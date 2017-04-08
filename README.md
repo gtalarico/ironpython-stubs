@@ -1,22 +1,9 @@
-- [Revit Python Stubs](#org80199ab)
-  - [Screenshot](#org9499b63)
-  - [Libraries](#org191a022)
-    - [Revit (DB and UI)](#org8828e60)
-    - [Dynamo](#orgd2425ac)
-    - [System](#org6fff53e)
-  - [Other resources](#orge22a3c5)
-
-
-<a id="org80199ab"></a>
-
 # Revit Python Stubs
 
 Generated Python stubs for Revit and Dynamo libraries.
 
 Useful for autocompetion and code analysis in 3rd party editors such as [PyCharm](https://www.jetbrains.com/pycharm/), [Emacs](https://www.gnu.org/software/emacs/), [Vim](http://www.vim.org/) etc.
 
-
-<a id="org9499b63"></a>
 
 ## Screenshot
 
@@ -25,12 +12,8 @@ Useful for autocompetion and code analysis in 3rd party editors such as [PyCharm
 Emacs autocompletion using Revit Python Stubs.
 
 
-<a id="org191a022"></a>
-
 ## Libraries
 
-
-<a id="org8828e60"></a>
 
 ### Revit (DB and UI)
 
@@ -38,8 +21,6 @@ Emacs autocompletion using Revit Python Stubs.
 
 Main Revit API.
 
-
-<a id="orgd2425ac"></a>
 
 ### Dynamo
 
@@ -62,16 +43,12 @@ Main Revit API.
     Access to the Document Manager which contains the Revit document instance.
 
 
-<a id="org6fff53e"></a>
-
 ### System
 
 [System](./System)
 
 Useful .NET System libraries.
 
-
-<a id="orge22a3c5"></a>
 
 ## Other resources
 
