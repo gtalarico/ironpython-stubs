@@ -16,7 +16,7 @@ clr.AddReference("RevitNodes")
 
 import generator3
 
-path = 'C:\Users\gary\Desktop\ironpython-stubs'
+path = 'C:\revit-python-stubs'
 generator3.quiet = False
 
 modules = ['Autodesk.DesignScript.Geometry',
