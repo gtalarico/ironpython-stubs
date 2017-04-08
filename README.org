@@ -4,6 +4,8 @@ Generated Python stubs for Revit and Dynamo libraries.
 
 Useful for autocompetion and code analysis in 3rd party editors such as [[https://www.jetbrains.com/pycharm/][PyCharm]], [[https://www.gnu.org/software/emacs/][Emacs]], [[http://www.vim.org/][Vim]] etc.
 
+** Screenshot
+
 [[./screenshot.png]]
 
 Emacs autocompletion using Revit Python Stubs.
