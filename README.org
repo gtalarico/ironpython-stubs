@@ -1,3 +1,5 @@
+#+OPTIONS: toc:nil
+
 * Revit Python Stubs
 
 Generated Python stubs for Revit and Dynamo libraries.
