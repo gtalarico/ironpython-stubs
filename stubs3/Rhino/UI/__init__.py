@@ -1,0 +1,136 @@
+# encoding: utf-8
+# module Rhino.UI calls itself UI
+# from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null
+# by generator 1.145
+# no doc
+# no imports
+
+# no functions
+# classes
+
+class DistanceDisplayMode(Enum):
+    """ enum DistanceDisplayMode, values: Decimal (0), FeetInches (2), Fractional (1) """
+    Decimal = None
+    FeetInches = None
+    Fractional = None
+    value__ = None
+
+
+class LOC(object):
+    # no doc
+    @staticmethod
+    def COMMANDNAME(english):
+        """ COMMANDNAME(english: str) -> str """
+        pass
+
+    @staticmethod
+    def CON(english, assemblyFromObject=None):
+        """
+        CON(english: str, assemblyFromObject: object) -> LocalizeStringPair
+        CON(english: str) -> LocalizeStringPair
+        """
+        pass
+
+    @staticmethod
+    def COV(engilsh, assemblyFromObject=None):
+        """
+        COV(engilsh: str, assemblyFromObject: object) -> LocalizeStringPair
+        COV(engilsh: str) -> LocalizeStringPair
+        """
+        pass
+
+    @staticmethod
+    def STR(english, assemblyOrObject=None):
+        """
+        STR(english: str, assemblyOrObject: object) -> str
+        STR(english: str) -> str
+        """
+        pass
+
+    __all__ = [
+        'COMMANDNAME',
+        'CON',
+        'COV',
+        'STR',
+    ]
+
+
+class Localization(object):
+    # no doc
+    @staticmethod
+    def GetAssemblyFromObject(assemblyOrObject):
+        """ GetAssemblyFromObject(assemblyOrObject: object) -> Assembly """
+        pass
+
+    @staticmethod
+    def LocalizeCommandName(english, assemblyOrObject=None):
+        """
+        LocalizeCommandName(english: str, assemblyOrObject: object) -> str
+        LocalizeCommandName(english: str) -> str
+        """
+        pass
+
+    @staticmethod
+    def LocalizeCommandOptionName(english, *__args):
+        """
+        LocalizeCommandOptionName(english: str, assemblyOrObject: object, contextId: int) -> LocalizeStringPair
+        LocalizeCommandOptionName(english: str, contextId: int) -> LocalizeStringPair
+        """
+        pass
+
+    @staticmethod
+    def LocalizeCommandOptionValue(english, *__args):
+        """
+        LocalizeCommandOptionValue(english: str, assemblyOrObject: object, contextId: int) -> LocalizeStringPair
+        LocalizeCommandOptionValue(english: str, contextId: int) -> LocalizeStringPair
+        """
+        pass
+
+    @staticmethod
+    def LocalizeDialogItem(assemblyOrObject, key, english):
+        """ LocalizeDialogItem(assemblyOrObject: object, key: str, english: str) -> str """
+        pass
+
+    @staticmethod
+    def LocalizeString(english, *__args):
+        """
+        LocalizeString(english: str, assemblyOrObject: object, contextId: int) -> str
+        LocalizeString(english: str, contextId: int) -> str
+        """
+        pass
+
+    @staticmethod
+    def SetLanguageId(id):
+        """ SetLanguageId(id: int) -> bool """
+        pass
+
+    __all__ = [
+        'GetAssemblyFromObject',
+        'LocalizeCommandName',
+        'LocalizeCommandOptionName',
+        'LocalizeCommandOptionValue',
+        'LocalizeDialogItem',
+        'LocalizeString',
+        'SetLanguageId',
+    ]
+
+
+class LocalizeStringPair(object):
+    """ LocalizeStringPair(english: str, local: str) """
+    @staticmethod # known case of __new__
+    def __new__(self, english, local):
+        """ __new__(cls: type, english: str, local: str) """
+        pass
+
+    English = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: English(self: LocalizeStringPair) -> str
+
+"""
+
+    Local = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: Local(self: LocalizeStringPair) -> str
+
+"""
+
+
+
