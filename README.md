@@ -9,3 +9,7 @@
 <!--http://jedi.readthedocs.io/en/latest/docs/plugin-api.html-->
 
 https://gitlab.com/reje/revit-python-stubs
+
+
+# Add static typing to Jedi for better performance?
+https://jedi.readthedocs.io/en/latest/docs/features.html#recipes

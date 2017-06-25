@@ -1,4 +1,4 @@
-from pycharm_generator_utils.constants import *
+from constants import *
 import keyword
 
 try:

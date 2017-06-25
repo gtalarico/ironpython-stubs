@@ -1,7 +1,7 @@
 import keyword
 
-from pycharm_generator_utils.util_methods import *
-from pycharm_generator_utils.constants import *
+from util_methods import *
+from constants import *
 
 
 class emptylistdict(dict):

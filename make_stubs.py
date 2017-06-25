@@ -7,52 +7,79 @@ URL
 import os
 import sys
 import clr
+from collections import defaultdict
+import json
+from pprint import pprint
+
+from generator3.generator3 import process_one
 
 join = os.path.join
 project_dir = os.getcwd()  # Must execute from project dir
 
-# sys.path.append(join(project_dir, 'bin')) # Dlls
-sys.path.append(join(project_dir, 'lib')) # Generator
-# print('Path: {}'.format(sys.path))
-
-# Other Dlls
+# Revit + Dynamo
 sys.path.append('C:\\Program Files\\Autodesk\\Revit 2017')                                               # RevitAPI
 sys.path.append('C:\\Program Files\\Autodesk\\Revit 2017\\en-US')                                      # RevitAPIUI - Revit Req.
-# sys.path.append('C:\\Program Files\\Dynamo\\Dynamo Core\\1.2')                                           # ProtoGeometry
-# sys.path.append('C:\\Program Files\\Dynamo\\Dynamo Revit\\1.2\\Revit_2017')                              # RevitServices
-
-class Module():
-
-    def __init__(self, name, module, parent):
-        self.name = name
-        self.module = module
-        self.parent = parent
+sys.path.append('C:\\Program Files\\Dynamo\\Dynamo Core\\1.2')                                           # ProtoGeometry
+sys.path.append('C:\\Program Files\\Dynamo\\Dynamo Revit\\1.2\\Revit_2017')                              # RevitServices
+sys.path.append(join(project_dir, 'bin'))
 
 
-from generator3 import process_one
+def is_namespace(something):
+    """ Returns True if object is Module """
+    if 'namespace' in str(type(something)):
+        return True
 
-target_assemblies = [
-              'RevitAPI.dll',
-            #   'RevitServices.dll',
-            #   'RevitAPIUI.dll',
-            #   'RevitNodes.dll',
-            #   'ProtoGeometry.dll',
-            #   'Rhino3dmIO.dll',
-            #   'Ironpython.Wpf.dll',
+def iter_module(module_name, module, module_path=None, namespaces=None, ):
+    """ Recursively iterate through all namespaces in assembly """
+    # print('>>> {}'.format(module_name))
+    if not namespaces:
+        namespaces = defaultdict(dict)
+    # module_path = module_path or module_name
 
-            #   'PresentationFramework.dll',
-            #   'WindowsBase.dll',
-            #   'System',
-            #   'System.Drawings',
-            #   'System.Collections',
-            #   'System.Windows.Forms',
-              ]
+    for submodule_name, submodule in vars(module).iteritems():
+        if not is_namespace(submodule):
+            continue
+        if module_path:
+            submodule_path = '.'.join([module_path, submodule_name])
+        else:
+            submodule_path = submodule_name
+        flat_namespaces[submodule_path] = repr(submodule_name)
 
-for assembly_name in target_assemblies:
+        namespaces[module_name].update({submodule_name: submodule})
+        iter_module(submodule_name, submodule, submodule_path, namespaces=namespaces)
+    return namespaces
+
+loadable_assemblies = [
+                       'IronPython.Wpf',
+                       'System',
+                       'PresentationFramework',
+                       'PresentationCore',
+                       'WindowsBase',
+                       'System.Drawing',
+                       'System.Windows.Forms',
+
+                       'RevitServices',
+                       'RevitNodes',
+                       'ProtoGeometry',
+                       'Rhino3dmIO',
+                      ]
+
+# IN REVIT ONLY
+loadable_assemblies = [ 'RevitAPI', 'RevitAPIUI',]
+loadable_assemblies = [ ]
+
+other_namespaces = ['clr']
+# try:
+#     import wpf
+#     other_modules.append(wpf)
+# except:
+#     loadable_assemblies.append('IronPython.Wpf')
+
+for assembly_name in loadable_assemblies:
     print('='*30)
     try:
         print('Adding Assembly [{}]'.format(assembly_name))
-        clr.AddReferenceToFile(assembly_name)
+        clr.AddReference(assembly_name)
     except Exception as errmsg:
         print('Could not load assembly: {}'.format(assembly_name))
         # print('-'*30)
@@ -61,31 +88,51 @@ for assembly_name in target_assemblies:
     else:
         print('Loaded [{}]'.format(assembly_name))
 
-def iter_assembly(assembly, namespaces=None):
-    if not namespaces:
-        namespaces = []
-    for name, module in vars(assembly).iteritems():
-        # print('='*30)
-        # print(name)
-        # print(module)
-        # print(type(module))
-        if 'namespace' in str(type(module)):
-            print('Iterating: {}'.format(module))
-            namespaces += iter_assembly(module, namespaces=namespaces)
-    return namespaces
 
-namespaces = []
+print('='*30)
+print('='*30)
+
+master_namespaces = {}
+flat_namespaces = {}
 
 for assembly in clr.References:
-    # print(assembly)
     assembly_name = assembly.GetName().Name
     assembly_path = assembly.CodeBase
     assembly_filename = os.path.basename(assembly_path)
-    print(assembly_filename)
-    if assembly_filename in target_assemblies:
-        rv = iter_assembly(assembly, assembly_name)
-# print('+++++++++++++++++')
-# print(rv)
+    if assembly_name in loadable_assemblies:
+        print('Parsing Assembly: {}'.format(assembly_name))
+        namespaces = iter_module(assembly_name, assembly)
+        print('Total: {}'.format(len(flat_namespaces)))
+        master_namespaces[assembly_filename] = flat_namespaces
+        # pprint(dict(flat_namespaces))
+    else:
+        print('*** Assembly Skiped. Not in target list: {}'.format(assembly_name))
+
+
+print('='*30)
+print('='*30)
+# print( json.dumps(master_namespaces, indent=4))
+print( json.dumps(flat_namespaces, indent=4, sort_keys=True))
+
+
+SAVE_PATH = os.path.join(project_dir, 'stubs2')
+print('='*30)
+print('='*30)
+
+for namespace in sorted(flat_namespaces.keys()):
+    try:
+        print('Processing [{}]'.format(namespace))
+        print('='*30)
+        process_one(namespace, None, True, SAVE_PATH)
+    except Exception as errmsg:
+        print('Could not process namespace: {}'.format(module))
+        print(errmsg)
+    else:
+        print('Done')
+    print('='*30)
+
+for other in other_namespaces:
+    process_one(other, None, True, SAVE_PATH)
 
 # modules = {
 #             {
@@ -198,20 +245,3 @@ for assembly in clr.References:
 #                 'Revit.References',
                 # 'Revit.AnalysisDisplay',
                 # ]
-
-# if REVIT_LOADED:
-#     namespaces.extend(revit_namespaces)
-#
-# # namespaces.extend(rhino_namespaces)
-#
-# SAVE_PATH = os.path.join(project_dir, 'stubs3')
-#
-# for module in namespaces:
-#     try:
-#         print('Processing [{}]'.format(module))
-#         process_one(module, None, True, SAVE_PATH)
-#     except Exception as errmsg:
-#         print('Could not process module: {}'.format(module))
-#         print(errmsg)
-#     else:
-#         print('Done')
