@@ -17,8 +17,9 @@ class CloudPoint(object):
     @staticmethod # known case of __new__
     def __new__(self, x, y, z, color):
         """
-        __new__(cls: type, x: Single, y: Single, z: Single, color: int)
-        __new__[CloudPoint]() -> CloudPoint
+        __new__[CloudPoint]() -> CloudPoint
+        
+        __new__(cls: type, x: Single, y: Single, z: Single, color: int)
         """
         pass
 

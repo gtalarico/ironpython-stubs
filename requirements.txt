@@ -1,0 +1,1 @@
+pyminifier==2.1

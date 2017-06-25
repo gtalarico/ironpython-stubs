@@ -1,2 +1,1 @@
-from Autodesk.Revit.UI import Events
-Events.
+from Autodesk.Revit.UI import Event

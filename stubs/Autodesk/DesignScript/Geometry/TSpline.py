@@ -2,7 +2,7 @@
 # module Autodesk.DesignScript.Geometry.TSpline calls itself TSpline
 # from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -30,8 +30,7 @@ class TSplineEdge(Edge, IDisposable, IGraphicItem):
         """
         Info(self: TSplineEdge) -> Dictionary[str, object]
         
-            A bunch of TSEdge properties: uvnFrame and index, whether TSEdge is on Border, 
-             is Manifold or not
+            A bunch of TSEdge properties: uvnFrame and index, whether TSEdge is on Border, is Manifold or not
         """
         pass
 
@@ -40,11 +39,18 @@ class TSplineEdge(Edge, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -132,11 +138,18 @@ class TSplineFace(Face, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -204,8 +217,7 @@ class TSplineInitialSymmetry(DesignScriptEntity, IDisposable, IGraphicItem):
         """
         ByRadial(symmetricFaces: int) -> TSplineInitialSymmetry
         
-            Create a radial TSplineInitialSymmetry with given amount of spans per symmetric 
-             segment.
+            Create a radial TSplineInitialSymmetry with given amount of spans per symmetric segment.
         """
         pass
 
@@ -230,11 +242,18 @@ class TSplineInitialSymmetry(DesignScriptEntity, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -302,17 +321,11 @@ class TSplineReflection(DesignScriptEntity, IDisposable, IGraphicItem):
         """
         ByRadial(plane: Plane, segmentsCount: int, segmentAngle: float) -> TSplineReflection
         
-            Create radial reflection for t-spline symmetry by given plane with given 
-             segments count and given angle (in degrees) between each pair of segments.
+            Create radial reflection for t-spline symmetry by given plane with given segments count and given angle (in degrees) between each pair of segments.
         
-        
-            plane: Plane which normal is axis for t-spline radial reflection. Given in World 
-             coordinates
-        
+            plane: Plane which normal is axis for t-spline radial reflection. Given in World coordinates
             segmentsCount: Number of segments of radial reflection
-            segmentAngle: Angle between each pair of segments of radial symmetry (in degrees). If is set 
-             to 0 it is defined by (360 / segmentsCount)
-        
+            segmentAngle: Angle between each pair of segments of radial symmetry (in degrees). If is set to 0 it is defined by (360 / segmentsCount)
             Returns: T-Spline radial reflection
         """
         pass
@@ -338,11 +351,18 @@ class TSplineReflection(DesignScriptEntity, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -474,11 +494,18 @@ class TSplineTopology(Topology, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -678,9 +705,7 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         """
         ByBoxLengths(cs: CoordinateSystem, width: float, length: float, height: float, xSpans: int, ySpans: int, zSpans: int, symmetry: TSplineInitialSymmetry, inSmoothMode: bool) -> TSplineSurface
         
-            Create a T-Spline Box centered and oriented to input CoordinateSystem, with  
-             specified width, length, and height.
-        
+            Create a T-Spline Box centered and oriented to input CoordinateSystem, with  specified width, length, and height.
         
             cs: Box's X-Y plane will be aligned with correspondi X
             width: Width of a box
@@ -694,9 +719,7 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
             Returns: T-Spline Cuboid
         ByBoxLengths(origin: Point, width: float, length: float, height: float, xSpans: int, ySpans: int, zSpans: int, symmetry: TSplineInitialSymmetry, inSmoothMode: bool) -> TSplineSurface
         
-            Create a T-Spline Box centered at input Point, with specified width, length,  
-             and height.
-        
+            Create a T-Spline Box centered at input Point, with specified width, length,  and height.
         
             origin: Center of a box
             width: Width of a box
@@ -734,11 +757,8 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         """
         ByConeCoordinateSystemHeightRadii(cs: CoordinateSystem, height: float, startRadius: float, endRadius: float, radiusSpans: int, heightSpans: int, symmetry: TSplineInitialSymmetry, inSmoothMode: bool) -> TSplineSurface
         
-            Create a T-Splines Cone with base Point at CoordinateSystem origin, extending 
-             in the direction of CoordinateSystem Z-axis,
-                    with its circular 
-             base in the CoordinateSystem XY Plane.
-        
+            Create a T-Splines Cone with base Point at CoordinateSystem origin, extending in the direction of CoordinateSystem Z-axis,
+                    with its circular base in the CoordinateSystem XY Plane.
         
             cs: Cone's center and base will be fit at X-Y plane of this coordinate system
             height: Height of a cone
@@ -757,11 +777,8 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         """
         ByConeCoordinateSystemHeightRadius(cs: CoordinateSystem, height: float, radius: float, radiusSpans: int, heightSpans: int, symmetry: TSplineInitialSymmetry, inSmoothMode: bool) -> TSplineSurface
         
-            Create a T-Splines Cone with base Point at CoordinateSystem origin, extending 
-             in the direction of CoordinateSystem's Z-axis,
-                     with a  circular 
-             base in the CoordinateSystem XY Plane.
-        
+            Create a T-Splines Cone with base Point at CoordinateSystem origin, extending in the direction of CoordinateSystem's Z-axis,
+                     with a  circular base in the CoordinateSystem XY Plane.
         
             cs: Cone's center and base will be fit at X-Y plane of this coordinate system
             height: Height of a cone
@@ -779,11 +796,8 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         """
         ByConePointsRadii(startPoint: Point, endPoint: Point, startRadius: float, endRadius: float, radiusSpans: int, heightSpans: int, symmetry: TSplineInitialSymmetry, inSmoothMode: bool) -> TSplineSurface
         
-            Create a T-Splines Cone with axis from start Point to end Point, with given 
-             radii at start and end. 
-                    This object does not have an apex, and is 
-             in the shape of a frustum.
-        
+            Create a T-Splines Cone with axis from start Point to end Point, with given radii at start and end. 
+                    This object does not have an apex, and is in the shape of a frustum.
         
             startPoint: Start point of a cone
             endPoint: End point of a cone
@@ -803,9 +817,7 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         ByConePointsRadius(startPoint: Point, endPoint: Point, radius: float, radiusSpans: int, heightSpans: int, symmetry: TSplineInitialSymmetry, inSmoothMode: bool) -> TSplineSurface
         
             Create a T-Splines Cone with given base radius at start Point,
-                    
-             extending to an apex at end Point.
-        
+                    extending to an apex at end Point.
         
             startPoint: Start point of a cone
             endPoint: End point of a cone
@@ -823,9 +835,7 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         """
         ByCylinderPointsRadius(startPoint: Point, endPoint: Point, radius: float, radiusSpans: int, heightSpans: int, symmetry: TSplineInitialSymmetry, inSmoothMode: bool) -> TSplineSurface
         
-            Construct a T-Splines Cylinder given the bottom and top center point of the 
-             Cylinder.
-        
+            Construct a T-Splines Cylinder given the bottom and top center point of the Cylinder.
         
             startPoint: Start point of a cylinder
             endPoint: End point of a cylinder
@@ -843,9 +853,7 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         """
         ByCylinderRadiusHeight(cs: CoordinateSystem, radius: float, height: float, radiusSpans: int, heightSpans: int, symmetry: TSplineInitialSymmetry, inSmoothMode: bool) -> TSplineSurface
         
-            Construct a T-Spline Cylinder defined by a parent CoordinateSystem, the radius, 
-             and the height of the cylinder
-        
+            Construct a T-Spline Cylinder defined by a parent CoordinateSystem, the radius, and the height of the cylinder
         
             cs: Cylinder's center and base will be fit at X-Y plane of this coordinate system
             radius: Radius of a cylinder
@@ -868,12 +876,10 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         """
         ByNurbsSurfaceCurvature(nurbsSurface: NurbsSurface, inSmoothMode: bool) -> TSplineSurface
         
-            Construct T-Spline surface from NURBS Surface using curvature subdivision 
-             strategy.
-                    Input NURBS surface is rebuilt to degree 3. Output 
-             T-Spline has span counts and 
-                    positions in each direction detected 
-             automatically depending on curvature.
+            Construct T-Spline surface from NURBS Surface using curvature subdivision strategy.
+                    Input NURBS surface is rebuilt to degree 3. Output T-Spline has span counts and 
+                    positions in 
+             each direction detected automatically depending on curvature.
         
         
             nurbsSurface: Input NURBS surface
@@ -887,15 +893,11 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         ByNurbsSurfaceUniform(nurbsSurface: NurbsSurface, uSpans: int, vSpans: int, uUseArcLen: bool, vUseArcLen: bool, inSmoothMode: bool) -> TSplineSurface
         
             Construct T-Spline surface from NURBS Surface using uniform strategy. 
-                
-                 Input NURBS surface is rebuilt with uniform knots placed at equal 
-             parametric or 
-                    arc length intervals depending on corresponding 
-             useArcLen flag, and approximated by 
-                    degree 3 NURBS surface. 
-             Output T-Spline is divided by given span counts 
-                    in u and v 
-             directions.
+                    Input NURBS surface is rebuilt with uniform knots placed at equal parametric or 
+                    arc length intervals 
+             depending on corresponding useArcLen flag, and approximated by 
+                    degree 3 NURBS surface. Output T-Spline is divided by given span counts 
+                    in u and v directions.
         
         
             nurbsSurface: Input NURBS surface
@@ -917,9 +919,7 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         """
         ByPlaneLineAndPoint(line: Line, point: Point, minCorner: Point, maxCorner: Point, xSpans: int, ySpans: int, symmetry: TSplineInitialSymmetry, inSmoothMode: bool) -> TSplineSurface
         
-            Create the T-Spline Plane containing the input Line and external Point. Point 
-             cannot lie on the Line or anywhere on the axis of the Line.
-        
+            Create the T-Spline Plane containing the input Line and external Point. Point cannot lie on the Line or anywhere on the axis of the Line.
         
             line: Line to build a plane
             point: Point to build a plane
@@ -957,11 +957,9 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         """
         ByPlaneOriginNormalXAxis(origin: Point, normal: Vector, xAxis: Vector, minCorner: Point, maxCorner: Point, xSpans: int, ySpans: int, symmetry: TSplineInitialSymmetry, inSmoothMode: bool) -> TSplineSurface
         
-            Create an "oriented" T-Spline Plane, positioned at Point origin with Vector 
-             normal, but with a specific X-axis orientation. 
-                    This has no 
-             impact to splitting, intersect, project, etc. operations, it only specifies the 
-             orientation of the input CoordinateSystem.
+            Create an "oriented" T-Spline Plane, positioned at Point origin with Vector normal, but with a specific X-axis orientation. 
+                    This has no impact to splitting, intersect, project, etc. 
+             operations, it only specifies the orientation of the input CoordinateSystem.
         
         
             origin: Plane's root point
@@ -983,9 +981,7 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         ByPlaneOriginXAxisYAxis(origin: Point, xAxis: Vector, yAxis: Vector, minCorner: Point, maxCorner: Point, xSpans: int, ySpans: int, symmetry: TSplineInitialSymmetry, inSmoothMode: bool) -> TSplineSurface
         
             Create a Plane by origin and X, Y axis.
-                    The Z axis is the cross 
-             product of the two Vectors.
-        
+                    The Z axis is the cross product of the two Vectors.
         
             origin: Plane's root point
             xAxis: Plane's x-axis
@@ -1005,9 +1001,7 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         """
         ByPlaneThreePoints(p1: Point, p2: Point, p3: Point, minCorner: Point, maxCorner: Point, xSpans: int, ySpans: int, symmetry: TSplineInitialSymmetry, inSmoothMode: bool) -> TSplineSurface
         
-            Create a T-Spline Plane containing the three input Points. The Points cannot 
-             lie on a straight line
-        
+            Create a T-Spline Plane containing the three input Points. The Points cannot lie on a straight line
         
             p1: First point to build a plane
             p2: Second point to build a plane
@@ -1027,9 +1021,7 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         """
         ByQuadballCenterRadius(center: Point, radius: float, spans: int, symmetry: TSplineInitialSymmetry, inSmoothMode: bool) -> TSplineSurface
         
-            Create a T-Splines Quadball with given center and radius, aligned with  default 
-             World XY plane
-        
+            Create a T-Splines Quadball with given center and radius, aligned with  default World XY plane
         
             center: Quadball center point
             radius: Quadball radius
@@ -1045,9 +1037,7 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         """
         ByQuadballCoordinateSystemRadius(cs: CoordinateSystem, radius: float, spans: int, symmetry: TSplineInitialSymmetry, inSmoothMode: bool) -> TSplineSurface
         
-            Create a T-Splines Quadball with center at CoordinateSystem origin  and given 
-             radius
-        
+            Create a T-Splines Quadball with center at CoordinateSystem origin  and given radius
         
             cs: Local coordinate system
             radius: Quadball radius
@@ -1064,10 +1054,9 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         ByRevolve(profile: Curve, axisOrigin: Point, axisDirection: Vector, startAngle: float, sweepAngle: float, radialSpans: int, axialSpans: int, uniform: bool, symmetry: TSplineInitialSymmetry, inSmoothMode: bool) -> TSplineSurface
         
             Create a T-Spline Surface by sweeping the profile Curve around the axis formed
-        
-                         by the axis origin and axis direction, starting at start_angle in 
-             degrees, 
-                    and sweeping by sweep_angle in degrees.
+                    by the axis origin and axis direction, starting at start_angle in degrees, 
+                    and sweeping by 
+             sweep_angle in degrees.
         
         
             profile: Profile curve
@@ -1133,9 +1122,7 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         """
         ByTorusCenterRadii(center: Point, innerRadius: float, outerRadius: float, innerRadiusSpans: int, outerRadiusSpans: int, symmetry: TSplineInitialSymmetry, inSmoothMode: bool) -> TSplineSurface
         
-            Create a T-Splines Torus with given center and radii, aligned with  default 
-             World XY plane
-        
+            Create a T-Splines Torus with given center and radii, aligned with  default World XY plane
         
             center: Center of a torus
             innerRadius: Inner radius of a torus
@@ -1155,9 +1142,7 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         
             Create a T-Splines Torus with center at CoordinateSystem origin and given radii
         
-            cs: Torus will be aligned in the X-Y plane of given coordinate system with center 
-             in its origin
-        
+            cs: Torus will be aligned in the X-Y plane of given coordinate system with center in its origin
             innerRadius: Inner radius of a torus
             outerRadius: Outer radius of a torus
             innerRadiusSpans: Number of inner radial spans
@@ -1172,8 +1157,7 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         """
         CompressIndexes(self: TSplineSurface) -> TSplineSurface
         
-            Compress all topology on the surface and make the indices contiguous. This 
-             function maintains the relative order of the indices.
+            Compress all topology on the surface and make the indices contiguous. This function maintains the relative order of the indices.
         """
         pass
 
@@ -1225,9 +1209,7 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         EnableSmoothMode(self: TSplineSurface, enable: bool) -> TSplineSurface
         
             Change visualization style of t-spline.
-                    Smooth visualization if 
-             true passed, box otherwise.
-        
+                    Smooth visualization if true passed, box otherwise.
         
             enable: Enable or disable smooth visualization
             Returns: t-spline with chosen visualization style
@@ -1336,10 +1318,8 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         """
         Interpolate(self: TSplineSurface, reverse: bool) -> TSplineSurface
         
-            Forward interpolation moves control points to their parametric locations on the 
-             surface. Reverse interpolation generates a point on the surface for each 
-             original control point and moves this control point to its corresponding 
-             surface point.
+            Forward interpolation moves control points to their parametric locations on the surface. Reverse interpolation generates a point on the surface for each original control point and moves this control point 
+             to its corresponding surface point.
         
         
             reverse: Interpolation direction: forward if false, reverse otherwise
@@ -1386,11 +1366,8 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         Standardize(self: TSplineSurface) -> TSplineSurface
         
             Standardize the t-spline to the point where exact insertion
-                    can be 
-             performed. If it cannot be standardized, exception is thrown
-                    with 
-             the reason
-        
+                    can be performed. If it cannot be standardized, exception is thrown
+                    with the reason
             Returns: Standardized T-Spline Surface
         """
         pass
@@ -1435,12 +1412,8 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         
             Convert t-spline surface to mesh. Mesh can have both triangles and quads.
         
-            minSegments: The minimum number of segments in each direction. At least one segment will 
-             always be produced.
-        
-            tolerance: Maximum allowed distance from the mesh to the surface. Setting to a zero or a 
-             negative value will disable its use
-        
+            minSegments: The minimum number of segments in each direction. At least one segment will always be produced.
+            tolerance: Maximum allowed distance from the mesh to the surface. Setting to a zero or a negative value will disable its use
             Returns: Mesh entity
         """
         pass
@@ -1483,11 +1456,18 @@ class TSplineSurface(TSplineTopology, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1567,11 +1547,18 @@ class TSplineUVNFrame(DesignScriptEntity, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1635,8 +1622,7 @@ class TSplineVertex(Vertex, IDisposable, IGraphicItem):
         """
         Info(self: TSplineVertex) -> Dictionary[str, object]
         
-            A bunch of TSVertex properties: uvnFrame, index, valence and functionalValence, 
-             whether TSVertex is a StarPoint, TPoint, Manifold or not
+            A bunch of TSVertex properties: uvnFrame, index, valence and functionalValence, whether TSVertex is a StarPoint, TPoint, Manifold or not
         """
         pass
 
@@ -1645,11 +1631,18 @@ class TSplineVertex(Vertex, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
