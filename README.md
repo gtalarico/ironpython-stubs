@@ -77,9 +77,9 @@ First the less important settings:
 Now to the ones that matter:
 
 * [ ] Use Kite-powered Completion: OFF - It might work, but you are on your own.
-    
+
 * [X] Output Provider Errors: ON - This will tell you if Jedi runs out of memory.
-    
+
 * Python Executable Path
 You can leave blank, or type in the path to your system's python, for example: `C:/Python35/python.exe`
 If blank, Atom will automatically use your default system's python.
@@ -87,13 +87,13 @@ The only thing to be mindful is that you should probably make sure you are runni
 The 32-bit version is limited to 2GB and will likely not be enough for Jedi.
 The system version is displayed when you launch python:
    `Python 3.5.2 (v3.5.2:4def2a2901a5, Jun 25 2016, 22:18:55) [MSC v.1900 64 bit (AMD64)` < 64 bit
-    
+
 * Extra Paths for Packages - This is the most important setting. This tells the autocomplete engine where to "crawl" to find the stub files.
 
 `C:\Path\To\ironpython-stubs\stubs.min`
 
 If you have other libraries you would like to add like [rpw](), you add multiple paths using a semicolon:
-   
+
 `C:\Path\To\ironpython-stubs\stubs.min;C:\Path\To\revitpythonwrapper.lib`
 
 That should be it. Should work like in the image below.
@@ -119,8 +119,8 @@ After the first time, should be quicker (~1 sec.)
 
 ## Credits
 
-This project was inspired by work started by Gary Edwards on [Gitlab](https://gitlab.com/reje/revit-python-stubs).
-Thank you Gary. And thank you [Ehsan](https://github.com/eirannejad) for pointing me to it!
+This project is a fork of the repository started by Gary Edwards on [Gitlab](https://gitlab.com/reje/revit-python-stubs).
+Thank you for your work Gary - and thank you [Ehsan](https://github.com/eirannejad) for pointing me to it.
 
 It uses PyCharm's [Generator3](https://github.com/JetBrains/intellij-community/blob/master/python/helpers/generator3.py)
 to create the stubs.
