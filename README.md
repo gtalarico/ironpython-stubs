@@ -5,7 +5,7 @@ Stubs for common IronPython CLR assemblies.
 These stubs are intended to be used with [Atom](https://atom.io/) +
 [autocomplete-python](https://atom.io/packages/autocomplete-python) package.
 
-The goal of this project is to develop, consolidate + optimizing IronPython stubs,
+The goal of this project is to develop, consolidate + optimize IronPython stubs,
 and to provide instructions for how to use them in Atom.
 
 Demo
