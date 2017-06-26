@@ -8,6 +8,10 @@ These stubs are intended to be used with [Atom](https://atom.io/) +
 The goal of this project is to develop, consolidate + optimizing IronPython stubs,
 and to provide instructions for how to use them in Atom.
 
+Demo
+
+![autocomplete-demo](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/gifs/autocomplete-demo.gif)
+
 --------------------------------------------------------------------------------
 
 ## Background
@@ -69,7 +73,7 @@ For more information on the 'optimization' see the `proces_stubs.py` file.
 
 First the less important settings:
 
-[X] Show Descriptions: ON - Recommended Option
+* [X] Show Descriptions: ON - Recommended Option
 * [X] Case Insensitive: ON - Recommended Option
 * [X] Fuzzy Matches: ON - Recommended Option
 * [required] Autocomplete Function Parameters - Recommended Option
@@ -80,7 +84,8 @@ Now to the ones that matter:
 
 * [X] Output Provider Errors: ON - This will tell you if Jedi runs out of memory.
 
-* Python Executable Path
+
+*Python Executable Path*
 You can leave blank, or type in the path to your system's python, for example: `C:/Python35/python.exe`
 If blank, Atom will automatically use your default system's python.
 The only thing to be mindful is that you should probably make sure you are running a 64 bit version.
@@ -88,26 +93,35 @@ The 32-bit version is limited to 2GB and will likely not be enough for Jedi.
 The system version is displayed when you launch python:
    `Python 3.5.2 (v3.5.2:4def2a2901a5, Jun 25 2016, 22:18:55) [MSC v.1900 64 bit (AMD64)` < 64 bit
 
-* Extra Paths for Packages - This is the most important setting. This tells the autocomplete engine where to "crawl" to find the stub files.
+*Extra Paths for Packages*
+This is the most important setting. This tells the autocomplete engine where to "crawl" to find the stub files.
+If you have other libraries you would like to add like [rpw](), you add multiple paths using a semicolon.
 
 `C:\Path\To\ironpython-stubs\stubs.min`
-
-If you have other libraries you would like to add like [rpw](), you add multiple paths using a semicolon:
-
 `C:\Path\To\ironpython-stubs\stubs.min;C:\Path\To\revitpythonwrapper.lib`
 
-That should be it. Should work like in the image below.
-Start by typing `from Autodesk.` you should see `Revit`
+----------------------------------------------------------------------
 
-Try it out:
+That should be it. Should work like in the images below.
 
-    from Rhino import Geometry
-    Geometry.  
-
-If you haven't yet, read 'Note on Performance'.
+If you haven't yet, read *Note on Performance* above.
 Large Namespaces such as `Autodesk.Revit.DB` do not show up right away
 The first time you use them could take  5-10 secondes for options to appear.
 After the first time, should be quicker (~1 sec.)
+
+#### Examples
+
+clr
+
+![autocomplete-clr](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/gifs/autocomplete-clr.gif)
+
+autodesk
+
+![autocomplete-clr](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/gifs/autocomplete-autodesk.gif)
+
+rhino
+
+![autocomplete-clr](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/gifs/autocomplete-rhino.gif)
 
 
 ## Known Issues
