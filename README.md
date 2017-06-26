@@ -25,7 +25,7 @@ to create the stubs.
 
 ## Background
 
-Autocomplete for Python can be quite good an easy to use in an editor like Atom.
+Autocomplete for Python can be quite good and easy to use in an editor like Atom.
 
 The problem comes when you are using IronPython with modules loaded through the
 Common Language Runtime (clr); the autocomplete engine runs regular python,
@@ -139,4 +139,4 @@ rhino
 * Some of the function/constructor signatures are missing or incorrect. This is a problem with Generator3. Please send a PR or let me know if you have a fix.
 
 ## Unknown Issues
-* A lot, probably.
+* Many, probably! 
