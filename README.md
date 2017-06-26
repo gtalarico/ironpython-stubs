@@ -94,7 +94,8 @@ Now to the ones that matter:
 * [X] Output Provider Errors: ON - This will tell you if Jedi runs out of memory.
 
 
-*Python Executable Path*
+* Python Executable Path
+
 You can leave blank, or type in the path to your system's python, for example: `C:/Python35/python.exe`
 If blank, Atom will automatically use your default system's python.
 The only thing to be mindful is that you should probably make sure you are running a 64 bit version.
@@ -102,7 +103,7 @@ The 32-bit version is limited to 2GB and will likely not be enough for Jedi.
 The system version is displayed when you launch python:
    `Python 3.5.2 (v3.5.2:4def2a2901a5, Jun 25 2016, 22:18:55) [MSC v.1900 64 bit (AMD64)` < 64 bit
 
-*Extra Paths for Packages*
+* Extra Paths for Packages
 This is the most important setting. This tells the autocomplete engine where to "crawl" to find the stub files.
 If you have other libraries you would like to add like [rpw](), you add multiple paths using a semicolon.
 
