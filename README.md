@@ -8,6 +8,9 @@ These stubs are intended to be used with [Atom](https://atom.io/) +
 The goal of this project is to develop, consolidate + optimizing IronPython stubs,
 and to provide instructions for how to use them in Atom.
 
+Demo
+![autocomplete-demo](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/gifs/autocomplete-demo.gif)
+
 --------------------------------------------------------------------------------
 
 ## Background
@@ -108,6 +111,17 @@ If you haven't yet, read 'Note on Performance'.
 Large Namespaces such as `Autodesk.Revit.DB` do not show up right away
 The first time you use them could take  5-10 secondes for options to appear.
 After the first time, should be quicker (~1 sec.)
+
+#### Examples
+
+clr
+![autocomplete-clr](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/gifs/autocomplete-clr.gif)
+
+autodesk
+![autocomplete-clr](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/gifs/autocomplete-autodesk.gif)
+
+rhino
+![autocomplete-clr](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/gifs/autocomplete-rhino.gif)
 
 
 ## Known Issues
