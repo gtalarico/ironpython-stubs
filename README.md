@@ -12,6 +12,15 @@ Demo
 
 ![autocomplete-demo](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/gifs/autocomplete-demo.gif)
 
+## Credits
+
+This project is a fork of the repository started by Gary Edwards on [Gitlab](https://gitlab.com/reje/revit-python-stubs).
+Thank you for your work Gary - and thank you [Ehsan](https://github.com/eirannejad) for pointing me to it.
+
+It uses PyCharm's [Generator3](https://github.com/JetBrains/intellij-community/blob/master/python/helpers/generator3.py)
+to create the stubs.
+
+
 --------------------------------------------------------------------------------
 
 ## Background
@@ -80,7 +89,7 @@ First the less important settings:
 
 Now to the ones that matter:
 
-* [ ] Use Kite-powered Completion: OFF - It might work, but you are on your own.
+* [ ] Use Kite-powered Completion: OFF - Recommended.
 
 * [X] Output Provider Errors: ON - This will tell you if Jedi runs out of memory.
 
@@ -130,11 +139,3 @@ rhino
 
 ## Unknown Issues
 * A lot, probably.
-
-## Credits
-
-This project is a fork of the repository started by Gary Edwards on [Gitlab](https://gitlab.com/reje/revit-python-stubs).
-Thank you for your work Gary - and thank you [Ehsan](https://github.com/eirannejad) for pointing me to it.
-
-It uses PyCharm's [Generator3](https://github.com/JetBrains/intellij-community/blob/master/python/helpers/generator3.py)
-to create the stubs.
