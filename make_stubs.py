@@ -45,7 +45,7 @@ def iter_module(module_name, module, module_path=None, namespaces=None, ):
     """ Recursively iterate through all namespaces in assembly """
     if not namespaces:
         namespaces = defaultdict(dict)
-        
+
     for submodule_name, submodule in vars(module).iteritems():
         if not is_namespace(submodule):
             continue
@@ -59,7 +59,7 @@ def iter_module(module_name, module, module_path=None, namespaces=None, ):
         iter_module(submodule_name, submodule, submodule_path, namespaces=namespaces)
     return namespaces
 
-other_namespaces = ['clr']
+other_namespaces = ['clr', 'wpf']
 loadable_assemblies = [
                        'IronPython.Wpf',
                        'System',
@@ -124,7 +124,7 @@ print('='*30)
 print('='*30)
 
 
-SAVE_PATH = os.path.join(project_dir, 'stubs2')
+SAVE_PATH = os.path.join(project_dir, 'stubs')
 
 def make_stubs():
     for namespace in sorted(flat_namespaces.keys()):
@@ -142,8 +142,8 @@ def make_stubs():
     for other in other_namespaces:
         process_one(other, None, True, SAVE_PATH)
 
+    with open('stubs.json', 'w') as fp:
+        json.dump(master_namespaces, fp, indent=4)
+
 # Uncomment to re-create stubs
 # make_stubs()
-
-with open('stubs.json', 'w') as fp:
-    json.dump(master_namespaces, fp, indent=4)

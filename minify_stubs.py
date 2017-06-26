@@ -36,7 +36,7 @@ sys.path.append(join(project_dir, 'bin'))
 SAVE_PATH = os.path.join(project_dir, 'stubs')
 
 # 500KB in Bytes = 500000
-LIMIT_IN_KB = 350
+LIMIT_IN_KB = 200
 FILESIZE_LIMITE = LIMIT_IN_KB * 1024
 
 # Python string size: 331851 bytes = 331.851
@@ -55,22 +55,16 @@ def write_source(filepath, source):
         os.makedirs(folderpath)
     with open(filepath, 'w') as fp:
         source = fp.write(source)
+    print('File Written: {}'.format(filepath))
 
 target_files = []
 for root, subfolders, files in os.walk(SAVE_PATH):
     py_files = [f for f in files if f.endswith('.py')]
     for filename in py_files:
         filepath = join(root, filename)
+        filesize = os.path.getsize(filepath)
+        target_files.append((filepath, filesize))
 
-        if is_too_big(filepath):
-            print("Large File: {}".format(filepath))
-            print("Size: {}".format(os.path.getsize(filepath)))
-            filesize = os.path.getsize(filepath)
-            target_files.append((filepath, filesize))
-
-        else:
-            print("Size: {} / {}".format(os.path.getsize(filepath), FILESIZE_LIMITE))
-            print("Small File: {}".format(filepath))
 
 for filepath, filesize in target_files:
     filename = os.path.basename(filepath)
@@ -80,6 +74,10 @@ for filepath, filesize in target_files:
     if filepath.endswith('.min'):
         continue
 
+    # Uncomment to test with a single file
+    # if not filepath.endswith('DB\\__init__.py'):
+    #     continue
+
     print("Processing File detected: {}".format(filepath))
     print("New file: {}".format(new_filepath))
 
@@ -87,14 +85,16 @@ for filepath, filesize in target_files:
     print('Starting Replacement. Source Size is: {}'.format(filesize))
 
     replacements = [
-                     (r'^( *)?(\r\n)', 's,'), # Empty Lines
-                     (r'self,', 's,'),         # self in functions signature
+                    #  (r'self,', 's,'),         # self in functions signature
                      (r' = ', '='),
                      (r', ', ','),
                      (r' # known case of __new__', ''), # Pycharm Note
                      (r' #cannot find CLR method', ''), # Pycharm Note
+                     (r'  # default', ''), # Pycharm Note
                      (r':\r\n( )+pass', r':pass'), # Pycharm Note
                      (r'"""\r\n( )+pass', r'"""'), # If has doc string, not need to keep pass
+                     (r'pass\n', r'pass'), # If has doc string, not need to keep pass
+                     (r' {4}', ' '),        # Empty Lines
                    ]
 
     new_source = source
@@ -103,11 +103,40 @@ for filepath, filesize in target_files:
 
     write_source(new_filepath, new_source)
     print('='*30)
-    if is_too_big(new_filepath):
-        print('**** File is still to big: {}'.format(os.path.getsize(new_filepath)))
-        source = read_source(new_filepath)
-        new_source = re.sub(r'"{3}((.)|(\r|\n))+?"{3}?', '', new_source)
 
-    os.rename(new_filepath, new_filepath + '.docstrings')
-    write_source(new_filepath, new_source)
-    print('Done. New Size is: {}'.format(os.path.getsize(new_filepath)))
+
+    ## WIP: Separate file into separate files
+    if is_too_big(new_filepath):
+        print('='*30)
+        print('='*30)
+        print('='*30)
+        print('WARNING: file above breaking max: {}'.format(new_filepath))
+
+        filedir = os.path.dirname(new_filepath)
+        module_name = os.path.basename(filepath).replace('.py', '_parts')
+        chunks_dir = join(filedir, module_name)
+        write_source(join(chunks_dir, '__init__.py'), '')
+
+        chunks = re.split(r'(?:\n)class ', source)
+        header = chunks.pop(0)
+        clean_source = header
+        write_source(new_filepath, clean_source)
+
+        for chunk in chunks:
+            class_source = 'class ' + chunk
+            class_name = re.search('(class )(\w+)', class_source)
+            class_name = class_name.group(2)
+            # print(class_source)
+
+            if not os.path.exists(chunks_dir):
+                os.mkdir(chunks_dir)
+
+            print(join(chunks_dir, class_name + '.py'))
+            with open(join(chunks_dir, class_name + '.py'), 'w') as fp:
+                fp.write(class_source)
+
+
+                print('>>>>>')
+                print(join(chunks_dir, '__init__.py'), '')
+                with open(new_filepath, 'a') as fp:
+                    fp.write('from {0}.{1} import {1}\n'.format(module_name, class_name))

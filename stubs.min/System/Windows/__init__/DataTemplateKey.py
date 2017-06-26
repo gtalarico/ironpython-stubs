@@ -1,0 +1,22 @@
+class DataTemplateKey(TemplateKey, ISupportInitialize):
+    """
+    Represents the resource key for the System.Windows.DataTemplate class.
+    
+    DataTemplateKey()
+    DataTemplateKey(dataType: object)
+    """
+    def __init__(self, *args): #cannot find CLR method
+        """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+        pass
+
+    @staticmethod # known case of __new__
+    def __new__(self, dataType=None):
+        """
+        __new__(cls: type)
+        __new__(cls: type, dataType: object)
+        """
+        pass
+
+    def __str__(self, *args): #cannot find CLR method
+        pass
+
