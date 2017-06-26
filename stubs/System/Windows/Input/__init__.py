@@ -1,8 +1,8 @@
 # encoding: utf-8
 # module System.Windows.Input calls itself Input
-# from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+# from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -32,9 +32,13 @@ class AccessKeyManager(object):
     def AddAccessKeyPressedHandler(element, handler):
         """
         AddAccessKeyPressedHandler(element: DependencyObject, handler: AccessKeyPressedEventHandler)
-            Adds a handler for the System.Windows.Input.AccessKeyManager.AccessKeyPressed�attached event.
+            Adds a handler for the System.Windows.Input.AccessKeyManager.AccessKeyPressed�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be added.
         """
         pass
@@ -44,7 +48,9 @@ class AccessKeyManager(object):
         """
         IsKeyRegistered(scope: object, key: str) -> bool
         
-            Indicates whether the specified key is registered as an access keys in the specified scope.
+            Indicates whether the specified key is registered as an access keys in the 
+             specified scope.
+        
         
             scope: The presentation source to query for key.
             key: The key to query.
@@ -57,7 +63,9 @@ class AccessKeyManager(object):
         """
         ProcessKey(scope: object, key: str, isMultiple: bool) -> bool
         
-            Processes the specified access keys as if a System.Windows.UIElement.KeyDown event for the key was passed to the System.Windows.Input.AccessKeyManager.
+            Processes the specified access keys as if a System.Windows.UIElement.KeyDown 
+             event for the key was passed to the System.Windows.Input.AccessKeyManager.
+        
         
             scope: The scope for the access key.
             key: The access key.
@@ -81,9 +89,13 @@ class AccessKeyManager(object):
     def RemoveAccessKeyPressedHandler(element, handler):
         """
         RemoveAccessKeyPressedHandler(element: DependencyObject, handler: AccessKeyPressedEventHandler)
-            Removes the specified System.Windows.Input.AccessKeyManager.AccessKeyPressed event handler from the specified object.
+            Removes the specified System.Windows.Input.AccessKeyManager.AccessKeyPressed 
+             event handler from the specified object.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be removed.
         """
         pass
@@ -156,7 +168,9 @@ class AccessKeyPressedEventHandler(MulticastDelegate, ICloneable, ISerializable)
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -169,7 +183,10 @@ class AccessKeyPressedEventHandler(MulticastDelegate, ICloneable, ISerializable)
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -195,10 +212,14 @@ class AccessKeyPressedEventHandler(MulticastDelegate, ICloneable, ISerializable)
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -315,7 +336,9 @@ class CanExecuteRoutedEventHandler(MulticastDelegate, ICloneable, ISerializable)
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -328,7 +351,10 @@ class CanExecuteRoutedEventHandler(MulticastDelegate, ICloneable, ISerializable)
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -354,10 +380,14 @@ class CanExecuteRoutedEventHandler(MulticastDelegate, ICloneable, ISerializable)
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -464,19 +494,25 @@ class CommandBindingCollection(object, IList, ICollection, IEnumerable):
         """
         Add(self: CommandBindingCollection, commandBinding: CommandBinding) -> int
         
-            Adds the specified System.Windows.Input.CommandBinding to this System.Windows.Input.CommandBindingCollection.
+            Adds the specified System.Windows.Input.CommandBinding to this 
+             System.Windows.Input.CommandBindingCollection.
+        
         
             commandBinding: The binding to add to the collection.
-            Returns: 0, if the operation was successful (note that this is not the index of the added item).
+            Returns: 0, if the operation was successful (note that this is not the index of the 
+             added item).
         """
         pass
 
     def AddRange(self, collection):
         """
         AddRange(self: CommandBindingCollection, collection: ICollection)
-            Adds the items of the specified System.Collections.ICollection to the end of this System.Windows.Input.CommandBindingCollection.
+            Adds the items of the specified System.Collections.ICollection to the end of 
+             this System.Windows.Input.CommandBindingCollection.
         
-            collection: The collection of items to add to the end of this System.Windows.Input.CommandBindingCollection.
+        
+            collection: The collection of items to add to the end of this 
+             System.Windows.Input.CommandBindingCollection.
         """
         pass
 
@@ -491,17 +527,23 @@ class CommandBindingCollection(object, IList, ICollection, IEnumerable):
         """
         Contains(self: CommandBindingCollection, commandBinding: CommandBinding) -> bool
         
-            Determines whether the specified System.Windows.Input.CommandBinding is in this System.Windows.Input.CommandBindingCollection.
+            Determines whether the specified System.Windows.Input.CommandBinding is in this 
+             System.Windows.Input.CommandBindingCollection.
+        
         
             commandBinding: The binding to locate in the collection.
-            Returns: true if the specified System.Windows.Input.CommandBinding is in the collection; otherwise, false.
+            Returns: true if the specified System.Windows.Input.CommandBinding is in the collection; 
+             otherwise, false.
         """
         pass
 
     def CopyTo(self, commandBindings, index):
         """
         CopyTo(self: CommandBindingCollection, commandBindings: Array[CommandBinding], index: int)
-            Copies all of the items in the System.Windows.Input.CommandBindingCollection to the specified one-dimensional array, starting at the specified index of the target array.
+            Copies all of the items in the System.Windows.Input.CommandBindingCollection to 
+             the specified one-dimensional array, starting at the specified index of the 
+             target array.
+        
         
             commandBindings: The array into which the collection is copied.
             index: The index position in commandBindings at which copying starts.
@@ -512,7 +554,9 @@ class CommandBindingCollection(object, IList, ICollection, IEnumerable):
         """
         GetEnumerator(self: CommandBindingCollection) -> IEnumerator
         
-            Gets an enumerator that iterates through this System.Windows.Input.CommandBindingCollection.
+            Gets an enumerator that iterates through this 
+             System.Windows.Input.CommandBindingCollection.
+        
             Returns: The enumerator for this collection.
         """
         pass
@@ -521,7 +565,10 @@ class CommandBindingCollection(object, IList, ICollection, IEnumerable):
         """
         IndexOf(self: CommandBindingCollection, value: CommandBinding) -> int
         
-            Searches for the first occurrence of the specified System.Windows.Input.CommandBinding in this System.Windows.Input.CommandBindingCollection.
+            Searches for the first occurrence of the specified 
+             System.Windows.Input.CommandBinding in this 
+             System.Windows.Input.CommandBindingCollection.
+        
         
             value: The binding to locate in the collection.
             Returns: The index of the first occurrence of value, if found; otherwise, -1.
@@ -531,7 +578,9 @@ class CommandBindingCollection(object, IList, ICollection, IEnumerable):
     def Insert(self, index, commandBinding):
         """
         Insert(self: CommandBindingCollection, index: int, commandBinding: CommandBinding)
-            Inserts the specified System.Windows.Input.CommandBinding into this System.Windows.Input.CommandBindingCollection at the specified index.
+            Inserts the specified System.Windows.Input.CommandBinding into this 
+             System.Windows.Input.CommandBindingCollection at the specified index.
+        
         
             index: The zero-based index at which to insert commandBinding
             commandBinding: The binding to insert.
@@ -541,7 +590,10 @@ class CommandBindingCollection(object, IList, ICollection, IEnumerable):
     def Remove(self, commandBinding):
         """
         Remove(self: CommandBindingCollection, commandBinding: CommandBinding)
-            Removes the first occurrence of the specified System.Windows.Input.CommandBinding from this System.Windows.Input.CommandBindingCollection.
+            Removes the first occurrence of the specified 
+             System.Windows.Input.CommandBinding from this 
+             System.Windows.Input.CommandBindingCollection.
+        
         
             commandBinding: The binding to remove.
         """
@@ -550,7 +602,9 @@ class CommandBindingCollection(object, IList, ICollection, IEnumerable):
     def RemoveAt(self, index):
         """
         RemoveAt(self: CommandBindingCollection, index: int)
-            Removes the specified System.Windows.Input.CommandBinding at the specified index of this System.Windows.Input.CommandBindingCollection.
+            Removes the specified System.Windows.Input.CommandBinding at the specified 
+             index of this System.Windows.Input.CommandBindingCollection.
+        
         
             index: The zero-based index of the System.Windows.Input.CommandBinding to remove.
         """
@@ -567,7 +621,8 @@ class CommandBindingCollection(object, IList, ICollection, IEnumerable):
             Determines whether the System.Collections.IList contains a specific value.
         
             value: The object to locate in the System.Collections.IList.
-            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, false.
+            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, 
+             false.
         """
         pass
 
@@ -650,9 +705,13 @@ class CommandConverter(TypeConverter):
         """
         CanConvertFrom(self: CommandConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Determines whether an object of the specified type can be converted to an instance of System.Windows.Input.ICommand, using the specified context.
+            Determines whether an object of the specified type can be converted to an 
+             instance of System.Windows.Input.ICommand, using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             sourceType: The type being evaluated for conversion.
             Returns: true if sourceType is of type System.String; otherwise, false.
         """
@@ -662,9 +721,13 @@ class CommandConverter(TypeConverter):
         """
         CanConvertTo(self: CommandConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Determines whether an instance of System.Windows.Input.ICommand can be converted to the specified type, using the specified context.
+            Determines whether an instance of System.Windows.Input.ICommand can be 
+             converted to the specified type, using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             destinationType: The type being evaluated for conversion.
             Returns: true if destinationType is of type System.String; otherwise, false.
         """
@@ -674,9 +737,13 @@ class CommandConverter(TypeConverter):
         """
         ConvertFrom(self: CommandConverter, context: ITypeDescriptorContext, culture: CultureInfo, source: object) -> object
         
-            Attempts to convert the specified object to an System.Windows.Input.ICommand, using the specified context.
+            Attempts to convert the specified object to an System.Windows.Input.ICommand, 
+             using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             culture: Culture specific information.
             source: The object to convert.
             Returns: The converted object, or null if source is an empty string.
@@ -687,9 +754,13 @@ class CommandConverter(TypeConverter):
         """
         ConvertTo(self: CommandConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object, destinationType: Type) -> object
         
-            Attempts to convert an System.Windows.Input.ICommand to the specified type, using the specified context.
+            Attempts to convert an System.Windows.Input.ICommand to the specified type, 
+             using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             culture: Culture specific information.
             value: The object to convert.
             destinationType: The type to convert the object to.
@@ -704,7 +775,9 @@ class CommandManager(object):
     def AddCanExecuteHandler(element, handler):
         """
         AddCanExecuteHandler(element: UIElement, handler: CanExecuteRoutedEventHandler)
-            Attaches the specified System.Windows.Input.CanExecuteRoutedEventHandler to the specified element.
+            Attaches the specified System.Windows.Input.CanExecuteRoutedEventHandler to the 
+             specified element.
+        
         
             element: The element to attach handler to.
             handler: The can execute handler.
@@ -715,7 +788,9 @@ class CommandManager(object):
     def AddExecutedHandler(element, handler):
         """
         AddExecutedHandler(element: UIElement, handler: ExecutedRoutedEventHandler)
-            Attaches the specified System.Windows.Input.ExecutedRoutedEventHandler to the specified element.
+            Attaches the specified System.Windows.Input.ExecutedRoutedEventHandler to the 
+             specified element.
+        
         
             element: The element to attach handler to.
             handler: The executed handler.
@@ -726,7 +801,9 @@ class CommandManager(object):
     def AddPreviewCanExecuteHandler(element, handler):
         """
         AddPreviewCanExecuteHandler(element: UIElement, handler: CanExecuteRoutedEventHandler)
-            Attaches the specified System.Windows.Input.CanExecuteRoutedEventHandler to the specified element.
+            Attaches the specified System.Windows.Input.CanExecuteRoutedEventHandler to the 
+             specified element.
+        
         
             element: The element to attach handler to.
             handler: The can execute handler.
@@ -737,7 +814,9 @@ class CommandManager(object):
     def AddPreviewExecutedHandler(element, handler):
         """
         AddPreviewExecutedHandler(element: UIElement, handler: ExecutedRoutedEventHandler)
-            Attaches the specified System.Windows.Input.ExecutedRoutedEventHandler to the specified element.
+            Attaches the specified System.Windows.Input.ExecutedRoutedEventHandler to the 
+             specified element.
+        
         
             element: The element to attach handler to.
             handler: The can execute handler.
@@ -748,7 +827,8 @@ class CommandManager(object):
     def InvalidateRequerySuggested():
         """
         InvalidateRequerySuggested()
-            Forces the System.Windows.Input.CommandManager to raise the System.Windows.Input.CommandManager.RequerySuggested event.
+            Forces the System.Windows.Input.CommandManager to raise the 
+             System.Windows.Input.CommandManager.RequerySuggested event.
         """
         pass
 
@@ -767,7 +847,9 @@ class CommandManager(object):
     def RegisterClassInputBinding(type, inputBinding):
         """
         RegisterClassInputBinding(type: Type, inputBinding: InputBinding)
-            Registers the specified System.Windows.Input.InputBinding with the specified type.
+            Registers the specified System.Windows.Input.InputBinding with the specified 
+             type.
+        
         
             type: The type to register inputBinding with.
             inputBinding: The input binding to register.
@@ -778,7 +860,9 @@ class CommandManager(object):
     def RemoveCanExecuteHandler(element, handler):
         """
         RemoveCanExecuteHandler(element: UIElement, handler: CanExecuteRoutedEventHandler)
-            Detaches the specified System.Windows.Input.CanExecuteRoutedEventHandler from the specified element.
+            Detaches the specified System.Windows.Input.CanExecuteRoutedEventHandler from 
+             the specified element.
+        
         
             element: The element to remove handler from.
             handler: The can execute handler.
@@ -789,7 +873,9 @@ class CommandManager(object):
     def RemoveExecutedHandler(element, handler):
         """
         RemoveExecutedHandler(element: UIElement, handler: ExecutedRoutedEventHandler)
-            Detaches the specified System.Windows.Input.ExecutedRoutedEventHandler from the specified element.
+            Detaches the specified System.Windows.Input.ExecutedRoutedEventHandler from the 
+             specified element.
+        
         
             element: The element to remove handler from.
             handler: The executed handler.
@@ -800,7 +886,9 @@ class CommandManager(object):
     def RemovePreviewCanExecuteHandler(element, handler):
         """
         RemovePreviewCanExecuteHandler(element: UIElement, handler: CanExecuteRoutedEventHandler)
-            Detaches the specified System.Windows.Input.CanExecuteRoutedEventHandler from the specified element.
+            Detaches the specified System.Windows.Input.CanExecuteRoutedEventHandler from 
+             the specified element.
+        
         
             element: The element to remove handler from.
             handler: The can execute handler.
@@ -811,7 +899,9 @@ class CommandManager(object):
     def RemovePreviewExecutedHandler(element, handler):
         """
         RemovePreviewExecutedHandler(element: UIElement, handler: ExecutedRoutedEventHandler)
-            Detaches the specified System.Windows.Input.ExecutedRoutedEventHandler from the specified element.
+            Detaches the specified System.Windows.Input.ExecutedRoutedEventHandler from the 
+             specified element.
+        
         
             element: The element to remove handler from.
             handler: The executed handler.
@@ -883,18 +973,11 @@ class Cursor(object, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -929,9 +1012,13 @@ class CursorConverter(TypeConverter):
         """
         CanConvertFrom(self: CursorConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Determines whether an object of the specified type can be converted to an instance of System.Windows.Input.Cursor, using the specified context.
+            Determines whether an object of the specified type can be converted to an 
+             instance of System.Windows.Input.Cursor, using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             sourceType: The type being evaluated for conversion.
             Returns: true if sourceType is of type System.String; otherwise, false.
         """
@@ -941,9 +1028,13 @@ class CursorConverter(TypeConverter):
         """
         CanConvertTo(self: CursorConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Determines whether an instance of System.Windows.Input.Cursor can be converted to the specified type, using the specified context.
+            Determines whether an instance of System.Windows.Input.Cursor can be converted 
+             to the specified type, using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             destinationType: The type being evaluated for conversion.
             Returns: true if destinationType is of type System.String; otherwise, false.
         """
@@ -953,9 +1044,13 @@ class CursorConverter(TypeConverter):
         """
         ConvertFrom(self: CursorConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object) -> object
         
-            Attempts to convert the specified object to a System.Windows.Input.Cursor, using the specified context.
+            Attempts to convert the specified object to a System.Windows.Input.Cursor, 
+             using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             culture: Culture specific information.
             value: The object to convert.
             Returns: The converted object, or null if value is an empty string.
@@ -966,9 +1061,13 @@ class CursorConverter(TypeConverter):
         """
         ConvertTo(self: CursorConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object, destinationType: Type) -> object
         
-            Attempts to convert a System.Windows.Input.Cursor to the specified type, using the specified context.
+            Attempts to convert a System.Windows.Input.Cursor to the specified type, using 
+             the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             culture: Culture specific information.
             value: The object to convert.
             destinationType: The type to convert the object to.
@@ -982,7 +1081,9 @@ class CursorConverter(TypeConverter):
         
             Gets a collection of standard cursor values, using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             Returns: A collection that holds a standard set of valid values.
         """
         pass
@@ -991,9 +1092,13 @@ class CursorConverter(TypeConverter):
         """
         GetStandardValuesSupported(self: CursorConverter, context: ITypeDescriptorContext) -> bool
         
-            Determines whether this object supports a standard set of values that can be picked from a list, using the specified context.
+            Determines whether this object supports a standard set of values that can be 
+             picked from a list, using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             Returns: Always returns true.
         """
         pass
@@ -1134,7 +1239,9 @@ class ExecutedRoutedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -1147,7 +1254,10 @@ class ExecutedRoutedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -1173,10 +1283,14 @@ class ExecutedRoutedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -1222,7 +1336,9 @@ class FocusManager(object):
         """
         GetFocusScope(element: DependencyObject) -> DependencyObject
         
-            Determines the closest ancestor of the specified element that has System.Windows.Input.FocusManager.IsFocusScope set to true.
+            Determines the closest ancestor of the specified element that has 
+             System.Windows.Input.FocusManager.IsFocusScope set to true.
+        
         
             element: The element to get the closest focus scope for.
             Returns: The focus scope for the specified element.
@@ -1234,10 +1350,13 @@ class FocusManager(object):
         """
         GetIsFocusScope(element: DependencyObject) -> bool
         
-            Determines whether the specified System.Windows.DependencyObject is a focus scope.
+            Determines whether the specified System.Windows.DependencyObject is a focus 
+             scope.
+        
         
             element: The element from which to read the attached property.
-            Returns: true if System.Windows.Input.FocusManager.IsFocusScope is set to true on the specified element; otherwise, false.
+            Returns: true if System.Windows.Input.FocusManager.IsFocusScope is set to true on the 
+             specified element; otherwise, false.
         """
         pass
 
@@ -1257,7 +1376,9 @@ class FocusManager(object):
         SetFocusedElement(element: DependencyObject, value: IInputElement)
             Sets logical focus on the specified element.
         
-            element: The focus scope in which to make the specified element the System.Windows.Input.FocusManager.FocusedElement.
+            element: The focus scope in which to make the specified element the 
+             System.Windows.Input.FocusManager.FocusedElement.
+        
             value: The element to give logical focus to.
         """
         pass
@@ -1435,7 +1556,9 @@ class IManipulator:
         
             Returns the position of the System.Windows.Input.IManipulator object.
         
-            relativeTo: The element to use as the frame of reference for calculating the position of the System.Windows.Input.IManipulator.
+            relativeTo: The element to use as the frame of reference for calculating the position of 
+             the System.Windows.Input.IManipulator.
+        
             Returns: The position of the System.Windows.Input.IManipulator object.
         """
         pass
@@ -1716,18 +1839,27 @@ class InputBinding(Freezable, ISealable, ICommandSource):
         """
         FreezeCore(self: Freezable, isChecking: bool) -> bool
         
-            Makes the System.Windows.Freezable object unmodifiable or tests whether it can be made unmodifiable.
+            Makes the System.Windows.Freezable object unmodifiable or tests whether it can 
+             be made unmodifiable.
         
-            isChecking: true to return an indication of whether the object can be frozen (without actually freezing it); false to actually freeze the object.
-            Returns: If isChecking is true, this method returns true if the System.Windows.Freezable can be made unmodifiable, or false if it cannot be made unmodifiable. If isChecking is false, this method returns true if the 
-             if the specified System.Windows.Freezable is now unmodifiable, or false if it cannot be made unmodifiable.
+        
+            isChecking: true to return an indication of whether the object can be frozen (without 
+             actually freezing it); false to actually freeze the object.
+        
+            Returns: If isChecking is true, this method returns true if the System.Windows.Freezable 
+             can be made unmodifiable, or false if it cannot be made unmodifiable. If 
+             isChecking is false, this method returns true if the if the specified 
+             System.Windows.Freezable is now unmodifiable, or false if it cannot be made 
+             unmodifiable.
         """
         pass
 
     def GetAsFrozenCore(self, *args): #cannot find CLR method
         """
         GetAsFrozenCore(self: InputBinding, sourceFreezable: Freezable)
-            Makes the instance a frozen clone of the specified System.Windows.Freezable by using base (non-animated) property values.
+            Makes the instance a frozen clone of the specified System.Windows.Freezable by 
+             using base (non-animated) property values.
+        
         
             sourceFreezable: The object to clone.
         """
@@ -1736,7 +1868,10 @@ class InputBinding(Freezable, ISealable, ICommandSource):
     def GetCurrentValueAsFrozenCore(self, *args): #cannot find CLR method
         """
         GetCurrentValueAsFrozenCore(self: InputBinding, sourceFreezable: Freezable)
-            Makes the current instance a frozen clone of the specified System.Windows.Freezable. If the object has animated dependency properties, their current animated values are copied.
+            Makes the current instance a frozen clone of the specified 
+             System.Windows.Freezable. If the object has animated dependency properties, 
+             their current animated values are copied.
+        
         
             sourceFreezable: The object to clone.
         """
@@ -1752,13 +1887,17 @@ class InputBinding(Freezable, ISealable, ICommandSource):
     def OnFreezablePropertyChanged(self, *args): #cannot find CLR method
         """
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject, property: DependencyProperty)
-            This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+            This member supports the Windows Presentation Foundation (WPF) infrastructure 
+             and is not intended to be used directly from your code.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
             property: The property that changed.
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject)
-            Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+            Ensures that appropriate context pointers are established for a 
+             System.Windows.DependencyObjectType data member that has just been set.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
@@ -1768,19 +1907,25 @@ class InputBinding(Freezable, ISealable, ICommandSource):
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: Freezable, e: DependencyPropertyChangedEventArgs)
-            Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-             System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+            Overrides the System.Windows.DependencyObject implementation of 
+             System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+             rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+             handlers in response to a changing dependency property of type 
+             System.Windows.Freezable.
         
         
-            e: Event data that contains information about which property changed, and its old and new values.
+            e: Event data that contains information about which property changed, and its old 
+             and new values.
         """
         pass
 
     def ReadPreamble(self, *args): #cannot find CLR method
         """
         ReadPreamble(self: Freezable)
-            Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-             not dependency properties.
+            Ensures that the System.Windows.Freezable is being accessed from a valid 
+             thread. Inheritors of System.Windows.Freezable must call this method at the 
+             beginning of any API that reads data members that are not dependency 
+             properties.
         """
         pass
 
@@ -1788,26 +1933,42 @@ class InputBinding(Freezable, ISealable, ICommandSource):
         """
         ShouldSerializeProperty(self: DependencyObject, dp: DependencyProperty) -> bool
         
-            Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+            Returns a value that indicates whether serialization processes should serialize 
+             the value for the provided dependency property.
+        
         
             dp: The identifier for the dependency property that should be serialized.
-            Returns: true if the dependency property that is supplied should be value-serialized; otherwise, false.
+            Returns: true if the dependency property that is supplied should be value-serialized; 
+             otherwise, false.
+        
+        ShouldSerializeProperty(self: Window_16$17, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Label_17$18, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: TextBox_18$19, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Button_19$20, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: CheckBox_20$21, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: ComboBox_21$22, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Separator_22$23, dp: DependencyProperty) -> bool
         """
         pass
 
     def WritePostscript(self, *args): #cannot find CLR method
         """
         WritePostscript(self: Freezable)
-            Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-             this method at the end of any API that modifies class members that are not stored as dependency properties.
+            Raises the System.Windows.Freezable.Changed event for the 
+             System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+             method. Classes that derive from System.Windows.Freezable should call this 
+             method at the end of any API that modifies class members that are not stored as 
+             dependency properties.
         """
         pass
 
     def WritePreamble(self, *args): #cannot find CLR method
         """
         WritePreamble(self: Freezable)
-            Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-             API that writes to data members that are not dependency properties.
+            Verifies that the System.Windows.Freezable is not frozen and that it is being 
+             accessed from a valid threading context. System.Windows.Freezable inheritors 
+             should call this method at the beginning of any API that writes to data members 
+             that are not dependency properties.
         """
         pass
 
@@ -1872,19 +2033,26 @@ class InputBindingCollection(object, IList, ICollection, IEnumerable):
         """
         Add(self: InputBindingCollection, inputBinding: InputBinding) -> int
         
-            Adds the specified System.Windows.Input.InputBinding to this System.Windows.Input.InputBindingCollection.
+            Adds the specified System.Windows.Input.InputBinding to this 
+             System.Windows.Input.InputBindingCollection.
+        
         
             inputBinding: The binding to add to the collection.
-            Returns: Always returns 0. This deviates from the standard System.Collections.IList implementation for Add, which should return the index where the new item was added to the collection.
+            Returns: Always returns 0. This deviates from the standard System.Collections.IList 
+             implementation for Add, which should return the index where the new item was 
+             added to the collection.
         """
         pass
 
     def AddRange(self, collection):
         """
         AddRange(self: InputBindingCollection, collection: ICollection)
-            Adds the items of the specified System.Collections.ICollection to the end of this System.Windows.Input.InputBindingCollection
+            Adds the items of the specified System.Collections.ICollection to the end of 
+             this System.Windows.Input.InputBindingCollection
         
-            collection: The collection of items to add to the end of this System.Windows.Input.InputBindingCollection.
+        
+            collection: The collection of items to add to the end of this 
+             System.Windows.Input.InputBindingCollection.
         """
         pass
 
@@ -1899,17 +2067,23 @@ class InputBindingCollection(object, IList, ICollection, IEnumerable):
         """
         Contains(self: InputBindingCollection, key: InputBinding) -> bool
         
-            Determines whether the specified System.Windows.Input.InputBinding is in this System.Windows.Input.InputBindingCollection
+            Determines whether the specified System.Windows.Input.InputBinding is in this 
+             System.Windows.Input.InputBindingCollection
+        
         
             key: The binding to locate in the collection.
-            Returns: true if the specified System.Windows.Input.InputBinding is in the collection; otherwise, false.
+            Returns: true if the specified System.Windows.Input.InputBinding is in the collection; 
+             otherwise, false.
         """
         pass
 
     def CopyTo(self, inputBindings, index):
         """
         CopyTo(self: InputBindingCollection, inputBindings: Array[InputBinding], index: int)
-            Copies all of the items in the System.Windows.Input.InputBindingCollection to the specified one-dimensional array, starting at the specified index of the target array.
+            Copies all of the items in the System.Windows.Input.InputBindingCollection to 
+             the specified one-dimensional array, starting at the specified index of the 
+             target array.
+        
         
             inputBindings: The array into which the collection is copied.
             index: The index position in inputBindings at which copying starts.
@@ -1920,7 +2094,9 @@ class InputBindingCollection(object, IList, ICollection, IEnumerable):
         """
         GetEnumerator(self: InputBindingCollection) -> IEnumerator
         
-            Gets an enumerator that iterates through this System.Windows.Input.InputBindingCollection.
+            Gets an enumerator that iterates through this 
+             System.Windows.Input.InputBindingCollection.
+        
             Returns: The enumerator for this collection.
         """
         pass
@@ -1929,7 +2105,10 @@ class InputBindingCollection(object, IList, ICollection, IEnumerable):
         """
         IndexOf(self: InputBindingCollection, value: InputBinding) -> int
         
-            Searches for the first occurrence of the specified System.Windows.Input.InputBinding in his System.Windows.Input.InputBindingCollection.
+            Searches for the first occurrence of the specified 
+             System.Windows.Input.InputBinding in his 
+             System.Windows.Input.InputBindingCollection.
+        
         
             value: The object to locate in the collection.
                 """
@@ -1938,7 +2117,9 @@ class InputBindingCollection(object, IList, ICollection, IEnumerable):
     def Insert(self, index, inputBinding):
         """
         Insert(self: InputBindingCollection, index: int, inputBinding: InputBinding)
-            Inserts the specified System.Windows.Input.InputBinding into this System.Windows.Input.InputBindingCollection at the specified index.
+            Inserts the specified System.Windows.Input.InputBinding into this 
+             System.Windows.Input.InputBindingCollection at the specified index.
+        
         
             index: The zero-based index at which to insert inputBinding.
             inputBinding: The binding to insert.
@@ -1948,7 +2129,9 @@ class InputBindingCollection(object, IList, ICollection, IEnumerable):
     def Remove(self, inputBinding):
         """
         Remove(self: InputBindingCollection, inputBinding: InputBinding)
-            Removes the first occurrence of the specified System.Windows.Input.InputBinding from this System.Windows.Input.InputBindingCollection.
+            Removes the first occurrence of the specified System.Windows.Input.InputBinding 
+             from this System.Windows.Input.InputBindingCollection.
+        
         
             inputBinding: The binding to remove.
         """
@@ -1957,7 +2140,9 @@ class InputBindingCollection(object, IList, ICollection, IEnumerable):
     def RemoveAt(self, index):
         """
         RemoveAt(self: InputBindingCollection, index: int)
-            Removes the specified System.Windows.Input.InputBinding at the specified index of this System.Windows.Input.InputBindingCollection.
+            Removes the specified System.Windows.Input.InputBinding at the specified index 
+             of this System.Windows.Input.InputBindingCollection.
+        
         
             index: The zero-based index of the System.Windows.Input.InputBinding to remove.
         """
@@ -1974,7 +2159,8 @@ class InputBindingCollection(object, IList, ICollection, IEnumerable):
             Determines whether the System.Collections.IList contains a specific value.
         
             value: The object to locate in the System.Collections.IList.
-            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, false.
+            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, 
+             false.
         """
         pass
 
@@ -2106,7 +2292,9 @@ class InputEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -2119,7 +2307,10 @@ class InputEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -2145,10 +2336,14 @@ class InputEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -2171,7 +2366,10 @@ class InputGesture(object):
         """
         Matches(self: InputGesture, targetElement: object, inputEventArgs: InputEventArgs) -> bool
         
-            When overridden in a derived class, determines whether the specified System.Windows.Input.InputGesture matches the input associated with the specified System.Windows.Input.InputEventArgs object.
+            When overridden in a derived class, determines whether the specified 
+             System.Windows.Input.InputGesture matches the input associated with the 
+             specified System.Windows.Input.InputEventArgs object.
+        
         
             targetElement: The target of the command.
             inputEventArgs: The input event data to compare this gesture to.
@@ -2191,19 +2389,25 @@ class InputGestureCollection(object, IList, ICollection, IEnumerable):
         """
         Add(self: InputGestureCollection, inputGesture: InputGesture) -> int
         
-            Adds the specified System.Windows.Input.InputGesture to this System.Windows.Input.InputGestureCollection.
+            Adds the specified System.Windows.Input.InputGesture to this 
+             System.Windows.Input.InputGestureCollection.
+        
         
             inputGesture: The gesture to add to the collection.
-            Returns: 0, if the operation was successful (note that this is not the index of the added item).
+            Returns: 0, if the operation was successful (note that this is not the index of the 
+             added item).
         """
         pass
 
     def AddRange(self, collection):
         """
         AddRange(self: InputGestureCollection, collection: ICollection)
-            Adds the elements of the specified System.Collections.ICollection to the end of this System.Windows.Input.InputGestureCollection.
+            Adds the elements of the specified System.Collections.ICollection to the end of 
+             this System.Windows.Input.InputGestureCollection.
         
-            collection: The collection of items to add to the end of this System.Windows.Input.InputGestureCollection.
+        
+            collection: The collection of items to add to the end of this 
+             System.Windows.Input.InputGestureCollection.
         """
         pass
 
@@ -2218,7 +2422,9 @@ class InputGestureCollection(object, IList, ICollection, IEnumerable):
         """
         Contains(self: InputGestureCollection, key: InputGesture) -> bool
         
-            Determines whether the specified System.Windows.Input.InputGesture is in the collection.
+            Determines whether the specified System.Windows.Input.InputGesture is in the 
+             collection.
+        
         
             key: The gesture to locate in the collection.
             Returns: true if the gesture is in the collection; otherwise, false.
@@ -2228,7 +2434,10 @@ class InputGestureCollection(object, IList, ICollection, IEnumerable):
     def CopyTo(self, inputGestures, index):
         """
         CopyTo(self: InputGestureCollection, inputGestures: Array[InputGesture], index: int)
-            Copies all of the items in the System.Windows.Input.InputGestureCollection to the specified one-dimensional array, starting at the specified index of the target array.
+            Copies all of the items in the System.Windows.Input.InputGestureCollection to 
+             the specified one-dimensional array, starting at the specified index of the 
+             target array.
+        
         
             inputGestures: An array into which the collection is copied.
             index: The index position in the inputGestures at which copying begins.
@@ -2239,7 +2448,9 @@ class InputGestureCollection(object, IList, ICollection, IEnumerable):
         """
         GetEnumerator(self: InputGestureCollection) -> IEnumerator
         
-            Gets an enumerator that iterates through this System.Windows.Input.InputGestureCollection.
+            Gets an enumerator that iterates through this 
+             System.Windows.Input.InputGestureCollection.
+        
             Returns: The enumerator for this collection.
         """
         pass
@@ -2248,7 +2459,10 @@ class InputGestureCollection(object, IList, ICollection, IEnumerable):
         """
         IndexOf(self: InputGestureCollection, value: InputGesture) -> int
         
-            Searches for the first occurrence of the specified System.Windows.Input.InputGesture in this System.Windows.Input.InputGestureCollection.
+            Searches for the first occurrence of the specified 
+             System.Windows.Input.InputGesture in this 
+             System.Windows.Input.InputGestureCollection.
+        
         
             value: The gesture to locate in the collection.
             Returns: The index of the first occurrence of value, if found; otherwise, -1.
@@ -2258,7 +2472,9 @@ class InputGestureCollection(object, IList, ICollection, IEnumerable):
     def Insert(self, index, inputGesture):
         """
         Insert(self: InputGestureCollection, index: int, inputGesture: InputGesture)
-            Inserts the specified System.Windows.Input.InputGesture into this System.Windows.Input.InputGestureCollection at the specified index.
+            Inserts the specified System.Windows.Input.InputGesture into this 
+             System.Windows.Input.InputGestureCollection at the specified index.
+        
         
             index: Index at which to insert inputGesture.
             inputGesture: The gesture to insert.
@@ -2268,7 +2484,9 @@ class InputGestureCollection(object, IList, ICollection, IEnumerable):
     def Remove(self, inputGesture):
         """
         Remove(self: InputGestureCollection, inputGesture: InputGesture)
-            Removes the first occurrence of the specified System.Windows.Input.InputGesture from this System.Windows.Input.InputGestureCollection.
+            Removes the first occurrence of the specified System.Windows.Input.InputGesture 
+             from this System.Windows.Input.InputGestureCollection.
+        
         
             inputGesture: The gesture to remove.
         """
@@ -2277,7 +2495,9 @@ class InputGestureCollection(object, IList, ICollection, IEnumerable):
     def RemoveAt(self, index):
         """
         RemoveAt(self: InputGestureCollection, index: int)
-            Removes the specified System.Windows.Input.InputGesture at the specified index of this System.Windows.Input.InputGestureCollection.
+            Removes the specified System.Windows.Input.InputGesture at the specified index 
+             of this System.Windows.Input.InputGestureCollection.
+        
         
             index: The zero-based index of the gesture to remove.
         """
@@ -2301,7 +2521,8 @@ class InputGestureCollection(object, IList, ICollection, IEnumerable):
             Determines whether the System.Collections.IList contains a specific value.
         
             value: The object to locate in the System.Collections.IList.
-            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, false.
+            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, 
+             false.
         """
         pass
 
@@ -2444,7 +2665,9 @@ class InputLanguageEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -2457,7 +2680,10 @@ class InputLanguageEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -2483,10 +2709,14 @@ class InputLanguageEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -2510,10 +2740,14 @@ class InputLanguageManager(DispatcherObject):
         """
         GetInputLanguage(target: DependencyObject) -> CultureInfo
         
-            Returns the value of the System.Windows.Input.InputLanguageManager.InputLanguage �attached property for a specified dependency object.
+            Returns the value of the 
+             System.Windows.Input.InputLanguageManager.InputLanguage �attached property for 
+             a specified dependency object.
+        
         
             target: The dependency object for which to retrieve the input language.
-            Returns: A System.Globalization.CultureInfo object representing the input language for the specified dependency object.
+            Returns: A System.Globalization.CultureInfo object representing the input language for 
+             the specified dependency object.
         """
         pass
 
@@ -2522,29 +2756,42 @@ class InputLanguageManager(DispatcherObject):
         """
         GetRestoreInputLanguage(target: DependencyObject) -> bool
         
-            Returns the value of System.Windows.Input.InputLanguageManager.RestoreInputLanguage �attached property for a specified dependency object.
+            Returns the value of 
+             System.Windows.Input.InputLanguageManager.RestoreInputLanguage �attached 
+             property for a specified dependency object.
         
-            target: The dependency object for which to retrieve the value of System.Windows.Input.InputLanguageManager.RestoreInputLanguage.
-            Returns: The current value of System.Windows.Input.InputLanguageManager.RestoreInputLanguage for the specified dependency object.
+        
+            target: The dependency object for which to retrieve the value of 
+             System.Windows.Input.InputLanguageManager.RestoreInputLanguage.
+        
+            Returns: The current value of 
+             System.Windows.Input.InputLanguageManager.RestoreInputLanguage for the 
+             specified dependency object.
         """
         pass
 
     def RegisterInputLanguageSource(self, inputLanguageSource):
         """
         RegisterInputLanguageSource(self: InputLanguageManager, inputLanguageSource: IInputLanguageSource)
-            Registers an input language source with the System.Windows.Input.InputLanguageManager.
+            Registers an input language source with the 
+             System.Windows.Input.InputLanguageManager.
         
-            inputLanguageSource: An object that specifies the input language to register.  This object must implement the System.Windows.Input.IInputLanguageSource interface.
+        
+            inputLanguageSource: An object that specifies the input language to register.  This object must 
+             implement the System.Windows.Input.IInputLanguageSource interface.
         """
         pass
 
     def ReportInputLanguageChanged(self, newLanguageId, previousLanguageId):
         """
         ReportInputLanguageChanged(self: InputLanguageManager, newLanguageId: CultureInfo, previousLanguageId: CultureInfo)
-            Report the completion of a change of input language to the System.Windows.Input.InputLanguageManager.
+            Report the completion of a change of input language to the 
+             System.Windows.Input.InputLanguageManager.
+        
         
             newLanguageId: A System.Globalization.CultureInfo object representing the new input language.
-            previousLanguageId: A System.Globalization.CultureInfo object representing the previous input language.
+            previousLanguageId: A System.Globalization.CultureInfo object representing the previous input 
+             language.
         """
         pass
 
@@ -2552,11 +2799,16 @@ class InputLanguageManager(DispatcherObject):
         """
         ReportInputLanguageChanging(self: InputLanguageManager, newLanguageId: CultureInfo, previousLanguageId: CultureInfo) -> bool
         
-            Report the initiation of a change of input language to the System.Windows.Input.InputLanguageManager.
+            Report the initiation of a change of input language to the 
+             System.Windows.Input.InputLanguageManager.
+        
         
             newLanguageId: A System.Globalization.CultureInfo object representing the new input language.
-            previousLanguageId: A System.Globalization.CultureInfo object representing the previous input language.
-            Returns: true to indicate that the reported change of input language was accepted; otherwise, false.
+            previousLanguageId: A System.Globalization.CultureInfo object representing the previous input 
+             language.
+        
+            Returns: true to indicate that the reported change of input language was accepted; 
+             otherwise, false.
         """
         pass
 
@@ -2564,10 +2816,15 @@ class InputLanguageManager(DispatcherObject):
     def SetInputLanguage(target, inputLanguage):
         """
         SetInputLanguage(target: DependencyObject, inputLanguage: CultureInfo)
-            Sets the value of the System.Windows.Input.InputLanguageManager.InputLanguage attached property on the specified dependency object.
+            Sets the value of the System.Windows.Input.InputLanguageManager.InputLanguage 
+             attached property on the specified dependency object.
         
-            target: The dependency object on which to set the System.Windows.Input.InputLanguageManager.InputLanguage attached property.
-            inputLanguage: A System.Globalization.CultureInfo object representing the new value for the System.Windows.Input.InputLanguageManager.InputLanguage attached property.
+        
+            target: The dependency object on which to set the 
+             System.Windows.Input.InputLanguageManager.InputLanguage attached property.
+        
+            inputLanguage: A System.Globalization.CultureInfo object representing the new value for the 
+             System.Windows.Input.InputLanguageManager.InputLanguage attached property.
         """
         pass
 
@@ -2575,10 +2832,17 @@ class InputLanguageManager(DispatcherObject):
     def SetRestoreInputLanguage(target, restore):
         """
         SetRestoreInputLanguage(target: DependencyObject, restore: bool)
-            Sets the value of the System.Windows.Input.InputLanguageManager.RestoreInputLanguage dependency property on the specified dependency object.
+            Sets the value of the 
+             System.Windows.Input.InputLanguageManager.RestoreInputLanguage dependency 
+             property on the specified dependency object.
         
-            target: The dependency object for which to set the value of System.Windows.Input.InputLanguageManager.RestoreInputLanguage.
-            restore: A Boolean value to set the System.Windows.Input.InputLanguageManager.RestoreInputLanguage attached property to.
+        
+            target: The dependency object for which to set the value of 
+             System.Windows.Input.InputLanguageManager.RestoreInputLanguage.
+        
+            restore: A Boolean value to set the 
+             System.Windows.Input.InputLanguageManager.RestoreInputLanguage attached 
+             property to.
         """
         pass
 
@@ -2689,10 +2953,13 @@ class InputMethod(DispatcherObject):
         """
         GetInputScope(target: DependencyObject) -> InputScope
         
-            Returns the value of the System.Windows.Input.InputMethod.InputScope �attached property for a specified dependency object.
+            Returns the value of the System.Windows.Input.InputMethod.InputScope �attached 
+             property for a specified dependency object.
+        
         
             target: The dependency object for which to retrieve the input scope.
-            Returns: An System.Windows.Input.InputScope object representing the current input scope for the specified dependency object.
+            Returns: An System.Windows.Input.InputScope object representing the current input scope 
+             for the specified dependency object.
         """
         pass
 
@@ -2701,10 +2968,15 @@ class InputMethod(DispatcherObject):
         """
         GetIsInputMethodEnabled(target: DependencyObject) -> bool
         
-            Returns the value of the System.Windows.Input.InputMethod.IsInputMethodEnabled �attached property for a specified dependency object.
+            Returns the value of the System.Windows.Input.InputMethod.IsInputMethodEnabled �
+             attached property for a specified dependency object.
         
-            target: The dependency object for which to retrieve the value of System.Windows.Input.InputMethod.IsInputMethodEnabled.
-            Returns: The current value of System.Windows.Input.InputMethod.IsInputMethodEnabled for the specified dependency object.
+        
+            target: The dependency object for which to retrieve the value of 
+             System.Windows.Input.InputMethod.IsInputMethodEnabled.
+        
+            Returns: The current value of System.Windows.Input.InputMethod.IsInputMethodEnabled for 
+             the specified dependency object.
         """
         pass
 
@@ -2713,10 +2985,16 @@ class InputMethod(DispatcherObject):
         """
         GetIsInputMethodSuspended(target: DependencyObject) -> bool
         
-            Returns the value of the System.Windows.Input.InputMethod.IsInputMethodSuspended �attached property for a specified dependency object.
+            Returns the value of the 
+             System.Windows.Input.InputMethod.IsInputMethodSuspended �attached property for 
+             a specified dependency object.
         
-            target: The dependency object for which to retrieve the value of System.Windows.Input.InputMethod.IsInputMethodSuspended.
-            Returns: The current value of System.Windows.Input.InputMethod.IsInputMethodSuspended for the specified dependency object.
+        
+            target: The dependency object for which to retrieve the value of 
+             System.Windows.Input.InputMethod.IsInputMethodSuspended.
+        
+            Returns: The current value of System.Windows.Input.InputMethod.IsInputMethodSuspended 
+             for the specified dependency object.
         """
         pass
 
@@ -2725,10 +3003,18 @@ class InputMethod(DispatcherObject):
         """
         GetPreferredImeConversionMode(target: DependencyObject) -> ImeConversionModeValues
         
-            Returns the value of the System.Windows.Input.InputMethod.PreferredImeConversionMode �attached property for a specified dependency object.
+            Returns the value of the 
+             System.Windows.Input.InputMethod.PreferredImeConversionMode �attached property 
+             for a specified dependency object.
         
-            target: The dependency object for which to retrieve the value of System.Windows.Input.InputMethod.PreferredImeConversionMode.
-            Returns: A member of the System.Windows.Input.ImeConversionModeValues enumeration specifying the current System.Windows.Input.InputMethod.PreferredImeConversionMode for the specified dependency object.
+        
+            target: The dependency object for which to retrieve the value of 
+             System.Windows.Input.InputMethod.PreferredImeConversionMode.
+        
+            Returns: A member of the System.Windows.Input.ImeConversionModeValues enumeration 
+             specifying the current 
+             System.Windows.Input.InputMethod.PreferredImeConversionMode for the specified 
+             dependency object.
         """
         pass
 
@@ -2737,10 +3023,18 @@ class InputMethod(DispatcherObject):
         """
         GetPreferredImeSentenceMode(target: DependencyObject) -> ImeSentenceModeValues
         
-            Returns the value of the System.Windows.Input.InputMethod.PreferredImeSentenceMode �attached property for a specified dependency object.
+            Returns the value of the 
+             System.Windows.Input.InputMethod.PreferredImeSentenceMode �attached property 
+             for a specified dependency object.
         
-            target: The dependency object for which to retrieve the value of System.Windows.Input.InputMethod.PreferredImeSentenceMode.
-            Returns: A member of the System.Windows.Input.ImeSentenceModeValues enumeration specifying the current System.Windows.Input.InputMethod.PreferredImeSentenceMode for the specified dependency object.
+        
+            target: The dependency object for which to retrieve the value of 
+             System.Windows.Input.InputMethod.PreferredImeSentenceMode.
+        
+            Returns: A member of the System.Windows.Input.ImeSentenceModeValues enumeration 
+             specifying the current 
+             System.Windows.Input.InputMethod.PreferredImeSentenceMode for the specified 
+             dependency object.
         """
         pass
 
@@ -2749,10 +3043,16 @@ class InputMethod(DispatcherObject):
         """
         GetPreferredImeState(target: DependencyObject) -> InputMethodState
         
-            Returns the value of the System.Windows.Input.InputMethod.PreferredImeState �attached property for a specified dependency object.
+            Returns the value of the System.Windows.Input.InputMethod.PreferredImeState �
+             attached property for a specified dependency object.
         
-            target: The dependency object for which to retrieve the value of System.Windows.Input.InputMethod.PreferredImeState.
-            Returns: A member of the System.Windows.Input.InputMethodState enumeration specifying the current System.Windows.Input.InputMethod.PreferredImeState for the specified dependency object.
+        
+            target: The dependency object for which to retrieve the value of 
+             System.Windows.Input.InputMethod.PreferredImeState.
+        
+            Returns: A member of the System.Windows.Input.InputMethodState enumeration specifying 
+             the current System.Windows.Input.InputMethod.PreferredImeState for the 
+             specified dependency object.
         """
         pass
 
@@ -2760,10 +3060,15 @@ class InputMethod(DispatcherObject):
     def SetInputScope(target, value):
         """
         SetInputScope(target: DependencyObject, value: InputScope)
-            Sets the value of the System.Windows.Input.InputMethod.InputScope attached property on the specified dependency object.
+            Sets the value of the System.Windows.Input.InputMethod.InputScope attached 
+             property on the specified dependency object.
         
-            target: The dependency object on which to set the System.Windows.Input.InputMethod.InputScope attached property.
-            value: An System.Windows.Input.InputScope object representing the new value for the System.Windows.Input.InputMethod.InputScope attached property.
+        
+            target: The dependency object on which to set the 
+             System.Windows.Input.InputMethod.InputScope attached property.
+        
+            value: An System.Windows.Input.InputScope object representing the new value for the 
+             System.Windows.Input.InputMethod.InputScope attached property.
         """
         pass
 
@@ -2771,10 +3076,15 @@ class InputMethod(DispatcherObject):
     def SetIsInputMethodEnabled(target, value):
         """
         SetIsInputMethodEnabled(target: DependencyObject, value: bool)
-            Sets the value of the System.Windows.Input.InputMethod.IsInputMethodEnabled attached property on the specified dependency object.
+            Sets the value of the System.Windows.Input.InputMethod.IsInputMethodEnabled 
+             attached property on the specified dependency object.
         
-            target: The dependency object on which to set the System.Windows.Input.InputMethod.IsInputMethodEnabled attached property.
-            value: The new value for the System.Windows.Input.InputMethod.IsInputMethodEnabled attached property.
+        
+            target: The dependency object on which to set the 
+             System.Windows.Input.InputMethod.IsInputMethodEnabled attached property.
+        
+            value: The new value for the System.Windows.Input.InputMethod.IsInputMethodEnabled 
+             attached property.
         """
         pass
 
@@ -2782,10 +3092,15 @@ class InputMethod(DispatcherObject):
     def SetIsInputMethodSuspended(target, value):
         """
         SetIsInputMethodSuspended(target: DependencyObject, value: bool)
-            Sets the value of the System.Windows.Input.InputMethod.IsInputMethodSuspended attached property on the specified dependency object.
+            Sets the value of the System.Windows.Input.InputMethod.IsInputMethodSuspended 
+             attached property on the specified dependency object.
         
-            target: The dependency object on which to set the System.Windows.Input.InputMethod.IsInputMethodSuspended attached property.
-            value: The new value for the System.Windows.Input.InputMethod.IsInputMethodSuspended attached property.
+        
+            target: The dependency object on which to set the 
+             System.Windows.Input.InputMethod.IsInputMethodSuspended attached property.
+        
+            value: The new value for the System.Windows.Input.InputMethod.IsInputMethodSuspended 
+             attached property.
         """
         pass
 
@@ -2793,10 +3108,17 @@ class InputMethod(DispatcherObject):
     def SetPreferredImeConversionMode(target, value):
         """
         SetPreferredImeConversionMode(target: DependencyObject, value: ImeConversionModeValues)
-            Sets the value of the System.Windows.Input.InputMethod.PreferredImeConversionMode attached property on the specified dependency object.
+            Sets the value of the 
+             System.Windows.Input.InputMethod.PreferredImeConversionMode attached property 
+             on the specified dependency object.
         
-            target: The dependency object on which to set the System.Windows.Input.InputMethod.PreferredImeConversionMode attached property.
-            value: A member of the System.Windows.Input.ImeConversionModeValues enumeration representing the new value for the System.Windows.Input.InputMethod.PreferredImeConversionMode attached property.
+        
+            target: The dependency object on which to set the 
+             System.Windows.Input.InputMethod.PreferredImeConversionMode attached property.
+        
+            value: A member of the System.Windows.Input.ImeConversionModeValues enumeration 
+             representing the new value for the 
+             System.Windows.Input.InputMethod.PreferredImeConversionMode attached property.
         """
         pass
 
@@ -2804,10 +3126,16 @@ class InputMethod(DispatcherObject):
     def SetPreferredImeSentenceMode(target, value):
         """
         SetPreferredImeSentenceMode(target: DependencyObject, value: ImeSentenceModeValues)
-            Sets the value of the System.Windows.Input.InputMethod.PreferredImeSentenceMode attached property on the specified dependency object.
+            Sets the value of the System.Windows.Input.InputMethod.PreferredImeSentenceMode 
+             attached property on the specified dependency object.
         
-            target: The dependency object on which to set the System.Windows.Input.InputMethod.PreferredImeSentenceMode attached property.
-            value: A member of the System.Windows.Input.ImeConversionModeValues enumeration representing the new value for the System.Windows.Input.InputMethod.PreferredImeSentenceMode attached property.
+        
+            target: The dependency object on which to set the 
+             System.Windows.Input.InputMethod.PreferredImeSentenceMode attached property.
+        
+            value: A member of the System.Windows.Input.ImeConversionModeValues enumeration 
+             representing the new value for the 
+             System.Windows.Input.InputMethod.PreferredImeSentenceMode attached property.
         """
         pass
 
@@ -2815,39 +3143,59 @@ class InputMethod(DispatcherObject):
     def SetPreferredImeState(target, value):
         """
         SetPreferredImeState(target: DependencyObject, value: InputMethodState)
-            Sets the value of the System.Windows.Input.InputMethod.PreferredImeState attached property on the specified dependency object.
+            Sets the value of the System.Windows.Input.InputMethod.PreferredImeState 
+             attached property on the specified dependency object.
         
-            target: The dependency object on which to set the System.Windows.Input.InputMethod.PreferredImeState attached property.
-            value: A member of the System.Windows.Input.ImeConversionModeValues enumeration representing the new value for the System.Windows.Input.InputMethod.PreferredImeState attached property.
+        
+            target: The dependency object on which to set the 
+             System.Windows.Input.InputMethod.PreferredImeState attached property.
+        
+            value: A member of the System.Windows.Input.ImeConversionModeValues enumeration 
+             representing the new value for the 
+             System.Windows.Input.InputMethod.PreferredImeState attached property.
         """
         pass
 
     def ShowConfigureUI(self, element=None):
         """
         ShowConfigureUI(self: InputMethod, element: UIElement)
-            Displays configuration user interface (UI) associated with the currently active keyboard text service, using a specified System.Windows.UIElement as the parent element for the configuration UI.
+            Displays configuration user interface (UI) associated with the currently active 
+             keyboard text service, using a specified System.Windows.UIElement as the parent 
+             element for the configuration UI.
         
-            element: A System.Windows.UIElement that will be used as the parent element for the configuration UI.  This parameter can be null.
+        
+            element: A System.Windows.UIElement that will be used as the parent element for the 
+             configuration UI.  This parameter can be null.
+        
         ShowConfigureUI(self: InputMethod)
-            Displays configuration user interface (UI) associated with the currently active keyboard text service.
+            Displays configuration user interface (UI) associated with the currently active 
+             keyboard text service.
         """
         pass
 
     def ShowRegisterWordUI(self, *__args):
         """
         ShowRegisterWordUI(self: InputMethod, element: UIElement, registeredText: str)
-            Displays word registration user interface (UI) associated with the currently active keyboard text service.  Accepts a specified string as the default value to register, and a specified 
-             System.Windows.UIElement as the parent element for the configuration UI.
+            Displays word registration user interface (UI) associated with the currently 
+             active keyboard text service.  Accepts a specified string as the default value 
+             to register, and a specified System.Windows.UIElement as the parent element for 
+             the configuration UI.
         
         
-            element: A System.Windows.UIElement that will be used as the parent element for the word registration UI.  This parameter can be null.
+            element: A System.Windows.UIElement that will be used as the parent element for the word 
+             registration UI.  This parameter can be null.
+        
             registeredText: A string that specifies a value to register.
         ShowRegisterWordUI(self: InputMethod, registeredText: str)
-            Displays word registration user interface (UI) associated with the currently active keyboard text service.  Accepts a specified string as the default value to register.
+            Displays word registration user interface (UI) associated with the currently 
+             active keyboard text service.  Accepts a specified string as the default value 
+             to register.
+        
         
             registeredText: A string that specifies a value to register.
         ShowRegisterWordUI(self: InputMethod)
-            Displays word registration user interface (UI) associated with the currently active keyboard text service.
+            Displays word registration user interface (UI) associated with the currently 
+             active keyboard text service.
         """
         pass
 
@@ -3029,7 +3377,9 @@ class InputMethodStateChangedEventHandler(MulticastDelegate, ICloneable, ISerial
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -3042,7 +3392,10 @@ class InputMethodStateChangedEventHandler(MulticastDelegate, ICloneable, ISerial
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -3068,10 +3421,14 @@ class InputMethodStateChangedEventHandler(MulticastDelegate, ICloneable, ISerial
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -3180,9 +3537,14 @@ class InputScopeConverter(TypeConverter):
         """
         CanConvertFrom(self: InputScopeConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Determines whether an System.Windows.Input.InputScope object can be converted from an object of a specified type.
+            Determines whether an System.Windows.Input.InputScope object can be converted 
+             from an object of a specified type.
         
-            context: An object that describes any type descriptor context.  This object must implement the System.ComponentModel.ITypeDescriptorContext interface.  This parameter may be null.
+        
+            context: An object that describes any type descriptor context.  This object must 
+             implement the System.ComponentModel.ITypeDescriptorContext interface.  This 
+             parameter may be null.
+        
             sourceType: A System.Type to check for conversion compatibility.
             Returns: true if sourceType is type System.String; otherwise, false.
         """
@@ -3192,9 +3554,14 @@ class InputScopeConverter(TypeConverter):
         """
         CanConvertTo(self: InputScopeConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Determines whether an System.Windows.Input.InputScope object can be converted to an object of a specified type.
+            Determines whether an System.Windows.Input.InputScope object can be converted 
+             to an object of a specified type.
         
-            context: An object that describes any type descriptor context.  This object must implement the System.ComponentModel.ITypeDescriptorContext interface.  This parameter may be null.
+        
+            context: An object that describes any type descriptor context.  This object must 
+             implement the System.ComponentModel.ITypeDescriptorContext interface.  This 
+             parameter may be null.
+        
             destinationType: A System.Type to check for conversion compatibility.
             Returns: true if destinationType is type System.String; otherwise, false.
         """
@@ -3204,12 +3571,20 @@ class InputScopeConverter(TypeConverter):
         """
         ConvertFrom(self: InputScopeConverter, context: ITypeDescriptorContext, culture: CultureInfo, source: object) -> object
         
-            Converts a source object (string) into an System.Windows.Input.InputScope object.
+            Converts a source object (string) into an System.Windows.Input.InputScope 
+             object.
         
-            context: An object that describes any type descriptor context.  This object must implement the System.ComponentModel.ITypeDescriptorContext interface.  This parameter may be null.
-            culture: A System.Globalization.CultureInfo object containing any cultural context for the conversion.  This parameter may be null.
+        
+            context: An object that describes any type descriptor context.  This object must 
+             implement the System.ComponentModel.ITypeDescriptorContext interface.  This 
+             parameter may be null.
+        
+            culture: A System.Globalization.CultureInfo object containing any cultural context for 
+             the conversion.  This parameter may be null.
+        
             source: A source object to convert from.  This object must be a string.
-            Returns: An System.Windows.Input.InputScope object converted from the specified source object.
+            Returns: An System.Windows.Input.InputScope object converted from the specified source 
+             object.
         """
         pass
 
@@ -3217,13 +3592,23 @@ class InputScopeConverter(TypeConverter):
         """
         ConvertTo(self: InputScopeConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object, destinationType: Type) -> object
         
-            Converts an System.Windows.Input.InputScope object into a specified object type (string).
+            Converts an System.Windows.Input.InputScope object into a specified object type 
+             (string).
         
-            context: An object that describes any type descriptor context.  This object must implement the System.ComponentModel.ITypeDescriptorContext interface.  This parameter may be null.
-            culture: A System.Globalization.CultureInfo object containing any cultural context for the conversion.  This parameter may be null.
-            value: An object to convert from.  This object must be of type System.Windows.Input.InputScope.
+        
+            context: An object that describes any type descriptor context.  This object must 
+             implement the System.ComponentModel.ITypeDescriptorContext interface.  This 
+             parameter may be null.
+        
+            culture: A System.Globalization.CultureInfo object containing any cultural context for 
+             the conversion.  This parameter may be null.
+        
+            value: An object to convert from.  This object must be of type 
+             System.Windows.Input.InputScope.
+        
             destinationType: A destination type to convert type.  This type must be string.
-            Returns: A new object of the specified type (string) converted from the given System.Windows.Input.InputScope object.
+            Returns: A new object of the specified type (string) converted from the given 
+             System.Windows.Input.InputScope object.
         """
         pass
 
@@ -3289,7 +3674,9 @@ class InputScopeNameConverter(TypeConverter):
         """
         CanConvertFrom(self: InputScopeNameConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Indicates whether an object can be converted from a given type to an instance of a System.Windows.Input.InputScopeName.
+            Indicates whether an object can be converted from a given type to an instance 
+             of a System.Windows.Input.InputScopeName.
+        
         
             context: Describes the context information of a type.
             sourceType: The source System.Type that is being queried for conversion support.
@@ -3301,10 +3688,14 @@ class InputScopeNameConverter(TypeConverter):
         """
         CanConvertTo(self: InputScopeNameConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Determines whether instances of System.Windows.Input.InputScopeName can be converted to the specified type.
+            Determines whether instances of System.Windows.Input.InputScopeName can be 
+             converted to the specified type.
+        
         
             context: Describes the context information of a type.
-            destinationType: The desired type this System.Windows.Input.InputScopeName is being evaluated to be converted to.
+            destinationType: The desired type this System.Windows.Input.InputScopeName is being evaluated to 
+             be converted to.
+        
             Returns: true if destinationType is type System.String; otherwise, false.
         """
         pass
@@ -3326,7 +3717,9 @@ class InputScopeNameConverter(TypeConverter):
         """
         ConvertTo(self: InputScopeNameConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object, destinationType: Type) -> object
         
-            Converts the specified System.Windows.Input.InputScopeName to the specified type.
+            Converts the specified System.Windows.Input.InputScopeName to the specified 
+             type.
+        
         
             context: Describes the context information of a type.
             culture: Describes the System.Globalization.CultureInfo of the type being converted.
@@ -3441,7 +3834,9 @@ class InputScopePhrase(object, IAddChild):
     def AddChild(self, value):
         """
         AddChild(self: InputScopePhrase, value: object)
-            This type or member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+            This type or member supports the Windows Presentation Foundation (WPF) 
+             infrastructure and is not intended to be used directly from your code.
+        
         
             value: An object to add as a child.
         """
@@ -3450,7 +3845,9 @@ class InputScopePhrase(object, IAddChild):
     def AddText(self, name):
         """
         AddText(self: InputScopePhrase, name: str)
-            This type or member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+            This type or member supports the Windows Presentation Foundation (WPF) 
+             infrastructure and is not intended to be used directly from your code.
+        
         
             name: A string to add.
         """
@@ -3822,18 +4219,27 @@ class KeyBinding(InputBinding, ISealable, ICommandSource):
         """
         FreezeCore(self: Freezable, isChecking: bool) -> bool
         
-            Makes the System.Windows.Freezable object unmodifiable or tests whether it can be made unmodifiable.
+            Makes the System.Windows.Freezable object unmodifiable or tests whether it can 
+             be made unmodifiable.
         
-            isChecking: true to return an indication of whether the object can be frozen (without actually freezing it); false to actually freeze the object.
-            Returns: If isChecking is true, this method returns true if the System.Windows.Freezable can be made unmodifiable, or false if it cannot be made unmodifiable. If isChecking is false, this method returns true if the 
-             if the specified System.Windows.Freezable is now unmodifiable, or false if it cannot be made unmodifiable.
+        
+            isChecking: true to return an indication of whether the object can be frozen (without 
+             actually freezing it); false to actually freeze the object.
+        
+            Returns: If isChecking is true, this method returns true if the System.Windows.Freezable 
+             can be made unmodifiable, or false if it cannot be made unmodifiable. If 
+             isChecking is false, this method returns true if the if the specified 
+             System.Windows.Freezable is now unmodifiable, or false if it cannot be made 
+             unmodifiable.
         """
         pass
 
     def GetAsFrozenCore(self, *args): #cannot find CLR method
         """
         GetAsFrozenCore(self: InputBinding, sourceFreezable: Freezable)
-            Makes the instance a frozen clone of the specified System.Windows.Freezable by using base (non-animated) property values.
+            Makes the instance a frozen clone of the specified System.Windows.Freezable by 
+             using base (non-animated) property values.
+        
         
             sourceFreezable: The object to clone.
         """
@@ -3842,7 +4248,10 @@ class KeyBinding(InputBinding, ISealable, ICommandSource):
     def GetCurrentValueAsFrozenCore(self, *args): #cannot find CLR method
         """
         GetCurrentValueAsFrozenCore(self: InputBinding, sourceFreezable: Freezable)
-            Makes the current instance a frozen clone of the specified System.Windows.Freezable. If the object has animated dependency properties, their current animated values are copied.
+            Makes the current instance a frozen clone of the specified 
+             System.Windows.Freezable. If the object has animated dependency properties, 
+             their current animated values are copied.
+        
         
             sourceFreezable: The object to clone.
         """
@@ -3858,13 +4267,17 @@ class KeyBinding(InputBinding, ISealable, ICommandSource):
     def OnFreezablePropertyChanged(self, *args): #cannot find CLR method
         """
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject, property: DependencyProperty)
-            This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+            This member supports the Windows Presentation Foundation (WPF) infrastructure 
+             and is not intended to be used directly from your code.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
             property: The property that changed.
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject)
-            Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+            Ensures that appropriate context pointers are established for a 
+             System.Windows.DependencyObjectType data member that has just been set.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
@@ -3874,19 +4287,25 @@ class KeyBinding(InputBinding, ISealable, ICommandSource):
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: Freezable, e: DependencyPropertyChangedEventArgs)
-            Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-             System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+            Overrides the System.Windows.DependencyObject implementation of 
+             System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+             rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+             handlers in response to a changing dependency property of type 
+             System.Windows.Freezable.
         
         
-            e: Event data that contains information about which property changed, and its old and new values.
+            e: Event data that contains information about which property changed, and its old 
+             and new values.
         """
         pass
 
     def ReadPreamble(self, *args): #cannot find CLR method
         """
         ReadPreamble(self: Freezable)
-            Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-             not dependency properties.
+            Ensures that the System.Windows.Freezable is being accessed from a valid 
+             thread. Inheritors of System.Windows.Freezable must call this method at the 
+             beginning of any API that reads data members that are not dependency 
+             properties.
         """
         pass
 
@@ -3894,26 +4313,42 @@ class KeyBinding(InputBinding, ISealable, ICommandSource):
         """
         ShouldSerializeProperty(self: DependencyObject, dp: DependencyProperty) -> bool
         
-            Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+            Returns a value that indicates whether serialization processes should serialize 
+             the value for the provided dependency property.
+        
         
             dp: The identifier for the dependency property that should be serialized.
-            Returns: true if the dependency property that is supplied should be value-serialized; otherwise, false.
+            Returns: true if the dependency property that is supplied should be value-serialized; 
+             otherwise, false.
+        
+        ShouldSerializeProperty(self: Window_16$17, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Label_17$18, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: TextBox_18$19, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Button_19$20, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: CheckBox_20$21, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: ComboBox_21$22, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Separator_22$23, dp: DependencyProperty) -> bool
         """
         pass
 
     def WritePostscript(self, *args): #cannot find CLR method
         """
         WritePostscript(self: Freezable)
-            Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-             this method at the end of any API that modifies class members that are not stored as dependency properties.
+            Raises the System.Windows.Freezable.Changed event for the 
+             System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+             method. Classes that derive from System.Windows.Freezable should call this 
+             method at the end of any API that modifies class members that are not stored as 
+             dependency properties.
         """
         pass
 
     def WritePreamble(self, *args): #cannot find CLR method
         """
         WritePreamble(self: Freezable)
-            Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-             API that writes to data members that are not dependency properties.
+            Verifies that the System.Windows.Freezable is not frozen and that it is being 
+             accessed from a valid threading context. System.Windows.Freezable inheritors 
+             should call this method at the beginning of any API that writes to data members 
+             that are not dependency properties.
         """
         pass
 
@@ -3965,9 +4400,13 @@ class Keyboard(object):
     def AddGotKeyboardFocusHandler(element, handler):
         """
         AddGotKeyboardFocusHandler(element: DependencyObject, handler: KeyboardFocusChangedEventHandler)
-            Adds a handler for the System.Windows.Input.Keyboard.GotKeyboardFocus�attached event.
+            Adds a handler for the System.Windows.Input.Keyboard.GotKeyboardFocus�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be added.
         """
         pass
@@ -3976,9 +4415,13 @@ class Keyboard(object):
     def AddKeyboardInputProviderAcquireFocusHandler(element, handler):
         """
         AddKeyboardInputProviderAcquireFocusHandler(element: DependencyObject, handler: KeyboardInputProviderAcquireFocusEventHandler)
-            Adds a handler for the System.Windows.Input.Keyboard.KeyboardInputProviderAcquireFocus�attached event.
+            Adds a handler for the 
+             System.Windows.Input.Keyboard.KeyboardInputProviderAcquireFocus�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be added.
         """
         pass
@@ -3989,7 +4432,9 @@ class Keyboard(object):
         AddKeyDownHandler(element: DependencyObject, handler: KeyEventHandler)
             Adds a handler for the System.Windows.Input.Keyboard.KeyDown�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be added.
         """
         pass
@@ -4000,7 +4445,9 @@ class Keyboard(object):
         AddKeyUpHandler(element: DependencyObject, handler: KeyEventHandler)
             Adds a handler for the System.Windows.Input.Keyboard.KeyUp�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be added.
         """
         pass
@@ -4009,9 +4456,13 @@ class Keyboard(object):
     def AddLostKeyboardFocusHandler(element, handler):
         """
         AddLostKeyboardFocusHandler(element: DependencyObject, handler: KeyboardFocusChangedEventHandler)
-            Adds a handler for the System.Windows.Input.Keyboard.LostKeyboardFocus�attached event.
+            Adds a handler for the System.Windows.Input.Keyboard.LostKeyboardFocus�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be added.
         """
         pass
@@ -4020,9 +4471,13 @@ class Keyboard(object):
     def AddPreviewGotKeyboardFocusHandler(element, handler):
         """
         AddPreviewGotKeyboardFocusHandler(element: DependencyObject, handler: KeyboardFocusChangedEventHandler)
-            Adds a handler for the System.Windows.Input.Keyboard.PreviewGotKeyboardFocus�attached event.
+            Adds a handler for the System.Windows.Input.Keyboard.PreviewGotKeyboardFocus�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be added.
         """
         pass
@@ -4031,9 +4486,14 @@ class Keyboard(object):
     def AddPreviewKeyboardInputProviderAcquireFocusHandler(element, handler):
         """
         AddPreviewKeyboardInputProviderAcquireFocusHandler(element: DependencyObject, handler: KeyboardInputProviderAcquireFocusEventHandler)
-            Adds a handler for the System.Windows.Input.Keyboard.PreviewKeyboardInputProviderAcquireFocus�attached event.
+            Adds a handler for the 
+             System.Windows.Input.Keyboard.PreviewKeyboardInputProviderAcquireFocus�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be added.
         """
         pass
@@ -4042,9 +4502,13 @@ class Keyboard(object):
     def AddPreviewKeyDownHandler(element, handler):
         """
         AddPreviewKeyDownHandler(element: DependencyObject, handler: KeyEventHandler)
-            Adds a handler for the System.Windows.Input.Keyboard.PreviewKeyDown�attached event.
+            Adds a handler for the System.Windows.Input.Keyboard.PreviewKeyDown�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be added.
         """
         pass
@@ -4053,9 +4517,13 @@ class Keyboard(object):
     def AddPreviewKeyUpHandler(element, handler):
         """
         AddPreviewKeyUpHandler(element: DependencyObject, handler: KeyEventHandler)
-            Adds a handler for the System.Windows.Input.Keyboard.PreviewKeyUp�attached event.
+            Adds a handler for the System.Windows.Input.Keyboard.PreviewKeyUp�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be added.
         """
         pass
@@ -4064,9 +4532,13 @@ class Keyboard(object):
     def AddPreviewLostKeyboardFocusHandler(element, handler):
         """
         AddPreviewLostKeyboardFocusHandler(element: DependencyObject, handler: KeyboardFocusChangedEventHandler)
-            Adds a handler for the System.Windows.Input.Keyboard.PreviewLostKeyboardFocus�attached event.
+            Adds a handler for the System.Windows.Input.Keyboard.PreviewLostKeyboardFocus�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be added.
         """
         pass
@@ -4143,9 +4615,13 @@ class Keyboard(object):
     def RemoveGotKeyboardFocusHandler(element, handler):
         """
         RemoveGotKeyboardFocusHandler(element: DependencyObject, handler: KeyboardFocusChangedEventHandler)
-            Removes a handler for the System.Windows.Input.Keyboard.GotKeyboardFocus�attached event.
+            Removes a handler for the System.Windows.Input.Keyboard.GotKeyboardFocus�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be removed.
         """
         pass
@@ -4154,9 +4630,13 @@ class Keyboard(object):
     def RemoveKeyboardInputProviderAcquireFocusHandler(element, handler):
         """
         RemoveKeyboardInputProviderAcquireFocusHandler(element: DependencyObject, handler: KeyboardInputProviderAcquireFocusEventHandler)
-            Removes a handler for the System.Windows.Input.Keyboard.KeyboardInputProviderAcquireFocus�attached event.
+            Removes a handler for the 
+             System.Windows.Input.Keyboard.KeyboardInputProviderAcquireFocus�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be removed.
         """
         pass
@@ -4167,7 +4647,9 @@ class Keyboard(object):
         RemoveKeyDownHandler(element: DependencyObject, handler: KeyEventHandler)
             Removes a handler for the System.Windows.Input.Keyboard.KeyDown�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be removed.
         """
         pass
@@ -4178,7 +4660,9 @@ class Keyboard(object):
         RemoveKeyUpHandler(element: DependencyObject, handler: KeyEventHandler)
             Removes a handler for the System.Windows.Input.Keyboard.KeyUp�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be removed.
         """
         pass
@@ -4187,9 +4671,13 @@ class Keyboard(object):
     def RemoveLostKeyboardFocusHandler(element, handler):
         """
         RemoveLostKeyboardFocusHandler(element: DependencyObject, handler: KeyboardFocusChangedEventHandler)
-            Removes a handler for the System.Windows.Input.Keyboard.LostKeyboardFocus�attached event.
+            Removes a handler for the System.Windows.Input.Keyboard.LostKeyboardFocus�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be removed.
         """
         pass
@@ -4198,9 +4686,13 @@ class Keyboard(object):
     def RemovePreviewGotKeyboardFocusHandler(element, handler):
         """
         RemovePreviewGotKeyboardFocusHandler(element: DependencyObject, handler: KeyboardFocusChangedEventHandler)
-            Removes a handler for the System.Windows.Input.Keyboard.PreviewGotKeyboardFocus�attached event.
+            Removes a handler for the System.Windows.Input.Keyboard.PreviewGotKeyboardFocus�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be removed.
         """
         pass
@@ -4209,9 +4701,14 @@ class Keyboard(object):
     def RemovePreviewKeyboardInputProviderAcquireFocusHandler(element, handler):
         """
         RemovePreviewKeyboardInputProviderAcquireFocusHandler(element: DependencyObject, handler: KeyboardInputProviderAcquireFocusEventHandler)
-            Removes a handler for the System.Windows.Input.Keyboard.PreviewKeyboardInputProviderAcquireFocus�attached event.
+            Removes a handler for the 
+             System.Windows.Input.Keyboard.PreviewKeyboardInputProviderAcquireFocus�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be removed.
         """
         pass
@@ -4220,9 +4717,13 @@ class Keyboard(object):
     def RemovePreviewKeyDownHandler(element, handler):
         """
         RemovePreviewKeyDownHandler(element: DependencyObject, handler: KeyEventHandler)
-            Removes a handler for the System.Windows.Input.Keyboard.PreviewKeyDown�attached event.
+            Removes a handler for the System.Windows.Input.Keyboard.PreviewKeyDown�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be removed.
         """
         pass
@@ -4231,9 +4732,13 @@ class Keyboard(object):
     def RemovePreviewKeyUpHandler(element, handler):
         """
         RemovePreviewKeyUpHandler(element: DependencyObject, handler: KeyEventHandler)
-            Removes a handler for the System.Windows.Input.Keyboard.PreviewKeyUp�attached event.
+            Removes a handler for the System.Windows.Input.Keyboard.PreviewKeyUp�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be removed.
         """
         pass
@@ -4242,9 +4747,13 @@ class Keyboard(object):
     def RemovePreviewLostKeyboardFocusHandler(element, handler):
         """
         RemovePreviewLostKeyboardFocusHandler(element: DependencyObject, handler: KeyboardFocusChangedEventHandler)
-            Removes a handler for the System.Windows.Input.Keyboard.PreviewLostKeyboardFocus�attached event.
+            Removes a handler for the 
+             System.Windows.Input.Keyboard.PreviewLostKeyboardFocus�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to be removed.
         """
         pass
@@ -4338,7 +4847,9 @@ class KeyboardDevice(InputDevice):
         """
         GetKeyStatesFromSystem(self: KeyboardDevice, key: Key) -> KeyStates
         
-            When overridden in a derived class, obtains the System.Windows.Input.KeyStates for the specified System.Windows.Input.Key.
+            When overridden in a derived class, obtains the System.Windows.Input.KeyStates 
+             for the specified System.Windows.Input.Key.
+        
         
             key: The key to check.
             Returns: The set of key states for the specified key.
@@ -4360,7 +4871,9 @@ class KeyboardDevice(InputDevice):
         """
         IsKeyToggled(self: KeyboardDevice, key: Key) -> bool
         
-            Determines whether the specified System.Windows.Input.Key is in the toggled state.
+            Determines whether the specified System.Windows.Input.Key is in the toggled 
+             state.
+        
         
             key: The key to check.
             Returns: true if key is in the toggled state; otherwise, false.
@@ -4455,7 +4968,9 @@ class KeyboardEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -4468,7 +4983,10 @@ class KeyboardEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -4494,10 +5012,14 @@ class KeyboardEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -4555,7 +5077,9 @@ class KeyboardFocusChangedEventHandler(MulticastDelegate, ICloneable, ISerializa
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -4568,7 +5092,10 @@ class KeyboardFocusChangedEventHandler(MulticastDelegate, ICloneable, ISerializa
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -4594,10 +5121,14 @@ class KeyboardFocusChangedEventHandler(MulticastDelegate, ICloneable, ISerializa
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -4648,7 +5179,9 @@ class KeyboardInputProviderAcquireFocusEventHandler(MulticastDelegate, ICloneabl
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -4661,7 +5194,10 @@ class KeyboardInputProviderAcquireFocusEventHandler(MulticastDelegate, ICloneabl
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -4687,10 +5223,14 @@ class KeyboardInputProviderAcquireFocusEventHandler(MulticastDelegate, ICloneabl
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -4714,7 +5254,9 @@ class KeyboardNavigation(object):
         """
         GetAcceptsReturn(element: DependencyObject) -> bool
         
-            Gets the value of the System.Windows.Input.KeyboardNavigation.AcceptsReturn�attached property for the specified element.
+            Gets the value of the System.Windows.Input.KeyboardNavigation.AcceptsReturn�
+             attached property for the specified element.
+        
         
             element: The element from which to read the attached property.
             Returns: The value of the System.Windows.Input.KeyboardNavigation.AcceptsReturn property.
@@ -4726,10 +5268,14 @@ class KeyboardNavigation(object):
         """
         GetControlTabNavigation(element: DependencyObject) -> KeyboardNavigationMode
         
-            Gets the value of the System.Windows.Input.KeyboardNavigation.ControlTabNavigation�attached property for the specified element.
+            Gets the value of the 
+             System.Windows.Input.KeyboardNavigation.ControlTabNavigation�attached property 
+             for the specified element.
+        
         
             element: Element from which to get the attached property.
-            Returns: The value of the System.Windows.Input.KeyboardNavigation.ControlTabNavigation property.
+            Returns: The value of the System.Windows.Input.KeyboardNavigation.ControlTabNavigation 
+             property.
         """
         pass
 
@@ -4738,10 +5284,14 @@ class KeyboardNavigation(object):
         """
         GetDirectionalNavigation(element: DependencyObject) -> KeyboardNavigationMode
         
-            Gets the value of the System.Windows.Input.KeyboardNavigation.DirectionalNavigation�attached property for the specified element.
+            Gets the value of the 
+             System.Windows.Input.KeyboardNavigation.DirectionalNavigation�attached property 
+             for the specified element.
+        
         
             element: Element from which to get the attached property.
-            Returns: The value of the System.Windows.Input.KeyboardNavigation.DirectionalNavigation property.
+            Returns: The value of the System.Windows.Input.KeyboardNavigation.DirectionalNavigation 
+             property.
         """
         pass
 
@@ -4750,7 +5300,9 @@ class KeyboardNavigation(object):
         """
         GetIsTabStop(element: DependencyObject) -> bool
         
-            Gets the value of the System.Windows.Input.KeyboardNavigation.IsTabStop�attached property for the specified element.
+            Gets the value of the System.Windows.Input.KeyboardNavigation.IsTabStop�
+             attached property for the specified element.
+        
         
             element: The element from which to read the attached property.
             Returns: The value of the System.Windows.Input.KeyboardNavigation.IsTabStop property.
@@ -4762,7 +5314,9 @@ class KeyboardNavigation(object):
         """
         GetTabIndex(element: DependencyObject) -> int
         
-            Gets the value of the System.Windows.Input.KeyboardNavigation.TabIndex �attached property for the specified element.
+            Gets the value of the System.Windows.Input.KeyboardNavigation.TabIndex �
+             attached property for the specified element.
+        
         
             element: The element from which to read the attached property.
             Returns: The value of the System.Windows.Input.KeyboardNavigation.TabIndex property.
@@ -4774,7 +5328,9 @@ class KeyboardNavigation(object):
         """
         GetTabNavigation(element: DependencyObject) -> KeyboardNavigationMode
         
-            Gets the value of the System.Windows.Input.KeyboardNavigation.TabNavigation�attached property for the specified element.
+            Gets the value of the System.Windows.Input.KeyboardNavigation.TabNavigation�
+             attached property for the specified element.
+        
         
             element: Element from which to get the attached property.
             Returns: The value of the System.Windows.Input.KeyboardNavigation.TabNavigation property.
@@ -4785,7 +5341,9 @@ class KeyboardNavigation(object):
     def SetAcceptsReturn(element, enabled):
         """
         SetAcceptsReturn(element: DependencyObject, enabled: bool)
-            Sets the value of the System.Windows.Input.KeyboardNavigation.AcceptsReturn �attached property for the specified element.
+            Sets the value of the System.Windows.Input.KeyboardNavigation.AcceptsReturn �
+             attached property for the specified element.
+        
         
             element: The element to write the attached property to.
             enabled: The property value to set.
@@ -4796,7 +5354,10 @@ class KeyboardNavigation(object):
     def SetControlTabNavigation(element, mode):
         """
         SetControlTabNavigation(element: DependencyObject, mode: KeyboardNavigationMode)
-            Sets the value of the System.Windows.Input.KeyboardNavigation.ControlTabNavigation�attached property for the specified element.
+            Sets the value of the 
+             System.Windows.Input.KeyboardNavigation.ControlTabNavigation�attached property 
+             for the specified element.
+        
         
             element: Element on which to set the attached property.
             mode: The property value to set
@@ -4807,7 +5368,10 @@ class KeyboardNavigation(object):
     def SetDirectionalNavigation(element, mode):
         """
         SetDirectionalNavigation(element: DependencyObject, mode: KeyboardNavigationMode)
-            Sets the value of the System.Windows.Input.KeyboardNavigation.DirectionalNavigation�attached property for the specified element.
+            Sets the value of the 
+             System.Windows.Input.KeyboardNavigation.DirectionalNavigation�attached property 
+             for the specified element.
+        
         
             element: Element on which to set the attached property.
             mode: Property value to set.
@@ -4818,7 +5382,9 @@ class KeyboardNavigation(object):
     def SetIsTabStop(element, isTabStop):
         """
         SetIsTabStop(element: DependencyObject, isTabStop: bool)
-            Sets the value of the System.Windows.Input.KeyboardNavigation.IsTabStop�attached property for the specified element.
+            Sets the value of the System.Windows.Input.KeyboardNavigation.IsTabStop�
+             attached property for the specified element.
+        
         
             element: The element to which to write the attached property.
             isTabStop: The property value to set.
@@ -4829,7 +5395,9 @@ class KeyboardNavigation(object):
     def SetTabIndex(element, index):
         """
         SetTabIndex(element: DependencyObject, index: int)
-            Set the value of the System.Windows.Input.KeyboardNavigation.TabIndex�attached property for the specified element.
+            Set the value of the System.Windows.Input.KeyboardNavigation.TabIndex�attached 
+             property for the specified element.
+        
         
             element: The element on which to set the attached property to.
             index: The property value to set.
@@ -4840,7 +5408,9 @@ class KeyboardNavigation(object):
     def SetTabNavigation(element, mode):
         """
         SetTabNavigation(element: DependencyObject, mode: KeyboardNavigationMode)
-            Sets the value of the System.Windows.Input.KeyboardNavigation.TabNavigation�attached property for the specified element.
+            Sets the value of the System.Windows.Input.KeyboardNavigation.TabNavigation�
+             attached property for the specified element.
+        
         
             element: Element on which to set the attached property.
             mode: Property value to set.
@@ -4913,9 +5483,13 @@ class KeyConverter(TypeConverter):
         """
         CanConvertFrom(self: KeyConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Determines whether an object of the specified type can be converted to an instance of System.Windows.Input.Key, using the specified context.
+            Determines whether an object of the specified type can be converted to an 
+             instance of System.Windows.Input.Key, using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             sourceType: The type being evaluated for conversion.
             Returns: true if sourceType is of type System.String; otherwise, false.
         """
@@ -4925,9 +5499,13 @@ class KeyConverter(TypeConverter):
         """
         CanConvertTo(self: KeyConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Determines whether an instance of System.Windows.Input.Key can be converted to the specified type, using the specified context.
+            Determines whether an instance of System.Windows.Input.Key can be converted to 
+             the specified type, using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             destinationType: The type being evaluated for conversion.
             Returns: true if destinationType is of type System.String; otherwise, false.
         """
@@ -4937,9 +5515,13 @@ class KeyConverter(TypeConverter):
         """
         ConvertFrom(self: KeyConverter, context: ITypeDescriptorContext, culture: CultureInfo, source: object) -> object
         
-            Attempts to convert the specified object to a System.Windows.Input.Key, using the specified context.
+            Attempts to convert the specified object to a System.Windows.Input.Key, using 
+             the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             culture: Culture specific information.
             source: The object to convert.
             Returns: The converted object.
@@ -4950,9 +5532,13 @@ class KeyConverter(TypeConverter):
         """
         ConvertTo(self: KeyConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object, destinationType: Type) -> object
         
-            Attempts to convert a System.Windows.Input.Key to the specified type, using the specified context.
+            Attempts to convert a System.Windows.Input.Key to the specified type, using the 
+             specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             culture: Culture specific information.
             value: The object to convert.
             destinationType: The type to convert the object to.
@@ -5058,7 +5644,9 @@ class KeyEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -5071,7 +5659,10 @@ class KeyEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -5097,10 +5688,14 @@ class KeyEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -5129,7 +5724,9 @@ class KeyGesture(InputGesture):
         """
         GetDisplayStringForCulture(self: KeyGesture, culture: CultureInfo) -> str
         
-            Returns a string that can be used to display the System.Windows.Input.KeyGesture.
+            Returns a string that can be used to display the 
+             System.Windows.Input.KeyGesture.
+        
         
             culture: The culture specific information.
             Returns: The string to display
@@ -5140,11 +5737,14 @@ class KeyGesture(InputGesture):
         """
         Matches(self: KeyGesture, targetElement: object, inputEventArgs: InputEventArgs) -> bool
         
-            Determines whether this System.Windows.Input.KeyGesture matches the input associated with the specified System.Windows.Input.InputEventArgs object.
+            Determines whether this System.Windows.Input.KeyGesture matches the input 
+             associated with the specified System.Windows.Input.InputEventArgs object.
+        
         
             targetElement: The target.
             inputEventArgs: The input event data to compare this gesture to.
-            Returns: true if the event data matches this System.Windows.Input.KeyGesture; otherwise, false.
+            Returns: true if the event data matches this System.Windows.Input.KeyGesture; otherwise, 
+             false.
         """
         pass
 
@@ -5190,9 +5790,13 @@ class KeyGestureConverter(TypeConverter):
         """
         CanConvertFrom(self: KeyGestureConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Determines whether an object of the specified type can be converted to an instance of System.Windows.Input.KeyGesture, using the specified context.
+            Determines whether an object of the specified type can be converted to an 
+             instance of System.Windows.Input.KeyGesture, using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             sourceType: The type being evaluated for conversion.
             Returns: true if sourceType is type System.String; otherwise, false.
         """
@@ -5202,9 +5806,13 @@ class KeyGestureConverter(TypeConverter):
         """
         CanConvertTo(self: KeyGestureConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Determines whether an instance of System.Windows.Input.KeyGesture can be converted to the specified type, using the specified context.
+            Determines whether an instance of System.Windows.Input.KeyGesture can be 
+             converted to the specified type, using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             destinationType: The type being evaluated for conversion.
             Returns: true if destinationType is type System.String; otherwise, false.
         """
@@ -5214,9 +5822,13 @@ class KeyGestureConverter(TypeConverter):
         """
         ConvertFrom(self: KeyGestureConverter, context: ITypeDescriptorContext, culture: CultureInfo, source: object) -> object
         
-            Attempts to convert the specified object to a System.Windows.Input.KeyGesture, using the specified context.
+            Attempts to convert the specified object to a System.Windows.Input.KeyGesture, 
+             using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             culture: Culture specific information.
             source: The object to convert.
             Returns: The converted object.
@@ -5227,9 +5839,13 @@ class KeyGestureConverter(TypeConverter):
         """
         ConvertTo(self: KeyGestureConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object, destinationType: Type) -> object
         
-            Attempts to convert a System.Windows.Input.KeyGesture to the specified type, using the specified context.
+            Attempts to convert a System.Windows.Input.KeyGesture to the specified type, 
+             using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             culture: Culture specific information.
             value: The object to convert.
             destinationType: The type to convert the object to.
@@ -5248,7 +5864,9 @@ class KeyGestureValueSerializer(ValueSerializer):
         """
         CanConvertFromString(self: KeyGestureValueSerializer, value: str, context: IValueSerializerContext) -> bool
         
-            Determines if the specified System.String can be convert to an instance of System.Windows.Input.KeyGesture.
+            Determines if the specified System.String can be convert to an instance of 
+             System.Windows.Input.KeyGesture.
+        
         
             value: String to evaluate for conversion.
             context: Context information that is used for conversion.
@@ -5260,7 +5878,9 @@ class KeyGestureValueSerializer(ValueSerializer):
         """
         CanConvertToString(self: KeyGestureValueSerializer, value: object, context: IValueSerializerContext) -> bool
         
-            Determines if the specified System.Windows.Input.KeyGesture can be converted to a System.String.
+            Determines if the specified System.Windows.Input.KeyGesture can be converted to 
+             a System.String.
+        
         
             value: The gesture to evaluate for conversion.
             context: Context information that is used for conversion.
@@ -5288,7 +5908,8 @@ class KeyGestureValueSerializer(ValueSerializer):
         
             value: The gesture to convert into a string.
             context: Context information that is used for conversion.
-            Returns: An invariant string representation of the specified System.Windows.Input.KeyGesture.
+            Returns: An invariant string representation of the specified 
+             System.Windows.Input.KeyGesture.
         """
         pass
 
@@ -5380,7 +6001,9 @@ class KeyValueSerializer(ValueSerializer):
         """
         CanConvertFromString(self: KeyValueSerializer, value: str, context: IValueSerializerContext) -> bool
         
-            Determines if the specified System.String can be convert to an instance of System.Windows.Input.Key.
+            Determines if the specified System.String can be convert to an instance of 
+             System.Windows.Input.Key.
+        
         
             value: String to evaluate for conversion.
             context: Context information that is used for conversion.
@@ -5392,7 +6015,9 @@ class KeyValueSerializer(ValueSerializer):
         """
         CanConvertToString(self: KeyValueSerializer, value: object, context: IValueSerializerContext) -> bool
         
-            Determines if the specified System.Windows.Input.Key can be converted to a System.String.
+            Determines if the specified System.Windows.Input.Key can be converted to a 
+             System.String.
+        
         
             value: The key to evaluate for conversion.
             context: Context information that is used for conversion.
@@ -5431,10 +6056,13 @@ class Manipulation(object):
     def AddManipulator(element, manipulator):
         """
         AddManipulator(element: UIElement, manipulator: IManipulator)
-            Associates a System.Windows.Input.IManipulator object with the specified element.
+            Associates a System.Windows.Input.IManipulator object with the specified 
+             element.
+        
         
             element: The element to associate the manipulator with.
-            manipulator: The object that provides the position of the input that creates or is added to a manipulation.
+            manipulator: The object that provides the position of the input that creates or is added to 
+             a manipulation.
         """
         pass
 
@@ -5442,7 +6070,10 @@ class Manipulation(object):
     def CompleteManipulation(element):
         """
         CompleteManipulation(element: UIElement)
-            Completes the active manipulation on the specified element. When called, manipulation input is no longer tracked and inertia on the specified element stops.
+            Completes the active manipulation on the specified element. When called, 
+             manipulation input is no longer tracked and inertia on the specified element 
+             stops.
+        
         
             element: The element on which to complete manipulation.
         """
@@ -5477,7 +6108,9 @@ class Manipulation(object):
         """
         GetManipulationPivot(element: UIElement) -> ManipulationPivot
         
-            Returns an object that describes how a rotation occurs with one point of user input.
+            Returns an object that describes how a rotation occurs with one point of user 
+             input.
+        
         
             element: The element on which there is a manipulation.
             Returns: An object that describes how a rotation occurs with one point of user input.
@@ -5489,10 +6122,13 @@ class Manipulation(object):
         """
         IsManipulationActive(element: UIElement) -> bool
         
-            Gets a value that indicates whether a manipulation is associated with the specified element.
+            Gets a value that indicates whether a manipulation is associated with the 
+             specified element.
+        
         
             element: The element to check.
-            Returns: true if a manipulation is associated with the specified element; otherwise, false.
+            Returns: true if a manipulation is associated with the specified element; otherwise, 
+             false.
         """
         pass
 
@@ -5500,7 +6136,9 @@ class Manipulation(object):
     def RemoveManipulator(element, manipulator):
         """
         RemoveManipulator(element: UIElement, manipulator: IManipulator)
-            Removes the association between the specified System.Windows.Input.IManipulator object and the element.
+            Removes the association between the specified System.Windows.Input.IManipulator 
+             object and the element.
+        
         
             element: The element to remove the associated manipulator from.
             manipulator: The object that provides the position of the input.
@@ -5511,7 +6149,9 @@ class Manipulation(object):
     def SetManipulationContainer(element, container):
         """
         SetManipulationContainer(element: UIElement, container: IInputElement)
-            Sets the element that defines the coordinates for the manipulation of the specified element.
+            Sets the element that defines the coordinates for the manipulation of the 
+             specified element.
+        
         
             element: The element with which the manipulation is associated.
             container: The container that defines the coordinate space.
@@ -5728,7 +6368,8 @@ class ManipulationDeltaEventArgs(InputEventArgs):
     def StartInertia(self):
         """
         StartInertia(self: ManipulationDeltaEventArgs)
-            Starts inertia on the manipulation by ignoring subsequent contact movements and raising the System.Windows.UIElement.ManipulationInertiaStarting event.
+            Starts inertia on the manipulation by ignoring subsequent contact movements and 
+             raising the System.Windows.UIElement.ManipulationInertiaStarting event.
         """
         pass
 
@@ -6162,9 +6803,13 @@ class ModifierKeysConverter(TypeConverter):
         """
         CanConvertFrom(self: ModifierKeysConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Determines whether an object of the specified type can be converted to an instance of System.Windows.Input.ModifierKeys, using the specified context.
+            Determines whether an object of the specified type can be converted to an 
+             instance of System.Windows.Input.ModifierKeys, using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             sourceType: The type being evaluated for conversion.
             Returns: true if sourceType is type System.String; otherwise, false.
         """
@@ -6174,9 +6819,13 @@ class ModifierKeysConverter(TypeConverter):
         """
         CanConvertTo(self: ModifierKeysConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Determines whether an instance of System.Windows.Input.ModifierKeys can be converted to the specified type, using the specified context.
+            Determines whether an instance of System.Windows.Input.ModifierKeys can be 
+             converted to the specified type, using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             destinationType: The type being evaluated for conversion.
             Returns: true if destinationType is type System.String; otherwise, false.
         """
@@ -6186,9 +6835,13 @@ class ModifierKeysConverter(TypeConverter):
         """
         ConvertFrom(self: ModifierKeysConverter, context: ITypeDescriptorContext, culture: CultureInfo, source: object) -> object
         
-            Attempts to convert the specified object to a System.Windows.Input.ModifierKeys, using the specified context.
+            Attempts to convert the specified object to a 
+             System.Windows.Input.ModifierKeys, using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             culture: Culture specific information.
             source: The object to convert.
             Returns: The converted object.
@@ -6199,9 +6852,13 @@ class ModifierKeysConverter(TypeConverter):
         """
         ConvertTo(self: ModifierKeysConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object, destinationType: Type) -> object
         
-            Attempts to convert a System.Windows.Input.ModifierKeys to the specified type, using the specified context.
+            Attempts to convert a System.Windows.Input.ModifierKeys to the specified type, 
+             using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             culture: Culture specific information.
             value: The object to convert.
             destinationType: The type to convert the object to.
@@ -6214,10 +6871,13 @@ class ModifierKeysConverter(TypeConverter):
         """
         IsDefinedModifierKeys(modifierKeys: ModifierKeys) -> bool
         
-            Determines whether the specified value is a valid System.Windows.Input.ModifierKeys value.
+            Determines whether the specified value is a valid 
+             System.Windows.Input.ModifierKeys value.
+        
         
             modifierKeys: The value to check for validity.
-            Returns: true if input is a valid System.Windows.Input.ModifierKeys value; otherwise, false.
+            Returns: true if input is a valid System.Windows.Input.ModifierKeys value; otherwise, 
+             false.
         """
         pass
 
@@ -6232,7 +6892,9 @@ class ModifierKeysValueSerializer(ValueSerializer):
         """
         CanConvertFromString(self: ModifierKeysValueSerializer, value: str, context: IValueSerializerContext) -> bool
         
-            Determines if the specified System.String can be convert to an instance of System.Windows.Input.ModifierKeys.
+            Determines if the specified System.String can be convert to an instance of 
+             System.Windows.Input.ModifierKeys.
+        
         
             value: String to evaluate for conversion.
             context: Context information that is used for conversion.
@@ -6244,7 +6906,9 @@ class ModifierKeysValueSerializer(ValueSerializer):
         """
         CanConvertToString(self: ModifierKeysValueSerializer, value: object, context: IValueSerializerContext) -> bool
         
-            Determines if the specified System.Windows.Input.ModifierKeys can be converted to a System.String.
+            Determines if the specified System.Windows.Input.ModifierKeys can be converted 
+             to a System.String.
+        
         
             value: The modifier keys to evaluate for conversion.
             context: Context information that is used for conversion.
@@ -6272,7 +6936,8 @@ class ModifierKeysValueSerializer(ValueSerializer):
         
             value: The key to convert into a string.
             context: Context information that is used for conversion.
-            Returns: An invariant string representation of the specified System.Windows.Input.ModifierKeys value.
+            Returns: An invariant string representation of the specified 
+             System.Windows.Input.ModifierKeys value.
         """
         pass
 
@@ -6283,9 +6948,13 @@ class Mouse(object):
     def AddGotMouseCaptureHandler(element, handler):
         """
         AddGotMouseCaptureHandler(element: DependencyObject, handler: MouseEventHandler)
-            Adds a handler for the System.Windows.Input.Mouse.GotMouseCapture�attached event.
+            Adds a handler for the System.Windows.Input.Mouse.GotMouseCapture�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6294,9 +6963,13 @@ class Mouse(object):
     def AddLostMouseCaptureHandler(element, handler):
         """
         AddLostMouseCaptureHandler(element: DependencyObject, handler: MouseEventHandler)
-            Adds a handler for the System.Windows.Input.Mouse.LostMouseCapture�attached event.
+            Adds a handler for the System.Windows.Input.Mouse.LostMouseCapture�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6307,7 +6980,9 @@ class Mouse(object):
         AddMouseDownHandler(element: DependencyObject, handler: MouseButtonEventHandler)
             Adds a handler for the System.Windows.Input.Mouse.MouseDown�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6318,7 +6993,9 @@ class Mouse(object):
         AddMouseEnterHandler(element: DependencyObject, handler: MouseEventHandler)
             Adds a handler for the System.Windows.Input.Mouse.MouseEnter�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6329,7 +7006,9 @@ class Mouse(object):
         AddMouseLeaveHandler(element: DependencyObject, handler: MouseEventHandler)
             Adds a handler for the System.Windows.Input.Mouse.MouseLeave�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6340,7 +7019,9 @@ class Mouse(object):
         AddMouseMoveHandler(element: DependencyObject, handler: MouseEventHandler)
             Adds a handler for the System.Windows.Input.Mouse.MouseMove�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6351,7 +7032,9 @@ class Mouse(object):
         AddMouseUpHandler(element: DependencyObject, handler: MouseButtonEventHandler)
             Adds a handler for the System.Windows.Input.Mouse.MouseUp�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6362,7 +7045,9 @@ class Mouse(object):
         AddMouseWheelHandler(element: DependencyObject, handler: MouseWheelEventHandler)
             Adds a handler for the System.Windows.Input.Mouse.MouseWheel�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6371,9 +7056,13 @@ class Mouse(object):
     def AddPreviewMouseDownHandler(element, handler):
         """
         AddPreviewMouseDownHandler(element: DependencyObject, handler: MouseButtonEventHandler)
-            Adds a handler for the System.Windows.Input.Mouse.PreviewMouseDown�attached event.
+            Adds a handler for the System.Windows.Input.Mouse.PreviewMouseDown�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6382,9 +7071,14 @@ class Mouse(object):
     def AddPreviewMouseDownOutsideCapturedElementHandler(element, handler):
         """
         AddPreviewMouseDownOutsideCapturedElementHandler(element: DependencyObject, handler: MouseButtonEventHandler)
-            Adds a handler for the System.Windows.Input.Mouse.PreviewMouseDownOutsideCapturedElement�attached event.
+            Adds a handler for the 
+             System.Windows.Input.Mouse.PreviewMouseDownOutsideCapturedElement�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6393,9 +7087,13 @@ class Mouse(object):
     def AddPreviewMouseMoveHandler(element, handler):
         """
         AddPreviewMouseMoveHandler(element: DependencyObject, handler: MouseEventHandler)
-            Adds a handler for the System.Windows.Input.Mouse.PreviewMouseMove�attached event.
+            Adds a handler for the System.Windows.Input.Mouse.PreviewMouseMove�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6406,7 +7104,9 @@ class Mouse(object):
         AddPreviewMouseUpHandler(element: DependencyObject, handler: MouseButtonEventHandler)
             Adds a handler for the System.Windows.Input.Mouse.PreviewMouseUp�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6415,9 +7115,13 @@ class Mouse(object):
     def AddPreviewMouseUpOutsideCapturedElementHandler(element, handler):
         """
         AddPreviewMouseUpOutsideCapturedElementHandler(element: DependencyObject, handler: MouseButtonEventHandler)
-            Adds a handler for the System.Windows.Input.Mouse.PreviewMouseUpOutsideCapturedElement�attached event.
+            Adds a handler for the 
+             System.Windows.Input.Mouse.PreviewMouseUpOutsideCapturedElement�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6426,9 +7130,13 @@ class Mouse(object):
     def AddPreviewMouseWheelHandler(element, handler):
         """
         AddPreviewMouseWheelHandler(element: DependencyObject, handler: MouseWheelEventHandler)
-            Adds a handler for the System.Windows.Input.Mouse.PreviewMouseWheel�attached event.
+            Adds a handler for the System.Windows.Input.Mouse.PreviewMouseWheel�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6439,7 +7147,9 @@ class Mouse(object):
         AddQueryCursorHandler(element: DependencyObject, handler: QueryCursorEventHandler)
             Adds a handler for the System.Windows.Input.Mouse.QueryCursor�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6449,7 +7159,9 @@ class Mouse(object):
         """
         Capture(element: IInputElement, captureMode: CaptureMode) -> bool
         
-            Captures mouse input to the specified element using the specified System.Windows.Input.CaptureMode.
+            Captures mouse input to the specified element using the specified 
+             System.Windows.Input.CaptureMode.
+        
         
             element: The element to capture the mouse.
             captureMode: The capture policy to use.
@@ -6468,7 +7180,9 @@ class Mouse(object):
         """
         GetIntermediatePoints(relativeTo: IInputElement, points: Array[Point]) -> int
         
-            Retrieves up to 64 previous coordinates of the mouse pointer since the last mouse move event.
+            Retrieves up to 64 previous coordinates of the mouse pointer since the last 
+             mouse move event.
+        
         
             relativeTo: The elements points are in relation to.
             points: An array of objects.
@@ -6492,9 +7206,13 @@ class Mouse(object):
     def RemoveGotMouseCaptureHandler(element, handler):
         """
         RemoveGotMouseCaptureHandler(element: DependencyObject, handler: MouseEventHandler)
-            Removes a handler for the System.Windows.Input.Mouse.GotMouseCapture�attached event.
+            Removes a handler for the System.Windows.Input.Mouse.GotMouseCapture�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6503,9 +7221,13 @@ class Mouse(object):
     def RemoveLostMouseCaptureHandler(element, handler):
         """
         RemoveLostMouseCaptureHandler(element: DependencyObject, handler: MouseEventHandler)
-            Removes a handler for the System.Windows.Input.Mouse.LostMouseCapture�attached event.
+            Removes a handler for the System.Windows.Input.Mouse.LostMouseCapture�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6516,7 +7238,9 @@ class Mouse(object):
         RemoveMouseDownHandler(element: DependencyObject, handler: MouseButtonEventHandler)
             Removes a handler for the System.Windows.Input.Mouse.MouseDown�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6527,7 +7251,9 @@ class Mouse(object):
         RemoveMouseEnterHandler(element: DependencyObject, handler: MouseEventHandler)
             Removes a handler for the System.Windows.Input.Mouse.MouseEnter�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6538,7 +7264,9 @@ class Mouse(object):
         RemoveMouseLeaveHandler(element: DependencyObject, handler: MouseEventHandler)
             Removes a handler for the System.Windows.Input.Mouse.MouseLeave�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6549,7 +7277,9 @@ class Mouse(object):
         RemoveMouseMoveHandler(element: DependencyObject, handler: MouseEventHandler)
             Removes a handler for the System.Windows.Input.Mouse.MouseMove�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6560,7 +7290,9 @@ class Mouse(object):
         RemoveMouseUpHandler(element: DependencyObject, handler: MouseButtonEventHandler)
             Removes a handler for the System.Windows.Input.Mouse.MouseUp�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6571,7 +7303,9 @@ class Mouse(object):
         RemoveMouseWheelHandler(element: DependencyObject, handler: MouseWheelEventHandler)
             Removes a handler for the System.Windows.Input.Mouse.MouseWheel�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6580,9 +7314,13 @@ class Mouse(object):
     def RemovePreviewMouseDownHandler(element, handler):
         """
         RemovePreviewMouseDownHandler(element: DependencyObject, handler: MouseButtonEventHandler)
-            Removes a handler for the System.Windows.Input.Mouse.PreviewMouseDown�attached event.
+            Removes a handler for the System.Windows.Input.Mouse.PreviewMouseDown�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6591,9 +7329,14 @@ class Mouse(object):
     def RemovePreviewMouseDownOutsideCapturedElementHandler(element, handler):
         """
         RemovePreviewMouseDownOutsideCapturedElementHandler(element: DependencyObject, handler: MouseButtonEventHandler)
-            Removes a handler for the System.Windows.Input.Mouse.PreviewMouseDownOutsideCapturedElement�attached event.
+            Removes a handler for the 
+             System.Windows.Input.Mouse.PreviewMouseDownOutsideCapturedElement�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6602,9 +7345,13 @@ class Mouse(object):
     def RemovePreviewMouseMoveHandler(element, handler):
         """
         RemovePreviewMouseMoveHandler(element: DependencyObject, handler: MouseEventHandler)
-            Removes a handler for the System.Windows.Input.Mouse.PreviewMouseMove�attached event.
+            Removes a handler for the System.Windows.Input.Mouse.PreviewMouseMove�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6613,9 +7360,13 @@ class Mouse(object):
     def RemovePreviewMouseUpHandler(element, handler):
         """
         RemovePreviewMouseUpHandler(element: DependencyObject, handler: MouseButtonEventHandler)
-            Removes a handler for the System.Windows.Input.Mouse.PreviewMouseUp�attached event.
+            Removes a handler for the System.Windows.Input.Mouse.PreviewMouseUp�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6624,9 +7375,13 @@ class Mouse(object):
     def RemovePreviewMouseUpOutsideCapturedElementHandler(element, handler):
         """
         RemovePreviewMouseUpOutsideCapturedElementHandler(element: DependencyObject, handler: MouseButtonEventHandler)
-            Removes a handler for the System.Windows.Input.Mouse.PreviewMouseUpOutsideCapturedElement�attached event.
+            Removes a handler for the 
+             System.Windows.Input.Mouse.PreviewMouseUpOutsideCapturedElement�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6635,9 +7390,13 @@ class Mouse(object):
     def RemovePreviewMouseWheelHandler(element, handler):
         """
         RemovePreviewMouseWheelHandler(element: DependencyObject, handler: MouseWheelEventHandler)
-            Removes a handler for the System.Windows.Input.Mouse.PreviewMouseWheel�attached event.
+            Removes a handler for the System.Windows.Input.Mouse.PreviewMouseWheel�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6648,7 +7407,9 @@ class Mouse(object):
         RemoveQueryCursorHandler(element: DependencyObject, handler: QueryCursorEventHandler)
             Removes a handler for the System.Windows.Input.Mouse.QueryCursor�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler.
         """
         pass
@@ -6822,9 +7583,13 @@ class MouseActionConverter(TypeConverter):
         """
         CanConvertFrom(self: MouseActionConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Determines whether an object of the specified type can be converted to an instance of System.Windows.Input.MouseAction,using the specified context.
+            Determines whether an object of the specified type can be converted to an 
+             instance of System.Windows.Input.MouseAction,using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             sourceType: The type being evaluated for conversion.
             Returns: true if this converter can perform the operation; otherwise, false.
         """
@@ -6834,9 +7599,13 @@ class MouseActionConverter(TypeConverter):
         """
         CanConvertTo(self: MouseActionConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Determines whether an instance of System.Windows.Input.MouseAction can be converted to the specified type, using the specified context.
+            Determines whether an instance of System.Windows.Input.MouseAction can be 
+             converted to the specified type, using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             destinationType: The type being evaluated for conversion.
             Returns: true if this converter can perform the operation; otherwise, false.
         """
@@ -6846,9 +7615,13 @@ class MouseActionConverter(TypeConverter):
         """
         ConvertFrom(self: MouseActionConverter, context: ITypeDescriptorContext, culture: CultureInfo, source: object) -> object
         
-            Attempts to convert the specified object to a System.Windows.Input.MouseAction, using the specified context.
+            Attempts to convert the specified object to a System.Windows.Input.MouseAction, 
+             using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             culture: Culture specific information.
             source: The object to convert.
             Returns: The converted object.
@@ -6859,9 +7632,13 @@ class MouseActionConverter(TypeConverter):
         """
         ConvertTo(self: MouseActionConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object, destinationType: Type) -> object
         
-            Attempts to convert a System.Windows.Input.MouseAction to the specified type, using the specified context.
+            Attempts to convert a System.Windows.Input.MouseAction to the specified type, 
+             using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             culture: Culture specific information.
             value: The object to convert.
             destinationType: The type to convert the object to.
@@ -6880,7 +7657,9 @@ class MouseActionValueSerializer(ValueSerializer):
         """
         CanConvertFromString(self: MouseActionValueSerializer, value: str, context: IValueSerializerContext) -> bool
         
-            Determines if the specified System.String can be convert to an instance of System.Windows.Input.MouseAction.
+            Determines if the specified System.String can be convert to an instance of 
+             System.Windows.Input.MouseAction.
+        
         
             value: String to evaluate for conversion.
             context: Context information that is used for conversion.
@@ -6892,7 +7671,9 @@ class MouseActionValueSerializer(ValueSerializer):
         """
         CanConvertToString(self: MouseActionValueSerializer, value: object, context: IValueSerializerContext) -> bool
         
-            Determines if the specified System.Windows.Input.MouseAction can be converted to a System.String.
+            Determines if the specified System.Windows.Input.MouseAction can be converted 
+             to a System.String.
+        
         
             value: The modifier keys to evaluate for conversion.
             context: Context information that is used for conversion.
@@ -6920,7 +7701,8 @@ class MouseActionValueSerializer(ValueSerializer):
         
             value: The key to convert into a string.
             context: Context information that is used for conversion.
-            Returns: An invariant string representation of the specified System.Windows.Input.MouseAction.
+            Returns: An invariant string representation of the specified 
+             System.Windows.Input.MouseAction.
         """
         pass
 
@@ -6972,18 +7754,27 @@ class MouseBinding(InputBinding, ISealable, ICommandSource):
         """
         FreezeCore(self: Freezable, isChecking: bool) -> bool
         
-            Makes the System.Windows.Freezable object unmodifiable or tests whether it can be made unmodifiable.
+            Makes the System.Windows.Freezable object unmodifiable or tests whether it can 
+             be made unmodifiable.
         
-            isChecking: true to return an indication of whether the object can be frozen (without actually freezing it); false to actually freeze the object.
-            Returns: If isChecking is true, this method returns true if the System.Windows.Freezable can be made unmodifiable, or false if it cannot be made unmodifiable. If isChecking is false, this method returns true if the 
-             if the specified System.Windows.Freezable is now unmodifiable, or false if it cannot be made unmodifiable.
+        
+            isChecking: true to return an indication of whether the object can be frozen (without 
+             actually freezing it); false to actually freeze the object.
+        
+            Returns: If isChecking is true, this method returns true if the System.Windows.Freezable 
+             can be made unmodifiable, or false if it cannot be made unmodifiable. If 
+             isChecking is false, this method returns true if the if the specified 
+             System.Windows.Freezable is now unmodifiable, or false if it cannot be made 
+             unmodifiable.
         """
         pass
 
     def GetAsFrozenCore(self, *args): #cannot find CLR method
         """
         GetAsFrozenCore(self: MouseBinding, sourceFreezable: Freezable)
-            Creates the instance a frozen clone of the specified System.Windows.Freezable by using base (non-animated) property values.
+            Creates the instance a frozen clone of the specified System.Windows.Freezable 
+             by using base (non-animated) property values.
+        
         
             sourceFreezable: The object to clone.
         """
@@ -6992,7 +7783,10 @@ class MouseBinding(InputBinding, ISealable, ICommandSource):
     def GetCurrentValueAsFrozenCore(self, *args): #cannot find CLR method
         """
         GetCurrentValueAsFrozenCore(self: MouseBinding, sourceFreezable: Freezable)
-            Creates the current instance a frozen clone of the specified System.Windows.Freezable. If the object has animated dependency properties, their current animated values are copied.
+            Creates the current instance a frozen clone of the specified 
+             System.Windows.Freezable. If the object has animated dependency properties, 
+             their current animated values are copied.
+        
         
             sourceFreezable: The object to clone.
         """
@@ -7008,13 +7802,17 @@ class MouseBinding(InputBinding, ISealable, ICommandSource):
     def OnFreezablePropertyChanged(self, *args): #cannot find CLR method
         """
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject, property: DependencyProperty)
-            This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+            This member supports the Windows Presentation Foundation (WPF) infrastructure 
+             and is not intended to be used directly from your code.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
             property: The property that changed.
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject)
-            Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+            Ensures that appropriate context pointers are established for a 
+             System.Windows.DependencyObjectType data member that has just been set.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
@@ -7024,19 +7822,25 @@ class MouseBinding(InputBinding, ISealable, ICommandSource):
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: Freezable, e: DependencyPropertyChangedEventArgs)
-            Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-             System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+            Overrides the System.Windows.DependencyObject implementation of 
+             System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+             rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+             handlers in response to a changing dependency property of type 
+             System.Windows.Freezable.
         
         
-            e: Event data that contains information about which property changed, and its old and new values.
+            e: Event data that contains information about which property changed, and its old 
+             and new values.
         """
         pass
 
     def ReadPreamble(self, *args): #cannot find CLR method
         """
         ReadPreamble(self: Freezable)
-            Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-             not dependency properties.
+            Ensures that the System.Windows.Freezable is being accessed from a valid 
+             thread. Inheritors of System.Windows.Freezable must call this method at the 
+             beginning of any API that reads data members that are not dependency 
+             properties.
         """
         pass
 
@@ -7044,26 +7848,42 @@ class MouseBinding(InputBinding, ISealable, ICommandSource):
         """
         ShouldSerializeProperty(self: DependencyObject, dp: DependencyProperty) -> bool
         
-            Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+            Returns a value that indicates whether serialization processes should serialize 
+             the value for the provided dependency property.
+        
         
             dp: The identifier for the dependency property that should be serialized.
-            Returns: true if the dependency property that is supplied should be value-serialized; otherwise, false.
+            Returns: true if the dependency property that is supplied should be value-serialized; 
+             otherwise, false.
+        
+        ShouldSerializeProperty(self: Window_16$17, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Label_17$18, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: TextBox_18$19, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Button_19$20, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: CheckBox_20$21, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: ComboBox_21$22, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Separator_22$23, dp: DependencyProperty) -> bool
         """
         pass
 
     def WritePostscript(self, *args): #cannot find CLR method
         """
         WritePostscript(self: Freezable)
-            Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-             this method at the end of any API that modifies class members that are not stored as dependency properties.
+            Raises the System.Windows.Freezable.Changed event for the 
+             System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+             method. Classes that derive from System.Windows.Freezable should call this 
+             method at the end of any API that modifies class members that are not stored as 
+             dependency properties.
         """
         pass
 
     def WritePreamble(self, *args): #cannot find CLR method
         """
         WritePreamble(self: Freezable)
-            Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-             API that writes to data members that are not dependency properties.
+            Verifies that the System.Windows.Freezable is not frozen and that it is being 
+             accessed from a valid threading context. System.Windows.Freezable inheritors 
+             should call this method at the beginning of any API that writes to data members 
+             that are not dependency properties.
         """
         pass
 
@@ -7159,8 +7979,11 @@ class MouseEventArgs(InputEventArgs):
         
             Returns the position of the mouse pointer relative to the specified element.
         
-            relativeTo: The element to use as the frame of reference for calculating the position of the mouse pointer.
-            Returns: The x- and y-coordinates of the mouse pointer position relative to the specified object.
+            relativeTo: The element to use as the frame of reference for calculating the position of 
+             the mouse pointer.
+        
+            Returns: The x- and y-coordinates of the mouse pointer position relative to the 
+             specified object.
         """
         pass
 
@@ -7275,7 +8098,9 @@ class MouseButtonEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -7288,7 +8113,10 @@ class MouseButtonEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -7314,10 +8142,14 @@ class MouseButtonEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -7384,7 +8216,9 @@ class MouseDevice(InputDevice):
         """
         Capture(self: MouseDevice, element: IInputElement, captureMode: CaptureMode) -> bool
         
-            Captures mouse input to the specified element using the specified System.Windows.Input.CaptureMode.
+            Captures mouse input to the specified element using the specified 
+             System.Windows.Input.CaptureMode.
+        
         
             element: The element to capture the mouse..
             captureMode: The capture policy to use.
@@ -7413,10 +8247,14 @@ class MouseDevice(InputDevice):
         """
         GetClientPosition(self: MouseDevice, presentationSource: PresentationSource) -> Point
         
-            Calculates the position of the mouse pointer, in client coordinates, in the specified System.Windows.PresentationSource.
+            Calculates the position of the mouse pointer, in client coordinates, in the 
+             specified System.Windows.PresentationSource.
+        
         
             presentationSource: The source in which to obtain the mouse position.
-            Returns: The position of the mouse pointer, in client coordinates, in the specified System.Windows.PresentationSource.
+            Returns: The position of the mouse pointer, in client coordinates, in the specified 
+             System.Windows.PresentationSource.
+        
         GetClientPosition(self: MouseDevice) -> Point
         
             Calculates the position of the mouse pointer, in client coordinates.
@@ -7556,7 +8394,9 @@ class MouseEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -7569,7 +8409,10 @@ class MouseEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -7595,10 +8438,14 @@ class MouseEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -7627,11 +8474,14 @@ class MouseGesture(InputGesture):
         """
         Matches(self: MouseGesture, targetElement: object, inputEventArgs: InputEventArgs) -> bool
         
-            Determines whether System.Windows.Input.MouseGesture matches the input associated with the specified System.Windows.Input.InputEventArgs object.
+            Determines whether System.Windows.Input.MouseGesture matches the input 
+             associated with the specified System.Windows.Input.InputEventArgs object.
+        
         
             targetElement: The target.
             inputEventArgs: The input event data to compare with this gesture.
-            Returns: true if the event data matches this System.Windows.Input.MouseGesture; otherwise, false.
+            Returns: true if the event data matches this System.Windows.Input.MouseGesture; 
+             otherwise, false.
         """
         pass
 
@@ -7672,9 +8522,13 @@ class MouseGestureConverter(TypeConverter):
         """
         CanConvertFrom(self: MouseGestureConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Determines whether an object of the specified type can be converted to an instance of System.Windows.Input.MouseGesture, using the specified context.
+            Determines whether an object of the specified type can be converted to an 
+             instance of System.Windows.Input.MouseGesture, using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             sourceType: The type being evaluated for conversion.
             Returns: true if sourceType is of type System.String; otherwise, false.
         """
@@ -7684,9 +8538,13 @@ class MouseGestureConverter(TypeConverter):
         """
         CanConvertTo(self: MouseGestureConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Determines whether an instance of System.Windows.Input.MouseGesture can be converted to the specified type, using the specified context.
+            Determines whether an instance of System.Windows.Input.MouseGesture can be 
+             converted to the specified type, using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             destinationType: The type being evaluated for conversion.
             Returns: true if destinationType is of type System.String; otherwise, false.
         """
@@ -7696,9 +8554,13 @@ class MouseGestureConverter(TypeConverter):
         """
         ConvertFrom(self: MouseGestureConverter, context: ITypeDescriptorContext, culture: CultureInfo, source: object) -> object
         
-            Attempts to convert the specified object to a System.Windows.Input.MouseGesture, using the specified context.
+            Attempts to convert the specified object to a 
+             System.Windows.Input.MouseGesture, using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             culture: Culture specific information.
             source: The object to convert.
             Returns: The converted object.
@@ -7709,10 +8571,16 @@ class MouseGestureConverter(TypeConverter):
         """
         ConvertTo(self: MouseGestureConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object, destinationType: Type) -> object
         
-            Attempts to convert a System.Windows.Input.MouseGesture to the specified type, using the specified context.
+            Attempts to convert a System.Windows.Input.MouseGesture to the specified type, 
+             using the specified context.
         
-            context: A format context that provides information about the environment from which this converter is being invoked.
-            culture: A format context that provides information about the environment from which this converter is being invoked.
+        
+            context: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
+            culture: A format context that provides information about the environment from which 
+             this converter is being invoked.
+        
             value: The object to convert.
             destinationType: The type to convert the object to.
             Returns: The converted object.
@@ -7730,7 +8598,9 @@ class MouseGestureValueSerializer(ValueSerializer):
         """
         CanConvertFromString(self: MouseGestureValueSerializer, value: str, context: IValueSerializerContext) -> bool
         
-            Determines if the specified System.String can be convert to an instance of System.Windows.Input.ModifierKeys.
+            Determines if the specified System.String can be convert to an instance of 
+             System.Windows.Input.ModifierKeys.
+        
         
             value: String to evaluate for conversion.
             context: Context information that is used for conversion.
@@ -7742,7 +8612,9 @@ class MouseGestureValueSerializer(ValueSerializer):
         """
         CanConvertToString(self: MouseGestureValueSerializer, value: object, context: IValueSerializerContext) -> bool
         
-            Determines if the specified System.Windows.Input.ModifierKeys can be converted to a System.String.
+            Determines if the specified System.Windows.Input.ModifierKeys can be converted 
+             to a System.String.
+        
         
             value: The modifier keys to evaluate for conversion.
             context: Context information that is used for conversion.
@@ -7809,7 +8681,9 @@ class MouseWheelEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -7822,7 +8696,10 @@ class MouseWheelEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -7848,10 +8725,14 @@ class MouseWheelEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -7921,7 +8802,9 @@ class NotifyInputEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -7934,7 +8817,10 @@ class NotifyInputEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -7960,10 +8846,14 @@ class NotifyInputEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -7996,7 +8886,8 @@ class ProcessInputEventArgs(NotifyInputEventArgs):
         PopInput(self: ProcessInputEventArgs) -> StagingAreaInputItem
         
             Removes the input event off the top of the staging area stack.
-            Returns: The input event that was on the top of the staging area stack. This will be null if the staging area is empty.
+            Returns: The input event that was on the top of the staging area stack. This will be 
+             null if the staging area is empty.
         """
         pass
 
@@ -8051,7 +8942,9 @@ class PreProcessInputEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -8064,7 +8957,10 @@ class PreProcessInputEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -8090,10 +8986,14 @@ class PreProcessInputEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -8124,7 +9024,9 @@ class ProcessInputEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -8137,7 +9039,10 @@ class ProcessInputEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -8163,10 +9068,14 @@ class ProcessInputEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -8222,7 +9131,9 @@ class QueryCursorEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -8235,7 +9146,10 @@ class QueryCursorEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -8261,10 +9175,14 @@ class QueryCursorEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -8337,7 +9255,9 @@ class RoutedCommand(object, ICommand):
         """
         CanExecute(self: RoutedCommand, parameter: object, target: IInputElement) -> bool
         
-            Determines whether this System.Windows.Input.RoutedCommand can execute in its current state.
+            Determines whether this System.Windows.Input.RoutedCommand can execute in its 
+             current state.
+        
         
             parameter: A user defined data type.
             target: The command target.
@@ -8511,9 +9431,13 @@ class Stylus(object):
     def AddGotStylusCaptureHandler(element, handler):
         """
         AddGotStylusCaptureHandler(element: DependencyObject, handler: StylusEventHandler)
-            Adds a handler for the System.Windows.Input.Stylus.GotStylusCapture�attached event.
+            Adds a handler for the System.Windows.Input.Stylus.GotStylusCapture�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8522,9 +9446,13 @@ class Stylus(object):
     def AddLostStylusCaptureHandler(element, handler):
         """
         AddLostStylusCaptureHandler(element: DependencyObject, handler: StylusEventHandler)
-            Adds a handler for the System.Windows.Input.Stylus.LostStylusCapture�attached event.
+            Adds a handler for the System.Windows.Input.Stylus.LostStylusCapture�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8533,9 +9461,13 @@ class Stylus(object):
     def AddPreviewStylusButtonDownHandler(element, handler):
         """
         AddPreviewStylusButtonDownHandler(element: DependencyObject, handler: StylusButtonEventHandler)
-            Adds a handler for the System.Windows.Input.Stylus.PreviewStylusButtonDown�attached event.
+            Adds a handler for the System.Windows.Input.Stylus.PreviewStylusButtonDown�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8544,9 +9476,13 @@ class Stylus(object):
     def AddPreviewStylusButtonUpHandler(element, handler):
         """
         AddPreviewStylusButtonUpHandler(element: DependencyObject, handler: StylusButtonEventHandler)
-            Adds a handler for the System.Windows.Input.Stylus.PreviewStylusButtonUp�attached event.
+            Adds a handler for the System.Windows.Input.Stylus.PreviewStylusButtonUp�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8555,9 +9491,13 @@ class Stylus(object):
     def AddPreviewStylusDownHandler(element, handler):
         """
         AddPreviewStylusDownHandler(element: DependencyObject, handler: StylusDownEventHandler)
-            Adds a handler for the System.Windows.Input.Stylus.PreviewStylusDown�attached event.
+            Adds a handler for the System.Windows.Input.Stylus.PreviewStylusDown�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8566,9 +9506,13 @@ class Stylus(object):
     def AddPreviewStylusInAirMoveHandler(element, handler):
         """
         AddPreviewStylusInAirMoveHandler(element: DependencyObject, handler: StylusEventHandler)
-            Adds a handler for the System.Windows.Input.Stylus.PreviewStylusInAirMove�attached event.
+            Adds a handler for the System.Windows.Input.Stylus.PreviewStylusInAirMove�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8577,9 +9521,13 @@ class Stylus(object):
     def AddPreviewStylusInRangeHandler(element, handler):
         """
         AddPreviewStylusInRangeHandler(element: DependencyObject, handler: StylusEventHandler)
-            Adds a handler for the System.Windows.Input.Stylus.PreviewStylusInRange�attached event.
+            Adds a handler for the System.Windows.Input.Stylus.PreviewStylusInRange�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8588,9 +9536,13 @@ class Stylus(object):
     def AddPreviewStylusMoveHandler(element, handler):
         """
         AddPreviewStylusMoveHandler(element: DependencyObject, handler: StylusEventHandler)
-            Adds a handler for the System.Windows.Input.Stylus.PreviewStylusMove�attached event.
+            Adds a handler for the System.Windows.Input.Stylus.PreviewStylusMove�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8599,9 +9551,13 @@ class Stylus(object):
     def AddPreviewStylusOutOfRangeHandler(element, handler):
         """
         AddPreviewStylusOutOfRangeHandler(element: DependencyObject, handler: StylusEventHandler)
-            Adds a handler for the System.Windows.Input.Stylus.PreviewStylusOutOfRange�attached event.
+            Adds a handler for the System.Windows.Input.Stylus.PreviewStylusOutOfRange�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8610,9 +9566,13 @@ class Stylus(object):
     def AddPreviewStylusSystemGestureHandler(element, handler):
         """
         AddPreviewStylusSystemGestureHandler(element: DependencyObject, handler: StylusSystemGestureEventHandler)
-            Adds a handler for the System.Windows.Input.Stylus.PreviewStylusSystemGesture�attached event.
+            Adds a handler for the System.Windows.Input.Stylus.PreviewStylusSystemGesture�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8621,9 +9581,13 @@ class Stylus(object):
     def AddPreviewStylusUpHandler(element, handler):
         """
         AddPreviewStylusUpHandler(element: DependencyObject, handler: StylusEventHandler)
-            Adds a handler for the System.Windows.Input.Stylus.PreviewStylusUp�attached event.
+            Adds a handler for the System.Windows.Input.Stylus.PreviewStylusUp�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8632,9 +9596,13 @@ class Stylus(object):
     def AddStylusButtonDownHandler(element, handler):
         """
         AddStylusButtonDownHandler(element: DependencyObject, handler: StylusButtonEventHandler)
-            Adds a handler for the System.Windows.Input.Stylus.StylusButtonDown�attached event.
+            Adds a handler for the System.Windows.Input.Stylus.StylusButtonDown�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8643,9 +9611,13 @@ class Stylus(object):
     def AddStylusButtonUpHandler(element, handler):
         """
         AddStylusButtonUpHandler(element: DependencyObject, handler: StylusButtonEventHandler)
-            Adds a handler for the System.Windows.Input.Stylus.StylusButtonUp�attached event.
+            Adds a handler for the System.Windows.Input.Stylus.StylusButtonUp�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8656,7 +9628,9 @@ class Stylus(object):
         AddStylusDownHandler(element: DependencyObject, handler: StylusDownEventHandler)
             Adds a handler for the System.Windows.Input.Stylus.StylusDown�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8667,7 +9641,9 @@ class Stylus(object):
         AddStylusEnterHandler(element: DependencyObject, handler: StylusEventHandler)
             Adds a handler for the System.Windows.Input.Stylus.StylusEnter�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8676,9 +9652,13 @@ class Stylus(object):
     def AddStylusInAirMoveHandler(element, handler):
         """
         AddStylusInAirMoveHandler(element: DependencyObject, handler: StylusEventHandler)
-            Adds a handler for the System.Windows.Input.Stylus.StylusInAirMove�attached event.
+            Adds a handler for the System.Windows.Input.Stylus.StylusInAirMove�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8689,7 +9669,9 @@ class Stylus(object):
         AddStylusInRangeHandler(element: DependencyObject, handler: StylusEventHandler)
             Adds a handler for the System.Windows.Input.Stylus.StylusInRange�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8700,7 +9682,9 @@ class Stylus(object):
         AddStylusLeaveHandler(element: DependencyObject, handler: StylusEventHandler)
             Adds a handler for the System.Windows.Input.Stylus.StylusLeave�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8711,7 +9695,9 @@ class Stylus(object):
         AddStylusMoveHandler(element: DependencyObject, handler: StylusEventHandler)
             Adds a handler for the System.Windows.Input.Stylus.StylusMove�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8720,9 +9706,13 @@ class Stylus(object):
     def AddStylusOutOfRangeHandler(element, handler):
         """
         AddStylusOutOfRangeHandler(element: DependencyObject, handler: StylusEventHandler)
-            Adds a handler for the System.Windows.Input.Stylus.StylusOutOfRange�attached event.
+            Adds a handler for the System.Windows.Input.Stylus.StylusOutOfRange�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8731,9 +9721,13 @@ class Stylus(object):
     def AddStylusSystemGestureHandler(element, handler):
         """
         AddStylusSystemGestureHandler(element: DependencyObject, handler: StylusSystemGestureEventHandler)
-            Adds a handler for the System.Windows.Input.Stylus.StylusSystemGesture�attached event.
+            Adds a handler for the System.Windows.Input.Stylus.StylusSystemGesture�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8744,7 +9738,9 @@ class Stylus(object):
         AddStylusUpHandler(element: DependencyObject, handler: StylusEventHandler)
             Adds a handler for the System.Windows.Input.Stylus.StylusUp�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to add.
         """
         pass
@@ -8773,9 +9769,13 @@ class Stylus(object):
         """
         GetIsFlicksEnabled(element: DependencyObject) -> bool
         
-            Gets the value of the System.Windows.Input.Stylus.IsFlicksEnabled�attached property on the specified element.
+            Gets the value of the System.Windows.Input.Stylus.IsFlicksEnabled�attached 
+             property on the specified element.
         
-            element: A System.Windows.UIElement or System.Windows.ContentElement on which to determine whether flicks are enabled.
+        
+            element: A System.Windows.UIElement or System.Windows.ContentElement on which to 
+             determine whether flicks are enabled.
+        
             Returns: true if the specified element has flicks enabled; otherwise, false.
         """
         pass
@@ -8785,9 +9785,13 @@ class Stylus(object):
         """
         GetIsPressAndHoldEnabled(element: DependencyObject) -> bool
         
-            Gets the value of the System.Windows.Input.Stylus.IsPressAndHoldEnabled�attached property on the specified element.
+            Gets the value of the System.Windows.Input.Stylus.IsPressAndHoldEnabled�
+             attached property on the specified element.
         
-            element: A System.Windows.UIElement or System.Windows.ContentElement on which to determine whether press and hold is enabled.
+        
+            element: A System.Windows.UIElement or System.Windows.ContentElement on which to 
+             determine whether press and hold is enabled.
+        
             Returns: true if the specified element has press and hold enabled; otherwise, false;
         """
         pass
@@ -8797,9 +9801,13 @@ class Stylus(object):
         """
         GetIsTapFeedbackEnabled(element: DependencyObject) -> bool
         
-            Gets the value of the System.Windows.Input.Stylus.IsTapFeedbackEnabled�attached property on the specified element.
+            Gets the value of the System.Windows.Input.Stylus.IsTapFeedbackEnabled�attached 
+             property on the specified element.
         
-            element: A System.Windows.UIElement or System.Windows.ContentElement on which to determine whether tap feedback enabled.
+        
+            element: A System.Windows.UIElement or System.Windows.ContentElement on which to 
+             determine whether tap feedback enabled.
+        
             Returns: true if the specified element has tap feedback enabled; otherwise, false.
         """
         pass
@@ -8809,9 +9817,13 @@ class Stylus(object):
         """
         GetIsTouchFeedbackEnabled(element: DependencyObject) -> bool
         
-            Gets the value of the System.Windows.Input.Stylus.IsTouchFeedbackEnabled�attached property on the specified element.
+            Gets the value of the System.Windows.Input.Stylus.IsTouchFeedbackEnabled�
+             attached property on the specified element.
         
-            element: A System.Windows.UIElement or System.Windows.ContentElement on which to determine whether touch input feedback enabled.
+        
+            element: A System.Windows.UIElement or System.Windows.ContentElement on which to 
+             determine whether touch input feedback enabled.
+        
             Returns: true if touch input feedback is enabled, otherwise false.
         """
         pass
@@ -8820,9 +9832,13 @@ class Stylus(object):
     def RemoveGotStylusCaptureHandler(element, handler):
         """
         RemoveGotStylusCaptureHandler(element: DependencyObject, handler: StylusEventHandler)
-            Removes a handler for the System.Windows.Input.Stylus.GotStylusCapture�attached event.
+            Removes a handler for the System.Windows.Input.Stylus.GotStylusCapture�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -8831,9 +9847,13 @@ class Stylus(object):
     def RemoveLostStylusCaptureHandler(element, handler):
         """
         RemoveLostStylusCaptureHandler(element: DependencyObject, handler: StylusEventHandler)
-            Removes a handler for the System.Windows.Input.Stylus.LostStylusCapture�attached event.
+            Removes a handler for the System.Windows.Input.Stylus.LostStylusCapture�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -8842,9 +9862,13 @@ class Stylus(object):
     def RemovePreviewStylusButtonDownHandler(element, handler):
         """
         RemovePreviewStylusButtonDownHandler(element: DependencyObject, handler: StylusButtonEventHandler)
-            Removes a handler for the System.Windows.Input.Stylus.PreviewStylusButtonDown�attached event.
+            Removes a handler for the System.Windows.Input.Stylus.PreviewStylusButtonDown�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -8853,9 +9877,13 @@ class Stylus(object):
     def RemovePreviewStylusButtonUpHandler(element, handler):
         """
         RemovePreviewStylusButtonUpHandler(element: DependencyObject, handler: StylusButtonEventHandler)
-            Removes a handler for the System.Windows.Input.Stylus.PreviewStylusButtonUp�attached event.
+            Removes a handler for the System.Windows.Input.Stylus.PreviewStylusButtonUp�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -8864,9 +9892,13 @@ class Stylus(object):
     def RemovePreviewStylusDownHandler(element, handler):
         """
         RemovePreviewStylusDownHandler(element: DependencyObject, handler: StylusDownEventHandler)
-            Removes a handler for the System.Windows.Input.Stylus.PreviewStylusDown�attached event.
+            Removes a handler for the System.Windows.Input.Stylus.PreviewStylusDown�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -8875,9 +9907,13 @@ class Stylus(object):
     def RemovePreviewStylusInAirMoveHandler(element, handler):
         """
         RemovePreviewStylusInAirMoveHandler(element: DependencyObject, handler: StylusEventHandler)
-            Removes a handler for the System.Windows.Input.Stylus.PreviewStylusInAirMove�attached event.
+            Removes a handler for the System.Windows.Input.Stylus.PreviewStylusInAirMove�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -8886,9 +9922,13 @@ class Stylus(object):
     def RemovePreviewStylusInRangeHandler(element, handler):
         """
         RemovePreviewStylusInRangeHandler(element: DependencyObject, handler: StylusEventHandler)
-            Removes a handler for the System.Windows.Input.Stylus.PreviewStylusInRange�attached event.
+            Removes a handler for the System.Windows.Input.Stylus.PreviewStylusInRange�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -8897,9 +9937,13 @@ class Stylus(object):
     def RemovePreviewStylusMoveHandler(element, handler):
         """
         RemovePreviewStylusMoveHandler(element: DependencyObject, handler: StylusEventHandler)
-            Removes a handler for the System.Windows.Input.Stylus.PreviewStylusMove�attached event.
+            Removes a handler for the System.Windows.Input.Stylus.PreviewStylusMove�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -8908,9 +9952,13 @@ class Stylus(object):
     def RemovePreviewStylusOutOfRangeHandler(element, handler):
         """
         RemovePreviewStylusOutOfRangeHandler(element: DependencyObject, handler: StylusEventHandler)
-            Removes a handler for the System.Windows.Input.Stylus.PreviewStylusOutOfRange�attached event.
+            Removes a handler for the System.Windows.Input.Stylus.PreviewStylusOutOfRange�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -8919,9 +9967,13 @@ class Stylus(object):
     def RemovePreviewStylusSystemGestureHandler(element, handler):
         """
         RemovePreviewStylusSystemGestureHandler(element: DependencyObject, handler: StylusSystemGestureEventHandler)
-            Removes a handler for the System.Windows.Input.Stylus.PreviewStylusSystemGesture�attached event.
+            Removes a handler for the 
+             System.Windows.Input.Stylus.PreviewStylusSystemGesture�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -8930,9 +9982,13 @@ class Stylus(object):
     def RemovePreviewStylusUpHandler(element, handler):
         """
         RemovePreviewStylusUpHandler(element: DependencyObject, handler: StylusEventHandler)
-            Removes a handler for the System.Windows.Input.Stylus.PreviewStylusUp�attached event.
+            Removes a handler for the System.Windows.Input.Stylus.PreviewStylusUp�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -8941,9 +9997,13 @@ class Stylus(object):
     def RemoveStylusButtonDownHandler(element, handler):
         """
         RemoveStylusButtonDownHandler(element: DependencyObject, handler: StylusButtonEventHandler)
-            Removes a handler for the System.Windows.Input.Stylus.StylusButtonDown�attached event.
+            Removes a handler for the System.Windows.Input.Stylus.StylusButtonDown�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -8952,9 +10012,13 @@ class Stylus(object):
     def RemoveStylusButtonUpHandler(element, handler):
         """
         RemoveStylusButtonUpHandler(element: DependencyObject, handler: StylusButtonEventHandler)
-            Removes a handler for the System.Windows.Input.Stylus.StylusButtonUp�attached event.
+            Removes a handler for the System.Windows.Input.Stylus.StylusButtonUp�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -8965,7 +10029,9 @@ class Stylus(object):
         RemoveStylusDownHandler(element: DependencyObject, handler: StylusDownEventHandler)
             Removes a handler for the System.Windows.Input.Stylus.StylusDown�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -8974,9 +10040,13 @@ class Stylus(object):
     def RemoveStylusEnterHandler(element, handler):
         """
         RemoveStylusEnterHandler(element: DependencyObject, handler: StylusEventHandler)
-            Removes a handler for the System.Windows.Input.Stylus.StylusEnter�attached event.
+            Removes a handler for the System.Windows.Input.Stylus.StylusEnter�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -8985,9 +10055,13 @@ class Stylus(object):
     def RemoveStylusInAirMoveHandler(element, handler):
         """
         RemoveStylusInAirMoveHandler(element: DependencyObject, handler: StylusEventHandler)
-            Removes a handler for the System.Windows.Input.Stylus.StylusInAirMove�attached event.
+            Removes a handler for the System.Windows.Input.Stylus.StylusInAirMove�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -8996,9 +10070,13 @@ class Stylus(object):
     def RemoveStylusInRangeHandler(element, handler):
         """
         RemoveStylusInRangeHandler(element: DependencyObject, handler: StylusEventHandler)
-            Removes a handler for the System.Windows.Input.Stylus.StylusInRange�attached event.
+            Removes a handler for the System.Windows.Input.Stylus.StylusInRange�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -9007,9 +10085,13 @@ class Stylus(object):
     def RemoveStylusLeaveHandler(element, handler):
         """
         RemoveStylusLeaveHandler(element: DependencyObject, handler: StylusEventHandler)
-            Removes a handler for the System.Windows.Input.Stylus.StylusLeave�attached event.
+            Removes a handler for the System.Windows.Input.Stylus.StylusLeave�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -9020,7 +10102,9 @@ class Stylus(object):
         RemoveStylusMoveHandler(element: DependencyObject, handler: StylusEventHandler)
             Removes a handler for the System.Windows.Input.Stylus.StylusMove�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -9029,9 +10113,13 @@ class Stylus(object):
     def RemoveStylusOutOfRangeHandler(element, handler):
         """
         RemoveStylusOutOfRangeHandler(element: DependencyObject, handler: StylusEventHandler)
-            Removes a handler for the System.Windows.Input.Stylus.StylusOutOfRange�attached event.
+            Removes a handler for the System.Windows.Input.Stylus.StylusOutOfRange�attached 
+             event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -9040,9 +10128,13 @@ class Stylus(object):
     def RemoveStylusSystemGestureHandler(element, handler):
         """
         RemoveStylusSystemGestureHandler(element: DependencyObject, handler: StylusSystemGestureEventHandler)
-            Removes a handler for the System.Windows.Input.Stylus.StylusSystemGesture�attached event.
+            Removes a handler for the System.Windows.Input.Stylus.StylusSystemGesture�
+             attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -9053,7 +10145,9 @@ class Stylus(object):
         RemoveStylusUpHandler(element: DependencyObject, handler: StylusEventHandler)
             Removes a handler for the System.Windows.Input.Stylus.StylusUp�attached event.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to this event.
+            element: The System.Windows.UIElement or System.Windows.ContentElement that listens to 
+             this event.
+        
             handler: The event handler to remove.
         """
         pass
@@ -9062,9 +10156,13 @@ class Stylus(object):
     def SetIsFlicksEnabled(element, enabled):
         """
         SetIsFlicksEnabled(element: DependencyObject, enabled: bool)
-            Gets the value of the System.Windows.Input.Stylus.IsFlicksEnabled�attached property on the specified element.
+            Gets the value of the System.Windows.Input.Stylus.IsFlicksEnabled�attached 
+             property on the specified element.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement on which to enable flicks.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement on which to 
+             enable flicks.
+        
             enabled: true to enable flicks; false to disable flicks.
         """
         pass
@@ -9073,9 +10171,13 @@ class Stylus(object):
     def SetIsPressAndHoldEnabled(element, enabled):
         """
         SetIsPressAndHoldEnabled(element: DependencyObject, enabled: bool)
-            Sets the value of the System.Windows.Input.Stylus.IsPressAndHoldEnabled�attached property on the specified element.
+            Sets the value of the System.Windows.Input.Stylus.IsPressAndHoldEnabled�
+             attached property on the specified element.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement on which to enable press and hold.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement on which to 
+             enable press and hold.
+        
             enabled: true to enable press and hold; false to disable press and hold.
         """
         pass
@@ -9084,9 +10186,13 @@ class Stylus(object):
     def SetIsTapFeedbackEnabled(element, enabled):
         """
         SetIsTapFeedbackEnabled(element: DependencyObject, enabled: bool)
-            Sets the value of the System.Windows.Input.Stylus.IsTapFeedbackEnabled�attached property on the specified element.
+            Sets the value of the System.Windows.Input.Stylus.IsTapFeedbackEnabled�attached 
+             property on the specified element.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement on which to enable tap feedback.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement on which to 
+             enable tap feedback.
+        
             enabled: true to enable tap feedback; false to disable tap feedback.
         """
         pass
@@ -9095,9 +10201,13 @@ class Stylus(object):
     def SetIsTouchFeedbackEnabled(element, enabled):
         """
         SetIsTouchFeedbackEnabled(element: DependencyObject, enabled: bool)
-            Sets the value of the System.Windows.Input.Stylus.IsTouchFeedbackEnabled�attached property on the specified element.
+            Sets the value of the System.Windows.Input.Stylus.IsTouchFeedbackEnabled�
+             attached property on the specified element.
         
-            element: The System.Windows.UIElement or System.Windows.ContentElement on which to enable tap feedback.
+        
+            element: The System.Windows.UIElement or System.Windows.ContentElement on which to 
+             enable tap feedback.
+        
             enabled: true to enable touch input feedback; false to disable touch input feedback.
         """
         pass
@@ -9308,7 +10418,8 @@ class StylusEventArgs(InputEventArgs):
             Gets the position of the stylus.
         
             relativeTo: The System.Windows.IInputElement that the (x,y) coordinates are mapped to.
-            Returns: A System.Windows.Point that represents the position of the stylus, based on the coordinates of relativeTo.
+            Returns: A System.Windows.Point that represents the position of the stylus, based on the 
+             coordinates of relativeTo.
         """
         pass
 
@@ -9316,19 +10427,33 @@ class StylusEventArgs(InputEventArgs):
         """
         GetStylusPoints(self: StylusEventArgs, relativeTo: IInputElement, subsetToReformatTo: StylusPointDescription) -> StylusPointCollection
         
-            Returns a System.Windows.Input.StylusPointCollection that uses the specified System.Windows.Input.StylusPointDescription and contains System.Windows.Input.StylusPoint objects relating to the specified 
-             input element.
+            Returns a System.Windows.Input.StylusPointCollection that uses the specified 
+             System.Windows.Input.StylusPointDescription and contains 
+             System.Windows.Input.StylusPoint objects relating to the specified input 
+             element.
         
         
-            relativeTo: The System.Windows.IInputElement to which the (x,y) coordinates in the System.Windows.Input.StylusPointCollection are mapped.
-            subsetToReformatTo: The System.Windows.Input.StylusPointDescription to be used by the System.Windows.Input.StylusPointCollection.
-            Returns: A System.Windows.Input.StylusPointCollection that contains System.Windows.Input.StylusPoint objects collected during an event.
+            relativeTo: The System.Windows.IInputElement to which the (x,y) coordinates in the 
+             System.Windows.Input.StylusPointCollection are mapped.
+        
+            subsetToReformatTo: The System.Windows.Input.StylusPointDescription to be used by the 
+             System.Windows.Input.StylusPointCollection.
+        
+            Returns: A System.Windows.Input.StylusPointCollection that contains 
+             System.Windows.Input.StylusPoint objects collected during an event.
+        
         GetStylusPoints(self: StylusEventArgs, relativeTo: IInputElement) -> StylusPointCollection
         
-            Returns a System.Windows.Input.StylusPointCollection that contains System.Windows.Input.StylusPoint objects relative to the specified input element.
+            Returns a System.Windows.Input.StylusPointCollection that contains 
+             System.Windows.Input.StylusPoint objects relative to the specified input 
+             element.
         
-            relativeTo: The System.Windows.IInputElement to which the (x,y) coordinates in the System.Windows.Input.StylusPointCollection are mapped.
-            Returns: A System.Windows.Input.StylusPointCollection that contains System.Windows.Input.StylusPoint objects collected in the event.
+        
+            relativeTo: The System.Windows.IInputElement to which the (x,y) coordinates in the 
+             System.Windows.Input.StylusPointCollection are mapped.
+        
+            Returns: A System.Windows.Input.StylusPointCollection that contains 
+             System.Windows.Input.StylusPoint objects collected in the event.
         """
         pass
 
@@ -9394,7 +10519,9 @@ class StylusButtonEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -9407,7 +10534,10 @@ class StylusButtonEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -9433,10 +10563,14 @@ class StylusButtonEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -9506,13 +10640,16 @@ class StylusDevice(InputDevice):
             Binds input from the stylus to the specified element.
         
             element: The element to which the stylus is bound.
-            Returns: true if the input element is captured successfully; otherwise, false. The default is false.
+            Returns: true if the input element is captured successfully; otherwise, false. The 
+             default is false.
+        
         Capture(self: StylusDevice, element: IInputElement, captureMode: CaptureMode) -> bool
         
             Binds the stylus to the specified element.
         
             captureMode: One of the System.Windows.Input.CaptureMode values.
-            Returns: true if the input element is captured successfully; otherwise, false. The default is false.
+            Returns: true if the input element is captured successfully; otherwise, false. The 
+             default is false.
         """
         pass
 
@@ -9523,7 +10660,8 @@ class StylusDevice(InputDevice):
             Gets the position of the stylus.
         
             relativeTo: The System.Windows.IInputElement to which the (x,y) coordinates are mapped.
-            Returns: A System.Windows.Point that represents the position of the stylus, in relation to relativeTo.
+            Returns: A System.Windows.Point that represents the position of the stylus, in relation 
+             to relativeTo.
         """
         pass
 
@@ -9531,17 +10669,31 @@ class StylusDevice(InputDevice):
         """
         GetStylusPoints(self: StylusDevice, relativeTo: IInputElement, subsetToReformatTo: StylusPointDescription) -> StylusPointCollection
         
-            Returns a System.Windows.Input.StylusPointCollection that contains System.Windows.Input.StylusPoint objects collected from the stylus. Uses the specified System.Windows.Input.StylusPointDescription.
+            Returns a System.Windows.Input.StylusPointCollection that contains 
+             System.Windows.Input.StylusPoint objects collected from the stylus. Uses the 
+             specified System.Windows.Input.StylusPointDescription.
         
-            relativeTo: The System.Windows.IInputElement to which the (x y) coordinates in the System.Windows.Input.StylusPointCollection are mapped.
-            subsetToReformatTo: The System.Windows.Input.StylusPointDescription to be used by the System.Windows.Input.StylusPointCollection.
-            Returns: A System.Windows.Input.StylusPointCollection that contains System.Windows.Input.StylusPoint objects collected from the stylus.
+        
+            relativeTo: The System.Windows.IInputElement to which the (x y) coordinates in the 
+             System.Windows.Input.StylusPointCollection are mapped.
+        
+            subsetToReformatTo: The System.Windows.Input.StylusPointDescription to be used by the 
+             System.Windows.Input.StylusPointCollection.
+        
+            Returns: A System.Windows.Input.StylusPointCollection that contains 
+             System.Windows.Input.StylusPoint objects collected from the stylus.
+        
         GetStylusPoints(self: StylusDevice, relativeTo: IInputElement) -> StylusPointCollection
         
-            Returns a System.Windows.Input.StylusPointCollection that contains System.Windows.Input.StylusPoint objects collected from the stylus.
+            Returns a System.Windows.Input.StylusPointCollection that contains 
+             System.Windows.Input.StylusPoint objects collected from the stylus.
         
-            relativeTo: The System.Windows.IInputElement to which the (x,y) coordinates in the System.Windows.Input.StylusPointCollection are mapped.
-            Returns: A System.Windows.Input.StylusPointCollection that contains System.Windows.Input.StylusPoint objects that the stylus collected.
+        
+            relativeTo: The System.Windows.IInputElement to which the (x,y) coordinates in the 
+             System.Windows.Input.StylusPointCollection are mapped.
+        
+            Returns: A System.Windows.Input.StylusPointCollection that contains 
+             System.Windows.Input.StylusPoint objects that the stylus collected.
         """
         pass
 
@@ -9700,7 +10852,9 @@ class StylusDownEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -9713,7 +10867,10 @@ class StylusDownEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -9739,10 +10896,14 @@ class StylusDownEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -9773,7 +10934,9 @@ class StylusEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -9786,7 +10949,10 @@ class StylusEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -9812,10 +10978,14 @@ class StylusEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -9845,23 +11015,37 @@ class StylusPoint(object, IEquatable[StylusPoint]):
         """
         Equals(self: StylusPoint, value: StylusPoint) -> bool
         
-            Returns a Boolean value that indicates whether the specified System.Windows.Input.StylusPoint is equal to the current System.Windows.Input.StylusPoint.
+            Returns a Boolean value that indicates whether the specified 
+             System.Windows.Input.StylusPoint is equal to the current 
+             System.Windows.Input.StylusPoint.
         
-            value: The System.Windows.Input.StylusPoint to compare to the current System.Windows.Input.StylusPoint.
-            Returns: true if the System.Windows.Input.StylusPoint objects are equal; otherwise, false.
+        
+            value: The System.Windows.Input.StylusPoint to compare to the current 
+             System.Windows.Input.StylusPoint.
+        
+            Returns: true if the System.Windows.Input.StylusPoint objects are equal; otherwise, 
+             false.
+        
         Equals(self: StylusPoint, o: object) -> bool
         
-            Returns a value indicating whether the specified object is equal to the System.Windows.Input.StylusPoint.
+            Returns a value indicating whether the specified object is equal to the 
+             System.Windows.Input.StylusPoint.
         
-            o: The System.Windows.Input.StylusPoint to compare to the current System.Windows.Input.StylusPoint.
+        
+            o: The System.Windows.Input.StylusPoint to compare to the current 
+             System.Windows.Input.StylusPoint.
+        
             Returns: true if the objects are equal; otherwise, false.
         Equals(stylusPoint1: StylusPoint, stylusPoint2: StylusPoint) -> bool
         
-            Returns a Boolean value that indicates whether the two specified System.Windows.Input.StylusPoint objects are equal.
+            Returns a Boolean value that indicates whether the two specified 
+             System.Windows.Input.StylusPoint objects are equal.
+        
         
             stylusPoint1: The first System.Windows.Input.StylusPoint to compare.
             stylusPoint2: The second System.Windows.Input.StylusPoint to compare.
-            Returns: true if the System.Windows.Input.StylusPoint objects are equal; otherwise, false.
+            Returns: true if the System.Windows.Input.StylusPoint objects are equal; otherwise, 
+             false.
         """
         pass
 
@@ -9875,7 +11059,9 @@ class StylusPoint(object, IEquatable[StylusPoint]):
         
             Returns the value of the specified property.
         
-            stylusPointProperty: The System.Windows.Input.StylusPointProperty that specifies which property value to get.
+            stylusPointProperty: The System.Windows.Input.StylusPointProperty that specifies which property 
+             value to get.
+        
             Returns: The value of the specified System.Windows.Input.StylusPointProperty.
         """
         pass
@@ -9884,10 +11070,15 @@ class StylusPoint(object, IEquatable[StylusPoint]):
         """
         HasProperty(self: StylusPoint, stylusPointProperty: StylusPointProperty) -> bool
         
-            Returns whether the current System.Windows.Input.StylusPoint contains the specified property.
+            Returns whether the current System.Windows.Input.StylusPoint contains the 
+             specified property.
         
-            stylusPointProperty: The System.Windows.Input.StylusPointProperty to check for in the System.Windows.Input.StylusPoint.
-            Returns: true if the specified System.Windows.Input.StylusPointProperty is in the current System.Windows.Input.StylusPoint; otherwise, false.
+        
+            stylusPointProperty: The System.Windows.Input.StylusPointProperty to check for in the 
+             System.Windows.Input.StylusPoint.
+        
+            Returns: true if the specified System.Windows.Input.StylusPointProperty is in the 
+             current System.Windows.Input.StylusPoint; otherwise, false.
         """
         pass
 
@@ -9896,7 +11087,9 @@ class StylusPoint(object, IEquatable[StylusPoint]):
         SetPropertyValue(self: StylusPoint, stylusPointProperty: StylusPointProperty, value: int)
             Sets the specified property to the specified value.
         
-            stylusPointProperty: The System.Windows.Input.StylusPointProperty that specifies which property value to set.
+            stylusPointProperty: The System.Windows.Input.StylusPointProperty that specifies which property 
+             value to set.
+        
             value: The value of the property.
         """
         pass
@@ -9989,16 +11182,20 @@ class StylusPointCollection(Collection[StylusPoint], IList[StylusPoint], ICollec
     def Add(self, *__args):
         """
         Add(self: StylusPointCollection, stylusPoints: StylusPointCollection)
-            Adds the specified System.Windows.Input.StylusPointCollection to the current System.Windows.Input.StylusPointCollection.
+            Adds the specified System.Windows.Input.StylusPointCollection to the current 
+             System.Windows.Input.StylusPointCollection.
         
-            stylusPoints: The System.Windows.Input.StylusPointCollection to add to the current System.Windows.Input.StylusPointCollection.
+        
+            stylusPoints: The System.Windows.Input.StylusPointCollection to add to the current 
+             System.Windows.Input.StylusPointCollection.
         """
         pass
 
     def ClearItems(self, *args): #cannot find CLR method
         """
         ClearItems(self: StylusPointCollection)
-            Removes all System.Windows.Input.StylusPoint objects from the System.Windows.Input.StylusPointCollection.
+            Removes all System.Windows.Input.StylusPoint objects from the 
+             System.Windows.Input.StylusPointCollection.
         """
         pass
 
@@ -10007,17 +11204,22 @@ class StylusPointCollection(Collection[StylusPoint], IList[StylusPoint], ICollec
         Clone(self: StylusPointCollection) -> StylusPointCollection
         
             Copies the System.Windows.Input.StylusPointCollection.
-            Returns: A new System.Windows.Input.StylusPointCollection that contains copies of the System.Windows.Input.StylusPoint objects in the current System.Windows.Input.StylusPointCollection.
+            Returns: A new System.Windows.Input.StylusPointCollection that contains copies of the 
+             System.Windows.Input.StylusPoint objects in the current 
+             System.Windows.Input.StylusPointCollection.
         """
         pass
 
     def InsertItem(self, *args): #cannot find CLR method
         """
         InsertItem(self: StylusPointCollection, index: int, stylusPoint: StylusPoint)
-            Inserts the specified System.Windows.Input.StylusPoint into the System.Windows.Input.StylusPointCollection at the specified position.
+            Inserts the specified System.Windows.Input.StylusPoint into the 
+             System.Windows.Input.StylusPointCollection at the specified position.
+        
         
             index: The position at which to insert the System.Windows.Input.StylusPoint.
-            stylusPoint: The System.Windows.Input.StylusPoint to insert into the System.Windows.Input.StylusPointCollection.
+            stylusPoint: The System.Windows.Input.StylusPoint to insert into the 
+             System.Windows.Input.StylusPointCollection.
         """
         pass
 
@@ -10034,18 +11236,29 @@ class StylusPointCollection(Collection[StylusPoint], IList[StylusPoint], ICollec
         """
         Reformat(self: StylusPointCollection, subsetToReformatTo: StylusPointDescription) -> StylusPointCollection
         
-            Finds the intersection of the specified System.Windows.Input.StylusPointDescription and the System.Windows.Input.StylusPointCollection.Description property.
+            Finds the intersection of the specified 
+             System.Windows.Input.StylusPointDescription and the 
+             System.Windows.Input.StylusPointCollection.Description property.
         
-            subsetToReformatTo: A System.Windows.Input.StylusPointDescription to intersect with the System.Windows.Input.StylusPointDescription of the current System.Windows.Input.StylusPointCollection.
-            Returns: A System.Windows.Input.StylusPointCollection that has a System.Windows.Input.StylusPointDescription that is a subset of the specified System.Windows.Input.StylusPointDescription and the 
-             System.Windows.Input.StylusPointDescription that the current System.Windows.Input.StylusPointCollection uses.
+        
+            subsetToReformatTo: A System.Windows.Input.StylusPointDescription to intersect with the 
+             System.Windows.Input.StylusPointDescription of the current 
+             System.Windows.Input.StylusPointCollection.
+        
+            Returns: A System.Windows.Input.StylusPointCollection that has a 
+             System.Windows.Input.StylusPointDescription that is a subset of the specified 
+             System.Windows.Input.StylusPointDescription and the 
+             System.Windows.Input.StylusPointDescription that the current 
+             System.Windows.Input.StylusPointCollection uses.
         """
         pass
 
     def RemoveItem(self, *args): #cannot find CLR method
         """
         RemoveItem(self: StylusPointCollection, index: int)
-            Removes the System.Windows.Input.StylusPoint at the specified position from the System.Windows.Input.StylusPointCollection.
+            Removes the System.Windows.Input.StylusPoint at the specified position from the 
+             System.Windows.Input.StylusPointCollection.
+        
         
             index: The position at which to remove the System.Windows.Input.StylusPoint.
         """
@@ -10065,7 +11278,8 @@ class StylusPointCollection(Collection[StylusPoint], IList[StylusPoint], ICollec
         """
         ToHiMetricArray(self: StylusPointCollection) -> Array[int]
         
-            Converts the property values of the System.Windows.Input.StylusPoint objects into a 32-bit signed integer array.
+            Converts the property values of the System.Windows.Input.StylusPoint objects 
+             into a 32-bit signed integer array.
         """
         pass
 
@@ -10129,11 +11343,14 @@ class StylusPointDescription(object):
         """
         AreCompatible(stylusPointDescription1: StylusPointDescription, stylusPointDescription2: StylusPointDescription) -> bool
         
-            Returns a value that indicates whether the specified System.Windows.Input.StylusPointDescription objects are identical.
+            Returns a value that indicates whether the specified 
+             System.Windows.Input.StylusPointDescription objects are identical.
+        
         
             stylusPointDescription1: The first System.Windows.Input.StylusPointDescription to check.
             stylusPointDescription2: The second System.Windows.Input.StylusPointDescription to check.
-            Returns: true if the System.Windows.Input.StylusPointDescription objects are identical; otherwise, false.
+            Returns: true if the System.Windows.Input.StylusPointDescription objects are identical; 
+             otherwise, false.
         """
         pass
 
@@ -10142,10 +11359,14 @@ class StylusPointDescription(object):
         """
         GetCommonDescription(stylusPointDescription: StylusPointDescription, stylusPointDescriptionPreserveInfo: StylusPointDescription) -> StylusPointDescription
         
-            Returns the intersection of the specified System.Windows.Input.StylusPointDescription objects.
+            Returns the intersection of the specified 
+             System.Windows.Input.StylusPointDescription objects.
+        
         
             stylusPointDescriptionPreserveInfo: The second System.Windows.Input.StylusPointDescription to intersect.
-            Returns: A System.Windows.Input.StylusPointDescription that contains the properties that are present if both of the specified System.Windows.Input.StylusPointDescription objects.
+            Returns: A System.Windows.Input.StylusPointDescription that contains the properties that 
+             are present if both of the specified 
+             System.Windows.Input.StylusPointDescription objects.
         """
         pass
 
@@ -10153,10 +11374,15 @@ class StylusPointDescription(object):
         """
         GetPropertyInfo(self: StylusPointDescription, stylusPointProperty: StylusPointProperty) -> StylusPointPropertyInfo
         
-            Gets the System.Windows.Input.StylusPointPropertyInfo for the specified property.
+            Gets the System.Windows.Input.StylusPointPropertyInfo for the specified 
+             property.
         
-            stylusPointProperty: The System.Windows.Input.StylusPointProperty that specifies the property of the desired System.Windows.Input.StylusPointPropertyInfo.
-            Returns: The System.Windows.Input.StylusPointPropertyInfo for the specified System.Windows.Input.StylusPointProperty.
+        
+            stylusPointProperty: The System.Windows.Input.StylusPointProperty that specifies the property of the 
+             desired System.Windows.Input.StylusPointPropertyInfo.
+        
+            Returns: The System.Windows.Input.StylusPointPropertyInfo for the specified 
+             System.Windows.Input.StylusPointProperty.
         """
         pass
 
@@ -10165,7 +11391,9 @@ class StylusPointDescription(object):
         GetStylusPointProperties(self: StylusPointDescription) -> ReadOnlyCollection[StylusPointPropertyInfo]
         
             Gets all the properties of the System.Windows.Input.StylusPointDescription.
-            Returns: A collection that contains all of the System.Windows.Input.StylusPointPropertyInfo objects in the System.Windows.Input.StylusPointDescription.
+            Returns: A collection that contains all of the 
+             System.Windows.Input.StylusPointPropertyInfo objects in the 
+             System.Windows.Input.StylusPointDescription.
         """
         pass
 
@@ -10173,10 +11401,15 @@ class StylusPointDescription(object):
         """
         HasProperty(self: StylusPointDescription, stylusPointProperty: StylusPointProperty) -> bool
         
-            Returns a value that indicates whether the current System.Windows.Input.StylusPointDescription has the specified property.
+            Returns a value that indicates whether the current 
+             System.Windows.Input.StylusPointDescription has the specified property.
         
-            stylusPointProperty: The System.Windows.Input.StylusPointProperty to check for in the System.Windows.Input.StylusPointDescription.
-            Returns: true if the System.Windows.Input.StylusPointDescription has the specified System.Windows.Input.StylusPointProperty; otherwise, false.
+        
+            stylusPointProperty: The System.Windows.Input.StylusPointProperty to check for in the 
+             System.Windows.Input.StylusPointDescription.
+        
+            Returns: true if the System.Windows.Input.StylusPointDescription has the specified 
+             System.Windows.Input.StylusPointProperty; otherwise, false.
         """
         pass
 
@@ -10184,10 +11417,16 @@ class StylusPointDescription(object):
         """
         IsSubsetOf(self: StylusPointDescription, stylusPointDescriptionSuperset: StylusPointDescription) -> bool
         
-            Returns a value that indicates whether the current System.Windows.Input.StylusPointDescription is a subset of the specified System.Windows.Input.StylusPointDescription.
+            Returns a value that indicates whether the current 
+             System.Windows.Input.StylusPointDescription is a subset of the specified 
+             System.Windows.Input.StylusPointDescription.
         
-            stylusPointDescriptionSuperset: The System.Windows.Input.StylusPointDescription against which to check whether the current System.Windows.Input.StylusPointDescription is a subset.
-            Returns: true if the current System.Windows.Input.StylusPointDescription is a subset of the specified System.Windows.Input.StylusPointDescription; otherwise, false.
+        
+            stylusPointDescriptionSuperset: The System.Windows.Input.StylusPointDescription against which to check whether 
+             the current System.Windows.Input.StylusPointDescription is a subset.
+        
+            Returns: true if the current System.Windows.Input.StylusPointDescription is a subset of 
+             the specified System.Windows.Input.StylusPointDescription; otherwise, false.
         """
         pass
 
@@ -10421,7 +11660,9 @@ class StylusSystemGestureEventHandler(MulticastDelegate, ICloneable, ISerializab
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -10434,7 +11675,10 @@ class StylusSystemGestureEventHandler(MulticastDelegate, ICloneable, ISerializab
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -10460,10 +11704,14 @@ class StylusSystemGestureEventHandler(MulticastDelegate, ICloneable, ISerializab
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -10621,9 +11869,13 @@ class TabletDeviceCollection(object, ICollection, IEnumerable):
     def CopyTo(self, array, index):
         """
         CopyTo(self: TabletDeviceCollection, array: Array[TabletDevice], index: int)
-            Copies all elements in the current collection to the specified one-dimensional array, starting at the specified destination array index.
+            Copies all elements in the current collection to the specified one-dimensional 
+             array, starting at the specified destination array index.
         
-            array: The one-dimensional array that is the destination of elements copied from the collection. The array must have zero-based indexing.
+        
+            array: The one-dimensional array that is the destination of elements copied from the 
+             collection. The array must have zero-based indexing.
+        
             index: The zero-based index in the array parameter where copying begins.
         """
         pass
@@ -10928,7 +12180,9 @@ class TextCompositionEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -10941,7 +12195,10 @@ class TextCompositionEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -10967,10 +12224,14 @@ class TextCompositionEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -10993,9 +12254,13 @@ class TextCompositionManager(DispatcherObject):
     def AddPreviewTextInputHandler(element, handler):
         """
         AddPreviewTextInputHandler(element: DependencyObject, handler: TextCompositionEventHandler)
-            Adds a handler for the System.Windows.Input.TextCompositionManager.PreviewTextInput � attached event.
+            Adds a handler for the 
+             System.Windows.Input.TextCompositionManager.PreviewTextInput � attached event.
         
-            element: A dependency object to add the event handler to.  The dependency object must be a System.Windows.UIElement or a System.Windows.ContentElement.
+        
+            element: A dependency object to add the event handler to.  The dependency object must be 
+             a System.Windows.UIElement or a System.Windows.ContentElement.
+        
             handler: A delegate that designates the handler to add.
         """
         pass
@@ -11004,9 +12269,14 @@ class TextCompositionManager(DispatcherObject):
     def AddPreviewTextInputStartHandler(element, handler):
         """
         AddPreviewTextInputStartHandler(element: DependencyObject, handler: TextCompositionEventHandler)
-            Adds a handler for the System.Windows.Input.TextCompositionManager.PreviewTextInputStart � attached event.
+            Adds a handler for the 
+             System.Windows.Input.TextCompositionManager.PreviewTextInputStart � attached 
+             event.
         
-            element: A dependency object to add the event handler to.  The dependency object must be a System.Windows.UIElement or a System.Windows.ContentElement.
+        
+            element: A dependency object to add the event handler to.  The dependency object must be 
+             a System.Windows.UIElement or a System.Windows.ContentElement.
+        
             handler: A delegate that designates the handler to add.
         """
         pass
@@ -11015,9 +12285,14 @@ class TextCompositionManager(DispatcherObject):
     def AddPreviewTextInputUpdateHandler(element, handler):
         """
         AddPreviewTextInputUpdateHandler(element: DependencyObject, handler: TextCompositionEventHandler)
-            Adds a handler for the System.Windows.Input.TextCompositionManager.PreviewTextInputUpdate � attached event.
+            Adds a handler for the 
+             System.Windows.Input.TextCompositionManager.PreviewTextInputUpdate � attached 
+             event.
         
-            element: A dependency object to add the event handler to.  The dependency object must be a System.Windows.UIElement or a System.Windows.ContentElement.
+        
+            element: A dependency object to add the event handler to.  The dependency object must be 
+             a System.Windows.UIElement or a System.Windows.ContentElement.
+        
             handler: A delegate that designates the handler to add.
         """
         pass
@@ -11026,9 +12301,13 @@ class TextCompositionManager(DispatcherObject):
     def AddTextInputHandler(element, handler):
         """
         AddTextInputHandler(element: DependencyObject, handler: TextCompositionEventHandler)
-            Adds a handler for the System.Windows.Input.TextCompositionManager.TextInput � attached event.
+            Adds a handler for the System.Windows.Input.TextCompositionManager.TextInput � 
+             attached event.
         
-            element: A dependency object to add the event handler to.  The dependency object must be a System.Windows.UIElement or a System.Windows.ContentElement.
+        
+            element: A dependency object to add the event handler to.  The dependency object must be 
+             a System.Windows.UIElement or a System.Windows.ContentElement.
+        
             handler: A delegate that designates the handler to add.
         """
         pass
@@ -11037,9 +12316,13 @@ class TextCompositionManager(DispatcherObject):
     def AddTextInputStartHandler(element, handler):
         """
         AddTextInputStartHandler(element: DependencyObject, handler: TextCompositionEventHandler)
-            Adds a handler for the System.Windows.Input.TextCompositionManager.TextInputStart � attached event.
+            Adds a handler for the 
+             System.Windows.Input.TextCompositionManager.TextInputStart � attached event.
         
-            element: A dependency object to add the event handler to.  The dependency object must be a System.Windows.UIElement or a System.Windows.ContentElement.
+        
+            element: A dependency object to add the event handler to.  The dependency object must be 
+             a System.Windows.UIElement or a System.Windows.ContentElement.
+        
             handler: A delegate that designates the handler to add.
         """
         pass
@@ -11048,9 +12331,13 @@ class TextCompositionManager(DispatcherObject):
     def AddTextInputUpdateHandler(element, handler):
         """
         AddTextInputUpdateHandler(element: DependencyObject, handler: TextCompositionEventHandler)
-            Adds a handler for the System.Windows.Input.TextCompositionManager.TextInputUpdate � attached event.
+            Adds a handler for the 
+             System.Windows.Input.TextCompositionManager.TextInputUpdate � attached event.
         
-            element: A dependency object to add the event handler to.  The dependency object must be a System.Windows.UIElement or a System.Windows.ContentElement.
+        
+            element: A dependency object to add the event handler to.  The dependency object must be 
+             a System.Windows.UIElement or a System.Windows.ContentElement.
+        
             handler: A delegate that designates the handler to add.
         """
         pass
@@ -11071,9 +12358,13 @@ class TextCompositionManager(DispatcherObject):
     def RemovePreviewTextInputHandler(element, handler):
         """
         RemovePreviewTextInputHandler(element: DependencyObject, handler: TextCompositionEventHandler)
-            Removes a handler for the System.Windows.Input.TextCompositionManager.PreviewTextInput � attached event.
+            Removes a handler for the 
+             System.Windows.Input.TextCompositionManager.PreviewTextInput � attached event.
         
-            element: A dependency object to remove the event handler from.  The dependency object must be a System.Windows.UIElement or a System.Windows.ContentElement.
+        
+            element: A dependency object to remove the event handler from.  The dependency object 
+             must be a System.Windows.UIElement or a System.Windows.ContentElement.
+        
             handler: A delegate that designates the handler to remove.
         """
         pass
@@ -11082,9 +12373,13 @@ class TextCompositionManager(DispatcherObject):
     def RemovePreviewTextInputStartHandler(element, handler):
         """
         RemovePreviewTextInputStartHandler(element: DependencyObject, handler: TextCompositionEventHandler)
-            Removes a handler for the System.Windows.Input.TextCompositionManager.TextInputStart � attached event.
+            Removes a handler for the 
+             System.Windows.Input.TextCompositionManager.TextInputStart � attached event.
         
-            element: A dependency object to remove the event handler from.  The dependency object must be a System.Windows.UIElement or a System.Windows.ContentElement.
+        
+            element: A dependency object to remove the event handler from.  The dependency object 
+             must be a System.Windows.UIElement or a System.Windows.ContentElement.
+        
             handler: A delegate that designates the handler to remove.
         """
         pass
@@ -11093,9 +12388,14 @@ class TextCompositionManager(DispatcherObject):
     def RemovePreviewTextInputUpdateHandler(element, handler):
         """
         RemovePreviewTextInputUpdateHandler(element: DependencyObject, handler: TextCompositionEventHandler)
-            Removes a handler for the System.Windows.Input.TextCompositionManager.PreviewTextInputUpdate � attached event.
+            Removes a handler for the 
+             System.Windows.Input.TextCompositionManager.PreviewTextInputUpdate � attached 
+             event.
         
-            element: A dependency object to remove the event handler from.  The dependency object must be a System.Windows.UIElement or a System.Windows.ContentElement.
+        
+            element: A dependency object to remove the event handler from.  The dependency object 
+             must be a System.Windows.UIElement or a System.Windows.ContentElement.
+        
             handler: A delegate that designates the handler to remove.
         """
         pass
@@ -11104,9 +12404,13 @@ class TextCompositionManager(DispatcherObject):
     def RemoveTextInputHandler(element, handler):
         """
         RemoveTextInputHandler(element: DependencyObject, handler: TextCompositionEventHandler)
-            Removes a handler for the System.Windows.Input.TextCompositionManager.TextInput � attached event.
+            Removes a handler for the System.Windows.Input.TextCompositionManager.TextInput 
+             � attached event.
         
-            element: A dependency object to remove the event handler from.  The dependency object must be a System.Windows.UIElement or a System.Windows.ContentElement.
+        
+            element: A dependency object to remove the event handler from.  The dependency object 
+             must be a System.Windows.UIElement or a System.Windows.ContentElement.
+        
             handler: A delegate that designates the handler to remove.
         """
         pass
@@ -11115,9 +12419,13 @@ class TextCompositionManager(DispatcherObject):
     def RemoveTextInputStartHandler(element, handler):
         """
         RemoveTextInputStartHandler(element: DependencyObject, handler: TextCompositionEventHandler)
-            Removes a handler for the System.Windows.Input.TextCompositionManager.TextInputStart � attached event.
+            Removes a handler for the 
+             System.Windows.Input.TextCompositionManager.TextInputStart � attached event.
         
-            element: A dependency object to remove the event handler from.  The dependency object must be a System.Windows.UIElement or a System.Windows.ContentElement.
+        
+            element: A dependency object to remove the event handler from.  The dependency object 
+             must be a System.Windows.UIElement or a System.Windows.ContentElement.
+        
             handler: A delegate that designates the handler to remove.
         """
         pass
@@ -11126,9 +12434,13 @@ class TextCompositionManager(DispatcherObject):
     def RemoveTextInputUpdateHandler(element, handler):
         """
         RemoveTextInputUpdateHandler(element: DependencyObject, handler: TextCompositionEventHandler)
-            Removes a handler for the System.Windows.Input.TextCompositionManager.TextInputUpdate � attached event.
+            Removes a handler for the 
+             System.Windows.Input.TextCompositionManager.TextInputUpdate � attached event.
         
-            element: A dependency object to remove the event handler from.  The dependency object must be a System.Windows.UIElement or a System.Windows.ContentElement.
+        
+            element: A dependency object to remove the event handler from.  The dependency object 
+             must be a System.Windows.UIElement or a System.Windows.ContentElement.
+        
             handler: A delegate that designates the handler to remove.
         """
         pass
@@ -11231,14 +12543,18 @@ class TouchDevice(InputDevice, IManipulator):
         """
         Capture(self: TouchDevice, element: IInputElement, captureMode: CaptureMode) -> bool
         
-            Captures a touch to the specified element by using the specified System.Windows.Input.CaptureMode.
+            Captures a touch to the specified element by using the specified 
+             System.Windows.Input.CaptureMode.
+        
         
             element: The element that captures the touch.
             captureMode: The capture policy to use.
             Returns: true if the element was able to capture the touch; otherwise, false.
         Capture(self: TouchDevice, element: IInputElement) -> bool
         
-            Captures a touch to the specified element by using the System.Windows.Input.CaptureMode.Element capture mode.
+            Captures a touch to the specified element by using the 
+             System.Windows.Input.CaptureMode.Element capture mode.
+        
         
             element: The element that captures the touch input.
             Returns: true if the element was able to capture the touch; otherwise, false.
@@ -11256,10 +12572,13 @@ class TouchDevice(InputDevice, IManipulator):
         """
         GetIntermediateTouchPoints(self: TouchDevice, relativeTo: IInputElement) -> TouchPointCollection
         
-            When overridden in a derived class, returns all touch points that are collected between the most recent and previous touch events.
+            When overridden in a derived class, returns all touch points that are collected 
+             between the most recent and previous touch events.
+        
         
             relativeTo: The element that defines the coordinate space.
-            Returns: All touch points that were collected between the most recent and previous touch events.
+            Returns: All touch points that were collected between the most recent and previous touch 
+             events.
         """
         pass
 
@@ -11267,7 +12586,9 @@ class TouchDevice(InputDevice, IManipulator):
         """
         GetTouchPoint(self: TouchDevice, relativeTo: IInputElement) -> TouchPoint
         
-            Returns the current position of the touch device relative to the specified element.
+            Returns the current position of the touch device relative to the specified 
+             element.
+        
         
             relativeTo: The element that defines the coordinate space.
             Returns: The current position of the touch device relative to the specified element.
@@ -11305,7 +12626,8 @@ class TouchDevice(InputDevice, IManipulator):
         ReportDown(self: TouchDevice) -> bool
         
             Reports that a touch is pressed on an element.
-            Returns: true if the System.Windows.UIElement.TouchDown event was handled; otherwise, false.
+            Returns: true if the System.Windows.UIElement.TouchDown event was handled; otherwise, 
+             false.
         """
         pass
 
@@ -11314,7 +12636,8 @@ class TouchDevice(InputDevice, IManipulator):
         ReportMove(self: TouchDevice) -> bool
         
             Reports that a touch is moving across an element.
-            Returns: true if the System.Windows.UIElement.TouchMove event was handled; otherwise, false.
+            Returns: true if the System.Windows.UIElement.TouchMove event was handled; otherwise, 
+             false.
         """
         pass
 
@@ -11323,14 +12646,17 @@ class TouchDevice(InputDevice, IManipulator):
         ReportUp(self: TouchDevice) -> bool
         
             Reports that a touch was lifted from an element.
-            Returns: true if the System.Windows.UIElement.TouchUp event was handled; otherwise, false.
+            Returns: true if the System.Windows.UIElement.TouchUp event was handled; otherwise, 
+             false.
         """
         pass
 
     def SetActiveSource(self, *args): #cannot find CLR method
         """
         SetActiveSource(self: TouchDevice, activeSource: PresentationSource)
-            Sets the System.Windows.PresentationSource that is reporting input for this device.
+            Sets the System.Windows.PresentationSource that is reporting input for this 
+             device.
+        
         
             activeSource: The source that reports input for this device.
         """
@@ -11339,7 +12665,8 @@ class TouchDevice(InputDevice, IManipulator):
     def Synchronize(self):
         """
         Synchronize(self: TouchDevice)
-            Forces the System.Windows.Input.TouchDevice to synchronize the user interface with underlying touch points.
+            Forces the System.Windows.Input.TouchDevice to synchronize the user interface 
+             with underlying touch points.
         """
         pass
 
@@ -11417,10 +12744,13 @@ class TouchEventArgs(InputEventArgs):
         """
         GetIntermediateTouchPoints(self: TouchEventArgs, relativeTo: IInputElement) -> TouchPointCollection
         
-            Returns all touch points that were collected between the most recent and previous touch events.
+            Returns all touch points that were collected between the most recent and 
+             previous touch events.
+        
         
             relativeTo: The element that defines the coordinate space.
-            Returns: All touch points that were collected between the most recent and previous touch events.
+            Returns: All touch points that were collected between the most recent and previous touch 
+             events.
         """
         pass
 
@@ -11428,7 +12758,9 @@ class TouchEventArgs(InputEventArgs):
         """
         GetTouchPoint(self: TouchEventArgs, relativeTo: IInputElement) -> TouchPoint
         
-            Returns the current position of the touch device relative to the specified element.
+            Returns the current position of the touch device relative to the specified 
+             element.
+        
         
             relativeTo: The element that defines the coordinate space.
             Returns: The current position of the touch device relative to the specified element.
@@ -11455,10 +12787,16 @@ class TouchFrameEventArgs(EventArgs):
         """
         GetPrimaryTouchPoint(self: TouchFrameEventArgs, relativeTo: IInputElement) -> TouchPoint
         
-            Returns the current touch point of the primary touch device relative to the specified element.
+            Returns the current touch point of the primary touch device relative to the 
+             specified element.
         
-            relativeTo: The element that defines the coordinate space. To use WPF absolute coordinates, specify relativeTo as null.
-            Returns: The current position of the primary System.Windows.Input.TouchDevice relative to the specified element; or null if the primary System.Windows.Input.TouchDevice is not active.
+        
+            relativeTo: The element that defines the coordinate space. To use WPF absolute coordinates, 
+             specify relativeTo as null.
+        
+            Returns: The current position of the primary System.Windows.Input.TouchDevice relative 
+             to the specified element; or null if the primary 
+             System.Windows.Input.TouchDevice is not active.
         """
         pass
 
@@ -11466,10 +12804,15 @@ class TouchFrameEventArgs(EventArgs):
         """
         GetTouchPoints(self: TouchFrameEventArgs, relativeTo: IInputElement) -> TouchPointCollection
         
-            Returns a collection that contains the current touch point for each active touch device relative to the specified element.
+            Returns a collection that contains the current touch point for each active 
+             touch device relative to the specified element.
         
-            relativeTo: The element that defines the coordinate space. To use WPF absolute coordinates, specify relativeTo as null.
-            Returns: A collection that contains the current System.Windows.Input.TouchPoint for each active System.Windows.Input.TouchDevice.
+        
+            relativeTo: The element that defines the coordinate space. To use WPF absolute coordinates, 
+             specify relativeTo as null.
+        
+            Returns: A collection that contains the current System.Windows.Input.TouchPoint for each 
+             active System.Windows.Input.TouchDevice.
         """
         pass
 
@@ -11503,7 +12846,9 @@ class TouchFrameEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -11516,7 +12861,10 @@ class TouchFrameEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -11542,10 +12890,14 @@ class TouchFrameEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -11638,7 +12990,9 @@ class TouchPointCollection(Collection[TouchPoint], IList[TouchPoint], ICollectio
     def RemoveItem(self, *args): #cannot find CLR method
         """
         RemoveItem(self: Collection[TouchPoint], index: int)
-            Removes the element at the specified index of the System.Collections.ObjectModel.Collection.
+            Removes the element at the specified index of the 
+             System.Collections.ObjectModel.Collection.
+        
         
             index: The zero-based index of the element to remove.
         """

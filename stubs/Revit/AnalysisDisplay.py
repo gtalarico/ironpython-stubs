@@ -2,7 +2,7 @@
 # module Revit.AnalysisDisplay calls itself AnalysisDisplay
 # from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -35,10 +35,13 @@ class AbstractAnalysisDisplay(object, IDisposable):
         """
         GetSpatialFieldManagerFromView(view: View, numValuesPerAnalysisPoint: UInt32) -> SpatialFieldManager
         
-            Get the SpatialFieldManager for a particular view.  This is a singleton for every view.  Note that the 
-                    number of values per analysis point is ignored if the SpatialFieldManager has already 
-             been obtained
-                    for this view.  This field cannot be mutated once the SpatialFieldManager is set for a partiular 
+            Get the SpatialFieldManager for a particular view.  This is a singleton for 
+             every view.  Note that the 
+                    number of values per analysis point is 
+             ignored if the SpatialFieldManager has already been obtained
+                    for 
+             this view.  This field cannot be mutated once the SpatialFieldManager is set 
+             for a partiular 
                     view.
         """
         pass
@@ -63,18 +66,11 @@ class AbstractAnalysisDisplay(object, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -170,18 +166,11 @@ class FaceAnalysisDisplay(AbstractAnalysisDisplay, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -281,18 +270,11 @@ class PointAnalysisDisplay(AbstractAnalysisDisplay, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -465,18 +447,11 @@ class VectorAnalysisDisplay(AbstractAnalysisDisplay, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method

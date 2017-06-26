@@ -2,7 +2,7 @@
 # module System.Windows.Media.Imaging calls itself Imaging
 # from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -196,29 +196,47 @@ class BitmapDecoder(DispatcherObject):
         """
         Create(bitmapStream: Stream, createOptions: BitmapCreateOptions, cacheOption: BitmapCacheOption) -> BitmapDecoder
         
-            Creates a System.Windows.Media.Imaging.BitmapDecoder from a System.IO.Stream by using the specified System.Windows.Media.Imaging.BitmapCreateOptions and System.Windows.Media.Imaging.BitmapCacheOption.
+            Creates a System.Windows.Media.Imaging.BitmapDecoder from a System.IO.Stream by 
+             using the specified System.Windows.Media.Imaging.BitmapCreateOptions and 
+             System.Windows.Media.Imaging.BitmapCacheOption.
+        
         
             bitmapStream: The file stream that identifies the bitmap to decode.
-            createOptions: Identifies the System.Windows.Media.Imaging.BitmapCreateOptions for this decoder.
+            createOptions: Identifies the System.Windows.Media.Imaging.BitmapCreateOptions for this 
+             decoder.
+        
             cacheOption: Identifies the System.Windows.Media.Imaging.BitmapCacheOption for this decoder.
             Returns: A new System.Windows.Media.Imaging.BitmapDecoder.
         Create(bitmapUri: Uri, createOptions: BitmapCreateOptions, cacheOption: BitmapCacheOption, uriCachePolicy: RequestCachePolicy) -> BitmapDecoder
         
-            Creates a System.Windows.Media.Imaging.BitmapDecoder from a System.Uri by using the specified System.Windows.Media.Imaging.BitmapCreateOptions, System.Windows.Media.Imaging.BitmapCacheOption and 
+            Creates a System.Windows.Media.Imaging.BitmapDecoder from a System.Uri by using 
+             the specified System.Windows.Media.Imaging.BitmapCreateOptions, 
+             System.Windows.Media.Imaging.BitmapCacheOption and 
              System.Net.Cache.RequestCachePolicy.
         
         
-            bitmapUri: The location of the bitmap from which the System.Windows.Media.Imaging.BitmapDecoder is created.
-            createOptions: The options that are used to create this System.Windows.Media.Imaging.BitmapDecoder.
-            cacheOption: The cache option that is used to create this System.Windows.Media.Imaging.BitmapDecoder.
+            bitmapUri: The location of the bitmap from which the 
+             System.Windows.Media.Imaging.BitmapDecoder is created.
+        
+            createOptions: The options that are used to create this 
+             System.Windows.Media.Imaging.BitmapDecoder.
+        
+            cacheOption: The cache option that is used to create this 
+             System.Windows.Media.Imaging.BitmapDecoder.
+        
             uriCachePolicy: The caching requirements for this System.Windows.Media.Imaging.BitmapDecoder.
             Returns: A new System.Windows.Media.Imaging.BitmapDecoder.
         Create(bitmapUri: Uri, createOptions: BitmapCreateOptions, cacheOption: BitmapCacheOption) -> BitmapDecoder
         
-            Creates a System.Windows.Media.Imaging.BitmapDecoder from a System.Uri by using the specified System.Windows.Media.Imaging.BitmapCreateOptions and System.Windows.Media.Imaging.BitmapCacheOption.
+            Creates a System.Windows.Media.Imaging.BitmapDecoder from a System.Uri by using 
+             the specified System.Windows.Media.Imaging.BitmapCreateOptions and 
+             System.Windows.Media.Imaging.BitmapCacheOption.
+        
         
             bitmapUri: The System.Uri of the bitmap to decode.
-            createOptions: Identifies the System.Windows.Media.Imaging.BitmapCreateOptions for this decoder.
+            createOptions: Identifies the System.Windows.Media.Imaging.BitmapCreateOptions for this 
+             decoder.
+        
             cacheOption: Identifies the System.Windows.Media.Imaging.BitmapCacheOption for this decoder.
             Returns: A new System.Windows.Media.Imaging.BitmapDecoder.
         """
@@ -228,7 +246,10 @@ class BitmapDecoder(DispatcherObject):
         """
         CreateInPlaceBitmapMetadataWriter(self: BitmapDecoder) -> InPlaceBitmapMetadataWriter
         
-            Creates an instance of System.Windows.Media.Imaging.InPlaceBitmapMetadataWriter, which can be used to update the metadata of a bitmap.
+            Creates an instance of 
+             System.Windows.Media.Imaging.InPlaceBitmapMetadataWriter, which can be used to 
+             update the metadata of a bitmap.
+        
             Returns: An instance of System.Windows.Media.Imaging.InPlaceBitmapMetadataWriter.
         """
         pass
@@ -237,7 +258,9 @@ class BitmapDecoder(DispatcherObject):
         """
         ToString(self: BitmapDecoder) -> str
         
-            Converts the current value of a System.Windows.Media.Imaging.BitmapDecoder to a System.String.
+            Converts the current value of a System.Windows.Media.Imaging.BitmapDecoder to a 
+             System.String.
+        
             Returns: A string representation of the System.Windows.Media.Imaging.BitmapDecoder.
         """
         pass
@@ -311,10 +334,13 @@ class BitmapEncoder(DispatcherObject):
         """
         Create(containerFormat: Guid) -> BitmapEncoder
         
-            Creates a System.Windows.Media.Imaging.BitmapEncoder from a System.Guid that identifies the desired bitmap format.
+            Creates a System.Windows.Media.Imaging.BitmapEncoder from a System.Guid that 
+             identifies the desired bitmap format.
+        
         
             containerFormat: Identifies the desired bitmap encoding format.
-            Returns: A System.Windows.Media.Imaging.BitmapEncoder that can encode to the specified containerFormat.
+            Returns: A System.Windows.Media.Imaging.BitmapEncoder that can encode to the specified 
+             containerFormat.
         """
         pass
 
@@ -389,7 +415,8 @@ class BitmapSource(ImageSource, ISealable, IAnimatable, IResource, IFormattable)
     def CheckIfSiteOfOrigin(self, *args): #cannot find CLR method
         """
         CheckIfSiteOfOrigin(self: BitmapSource)
-            Checks whether the bitmap source content is from a known site of origin. This method is used to make sure that pixel copying operations are safe.
+            Checks whether the bitmap source content is from a known site of origin. This 
+             method is used to make sure that pixel copying operations are safe.
         """
         pass
 
@@ -397,17 +424,23 @@ class BitmapSource(ImageSource, ISealable, IAnimatable, IResource, IFormattable)
         """
         Clone(self: BitmapSource) -> BitmapSource
         
-            Creates a modifiable clone of this System.Windows.Media.Imaging.BitmapSource, making deep copies of this object's values. When copying dependency properties, this method copies resource references and data 
-             bindings (but they might no longer resolve) but not animations or their current values.
+            Creates a modifiable clone of this System.Windows.Media.Imaging.BitmapSource, 
+             making deep copies of this object's values. When copying dependency properties, 
+             this method copies resource references and data bindings (but they might no 
+             longer resolve) but not animations or their current values.
         
-            Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+            Returns: A modifiable clone of the current object. The cloned object's 
+             System.Windows.Freezable.IsFrozen property will be false even if the source's 
+             System.Windows.Freezable.IsFrozen property was true.
         """
         pass
 
     def CloneCore(self, *args): #cannot find CLR method
         """
         CloneCore(self: BitmapSource, sourceFreezable: Freezable)
-            Makes this instance a deep copy of the specified System.Windows.Media.Imaging.BitmapSource. When copying dependency properties, this method copies resource references and data bindings (but they might no 
+            Makes this instance a deep copy of the specified 
+             System.Windows.Media.Imaging.BitmapSource. When copying dependency properties, 
+             this method copies resource references and data bindings (but they might no 
              longer resolve) but not animations or their current values.
         
         
@@ -419,18 +452,24 @@ class BitmapSource(ImageSource, ISealable, IAnimatable, IResource, IFormattable)
         """
         CloneCurrentValue(self: BitmapSource) -> BitmapSource
         
-            Creates a modifiable clone of this System.Windows.Media.Imaging.BitmapSource object, making deep copies of this object's current values. Resource references, data bindings, and animations are not copied, 
-             but their current values are.
+            Creates a modifiable clone of this System.Windows.Media.Imaging.BitmapSource 
+             object, making deep copies of this object's current values. Resource 
+             references, data bindings, and animations are not copied, but their current 
+             values are.
         
-            Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+            Returns: A modifiable clone of the current object. The cloned object's 
+             System.Windows.Freezable.IsFrozen property will be false even if the source's 
+             System.Windows.Freezable.IsFrozen property was true.
         """
         pass
 
     def CloneCurrentValueCore(self, *args): #cannot find CLR method
         """
         CloneCurrentValueCore(self: BitmapSource, sourceFreezable: Freezable)
-            Makes this instance a modifiable deep copy of the specified System.Windows.Media.Imaging.BitmapSource using current property values. Resource references, data bindings, and animations are not copied, but 
-             their current values are.
+            Makes this instance a modifiable deep copy of the specified 
+             System.Windows.Media.Imaging.BitmapSource using current property values. 
+             Resource references, data bindings, and animations are not copied, but their 
+             current values are.
         
         
             sourceFreezable: The System.Windows.Media.Imaging.BitmapSource to clone.
@@ -442,20 +481,28 @@ class BitmapSource(ImageSource, ISealable, IAnimatable, IResource, IFormattable)
         CopyPixels(self: BitmapSource, sourceRect: Int32Rect, buffer: IntPtr, bufferSize: int, stride: int)
             Copies the bitmap pixel data within the specified rectangle
         
-            sourceRect: The source rectangle to copy. An System.Windows.Int32Rect.Empty value specifies the entire bitmap.
+            sourceRect: The source rectangle to copy. An System.Windows.Int32Rect.Empty value specifies 
+             the entire bitmap.
+        
             buffer: A pointer to the buffer.
             bufferSize: The size of the buffer.
             stride: The stride of the bitmap.
         CopyPixels(self: BitmapSource, pixels: Array, stride: int, offset: int)
-            Copies the bitmap pixel data into an array of pixels with the specified stride, starting at the specified offset.
+            Copies the bitmap pixel data into an array of pixels with the specified stride, 
+             starting at the specified offset.
+        
         
             pixels: The destination array.
             stride: The stride of the bitmap.
             offset: The pixel location where copying starts.
         CopyPixels(self: BitmapSource, sourceRect: Int32Rect, pixels: Array, stride: int, offset: int)
-            Copies the bitmap pixel data within the specified rectangle into an array of pixels that has the specified stride starting at the specified offset.
+            Copies the bitmap pixel data within the specified rectangle into an array of 
+             pixels that has the specified stride starting at the specified offset.
         
-            sourceRect: The source rectangle to copy. An System.Windows.Int32Rect.Empty value specifies the entire bitmap.
+        
+            sourceRect: The source rectangle to copy. An System.Windows.Int32Rect.Empty value specifies 
+             the entire bitmap.
+        
             pixels: The destination array.
             stride: The stride of the bitmap.
             offset: The pixel location where copying begins.
@@ -467,7 +514,9 @@ class BitmapSource(ImageSource, ISealable, IAnimatable, IResource, IFormattable)
         """
         Create(pixelWidth: int, pixelHeight: int, dpiX: float, dpiY: float, pixelFormat: PixelFormat, palette: BitmapPalette, buffer: IntPtr, bufferSize: int, stride: int) -> BitmapSource
         
-            Creates a new System.Windows.Media.Imaging.BitmapSource from an array of pixels that are stored in unmanaged memory.
+            Creates a new System.Windows.Media.Imaging.BitmapSource from an array of pixels 
+             that are stored in unmanaged memory.
+        
         
             pixelWidth: The width of the bitmap.
             pixelHeight: The height of the bitmap.
@@ -478,7 +527,9 @@ class BitmapSource(ImageSource, ISealable, IAnimatable, IResource, IFormattable)
             buffer: A pointer to the buffer that contains the bitmap data in memory.
             bufferSize: The size of the buffer.
             stride: The stride of the bitmap.
-            Returns: A System.Windows.Media.Imaging.BitmapSource that is created from the array of pixels in unmanaged memory.
+            Returns: A System.Windows.Media.Imaging.BitmapSource that is created from the array of 
+             pixels in unmanaged memory.
+        
         Create(pixelWidth: int, pixelHeight: int, dpiX: float, dpiY: float, pixelFormat: PixelFormat, palette: BitmapPalette, pixels: Array, stride: int) -> BitmapSource
         
             Creates a new System.Windows.Media.Imaging.BitmapSource from an array of pixels.
@@ -491,7 +542,8 @@ class BitmapSource(ImageSource, ISealable, IAnimatable, IResource, IFormattable)
             palette: The palette of the bitmap.
             pixels: An array of bytes that represents the content of a bitmap image.
             stride: The stride of the bitmap.
-            Returns: The System.Windows.Media.Imaging.BitmapSource that is created from the specified array of pixels.
+            Returns: The System.Windows.Media.Imaging.BitmapSource that is created from the 
+             specified array of pixels.
         """
         pass
 
@@ -508,7 +560,9 @@ class BitmapSource(ImageSource, ISealable, IAnimatable, IResource, IFormattable)
         """
         CreateInstanceCore(self: Freezable) -> Freezable
         
-            When implemented in a derived class, creates a new instance of the System.Windows.Freezable derived class.
+            When implemented in a derived class, creates a new instance of the 
+             System.Windows.Freezable derived class.
+        
             Returns: The new instance.
         """
         pass
@@ -517,19 +571,28 @@ class BitmapSource(ImageSource, ISealable, IAnimatable, IResource, IFormattable)
         """
         FreezeCore(self: BitmapSource, isChecking: bool) -> bool
         
-            Makes an instance of System.Windows.Media.Imaging.BitmapSource or a derived class immutable.
+            Makes an instance of System.Windows.Media.Imaging.BitmapSource or a derived 
+             class immutable.
         
-            isChecking: true if this instance should actually freeze itself when this method is called; otherwise, false.
-            Returns: If isChecking is true, this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable, or false if it cannot be made unmodifiable. If isChecking is false, this method 
-             returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable, or false if it cannot be made unmodifiable, with the side effect of having begun to change the frozen status of 
-             this object.
+        
+            isChecking: true if this instance should actually freeze itself when this method is called; 
+             otherwise, false.
+        
+            Returns: If isChecking is true, this method returns true if this 
+             System.Windows.Media.Animation.Animatable can be made unmodifiable, or false if 
+             it cannot be made unmodifiable. If isChecking is false, this method returns 
+             true if the if this System.Windows.Media.Animation.Animatable is now 
+             unmodifiable, or false if it cannot be made unmodifiable, with the side effect 
+             of having begun to change the frozen status of this object.
         """
         pass
 
     def GetAsFrozenCore(self, *args): #cannot find CLR method
         """
         GetAsFrozenCore(self: BitmapSource, sourceFreezable: Freezable)
-            Makes this instance a clone of the specified System.Windows.Media.Imaging.BitmapSource object.
+            Makes this instance a clone of the specified 
+             System.Windows.Media.Imaging.BitmapSource object.
+        
         
             sourceFreezable: The System.Windows.Media.Imaging.BitmapSource object to clone and freeze.
         """
@@ -538,7 +601,10 @@ class BitmapSource(ImageSource, ISealable, IAnimatable, IResource, IFormattable)
     def GetCurrentValueAsFrozenCore(self, *args): #cannot find CLR method
         """
         GetCurrentValueAsFrozenCore(self: BitmapSource, sourceFreezable: Freezable)
-            Makes this instance a frozen clone of the specified System.Windows.Media.Imaging.BitmapSource. Resource references, data bindings, and animations are not copied, but their current values are.
+            Makes this instance a frozen clone of the specified 
+             System.Windows.Media.Imaging.BitmapSource. Resource references, data bindings, 
+             and animations are not copied, but their current values are.
+        
         
             sourceFreezable: The System.Windows.Media.Imaging.BitmapSource to copy and freeze.
         """
@@ -554,13 +620,17 @@ class BitmapSource(ImageSource, ISealable, IAnimatable, IResource, IFormattable)
     def OnFreezablePropertyChanged(self, *args): #cannot find CLR method
         """
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject, property: DependencyProperty)
-            This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+            This member supports the Windows Presentation Foundation (WPF) infrastructure 
+             and is not intended to be used directly from your code.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
             property: The property that changed.
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject)
-            Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+            Ensures that appropriate context pointers are established for a 
+             System.Windows.DependencyObjectType data member that has just been set.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
@@ -570,19 +640,25 @@ class BitmapSource(ImageSource, ISealable, IAnimatable, IResource, IFormattable)
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: Freezable, e: DependencyPropertyChangedEventArgs)
-            Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-             System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+            Overrides the System.Windows.DependencyObject implementation of 
+             System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+             rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+             handlers in response to a changing dependency property of type 
+             System.Windows.Freezable.
         
         
-            e: Event data that contains information about which property changed, and its old and new values.
+            e: Event data that contains information about which property changed, and its old 
+             and new values.
         """
         pass
 
     def ReadPreamble(self, *args): #cannot find CLR method
         """
         ReadPreamble(self: Freezable)
-            Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-             not dependency properties.
+            Ensures that the System.Windows.Freezable is being accessed from a valid 
+             thread. Inheritors of System.Windows.Freezable must call this method at the 
+             beginning of any API that reads data members that are not dependency 
+             properties.
         """
         pass
 
@@ -590,26 +666,42 @@ class BitmapSource(ImageSource, ISealable, IAnimatable, IResource, IFormattable)
         """
         ShouldSerializeProperty(self: DependencyObject, dp: DependencyProperty) -> bool
         
-            Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+            Returns a value that indicates whether serialization processes should serialize 
+             the value for the provided dependency property.
+        
         
             dp: The identifier for the dependency property that should be serialized.
-            Returns: true if the dependency property that is supplied should be value-serialized; otherwise, false.
+            Returns: true if the dependency property that is supplied should be value-serialized; 
+             otherwise, false.
+        
+        ShouldSerializeProperty(self: Window_16$17, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Label_17$18, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: TextBox_18$19, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Button_19$20, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: CheckBox_20$21, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: ComboBox_21$22, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Separator_22$23, dp: DependencyProperty) -> bool
         """
         pass
 
     def WritePostscript(self, *args): #cannot find CLR method
         """
         WritePostscript(self: Freezable)
-            Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-             this method at the end of any API that modifies class members that are not stored as dependency properties.
+            Raises the System.Windows.Freezable.Changed event for the 
+             System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+             method. Classes that derive from System.Windows.Freezable should call this 
+             method at the end of any API that modifies class members that are not stored as 
+             dependency properties.
         """
         pass
 
     def WritePreamble(self, *args): #cannot find CLR method
         """
         WritePreamble(self: Freezable)
-            Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-             API that writes to data members that are not dependency properties.
+            Verifies that the System.Windows.Freezable is not frozen and that it is being 
+             accessed from a valid threading context. System.Windows.Freezable inheritors 
+             should call this method at the beginning of any API that writes to data members 
+             that are not dependency properties.
         """
         pass
 
@@ -706,14 +798,17 @@ class BitmapFrame(BitmapSource, ISealable, IAnimatable, IResource, IFormattable,
     def CheckIfSiteOfOrigin(self, *args): #cannot find CLR method
         """
         CheckIfSiteOfOrigin(self: BitmapSource)
-            Checks whether the bitmap source content is from a known site of origin. This method is used to make sure that pixel copying operations are safe.
+            Checks whether the bitmap source content is from a known site of origin. This 
+             method is used to make sure that pixel copying operations are safe.
         """
         pass
 
     def CloneCore(self, *args): #cannot find CLR method
         """
         CloneCore(self: BitmapSource, sourceFreezable: Freezable)
-            Makes this instance a deep copy of the specified System.Windows.Media.Imaging.BitmapSource. When copying dependency properties, this method copies resource references and data bindings (but they might no 
+            Makes this instance a deep copy of the specified 
+             System.Windows.Media.Imaging.BitmapSource. When copying dependency properties, 
+             this method copies resource references and data bindings (but they might no 
              longer resolve) but not animations or their current values.
         
         
@@ -724,8 +819,10 @@ class BitmapFrame(BitmapSource, ISealable, IAnimatable, IResource, IFormattable,
     def CloneCurrentValueCore(self, *args): #cannot find CLR method
         """
         CloneCurrentValueCore(self: BitmapSource, sourceFreezable: Freezable)
-            Makes this instance a modifiable deep copy of the specified System.Windows.Media.Imaging.BitmapSource using current property values. Resource references, data bindings, and animations are not copied, but 
-             their current values are.
+            Makes this instance a modifiable deep copy of the specified 
+             System.Windows.Media.Imaging.BitmapSource using current property values. 
+             Resource references, data bindings, and animations are not copied, but their 
+             current values are.
         
         
             sourceFreezable: The System.Windows.Media.Imaging.BitmapSource to clone.
@@ -737,63 +834,108 @@ class BitmapFrame(BitmapSource, ISealable, IAnimatable, IResource, IFormattable,
         """
         Create(source: BitmapSource) -> BitmapFrame
         
-            Creates a new System.Windows.Media.Imaging.BitmapFrame from a given System.Windows.Media.Imaging.BitmapSource.
+            Creates a new System.Windows.Media.Imaging.BitmapFrame from a given 
+             System.Windows.Media.Imaging.BitmapSource.
         
-            source: The System.Windows.Media.Imaging.BitmapSource that is used to construct this System.Windows.Media.Imaging.BitmapFrame.
+        
+            source: The System.Windows.Media.Imaging.BitmapSource that is used to construct this 
+             System.Windows.Media.Imaging.BitmapFrame.
+        
             Returns: A new System.Windows.Media.Imaging.BitmapFrame.
         Create(bitmapStream: Stream, createOptions: BitmapCreateOptions, cacheOption: BitmapCacheOption) -> BitmapFrame
         
-            Creates a new System.Windows.Media.Imaging.BitmapFrame from a given System.IO.Stream with the specified System.Windows.Media.Imaging.BitmapCreateOptions and System.Windows.Media.Imaging.BitmapCacheOption.
+            Creates a new System.Windows.Media.Imaging.BitmapFrame from a given 
+             System.IO.Stream with the specified 
+             System.Windows.Media.Imaging.BitmapCreateOptions and 
+             System.Windows.Media.Imaging.BitmapCacheOption.
         
-            bitmapStream: The stream from which this System.Windows.Media.Imaging.BitmapFrame is constructed.
-            createOptions: The options that are used to create this System.Windows.Media.Imaging.BitmapFrame.
-            cacheOption: The cache option that is used to create this System.Windows.Media.Imaging.BitmapFrame.
+        
+            bitmapStream: The stream from which this System.Windows.Media.Imaging.BitmapFrame is 
+             constructed.
+        
+            createOptions: The options that are used to create this 
+             System.Windows.Media.Imaging.BitmapFrame.
+        
+            cacheOption: The cache option that is used to create this 
+             System.Windows.Media.Imaging.BitmapFrame.
+        
             Returns: A new System.Windows.Media.Imaging.BitmapFrame.
         Create(source: BitmapSource, thumbnail: BitmapSource, metadata: BitmapMetadata, colorContexts: ReadOnlyCollection[ColorContext]) -> BitmapFrame
         Create(source: BitmapSource, thumbnail: BitmapSource) -> BitmapFrame
         
-            Creates a new System.Windows.Media.Imaging.BitmapFrame from a given System.Windows.Media.Imaging.BitmapSource with the specified thumbnail.
+            Creates a new System.Windows.Media.Imaging.BitmapFrame from a given 
+             System.Windows.Media.Imaging.BitmapSource with the specified thumbnail.
         
-            source: The source from which the System.Windows.Media.Imaging.BitmapFrame is constructed.
+        
+            source: The source from which the System.Windows.Media.Imaging.BitmapFrame is 
+             constructed.
+        
             thumbnail: A thumbnail image of the resulting System.Windows.Media.Imaging.BitmapFrame.
             Returns: A new System.Windows.Media.Imaging.BitmapFrame.
         Create(bitmapStream: Stream) -> BitmapFrame
         
-            Creates a new System.Windows.Media.Imaging.BitmapFrame from a given System.IO.Stream.
+            Creates a new System.Windows.Media.Imaging.BitmapFrame from a given 
+             System.IO.Stream.
         
-            bitmapStream: The System.IO.Stream that is used to construct the System.Windows.Media.Imaging.BitmapFrame.
+        
+            bitmapStream: The System.IO.Stream that is used to construct the 
+             System.Windows.Media.Imaging.BitmapFrame.
+        
             Returns: A new System.Windows.Media.Imaging.BitmapFrame.
         Create(bitmapUri: Uri, uriCachePolicy: RequestCachePolicy) -> BitmapFrame
         
-            Creates a System.Windows.Media.Imaging.BitmapFrame from a given System.Uri with the specified System.Net.Cache.RequestCachePolicy.
+            Creates a System.Windows.Media.Imaging.BitmapFrame from a given System.Uri with 
+             the specified System.Net.Cache.RequestCachePolicy.
         
-            bitmapUri: The location of the bitmap from which the System.Windows.Media.Imaging.BitmapFrame is created.
+        
+            bitmapUri: The location of the bitmap from which the 
+             System.Windows.Media.Imaging.BitmapFrame is created.
+        
             uriCachePolicy: The caching requirements for this System.Windows.Media.Imaging.BitmapFrame.
             Returns: A new System.Windows.Media.Imaging.BitmapFrame.
         Create(bitmapUri: Uri) -> BitmapFrame
         
             Creates a new System.Windows.Media.Imaging.BitmapFrame from a given System.Uri.
         
-            bitmapUri: The System.Uri that identifies the source of the System.Windows.Media.Imaging.BitmapFrame.
+            bitmapUri: The System.Uri that identifies the source of the 
+             System.Windows.Media.Imaging.BitmapFrame.
+        
             Returns: A new System.Windows.Media.Imaging.BitmapFrame.
         Create(bitmapUri: Uri, createOptions: BitmapCreateOptions, cacheOption: BitmapCacheOption, uriCachePolicy: RequestCachePolicy) -> BitmapFrame
         
-            Creates a System.Windows.Media.Imaging.BitmapFrame from a given System.Uri with the specified System.Windows.Media.Imaging.BitmapCreateOptions, System.Windows.Media.Imaging.BitmapCacheOption, and 
+            Creates a System.Windows.Media.Imaging.BitmapFrame from a given System.Uri with 
+             the specified System.Windows.Media.Imaging.BitmapCreateOptions, 
+             System.Windows.Media.Imaging.BitmapCacheOption, and 
              System.Net.Cache.RequestCachePolicy.
         
         
-            bitmapUri: The location of the bitmap from which the System.Windows.Media.Imaging.BitmapFrame is created.
-            createOptions: The options that are used to create this System.Windows.Media.Imaging.BitmapFrame.
-            cacheOption: The cache option that is used to create this System.Windows.Media.Imaging.BitmapFrame.
+            bitmapUri: The location of the bitmap from which the 
+             System.Windows.Media.Imaging.BitmapFrame is created.
+        
+            createOptions: The options that are used to create this 
+             System.Windows.Media.Imaging.BitmapFrame.
+        
+            cacheOption: The cache option that is used to create this 
+             System.Windows.Media.Imaging.BitmapFrame.
+        
             uriCachePolicy: The caching requirements for this System.Windows.Media.Imaging.BitmapFrame.
             Returns: A new System.Windows.Media.Imaging.BitmapFrame.
         Create(bitmapUri: Uri, createOptions: BitmapCreateOptions, cacheOption: BitmapCacheOption) -> BitmapFrame
         
-            Creates a System.Windows.Media.Imaging.BitmapFrame from a given System.Uri with the specified System.Windows.Media.Imaging.BitmapCreateOptions and System.Windows.Media.Imaging.BitmapCacheOption.
+            Creates a System.Windows.Media.Imaging.BitmapFrame from a given System.Uri with 
+             the specified System.Windows.Media.Imaging.BitmapCreateOptions and 
+             System.Windows.Media.Imaging.BitmapCacheOption.
         
-            bitmapUri: The location of the bitmap from which the System.Windows.Media.Imaging.BitmapFrame is created.
-            createOptions: The options that are used to create this System.Windows.Media.Imaging.BitmapFrame.
-            cacheOption: The cache option that is used to create this System.Windows.Media.Imaging.BitmapFrame.
+        
+            bitmapUri: The location of the bitmap from which the 
+             System.Windows.Media.Imaging.BitmapFrame is created.
+        
+            createOptions: The options that are used to create this 
+             System.Windows.Media.Imaging.BitmapFrame.
+        
+            cacheOption: The cache option that is used to create this 
+             System.Windows.Media.Imaging.BitmapFrame.
+        
             Returns: A new System.Windows.Media.Imaging.BitmapFrame.
         """
         pass
@@ -802,7 +944,10 @@ class BitmapFrame(BitmapSource, ISealable, IAnimatable, IResource, IFormattable,
         """
         CreateInPlaceBitmapMetadataWriter(self: BitmapFrame) -> InPlaceBitmapMetadataWriter
         
-            When overridden in a derived class, creates an instance of System.Windows.Media.Imaging.InPlaceBitmapMetadataWriter, which can be used to associate metadata with a System.Windows.Media.Imaging.BitmapFrame.
+            When overridden in a derived class, creates an instance of 
+             System.Windows.Media.Imaging.InPlaceBitmapMetadataWriter, which can be used to 
+             associate metadata with a System.Windows.Media.Imaging.BitmapFrame.
+        
             Returns: An System.Windows.Media.Imaging.InPlaceBitmapMetadataWriter.
         """
         pass
@@ -820,7 +965,9 @@ class BitmapFrame(BitmapSource, ISealable, IAnimatable, IResource, IFormattable,
         """
         CreateInstanceCore(self: Freezable) -> Freezable
         
-            When implemented in a derived class, creates a new instance of the System.Windows.Freezable derived class.
+            When implemented in a derived class, creates a new instance of the 
+             System.Windows.Freezable derived class.
+        
             Returns: The new instance.
         """
         pass
@@ -829,19 +976,28 @@ class BitmapFrame(BitmapSource, ISealable, IAnimatable, IResource, IFormattable,
         """
         FreezeCore(self: BitmapSource, isChecking: bool) -> bool
         
-            Makes an instance of System.Windows.Media.Imaging.BitmapSource or a derived class immutable.
+            Makes an instance of System.Windows.Media.Imaging.BitmapSource or a derived 
+             class immutable.
         
-            isChecking: true if this instance should actually freeze itself when this method is called; otherwise, false.
-            Returns: If isChecking is true, this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable, or false if it cannot be made unmodifiable. If isChecking is false, this method 
-             returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable, or false if it cannot be made unmodifiable, with the side effect of having begun to change the frozen status of 
-             this object.
+        
+            isChecking: true if this instance should actually freeze itself when this method is called; 
+             otherwise, false.
+        
+            Returns: If isChecking is true, this method returns true if this 
+             System.Windows.Media.Animation.Animatable can be made unmodifiable, or false if 
+             it cannot be made unmodifiable. If isChecking is false, this method returns 
+             true if the if this System.Windows.Media.Animation.Animatable is now 
+             unmodifiable, or false if it cannot be made unmodifiable, with the side effect 
+             of having begun to change the frozen status of this object.
         """
         pass
 
     def GetAsFrozenCore(self, *args): #cannot find CLR method
         """
         GetAsFrozenCore(self: BitmapSource, sourceFreezable: Freezable)
-            Makes this instance a clone of the specified System.Windows.Media.Imaging.BitmapSource object.
+            Makes this instance a clone of the specified 
+             System.Windows.Media.Imaging.BitmapSource object.
+        
         
             sourceFreezable: The System.Windows.Media.Imaging.BitmapSource object to clone and freeze.
         """
@@ -850,7 +1006,10 @@ class BitmapFrame(BitmapSource, ISealable, IAnimatable, IResource, IFormattable,
     def GetCurrentValueAsFrozenCore(self, *args): #cannot find CLR method
         """
         GetCurrentValueAsFrozenCore(self: BitmapSource, sourceFreezable: Freezable)
-            Makes this instance a frozen clone of the specified System.Windows.Media.Imaging.BitmapSource. Resource references, data bindings, and animations are not copied, but their current values are.
+            Makes this instance a frozen clone of the specified 
+             System.Windows.Media.Imaging.BitmapSource. Resource references, data bindings, 
+             and animations are not copied, but their current values are.
+        
         
             sourceFreezable: The System.Windows.Media.Imaging.BitmapSource to copy and freeze.
         """
@@ -866,13 +1025,17 @@ class BitmapFrame(BitmapSource, ISealable, IAnimatable, IResource, IFormattable,
     def OnFreezablePropertyChanged(self, *args): #cannot find CLR method
         """
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject, property: DependencyProperty)
-            This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+            This member supports the Windows Presentation Foundation (WPF) infrastructure 
+             and is not intended to be used directly from your code.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
             property: The property that changed.
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject)
-            Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+            Ensures that appropriate context pointers are established for a 
+             System.Windows.DependencyObjectType data member that has just been set.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
@@ -882,19 +1045,25 @@ class BitmapFrame(BitmapSource, ISealable, IAnimatable, IResource, IFormattable,
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: Freezable, e: DependencyPropertyChangedEventArgs)
-            Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-             System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+            Overrides the System.Windows.DependencyObject implementation of 
+             System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+             rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+             handlers in response to a changing dependency property of type 
+             System.Windows.Freezable.
         
         
-            e: Event data that contains information about which property changed, and its old and new values.
+            e: Event data that contains information about which property changed, and its old 
+             and new values.
         """
         pass
 
     def ReadPreamble(self, *args): #cannot find CLR method
         """
         ReadPreamble(self: Freezable)
-            Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-             not dependency properties.
+            Ensures that the System.Windows.Freezable is being accessed from a valid 
+             thread. Inheritors of System.Windows.Freezable must call this method at the 
+             beginning of any API that reads data members that are not dependency 
+             properties.
         """
         pass
 
@@ -902,26 +1071,42 @@ class BitmapFrame(BitmapSource, ISealable, IAnimatable, IResource, IFormattable,
         """
         ShouldSerializeProperty(self: DependencyObject, dp: DependencyProperty) -> bool
         
-            Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+            Returns a value that indicates whether serialization processes should serialize 
+             the value for the provided dependency property.
+        
         
             dp: The identifier for the dependency property that should be serialized.
-            Returns: true if the dependency property that is supplied should be value-serialized; otherwise, false.
+            Returns: true if the dependency property that is supplied should be value-serialized; 
+             otherwise, false.
+        
+        ShouldSerializeProperty(self: Window_16$17, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Label_17$18, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: TextBox_18$19, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Button_19$20, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: CheckBox_20$21, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: ComboBox_21$22, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Separator_22$23, dp: DependencyProperty) -> bool
         """
         pass
 
     def WritePostscript(self, *args): #cannot find CLR method
         """
         WritePostscript(self: Freezable)
-            Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-             this method at the end of any API that modifies class members that are not stored as dependency properties.
+            Raises the System.Windows.Freezable.Changed event for the 
+             System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+             method. Classes that derive from System.Windows.Freezable should call this 
+             method at the end of any API that modifies class members that are not stored as 
+             dependency properties.
         """
         pass
 
     def WritePreamble(self, *args): #cannot find CLR method
         """
         WritePreamble(self: Freezable)
-            Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-             API that writes to data members that are not dependency properties.
+            Verifies that the System.Windows.Freezable is not frozen and that it is being 
+             accessed from a valid threading context. System.Windows.Freezable inheritors 
+             should call this method at the beginning of any API that writes to data members 
+             that are not dependency properties.
         """
         pass
 
@@ -978,14 +1163,16 @@ class BitmapImage(BitmapSource, ISealable, IAnimatable, IResource, IFormattable,
     def BeginInit(self):
         """
         BeginInit(self: BitmapImage)
-            Signals the start of the System.Windows.Media.Imaging.BitmapImage initialization.
+            Signals the start of the System.Windows.Media.Imaging.BitmapImage 
+             initialization.
         """
         pass
 
     def CheckIfSiteOfOrigin(self, *args): #cannot find CLR method
         """
         CheckIfSiteOfOrigin(self: BitmapSource)
-            Checks whether the bitmap source content is from a known site of origin. This method is used to make sure that pixel copying operations are safe.
+            Checks whether the bitmap source content is from a known site of origin. This 
+             method is used to make sure that pixel copying operations are safe.
         """
         pass
 
@@ -993,8 +1180,12 @@ class BitmapImage(BitmapSource, ISealable, IAnimatable, IResource, IFormattable,
         """
         Clone(self: BitmapImage) -> BitmapImage
         
-            Creates a modifiable clone of this System.Windows.Media.Imaging.BitmapImage, making deep copies of this object's values.
-            Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property is false even if the source's System.Windows.Freezable.IsFrozen property is true.
+            Creates a modifiable clone of this System.Windows.Media.Imaging.BitmapImage, 
+             making deep copies of this object's values.
+        
+            Returns: A modifiable clone of the current object. The cloned object's 
+             System.Windows.Freezable.IsFrozen property is false even if the source's 
+             System.Windows.Freezable.IsFrozen property is true.
         """
         pass
 
@@ -1006,10 +1197,14 @@ class BitmapImage(BitmapSource, ISealable, IAnimatable, IResource, IFormattable,
         """
         CloneCurrentValue(self: BitmapImage) -> BitmapImage
         
-            Creates a modifiable clone of this System.Windows.Media.Imaging.BitmapImage object, making deep copies of this object's current values. Resource references, data bindings, and animations are not copied, 
-             but their current values are.
+            Creates a modifiable clone of this System.Windows.Media.Imaging.BitmapImage 
+             object, making deep copies of this object's current values. Resource 
+             references, data bindings, and animations are not copied, but their current 
+             values are.
         
-            Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property is false even if the source's System.Windows.Freezable.IsFrozen property is true.
+            Returns: A modifiable clone of the current object. The cloned object's 
+             System.Windows.Freezable.IsFrozen property is false even if the source's 
+             System.Windows.Freezable.IsFrozen property is true.
         """
         pass
 
@@ -1041,12 +1236,19 @@ class BitmapImage(BitmapSource, ISealable, IAnimatable, IResource, IFormattable,
         """
         FreezeCore(self: BitmapSource, isChecking: bool) -> bool
         
-            Makes an instance of System.Windows.Media.Imaging.BitmapSource or a derived class immutable.
+            Makes an instance of System.Windows.Media.Imaging.BitmapSource or a derived 
+             class immutable.
         
-            isChecking: true if this instance should actually freeze itself when this method is called; otherwise, false.
-            Returns: If isChecking is true, this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable, or false if it cannot be made unmodifiable. If isChecking is false, this method 
-             returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable, or false if it cannot be made unmodifiable, with the side effect of having begun to change the frozen status of 
-             this object.
+        
+            isChecking: true if this instance should actually freeze itself when this method is called; 
+             otherwise, false.
+        
+            Returns: If isChecking is true, this method returns true if this 
+             System.Windows.Media.Animation.Animatable can be made unmodifiable, or false if 
+             it cannot be made unmodifiable. If isChecking is false, this method returns 
+             true if the if this System.Windows.Media.Animation.Animatable is now 
+             unmodifiable, or false if it cannot be made unmodifiable, with the side effect 
+             of having begun to change the frozen status of this object.
         """
         pass
 
@@ -1068,13 +1270,17 @@ class BitmapImage(BitmapSource, ISealable, IAnimatable, IResource, IFormattable,
     def OnFreezablePropertyChanged(self, *args): #cannot find CLR method
         """
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject, property: DependencyProperty)
-            This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+            This member supports the Windows Presentation Foundation (WPF) infrastructure 
+             and is not intended to be used directly from your code.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
             property: The property that changed.
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject)
-            Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+            Ensures that appropriate context pointers are established for a 
+             System.Windows.DependencyObjectType data member that has just been set.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
@@ -1084,19 +1290,25 @@ class BitmapImage(BitmapSource, ISealable, IAnimatable, IResource, IFormattable,
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: Freezable, e: DependencyPropertyChangedEventArgs)
-            Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-             System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+            Overrides the System.Windows.DependencyObject implementation of 
+             System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+             rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+             handlers in response to a changing dependency property of type 
+             System.Windows.Freezable.
         
         
-            e: Event data that contains information about which property changed, and its old and new values.
+            e: Event data that contains information about which property changed, and its old 
+             and new values.
         """
         pass
 
     def ReadPreamble(self, *args): #cannot find CLR method
         """
         ReadPreamble(self: Freezable)
-            Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-             not dependency properties.
+            Ensures that the System.Windows.Freezable is being accessed from a valid 
+             thread. Inheritors of System.Windows.Freezable must call this method at the 
+             beginning of any API that reads data members that are not dependency 
+             properties.
         """
         pass
 
@@ -1104,26 +1316,42 @@ class BitmapImage(BitmapSource, ISealable, IAnimatable, IResource, IFormattable,
         """
         ShouldSerializeProperty(self: DependencyObject, dp: DependencyProperty) -> bool
         
-            Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+            Returns a value that indicates whether serialization processes should serialize 
+             the value for the provided dependency property.
+        
         
             dp: The identifier for the dependency property that should be serialized.
-            Returns: true if the dependency property that is supplied should be value-serialized; otherwise, false.
+            Returns: true if the dependency property that is supplied should be value-serialized; 
+             otherwise, false.
+        
+        ShouldSerializeProperty(self: Window_16$17, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Label_17$18, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: TextBox_18$19, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Button_19$20, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: CheckBox_20$21, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: ComboBox_21$22, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Separator_22$23, dp: DependencyProperty) -> bool
         """
         pass
 
     def WritePostscript(self, *args): #cannot find CLR method
         """
         WritePostscript(self: Freezable)
-            Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-             this method at the end of any API that modifies class members that are not stored as dependency properties.
+            Raises the System.Windows.Freezable.Changed event for the 
+             System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+             method. Classes that derive from System.Windows.Freezable should call this 
+             method at the end of any API that modifies class members that are not stored as 
+             dependency properties.
         """
         pass
 
     def WritePreamble(self, *args): #cannot find CLR method
         """
         WritePreamble(self: Freezable)
-            Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-             API that writes to data members that are not dependency properties.
+            Verifies that the System.Windows.Freezable is not frozen and that it is being 
+             accessed from a valid threading context. System.Windows.Freezable inheritors 
+             should call this method at the beginning of any API that writes to data members 
+             that are not dependency properties.
         """
         pass
 
@@ -1263,15 +1491,21 @@ class BitmapMetadata(ImageMetadata, ISealable, IEnumerable, IEnumerable[str]):
         """
         Clone(self: BitmapMetadata) -> BitmapMetadata
         
-            Creates a modifiable clone of this System.Windows.Media.Imaging.BitmapMetadata, making deep copies of this object's values.
-            Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property is false even if the source's System.Windows.Freezable.IsFrozen property is true.
+            Creates a modifiable clone of this System.Windows.Media.Imaging.BitmapMetadata, 
+             making deep copies of this object's values.
+        
+            Returns: A modifiable clone of the current object. The cloned object's 
+             System.Windows.Freezable.IsFrozen property is false even if the source's 
+             System.Windows.Freezable.IsFrozen property is true.
         """
         pass
 
     def CloneCore(self, *args): #cannot find CLR method
         """
         CloneCore(self: BitmapMetadata, sourceFreezable: Freezable)
-            Makes this instance a deep copy of the specified System.Windows.Media.Imaging.BitmapMetadata.
+            Makes this instance a deep copy of the specified 
+             System.Windows.Media.Imaging.BitmapMetadata.
+        
         
             sourceFreezable: The System.Windows.Media.Imaging.BitmapMetadata to clone.
         """
@@ -1280,8 +1514,10 @@ class BitmapMetadata(ImageMetadata, ISealable, IEnumerable, IEnumerable[str]):
     def CloneCurrentValueCore(self, *args): #cannot find CLR method
         """
         CloneCurrentValueCore(self: BitmapMetadata, sourceFreezable: Freezable)
-            Makes this instance a modifiable deep copy of the specified System.Windows.Media.Imaging.BitmapMetadata using current property values. Resource references, data bindings, and animations are not copied, but 
-             their current values are.
+            Makes this instance a modifiable deep copy of the specified 
+             System.Windows.Media.Imaging.BitmapMetadata using current property values. 
+             Resource references, data bindings, and animations are not copied, but their 
+             current values are.
         
         
             sourceFreezable: The System.Windows.Media.Imaging.BitmapMetadata to clone.
@@ -1292,9 +1528,13 @@ class BitmapMetadata(ImageMetadata, ISealable, IEnumerable, IEnumerable[str]):
         """
         ContainsQuery(self: BitmapMetadata, query: str) -> bool
         
-            Determines whether a given query string exists within a System.Windows.Media.Imaging.BitmapMetadata object.
+            Determines whether a given query string exists within a 
+             System.Windows.Media.Imaging.BitmapMetadata object.
         
-            query: Identifies the string that is being queried in the current System.Windows.Media.Imaging.BitmapMetadata object.
+        
+            query: Identifies the string that is being queried in the current 
+             System.Windows.Media.Imaging.BitmapMetadata object.
+        
             Returns: true if the query string is found within the metadata store; otherwise, false.
         """
         pass
@@ -1321,18 +1561,27 @@ class BitmapMetadata(ImageMetadata, ISealable, IEnumerable, IEnumerable[str]):
         """
         FreezeCore(self: Freezable, isChecking: bool) -> bool
         
-            Makes the System.Windows.Freezable object unmodifiable or tests whether it can be made unmodifiable.
+            Makes the System.Windows.Freezable object unmodifiable or tests whether it can 
+             be made unmodifiable.
         
-            isChecking: true to return an indication of whether the object can be frozen (without actually freezing it); false to actually freeze the object.
-            Returns: If isChecking is true, this method returns true if the System.Windows.Freezable can be made unmodifiable, or false if it cannot be made unmodifiable. If isChecking is false, this method returns true if the 
-             if the specified System.Windows.Freezable is now unmodifiable, or false if it cannot be made unmodifiable.
+        
+            isChecking: true to return an indication of whether the object can be frozen (without 
+             actually freezing it); false to actually freeze the object.
+        
+            Returns: If isChecking is true, this method returns true if the System.Windows.Freezable 
+             can be made unmodifiable, or false if it cannot be made unmodifiable. If 
+             isChecking is false, this method returns true if the if the specified 
+             System.Windows.Freezable is now unmodifiable, or false if it cannot be made 
+             unmodifiable.
         """
         pass
 
     def GetAsFrozenCore(self, *args): #cannot find CLR method
         """
         GetAsFrozenCore(self: BitmapMetadata, sourceFreezable: Freezable)
-            Makes this instance a clone of the specified System.Windows.Media.Imaging.BitmapMetadata object.
+            Makes this instance a clone of the specified 
+             System.Windows.Media.Imaging.BitmapMetadata object.
+        
         
             sourceFreezable: The System.Windows.Media.Imaging.BitmapMetadata object to clone and freeze.
         """
@@ -1341,7 +1590,10 @@ class BitmapMetadata(ImageMetadata, ISealable, IEnumerable, IEnumerable[str]):
     def GetCurrentValueAsFrozenCore(self, *args): #cannot find CLR method
         """
         GetCurrentValueAsFrozenCore(self: BitmapMetadata, sourceFreezable: Freezable)
-            Makes this instance a frozen clone of the specified System.Windows.Media.Imaging.BitmapMetadata. Resource references, data bindings, and animations are not copied, but their current values are.
+            Makes this instance a frozen clone of the specified 
+             System.Windows.Media.Imaging.BitmapMetadata. Resource references, data 
+             bindings, and animations are not copied, but their current values are.
+        
         
             sourceFreezable: The System.Windows.Media.Imaging.BitmapMetadata to copy and freeze.
         """
@@ -1351,9 +1603,13 @@ class BitmapMetadata(ImageMetadata, ISealable, IEnumerable, IEnumerable[str]):
         """
         GetQuery(self: BitmapMetadata, query: str) -> object
         
-            Provides access to a metadata query reader that can extract metadata from a bitmap image file.
+            Provides access to a metadata query reader that can extract metadata from a 
+             bitmap image file.
         
-            query: Identifies the string that is being queried in the current System.Windows.Media.Imaging.BitmapMetadata object.
+        
+            query: Identifies the string that is being queried in the current 
+             System.Windows.Media.Imaging.BitmapMetadata object.
+        
             Returns: The metadata at the specified query location.
         """
         pass
@@ -1368,13 +1624,17 @@ class BitmapMetadata(ImageMetadata, ISealable, IEnumerable, IEnumerable[str]):
     def OnFreezablePropertyChanged(self, *args): #cannot find CLR method
         """
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject, property: DependencyProperty)
-            This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+            This member supports the Windows Presentation Foundation (WPF) infrastructure 
+             and is not intended to be used directly from your code.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
             property: The property that changed.
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject)
-            Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+            Ensures that appropriate context pointers are established for a 
+             System.Windows.DependencyObjectType data member that has just been set.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
@@ -1384,26 +1644,34 @@ class BitmapMetadata(ImageMetadata, ISealable, IEnumerable, IEnumerable[str]):
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: Freezable, e: DependencyPropertyChangedEventArgs)
-            Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-             System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+            Overrides the System.Windows.DependencyObject implementation of 
+             System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+             rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+             handlers in response to a changing dependency property of type 
+             System.Windows.Freezable.
         
         
-            e: Event data that contains information about which property changed, and its old and new values.
+            e: Event data that contains information about which property changed, and its old 
+             and new values.
         """
         pass
 
     def ReadPreamble(self, *args): #cannot find CLR method
         """
         ReadPreamble(self: Freezable)
-            Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-             not dependency properties.
+            Ensures that the System.Windows.Freezable is being accessed from a valid 
+             thread. Inheritors of System.Windows.Freezable must call this method at the 
+             beginning of any API that reads data members that are not dependency 
+             properties.
         """
         pass
 
     def RemoveQuery(self, query):
         """
         RemoveQuery(self: BitmapMetadata, query: str)
-            Removes a metadata query from an instance of System.Windows.Media.Imaging.BitmapMetadata.
+            Removes a metadata query from an instance of 
+             System.Windows.Media.Imaging.BitmapMetadata.
+        
         
             query: The metadata query to remove.
         """
@@ -1412,7 +1680,9 @@ class BitmapMetadata(ImageMetadata, ISealable, IEnumerable, IEnumerable[str]):
     def SetQuery(self, query, value):
         """
         SetQuery(self: BitmapMetadata, query: str, value: object)
-            Provides access to a metadata query writer that can write metadata to a bitmap image file.
+            Provides access to a metadata query writer that can write metadata to a bitmap 
+             image file.
+        
         
             query: Identifies the location of the metadata to be written.
             value: The value of the metadata to be written.
@@ -1423,26 +1693,42 @@ class BitmapMetadata(ImageMetadata, ISealable, IEnumerable, IEnumerable[str]):
         """
         ShouldSerializeProperty(self: DependencyObject, dp: DependencyProperty) -> bool
         
-            Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+            Returns a value that indicates whether serialization processes should serialize 
+             the value for the provided dependency property.
+        
         
             dp: The identifier for the dependency property that should be serialized.
-            Returns: true if the dependency property that is supplied should be value-serialized; otherwise, false.
+            Returns: true if the dependency property that is supplied should be value-serialized; 
+             otherwise, false.
+        
+        ShouldSerializeProperty(self: Window_16$17, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Label_17$18, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: TextBox_18$19, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Button_19$20, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: CheckBox_20$21, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: ComboBox_21$22, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Separator_22$23, dp: DependencyProperty) -> bool
         """
         pass
 
     def WritePostscript(self, *args): #cannot find CLR method
         """
         WritePostscript(self: Freezable)
-            Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-             this method at the end of any API that modifies class members that are not stored as dependency properties.
+            Raises the System.Windows.Freezable.Changed event for the 
+             System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+             method. Classes that derive from System.Windows.Freezable should call this 
+             method at the end of any API that modifies class members that are not stored as 
+             dependency properties.
         """
         pass
 
     def WritePreamble(self, *args): #cannot find CLR method
         """
         WritePreamble(self: Freezable)
-            Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-             API that writes to data members that are not dependency properties.
+            Verifies that the System.Windows.Freezable is not frozen and that it is being 
+             accessed from a valid threading context. System.Windows.Freezable inheritors 
+             should call this method at the beginning of any API that writes to data members 
+             that are not dependency properties.
         """
         pass
 
@@ -1591,7 +1877,9 @@ class BitmapMetadataBlob(object):
         """
         GetBlobValue(self: BitmapMetadataBlob) -> Array[Byte]
         
-            Returns an array of bytes that represents the value of a System.Windows.Media.Imaging.BitmapMetadataBlob.
+            Returns an array of bytes that represents the value of a 
+             System.Windows.Media.Imaging.BitmapMetadataBlob.
+        
             Returns: An array of bytes.
         """
         pass
@@ -1662,7 +1950,9 @@ class BitmapSizeOptions(object):
         """
         FromEmptyOptions() -> BitmapSizeOptions
         
-            Initializes a new instance of System.Windows.Media.Imaging.BitmapSizeOptions with empty sizing properties.
+            Initializes a new instance of System.Windows.Media.Imaging.BitmapSizeOptions 
+             with empty sizing properties.
+        
             Returns: An instance of System.Windows.Media.Imaging.BitmapSizeOptions.
         """
         pass
@@ -1672,7 +1962,8 @@ class BitmapSizeOptions(object):
         """
         FromHeight(pixelHeight: int) -> BitmapSizeOptions
         
-            Initializes an instance of System.Windows.Media.Imaging.BitmapSizeOptions that preserves the aspect ratio of the source bitmap and specifies an initial 
+            Initializes an instance of System.Windows.Media.Imaging.BitmapSizeOptions that 
+             preserves the aspect ratio of the source bitmap and specifies an initial 
              System.Windows.Media.Imaging.BitmapSizeOptions.PixelHeight.
         
         
@@ -1686,7 +1977,10 @@ class BitmapSizeOptions(object):
         """
         FromRotation(rotation: Rotation) -> BitmapSizeOptions
         
-            Initializes an instance of System.Windows.Media.Imaging.BitmapSizeOptions that preserves the aspect ratio of the source bitmap and specifies an initial System.Windows.Media.Imaging.Rotation to apply.
+            Initializes an instance of System.Windows.Media.Imaging.BitmapSizeOptions that 
+             preserves the aspect ratio of the source bitmap and specifies an initial 
+             System.Windows.Media.Imaging.Rotation to apply.
+        
         
             rotation: The initial rotation value to apply. Only 90 degree increments are supported.
             Returns: A new instance of System.Windows.Media.Imaging.BitmapSizeOptions.
@@ -1698,7 +1992,8 @@ class BitmapSizeOptions(object):
         """
         FromWidth(pixelWidth: int) -> BitmapSizeOptions
         
-            Initializes an instance of System.Windows.Media.Imaging.BitmapSizeOptions that preserves the aspect ratio of the source bitmap and specifies an initial 
+            Initializes an instance of System.Windows.Media.Imaging.BitmapSizeOptions that 
+             preserves the aspect ratio of the source bitmap and specifies an initial 
              System.Windows.Media.Imaging.BitmapSizeOptions.PixelWidth.
         
         
@@ -1712,7 +2007,9 @@ class BitmapSizeOptions(object):
         """
         FromWidthAndHeight(pixelWidth: int, pixelHeight: int) -> BitmapSizeOptions
         
-            Initializes an instance of System.Windows.Media.Imaging.BitmapSizeOptions that does not preserve the original bitmap aspect ratio.
+            Initializes an instance of System.Windows.Media.Imaging.BitmapSizeOptions that 
+             does not preserve the original bitmap aspect ratio.
+        
         
             pixelWidth: The width, in pixels, of the resulting bitmap.
             pixelHeight: The height, in pixels, of the resulting bitmap.
@@ -1782,7 +2079,8 @@ class CachedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormattable
     def CheckIfSiteOfOrigin(self, *args): #cannot find CLR method
         """
         CheckIfSiteOfOrigin(self: BitmapSource)
-            Checks whether the bitmap source content is from a known site of origin. This method is used to make sure that pixel copying operations are safe.
+            Checks whether the bitmap source content is from a known site of origin. This 
+             method is used to make sure that pixel copying operations are safe.
         """
         pass
 
@@ -1790,10 +2088,14 @@ class CachedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormattable
         """
         Clone(self: CachedBitmap) -> CachedBitmap
         
-            Creates a modifiable clone of this System.Windows.Media.Imaging.CachedBitmap, making deep copies of this object's values. When copying dependency properties, this method copies resource references and data 
-             bindings (but they might no longer resolve) but not animations or their current values.
+            Creates a modifiable clone of this System.Windows.Media.Imaging.CachedBitmap, 
+             making deep copies of this object's values. When copying dependency properties, 
+             this method copies resource references and data bindings (but they might no 
+             longer resolve) but not animations or their current values.
         
-            Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+            Returns: A modifiable clone of the current object. The cloned object's 
+             System.Windows.Freezable.IsFrozen property will be false even if the source's 
+             System.Windows.Freezable.IsFrozen property was true.
         """
         pass
 
@@ -1805,10 +2107,14 @@ class CachedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormattable
         """
         CloneCurrentValue(self: CachedBitmap) -> CachedBitmap
         
-            Creates a modifiable clone of this System.Windows.Media.Imaging.CachedBitmap object, making deep copies of this object's current values. Resource references, data bindings, and animations are not copied, 
-             but their current values are.
+            Creates a modifiable clone of this System.Windows.Media.Imaging.CachedBitmap 
+             object, making deep copies of this object's current values. Resource 
+             references, data bindings, and animations are not copied, but their current 
+             values are.
         
-            Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+            Returns: A modifiable clone of the current object. The cloned object's 
+             System.Windows.Freezable.IsFrozen property will be false even if the source's 
+             System.Windows.Freezable.IsFrozen property was true.
         """
         pass
 
@@ -1833,12 +2139,19 @@ class CachedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormattable
         """
         FreezeCore(self: BitmapSource, isChecking: bool) -> bool
         
-            Makes an instance of System.Windows.Media.Imaging.BitmapSource or a derived class immutable.
+            Makes an instance of System.Windows.Media.Imaging.BitmapSource or a derived 
+             class immutable.
         
-            isChecking: true if this instance should actually freeze itself when this method is called; otherwise, false.
-            Returns: If isChecking is true, this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable, or false if it cannot be made unmodifiable. If isChecking is false, this method 
-             returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable, or false if it cannot be made unmodifiable, with the side effect of having begun to change the frozen status of 
-             this object.
+        
+            isChecking: true if this instance should actually freeze itself when this method is called; 
+             otherwise, false.
+        
+            Returns: If isChecking is true, this method returns true if this 
+             System.Windows.Media.Animation.Animatable can be made unmodifiable, or false if 
+             it cannot be made unmodifiable. If isChecking is false, this method returns 
+             true if the if this System.Windows.Media.Animation.Animatable is now 
+             unmodifiable, or false if it cannot be made unmodifiable, with the side effect 
+             of having begun to change the frozen status of this object.
         """
         pass
 
@@ -1860,13 +2173,17 @@ class CachedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormattable
     def OnFreezablePropertyChanged(self, *args): #cannot find CLR method
         """
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject, property: DependencyProperty)
-            This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+            This member supports the Windows Presentation Foundation (WPF) infrastructure 
+             and is not intended to be used directly from your code.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
             property: The property that changed.
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject)
-            Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+            Ensures that appropriate context pointers are established for a 
+             System.Windows.DependencyObjectType data member that has just been set.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
@@ -1876,19 +2193,25 @@ class CachedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormattable
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: Freezable, e: DependencyPropertyChangedEventArgs)
-            Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-             System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+            Overrides the System.Windows.DependencyObject implementation of 
+             System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+             rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+             handlers in response to a changing dependency property of type 
+             System.Windows.Freezable.
         
         
-            e: Event data that contains information about which property changed, and its old and new values.
+            e: Event data that contains information about which property changed, and its old 
+             and new values.
         """
         pass
 
     def ReadPreamble(self, *args): #cannot find CLR method
         """
         ReadPreamble(self: Freezable)
-            Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-             not dependency properties.
+            Ensures that the System.Windows.Freezable is being accessed from a valid 
+             thread. Inheritors of System.Windows.Freezable must call this method at the 
+             beginning of any API that reads data members that are not dependency 
+             properties.
         """
         pass
 
@@ -1896,26 +2219,42 @@ class CachedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormattable
         """
         ShouldSerializeProperty(self: DependencyObject, dp: DependencyProperty) -> bool
         
-            Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+            Returns a value that indicates whether serialization processes should serialize 
+             the value for the provided dependency property.
+        
         
             dp: The identifier for the dependency property that should be serialized.
-            Returns: true if the dependency property that is supplied should be value-serialized; otherwise, false.
+            Returns: true if the dependency property that is supplied should be value-serialized; 
+             otherwise, false.
+        
+        ShouldSerializeProperty(self: Window_16$17, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Label_17$18, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: TextBox_18$19, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Button_19$20, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: CheckBox_20$21, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: ComboBox_21$22, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Separator_22$23, dp: DependencyProperty) -> bool
         """
         pass
 
     def WritePostscript(self, *args): #cannot find CLR method
         """
         WritePostscript(self: Freezable)
-            Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-             this method at the end of any API that modifies class members that are not stored as dependency properties.
+            Raises the System.Windows.Freezable.Changed event for the 
+             System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+             method. Classes that derive from System.Windows.Freezable should call this 
+             method at the end of any API that modifies class members that are not stored as 
+             dependency properties.
         """
         pass
 
     def WritePreamble(self, *args): #cannot find CLR method
         """
         WritePreamble(self: Freezable)
-            Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-             API that writes to data members that are not dependency properties.
+            Verifies that the System.Windows.Freezable is not frozen and that it is being 
+             accessed from a valid threading context. System.Windows.Freezable inheritors 
+             should call this method at the beginning of any API that writes to data members 
+             that are not dependency properties.
         """
         pass
 
@@ -1946,14 +2285,16 @@ class ColorConvertedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFor
     def BeginInit(self):
         """
         BeginInit(self: ColorConvertedBitmap)
-            Signals the start of the System.Windows.Media.Imaging.ColorConvertedBitmap initialization.
+            Signals the start of the System.Windows.Media.Imaging.ColorConvertedBitmap 
+             initialization.
         """
         pass
 
     def CheckIfSiteOfOrigin(self, *args): #cannot find CLR method
         """
         CheckIfSiteOfOrigin(self: BitmapSource)
-            Checks whether the bitmap source content is from a known site of origin. This method is used to make sure that pixel copying operations are safe.
+            Checks whether the bitmap source content is from a known site of origin. This 
+             method is used to make sure that pixel copying operations are safe.
         """
         pass
 
@@ -1961,10 +2302,15 @@ class ColorConvertedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFor
         """
         Clone(self: ColorConvertedBitmap) -> ColorConvertedBitmap
         
-            Creates a modifiable clone of this System.Windows.Media.Imaging.ColorConvertedBitmap, making deep copies of this object's values. When copying dependency properties, this method copies resource references 
-             and data bindings (but they might no longer resolve) but not animations or their current values.
+            Creates a modifiable clone of this 
+             System.Windows.Media.Imaging.ColorConvertedBitmap, making deep copies of this 
+             object's values. When copying dependency properties, this method copies 
+             resource references and data bindings (but they might no longer resolve) but 
+             not animations or their current values.
         
-            Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+            Returns: A modifiable clone of the current object. The cloned object's 
+             System.Windows.Freezable.IsFrozen property will be false even if the source's 
+             System.Windows.Freezable.IsFrozen property was true.
         """
         pass
 
@@ -1976,10 +2322,14 @@ class ColorConvertedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFor
         """
         CloneCurrentValue(self: ColorConvertedBitmap) -> ColorConvertedBitmap
         
-            Creates a modifiable clone of this System.Windows.Media.Imaging.ColorConvertedBitmap object, making deep copies of this object's current values. Resource references, data bindings, and animations are not 
-             copied, but their current values are.
+            Creates a modifiable clone of this 
+             System.Windows.Media.Imaging.ColorConvertedBitmap object, making deep copies of 
+             this object's current values. Resource references, data bindings, and 
+             animations are not copied, but their current values are.
         
-            Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+            Returns: A modifiable clone of the current object. The cloned object's 
+             System.Windows.Freezable.IsFrozen property will be false even if the source's 
+             System.Windows.Freezable.IsFrozen property was true.
         """
         pass
 
@@ -2003,7 +2353,8 @@ class ColorConvertedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFor
     def EndInit(self):
         """
         EndInit(self: ColorConvertedBitmap)
-            Signals the end of the System.Windows.Media.Imaging.ColorConvertedBitmap initialization.
+            Signals the end of the System.Windows.Media.Imaging.ColorConvertedBitmap 
+             initialization.
         """
         pass
 
@@ -2011,12 +2362,19 @@ class ColorConvertedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFor
         """
         FreezeCore(self: BitmapSource, isChecking: bool) -> bool
         
-            Makes an instance of System.Windows.Media.Imaging.BitmapSource or a derived class immutable.
+            Makes an instance of System.Windows.Media.Imaging.BitmapSource or a derived 
+             class immutable.
         
-            isChecking: true if this instance should actually freeze itself when this method is called; otherwise, false.
-            Returns: If isChecking is true, this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable, or false if it cannot be made unmodifiable. If isChecking is false, this method 
-             returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable, or false if it cannot be made unmodifiable, with the side effect of having begun to change the frozen status of 
-             this object.
+        
+            isChecking: true if this instance should actually freeze itself when this method is called; 
+             otherwise, false.
+        
+            Returns: If isChecking is true, this method returns true if this 
+             System.Windows.Media.Animation.Animatable can be made unmodifiable, or false if 
+             it cannot be made unmodifiable. If isChecking is false, this method returns 
+             true if the if this System.Windows.Media.Animation.Animatable is now 
+             unmodifiable, or false if it cannot be made unmodifiable, with the side effect 
+             of having begun to change the frozen status of this object.
         """
         pass
 
@@ -2038,13 +2396,17 @@ class ColorConvertedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFor
     def OnFreezablePropertyChanged(self, *args): #cannot find CLR method
         """
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject, property: DependencyProperty)
-            This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+            This member supports the Windows Presentation Foundation (WPF) infrastructure 
+             and is not intended to be used directly from your code.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
             property: The property that changed.
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject)
-            Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+            Ensures that appropriate context pointers are established for a 
+             System.Windows.DependencyObjectType data member that has just been set.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
@@ -2054,19 +2416,25 @@ class ColorConvertedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFor
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: Freezable, e: DependencyPropertyChangedEventArgs)
-            Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-             System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+            Overrides the System.Windows.DependencyObject implementation of 
+             System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+             rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+             handlers in response to a changing dependency property of type 
+             System.Windows.Freezable.
         
         
-            e: Event data that contains information about which property changed, and its old and new values.
+            e: Event data that contains information about which property changed, and its old 
+             and new values.
         """
         pass
 
     def ReadPreamble(self, *args): #cannot find CLR method
         """
         ReadPreamble(self: Freezable)
-            Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-             not dependency properties.
+            Ensures that the System.Windows.Freezable is being accessed from a valid 
+             thread. Inheritors of System.Windows.Freezable must call this method at the 
+             beginning of any API that reads data members that are not dependency 
+             properties.
         """
         pass
 
@@ -2074,26 +2442,42 @@ class ColorConvertedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFor
         """
         ShouldSerializeProperty(self: DependencyObject, dp: DependencyProperty) -> bool
         
-            Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+            Returns a value that indicates whether serialization processes should serialize 
+             the value for the provided dependency property.
+        
         
             dp: The identifier for the dependency property that should be serialized.
-            Returns: true if the dependency property that is supplied should be value-serialized; otherwise, false.
+            Returns: true if the dependency property that is supplied should be value-serialized; 
+             otherwise, false.
+        
+        ShouldSerializeProperty(self: Window_16$17, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Label_17$18, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: TextBox_18$19, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Button_19$20, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: CheckBox_20$21, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: ComboBox_21$22, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Separator_22$23, dp: DependencyProperty) -> bool
         """
         pass
 
     def WritePostscript(self, *args): #cannot find CLR method
         """
         WritePostscript(self: Freezable)
-            Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-             this method at the end of any API that modifies class members that are not stored as dependency properties.
+            Raises the System.Windows.Freezable.Changed event for the 
+             System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+             method. Classes that derive from System.Windows.Freezable should call this 
+             method at the end of any API that modifies class members that are not stored as 
+             dependency properties.
         """
         pass
 
     def WritePreamble(self, *args): #cannot find CLR method
         """
         WritePreamble(self: Freezable)
-            Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-             API that writes to data members that are not dependency properties.
+            Verifies that the System.Windows.Freezable is not frozen and that it is being 
+             accessed from a valid threading context. System.Windows.Freezable inheritors 
+             should call this method at the beginning of any API that writes to data members 
+             that are not dependency properties.
         """
         pass
 
@@ -2165,14 +2549,16 @@ class CroppedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormattabl
     def BeginInit(self):
         """
         BeginInit(self: CroppedBitmap)
-            Signals the start of the System.Windows.Media.Imaging.CroppedBitmap initialization.
+            Signals the start of the System.Windows.Media.Imaging.CroppedBitmap 
+             initialization.
         """
         pass
 
     def CheckIfSiteOfOrigin(self, *args): #cannot find CLR method
         """
         CheckIfSiteOfOrigin(self: BitmapSource)
-            Checks whether the bitmap source content is from a known site of origin. This method is used to make sure that pixel copying operations are safe.
+            Checks whether the bitmap source content is from a known site of origin. This 
+             method is used to make sure that pixel copying operations are safe.
         """
         pass
 
@@ -2180,10 +2566,14 @@ class CroppedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormattabl
         """
         Clone(self: CroppedBitmap) -> CroppedBitmap
         
-            Creates a modifiable clone of this System.Windows.Media.Imaging.CroppedBitmap, making deep copies of this object's values. When copying dependency properties, this method copies resource references and 
-             data bindings (but they might no longer resolve) but not animations or their current values.
+            Creates a modifiable clone of this System.Windows.Media.Imaging.CroppedBitmap, 
+             making deep copies of this object's values. When copying dependency properties, 
+             this method copies resource references and data bindings (but they might no 
+             longer resolve) but not animations or their current values.
         
-            Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+            Returns: A modifiable clone of the current object. The cloned object's 
+             System.Windows.Freezable.IsFrozen property will be false even if the source's 
+             System.Windows.Freezable.IsFrozen property was true.
         """
         pass
 
@@ -2195,10 +2585,14 @@ class CroppedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormattabl
         """
         CloneCurrentValue(self: CroppedBitmap) -> CroppedBitmap
         
-            Creates a modifiable clone of this System.Windows.Media.Imaging.CroppedBitmap object, making deep copies of this object's current values. Resource references, data bindings, and animations are not copied, 
-             but their current values are.
+            Creates a modifiable clone of this System.Windows.Media.Imaging.CroppedBitmap 
+             object, making deep copies of this object's current values. Resource 
+             references, data bindings, and animations are not copied, but their current 
+             values are.
         
-            Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+            Returns: A modifiable clone of the current object. The cloned object's 
+             System.Windows.Freezable.IsFrozen property will be false even if the source's 
+             System.Windows.Freezable.IsFrozen property was true.
         """
         pass
 
@@ -2222,7 +2616,8 @@ class CroppedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormattabl
     def EndInit(self):
         """
         EndInit(self: CroppedBitmap)
-            Signals the end of the System.Windows.Media.Imaging.CroppedBitmap initialization.
+            Signals the end of the System.Windows.Media.Imaging.CroppedBitmap 
+             initialization.
         """
         pass
 
@@ -2230,12 +2625,19 @@ class CroppedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormattabl
         """
         FreezeCore(self: BitmapSource, isChecking: bool) -> bool
         
-            Makes an instance of System.Windows.Media.Imaging.BitmapSource or a derived class immutable.
+            Makes an instance of System.Windows.Media.Imaging.BitmapSource or a derived 
+             class immutable.
         
-            isChecking: true if this instance should actually freeze itself when this method is called; otherwise, false.
-            Returns: If isChecking is true, this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable, or false if it cannot be made unmodifiable. If isChecking is false, this method 
-             returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable, or false if it cannot be made unmodifiable, with the side effect of having begun to change the frozen status of 
-             this object.
+        
+            isChecking: true if this instance should actually freeze itself when this method is called; 
+             otherwise, false.
+        
+            Returns: If isChecking is true, this method returns true if this 
+             System.Windows.Media.Animation.Animatable can be made unmodifiable, or false if 
+             it cannot be made unmodifiable. If isChecking is false, this method returns 
+             true if the if this System.Windows.Media.Animation.Animatable is now 
+             unmodifiable, or false if it cannot be made unmodifiable, with the side effect 
+             of having begun to change the frozen status of this object.
         """
         pass
 
@@ -2257,13 +2659,17 @@ class CroppedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormattabl
     def OnFreezablePropertyChanged(self, *args): #cannot find CLR method
         """
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject, property: DependencyProperty)
-            This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+            This member supports the Windows Presentation Foundation (WPF) infrastructure 
+             and is not intended to be used directly from your code.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
             property: The property that changed.
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject)
-            Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+            Ensures that appropriate context pointers are established for a 
+             System.Windows.DependencyObjectType data member that has just been set.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
@@ -2273,19 +2679,25 @@ class CroppedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormattabl
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: Freezable, e: DependencyPropertyChangedEventArgs)
-            Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-             System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+            Overrides the System.Windows.DependencyObject implementation of 
+             System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+             rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+             handlers in response to a changing dependency property of type 
+             System.Windows.Freezable.
         
         
-            e: Event data that contains information about which property changed, and its old and new values.
+            e: Event data that contains information about which property changed, and its old 
+             and new values.
         """
         pass
 
     def ReadPreamble(self, *args): #cannot find CLR method
         """
         ReadPreamble(self: Freezable)
-            Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-             not dependency properties.
+            Ensures that the System.Windows.Freezable is being accessed from a valid 
+             thread. Inheritors of System.Windows.Freezable must call this method at the 
+             beginning of any API that reads data members that are not dependency 
+             properties.
         """
         pass
 
@@ -2293,26 +2705,42 @@ class CroppedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormattabl
         """
         ShouldSerializeProperty(self: DependencyObject, dp: DependencyProperty) -> bool
         
-            Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+            Returns a value that indicates whether serialization processes should serialize 
+             the value for the provided dependency property.
+        
         
             dp: The identifier for the dependency property that should be serialized.
-            Returns: true if the dependency property that is supplied should be value-serialized; otherwise, false.
+            Returns: true if the dependency property that is supplied should be value-serialized; 
+             otherwise, false.
+        
+        ShouldSerializeProperty(self: Window_16$17, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Label_17$18, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: TextBox_18$19, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Button_19$20, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: CheckBox_20$21, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: ComboBox_21$22, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Separator_22$23, dp: DependencyProperty) -> bool
         """
         pass
 
     def WritePostscript(self, *args): #cannot find CLR method
         """
         WritePostscript(self: Freezable)
-            Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-             this method at the end of any API that modifies class members that are not stored as dependency properties.
+            Raises the System.Windows.Freezable.Changed event for the 
+             System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+             method. Classes that derive from System.Windows.Freezable should call this 
+             method at the end of any API that modifies class members that are not stored as 
+             dependency properties.
         """
         pass
 
     def WritePreamble(self, *args): #cannot find CLR method
         """
         WritePreamble(self: Freezable)
-            Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-             API that writes to data members that are not dependency properties.
+            Verifies that the System.Windows.Freezable is not frozen and that it is being 
+             accessed from a valid threading context. System.Windows.Freezable inheritors 
+             should call this method at the beginning of any API that writes to data members 
+             that are not dependency properties.
         """
         pass
 
@@ -2377,14 +2805,16 @@ class FormatConvertedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFo
     def BeginInit(self):
         """
         BeginInit(self: FormatConvertedBitmap)
-            Signals the start of the System.Windows.Media.Imaging.FormatConvertedBitmap initialization.
+            Signals the start of the System.Windows.Media.Imaging.FormatConvertedBitmap 
+             initialization.
         """
         pass
 
     def CheckIfSiteOfOrigin(self, *args): #cannot find CLR method
         """
         CheckIfSiteOfOrigin(self: BitmapSource)
-            Checks whether the bitmap source content is from a known site of origin. This method is used to make sure that pixel copying operations are safe.
+            Checks whether the bitmap source content is from a known site of origin. This 
+             method is used to make sure that pixel copying operations are safe.
         """
         pass
 
@@ -2392,10 +2822,15 @@ class FormatConvertedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFo
         """
         Clone(self: FormatConvertedBitmap) -> FormatConvertedBitmap
         
-            Creates a modifiable clone of this System.Windows.Media.Imaging.FormatConvertedBitmap, making deep copies of this object's values. When copying dependency properties, this method copies resource references 
-             and data bindings (but they might no longer resolve) but not animations or their current values.
+            Creates a modifiable clone of this 
+             System.Windows.Media.Imaging.FormatConvertedBitmap, making deep copies of this 
+             object's values. When copying dependency properties, this method copies 
+             resource references and data bindings (but they might no longer resolve) but 
+             not animations or their current values.
         
-            Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+            Returns: A modifiable clone of the current object. The cloned object's 
+             System.Windows.Freezable.IsFrozen property will be false even if the source's 
+             System.Windows.Freezable.IsFrozen property was true.
         """
         pass
 
@@ -2407,10 +2842,14 @@ class FormatConvertedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFo
         """
         CloneCurrentValue(self: FormatConvertedBitmap) -> FormatConvertedBitmap
         
-            Creates a modifiable clone of this System.Windows.Media.Imaging.FormatConvertedBitmap object, making deep copies of this object's current values. Resource references, data bindings, and animations are not 
-             copied, but their current values are.
+            Creates a modifiable clone of this 
+             System.Windows.Media.Imaging.FormatConvertedBitmap object, making deep copies 
+             of this object's current values. Resource references, data bindings, and 
+             animations are not copied, but their current values are.
         
-            Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+            Returns: A modifiable clone of the current object. The cloned object's 
+             System.Windows.Freezable.IsFrozen property will be false even if the source's 
+             System.Windows.Freezable.IsFrozen property was true.
         """
         pass
 
@@ -2434,7 +2873,8 @@ class FormatConvertedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFo
     def EndInit(self):
         """
         EndInit(self: FormatConvertedBitmap)
-            Signals the end of the System.Windows.Media.Imaging.FormatConvertedBitmap initialization.
+            Signals the end of the System.Windows.Media.Imaging.FormatConvertedBitmap 
+             initialization.
         """
         pass
 
@@ -2442,12 +2882,19 @@ class FormatConvertedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFo
         """
         FreezeCore(self: BitmapSource, isChecking: bool) -> bool
         
-            Makes an instance of System.Windows.Media.Imaging.BitmapSource or a derived class immutable.
+            Makes an instance of System.Windows.Media.Imaging.BitmapSource or a derived 
+             class immutable.
         
-            isChecking: true if this instance should actually freeze itself when this method is called; otherwise, false.
-            Returns: If isChecking is true, this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable, or false if it cannot be made unmodifiable. If isChecking is false, this method 
-             returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable, or false if it cannot be made unmodifiable, with the side effect of having begun to change the frozen status of 
-             this object.
+        
+            isChecking: true if this instance should actually freeze itself when this method is called; 
+             otherwise, false.
+        
+            Returns: If isChecking is true, this method returns true if this 
+             System.Windows.Media.Animation.Animatable can be made unmodifiable, or false if 
+             it cannot be made unmodifiable. If isChecking is false, this method returns 
+             true if the if this System.Windows.Media.Animation.Animatable is now 
+             unmodifiable, or false if it cannot be made unmodifiable, with the side effect 
+             of having begun to change the frozen status of this object.
         """
         pass
 
@@ -2469,13 +2916,17 @@ class FormatConvertedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFo
     def OnFreezablePropertyChanged(self, *args): #cannot find CLR method
         """
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject, property: DependencyProperty)
-            This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+            This member supports the Windows Presentation Foundation (WPF) infrastructure 
+             and is not intended to be used directly from your code.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
             property: The property that changed.
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject)
-            Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+            Ensures that appropriate context pointers are established for a 
+             System.Windows.DependencyObjectType data member that has just been set.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
@@ -2485,19 +2936,25 @@ class FormatConvertedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFo
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: Freezable, e: DependencyPropertyChangedEventArgs)
-            Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-             System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+            Overrides the System.Windows.DependencyObject implementation of 
+             System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+             rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+             handlers in response to a changing dependency property of type 
+             System.Windows.Freezable.
         
         
-            e: Event data that contains information about which property changed, and its old and new values.
+            e: Event data that contains information about which property changed, and its old 
+             and new values.
         """
         pass
 
     def ReadPreamble(self, *args): #cannot find CLR method
         """
         ReadPreamble(self: Freezable)
-            Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-             not dependency properties.
+            Ensures that the System.Windows.Freezable is being accessed from a valid 
+             thread. Inheritors of System.Windows.Freezable must call this method at the 
+             beginning of any API that reads data members that are not dependency 
+             properties.
         """
         pass
 
@@ -2505,26 +2962,42 @@ class FormatConvertedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFo
         """
         ShouldSerializeProperty(self: DependencyObject, dp: DependencyProperty) -> bool
         
-            Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+            Returns a value that indicates whether serialization processes should serialize 
+             the value for the provided dependency property.
+        
         
             dp: The identifier for the dependency property that should be serialized.
-            Returns: true if the dependency property that is supplied should be value-serialized; otherwise, false.
+            Returns: true if the dependency property that is supplied should be value-serialized; 
+             otherwise, false.
+        
+        ShouldSerializeProperty(self: Window_16$17, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Label_17$18, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: TextBox_18$19, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Button_19$20, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: CheckBox_20$21, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: ComboBox_21$22, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Separator_22$23, dp: DependencyProperty) -> bool
         """
         pass
 
     def WritePostscript(self, *args): #cannot find CLR method
         """
         WritePostscript(self: Freezable)
-            Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-             this method at the end of any API that modifies class members that are not stored as dependency properties.
+            Raises the System.Windows.Freezable.Changed event for the 
+             System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+             method. Classes that derive from System.Windows.Freezable should call this 
+             method at the end of any API that modifies class members that are not stored as 
+             dependency properties.
         """
         pass
 
     def WritePreamble(self, *args): #cannot find CLR method
         """
         WritePreamble(self: Freezable)
-            Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-             API that writes to data members that are not dependency properties.
+            Verifies that the System.Windows.Freezable is not frozen and that it is being 
+             accessed from a valid threading context. System.Windows.Freezable inheritors 
+             should call this method at the beginning of any API that writes to data members 
+             that are not dependency properties.
         """
         pass
 
@@ -2631,10 +3104,15 @@ class InPlaceBitmapMetadataWriter(BitmapMetadata, ISealable, IEnumerable, IEnume
         """
         Clone(self: InPlaceBitmapMetadataWriter) -> InPlaceBitmapMetadataWriter
         
-            Creates a modifiable clone of this System.Windows.Media.Imaging.InPlaceBitmapMetadataWriter, making deep copies of this object's values. When copying dependency properties, this method copies resource 
-             references and data bindings (but they might no longer resolve) but not animations or their current values.
+            Creates a modifiable clone of this 
+             System.Windows.Media.Imaging.InPlaceBitmapMetadataWriter, making deep copies of 
+             this object's values. When copying dependency properties, this method copies 
+             resource references and data bindings (but they might no longer resolve) but 
+             not animations or their current values.
         
-            Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+            Returns: A modifiable clone of the current object. The cloned object's 
+             System.Windows.Freezable.IsFrozen property will be false even if the source's 
+             System.Windows.Freezable.IsFrozen property was true.
         """
         pass
 
@@ -2663,11 +3141,18 @@ class InPlaceBitmapMetadataWriter(BitmapMetadata, ISealable, IEnumerable, IEnume
         """
         FreezeCore(self: Freezable, isChecking: bool) -> bool
         
-            Makes the System.Windows.Freezable object unmodifiable or tests whether it can be made unmodifiable.
+            Makes the System.Windows.Freezable object unmodifiable or tests whether it can 
+             be made unmodifiable.
         
-            isChecking: true to return an indication of whether the object can be frozen (without actually freezing it); false to actually freeze the object.
-            Returns: If isChecking is true, this method returns true if the System.Windows.Freezable can be made unmodifiable, or false if it cannot be made unmodifiable. If isChecking is false, this method returns true if the 
-             if the specified System.Windows.Freezable is now unmodifiable, or false if it cannot be made unmodifiable.
+        
+            isChecking: true to return an indication of whether the object can be frozen (without 
+             actually freezing it); false to actually freeze the object.
+        
+            Returns: If isChecking is true, this method returns true if the System.Windows.Freezable 
+             can be made unmodifiable, or false if it cannot be made unmodifiable. If 
+             isChecking is false, this method returns true if the if the specified 
+             System.Windows.Freezable is now unmodifiable, or false if it cannot be made 
+             unmodifiable.
         """
         pass
 
@@ -2689,13 +3174,17 @@ class InPlaceBitmapMetadataWriter(BitmapMetadata, ISealable, IEnumerable, IEnume
     def OnFreezablePropertyChanged(self, *args): #cannot find CLR method
         """
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject, property: DependencyProperty)
-            This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+            This member supports the Windows Presentation Foundation (WPF) infrastructure 
+             and is not intended to be used directly from your code.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
             property: The property that changed.
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject)
-            Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+            Ensures that appropriate context pointers are established for a 
+             System.Windows.DependencyObjectType data member that has just been set.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
@@ -2705,19 +3194,25 @@ class InPlaceBitmapMetadataWriter(BitmapMetadata, ISealable, IEnumerable, IEnume
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: Freezable, e: DependencyPropertyChangedEventArgs)
-            Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-             System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+            Overrides the System.Windows.DependencyObject implementation of 
+             System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+             rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+             handlers in response to a changing dependency property of type 
+             System.Windows.Freezable.
         
         
-            e: Event data that contains information about which property changed, and its old and new values.
+            e: Event data that contains information about which property changed, and its old 
+             and new values.
         """
         pass
 
     def ReadPreamble(self, *args): #cannot find CLR method
         """
         ReadPreamble(self: Freezable)
-            Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-             not dependency properties.
+            Ensures that the System.Windows.Freezable is being accessed from a valid 
+             thread. Inheritors of System.Windows.Freezable must call this method at the 
+             beginning of any API that reads data members that are not dependency 
+             properties.
         """
         pass
 
@@ -2725,10 +3220,21 @@ class InPlaceBitmapMetadataWriter(BitmapMetadata, ISealable, IEnumerable, IEnume
         """
         ShouldSerializeProperty(self: DependencyObject, dp: DependencyProperty) -> bool
         
-            Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+            Returns a value that indicates whether serialization processes should serialize 
+             the value for the provided dependency property.
+        
         
             dp: The identifier for the dependency property that should be serialized.
-            Returns: true if the dependency property that is supplied should be value-serialized; otherwise, false.
+            Returns: true if the dependency property that is supplied should be value-serialized; 
+             otherwise, false.
+        
+        ShouldSerializeProperty(self: Window_16$17, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Label_17$18, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: TextBox_18$19, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Button_19$20, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: CheckBox_20$21, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: ComboBox_21$22, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Separator_22$23, dp: DependencyProperty) -> bool
         """
         pass
 
@@ -2744,16 +3250,21 @@ class InPlaceBitmapMetadataWriter(BitmapMetadata, ISealable, IEnumerable, IEnume
     def WritePostscript(self, *args): #cannot find CLR method
         """
         WritePostscript(self: Freezable)
-            Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-             this method at the end of any API that modifies class members that are not stored as dependency properties.
+            Raises the System.Windows.Freezable.Changed event for the 
+             System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+             method. Classes that derive from System.Windows.Freezable should call this 
+             method at the end of any API that modifies class members that are not stored as 
+             dependency properties.
         """
         pass
 
     def WritePreamble(self, *args): #cannot find CLR method
         """
         WritePreamble(self: Freezable)
-            Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-             API that writes to data members that are not dependency properties.
+            Verifies that the System.Windows.Freezable is not frozen and that it is being 
+             accessed from a valid threading context. System.Windows.Freezable inheritors 
+             should call this method at the beginning of any API that writes to data members 
+             that are not dependency properties.
         """
         pass
 
@@ -2968,7 +3479,8 @@ class RenderTargetBitmap(BitmapSource, ISealable, IAnimatable, IResource, IForma
     def CheckIfSiteOfOrigin(self, *args): #cannot find CLR method
         """
         CheckIfSiteOfOrigin(self: BitmapSource)
-            Checks whether the bitmap source content is from a known site of origin. This method is used to make sure that pixel copying operations are safe.
+            Checks whether the bitmap source content is from a known site of origin. This 
+             method is used to make sure that pixel copying operations are safe.
         """
         pass
 
@@ -3004,12 +3516,19 @@ class RenderTargetBitmap(BitmapSource, ISealable, IAnimatable, IResource, IForma
         """
         FreezeCore(self: BitmapSource, isChecking: bool) -> bool
         
-            Makes an instance of System.Windows.Media.Imaging.BitmapSource or a derived class immutable.
+            Makes an instance of System.Windows.Media.Imaging.BitmapSource or a derived 
+             class immutable.
         
-            isChecking: true if this instance should actually freeze itself when this method is called; otherwise, false.
-            Returns: If isChecking is true, this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable, or false if it cannot be made unmodifiable. If isChecking is false, this method 
-             returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable, or false if it cannot be made unmodifiable, with the side effect of having begun to change the frozen status of 
-             this object.
+        
+            isChecking: true if this instance should actually freeze itself when this method is called; 
+             otherwise, false.
+        
+            Returns: If isChecking is true, this method returns true if this 
+             System.Windows.Media.Animation.Animatable can be made unmodifiable, or false if 
+             it cannot be made unmodifiable. If isChecking is false, this method returns 
+             true if the if this System.Windows.Media.Animation.Animatable is now 
+             unmodifiable, or false if it cannot be made unmodifiable, with the side effect 
+             of having begun to change the frozen status of this object.
         """
         pass
 
@@ -3031,13 +3550,17 @@ class RenderTargetBitmap(BitmapSource, ISealable, IAnimatable, IResource, IForma
     def OnFreezablePropertyChanged(self, *args): #cannot find CLR method
         """
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject, property: DependencyProperty)
-            This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+            This member supports the Windows Presentation Foundation (WPF) infrastructure 
+             and is not intended to be used directly from your code.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
             property: The property that changed.
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject)
-            Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+            Ensures that appropriate context pointers are established for a 
+             System.Windows.DependencyObjectType data member that has just been set.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
@@ -3047,19 +3570,25 @@ class RenderTargetBitmap(BitmapSource, ISealable, IAnimatable, IResource, IForma
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: Freezable, e: DependencyPropertyChangedEventArgs)
-            Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-             System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+            Overrides the System.Windows.DependencyObject implementation of 
+             System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+             rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+             handlers in response to a changing dependency property of type 
+             System.Windows.Freezable.
         
         
-            e: Event data that contains information about which property changed, and its old and new values.
+            e: Event data that contains information about which property changed, and its old 
+             and new values.
         """
         pass
 
     def ReadPreamble(self, *args): #cannot find CLR method
         """
         ReadPreamble(self: Freezable)
-            Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-             not dependency properties.
+            Ensures that the System.Windows.Freezable is being accessed from a valid 
+             thread. Inheritors of System.Windows.Freezable must call this method at the 
+             beginning of any API that reads data members that are not dependency 
+             properties.
         """
         pass
 
@@ -3076,26 +3605,42 @@ class RenderTargetBitmap(BitmapSource, ISealable, IAnimatable, IResource, IForma
         """
         ShouldSerializeProperty(self: DependencyObject, dp: DependencyProperty) -> bool
         
-            Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+            Returns a value that indicates whether serialization processes should serialize 
+             the value for the provided dependency property.
+        
         
             dp: The identifier for the dependency property that should be serialized.
-            Returns: true if the dependency property that is supplied should be value-serialized; otherwise, false.
+            Returns: true if the dependency property that is supplied should be value-serialized; 
+             otherwise, false.
+        
+        ShouldSerializeProperty(self: Window_16$17, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Label_17$18, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: TextBox_18$19, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Button_19$20, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: CheckBox_20$21, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: ComboBox_21$22, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Separator_22$23, dp: DependencyProperty) -> bool
         """
         pass
 
     def WritePostscript(self, *args): #cannot find CLR method
         """
         WritePostscript(self: Freezable)
-            Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-             this method at the end of any API that modifies class members that are not stored as dependency properties.
+            Raises the System.Windows.Freezable.Changed event for the 
+             System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+             method. Classes that derive from System.Windows.Freezable should call this 
+             method at the end of any API that modifies class members that are not stored as 
+             dependency properties.
         """
         pass
 
     def WritePreamble(self, *args): #cannot find CLR method
         """
         WritePreamble(self: Freezable)
-            Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-             API that writes to data members that are not dependency properties.
+            Verifies that the System.Windows.Freezable is not frozen and that it is being 
+             accessed from a valid threading context. System.Windows.Freezable inheritors 
+             should call this method at the beginning of any API that writes to data members 
+             that are not dependency properties.
         """
         pass
 
@@ -3253,14 +3798,16 @@ class TransformedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormat
     def BeginInit(self):
         """
         BeginInit(self: TransformedBitmap)
-            Signals the start of the System.Windows.Media.Imaging.TransformedBitmap initialization.
+            Signals the start of the System.Windows.Media.Imaging.TransformedBitmap 
+             initialization.
         """
         pass
 
     def CheckIfSiteOfOrigin(self, *args): #cannot find CLR method
         """
         CheckIfSiteOfOrigin(self: BitmapSource)
-            Checks whether the bitmap source content is from a known site of origin. This method is used to make sure that pixel copying operations are safe.
+            Checks whether the bitmap source content is from a known site of origin. This 
+             method is used to make sure that pixel copying operations are safe.
         """
         pass
 
@@ -3268,10 +3815,15 @@ class TransformedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormat
         """
         Clone(self: TransformedBitmap) -> TransformedBitmap
         
-            Creates a modifiable clone of this System.Windows.Media.Imaging.TransformedBitmap, making deep copies of this object's values. When copying dependency properties, this method copies resource references and 
-             data bindings (but they might no longer resolve) but not animations or their current values.
+            Creates a modifiable clone of this 
+             System.Windows.Media.Imaging.TransformedBitmap, making deep copies of this 
+             object's values. When copying dependency properties, this method copies 
+             resource references and data bindings (but they might no longer resolve) but 
+             not animations or their current values.
         
-            Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+            Returns: A modifiable clone of the current object. The cloned object's 
+             System.Windows.Freezable.IsFrozen property will be false even if the source's 
+             System.Windows.Freezable.IsFrozen property was true.
         """
         pass
 
@@ -3283,10 +3835,14 @@ class TransformedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormat
         """
         CloneCurrentValue(self: TransformedBitmap) -> TransformedBitmap
         
-            Creates a modifiable clone of this System.Windows.Media.Imaging.TransformedBitmap object, making deep copies of this object's current values. Resource references, data bindings, and animations are not 
-             copied, but their current values are.
+            Creates a modifiable clone of this 
+             System.Windows.Media.Imaging.TransformedBitmap object, making deep copies of 
+             this object's current values. Resource references, data bindings, and 
+             animations are not copied, but their current values are.
         
-            Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+            Returns: A modifiable clone of the current object. The cloned object's 
+             System.Windows.Freezable.IsFrozen property will be false even if the source's 
+             System.Windows.Freezable.IsFrozen property was true.
         """
         pass
 
@@ -3318,12 +3874,19 @@ class TransformedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormat
         """
         FreezeCore(self: BitmapSource, isChecking: bool) -> bool
         
-            Makes an instance of System.Windows.Media.Imaging.BitmapSource or a derived class immutable.
+            Makes an instance of System.Windows.Media.Imaging.BitmapSource or a derived 
+             class immutable.
         
-            isChecking: true if this instance should actually freeze itself when this method is called; otherwise, false.
-            Returns: If isChecking is true, this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable, or false if it cannot be made unmodifiable. If isChecking is false, this method 
-             returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable, or false if it cannot be made unmodifiable, with the side effect of having begun to change the frozen status of 
-             this object.
+        
+            isChecking: true if this instance should actually freeze itself when this method is called; 
+             otherwise, false.
+        
+            Returns: If isChecking is true, this method returns true if this 
+             System.Windows.Media.Animation.Animatable can be made unmodifiable, or false if 
+             it cannot be made unmodifiable. If isChecking is false, this method returns 
+             true if the if this System.Windows.Media.Animation.Animatable is now 
+             unmodifiable, or false if it cannot be made unmodifiable, with the side effect 
+             of having begun to change the frozen status of this object.
         """
         pass
 
@@ -3345,13 +3908,17 @@ class TransformedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormat
     def OnFreezablePropertyChanged(self, *args): #cannot find CLR method
         """
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject, property: DependencyProperty)
-            This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+            This member supports the Windows Presentation Foundation (WPF) infrastructure 
+             and is not intended to be used directly from your code.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
             property: The property that changed.
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject)
-            Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+            Ensures that appropriate context pointers are established for a 
+             System.Windows.DependencyObjectType data member that has just been set.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
@@ -3361,19 +3928,25 @@ class TransformedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormat
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: Freezable, e: DependencyPropertyChangedEventArgs)
-            Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-             System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+            Overrides the System.Windows.DependencyObject implementation of 
+             System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+             rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+             handlers in response to a changing dependency property of type 
+             System.Windows.Freezable.
         
         
-            e: Event data that contains information about which property changed, and its old and new values.
+            e: Event data that contains information about which property changed, and its old 
+             and new values.
         """
         pass
 
     def ReadPreamble(self, *args): #cannot find CLR method
         """
         ReadPreamble(self: Freezable)
-            Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-             not dependency properties.
+            Ensures that the System.Windows.Freezable is being accessed from a valid 
+             thread. Inheritors of System.Windows.Freezable must call this method at the 
+             beginning of any API that reads data members that are not dependency 
+             properties.
         """
         pass
 
@@ -3381,26 +3954,42 @@ class TransformedBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormat
         """
         ShouldSerializeProperty(self: DependencyObject, dp: DependencyProperty) -> bool
         
-            Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+            Returns a value that indicates whether serialization processes should serialize 
+             the value for the provided dependency property.
+        
         
             dp: The identifier for the dependency property that should be serialized.
-            Returns: true if the dependency property that is supplied should be value-serialized; otherwise, false.
+            Returns: true if the dependency property that is supplied should be value-serialized; 
+             otherwise, false.
+        
+        ShouldSerializeProperty(self: Window_16$17, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Label_17$18, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: TextBox_18$19, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Button_19$20, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: CheckBox_20$21, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: ComboBox_21$22, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Separator_22$23, dp: DependencyProperty) -> bool
         """
         pass
 
     def WritePostscript(self, *args): #cannot find CLR method
         """
         WritePostscript(self: Freezable)
-            Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-             this method at the end of any API that modifies class members that are not stored as dependency properties.
+            Raises the System.Windows.Freezable.Changed event for the 
+             System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+             method. Classes that derive from System.Windows.Freezable should call this 
+             method at the end of any API that modifies class members that are not stored as 
+             dependency properties.
         """
         pass
 
     def WritePreamble(self, *args): #cannot find CLR method
         """
         WritePreamble(self: Freezable)
-            Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-             API that writes to data members that are not dependency properties.
+            Verifies that the System.Windows.Freezable is not frozen and that it is being 
+             accessed from a valid threading context. System.Windows.Freezable inheritors 
+             should call this method at the beginning of any API that writes to data members 
+             that are not dependency properties.
         """
         pass
 
@@ -3624,14 +4213,16 @@ class WriteableBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormatta
         AddDirtyRect(self: WriteableBitmap, dirtyRect: Int32Rect)
             Specifies the area of the bitmap that changed.
         
-            dirtyRect: An System.Windows.Int32Rect representing the area that changed. Dimensions are in pixels.
+            dirtyRect: An System.Windows.Int32Rect representing the area that changed. Dimensions are 
+             in pixels.
         """
         pass
 
     def CheckIfSiteOfOrigin(self, *args): #cannot find CLR method
         """
         CheckIfSiteOfOrigin(self: BitmapSource)
-            Checks whether the bitmap source content is from a known site of origin. This method is used to make sure that pixel copying operations are safe.
+            Checks whether the bitmap source content is from a known site of origin. This 
+             method is used to make sure that pixel copying operations are safe.
         """
         pass
 
@@ -3639,10 +4230,15 @@ class WriteableBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormatta
         """
         Clone(self: WriteableBitmap) -> WriteableBitmap
         
-            Creates a modifiable clone of this System.Windows.Media.Imaging.WriteableBitmap, making deep copies of this object's values. When copying dependency properties, this method copies resource references and 
-             data bindings (but they might no longer resolve) but not animations or their current values.
+            Creates a modifiable clone of this 
+             System.Windows.Media.Imaging.WriteableBitmap, making deep copies of this 
+             object's values. When copying dependency properties, this method copies 
+             resource references and data bindings (but they might no longer resolve) but 
+             not animations or their current values.
         
-            Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+            Returns: A modifiable clone of the current object. The cloned object's 
+             System.Windows.Freezable.IsFrozen property will be false even if the source's 
+             System.Windows.Freezable.IsFrozen property was true.
         """
         pass
 
@@ -3654,10 +4250,14 @@ class WriteableBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormatta
         """
         CloneCurrentValue(self: WriteableBitmap) -> WriteableBitmap
         
-            Creates a modifiable clone of this System.Windows.Media.Animation.ByteAnimationUsingKeyFrames object, making deep copies of this object's current values. Resource references, data bindings, and animations 
-             are not copied, but their current values are.
+            Creates a modifiable clone of this 
+             System.Windows.Media.Animation.ByteAnimationUsingKeyFrames object, making deep 
+             copies of this object's current values. Resource references, data bindings, and 
+             animations are not copied, but their current values are.
         
-            Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+            Returns: A modifiable clone of the current object. The cloned object's 
+             System.Windows.Freezable.IsFrozen property will be false even if the source's 
+             System.Windows.Freezable.IsFrozen property was true.
         """
         pass
 
@@ -3707,13 +4307,17 @@ class WriteableBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormatta
     def OnFreezablePropertyChanged(self, *args): #cannot find CLR method
         """
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject, property: DependencyProperty)
-            This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+            This member supports the Windows Presentation Foundation (WPF) infrastructure 
+             and is not intended to be used directly from your code.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
             property: The property that changed.
         OnFreezablePropertyChanged(self: Freezable, oldValue: DependencyObject, newValue: DependencyObject)
-            Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+            Ensures that appropriate context pointers are established for a 
+             System.Windows.DependencyObjectType data member that has just been set.
+        
         
             oldValue: The previous value of the data member.
             newValue: The current value of the data member.
@@ -3723,19 +4327,25 @@ class WriteableBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormatta
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: Freezable, e: DependencyPropertyChangedEventArgs)
-            Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-             System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+            Overrides the System.Windows.DependencyObject implementation of 
+             System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+             rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+             handlers in response to a changing dependency property of type 
+             System.Windows.Freezable.
         
         
-            e: Event data that contains information about which property changed, and its old and new values.
+            e: Event data that contains information about which property changed, and its old 
+             and new values.
         """
         pass
 
     def ReadPreamble(self, *args): #cannot find CLR method
         """
         ReadPreamble(self: Freezable)
-            Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-             not dependency properties.
+            Ensures that the System.Windows.Freezable is being accessed from a valid 
+             thread. Inheritors of System.Windows.Freezable must call this method at the 
+             beginning of any API that reads data members that are not dependency 
+             properties.
         """
         pass
 
@@ -3743,10 +4353,21 @@ class WriteableBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormatta
         """
         ShouldSerializeProperty(self: DependencyObject, dp: DependencyProperty) -> bool
         
-            Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+            Returns a value that indicates whether serialization processes should serialize 
+             the value for the provided dependency property.
+        
         
             dp: The identifier for the dependency property that should be serialized.
-            Returns: true if the dependency property that is supplied should be value-serialized; otherwise, false.
+            Returns: true if the dependency property that is supplied should be value-serialized; 
+             otherwise, false.
+        
+        ShouldSerializeProperty(self: Window_16$17, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Label_17$18, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: TextBox_18$19, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Button_19$20, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: CheckBox_20$21, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: ComboBox_21$22, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Separator_22$23, dp: DependencyProperty) -> bool
         """
         pass
 
@@ -3754,9 +4375,14 @@ class WriteableBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormatta
         """
         TryLock(self: WriteableBitmap, timeout: Duration) -> bool
         
-            Attempts to lock the bitmap, waiting for no longer than the specified length of time.
+            Attempts to lock the bitmap, waiting for no longer than the specified length of 
+             time.
         
-            timeout: A System.Windows.Duration that represents the length of time to wait. A value of 0 returns immediately. A value of System.Windows.Duration.Forever blocks indefinitely.
+        
+            timeout: A System.Windows.Duration that represents the length of time to wait. A value 
+             of 0 returns immediately. A value of System.Windows.Duration.Forever blocks 
+             indefinitely.
+        
             Returns: true if the lock was acquired; otherwise, false.
         """
         pass
@@ -3807,16 +4433,21 @@ class WriteableBitmap(BitmapSource, ISealable, IAnimatable, IResource, IFormatta
     def WritePostscript(self, *args): #cannot find CLR method
         """
         WritePostscript(self: Freezable)
-            Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-             this method at the end of any API that modifies class members that are not stored as dependency properties.
+            Raises the System.Windows.Freezable.Changed event for the 
+             System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+             method. Classes that derive from System.Windows.Freezable should call this 
+             method at the end of any API that modifies class members that are not stored as 
+             dependency properties.
         """
         pass
 
     def WritePreamble(self, *args): #cannot find CLR method
         """
         WritePreamble(self: Freezable)
-            Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-             API that writes to data members that are not dependency properties.
+            Verifies that the System.Windows.Freezable is not frozen and that it is being 
+             accessed from a valid threading context. System.Windows.Freezable inheritors 
+             should call this method at the beginning of any API that writes to data members 
+             that are not dependency properties.
         """
         pass
 

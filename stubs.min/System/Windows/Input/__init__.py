@@ -1,8 +1,8 @@
 # encoding: utf-8
 # module System.Windows.Input calls itself Input
-# from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+# from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,WindowsBase,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,PresentationCore,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions

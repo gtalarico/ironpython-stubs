@@ -2,7 +2,7 @@
 # module Rhino.DocObjects calls itself DocObjects
 # from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -242,18 +242,11 @@ class DimensionStyle(CommonObject, IDisposable, ISerializable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -546,18 +539,11 @@ class EarthAnchorPoint(object, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -643,18 +629,11 @@ class HatchPattern(CommonObject, IDisposable, ISerializable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -933,18 +912,11 @@ class Layer(CommonObject, IDisposable, ISerializable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1113,18 +1085,11 @@ class Linetype(CommonObject, IDisposable, ISerializable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1274,18 +1239,11 @@ class Material(CommonObject, IDisposable, ISerializable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1406,18 +1364,11 @@ class MaterialRef(object, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1654,18 +1605,11 @@ class ObjectAttributes(CommonObject, IDisposable, ISerializable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -2292,18 +2236,11 @@ class Texture(CommonObject, IDisposable, ISerializable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -2518,18 +2455,11 @@ class ViewInfo(object, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -2723,18 +2653,11 @@ class ViewportInfo(object, IDisposable, ISerializable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method

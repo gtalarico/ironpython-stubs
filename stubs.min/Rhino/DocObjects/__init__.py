@@ -2,7 +2,7 @@
 # module Rhino.DocObjects calls itself DocObjects
 # from Rhino3dmIO,Version=5.1.30000.14,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -207,17 +207,10 @@ class DimensionStyle(CommonObject,IDisposable,ISerializable):
   """ OnSwitchToNonConst(self: CommonObject) """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -473,17 +466,10 @@ class EarthAnchorPoint(object,IDisposable):
   """ GetModelToEarthTransform(self: EarthAnchorPoint,modelUnitSystem: UnitSystem) -> Transform """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -562,17 +548,10 @@ class HatchPattern(CommonObject,IDisposable,ISerializable):
   """ OnSwitchToNonConst(self: CommonObject) """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -791,17 +770,10 @@ class Layer(CommonObject,IDisposable,ISerializable):
   """ UnsetPersistentVisibility(self: Layer) """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -955,17 +927,10 @@ class Linetype(CommonObject,IDisposable,ISerializable):
   """ SetSegment(self: Linetype,index: int,length: float,isSolid: bool) -> bool """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1093,17 +1058,10 @@ class Material(CommonObject,IDisposable,ISerializable):
   """ SetUserString(self: Material,key: str,value: str) -> bool """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1219,17 +1177,10 @@ class MaterialRef(object,IDisposable):
   """ Dispose(self: MaterialRef) """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1432,17 +1383,10 @@ class ObjectAttributes(CommonObject,IDisposable,ISerializable):
   """ SetUserString(self: ObjectAttributes,key: str,value: str) -> bool """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1959,17 +1903,10 @@ class Texture(CommonObject,IDisposable,ISerializable):
   """ SetAlphaBlendValues(self: Texture,constant: float,a0: float,a1: float,a2: float,a3: float) """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2149,17 +2086,10 @@ class ViewInfo(object,IDisposable):
   """ Dispose(self: ViewInfo) """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2316,17 +2246,10 @@ class ViewportInfo(object,IDisposable,ISerializable):
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

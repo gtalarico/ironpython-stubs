@@ -2,7 +2,7 @@
 # module Rhino.FileIO calls itself FileIO
 # from Rhino3dmIO,Version=5.1.30000.14,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -38,17 +38,10 @@ class BinaryArchiveFile(object,IDisposable):
   """ Open(self: BinaryArchiveFile) -> bool """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -494,17 +487,10 @@ class File3dm(object,IDisposable):
   """ WriteWithLog(self: File3dm,path: str,version: int) -> (bool,str) """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1493,17 +1479,10 @@ class TextLog(object,IDisposable):
   """ ToString(self: TextLog) -> str """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

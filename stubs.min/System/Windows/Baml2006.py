@@ -2,7 +2,7 @@
 # module System.Windows.Baml2006 calls itself Baml2006
 # from PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -19,7 +19,10 @@ class Baml2006Reader(XamlReader,IDisposable,IXamlLineInfo,IFreezeFreezables):
  def Dispose(self,*args):
   """
   Dispose(self: Baml2006Reader,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Baml2006.Baml2006Reader and optionally releases the managed resources.
+   Releases the unmanaged resources used by the 
+    System.Windows.Baml2006.Baml2006Reader and optionally releases the managed 
+    resources.
+  
   
    disposing: true to release the managed resources; otherwise,false.
   """
@@ -33,17 +36,10 @@ class Baml2006Reader(XamlReader,IDisposable,IXamlLineInfo,IFreezeFreezables):
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

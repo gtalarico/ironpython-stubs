@@ -2,7 +2,7 @@
 # module Revit.GeometryObjects calls itself GeometryObjects
 # from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -15,7 +15,8 @@ class GeometryObjectSelector(object):
         """
         ByReferenceStableRepresentation(referenceString: str) -> object
         
-            Return an AbstractGeometryObject given a string representation of the geometry's reference.
+            Return an AbstractGeometryObject given a string representation of the 
+             geometry's reference.
         """
         pass
 

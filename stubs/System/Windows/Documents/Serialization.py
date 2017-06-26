@@ -2,7 +2,7 @@
 # module System.Windows.Documents.Serialization calls itself Serialization
 # from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -14,10 +14,14 @@ class ISerializerFactory:
         """
         CreateSerializerWriter(self: ISerializerFactory, stream: Stream) -> SerializerWriter
         
-            Initializes an object derived from the abstract System.Windows.Documents.Serialization.SerializerWriter class for the specified System.IO.Stream.
+            Initializes an object derived from the abstract 
+             System.Windows.Documents.Serialization.SerializerWriter class for the specified 
+             System.IO.Stream.
+        
         
             stream: The System.IO.Stream to which the returned object writes.
-            Returns: An object of a class derived from System.Windows.Documents.Serialization.SerializerWriter.
+            Returns: An object of a class derived from 
+             System.Windows.Documents.Serialization.SerializerWriter.
         """
         pass
 
@@ -62,10 +66,17 @@ class SerializerDescriptor(object):
         """
         CreateFromFactoryInstance(factoryInstance: ISerializerFactory) -> SerializerDescriptor
         
-            Creates a new System.Windows.Documents.Serialization.SerializerDescriptor through a given System.Windows.Documents.Serialization.ISerializerFactory implementation.
+            Creates a new System.Windows.Documents.Serialization.SerializerDescriptor 
+             through a given System.Windows.Documents.Serialization.ISerializerFactory 
+             implementation.
         
-            factoryInstance: The source of data for the new System.Windows.Documents.Serialization.SerializerDescriptor.
-            Returns: A new System.Windows.Documents.Serialization.SerializerDescriptor with its properties initialized with values from the given System.Windows.Documents.Serialization.ISerializerFactory implementation.
+        
+            factoryInstance: The source of data for the new 
+             System.Windows.Documents.Serialization.SerializerDescriptor.
+        
+            Returns: A new System.Windows.Documents.Serialization.SerializerDescriptor with its 
+             properties initialized with values from the given 
+             System.Windows.Documents.Serialization.ISerializerFactory implementation.
         """
         pass
 
@@ -73,9 +84,13 @@ class SerializerDescriptor(object):
         """
         Equals(self: SerializerDescriptor, obj: object) -> bool
         
-            Tests two System.Windows.Documents.Serialization.SerializerDescriptor objects for equality.
+            Tests two System.Windows.Documents.Serialization.SerializerDescriptor objects 
+             for equality.
         
-            obj: The object to be compared with this System.Windows.Documents.Serialization.SerializerDescriptor.
+        
+            obj: The object to be compared with this 
+             System.Windows.Documents.Serialization.SerializerDescriptor.
+        
             Returns: true if both are equal; otherwise, false.
         """
         pass
@@ -178,11 +193,18 @@ class SerializerProvider(object):
         """
         CreateSerializerWriter(self: SerializerProvider, serializerDescriptor: SerializerDescriptor, stream: Stream) -> SerializerWriter
         
-            Initializes an object derived from the abstract System.Windows.Documents.Serialization.SerializerWriter class for the specified System.IO.Stream that will use the specified descriptor.
+            Initializes an object derived from the abstract 
+             System.Windows.Documents.Serialization.SerializerWriter class for the specified 
+             System.IO.Stream that will use the specified descriptor.
         
-            serializerDescriptor: A System.Windows.Documents.Serialization.SerializerDescriptor that contains serialization information for the System.Windows.Documents.Serialization.SerializerWriter.
+        
+            serializerDescriptor: A System.Windows.Documents.Serialization.SerializerDescriptor that contains 
+             serialization information for the 
+             System.Windows.Documents.Serialization.SerializerWriter.
+        
             stream: The System.IO.Stream to which the returned object writes.
-            Returns: An object of a class derived from System.Windows.Documents.Serialization.SerializerWriter.
+            Returns: An object of a class derived from 
+             System.Windows.Documents.Serialization.SerializerWriter.
         """
         pass
 
@@ -193,7 +215,8 @@ class SerializerProvider(object):
             Registers a serializer plug-in.
         
             serializerDescriptor: The System.Windows.Documents.Serialization.SerializerDescriptor for the plug-in.
-            overwrite: true to overwrite an existing registration for the same plug-in; otherwise, false. See Remarks.
+            overwrite: true to overwrite an existing registration for the same plug-in; otherwise, 
+             false. See Remarks.
         """
         pass
 
@@ -229,64 +252,119 @@ class SerializerWriter(object):
         """
         CreateVisualsCollator(self: SerializerWriter, documentSequencePT: PrintTicket, documentPT: PrintTicket) -> SerializerWriterCollator
         
-            When overridden in a derived class, returns a System.Windows.Documents.Serialization.SerializerWriterCollator that writes collated System.Windows.Media.Visual elements together with the given print tickets.
+            When overridden in a derived class, returns a 
+             System.Windows.Documents.Serialization.SerializerWriterCollator that writes 
+             collated System.Windows.Media.Visual elements together with the given print 
+             tickets.
         
-            documentSequencePT: The default print preferences for System.Windows.Documents.FixedDocumentSequence content.
-            documentPT: The default print preferences for System.Windows.Documents.FixedDocument content.
-            Returns: A System.Windows.Documents.Serialization.SerializerWriterCollator that writes collated System.Windows.Media.Visual elements to the document output serialization�System.IO.Stream.
+        
+            documentSequencePT: The default print preferences for 
+             System.Windows.Documents.FixedDocumentSequence content.
+        
+            documentPT: The default print preferences for System.Windows.Documents.FixedDocument 
+             content.
+        
+            Returns: A System.Windows.Documents.Serialization.SerializerWriterCollator that writes 
+             collated System.Windows.Media.Visual elements to the document output 
+             serialization�System.IO.Stream.
+        
         CreateVisualsCollator(self: SerializerWriter) -> SerializerWriterCollator
         
-            When overridden in a derived class, returns a System.Windows.Documents.Serialization.SerializerWriterCollator that writes collated System.Windows.Media.Visual elements.
-            Returns: A System.Windows.Documents.Serialization.SerializerWriterCollator that writes collated System.Windows.Media.Visual elements to the document output serialization�System.IO.Stream.
+            When overridden in a derived class, returns a 
+             System.Windows.Documents.Serialization.SerializerWriterCollator that writes 
+             collated System.Windows.Media.Visual elements.
+        
+            Returns: A System.Windows.Documents.Serialization.SerializerWriterCollator that writes 
+             collated System.Windows.Media.Visual elements to the document output 
+             serialization�System.IO.Stream.
         """
         pass
 
     def Write(self, *__args):
         """
         Write(self: SerializerWriter, fixedDocument: FixedDocument)
-            When overridden in a derived class, synchronously writes a given System.Windows.Documents.FixedDocument to the serialization�System.IO.Stream.
+            When overridden in a derived class, synchronously writes a given 
+             System.Windows.Documents.FixedDocument to the serialization�System.IO.Stream.
+        
         
             fixedDocument: The document to write to the serialization System.IO.Stream.
         Write(self: SerializerWriter, fixedPage: FixedPage, printTicket: PrintTicket)
-            When overridden in a derived class, synchronously writes a given System.Windows.Documents.FixedPage together with an associated System.Printing.PrintTicket to the serialization�System.IO.Stream.
+            When overridden in a derived class, synchronously writes a given 
+             System.Windows.Documents.FixedPage together with an associated 
+             System.Printing.PrintTicket to the serialization�System.IO.Stream.
+        
         
             fixedPage: The page to write to the serialization System.IO.Stream.
             printTicket: The default print preferences for the fixedPage content.
         Write(self: SerializerWriter, fixedDocument: FixedDocument, printTicket: PrintTicket)
-            When overridden in a derived class, synchronously writes a given System.Windows.Documents.FixedDocument together with an associated System.Printing.PrintTicket to the serialization�System.IO.Stream.
+            When overridden in a derived class, synchronously writes a given 
+             System.Windows.Documents.FixedDocument together with an associated 
+             System.Printing.PrintTicket to the serialization�System.IO.Stream.
+        
         
             fixedDocument: The document to write to the serialization System.IO.Stream.
             printTicket: The default print preferences for the fixedDocument content.
         Write(self: SerializerWriter, fixedDocumentSequence: FixedDocumentSequence, printTicket: PrintTicket)
-            When overridden in a derived class, synchronously writes a given System.Windows.Documents.FixedDocumentSequence together with an associated System.Printing.PrintTicket to the serialization�System.IO.Stream.
+            When overridden in a derived class, synchronously writes a given 
+             System.Windows.Documents.FixedDocumentSequence together with an associated 
+             System.Printing.PrintTicket to the serialization�System.IO.Stream.
         
-            fixedDocumentSequence: The document sequence that defines the content to write to the serialization System.IO.Stream.
+        
+            fixedDocumentSequence: The document sequence that defines the content to write to the serialization 
+             System.IO.Stream.
+        
             printTicket: The default print preferences for the fixedDocumentSequence content.
         Write(self: SerializerWriter, fixedDocumentSequence: FixedDocumentSequence)
-            When overridden in a derived class, synchronously writes a given System.Windows.Documents.FixedDocumentSequence to the serialization�System.IO.Stream.
+            When overridden in a derived class, synchronously writes a given 
+             System.Windows.Documents.FixedDocumentSequence to the serialization�
+             System.IO.Stream.
         
-            fixedDocumentSequence: The document sequence that defines the content to write to the serialization System.IO.Stream.
+        
+            fixedDocumentSequence: The document sequence that defines the content to write to the serialization 
+             System.IO.Stream.
+        
         Write(self: SerializerWriter, visual: Visual, printTicket: PrintTicket)
-            When overridden in a derived class, synchronously writes a given System.Windows.Media.Visual element together with an associated System.Printing.PrintTicket to the serialization�System.IO.Stream.
+            When overridden in a derived class, synchronously writes a given 
+             System.Windows.Media.Visual element together with an associated 
+             System.Printing.PrintTicket to the serialization�System.IO.Stream.
         
-            visual: The System.Windows.Media.Visual element to write to the serialization System.IO.Stream.
+        
+            visual: The System.Windows.Media.Visual element to write to the serialization 
+             System.IO.Stream.
+        
             printTicket: The default print preferences for the visual element.
         Write(self: SerializerWriter, visual: Visual)
-            When overridden in a derived class, synchronously writes a given System.Windows.Media.Visual element to the serialization�System.IO.Stream.
+            When overridden in a derived class, synchronously writes a given 
+             System.Windows.Media.Visual element to the serialization�System.IO.Stream.
         
-            visual: The System.Windows.Media.Visual element to write to the serialization System.IO.Stream.
+        
+            visual: The System.Windows.Media.Visual element to write to the serialization 
+             System.IO.Stream.
+        
         Write(self: SerializerWriter, documentPaginator: DocumentPaginator)
-            When overridden in a derived class, synchronously writes the content of a given System.Windows.Documents.DocumentPaginator to the serialization�System.IO.Stream.
+            When overridden in a derived class, synchronously writes the content of a given 
+             System.Windows.Documents.DocumentPaginator to the serialization�
+             System.IO.Stream.
         
-            documentPaginator: The document paginator that defines the content to write to the serialization System.IO.Stream.
+        
+            documentPaginator: The document paginator that defines the content to write to the serialization 
+             System.IO.Stream.
+        
         Write(self: SerializerWriter, fixedPage: FixedPage)
-            When overridden in a derived class, synchronously writes a given System.Windows.Documents.FixedPage to the serialization�System.IO.Stream.
+            When overridden in a derived class, synchronously writes a given 
+             System.Windows.Documents.FixedPage to the serialization�System.IO.Stream.
+        
         
             fixedPage: The page to write to the serialization System.IO.Stream.
         Write(self: SerializerWriter, documentPaginator: DocumentPaginator, printTicket: PrintTicket)
-            When overridden in a derived class, synchronously writes paginated content together with an associated System.Printing.PrintTicket to the serialization�System.IO.Stream.
+            When overridden in a derived class, synchronously writes paginated content 
+             together with an associated System.Printing.PrintTicket to the serialization�
+             System.IO.Stream.
         
-            documentPaginator: The document paginator that defines the content to write to the serialization System.IO.Stream.
+        
+            documentPaginator: The document paginator that defines the content to write to the serialization 
+             System.IO.Stream.
+        
             printTicket: The default print preferences for the documentPaginator content.
         """
         pass
@@ -294,110 +372,183 @@ class SerializerWriter(object):
     def WriteAsync(self, *__args):
         """
         WriteAsync(self: SerializerWriter, fixedDocument: FixedDocument, printTicket: PrintTicket)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Documents.FixedDocument together with an associated System.Printing.PrintTicket to the serialization�System.IO.Stream.
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Documents.FixedDocument together with an associated 
+             System.Printing.PrintTicket to the serialization�System.IO.Stream.
+        
         
             fixedDocument: The document to write to the serialization System.IO.Stream.
             printTicket: The default print preferences for the fixedDocument content.
         WriteAsync(self: SerializerWriter, fixedDocument: FixedDocument, userState: object)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Documents.FixedDocument to the serialization�System.IO.Stream.
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Documents.FixedDocument to the serialization�System.IO.Stream.
+        
         
             fixedDocument: The document to write to the serialization System.IO.Stream.
             userState: A caller-specified object to identify the asynchronous write operation.
         WriteAsync(self: SerializerWriter, fixedDocument: FixedDocument)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Documents.FixedDocument to the serialization�System.IO.Stream.
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Documents.FixedDocument to the serialization�System.IO.Stream.
+        
         
             fixedDocument: The document to write to the serialization System.IO.Stream.
         WriteAsync(self: SerializerWriter, fixedPage: FixedPage, userState: object)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Documents.FixedPage to the serialization�System.IO.Stream.
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Documents.FixedPage to the serialization�System.IO.Stream.
+        
         
             fixedPage: The page to write to the serialization System.IO.Stream.
             userState: A caller-specified object to identify the asynchronous write operation.
         WriteAsync(self: SerializerWriter, fixedPage: FixedPage, printTicket: PrintTicket, userState: object)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Documents.FixedPage together with an associated System.Printing.PrintTicket to the serialization�System.IO.Stream.
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Documents.FixedPage together with an associated 
+             System.Printing.PrintTicket to the serialization�System.IO.Stream.
+        
         
             fixedPage: The page to write to the serialization System.IO.Stream.
             printTicket: The default print preferences for the fixedPage content.
             userState: A caller-specified object to identify the asynchronous write operation.
         WriteAsync(self: SerializerWriter, fixedDocumentSequence: FixedDocumentSequence, userState: object)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Documents.FixedDocumentSequence to the serialization�System.IO.Stream.
-        
-            fixedDocumentSequence: The document sequence that defines the content to write to the serialization System.IO.Stream.
-            userState: A caller-specified object to identify the asynchronous write operation.
-        WriteAsync(self: SerializerWriter, fixedDocumentSequence: FixedDocumentSequence, printTicket: PrintTicket, userState: object)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Documents.FixedDocumentSequence together with an associated System.Printing.PrintTicket to the serialization�
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Documents.FixedDocumentSequence to the serialization�
              System.IO.Stream.
         
         
-            fixedDocumentSequence: The document sequence that defines the content to write to the serialization System.IO.Stream.
+            fixedDocumentSequence: The document sequence that defines the content to write to the serialization 
+             System.IO.Stream.
+        
+            userState: A caller-specified object to identify the asynchronous write operation.
+        WriteAsync(self: SerializerWriter, fixedDocumentSequence: FixedDocumentSequence, printTicket: PrintTicket, userState: object)
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Documents.FixedDocumentSequence together with an associated 
+             System.Printing.PrintTicket to the serialization�System.IO.Stream.
+        
+        
+            fixedDocumentSequence: The document sequence that defines the content to write to the serialization 
+             System.IO.Stream.
+        
             printTicket: The default print preferences for the fixedDocumentSequence content.
             userState: A caller-specified object to identify the asynchronous write operation.
         WriteAsync(self: SerializerWriter, fixedDocumentSequence: FixedDocumentSequence, printTicket: PrintTicket)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Documents.FixedDocumentSequence together with an associated System.Printing.PrintTicket to the serialization�
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Documents.FixedDocumentSequence together with an associated 
+             System.Printing.PrintTicket to the serialization�System.IO.Stream.
+        
+        
+            fixedDocumentSequence: The document sequence that defines the content to write to the serialization 
              System.IO.Stream.
         
-        
-            fixedDocumentSequence: The document sequence that defines the content to write to the serialization System.IO.Stream.
             printTicket: The default print preferences for the fixedDocumentSequence content.
         WriteAsync(self: SerializerWriter, fixedDocument: FixedDocument, printTicket: PrintTicket, userState: object)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Documents.FixedDocument together with an associated System.Printing.PrintTicket to the serialization�System.IO.Stream.
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Documents.FixedDocument together with an associated 
+             System.Printing.PrintTicket to the serialization�System.IO.Stream.
+        
         
             fixedDocument: The document to write to the serialization System.IO.Stream.
             printTicket: The default print preferences for the fixedDocument content.
             userState: A caller-specified object to identify the asynchronous write operation.
         WriteAsync(self: SerializerWriter, fixedDocumentSequence: FixedDocumentSequence)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Documents.FixedDocumentSequence to the serialization�System.IO.Stream.
-        
-            fixedDocumentSequence: The document sequence that defines the content to write to the serialization System.IO.Stream.
-        WriteAsync(self: SerializerWriter, visual: Visual, printTicket: PrintTicket, userState: object)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Media.Visual element together with an associated System.Printing.PrintTicket and identifier to the serialization�
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Documents.FixedDocumentSequence to the serialization�
              System.IO.Stream.
         
         
-            visual: The System.Windows.Media.Visual element to write to the serialization System.IO.Stream.
+            fixedDocumentSequence: The document sequence that defines the content to write to the serialization 
+             System.IO.Stream.
+        
+        WriteAsync(self: SerializerWriter, visual: Visual, printTicket: PrintTicket, userState: object)
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Media.Visual element together with an associated 
+             System.Printing.PrintTicket and identifier to the serialization�
+             System.IO.Stream.
+        
+        
+            visual: The System.Windows.Media.Visual element to write to the serialization 
+             System.IO.Stream.
+        
             printTicket: The default print preferences for the visual element.
             userState: A caller-specified object to identify the asynchronous write operation.
         WriteAsync(self: SerializerWriter, documentPaginator: DocumentPaginator)
-            When overridden in a derived class, asynchronously writes the content of a given System.Windows.Documents.DocumentPaginator to the serialization�System.IO.Stream.
+            When overridden in a derived class, asynchronously writes the content of a 
+             given System.Windows.Documents.DocumentPaginator to the serialization�
+             System.IO.Stream.
         
-            documentPaginator: The document paginator that defines the content to write to the serialization System.IO.Stream.
+        
+            documentPaginator: The document paginator that defines the content to write to the serialization 
+             System.IO.Stream.
+        
         WriteAsync(self: SerializerWriter, visual: Visual, printTicket: PrintTicket)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Media.Visual element together with an associated System.Printing.PrintTicket to the serialization�System.IO.Stream.
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Media.Visual element together with an associated 
+             System.Printing.PrintTicket to the serialization�System.IO.Stream.
         
-            visual: The System.Windows.Media.Visual element to write to the serialization System.IO.Stream.
+        
+            visual: The System.Windows.Media.Visual element to write to the serialization 
+             System.IO.Stream.
+        
             printTicket: The default print preferences for the visual element.
         WriteAsync(self: SerializerWriter, visual: Visual)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Media.Visual element to the serialization�System.IO.Stream.
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Media.Visual element to the serialization�System.IO.Stream.
         
-            visual: The System.Windows.Media.Visual element to write to the serialization System.IO.Stream.
+        
+            visual: The System.Windows.Media.Visual element to write to the serialization 
+             System.IO.Stream.
+        
         WriteAsync(self: SerializerWriter, visual: Visual, userState: object)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Media.Visual element to the serialization�System.IO.Stream.
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Media.Visual element to the serialization�System.IO.Stream.
         
-            visual: The System.Windows.Media.Visual element to write to the serialization System.IO.Stream.
+        
+            visual: The System.Windows.Media.Visual element to write to the serialization 
+             System.IO.Stream.
+        
             userState: A caller-specified object to identify the asynchronous write operation.
         WriteAsync(self: SerializerWriter, fixedPage: FixedPage)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Documents.FixedPage to the serialization�System.IO.Stream.
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Documents.FixedPage to the serialization�System.IO.Stream.
+        
         
             fixedPage: The page to write to the serialization System.IO.Stream.
         WriteAsync(self: SerializerWriter, fixedPage: FixedPage, printTicket: PrintTicket)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Documents.FixedPage together with an associated System.Printing.PrintTicket to the serialization�System.IO.Stream.
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Documents.FixedPage together with an associated 
+             System.Printing.PrintTicket to the serialization�System.IO.Stream.
+        
         
             fixedPage: The page to write to the serialization System.IO.Stream.
             printTicket: The default print preferences for the fixedPage content.
         WriteAsync(self: SerializerWriter, documentPaginator: DocumentPaginator, printTicket: PrintTicket, userState: object)
-            When overridden in a derived class, asynchronously writes paginated content together with an associated System.Printing.PrintTicket to the serialization�System.IO.Stream.
+            When overridden in a derived class, asynchronously writes paginated content 
+             together with an associated System.Printing.PrintTicket to the serialization�
+             System.IO.Stream.
         
-            documentPaginator: The document paginator that defines the content to write to the serialization System.IO.Stream.
+        
+            documentPaginator: The document paginator that defines the content to write to the serialization 
+             System.IO.Stream.
+        
             printTicket: The default print preferences for the documentPaginator content.
             userState: A caller-specified object to identify the asynchronous write operation.
         WriteAsync(self: SerializerWriter, documentPaginator: DocumentPaginator, printTicket: PrintTicket)
-            When overridden in a derived class, asynchronously writes the content of a given System.Windows.Documents.DocumentPaginator to the serialization�System.IO.Stream.
+            When overridden in a derived class, asynchronously writes the content of a 
+             given System.Windows.Documents.DocumentPaginator to the serialization�
+             System.IO.Stream.
         
-            documentPaginator: The document paginator that defines the content to write to the serialization System.IO.Stream.
+        
+            documentPaginator: The document paginator that defines the content to write to the serialization 
+             System.IO.Stream.
+        
             printTicket: The default print preferences for the documentPaginator content.
         WriteAsync(self: SerializerWriter, documentPaginator: DocumentPaginator, userState: object)
-            When overridden in a derived class, asynchronously writes the content of a given System.Windows.Documents.DocumentPaginator to the serialization�System.IO.Stream.
+            When overridden in a derived class, asynchronously writes the content of a 
+             given System.Windows.Documents.DocumentPaginator to the serialization�
+             System.IO.Stream.
         
-            documentPaginator: The document paginator that defines the content to write to the serialization System.IO.Stream.
+        
+            documentPaginator: The document paginator that defines the content to write to the serialization 
+             System.IO.Stream.
+        
             userState: A caller-specified object to identify the asynchronous write operation.
         """
         pass
@@ -413,21 +564,26 @@ class SerializerWriterCollator(object):
     def BeginBatchWrite(self):
         """
         BeginBatchWrite(self: SerializerWriterCollator)
-            When overridden in a derived class, initiates the start of a batch write operation.
+            When overridden in a derived class, initiates the start of a batch write 
+             operation.
         """
         pass
 
     def Cancel(self):
         """
         Cancel(self: SerializerWriterCollator)
-            When overridden in a derived class, cancels a synchronous�erload:System.Windows.Documents.Serialization.SerializerWriterCollator.Write operation.
+            When overridden in a derived class, cancels a synchronous�
+             erload:System.Windows.Documents.Serialization.SerializerWriterCollator.Write 
+             operation.
         """
         pass
 
     def CancelAsync(self):
         """
         CancelAsync(self: SerializerWriterCollator)
-            When overridden in a derived class, cancels an asynchronous�erload:System.Windows.Documents.Serialization.SerializerWriterCollator.WriteAsync operation.
+            When overridden in a derived class, cancels an asynchronous�
+             erload:System.Windows.Documents.Serialization.SerializerWriterCollator.WriteAsyn
+             c operation.
         """
         pass
 
@@ -441,12 +597,17 @@ class SerializerWriterCollator(object):
     def Write(self, visual, printTicket=None):
         """
         Write(self: SerializerWriterCollator, visual: Visual, printTicket: PrintTicket)
-            When overridden in a derived class, synchronously writes a given System.Windows.Media.Visual element together with an associated print ticket to the serialization stream.
+            When overridden in a derived class, synchronously writes a given 
+             System.Windows.Media.Visual element together with an associated print ticket to 
+             the serialization stream.
+        
         
             visual: A System.Windows.Media.Visual that is written to the stream.
             printTicket: An object specifying preferences for how the material should be printed.
         Write(self: SerializerWriterCollator, visual: Visual)
-            When overridden in a derived class, synchronously writes a given System.Windows.Media.Visual element to the serialization stream.
+            When overridden in a derived class, synchronously writes a given 
+             System.Windows.Media.Visual element to the serialization stream.
+        
         
             visual: The visual element to write to the serialization System.IO.Stream.
         """
@@ -455,22 +616,33 @@ class SerializerWriterCollator(object):
     def WriteAsync(self, visual, *__args):
         """
         WriteAsync(self: SerializerWriterCollator, visual: Visual, printTicket: PrintTicket)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Media.Visual element together with an associated print ticket to the serialization stream.
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Media.Visual element together with an associated print ticket to 
+             the serialization stream.
+        
         
             visual: The visual element to write to the serialization System.IO.Stream.
             printTicket: The default print preferences for the visual element.
         WriteAsync(self: SerializerWriterCollator, visual: Visual, printTicket: PrintTicket, userState: object)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Media.Visual element together with an associated print ticket and identifier to the serialization stream.
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Media.Visual element together with an associated print ticket 
+             and identifier to the serialization stream.
+        
         
             visual: The visual element to write to the serialization System.IO.Stream.
             printTicket: The default print preferences for the visual element.
             userState: A caller-specified object to identify the asynchronous write operation.
         WriteAsync(self: SerializerWriterCollator, visual: Visual)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Media.Visual element to the serialization stream.
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Media.Visual element to the serialization stream.
+        
         
             visual: The visual element to write to the serialization System.IO.Stream.
         WriteAsync(self: SerializerWriterCollator, visual: Visual, userState: object)
-            When overridden in a derived class, asynchronously writes a given System.Windows.Media.Visual element with a specified event identifier to the serialization stream.
+            When overridden in a derived class, asynchronously writes a given 
+             System.Windows.Media.Visual element with a specified event identifier to the 
+             serialization stream.
+        
         
             visual: The visual element to write to the serialization System.IO.Stream.
             userState: A caller-specified object to identify the asynchronous write operation.
@@ -512,7 +684,9 @@ class WritingCancelledEventHandler(MulticastDelegate, ICloneable, ISerializable)
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -525,7 +699,10 @@ class WritingCancelledEventHandler(MulticastDelegate, ICloneable, ISerializable)
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -551,10 +728,14 @@ class WritingCancelledEventHandler(MulticastDelegate, ICloneable, ISerializable)
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -597,7 +778,9 @@ class WritingCompletedEventHandler(MulticastDelegate, ICloneable, ISerializable)
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -610,7 +793,10 @@ class WritingCompletedEventHandler(MulticastDelegate, ICloneable, ISerializable)
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -636,10 +822,14 @@ class WritingCompletedEventHandler(MulticastDelegate, ICloneable, ISerializable)
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -705,7 +895,9 @@ class WritingPrintTicketRequiredEventHandler(MulticastDelegate, ICloneable, ISer
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -718,7 +910,10 @@ class WritingPrintTicketRequiredEventHandler(MulticastDelegate, ICloneable, ISer
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -744,10 +939,14 @@ class WritingPrintTicketRequiredEventHandler(MulticastDelegate, ICloneable, ISer
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -805,7 +1004,9 @@ class WritingProgressChangedEventHandler(MulticastDelegate, ICloneable, ISeriali
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -818,7 +1019,10 @@ class WritingProgressChangedEventHandler(MulticastDelegate, ICloneable, ISeriali
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -844,10 +1048,14 @@ class WritingProgressChangedEventHandler(MulticastDelegate, ICloneable, ISeriali
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 

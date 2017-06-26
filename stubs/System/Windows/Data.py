@@ -2,7 +2,7 @@
 # module System.Windows.Data calls itself Data
 # from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -14,9 +14,13 @@ class BindingBase(MarkupExtension):
         """
         ProvideValue(self: BindingBase, serviceProvider: IServiceProvider) -> object
         
-            Returns an object that should be set on the property where this binding and extension are applied.
+            Returns an object that should be set on the property where this binding and 
+             extension are applied.
         
-            serviceProvider: The object that can provide services for the markup extension. May be null; see the Remarks section for more information.
+        
+            serviceProvider: The object that can provide services for the markup extension. May be null; see 
+             the Remarks section for more information.
+        
             Returns: The value to set on the binding target property.
         """
         pass
@@ -25,8 +29,12 @@ class BindingBase(MarkupExtension):
         """
         ShouldSerializeFallbackValue(self: BindingBase) -> bool
         
-            Returns a value that indicates whether serialization processes should serialize the effective value of the System.Windows.Data.BindingBase.FallbackValue property on instances of this class.
-            Returns: true if the System.Windows.Data.BindingBase.FallbackValue property value should be serialized; otherwise, false.
+            Returns a value that indicates whether serialization processes should serialize 
+             the effective value of the System.Windows.Data.BindingBase.FallbackValue 
+             property on instances of this class.
+        
+            Returns: true if the System.Windows.Data.BindingBase.FallbackValue property value should 
+             be serialized; otherwise, false.
         """
         pass
 
@@ -34,8 +42,11 @@ class BindingBase(MarkupExtension):
         """
         ShouldSerializeTargetNullValue(self: BindingBase) -> bool
         
-            Returns a value that indicates whether the System.Windows.Data.BindingBase.TargetNullValue property should be serialized.
-            Returns: true if the System.Windows.Data.BindingBase.TargetNullValue property should be serialized; otherwise, false.
+            Returns a value that indicates whether the 
+             System.Windows.Data.BindingBase.TargetNullValue property should be serialized.
+        
+            Returns: true if the System.Windows.Data.BindingBase.TargetNullValue property should be 
+             serialized; otherwise, false.
         """
         pass
 
@@ -101,10 +112,14 @@ class Binding(BindingBase):
         """
         GetXmlNamespaceManager(target: DependencyObject) -> XmlNamespaceManager
         
-            Returns an XML namespace manager object used by the binding attached to the specified�object.
+            Returns an XML namespace manager object used by the binding attached to the 
+             specified�object.
+        
         
             target: The object from which to get namespace information.
-            Returns: A returned object used for viewing XML namespaces that relate to the binding on the passed object element. This object should be cast as System.Xml.XmlNamespaceManager.
+            Returns: A returned object used for viewing XML namespaces that relate to the binding on 
+             the passed object element. This object should be cast as 
+             System.Xml.XmlNamespaceManager.
         """
         pass
 
@@ -122,10 +137,13 @@ class Binding(BindingBase):
     def SetXmlNamespaceManager(target, value):
         """
         SetXmlNamespaceManager(target: DependencyObject, value: XmlNamespaceManager)
-            Sets a namespace manager object used by the binding attached to the provided element.
+            Sets a namespace manager object used by the binding attached to the provided 
+             element.
+        
         
             target: The object from which to get namespace information.
-            value: The System.Xml.XmlNamespaceManager to use for namespace evaluation in the passed element.
+            value: The System.Xml.XmlNamespaceManager to use for namespace evaluation in the 
+             passed element.
         """
         pass
 
@@ -133,7 +151,9 @@ class Binding(BindingBase):
         """
         ShouldSerializePath(self: Binding) -> bool
         
-            Indicates whether the System.Windows.Data.Binding.Path property should be persisted.
+            Indicates whether the System.Windows.Data.Binding.Path property should be 
+             persisted.
+        
             Returns: true if the property value has changed from its default; otherwise, false.
         """
         pass
@@ -142,7 +162,9 @@ class Binding(BindingBase):
         """
         ShouldSerializeSource(self: Binding) -> bool
         
-            Indicates whether the System.Windows.Data.Binding.Source property should be persisted.
+            Indicates whether the System.Windows.Data.Binding.Source property should be 
+             persisted.
+        
             Returns: true if the property value has changed from its default; otherwise, false.
         """
         pass
@@ -151,7 +173,9 @@ class Binding(BindingBase):
         """
         ShouldSerializeValidationRules(self: Binding) -> bool
         
-            Indicates whether the System.Windows.Data.Binding.ValidationRules property should be persisted.
+            Indicates whether the System.Windows.Data.Binding.ValidationRules property 
+             should be persisted.
+        
             Returns: true if the property value has changed from its default; otherwise, false.
         """
         pass
@@ -342,7 +366,9 @@ class BindingExpressionBase(Expression, IWeakEventListener):
     def UpdateSource(self):
         """
         UpdateSource(self: BindingExpressionBase)
-            Sends the current binding target value to the binding source in System.Windows.Data.BindingMode.TwoWay or System.Windows.Data.BindingMode.OneWayToSource bindings.
+            Sends the current binding target value to the binding source in 
+             System.Windows.Data.BindingMode.TwoWay or 
+             System.Windows.Data.BindingMode.OneWayToSource bindings.
         """
         pass
 
@@ -357,8 +383,12 @@ class BindingExpressionBase(Expression, IWeakEventListener):
         """
         ValidateWithoutUpdate(self: BindingExpressionBase) -> bool
         
-            Runs any System.Windows.Controls.ValidationRule objects on the associated System.Windows.Data.Binding that have the System.Windows.Controls.ValidationRule.ValidationStep property set to 
-             System.Windows.Controls.ValidationStep.RawProposedValue or System.Windows.Controls.ValidationStep.ConvertedProposedValue. This method does not update the source.
+            Runs any System.Windows.Controls.ValidationRule objects on the associated 
+             System.Windows.Data.Binding that have the 
+             System.Windows.Controls.ValidationRule.ValidationStep property set to 
+             System.Windows.Controls.ValidationStep.RawProposedValue or 
+             System.Windows.Controls.ValidationStep.ConvertedProposedValue. This method does 
+             not update the source.
         
             Returns: true if the validation rules succeed; otherwise, false.
         """
@@ -433,14 +463,17 @@ class BindingExpression(BindingExpressionBase, IWeakEventListener, IDataBindEngi
     def UpdateSource(self):
         """
         UpdateSource(self: BindingExpression)
-            Sends the current binding target value to the binding source property in System.Windows.Data.BindingMode.TwoWay or System.Windows.Data.BindingMode.OneWayToSource bindings.
+            Sends the current binding target value to the binding source property in 
+             System.Windows.Data.BindingMode.TwoWay or 
+             System.Windows.Data.BindingMode.OneWayToSource bindings.
         """
         pass
 
     def UpdateTarget(self):
         """
         UpdateTarget(self: BindingExpression)
-            Forces a data transfer from the binding source property to the binding target property.
+            Forces a data transfer from the binding source property to the binding target 
+             property.
         """
         pass
 
@@ -483,7 +516,8 @@ class BindingGroup(DependencyObject):
     def BeginEdit(self):
         """
         BeginEdit(self: BindingGroup)
-            Begins an edit transaction on the sources in the System.Windows.Data.BindingGroup.
+            Begins an edit transaction on the sources in the 
+             System.Windows.Data.BindingGroup.
         """
         pass
 
@@ -498,8 +532,11 @@ class BindingGroup(DependencyObject):
         """
         CommitEdit(self: BindingGroup) -> bool
         
-            Runs all the System.Windows.Controls.ValidationRule objects and updates the binding sources if all validation rules succeed.
-            Returns: true if every System.Windows.Controls.ValidationRule succeeds and the values are committed to the sources; otherwise, false.
+            Runs all the System.Windows.Controls.ValidationRule objects and updates the 
+             binding sources if all validation rules succeed.
+        
+            Returns: true if every System.Windows.Controls.ValidationRule succeeds and the values 
+             are committed to the sources; otherwise, false.
         """
         pass
 
@@ -523,7 +560,8 @@ class BindingGroup(DependencyObject):
         
             item: The object that contains the specified property.
             propertyName: The property whose proposed value to get.
-            Returns: true if value is the proposed value for the specified property; otherwise, false.
+            Returns: true if value is the proposed value for the specified property; otherwise, 
+             false.
         """
         pass
 
@@ -531,8 +569,12 @@ class BindingGroup(DependencyObject):
         """
         UpdateSources(self: BindingGroup) -> bool
         
-            Runs the converter on the binding and the System.Windows.Controls.ValidationRule objects that have the System.Windows.Controls.ValidationRule.ValidationStep property set to 
-             System.Windows.Controls.ValidationStep.RawProposedValue, System.Windows.Controls.ValidationStep.ConvertedProposedValue, or System.Windows.Controls.ValidationStep.UpdatedValue and saves the values of the 
+            Runs the converter on the binding and the 
+             System.Windows.Controls.ValidationRule objects that have the 
+             System.Windows.Controls.ValidationRule.ValidationStep property set to 
+             System.Windows.Controls.ValidationStep.RawProposedValue, 
+             System.Windows.Controls.ValidationStep.ConvertedProposedValue, or 
+             System.Windows.Controls.ValidationStep.UpdatedValue and saves the values of the 
              targets to the source objects if all the validation rules succeed.
         
             Returns: true if all validation rules succeed; otherwise, false.
@@ -543,8 +585,11 @@ class BindingGroup(DependencyObject):
         """
         ValidateWithoutUpdate(self: BindingGroup) -> bool
         
-            Runs the converter on the binding and the System.Windows.Controls.ValidationRule objects that have the System.Windows.Controls.ValidationRule.ValidationStep property set to 
-             System.Windows.Controls.ValidationStep.RawProposedValue or System.Windows.Controls.ValidationStep.ConvertedProposedValue.
+            Runs the converter on the binding and the 
+             System.Windows.Controls.ValidationRule objects that have the 
+             System.Windows.Controls.ValidationRule.ValidationStep property set to 
+             System.Windows.Controls.ValidationStep.RawProposedValue or 
+             System.Windows.Controls.ValidationStep.ConvertedProposedValue.
         
             Returns: true if the validation rules succeed; otherwise, false.
         """
@@ -670,7 +715,9 @@ class CollectionView(DispatcherObject, ICollectionView, IEnumerable, INotifyColl
         """
         DeferRefresh(self: CollectionView) -> IDisposable
         
-            Enters a defer cycle that you can use to merge changes to the view and delay automatic refresh.
+            Enters a defer cycle that you can use to merge changes to the view and delay 
+             automatic refresh.
+        
             Returns: An System.IDisposable object that you can use to dispose of the calling object.
         """
         pass
@@ -684,7 +731,8 @@ class CollectionView(DispatcherObject, ICollectionView, IEnumerable, INotifyColl
         GetEnumerator(self: CollectionView) -> IEnumerator
         
             Returns an object that you can use to enumerate the items in the view.
-            Returns: An System.Collections.IEnumerator object that you can use to enumerate the items in the view.
+            Returns: An System.Collections.IEnumerator object that you can use to enumerate the 
+             items in the view.
         """
         pass
 
@@ -713,10 +761,13 @@ class CollectionView(DispatcherObject, ICollectionView, IEnumerable, INotifyColl
         """
         MoveCurrentTo(self: CollectionView, item: object) -> bool
         
-            Sets the specified item to be the System.Windows.Data.CollectionView.CurrentItem in the view.
+            Sets the specified item to be the 
+             System.Windows.Data.CollectionView.CurrentItem in the view.
+        
         
             item: The item to set as the System.Windows.Data.CollectionView.CurrentItem.
-            Returns: true if the resulting System.Windows.Data.CollectionView.CurrentItem is within the view; otherwise, false.
+            Returns: true if the resulting System.Windows.Data.CollectionView.CurrentItem is within 
+             the view; otherwise, false.
         """
         pass
 
@@ -724,8 +775,11 @@ class CollectionView(DispatcherObject, ICollectionView, IEnumerable, INotifyColl
         """
         MoveCurrentToFirst(self: CollectionView) -> bool
         
-            Sets the first item in the view as the System.Windows.Data.CollectionView.CurrentItem.
-            Returns: true if the resulting System.Windows.Data.CollectionView.CurrentItem is an item within the view; otherwise, false.
+            Sets the first item in the view as the 
+             System.Windows.Data.CollectionView.CurrentItem.
+        
+            Returns: true if the resulting System.Windows.Data.CollectionView.CurrentItem is an item 
+             within the view; otherwise, false.
         """
         pass
 
@@ -733,8 +787,11 @@ class CollectionView(DispatcherObject, ICollectionView, IEnumerable, INotifyColl
         """
         MoveCurrentToLast(self: CollectionView) -> bool
         
-            Sets the last item in the view as the System.Windows.Data.CollectionView.CurrentItem.
-            Returns: true if the resulting System.Windows.Data.CollectionView.CurrentItem is an item within the view; otherwise, false.
+            Sets the last item in the view as the 
+             System.Windows.Data.CollectionView.CurrentItem.
+        
+            Returns: true if the resulting System.Windows.Data.CollectionView.CurrentItem is an item 
+             within the view; otherwise, false.
         """
         pass
 
@@ -742,8 +799,11 @@ class CollectionView(DispatcherObject, ICollectionView, IEnumerable, INotifyColl
         """
         MoveCurrentToNext(self: CollectionView) -> bool
         
-            Sets the item after the System.Windows.Data.CollectionView.CurrentItem in the view as the System.Windows.Data.CollectionView.CurrentItem.
-            Returns: true if the resulting System.Windows.Data.CollectionView.CurrentItem is an item within the view; otherwise, false.
+            Sets the item after the System.Windows.Data.CollectionView.CurrentItem in the 
+             view as the System.Windows.Data.CollectionView.CurrentItem.
+        
+            Returns: true if the resulting System.Windows.Data.CollectionView.CurrentItem is an item 
+             within the view; otherwise, false.
         """
         pass
 
@@ -751,10 +811,13 @@ class CollectionView(DispatcherObject, ICollectionView, IEnumerable, INotifyColl
         """
         MoveCurrentToPosition(self: CollectionView, position: int) -> bool
         
-            Sets the item at the specified index to be the System.Windows.Data.CollectionView.CurrentItem in the view.
+            Sets the item at the specified index to be the 
+             System.Windows.Data.CollectionView.CurrentItem in the view.
+        
         
             position: The index to set the System.Windows.Data.CollectionView.CurrentItem to.
-            Returns: true if the resulting System.Windows.Data.CollectionView.CurrentItem is an item within the view; otherwise, false.
+            Returns: true if the resulting System.Windows.Data.CollectionView.CurrentItem is an item 
+             within the view; otherwise, false.
         """
         pass
 
@@ -762,8 +825,11 @@ class CollectionView(DispatcherObject, ICollectionView, IEnumerable, INotifyColl
         """
         MoveCurrentToPrevious(self: CollectionView) -> bool
         
-            Sets the item before the System.Windows.Data.CollectionView.CurrentItem in the view as the System.Windows.Data.CollectionView.CurrentItem.
-            Returns: true if the resulting System.Windows.Data.CollectionView.CurrentItem is an item within the view; otherwise, false.
+            Sets the item before the System.Windows.Data.CollectionView.CurrentItem in the 
+             view as the System.Windows.Data.CollectionView.CurrentItem.
+        
+            Returns: true if the resulting System.Windows.Data.CollectionView.CurrentItem is an item 
+             within the view; otherwise, false.
         """
         pass
 
@@ -771,7 +837,9 @@ class CollectionView(DispatcherObject, ICollectionView, IEnumerable, INotifyColl
         """
         OKToChangeCurrent(self: CollectionView) -> bool
         
-            Returns a value that indicates whether the view can change which item is the System.Windows.Data.CollectionView.CurrentItem.
+            Returns a value that indicates whether the view can change which item is the 
+             System.Windows.Data.CollectionView.CurrentItem.
+        
             Returns: false if a listener cancels the change; otherwise, true.
         """
         pass
@@ -783,9 +851,13 @@ class CollectionView(DispatcherObject, ICollectionView, IEnumerable, INotifyColl
     def OnBeginChangeLogging(self, *args): #cannot find CLR method
         """
         OnBeginChangeLogging(self: CollectionView, args: NotifyCollectionChangedEventArgs)
-            Called by the base class to notify the derived class that an System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged event has been posted to the message queue.
+            Called by the base class to notify the derived class that an 
+             System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged event 
+             has been posted to the message queue.
         
-            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object that is added to the change log.
+        
+            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object that 
+             is added to the change log.
         """
         pass
 
@@ -795,11 +867,14 @@ class CollectionView(DispatcherObject, ICollectionView, IEnumerable, INotifyColl
             Raises the System.Windows.Data.CollectionView.CollectionChanged event.
         
             sender: The sender of the event.
-            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to pass to the event handler.
+            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to 
+             pass to the event handler.
+        
         OnCollectionChanged(self: CollectionView, args: NotifyCollectionChangedEventArgs)
             Raises the System.Windows.Data.CollectionView.CollectionChanged event.
         
-            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to pass to the event handler.
+            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to 
+             pass to the event handler.
         """
         pass
 
@@ -813,18 +888,23 @@ class CollectionView(DispatcherObject, ICollectionView, IEnumerable, INotifyColl
     def OnCurrentChanging(self, *args): #cannot find CLR method
         """
         OnCurrentChanging(self: CollectionView, args: CurrentChangingEventArgs)
-            Raises the System.Windows.Data.CollectionView.CurrentChanging event with the specified arguments.
+            Raises the System.Windows.Data.CollectionView.CurrentChanging event with the 
+             specified arguments.
+        
         
             args: Information about the event.
         OnCurrentChanging(self: CollectionView)
-            Raises a System.Windows.Data.CollectionView.CurrentChanging event that is not cancelable.
+            Raises a System.Windows.Data.CollectionView.CurrentChanging event that is not 
+             cancelable.
         """
         pass
 
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: CollectionView, e: PropertyChangedEventArgs)
-            Raises the System.ComponentModel.INotifyPropertyChanged.PropertyChanged event using the specified arguments.
+            Raises the System.ComponentModel.INotifyPropertyChanged.PropertyChanged event 
+             using the specified arguments.
+        
         
             e: Arguments of the event being raised.
         """
@@ -834,10 +914,13 @@ class CollectionView(DispatcherObject, ICollectionView, IEnumerable, INotifyColl
         """
         PassesFilter(self: CollectionView, item: object) -> bool
         
-            Returns a value that indicates whether the specified item in the underlying collection belongs to the view.
+            Returns a value that indicates whether the specified item in the underlying 
+             collection belongs to the view.
+        
         
             item: The item to check.
-            Returns: true if the specified item belongs to the view or if there is not filter set on the collection view; otherwise, false.
+            Returns: true if the specified item belongs to the view or if there is not filter set on 
+             the collection view; otherwise, false.
         """
         pass
 
@@ -846,7 +929,8 @@ class CollectionView(DispatcherObject, ICollectionView, IEnumerable, INotifyColl
         ProcessCollectionChanged(self: CollectionView, args: NotifyCollectionChangedEventArgs)
             When overridden in a derived class, processes a single change on the UI�thread.
         
-            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to process.
+            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to 
+             process.
         """
         pass
 
@@ -864,7 +948,8 @@ class CollectionView(DispatcherObject, ICollectionView, IEnumerable, INotifyColl
     def RefreshOrDefer(self, *args): #cannot find CLR method
         """
         RefreshOrDefer(self: CollectionView)
-            Refreshes the view or specifies that the view needs to be refreshed when the defer cycle completes.
+            Refreshes the view or specifies that the view needs to be refreshed when the 
+             defer cycle completes.
         """
         pass
 
@@ -886,18 +971,26 @@ class CollectionView(DispatcherObject, ICollectionView, IEnumerable, INotifyColl
     def SetCurrent(self, *args): #cannot find CLR method
         """
         SetCurrent(self: CollectionView, newItem: object, newPosition: int, count: int)
-            Sets the specified item and index as the values of the System.Windows.Data.CollectionView.CurrentItem and System.Windows.Data.CollectionView.CurrentPosition properties. This method can be called from a 
-             constructor of a derived class.
+            Sets the specified item and index as the values of the 
+             System.Windows.Data.CollectionView.CurrentItem and 
+             System.Windows.Data.CollectionView.CurrentPosition properties. This method can 
+             be called from a constructor of a derived class.
         
         
             newItem: The item to set as the System.Windows.Data.CollectionView.CurrentItem.
-            newPosition: The value to set as the System.Windows.Data.CollectionView.CurrentPosition property value.
+            newPosition: The value to set as the System.Windows.Data.CollectionView.CurrentPosition 
+             property value.
+        
             count: The number of items in the System.Windows.Data.CollectionView.
         SetCurrent(self: CollectionView, newItem: object, newPosition: int)
-            Sets the specified item and index as the values of the System.Windows.Data.CollectionView.CurrentItem and System.Windows.Data.CollectionView.CurrentPosition properties.
+            Sets the specified item and index as the values of the 
+             System.Windows.Data.CollectionView.CurrentItem and 
+             System.Windows.Data.CollectionView.CurrentPosition properties.
+        
         
             newItem: The item to set as the System.Windows.Data.CollectionView.CurrentItem.
-            newPosition: The value to set as the System.Windows.Data.CollectionView.CurrentPosition property value.
+            newPosition: The value to set as the System.Windows.Data.CollectionView.CurrentPosition 
+             property value.
         """
         pass
 
@@ -1094,7 +1187,8 @@ class BindingListCollectionView(CollectionView, ICollectionView, IEnumerable, IN
     def CancelEdit(self):
         """
         CancelEdit(self: BindingListCollectionView)
-            Ends the edit transaction and, if possible, restores the original value to the item.
+            Ends the edit transaction and, if possible, restores the original value to the 
+             item.
         """
         pass
 
@@ -1134,7 +1228,9 @@ class BindingListCollectionView(CollectionView, ICollectionView, IEnumerable, IN
         """
         Contains(self: BindingListCollectionView, item: object) -> bool
         
-            Returns a value that indicates whether a given item belongs to the collection view.
+            Returns a value that indicates whether a given item belongs to the collection 
+             view.
+        
         
             item: The object to check.
             Returns: true if the item belongs to the collection view; otherwise, false.
@@ -1176,7 +1272,8 @@ class BindingListCollectionView(CollectionView, ICollectionView, IEnumerable, IN
             Returns the index at which the given item belongs in the collection view.
         
             item: The object to look for in the collection.
-            Returns: The index of the item in the collection, or -1 if the item does not exist in the collection view.
+            Returns: The index of the item in the collection, or -1 if the item does not exist in 
+             the collection view.
         """
         pass
 
@@ -1184,10 +1281,13 @@ class BindingListCollectionView(CollectionView, ICollectionView, IEnumerable, IN
         """
         MoveCurrentToPosition(self: BindingListCollectionView, position: int) -> bool
         
-            Sets the item at the specified index to be the System.Windows.Data.CollectionView.CurrentItem in the view.
+            Sets the item at the specified index to be the 
+             System.Windows.Data.CollectionView.CurrentItem in the view.
+        
         
             position: The index to set the System.Windows.Data.CollectionView.CurrentItem to.
-            Returns: true if the resulting System.Windows.Data.CollectionView.CurrentItem is an item within the view; otherwise, false.
+            Returns: true if the resulting System.Windows.Data.CollectionView.CurrentItem is an item 
+             within the view; otherwise, false.
         """
         pass
 
@@ -1195,7 +1295,9 @@ class BindingListCollectionView(CollectionView, ICollectionView, IEnumerable, IN
         """
         OKToChangeCurrent(self: CollectionView) -> bool
         
-            Returns a value that indicates whether the view can change which item is the System.Windows.Data.CollectionView.CurrentItem.
+            Returns a value that indicates whether the view can change which item is the 
+             System.Windows.Data.CollectionView.CurrentItem.
+        
             Returns: false if a listener cancels the change; otherwise, true.
         """
         pass
@@ -1214,11 +1316,14 @@ class BindingListCollectionView(CollectionView, ICollectionView, IEnumerable, IN
             Raises the System.Windows.Data.CollectionView.CollectionChanged event.
         
             sender: The sender of the event.
-            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to pass to the event handler.
+            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to 
+             pass to the event handler.
+        
         OnCollectionChanged(self: CollectionView, args: NotifyCollectionChangedEventArgs)
             Raises the System.Windows.Data.CollectionView.CollectionChanged event.
         
-            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to pass to the event handler.
+            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to 
+             pass to the event handler.
         """
         pass
 
@@ -1232,18 +1337,23 @@ class BindingListCollectionView(CollectionView, ICollectionView, IEnumerable, IN
     def OnCurrentChanging(self, *args): #cannot find CLR method
         """
         OnCurrentChanging(self: CollectionView, args: CurrentChangingEventArgs)
-            Raises the System.Windows.Data.CollectionView.CurrentChanging event with the specified arguments.
+            Raises the System.Windows.Data.CollectionView.CurrentChanging event with the 
+             specified arguments.
+        
         
             args: Information about the event.
         OnCurrentChanging(self: CollectionView)
-            Raises a System.Windows.Data.CollectionView.CurrentChanging event that is not cancelable.
+            Raises a System.Windows.Data.CollectionView.CurrentChanging event that is not 
+             cancelable.
         """
         pass
 
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: CollectionView, e: PropertyChangedEventArgs)
-            Raises the System.ComponentModel.INotifyPropertyChanged.PropertyChanged event using the specified arguments.
+            Raises the System.ComponentModel.INotifyPropertyChanged.PropertyChanged event 
+             using the specified arguments.
+        
         
             e: Arguments of the event being raised.
         """
@@ -1253,10 +1363,13 @@ class BindingListCollectionView(CollectionView, ICollectionView, IEnumerable, IN
         """
         PassesFilter(self: BindingListCollectionView, item: object) -> bool
         
-            Returns a value that indicates whether the specified item in the underlying collection belongs to the view.
+            Returns a value that indicates whether the specified item in the underlying 
+             collection belongs to the view.
+        
         
             item: The item to check.
-            Returns: true if the specified item belongs to the view or if there is not filter set on the collection view; otherwise, false.
+            Returns: true if the specified item belongs to the view or if there is not filter set on 
+             the collection view; otherwise, false.
         """
         pass
 
@@ -1271,7 +1384,8 @@ class BindingListCollectionView(CollectionView, ICollectionView, IEnumerable, IN
     def RefreshOrDefer(self, *args): #cannot find CLR method
         """
         RefreshOrDefer(self: CollectionView)
-            Refreshes the view or specifies that the view needs to be refreshed when the defer cycle completes.
+            Refreshes the view or specifies that the view needs to be refreshed when the 
+             defer cycle completes.
         """
         pass
 
@@ -1308,18 +1422,26 @@ class BindingListCollectionView(CollectionView, ICollectionView, IEnumerable, IN
     def SetCurrent(self, *args): #cannot find CLR method
         """
         SetCurrent(self: CollectionView, newItem: object, newPosition: int, count: int)
-            Sets the specified item and index as the values of the System.Windows.Data.CollectionView.CurrentItem and System.Windows.Data.CollectionView.CurrentPosition properties. This method can be called from a 
-             constructor of a derived class.
+            Sets the specified item and index as the values of the 
+             System.Windows.Data.CollectionView.CurrentItem and 
+             System.Windows.Data.CollectionView.CurrentPosition properties. This method can 
+             be called from a constructor of a derived class.
         
         
             newItem: The item to set as the System.Windows.Data.CollectionView.CurrentItem.
-            newPosition: The value to set as the System.Windows.Data.CollectionView.CurrentPosition property value.
+            newPosition: The value to set as the System.Windows.Data.CollectionView.CurrentPosition 
+             property value.
+        
             count: The number of items in the System.Windows.Data.CollectionView.
         SetCurrent(self: CollectionView, newItem: object, newPosition: int)
-            Sets the specified item and index as the values of the System.Windows.Data.CollectionView.CurrentItem and System.Windows.Data.CollectionView.CurrentPosition properties.
+            Sets the specified item and index as the values of the 
+             System.Windows.Data.CollectionView.CurrentItem and 
+             System.Windows.Data.CollectionView.CurrentPosition properties.
+        
         
             newItem: The item to set as the System.Windows.Data.CollectionView.CurrentItem.
-            newPosition: The value to set as the System.Windows.Data.CollectionView.CurrentPosition property value.
+            newPosition: The value to set as the System.Windows.Data.CollectionView.CurrentPosition 
+             property value.
         """
         pass
 
@@ -1617,7 +1739,10 @@ class BindingOperations(object):
     def ClearAllBindings(target):
         """
         ClearAllBindings(target: DependencyObject)
-            Removes all bindings, including bindings of type System.Windows.Data.Binding, System.Windows.Data.MultiBinding, and System.Windows.Data.PriorityBinding, from the specified System.Windows.DependencyObject.
+            Removes all bindings, including bindings of type System.Windows.Data.Binding, 
+             System.Windows.Data.MultiBinding, and System.Windows.Data.PriorityBinding, from 
+             the specified System.Windows.DependencyObject.
+        
         
             target: The object from which to remove bindings.
         """
@@ -1649,11 +1774,14 @@ class BindingOperations(object):
         """
         GetBinding(target: DependencyObject, dp: DependencyProperty) -> Binding
         
-            Retrieves the System.Windows.Data.Binding object that is set on the specified property.
+            Retrieves the System.Windows.Data.Binding object that is set on the specified 
+             property.
+        
         
             target: The object where dp is.
             dp: The binding target property from which to retrieve the binding.
-            Returns: The System.Windows.Data.Binding object set on the given property or null if no System.Windows.Data.Binding object has been set.
+            Returns: The System.Windows.Data.Binding object set on the given property or null if no 
+             System.Windows.Data.Binding object has been set.
         """
         pass
 
@@ -1662,11 +1790,16 @@ class BindingOperations(object):
         """
         GetBindingBase(target: DependencyObject, dp: DependencyProperty) -> BindingBase
         
-            Retrieves the System.Windows.Data.BindingBase object that is set on the specified property.
+            Retrieves the System.Windows.Data.BindingBase object that is set on the 
+             specified property.
+        
         
             target: The object where dp is.
-            dp: The binding target property from which to retrieve the System.Windows.Data.BindingBase object.
-            Returns: The System.Windows.Data.BindingBase object that is set on the given property or null if no binding object has been set.
+            dp: The binding target property from which to retrieve the 
+             System.Windows.Data.BindingBase object.
+        
+            Returns: The System.Windows.Data.BindingBase object that is set on the given property or 
+             null if no binding object has been set.
         """
         pass
 
@@ -1675,12 +1808,19 @@ class BindingOperations(object):
         """
         GetBindingExpression(target: DependencyObject, dp: DependencyProperty) -> BindingExpression
         
-            Returns the System.Windows.Data.BindingExpression object associated with the specified binding target property on the specified object.
+            Returns the System.Windows.Data.BindingExpression object associated with the 
+             specified binding target property on the specified object.
+        
         
             target: The binding target object where dp is.
-            dp: The binding target property from which to retrieve the System.Windows.Data.BindingExpression object.
-            Returns: The System.Windows.Data.BindingExpression object associated with the given property or null if none exists. If a System.Windows.Data.PriorityBindingExpression object is set on the property, the 
-             System.Windows.Data.PriorityBindingExpression.ActiveBindingExpression is returned.
+            dp: The binding target property from which to retrieve the 
+             System.Windows.Data.BindingExpression object.
+        
+            Returns: The System.Windows.Data.BindingExpression object associated with the given 
+             property or null if none exists. If a 
+             System.Windows.Data.PriorityBindingExpression object is set on the property, 
+             the System.Windows.Data.PriorityBindingExpression.ActiveBindingExpression is 
+             returned.
         """
         pass
 
@@ -1689,11 +1829,16 @@ class BindingOperations(object):
         """
         GetBindingExpressionBase(target: DependencyObject, dp: DependencyProperty) -> BindingExpressionBase
         
-            Retrieves the System.Windows.Data.BindingExpressionBase object that is set on the specified property.
+            Retrieves the System.Windows.Data.BindingExpressionBase object that is set on 
+             the specified property.
+        
         
             target: The object where dp is.
-            dp: The binding target property from which to retrieve the System.Windows.Data.BindingExpressionBase object.
-            Returns: The System.Windows.Data.BindingExpressionBase object that is set on the given property or null if no binding object has been set.
+            dp: The binding target property from which to retrieve the 
+             System.Windows.Data.BindingExpressionBase object.
+        
+            Returns: The System.Windows.Data.BindingExpressionBase object that is set on the given 
+             property or null if no binding object has been set.
         """
         pass
 
@@ -1702,11 +1847,14 @@ class BindingOperations(object):
         """
         GetMultiBinding(target: DependencyObject, dp: DependencyProperty) -> MultiBinding
         
-            Retrieves the System.Windows.Data.MultiBinding object that is set on the specified property.
+            Retrieves the System.Windows.Data.MultiBinding object that is set on the 
+             specified property.
+        
         
             target: The object where dp is.
             dp: The binding target property from which to retrieve the binding.
-            Returns: The System.Windows.Data.MultiBinding object set on the given property or null if no System.Windows.Data.MultiBinding object has been set.
+            Returns: The System.Windows.Data.MultiBinding object set on the given property or null 
+             if no System.Windows.Data.MultiBinding object has been set.
         """
         pass
 
@@ -1715,11 +1863,16 @@ class BindingOperations(object):
         """
         GetMultiBindingExpression(target: DependencyObject, dp: DependencyProperty) -> MultiBindingExpression
         
-            Returns the System.Windows.Data.MultiBindingExpression object associated with the specified binding target property on the specified object.
+            Returns the System.Windows.Data.MultiBindingExpression object associated with 
+             the specified binding target property on the specified object.
+        
         
             target: The binding target object where dp is.
-            dp: The binding target property from which to retrieve the System.Windows.Data.MultiBindingExpression object.
-            Returns: The System.Windows.Data.MultiBindingExpression object associated with the given property or null if none exists.
+            dp: The binding target property from which to retrieve the 
+             System.Windows.Data.MultiBindingExpression object.
+        
+            Returns: The System.Windows.Data.MultiBindingExpression object associated with the given 
+             property or null if none exists.
         """
         pass
 
@@ -1728,11 +1881,14 @@ class BindingOperations(object):
         """
         GetPriorityBinding(target: DependencyObject, dp: DependencyProperty) -> PriorityBinding
         
-            Retrieves the System.Windows.Data.PriorityBinding object that is set on the specified property.
+            Retrieves the System.Windows.Data.PriorityBinding object that is set on the 
+             specified property.
+        
         
             target: The object where dp is.
             dp: The binding target property from which to retrieve the binding.
-            Returns: The System.Windows.Data.PriorityBinding object set on the given property or null if no System.Windows.Data.PriorityBinding object has been set.
+            Returns: The System.Windows.Data.PriorityBinding object set on the given property or 
+             null if no System.Windows.Data.PriorityBinding object has been set.
         """
         pass
 
@@ -1741,11 +1897,16 @@ class BindingOperations(object):
         """
         GetPriorityBindingExpression(target: DependencyObject, dp: DependencyProperty) -> PriorityBindingExpression
         
-            Returns the System.Windows.Data.PriorityBindingExpression object associated with the specified binding target property on the specified object.
+            Returns the System.Windows.Data.PriorityBindingExpression object associated 
+             with the specified binding target property on the specified object.
+        
         
             target: The binding target object where dp is.
-            dp: The binding target property from which to retrieve the System.Windows.Data.PriorityBindingExpression object.
-            Returns: The System.Windows.Data.PriorityBindingExpression object associated with the given property or null if none exists.
+            dp: The binding target property from which to retrieve the 
+             System.Windows.Data.PriorityBindingExpression object.
+        
+            Returns: The System.Windows.Data.PriorityBindingExpression object associated with the 
+             given property or null if none exists.
         """
         pass
 
@@ -1764,7 +1925,9 @@ class BindingOperations(object):
         """
         IsDataBound(target: DependencyObject, dp: DependencyProperty) -> bool
         
-            Returns a value that indicates whether the specified property is currently data-bound.
+            Returns a value that indicates whether the specified property is currently 
+             data-bound.
+        
         
             target: The object where dp is.
             dp: The dependency property to check.
@@ -1777,13 +1940,20 @@ class BindingOperations(object):
         """
         SetBinding(target: DependencyObject, dp: DependencyProperty, binding: BindingBase) -> BindingExpressionBase
         
-            Creates and associates a new instance of System.Windows.Data.BindingExpressionBase with the specified binding target property.
+            Creates and associates a new instance of 
+             System.Windows.Data.BindingExpressionBase with the specified binding target 
+             property.
+        
         
             target: The binding target of the binding.
             dp: The target property of the binding.
             binding: The System.Windows.Data.BindingBase object that describes the binding.
-            Returns: The instance of System.Windows.Data.BindingExpressionBase created for and associated with the specified property. The System.Windows.Data.BindingExpressionBase class is the base class of 
-             System.Windows.Data.BindingExpression, System.Windows.Data.MultiBindingExpression, and System.Windows.Data.PriorityBindingExpression.
+            Returns: The instance of System.Windows.Data.BindingExpressionBase created for and 
+             associated with the specified property. The 
+             System.Windows.Data.BindingExpressionBase class is the base class of 
+             System.Windows.Data.BindingExpression, 
+             System.Windows.Data.MultiBindingExpression, and 
+             System.Windows.Data.PriorityBindingExpression.
         """
         pass
 
@@ -1885,9 +2055,15 @@ class CollectionContainer(DependencyObject, INotifyCollectionChanged, IWeakEvent
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: DependencyObject, e: DependencyPropertyChangedEventArgs)
-            Invoked whenever the effective value of any dependency property on this System.Windows.DependencyObject has been updated. The specific dependency property that changed is reported in the event data.
+            Invoked whenever the effective value of any dependency property on this 
+             System.Windows.DependencyObject has been updated. The specific dependency 
+             property that changed is reported in the event data.
         
-            e: Event data that will contain the dependency property identifier of interest, the property metadata for the type, and old and new values.
+        
+            e: Event data that will contain the dependency property identifier of interest, 
+             the property metadata for the type, and old and new values.
+        
+        OnPropertyChanged(self: Window_16$17, e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: Label_17$18, e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: TextBox_18$19, e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: Button_19$20, e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: CheckBox_20$21, e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: ComboBox_21$22, e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: Separator_22$23, e: DependencyPropertyChangedEventArgs)
         """
         pass
 
@@ -1897,7 +2073,10 @@ class CollectionContainer(DependencyObject, INotifyCollectionChanged, IWeakEvent
         
             Handles events from the centralized event table.
         
-            managerType: The type of the System.Windows.WeakEventManager calling this method. This only recognizes manager objects of type System.Collections.Specialized.CollectionChangedEventManager.
+            managerType: The type of the System.Windows.WeakEventManager calling this method. This only 
+             recognizes manager objects of type 
+             System.Collections.Specialized.CollectionChangedEventManager.
+        
             sender: The object that originated the event.
             e: The event data.
             Returns: true if the listener handled the event; otherwise, false.
@@ -1912,7 +2091,9 @@ class CollectionContainer(DependencyObject, INotifyCollectionChanged, IWeakEvent
         """
         ShouldSerializeCollection(self: CollectionContainer) -> bool
         
-            Indicates whether the System.Windows.Data.CollectionContainer.Collection property should be persisted.
+            Indicates whether the System.Windows.Data.CollectionContainer.Collection 
+             property should be persisted.
+        
             Returns: true if the property value has changed from its default; otherwise, false.
         """
         pass
@@ -1921,10 +2102,21 @@ class CollectionContainer(DependencyObject, INotifyCollectionChanged, IWeakEvent
         """
         ShouldSerializeProperty(self: DependencyObject, dp: DependencyProperty) -> bool
         
-            Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+            Returns a value that indicates whether serialization processes should serialize 
+             the value for the provided dependency property.
+        
         
             dp: The identifier for the dependency property that should be serialized.
-            Returns: true if the dependency property that is supplied should be value-serialized; otherwise, false.
+            Returns: true if the dependency property that is supplied should be value-serialized; 
+             otherwise, false.
+        
+        ShouldSerializeProperty(self: Window_16$17, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Label_17$18, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: TextBox_18$19, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Button_19$20, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: CheckBox_20$21, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: ComboBox_21$22, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Separator_22$23, dp: DependencyProperty) -> bool
         """
         pass
 
@@ -1968,7 +2160,9 @@ class CollectionSynchronizationCallback(MulticastDelegate, ICloneable, ISerializ
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -1981,7 +2175,10 @@ class CollectionSynchronizationCallback(MulticastDelegate, ICloneable, ISerializ
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -2007,10 +2204,14 @@ class CollectionSynchronizationCallback(MulticastDelegate, ICloneable, ISerializ
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -2036,7 +2237,9 @@ class CollectionViewGroup(object, INotifyPropertyChanged):
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: CollectionViewGroup, e: PropertyChangedEventArgs)
-            Raises the System.Windows.Data.CollectionViewGroup.PropertyChanged event using the provided arguments.
+            Raises the System.Windows.Data.CollectionViewGroup.PropertyChanged event using 
+             the provided arguments.
+        
         
             e: Arguments of the event being raised.
         """
@@ -2118,7 +2321,9 @@ class CollectionViewSource(DependencyObject, ISupportInitialize, IWeakEventListe
         """
         DeferRefresh(self: CollectionViewSource) -> IDisposable
         
-            Enters a defer cycle that you can use to merge changes to the view and delay automatic refresh.
+            Enters a defer cycle that you can use to merge changes to the view and delay 
+             automatic refresh.
+        
             Returns: An System.IDisposable object that you can use to dispose of the calling object.
         """
         pass
@@ -2131,7 +2336,8 @@ class CollectionViewSource(DependencyObject, ISupportInitialize, IWeakEventListe
             Returns the default view for the given source.
         
             source: An object reference to the binding source.
-            Returns: Returns an System.ComponentModel.ICollectionView object that is the default view for the given source collection.
+            Returns: Returns an System.ComponentModel.ICollectionView object that is the default 
+             view for the given source collection.
         """
         pass
 
@@ -2140,36 +2346,53 @@ class CollectionViewSource(DependencyObject, ISupportInitialize, IWeakEventListe
         """
         IsDefaultView(view: ICollectionView) -> bool
         
-            Returns a value that indicates whether the given view is the default view for the System.Windows.Data.CollectionViewSource.Source collection.
+            Returns a value that indicates whether the given view is the default view for 
+             the System.Windows.Data.CollectionViewSource.Source collection.
+        
         
             view: The view object to check.
-            Returns: true if the given view is the default view for the System.Windows.Data.CollectionViewSource.Source collection or if the given view is nulll; otherwise, false.
+            Returns: true if the given view is the default view for the 
+             System.Windows.Data.CollectionViewSource.Source collection or if the given view 
+             is nulll; otherwise, false.
         """
         pass
 
     def OnCollectionViewTypeChanged(self, *args): #cannot find CLR method
         """
         OnCollectionViewTypeChanged(self: CollectionViewSource, oldCollectionViewType: Type, newCollectionViewType: Type)
-            Invoked when the System.Windows.Data.CollectionViewSource.CollectionViewType property changes.
+            Invoked when the System.Windows.Data.CollectionViewSource.CollectionViewType 
+             property changes.
         
-            oldCollectionViewType: The old value of the System.Windows.Data.CollectionViewSource.CollectionViewType property.
-            newCollectionViewType: The new value of the System.Windows.Data.CollectionViewSource.CollectionViewType property.
+        
+            oldCollectionViewType: The old value of the 
+             System.Windows.Data.CollectionViewSource.CollectionViewType property.
+        
+            newCollectionViewType: The new value of the 
+             System.Windows.Data.CollectionViewSource.CollectionViewType property.
         """
         pass
 
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: DependencyObject, e: DependencyPropertyChangedEventArgs)
-            Invoked whenever the effective value of any dependency property on this System.Windows.DependencyObject has been updated. The specific dependency property that changed is reported in the event data.
+            Invoked whenever the effective value of any dependency property on this 
+             System.Windows.DependencyObject has been updated. The specific dependency 
+             property that changed is reported in the event data.
         
-            e: Event data that will contain the dependency property identifier of interest, the property metadata for the type, and old and new values.
+        
+            e: Event data that will contain the dependency property identifier of interest, 
+             the property metadata for the type, and old and new values.
+        
+        OnPropertyChanged(self: Window_16$17, e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: Label_17$18, e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: TextBox_18$19, e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: Button_19$20, e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: CheckBox_20$21, e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: ComboBox_21$22, e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: Separator_22$23, e: DependencyPropertyChangedEventArgs)
         """
         pass
 
     def OnSourceChanged(self, *args): #cannot find CLR method
         """
         OnSourceChanged(self: CollectionViewSource, oldSource: object, newSource: object)
-            Invoked when the System.Windows.Data.CollectionViewSource.Source property changes.
+            Invoked when the System.Windows.Data.CollectionViewSource.Source property 
+             changes.
+        
         
             oldSource: The old value of the System.Windows.Data.CollectionViewSource.Source property.
             newSource: The new value of the System.Windows.Data.CollectionViewSource.Source property.
@@ -2182,7 +2405,9 @@ class CollectionViewSource(DependencyObject, ISupportInitialize, IWeakEventListe
         
             Handles events from the centralized event table.
         
-            managerType: The type of the System.Windows.WeakEventManager calling this method. This only recognizes manager objects of type System.Windows.Data.DataChangedEventManager.
+            managerType: The type of the System.Windows.WeakEventManager calling this method. This only 
+             recognizes manager objects of type System.Windows.Data.DataChangedEventManager.
+        
             sender: Object that originated the event.
             e: Event data.
             Returns: true if the listener handled the event; otherwise, false.
@@ -2193,10 +2418,21 @@ class CollectionViewSource(DependencyObject, ISupportInitialize, IWeakEventListe
         """
         ShouldSerializeProperty(self: DependencyObject, dp: DependencyProperty) -> bool
         
-            Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+            Returns a value that indicates whether serialization processes should serialize 
+             the value for the provided dependency property.
+        
         
             dp: The identifier for the dependency property that should be serialized.
-            Returns: true if the dependency property that is supplied should be value-serialized; otherwise, false.
+            Returns: true if the dependency property that is supplied should be value-serialized; 
+             otherwise, false.
+        
+        ShouldSerializeProperty(self: Window_16$17, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Label_17$18, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: TextBox_18$19, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Button_19$20, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: CheckBox_20$21, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: ComboBox_21$22, dp: DependencyProperty) -> bool
+        ShouldSerializeProperty(self: Separator_22$23, dp: DependencyProperty) -> bool
         """
         pass
 
@@ -2371,7 +2607,9 @@ class CompositeCollection(object, IList, ICollection, IEnumerable, INotifyCollec
     def CopyTo(self, array, index):
         """
         CopyTo(self: CompositeCollection, array: Array, index: int)
-            Makes a shallow copy of object references from this collection to the given array.
+            Makes a shallow copy of object references from this collection to the given 
+             array.
+        
         
             array: The array that is the destination of the copy operation.
             index: Zero-based index in the target array at which the copying starts.
@@ -2385,14 +2623,17 @@ class CompositeCollection(object, IList, ICollection, IEnumerable, INotifyCollec
             Returns the index in this collection where the given item is found.
         
             indexItem: The item to retrieve the index for.
-            Returns: If the item appears in the collection, then the zero-based index in the collection where the given item is found; otherwise, -1.
+            Returns: If the item appears in the collection, then the zero-based index in the 
+             collection where the given item is found; otherwise, -1.
         """
         pass
 
     def Insert(self, insertIndex, insertItem):
         """
         Insert(self: CompositeCollection, insertIndex: int, insertItem: object)
-            Inserts an item in the collection at a given index. All items after the given position are moved down by one.
+            Inserts an item in the collection at a given index. All items after the given 
+             position are moved down by one.
+        
         
             insertIndex: The index to insert the item at.
             insertItem: The item reference to add to the collection.
@@ -2405,7 +2646,10 @@ class CompositeCollection(object, IList, ICollection, IEnumerable, INotifyCollec
         
             Handles events from the centralized event table.
         
-            managerType: The type of the System.Windows.WeakEventManager calling this method. This only recognizes manager objects of type System.Collections.Specialized.CollectionChangedEventManager.
+            managerType: The type of the System.Windows.WeakEventManager calling this method. This only 
+             recognizes manager objects of type 
+             System.Collections.Specialized.CollectionChangedEventManager.
+        
             sender: Object that originated the event.
             e: Event data.
             Returns: true if the listener handled the event; otherwise, false.
@@ -2415,7 +2659,9 @@ class CompositeCollection(object, IList, ICollection, IEnumerable, INotifyCollec
     def Remove(self, removeItem):
         """
         Remove(self: CompositeCollection, removeItem: object)
-            Removes the given item reference from the collection. All remaining items move up by one.
+            Removes the given item reference from the collection. All remaining items move 
+             up by one.
+        
         
             removeItem: The item to remove.
         """
@@ -2424,7 +2670,9 @@ class CompositeCollection(object, IList, ICollection, IEnumerable, INotifyCollec
     def RemoveAt(self, removeIndex):
         """
         RemoveAt(self: CompositeCollection, removeIndex: int)
-            Removes an item from the collection at the given index. All remaining items move up by one.
+            Removes an item from the collection at the given index. All remaining items 
+             move up by one.
+        
         
             removeIndex: The index at which to remove an item.
         """
@@ -2445,7 +2693,8 @@ class CompositeCollection(object, IList, ICollection, IEnumerable, INotifyCollec
             Determines whether the System.Collections.IList contains a specific value.
         
             value: The object to locate in the System.Collections.IList.
-            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, false.
+            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, 
+             false.
         """
         pass
 
@@ -2501,7 +2750,10 @@ class DataChangedEventManager(WeakEventManager):
     def AddListener(source, listener):
         """
         AddListener(source: DataSourceProvider, listener: IWeakEventListener)
-            Adds the specified listener to the System.Windows.Data.DataSourceProvider.DataChanged event of the specified source.
+            Adds the specified listener to the 
+             System.Windows.Data.DataSourceProvider.DataChanged event of the specified 
+             source.
+        
         
             source: The object with the event.
             listener: The object to add as a listener.
@@ -2517,7 +2769,10 @@ class DataChangedEventManager(WeakEventManager):
     def RemoveListener(source, listener):
         """
         RemoveListener(source: DataSourceProvider, listener: IWeakEventListener)
-            Removes the specified listener from the System.Windows.Data.DataSourceProvider.DataChanged event of the specified source.
+            Removes the specified listener from the 
+             System.Windows.Data.DataSourceProvider.DataChanged event of the specified 
+             source.
+        
         
             source: The object with the event.
             listener: The listener to remove.
@@ -2545,16 +2800,19 @@ class DataSourceProvider(object, INotifyPropertyChanged, ISupportInitialize):
     def BeginInit(self, *args): #cannot find CLR method
         """
         BeginInit(self: DataSourceProvider)
-            Indicates that initialization of this object is about to begin; no implicit System.Windows.Data.DataSourceProvider.Refresh occurs until the matched System.Windows.Data.DataSourceProvider.EndInit method is 
-             called.
+            Indicates that initialization of this object is about to begin; no implicit 
+             System.Windows.Data.DataSourceProvider.Refresh occurs until the matched 
+             System.Windows.Data.DataSourceProvider.EndInit method is called.
         """
         pass
 
     def BeginQuery(self, *args): #cannot find CLR method
         """
         BeginQuery(self: DataSourceProvider)
-            When overridden in a derived class, this base class calls this method when System.Windows.Data.DataSourceProvider.InitialLoad or System.Windows.Data.DataSourceProvider.Refresh has been called. The base 
-             class delays the call if refresh is deferred or initial load is disabled.
+            When overridden in a derived class, this base class calls this method when 
+             System.Windows.Data.DataSourceProvider.InitialLoad or 
+             System.Windows.Data.DataSourceProvider.Refresh has been called. The base class 
+             delays the call if refresh is deferred or initial load is disabled.
         """
         pass
 
@@ -2562,7 +2820,9 @@ class DataSourceProvider(object, INotifyPropertyChanged, ISupportInitialize):
         """
         DeferRefresh(self: DataSourceProvider) -> IDisposable
         
-            Enters a defer cycle that you can use to change properties of the provider and delay automatic refresh.
+            Enters a defer cycle that you can use to change properties of the provider and 
+             delay automatic refresh.
+        
             Returns: An System.IDisposable object that you can use to dispose of the calling object.
         """
         pass
@@ -2570,21 +2830,26 @@ class DataSourceProvider(object, INotifyPropertyChanged, ISupportInitialize):
     def EndInit(self, *args): #cannot find CLR method
         """
         EndInit(self: DataSourceProvider)
-            Indicates that the initialization of this object has completed; this causes a System.Windows.Data.DataSourceProvider.Refresh if no other System.Windows.Data.DataSourceProvider.DeferRefresh is outstanding.
+            Indicates that the initialization of this object has completed; this causes a 
+             System.Windows.Data.DataSourceProvider.Refresh if no other 
+             System.Windows.Data.DataSourceProvider.DeferRefresh is outstanding.
         """
         pass
 
     def InitialLoad(self):
         """
         InitialLoad(self: DataSourceProvider)
-            Starts the initial query to the underlying data model. The result is returned on the System.Windows.Data.DataSourceProvider.Data property.
+            Starts the initial query to the underlying data model. The result is returned 
+             on the System.Windows.Data.DataSourceProvider.Data property.
         """
         pass
 
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: DataSourceProvider, e: PropertyChangedEventArgs)
-            Raises the System.Windows.Data.DataSourceProvider.PropertyChanged event with the provided arguments.
+            Raises the System.Windows.Data.DataSourceProvider.PropertyChanged event with 
+             the provided arguments.
+        
         
             e: Arguments of the event being raised.
         """
@@ -2596,8 +2861,12 @@ class DataSourceProvider(object, INotifyPropertyChanged, ISupportInitialize):
             Derived classes call this method to indicate that a query has finished.
         
             newData: The data that is the result of the query.
-            error: The error that occurred while running the query. This value is null if there is no error.
-            completionWork: Optional delegate that is used to execute completion work on the UI thread, for example, to set additional properties.
+            error: The error that occurred while running the query. This value is null if there is 
+             no error.
+        
+            completionWork: Optional delegate that is used to execute completion work on the UI thread, for 
+             example, to set additional properties.
+        
             callbackArguments: Optional arguments to send as a parameter with the completionWork delegate.
         OnQueryFinished(self: DataSourceProvider, newData: object)
             Derived classes call this method to indicate that a query has finished.
@@ -2609,7 +2878,8 @@ class DataSourceProvider(object, INotifyPropertyChanged, ISupportInitialize):
     def Refresh(self):
         """
         Refresh(self: DataSourceProvider)
-            Initiates a refresh operation to the underlying data model. The result is returned on the System.Windows.Data.DataSourceProvider.Data property.
+            Initiates a refresh operation to the underlying data model. The result is 
+             returned on the System.Windows.Data.DataSourceProvider.Data property.
         """
         pass
 
@@ -2716,7 +2986,9 @@ class FilterEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -2729,7 +3001,10 @@ class FilterEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -2755,10 +3030,14 @@ class FilterEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -2789,7 +3068,9 @@ class GroupDescriptionSelectorCallback(MulticastDelegate, ICloneable, ISerializa
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -2802,7 +3083,10 @@ class GroupDescriptionSelectorCallback(MulticastDelegate, ICloneable, ISerializa
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -2828,10 +3112,14 @@ class GroupDescriptionSelectorCallback(MulticastDelegate, ICloneable, ISerializa
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -2854,17 +3142,28 @@ class IMultiValueConverter:
         """
         Convert(self: IMultiValueConverter, values: Array[object], targetType: Type, parameter: object, culture: CultureInfo) -> object
         
-            Converts source values to a value for the binding target. The data binding engine calls this method when it propagates the values from source bindings to the binding target.
+            Converts source values to a value for the binding target. The data binding 
+             engine calls this method when it propagates the values from source bindings to 
+             the binding target.
         
-            values: The array of values that the source bindings in the System.Windows.Data.MultiBinding produces. The value System.Windows.DependencyProperty.UnsetValue indicates that the source binding has no value to 
-             provide for conversion.
+        
+            values: The array of values that the source bindings in the 
+             System.Windows.Data.MultiBinding produces. The value 
+             System.Windows.DependencyProperty.UnsetValue indicates that the source binding 
+             has no value to provide for conversion.
         
             targetType: The type of the binding target property.
             parameter: The converter parameter to use.
             culture: The culture to use in the converter.
-            Returns: A converted value.If the method returns null, the valid null value is used.A return value of System.Windows.DependencyProperty.System.Windows.DependencyProperty.UnsetValue indicates that the converter did 
-             not produce a value, and that the binding will use the System.Windows.Data.BindingBase.FallbackValue if it is available, or else will use the default value.A return value of 
-             System.Windows.Data.Binding.System.Windows.Data.Binding.DoNothing indicates that the binding does not transfer the value or use the System.Windows.Data.BindingBase.FallbackValue or the default value.
+            Returns: A converted value.If the method returns null, the valid null value is used.A 
+             return value of 
+             System.Windows.DependencyProperty.System.Windows.DependencyProperty.UnsetValue 
+             indicates that the converter did not produce a value, and that the binding will 
+             use the System.Windows.Data.BindingBase.FallbackValue if it is available, or 
+             else will use the default value.A return value of 
+             System.Windows.Data.Binding.System.Windows.Data.Binding.DoNothing indicates 
+             that the binding does not transfer the value or use the 
+             System.Windows.Data.BindingBase.FallbackValue or the default value.
         """
         pass
 
@@ -2875,10 +3174,13 @@ class IMultiValueConverter:
             Converts a binding target value to the source binding values.
         
             value: The value that the binding target produces.
-            targetTypes: The array of types to convert to. The array length indicates the number and types of values that are suggested for the method to return.
+            targetTypes: The array of types to convert to. The array length indicates the number and 
+             types of values that are suggested for the method to return.
+        
             parameter: The converter parameter to use.
             culture: The culture to use in the converter.
-            Returns: An array of values that have been converted from the target value back to the source values.
+            Returns: An array of values that have been converted from the target value back to the 
+             source values.
         """
         pass
 
@@ -2959,7 +3261,8 @@ class ListCollectionView(CollectionView, ICollectionView, IEnumerable, INotifyCo
     def CancelEdit(self):
         """
         CancelEdit(self: ListCollectionView)
-            Ends the edit transaction, and if possible, restores the original value to the item.
+            Ends the edit transaction, and if possible, restores the original value to the 
+             item.
         """
         pass
 
@@ -2999,11 +3302,14 @@ class ListCollectionView(CollectionView, ICollectionView, IEnumerable, INotifyCo
         """
         Compare(self: ListCollectionView, o1: object, o2: object) -> int
         
-            Compares two objects and returns a value that indicates whether one is less than, equal to, or greater than the other.
+            Compares two objects and returns a value that indicates whether one is less 
+             than, equal to, or greater than the other.
+        
         
             o1: The first object to compare.
             o2: The second object to compare.
-            Returns: Less than zero if o1 is less than o2, zero if o1 and o2 are equal, or greater than zero if o1 is greater than o2.
+            Returns: Less than zero if o1 is less than o2, zero if o1 and o2 are equal, or greater 
+             than zero if o1 is greater than o2.
         """
         pass
 
@@ -3011,7 +3317,9 @@ class ListCollectionView(CollectionView, ICollectionView, IEnumerable, INotifyCo
         """
         Contains(self: ListCollectionView, item: object) -> bool
         
-            Returns a value that indicates whether a given item belongs to the collection view.
+            Returns a value that indicates whether a given item belongs to the collection 
+             view.
+        
         
             item: The object to check.
             Returns: true if the item belongs to the collection view; otherwise, false.
@@ -3032,7 +3340,8 @@ class ListCollectionView(CollectionView, ICollectionView, IEnumerable, INotifyCo
         GetEnumerator(self: ListCollectionView) -> IEnumerator
         
             Returns an object that you can use to enumerate the items in the view.
-            Returns: An System.Collections.IEnumerator object that you can use to enumerate the items in the view.
+            Returns: An System.Collections.IEnumerator object that you can use to enumerate the 
+             items in the view.
         """
         pass
 
@@ -3051,10 +3360,13 @@ class ListCollectionView(CollectionView, ICollectionView, IEnumerable, INotifyCo
         """
         IndexOf(self: ListCollectionView, item: object) -> int
         
-            Returns the index where the given data item belongs in the collection, or -1 if the index of that item is unknown.
+            Returns the index where the given data item belongs in the collection, or -1 if 
+             the index of that item is unknown.
+        
         
             item: The object to check for in the collection.
-            Returns: The index of the item in the collection, or -1 if the item does not exist in the collection.
+            Returns: The index of the item in the collection, or -1 if the item does not exist in 
+             the collection.
         """
         pass
 
@@ -3062,10 +3374,13 @@ class ListCollectionView(CollectionView, ICollectionView, IEnumerable, INotifyCo
         """
         InternalContains(self: ListCollectionView, item: object) -> bool
         
-            Return a value that indicates whether the System.Windows.Data.ListCollectionView.InternalList contains the item.
+            Return a value that indicates whether the 
+             System.Windows.Data.ListCollectionView.InternalList contains the item.
+        
         
             item: The item to locate.
-            Returns: true if the System.Windows.Data.ListCollectionView.InternalList contains the item; otherwise, false.
+            Returns: true if the System.Windows.Data.ListCollectionView.InternalList contains the 
+             item; otherwise, false.
         """
         pass
 
@@ -3073,7 +3388,9 @@ class ListCollectionView(CollectionView, ICollectionView, IEnumerable, INotifyCo
         """
         InternalGetEnumerator(self: ListCollectionView) -> IEnumerator
         
-            Returns an enumerator for the System.Windows.Data.ListCollectionView.InternalList.
+            Returns an enumerator for the 
+             System.Windows.Data.ListCollectionView.InternalList.
+        
             Returns: An enumerator for the System.Windows.Data.ListCollectionView.InternalList.
         """
         pass
@@ -3082,10 +3399,13 @@ class ListCollectionView(CollectionView, ICollectionView, IEnumerable, INotifyCo
         """
         InternalIndexOf(self: ListCollectionView, item: object) -> int
         
-            Returns the index of the specified item in the System.Windows.Data.ListCollectionView.InternalList.
+            Returns the index of the specified item in the 
+             System.Windows.Data.ListCollectionView.InternalList.
+        
         
             item: The item to return an index for.
-            Returns: The index of the specified item in the System.Windows.Data.ListCollectionView.InternalList.
+            Returns: The index of the specified item in the 
+             System.Windows.Data.ListCollectionView.InternalList.
         """
         pass
 
@@ -3093,7 +3413,9 @@ class ListCollectionView(CollectionView, ICollectionView, IEnumerable, INotifyCo
         """
         InternalItemAt(self: ListCollectionView, index: int) -> object
         
-            Returns the item at the given index in the System.Windows.Data.ListCollectionView.InternalList.
+            Returns the item at the given index in the 
+             System.Windows.Data.ListCollectionView.InternalList.
+        
         
             index: The index at which the item is located.
             Returns: The item at the specified zero-based index in the view.
@@ -3104,10 +3426,13 @@ class ListCollectionView(CollectionView, ICollectionView, IEnumerable, INotifyCo
         """
         MoveCurrentToPosition(self: ListCollectionView, position: int) -> bool
         
-            Sets the item at the specified index to be the System.Windows.Data.CollectionView.CurrentItem in the view.
+            Sets the item at the specified index to be the 
+             System.Windows.Data.CollectionView.CurrentItem in the view.
+        
         
             position: The index to set the System.Windows.Data.CollectionView.CurrentItem to.
-            Returns: true if the resulting System.Windows.Data.CollectionView.CurrentItem is an item within the view; otherwise, false.
+            Returns: true if the resulting System.Windows.Data.CollectionView.CurrentItem is an item 
+             within the view; otherwise, false.
         """
         pass
 
@@ -3115,7 +3440,9 @@ class ListCollectionView(CollectionView, ICollectionView, IEnumerable, INotifyCo
         """
         OKToChangeCurrent(self: CollectionView) -> bool
         
-            Returns a value that indicates whether the view can change which item is the System.Windows.Data.CollectionView.CurrentItem.
+            Returns a value that indicates whether the view can change which item is the 
+             System.Windows.Data.CollectionView.CurrentItem.
+        
             Returns: false if a listener cancels the change; otherwise, true.
         """
         pass
@@ -3127,9 +3454,13 @@ class ListCollectionView(CollectionView, ICollectionView, IEnumerable, INotifyCo
     def OnBeginChangeLogging(self, *args): #cannot find CLR method
         """
         OnBeginChangeLogging(self: ListCollectionView, args: NotifyCollectionChangedEventArgs)
-            Called by the base class to notify the derived class that a System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged event has been posted to the message queue.
+            Called by the base class to notify the derived class that a 
+             System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged event 
+             has been posted to the message queue.
         
-            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object that is added to the change log.
+        
+            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object that 
+             is added to the change log.
         """
         pass
 
@@ -3139,11 +3470,14 @@ class ListCollectionView(CollectionView, ICollectionView, IEnumerable, INotifyCo
             Raises the System.Windows.Data.CollectionView.CollectionChanged event.
         
             sender: The sender of the event.
-            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to pass to the event handler.
+            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to 
+             pass to the event handler.
+        
         OnCollectionChanged(self: CollectionView, args: NotifyCollectionChangedEventArgs)
             Raises the System.Windows.Data.CollectionView.CollectionChanged event.
         
-            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to pass to the event handler.
+            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to 
+             pass to the event handler.
         """
         pass
 
@@ -3157,18 +3491,23 @@ class ListCollectionView(CollectionView, ICollectionView, IEnumerable, INotifyCo
     def OnCurrentChanging(self, *args): #cannot find CLR method
         """
         OnCurrentChanging(self: CollectionView, args: CurrentChangingEventArgs)
-            Raises the System.Windows.Data.CollectionView.CurrentChanging event with the specified arguments.
+            Raises the System.Windows.Data.CollectionView.CurrentChanging event with the 
+             specified arguments.
+        
         
             args: Information about the event.
         OnCurrentChanging(self: CollectionView)
-            Raises a System.Windows.Data.CollectionView.CurrentChanging event that is not cancelable.
+            Raises a System.Windows.Data.CollectionView.CurrentChanging event that is not 
+             cancelable.
         """
         pass
 
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: CollectionView, e: PropertyChangedEventArgs)
-            Raises the System.ComponentModel.INotifyPropertyChanged.PropertyChanged event using the specified arguments.
+            Raises the System.ComponentModel.INotifyPropertyChanged.PropertyChanged event 
+             using the specified arguments.
+        
         
             e: Arguments of the event being raised.
         """
@@ -3178,19 +3517,26 @@ class ListCollectionView(CollectionView, ICollectionView, IEnumerable, INotifyCo
         """
         PassesFilter(self: ListCollectionView, item: object) -> bool
         
-            Returns a value that indicates whether the specified item in the underlying collection belongs to the view.
+            Returns a value that indicates whether the specified item in the underlying 
+             collection belongs to the view.
+        
         
             item: The item to check.
-            Returns: true if the specified item belongs to the view or if there is not filter set on the collection view; otherwise, false.
+            Returns: true if the specified item belongs to the view or if there is not filter set on 
+             the collection view; otherwise, false.
         """
         pass
 
     def ProcessCollectionChanged(self, *args): #cannot find CLR method
         """
         ProcessCollectionChanged(self: ListCollectionView, args: NotifyCollectionChangedEventArgs)
-            Handles System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged events.
+            Handles 
+             System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged 
+             events.
         
-            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to process.
+        
+            args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to 
+             process.
         """
         pass
 
@@ -3201,7 +3547,8 @@ class ListCollectionView(CollectionView, ICollectionView, IEnumerable, INotifyCo
     def RefreshOrDefer(self, *args): #cannot find CLR method
         """
         RefreshOrDefer(self: CollectionView)
-            Refreshes the view or specifies that the view needs to be refreshed when the defer cycle completes.
+            Refreshes the view or specifies that the view needs to be refreshed when the 
+             defer cycle completes.
         """
         pass
 
@@ -3241,18 +3588,26 @@ class ListCollectionView(CollectionView, ICollectionView, IEnumerable, INotifyCo
     def SetCurrent(self, *args): #cannot find CLR method
         """
         SetCurrent(self: CollectionView, newItem: object, newPosition: int, count: int)
-            Sets the specified item and index as the values of the System.Windows.Data.CollectionView.CurrentItem and System.Windows.Data.CollectionView.CurrentPosition properties. This method can be called from a 
-             constructor of a derived class.
+            Sets the specified item and index as the values of the 
+             System.Windows.Data.CollectionView.CurrentItem and 
+             System.Windows.Data.CollectionView.CurrentPosition properties. This method can 
+             be called from a constructor of a derived class.
         
         
             newItem: The item to set as the System.Windows.Data.CollectionView.CurrentItem.
-            newPosition: The value to set as the System.Windows.Data.CollectionView.CurrentPosition property value.
+            newPosition: The value to set as the System.Windows.Data.CollectionView.CurrentPosition 
+             property value.
+        
             count: The number of items in the System.Windows.Data.CollectionView.
         SetCurrent(self: CollectionView, newItem: object, newPosition: int)
-            Sets the specified item and index as the values of the System.Windows.Data.CollectionView.CurrentItem and System.Windows.Data.CollectionView.CurrentPosition properties.
+            Sets the specified item and index as the values of the 
+             System.Windows.Data.CollectionView.CurrentItem and 
+             System.Windows.Data.CollectionView.CurrentPosition properties.
+        
         
             newItem: The item to set as the System.Windows.Data.CollectionView.CurrentItem.
-            newPosition: The value to set as the System.Windows.Data.CollectionView.CurrentPosition property value.
+            newPosition: The value to set as the System.Windows.Data.CollectionView.CurrentPosition 
+             property value.
         """
         pass
 
@@ -3540,7 +3895,9 @@ class MultiBinding(BindingBase, IAddChild):
         """
         ShouldSerializeBindings(self: MultiBinding) -> bool
         
-            Indicates whether the System.Windows.Data.MultiBinding.Bindings property should be persisted.
+            Indicates whether the System.Windows.Data.MultiBinding.Bindings property should 
+             be persisted.
+        
             Returns: true if the property value has changed from its default; otherwise, false.
         """
         pass
@@ -3549,7 +3906,9 @@ class MultiBinding(BindingBase, IAddChild):
         """
         ShouldSerializeValidationRules(self: MultiBinding) -> bool
         
-            Indicates whether the System.Windows.Data.MultiBinding.ValidationRules property should be persisted.
+            Indicates whether the System.Windows.Data.MultiBinding.ValidationRules property 
+             should be persisted.
+        
             Returns: true if the property value has changed from its default; otherwise, false.
         """
         pass
@@ -3673,14 +4032,17 @@ class MultiBindingExpression(BindingExpressionBase, IWeakEventListener, IDataBin
     def UpdateSource(self):
         """
         UpdateSource(self: MultiBindingExpression)
-            Sends the current binding target value to the binding source properties in System.Windows.Data.BindingMode.TwoWay or System.Windows.Data.BindingMode.OneWayToSource bindings.
+            Sends the current binding target value to the binding source properties in 
+             System.Windows.Data.BindingMode.TwoWay or 
+             System.Windows.Data.BindingMode.OneWayToSource bindings.
         """
         pass
 
     def UpdateTarget(self):
         """
         UpdateTarget(self: MultiBindingExpression)
-            Forces a data transfer from the binding source properties to the binding target property.
+            Forces a data transfer from the binding source properties to the binding target 
+             property.
         """
         pass
 
@@ -3736,29 +4098,36 @@ class ObjectDataProvider(DataSourceProvider, INotifyPropertyChanged, ISupportIni
     def BeginInit(self, *args): #cannot find CLR method
         """
         BeginInit(self: DataSourceProvider)
-            Indicates that initialization of this object is about to begin; no implicit System.Windows.Data.DataSourceProvider.Refresh occurs until the matched System.Windows.Data.DataSourceProvider.EndInit method is 
-             called.
+            Indicates that initialization of this object is about to begin; no implicit 
+             System.Windows.Data.DataSourceProvider.Refresh occurs until the matched 
+             System.Windows.Data.DataSourceProvider.EndInit method is called.
         """
         pass
 
     def BeginQuery(self, *args): #cannot find CLR method
         """
         BeginQuery(self: ObjectDataProvider)
-            Starts to create the requested object, either immediately or on a background thread, based on the value of the System.Windows.Data.ObjectDataProvider.IsAsynchronous property.
+            Starts to create the requested object, either immediately or on a background 
+             thread, based on the value of the 
+             System.Windows.Data.ObjectDataProvider.IsAsynchronous property.
         """
         pass
 
     def EndInit(self, *args): #cannot find CLR method
         """
         EndInit(self: DataSourceProvider)
-            Indicates that the initialization of this object has completed; this causes a System.Windows.Data.DataSourceProvider.Refresh if no other System.Windows.Data.DataSourceProvider.DeferRefresh is outstanding.
+            Indicates that the initialization of this object has completed; this causes a 
+             System.Windows.Data.DataSourceProvider.Refresh if no other 
+             System.Windows.Data.DataSourceProvider.DeferRefresh is outstanding.
         """
         pass
 
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: DataSourceProvider, e: PropertyChangedEventArgs)
-            Raises the System.Windows.Data.DataSourceProvider.PropertyChanged event with the provided arguments.
+            Raises the System.Windows.Data.DataSourceProvider.PropertyChanged event with 
+             the provided arguments.
+        
         
             e: Arguments of the event being raised.
         """
@@ -3770,8 +4139,12 @@ class ObjectDataProvider(DataSourceProvider, INotifyPropertyChanged, ISupportIni
             Derived classes call this method to indicate that a query has finished.
         
             newData: The data that is the result of the query.
-            error: The error that occurred while running the query. This value is null if there is no error.
-            completionWork: Optional delegate that is used to execute completion work on the UI thread, for example, to set additional properties.
+            error: The error that occurred while running the query. This value is null if there is 
+             no error.
+        
+            completionWork: Optional delegate that is used to execute completion work on the UI thread, for 
+             example, to set additional properties.
+        
             callbackArguments: Optional arguments to send as a parameter with the completionWork delegate.
         OnQueryFinished(self: DataSourceProvider, newData: object)
             Derived classes call this method to indicate that a query has finished.
@@ -3788,7 +4161,10 @@ class ObjectDataProvider(DataSourceProvider, INotifyPropertyChanged, ISupportIni
         """
         ShouldSerializeConstructorParameters(self: ObjectDataProvider) -> bool
         
-            Indicates whether the System.Windows.Data.ObjectDataProvider.ConstructorParameters property should be persisted.
+            Indicates whether the 
+             System.Windows.Data.ObjectDataProvider.ConstructorParameters property should be 
+             persisted.
+        
             Returns: true if the property value has changed from its default; otherwise, false.
         """
         pass
@@ -3797,7 +4173,9 @@ class ObjectDataProvider(DataSourceProvider, INotifyPropertyChanged, ISupportIni
         """
         ShouldSerializeMethodParameters(self: ObjectDataProvider) -> bool
         
-            Indicates whether the System.Windows.Data.ObjectDataProvider.MethodParameters property should be persisted.
+            Indicates whether the System.Windows.Data.ObjectDataProvider.MethodParameters 
+             property should be persisted.
+        
             Returns: true if the property value has changed from its default; otherwise, false.
         """
         pass
@@ -3806,7 +4184,9 @@ class ObjectDataProvider(DataSourceProvider, INotifyPropertyChanged, ISupportIni
         """
         ShouldSerializeObjectInstance(self: ObjectDataProvider) -> bool
         
-            Indicates whether the System.Windows.Data.ObjectDataProvider.ObjectInstance property should be persisted.
+            Indicates whether the System.Windows.Data.ObjectDataProvider.ObjectInstance 
+             property should be persisted.
+        
             Returns: true if the property value has changed from its default; otherwise, false.
         """
         pass
@@ -3815,7 +4195,9 @@ class ObjectDataProvider(DataSourceProvider, INotifyPropertyChanged, ISupportIni
         """
         ShouldSerializeObjectType(self: ObjectDataProvider) -> bool
         
-            Indicates whether the System.Windows.Data.ObjectDataProvider.ObjectType property should be persisted.
+            Indicates whether the System.Windows.Data.ObjectDataProvider.ObjectType 
+             property should be persisted.
+        
             Returns: true if the property value has changed from its default; otherwise, false.
         """
         pass
@@ -3892,8 +4274,12 @@ class PriorityBinding(BindingBase, IAddChild):
         """
         ShouldSerializeBindings(self: PriorityBinding) -> bool
         
-            Returns a value that indicates whether serialization processes should serialize the effective value of the System.Windows.Data.PriorityBinding.Bindings property on instances of this class.
-            Returns: true if the System.Windows.Data.PriorityBinding.Bindings property value should be serialized; otherwise, false.
+            Returns a value that indicates whether serialization processes should serialize 
+             the effective value of the System.Windows.Data.PriorityBinding.Bindings 
+             property on instances of this class.
+        
+            Returns: true if the System.Windows.Data.PriorityBinding.Bindings property value should 
+             be serialized; otherwise, false.
         """
         pass
 
@@ -3988,7 +4374,9 @@ class PropertyGroupDescription(GroupDescription, INotifyPropertyChanged):
         """
         NamesMatch(self: PropertyGroupDescription, groupName: object, itemName: object) -> bool
         
-            Returns a value that indicates whether the group name and the item name match so that the item belongs to the group.
+            Returns a value that indicates whether the group name and the item name match 
+             so that the item belongs to the group.
+        
         
             groupName: The name of the group to check.
             itemName: The name of the item to check.
@@ -4064,11 +4452,15 @@ class RelativeSource(MarkupExtension, ISupportInitialize):
         """
         ProvideValue(self: RelativeSource, serviceProvider: IServiceProvider) -> object
         
-            Returns an object that should be set as the value on the target object's property for this markup extension. For System.Windows.Data.RelativeSource, this is another System.Windows.Data.RelativeSource, 
-             using the appropriate source for the specified mode.
+            Returns an object that should be set as the value on the target object's 
+             property for this markup extension. For System.Windows.Data.RelativeSource, 
+             this is another System.Windows.Data.RelativeSource, using the appropriate 
+             source for the specified mode.
         
         
-            serviceProvider: An object that can provide services for the markup extension. In this implementation, this parameter can be null.
+            serviceProvider: An object that can provide services for the markup extension. In this 
+             implementation, this parameter can be null.
+        
             Returns: Another System.Windows.Data.RelativeSource.
         """
         pass
@@ -4077,7 +4469,9 @@ class RelativeSource(MarkupExtension, ISupportInitialize):
         """
         ShouldSerializeAncestorLevel(self: RelativeSource) -> bool
         
-            Indicates whether the System.Windows.Data.RelativeSource.AncestorLevel property should be persisted.
+            Indicates whether the System.Windows.Data.RelativeSource.AncestorLevel property 
+             should be persisted.
+        
             Returns: true if the property value has changed from its default; otherwise, false.
         """
         pass
@@ -4086,7 +4480,9 @@ class RelativeSource(MarkupExtension, ISupportInitialize):
         """
         ShouldSerializeAncestorType(self: RelativeSource) -> bool
         
-            Indicates whether the System.Windows.Data.RelativeSource.AncestorType property should be persisted.
+            Indicates whether the System.Windows.Data.RelativeSource.AncestorType property 
+             should be persisted.
+        
             Returns: true if the property value has changed from its default; otherwise, false.
         """
         pass
@@ -4194,7 +4590,9 @@ class UpdateSourceExceptionFilterCallback(MulticastDelegate, ICloneable, ISerial
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -4207,7 +4605,10 @@ class UpdateSourceExceptionFilterCallback(MulticastDelegate, ICloneable, ISerial
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -4233,10 +4634,14 @@ class UpdateSourceExceptionFilterCallback(MulticastDelegate, ICloneable, ISerial
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -4309,7 +4714,9 @@ class ValueConversionAttribute(Attribute, _Attribute):
         """
         GetHashCode(self: ValueConversionAttribute) -> int
         
-            Returns the hash code for this instance of System.Windows.Data.ValueConversionAttribute.
+            Returns the hash code for this instance of 
+             System.Windows.Data.ValueConversionAttribute.
+        
             Returns: The hash code for this instance of System.Windows.Data.ValueConversionAttribute.
         """
         pass
@@ -4404,29 +4811,35 @@ class XmlDataProvider(DataSourceProvider, INotifyPropertyChanged, ISupportInitia
     def BeginInit(self, *args): #cannot find CLR method
         """
         BeginInit(self: DataSourceProvider)
-            Indicates that initialization of this object is about to begin; no implicit System.Windows.Data.DataSourceProvider.Refresh occurs until the matched System.Windows.Data.DataSourceProvider.EndInit method is 
-             called.
+            Indicates that initialization of this object is about to begin; no implicit 
+             System.Windows.Data.DataSourceProvider.Refresh occurs until the matched 
+             System.Windows.Data.DataSourceProvider.EndInit method is called.
         """
         pass
 
     def BeginQuery(self, *args): #cannot find CLR method
         """
         BeginQuery(self: XmlDataProvider)
-            Prepares the loading of either the inline XML or the external XML file to produce a collection of XML nodes.
+            Prepares the loading of either the inline XML or the external XML file to 
+             produce a collection of XML nodes.
         """
         pass
 
     def EndInit(self, *args): #cannot find CLR method
         """
         EndInit(self: XmlDataProvider)
-            Indicates that the initialization of this element has completed; this causes a System.Windows.Data.DataSourceProvider.Refresh if no other System.Windows.Data.DataSourceProvider.DeferRefresh is outstanding.
+            Indicates that the initialization of this element has completed; this causes a 
+             System.Windows.Data.DataSourceProvider.Refresh if no other 
+             System.Windows.Data.DataSourceProvider.DeferRefresh is outstanding.
         """
         pass
 
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: DataSourceProvider, e: PropertyChangedEventArgs)
-            Raises the System.Windows.Data.DataSourceProvider.PropertyChanged event with the provided arguments.
+            Raises the System.Windows.Data.DataSourceProvider.PropertyChanged event with 
+             the provided arguments.
+        
         
             e: Arguments of the event being raised.
         """
@@ -4438,8 +4851,12 @@ class XmlDataProvider(DataSourceProvider, INotifyPropertyChanged, ISupportInitia
             Derived classes call this method to indicate that a query has finished.
         
             newData: The data that is the result of the query.
-            error: The error that occurred while running the query. This value is null if there is no error.
-            completionWork: Optional delegate that is used to execute completion work on the UI thread, for example, to set additional properties.
+            error: The error that occurred while running the query. This value is null if there is 
+             no error.
+        
+            completionWork: Optional delegate that is used to execute completion work on the UI thread, for 
+             example, to set additional properties.
+        
             callbackArguments: Optional arguments to send as a parameter with the completionWork delegate.
         OnQueryFinished(self: DataSourceProvider, newData: object)
             Derived classes call this method to indicate that a query has finished.
@@ -4456,7 +4873,9 @@ class XmlDataProvider(DataSourceProvider, INotifyPropertyChanged, ISupportInitia
         """
         ShouldSerializeSource(self: XmlDataProvider) -> bool
         
-            Indicates whether the System.Windows.Data.XmlDataProvider.Source property should be persisted.
+            Indicates whether the System.Windows.Data.XmlDataProvider.Source property 
+             should be persisted.
+        
             Returns: true if the property value has changed from its default; otherwise, false.
         """
         pass
@@ -4465,7 +4884,9 @@ class XmlDataProvider(DataSourceProvider, INotifyPropertyChanged, ISupportInitia
         """
         ShouldSerializeXmlSerializer(self: XmlDataProvider) -> bool
         
-            Indicates whether the System.Windows.Data.XmlDataProvider.XmlSerializer property should be persisted.
+            Indicates whether the System.Windows.Data.XmlDataProvider.XmlSerializer 
+             property should be persisted.
+        
             Returns: true if the property value has changed from its default; otherwise, false.
         """
         pass
@@ -4474,7 +4895,9 @@ class XmlDataProvider(DataSourceProvider, INotifyPropertyChanged, ISupportInitia
         """
         ShouldSerializeXPath(self: XmlDataProvider) -> bool
         
-            Indicates whether the System.Windows.Data.XmlDataProvider.XPath property should be persisted.
+            Indicates whether the System.Windows.Data.XmlDataProvider.XPath property should 
+             be persisted.
+        
             Returns: true if the property value has changed from its default; otherwise, false.
         """
         pass
@@ -4558,7 +4981,10 @@ class XmlNamespaceMapping(object, ISupportInitialize):
         """
         Equals(self: XmlNamespaceMapping, obj: object) -> bool
         
-            Returns a value that indicates whether this System.Windows.Data.XmlNamespaceMapping is equivalent to the specified instance.
+            Returns a value that indicates whether this 
+             System.Windows.Data.XmlNamespaceMapping is equivalent to the specified 
+             instance.
+        
         
             obj: The instance to compare for equality.
             Returns: true if the two instances are the same; otherwise, false.
@@ -4642,7 +5068,9 @@ class XmlNamespaceMappingCollection(XmlNamespaceManager, IXmlNamespaceResolver, 
     def AddText(self, *args): #cannot find CLR method
         """
         AddText(self: XmlNamespaceMappingCollection, text: str)
-            Adds a text string as a child of this System.Windows.Data.XmlNamespaceMappingCollection object.
+            Adds a text string as a child of this 
+             System.Windows.Data.XmlNamespaceMappingCollection object.
+        
         
             text: The text string to add as a child.
         """
@@ -4659,17 +5087,24 @@ class XmlNamespaceMappingCollection(XmlNamespaceManager, IXmlNamespaceResolver, 
         """
         Contains(self: XmlNamespaceMappingCollection, mapping: XmlNamespaceMapping) -> bool
         
-            Returns a value that indicates whether this collection contains the specified System.Windows.Data.XmlNamespaceMapping object.
+            Returns a value that indicates whether this collection contains the specified 
+             System.Windows.Data.XmlNamespaceMapping object.
         
-            mapping: The System.Windows.Data.XmlNamespaceMapping object of interest. This cannot be null.
-            Returns: true if this collection contains the specified System.Windows.Data.XmlNamespaceMapping object; otherwise, false.
+        
+            mapping: The System.Windows.Data.XmlNamespaceMapping object of interest. This cannot be 
+             null.
+        
+            Returns: true if this collection contains the specified 
+             System.Windows.Data.XmlNamespaceMapping object; otherwise, false.
         """
         pass
 
     def CopyTo(self, array, arrayIndex):
         """
         CopyTo(self: XmlNamespaceMappingCollection, array: Array[XmlNamespaceMapping], arrayIndex: int)
-            Copies the items of the collection to the specified array, starting at the specified index.
+            Copies the items of the collection to the specified array, starting at the 
+             specified index.
+        
         
             array: The array that is the destination of the items copied from the collection.
             arrayIndex: The zero-based index in array at which copying starts.
@@ -4680,8 +5115,11 @@ class XmlNamespaceMappingCollection(XmlNamespaceManager, IXmlNamespaceResolver, 
         """
         GetEnumerator(self: XmlNamespaceMappingCollection) -> IEnumerator
         
-            Returns an System.Collections.IEnumerator object that you can use to enumerate the items in this collection.
-            Returns: An System.Collections.IEnumerator object that you can use to enumerate the items in this collection.
+            Returns an System.Collections.IEnumerator object that you can use to enumerate 
+             the items in this collection.
+        
+            Returns: An System.Collections.IEnumerator object that you can use to enumerate the 
+             items in this collection.
         """
         pass
 
@@ -4698,10 +5136,15 @@ class XmlNamespaceMappingCollection(XmlNamespaceManager, IXmlNamespaceResolver, 
         """
         Remove(self: XmlNamespaceMappingCollection, mapping: XmlNamespaceMapping) -> bool
         
-            Removes the specified System.Windows.Data.XmlNamespaceMapping object from this collection.
+            Removes the specified System.Windows.Data.XmlNamespaceMapping object from this 
+             collection.
         
-            mapping: The System.Windows.Data.XmlNamespaceMapping object to remove. This cannot be null.
-            Returns: true if the specified System.Windows.Data.XmlNamespaceMapping object has been successfully removed; otherwise, false.
+        
+            mapping: The System.Windows.Data.XmlNamespaceMapping object to remove. This cannot be 
+             null.
+        
+            Returns: true if the specified System.Windows.Data.XmlNamespaceMapping object has been 
+             successfully removed; otherwise, false.
         """
         pass
 

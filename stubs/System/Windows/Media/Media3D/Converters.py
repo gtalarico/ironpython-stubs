@@ -2,7 +2,7 @@
 # module System.Windows.Media.Media3D.Converters calls itself Converters
 # from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -18,7 +18,9 @@ class Matrix3DValueSerializer(ValueSerializer):
         """
         CanConvertFromString(self: Matrix3DValueSerializer, value: str, context: IValueSerializerContext) -> bool
         
-            Determines if conversion from a given System.String to an instance of System.Windows.Media.Media3D.Matrix3D is possible.
+            Determines if conversion from a given System.String to an instance of 
+             System.Windows.Media.Media3D.Matrix3D is possible.
+        
         
             value: String to evaluate for conversion.
             context: Context information used for conversion.
@@ -30,7 +32,9 @@ class Matrix3DValueSerializer(ValueSerializer):
         """
         CanConvertToString(self: Matrix3DValueSerializer, value: object, context: IValueSerializerContext) -> bool
         
-            Determines if an instance of System.Windows.Media.Media3D.Matrix3D can be converted to a System.String.
+            Determines if an instance of System.Windows.Media.Media3D.Matrix3D can be 
+             converted to a System.String.
+        
         
             value: Instance of System.Windows.Media.Media3D.Matrix3D to evaluate for conversion.
             context: Context information used for conversion.
@@ -46,7 +50,8 @@ class Matrix3DValueSerializer(ValueSerializer):
         
             value: System.String value to convert into a System.Windows.Media.Media3D.Matrix3D.
             context: Context information used for conversion.
-            Returns: A new instance of System.Windows.Media.Media3D.Matrix3D based on the supplied value.
+            Returns: A new instance of System.Windows.Media.Media3D.Matrix3D based on the supplied 
+             value.
         """
         pass
 
@@ -54,11 +59,14 @@ class Matrix3DValueSerializer(ValueSerializer):
         """
         ConvertToString(self: Matrix3DValueSerializer, value: object, context: IValueSerializerContext) -> str
         
-            Converts an instance of System.Windows.Media.Media3D.Matrix3D to a System.String.
+            Converts an instance of System.Windows.Media.Media3D.Matrix3D to a 
+             System.String.
+        
         
             value: Instance of System.Windows.Media.Media3D.Matrix3D to evaluate for conversion.
             context: Context information used for conversion.
-            Returns: A System.String representation of the supplied System.Windows.Media.Media3D.Matrix3D object.
+            Returns: A System.String representation of the supplied 
+             System.Windows.Media.Media3D.Matrix3D object.
         """
         pass
 
@@ -73,7 +81,9 @@ class Point3DCollectionValueSerializer(ValueSerializer):
         """
         CanConvertFromString(self: Point3DCollectionValueSerializer, value: str, context: IValueSerializerContext) -> bool
         
-            Determines if conversion from a given System.String to an instance of System.Windows.Media.Media3D.Point3DCollection is possible.
+            Determines if conversion from a given System.String to an instance of 
+             System.Windows.Media.Media3D.Point3DCollection is possible.
+        
         
             value: String to evaluate for conversion.
             context: Context information used for conversion.
@@ -85,9 +95,13 @@ class Point3DCollectionValueSerializer(ValueSerializer):
         """
         CanConvertToString(self: Point3DCollectionValueSerializer, value: object, context: IValueSerializerContext) -> bool
         
-            Determines if an instance of System.Windows.Media.Media3D.Point3DCollection can be converted to a System.String.
+            Determines if an instance of System.Windows.Media.Media3D.Point3DCollection can 
+             be converted to a System.String.
         
-            value: Instance of System.Windows.Media.Media3D.Point3DCollection to evaluate for conversion.
+        
+            value: Instance of System.Windows.Media.Media3D.Point3DCollection to evaluate for 
+             conversion.
+        
             context: Context information used for conversion.
             Returns: true if value can be converted into a System.String; otherwise, false.
         """
@@ -99,9 +113,12 @@ class Point3DCollectionValueSerializer(ValueSerializer):
         
             Converts a System.String into a System.Windows.Media.Media3D.Point3DCollection.
         
-            value: System.String value to convert into a System.Windows.Media.Media3D.Point3DCollection.
+            value: System.String value to convert into a 
+             System.Windows.Media.Media3D.Point3DCollection.
+        
             context: Context information used for conversion.
-            Returns: A new instance of System.Windows.Media.Media3D.Point3DCollection based on the supplied value.
+            Returns: A new instance of System.Windows.Media.Media3D.Point3DCollection based on the 
+             supplied value.
         """
         pass
 
@@ -109,11 +126,16 @@ class Point3DCollectionValueSerializer(ValueSerializer):
         """
         ConvertToString(self: Point3DCollectionValueSerializer, value: object, context: IValueSerializerContext) -> str
         
-            Converts an instance of System.Windows.Media.Media3D.Point3DCollection to a System.String.
+            Converts an instance of System.Windows.Media.Media3D.Point3DCollection to a 
+             System.String.
         
-            value: Instance of System.Windows.Media.Media3D.Point3DCollection to evaluate for conversion.
+        
+            value: Instance of System.Windows.Media.Media3D.Point3DCollection to evaluate for 
+             conversion.
+        
             context: Context information used for conversion.
-            Returns: A System.String representation of the supplied System.Windows.Media.Media3D.Point3DCollection object.
+            Returns: A System.String representation of the supplied 
+             System.Windows.Media.Media3D.Point3DCollection object.
         """
         pass
 
@@ -128,7 +150,9 @@ class Point3DValueSerializer(ValueSerializer):
         """
         CanConvertFromString(self: Point3DValueSerializer, value: str, context: IValueSerializerContext) -> bool
         
-            Determines if conversion from a given System.String to an instance of System.Windows.Media.Media3D.Point3D is possible.
+            Determines if conversion from a given System.String to an instance of 
+             System.Windows.Media.Media3D.Point3D is possible.
+        
         
             value: String to evaluate for conversion.
             context: Context information used for conversion.
@@ -140,7 +164,9 @@ class Point3DValueSerializer(ValueSerializer):
         """
         CanConvertToString(self: Point3DValueSerializer, value: object, context: IValueSerializerContext) -> bool
         
-            Determines if an instance of System.Windows.Media.Media3D.Point3D can be converted to a System.String.
+            Determines if an instance of System.Windows.Media.Media3D.Point3D can be 
+             converted to a System.String.
+        
         
             value: Instance of System.Windows.Media.Media3D.Point3D to evaluate for conversion.
             context: Context information used for conversion.
@@ -156,7 +182,8 @@ class Point3DValueSerializer(ValueSerializer):
         
             value: System.String value to convert into a System.Windows.Media.Media3D.Point3D.
             context: Context information used for conversion.
-            Returns: A new instance of System.Windows.Media.Media3D.Point3D based on the supplied value.
+            Returns: A new instance of System.Windows.Media.Media3D.Point3D based on the supplied 
+             value.
         """
         pass
 
@@ -168,7 +195,8 @@ class Point3DValueSerializer(ValueSerializer):
         
             value: Instance of System.Windows.Media.Media3D.Point3D to evaluate for conversion.
             context: Context information used for conversion.
-            Returns: A System.String representation of the supplied System.Windows.Media.Media3D.Point3D object.
+            Returns: A System.String representation of the supplied 
+             System.Windows.Media.Media3D.Point3D object.
         """
         pass
 
@@ -183,7 +211,9 @@ class Point4DValueSerializer(ValueSerializer):
         """
         CanConvertFromString(self: Point4DValueSerializer, value: str, context: IValueSerializerContext) -> bool
         
-            Determines if conversion from a given System.String to an instance of System.Windows.Media.Media3D.Point4D is possible.
+            Determines if conversion from a given System.String to an instance of 
+             System.Windows.Media.Media3D.Point4D is possible.
+        
         
             value: String to evaluate for conversion.
             context: Context information used for conversion.
@@ -195,7 +225,9 @@ class Point4DValueSerializer(ValueSerializer):
         """
         CanConvertToString(self: Point4DValueSerializer, value: object, context: IValueSerializerContext) -> bool
         
-            Determines if an instance of System.Windows.Media.Media3D.Point4D can be converted to a System.String.
+            Determines if an instance of System.Windows.Media.Media3D.Point4D can be 
+             converted to a System.String.
+        
         
             value: Instance of System.Windows.Media.Media3D.Point4D to evaluate for conversion.
             context: Context information used for conversion.
@@ -211,7 +243,8 @@ class Point4DValueSerializer(ValueSerializer):
         
             value: System.String value to convert into a System.Windows.Media.Media3D.Point4D.
             context: Context information used for conversion.
-            Returns: A new instance of System.Windows.Media.Media3D.Point4D based on the supplied value.
+            Returns: A new instance of System.Windows.Media.Media3D.Point4D based on the supplied 
+             value.
         """
         pass
 
@@ -223,7 +256,8 @@ class Point4DValueSerializer(ValueSerializer):
         
             value: Instance of System.Windows.Media.Media3D.Point4D to evaluate for conversion.
             context: Context information used for conversion.
-            Returns: A System.String representation of the supplied System.Windows.Media.Media3D.Point4D object.
+            Returns: A System.String representation of the supplied 
+             System.Windows.Media.Media3D.Point4D object.
         """
         pass
 
@@ -238,7 +272,9 @@ class QuaternionValueSerializer(ValueSerializer):
         """
         CanConvertFromString(self: QuaternionValueSerializer, value: str, context: IValueSerializerContext) -> bool
         
-            Determines if conversion from a given System.String to an instance of System.Windows.Media.Media3D.Quaternion is possible.
+            Determines if conversion from a given System.String to an instance of 
+             System.Windows.Media.Media3D.Quaternion is possible.
+        
         
             value: String to evaluate for conversion.
             context: Context information used for conversion.
@@ -250,7 +286,9 @@ class QuaternionValueSerializer(ValueSerializer):
         """
         CanConvertToString(self: QuaternionValueSerializer, value: object, context: IValueSerializerContext) -> bool
         
-            Determines if an instance of System.Windows.Media.Media3D.Quaternion can be converted to a System.String.
+            Determines if an instance of System.Windows.Media.Media3D.Quaternion can be 
+             converted to a System.String.
+        
         
             value: Instance of System.Windows.Media.Media3D.Quaternion to evaluate for conversion.
             context: Context information used for conversion.
@@ -266,7 +304,8 @@ class QuaternionValueSerializer(ValueSerializer):
         
             value: System.String value to convert into a System.Windows.Media.Media3D.Quaternion.
             context: Context information used for conversion.
-            Returns: A new instance of System.Windows.Media.Media3D.Quaternion based on the supplied value.
+            Returns: A new instance of System.Windows.Media.Media3D.Quaternion based on the supplied 
+             value.
         """
         pass
 
@@ -274,11 +313,14 @@ class QuaternionValueSerializer(ValueSerializer):
         """
         ConvertToString(self: QuaternionValueSerializer, value: object, context: IValueSerializerContext) -> str
         
-            Converts an instance of System.Windows.Media.Media3D.Quaternion to a System.String.
+            Converts an instance of System.Windows.Media.Media3D.Quaternion to a 
+             System.String.
+        
         
             value: Instance of System.Windows.Media.Media3D.Quaternion to evaluate for conversion.
             context: Context information used for conversion.
-            Returns: A System.String representation of the supplied System.Windows.Media.Media3D.Quaternion object.
+            Returns: A System.String representation of the supplied 
+             System.Windows.Media.Media3D.Quaternion object.
         """
         pass
 
@@ -293,7 +335,9 @@ class Rect3DValueSerializer(ValueSerializer):
         """
         CanConvertFromString(self: Rect3DValueSerializer, value: str, context: IValueSerializerContext) -> bool
         
-            Determines if conversion from a given System.String to an instance of System.Windows.Media.Media3D.Rect3D is possible.
+            Determines if conversion from a given System.String to an instance of 
+             System.Windows.Media.Media3D.Rect3D is possible.
+        
         
             value: String to evaluate for conversion.
             context: Context information used for conversion.
@@ -305,7 +349,9 @@ class Rect3DValueSerializer(ValueSerializer):
         """
         CanConvertToString(self: Rect3DValueSerializer, value: object, context: IValueSerializerContext) -> bool
         
-            Determines if an instance of System.Windows.Media.Media3D.Rect3D can be converted to a System.String.
+            Determines if an instance of System.Windows.Media.Media3D.Rect3D can be 
+             converted to a System.String.
+        
         
             value: Instance of System.Windows.Media.Media3D.Rect3D to evaluate for conversion.
             context: Context information used for conversion.
@@ -321,7 +367,8 @@ class Rect3DValueSerializer(ValueSerializer):
         
             value: System.String value to convert into a System.Windows.Media.Media3D.Rect3D.
             context: Context information used for conversion.
-            Returns: A new instance of System.Windows.Media.Media3D.Rect3D based on the supplied value.
+            Returns: A new instance of System.Windows.Media.Media3D.Rect3D based on the supplied 
+             value.
         """
         pass
 
@@ -333,7 +380,8 @@ class Rect3DValueSerializer(ValueSerializer):
         
             value: Instance of System.Windows.Media.Media3D.Rect3D to evaluate for conversion.
             context: Context information used for conversion.
-            Returns: A System.String representation of the supplied System.Windows.Media.Media3D.Rect3D object.
+            Returns: A System.String representation of the supplied 
+             System.Windows.Media.Media3D.Rect3D object.
         """
         pass
 
@@ -348,7 +396,9 @@ class Size3DValueSerializer(ValueSerializer):
         """
         CanConvertFromString(self: Size3DValueSerializer, value: str, context: IValueSerializerContext) -> bool
         
-            Determines if conversion from a given System.String to an instance of System.Windows.Media.Media3D.Size3D is possible.
+            Determines if conversion from a given System.String to an instance of 
+             System.Windows.Media.Media3D.Size3D is possible.
+        
         
             value: String to evaluate for conversion.
             context: Context information used for conversion.
@@ -360,7 +410,9 @@ class Size3DValueSerializer(ValueSerializer):
         """
         CanConvertToString(self: Size3DValueSerializer, value: object, context: IValueSerializerContext) -> bool
         
-            Determines if an instance of System.Windows.Media.Media3D.Size3D can be converted to a System.String.
+            Determines if an instance of System.Windows.Media.Media3D.Size3D can be 
+             converted to a System.String.
+        
         
             value: Instance of System.Windows.Media.Media3D.Size3D to evaluate for conversion.
             context: Context information used for conversion.
@@ -376,7 +428,8 @@ class Size3DValueSerializer(ValueSerializer):
         
             value: System.String value to convert into a System.Windows.Media.Media3D.Size3D.
             context: Context information used for conversion.
-            Returns: A new instance of System.Windows.Media.Media3D.Size3D based on the supplied value.
+            Returns: A new instance of System.Windows.Media.Media3D.Size3D based on the supplied 
+             value.
         """
         pass
 
@@ -388,7 +441,8 @@ class Size3DValueSerializer(ValueSerializer):
         
             value: Instance of System.Windows.Media.Media3D.Size3D to evaluate for conversion.
             context: Context information used for conversion.
-            Returns: A System.String representation of the supplied System.Windows.Media.Media3D.Size3D object.
+            Returns: A System.String representation of the supplied 
+             System.Windows.Media.Media3D.Size3D object.
         """
         pass
 
@@ -403,7 +457,9 @@ class Vector3DCollectionValueSerializer(ValueSerializer):
         """
         CanConvertFromString(self: Vector3DCollectionValueSerializer, value: str, context: IValueSerializerContext) -> bool
         
-            Determines if conversion from a given System.String to an instance of System.Windows.Media.Media3D.Vector3DCollection is possible.
+            Determines if conversion from a given System.String to an instance of 
+             System.Windows.Media.Media3D.Vector3DCollection is possible.
+        
         
             value: String to evaluate for conversion.
             context: Context information used for conversion.
@@ -415,9 +471,13 @@ class Vector3DCollectionValueSerializer(ValueSerializer):
         """
         CanConvertToString(self: Vector3DCollectionValueSerializer, value: object, context: IValueSerializerContext) -> bool
         
-            Determines if an instance of System.Windows.Media.Media3D.Vector3DCollection can be converted to a System.String.
+            Determines if an instance of System.Windows.Media.Media3D.Vector3DCollection 
+             can be converted to a System.String.
         
-            value: Instance of System.Windows.Media.Media3D.Vector3DCollection to evaluate for conversion.
+        
+            value: Instance of System.Windows.Media.Media3D.Vector3DCollection to evaluate for 
+             conversion.
+        
             context: Context information used for conversion.
             Returns: true if value can be converted into a System.String; otherwise, false.
         """
@@ -429,9 +489,12 @@ class Vector3DCollectionValueSerializer(ValueSerializer):
         
             Converts a System.String into a System.Windows.Media.Media3D.Vector3DCollection.
         
-            value: System.String value to convert into a System.Windows.Media.Media3D.Vector3DCollection.
+            value: System.String value to convert into a 
+             System.Windows.Media.Media3D.Vector3DCollection.
+        
             context: Context information used for conversion.
-            Returns: A new instance of System.Windows.Media.Media3D.Vector3DCollection based on the supplied value.
+            Returns: A new instance of System.Windows.Media.Media3D.Vector3DCollection based on the 
+             supplied value.
         """
         pass
 
@@ -439,11 +502,16 @@ class Vector3DCollectionValueSerializer(ValueSerializer):
         """
         ConvertToString(self: Vector3DCollectionValueSerializer, value: object, context: IValueSerializerContext) -> str
         
-            Converts an instance of System.Windows.Media.Media3D.Vector3DCollection to a System.String.
+            Converts an instance of System.Windows.Media.Media3D.Vector3DCollection to a 
+             System.String.
         
-            value: Instance of System.Windows.Media.Media3D.Vector3DCollection to evaluate for conversion.
+        
+            value: Instance of System.Windows.Media.Media3D.Vector3DCollection to evaluate for 
+             conversion.
+        
             context: Context information used for conversion.
-            Returns: A System.String representation of the supplied System.Windows.Media.Media3D.Vector3DCollection object.
+            Returns: A System.String representation of the supplied 
+             System.Windows.Media.Media3D.Vector3DCollection object.
         """
         pass
 
@@ -458,7 +526,9 @@ class Vector3DValueSerializer(ValueSerializer):
         """
         CanConvertFromString(self: Vector3DValueSerializer, value: str, context: IValueSerializerContext) -> bool
         
-            Determines if conversion from a given System.String to an instance of System.Windows.Media.Media3D.Vector3D is possible.
+            Determines if conversion from a given System.String to an instance of 
+             System.Windows.Media.Media3D.Vector3D is possible.
+        
         
             value: String to evaluate for conversion.
             context: Context information used for conversion.
@@ -470,7 +540,9 @@ class Vector3DValueSerializer(ValueSerializer):
         """
         CanConvertToString(self: Vector3DValueSerializer, value: object, context: IValueSerializerContext) -> bool
         
-            Determines if an instance of System.Windows.Media.Media3D.Vector3D can be converted to a System.String.
+            Determines if an instance of System.Windows.Media.Media3D.Vector3D can be 
+             converted to a System.String.
+        
         
             value: Instance of System.Windows.Media.Media3D.Vector3D to evaluate for conversion.
             context: Context information used for conversion.
@@ -486,7 +558,8 @@ class Vector3DValueSerializer(ValueSerializer):
         
             value: System.String value to convert into a System.Windows.Media.Media3D.Vector3D.
             context: Context information used for conversion.
-            Returns: A new instance of System.Windows.Media.Media3D.Vector3D based on the supplied value.
+            Returns: A new instance of System.Windows.Media.Media3D.Vector3D based on the supplied 
+             value.
         """
         pass
 
@@ -494,11 +567,14 @@ class Vector3DValueSerializer(ValueSerializer):
         """
         ConvertToString(self: Vector3DValueSerializer, value: object, context: IValueSerializerContext) -> str
         
-            Converts an instance of System.Windows.Media.Media3D.Vector3D to a System.String.
+            Converts an instance of System.Windows.Media.Media3D.Vector3D to a 
+             System.String.
+        
         
             value: Instance of System.Windows.Media.Media3D.Vector3D to evaluate for conversion.
             context: Context information used for conversion.
-            Returns: A System.String representation of the supplied System.Windows.Media.Media3D.Vector3D object.
+            Returns: A System.String representation of the supplied 
+             System.Windows.Media.Media3D.Vector3D object.
         """
         pass
 

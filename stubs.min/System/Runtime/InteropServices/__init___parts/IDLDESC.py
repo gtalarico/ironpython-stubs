@@ -1,5 +1,5 @@
 class IDLDESC(object):
-    """ Use System.Runtime.InteropServices.ComTypes.IDLDESC instead. """
-    dwReserved = None
-    wIDLFlags = None
+ """ Use System.Runtime.InteropServices.ComTypes.IDLDESC instead. """
+ dwReserved=None
+ wIDLFlags=None
 

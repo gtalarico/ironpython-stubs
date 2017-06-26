@@ -1,8 +1,8 @@
 # encoding: utf-8
 # module System.Windows.Markup calls itself Markup
-# from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,PresentationCore,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,WindowsBase,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
+# from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,WindowsBase,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,PresentationCore,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -18,9 +18,14 @@ class ComponentResourceKeyConverter(ExpressionConverter):
   """
   CanConvertFrom(self: ComponentResourceKeyConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Determines whether an object of the specified type can be converted to an instance of System.Windows.ComponentResourceKey,using the specified context. Always returns false.
+   Determines whether an object of the specified type can be converted to an 
+    instance of System.Windows.ComponentResourceKey,using the specified context. 
+    Always returns false.
   
-   context: A format context that provides information about the environment from which this converter is being invoked.
+  
+   context: A format context that provides information about the environment from which 
+    this converter is being invoked.
+  
    sourceType: The type being evaluated for conversion.
    Returns: false in all cases.
   """
@@ -29,9 +34,14 @@ class ComponentResourceKeyConverter(ExpressionConverter):
   """
   CanConvertTo(self: ComponentResourceKeyConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Determines whether an instance of System.Windows.ComponentResourceKey can be converted to the specified type,using the specified context. Always returns false.
+   Determines whether an instance of System.Windows.ComponentResourceKey can be 
+    converted to the specified type,using the specified context. Always returns 
+    false.
   
-   context: A format context that provides information about the environment from which this converter is being invoked.
+  
+   context: A format context that provides information about the environment from which 
+    this converter is being invoked.
+  
    destinationType: The type being evaluated for conversion.
    Returns: false in all cases.
   """
@@ -40,9 +50,14 @@ class ComponentResourceKeyConverter(ExpressionConverter):
   """
   ConvertFrom(self: ComponentResourceKeyConverter,context: ITypeDescriptorContext,culture: CultureInfo,value: object) -> object
   
-   Attempts to convert the specified object to a System.Windows.ComponentResourceKey,using the specified context. Throws an exception in all cases.
+   Attempts to convert the specified object to a 
+    System.Windows.ComponentResourceKey,using the specified context. Throws an 
+    exception in all cases.
   
-   context: A format context that provides information about the environment from which this converter is being invoked.
+  
+   context: A format context that provides information about the environment from which 
+    this converter is being invoked.
+  
    culture: Culture specific information.
    value: The object to convert.
    Returns: Throws an exception in all cases.
@@ -52,9 +67,13 @@ class ComponentResourceKeyConverter(ExpressionConverter):
   """
   ConvertTo(self: ComponentResourceKeyConverter,context: ITypeDescriptorContext,culture: CultureInfo,value: object,destinationType: Type) -> object
   
-   Attempts to convert a System.Windows.ComponentResourceKey to the specified type,using the specified context. Throws an exception in all cases.
+   Attempts to convert a System.Windows.ComponentResourceKey to the specified 
+    type,using the specified context. Throws an exception in all cases.
   
-   context: A format context that provides information about the environment from which this converter is being invoked.
+  
+   context: A format context that provides information about the environment from which 
+    this converter is being invoked.
+  
    culture: Culture specific information.
    value: The object to convert.
    destinationType: The type to convert the object to.
@@ -72,9 +91,13 @@ class DependencyPropertyConverter(TypeConverter):
   """
   CanConvertFrom(self: DependencyPropertyConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Determines whether an object of the specified type can be converted to an instance of System.Windows.DependencyProperty.
+   Determines whether an object of the specified type can be converted to an 
+    instance of System.Windows.DependencyProperty.
   
-   context: A format context that provides information about the environment from which this converter is being invoked.
+  
+   context: A format context that provides information about the environment from which 
+    this converter is being invoked.
+  
    sourceType: The type being evaluated for conversion.
    Returns: true if this converter can perform the operation; otherwise,false.
   """
@@ -83,9 +106,13 @@ class DependencyPropertyConverter(TypeConverter):
   """
   CanConvertTo(self: DependencyPropertyConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Determines whether an instance of System.Windows.DependencyProperty can be converted to the specified type.
+   Determines whether an instance of System.Windows.DependencyProperty can be 
+    converted to the specified type.
   
-   context: A format context that provides information about the environment from which this converter is being invoked.
+  
+   context: A format context that provides information about the environment from which 
+    this converter is being invoked.
+  
    destinationType: The type being evaluated for conversion.
    Returns: true if this converter can perform the operation; otherwise,false.
   """
@@ -94,21 +121,30 @@ class DependencyPropertyConverter(TypeConverter):
   """
   ConvertFrom(self: DependencyPropertyConverter,context: ITypeDescriptorContext,culture: CultureInfo,source: object) -> object
   
-   Attempts to convert the specified object to a System.Windows.DependencyProperty,using the specified context.
+   Attempts to convert the specified object to a 
+    System.Windows.DependencyProperty,using the specified context.
   
-   context: A format context that provides information about the environment from which this converter is being invoked.
+  
+   context: A format context that provides information about the environment from which 
+    this converter is being invoked.
+  
    culture: Culture specific information.
    source: The object to convert.
-   Returns: The converted object. If the conversion is successful,this is a System.Windows.DependencyProperty.
+   Returns: The converted object. If the conversion is successful,this is a 
+    System.Windows.DependencyProperty.
   """
   pass
  def ConvertTo(self,*__args):
   """
   ConvertTo(self: DependencyPropertyConverter,context: ITypeDescriptorContext,culture: CultureInfo,value: object,destinationType: Type) -> object
   
-   Attempts to convert a System.Windows.DependencyProperty to the specified type,using the specified context. Always throws an exception.
+   Attempts to convert a System.Windows.DependencyProperty to the specified type,
+    using the specified context. Always throws an exception.
   
-   context: A format context that provides information about the environment from which this converter is being invoked.
+  
+   context: A format context that provides information about the environment from which 
+    this converter is being invoked.
+  
    culture: Culture specific information.
    value: The object to convert.
    destinationType: The type to convert the object to.
@@ -181,7 +217,9 @@ class EventSetterHandlerConverter(TypeConverter):
   """
   CanConvertFrom(self: EventSetterHandlerConverter,typeDescriptorContext: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Returns whether this converter can convert an object of one type to a System.Delegate.
+   Returns whether this converter can convert an object of one type to a 
+    System.Delegate.
+  
   
    typeDescriptorContext: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    sourceType: A System.Type that represents the type you want to convert from.
@@ -215,7 +253,9 @@ class EventSetterHandlerConverter(TypeConverter):
   """
   ConvertTo(self: EventSetterHandlerConverter,typeDescriptorContext: ITypeDescriptorContext,cultureInfo: CultureInfo,value: object,destinationType: Type) -> object
   
-   Converts the specified value object to the specified type. Always throws an exception.
+   Converts the specified value object to the specified type. Always throws an 
+    exception.
+  
   
    typeDescriptorContext: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    cultureInfo: The System.Globalization.CultureInfo to use as the current culture.
@@ -252,7 +292,9 @@ class InternalTypeHelper(object):
  def AddEventHandler(self,*args):
   """
   AddEventHandler(self: InternalTypeHelper,eventInfo: EventInfo,target: object,handler: Delegate)
-   When overridden in a derived (generated) class,attaches an event handler delegate to an internal event.
+   When overridden in a derived (generated) class,attaches an event handler 
+    delegate to an internal event.
+  
   
    eventInfo: The event information for the event (CLR reflection information).
    target: The target where the handler is attached.
@@ -263,7 +305,9 @@ class InternalTypeHelper(object):
   """
   CreateDelegate(self: InternalTypeHelper,delegateType: Type,target: object,handler: str) -> Delegate
   
-   When overridden in a derived (generated) class,creates an event delegate referencing a non-public handler method.
+   When overridden in a derived (generated) class,creates an event delegate 
+    referencing a non-public handler method.
+  
   
    delegateType: The System.Type of the delegate.
    target: The target where the handler is attached.
@@ -275,7 +319,9 @@ class InternalTypeHelper(object):
   """
   CreateInstance(self: InternalTypeHelper,type: Type,culture: CultureInfo) -> object
   
-   When overridden in a derived (generated) class,creates an instance of an internal type.
+   When overridden in a derived (generated) class,creates an instance of an 
+    internal type.
+  
   
    type: The System.Type to create.
    culture: Culture specific information.
@@ -286,7 +332,9 @@ class InternalTypeHelper(object):
   """
   GetPropertyValue(self: InternalTypeHelper,propertyInfo: PropertyInfo,target: object,culture: CultureInfo) -> object
   
-   When overridden in a derived (generated) class,gets the value of an internal property on the target object
+   When overridden in a derived (generated) class,gets the value of an internal 
+    property on the target object
+  
   
    propertyInfo: Property information for the property to get.
    target: The object that holds the desired property value.
@@ -297,7 +345,9 @@ class InternalTypeHelper(object):
  def SetPropertyValue(self,*args):
   """
   SetPropertyValue(self: InternalTypeHelper,propertyInfo: PropertyInfo,target: object,value: object,culture: CultureInfo)
-   When overridden in a derived (generated) class,sets the value on an internal property on the target object.
+   When overridden in a derived (generated) class,sets the value on an internal 
+    property on the target object.
+  
   
    propertyInfo: Property information for the property to set.
    target: The object that holds the desired property value.
@@ -311,11 +361,15 @@ class IReceiveMarkupExtension:
  def ReceiveMarkupExtension(self,property,markupExtension,serviceProvider):
   """
   ReceiveMarkupExtension(self: IReceiveMarkupExtension,property: str,markupExtension: MarkupExtension,serviceProvider: IServiceProvider)
-   Provides the handling for markup extensions that provide property values. Do not use for .NET Framework�4 implementations; see Remarks in System.Windows.Markup.IReceiveMarkupExtension.
+   Provides the handling for markup extensions that provide property values. Do 
+    not use for .NET Framework�4 implementations; see Remarks in 
+    System.Windows.Markup.IReceiveMarkupExtension.
+  
   
    property: The name of the target property.
    markupExtension: The markup extension instance of the incoming data.
-   serviceProvider: Can provide additional services that should be performed when processing the markup extension data for a property value.
+   serviceProvider: Can provide additional services that should be performed when processing the 
+    markup extension data for a property value.
   """
   pass
  def __init__(self,*args):
@@ -389,7 +443,9 @@ class ParserContext(object,IUriContext):
   """
   ToXmlParserContext(parserContext: ParserContext) -> XmlParserContext
   
-   Converts an System.Windows.Markup.ParserContext to an System.Xml.XmlParserContext.
+   Converts an System.Windows.Markup.ParserContext to an 
+    System.Xml.XmlParserContext.
+  
   
    parserContext: The context to convert to an System.Xml.XmlParserContext.
    Returns: The XML parser context.
@@ -459,7 +515,9 @@ class ResourceReferenceExpressionConverter(ExpressionConverter):
   """
   CanConvertFrom(self: ResourceReferenceExpressionConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Returns a value that indicates whether the converter can convert from a source object to a ResourceReferenceExpression object.
+   Returns a value that indicates whether the converter can convert from a source 
+    object to a ResourceReferenceExpression object.
+  
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    sourceType: The type to convert from.
@@ -470,7 +528,9 @@ class ResourceReferenceExpressionConverter(ExpressionConverter):
   """
   CanConvertTo(self: ResourceReferenceExpressionConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Returns a value that indicates whether the converter can convert a ResourceReferenceExpression object to the specified destination type.
+   Returns a value that indicates whether the converter can convert a 
+    ResourceReferenceExpression object to the specified destination type.
+  
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    destinationType: The type to convert to.
@@ -513,9 +573,13 @@ class RoutedEventConverter(TypeConverter):
   """
   CanConvertFrom(self: RoutedEventConverter,typeDescriptorContext: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Determines whether an object of the specified type can be converted to an instance of System.Windows.RoutedEvent.
+   Determines whether an object of the specified type can be converted to an 
+    instance of System.Windows.RoutedEvent.
   
-   typeDescriptorContext: A format context that provides information about the environment from which this converter is being invoked.
+  
+   typeDescriptorContext: A format context that provides information about the environment from which 
+    this converter is being invoked.
+  
    sourceType: The type being evaluated for conversion.
    Returns: true if this converter can perform the operation; otherwise,false.
   """
@@ -524,9 +588,13 @@ class RoutedEventConverter(TypeConverter):
   """
   CanConvertTo(self: RoutedEventConverter,typeDescriptorContext: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Determines whether an instance of System.Windows.RoutedEvent can be converted to the specified type.
+   Determines whether an instance of System.Windows.RoutedEvent can be converted 
+    to the specified type.
   
-   typeDescriptorContext: A format context that provides information about the environment from which this converter is being invoked.
+  
+   typeDescriptorContext: A format context that provides information about the environment from which 
+    this converter is being invoked.
+  
    destinationType: The type being evaluated for conversion.
    Returns: Always returns false.
   """
@@ -535,9 +603,13 @@ class RoutedEventConverter(TypeConverter):
   """
   ConvertFrom(self: RoutedEventConverter,typeDescriptorContext: ITypeDescriptorContext,cultureInfo: CultureInfo,source: object) -> object
   
-   Attempts to convert the specified object to a System.Windows.RoutedEvent object,using the specified context.
+   Attempts to convert the specified object to a System.Windows.RoutedEvent 
+    object,using the specified context.
   
-   typeDescriptorContext: A format context that provides information about the environment from which this converter is being invoked.
+  
+   typeDescriptorContext: A format context that provides information about the environment from which 
+    this converter is being invoked.
+  
    cultureInfo: Culture specific information.
    source: The object to convert.
    Returns: The conversion result.
@@ -547,9 +619,13 @@ class RoutedEventConverter(TypeConverter):
   """
   ConvertTo(self: RoutedEventConverter,typeDescriptorContext: ITypeDescriptorContext,cultureInfo: CultureInfo,value: object,destinationType: Type) -> object
   
-   Attempts to convert a System.Windows.RoutedEvent to the specified type. Throws an exception in all cases.
+   Attempts to convert a System.Windows.RoutedEvent to the specified type. Throws 
+    an exception in all cases.
   
-   typeDescriptorContext: A format context that provides information about the environment from which this converter is being invoked.
+  
+   typeDescriptorContext: A format context that provides information about the environment from which 
+    this converter is being invoked.
+  
    cultureInfo: Culture specific information.
    value: The object to convert.
    destinationType: The type to convert the object to.
@@ -579,7 +655,8 @@ class ServiceProviders(object,IServiceProvider):
    Gets the service object of the specified type.
   
    serviceType: The type of service object to get.
-   Returns: A service implementation for the type serviceType. May be null if there is no service stored for type serviceType.
+   Returns: A service implementation for the type serviceType. May be null if there is no 
+    service stored for type serviceType.
   """
   pass
  def __init__(self,*args):
@@ -599,7 +676,10 @@ class SetterTriggerConditionValueConverter(TypeConverter):
   """
   CanConvertFrom(self: SetterTriggerConditionValueConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Returns a value that indicates whether the converter can convert from a source object to a side-effect-produced System.Windows.Setter,System.Windows.Trigger or System.Windows.Condition .
+   Returns a value that indicates whether the converter can convert from a source 
+    object to a side-effect-produced System.Windows.Setter,System.Windows.Trigger 
+    or System.Windows.Condition .
+  
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    sourceType: The type to convert from.
@@ -610,7 +690,9 @@ class SetterTriggerConditionValueConverter(TypeConverter):
   """
   CanConvertTo(self: SetterTriggerConditionValueConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Returns a value that indicates whether the converter can convert to the specified destination type. Always returns false.
+   Returns a value that indicates whether the converter can convert to the 
+    specified destination type. Always returns false.
+  
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    destinationType: The type to convert to.
@@ -621,7 +703,9 @@ class SetterTriggerConditionValueConverter(TypeConverter):
   """
   ConvertFrom(self: SetterTriggerConditionValueConverter,context: ITypeDescriptorContext,culture: CultureInfo,source: object) -> object
   
-   Converts the converted source value if an underlying type converter can be obtained from context. Otherwise returns an unconverted source.
+   Converts the converted source value if an underlying type converter can be 
+    obtained from context. Otherwise returns an unconverted source.
+  
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    culture: The System.Globalization.CultureInfo to use as the current culture.
@@ -653,9 +737,13 @@ class TemplateKeyConverter(TypeConverter):
   """
   CanConvertFrom(self: TemplateKeyConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Determines whether an object of the specified type can be converted to an instance of System.Windows.TemplateKey.
+   Determines whether an object of the specified type can be converted to an 
+    instance of System.Windows.TemplateKey.
   
-   context: A format context that provides information about the environment from which this converter is being invoked.
+  
+   context: A format context that provides information about the environment from which 
+    this converter is being invoked.
+  
    sourceType: The type being evaluated for conversion.
    Returns: Always returns false.
   """
@@ -664,9 +752,13 @@ class TemplateKeyConverter(TypeConverter):
   """
   CanConvertTo(self: TemplateKeyConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Determines whether an instance of System.Windows.TemplateKey can be converted to the specified type.
+   Determines whether an instance of System.Windows.TemplateKey can be converted 
+    to the specified type.
   
-   context: A format context that provides information about the environment from which this converter is being invoked.
+  
+   context: A format context that provides information about the environment from which 
+    this converter is being invoked.
+  
    destinationType: The type being evaluated for conversion.
    Returns: Always returns false.
   """
@@ -675,9 +767,13 @@ class TemplateKeyConverter(TypeConverter):
   """
   ConvertFrom(self: TemplateKeyConverter,context: ITypeDescriptorContext,culture: CultureInfo,source: object) -> object
   
-   Attempts to convert the specified object (string) to a System.Windows.TemplateKey.
+   Attempts to convert the specified object (string) to a 
+    System.Windows.TemplateKey.
   
-   context: A format context that provides information about the environment from which this converter is being invoked.
+  
+   context: A format context that provides information about the environment from which 
+    this converter is being invoked.
+  
    culture: Culture specific information.
    source: The object to convert.
    Returns: Always throws an exception.
@@ -687,9 +783,13 @@ class TemplateKeyConverter(TypeConverter):
   """
   ConvertTo(self: TemplateKeyConverter,context: ITypeDescriptorContext,culture: CultureInfo,value: object,destinationType: Type) -> object
   
-   Attempts to convert a System.Windows.TemplateKey to the specified type,using the specified context.
+   Attempts to convert a System.Windows.TemplateKey to the specified type,using 
+    the specified context.
   
-   context: A format context that provides information about the environment from which this converter is being invoked.
+  
+   context: A format context that provides information about the environment from which 
+    this converter is being invoked.
+  
    culture: Culture specific information.
    value: The object to convert.
    destinationType: The type to convert the object to.
@@ -753,7 +853,9 @@ class XamlInstanceCreator(object):
   """
   CreateObject(self: XamlInstanceCreator) -> object
   
-   When overridden in a derived class,creates a new object to store parser records.
+   When overridden in a derived class,creates a new object to store parser 
+    records.
+  
    Returns: The created object.
   """
   pass
@@ -774,7 +876,9 @@ class XamlParseException(SystemException,ISerializable,_Exception):
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: XamlParseException,info: SerializationInfo,context: StreamingContext)
-   Gets the data that is required to serialize the specified object by populating the specified System.Runtime.Serialization.SerializationInfo object.
+   Gets the data that is required to serialize the specified object by populating 
+    the specified System.Runtime.Serialization.SerializationInfo object.
+  
   
    info: The serialization information object to add the serialization data to.
    context: The destination for this serialization.
@@ -854,7 +958,8 @@ class XamlReader(object):
  def CancelAsync(self):
   """
   CancelAsync(self: XamlReader)
-   Aborts the current asynchronous load operation,if there is an asynchronous load operation pending.
+   Aborts the current asynchronous load operation,if there is an asynchronous 
+    load operation pending.
   """
   pass
  @staticmethod
@@ -862,8 +967,11 @@ class XamlReader(object):
   """
   GetWpfSchemaContext() -> XamlSchemaContext
   
-   Returns a System.Xaml.XamlSchemaContext object that represents the WPF schema context settings for a System.Windows.Markup.XamlReader.
-   Returns: A System.Xaml.XamlSchemaContext object that represents the WPF schema context settings for a System.Windows.Markup.XamlReader.
+   Returns a System.Xaml.XamlSchemaContext object that represents the WPF schema 
+    context settings for a System.Windows.Markup.XamlReader.
+  
+   Returns: A System.Xaml.XamlSchemaContext object that represents the WPF schema context 
+    settings for a System.Windows.Markup.XamlReader.
   """
   pass
  @staticmethod
@@ -871,28 +979,40 @@ class XamlReader(object):
   """
   Load(stream: Stream,parserContext: ParserContext) -> object
   
-   Reads the XAML input in the specified System.IO.Stream and returns an object that is the root of the corresponding object tree.
+   Reads the XAML input in the specified System.IO.Stream and returns an object 
+    that is the root of the corresponding object tree.
+  
   
    stream: The stream that contains the XAML input to load.
    parserContext: Context information used by the parser.
    Returns: The object that is the root of the created object tree.
   Load(reader: XamlReader) -> object
   
-   Reads the XAML input through a provided System.Xaml.XamlReader and returns an object that is the root of the corresponding object tree.
+   Reads the XAML input through a provided System.Xaml.XamlReader and returns an 
+    object that is the root of the corresponding object tree.
   
-   reader: A System.Xaml.XamlReader object. This is expected to be initialized with input XAML.
+  
+   reader: A System.Xaml.XamlReader object. This is expected to be initialized with input 
+    XAML.
+  
    Returns: The object that is the root of the created object tree.
   Load(stream: Stream) -> object
   
-   Reads the XAML input in the specified System.IO.Stream and returns an System.Object that is the root of the corresponding object tree.
+   Reads the XAML input in the specified System.IO.Stream and returns an 
+    System.Object that is the root of the corresponding object tree.
+  
   
    stream: The XAML to load,in stream form.
    Returns: The object at the root of the created object tree.
   Load(reader: XmlReader) -> object
   
-   Reads the XAML input in the specified System.Xml.XmlReader and returns an object that is the root of the corresponding object tree.
+   Reads the XAML input in the specified System.Xml.XmlReader and returns an 
+    object that is the root of the corresponding object tree.
   
-   reader: The System.Xml.XmlReader that has already loaded the XAML input to load in XML form.
+  
+   reader: The System.Xml.XmlReader that has already loaded the XAML input to load in XML 
+    form.
+  
    Returns: The object that is the root of the created object tree.
   """
   pass
@@ -900,20 +1020,26 @@ class XamlReader(object):
   """
   LoadAsync(self: XamlReader,stream: Stream,parserContext: ParserContext) -> object
   
-   Reads the XAML input in the specified System.IO.Stream and returns the root of the corresponding object tree.
+   Reads the XAML input in the specified System.IO.Stream and returns the root of 
+    the corresponding object tree.
+  
   
    stream: A stream containing the XAML input to load.
    parserContext: Context information used by the parser.
    Returns: The root of the created object tree.
   LoadAsync(self: XamlReader,reader: XmlReader) -> object
   
-   Reads the XAML input in the specified System.Xml.XmlReader and returns the root of the corresponding object tree.
+   Reads the XAML input in the specified System.Xml.XmlReader and returns the root 
+    of the corresponding object tree.
+  
   
    reader: An existing  System.Xml.XmlReader that has already loaded/read the XAML input.
    Returns: The root of the created object tree.
   LoadAsync(self: XamlReader,stream: Stream) -> object
   
-   Reads the XAML input in the specified System.IO.Stream and returns the root of the corresponding object tree.
+   Reads the XAML input in the specified System.IO.Stream and returns the root of 
+    the corresponding object tree.
+  
   
    stream: The stream containing the XAML input to load.
    Returns: The object that is the root of the created object tree.
@@ -924,14 +1050,19 @@ class XamlReader(object):
   """
   Parse(xamlText: str,parserContext: ParserContext) -> object
   
-   Reads the XAML markup in the specified text string (using a specified System.Windows.Markup.ParserContext) and returns an object that corresponds to the root of the specified markup.
+   Reads the XAML markup in the specified text string (using a specified 
+    System.Windows.Markup.ParserContext) and returns an object that corresponds to 
+    the root of the specified markup.
+  
   
    xamlText: The input XAML,as a single text string.
    parserContext: Context information used by the parser.
    Returns: The root of the created object tree.
   Parse(xamlText: str) -> object
   
-   Reads the XAML input in the specified text string and returns an object that corresponds to the root of the specified markup.
+   Reads the XAML input in the specified text string and returns an object that 
+    corresponds to the root of the specified markup.
+  
   
    xamlText: The input XAML,as a single text string.
    Returns: The root of the created object tree.
@@ -950,7 +1081,9 @@ class XamlTypeMapper(object):
  def AddMappingProcessingInstruction(self,xmlNamespace,clrNamespace,assemblyName):
   """
   AddMappingProcessingInstruction(self: XamlTypeMapper,xmlNamespace: str,clrNamespace: str,assemblyName: str)
-   Defines a mapping between an XML namespace and CLR namespaces in assemblies,and adds these to the System.Windows.Markup.XamlTypeMapper information.
+   Defines a mapping between an XML namespace and CLR namespaces in assemblies,
+    and adds these to the System.Windows.Markup.XamlTypeMapper information.
+  
   
    xmlNamespace: The prefix for the XML namespace..
    clrNamespace: The CLR  namespace that contains the types to map.
@@ -961,7 +1094,9 @@ class XamlTypeMapper(object):
   """
   AllowInternalType(self: XamlTypeMapper,type: Type) -> bool
   
-   Requests permission for a System.Windows.Markup.XamlTypeMapper derived type that is called under full trust to access a specific internal type.
+   Requests permission for a System.Windows.Markup.XamlTypeMapper derived type 
+    that is called under full trust to access a specific internal type.
+  
   
    type: The type to access.
    Returns: true if the internal type can be accessed; otherwise,false.
@@ -971,10 +1106,14 @@ class XamlTypeMapper(object):
   """
   GetType(self: XamlTypeMapper,xmlNamespace: str,localName: str) -> Type
   
-   Gets the CLR System.Type that a given XAML element is mapped to,using the specified XML namespace prefix and element name.
+   Gets the CLR System.Type that a given XAML element is mapped to,using the 
+    specified XML namespace prefix and element name.
+  
   
    xmlNamespace: The specified XML namespace prefix.
-   localName: The "local" name of the XAML element to obtain the mapped System.Type for. Local in this context means as mapped versus the provided xmlNamespace.
+   localName: The "local" name of the XAML element to obtain the mapped System.Type for. 
+    Local in this context means as mapped versus the provided xmlNamespace.
+  
    Returns: The System.Type for the object,or null if no mapping could be resolved.
   """
   pass
@@ -983,8 +1122,11 @@ class XamlTypeMapper(object):
   SetAssemblyPath(self: XamlTypeMapper,assemblyName: str,assemblyPath: str)
    Specifies the path to use when loading an assembly.
   
-   assemblyName: The short name of the assembly without an extension or path specified (equivalent to System.Reflection.AssemblyName.Name).
-   assemblyPath: The file path of the assembly. The assembly path must be a full file path containing a file extension.
+   assemblyName: The short name of the assembly without an extension or path specified 
+    (equivalent to System.Reflection.AssemblyName.Name).
+  
+   assemblyPath: The file path of the assembly. The assembly path must be a full file path 
+    containing a file extension.
   """
   pass
  @staticmethod
@@ -1003,31 +1145,54 @@ class XamlWriter(object):
  def Save(obj,*__args):
   """
   Save(obj: object,xmlWriter: XmlWriter)
-   Saves XAML information as the source for a provided System.Xml.XmlWriter object. The output of the System.Xml.XmlWriter can then be used to serialize the provided object and its properties.
+   Saves XAML information as the source for a provided System.Xml.XmlWriter 
+    object. The output of the System.Xml.XmlWriter can then be used to serialize 
+    the provided object and its properties.
   
-   obj: The element to be serialized. Typically,this is the root element of a page or application.
+  
+   obj: The element to be serialized. Typically,this is the root element of a page or 
+    application.
+  
    xmlWriter: Writer to use to write the serialized XAML information.
   Save(obj: object,manager: XamlDesignerSerializationManager)
-   Saves XAML information into a custom serializer. The output of the serializer can then be used to serialize the provided object and its properties.
+   Saves XAML information into a custom serializer. The output of the serializer 
+    can then be used to serialize the provided object and its properties.
   
-   obj: The element to be serialized. Typically,this is the root element of a page or application.
+  
+   obj: The element to be serialized. Typically,this is the root element of a page or 
+    application.
+  
    manager: A custom serialization implementation.
   Save(obj: object,stream: Stream)
-   Saves XAML information into a specified stream to serialize the specified object and its properties.
+   Saves XAML information into a specified stream to serialize the specified 
+    object and its properties.
   
-   obj: The element to be serialized. Typically,this is the root element of a page or application.
+  
+   obj: The element to be serialized. Typically,this is the root element of a page or 
+    application.
+  
    stream: Destination stream for the serialized XAML information.
   Save(obj: object) -> str
   
    Returns a XAML string that serializes the specified object and its properties.
   
-   obj: The element to be serialized. Typically,this is the root element of a page or application.
-   Returns: A XAML string that can be written to a stream or file. The logical tree of all elements that fall under the provided obj element will be serialized.
-  Save(obj: object,writer: TextWriter)
-   Saves XAML information as the source for a provided System.IO.TextWriter object. The output of the System.IO.TextWriter can then be used to serialize the provided object and its properties.
+   obj: The element to be serialized. Typically,this is the root element of a page or 
+    application.
   
-   obj: The element to be serialized. Typically,this is the root element of a page or application.
-   writer: A System.IO.TextWriter instance as the destination where the serialized XAML information is written.
+   Returns: A XAML string that can be written to a stream or file. The logical tree of all 
+    elements that fall under the provided obj element will be serialized.
+  
+  Save(obj: object,writer: TextWriter)
+   Saves XAML information as the source for a provided System.IO.TextWriter 
+    object. The output of the System.IO.TextWriter can then be used to serialize 
+    the provided object and its properties.
+  
+  
+   obj: The element to be serialized. Typically,this is the root element of a page or 
+    application.
+  
+   writer: A System.IO.TextWriter instance as the destination where the serialized XAML 
+    information is written.
   """
   pass
  __all__=[
@@ -1110,10 +1275,16 @@ class XmlAttributeProperties(object):
   """
   GetXmlNamespaceMaps(dependencyObject: DependencyObject) -> str
   
-   Gets the value of the System.Windows.Markup.XmlAttributeProperties.XmlNamespaceMaps�attached property of the specified System.Windows.DependencyObject.
+   Gets the value of the 
+    System.Windows.Markup.XmlAttributeProperties.XmlNamespaceMaps�attached property 
+    of the specified System.Windows.DependencyObject.
   
-   dependencyObject: The object to obtain the System.Windows.Markup.XmlAttributeProperties.XmlNamespaceMaps property from.
-   Returns: The value of the System.Windows.Markup.XmlAttributeProperties.XmlNamespaceMaps property for the specified object.
+  
+   dependencyObject: The object to obtain the 
+    System.Windows.Markup.XmlAttributeProperties.XmlNamespaceMaps property from.
+  
+   Returns: The value of the System.Windows.Markup.XmlAttributeProperties.XmlNamespaceMaps 
+    property for the specified object.
   """
   pass
  @staticmethod
@@ -1121,10 +1292,17 @@ class XmlAttributeProperties(object):
   """
   GetXmlnsDefinition(dependencyObject: DependencyObject) -> str
   
-   Gets the value of the System.Windows.Markup.XmlAttributeProperties.XmlnsDefinition�attached property of the specified System.Windows.DependencyObject.
+   Gets the value of the 
+    System.Windows.Markup.XmlAttributeProperties.XmlnsDefinition�attached property 
+    of the specified System.Windows.DependencyObject.
   
-   dependencyObject: The object to obtain the System.Windows.Markup.XmlAttributeProperties.XmlnsDefinition attached property value from.
-   Returns: The value of the System.Windows.Markup.XmlAttributeProperties.XmlnsDefinition attached property for the specified object.
+  
+   dependencyObject: The object to obtain the 
+    System.Windows.Markup.XmlAttributeProperties.XmlnsDefinition attached property 
+    value from.
+  
+   Returns: The value of the System.Windows.Markup.XmlAttributeProperties.XmlnsDefinition 
+    attached property for the specified object.
   """
   pass
  @staticmethod
@@ -1132,10 +1310,17 @@ class XmlAttributeProperties(object):
   """
   GetXmlnsDictionary(dependencyObject: DependencyObject) -> XmlnsDictionary
   
-   Gets the value of the System.Windows.Markup.XmlAttributeProperties.XmlnsDictionary�attached property of the specified System.Windows.DependencyObject.
+   Gets the value of the 
+    System.Windows.Markup.XmlAttributeProperties.XmlnsDictionary�attached property 
+    of the specified System.Windows.DependencyObject.
   
-   dependencyObject: The object to obtain the System.Windows.Markup.XmlAttributeProperties.XmlnsDictionary attached property value from.
-   Returns: The value of the System.Windows.Markup.XmlAttributeProperties.XmlnsDictionary attached property for the specified object.
+  
+   dependencyObject: The object to obtain the 
+    System.Windows.Markup.XmlAttributeProperties.XmlnsDictionary attached property 
+    value from.
+  
+   Returns: The value of the System.Windows.Markup.XmlAttributeProperties.XmlnsDictionary 
+    attached property for the specified object.
   """
   pass
  @staticmethod
@@ -1143,19 +1328,30 @@ class XmlAttributeProperties(object):
   """
   GetXmlSpace(dependencyObject: DependencyObject) -> str
   
-   Gets the value of the System.Windows.Markup.XmlAttributeProperties.XmlSpace�attached property of the specified System.Windows.DependencyObject.
+   Gets the value of the System.Windows.Markup.XmlAttributeProperties.XmlSpace�
+    attached property of the specified System.Windows.DependencyObject.
   
-   dependencyObject: The object to obtain the System.Windows.Markup.XmlAttributeProperties.XmlSpace attached property value from.
-   Returns: The value of the System.Windows.Markup.XmlAttributeProperties.XmlSpace attached property for the specified object.
+  
+   dependencyObject: The object to obtain the System.Windows.Markup.XmlAttributeProperties.XmlSpace 
+    attached property value from.
+  
+   Returns: The value of the System.Windows.Markup.XmlAttributeProperties.XmlSpace attached 
+    property for the specified object.
   """
   pass
  @staticmethod
  def SetXmlNamespaceMaps(dependencyObject,value):
   """
   SetXmlNamespaceMaps(dependencyObject: DependencyObject,value: str)
-   Sets the value of the System.Windows.Markup.XmlAttributeProperties.XmlNamespaceMaps�attached property of the specified System.Windows.DependencyObject.
+   Sets the value of the 
+    System.Windows.Markup.XmlAttributeProperties.XmlNamespaceMaps�attached property 
+    of the specified System.Windows.DependencyObject.
   
-   dependencyObject: The object on which to set the System.Windows.Markup.XmlAttributeProperties.XmlNamespaceMaps attached property.
+  
+   dependencyObject: The object on which to set the 
+    System.Windows.Markup.XmlAttributeProperties.XmlNamespaceMaps attached 
+    property.
+  
    value: The string value to set.
   """
   pass
@@ -1163,9 +1359,14 @@ class XmlAttributeProperties(object):
  def SetXmlnsDefinition(dependencyObject,value):
   """
   SetXmlnsDefinition(dependencyObject: DependencyObject,value: str)
-   Sets the value of the System.Windows.Markup.XmlAttributeProperties.XmlnsDefinition�attached property of the specified System.Windows.DependencyObject.
+   Sets the value of the 
+    System.Windows.Markup.XmlAttributeProperties.XmlnsDefinition�attached property 
+    of the specified System.Windows.DependencyObject.
   
-   dependencyObject: The object on which to set the System.Windows.Markup.XmlAttributeProperties.XmlnsDefinition property.
+  
+   dependencyObject: The object on which to set the 
+    System.Windows.Markup.XmlAttributeProperties.XmlnsDefinition property.
+  
    value: The XML namespace definition in string form.
   """
   pass
@@ -1173,9 +1374,14 @@ class XmlAttributeProperties(object):
  def SetXmlnsDictionary(dependencyObject,value):
   """
   SetXmlnsDictionary(dependencyObject: DependencyObject,value: XmlnsDictionary)
-   Sets the value of the System.Windows.Markup.XmlAttributeProperties.XmlnsDictionary�attached property of the specified System.Windows.DependencyObject.
+   Sets the value of the 
+    System.Windows.Markup.XmlAttributeProperties.XmlnsDictionary�attached property 
+    of the specified System.Windows.DependencyObject.
   
-   dependencyObject: The object on which to set the System.Windows.Markup.XmlAttributeProperties.XmlnsDictionary attached property.
+  
+   dependencyObject: The object on which to set the 
+    System.Windows.Markup.XmlAttributeProperties.XmlnsDictionary attached property.
+  
    value: The xmlns dictionary in string form.
   """
   pass
@@ -1183,9 +1389,13 @@ class XmlAttributeProperties(object):
  def SetXmlSpace(dependencyObject,value):
   """
   SetXmlSpace(dependencyObject: DependencyObject,value: str)
-   Sets the value of the System.Windows.Markup.XmlAttributeProperties.XmlSpace�attached property of the specified System.Windows.DependencyObject.
+   Sets the value of the System.Windows.Markup.XmlAttributeProperties.XmlSpace�
+    attached property of the specified System.Windows.DependencyObject.
   
-   dependencyObject: The object on which to set the System.Windows.Markup.XmlAttributeProperties.XmlSpace attached property.
+  
+   dependencyObject: The object on which to set the 
+    System.Windows.Markup.XmlAttributeProperties.XmlSpace attached property.
+  
    value: The string to use for an XML space.
   """
   pass
@@ -1201,10 +1411,14 @@ class XmlLanguage(object):
   """
   GetEquivalentCulture(self: XmlLanguage) -> CultureInfo
   
-   Returns the appropriate equivalent System.Globalization.CultureInfo for this System.Windows.Markup.XmlLanguage,if and only if such a System.Globalization.CultureInfo is registered for the 
-    System.Windows.Markup.XmlLanguage.IetfLanguageTag value of this System.Windows.Markup.XmlLanguage
+   Returns the appropriate equivalent System.Globalization.CultureInfo for this 
+    System.Windows.Markup.XmlLanguage,if and only if such a 
+    System.Globalization.CultureInfo is registered for the 
+    System.Windows.Markup.XmlLanguage.IetfLanguageTag value of this 
+    System.Windows.Markup.XmlLanguage
   
-   Returns: A System.Globalization.CultureInfo that can be used for localization-globalization API calls that take that type as an argument.
+   Returns: A System.Globalization.CultureInfo that can be used for 
+    localization-globalization API calls that take that type as an argument.
   """
   pass
  @staticmethod
@@ -1212,25 +1426,33 @@ class XmlLanguage(object):
   """
   GetLanguage(ietfLanguageTag: str) -> XmlLanguage
   
-   Returns a System.Windows.Markup.XmlLanguage instance,based on a string representing the language per RFC 3066.
+   Returns a System.Windows.Markup.XmlLanguage instance,based on a string 
+    representing the language per RFC 3066.
+  
   
    ietfLanguageTag: An RFC 3066 language string,or empty string.
-   Returns: A new System.Windows.Markup.XmlLanguage with the provided string as its System.Windows.Markup.XmlLanguage.IetfLanguageTag value.
+   Returns: A new System.Windows.Markup.XmlLanguage with the provided string as its 
+    System.Windows.Markup.XmlLanguage.IetfLanguageTag value.
   """
   pass
  def GetSpecificCulture(self):
   """
   GetSpecificCulture(self: XmlLanguage) -> CultureInfo
   
-   Returns the most-closely-related non-neutral System.Globalization.CultureInfo for this System.Windows.Markup.XmlLanguage.
-   Returns: A System.Globalization.CultureInfo that can be used for localization-globalization API calls that take that type as an argument.
+   Returns the most-closely-related non-neutral System.Globalization.CultureInfo 
+    for this System.Windows.Markup.XmlLanguage.
+  
+   Returns: A System.Globalization.CultureInfo that can be used for 
+    localization-globalization API calls that take that type as an argument.
   """
   pass
  def ToString(self):
   """
   ToString(self: XmlLanguage) -> str
   
-   Returns a System.String that represents the current System.Windows.Markup.XmlLanguage.
+   Returns a System.String that represents the current 
+    System.Windows.Markup.XmlLanguage.
+  
    Returns: A System.String that represents the current System.Windows.Markup.XmlLanguage.
   """
   pass
@@ -1255,7 +1477,9 @@ class XmlLanguageConverter(TypeConverter):
   """
   CanConvertFrom(self: XmlLanguageConverter,typeDescriptorContext: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Returns whether this converter can convert an object of one type to the System.Windows.Markup.XmlLanguage type supported by this converter.
+   Returns whether this converter can convert an object of one type to the 
+    System.Windows.Markup.XmlLanguage type supported by this converter.
+  
   
    typeDescriptorContext: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    sourceType: A type that represents the type you want to convert from.
@@ -1277,7 +1501,9 @@ class XmlLanguageConverter(TypeConverter):
   """
   ConvertFrom(self: XmlLanguageConverter,typeDescriptorContext: ITypeDescriptorContext,cultureInfo: CultureInfo,source: object) -> object
   
-   Converts the specified string value to the System.Windows.Markup.XmlLanguage type supported by this converter.
+   Converts the specified string value to the System.Windows.Markup.XmlLanguage 
+    type supported by this converter.
+  
   
    typeDescriptorContext: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    cultureInfo: The System.Globalization.CultureInfo to use as the current culture.
@@ -1293,7 +1519,9 @@ class XmlLanguageConverter(TypeConverter):
   
    typeDescriptorContext: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    cultureInfo: The System.Globalization.CultureInfo to use as the current culture.
-   value: The object to convert. This is expected to be type System.Windows.Markup.XmlLanguage.
+   value: The object to convert. This is expected to be type 
+    System.Windows.Markup.XmlLanguage.
+  
    destinationType: A type that represents the type you want to convert to.
    Returns: An object that represents the converted value.
   """
@@ -1330,7 +1558,9 @@ class XmlnsDictionary(object,IDictionary,ICollection,IEnumerable,IXamlNamespaceR
   """
   Contains(self: XmlnsDictionary,key: object) -> bool
   
-   Returns a value that indicates whether the specified prefix key is in this System.Windows.Markup.XmlnsDictionary.
+   Returns a value that indicates whether the specified prefix key is in this 
+    System.Windows.Markup.XmlnsDictionary.
+  
   
    key: The prefix key to search for.
    Returns: true if the requested prefix key is in the dictionary; otherwise,false.
@@ -1339,12 +1569,16 @@ class XmlnsDictionary(object,IDictionary,ICollection,IEnumerable,IXamlNamespaceR
  def CopyTo(self,array,index):
   """
   CopyTo(self: XmlnsDictionary,array: Array,index: int)
-   Copies the entries in the System.Windows.Markup.XmlnsDictionary to the specified array.
+   Copies the entries in the System.Windows.Markup.XmlnsDictionary to the 
+    specified array.
+  
   
    array: The array to copy the table data into.
    index: The zero-based index in the destination array where copying starts.
   CopyTo(self: XmlnsDictionary,array: Array[DictionaryEntry],index: int)
-   Copies the entries in the System.Windows.Markup.XmlnsDictionary to the specified System.Collections.DictionaryEntry array.
+   Copies the entries in the System.Windows.Markup.XmlnsDictionary to the 
+    specified System.Collections.DictionaryEntry array.
+  
   
    array: The array to copy the table data into.
    index: The zero-based index in the destination array where copying starts.
@@ -1355,14 +1589,17 @@ class XmlnsDictionary(object,IDictionary,ICollection,IEnumerable,IXamlNamespaceR
   DefaultNamespace(self: XmlnsDictionary) -> str
   
    Looks up the XAML namespace that corresponds to the default XAML namespace.
-   Returns: The namespace that corresponds to the default XML namespace if one exists; otherwise,null.
+   Returns: The namespace that corresponds to the default XML namespace if one exists; 
+    otherwise,null.
   """
   pass
  def GetDictionaryEnumerator(self,*args):
   """
   GetDictionaryEnumerator(self: XmlnsDictionary) -> IDictionaryEnumerator
   
-   Returns a dictionary enumerator that iterates through this System.Windows.Markup.XmlnsDictionary.
+   Returns a dictionary enumerator that iterates through this 
+    System.Windows.Markup.XmlnsDictionary.
+  
    Returns: The dictionary enumerator for this dictionary.
   """
   pass
@@ -1370,7 +1607,9 @@ class XmlnsDictionary(object,IDictionary,ICollection,IEnumerable,IXamlNamespaceR
   """
   GetEnumerator(self: XmlnsDictionary) -> IEnumerator
   
-   Returns an enumerator that iterates through this System.Windows.Markup.XmlnsDictionary.
+   Returns an enumerator that iterates through this 
+    System.Windows.Markup.XmlnsDictionary.
+  
    Returns: The enumerator for this dictionary.
   """
   pass
@@ -1388,18 +1627,26 @@ class XmlnsDictionary(object,IDictionary,ICollection,IEnumerable,IXamlNamespaceR
   """
   GetNamespacePrefixes(self: XmlnsDictionary) -> IEnumerable[NamespaceDeclaration]
   
-   Returns all possible prefix-XAML namespace mappings (System.Xaml.NamespaceDeclaration values) that are available in the active schema context.
-   Returns: An enumerable set of System.Xaml.NamespaceDeclaration values. To get the prefix strings specifically,get the System.Xaml.NamespaceDeclaration.Prefix value from each value returned.
+   Returns all possible prefix-XAML namespace mappings 
+    (System.Xaml.NamespaceDeclaration values) that are available in the active 
+    schema context.
+  
+   Returns: An enumerable set of System.Xaml.NamespaceDeclaration values. To get the prefix 
+    strings specifically,get the System.Xaml.NamespaceDeclaration.Prefix value 
+    from each value returned.
   """
   pass
  def LookupNamespace(self,prefix):
   """
   LookupNamespace(self: XmlnsDictionary,prefix: str) -> str
   
-   Returns the XAML namespace URI that corresponds to the specified XML namespace prefix.
+   Returns the XAML namespace URI that corresponds to the specified XML namespace 
+    prefix.
+  
   
    prefix: The XAML namespace prefix to look up.
-   Returns: The XAML namespace URI that corresponds to the specified prefix if it exists in this System.Windows.Markup.XmlnsDictionary; otherwise,null.
+   Returns: The XAML namespace URI that corresponds to the specified prefix if it exists in 
+    this System.Windows.Markup.XmlnsDictionary; otherwise,null.
   """
   pass
  def LookupPrefix(self,xmlNamespace):
@@ -1427,11 +1674,15 @@ class XmlnsDictionary(object,IDictionary,ICollection,IEnumerable,IXamlNamespaceR
  def Remove(self,prefix):
   """
   Remove(self: XmlnsDictionary,prefix: object)
-   Removes the item with the specified prefix key from the System.Windows.Markup.XmlnsDictionary.
+   Removes the item with the specified prefix key from the 
+    System.Windows.Markup.XmlnsDictionary.
+  
   
    prefix: The prefix key to remove.
   Remove(self: XmlnsDictionary,prefix: str)
-   Removes the item with the specified prefix key from the System.Windows.Markup.XmlnsDictionary.
+   Removes the item with the specified prefix key from the 
+    System.Windows.Markup.XmlnsDictionary.
+  
   
    prefix: The prefix key to remove.
   """
@@ -1449,10 +1700,13 @@ class XmlnsDictionary(object,IDictionary,ICollection,IEnumerable,IXamlNamespaceR
   """
   Contains(self: IDictionary,key: object) -> bool
   
-   Determines whether the System.Collections.IDictionary object contains an element with the specified key.
+   Determines whether the System.Collections.IDictionary object contains an 
+    element with the specified key.
+  
   
    key: The key to locate in the System.Collections.IDictionary object.
-   Returns: true if the System.Collections.IDictionary contains an element with the key; otherwise,false.
+   Returns: true if the System.Collections.IDictionary contains an element with the key; 
+    otherwise,false.
   """
   pass
  def __getitem__(self,*args):

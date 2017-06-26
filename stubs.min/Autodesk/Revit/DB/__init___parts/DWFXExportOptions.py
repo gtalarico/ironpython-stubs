@@ -1,6 +1,6 @@
 class DWFXExportOptions(DWFExportOptions):
-    """
-    DWFX Export options.
-    
-    DWFXExportOptions()
-    """
+ """
+ DWFX Export options.
+ 
+ DWFXExportOptions()
+ """

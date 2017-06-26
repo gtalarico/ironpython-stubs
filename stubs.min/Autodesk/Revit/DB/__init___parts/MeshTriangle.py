@@ -1,2 +1,2 @@
 class MeshTriangle(object):
-    """ One triangle of a mesh. """
+ """ One triangle of a mesh. """

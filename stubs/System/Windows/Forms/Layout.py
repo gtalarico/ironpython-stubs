@@ -2,7 +2,7 @@
 # module System.Windows.Forms.Layout calls itself Layout
 # from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -13,9 +13,13 @@ class ArrangedElementCollection(object, IList, ICollection, IEnumerable):
     def CopyTo(self, array, index):
         """
         CopyTo(self: ArrangedElementCollection, array: Array, index: int)
-            Copies the entire contents of this collection to a compatible one-dimensional System.Array, starting at the specified index of the target array.
+            Copies the entire contents of this collection to a compatible one-dimensional 
+             System.Array, starting at the specified index of the target array.
         
-            array: The one-dimensional System.Array that is the destination of the elements copied from the current collection. The array must have zero-based indexing.
+        
+            array: The one-dimensional System.Array that is the destination of the elements copied 
+             from the current collection. The array must have zero-based indexing.
+        
             index: The zero-based index in array at which copying begins.
         """
         pass
@@ -24,10 +28,16 @@ class ArrangedElementCollection(object, IList, ICollection, IEnumerable):
         """
         Equals(self: ArrangedElementCollection, obj: object) -> bool
         
-            Determines whether two System.Windows.Forms.Layout.ArrangedElementCollection instances are equal.
+            Determines whether two System.Windows.Forms.Layout.ArrangedElementCollection 
+             instances are equal.
         
-            obj: The System.Windows.Forms.Layout.ArrangedElementCollection to compare with the current System.Windows.Forms.Layout.ArrangedElementCollection.
-            Returns: true if the specified System.Windows.Forms.Layout.ArrangedElementCollection is equal to the current System.Windows.Forms.Layout.ArrangedElementCollection; otherwise, false.
+        
+            obj: The System.Windows.Forms.Layout.ArrangedElementCollection to compare with the 
+             current System.Windows.Forms.Layout.ArrangedElementCollection.
+        
+            Returns: true if the specified System.Windows.Forms.Layout.ArrangedElementCollection is 
+             equal to the current System.Windows.Forms.Layout.ArrangedElementCollection; 
+             otherwise, false.
         """
         pass
 
@@ -45,7 +55,8 @@ class ArrangedElementCollection(object, IList, ICollection, IEnumerable):
         GetHashCode(self: ArrangedElementCollection) -> int
         
             Returns the hash code for this instance.
-            Returns: A hash code for the current System.Windows.Forms.Layout.ArrangedElementCollection.
+            Returns: A hash code for the current 
+             System.Windows.Forms.Layout.ArrangedElementCollection.
         """
         pass
 
@@ -56,7 +67,8 @@ class ArrangedElementCollection(object, IList, ICollection, IEnumerable):
             Determines whether the System.Collections.IList contains a specific value.
         
             value: The object to locate in the System.Collections.IList.
-            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, false.
+            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, 
+             false.
         """
         pass
 
@@ -119,7 +131,8 @@ class LayoutEngine(object):
         
             container: The container on which the layout engine will operate.
             layoutEventArgs: An event argument from a System.Windows.Forms.Control.Layout event.
-            Returns: true if layout should be performed again by the parent of container; otherwise, false.
+            Returns: true if layout should be performed again by the parent of container; otherwise, 
+             false.
         """
         pass
 
@@ -134,7 +147,9 @@ class TableLayoutSettingsTypeConverter(TypeConverter):
         """
         CanConvertFrom(self: TableLayoutSettingsTypeConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Determines whether this converter can convert an object in the given source type to the native type of this converter.
+            Determines whether this converter can convert an object in the given source 
+             type to the native type of this converter.
+        
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             sourceType: A System.Type that represents the type you want to convert from.
@@ -146,7 +161,9 @@ class TableLayoutSettingsTypeConverter(TypeConverter):
         """
         CanConvertTo(self: TableLayoutSettingsTypeConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Returns a value indicating whether this converter can convert an object to the given destination type by using the context.
+            Returns a value indicating whether this converter can convert an object to the 
+             given destination type by using the context.
+        
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             destinationType: A System.Type that represents the type you want to convert to.
@@ -158,7 +175,9 @@ class TableLayoutSettingsTypeConverter(TypeConverter):
         """
         ConvertFrom(self: TableLayoutSettingsTypeConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object) -> object
         
-            Converts the given object to the type of this converter by using the specified context and culture information.
+            Converts the given object to the type of this converter by using the specified 
+             context and culture information.
+        
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             culture: The System.Globalization.CultureInfo to use as the current culture.
@@ -171,7 +190,9 @@ class TableLayoutSettingsTypeConverter(TypeConverter):
         """
         ConvertTo(self: TableLayoutSettingsTypeConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object, destinationType: Type) -> object
         
-            Converts the given value object to the specified type by using the specified context and culture information.
+            Converts the given value object to the specified type by using the specified 
+             context and culture information.
+        
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             culture: The System.Globalization.CultureInfo to use as the current culture.

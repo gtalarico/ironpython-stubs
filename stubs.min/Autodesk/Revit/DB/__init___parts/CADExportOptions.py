@@ -1,2 +1,2 @@
 class CADExportOptions(object):
-    """ Generic CAD Export options. """
+ """ Generic CAD Export options. """

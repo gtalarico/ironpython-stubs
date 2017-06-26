@@ -1,47 +1,33 @@
-class BrepVertex(Point, IDisposable, ISerializable):
-    # no doc
-    def ConstructConstObject(self, *args): #cannot find CLR method
-        """ ConstructConstObject(self: CommonObject, parentObject: object, subobject_index: int) """
-        pass
-
-    def Dispose(self):
-        """ Dispose(self: CommonObject, disposing: bool) """
-        pass
-
-    def NonConstOperation(self, *args): #cannot find CLR method
-        """ NonConstOperation(self: CommonObject) """
-        pass
-
-    def OnSwitchToNonConst(self, *args): #cannot find CLR method
-        """ OnSwitchToNonConst(self: GeometryBase) """
-        pass
-
-    def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
-        pass
-
-    def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
-        pass
-
-    def __init__(self, *args): #cannot find CLR method
-        """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
-        pass
-
-    Brep = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Brep(self: BrepVertex) -> Brep
+class BrepVertex(Point,IDisposable,ISerializable):
+ # no doc
+ def ConstructConstObject(self,*args):
+  """ ConstructConstObject(self: CommonObject,parentObject: object,subobject_index: int) """
+  pass
+ def Dispose(self):
+  """ Dispose(self: CommonObject,disposing: bool) """
+  pass
+ def NonConstOperation(self,*args):
+  """ NonConstOperation(self: CommonObject) """
+  pass
+ def OnSwitchToNonConst(self,*args):
+  """ OnSwitchToNonConst(self: GeometryBase) """
+  pass
+ def __enter__(self,*args):
+  """ __enter__(self: IDisposable) -> object """
+  pass
+ def __exit__(self,*args):
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  pass
+ def __init__(self,*args):
+  """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+  pass
+ Brep=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Brep(self: BrepVertex) -> Brep
 
 """
 
-    VertexIndex = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: VertexIndex(self: BrepVertex) -> int
+ VertexIndex=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: VertexIndex(self: BrepVertex) -> int
 
 """
 

@@ -2,7 +2,7 @@
 # module Rhino.DocObjects.Custom calls itself Custom
 # from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -46,18 +46,11 @@ class UserData(object, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -108,18 +101,11 @@ class UnknownUserData(UserData, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -180,18 +166,11 @@ class UserDictionary(UserData, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method

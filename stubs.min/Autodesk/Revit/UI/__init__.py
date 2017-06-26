@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Autodesk.Revit.UI calls itself UI
-# from RevitAPIUI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null
+# from RevitAPIUI,Version=17.0.0.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports

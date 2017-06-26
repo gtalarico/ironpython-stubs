@@ -1,47 +1,47 @@
 class RTreeEventArgs(EventArgs):
-    # no doc
-    Cancel = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Cancel(self: RTreeEventArgs) -> bool
+ # no doc
+ Cancel=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Cancel(self: RTreeEventArgs) -> bool
 
-Set: Cancel(self: RTreeEventArgs) = value
+Set: Cancel(self: RTreeEventArgs)=value
 """
 
-    Id = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Id(self: RTreeEventArgs) -> int
-
-"""
-
-    IdB = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: IdB(self: RTreeEventArgs) -> int
+ Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Id(self: RTreeEventArgs) -> int
 
 """
 
-    IdBPtr = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: IdBPtr(self: RTreeEventArgs) -> IntPtr
+ IdB=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: IdB(self: RTreeEventArgs) -> int
 
 """
 
-    IdPtr = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: IdPtr(self: RTreeEventArgs) -> IntPtr
+ IdBPtr=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: IdBPtr(self: RTreeEventArgs) -> IntPtr
 
 """
 
-    SearchBoundingBox = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: SearchBoundingBox(self: RTreeEventArgs) -> BoundingBox
+ IdPtr=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: IdPtr(self: RTreeEventArgs) -> IntPtr
 
-Set: SearchBoundingBox(self: RTreeEventArgs) = value
 """
 
-    SearchSphere = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: SearchSphere(self: RTreeEventArgs) -> Sphere
+ SearchBoundingBox=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: SearchBoundingBox(self: RTreeEventArgs) -> BoundingBox
 
-Set: SearchSphere(self: RTreeEventArgs) = value
+Set: SearchBoundingBox(self: RTreeEventArgs)=value
 """
 
-    Tag = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Tag(self: RTreeEventArgs) -> object
+ SearchSphere=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: SearchSphere(self: RTreeEventArgs) -> Sphere
 
-Set: Tag(self: RTreeEventArgs) = value
+Set: SearchSphere(self: RTreeEventArgs)=value
+"""
+
+ Tag=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Tag(self: RTreeEventArgs) -> object
+
+Set: Tag(self: RTreeEventArgs)=value
 """
 
 

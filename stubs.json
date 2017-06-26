@@ -1,187 +1,46 @@
 {
-    "RevitNodes.DLL": {
-        "RevitNodes": {
-            "Revit": "<module 'Revit' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+    "RevitAPI.DLL": {
+        "DB": {
+            "Events": "<module 'Events' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "Plumbing": "<module 'Plumbing' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "Lighting": "<module 'Lighting' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "PointClouds": "<module 'PointClouds' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "Analysis": "<module 'Analysis' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "Architecture": "<module 'Architecture' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "Electrical": "<module 'Electrical' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "ExternalService": "<module 'ExternalService' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "Macros": "<module 'Macros' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "ExtensibleStorage": "<module 'ExtensibleStorage' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "IFC": "<module 'IFC' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "Fabrication": "<module 'Fabrication' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "Structure": "<module 'Structure' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "Mechanical": "<module 'Mechanical' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>"
         }, 
-        "Elements": {
-            "InternalUtilities": "<module 'InternalUtilities' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+        "RevitAPI": {
+            "Autodesk": "<module 'Autodesk' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>"
         }, 
         "Revit": {
-            "GeometryReferences": "<module 'GeometryReferences' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
-            "Filter": "<module 'Filter' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
-            "Transaction": "<module 'Transaction' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
-            "Elements": "<module 'Elements' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
-            "GeometryObjects": "<module 'GeometryObjects' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
-            "Application": "<module 'Application' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
-            "References": "<module 'References' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
-            "AnalysisDisplay": "<module 'AnalysisDisplay' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
-            "GeometryConversion": "<module 'GeometryConversion' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
-            "Graphics": "<module 'Graphics' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
-        }
-    }, 
-    "RevitServices.DLL": {
-        "RevitServices": {
-            "Persistence": "<module 'Persistence' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
-            "Transactions": "<module 'Transactions' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
-            "Elements": "<module 'Elements' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
-            "Materials": "<module 'Materials' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
-            "Threading": "<module 'Threading' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
-            "EventHandler": "<module 'EventHandler' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
-            "RevitServices": "<module 'RevitServices' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
-        }
-    }, 
-    "ProtoGeometry.DLL": {
+            "DB": "<module 'DB' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "Exceptions": "<module 'Exceptions' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "Utility": "<module 'Utility' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "Creation": "<module 'Creation' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "ApplicationServices": "<module 'ApplicationServices' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "Attributes": "<module 'Attributes' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+        }, 
         "Autodesk": {
-            "DesignScript": "<module 'DesignScript' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+            "Revit": "<module 'Revit' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>"
         }, 
-        "DesignScript": {
-            "Geometry": "<module 'Geometry' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
-        }, 
-        "ProtoGeometry": {
-            "Autodesk": "<module 'Autodesk' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
-        }, 
-        "Geometry": {
-            "TSpline": "<module 'TSpline' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
-            "Core": "<module 'Core' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
-        }
-    }, 
-    "Rhino3dmIO.DLL": {
-        "Rhino3dmIO": {
-            "Rhino": "<module 'Rhino' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
-        }, 
-        "DocObjects": {
-            "Custom": "<module 'Custom' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
-        }, 
-        "Geometry": {
-            "Intersect": "<module 'Intersect' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
-            "Collections": "<module 'Collections' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
-        }, 
-        "Runtime": {
-            "InteropWrappers": "<module 'InteropWrappers' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
-        }, 
-        "Rhino": {
-            "Runtime": "<module 'Runtime' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
-            "Display": "<module 'Display' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
-            "DocObjects": "<module 'DocObjects' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
-            "Geometry": "<module 'Geometry' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
-            "UI": "<module 'UI' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
-            "FileIO": "<module 'FileIO' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
-            "Collections": "<module 'Collections' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
-            "Render": "<module 'Render' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
-        }
-    }, 
-    "System.dll": {
-        "Security": {
-            "Permissions": "<module 'Permissions' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "AccessControl": "<module 'AccessControl' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Cryptography": "<module 'Cryptography' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Authentication": "<module 'Authentication' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Claims": "<module 'Claims' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
-        }, 
-        "Windows": {
-            "Input": "<module 'Input' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Markup": "<module 'Markup' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
-        }, 
-        "Cryptography": {
-            "X509Certificates": "<module 'X509Certificates' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
-        }, 
-        "Microsoft": {
-            "VisualBasic": "<module 'VisualBasic' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Win32": "<module 'Win32' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "CSharp": "<module 'CSharp' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
-        }, 
-        "ExtendedProtection": {
-            "Configuration": "<module 'Configuration' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
-        }, 
-        "Design": {
-            "Serialization": "<module 'Serialization' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
-        }, 
-        "Diagnostics": {
-            "CodeAnalysis": "<module 'CodeAnalysis' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
-        }, 
-        "Win32": {
-            "SafeHandles": "<module 'SafeHandles' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
-        }, 
-        "System": {
-            "Web": "<module 'Web' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Microsoft": "<module 'Microsoft' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Net": "<module 'Net' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "ComponentModel": "<module 'ComponentModel' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Security": "<module 'Security' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Text": "<module 'Text' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "IO": "<module 'IO' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Runtime": "<module 'Runtime' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Windows": "<module 'Windows' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Timers": "<module 'Timers' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Diagnostics": "<module 'Diagnostics' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "System": "<module 'System' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Threading": "<module 'Threading' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Collections": "<module 'Collections' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Media": "<module 'Media' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Reflection": "<module 'Reflection' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "CodeDom": "<module 'CodeDom' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Configuration": "<module 'Configuration' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
-        }, 
-        "Authentication": {
-            "ExtendedProtection": "<module 'ExtendedProtection' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
-        }, 
-        "Text": {
-            "RegularExpressions": "<module 'RegularExpressions' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
-        }, 
-        "InteropServices": {
-            "ComTypes": "<module 'ComTypes' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
-        }, 
-        "Runtime": {
-            "Versioning": "<module 'Versioning' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "InteropServices": "<module 'InteropServices' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
-        }, 
-        "Collections": {
-            "ObjectModel": "<module 'ObjectModel' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Specialized": "<module 'Specialized' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Concurrent": "<module 'Concurrent' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Generic": "<module 'Generic' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
-        }, 
-        "Net": {
-            "Mime": "<module 'Mime' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Sockets": "<module 'Sockets' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "WebSockets": "<module 'WebSockets' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "NetworkInformation": "<module 'NetworkInformation' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Cache": "<module 'Cache' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Configuration": "<module 'Configuration' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Security": "<module 'Security' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Mail": "<module 'Mail' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
-        }, 
-        "IO": {
-            "Ports": "<module 'Ports' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Compression": "<module 'Compression' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
-        }, 
-        "CodeDom": {
-            "Compiler": "<module 'Compiler' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
-        }, 
-        "ComponentModel": {
-            "Design": "<module 'Design' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        "Structure": {
+            "StructuralSections": "<module 'StructuralSections' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>"
         }
     }, 
     "PresentationFramework.dll": {
-        "Documents": {
-            "DocumentStructures": "<module 'DocumentStructures' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Serialization": "<module 'Serialization' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
-        }, 
         "Controls": {
             "Primitives": "<module 'Primitives' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
         }, 
-        "Microsoft": {
-            "Win32": "<module 'Win32' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
-        }, 
-        "Media": {
-            "Animation": "<module 'Animation' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
-        }, 
-        "System": {
-            "Windows": "<module 'Windows' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "ComponentModel": "<module 'ComponentModel' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
-        }, 
-        "Automation": {
-            "Peers": "<module 'Peers' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        "Documents": {
+            "DocumentStructures": "<module 'DocumentStructures' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Serialization": "<module 'Serialization' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
         }, 
         "Annotations": {
             "Storage": "<module 'Storage' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
@@ -190,151 +49,346 @@
             "Primitives": "<module 'Primitives' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
             "Localizer": "<module 'Localizer' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
         }, 
+        "Microsoft": {
+            "Win32": "<module 'Win32' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        }, 
+        "Automation": {
+            "Peers": "<module 'Peers' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        }, 
+        "Media": {
+            "Animation": "<module 'Animation' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        }, 
+        "System": {
+            "ComponentModel": "<module 'ComponentModel' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Windows": "<module 'Windows' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        }, 
         "PresentationFramework": {
-            "Microsoft": "<module 'Microsoft' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "System": "<module 'System' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+            "System": "<module 'System' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Microsoft": "<module 'Microsoft' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
         }, 
         "Windows": {
-            "Shell": "<module 'Shell' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Controls": "<module 'Controls' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Interop": "<module 'Interop' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
             "Markup": "<module 'Markup' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Annotations": "<module 'Annotations' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Diagnostics": "<module 'Diagnostics' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Input": "<module 'Input' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
             "Resources": "<module 'Resources' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Diagnostics": "<module 'Diagnostics' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
             "Data": "<module 'Data' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Baml2006": "<module 'Baml2006' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Shapes": "<module 'Shapes' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Annotations": "<module 'Annotations' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Documents": "<module 'Documents' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Controls": "<module 'Controls' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Input": "<module 'Input' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Shell": "<module 'Shell' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Interop": "<module 'Interop' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
             "Media": "<module 'Media' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
             "Navigation": "<module 'Navigation' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Shapes": "<module 'Shapes' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Documents": "<module 'Documents' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Baml2006": "<module 'Baml2006' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
             "Automation": "<module 'Automation' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
         }
     }, 
-    "System.Drawing.dll": {
-        "Drawing": {
-            "Printing": "<module 'Printing' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>", 
-            "Drawing2D": "<module 'Drawing2D' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>", 
-            "Design": "<module 'Design' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>", 
-            "Configuration": "<module 'Configuration' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>", 
-            "Text": "<module 'Text' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>", 
-            "Imaging": "<module 'Imaging' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>"
-        }, 
-        "System.Drawing": {
-            "System": "<module 'System' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>"
-        }, 
-        "System": {
-            "Drawing": "<module 'Drawing' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>"
-        }
-    }, 
-    "WindowsBase.dll": {
-        "Security": {
-            "Permissions": "<module 'Permissions' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "RightsManagement": "<module 'RightsManagement' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
-        }, 
-        "Media": {
-            "Converters": "<module 'Converters' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
-        }, 
-        "System": {
-            "Windows": "<module 'Windows' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Diagnostics": "<module 'Diagnostics' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "ComponentModel": "<module 'ComponentModel' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Security": "<module 'Security' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Collections": "<module 'Collections' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "IO": "<module 'IO' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
-        }, 
-        "WindowsBase": {
-            "System": "<module 'System' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
-        }, 
-        "Collections": {
-            "Specialized": "<module 'Specialized' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
-        }, 
-        "IO": {
-            "Packaging": "<module 'Packaging' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
-        }, 
-        "Markup": {
-            "Primitives": "<module 'Primitives' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
-        }, 
-        "Windows": {
-            "Interop": "<module 'Interop' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Media": "<module 'Media' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Input": "<module 'Input' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Threading": "<module 'Threading' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Converters": "<module 'Converters' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Data": "<module 'Data' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Markup": "<module 'Markup' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
-        }
-    }, 
-    "IronPython.Wpf.dll": {
-        "IronPython.Wpf": {
-            "IronPython": "<module 'IronPython' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>"
-        }, 
-        "IronPython": {
-            "Modules": "<module 'Modules' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>"
-        }
-    }, 
-    "PresentationCore.dll": {
-        "Input": {
-            "StylusPlugIns": "<module 'StylusPlugIns' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
-        }, 
-        "Media": {
-            "Animation": "<module 'Animation' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "TextFormatting": "<module 'TextFormatting' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Effects": "<module 'Effects' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Converters": "<module 'Converters' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Media3D": "<module 'Media3D' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Imaging": "<module 'Imaging' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
-        }, 
-        "PresentationCore": {
-            "System": "<module 'System' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
-        }, 
-        "System": {
-            "Windows": "<module 'Windows' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "IO": "<module 'IO' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
-        }, 
-        "Automation": {
-            "Peers": "<module 'Peers' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
-        }, 
-        "Media3D": {
-            "Converters": "<module 'Converters' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
-        }, 
-        "IO": {
-            "Packaging": "<module 'Packaging' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
-        }, 
-        "Windows": {
-            "Media": "<module 'Media' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Navigation": "<module 'Navigation' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Interop": "<module 'Interop' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Ink": "<module 'Ink' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Diagnostics": "<module 'Diagnostics' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Input": "<module 'Input' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Documents": "<module 'Documents' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Resources": "<module 'Resources' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Automation": "<module 'Automation' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
-            "Markup": "<module 'Markup' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+    "RevitServices.DLL": {
+        "RevitServices": {
+            "Persistence": "<module 'Persistence' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+            "Elements": "<module 'Elements' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+            "Threading": "<module 'Threading' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+            "EventHandler": "<module 'EventHandler' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+            "Transactions": "<module 'Transactions' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+            "Materials": "<module 'Materials' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+            "RevitServices": "<module 'RevitServices' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
         }
     }, 
     "System.Windows.Forms.dll": {
-        "ComponentModel": {
-            "Com2Interop": "<module 'Com2Interop' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
-        }, 
         "Forms": {
             "Design": "<module 'Design' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Layout": "<module 'Layout' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
             "ComponentModel": "<module 'ComponentModel' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "VisualStyles": "<module 'VisualStyles' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
             "PropertyGridInternal": "<module 'PropertyGridInternal' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "VisualStyles": "<module 'VisualStyles' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+            "Layout": "<module 'Layout' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
         }, 
         "System.Windows.Forms": {
             "System": "<module 'System' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
         }, 
         "System": {
-            "Windows": "<module 'Windows' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
-            "Resources": "<module 'Resources' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+            "Resources": "<module 'Resources' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Windows": "<module 'Windows' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }, 
+        "ComponentModel": {
+            "Com2Interop": "<module 'Com2Interop' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
         }, 
         "Windows": {
             "Forms": "<module 'Forms' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }
+    }, 
+    "RevitNodes.DLL": {
+        "RevitNodes": {
+            "Revit": "<module 'Revit' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+        }, 
+        "Revit": {
+            "GeometryConversion": "<module 'GeometryConversion' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+            "References": "<module 'References' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+            "AnalysisDisplay": "<module 'AnalysisDisplay' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+            "Application": "<module 'Application' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+            "Transaction": "<module 'Transaction' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+            "Graphics": "<module 'Graphics' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+            "GeometryReferences": "<module 'GeometryReferences' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+            "GeometryObjects": "<module 'GeometryObjects' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+            "Elements": "<module 'Elements' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+            "Filter": "<module 'Filter' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+        }, 
+        "Elements": {
+            "InternalUtilities": "<module 'InternalUtilities' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+            "Views": "<module 'Views' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+        }
+    }, 
+    "System.dll": {
+        "Runtime": {
+            "InteropServices": "<module 'InteropServices' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Versioning": "<module 'Versioning' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }, 
+        "Net": {
+            "Security": "<module 'Security' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Sockets": "<module 'Sockets' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "NetworkInformation": "<module 'NetworkInformation' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Configuration": "<module 'Configuration' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Mail": "<module 'Mail' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Cache": "<module 'Cache' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "WebSockets": "<module 'WebSockets' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Mime": "<module 'Mime' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }, 
+        "Security": {
+            "AccessControl": "<module 'AccessControl' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Authentication": "<module 'Authentication' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Claims": "<module 'Claims' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Cryptography": "<module 'Cryptography' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Permissions": "<module 'Permissions' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }, 
+        "Collections": {
+            "Concurrent": "<module 'Concurrent' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Generic": "<module 'Generic' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "ObjectModel": "<module 'ObjectModel' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Specialized": "<module 'Specialized' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }, 
+        "Design": {
+            "Serialization": "<module 'Serialization' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }, 
+        "Cryptography": {
+            "X509Certificates": "<module 'X509Certificates' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }, 
+        "Microsoft": {
+            "CSharp": "<module 'CSharp' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Win32": "<module 'Win32' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "VisualBasic": "<module 'VisualBasic' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }, 
+        "Diagnostics": {
+            "CodeAnalysis": "<module 'CodeAnalysis' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }, 
+        "CodeDom": {
+            "Compiler": "<module 'Compiler' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }, 
+        "Win32": {
+            "SafeHandles": "<module 'SafeHandles' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }, 
+        "IO": {
+            "Compression": "<module 'Compression' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Ports": "<module 'Ports' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }, 
+        "System": {
+            "Net": "<module 'Net' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Text": "<module 'Text' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Diagnostics": "<module 'Diagnostics' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Windows": "<module 'Windows' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "System": "<module 'System' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Collections": "<module 'Collections' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Web": "<module 'Web' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Reflection": "<module 'Reflection' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Timers": "<module 'Timers' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Runtime": "<module 'Runtime' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "IO": "<module 'IO' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Media": "<module 'Media' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Security": "<module 'Security' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Configuration": "<module 'Configuration' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "CodeDom": "<module 'CodeDom' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "ComponentModel": "<module 'ComponentModel' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Microsoft": "<module 'Microsoft' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Threading": "<module 'Threading' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }, 
+        "InteropServices": {
+            "ComTypes": "<module 'ComTypes' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }, 
+        "ExtendedProtection": {
+            "Configuration": "<module 'Configuration' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }, 
+        "Authentication": {
+            "ExtendedProtection": "<module 'ExtendedProtection' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }, 
+        "Text": {
+            "RegularExpressions": "<module 'RegularExpressions' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }, 
+        "Windows": {
+            "Markup": "<module 'Markup' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+            "Input": "<module 'Input' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }, 
+        "ComponentModel": {
+            "Design": "<module 'Design' (CLS module from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+        }
+    }, 
+    "System.Drawing.dll": {
+        "System.Drawing": {
+            "System": "<module 'System' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>"
+        }, 
+        "System": {
+            "Drawing": "<module 'Drawing' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>"
+        }, 
+        "Drawing": {
+            "Design": "<module 'Design' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>", 
+            "Printing": "<module 'Printing' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>", 
+            "Configuration": "<module 'Configuration' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>", 
+            "Text": "<module 'Text' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>", 
+            "Imaging": "<module 'Imaging' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>", 
+            "Drawing2D": "<module 'Drawing2D' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>"
+        }
+    }, 
+    "WindowsBase.dll": {
+        "Security": {
+            "RightsManagement": "<module 'RightsManagement' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Permissions": "<module 'Permissions' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        }, 
+        "Collections": {
+            "Specialized": "<module 'Specialized' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        }, 
+        "WindowsBase": {
+            "System": "<module 'System' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        }, 
+        "Markup": {
+            "Primitives": "<module 'Primitives' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        }, 
+        "IO": {
+            "Packaging": "<module 'Packaging' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        }, 
+        "System": {
+            "Security": "<module 'Security' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Collections": "<module 'Collections' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Diagnostics": "<module 'Diagnostics' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "ComponentModel": "<module 'ComponentModel' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Windows": "<module 'Windows' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "IO": "<module 'IO' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        }, 
+        "Media": {
+            "Converters": "<module 'Converters' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        }, 
+        "Windows": {
+            "Converters": "<module 'Converters' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Markup": "<module 'Markup' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Interop": "<module 'Interop' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Input": "<module 'Input' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Threading": "<module 'Threading' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Data": "<module 'Data' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Media": "<module 'Media' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        }
+    }, 
+    "RevitAPIUI.DLL": {
+        "RevitAPIUI": {
+            "Autodesk": "<module 'Autodesk' (CLS module from RevitAPIUI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+        }, 
+        "Autodesk": {
+            "Revit": "<module 'Revit' (CLS module from RevitAPIUI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+        }, 
+        "Revit": {
+            "UI": "<module 'UI' (CLS module from RevitAPIUI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+        }, 
+        "UI": {
+            "Macros": "<module 'Macros' (CLS module from RevitAPIUI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "Selection": "<module 'Selection' (CLS module from RevitAPIUI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "Events": "<module 'Events' (CLS module from RevitAPIUI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "Plumbing": "<module 'Plumbing' (CLS module from RevitAPIUI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "Mechanical": "<module 'Mechanical' (CLS module from RevitAPIUI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+        }
+    }, 
+    "ProtoGeometry.DLL": {
+        "ProtoGeometry": {
+            "Autodesk": "<module 'Autodesk' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+        }, 
+        "Geometry": {
+            "TSpline": "<module 'TSpline' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+            "Core": "<module 'Core' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+        }, 
+        "DesignScript": {
+            "Geometry": "<module 'Geometry' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+        }, 
+        "Autodesk": {
+            "DesignScript": "<module 'DesignScript' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+        }
+    }, 
+    "Rhino3dmIO.DLL": {
+        "Runtime": {
+            "InteropWrappers": "<module 'InteropWrappers' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+        }, 
+        "Rhino": {
+            "Collections": "<module 'Collections' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+            "Render": "<module 'Render' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+            "Geometry": "<module 'Geometry' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+            "UI": "<module 'UI' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+            "Runtime": "<module 'Runtime' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+            "FileIO": "<module 'FileIO' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+            "Display": "<module 'Display' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+            "DocObjects": "<module 'DocObjects' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+        }, 
+        "DocObjects": {
+            "Custom": "<module 'Custom' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+        }, 
+        "Rhino3dmIO": {
+            "Rhino": "<module 'Rhino' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+        }, 
+        "Geometry": {
+            "Collections": "<module 'Collections' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+            "Intersect": "<module 'Intersect' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+        }
+    }, 
+    "IronPython.Wpf.DLL": {
+        "IronPython": {
+            "Modules": "<module 'Modules' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>"
+        }, 
+        "IronPython.Wpf": {
+            "IronPython": "<module 'IronPython' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>"
+        }
+    }, 
+    "PresentationCore.dll": {
+        "Automation": {
+            "Peers": "<module 'Peers' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        }, 
+        "PresentationCore": {
+            "System": "<module 'System' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        }, 
+        "Media3D": {
+            "Converters": "<module 'Converters' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        }, 
+        "Media": {
+            "Converters": "<module 'Converters' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Animation": "<module 'Animation' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "TextFormatting": "<module 'TextFormatting' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Imaging": "<module 'Imaging' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Media3D": "<module 'Media3D' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Effects": "<module 'Effects' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        }, 
+        "System": {
+            "Windows": "<module 'Windows' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "IO": "<module 'IO' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        }, 
+        "IO": {
+            "Packaging": "<module 'Packaging' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        }, 
+        "Windows": {
+            "Navigation": "<module 'Navigation' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Ink": "<module 'Ink' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Documents": "<module 'Documents' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Markup": "<module 'Markup' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Resources": "<module 'Resources' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Diagnostics": "<module 'Diagnostics' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Interop": "<module 'Interop' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Input": "<module 'Input' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Automation": "<module 'Automation' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+            "Media": "<module 'Media' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+        }, 
+        "Input": {
+            "StylusPlugIns": "<module 'StylusPlugIns' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
         }
     }
 }

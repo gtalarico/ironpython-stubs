@@ -2,7 +2,7 @@
 # module System.Security.RightsManagement calls itself RightsManagement
 # from WindowsBase,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -143,18 +143,28 @@ class ContentUser(object):
   """
   Equals(self: ContentUser,obj: object) -> bool
   
-   Returns a value that indicates whether this System.Security.RightsManagement.ContentUser is equivalent to another given instance.
+   Returns a value that indicates whether this 
+    System.Security.RightsManagement.ContentUser is equivalent to another given 
+    instance.
+  
   
    obj: The user instance to compare for equality.
-   Returns: true if System.Security.RightsManagement.ContentUser.Name and System.Security.RightsManagement.ContentUser.AuthenticationType are the same for both this user and the given user; otherwise,false.
+   Returns: true if System.Security.RightsManagement.ContentUser.Name and 
+    System.Security.RightsManagement.ContentUser.AuthenticationType are the same 
+    for both this user and the given user; otherwise,false.
   """
   pass
  def GetHashCode(self):
   """
   GetHashCode(self: ContentUser) -> int
   
-   Returns a computed hash code based on the user System.Security.RightsManagement.ContentUser.Name and System.Security.RightsManagement.ContentUser.AuthenticationType.
-   Returns: A hash code computed from the user System.Security.RightsManagement.ContentUser.Name and System.Security.RightsManagement.ContentUser.AuthenticationType.
+   Returns a computed hash code based on the user 
+    System.Security.RightsManagement.ContentUser.Name and 
+    System.Security.RightsManagement.ContentUser.AuthenticationType.
+  
+   Returns: A hash code computed from the user 
+    System.Security.RightsManagement.ContentUser.Name and 
+    System.Security.RightsManagement.ContentUser.AuthenticationType.
   """
   pass
  def IsAuthenticated(self):
@@ -162,7 +172,8 @@ class ContentUser(object):
   IsAuthenticated(self: ContentUser) -> bool
   
    Returns a value that indicates whether the user is currently authenticated.
-   Returns: true if the user is currently authenticated; otherwise,false.  The default is false until authenticated.
+   Returns: true if the user is currently authenticated; otherwise,false.  The default is 
+    false until authenticated.
   """
   pass
  def __eq__(self,*args):
@@ -208,7 +219,8 @@ class CryptoProvider(object,IDisposable):
  def Dispose(self):
   """
   Dispose(self: CryptoProvider)
-   Releases all resources used by the System.Security.RightsManagement.CryptoProvider.
+   Releases all resources used by the 
+    System.Security.RightsManagement.CryptoProvider.
   """
   pass
  def Encrypt(self,clearText):
@@ -222,17 +234,10 @@ class CryptoProvider(object,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -287,21 +292,36 @@ class LocalizedNameDescriptionPair(object):
   """
   Equals(self: LocalizedNameDescriptionPair,obj: object) -> bool
   
-   Indicates whether the System.Security.RightsManagement.LocalizedNameDescriptionPair.Name and System.Security.RightsManagement.LocalizedNameDescriptionPair.Description properties of a given object match 
-    those of this System.Security.RightsManagement.LocalizedNameDescriptionPair.
+   Indicates whether the 
+    System.Security.RightsManagement.LocalizedNameDescriptionPair.Name and 
+    System.Security.RightsManagement.LocalizedNameDescriptionPair.Description 
+    properties of a given object match those of this 
+    System.Security.RightsManagement.LocalizedNameDescriptionPair.
   
   
-   obj: The object to compare the System.Security.RightsManagement.LocalizedNameDescriptionPair.Name and System.Security.RightsManagement.LocalizedNameDescriptionPair.Description properties of.
-   Returns: true if the System.Security.RightsManagement.LocalizedNameDescriptionPair.Name and System.Security.RightsManagement.LocalizedNameDescriptionPair.Description properties of the given object match those of 
-    this instance; otherwise,false.
+   obj: The object to compare the 
+    System.Security.RightsManagement.LocalizedNameDescriptionPair.Name and 
+    System.Security.RightsManagement.LocalizedNameDescriptionPair.Description 
+    properties of.
+  
+   Returns: true if the System.Security.RightsManagement.LocalizedNameDescriptionPair.Name 
+    and System.Security.RightsManagement.LocalizedNameDescriptionPair.Description 
+    properties of the given object match those of this instance; otherwise,false.
   """
   pass
  def GetHashCode(self):
   """
   GetHashCode(self: LocalizedNameDescriptionPair) -> int
   
-   Gets a computed hash code based on the System.Security.RightsManagement.LocalizedNameDescriptionPair.Name and System.Security.RightsManagement.LocalizedNameDescriptionPair.Description properties.
-   Returns: A computed hash code based on the System.Security.RightsManagement.LocalizedNameDescriptionPair.Name and System.Security.RightsManagement.LocalizedNameDescriptionPair.Description properties of this 
+   Gets a computed hash code based on the 
+    System.Security.RightsManagement.LocalizedNameDescriptionPair.Name and 
+    System.Security.RightsManagement.LocalizedNameDescriptionPair.Description 
+    properties.
+  
+   Returns: A computed hash code based on the 
+    System.Security.RightsManagement.LocalizedNameDescriptionPair.Name and 
+    System.Security.RightsManagement.LocalizedNameDescriptionPair.Description 
+    properties of this 
     System.Security.RightsManagement.LocalizedNameDescriptionPair.
   """
   pass
@@ -340,27 +360,35 @@ class PublishLicense(object):
   """
   AcquireUseLicense(self: PublishLicense,secureEnvironment: SecureEnvironment) -> UseLicense
   
-   Attempts to acquire a System.Security.RightsManagement.UseLicense for a user or user group in a specified System.Security.RightsManagement.SecureEnvironment.
+   Attempts to acquire a System.Security.RightsManagement.UseLicense for a user or 
+    user group in a specified System.Security.RightsManagement.SecureEnvironment.
+  
   
    secureEnvironment: The secure environment for license activation and binding.
-   Returns: The System.Security.RightsManagement.UseLicense for a user or user group in the specified secureEnvironment.
+   Returns: The System.Security.RightsManagement.UseLicense for a user or user group in the 
+    specified secureEnvironment.
   """
   pass
  def AcquireUseLicenseNoUI(self,secureEnvironment):
   """
   AcquireUseLicenseNoUI(self: PublishLicense,secureEnvironment: SecureEnvironment) -> UseLicense
   
-   Attempts to acquire a System.Security.RightsManagement.UseLicense for a user or user group in a specified System.Security.RightsManagement.SecureEnvironment.
+   Attempts to acquire a System.Security.RightsManagement.UseLicense for a user or 
+    user group in a specified System.Security.RightsManagement.SecureEnvironment.
+  
   
    secureEnvironment: The secure environment for license activation and binding.
-   Returns: The System.Security.RightsManagement.UseLicense for a user or user group in the specified secureEnvironment.
+   Returns: The System.Security.RightsManagement.UseLicense for a user or user group in the 
+    specified secureEnvironment.
   """
   pass
  def DecryptUnsignedPublishLicense(self,cryptoProvider):
   """
   DecryptUnsignedPublishLicense(self: PublishLicense,cryptoProvider: CryptoProvider) -> UnsignedPublishLicense
   
-   Returns a decrypted System.Security.RightsManagement.UnsignedPublishLicense version of this signed System.Security.RightsManagement.PublishLicense.
+   Returns a decrypted System.Security.RightsManagement.UnsignedPublishLicense 
+    version of this signed System.Security.RightsManagement.PublishLicense.
+  
   
    cryptoProvider: The rights management service to use for decrypting the license.
    Returns: A decrypted,unsigned version of this license.
@@ -371,7 +399,8 @@ class PublishLicense(object):
   ToString(self: PublishLicense) -> str
   
    Returns the serialized XrML�string that was�used to create this license.
-   Returns: The serialized�Extensible Rights Markup Language (XrML) string that was�used to create this license.
+   Returns: The serialized�Extensible Rights Markup Language (XrML) string that was�used to 
+    create this license.
   """
   pass
  @staticmethod
@@ -426,7 +455,9 @@ class RightsManagementException(Exception,ISerializable,_Exception):
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: RightsManagementException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo store with the parameter name and information about the exception.
+   Sets the System.Runtime.Serialization.SerializationInfo store with the 
+    parameter name and information about the exception.
+  
   
    info: The object that holds the serialized data.
    context: The contextual information about the source or destination.
@@ -597,25 +628,34 @@ class SecureEnvironment(object,IDisposable):
   """
   Create(applicationManifest: str,authentication: AuthenticationType,userActivationMode: UserActivationMode) -> SecureEnvironment
   
-   Creates a secure client session given an application rights manifest,System.Security.RightsManagement.AuthenticationType,and System.Security.RightsManagement.UserActivationMode.
+   Creates a secure client session given an application rights manifest,
+    System.Security.RightsManagement.AuthenticationType,and 
+    System.Security.RightsManagement.UserActivationMode.
+  
   
    applicationManifest: The application rights manifest.
    authentication: The method of authentication.
    userActivationMode: The type of the user rights account certificate.
-   Returns: A secure client session for activation,license binding,and other rights management operations.
+   Returns: A secure client session for activation,license binding,and other rights 
+    management operations.
+  
   Create(applicationManifest: str,user: ContentUser) -> SecureEnvironment
   
-   Creates a secure client session for a specified user with a given rights manifest.
+   Creates a secure client session for a specified user with a given rights 
+    manifest.
+  
   
    applicationManifest: The application rights manifest.
    user: The user or user-group for granting access to rights managed content.
-   Returns: A secure client session for activation,license binding,and other rights management operations.
+   Returns: A secure client session for activation,license binding,and other rights 
+    management operations.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: SecureEnvironment)
-   Releases all resources used by the System.Security.RightsManagement.SecureEnvironment.
+   Releases all resources used by the 
+    System.Security.RightsManagement.SecureEnvironment.
   """
   pass
  @staticmethod
@@ -632,10 +672,13 @@ class SecureEnvironment(object,IDisposable):
   """
   IsUserActivated(user: ContentUser) -> bool
   
-   Indicates whether a given user has been activated for accessing rights managed content.
+   Indicates whether a given user has been activated for accessing rights managed 
+    content.
+  
   
    user: The user or user-group for granting access to rights managed content.
-   Returns: true if the given user has been activated for accessing rights managed content; otherwise,false.
+   Returns: true if the given user has been activated for accessing rights managed content; 
+    otherwise,false.
   """
   pass
  @staticmethod
@@ -648,17 +691,10 @@ class SecureEnvironment(object,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -693,18 +729,24 @@ class UnsignedPublishLicense(object):
   """
   Sign(self: UnsignedPublishLicense,secureEnvironment: SecureEnvironment) -> (PublishLicense,UseLicense)
   
-   Creates a signed System.Security.RightsManagement.PublishLicense and returns a System.Security.RightsManagement.UseLicense for the document author.
+   Creates a signed System.Security.RightsManagement.PublishLicense and returns a 
+    System.Security.RightsManagement.UseLicense for the document author.
+  
   
    secureEnvironment: The secure environment for license activation and binding.
-   Returns: The signed System.Security.RightsManagement.PublishLicense that is created by signing this System.Security.RightsManagement.UnsignedPublishLicense.
+   Returns: The signed System.Security.RightsManagement.PublishLicense that is created by 
+    signing this System.Security.RightsManagement.UnsignedPublishLicense.
   """
   pass
  def ToString(self):
   """
   ToString(self: UnsignedPublishLicense) -> str
   
-   Returns a serialized template created from the XrML of the System.Security.RightsManagement.UnsignedPublishLicense.
-   Returns: A serialized template created from the XrML of the System.Security.RightsManagement.UnsignedPublishLicense.
+   Returns a serialized template created from the XrML of the 
+    System.Security.RightsManagement.UnsignedPublishLicense.
+  
+   Returns: A serialized template created from the XrML of the 
+    System.Security.RightsManagement.UnsignedPublishLicense.
   """
   pass
  @staticmethod
@@ -775,7 +817,8 @@ class UseLicense(object):
    Binds the license to a given System.Security.RightsManagement.SecureEnvironment.
   
    secureEnvironment: The environment to bind the license to.
-   Returns: A System.Security.RightsManagement.CryptoProvider instance if the license binding succeeded; otherwise,null.
+   Returns: A System.Security.RightsManagement.CryptoProvider instance if the license 
+    binding succeeded; otherwise,null.
   """
   pass
  def Equals(self,x):
@@ -801,7 +844,9 @@ class UseLicense(object):
   ToString(self: UseLicense) -> str
   
    Returns the serialized XrML string used to create this license.
-   Returns: The serialized Extensible Rights Markup Language (XrML) string originally passed to the System.Security.RightsManagement.UseLicense.#ctor(System.String) constructor.
+   Returns: The serialized Extensible Rights Markup Language (XrML) string originally 
+    passed to the System.Security.RightsManagement.UseLicense.#ctor(System.String) 
+    constructor.
   """
   pass
  def __eq__(self,*args):

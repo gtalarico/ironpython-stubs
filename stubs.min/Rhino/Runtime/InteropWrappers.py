@@ -2,7 +2,7 @@
 # module Rhino.Runtime.InteropWrappers calls itself InteropWrappers
 # from Rhino3dmIO,Version=5.1.30000.14,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -46,17 +46,10 @@ class SimpleArrayBrepPointer(object,IDisposable):
   """ x.__add__(y) <==> x+y """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -89,17 +82,10 @@ class SimpleArrayCurvePointer(object,IDisposable):
   """ ToNonConstArray(self: SimpleArrayCurvePointer) -> Array[Curve] """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -133,17 +119,10 @@ class SimpleArrayDouble(object,IDisposable):
   """ ToArray(self: SimpleArrayDouble) -> Array[float] """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -184,17 +163,10 @@ class SimpleArrayGeometryPointer(object,IDisposable):
   """ ToNonConstArray(self: SimpleArrayGeometryPointer) -> Array[GeometryBase] """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -226,17 +198,10 @@ class SimpleArrayGuid(object,IDisposable):
   """ ToArray(self: SimpleArrayGuid) -> Array[Guid] """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -269,17 +234,10 @@ class SimpleArrayInt(object,IDisposable):
   """ ToArray(self: SimpleArrayInt) -> Array[int] """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -316,17 +274,10 @@ class SimpleArrayInterval(object,IDisposable):
   """ ToArray(self: SimpleArrayInterval) -> Array[Interval] """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -356,17 +307,10 @@ class SimpleArrayLine(object,IDisposable):
   """ ToArray(self: SimpleArrayLine) -> Array[Line] """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -402,17 +346,10 @@ class SimpleArrayMeshPointer(object,IDisposable):
   """ x.__add__(y) <==> x+y """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -442,17 +379,10 @@ class SimpleArrayPoint2d(object,IDisposable):
   """ ToArray(self: SimpleArrayPoint2d) -> Array[Point2d] """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -482,17 +412,10 @@ class SimpleArrayPoint3d(object,IDisposable):
   """ ToArray(self: SimpleArrayPoint3d) -> Array[Point3d] """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -522,17 +445,10 @@ class SimpleArraySurfacePointer(object,IDisposable):
   """ ToNonConstArray(self: SimpleArraySurfacePointer) -> Array[Surface] """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -560,17 +476,10 @@ class StringHolder(object,IDisposable):
   """ ToString(self: StringHolder) -> str """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -604,17 +513,10 @@ class StringWrapper(object,IDisposable):
   """ ToString(self: StringWrapper) -> str """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

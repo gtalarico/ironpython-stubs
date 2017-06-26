@@ -2,7 +2,7 @@
 # module System.Drawing.Printing calls itself Printing
 # from System.Drawing,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -56,10 +56,15 @@ class InvalidPrinterException(SystemException,ISerializable,_Exception):
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: InvalidPrinterException,info: SerializationInfo,context: StreamingContext)
-   Overridden. Sets the System.Runtime.Serialization.SerializationInfo with information about the exception.
+   Overridden. Sets the System.Runtime.Serialization.SerializationInfo with 
+    information about the exception.
   
-   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about the exception being thrown.
-   context: The System.Runtime.Serialization.StreamingContext that contains contextual information about the source or destination.
+  
+   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized 
+    object data about the exception being thrown.
+  
+   context: The System.Runtime.Serialization.StreamingContext that contains contextual 
+    information about the source or destination.
   """
   pass
  def remove_SerializeObjectState(self,*args):
@@ -99,18 +104,25 @@ class Margins(object,ICloneable):
   """
   Equals(self: Margins,obj: object) -> bool
   
-   Compares this System.Drawing.Printing.Margins to the specified System.Object to determine whether they have the same dimensions.
+   Compares this System.Drawing.Printing.Margins to the specified System.Object to 
+    determine whether they have the same dimensions.
+  
   
    obj: The object to which to compare this System.Drawing.Printing.Margins.
-   Returns: true if the specified object is a System.Drawing.Printing.Margins and has the same System.Drawing.Printing.Margins.Top,System.Drawing.Printing.Margins.Bottom,System.Drawing.Printing.Margins.Right and 
-    System.Drawing.Printing.Margins.Left values as this System.Drawing.Printing.Margins; otherwise,false.
+   Returns: true if the specified object is a System.Drawing.Printing.Margins and has the 
+    same System.Drawing.Printing.Margins.Top,
+    System.Drawing.Printing.Margins.Bottom,System.Drawing.Printing.Margins.Right 
+    and System.Drawing.Printing.Margins.Left values as this 
+    System.Drawing.Printing.Margins; otherwise,false.
   """
   pass
  def GetHashCode(self):
   """
   GetHashCode(self: Margins) -> int
   
-   Calculates and retrieves a hash code based on the width of the left,right,top,and bottom margins.
+   Calculates and retrieves a hash code based on the width of the left,right,
+    top,and bottom margins.
+  
    Returns: A hash code based on the left,right,top,and bottom margins.
   """
   pass
@@ -188,7 +200,9 @@ class MarginsConverter(ExpandableObjectConverter):
   """
   CanConvertFrom(self: MarginsConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Returns whether this converter can convert an object of the specified source type to the native type of the converter using the specified context.
+   Returns whether this converter can convert an object of the specified source 
+    type to the native type of the converter using the specified context.
+  
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    sourceType: A System.Type that represents the type from which you want to convert.
@@ -199,7 +213,9 @@ class MarginsConverter(ExpandableObjectConverter):
   """
   CanConvertTo(self: MarginsConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Returns whether this converter can convert an object to the given destination type using the context.
+   Returns whether this converter can convert an object to the given destination 
+    type using the context.
+  
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    destinationType: A System.Type that represents the type to which you want to convert.
@@ -222,7 +238,9 @@ class MarginsConverter(ExpandableObjectConverter):
   """
   ConvertTo(self: MarginsConverter,context: ITypeDescriptorContext,culture: CultureInfo,value: object,destinationType: Type) -> object
   
-   Converts the given value object to the specified destination type using the specified context and arguments.
+   Converts the given value object to the specified destination type using the 
+    specified context and arguments.
+  
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    culture: A System.Globalization.CultureInfo that provides the language to convert to.
@@ -239,20 +257,25 @@ class MarginsConverter(ExpandableObjectConverter):
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    propertyValues: An System.Collections.IDictionary of new property values.
-   Returns: An System.Object representing the specified System.Collections.IDictionary,or null if the object cannot be created.
+   Returns: An System.Object representing the specified System.Collections.IDictionary,or 
+    null if the object cannot be created.
   """
   pass
  def GetCreateInstanceSupported(self,context=None):
   """
   GetCreateInstanceSupported(self: MarginsConverter,context: ITypeDescriptorContext) -> bool
   
-   Returns whether changing a value on this object requires a call to the System.Drawing.Printing.MarginsConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext,System.Collections.IDictionary) 
-    method to create a new value,using the specified context.
+   Returns whether changing a value on this object requires a call to the 
+    System.Drawing.Printing.MarginsConverter.CreateInstance(System.ComponentModel.IT
+    ypeDescriptorContext,System.Collections.IDictionary) method to create a new 
+    value,using the specified context.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   Returns: true if changing a property on this object requires a call to System.Drawing.Printing.MarginsConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext,System.Collections.IDictionary) to create 
-    a new value; otherwise,false. This method always returns true.
+   Returns: true if changing a property on this object requires a call to 
+    System.Drawing.Printing.MarginsConverter.CreateInstance(System.ComponentModel.IT
+    ypeDescriptorContext,System.Collections.IDictionary) to create a new value; 
+    otherwise,false. This method always returns true.
   """
   pass
 
@@ -274,7 +297,9 @@ class PageSettings(object,ICloneable):
  def CopyToHdevmode(self,hdevmode):
   """
   CopyToHdevmode(self: PageSettings,hdevmode: IntPtr)
-   Copies the relevant information from the System.Drawing.Printing.PageSettings to the specified DEVMODE structure.
+   Copies the relevant information from the System.Drawing.Printing.PageSettings 
+    to the specified DEVMODE structure.
+  
   
    hdevmode: The handle to a Win32 DEVMODE structure.
   """
@@ -282,7 +307,9 @@ class PageSettings(object,ICloneable):
  def SetHdevmode(self,hdevmode):
   """
   SetHdevmode(self: PageSettings,hdevmode: IntPtr)
-   Copies relevant information to the System.Drawing.Printing.PageSettings from the specified DEVMODE structure.
+   Copies relevant information to the System.Drawing.Printing.PageSettings from 
+    the specified DEVMODE structure.
+  
   
    hdevmode: The handle to a Win32 DEVMODE structure.
   """
@@ -292,7 +319,8 @@ class PageSettings(object,ICloneable):
   ToString(self: PageSettings) -> str
   
    Converts the System.Drawing.Printing.PageSettings to string form.
-   Returns: A string showing the various property settings for the System.Drawing.Printing.PageSettings.
+   Returns: A string showing the various property settings for the 
+    System.Drawing.Printing.PageSettings.
   """
   pass
  def __init__(self,*args):
@@ -620,7 +648,9 @@ class PaperSource(object):
   """
   ToString(self: PaperSource) -> str
   
-   Provides information about the System.Drawing.Printing.PaperSource in string form.
+   Provides information about the System.Drawing.Printing.PaperSource in string 
+    form.
+  
    Returns: A string.
   """
   pass
@@ -726,18 +756,26 @@ class PrintController(object):
  def OnEndPage(self,document,e):
   """
   OnEndPage(self: PrintController,document: PrintDocument,e: PrintPageEventArgs)
-   When overridden in a derived class,completes the control sequence that determines when and how to print a page of a document.
+   When overridden in a derived class,completes the control sequence that 
+    determines when and how to print a page of a document.
   
-   document: A System.Drawing.Printing.PrintDocument that represents the document currently being printed.
+  
+   document: A System.Drawing.Printing.PrintDocument that represents the document currently 
+    being printed.
+  
    e: A System.Drawing.Printing.PrintPageEventArgs that contains the event data.
   """
   pass
  def OnEndPrint(self,document,e):
   """
   OnEndPrint(self: PrintController,document: PrintDocument,e: PrintEventArgs)
-   When overridden in a derived class,completes the control sequence that determines when and how to print a document.
+   When overridden in a derived class,completes the control sequence that 
+    determines when and how to print a document.
   
-   document: A System.Drawing.Printing.PrintDocument that represents the document currently being printed.
+  
+   document: A System.Drawing.Printing.PrintDocument that represents the document currently 
+    being printed.
+  
    e: A System.Drawing.Printing.PrintEventArgs that contains the event data.
   """
   pass
@@ -745,19 +783,28 @@ class PrintController(object):
   """
   OnStartPage(self: PrintController,document: PrintDocument,e: PrintPageEventArgs) -> Graphics
   
-   When overridden in a derived class,begins the control sequence that determines when and how to print a page of a document.
+   When overridden in a derived class,begins the control sequence that determines 
+    when and how to print a page of a document.
   
-   document: A System.Drawing.Printing.PrintDocument that represents the document currently being printed.
+  
+   document: A System.Drawing.Printing.PrintDocument that represents the document currently 
+    being printed.
+  
    e: A System.Drawing.Printing.PrintPageEventArgs that contains the event data.
-   Returns: A System.Drawing.Graphics that represents a page from a System.Drawing.Printing.PrintDocument.
+   Returns: A System.Drawing.Graphics that represents a page from a 
+    System.Drawing.Printing.PrintDocument.
   """
   pass
  def OnStartPrint(self,document,e):
   """
   OnStartPrint(self: PrintController,document: PrintDocument,e: PrintEventArgs)
-   When overridden in a derived class,begins the control sequence that determines when and how to print a document.
+   When overridden in a derived class,begins the control sequence that determines 
+    when and how to print a document.
   
-   document: A System.Drawing.Printing.PrintDocument that represents the document currently being printed.
+  
+   document: A System.Drawing.Printing.PrintDocument that represents the document currently 
+    being printed.
+  
    e: A System.Drawing.Printing.PrintEventArgs that contains the event data.
   """
   pass
@@ -781,47 +828,71 @@ class PreviewPrintController(PrintController):
   GetPreviewPageInfo(self: PreviewPrintController) -> Array[PreviewPageInfo]
   
    Captures the pages of a document as a series of images.
-   Returns: An array of type System.Drawing.Printing.PreviewPageInfo that contains the pages of a System.Drawing.Printing.PrintDocument as a series of images.
+   Returns: An array of type System.Drawing.Printing.PreviewPageInfo that contains the 
+    pages of a System.Drawing.Printing.PrintDocument as a series of images.
   """
   pass
  def OnEndPage(self,document,e):
   """
   OnEndPage(self: PreviewPrintController,document: PrintDocument,e: PrintPageEventArgs)
-   Completes the control sequence that determines when and how to preview a page in a print document.
+   Completes the control sequence that determines when and how to preview a page 
+    in a print document.
   
-   document: A System.Drawing.Printing.PrintDocument that represents the document being previewed.
-   e: A System.Drawing.Printing.PrintPageEventArgs that contains data about how to preview a page in the print document.
+  
+   document: A System.Drawing.Printing.PrintDocument that represents the document being 
+    previewed.
+  
+   e: A System.Drawing.Printing.PrintPageEventArgs that contains data about how to 
+    preview a page in the print document.
   """
   pass
  def OnEndPrint(self,document,e):
   """
   OnEndPrint(self: PreviewPrintController,document: PrintDocument,e: PrintEventArgs)
-   Completes the control sequence that determines when and how to preview a print document.
+   Completes the control sequence that determines when and how to preview a print 
+    document.
   
-   document: A System.Drawing.Printing.PrintDocument that represents the document being previewed.
-   e: A System.Drawing.Printing.PrintEventArgs that contains data about how to preview the print document.
+  
+   document: A System.Drawing.Printing.PrintDocument that represents the document being 
+    previewed.
+  
+   e: A System.Drawing.Printing.PrintEventArgs that contains data about how to 
+    preview the print document.
   """
   pass
  def OnStartPage(self,document,e):
   """
   OnStartPage(self: PreviewPrintController,document: PrintDocument,e: PrintPageEventArgs) -> Graphics
   
-   Begins the control sequence that determines when and how to preview a page in a print document.
+   Begins the control sequence that determines when and how to preview a page in a 
+    print document.
   
-   document: A System.Drawing.Printing.PrintDocument that represents the document being previewed.
-   e: A System.Drawing.Printing.PrintPageEventArgs that contains data about how to preview a page in the print document. Initially,the System.Drawing.Printing.PrintPageEventArgs.Graphics property of this 
-    parameter will be null. The value returned from this method will be used to set this property.
   
-   Returns: A System.Drawing.Graphics that represents a page from a System.Drawing.Printing.PrintDocument.
+   document: A System.Drawing.Printing.PrintDocument that represents the document being 
+    previewed.
+  
+   e: A System.Drawing.Printing.PrintPageEventArgs that contains data about how to 
+    preview a page in the print document. Initially,the 
+    System.Drawing.Printing.PrintPageEventArgs.Graphics property of this parameter 
+    will be null. The value returned from this method will be used to set this 
+    property.
+  
+   Returns: A System.Drawing.Graphics that represents a page from a 
+    System.Drawing.Printing.PrintDocument.
   """
   pass
  def OnStartPrint(self,document,e):
   """
   OnStartPrint(self: PreviewPrintController,document: PrintDocument,e: PrintEventArgs)
-   Begins the control sequence that determines when and how to preview a print document.
+   Begins the control sequence that determines when and how to preview a print 
+    document.
   
-   document: A System.Drawing.Printing.PrintDocument that represents the document being previewed.
-   e: A System.Drawing.Printing.PrintEventArgs that contains data about how to print the document.
+  
+   document: A System.Drawing.Printing.PrintDocument that represents the document being 
+    previewed.
+  
+   e: A System.Drawing.Printing.PrintEventArgs that contains data about how to print 
+    the document.
   """
   pass
  IsPreview=property(lambda self: object(),lambda self,v: None,lambda self: None)
@@ -885,19 +956,26 @@ class PrintDocument(Component,IComponent,IDisposable):
  def Dispose(self):
   """
   Dispose(self: Component,disposing: bool)
-   Releases the unmanaged resources used by the System.ComponentModel.Component and optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.ComponentModel.Component 
+    and optionally releases the managed resources.
   
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+  
+   disposing: true to release both managed and unmanaged resources; false to release only 
+    unmanaged resources.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the 
+    System.ComponentModel.Component or by its System.ComponentModel.Container.
+  
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the 
+    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
+    does not provide the specified service.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -906,8 +984,11 @@ class PrintDocument(Component,IComponent,IDisposable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-    usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
+    will cause the object to be assigned a new identity when it is marshaled across 
+    a remoting boundary. A value of false is usually appropriate. true to copy the 
+    current System.MarshalByRefObject object's identity to its clone,which will 
+    cause remoting client calls to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -919,7 +1000,10 @@ class PrintDocument(Component,IComponent,IDisposable):
  def OnBeginPrint(self,*args):
   """
   OnBeginPrint(self: PrintDocument,e: PrintEventArgs)
-   Raises the System.Drawing.Printing.PrintDocument.BeginPrint event. It is called after the System.Drawing.Printing.PrintDocument.Print method is called and before the first page of the document prints.
+   Raises the System.Drawing.Printing.PrintDocument.BeginPrint event. It is called 
+    after the System.Drawing.Printing.PrintDocument.Print method is called and 
+    before the first page of the document prints.
+  
   
    e: A System.Drawing.Printing.PrintEventArgs that contains the event data.
   """
@@ -927,7 +1011,9 @@ class PrintDocument(Component,IComponent,IDisposable):
  def OnEndPrint(self,*args):
   """
   OnEndPrint(self: PrintDocument,e: PrintEventArgs)
-   Raises the System.Drawing.Printing.PrintDocument.EndPrint event. It is called when the last page of the document has printed.
+   Raises the System.Drawing.Printing.PrintDocument.EndPrint event. It is called 
+    when the last page of the document has printed.
+  
   
    e: A System.Drawing.Printing.PrintEventArgs that contains the event data.
   """
@@ -935,7 +1021,9 @@ class PrintDocument(Component,IComponent,IDisposable):
  def OnPrintPage(self,*args):
   """
   OnPrintPage(self: PrintDocument,e: PrintPageEventArgs)
-   Raises the System.Drawing.Printing.PrintDocument.PrintPage event. It is called before a page prints.
+   Raises the System.Drawing.Printing.PrintDocument.PrintPage event. It is called 
+    before a page prints.
+  
   
    e: A System.Drawing.Printing.PrintPageEventArgs that contains the event data.
   """
@@ -943,9 +1031,13 @@ class PrintDocument(Component,IComponent,IDisposable):
  def OnQueryPageSettings(self,*args):
   """
   OnQueryPageSettings(self: PrintDocument,e: QueryPageSettingsEventArgs)
-   Raises the System.Drawing.Printing.PrintDocument.QueryPageSettings event. It is called immediately before each System.Drawing.Printing.PrintDocument.PrintPage event.
+   Raises the System.Drawing.Printing.PrintDocument.QueryPageSettings event. It is 
+    called immediately before each System.Drawing.Printing.PrintDocument.PrintPage 
+    event.
   
-   e: A System.Drawing.Printing.QueryPageSettingsEventArgs that contains the event data.
+  
+   e: A System.Drawing.Printing.QueryPageSettingsEventArgs that contains the event 
+    data.
   """
   pass
  def Print(self):
@@ -963,17 +1055,10 @@ class PrintDocument(Component,IComponent,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1053,7 +1138,8 @@ class PrinterResolution(object):
   ToString(self: PrinterResolution) -> str
   
    This member overrides the System.Object.ToString method.
-   Returns: A System.String that contains information about the System.Drawing.Printing.PrinterResolution.
+   Returns: A System.String that contains information about the 
+    System.Drawing.Printing.PrinterResolution.
   """
   pass
  Kind=property(lambda self: object(),lambda self,v: None,lambda self: None)
@@ -1137,40 +1223,61 @@ class PrinterSettings(object,ICloneable):
   """
   CreateMeasurementGraphics(self: PrinterSettings,pageSettings: PageSettings) -> Graphics
   
-   Returns a System.Drawing.Graphics that contains printer information associated with the specified System.Drawing.Printing.PageSettings.
+   Returns a System.Drawing.Graphics that contains printer information associated 
+    with the specified System.Drawing.Printing.PageSettings.
+  
   
    pageSettings: The System.Drawing.Printing.PageSettings to retrieve a graphics object for.
-   Returns: A System.Drawing.Graphics that contains printer information from the System.Drawing.Printing.PageSettings.
+   Returns: A System.Drawing.Graphics that contains printer information from the 
+    System.Drawing.Printing.PageSettings.
+  
   CreateMeasurementGraphics(self: PrinterSettings,pageSettings: PageSettings,honorOriginAtMargins: bool) -> Graphics
   
-   Creates a System.Drawing.Graphics associated with the specified page settings and optionally specifying the origin at the margins.
+   Creates a System.Drawing.Graphics associated with the specified page settings 
+    and optionally specifying the origin at the margins.
   
-   pageSettings: The System.Drawing.Printing.PageSettings to retrieve a System.Drawing.Graphics object for.
+  
+   pageSettings: The System.Drawing.Printing.PageSettings to retrieve a System.Drawing.Graphics 
+    object for.
+  
    honorOriginAtMargins: true to specify the origin at the margins; otherwise,false.
-   Returns: A System.Drawing.Graphics that contains printer information from the System.Drawing.Printing.PageSettings.
+   Returns: A System.Drawing.Graphics that contains printer information from the 
+    System.Drawing.Printing.PageSettings.
+  
   CreateMeasurementGraphics(self: PrinterSettings) -> Graphics
   
-   Returns a System.Drawing.Graphics that contains printer information that is useful when creating a System.Drawing.Printing.PrintDocument.
+   Returns a System.Drawing.Graphics that contains printer information that is 
+    useful when creating a System.Drawing.Printing.PrintDocument.
+  
    Returns: A System.Drawing.Graphics that contains information from a printer.
   CreateMeasurementGraphics(self: PrinterSettings,honorOriginAtMargins: bool) -> Graphics
   
-   Returns a System.Drawing.Graphics that contains printer information,optionally specifying the origin at the margins.
+   Returns a System.Drawing.Graphics that contains printer information,optionally 
+    specifying the origin at the margins.
+  
   
    honorOriginAtMargins: true to indicate the origin at the margins; otherwise,false.
-   Returns: A System.Drawing.Graphics that contains printer information from the System.Drawing.Printing.PageSettings.
+   Returns: A System.Drawing.Graphics that contains printer information from the 
+    System.Drawing.Printing.PageSettings.
   """
   pass
  def GetHdevmode(self,pageSettings=None):
   """
   GetHdevmode(self: PrinterSettings,pageSettings: PageSettings) -> IntPtr
   
-   Creates a handle to a DEVMODE structure that corresponds to the printer and the page settings specified through the pageSettings parameter.
+   Creates a handle to a DEVMODE structure that corresponds to the printer and the 
+    page settings specified through the pageSettings parameter.
   
-   pageSettings: The System.Drawing.Printing.PageSettings object that the DEVMODE structure's handle corresponds to.
+  
+   pageSettings: The System.Drawing.Printing.PageSettings object that the DEVMODE structure's 
+    handle corresponds to.
+  
    Returns: A handle to a DEVMODE structure.
   GetHdevmode(self: PrinterSettings) -> IntPtr
   
-   Creates a handle to a DEVMODE structure that corresponds to the printer settings.
+   Creates a handle to a DEVMODE structure that corresponds to the printer 
+    settings.
+  
    Returns: A handle to a DEVMODE structure.
   """
   pass
@@ -1178,7 +1285,9 @@ class PrinterSettings(object,ICloneable):
   """
   GetHdevnames(self: PrinterSettings) -> IntPtr
   
-   Creates a handle to a DEVNAMES structure that corresponds to the printer settings.
+   Creates a handle to a DEVNAMES structure that corresponds to the printer 
+    settings.
+  
    Returns: A handle to a DEVNAMES structure.
   """
   pass
@@ -1186,22 +1295,29 @@ class PrinterSettings(object,ICloneable):
   """
   IsDirectPrintingSupported(self: PrinterSettings,image: Image) -> bool
   
-   Gets a value indicating whether the printer supports printing the specified image file.
+   Gets a value indicating whether the printer supports printing the specified 
+    image file.
+  
   
    image: The image to print.
    Returns: true if the printer supports printing the specified image; otherwise,false.
   IsDirectPrintingSupported(self: PrinterSettings,imageFormat: ImageFormat) -> bool
   
-   Returns a value indicating whether the printer supports printing the specified image format.
+   Returns a value indicating whether the printer supports printing the specified 
+    image format.
+  
   
    imageFormat: An System.Drawing.Imaging.ImageFormat to print.
-   Returns: true if the printer supports printing the specified image format; otherwise,false.
+   Returns: true if the printer supports printing the specified image format; otherwise,
+    false.
   """
   pass
  def SetHdevmode(self,hdevmode):
   """
   SetHdevmode(self: PrinterSettings,hdevmode: IntPtr)
-   Copies the relevant information out of the given handle and into the System.Drawing.Printing.PrinterSettings.
+   Copies the relevant information out of the given handle and into the 
+    System.Drawing.Printing.PrinterSettings.
+  
   
    hdevmode: The handle to a Win32 DEVMODE structure.
   """
@@ -1209,7 +1325,9 @@ class PrinterSettings(object,ICloneable):
  def SetHdevnames(self,hdevnames):
   """
   SetHdevnames(self: PrinterSettings,hdevnames: IntPtr)
-   Copies the relevant information out of the given handle and into the System.Drawing.Printing.PrinterSettings.
+   Copies the relevant information out of the given handle and into the 
+    System.Drawing.Printing.PrinterSettings.
+  
   
    hdevnames: The handle to a Win32 DEVNAMES structure.
   """
@@ -1218,7 +1336,9 @@ class PrinterSettings(object,ICloneable):
   """
   ToString(self: PrinterSettings) -> str
   
-   Provides information about the System.Drawing.Printing.PrinterSettings in string form.
+   Provides information about the System.Drawing.Printing.PrinterSettings in 
+    string form.
+  
    Returns: A string.
   """
   pass
@@ -1448,52 +1568,78 @@ class PrinterUnitConvert(object):
   """
   Convert(value: Size,fromUnit: PrinterUnit,toUnit: PrinterUnit) -> Size
   
-   Converts a System.Drawing.Size from one System.Drawing.Printing.PrinterUnit type to another System.Drawing.Printing.PrinterUnit type.
+   Converts a System.Drawing.Size from one System.Drawing.Printing.PrinterUnit 
+    type to another System.Drawing.Printing.PrinterUnit type.
+  
   
    value: The System.Drawing.Size being converted.
    fromUnit: The unit to convert from.
    toUnit: The unit to convert to.
-   Returns: A System.Drawing.Size that represents the converted System.Drawing.Printing.PrinterUnit.
+   Returns: A System.Drawing.Size that represents the converted 
+    System.Drawing.Printing.PrinterUnit.
+  
   Convert(value: Rectangle,fromUnit: PrinterUnit,toUnit: PrinterUnit) -> Rectangle
   
-   Converts a System.Drawing.Rectangle from one System.Drawing.Printing.PrinterUnit type to another System.Drawing.Printing.PrinterUnit type.
+   Converts a System.Drawing.Rectangle from one 
+    System.Drawing.Printing.PrinterUnit type to another 
+    System.Drawing.Printing.PrinterUnit type.
+  
   
    value: The System.Drawing.Rectangle being converted.
    fromUnit: The unit to convert from.
    toUnit: The unit to convert to.
-   Returns: A System.Drawing.Rectangle that represents the converted System.Drawing.Printing.PrinterUnit.
+   Returns: A System.Drawing.Rectangle that represents the converted 
+    System.Drawing.Printing.PrinterUnit.
+  
   Convert(value: Margins,fromUnit: PrinterUnit,toUnit: PrinterUnit) -> Margins
   
-   Converts a System.Drawing.Printing.Margins from one System.Drawing.Printing.PrinterUnit type to another System.Drawing.Printing.PrinterUnit type.
+   Converts a System.Drawing.Printing.Margins from one 
+    System.Drawing.Printing.PrinterUnit type to another 
+    System.Drawing.Printing.PrinterUnit type.
+  
   
    value: The System.Drawing.Printing.Margins being converted.
    fromUnit: The unit to convert from.
    toUnit: The unit to convert to.
-   Returns: A System.Drawing.Printing.Margins that represents the converted System.Drawing.Printing.PrinterUnit.
+   Returns: A System.Drawing.Printing.Margins that represents the converted 
+    System.Drawing.Printing.PrinterUnit.
+  
   Convert(value: float,fromUnit: PrinterUnit,toUnit: PrinterUnit) -> float
   
-   Converts a double-precision floating-point number from one System.Drawing.Printing.PrinterUnit type to another System.Drawing.Printing.PrinterUnit type.
+   Converts a double-precision floating-point number from one 
+    System.Drawing.Printing.PrinterUnit type to another 
+    System.Drawing.Printing.PrinterUnit type.
+  
   
    value: The System.Drawing.Point being converted.
    fromUnit: The unit to convert from.
    toUnit: The unit to convert to.
-   Returns: A double-precision floating-point number that represents the converted System.Drawing.Printing.PrinterUnit.
+   Returns: A double-precision floating-point number that represents the converted 
+    System.Drawing.Printing.PrinterUnit.
+  
   Convert(value: int,fromUnit: PrinterUnit,toUnit: PrinterUnit) -> int
   
-   Converts a 32-bit signed integer from one System.Drawing.Printing.PrinterUnit type to another System.Drawing.Printing.PrinterUnit type.
+   Converts a 32-bit signed integer from one System.Drawing.Printing.PrinterUnit 
+    type to another System.Drawing.Printing.PrinterUnit type.
+  
   
    value: The value being converted.
    fromUnit: The unit to convert from.
    toUnit: The unit to convert to.
-   Returns: A 32-bit signed integer that represents the converted System.Drawing.Printing.PrinterUnit.
+   Returns: A 32-bit signed integer that represents the converted 
+    System.Drawing.Printing.PrinterUnit.
+  
   Convert(value: Point,fromUnit: PrinterUnit,toUnit: PrinterUnit) -> Point
   
-   Converts a System.Drawing.Point from one System.Drawing.Printing.PrinterUnit type to another System.Drawing.Printing.PrinterUnit type.
+   Converts a System.Drawing.Point from one System.Drawing.Printing.PrinterUnit 
+    type to another System.Drawing.Printing.PrinterUnit type.
+  
   
    value: The System.Drawing.Point being converted.
    fromUnit: The unit to convert from.
    toUnit: The unit to convert to.
-   Returns: A System.Drawing.Point that represents the converted System.Drawing.Printing.PrinterUnit.
+   Returns: A System.Drawing.Point that represents the converted 
+    System.Drawing.Printing.PrinterUnit.
   """
   pass
 
@@ -1525,7 +1671,9 @@ class PrintEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+    delegate.
+  
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -1537,7 +1685,10 @@ class PrintEventHandler(MulticastDelegate,ICloneable,ISerializable):
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by 
+    the current delegate.-or- null,if the method represented by the current 
+    delegate does not require arguments.
+  
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -1559,10 +1710,14 @@ class PrintEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate 
+    that is equal to the specified delegate.
+  
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new 
+    System.Delegate without value in its invocation list; otherwise,this instance 
+    with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -1602,19 +1757,26 @@ class PrintingPermission(CodeAccessPermission,IPermission,ISecurityEncodable,ISt
   """
   Intersect(self: PrintingPermission,target: IPermission) -> IPermission
   
-   Creates and returns a permission that is the intersection of the current permission object and a target permission object.
+   Creates and returns a permission that is the intersection of the current 
+    permission object and a target permission object.
+  
   
    target: A permission object of the same type as the current permission object.
-   Returns: A new permission object that represents the intersection of the current object and the specified target. This object is null if the intersection is empty.
+   Returns: A new permission object that represents the intersection of the current object 
+    and the specified target. This object is null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
   IsSubsetOf(self: PrintingPermission,target: IPermission) -> bool
   
-   Determines whether the current permission object is a subset of the specified permission.
+   Determines whether the current permission object is a subset of the specified 
+    permission.
   
-   target: A permission object that is to be tested for the subset relationship. This object must be of the same type as the current permission object.
+  
+   target: A permission object that is to be tested for the subset relationship. This 
+    object must be of the same type as the current permission object.
+  
    Returns: true if the current permission object is a subset of target; otherwise,false.
   """
   pass
@@ -1638,10 +1800,13 @@ class PrintingPermission(CodeAccessPermission,IPermission,ISecurityEncodable,ISt
   """
   Union(self: PrintingPermission,target: IPermission) -> IPermission
   
-   Creates a permission that combines the permission object and the target permission object.
+   Creates a permission that combines the permission object and the target 
+    permission object.
+  
   
    target: A permission object of the same type as the current permission object.
-   Returns: A new permission object that represents the union of the current permission object and the specified permission object.
+   Returns: A new permission object that represents the union of the current permission 
+    object and the specified permission object.
   """
   pass
  def __init__(self,*args):
@@ -1678,7 +1843,10 @@ class PrintingPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
   """
   CreatePermission(self: PrintingPermissionAttribute) -> IPermission
   
-   Creates the permission based on the requested access levels,which are set through the System.Drawing.Printing.PrintingPermissionAttribute.Level property on the attribute.
+   Creates the permission based on the requested access levels,which are set 
+    through the System.Drawing.Printing.PrintingPermissionAttribute.Level property 
+    on the attribute.
+  
    Returns: An System.Security.IPermission that represents the created permission.
   """
   pass
@@ -1804,7 +1972,9 @@ class PrintPageEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+    delegate.
+  
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -1816,7 +1986,10 @@ class PrintPageEventHandler(MulticastDelegate,ICloneable,ISerializable):
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by 
+    the current delegate.-or- null,if the method represented by the current 
+    delegate does not require arguments.
+  
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -1838,10 +2011,14 @@ class PrintPageEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate 
+    that is equal to the specified delegate.
+  
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new 
+    System.Delegate without value in its invocation list; otherwise,this instance 
+    with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -1923,7 +2100,9 @@ class QueryPageSettingsEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+    delegate.
+  
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -1935,7 +2114,10 @@ class QueryPageSettingsEventHandler(MulticastDelegate,ICloneable,ISerializable):
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by 
+    the current delegate.-or- null,if the method represented by the current 
+    delegate does not require arguments.
+  
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -1957,10 +2139,14 @@ class QueryPageSettingsEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate 
+    that is equal to the specified delegate.
+  
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new 
+    System.Delegate without value in its invocation list; otherwise,this instance 
+    with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -1982,10 +2168,15 @@ class StandardPrintController(PrintController):
  def OnEndPage(self,document,e):
   """
   OnEndPage(self: StandardPrintController,document: PrintDocument,e: PrintPageEventArgs)
-   Completes the control sequence that determines when and how to print a page of a document.
+   Completes the control sequence that determines when and how to print a page of 
+    a document.
   
-   document: A System.Drawing.Printing.PrintDocument that represents the document being printed.
-   e: A System.Drawing.Printing.PrintPageEventArgs that contains data about how to print a page in the document.
+  
+   document: A System.Drawing.Printing.PrintDocument that represents the document being 
+    printed.
+  
+   e: A System.Drawing.Printing.PrintPageEventArgs that contains data about how to 
+    print a page in the document.
   """
   pass
  def OnEndPrint(self,document,e):
@@ -1993,22 +2184,34 @@ class StandardPrintController(PrintController):
   OnEndPrint(self: StandardPrintController,document: PrintDocument,e: PrintEventArgs)
    Completes the control sequence that determines when and how to print a document.
   
-   document: A System.Drawing.Printing.PrintDocument that represents the document being printed.
-   e: A System.Drawing.Printing.PrintEventArgs that contains data about how to print the document.
+   document: A System.Drawing.Printing.PrintDocument that represents the document being 
+    printed.
+  
+   e: A System.Drawing.Printing.PrintEventArgs that contains data about how to print 
+    the document.
   """
   pass
  def OnStartPage(self,document,e):
   """
   OnStartPage(self: StandardPrintController,document: PrintDocument,e: PrintPageEventArgs) -> Graphics
   
-   Begins the control sequence that determines when and how to print a page in a document.
+   Begins the control sequence that determines when and how to print a page in a 
+    document.
   
-   document: A System.Drawing.Printing.PrintDocument that represents the document being printed.
-   e: A System.Drawing.Printing.PrintPageEventArgs that contains data about how to print a page in the document. Initially,the System.Drawing.Printing.PrintPageEventArgs.Graphics property of this parameter will 
-    be null. The value returned from the System.Drawing.Printing.StandardPrintController.OnStartPage(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintPageEventArgs) method will be used to set 
-    this property.
   
-   Returns: A System.Drawing.Graphics object that represents a page from a System.Drawing.Printing.PrintDocument.
+   document: A System.Drawing.Printing.PrintDocument that represents the document being 
+    printed.
+  
+   e: A System.Drawing.Printing.PrintPageEventArgs that contains data about how to 
+    print a page in the document. Initially,the 
+    System.Drawing.Printing.PrintPageEventArgs.Graphics property of this parameter 
+    will be null. The value returned from the 
+    System.Drawing.Printing.StandardPrintController.OnStartPage(System.Drawing.Print
+    ing.PrintDocument,System.Drawing.Printing.PrintPageEventArgs) method will be 
+    used to set this property.
+  
+   Returns: A System.Drawing.Graphics object that represents a page from a 
+    System.Drawing.Printing.PrintDocument.
   """
   pass
  def OnStartPrint(self,document,e):
@@ -2016,8 +2219,11 @@ class StandardPrintController(PrintController):
   OnStartPrint(self: StandardPrintController,document: PrintDocument,e: PrintEventArgs)
    Begins the control sequence that determines when and how to print a document.
   
-   document: A System.Drawing.Printing.PrintDocument that represents the document being printed.
-   e: A System.Drawing.Printing.PrintEventArgs that contains data about how to print the document.
+   document: A System.Drawing.Printing.PrintDocument that represents the document being 
+    printed.
+  
+   e: A System.Drawing.Printing.PrintEventArgs that contains data about how to print 
+    the document.
   """
   pass
 

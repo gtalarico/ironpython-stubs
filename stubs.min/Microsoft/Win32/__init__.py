@@ -2,7 +2,7 @@
 # module Microsoft.Win32 calls itself Win32
 # from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -20,7 +20,9 @@ class CommonDialog(object):
   """
   HookProc(self: CommonDialog,hwnd: IntPtr,msg: int,wParam: IntPtr,lParam: IntPtr) -> IntPtr
   
-   Defines the common dialog box hook procedure that is overridden to add specific functionality to a common dialog box.
+   Defines the common dialog box hook procedure that is overridden to add specific 
+    functionality to a common dialog box.
+  
   
    hwnd: Window handle for the Win32 dialog.
    msg: Windows message to be processed by the Win32 dialog.
@@ -32,17 +34,22 @@ class CommonDialog(object):
  def Reset(self):
   """
   Reset(self: CommonDialog)
-   When overridden in a derived class,resets the properties of a common dialog to their default values.
+   When overridden in a derived class,resets the properties of a common dialog to 
+    their default values.
   """
   pass
  def RunDialog(self,*args):
   """
   RunDialog(self: CommonDialog,hwndOwner: IntPtr) -> bool
   
-   When overridden in a derived class,is called to display a particular type of Win32 common dialog.
+   When overridden in a derived class,is called to display a particular type of 
+    Win32 common dialog.
+  
   
    hwndOwner: Handle to the window that owns the dialog box.
-   Returns: If the user clicks the OK button of the dialog that is displayed (e.g. Microsoft.Win32.OpenFileDialog,Microsoft.Win32.SaveFileDialog),true is returned; otherwise,false.
+   Returns: If the user clicks the OK button of the dialog that is displayed (e.g. 
+    Microsoft.Win32.OpenFileDialog,Microsoft.Win32.SaveFileDialog),true is 
+    returned; otherwise,false.
   """
   pass
  def ShowDialog(self,owner=None):
@@ -52,11 +59,16 @@ class CommonDialog(object):
    Displays a common dialog.
   
    owner: Handle to the window that owns the dialog.
-   Returns: If the user clicks the OK button of the dialog that is displayed (e.g. Microsoft.Win32.OpenFileDialog,Microsoft.Win32.SaveFileDialog),true is returned; otherwise,false.
+   Returns: If the user clicks the OK button of the dialog that is displayed (e.g. 
+    Microsoft.Win32.OpenFileDialog,Microsoft.Win32.SaveFileDialog),true is 
+    returned; otherwise,false.
+  
   ShowDialog(self: CommonDialog) -> Nullable[bool]
   
    Displays a common dialog.
-   Returns: If the user clicks the OK button of the dialog that is displayed (e.g. Microsoft.Win32.OpenFileDialog,Microsoft.Win32.SaveFileDialog),true is returned; otherwise,false.
+   Returns: If the user clicks the OK button of the dialog that is displayed (e.g. 
+    Microsoft.Win32.OpenFileDialog,Microsoft.Win32.SaveFileDialog),true is 
+    returned; otherwise,false.
   """
   pass
  Tag=property(lambda self: object(),lambda self,v: None,lambda self: None)
@@ -90,7 +102,9 @@ class FileDialog(CommonDialog):
   ToString(self: FileDialog) -> str
   
    Returns a string that represents a file dialog.
-   Returns: A System.String representation of Microsoft.Win32.FileDialog that contains the full pathname for any files selected from either Microsoft.Win32.OpenFileDialog,Microsoft.Win32.SaveFileDialog.
+   Returns: A System.String representation of Microsoft.Win32.FileDialog that contains the 
+    full pathname for any files selected from either 
+    Microsoft.Win32.OpenFileDialog,Microsoft.Win32.SaveFileDialog.
   """
   pass
  AddExtension=property(lambda self: object(),lambda self,v: None,lambda self: None)
@@ -289,13 +303,20 @@ class IntranetZoneCredentialPolicy(object,ICredentialPolicy):
   """
   ShouldSendCredential(self: IntranetZoneCredentialPolicy,challengeUri: Uri,request: WebRequest,credential: NetworkCredential,authModule: IAuthenticationModule) -> bool
   
-   Returns a System.Boolean that indicates whether the client's credentials are sent with a request for a resource that was made using System.Net.WebRequest.
+   Returns a System.Boolean that indicates whether the client's credentials are 
+    sent with a request for a resource that was made using System.Net.WebRequest.
+  
   
    challengeUri: The System.Uri that will receive the request.
    request: The System.Net.WebRequest that represents the resource being requested.
-   credential: The System.Net.NetworkCredential that will be sent with the request if this method returns true.
-   authModule: The System.Net.IAuthenticationModule that will conduct the authentication,if authentication is required.
-   Returns: true if the requested resource is in the same domain as the client making the request; otherwise,false.
+   credential: The System.Net.NetworkCredential that will be sent with the request if this 
+    method returns true.
+  
+   authModule: The System.Net.IAuthenticationModule that will conduct the authentication,if 
+    authentication is required.
+  
+   Returns: true if the requested resource is in the same domain as the client making the 
+    request; otherwise,false.
   """
   pass
  def __init__(self,*args):
@@ -315,7 +336,9 @@ class OpenFileDialog(FileDialog):
   """
   OpenFile(self: OpenFileDialog) -> Stream
   
-   Opens a read-only stream for the file that is selected by the user using Microsoft.Win32.OpenFileDialog.
+   Opens a read-only stream for the file that is selected by the user using 
+    Microsoft.Win32.OpenFileDialog.
+  
    Returns: A new System.IO.Stream that contains the selected file.
   """
   pass
@@ -323,8 +346,11 @@ class OpenFileDialog(FileDialog):
   """
   OpenFiles(self: OpenFileDialog) -> Array[Stream]
   
-   Creates an array that contains one read-only stream for each file selected by the user using Microsoft.Win32.OpenFileDialog.
-   Returns: An array of multiple new System.IO.Stream objects that contain the selected files.
+   Creates an array that contains one read-only stream for each file selected by 
+    the user using Microsoft.Win32.OpenFileDialog.
+  
+   Returns: An array of multiple new System.IO.Stream objects that contain the selected 
+    files.
   """
   pass
  def Reset(self):
@@ -396,7 +422,9 @@ class PowerModeChangedEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+    delegate.
+  
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -408,7 +436,10 @@ class PowerModeChangedEventHandler(MulticastDelegate,ICloneable,ISerializable):
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by 
+    the current delegate.-or- null,if the method represented by the current 
+    delegate does not require arguments.
+  
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -430,10 +461,14 @@ class PowerModeChangedEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate 
+    that is equal to the specified delegate.
+  
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new 
+    System.Delegate without value in its invocation list; otherwise,this instance 
+    with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -488,29 +523,41 @@ class Registry(object):
   """
   GetValue(keyName: str,valueName: str,defaultValue: object) -> object
   
-   Retrieves the value associated with the specified name,in the specified registry key. If the name is not found in the specified key,returns a default value that you provide,or null if the specified key 
-    does not exist.
+   Retrieves the value associated with the specified name,in the specified 
+    registry key. If the name is not found in the specified key,returns a default 
+    value that you provide,or null if the specified key does not exist.
   
   
-   keyName: The full registry path of the key,beginning with a valid registry root,such as "HKEY_CURRENT_USER".
+   keyName: The full registry path of the key,beginning with a valid registry root,such 
+    as "HKEY_CURRENT_USER".
+  
    valueName: The name of the name/value pair.
    defaultValue: The value to return if valueName does not exist.
-   Returns: null if the subkey specified by keyName does not exist; otherwise,the value associated with valueName,or defaultValue if valueName is not found.
+   Returns: null if the subkey specified by keyName does not exist; otherwise,the value 
+    associated with valueName,or defaultValue if valueName is not found.
   """
   pass
  @staticmethod
  def SetValue(keyName,valueName,value,valueKind=None):
   """
   SetValue(keyName: str,valueName: str,value: object)
-   Sets the specified name/value pair on the specified registry key. If the specified key does not exist,it is created.
+   Sets the specified name/value pair on the specified registry key. If the 
+    specified key does not exist,it is created.
   
-   keyName: The full registry path of the key,beginning with a valid registry root,such as "HKEY_CURRENT_USER".
+  
+   keyName: The full registry path of the key,beginning with a valid registry root,such 
+    as "HKEY_CURRENT_USER".
+  
    valueName: The name of the name/value pair.
    value: The value to be stored.
   SetValue(keyName: str,valueName: str,value: object,valueKind: RegistryValueKind)
-   Sets the name/value pair on the specified registry key,using the specified registry data type. If the specified key does not exist,it is created.
+   Sets the name/value pair on the specified registry key,using the specified 
+    registry data type. If the specified key does not exist,it is created.
   
-   keyName: The full registry path of the key,beginning with a valid registry root,such as "HKEY_CURRENT_USER".
+  
+   keyName: The full registry path of the key,beginning with a valid registry root,such 
+    as "HKEY_CURRENT_USER".
+  
    valueName: The name of the name/value pair.
    value: The value to be stored.
    valueKind: The registry data type to use when storing the data.
@@ -588,18 +635,31 @@ class RegistryKey(MarshalByRefObject,IDisposable):
   CreateSubKey(self: RegistryKey,subkey: str,writable: bool,options: RegistryOptions) -> RegistryKey
   CreateSubKey(self: RegistryKey,subkey: str,permissionCheck: RegistryKeyPermissionCheck,registrySecurity: RegistrySecurity) -> RegistryKey
   
-   Creates a new subkey or opens an existing subkey for write access,using the specified permission check option and registry security.
+   Creates a new subkey or opens an existing subkey for write access,using the 
+    specified permission check option and registry security.
   
-   subkey: The name or path of the subkey to create or open. This string is not case-sensitive.
-   permissionCheck: One of the enumeration values that specifies whether the key is opened for read or read/write access.
+  
+   subkey: The name or path of the subkey to create or open. This string is not 
+    case-sensitive.
+  
+   permissionCheck: One of the enumeration values that specifies whether the key is opened for read 
+    or read/write access.
+  
    registrySecurity: The access control security for the new key.
-   Returns: The newly created subkey,or null if the operation failed. If a zero-length string is specified for subkey,the current Microsoft.Win32.RegistryKey object is returned.
+   Returns: The newly created subkey,or null if the operation failed. If a zero-length 
+    string is specified for subkey,the current Microsoft.Win32.RegistryKey object 
+    is returned.
+  
   CreateSubKey(self: RegistryKey,subkey: str,permissionCheck: RegistryKeyPermissionCheck,registryOptions: RegistryOptions,registrySecurity: RegistrySecurity) -> RegistryKey
   
-   Creates a subkey or opens a subkey for write access,using the specified permission check option,registry option,and registry security.
+   Creates a subkey or opens a subkey for write access,using the specified 
+    permission check option,registry option,and registry security.
+  
   
    subkey: The name or path of the subkey to create or open.
-   permissionCheck: One of the enumeration values that specifies whether the key is opened for read or read/write access.
+   permissionCheck: One of the enumeration values that specifies whether the key is opened for read 
+    or read/write access.
+  
    registryOptions: The registry option to use.
    registrySecurity: The access control security for the new subkey.
    Returns: The newly created subkey,or null if the operation failed.
@@ -608,21 +668,39 @@ class RegistryKey(MarshalByRefObject,IDisposable):
   
    Creates a new subkey or opens an existing subkey for write access.
   
-   subkey: The name or path of the subkey to create or open. This string is not case-sensitive.
-   Returns: The newly created subkey,or null if the operation failed. If a zero-length string is specified for subkey,the current Microsoft.Win32.RegistryKey object is returned.
+   subkey: The name or path of the subkey to create or open. This string is not 
+    case-sensitive.
+  
+   Returns: The newly created subkey,or null if the operation failed. If a zero-length 
+    string is specified for subkey,the current Microsoft.Win32.RegistryKey object 
+    is returned.
+  
   CreateSubKey(self: RegistryKey,subkey: str,permissionCheck: RegistryKeyPermissionCheck) -> RegistryKey
   
-   Creates a new subkey or opens an existing subkey for write access,using the specified permission check option.
+   Creates a new subkey or opens an existing subkey for write access,using the 
+    specified permission check option.
   
-   subkey: The name or path of the subkey to create or open. This string is not case-sensitive.
-   permissionCheck: One of the enumeration values that specifies whether the key is opened for read or read/write access.
-   Returns: The newly created subkey,or null if the operation failed. If a zero-length string is specified for subkey,the current Microsoft.Win32.RegistryKey object is returned.
+  
+   subkey: The name or path of the subkey to create or open. This string is not 
+    case-sensitive.
+  
+   permissionCheck: One of the enumeration values that specifies whether the key is opened for read 
+    or read/write access.
+  
+   Returns: The newly created subkey,or null if the operation failed. If a zero-length 
+    string is specified for subkey,the current Microsoft.Win32.RegistryKey object 
+    is returned.
+  
   CreateSubKey(self: RegistryKey,subkey: str,permissionCheck: RegistryKeyPermissionCheck,options: RegistryOptions) -> RegistryKey
   
-   Creates a subkey or opens a subkey for write access,using the specified permission check and registry options.
+   Creates a subkey or opens a subkey for write access,using the specified 
+    permission check and registry options.
+  
   
    subkey: The name or path of the subkey to create or open.
-   permissionCheck: One of the enumeration values that specifies whether the key is opened for read or read/write access.
+   permissionCheck: One of the enumeration values that specifies whether the key is opened for read 
+    or read/write access.
+  
    options: The registry option to use; for example,that creates a volatile key.
    Returns: The newly created subkey,or null if the operation failed.
   """
@@ -630,11 +708,15 @@ class RegistryKey(MarshalByRefObject,IDisposable):
  def DeleteSubKey(self,subkey,throwOnMissingSubKey=None):
   """
   DeleteSubKey(self: RegistryKey,subkey: str,throwOnMissingSubKey: bool)
-   Deletes the specified subkey,and specifies whether an exception is raised if the subkey is not found.
+   Deletes the specified subkey,and specifies whether an exception is raised if 
+    the subkey is not found.
+  
   
    subkey: The name of the subkey to delete. This string is not case-sensitive.
-   throwOnMissingSubKey: Indicates whether an exception should be raised if the specified subkey cannot be found. If this argument is true and the specified subkey does not exist,an exception is raised. If this argument is false 
-    and the specified subkey does not exist,no action is taken.
+   throwOnMissingSubKey: Indicates whether an exception should be raised if the specified subkey cannot 
+    be found. If this argument is true and the specified subkey does not exist,an 
+    exception is raised. If this argument is false and the specified subkey does 
+    not exist,no action is taken.
   
   DeleteSubKey(self: RegistryKey,subkey: str)
    Deletes the specified subkey.
@@ -645,11 +727,15 @@ class RegistryKey(MarshalByRefObject,IDisposable):
  def DeleteSubKeyTree(self,subkey,throwOnMissingSubKey=None):
   """
   DeleteSubKeyTree(self: RegistryKey,subkey: str,throwOnMissingSubKey: bool)
-   Deletes the specified subkey and any child subkeys recursively,and specifies whether an exception is raised if the subkey is not found.
+   Deletes the specified subkey and any child subkeys recursively,and specifies 
+    whether an exception is raised if the subkey is not found.
+  
   
    subkey: The name of the subkey to delete. This string is not case-sensitive.
-   throwOnMissingSubKey: Indicates whether an exception should be raised if the specified subkey cannot be found. If this argument is true and the specified subkey does not exist,an exception is raised. If this argument is false 
-    and the specified subkey does not exist,no action is taken.
+   throwOnMissingSubKey: Indicates whether an exception should be raised if the specified subkey cannot 
+    be found. If this argument is true and the specified subkey does not exist,an 
+    exception is raised. If this argument is false and the specified subkey does 
+    not exist,no action is taken.
   
   DeleteSubKeyTree(self: RegistryKey,subkey: str)
    Deletes a subkey and any child subkeys recursively.
@@ -660,11 +746,15 @@ class RegistryKey(MarshalByRefObject,IDisposable):
  def DeleteValue(self,name,throwOnMissingValue=None):
   """
   DeleteValue(self: RegistryKey,name: str,throwOnMissingValue: bool)
-   Deletes the specified value from this key,and specifies whether an exception is raised if the value is not found.
+   Deletes the specified value from this key,and specifies whether an exception 
+    is raised if the value is not found.
+  
   
    name: The name of the value to delete.
-   throwOnMissingValue: Indicates whether an exception should be raised if the specified value cannot be found. If this argument is true and the specified value does not exist,an exception is raised. If this argument is false 
-    and the specified value does not exist,no action is taken.
+   throwOnMissingValue: Indicates whether an exception should be raised if the specified value cannot 
+    be found. If this argument is true and the specified value does not exist,an 
+    exception is raised. If this argument is false and the specified value does not 
+    exist,no action is taken.
   
   DeleteValue(self: RegistryKey,name: str)
    Deletes the specified value from this key.
@@ -675,7 +765,8 @@ class RegistryKey(MarshalByRefObject,IDisposable):
  def Dispose(self):
   """
   Dispose(self: RegistryKey)
-   Releases all resources used by the current instance of the Microsoft.Win32.RegistryKey class.
+   Releases all resources used by the current instance of the 
+    Microsoft.Win32.RegistryKey class.
   """
   pass
  def Flush(self):
@@ -706,14 +797,21 @@ class RegistryKey(MarshalByRefObject,IDisposable):
   """
   GetAccessControl(self: RegistryKey,includeSections: AccessControlSections) -> RegistrySecurity
   
-   Returns the specified sections of the access control security for the current registry key.
+   Returns the specified sections of the access control security for the current 
+    registry key.
   
-   includeSections: A bitwise combination of enumeration values that specifies the type of security information to get.
-   Returns: An object that describes the access control permissions on the registry key represented by the current Microsoft.Win32.RegistryKey.
+  
+   includeSections: A bitwise combination of enumeration values that specifies the type of security 
+    information to get.
+  
+   Returns: An object that describes the access control permissions on the registry key 
+    represented by the current Microsoft.Win32.RegistryKey.
+  
   GetAccessControl(self: RegistryKey) -> RegistrySecurity
   
    Returns the access control security for the current registry key.
-   Returns: An object that describes the access control permissions on the registry key represented by the current Microsoft.Win32.RegistryKey.
+   Returns: An object that describes the access control permissions on the registry key 
+    represented by the current Microsoft.Win32.RegistryKey.
   """
   pass
  def GetSubKeyNames(self):
@@ -728,22 +826,34 @@ class RegistryKey(MarshalByRefObject,IDisposable):
   """
   GetValue(self: RegistryKey,name: str,defaultValue: object,options: RegistryValueOptions) -> object
   
-   Retrieves the value associated with the specified name and retrieval options. If the name is not found,returns the default value that you provide.
+   Retrieves the value associated with the specified name and retrieval options. 
+    If the name is not found,returns the default value that you provide.
+  
   
    name: The name of the value to retrieve. This string is not case-sensitive.
    defaultValue: The value to return if name does not exist.
-   options: One of the enumeration values that specifies optional processing of the retrieved value.
-   Returns: The value associated with name,processed according to the specified options,or defaultValue if name is not found.
+   options: One of the enumeration values that specifies optional processing of the 
+    retrieved value.
+  
+   Returns: The value associated with name,processed according to the specified options,
+    or defaultValue if name is not found.
+  
   GetValue(self: RegistryKey,name: str,defaultValue: object) -> object
   
-   Retrieves the value associated with the specified name. If the name is not found,returns the default value that you provide.
+   Retrieves the value associated with the specified name. If the name is not 
+    found,returns the default value that you provide.
+  
   
    name: The name of the value to retrieve. This string is not case-sensitive.
    defaultValue: The value to return if name does not exist.
-   Returns: The value associated with name,with any embedded environment variables left unexpanded,or defaultValue if name is not found.
+   Returns: The value associated with name,with any embedded environment variables left 
+    unexpanded,or defaultValue if name is not found.
+  
   GetValue(self: RegistryKey,name: str) -> object
   
-   Retrieves the value associated with the specified name. Returns null if the name/value pair does not exist in the registry.
+   Retrieves the value associated with the specified name. Returns null if the 
+    name/value pair does not exist in the registry.
+  
   
    name: The name of the value to retrieve. This string is not case-sensitive.
    Returns: The value associated with name,or null if name is not found.
@@ -753,9 +863,13 @@ class RegistryKey(MarshalByRefObject,IDisposable):
   """
   GetValueKind(self: RegistryKey,name: str) -> RegistryValueKind
   
-   Retrieves the registry data type of the value associated with the specified name.
+   Retrieves the registry data type of the value associated with the specified 
+    name.
   
-   name: The name of the value whose registry data type is to be retrieved. This string is not case-sensitive.
+  
+   name: The name of the value whose registry data type is to be retrieved. This string 
+    is not case-sensitive.
+  
    Returns: The registry data type of the value associated with name.
   """
   pass
@@ -763,7 +877,9 @@ class RegistryKey(MarshalByRefObject,IDisposable):
   """
   GetValueNames(self: RegistryKey) -> Array[str]
   
-   Retrieves an array of strings that contains all the value names associated with this key.
+   Retrieves an array of strings that contains all the value names associated with 
+    this key.
+  
    Returns: An array of strings that contains the value names for the current key.
   """
   pass
@@ -773,8 +889,11 @@ class RegistryKey(MarshalByRefObject,IDisposable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-    usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
+    will cause the object to be assigned a new identity when it is marshaled across 
+    a remoting boundary. A value of false is usually appropriate. true to copy the 
+    current System.MarshalByRefObject object's identity to its clone,which will 
+    cause remoting client calls to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -788,7 +907,9 @@ class RegistryKey(MarshalByRefObject,IDisposable):
   """
   OpenBaseKey(hKey: RegistryHive,view: RegistryView) -> RegistryKey
   
-   Opens a new Microsoft.Win32.RegistryKey that represents the requested key on the local machine with the specified view.
+   Opens a new Microsoft.Win32.RegistryKey that represents the requested key on 
+    the local machine with the specified view.
+  
   
    hKey: The HKEY to open.
    view: The registry view to use.
@@ -800,7 +921,9 @@ class RegistryKey(MarshalByRefObject,IDisposable):
   """
   OpenRemoteBaseKey(hKey: RegistryHive,machineName: str,view: RegistryView) -> RegistryKey
   
-   Opens a new registry key that represents the requested key on a remote machine with the specified view.
+   Opens a new registry key that represents the requested key on a remote machine 
+    with the specified view.
+  
   
    hKey: The HKEY to open from the Microsoft.Win32.RegistryHive enumeration..
    machineName: The remote machine.
@@ -808,7 +931,9 @@ class RegistryKey(MarshalByRefObject,IDisposable):
    Returns: The requested registry key.
   OpenRemoteBaseKey(hKey: RegistryHive,machineName: str) -> RegistryKey
   
-   Opens a new Microsoft.Win32.RegistryKey that represents the requested key on a remote machine.
+   Opens a new Microsoft.Win32.RegistryKey that represents the requested key on a 
+    remote machine.
+  
   
    hKey: The HKEY to open,from the Microsoft.Win32.RegistryHive enumeration.
    machineName: The remote machine.
@@ -819,11 +944,17 @@ class RegistryKey(MarshalByRefObject,IDisposable):
   """
   OpenSubKey(self: RegistryKey,name: str,permissionCheck: RegistryKeyPermissionCheck,rights: RegistryRights) -> RegistryKey
   
-   Retrieves the specified subkey for read or read/write access,requesting the specified access rights.
+   Retrieves the specified subkey for read or read/write access,requesting the 
+    specified access rights.
+  
   
    name: The name or path of the subkey to create or open.
-   permissionCheck: One of the enumeration values that specifies whether the key is opened for read or read/write access.
-   rights: A bitwise combination of enumeration values that specifies the desired security access.
+   permissionCheck: One of the enumeration values that specifies whether the key is opened for read 
+    or read/write access.
+  
+   rights: A bitwise combination of enumeration values that specifies the desired security 
+    access.
+  
    Returns: The subkey requested,or null if the operation failed.
   OpenSubKey(self: RegistryKey,name: str) -> RegistryKey
   
@@ -834,7 +965,9 @@ class RegistryKey(MarshalByRefObject,IDisposable):
   OpenSubKey(self: RegistryKey,name: str,rights: RegistryRights) -> RegistryKey
   OpenSubKey(self: RegistryKey,name: str,writable: bool) -> RegistryKey
   
-   Retrieves a specified subkey,and specifies whether write access is to be applied to the key.
+   Retrieves a specified subkey,and specifies whether write access is to be 
+    applied to the key.
+  
   
    name: Name or path of the subkey to open.
    writable: Set to true if you need write access to the key.
@@ -844,7 +977,9 @@ class RegistryKey(MarshalByRefObject,IDisposable):
    Retrieves the specified subkey for read or read/write access.
   
    name: The name or path of the subkey to create or open.
-   permissionCheck: One of the enumeration values that specifies whether the key is opened for read or read/write access.
+   permissionCheck: One of the enumeration values that specifies whether the key is opened for read 
+    or read/write access.
+  
    Returns: The subkey requested,or null if the operation failed.
   """
   pass
@@ -859,7 +994,9 @@ class RegistryKey(MarshalByRefObject,IDisposable):
  def SetValue(self,name,value,valueKind=None):
   """
   SetValue(self: RegistryKey,name: str,value: object,valueKind: RegistryValueKind)
-   Sets the value of a name/value pair in the registry key,using the specified registry data type.
+   Sets the value of a name/value pair in the registry key,using the specified 
+    registry data type.
+  
   
    name: The name of the value to be stored.
    value: The data to be stored.
@@ -876,21 +1013,15 @@ class RegistryKey(MarshalByRefObject,IDisposable):
   ToString(self: RegistryKey) -> str
   
    Retrieves a string representation of this key.
-   Returns: A string representing the key. If the specified key is invalid (cannot be found) then null is returned.
+   Returns: A string representing the key. If the specified key is invalid (cannot be 
+    found) then null is returned.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1122,7 +1253,9 @@ class SaveFileDialog(FileDialog):
   """
   OpenFile(self: SaveFileDialog) -> Stream
   
-   Creates a read-write file stream for the filename selected by the user using Microsoft.Win32.SaveFileDialog.
+   Creates a read-write file stream for the filename selected by the user using 
+    Microsoft.Win32.SaveFileDialog.
+  
    Returns: A new System.IO.Stream that contains the selected file.
   """
   pass
@@ -1187,7 +1320,9 @@ class SessionEndedEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+    delegate.
+  
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -1199,7 +1334,10 @@ class SessionEndedEventHandler(MulticastDelegate,ICloneable,ISerializable):
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by 
+    the current delegate.-or- null,if the method represented by the current 
+    delegate does not require arguments.
+  
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -1221,10 +1359,14 @@ class SessionEndedEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate 
+    that is equal to the specified delegate.
+  
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new 
+    System.Delegate without value in its invocation list; otherwise,this instance 
+    with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -1277,7 +1419,9 @@ class SessionEndingEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+    delegate.
+  
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -1289,7 +1433,10 @@ class SessionEndingEventHandler(MulticastDelegate,ICloneable,ISerializable):
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by 
+    the current delegate.-or- null,if the method represented by the current 
+    delegate does not require arguments.
+  
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -1311,10 +1458,14 @@ class SessionEndingEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate 
+    that is equal to the specified delegate.
+  
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new 
+    System.Delegate without value in its invocation list; otherwise,this instance 
+    with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -1393,7 +1544,9 @@ class SessionSwitchEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+    delegate.
+  
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -1405,7 +1558,10 @@ class SessionSwitchEventHandler(MulticastDelegate,ICloneable,ISerializable):
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by 
+    the current delegate.-or- null,if the method represented by the current 
+    delegate does not require arguments.
+  
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -1427,10 +1583,14 @@ class SessionSwitchEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate 
+    that is equal to the specified delegate.
+  
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new 
+    System.Delegate without value in its invocation list; otherwise,this instance 
+    with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -1563,7 +1723,9 @@ class TimerElapsedEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+    delegate.
+  
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -1575,7 +1737,10 @@ class TimerElapsedEventHandler(MulticastDelegate,ICloneable,ISerializable):
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by 
+    the current delegate.-or- null,if the method represented by the current 
+    delegate does not require arguments.
+  
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -1597,10 +1762,14 @@ class TimerElapsedEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate 
+    that is equal to the specified delegate.
+  
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new 
+    System.Delegate without value in its invocation list; otherwise,this instance 
+    with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -1691,7 +1860,9 @@ class UserPreferenceChangedEventHandler(MulticastDelegate,ICloneable,ISerializab
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+    delegate.
+  
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -1703,7 +1874,10 @@ class UserPreferenceChangedEventHandler(MulticastDelegate,ICloneable,ISerializab
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by 
+    the current delegate.-or- null,if the method represented by the current 
+    delegate does not require arguments.
+  
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -1725,10 +1899,14 @@ class UserPreferenceChangedEventHandler(MulticastDelegate,ICloneable,ISerializab
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate 
+    that is equal to the specified delegate.
+  
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new 
+    System.Delegate without value in its invocation list; otherwise,this instance 
+    with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -1773,7 +1951,9 @@ class UserPreferenceChangingEventHandler(MulticastDelegate,ICloneable,ISerializa
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+    delegate.
+  
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -1785,7 +1965,10 @@ class UserPreferenceChangingEventHandler(MulticastDelegate,ICloneable,ISerializa
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by 
+    the current delegate.-or- null,if the method represented by the current 
+    delegate does not require arguments.
+  
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -1807,10 +1990,14 @@ class UserPreferenceChangingEventHandler(MulticastDelegate,ICloneable,ISerializa
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate 
+    that is equal to the specified delegate.
+  
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new 
+    System.Delegate without value in its invocation list; otherwise,this instance 
+    with its original invocation list.
   """
   pass
  def __init__(self,*args):

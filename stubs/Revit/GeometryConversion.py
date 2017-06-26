@@ -2,7 +2,7 @@
 # module Revit.GeometryConversion calls itself GeometryConversion
 # from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -16,17 +16,21 @@ class CurveUtils(object):
         CurvesAreSimilar(a: Curve, b: Curve) -> bool
         
             This method uses basic checks to compare curves for similarity.
-                    It starts by comparing the curves' end points. Curves which have similar
-                    end points but different directions will 
-             not be regarded as similar,
-                    because directionality is important in Revit for other purposes. 
-                    Depending on the curve type, other comparisons are then performed.
+                    It 
+             starts by comparing the curves' end points. Curves which have similar
+                 
+                end points but different directions will not be regarded as similar,
+               
+                  because directionality is important in Revit for other purposes. 
+                
+                 Depending on the curve type, other comparisons are then performed.
         
         
             a: The first curve.
             b: The second curve.
             Returns: Returns true if the curves are similar within Tolerance, and 
-                    false if they are not.
+                    
+             false if they are not.
         """
         pass
 
@@ -237,8 +241,10 @@ class NurbsUtils(object):
         """
         ElevateBezierDegree(crv: NurbsCurve, finalDegree: int) -> NurbsCurve
         
-            Elevate the degree of a Bezier curve (represented in NURBS form) to a given degree
+            Elevate the degree of a Bezier curve (represented in NURBS form) to a given 
+             degree
                     without changing the shape
+        
         
             crv: The curve
             finalDegree: The requested degree
@@ -263,7 +269,8 @@ class PolygonContainment(object):
         GetQuadrant(vertex: UV, p: UV) -> int
         
             Determine the quadrant of a polygon vertex 
-                    relative to the test point.
+                    relative to the test 
+             point.
         """
         pass
 
@@ -273,7 +280,8 @@ class PolygonContainment(object):
         GetXIntercept(p: UV, q: UV, y: float) -> float
         
             Determine the X intercept of a polygon edge 
-                    with a horizontal line at the Y value of the 
+                    with a horizontal 
+             line at the Y value of the 
                     test point.
         """
         pass
@@ -313,7 +321,8 @@ class ProtoToRevitMesh(object):
         """
         CreateBoundingBoxMeshForErrors(minPoint: Point, maxPoint: Point, performHostUnitConversion: bool) -> IList[GeometryObject]
         
-            This is to create a bounding box mesh for geometries which have errors during the tessellating process
+            This is to create a bounding box mesh for geometries which have errors during 
+             the tessellating process
         """
         pass
 

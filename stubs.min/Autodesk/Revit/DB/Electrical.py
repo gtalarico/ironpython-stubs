@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Autodesk.Revit.DB.Electrical calls itself Electrical
-# from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null
+# from RevitAPI,Version=17.0.0.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports

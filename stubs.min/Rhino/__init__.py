@@ -2,7 +2,7 @@
 # module Rhino
 # from Rhino3dmIO,Version=5.1.30000.14,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # functions

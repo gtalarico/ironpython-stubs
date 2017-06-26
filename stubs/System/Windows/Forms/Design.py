@@ -2,7 +2,7 @@
 # module System.Windows.Forms.Design calls itself Design
 # from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -17,15 +17,23 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
     def AccessibilityNotifyClients(self, *args): #cannot find CLR method
         """
         AccessibilityNotifyClients(self: Control, accEvent: AccessibleEvents, objectID: int, childID: int)
-            Notifies the accessibility client applications of the specified System.Windows.Forms.AccessibleEvents for the specified child control .
+            Notifies the accessibility client applications of the specified 
+             System.Windows.Forms.AccessibleEvents for the specified child control .
         
-            accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
+        
+            accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
+             applications of.
+        
             objectID: The identifier of the System.Windows.Forms.AccessibleObject.
             childID: The child System.Windows.Forms.Control to notify of the accessible event.
         AccessibilityNotifyClients(self: Control, accEvent: AccessibleEvents, childID: int)
-            Notifies the accessibility client applications of the specified System.Windows.Forms.AccessibleEvents for the specified child control.
+            Notifies the accessibility client applications of the specified 
+             System.Windows.Forms.AccessibleEvents for the specified child control.
         
-            accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
+        
+            accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
+             applications of.
+        
             childID: The child System.Windows.Forms.Control to notify of the accessible event.
         """
         pass
@@ -42,7 +50,9 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
     def AdjustFormScrollbars(self, *args): #cannot find CLR method
         """
         AdjustFormScrollbars(self: Form, displayScrollbars: bool)
-            Adjusts the scroll bars on the container based on the current control positions and the control currently selected.
+            Adjusts the scroll bars on the container based on the current control positions 
+             and the control currently selected.
+        
         
             displayScrollbars: true to show the scroll bars; otherwise, false.
         """
@@ -51,7 +61,9 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
     def ApplyAutoScaling(self, *args): #cannot find CLR method
         """
         ApplyAutoScaling(self: Form)
-            Resizes the form according to the current value of the System.Windows.Forms.Form.AutoScaleBaseSize property and the size of the current font.
+            Resizes the form according to the current value of the 
+             System.Windows.Forms.Form.AutoScaleBaseSize property and the size of the 
+             current font.
         """
         pass
 
@@ -81,14 +93,16 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
     def CreateControlsInstance(self, *args): #cannot find CLR method
         """
         CreateControlsInstance(self: Form) -> ControlCollection
-            Returns: A new instance of System.Windows.Forms.Control.ControlCollection assigned to the control.
+            Returns: A new instance of System.Windows.Forms.Control.ControlCollection assigned to 
+             the control.
         """
         pass
 
     def CreateHandle(self, *args): #cannot find CLR method
         """
         CreateHandle(self: Form)
-            Creates the handle for the form. If a derived class overrides this function, it must call the base implementation.
+            Creates the handle for the form. If a derived class overrides this function, it 
+             must call the base implementation.
         """
         pass
 
@@ -110,9 +124,12 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
     def Dispose(self):
         """
         Dispose(self: Form, disposing: bool)
-            Disposes of the resources (other than memory) used by the System.Windows.Forms.Form.
+            Disposes of the resources (other than memory) used by the 
+             System.Windows.Forms.Form.
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+        
+            disposing: true to release both managed and unmanaged resources; false to release only 
+             unmanaged resources.
         """
         pass
 
@@ -131,7 +148,9 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         """
         GetAutoSizeMode(self: Control) -> AutoSizeMode
         
-            Retrieves a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
+            Retrieves a value indicating how a control will behave when its 
+             System.Windows.Forms.Control.AutoSize property is enabled.
+        
             Returns: One of the System.Windows.Forms.AutoSizeMode values.
         """
         pass
@@ -140,10 +159,15 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         """
         GetScaledBounds(self: Form, bounds: Rectangle, factor: SizeF, specified: BoundsSpecified) -> Rectangle
         
-            bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display bounds.
+            bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the 
+             display bounds.
+        
             factor: The height and width of the control's bounds.
-            specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of the control to use when defining its size and position.
-            Returns: A System.Drawing.Rectangle representing the bounds within which the control is scaled.
+            specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the 
+             bounds of the control to use when defining its size and position.
+        
+            Returns: A System.Drawing.Rectangle representing the bounds within which the control is 
+             scaled.
         """
         pass
 
@@ -162,10 +186,14 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         """
         GetService(self: Component, service: Type) -> object
         
-            Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
+            Returns an object that represents a service provided by the 
+             System.ComponentModel.Component or by its System.ComponentModel.Container.
+        
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the 
+             System.ComponentModel.Component, or null if the System.ComponentModel.Component 
+             does not provide the specified service.
         """
         pass
 
@@ -199,7 +227,9 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
     def InvokeGotFocus(self, *args): #cannot find CLR method
         """
         InvokeGotFocus(self: Control, toInvoke: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.GotFocus event for the specified control.
+            Raises the System.Windows.Forms.Control.GotFocus event for the specified 
+             control.
+        
         
             toInvoke: The System.Windows.Forms.Control to assign the event to.
             e: An System.EventArgs that contains the event data.
@@ -209,7 +239,9 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
     def InvokeLostFocus(self, *args): #cannot find CLR method
         """
         InvokeLostFocus(self: Control, toInvoke: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.LostFocus event for the specified control.
+            Raises the System.Windows.Forms.Control.LostFocus event for the specified 
+             control.
+        
         
             toInvoke: The System.Windows.Forms.Control to assign the event to.
             e: An System.EventArgs that contains the event data.
@@ -221,7 +253,9 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         InvokeOnClick(self: Control, toInvoke: Control, e: EventArgs)
             Raises the System.Windows.Forms.Control.Click event for the specified control.
         
-            toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event to.
+            toInvoke: The System.Windows.Forms.Control to assign the 
+             System.Windows.Forms.Control.Click event to.
+        
             e: An System.EventArgs that contains the event data.
         """
         pass
@@ -231,7 +265,9 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         InvokePaint(self: Control, c: Control, e: PaintEventArgs)
             Raises the System.Windows.Forms.Control.Paint event for the specified control.
         
-            c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
+            c: The System.Windows.Forms.Control to assign the 
+             System.Windows.Forms.Control.Paint event to.
+        
             e: An System.Windows.Forms.PaintEventArgs that contains the event data.
         """
         pass
@@ -241,7 +277,9 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         InvokePaintBackground(self: Control, c: Control, e: PaintEventArgs)
             Raises the PaintBackground event for the specified control.
         
-            c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
+            c: The System.Windows.Forms.Control to assign the 
+             System.Windows.Forms.Control.Paint event to.
+        
             e: An System.Windows.Forms.PaintEventArgs that contains the event data.
         """
         pass
@@ -253,7 +291,8 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
             Determines if a character is an input character that the control recognizes.
         
             charCode: The character to test.
-            Returns: true if the character should be sent directly to the control and not preprocessed; otherwise, false.
+            Returns: true if the character should be sent directly to the control and not 
+             preprocessed; otherwise, false.
         """
         pass
 
@@ -261,7 +300,9 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         """
         IsInputKey(self: Control, keyData: Keys) -> bool
         
-            Determines whether the specified key is a regular input key or a special key that requires preprocessing.
+            Determines whether the specified key is a regular input key or a special key 
+             that requires preprocessing.
+        
         
             keyData: One of the System.Windows.Forms.Keys values.
             Returns: true if the specified key is a regular input key; otherwise, false.
@@ -274,8 +315,11 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-             usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled across 
+             a remoting boundary. A value of false is usually appropriate. true to copy the 
+             current System.MarshalByRefObject object's identity to its clone, which will 
+             cause remoting client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -288,7 +332,9 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
     def NotifyInvalidate(self, *args): #cannot find CLR method
         """
         NotifyInvalidate(self: Control, invalidatedArea: Rectangle)
-            Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the control to invalidate.
+            Raises the System.Windows.Forms.Control.Invalidated event with a specified 
+             region of the control to invalidate.
+        
         
             invalidatedArea: A System.Drawing.Rectangle representing the area to invalidate.
         """
@@ -640,7 +686,8 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         OnInputLanguageChanged(self: Form, e: InputLanguageChangedEventArgs)
             Raises the System.Windows.Forms.Form.InputLanguageChanged event.
         
-            e: The System.Windows.Forms.InputLanguageChangedEventArgs that contains the event data.
+            e: The System.Windows.Forms.InputLanguageChangedEventArgs that contains the event 
+             data.
         """
         pass
 
@@ -649,7 +696,8 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         OnInputLanguageChanging(self: Form, e: InputLanguageChangingEventArgs)
             Raises the System.Windows.Forms.Form.InputLanguageChanging event.
         
-            e: The System.Windows.Forms.InputLanguageChangingEventArgs that contains the event data.
+            e: The System.Windows.Forms.InputLanguageChangingEventArgs that contains the event 
+             data.
         """
         pass
 
@@ -933,7 +981,10 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
     def OnParentBackColorChanged(self, *args): #cannot find CLR method
         """
         OnParentBackColorChanged(self: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.BackColorChanged event when the System.Windows.Forms.Control.BackColor property value of the control's container changes.
+            Raises the System.Windows.Forms.Control.BackColorChanged event when the 
+             System.Windows.Forms.Control.BackColor property value of the control's 
+             container changes.
+        
         
             e: An System.EventArgs that contains the event data.
         """
@@ -942,7 +993,10 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
     def OnParentBackgroundImageChanged(self, *args): #cannot find CLR method
         """
         OnParentBackgroundImageChanged(self: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the System.Windows.Forms.Control.BackgroundImage property value of the control's container changes.
+            Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the 
+             System.Windows.Forms.Control.BackgroundImage property value of the control's 
+             container changes.
+        
         
             e: An System.EventArgs that contains the event data.
         """
@@ -951,7 +1005,10 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
     def OnParentBindingContextChanged(self, *args): #cannot find CLR method
         """
         OnParentBindingContextChanged(self: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.BindingContextChanged event when the System.Windows.Forms.Control.BindingContext property value of the control's container changes.
+            Raises the System.Windows.Forms.Control.BindingContextChanged event when the 
+             System.Windows.Forms.Control.BindingContext property value of the control's 
+             container changes.
+        
         
             e: An System.EventArgs that contains the event data.
         """
@@ -976,7 +1033,10 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
     def OnParentEnabledChanged(self, *args): #cannot find CLR method
         """
         OnParentEnabledChanged(self: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.EnabledChanged event when the System.Windows.Forms.Control.Enabled property value of the control's container changes.
+            Raises the System.Windows.Forms.Control.EnabledChanged event when the 
+             System.Windows.Forms.Control.Enabled property value of the control's container 
+             changes.
+        
         
             e: An System.EventArgs that contains the event data.
         """
@@ -985,7 +1045,10 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
     def OnParentFontChanged(self, *args): #cannot find CLR method
         """
         OnParentFontChanged(self: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.FontChanged event when the System.Windows.Forms.Control.Font property value of the control's container changes.
+            Raises the System.Windows.Forms.Control.FontChanged event when the 
+             System.Windows.Forms.Control.Font property value of the control's container 
+             changes.
+        
         
             e: An System.EventArgs that contains the event data.
         """
@@ -994,7 +1057,10 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
     def OnParentForeColorChanged(self, *args): #cannot find CLR method
         """
         OnParentForeColorChanged(self: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.ForeColorChanged event when the System.Windows.Forms.Control.ForeColor property value of the control's container changes.
+            Raises the System.Windows.Forms.Control.ForeColorChanged event when the 
+             System.Windows.Forms.Control.ForeColor property value of the control's 
+             container changes.
+        
         
             e: An System.EventArgs that contains the event data.
         """
@@ -1003,7 +1069,10 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
     def OnParentRightToLeftChanged(self, *args): #cannot find CLR method
         """
         OnParentRightToLeftChanged(self: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.RightToLeftChanged event when the System.Windows.Forms.Control.RightToLeft property value of the control's container changes.
+            Raises the System.Windows.Forms.Control.RightToLeftChanged event when the 
+             System.Windows.Forms.Control.RightToLeft property value of the control's 
+             container changes.
+        
         
             e: An System.EventArgs that contains the event data.
         """
@@ -1012,7 +1081,10 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
     def OnParentVisibleChanged(self, *args): #cannot find CLR method
         """
         OnParentVisibleChanged(self: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.VisibleChanged event when the System.Windows.Forms.Control.Visible property value of the control's container changes.
+            Raises the System.Windows.Forms.Control.VisibleChanged event when the 
+             System.Windows.Forms.Control.Visible property value of the control's container 
+             changes.
+        
         
             e: An System.EventArgs that contains the event data.
         """
@@ -1204,7 +1276,9 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         """
         PreProcessMessage(self: ComponentEditorForm, msg: Message) -> (bool, Message)
         
-            Provides a method to override in order to preprocess input messages before they are dispatched.
+            Provides a method to override in order to preprocess input messages before they 
+             are dispatched.
+        
         
             msg: A System.Windows.Forms.Message that specifies the message to preprocess.
             Returns: true if the specified message is for a component editor page; otherwise, false.
@@ -1217,9 +1291,12 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         
             Processes a command key.
         
-            msg: A System.Windows.Forms.Message, passed by reference, that represents the Win32 message to process.
+            msg: A System.Windows.Forms.Message, passed by reference, that represents the Win32 
+             message to process.
+        
             keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
-            Returns: true if the keystroke was processed and consumed by the control; otherwise, false to allow further processing.
+            Returns: true if the keystroke was processed and consumed by the control; otherwise, 
+             false to allow further processing.
         """
         pass
 
@@ -1241,7 +1318,8 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
             Processes a dialog box key.
         
             keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
-            Returns: true if the keystroke was processed and consumed by the control; otherwise, false to allow further processing.
+            Returns: true if the keystroke was processed and consumed by the control; otherwise, 
+             false to allow further processing.
         """
         pass
 
@@ -1251,7 +1329,9 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         
             Processes a key message and generates the appropriate control events.
         
-            m: A System.Windows.Forms.Message, passed by reference, that represents the window message to process.
+            m: A System.Windows.Forms.Message, passed by reference, that represents the window 
+             message to process.
+        
             Returns: true if the message was processed by the control; otherwise, false.
         """
         pass
@@ -1262,7 +1342,9 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         
             Processes a keyboard message.
         
-            m: A System.Windows.Forms.Message, passed by reference, that represents the window message to process.
+            m: A System.Windows.Forms.Message, passed by reference, that represents the window 
+             message to process.
+        
             Returns: true if the message was processed by the control; otherwise, false.
         """
         pass
@@ -1271,7 +1353,9 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         """
         ProcessKeyPreview(self: Form, m: Message) -> (bool, Message)
         
-            m: A System.Windows.Forms.Message, passed by reference, that represents the window message to process.
+            m: A System.Windows.Forms.Message, passed by reference, that represents the window 
+             message to process.
+        
             Returns: true if the message was processed by the control; otherwise, false.
         """
         pass
@@ -1283,7 +1367,8 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
             Processes a mnemonic character.
         
             charCode: The character to process.
-            Returns: true if the character was processed as a mnemonic by the control; otherwise, false.
+            Returns: true if the character was processed as a mnemonic by the control; otherwise, 
+             false.
         """
         pass
 
@@ -1291,7 +1376,9 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         """
         ProcessTabKey(self: Form, forward: bool) -> bool
         
-            forward: true to cycle forward through the controls in the System.Windows.Forms.ContainerControl; otherwise, false.
+            forward: true to cycle forward through the controls in the 
+             System.Windows.Forms.ContainerControl; otherwise, false.
+        
             Returns: true if a control is selected; otherwise, false.
         """
         pass
@@ -1354,19 +1441,27 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         """
         RtlTranslateAlignment(self: Control, align: ContentAlignment) -> ContentAlignment
         
-            Converts the specified System.Drawing.ContentAlignment to the appropriate System.Drawing.ContentAlignment to support right-to-left text.
+            Converts the specified System.Drawing.ContentAlignment to the appropriate 
+             System.Drawing.ContentAlignment to support right-to-left text.
+        
         
             align: One of the System.Drawing.ContentAlignment values.
             Returns: One of the System.Drawing.ContentAlignment values.
         RtlTranslateAlignment(self: Control, align: LeftRightAlignment) -> LeftRightAlignment
         
-            Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left text.
+            Converts the specified System.Windows.Forms.LeftRightAlignment to the 
+             appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
+             text.
+        
         
             align: One of the System.Windows.Forms.LeftRightAlignment values.
             Returns: One of the System.Windows.Forms.LeftRightAlignment values.
         RtlTranslateAlignment(self: Control, align: HorizontalAlignment) -> HorizontalAlignment
         
-            Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left text.
+            Converts the specified System.Windows.Forms.HorizontalAlignment to the 
+             appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
+             text.
+        
         
             align: One of the System.Windows.Forms.HorizontalAlignment values.
             Returns: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1377,7 +1472,9 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         """
         RtlTranslateContent(self: Control, align: ContentAlignment) -> ContentAlignment
         
-            Converts the specified System.Drawing.ContentAlignment to the appropriate System.Drawing.ContentAlignment to support right-to-left text.
+            Converts the specified System.Drawing.ContentAlignment to the appropriate 
+             System.Drawing.ContentAlignment to support right-to-left text.
+        
         
             align: One of the System.Drawing.ContentAlignment values.
             Returns: One of the System.Drawing.ContentAlignment values.
@@ -1388,7 +1485,10 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         """
         RtlTranslateHorizontal(self: Control, align: HorizontalAlignment) -> HorizontalAlignment
         
-            Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left text.
+            Converts the specified System.Windows.Forms.HorizontalAlignment to the 
+             appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
+             text.
+        
         
             align: One of the System.Windows.Forms.HorizontalAlignment values.
             Returns: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1399,7 +1499,10 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         """
         RtlTranslateLeftRight(self: Control, align: LeftRightAlignment) -> LeftRightAlignment
         
-            Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left text.
+            Converts the specified System.Windows.Forms.LeftRightAlignment to the 
+             appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
+             text.
+        
         
             align: One of the System.Windows.Forms.LeftRightAlignment values.
             Returns: One of the System.Windows.Forms.LeftRightAlignment values.
@@ -1412,7 +1515,8 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
             Scales the location, size, padding, and margin of a control.
         
             factor: The factor by which the height and width of the control are scaled.
-            specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to use when defining its size and position.
+            specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the 
+             control to use when defining its size and position.
         """
         pass
 
@@ -1433,7 +1537,8 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
             Calculates the scroll offset to the specified child control.
         
             activeControl: The child control to scroll into view.
-            Returns: The upper-left hand System.Drawing.Point of the display area relative to the client area required to scroll the control into view.
+            Returns: The upper-left hand System.Drawing.Point of the display area relative to the 
+             client area required to scroll the control into view.
         """
         pass
 
@@ -1443,14 +1548,18 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
             Selects this form, and optionally selects the next or previous control.
         
             directed: If set to true that the active control is changed
-            forward: If directed is true, then this controls the direction in which focus is moved. If this is true, then the next control is selected; otherwise, the previous control is selected.
+            forward: If directed is true, then this controls the direction in which focus is moved. 
+             If this is true, then the next control is selected; otherwise, the previous 
+             control is selected.
         """
         pass
 
     def SetAutoSizeMode(self, *args): #cannot find CLR method
         """
         SetAutoSizeMode(self: Control, mode: AutoSizeMode)
-            Sets a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
+            Sets a value indicating how a control will behave when its 
+             System.Windows.Forms.Control.AutoSize property is enabled.
+        
         
             mode: One of the System.Windows.Forms.AutoSizeMode values.
         """
@@ -1470,7 +1579,9 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
     def SetClientSizeCore(self, *args): #cannot find CLR method
         """
         SetClientSizeCore(self: Form, x: int, y: int)
-            Sets the client size of the form. This will adjust the bounds of the form to make the client size the requested size.
+            Sets the client size of the form. This will adjust the bounds of the form to 
+             make the client size the requested size.
+        
         
             x: Requested width of the client region.
             y: Requested height of the client region.
@@ -1482,8 +1593,11 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         SetDisplayRectLocation(self: ScrollableControl, x: int, y: int)
             Positions the display window to the specified value.
         
-            x: The horizontal offset at which to position the System.Windows.Forms.ScrollableControl.
-            y: The vertical offset at which to position the System.Windows.Forms.ScrollableControl.
+            x: The horizontal offset at which to position the 
+             System.Windows.Forms.ScrollableControl.
+        
+            y: The vertical offset at which to position the 
+             System.Windows.Forms.ScrollableControl.
         """
         pass
 
@@ -1500,7 +1614,9 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
     def SetStyle(self, *args): #cannot find CLR method
         """
         SetStyle(self: Control, flag: ControlStyles, value: bool)
-            Sets a specified System.Windows.Forms.ControlStyles flag to either true or false.
+            Sets a specified System.Windows.Forms.ControlStyles flag to either true or 
+             false.
+        
         
             flag: The System.Windows.Forms.ControlStyles bit to set.
             value: true to apply the specified style to the control; otherwise, false.
@@ -1530,24 +1646,33 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
             Shows the form with the specified owner.
         
             owner: The System.Windows.Forms.IWin32Window to own the dialog.
-            Returns: One of the System.Windows.Forms.DialogResult values indicating the result code returned from the dialog box.
+            Returns: One of the System.Windows.Forms.DialogResult values indicating the result code 
+             returned from the dialog box.
+        
         ShowForm(self: ComponentEditorForm, owner: IWin32Window, page: int) -> DialogResult
         
             Shows the form and the specified page with the specified owner.
         
             owner: The System.Windows.Forms.IWin32Window to own the dialog.
             page: The index of the page to show.
-            Returns: One of the System.Windows.Forms.DialogResult values indicating the result code returned from the dialog box.
+            Returns: One of the System.Windows.Forms.DialogResult values indicating the result code 
+             returned from the dialog box.
+        
         ShowForm(self: ComponentEditorForm) -> DialogResult
         
             Shows the form. The form will have no owner window.
-            Returns: One of the System.Windows.Forms.DialogResult values indicating the result code returned from the dialog box.
+            Returns: One of the System.Windows.Forms.DialogResult values indicating the result code 
+             returned from the dialog box.
+        
         ShowForm(self: ComponentEditorForm, page: int) -> DialogResult
         
-            Shows the specified page of the specified form. The form will have no owner window.
+            Shows the specified page of the specified form. The form will have no owner 
+             window.
+        
         
             page: The index of the page to show.
-            Returns: One of the System.Windows.Forms.DialogResult values indicating the result code returned from the dialog box.
+            Returns: One of the System.Windows.Forms.DialogResult values indicating the result code 
+             returned from the dialog box.
         """
         pass
 
@@ -1555,17 +1680,24 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         """
         SizeFromClientSize(self: Control, clientSize: Size) -> Size
         
-            Determines the size of the entire control from the height and width of its client area.
+            Determines the size of the entire control from the height and width of its 
+             client area.
         
-            clientSize: A System.Drawing.Size value representing the height and width of the control's client area.
-            Returns: A System.Drawing.Size value representing the height and width of the entire control.
+        
+            clientSize: A System.Drawing.Size value representing the height and width of the control's 
+             client area.
+        
+            Returns: A System.Drawing.Size value representing the height and width of the entire 
+             control.
         """
         pass
 
     def UpdateBounds(self, *args): #cannot find CLR method
         """
         UpdateBounds(self: Control, x: int, y: int, width: int, height: int, clientWidth: int, clientHeight: int)
-            Updates the bounds of the control with the specified size, location, and client size.
+            Updates the bounds of the control with the specified size, location, and client 
+             size.
+        
         
             x: The System.Drawing.Point.X coordinate of the control.
             y: The System.Drawing.Point.Y coordinate of the control.
@@ -1615,18 +1747,11 @@ class ComponentEditorForm(Form, IComponent, IDisposable, IOleControl, IOleObject
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1779,15 +1904,23 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
     def AccessibilityNotifyClients(self, *args): #cannot find CLR method
         """
         AccessibilityNotifyClients(self: Control, accEvent: AccessibleEvents, objectID: int, childID: int)
-            Notifies the accessibility client applications of the specified System.Windows.Forms.AccessibleEvents for the specified child control .
+            Notifies the accessibility client applications of the specified 
+             System.Windows.Forms.AccessibleEvents for the specified child control .
         
-            accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
+        
+            accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
+             applications of.
+        
             objectID: The identifier of the System.Windows.Forms.AccessibleObject.
             childID: The child System.Windows.Forms.Control to notify of the accessible event.
         AccessibilityNotifyClients(self: Control, accEvent: AccessibleEvents, childID: int)
-            Notifies the accessibility client applications of the specified System.Windows.Forms.AccessibleEvents for the specified child control.
+            Notifies the accessibility client applications of the specified 
+             System.Windows.Forms.AccessibleEvents for the specified child control.
         
-            accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
+        
+            accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
+             applications of.
+        
             childID: The child System.Windows.Forms.Control to notify of the accessible event.
         """
         pass
@@ -1802,7 +1935,9 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
     def AdjustFormScrollbars(self, *args): #cannot find CLR method
         """
         AdjustFormScrollbars(self: ScrollableControl, displayScrollbars: bool)
-            Adjusts the scroll bars on the container based on the current control positions and the control currently selected.
+            Adjusts the scroll bars on the container based on the current control positions 
+             and the control currently selected.
+        
         
             displayScrollbars: true to show the scroll bars; otherwise, false.
         """
@@ -1829,7 +1964,8 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         CreateControlsInstance(self: Control) -> ControlCollection
         
             Creates a new instance of the control collection for the control.
-            Returns: A new instance of System.Windows.Forms.Control.ControlCollection assigned to the control.
+            Returns: A new instance of System.Windows.Forms.Control.ControlCollection assigned to 
+             the control.
         """
         pass
 
@@ -1867,9 +2003,12 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
     def Dispose(self):
         """
         Dispose(self: Control, disposing: bool)
-            Releases the unmanaged resources used by the System.Windows.Forms.Control and its child controls and optionally releases the managed resources.
+            Releases the unmanaged resources used by the System.Windows.Forms.Control and 
+             its child controls and optionally releases the managed resources.
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+        
+            disposing: true to release both managed and unmanaged resources; false to release only 
+             unmanaged resources.
         """
         pass
 
@@ -1902,7 +2041,9 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         """
         GetAutoSizeMode(self: Control) -> AutoSizeMode
         
-            Retrieves a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
+            Retrieves a value indicating how a control will behave when its 
+             System.Windows.Forms.Control.AutoSize property is enabled.
+        
             Returns: One of the System.Windows.Forms.AutoSizeMode values.
         """
         pass
@@ -1922,10 +2063,15 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         
             Retrieves the bounds within which the control is scaled.
         
-            bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display bounds.
+            bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the 
+             display bounds.
+        
             factor: The height and width of the control's bounds.
-            specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of the control to use when defining its size and position.
-            Returns: A System.Drawing.Rectangle representing the bounds within which the control is scaled.
+            specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the 
+             bounds of the control to use when defining its size and position.
+        
+            Returns: A System.Drawing.Rectangle representing the bounds within which the control is 
+             scaled.
         """
         pass
 
@@ -1953,10 +2099,14 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         """
         GetService(self: Component, service: Type) -> object
         
-            Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
+            Returns an object that represents a service provided by the 
+             System.ComponentModel.Component or by its System.ComponentModel.Container.
+        
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the 
+             System.ComponentModel.Component, or null if the System.ComponentModel.Component 
+             does not provide the specified service.
         """
         pass
 
@@ -1990,7 +2140,9 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
     def InvokeGotFocus(self, *args): #cannot find CLR method
         """
         InvokeGotFocus(self: Control, toInvoke: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.GotFocus event for the specified control.
+            Raises the System.Windows.Forms.Control.GotFocus event for the specified 
+             control.
+        
         
             toInvoke: The System.Windows.Forms.Control to assign the event to.
             e: An System.EventArgs that contains the event data.
@@ -2000,7 +2152,9 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
     def InvokeLostFocus(self, *args): #cannot find CLR method
         """
         InvokeLostFocus(self: Control, toInvoke: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.LostFocus event for the specified control.
+            Raises the System.Windows.Forms.Control.LostFocus event for the specified 
+             control.
+        
         
             toInvoke: The System.Windows.Forms.Control to assign the event to.
             e: An System.EventArgs that contains the event data.
@@ -2012,7 +2166,9 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         InvokeOnClick(self: Control, toInvoke: Control, e: EventArgs)
             Raises the System.Windows.Forms.Control.Click event for the specified control.
         
-            toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event to.
+            toInvoke: The System.Windows.Forms.Control to assign the 
+             System.Windows.Forms.Control.Click event to.
+        
             e: An System.EventArgs that contains the event data.
         """
         pass
@@ -2022,7 +2178,9 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         InvokePaint(self: Control, c: Control, e: PaintEventArgs)
             Raises the System.Windows.Forms.Control.Paint event for the specified control.
         
-            c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
+            c: The System.Windows.Forms.Control to assign the 
+             System.Windows.Forms.Control.Paint event to.
+        
             e: An System.Windows.Forms.PaintEventArgs that contains the event data.
         """
         pass
@@ -2032,7 +2190,9 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         InvokePaintBackground(self: Control, c: Control, e: PaintEventArgs)
             Raises the PaintBackground event for the specified control.
         
-            c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
+            c: The System.Windows.Forms.Control to assign the 
+             System.Windows.Forms.Control.Paint event to.
+        
             e: An System.Windows.Forms.PaintEventArgs that contains the event data.
         """
         pass
@@ -2053,7 +2213,8 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
             Determines if a character is an input character that the control recognizes.
         
             charCode: The character to test.
-            Returns: true if the character should be sent directly to the control and not preprocessed; otherwise, false.
+            Returns: true if the character should be sent directly to the control and not 
+             preprocessed; otherwise, false.
         """
         pass
 
@@ -2061,7 +2222,9 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         """
         IsInputKey(self: Control, keyData: Keys) -> bool
         
-            Determines whether the specified key is a regular input key or a special key that requires preprocessing.
+            Determines whether the specified key is a regular input key or a special key 
+             that requires preprocessing.
+        
         
             keyData: One of the System.Windows.Forms.Keys values.
             Returns: true if the specified key is a regular input key; otherwise, false.
@@ -2101,8 +2264,11 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-             usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled across 
+             a remoting boundary. A value of false is usually appropriate. true to copy the 
+             current System.MarshalByRefObject object's identity to its clone, which will 
+             cause remoting client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2115,7 +2281,9 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
     def NotifyInvalidate(self, *args): #cannot find CLR method
         """
         NotifyInvalidate(self: Control, invalidatedArea: Rectangle)
-            Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the control to invalidate.
+            Raises the System.Windows.Forms.Control.Invalidated event with a specified 
+             region of the control to invalidate.
+        
         
             invalidatedArea: A System.Drawing.Rectangle representing the area to invalidate.
         """
@@ -2622,7 +2790,10 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
     def OnParentBackColorChanged(self, *args): #cannot find CLR method
         """
         OnParentBackColorChanged(self: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.BackColorChanged event when the System.Windows.Forms.Control.BackColor property value of the control's container changes.
+            Raises the System.Windows.Forms.Control.BackColorChanged event when the 
+             System.Windows.Forms.Control.BackColor property value of the control's 
+             container changes.
+        
         
             e: An System.EventArgs that contains the event data.
         """
@@ -2631,7 +2802,10 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
     def OnParentBackgroundImageChanged(self, *args): #cannot find CLR method
         """
         OnParentBackgroundImageChanged(self: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the System.Windows.Forms.Control.BackgroundImage property value of the control's container changes.
+            Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the 
+             System.Windows.Forms.Control.BackgroundImage property value of the control's 
+             container changes.
+        
         
             e: An System.EventArgs that contains the event data.
         """
@@ -2640,7 +2814,10 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
     def OnParentBindingContextChanged(self, *args): #cannot find CLR method
         """
         OnParentBindingContextChanged(self: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.BindingContextChanged event when the System.Windows.Forms.Control.BindingContext property value of the control's container changes.
+            Raises the System.Windows.Forms.Control.BindingContextChanged event when the 
+             System.Windows.Forms.Control.BindingContext property value of the control's 
+             container changes.
+        
         
             e: An System.EventArgs that contains the event data.
         """
@@ -2667,7 +2844,10 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
     def OnParentEnabledChanged(self, *args): #cannot find CLR method
         """
         OnParentEnabledChanged(self: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.EnabledChanged event when the System.Windows.Forms.Control.Enabled property value of the control's container changes.
+            Raises the System.Windows.Forms.Control.EnabledChanged event when the 
+             System.Windows.Forms.Control.Enabled property value of the control's container 
+             changes.
+        
         
             e: An System.EventArgs that contains the event data.
         """
@@ -2676,7 +2856,10 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
     def OnParentFontChanged(self, *args): #cannot find CLR method
         """
         OnParentFontChanged(self: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.FontChanged event when the System.Windows.Forms.Control.Font property value of the control's container changes.
+            Raises the System.Windows.Forms.Control.FontChanged event when the 
+             System.Windows.Forms.Control.Font property value of the control's container 
+             changes.
+        
         
             e: An System.EventArgs that contains the event data.
         """
@@ -2685,7 +2868,10 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
     def OnParentForeColorChanged(self, *args): #cannot find CLR method
         """
         OnParentForeColorChanged(self: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.ForeColorChanged event when the System.Windows.Forms.Control.ForeColor property value of the control's container changes.
+            Raises the System.Windows.Forms.Control.ForeColorChanged event when the 
+             System.Windows.Forms.Control.ForeColor property value of the control's 
+             container changes.
+        
         
             e: An System.EventArgs that contains the event data.
         """
@@ -2694,7 +2880,10 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
     def OnParentRightToLeftChanged(self, *args): #cannot find CLR method
         """
         OnParentRightToLeftChanged(self: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.RightToLeftChanged event when the System.Windows.Forms.Control.RightToLeft property value of the control's container changes.
+            Raises the System.Windows.Forms.Control.RightToLeftChanged event when the 
+             System.Windows.Forms.Control.RightToLeft property value of the control's 
+             container changes.
+        
         
             e: An System.EventArgs that contains the event data.
         """
@@ -2703,7 +2892,10 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
     def OnParentVisibleChanged(self, *args): #cannot find CLR method
         """
         OnParentVisibleChanged(self: Control, e: EventArgs)
-            Raises the System.Windows.Forms.Control.VisibleChanged event when the System.Windows.Forms.Control.Visible property value of the control's container changes.
+            Raises the System.Windows.Forms.Control.VisibleChanged event when the 
+             System.Windows.Forms.Control.Visible property value of the control's container 
+             changes.
+        
         
             e: An System.EventArgs that contains the event data.
         """
@@ -2748,8 +2940,9 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
     def OnResize(self, *args): #cannot find CLR method
         """
         OnResize(self: Panel, eventargs: EventArgs)
-            Fires the event indicating that the panel has been resized. Inheriting controls should use this in favor of actually listening to the event, but should still call base.onResize to ensure that the event is 
-             fired for external listeners.
+            Fires the event indicating that the panel has been resized. Inheriting controls 
+             should use this in favor of actually listening to the event, but should still 
+             call base.onResize to ensure that the event is fired for external listeners.
         
         
             eventargs: An System.EventArgs that contains the event data.
@@ -2857,7 +3050,9 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         
             Processes a command key.
         
-            msg: A System.Windows.Forms.Message, passed by reference, that represents the window message to process.
+            msg: A System.Windows.Forms.Message, passed by reference, that represents the window 
+             message to process.
+        
             keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
             Returns: true if the character was processed by the control; otherwise, false.
         """
@@ -2891,7 +3086,9 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         
             Processes a key message and generates the appropriate control events.
         
-            m: A System.Windows.Forms.Message, passed by reference, that represents the window message to process.
+            m: A System.Windows.Forms.Message, passed by reference, that represents the window 
+             message to process.
+        
             Returns: true if the message was processed by the control; otherwise, false.
         """
         pass
@@ -2902,7 +3099,9 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         
             Processes a keyboard message.
         
-            m: A System.Windows.Forms.Message, passed by reference, that represents the window message to process.
+            m: A System.Windows.Forms.Message, passed by reference, that represents the window 
+             message to process.
+        
             Returns: true if the message was processed by the control; otherwise, false.
         """
         pass
@@ -2913,7 +3112,9 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         
             Previews a keyboard message.
         
-            m: A System.Windows.Forms.Message, passed by reference, that represents the window message to process.
+            m: A System.Windows.Forms.Message, passed by reference, that represents the window 
+             message to process.
+        
             Returns: true if the message was processed by the control; otherwise, false.
         """
         pass
@@ -2925,7 +3126,8 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
             Processes a mnemonic character.
         
             charCode: The character to process.
-            Returns: true if the character was processed as a mnemonic by the control; otherwise, false.
+            Returns: true if the character was processed as a mnemonic by the control; otherwise, 
+             false.
         """
         pass
 
@@ -2994,19 +3196,27 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         """
         RtlTranslateAlignment(self: Control, align: ContentAlignment) -> ContentAlignment
         
-            Converts the specified System.Drawing.ContentAlignment to the appropriate System.Drawing.ContentAlignment to support right-to-left text.
+            Converts the specified System.Drawing.ContentAlignment to the appropriate 
+             System.Drawing.ContentAlignment to support right-to-left text.
+        
         
             align: One of the System.Drawing.ContentAlignment values.
             Returns: One of the System.Drawing.ContentAlignment values.
         RtlTranslateAlignment(self: Control, align: LeftRightAlignment) -> LeftRightAlignment
         
-            Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left text.
+            Converts the specified System.Windows.Forms.LeftRightAlignment to the 
+             appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
+             text.
+        
         
             align: One of the System.Windows.Forms.LeftRightAlignment values.
             Returns: One of the System.Windows.Forms.LeftRightAlignment values.
         RtlTranslateAlignment(self: Control, align: HorizontalAlignment) -> HorizontalAlignment
         
-            Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left text.
+            Converts the specified System.Windows.Forms.HorizontalAlignment to the 
+             appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
+             text.
+        
         
             align: One of the System.Windows.Forms.HorizontalAlignment values.
             Returns: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -3017,7 +3227,9 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         """
         RtlTranslateContent(self: Control, align: ContentAlignment) -> ContentAlignment
         
-            Converts the specified System.Drawing.ContentAlignment to the appropriate System.Drawing.ContentAlignment to support right-to-left text.
+            Converts the specified System.Drawing.ContentAlignment to the appropriate 
+             System.Drawing.ContentAlignment to support right-to-left text.
+        
         
             align: One of the System.Drawing.ContentAlignment values.
             Returns: One of the System.Drawing.ContentAlignment values.
@@ -3028,7 +3240,10 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         """
         RtlTranslateHorizontal(self: Control, align: HorizontalAlignment) -> HorizontalAlignment
         
-            Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left text.
+            Converts the specified System.Windows.Forms.HorizontalAlignment to the 
+             appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
+             text.
+        
         
             align: One of the System.Windows.Forms.HorizontalAlignment values.
             Returns: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -3039,7 +3254,10 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         """
         RtlTranslateLeftRight(self: Control, align: LeftRightAlignment) -> LeftRightAlignment
         
-            Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left text.
+            Converts the specified System.Windows.Forms.LeftRightAlignment to the 
+             appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
+             text.
+        
         
             align: One of the System.Windows.Forms.LeftRightAlignment values.
             Returns: One of the System.Windows.Forms.LeftRightAlignment values.
@@ -3057,7 +3275,8 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         """
         ScaleControl(self: ScrollableControl, factor: SizeF, specified: BoundsSpecified)
             factor: The factor by which the height and width of the control will be scaled.
-            specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to use when defining its size and position.
+            specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the 
+             control to use when defining its size and position.
         """
         pass
 
@@ -3076,14 +3295,17 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
             Calculates the scroll offset to the specified child control.
         
             activeControl: The child control to scroll into view.
-            Returns: The upper-left hand System.Drawing.Point of the display area relative to the client area required to scroll the control into view.
+            Returns: The upper-left hand System.Drawing.Point of the display area relative to the 
+             client area required to scroll the control into view.
         """
         pass
 
     def Select(self):
         """
         Select(self: Control, directed: bool, forward: bool)
-            Activates a child control. Optionally specifies the direction in the tab order to select the control from.
+            Activates a child control. Optionally specifies the direction in the tab order 
+             to select the control from.
+        
         
             directed: true to specify the direction of the control to select; otherwise, false.
             forward: true to move forward in the tab order; false to move backward in the tab order.
@@ -3093,7 +3315,9 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
     def SetAutoSizeMode(self, *args): #cannot find CLR method
         """
         SetAutoSizeMode(self: Control, mode: AutoSizeMode)
-            Sets a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
+            Sets a value indicating how a control will behave when its 
+             System.Windows.Forms.Control.AutoSize property is enabled.
+        
         
             mode: One of the System.Windows.Forms.AutoSizeMode values.
         """
@@ -3143,8 +3367,11 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         SetDisplayRectLocation(self: ScrollableControl, x: int, y: int)
             Positions the display window to the specified value.
         
-            x: The horizontal offset at which to position the System.Windows.Forms.ScrollableControl.
-            y: The vertical offset at which to position the System.Windows.Forms.ScrollableControl.
+            x: The horizontal offset at which to position the 
+             System.Windows.Forms.ScrollableControl.
+        
+            y: The vertical offset at which to position the 
+             System.Windows.Forms.ScrollableControl.
         """
         pass
 
@@ -3170,7 +3397,9 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
     def SetStyle(self, *args): #cannot find CLR method
         """
         SetStyle(self: Control, flag: ControlStyles, value: bool)
-            Sets a specified System.Windows.Forms.ControlStyles flag to either true or false.
+            Sets a specified System.Windows.Forms.ControlStyles flag to either true or 
+             false.
+        
         
             flag: The System.Windows.Forms.ControlStyles bit to set.
             value: true to apply the specified style to the control; otherwise, false.
@@ -3206,10 +3435,15 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         """
         SizeFromClientSize(self: Control, clientSize: Size) -> Size
         
-            Determines the size of the entire control from the height and width of its client area.
+            Determines the size of the entire control from the height and width of its 
+             client area.
         
-            clientSize: A System.Drawing.Size value representing the height and width of the control's client area.
-            Returns: A System.Drawing.Size value representing the height and width of the entire control.
+        
+            clientSize: A System.Drawing.Size value representing the height and width of the control's 
+             client area.
+        
+            Returns: A System.Drawing.Size value representing the height and width of the entire 
+             control.
         """
         pass
 
@@ -3218,14 +3452,17 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         SupportsHelp(self: ComponentEditorPage) -> bool
         
             Gets a value indicating whether the editor supports Help.
-            Returns: true if the editor supports Help; otherwise, false. The default implementation returns false.
+            Returns: true if the editor supports Help; otherwise, false. The default implementation 
+             returns false.
         """
         pass
 
     def UpdateBounds(self, *args): #cannot find CLR method
         """
         UpdateBounds(self: Control, x: int, y: int, width: int, height: int, clientWidth: int, clientHeight: int)
-            Updates the bounds of the control with the specified size, location, and client size.
+            Updates the bounds of the control with the specified size, location, and client 
+             size.
+        
         
             x: The System.Drawing.Point.X coordinate of the control.
             y: The System.Drawing.Point.Y coordinate of the control.
@@ -3268,18 +3505,11 @@ class ComponentEditorPage(Panel, IComponent, IDisposable, IOleControl, IOleObjec
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -3462,7 +3692,9 @@ class PropertyTab(object, IExtenderProvider):
         """
         CanExtend(self: PropertyTab, extendee: object) -> bool
         
-            Gets a value indicating whether this System.Windows.Forms.Design.PropertyTab can display properties for the specified component.
+            Gets a value indicating whether this System.Windows.Forms.Design.PropertyTab 
+             can display properties for the specified component.
+        
         
             extendee: The object to test.
             Returns: true if the object can be extended; otherwise, false.
@@ -3491,25 +3723,40 @@ class PropertyTab(object, IExtenderProvider):
         """
         GetProperties(self: PropertyTab, context: ITypeDescriptorContext, component: object, attributes: Array[Attribute]) -> PropertyDescriptorCollection
         
-            Gets the properties of the specified component that match the specified attributes and context.
+            Gets the properties of the specified component that match the specified 
+             attributes and context.
         
-            context: An System.ComponentModel.ITypeDescriptorContext that indicates the context to retrieve properties from.
+        
+            context: An System.ComponentModel.ITypeDescriptorContext that indicates the context to 
+             retrieve properties from.
+        
             component: The component to retrieve properties from.
-            attributes: An array of type System.Attribute that indicates the attributes of the properties to retrieve.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection that contains the properties matching the specified context and attributes.
+            attributes: An array of type System.Attribute that indicates the attributes of the 
+             properties to retrieve.
+        
+            Returns: A System.ComponentModel.PropertyDescriptorCollection that contains the 
+             properties matching the specified context and attributes.
+        
         GetProperties(self: PropertyTab, component: object, attributes: Array[Attribute]) -> PropertyDescriptorCollection
         
-            Gets the properties of the specified component that match the specified attributes.
+            Gets the properties of the specified component that match the specified 
+             attributes.
+        
         
             component: The component to retrieve properties from.
-            attributes: An array of type System.Attribute that indicates the attributes of the properties to retrieve.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection that contains the properties.
+            attributes: An array of type System.Attribute that indicates the attributes of the 
+             properties to retrieve.
+        
+            Returns: A System.ComponentModel.PropertyDescriptorCollection that contains the 
+             properties.
+        
         GetProperties(self: PropertyTab, component: object) -> PropertyDescriptorCollection
         
             Gets the properties of the specified component.
         
             component: The component to retrieve the properties of.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection that contains the properties of the component.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection that contains the 
+             properties of the component.
         """
         pass
 
@@ -3572,9 +3819,13 @@ class EventsTab(PropertyTab, IExtenderProvider):
     def Dispose(self):
         """
         Dispose(self: PropertyTab, disposing: bool)
-            Releases the unmanaged resources used by the System.Windows.Forms.Design.PropertyTab and optionally releases the managed resources.
+            Releases the unmanaged resources used by the 
+             System.Windows.Forms.Design.PropertyTab and optionally releases the managed 
+             resources.
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+        
+            disposing: true to release both managed and unmanaged resources; false to release only 
+             unmanaged resources.
         """
         pass
 
@@ -3593,22 +3844,34 @@ class EventsTab(PropertyTab, IExtenderProvider):
         """
         GetProperties(self: EventsTab, context: ITypeDescriptorContext, component: object, attributes: Array[Attribute]) -> PropertyDescriptorCollection
         
-            Gets all the properties of the event tab that match the specified attributes and context.
+            Gets all the properties of the event tab that match the specified attributes 
+             and context.
         
-            context: An System.ComponentModel.ITypeDescriptorContext that can be used to gain context information.
+        
+            context: An System.ComponentModel.ITypeDescriptorContext that can be used to gain 
+             context information.
+        
             component: The component to retrieve the properties of.
-            attributes: An array of type System.Attribute that indicates the attributes of the event properties to retrieve.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection that contains the properties. This will be an empty System.ComponentModel.PropertyDescriptorCollection if the component does not implement an event 
-             service.
+            attributes: An array of type System.Attribute that indicates the attributes of the event 
+             properties to retrieve.
+        
+            Returns: A System.ComponentModel.PropertyDescriptorCollection that contains the 
+             properties. This will be an empty 
+             System.ComponentModel.PropertyDescriptorCollection if the component does not 
+             implement an event service.
         
         GetProperties(self: EventsTab, component: object, attributes: Array[Attribute]) -> PropertyDescriptorCollection
         
             Gets all the properties of the event tab that match the specified attributes.
         
             component: The component to retrieve the properties of.
-            attributes: An array of System.Attribute that indicates the attributes of the event properties to retrieve.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection that contains the properties. This will be an empty System.ComponentModel.PropertyDescriptorCollection if the component does not implement an event 
-             service.
+            attributes: An array of System.Attribute that indicates the attributes of the event 
+             properties to retrieve.
+        
+            Returns: A System.ComponentModel.PropertyDescriptorCollection that contains the 
+             properties. This will be an empty 
+             System.ComponentModel.PropertyDescriptorCollection if the component does not 
+             implement an event service.
         """
         pass
 
@@ -3643,10 +3906,15 @@ class IUIService:
         """
         CanShowComponentEditor(self: IUIService, component: object) -> bool
         
-            Indicates whether the component can display a System.Windows.Forms.Design.ComponentEditorForm.
+            Indicates whether the component can display a 
+             System.Windows.Forms.Design.ComponentEditorForm.
         
-            component: The component to check for support for displaying a System.Windows.Forms.Design.ComponentEditorForm.
-            Returns: true if the specified component can display a component editor form; otherwise, false.
+        
+            component: The component to check for support for displaying a 
+             System.Windows.Forms.Design.ComponentEditorForm.
+        
+            Returns: true if the specified component can display a component editor form; otherwise, 
+             false.
         """
         pass
 
@@ -3655,7 +3923,8 @@ class IUIService:
         GetDialogOwnerWindow(self: IUIService) -> IWin32Window
         
             Gets the window that should be used as the owner when showing dialog boxes.
-            Returns: An System.Windows.Forms.IWin32Window that indicates the window to own any child dialog boxes.
+            Returns: An System.Windows.Forms.IWin32Window that indicates the window to own any child 
+             dialog boxes.
         """
         pass
 
@@ -3670,9 +3939,13 @@ class IUIService:
         """
         ShowComponentEditor(self: IUIService, component: object, parent: IWin32Window) -> bool
         
-            Attempts to display a System.Windows.Forms.Design.ComponentEditorForm for a component.
+            Attempts to display a System.Windows.Forms.Design.ComponentEditorForm for a 
+             component.
         
-            component: The component for which to display a System.Windows.Forms.Design.ComponentEditorForm.
+        
+            component: The component for which to display a 
+             System.Windows.Forms.Design.ComponentEditorForm.
+        
             parent: The System.Windows.Forms.IWin32Window to parent any dialog boxes to.
             Returns: true if the attempt is successful; otherwise, false.
         """
@@ -3685,19 +3958,24 @@ class IUIService:
             Attempts to display the specified form in a dialog box.
         
             form: The System.Windows.Forms.Form to display.
-            Returns: One of the System.Windows.Forms.DialogResult values indicating the result code returned by the dialog box.
+            Returns: One of the System.Windows.Forms.DialogResult values indicating the result code 
+             returned by the dialog box.
         """
         pass
 
     def ShowError(self, *__args):
         """
         ShowError(self: IUIService, ex: Exception, message: str)
-            Displays the specified exception and information about the exception in a message box.
+            Displays the specified exception and information about the exception in a 
+             message box.
+        
         
             ex: The System.Exception to display.
             message: A message to display that provides information about the exception.
         ShowError(self: IUIService, ex: Exception)
-            Displays the specified exception and information about the exception in a message box.
+            Displays the specified exception and information about the exception in a 
+             message box.
+        
         
             ex: The System.Exception to display.
         ShowError(self: IUIService, message: str)
@@ -3711,14 +3989,21 @@ class IUIService:
         """
         ShowMessage(self: IUIService, message: str, caption: str, buttons: MessageBoxButtons) -> DialogResult
         
-            Displays the specified message in a message box with the specified caption and buttons to place on the dialog box.
+            Displays the specified message in a message box with the specified caption and 
+             buttons to place on the dialog box.
+        
         
             message: The message to display.
             caption: The caption for the dialog box.
-            buttons: One of the System.Windows.Forms.MessageBoxButtons values: System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxButtons.OKCancel, System.Windows.Forms.MessageBoxButtons.YesNo, or 
+            buttons: One of the System.Windows.Forms.MessageBoxButtons values: 
+             System.Windows.Forms.MessageBoxButtons.OK, 
+             System.Windows.Forms.MessageBoxButtons.OKCancel, 
+             System.Windows.Forms.MessageBoxButtons.YesNo, or 
              System.Windows.Forms.MessageBoxButtons.YesNoCancel.
         
-            Returns: One of the System.Windows.Forms.DialogResult values indicating the result code returned by the dialog box.
+            Returns: One of the System.Windows.Forms.DialogResult values indicating the result code 
+             returned by the dialog box.
+        
         ShowMessage(self: IUIService, message: str, caption: str)
             Displays the specified message in a message box with the specified caption.
         
@@ -3737,8 +4022,12 @@ class IUIService:
         
             Displays the specified tool window.
         
-            toolWindow: A System.Guid identifier for the tool window. This can be a custom System.Guid or one of the predefined values from System.ComponentModel.Design.StandardToolWindows.
-            Returns: true if the tool window was successfully shown; false if it could not be shown or found.
+            toolWindow: A System.Guid identifier for the tool window. This can be a custom System.Guid 
+             or one of the predefined values from 
+             System.ComponentModel.Design.StandardToolWindows.
+        
+            Returns: true if the tool window was successfully shown; false if it could not be shown 
+             or found.
         """
         pass
 
@@ -3767,7 +4056,9 @@ class IWindowsFormsEditorService:
     def DropDownControl(self, control):
         """
         DropDownControl(self: IWindowsFormsEditorService, control: Control)
-            Displays the specified control in a drop down area below a value field of the property grid that provides this service.
+            Displays the specified control in a drop down area below a value field of the 
+             property grid that provides this service.
+        
         
             control: The drop down list System.Windows.Forms.Control to open.
         """
@@ -3780,7 +4071,8 @@ class IWindowsFormsEditorService:
             Shows the specified System.Windows.Forms.Form.
         
             dialog: The System.Windows.Forms.Form to display.
-            Returns: A System.Windows.Forms.DialogResult indicating the result code returned by the System.Windows.Forms.Form.
+            Returns: A System.Windows.Forms.DialogResult indicating the result code returned by the 
+             System.Windows.Forms.Form.
         """
         pass
 
@@ -3864,7 +4156,9 @@ class ToolStripItemDesignerAvailabilityAttribute(Attribute, _Attribute):
         """
         IsDefaultAttribute(self: ToolStripItemDesignerAvailabilityAttribute) -> bool
         
-            When overriden in a derived class, indicates whether the value of this instance is the default value for the derived class.
+            When overriden in a derived class, indicates whether the value of this instance 
+             is the default value for the derived class.
+        
             Returns: true if this instance is the default attribute for the class; otherwise, false.
         """
         pass
@@ -3907,22 +4201,30 @@ class WindowsFormsComponentEditor(ComponentEditor):
         
             Creates an editor window that allows the user to edit the specified component.
         
-            context: An System.ComponentModel.ITypeDescriptorContext that can be used to gain additional context information.
+            context: An System.ComponentModel.ITypeDescriptorContext that can be used to gain 
+             additional context information.
+        
             component: The component to edit.
             owner: An System.Windows.Forms.IWin32Window that the component belongs to.
             Returns: true if the component was changed during editing; otherwise, false.
         EditComponent(self: WindowsFormsComponentEditor, component: object, owner: IWin32Window) -> bool
         
-            Creates an editor window that allows the user to edit the specified component, using the specified window that owns the component.
+            Creates an editor window that allows the user to edit the specified component, 
+             using the specified window that owns the component.
+        
         
             component: The component to edit.
             owner: An System.Windows.Forms.IWin32Window that the component belongs to.
             Returns: true if the component was changed during editing; otherwise, false.
         EditComponent(self: WindowsFormsComponentEditor, context: ITypeDescriptorContext, component: object) -> bool
         
-            Creates an editor window that allows the user to edit the specified component, using the specified context information.
+            Creates an editor window that allows the user to edit the specified component, 
+             using the specified context information.
         
-            context: An System.ComponentModel.ITypeDescriptorContext that can be used to gain additional context information.
+        
+            context: An System.ComponentModel.ITypeDescriptorContext that can be used to gain 
+             additional context information.
+        
             component: The component to edit.
             Returns: true if the component was changed during editing; otherwise, false.
         """
@@ -3941,8 +4243,11 @@ class WindowsFormsComponentEditor(ComponentEditor):
         """
         GetInitialComponentEditorPageIndex(self: WindowsFormsComponentEditor) -> int
         
-            Gets the index of the initial component editor page for the component editor to display.
-            Returns: The index of the component editor page that the component editor will initially display.
+            Gets the index of the initial component editor page for the component editor to 
+             display.
+        
+            Returns: The index of the component editor page that the component editor will initially 
+             display.
         """
         pass
 

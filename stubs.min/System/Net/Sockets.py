@@ -2,7 +2,7 @@
 # module System.Net.Sockets calls itself Sockets
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -143,10 +143,13 @@ class IPPacketInformation(object):
   """
   Equals(self: IPPacketInformation,comparand: object) -> bool
   
-   Returns a value that indicates whether this instance is equal to a specified object.
+   Returns a value that indicates whether this instance is equal to a specified 
+    object.
+  
   
    comparand: The object to compare with this instance.
-   Returns: true if comparand is an instance of System.Net.Sockets.IPPacketInformation and equals the value of the instance; otherwise,false.
+   Returns: true if comparand is an instance of System.Net.Sockets.IPPacketInformation and 
+    equals the value of the instance; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -331,10 +334,15 @@ class NetworkStream(Stream,IDisposable):
   
    Begins an asynchronous read from the System.Net.Sockets.NetworkStream.
   
-   buffer: An array of type System.Byte that is the location in memory to store data read from the System.Net.Sockets.NetworkStream.
+   buffer: An array of type System.Byte that is the location in memory to store data read 
+    from the System.Net.Sockets.NetworkStream.
+  
    offset: The location in buffer to begin storing the data.
    size: The number of bytes to read from the System.Net.Sockets.NetworkStream.
-   callback: The System.AsyncCallback delegate that is executed when System.Net.Sockets.NetworkStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) completes.
+   callback: The System.AsyncCallback delegate that is executed when 
+    System.Net.Sockets.NetworkStream.BeginRead(System.Byte[],System.Int32,System.Int
+    32,System.AsyncCallback,System.Object) completes.
+  
    state: An object that contains any additional user-defined data.
    Returns: An System.IAsyncResult that represents the asynchronous call.
   """
@@ -345,10 +353,15 @@ class NetworkStream(Stream,IDisposable):
   
    Begins an asynchronous write to a stream.
   
-   buffer: An array of type System.Byte that contains the data to write to the System.Net.Sockets.NetworkStream.
+   buffer: An array of type System.Byte that contains the data to write to the 
+    System.Net.Sockets.NetworkStream.
+  
    offset: The location in buffer to begin sending the data.
    size: The number of bytes to write to the System.Net.Sockets.NetworkStream.
-   callback: The System.AsyncCallback delegate that is executed when System.Net.Sockets.NetworkStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) completes.
+   callback: The System.AsyncCallback delegate that is executed when 
+    System.Net.Sockets.NetworkStream.BeginWrite(System.Byte[],System.Int32,System.In
+    t32,System.AsyncCallback,System.Object) completes.
+  
    state: An object that contains any additional user-defined data.
    Returns: An System.IAsyncResult that represents the asynchronous call.
   """
@@ -356,9 +369,12 @@ class NetworkStream(Stream,IDisposable):
  def Close(self,timeout=None):
   """
   Close(self: NetworkStream,timeout: int)
-   Closes the System.Net.Sockets.NetworkStream after waiting the specified time to allow data to be sent.
+   Closes the System.Net.Sockets.NetworkStream after waiting the specified time to 
+    allow data to be sent.
   
-   timeout: A 32-bit signed integer that specifies the number of milliseconds to wait to send any remaining data before closing.
+  
+   timeout: A 32-bit signed integer that specifies the number of milliseconds to wait to 
+    send any remaining data before closing.
   """
   pass
  def CreateWaitHandle(self,*args):
@@ -372,9 +388,12 @@ class NetworkStream(Stream,IDisposable):
  def Dispose(self):
   """
   Dispose(self: NetworkStream,disposing: bool)
-   Releases the unmanaged resources used by the System.Net.Sockets.NetworkStream and optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Net.Sockets.NetworkStream 
+    and optionally releases the managed resources.
   
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+  
+   disposing: true to release both managed and unmanaged resources; false to release only 
+    unmanaged resources.
   """
   pass
  def EndRead(self,asyncResult):
@@ -410,8 +429,11 @@ class NetworkStream(Stream,IDisposable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-    usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
+    will cause the object to be assigned a new identity when it is marshaled across 
+    a remoting boundary. A value of false is usually appropriate. true to copy the 
+    current System.MarshalByRefObject object's identity to its clone,which will 
+    cause remoting client calls to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -441,7 +463,9 @@ class NetworkStream(Stream,IDisposable):
   """
   Seek(self: NetworkStream,offset: Int64,origin: SeekOrigin) -> Int64
   
-   Sets the current position of the stream to the given value. This method is not currently supported and always throws a System.NotSupportedException.
+   Sets the current position of the stream to the given value. This method is not 
+    currently supported and always throws a System.NotSupportedException.
+  
   
    offset: This parameter is not used.
    origin: This parameter is not used.
@@ -451,7 +475,9 @@ class NetworkStream(Stream,IDisposable):
  def SetLength(self,value):
   """
   SetLength(self: NetworkStream,value: Int64)
-   Sets the length of the stream. This method always throws a System.NotSupportedException.
+   Sets the length of the stream. This method always throws a 
+    System.NotSupportedException.
+  
   
    value: This parameter is not used.
   """
@@ -461,23 +487,18 @@ class NetworkStream(Stream,IDisposable):
   Write(self: NetworkStream,buffer: Array[Byte],offset: int,size: int)
    Writes data to the System.Net.Sockets.NetworkStream.
   
-   buffer: An array of type System.Byte that contains the data to write to the System.Net.Sockets.NetworkStream.
+   buffer: An array of type System.Byte that contains the data to write to the 
+    System.Net.Sockets.NetworkStream.
+  
    offset: The location in buffer from which to start writing data.
    size: The number of bytes to write to the System.Net.Sockets.NetworkStream.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -810,59 +831,89 @@ class Socket(object,IDisposable):
   
    Begins an asynchronous operation to accept an incoming connection attempt.
   
-   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous socket operation.
-   Returns: Returns true if the I/O operation is pending. The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will be raised upon completion of the operation.Returns false if the I/O 
-    operation completed synchronously. The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will not be raised and the e object passed as a parameter may be examined immediately after 
-    the method call returns to retrieve the result of the operation.
+   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous 
+    socket operation.
+  
+   Returns: Returns true if the I/O operation is pending. The 
+    System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will 
+    be raised upon completion of the operation.Returns false if the I/O operation 
+    completed synchronously. The System.Net.Sockets.SocketAsyncEventArgs.Completed 
+    event on the e parameter will not be raised and the e object passed as a 
+    parameter may be examined immediately after the method call returns to retrieve 
+    the result of the operation.
   """
   pass
  def BeginAccept(self,*__args):
   """
   BeginAccept(self: Socket,acceptSocket: Socket,receiveSize: int,callback: AsyncCallback,state: object) -> IAsyncResult
   
-   Begins an asynchronous operation to accept an incoming connection attempt from a specified socket and receives the first block of data sent by the client application.
+   Begins an asynchronous operation to accept an incoming connection attempt from 
+    a specified socket and receives the first block of data sent by the client 
+    application.
+  
   
    acceptSocket: The accepted System.Net.Sockets.Socket object. This value may be null.
    receiveSize: The maximum number of bytes to receive.
    callback: The System.AsyncCallback delegate.
    state: An object that contains state information for this request.
-   Returns: An System.IAsyncResult object that references the asynchronous System.Net.Sockets.Socket object creation.
+   Returns: An System.IAsyncResult object that references the asynchronous 
+    System.Net.Sockets.Socket object creation.
+  
   BeginAccept(self: Socket,receiveSize: int,callback: AsyncCallback,state: object) -> IAsyncResult
   
-   Begins an asynchronous operation to accept an incoming connection attempt and receives the first block of data sent by the client application.
+   Begins an asynchronous operation to accept an incoming connection attempt and 
+    receives the first block of data sent by the client application.
+  
   
    receiveSize: The number of bytes to accept from the sender.
    callback: The System.AsyncCallback delegate.
    state: An object that contains state information for this request.
-   Returns: An System.IAsyncResult that references the asynchronous System.Net.Sockets.Socket creation.
+   Returns: An System.IAsyncResult that references the asynchronous 
+    System.Net.Sockets.Socket creation.
+  
   BeginAccept(self: Socket,callback: AsyncCallback,state: object) -> IAsyncResult
   
    Begins an asynchronous operation to accept an incoming connection attempt.
   
    callback: The System.AsyncCallback delegate.
    state: An object that contains state information for this request.
-   Returns: An System.IAsyncResult that references the asynchronous System.Net.Sockets.Socket creation.
+   Returns: An System.IAsyncResult that references the asynchronous 
+    System.Net.Sockets.Socket creation.
   """
   pass
  def BeginConnect(self,*__args):
   """
   BeginConnect(self: Socket,address: IPAddress,port: int,requestCallback: AsyncCallback,state: object) -> IAsyncResult
   
-   Begins an asynchronous request for a remote host connection. The host is specified by an System.Net.IPAddress and a port number.
+   Begins an asynchronous request for a remote host connection. The host is 
+    specified by an System.Net.IPAddress and a port number.
+  
   
    address: The System.Net.IPAddress of the remote host.
    port: The port number of the remote host.
-   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the connect operation is complete.
-   state: A user-defined object that contains information about the connect operation. This object is passed to the requestCallback delegate when the operation is complete.
+   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    connect operation is complete.
+  
+   state: A user-defined object that contains information about the connect operation. 
+    This object is passed to the requestCallback delegate when the operation is 
+    complete.
+  
    Returns: An System.IAsyncResult that references the asynchronous connection.
   BeginConnect(self: Socket,addresses: Array[IPAddress],port: int,requestCallback: AsyncCallback,state: object) -> IAsyncResult
   
-   Begins an asynchronous request for a remote host connection. The host is specified by an System.Net.IPAddress array and a port number.
+   Begins an asynchronous request for a remote host connection. The host is 
+    specified by an System.Net.IPAddress array and a port number.
+  
   
    addresses: At least one System.Net.IPAddress,designating the remote host.
    port: The port number of the remote host.
-   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the connect operation is complete.
-   state: A user-defined object that contains information about the connect operation. This object is passed to the requestCallback delegate when the operation is complete.
+   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    connect operation is complete.
+  
+   state: A user-defined object that contains information about the connect operation. 
+    This object is passed to the requestCallback delegate when the operation is 
+    complete.
+  
    Returns: An System.IAsyncResult that references the asynchronous connections.
   BeginConnect(self: Socket,remoteEP: EndPoint,callback: AsyncCallback,state: object) -> IAsyncResult
   
@@ -874,12 +925,19 @@ class Socket(object,IDisposable):
    Returns: An System.IAsyncResult that references the asynchronous connection.
   BeginConnect(self: Socket,host: str,port: int,requestCallback: AsyncCallback,state: object) -> IAsyncResult
   
-   Begins an asynchronous request for a remote host connection. The host is specified by a host name and a port number.
+   Begins an asynchronous request for a remote host connection. The host is 
+    specified by a host name and a port number.
+  
   
    host: The name of the remote host.
    port: The port number of the remote host.
-   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the connect operation is complete.
-   state: A user-defined object that contains information about the connect operation. This object is passed to the requestCallback delegate when the operation is complete.
+   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    connect operation is complete.
+  
+   state: A user-defined object that contains information about the connect operation. 
+    This object is passed to the requestCallback delegate when the operation is 
+    complete.
+  
    Returns: An System.IAsyncResult that references the asynchronous connection.
   """
   pass
@@ -889,7 +947,9 @@ class Socket(object,IDisposable):
   
    Begins an asynchronous request to disconnect from a remote endpoint.
   
-   reuseSocket: true if this socket can be reused after the connection is closed; otherwise,false.
+   reuseSocket: true if this socket can be reused after the connection is closed; otherwise,
+    false.
+  
    callback: The System.AsyncCallback delegate.
    state: An object that contains state information for this request.
    Returns: An System.IAsyncResult object that references the asynchronous operation.
@@ -901,25 +961,43 @@ class Socket(object,IDisposable):
   BeginReceive(self: Socket,buffers: IList[ArraySegment[Byte]],socketFlags: SocketFlags,callback: AsyncCallback,state: object) -> (IAsyncResult,SocketError)
   BeginReceive(self: Socket,buffer: Array[Byte],offset: int,size: int,socketFlags: SocketFlags,callback: AsyncCallback,state: object) -> IAsyncResult
   
-   Begins to asynchronously receive data from a connected System.Net.Sockets.Socket.
+   Begins to asynchronously receive data from a connected 
+    System.Net.Sockets.Socket.
+  
   
    buffer: An array of type System.Byte that is the storage location for the received data.
-   offset: The zero-based position in the buffer parameter at which to store the received data.
+   offset: The zero-based position in the buffer parameter at which to store the received 
+    data.
+  
    size: The number of bytes to receive.
    socketFlags: A bitwise combination of the System.Net.Sockets.SocketFlags values.
-   callback: An System.AsyncCallback delegate that references the method to invoke when the operation is complete.
-   state: A user-defined object that contains information about the receive operation. This object is passed to the System.Net.Sockets.Socket.EndReceive(System.IAsyncResult) delegate when the operation is complete.
+   callback: An System.AsyncCallback delegate that references the method to invoke when the 
+    operation is complete.
+  
+   state: A user-defined object that contains information about the receive operation. 
+    This object is passed to the 
+    System.Net.Sockets.Socket.EndReceive(System.IAsyncResult) delegate when the 
+    operation is complete.
+  
    Returns: An System.IAsyncResult that references the asynchronous read.
   BeginReceive(self: Socket,buffer: Array[Byte],offset: int,size: int,socketFlags: SocketFlags,callback: AsyncCallback,state: object) -> (IAsyncResult,SocketError)
   
-   Begins to asynchronously receive data from a connected System.Net.Sockets.Socket.
+   Begins to asynchronously receive data from a connected 
+    System.Net.Sockets.Socket.
+  
   
    buffer: An array of type System.Byte that is the storage location for the received data.
    offset: The location in buffer to store the received data.
    size: The number of bytes to receive.
    socketFlags: A bitwise combination of the System.Net.Sockets.SocketFlags values.
-   callback: An System.AsyncCallback delegate that references the method to invoke when the operation is complete.
-   state: A user-defined object that contains information about the receive operation. This object is passed to the System.Net.Sockets.Socket.EndReceive(System.IAsyncResult) delegate when the operation is complete.
+   callback: An System.AsyncCallback delegate that references the method to invoke when the 
+    operation is complete.
+  
+   state: A user-defined object that contains information about the receive operation. 
+    This object is passed to the 
+    System.Net.Sockets.Socket.EndReceive(System.IAsyncResult) delegate when the 
+    operation is complete.
+  
    Returns: An System.IAsyncResult that references the asynchronous read.
   """
   pass
@@ -943,7 +1021,9 @@ class Socket(object,IDisposable):
   """
   BeginReceiveMessageFrom(self: Socket,buffer: Array[Byte],offset: int,size: int,socketFlags: SocketFlags,remoteEP: EndPoint,callback: AsyncCallback,state: object) -> (IAsyncResult,EndPoint)
   
-   Begins to asynchronously receive the specified number of bytes of data into the specified location of the data buffer,using the specified System.Net.Sockets.SocketFlags,and stores the endpoint and packet 
+   Begins to asynchronously receive the specified number of bytes of data into the 
+    specified location of the data buffer,using the specified 
+    System.Net.Sockets.SocketFlags,and stores the endpoint and packet 
     information..
   
   
@@ -989,20 +1069,36 @@ class Socket(object,IDisposable):
   """
   BeginSendFile(self: Socket,fileName: str,preBuffer: Array[Byte],postBuffer: Array[Byte],flags: TransmitFileOptions,callback: AsyncCallback,state: object) -> IAsyncResult
   
-   Sends a file and buffers of data asynchronously to a connected System.Net.Sockets.Socket object.
+   Sends a file and buffers of data asynchronously to a connected 
+    System.Net.Sockets.Socket object.
   
-   fileName: A string that contains the path and name of the file to be sent. This parameter can be null.
-   preBuffer: A System.Byte array that contains data to be sent before the file is sent. This parameter can be null.
-   postBuffer: A System.Byte array that contains data to be sent after the file is sent. This parameter can be null.
+  
+   fileName: A string that contains the path and name of the file to be sent. This parameter 
+    can be null.
+  
+   preBuffer: A System.Byte array that contains data to be sent before the file is sent. This 
+    parameter can be null.
+  
+   postBuffer: A System.Byte array that contains data to be sent after the file is sent. This 
+    parameter can be null.
+  
    flags: A bitwise combination of System.Net.Sockets.TransmitFileOptions values.
-   callback: An System.AsyncCallback delegate to be invoked when this operation completes. This parameter can be null.
-   state: A user-defined object that contains state information for this request. This parameter can be null.
+   callback: An System.AsyncCallback delegate to be invoked when this operation completes. 
+    This parameter can be null.
+  
+   state: A user-defined object that contains state information for this request. This 
+    parameter can be null.
+  
    Returns: An System.IAsyncResult object that represents the asynchronous operation.
   BeginSendFile(self: Socket,fileName: str,callback: AsyncCallback,state: object) -> IAsyncResult
   
-   Sends the file fileName to a connected System.Net.Sockets.Socket object using the System.Net.Sockets.TransmitFileOptions.UseDefaultWorkerThread flag.
+   Sends the file fileName to a connected System.Net.Sockets.Socket object using 
+    the System.Net.Sockets.TransmitFileOptions.UseDefaultWorkerThread flag.
   
-   fileName: A string that contains the path and name of the file to send. This parameter can be null.
+  
+   fileName: A string that contains the path and name of the file to send. This parameter 
+    can be null.
+  
    callback: The System.AsyncCallback delegate.
    state: An object that contains state information for this request.
    Returns: An System.IAsyncResult object that represents the asynchronous send.
@@ -1038,29 +1134,38 @@ class Socket(object,IDisposable):
   CancelConnectAsync(e: SocketAsyncEventArgs)
    Cancels an asynchronous request for a remote host connection.
   
-   e: The System.Net.Sockets.SocketAsyncEventArgs object used to request the connection to the remote host by calling one of the 
-    System.Net.Sockets.Socket.ConnectAsync(System.Net.Sockets.SocketType,System.Net.Sockets.ProtocolType,System.Net.Sockets.SocketAsyncEventArgs) methods.
+   e: The System.Net.Sockets.SocketAsyncEventArgs object used to request the 
+    connection to the remote host by calling one of the 
+    System.Net.Sockets.Socket.ConnectAsync(System.Net.Sockets.SocketType,System.Net.
+    Sockets.ProtocolType,System.Net.Sockets.SocketAsyncEventArgs) methods.
   """
   pass
  def Close(self,timeout=None):
   """
   Close(self: Socket,timeout: int)
-   Closes the System.Net.Sockets.Socket connection and releases all associated resources with a specified timeout to allow queued data to be sent.
+   Closes the System.Net.Sockets.Socket connection and releases all associated 
+    resources with a specified timeout to allow queued data to be sent.
+  
   
    timeout: Wait up to timeout seconds to send any remaining data,then close the socket.
   Close(self: Socket)
-   Closes the System.Net.Sockets.Socket connection and releases all associated resources.
+   Closes the System.Net.Sockets.Socket connection and releases all associated 
+    resources.
   """
   pass
  def Connect(self,*__args):
   """
   Connect(self: Socket,host: str,port: int)
-   Establishes a connection to a remote host. The host is specified by a host name and a port number.
+   Establishes a connection to a remote host. The host is specified by a host name 
+    and a port number.
+  
   
    host: The name of the remote host.
    port: The port number of the remote host.
   Connect(self: Socket,addresses: Array[IPAddress],port: int)
-   Establishes a connection to a remote host. The host is specified by an array of IP addresses and a port number.
+   Establishes a connection to a remote host. The host is specified by an array of 
+    IP addresses and a port number.
+  
   
    addresses: The IP addresses of the remote host.
    port: The port number of the remote host.
@@ -1069,7 +1174,9 @@ class Socket(object,IDisposable):
   
    remoteEP: An System.Net.EndPoint that represents the remote device.
   Connect(self: Socket,address: IPAddress,port: int)
-   Establishes a connection to a remote host. The host is specified by an IP address and a port number.
+   Establishes a connection to a remote host. The host is specified by an IP 
+    address and a port number.
+  
   
    address: The IP address of the remote host.
    port: The port number of the remote host.
@@ -1083,19 +1190,33 @@ class Socket(object,IDisposable):
   
    socketType: One of the System.Net.Sockets.SocketType values.
    protocolType: One of the System.Net.Sockets.ProtocolType values.
-   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous socket operation.
-   Returns: Returns true if the I/O operation is pending. The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will be raised upon completion of the operation. Returns false if the I/O 
-    operation completed synchronously. In this case,The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will not be raised and the e object passed as a parameter may be examined 
-    immediately after the method call returns to retrieve the result of the operation.
+   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous 
+    socket operation.
+  
+   Returns: Returns true if the I/O operation is pending. The 
+    System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will 
+    be raised upon completion of the operation. Returns false if the I/O operation 
+    completed synchronously. In this case,The 
+    System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will 
+    not be raised and the e object passed as a parameter may be examined 
+    immediately after the method call returns to retrieve the result of the 
+    operation.
   
   ConnectAsync(self: Socket,e: SocketAsyncEventArgs) -> bool
   
    Begins an asynchronous request for a remote host connection.
   
-   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous socket operation.
-   Returns: Returns true if the I/O operation is pending. The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will be raised upon completion of the operation. Returns false if the I/O 
-    operation completed synchronously. In this case,The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will not be raised and the e object passed as a parameter may be examined 
-    immediately after the method call returns to retrieve the result of the operation.
+   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous 
+    socket operation.
+  
+   Returns: Returns true if the I/O operation is pending. The 
+    System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will 
+    be raised upon completion of the operation. Returns false if the I/O operation 
+    completed synchronously. In this case,The 
+    System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will 
+    not be raised and the e object passed as a parameter may be examined 
+    immediately after the method call returns to retrieve the result of the 
+    operation.
   """
   pass
  def Disconnect(self,reuseSocket):
@@ -1103,7 +1224,8 @@ class Socket(object,IDisposable):
   Disconnect(self: Socket,reuseSocket: bool)
    Closes the socket connection and allows reuse of the socket.
   
-   reuseSocket: true if this socket can be reused after the current connection is closed; otherwise,false.
+   reuseSocket: true if this socket can be reused after the current connection is closed; 
+    otherwise,false.
   """
   pass
  def DisconnectAsync(self,e):
@@ -1112,25 +1234,37 @@ class Socket(object,IDisposable):
   
    Begins an asynchronous request to disconnect from a remote endpoint.
   
-   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous socket operation.
-   Returns: Returns true if the I/O operation is pending. The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will be raised upon completion of the operation. Returns false if the I/O 
-    operation completed synchronously. In this case,The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will not be raised and the e object passed as a parameter may be examined 
-    immediately after the method call returns to retrieve the result of the operation.
+   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous 
+    socket operation.
+  
+   Returns: Returns true if the I/O operation is pending. The 
+    System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will 
+    be raised upon completion of the operation. Returns false if the I/O operation 
+    completed synchronously. In this case,The 
+    System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will 
+    not be raised and the e object passed as a parameter may be examined 
+    immediately after the method call returns to retrieve the result of the 
+    operation.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: Socket)
-   Releases all resources used by the current instance of the System.Net.Sockets.Socket class.
+   Releases all resources used by the current instance of the 
+    System.Net.Sockets.Socket class.
   """
   pass
  def DuplicateAndClose(self,targetProcessId):
   """
   DuplicateAndClose(self: Socket,targetProcessId: int) -> SocketInformation
   
-   Duplicates the socket reference for the target process,and closes the socket for this process.
+   Duplicates the socket reference for the target process,and closes the socket 
+    for this process.
   
-   targetProcessId: The ID of the target process where a duplicate of the socket reference is created.
+  
+   targetProcessId: The ID of the target process where a duplicate of the socket reference is 
+    created.
+  
    Returns: The socket reference to be passed to the target process.
   """
   pass
@@ -1138,25 +1272,36 @@ class Socket(object,IDisposable):
   """
   EndAccept(self: Socket,asyncResult: IAsyncResult) -> (Socket,Array[Byte],int)
   
-   Asynchronously accepts an incoming connection attempt and creates a new System.Net.Sockets.Socket object to handle remote host communication. This method returns a buffer that contains the initial data and 
-    the number of bytes transferred.
-  
-  
-   asyncResult: An System.IAsyncResult object that stores state information for this asynchronous operation as well as any user defined data.
-   Returns: A System.Net.Sockets.Socket object to handle communication with the remote host.
-  EndAccept(self: Socket,asyncResult: IAsyncResult) -> (Socket,Array[Byte])
-  
-   Asynchronously accepts an incoming connection attempt and creates a new System.Net.Sockets.Socket object to handle remote host communication. This method returns a buffer that contains the initial data 
+   Asynchronously accepts an incoming connection attempt and creates a new 
+    System.Net.Sockets.Socket object to handle remote host communication. This 
+    method returns a buffer that contains the initial data and the number of bytes 
     transferred.
   
   
-   asyncResult: An System.IAsyncResult object that stores state information for this asynchronous operation as well as any user defined data.
+   asyncResult: An System.IAsyncResult object that stores state information for this 
+    asynchronous operation as well as any user defined data.
+  
+   Returns: A System.Net.Sockets.Socket object to handle communication with the remote host.
+  EndAccept(self: Socket,asyncResult: IAsyncResult) -> (Socket,Array[Byte])
+  
+   Asynchronously accepts an incoming connection attempt and creates a new 
+    System.Net.Sockets.Socket object to handle remote host communication. This 
+    method returns a buffer that contains the initial data transferred.
+  
+  
+   asyncResult: An System.IAsyncResult object that stores state information for this 
+    asynchronous operation as well as any user defined data.
+  
    Returns: A System.Net.Sockets.Socket object to handle communication with the remote host.
   EndAccept(self: Socket,asyncResult: IAsyncResult) -> Socket
   
-   Asynchronously accepts an incoming connection attempt and creates a new System.Net.Sockets.Socket to handle remote host communication.
+   Asynchronously accepts an incoming connection attempt and creates a new 
+    System.Net.Sockets.Socket to handle remote host communication.
   
-   asyncResult: An System.IAsyncResult that stores state information for this asynchronous operation as well as any user defined data.
+  
+   asyncResult: An System.IAsyncResult that stores state information for this asynchronous 
+    operation as well as any user defined data.
+  
    Returns: A System.Net.Sockets.Socket to handle communication with the remote host.
   """
   pass
@@ -1165,7 +1310,8 @@ class Socket(object,IDisposable):
   EndConnect(self: Socket,asyncResult: IAsyncResult)
    Ends a pending asynchronous connection request.
   
-   asyncResult: An System.IAsyncResult that stores state information and any user defined data for this asynchronous operation.
+   asyncResult: An System.IAsyncResult that stores state information and any user defined data 
+    for this asynchronous operation.
   """
   pass
  def EndDisconnect(self,asyncResult):
@@ -1173,7 +1319,8 @@ class Socket(object,IDisposable):
   EndDisconnect(self: Socket,asyncResult: IAsyncResult)
    Ends a pending asynchronous disconnect request.
   
-   asyncResult: An System.IAsyncResult object that stores state information and any user-defined data for this asynchronous operation.
+   asyncResult: An System.IAsyncResult object that stores state information and any 
+    user-defined data for this asynchronous operation.
   """
   pass
  def EndReceive(self,asyncResult,errorCode=None):
@@ -1182,13 +1329,17 @@ class Socket(object,IDisposable):
   
    Ends a pending asynchronous read.
   
-   asyncResult: An System.IAsyncResult that stores state information and any user defined data for this asynchronous operation.
+   asyncResult: An System.IAsyncResult that stores state information and any user defined data 
+    for this asynchronous operation.
+  
    Returns: The number of bytes received.
   EndReceive(self: Socket,asyncResult: IAsyncResult) -> int
   
    Ends a pending asynchronous read.
   
-   asyncResult: An System.IAsyncResult that stores state information and any user defined data for this asynchronous operation.
+   asyncResult: An System.IAsyncResult that stores state information and any user defined data 
+    for this asynchronous operation.
+  
    Returns: The number of bytes received.
   """
   pass
@@ -1198,7 +1349,9 @@ class Socket(object,IDisposable):
   
    Ends a pending asynchronous read from a specific endpoint.
   
-   asyncResult: An System.IAsyncResult that stores state information and any user defined data for this asynchronous operation.
+   asyncResult: An System.IAsyncResult that stores state information and any user defined data 
+    for this asynchronous operation.
+  
    endPoint: The source System.Net.EndPoint.
    Returns: If successful,the number of bytes received. If unsuccessful,returns 0.
   """
@@ -1207,10 +1360,18 @@ class Socket(object,IDisposable):
   """
   EndReceiveMessageFrom(self: Socket,asyncResult: IAsyncResult,socketFlags: SocketFlags,endPoint: EndPoint) -> (int,SocketFlags,EndPoint,IPPacketInformation)
   
-   Ends a pending asynchronous read from a specific endpoint. This method also reveals more information about the packet than System.Net.Sockets.Socket.EndReceiveFrom(System.IAsyncResult,System.Net.EndPoint@).
+   Ends a pending asynchronous read from a specific endpoint. This method also 
+    reveals more information about the packet than 
+    System.Net.Sockets.Socket.EndReceiveFrom(System.IAsyncResult,System.Net.EndPoint
+    @).
   
-   asyncResult: An System.IAsyncResult that stores state information and any user defined data for this asynchronous operation.
-   socketFlags: A bitwise combination of the System.Net.Sockets.SocketFlags values for the received packet.
+  
+   asyncResult: An System.IAsyncResult that stores state information and any user defined data 
+    for this asynchronous operation.
+  
+   socketFlags: A bitwise combination of the System.Net.Sockets.SocketFlags values for the 
+    received packet.
+  
    endPoint: The source System.Net.EndPoint.
    Returns: If successful,the number of bytes received. If unsuccessful,returns 0.
   """
@@ -1221,14 +1382,21 @@ class Socket(object,IDisposable):
   
    Ends a pending asynchronous send.
   
-   asyncResult: An System.IAsyncResult that stores state information for this asynchronous operation.
-   Returns: If successful,the number of bytes sent to the System.Net.Sockets.Socket; otherwise,an invalid System.Net.Sockets.Socket error.
+   asyncResult: An System.IAsyncResult that stores state information for this asynchronous 
+    operation.
+  
+   Returns: If successful,the number of bytes sent to the System.Net.Sockets.Socket; 
+    otherwise,an invalid System.Net.Sockets.Socket error.
+  
   EndSend(self: Socket,asyncResult: IAsyncResult) -> int
   
    Ends a pending asynchronous send.
   
-   asyncResult: An System.IAsyncResult that stores state information for this asynchronous operation.
-   Returns: If successful,the number of bytes sent to the System.Net.Sockets.Socket; otherwise,an invalid System.Net.Sockets.Socket error.
+   asyncResult: An System.IAsyncResult that stores state information for this asynchronous 
+    operation.
+  
+   Returns: If successful,the number of bytes sent to the System.Net.Sockets.Socket; 
+    otherwise,an invalid System.Net.Sockets.Socket error.
   """
   pass
  def EndSendFile(self,asyncResult):
@@ -1236,7 +1404,8 @@ class Socket(object,IDisposable):
   EndSendFile(self: Socket,asyncResult: IAsyncResult)
    Ends a pending asynchronous send of a file.
   
-   asyncResult: An System.IAsyncResult object that stores state information for this asynchronous operation.
+   asyncResult: An System.IAsyncResult object that stores state information for this 
+    asynchronous operation.
   """
   pass
  def EndSendTo(self,asyncResult):
@@ -1245,8 +1414,11 @@ class Socket(object,IDisposable):
   
    Ends a pending asynchronous send to a specific location.
   
-   asyncResult: An System.IAsyncResult that stores state information and any user defined data for this asynchronous operation.
-   Returns: If successful,the number of bytes sent; otherwise,an invalid System.Net.Sockets.Socket error.
+   asyncResult: An System.IAsyncResult that stores state information and any user defined data 
+    for this asynchronous operation.
+  
+   Returns: If successful,the number of bytes sent; otherwise,an invalid 
+    System.Net.Sockets.Socket error.
   """
   pass
  def GetSocketOption(self,optionLevel,optionName,*__args):
@@ -1260,37 +1432,57 @@ class Socket(object,IDisposable):
    optionLength: The length,in bytes,of the expected return value.
    Returns: An array of type System.Byte that contains the value of the socket option.
   GetSocketOption(self: Socket,optionLevel: SocketOptionLevel,optionName: SocketOptionName,optionValue: Array[Byte])
-   Returns the specified System.Net.Sockets.Socket option setting,represented as a byte array.
+   Returns the specified System.Net.Sockets.Socket option setting,represented as 
+    a byte array.
+  
   
    optionLevel: One of the System.Net.Sockets.SocketOptionLevel values.
    optionName: One of the System.Net.Sockets.SocketOptionName values.
    optionValue: An array of type System.Byte that is to receive the option setting.
   GetSocketOption(self: Socket,optionLevel: SocketOptionLevel,optionName: SocketOptionName) -> object
   
-   Returns the value of a specified System.Net.Sockets.Socket option,represented as an object.
+   Returns the value of a specified System.Net.Sockets.Socket option,represented 
+    as an object.
+  
   
    optionLevel: One of the System.Net.Sockets.SocketOptionLevel values.
    optionName: One of the System.Net.Sockets.SocketOptionName values.
-   Returns: An object that represents the value of the option. When the optionName parameter is set to System.Net.Sockets.SocketOptionName.Linger the return value is an instance of the System.Net.Sockets.LingerOption 
-    class. When optionName is set to System.Net.Sockets.SocketOptionName.AddMembership or System.Net.Sockets.SocketOptionName.DropMembership,the return value is an instance of the 
-    System.Net.Sockets.MulticastOption class. When optionName is any other value,the return value is an integer.
+   Returns: An object that represents the value of the option. When the optionName 
+    parameter is set to System.Net.Sockets.SocketOptionName.Linger the return value 
+    is an instance of the System.Net.Sockets.LingerOption class. When optionName is 
+    set to System.Net.Sockets.SocketOptionName.AddMembership or 
+    System.Net.Sockets.SocketOptionName.DropMembership,the return value is an 
+    instance of the System.Net.Sockets.MulticastOption class. When optionName is 
+    any other value,the return value is an integer.
   """
   pass
  def IOControl(self,ioControlCode,optionInValue,optionOutValue):
   """
   IOControl(self: Socket,ioControlCode: IOControlCode,optionInValue: Array[Byte],optionOutValue: Array[Byte]) -> int
   
-   Sets low-level operating modes for the System.Net.Sockets.Socket using the System.Net.Sockets.IOControlCode enumeration to specify control codes.
+   Sets low-level operating modes for the System.Net.Sockets.Socket using the 
+    System.Net.Sockets.IOControlCode enumeration to specify control codes.
   
-   ioControlCode: A System.Net.Sockets.IOControlCode value that specifies the control code of the operation to perform.
-   optionInValue: An array of type System.Byte that contains the input data required by the operation.
-   optionOutValue: An array of type System.Byte that contains the output data returned by the operation.
+  
+   ioControlCode: A System.Net.Sockets.IOControlCode value that specifies the control code of the 
+    operation to perform.
+  
+   optionInValue: An array of type System.Byte that contains the input data required by the 
+    operation.
+  
+   optionOutValue: An array of type System.Byte that contains the output data returned by the 
+    operation.
+  
    Returns: The number of bytes in the optionOutValue parameter.
   IOControl(self: Socket,ioControlCode: int,optionInValue: Array[Byte],optionOutValue: Array[Byte]) -> int
   
-   Sets low-level operating modes for the System.Net.Sockets.Socket using numerical control codes.
+   Sets low-level operating modes for the System.Net.Sockets.Socket using 
+    numerical control codes.
   
-   ioControlCode: An System.Int32 value that specifies the control code of the operation to perform.
+  
+   ioControlCode: An System.Int32 value that specifies the control code of the operation to 
+    perform.
+  
    optionInValue: A System.Byte array that contains the input data required by the operation.
    optionOutValue: A System.Byte array that contains the output data returned by the operation.
    Returns: The number of bytes in the optionOutValue parameter.
@@ -1312,11 +1504,20 @@ class Socket(object,IDisposable):
   
    microSeconds: The time to wait for a response,in microseconds.
    mode: One of the System.Net.Sockets.SelectMode values.
-   Returns: The status of the System.Net.Sockets.Socket based on the polling mode value passed in the mode parameter.Mode Return Value System.Net.Sockets.SelectMode.SelectReadtrue if 
-    System.Net.Sockets.Socket.Listen(System.Int32) has been called and a connection is pending; -or- true if data is available for reading; -or- true if the connection has been closed,reset,or terminated; 
-    otherwise,returns false. System.Net.Sockets.SelectMode.SelectWritetrue,if processing a System.Net.Sockets.Socket.Connect(System.Net.EndPoint),and the connection has succeeded; -or- true if data can be 
-    sent; otherwise,returns false. System.Net.Sockets.SelectMode.SelectErrortrue if processing a System.Net.Sockets.Socket.Connect(System.Net.EndPoint) that does not block,and the connection has failed; -or- 
-    true if System.Net.Sockets.SocketOptionName.OutOfBandInline is not set and out-of-band data is available; otherwise,returns false.
+   Returns: The status of the System.Net.Sockets.Socket based on the polling mode value 
+    passed in the mode parameter.Mode Return Value 
+    System.Net.Sockets.SelectMode.SelectReadtrue if 
+    System.Net.Sockets.Socket.Listen(System.Int32) has been called and a connection 
+    is pending; -or- true if data is available for reading; -or- true if the 
+    connection has been closed,reset,or terminated; otherwise,returns false. 
+    System.Net.Sockets.SelectMode.SelectWritetrue,if processing a 
+    System.Net.Sockets.Socket.Connect(System.Net.EndPoint),and the connection has 
+    succeeded; -or- true if data can be sent; otherwise,returns false. 
+    System.Net.Sockets.SelectMode.SelectErrortrue if processing a 
+    System.Net.Sockets.Socket.Connect(System.Net.EndPoint) that does not block,and 
+    the connection has failed; -or- true if 
+    System.Net.Sockets.SocketOptionName.OutOfBandInline is not set and out-of-band 
+    data is available; otherwise,returns false.
   """
   pass
  def Receive(self,*__args):
@@ -1324,7 +1525,9 @@ class Socket(object,IDisposable):
   Receive(self: Socket,buffers: IList[ArraySegment[Byte]]) -> int
   Receive(self: Socket,buffer: Array[Byte],offset: int,size: int,socketFlags: SocketFlags) -> (int,SocketError)
   
-   Receives data from a bound System.Net.Sockets.Socket into a receive buffer,using the specified System.Net.Sockets.SocketFlags.
+   Receives data from a bound System.Net.Sockets.Socket into a receive buffer,
+    using the specified System.Net.Sockets.SocketFlags.
+  
   
    buffer: An array of type System.Byte that is the storage location for the received data.
    offset: The position in the buffer parameter to store the received data.
@@ -1335,14 +1538,19 @@ class Socket(object,IDisposable):
   Receive(self: Socket,buffers: IList[ArraySegment[Byte]],socketFlags: SocketFlags) -> int
   Receive(self: Socket,buffer: Array[Byte],socketFlags: SocketFlags) -> int
   
-   Receives data from a bound System.Net.Sockets.Socket into a receive buffer,using the specified System.Net.Sockets.SocketFlags.
+   Receives data from a bound System.Net.Sockets.Socket into a receive buffer,
+    using the specified System.Net.Sockets.SocketFlags.
+  
   
    buffer: An array of type System.Byte that is the storage location for the received data.
    socketFlags: A bitwise combination of the System.Net.Sockets.SocketFlags values.
    Returns: The number of bytes received.
   Receive(self: Socket,buffer: Array[Byte],size: int,socketFlags: SocketFlags) -> int
   
-   Receives the specified number of bytes of data from a bound System.Net.Sockets.Socket into a receive buffer,using the specified System.Net.Sockets.SocketFlags.
+   Receives the specified number of bytes of data from a bound 
+    System.Net.Sockets.Socket into a receive buffer,using the specified 
+    System.Net.Sockets.SocketFlags.
+  
   
    buffer: An array of type System.Byte that is the storage location for the received data.
    size: The number of bytes to receive.
@@ -1350,7 +1558,10 @@ class Socket(object,IDisposable):
    Returns: The number of bytes received.
   Receive(self: Socket,buffer: Array[Byte],offset: int,size: int,socketFlags: SocketFlags) -> int
   
-   Receives the specified number of bytes from a bound System.Net.Sockets.Socket into the specified offset position of the receive buffer,using the specified System.Net.Sockets.SocketFlags.
+   Receives the specified number of bytes from a bound System.Net.Sockets.Socket 
+    into the specified offset position of the receive buffer,using the specified 
+    System.Net.Sockets.SocketFlags.
+  
   
    buffer: An array of type System.Byte that is the storage location for received data.
    offset: The location in buffer to store the received data.
@@ -1369,19 +1580,30 @@ class Socket(object,IDisposable):
   """
   ReceiveAsync(self: Socket,e: SocketAsyncEventArgs) -> bool
   
-   Begins an asynchronous request to receive data from a connected System.Net.Sockets.Socket object.
+   Begins an asynchronous request to receive data from a connected 
+    System.Net.Sockets.Socket object.
   
-   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous socket operation.
-   Returns: Returns true if the I/O operation is pending. The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will be raised upon completion of the operation. Returns false if the I/O 
-    operation completed synchronously. In this case,The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will not be raised and the e object passed as a parameter may be examined 
-    immediately after the method call returns to retrieve the result of the operation.
+  
+   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous 
+    socket operation.
+  
+   Returns: Returns true if the I/O operation is pending. The 
+    System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will 
+    be raised upon completion of the operation. Returns false if the I/O operation 
+    completed synchronously. In this case,The 
+    System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will 
+    not be raised and the e object passed as a parameter may be examined 
+    immediately after the method call returns to retrieve the result of the 
+    operation.
   """
   pass
  def ReceiveFrom(self,buffer,*__args):
   """
   ReceiveFrom(self: Socket,buffer: Array[Byte],socketFlags: SocketFlags,remoteEP: EndPoint) -> (int,EndPoint)
   
-   Receives a datagram into the data buffer,using the specified System.Net.Sockets.SocketFlags,and stores the endpoint.
+   Receives a datagram into the data buffer,using the specified 
+    System.Net.Sockets.SocketFlags,and stores the endpoint.
+  
   
    buffer: An array of type System.Byte that is the storage location for the received data.
    socketFlags: A bitwise combination of the System.Net.Sockets.SocketFlags values.
@@ -1396,7 +1618,10 @@ class Socket(object,IDisposable):
    Returns: The number of bytes received.
   ReceiveFrom(self: Socket,buffer: Array[Byte],offset: int,size: int,socketFlags: SocketFlags,remoteEP: EndPoint) -> (int,EndPoint)
   
-   Receives the specified number of bytes of data into the specified location of the data buffer,using the specified System.Net.Sockets.SocketFlags,and stores the endpoint.
+   Receives the specified number of bytes of data into the specified location of 
+    the data buffer,using the specified System.Net.Sockets.SocketFlags,and stores 
+    the endpoint.
+  
   
    buffer: An array of type System.Byte that is the storage location for received data.
    offset: The position in the buffer parameter to store the received data.
@@ -1406,7 +1631,9 @@ class Socket(object,IDisposable):
    Returns: The number of bytes received.
   ReceiveFrom(self: Socket,buffer: Array[Byte],size: int,socketFlags: SocketFlags,remoteEP: EndPoint) -> (int,EndPoint)
   
-   Receives the specified number of bytes into the data buffer,using the specified System.Net.Sockets.SocketFlags,and stores the endpoint.
+   Receives the specified number of bytes into the data buffer,using the 
+    specified System.Net.Sockets.SocketFlags,and stores the endpoint.
+  
   
    buffer: An array of type System.Byte that is the storage location for received data.
    size: The number of bytes to receive.
@@ -1421,17 +1648,27 @@ class Socket(object,IDisposable):
   
    Begins to asynchronously receive data from a specified network device.
   
-   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous socket operation.
-   Returns: Returns true if the I/O operation is pending. The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will be raised upon completion of the operation. Returns false if the I/O 
-    operation completed synchronously. In this case,The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will not be raised and the e object passed as a parameter may be examined 
-    immediately after the method call returns to retrieve the result of the operation.
+   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous 
+    socket operation.
+  
+   Returns: Returns true if the I/O operation is pending. The 
+    System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will 
+    be raised upon completion of the operation. Returns false if the I/O operation 
+    completed synchronously. In this case,The 
+    System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will 
+    not be raised and the e object passed as a parameter may be examined 
+    immediately after the method call returns to retrieve the result of the 
+    operation.
   """
   pass
  def ReceiveMessageFrom(self,buffer,offset,size,socketFlags,remoteEP,ipPacketInformation):
   """
   ReceiveMessageFrom(self: Socket,buffer: Array[Byte],offset: int,size: int,socketFlags: SocketFlags,remoteEP: EndPoint) -> (int,SocketFlags,EndPoint,IPPacketInformation)
   
-   Receives the specified number of bytes of data into the specified location of the data buffer,using the specified System.Net.Sockets.SocketFlags,and stores the endpoint and packet information.
+   Receives the specified number of bytes of data into the specified location of 
+    the data buffer,using the specified System.Net.Sockets.SocketFlags,and stores 
+    the endpoint and packet information.
+  
   
    buffer: An array of type System.Byte that is the storage location for received data.
    offset: The position in the buffer parameter to store the received data.
@@ -1445,14 +1682,23 @@ class Socket(object,IDisposable):
   """
   ReceiveMessageFromAsync(self: Socket,e: SocketAsyncEventArgs) -> bool
   
-   Begins to asynchronously receive the specified number of bytes of data into the specified location in the data buffer,using the specified System.Net.Sockets.SocketAsyncEventArgs.SocketFlags,and stores 
-    the endpoint and packet information.
+   Begins to asynchronously receive the specified number of bytes of data into the 
+    specified location in the data buffer,using the specified 
+    System.Net.Sockets.SocketAsyncEventArgs.SocketFlags,and stores the endpoint 
+    and packet information.
   
   
-   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous socket operation.
-   Returns: Returns true if the I/O operation is pending. The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will be raised upon completion of the operation. Returns false if the I/O 
-    operation completed synchronously. In this case,The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will not be raised and the e object passed as a parameter may be examined 
-    immediately after the method call returns to retrieve the result of the operation.
+   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous 
+    socket operation.
+  
+   Returns: Returns true if the I/O operation is pending. The 
+    System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will 
+    be raised upon completion of the operation. Returns false if the I/O operation 
+    completed synchronously. In this case,The 
+    System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will 
+    not be raised and the e object passed as a parameter may be examined 
+    immediately after the method call returns to retrieve the result of the 
+    operation.
   """
   pass
  @staticmethod
@@ -1461,9 +1707,15 @@ class Socket(object,IDisposable):
   Select(checkRead: IList,checkWrite: IList,checkError: IList,microSeconds: int)
    Determines the status of one or more sockets.
   
-   checkRead: An System.Collections.IList of System.Net.Sockets.Socket instances to check for readability.
-   checkWrite: An System.Collections.IList of System.Net.Sockets.Socket instances to check for writability.
-   checkError: An System.Collections.IList of System.Net.Sockets.Socket instances to check for errors.
+   checkRead: An System.Collections.IList of System.Net.Sockets.Socket instances to check for 
+    readability.
+  
+   checkWrite: An System.Collections.IList of System.Net.Sockets.Socket instances to check for 
+    writability.
+  
+   checkError: An System.Collections.IList of System.Net.Sockets.Socket instances to check for 
+    errors.
+  
    microSeconds: The time-out value,in microseconds. A -1 value indicates an infinite time-out.
   """
   pass
@@ -1473,7 +1725,10 @@ class Socket(object,IDisposable):
   Send(self: Socket,buffers: IList[ArraySegment[Byte]],socketFlags: SocketFlags) -> int
   Send(self: Socket,buffer: Array[Byte],offset: int,size: int,socketFlags: SocketFlags) -> (int,SocketError)
   
-   Sends the specified number of bytes of data to a connected System.Net.Sockets.Socket,starting at the specified offset,and using the specified System.Net.Sockets.SocketFlags
+   Sends the specified number of bytes of data to a connected 
+    System.Net.Sockets.Socket,starting at the specified offset,and using the 
+    specified System.Net.Sockets.SocketFlags
+  
   
    buffer: An array of type System.Byte that contains the data to be sent.
    offset: The position in the data buffer at which to begin sending data.
@@ -1482,7 +1737,10 @@ class Socket(object,IDisposable):
    Returns: The number of bytes sent to the System.Net.Sockets.Socket.
   Send(self: Socket,buffer: Array[Byte],offset: int,size: int,socketFlags: SocketFlags) -> int
   
-   Sends the specified number of bytes of data to a connected System.Net.Sockets.Socket,starting at the specified offset,and using the specified System.Net.Sockets.SocketFlags.
+   Sends the specified number of bytes of data to a connected 
+    System.Net.Sockets.Socket,starting at the specified offset,and using the 
+    specified System.Net.Sockets.SocketFlags.
+  
   
    buffer: An array of type System.Byte that contains the data to be sent.
    offset: The position in the data buffer at which to begin sending data.
@@ -1491,14 +1749,18 @@ class Socket(object,IDisposable):
    Returns: The number of bytes sent to the System.Net.Sockets.Socket.
   Send(self: Socket,buffer: Array[Byte],socketFlags: SocketFlags) -> int
   
-   Sends data to a connected System.Net.Sockets.Socket using the specified System.Net.Sockets.SocketFlags.
+   Sends data to a connected System.Net.Sockets.Socket using the specified 
+    System.Net.Sockets.SocketFlags.
+  
   
    buffer: An array of type System.Byte that contains the data to be sent.
    socketFlags: A bitwise combination of the System.Net.Sockets.SocketFlags values.
    Returns: The number of bytes sent to the System.Net.Sockets.Socket.
   Send(self: Socket,buffer: Array[Byte],size: int,socketFlags: SocketFlags) -> int
   
-   Sends the specified number of bytes of data to a connected System.Net.Sockets.Socket,using the specified System.Net.Sockets.SocketFlags.
+   Sends the specified number of bytes of data to a connected 
+    System.Net.Sockets.Socket,using the specified System.Net.Sockets.SocketFlags.
+  
   
    buffer: An array of type System.Byte that contains the data to be sent.
    size: The number of bytes to send.
@@ -1519,44 +1781,75 @@ class Socket(object,IDisposable):
   
    Sends data asynchronously to a connected System.Net.Sockets.Socket object.
   
-   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous socket operation.
-   Returns: Returns true if the I/O operation is pending. The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will be raised upon completion of the operation. Returns false if the I/O 
-    operation completed synchronously. In this case,The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will not be raised and the e object passed as a parameter may be examined 
-    immediately after the method call returns to retrieve the result of the operation.
+   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous 
+    socket operation.
+  
+   Returns: Returns true if the I/O operation is pending. The 
+    System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will 
+    be raised upon completion of the operation. Returns false if the I/O operation 
+    completed synchronously. In this case,The 
+    System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will 
+    not be raised and the e object passed as a parameter may be examined 
+    immediately after the method call returns to retrieve the result of the 
+    operation.
   """
   pass
  def SendFile(self,fileName,preBuffer=None,postBuffer=None,flags=None):
   """
   SendFile(self: Socket,fileName: str,preBuffer: Array[Byte],postBuffer: Array[Byte],flags: TransmitFileOptions)
-   Sends the file fileName and buffers of data to a connected System.Net.Sockets.Socket object using the specified System.Net.Sockets.TransmitFileOptions value.
+   Sends the file fileName and buffers of data to a connected 
+    System.Net.Sockets.Socket object using the specified 
+    System.Net.Sockets.TransmitFileOptions value.
   
-   fileName: A System.String that contains the path and name of the file to be sent. This parameter can be null.
-   preBuffer: A System.Byte array that contains data to be sent before the file is sent. This parameter can be null.
-   postBuffer: A System.Byte array that contains data to be sent after the file is sent. This parameter can be null.
+  
+   fileName: A System.String that contains the path and name of the file to be sent. This 
+    parameter can be null.
+  
+   preBuffer: A System.Byte array that contains data to be sent before the file is sent. This 
+    parameter can be null.
+  
+   postBuffer: A System.Byte array that contains data to be sent after the file is sent. This 
+    parameter can be null.
+  
    flags: One or more of System.Net.Sockets.TransmitFileOptions values.
   SendFile(self: Socket,fileName: str)
-   Sends the file fileName to a connected System.Net.Sockets.Socket object with the System.Net.Sockets.TransmitFileOptions.UseDefaultWorkerThread transmit flag.
+   Sends the file fileName to a connected System.Net.Sockets.Socket object with 
+    the System.Net.Sockets.TransmitFileOptions.UseDefaultWorkerThread transmit 
+    flag.
   
-   fileName: A System.String that contains the path and name of the file to be sent. This parameter can be null.
+  
+   fileName: A System.String that contains the path and name of the file to be sent. This 
+    parameter can be null.
   """
   pass
  def SendPacketsAsync(self,e):
   """
   SendPacketsAsync(self: Socket,e: SocketAsyncEventArgs) -> bool
   
-   Sends a collection of files or in memory data buffers asynchronously to a connected System.Net.Sockets.Socket object.
+   Sends a collection of files or in memory data buffers asynchronously to a 
+    connected System.Net.Sockets.Socket object.
   
-   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous socket operation.
-   Returns: Returns true if the I/O operation is pending. The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will be raised upon completion of the operation. Returns false if the I/O 
-    operation completed synchronously. In this case,The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will not be raised and the e object passed as a parameter may be examined 
-    immediately after the method call returns to retrieve the result of the operation.
+  
+   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous 
+    socket operation.
+  
+   Returns: Returns true if the I/O operation is pending. The 
+    System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will 
+    be raised upon completion of the operation. Returns false if the I/O operation 
+    completed synchronously. In this case,The 
+    System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will 
+    not be raised and the e object passed as a parameter may be examined 
+    immediately after the method call returns to retrieve the result of the 
+    operation.
   """
   pass
  def SendTo(self,buffer,*__args):
   """
   SendTo(self: Socket,buffer: Array[Byte],socketFlags: SocketFlags,remoteEP: EndPoint) -> int
   
-   Sends data to a specific endpoint using the specified System.Net.Sockets.SocketFlags.
+   Sends data to a specific endpoint using the specified 
+    System.Net.Sockets.SocketFlags.
+  
   
    buffer: An array of type System.Byte that contains the data to be sent.
    socketFlags: A bitwise combination of the System.Net.Sockets.SocketFlags values.
@@ -1571,7 +1864,10 @@ class Socket(object,IDisposable):
    Returns: The number of bytes sent.
   SendTo(self: Socket,buffer: Array[Byte],offset: int,size: int,socketFlags: SocketFlags,remoteEP: EndPoint) -> int
   
-   Sends the specified number of bytes of data to the specified endpoint,starting at the specified location in the buffer,and using the specified System.Net.Sockets.SocketFlags.
+   Sends the specified number of bytes of data to the specified endpoint,starting 
+    at the specified location in the buffer,and using the specified 
+    System.Net.Sockets.SocketFlags.
+  
   
    buffer: An array of type System.Byte that contains the data to be sent.
    offset: The position in the data buffer at which to begin sending data.
@@ -1581,7 +1877,9 @@ class Socket(object,IDisposable):
    Returns: The number of bytes sent.
   SendTo(self: Socket,buffer: Array[Byte],size: int,socketFlags: SocketFlags,remoteEP: EndPoint) -> int
   
-   Sends the specified number of bytes of data to the specified endpoint using the specified System.Net.Sockets.SocketFlags.
+   Sends the specified number of bytes of data to the specified endpoint using the 
+    specified System.Net.Sockets.SocketFlags.
+  
   
    buffer: An array of type System.Byte that contains the data to be sent.
    size: The number of bytes to send.
@@ -1596,10 +1894,17 @@ class Socket(object,IDisposable):
   
    Sends data asynchronously to a specific remote host.
   
-   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous socket operation.
-   Returns: Returns true if the I/O operation is pending. The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will be raised upon completion of the operation. Returns false if the I/O 
-    operation completed synchronously. In this case,The System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will not be raised and the e object passed as a parameter may be examined 
-    immediately after the method call returns to retrieve the result of the operation.
+   e: The System.Net.Sockets.SocketAsyncEventArgs object to use for this asynchronous 
+    socket operation.
+  
+   Returns: Returns true if the I/O operation is pending. The 
+    System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will 
+    be raised upon completion of the operation. Returns false if the I/O operation 
+    completed synchronously. In this case,The 
+    System.Net.Sockets.SocketAsyncEventArgs.Completed event on the e parameter will 
+    not be raised and the e object passed as a parameter may be examined 
+    immediately after the method call returns to retrieve the result of the 
+    operation.
   """
   pass
  def SetIPProtectionLevel(self,level):
@@ -1613,25 +1918,35 @@ class Socket(object,IDisposable):
  def SetSocketOption(self,optionLevel,optionName,optionValue):
   """
   SetSocketOption(self: Socket,optionLevel: SocketOptionLevel,optionName: SocketOptionName,optionValue: bool)
-   Sets the specified System.Net.Sockets.Socket option to the specified System.Boolean value.
+   Sets the specified System.Net.Sockets.Socket option to the specified 
+    System.Boolean value.
+  
   
    optionLevel: One of the System.Net.Sockets.SocketOptionLevel values.
    optionName: One of the System.Net.Sockets.SocketOptionName values.
    optionValue: The value of the option,represented as a System.Boolean.
   SetSocketOption(self: Socket,optionLevel: SocketOptionLevel,optionName: SocketOptionName,optionValue: object)
-   Sets the specified System.Net.Sockets.Socket option to the specified value,represented as an object.
+   Sets the specified System.Net.Sockets.Socket option to the specified value,
+    represented as an object.
+  
   
    optionLevel: One of the System.Net.Sockets.SocketOptionLevel values.
    optionName: One of the System.Net.Sockets.SocketOptionName values.
-   optionValue: A System.Net.Sockets.LingerOption or System.Net.Sockets.MulticastOption that contains the value of the option.
+   optionValue: A System.Net.Sockets.LingerOption or System.Net.Sockets.MulticastOption that 
+    contains the value of the option.
+  
   SetSocketOption(self: Socket,optionLevel: SocketOptionLevel,optionName: SocketOptionName,optionValue: int)
-   Sets the specified System.Net.Sockets.Socket option to the specified integer value.
+   Sets the specified System.Net.Sockets.Socket option to the specified integer 
+    value.
+  
   
    optionLevel: One of the System.Net.Sockets.SocketOptionLevel values.
    optionName: One of the System.Net.Sockets.SocketOptionName values.
    optionValue: A value of the option.
   SetSocketOption(self: Socket,optionLevel: SocketOptionLevel,optionName: SocketOptionName,optionValue: Array[Byte])
-   Sets the specified System.Net.Sockets.Socket option to the specified value,represented as a byte array.
+   Sets the specified System.Net.Sockets.Socket option to the specified value,
+    represented as a byte array.
+  
   
    optionLevel: One of the System.Net.Sockets.SocketOptionLevel values.
    optionName: One of the System.Net.Sockets.SocketOptionName values.
@@ -1643,21 +1958,15 @@ class Socket(object,IDisposable):
   Shutdown(self: Socket,how: SocketShutdown)
    Disables sends and receives on a System.Net.Sockets.Socket.
   
-   how: One of the System.Net.Sockets.SocketShutdown values that specifies the operation that will no longer be allowed.
+   how: One of the System.Net.Sockets.SocketShutdown values that specifies the 
+    operation that will no longer be allowed.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1862,7 +2171,9 @@ class SocketAsyncEventArgs(EventArgs,IDisposable):
  def Dispose(self):
   """
   Dispose(self: SocketAsyncEventArgs)
-   Releases the unmanaged resources used by the System.Net.Sockets.SocketAsyncEventArgs instance and optionally disposes of the managed resources.
+   Releases the unmanaged resources used by the 
+    System.Net.Sockets.SocketAsyncEventArgs instance and optionally disposes of the 
+    managed resources.
   """
   pass
  def OnCompleted(self,*args):
@@ -1889,17 +2200,10 @@ class SocketAsyncEventArgs(EventArgs,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2551,47 +2855,73 @@ class TcpClient(object,IDisposable):
   """
   BeginConnect(self: TcpClient,addresses: Array[IPAddress],port: int,requestCallback: AsyncCallback,state: object) -> IAsyncResult
   
-   Begins an asynchronous request for a remote host connection. The remote host is specified by an System.Net.IPAddress array and a port number (System.Int32).
+   Begins an asynchronous request for a remote host connection. The remote host is 
+    specified by an System.Net.IPAddress array and a port number (System.Int32).
+  
   
    addresses: At least one System.Net.IPAddress that designates the remote hosts.
    port: The port number of the remote hosts.
-   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is complete.
-   state: A user-defined object that contains information about the connect operation. This object is passed to the requestCallback delegate when the operation is complete.
+   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    operation is complete.
+  
+   state: A user-defined object that contains information about the connect operation. 
+    This object is passed to the requestCallback delegate when the operation is 
+    complete.
+  
    Returns: An System.IAsyncResult object that references the asynchronous connection.
   BeginConnect(self: TcpClient,address: IPAddress,port: int,requestCallback: AsyncCallback,state: object) -> IAsyncResult
   
-   Begins an asynchronous request for a remote host connection. The remote host is specified by an System.Net.IPAddress and a port number (System.Int32).
+   Begins an asynchronous request for a remote host connection. The remote host is 
+    specified by an System.Net.IPAddress and a port number (System.Int32).
+  
   
    address: The System.Net.IPAddress of the remote host.
    port: The port number of the remote host.
-   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is complete.
-   state: A user-defined object that contains information about the connect operation. This object is passed to the requestCallback delegate when the operation is complete.
+   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    operation is complete.
+  
+   state: A user-defined object that contains information about the connect operation. 
+    This object is passed to the requestCallback delegate when the operation is 
+    complete.
+  
    Returns: An System.IAsyncResult object that references the asynchronous connection.
   BeginConnect(self: TcpClient,host: str,port: int,requestCallback: AsyncCallback,state: object) -> IAsyncResult
   
-   Begins an asynchronous request for a remote host connection. The remote host is specified by a host name (System.String) and a port number (System.Int32).
+   Begins an asynchronous request for a remote host connection. The remote host is 
+    specified by a host name (System.String) and a port number (System.Int32).
+  
   
    host: The name of the remote host.
    port: The port number of the remote host.
-   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is complete.
-   state: A user-defined object that contains information about the connect operation. This object is passed to the requestCallback delegate when the operation is complete.
+   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    operation is complete.
+  
+   state: A user-defined object that contains information about the connect operation. 
+    This object is passed to the requestCallback delegate when the operation is 
+    complete.
+  
    Returns: An System.IAsyncResult object that references the asynchronous connection.
   """
   pass
  def Close(self):
   """
   Close(self: TcpClient)
-   Disposes this System.Net.Sockets.TcpClient instance and requests that the underlying TCP connection be closed.
+   Disposes this System.Net.Sockets.TcpClient instance and requests that the 
+    underlying TCP connection be closed.
   """
   pass
  def Connect(self,*__args):
   """
   Connect(self: TcpClient,remoteEP: IPEndPoint)
-   Connects the client to a remote TCP host using the specified remote network endpoint.
+   Connects the client to a remote TCP host using the specified remote network 
+    endpoint.
+  
   
    remoteEP: The System.Net.IPEndPoint to which you intend to connect.
   Connect(self: TcpClient,ipAddresses: Array[IPAddress],port: int)
-   Connects the client to a remote TCP host using the specified IP addresses and port number.
+   Connects the client to a remote TCP host using the specified IP addresses and 
+    port number.
+  
   
    ipAddresses: The System.Net.IPAddress array of the host to which you intend to connect.
    port: The port number to which you intend to connect.
@@ -2601,7 +2931,9 @@ class TcpClient(object,IDisposable):
    hostname: The DNS name of the remote host to which you intend to connect.
    port: The port number of the remote host to which you intend to connect.
   Connect(self: TcpClient,address: IPAddress,port: int)
-   Connects the client to a remote TCP host using the specified IP address and port number.
+   Connects the client to a remote TCP host using the specified IP address and 
+    port number.
+  
   
    address: The System.Net.IPAddress of the host to which you intend to connect.
    port: The port number to which you intend to connect.
@@ -2622,7 +2954,8 @@ class TcpClient(object,IDisposable):
   EndConnect(self: TcpClient,asyncResult: IAsyncResult)
    Asynchronously accepts an incoming connection attempt.
   
-   asyncResult: An System.IAsyncResult object returned by a call to erload:System.Net.Sockets.TcpClient.BeginConnect.
+   asyncResult: An System.IAsyncResult object returned by a call to 
+    erload:System.Net.Sockets.TcpClient.BeginConnect.
   """
   pass
  def GetStream(self):
@@ -2634,17 +2967,10 @@ class TcpClient(object,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2779,7 +3105,9 @@ class TcpListener(object):
  def AllowNatTraversal(self,allowed):
   """
   AllowNatTraversal(self: TcpListener,allowed: bool)
-   Enables or disables Network Address Translation (NAT) traversal on a System.Net.Sockets.TcpListener instance.
+   Enables or disables Network Address Translation (NAT) traversal on a 
+    System.Net.Sockets.TcpListener instance.
+  
   
    allowed: A Boolean value that specifies whether to enable or disable NAT traversal.
   """
@@ -2790,9 +3118,14 @@ class TcpListener(object):
   
    Begins an asynchronous operation to accept an incoming connection attempt.
   
-   callback: An System.AsyncCallback delegate that references the method to invoke when the operation is complete.
-   state: A user-defined object containing information about the accept operation. This object is passed to the callback delegate when the operation is complete.
-   Returns: An System.IAsyncResult that references the asynchronous creation of the System.Net.Sockets.Socket.
+   callback: An System.AsyncCallback delegate that references the method to invoke when the 
+    operation is complete.
+  
+   state: A user-defined object containing information about the accept operation. This 
+    object is passed to the callback delegate when the operation is complete.
+  
+   Returns: An System.IAsyncResult that references the asynchronous creation of the 
+    System.Net.Sockets.Socket.
   """
   pass
  def BeginAcceptTcpClient(self,callback,state):
@@ -2801,9 +3134,14 @@ class TcpListener(object):
   
    Begins an asynchronous operation to accept an incoming connection attempt.
   
-   callback: An System.AsyncCallback delegate that references the method to invoke when the operation is complete.
-   state: A user-defined object containing information about the accept operation. This object is passed to the callback delegate when the operation is complete.
-   Returns: An System.IAsyncResult that references the asynchronous creation of the System.Net.Sockets.TcpClient.
+   callback: An System.AsyncCallback delegate that references the method to invoke when the 
+    operation is complete.
+  
+   state: A user-defined object containing information about the accept operation. This 
+    object is passed to the callback delegate when the operation is complete.
+  
+   Returns: An System.IAsyncResult that references the asynchronous creation of the 
+    System.Net.Sockets.TcpClient.
   """
   pass
  @staticmethod
@@ -2814,9 +3152,14 @@ class TcpListener(object):
   """
   EndAcceptSocket(self: TcpListener,asyncResult: IAsyncResult) -> Socket
   
-   Asynchronously accepts an incoming connection attempt and creates a new System.Net.Sockets.Socket to handle remote host communication.
+   Asynchronously accepts an incoming connection attempt and creates a new 
+    System.Net.Sockets.Socket to handle remote host communication.
   
-   asyncResult: An System.IAsyncResult returned by a call to the System.Net.Sockets.TcpListener.BeginAcceptSocket(System.AsyncCallback,System.Object)  method.
+  
+   asyncResult: An System.IAsyncResult returned by a call to the 
+    System.Net.Sockets.TcpListener.BeginAcceptSocket(System.AsyncCallback,System.Obj
+    ect)  method.
+  
    Returns: A System.Net.Sockets.Socket.
   """
   pass
@@ -2824,9 +3167,14 @@ class TcpListener(object):
   """
   EndAcceptTcpClient(self: TcpListener,asyncResult: IAsyncResult) -> TcpClient
   
-   Asynchronously accepts an incoming connection attempt and creates a new System.Net.Sockets.TcpClient to handle remote host communication.
+   Asynchronously accepts an incoming connection attempt and creates a new 
+    System.Net.Sockets.TcpClient to handle remote host communication.
   
-   asyncResult: An System.IAsyncResult returned by a call to the System.Net.Sockets.TcpListener.BeginAcceptTcpClient(System.AsyncCallback,System.Object) method.
+  
+   asyncResult: An System.IAsyncResult returned by a call to the 
+    System.Net.Sockets.TcpListener.BeginAcceptTcpClient(System.AsyncCallback,System.
+    Object) method.
+  
    Returns: A System.Net.Sockets.TcpClient.
   """
   pass
@@ -2841,7 +3189,9 @@ class TcpListener(object):
  def Start(self,backlog=None):
   """
   Start(self: TcpListener,backlog: int)
-   Starts listening for incoming connection requests with a maximum number of pending connection.
+   Starts listening for incoming connection requests with a maximum number of 
+    pending connection.
+  
   
    backlog: The maximum length of the pending connections queue.
   Start(self: TcpListener)
@@ -2943,7 +3293,9 @@ class UdpClient(object,IDisposable):
  def AllowNatTraversal(self,allowed):
   """
   AllowNatTraversal(self: UdpClient,allowed: bool)
-   Enables or disables Network Address Translation (NAT) traversal on a System.Net.Sockets.UdpClient instance.
+   Enables or disables Network Address Translation (NAT) traversal on a 
+    System.Net.Sockets.UdpClient instance.
+  
   
    allowed: A Boolean value that specifies whether to enable or disable NAT traversal.
   """
@@ -2954,8 +3306,13 @@ class UdpClient(object,IDisposable):
   
    Receives a datagram from a remote host asynchronously.
   
-   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is complete.
-   state: A user-defined object that contains information about the receive operation. This object is passed to the requestCallback delegate when the operation is complete.
+   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    operation is complete.
+  
+   state: A user-defined object that contains information about the receive operation. 
+    This object is passed to the requestCallback delegate when the operation is 
+    complete.
+  
    Returns: An System.IAsyncResult object that references the asynchronous receive.
   """
   pass
@@ -2963,33 +3320,54 @@ class UdpClient(object,IDisposable):
   """
   BeginSend(self: UdpClient,datagram: Array[Byte],bytes: int,requestCallback: AsyncCallback,state: object) -> IAsyncResult
   
-   Sends a datagram to a remote host asynchronously. The destination was specified previously by a call to erload:System.Net.Sockets.UdpClient.Connect.
+   Sends a datagram to a remote host asynchronously. The destination was specified 
+    previously by a call to erload:System.Net.Sockets.UdpClient.Connect.
+  
   
    datagram: A System.Byte array that contains the data to be sent.
    bytes: The number of bytes to send.
-   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is complete.
-   state: A user-defined object that contains information about the send operation. This object is passed to the requestCallback delegate when the operation is complete.
+   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    operation is complete.
+  
+   state: A user-defined object that contains information about the send operation. This 
+    object is passed to the requestCallback delegate when the operation is 
+    complete.
+  
    Returns: An System.IAsyncResult object that references the asynchronous send.
   BeginSend(self: UdpClient,datagram: Array[Byte],bytes: int,hostname: str,port: int,requestCallback: AsyncCallback,state: object) -> IAsyncResult
   
-   Sends a datagram to a destination asynchronously. The destination is specified by the host name and port number.
+   Sends a datagram to a destination asynchronously. The destination is specified 
+    by the host name and port number.
+  
   
    datagram: A System.Byte array that contains the data to be sent.
    bytes: The number of bytes to send.
    hostname: The destination host.
    port: The destination port number.
-   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is complete.
-   state: A user-defined object that contains information about the send operation. This object is passed to the requestCallback delegate when the operation is complete.
+   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    operation is complete.
+  
+   state: A user-defined object that contains information about the send operation. This 
+    object is passed to the requestCallback delegate when the operation is 
+    complete.
+  
    Returns: An System.IAsyncResult object that references the asynchronous send.
   BeginSend(self: UdpClient,datagram: Array[Byte],bytes: int,endPoint: IPEndPoint,requestCallback: AsyncCallback,state: object) -> IAsyncResult
   
-   Sends a datagram to a destination asynchronously. The destination is specified by a System.Net.EndPoint.
+   Sends a datagram to a destination asynchronously. The destination is specified 
+    by a System.Net.EndPoint.
+  
   
    datagram: A System.Byte array that contains the data to be sent.
    bytes: The number of bytes to send.
    endPoint: The System.Net.EndPoint that represents the destination for the data.
-   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is complete.
-   state: A user-defined object that contains information about the send operation. This object is passed to the requestCallback delegate when the operation is complete.
+   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    operation is complete.
+  
+   state: A user-defined object that contains information about the send operation. This 
+    object is passed to the requestCallback delegate when the operation is 
+    complete.
+  
    Returns: An System.IAsyncResult object that references the asynchronous send.
   """
   pass
@@ -3004,9 +3382,13 @@ class UdpClient(object,IDisposable):
   Connect(self: UdpClient,endPoint: IPEndPoint)
    Establishes a default remote host using the specified network endpoint.
   
-   endPoint: An System.Net.IPEndPoint that specifies the network endpoint to which you intend to send data.
+   endPoint: An System.Net.IPEndPoint that specifies the network endpoint to which you 
+    intend to send data.
+  
   Connect(self: UdpClient,addr: IPAddress,port: int)
-   Establishes a default remote host using the specified IP address and port number.
+   Establishes a default remote host using the specified IP address and port 
+    number.
+  
   
    addr: The System.Net.IPAddress of the remote host to which you intend to send data.
    port: The port number to which you intend send data.
@@ -3026,7 +3408,9 @@ class UdpClient(object,IDisposable):
    Leaves a multicast group.
   
    multicastAddr: The System.Net.IPAddress of the multicast group to leave.
-   ifindex: The interface index associated with the local IP address joined to the multicast group.
+   ifindex: The interface index associated with the local IP address joined to the 
+    multicast group.
+  
   DropMulticastGroup(self: UdpClient,multicastAddr: IPAddress)
    Leaves a multicast group.
   
@@ -3039,9 +3423,12 @@ class UdpClient(object,IDisposable):
   
    Ends a pending asynchronous receive.
   
-   asyncResult: An System.IAsyncResult object returned by a call to System.Net.Sockets.UdpClient.BeginReceive(System.AsyncCallback,System.Object).
+   asyncResult: An System.IAsyncResult object returned by a call to 
+    System.Net.Sockets.UdpClient.BeginReceive(System.AsyncCallback,System.Object).
+  
    remoteEP: The specified remote endpoint.
-   Returns: If successful,the number of bytes received. If unsuccessful,this method returns 0.
+   Returns: If successful,the number of bytes received. If unsuccessful,this method 
+    returns 0.
   """
   pass
  def EndSend(self,asyncResult):
@@ -3050,7 +3437,9 @@ class UdpClient(object,IDisposable):
   
    Ends a pending asynchronous send.
   
-   asyncResult: An System.IAsyncResult object returned by a call to erload:System.Net.Sockets.UdpClient.BeginSend.
+   asyncResult: An System.IAsyncResult object returned by a call to 
+    erload:System.Net.Sockets.UdpClient.BeginSend.
+  
    Returns: If successful,the number of bytes sent to the System.Net.Sockets.UdpClient.
   """
   pass
@@ -3059,10 +3448,14 @@ class UdpClient(object,IDisposable):
   JoinMulticastGroup(self: UdpClient,ifindex: int,multicastAddr: IPAddress)
    Adds a System.Net.Sockets.UdpClient to a multicast group.
   
-   ifindex: The interface index associated with the local IP address on which to join the multicast group.
+   ifindex: The interface index associated with the local IP address on which to join the 
+    multicast group.
+  
    multicastAddr: The multicast System.Net.IPAddress of the group you want to join.
   JoinMulticastGroup(self: UdpClient,multicastAddr: IPAddress,timeToLive: int)
-   Adds a System.Net.Sockets.UdpClient to a multicast group with the specified Time to Live (TTL).
+   Adds a System.Net.Sockets.UdpClient to a multicast group with the specified 
+    Time to Live (TTL).
+  
   
    multicastAddr: The System.Net.IPAddress of the multicast group to join.
    timeToLive: The Time to Live (TTL),measured in router hops.
@@ -3083,7 +3476,9 @@ class UdpClient(object,IDisposable):
   
    Returns a UDP datagram that was sent by a remote host.
   
-   remoteEP: An System.Net.IPEndPoint that represents the remote host from which the data was sent.
+   remoteEP: An System.Net.IPEndPoint that represents the remote host from which the data 
+    was sent.
+  
    Returns: An array of type System.Byte that contains datagram data.
   """
   pass
@@ -3096,14 +3491,18 @@ class UdpClient(object,IDisposable):
   
    Sends a UDP datagram to a remote host.
   
-   dgram: An array of type System.Byte that specifies the UDP datagram that you intend to send represented as an array of bytes.
+   dgram: An array of type System.Byte that specifies the UDP datagram that you intend to 
+    send represented as an array of bytes.
+  
    bytes: The number of bytes in the datagram.
    Returns: The number of bytes sent.
   Send(self: UdpClient,dgram: Array[Byte],bytes: int,hostname: str,port: int) -> int
   
    Sends a UDP datagram to a specified port on a specified remote host.
   
-   dgram: An array of type System.Byte that specifies the UDP datagram that you intend to send represented as an array of bytes.
+   dgram: An array of type System.Byte that specifies the UDP datagram that you intend to 
+    send represented as an array of bytes.
+  
    bytes: The number of bytes in the datagram.
    hostname: The name of the remote host to which you intend to send the datagram.
    port: The remote port number with which you intend to communicate.
@@ -3112,9 +3511,13 @@ class UdpClient(object,IDisposable):
   
    Sends a UDP datagram to the host at the specified remote endpoint.
   
-   dgram: An array of type System.Byte that specifies the UDP datagram that you intend to send,represented as an array of bytes.
+   dgram: An array of type System.Byte that specifies the UDP datagram that you intend to 
+    send,represented as an array of bytes.
+  
    bytes: The number of bytes in the datagram.
-   endPoint: An System.Net.IPEndPoint that represents the host and port to which to send the datagram.
+   endPoint: An System.Net.IPEndPoint that represents the host and port to which to send the 
+    datagram.
+  
    Returns: The number of bytes sent.
   """
   pass
@@ -3126,17 +3529,10 @@ class UdpClient(object,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

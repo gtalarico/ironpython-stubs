@@ -1,4 +1,4 @@
 class PerformanceAdviserRules(object):
-    """ Provides a container of all Revit built-in PerformanceAdviserRuleId instances. """
-    __all__ = []
+ """ Provides a container of all Revit built-in PerformanceAdviserRuleId instances. """
+ __all__=[]
 

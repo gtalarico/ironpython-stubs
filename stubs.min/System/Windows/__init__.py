@@ -1,16 +1,15 @@
 # encoding: utf-8
 # module System.Windows calls itself Windows
-# from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+# from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,WindowsBase,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,System.Windows.Forms,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,PresentationCore,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # functions
 
-def WeakEventManager(*args, **kwargs): # real signature unknown
-    """ Provides a base class for the event manager that is used in the weak event pattern. The manager adds and removes listeners for events (or callbacks) that also use the pattern. """
-    pass
-
+def WeakEventManager(*args,**kwargs): # real signature unknown
+ """ Provides a base class for the event manager that is used in the weak event pattern. The manager adds and removes listeners for events (or callbacks) that also use the pattern. """
+ pass
 # classes
 from __init___parts.Application import Application
 from __init___parts.AttachedPropertyBrowsableAttribute import AttachedPropertyBrowsableAttribute

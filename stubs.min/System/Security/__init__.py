@@ -2,7 +2,7 @@
 # module System.Security calls itself Security
 # from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,WindowsBase,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -32,44 +32,58 @@ class CodeAccessPermission(object,IPermission,ISecurityEncodable,IStackWalk):
  def Assert(self):
   """
   Assert(self: CodeAccessPermission)
-   Declares that the calling code can access the resource protected by a permission demand through the code that calls this method,even if callers higher in the stack have not been granted permission to 
-    access the resource. Using System.Security.CodeAccessPermission.Assert can create security issues.
+   Declares that the calling code can access the resource protected by a 
+    permission demand through the code that calls this method,even if callers 
+    higher in the stack have not been granted permission to access the resource. 
+    Using System.Security.CodeAccessPermission.Assert can create security issues.
   """
   pass
  def Copy(self):
   """
   Copy(self: CodeAccessPermission) -> IPermission
   
-   When implemented by a derived class,creates and returns an identical copy of the current permission object.
+   When implemented by a derived class,creates and returns an identical copy of 
+    the current permission object.
+  
    Returns: A copy of the current permission object.
   """
   pass
  def Demand(self):
   """
   Demand(self: CodeAccessPermission)
-   Forces a System.Security.SecurityException at run time if all callers higher in the call stack have not been granted the permission specified by the current instance.
+   Forces a System.Security.SecurityException at run time if all callers higher in 
+    the call stack have not been granted the permission specified by the current 
+    instance.
   """
   pass
  def Deny(self):
   """
   Deny(self: CodeAccessPermission)
-   Prevents callers higher in the call stack from using the code that calls this method to access the resource specified by the current instance.
+   Prevents callers higher in the call stack from using the code that calls this 
+    method to access the resource specified by the current instance.
   """
   pass
  def Equals(self,obj):
   """
   Equals(self: CodeAccessPermission,obj: object) -> bool
   
-   Determines whether the specified System.Security.CodeAccessPermission object is equal to the current System.Security.CodeAccessPermission.
+   Determines whether the specified System.Security.CodeAccessPermission object is 
+    equal to the current System.Security.CodeAccessPermission.
   
-   obj: The System.Security.CodeAccessPermission object to compare with the current System.Security.CodeAccessPermission.
-   Returns: true if the specified System.Security.CodeAccessPermission object is equal to the current System.Security.CodeAccessPermission; otherwise,false.
+  
+   obj: The System.Security.CodeAccessPermission object to compare with the current 
+    System.Security.CodeAccessPermission.
+  
+   Returns: true if the specified System.Security.CodeAccessPermission object is equal to 
+    the current System.Security.CodeAccessPermission; otherwise,false.
   """
   pass
  def FromXml(self,elem):
   """
   FromXml(self: CodeAccessPermission,elem: SecurityElement)
-   When overridden in a derived class,reconstructs a security object with a specified state from an XML encoding.
+   When overridden in a derived class,reconstructs a security object with a 
+    specified state from an XML encoding.
+  
   
    elem: The XML encoding to use to reconstruct the security object.
   """
@@ -78,7 +92,10 @@ class CodeAccessPermission(object,IPermission,ISecurityEncodable,IStackWalk):
   """
   GetHashCode(self: CodeAccessPermission) -> int
   
-   Gets a hash code for the System.Security.CodeAccessPermission object that is suitable for use in hashing algorithms and data structures such as a hash table.
+   Gets a hash code for the System.Security.CodeAccessPermission object that is 
+    suitable for use in hashing algorithms and data structures such as a hash 
+    table.
+  
    Returns: A hash code for the current System.Security.CodeAccessPermission object.
   """
   pass
@@ -86,54 +103,71 @@ class CodeAccessPermission(object,IPermission,ISecurityEncodable,IStackWalk):
   """
   Intersect(self: CodeAccessPermission,target: IPermission) -> IPermission
   
-   When implemented by a derived class,creates and returns a permission that is the intersection of the current permission and the specified permission.
+   When implemented by a derived class,creates and returns a permission that is 
+    the intersection of the current permission and the specified permission.
   
-   target: A permission to intersect with the current permission. It must be of the same type as the current permission.
-   Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
+  
+   target: A permission to intersect with the current permission. It must be of the same 
+    type as the current permission.
+  
+   Returns: A new permission that represents the intersection of the current permission and 
+    the specified permission. This new permission is null if the intersection is 
+    empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
   IsSubsetOf(self: CodeAccessPermission,target: IPermission) -> bool
   
-   When implemented by a derived class,determines whether the current permission is a subset of the specified permission.
+   When implemented by a derived class,determines whether the current permission 
+    is a subset of the specified permission.
   
-   target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
-   Returns: true if the current permission is a subset of the specified permission; otherwise,false.
+  
+   target: A permission that is to be tested for the subset relationship. This permission 
+    must be of the same type as the current permission.
+  
+   Returns: true if the current permission is a subset of the specified permission; 
+    otherwise,false.
   """
   pass
  def PermitOnly(self):
   """
   PermitOnly(self: CodeAccessPermission)
-   Prevents callers higher in the call stack from using the code that calls this method to access all resources except for the resource specified by the current instance.
+   Prevents callers higher in the call stack from using the code that calls this 
+    method to access all resources except for the resource specified by the current 
+    instance.
   """
   pass
  @staticmethod
  def RevertAll():
   """
   RevertAll()
-   Causes all previous overrides for the current frame to be removed and no longer in effect.
+   Causes all previous overrides for the current frame to be removed and no longer 
+    in effect.
   """
   pass
  @staticmethod
  def RevertAssert():
   """
   RevertAssert()
-   Causes any previous System.Security.CodeAccessPermission.Assert for the current frame to be removed and no longer in effect.
+   Causes any previous System.Security.CodeAccessPermission.Assert for the current 
+    frame to be removed and no longer in effect.
   """
   pass
  @staticmethod
  def RevertDeny():
   """
   RevertDeny()
-   Causes any previous System.Security.CodeAccessPermission.Deny for the current frame to be removed and no longer in effect.
+   Causes any previous System.Security.CodeAccessPermission.Deny for the current 
+    frame to be removed and no longer in effect.
   """
   pass
  @staticmethod
  def RevertPermitOnly():
   """
   RevertPermitOnly()
-   Causes any previous System.Security.CodeAccessPermission.PermitOnly for the current frame to be removed and no longer in effect.
+   Causes any previous System.Security.CodeAccessPermission.PermitOnly for the 
+    current frame to be removed and no longer in effect.
   """
   pass
  def ToString(self):
@@ -148,7 +182,9 @@ class CodeAccessPermission(object,IPermission,ISecurityEncodable,IStackWalk):
   """
   ToXml(self: CodeAccessPermission) -> SecurityElement
   
-   When overridden in a derived class,creates an XML encoding of the security object and its current state.
+   When overridden in a derived class,creates an XML encoding of the security 
+    object and its current state.
+  
    Returns: An XML encoding of the security object,including any state information.
   """
   pass
@@ -156,10 +192,15 @@ class CodeAccessPermission(object,IPermission,ISecurityEncodable,IStackWalk):
   """
   Union(self: CodeAccessPermission,other: IPermission) -> IPermission
   
-   When overridden in a derived class,creates a permission that is the union of the current permission and the specified permission.
+   When overridden in a derived class,creates a permission that is the union of 
+    the current permission and the specified permission.
   
-   other: A permission to combine with the current permission. It must be of the same type as the current permission.
-   Returns: A new permission that represents the union of the current permission and the specified permission.
+  
+   other: A permission to combine with the current permission. It must be of the same 
+    type as the current permission.
+  
+   Returns: A new permission that represents the union of the current permission and the 
+    specified permission.
   """
   pass
  def __eq__(self,*args):
@@ -193,7 +234,9 @@ class HostProtectionException(SystemException,ISerializable,_Exception):
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: HostProtectionException,info: SerializationInfo,context: StreamingContext)
-   Sets the specified System.Runtime.Serialization.SerializationInfo object with information about the host protection exception.
+   Sets the specified System.Runtime.Serialization.SerializationInfo object with 
+    information about the host protection exception.
+  
   
    info: The serialized object data about the exception being thrown.
    context: The contextual information about the source or destination.
@@ -286,7 +329,9 @@ class HostSecurityManager(object):
   """
   GetHostSuppliedAppDomainEvidenceTypes(self: HostSecurityManager) -> Array[Type]
   
-   Determines which evidence types the host can supply for the application domain,if requested.
+   Determines which evidence types the host can supply for the application domain,
+    if requested.
+  
    Returns: An array of evidence types.
   """
   pass
@@ -294,7 +339,9 @@ class HostSecurityManager(object):
   """
   GetHostSuppliedAssemblyEvidenceTypes(self: HostSecurityManager,assembly: Assembly) -> Array[Type]
   
-   Determines which evidence types the host can supply for the assembly,if requested.
+   Determines which evidence types the host can supply for the assembly,if 
+    requested.
+  
   
    assembly: The target assembly.
    Returns: An array of evidence types.
@@ -435,37 +482,54 @@ class IPermission(ISecurityEncodable):
  def Demand(self):
   """
   Demand(self: IPermission)
-   Throws a System.Security.SecurityException at run time if the security requirement is not met.
+   Throws a System.Security.SecurityException at run time if the security 
+    requirement is not met.
   """
   pass
  def Intersect(self,target):
   """
   Intersect(self: IPermission,target: IPermission) -> IPermission
   
-   Creates and returns a permission that is the intersection of the current permission and the specified permission.
+   Creates and returns a permission that is the intersection of the current 
+    permission and the specified permission.
   
-   target: A permission to intersect with the current permission. It must be of the same type as the current permission.
-   Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
+  
+   target: A permission to intersect with the current permission. It must be of the same 
+    type as the current permission.
+  
+   Returns: A new permission that represents the intersection of the current permission and 
+    the specified permission. This new permission is null if the intersection is 
+    empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
   IsSubsetOf(self: IPermission,target: IPermission) -> bool
   
-   Determines whether the current permission is a subset of the specified permission.
+   Determines whether the current permission is a subset of the specified 
+    permission.
   
-   target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
-   Returns: true if the current permission is a subset of the specified permission; otherwise,false.
+  
+   target: A permission that is to be tested for the subset relationship. This permission 
+    must be of the same type as the current permission.
+  
+   Returns: true if the current permission is a subset of the specified permission; 
+    otherwise,false.
   """
   pass
  def Union(self,target):
   """
   Union(self: IPermission,target: IPermission) -> IPermission
   
-   Creates a permission that is the union of the current permission and the specified permission.
+   Creates a permission that is the union of the current permission and the 
+    specified permission.
   
-   target: A permission to combine with the current permission. It must be of the same type as the current permission.
-   Returns: A new permission that represents the union of the current permission and the specified permission.
+  
+   target: A permission to combine with the current permission. It must be of the same 
+    type as the current permission.
+  
+   Returns: A new permission that represents the union of the current permission and the 
+    specified permission.
   """
   pass
  def __init__(self,*args):
@@ -502,26 +566,31 @@ class IStackWalk:
  def Assert(self):
   """
   Assert(self: IStackWalk)
-   Asserts that the calling code can access the resource identified by the current permission object,even if callers higher in the stack have not been granted permission to access the resource.
+   Asserts that the calling code can access the resource identified by the current 
+    permission object,even if callers higher in the stack have not been granted 
+    permission to access the resource.
   """
   pass
  def Demand(self):
   """
   Demand(self: IStackWalk)
-   Determines at run time whether all callers in the call stack have been granted the permission specified by the current permission object.
+   Determines at run time whether all callers in the call stack have been granted 
+    the permission specified by the current permission object.
   """
   pass
  def Deny(self):
   """
   Deny(self: IStackWalk)
-   Causes every System.Security.IStackWalk.Demand for the current object that passes through the calling code to fail.
+   Causes every System.Security.IStackWalk.Demand for the current object that 
+    passes through the calling code to fail.
   """
   pass
  def PermitOnly(self):
   """
   PermitOnly(self: IStackWalk)
-   Causes every System.Security.IStackWalk.Demand for all objects except the current one that passes through the calling code to fail,even if code higher in the call stack has been granted permission to 
-    access other resources.
+   Causes every System.Security.IStackWalk.Demand for all objects except the 
+    current one that passes through the calling code to fail,even if code higher 
+    in the call stack has been granted permission to access other resources.
   """
   pass
  def __init__(self,*args):
@@ -542,7 +611,8 @@ class PermissionSet(object,ISecurityEncodable,ICollection,IEnumerable,IStackWalk
    Adds a specified permission to the System.Security.PermissionSet.
   
    perm: The permission to add.
-   Returns: The union of the permission added and any permission of the same type that already exists in the System.Security.PermissionSet.
+   Returns: The union of the permission added and any permission of the same type that 
+    already exists in the System.Security.PermissionSet.
   """
   pass
  def AddPermissionImpl(self,*args):
@@ -552,22 +622,28 @@ class PermissionSet(object,ISecurityEncodable,ICollection,IEnumerable,IStackWalk
    Adds a specified permission to the System.Security.PermissionSet.
   
    perm: The permission to add.
-   Returns: The union of the permission added and any permission of the same type that already exists in the System.Security.PermissionSet,or null if perm is null.
+   Returns: The union of the permission added and any permission of the same type that 
+    already exists in the System.Security.PermissionSet,or null if perm is null.
   """
   pass
  def Assert(self):
   """
   Assert(self: PermissionSet)
-   Declares that the calling code can access the resource protected by a permission demand through the code that calls this method,even if callers higher in the stack have not been granted permission to 
-    access the resource. Using System.Security.PermissionSet.Assert can create security vulnerabilities.
+   Declares that the calling code can access the resource protected by a 
+    permission demand through the code that calls this method,even if callers 
+    higher in the stack have not been granted permission to access the resource. 
+    Using System.Security.PermissionSet.Assert can create security vulnerabilities.
   """
   pass
  def ContainsNonCodeAccessPermissions(self):
   """
   ContainsNonCodeAccessPermissions(self: PermissionSet) -> bool
   
-   Gets a value indicating whether the System.Security.PermissionSet contains permissions that are not derived from System.Security.CodeAccessPermission.
-   Returns: true if the System.Security.PermissionSet contains permissions that are not derived from System.Security.CodeAccessPermission; otherwise,false.
+   Gets a value indicating whether the System.Security.PermissionSet contains 
+    permissions that are not derived from System.Security.CodeAccessPermission.
+  
+   Returns: true if the System.Security.PermissionSet contains permissions that are not 
+    derived from System.Security.CodeAccessPermission; otherwise,false.
   """
   pass
  @staticmethod
@@ -575,11 +651,17 @@ class PermissionSet(object,ISecurityEncodable,ICollection,IEnumerable,IStackWalk
   """
   ConvertPermissionSet(inFormat: str,inData: Array[Byte],outFormat: str) -> Array[Byte]
   
-   Converts an encoded System.Security.PermissionSet from one XML encoding format to another XML encoding format.
+   Converts an encoded System.Security.PermissionSet from one XML encoding format 
+    to another XML encoding format.
   
-   inFormat: A string representing one of the following encoding formats: ASCII,Unicode,or Binary. Possible values are "XMLASCII" or "XML","XMLUNICODE",and "BINARY".
+  
+   inFormat: A string representing one of the following encoding formats: ASCII,Unicode,or 
+    Binary. Possible values are "XMLASCII" or "XML","XMLUNICODE",and "BINARY".
+  
    inData: An XML-encoded permission set.
-   outFormat: A string representing one of the following encoding formats: ASCII,Unicode,or Binary. Possible values are "XMLASCII" or "XML","XMLUNICODE",and "BINARY".
+   outFormat: A string representing one of the following encoding formats: ASCII,Unicode,or 
+    Binary. Possible values are "XMLASCII" or "XML","XMLUNICODE",and "BINARY".
+  
    Returns: An encrypted permission set with the specified output format.
   """
   pass
@@ -594,7 +676,9 @@ class PermissionSet(object,ISecurityEncodable,ICollection,IEnumerable,IStackWalk
  def CopyTo(self,array,index):
   """
   CopyTo(self: PermissionSet,array: Array,index: int)
-   Copies the permission objects of the set to the indicated location in an System.Array.
+   Copies the permission objects of the set to the indicated location in an 
+    System.Array.
+  
   
    array: The target array to which to copy.
    index: The starting position in the array to begin copying (zero based).
@@ -603,24 +687,31 @@ class PermissionSet(object,ISecurityEncodable,ICollection,IEnumerable,IStackWalk
  def Demand(self):
   """
   Demand(self: PermissionSet)
-   Forces a System.Security.SecurityException at run time if all callers higher in the call stack have not been granted the permissions specified by the current instance.
+   Forces a System.Security.SecurityException at run time if all callers higher in 
+    the call stack have not been granted the permissions specified by the current 
+    instance.
   """
   pass
  def Deny(self):
   """
   Deny(self: PermissionSet)
-   Causes any System.Security.PermissionSet.Demand that passes through the calling code for a permission that has an intersection with a permission of a type contained in the current 
-    System.Security.PermissionSet to fail.
+   Causes any System.Security.PermissionSet.Demand that passes through the calling 
+    code for a permission that has an intersection with a permission of a type 
+    contained in the current System.Security.PermissionSet to fail.
   """
   pass
  def Equals(self,obj):
   """
   Equals(self: PermissionSet,obj: object) -> bool
   
-   Determines whether the specified System.Security.PermissionSet or System.Security.NamedPermissionSet object is equal to the current System.Security.PermissionSet.
+   Determines whether the specified System.Security.PermissionSet or 
+    System.Security.NamedPermissionSet object is equal to the current 
+    System.Security.PermissionSet.
+  
   
    obj: The object to compare with the current System.Security.PermissionSet.
-   Returns: true if the specified object is equal to the current System.Security.PermissionSet object; otherwise,false.
+   Returns: true if the specified object is equal to the current 
+    System.Security.PermissionSet object; otherwise,false.
   """
   pass
  def FromXml(self,et):
@@ -651,7 +742,9 @@ class PermissionSet(object,ISecurityEncodable,ICollection,IEnumerable,IStackWalk
   """
   GetHashCode(self: PermissionSet) -> int
   
-   Gets a hash code for the System.Security.PermissionSet object that is suitable for use in hashing algorithms and data structures such as a hash table.
+   Gets a hash code for the System.Security.PermissionSet object that is suitable 
+    for use in hashing algorithms and data structures such as a hash table.
+  
    Returns: A hash code for the current System.Security.PermissionSet object.
   """
   pass
@@ -662,7 +755,9 @@ class PermissionSet(object,ISecurityEncodable,ICollection,IEnumerable,IStackWalk
    Gets a permission object of the specified type,if it exists in the set.
   
    permClass: The type of the desired permission object.
-   Returns: A copy of the permission object of the type specified by the permClass parameter contained in the System.Security.PermissionSet,or null if none exists.
+   Returns: A copy of the permission object of the type specified by the permClass 
+    parameter contained in the System.Security.PermissionSet,or null if none 
+    exists.
   """
   pass
  def GetPermissionImpl(self,*args):
@@ -672,17 +767,23 @@ class PermissionSet(object,ISecurityEncodable,ICollection,IEnumerable,IStackWalk
    Gets a permission object of the specified type,if it exists in the set.
   
    permClass: The type of the permission object.
-   Returns: A copy of the permission object,of the type specified by the permClass parameter,contained in the System.Security.PermissionSet,or null if none exists.
+   Returns: A copy of the permission object,of the type specified by the permClass 
+    parameter,contained in the System.Security.PermissionSet,or null if none 
+    exists.
   """
   pass
  def Intersect(self,other):
   """
   Intersect(self: PermissionSet,other: PermissionSet) -> PermissionSet
   
-   Creates and returns a permission set that is the intersection of the current System.Security.PermissionSet and the specified System.Security.PermissionSet.
+   Creates and returns a permission set that is the intersection of the current 
+    System.Security.PermissionSet and the specified System.Security.PermissionSet.
+  
   
    other: A permission set to intersect with the current System.Security.PermissionSet.
-   Returns: A new permission set that represents the intersection of the current System.Security.PermissionSet and the specified target. This object is null if the intersection is empty.
+   Returns: A new permission set that represents the intersection of the current 
+    System.Security.PermissionSet and the specified target. This object is null if 
+    the intersection is empty.
   """
   pass
  def IsEmpty(self):
@@ -697,10 +798,15 @@ class PermissionSet(object,ISecurityEncodable,ICollection,IEnumerable,IStackWalk
   """
   IsSubsetOf(self: PermissionSet,target: PermissionSet) -> bool
   
-   Determines whether the current System.Security.PermissionSet is a subset of the specified System.Security.PermissionSet.
+   Determines whether the current System.Security.PermissionSet is a subset of the 
+    specified System.Security.PermissionSet.
   
-   target: The permission set to test for the subset relationship. This must be either a System.Security.PermissionSet or a System.Security.NamedPermissionSet.
-   Returns: true if the current System.Security.PermissionSet is a subset of the target parameter; otherwise,false.
+  
+   target: The permission set to test for the subset relationship. This must be either a 
+    System.Security.PermissionSet or a System.Security.NamedPermissionSet.
+  
+   Returns: true if the current System.Security.PermissionSet is a subset of the target 
+    parameter; otherwise,false.
   """
   pass
  def IsUnrestricted(self):
@@ -714,7 +820,9 @@ class PermissionSet(object,ISecurityEncodable,ICollection,IEnumerable,IStackWalk
  def PermitOnly(self):
   """
   PermitOnly(self: PermissionSet)
-   Causes any System.Security.PermissionSet.Demand that passes through the calling code for any System.Security.PermissionSet that is not a subset of the current System.Security.PermissionSet to fail.
+   Causes any System.Security.PermissionSet.Demand that passes through the calling 
+    code for any System.Security.PermissionSet that is not a subset of the current 
+    System.Security.PermissionSet to fail.
   """
   pass
  def RemovePermission(self,permClass):
@@ -741,14 +849,17 @@ class PermissionSet(object,ISecurityEncodable,ICollection,IEnumerable,IStackWalk
  def RevertAssert():
   """
   RevertAssert()
-   Causes any previous System.Security.CodeAccessPermission.Assert for the current frame to be removed and no longer be in effect.
+   Causes any previous System.Security.CodeAccessPermission.Assert for the current 
+    frame to be removed and no longer be in effect.
   """
   pass
  def SetPermission(self,perm):
   """
   SetPermission(self: PermissionSet,perm: IPermission) -> IPermission
   
-   Sets a permission to the System.Security.PermissionSet,replacing any existing permission of the same type.
+   Sets a permission to the System.Security.PermissionSet,replacing any existing 
+    permission of the same type.
+  
   
    perm: The permission to set.
    Returns: The set permission.
@@ -758,7 +869,9 @@ class PermissionSet(object,ISecurityEncodable,ICollection,IEnumerable,IStackWalk
   """
   SetPermissionImpl(self: PermissionSet,perm: IPermission) -> IPermission
   
-   Sets a permission to the System.Security.PermissionSet,replacing any existing permission of the same type.
+   Sets a permission to the System.Security.PermissionSet,replacing any existing 
+    permission of the same type.
+  
   
    perm: The permission to set.
    Returns: The set permission.
@@ -784,10 +897,15 @@ class PermissionSet(object,ISecurityEncodable,ICollection,IEnumerable,IStackWalk
   """
   Union(self: PermissionSet,other: PermissionSet) -> PermissionSet
   
-   Creates a System.Security.PermissionSet that is the union of the current System.Security.PermissionSet and the specified System.Security.PermissionSet.
+   Creates a System.Security.PermissionSet that is the union of the current 
+    System.Security.PermissionSet and the specified System.Security.PermissionSet.
   
-   other: The permission set to form the union with the current System.Security.PermissionSet.
-   Returns: A new permission set that represents the union of the current System.Security.PermissionSet and the specified System.Security.PermissionSet.
+  
+   other: The permission set to form the union with the current 
+    System.Security.PermissionSet.
+  
+   Returns: A new permission set that represents the union of the current 
+    System.Security.PermissionSet and the specified System.Security.PermissionSet.
   """
   pass
  def __eq__(self,*args):
@@ -864,14 +982,17 @@ class NamedPermissionSet(PermissionSet,ISecurityEncodable,ICollection,IEnumerabl
    Adds a specified permission to the System.Security.PermissionSet.
   
    perm: The permission to add.
-   Returns: The union of the permission added and any permission of the same type that already exists in the System.Security.PermissionSet,or null if perm is null.
+   Returns: The union of the permission added and any permission of the same type that 
+    already exists in the System.Security.PermissionSet,or null if perm is null.
   """
   pass
  def Copy(self,name=None):
   """
   Copy(self: NamedPermissionSet,name: str) -> NamedPermissionSet
   
-   Creates a copy of the named permission set with a different name but the same permissions.
+   Creates a copy of the named permission set with a different name but the same 
+    permissions.
+  
   
    name: The name for the new named permission set.
    Returns: A copy of the named permission set with the new name.
@@ -885,10 +1006,15 @@ class NamedPermissionSet(PermissionSet,ISecurityEncodable,ICollection,IEnumerabl
   """
   Equals(self: NamedPermissionSet,obj: object) -> bool
   
-   Determines whether the specified System.Security.NamedPermissionSet object is equal to the current System.Security.NamedPermissionSet.
+   Determines whether the specified System.Security.NamedPermissionSet object is 
+    equal to the current System.Security.NamedPermissionSet.
   
-   obj: The System.Security.NamedPermissionSet object to compare with the current System.Security.NamedPermissionSet.
-   Returns: true if the specified System.Security.NamedPermissionSet is equal to the current System.Security.NamedPermissionSet object; otherwise,false.
+  
+   obj: The System.Security.NamedPermissionSet object to compare with the current 
+    System.Security.NamedPermissionSet.
+  
+   Returns: true if the specified System.Security.NamedPermissionSet is equal to the 
+    current System.Security.NamedPermissionSet object; otherwise,false.
   """
   pass
  def FromXml(self,et):
@@ -896,7 +1022,8 @@ class NamedPermissionSet(PermissionSet,ISecurityEncodable,ICollection,IEnumerabl
   FromXml(self: NamedPermissionSet,et: SecurityElement)
    Reconstructs a named permission set with a specified state from an XML encoding.
   
-   et: A security element containing the XML representation of the named permission set.
+   et: A security element containing the XML representation of the named permission 
+    set.
   """
   pass
  def GetEnumeratorImpl(self,*args):
@@ -911,7 +1038,10 @@ class NamedPermissionSet(PermissionSet,ISecurityEncodable,ICollection,IEnumerabl
   """
   GetHashCode(self: NamedPermissionSet) -> int
   
-   Gets a hash code for the System.Security.NamedPermissionSet object that is suitable for use in hashing algorithms and data structures such as a hash table.
+   Gets a hash code for the System.Security.NamedPermissionSet object that is 
+    suitable for use in hashing algorithms and data structures such as a hash 
+    table.
+  
    Returns: A hash code for the current System.Security.NamedPermissionSet object.
   """
   pass
@@ -922,7 +1052,9 @@ class NamedPermissionSet(PermissionSet,ISecurityEncodable,ICollection,IEnumerabl
    Gets a permission object of the specified type,if it exists in the set.
   
    permClass: The type of the permission object.
-   Returns: A copy of the permission object,of the type specified by the permClass parameter,contained in the System.Security.PermissionSet,or null if none exists.
+   Returns: A copy of the permission object,of the type specified by the permClass 
+    parameter,contained in the System.Security.PermissionSet,or null if none 
+    exists.
   """
   pass
  def RemovePermissionImpl(self,*args):
@@ -939,7 +1071,9 @@ class NamedPermissionSet(PermissionSet,ISecurityEncodable,ICollection,IEnumerabl
   """
   SetPermissionImpl(self: PermissionSet,perm: IPermission) -> IPermission
   
-   Sets a permission to the System.Security.PermissionSet,replacing any existing permission of the same type.
+   Sets a permission to the System.Security.PermissionSet,replacing any existing 
+    permission of the same type.
+  
   
    perm: The permission to set.
    Returns: The set permission.
@@ -1202,24 +1336,19 @@ class SecureString(object,IDisposable):
  def SetAt(self,index,c):
   """
   SetAt(self: SecureString,index: int,c: Char)
-   Replaces the existing character at the specified index position with another character.
+   Replaces the existing character at the specified index position with another 
+    character.
+  
   
    index: The index position of an existing character in this secure string
    c: A character that replaces the existing character.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1265,7 +1394,8 @@ class SecurityContext(object,IDisposable):
  def Dispose(self):
   """
   Dispose(self: SecurityContext)
-   Releases all resources used by the current instance of the System.Security.SecurityContext class.
+   Releases all resources used by the current instance of the 
+    System.Security.SecurityContext class.
   """
   pass
  @staticmethod
@@ -1282,7 +1412,9 @@ class SecurityContext(object,IDisposable):
   """
   IsWindowsIdentityFlowSuppressed() -> bool
   
-   Determines whether the flow of the Windows identity portion of the current security context has been suppressed.
+   Determines whether the flow of the Windows identity portion of the current 
+    security context has been suppressed.
+  
    Returns: true if the flow has been suppressed; otherwise,false.
   """
   pass
@@ -1297,10 +1429,14 @@ class SecurityContext(object,IDisposable):
  def Run(securityContext,callback,state):
   """
   Run(securityContext: SecurityContext,callback: ContextCallback,state: object)
-   Runs the specified method in the specified security context on the current thread.
+   Runs the specified method in the specified security context on the current 
+    thread.
+  
   
    securityContext: The security context to set.
-   callback: The delegate that represents the method to run in the specified security context.
+   callback: The delegate that represents the method to run in the specified security 
+    context.
+  
    state: The object to pass to the callback method.
   """
   pass
@@ -1318,22 +1454,17 @@ class SecurityContext(object,IDisposable):
   """
   SuppressFlowWindowsIdentity() -> AsyncFlowControl
   
-   Suppresses the flow of the Windows identity portion of the current security context across asynchronous threads.
+   Suppresses the flow of the Windows identity portion of the current security 
+    context across asynchronous threads.
+  
    Returns: A structure for restoring the flow.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1467,14 +1598,17 @@ class SecurityElement(object,ISecurityElementFactory):
    Finds an attribute by name in an XML element.
   
    name: The name of the attribute for which to search.
-   Returns: The value associated with the named attribute,or null if no attribute with name exists.
+   Returns: The value associated with the named attribute,or null if no attribute with 
+    name exists.
   """
   pass
  def Copy(self):
   """
   Copy(self: SecurityElement) -> SecurityElement
   
-   Creates and returns an identical copy of the current System.Security.SecurityElement object.
+   Creates and returns an identical copy of the current 
+    System.Security.SecurityElement object.
+  
    Returns: A copy of the current System.Security.SecurityElement object.
   """
   pass
@@ -1485,7 +1619,9 @@ class SecurityElement(object,ISecurityElementFactory):
    Compares two XML element objects for equality.
   
    other: An XML element object to which to compare the current XML element object.
-   Returns: true if the tag,attribute names and values,child elements,and text fields in the current XML element are identical to their counterparts in the other parameter; otherwise,false.
+   Returns: true if the tag,attribute names and values,child elements,and text fields in 
+    the current XML element are identical to their counterparts in the other 
+    parameter; otherwise,false.
   """
   pass
  @staticmethod
@@ -1561,7 +1697,8 @@ class SecurityElement(object,ISecurityElementFactory):
    Finds a child by its tag name.
   
    tag: The tag for which to search in child elements.
-   Returns: The first child XML element with the specified tag value,or null if no child element with tag exists.
+   Returns: The first child XML element with the specified tag value,or null if no child 
+    element with tag exists.
   """
   pass
  def SearchForTextOfTag(self,tag):
@@ -1578,7 +1715,9 @@ class SecurityElement(object,ISecurityElementFactory):
   """
   ToString(self: SecurityElement) -> str
   
-   Produces a string representation of an XML element and its constituent attributes,child elements,and text.
+   Produces a string representation of an XML element and its constituent 
+    attributes,child elements,and text.
+  
    Returns: The XML element and its contents.
   """
   pass
@@ -1651,10 +1790,15 @@ class SecurityException(SystemException,ISerializable,_Exception):
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: SecurityException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo with information about the System.Security.SecurityException.
+   Sets the System.Runtime.Serialization.SerializationInfo with information about 
+    the System.Security.SecurityException.
   
-   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about the exception being thrown.
-   context: The System.Runtime.Serialization.StreamingContext that contains contextual information about the source or destination.
+  
+   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized 
+    object data about the exception being thrown.
+  
+   context: The System.Runtime.Serialization.StreamingContext that contains contextual 
+    information about the source or destination.
   """
   pass
  def remove_SerializeObjectState(self,*args):
@@ -1801,9 +1945,14 @@ class SecurityManager(object):
   """
   CurrentThreadRequiresSecurityContextCapture() -> bool
   
-   Determines whether the current thread requires a security context capture if its security state has to be re-created at a later point in time.
-   Returns: false if the stack contains no partially trusted application domains,no partially trusted assemblies,and no currently active System.Security.CodeAccessPermission.PermitOnly or 
-    System.Security.CodeAccessPermission.Deny modifiers; true if the common language runtime cannot guarantee that the stack contains none of these.
+   Determines whether the current thread requires a security context capture if 
+    its security state has to be re-created at a later point in time.
+  
+   Returns: false if the stack contains no partially trusted application domains,no 
+    partially trusted assemblies,and no currently active 
+    System.Security.CodeAccessPermission.PermitOnly or 
+    System.Security.CodeAccessPermission.Deny modifiers; true if the common 
+    language runtime cannot guarantee that the stack contains none of these.
   """
   pass
  @staticmethod
@@ -1811,10 +1960,13 @@ class SecurityManager(object):
   """
   GetStandardSandbox(evidence: Evidence) -> PermissionSet
   
-   Gets a permission set that is safe to grant to an application that has the provided evidence.
+   Gets a permission set that is safe to grant to an application that has the 
+    provided evidence.
+  
   
    evidence: The host evidence to match to a permission set.
-   Returns: A permission set that can be used as a grant set for the application that has the provided evidence.
+   Returns: A permission set that can be used as a grant set for the application that has 
+    the provided evidence.
   """
   pass
  @staticmethod
@@ -1822,7 +1974,8 @@ class SecurityManager(object):
   """
   GetZoneAndOrigin() -> (ArrayList,ArrayList)
   
-   Gets the granted zone identity and URL identity permission sets for the current assembly.
+   Gets the granted zone identity and URL identity permission sets for the current 
+    assembly.
   """
   pass
  @staticmethod
@@ -1833,7 +1986,8 @@ class SecurityManager(object):
    Determines whether a permission is granted to the caller.
   
    perm: The permission to test against the grant of the caller.
-   Returns: true if the permissions granted to the caller include the permission perm; otherwise,false.
+   Returns: true if the permissions granted to the caller include the permission perm; 
+    otherwise,false.
   """
   pass
  @staticmethod
@@ -1844,7 +1998,9 @@ class SecurityManager(object):
    Loads a System.Security.Policy.PolicyLevel from the specified file.
   
    path: The physical file path to a file containing the security policy information.
-   type: One of the enumeration values that specifies the type of the policy level to be loaded.
+   type: One of the enumeration values that specifies the type of the policy level to be 
+    loaded.
+  
    Returns: The loaded policy level.
   """
   pass
@@ -1855,8 +2011,12 @@ class SecurityManager(object):
   
    Loads a System.Security.Policy.PolicyLevel from the specified string.
   
-   str: The XML representation of a security policy level in the same form in which it appears in a configuration file.
-   type: One of the enumeration values that specifies the type of the policy level to be loaded.
+   str: The XML representation of a security policy level in the same form in which it 
+    appears in a configuration file.
+  
+   type: One of the enumeration values that specifies the type of the policy level to be 
+    loaded.
+  
    Returns: The loaded policy level.
   """
   pass
@@ -1865,8 +2025,11 @@ class SecurityManager(object):
   """
   PolicyHierarchy() -> IEnumerator
   
-   Provides an enumerator to access the security policy hierarchy by levels,such as computer policy and user policy.
-   Returns: An enumerator for System.Security.Policy.PolicyLevel objects that compose the security policy hierarchy.
+   Provides an enumerator to access the security policy hierarchy by levels,such 
+    as computer policy and user policy.
+  
+   Returns: An enumerator for System.Security.Policy.PolicyLevel objects that compose the 
+    security policy hierarchy.
   """
   pass
  @staticmethod
@@ -1886,12 +2049,18 @@ class SecurityManager(object):
    Returns: The set of permissions that can be granted by the security system.
   ResolvePolicy(evidence: Evidence,reqdPset: PermissionSet,optPset: PermissionSet,denyPset: PermissionSet) -> (PermissionSet,PermissionSet)
   
-   Determines what permissions to grant to code based on the specified evidence and requests.
+   Determines what permissions to grant to code based on the specified evidence 
+    and requests.
+  
   
    evidence: The evidence set used to evaluate policy.
    reqdPset: The required permissions the code needs to run.
-   optPset: The optional permissions that will be used if granted,but aren't required for the code to run.
-   denyPset: The denied permissions that must never be granted to the code even if policy otherwise permits it.
+   optPset: The optional permissions that will be used if granted,but aren't required for 
+    the code to run.
+  
+   denyPset: The denied permissions that must never be granted to the code even if policy 
+    otherwise permits it.
+  
    Returns: The set of permissions that would be granted by the security system.
   """
   pass
@@ -1911,7 +2080,9 @@ class SecurityManager(object):
   """
   ResolveSystemPolicy(evidence: Evidence) -> PermissionSet
   
-   Determines which permissions to grant to code based on the specified evidence,excluding the policy for the System.AppDomain level.
+   Determines which permissions to grant to code based on the specified evidence,
+    excluding the policy for the System.AppDomain level.
+  
   
    evidence: The evidence set used to evaluate policy.
    Returns: The set of permissions that can be granted by the security system.
@@ -1928,7 +2099,10 @@ class SecurityManager(object):
  def SavePolicyLevel(level):
   """
   SavePolicyLevel(level: PolicyLevel)
-   Saves a modified security policy level loaded with System.Security.SecurityManager.LoadPolicyLevelFromFile(System.String,System.Security.PolicyLevelType).
+   Saves a modified security policy level loaded with 
+    System.Security.SecurityManager.LoadPolicyLevelFromFile(System.String,System.Sec
+    urity.PolicyLevelType).
+  
   
    level: The policy level object to be saved.
   """
@@ -2031,14 +2205,17 @@ class SecurityState(object):
  def EnsureState(self):
   """
   EnsureState(self: SecurityState)
-   When overridden in a derived class,ensures that the state that is represented by System.Security.SecurityState is available on the host.
+   When overridden in a derived class,ensures that the state that is represented 
+    by System.Security.SecurityState is available on the host.
   """
   pass
  def IsStateAvailable(self):
   """
   IsStateAvailable(self: SecurityState) -> bool
   
-   Gets a value that indicates whether the state for this implementation of the System.Security.SecurityState class is available on the current host.
+   Gets a value that indicates whether the state for this implementation of the 
+    System.Security.SecurityState class is available on the current host.
+  
    Returns: true if the state is available; otherwise,false.
   """
   pass

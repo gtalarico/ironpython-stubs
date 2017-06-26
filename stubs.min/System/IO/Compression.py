@@ -2,7 +2,7 @@
 # module System.IO.Compression calls itself Compression
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -92,8 +92,11 @@ class DeflateStream(Stream,IDisposable):
    offset: The byte offset in array at which to begin writing data read from the stream.
    count: The maximum number of bytes to read.
    asyncCallback: An optional asynchronous callback,to be called when the read is complete.
-   asyncState: A user-provided object that distinguishes this particular asynchronous read request from other requests.
-   Returns: An System.IAsyncResult object that represents the asynchronous read,which could still be pending.
+   asyncState: A user-provided object that distinguishes this particular asynchronous read 
+    request from other requests.
+  
+   Returns: An System.IAsyncResult object that represents the asynchronous read,which 
+    could still be pending.
   """
   pass
  def BeginWrite(self,array,offset,count,asyncCallback,asyncState):
@@ -106,8 +109,11 @@ class DeflateStream(Stream,IDisposable):
    offset: The byte offset in buffer to begin writing from.
    count: The maximum number of bytes to write.
    asyncCallback: An optional asynchronous callback,to be called when the write is complete.
-   asyncState: A user-provided object that distinguishes this particular asynchronous write request from other requests.
-   Returns: An System.IAsyncResult object that represents the asynchronous write,which could still be pending.
+   asyncState: A user-provided object that distinguishes this particular asynchronous write 
+    request from other requests.
+  
+   Returns: An System.IAsyncResult object that represents the asynchronous write,which 
+    could still be pending.
   """
   pass
  def CreateWaitHandle(self,*args):
@@ -121,9 +127,13 @@ class DeflateStream(Stream,IDisposable):
  def Dispose(self):
   """
   Dispose(self: DeflateStream,disposing: bool)
-   Releases the unmanaged resources used by the System.IO.Compression.DeflateStream and optionally releases the managed resources.
+   Releases the unmanaged resources used by the 
+    System.IO.Compression.DeflateStream and optionally releases the managed 
+    resources.
   
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+  
+   disposing: true to release both managed and unmanaged resources; false to release only 
+    unmanaged resources.
   """
   pass
  def EndRead(self,asyncResult):
@@ -133,8 +143,10 @@ class DeflateStream(Stream,IDisposable):
    Waits for the pending asynchronous read to complete.
   
    asyncResult: The reference to the pending asynchronous request to finish.
-   Returns: The number of bytes read from the stream,between zero (0) and the number of bytes you requested. System.IO.Compression.DeflateStream returns zero (0) only at the end of the stream; otherwise,it blocks 
-    until at least one byte is available.
+   Returns: The number of bytes read from the stream,between zero (0) and the number of 
+    bytes you requested. System.IO.Compression.DeflateStream returns zero (0) only 
+    at the end of the stream; otherwise,it blocks until at least one byte is 
+    available.
   """
   pass
  def EndWrite(self,asyncResult):
@@ -148,7 +160,8 @@ class DeflateStream(Stream,IDisposable):
  def Flush(self):
   """
   Flush(self: DeflateStream)
-   Flushes the contents of the internal buffer of the current stream object to the underlying stream.
+   Flushes the contents of the internal buffer of the current stream object to the 
+    underlying stream.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -157,8 +170,11 @@ class DeflateStream(Stream,IDisposable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-    usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
+    will cause the object to be assigned a new identity when it is marshaled across 
+    a remoting boundary. A value of false is usually appropriate. true to copy the 
+    current System.MarshalByRefObject object's identity to its clone,which will 
+    cause remoting client calls to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -189,7 +205,9 @@ class DeflateStream(Stream,IDisposable):
   """
   Seek(self: DeflateStream,offset: Int64,origin: SeekOrigin) -> Int64
   
-   This operation is not supported and always throws a System.NotSupportedException.
+   This operation is not supported and always throws a 
+    System.NotSupportedException.
+  
   
    offset: The location in the stream.
    origin: One of the System.IO.SeekOrigin values.
@@ -199,7 +217,9 @@ class DeflateStream(Stream,IDisposable):
  def SetLength(self,value):
   """
   SetLength(self: DeflateStream,value: Int64)
-   This operation is not supported and always throws a System.NotSupportedException.
+   This operation is not supported and always throws a 
+    System.NotSupportedException.
+  
   
    value: The length of the stream.
   """
@@ -215,17 +235,10 @@ class DeflateStream(Stream,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -303,8 +316,11 @@ class GZipStream(Stream,IDisposable):
    offset: The byte offset in array at which to begin writing data read from the stream.
    count: The maximum number of bytes to read.
    asyncCallback: An optional asynchronous callback,to be called when the read is complete.
-   asyncState: A user-provided object that distinguishes this particular asynchronous read request from other requests.
-   Returns: An System.IAsyncResult object that represents the asynchronous read,which could still be pending.
+   asyncState: A user-provided object that distinguishes this particular asynchronous read 
+    request from other requests.
+  
+   Returns: An System.IAsyncResult object that represents the asynchronous read,which 
+    could still be pending.
   """
   pass
  def BeginWrite(self,array,offset,count,asyncCallback,asyncState):
@@ -317,8 +333,11 @@ class GZipStream(Stream,IDisposable):
    offset: The byte offset in array at which to begin writing.
    count: The maximum number of bytes to write.
    asyncCallback: An optional asynchronous callback to be called when the write is complete.
-   asyncState: A user-provided object that distinguishes this particular asynchronous write request from other requests.
-   Returns: An System.IAsyncResult object that represents the asynchronous write,which could still be pending.
+   asyncState: A user-provided object that distinguishes this particular asynchronous write 
+    request from other requests.
+  
+   Returns: An System.IAsyncResult object that represents the asynchronous write,which 
+    could still be pending.
   """
   pass
  def CreateWaitHandle(self,*args):
@@ -332,9 +351,12 @@ class GZipStream(Stream,IDisposable):
  def Dispose(self):
   """
   Dispose(self: GZipStream,disposing: bool)
-   Releases the unmanaged resources used by the System.IO.Compression.GZipStream and optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.IO.Compression.GZipStream 
+    and optionally releases the managed resources.
   
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+  
+   disposing: true to release both managed and unmanaged resources; false to release only 
+    unmanaged resources.
   """
   pass
  def EndRead(self,asyncResult):
@@ -344,8 +366,10 @@ class GZipStream(Stream,IDisposable):
    Waits for the pending asynchronous read to complete.
   
    asyncResult: The reference to the pending asynchronous request to finish.
-   Returns: The number of bytes read from the stream,between zero (0) and the number of bytes you requested. System.IO.Compression.GZipStream returns zero (0) only at the end of the stream; otherwise,it blocks until 
-    at least one byte is available.
+   Returns: The number of bytes read from the stream,between zero (0) and the number of 
+    bytes you requested. System.IO.Compression.GZipStream returns zero (0) only at 
+    the end of the stream; otherwise,it blocks until at least one byte is 
+    available.
   """
   pass
  def EndWrite(self,asyncResult):
@@ -359,7 +383,8 @@ class GZipStream(Stream,IDisposable):
  def Flush(self):
   """
   Flush(self: GZipStream)
-   Flushes the contents of the internal buffer of the current System.IO.Compression.GZipStream object to the underlying stream.
+   Flushes the contents of the internal buffer of the current 
+    System.IO.Compression.GZipStream object to the underlying stream.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -368,8 +393,11 @@ class GZipStream(Stream,IDisposable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-    usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
+    will cause the object to be assigned a new identity when it is marshaled across 
+    a remoting boundary. A value of false is usually appropriate. true to copy the 
+    current System.MarshalByRefObject object's identity to its clone,which will 
+    cause remoting client calls to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -393,7 +421,8 @@ class GZipStream(Stream,IDisposable):
    array: The array used to store decompressed bytes.
    offset: The byte offset in array at which the read bytes will be placed.
    count: The maximum number of decompressed bytes to read.
-   Returns: The number of bytes that were decompressed into the byte array. If the end of the stream has been reached,zero or the number of bytes read is returned.
+   Returns: The number of bytes that were decompressed into the byte array. If the end of 
+    the stream has been reached,zero or the number of bytes read is returned.
   """
   pass
  def Seek(self,offset,origin):
@@ -426,17 +455,10 @@ class GZipStream(Stream,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

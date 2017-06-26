@@ -2,7 +2,7 @@
 # module System.Windows.Forms.ComponentModel.Com2Interop calls itself Com2Interop
 # from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -24,7 +24,9 @@ class ICom2PropertyPageDisplayService:
         
             title: A string that is the title of the property page.
             component: The object for which the property page is created.
-            dispid: The DispID of the property that is highlighted when the property page is created.
+            dispid: The DispID of the property that is highlighted when the property page is 
+             created.
+        
             pageGuid: The GUID for the property page.
             parentHandle: A IntPtr that is the handle of the parent control of the property page.
         """
@@ -40,7 +42,8 @@ class IComPropertyBrowser:
     def DropDownDone(self):
         """
         DropDownDone(self: IComPropertyBrowser)
-            Closes any open drop-down controls on the System.Windows.Forms.PropertyGrid control.
+            Closes any open drop-down controls on the System.Windows.Forms.PropertyGrid 
+             control.
         """
         pass
 
@@ -49,21 +52,25 @@ class IComPropertyBrowser:
         EnsurePendingChangesCommitted(self: IComPropertyBrowser) -> bool
         
             Commits all pending changes to the System.Windows.Forms.PropertyGrid control.
-            Returns: true if the System.Windows.Forms.PropertyGrid successfully commits changes; otherwise, false.
+            Returns: true if the System.Windows.Forms.PropertyGrid successfully commits changes; 
+             otherwise, false.
         """
         pass
 
     def HandleF4(self):
         """
         HandleF4(self: IComPropertyBrowser)
-            Activates the System.Windows.Forms.PropertyGrid control when the user chooses Properties for a control in Design view.
+            Activates the System.Windows.Forms.PropertyGrid control when the user chooses 
+             Properties for a control in Design view.
         """
         pass
 
     def LoadState(self, key):
         """
         LoadState(self: IComPropertyBrowser, key: RegistryKey)
-            Loads user states from the registry into the System.Windows.Forms.PropertyGrid control.
+            Loads user states from the registry into the System.Windows.Forms.PropertyGrid 
+             control.
+        
         
             key: The registry key that contains the user states.
         """
@@ -72,7 +79,9 @@ class IComPropertyBrowser:
     def SaveState(self, key):
         """
         SaveState(self: IComPropertyBrowser, key: RegistryKey)
-            Saves user states from the System.Windows.Forms.PropertyGrid control to the registry.
+            Saves user states from the System.Windows.Forms.PropertyGrid control to the 
+             registry.
+        
         
             key: The registry key that contains the user states.
         """

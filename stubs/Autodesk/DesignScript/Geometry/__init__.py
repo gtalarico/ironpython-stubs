@@ -2,7 +2,7 @@
 # module Autodesk.DesignScript.Geometry calls itself Geometry
 # from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -70,11 +70,7 @@ class DesignScriptEntity(object, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __eq__(self, *args): #cannot find CLR method
@@ -82,10 +78,7 @@ class DesignScriptEntity(object, IDisposable, IGraphicItem):
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -125,7 +118,8 @@ class Geometry(DesignScriptEntity, IDisposable, IGraphicItem):
         """
         DeserializeFromSAB(buffer: Array[Byte]) -> Array[Geometry]
         
-            Deserializes the specified Standard ACIS Binary(SAB) format data and returns a list of geometry
+            Deserializes the specified Standard ACIS Binary(SAB) format data and returns a 
+             list of geometry
         """
         pass
 
@@ -163,7 +157,8 @@ class Geometry(DesignScriptEntity, IDisposable, IGraphicItem):
         Explode(self: Geometry) -> Array[Geometry]
         
             Separates compound or non-separated elements into their component
-                    parts.
+                    
+             parts.
         """
         pass
 
@@ -229,7 +224,8 @@ class Geometry(DesignScriptEntity, IDisposable, IGraphicItem):
         """
         IsAlmostEqualTo(self: Geometry, other: Geometry) -> bool
         
-            Check if the two objects have the same representational geometry or numerical values
+            Check if the two objects have the same representational geometry or numerical 
+             values
         """
         pass
 
@@ -246,11 +242,14 @@ class Geometry(DesignScriptEntity, IDisposable, IGraphicItem):
         Rotate(self: Geometry, basePlane: Plane, degrees: float) -> Geometry
         
             Rotates an object around the Plane origin and normal by a specified 
-                    degree
+                  
+               degree
+        
         Rotate(self: Geometry, origin: Point, axis: Vector, degrees: float) -> Geometry
         
             Rotates an object around an origin and an axis by a specified 
-                    degree
+                    
+             degree
         """
         pass
 
@@ -275,7 +274,8 @@ class Geometry(DesignScriptEntity, IDisposable, IGraphicItem):
         """
         Scale1D(self: Geometry, basePoint: Point, from: Point, to: Point) -> Geometry
         
-            Scale in one dimension by base and 2 pick points.  The scaling axis is defined by the line between base and pick0.
+            Scale in one dimension by base and 2 pick points.  The scaling axis is defined 
+             by the line between base and pick0.
         """
         pass
 
@@ -283,7 +283,8 @@ class Geometry(DesignScriptEntity, IDisposable, IGraphicItem):
         """
         Scale2D(self: Geometry, basePlane: Plane, from: Point, to: Point) -> Geometry
         
-            Scale in two dimension by base and 2 pick points  The two pick points are projected onto the base plane in order to determine the 2d scale factors
+            Scale in two dimension by base and 2 pick points  The two pick points are 
+             projected onto the base plane in order to determine the 2d scale factors
         """
         pass
 
@@ -292,7 +293,8 @@ class Geometry(DesignScriptEntity, IDisposable, IGraphicItem):
         SerializeAsSAB(geometry: IEnumerable[Geometry]) -> Array[Byte]
         SerializeAsSAB(self: Geometry) -> Array[Byte]
         
-            Serializes the specified geometry into Standard ACIS Binary(SAB) format and returns serialized binary stream data
+            Serializes the specified geometry into Standard ACIS Binary(SAB) format and 
+             returns serialized binary stream data
         """
         pass
 
@@ -314,7 +316,9 @@ class Geometry(DesignScriptEntity, IDisposable, IGraphicItem):
         Transform(self: Geometry, fromCoordinateSystem: CoordinateSystem, contextCoordinateSystem: CoordinateSystem) -> Geometry
         
             Transforms this geometry from source CoordinateSystem to a new 
-                    context CoordinateSystem.
+                    
+             context CoordinateSystem.
+        
             Returns: Transformed Geometry.
         Transform(self: Geometry, cs: CoordinateSystem) -> Geometry
         
@@ -327,7 +331,9 @@ class Geometry(DesignScriptEntity, IDisposable, IGraphicItem):
         Translate(self: Geometry, direction: Vector, distance: float) -> Geometry
         
             Translates any geometry type by the given distance in the given 
-                    direction.
+                    
+             direction.
+        
         
             direction: Displacement direction.
             distance: Displacement distance along given direction.
@@ -338,7 +344,9 @@ class Geometry(DesignScriptEntity, IDisposable, IGraphicItem):
         Translate(self: Geometry, xTranslation: float, yTranslation: float, zTranslation: float) -> Geometry
         
             Translates any given geometry by the given displacements in the x, y,
-                    and z directions defined in WCS respectively.
+                 
+                and z directions defined in WCS respectively.
+        
         
             xTranslation: Displacement along X-axis.
             yTranslation: Displacement along Y-axis.
@@ -361,18 +369,11 @@ class Geometry(DesignScriptEntity, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -464,8 +465,10 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         CoordinateSystemAtParameter(self: Curve, param: float) -> CoordinateSystem
         
-            Get a CoordinateSystem with origin at the point at the given parameter. The XAxis is aligned with the curve normal,  the YAxis is aligned with the curve tangent at this point, and the ZAxis is aligned with 
-             the up-vector or binormal at this point
+            Get a CoordinateSystem with origin at the point at the given parameter. The 
+             XAxis is aligned with the curve normal,  the YAxis is aligned with the curve 
+             tangent at this point, and the ZAxis is aligned with the up-vector or binormal 
+             at this point
         
         
             param: The parameter at which to evaluate
@@ -477,7 +480,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         CoordinateSystemAtSegmentLength(self: Curve, segmentLength: float) -> CoordinateSystem
         
-            Returns a CoordinateSystem at specified distance from Curve start Point. Y Axis lies tangent to the Curve, X Axis is the curvature.
+            Returns a CoordinateSystem at specified distance from Curve start Point. Y Axis 
+             lies tangent to the Curve, X Axis is the curvature.
+        
         
             segmentLength: The distance along the curve at which to evaluate
             Returns: CoordinateSystem on curve
@@ -500,7 +505,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         DivideByDistance(self: Curve, divisions: int) -> Array[Curve]
         
-            Divides curve into given number of curves with equal distances between start and end of each curve (equal chords).
+            Divides curve into given number of curves with equal distances between start 
+             and end of each curve (equal chords).
+        
         
             divisions: Number of divisions
             Returns: An Array of Curves after dividing
@@ -511,7 +518,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         DivideByDistanceFromParameter(self: Curve, distance: float, parameter: float) -> Array[Curve]
         
-            Divides curve into curves of given chord length measured from given parameter location
+            Divides curve into curves of given chord length measured from given parameter 
+             location
+        
         
             distance: Chord length of each curve obtained from splitting
             parameter: Parameter location for measuring from
@@ -523,7 +532,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         DivideByLengthFromParameter(self: Curve, length: float, parameter: float) -> Array[Curve]
         
-            Divides curve into curves of given length measured from the given parameter location
+            Divides curve into curves of given length measured from the given parameter 
+             location
+        
         
             length: Length of  curves after division
             parameter: Parameter location for measuring from
@@ -559,7 +570,10 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         Extend(self: Curve, distance: float, pickSide: Point) -> Curve
         
-            Extend a Curve by a given distance at a particular end determined by a pick Point.  The picked side will be extended.  Closed curves like Circles and Ellipses cannot be extended.
+            Extend a Curve by a given distance at a particular end determined by a pick 
+             Point.  The picked side will be extended.  Closed curves like Circles and 
+             Ellipses cannot be extended.
+        
         
             distance: Distance to extend
             pickSide: A Point on the end to extend
@@ -571,7 +585,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         ExtendEnd(self: Curve, distance: float) -> Curve
         
-            Extend a Curve by a given distance on its end.  Closed curves like Circles and Ellipses cannot be extended.
+            Extend a Curve by a given distance on its end.  Closed curves like Circles and 
+             Ellipses cannot be extended.
+        
         
             distance: Distance to extend
             Returns: The extended Curve
@@ -582,7 +598,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         ExtendStart(self: Curve, distance: float) -> Curve
         
-            Extend a Curve by a given distance on its start side.  Closed curves like Circles and Ellipses cannot be extended.
+            Extend a Curve by a given distance on its start side.  Closed curves like 
+             Circles and Ellipses cannot be extended.
+        
         
             distance: Distance to extend
             Returns: The extended Curve
@@ -617,20 +635,26 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         ExtrudeAsSolid(self: Curve, direction: Vector, distance: float) -> Solid
         
-            Extrudes a Curve in the specified direction, by the specified distance. Curve must be closed.
+            Extrudes a Curve in the specified direction, by the specified distance. Curve 
+             must be closed.
+        
         
             direction: Vector to extrude along
             distance: Distance to extrude
             Returns: The extruded Solid
         ExtrudeAsSolid(self: Curve, direction: Vector) -> Solid
         
-            Extrudes a Curve in the specified direction, by the length of the input Vector. Curve must be closed.
+            Extrudes a Curve in the specified direction, by the length of the input Vector. 
+             Curve must be closed.
+        
         
             direction: Vector to extrude along
             Returns: The extruded Solid
         ExtrudeAsSolid(self: Curve, distance: float) -> Solid
         
-            Extrudes a Curve in the Normal direction by the specified distance. Curve must be closed.
+            Extrudes a Curve in the Normal direction by the specified distance. Curve must 
+             be closed.
+        
         
             distance: Distance to extrude
             Returns: The extruded Solid
@@ -653,7 +677,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         Join(self: Curve, curves: IEnumerable[Curve]) -> PolyCurve
         Join(self: Curve, curve: Curve) -> PolyCurve
         
-            Join this curve and the input curve into a new PolyCurve, maintaining the original curves exactly.
+            Join this curve and the input curve into a new PolyCurve, maintaining the 
+             original curves exactly.
+        
         
             curve: The curve to join to
             Returns: A PolyCurve made up of the two curves
@@ -668,7 +694,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         NormalAtParameter(self: Curve, param: float) -> Vector
         
-            Get a Vector perpendicular to the curve at a specified parameter between StartParameter() and EndParameter()
+            Get a Vector perpendicular to the curve at a specified parameter between 
+             StartParameter() and EndParameter()
+        
         
             param: The parameter at which to evaluate
             Returns: A Vector perpendicular to the curve at param
@@ -679,7 +707,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         Offset(self: Curve, distance: float) -> Curve
         
-            Offset a Curve by a specified amount. Curve must be planar, and, if a BSplineCurve/NurbsCurve, must have degree > 1.
+            Offset a Curve by a specified amount. Curve must be planar, and, if a 
+             BSplineCurve/NurbsCurve, must have degree > 1.
+        
         
             distance: A positive or negative distance to offset
             Returns: new offsetted curves
@@ -690,7 +720,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         ParameterAtChordLength(self: Curve, chordLength: float, parameter: float, forward: bool) -> float
         
-            Get the parameter at a particular chord length along the curve from given location.
+            Get the parameter at a particular chord length along the curve from given 
+             location.
+        
         
             chordLength: The chord length at which to evaluate
             parameter: Parameter on the curve to measure from
@@ -769,7 +801,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         PlaneAtParameter(self: Curve, param: float) -> Plane
         
-            Returns a Plane whose normal aligns with the tangent of the Curve. Parameters are adjusted such that 0 is always the start Point and 1 is always the end Point.
+            Returns a Plane whose normal aligns with the tangent of the Curve. Parameters 
+             are adjusted such that 0 is always the start Point and 1 is always the end 
+             Point.
         """
         pass
 
@@ -777,7 +811,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         PlaneAtSegmentLength(self: Curve, segmentLength: float) -> Plane
         
-            Returns a Plane at the specified distance along the Curve from the  start Point. The normal of the Plane aligns with the tangent of the  Curve.
+            Returns a Plane at the specified distance along the Curve from the  start 
+             Point. The normal of the Plane aligns with the tangent of the  Curve.
+        
         
             segmentLength: The distance along the curve at which to evaluate
             Returns: Plane on curve
@@ -788,7 +824,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         PointAtChordLength(self: Curve, chordLength: float, parameterLocation: float, forward: bool) -> Point
         
-            Get the point at a particular chord length of the curve from given parameter location.
+            Get the point at a particular chord length of the curve from given parameter 
+             location.
+        
         
             chordLength: The chord length at which to evaluate
             parameterLocation: Parameter on the curve to measure from
@@ -805,7 +843,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         PointAtParameter(self: Curve, param: float) -> Point
         
-            Get a Point on the Curve at a specified parameter between StartParameter() and EndParameter()
+            Get a Point on the Curve at a specified parameter between StartParameter() and 
+             EndParameter()
+        
         
             param: The parameter at which to evaluate
             Returns: Point
@@ -827,7 +867,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         PointsAtChordLengthFromPoint(self: Curve, point: Point, chordLength: float) -> Array[Point]
         
-            Returns points spaced on the curve at given chord length starting from the given point
+            Returns points spaced on the curve at given chord length starting from the 
+             given point
+        
         
             point: The reference point from where to measure
             Returns: List of points on curve
@@ -838,7 +880,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         PointsAtEqualChordLength(self: Curve, divisions: int) -> Array[Point]
         
-            Returns points spaced along curve at equal chord length  based on the input number of divisions
+            Returns points spaced along curve at equal chord length  based on the input 
+             number of divisions
+        
             Returns: List of points on curve
         """
         pass
@@ -847,7 +891,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         PointsAtEqualSegmentLength(self: Curve, divisions: int) -> Array[Point]
         
-            Returns points spaced equally along the curve length  based on the input number of divisions
+            Returns points spaced equally along the curve length  based on the input number 
+             of divisions
+        
             Returns: Points spaced equally along length of curve
         """
         pass
@@ -856,7 +902,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         PointsAtSegmentLengthFromPoint(self: Curve, point: Point, segmentLength: float) -> Array[Point]
         
-            Returns points spaced equally along the curve at given segment length and starting from the given point
+            Returns points spaced equally along the curve at given segment length and 
+             starting from the given point
+        
         
             point: The reference point from where to measure
             segmentLength: The distance along the curve at which to evaluate
@@ -981,7 +1029,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         TangentAtParameter(self: Curve, param: float) -> Vector
         
-            Get a Vector tangent to the curve at a specified parameter between StartParameter() and EndParameter()
+            Get a Vector tangent to the curve at a specified parameter between 
+             StartParameter() and EndParameter()
+        
         
             param: The parameter at which to evaluate
             Returns: A Vector parallel to the curve at param
@@ -1051,7 +1101,9 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         """
         TrimSegmentsByParameter(self: Curve, parameters: Array[float], discardEvenSegments: bool) -> Array[Curve]
         
-            Removes several segments of the Curve, disgarding 2nd, 4th, 6th ... segments if the bool is true
+            Removes several segments of the Curve, disgarding 2nd, 4th, 6th ... segments if 
+             the bool is true
+        
         
             parameters: A list of parameters at which to split the curve
             discardEvenSegments: Whether to discard even segments or not
@@ -1066,18 +1118,11 @@ class Curve(Geometry, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1145,7 +1190,9 @@ class Arc(Curve, IDisposable, IGraphicItem):
         """
         ByCenterPointRadiusAngle(center: Point, radius: float, startAngle: float, endAngle: float, normal: Vector) -> Arc
         
-            Create an arc by providing it's center point, radius, angle sweep, and normal vector
+            Create an arc by providing it's center point, radius, angle sweep, and normal 
+             vector
+        
         
             center: The center of the arc
             radius: Radius of the arc
@@ -1175,7 +1222,9 @@ class Arc(Curve, IDisposable, IGraphicItem):
         """
         ByCenterPointStartPointSweepAngle(centerPoint: Point, startPoint: Point, sweepAngle: float, normal: Vector) -> Arc
         
-            Create an arc by providing it's center point, start point, sweep point, and normal
+            Create an arc by providing it's center point, start point, sweep point, and 
+             normal
+        
         
             centerPoint: The center of the arc
             startPoint: The start point on the arc
@@ -1218,7 +1267,9 @@ class Arc(Curve, IDisposable, IGraphicItem):
         """
         ByStartEndAndTangencies(point1: Point, vector1: Vector, point2: Point, vector2: Vector) -> Array[Arc]
         
-            Create an arc or tangent bi arc by start and end points and tangencies at start and end
+            Create an arc or tangent bi arc by start and end points and tangencies at start 
+             and end
+        
         
             point1: Point for the start of bi-arc
             vector1: Tangent vector for the start of bi-arc
@@ -1271,18 +1322,11 @@ class Arc(Curve, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1331,7 +1375,8 @@ class BoundingBox(DesignScriptEntity, IDisposable, IGraphicItem):
         """
         ByCorners(min: Point, max: Point) -> BoundingBox
         
-            Creates the an axis-aligned BoundingBox spanning between the minimum Point and the maximum Point.
+            Creates the an axis-aligned BoundingBox spanning between the minimum Point and 
+             the maximum Point.
         """
         pass
 
@@ -1432,18 +1477,11 @@ class BoundingBox(DesignScriptEntity, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1488,7 +1526,8 @@ class Circle(Curve, IDisposable, IGraphicItem):
         """
         ByCenterPointRadius(centerPoint: Point, radius: float) -> Circle
         
-            Creates a Circle with input center Point and radius in the world XY plane, with world Z as normal.
+            Creates a Circle with input center Point and radius in the world XY plane, with 
+             world Z as normal.
         """
         pass
 
@@ -1506,7 +1545,8 @@ class Circle(Curve, IDisposable, IGraphicItem):
         """
         ByPlaneRadius(plane: Plane, radius: float) -> Circle
         
-            Create a Circle centered at the input Plane origin (root), lying in  the input Plane, with given radius.
+            Create a Circle centered at the input Plane origin (root), lying in  the input 
+             Plane, with given radius.
         """
         pass
 
@@ -1540,18 +1580,11 @@ class Circle(Curve, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1602,18 +1635,11 @@ class CoEdge(DesignScriptEntity, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1690,18 +1716,11 @@ class Topology(Geometry, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1757,7 +1776,9 @@ class Solid(Topology, IDisposable, IGraphicItem):
         """
         ByRevolve(profile: Curve, axisOrigin: Point, axisDirection: Vector, startAngle: float, sweepAngle: float) -> Solid
         
-            Create a Surface of revolution, sweeping the profile Curve around the axis Ray formed by the origin and the axis Vector, from the start angle in degrees to the sweep angle in degrees.
+            Create a Surface of revolution, sweeping the profile Curve around the axis Ray 
+             formed by the origin and the axis Vector, from the start angle in degrees to 
+             the sweep angle in degrees.
         """
         pass
 
@@ -1835,7 +1856,8 @@ class Solid(Topology, IDisposable, IGraphicItem):
         """
         ProjectInputOnto(self: Solid, geometryToProject: Geometry, projectDirection: Vector) -> Array[Geometry]
         
-            Projects the input Geometry onto this Solid, in the direction of the input Vector
+            Projects the input Geometry onto this Solid, in the direction of the input 
+             Vector
         """
         pass
 
@@ -1867,18 +1889,11 @@ class Solid(Topology, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1913,7 +1928,9 @@ class Cone(Solid, IDisposable, IGraphicItem):
         """
         ByCoordinateSystemHeightRadii(cs: CoordinateSystem, height: float, startRadius: float, endRadius: float) -> Cone
         
-            Creates a Cone with base Point at CoordinateSystem origin, extending in the CoordinateSystem Z axis deriction length amount, with a  circular bases in the CoordinateSystem XY Plane.
+            Creates a Cone with base Point at CoordinateSystem origin, extending in the 
+             CoordinateSystem Z axis deriction length amount, with a  circular bases in the 
+             CoordinateSystem XY Plane.
         """
         pass
 
@@ -1922,7 +1939,9 @@ class Cone(Solid, IDisposable, IGraphicItem):
         """
         ByCoordinateSystemHeightRadius(cs: CoordinateSystem, height: float, startRadius: float) -> Cone
         
-            Creates a Cone with base Point at CoordinateSystem origin, extending in the CoordinateSystem Z axis deriction length amount, with a  circular base in the CoordinateSystem XY Plane.
+            Creates a Cone with base Point at CoordinateSystem origin, extending in the 
+             CoordinateSystem Z axis deriction length amount, with a  circular base in the 
+             CoordinateSystem XY Plane.
         """
         pass
 
@@ -1931,7 +1950,9 @@ class Cone(Solid, IDisposable, IGraphicItem):
         """
         ByPointsRadii(startPoint: Point, endPoint: Point, startRadius: float, endRadius: float) -> Cone
         
-            Create a Cone with axis from start Point to end Point, with given  radiuses at start and end. This object does not have an apex, and can be thought of as a trimmed Cone.
+            Create a Cone with axis from start Point to end Point, with given  radiuses at 
+             start and end. This object does not have an apex, and can be thought of as a 
+             trimmed Cone.
         """
         pass
 
@@ -1940,7 +1961,8 @@ class Cone(Solid, IDisposable, IGraphicItem):
         """
         ByPointsRadius(startPoint: Point, endPoint: Point, startRadius: float) -> Cone
         
-            Create a Cone with given base radius at start Point, extending to a  apex at end Point.
+            Create a Cone with given base radius at start Point, extending to a  apex at 
+             end Point.
         """
         pass
 
@@ -1965,18 +1987,11 @@ class Cone(Solid, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -2039,7 +2054,8 @@ class CoordinateSystem(DesignScriptEntity, IDisposable, IGraphicItem):
         """
         ByCylindricalCoordinates(cs: CoordinateSystem, radius: float, theta: float, height: float) -> CoordinateSystem
         
-            Creates a CoordinateSystem at the specified cylindrical coordinate parameters with respect to the specified coordinate system
+            Creates a CoordinateSystem at the specified cylindrical coordinate parameters 
+             with respect to the specified coordinate system
         """
         pass
 
@@ -2058,15 +2074,20 @@ class CoordinateSystem(DesignScriptEntity, IDisposable, IGraphicItem):
         ByOrigin(origin: Point) -> CoordinateSystem
         
             Create a CoordinateSystem with origin at input Point, with X and Y Axes
-                    set as WCS X and Y Axes.
+               
+                  set as WCS X and Y Axes.
+        
         ByOrigin(x: float, y: float, z: float) -> CoordinateSystem
         
             Create a CoordinateSystem with origin at X, Y, and Z locations, with
-                    X and Y Axes set as WCS X and Y Axes.
+                  
+               X and Y Axes set as WCS X and Y Axes.
+        
         ByOrigin(x: float, y: float) -> CoordinateSystem
         
             Create a CoordinateSystem with origin at X and Y locations, with
-                    X and Y Axes set as WCS X and Y Axes. Z defaults to 0.
+                    X 
+             and Y Axes set as WCS X and Y Axes. Z defaults to 0.
         """
         pass
 
@@ -2076,12 +2097,16 @@ class CoordinateSystem(DesignScriptEntity, IDisposable, IGraphicItem):
         ByOriginVectors(origin: Point, xAxis: Vector, yAxis: Vector, zAxis: Vector) -> CoordinateSystem
         
             Create a CoordinateSystem at the origin with X and Y axis, with Z
-                    axis ignored completely. Input Vectors are normalized before creating 
-                    the CoordinateSystem.
+                    
+             axis ignored completely. Input Vectors are normalized before creating 
+                
+                 the CoordinateSystem.
+        
         ByOriginVectors(origin: Point, xAxis: Vector, yAxis: Vector) -> CoordinateSystem
         
             Create a CoordinateSystem at the origin with X and Y axis. 
-                    Input Vectors are normalized before creating the CoordinateSystem.
+                    Input 
+             Vectors are normalized before creating the CoordinateSystem.
         """
         pass
 
@@ -2091,7 +2116,8 @@ class CoordinateSystem(DesignScriptEntity, IDisposable, IGraphicItem):
         ByPlane(plane: Plane) -> CoordinateSystem
         
             Create a CoordinateSystem with origin equal to input Plane origin, and 
-                    X and Y axes lying in the Plane, aligned with Plane X and Y axes.
+               
+                  X and Y axes lying in the Plane, aligned with Plane X and Y axes.
         """
         pass
 
@@ -2100,7 +2126,8 @@ class CoordinateSystem(DesignScriptEntity, IDisposable, IGraphicItem):
         """
         BySphericalCoordinates(cs: CoordinateSystem, radius: float, theta: float, phi: float) -> CoordinateSystem
         
-            Creates a CoordinateSystem at the specified spherical coordinate parameters with respect to the specified coordinate system
+            Creates a CoordinateSystem at the specified spherical coordinate parameters 
+             with respect to the specified coordinate system
         """
         pass
 
@@ -2126,7 +2153,8 @@ class CoordinateSystem(DesignScriptEntity, IDisposable, IGraphicItem):
         Identity() -> CoordinateSystem
         
             Creates a CoordinateSystem as the World Coordinate System: origin at 
-                    0, 0, 0; x axis at 1, 0, 0; y axis at 0, 1, 0; z axis at 0, 0, 1
+                 
+                0, 0, 0; x axis at 1, 0, 0; y axis at 0, 1, 0; z axis at 0, 0, 1
         """
         pass
 
@@ -2134,7 +2162,8 @@ class CoordinateSystem(DesignScriptEntity, IDisposable, IGraphicItem):
         """
         Inverse(self: CoordinateSystem) -> CoordinateSystem
         
-            Get the inverse of this CoordinateSystem - applying this CoordinateSystem to a piece of Geometry reverses the original.
+            Get the inverse of this CoordinateSystem - applying this CoordinateSystem to a 
+             piece of Geometry reverses the original.
         """
         pass
 
@@ -2174,12 +2203,15 @@ class CoordinateSystem(DesignScriptEntity, IDisposable, IGraphicItem):
         """
         Rotate(self: CoordinateSystem, plane: Plane, degrees: float) -> CoordinateSystem
         
-            Rotates an object around the origin and normal of the given Plane by a specified
+            Rotates an object around the origin and normal of the given Plane by a 
+             specified
                     degree
+        
         Rotate(self: CoordinateSystem, origin: Point, axis: Vector, degrees: float) -> CoordinateSystem
         
             Rotates an object around an origin and an axis by a specified 
-                    degree
+                    
+             degree
         """
         pass
 
@@ -2204,7 +2236,8 @@ class CoordinateSystem(DesignScriptEntity, IDisposable, IGraphicItem):
         """
         Scale1D(self: CoordinateSystem, basePoint: Point, from: Point, to: Point) -> CoordinateSystem
         
-            Scale in one dimension by base and 2 pick points.  The scaling axis is defined by the line between base and pick0.
+            Scale in one dimension by base and 2 pick points.  The scaling axis is defined 
+             by the line between base and pick0.
         """
         pass
 
@@ -2212,7 +2245,8 @@ class CoordinateSystem(DesignScriptEntity, IDisposable, IGraphicItem):
         """
         Scale2D(self: CoordinateSystem, basePlane: Plane, from: Point, to: Point) -> CoordinateSystem
         
-            Scale in two dimension by base and 2 pick points  The two pick points are projected onto the base plane in order to determine the 2d scale factors
+            Scale in two dimension by base and 2 pick points  The two pick points are 
+             projected onto the base plane in order to determine the 2d scale factors
         """
         pass
 
@@ -2233,7 +2267,9 @@ class CoordinateSystem(DesignScriptEntity, IDisposable, IGraphicItem):
         Transform(self: CoordinateSystem, fromCoordinateSystem: CoordinateSystem, contextCoordinateSystem: CoordinateSystem) -> CoordinateSystem
         
             Transforms this CoordinateSystem from source CoordinateSystem to a new 
-                    context CoordinateSystem.
+               
+                  context CoordinateSystem.
+        
             Returns: Transformed CoordinateSystem.
         Transform(self: CoordinateSystem, cs: CoordinateSystem) -> CoordinateSystem
         
@@ -2246,7 +2282,9 @@ class CoordinateSystem(DesignScriptEntity, IDisposable, IGraphicItem):
         Translate(self: CoordinateSystem, direction: Vector, distance: float) -> CoordinateSystem
         
             Translates any CoordinateSystem type by the given distance in the given 
-                    direction.
+              
+                   direction.
+        
         
             direction: Displacement direction.
             distance: Displacement distance along given direction.
@@ -2257,7 +2295,9 @@ class CoordinateSystem(DesignScriptEntity, IDisposable, IGraphicItem):
         Translate(self: CoordinateSystem, xTranslation: float, yTranslation: float, zTranslation: float) -> CoordinateSystem
         
             Translates any given CoordinateSystem by the given displacements in the x, y,
-                    and z directions defined in WCS respectively.
+         
+                        and z directions defined in WCS respectively.
+        
         
             xTranslation: Displacement along X-axis.
             yTranslation: Displacement along Y-axis.
@@ -2267,18 +2307,11 @@ class CoordinateSystem(DesignScriptEntity, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -2406,10 +2439,14 @@ class Cuboid(Solid, IDisposable, IGraphicItem):
         """
         ByLengths(cs: CoordinateSystem, width: float, length: float, height: float) -> Cuboid
         
-            Create a Cuboid centered and oriented to input CoordinateSystem, with  specified width, length, and height.
+            Create a Cuboid centered and oriented to input CoordinateSystem, with  
+             specified width, length, and height.
+        
         ByLengths(origin: Point, width: float, length: float, height: float) -> Cuboid
         
-            Create a Cuboid centered at input Point, with specified width, length,  and height.
+            Create a Cuboid centered at input Point, with specified width, length,  and 
+             height.
+        
         ByLengths(width: float, length: float, height: float) -> Cuboid
         
             Create a Cuboid centered at WCS origin, with width, length, and height.
@@ -2437,18 +2474,11 @@ class Cuboid(Solid, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -2490,7 +2520,8 @@ class Cylinder(Cone, IDisposable, IGraphicItem):
         """
         ByPointsRadius(startPoint: Point, endPoint: Point, radius: float) -> Cylinder
         
-            Construct a Solid Cylinder given the bottom and top center point of the Cylinder.
+            Construct a Solid Cylinder given the bottom and top center point of the 
+             Cylinder.
         """
         pass
 
@@ -2499,7 +2530,8 @@ class Cylinder(Cone, IDisposable, IGraphicItem):
         """
         ByRadiusHeight(cs: CoordinateSystem, radius: float, height: float) -> Cylinder
         
-            Construct a Solid Cylinder defined by a parent CoordinateSystem, the radius, and the height of the cylinder
+            Construct a Solid Cylinder defined by a parent CoordinateSystem, the radius, 
+             and the height of the cylinder
         """
         pass
 
@@ -2524,18 +2556,11 @@ class Cylinder(Cone, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -2579,18 +2604,11 @@ class Edge(DesignScriptEntity, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -2644,7 +2662,9 @@ class Ellipse(Curve, IDisposable, IGraphicItem):
         """
         ByCoordinateSystemRadii(origin: CoordinateSystem, xAxisRadius: float, yAxisRadius: float) -> Ellipse
         
-            Create an Ellipse centered and aligned with input CoordinateSystem,  with a x_radius radius in the CS X direction, and y_radius radius in the  CS Y direction.
+            Create an Ellipse centered and aligned with input CoordinateSystem,  with a 
+             x_radius radius in the CS X direction, and y_radius radius in the  CS Y 
+             direction.
         """
         pass
 
@@ -2653,7 +2673,8 @@ class Ellipse(Curve, IDisposable, IGraphicItem):
         """
         ByOriginRadii(origin: Point, xAxisRadius: float, yAxisRadius: float) -> Ellipse
         
-            Create an Ellipse centered at input Point, aligned with WCS XY Plane, with specified X and Y axis radii.
+            Create an Ellipse centered at input Point, aligned with WCS XY Plane, with 
+             specified X and Y axis radii.
         """
         pass
 
@@ -2662,7 +2683,8 @@ class Ellipse(Curve, IDisposable, IGraphicItem):
         """
         ByOriginVectors(origin: Point, xAxisRadius: Vector, yAxisRadius: Vector) -> Ellipse
         
-            Create an Ellipse centered at input Point, with two specified axes.  Axes should be be at 90 degrees to each other.
+            Create an Ellipse centered at input Point, with two specified axes.  Axes 
+             should be be at 90 degrees to each other.
         """
         pass
 
@@ -2671,7 +2693,9 @@ class Ellipse(Curve, IDisposable, IGraphicItem):
         """
         ByPlaneRadii(plane: Plane, xAxisRadius: float, yAxisRadius: float) -> Ellipse
         
-            Create an Ellipse centered and aligned with input Plane, with a x_radius  radius in the Plane X axis direction, and y_radius radius in the  Plane Y axis direction.
+            Create an Ellipse centered and aligned with input Plane, with a x_radius  
+             radius in the Plane X axis direction, and y_radius radius in the  Plane Y axis 
+             direction.
         """
         pass
 
@@ -2696,18 +2720,11 @@ class Ellipse(Curve, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -2749,12 +2766,16 @@ class EllipseArc(Curve, IDisposable, IGraphicItem):
         """
         ByPlaneRadiiAngles(plane: Plane, xRadius: float, yRadius: float, startAngle: float, sweepAngle: float) -> EllipseArc
         
-            Create an EllipseArc in a plane with the given the radii along the X and Y axes and the angles to sweep through
+            Create an EllipseArc in a plane with the given the radii along the X and Y axes 
+             and the angles to sweep through
+        
         
             plane: The plane the EllipseArc is contained in
             xRadius: The radius of the EllipseArc in the X direction of the Plane
             yRadius: The radius of the EllipseArc in the Y direction of the Plane
-            startAngle: The start angle of the arc as measured from the positive x-axis of the input plane
+            startAngle: The start angle of the arc as measured from the positive x-axis of the input 
+             plane
+        
             sweepAngle: The angle to sweep from the start angle in degrees
         """
         pass
@@ -2785,18 +2806,11 @@ class EllipseArc(Curve, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -2883,18 +2897,11 @@ class Face(DesignScriptEntity, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -3026,8 +3033,11 @@ class Helix(Curve, IDisposable, IGraphicItem):
         """
         ByAxis(axisPoint: Point, axisDirection: Vector, startPoint: Point, pitch: float, angleTurns: float) -> Helix
         
-            Create a Helix. The helix always rotates clockwise about the supplied  axis direction. If viewing along the axis direction, the viewer will see  the point turning clockwise around the axis as it moves 
-             along the curve  in the direction of increasing parameter. Pitch is Distance the helix  moves in the axis direction per turn. This can be positive or negative.
+            Create a Helix. The helix always rotates clockwise about the supplied  axis 
+             direction. If viewing along the axis direction, the viewer will see  the point 
+             turning clockwise around the axis as it moves along the curve  in the direction 
+             of increasing parameter. Pitch is Distance the helix  moves in the axis 
+             direction per turn. This can be positive or negative.
         """
         pass
 
@@ -3052,18 +3062,11 @@ class Helix(Curve, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -3233,7 +3236,8 @@ class Line(Curve, IDisposable, IGraphicItem):
         """
         ByStartPointDirectionLength(startPoint: Point, direction: Vector, length: float) -> Line
         
-            Create a straight Line starting at start Point, extending in Vector direction by specified length.
+            Create a straight Line starting at start Point, extending in Vector direction 
+             by specified length.
         """
         pass
 
@@ -3251,7 +3255,8 @@ class Line(Curve, IDisposable, IGraphicItem):
         """
         ByTangency(curve: Curve, parameter: float) -> Line
         
-            Create a Line tangent to the input Curve, positioned at the parameter Point of the input Curve.
+            Create a Line tangent to the input Curve, positioned at the parameter Point of 
+             the input Curve.
         """
         pass
 
@@ -3276,18 +3281,11 @@ class Line(Curve, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -3331,18 +3329,11 @@ class Loop(DesignScriptEntity, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -3394,18 +3385,11 @@ class Mesh(DesignScriptEntity, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -3478,7 +3462,9 @@ class NurbsCurve(Curve, IDisposable, IGraphicItem):
         """
         ControlPoints(self: NurbsCurve) -> Array[Point]
         
-            Get the control points of the NurbsCurve.  These are the points that the curve interpolates.
+            Get the control points of the NurbsCurve.  These are the points that the curve 
+             interpolates.
+        
             Returns: An Array of Points
         """
         pass
@@ -3499,7 +3485,8 @@ class NurbsCurve(Curve, IDisposable, IGraphicItem):
         """
         Knots(self: NurbsCurve) -> Array[float]
         
-            The knots of the Curve.  These, along with the Degree, define the domain of the Curve where a particular control vertex acts.
+            The knots of the Curve.  These, along with the Degree, define the domain of the 
+             Curve where a particular control vertex acts.
         """
         pass
 
@@ -3511,23 +3498,17 @@ class NurbsCurve(Curve, IDisposable, IGraphicItem):
         """
         Weights(self: NurbsCurve) -> Array[float]
         
-            The weights of the control vertices of the curve.  These define the magnitude of influence of the control vertices.
+            The weights of the control vertices of the curve.  These define the magnitude 
+             of influence of the control vertices.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -3568,7 +3549,8 @@ class Surface(Topology, IDisposable, IGraphicItem):
         """
         ApproximateWithTolerance(self: Surface, tolerance: float) -> NurbsSurface
         
-            Gets a Nurbs representation of the Surface within a specified tolerance. This method may approximate Surface in certain circumstances.
+            Gets a Nurbs representation of the Surface within a specified tolerance. This 
+             method may approximate Surface in certain circumstances.
         """
         pass
 
@@ -3586,7 +3568,8 @@ class Surface(Topology, IDisposable, IGraphicItem):
         """
         ByPatch(closedCurve: Curve) -> Surface
         
-            Create a Surface by filling in the interior of a closed boundary defined by input Curves.
+            Create a Surface by filling in the interior of a closed boundary defined by 
+             input Curves.
         """
         pass
 
@@ -3600,7 +3583,9 @@ class Surface(Topology, IDisposable, IGraphicItem):
         """
         ByRevolve(profile: Curve, axisOrigin: Point, axisDirection: Vector, startAngle: float, sweepAngle: float) -> Surface
         
-            Create a Surface by sweeping the profile Curve around the axis ray formed  by origin Point in the direction of the axis Vector, starting at start_angle in degrees, sweeping sweep_angle in degrees.
+            Create a Surface by sweeping the profile Curve around the axis ray formed  by 
+             origin Point in the direction of the axis Vector, starting at start_angle in 
+             degrees, sweeping sweep_angle in degrees.
         """
         pass
 
@@ -3646,7 +3631,8 @@ class Surface(Topology, IDisposable, IGraphicItem):
         """
         CurvatureAtParameter(self: Surface, u: float, v: float) -> CoordinateSystem
         
-            The returned coordination system use xAxis, yAxis and zAxis to represent the uDir, vDir and normal. The length of xAxis, yAxis represents the curvatures.
+            The returned coordination system use xAxis, yAxis and zAxis to represent the 
+             uDir, vDir and normal. The length of xAxis, yAxis represents the curvatures.
         """
         pass
 
@@ -3690,12 +3676,16 @@ class Surface(Topology, IDisposable, IGraphicItem):
         """
         GetIsoline(self: Surface, isoDirection: int, parameter: float) -> Curve
         
-            Create a parameter line curve on the given surface. Create a Curve that represents a u or v parameter line on the Surface. A  parameter line runs in the direction of increasing u or v parameter at a  
-             constant opposite u or v parameter. The resulting Curve will match the  Surface parameterisation and its range will be bounded by the Surface  parameter range. The type of Curve returned will depend on the 
-             Surface  type.
+            Create a parameter line curve on the given surface. Create a Curve that 
+             represents a u or v parameter line on the Surface. A  parameter line runs in 
+             the direction of increasing u or v parameter at a  constant opposite u or v 
+             parameter. The resulting Curve will match the  Surface parameterisation and its 
+             range will be bounded by the Surface  parameter range. The type of Curve 
+             returned will depend on the Surface  type.
         
         
-            isoDirection: If direction == 0, creates a U parameter line, if direction == 1, creates a V parameter line.
+            isoDirection: If direction == 0, creates a U parameter line, if direction == 1, creates a V 
+             parameter line.
         """
         pass
 
@@ -3800,10 +3790,13 @@ class Surface(Topology, IDisposable, IGraphicItem):
         """
         Thicken(self: Surface, thickness: float, both_sides: bool) -> Solid
         
-            Thicken Surface into a Solid, extruding in the direction of Surface  normals. If both_sides parameter is true, surface is thickened  on both sides.
+            Thicken Surface into a Solid, extruding in the direction of Surface  normals. 
+             If both_sides parameter is true, surface is thickened  on both sides.
+        
         Thicken(self: Surface, thickness: float) -> Solid
         
-            Thicken Surface into a Solid, extruding in the direction of Surface  normals on both sides of the Surface.
+            Thicken Surface into a Solid, extruding in the direction of Surface  normals on 
+             both sides of the Surface.
         """
         pass
 
@@ -3811,7 +3804,8 @@ class Surface(Topology, IDisposable, IGraphicItem):
         """
         ToNurbsSurface(self: Surface) -> NurbsSurface
         
-            Gets a Nurbs representation of the Surface. This method may approximate Surface in certain circumstances.
+            Gets a Nurbs representation of the Surface. This method may approximate Surface 
+             in certain circumstances.
         """
         pass
 
@@ -3827,23 +3821,17 @@ class Surface(Topology, IDisposable, IGraphicItem):
         """
         UVParameterAtPoint(self: Surface, point: Point) -> UV
         
-            Return the UV parameter pair at the input Point. This is the inverse of Point at parameter.
+            Return the UV parameter pair at the input Point. This is the inverse of Point 
+             at parameter.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -3899,7 +3887,8 @@ class NurbsSurface(Surface, IDisposable, IGraphicItem):
         """
         ByControlPoints(controlVertices: Array[Array[Point]], uDegree: int, vDegree: int) -> NurbsSurface
         
-            Create a NurbsSurface by using explicit control Points, with specified U and V degrees.
+            Create a NurbsSurface by using explicit control Points, with specified U and V 
+             degrees.
         """
         pass
 
@@ -3908,11 +3897,18 @@ class NurbsSurface(Surface, IDisposable, IGraphicItem):
         """
         ByControlPointsWeightsKnots(controlVertices: Array[Array[Point]], weights: Array[Array[float]], knotsU: Array[float], knotsV: Array[float], uDegree: int, vDegree: int) -> NurbsSurface
         
-            Creates a NurbsSurface with specified control vertices, knots, weights,  and U V degrees.  There are several restrictions on the data which, if broken, will cause the function to fail and will throw an 
-             exception. Degree: Both u- and v- degree should be >= 1 (piecewise-linear spline)  and  less than 26 (the maximum B-spline basis degree supported by ASM). Weights: All weight values (if supplied) should be 
-             strictly positive.  Weights smaller than 1e-11 will be rejected and the function will fail.  Knots: Both knot vectors should be non-decreasing sequences. Interior knot multiplicity should be no larger than 
-             degree + 1 at the start/end knot and  degree at an internal knot (this allows surfaces with G1 discontinuities to  be represented). Note that non-clamped knot vectors are supported, but will  be converted 
-             to clamped ones, with the corresponding changes applied to the  control point/weight data.
+            Creates a NurbsSurface with specified control vertices, knots, weights,  and U 
+             V degrees.  There are several restrictions on the data which, if broken, will 
+             cause the function to fail and will throw an exception. Degree: Both u- and v- 
+             degree should be >= 1 (piecewise-linear spline)  and  less than 26 (the maximum 
+             B-spline basis degree supported by ASM). Weights: All weight values (if 
+             supplied) should be strictly positive.  Weights smaller than 1e-11 will be 
+             rejected and the function will fail.  Knots: Both knot vectors should be 
+             non-decreasing sequences. Interior knot multiplicity should be no larger than 
+             degree + 1 at the start/end knot and  degree at an internal knot (this allows 
+             surfaces with G1 discontinuities to  be represented). Note that non-clamped 
+             knot vectors are supported, but will  be converted to clamped ones, with the 
+             corresponding changes applied to the  control point/weight data.
         """
         pass
 
@@ -3921,7 +3917,8 @@ class NurbsSurface(Surface, IDisposable, IGraphicItem):
         """
         ByPoints(points: Array[Array[Point]], uDegree: int, vDegree: int) -> NurbsSurface
         
-            Creates a NurbsSurface with specified interpolated points and  U and V degrees.  The resultant surface will pass through all of the points.
+            Creates a NurbsSurface with specified interpolated points and  U and V degrees. 
+              The resultant surface will pass through all of the points.
         """
         pass
 
@@ -3988,18 +3985,11 @@ class NurbsSurface(Surface, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -4074,7 +4064,8 @@ class Plane(Geometry, IDisposable, IGraphicItem):
         """
         ByLineAndPoint(line: Line, point: Point) -> Plane
         
-            Create the Plane containing the input Line and external Point. Point cannot lie on the Line or in the Line axis.
+            Create the Plane containing the input Line and external Point. Point cannot lie 
+             on the Line or in the Line axis.
         """
         pass
 
@@ -4092,8 +4083,10 @@ class Plane(Geometry, IDisposable, IGraphicItem):
         """
         ByOriginNormalXAxis(origin: Point, normal: Vector, xAxis: Vector) -> Plane
         
-            Create an "oriented" Plane, positioned at Point origin with Vector  normal, but with a specific X axis orientation. This has no impact to splitting, intersect, project, etc oporations, it only specifies 
-             the orientation of the input CoordinateSystem.
+            Create an "oriented" Plane, positioned at Point origin with Vector  normal, but 
+             with a specific X axis orientation. This has no impact to splitting, intersect, 
+             project, etc oporations, it only specifies the orientation of the input 
+             CoordinateSystem.
         """
         pass
 
@@ -4102,7 +4095,8 @@ class Plane(Geometry, IDisposable, IGraphicItem):
         """
         ByOriginXAxisYAxis(origin: Point, xAxis: Vector, yAxis: Vector) -> Plane
         
-            The X and Y axis lie in the plane. The Z axis is the cross product of the two Vectors.
+            The X and Y axis lie in the plane. The Z axis is the cross product of the two 
+             Vectors.
         """
         pass
 
@@ -4139,7 +4133,8 @@ class Plane(Geometry, IDisposable, IGraphicItem):
         """
         Offset(self: Plane, dist: float) -> Plane
         
-            Create a new Plane offset by this Plane in the normal direction by the specified distance.
+            Create a new Plane offset by this Plane in the normal direction by the 
+             specified distance.
         """
         pass
 
@@ -4147,7 +4142,8 @@ class Plane(Geometry, IDisposable, IGraphicItem):
         """
         ToCoordinateSystem(self: Plane) -> CoordinateSystem
         
-            Produces a new CoordinateSystem representing this plane. It is based on  the origin, and X and Y axis basis.
+            Produces a new CoordinateSystem representing this plane. It is based on  the 
+             origin, and X and Y axis basis.
         """
         pass
 
@@ -4183,18 +4179,11 @@ class Plane(Geometry, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -4271,7 +4260,8 @@ class Point(Geometry, IDisposable, IGraphicItem):
             Form a Point given 3 cartesian coordinates
         ByCoordinates(x: float, y: float) -> Point
         
-            Form a Point in the XY plane given two 2 cartesian coordinates.  The Z component is 0.
+            Form a Point in the XY plane given two 2 cartesian coordinates.  The Z 
+             component is 0.
         """
         pass
 
@@ -4280,10 +4270,14 @@ class Point(Geometry, IDisposable, IGraphicItem):
         """
         ByCylindricalCoordinates(cs: CoordinateSystem, angle: float, elevation: float, radius: float) -> Point
         
-            Form a Point in the given coordinate system given its position in cylindrical coordinates.
+            Form a Point in the given coordinate system given its position in cylindrical 
+             coordinates.
+        
         
             cs: The coordinate system to build the point in
-            angle: The angle is the rotation from the X axis in the coordinate system around the Z axis in degrees
+            angle: The angle is the rotation from the X axis in the coordinate system around the Z 
+             axis in degrees
+        
             elevation: The elevation of the point above the XY plane
             radius: The distance from the origin of the coordinate system
             Returns: A new Point
@@ -4295,7 +4289,9 @@ class Point(Geometry, IDisposable, IGraphicItem):
         """
         BySphericalCoordinates(cs: CoordinateSystem, phi: float, theta: float, radius: float) -> Point
         
-            Form a Point in the given coordinate system given its position in spherical coordinates.
+            Form a Point in the given coordinate system given its position in spherical 
+             coordinates.
+        
         
             cs: The coordinate system to build the point in
             phi: The angle down from the Z axis in degrees
@@ -4360,18 +4356,11 @@ class Point(Geometry, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -4549,18 +4538,11 @@ class PolyCurve(Curve, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -4650,18 +4632,11 @@ class Polygon(PolyCurve, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -4785,7 +4760,9 @@ class PolySurface(Surface, IDisposable, IGraphicItem):
         """
         LocateSurfacesByPoint(self: PolySurface, point: Point, direction: Vector) -> Array[Surface]
         
-            Locate Surfaces by point. Takes first intersection in forward direction.  Returns one surface if hit  surface interior, two if hit edge interior, and many if hit vertex
+            Locate Surfaces by point. Takes first intersection in forward direction.  
+             Returns one surface if hit  surface interior, two if hit edge interior, and 
+             many if hit vertex
         """
         pass
 
@@ -4826,18 +4803,11 @@ class PolySurface(Surface, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -4891,13 +4861,18 @@ class Rectangle(Polygon, IDisposable, IGraphicItem):
         """
         ByWidthLength(cs: CoordinateSystem, width: float, length: float) -> Rectangle
         
-            Create a Rectangle centered at the input origin in the CoordinateSystem  XY Plane, with specified width (X Axis length), and length  (Y Axis length).
+            Create a Rectangle centered at the input origin in the CoordinateSystem  XY 
+             Plane, with specified width (X Axis length), and length  (Y Axis length).
+        
         ByWidthLength(plane: Plane, width: float, length: float) -> Rectangle
         
-            Create a Rectangle centered at input Plane root, with input width  (Plane X axis length), and length (Plane Y axis length).
+            Create a Rectangle centered at input Plane root, with input width  (Plane X 
+             axis length), and length (Plane Y axis length).
+        
         ByWidthLength(width: float, length: float) -> Rectangle
         
-            Create a Rectangle centered at the WCS origin in the WCS XY Plane, with specified width (X Axis length), and length (Y Axis length).
+            Create a Rectangle centered at the WCS origin in the WCS XY Plane, with 
+             specified width (X Axis length), and length (Y Axis length).
         """
         pass
 
@@ -4922,18 +4897,11 @@ class Rectangle(Polygon, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -5003,18 +4971,11 @@ class Sphere(Solid, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -5102,7 +5063,8 @@ class Vector(DesignScriptEntity, IDisposable, IGraphicItem):
         """
         AngleAboutAxis(self: Vector, otherVector: Vector, rotationAxis: Vector) -> float
         
-            Returns the angle between the two Vectors, in the range [0, 360] degrees. It uses axis of rotation to determine the direction of the angle.
+            Returns the angle between the two Vectors, in the range [0, 360] degrees. It 
+             uses axis of rotation to determine the direction of the angle.
         """
         pass
 
@@ -5155,7 +5117,8 @@ class Vector(DesignScriptEntity, IDisposable, IGraphicItem):
         """
         ByTwoPoints(start: Point, end: Point) -> Vector
         
-            Form a Vector by two end points.  The result is a vector from the start to the end point.
+            Form a Vector by two end points.  The result is a vector from the start to the 
+             end point.
         """
         pass
 
@@ -5219,7 +5182,8 @@ class Vector(DesignScriptEntity, IDisposable, IGraphicItem):
         """
         Reverse(self: Vector) -> Vector
         
-            Get the reverse of the vector.  Essentially this negates the X, Y, and Z components of the Vector.
+            Get the reverse of the vector.  Essentially this negates the X, Y, and Z 
+             components of the Vector.
         """
         pass
 
@@ -5297,18 +5261,11 @@ class Vector(DesignScriptEntity, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -5377,18 +5334,11 @@ class Vertex(DesignScriptEntity, IDisposable, IGraphicItem):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method

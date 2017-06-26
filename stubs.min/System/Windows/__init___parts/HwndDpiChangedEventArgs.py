@@ -1,17 +1,17 @@
 class HwndDpiChangedEventArgs(HandledEventArgs):
-    # no doc
-    NewDpi = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: NewDpi(self: HwndDpiChangedEventArgs) -> DpiScale
+ # no doc
+ NewDpi=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: NewDpi(self: HwndDpiChangedEventArgs) -> DpiScale
 
 """
 
-    OldDpi = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: OldDpi(self: HwndDpiChangedEventArgs) -> DpiScale
+ OldDpi=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: OldDpi(self: HwndDpiChangedEventArgs) -> DpiScale
 
 """
 
-    SuggestedRect = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: SuggestedRect(self: HwndDpiChangedEventArgs) -> Rect
+ SuggestedRect=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: SuggestedRect(self: HwndDpiChangedEventArgs) -> Rect
 
 """
 

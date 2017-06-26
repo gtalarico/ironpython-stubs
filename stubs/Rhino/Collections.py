@@ -2,7 +2,7 @@
 # module Rhino.Collections calls itself Collections
 # from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -619,16 +619,21 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
         """
         __contains__(self: ICollection[T], item: T) -> bool
         
-            Determines whether the System.Collections.Generic.ICollection contains a specific value.
+            Determines whether the System.Collections.Generic.ICollection contains a 
+             specific value.
+        
         
             item: The object to locate in the System.Collections.Generic.ICollection.
-            Returns: true if item is found in the System.Collections.Generic.ICollection; otherwise, false.
+            Returns: true if item is found in the System.Collections.Generic.ICollection; otherwise, 
+             false.
+        
         __contains__(self: IList, value: object) -> bool
         
             Determines whether the System.Collections.IList contains a specific value.
         
             value: The object to locate in the System.Collections.IList.
-            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, false.
+            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, 
+             false.
         """
         pass
 

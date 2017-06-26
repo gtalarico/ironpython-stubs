@@ -2,7 +2,7 @@
 # module System.Windows.Documents.DocumentStructures calls itself DocumentStructures
 # from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -280,7 +280,9 @@ class StoryFragments(object, IAddChild, IEnumerable[StoryFragment], IEnumerable)
     def Add(self, storyFragment):
         """
         Add(self: StoryFragments, storyFragment: StoryFragment)
-            Adds a System.Windows.Documents.DocumentStructures.StoryFragment to the System.Windows.Documents.DocumentStructures.StoryFragments collection.
+            Adds a System.Windows.Documents.DocumentStructures.StoryFragment to the 
+             System.Windows.Documents.DocumentStructures.StoryFragments collection.
+        
         
             storyFragment: The System.Windows.Documents.DocumentStructures.StoryFragment to add.
         """

@@ -2,7 +2,7 @@
 # module System.Windows.Annotations.Storage calls itself Storage
 # from PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -22,10 +22,15 @@ class AnnotationStore(object,IDisposable):
   """
   DeleteAnnotation(self: AnnotationStore,annotationId: Guid) -> Annotation
   
-   Deletes the annotation with the specified System.Windows.Annotations.Annotation.Id from the store.
+   Deletes the annotation with the specified 
+    System.Windows.Annotations.Annotation.Id from the store.
   
-   annotationId: The globally unique identifier (GUID)�System.Windows.Annotations.Annotation.Id property of the annotation to be deleted.
-   Returns: The annotation that was deleted; otherwise,null if an annotation with the specified annotationId was not found in the store.
+  
+   annotationId: The globally unique identifier (GUID)�System.Windows.Annotations.Annotation.Id 
+    property of the annotation to be deleted.
+  
+   Returns: The annotation that was deleted; otherwise,null if an annotation with the 
+    specified annotationId was not found in the store.
   """
   pass
  def Dispose(self):
@@ -37,17 +42,23 @@ class AnnotationStore(object,IDisposable):
  def Flush(self):
   """
   Flush(self: AnnotationStore)
-   Forces any annotation data retained in internal buffers to be written to the underlying storage device.
+   Forces any annotation data retained in internal buffers to be written to the 
+    underlying storage device.
   """
   pass
  def GetAnnotation(self,annotationId):
   """
   GetAnnotation(self: AnnotationStore,annotationId: Guid) -> Annotation
   
-   Returns the annotation with the specified System.Windows.Annotations.Annotation.Id from the store.
+   Returns the annotation with the specified 
+    System.Windows.Annotations.Annotation.Id from the store.
   
-   annotationId: The globally unique identifier (GUID)�System.Windows.Annotations.Annotation.Id property of the annotation to be returned.
-   Returns: The annotation with the given annotationId; or null,if an annotation with the specified annotationId was not found in the store.
+  
+   annotationId: The globally unique identifier (GUID)�System.Windows.Annotations.Annotation.Id 
+    property of the annotation to be returned.
+  
+   Returns: The annotation with the given annotationId; or null,if an annotation with the 
+    specified annotationId was not found in the store.
   """
   pass
  def GetAnnotations(self,anchorLocator=None):
@@ -58,16 +69,25 @@ class AnnotationStore(object,IDisposable):
    Returns: The list of all annotations currently contained in the store.
   GetAnnotations(self: AnnotationStore,anchorLocator: ContentLocator) -> IList[Annotation]
   
-   Returns a list of annotations that have System.Windows.Annotations.Annotation.Anchors with locators that begin with a matching System.Windows.Annotations.ContentLocatorPart sequence.
+   Returns a list of annotations that have 
+    System.Windows.Annotations.Annotation.Anchors with locators that begin with a 
+    matching System.Windows.Annotations.ContentLocatorPart sequence.
   
-   anchorLocator: The starting System.Windows.Annotations.ContentLocatorPart sequence to return matching annotations for.
-   Returns: The list of annotations that have System.Windows.Annotations.Annotation.Anchors with locators that start and match the given anchorLocator; otherwise,null if no matching annotations were found.
+  
+   anchorLocator: The starting System.Windows.Annotations.ContentLocatorPart sequence to return 
+    matching annotations for.
+  
+   Returns: The list of annotations that have System.Windows.Annotations.Annotation.Anchors 
+    with locators that start and match the given anchorLocator; otherwise,null if 
+    no matching annotations were found.
   """
   pass
  def OnAnchorChanged(self,*args):
   """
   OnAnchorChanged(self: AnnotationStore,args: AnnotationResourceChangedEventArgs)
-   Raises the System.Windows.Annotations.Storage.AnnotationStore.AnchorChanged event.
+   Raises the System.Windows.Annotations.Storage.AnnotationStore.AnchorChanged 
+    event.
+  
   
    args: The event data.
   """
@@ -75,7 +95,9 @@ class AnnotationStore(object,IDisposable):
  def OnAuthorChanged(self,*args):
   """
   OnAuthorChanged(self: AnnotationStore,args: AnnotationAuthorChangedEventArgs)
-   Raises the System.Windows.Annotations.Storage.AnnotationStore.AuthorChanged event.
+   Raises the System.Windows.Annotations.Storage.AnnotationStore.AuthorChanged 
+    event.
+  
   
    args: The event data.
   """
@@ -83,7 +105,9 @@ class AnnotationStore(object,IDisposable):
  def OnCargoChanged(self,*args):
   """
   OnCargoChanged(self: AnnotationStore,args: AnnotationResourceChangedEventArgs)
-   Raises the System.Windows.Annotations.Storage.AnnotationStore.CargoChanged event.
+   Raises the System.Windows.Annotations.Storage.AnnotationStore.CargoChanged 
+    event.
+  
   
    args: The event data.
   """
@@ -91,23 +115,18 @@ class AnnotationStore(object,IDisposable):
  def OnStoreContentChanged(self,*args):
   """
   OnStoreContentChanged(self: AnnotationStore,e: StoreContentChangedEventArgs)
-   Raises the System.Windows.Annotations.Storage.AnnotationStore.StoreContentChanged event.
+   Raises the 
+    System.Windows.Annotations.Storage.AnnotationStore.StoreContentChanged event.
+  
   
    e: The event data.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -213,7 +232,9 @@ class StoreContentChangedEventHandler(MulticastDelegate,ICloneable,ISerializable
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+    delegate.
+  
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -225,7 +246,10 @@ class StoreContentChangedEventHandler(MulticastDelegate,ICloneable,ISerializable
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by 
+    the current delegate.-or- null,if the method represented by the current 
+    delegate does not require arguments.
+  
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -247,10 +271,14 @@ class StoreContentChangedEventHandler(MulticastDelegate,ICloneable,ISerializable
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate 
+    that is equal to the specified delegate.
+  
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new 
+    System.Delegate without value in its invocation list; otherwise,this instance 
+    with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -282,10 +310,15 @@ class XmlStreamStore(AnnotationStore,IDisposable):
   """
   DeleteAnnotation(self: XmlStreamStore,annotationId: Guid) -> Annotation
   
-   Deletes the annotation with the specified System.Windows.Annotations.Annotation.Id from the store.
+   Deletes the annotation with the specified 
+    System.Windows.Annotations.Annotation.Id from the store.
   
-   annotationId: The globally unique identifier (GUID)�System.Windows.Annotations.Annotation.Id property of the annotation to be deleted.
-   Returns: The annotation that was deleted; otherwise,null if an annotation with the specified annotationId was not found in the store.
+  
+   annotationId: The globally unique identifier (GUID)�System.Windows.Annotations.Annotation.Id 
+    property of the annotation to be deleted.
+  
+   Returns: The annotation that was deleted; otherwise,null if an annotation with the 
+    specified annotationId was not found in the store.
   """
   pass
  def Dispose(self):
@@ -294,17 +327,23 @@ class XmlStreamStore(AnnotationStore,IDisposable):
  def Flush(self):
   """
   Flush(self: XmlStreamStore)
-   Forces any annotation data retained in internal buffers to be written to the underlying storage device.
+   Forces any annotation data retained in internal buffers to be written to the 
+    underlying storage device.
   """
   pass
  def GetAnnotation(self,annotationId):
   """
   GetAnnotation(self: XmlStreamStore,annotationId: Guid) -> Annotation
   
-   Returns the annotation with the specified System.Windows.Annotations.Annotation.Id from the store.
+   Returns the annotation with the specified 
+    System.Windows.Annotations.Annotation.Id from the store.
   
-   annotationId: The globally unique identifier (GUID)�System.Windows.Annotations.Annotation.Id property of the annotation to be returned.
-   Returns: The annotation with the given annotationId; otherwise,null if an annotation with the specified annotationId was not found in the store.
+  
+   annotationId: The globally unique identifier (GUID)�System.Windows.Annotations.Annotation.Id 
+    property of the annotation to be returned.
+  
+   Returns: The annotation with the given annotationId; otherwise,null if an annotation 
+    with the specified annotationId was not found in the store.
   """
   pass
  def GetAnnotations(self,anchorLocator=None):
@@ -315,10 +354,17 @@ class XmlStreamStore(AnnotationStore,IDisposable):
    Returns: The list of all annotations that are currently in the store.
   GetAnnotations(self: XmlStreamStore,anchorLocator: ContentLocator) -> IList[Annotation]
   
-   Returns a list of annotations that have System.Windows.Annotations.Annotation.Anchors with locators that begin with a matching System.Windows.Annotations.ContentLocatorPart sequence.
+   Returns a list of annotations that have 
+    System.Windows.Annotations.Annotation.Anchors with locators that begin with a 
+    matching System.Windows.Annotations.ContentLocatorPart sequence.
   
-   anchorLocator: The starting System.Windows.Annotations.ContentLocatorPart sequence to return matching annotations for.
-   Returns: The list of annotations that have System.Windows.Annotations.Annotation.Anchors with locators that start and match the given anchorLocator; otherwise,null if no matching annotations were found.
+  
+   anchorLocator: The starting System.Windows.Annotations.ContentLocatorPart sequence to return 
+    matching annotations for.
+  
+   Returns: The list of annotations that have System.Windows.Annotations.Annotation.Anchors 
+    with locators that start and match the given anchorLocator; otherwise,null if 
+    no matching annotations were found.
   """
   pass
  @staticmethod
@@ -329,13 +375,16 @@ class XmlStreamStore(AnnotationStore,IDisposable):
    Returns a list of namespaces that are compatible as an input namespace.
   
    name: The starting URI sequence to return the list of namespaces for.
-   Returns: A list of compatible namespaces that match name; otherwise,null if there are no compatible namespaces found.
+   Returns: A list of compatible namespaces that match name; otherwise,null if there are 
+    no compatible namespaces found.
   """
   pass
  def OnAnchorChanged(self,*args):
   """
   OnAnchorChanged(self: AnnotationStore,args: AnnotationResourceChangedEventArgs)
-   Raises the System.Windows.Annotations.Storage.AnnotationStore.AnchorChanged event.
+   Raises the System.Windows.Annotations.Storage.AnnotationStore.AnchorChanged 
+    event.
+  
   
    args: The event data.
   """
@@ -343,7 +392,9 @@ class XmlStreamStore(AnnotationStore,IDisposable):
  def OnAuthorChanged(self,*args):
   """
   OnAuthorChanged(self: AnnotationStore,args: AnnotationAuthorChangedEventArgs)
-   Raises the System.Windows.Annotations.Storage.AnnotationStore.AuthorChanged event.
+   Raises the System.Windows.Annotations.Storage.AnnotationStore.AuthorChanged 
+    event.
+  
   
    args: The event data.
   """
@@ -351,7 +402,9 @@ class XmlStreamStore(AnnotationStore,IDisposable):
  def OnCargoChanged(self,*args):
   """
   OnCargoChanged(self: AnnotationStore,args: AnnotationResourceChangedEventArgs)
-   Raises the System.Windows.Annotations.Storage.AnnotationStore.CargoChanged event.
+   Raises the System.Windows.Annotations.Storage.AnnotationStore.CargoChanged 
+    event.
+  
   
    args: The event data.
   """
@@ -360,17 +413,10 @@ class XmlStreamStore(AnnotationStore,IDisposable):
   """ OnStoreContentChanged(self: XmlStreamStore,e: StoreContentChangedEventArgs) """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

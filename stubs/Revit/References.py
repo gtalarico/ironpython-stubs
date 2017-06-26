@@ -2,7 +2,7 @@
 # module Revit.References calls itself References
 # from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -15,7 +15,8 @@ class RayBounce(object):
         """
         ByOriginDirection(origin: Point, direction: Vector, maxBounces: int, view: View3D) -> Dictionary[str, object]
         
-            Returns positions and elements hit by ray bounce from the specified origin point and direction
+            Returns positions and elements hit by ray bounce from the specified origin 
+             point and direction
         """
         pass
 

@@ -1,45 +1,39 @@
-class RevolvedFace(Face, IDisposable):
-    """ A revolved face of a 3d solid or open shell. """
-    def Dispose(self):
-        """ Dispose(self: APIObject, A_0: bool) """
-        pass
-
-    def ReleaseManagedResources(self, *args): #cannot find CLR method
-        """ ReleaseManagedResources(self: APIObject) """
-        pass
-
-    def ReleaseUnmanagedResources(self, *args): #cannot find CLR method
-        """ ReleaseUnmanagedResources(self: GeometryObject) """
-        pass
-
-    def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
-        pass
-
-    def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
-        pass
-
-    def __init__(self, *args): #cannot find CLR method
-        """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
-        pass
-
-    Axis = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Axis of the surface.
+class RevolvedFace(Face,IDisposable):
+ """ A revolved face of a 3d solid or open shell. """
+ def Dispose(self):
+  """ Dispose(self: APIObject,A_0: bool) """
+  pass
+ def ReleaseManagedResources(self,*args):
+  """ ReleaseManagedResources(self: APIObject) """
+  pass
+ def ReleaseUnmanagedResources(self,*args):
+  """ ReleaseUnmanagedResources(self: GeometryObject) """
+  pass
+ def __enter__(self,*args):
+  """ __enter__(self: IDisposable) -> object """
+  pass
+ def __exit__(self,*args):
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  pass
+ def __init__(self,*args):
+  """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+  pass
+ Axis=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Axis of the surface.
 
 Get: Axis(self: RevolvedFace) -> XYZ
 
 """
 
-    Curve = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Profile curve of the surface.
+ Curve=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Profile curve of the surface.
 
 Get: Curve(self: RevolvedFace) -> Curve
 
 """
 
-    Origin = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Origin of the surface.
+ Origin=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Origin of the surface.
 
 Get: Origin(self: RevolvedFace) -> XYZ
 

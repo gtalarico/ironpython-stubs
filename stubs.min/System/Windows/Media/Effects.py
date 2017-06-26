@@ -2,7 +2,7 @@
 # module System.Windows.Media.Effects calls itself Effects
 # from PresentationCore,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -14,16 +14,22 @@ class BitmapEffect(Animatable,ISealable,IAnimatable,IResource):
   """
   Clone(self: BitmapEffect) -> BitmapEffect
   
-   Creates a modifiable clone of this System.Windows.Media.Effects.BitmapEffect,making deep copies of this object's values. When copying dependency properties,this method copies resource references and data 
-    bindings (but they might no longer resolve) but not animations or their current values.
+   Creates a modifiable clone of this System.Windows.Media.Effects.BitmapEffect,
+    making deep copies of this object's values. When copying dependency properties,
+    this method copies resource references and data bindings (but they might no 
+    longer resolve) but not animations or their current values.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCore(self,*args):
   """
   CloneCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a clone (deep copy) of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a clone (deep copy) of the specified 
+    System.Windows.Freezable using base (non-animated) property values.
+  
   
    sourceFreezable: The object to clone.
   """
@@ -32,16 +38,22 @@ class BitmapEffect(Animatable,ISealable,IAnimatable,IResource):
   """
   CloneCurrentValue(self: BitmapEffect) -> BitmapEffect
   
-   Creates a modifiable clone of this System.Windows.Media.Effects.BitmapEffect object,making deep copies of this object's current values. Resource references,data bindings,and animations are not copied,
-    but their current values are.
+   Creates a modifiable clone of this System.Windows.Media.Effects.BitmapEffect 
+    object,making deep copies of this object's current values. Resource 
+    references,data bindings,and animations are not copied,but their current 
+    values are.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCurrentValueCore(self,*args):
   """
   CloneCurrentValueCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a modifiable clone (deep copy) of the specified System.Windows.Freezable using current property values.
+   Makes the instance a modifiable clone (deep copy) of the specified 
+    System.Windows.Freezable using current property values.
+  
   
    sourceFreezable: The System.Windows.Freezable to be cloned.
   """
@@ -50,7 +62,9 @@ class BitmapEffect(Animatable,ISealable,IAnimatable,IResource):
   """
   CreateBitmapEffectOuter() -> SafeHandle
   
-   Creates a handle to an IMILBitmapEffect object that is used to initialize a custom effect.
+   Creates a handle to an IMILBitmapEffect object that is used to initialize a 
+    custom effect.
+  
    Returns: A handle to an IMILBitmapEffect object.
   """
   pass
@@ -66,7 +80,9 @@ class BitmapEffect(Animatable,ISealable,IAnimatable,IResource):
   """
   CreateInstanceCore(self: Freezable) -> Freezable
   
-   When implemented in a derived class,creates a new instance of the System.Windows.Freezable derived class.
+   When implemented in a derived class,creates a new instance of the 
+    System.Windows.Freezable derived class.
+  
    Returns: The new instance.
   """
   pass
@@ -82,18 +98,28 @@ class BitmapEffect(Animatable,ISealable,IAnimatable,IResource):
   """
   FreezeCore(self: Animatable,isChecking: bool) -> bool
   
-   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or determines whether it can be made unmodifiable.
+   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or 
+    determines whether it can be made unmodifiable.
   
-   isChecking: true if this method should simply determine whether this instance can be frozen. false if this instance should actually freeze itself when this method is called.
-   Returns: If isChecking is true,this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if it cannot be made unmodifiable. If isChecking is false,this method 
-    returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable,or false if it cannot be made unmodifiable,with the side effect of having begun to change the frozen status of 
-    this object.
+  
+   isChecking: true if this method should simply determine whether this instance can be 
+    frozen. false if this instance should actually freeze itself when this method 
+    is called.
+  
+   Returns: If isChecking is true,this method returns true if this 
+    System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if 
+    it cannot be made unmodifiable. If isChecking is false,this method returns 
+    true if the if this System.Windows.Media.Animation.Animatable is now 
+    unmodifiable,or false if it cannot be made unmodifiable,with the side effect 
+    of having begun to change the frozen status of this object.
   """
   pass
  def GetAsFrozenCore(self,*args):
   """
   GetAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a frozen clone of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a frozen clone of the specified System.Windows.Freezable 
+    using base (non-animated) property values.
+  
   
    sourceFreezable: The instance to copy.
   """
@@ -101,7 +127,10 @@ class BitmapEffect(Animatable,ISealable,IAnimatable,IResource):
  def GetCurrentValueAsFrozenCore(self,*args):
   """
   GetCurrentValueAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the current instance a frozen clone of the specified System.Windows.Freezable. If the object has animated dependency properties,their current animated values are copied.
+   Makes the current instance a frozen clone of the specified 
+    System.Windows.Freezable. If the object has animated dependency properties,
+    their current animated values are copied.
+  
   
    sourceFreezable: The System.Windows.Freezable to copy and freeze.
   """
@@ -110,16 +139,23 @@ class BitmapEffect(Animatable,ISealable,IAnimatable,IResource):
   """
   GetOutput(self: BitmapEffect,input: BitmapEffectInput) -> BitmapSource
   
-   Returns the System.Windows.Media.Imaging.BitmapSource that results when the effect is applied to the specified System.Windows.Media.Effects.BitmapEffectInput.
+   Returns the System.Windows.Media.Imaging.BitmapSource that results when the 
+    effect is applied to the specified 
+    System.Windows.Media.Effects.BitmapEffectInput.
+  
   
    input: The input to apply the effect to.
-   Returns: The System.Windows.Media.Imaging.BitmapSource with the effect applied to the input.
+   Returns: The System.Windows.Media.Imaging.BitmapSource with the effect applied to the 
+    input.
   """
   pass
  def InitializeBitmapEffect(self,*args):
   """
   InitializeBitmapEffect(outerObject: SafeHandle,innerObject: SafeHandle)
-   Initializes an IMILBitmapEffect handle obtained from System.Windows.Media.Effects.BitmapEffect.CreateBitmapEffectOuter with the given IMILBitmapEffectPrimitive.
+   Initializes an IMILBitmapEffect handle obtained from 
+    System.Windows.Media.Effects.BitmapEffect.CreateBitmapEffectOuter with the 
+    given IMILBitmapEffectPrimitive.
+  
   
    outerObject: The outer IMILBitmapEffect wrapper to initialize.
    innerObject: The inner IMILBitmapEffectPrimitive.
@@ -134,13 +170,17 @@ class BitmapEffect(Animatable,ISealable,IAnimatable,IResource):
  def OnFreezablePropertyChanged(self,*args):
   """
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject,property: DependencyProperty)
-   This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+   This member supports the Windows Presentation Foundation (WPF) infrastructure 
+    and is not intended to be used directly from your code.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
    property: The property that changed.
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject)
-   Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+   Ensures that appropriate context pointers are established for a 
+    System.Windows.DependencyObjectType data member that has just been set.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
@@ -149,18 +189,24 @@ class BitmapEffect(Animatable,ISealable,IAnimatable,IResource):
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: Freezable,e: DependencyPropertyChangedEventArgs)
-   Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-    System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+   Overrides the System.Windows.DependencyObject implementation of 
+    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+    rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+    handlers in response to a changing dependency property of type 
+    System.Windows.Freezable.
   
   
-   e: Event data that contains information about which property changed,and its old and new values.
+   e: Event data that contains information about which property changed,and its old 
+    and new values.
   """
   pass
  def ReadPreamble(self,*args):
   """
   ReadPreamble(self: Freezable)
-   Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-    not dependency properties.
+   Ensures that the System.Windows.Freezable is being accessed from a valid 
+    thread. Inheritors of System.Windows.Freezable must call this method at the 
+    beginning of any API that reads data members that are not dependency 
+    properties.
   """
   pass
  def SetValue(self,*__args):
@@ -177,16 +223,29 @@ class BitmapEffect(Animatable,ISealable,IAnimatable,IResource):
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize 
+    the value for the provided dependency property.
+  
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
+   Returns: true if the dependency property that is supplied should be value-serialized; 
+    otherwise,false.
+  
+  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
   """
   pass
  def UpdateUnmanagedPropertyState(self,*args):
   """
   UpdateUnmanagedPropertyState(self: BitmapEffect,unmanagedEffect: SafeHandle)
-   When overridden in a derived class,updates the property states of the unmanaged properties of the effect.
+   When overridden in a derived class,updates the property states of the 
+    unmanaged properties of the effect.
+  
   
    unmanagedEffect: The handle to the effect that contains the properties to update.
   """
@@ -194,15 +253,20 @@ class BitmapEffect(Animatable,ISealable,IAnimatable,IResource):
  def WritePostscript(self,*args):
   """
   WritePostscript(self: Freezable)
-   Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-    this method at the end of any API that modifies class members that are not stored as dependency properties.
+   Raises the System.Windows.Freezable.Changed event for the 
+    System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+    method. Classes that derive from System.Windows.Freezable should call this 
+    method at the end of any API that modifies class members that are not stored as 
+    dependency properties.
   """
   pass
  def WritePreamble(self,*args):
   """
   WritePreamble(self: Freezable)
-   Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-    API that writes to data members that are not dependency properties.
+   Verifies that the System.Windows.Freezable is not frozen and that it is being 
+    accessed from a valid threading context. System.Windows.Freezable inheritors 
+    should call this method at the beginning of any API that writes to data members 
+    that are not dependency properties.
   """
   pass
  def __init__(self,*args):
@@ -219,16 +283,24 @@ class BevelBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
   """
   Clone(self: BevelBitmapEffect) -> BevelBitmapEffect
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Creates a modifiable clone of this System.Windows.Media.Effects.BevelBitmapEffect,making deep copies of 
-    this object's values. When copying dependency properties,this method copies resource references and data bindings (but they might no longer resolve) but not animations or their current values.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Creates a modifiable clone of this 
+    System.Windows.Media.Effects.BevelBitmapEffect,making deep copies of this 
+    object's values. When copying dependency properties,this method copies 
+    resource references and data bindings (but they might no longer resolve) but 
+    not animations or their current values.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCore(self,*args):
   """
   CloneCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a clone (deep copy) of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a clone (deep copy) of the specified 
+    System.Windows.Freezable using base (non-animated) property values.
+  
   
    sourceFreezable: The object to clone.
   """
@@ -237,16 +309,23 @@ class BevelBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
   """
   CloneCurrentValue(self: BevelBitmapEffect) -> BevelBitmapEffect
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Creates a modifiable clone of this System.Windows.Media.Effects.BevelBitmapEffect object,making deep 
-    copies of this object's current values. Resource references,data bindings,and animations are not copied,but their current values are
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Creates a modifiable clone of this 
+    System.Windows.Media.Effects.BevelBitmapEffect object,making deep copies of 
+    this object's current values. Resource references,data bindings,and 
+    animations are not copied,but their current values are
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCurrentValueCore(self,*args):
   """
   CloneCurrentValueCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a modifiable clone (deep copy) of the specified System.Windows.Freezable using current property values.
+   Makes the instance a modifiable clone (deep copy) of the specified 
+    System.Windows.Freezable using current property values.
+  
   
    sourceFreezable: The System.Windows.Freezable to be cloned.
   """
@@ -269,18 +348,28 @@ class BevelBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
   """
   FreezeCore(self: Animatable,isChecking: bool) -> bool
   
-   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or determines whether it can be made unmodifiable.
+   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or 
+    determines whether it can be made unmodifiable.
   
-   isChecking: true if this method should simply determine whether this instance can be frozen. false if this instance should actually freeze itself when this method is called.
-   Returns: If isChecking is true,this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if it cannot be made unmodifiable. If isChecking is false,this method 
-    returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable,or false if it cannot be made unmodifiable,with the side effect of having begun to change the frozen status of 
-    this object.
+  
+   isChecking: true if this method should simply determine whether this instance can be 
+    frozen. false if this instance should actually freeze itself when this method 
+    is called.
+  
+   Returns: If isChecking is true,this method returns true if this 
+    System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if 
+    it cannot be made unmodifiable. If isChecking is false,this method returns 
+    true if the if this System.Windows.Media.Animation.Animatable is now 
+    unmodifiable,or false if it cannot be made unmodifiable,with the side effect 
+    of having begun to change the frozen status of this object.
   """
   pass
  def GetAsFrozenCore(self,*args):
   """
   GetAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a frozen clone of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a frozen clone of the specified System.Windows.Freezable 
+    using base (non-animated) property values.
+  
   
    sourceFreezable: The instance to copy.
   """
@@ -288,7 +377,10 @@ class BevelBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def GetCurrentValueAsFrozenCore(self,*args):
   """
   GetCurrentValueAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the current instance a frozen clone of the specified System.Windows.Freezable. If the object has animated dependency properties,their current animated values are copied.
+   Makes the current instance a frozen clone of the specified 
+    System.Windows.Freezable. If the object has animated dependency properties,
+    their current animated values are copied.
+  
   
    sourceFreezable: The System.Windows.Freezable to copy and freeze.
   """
@@ -302,13 +394,17 @@ class BevelBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def OnFreezablePropertyChanged(self,*args):
   """
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject,property: DependencyProperty)
-   This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+   This member supports the Windows Presentation Foundation (WPF) infrastructure 
+    and is not intended to be used directly from your code.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
    property: The property that changed.
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject)
-   Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+   Ensures that appropriate context pointers are established for a 
+    System.Windows.DependencyObjectType data member that has just been set.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
@@ -317,28 +413,45 @@ class BevelBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: Freezable,e: DependencyPropertyChangedEventArgs)
-   Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-    System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+   Overrides the System.Windows.DependencyObject implementation of 
+    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+    rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+    handlers in response to a changing dependency property of type 
+    System.Windows.Freezable.
   
   
-   e: Event data that contains information about which property changed,and its old and new values.
+   e: Event data that contains information about which property changed,and its old 
+    and new values.
   """
   pass
  def ReadPreamble(self,*args):
   """
   ReadPreamble(self: Freezable)
-   Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-    not dependency properties.
+   Ensures that the System.Windows.Freezable is being accessed from a valid 
+    thread. Inheritors of System.Windows.Freezable must call this method at the 
+    beginning of any API that reads data members that are not dependency 
+    properties.
   """
   pass
  def ShouldSerializeProperty(self,*args):
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize 
+    the value for the provided dependency property.
+  
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
+   Returns: true if the dependency property that is supplied should be value-serialized; 
+    otherwise,false.
+  
+  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
   """
   pass
  def UpdateUnmanagedPropertyState(self,*args):
@@ -347,15 +460,20 @@ class BevelBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def WritePostscript(self,*args):
   """
   WritePostscript(self: Freezable)
-   Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-    this method at the end of any API that modifies class members that are not stored as dependency properties.
+   Raises the System.Windows.Freezable.Changed event for the 
+    System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+    method. Classes that derive from System.Windows.Freezable should call this 
+    method at the end of any API that modifies class members that are not stored as 
+    dependency properties.
   """
   pass
  def WritePreamble(self,*args):
   """
   WritePreamble(self: Freezable)
-   Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-    API that writes to data members that are not dependency properties.
+   Verifies that the System.Windows.Freezable is not frozen and that it is being 
+    accessed from a valid threading context. System.Windows.Freezable inheritors 
+    should call this method at the beginning of any API that writes to data members 
+    that are not dependency properties.
   """
   pass
  def __init__(self,*args):
@@ -420,25 +538,36 @@ class BitmapEffectCollection(Animatable,ISealable,IAnimatable,IResource,IList,IC
  def Add(self,value):
   """
   Add(self: BitmapEffectCollection,value: BitmapEffect)
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Adds a System.Windows.Media.Effects.BitmapEffect at the end of the collection.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Adds a 
+    System.Windows.Media.Effects.BitmapEffect at the end of the collection.
   
-   value: The System.Windows.Media.Effects.BitmapEffect to add to the end of the collection.
+  
+   value: The System.Windows.Media.Effects.BitmapEffect to add to the end of the 
+    collection.
   """
   pass
  def Clear(self):
   """
   Clear(self: BitmapEffectCollection)
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Removes all effects from the collection.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Removes all effects from the collection.
   """
   pass
  def Clone(self):
   """
   Clone(self: BitmapEffectCollection) -> BitmapEffectCollection
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Creates a modifiable clone of this System.Windows.Media.Effects.BitmapEffectCollection,making deep 
-    copies of this object's values. When copying dependency properties,this method copies resource references and data bindings (but they might no longer resolve) but not animations or their current values.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Creates a modifiable clone of this 
+    System.Windows.Media.Effects.BitmapEffectCollection,making deep copies of this 
+    object's values. When copying dependency properties,this method copies 
+    resource references and data bindings (but they might no longer resolve) but 
+    not animations or their current values.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCore(self,*args):
@@ -448,10 +577,15 @@ class BitmapEffectCollection(Animatable,ISealable,IAnimatable,IResource,IList,IC
   """
   CloneCurrentValue(self: BitmapEffectCollection) -> BitmapEffectCollection
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Creates a modifiable clone of this System.Windows.Media.Effects.BitmapEffectCollection object,making 
-    deep copies of this object's current values. Resource references,data bindings,and animations are not copied,but their current values are.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Creates a modifiable clone of this 
+    System.Windows.Media.Effects.BitmapEffectCollection object,making deep copies 
+    of this object's current values. Resource references,data bindings,and 
+    animations are not copied,but their current values are.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCurrentValueCore(self,*args):
@@ -461,7 +595,10 @@ class BitmapEffectCollection(Animatable,ISealable,IAnimatable,IResource,IList,IC
   """
   Contains(self: BitmapEffectCollection,value: BitmapEffect) -> bool
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Indicates whether the collection contains the specified System.Windows.Media.Effects.BitmapEffect.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Indicates whether the collection contains 
+    the specified System.Windows.Media.Effects.BitmapEffect.
+  
   
    value: The bitmap effect to locate in the collection.
    Returns: true if the collection contains value; otherwise,false.
@@ -470,7 +607,10 @@ class BitmapEffectCollection(Animatable,ISealable,IAnimatable,IResource,IList,IC
  def CopyTo(self,array,index):
   """
   CopyTo(self: BitmapEffectCollection,array: Array[BitmapEffect],index: int)
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Copies the elements of the collection to an array starting at the given index.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Copies the elements of the collection to 
+    an array starting at the given index.
+  
   
    array: The array to copy to.
    index: The collection index to begin coping.
@@ -500,15 +640,22 @@ class BitmapEffectCollection(Animatable,ISealable,IAnimatable,IResource,IList,IC
   """
   GetEnumerator(self: BitmapEffectCollection) -> Enumerator
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Returns an enumerator that can iterate through the collection.
-   Returns: An System.Windows.Media.Effects.BitmapEffectCollection.Enumerator that can iterate through the collection.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Returns an enumerator that can iterate 
+    through the collection.
+  
+   Returns: An System.Windows.Media.Effects.BitmapEffectCollection.Enumerator that can 
+    iterate through the collection.
   """
   pass
  def IndexOf(self,value):
   """
   IndexOf(self: BitmapEffectCollection,value: BitmapEffect) -> int
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Retrieves the index of the first instance of the specified System.Windows.Media.Effects.BitmapEffect.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Retrieves the index of the first instance 
+    of the specified System.Windows.Media.Effects.BitmapEffect.
+  
   
    value: The effect to find in the collection.
    Returns: The index of the specified effect.
@@ -517,7 +664,11 @@ class BitmapEffectCollection(Animatable,ISealable,IAnimatable,IResource,IList,IC
  def Insert(self,index,value):
   """
   Insert(self: BitmapEffectCollection,index: int,value: BitmapEffect)
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Inserts a System.Windows.Media.Effects.BitmapEffect into this collection at the specified index.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Inserts a 
+    System.Windows.Media.Effects.BitmapEffect into this collection at the specified 
+    index.
+  
   
    index: The index to insert the effect at.
    value: The specified effect to insert.
@@ -532,13 +683,17 @@ class BitmapEffectCollection(Animatable,ISealable,IAnimatable,IResource,IList,IC
  def OnFreezablePropertyChanged(self,*args):
   """
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject,property: DependencyProperty)
-   This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+   This member supports the Windows Presentation Foundation (WPF) infrastructure 
+    and is not intended to be used directly from your code.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
    property: The property that changed.
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject)
-   Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+   Ensures that appropriate context pointers are established for a 
+    System.Windows.DependencyObjectType data member that has just been set.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
@@ -547,26 +702,33 @@ class BitmapEffectCollection(Animatable,ISealable,IAnimatable,IResource,IList,IC
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: Freezable,e: DependencyPropertyChangedEventArgs)
-   Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-    System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+   Overrides the System.Windows.DependencyObject implementation of 
+    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+    rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+    handlers in response to a changing dependency property of type 
+    System.Windows.Freezable.
   
   
-   e: Event data that contains information about which property changed,and its old and new values.
+   e: Event data that contains information about which property changed,and its old 
+    and new values.
   """
   pass
  def ReadPreamble(self,*args):
   """
   ReadPreamble(self: Freezable)
-   Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-    not dependency properties.
+   Ensures that the System.Windows.Freezable is being accessed from a valid 
+    thread. Inheritors of System.Windows.Freezable must call this method at the 
+    beginning of any API that reads data members that are not dependency 
+    properties.
   """
   pass
  def Remove(self,value):
   """
   Remove(self: BitmapEffectCollection,value: BitmapEffect) -> bool
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Removes the first occurrence of the specified System.Windows.Media.Effects.BitmapEffect for this 
-    collection.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Removes the first occurrence of the 
+    specified System.Windows.Media.Effects.BitmapEffect for this collection.
   
   
    value: The effect to remove from the collection
@@ -576,7 +738,11 @@ class BitmapEffectCollection(Animatable,ISealable,IAnimatable,IResource,IList,IC
  def RemoveAt(self,index):
   """
   RemoveAt(self: BitmapEffectCollection,index: int)
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Remove the System.Windows.Media.Effects.BitmapEffect at the specified index from the collection.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Remove the 
+    System.Windows.Media.Effects.BitmapEffect at the specified index from the 
+    collection.
+  
   
    index: The index of the effect to remove.
   """
@@ -585,24 +751,40 @@ class BitmapEffectCollection(Animatable,ISealable,IAnimatable,IResource,IList,IC
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize 
+    the value for the provided dependency property.
+  
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
+   Returns: true if the dependency property that is supplied should be value-serialized; 
+    otherwise,false.
+  
+  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
   """
   pass
  def WritePostscript(self,*args):
   """
   WritePostscript(self: Freezable)
-   Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-    this method at the end of any API that modifies class members that are not stored as dependency properties.
+   Raises the System.Windows.Freezable.Changed event for the 
+    System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+    method. Classes that derive from System.Windows.Freezable should call this 
+    method at the end of any API that modifies class members that are not stored as 
+    dependency properties.
   """
   pass
  def WritePreamble(self,*args):
   """
   WritePreamble(self: Freezable)
-   Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-    API that writes to data members that are not dependency properties.
+   Verifies that the System.Windows.Freezable is not frozen and that it is being 
+    accessed from a valid threading context. System.Windows.Freezable inheritors 
+    should call this method at the beginning of any API that writes to data members 
+    that are not dependency properties.
   """
   pass
  def __add__(self,*args):
@@ -616,7 +798,8 @@ class BitmapEffectCollection(Animatable,ISealable,IAnimatable,IResource,IList,IC
    Determines whether the System.Collections.IList contains a specific value.
   
    value: The object to locate in the System.Collections.IList.
-   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,false.
+   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,
+    false.
   """
   pass
  def __getitem__(self,*args):
@@ -663,16 +846,23 @@ class BitmapEffectGroup(BitmapEffect,ISealable,IAnimatable,IResource):
   """
   Clone(self: BitmapEffectGroup) -> BitmapEffectGroup
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Creates a modifiable clone of this System.Windows.Media.Effects.BitmapEffectGroup object,making deep 
-    copies of this object's current values. Resource references,data bindings,and animations are not copied,but their current values are.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Creates a modifiable clone of this 
+    System.Windows.Media.Effects.BitmapEffectGroup object,making deep copies of 
+    this object's current values. Resource references,data bindings,and 
+    animations are not copied,but their current values are.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCore(self,*args):
   """
   CloneCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a clone (deep copy) of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a clone (deep copy) of the specified 
+    System.Windows.Freezable using base (non-animated) property values.
+  
   
    sourceFreezable: The object to clone.
   """
@@ -681,16 +871,23 @@ class BitmapEffectGroup(BitmapEffect,ISealable,IAnimatable,IResource):
   """
   CloneCurrentValue(self: BitmapEffectGroup) -> BitmapEffectGroup
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Creates a modifiable clone of this System.Windows.Media.Effects.BitmapEffectGroup object,making deep 
-    copies of this object's current values. Resource references,data bindings,and animations are not copied,but their current values are.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Creates a modifiable clone of this 
+    System.Windows.Media.Effects.BitmapEffectGroup object,making deep copies of 
+    this object's current values. Resource references,data bindings,and 
+    animations are not copied,but their current values are.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCurrentValueCore(self,*args):
   """
   CloneCurrentValueCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a modifiable clone (deep copy) of the specified System.Windows.Freezable using current property values.
+   Makes the instance a modifiable clone (deep copy) of the specified 
+    System.Windows.Freezable using current property values.
+  
   
    sourceFreezable: The System.Windows.Freezable to be cloned.
   """
@@ -713,18 +910,28 @@ class BitmapEffectGroup(BitmapEffect,ISealable,IAnimatable,IResource):
   """
   FreezeCore(self: Animatable,isChecking: bool) -> bool
   
-   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or determines whether it can be made unmodifiable.
+   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or 
+    determines whether it can be made unmodifiable.
   
-   isChecking: true if this method should simply determine whether this instance can be frozen. false if this instance should actually freeze itself when this method is called.
-   Returns: If isChecking is true,this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if it cannot be made unmodifiable. If isChecking is false,this method 
-    returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable,or false if it cannot be made unmodifiable,with the side effect of having begun to change the frozen status of 
-    this object.
+  
+   isChecking: true if this method should simply determine whether this instance can be 
+    frozen. false if this instance should actually freeze itself when this method 
+    is called.
+  
+   Returns: If isChecking is true,this method returns true if this 
+    System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if 
+    it cannot be made unmodifiable. If isChecking is false,this method returns 
+    true if the if this System.Windows.Media.Animation.Animatable is now 
+    unmodifiable,or false if it cannot be made unmodifiable,with the side effect 
+    of having begun to change the frozen status of this object.
   """
   pass
  def GetAsFrozenCore(self,*args):
   """
   GetAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a frozen clone of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a frozen clone of the specified System.Windows.Freezable 
+    using base (non-animated) property values.
+  
   
    sourceFreezable: The instance to copy.
   """
@@ -732,7 +939,10 @@ class BitmapEffectGroup(BitmapEffect,ISealable,IAnimatable,IResource):
  def GetCurrentValueAsFrozenCore(self,*args):
   """
   GetCurrentValueAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the current instance a frozen clone of the specified System.Windows.Freezable. If the object has animated dependency properties,their current animated values are copied.
+   Makes the current instance a frozen clone of the specified 
+    System.Windows.Freezable. If the object has animated dependency properties,
+    their current animated values are copied.
+  
   
    sourceFreezable: The System.Windows.Freezable to copy and freeze.
   """
@@ -746,13 +956,17 @@ class BitmapEffectGroup(BitmapEffect,ISealable,IAnimatable,IResource):
  def OnFreezablePropertyChanged(self,*args):
   """
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject,property: DependencyProperty)
-   This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+   This member supports the Windows Presentation Foundation (WPF) infrastructure 
+    and is not intended to be used directly from your code.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
    property: The property that changed.
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject)
-   Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+   Ensures that appropriate context pointers are established for a 
+    System.Windows.DependencyObjectType data member that has just been set.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
@@ -761,28 +975,45 @@ class BitmapEffectGroup(BitmapEffect,ISealable,IAnimatable,IResource):
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: Freezable,e: DependencyPropertyChangedEventArgs)
-   Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-    System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+   Overrides the System.Windows.DependencyObject implementation of 
+    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+    rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+    handlers in response to a changing dependency property of type 
+    System.Windows.Freezable.
   
   
-   e: Event data that contains information about which property changed,and its old and new values.
+   e: Event data that contains information about which property changed,and its old 
+    and new values.
   """
   pass
  def ReadPreamble(self,*args):
   """
   ReadPreamble(self: Freezable)
-   Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-    not dependency properties.
+   Ensures that the System.Windows.Freezable is being accessed from a valid 
+    thread. Inheritors of System.Windows.Freezable must call this method at the 
+    beginning of any API that reads data members that are not dependency 
+    properties.
   """
   pass
  def ShouldSerializeProperty(self,*args):
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize 
+    the value for the provided dependency property.
+  
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
+   Returns: true if the dependency property that is supplied should be value-serialized; 
+    otherwise,false.
+  
+  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
   """
   pass
  def UpdateUnmanagedPropertyState(self,*args):
@@ -791,15 +1022,20 @@ class BitmapEffectGroup(BitmapEffect,ISealable,IAnimatable,IResource):
  def WritePostscript(self,*args):
   """
   WritePostscript(self: Freezable)
-   Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-    this method at the end of any API that modifies class members that are not stored as dependency properties.
+   Raises the System.Windows.Freezable.Changed event for the 
+    System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+    method. Classes that derive from System.Windows.Freezable should call this 
+    method at the end of any API that modifies class members that are not stored as 
+    dependency properties.
   """
   pass
  def WritePreamble(self,*args):
   """
   WritePreamble(self: Freezable)
-   Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-    API that writes to data members that are not dependency properties.
+   Verifies that the System.Windows.Freezable is not frozen and that it is being 
+    accessed from a valid threading context. System.Windows.Freezable inheritors 
+    should call this method at the beginning of any API that writes to data members 
+    that are not dependency properties.
   """
   pass
  def __init__(self,*args):
@@ -828,16 +1064,24 @@ class BitmapEffectInput(Animatable,ISealable,IAnimatable,IResource):
   """
   Clone(self: BitmapEffectInput) -> BitmapEffectInput
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Creates a modifiable clone of this System.Windows.Media.Effects.BitmapEffectInput,making deep copies of 
-    this object's values. When copying dependency properties,this method copies resource references and data bindings (but they might no longer resolve) but not animations or their current values.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Creates a modifiable clone of this 
+    System.Windows.Media.Effects.BitmapEffectInput,making deep copies of this 
+    object's values. When copying dependency properties,this method copies 
+    resource references and data bindings (but they might no longer resolve) but 
+    not animations or their current values.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCore(self,*args):
   """
   CloneCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a clone (deep copy) of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a clone (deep copy) of the specified 
+    System.Windows.Freezable using base (non-animated) property values.
+  
   
    sourceFreezable: The object to clone.
   """
@@ -846,16 +1090,23 @@ class BitmapEffectInput(Animatable,ISealable,IAnimatable,IResource):
   """
   CloneCurrentValue(self: BitmapEffectInput) -> BitmapEffectInput
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Creates a modifiable clone of this System.Windows.Media.Effects.BitmapEffectInput object,making deep 
-    copies of this object's current values. Resource references,data bindings,and animations are not copied,but their current values are.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Creates a modifiable clone of this 
+    System.Windows.Media.Effects.BitmapEffectInput object,making deep copies of 
+    this object's current values. Resource references,data bindings,and 
+    animations are not copied,but their current values are.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCurrentValueCore(self,*args):
   """
   CloneCurrentValueCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a modifiable clone (deep copy) of the specified System.Windows.Freezable using current property values.
+   Makes the instance a modifiable clone (deep copy) of the specified 
+    System.Windows.Freezable using current property values.
+  
   
    sourceFreezable: The System.Windows.Freezable to be cloned.
   """
@@ -875,18 +1126,28 @@ class BitmapEffectInput(Animatable,ISealable,IAnimatable,IResource):
   """
   FreezeCore(self: Animatable,isChecking: bool) -> bool
   
-   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or determines whether it can be made unmodifiable.
+   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or 
+    determines whether it can be made unmodifiable.
   
-   isChecking: true if this method should simply determine whether this instance can be frozen. false if this instance should actually freeze itself when this method is called.
-   Returns: If isChecking is true,this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if it cannot be made unmodifiable. If isChecking is false,this method 
-    returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable,or false if it cannot be made unmodifiable,with the side effect of having begun to change the frozen status of 
-    this object.
+  
+   isChecking: true if this method should simply determine whether this instance can be 
+    frozen. false if this instance should actually freeze itself when this method 
+    is called.
+  
+   Returns: If isChecking is true,this method returns true if this 
+    System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if 
+    it cannot be made unmodifiable. If isChecking is false,this method returns 
+    true if the if this System.Windows.Media.Animation.Animatable is now 
+    unmodifiable,or false if it cannot be made unmodifiable,with the side effect 
+    of having begun to change the frozen status of this object.
   """
   pass
  def GetAsFrozenCore(self,*args):
   """
   GetAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a frozen clone of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a frozen clone of the specified System.Windows.Freezable 
+    using base (non-animated) property values.
+  
   
    sourceFreezable: The instance to copy.
   """
@@ -894,7 +1155,10 @@ class BitmapEffectInput(Animatable,ISealable,IAnimatable,IResource):
  def GetCurrentValueAsFrozenCore(self,*args):
   """
   GetCurrentValueAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the current instance a frozen clone of the specified System.Windows.Freezable. If the object has animated dependency properties,their current animated values are copied.
+   Makes the current instance a frozen clone of the specified 
+    System.Windows.Freezable. If the object has animated dependency properties,
+    their current animated values are copied.
+  
   
    sourceFreezable: The System.Windows.Freezable to copy and freeze.
   """
@@ -908,13 +1172,17 @@ class BitmapEffectInput(Animatable,ISealable,IAnimatable,IResource):
  def OnFreezablePropertyChanged(self,*args):
   """
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject,property: DependencyProperty)
-   This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+   This member supports the Windows Presentation Foundation (WPF) infrastructure 
+    and is not intended to be used directly from your code.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
    property: The property that changed.
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject)
-   Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+   Ensures that appropriate context pointers are established for a 
+    System.Windows.DependencyObjectType data member that has just been set.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
@@ -923,50 +1191,76 @@ class BitmapEffectInput(Animatable,ISealable,IAnimatable,IResource):
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: Freezable,e: DependencyPropertyChangedEventArgs)
-   Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-    System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+   Overrides the System.Windows.DependencyObject implementation of 
+    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+    rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+    handlers in response to a changing dependency property of type 
+    System.Windows.Freezable.
   
   
-   e: Event data that contains information about which property changed,and its old and new values.
+   e: Event data that contains information about which property changed,and its old 
+    and new values.
   """
   pass
  def ReadPreamble(self,*args):
   """
   ReadPreamble(self: Freezable)
-   Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-    not dependency properties.
+   Ensures that the System.Windows.Freezable is being accessed from a valid 
+    thread. Inheritors of System.Windows.Freezable must call this method at the 
+    beginning of any API that reads data members that are not dependency 
+    properties.
   """
   pass
  def ShouldSerializeInput(self):
   """
   ShouldSerializeInput(self: BitmapEffectInput) -> bool
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Determines if System.Windows.Media.Effects.BitmapEffectInput.Input should be serialized.
-   Returns: true if System.Windows.Media.Effects.BitmapEffectInput.Input should be serialized; otherwise false.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Determines if 
+    System.Windows.Media.Effects.BitmapEffectInput.Input should be serialized.
+  
+   Returns: true if System.Windows.Media.Effects.BitmapEffectInput.Input should be 
+    serialized; otherwise false.
   """
   pass
  def ShouldSerializeProperty(self,*args):
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize 
+    the value for the provided dependency property.
+  
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
+   Returns: true if the dependency property that is supplied should be value-serialized; 
+    otherwise,false.
+  
+  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
   """
   pass
  def WritePostscript(self,*args):
   """
   WritePostscript(self: Freezable)
-   Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-    this method at the end of any API that modifies class members that are not stored as dependency properties.
+   Raises the System.Windows.Freezable.Changed event for the 
+    System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+    method. Classes that derive from System.Windows.Freezable should call this 
+    method at the end of any API that modifies class members that are not stored as 
+    dependency properties.
   """
   pass
  def WritePreamble(self,*args):
   """
   WritePreamble(self: Freezable)
-   Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-    API that writes to data members that are not dependency properties.
+   Verifies that the System.Windows.Freezable is not frozen and that it is being 
+    accessed from a valid threading context. System.Windows.Freezable inheritors 
+    should call this method at the beginning of any API that writes to data members 
+    that are not dependency properties.
   """
   pass
  def __init__(self,*args):
@@ -1020,16 +1314,24 @@ class BlurBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
   """
   Clone(self: BlurBitmapEffect) -> BlurBitmapEffect
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.BlurEffect. Creates a modifiable clone of this System.Windows.Media.Effects.BlurBitmapEffect,making deep copies 
-    of this object's values. When copying dependency properties,this method copies resource references and data bindings (but they might no longer resolve) but not animations or their current values.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.BlurEffect. Creates a modifiable clone of this 
+    System.Windows.Media.Effects.BlurBitmapEffect,making deep copies of this 
+    object's values. When copying dependency properties,this method copies 
+    resource references and data bindings (but they might no longer resolve) but 
+    not animations or their current values.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCore(self,*args):
   """
   CloneCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a clone (deep copy) of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a clone (deep copy) of the specified 
+    System.Windows.Freezable using base (non-animated) property values.
+  
   
    sourceFreezable: The object to clone.
   """
@@ -1038,16 +1340,23 @@ class BlurBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
   """
   CloneCurrentValue(self: BlurBitmapEffect) -> BlurBitmapEffect
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.BlurEffect. Creates a modifiable clone of this System.Windows.Media.Effects.BlurBitmapEffect object,making deep 
-    copies of this object's current values. Resource references,data bindings,and animations are not copied,but their current values are.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.BlurEffect. Creates a modifiable clone of this 
+    System.Windows.Media.Effects.BlurBitmapEffect object,making deep copies of 
+    this object's current values. Resource references,data bindings,and 
+    animations are not copied,but their current values are.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCurrentValueCore(self,*args):
   """
   CloneCurrentValueCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a modifiable clone (deep copy) of the specified System.Windows.Freezable using current property values.
+   Makes the instance a modifiable clone (deep copy) of the specified 
+    System.Windows.Freezable using current property values.
+  
   
    sourceFreezable: The System.Windows.Freezable to be cloned.
   """
@@ -1070,18 +1379,28 @@ class BlurBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
   """
   FreezeCore(self: Animatable,isChecking: bool) -> bool
   
-   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or determines whether it can be made unmodifiable.
+   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or 
+    determines whether it can be made unmodifiable.
   
-   isChecking: true if this method should simply determine whether this instance can be frozen. false if this instance should actually freeze itself when this method is called.
-   Returns: If isChecking is true,this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if it cannot be made unmodifiable. If isChecking is false,this method 
-    returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable,or false if it cannot be made unmodifiable,with the side effect of having begun to change the frozen status of 
-    this object.
+  
+   isChecking: true if this method should simply determine whether this instance can be 
+    frozen. false if this instance should actually freeze itself when this method 
+    is called.
+  
+   Returns: If isChecking is true,this method returns true if this 
+    System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if 
+    it cannot be made unmodifiable. If isChecking is false,this method returns 
+    true if the if this System.Windows.Media.Animation.Animatable is now 
+    unmodifiable,or false if it cannot be made unmodifiable,with the side effect 
+    of having begun to change the frozen status of this object.
   """
   pass
  def GetAsFrozenCore(self,*args):
   """
   GetAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a frozen clone of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a frozen clone of the specified System.Windows.Freezable 
+    using base (non-animated) property values.
+  
   
    sourceFreezable: The instance to copy.
   """
@@ -1089,7 +1408,10 @@ class BlurBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def GetCurrentValueAsFrozenCore(self,*args):
   """
   GetCurrentValueAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the current instance a frozen clone of the specified System.Windows.Freezable. If the object has animated dependency properties,their current animated values are copied.
+   Makes the current instance a frozen clone of the specified 
+    System.Windows.Freezable. If the object has animated dependency properties,
+    their current animated values are copied.
+  
   
    sourceFreezable: The System.Windows.Freezable to copy and freeze.
   """
@@ -1103,13 +1425,17 @@ class BlurBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def OnFreezablePropertyChanged(self,*args):
   """
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject,property: DependencyProperty)
-   This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+   This member supports the Windows Presentation Foundation (WPF) infrastructure 
+    and is not intended to be used directly from your code.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
    property: The property that changed.
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject)
-   Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+   Ensures that appropriate context pointers are established for a 
+    System.Windows.DependencyObjectType data member that has just been set.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
@@ -1118,28 +1444,45 @@ class BlurBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: Freezable,e: DependencyPropertyChangedEventArgs)
-   Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-    System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+   Overrides the System.Windows.DependencyObject implementation of 
+    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+    rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+    handlers in response to a changing dependency property of type 
+    System.Windows.Freezable.
   
   
-   e: Event data that contains information about which property changed,and its old and new values.
+   e: Event data that contains information about which property changed,and its old 
+    and new values.
   """
   pass
  def ReadPreamble(self,*args):
   """
   ReadPreamble(self: Freezable)
-   Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-    not dependency properties.
+   Ensures that the System.Windows.Freezable is being accessed from a valid 
+    thread. Inheritors of System.Windows.Freezable must call this method at the 
+    beginning of any API that reads data members that are not dependency 
+    properties.
   """
   pass
  def ShouldSerializeProperty(self,*args):
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize 
+    the value for the provided dependency property.
+  
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
+   Returns: true if the dependency property that is supplied should be value-serialized; 
+    otherwise,false.
+  
+  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
   """
   pass
  def UpdateUnmanagedPropertyState(self,*args):
@@ -1148,15 +1491,20 @@ class BlurBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def WritePostscript(self,*args):
   """
   WritePostscript(self: Freezable)
-   Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-    this method at the end of any API that modifies class members that are not stored as dependency properties.
+   Raises the System.Windows.Freezable.Changed event for the 
+    System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+    method. Classes that derive from System.Windows.Freezable should call this 
+    method at the end of any API that modifies class members that are not stored as 
+    dependency properties.
   """
   pass
  def WritePreamble(self,*args):
   """
   WritePreamble(self: Freezable)
-   Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-    API that writes to data members that are not dependency properties.
+   Verifies that the System.Windows.Freezable is not frozen and that it is being 
+    accessed from a valid threading context. System.Windows.Freezable inheritors 
+    should call this method at the beginning of any API that writes to data members 
+    that are not dependency properties.
   """
   pass
  def __init__(self,*args):
@@ -1189,16 +1537,22 @@ class Effect(Animatable,ISealable,IAnimatable,IResource):
   """
   Clone(self: Effect) -> Effect
   
-   Creates a modifiable clone of this System.Windows.Media.Effects.Effect object,making deep copies of this object's values. When copying this object's dependency properties,this method copies resource 
-    references and data bindings (which may no longer resolve),but not animations or their current values.
+   Creates a modifiable clone of this System.Windows.Media.Effects.Effect object,
+    making deep copies of this object's values. When copying this object's 
+    dependency properties,this method copies resource references and data bindings 
+    (which may no longer resolve),but not animations or their current values.
   
-   Returns: A modifiable clone of this instance. The returned clone is effectively a deep copy of the current object. The clone's System.Windows.Freezable.IsFrozen property is false.
+   Returns: A modifiable clone of this instance. The returned clone is effectively a deep 
+    copy of the current object. The clone's System.Windows.Freezable.IsFrozen 
+    property is false.
   """
   pass
  def CloneCore(self,*args):
   """
   CloneCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a clone (deep copy) of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a clone (deep copy) of the specified 
+    System.Windows.Freezable using base (non-animated) property values.
+  
   
    sourceFreezable: The object to clone.
   """
@@ -1207,16 +1561,21 @@ class Effect(Animatable,ISealable,IAnimatable,IResource):
   """
   CloneCurrentValue(self: Effect) -> Effect
   
-   Creates a modifiable clone of this System.Windows.Media.Effects.Effect object,making deep copies of this object's current values. Resource references,data bindings,and animations are not copied,but 
-    their current values are copied.
+   Creates a modifiable clone of this System.Windows.Media.Effects.Effect object,
+    making deep copies of this object's current values. Resource references,data 
+    bindings,and animations are not copied,but their current values are copied.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCurrentValueCore(self,*args):
   """
   CloneCurrentValueCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a modifiable clone (deep copy) of the specified System.Windows.Freezable using current property values.
+   Makes the instance a modifiable clone (deep copy) of the specified 
+    System.Windows.Freezable using current property values.
+  
   
    sourceFreezable: The System.Windows.Freezable to be cloned.
   """
@@ -1233,7 +1592,9 @@ class Effect(Animatable,ISealable,IAnimatable,IResource):
   """
   CreateInstanceCore(self: Freezable) -> Freezable
   
-   When implemented in a derived class,creates a new instance of the System.Windows.Freezable derived class.
+   When implemented in a derived class,creates a new instance of the 
+    System.Windows.Freezable derived class.
+  
    Returns: The new instance.
   """
   pass
@@ -1241,18 +1602,28 @@ class Effect(Animatable,ISealable,IAnimatable,IResource):
   """
   FreezeCore(self: Animatable,isChecking: bool) -> bool
   
-   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or determines whether it can be made unmodifiable.
+   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or 
+    determines whether it can be made unmodifiable.
   
-   isChecking: true if this method should simply determine whether this instance can be frozen. false if this instance should actually freeze itself when this method is called.
-   Returns: If isChecking is true,this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if it cannot be made unmodifiable. If isChecking is false,this method 
-    returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable,or false if it cannot be made unmodifiable,with the side effect of having begun to change the frozen status of 
-    this object.
+  
+   isChecking: true if this method should simply determine whether this instance can be 
+    frozen. false if this instance should actually freeze itself when this method 
+    is called.
+  
+   Returns: If isChecking is true,this method returns true if this 
+    System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if 
+    it cannot be made unmodifiable. If isChecking is false,this method returns 
+    true if the if this System.Windows.Media.Animation.Animatable is now 
+    unmodifiable,or false if it cannot be made unmodifiable,with the side effect 
+    of having begun to change the frozen status of this object.
   """
   pass
  def GetAsFrozenCore(self,*args):
   """
   GetAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a frozen clone of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a frozen clone of the specified System.Windows.Freezable 
+    using base (non-animated) property values.
+  
   
    sourceFreezable: The instance to copy.
   """
@@ -1260,7 +1631,10 @@ class Effect(Animatable,ISealable,IAnimatable,IResource):
  def GetCurrentValueAsFrozenCore(self,*args):
   """
   GetCurrentValueAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the current instance a frozen clone of the specified System.Windows.Freezable. If the object has animated dependency properties,their current animated values are copied.
+   Makes the current instance a frozen clone of the specified 
+    System.Windows.Freezable. If the object has animated dependency properties,
+    their current animated values are copied.
+  
   
    sourceFreezable: The System.Windows.Freezable to copy and freeze.
   """
@@ -1274,13 +1648,17 @@ class Effect(Animatable,ISealable,IAnimatable,IResource):
  def OnFreezablePropertyChanged(self,*args):
   """
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject,property: DependencyProperty)
-   This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+   This member supports the Windows Presentation Foundation (WPF) infrastructure 
+    and is not intended to be used directly from your code.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
    property: The property that changed.
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject)
-   Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+   Ensures that appropriate context pointers are established for a 
+    System.Windows.DependencyObjectType data member that has just been set.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
@@ -1289,42 +1667,64 @@ class Effect(Animatable,ISealable,IAnimatable,IResource):
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: Freezable,e: DependencyPropertyChangedEventArgs)
-   Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-    System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+   Overrides the System.Windows.DependencyObject implementation of 
+    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+    rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+    handlers in response to a changing dependency property of type 
+    System.Windows.Freezable.
   
   
-   e: Event data that contains information about which property changed,and its old and new values.
+   e: Event data that contains information about which property changed,and its old 
+    and new values.
   """
   pass
  def ReadPreamble(self,*args):
   """
   ReadPreamble(self: Freezable)
-   Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-    not dependency properties.
+   Ensures that the System.Windows.Freezable is being accessed from a valid 
+    thread. Inheritors of System.Windows.Freezable must call this method at the 
+    beginning of any API that reads data members that are not dependency 
+    properties.
   """
   pass
  def ShouldSerializeProperty(self,*args):
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize 
+    the value for the provided dependency property.
+  
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
+   Returns: true if the dependency property that is supplied should be value-serialized; 
+    otherwise,false.
+  
+  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
   """
   pass
  def WritePostscript(self,*args):
   """
   WritePostscript(self: Freezable)
-   Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-    this method at the end of any API that modifies class members that are not stored as dependency properties.
+   Raises the System.Windows.Freezable.Changed event for the 
+    System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+    method. Classes that derive from System.Windows.Freezable should call this 
+    method at the end of any API that modifies class members that are not stored as 
+    dependency properties.
   """
   pass
  def WritePreamble(self,*args):
   """
   WritePreamble(self: Freezable)
-   Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-    API that writes to data members that are not dependency properties.
+   Verifies that the System.Windows.Freezable is not frozen and that it is being 
+    accessed from a valid threading context. System.Windows.Freezable inheritors 
+    should call this method at the beginning of any API that writes to data members 
+    that are not dependency properties.
   """
   pass
  def __init__(self,*args):
@@ -1349,16 +1749,22 @@ class BlurEffect(Effect,ISealable,IAnimatable,IResource):
   """
   Clone(self: BlurEffect) -> BlurEffect
   
-   Creates a modifiable clone of this System.Windows.Media.Effects.Effect object,making deep copies of this object's values. When copying this object's dependency properties,this method copies resource 
-    references and data bindings (which may no longer resolve),but not animations or their current values.
+   Creates a modifiable clone of this System.Windows.Media.Effects.Effect object,
+    making deep copies of this object's values. When copying this object's 
+    dependency properties,this method copies resource references and data bindings 
+    (which may no longer resolve),but not animations or their current values.
   
-   Returns: A modifiable clone of this instance. The returned clone is effectively a deep copy of the current object. The clone's System.Windows.Freezable.IsFrozen property is false.
+   Returns: A modifiable clone of this instance. The returned clone is effectively a deep 
+    copy of the current object. The clone's System.Windows.Freezable.IsFrozen 
+    property is false.
   """
   pass
  def CloneCore(self,*args):
   """
   CloneCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a clone (deep copy) of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a clone (deep copy) of the specified 
+    System.Windows.Freezable using base (non-animated) property values.
+  
   
    sourceFreezable: The object to clone.
   """
@@ -1367,16 +1773,21 @@ class BlurEffect(Effect,ISealable,IAnimatable,IResource):
   """
   CloneCurrentValue(self: BlurEffect) -> BlurEffect
   
-   Creates a modifiable clone of this System.Windows.Media.Effects.Effect object,making deep copies of this object's current values. Resource references,data bindings,and animations are not copied,but 
-    their current values are copied.
+   Creates a modifiable clone of this System.Windows.Media.Effects.Effect object,
+    making deep copies of this object's current values. Resource references,data 
+    bindings,and animations are not copied,but their current values are copied.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCurrentValueCore(self,*args):
   """
   CloneCurrentValueCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a modifiable clone (deep copy) of the specified System.Windows.Freezable using current property values.
+   Makes the instance a modifiable clone (deep copy) of the specified 
+    System.Windows.Freezable using current property values.
+  
   
    sourceFreezable: The System.Windows.Freezable to be cloned.
   """
@@ -1396,18 +1807,28 @@ class BlurEffect(Effect,ISealable,IAnimatable,IResource):
   """
   FreezeCore(self: Animatable,isChecking: bool) -> bool
   
-   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or determines whether it can be made unmodifiable.
+   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or 
+    determines whether it can be made unmodifiable.
   
-   isChecking: true if this method should simply determine whether this instance can be frozen. false if this instance should actually freeze itself when this method is called.
-   Returns: If isChecking is true,this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if it cannot be made unmodifiable. If isChecking is false,this method 
-    returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable,or false if it cannot be made unmodifiable,with the side effect of having begun to change the frozen status of 
-    this object.
+  
+   isChecking: true if this method should simply determine whether this instance can be 
+    frozen. false if this instance should actually freeze itself when this method 
+    is called.
+  
+   Returns: If isChecking is true,this method returns true if this 
+    System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if 
+    it cannot be made unmodifiable. If isChecking is false,this method returns 
+    true if the if this System.Windows.Media.Animation.Animatable is now 
+    unmodifiable,or false if it cannot be made unmodifiable,with the side effect 
+    of having begun to change the frozen status of this object.
   """
   pass
  def GetAsFrozenCore(self,*args):
   """
   GetAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a frozen clone of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a frozen clone of the specified System.Windows.Freezable 
+    using base (non-animated) property values.
+  
   
    sourceFreezable: The instance to copy.
   """
@@ -1415,7 +1836,10 @@ class BlurEffect(Effect,ISealable,IAnimatable,IResource):
  def GetCurrentValueAsFrozenCore(self,*args):
   """
   GetCurrentValueAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the current instance a frozen clone of the specified System.Windows.Freezable. If the object has animated dependency properties,their current animated values are copied.
+   Makes the current instance a frozen clone of the specified 
+    System.Windows.Freezable. If the object has animated dependency properties,
+    their current animated values are copied.
+  
   
    sourceFreezable: The System.Windows.Freezable to copy and freeze.
   """
@@ -1429,13 +1853,17 @@ class BlurEffect(Effect,ISealable,IAnimatable,IResource):
  def OnFreezablePropertyChanged(self,*args):
   """
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject,property: DependencyProperty)
-   This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+   This member supports the Windows Presentation Foundation (WPF) infrastructure 
+    and is not intended to be used directly from your code.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
    property: The property that changed.
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject)
-   Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+   Ensures that appropriate context pointers are established for a 
+    System.Windows.DependencyObjectType data member that has just been set.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
@@ -1444,42 +1872,64 @@ class BlurEffect(Effect,ISealable,IAnimatable,IResource):
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: Freezable,e: DependencyPropertyChangedEventArgs)
-   Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-    System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+   Overrides the System.Windows.DependencyObject implementation of 
+    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+    rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+    handlers in response to a changing dependency property of type 
+    System.Windows.Freezable.
   
   
-   e: Event data that contains information about which property changed,and its old and new values.
+   e: Event data that contains information about which property changed,and its old 
+    and new values.
   """
   pass
  def ReadPreamble(self,*args):
   """
   ReadPreamble(self: Freezable)
-   Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-    not dependency properties.
+   Ensures that the System.Windows.Freezable is being accessed from a valid 
+    thread. Inheritors of System.Windows.Freezable must call this method at the 
+    beginning of any API that reads data members that are not dependency 
+    properties.
   """
   pass
  def ShouldSerializeProperty(self,*args):
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize 
+    the value for the provided dependency property.
+  
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
+   Returns: true if the dependency property that is supplied should be value-serialized; 
+    otherwise,false.
+  
+  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
   """
   pass
  def WritePostscript(self,*args):
   """
   WritePostscript(self: Freezable)
-   Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-    this method at the end of any API that modifies class members that are not stored as dependency properties.
+   Raises the System.Windows.Freezable.Changed event for the 
+    System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+    method. Classes that derive from System.Windows.Freezable should call this 
+    method at the end of any API that modifies class members that are not stored as 
+    dependency properties.
   """
   pass
  def WritePreamble(self,*args):
   """
   WritePreamble(self: Freezable)
-   Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-    API that writes to data members that are not dependency properties.
+   Verifies that the System.Windows.Freezable is not frozen and that it is being 
+    accessed from a valid threading context. System.Windows.Freezable inheritors 
+    should call this method at the beginning of any API that writes to data members 
+    that are not dependency properties.
   """
   pass
  def __init__(self,*args):
@@ -1530,17 +1980,24 @@ class DropShadowBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
   """
   Clone(self: DropShadowBitmapEffect) -> DropShadowBitmapEffect
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.DropShadowEffect. Creates a modifiable clone of this System.Windows.Media.Effects.DropShadowBitmapEffect,making 
-    deep copies of this object's values. When copying dependency properties,this method copies resource references and data bindings (but they might no longer resolve) but not animations or their current 
-    values.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.DropShadowEffect. Creates a modifiable clone of 
+    this System.Windows.Media.Effects.DropShadowBitmapEffect,making deep copies of 
+    this object's values. When copying dependency properties,this method copies 
+    resource references and data bindings (but they might no longer resolve) but 
+    not animations or their current values.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCore(self,*args):
   """
   CloneCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a clone (deep copy) of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a clone (deep copy) of the specified 
+    System.Windows.Freezable using base (non-animated) property values.
+  
   
    sourceFreezable: The object to clone.
   """
@@ -1549,16 +2006,23 @@ class DropShadowBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
   """
   CloneCurrentValue(self: DropShadowBitmapEffect) -> DropShadowBitmapEffect
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.DropShadowEffect. Creates a modifiable clone of this System.Windows.Media.Effects.DropShadowBitmapEffect object,
-    making deep copies of this object's current values. Resource references,data bindings,and animations are not copied,but their current values are.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.DropShadowEffect. Creates a modifiable clone of 
+    this System.Windows.Media.Effects.DropShadowBitmapEffect object,making deep 
+    copies of this object's current values. Resource references,data bindings,and 
+    animations are not copied,but their current values are.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCurrentValueCore(self,*args):
   """
   CloneCurrentValueCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a modifiable clone (deep copy) of the specified System.Windows.Freezable using current property values.
+   Makes the instance a modifiable clone (deep copy) of the specified 
+    System.Windows.Freezable using current property values.
+  
   
    sourceFreezable: The System.Windows.Freezable to be cloned.
   """
@@ -1581,18 +2045,28 @@ class DropShadowBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
   """
   FreezeCore(self: Animatable,isChecking: bool) -> bool
   
-   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or determines whether it can be made unmodifiable.
+   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or 
+    determines whether it can be made unmodifiable.
   
-   isChecking: true if this method should simply determine whether this instance can be frozen. false if this instance should actually freeze itself when this method is called.
-   Returns: If isChecking is true,this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if it cannot be made unmodifiable. If isChecking is false,this method 
-    returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable,or false if it cannot be made unmodifiable,with the side effect of having begun to change the frozen status of 
-    this object.
+  
+   isChecking: true if this method should simply determine whether this instance can be 
+    frozen. false if this instance should actually freeze itself when this method 
+    is called.
+  
+   Returns: If isChecking is true,this method returns true if this 
+    System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if 
+    it cannot be made unmodifiable. If isChecking is false,this method returns 
+    true if the if this System.Windows.Media.Animation.Animatable is now 
+    unmodifiable,or false if it cannot be made unmodifiable,with the side effect 
+    of having begun to change the frozen status of this object.
   """
   pass
  def GetAsFrozenCore(self,*args):
   """
   GetAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a frozen clone of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a frozen clone of the specified System.Windows.Freezable 
+    using base (non-animated) property values.
+  
   
    sourceFreezable: The instance to copy.
   """
@@ -1600,7 +2074,10 @@ class DropShadowBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def GetCurrentValueAsFrozenCore(self,*args):
   """
   GetCurrentValueAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the current instance a frozen clone of the specified System.Windows.Freezable. If the object has animated dependency properties,their current animated values are copied.
+   Makes the current instance a frozen clone of the specified 
+    System.Windows.Freezable. If the object has animated dependency properties,
+    their current animated values are copied.
+  
   
    sourceFreezable: The System.Windows.Freezable to copy and freeze.
   """
@@ -1614,13 +2091,17 @@ class DropShadowBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def OnFreezablePropertyChanged(self,*args):
   """
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject,property: DependencyProperty)
-   This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+   This member supports the Windows Presentation Foundation (WPF) infrastructure 
+    and is not intended to be used directly from your code.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
    property: The property that changed.
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject)
-   Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+   Ensures that appropriate context pointers are established for a 
+    System.Windows.DependencyObjectType data member that has just been set.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
@@ -1629,28 +2110,45 @@ class DropShadowBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: Freezable,e: DependencyPropertyChangedEventArgs)
-   Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-    System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+   Overrides the System.Windows.DependencyObject implementation of 
+    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+    rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+    handlers in response to a changing dependency property of type 
+    System.Windows.Freezable.
   
   
-   e: Event data that contains information about which property changed,and its old and new values.
+   e: Event data that contains information about which property changed,and its old 
+    and new values.
   """
   pass
  def ReadPreamble(self,*args):
   """
   ReadPreamble(self: Freezable)
-   Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-    not dependency properties.
+   Ensures that the System.Windows.Freezable is being accessed from a valid 
+    thread. Inheritors of System.Windows.Freezable must call this method at the 
+    beginning of any API that reads data members that are not dependency 
+    properties.
   """
   pass
  def ShouldSerializeProperty(self,*args):
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize 
+    the value for the provided dependency property.
+  
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
+   Returns: true if the dependency property that is supplied should be value-serialized; 
+    otherwise,false.
+  
+  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
   """
   pass
  def UpdateUnmanagedPropertyState(self,*args):
@@ -1659,15 +2157,20 @@ class DropShadowBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def WritePostscript(self,*args):
   """
   WritePostscript(self: Freezable)
-   Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-    this method at the end of any API that modifies class members that are not stored as dependency properties.
+   Raises the System.Windows.Freezable.Changed event for the 
+    System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+    method. Classes that derive from System.Windows.Freezable should call this 
+    method at the end of any API that modifies class members that are not stored as 
+    dependency properties.
   """
   pass
  def WritePreamble(self,*args):
   """
   WritePreamble(self: Freezable)
-   Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-    API that writes to data members that are not dependency properties.
+   Verifies that the System.Windows.Freezable is not frozen and that it is being 
+    accessed from a valid threading context. System.Windows.Freezable inheritors 
+    should call this method at the beginning of any API that writes to data members 
+    that are not dependency properties.
   """
   pass
  def __init__(self,*args):
@@ -1740,16 +2243,22 @@ class DropShadowEffect(Effect,ISealable,IAnimatable,IResource):
   """
   Clone(self: DropShadowEffect) -> DropShadowEffect
   
-   Creates a modifiable clone of this System.Windows.Media.Effects.Effect object,making deep copies of this object's values. When copying this object's dependency properties,this method copies resource 
-    references and data bindings (which may no longer resolve),but not animations or their current values.
+   Creates a modifiable clone of this System.Windows.Media.Effects.Effect object,
+    making deep copies of this object's values. When copying this object's 
+    dependency properties,this method copies resource references and data bindings 
+    (which may no longer resolve),but not animations or their current values.
   
-   Returns: A modifiable clone of this instance. The returned clone is effectively a deep copy of the current object. The clone's System.Windows.Freezable.IsFrozen property is false.
+   Returns: A modifiable clone of this instance. The returned clone is effectively a deep 
+    copy of the current object. The clone's System.Windows.Freezable.IsFrozen 
+    property is false.
   """
   pass
  def CloneCore(self,*args):
   """
   CloneCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a clone (deep copy) of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a clone (deep copy) of the specified 
+    System.Windows.Freezable using base (non-animated) property values.
+  
   
    sourceFreezable: The object to clone.
   """
@@ -1758,16 +2267,21 @@ class DropShadowEffect(Effect,ISealable,IAnimatable,IResource):
   """
   CloneCurrentValue(self: DropShadowEffect) -> DropShadowEffect
   
-   Creates a modifiable clone of this System.Windows.Media.Effects.Effect object,making deep copies of this object's current values. Resource references,data bindings,and animations are not copied,but 
-    their current values are copied.
+   Creates a modifiable clone of this System.Windows.Media.Effects.Effect object,
+    making deep copies of this object's current values. Resource references,data 
+    bindings,and animations are not copied,but their current values are copied.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCurrentValueCore(self,*args):
   """
   CloneCurrentValueCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a modifiable clone (deep copy) of the specified System.Windows.Freezable using current property values.
+   Makes the instance a modifiable clone (deep copy) of the specified 
+    System.Windows.Freezable using current property values.
+  
   
    sourceFreezable: The System.Windows.Freezable to be cloned.
   """
@@ -1787,18 +2301,28 @@ class DropShadowEffect(Effect,ISealable,IAnimatable,IResource):
   """
   FreezeCore(self: Animatable,isChecking: bool) -> bool
   
-   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or determines whether it can be made unmodifiable.
+   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or 
+    determines whether it can be made unmodifiable.
   
-   isChecking: true if this method should simply determine whether this instance can be frozen. false if this instance should actually freeze itself when this method is called.
-   Returns: If isChecking is true,this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if it cannot be made unmodifiable. If isChecking is false,this method 
-    returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable,or false if it cannot be made unmodifiable,with the side effect of having begun to change the frozen status of 
-    this object.
+  
+   isChecking: true if this method should simply determine whether this instance can be 
+    frozen. false if this instance should actually freeze itself when this method 
+    is called.
+  
+   Returns: If isChecking is true,this method returns true if this 
+    System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if 
+    it cannot be made unmodifiable. If isChecking is false,this method returns 
+    true if the if this System.Windows.Media.Animation.Animatable is now 
+    unmodifiable,or false if it cannot be made unmodifiable,with the side effect 
+    of having begun to change the frozen status of this object.
   """
   pass
  def GetAsFrozenCore(self,*args):
   """
   GetAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a frozen clone of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a frozen clone of the specified System.Windows.Freezable 
+    using base (non-animated) property values.
+  
   
    sourceFreezable: The instance to copy.
   """
@@ -1806,7 +2330,10 @@ class DropShadowEffect(Effect,ISealable,IAnimatable,IResource):
  def GetCurrentValueAsFrozenCore(self,*args):
   """
   GetCurrentValueAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the current instance a frozen clone of the specified System.Windows.Freezable. If the object has animated dependency properties,their current animated values are copied.
+   Makes the current instance a frozen clone of the specified 
+    System.Windows.Freezable. If the object has animated dependency properties,
+    their current animated values are copied.
+  
   
    sourceFreezable: The System.Windows.Freezable to copy and freeze.
   """
@@ -1820,13 +2347,17 @@ class DropShadowEffect(Effect,ISealable,IAnimatable,IResource):
  def OnFreezablePropertyChanged(self,*args):
   """
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject,property: DependencyProperty)
-   This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+   This member supports the Windows Presentation Foundation (WPF) infrastructure 
+    and is not intended to be used directly from your code.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
    property: The property that changed.
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject)
-   Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+   Ensures that appropriate context pointers are established for a 
+    System.Windows.DependencyObjectType data member that has just been set.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
@@ -1835,42 +2366,64 @@ class DropShadowEffect(Effect,ISealable,IAnimatable,IResource):
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: Freezable,e: DependencyPropertyChangedEventArgs)
-   Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-    System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+   Overrides the System.Windows.DependencyObject implementation of 
+    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+    rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+    handlers in response to a changing dependency property of type 
+    System.Windows.Freezable.
   
   
-   e: Event data that contains information about which property changed,and its old and new values.
+   e: Event data that contains information about which property changed,and its old 
+    and new values.
   """
   pass
  def ReadPreamble(self,*args):
   """
   ReadPreamble(self: Freezable)
-   Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-    not dependency properties.
+   Ensures that the System.Windows.Freezable is being accessed from a valid 
+    thread. Inheritors of System.Windows.Freezable must call this method at the 
+    beginning of any API that reads data members that are not dependency 
+    properties.
   """
   pass
  def ShouldSerializeProperty(self,*args):
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize 
+    the value for the provided dependency property.
+  
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
+   Returns: true if the dependency property that is supplied should be value-serialized; 
+    otherwise,false.
+  
+  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
   """
   pass
  def WritePostscript(self,*args):
   """
   WritePostscript(self: Freezable)
-   Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-    this method at the end of any API that modifies class members that are not stored as dependency properties.
+   Raises the System.Windows.Freezable.Changed event for the 
+    System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+    method. Classes that derive from System.Windows.Freezable should call this 
+    method at the end of any API that modifies class members that are not stored as 
+    dependency properties.
   """
   pass
  def WritePreamble(self,*args):
   """
   WritePreamble(self: Freezable)
-   Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-    API that writes to data members that are not dependency properties.
+   Verifies that the System.Windows.Freezable is not frozen and that it is being 
+    accessed from a valid threading context. System.Windows.Freezable inheritors 
+    should call this method at the beginning of any API that writes to data members 
+    that are not dependency properties.
   """
   pass
  def __init__(self,*args):
@@ -1984,16 +2537,24 @@ class EmbossBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
   """
   Clone(self: EmbossBitmapEffect) -> EmbossBitmapEffect
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Creates a modifiable clone of this System.Windows.Media.Effects.EmbossBitmapEffect,making deep copies 
-    of this object's values. When copying dependency properties,this method copies resource references and data bindings (but they might no longer resolve) but not animations or their current values.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Creates a modifiable clone of this 
+    System.Windows.Media.Effects.EmbossBitmapEffect,making deep copies of this 
+    object's values. When copying dependency properties,this method copies 
+    resource references and data bindings (but they might no longer resolve) but 
+    not animations or their current values.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCore(self,*args):
   """
   CloneCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a clone (deep copy) of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a clone (deep copy) of the specified 
+    System.Windows.Freezable using base (non-animated) property values.
+  
   
    sourceFreezable: The object to clone.
   """
@@ -2002,16 +2563,23 @@ class EmbossBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
   """
   CloneCurrentValue(self: EmbossBitmapEffect) -> EmbossBitmapEffect
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.Effect. Creates a modifiable clone of this System.Windows.Media.Effects.EmbossBitmapEffect object,making deep 
-    copies of this object's current values. Resource references,data bindings,and animations are not copied,but their current values are.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.Effect. Creates a modifiable clone of this 
+    System.Windows.Media.Effects.EmbossBitmapEffect object,making deep copies of 
+    this object's current values. Resource references,data bindings,and 
+    animations are not copied,but their current values are.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCurrentValueCore(self,*args):
   """
   CloneCurrentValueCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a modifiable clone (deep copy) of the specified System.Windows.Freezable using current property values.
+   Makes the instance a modifiable clone (deep copy) of the specified 
+    System.Windows.Freezable using current property values.
+  
   
    sourceFreezable: The System.Windows.Freezable to be cloned.
   """
@@ -2034,18 +2602,28 @@ class EmbossBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
   """
   FreezeCore(self: Animatable,isChecking: bool) -> bool
   
-   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or determines whether it can be made unmodifiable.
+   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or 
+    determines whether it can be made unmodifiable.
   
-   isChecking: true if this method should simply determine whether this instance can be frozen. false if this instance should actually freeze itself when this method is called.
-   Returns: If isChecking is true,this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if it cannot be made unmodifiable. If isChecking is false,this method 
-    returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable,or false if it cannot be made unmodifiable,with the side effect of having begun to change the frozen status of 
-    this object.
+  
+   isChecking: true if this method should simply determine whether this instance can be 
+    frozen. false if this instance should actually freeze itself when this method 
+    is called.
+  
+   Returns: If isChecking is true,this method returns true if this 
+    System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if 
+    it cannot be made unmodifiable. If isChecking is false,this method returns 
+    true if the if this System.Windows.Media.Animation.Animatable is now 
+    unmodifiable,or false if it cannot be made unmodifiable,with the side effect 
+    of having begun to change the frozen status of this object.
   """
   pass
  def GetAsFrozenCore(self,*args):
   """
   GetAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a frozen clone of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a frozen clone of the specified System.Windows.Freezable 
+    using base (non-animated) property values.
+  
   
    sourceFreezable: The instance to copy.
   """
@@ -2053,7 +2631,10 @@ class EmbossBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def GetCurrentValueAsFrozenCore(self,*args):
   """
   GetCurrentValueAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the current instance a frozen clone of the specified System.Windows.Freezable. If the object has animated dependency properties,their current animated values are copied.
+   Makes the current instance a frozen clone of the specified 
+    System.Windows.Freezable. If the object has animated dependency properties,
+    their current animated values are copied.
+  
   
    sourceFreezable: The System.Windows.Freezable to copy and freeze.
   """
@@ -2067,13 +2648,17 @@ class EmbossBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def OnFreezablePropertyChanged(self,*args):
   """
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject,property: DependencyProperty)
-   This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+   This member supports the Windows Presentation Foundation (WPF) infrastructure 
+    and is not intended to be used directly from your code.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
    property: The property that changed.
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject)
-   Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+   Ensures that appropriate context pointers are established for a 
+    System.Windows.DependencyObjectType data member that has just been set.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
@@ -2082,28 +2667,45 @@ class EmbossBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: Freezable,e: DependencyPropertyChangedEventArgs)
-   Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-    System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+   Overrides the System.Windows.DependencyObject implementation of 
+    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+    rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+    handlers in response to a changing dependency property of type 
+    System.Windows.Freezable.
   
   
-   e: Event data that contains information about which property changed,and its old and new values.
+   e: Event data that contains information about which property changed,and its old 
+    and new values.
   """
   pass
  def ReadPreamble(self,*args):
   """
   ReadPreamble(self: Freezable)
-   Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-    not dependency properties.
+   Ensures that the System.Windows.Freezable is being accessed from a valid 
+    thread. Inheritors of System.Windows.Freezable must call this method at the 
+    beginning of any API that reads data members that are not dependency 
+    properties.
   """
   pass
  def ShouldSerializeProperty(self,*args):
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize 
+    the value for the provided dependency property.
+  
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
+   Returns: true if the dependency property that is supplied should be value-serialized; 
+    otherwise,false.
+  
+  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
   """
   pass
  def UpdateUnmanagedPropertyState(self,*args):
@@ -2112,15 +2714,20 @@ class EmbossBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def WritePostscript(self,*args):
   """
   WritePostscript(self: Freezable)
-   Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-    this method at the end of any API that modifies class members that are not stored as dependency properties.
+   Raises the System.Windows.Freezable.Changed event for the 
+    System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+    method. Classes that derive from System.Windows.Freezable should call this 
+    method at the end of any API that modifies class members that are not stored as 
+    dependency properties.
   """
   pass
  def WritePreamble(self,*args):
   """
   WritePreamble(self: Freezable)
-   Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-    API that writes to data members that are not dependency properties.
+   Verifies that the System.Windows.Freezable is not frozen and that it is being 
+    accessed from a valid threading context. System.Windows.Freezable inheritors 
+    should call this method at the beginning of any API that writes to data members 
+    that are not dependency properties.
   """
   pass
  def __init__(self,*args):
@@ -2191,16 +2798,24 @@ class OuterGlowBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
   """
   Clone(self: OuterGlowBitmapEffect) -> OuterGlowBitmapEffect
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.BlurEffect. Creates a modifiable clone of this System.Windows.Media.Effects.OuterGlowBitmapEffect,making deep 
-    copies of this object's values. When copying dependency properties,this method copies resource references and data bindings (but they might no longer resolve) but not animations or their current values.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.BlurEffect. Creates a modifiable clone of this 
+    System.Windows.Media.Effects.OuterGlowBitmapEffect,making deep copies of this 
+    object's values. When copying dependency properties,this method copies 
+    resource references and data bindings (but they might no longer resolve) but 
+    not animations or their current values.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCore(self,*args):
   """
   CloneCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a clone (deep copy) of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a clone (deep copy) of the specified 
+    System.Windows.Freezable using base (non-animated) property values.
+  
   
    sourceFreezable: The object to clone.
   """
@@ -2209,16 +2824,23 @@ class OuterGlowBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
   """
   CloneCurrentValue(self: OuterGlowBitmapEffect) -> OuterGlowBitmapEffect
   
-   Note: This API is now obsolete. The non-obsolete alternative is System.Windows.Media.Effects.BlurEffect. Creates a modifiable clone of this System.Windows.Media.Effects.OuterGlowBitmapEffect object,making 
-    deep copies of this object's current values. Resource references,data bindings,and animations are not copied,but their current values are.
+   Note: This API is now obsolete. The non-obsolete alternative is 
+    System.Windows.Media.Effects.BlurEffect. Creates a modifiable clone of this 
+    System.Windows.Media.Effects.OuterGlowBitmapEffect object,making deep copies 
+    of this object's current values. Resource references,data bindings,and 
+    animations are not copied,but their current values are.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCurrentValueCore(self,*args):
   """
   CloneCurrentValueCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a modifiable clone (deep copy) of the specified System.Windows.Freezable using current property values.
+   Makes the instance a modifiable clone (deep copy) of the specified 
+    System.Windows.Freezable using current property values.
+  
   
    sourceFreezable: The System.Windows.Freezable to be cloned.
   """
@@ -2241,18 +2863,28 @@ class OuterGlowBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
   """
   FreezeCore(self: Animatable,isChecking: bool) -> bool
   
-   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or determines whether it can be made unmodifiable.
+   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or 
+    determines whether it can be made unmodifiable.
   
-   isChecking: true if this method should simply determine whether this instance can be frozen. false if this instance should actually freeze itself when this method is called.
-   Returns: If isChecking is true,this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if it cannot be made unmodifiable. If isChecking is false,this method 
-    returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable,or false if it cannot be made unmodifiable,with the side effect of having begun to change the frozen status of 
-    this object.
+  
+   isChecking: true if this method should simply determine whether this instance can be 
+    frozen. false if this instance should actually freeze itself when this method 
+    is called.
+  
+   Returns: If isChecking is true,this method returns true if this 
+    System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if 
+    it cannot be made unmodifiable. If isChecking is false,this method returns 
+    true if the if this System.Windows.Media.Animation.Animatable is now 
+    unmodifiable,or false if it cannot be made unmodifiable,with the side effect 
+    of having begun to change the frozen status of this object.
   """
   pass
  def GetAsFrozenCore(self,*args):
   """
   GetAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a frozen clone of the specified System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a frozen clone of the specified System.Windows.Freezable 
+    using base (non-animated) property values.
+  
   
    sourceFreezable: The instance to copy.
   """
@@ -2260,7 +2892,10 @@ class OuterGlowBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def GetCurrentValueAsFrozenCore(self,*args):
   """
   GetCurrentValueAsFrozenCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the current instance a frozen clone of the specified System.Windows.Freezable. If the object has animated dependency properties,their current animated values are copied.
+   Makes the current instance a frozen clone of the specified 
+    System.Windows.Freezable. If the object has animated dependency properties,
+    their current animated values are copied.
+  
   
    sourceFreezable: The System.Windows.Freezable to copy and freeze.
   """
@@ -2274,13 +2909,17 @@ class OuterGlowBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def OnFreezablePropertyChanged(self,*args):
   """
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject,property: DependencyProperty)
-   This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+   This member supports the Windows Presentation Foundation (WPF) infrastructure 
+    and is not intended to be used directly from your code.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
    property: The property that changed.
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject)
-   Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+   Ensures that appropriate context pointers are established for a 
+    System.Windows.DependencyObjectType data member that has just been set.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
@@ -2289,28 +2928,45 @@ class OuterGlowBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: Freezable,e: DependencyPropertyChangedEventArgs)
-   Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-    System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+   Overrides the System.Windows.DependencyObject implementation of 
+    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+    rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+    handlers in response to a changing dependency property of type 
+    System.Windows.Freezable.
   
   
-   e: Event data that contains information about which property changed,and its old and new values.
+   e: Event data that contains information about which property changed,and its old 
+    and new values.
   """
   pass
  def ReadPreamble(self,*args):
   """
   ReadPreamble(self: Freezable)
-   Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-    not dependency properties.
+   Ensures that the System.Windows.Freezable is being accessed from a valid 
+    thread. Inheritors of System.Windows.Freezable must call this method at the 
+    beginning of any API that reads data members that are not dependency 
+    properties.
   """
   pass
  def ShouldSerializeProperty(self,*args):
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize 
+    the value for the provided dependency property.
+  
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
+   Returns: true if the dependency property that is supplied should be value-serialized; 
+    otherwise,false.
+  
+  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
   """
   pass
  def UpdateUnmanagedPropertyState(self,*args):
@@ -2319,15 +2975,20 @@ class OuterGlowBitmapEffect(BitmapEffect,ISealable,IAnimatable,IResource):
  def WritePostscript(self,*args):
   """
   WritePostscript(self: Freezable)
-   Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-    this method at the end of any API that modifies class members that are not stored as dependency properties.
+   Raises the System.Windows.Freezable.Changed event for the 
+    System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+    method. Classes that derive from System.Windows.Freezable should call this 
+    method at the end of any API that modifies class members that are not stored as 
+    dependency properties.
   """
   pass
  def WritePreamble(self,*args):
   """
   WritePreamble(self: Freezable)
-   Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-    API that writes to data members that are not dependency properties.
+   Verifies that the System.Windows.Freezable is not frozen and that it is being 
+    accessed from a valid threading context. System.Windows.Freezable inheritors 
+    should call this method at the beginning of any API that writes to data members 
+    that are not dependency properties.
   """
   pass
  def __init__(self,*args):
@@ -2382,10 +3043,14 @@ class PixelShader(Animatable,ISealable,IAnimatable,IResource):
   """
   Clone(self: PixelShader) -> PixelShader
   
-   Creates a modifiable clone of this System.Windows.Media.Effects.PixelShader object,making deep copies of this object's values. When copying this object's dependency properties,this method copies resource 
-    references and data bindings (which may no longer resolve),but not animations or their current values.
+   Creates a modifiable clone of this System.Windows.Media.Effects.PixelShader 
+    object,making deep copies of this object's values. When copying this object's 
+    dependency properties,this method copies resource references and data bindings 
+    (which may no longer resolve),but not animations or their current values.
   
-   Returns: A modifiable clone of this instance. The returned clone is effectively a deep copy of the current object. The clone's System.Windows.Freezable.IsFrozen property is false.
+   Returns: A modifiable clone of this instance. The returned clone is effectively a deep 
+    copy of the current object. The clone's System.Windows.Freezable.IsFrozen 
+    property is false.
   """
   pass
  def CloneCore(self,*args):
@@ -2395,10 +3060,14 @@ class PixelShader(Animatable,ISealable,IAnimatable,IResource):
   """
   CloneCurrentValue(self: PixelShader) -> PixelShader
   
-   Creates a modifiable clone of this System.Windows.Media.Effects.PixelShader object,making deep copies of this object's current values. Resource references,data bindings,and animations are not copied,
-    but their current values are copied.
+   Creates a modifiable clone of this System.Windows.Media.Effects.PixelShader 
+    object,making deep copies of this object's current values. Resource 
+    references,data bindings,and animations are not copied,but their current 
+    values are copied.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCurrentValueCore(self,*args):
@@ -2419,12 +3088,20 @@ class PixelShader(Animatable,ISealable,IAnimatable,IResource):
   """
   FreezeCore(self: Animatable,isChecking: bool) -> bool
   
-   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or determines whether it can be made unmodifiable.
+   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or 
+    determines whether it can be made unmodifiable.
   
-   isChecking: true if this method should simply determine whether this instance can be frozen. false if this instance should actually freeze itself when this method is called.
-   Returns: If isChecking is true,this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if it cannot be made unmodifiable. If isChecking is false,this method 
-    returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable,or false if it cannot be made unmodifiable,with the side effect of having begun to change the frozen status of 
-    this object.
+  
+   isChecking: true if this method should simply determine whether this instance can be 
+    frozen. false if this instance should actually freeze itself when this method 
+    is called.
+  
+   Returns: If isChecking is true,this method returns true if this 
+    System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if 
+    it cannot be made unmodifiable. If isChecking is false,this method returns 
+    true if the if this System.Windows.Media.Animation.Animatable is now 
+    unmodifiable,or false if it cannot be made unmodifiable,with the side effect 
+    of having begun to change the frozen status of this object.
   """
   pass
  def GetAsFrozenCore(self,*args):
@@ -2442,13 +3119,17 @@ class PixelShader(Animatable,ISealable,IAnimatable,IResource):
  def OnFreezablePropertyChanged(self,*args):
   """
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject,property: DependencyProperty)
-   This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+   This member supports the Windows Presentation Foundation (WPF) infrastructure 
+    and is not intended to be used directly from your code.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
    property: The property that changed.
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject)
-   Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+   Ensures that appropriate context pointers are established for a 
+    System.Windows.DependencyObjectType data member that has just been set.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
@@ -2457,18 +3138,24 @@ class PixelShader(Animatable,ISealable,IAnimatable,IResource):
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: Freezable,e: DependencyPropertyChangedEventArgs)
-   Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-    System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+   Overrides the System.Windows.DependencyObject implementation of 
+    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+    rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+    handlers in response to a changing dependency property of type 
+    System.Windows.Freezable.
   
   
-   e: Event data that contains information about which property changed,and its old and new values.
+   e: Event data that contains information about which property changed,and its old 
+    and new values.
   """
   pass
  def ReadPreamble(self,*args):
   """
   ReadPreamble(self: Freezable)
-   Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-    not dependency properties.
+   Ensures that the System.Windows.Freezable is being accessed from a valid 
+    thread. Inheritors of System.Windows.Freezable must call this method at the 
+    beginning of any API that reads data members that are not dependency 
+    properties.
   """
   pass
  def SetStreamSource(self,source):
@@ -2483,24 +3170,40 @@ class PixelShader(Animatable,ISealable,IAnimatable,IResource):
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize 
+    the value for the provided dependency property.
+  
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
+   Returns: true if the dependency property that is supplied should be value-serialized; 
+    otherwise,false.
+  
+  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
   """
   pass
  def WritePostscript(self,*args):
   """
   WritePostscript(self: Freezable)
-   Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-    this method at the end of any API that modifies class members that are not stored as dependency properties.
+   Raises the System.Windows.Freezable.Changed event for the 
+    System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+    method. Classes that derive from System.Windows.Freezable should call this 
+    method at the end of any API that modifies class members that are not stored as 
+    dependency properties.
   """
   pass
  def WritePreamble(self,*args):
   """
   WritePreamble(self: Freezable)
-   Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-    API that writes to data members that are not dependency properties.
+   Verifies that the System.Windows.Freezable is not frozen and that it is being 
+    accessed from a valid threading context. System.Windows.Freezable inheritors 
+    should call this method at the beginning of any API that writes to data members 
+    that are not dependency properties.
   """
   pass
  def __init__(self,*args):
@@ -2603,10 +3306,14 @@ class ShaderEffect(Effect,ISealable,IAnimatable,IResource):
   """
   Clone(self: ShaderEffect) -> ShaderEffect
   
-   Creates a modifiable clone of this System.Windows.Media.Effects.ShaderEffect object,making deep copies of this object's values. When copying this object's dependency properties,this method copies 
-    resource references and data bindings (which may no longer resolve),but not animations or their current values.
+   Creates a modifiable clone of this System.Windows.Media.Effects.ShaderEffect 
+    object,making deep copies of this object's values. When copying this object's 
+    dependency properties,this method copies resource references and data bindings 
+    (which may no longer resolve),but not animations or their current values.
   
-   Returns: A modifiable clone of this instance. The returned clone is effectively a deep copy of the current object. The clone's System.Windows.Freezable.IsFrozen property is false.
+   Returns: A modifiable clone of this instance. The returned clone is effectively a deep 
+    copy of the current object. The clone's System.Windows.Freezable.IsFrozen 
+    property is false.
   """
   pass
  def CloneCore(self,*args):
@@ -2619,10 +3326,14 @@ class ShaderEffect(Effect,ISealable,IAnimatable,IResource):
   """
   CloneCurrentValue(self: ShaderEffect) -> ShaderEffect
   
-   Creates a modifiable clone of this System.Windows.Media.Effects.ShaderEffect object,making deep copies of this object's current values. Resource references,data bindings,and animations are not copied,
-    but their current values are copied.
+   Creates a modifiable clone of this System.Windows.Media.Effects.ShaderEffect 
+    object,making deep copies of this object's current values. Resource 
+    references,data bindings,and animations are not copied,but their current 
+    values are copied.
   
-   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's 
+    System.Windows.Freezable.IsFrozen property will be false even if the source's 
+    System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCurrentValueCore(self,*args):
@@ -2646,12 +3357,20 @@ class ShaderEffect(Effect,ISealable,IAnimatable,IResource):
   """
   FreezeCore(self: Animatable,isChecking: bool) -> bool
   
-   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or determines whether it can be made unmodifiable.
+   Makes this System.Windows.Media.Animation.Animatable object unmodifiable or 
+    determines whether it can be made unmodifiable.
   
-   isChecking: true if this method should simply determine whether this instance can be frozen. false if this instance should actually freeze itself when this method is called.
-   Returns: If isChecking is true,this method returns true if this System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if it cannot be made unmodifiable. If isChecking is false,this method 
-    returns true if the if this System.Windows.Media.Animation.Animatable is now unmodifiable,or false if it cannot be made unmodifiable,with the side effect of having begun to change the frozen status of 
-    this object.
+  
+   isChecking: true if this method should simply determine whether this instance can be 
+    frozen. false if this instance should actually freeze itself when this method 
+    is called.
+  
+   Returns: If isChecking is true,this method returns true if this 
+    System.Windows.Media.Animation.Animatable can be made unmodifiable,or false if 
+    it cannot be made unmodifiable. If isChecking is false,this method returns 
+    true if the if this System.Windows.Media.Animation.Animatable is now 
+    unmodifiable,or false if it cannot be made unmodifiable,with the side effect 
+    of having begun to change the frozen status of this object.
   """
   pass
  def GetAsFrozenCore(self,*args):
@@ -2675,13 +3394,17 @@ class ShaderEffect(Effect,ISealable,IAnimatable,IResource):
  def OnFreezablePropertyChanged(self,*args):
   """
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject,property: DependencyProperty)
-   This member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.
+   This member supports the Windows Presentation Foundation (WPF) infrastructure 
+    and is not intended to be used directly from your code.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
    property: The property that changed.
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject)
-   Ensures that appropriate context pointers are established for a System.Windows.DependencyObjectType data member that has just been set.
+   Ensures that appropriate context pointers are established for a 
+    System.Windows.DependencyObjectType data member that has just been set.
+  
   
    oldValue: The previous value of the data member.
    newValue: The current value of the data member.
@@ -2690,58 +3413,76 @@ class ShaderEffect(Effect,ISealable,IAnimatable,IResource):
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: Freezable,e: DependencyPropertyChangedEventArgs)
-   Overrides the System.Windows.DependencyObject implementation of System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs) to also invoke any 
-    System.Windows.Freezable.Changed handlers in response to a changing dependency property of type System.Windows.Freezable.
+   Overrides the System.Windows.DependencyObject implementation of 
+    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
+    rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
+    handlers in response to a changing dependency property of type 
+    System.Windows.Freezable.
   
   
-   e: Event data that contains information about which property changed,and its old and new values.
+   e: Event data that contains information about which property changed,and its old 
+    and new values.
   """
   pass
  def PixelShaderConstantCallback(self,*args):
   """
   PixelShaderConstantCallback(floatRegisterIndex: int) -> PropertyChangedCallback
   
-   Associates a dependency property value with a pixel shader's float constant register.
+   Associates a dependency property value with a pixel shader's float constant 
+    register.
+  
   
    floatRegisterIndex: The index of the shader register associated with the dependency property.
-   Returns: A System.Windows.PropertyChangedCallback delegate that associates a dependency property and the shader constant register specified by floatRegisterIndex.
+   Returns: A System.Windows.PropertyChangedCallback delegate that associates a dependency 
+    property and the shader constant register specified by floatRegisterIndex.
   """
   pass
  def PixelShaderSamplerCallback(self,*args):
   """
   PixelShaderSamplerCallback(samplerRegisterIndex: int,samplingMode: SamplingMode) -> PropertyChangedCallback
   
-   Associates a dependency property value with a pixel shader's sampler register and a System.Windows.Media.Effects.SamplingMode.
+   Associates a dependency property value with a pixel shader's sampler register 
+    and a System.Windows.Media.Effects.SamplingMode.
+  
   
    samplerRegisterIndex: The index of the shader sampler associated with the dependency property.
    samplingMode: The System.Windows.Media.Effects.SamplingMode for the shader sampler.
-   Returns: A System.Windows.PropertyChangedCallback delegate that associates a dependency property and the shader sampler register specified by samplerRegisterIndex.
+   Returns: A System.Windows.PropertyChangedCallback delegate that associates a dependency 
+    property and the shader sampler register specified by samplerRegisterIndex.
+  
   PixelShaderSamplerCallback(samplerRegisterIndex: int) -> PropertyChangedCallback
   
    Associates a dependency property value with a pixel shader's sampler register.
   
    samplerRegisterIndex: The index of the shader sampler associated with the dependency property.
-   Returns: A System.Windows.PropertyChangedCallback delegate that associates a dependency property and the shader sampler register specified by samplerRegisterIndex.
+   Returns: A System.Windows.PropertyChangedCallback delegate that associates a dependency 
+    property and the shader sampler register specified by samplerRegisterIndex.
   """
   pass
  def ReadPreamble(self,*args):
   """
   ReadPreamble(self: Freezable)
-   Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of System.Windows.Freezable must call this method at the beginning of any API that reads data members that are 
-    not dependency properties.
+   Ensures that the System.Windows.Freezable is being accessed from a valid 
+    thread. Inheritors of System.Windows.Freezable must call this method at the 
+    beginning of any API that reads data members that are not dependency 
+    properties.
   """
   pass
  def RegisterPixelShaderSamplerProperty(self,*args):
   """
   RegisterPixelShaderSamplerProperty(dpName: str,ownerType: Type,samplerRegisterIndex: int,samplingMode: SamplingMode) -> DependencyProperty
   
-   Associates a dependency property with a shader sampler register and a System.Windows.Media.Effects.SamplingMode.
+   Associates a dependency property with a shader sampler register and a 
+    System.Windows.Media.Effects.SamplingMode.
+  
   
    dpName: The name of the dependency property.
    ownerType: The type of the effect that has the dependency property.
    samplerRegisterIndex: The index of the shader sampler associated with the dependency property.
    samplingMode: The System.Windows.Media.Effects.SamplingMode for the shader sampler.
-   Returns: A dependency property associated with the shader sampler specified by samplerRegisterIndex.
+   Returns: A dependency property associated with the shader sampler specified by 
+    samplerRegisterIndex.
+  
   RegisterPixelShaderSamplerProperty(dpName: str,ownerType: Type,samplerRegisterIndex: int) -> DependencyProperty
   
    Associates a dependency property with a shader sampler register.
@@ -2749,23 +3490,37 @@ class ShaderEffect(Effect,ISealable,IAnimatable,IResource):
    dpName: The name of the dependency property.
    ownerType: The type of the effect that has the dependency property.
    samplerRegisterIndex: The index of the shader sampler associated with the dependency property.
-   Returns: A dependency property associated with the shader sampler specified by samplerRegisterIndex.
+   Returns: A dependency property associated with the shader sampler specified by 
+    samplerRegisterIndex.
   """
   pass
  def ShouldSerializeProperty(self,*args):
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize 
+    the value for the provided dependency property.
+  
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
+   Returns: true if the dependency property that is supplied should be value-serialized; 
+    otherwise,false.
+  
+  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
+  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
   """
   pass
  def UpdateShaderValue(self,*args):
   """
   UpdateShaderValue(self: ShaderEffect,dp: DependencyProperty)
-   Notifies the effect that the shader constant or sampler corresponding to the specified dependency property should be updated.
+   Notifies the effect that the shader constant or sampler corresponding to the 
+    specified dependency property should be updated.
+  
   
    dp: The dependency property to be updated.
   """
@@ -2773,15 +3528,20 @@ class ShaderEffect(Effect,ISealable,IAnimatable,IResource):
  def WritePostscript(self,*args):
   """
   WritePostscript(self: Freezable)
-   Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable should call 
-    this method at the end of any API that modifies class members that are not stored as dependency properties.
+   Raises the System.Windows.Freezable.Changed event for the 
+    System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
+    method. Classes that derive from System.Windows.Freezable should call this 
+    method at the end of any API that modifies class members that are not stored as 
+    dependency properties.
   """
   pass
  def WritePreamble(self,*args):
   """
   WritePreamble(self: Freezable)
-   Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a valid threading context. System.Windows.Freezable inheritors should call this method at the beginning of any 
-    API that writes to data members that are not dependency properties.
+   Verifies that the System.Windows.Freezable is not frozen and that it is being 
+    accessed from a valid threading context. System.Windows.Freezable inheritors 
+    should call this method at the beginning of any API that writes to data members 
+    that are not dependency properties.
   """
   pass
  def __init__(self,*args):

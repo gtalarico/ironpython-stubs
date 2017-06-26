@@ -2,7 +2,7 @@
 # module System.Windows.Automation calls itself Automation
 # from PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,PresentationCore,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -15,7 +15,9 @@ class AutomationProperties(object):
   """
   GetAcceleratorKey(element: DependencyObject) -> str
   
-   Gets the System.Windows.Automation.AutomationProperties.AcceleratorKey�attached property for the specified System.Windows.DependencyObject.
+   Gets the System.Windows.Automation.AutomationProperties.AcceleratorKey�attached 
+    property for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject to check.
    Returns: A string that contains the accelerator key.
@@ -26,7 +28,9 @@ class AutomationProperties(object):
   """
   GetAccessKey(element: DependencyObject) -> str
   
-   Gets the System.Windows.Automation.AutomationProperties.AccessKey�attached property for the specified System.Windows.DependencyObject.
+   Gets the System.Windows.Automation.AutomationProperties.AccessKey�attached 
+    property for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject to check.
    Returns: The access key for the specified element.
@@ -37,7 +41,9 @@ class AutomationProperties(object):
   """
   GetAutomationId(element: DependencyObject) -> str
   
-   Gets the System.Windows.Automation.AutomationProperties.AutomationId�attached property for the specified System.Windows.DependencyObject.
+   Gets the System.Windows.Automation.AutomationProperties.AutomationId�attached 
+    property for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject to check.
    Returns: The UI Automation�identifier for the specified element.
@@ -48,10 +54,14 @@ class AutomationProperties(object):
   """
   GetHelpText(element: DependencyObject) -> str
   
-   Gets the System.Windows.Automation.AutomationProperties.HelpText�attached property for the specified System.Windows.DependencyObject.
+   Gets the System.Windows.Automation.AutomationProperties.HelpText�attached 
+    property for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject to check.
-   Returns: A string containing the help text for the specified element. The string that is returned generally is the same text that is provided in the tooltip for the control.
+   Returns: A string containing the help text for the specified element. The string that is 
+    returned generally is the same text that is provided in the tooltip for the 
+    control.
   """
   pass
  @staticmethod
@@ -59,10 +69,13 @@ class AutomationProperties(object):
   """
   GetIsColumnHeader(element: DependencyObject) -> bool
   
-   Gets the System.Windows.Automation.AutomationProperties.IsColumnHeader�attached property for the specified System.Windows.DependencyObject.
+   Gets the System.Windows.Automation.AutomationProperties.IsColumnHeader�attached 
+    property for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject to check.
-   Returns: A boolean that indicates whether the specified element is a System.Windows.Automation.TablePattern.ColumnHeadersProperty.
+   Returns: A boolean that indicates whether the specified element is a 
+    System.Windows.Automation.TablePattern.ColumnHeadersProperty.
   """
   pass
  @staticmethod
@@ -74,10 +87,14 @@ class AutomationProperties(object):
   """
   GetIsRequiredForForm(element: DependencyObject) -> bool
   
-   Gets the System.Windows.Automation.AutomationProperties.IsRequiredForForm�attached property for the specified System.Windows.DependencyObject.
+   Gets the System.Windows.Automation.AutomationProperties.IsRequiredForForm�
+    attached property for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject to check.
-   Returns: A boolean that indicates whether the specified element is System.Windows.Automation.AutomationElement.AutomationElementInformation.IsRequiredForForm.
+   Returns: A boolean that indicates whether the specified element is 
+    System.Windows.Automation.AutomationElement.AutomationElementInformation.IsRequi
+    redForForm.
   """
   pass
  @staticmethod
@@ -85,10 +102,13 @@ class AutomationProperties(object):
   """
   GetIsRowHeader(element: DependencyObject) -> bool
   
-   Gets the System.Windows.Automation.AutomationProperties.IsRowHeader�attached property for the specified System.Windows.DependencyObject.
+   Gets the System.Windows.Automation.AutomationProperties.IsRowHeader�attached 
+    property for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject to check.
-   Returns: A boolean that indicates whether the specified element is a System.Windows.Automation.TablePattern.RowHeadersProperty.
+   Returns: A boolean that indicates whether the specified element is a 
+    System.Windows.Automation.TablePattern.RowHeadersProperty.
   """
   pass
  @staticmethod
@@ -96,10 +116,14 @@ class AutomationProperties(object):
   """
   GetItemStatus(element: DependencyObject) -> str
   
-   Gets the System.Windows.Automation.AutomationProperties.ItemStatus�attached property for the specified System.Windows.DependencyObject.
+   Gets the System.Windows.Automation.AutomationProperties.ItemStatus�attached 
+    property for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject to check.
-   Returns: The System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemStatus of the given element.
+   Returns: The 
+    System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemSta
+    tus of the given element.
   """
   pass
  @staticmethod
@@ -107,10 +131,14 @@ class AutomationProperties(object):
   """
   GetItemType(element: DependencyObject) -> str
   
-   Gets the System.Windows.Automation.AutomationProperties.ItemType�attached property for the specified System.Windows.DependencyObject.
+   Gets the System.Windows.Automation.AutomationProperties.ItemType�attached 
+    property for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject to check.
-   Returns: The System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemType of the given element.
+   Returns: The 
+    System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemTyp
+    e of the given element.
   """
   pass
  @staticmethod
@@ -118,7 +146,9 @@ class AutomationProperties(object):
   """
   GetLabeledBy(element: DependencyObject) -> UIElement
   
-   Gets the System.Windows.Automation.AutomationProperties.LabeledBy�attached property for the specified System.Windows.DependencyObject.
+   Gets the System.Windows.Automation.AutomationProperties.LabeledBy�attached 
+    property for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject to check.
    Returns: The element that is targeted by the label.
@@ -129,7 +159,9 @@ class AutomationProperties(object):
   """
   GetName(element: DependencyObject) -> str
   
-   Gets the System.Windows.Automation.AutomationProperties.Name�attached property for the specified System.Windows.DependencyObject.
+   Gets the System.Windows.Automation.AutomationProperties.Name�attached property 
+    for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject to check.
    Returns: The name of the specified element.
@@ -139,7 +171,9 @@ class AutomationProperties(object):
  def SetAcceleratorKey(element,value):
   """
   SetAcceleratorKey(element: DependencyObject,value: str)
-   Sets the System.Windows.Automation.AutomationProperties.AcceleratorKey�attached property for the specified System.Windows.DependencyObject.
+   Sets the System.Windows.Automation.AutomationProperties.AcceleratorKey�attached 
+    property for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject on which to set the property.
    value: The accelerator key value to set.
@@ -149,7 +183,9 @@ class AutomationProperties(object):
  def SetAccessKey(element,value):
   """
   SetAccessKey(element: DependencyObject,value: str)
-   Sets the System.Windows.Automation.AutomationProperties.AccessKey�attached property for the specified System.Windows.DependencyObject.
+   Sets the System.Windows.Automation.AutomationProperties.AccessKey�attached 
+    property for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject on which to set the property.
    value: The access key value to set.
@@ -159,7 +195,9 @@ class AutomationProperties(object):
  def SetAutomationId(element,value):
   """
   SetAutomationId(element: DependencyObject,value: str)
-   Sets the System.Windows.Automation.AutomationProperties.AutomationId�attached property for the specified System.Windows.DependencyObject.
+   Sets the System.Windows.Automation.AutomationProperties.AutomationId�attached 
+    property for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject on which to set the property.
    value: The UI Automation identifier value to set.
@@ -169,7 +207,9 @@ class AutomationProperties(object):
  def SetHelpText(element,value):
   """
   SetHelpText(element: DependencyObject,value: str)
-   Sets the System.Windows.Automation.AutomationProperties.HelpText�attached property for the specified System.Windows.DependencyObject.
+   Sets the System.Windows.Automation.AutomationProperties.HelpText�attached 
+    property for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject on which to set the property.
    value: The help text value to set.
@@ -179,10 +219,13 @@ class AutomationProperties(object):
  def SetIsColumnHeader(element,value):
   """
   SetIsColumnHeader(element: DependencyObject,value: bool)
-   Sets the System.Windows.Automation.AutomationProperties.IsColumnHeader�attached property for the specified System.Windows.DependencyObject.
+   Sets the System.Windows.Automation.AutomationProperties.IsColumnHeader�attached 
+    property for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject on which to set the property.
-   value: The value to set; true if the element is meant to be a column header,otherwise false
+   value: The value to set; true if the element is meant to be a column header,otherwise 
+    false
   """
   pass
  @staticmethod
@@ -193,27 +236,35 @@ class AutomationProperties(object):
  def SetIsRequiredForForm(element,value):
   """
   SetIsRequiredForForm(element: DependencyObject,value: bool)
-   Sets the System.Windows.Automation.AutomationProperties.IsRequiredForForm�attached property for the specified System.Windows.DependencyObject.
+   Sets the System.Windows.Automation.AutomationProperties.IsRequiredForForm�
+    attached property for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject on which to set the property.
-   value: The value to set; true if the element is meant to be required to be filled out on a form,otherwise false.
+   value: The value to set; true if the element is meant to be required to be filled out 
+    on a form,otherwise false.
   """
   pass
  @staticmethod
  def SetIsRowHeader(element,value):
   """
   SetIsRowHeader(element: DependencyObject,value: bool)
-   Sets the System.Windows.Automation.AutomationProperties.IsRowHeader�attached property for the specified System.Windows.DependencyObject.
+   Sets the System.Windows.Automation.AutomationProperties.IsRowHeader�attached 
+    property for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject on which to set the property.
-   value: The value to set; true if the element is meant to be a row header,otherwise false.
+   value: The value to set; true if the element is meant to be a row header,otherwise 
+    false.
   """
   pass
  @staticmethod
  def SetItemStatus(element,value):
   """
   SetItemStatus(element: DependencyObject,value: str)
-   Sets the System.Windows.Automation.AutomationProperties.ItemStatus�attached property for the specified System.Windows.DependencyObject.
+   Sets the System.Windows.Automation.AutomationProperties.ItemStatus�attached 
+    property for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject on which to set the property.
    value: The item status value to set.
@@ -223,7 +274,9 @@ class AutomationProperties(object):
  def SetItemType(element,value):
   """
   SetItemType(element: DependencyObject,value: str)
-   Sets the System.Windows.Automation.AutomationProperties.ItemType�attached property for the specified System.Windows.DependencyObject.
+   Sets the System.Windows.Automation.AutomationProperties.ItemType�attached 
+    property for the specified System.Windows.DependencyObject.
+  
   
    element: The System.Windows.DependencyObject on which to set the property.
    value: The item type value to set.
@@ -233,7 +286,9 @@ class AutomationProperties(object):
  def SetLabeledBy(element,value):
   """
   SetLabeledBy(element: DependencyObject,value: UIElement)
-   Sets the System.Windows.Automation.AutomationProperties.LabeledBy attached property.
+   Sets the System.Windows.Automation.AutomationProperties.LabeledBy attached 
+    property.
+  
   
    element: The System.Windows.DependencyObject on which to set the property.
    value: The labeled by value to set.

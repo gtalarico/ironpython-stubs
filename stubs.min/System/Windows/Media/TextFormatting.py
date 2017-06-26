@@ -2,7 +2,7 @@
 # module System.Windows.Media.TextFormatting calls itself TextFormatting
 # from PresentationCore,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -20,26 +20,43 @@ class CharacterBufferRange(object,IEquatable[CharacterBufferRange]):
   """
   Equals(self: CharacterBufferRange,value: CharacterBufferRange) -> bool
   
-   Determines whether the System.Windows.Media.TextFormatting.CharacterBufferRange object is equal to the current System.Windows.Media.TextFormatting.CharacterBufferRange object.
+   Determines whether the System.Windows.Media.TextFormatting.CharacterBufferRange 
+    object is equal to the current 
+    System.Windows.Media.TextFormatting.CharacterBufferRange object.
   
-   value: The System.Windows.Media.TextFormatting.CharacterBufferRange to compare with the current System.Windows.Media.TextFormatting.CharacterBufferRange object.
-   Returns: true if value is equal to the current System.Windows.Media.TextFormatting.CharacterBufferRange object; otherwise,false. If value is not a System.Windows.Media.TextFormatting.CharacterBufferRange object,
-    false is returned.
+  
+   value: The System.Windows.Media.TextFormatting.CharacterBufferRange to compare with 
+    the current System.Windows.Media.TextFormatting.CharacterBufferRange object.
+  
+   Returns: true if value is equal to the current 
+    System.Windows.Media.TextFormatting.CharacterBufferRange object; otherwise,
+    false. If value is not a 
+    System.Windows.Media.TextFormatting.CharacterBufferRange object,false is 
+    returned.
   
   Equals(self: CharacterBufferRange,obj: object) -> bool
   
-   Determines whether the specified object is equal to the current System.Windows.Media.TextFormatting.CharacterBufferRange object.
+   Determines whether the specified object is equal to the current 
+    System.Windows.Media.TextFormatting.CharacterBufferRange object.
   
-   obj: The System.Object to compare with the current System.Windows.Media.TextFormatting.CharacterBufferRange object.
-   Returns: true if o is equal to the current System.Windows.Media.TextFormatting.CharacterBufferRange object; otherwise,false. If o is not a System.Windows.Media.TextFormatting.CharacterBufferRange object,false is 
-    returned.
+  
+   obj: The System.Object to compare with the current 
+    System.Windows.Media.TextFormatting.CharacterBufferRange object.
+  
+   Returns: true if o is equal to the current 
+    System.Windows.Media.TextFormatting.CharacterBufferRange object; otherwise,
+    false. If o is not a System.Windows.Media.TextFormatting.CharacterBufferRange 
+    object,false is returned.
   """
   pass
  def GetHashCode(self):
   """
   GetHashCode(self: CharacterBufferRange) -> int
   
-   Serves as a hash function for System.Windows.Media.TextFormatting.CharacterBufferRange. It is suitable for use in hashing algorithms and data structures such as a hash table.
+   Serves as a hash function for 
+    System.Windows.Media.TextFormatting.CharacterBufferRange. It is suitable for 
+    use in hashing algorithms and data structures such as a hash table.
+  
    Returns: An System.Int32 value that represents the hash code for the current object.
   """
   pass
@@ -96,24 +113,43 @@ class CharacterBufferReference(object,IEquatable[CharacterBufferReference]):
   """
   Equals(self: CharacterBufferReference,value: CharacterBufferReference) -> bool
   
-   Determines whether the System.Windows.Media.TextFormatting.CharacterBufferReference is equal to the current System.Windows.Media.TextFormatting.CharacterBufferReference object.
+   Determines whether the 
+    System.Windows.Media.TextFormatting.CharacterBufferReference is equal to the 
+    current System.Windows.Media.TextFormatting.CharacterBufferReference object.
   
-   value: The System.Windows.Media.TextFormatting.CharacterBufferReference to compare with the current System.Windows.Media.TextFormatting.CharacterBufferReference object.
-   Returns: true if value is equal to the current System.Windows.Media.TextFormatting.CharacterBufferReference object; otherwise,false.
+  
+   value: The System.Windows.Media.TextFormatting.CharacterBufferReference to compare 
+    with the current System.Windows.Media.TextFormatting.CharacterBufferReference 
+    object.
+  
+   Returns: true if value is equal to the current 
+    System.Windows.Media.TextFormatting.CharacterBufferReference object; otherwise,
+    false.
+  
   Equals(self: CharacterBufferReference,obj: object) -> bool
   
-   Determines whether the specified object is equal to the current System.Windows.Media.TextFormatting.CharacterBufferReference object.
+   Determines whether the specified object is equal to the current 
+    System.Windows.Media.TextFormatting.CharacterBufferReference object.
   
-   obj: The object to compare with the current System.Windows.Media.TextFormatting.CharacterBufferReference object.
-   Returns: true if obj is equal to the current System.Windows.Media.TextFormatting.CharacterBufferReference object; otherwise,false. If obj is not a System.Windows.Media.TextFormatting.CharacterBufferReference 
-    object,false is returned.
+  
+   obj: The object to compare with the current 
+    System.Windows.Media.TextFormatting.CharacterBufferReference object.
+  
+   Returns: true if obj is equal to the current 
+    System.Windows.Media.TextFormatting.CharacterBufferReference object; otherwise,
+    false. If obj is not a 
+    System.Windows.Media.TextFormatting.CharacterBufferReference object,false is 
+    returned.
   """
   pass
  def GetHashCode(self):
   """
   GetHashCode(self: CharacterBufferReference) -> int
   
-   Serves as a hash function for System.Windows.Media.TextFormatting.CharacterBufferReference. It is suitable for use in hashing algorithms and data structures such as a hash table.
+   Serves as a hash function for 
+    System.Windows.Media.TextFormatting.CharacterBufferReference. It is suitable 
+    for use in hashing algorithms and data structures such as a hash table.
+  
    Returns: An System.Int32 value that represents the hash code for the current object.
   """
   pass
@@ -151,25 +187,43 @@ class CharacterHit(object,IEquatable[CharacterHit]):
   """
   Equals(self: CharacterHit,obj: object) -> bool
   
-   Determines whether the specified object is equal to the current System.Windows.Media.TextFormatting.CharacterBufferReference object.
+   Determines whether the specified object is equal to the current 
+    System.Windows.Media.TextFormatting.CharacterBufferReference object.
   
-   obj: The object to compare with the current System.Windows.Media.TextFormatting.CharacterBufferReference object.
-   Returns: true if obj is equal to the current System.Windows.Media.TextFormatting.CharacterBufferReference object; otherwise,false. If obj is not a System.Windows.Media.TextFormatting.CharacterBufferReference 
-    object,false is returned.
+  
+   obj: The object to compare with the current 
+    System.Windows.Media.TextFormatting.CharacterBufferReference object.
+  
+   Returns: true if obj is equal to the current 
+    System.Windows.Media.TextFormatting.CharacterBufferReference object; otherwise,
+    false. If obj is not a 
+    System.Windows.Media.TextFormatting.CharacterBufferReference object,false is 
+    returned.
   
   Equals(self: CharacterHit,obj: CharacterHit) -> bool
   
-   Determines whether the System.Windows.Media.TextFormatting.CharacterBufferReference is equal to the current System.Windows.Media.TextFormatting.CharacterBufferReference object.
+   Determines whether the 
+    System.Windows.Media.TextFormatting.CharacterBufferReference is equal to the 
+    current System.Windows.Media.TextFormatting.CharacterBufferReference object.
   
-   obj: The System.Windows.Media.TextFormatting.CharacterBufferReference to compare with the current System.Windows.Media.TextFormatting.CharacterBufferReference object.
-   Returns: true if obj is equal to the current System.Windows.Media.TextFormatting.CharacterBufferReference object; otherwise,false.
+  
+   obj: The System.Windows.Media.TextFormatting.CharacterBufferReference to compare 
+    with the current System.Windows.Media.TextFormatting.CharacterBufferReference 
+    object.
+  
+   Returns: true if obj is equal to the current 
+    System.Windows.Media.TextFormatting.CharacterBufferReference object; otherwise,
+    false.
   """
   pass
  def GetHashCode(self):
   """
   GetHashCode(self: CharacterHit) -> int
   
-   Serves as a hash function for System.Windows.Media.TextFormatting.CharacterBufferReference. It is suitable for use in hashing algorithms and data structures such as a hash table.
+   Serves as a hash function for 
+    System.Windows.Media.TextFormatting.CharacterBufferReference. It is suitable 
+    for use in hashing algorithms and data structures such as a hash table.
+  
    Returns: An System.Int32 value that represents the hash code for the current object.
   """
   pass
@@ -303,25 +357,43 @@ class MinMaxParagraphWidth(object,IEquatable[MinMaxParagraphWidth]):
   """
   Equals(self: MinMaxParagraphWidth,obj: object) -> bool
   
-   Determines whether the specified object is equal to the current System.Windows.Media.TextFormatting.CharacterBufferReference object.
+   Determines whether the specified object is equal to the current 
+    System.Windows.Media.TextFormatting.CharacterBufferReference object.
   
-   obj: The System.Object to compare with the current System.Windows.Media.TextFormatting.CharacterBufferReference object.
-   Returns: true if obj is equal to the current System.Windows.Media.TextFormatting.CharacterBufferReference object; otherwise,false. If obj is not a System.Windows.Media.TextFormatting.CharacterBufferReference 
-    object,false is returned.
+  
+   obj: The System.Object to compare with the current 
+    System.Windows.Media.TextFormatting.CharacterBufferReference object.
+  
+   Returns: true if obj is equal to the current 
+    System.Windows.Media.TextFormatting.CharacterBufferReference object; otherwise,
+    false. If obj is not a 
+    System.Windows.Media.TextFormatting.CharacterBufferReference object,false is 
+    returned.
   
   Equals(self: MinMaxParagraphWidth,value: MinMaxParagraphWidth) -> bool
   
-   Determines whether the System.Windows.Media.TextFormatting.CharacterBufferReference is equal to the current System.Windows.Media.TextFormatting.CharacterBufferReference object.
+   Determines whether the 
+    System.Windows.Media.TextFormatting.CharacterBufferReference is equal to the 
+    current System.Windows.Media.TextFormatting.CharacterBufferReference object.
   
-   value: The System.Windows.Media.TextFormatting.CharacterBufferReference to compare with the current System.Windows.Media.TextFormatting.CharacterBufferReference object.
-   Returns: true if value is equal to the current System.Windows.Media.TextFormatting.CharacterBufferReference object; otherwise,false.
+  
+   value: The System.Windows.Media.TextFormatting.CharacterBufferReference to compare 
+    with the current System.Windows.Media.TextFormatting.CharacterBufferReference 
+    object.
+  
+   Returns: true if value is equal to the current 
+    System.Windows.Media.TextFormatting.CharacterBufferReference object; otherwise,
+    false.
   """
   pass
  def GetHashCode(self):
   """
   GetHashCode(self: MinMaxParagraphWidth) -> int
   
-   Serves as a hash function for System.Windows.Media.TextFormatting.CharacterBufferReference. It is suitable for use in hashing algorithms and data structures such as a hash table.
+   Serves as a hash function for 
+    System.Windows.Media.TextFormatting.CharacterBufferReference. It is suitable 
+    for use in hashing algorithms and data structures such as a hash table.
+  
    Returns: An System.Int32 value that represents the hash code for the current object.
   """
   pass
@@ -540,9 +612,14 @@ class TextEmbeddedObject(TextRun):
   
    Gets the computed bounding box of the text object.
   
-   rightToLeft: A System.Boolean value that determines if the text object is drawn from right to left.
-   sideways: A System.Boolean value that determines if the text object is drawn with its side parallel to the baseline.
-   Returns: A System.Windows.Rect value that represents the bounding box size of the text object.
+   rightToLeft: A System.Boolean value that determines if the text object is drawn from right 
+    to left.
+  
+   sideways: A System.Boolean value that determines if the text object is drawn with its 
+    side parallel to the baseline.
+  
+   Returns: A System.Windows.Rect value that represents the bounding box size of the text 
+    object.
   """
   pass
  def Draw(self,drawingContext,origin,rightToLeft,sideways):
@@ -551,19 +628,27 @@ class TextEmbeddedObject(TextRun):
    Draws the text object.
   
    drawingContext: The System.Windows.Media.DrawingContext to use for rendering the text object.
-   origin: The System.Windows.Point value that represents the origin where the text object is drawn.
-   rightToLeft: A System.Boolean value that determines if the text object is drawn from right to left.
-   sideways: A System.Boolean value that determines if the text object is drawn with its side parallel to the baseline.
+   origin: The System.Windows.Point value that represents the origin where the text object 
+    is drawn.
+  
+   rightToLeft: A System.Boolean value that determines if the text object is drawn from right 
+    to left.
+  
+   sideways: A System.Boolean value that determines if the text object is drawn with its 
+    side parallel to the baseline.
   """
   pass
  def Format(self,remainingParagraphWidth):
   """
   Format(self: TextEmbeddedObject,remainingParagraphWidth: float) -> TextEmbeddedObjectMetrics
   
-   Get text object measurement metrics that will fit within the specified remaining width of the paragraph.
+   Get text object measurement metrics that will fit within the specified 
+    remaining width of the paragraph.
+  
   
    remainingParagraphWidth: A System.Double that represents the remaining paragraph width.
-   Returns: A System.Windows.Media.TextFormatting.TextEmbeddedObjectMetrics value that represents the text object metrics.
+   Returns: A System.Windows.Media.TextFormatting.TextEmbeddedObjectMetrics value that 
+    represents the text object metrics.
   """
   pass
  BreakAfter=property(lambda self: object(),lambda self,v: None,lambda self: None)
@@ -714,80 +799,138 @@ class TextFormatter(object,IDisposable):
   """
   Create() -> TextFormatter
   
-   Creates a new instance of the System.Windows.Media.TextFormatting.TextFormatter class. This is a static method.
+   Creates a new instance of the System.Windows.Media.TextFormatting.TextFormatter 
+    class. This is a static method.
+  
    Returns: A new instance of System.Windows.Media.TextFormatting.TextFormatter.
   Create(textFormattingMode: TextFormattingMode) -> TextFormatter
   
-   Creates a new instance of the System.Windows.Media.TextFormatting.TextFormatter class with the specified formatting mode. This is a static method.
+   Creates a new instance of the System.Windows.Media.TextFormatting.TextFormatter 
+    class with the specified formatting mode. This is a static method.
   
-   textFormattingMode: The System.Windows.Media.TextFormattingMode that specifies the text layout for the System.Windows.Media.TextFormatting.TextFormatter.
+  
+   textFormattingMode: The System.Windows.Media.TextFormattingMode that specifies the text layout for 
+    the System.Windows.Media.TextFormatting.TextFormatter.
+  
    Returns: A new instance of System.Windows.Media.TextFormatting.TextFormatter.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: TextFormatter)
-   Releases all managed and unmanaged resources used by the System.Windows.Media.TextFormatting.TextFormatter object.
+   Releases all managed and unmanaged resources used by the 
+    System.Windows.Media.TextFormatting.TextFormatter object.
   """
   pass
  def FormatLine(self,textSource,firstCharIndex,paragraphWidth,paragraphProperties,previousLineBreak,textRunCache=None):
   """
   FormatLine(self: TextFormatter,textSource: TextSource,firstCharIndex: int,paragraphWidth: float,paragraphProperties: TextParagraphProperties,previousLineBreak: TextLineBreak,textRunCache: TextRunCache) -> TextLine
   
-   Creates a System.Windows.Media.TextFormatting.TextLine that is used for formatting and displaying document content.
+   Creates a System.Windows.Media.TextFormatting.TextLine that is used for 
+    formatting and displaying document content.
   
-   textSource: A System.Windows.Media.TextFormatting.TextSource object that represents the text source for the line.
-   firstCharIndex: An System.Int32 value that specifies the character index of the starting character in the line.
-   paragraphWidth: A System.Double value that specifies the width of the paragraph that the line fills.
-   paragraphProperties: A System.Windows.Media.TextFormatting.TextParagraphProperties object that represents paragraph properties,such as flow direction,alignment,or indentation.
-   previousLineBreak: A System.Windows.Media.TextFormatting.TextLineBreak object that specifies the text formatter state,in terms of where the previous line in the paragraph was broken by the text formatting process.
-   textRunCache: A System.Windows.Media.TextFormatting.TextRunCache object that represents the caching mechanism for the layout of text.
-   Returns: A System.Windows.Media.TextFormatting.TextLine value that represents a line of text that can be displayed.
+  
+   textSource: A System.Windows.Media.TextFormatting.TextSource object that represents the 
+    text source for the line.
+  
+   firstCharIndex: An System.Int32 value that specifies the character index of the starting 
+    character in the line.
+  
+   paragraphWidth: A System.Double value that specifies the width of the paragraph that the line 
+    fills.
+  
+   paragraphProperties: A System.Windows.Media.TextFormatting.TextParagraphProperties object that 
+    represents paragraph properties,such as flow direction,alignment,or 
+    indentation.
+  
+   previousLineBreak: A System.Windows.Media.TextFormatting.TextLineBreak object that specifies the 
+    text formatter state,in terms of where the previous line in the paragraph was 
+    broken by the text formatting process.
+  
+   textRunCache: A System.Windows.Media.TextFormatting.TextRunCache object that represents the 
+    caching mechanism for the layout of text.
+  
+   Returns: A System.Windows.Media.TextFormatting.TextLine value that represents a line of 
+    text that can be displayed.
+  
   FormatLine(self: TextFormatter,textSource: TextSource,firstCharIndex: int,paragraphWidth: float,paragraphProperties: TextParagraphProperties,previousLineBreak: TextLineBreak) -> TextLine
   
-   Creates a System.Windows.Media.TextFormatting.TextLine that is used for formatting and displaying document content.
+   Creates a System.Windows.Media.TextFormatting.TextLine that is used for 
+    formatting and displaying document content.
   
-   textSource: A System.Windows.Media.TextFormatting.TextSource value that represents the text source for the line.
-   firstCharIndex: An System.Int32 value that specifies the character index of the starting character in the line.
-   paragraphWidth: A System.Double value that specifies the width of the paragraph that the line fills.
-   paragraphProperties: A System.Windows.Media.TextFormatting.TextParagraphProperties value that represents paragraph properties,such as flow direction,alignment,or indentation.
-   previousLineBreak: A System.Windows.Media.TextFormatting.TextLineBreak value that specifies the text formatter state,in terms of where the previous line in the paragraph was broken by the text formatting process.
-   Returns: A System.Windows.Media.TextFormatting.TextLine value that represents a line of text that can be displayed.
+  
+   textSource: A System.Windows.Media.TextFormatting.TextSource value that represents the text 
+    source for the line.
+  
+   firstCharIndex: An System.Int32 value that specifies the character index of the starting 
+    character in the line.
+  
+   paragraphWidth: A System.Double value that specifies the width of the paragraph that the line 
+    fills.
+  
+   paragraphProperties: A System.Windows.Media.TextFormatting.TextParagraphProperties value that 
+    represents paragraph properties,such as flow direction,alignment,or 
+    indentation.
+  
+   previousLineBreak: A System.Windows.Media.TextFormatting.TextLineBreak value that specifies the 
+    text formatter state,in terms of where the previous line in the paragraph was 
+    broken by the text formatting process.
+  
+   Returns: A System.Windows.Media.TextFormatting.TextLine value that represents a line of 
+    text that can be displayed.
   """
   pass
  def FormatMinMaxParagraphWidth(self,textSource,firstCharIndex,paragraphProperties,textRunCache=None):
   """
   FormatMinMaxParagraphWidth(self: TextFormatter,textSource: TextSource,firstCharIndex: int,paragraphProperties: TextParagraphProperties,textRunCache: TextRunCache) -> MinMaxParagraphWidth
   
-   Returns a value that represents the smallest and largest possible paragraph width that can fully contain the specified text content.
+   Returns a value that represents the smallest and largest possible paragraph 
+    width that can fully contain the specified text content.
   
-   textSource: A System.Windows.Media.TextFormatting.TextSource object that represents the text source for the line.
-   firstCharIndex: An System.Int32 value that specifies the character index of the starting character in the line.
-   paragraphProperties: A System.Windows.Media.TextFormatting.TextParagraphProperties object that represents paragraph properties,such as flow direction,alignment,or indentation.
-   textRunCache: A System.Windows.Media.TextFormatting.TextRunCache object that represents the caching mechanism for the layout of text.
-   Returns: A System.Windows.Media.TextFormatting.MinMaxParagraphWidth value that represents the smallest and largest possible paragraph width that can fully contain the specified text content.
+  
+   textSource: A System.Windows.Media.TextFormatting.TextSource object that represents the 
+    text source for the line.
+  
+   firstCharIndex: An System.Int32 value that specifies the character index of the starting 
+    character in the line.
+  
+   paragraphProperties: A System.Windows.Media.TextFormatting.TextParagraphProperties object that 
+    represents paragraph properties,such as flow direction,alignment,or 
+    indentation.
+  
+   textRunCache: A System.Windows.Media.TextFormatting.TextRunCache object that represents the 
+    caching mechanism for the layout of text.
+  
+   Returns: A System.Windows.Media.TextFormatting.MinMaxParagraphWidth value that 
+    represents the smallest and largest possible paragraph width that can fully 
+    contain the specified text content.
+  
   FormatMinMaxParagraphWidth(self: TextFormatter,textSource: TextSource,firstCharIndex: int,paragraphProperties: TextParagraphProperties) -> MinMaxParagraphWidth
   
-   Returns a value that represents the smallest and largest possible paragraph width that can fully contain the specified text content.
+   Returns a value that represents the smallest and largest possible paragraph 
+    width that can fully contain the specified text content.
   
-   textSource: A System.Windows.Media.TextFormatting.TextSource object that represents the text source for the line.
-   firstCharIndex: An System.Int32 value that specifies the character index of the starting character in the line.
-   paragraphProperties: A System.Windows.Media.TextFormatting.TextParagraphProperties object that represents paragraph properties,such as flow direction,alignment,or indentation.
-   Returns: A System.Windows.Media.TextFormatting.MinMaxParagraphWidth value that represents the smallest and largest possible paragraph width that can fully contain the specified text content.
+  
+   textSource: A System.Windows.Media.TextFormatting.TextSource object that represents the 
+    text source for the line.
+  
+   firstCharIndex: An System.Int32 value that specifies the character index of the starting 
+    character in the line.
+  
+   paragraphProperties: A System.Windows.Media.TextFormatting.TextParagraphProperties object that 
+    represents paragraph properties,such as flow direction,alignment,or 
+    indentation.
+  
+   Returns: A System.Windows.Media.TextFormatting.MinMaxParagraphWidth value that 
+    represents the smallest and largest possible paragraph width that can fully 
+    contain the specified text content.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -837,24 +980,34 @@ class TextLine(object,ITextMetrics,IDisposable):
   
    Create a collapsed line based on collapsed text properties.
   
-   collapsingPropertiesList: A list of System.Windows.Media.TextFormatting.TextCollapsingProperties objects that represent the collapsed text properties.
-   Returns: A System.Windows.Media.TextFormatting.TextLine value that represents a collapsed line that can be displayed.
+   collapsingPropertiesList: A list of System.Windows.Media.TextFormatting.TextCollapsingProperties objects 
+    that represent the collapsed text properties.
+  
+   Returns: A System.Windows.Media.TextFormatting.TextLine value that represents a 
+    collapsed line that can be displayed.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: TextLine)
-   Releases all managed and unmanaged resources used by the System.Windows.Media.TextFormatting.TextFormatter object.
+   Releases all managed and unmanaged resources used by the 
+    System.Windows.Media.TextFormatting.TextFormatter object.
   """
   pass
  def Draw(self,drawingContext,origin,inversion):
   """
   Draw(self: TextLine,drawingContext: DrawingContext,origin: Point,inversion: InvertAxes)
-   Renders the System.Windows.Media.TextFormatting.TextLine object based upon the specified System.Windows.Media.DrawingContext.
+   Renders the System.Windows.Media.TextFormatting.TextLine object based upon the 
+    specified System.Windows.Media.DrawingContext.
   
-   drawingContext: The System.Windows.Media.DrawingContext object onto which the System.Windows.Media.TextFormatting.TextLine is rendered.
+  
+   drawingContext: The System.Windows.Media.DrawingContext object onto which the 
+    System.Windows.Media.TextFormatting.TextLine is rendered.
+  
    origin: A System.Windows.Point value that represents the drawing origin.
-   inversion: An enumerated System.Windows.Media.TextFormatting.InvertAxes value that indicates the inversion of the horizontal and vertical axes of the drawing surface.
+   inversion: An enumerated System.Windows.Media.TextFormatting.InvertAxes value that 
+    indicates the inversion of the horizontal and vertical axes of the drawing 
+    surface.
   """
   pass
  def GetBackspaceCaretCharacterHit(self,characterHit):
@@ -871,10 +1024,15 @@ class TextLine(object,ITextMetrics,IDisposable):
   """
   GetCharacterHitFromDistance(self: TextLine,distance: float) -> CharacterHit
   
-   Gets the character hit corresponding to the specified distance from the beginning of the line.
+   Gets the character hit corresponding to the specified distance from the 
+    beginning of the line.
   
-   distance: A System.Double value that represents the distance from the beginning of the line.
-   Returns: The System.Windows.Media.TextFormatting.CharacterHit object at the specified distance from the beginning of the line.
+  
+   distance: A System.Double value that represents the distance from the beginning of the 
+    line.
+  
+   Returns: The System.Windows.Media.TextFormatting.CharacterHit object at the specified 
+    distance from the beginning of the line.
   """
   pass
  def GetDistanceFromCharacterHit(self,characterHit):
@@ -883,7 +1041,9 @@ class TextLine(object,ITextMetrics,IDisposable):
   
    Gets the distance from the beginning of the line to the specified character hit.
   
-   characterHit: The System.Windows.Media.TextFormatting.CharacterHit object whose distance you want to query.
+   characterHit: The System.Windows.Media.TextFormatting.CharacterHit object whose distance you 
+    want to query.
+  
    Returns: A System.Double that represents the distance from the beginning of the line.
   """
   pass
@@ -891,8 +1051,13 @@ class TextLine(object,ITextMetrics,IDisposable):
   """
   GetIndexedGlyphRuns(self: TextLine) -> IEnumerable[IndexedGlyphRun]
   
-   Gets an enumerator for enumerating System.Windows.Media.TextFormatting.IndexedGlyphRun objects in the System.Windows.Media.TextFormatting.TextLine.
-   Returns: An enumerator that allows you to enumerate each System.Windows.Media.TextFormatting.IndexedGlyphRun object in the System.Windows.Media.TextFormatting.TextLine.
+   Gets an enumerator for enumerating 
+    System.Windows.Media.TextFormatting.IndexedGlyphRun objects in the 
+    System.Windows.Media.TextFormatting.TextLine.
+  
+   Returns: An enumerator that allows you to enumerate each 
+    System.Windows.Media.TextFormatting.IndexedGlyphRun object in the 
+    System.Windows.Media.TextFormatting.TextLine.
   """
   pass
  def GetNextCaretCharacterHit(self,characterHit):
@@ -902,7 +1067,8 @@ class TextLine(object,ITextMetrics,IDisposable):
    Gets the next character hit for caret navigation.
   
    characterHit: The current System.Windows.Media.TextFormatting.CharacterHit object.
-   Returns: The next System.Windows.Media.TextFormatting.CharacterHit object based on caret navigation.
+   Returns: The next System.Windows.Media.TextFormatting.CharacterHit object based on caret 
+    navigation.
   """
   pass
  def GetPreviousCaretCharacterHit(self,characterHit):
@@ -912,18 +1078,26 @@ class TextLine(object,ITextMetrics,IDisposable):
    Gets the previous character hit for caret navigation.
   
    characterHit: The current System.Windows.Media.TextFormatting.CharacterHit object.
-   Returns: The previous System.Windows.Media.TextFormatting.CharacterHit object based on caret navigation.
+   Returns: The previous System.Windows.Media.TextFormatting.CharacterHit object based on 
+    caret navigation.
   """
   pass
  def GetTextBounds(self,firstTextSourceCharacterIndex,textLength):
   """
   GetTextBounds(self: TextLine,firstTextSourceCharacterIndex: int,textLength: int) -> IList[TextBounds]
   
-   Gets an array of bounding rectangles that represent the range of characters within a text line.
+   Gets an array of bounding rectangles that represent the range of characters 
+    within a text line.
   
-   firstTextSourceCharacterIndex: An System.Int32 value that represents the index of first character of specified range.
-   textLength: An System.Int32 value that represents the number of characters of the specified range.
-   Returns: A list of System.Windows.Media.TextFormatting.TextBounds objects representing the bounding rectangle.
+  
+   firstTextSourceCharacterIndex: An System.Int32 value that represents the index of first character of specified 
+    range.
+  
+   textLength: An System.Int32 value that represents the number of characters of the specified 
+    range.
+  
+   Returns: A list of System.Windows.Media.TextFormatting.TextBounds objects representing 
+    the bounding rectangle.
   """
   pass
  def GetTextCollapsedRanges(self):
@@ -931,7 +1105,8 @@ class TextLine(object,ITextMetrics,IDisposable):
   GetTextCollapsedRanges(self: TextLine) -> IList[TextCollapsedRange]
   
    Gets a collection of collapsed text ranges after a line has been collapsed.
-   Returns: A list of System.Windows.Media.TextFormatting.TextCollapsedRange objects that represent the collapsed text.
+   Returns: A list of System.Windows.Media.TextFormatting.TextCollapsedRange objects that 
+    represent the collapsed text.
   """
   pass
  def GetTextLineBreak(self):
@@ -939,29 +1114,26 @@ class TextLine(object,ITextMetrics,IDisposable):
   GetTextLineBreak(self: TextLine) -> TextLineBreak
   
    Gets the state of the line when broken by line breaking process.
-   Returns: A System.Windows.Media.TextFormatting.TextLineBreak value that represents the line break.
+   Returns: A System.Windows.Media.TextFormatting.TextLineBreak value that represents the 
+    line break.
   """
   pass
  def GetTextRunSpans(self):
   """
   GetTextRunSpans(self: TextLine) -> IList[TextSpan[TextRun]]
   
-   Gets a collection of System.Windows.Media.TextFormatting.TextRun objects in a text span that are contained within a line.
-   Returns: Gets a list of System.Windows.Media.TextFormatting.TextRun objects contained within a text span.
+   Gets a collection of System.Windows.Media.TextFormatting.TextRun objects in a 
+    text span that are contained within a line.
+  
+   Returns: Gets a list of System.Windows.Media.TextFormatting.TextRun objects contained 
+    within a text span.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1130,28 +1302,24 @@ class TextLineBreak(object,IDisposable):
   """
   Clone(self: TextLineBreak) -> TextLineBreak
   
-   Clone a new instance of the System.Windows.Media.TextFormatting.TextLineBreak object.
+   Clone a new instance of the System.Windows.Media.TextFormatting.TextLineBreak 
+    object.
+  
    Returns: A new instance of System.Windows.Media.TextFormatting.TextLineBreak.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: TextLineBreak)
-   Releases the resources used by the System.Windows.Media.TextFormatting.TextLineBreak class.
+   Releases the resources used by the 
+    System.Windows.Media.TextFormatting.TextLineBreak class.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1184,13 +1352,19 @@ class TextModifier(TextRun):
   """
   ModifyProperties(self: TextModifier,properties: TextRunProperties) -> TextRunProperties
   
-   Retrieves the System.Windows.Media.TextFormatting.TextRunProperties for a text run.
+   Retrieves the System.Windows.Media.TextFormatting.TextRunProperties for a text 
+    run.
   
-   properties: The System.Windows.Media.TextFormatting.TextRunProperties for a text run,or the return value of 
-    System.Windows.Media.TextFormatting.TextModifier.ModifyProperties(System.Windows.Media.TextFormatting.TextRunProperties) for a nested text modifier.
   
-   Returns: The actual System.Windows.Media.TextFormatting.TextRunProperties to be used by the System.Windows.Media.TextFormatting.TextFormatter,subject to further modification by 
-    System.Windows.Media.TextFormatting.TextModifier objects at outer scopes.
+   properties: The System.Windows.Media.TextFormatting.TextRunProperties for a text run,or 
+    the return value of 
+    System.Windows.Media.TextFormatting.TextModifier.ModifyProperties(System.Windows
+    .Media.TextFormatting.TextRunProperties) for a nested text modifier.
+  
+   Returns: The actual System.Windows.Media.TextFormatting.TextRunProperties to be used by 
+    the System.Windows.Media.TextFormatting.TextFormatter,subject to further 
+    modification by System.Windows.Media.TextFormatting.TextModifier objects at 
+    outer scopes.
   """
   pass
  CharacterBufferReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
@@ -1352,17 +1526,26 @@ class TextRunCache(object):
  def Change(self,textSourceCharacterIndex,addition,removal):
   """
   Change(self: TextRunCache,textSourceCharacterIndex: int,addition: int,removal: int)
-   Notifies the text engine client of a change to the cache when text content or text run properties of System.Windows.Media.TextFormatting.TextRun are added,removed,or replaced.
+   Notifies the text engine client of a change to the cache when text content or 
+    text run properties of System.Windows.Media.TextFormatting.TextRun are added,
+    removed,or replaced.
   
-   textSourceCharacterIndex: Specifies the System.Windows.Media.TextFormatting.TextSource character index position of the start of the change.
-   addition: Indicates the number of System.Windows.Media.TextFormatting.TextSource characters to be added.
-   removal: Indicates the number of System.Windows.Media.TextFormatting.TextSource characters to be removed.
+  
+   textSourceCharacterIndex: Specifies the System.Windows.Media.TextFormatting.TextSource character index 
+    position of the start of the change.
+  
+   addition: Indicates the number of System.Windows.Media.TextFormatting.TextSource 
+    characters to be added.
+  
+   removal: Indicates the number of System.Windows.Media.TextFormatting.TextSource 
+    characters to be removed.
   """
   pass
  def Invalidate(self):
   """
   Invalidate(self: TextRunCache)
-   Signals the text engine client to invalidate the entire contents of the System.Windows.Media.TextFormatting.TextFormatter cache.
+   Signals the text engine client to invalidate the entire contents of the 
+    System.Windows.Media.TextFormatting.TextFormatter cache.
   """
   pass
 
@@ -1458,8 +1641,10 @@ class TextRunTypographyProperties(object):
  def OnPropertiesChanged(self,*args):
   """
   OnPropertiesChanged(self: TextRunTypographyProperties)
-   Corrects internal state for a System.Windows.Media.TextFormatting.TextRunTypographyProperties derived class whenever any System.Windows.Media.TextFormatting.TextRunTypographyProperties property changes its 
-    value.
+   Corrects internal state for a 
+    System.Windows.Media.TextFormatting.TextRunTypographyProperties derived class 
+    whenever any System.Windows.Media.TextFormatting.TextRunTypographyProperties 
+    property changes its value.
   """
   pass
  AnnotationAlternates=property(lambda self: object(),lambda self,v: None,lambda self: None)
@@ -1797,30 +1982,46 @@ class TextSource(object):
   """
   GetPrecedingText(self: TextSource,textSourceCharacterIndexLimit: int) -> TextSpan[CultureSpecificCharacterBufferRange]
   
-   Retrieves the text span immediately before the specified System.Windows.Media.TextFormatting.TextSource position.
+   Retrieves the text span immediately before the specified 
+    System.Windows.Media.TextFormatting.TextSource position.
   
-   textSourceCharacterIndexLimit: An System.Int32 value that specifies the character index position where text retrieval stops.
-   Returns: A System.Windows.Media.TextFormatting.CultureSpecificCharacterBufferRange value that represents the text span immediately before textSourceCharacterIndexLimit.
+  
+   textSourceCharacterIndexLimit: An System.Int32 value that specifies the character index position where text 
+    retrieval stops.
+  
+   Returns: A System.Windows.Media.TextFormatting.CultureSpecificCharacterBufferRange value 
+    that represents the text span immediately before textSourceCharacterIndexLimit.
   """
   pass
  def GetTextEffectCharacterIndexFromTextSourceCharacterIndex(self,textSourceCharacterIndex):
   """
   GetTextEffectCharacterIndexFromTextSourceCharacterIndex(self: TextSource,textSourceCharacterIndex: int) -> int
   
-   Retrieves a value that maps a System.Windows.Media.TextFormatting.TextSource character index to a System.Windows.Media.TextEffect character index.
+   Retrieves a value that maps a System.Windows.Media.TextFormatting.TextSource 
+    character index to a System.Windows.Media.TextEffect character index.
   
-   textSourceCharacterIndex: An System.Int32 value that specifies the System.Windows.Media.TextFormatting.TextSource character index to map.
-   Returns: An System.Int32 value that represents the System.Windows.Media.TextEffect character index.
+  
+   textSourceCharacterIndex: An System.Int32 value that specifies the 
+    System.Windows.Media.TextFormatting.TextSource character index to map.
+  
+   Returns: An System.Int32 value that represents the System.Windows.Media.TextEffect 
+    character index.
   """
   pass
  def GetTextRun(self,textSourceCharacterIndex):
   """
   GetTextRun(self: TextSource,textSourceCharacterIndex: int) -> TextRun
   
-   Retrieves a System.Windows.Media.TextFormatting.TextRun starting at a specified System.Windows.Media.TextFormatting.TextSource position.
+   Retrieves a System.Windows.Media.TextFormatting.TextRun starting at a specified 
+    System.Windows.Media.TextFormatting.TextSource position.
   
-   textSourceCharacterIndex: Specifies the character index position in the System.Windows.Media.TextFormatting.TextSource where the System.Windows.Media.TextFormatting.TextRun is retrieved.
-   Returns: A value that represents a System.Windows.Media.TextFormatting.TextRun,or an object derived from System.Windows.Media.TextFormatting.TextRun.
+  
+   textSourceCharacterIndex: Specifies the character index position in the 
+    System.Windows.Media.TextFormatting.TextSource where the 
+    System.Windows.Media.TextFormatting.TextRun is retrieved.
+  
+   Returns: A value that represents a System.Windows.Media.TextFormatting.TextRun,or an 
+    object derived from System.Windows.Media.TextFormatting.TextRun.
   """
   pass
  PixelsPerDip=property(lambda self: object(),lambda self,v: None,lambda self: None)

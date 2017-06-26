@@ -2,7 +2,7 @@
 # module Revit.Elements.InternalUtilities calls itself InternalUtilities
 # from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -67,11 +67,14 @@ class ElementUtils(object):
         UpdateLevelName(name: str) -> str
         
             This function checks if the name ends with "(num)". Here num is a integer.
-                    If yes, it will replace "(num)" with "(num+1)". Here num+1 is the form of the
-                    evaluated integer. 
-             Otherwise, it will append "(1)" at the end of the name.
+            
+                     If yes, it will replace "(num)" with "(num+1)". Here num+1 is the form 
+             of the
+                    evaluated integer. Otherwise, it will append "(1)" at the 
+             end of the name.
                     For example:
-                    This function will change the name from "abc(2)" to "abc(3)",
+                    This function will 
+             change the name from "abc(2)" to "abc(3)",
                     from "abc" to "abc(1)".
         """
         pass

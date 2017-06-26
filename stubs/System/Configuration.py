@@ -2,7 +2,7 @@
 # module System.Configuration calls itself Configuration
 # from mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -35,11 +35,16 @@ class SettingsBase(object):
     def Initialize(self, context, properties, providers):
         """
         Initialize(self: SettingsBase, context: SettingsContext, properties: SettingsPropertyCollection, providers: SettingsProviderCollection)
-            Initializes internal properties used by System.Configuration.SettingsBase object.
+            Initializes internal properties used by System.Configuration.SettingsBase 
+             object.
+        
         
             context: The settings context related to the settings properties.
-            properties: The settings properties that will be accessible from the System.Configuration.SettingsBase instance.
-            providers: The initialized providers that should be used when loading and saving property values.
+            properties: The settings properties that will be accessible from the 
+             System.Configuration.SettingsBase instance.
+        
+            providers: The initialized providers that should be used when loading and saving property 
+             values.
         """
         pass
 
@@ -55,7 +60,9 @@ class SettingsBase(object):
         """
         Synchronized(settingsBase: SettingsBase) -> SettingsBase
         
-            Provides a System.Configuration.SettingsBase class that is synchronized (thread safe).
+            Provides a System.Configuration.SettingsBase class that is synchronized (thread 
+             safe).
+        
         
             settingsBase: The class used to support user property settings.
             Returns: A System.Configuration.SettingsBase class that is synchronized.
@@ -113,10 +120,15 @@ class ApplicationSettingsBase(SettingsBase, INotifyPropertyChanged):
         """
         GetPreviousVersion(self: ApplicationSettingsBase, propertyName: str) -> object
         
-            Returns the value of the named settings property for the previous version of the same application.
+            Returns the value of the named settings property for the previous version of 
+             the same application.
         
-            propertyName: A System.String containing the name of the settings property whose value is to be returned.
-            Returns: An System.Object containing the value of the specified System.Configuration.SettingsProperty if found; otherwise, null.
+        
+            propertyName: A System.String containing the name of the settings property whose value is to 
+             be returned.
+        
+            Returns: An System.Object containing the value of the specified 
+             System.Configuration.SettingsProperty if found; otherwise, null.
         """
         pass
 
@@ -170,7 +182,8 @@ class ApplicationSettingsBase(SettingsBase, INotifyPropertyChanged):
     def Reset(self):
         """
         Reset(self: ApplicationSettingsBase)
-            Restores the persisted application settings values to their corresponding default properties.
+            Restores the persisted application settings values to their corresponding 
+             default properties.
         """
         pass
 
@@ -184,7 +197,8 @@ class ApplicationSettingsBase(SettingsBase, INotifyPropertyChanged):
     def Upgrade(self):
         """
         Upgrade(self: ApplicationSettingsBase)
-            Updates application settings to reflect a more recent installation of the application.
+            Updates application settings to reflect a more recent installation of the 
+             application.
         """
         pass
 
@@ -270,7 +284,10 @@ class AppSettingsReader(object):
         """
         GetValue(self: AppSettingsReader, key: str, type: Type) -> object
         
-            Gets the value for a specified key from the System.Configuration.ConfigurationSettings.AppSettings property and returns an object of the specified type containing the value from the configuration.
+            Gets the value for a specified key from the 
+             System.Configuration.ConfigurationSettings.AppSettings property and returns an 
+             object of the specified type containing the value from the configuration.
+        
         
             key: The key for which to get the value.
             type: The type of the object to return.
@@ -327,7 +344,9 @@ class ConfigurationException(SystemException, ISerializable, _Exception):
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: ConfigurationException, info: SerializationInfo, context: StreamingContext)
-            Sets the System.Runtime.Serialization.SerializationInfo object with the file name and line number at which this configuration exception occurred.
+            Sets the System.Runtime.Serialization.SerializationInfo object with the file 
+             name and line number at which this configuration exception occurred.
+        
         
             info: The object that holds the information to be serialized.
             context: The contextual information about the source or destination.
@@ -339,9 +358,14 @@ class ConfigurationException(SystemException, ISerializable, _Exception):
         """
         GetXmlNodeFilename(node: XmlNode) -> str
         
-            Gets the path to the configuration file from which the internal System.Xml.XmlNode object was loaded when this configuration exception was thrown.
+            Gets the path to the configuration file from which the internal 
+             System.Xml.XmlNode object was loaded when this configuration exception was 
+             thrown.
         
-            node: The System.Xml.XmlNode that caused this System.Configuration.ConfigurationException exception to be thrown.
+        
+            node: The System.Xml.XmlNode that caused this 
+             System.Configuration.ConfigurationException exception to be thrown.
+        
             Returns: A string representing the node file name.
         """
         pass
@@ -351,9 +375,14 @@ class ConfigurationException(SystemException, ISerializable, _Exception):
         """
         GetXmlNodeLineNumber(node: XmlNode) -> int
         
-            Gets the line number within the configuration file that the internal System.Xml.XmlNode object represented when this configuration exception was thrown.
+            Gets the line number within the configuration file that the internal 
+             System.Xml.XmlNode object represented when this configuration exception was 
+             thrown.
         
-            node: The System.Xml.XmlNode that caused this System.Configuration.ConfigurationException exception to be thrown.
+        
+            node: The System.Xml.XmlNode that caused this 
+             System.Configuration.ConfigurationException exception to be thrown.
+        
             Returns: An int representing the node line number.
         """
         pass
@@ -423,11 +452,17 @@ class ConfigurationSettings(object):
         """
         GetConfig(sectionName: str) -> object
         
-            Returns the System.Configuration.ConfigurationSection object for the passed configuration section name and path.
+            Returns the System.Configuration.ConfigurationSection object for the passed 
+             configuration section name and path.
+        
         
             sectionName: A configuration name and path, such as "system.net/settings".
-            Returns: The System.Configuration.ConfigurationSection object for the passed configuration section name and path.NoteThe System.Configuration.ConfigurationSettings class provides backward compatibility only. You 
-             should use the System.Configuration.ConfigurationManager class or System.Web.Configuration.WebConfigurationManager class instead.
+            Returns: The System.Configuration.ConfigurationSection object for the passed 
+             configuration section name and path.NoteThe 
+             System.Configuration.ConfigurationSettings class provides backward 
+             compatibility only. You should use the 
+             System.Configuration.ConfigurationManager class or 
+             System.Web.Configuration.WebConfigurationManager class instead.
         """
         pass
 
@@ -479,7 +514,9 @@ class ConfigXmlDocument(XmlDocument, ICloneable, IEnumerable, IXPathNavigable, I
         """
         CreateDefaultAttribute(self: XmlDocument, prefix: str, localName: str, namespaceURI: str) -> XmlAttribute
         
-            Creates a default attribute with the specified prefix, local name and namespace URI.
+            Creates a default attribute with the specified prefix, local name and namespace 
+             URI.
+        
         
             prefix: The prefix of the attribute (if any).
             localName: The local name of the attribute.
@@ -505,7 +542,9 @@ class ConfigXmlDocument(XmlDocument, ICloneable, IEnumerable, IXPathNavigable, I
         """
         CreateNavigator(self: XmlDocument, node: XmlNode) -> XPathNavigator
         
-            Creates an System.Xml.XPath.XPathNavigator object for navigating this document positioned on the System.Xml.XmlNode specified.
+            Creates an System.Xml.XPath.XPathNavigator object for navigating this document 
+             positioned on the System.Xml.XmlNode specified.
+        
         
             node: The System.Xml.XmlNode you want the navigator initially positioned on.
             Returns: An System.Xml.XPath.XPathNavigator object.
@@ -626,7 +665,9 @@ class DictionarySectionHandler(object, IConfigurationSectionHandler):
         """
         Create(self: DictionarySectionHandler, parent: object, context: object, section: XmlNode) -> object
         
-            Creates a new configuration handler and adds it to the section-handler collection based on the specified parameters.
+            Creates a new configuration handler and adds it to the section-handler 
+             collection based on the specified parameters.
+        
         
             parent: Parent object.
             context: Configuration context object.
@@ -661,18 +702,24 @@ class IApplicationSettingsProvider:
         """
         GetPreviousVersion(self: IApplicationSettingsProvider, context: SettingsContext, property: SettingsProperty) -> SettingsPropertyValue
         
-            Returns the value of the specified settings property for the previous version of the same application.
+            Returns the value of the specified settings property for the previous version 
+             of the same application.
+        
         
             context: A System.Configuration.SettingsContext describing the current application usage.
             property: The System.Configuration.SettingsProperty whose value is to be returned.
-            Returns: A System.Configuration.SettingsPropertyValue containing the value of the specified property setting as it was last set in the previous version of the application; or null if the setting cannot be found.
+            Returns: A System.Configuration.SettingsPropertyValue containing the value of the 
+             specified property setting as it was last set in the previous version of the 
+             application; or null if the setting cannot be found.
         """
         pass
 
     def Reset(self, context):
         """
         Reset(self: IApplicationSettingsProvider, context: SettingsContext)
-            Resets the application settings associated with the specified application to their default values.
+            Resets the application settings associated with the specified application to 
+             their default values.
+        
         
             context: A System.Configuration.SettingsContext describing the current application usage.
         """
@@ -681,10 +728,13 @@ class IApplicationSettingsProvider:
     def Upgrade(self, context, properties):
         """
         Upgrade(self: IApplicationSettingsProvider, context: SettingsContext, properties: SettingsPropertyCollection)
-            Indicates to the provider that the application has been upgraded. This offers the provider an opportunity to upgrade its stored settings as appropriate.
+            Indicates to the provider that the application has been upgraded. This offers 
+             the provider an opportunity to upgrade its stored settings as appropriate.
+        
         
             context: A System.Configuration.SettingsContext describing the current application usage.
-            properties: A System.Configuration.SettingsPropertyCollection containing the settings property group whose values are to be retrieved.
+            properties: A System.Configuration.SettingsPropertyCollection containing the settings 
+             property group whose values are to be retrieved.
         """
         pass
 
@@ -778,11 +828,18 @@ class IgnoreSectionHandler(object, IConfigurationSectionHandler):
         """
         Create(self: IgnoreSectionHandler, parent: object, configContext: object, section: XmlNode) -> object
         
-            Creates a new configuration handler and adds the specified configuration object to the section-handler collection.
+            Creates a new configuration handler and adds the specified configuration object 
+             to the section-handler collection.
+        
         
             parent: The configuration settings in a corresponding parent configuration section.
-            configContext: The virtual path for which the configuration section handler computes configuration values. Normally this parameter is reserved and is null.
-            section: An System.Xml.XmlNode that contains the configuration information to be handled. Provides direct access to the XML contents of the configuration section.
+            configContext: The virtual path for which the configuration section handler computes 
+             configuration values. Normally this parameter is reserved and is null.
+        
+            section: An System.Xml.XmlNode that contains the configuration information to be 
+             handled. Provides direct access to the XML contents of the configuration 
+             section.
+        
             Returns: The created configuration handler object.
         """
         pass
@@ -801,7 +858,8 @@ class IPersistComponentSettings:
     def LoadComponentSettings(self):
         """
         LoadComponentSettings(self: IPersistComponentSettings)
-            Reads the control's application settings into their corresponding properties and updates the control's state.
+            Reads the control's application settings into their corresponding properties 
+             and updates the control's state.
         """
         pass
 
@@ -880,7 +938,8 @@ class ISettingsProviderService:
             Returns the settings provider compatible with the specified settings property.
         
             property: The System.Configuration.SettingsProperty that requires serialization.
-            Returns: If found, the System.Configuration.SettingsProvider that can persist the specified settings property; otherwise, null.
+            Returns: If found, the System.Configuration.SettingsProvider that can persist the 
+             specified settings property; otherwise, null.
         """
         pass
 
@@ -895,11 +954,16 @@ class SettingsProvider(ProviderBase):
         """
         GetPropertyValues(self: SettingsProvider, context: SettingsContext, collection: SettingsPropertyCollection) -> SettingsPropertyValueCollection
         
-            Returns the collection of settings property values for the specified application instance and settings property group.
+            Returns the collection of settings property values for the specified 
+             application instance and settings property group.
+        
         
             context: A System.Configuration.SettingsContext describing the current application use.
-            collection: A System.Configuration.SettingsPropertyCollection containing the settings property group whose values are to be retrieved.
-            Returns: A System.Configuration.SettingsPropertyValueCollection containing the values for the specified settings property group.
+            collection: A System.Configuration.SettingsPropertyCollection containing the settings 
+             property group whose values are to be retrieved.
+        
+            Returns: A System.Configuration.SettingsPropertyValueCollection containing the values 
+             for the specified settings property group.
         """
         pass
 
@@ -909,7 +973,8 @@ class SettingsProvider(ProviderBase):
             Sets the values of the specified group of property settings.
         
             context: A System.Configuration.SettingsContext describing the current application usage.
-            collection: A System.Configuration.SettingsPropertyValueCollection representing the group of property settings to set.
+            collection: A System.Configuration.SettingsPropertyValueCollection representing the group 
+             of property settings to set.
         """
         pass
 
@@ -933,11 +998,16 @@ class LocalFileSettingsProvider(SettingsProvider, IApplicationSettingsProvider):
         """
         GetPreviousVersion(self: LocalFileSettingsProvider, context: SettingsContext, property: SettingsProperty) -> SettingsPropertyValue
         
-            Returns the value of the named settings property for the previous version of the same application.
+            Returns the value of the named settings property for the previous version of 
+             the same application.
         
-            context: A System.Configuration.SettingsContext that describes where the application settings property is used.
+        
+            context: A System.Configuration.SettingsContext that describes where the application 
+             settings property is used.
+        
             property: The System.Configuration.SettingsProperty whose value is to be returned.
-            Returns: A System.Configuration.SettingsPropertyValue representing the application setting if found; otherwise, null.
+            Returns: A System.Configuration.SettingsPropertyValue representing the application 
+             setting if found; otherwise, null.
         """
         pass
 
@@ -945,11 +1015,16 @@ class LocalFileSettingsProvider(SettingsProvider, IApplicationSettingsProvider):
         """
         GetPropertyValues(self: LocalFileSettingsProvider, context: SettingsContext, properties: SettingsPropertyCollection) -> SettingsPropertyValueCollection
         
-            Returns the collection of setting property values for the specified application instance and settings property group.
+            Returns the collection of setting property values for the specified application 
+             instance and settings property group.
+        
         
             context: A System.Configuration.SettingsContext describing the current application usage.
-            properties: A System.Configuration.SettingsPropertyCollection containing the settings property group whose values are to be retrieved.
-            Returns: A System.Configuration.SettingsPropertyValueCollection containing the values for the specified settings property group.
+            properties: A System.Configuration.SettingsPropertyCollection containing the settings 
+             property group whose values are to be retrieved.
+        
+            Returns: A System.Configuration.SettingsPropertyValueCollection containing the values 
+             for the specified settings property group.
         """
         pass
 
@@ -964,7 +1039,9 @@ class LocalFileSettingsProvider(SettingsProvider, IApplicationSettingsProvider):
     def Reset(self, context):
         """
         Reset(self: LocalFileSettingsProvider, context: SettingsContext)
-            Resets all application settings properties associated with the specified application to their default values.
+            Resets all application settings properties associated with the specified 
+             application to their default values.
+        
         
             context: A System.Configuration.SettingsContext describing the current application usage.
         """
@@ -976,17 +1053,21 @@ class LocalFileSettingsProvider(SettingsProvider, IApplicationSettingsProvider):
             Sets the values of the specified group of property settings.
         
             context: A System.Configuration.SettingsContext describing the current application usage.
-            values: A System.Configuration.SettingsPropertyValueCollection representing the group of property settings to set.
+            values: A System.Configuration.SettingsPropertyValueCollection representing the group 
+             of property settings to set.
         """
         pass
 
     def Upgrade(self, context, properties):
         """
         Upgrade(self: LocalFileSettingsProvider, context: SettingsContext, properties: SettingsPropertyCollection)
-            Attempts to migrate previous user-scoped settings from a previous version of the same application.
+            Attempts to migrate previous user-scoped settings from a previous version of 
+             the same application.
+        
         
             context: A System.Configuration.SettingsContext describing the current application usage.
-            properties: A System.Configuration.SettingsPropertyCollection containing the settings property group whose values are to be retrieved.
+            properties: A System.Configuration.SettingsPropertyCollection containing the settings 
+             property group whose values are to be retrieved.
         """
         pass
 
@@ -1014,7 +1095,9 @@ class NameValueFileSectionHandler(object, IConfigurationSectionHandler):
         """
         Create(self: NameValueFileSectionHandler, parent: object, configContext: object, section: XmlNode) -> object
         
-            Creates a new configuration handler and adds it to the section-handler collection based on the specified parameters.
+            Creates a new configuration handler and adds it to the section-handler 
+             collection based on the specified parameters.
+        
         
             parent: The parent object.
             configContext: The configuration context object.
@@ -1042,7 +1125,9 @@ class NameValueSectionHandler(object, IConfigurationSectionHandler):
         """
         Create(self: NameValueSectionHandler, parent: object, context: object, section: XmlNode) -> object
         
-            Creates a new configuration handler and adds it to the section-handler collection based on the specified parameters.
+            Creates a new configuration handler and adds it to the section-handler 
+             collection based on the specified parameters.
+        
         
             parent: Parent object.
             context: Configuration context object.
@@ -1129,15 +1214,22 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
         BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
             Adds a configuration element to the configuration element collection.
         
-            index: The index location at which to add the specified System.Configuration.ConfigurationElement.
+            index: The index location at which to add the specified 
+             System.Configuration.ConfigurationElement.
+        
             element: The System.Configuration.ConfigurationElement to add.
         BaseAdd(self: ConfigurationElementCollection, element: ConfigurationElement, throwIfExists: bool)
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; otherwise, false.
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement 
+             specified is already contained in the 
+             System.Configuration.ConfigurationElementCollection; otherwise, false.
+        
         BaseAdd(self: ConfigurationElementCollection, element: ConfigurationElement)
-            Adds a configuration element to the System.Configuration.ConfigurationElementCollection.
+            Adds a configuration element to the 
+             System.Configuration.ConfigurationElementCollection.
+        
         
             element: The System.Configuration.ConfigurationElement to add.
         """
@@ -1163,7 +1255,8 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
             Returns the configuration element with the specified key.
         
             key: The key of the element to return.
-            Returns: The System.Configuration.ConfigurationElement with the specified key; otherwise, null.
+            Returns: The System.Configuration.ConfigurationElement with the specified key; 
+             otherwise, null.
         """
         pass
 
@@ -1171,8 +1264,12 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
         """
         BaseGetAllKeys(self: ConfigurationElementCollection) -> Array[object]
         
-            Returns an array of the keys for all of the configuration elements contained in the System.Configuration.ConfigurationElementCollection.
-            Returns: An array that contains the keys for all of the System.Configuration.ConfigurationElement objects contained in the System.Configuration.ConfigurationElementCollection.
+            Returns an array of the keys for all of the configuration elements contained in 
+             the System.Configuration.ConfigurationElementCollection.
+        
+            Returns: An array that contains the keys for all of the 
+             System.Configuration.ConfigurationElement objects contained in the 
+             System.Configuration.ConfigurationElementCollection.
         """
         pass
 
@@ -1180,7 +1277,9 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
         """
         BaseGetKey(self: ConfigurationElementCollection, index: int) -> object
         
-            Gets the key for the System.Configuration.ConfigurationElement at the specified index location.
+            Gets the key for the System.Configuration.ConfigurationElement at the specified 
+             index location.
+        
         
             index: The index location for the System.Configuration.ConfigurationElement.
             Returns: The key for the specified System.Configuration.ConfigurationElement.
@@ -1194,7 +1293,8 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
             The index of the specified System.Configuration.ConfigurationElement.
         
             element: The System.Configuration.ConfigurationElement for the specified index location.
-            Returns: The index of the specified System.Configuration.ConfigurationElement; otherwise, -1.
+            Returns: The index of the specified System.Configuration.ConfigurationElement; 
+             otherwise, -1.
         """
         pass
 
@@ -1202,10 +1302,14 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the System.Configuration.ConfigurationElementCollection.
+            Gets a value indicating whether the System.Configuration.ConfigurationElement 
+             with the specified key has been removed from the 
+             System.Configuration.ConfigurationElementCollection.
+        
         
             key: The key of the element to check.
-            Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; otherwise, false. The default is false.
+            Returns: true if the System.Configuration.ConfigurationElement with the specified key 
+             has been removed; otherwise, false. The default is false.
         """
         pass
 
@@ -1221,7 +1325,9 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
     def BaseRemoveAt(self, *args): #cannot find CLR method
         """
         BaseRemoveAt(self: ConfigurationElementCollection, index: int)
-            Removes the System.Configuration.ConfigurationElement at the specified index location.
+            Removes the System.Configuration.ConfigurationElement at the specified index 
+             location.
+        
         
             index: The index location of the System.Configuration.ConfigurationElement to remove.
         """
@@ -1232,7 +1338,9 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
         CreateNewElement(self: SchemeSettingElementCollection) -> ConfigurationElement
         CreateNewElement(self: ConfigurationElementCollection, elementName: str) -> ConfigurationElement
         
-            Creates a new System.Configuration.ConfigurationElement when overridden in a derived class.
+            Creates a new System.Configuration.ConfigurationElement when overridden in a 
+             derived class.
+        
         
             elementName: The name of the System.Configuration.ConfigurationElement to create.
             Returns: A new System.Configuration.ConfigurationElement.
@@ -1260,8 +1368,10 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
             Returns the transformed version of the specified assembly name.
         
             assemblyName: The name of the assembly.
-            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName parameter value is returned unchanged. The System.Configuration.Configuration.TypeStringTransformer property 
-             is null if no transformer is available.
+            Returns: The transformed version of the assembly name. If no transformer is available, 
+             the assemblyName parameter value is returned unchanged. The 
+             System.Configuration.Configuration.TypeStringTransformer property is null if no 
+             transformer is available.
         """
         pass
 
@@ -1272,8 +1382,10 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
             Returns the transformed version of the specified type name.
         
             typeName: The name of the type.
-            Returns: The transformed version of the specified type name. If no transformer is available, the typeName parameter value is returned unchanged. The System.Configuration.Configuration.TypeStringTransformer property 
-             is null if no transformer is available.
+            Returns: The transformed version of the specified type name. If no transformer is 
+             available, the typeName parameter value is returned unchanged. The 
+             System.Configuration.Configuration.TypeStringTransformer property is null if no 
+             transformer is available.
         """
         pass
 
@@ -1291,7 +1403,8 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
             The index of the specified System.Configuration.SchemeSettingElement.
         
             element: The System.Configuration.SchemeSettingElement for the specified index location.
-            Returns: The index of the specified System.Configuration.SchemeSettingElement; otherwise, -1.
+            Returns: The index of the specified System.Configuration.SchemeSettingElement; 
+             otherwise, -1.
         """
         pass
 
@@ -1305,7 +1418,8 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
     def InitializeDefault(self, *args): #cannot find CLR method
         """
         InitializeDefault(self: ConfigurationElement)
-            Used to initialize a default set of values for the System.Configuration.ConfigurationElement object.
+            Used to initialize a default set of values for the 
+             System.Configuration.ConfigurationElement object.
         """
         pass
 
@@ -1313,10 +1427,13 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
         """
         IsElementName(self: ConfigurationElementCollection, elementName: str) -> bool
         
-            Indicates whether the specified System.Configuration.ConfigurationElement exists in the System.Configuration.ConfigurationElementCollection.
+            Indicates whether the specified System.Configuration.ConfigurationElement 
+             exists in the System.Configuration.ConfigurationElementCollection.
+        
         
             elementName: The name of the element to verify.
-            Returns: true if the element exists in the collection; otherwise, false. The default is false.
+            Returns: true if the element exists in the collection; otherwise, false. The default is 
+             false.
         """
         pass
 
@@ -1324,10 +1441,15 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
         """
         IsElementRemovable(self: ConfigurationElementCollection, element: ConfigurationElement) -> bool
         
-            Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be removed from the System.Configuration.ConfigurationElementCollection.
+            Gets a value indicating whether the specified 
+             System.Configuration.ConfigurationElement can be removed from the 
+             System.Configuration.ConfigurationElementCollection.
+        
         
             element: The element to check.
-            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default is true.
+            Returns: true if the specified System.Configuration.ConfigurationElement can be removed 
+             from this System.Configuration.ConfigurationElementCollection; otherwise, 
+             false. The default is true.
         """
         pass
 
@@ -1335,7 +1457,10 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
         """
         IsModified(self: ConfigurationElementCollection) -> bool
         
-            Indicates whether this System.Configuration.ConfigurationElementCollection has been modified since it was last saved or loaded when overridden in a derived class.
+            Indicates whether this System.Configuration.ConfigurationElementCollection has 
+             been modified since it was last saved or loaded when overridden in a derived 
+             class.
+        
             Returns: true if any contained element has been modified; otherwise, false
         """
         pass
@@ -1343,7 +1468,10 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
     def ListErrors(self, *args): #cannot find CLR method
         """
         ListErrors(self: ConfigurationElement, errorList: IList)
-            Adds the invalid-property errors in this System.Configuration.ConfigurationElement object, and in all subelements, to the passed list.
+            Adds the invalid-property errors in this 
+             System.Configuration.ConfigurationElement object, and in all subelements, to 
+             the passed list.
+        
         
             errorList: An object that implements the System.Collections.IList interface.
         """
@@ -1353,11 +1481,14 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
         """
         OnDeserializeUnrecognizedAttribute(self: ConfigurationElement, name: str, value: str) -> bool
         
-            Gets a value indicating whether an unknown attribute is encountered during deserialization.
+            Gets a value indicating whether an unknown attribute is encountered during 
+             deserialization.
+        
         
             name: The name of the unrecognized attribute.
             value: The value of the unrecognized attribute.
-            Returns: true when an unknown attribute is encountered while deserializing; otherwise, false.
+            Returns: true when an unknown attribute is encountered while deserializing; otherwise, 
+             false.
         """
         pass
 
@@ -1369,7 +1500,8 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
         
             elementName: The name of the unrecognized element.
             reader: An input stream that reads XML from the configuration file.
-            Returns: true if the unrecognized element was deserialized successfully; otherwise, false. The default is false.
+            Returns: true if the unrecognized element was deserialized successfully; otherwise, 
+             false. The default is false.
         """
         pass
 
@@ -1396,23 +1528,29 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
         PreSerialize(self: ConfigurationElement, writer: XmlWriter)
             Called before serialization.
         
-            writer: The System.Xml.XmlWriter that will be used to serialize the System.Configuration.ConfigurationElement.
+            writer: The System.Xml.XmlWriter that will be used to serialize the 
+             System.Configuration.ConfigurationElement.
         """
         pass
 
     def Reset(self, *args): #cannot find CLR method
         """
         Reset(self: ConfigurationElementCollection, parentElement: ConfigurationElement)
-            Resets the System.Configuration.ConfigurationElementCollection to its unmodified state when overridden in a derived class.
+            Resets the System.Configuration.ConfigurationElementCollection to its 
+             unmodified state when overridden in a derived class.
         
-            parentElement: The System.Configuration.ConfigurationElement representing the collection parent element, if any; otherwise, null.
+        
+            parentElement: The System.Configuration.ConfigurationElement representing the collection 
+             parent element, if any; otherwise, null.
         """
         pass
 
     def ResetModified(self, *args): #cannot find CLR method
         """
         ResetModified(self: ConfigurationElementCollection)
-            Resets the value of the System.Configuration.ConfigurationElementCollection.IsModified property to false when overridden in a derived class.
+            Resets the value of the 
+             System.Configuration.ConfigurationElementCollection.IsModified property to 
+             false when overridden in a derived class.
         """
         pass
 
@@ -1420,11 +1558,14 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
         """
         SerializeElement(self: ConfigurationElementCollection, writer: XmlWriter, serializeCollectionKey: bool) -> bool
         
-            Writes the configuration data to an XML element in the configuration file when overridden in a derived class.
+            Writes the configuration data to an XML element in the configuration file when 
+             overridden in a derived class.
+        
         
             writer: Output stream that writes XML to the configuration file.
             serializeCollectionKey: true to serialize the collection key; otherwise, false.
-            Returns: true if the System.Configuration.ConfigurationElementCollection was written to the configuration file successfully.
+            Returns: true if the System.Configuration.ConfigurationElementCollection was written to 
+             the configuration file successfully.
         """
         pass
 
@@ -1432,7 +1573,9 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
         """
         SerializeToXmlElement(self: ConfigurationElement, writer: XmlWriter, elementName: str) -> bool
         
-            Writes the outer tags of this configuration element to the configuration file when implemented in a derived class.
+            Writes the outer tags of this configuration element to the configuration file 
+             when implemented in a derived class.
+        
         
             writer: The System.Xml.XmlWriter that writes to the configuration file.
             elementName: The name of the System.Configuration.ConfigurationElement to be written.
@@ -1454,7 +1597,9 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
     def SetReadOnly(self, *args): #cannot find CLR method
         """
         SetReadOnly(self: ConfigurationElementCollection)
-            Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly property for the System.Configuration.ConfigurationElementCollection object and for all sub-elements.
+            Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly 
+             property for the System.Configuration.ConfigurationElementCollection object and 
+             for all sub-elements.
         """
         pass
 
@@ -1465,11 +1610,18 @@ class SchemeSettingElementCollection(ConfigurationElementCollection, ICollection
     def Unmerge(self, *args): #cannot find CLR method
         """
         Unmerge(self: ConfigurationElementCollection, sourceElement: ConfigurationElement, parentElement: ConfigurationElement, saveMode: ConfigurationSaveMode)
-            Reverses the effect of merging configuration information from different levels of the configuration hierarchy
+            Reverses the effect of merging configuration information from different levels 
+             of the configuration hierarchy
         
-            sourceElement: A System.Configuration.ConfigurationElement object at the current level containing a merged view of the properties.
-            parentElement: The parent System.Configuration.ConfigurationElement object of the current element, or null if this is the top level.
-            saveMode: A System.Configuration.ConfigurationSaveMode enumerated value that determines which property values to include.
+        
+            sourceElement: A System.Configuration.ConfigurationElement object at the current level 
+             containing a merged view of the properties.
+        
+            parentElement: The parent System.Configuration.ConfigurationElement object of the current 
+             element, or null if this is the top level.
+        
+            saveMode: A System.Configuration.ConfigurationSaveMode enumerated value that determines 
+             which property values to include.
         """
         pass
 
@@ -1591,7 +1743,9 @@ class SettingChangingEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -1604,7 +1758,10 @@ class SettingChangingEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -1630,10 +1787,14 @@ class SettingChangingEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -1661,10 +1822,13 @@ class SettingElement(ConfigurationElement):
         """
         Equals(self: SettingElement, settings: object) -> bool
         
-            Compares the current System.Configuration.SettingElement instance to the specified object.
+            Compares the current System.Configuration.SettingElement instance to the 
+             specified object.
+        
         
             settings: The object to compare with.
-            Returns: true if the System.Configuration.SettingElement instance is equal to the specified object; otherwise, false.
+            Returns: true if the System.Configuration.SettingElement instance is equal to the 
+             specified object; otherwise, false.
         """
         pass
 
@@ -1672,8 +1836,11 @@ class SettingElement(ConfigurationElement):
         """
         GetHashCode(self: SettingElement) -> int
         
-            Gets a unique value representing the System.Configuration.SettingElement current instance.
-            Returns: A unique value representing the System.Configuration.SettingElement current instance.
+            Gets a unique value representing the System.Configuration.SettingElement 
+             current instance.
+        
+            Returns: A unique value representing the System.Configuration.SettingElement current 
+             instance.
         """
         pass
 
@@ -1745,15 +1912,22 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
         BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
             Adds a configuration element to the configuration element collection.
         
-            index: The index location at which to add the specified System.Configuration.ConfigurationElement.
+            index: The index location at which to add the specified 
+             System.Configuration.ConfigurationElement.
+        
             element: The System.Configuration.ConfigurationElement to add.
         BaseAdd(self: ConfigurationElementCollection, element: ConfigurationElement, throwIfExists: bool)
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; otherwise, false.
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement 
+             specified is already contained in the 
+             System.Configuration.ConfigurationElementCollection; otherwise, false.
+        
         BaseAdd(self: ConfigurationElementCollection, element: ConfigurationElement)
-            Adds a configuration element to the System.Configuration.ConfigurationElementCollection.
+            Adds a configuration element to the 
+             System.Configuration.ConfigurationElementCollection.
+        
         
             element: The System.Configuration.ConfigurationElement to add.
         """
@@ -1779,7 +1953,8 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
             Returns the configuration element with the specified key.
         
             key: The key of the element to return.
-            Returns: The System.Configuration.ConfigurationElement with the specified key; otherwise, null.
+            Returns: The System.Configuration.ConfigurationElement with the specified key; 
+             otherwise, null.
         """
         pass
 
@@ -1787,8 +1962,12 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
         """
         BaseGetAllKeys(self: ConfigurationElementCollection) -> Array[object]
         
-            Returns an array of the keys for all of the configuration elements contained in the System.Configuration.ConfigurationElementCollection.
-            Returns: An array that contains the keys for all of the System.Configuration.ConfigurationElement objects contained in the System.Configuration.ConfigurationElementCollection.
+            Returns an array of the keys for all of the configuration elements contained in 
+             the System.Configuration.ConfigurationElementCollection.
+        
+            Returns: An array that contains the keys for all of the 
+             System.Configuration.ConfigurationElement objects contained in the 
+             System.Configuration.ConfigurationElementCollection.
         """
         pass
 
@@ -1796,7 +1975,9 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
         """
         BaseGetKey(self: ConfigurationElementCollection, index: int) -> object
         
-            Gets the key for the System.Configuration.ConfigurationElement at the specified index location.
+            Gets the key for the System.Configuration.ConfigurationElement at the specified 
+             index location.
+        
         
             index: The index location for the System.Configuration.ConfigurationElement.
             Returns: The key for the specified System.Configuration.ConfigurationElement.
@@ -1810,7 +1991,8 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
             The index of the specified System.Configuration.ConfigurationElement.
         
             element: The System.Configuration.ConfigurationElement for the specified index location.
-            Returns: The index of the specified System.Configuration.ConfigurationElement; otherwise, -1.
+            Returns: The index of the specified System.Configuration.ConfigurationElement; 
+             otherwise, -1.
         """
         pass
 
@@ -1818,10 +2000,14 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the System.Configuration.ConfigurationElementCollection.
+            Gets a value indicating whether the System.Configuration.ConfigurationElement 
+             with the specified key has been removed from the 
+             System.Configuration.ConfigurationElementCollection.
+        
         
             key: The key of the element to check.
-            Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; otherwise, false. The default is false.
+            Returns: true if the System.Configuration.ConfigurationElement with the specified key 
+             has been removed; otherwise, false. The default is false.
         """
         pass
 
@@ -1837,7 +2023,9 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
     def BaseRemoveAt(self, *args): #cannot find CLR method
         """
         BaseRemoveAt(self: ConfigurationElementCollection, index: int)
-            Removes the System.Configuration.ConfigurationElement at the specified index location.
+            Removes the System.Configuration.ConfigurationElement at the specified index 
+             location.
+        
         
             index: The index location of the System.Configuration.ConfigurationElement to remove.
         """
@@ -1855,7 +2043,9 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
         CreateNewElement(self: SettingElementCollection) -> ConfigurationElement
         CreateNewElement(self: ConfigurationElementCollection, elementName: str) -> ConfigurationElement
         
-            Creates a new System.Configuration.ConfigurationElement when overridden in a derived class.
+            Creates a new System.Configuration.ConfigurationElement when overridden in a 
+             derived class.
+        
         
             elementName: The name of the System.Configuration.ConfigurationElement to create.
             Returns: A new System.Configuration.ConfigurationElement.
@@ -1878,7 +2068,9 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
         
             Gets a System.Configuration.SettingElement object from the collection.
         
-            elementKey: A string value representing the System.Configuration.SettingElement object in the collection.
+            elementKey: A string value representing the System.Configuration.SettingElement object in 
+             the collection.
+        
             Returns: A System.Configuration.SettingElement object.
         """
         pass
@@ -1894,8 +2086,10 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
             Returns the transformed version of the specified assembly name.
         
             assemblyName: The name of the assembly.
-            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName parameter value is returned unchanged. The System.Configuration.Configuration.TypeStringTransformer property 
-             is null if no transformer is available.
+            Returns: The transformed version of the assembly name. If no transformer is available, 
+             the assemblyName parameter value is returned unchanged. The 
+             System.Configuration.Configuration.TypeStringTransformer property is null if no 
+             transformer is available.
         """
         pass
 
@@ -1906,8 +2100,10 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
             Returns the transformed version of the specified type name.
         
             typeName: The name of the type.
-            Returns: The transformed version of the specified type name. If no transformer is available, the typeName parameter value is returned unchanged. The System.Configuration.Configuration.TypeStringTransformer property 
-             is null if no transformer is available.
+            Returns: The transformed version of the specified type name. If no transformer is 
+             available, the typeName parameter value is returned unchanged. The 
+             System.Configuration.Configuration.TypeStringTransformer property is null if no 
+             transformer is available.
         """
         pass
 
@@ -1928,7 +2124,8 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
     def InitializeDefault(self, *args): #cannot find CLR method
         """
         InitializeDefault(self: ConfigurationElement)
-            Used to initialize a default set of values for the System.Configuration.ConfigurationElement object.
+            Used to initialize a default set of values for the 
+             System.Configuration.ConfigurationElement object.
         """
         pass
 
@@ -1936,10 +2133,13 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
         """
         IsElementName(self: ConfigurationElementCollection, elementName: str) -> bool
         
-            Indicates whether the specified System.Configuration.ConfigurationElement exists in the System.Configuration.ConfigurationElementCollection.
+            Indicates whether the specified System.Configuration.ConfigurationElement 
+             exists in the System.Configuration.ConfigurationElementCollection.
+        
         
             elementName: The name of the element to verify.
-            Returns: true if the element exists in the collection; otherwise, false. The default is false.
+            Returns: true if the element exists in the collection; otherwise, false. The default is 
+             false.
         """
         pass
 
@@ -1947,10 +2147,15 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
         """
         IsElementRemovable(self: ConfigurationElementCollection, element: ConfigurationElement) -> bool
         
-            Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be removed from the System.Configuration.ConfigurationElementCollection.
+            Gets a value indicating whether the specified 
+             System.Configuration.ConfigurationElement can be removed from the 
+             System.Configuration.ConfigurationElementCollection.
+        
         
             element: The element to check.
-            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default is true.
+            Returns: true if the specified System.Configuration.ConfigurationElement can be removed 
+             from this System.Configuration.ConfigurationElementCollection; otherwise, 
+             false. The default is true.
         """
         pass
 
@@ -1958,7 +2163,10 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
         """
         IsModified(self: ConfigurationElementCollection) -> bool
         
-            Indicates whether this System.Configuration.ConfigurationElementCollection has been modified since it was last saved or loaded when overridden in a derived class.
+            Indicates whether this System.Configuration.ConfigurationElementCollection has 
+             been modified since it was last saved or loaded when overridden in a derived 
+             class.
+        
             Returns: true if any contained element has been modified; otherwise, false
         """
         pass
@@ -1966,7 +2174,10 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
     def ListErrors(self, *args): #cannot find CLR method
         """
         ListErrors(self: ConfigurationElement, errorList: IList)
-            Adds the invalid-property errors in this System.Configuration.ConfigurationElement object, and in all subelements, to the passed list.
+            Adds the invalid-property errors in this 
+             System.Configuration.ConfigurationElement object, and in all subelements, to 
+             the passed list.
+        
         
             errorList: An object that implements the System.Collections.IList interface.
         """
@@ -1976,11 +2187,14 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
         """
         OnDeserializeUnrecognizedAttribute(self: ConfigurationElement, name: str, value: str) -> bool
         
-            Gets a value indicating whether an unknown attribute is encountered during deserialization.
+            Gets a value indicating whether an unknown attribute is encountered during 
+             deserialization.
+        
         
             name: The name of the unrecognized attribute.
             value: The value of the unrecognized attribute.
-            Returns: true when an unknown attribute is encountered while deserializing; otherwise, false.
+            Returns: true when an unknown attribute is encountered while deserializing; otherwise, 
+             false.
         """
         pass
 
@@ -1992,7 +2206,8 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
         
             elementName: The name of the unrecognized element.
             reader: An input stream that reads XML from the configuration file.
-            Returns: true if the unrecognized element was deserialized successfully; otherwise, false. The default is false.
+            Returns: true if the unrecognized element was deserialized successfully; otherwise, 
+             false. The default is false.
         """
         pass
 
@@ -2019,7 +2234,8 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
         PreSerialize(self: ConfigurationElement, writer: XmlWriter)
             Called before serialization.
         
-            writer: The System.Xml.XmlWriter that will be used to serialize the System.Configuration.ConfigurationElement.
+            writer: The System.Xml.XmlWriter that will be used to serialize the 
+             System.Configuration.ConfigurationElement.
         """
         pass
 
@@ -2035,16 +2251,21 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
     def Reset(self, *args): #cannot find CLR method
         """
         Reset(self: ConfigurationElementCollection, parentElement: ConfigurationElement)
-            Resets the System.Configuration.ConfigurationElementCollection to its unmodified state when overridden in a derived class.
+            Resets the System.Configuration.ConfigurationElementCollection to its 
+             unmodified state when overridden in a derived class.
         
-            parentElement: The System.Configuration.ConfigurationElement representing the collection parent element, if any; otherwise, null.
+        
+            parentElement: The System.Configuration.ConfigurationElement representing the collection 
+             parent element, if any; otherwise, null.
         """
         pass
 
     def ResetModified(self, *args): #cannot find CLR method
         """
         ResetModified(self: ConfigurationElementCollection)
-            Resets the value of the System.Configuration.ConfigurationElementCollection.IsModified property to false when overridden in a derived class.
+            Resets the value of the 
+             System.Configuration.ConfigurationElementCollection.IsModified property to 
+             false when overridden in a derived class.
         """
         pass
 
@@ -2052,11 +2273,14 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
         """
         SerializeElement(self: ConfigurationElementCollection, writer: XmlWriter, serializeCollectionKey: bool) -> bool
         
-            Writes the configuration data to an XML element in the configuration file when overridden in a derived class.
+            Writes the configuration data to an XML element in the configuration file when 
+             overridden in a derived class.
+        
         
             writer: Output stream that writes XML to the configuration file.
             serializeCollectionKey: true to serialize the collection key; otherwise, false.
-            Returns: true if the System.Configuration.ConfigurationElementCollection was written to the configuration file successfully.
+            Returns: true if the System.Configuration.ConfigurationElementCollection was written to 
+             the configuration file successfully.
         """
         pass
 
@@ -2064,7 +2288,9 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
         """
         SerializeToXmlElement(self: ConfigurationElement, writer: XmlWriter, elementName: str) -> bool
         
-            Writes the outer tags of this configuration element to the configuration file when implemented in a derived class.
+            Writes the outer tags of this configuration element to the configuration file 
+             when implemented in a derived class.
+        
         
             writer: The System.Xml.XmlWriter that writes to the configuration file.
             elementName: The name of the System.Configuration.ConfigurationElement to be written.
@@ -2086,7 +2312,9 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
     def SetReadOnly(self, *args): #cannot find CLR method
         """
         SetReadOnly(self: ConfigurationElementCollection)
-            Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly property for the System.Configuration.ConfigurationElementCollection object and for all sub-elements.
+            Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly 
+             property for the System.Configuration.ConfigurationElementCollection object and 
+             for all sub-elements.
         """
         pass
 
@@ -2097,11 +2325,18 @@ class SettingElementCollection(ConfigurationElementCollection, ICollection, IEnu
     def Unmerge(self, *args): #cannot find CLR method
         """
         Unmerge(self: ConfigurationElementCollection, sourceElement: ConfigurationElement, parentElement: ConfigurationElement, saveMode: ConfigurationSaveMode)
-            Reverses the effect of merging configuration information from different levels of the configuration hierarchy
+            Reverses the effect of merging configuration information from different levels 
+             of the configuration hierarchy
         
-            sourceElement: A System.Configuration.ConfigurationElement object at the current level containing a merged view of the properties.
-            parentElement: The parent System.Configuration.ConfigurationElement object of the current element, or null if this is the top level.
-            saveMode: A System.Configuration.ConfigurationSaveMode enumerated value that determines which property values to include.
+        
+            sourceElement: A System.Configuration.ConfigurationElement object at the current level 
+             containing a merged view of the properties.
+        
+            parentElement: The parent System.Configuration.ConfigurationElement object of the current 
+             element, or null if this is the top level.
+        
+            saveMode: A System.Configuration.ConfigurationSaveMode enumerated value that determines 
+             which property values to include.
         """
         pass
 
@@ -2187,7 +2422,9 @@ class SettingsAttributeDictionary(Hashtable, IDictionary, ICollection, IEnumerab
         """
         KeyEquals(self: Hashtable, item: object, key: object) -> bool
         
-            Compares a specific System.Object with a specific key in the System.Collections.Hashtable.
+            Compares a specific System.Object with a specific key in the 
+             System.Collections.Hashtable.
+        
         
             item: The System.Object to compare with key.
             key: The key in the System.Collections.Hashtable to compare with item.
@@ -2260,7 +2497,9 @@ class SettingsContext(Hashtable, IDictionary, ICollection, IEnumerable, ISeriali
         """
         KeyEquals(self: Hashtable, item: object, key: object) -> bool
         
-            Compares a specific System.Object with a specific key in the System.Collections.Hashtable.
+            Compares a specific System.Object with a specific key in the 
+             System.Collections.Hashtable.
+        
         
             item: The System.Object to compare with key.
             key: The key in the System.Collections.Hashtable to compare with item.
@@ -2410,7 +2649,9 @@ class SettingsLoadedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -2423,7 +2664,10 @@ class SettingsLoadedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -2449,10 +2693,14 @@ class SettingsLoadedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -2679,7 +2927,9 @@ class SettingsPropertyCollection(object, IEnumerable, ICloneable, ICollection):
     def OnAdd(self, *args): #cannot find CLR method
         """
         OnAdd(self: SettingsPropertyCollection, property: SettingsProperty)
-            Performs additional, custom processing when adding to the contents of the System.Configuration.SettingsPropertyCollection instance.
+            Performs additional, custom processing when adding to the contents of the 
+             System.Configuration.SettingsPropertyCollection instance.
+        
         
             property: A System.Configuration.SettingsProperty object.
         """
@@ -2688,7 +2938,9 @@ class SettingsPropertyCollection(object, IEnumerable, ICloneable, ICollection):
     def OnAddComplete(self, *args): #cannot find CLR method
         """
         OnAddComplete(self: SettingsPropertyCollection, property: SettingsProperty)
-            Performs additional, custom processing after adding to the contents of the System.Configuration.SettingsPropertyCollection instance.
+            Performs additional, custom processing after adding to the contents of the 
+             System.Configuration.SettingsPropertyCollection instance.
+        
         
             property: A System.Configuration.SettingsProperty object.
         """
@@ -2697,21 +2949,25 @@ class SettingsPropertyCollection(object, IEnumerable, ICloneable, ICollection):
     def OnClear(self, *args): #cannot find CLR method
         """
         OnClear(self: SettingsPropertyCollection)
-            Performs additional, custom processing when clearing the contents of the System.Configuration.SettingsPropertyCollection instance.
+            Performs additional, custom processing when clearing the contents of the 
+             System.Configuration.SettingsPropertyCollection instance.
         """
         pass
 
     def OnClearComplete(self, *args): #cannot find CLR method
         """
         OnClearComplete(self: SettingsPropertyCollection)
-            Performs additional, custom processing after clearing the contents of the System.Configuration.SettingsPropertyCollection instance.
+            Performs additional, custom processing after clearing the contents of the 
+             System.Configuration.SettingsPropertyCollection instance.
         """
         pass
 
     def OnRemove(self, *args): #cannot find CLR method
         """
         OnRemove(self: SettingsPropertyCollection, property: SettingsProperty)
-            Performs additional, custom processing when removing the contents of the System.Configuration.SettingsPropertyCollection instance.
+            Performs additional, custom processing when removing the contents of the 
+             System.Configuration.SettingsPropertyCollection instance.
+        
         
             property: A System.Configuration.SettingsProperty object.
         """
@@ -2720,7 +2976,9 @@ class SettingsPropertyCollection(object, IEnumerable, ICloneable, ICollection):
     def OnRemoveComplete(self, *args): #cannot find CLR method
         """
         OnRemoveComplete(self: SettingsPropertyCollection, property: SettingsProperty)
-            Performs additional, custom processing after removing the contents of the System.Configuration.SettingsPropertyCollection instance.
+            Performs additional, custom processing after removing the contents of the 
+             System.Configuration.SettingsPropertyCollection instance.
+        
         
             property: A System.Configuration.SettingsProperty object.
         """
@@ -2947,7 +3205,8 @@ class SettingsPropertyValueCollection(object, IEnumerable, ICloneable, ICollecti
     def Clear(self):
         """
         Clear(self: SettingsPropertyValueCollection)
-            Removes all System.Configuration.SettingsPropertyValue objects from the collection.
+            Removes all System.Configuration.SettingsPropertyValue objects from the 
+             collection.
         """
         pass
 
@@ -2963,7 +3222,9 @@ class SettingsPropertyValueCollection(object, IEnumerable, ICloneable, ICollecti
     def CopyTo(self, array, index):
         """
         CopyTo(self: SettingsPropertyValueCollection, array: Array, index: int)
-            Copies this System.Configuration.SettingsPropertyValueCollection collection to an array.
+            Copies this System.Configuration.SettingsPropertyValueCollection collection to 
+             an array.
+        
         
             array: The array to copy the collection to.
             index: The index at which to begin copying.
@@ -3153,7 +3414,9 @@ class SettingsSavingEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -3166,7 +3429,10 @@ class SettingsSavingEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -3192,10 +3458,14 @@ class SettingsSavingEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -3292,10 +3562,13 @@ class SettingValueElement(ConfigurationElement):
         """
         Equals(self: SettingValueElement, settingValue: object) -> bool
         
-            Compares the current System.Configuration.SettingValueElement instance to the specified object.
+            Compares the current System.Configuration.SettingValueElement instance to the 
+             specified object.
+        
         
             settingValue: The object to compare.
-            Returns: true if the System.Configuration.SettingValueElement instance is equal to the specified object; otherwise, false.
+            Returns: true if the System.Configuration.SettingValueElement instance is equal to the 
+             specified object; otherwise, false.
         """
         pass
 
@@ -3303,8 +3576,11 @@ class SettingValueElement(ConfigurationElement):
         """
         GetHashCode(self: SettingValueElement) -> int
         
-            Gets a unique value representing the System.Configuration.SettingValueElement current instance.
-            Returns: A unique value representing the System.Configuration.SettingValueElement current instance.
+            Gets a unique value representing the System.Configuration.SettingValueElement 
+             current instance.
+        
+            Returns: A unique value representing the System.Configuration.SettingValueElement 
+             current instance.
         """
         pass
 

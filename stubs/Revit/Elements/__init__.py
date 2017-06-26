@@ -2,7 +2,7 @@
 # module Revit.Elements calls itself Elements
 # from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -14,7 +14,8 @@ class Element(object, IDisposable, IGraphicItem, IFormattable):
         """
         Dispose(self: Element)
             Default implementation of dispose that removes the element from the
-                    document
+                   
+              document
         """
         pass
 
@@ -132,11 +133,7 @@ class Element(object, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __eq__(self, *args): #cannot find CLR method
@@ -144,10 +141,7 @@ class Element(object, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -291,18 +285,11 @@ class AbstractFamilyInstance(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -414,18 +401,11 @@ class AdaptiveComponent(AbstractFamilyInstance, IDisposable, IGraphicItem, IForm
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -624,18 +604,11 @@ class CurtainPanel(AbstractFamilyInstance, IDisposable, IGraphicItem, IFormattab
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -752,18 +725,11 @@ class CurveElement(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -818,7 +784,8 @@ class CurveByPoints(CurveElement, IDisposable, IGraphicItem, IFormattable):
         """
         ByReferencePoints(points: Array[ReferencePoint], isReferenceLine: bool) -> CurveByPoints
         
-            Construct a Revit CurveByPoints Element (a CurveElement) from a collection of ReferencePoint's
+            Construct a Revit CurveByPoints Element (a CurveElement) from a collection of 
+             ReferencePoint's
         """
         pass
 
@@ -848,18 +815,11 @@ class CurveByPoints(CurveElement, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -934,18 +894,11 @@ class DetailCurve(CurveElement, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -1007,18 +960,11 @@ class Dimension(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -1088,14 +1034,19 @@ class DirectShape(Element, IDisposable, IGraphicItem, IFormattable):
         """
         ByGeometry(geometry: Geometry, category: Category, material: Material, name: str) -> DirectShape
         
-            Create a Revit DirectShape given some geometry, a name for the shape, a Category, and Material.
-                    The geometry will be tessellated before being placed in the Revit model
-                    The 
-             category of a DirectShape cannot be changed after creation, so
-                    a new DirectShape will be generated if the category input is changed.
+            Create a Revit DirectShape given some geometry, a name for the shape, a 
+             Category, and Material.
+                    The geometry will be tessellated before 
+             being placed in the Revit model
+                    The category of a DirectShape 
+             cannot be changed after creation, so
+                    a new DirectShape will be 
+             generated if the category input is changed.
         
         
-            geometry: A Solid or Surface that will be tessellated and placed in the Revit model as a DirectShape
+            geometry: A Solid or Surface that will be tessellated and placed in the Revit model as a 
+             DirectShape
+        
             category: Must be a top level Built-in Category
             material: A Material to apply to the faces of the DirectShape
             name: A string name for the DirectShape
@@ -1108,11 +1059,14 @@ class DirectShape(Element, IDisposable, IGraphicItem, IFormattable):
         """
         ByMesh(mesh: Mesh, category: Category, material: Material, name: str) -> DirectShape
         
-            Create a Revit DirectShape given some geometry, a name for the shape, a Category, and Material.
-                    The geometry will be tessellated before being placed in the Revit model
-                    The 
-             category of a DirectShape cannot be changed after creation, so
-                    a new DirectShape will be generated if the category input is changed.
+            Create a Revit DirectShape given some geometry, a name for the shape, a 
+             Category, and Material.
+                    The geometry will be tessellated before 
+             being placed in the Revit model
+                    The category of a DirectShape 
+             cannot be changed after creation, so
+                    a new DirectShape will be 
+             generated if the category input is changed.
         
         
             mesh: A Mesh that will be tessellated and placed in the Revit model as a DirectShape
@@ -1139,18 +1093,11 @@ class DirectShape(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -1243,7 +1190,9 @@ class DividedPath(Element, IDisposable, IGraphicItem, IFormattable):
         """
         ByCurveAndDivisions(curve: Curve, divisions: int) -> DividedPath
         
-            Creates a Revit divided path on the given curve with specified amount of division
+            Creates a Revit divided path on the given curve with specified amount of 
+             division
+        
         ByCurveAndDivisions(element: Element, divisions: int) -> DividedPath
         ByCurveAndDivisions(element: ElementCurveReference, divisions: int) -> DividedPath
         """
@@ -1254,7 +1203,9 @@ class DividedPath(Element, IDisposable, IGraphicItem, IFormattable):
         """
         ByCurvesAndDivisions(curve: Array[Curve], divisions: int) -> DividedPath
         
-            Creates a Revit divided path on the given collection of curves with specified amount of division
+            Creates a Revit divided path on the given collection of curves with specified 
+             amount of division
+        
         ByCurvesAndDivisions(elements: Array[Element], divisions: int) -> DividedPath
         ByCurvesAndDivisions(curveReferences: Array[ElementCurveReference], divisions: int) -> DividedPath
         """
@@ -1268,18 +1219,11 @@ class DividedPath(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -1328,7 +1272,9 @@ class DividedSurface(Element, IDisposable, IGraphicItem, IFormattable):
         """
         ByFaceAndUVDivisions(elementFace: Surface, uDivs: int, vDivs: int) -> DividedSurface
         
-            Create a Revit DividedSurface on a face given the face and number of divisions in u and v directon
+            Create a Revit DividedSurface on a face given the face and number of divisions 
+             in u and v directon
+        
         ByFaceAndUVDivisions(elementFace: ElementFaceReference, uDivs: int, vDivs: int) -> DividedSurface
         """
         pass
@@ -1338,8 +1284,11 @@ class DividedSurface(Element, IDisposable, IGraphicItem, IFormattable):
         """
         ByFaceUVDivisionsAndRotation(surface: Surface, uDivs: int, vDivs: int, gridRotation: float) -> DividedSurface
         
-            Create a Revit DividedSurface on a face given the face and number of divisions in u and v directon
-                    and the rotation of the grid lines with respect to the natural UV parameterization of the face
+            Create a Revit DividedSurface on a face given the face and number of divisions 
+             in u and v directon
+                    and the rotation of the grid lines with 
+             respect to the natural UV parameterization of the face
+        
         ByFaceUVDivisionsAndRotation(faceReference: ElementFaceReference, uDivs: int, vDivs: int, gridRotation: float) -> DividedSurface
         """
         pass
@@ -1352,18 +1301,11 @@ class DividedSurface(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -1429,7 +1371,9 @@ class ElementSelector(object):
         ByElementId(elementId: int, isRevitOwned: bool) -> Element
         
             A factory method for looking up and obtaining elements
-                    from the revit project.
+                    from the 
+             revit project.
+        
         
             elementId: The id of the element to select
             isRevitOwned: Whether the returned object should be revit owned or not
@@ -1442,7 +1386,9 @@ class ElementSelector(object):
         ByUniqueId(uniqueId: str, isRevitOwned: bool) -> Element
         
             A factory method for looking up and obtaining elements
-                    from the revit project
+                    from the 
+             revit project
+        
         
             uniqueId: The unique id of the element to select
             isRevitOwned: Whether the returned object should be revit owned or not
@@ -1544,18 +1490,11 @@ class Family(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -1611,7 +1550,9 @@ class FamilyInstance(AbstractFamilyInstance, IDisposable, IGraphicItem, IFormatt
         """
         ByCoordinates(familyType: FamilyType, x: float, y: float, z: float) -> FamilyInstance
         
-            Place a Revit FamilyInstance given the FamilyType (also known as the FamilySymbol in the Revit API) and its coordinates in world space
+            Place a Revit FamilyInstance given the FamilyType (also known as the 
+             FamilySymbol in the Revit API) and its coordinates in world space
+        
         
             x: X coordinate in meters
             y: Y coordinate in meters
@@ -1624,12 +1565,16 @@ class FamilyInstance(AbstractFamilyInstance, IDisposable, IGraphicItem, IFormatt
         """
         ByFace(familyType: FamilyType, face: Surface, location: Point, referenceDirection: Vector) -> FamilyInstance
         
-            Place a Revit family instance given the FamilyType (also known as the FamilySymbol in the Revit API) 
-                    on a surface derived from a backing Revit face as reference, a reference direction and a 
-             point location where to place the family.
+            Place a Revit family instance given the FamilyType (also known as the 
+             FamilySymbol in the Revit API) 
+                    on a surface derived from a 
+             backing Revit face as reference, a reference direction and a point location 
+             where to place the family.
                     
-                    Note: The FamilyType should be workplane based and the input surface must be created from a Revit Face. The reference direction defines 
-             the rotation of the instance on the reference, and thus cannot be perpendicular to the face.
+                    Note: The FamilyType 
+             should be workplane based and the input surface must be created from a Revit 
+             Face. The reference direction defines the rotation of the instance on the 
+             reference, and thus cannot be perpendicular to the face.
         
         
             face: Surface geometry derived from a Revit face as reference element
@@ -1638,11 +1583,14 @@ class FamilyInstance(AbstractFamilyInstance, IDisposable, IGraphicItem, IFormatt
             Returns: FamilyInstance
         ByFace(familyType: FamilyType, face: Surface, line: Line) -> FamilyInstance
         
-            Place a Revit family instance of the given the FamilyType (also known as the FamilySymbol in the Revit API) 
-                    on a surface derived from a backing Revit face as reference and a line as reference 
-             for its position.
+            Place a Revit family instance of the given the FamilyType (also known as the 
+             FamilySymbol in the Revit API) 
+                    on a surface derived from a 
+             backing Revit face as reference and a line as reference for its position.
+             
                     
-                    Note: The FamilyPlacementType must be CurveBased and the input surface must be created from a Revit Face
+                    Note: The FamilyPlacementType must be CurveBased and the 
+             input surface must be created from a Revit Face
         
         
             face: Surface geometry derived from a Revit face as reference element
@@ -1656,7 +1604,8 @@ class FamilyInstance(AbstractFamilyInstance, IDisposable, IGraphicItem, IFormatt
         """
         ByFamilyType(familyType: FamilyType) -> Array[FamilyInstance]
         
-            Obtain a collection of FamilyInstances from the Revit Document and use them in the Dynamo graph
+            Obtain a collection of FamilyInstances from the Revit Document and use them in 
+             the Dynamo graph
         """
         pass
 
@@ -1665,7 +1614,8 @@ class FamilyInstance(AbstractFamilyInstance, IDisposable, IGraphicItem, IFormatt
         """
         ByPoint(familyType: FamilyType, point: Point) -> FamilyInstance
         
-            Place a Revit FamilyInstance given the FamilyType (also known as the FamilySymbol in the Revit API) and its coordinates in world space
+            Place a Revit FamilyInstance given the FamilyType (also known as the 
+             FamilySymbol in the Revit API) and its coordinates in world space
         """
         pass
 
@@ -1674,7 +1624,9 @@ class FamilyInstance(AbstractFamilyInstance, IDisposable, IGraphicItem, IFormatt
         """
         ByPointAndLevel(familyType: FamilyType, point: Point, level: Level) -> FamilyInstance
         
-            Place a Revit FamilyInstance given the FamilyType (also known as the FamilySymbol in the Revit API), it's coordinates in world space, and the Level
+            Place a Revit FamilyInstance given the FamilyType (also known as the 
+             FamilySymbol in the Revit API), it's coordinates in world space, and the Level
+        
         
             point: Point in meters
         """
@@ -1711,18 +1663,11 @@ class FamilyInstance(AbstractFamilyInstance, IDisposable, IGraphicItem, IFormatt
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -1828,8 +1773,11 @@ class FamilyType(Element, IDisposable, IGraphicItem, IFormattable):
         """
         ByName(name: str) -> FamilyType
         
-            Select a FamilyType given it's name.  This method will return the first FamilyType it finds if there are
-                    two or more FamilyTypes with the same name.
+            Select a FamilyType given it's name.  This method will return the first 
+             FamilyType it finds if there are
+                    two or more FamilyTypes with the 
+             same name.
+        
         
             name: The name of the FamilyType
         """
@@ -1847,18 +1795,11 @@ class FamilyType(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -1922,18 +1863,11 @@ class FilledRegion(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -1987,18 +1921,11 @@ class FilledRegionType(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -2078,18 +2005,11 @@ class Floor(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -2147,18 +2067,11 @@ class FloorType(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -2226,18 +2139,11 @@ class Form(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -2282,18 +2188,11 @@ class FreeForm(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -2365,18 +2264,11 @@ class Grid(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -2432,8 +2324,11 @@ class ImportInstance(Element, IDisposable, IGraphicItem, IFormattable):
         """
         ByGeometries(geometries: Array[Geometry]) -> ImportInstance
         
-            Import a collection of Geometry (Solid, Curve, Surface, etc) into Revit as an ImportInstance.  This variant is much faster than
-                    ImportInstance.ByGeometry as it uses a batch method.
+            Import a collection of Geometry (Solid, Curve, Surface, etc) into Revit as an 
+             ImportInstance.  This variant is much faster than
+                    
+             ImportInstance.ByGeometry as it uses a batch method.
+        
         
             geometries: A collection of Geometry
         """
@@ -2444,7 +2339,9 @@ class ImportInstance(Element, IDisposable, IGraphicItem, IFormattable):
         """
         ByGeometry(geometry: Geometry) -> ImportInstance
         
-            Import a collection of Geometry (Solid, Curve, Surface, etc) into Revit as an ImportInstance.
+            Import a collection of Geometry (Solid, Curve, Surface, etc) into Revit as an 
+             ImportInstance.
+        
         
             geometry: A single piece of geometry
         """
@@ -2469,18 +2366,11 @@ class ImportInstance(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -2528,7 +2418,8 @@ class Level(Element, IDisposable, IGraphicItem, IFormattable):
         ByElevation(elevation: float) -> Level
         
             Create a Revit Level given it's elevation.  The name will be whatever
-                    Revit gives it.
+                 
+                Revit gives it.
         """
         pass
 
@@ -2556,7 +2447,8 @@ class Level(Element, IDisposable, IGraphicItem, IFormattable):
         ByLevelOffsetAndName(level: Level, offset: float, name: str) -> Level
         
             Create a Revit Level given a distance offset from an existing 
-                    level and a name for the new level
+                    
+             level and a name for the new level
         """
         pass
 
@@ -2572,18 +2464,11 @@ class Level(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -2692,18 +2577,11 @@ class Material(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -2875,18 +2753,11 @@ class ModelCurve(CurveElement, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -2921,9 +2792,10 @@ class ModelText(Element, IDisposable, IGraphicItem, IFormattable):
         """
         ByTextSketchPlaneAndPosition(text: str, sketchPlane: SketchPlane, xCoordinateInPlane: float, yCoordinateInPlane: float, textDepth: float, modelTextType: ModelTextType) -> ModelText
         
-            Create a ModelText Element in the Family Document by providing the text, SketchPlane Element host, coordinates (within the plane of the SketchPlane),
-                    the depth of the text, and the text type 
-             name
+            Create a ModelText Element in the Family Document by providing the text, 
+             SketchPlane Element host, coordinates (within the plane of the SketchPlane),
+          
+                       the depth of the text, and the text type name
         """
         pass
 
@@ -2935,18 +2807,11 @@ class ModelText(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -3021,18 +2886,11 @@ class ModelTextType(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -3121,18 +2979,11 @@ class Mullion(AbstractFamilyInstance, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -3183,7 +3034,9 @@ class Parameter(object):
     def CreateProjectParameterForAllCategories(parameterName, groupName, type, group, instance):
         """
         CreateProjectParameterForAllCategories(parameterName: str, groupName: str, type: str, group: str, instance: bool)
-            Create a new Project Parameter in this current Revit document for all applicable categories
+            Create a new Project Parameter in this current Revit document for all 
+             applicable categories
+        
         
             parameterName: Name
             groupName: Group of the parameter for shared parameters
@@ -3202,7 +3055,9 @@ class Parameter(object):
     def CreateSharedParameterForAllCategories(parameterName, groupName, type, group, instance):
         """
         CreateSharedParameterForAllCategories(parameterName: str, groupName: str, type: str, group: str, instance: bool)
-            Create a new Shared Parameter in the current Revit document for all applicable categories
+            Create a new Shared Parameter in the current Revit document for all applicable 
+             categories
+        
         
             parameterName: Name
             groupName: Group of the parameter for shared parameters
@@ -3362,18 +3217,11 @@ class PlanView(View, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -3415,7 +3263,9 @@ class ReferencePlane(Element, IDisposable, IGraphicItem, IFormattable):
         """
         ByLine(line: Line) -> ReferencePlane
         
-            Form a ReferencePlane from a line in the Active view.  The cut vector is the Z Axis.
+            Form a ReferencePlane from a line in the Active view.  The cut vector is the Z 
+             Axis.
+        
         
             line: The line where the bubble wil be located at the start
         """
@@ -3426,7 +3276,9 @@ class ReferencePlane(Element, IDisposable, IGraphicItem, IFormattable):
         """
         ByStartPointEndPoint(start: Point, end: Point) -> ReferencePlane
         
-            Form a Refernece plane from two end points in the Active view.  The cut vector is the Z Axis.
+            Form a Refernece plane from two end points in the Active view.  The cut vector 
+             is the Z Axis.
+        
         
             start: The location where the bubble will be located
             end: The other end
@@ -3441,18 +3293,11 @@ class ReferencePlane(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -3528,7 +3373,8 @@ class ReferencePoint(Element, IDisposable, IGraphicItem, IFormattable):
         """
         ByParameterOnCurveReference(elementCurveReference: object, parameter: float) -> ReferencePoint
         
-            Create a Reference Point at a parameter on an Curve.  This introduces a persistent relationship between
+            Create a Reference Point at a parameter on an Curve.  This introduces a 
+             persistent relationship between
                     Elements in the Revit document.
         """
         pass
@@ -3538,7 +3384,8 @@ class ReferencePoint(Element, IDisposable, IGraphicItem, IFormattable):
         """
         ByParametersOnFaceReference(elementFaceReference: object, u: float, v: float) -> ReferencePoint
         
-            Create a Reference Point by UV coordinates on a Face. This introduces a persistent relationship between
+            Create a Reference Point by UV coordinates on a Face. This introduces a 
+             persistent relationship between
                     Elements in the Revit document.
         """
         pass
@@ -3576,18 +3423,11 @@ class ReferencePoint(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -3738,18 +3578,11 @@ class Revision(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -3827,18 +3660,11 @@ class RevisionCloud(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -3937,18 +3763,11 @@ class Room(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -4065,18 +3884,11 @@ class SketchPlane(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -4162,7 +3974,9 @@ class StructuralFraming(AbstractFamilyInstance, IDisposable, IGraphicItem, IForm
         
             curve: The curve path for the structural member
             level: The level on which the member should appear
-            upVector: The up vector for the element - this is required to determine the orientation of the element
+            upVector: The up vector for the element - this is required to determine the orientation 
+             of the element
+        
             structuralType: The type of the structural element - a beam, column, etc
             structuralFramingType: The structural framing type representing the structural type
         """
@@ -4197,18 +4011,11 @@ class StructuralFraming(AbstractFamilyInstance, IDisposable, IGraphicItem, IForm
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -4312,18 +4119,11 @@ class SunSettings(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -4415,18 +4215,11 @@ class TextElement(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -4477,7 +4270,8 @@ class Tag(TextElement, IDisposable, IGraphicItem, IFormattable):
             horizontalAlignment: Horizontal Alignment
             verticalAlignment: Vertical Alignment
             offset: Offset Vector or Tag Location
-            isOffset: Specifies if the point is being used as an offset vector or if it specifies the tags location
+            isOffset: Specifies if the point is being used as an offset vector or if it specifies the 
+             tags location
         """
         pass
 
@@ -4489,18 +4283,11 @@ class Tag(TextElement, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -4590,18 +4377,11 @@ class TextNote(TextElement, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -4692,18 +4472,11 @@ class TextNoteType(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -4757,18 +4530,11 @@ class Topography(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -4832,18 +4598,11 @@ class UnknownElement(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -4904,18 +4663,11 @@ class Wall(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method
@@ -4973,18 +4725,11 @@ class WallType(Element, IDisposable, IGraphicItem, IFormattable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __format__(self, *args): #cannot find CLR method

@@ -2,7 +2,7 @@
 # module System.Net.Security calls itself Security
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -21,9 +21,13 @@ class AuthenticatedStream(Stream,IDisposable):
  def Dispose(self):
   """
   Dispose(self: AuthenticatedStream,disposing: bool)
-   Releases the unmanaged resources used by the System.Net.Security.AuthenticatedStream and optionally releases the managed resources.
+   Releases the unmanaged resources used by the 
+    System.Net.Security.AuthenticatedStream and optionally releases the managed 
+    resources.
   
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+  
+   disposing: true to release both managed and unmanaged resources; false to release only 
+    unmanaged resources.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -32,8 +36,11 @@ class AuthenticatedStream(Stream,IDisposable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-    usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
+    will cause the object to be assigned a new identity when it is marshaled across 
+    a remoting boundary. A value of false is usually appropriate. true to copy the 
+    current System.MarshalByRefObject object's identity to its clone,which will 
+    cause remoting client calls to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -49,17 +56,10 @@ class AuthenticatedStream(Stream,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -200,7 +200,9 @@ class LocalCertificateSelectionCallback(MulticastDelegate,ICloneable,ISerializab
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+    delegate.
+  
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -212,7 +214,10 @@ class LocalCertificateSelectionCallback(MulticastDelegate,ICloneable,ISerializab
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by 
+    the current delegate.-or- null,if the method represented by the current 
+    delegate does not require arguments.
+  
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -234,10 +239,14 @@ class LocalCertificateSelectionCallback(MulticastDelegate,ICloneable,ISerializab
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate 
+    that is equal to the specified delegate.
+  
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new 
+    System.Delegate without value in its invocation list; otherwise,this instance 
+    with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -260,33 +269,74 @@ class NegotiateStream(AuthenticatedStream,IDisposable):
  def AuthenticateAsClient(self,credential=None,*__args):
   """
   AuthenticateAsClient(self: NegotiateStream,credential: NetworkCredential,targetName: str,requiredProtectionLevel: ProtectionLevel,allowedImpersonationLevel: TokenImpersonationLevel)
-   Called by clients to authenticate the client,and optionally the server,in a client-server connection. The authentication process uses the specified credentials and authentication options.
+   Called by clients to authenticate the client,and optionally the server,in a 
+    client-server connection. The authentication process uses the specified 
+    credentials and authentication options.
   
-   credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
-   targetName: The Service Principal Name (SPN) that uniquely identifies the server to authenticate.
-   requiredProtectionLevel: One of the System.Net.Security.ProtectionLevel values,indicating the security services for the stream.
-   allowedImpersonationLevel: One of the System.Security.Principal.TokenImpersonationLevel values,indicating how the server can use the client's credentials to access resources.
+  
+   credential: The System.Net.NetworkCredential that is used to establish the identity of the 
+    client.
+  
+   targetName: The Service Principal Name (SPN) that uniquely identifies the server to 
+    authenticate.
+  
+   requiredProtectionLevel: One of the System.Net.Security.ProtectionLevel values,indicating the security 
+    services for the stream.
+  
+   allowedImpersonationLevel: One of the System.Security.Principal.TokenImpersonationLevel values,indicating 
+    how the server can use the client's credentials to access resources.
+  
   AuthenticateAsClient(self: NegotiateStream,credential: NetworkCredential,binding: ChannelBinding,targetName: str,requiredProtectionLevel: ProtectionLevel,allowedImpersonationLevel: TokenImpersonationLevel)
-   Called by clients to authenticate the client,and optionally the server,in a client-server connection. The authentication process uses the specified credential,authentication options,and channel binding.
+   Called by clients to authenticate the client,and optionally the server,in a 
+    client-server connection. The authentication process uses the specified 
+    credential,authentication options,and channel binding.
   
-   credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
-   binding: The System.Security.Authentication.ExtendedProtection.ChannelBinding that is used for extended protection.
-   targetName: The Service Principal Name (SPN) that uniquely identifies the server to authenticate.
-   requiredProtectionLevel: One of the System.Net.Security.ProtectionLevel values,indicating the security services for the stream.
-   allowedImpersonationLevel: One of the System.Security.Principal.TokenImpersonationLevel values,indicating how the server can use the client's credentials to access resources.
+  
+   credential: The System.Net.NetworkCredential that is used to establish the identity of the 
+    client.
+  
+   binding: The System.Security.Authentication.ExtendedProtection.ChannelBinding that is 
+    used for extended protection.
+  
+   targetName: The Service Principal Name (SPN) that uniquely identifies the server to 
+    authenticate.
+  
+   requiredProtectionLevel: One of the System.Net.Security.ProtectionLevel values,indicating the security 
+    services for the stream.
+  
+   allowedImpersonationLevel: One of the System.Security.Principal.TokenImpersonationLevel values,indicating 
+    how the server can use the client's credentials to access resources.
+  
   AuthenticateAsClient(self: NegotiateStream,credential: NetworkCredential,binding: ChannelBinding,targetName: str)
-   Called by clients to authenticate the client,and optionally the server,in a client-server connection. The authentication process uses the specified client credential and the channel binding.
+   Called by clients to authenticate the client,and optionally the server,in a 
+    client-server connection. The authentication process uses the specified client 
+    credential and the channel binding.
   
-   credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
-   binding: The System.Security.Authentication.ExtendedProtection.ChannelBinding that is used for extended protection.
-   targetName: The Service Principal Name (SPN) that uniquely identifies the server to authenticate.
+  
+   credential: The System.Net.NetworkCredential that is used to establish the identity of the 
+    client.
+  
+   binding: The System.Security.Authentication.ExtendedProtection.ChannelBinding that is 
+    used for extended protection.
+  
+   targetName: The Service Principal Name (SPN) that uniquely identifies the server to 
+    authenticate.
+  
   AuthenticateAsClient(self: NegotiateStream)
-   Called by clients to authenticate the client,and optionally the server,in a client-server connection.
-  AuthenticateAsClient(self: NegotiateStream,credential: NetworkCredential,targetName: str)
-   Called by clients to authenticate the client,and optionally the server,in a client-server connection. The authentication process uses the specified client credential.
+   Called by clients to authenticate the client,and optionally the server,in a 
+    client-server connection.
   
-   credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
-   targetName: The Service Principal Name (SPN) that uniquely identifies the server to authenticate.
+  AuthenticateAsClient(self: NegotiateStream,credential: NetworkCredential,targetName: str)
+   Called by clients to authenticate the client,and optionally the server,in a 
+    client-server connection. The authentication process uses the specified client 
+    credential.
+  
+  
+   credential: The System.Net.NetworkCredential that is used to establish the identity of the 
+    client.
+  
+   targetName: The Service Principal Name (SPN) that uniquely identifies the server to 
+    authenticate.
   """
   pass
  def AuthenticateAsClientAsync(self,credential=None,*__args):
@@ -301,26 +351,50 @@ class NegotiateStream(AuthenticatedStream,IDisposable):
  def AuthenticateAsServer(self,*__args):
   """
   AuthenticateAsServer(self: NegotiateStream,credential: NetworkCredential,requiredProtectionLevel: ProtectionLevel,requiredImpersonationLevel: TokenImpersonationLevel)
-   Called by servers to authenticate the client,and optionally the server,in a client-server connection. The authentication process uses the specified server credentials and authentication options.
+   Called by servers to authenticate the client,and optionally the server,in a 
+    client-server connection. The authentication process uses the specified server 
+    credentials and authentication options.
   
-   credential: The System.Net.NetworkCredential that is used to establish the identity of the server.
-   requiredProtectionLevel: One of the System.Net.Security.ProtectionLevel values,indicating the security services for the stream.
-   requiredImpersonationLevel: One of the System.Security.Principal.TokenImpersonationLevel values,indicating how the server can use the client's credentials to access resources.
+  
+   credential: The System.Net.NetworkCredential that is used to establish the identity of the 
+    server.
+  
+   requiredProtectionLevel: One of the System.Net.Security.ProtectionLevel values,indicating the security 
+    services for the stream.
+  
+   requiredImpersonationLevel: One of the System.Security.Principal.TokenImpersonationLevel values,indicating 
+    how the server can use the client's credentials to access resources.
+  
   AuthenticateAsServer(self: NegotiateStream,credential: NetworkCredential,policy: ExtendedProtectionPolicy,requiredProtectionLevel: ProtectionLevel,requiredImpersonationLevel: TokenImpersonationLevel)
-   Called by servers to authenticate the client,and optionally the server,in a client-server connection. The authentication process uses the specified server credentials,authentication options,and 
+   Called by servers to authenticate the client,and optionally the server,in a 
+    client-server connection. The authentication process uses the specified server 
+    credentials,authentication options,and extended protection policy.
+  
+  
+   credential: The System.Net.NetworkCredential that is used to establish the identity of the 
+    client.
+  
+   policy: The System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy 
+    that is used for extended protection.
+  
+   requiredProtectionLevel: One of the System.Net.Security.ProtectionLevel values,indicating the security 
+    services for the stream.
+  
+   requiredImpersonationLevel: One of the System.Security.Principal.TokenImpersonationLevel values,indicating 
+    how the server can use the client's credentials to access resources.
+  
+  AuthenticateAsServer(self: NegotiateStream)
+   Called by servers to authenticate the client,and optionally the server,in a 
+    client-server connection.
+  
+  AuthenticateAsServer(self: NegotiateStream,policy: ExtendedProtectionPolicy)
+   Called by servers to authenticate the client,and optionally the server,in a 
+    client-server connection. The authentication process uses the specified 
     extended protection policy.
   
   
-   credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
-   policy: The System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy that is used for extended protection.
-   requiredProtectionLevel: One of the System.Net.Security.ProtectionLevel values,indicating the security services for the stream.
-   requiredImpersonationLevel: One of the System.Security.Principal.TokenImpersonationLevel values,indicating how the server can use the client's credentials to access resources.
-  AuthenticateAsServer(self: NegotiateStream)
-   Called by servers to authenticate the client,and optionally the server,in a client-server connection.
-  AuthenticateAsServer(self: NegotiateStream,policy: ExtendedProtectionPolicy)
-   Called by servers to authenticate the client,and optionally the server,in a client-server connection. The authentication process uses the specified extended protection policy.
-  
-   policy: The System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy that is used for extended protection.
+   policy: The System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy 
+    that is used for extended protection.
   """
   pass
  def AuthenticateAsServerAsync(self,*__args):
@@ -335,135 +409,269 @@ class NegotiateStream(AuthenticatedStream,IDisposable):
   """
   BeginAuthenticateAsClient(self: NegotiateStream,credential: NetworkCredential,targetName: str,requiredProtectionLevel: ProtectionLevel,allowedImpersonationLevel: TokenImpersonationLevel,asyncCallback: AsyncCallback,asyncState: object) -> IAsyncResult
   
-   Called by clients to begin an asynchronous operation to authenticate the client,and optionally the server,in a client-server connection. The authentication process uses the specified credentials and 
-    authentication options. This method does not block.
+   Called by clients to begin an asynchronous operation to authenticate the 
+    client,and optionally the server,in a client-server connection. The 
+    authentication process uses the specified credentials and authentication 
+    options. This method does not block.
   
   
-   credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
-   targetName: The Service Principal Name (SPN) that uniquely identifies the server to authenticate.
-   requiredProtectionLevel: One of the System.Net.Security.ProtectionLevel values,indicating the security services for the stream.
-   allowedImpersonationLevel: One of the System.Security.Principal.TokenImpersonationLevel values,indicating how the server can use the client's credentials to access resources.
-   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the authentication is complete.
-   asyncState: A user-defined object containing information about the write operation. This object is passed to the asyncCallback delegate when the operation completes.
-   Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
+   credential: The System.Net.NetworkCredential that is used to establish the identity of the 
+    client.
+  
+   targetName: The Service Principal Name (SPN) that uniquely identifies the server to 
+    authenticate.
+  
+   requiredProtectionLevel: One of the System.Net.Security.ProtectionLevel values,indicating the security 
+    services for the stream.
+  
+   allowedImpersonationLevel: One of the System.Security.Principal.TokenImpersonationLevel values,indicating 
+    how the server can use the client's credentials to access resources.
+  
+   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    authentication is complete.
+  
+   asyncState: A user-defined object containing information about the write operation. This 
+    object is passed to the asyncCallback delegate when the operation completes.
+  
+   Returns: An System.IAsyncResult object indicating the status of the asynchronous 
+    operation.
+  
   BeginAuthenticateAsClient(self: NegotiateStream,credential: NetworkCredential,binding: ChannelBinding,targetName: str,requiredProtectionLevel: ProtectionLevel,allowedImpersonationLevel: TokenImpersonationLevel,asyncCallback: AsyncCallback,asyncState: object) -> IAsyncResult
   
-   Called by clients to begin an asynchronous operation to authenticate the client,and optionally the server,in a client-server connection. The authentication process uses the specified credentials,
-    authentication options,and channel binding. This method does not block.
+   Called by clients to begin an asynchronous operation to authenticate the 
+    client,and optionally the server,in a client-server connection. The 
+    authentication process uses the specified credentials,authentication options,
+    and channel binding. This method does not block.
   
   
-   credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
-   binding: The System.Security.Authentication.ExtendedProtection.ChannelBinding that is used for extended protection.
-   targetName: The Service Principal Name (SPN) that uniquely identifies the server to authenticate.
-   requiredProtectionLevel: One of the System.Net.Security.ProtectionLevel values,indicating the security services for the stream.
-   allowedImpersonationLevel: One of the System.Security.Principal.TokenImpersonationLevel values,indicating how the server can use the client's credentials to access resources.
-   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the authentication is complete.
-   asyncState: A user-defined object containing information about the write operation. This object is passed to the asyncCallback delegate when the operation completes.
-   Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
+   credential: The System.Net.NetworkCredential that is used to establish the identity of the 
+    client.
+  
+   binding: The System.Security.Authentication.ExtendedProtection.ChannelBinding that is 
+    used for extended protection.
+  
+   targetName: The Service Principal Name (SPN) that uniquely identifies the server to 
+    authenticate.
+  
+   requiredProtectionLevel: One of the System.Net.Security.ProtectionLevel values,indicating the security 
+    services for the stream.
+  
+   allowedImpersonationLevel: One of the System.Security.Principal.TokenImpersonationLevel values,indicating 
+    how the server can use the client's credentials to access resources.
+  
+   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    authentication is complete.
+  
+   asyncState: A user-defined object containing information about the write operation. This 
+    object is passed to the asyncCallback delegate when the operation completes.
+  
+   Returns: An System.IAsyncResult object indicating the status of the asynchronous 
+    operation.
+  
   BeginAuthenticateAsClient(self: NegotiateStream,credential: NetworkCredential,binding: ChannelBinding,targetName: str,asyncCallback: AsyncCallback,asyncState: object) -> IAsyncResult
   
-   Called by clients to begin an asynchronous operation to authenticate the client,and optionally the server,in a client-server connection. The authentication process uses the specified credentials and 
-    channel binding. This method does not block.
-  
-  
-   credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
-   binding: The System.Security.Authentication.ExtendedProtection.ChannelBinding that is used for extended protection.
-   targetName: The Service Principal Name (SPN) that uniquely identifies the server to authenticate.
-   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the authentication is complete.
-   asyncState: A user-defined object containing information about the write operation. This object is passed to the asyncCallback delegate when the operation completes.
-   Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
-  BeginAuthenticateAsClient(self: NegotiateStream,asyncCallback: AsyncCallback,asyncState: object) -> IAsyncResult
-  
-   Called by clients to begin an asynchronous operation to authenticate the client,and optionally the server,in a client-server connection. This method does not block.
-  
-   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the authentication is complete.
-   asyncState: A user-defined object containing information about the operation. This object is passed to the asyncCallback delegate when the operation completes.
-   Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
-  BeginAuthenticateAsClient(self: NegotiateStream,credential: NetworkCredential,targetName: str,asyncCallback: AsyncCallback,asyncState: object) -> IAsyncResult
-  
-   Called by clients to begin an asynchronous operation to authenticate the client,and optionally the server,in a client-server connection. The authentication process uses the specified credentials. This 
+   Called by clients to begin an asynchronous operation to authenticate the 
+    client,and optionally the server,in a client-server connection. The 
+    authentication process uses the specified credentials and channel binding. This 
     method does not block.
   
   
-   credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
-   targetName: The Service Principal Name (SPN) that uniquely identifies the server to authenticate.
-   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the authentication is complete.
-   asyncState: A user-defined object containing information about the write operation. This object is passed to the asyncCallback delegate when the operation completes.
-   Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
+   credential: The System.Net.NetworkCredential that is used to establish the identity of the 
+    client.
+  
+   binding: The System.Security.Authentication.ExtendedProtection.ChannelBinding that is 
+    used for extended protection.
+  
+   targetName: The Service Principal Name (SPN) that uniquely identifies the server to 
+    authenticate.
+  
+   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    authentication is complete.
+  
+   asyncState: A user-defined object containing information about the write operation. This 
+    object is passed to the asyncCallback delegate when the operation completes.
+  
+   Returns: An System.IAsyncResult object indicating the status of the asynchronous 
+    operation.
+  
+  BeginAuthenticateAsClient(self: NegotiateStream,asyncCallback: AsyncCallback,asyncState: object) -> IAsyncResult
+  
+   Called by clients to begin an asynchronous operation to authenticate the 
+    client,and optionally the server,in a client-server connection. This method 
+    does not block.
+  
+  
+   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    authentication is complete.
+  
+   asyncState: A user-defined object containing information about the operation. This object 
+    is passed to the asyncCallback delegate when the operation completes.
+  
+   Returns: An System.IAsyncResult object indicating the status of the asynchronous 
+    operation.
+  
+  BeginAuthenticateAsClient(self: NegotiateStream,credential: NetworkCredential,targetName: str,asyncCallback: AsyncCallback,asyncState: object) -> IAsyncResult
+  
+   Called by clients to begin an asynchronous operation to authenticate the 
+    client,and optionally the server,in a client-server connection. The 
+    authentication process uses the specified credentials. This method does not 
+    block.
+  
+  
+   credential: The System.Net.NetworkCredential that is used to establish the identity of the 
+    client.
+  
+   targetName: The Service Principal Name (SPN) that uniquely identifies the server to 
+    authenticate.
+  
+   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    authentication is complete.
+  
+   asyncState: A user-defined object containing information about the write operation. This 
+    object is passed to the asyncCallback delegate when the operation completes.
+  
+   Returns: An System.IAsyncResult object indicating the status of the asynchronous 
+    operation.
   """
   pass
  def BeginAuthenticateAsServer(self,*__args):
   """
   BeginAuthenticateAsServer(self: NegotiateStream,credential: NetworkCredential,requiredProtectionLevel: ProtectionLevel,requiredImpersonationLevel: TokenImpersonationLevel,asyncCallback: AsyncCallback,asyncState: object) -> IAsyncResult
   
-   Called by servers to begin an asynchronous operation to authenticate the client,and optionally the server,in a client-server connection. The authentication process uses the specified server credentials 
-    and authentication options. This method does not block.
+   Called by servers to begin an asynchronous operation to authenticate the 
+    client,and optionally the server,in a client-server connection. The 
+    authentication process uses the specified server credentials and authentication 
+    options. This method does not block.
   
   
-   credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
-   requiredProtectionLevel: One of the System.Net.Security.ProtectionLevel values,indicating the security services for the stream.
-   requiredImpersonationLevel: One of the System.Security.Principal.TokenImpersonationLevel values,indicating how the server can use the client's credentials to access resources.
-   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the authentication is complete.
-   asyncState: A user-defined object containing information about the operation. This object is passed to the asyncCallback delegate when the operation completes.
-   Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
+   credential: The System.Net.NetworkCredential that is used to establish the identity of the 
+    client.
+  
+   requiredProtectionLevel: One of the System.Net.Security.ProtectionLevel values,indicating the security 
+    services for the stream.
+  
+   requiredImpersonationLevel: One of the System.Security.Principal.TokenImpersonationLevel values,indicating 
+    how the server can use the client's credentials to access resources.
+  
+   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    authentication is complete.
+  
+   asyncState: A user-defined object containing information about the operation. This object 
+    is passed to the asyncCallback delegate when the operation completes.
+  
+   Returns: An System.IAsyncResult object indicating the status of the asynchronous 
+    operation.
+  
   BeginAuthenticateAsServer(self: NegotiateStream,credential: NetworkCredential,policy: ExtendedProtectionPolicy,requiredProtectionLevel: ProtectionLevel,requiredImpersonationLevel: TokenImpersonationLevel,asyncCallback: AsyncCallback,asyncState: object) -> IAsyncResult
   
-   Called by servers to begin an asynchronous operation to authenticate the client,and optionally the server,in a client-server connection. The authentication process uses the specified server credentials,
-    authentication options,and extended protection policy. This method does not block.
+   Called by servers to begin an asynchronous operation to authenticate the 
+    client,and optionally the server,in a client-server connection. The 
+    authentication process uses the specified server credentials,authentication 
+    options,and extended protection policy. This method does not block.
   
   
-   credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
-   policy: The System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy that is used for extended protection.
-   requiredProtectionLevel: One of the System.Net.Security.ProtectionLevel values,indicating the security services for the stream.
-   requiredImpersonationLevel: One of the System.Security.Principal.TokenImpersonationLevel values,indicating how the server can use the client's credentials to access resources.
-   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the authentication is complete.
-   asyncState: A user-defined object containing information about the write operation. This object is passed to the asyncCallback delegate when the operation completes.
-   Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
+   credential: The System.Net.NetworkCredential that is used to establish the identity of the 
+    client.
+  
+   policy: The System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy 
+    that is used for extended protection.
+  
+   requiredProtectionLevel: One of the System.Net.Security.ProtectionLevel values,indicating the security 
+    services for the stream.
+  
+   requiredImpersonationLevel: One of the System.Security.Principal.TokenImpersonationLevel values,indicating 
+    how the server can use the client's credentials to access resources.
+  
+   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    authentication is complete.
+  
+   asyncState: A user-defined object containing information about the write operation. This 
+    object is passed to the asyncCallback delegate when the operation completes.
+  
+   Returns: An System.IAsyncResult object indicating the status of the asynchronous 
+    operation.
+  
   BeginAuthenticateAsServer(self: NegotiateStream,asyncCallback: AsyncCallback,asyncState: object) -> IAsyncResult
   
-   Called by servers to begin an asynchronous operation to authenticate the client,and optionally the server,in a client-server connection. This method does not block.
+   Called by servers to begin an asynchronous operation to authenticate the 
+    client,and optionally the server,in a client-server connection. This method 
+    does not block.
   
-   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the authentication is complete.
-   asyncState: A user-defined object containing information about the operation. This object is passed to the asyncCallback delegate when the operation completes.
-   Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
+  
+   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    authentication is complete.
+  
+   asyncState: A user-defined object containing information about the operation. This object 
+    is passed to the asyncCallback delegate when the operation completes.
+  
+   Returns: An System.IAsyncResult object indicating the status of the asynchronous 
+    operation.
+  
   BeginAuthenticateAsServer(self: NegotiateStream,policy: ExtendedProtectionPolicy,asyncCallback: AsyncCallback,asyncState: object) -> IAsyncResult
   
-   Called by servers to begin an asynchronous operation to authenticate the client,and optionally the server,in a client-server connection. The authentication process uses the specified extended protection 
-    policy. This method does not block.
+   Called by servers to begin an asynchronous operation to authenticate the 
+    client,and optionally the server,in a client-server connection. The 
+    authentication process uses the specified extended protection policy. This 
+    method does not block.
   
   
-   policy: The System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy that is used for extended protection.
-   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the authentication is complete.
-   asyncState: A user-defined object containing information about the write operation. This object is passed to the asyncCallback delegate when the operation completes.
-   Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
+   policy: The System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy 
+    that is used for extended protection.
+  
+   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    authentication is complete.
+  
+   asyncState: A user-defined object containing information about the write operation. This 
+    object is passed to the asyncCallback delegate when the operation completes.
+  
+   Returns: An System.IAsyncResult object indicating the status of the asynchronous 
+    operation.
   """
   pass
  def BeginRead(self,buffer,offset,count,asyncCallback,asyncState):
   """
   BeginRead(self: NegotiateStream,buffer: Array[Byte],offset: int,count: int,asyncCallback: AsyncCallback,asyncState: object) -> IAsyncResult
   
-   Begins an asynchronous read operation that reads data from the stream and stores it in the specified array.
+   Begins an asynchronous read operation that reads data from the stream and 
+    stores it in the specified array.
+  
   
    buffer: A System.Byte array that receives the bytes read from the stream.
-   offset: The zero-based location in buffer at which to begin storing the data read from this stream.
+   offset: The zero-based location in buffer at which to begin storing the data read from 
+    this stream.
+  
    count: The maximum number of bytes to read from the stream.
-   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the read operation is complete.
-   asyncState: A user-defined object containing information about the read operation. This object is passed to the asyncCallback delegate when the operation completes.
-   Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
+   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    read operation is complete.
+  
+   asyncState: A user-defined object containing information about the read operation. This 
+    object is passed to the asyncCallback delegate when the operation completes.
+  
+   Returns: An System.IAsyncResult object indicating the status of the asynchronous 
+    operation.
   """
   pass
  def BeginWrite(self,buffer,offset,count,asyncCallback,asyncState):
   """
   BeginWrite(self: NegotiateStream,buffer: Array[Byte],offset: int,count: int,asyncCallback: AsyncCallback,asyncState: object) -> IAsyncResult
   
-   Begins an asynchronous write operation that writes System.Bytes from the specified buffer to the stream.
+   Begins an asynchronous write operation that writes System.Bytes from the 
+    specified buffer to the stream.
+  
   
    buffer: A System.Byte array that supplies the bytes to be written to the stream.
-   offset: The zero-based location in buffer at which to begin reading bytes to be written to the stream.
+   offset: The zero-based location in buffer at which to begin reading bytes to be written 
+    to the stream.
+  
    count: An System.Int32 value that specifies the number of bytes to read from buffer.
-   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the write operation is complete.
-   asyncState: A user-defined object containing information about the write operation. This object is passed to the asyncCallback delegate when the operation completes.
-   Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
+   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    write operation is complete.
+  
+   asyncState: A user-defined object containing information about the write operation. This 
+    object is passed to the asyncCallback delegate when the operation completes.
+  
+   Returns: An System.IAsyncResult object indicating the status of the asynchronous 
+    operation.
   """
   pass
  def CreateWaitHandle(self,*args):
@@ -477,43 +685,67 @@ class NegotiateStream(AuthenticatedStream,IDisposable):
  def Dispose(self):
   """
   Dispose(self: NegotiateStream,disposing: bool)
-   Releases the unmanaged resources used by the System.Net.Security.NegotiateStream and optionally releases the managed resources.
+   Releases the unmanaged resources used by the 
+    System.Net.Security.NegotiateStream and optionally releases the managed 
+    resources.
   
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+  
+   disposing: true to release both managed and unmanaged resources; false to release only 
+    unmanaged resources.
   """
   pass
  def EndAuthenticateAsClient(self,asyncResult):
   """
   EndAuthenticateAsClient(self: NegotiateStream,asyncResult: IAsyncResult)
-   Ends a pending asynchronous client authentication operation that was started with a call to erload:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient.
+   Ends a pending asynchronous client authentication operation that was started 
+    with a call to 
+    erload:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient.
   
-   asyncResult: An System.IAsyncResult instance returned by a call to erload:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient.
+  
+   asyncResult: An System.IAsyncResult instance returned by a call to 
+    erload:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient.
   """
   pass
  def EndAuthenticateAsServer(self,asyncResult):
   """
   EndAuthenticateAsServer(self: NegotiateStream,asyncResult: IAsyncResult)
-   Ends a pending asynchronous client authentication operation that was started with a call to erload:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer.
+   Ends a pending asynchronous client authentication operation that was started 
+    with a call to 
+    erload:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer.
   
-   asyncResult: An System.IAsyncResult instance returned by a call to erload:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer.
+  
+   asyncResult: An System.IAsyncResult instance returned by a call to 
+    erload:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer.
   """
   pass
  def EndRead(self,asyncResult):
   """
   EndRead(self: NegotiateStream,asyncResult: IAsyncResult) -> int
   
-   Ends an asynchronous read operation that was started with a call to System.Net.Security.NegotiateStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object).
+   Ends an asynchronous read operation that was started with a call to 
+    System.Net.Security.NegotiateStream.BeginRead(System.Byte[],System.Int32,System.
+    Int32,System.AsyncCallback,System.Object).
   
-   asyncResult: An System.IAsyncResult instance returned by a call to System.Net.Security.NegotiateStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
-   Returns: A System.Int32 value that specifies the number of bytes read from the underlying stream.
+  
+   asyncResult: An System.IAsyncResult instance returned by a call to 
+    System.Net.Security.NegotiateStream.BeginRead(System.Byte[],System.Int32,System.
+    Int32,System.AsyncCallback,System.Object)
+  
+   Returns: A System.Int32 value that specifies the number of bytes read from the 
+    underlying stream.
   """
   pass
  def EndWrite(self,asyncResult):
   """
   EndWrite(self: NegotiateStream,asyncResult: IAsyncResult)
-   Ends an asynchronous write operation that was started with a call to System.Net.Security.NegotiateStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object).
+   Ends an asynchronous write operation that was started with a call to 
+    System.Net.Security.NegotiateStream.BeginWrite(System.Byte[],System.Int32,System
+    .Int32,System.AsyncCallback,System.Object).
   
-   asyncResult: An System.IAsyncResult instance returned by a call to System.Net.Security.NegotiateStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+  
+   asyncResult: An System.IAsyncResult instance returned by a call to 
+    System.Net.Security.NegotiateStream.BeginWrite(System.Byte[],System.Int32,System
+    .Int32,System.AsyncCallback,System.Object)
   """
   pass
  def Flush(self):
@@ -528,8 +760,11 @@ class NegotiateStream(AuthenticatedStream,IDisposable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-    usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
+    will cause the object to be assigned a new identity when it is marshaled across 
+    a remoting boundary. A value of false is usually appropriate. true to copy the 
+    current System.MarshalByRefObject object's identity to its clone,which will 
+    cause remoting client calls to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -551,9 +786,12 @@ class NegotiateStream(AuthenticatedStream,IDisposable):
    Reads data from this stream and stores it in the specified array.
   
    buffer: A System.Byte array that receives the bytes read from the stream.
-   offset: A System.Int32 containing the zero-based location in buffer at which to begin storing the data read from this stream.
+   offset: A System.Int32 containing the zero-based location in buffer at which to begin 
+    storing the data read from this stream.
+  
    count: A System.Int32 containing the maximum number of bytes to read from the stream.
-   Returns: A System.Int32 value that specifies the number of bytes read from the underlying stream. When there is no more data to be read,returns 0.
+   Returns: A System.Int32 value that specifies the number of bytes read from the 
+    underlying stream. When there is no more data to be read,returns 0.
   """
   pass
  def Seek(self,offset,origin):
@@ -578,25 +816,22 @@ class NegotiateStream(AuthenticatedStream,IDisposable):
  def Write(self,buffer,offset,count):
   """
   Write(self: NegotiateStream,buffer: Array[Byte],offset: int,count: int)
-   Write the specified number of System.Bytes to the underlying stream using the specified buffer and offset.
+   Write the specified number of System.Bytes to the underlying stream using the 
+    specified buffer and offset.
+  
   
    buffer: A System.Byte array that supplies the bytes written to the stream.
-   offset: An System.Int32 containing the zero-based location in buffer at which to begin reading bytes to be written to the stream.
+   offset: An System.Int32 containing the zero-based location in buffer at which to begin 
+    reading bytes to be written to the stream.
+  
    count: A System.Int32 containing the number of bytes to read from buffer.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -771,7 +1006,9 @@ class RemoteCertificateValidationCallback(MulticastDelegate,ICloneable,ISerializ
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+    delegate.
+  
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -783,7 +1020,10 @@ class RemoteCertificateValidationCallback(MulticastDelegate,ICloneable,ISerializ
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by 
+    the current delegate.-or- null,if the method represented by the current 
+    delegate does not require arguments.
+  
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -805,10 +1045,14 @@ class RemoteCertificateValidationCallback(MulticastDelegate,ICloneable,ISerializ
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate 
+    that is equal to the specified delegate.
+  
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new 
+    System.Delegate without value in its invocation list; otherwise,this instance 
+    with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -870,16 +1114,26 @@ class SslStream(AuthenticatedStream,IDisposable):
  def AuthenticateAsClient(self,targetHost,clientCertificates=None,enabledSslProtocols=None,checkCertificateRevocation=None):
   """
   AuthenticateAsClient(self: SslStream,targetHost: str)
-   Called by clients to authenticate the server and optionally the client in a client-server connection.
+   Called by clients to authenticate the server and optionally the client in a 
+    client-server connection.
+  
   
    targetHost: The name of the server that shares this System.Net.Security.SslStream.
   AuthenticateAsClient(self: SslStream,targetHost: str,clientCertificates: X509CertificateCollection,enabledSslProtocols: SslProtocols,checkCertificateRevocation: bool)
-   Called by clients to authenticate the server and optionally the client in a client-server connection. The authentication process uses the specified certificate collection and SSL protocol.
+   Called by clients to authenticate the server and optionally the client in a 
+    client-server connection. The authentication process uses the specified 
+    certificate collection and SSL protocol.
+  
   
    targetHost: The name of the server that will share this System.Net.Security.SslStream.
-   clientCertificates: The System.Security.Cryptography.X509Certificates.X509CertificateCollection that contains client certificates.
-   enabledSslProtocols: The System.Security.Authentication.SslProtocols value that represents the protocol used for authentication.
-   checkCertificateRevocation: A System.Boolean value that specifies whether the certificate revocation list is checked during authentication.
+   clientCertificates: The System.Security.Cryptography.X509Certificates.X509CertificateCollection 
+    that contains client certificates.
+  
+   enabledSslProtocols: The System.Security.Authentication.SslProtocols value that represents the 
+    protocol used for authentication.
+  
+   checkCertificateRevocation: A System.Boolean value that specifies whether the certificate revocation list 
+    is checked during authentication.
   """
   pass
  def AuthenticateAsClientAsync(self,targetHost,clientCertificates=None,enabledSslProtocols=None,checkCertificateRevocation=None):
@@ -891,14 +1145,25 @@ class SslStream(AuthenticatedStream,IDisposable):
  def AuthenticateAsServer(self,serverCertificate,clientCertificateRequired=None,enabledSslProtocols=None,checkCertificateRevocation=None):
   """
   AuthenticateAsServer(self: SslStream,serverCertificate: X509Certificate,clientCertificateRequired: bool,enabledSslProtocols: SslProtocols,checkCertificateRevocation: bool)
-   Called by servers to begin an asynchronous operation to authenticate the server and optionally the client using the specified certificates,requirements and security protocol.
+   Called by servers to begin an asynchronous operation to authenticate the server 
+    and optionally the client using the specified certificates,requirements and 
+    security protocol.
+  
   
    serverCertificate: The X509Certificate used to authenticate the server.
-   clientCertificateRequired: A System.Boolean value that specifies whether the client must supply a certificate for authentication.
-   enabledSslProtocols: The System.Security.Authentication.SslProtocols  value that represents the protocol used for authentication.
-   checkCertificateRevocation: A System.Boolean value that specifies whether the certificate revocation list is checked during authentication.
+   clientCertificateRequired: A System.Boolean value that specifies whether the client must supply a 
+    certificate for authentication.
+  
+   enabledSslProtocols: The System.Security.Authentication.SslProtocols  value that represents the 
+    protocol used for authentication.
+  
+   checkCertificateRevocation: A System.Boolean value that specifies whether the certificate revocation list 
+    is checked during authentication.
+  
   AuthenticateAsServer(self: SslStream,serverCertificate: X509Certificate)
-   Called by servers to authenticate the server and optionally the client in a client-server connection using the specified certificate.
+   Called by servers to authenticate the server and optionally the client in a 
+    client-server connection using the specified certificate.
+  
   
    serverCertificate: The certificate used to authenticate the server.
   """
@@ -913,74 +1178,136 @@ class SslStream(AuthenticatedStream,IDisposable):
   """
   BeginAuthenticateAsClient(self: SslStream,targetHost: str,clientCertificates: X509CertificateCollection,enabledSslProtocols: SslProtocols,checkCertificateRevocation: bool,asyncCallback: AsyncCallback,asyncState: object) -> IAsyncResult
   
-   Called by clients to begin an asynchronous operation to authenticate the server and optionally the client using the specified certificates and security protocol.
+   Called by clients to begin an asynchronous operation to authenticate the server 
+    and optionally the client using the specified certificates and security 
+    protocol.
+  
   
    targetHost: The name of the server that shares this System.Net.Security.SslStream.
-   clientCertificates: The System.Security.Cryptography.X509Certificates.X509CertificateCollection containing client certificates.
-   enabledSslProtocols: The System.Security.Authentication.SslProtocols value that represents the protocol used for authentication.
-   checkCertificateRevocation: A System.Boolean value that specifies whether the certificate revocation list is checked during authentication.
-   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the authentication is complete.
-   asyncState: A user-defined object that contains information about the operation. This object is passed to the asyncCallback delegate when the operation completes.
-   Returns: An System.IAsyncResult object that indicates the status of the asynchronous operation.
+   clientCertificates: The System.Security.Cryptography.X509Certificates.X509CertificateCollection 
+    containing client certificates.
+  
+   enabledSslProtocols: The System.Security.Authentication.SslProtocols value that represents the 
+    protocol used for authentication.
+  
+   checkCertificateRevocation: A System.Boolean value that specifies whether the certificate revocation list 
+    is checked during authentication.
+  
+   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    authentication is complete.
+  
+   asyncState: A user-defined object that contains information about the operation. This 
+    object is passed to the asyncCallback delegate when the operation completes.
+  
+   Returns: An System.IAsyncResult object that indicates the status of the asynchronous 
+    operation.
+  
   BeginAuthenticateAsClient(self: SslStream,targetHost: str,asyncCallback: AsyncCallback,asyncState: object) -> IAsyncResult
   
-   Called by clients to begin an asynchronous operation to authenticate the server and optionally the client.
+   Called by clients to begin an asynchronous operation to authenticate the server 
+    and optionally the client.
+  
   
    targetHost: The name of the server that shares this System.Net.Security.SslStream.
-   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the authentication is complete.
-   asyncState: A user-defined object that contains information about the operation. This object is passed to the asyncCallback delegate when the operation completes.
-   Returns: An System.IAsyncResult object that indicates the status of the asynchronous operation.
+   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    authentication is complete.
+  
+   asyncState: A user-defined object that contains information about the operation. This 
+    object is passed to the asyncCallback delegate when the operation completes.
+  
+   Returns: An System.IAsyncResult object that indicates the status of the asynchronous 
+    operation.
   """
   pass
  def BeginAuthenticateAsServer(self,serverCertificate,*__args):
   """
   BeginAuthenticateAsServer(self: SslStream,serverCertificate: X509Certificate,clientCertificateRequired: bool,enabledSslProtocols: SslProtocols,checkCertificateRevocation: bool,asyncCallback: AsyncCallback,asyncState: object) -> IAsyncResult
   
-   Called by servers to begin an asynchronous operation to authenticate the server and optionally the client using the specified certificates,requirements and security protocol.
+   Called by servers to begin an asynchronous operation to authenticate the server 
+    and optionally the client using the specified certificates,requirements and 
+    security protocol.
+  
   
    serverCertificate: The X509Certificate used to authenticate the server.
-   clientCertificateRequired: A System.Boolean value that specifies whether the client must supply a certificate for authentication.
-   enabledSslProtocols: The System.Security.Authentication.SslProtocols  value that represents the protocol used for authentication.
-   checkCertificateRevocation: A System.Boolean value that specifies whether the certificate revocation list is checked during authentication.
-   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the authentication is complete.
-   asyncState: A user-defined object that contains information about the operation. This object is passed to the asyncCallback delegate when the operation completes.
-   Returns: An System.IAsyncResult object that indicates the status of the asynchronous operation.
+   clientCertificateRequired: A System.Boolean value that specifies whether the client must supply a 
+    certificate for authentication.
+  
+   enabledSslProtocols: The System.Security.Authentication.SslProtocols  value that represents the 
+    protocol used for authentication.
+  
+   checkCertificateRevocation: A System.Boolean value that specifies whether the certificate revocation list 
+    is checked during authentication.
+  
+   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    authentication is complete.
+  
+   asyncState: A user-defined object that contains information about the operation. This 
+    object is passed to the asyncCallback delegate when the operation completes.
+  
+   Returns: An System.IAsyncResult object that indicates the status of the asynchronous 
+    operation.
+  
   BeginAuthenticateAsServer(self: SslStream,serverCertificate: X509Certificate,asyncCallback: AsyncCallback,asyncState: object) -> IAsyncResult
   
-   Called by servers to begin an asynchronous operation to authenticate the client and optionally the server in a client-server connection.
+   Called by servers to begin an asynchronous operation to authenticate the client 
+    and optionally the server in a client-server connection.
+  
   
    serverCertificate: The X509Certificate used to authenticate the server.
-   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the authentication is complete.
-   asyncState: A user-defined object that contains information about the operation. This object is passed to the asyncCallback delegate when the operation completes.
-   Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
+   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    authentication is complete.
+  
+   asyncState: A user-defined object that contains information about the operation. This 
+    object is passed to the asyncCallback delegate when the operation completes.
+  
+   Returns: An System.IAsyncResult object indicating the status of the asynchronous 
+    operation.
   """
   pass
  def BeginRead(self,buffer,offset,count,asyncCallback,asyncState):
   """
   BeginRead(self: SslStream,buffer: Array[Byte],offset: int,count: int,asyncCallback: AsyncCallback,asyncState: object) -> IAsyncResult
   
-   Begins an asynchronous read operation that reads data from the stream and stores it in the specified array.
+   Begins an asynchronous read operation that reads data from the stream and 
+    stores it in the specified array.
+  
   
    buffer: A System.Byte array that receives the bytes read from the stream.
-   offset: The zero-based location in buffer at which to begin storing the data read from this stream.
+   offset: The zero-based location in buffer at which to begin storing the data read from 
+    this stream.
+  
    count: The maximum number of bytes to read from the stream.
-   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the read operation is complete.
-   asyncState: A user-defined object that contains information about the read operation. This object is passed to the asyncCallback delegate when the operation completes.
-   Returns: An System.IAsyncResult object that indicates the status of the asynchronous operation.
+   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    read operation is complete.
+  
+   asyncState: A user-defined object that contains information about the read operation. This 
+    object is passed to the asyncCallback delegate when the operation completes.
+  
+   Returns: An System.IAsyncResult object that indicates the status of the asynchronous 
+    operation.
   """
   pass
  def BeginWrite(self,buffer,offset,count,asyncCallback,asyncState):
   """
   BeginWrite(self: SslStream,buffer: Array[Byte],offset: int,count: int,asyncCallback: AsyncCallback,asyncState: object) -> IAsyncResult
   
-   Begins an asynchronous write operation that writes System.Bytes from the specified buffer to the stream.
+   Begins an asynchronous write operation that writes System.Bytes from the 
+    specified buffer to the stream.
+  
   
    buffer: A System.Byte array that supplies the bytes to be written to the stream.
-   offset: The zero-based location in buffer at which to begin reading bytes to be written to the stream.
+   offset: The zero-based location in buffer at which to begin reading bytes to be written 
+    to the stream.
+  
    count: An System.Int32 value that specifies the number of bytes to read from buffer.
-   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the write operation is complete.
-   asyncState: A user-defined object that contains information about the write operation. This object is passed to the asyncCallback delegate when the operation completes.
-   Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
+   asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the 
+    write operation is complete.
+  
+   asyncState: A user-defined object that contains information about the write operation. This 
+    object is passed to the asyncCallback delegate when the operation completes.
+  
+   Returns: An System.IAsyncResult object indicating the status of the asynchronous 
+    operation.
   """
   pass
  def CreateWaitHandle(self,*args):
@@ -994,43 +1321,66 @@ class SslStream(AuthenticatedStream,IDisposable):
  def Dispose(self):
   """
   Dispose(self: SslStream,disposing: bool)
-   Releases the unmanaged resources used by the System.Net.Security.SslStream and optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Net.Security.SslStream and 
+    optionally releases the managed resources.
   
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+  
+   disposing: true to release both managed and unmanaged resources; false to release only 
+    unmanaged resources.
   """
   pass
  def EndAuthenticateAsClient(self,asyncResult):
   """
   EndAuthenticateAsClient(self: SslStream,asyncResult: IAsyncResult)
-   Ends a pending asynchronous server authentication operation started with a previous call to erload:System.Net.Security.SslStream.BeginAuthenticateAsServer.
+   Ends a pending asynchronous server authentication operation started with a 
+    previous call to 
+    erload:System.Net.Security.SslStream.BeginAuthenticateAsServer.
   
-   asyncResult: An System.IAsyncResult instance returned by a call to erload:System.Net.Security.SslStream.BeginAuthenticateAsServer.
+  
+   asyncResult: An System.IAsyncResult instance returned by a call to 
+    erload:System.Net.Security.SslStream.BeginAuthenticateAsServer.
   """
   pass
  def EndAuthenticateAsServer(self,asyncResult):
   """
   EndAuthenticateAsServer(self: SslStream,asyncResult: IAsyncResult)
-   Ends a pending asynchronous client authentication operation started with a previous call to erload:System.Net.Security.SslStream.BeginAuthenticateAsClient.
+   Ends a pending asynchronous client authentication operation started with a 
+    previous call to 
+    erload:System.Net.Security.SslStream.BeginAuthenticateAsClient.
   
-   asyncResult: An System.IAsyncResult instance returned by a call to erload:System.Net.Security.SslStream.BeginAuthenticateAsClient.
+  
+   asyncResult: An System.IAsyncResult instance returned by a call to 
+    erload:System.Net.Security.SslStream.BeginAuthenticateAsClient.
   """
   pass
  def EndRead(self,asyncResult):
   """
   EndRead(self: SslStream,asyncResult: IAsyncResult) -> int
   
-   Ends an asynchronous read operation started with a previous call to System.Net.Security.SslStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object).
+   Ends an asynchronous read operation started with a previous call to 
+    System.Net.Security.SslStream.BeginRead(System.Byte[],System.Int32,System.Int32,
+    System.AsyncCallback,System.Object).
   
-   asyncResult: An System.IAsyncResult instance returned by a call to System.Net.Security.SslStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
-   Returns: A System.Int32 value that specifies the number of bytes read from the underlying stream.
+  
+   asyncResult: An System.IAsyncResult instance returned by a call to 
+    System.Net.Security.SslStream.BeginRead(System.Byte[],System.Int32,System.Int32,
+    System.AsyncCallback,System.Object)
+  
+   Returns: A System.Int32 value that specifies the number of bytes read from the 
+    underlying stream.
   """
   pass
  def EndWrite(self,asyncResult):
   """
   EndWrite(self: SslStream,asyncResult: IAsyncResult)
-   Ends an asynchronous write operation started with a previous call to System.Net.Security.SslStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object).
+   Ends an asynchronous write operation started with a previous call to 
+    System.Net.Security.SslStream.BeginWrite(System.Byte[],System.Int32,System.Int32
+    ,System.AsyncCallback,System.Object).
   
-   asyncResult: An System.IAsyncResult instance returned by a call to System.Net.Security.SslStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+  
+   asyncResult: An System.IAsyncResult instance returned by a call to 
+    System.Net.Security.SslStream.BeginWrite(System.Byte[],System.Int32,System.Int32
+    ,System.AsyncCallback,System.Object)
   """
   pass
  def Flush(self):
@@ -1045,8 +1395,11 @@ class SslStream(AuthenticatedStream,IDisposable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-    usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
+    will cause the object to be assigned a new identity when it is marshaled across 
+    a remoting boundary. A value of false is usually appropriate. true to copy the 
+    current System.MarshalByRefObject object's identity to its clone,which will 
+    cause remoting client calls to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -1068,9 +1421,14 @@ class SslStream(AuthenticatedStream,IDisposable):
    Reads data from this stream and stores it in the specified array.
   
    buffer: A System.Byte array that receives the bytes read from this stream.
-   offset: A System.Int32 that contains the zero-based location in buffer at which to begin storing the data read from this stream.
-   count: A System.Int32 that contains the maximum number of bytes to read from this stream.
-   Returns: A System.Int32 value that specifies the number of bytes read. When there is no more data to be read,returns 0.
+   offset: A System.Int32 that contains the zero-based location in buffer at which to 
+    begin storing the data read from this stream.
+  
+   count: A System.Int32 that contains the maximum number of bytes to read from this 
+    stream.
+  
+   Returns: A System.Int32 value that specifies the number of bytes read. When there is no 
+    more data to be read,returns 0.
   """
   pass
  def Seek(self,offset,origin):
@@ -1095,10 +1453,14 @@ class SslStream(AuthenticatedStream,IDisposable):
  def Write(self,buffer,offset=None,count=None):
   """
   Write(self: SslStream,buffer: Array[Byte],offset: int,count: int)
-   Write the specified number of System.Bytes to the underlying stream using the specified buffer and offset.
+   Write the specified number of System.Bytes to the underlying stream using the 
+    specified buffer and offset.
+  
   
    buffer: A System.Byte array that supplies the bytes written to the stream.
-   offset: A System.Int32 that contains the zero-based location in buffer at which to begin reading bytes to be written to the stream.
+   offset: A System.Int32 that contains the zero-based location in buffer at which to 
+    begin reading bytes to be written to the stream.
+  
    count: A System.Int32 that contains the number of bytes to read from buffer.
   Write(self: SslStream,buffer: Array[Byte])
    Writes the specified data to this stream.
@@ -1107,17 +1469,10 @@ class SslStream(AuthenticatedStream,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

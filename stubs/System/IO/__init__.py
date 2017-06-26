@@ -1,8 +1,8 @@
 # encoding: utf-8
 # module System.IO calls itself IO
-# from mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+# from mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -26,14 +26,17 @@ class BinaryReader(object, IDisposable):
     def Dispose(self):
         """
         Dispose(self: BinaryReader)
-            Releases all resources used by the current instance of the System.IO.BinaryReader class.
+            Releases all resources used by the current instance of the 
+             System.IO.BinaryReader class.
         """
         pass
 
     def FillBuffer(self, *args): #cannot find CLR method
         """
         FillBuffer(self: BinaryReader, numBytes: int)
-            Fills the internal buffer with the specified number of bytes read from the stream.
+            Fills the internal buffer with the specified number of bytes read from the 
+             stream.
+        
         
             numBytes: The number of bytes to be read.
         """
@@ -43,8 +46,11 @@ class BinaryReader(object, IDisposable):
         """
         PeekChar(self: BinaryReader) -> int
         
-            Returns the next available character and does not advance the byte or character position.
-            Returns: The next available character, or -1 if no more characters are available or the stream does not support seeking.
+            Returns the next available character and does not advance the byte or character 
+             position.
+        
+            Returns: The next available character, or -1 if no more characters are available or the 
+             stream does not support seeking.
         """
         pass
 
@@ -52,26 +58,38 @@ class BinaryReader(object, IDisposable):
         """
         Read(self: BinaryReader, buffer: Array[Byte], index: int, count: int) -> int
         
-            Reads the specified number of bytes from the stream, starting from a specified point in the byte array.
+            Reads the specified number of bytes from the stream, starting from a specified 
+             point in the byte array.
+        
         
             buffer: The buffer to read data into.
             index: The starting point in the buffer at which to begin reading into the buffer.
             count: The number of bytes to read.
-            Returns: The number of bytes read into buffer. This might be less than the number of bytes requested if that many bytes are not available, or it might be zero if the end of the stream is reached.
+            Returns: The number of bytes read into buffer. This might be less than the number of 
+             bytes requested if that many bytes are not available, or it might be zero if 
+             the end of the stream is reached.
+        
         Read(self: BinaryReader, buffer: Array[Char], index: int, count: int) -> int
         
-            Reads the specified number of characters from the stream, starting from a specified point in the character array.
+            Reads the specified number of characters from the stream, starting from a 
+             specified point in the character array.
+        
         
             buffer: The buffer to read data into.
             index: The starting point in the buffer at which to begin reading into the buffer.
             count: The number of characters to read.
-            Returns: The total number of characters read into the buffer. This might be less than the number of characters requested if that many characters are not currently available, or it might be zero if the end of the 
-             stream is reached.
+            Returns: The total number of characters read into the buffer. This might be less than 
+             the number of characters requested if that many characters are not currently 
+             available, or it might be zero if the end of the stream is reached.
         
         Read(self: BinaryReader) -> int
         
-            Reads characters from the underlying stream and advances the current position of the stream in accordance with the Encoding used and the specific character being read from the stream.
-            Returns: The next character from the input stream, or -1 if no characters are currently available.
+            Reads characters from the underlying stream and advances the current position 
+             of the stream in accordance with the Encoding used and the specific character 
+             being read from the stream.
+        
+            Returns: The next character from the input stream, or -1 if no characters are currently 
+             available.
         """
         pass
 
@@ -88,7 +106,9 @@ class BinaryReader(object, IDisposable):
         """
         ReadBoolean(self: BinaryReader) -> bool
         
-            Reads a Boolean value from the current stream and advances the current position of the stream by one byte.
+            Reads a Boolean value from the current stream and advances the current position 
+             of the stream by one byte.
+        
             Returns: true if the byte is nonzero; otherwise, false.
         """
         pass
@@ -97,7 +117,9 @@ class BinaryReader(object, IDisposable):
         """
         ReadByte(self: BinaryReader) -> Byte
         
-            Reads the next byte from the current stream and advances the current position of the stream by one byte.
+            Reads the next byte from the current stream and advances the current position 
+             of the stream by one byte.
+        
             Returns: The next byte read from the current stream.
         """
         pass
@@ -106,10 +128,13 @@ class BinaryReader(object, IDisposable):
         """
         ReadBytes(self: BinaryReader, count: int) -> Array[Byte]
         
-            Reads the specified number of bytes from the current stream into a byte array and advances the current position by that number of bytes.
+            Reads the specified number of bytes from the current stream into a byte array 
+             and advances the current position by that number of bytes.
+        
         
             count: The number of bytes to read.
-            Returns: A byte array containing data read from the underlying stream. This might be less than the number of bytes requested if the end of the stream is reached.
+            Returns: A byte array containing data read from the underlying stream. This might be 
+             less than the number of bytes requested if the end of the stream is reached.
         """
         pass
 
@@ -117,7 +142,10 @@ class BinaryReader(object, IDisposable):
         """
         ReadChar(self: BinaryReader) -> Char
         
-            Reads the next character from the current stream and advances the current position of the stream in accordance with the Encoding used and the specific character being read from the stream.
+            Reads the next character from the current stream and advances the current 
+             position of the stream in accordance with the Encoding used and the specific 
+             character being read from the stream.
+        
             Returns: A character read from the current stream.
         """
         pass
@@ -126,12 +154,15 @@ class BinaryReader(object, IDisposable):
         """
         ReadChars(self: BinaryReader, count: int) -> Array[Char]
         
-            Reads the specified number of characters from the current stream, returns the data in a character array, and advances the current position in accordance with the Encoding used and the specific character 
-             being read from the stream.
+            Reads the specified number of characters from the current stream, returns the 
+             data in a character array, and advances the current position in accordance with 
+             the Encoding used and the specific character being read from the stream.
         
         
             count: The number of characters to read.
-            Returns: A character array containing data read from the underlying stream. This might be less than the number of characters requested if the end of the stream is reached.
+            Returns: A character array containing data read from the underlying stream. This might 
+             be less than the number of characters requested if the end of the stream is 
+             reached.
         """
         pass
 
@@ -139,7 +170,9 @@ class BinaryReader(object, IDisposable):
         """
         ReadDecimal(self: BinaryReader) -> Decimal
         
-            Reads a decimal value from the current stream and advances the current position of the stream by sixteen bytes.
+            Reads a decimal value from the current stream and advances the current position 
+             of the stream by sixteen bytes.
+        
             Returns: A decimal value read from the current stream.
         """
         pass
@@ -148,7 +181,9 @@ class BinaryReader(object, IDisposable):
         """
         ReadDouble(self: BinaryReader) -> float
         
-            Reads an 8-byte floating point value from the current stream and advances the current position of the stream by eight bytes.
+            Reads an 8-byte floating point value from the current stream and advances the 
+             current position of the stream by eight bytes.
+        
             Returns: An 8-byte floating point value read from the current stream.
         """
         pass
@@ -157,7 +192,9 @@ class BinaryReader(object, IDisposable):
         """
         ReadInt16(self: BinaryReader) -> Int16
         
-            Reads a 2-byte signed integer from the current stream and advances the current position of the stream by two bytes.
+            Reads a 2-byte signed integer from the current stream and advances the current 
+             position of the stream by two bytes.
+        
             Returns: A 2-byte signed integer read from the current stream.
         """
         pass
@@ -166,7 +203,9 @@ class BinaryReader(object, IDisposable):
         """
         ReadInt32(self: BinaryReader) -> int
         
-            Reads a 4-byte signed integer from the current stream and advances the current position of the stream by four bytes.
+            Reads a 4-byte signed integer from the current stream and advances the current 
+             position of the stream by four bytes.
+        
             Returns: A 4-byte signed integer read from the current stream.
         """
         pass
@@ -175,7 +214,9 @@ class BinaryReader(object, IDisposable):
         """
         ReadInt64(self: BinaryReader) -> Int64
         
-            Reads an 8-byte signed integer from the current stream and advances the current position of the stream by eight bytes.
+            Reads an 8-byte signed integer from the current stream and advances the current 
+             position of the stream by eight bytes.
+        
             Returns: An 8-byte signed integer read from the current stream.
         """
         pass
@@ -184,7 +225,9 @@ class BinaryReader(object, IDisposable):
         """
         ReadSByte(self: BinaryReader) -> SByte
         
-            Reads a signed byte from this stream and advances the current position of the stream by one byte.
+            Reads a signed byte from this stream and advances the current position of the 
+             stream by one byte.
+        
             Returns: A signed byte read from the current stream.
         """
         pass
@@ -193,7 +236,9 @@ class BinaryReader(object, IDisposable):
         """
         ReadSingle(self: BinaryReader) -> Single
         
-            Reads a 4-byte floating point value from the current stream and advances the current position of the stream by four bytes.
+            Reads a 4-byte floating point value from the current stream and advances the 
+             current position of the stream by four bytes.
+        
             Returns: A 4-byte floating point value read from the current stream.
         """
         pass
@@ -202,7 +247,9 @@ class BinaryReader(object, IDisposable):
         """
         ReadString(self: BinaryReader) -> str
         
-            Reads a string from the current stream. The string is prefixed with the length, encoded as an integer seven bits at a time.
+            Reads a string from the current stream. The string is prefixed with the length, 
+             encoded as an integer seven bits at a time.
+        
             Returns: The string being read.
         """
         pass
@@ -211,7 +258,9 @@ class BinaryReader(object, IDisposable):
         """
         ReadUInt16(self: BinaryReader) -> UInt16
         
-            Reads a 2-byte unsigned integer from the current stream using little-endian encoding and advances the position of the stream by two bytes.
+            Reads a 2-byte unsigned integer from the current stream using little-endian 
+             encoding and advances the position of the stream by two bytes.
+        
             Returns: A 2-byte unsigned integer read from this stream.
         """
         pass
@@ -220,7 +269,9 @@ class BinaryReader(object, IDisposable):
         """
         ReadUInt32(self: BinaryReader) -> UInt32
         
-            Reads a 4-byte unsigned integer from the current stream and advances the position of the stream by four bytes.
+            Reads a 4-byte unsigned integer from the current stream and advances the 
+             position of the stream by four bytes.
+        
             Returns: A 4-byte unsigned integer read from this stream.
         """
         pass
@@ -229,24 +280,19 @@ class BinaryReader(object, IDisposable):
         """
         ReadUInt64(self: BinaryReader) -> UInt64
         
-            Reads an 8-byte unsigned integer from the current stream and advances the position of the stream by eight bytes.
+            Reads an 8-byte unsigned integer from the current stream and advances the 
+             position of the stream by eight bytes.
+        
             Returns: An 8-byte unsigned integer read from this stream.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -293,14 +339,16 @@ class BinaryWriter(object, IDisposable):
     def Dispose(self):
         """
         Dispose(self: BinaryWriter)
-            Releases all resources used by the current instance of the System.IO.BinaryWriter class.
+            Releases all resources used by the current instance of the 
+             System.IO.BinaryWriter class.
         """
         pass
 
     def Flush(self):
         """
         Flush(self: BinaryWriter)
-            Clears all buffers for the current writer and causes any buffered data to be written to the underlying device.
+            Clears all buffers for the current writer and causes any buffered data to be 
+             written to the underlying device.
         """
         pass
 
@@ -311,7 +359,9 @@ class BinaryWriter(object, IDisposable):
             Sets the position within the current stream.
         
             offset: A byte offset relative to origin.
-            origin: A field of System.IO.SeekOrigin indicating the reference point from which the new position is to be obtained.
+            origin: A field of System.IO.SeekOrigin indicating the reference point from which the 
+             new position is to be obtained.
+        
             Returns: The position with the current stream.
         """
         pass
@@ -319,45 +369,65 @@ class BinaryWriter(object, IDisposable):
     def Write(self, *__args):
         """
         Write(self: BinaryWriter, value: UInt16)
-            Writes a two-byte unsigned integer to the current stream and advances the stream position by two bytes.
+            Writes a two-byte unsigned integer to the current stream and advances the 
+             stream position by two bytes.
+        
         
             value: The two-byte unsigned integer to write.
         Write(self: BinaryWriter, value: int)
-            Writes a four-byte signed integer to the current stream and advances the stream position by four bytes.
+            Writes a four-byte signed integer to the current stream and advances the stream 
+             position by four bytes.
+        
         
             value: The four-byte signed integer to write.
         Write(self: BinaryWriter, value: Decimal)
-            Writes a decimal value to the current stream and advances the stream position by sixteen bytes.
+            Writes a decimal value to the current stream and advances the stream position 
+             by sixteen bytes.
+        
         
             value: The decimal value to write.
         Write(self: BinaryWriter, value: Int16)
-            Writes a two-byte signed integer to the current stream and advances the stream position by two bytes.
+            Writes a two-byte signed integer to the current stream and advances the stream 
+             position by two bytes.
+        
         
             value: The two-byte signed integer to write.
         Write(self: BinaryWriter, value: UInt32)
-            Writes a four-byte unsigned integer to the current stream and advances the stream position by four bytes.
+            Writes a four-byte unsigned integer to the current stream and advances the 
+             stream position by four bytes.
+        
         
             value: The four-byte unsigned integer to write.
         Write(self: BinaryWriter, value: Single)
-            Writes a four-byte floating-point value to the current stream and advances the stream position by four bytes.
+            Writes a four-byte floating-point value to the current stream and advances the 
+             stream position by four bytes.
+        
         
             value: The four-byte floating-point value to write.
         Write(self: BinaryWriter, value: str)
-            Writes a length-prefixed string to this stream in the current encoding of the System.IO.BinaryWriter, and advances the current position of the stream in accordance with the encoding used and the specific 
-             characters being written to the stream.
+            Writes a length-prefixed string to this stream in the current encoding of the 
+             System.IO.BinaryWriter, and advances the current position of the stream in 
+             accordance with the encoding used and the specific characters being written to 
+             the stream.
         
         
             value: The value to write.
         Write(self: BinaryWriter, value: Int64)
-            Writes an eight-byte signed integer to the current stream and advances the stream position by eight bytes.
+            Writes an eight-byte signed integer to the current stream and advances the 
+             stream position by eight bytes.
+        
         
             value: The eight-byte signed integer to write.
         Write(self: BinaryWriter, value: UInt64)
-            Writes an eight-byte unsigned integer to the current stream and advances the stream position by eight bytes.
+            Writes an eight-byte unsigned integer to the current stream and advances the 
+             stream position by eight bytes.
+        
         
             value: The eight-byte unsigned integer to write.
         Write(self: BinaryWriter, value: SByte)
-            Writes a signed byte to the current stream and advances the stream position by one byte.
+            Writes a signed byte to the current stream and advances the stream position by 
+             one byte.
+        
         
             value: The signed byte to write.
         Write(self: BinaryWriter, buffer: Array[Byte])
@@ -365,11 +435,15 @@ class BinaryWriter(object, IDisposable):
         
             buffer: A byte array containing the data to write.
         Write(self: BinaryWriter, value: bool)
-            Writes a one-byte Boolean value to the current stream, with 0 representing false and 1 representing true.
+            Writes a one-byte Boolean value to the current stream, with 0 representing 
+             false and 1 representing true.
+        
         
             value: The Boolean value to write (0 or 1).
         Write(self: BinaryWriter, value: Byte)
-            Writes an unsigned byte to the current stream and advances the stream position by one byte.
+            Writes an unsigned byte to the current stream and advances the stream position 
+             by one byte.
+        
         
             value: The unsigned byte to write.
         Write(self: BinaryWriter, buffer: Array[Byte], index: int, count: int)
@@ -379,23 +453,32 @@ class BinaryWriter(object, IDisposable):
             index: The starting point in buffer at which to begin writing.
             count: The number of bytes to write.
         Write(self: BinaryWriter, chars: Array[Char], index: int, count: int)
-            Writes a section of a character array to the current stream, and advances the current position of the stream in accordance with the Encoding used and perhaps the specific characters being written to the 
-             stream.
+            Writes a section of a character array to the current stream, and advances the 
+             current position of the stream in accordance with the Encoding used and perhaps 
+             the specific characters being written to the stream.
         
         
             chars: A character array containing the data to write.
             index: The starting point in chars from which to begin writing.
             count: The number of characters to write.
         Write(self: BinaryWriter, value: float)
-            Writes an eight-byte floating-point value to the current stream and advances the stream position by eight bytes.
+            Writes an eight-byte floating-point value to the current stream and advances 
+             the stream position by eight bytes.
+        
         
             value: The eight-byte floating-point value to write.
         Write(self: BinaryWriter, ch: Char)
-            Writes a Unicode character to the current stream and advances the current position of the stream in accordance with the Encoding used and the specific characters being written to the stream.
+            Writes a Unicode character to the current stream and advances the current 
+             position of the stream in accordance with the Encoding used and the specific 
+             characters being written to the stream.
+        
         
             ch: The non-surrogate, Unicode character to write.
         Write(self: BinaryWriter, chars: Array[Char])
-            Writes a character array to the current stream and advances the current position of the stream in accordance with the Encoding used and the specific characters being written to the stream.
+            Writes a character array to the current stream and advances the current 
+             position of the stream in accordance with the Encoding used and the specific 
+             characters being written to the stream.
+        
         
             chars: A character array containing the data to write.
         """
@@ -411,18 +494,11 @@ class BinaryWriter(object, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -470,8 +546,11 @@ class Stream(MarshalByRefObject, IDisposable):
             offset: The byte offset in buffer at which to begin writing data read from the stream.
             count: The maximum number of bytes to read.
             callback: An optional asynchronous callback, to be called when the read is complete.
-            state: A user-provided object that distinguishes this particular asynchronous read request from other requests.
-            Returns: An System.IAsyncResult that represents the asynchronous read, which could still be pending.
+            state: A user-provided object that distinguishes this particular asynchronous read 
+             request from other requests.
+        
+            Returns: An System.IAsyncResult that represents the asynchronous read, which could still 
+             be pending.
         """
         pass
 
@@ -485,27 +564,37 @@ class Stream(MarshalByRefObject, IDisposable):
             offset: The byte offset in buffer from which to begin writing.
             count: The maximum number of bytes to write.
             callback: An optional asynchronous callback, to be called when the write is complete.
-            state: A user-provided object that distinguishes this particular asynchronous write request from other requests.
-            Returns: An IAsyncResult that represents the asynchronous write, which could still be pending.
+            state: A user-provided object that distinguishes this particular asynchronous write 
+             request from other requests.
+        
+            Returns: An IAsyncResult that represents the asynchronous write, which could still be 
+             pending.
         """
         pass
 
     def Close(self):
         """
         Close(self: Stream)
-            Closes the current stream and releases any resources (such as sockets and file handles) associated with the current stream.
+            Closes the current stream and releases any resources (such as sockets and file 
+             handles) associated with the current stream.
         """
         pass
 
     def CopyTo(self, destination, bufferSize=None):
         """
         CopyTo(self: Stream, destination: Stream, bufferSize: int)
-            Reads all the bytes from the current stream and writes them to a destination stream, using a specified buffer size.
+            Reads all the bytes from the current stream and writes them to a destination 
+             stream, using a specified buffer size.
+        
         
             destination: The stream that will contain the contents of the current stream.
-            bufferSize: The size of the buffer. This value must be greater than zero. The default size is 4096.
+            bufferSize: The size of the buffer. This value must be greater than zero. The default size 
+             is 4096.
+        
         CopyTo(self: Stream, destination: Stream)
-            Reads the bytes from the current stream and writes them to the destination stream.
+            Reads the bytes from the current stream and writes them to the destination 
+             stream.
+        
         
             destination: The stream that will contain the contents of the current stream.
         """
@@ -542,8 +631,9 @@ class Stream(MarshalByRefObject, IDisposable):
             Waits for the pending asynchronous read to complete.
         
             asyncResult: The reference to the pending asynchronous request to finish.
-            Returns: The number of bytes read from the stream, between zero (0) and the number of bytes you requested. Streams return zero (0) only at the end of the stream, otherwise, they should block until at least one byte 
-             is available.
+            Returns: The number of bytes read from the stream, between zero (0) and the number of 
+             bytes you requested. Streams return zero (0) only at the end of the stream, 
+             otherwise, they should block until at least one byte is available.
         """
         pass
 
@@ -559,7 +649,8 @@ class Stream(MarshalByRefObject, IDisposable):
     def Flush(self):
         """
         Flush(self: Stream)
-            When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.
+            When overridden in a derived class, clears all buffers for this stream and 
+             causes any buffered data to be written to the underlying device.
         """
         pass
 
@@ -576,8 +667,11 @@ class Stream(MarshalByRefObject, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-             usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled across 
+             a remoting boundary. A value of false is usually appropriate. true to copy the 
+             current System.MarshalByRefObject object's identity to its clone, which will 
+             cause remoting client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -598,11 +692,17 @@ class Stream(MarshalByRefObject, IDisposable):
         """
         Read(self: Stream, offset: int, count: int) -> (int, Array[Byte])
         
-            When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.
+            When overridden in a derived class, reads a sequence of bytes from the current 
+             stream and advances the position within the stream by the number of bytes read.
         
-            offset: The zero-based byte offset in buffer at which to begin storing the data read from the current stream.
+        
+            offset: The zero-based byte offset in buffer at which to begin storing the data read 
+             from the current stream.
+        
             count: The maximum number of bytes to be read from the current stream.
-            Returns: The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.
+            Returns: The total number of bytes read into the buffer. This can be less than the 
+             number of bytes requested if that many bytes are not currently available, or 
+             zero (0) if the end of the stream has been reached.
         """
         pass
 
@@ -617,7 +717,9 @@ class Stream(MarshalByRefObject, IDisposable):
         """
         ReadByte(self: Stream) -> int
         
-            Reads a byte from the stream and advances the position within the stream by one byte, or returns -1 if at the end of the stream.
+            Reads a byte from the stream and advances the position within the stream by one 
+             byte, or returns -1 if at the end of the stream.
+        
             Returns: The unsigned byte cast to an Int32, or -1 if at the end of the stream.
         """
         pass
@@ -629,7 +731,9 @@ class Stream(MarshalByRefObject, IDisposable):
             When overridden in a derived class, sets the position within the current stream.
         
             offset: A byte offset relative to the origin parameter.
-            origin: A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.
+            origin: A value of type System.IO.SeekOrigin indicating the reference point used to 
+             obtain the new position.
+        
             Returns: The new position within the current stream.
         """
         pass
@@ -648,7 +752,9 @@ class Stream(MarshalByRefObject, IDisposable):
         """
         Synchronized(stream: Stream) -> Stream
         
-            Creates a thread-safe (synchronized) wrapper around the specified System.IO.Stream object.
+            Creates a thread-safe (synchronized) wrapper around the specified 
+             System.IO.Stream object.
+        
         
             stream: The System.IO.Stream object to synchronize.
             Returns: A thread-safe System.IO.Stream object.
@@ -658,10 +764,17 @@ class Stream(MarshalByRefObject, IDisposable):
     def Write(self, buffer, offset, count):
         """
         Write(self: Stream, buffer: Array[Byte], offset: int, count: int)
-            When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
+            When overridden in a derived class, writes a sequence of bytes to the current 
+             stream and advances the current position within this stream by the number of 
+             bytes written.
         
-            buffer: An array of bytes. This method copies count bytes from buffer to the current stream.
-            offset: The zero-based byte offset in buffer at which to begin copying bytes to the current stream.
+        
+            buffer: An array of bytes. This method copies count bytes from buffer to the current 
+             stream.
+        
+            offset: The zero-based byte offset in buffer at which to begin copying bytes to the 
+             current stream.
+        
             count: The number of bytes to be written to the current stream.
         """
         pass
@@ -676,25 +789,20 @@ class Stream(MarshalByRefObject, IDisposable):
     def WriteByte(self, value):
         """
         WriteByte(self: Stream, value: Byte)
-            Writes a byte to the current position in the stream and advances the position within the stream by one byte.
+            Writes a byte to the current position in the stream and advances the position 
+             within the stream by one byte.
+        
         
             value: The byte to write to the stream.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -806,7 +914,8 @@ class BufferedStream(Stream, IDisposable):
     def Flush(self):
         """
         Flush(self: BufferedStream)
-            Clears all buffers for this stream and causes any buffered data to be written to the underlying device.
+            Clears all buffers for this stream and causes any buffered data to be written 
+             to the underlying device.
         """
         pass
 
@@ -820,8 +929,11 @@ class BufferedStream(Stream, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-             usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled across 
+             a remoting boundary. A value of false is usually appropriate. true to copy the 
+             current System.MarshalByRefObject object's identity to its clone, which will 
+             cause remoting client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -846,8 +958,9 @@ class BufferedStream(Stream, IDisposable):
         
             offset: The byte offset in the buffer at which to begin reading bytes.
             count: The number of bytes to be read.
-            Returns: The total number of bytes read into array. This can be less than the number of bytes requested if that many bytes are not currently available, or 0 if the end of the stream has been reached before any data 
-             can be read.
+            Returns: The total number of bytes read into array. This can be less than the number of 
+             bytes requested if that many bytes are not currently available, or 0 if the end 
+             of the stream has been reached before any data can be read.
         """
         pass
 
@@ -859,7 +972,9 @@ class BufferedStream(Stream, IDisposable):
         """
         ReadByte(self: BufferedStream) -> int
         
-            Reads a byte from the underlying stream and returns the byte cast to an int, or returns -1 if reading from the end of the stream.
+            Reads a byte from the underlying stream and returns the byte cast to an int, or 
+             returns -1 if reading from the end of the stream.
+        
             Returns: The byte cast to an int, or -1 if reading from the end of the stream.
         """
         pass
@@ -871,7 +986,9 @@ class BufferedStream(Stream, IDisposable):
             Sets the position within the current buffered stream.
         
             offset: A byte offset relative to origin.
-            origin: A value of type System.IO.SeekOrigin indicating the reference point from which to obtain the new position.
+            origin: A value of type System.IO.SeekOrigin indicating the reference point from which 
+             to obtain the new position.
+        
             Returns: The new position within the current buffered stream.
         """
         pass
@@ -881,17 +998,22 @@ class BufferedStream(Stream, IDisposable):
         SetLength(self: BufferedStream, value: Int64)
             Sets the length of the buffered stream.
         
-            value: An integer indicating the desired length of the current buffered stream in bytes.
+            value: An integer indicating the desired length of the current buffered stream in 
+             bytes.
         """
         pass
 
     def Write(self, array, offset, count):
         """
         Write(self: BufferedStream, array: Array[Byte], offset: int, count: int)
-            Copies bytes to the buffered stream and advances the current position within the buffered stream by the number of bytes written.
+            Copies bytes to the buffered stream and advances the current position within 
+             the buffered stream by the number of bytes written.
+        
         
             array: The byte array from which to copy count bytes to the current buffered stream.
-            offset: The offset in the buffer at which to begin copying bytes to the current buffered stream.
+            offset: The offset in the buffer at which to begin copying bytes to the current 
+             buffered stream.
+        
             count: The number of bytes to be written to the current buffered stream.
         """
         pass
@@ -910,18 +1032,11 @@ class BufferedStream(Stream, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -981,7 +1096,9 @@ class Directory(object):
         """
         CreateDirectory(path: str, directorySecurity: DirectorySecurity) -> DirectoryInfo
         
-            Creates all the directories in the specified path, applying the specified Windows security.
+            Creates all the directories in the specified path, applying the specified 
+             Windows security.
+        
         
             path: The directory to create.
             directorySecurity: The access control to apply to the directory.
@@ -999,14 +1116,17 @@ class Directory(object):
     def Delete(path, recursive=None):
         """
         Delete(path: str, recursive: bool)
-            Deletes the specified directory and, if indicated, any subdirectories and files in the directory.
+            Deletes the specified directory and, if indicated, any subdirectories and files 
+             in the directory.
+        
         
             path: The name of the directory to remove.
             recursive: true to remove directories, subdirectories, and files in path; otherwise, false.
         Delete(path: str)
             Deletes an empty directory from a specified path.
         
-            path: The name of the empty directory to remove. This directory must be writable or empty.
+            path: The name of the empty directory to remove. This directory must be writable or 
+             empty.
         """
         pass
 
@@ -1015,21 +1135,31 @@ class Directory(object):
         """
         EnumerateDirectories(path: str, searchPattern: str, searchOption: SearchOption) -> IEnumerable[str]
         
-            Returns an enumerable collection of directory names that match a search pattern in a specified path, and optionally searches subdirectories.
+            Returns an enumerable collection of directory names that match a search pattern 
+             in a specified path, and optionally searches subdirectories.
+        
         
             path: The directory to search.
             searchPattern: The search string to match against the names of directories in path.
-            searchOption: One of the values of the System.IO.SearchOption enumeration that specifies whether the search operation should include only the current directory or should include all subdirectories.The default value is 
+            searchOption: One of the values of the System.IO.SearchOption enumeration that specifies 
+             whether the search operation should include only the current directory or 
+             should include all subdirectories.The default value is 
              System.IO.SearchOption.TopDirectoryOnly.
         
-            Returns: An enumerable collection of directory names in the directory specified by path and that match searchPattern and searchOption.
+            Returns: An enumerable collection of directory names in the directory specified by path 
+             and that match searchPattern and searchOption.
+        
         EnumerateDirectories(path: str, searchPattern: str) -> IEnumerable[str]
         
-            Returns an enumerable collection of directory names that match a search pattern in a specified path.
+            Returns an enumerable collection of directory names that match a search pattern 
+             in a specified path.
+        
         
             path: The directory to search.
             searchPattern: The search string to match against the names of directories in path.
-            Returns: An enumerable collection of directory names in the directory specified by path and that match searchPattern.
+            Returns: An enumerable collection of directory names in the directory specified by path 
+             and that match searchPattern.
+        
         EnumerateDirectories(path: str) -> IEnumerable[str]
         
             Returns an enumerable collection of directory names in a specified path.
@@ -1044,21 +1174,31 @@ class Directory(object):
         """
         EnumerateFiles(path: str, searchPattern: str, searchOption: SearchOption) -> IEnumerable[str]
         
-            Returns an enumerable collection of file names that match a search pattern in a specified path, and optionally searches subdirectories.
+            Returns an enumerable collection of file names that match a search pattern in a 
+             specified path, and optionally searches subdirectories.
+        
         
             path: The directory to search.
             searchPattern: The search string to match against the names of directories in path.
-            searchOption: One of the values of the System.IO.SearchOption enumeration that specifies whether the search operation should include only the current directory or should include all subdirectories.The default value is 
+            searchOption: One of the values of the System.IO.SearchOption enumeration that specifies 
+             whether the search operation should include only the current directory or 
+             should include all subdirectories.The default value is 
              System.IO.SearchOption.TopDirectoryOnly.
         
-            Returns: An enumerable collection of file names in the directory specified by path and that match searchPattern and searchOption.
+            Returns: An enumerable collection of file names in the directory specified by path and 
+             that match searchPattern and searchOption.
+        
         EnumerateFiles(path: str, searchPattern: str) -> IEnumerable[str]
         
-            Returns an enumerable collection of file names that match a search pattern in a specified path.
+            Returns an enumerable collection of file names that match a search pattern in a 
+             specified path.
+        
         
             path: The directory to search.
             searchPattern: The search string to match against the names of directories in path.
-            Returns: An enumerable collection of file names in the directory specified by path and that match searchPattern.
+            Returns: An enumerable collection of file names in the directory specified by path and 
+             that match searchPattern.
+        
         EnumerateFiles(path: str) -> IEnumerable[str]
         
             Returns an enumerable collection of file names in a specified path.
@@ -1073,27 +1213,38 @@ class Directory(object):
         """
         EnumerateFileSystemEntries(path: str, searchPattern: str, searchOption: SearchOption) -> IEnumerable[str]
         
-            Returns an enumerable collection of file names and directory names that match a search pattern in a specified path, and optionally searches subdirectories.
+            Returns an enumerable collection of file names and directory names that match a 
+             search pattern in a specified path, and optionally searches subdirectories.
+        
         
             path: The directory to search.
             searchPattern: The search string to match against the names of directories in path.
-            searchOption: One of the values of the System.IO.SearchOption enumeration that specifies whether the search operation should include only the current directory or should include all subdirectories.The default value is 
+            searchOption: One of the values of the System.IO.SearchOption enumeration that specifies 
+             whether the search operation should include only the current directory or 
+             should include all subdirectories.The default value is 
              System.IO.SearchOption.TopDirectoryOnly.
         
-            Returns: An enumerable collection of file-system entries in the directory specified by path and that match searchPattern and searchOption.
+            Returns: An enumerable collection of file-system entries in the directory specified by 
+             path and that match searchPattern and searchOption.
+        
         EnumerateFileSystemEntries(path: str, searchPattern: str) -> IEnumerable[str]
         
-            Returns an enumerable collection of file-system entries that match a search pattern in a specified path.
+            Returns an enumerable collection of file-system entries that match a search 
+             pattern in a specified path.
+        
         
             path: The directory to search.
             searchPattern: The search string to match against the names of directories in path.
-            Returns: An enumerable collection of file-system entries in the directory specified by path and that match searchPattern.
+            Returns: An enumerable collection of file-system entries in the directory specified by 
+             path and that match searchPattern.
+        
         EnumerateFileSystemEntries(path: str) -> IEnumerable[str]
         
             Returns an enumerable collection of file-system entries in a specified path.
         
             path: The directory to search.
-            Returns: An enumerable collection of file-system entries in the directory specified by path.
+            Returns: An enumerable collection of file-system entries in the directory specified by 
+             path.
         """
         pass
 
@@ -1114,17 +1265,33 @@ class Directory(object):
         """
         GetAccessControl(path: str, includeSections: AccessControlSections) -> DirectorySecurity
         
-            Gets a System.Security.AccessControl.DirectorySecurity object that encapsulates the specified type of access control list (ACL) entries for a specified directory.
+            Gets a System.Security.AccessControl.DirectorySecurity object that encapsulates 
+             the specified type of access control list (ACL) entries for a specified 
+             directory.
         
-            path: The path to a directory containing a System.Security.AccessControl.DirectorySecurity object that describes the file's access control list (ACL) information.
-            includeSections: One of the System.Security.AccessControl.AccessControlSections values that specifies the type of access control list (ACL) information to receive.
-            Returns: A System.Security.AccessControl.DirectorySecurity object that encapsulates the access control rules for the file described by the path parameter.
+        
+            path: The path to a directory containing a 
+             System.Security.AccessControl.DirectorySecurity object that describes the 
+             file's access control list (ACL) information.
+        
+            includeSections: One of the System.Security.AccessControl.AccessControlSections values that 
+             specifies the type of access control list (ACL) information to receive.
+        
+            Returns: A System.Security.AccessControl.DirectorySecurity object that encapsulates the 
+             access control rules for the file described by the path parameter.
+        
         GetAccessControl(path: str) -> DirectorySecurity
         
-            Gets a System.Security.AccessControl.DirectorySecurity object that encapsulates the access control list (ACL) entries for a specified directory.
+            Gets a System.Security.AccessControl.DirectorySecurity object that encapsulates 
+             the access control list (ACL) entries for a specified directory.
         
-            path: The path to a directory containing a System.Security.AccessControl.DirectorySecurity object that describes the file's access control list (ACL) information.
-            Returns: A System.Security.AccessControl.DirectorySecurity object that encapsulates the access control rules for the file described by the path parameter.
+        
+            path: The path to a directory containing a 
+             System.Security.AccessControl.DirectorySecurity object that describes the 
+             file's access control list (ACL) information.
+        
+            Returns: A System.Security.AccessControl.DirectorySecurity object that encapsulates the 
+             access control rules for the file described by the path parameter.
         """
         pass
 
@@ -1136,7 +1303,8 @@ class Directory(object):
             Gets the creation date and time of a directory.
         
             path: The path of the directory.
-            Returns: A System.DateTime structure set to the creation date and time for the specified directory. This value is expressed in local time.
+            Returns: A System.DateTime structure set to the creation date and time for the specified 
+             directory. This value is expressed in local time.
         """
         pass
 
@@ -1145,10 +1313,13 @@ class Directory(object):
         """
         GetCreationTimeUtc(path: str) -> DateTime
         
-            Gets the creation date and time, in Coordinated Universal Time (UTC) format, of a directory.
+            Gets the creation date and time, in Coordinated Universal Time (UTC) format, of 
+             a directory.
+        
         
             path: The path of the directory.
-            Returns: A System.DateTime structure set to the creation date and time for the specified directory. This value is expressed in UTC time.
+            Returns: A System.DateTime structure set to the creation date and time for the specified 
+             directory. This value is expressed in UTC time.
         """
         pass
 
@@ -1158,7 +1329,8 @@ class Directory(object):
         GetCurrentDirectory() -> str
         
             Gets the current working directory of the application.
-            Returns: A string that contains the path of the current working directory, and does not end with a backslash (\).
+            Returns: A string that contains the path of the current working directory, and does not 
+             end with a backslash (\).
         """
         pass
 
@@ -1167,26 +1339,41 @@ class Directory(object):
         """
         GetDirectories(path: str, searchPattern: str, searchOption: SearchOption) -> Array[str]
         
-            Gets the names of the directories (including their paths) that match the specified search pattern in the current directory, and optionally searches subdirectories.
+            Gets the names of the directories (including their paths) that match the 
+             specified search pattern in the current directory, and optionally searches 
+             subdirectories.
+        
         
             path: The path to search.
-            searchPattern: The search string to match against the names of files in path. The parameter cannot end in two periods ("..") or contain two periods ("..") followed by System.IO.Path.DirectorySeparatorChar or 
-             System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the characters in System.IO.Path.InvalidPathChars.
+            searchPattern: The search string to match against the names of files in path. The parameter 
+             cannot end in two periods ("..") or contain two periods ("..") followed by 
+             System.IO.Path.DirectorySeparatorChar or 
+             System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the 
+             characters in System.IO.Path.InvalidPathChars.
         
-            searchOption: One of the System.IO.SearchOption values that specifies whether the search operation should include all subdirectories or only the current directory.
+            searchOption: One of the System.IO.SearchOption values that specifies whether the search 
+             operation should include all subdirectories or only the current directory.
+        
             Returns: A String array of directories that match the search pattern.
         GetDirectories(path: str, searchPattern: str) -> Array[str]
         
-            Gets an array of directories (including their paths) that match the specified search pattern in the current directory.
+            Gets an array of directories (including their paths) that match the specified 
+             search pattern in the current directory.
+        
         
             path: The path to search.
-            searchPattern: The search string to match against the names of files in path. The parameter cannot end in two periods ("..") or contain two periods ("..") followed by System.IO.Path.DirectorySeparatorChar or 
-             System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the characters in System.IO.Path.InvalidPathChars.
+            searchPattern: The search string to match against the names of files in path. The parameter 
+             cannot end in two periods ("..") or contain two periods ("..") followed by 
+             System.IO.Path.DirectorySeparatorChar or 
+             System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the 
+             characters in System.IO.Path.InvalidPathChars.
         
             Returns: A String array of directories that match the search pattern.
         GetDirectories(path: str) -> Array[str]
         
-            Gets the names of subdirectories (including their paths) in the specified directory.
+            Gets the names of subdirectories (including their paths) in the specified 
+             directory.
+        
         
             path: The path for which an array of subdirectory names is returned.
             Returns: An array of the names of subdirectories in path.
@@ -1198,10 +1385,13 @@ class Directory(object):
         """
         GetDirectoryRoot(path: str) -> str
         
-            Returns the volume information, root information, or both for the specified path.
+            Returns the volume information, root information, or both for the specified 
+             path.
+        
         
             path: The path of a file or directory.
-            Returns: A string containing the volume information, root information, or both for the specified path.
+            Returns: A string containing the volume information, root information, or both for the 
+             specified path.
         """
         pass
 
@@ -1210,23 +1400,40 @@ class Directory(object):
         """
         GetFiles(path: str, searchPattern: str, searchOption: SearchOption) -> Array[str]
         
-            Returns the names of files (including their paths) that match the specified search pattern in the specified directory, using a value to determine whether to search subdirectories.
+            Returns the names of files (including their paths) that match the specified 
+             search pattern in the specified directory, using a value to determine whether 
+             to search subdirectories.
+        
         
             path: The directory to search.
-            searchPattern: The search string to match against the names of files in path. The parameter cannot end in two periods ("..") or contain two periods ("..") followed by System.IO.Path.DirectorySeparatorChar or 
-             System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the characters in System.IO.Path.InvalidPathChars.
+            searchPattern: The search string to match against the names of files in path. The parameter 
+             cannot end in two periods ("..") or contain two periods ("..") followed by 
+             System.IO.Path.DirectorySeparatorChar or 
+             System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the 
+             characters in System.IO.Path.InvalidPathChars.
         
-            searchOption: One of the System.IO.SearchOption values that specifies whether the search operation should include all subdirectories or only the current directory.
-            Returns: A String array containing the names of files in the specified directory that match the specified search pattern. File names include the full path.
+            searchOption: One of the System.IO.SearchOption values that specifies whether the search 
+             operation should include all subdirectories or only the current directory.
+        
+            Returns: A String array containing the names of files in the specified directory that 
+             match the specified search pattern. File names include the full path.
+        
         GetFiles(path: str, searchPattern: str) -> Array[str]
         
-            Returns the names of files (including their paths) that match the specified search pattern in the specified directory.
+            Returns the names of files (including their paths) that match the specified 
+             search pattern in the specified directory.
+        
         
             path: The directory to search.
-            searchPattern: The search string to match against the names of files in path. The parameter cannot end in two periods ("..") or contain two periods ("..") followed by System.IO.Path.DirectorySeparatorChar or 
-             System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the characters in System.IO.Path.InvalidPathChars.
+            searchPattern: The search string to match against the names of files in path. The parameter 
+             cannot end in two periods ("..") or contain two periods ("..") followed by 
+             System.IO.Path.DirectorySeparatorChar or 
+             System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the 
+             characters in System.IO.Path.InvalidPathChars.
         
-            Returns: A String array containing the names of files in the specified directory that match the specified search pattern. File names include the full path.
+            Returns: A String array containing the names of files in the specified directory that 
+             match the specified search pattern. File names include the full path.
+        
         GetFiles(path: str) -> Array[str]
         
             Returns the names of files (including their paths) in the specified directory.
@@ -1241,19 +1448,31 @@ class Directory(object):
         """
         GetFileSystemEntries(path: str, searchPattern: str, searchOption: SearchOption) -> Array[str]
         
-            Gets an array of all the file names and directory names that match a search pattern in a specified path, and optionally searches subdirectories.
+            Gets an array of all the file names and directory names that match a search 
+             pattern in a specified path, and optionally searches subdirectories.
+        
         
             path: The directory to search.
-            searchPattern: The string used to search for all files or directories that match its search pattern. The default pattern is for all files and directories: "*"
-            searchOption: The option that specifies whether the search operation should include only the current directory or should include all subdirectories.The default value is System.IO.SearchOption.TopDirectoryOnly.
+            searchPattern: The string used to search for all files or directories that match its search 
+             pattern. The default pattern is for all files and directories: "*"
+        
+            searchOption: The option that specifies whether the search operation should include only the 
+             current directory or should include all subdirectories.The default value is 
+             System.IO.SearchOption.TopDirectoryOnly.
+        
             Returns: An array of file system entries that match the search criteria.
         GetFileSystemEntries(path: str, searchPattern: str) -> Array[str]
         
-            Returns an array of file system entries that match the specified search criteria.
+            Returns an array of file system entries that match the specified search 
+             criteria.
+        
         
             path: The path to be searched.
-            searchPattern: The search string to match against the names of files in path. The searchPattern parameter cannot end in two periods ("..") or contain two periods ("..") followed by System.IO.Path.DirectorySeparatorChar 
-             or System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the characters in System.IO.Path.InvalidPathChars.
+            searchPattern: The search string to match against the names of files in path. The 
+             searchPattern parameter cannot end in two periods ("..") or contain two periods 
+             ("..") followed by System.IO.Path.DirectorySeparatorChar or 
+             System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the 
+             characters in System.IO.Path.InvalidPathChars.
         
             Returns: An array of file system entries that match the search criteria.
         GetFileSystemEntries(path: str) -> Array[str]
@@ -1261,7 +1480,8 @@ class Directory(object):
             Returns the names of all files and subdirectories in the specified directory.
         
             path: The directory for which file and subdirectory names are returned.
-            Returns: An array that contains the names of files and subdirectories in the specified directory.
+            Returns: An array that contains the names of files and subdirectories in the specified 
+             directory.
         """
         pass
 
@@ -1273,7 +1493,8 @@ class Directory(object):
             Returns the date and time the specified file or directory was last accessed.
         
             path: The file or directory for which to obtain access date and time information.
-            Returns: A System.DateTime structure set to the date and time the specified file or directory was last accessed. This value is expressed in local time.
+            Returns: A System.DateTime structure set to the date and time the specified file or 
+             directory was last accessed. This value is expressed in local time.
         """
         pass
 
@@ -1282,10 +1503,13 @@ class Directory(object):
         """
         GetLastAccessTimeUtc(path: str) -> DateTime
         
-            Returns the date and time, in Coordinated Universal Time (UTC) format, that the specified file or directory was last accessed.
+            Returns the date and time, in Coordinated Universal Time (UTC) format, that the 
+             specified file or directory was last accessed.
+        
         
             path: The file or directory for which to obtain access date and time information.
-            Returns: A System.DateTime structure set to the date and time the specified file or directory was last accessed. This value is expressed in UTC time.
+            Returns: A System.DateTime structure set to the date and time the specified file or 
+             directory was last accessed. This value is expressed in UTC time.
         """
         pass
 
@@ -1296,8 +1520,11 @@ class Directory(object):
         
             Returns the date and time the specified file or directory was last written to.
         
-            path: The file or directory for which to obtain modification date and time information.
-            Returns: A System.DateTime structure set to the date and time the specified file or directory was last written to. This value is expressed in local time.
+            path: The file or directory for which to obtain modification date and time 
+             information.
+        
+            Returns: A System.DateTime structure set to the date and time the specified file or 
+             directory was last written to. This value is expressed in local time.
         """
         pass
 
@@ -1306,10 +1533,15 @@ class Directory(object):
         """
         GetLastWriteTimeUtc(path: str) -> DateTime
         
-            Returns the date and time, in Coordinated Universal Time (UTC) format, that the specified file or directory was last written to.
+            Returns the date and time, in Coordinated Universal Time (UTC) format, that the 
+             specified file or directory was last written to.
         
-            path: The file or directory for which to obtain modification date and time information.
-            Returns: A System.DateTime structure set to the date and time the specified file or directory was last written to. This value is expressed in UTC time.
+        
+            path: The file or directory for which to obtain modification date and time 
+             information.
+        
+            Returns: A System.DateTime structure set to the date and time the specified file or 
+             directory was last written to. This value is expressed in UTC time.
         """
         pass
 
@@ -1318,7 +1550,9 @@ class Directory(object):
         """
         GetLogicalDrives() -> Array[str]
         
-            Retrieves the names of the logical drives on this computer in the form "<drive letter>:\".
+            Retrieves the names of the logical drives on this computer in the form "<drive 
+             letter>:\".
+        
             Returns: The logical drives on this computer.
         """
         pass
@@ -1328,10 +1562,13 @@ class Directory(object):
         """
         GetParent(path: str) -> DirectoryInfo
         
-            Retrieves the parent directory of the specified path, including both absolute and relative paths.
+            Retrieves the parent directory of the specified path, including both absolute 
+             and relative paths.
+        
         
             path: The path for which to retrieve the parent directory.
-            Returns: The parent directory, or null if path is the root directory, including the root of a UNC server or share name.
+            Returns: The parent directory, or null if path is the root directory, including the root 
+             of a UNC server or share name.
         """
         pass
 
@@ -1342,7 +1579,8 @@ class Directory(object):
             Moves a file or a directory and its contents to a new location.
         
             sourceDirName: The path of the file or directory to move.
-            destDirName: The path to the new location for sourceDirName. If sourceDirName is a file, then destDirName must also be a file name.
+            destDirName: The path to the new location for sourceDirName. If sourceDirName is a file, 
+             then destDirName must also be a file name.
         """
         pass
 
@@ -1350,10 +1588,14 @@ class Directory(object):
     def SetAccessControl(path, directorySecurity):
         """
         SetAccessControl(path: str, directorySecurity: DirectorySecurity)
-            Applies access control list (ACL) entries described by a System.Security.AccessControl.DirectorySecurity object to the specified directory.
+            Applies access control list (ACL) entries described by a 
+             System.Security.AccessControl.DirectorySecurity object to the specified 
+             directory.
+        
         
             path: A directory to add or remove access control list (ACL) entries from.
-            directorySecurity: A System.Security.AccessControl.DirectorySecurity object that describes an ACL entry to apply to the directory described by the path parameter.
+            directorySecurity: A System.Security.AccessControl.DirectorySecurity object that describes an ACL 
+             entry to apply to the directory described by the path parameter.
         """
         pass
 
@@ -1364,7 +1606,8 @@ class Directory(object):
             Sets the creation date and time for the specified file or directory.
         
             path: The file or directory for which to set the creation date and time information.
-            creationTime: A System.DateTime containing the value to set for the creation date and time of path. This value is expressed in local time.
+            creationTime: A System.DateTime containing the value to set for the creation date and time of 
+             path. This value is expressed in local time.
         """
         pass
 
@@ -1372,10 +1615,13 @@ class Directory(object):
     def SetCreationTimeUtc(path, creationTimeUtc):
         """
         SetCreationTimeUtc(path: str, creationTimeUtc: DateTime)
-            Sets the creation date and time, in Coordinated Universal Time (UTC) format, for the specified file or directory.
+            Sets the creation date and time, in Coordinated Universal Time (UTC) format, 
+             for the specified file or directory.
+        
         
             path: The file or directory for which to set the creation date and time information.
-            creationTimeUtc: A System.DateTime containing the value to set for the creation date and time of path. This value is expressed in UTC time.
+            creationTimeUtc: A System.DateTime containing the value to set for the creation date and time of 
+             path. This value is expressed in UTC time.
         """
         pass
 
@@ -1396,7 +1642,8 @@ class Directory(object):
             Sets the date and time the specified file or directory was last accessed.
         
             path: The file or directory for which to set the access date and time information.
-            lastAccessTime: A System.DateTime containing the value to set for the access date and time of path. This value is expressed in local time.
+            lastAccessTime: A System.DateTime containing the value to set for the access date and time of 
+             path. This value is expressed in local time.
         """
         pass
 
@@ -1404,10 +1651,13 @@ class Directory(object):
     def SetLastAccessTimeUtc(path, lastAccessTimeUtc):
         """
         SetLastAccessTimeUtc(path: str, lastAccessTimeUtc: DateTime)
-            Sets the date and time, in Coordinated Universal Time (UTC) format, that the specified file or directory was last accessed.
+            Sets the date and time, in Coordinated Universal Time (UTC) format, that the 
+             specified file or directory was last accessed.
+        
         
             path: The file or directory for which to set the access date and time information.
-            lastAccessTimeUtc: A System.DateTime containing the value to set for the access date and time of path. This value is expressed in UTC time.
+            lastAccessTimeUtc: A System.DateTime containing the value to set for the access date and time of 
+             path. This value is expressed in UTC time.
         """
         pass
 
@@ -1418,7 +1668,8 @@ class Directory(object):
             Sets the date and time a directory was last written to.
         
             path: The path of the directory.
-            lastWriteTime: The date and time the directory was last written to. This value is expressed in local time.
+            lastWriteTime: The date and time the directory was last written to. This value is expressed in 
+             local time.
         """
         pass
 
@@ -1426,10 +1677,13 @@ class Directory(object):
     def SetLastWriteTimeUtc(path, lastWriteTimeUtc):
         """
         SetLastWriteTimeUtc(path: str, lastWriteTimeUtc: DateTime)
-            Sets the date and time, in Coordinated Universal Time (UTC) format, that a directory was last written to.
+            Sets the date and time, in Coordinated Universal Time (UTC) format, that a 
+             directory was last written to.
+        
         
             path: The path of the directory.
-            lastWriteTimeUtc: The date and time the directory was last written to. This value is expressed in UTC time.
+            lastWriteTimeUtc: The date and time the directory was last written to. This value is expressed in 
+             UTC time.
         """
         pass
 
@@ -1478,10 +1732,15 @@ class FileSystemInfo(MarshalByRefObject, ISerializable):
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: FileSystemInfo, info: SerializationInfo, context: StreamingContext)
-            Sets the System.Runtime.Serialization.SerializationInfo object with the file name and additional exception information.
+            Sets the System.Runtime.Serialization.SerializationInfo object with the file 
+             name and additional exception information.
         
-            info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about the exception being thrown.
-            context: The System.Runtime.Serialization.StreamingContext that contains contextual information about the source or destination.
+        
+            info: The System.Runtime.Serialization.SerializationInfo that holds the serialized 
+             object data about the exception being thrown.
+        
+            context: The System.Runtime.Serialization.StreamingContext that contains contextual 
+             information about the source or destination.
         """
         pass
 
@@ -1491,8 +1750,11 @@ class FileSystemInfo(MarshalByRefObject, ISerializable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-             usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled across 
+             a remoting boundary. A value of false is usually appropriate. true to copy the 
+             current System.MarshalByRefObject object's identity to its clone, which will 
+             cause remoting client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -1622,7 +1884,9 @@ class DirectoryInfo(FileSystemInfo, ISerializable):
     def Create(self, directorySecurity=None):
         """
         Create(self: DirectoryInfo, directorySecurity: DirectorySecurity)
-            Creates a directory using a System.Security.AccessControl.DirectorySecurity object.
+            Creates a directory using a System.Security.AccessControl.DirectorySecurity 
+             object.
+        
         
             directorySecurity: The access control to apply to the directory.
         Create(self: DirectoryInfo)
@@ -1634,16 +1898,25 @@ class DirectoryInfo(FileSystemInfo, ISerializable):
         """
         CreateSubdirectory(self: DirectoryInfo, path: str, directorySecurity: DirectorySecurity) -> DirectoryInfo
         
-            Creates a subdirectory or subdirectories on the specified path with the specified security. The specified path can be relative to this instance of the System.IO.DirectoryInfo class.
+            Creates a subdirectory or subdirectories on the specified path with the 
+             specified security. The specified path can be relative to this instance of the 
+             System.IO.DirectoryInfo class.
         
-            path: The specified path. This cannot be a different disk volume or Universal Naming Convention (UNC) name.
+        
+            path: The specified path. This cannot be a different disk volume or Universal Naming 
+             Convention (UNC) name.
+        
             directorySecurity: The security to apply.
             Returns: The last directory specified in path.
         CreateSubdirectory(self: DirectoryInfo, path: str) -> DirectoryInfo
         
-            Creates a subdirectory or subdirectories on the specified path. The specified path can be relative to this instance of the System.IO.DirectoryInfo class.
+            Creates a subdirectory or subdirectories on the specified path. The specified 
+             path can be relative to this instance of the System.IO.DirectoryInfo class.
         
-            path: The specified path. This cannot be a different disk volume or Universal Naming Convention (UNC) name.
+        
+            path: The specified path. This cannot be a different disk volume or Universal Naming 
+             Convention (UNC) name.
+        
             Returns: The last directory specified in path.
         """
         pass
@@ -1651,9 +1924,13 @@ class DirectoryInfo(FileSystemInfo, ISerializable):
     def Delete(self, recursive=None):
         """
         Delete(self: DirectoryInfo, recursive: bool)
-            Deletes this instance of a System.IO.DirectoryInfo, specifying whether to delete subdirectories and files.
+            Deletes this instance of a System.IO.DirectoryInfo, specifying whether to 
+             delete subdirectories and files.
         
-            recursive: true to delete this directory, its subdirectories, and all files; otherwise, false.
+        
+            recursive: true to delete this directory, its subdirectories, and all files; otherwise, 
+             false.
+        
         Delete(self: DirectoryInfo)
             Deletes this System.IO.DirectoryInfo if it is empty.
         """
@@ -1663,20 +1940,31 @@ class DirectoryInfo(FileSystemInfo, ISerializable):
         """
         EnumerateDirectories(self: DirectoryInfo, searchPattern: str, searchOption: SearchOption) -> IEnumerable[DirectoryInfo]
         
-            Returns an enumerable collection of directory information that matches a specified search pattern and search subdirectory option.
+            Returns an enumerable collection of directory information that matches a 
+             specified search pattern and search subdirectory option.
+        
         
             searchPattern: The search string. The default pattern is "*", which returns all directories.
-            searchOption: One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories. The default value is System.IO.SearchOption.TopDirectoryOnly.
-            Returns: An enumerable collection of directories that matches searchPattern and searchOption.
+            searchOption: One of the enumeration values that specifies whether the search operation 
+             should include only the current directory or all subdirectories. The default 
+             value is System.IO.SearchOption.TopDirectoryOnly.
+        
+            Returns: An enumerable collection of directories that matches searchPattern and 
+             searchOption.
+        
         EnumerateDirectories(self: DirectoryInfo, searchPattern: str) -> IEnumerable[DirectoryInfo]
         
-            Returns an enumerable collection of directory information that matches a specified search pattern.
+            Returns an enumerable collection of directory information that matches a 
+             specified search pattern.
+        
         
             searchPattern: The search string. The default pattern is "*", which returns all directories.
             Returns: An enumerable collection of directories that matches searchPattern.
         EnumerateDirectories(self: DirectoryInfo) -> IEnumerable[DirectoryInfo]
         
-            Returns an enumerable collection of directory information in the current directory.
+            Returns an enumerable collection of directory information in the current 
+             directory.
+        
             Returns: An enumerable collection of directories in the current directory.
         """
         pass
@@ -1685,14 +1973,21 @@ class DirectoryInfo(FileSystemInfo, ISerializable):
         """
         EnumerateFiles(self: DirectoryInfo, searchPattern: str, searchOption: SearchOption) -> IEnumerable[FileInfo]
         
-            Returns an enumerable collection of file information that matches a specified search pattern and search subdirectory option.
+            Returns an enumerable collection of file information that matches a specified 
+             search pattern and search subdirectory option.
+        
         
             searchPattern: The search string. The default pattern is "*", which returns all files.
-            searchOption: One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories. The default value is System.IO.SearchOption.TopDirectoryOnly.
+            searchOption: One of the enumeration values that specifies whether the search operation 
+             should include only the current directory or all subdirectories. The default 
+             value is System.IO.SearchOption.TopDirectoryOnly.
+        
             Returns: An enumerable collection of files that matches searchPattern and searchOption.
         EnumerateFiles(self: DirectoryInfo, searchPattern: str) -> IEnumerable[FileInfo]
         
-            Returns an enumerable collection of file information that matches a search pattern.
+            Returns an enumerable collection of file information that matches a search 
+             pattern.
+        
         
             searchPattern: The search string. The default pattern is "*", which returns all files.
             Returns: An enumerable collection of files that matches searchPattern.
@@ -1707,20 +2002,37 @@ class DirectoryInfo(FileSystemInfo, ISerializable):
         """
         EnumerateFileSystemInfos(self: DirectoryInfo, searchPattern: str, searchOption: SearchOption) -> IEnumerable[FileSystemInfo]
         
-            Returns an enumerable collection of file system information that matches a specified search pattern and search subdirectory option.
+            Returns an enumerable collection of file system information that matches a 
+             specified search pattern and search subdirectory option.
         
-            searchPattern: The search string. The default pattern is "*", which returns all files or directories.
-            searchOption: One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories. The default value is System.IO.SearchOption.TopDirectoryOnly.
-            Returns: An enumerable collection of file system information objects that matches searchPattern and searchOption.
+        
+            searchPattern: The search string. The default pattern is "*", which returns all files or 
+             directories.
+        
+            searchOption: One of the enumeration values that specifies whether the search operation 
+             should include only the current directory or all subdirectories. The default 
+             value is System.IO.SearchOption.TopDirectoryOnly.
+        
+            Returns: An enumerable collection of file system information objects that matches 
+             searchPattern and searchOption.
+        
         EnumerateFileSystemInfos(self: DirectoryInfo, searchPattern: str) -> IEnumerable[FileSystemInfo]
         
-            Returns an enumerable collection of file system information that matches a specified search pattern.
+            Returns an enumerable collection of file system information that matches a 
+             specified search pattern.
         
-            searchPattern: The search string. The default pattern is "*", which returns all files and directories.
-            Returns: An enumerable collection of file system information objects that matches searchPattern.
+        
+            searchPattern: The search string. The default pattern is "*", which returns all files and 
+             directories.
+        
+            Returns: An enumerable collection of file system information objects that matches 
+             searchPattern.
+        
         EnumerateFileSystemInfos(self: DirectoryInfo) -> IEnumerable[FileSystemInfo]
         
-            Returns an enumerable collection of file system information in the current directory.
+            Returns an enumerable collection of file system information in the current 
+             directory.
+        
             Returns: An enumerable collection of file system information in the current directory.
         """
         pass
@@ -1729,20 +2041,33 @@ class DirectoryInfo(FileSystemInfo, ISerializable):
         """
         GetAccessControl(self: DirectoryInfo, includeSections: AccessControlSections) -> DirectorySecurity
         
-            Gets a System.Security.AccessControl.DirectorySecurity object that encapsulates the specified type of access control list (ACL) entries for the directory described by the current System.IO.DirectoryInfo 
-             object.
+            Gets a System.Security.AccessControl.DirectorySecurity object that encapsulates 
+             the specified type of access control list (ACL) entries for the directory 
+             described by the current System.IO.DirectoryInfo object.
         
         
-            includeSections: One of the System.Security.AccessControl.AccessControlSections values that specifies the type of access control list (ACL) information to receive.
-            Returns: A System.Security.AccessControl.DirectorySecurity object that encapsulates the access control rules for the file described by the path parameter.ExceptionsException typeConditionSystem.SystemExceptionThe 
-             directory could not be found or modified.System.UnauthorizedAccessExceptionThe current process does not have access to open the directory.System.IO.IOExceptionAn I/O error occurred while opening the 
-             directory.System.PlatformNotSupportedExceptionThe current operating system is not Microsoft Windows 2000 or later.System.UnauthorizedAccessExceptionThe directory is read-only.-or- This operation is not 
-             supported on the current platform.-or- The caller does not have the required permission.
+            includeSections: One of the System.Security.AccessControl.AccessControlSections values that 
+             specifies the type of access control list (ACL) information to receive.
+        
+            Returns: A System.Security.AccessControl.DirectorySecurity object that encapsulates the 
+             access control rules for the file described by the path 
+             parameter.ExceptionsException typeConditionSystem.SystemExceptionThe directory 
+             could not be found or modified.System.UnauthorizedAccessExceptionThe current 
+             process does not have access to open the directory.System.IO.IOExceptionAn I/O 
+             error occurred while opening the 
+             directory.System.PlatformNotSupportedExceptionThe current operating system is 
+             not Microsoft Windows 2000 or later.System.UnauthorizedAccessExceptionThe 
+             directory is read-only.-or- This operation is not supported on the current 
+             platform.-or- The caller does not have the required permission.
         
         GetAccessControl(self: DirectoryInfo) -> DirectorySecurity
         
-            Gets a System.Security.AccessControl.DirectorySecurity object that encapsulates the access control list (ACL) entries for the directory described by the current System.IO.DirectoryInfo object.
-            Returns: A System.Security.AccessControl.DirectorySecurity object that encapsulates the access control rules for the directory.
+            Gets a System.Security.AccessControl.DirectorySecurity object that encapsulates 
+             the access control list (ACL) entries for the directory described by the 
+             current System.IO.DirectoryInfo object.
+        
+            Returns: A System.Security.AccessControl.DirectorySecurity object that encapsulates the 
+             access control rules for the directory.
         """
         pass
 
@@ -1750,16 +2075,27 @@ class DirectoryInfo(FileSystemInfo, ISerializable):
         """
         GetDirectories(self: DirectoryInfo, searchPattern: str, searchOption: SearchOption) -> Array[DirectoryInfo]
         
-            Returns an array of directories in the current System.IO.DirectoryInfo matching the given search criteria and using a value to determine whether to search subdirectories.
+            Returns an array of directories in the current System.IO.DirectoryInfo matching 
+             the given search criteria and using a value to determine whether to search 
+             subdirectories.
         
-            searchPattern: The search string. For example, "System*" can be used to search for all directories that begin with the word "System".
-            searchOption: One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories.
+        
+            searchPattern: The search string. For example, "System*" can be used to search for all 
+             directories that begin with the word "System".
+        
+            searchOption: One of the enumeration values that specifies whether the search operation 
+             should include only the current directory or all subdirectories.
+        
             Returns: An array of type DirectoryInfo matching searchPattern.
         GetDirectories(self: DirectoryInfo, searchPattern: str) -> Array[DirectoryInfo]
         
-            Returns an array of directories in the current System.IO.DirectoryInfo matching the given search criteria.
+            Returns an array of directories in the current System.IO.DirectoryInfo matching 
+             the given search criteria.
         
-            searchPattern: The search string. For example, "System*" can be used to search for all directories that begin with the word "System".
+        
+            searchPattern: The search string. For example, "System*" can be used to search for all 
+             directories that begin with the word "System".
+        
             Returns: An array of type DirectoryInfo matching searchPattern.
         GetDirectories(self: DirectoryInfo) -> Array[DirectoryInfo]
         
@@ -1776,14 +2112,22 @@ class DirectoryInfo(FileSystemInfo, ISerializable):
             Returns: An array of type System.IO.FileInfo.
         GetFiles(self: DirectoryInfo, searchPattern: str, searchOption: SearchOption) -> Array[FileInfo]
         
-            Returns a file list from the current directory matching the given search pattern and using a value to determine whether to search subdirectories.
+            Returns a file list from the current directory matching the given search 
+             pattern and using a value to determine whether to search subdirectories.
         
-            searchPattern: The search string. For example, "System*" can be used to search for all directories that begin with the word "System".
-            searchOption: One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories.
+        
+            searchPattern: The search string. For example, "System*" can be used to search for all 
+             directories that begin with the word "System".
+        
+            searchOption: One of the enumeration values that specifies whether the search operation 
+             should include only the current directory or all subdirectories.
+        
             Returns: An array of type System.IO.FileInfo.
         GetFiles(self: DirectoryInfo, searchPattern: str) -> Array[FileInfo]
         
-            Returns a file list from the current directory matching the given search pattern.
+            Returns a file list from the current directory matching the given search 
+             pattern.
+        
         
             searchPattern: The search string, such as "*.txt".
             Returns: An array of type System.IO.FileInfo.
@@ -1794,20 +2138,34 @@ class DirectoryInfo(FileSystemInfo, ISerializable):
         """
         GetFileSystemInfos(self: DirectoryInfo) -> Array[FileSystemInfo]
         
-            Returns an array of strongly typed System.IO.FileSystemInfo entries representing all the files and subdirectories in a directory.
+            Returns an array of strongly typed System.IO.FileSystemInfo entries 
+             representing all the files and subdirectories in a directory.
+        
             Returns: An array of strongly typed System.IO.FileSystemInfo entries.
         GetFileSystemInfos(self: DirectoryInfo, searchPattern: str, searchOption: SearchOption) -> Array[FileSystemInfo]
         
-            Retrieves an array of System.IO.FileSystemInfo objects that represent the files and subdirectories matching the specified search criteria.
+            Retrieves an array of System.IO.FileSystemInfo objects that represent the files 
+             and subdirectories matching the specified search criteria.
         
-            searchPattern: The search string. The default pattern is "*", which returns all files and directories.
-            searchOption: One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories. The default value is System.IO.SearchOption.TopDirectoryOnly.
+        
+            searchPattern: The search string. The default pattern is "*", which returns all files and 
+             directories.
+        
+            searchOption: One of the enumeration values that specifies whether the search operation 
+             should include only the current directory or all subdirectories. The default 
+             value is System.IO.SearchOption.TopDirectoryOnly.
+        
             Returns: An array of file system entries that match the search criteria.
         GetFileSystemInfos(self: DirectoryInfo, searchPattern: str) -> Array[FileSystemInfo]
         
-            Retrieves an array of strongly typed System.IO.FileSystemInfo objects representing the files and subdirectories that match the specified search criteria.
+            Retrieves an array of strongly typed System.IO.FileSystemInfo objects 
+             representing the files and subdirectories that match the specified search 
+             criteria.
         
-            searchPattern: The search string. For example, "System*" can be used to search for all directories that begin with the word "System".
+        
+            searchPattern: The search string. For example, "System*" can be used to search for all 
+             directories that begin with the word "System".
+        
             Returns: An array of strongly typed FileSystemInfo objects matching the search criteria.
         """
         pass
@@ -1818,8 +2176,11 @@ class DirectoryInfo(FileSystemInfo, ISerializable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-             usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled across 
+             a remoting boundary. A value of false is usually appropriate. true to copy the 
+             current System.MarshalByRefObject object's identity to its clone, which will 
+             cause remoting client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -1834,17 +2195,22 @@ class DirectoryInfo(FileSystemInfo, ISerializable):
         MoveTo(self: DirectoryInfo, destDirName: str)
             Moves a System.IO.DirectoryInfo instance and its contents to a new path.
         
-            destDirName: The name and path to which to move this directory. The destination cannot be another disk volume or a directory with the identical name. It can be an existing directory to which you want to add this 
-             directory as a subdirectory.
+            destDirName: The name and path to which to move this directory. The destination cannot be 
+             another disk volume or a directory with the identical name. It can be an 
+             existing directory to which you want to add this directory as a subdirectory.
         """
         pass
 
     def SetAccessControl(self, directorySecurity):
         """
         SetAccessControl(self: DirectoryInfo, directorySecurity: DirectorySecurity)
-            Applies access control list (ACL) entries described by a System.Security.AccessControl.DirectorySecurity object to the directory described by the current System.IO.DirectoryInfo object.
+            Applies access control list (ACL) entries described by a 
+             System.Security.AccessControl.DirectorySecurity object to the directory 
+             described by the current System.IO.DirectoryInfo object.
         
-            directorySecurity: An object that describes an ACL entry to apply to the directory described by the path parameter.
+        
+            directorySecurity: An object that describes an ACL entry to apply to the directory described by 
+             the path parameter.
         """
         pass
 
@@ -1993,7 +2359,8 @@ class DriveInfo(object, ISerializable):
         GetDrives() -> Array[DriveInfo]
         
             Retrieves the drive names of all logical drives on a computer.
-            Returns: An array of type System.IO.DriveInfo that represents the logical drives on a computer.
+            Returns: An array of type System.IO.DriveInfo that represents the logical drives on a 
+             computer.
         """
         pass
 
@@ -2249,7 +2616,9 @@ class ErrorEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -2262,7 +2631,10 @@ class ErrorEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -2288,10 +2660,14 @@ class ErrorEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -2319,13 +2695,18 @@ class File(object):
     def AppendAllText(path, contents, encoding=None):
         """
         AppendAllText(path: str, contents: str, encoding: Encoding)
-            Appends the specified string to the file, creating the file if it does not already exist.
+            Appends the specified string to the file, creating the file if it does not 
+             already exist.
+        
         
             path: The file to append the specified string to.
             contents: The string to append to the file.
             encoding: The character encoding to use.
         AppendAllText(path: str, contents: str)
-            Opens a file, appends the specified string to the file, and then closes the file. If the file does not exist, this method creates a file, writes the specified string to the file, then closes the file.
+            Opens a file, appends the specified string to the file, and then closes the 
+             file. If the file does not exist, this method creates a file, writes the 
+             specified string to the file, then closes the file.
+        
         
             path: The file to append the specified string to.
             contents: The string to append to the file.
@@ -2337,7 +2718,9 @@ class File(object):
         """
         AppendText(path: str) -> StreamWriter
         
-            Creates a System.IO.StreamWriter that appends UTF-8 encoded text to an existing file.
+            Creates a System.IO.StreamWriter that appends UTF-8 encoded text to an existing 
+             file.
+        
         
             path: The path to the file to append to.
             Returns: A StreamWriter that appends UTF-8 encoded text to an existing file.
@@ -2348,16 +2731,21 @@ class File(object):
     def Copy(sourceFileName, destFileName, overwrite=None):
         """
         Copy(sourceFileName: str, destFileName: str, overwrite: bool)
-            Copies an existing file to a new file. Overwriting a file of the same name is allowed.
+            Copies an existing file to a new file. Overwriting a file of the same name is 
+             allowed.
+        
         
             sourceFileName: The file to copy.
             destFileName: The name of the destination file. This cannot be a directory.
             overwrite: true if the destination file can be overwritten; otherwise, false.
         Copy(sourceFileName: str, destFileName: str)
-            Copies an existing file to a new file. Overwriting a file of the same name is not allowed.
+            Copies an existing file to a new file. Overwriting a file of the same name is 
+             not allowed.
+        
         
             sourceFileName: The file to copy.
-            destFileName: The name of the destination file. This cannot be a directory or an existing file.
+            destFileName: The name of the destination file. This cannot be a directory or an existing 
+             file.
         """
         pass
 
@@ -2366,34 +2754,47 @@ class File(object):
         """
         Create(path: str, bufferSize: int, options: FileOptions) -> FileStream
         
-            Creates or overwrites the specified file, specifying a buffer size and a System.IO.FileOptions value that describes how to create or overwrite the file.
+            Creates or overwrites the specified file, specifying a buffer size and a 
+             System.IO.FileOptions value that describes how to create or overwrite the file.
+        
         
             path: The name of the file.
             bufferSize: The number of bytes buffered for reads and writes to the file.
-            options: One of the System.IO.FileOptions values that describes how to create or overwrite the file.
+            options: One of the System.IO.FileOptions values that describes how to create or 
+             overwrite the file.
+        
             Returns: A new file with the specified buffer size.
         Create(path: str, bufferSize: int, options: FileOptions, fileSecurity: FileSecurity) -> FileStream
         
-            Creates or overwrites the specified file with the specified buffer size, file options, and file security.
+            Creates or overwrites the specified file with the specified buffer size, file 
+             options, and file security.
+        
         
             path: The name of the file.
             bufferSize: The number of bytes buffered for reads and writes to the file.
-            options: One of the System.IO.FileOptions values that describes how to create or overwrite the file.
-            fileSecurity: One of the System.Security.AccessControl.FileSecurity values that determines the access control and audit security for the file.
+            options: One of the System.IO.FileOptions values that describes how to create or 
+             overwrite the file.
+        
+            fileSecurity: One of the System.Security.AccessControl.FileSecurity values that determines 
+             the access control and audit security for the file.
+        
             Returns: A new file with the specified buffer size, file options, and file security.
         Create(path: str) -> FileStream
         
             Creates or overwrites a file in the specified path.
         
             path: The path and name of the file to create.
-            Returns: A System.IO.FileStream that provides read/write access to the file specified in path.
+            Returns: A System.IO.FileStream that provides read/write access to the file specified in 
+             path.
+        
         Create(path: str, bufferSize: int) -> FileStream
         
             Creates or overwrites the specified file.
         
             path: The name of the file.
             bufferSize: The number of bytes buffered for reads and writes to the file.
-            Returns: A System.IO.FileStream with the specified buffer size that provides read/write access to the file specified in path.
+            Returns: A System.IO.FileStream with the specified buffer size that provides read/write 
+             access to the file specified in path.
         """
         pass
 
@@ -2413,7 +2814,9 @@ class File(object):
     def Decrypt(path):
         """
         Decrypt(path: str)
-            Decrypts a file that was encrypted by the current account using the System.IO.File.Encrypt(System.String) method.
+            Decrypts a file that was encrypted by the current account using the 
+             System.IO.File.Encrypt(System.String) method.
+        
         
             path: A path that describes a file to decrypt.
         """
@@ -2433,7 +2836,9 @@ class File(object):
     def Encrypt(path):
         """
         Encrypt(path: str)
-            Encrypts a file so that only the account used to encrypt the file can decrypt it.
+            Encrypts a file so that only the account used to encrypt the file can decrypt 
+             it.
+        
         
             path: A path that describes a file to encrypt.
         """
@@ -2447,8 +2852,11 @@ class File(object):
             Determines whether the specified file exists.
         
             path: The file to check.
-            Returns: true if the caller has the required permissions and path contains the name of an existing file; otherwise, false. This method also returns false if path is null, an invalid path, or a zero-length string. 
-             If the caller does not have sufficient permissions to read the specified file, no exception is thrown and the method returns false regardless of the existence of path.
+            Returns: true if the caller has the required permissions and path contains the name of 
+             an existing file; otherwise, false. This method also returns false if path is 
+             null, an invalid path, or a zero-length string. If the caller does not have 
+             sufficient permissions to read the specified file, no exception is thrown and 
+             the method returns false regardless of the existence of path.
         """
         pass
 
@@ -2457,17 +2865,30 @@ class File(object):
         """
         GetAccessControl(path: str, includeSections: AccessControlSections) -> FileSecurity
         
-            Gets a System.Security.AccessControl.FileSecurity object that encapsulates the specified type of access control list (ACL) entries for a particular file.
+            Gets a System.Security.AccessControl.FileSecurity object that encapsulates the 
+             specified type of access control list (ACL) entries for a particular file.
         
-            path: The path to a file containing a System.Security.AccessControl.FileSecurity object that describes the file's access control list (ACL) information.
-            includeSections: One of the System.Security.AccessControl.AccessControlSections values that specifies the type of access control list (ACL) information to receive.
-            Returns: A System.Security.AccessControl.FileSecurity object that encapsulates the access control rules for the file described by the path parameter.
+        
+            path: The path to a file containing a System.Security.AccessControl.FileSecurity 
+             object that describes the file's access control list (ACL) information.
+        
+            includeSections: One of the System.Security.AccessControl.AccessControlSections values that 
+             specifies the type of access control list (ACL) information to receive.
+        
+            Returns: A System.Security.AccessControl.FileSecurity object that encapsulates the 
+             access control rules for the file described by the path parameter.
+        
         GetAccessControl(path: str) -> FileSecurity
         
-            Gets a System.Security.AccessControl.FileSecurity object that encapsulates the access control list (ACL) entries for a specified file.
+            Gets a System.Security.AccessControl.FileSecurity object that encapsulates the 
+             access control list (ACL) entries for a specified file.
         
-            path: The path to a file containing a System.Security.AccessControl.FileSecurity object that describes the file's access control list (ACL) information.
-            Returns: A System.Security.AccessControl.FileSecurity object that encapsulates the access control rules for the file described by the path parameter.
+        
+            path: The path to a file containing a System.Security.AccessControl.FileSecurity 
+             object that describes the file's access control list (ACL) information.
+        
+            Returns: A System.Security.AccessControl.FileSecurity object that encapsulates the 
+             access control rules for the file described by the path parameter.
         """
         pass
 
@@ -2491,7 +2912,8 @@ class File(object):
             Returns the creation date and time of the specified file or directory.
         
             path: The file or directory for which to obtain creation date and time information.
-            Returns: A System.DateTime structure set to the creation date and time for the specified file or directory. This value is expressed in local time.
+            Returns: A System.DateTime structure set to the creation date and time for the specified 
+             file or directory. This value is expressed in local time.
         """
         pass
 
@@ -2500,10 +2922,13 @@ class File(object):
         """
         GetCreationTimeUtc(path: str) -> DateTime
         
-            Returns the creation date and time, in coordinated universal time (UTC), of the specified file or directory.
+            Returns the creation date and time, in coordinated universal time (UTC), of the 
+             specified file or directory.
+        
         
             path: The file or directory for which to obtain creation date and time information.
-            Returns: A System.DateTime structure set to the creation date and time for the specified file or directory. This value is expressed in UTC time.
+            Returns: A System.DateTime structure set to the creation date and time for the specified 
+             file or directory. This value is expressed in UTC time.
         """
         pass
 
@@ -2515,7 +2940,8 @@ class File(object):
             Returns the date and time the specified file or directory was last accessed.
         
             path: The file or directory for which to obtain access date and time information.
-            Returns: A System.DateTime structure set to the date and time that the specified file or directory was last accessed. This value is expressed in local time.
+            Returns: A System.DateTime structure set to the date and time that the specified file or 
+             directory was last accessed. This value is expressed in local time.
         """
         pass
 
@@ -2524,10 +2950,13 @@ class File(object):
         """
         GetLastAccessTimeUtc(path: str) -> DateTime
         
-            Returns the date and time, in coordinated universal time (UTC), that the specified file or directory was last accessed.
+            Returns the date and time, in coordinated universal time (UTC), that the 
+             specified file or directory was last accessed.
+        
         
             path: The file or directory for which to obtain access date and time information.
-            Returns: A System.DateTime structure set to the date and time that the specified file or directory was last accessed. This value is expressed in UTC time.
+            Returns: A System.DateTime structure set to the date and time that the specified file or 
+             directory was last accessed. This value is expressed in UTC time.
         """
         pass
 
@@ -2539,7 +2968,8 @@ class File(object):
             Returns the date and time the specified file or directory was last written to.
         
             path: The file or directory for which to obtain write date and time information.
-            Returns: A System.DateTime structure set to the date and time that the specified file or directory was last written to. This value is expressed in local time.
+            Returns: A System.DateTime structure set to the date and time that the specified file or 
+             directory was last written to. This value is expressed in local time.
         """
         pass
 
@@ -2548,10 +2978,13 @@ class File(object):
         """
         GetLastWriteTimeUtc(path: str) -> DateTime
         
-            Returns the date and time, in coordinated universal time (UTC), that the specified file or directory was last written to.
+            Returns the date and time, in coordinated universal time (UTC), that the 
+             specified file or directory was last written to.
+        
         
             path: The file or directory for which to obtain write date and time information.
-            Returns: A System.DateTime structure set to the date and time that the specified file or directory was last written to. This value is expressed in UTC time.
+            Returns: A System.DateTime structure set to the date and time that the specified file or 
+             directory was last written to. This value is expressed in UTC time.
         """
         pass
 
@@ -2559,7 +2992,9 @@ class File(object):
     def Move(sourceFileName, destFileName):
         """
         Move(sourceFileName: str, destFileName: str)
-            Moves a specified file to a new location, providing the option to specify a new file name.
+            Moves a specified file to a new location, providing the option to specify a new 
+             file name.
+        
         
             sourceFileName: The name of the file to move.
             destFileName: The new path for the file.
@@ -2571,28 +3006,52 @@ class File(object):
         """
         Open(path: str, mode: FileMode, access: FileAccess, share: FileShare) -> FileStream
         
-            Opens a System.IO.FileStream on the specified path, having the specified mode with read, write, or read/write access and the specified sharing option.
+            Opens a System.IO.FileStream on the specified path, having the specified mode 
+             with read, write, or read/write access and the specified sharing option.
+        
         
             path: The file to open.
-            mode: A System.IO.FileMode value that specifies whether a file is created if one does not exist, and determines whether the contents of existing files are retained or overwritten.
-            access: A System.IO.FileAccess value that specifies the operations that can be performed on the file.
-            share: A System.IO.FileShare value specifying the type of access other threads have to the file.
-            Returns: A System.IO.FileStream on the specified path, having the specified mode with read, write, or read/write access and the specified sharing option.
+            mode: A System.IO.FileMode value that specifies whether a file is created if one does 
+             not exist, and determines whether the contents of existing files are retained 
+             or overwritten.
+        
+            access: A System.IO.FileAccess value that specifies the operations that can be 
+             performed on the file.
+        
+            share: A System.IO.FileShare value specifying the type of access other threads have to 
+             the file.
+        
+            Returns: A System.IO.FileStream on the specified path, having the specified mode with 
+             read, write, or read/write access and the specified sharing option.
+        
         Open(path: str, mode: FileMode, access: FileAccess) -> FileStream
         
-            Opens a System.IO.FileStream on the specified path, with the specified mode and access.
+            Opens a System.IO.FileStream on the specified path, with the specified mode and 
+             access.
+        
         
             path: The file to open.
-            mode: A System.IO.FileMode value that specifies whether a file is created if one does not exist, and determines whether the contents of existing files are retained or overwritten.
-            access: A System.IO.FileAccess value that specifies the operations that can be performed on the file.
-            Returns: An unshared System.IO.FileStream that provides access to the specified file, with the specified mode and access.
+            mode: A System.IO.FileMode value that specifies whether a file is created if one does 
+             not exist, and determines whether the contents of existing files are retained 
+             or overwritten.
+        
+            access: A System.IO.FileAccess value that specifies the operations that can be 
+             performed on the file.
+        
+            Returns: An unshared System.IO.FileStream that provides access to the specified file, 
+             with the specified mode and access.
+        
         Open(path: str, mode: FileMode) -> FileStream
         
             Opens a System.IO.FileStream on the specified path with read/write access.
         
             path: The file to open.
-            mode: A System.IO.FileMode value that specifies whether a file is created if one does not exist, and determines whether the contents of existing files are retained or overwritten.
-            Returns: A System.IO.FileStream opened in the specified mode and path, with read/write access and not shared.
+            mode: A System.IO.FileMode value that specifies whether a file is created if one does 
+             not exist, and determines whether the contents of existing files are retained 
+             or overwritten.
+        
+            Returns: A System.IO.FileStream opened in the specified mode and path, with read/write 
+             access and not shared.
         """
         pass
 
@@ -2628,7 +3087,8 @@ class File(object):
             Opens an existing file or creates a new file for writing.
         
             path: The file to be opened for writing.
-            Returns: An unshared System.IO.FileStream object on the specified path with System.IO.FileAccess.Write access.
+            Returns: An unshared System.IO.FileStream object on the specified path with 
+             System.IO.FileAccess.Write access.
         """
         pass
 
@@ -2637,7 +3097,9 @@ class File(object):
         """
         ReadAllBytes(path: str) -> Array[Byte]
         
-            Opens a binary file, reads the contents of the file into a byte array, and then closes the file.
+            Opens a binary file, reads the contents of the file into a byte array, and then 
+             closes the file.
+        
         
             path: The file to open for reading.
             Returns: A byte array containing the contents of the file.
@@ -2649,7 +3111,9 @@ class File(object):
         """
         ReadAllLines(path: str, encoding: Encoding) -> Array[str]
         
-            Opens a file, reads all lines of the file with the specified encoding, and then closes the file.
+            Opens a file, reads all lines of the file with the specified encoding, and then 
+             closes the file.
+        
         
             path: The file to open for reading.
             encoding: The encoding applied to the contents of the file.
@@ -2668,7 +3132,9 @@ class File(object):
         """
         ReadAllText(path: str, encoding: Encoding) -> str
         
-            Opens a file, reads all lines of the file with the specified encoding, and then closes the file.
+            Opens a file, reads all lines of the file with the specified encoding, and then 
+             closes the file.
+        
         
             path: The file to open for reading.
             encoding: The encoding applied to the contents of the file.
@@ -2705,14 +3171,21 @@ class File(object):
     def Replace(sourceFileName, destinationFileName, destinationBackupFileName, ignoreMetadataErrors=None):
         """
         Replace(sourceFileName: str, destinationFileName: str, destinationBackupFileName: str, ignoreMetadataErrors: bool)
-            Replaces the contents of a specified file with the contents of another file, deleting the original file, and creating a backup of the replaced file and optionally ignores merge errors.
+            Replaces the contents of a specified file with the contents of another file, 
+             deleting the original file, and creating a backup of the replaced file and 
+             optionally ignores merge errors.
+        
         
             sourceFileName: The name of a file that replaces the file specified by destinationFileName.
             destinationFileName: The name of the file being replaced.
             destinationBackupFileName: The name of the backup file.
-            ignoreMetadataErrors: true to ignore merge errors (such as attributes and access control lists (ACLs)) from the replaced file to the replacement file; otherwise, false.
+            ignoreMetadataErrors: true to ignore merge errors (such as attributes and access control lists 
+             (ACLs)) from the replaced file to the replacement file; otherwise, false.
+        
         Replace(sourceFileName: str, destinationFileName: str, destinationBackupFileName: str)
-            Replaces the contents of a specified file with the contents of another file, deleting the original file, and creating a backup of the replaced file.
+            Replaces the contents of a specified file with the contents of another file, 
+             deleting the original file, and creating a backup of the replaced file.
+        
         
             sourceFileName: The name of a file that replaces the file specified by destinationFileName.
             destinationFileName: The name of the file being replaced.
@@ -2724,10 +3197,13 @@ class File(object):
     def SetAccessControl(path, fileSecurity):
         """
         SetAccessControl(path: str, fileSecurity: FileSecurity)
-            Applies access control list (ACL) entries described by a System.Security.AccessControl.FileSecurity object to the specified file.
+            Applies access control list (ACL) entries described by a 
+             System.Security.AccessControl.FileSecurity object to the specified file.
+        
         
             path: A file to add or remove access control list (ACL) entries from.
-            fileSecurity: A System.Security.AccessControl.FileSecurity object that describes an ACL entry to apply to the file described by the path parameter.
+            fileSecurity: A System.Security.AccessControl.FileSecurity object that describes an ACL entry 
+             to apply to the file described by the path parameter.
         """
         pass
 
@@ -2749,7 +3225,8 @@ class File(object):
             Sets the date and time the file was created.
         
             path: The file for which to set the creation date and time information.
-            creationTime: A System.DateTime containing the value to set for the creation date and time of path. This value is expressed in local time.
+            creationTime: A System.DateTime containing the value to set for the creation date and time of 
+             path. This value is expressed in local time.
         """
         pass
 
@@ -2757,10 +3234,13 @@ class File(object):
     def SetCreationTimeUtc(path, creationTimeUtc):
         """
         SetCreationTimeUtc(path: str, creationTimeUtc: DateTime)
-            Sets the date and time, in coordinated universal time (UTC), that the file was created.
+            Sets the date and time, in coordinated universal time (UTC), that the file was 
+             created.
+        
         
             path: The file for which to set the creation date and time information.
-            creationTimeUtc: A System.DateTime containing the value to set for the creation date and time of path. This value is expressed in UTC time.
+            creationTimeUtc: A System.DateTime containing the value to set for the creation date and time of 
+             path. This value is expressed in UTC time.
         """
         pass
 
@@ -2771,7 +3251,8 @@ class File(object):
             Sets the date and time the specified file was last accessed.
         
             path: The file for which to set the access date and time information.
-            lastAccessTime: A System.DateTime containing the value to set for the last access date and time of path. This value is expressed in local time.
+            lastAccessTime: A System.DateTime containing the value to set for the last access date and time 
+             of path. This value is expressed in local time.
         """
         pass
 
@@ -2779,10 +3260,13 @@ class File(object):
     def SetLastAccessTimeUtc(path, lastAccessTimeUtc):
         """
         SetLastAccessTimeUtc(path: str, lastAccessTimeUtc: DateTime)
-            Sets the date and time, in coordinated universal time (UTC), that the specified file was last accessed.
+            Sets the date and time, in coordinated universal time (UTC), that the specified 
+             file was last accessed.
+        
         
             path: The file for which to set the access date and time information.
-            lastAccessTimeUtc: A System.DateTime containing the value to set for the last access date and time of path. This value is expressed in UTC time.
+            lastAccessTimeUtc: A System.DateTime containing the value to set for the last access date and time 
+             of path. This value is expressed in UTC time.
         """
         pass
 
@@ -2793,7 +3277,8 @@ class File(object):
             Sets the date and time that the specified file was last written to.
         
             path: The file for which to set the date and time information.
-            lastWriteTime: A System.DateTime containing the value to set for the last write date and time of path. This value is expressed in local time.
+            lastWriteTime: A System.DateTime containing the value to set for the last write date and time 
+             of path. This value is expressed in local time.
         """
         pass
 
@@ -2801,10 +3286,13 @@ class File(object):
     def SetLastWriteTimeUtc(path, lastWriteTimeUtc):
         """
         SetLastWriteTimeUtc(path: str, lastWriteTimeUtc: DateTime)
-            Sets the date and time, in coordinated universal time (UTC), that the specified file was last written to.
+            Sets the date and time, in coordinated universal time (UTC), that the specified 
+             file was last written to.
+        
         
             path: The file for which to set the date and time information.
-            lastWriteTimeUtc: A System.DateTime containing the value to set for the last write date and time of path. This value is expressed in UTC time.
+            lastWriteTimeUtc: A System.DateTime containing the value to set for the last write date and time 
+             of path. This value is expressed in UTC time.
         """
         pass
 
@@ -2812,7 +3300,9 @@ class File(object):
     def WriteAllBytes(path, bytes):
         """
         WriteAllBytes(path: str, bytes: Array[Byte])
-            Creates a new file, writes the specified byte array to the file, and then closes the file. If the target file already exists, it is overwritten.
+            Creates a new file, writes the specified byte array to the file, and then 
+             closes the file. If the target file already exists, it is overwritten.
+        
         
             path: The file to write to.
             bytes: The bytes to write to the file.
@@ -2823,16 +3313,21 @@ class File(object):
     def WriteAllLines(path, contents, encoding=None):
         """
         WriteAllLines(path: str, contents: IEnumerable[str])WriteAllLines(path: str, contents: IEnumerable[str], encoding: Encoding)WriteAllLines(path: str, contents: Array[str])
-            Creates a new file, write the specified string array to the file, and then closes the file.
+            Creates a new file, write the specified string array to the file, and then 
+             closes the file.
+        
         
             path: The file to write to.
             contents: The string array to write to the file.
         WriteAllLines(path: str, contents: Array[str], encoding: Encoding)
-            Creates a new file, writes the specified string array to the file by using the specified encoding, and then closes the file.
+            Creates a new file, writes the specified string array to the file by using the 
+             specified encoding, and then closes the file.
+        
         
             path: The file to write to.
             contents: The string array to write to the file.
-            encoding: An System.Text.Encoding object that represents the character encoding applied to the string array.
+            encoding: An System.Text.Encoding object that represents the character encoding applied 
+             to the string array.
         """
         pass
 
@@ -2840,13 +3335,18 @@ class File(object):
     def WriteAllText(path, contents, encoding=None):
         """
         WriteAllText(path: str, contents: str, encoding: Encoding)
-            Creates a new file, writes the specified string to the file using the specified encoding, and then closes the file. If the target file already exists, it is overwritten.
+            Creates a new file, writes the specified string to the file using the specified 
+             encoding, and then closes the file. If the target file already exists, it is 
+             overwritten.
+        
         
             path: The file to write to.
             contents: The string to write to the file.
             encoding: The encoding to apply to the string.
         WriteAllText(path: str, contents: str)
-            Creates a new file, writes the specified string to the file, and then closes the file. If the target file already exists, it is overwritten.
+            Creates a new file, writes the specified string to the file, and then closes 
+             the file. If the target file already exists, it is overwritten.
+        
         
             path: The file to write to.
             contents: The string to write to the file.
@@ -3018,7 +3518,9 @@ class FileFormatException(FormatException, ISerializable, _Exception):
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: FileFormatException, info: SerializationInfo, context: StreamingContext)
-            Sets the System.Runtime.Serialization.SerializationInfo object with the file name and additional exception information.
+            Sets the System.Runtime.Serialization.SerializationInfo object with the file 
+             name and additional exception information.
+        
         
             info: The object that holds the serialized object data.
             context: The contextual information about the source or destination.
@@ -3072,7 +3574,9 @@ class FileInfo(FileSystemInfo, ISerializable):
         """
         AppendText(self: FileInfo) -> StreamWriter
         
-            Creates a System.IO.StreamWriter that appends text to the file represented by this instance of the System.IO.FileInfo.
+            Creates a System.IO.StreamWriter that appends text to the file represented by 
+             this instance of the System.IO.FileInfo.
+        
             Returns: A new StreamWriter.
         """
         pass
@@ -3081,14 +3585,20 @@ class FileInfo(FileSystemInfo, ISerializable):
         """
         CopyTo(self: FileInfo, destFileName: str, overwrite: bool) -> FileInfo
         
-            Copies an existing file to a new file, allowing the overwriting of an existing file.
+            Copies an existing file to a new file, allowing the overwriting of an existing 
+             file.
+        
         
             destFileName: The name of the new file to copy to.
             overwrite: true to allow an existing file to be overwritten; otherwise, false.
-            Returns: A new file, or an overwrite of an existing file if overwrite is true. If the file exists and overwrite is false, an System.IO.IOException is thrown.
+            Returns: A new file, or an overwrite of an existing file if overwrite is true. If the 
+             file exists and overwrite is false, an System.IO.IOException is thrown.
+        
         CopyTo(self: FileInfo, destFileName: str) -> FileInfo
         
-            Copies an existing file to a new file, disallowing the overwriting of an existing file.
+            Copies an existing file to a new file, disallowing the overwriting of an 
+             existing file.
+        
         
             destFileName: The name of the new file to copy to.
             Returns: A new file with a fully qualified path.
@@ -3116,7 +3626,8 @@ class FileInfo(FileSystemInfo, ISerializable):
     def Decrypt(self):
         """
         Decrypt(self: FileInfo)
-            Decrypts a file that was encrypted by the current account using the System.IO.FileInfo.Encrypt method.
+            Decrypts a file that was encrypted by the current account using the 
+             System.IO.FileInfo.Encrypt method.
         """
         pass
 
@@ -3130,7 +3641,8 @@ class FileInfo(FileSystemInfo, ISerializable):
     def Encrypt(self):
         """
         Encrypt(self: FileInfo)
-            Encrypts a file so that only the account used to encrypt the file can decrypt it.
+            Encrypts a file so that only the account used to encrypt the file can decrypt 
+             it.
         """
         pass
 
@@ -3138,14 +3650,25 @@ class FileInfo(FileSystemInfo, ISerializable):
         """
         GetAccessControl(self: FileInfo, includeSections: AccessControlSections) -> FileSecurity
         
-            Gets a System.Security.AccessControl.FileSecurity object that encapsulates the specified type of access control list (ACL) entries for the file described by the current System.IO.FileInfo object.
+            Gets a System.Security.AccessControl.FileSecurity object that encapsulates the 
+             specified type of access control list (ACL) entries for the file described by 
+             the current System.IO.FileInfo object.
         
-            includeSections: One of the System.Security.AccessControl.AccessControlSections values that specifies which group of access control entries to retrieve.
-            Returns: A System.Security.AccessControl.FileSecurity object that encapsulates the access control rules for the current file.
+        
+            includeSections: One of the System.Security.AccessControl.AccessControlSections values that 
+             specifies which group of access control entries to retrieve.
+        
+            Returns: A System.Security.AccessControl.FileSecurity object that encapsulates the 
+             access control rules for the current file.
+        
         GetAccessControl(self: FileInfo) -> FileSecurity
         
-            Gets a System.Security.AccessControl.FileSecurity object that encapsulates the access control list (ACL) entries for the file described by the current System.IO.FileInfo object.
-            Returns: A System.Security.AccessControl.FileSecurity object that encapsulates the access control rules for the current file.
+            Gets a System.Security.AccessControl.FileSecurity object that encapsulates the 
+             access control list (ACL) entries for the file described by the current 
+             System.IO.FileInfo object.
+        
+            Returns: A System.Security.AccessControl.FileSecurity object that encapsulates the 
+             access control rules for the current file.
         """
         pass
 
@@ -3155,8 +3678,11 @@ class FileInfo(FileSystemInfo, ISerializable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-             usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled across 
+             a remoting boundary. A value of false is usually appropriate. true to copy the 
+             current System.MarshalByRefObject object's identity to its clone, which will 
+             cause remoting client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -3169,7 +3695,9 @@ class FileInfo(FileSystemInfo, ISerializable):
     def MoveTo(self, destFileName):
         """
         MoveTo(self: FileInfo, destFileName: str)
-            Moves a specified file to a new location, providing the option to specify a new file name.
+            Moves a specified file to a new location, providing the option to specify a new 
+             file name.
+        
         
             destFileName: The path to move the file to, which can specify a different file name.
         """
@@ -3179,24 +3707,42 @@ class FileInfo(FileSystemInfo, ISerializable):
         """
         Open(self: FileInfo, mode: FileMode, access: FileAccess, share: FileShare) -> FileStream
         
-            Opens a file in the specified mode with read, write, or read/write access and the specified sharing option.
+            Opens a file in the specified mode with read, write, or read/write access and 
+             the specified sharing option.
         
-            mode: A System.IO.FileMode constant specifying the mode (for example, Open or Append) in which to open the file.
-            access: A System.IO.FileAccess constant specifying whether to open the file with Read, Write, or ReadWrite file access.
-            share: A System.IO.FileShare constant specifying the type of access other FileStream objects have to this file.
-            Returns: A System.IO.FileStream object opened with the specified mode, access, and sharing options.
+        
+            mode: A System.IO.FileMode constant specifying the mode (for example, Open or Append) 
+             in which to open the file.
+        
+            access: A System.IO.FileAccess constant specifying whether to open the file with Read, 
+             Write, or ReadWrite file access.
+        
+            share: A System.IO.FileShare constant specifying the type of access other FileStream 
+             objects have to this file.
+        
+            Returns: A System.IO.FileStream object opened with the specified mode, access, and 
+             sharing options.
+        
         Open(self: FileInfo, mode: FileMode, access: FileAccess) -> FileStream
         
             Opens a file in the specified mode with read, write, or read/write access.
         
-            mode: A System.IO.FileMode constant specifying the mode (for example, Open or Append) in which to open the file.
-            access: A System.IO.FileAccess constant specifying whether to open the file with Read, Write, or ReadWrite file access.
-            Returns: A System.IO.FileStream object opened in the specified mode and access, and unshared.
+            mode: A System.IO.FileMode constant specifying the mode (for example, Open or Append) 
+             in which to open the file.
+        
+            access: A System.IO.FileAccess constant specifying whether to open the file with Read, 
+             Write, or ReadWrite file access.
+        
+            Returns: A System.IO.FileStream object opened in the specified mode and access, and 
+             unshared.
+        
         Open(self: FileInfo, mode: FileMode) -> FileStream
         
             Opens a file in the specified mode.
         
-            mode: A System.IO.FileMode constant specifying the mode (for example, Open or Append) in which to open the file.
+            mode: A System.IO.FileMode constant specifying the mode (for example, Open or Append) 
+             in which to open the file.
+        
             Returns: A file opened in the specified mode, with read/write access and unshared.
         """
         pass
@@ -3214,7 +3760,9 @@ class FileInfo(FileSystemInfo, ISerializable):
         """
         OpenText(self: FileInfo) -> StreamReader
         
-            Creates a System.IO.StreamReader with UTF8 encoding that reads from an existing text file.
+            Creates a System.IO.StreamReader with UTF8 encoding that reads from an existing 
+             text file.
+        
             Returns: A new StreamReader with UTF8 encoding.
         """
         pass
@@ -3232,30 +3780,47 @@ class FileInfo(FileSystemInfo, ISerializable):
         """
         Replace(self: FileInfo, destinationFileName: str, destinationBackupFileName: str, ignoreMetadataErrors: bool) -> FileInfo
         
-            Replaces the contents of a specified file with the file described by the current System.IO.FileInfo object, deleting the original file, and creating a backup of the replaced file.  Also specifies whether 
-             to ignore merge errors.
+            Replaces the contents of a specified file with the file described by the 
+             current System.IO.FileInfo object, deleting the original file, and creating a 
+             backup of the replaced file.  Also specifies whether to ignore merge errors.
         
         
             destinationFileName: The name of a file to replace with the current file.
-            destinationBackupFileName: The name of a file with which to create a backup of the file described by the destFileName parameter.
-            ignoreMetadataErrors: true to ignore merge errors (such as attributes and ACLs) from the replaced file to the replacement file; otherwise false.
-            Returns: A System.IO.FileInfo object that encapsulates information about the file described by the destFileName parameter.
+            destinationBackupFileName: The name of a file with which to create a backup of the file described by the 
+             destFileName parameter.
+        
+            ignoreMetadataErrors: true to ignore merge errors (such as attributes and ACLs) from the replaced 
+             file to the replacement file; otherwise false.
+        
+            Returns: A System.IO.FileInfo object that encapsulates information about the file 
+             described by the destFileName parameter.
+        
         Replace(self: FileInfo, destinationFileName: str, destinationBackupFileName: str) -> FileInfo
         
-            Replaces the contents of a specified file with the file described by the current System.IO.FileInfo object, deleting the original file, and creating a backup of the replaced file.
+            Replaces the contents of a specified file with the file described by the 
+             current System.IO.FileInfo object, deleting the original file, and creating a 
+             backup of the replaced file.
+        
         
             destinationFileName: The name of a file to replace with the current file.
-            destinationBackupFileName: The name of a file with which to create a backup of the file described by the destFileName parameter.
-            Returns: A System.IO.FileInfo object that encapsulates information about the file described by the destFileName parameter.
+            destinationBackupFileName: The name of a file with which to create a backup of the file described by the 
+             destFileName parameter.
+        
+            Returns: A System.IO.FileInfo object that encapsulates information about the file 
+             described by the destFileName parameter.
         """
         pass
 
     def SetAccessControl(self, fileSecurity):
         """
         SetAccessControl(self: FileInfo, fileSecurity: FileSecurity)
-            Applies access control list (ACL) entries described by a System.Security.AccessControl.FileSecurity object to the file described by the current System.IO.FileInfo object.
+            Applies access control list (ACL) entries described by a 
+             System.Security.AccessControl.FileSecurity object to the file described by the 
+             current System.IO.FileInfo object.
         
-            fileSecurity: A System.Security.AccessControl.FileSecurity object that describes an access control list (ACL) entry to apply to the current file.
+        
+            fileSecurity: A System.Security.AccessControl.FileSecurity object that describes an access 
+             control list (ACL) entry to apply to the current file.
         """
         pass
 
@@ -3348,10 +3913,15 @@ class FileLoadException(IOException, ISerializable, _Exception):
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: FileLoadException, info: SerializationInfo, context: StreamingContext)
-            Sets the System.Runtime.Serialization.SerializationInfo with the file name and additional exception information.
+            Sets the System.Runtime.Serialization.SerializationInfo with the file name and 
+             additional exception information.
         
-            info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about the exception being thrown.
-            context: The System.Runtime.Serialization.StreamingContext that contains contextual information about the source or destination.
+        
+            info: The System.Runtime.Serialization.SerializationInfo that holds the serialized 
+             object data about the exception being thrown.
+        
+            context: The System.Runtime.Serialization.StreamingContext that contains contextual 
+             information about the source or destination.
         """
         pass
 
@@ -3363,9 +3933,12 @@ class FileLoadException(IOException, ISerializable, _Exception):
         """
         ToString(self: FileLoadException) -> str
         
-            Returns the fully qualified name of the current exception, and possibly the error message, the name of the inner exception, and the stack trace.
-            Returns: A string containing the fully qualified name of this exception, and possibly the error message, the name of the inner exception, and the stack trace, depending on which System.IO.FileLoadException 
-             constructor is used.
+            Returns the fully qualified name of the current exception, and possibly the 
+             error message, the name of the inner exception, and the stack trace.
+        
+            Returns: A string containing the fully qualified name of this exception, and possibly 
+             the error message, the name of the inner exception, and the stack trace, 
+             depending on which System.IO.FileLoadException constructor is used.
         """
         pass
 
@@ -3479,9 +4052,13 @@ class FileNotFoundException(IOException, ISerializable, _Exception):
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: FileNotFoundException, info: SerializationInfo, context: StreamingContext)
-            Sets the System.Runtime.Serialization.SerializationInfo object with the file name and additional exception information.
+            Sets the System.Runtime.Serialization.SerializationInfo object with the file 
+             name and additional exception information.
         
-            info: The object that holds the serialized object data about the exception being thrown.
+        
+            info: The object that holds the serialized object data about the exception being 
+             thrown.
+        
             context: The object that contains contextual information about the source or destination.
         """
         pass
@@ -3494,8 +4071,11 @@ class FileNotFoundException(IOException, ISerializable, _Exception):
         """
         ToString(self: FileNotFoundException) -> str
         
-            Returns the fully qualified name of this exception and possibly the error message, the name of the inner exception, and the stack trace.
-            Returns: The fully qualified name of this exception and possibly the error message, the name of the inner exception, and the stack trace.
+            Returns the fully qualified name of this exception and possibly the error 
+             message, the name of the inner exception, and the stack trace.
+        
+            Returns: The fully qualified name of this exception and possibly the error message, the 
+             name of the inner exception, and the stack trace.
         """
         pass
 
@@ -3671,7 +4251,9 @@ class FileStream(Stream, IDisposable):
             offset: The byte offset in array at which to begin reading.
             numBytes: The maximum number of bytes to read.
             userCallback: The method to be called when the asynchronous read operation is completed.
-            stateObject: A user-provided object that distinguishes this particular asynchronous read request from other requests.
+            stateObject: A user-provided object that distinguishes this particular asynchronous read 
+             request from other requests.
+        
             Returns: An object that references the asynchronous read.
         """
         pass
@@ -3683,10 +4265,14 @@ class FileStream(Stream, IDisposable):
             Begins an asynchronous write.
         
             array: The buffer containing data to write to the current stream.
-            offset: The zero-based byte offset in array at which to begin copying bytes to the current stream.
+            offset: The zero-based byte offset in array at which to begin copying bytes to the 
+             current stream.
+        
             numBytes: The maximum number of bytes to write.
             userCallback: The method to be called when the asynchronous write operation is completed.
-            stateObject: A user-provided object that distinguishes this particular asynchronous write request from other requests.
+            stateObject: A user-provided object that distinguishes this particular asynchronous write 
+             request from other requests.
+        
             Returns: An object that references the asynchronous write.
         """
         pass
@@ -3703,9 +4289,12 @@ class FileStream(Stream, IDisposable):
     def Dispose(self):
         """
         Dispose(self: FileStream, disposing: bool)
-            Releases the unmanaged resources used by the System.IO.FileStream and optionally releases the managed resources.
+            Releases the unmanaged resources used by the System.IO.FileStream and 
+             optionally releases the managed resources.
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+        
+            disposing: true to release both managed and unmanaged resources; false to release only 
+             unmanaged resources.
         """
         pass
 
@@ -3716,7 +4305,9 @@ class FileStream(Stream, IDisposable):
             Waits for the pending asynchronous read to complete.
         
             asyncResult: The reference to the pending asynchronous request to wait for.
-            Returns: The number of bytes read from the stream, between 0 and the number of bytes you requested. Streams only return 0 at the end of the stream, otherwise, they should block until at least 1 byte is available.
+            Returns: The number of bytes read from the stream, between 0 and the number of bytes you 
+             requested. Streams only return 0 at the end of the stream, otherwise, they 
+             should block until at least 1 byte is available.
         """
         pass
 
@@ -3732,11 +4323,14 @@ class FileStream(Stream, IDisposable):
     def Flush(self, flushToDisk=None):
         """
         Flush(self: FileStream, flushToDisk: bool)
-            Clears buffers for this stream and causes any buffered data to be written to the file, and also clears all intermediate file buffers.
+            Clears buffers for this stream and causes any buffered data to be written to 
+             the file, and also clears all intermediate file buffers.
+        
         
             flushToDisk: true to flush all intermediate file buffers; otherwise, false.
         Flush(self: FileStream)
-            Clears buffers for this stream and causes any buffered data to be written to the file.
+            Clears buffers for this stream and causes any buffered data to be written to 
+             the file.
         """
         pass
 
@@ -3748,17 +4342,25 @@ class FileStream(Stream, IDisposable):
         """
         GetAccessControl(self: FileStream) -> FileSecurity
         
-            Gets a System.Security.AccessControl.FileSecurity object that encapsulates the access control list (ACL) entries for the file described by the current System.IO.FileStream object.
-            Returns: An object that encapsulates the access control settings for the file described by the current System.IO.FileStream object.
+            Gets a System.Security.AccessControl.FileSecurity object that encapsulates the 
+             access control list (ACL) entries for the file described by the current 
+             System.IO.FileStream object.
+        
+            Returns: An object that encapsulates the access control settings for the file described 
+             by the current System.IO.FileStream object.
         """
         pass
 
     def Lock(self, position, length):
         """
         Lock(self: FileStream, position: Int64, length: Int64)
-            Prevents other processes from reading from or writing to the System.IO.FileStream.
+            Prevents other processes from reading from or writing to the 
+             System.IO.FileStream.
         
-            position: The beginning of the range to lock. The value of this parameter must be equal to or greater than zero (0).
+        
+            position: The beginning of the range to lock. The value of this parameter must be equal 
+             to or greater than zero (0).
+        
             length: The range to be locked.
         """
         pass
@@ -3769,8 +4371,11 @@ class FileStream(Stream, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-             usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled across 
+             a remoting boundary. A value of false is usually appropriate. true to copy the 
+             current System.MarshalByRefObject object's identity to its clone, which will 
+             cause remoting client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -3795,7 +4400,9 @@ class FileStream(Stream, IDisposable):
         
             offset: The byte offset in array at which the read bytes will be placed.
             count: The maximum number of bytes to read.
-            Returns: The total number of bytes read into the buffer. This might be less than the number of bytes requested if that number of bytes are not currently available, or zero if the end of the stream is reached.
+            Returns: The total number of bytes read into the buffer. This might be less than the 
+             number of bytes requested if that number of bytes are not currently available, 
+             or zero if the end of the stream is reached.
         """
         pass
 
@@ -3808,7 +4415,8 @@ class FileStream(Stream, IDisposable):
         ReadByte(self: FileStream) -> int
         
             Reads a byte from the file and advances the read position one byte.
-            Returns: The byte, cast to an System.Int32, or -1 if the end of the stream has been reached.
+            Returns: The byte, cast to an System.Int32, or -1 if the end of the stream has been 
+             reached.
         """
         pass
 
@@ -3819,7 +4427,9 @@ class FileStream(Stream, IDisposable):
             Sets the current position of this stream to the given value.
         
             offset: The point relative to origin from which to begin seeking.
-            origin: Specifies the beginning, the end, or the current position as a reference point for origin, using a value of type System.IO.SeekOrigin.
+            origin: Specifies the beginning, the end, or the current position as a reference point 
+             for origin, using a value of type System.IO.SeekOrigin.
+        
             Returns: The new position in the stream.
         """
         pass
@@ -3827,7 +4437,10 @@ class FileStream(Stream, IDisposable):
     def SetAccessControl(self, fileSecurity):
         """
         SetAccessControl(self: FileStream, fileSecurity: FileSecurity)
-            Applies access control list (ACL) entries described by a System.Security.AccessControl.FileSecurity object to the file described by the current System.IO.FileStream object.
+            Applies access control list (ACL) entries described by a 
+             System.Security.AccessControl.FileSecurity object to the file described by the 
+             current System.IO.FileStream object.
+        
         
             fileSecurity: An object that describes an ACL entry to apply to the current file.
         """
@@ -3845,7 +4458,9 @@ class FileStream(Stream, IDisposable):
     def Unlock(self, position, length):
         """
         Unlock(self: FileStream, position: Int64, length: Int64)
-            Allows access by other processes to all or part of a file that was previously locked.
+            Allows access by other processes to all or part of a file that was previously 
+             locked.
+        
         
             position: The beginning of the range to unlock.
             length: The range to be unlocked.
@@ -3858,7 +4473,9 @@ class FileStream(Stream, IDisposable):
             Writes a block of bytes to this stream using data from a buffer.
         
             array: The buffer containing data to write to the stream.
-            offset: The zero-based byte offset in array at which to begin copying bytes to the current stream.
+            offset: The zero-based byte offset in array at which to begin copying bytes to the 
+             current stream.
+        
             count: The number of bytes to be written to the current stream.
         """
         pass
@@ -3877,18 +4494,11 @@ class FileStream(Stream, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -4030,7 +4640,9 @@ class FileSystemEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -4043,7 +4655,10 @@ class FileSystemEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -4069,10 +4684,14 @@ class FileSystemEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -4100,23 +4719,28 @@ class FileSystemWatcher(Component, IComponent, IDisposable, ISupportInitialize):
     def BeginInit(self):
         """
         BeginInit(self: FileSystemWatcher)
-            Begins the initialization of a System.IO.FileSystemWatcher used on a form or used by another component. The initialization occurs at run time.
+            Begins the initialization of a System.IO.FileSystemWatcher used on a form or 
+             used by another component. The initialization occurs at run time.
         """
         pass
 
     def Dispose(self):
         """
         Dispose(self: FileSystemWatcher, disposing: bool)
-            Releases the unmanaged resources used by the System.IO.FileSystemWatcher and optionally releases the managed resources.
+            Releases the unmanaged resources used by the System.IO.FileSystemWatcher and 
+             optionally releases the managed resources.
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+        
+            disposing: true to release both managed and unmanaged resources; false to release only 
+             unmanaged resources.
         """
         pass
 
     def EndInit(self):
         """
         EndInit(self: FileSystemWatcher)
-            Ends the initialization of a System.IO.FileSystemWatcher used on a form or used by another component. The initialization occurs at run time.
+            Ends the initialization of a System.IO.FileSystemWatcher used on a form or used 
+             by another component. The initialization occurs at run time.
         """
         pass
 
@@ -4124,10 +4748,14 @@ class FileSystemWatcher(Component, IComponent, IDisposable, ISupportInitialize):
         """
         GetService(self: Component, service: Type) -> object
         
-            Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
+            Returns an object that represents a service provided by the 
+             System.ComponentModel.Component or by its System.ComponentModel.Container.
+        
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the 
+             System.ComponentModel.Component, or null if the System.ComponentModel.Component 
+             does not provide the specified service.
         """
         pass
 
@@ -4137,8 +4765,11 @@ class FileSystemWatcher(Component, IComponent, IDisposable, ISupportInitialize):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-             usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled across 
+             a remoting boundary. A value of false is usually appropriate. true to copy the 
+             current System.MarshalByRefObject object's identity to its clone, which will 
+             cause remoting client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -4197,35 +4828,35 @@ class FileSystemWatcher(Component, IComponent, IDisposable, ISupportInitialize):
         """
         WaitForChanged(self: FileSystemWatcher, changeType: WatcherChangeTypes, timeout: int) -> WaitForChangedResult
         
-            A synchronous method that returns a structure that contains specific information on the change that occurred, given the type of change you want to monitor and the time (in milliseconds) to wait before 
-             timing out.
+            A synchronous method that returns a structure that contains specific 
+             information on the change that occurred, given the type of change you want to 
+             monitor and the time (in milliseconds) to wait before timing out.
         
         
             changeType: The System.IO.WatcherChangeTypes to watch for.
             timeout: The time (in milliseconds) to wait before timing out.
-            Returns: A System.IO.WaitForChangedResult that contains specific information on the change that occurred.
+            Returns: A System.IO.WaitForChangedResult that contains specific information on the 
+             change that occurred.
+        
         WaitForChanged(self: FileSystemWatcher, changeType: WatcherChangeTypes) -> WaitForChangedResult
         
-            A synchronous method that returns a structure that contains specific information on the change that occurred, given the type of change you want to monitor.
+            A synchronous method that returns a structure that contains specific 
+             information on the change that occurred, given the type of change you want to 
+             monitor.
+        
         
             changeType: The System.IO.WatcherChangeTypes to watch for.
-            Returns: A System.IO.WaitForChangedResult that contains specific information on the change that occurred.
+            Returns: A System.IO.WaitForChangedResult that contains specific information on the 
+             change that occurred.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -4461,9 +5092,12 @@ class MemoryStream(Stream, IDisposable):
     def Dispose(self):
         """
         Dispose(self: MemoryStream, disposing: bool)
-            Releases the unmanaged resources used by the System.IO.MemoryStream class and optionally releases the managed resources.
+            Releases the unmanaged resources used by the System.IO.MemoryStream class and 
+             optionally releases the managed resources.
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+        
+            disposing: true to release both managed and unmanaged resources; false to release only 
+             unmanaged resources.
         """
         pass
 
@@ -4483,7 +5117,9 @@ class MemoryStream(Stream, IDisposable):
         GetBuffer(self: MemoryStream) -> Array[Byte]
         
             Returns the array of unsigned bytes from which this stream was created.
-            Returns: The byte array from which this stream was created, or the underlying array if a byte array was not provided to the System.IO.MemoryStream constructor during construction of the current instance.
+            Returns: The byte array from which this stream was created, or the underlying array if a 
+             byte array was not provided to the System.IO.MemoryStream constructor during 
+             construction of the current instance.
         """
         pass
 
@@ -4493,8 +5129,11 @@ class MemoryStream(Stream, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-             usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled across 
+             a remoting boundary. A value of false is usually appropriate. true to copy the 
+             current System.MarshalByRefObject object's identity to its clone, which will 
+             cause remoting client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -4517,10 +5156,13 @@ class MemoryStream(Stream, IDisposable):
         
             Reads a block of bytes from the current stream and writes the data to a buffer.
         
-            offset: The zero-based byte offset in buffer at which to begin storing data from the current stream.
+            offset: The zero-based byte offset in buffer at which to begin storing data from the 
+             current stream.
+        
             count: The maximum number of bytes to read.
-            Returns: The total number of bytes written into the buffer. This can be less than the number of bytes requested if that number of bytes are not currently available, or zero if the end of the stream is reached 
-             before any bytes are read.
+            Returns: The total number of bytes written into the buffer. This can be less than the 
+             number of bytes requested if that number of bytes are not currently available, 
+             or zero if the end of the stream is reached before any bytes are read.
         """
         pass
 
@@ -4533,7 +5175,8 @@ class MemoryStream(Stream, IDisposable):
         ReadByte(self: MemoryStream) -> int
         
             Reads a byte from the current stream.
-            Returns: The byte cast to a System.Int32, or -1 if the end of the stream has been reached.
+            Returns: The byte cast to a System.Int32, or -1 if the end of the stream has been 
+             reached.
         """
         pass
 
@@ -4543,9 +5186,12 @@ class MemoryStream(Stream, IDisposable):
         
             Sets the position within the current stream to the specified value.
         
-            offset: The new position within the stream. This is relative to the loc parameter, and can be positive or negative.
+            offset: The new position within the stream. This is relative to the loc parameter, and 
+             can be positive or negative.
+        
             loc: A value of type System.IO.SeekOrigin, which acts as the seek reference point.
-            Returns: The new position within the stream, calculated by combining the initial reference point and the offset.
+            Returns: The new position within the stream, calculated by combining the initial 
+             reference point and the offset.
         """
         pass
 
@@ -4562,7 +5208,9 @@ class MemoryStream(Stream, IDisposable):
         """
         ToArray(self: MemoryStream) -> Array[Byte]
         
-            Writes the stream contents to a byte array, regardless of the System.IO.MemoryStream.Position property.
+            Writes the stream contents to a byte array, regardless of the 
+             System.IO.MemoryStream.Position property.
+        
             Returns: A new byte array.
         """
         pass
@@ -4577,7 +5225,9 @@ class MemoryStream(Stream, IDisposable):
             Writes a block of bytes to the current stream using data read from a buffer.
         
             buffer: The buffer to write data from.
-            offset: The zero-based byte offset in buffer at which to begin copying bytes to the current stream.
+            offset: The zero-based byte offset in buffer at which to begin copying bytes to the 
+             current stream.
+        
             count: The maximum number of bytes to write.
         """
         pass
@@ -4605,18 +5255,11 @@ class MemoryStream(Stream, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -4744,10 +5387,17 @@ class Path(object):
         
             Changes the extension of a path string.
         
-            path: The path information to modify. The path cannot contain any of the characters defined in System.IO.Path.GetInvalidPathChars.
-            extension: The new extension (with or without a leading period). Specify null to remove an existing extension from path.
-            Returns: The modified path information.On Windows-based desktop platforms, if path is null or an empty string (""), the path information is returned unmodified. If extension is null, the returned string contains 
-             the specified path with its extension removed. If path has no extension, and extension is not null, the returned path string contains extension appended to the end of path.
+            path: The path information to modify. The path cannot contain any of the characters 
+             defined in System.IO.Path.GetInvalidPathChars.
+        
+            extension: The new extension (with or without a leading period). Specify null to remove an 
+             existing extension from path.
+        
+            Returns: The modified path information.On Windows-based desktop platforms, if path is 
+             null or an empty string (""), the path information is returned unmodified. If 
+             extension is null, the returned string contains the specified path with its 
+             extension removed. If path has no extension, and extension is not null, the 
+             returned path string contains extension appended to the end of path.
         """
         pass
 
@@ -4775,7 +5425,10 @@ class Path(object):
         
             path1: The first path to combine.
             path2: The second path to combine.
-            Returns: The combined paths. If one of the specified paths is a zero-length string, this method returns the other path. If path2 contains an absolute path, this method returns path2.
+            Returns: The combined paths. If one of the specified paths is a zero-length string, this 
+             method returns the other path. If path2 contains an absolute path, this method 
+             returns path2.
+        
         Combine(path1: str, path2: str, path3: str) -> str
         
             Combines three strings into a path.
@@ -4795,7 +5448,9 @@ class Path(object):
             Returns the directory information for the specified path string.
         
             path: The path of a file or directory.
-            Returns: Directory information for path, or null if path denotes a root directory or is null. Returns System.String.Empty if path does not contain directory information.
+            Returns: Directory information for path, or null if path denotes a root directory or is 
+             null. Returns System.String.Empty if path does not contain directory 
+             information.
         """
         pass
 
@@ -4807,8 +5462,11 @@ class Path(object):
             Returns the extension of the specified path string.
         
             path: The path string from which to get the extension.
-            Returns: The extension of the specified path (including the period "."), or null, or System.String.Empty. If path is null, System.IO.Path.GetExtension(System.String) returns null. If path does not have extension 
-             information, System.IO.Path.GetExtension(System.String) returns System.String.Empty.
+            Returns: The extension of the specified path (including the period "."), or null, or 
+             System.String.Empty. If path is null, 
+             System.IO.Path.GetExtension(System.String) returns null. If path does not have 
+             extension information, System.IO.Path.GetExtension(System.String) returns 
+             System.String.Empty.
         """
         pass
 
@@ -4820,8 +5478,9 @@ class Path(object):
             Returns the file name and extension of the specified path string.
         
             path: The path string from which to obtain the file name and extension.
-            Returns: The characters after the last directory character in path. If the last character of path is a directory or volume separator character, this method returns System.String.Empty. If path is null, this method 
-             returns null.
+            Returns: The characters after the last directory character in path. If the last 
+             character of path is a directory or volume separator character, this method 
+             returns System.String.Empty. If path is null, this method returns null.
         """
         pass
 
@@ -4833,7 +5492,8 @@ class Path(object):
             Returns the file name of the specified path string without the extension.
         
             path: The path of the file.
-            Returns: The string returned by System.IO.Path.GetFileName(System.String), minus the last period (.) and all characters following it.
+            Returns: The string returned by System.IO.Path.GetFileName(System.String), minus the 
+             last period (.) and all characters following it.
         """
         pass
 
@@ -4877,7 +5537,8 @@ class Path(object):
             Gets the root directory information of the specified path.
         
             path: The path from which to obtain root directory information.
-            Returns: The root directory of path, such as "C:\", or null if path is null, or an empty string if path does not contain root directory information.
+            Returns: The root directory of path, such as "C:\", or null if path is null, or an empty 
+             string if path does not contain root directory information.
         """
         pass
 
@@ -4896,7 +5557,9 @@ class Path(object):
         """
         GetTempFileName() -> str
         
-            Creates a uniquely named, zero-byte temporary file on disk and returns the full path of that file.
+            Creates a uniquely named, zero-byte temporary file on disk and returns the full 
+             path of that file.
+        
             Returns: The full path of the temporary file.
         """
         pass
@@ -4919,7 +5582,9 @@ class Path(object):
             Determines whether a path includes a file name extension.
         
             path: The path to search for an extension.
-            Returns: true if the characters that follow the last directory separator (\\ or /) or volume separator (:) in the path include a period (.) followed by one or more characters; otherwise, false.
+            Returns: true if the characters that follow the last directory separator (\\ or /) or 
+             volume separator (:) in the path include a period (.) followed by one or more 
+             characters; otherwise, false.
         """
         pass
 
@@ -5042,7 +5707,9 @@ class RenamedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -5055,7 +5722,10 @@ class RenamedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -5081,10 +5751,14 @@ class RenamedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -5195,7 +5869,8 @@ class TextReader(MarshalByRefObject, IDisposable):
     def Close(self):
         """
         Close(self: TextReader)
-            Closes the System.IO.TextReader and releases any system resources associated with the TextReader.
+            Closes the System.IO.TextReader and releases any system resources associated 
+             with the TextReader.
         """
         pass
 
@@ -5212,8 +5887,11 @@ class TextReader(MarshalByRefObject, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-             usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled across 
+             a remoting boundary. A value of false is usually appropriate. true to copy the 
+             current System.MarshalByRefObject object's identity to its clone, which will 
+             cause remoting client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -5227,8 +5905,12 @@ class TextReader(MarshalByRefObject, IDisposable):
         """
         Peek(self: TextReader) -> int
         
-            Reads the next character without changing the state of the reader or the character source. Returns the next available character without actually reading it from the input stream.
-            Returns: An integer representing the next character to be read, or -1 if no more characters are available or the stream does not support seeking.
+            Reads the next character without changing the state of the reader or the 
+             character source. Returns the next available character without actually reading 
+             it from the input stream.
+        
+            Returns: An integer representing the next character to be read, or -1 if no more 
+             characters are available or the stream does not support seeking.
         """
         pass
 
@@ -5236,17 +5918,25 @@ class TextReader(MarshalByRefObject, IDisposable):
         """
         Read(self: TextReader, index: int, count: int) -> (int, Array[Char])
         
-            Reads a maximum of count characters from the current stream and writes the data to buffer, beginning at index.
+            Reads a maximum of count characters from the current stream and writes the data 
+             to buffer, beginning at index.
+        
         
             index: The position in buffer at which to begin writing.
-            count: The maximum number of characters to read. If the end of the stream is reached before count of characters is read into buffer, the current method returns.
-            Returns: The number of characters that have been read. The number will be less than or equal to count, depending on whether the data is available within the stream. This method returns zero if called when no more 
-             characters are left to read.
+            count: The maximum number of characters to read. If the end of the stream is reached 
+             before count of characters is read into buffer, the current method returns.
+        
+            Returns: The number of characters that have been read. The number will be less than or 
+             equal to count, depending on whether the data is available within the stream. 
+             This method returns zero if called when no more characters are left to read.
         
         Read(self: TextReader) -> int
         
-            Reads the next character from the input stream and advances the character position by one character.
-            Returns: The next character from the input stream, or -1 if no more characters are available. The default implementation returns -1.
+            Reads the next character from the input stream and advances the character 
+             position by one character.
+        
+            Returns: The next character from the input stream, or -1 if no more characters are 
+             available. The default implementation returns -1.
         """
         pass
 
@@ -5258,12 +5948,16 @@ class TextReader(MarshalByRefObject, IDisposable):
         """
         ReadBlock(self: TextReader, index: int, count: int) -> (int, Array[Char])
         
-            Reads a maximum of count characters from the current stream, and writes the data to buffer, beginning at index.
+            Reads a maximum of count characters from the current stream, and writes the 
+             data to buffer, beginning at index.
+        
         
             index: The position in buffer at which to begin writing.
             count: The maximum number of characters to read.
-            Returns: The position of the underlying stream is advanced by the number of characters that were read into buffer.The number of characters that have been read. The number will be less than or equal to count, 
-             depending on whether all input characters have been read.
+            Returns: The position of the underlying stream is advanced by the number of characters 
+             that were read into buffer.The number of characters that have been read. The 
+             number will be less than or equal to count, depending on whether all input 
+             characters have been read.
         """
         pass
 
@@ -5275,7 +5969,9 @@ class TextReader(MarshalByRefObject, IDisposable):
         """
         ReadLine(self: TextReader) -> str
         
-            Reads a line of characters from the current stream and returns the data as a string.
+            Reads a line of characters from the current stream and returns the data as a 
+             string.
+        
             Returns: The next line from the input stream, or null if all characters have been read.
         """
         pass
@@ -5288,8 +5984,11 @@ class TextReader(MarshalByRefObject, IDisposable):
         """
         ReadToEnd(self: TextReader) -> str
         
-            Reads all characters from the current position to the end of the TextReader and returns them as one string.
-            Returns: A string containing all characters from the current position to the end of the TextReader.
+            Reads all characters from the current position to the end of the TextReader and 
+             returns them as one string.
+        
+            Returns: A string containing all characters from the current position to the end of the 
+             TextReader.
         """
         pass
 
@@ -5310,18 +6009,11 @@ class TextReader(MarshalByRefObject, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -5353,7 +6045,8 @@ class StreamReader(TextReader, IDisposable):
     def Close(self):
         """
         Close(self: StreamReader)
-            Closes the System.IO.StreamReader object and the underlying stream, and releases any system resources associated with the reader.
+            Closes the System.IO.StreamReader object and the underlying stream, and 
+             releases any system resources associated with the reader.
         """
         pass
 
@@ -5367,9 +6060,12 @@ class StreamReader(TextReader, IDisposable):
     def Dispose(self):
         """
         Dispose(self: StreamReader, disposing: bool)
-            Closes the underlying stream, releases the unmanaged resources used by the System.IO.StreamReader, and optionally releases the managed resources.
+            Closes the underlying stream, releases the unmanaged resources used by the 
+             System.IO.StreamReader, and optionally releases the managed resources.
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+        
+            disposing: true to release both managed and unmanaged resources; false to release only 
+             unmanaged resources.
         """
         pass
 
@@ -5379,8 +6075,11 @@ class StreamReader(TextReader, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-             usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled across 
+             a remoting boundary. A value of false is usually appropriate. true to copy the 
+             current System.MarshalByRefObject object's identity to its clone, which will 
+             cause remoting client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -5395,7 +6094,8 @@ class StreamReader(TextReader, IDisposable):
         Peek(self: StreamReader) -> int
         
             Returns the next available character but does not consume it.
-            Returns: An integer representing the next character to be read, or -1 if there are no characters to be read or if the stream does not support seeking.
+            Returns: An integer representing the next character to be read, or -1 if there are no 
+             characters to be read or if the stream does not support seeking.
         """
         pass
 
@@ -5403,17 +6103,23 @@ class StreamReader(TextReader, IDisposable):
         """
         Read(self: StreamReader, index: int, count: int) -> (int, Array[Char])
         
-            Reads a specified maximum of characters from the current stream into a buffer, beginning at the specified index.
+            Reads a specified maximum of characters from the current stream into a buffer, 
+             beginning at the specified index.
+        
         
             index: The index of buffer at which to begin writing.
             count: The maximum number of characters to read.
-            Returns: The number of characters that have been read, or 0 if at the end of the stream and no data was read. The number will be less than or equal to the count parameter, depending on whether the data is available 
-             within the stream.
+            Returns: The number of characters that have been read, or 0 if at the end of the stream 
+             and no data was read. The number will be less than or equal to the count 
+             parameter, depending on whether the data is available within the stream.
         
         Read(self: StreamReader) -> int
         
-            Reads the next character from the input stream and advances the character position by one character.
-            Returns: The next character from the input stream represented as an System.Int32 object, or -1 if no more characters are available.
+            Reads the next character from the input stream and advances the character 
+             position by one character.
+        
+            Returns: The next character from the input stream represented as an System.Int32 object, 
+             or -1 if no more characters are available.
         """
         pass
 
@@ -5433,8 +6139,11 @@ class StreamReader(TextReader, IDisposable):
         """
         ReadLine(self: StreamReader) -> str
         
-            Reads a line of characters from the current stream and returns the data as a string.
-            Returns: The next line from the input stream, or null if the end of the input stream is reached.
+            Reads a line of characters from the current stream and returns the data as a 
+             string.
+        
+            Returns: The next line from the input stream, or null if the end of the input stream is 
+             reached.
         """
         pass
 
@@ -5447,7 +6156,8 @@ class StreamReader(TextReader, IDisposable):
         ReadToEnd(self: StreamReader) -> str
         
             Reads the stream from the current position to the end of the stream.
-            Returns: The rest of the stream as a string, from the current position to the end. If the current position is at the end of the stream, returns an empty string ("").
+            Returns: The rest of the stream as a string, from the current position to the end. If 
+             the current position is at the end of the stream, returns an empty string ("").
         """
         pass
 
@@ -5456,18 +6166,11 @@ class StreamReader(TextReader, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -5524,7 +6227,8 @@ class TextWriter(MarshalByRefObject, IDisposable):
     def Close(self):
         """
         Close(self: TextWriter)
-            Closes the current writer and releases any system resources associated with the writer.
+            Closes the current writer and releases any system resources associated with the 
+             writer.
         """
         pass
 
@@ -5538,7 +6242,8 @@ class TextWriter(MarshalByRefObject, IDisposable):
     def Flush(self):
         """
         Flush(self: TextWriter)
-            Clears all buffers for the current writer and causes any buffered data to be written to the underlying device.
+            Clears all buffers for the current writer and causes any buffered data to be 
+             written to the underlying device.
         """
         pass
 
@@ -5552,8 +6257,11 @@ class TextWriter(MarshalByRefObject, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-             usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled across 
+             a remoting boundary. A value of false is usually appropriate. true to copy the 
+             current System.MarshalByRefObject object's identity to its clone, which will 
+             cause remoting client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -5582,11 +6290,15 @@ class TextWriter(MarshalByRefObject, IDisposable):
         
             value: The string to write.
         Write(self: TextWriter, value: object)
-            Writes the text representation of an object to the text stream by calling ToString on that object.
+            Writes the text representation of an object to the text stream by calling 
+             ToString on that object.
+        
         
             value: The object to write.
         Write(self: TextWriter, value: float)
-            Writes the text representation of an 8-byte floating-point value to the text stream.
+            Writes the text representation of an 8-byte floating-point value to the text 
+             stream.
+        
         
             value: The 8-byte floating-point value to write.
         Write(self: TextWriter, value: Decimal)
@@ -5594,30 +6306,40 @@ class TextWriter(MarshalByRefObject, IDisposable):
         
             value: The decimal value to write.
         Write(self: TextWriter, format: str, arg0: object, arg1: object, arg2: object)
-            Writes out a formatted string, using the same semantics as System.String.Format(System.String,System.Object).
+            Writes out a formatted string, using the same semantics as 
+             System.String.Format(System.String,System.Object).
+        
         
             format: The formatting string.
             arg0: An object to write into the formatted string.
             arg1: An object to write into the formatted string.
             arg2: An object to write into the formatted string.
         Write(self: TextWriter, format: str, *arg: Array[object])
-            Writes out a formatted string, using the same semantics as System.String.Format(System.String,System.Object).
+            Writes out a formatted string, using the same semantics as 
+             System.String.Format(System.String,System.Object).
+        
         
             format: The formatting string.
             arg: The object array to write into the formatted string.
         Write(self: TextWriter, format: str, arg0: object)
-            Writes out a formatted string, using the same semantics as System.String.Format(System.String,System.Object).
+            Writes out a formatted string, using the same semantics as 
+             System.String.Format(System.String,System.Object).
+        
         
             format: The formatting string.
             arg0: An object to write into the formatted string.
         Write(self: TextWriter, format: str, arg0: object, arg1: object)
-            Writes out a formatted string, using the same semantics as System.String.Format(System.String,System.Object).
+            Writes out a formatted string, using the same semantics as 
+             System.String.Format(System.String,System.Object).
+        
         
             format: The formatting string.
             arg0: An object to write into the formatted string.
             arg1: An object to write into the formatted string.
         Write(self: TextWriter, value: Single)
-            Writes the text representation of a 4-byte floating-point value to the text stream.
+            Writes the text representation of a 4-byte floating-point value to the text 
+             stream.
+        
         
             value: The 4-byte floating-point value to write.
         Write(self: TextWriter, buffer: Array[Char], index: int, count: int)
@@ -5669,44 +6391,64 @@ class TextWriter(MarshalByRefObject, IDisposable):
     def WriteLine(self, *__args):
         """
         WriteLine(self: TextWriter, value: Decimal)
-            Writes the text representation of a decimal value followed by a line terminator to the text stream.
+            Writes the text representation of a decimal value followed by a line terminator 
+             to the text stream.
+        
         
             value: The decimal value to write.
         WriteLine(self: TextWriter, value: str)
             Writes a string followed by a line terminator to the text stream.
         
-            value: The string to write. If value is null, only the line termination characters are written.
+            value: The string to write. If value is null, only the line termination characters are 
+             written.
+        
         WriteLine(self: TextWriter, value: Single)
-            Writes the text representation of a 4-byte floating-point value followed by a line terminator to the text stream.
+            Writes the text representation of a 4-byte floating-point value followed by a 
+             line terminator to the text stream.
+        
         
             value: The 4-byte floating-point value to write.
         WriteLine(self: TextWriter, value: float)
-            Writes the text representation of a 8-byte floating-point value followed by a line terminator to the text stream.
+            Writes the text representation of a 8-byte floating-point value followed by a 
+             line terminator to the text stream.
+        
         
             value: The 8-byte floating-point value to write.
         WriteLine(self: TextWriter, value: object)
-            Writes the text representation of an object by calling ToString on this object, followed by a line terminator to the text stream.
+            Writes the text representation of an object by calling ToString on this object, 
+             followed by a line terminator to the text stream.
         
-            value: The object to write. If value is null, only the line termination characters are written.
+        
+            value: The object to write. If value is null, only the line termination characters are 
+             written.
+        
         WriteLine(self: TextWriter, format: str, arg0: object, arg1: object, arg2: object)
-            Writes out a formatted string and a new line, using the same semantics as System.String.Format(System.String,System.Object).
+            Writes out a formatted string and a new line, using the same semantics as 
+             System.String.Format(System.String,System.Object).
+        
         
             format: The formatting string.
             arg0: The object to write into the format string.
             arg1: The object to write into the format string.
             arg2: The object to write into the format string.
         WriteLine(self: TextWriter, format: str, *arg: Array[object])
-            Writes out a formatted string and a new line, using the same semantics as System.String.Format(System.String,System.Object).
+            Writes out a formatted string and a new line, using the same semantics as 
+             System.String.Format(System.String,System.Object).
+        
         
             format: The formatting string.
             arg: The object array to write into format string.
         WriteLine(self: TextWriter, format: str, arg0: object)
-            Writes out a formatted string and a new line, using the same semantics as System.String.Format(System.String,System.Object).
+            Writes out a formatted string and a new line, using the same semantics as 
+             System.String.Format(System.String,System.Object).
+        
         
             format: The formatted string.
             arg0: The object to write into the formatted string.
         WriteLine(self: TextWriter, format: str, arg0: object, arg1: object)
-            Writes out a formatted string and a new line, using the same semantics as System.String.Format(System.String,System.Object).
+            Writes out a formatted string and a new line, using the same semantics as 
+             System.String.Format(System.String,System.Object).
+        
         
             format: The formatting string.
             arg0: The object to write into the format string.
@@ -5716,7 +6458,9 @@ class TextWriter(MarshalByRefObject, IDisposable):
         
             buffer: The character array from which data is read.
         WriteLine(self: TextWriter, buffer: Array[Char], index: int, count: int)
-            Writes a subarray of characters followed by a line terminator to the text stream.
+            Writes a subarray of characters followed by a line terminator to the text 
+             stream.
+        
         
             buffer: The character array from which data is read.
             index: The index into buffer at which to begin reading.
@@ -5728,23 +6472,33 @@ class TextWriter(MarshalByRefObject, IDisposable):
         
             value: The character to write to the text stream.
         WriteLine(self: TextWriter, value: bool)
-            Writes the text representation of a Boolean followed by a line terminator to the text stream.
+            Writes the text representation of a Boolean followed by a line terminator to 
+             the text stream.
+        
         
             value: The Boolean to write.
         WriteLine(self: TextWriter, value: Int64)
-            Writes the text representation of an 8-byte signed integer followed by a line terminator to the text stream.
+            Writes the text representation of an 8-byte signed integer followed by a line 
+             terminator to the text stream.
+        
         
             value: The 8-byte signed integer to write.
         WriteLine(self: TextWriter, value: UInt64)
-            Writes the text representation of an 8-byte unsigned integer followed by a line terminator to the text stream.
+            Writes the text representation of an 8-byte unsigned integer followed by a line 
+             terminator to the text stream.
+        
         
             value: The 8-byte unsigned integer to write.
         WriteLine(self: TextWriter, value: int)
-            Writes the text representation of a 4-byte signed integer followed by a line terminator to the text stream.
+            Writes the text representation of a 4-byte signed integer followed by a line 
+             terminator to the text stream.
+        
         
             value: The 4-byte signed integer to write.
         WriteLine(self: TextWriter, value: UInt32)
-            Writes the text representation of a 4-byte unsigned integer followed by a line terminator to the text stream.
+            Writes the text representation of a 4-byte unsigned integer followed by a line 
+             terminator to the text stream.
+        
         
             value: The 4-byte unsigned integer to write.
         """
@@ -5761,18 +6515,11 @@ class TextWriter(MarshalByRefObject, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -5840,16 +6587,20 @@ class StreamWriter(TextWriter, IDisposable):
     def Dispose(self):
         """
         Dispose(self: StreamWriter, disposing: bool)
-            Releases the unmanaged resources used by the System.IO.StreamWriter and optionally releases the managed resources.
+            Releases the unmanaged resources used by the System.IO.StreamWriter and 
+             optionally releases the managed resources.
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+        
+            disposing: true to release both managed and unmanaged resources; false to release only 
+             unmanaged resources.
         """
         pass
 
     def Flush(self):
         """
         Flush(self: StreamWriter)
-            Clears all buffers for the current writer and causes any buffered data to be written to the underlying stream.
+            Clears all buffers for the current writer and causes any buffered data to be 
+             written to the underlying stream.
         """
         pass
 
@@ -5863,8 +6614,11 @@ class StreamWriter(TextWriter, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-             usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled across 
+             a remoting boundary. A value of false is usually appropriate. true to copy the 
+             current System.MarshalByRefObject object's identity to its clone, which will 
+             cause remoting client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -5879,7 +6633,9 @@ class StreamWriter(TextWriter, IDisposable):
         Write(self: StreamWriter, buffer: Array[Char])
             Writes a character array to the stream.
         
-            buffer: A character array containing the data to write. If buffer is null, nothing is written.
+            buffer: A character array containing the data to write. If buffer is null, nothing is 
+             written.
+        
         Write(self: StreamWriter, value: str)
             Writes a string to the stream.
         
@@ -5915,18 +6671,11 @@ class StreamWriter(TextWriter, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -5993,9 +6742,12 @@ class StringReader(TextReader, IDisposable):
     def Dispose(self):
         """
         Dispose(self: StringReader, disposing: bool)
-            Releases the unmanaged resources used by the System.IO.StringReader and optionally releases the managed resources.
+            Releases the unmanaged resources used by the System.IO.StringReader and 
+             optionally releases the managed resources.
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+        
+            disposing: true to release both managed and unmanaged resources; false to release only 
+             unmanaged resources.
         """
         pass
 
@@ -6005,8 +6757,11 @@ class StringReader(TextReader, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-             usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled across 
+             a remoting boundary. A value of false is usually appropriate. true to copy the 
+             current System.MarshalByRefObject object's identity to its clone, which will 
+             cause remoting client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -6021,7 +6776,8 @@ class StringReader(TextReader, IDisposable):
         Peek(self: StringReader) -> int
         
             Returns the next available character but does not consume it.
-            Returns: An integer representing the next character to be read, or -1 if no more characters are available or the stream does not support seeking.
+            Returns: An integer representing the next character to be read, or -1 if no more 
+             characters are available or the stream does not support seeking.
         """
         pass
 
@@ -6029,17 +6785,23 @@ class StringReader(TextReader, IDisposable):
         """
         Read(self: StringReader, index: int, count: int) -> (int, Array[Char])
         
-            Reads a block of characters from the input string and advances the character position by count.
+            Reads a block of characters from the input string and advances the character 
+             position by count.
+        
         
             index: The starting index in the buffer.
             count: The number of characters to read.
-            Returns: The total number of characters read into the buffer. This can be less than the number of characters requested if that many characters are not currently available, or zero if the end of the underlying 
-             string has been reached.
+            Returns: The total number of characters read into the buffer. This can be less than the 
+             number of characters requested if that many characters are not currently 
+             available, or zero if the end of the underlying string has been reached.
         
         Read(self: StringReader) -> int
         
-            Reads the next character from the input string and advances the character position by one character.
-            Returns: The next character from the underlying string, or -1 if no more characters are available.
+            Reads the next character from the input string and advances the character 
+             position by one character.
+        
+            Returns: The next character from the underlying string, or -1 if no more characters are 
+             available.
         """
         pass
 
@@ -6056,7 +6818,8 @@ class StringReader(TextReader, IDisposable):
         ReadLine(self: StringReader) -> str
         
             Reads a line from the underlying string.
-            Returns: The next line from the underlying string, or null if the end of the underlying string is reached.
+            Returns: The next line from the underlying string, or null if the end of the underlying 
+             string is reached.
         """
         pass
 
@@ -6068,7 +6831,9 @@ class StringReader(TextReader, IDisposable):
         """
         ReadToEnd(self: StringReader) -> str
         
-            Reads the stream as a string, either in its entirety or from the current position to the end of the stream.
+            Reads the stream as a string, either in its entirety or from the current 
+             position to the end of the stream.
+        
             Returns: The content from the current position to the end of the underlying string.
         """
         pass
@@ -6078,18 +6843,11 @@ class StringReader(TextReader, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -6124,9 +6882,12 @@ class StringWriter(TextWriter, IDisposable):
     def Dispose(self):
         """
         Dispose(self: StringWriter, disposing: bool)
-            Releases the unmanaged resources used by the System.IO.StringWriter and optionally releases the managed resources.
+            Releases the unmanaged resources used by the System.IO.StringWriter and 
+             optionally releases the managed resources.
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+        
+            disposing: true to release both managed and unmanaged resources; false to release only 
+             unmanaged resources.
         """
         pass
 
@@ -6149,8 +6910,11 @@ class StringWriter(TextWriter, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-             usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled across 
+             a remoting boundary. A value of false is usually appropriate. true to copy the 
+             current System.MarshalByRefObject object's identity to its clone, which will 
+             cause remoting client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -6164,7 +6928,9 @@ class StringWriter(TextWriter, IDisposable):
         """
         ToString(self: StringWriter) -> str
         
-            Returns a string containing the characters written to the current StringWriter so far.
+            Returns a string containing the characters written to the current StringWriter 
+             so far.
+        
             Returns: The string containing the characters written to the current StringWriter.
         """
         pass
@@ -6176,7 +6942,9 @@ class StringWriter(TextWriter, IDisposable):
         
             value: The string to write.
         Write(self: StringWriter, buffer: Array[Char], index: int, count: int)
-            Writes the specified region of a character array to this instance of the StringWriter.
+            Writes the specified region of a character array to this instance of the 
+             StringWriter.
+        
         
             buffer: The character array to read data from.
             index: The index at which to begin reading from buffer.
@@ -6205,18 +6973,11 @@ class StringWriter(TextWriter, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -6272,7 +7033,8 @@ class UnmanagedMemoryAccessor(object, IDisposable):
             buffer: The buffer to contain the accessor.
             offset: The byte at which to start the accessor.
             capacity: The size, in bytes, of memory to allocate.
-            access: The type of access allowed to the memory. The default is System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite.
+            access: The type of access allowed to the memory. The default is 
+             System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite.
         """
         pass
 
@@ -6503,18 +7265,11 @@ class UnmanagedMemoryAccessor(object, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -6583,9 +7338,12 @@ class UnmanagedMemoryStream(Stream, IDisposable):
     def Dispose(self):
         """
         Dispose(self: UnmanagedMemoryStream, disposing: bool)
-            Releases the unmanaged resources used by the System.IO.UnmanagedMemoryStream and optionally releases the managed resources.
+            Releases the unmanaged resources used by the System.IO.UnmanagedMemoryStream 
+             and optionally releases the managed resources.
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+        
+            disposing: true to release both managed and unmanaged resources; false to release only 
+             unmanaged resources.
         """
         pass
 
@@ -6603,14 +7361,18 @@ class UnmanagedMemoryStream(Stream, IDisposable):
     def Initialize(self, *args): #cannot find CLR method
         """
         Initialize(self: UnmanagedMemoryStream, buffer: SafeBuffer, offset: Int64, length: Int64, access: FileAccess)
-            Initializes a new instance of the System.IO.UnmanagedMemoryStream class in a safe buffer with a specified offset, length, and file access.
+            Initializes a new instance of the System.IO.UnmanagedMemoryStream class in a 
+             safe buffer with a specified offset, length, and file access.
+        
         
             buffer: The buffer to contain the unmanaged memory stream.
             offset: The byte position in the buffer at which to start the unmanaged memory stream.
             length: The length of the unmanaged memory stream.
             access: The mode of file access to the unmanaged memory stream.
         Initialize(self: UnmanagedMemoryStream, pointer: Byte*, length: Int64, capacity: Int64, access: FileAccess)
-            Initializes a new instance of the System.IO.UnmanagedMemoryStream class by using a pointer to an unmanaged memory location.
+            Initializes a new instance of the System.IO.UnmanagedMemoryStream class by 
+             using a pointer to an unmanaged memory location.
+        
         
             pointer: A pointer to an unmanaged memory location.
             length: The length of the memory to use.
@@ -6625,8 +7387,11 @@ class UnmanagedMemoryStream(Stream, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-             usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled across 
+             a remoting boundary. A value of false is usually appropriate. true to copy the 
+             current System.MarshalByRefObject object's identity to its clone, which will 
+             cause remoting client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -6649,9 +7414,13 @@ class UnmanagedMemoryStream(Stream, IDisposable):
         
             Reads the specified number of bytes into the specified array.
         
-            offset: The zero-based byte offset in buffer at which to begin storing the data read from the current stream.
+            offset: The zero-based byte offset in buffer at which to begin storing the data read 
+             from the current stream.
+        
             count: The maximum number of bytes to read from the current stream.
-            Returns: The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.
+            Returns: The total number of bytes read into the buffer. This can be less than the 
+             number of bytes requested if that many bytes are not currently available, or 
+             zero (0) if the end of the stream has been reached.
         """
         pass
 
@@ -6663,8 +7432,11 @@ class UnmanagedMemoryStream(Stream, IDisposable):
         """
         ReadByte(self: UnmanagedMemoryStream) -> int
         
-            Reads a byte from a stream and advances the position within the stream by one byte, or returns -1 if at the end of the stream.
-            Returns: The unsigned byte cast to an System.Int32 object, or -1 if at the end of the stream.
+            Reads a byte from a stream and advances the position within the stream by one 
+             byte, or returns -1 if at the end of the stream.
+        
+            Returns: The unsigned byte cast to an System.Int32 object, or -1 if at the end of the 
+             stream.
         """
         pass
 
@@ -6675,7 +7447,9 @@ class UnmanagedMemoryStream(Stream, IDisposable):
             Sets the current position of the current stream to the given value.
         
             offset: The point relative to origin to begin seeking from.
-            loc: Specifies the beginning, the end, or the current position as a reference point for origin, using a value of type System.IO.SeekOrigin.
+            loc: Specifies the beginning, the end, or the current position as a reference point 
+             for origin, using a value of type System.IO.SeekOrigin.
+        
             Returns: The new position in the stream.
         """
         pass
@@ -6714,18 +7488,11 @@ class UnmanagedMemoryStream(Stream, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method

@@ -2,7 +2,7 @@
 # module System.Windows.Threading calls itself Threading
 # from WindowsBase,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # functions
@@ -18,45 +18,97 @@ class Dispatcher(object):
   """
   BeginInvoke(self: Dispatcher,method: Delegate,*args: Array[object]) -> DispatcherOperation
   
-   Executes the specified delegate asynchronously with the specified arguments on the thread that the System.Windows.Threading.Dispatcher was created on.
+   Executes the specified delegate asynchronously with the specified arguments on 
+    the thread that the System.Windows.Threading.Dispatcher was created on.
   
-   method: The delegate to a method that takes parameters specified in args,which is pushed onto the System.Windows.Threading.Dispatcher event queue.
+  
+   method: The delegate to a method that takes parameters specified in args,which is 
+    pushed onto the System.Windows.Threading.Dispatcher event queue.
+  
    args: An array of objects to pass as arguments to the given method. Can be null.
-   Returns: An object,which is returned immediately after erload:System.Windows.Threading.Dispatcher.BeginInvoke is called,that can be used to interact with the delegate as it is pending execution in the event queue.
+   Returns: An object,which is returned immediately after 
+    erload:System.Windows.Threading.Dispatcher.BeginInvoke is called,that can be 
+    used to interact with the delegate as it is pending execution in the event 
+    queue.
+  
   BeginInvoke(self: Dispatcher,method: Delegate,priority: DispatcherPriority,*args: Array[object]) -> DispatcherOperation
   
-   Executes the specified delegate asynchronously with the specified arguments,at the specified priority,on the thread that the System.Windows.Threading.Dispatcher was created on.
+   Executes the specified delegate asynchronously with the specified arguments,at 
+    the specified priority,on the thread that the 
+    System.Windows.Threading.Dispatcher was created on.
   
-   method: The delegate to a method that takes parameters specified in args,which is pushed onto the System.Windows.Threading.Dispatcher event queue.
-   priority: The priority,relative to the other pending operations in the System.Windows.Threading.Dispatcher event queue,the specified method is invoked.
+  
+   method: The delegate to a method that takes parameters specified in args,which is 
+    pushed onto the System.Windows.Threading.Dispatcher event queue.
+  
+   priority: The priority,relative to the other pending operations in the 
+    System.Windows.Threading.Dispatcher event queue,the specified method is 
+    invoked.
+  
    args: An array of objects to pass as arguments to the given method. Can be null.
-   Returns: An object,which is returned immediately after erload:System.Windows.Threading.Dispatcher.BeginInvoke is called,that can be used to interact with the delegate as it is pending execution in the event queue.
+   Returns: An object,which is returned immediately after 
+    erload:System.Windows.Threading.Dispatcher.BeginInvoke is called,that can be 
+    used to interact with the delegate as it is pending execution in the event 
+    queue.
+  
   BeginInvoke(self: Dispatcher,priority: DispatcherPriority,method: Delegate,arg: object,*args: Array[object]) -> DispatcherOperation
   
-   Executes the specified delegate asynchronously at the specified priority and with the specified array of arguments on the thread the System.Windows.Threading.Dispatcher is associated with.
+   Executes the specified delegate asynchronously at the specified priority and 
+    with the specified array of arguments on the thread the 
+    System.Windows.Threading.Dispatcher is associated with.
   
-   priority: The priority,relative to the other pending operations in the System.Windows.Threading.Dispatcher event queue,the specified method is invoked.
-   method: A delegate to a method that takes multiple arguments,which is pushed onto the System.Windows.Threading.Dispatcher event queue.
+  
+   priority: The priority,relative to the other pending operations in the 
+    System.Windows.Threading.Dispatcher event queue,the specified method is 
+    invoked.
+  
+   method: A delegate to a method that takes multiple arguments,which is pushed onto the 
+    System.Windows.Threading.Dispatcher event queue.
+  
    arg: The object to pass as an argument to the specified method.
    args: An array of objects to pass as arguments to the specified method.
-   Returns: An object,which is returned immediately after erload:System.Windows.Threading.Dispatcher.BeginInvoke is called,that can be used to interact with the delegate as it is pending execution in the 
+   Returns: An object,which is returned immediately after 
+    erload:System.Windows.Threading.Dispatcher.BeginInvoke is called,that can be 
+    used to interact with the delegate as it is pending execution in the 
     System.Windows.Threading.Dispatcher queue.
   
   BeginInvoke(self: Dispatcher,priority: DispatcherPriority,method: Delegate) -> DispatcherOperation
   
-   Executes the specified delegate asynchronously at the specified priority on the thread the System.Windows.Threading.Dispatcher is associated with.
+   Executes the specified delegate asynchronously at the specified priority on the 
+    thread the System.Windows.Threading.Dispatcher is associated with.
   
-   priority: The priority,relative to the other pending operations in the System.Windows.Threading.Dispatcher event queue,the specified method is invoked.
-   method: The delegate to a method that takes no arguments,which is pushed onto the System.Windows.Threading.Dispatcher event queue.
-   Returns: An object,which is returned immediately after erload:System.Windows.Threading.Dispatcher.BeginInvoke is called,that can be used to interact with the delegate as it is pending execution in the event queue.
+  
+   priority: The priority,relative to the other pending operations in the 
+    System.Windows.Threading.Dispatcher event queue,the specified method is 
+    invoked.
+  
+   method: The delegate to a method that takes no arguments,which is pushed onto the 
+    System.Windows.Threading.Dispatcher event queue.
+  
+   Returns: An object,which is returned immediately after 
+    erload:System.Windows.Threading.Dispatcher.BeginInvoke is called,that can be 
+    used to interact with the delegate as it is pending execution in the event 
+    queue.
+  
   BeginInvoke(self: Dispatcher,priority: DispatcherPriority,method: Delegate,arg: object) -> DispatcherOperation
   
-   Executes the specified delegate asynchronously at the specified priority and with the specified argument on the thread the System.Windows.Threading.Dispatcher is associated with.
+   Executes the specified delegate asynchronously at the specified priority and 
+    with the specified argument on the thread the 
+    System.Windows.Threading.Dispatcher is associated with.
   
-   priority: The priority,relative to the other pending operations in the System.Windows.Threading.Dispatcher event queue,the specified method is invoked.
-   method: A delegate to a method that takes one argument,which is pushed onto the System.Windows.Threading.Dispatcher event queue.
+  
+   priority: The priority,relative to the other pending operations in the 
+    System.Windows.Threading.Dispatcher event queue,the specified method is 
+    invoked.
+  
+   method: A delegate to a method that takes one argument,which is pushed onto the 
+    System.Windows.Threading.Dispatcher event queue.
+  
    arg: The object to pass as an argument to the specified method.
-   Returns: An object,which is returned immediately after erload:System.Windows.Threading.Dispatcher.BeginInvoke is called,that can be used to interact with the delegate as it is pending execution in the event queue.
+   Returns: An object,which is returned immediately after 
+    erload:System.Windows.Threading.Dispatcher.BeginInvoke is called,that can be 
+    used to interact with the delegate as it is pending execution in the event 
+    queue.
   """
   pass
  def BeginInvokeShutdown(self,priority):
@@ -71,8 +123,11 @@ class Dispatcher(object):
   """
   CheckAccess(self: Dispatcher) -> bool
   
-   Determines whether the calling thread is the thread associated with this System.Windows.Threading.Dispatcher.
-   Returns: true if the calling thread is the thread associated with this System.Windows.Threading.Dispatcher; otherwise,false.
+   Determines whether the calling thread is the thread associated with this 
+    System.Windows.Threading.Dispatcher.
+  
+   Returns: true if the calling thread is the thread associated with this 
+    System.Windows.Threading.Dispatcher; otherwise,false.
   """
   pass
  def DisableProcessing(self):
@@ -105,89 +160,183 @@ class Dispatcher(object):
   """
   Invoke(self: Dispatcher,priority: DispatcherPriority,timeout: TimeSpan,method: Delegate) -> object
   
-   Executes the specified delegate synchronously at the specified priority and with the specified time-out value on the thread the System.Windows.Threading.Dispatcher was created.
+   Executes the specified delegate synchronously at the specified priority and 
+    with the specified time-out value on the thread the 
+    System.Windows.Threading.Dispatcher was created.
   
-   priority: The priority,relative to the other pending operations in the System.Windows.Threading.Dispatcher event queue,the specified method is invoked.
+  
+   priority: The priority,relative to the other pending operations in the 
+    System.Windows.Threading.Dispatcher event queue,the specified method is 
+    invoked.
+  
    timeout: The maximum time to wait for the operation to finish.
-   method: The delegate to a method that takes no arguments,which is pushed onto the System.Windows.Threading.Dispatcher event queue.
-   Returns: The return value from the delegate being invoked or null if the delegate has no return value.
+   method: The delegate to a method that takes no arguments,which is pushed onto the 
+    System.Windows.Threading.Dispatcher event queue.
+  
+   Returns: The return value from the delegate being invoked or null if the delegate has no 
+    return value.
+  
   Invoke(self: Dispatcher,priority: DispatcherPriority,timeout: TimeSpan,method: Delegate,arg: object) -> object
   
-   Executes the specified delegate at the specified priority with the specified argument synchronously on the thread the System.Windows.Threading.Dispatcher is associated with.
+   Executes the specified delegate at the specified priority with the specified 
+    argument synchronously on the thread the System.Windows.Threading.Dispatcher is 
+    associated with.
   
-   priority: The priority,relative to the other pending operations in the System.Windows.Threading.Dispatcher event queue,the specified method is invoked.
+  
+   priority: The priority,relative to the other pending operations in the 
+    System.Windows.Threading.Dispatcher event queue,the specified method is 
+    invoked.
+  
    timeout: The maximum time to wait for the operation to finish.
-   method: A delegate to a method that takes multiple arguments,which is pushed onto the System.Windows.Threading.Dispatcher event queue.
-   arg: An object to pass as an argument to the given method. This can be null if no arguments are needed.
-   Returns: The return value from the delegate being invoked or null if the delegate has no return value.
+   method: A delegate to a method that takes multiple arguments,which is pushed onto the 
+    System.Windows.Threading.Dispatcher event queue.
+  
+   arg: An object to pass as an argument to the given method. This can be null if no 
+    arguments are needed.
+  
+   Returns: The return value from the delegate being invoked or null if the delegate has no 
+    return value.
+  
   Invoke(self: Dispatcher,priority: DispatcherPriority,method: Delegate,arg: object) -> object
   
-   Executes the specified delegate at the specified priority with the specified argument synchronously on the thread the System.Windows.Threading.Dispatcher is associated with.
+   Executes the specified delegate at the specified priority with the specified 
+    argument synchronously on the thread the System.Windows.Threading.Dispatcher is 
+    associated with.
   
-   priority: The priority,relative to the other pending operations in the System.Windows.Threading.Dispatcher event queue,the specified method is invoked.
-   method: A delegate to a method that takes one argument,which is pushed onto the System.Windows.Threading.Dispatcher event queue.
+  
+   priority: The priority,relative to the other pending operations in the 
+    System.Windows.Threading.Dispatcher event queue,the specified method is 
+    invoked.
+  
+   method: A delegate to a method that takes one argument,which is pushed onto the 
+    System.Windows.Threading.Dispatcher event queue.
+  
    arg: An object to pass as an argument to the given method.
-   Returns: The return value from the delegate being invoked or null if the delegate has no return value.
+   Returns: The return value from the delegate being invoked or null if the delegate has no 
+    return value.
+  
   Invoke(self: Dispatcher,priority: DispatcherPriority,method: Delegate,arg: object,*args: Array[object]) -> object
   
-   Executes the specified delegate at the specified priority with the specified arguments synchronously on the thread the System.Windows.Threading.Dispatcher is associated with.
+   Executes the specified delegate at the specified priority with the specified 
+    arguments synchronously on the thread the System.Windows.Threading.Dispatcher 
+    is associated with.
   
-   priority: The priority,relative to the other pending operations in the System.Windows.Threading.Dispatcher event queue,the specified method is invoked.
-   method: A delegate to a method that takes multiple arguments,which is pushed onto the System.Windows.Threading.Dispatcher event queue.
+  
+   priority: The priority,relative to the other pending operations in the 
+    System.Windows.Threading.Dispatcher event queue,the specified method is 
+    invoked.
+  
+   method: A delegate to a method that takes multiple arguments,which is pushed onto the 
+    System.Windows.Threading.Dispatcher event queue.
+  
    arg: An object to pass as an argument to the given method.
    args: An array of objects to pass as arguments to the given method.
-   Returns: The return value from the delegate being invoked or null if the delegate has no return value.
+   Returns: The return value from the delegate being invoked or null if the delegate has no 
+    return value.
+  
   Invoke(self: Dispatcher,priority: DispatcherPriority,timeout: TimeSpan,method: Delegate,arg: object,*args: Array[object]) -> object
   
-   Executes the specified delegate at the specified priority with the specified arguments synchronously on the thread the System.Windows.Threading.Dispatcher is associated with.
+   Executes the specified delegate at the specified priority with the specified 
+    arguments synchronously on the thread the System.Windows.Threading.Dispatcher 
+    is associated with.
   
-   priority: The priority,relative to the other pending operations in the System.Windows.Threading.Dispatcher event queue,the specified method is invoked.
+  
+   priority: The priority,relative to the other pending operations in the 
+    System.Windows.Threading.Dispatcher event queue,the specified method is 
+    invoked.
+  
    timeout: The maximum time to wait for the operation to finish.
-   method: A delegate to a method that takes multiple arguments,which is pushed onto the System.Windows.Threading.Dispatcher event queue.
+   method: A delegate to a method that takes multiple arguments,which is pushed onto the 
+    System.Windows.Threading.Dispatcher event queue.
+  
    arg: An object to pass as an argument to the specified method.
    args: An array of objects to pass as arguments to the specified method.
-   Returns: The return value from the delegate being invoked or null if the delegate has no return value.
+   Returns: The return value from the delegate being invoked or null if the delegate has no 
+    return value.
+  
   Invoke(self: Dispatcher,method: Delegate,timeout: TimeSpan,*args: Array[object]) -> object
   
-   Executes the specified delegate within the designated time span at the specified priority with the specified arguments synchronously on the thread the System.Windows.Threading.Dispatcher is associated with.
+   Executes the specified delegate within the designated time span at the 
+    specified priority with the specified arguments synchronously on the thread the 
+    System.Windows.Threading.Dispatcher is associated with.
   
-   method: A delegate to a method that takes parameters specified in args,which is pushed onto the System.Windows.Threading.Dispatcher event queue.
+  
+   method: A delegate to a method that takes parameters specified in args,which is pushed 
+    onto the System.Windows.Threading.Dispatcher event queue.
+  
    timeout: The maximum amount of time to wait for the operation to complete.
    args: An array of objects to pass as arguments to the given method. Can be null.
-   Returns: The return value from the delegate being invoked or null if the delegate has no return value.
+   Returns: The return value from the delegate being invoked or null if the delegate has no 
+    return value.
+  
   Invoke(self: Dispatcher,method: Delegate,timeout: TimeSpan,priority: DispatcherPriority,*args: Array[object]) -> object
   
-   Executes the specified delegate within the designated time span at the specified priority with the specified arguments synchronously on the thread the System.Windows.Threading.Dispatcher is associated with.
+   Executes the specified delegate within the designated time span at the 
+    specified priority with the specified arguments synchronously on the thread the 
+    System.Windows.Threading.Dispatcher is associated with.
   
-   method: A delegate to a method that takes parameters specified in args,which is pushed onto the System.Windows.Threading.Dispatcher event queue.
+  
+   method: A delegate to a method that takes parameters specified in args,which is pushed 
+    onto the System.Windows.Threading.Dispatcher event queue.
+  
    timeout: The maximum amount of time to wait for the operation to complete.
-   priority: The priority,relative to the other pending operations in the System.Windows.Threading.Dispatcher event queue,the specified method is invoked.
+   priority: The priority,relative to the other pending operations in the 
+    System.Windows.Threading.Dispatcher event queue,the specified method is 
+    invoked.
+  
    args: An array of objects to pass as arguments to the given method. Can be null.
-   Returns: The return value from the delegate being invoked or null if the delegate has no return value.
+   Returns: The return value from the delegate being invoked or null if the delegate has no 
+    return value.
+  
   Invoke(self: Dispatcher,method: Delegate,*args: Array[object]) -> object
   
-   Executes the specified delegate with the specified arguments synchronously on the thread the System.Windows.Threading.Dispatcher is associated with.
+   Executes the specified delegate with the specified arguments synchronously on 
+    the thread the System.Windows.Threading.Dispatcher is associated with.
   
-   method: A delegate to a method that takes parameters specified in args,which is pushed onto the System.Windows.Threading.Dispatcher event queue.
+  
+   method: A delegate to a method that takes parameters specified in args,which is pushed 
+    onto the System.Windows.Threading.Dispatcher event queue.
+  
    args: An array of objects to pass as arguments to the given method. Can be null.
-   Returns: The return value from the delegate being invoked or null if the delegate has no return value.
+   Returns: The return value from the delegate being invoked or null if the delegate has no 
+    return value.
+  
   Invoke(self: Dispatcher,method: Delegate,priority: DispatcherPriority,*args: Array[object]) -> object
   
-   Executes the specified delegate at the specified priority with the specified arguments synchronously on the thread the System.Windows.Threading.Dispatcher is associated with.
+   Executes the specified delegate at the specified priority with the specified 
+    arguments synchronously on the thread the System.Windows.Threading.Dispatcher 
+    is associated with.
   
-   method: A delegate to a method that takes parameters specified in args,which is pushed onto the System.Windows.Threading.Dispatcher event queue.
-   priority: The priority,relative to the other pending operations in the System.Windows.Threading.Dispatcher event queue,the specified method is invoked.
+  
+   method: A delegate to a method that takes parameters specified in args,which is pushed 
+    onto the System.Windows.Threading.Dispatcher event queue.
+  
+   priority: The priority,relative to the other pending operations in the 
+    System.Windows.Threading.Dispatcher event queue,the specified method is 
+    invoked.
+  
    args: An array of objects to pass as arguments to the given method. Can be null.
-   Returns: The return value from the delegate being invoked or null if the delegate has no return value.
+   Returns: The return value from the delegate being invoked or null if the delegate has no 
+    return value.
+  
   Invoke(self: Dispatcher,callback: Action,priority: DispatcherPriority,cancellationToken: CancellationToken)Invoke(self: Dispatcher,callback: Action,priority: DispatcherPriority,cancellationToken: CancellationToken,timeout: TimeSpan)Invoke(self: Dispatcher,callback: Action)Invoke(self: Dispatcher,callback: Action,priority: DispatcherPriority)Invoke[TResult](self: Dispatcher,callback: Func[TResult]) -> TResult
   Invoke[TResult](self: Dispatcher,callback: Func[TResult],priority: DispatcherPriority,cancellationToken: CancellationToken,timeout: TimeSpan) -> TResult
   Invoke(self: Dispatcher,priority: DispatcherPriority,method: Delegate) -> object
   
-   Executes the specified delegate synchronously at the specified priority on the thread on which the System.Windows.Threading.Dispatcher is associated with.
+   Executes the specified delegate synchronously at the specified priority on the 
+    thread on which the System.Windows.Threading.Dispatcher is associated with.
   
-   priority: The priority,relative to the other pending operations in the System.Windows.Threading.Dispatcher event queue,the specified method is invoked.
-   method: A delegate to a method that takes no arguments,which is pushed onto the System.Windows.Threading.Dispatcher event queue.
-   Returns: The return value from the delegate being invoked or null if the delegate has no return value.
+  
+   priority: The priority,relative to the other pending operations in the 
+    System.Windows.Threading.Dispatcher event queue,the specified method is 
+    invoked.
+  
+   method: A delegate to a method that takes no arguments,which is pushed onto the 
+    System.Windows.Threading.Dispatcher event queue.
+  
+   Returns: The return value from the delegate being invoked or null if the delegate has no 
+    return value.
+  
   Invoke[TResult](self: Dispatcher,callback: Func[TResult],priority: DispatcherPriority) -> TResult
   Invoke[TResult](self: Dispatcher,callback: Func[TResult],priority: DispatcherPriority,cancellationToken: CancellationToken) -> TResult
   """
@@ -205,7 +354,8 @@ class Dispatcher(object):
  def InvokeShutdown(self):
   """
   InvokeShutdown(self: Dispatcher)
-   Initiates the shutdown process of the System.Windows.Threading.Dispatcher synchronously.
+   Initiates the shutdown process of the System.Windows.Threading.Dispatcher 
+    synchronously.
   """
   pass
  @staticmethod
@@ -221,23 +371,28 @@ class Dispatcher(object):
  def Run():
   """
   Run()
-   Pushes the main execution frame on the event queue of the System.Windows.Threading.Dispatcher.
+   Pushes the main execution frame on the event queue of the 
+    System.Windows.Threading.Dispatcher.
   """
   pass
  @staticmethod
  def ValidatePriority(priority,parameterName):
   """
   ValidatePriority(priority: DispatcherPriority,parameterName: str)
-   Determines whether the specified System.Windows.Threading.DispatcherPriority is a valid priority.
+   Determines whether the specified System.Windows.Threading.DispatcherPriority is 
+    a valid priority.
+  
   
    priority: The priority to check.
-   parameterName: A string that will be returned by the exception that occurs if the priority is invalid.
+   parameterName: A string that will be returned by the exception that occurs if the priority is 
+    invalid.
   """
   pass
  def VerifyAccess(self):
   """
   VerifyAccess(self: Dispatcher)
-   Determines whether the calling thread has access to this System.Windows.Threading.Dispatcher.
+   Determines whether the calling thread has access to this 
+    System.Windows.Threading.Dispatcher.
   """
   pass
  @staticmethod
@@ -300,14 +455,17 @@ class DispatcherObject(object):
   """
   CheckAccess(self: DispatcherObject) -> bool
   
-   Determines whether the calling thread has access to this System.Windows.Threading.DispatcherObject.
+   Determines whether the calling thread has access to this 
+    System.Windows.Threading.DispatcherObject.
+  
    Returns: true if the calling thread has access to this object; otherwise,false.
   """
   pass
  def VerifyAccess(self):
   """
   VerifyAccess(self: DispatcherObject)
-   Enforces that the calling thread has access to this System.Windows.Threading.DispatcherObject.
+   Enforces that the calling thread has access to this 
+    System.Windows.Threading.DispatcherObject.
   """
   pass
  Dispatcher=property(lambda self: object(),lambda self,v: None,lambda self: None)
@@ -382,7 +540,9 @@ class DispatcherHookEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+    delegate.
+  
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -394,7 +554,10 @@ class DispatcherHookEventHandler(MulticastDelegate,ICloneable,ISerializable):
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by 
+    the current delegate.-or- null,if the method represented by the current 
+    delegate does not require arguments.
+  
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -416,10 +579,14 @@ class DispatcherHookEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate 
+    that is equal to the specified delegate.
+  
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new 
+    System.Delegate without value in its invocation list; otherwise,this instance 
+    with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -455,7 +622,9 @@ class DispatcherOperationCallback(MulticastDelegate,ICloneable,ISerializable):
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+    delegate.
+  
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -467,7 +636,10 @@ class DispatcherOperationCallback(MulticastDelegate,ICloneable,ISerializable):
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by 
+    the current delegate.-or- null,if the method represented by the current 
+    delegate does not require arguments.
+  
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -489,10 +661,14 @@ class DispatcherOperationCallback(MulticastDelegate,ICloneable,ISerializable):
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate 
+    that is equal to the specified delegate.
+  
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new 
+    System.Delegate without value in its invocation list; otherwise,this instance 
+    with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -626,10 +802,14 @@ class DispatcherProcessingDisabled(object,IDisposable):
   """
   Equals(self: DispatcherProcessingDisabled,obj: object) -> bool
   
-   Determines whether the specified System.Windows.Threading.DispatcherProcessingDisabled object is equal to this System.Windows.Threading.DispatcherProcessingDisabled object.
+   Determines whether the specified 
+    System.Windows.Threading.DispatcherProcessingDisabled object is equal to this 
+    System.Windows.Threading.DispatcherProcessingDisabled object.
+  
   
    obj: The object to evaluate for equality.
-   Returns: true if the specified object is equal to this System.Windows.Threading.DispatcherProcessingDisabled object; otherwise,false.
+   Returns: true if the specified object is equal to this 
+    System.Windows.Threading.DispatcherProcessingDisabled object; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -641,20 +821,13 @@ class DispatcherProcessingDisabled(object,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==y """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -679,7 +852,9 @@ class DispatcherSynchronizationContext(SynchronizationContext):
   """
   CreateCopy(self: DispatcherSynchronizationContext) -> SynchronizationContext
   
-   Creates a copy of this System.Windows.Threading.DispatcherSynchronizationContext.
+   Creates a copy of this 
+    System.Windows.Threading.DispatcherSynchronizationContext.
+  
    Returns: The copy of this synchronization context.
   """
   pass
@@ -709,7 +884,9 @@ class DispatcherSynchronizationContext(SynchronizationContext):
   
    waitHandles: An array that contains the native operating system handles.
    waitAll: true to wait for all handles; false to wait for any handle.
-   millisecondsTimeout: The number of milliseconds to wait,or System.Threading.Timeout.Infinite (-1) to wait indefinitely.
+   millisecondsTimeout: The number of milliseconds to wait,or System.Threading.Timeout.Infinite (-1) 
+    to wait indefinitely.
+  
    Returns: The array index of the object that satisfied the wait.
   """
   pass
@@ -819,7 +996,9 @@ class DispatcherUnhandledExceptionEventHandler(MulticastDelegate,ICloneable,ISer
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+    delegate.
+  
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -831,7 +1010,10 @@ class DispatcherUnhandledExceptionEventHandler(MulticastDelegate,ICloneable,ISer
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by 
+    the current delegate.-or- null,if the method represented by the current 
+    delegate does not require arguments.
+  
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -853,10 +1035,14 @@ class DispatcherUnhandledExceptionEventHandler(MulticastDelegate,ICloneable,ISer
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate 
+    that is equal to the specified delegate.
+  
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new 
+    System.Delegate without value in its invocation list; otherwise,this instance 
+    with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -901,7 +1087,9 @@ class DispatcherUnhandledExceptionFilterEventHandler(MulticastDelegate,ICloneabl
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+    delegate.
+  
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -913,7 +1101,10 @@ class DispatcherUnhandledExceptionFilterEventHandler(MulticastDelegate,ICloneabl
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by 
+    the current delegate.-or- null,if the method represented by the current 
+    delegate does not require arguments.
+  
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -935,10 +1126,14 @@ class DispatcherUnhandledExceptionFilterEventHandler(MulticastDelegate,ICloneabl
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate 
+    that is equal to the specified delegate.
+  
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new 
+    System.Delegate without value in its invocation list; otherwise,this instance 
+    with its original invocation list.
   """
   pass
  def __init__(self,*args):

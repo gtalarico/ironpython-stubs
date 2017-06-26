@@ -2,7 +2,7 @@
 # module Autodesk.DesignScript.Geometry.Core calls itself Core
 # from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions

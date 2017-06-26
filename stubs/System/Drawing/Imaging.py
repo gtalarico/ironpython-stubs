@@ -2,7 +2,7 @@
 # module System.Drawing.Imaging calls itself Imaging
 # from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -956,23 +956,17 @@ class EncoderParameter(object, IDisposable):
     def Dispose(self):
         """
         Dispose(self: EncoderParameter)
-            Releases all resources used by this System.Drawing.Imaging.EncoderParameter object.
+            Releases all resources used by this System.Drawing.Imaging.EncoderParameter 
+             object.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1047,23 +1041,17 @@ class EncoderParameters(object, IDisposable):
     def Dispose(self):
         """
         Dispose(self: EncoderParameters)
-            Releases all resources used by this System.Drawing.Imaging.EncoderParameters object.
+            Releases all resources used by this System.Drawing.Imaging.EncoderParameters 
+             object.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1218,10 +1206,14 @@ class FrameDimension(object):
         """
         Equals(self: FrameDimension, o: object) -> bool
         
-            Returns a value that indicates whether the specified object is a System.Drawing.Imaging.FrameDimension equivalent to this System.Drawing.Imaging.FrameDimension object.
+            Returns a value that indicates whether the specified object is a 
+             System.Drawing.Imaging.FrameDimension equivalent to this 
+             System.Drawing.Imaging.FrameDimension object.
+        
         
             o: The object to test.
-            Returns: Returns true if o is a System.Drawing.Imaging.FrameDimension equivalent to this System.Drawing.Imaging.FrameDimension object; otherwise, false.
+            Returns: Returns true if o is a System.Drawing.Imaging.FrameDimension equivalent to this 
+             System.Drawing.Imaging.FrameDimension object; otherwise, false.
         """
         pass
 
@@ -1230,7 +1222,8 @@ class FrameDimension(object):
         GetHashCode(self: FrameDimension) -> int
         
             Returns a hash code for this System.Drawing.Imaging.FrameDimension object.
-            Returns: Returns an int value that is the hash code of this System.Drawing.Imaging.FrameDimension object.
+            Returns: Returns an int value that is the hash code of this 
+             System.Drawing.Imaging.FrameDimension object.
         """
         pass
 
@@ -1238,7 +1231,9 @@ class FrameDimension(object):
         """
         ToString(self: FrameDimension) -> str
         
-            Converts this System.Drawing.Imaging.FrameDimension object to a human-readable string.
+            Converts this System.Drawing.Imaging.FrameDimension object to a human-readable 
+             string.
+        
             Returns: A string that represents this System.Drawing.Imaging.FrameDimension object.
         """
         pass
@@ -1277,7 +1272,8 @@ class ImageAttributes(object, ICloneable, IDisposable):
     def ClearBrushRemapTable(self):
         """
         ClearBrushRemapTable(self: ImageAttributes)
-            Clears the brush color-remap table of this System.Drawing.Imaging.ImageAttributes object.
+            Clears the brush color-remap table of this 
+             System.Drawing.Imaging.ImageAttributes object.
         """
         pass
 
@@ -1288,7 +1284,8 @@ class ImageAttributes(object, ICloneable, IDisposable):
         ClearColorKey(self: ImageAttributes, type: ColorAdjustType)
             Clears the color key (transparency range) for a specified category.
         
-            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the category for which the color key is cleared.
+            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the 
+             category for which the color key is cleared.
         """
         pass
 
@@ -1297,7 +1294,9 @@ class ImageAttributes(object, ICloneable, IDisposable):
         ClearColorMatrix(self: ImageAttributes, type: ColorAdjustType)
             Clears the color-adjustment matrix for a specified category.
         
-            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the category for which the color-adjustment matrix is cleared.
+            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the 
+             category for which the color-adjustment matrix is cleared.
+        
         ClearColorMatrix(self: ImageAttributes)
             Clears the color-adjustment matrix for the default category.
         """
@@ -1308,7 +1307,9 @@ class ImageAttributes(object, ICloneable, IDisposable):
         ClearGamma(self: ImageAttributes, type: ColorAdjustType)
             Disables gamma correction for a specified category.
         
-            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the category for which gamma correction is disabled.
+            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the 
+             category for which gamma correction is disabled.
+        
         ClearGamma(self: ImageAttributes)
             Disables gamma correction for the default category.
         """
@@ -1319,7 +1320,9 @@ class ImageAttributes(object, ICloneable, IDisposable):
         ClearNoOp(self: ImageAttributes, type: ColorAdjustType)
             Clears the NoOp setting for a specified category.
         
-            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the category for which the NoOp setting is cleared.
+            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the 
+             category for which the NoOp setting is cleared.
+        
         ClearNoOp(self: ImageAttributes)
             Clears the NoOp setting for the default category.
         """
@@ -1328,11 +1331,16 @@ class ImageAttributes(object, ICloneable, IDisposable):
     def ClearOutputChannel(self, type=None):
         """
         ClearOutputChannel(self: ImageAttributes, type: ColorAdjustType)
-            Clears the (cyan-magenta-yellow-black) output channel setting for a specified category.
+            Clears the (cyan-magenta-yellow-black) output channel setting for a specified 
+             category.
         
-            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the category for which the output channel setting is cleared.
+        
+            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the 
+             category for which the output channel setting is cleared.
+        
         ClearOutputChannel(self: ImageAttributes)
-            Clears the CMYK (cyan-magenta-yellow-black) output channel setting for the default category.
+            Clears the CMYK (cyan-magenta-yellow-black) output channel setting for the 
+             default category.
         """
         pass
 
@@ -1341,7 +1349,9 @@ class ImageAttributes(object, ICloneable, IDisposable):
         ClearOutputChannelColorProfile(self: ImageAttributes, type: ColorAdjustType)
             Clears the output channel color profile setting for a specified category.
         
-            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the category for which the output channel profile setting is cleared.
+            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the 
+             category for which the output channel profile setting is cleared.
+        
         ClearOutputChannelColorProfile(self: ImageAttributes)
             Clears the output channel color profile setting for the default category.
         """
@@ -1352,7 +1362,9 @@ class ImageAttributes(object, ICloneable, IDisposable):
         ClearRemapTable(self: ImageAttributes, type: ColorAdjustType)
             Clears the color-remap table for a specified category.
         
-            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the category for which the remap table is cleared.
+            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the 
+             category for which the remap table is cleared.
+        
         ClearRemapTable(self: ImageAttributes)
             Clears the color-remap table for the default category.
         """
@@ -1363,7 +1375,9 @@ class ImageAttributes(object, ICloneable, IDisposable):
         ClearThreshold(self: ImageAttributes, type: ColorAdjustType)
             Clears the threshold value for a specified category.
         
-            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the category for which the threshold is cleared.
+            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the 
+             category for which the threshold is cleared.
+        
         ClearThreshold(self: ImageAttributes)
             Clears the threshold value for the default category.
         """
@@ -1374,24 +1388,31 @@ class ImageAttributes(object, ICloneable, IDisposable):
         Clone(self: ImageAttributes) -> object
         
             Creates an exact copy of this System.Drawing.Imaging.ImageAttributes object.
-            Returns: The System.Drawing.Imaging.ImageAttributes object this class creates, cast as an object.
+            Returns: The System.Drawing.Imaging.ImageAttributes object this class creates, cast as 
+             an object.
         """
         pass
 
     def Dispose(self):
         """
         Dispose(self: ImageAttributes)
-            Releases all resources used by this System.Drawing.Imaging.ImageAttributes object.
+            Releases all resources used by this System.Drawing.Imaging.ImageAttributes 
+             object.
         """
         pass
 
     def GetAdjustedPalette(self, palette, type):
         """
         GetAdjustedPalette(self: ImageAttributes, palette: ColorPalette, type: ColorAdjustType)
-            Adjusts the colors in a palette according to the adjustment settings of a specified category.
+            Adjusts the colors in a palette according to the adjustment settings of a 
+             specified category.
         
-            palette: A System.Drawing.Imaging.ColorPalette that on input contains the palette to be adjusted, and on output contains the adjusted palette.
-            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the category whose adjustment settings will be applied to the palette.
+        
+            palette: A System.Drawing.Imaging.ColorPalette that on input contains the palette to be 
+             adjusted, and on output contains the adjusted palette.
+        
+            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the 
+             category whose adjustment settings will be applied to the palette.
         """
         pass
 
@@ -1411,7 +1432,9 @@ class ImageAttributes(object, ICloneable, IDisposable):
         
             colorLow: The low color-key value.
             colorHigh: The high color-key value.
-            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the category for which the color key is set.
+            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the 
+             category for which the color key is set.
+        
         SetColorKey(self: ImageAttributes, colorLow: Color, colorHigh: Color)
             Sets the color key for the default category.
         
@@ -1423,20 +1446,35 @@ class ImageAttributes(object, ICloneable, IDisposable):
     def SetColorMatrices(self, newColorMatrix, grayMatrix, *__args):
         """
         SetColorMatrices(self: ImageAttributes, newColorMatrix: ColorMatrix, grayMatrix: ColorMatrix, mode: ColorMatrixFlag, type: ColorAdjustType)
-            Sets the color-adjustment matrix and the grayscale-adjustment matrix for a specified category.
+            Sets the color-adjustment matrix and the grayscale-adjustment matrix for a 
+             specified category.
+        
         
             newColorMatrix: The color-adjustment matrix.
             grayMatrix: The grayscale-adjustment matrix.
-            mode: An element of System.Drawing.Imaging.ColorMatrixFlag that specifies the type of image and color that will be affected by the color-adjustment and grayscale-adjustment matrices.
-            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the category for which the color-adjustment and grayscale-adjustment matrices are set.
+            mode: An element of System.Drawing.Imaging.ColorMatrixFlag that specifies the type of 
+             image and color that will be affected by the color-adjustment and 
+             grayscale-adjustment matrices.
+        
+            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the 
+             category for which the color-adjustment and grayscale-adjustment matrices are 
+             set.
+        
         SetColorMatrices(self: ImageAttributes, newColorMatrix: ColorMatrix, grayMatrix: ColorMatrix, flags: ColorMatrixFlag)
-            Sets the color-adjustment matrix and the grayscale-adjustment matrix for the default category.
+            Sets the color-adjustment matrix and the grayscale-adjustment matrix for the 
+             default category.
+        
         
             newColorMatrix: The color-adjustment matrix.
             grayMatrix: The grayscale-adjustment matrix.
-            flags: An element of System.Drawing.Imaging.ColorMatrixFlag that specifies the type of image and color that will be affected by the color-adjustment and grayscale-adjustment matrices.
+            flags: An element of System.Drawing.Imaging.ColorMatrixFlag that specifies the type of 
+             image and color that will be affected by the color-adjustment and 
+             grayscale-adjustment matrices.
+        
         SetColorMatrices(self: ImageAttributes, newColorMatrix: ColorMatrix, grayMatrix: ColorMatrix)
-            Sets the color-adjustment matrix and the grayscale-adjustment matrix for the default category.
+            Sets the color-adjustment matrix and the grayscale-adjustment matrix for the 
+             default category.
+        
         
             newColorMatrix: The color-adjustment matrix.
             grayMatrix: The grayscale-adjustment matrix.
@@ -1449,7 +1487,9 @@ class ImageAttributes(object, ICloneable, IDisposable):
             Sets the color-adjustment matrix for the default category.
         
             newColorMatrix: The color-adjustment matrix.
-            flags: An element of System.Drawing.Imaging.ColorMatrixFlag that specifies the type of image and color that will be affected by the color-adjustment matrix.
+            flags: An element of System.Drawing.Imaging.ColorMatrixFlag that specifies the type of 
+             image and color that will be affected by the color-adjustment matrix.
+        
         SetColorMatrix(self: ImageAttributes, newColorMatrix: ColorMatrix)
             Sets the color-adjustment matrix for the default category.
         
@@ -1458,8 +1498,11 @@ class ImageAttributes(object, ICloneable, IDisposable):
             Sets the color-adjustment matrix for a specified category.
         
             newColorMatrix: The color-adjustment matrix.
-            mode: An element of System.Drawing.Imaging.ColorMatrixFlag that specifies the type of image and color that will be affected by the color-adjustment matrix.
-            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the category for which the color-adjustment matrix is set.
+            mode: An element of System.Drawing.Imaging.ColorMatrixFlag that specifies the type of 
+             image and color that will be affected by the color-adjustment matrix.
+        
+            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the 
+             category for which the color-adjustment matrix is set.
         """
         pass
 
@@ -1469,7 +1512,9 @@ class ImageAttributes(object, ICloneable, IDisposable):
             Sets the gamma value for a specified category.
         
             gamma: The gamma correction value.
-            type: An element of the System.Drawing.Imaging.ColorAdjustType enumeration that specifies the category for which the gamma value is set.
+            type: An element of the System.Drawing.Imaging.ColorAdjustType enumeration that 
+             specifies the category for which the gamma value is set.
+        
         SetGamma(self: ImageAttributes, gamma: Single)
             Sets the gamma value for the default category.
         
@@ -1480,28 +1525,43 @@ class ImageAttributes(object, ICloneable, IDisposable):
     def SetNoOp(self, type=None):
         """
         SetNoOp(self: ImageAttributes, type: ColorAdjustType)
-            Turns off color adjustment for a specified category. You can call the erload:System.Drawing.Imaging.ImageAttributes.ClearNoOp method to reinstate the color-adjustment settings that were in place before the 
-             call to the erload:System.Drawing.Imaging.ImageAttributes.SetNoOp method.
+            Turns off color adjustment for a specified category. You can call the 
+             erload:System.Drawing.Imaging.ImageAttributes.ClearNoOp method to reinstate the 
+             color-adjustment settings that were in place before the call to the 
+             erload:System.Drawing.Imaging.ImageAttributes.SetNoOp method.
         
         
-            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the category for which color correction is turned off.
+            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the 
+             category for which color correction is turned off.
+        
         SetNoOp(self: ImageAttributes)
-            Turns off color adjustment for the default category. You can call the erload:System.Drawing.Imaging.ImageAttributes.ClearNoOp method to reinstate the color-adjustment settings that were in place before the 
-             call to the erload:System.Drawing.Imaging.ImageAttributes.SetNoOp method.
+            Turns off color adjustment for the default category. You can call the 
+             erload:System.Drawing.Imaging.ImageAttributes.ClearNoOp method to reinstate the 
+             color-adjustment settings that were in place before the call to the 
+             erload:System.Drawing.Imaging.ImageAttributes.SetNoOp method.
         """
         pass
 
     def SetOutputChannel(self, flags, type=None):
         """
         SetOutputChannel(self: ImageAttributes, flags: ColorChannelFlag, type: ColorAdjustType)
-            Sets the CMYK (cyan-magenta-yellow-black) output channel for a specified category.
+            Sets the CMYK (cyan-magenta-yellow-black) output channel for a specified 
+             category.
         
-            flags: An element of System.Drawing.Imaging.ColorChannelFlag that specifies the output channel.
-            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the category for which the output channel is set.
+        
+            flags: An element of System.Drawing.Imaging.ColorChannelFlag that specifies the output 
+             channel.
+        
+            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the 
+             category for which the output channel is set.
+        
         SetOutputChannel(self: ImageAttributes, flags: ColorChannelFlag)
-            Sets the CMYK (cyan-magenta-yellow-black) output channel for the default category.
+            Sets the CMYK (cyan-magenta-yellow-black) output channel for the default 
+             category.
         
-            flags: An element of System.Drawing.Imaging.ColorChannelFlag that specifies the output channel.
+        
+            flags: An element of System.Drawing.Imaging.ColorChannelFlag that specifies the output 
+             channel.
         """
         pass
 
@@ -1510,15 +1570,19 @@ class ImageAttributes(object, ICloneable, IDisposable):
         SetOutputChannelColorProfile(self: ImageAttributes, colorProfileFilename: str, type: ColorAdjustType)
             Sets the output channel color-profile file for a specified category.
         
-            colorProfileFilename: The path name of a color-profile file. If the color-profile file is in the %SystemRoot%\System32\Spool\Drivers\Color directory, this parameter can be the file name. Otherwise, this parameter must be the 
-             fully qualified path name.
+            colorProfileFilename: The path name of a color-profile file. If the color-profile file is in the 
+             %SystemRoot%\System32\Spool\Drivers\Color directory, this parameter can be the 
+             file name. Otherwise, this parameter must be the fully qualified path name.
         
-            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the category for which the output channel color-profile file is set.
+            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the 
+             category for which the output channel color-profile file is set.
+        
         SetOutputChannelColorProfile(self: ImageAttributes, colorProfileFilename: str)
             Sets the output channel color-profile file for the default category.
         
-            colorProfileFilename: The path name of a color-profile file. If the color-profile file is in the %SystemRoot%\System32\Spool\Drivers\Color directory, this parameter can be the file name. Otherwise, this parameter must be the 
-             fully qualified path name.
+            colorProfileFilename: The path name of a color-profile file. If the color-profile file is in the 
+             %SystemRoot%\System32\Spool\Drivers\Color directory, this parameter can be the 
+             file name. Otherwise, this parameter must be the fully qualified path name.
         """
         pass
 
@@ -1527,12 +1591,19 @@ class ImageAttributes(object, ICloneable, IDisposable):
         SetRemapTable(self: ImageAttributes, map: Array[ColorMap], type: ColorAdjustType)
             Sets the color-remap table for a specified category.
         
-            map: An array of color pairs of type System.Drawing.Imaging.ColorMap. Each color pair contains an existing color (the first value) and the color that it will be mapped to (the second value).
-            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the category for which the color-remap table is set.
+            map: An array of color pairs of type System.Drawing.Imaging.ColorMap. Each color 
+             pair contains an existing color (the first value) and the color that it will be 
+             mapped to (the second value).
+        
+            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the 
+             category for which the color-remap table is set.
+        
         SetRemapTable(self: ImageAttributes, map: Array[ColorMap])
             Sets the color-remap table for the default category.
         
-            map: An array of color pairs of type System.Drawing.Imaging.ColorMap. Each color pair contains an existing color (the first value) and the color that it will be mapped to (the second value).
+            map: An array of color pairs of type System.Drawing.Imaging.ColorMap. Each color 
+             pair contains an existing color (the first value) and the color that it will be 
+             mapped to (the second value).
         """
         pass
 
@@ -1541,8 +1612,12 @@ class ImageAttributes(object, ICloneable, IDisposable):
         SetThreshold(self: ImageAttributes, threshold: Single, type: ColorAdjustType)
             Sets the threshold (transparency range) for a specified category.
         
-            threshold: A threshold value from 0.0 to 1.0 that is used as a breakpoint to sort colors that will be mapped to either a maximum or a minimum value.
-            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the category for which the color threshold is set.
+            threshold: A threshold value from 0.0 to 1.0 that is used as a breakpoint to sort colors 
+             that will be mapped to either a maximum or a minimum value.
+        
+            type: An element of System.Drawing.Imaging.ColorAdjustType that specifies the 
+             category for which the color threshold is set.
+        
         SetThreshold(self: ImageAttributes, threshold: Single)
             Sets the threshold (transparency range) for the default category.
         
@@ -1553,46 +1628,52 @@ class ImageAttributes(object, ICloneable, IDisposable):
     def SetWrapMode(self, mode, color=None, clamp=None):
         """
         SetWrapMode(self: ImageAttributes, mode: WrapMode, color: Color, clamp: bool)
-            Sets the wrap mode and color used to decide how to tile a texture across a shape, or at shape boundaries. A texture is tiled across a shape to fill it in when the texture is smaller than the shape it is 
-             filling.
+            Sets the wrap mode and color used to decide how to tile a texture across a 
+             shape, or at shape boundaries. A texture is tiled across a shape to fill it in 
+             when the texture is smaller than the shape it is filling.
         
         
-            mode: An element of System.Drawing.Drawing2D.WrapMode that specifies how repeated copies of an image are used to tile an area.
-            color: A color object that specifies the color of pixels outside of a rendered image. This color is visible if the mode parameter is set to System.Drawing.Drawing2D.WrapMode.Clamp and the source rectangle passed 
-             to erload:System.Drawing.Graphics.DrawImage is larger than the image itself.
+            mode: An element of System.Drawing.Drawing2D.WrapMode that specifies how repeated 
+             copies of an image are used to tile an area.
+        
+            color: A color object that specifies the color of pixels outside of a rendered image. 
+             This color is visible if the mode parameter is set to 
+             System.Drawing.Drawing2D.WrapMode.Clamp and the source rectangle passed to 
+             erload:System.Drawing.Graphics.DrawImage is larger than the image itself.
         
             clamp: This parameter has no effect. Set it to false.
         SetWrapMode(self: ImageAttributes, mode: WrapMode, color: Color)
-            Sets the wrap mode and color used to decide how to tile a texture across a shape, or at shape boundaries. A texture is tiled across a shape to fill it in when the texture is smaller than the shape it is 
-             filling.
+            Sets the wrap mode and color used to decide how to tile a texture across a 
+             shape, or at shape boundaries. A texture is tiled across a shape to fill it in 
+             when the texture is smaller than the shape it is filling.
         
         
-            mode: An element of System.Drawing.Drawing2D.WrapMode that specifies how repeated copies of an image are used to tile an area.
-            color: An System.Drawing.Imaging.ImageAttributes object that specifies the color of pixels outside of a rendered image. This color is visible if the mode parameter is set to 
-             System.Drawing.Drawing2D.WrapMode.Clamp and the source rectangle passed to erload:System.Drawing.Graphics.DrawImage is larger than the image itself.
+            mode: An element of System.Drawing.Drawing2D.WrapMode that specifies how repeated 
+             copies of an image are used to tile an area.
+        
+            color: An System.Drawing.Imaging.ImageAttributes object that specifies the color of 
+             pixels outside of a rendered image. This color is visible if the mode parameter 
+             is set to System.Drawing.Drawing2D.WrapMode.Clamp and the source rectangle 
+             passed to erload:System.Drawing.Graphics.DrawImage is larger than the image 
+             itself.
         
         SetWrapMode(self: ImageAttributes, mode: WrapMode)
-            Sets the wrap mode that is used to decide how to tile a texture across a shape, or at shape boundaries. A texture is tiled across a shape to fill it in when the texture is smaller than the shape it is 
-             filling.
+            Sets the wrap mode that is used to decide how to tile a texture across a shape, 
+             or at shape boundaries. A texture is tiled across a shape to fill it in when 
+             the texture is smaller than the shape it is filling.
         
         
-            mode: An element of System.Drawing.Drawing2D.WrapMode that specifies how repeated copies of an image are used to tile an area.
+            mode: An element of System.Drawing.Drawing2D.WrapMode that specifies how repeated 
+             copies of an image are used to tile an area.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1662,8 +1743,12 @@ class ImageCodecInfo(object):
         """
         GetImageDecoders() -> Array[ImageCodecInfo]
         
-            Returns an array of System.Drawing.Imaging.ImageCodecInfo objects that contain information about the image decoders built into GDI+.
-            Returns: An array of System.Drawing.Imaging.ImageCodecInfo objects. Each System.Drawing.Imaging.ImageCodecInfo object in the array contains information about one of the built-in image decoders.
+            Returns an array of System.Drawing.Imaging.ImageCodecInfo objects that contain 
+             information about the image decoders built into GDI+.
+        
+            Returns: An array of System.Drawing.Imaging.ImageCodecInfo objects. Each 
+             System.Drawing.Imaging.ImageCodecInfo object in the array contains information 
+             about one of the built-in image decoders.
         """
         pass
 
@@ -1672,8 +1757,12 @@ class ImageCodecInfo(object):
         """
         GetImageEncoders() -> Array[ImageCodecInfo]
         
-            Returns an array of System.Drawing.Imaging.ImageCodecInfo objects that contain information about the image encoders built into GDI+.
-            Returns: An array of System.Drawing.Imaging.ImageCodecInfo objects. Each System.Drawing.Imaging.ImageCodecInfo object in the array contains information about one of the built-in image encoders.
+            Returns an array of System.Drawing.Imaging.ImageCodecInfo objects that contain 
+             information about the image encoders built into GDI+.
+        
+            Returns: An array of System.Drawing.Imaging.ImageCodecInfo objects. Each 
+             System.Drawing.Imaging.ImageCodecInfo object in the array contains information 
+             about one of the built-in image encoders.
         """
         pass
 
@@ -1833,10 +1922,14 @@ class ImageFormat(object):
         """
         Equals(self: ImageFormat, o: object) -> bool
         
-            Returns a value that indicates whether the specified object is an System.Drawing.Imaging.ImageFormat object that is equivalent to this System.Drawing.Imaging.ImageFormat object.
+            Returns a value that indicates whether the specified object is an 
+             System.Drawing.Imaging.ImageFormat object that is equivalent to this 
+             System.Drawing.Imaging.ImageFormat object.
+        
         
             o: The object to test.
-            Returns: true if o is an System.Drawing.Imaging.ImageFormat object that is equivalent to this System.Drawing.Imaging.ImageFormat object; otherwise, false.
+            Returns: true if o is an System.Drawing.Imaging.ImageFormat object that is equivalent to 
+             this System.Drawing.Imaging.ImageFormat object; otherwise, false.
         """
         pass
 
@@ -1853,7 +1946,9 @@ class ImageFormat(object):
         """
         ToString(self: ImageFormat) -> str
         
-            Converts this System.Drawing.Imaging.ImageFormat object to a human-readable string.
+            Converts this System.Drawing.Imaging.ImageFormat object to a human-readable 
+             string.
+        
             Returns: A string that represents this System.Drawing.Imaging.ImageFormat object.
         """
         pass
@@ -1983,9 +2078,12 @@ class Metafile(Image, ISerializable, ICloneable, IDisposable):
     def Dispose(self):
         """
         Dispose(self: Image, disposing: bool)
-            Releases the unmanaged resources used by the System.Drawing.Image and optionally releases the managed resources.
+            Releases the unmanaged resources used by the System.Drawing.Image and 
+             optionally releases the managed resources.
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+        
+            disposing: true to release both managed and unmanaged resources; false to release only 
+             unmanaged resources.
         """
         pass
 
@@ -2003,33 +2101,58 @@ class Metafile(Image, ISerializable, ICloneable, IDisposable):
         """
         GetMetafileHeader(stream: Stream) -> MetafileHeader
         
-            Returns the System.Drawing.Imaging.MetafileHeader associated with the specified System.Drawing.Imaging.Metafile.
+            Returns the System.Drawing.Imaging.MetafileHeader associated with the specified 
+             System.Drawing.Imaging.Metafile.
         
-            stream: A System.IO.Stream containing the System.Drawing.Imaging.Metafile for which a header is retrieved.
-            Returns: The System.Drawing.Imaging.MetafileHeader associated with the specified System.Drawing.Imaging.Metafile.
+        
+            stream: A System.IO.Stream containing the System.Drawing.Imaging.Metafile for which a 
+             header is retrieved.
+        
+            Returns: The System.Drawing.Imaging.MetafileHeader associated with the specified 
+             System.Drawing.Imaging.Metafile.
+        
         GetMetafileHeader(self: Metafile) -> MetafileHeader
         
-            Returns the System.Drawing.Imaging.MetafileHeader associated with this System.Drawing.Imaging.Metafile.
-            Returns: The System.Drawing.Imaging.MetafileHeader associated with this System.Drawing.Imaging.Metafile.
+            Returns the System.Drawing.Imaging.MetafileHeader associated with this 
+             System.Drawing.Imaging.Metafile.
+        
+            Returns: The System.Drawing.Imaging.MetafileHeader associated with this 
+             System.Drawing.Imaging.Metafile.
+        
         GetMetafileHeader(fileName: str) -> MetafileHeader
         
-            Returns the System.Drawing.Imaging.MetafileHeader associated with the specified System.Drawing.Imaging.Metafile.
+            Returns the System.Drawing.Imaging.MetafileHeader associated with the specified 
+             System.Drawing.Imaging.Metafile.
         
-            fileName: A System.String containing the name of the System.Drawing.Imaging.Metafile for which a header is retrieved.
-            Returns: The System.Drawing.Imaging.MetafileHeader associated with the specified System.Drawing.Imaging.Metafile.
+        
+            fileName: A System.String containing the name of the System.Drawing.Imaging.Metafile for 
+             which a header is retrieved.
+        
+            Returns: The System.Drawing.Imaging.MetafileHeader associated with the specified 
+             System.Drawing.Imaging.Metafile.
+        
         GetMetafileHeader(hmetafile: IntPtr, wmfHeader: WmfPlaceableFileHeader) -> MetafileHeader
         
-            Returns the System.Drawing.Imaging.MetafileHeader associated with the specified System.Drawing.Imaging.Metafile.
+            Returns the System.Drawing.Imaging.MetafileHeader associated with the specified 
+             System.Drawing.Imaging.Metafile.
+        
         
             hmetafile: The handle to the System.Drawing.Imaging.Metafile for which to return a header.
             wmfHeader: A System.Drawing.Imaging.WmfPlaceableFileHeader.
-            Returns: The System.Drawing.Imaging.MetafileHeader associated with the specified System.Drawing.Imaging.Metafile.
+            Returns: The System.Drawing.Imaging.MetafileHeader associated with the specified 
+             System.Drawing.Imaging.Metafile.
+        
         GetMetafileHeader(henhmetafile: IntPtr) -> MetafileHeader
         
-            Returns the System.Drawing.Imaging.MetafileHeader associated with the specified System.Drawing.Imaging.Metafile.
+            Returns the System.Drawing.Imaging.MetafileHeader associated with the specified 
+             System.Drawing.Imaging.Metafile.
         
-            henhmetafile: The handle to the enhanced System.Drawing.Imaging.Metafile for which a header is returned.
-            Returns: The System.Drawing.Imaging.MetafileHeader associated with the specified System.Drawing.Imaging.Metafile.
+        
+            henhmetafile: The handle to the enhanced System.Drawing.Imaging.Metafile for which a header 
+             is returned.
+        
+            Returns: The System.Drawing.Imaging.MetafileHeader associated with the specified 
+             System.Drawing.Imaging.Metafile.
         """
         pass
 
@@ -2039,8 +2162,11 @@ class Metafile(Image, ISerializable, ICloneable, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is 
-             usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled across 
+             a remoting boundary. A value of false is usually appropriate. true to copy the 
+             current System.MarshalByRefObject object's identity to its clone, which will 
+             cause remoting client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2055,7 +2181,9 @@ class Metafile(Image, ISerializable, ICloneable, IDisposable):
         PlayRecord(self: Metafile, recordType: EmfPlusRecordType, flags: int, dataSize: int, data: Array[Byte])
             Plays an individual metafile record.
         
-            recordType: Element of the System.Drawing.Imaging.EmfPlusRecordType that specifies the type of metafile record being played.
+            recordType: Element of the System.Drawing.Imaging.EmfPlusRecordType that specifies the type 
+             of metafile record being played.
+        
             flags: A set of flags that specify attributes of the record.
             dataSize: The number of bytes in the record data.
             data: An array of bytes that contains the record data.
@@ -2063,18 +2191,11 @@ class Metafile(Image, ISerializable, ICloneable, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -2184,8 +2305,11 @@ class MetafileHeader(object):
         """
         IsDisplay(self: MetafileHeader) -> bool
         
-            Returns a value that indicates whether the associated System.Drawing.Imaging.Metafile is device dependent.
-            Returns: true if the associated System.Drawing.Imaging.Metafile is device dependent; otherwise, false.
+            Returns a value that indicates whether the associated 
+             System.Drawing.Imaging.Metafile is device dependent.
+        
+            Returns: true if the associated System.Drawing.Imaging.Metafile is device dependent; 
+             otherwise, false.
         """
         pass
 
@@ -2193,8 +2317,11 @@ class MetafileHeader(object):
         """
         IsEmf(self: MetafileHeader) -> bool
         
-            Returns a value that indicates whether the associated System.Drawing.Imaging.Metafile is in the Windows enhanced metafile format.
-            Returns: true if the associated System.Drawing.Imaging.Metafile is in the Windows enhanced metafile format; otherwise, false.
+            Returns a value that indicates whether the associated 
+             System.Drawing.Imaging.Metafile is in the Windows enhanced metafile format.
+        
+            Returns: true if the associated System.Drawing.Imaging.Metafile is in the Windows 
+             enhanced metafile format; otherwise, false.
         """
         pass
 
@@ -2202,8 +2329,13 @@ class MetafileHeader(object):
         """
         IsEmfOrEmfPlus(self: MetafileHeader) -> bool
         
-            Returns a value that indicates whether the associated System.Drawing.Imaging.Metafile is in the Windows enhanced metafile format or the Windows enhanced metafile plus format.
-            Returns: true if the associated System.Drawing.Imaging.Metafile is in the Windows enhanced metafile format or the Windows enhanced metafile plus format; otherwise, false.
+            Returns a value that indicates whether the associated 
+             System.Drawing.Imaging.Metafile is in the Windows enhanced metafile format or 
+             the Windows enhanced metafile plus format.
+        
+            Returns: true if the associated System.Drawing.Imaging.Metafile is in the Windows 
+             enhanced metafile format or the Windows enhanced metafile plus format; 
+             otherwise, false.
         """
         pass
 
@@ -2211,8 +2343,12 @@ class MetafileHeader(object):
         """
         IsEmfPlus(self: MetafileHeader) -> bool
         
-            Returns a value that indicates whether the associated System.Drawing.Imaging.Metafile is in the Windows enhanced metafile plus format.
-            Returns: true if the associated System.Drawing.Imaging.Metafile is in the Windows enhanced metafile plus format; otherwise, false.
+            Returns a value that indicates whether the associated 
+             System.Drawing.Imaging.Metafile is in the Windows enhanced metafile plus 
+             format.
+        
+            Returns: true if the associated System.Drawing.Imaging.Metafile is in the Windows 
+             enhanced metafile plus format; otherwise, false.
         """
         pass
 
@@ -2220,8 +2356,12 @@ class MetafileHeader(object):
         """
         IsEmfPlusDual(self: MetafileHeader) -> bool
         
-            Returns a value that indicates whether the associated System.Drawing.Imaging.Metafile is in the Dual enhanced metafile format. This format supports both the enhanced and the enhanced plus format.
-            Returns: true if the associated System.Drawing.Imaging.Metafile is in the Dual enhanced metafile format; otherwise, false.
+            Returns a value that indicates whether the associated 
+             System.Drawing.Imaging.Metafile is in the Dual enhanced metafile format. This 
+             format supports both the enhanced and the enhanced plus format.
+        
+            Returns: true if the associated System.Drawing.Imaging.Metafile is in the Dual enhanced 
+             metafile format; otherwise, false.
         """
         pass
 
@@ -2229,8 +2369,12 @@ class MetafileHeader(object):
         """
         IsEmfPlusOnly(self: MetafileHeader) -> bool
         
-            Returns a value that indicates whether the associated System.Drawing.Imaging.Metafile supports only the Windows enhanced metafile plus format.
-            Returns: true if the associated System.Drawing.Imaging.Metafile supports only the Windows enhanced metafile plus format; otherwise, false.
+            Returns a value that indicates whether the associated 
+             System.Drawing.Imaging.Metafile supports only the Windows enhanced metafile 
+             plus format.
+        
+            Returns: true if the associated System.Drawing.Imaging.Metafile supports only the 
+             Windows enhanced metafile plus format; otherwise, false.
         """
         pass
 
@@ -2238,8 +2382,11 @@ class MetafileHeader(object):
         """
         IsWmf(self: MetafileHeader) -> bool
         
-            Returns a value that indicates whether the associated System.Drawing.Imaging.Metafile is in the Windows metafile format.
-            Returns: true if the associated System.Drawing.Imaging.Metafile is in the Windows metafile format; otherwise, false.
+            Returns a value that indicates whether the associated 
+             System.Drawing.Imaging.Metafile is in the Windows metafile format.
+        
+            Returns: true if the associated System.Drawing.Imaging.Metafile is in the Windows 
+             metafile format; otherwise, false.
         """
         pass
 
@@ -2247,8 +2394,11 @@ class MetafileHeader(object):
         """
         IsWmfPlaceable(self: MetafileHeader) -> bool
         
-            Returns a value that indicates whether the associated System.Drawing.Imaging.Metafile is in the Windows placeable metafile format.
-            Returns: true if the associated System.Drawing.Imaging.Metafile is in the Windows placeable metafile format; otherwise, false.
+            Returns a value that indicates whether the associated 
+             System.Drawing.Imaging.Metafile is in the Windows placeable metafile format.
+        
+            Returns: true if the associated System.Drawing.Imaging.Metafile is in the Windows 
+             placeable metafile format; otherwise, false.
         """
         pass
 
@@ -2560,7 +2710,9 @@ class PlayRecordCallback(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -2573,7 +2725,10 @@ class PlayRecordCallback(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by 
+             the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -2599,10 +2754,14 @@ class PlayRecordCallback(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 

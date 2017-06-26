@@ -2,7 +2,7 @@
 # module System.Windows.Converters calls itself Converters
 # from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -18,7 +18,9 @@ class Int32RectValueSerializer(ValueSerializer):
         """
         CanConvertFromString(self: Int32RectValueSerializer, value: str, context: IValueSerializerContext) -> bool
         
-            Determines whether the specified System.String can be converted to an instance of System.Windows.Int32Rect.
+            Determines whether the specified System.String can be converted to an instance 
+             of System.Windows.Int32Rect.
+        
         
             value: String to evaluate for conversion.
             context: Context information that is used for conversion.
@@ -30,7 +32,9 @@ class Int32RectValueSerializer(ValueSerializer):
         """
         CanConvertToString(self: Int32RectValueSerializer, value: object, context: IValueSerializerContext) -> bool
         
-            Determines whether the specified System.Windows.Int32Rect can be converted to a System.String.
+            Determines whether the specified System.Windows.Int32Rect can be converted to a 
+             System.String.
+        
         
             value: The object to evaluate for conversion.
             context: Context information that is used for conversion.
@@ -73,7 +77,9 @@ class PointValueSerializer(ValueSerializer):
         """
         CanConvertFromString(self: PointValueSerializer, value: str, context: IValueSerializerContext) -> bool
         
-            Determines whether the specified System.String can be converted to an instance of System.Windows.Point.
+            Determines whether the specified System.String can be converted to an instance 
+             of System.Windows.Point.
+        
         
             value: String to evaluate for conversion.
             context: Context information that is used for conversion.
@@ -85,7 +91,9 @@ class PointValueSerializer(ValueSerializer):
         """
         CanConvertToString(self: PointValueSerializer, value: object, context: IValueSerializerContext) -> bool
         
-            Determines whether the specified System.Windows.Point can be converted to a System.String.
+            Determines whether the specified System.Windows.Point can be converted to a 
+             System.String.
+        
         
             value: The object to evaluate for conversion.
             context: Context information that is used for conversion.
@@ -128,7 +136,9 @@ class RectValueSerializer(ValueSerializer):
         """
         CanConvertFromString(self: RectValueSerializer, value: str, context: IValueSerializerContext) -> bool
         
-            Determines whether the specified System.String can be converted to an instance of System.Windows.Rect.
+            Determines whether the specified System.String can be converted to an instance 
+             of System.Windows.Rect.
+        
         
             value: String to evaluate for conversion.
             context: Context information that is used for conversion.
@@ -140,7 +150,9 @@ class RectValueSerializer(ValueSerializer):
         """
         CanConvertToString(self: RectValueSerializer, value: object, context: IValueSerializerContext) -> bool
         
-            Determines whether the specified System.Windows.Rect can be converted to a System.String.
+            Determines whether the specified System.Windows.Rect can be converted to a 
+             System.String.
+        
         
             value: The object to evaluate for conversion.
             context: Context information that is used for conversion.
@@ -183,7 +195,9 @@ class SizeValueSerializer(ValueSerializer):
         """
         CanConvertFromString(self: SizeValueSerializer, value: str, context: IValueSerializerContext) -> bool
         
-            Determines whether the specified System.String can be converted to an instance of System.Windows.Size.
+            Determines whether the specified System.String can be converted to an instance 
+             of System.Windows.Size.
+        
         
             value: String to evaluate for conversion.
             context: Context information that is used for conversion.
@@ -195,7 +209,9 @@ class SizeValueSerializer(ValueSerializer):
         """
         CanConvertToString(self: SizeValueSerializer, value: object, context: IValueSerializerContext) -> bool
         
-            Determines whether the specified System.Windows.Size can be converted to a System.String.
+            Determines whether the specified System.Windows.Size can be converted to a 
+             System.String.
+        
         
             value: The object to evaluate for conversion.
             context: Context information that is used for conversion.
@@ -238,7 +254,9 @@ class VectorValueSerializer(ValueSerializer):
         """
         CanConvertFromString(self: VectorValueSerializer, value: str, context: IValueSerializerContext) -> bool
         
-            Determines whether the specified System.String can be converted to an instance of System.Windows.Vector.
+            Determines whether the specified System.String can be converted to an instance 
+             of System.Windows.Vector.
+        
         
             value: String to evaluate for conversion.
             context: Context information that is used for conversion.
@@ -250,7 +268,9 @@ class VectorValueSerializer(ValueSerializer):
         """
         CanConvertToString(self: VectorValueSerializer, value: object, context: IValueSerializerContext) -> bool
         
-            Determines whether the specified System.Windows.Vector can be converted to a System.String.
+            Determines whether the specified System.Windows.Vector can be converted to a 
+             System.String.
+        
         
             value: The object to evaluate for conversion.
             context: Context information that is used for conversion.

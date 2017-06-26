@@ -2,7 +2,7 @@
 # module Microsoft.Win32.SafeHandles calls itself SafeHandles
 # from mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -13,7 +13,10 @@ class CriticalHandleMinusOneIsInvalid(CriticalHandle, IDisposable):
     def Dispose(self):
         """
         Dispose(self: CriticalHandle, disposing: bool)
-            Releases the unmanaged resources used by the System.Runtime.InteropServices.CriticalHandle class specifying whether to perform a normal dispose operation.
+            Releases the unmanaged resources used by the 
+             System.Runtime.InteropServices.CriticalHandle class specifying whether to 
+             perform a normal dispose operation.
+        
         
             disposing: true for a normal dispose operation; false to finalize the handle.
         """
@@ -23,8 +26,12 @@ class CriticalHandleMinusOneIsInvalid(CriticalHandle, IDisposable):
         """
         ReleaseHandle(self: CriticalHandle) -> bool
         
-            When overridden in a derived class, executes the code required to free the handle.
-            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging Assistant.
+            When overridden in a derived class, executes the code required to free the 
+             handle.
+        
+            Returns: true if the handle is released successfully; otherwise, in the event of a 
+             catastrophic failure, false. In this case, it generates a releaseHandleFailed 
+             MDA Managed Debugging Assistant.
         """
         pass
 
@@ -38,18 +45,11 @@ class CriticalHandleMinusOneIsInvalid(CriticalHandle, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -72,7 +72,10 @@ class CriticalHandleZeroOrMinusOneIsInvalid(CriticalHandle, IDisposable):
     def Dispose(self):
         """
         Dispose(self: CriticalHandle, disposing: bool)
-            Releases the unmanaged resources used by the System.Runtime.InteropServices.CriticalHandle class specifying whether to perform a normal dispose operation.
+            Releases the unmanaged resources used by the 
+             System.Runtime.InteropServices.CriticalHandle class specifying whether to 
+             perform a normal dispose operation.
+        
         
             disposing: true for a normal dispose operation; false to finalize the handle.
         """
@@ -82,8 +85,12 @@ class CriticalHandleZeroOrMinusOneIsInvalid(CriticalHandle, IDisposable):
         """
         ReleaseHandle(self: CriticalHandle) -> bool
         
-            When overridden in a derived class, executes the code required to free the handle.
-            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging Assistant.
+            When overridden in a derived class, executes the code required to free the 
+             handle.
+        
+            Returns: true if the handle is released successfully; otherwise, in the event of a 
+             catastrophic failure, false. In this case, it generates a releaseHandleFailed 
+             MDA Managed Debugging Assistant.
         """
         pass
 
@@ -97,18 +104,11 @@ class CriticalHandleZeroOrMinusOneIsInvalid(CriticalHandle, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -131,7 +131,10 @@ class SafeAccessTokenHandle(SafeHandle, IDisposable):
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
-            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
+            Releases the unmanaged resources used by the 
+             System.Runtime.InteropServices.SafeHandle class specifying whether to perform a 
+             normal dispose operation.
+        
         
             disposing: true for a normal dispose operation; false to finalize the handle.
         """
@@ -151,18 +154,11 @@ class SafeAccessTokenHandle(SafeHandle, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -189,7 +185,10 @@ class SafeHandleZeroOrMinusOneIsInvalid(SafeHandle, IDisposable):
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
-            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
+            Releases the unmanaged resources used by the 
+             System.Runtime.InteropServices.SafeHandle class specifying whether to perform a 
+             normal dispose operation.
+        
         
             disposing: true for a normal dispose operation; false to finalize the handle.
         """
@@ -199,8 +198,12 @@ class SafeHandleZeroOrMinusOneIsInvalid(SafeHandle, IDisposable):
         """
         ReleaseHandle(self: SafeHandle) -> bool
         
-            When overridden in a derived class, executes the code required to free the handle.
-            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging Assistant.
+            When overridden in a derived class, executes the code required to free the 
+             handle.
+        
+            Returns: true if the handle is released successfully; otherwise, in the event of a 
+             catastrophic failure, false. In this case, it generates a releaseHandleFailed 
+             MDA Managed Debugging Assistant.
         """
         pass
 
@@ -214,18 +217,11 @@ class SafeHandleZeroOrMinusOneIsInvalid(SafeHandle, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -257,7 +253,10 @@ class SafeFileHandle(SafeHandleZeroOrMinusOneIsInvalid, IDisposable):
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
-            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
+            Releases the unmanaged resources used by the 
+             System.Runtime.InteropServices.SafeHandle class specifying whether to perform a 
+             normal dispose operation.
+        
         
             disposing: true for a normal dispose operation; false to finalize the handle.
         """
@@ -277,18 +276,11 @@ class SafeFileHandle(SafeHandleZeroOrMinusOneIsInvalid, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -308,7 +300,10 @@ class SafeHandleMinusOneIsInvalid(SafeHandle, IDisposable):
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
-            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
+            Releases the unmanaged resources used by the 
+             System.Runtime.InteropServices.SafeHandle class specifying whether to perform a 
+             normal dispose operation.
+        
         
             disposing: true for a normal dispose operation; false to finalize the handle.
         """
@@ -318,8 +313,12 @@ class SafeHandleMinusOneIsInvalid(SafeHandle, IDisposable):
         """
         ReleaseHandle(self: SafeHandle) -> bool
         
-            When overridden in a derived class, executes the code required to free the handle.
-            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging Assistant.
+            When overridden in a derived class, executes the code required to free the 
+             handle.
+        
+            Returns: true if the handle is released successfully; otherwise, in the event of a 
+             catastrophic failure, false. In this case, it generates a releaseHandleFailed 
+             MDA Managed Debugging Assistant.
         """
         pass
 
@@ -333,18 +332,11 @@ class SafeHandleMinusOneIsInvalid(SafeHandle, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -372,7 +364,10 @@ class SafeProcessHandle(SafeHandleZeroOrMinusOneIsInvalid, IDisposable):
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
-            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
+            Releases the unmanaged resources used by the 
+             System.Runtime.InteropServices.SafeHandle class specifying whether to perform a 
+             normal dispose operation.
+        
         
             disposing: true for a normal dispose operation; false to finalize the handle.
         """
@@ -392,18 +387,11 @@ class SafeProcessHandle(SafeHandleZeroOrMinusOneIsInvalid, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -427,7 +415,10 @@ class SafeRegistryHandle(SafeHandleZeroOrMinusOneIsInvalid, IDisposable):
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
-            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
+            Releases the unmanaged resources used by the 
+             System.Runtime.InteropServices.SafeHandle class specifying whether to perform a 
+             normal dispose operation.
+        
         
             disposing: true for a normal dispose operation; false to finalize the handle.
         """
@@ -447,18 +438,11 @@ class SafeRegistryHandle(SafeHandleZeroOrMinusOneIsInvalid, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -482,7 +466,10 @@ class SafeWaitHandle(SafeHandleZeroOrMinusOneIsInvalid, IDisposable):
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
-            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
+            Releases the unmanaged resources used by the 
+             System.Runtime.InteropServices.SafeHandle class specifying whether to perform a 
+             normal dispose operation.
+        
         
             disposing: true for a normal dispose operation; false to finalize the handle.
         """
@@ -502,18 +489,11 @@ class SafeWaitHandle(SafeHandleZeroOrMinusOneIsInvalid, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -533,7 +513,10 @@ class SafeX509ChainHandle(SafeHandleZeroOrMinusOneIsInvalid, IDisposable):
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
-            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
+            Releases the unmanaged resources used by the 
+             System.Runtime.InteropServices.SafeHandle class specifying whether to perform a 
+             normal dispose operation.
+        
         
             disposing: true for a normal dispose operation; false to finalize the handle.
         """
@@ -553,18 +536,11 @@ class SafeX509ChainHandle(SafeHandleZeroOrMinusOneIsInvalid, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method

@@ -2,7 +2,7 @@
 # module System.Security.Authentication.ExtendedProtection calls itself ExtendedProtection
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -13,7 +13,10 @@ class ChannelBinding(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
  def Dispose(self):
   """
   Dispose(self: SafeHandle,disposing: bool)
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
+   Releases the unmanaged resources used by the 
+    System.Runtime.InteropServices.SafeHandle class specifying whether to perform a 
+    normal dispose operation.
+  
   
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
@@ -22,8 +25,12 @@ class ChannelBinding(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
   """
   ReleaseHandle(self: SafeHandle) -> bool
   
-   When overridden in a derived class,executes the code required to free the handle.
-   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,false. In this case,it generates a releaseHandleFailed MDA Managed Debugging Assistant.
+   When overridden in a derived class,executes the code required to free the 
+    handle.
+  
+   Returns: true if the handle is released successfully; otherwise,in the event of a 
+    catastrophic failure,false. In this case,it generates a releaseHandleFailed 
+    MDA Managed Debugging Assistant.
   """
   pass
  def SetHandle(self,*args):
@@ -35,17 +42,10 @@ class ChannelBinding(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-  
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -117,7 +117,9 @@ class ExtendedProtectionPolicy(object,ISerializable):
   ToString(self: ExtendedProtectionPolicy) -> str
   
    Gets a string representation for the extended protection policy instance.
-   Returns: A System.String instance that contains the representation of the System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy instance.
+   Returns: A System.String instance that contains the representation of the 
+    System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy 
+    instance.
   """
   pass
  def __init__(self,*args):
@@ -196,8 +198,13 @@ class ExtendedProtectionPolicyTypeConverter(TypeConverter):
    Convert the object to the specified type
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   culture: A System.Globalization.CultureInfo object. If null is passed,the current culture is assumed.
-   value: The System.Object to convert. This should be a System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy object.
+   culture: A System.Globalization.CultureInfo object. If null is passed,the current 
+    culture is assumed.
+  
+   value: The System.Object to convert. This should be a 
+    System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy 
+    object.
+  
    destinationType: The System.Type to convert the value parameter to.
    Returns: An System.Object that represents the converted value parameter.
   """
@@ -285,22 +292,36 @@ class ServiceNameCollection(ReadOnlyCollectionBase,ICollection,IEnumerable):
   """
   Merge(self: ServiceNameCollection,serviceNames: IEnumerable) -> ServiceNameCollection
   
-   Merges the current System.Security.Authentication.ExtendedProtection.ServiceNameCollection with the specified values to create a new System.Security.Authentication.ExtendedProtection.ServiceNameCollection 
+   Merges the current 
+    System.Security.Authentication.ExtendedProtection.ServiceNameCollection with 
+    the specified values to create a new 
+    System.Security.Authentication.ExtendedProtection.ServiceNameCollection 
     containing the union.
   
   
-   serviceNames: An instance of the System.Collections.IEnumerable class that contains the specified values of service names to be merged.
-   Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance that contains the union of the existing System.Security.Authentication.ExtendedProtection.ServiceNameCollection 
+   serviceNames: An instance of the System.Collections.IEnumerable class that contains the 
+    specified values of service names to be merged.
+  
+   Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection 
+    instance that contains the union of the existing 
+    System.Security.Authentication.ExtendedProtection.ServiceNameCollection 
     instance merged with the specified values.
   
   Merge(self: ServiceNameCollection,serviceName: str) -> ServiceNameCollection
   
-   Merges the current System.Security.Authentication.ExtendedProtection.ServiceNameCollection with the specified values to create a new System.Security.Authentication.ExtendedProtection.ServiceNameCollection 
+   Merges the current 
+    System.Security.Authentication.ExtendedProtection.ServiceNameCollection with 
+    the specified values to create a new 
+    System.Security.Authentication.ExtendedProtection.ServiceNameCollection 
     containing the union.
   
   
-   serviceName: A string that contains the specified values of service names to be used to initialize the class.
-   Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance that contains the union of the existing System.Security.Authentication.ExtendedProtection.ServiceNameCollection 
+   serviceName: A string that contains the specified values of service names to be used to 
+    initialize the class.
+  
+   Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection 
+    instance that contains the union of the existing 
+    System.Security.Authentication.ExtendedProtection.ServiceNameCollection 
     instance merged with the specified values.
   """
   pass

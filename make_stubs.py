@@ -10,8 +10,17 @@ Iterates through a list of targeted assemblies and generates stub directories
 for the namespaces using pycharm's generator3.
 
 Note:
-    Directories where target DLLs are must be added to path first.
+    Some files ended up too large for Jedi to handle and would cause
+    memory errors and crashes - 1mb+ in a single files was enough to
+    cause problems. To fix this, there is a separate module that creates
+    a compressed version of the stubs, but it also split large file
+    into separate files to deal with jedi.
+    These directories will show up in the stubs as (X_parts)
 
+
+MIT LICENSE
+https://github.com/gtalarico/ironpython-stubs
+Gui Talarico
 """
 
 import os
@@ -21,20 +30,19 @@ from collections import defaultdict
 import json
 from pprint import pprint
 
-from generator3.generator3 import process_one
-
 join = os.path.join
 project_dir = os.getcwd()  # Must execute from project dir
 
+from generator3.generator3 import process_one
+
 # Revit + Dynamo
-sys.path.append('C:\\Program Files\\Autodesk\\Revit 2017')                                               # RevitAPI
-sys.path.append('C:\\Program Files\\Autodesk\\Revit 2017\\en-US')                                      # RevitAPIUI - Revit Req.
-sys.path.append('C:\\Program Files\\Dynamo\\Dynamo Core\\1.2')                                           # ProtoGeometry
-sys.path.append('C:\\Program Files\\Dynamo\\Dynamo Revit\\1.2\\Revit_2017')                              # RevitServices
+sys.path.append('C:\\Program Files\\Autodesk\\Revit 2017')                  # RevitAPI
+sys.path.append('C:\\Program Files\\Autodesk\\Revit 2017\\en-US')           # RevitAPIUI - Revit Req.
+sys.path.append('C:\\Program Files\\Dynamo\\Dynamo Core\\1.2')              # ProtoGeometry
+sys.path.append('C:\\Program Files\\Dynamo\\Dynamo Revit\\1.2\\Revit_2017') # RevitServices
 
 # Local DLLS
 sys.path.append(join(project_dir, 'bin'))
-
 
 def is_namespace(something):
     """ Returns True if object is Module """
@@ -59,7 +67,7 @@ def iter_module(module_name, module, module_path=None, namespaces=None, ):
         iter_module(submodule_name, submodule, submodule_path, namespaces=namespaces)
     return namespaces
 
-other_namespaces = ['clr', 'wpf']
+loaded_modules = ['clr', 'wpf']
 loadable_assemblies = [
                        'IronPython.Wpf',
                        'System',
@@ -83,6 +91,9 @@ try:
 except NameError:
     pass
 
+###################
+# LOAD ASSEMBLIES #
+###################
 for assembly_name in loadable_assemblies:
     print('='*30)
     try:
@@ -94,9 +105,12 @@ for assembly_name in loadable_assemblies:
     else:
         print('Loaded [{}]'.format(assembly_name))
 
+print('#'*30)
 
-print('='*30)
-print('='*30)
+
+##########################################
+# CRAWL ASSEMBLIES TO GET ALL NAMESPACES #
+##########################################
 
 master_namespaces = {}
 flat_namespaces = {}
@@ -110,21 +124,17 @@ for assembly in clr.References:
         namespaces = iter_module(assembly_name, assembly)
         print('Total: {}'.format(len(flat_namespaces)))
         master_namespaces[assembly_filename] = namespaces
-        # pprint(dict(flat_namespaces))
     else:
         print('*** Assembly Skiped. Not in target list: {}'.format(assembly_name))
 
-
-print('='*30)
-print('='*30)
 # print( json.dumps(master_namespaces, indent=4))
 print( json.dumps(flat_namespaces, indent=4, sort_keys=True))
 
-print('='*30)
-print('='*30)
+print('#'*30)
 
-
-SAVE_PATH = os.path.join(project_dir, 'stubs')
+###############################
+# MAKE STUBS USING GENERATOR3 #
+###############################
 
 def make_stubs():
     for namespace in sorted(flat_namespaces.keys()):
@@ -139,11 +149,12 @@ def make_stubs():
             print('Done')
         print('='*30)
 
-    for other in other_namespaces:
+    for other in loaded_modules:
         process_one(other, None, True, SAVE_PATH)
 
     with open('stubs.json', 'w') as fp:
         json.dump(master_namespaces, fp, indent=4)
 
+SAVE_PATH = os.path.join(project_dir, 'stubs')
 # Uncomment to re-create stubs
-# make_stubs()
+make_stubs()

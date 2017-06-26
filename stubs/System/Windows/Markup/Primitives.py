@@ -2,7 +2,7 @@
 # module System.Windows.Markup.Primitives calls itself Primitives
 # from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -13,7 +13,9 @@ class MarkupObject(object):
     def AssignRootContext(self, context):
         """
         AssignRootContext(self: MarkupObject, context: IValueSerializerContext)
-            When overridden in a derived class, assigns a root context for System.Windows.Markup.ValueSerializer classes.
+            When overridden in a derived class, assigns a root context for 
+             System.Windows.Markup.ValueSerializer classes.
+        
         
             context: The System.Windows.Markup.IValueSerializerContext to assign a root context for.
         """
@@ -163,7 +165,8 @@ class MarkupWriter(object, IDisposable):
     def Dispose(self):
         """
         Dispose(self: MarkupWriter)
-            Releases the resources used by the System.Windows.Markup.Primitives.MarkupWriter.
+            Releases the resources used by the 
+             System.Windows.Markup.Primitives.MarkupWriter.
         """
         pass
 
@@ -172,14 +175,18 @@ class MarkupWriter(object, IDisposable):
         """
         GetMarkupObjectFor(instance: object, manager: XamlDesignerSerializationManager) -> MarkupObject
         
-            Creates an instance of a System.Windows.Markup.Primitives.MarkupObject from the specified object and the specified serialization manager.
+            Creates an instance of a System.Windows.Markup.Primitives.MarkupObject from the 
+             specified object and the specified serialization manager.
+        
         
             instance: An object that will be the root of the serialized tree.
             manager: The serialization manager.
             Returns: A markup object that enables navigating through the tree of objects.
         GetMarkupObjectFor(instance: object) -> MarkupObject
         
-            Creates an instance of a System.Windows.Markup.Primitives.MarkupObject from the specified object.
+            Creates an instance of a System.Windows.Markup.Primitives.MarkupObject from the 
+             specified object.
+        
         
             instance: An object that will be the root of the serialized tree.
             Returns: A markup object that enables navigating through the tree of objects.
@@ -187,18 +194,11 @@ class MarkupWriter(object, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
