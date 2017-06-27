@@ -146,6 +146,7 @@ You should also be able to use these stubs in Visual Studio Code:
 "python.autoComplete.extraPaths": ["C:\Path\To\ironpython-stubs\stubs.min"]
 ```
 
+![vscode](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/gifs/vscode.gif)
 
 
 ## Known Issues
