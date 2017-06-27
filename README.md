@@ -63,6 +63,7 @@ For more information on the 'optimization' see the `proces_stubs.py` file.
 #### Setup Atom
 
 1. If you haven't yet, install Atom + [autocomplete-python](https://atom.io/packages/autocomplete-python)
+   (When asked if you want to use Kite or Local Engine, pick local engine)
 2. Make sure you have no other autocomplete engine on.
 3. At this point, you should make sure you have the autocomplete engine working
    for the native Python libraries. If it's not I recommend you start with a fresh install of atom and go back to step #1.
@@ -105,10 +106,10 @@ The system version is displayed when you launch python:
 
 * Extra Paths for Packages
 This is the most important setting. This tells the autocomplete engine where to "crawl" to find the stub files.
-If you have other libraries you would like to add like [rpw](), you add multiple paths using a semicolon.
-
 `C:\Path\To\ironpython-stubs\stubs.min`
-`C:\Path\To\ironpython-stubs\stubs.min;C:\Path\To\revitpythonwrapper.lib`
+
+If you have other libraries you would like to add like [rpw](), you add multiple paths using a semicolon.
+`C:\Path\To\ironpython-stubs\stubs.min` `;` `C:\Path\To\revitpythonwrapper.lib`
 
 ----------------------------------------------------------------------
 
@@ -132,6 +133,19 @@ autodesk
 rhino
 
 ![autocomplete-clr](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/gifs/autocomplete-rhino.gif)
+
+
+## For Visual Code
+
+You should also be able to use these stubs in Visual Studio Code:
+
+1. Install the [Python Package](https://marketplace.visualstudio.com/items?itemName=donjayamanne.python)
+2. Follow the instruction on [the repository](https://github.com/DonJayamanne/pythonVSCode) to set the autocomplete `extraPaths`:
+
+```
+"python.autoComplete.extraPaths": ["C:\Path\To\ironpython-stubs\stubs.min"]
+```
+
 
 
 ## Known Issues
