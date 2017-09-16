@@ -30,7 +30,11 @@ LOADABLE_ASSEMBLIES = [
    'RevitServices',
    'RevitNodes',
    'ProtoGeometry',
+
    'Rhino3dmIO',
+   'Grasshopper',
+   'GH_IO',
+   'GH_Util',
     ]
 
 # If running inside Revit, Process these only
