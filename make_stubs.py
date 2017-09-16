@@ -36,7 +36,7 @@ import System
 
 # Ensure Proper CWD is set. This ensure proper running from within Revit
 # os.chdir(os.path.dirname(__file__))
-from config import PROJECT_DIR, SYS_PATHS, SAVE_PATH
+from config import PROJECT_DIR, SYS_PATHS, STUBS_DIR, STUBS_JSON
 from config import LOADABLE_ASSEMBLIES, BUILTIN_MODULES
 from generator3.generator3 import process_one
 
@@ -113,7 +113,7 @@ def make_stubs():
         try:
             print('Processing [{}]'.format(namespace))
             print('='*30)
-            process_one(namespace, None, True, SAVE_PATH)
+            process_one(namespace, None, True, STUBS_DIR)
         except Exception as errmsg:
             print('Could not process namespace: {}'.format(module))
             print(errmsg)
@@ -122,10 +122,14 @@ def make_stubs():
         print('='*30)
 
     for other in BUILTIN_MODULES:
-        process_one(other, None, True, SAVE_PATH)
+        process_one(other, None, True, STUBS_DIR)
 
-    with open('stubs.json', 'w') as fp:
+    with open(STUBS_JSON, 'w') as fp:
         json.dump(master_namespaces, fp, indent=4)
 
 # Uncomment to re-create stubs
-# make_stubs()
+if raw_input('Write Stubs ({}) [y] ?'.format(STUBS_DIR)) == 'y':
+    make_stubs()
+    print('Stubs Created')
+else:
+    print('No Stubs Created')
