@@ -63,7 +63,6 @@ def iter_module(module_name, module, module_path=None, namespaces=None, ):
         iter_module(submodule_name, submodule, submodule_path, namespaces=namespaces)
     return namespaces
 
-
 ###################
 # LOAD ASSEMBLIES #
 ###################
