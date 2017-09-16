@@ -38,6 +38,7 @@ import System
 # os.chdir(os.path.dirname(__file__))
 from config import PROJECT_DIR, SYS_PATHS, STUBS_DIR, STUBS_JSON
 from config import LOADABLE_ASSEMBLIES, BUILTIN_MODULES
+from config import OVERWRITE_EXISTING
 from generator3.generator3 import process_one
 
 # Add Paths
@@ -110,6 +111,14 @@ print('#'*30)
 
 def make_stubs():
     for namespace in sorted(flat_namespaces.keys()):
+
+        # Skip if exists and
+        path = os.path.join(STUBS_DIR, *namespace.split('.'))
+        exists = os.path.exists(path) or os.path.exists(path + '.py')
+        if exists and not OVERWRITE_EXISTING:
+            print('Skipping [{}]'.format(namespace))
+            continue
+
         try:
             print('Processing [{}]'.format(namespace))
             print('='*30)

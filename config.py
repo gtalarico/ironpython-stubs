@@ -1,5 +1,6 @@
 import os
 
+OVERWRITE_EXISTING = False
 STUBS_NAME = 'stubs'
 STUBS_NAME = raw_input('Stubs Name [{}]:'.format(STUBS_NAME)) or STUBS_NAME
 
@@ -37,8 +38,6 @@ LOADABLE_ASSEMBLIES = [
    'System.Drawing',
    'System.Windows.Forms',
 
-   'RevitServices',
-   'RevitNodes',
    'ProtoGeometry',
    'DSCoreNodes',
    'DSOffice',
@@ -46,6 +45,7 @@ LOADABLE_ASSEMBLIES = [
 
    'Rhino3dmIO',
    'RhinoCommon',
+
    # 'GH_IO',
    # 'Grasshopper',
    # 'GH_Util',
@@ -54,6 +54,8 @@ LOADABLE_ASSEMBLIES = [
 REVIT_ONLY_ASSEMBLIES = [
     'RevitAPI',
     'RevitAPIUI'
+    'RevitServices',
+    'RevitNodes',
     ]
 
 # If running inside Revit, Process these only

@@ -46,7 +46,7 @@ to analyze your code and the libraries you are using.
 The work Jedi's does can be quite _expensive_. Make sure your computer has plenty of RAM and CPU power.
 
 Once you are setup, the Autocomplete will be a bit slow at first, but it should get better as you use it
-and the engine caches the results and indexes the libraries. Jedi's index is saved here:  
+and the engine caches the results and indexes the libraries. Jedi's index is saved here:
 `C:\Users\{username}\AppData\Roaming\Jedi\Jedi\{python-version}`
 
 The index can get _very_ large - hundreds of MB up to a few Gigs.
@@ -148,10 +148,14 @@ You should also be able to use these stubs in Visual Studio Code:
 
 ![vscode](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/gifs/vscode.gif)
 
+## Building your Own Stubs
+
+`ipy make_stubs.py`
+`ipy make_stubs.py`
 
 ## Known Issues
 * Performance is not great for some of the larger classes. If you know how this can be improved please let me know.
 * Some of the function/constructor signatures are missing or incorrect. This is a problem with Generator3. Please send a PR or let me know if you have a fix.
 
 ## Unknown Issues
-* Many, probably! 
+* Many, probably!
