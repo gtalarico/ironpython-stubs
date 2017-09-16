@@ -30,6 +30,9 @@ LOADABLE_ASSEMBLIES = [
    'RevitServices',
    'RevitNodes',
    'ProtoGeometry',
+   'DSCoreNodes',
+   'DSOffice',
+   'Tessellation',
 
    'Rhino3dmIO',
    'Grasshopper',
