@@ -7,6 +7,9 @@ SAVE_PATH = os.path.join(PROJECT_DIR, 'stubs') # Stubs Output
 # List of all required Paths that need to be added in order to find
 # the files needed
 SYS_PATHS = [
+    # Repo Binaries:
+    BIN_DIR,
+    # RevitAPI
     'C:\\Program Files\\Autodesk\\Revit 2017',
     # RevitAPIUI + Other  Revit Requirements
     'C:\\Program Files\\Autodesk\\Revit 2017\\en-US',

@@ -27,23 +27,25 @@ __version__ = '0.2.0'
 
 import os
 import sys
-import clr
-from collections import defaultdict
 import json
+from collections import defaultdict
 from pprint import pprint
 
+import clr
+import System
+
 # Ensure Proper CWD is set. This ensure proper running from within Revit
-os.chdir(os.path.dirname(__file__))
-from config import PROJECT_DIR, BIN_DIR, SYS_PATHS, SAVE_PATH
+# os.chdir(os.path.dirname(__file__))
+from config import PROJECT_DIR, SYS_PATHS, SAVE_PATH
 from config import LOADABLE_ASSEMBLIES, BUILTIN_MODULES
 from generator3.generator3 import process_one
 
 # Add Paths
-[sys.path.append(p) for p in BIN_DIR + SYS_PATHS]
+[sys.path.append(p) for p in SYS_PATHS]
 
 def is_namespace(something):
-    """ Returns True if object is Module """
-    if 'namespace' in str(type(something)):
+    """ Returns True if object is Namespace: Module """
+    if isinstance(something, type(System)):
         return True
 
 def iter_module(module_name, module, module_path=None, namespaces=None, ):
