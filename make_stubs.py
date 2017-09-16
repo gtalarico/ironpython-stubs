@@ -35,13 +35,19 @@ project_dir = os.getcwd()  # Must execute from project dir
 
 from generator3.generator3 import process_one
 
-# Revit + Dynamo
-sys.path.append('C:\\Program Files\\Autodesk\\Revit 2017')                  # RevitAPI
-sys.path.append('C:\\Program Files\\Autodesk\\Revit 2017\\en-US')           # RevitAPIUI - Revit Req.
-sys.path.append('C:\\Program Files\\Dynamo\\Dynamo Core\\1.2')              # ProtoGeometry
-sys.path.append('C:\\Program Files\\Dynamo\\Dynamo Revit\\1.2\\Revit_2017') # RevitServices
+##################
+# Revit + Dynamo #
+##################
+# RevitAPI
+sys.path.append('C:\\Program Files\\Autodesk\\Revit 2017')
+# RevitAPIUI + Other  Revit Requirements
+sys.path.append('C:\\Program Files\\Autodesk\\Revit 2017\\en-US')
+# ProtoGeometry
+sys.path.append('C:\\Program Files\\Dynamo\\Dynamo Core\\1.2')
+# RevitServices
+sys.path.append('C:\\Program Files\\Dynamo\\Dynamo Revit\\1.2\\Revit_2017')
 
-# Local DLLS
+# Repository Dlls
 sys.path.append(join(project_dir, 'bin'))
 
 def is_namespace(something):
