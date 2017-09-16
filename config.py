@@ -8,7 +8,7 @@ STUBS_NAME = raw_input('Stubs Name [{}]:'.format(STUBS_NAME)) or STUBS_NAME
 PROJECT_DIR = os.getcwd()  # Must execute from project dir
 BIN_DIR = os.path.join(PROJECT_DIR, 'bin')     # Repository Dlls
 STUBS_DIR = os.path.join(PROJECT_DIR, STUBS_NAME) # Stubs Output
-STUBS_JSON = os.path.join(PROJECT_DIR, '{}.json'.format(STUBS_NAME))
+STUBS_JSON_DIR = os.path.join(PROJECT_DIR, STUBS_NAME, '_json')
 
 # List of all required Paths that need to be added in order to find
 # the files needed

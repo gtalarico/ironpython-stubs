@@ -109,6 +109,16 @@ print('#'*30)
 # MAKE STUBS USING GENERATOR3 #
 ###############################
 
+def dump_json(namespace):
+    if not os.path.exists(STUBS_JSON):
+        os.mkdir(STUBS_JSON)
+
+    filename = '{}.json'.format(namespace)
+    filepath = os.path.join(STUBS_JSON, filename)
+    with open(filepath, 'w') as fp:
+        data = master_namespaces[namespace]
+        json.dump(data, fp, indent=4)
+
 def make_stubs():
     for namespace in sorted(flat_namespaces.keys()):
 
@@ -127,14 +137,17 @@ def make_stubs():
             print('Could not process namespace: {}'.format(module))
             print(errmsg)
         else:
+            dump_json(namespace)
+            del sys.modules[namespace]
             print('Done')
         print('='*30)
 
-    for other in BUILTIN_MODULES:
-        process_one(other, None, True, STUBS_DIR)
+    for module in BUILTIN_MODULES:
+        process_one(module, None, True, STUBS_DIR)
+        dump_json(other)
 
-    with open(STUBS_JSON, 'w') as fp:
-        json.dump(master_namespaces, fp, indent=4)
+
+
 
 # Uncomment to re-create stubs
 if raw_input('Write Stubs ({}) [y] ?'.format(STUBS_DIR)) == 'y':
