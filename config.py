@@ -1,12 +1,12 @@
 import os
 
 PROJECT_DIR = os.getcwd()  # Must execute from project dir
-# Repository Dlls
-BIN_DIR = os.path.join(PROJECT_DIR, 'bin')
+BIN_DIR = os.path.join(PROJECT_DIR, 'bin')     # Repository Dlls
+SAVE_PATH = os.path.join(PROJECT_DIR, 'stubs') # Stubs Output
 
 # List of all required Paths that need to be added in order to find
 # the files needed
-PATHS = [
+SYS_PATHS = [
     'C:\\Program Files\\Autodesk\\Revit 2017',
     # RevitAPIUI + Other  Revit Requirements
     'C:\\Program Files\\Autodesk\\Revit 2017\\en-US',
@@ -43,7 +43,7 @@ LOADABLE_ASSEMBLIES = [
 # If running inside Revit, Process these only
 try:
     __revit__
-    LOADABLE_ASSEMBLIES.extend([ 'RevitAPI', 'RevitAPIUI'])
+    LOADABLE_ASSEMBLIES = [ 'RevitAPI', 'RevitAPIUI']
     # LOADABLE_ASSEMBLIES = [ 'RevitAPI', 'RevitAPIUI',] # ONLY REVIT
 except NameError:
     pass

@@ -34,11 +34,12 @@ from pprint import pprint
 
 # Ensure Proper CWD is set. This ensure proper running from within Revit
 os.chdir(os.path.dirname(__file__))
-from config import PROJECT_DIR, BIN_DIR, PATHS
+from config import PROJECT_DIR, BIN_DIR, SYS_PATHS, SAVE_PATH
+from config import LOADABLE_ASSEMBLIES, BUILTIN_MODULES
 from generator3.generator3 import process_one
 
 # Add Paths
-[sys.path.append(p) for p in BIN_DIR + PATHS]
+[sys.path.append(p) for p in BIN_DIR + SYS_PATHS]
 
 def is_namespace(something):
     """ Returns True if object is Module """
@@ -124,6 +125,5 @@ def make_stubs():
     with open('stubs.json', 'w') as fp:
         json.dump(master_namespaces, fp, indent=4)
 
-SAVE_PATH = os.path.join(project_dir, 'stubs')
 # Uncomment to re-create stubs
 # make_stubs()
