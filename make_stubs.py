@@ -30,25 +30,12 @@ from collections import defaultdict
 import json
 from pprint import pprint
 
-join = os.path.join
-project_dir = os.getcwd()  # Must execute from project dir
-
 from generator3.generator3 import process_one
 
-##################
-# Revit + Dynamo #
-##################
-# RevitAPI
-sys.path.append('C:\\Program Files\\Autodesk\\Revit 2017')
-# RevitAPIUI + Other  Revit Requirements
-sys.path.append('C:\\Program Files\\Autodesk\\Revit 2017\\en-US')
-# ProtoGeometry
-sys.path.append('C:\\Program Files\\Dynamo\\Dynamo Core\\1.2')
-# RevitServices
-sys.path.append('C:\\Program Files\\Dynamo\\Dynamo Revit\\1.2\\Revit_2017')
+from config import PROJECT_DIR, BIN_DIR, PATHS
 
-# Repository Dlls
-sys.path.append(join(project_dir, 'bin'))
+# Add Paths
+[sys.path.append(p) for p in BIN_DIR + PATHS]
 
 def is_namespace(something):
     """ Returns True if object is Module """
@@ -73,34 +60,11 @@ def iter_module(module_name, module, module_path=None, namespaces=None, ):
         iter_module(submodule_name, submodule, submodule_path, namespaces=namespaces)
     return namespaces
 
-loaded_modules = ['clr', 'wpf']
-loadable_assemblies = [
-                       'IronPython.Wpf',
-                       'System',
-                       'PresentationFramework',
-                       'PresentationCore',
-                       'WindowsBase',
-                       'System.Drawing',
-                       'System.Windows.Forms',
-
-                       'RevitServices',
-                       'RevitNodes',
-                       'ProtoGeometry',
-                       'Rhino3dmIO',
-                      ]
-
-# If running inside Revit, process these only
-try:
-    __revit__
-    loadable_assemblies.extend([ 'RevitAPI', 'RevitAPIUI'])
-    # loadable_assemblies = [ 'RevitAPI', 'RevitAPIUI',] # ONLY REVIT
-except NameError:
-    pass
 
 ###################
 # LOAD ASSEMBLIES #
 ###################
-for assembly_name in loadable_assemblies:
+for assembly_name in LOADABLE_ASSEMBLIES:
     print('='*30)
     try:
         print('Adding Assembly [{}]'.format(assembly_name))
@@ -113,11 +77,9 @@ for assembly_name in loadable_assemblies:
 
 print('#'*30)
 
-
 ##########################################
 # CRAWL ASSEMBLIES TO GET ALL NAMESPACES #
 ##########################################
-
 master_namespaces = {}
 flat_namespaces = {}
 
@@ -125,7 +87,7 @@ for assembly in clr.References:
     assembly_name = assembly.GetName().Name
     assembly_path = assembly.CodeBase
     assembly_filename = os.path.basename(assembly_path)
-    if assembly_name in loadable_assemblies:
+    if assembly_name in LOADABLE_ASSEMBLIES:
         print('Parsing Assembly: {}'.format(assembly_name))
         namespaces = iter_module(assembly_name, assembly)
         print('Total: {}'.format(len(flat_namespaces)))
@@ -135,7 +97,6 @@ for assembly in clr.References:
 
 # print( json.dumps(master_namespaces, indent=4))
 print( json.dumps(flat_namespaces, indent=4, sort_keys=True))
-
 print('#'*30)
 
 ###############################
@@ -155,7 +116,7 @@ def make_stubs():
             print('Done')
         print('='*30)
 
-    for other in loaded_modules:
+    for other in BUILTIN_MODULES:
         process_one(other, None, True, SAVE_PATH)
 
     with open('stubs.json', 'w') as fp:
@@ -163,4 +124,4 @@ def make_stubs():
 
 SAVE_PATH = os.path.join(project_dir, 'stubs')
 # Uncomment to re-create stubs
-make_stubs()
+# make_stubs()
