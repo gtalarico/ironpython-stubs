@@ -23,6 +23,8 @@ https://github.com/gtalarico/ironpython-stubs
 Gui Talarico
 """
 
+__version__ = '0.2.0'
+
 import os
 import sys
 import clr
@@ -30,9 +32,10 @@ from collections import defaultdict
 import json
 from pprint import pprint
 
-from generator3.generator3 import process_one
-
+# Ensure Proper CWD is set. This ensure proper running from within Revit
+os.chdir(os.path.dirname(__file__))
 from config import PROJECT_DIR, BIN_DIR, PATHS
+from generator3.generator3 import process_one
 
 # Add Paths
 [sys.path.append(p) for p in BIN_DIR + PATHS]
