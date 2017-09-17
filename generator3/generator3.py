@@ -316,6 +316,7 @@ def process_one(name, mod_file_name, doing_builtins, subdir, quiet=False):
                         action("closing %r", fname)
     except:
         exctype, value = sys.exc_info()[:2]
+        import pdb; pdb.set_trace()
         msg = "Failed to process %r while %s: %s"
         args = name, CURRENT_ACTION, str(value)
         report(msg, *args)
