@@ -30,21 +30,21 @@ SYS_PATHS = [
 BUILTIN_MODULES = ['clr', 'wpf']
 # TODO:
 LOADABLE_ASSEMBLIES = [
-   # 'IronPython.Wpf',
-   # 'PresentationCore',
-   # 'WindowsBase',
-   # 'System.Drawing',
-   # 'System',
-   # 'PresentationFramework',
-   # 'System.Windows.Forms',
+   'IronPython.Wpf',
+   'PresentationCore',
+   'WindowsBase',
+   'System.Drawing',
+   'System',
+   'PresentationFramework',
+   'System.Windows.Forms',
 
    'ProtoGeometry',
    'DSCoreNodes',
    'DSOffice',
    'Tessellation',
 
-   # 'Rhino3dmIO',
-   # 'RhinoCommon',
+   'Rhino3dmIO',
+   'RhinoCommon',
 
    # 'GH_IO',
    # 'Grasshopper',
