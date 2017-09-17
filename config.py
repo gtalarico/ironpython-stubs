@@ -1,6 +1,6 @@
 import os
 
-OVERWRITE_EXISTING = False
+OVERWRITE_EXISTING = True
 STUBS_NAME = 'stubs'
 STUBS_NAME = raw_input('Stubs Name [{}]:'.format(STUBS_NAME)) or STUBS_NAME
 
@@ -28,23 +28,23 @@ SYS_PATHS = [
     ]
 
 BUILTIN_MODULES = ['clr', 'wpf']
-
+# TODO:
 LOADABLE_ASSEMBLIES = [
-   'IronPython.Wpf',
-   'System',
-   'PresentationFramework',
-   'PresentationCore',
-   'WindowsBase',
-   'System.Drawing',
-   'System.Windows.Forms',
+   # 'IronPython.Wpf',
+   # 'PresentationCore',
+   # 'WindowsBase',
+   # 'System.Drawing',
+   # 'System',
+   # 'PresentationFramework',
+   # 'System.Windows.Forms',
 
    'ProtoGeometry',
    'DSCoreNodes',
    'DSOffice',
    'Tessellation',
 
-   'Rhino3dmIO',
-   'RhinoCommon',
+   # 'Rhino3dmIO',
+   # 'RhinoCommon',
 
    # 'GH_IO',
    # 'Grasshopper',
