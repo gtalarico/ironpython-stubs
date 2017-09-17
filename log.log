@@ -3059,3 +3059,1127 @@
     }
   ]
 } [(unknown file)](0)[06:08:07]
+[INFO] ** LOG LEVEL: INFO [(unknown file)](0)[06:12:26]
+[INFO] ============================== [(unknown file)](0)[06:12:26]
+[INFO] Adding Assembly [IronPython.Wpf] [(unknown file)](0)[06:12:26]
+[INFO] Loaded [IronPython.Wpf] [(unknown file)](0)[06:12:26]
+[INFO] ============================== [(unknown file)](0)[06:12:26]
+[INFO] Adding Assembly [ProtoGeometry] [(unknown file)](0)[06:12:26]
+[INFO] Loaded [ProtoGeometry] [(unknown file)](0)[06:12:26]
+[INFO] ============================== [(unknown file)](0)[06:12:26]
+[INFO] Adding Assembly [DSCoreNodes] [(unknown file)](0)[06:12:26]
+[INFO] Loaded [DSCoreNodes] [(unknown file)](0)[06:12:26]
+[INFO] ============================== [(unknown file)](0)[06:12:26]
+[INFO] Adding Assembly [DSOffice] [(unknown file)](0)[06:12:26]
+[INFO] Loaded [DSOffice] [(unknown file)](0)[06:12:26]
+[INFO] ============================== [(unknown file)](0)[06:12:26]
+[INFO] Adding Assembly [Tessellation] [(unknown file)](0)[06:12:26]
+[INFO] Loaded [Tessellation] [(unknown file)](0)[06:12:26]
+[INFO] ============================== [(unknown file)](0)[06:12:26]
+[INFO] Adding Assembly [Rhino3dmIO] [(unknown file)](0)[06:12:26]
+[INFO] Loaded [Rhino3dmIO] [(unknown file)](0)[06:12:26]
+[INFO] ============================== [(unknown file)](0)[06:12:26]
+[INFO] Adding Assembly [RhinoCommon] [(unknown file)](0)[06:12:26]
+[INFO] Loaded [RhinoCommon] [(unknown file)](0)[06:12:26]
+[WARNING] *** Assembly Skiped. Not in target list: mscorlib [(unknown file)](0)[06:12:26]
+[WARNING] *** Assembly Skiped. Not in target list: System [(unknown file)](0)[06:12:26]
+[WARNING] *** Assembly Skiped. Not in target list: IronPython.SQLite [(unknown file)](0)[06:12:26]
+[INFO] Parsing Assembly: IronPython.Wpf [(unknown file)](0)[06:12:26]
+[INFO] Parsing Assembly: ProtoGeometry [(unknown file)](0)[06:12:26]
+[INFO] Parsing Assembly: DSCoreNodes [(unknown file)](0)[06:12:26]
+[INFO] Parsing Assembly: DSOffice [(unknown file)](0)[06:12:26]
+[INFO] Parsing Assembly: Tessellation [(unknown file)](0)[06:12:26]
+[INFO] Parsing Assembly: Rhino3dmIO [(unknown file)](0)[06:12:26]
+[INFO] Parsing Assembly: RhinoCommon [(unknown file)](0)[06:12:26]
+[INFO] >>> Modules and Assemblies Loaded. [(unknown file)](0)[06:12:26]
+[INFO] {
+  "DSCoreNodes.DLL": [
+    [
+      {
+        "DSCore": "<module 'DSCore' (CLS module from DSCoreNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+      }, 
+      {
+        "DSCore.IO": "<module 'IO' (CLS module from DSCoreNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+      }
+    ]
+  ], 
+  "DSOffice.DLL": [
+    [
+      {
+        "DSOffice": "<module 'DSOffice' (CLS module from DSOffice, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+      }
+    ]
+  ], 
+  "IronPython.Wpf.dll": [
+    [
+      {
+        "IronPython": "<module 'IronPython' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>"
+      }, 
+      {
+        "IronPython.Modules": "<module 'Modules' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>"
+      }
+    ]
+  ], 
+  "ProtoGeometry.DLL": [
+    [
+      {
+        "Autodesk": "<module 'Autodesk' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+      }, 
+      {
+        "Autodesk.DesignScript": "<module 'DesignScript' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+      }, 
+      {
+        "Autodesk.DesignScript.Geometry": "<module 'Geometry' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+      }, 
+      {
+        "Autodesk.DesignScript.Geometry.TSpline": "<module 'TSpline' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+      }, 
+      {
+        "Autodesk.DesignScript.Geometry.Core": "<module 'Core' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+      }
+    ]
+  ], 
+  "Rhino3dmIO.DLL": [
+    [
+      {
+        "Rhino": "<module 'Rhino' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+      }, 
+      {
+        "Rhino.DocObjects": "<module 'DocObjects' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+      }, 
+      {
+        "Rhino.DocObjects.Custom": "<module 'Custom' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+      }, 
+      {
+        "Rhino.UI": "<module 'UI' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+      }, 
+      {
+        "Rhino.Display": "<module 'Display' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+      }, 
+      {
+        "Rhino.Geometry": "<module 'Geometry' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+      }, 
+      {
+        "Rhino.Geometry.Intersect": "<module 'Intersect' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+      }, 
+      {
+        "Rhino.Geometry.Collections": "<module 'Collections' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+      }, 
+      {
+        "Rhino.FileIO": "<module 'FileIO' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+      }, 
+      {
+        "Rhino.Runtime": "<module 'Runtime' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+      }, 
+      {
+        "Rhino.Runtime.InteropWrappers": "<module 'InteropWrappers' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+      }, 
+      {
+        "Rhino.Collections": "<module 'Collections' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+      }, 
+      {
+        "Rhino.Render": "<module 'Render' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+      }
+    ]
+  ], 
+  "RhinoCommon.DLL": [
+    [
+      {
+        "Rhino": "<module 'Rhino' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.Display": "<module 'Display' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.DocObjects": "<module 'DocObjects' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.DocObjects.Custom": "<module 'Custom' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.DocObjects.Tables": "<module 'Tables' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.Runtime": "<module 'Runtime' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.Runtime.InteropWrappers": "<module 'InteropWrappers' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.ApplicationSettings": "<module 'ApplicationSettings' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.Commands": "<module 'Commands' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.Input": "<module 'Input' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.Input.Custom": "<module 'Custom' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.PlugIns": "<module 'PlugIns' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.Collections": "<module 'Collections' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.Geometry": "<module 'Geometry' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.Geometry.Morphs": "<module 'Morphs' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.Geometry.Intersect": "<module 'Intersect' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.Geometry.Collections": "<module 'Collections' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.UI": "<module 'UI' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.UI.Gumball": "<module 'Gumball' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.FileIO": "<module 'FileIO' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.Render": "<module 'Render' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.Render.Fields": "<module 'Fields' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }, 
+      {
+        "Rhino.Render.UI": "<module 'UI' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+      }
+    ]
+  ], 
+  "Tessellation.DLL": [
+    [
+      {
+        "Tessellation": "<module 'Tessellation' (CLS module from Tessellation, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+      }, 
+      {
+        "Tessellation.Adapters": "<module 'Adapters' (CLS module from Tessellation, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+      }
+    ]
+  ], 
+  "__builtins__": [
+    {
+      "clr": "<module 'clr' (built-in)>"
+    }, 
+    {
+      "wpf": "<module 'wpf' (built-in)>"
+    }
+  ]
+} [(unknown file)](0)[06:12:26]
+[INFO] ** LOG LEVEL: INFO [(unknown file)](0)[06:14:33]
+[INFO] ============================== [(unknown file)](0)[06:14:34]
+[INFO] Adding Assembly [IronPython.Wpf] [(unknown file)](0)[06:14:34]
+[INFO] Loaded [IronPython.Wpf] [(unknown file)](0)[06:14:34]
+[INFO] ============================== [(unknown file)](0)[06:14:34]
+[INFO] Adding Assembly [ProtoGeometry] [(unknown file)](0)[06:14:34]
+[INFO] Loaded [ProtoGeometry] [(unknown file)](0)[06:14:34]
+[INFO] ============================== [(unknown file)](0)[06:14:34]
+[INFO] Adding Assembly [DSCoreNodes] [(unknown file)](0)[06:14:34]
+[INFO] Loaded [DSCoreNodes] [(unknown file)](0)[06:14:34]
+[INFO] ============================== [(unknown file)](0)[06:14:34]
+[INFO] Adding Assembly [DSOffice] [(unknown file)](0)[06:14:34]
+[INFO] Loaded [DSOffice] [(unknown file)](0)[06:14:34]
+[INFO] ============================== [(unknown file)](0)[06:14:34]
+[INFO] Adding Assembly [Tessellation] [(unknown file)](0)[06:14:34]
+[INFO] Loaded [Tessellation] [(unknown file)](0)[06:14:34]
+[INFO] ============================== [(unknown file)](0)[06:14:34]
+[INFO] Adding Assembly [Rhino3dmIO] [(unknown file)](0)[06:14:34]
+[INFO] Loaded [Rhino3dmIO] [(unknown file)](0)[06:14:34]
+[INFO] ============================== [(unknown file)](0)[06:14:34]
+[INFO] Adding Assembly [RhinoCommon] [(unknown file)](0)[06:14:34]
+[INFO] Loaded [RhinoCommon] [(unknown file)](0)[06:14:34]
+[WARNING] *** Assembly Skiped. Not in target list: mscorlib [(unknown file)](0)[06:14:34]
+[WARNING] *** Assembly Skiped. Not in target list: System [(unknown file)](0)[06:14:34]
+[WARNING] *** Assembly Skiped. Not in target list: IronPython.SQLite [(unknown file)](0)[06:14:34]
+[INFO] Parsing Assembly: IronPython.Wpf [(unknown file)](0)[06:14:34]
+[INFO] Parsing Assembly: ProtoGeometry [(unknown file)](0)[06:14:34]
+[INFO] Parsing Assembly: DSCoreNodes [(unknown file)](0)[06:14:34]
+[INFO] Parsing Assembly: DSOffice [(unknown file)](0)[06:14:34]
+[INFO] Parsing Assembly: Tessellation [(unknown file)](0)[06:14:34]
+[INFO] Parsing Assembly: Rhino3dmIO [(unknown file)](0)[06:14:34]
+[INFO] Parsing Assembly: RhinoCommon [(unknown file)](0)[06:14:34]
+[INFO] >>> Modules and Assemblies Loaded. [(unknown file)](0)[06:14:34]
+[INFO] {
+  "DSCoreNodes.DLL": [
+    {
+      "DSCore": "<module 'DSCore' (CLS module from DSCoreNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+      "DSCore.IO": "<module 'IO' (CLS module from DSCoreNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+    }
+  ], 
+  "DSOffice.DLL": [
+    {
+      "DSOffice": "<module 'DSOffice' (CLS module from DSOffice, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+    }
+  ], 
+  "IronPython.Wpf.dll": [
+    {
+      "IronPython": "<module 'IronPython' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>", 
+      "IronPython.Modules": "<module 'Modules' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>"
+    }
+  ], 
+  "ProtoGeometry.DLL": [
+    {
+      "Autodesk": "<module 'Autodesk' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+      "Autodesk.DesignScript": "<module 'DesignScript' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+      "Autodesk.DesignScript.Geometry": "<module 'Geometry' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+      "Autodesk.DesignScript.Geometry.Core": "<module 'Core' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+      "Autodesk.DesignScript.Geometry.TSpline": "<module 'TSpline' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+    }
+  ], 
+  "Rhino3dmIO.DLL": [
+    {
+      "Rhino": "<module 'Rhino' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.Collections": "<module 'Collections' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.Display": "<module 'Display' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.DocObjects": "<module 'DocObjects' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.DocObjects.Custom": "<module 'Custom' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.FileIO": "<module 'FileIO' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.Geometry": "<module 'Geometry' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.Geometry.Collections": "<module 'Collections' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.Geometry.Intersect": "<module 'Intersect' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.Render": "<module 'Render' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.Runtime": "<module 'Runtime' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.Runtime.InteropWrappers": "<module 'InteropWrappers' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.UI": "<module 'UI' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+    }
+  ], 
+  "RhinoCommon.DLL": [
+    {
+      "Rhino": "<module 'Rhino' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.ApplicationSettings": "<module 'ApplicationSettings' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Collections": "<module 'Collections' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Commands": "<module 'Commands' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Display": "<module 'Display' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.DocObjects": "<module 'DocObjects' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.DocObjects.Custom": "<module 'Custom' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.DocObjects.Tables": "<module 'Tables' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.FileIO": "<module 'FileIO' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Geometry": "<module 'Geometry' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Geometry.Collections": "<module 'Collections' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Geometry.Intersect": "<module 'Intersect' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Geometry.Morphs": "<module 'Morphs' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Input": "<module 'Input' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Input.Custom": "<module 'Custom' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.PlugIns": "<module 'PlugIns' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Render": "<module 'Render' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Render.Fields": "<module 'Fields' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Render.UI": "<module 'UI' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Runtime": "<module 'Runtime' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Runtime.InteropWrappers": "<module 'InteropWrappers' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.UI": "<module 'UI' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.UI.Gumball": "<module 'Gumball' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+    }
+  ], 
+  "Tessellation.DLL": [
+    {
+      "Tessellation": "<module 'Tessellation' (CLS module from Tessellation, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+      "Tessellation.Adapters": "<module 'Adapters' (CLS module from Tessellation, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+    }
+  ], 
+  "__builtins__": [
+    {
+      "clr": "<module 'clr' (built-in)>"
+    }, 
+    {
+      "wpf": "<module 'wpf' (built-in)>"
+    }
+  ]
+} [(unknown file)](0)[06:14:34]
+[INFO] ** LOG LEVEL: INFO [(unknown file)](0)[06:16:22]
+[INFO] ============================== [(unknown file)](0)[06:16:23]
+[INFO] Adding Assembly [IronPython.Wpf] [(unknown file)](0)[06:16:23]
+[INFO] Loaded [IronPython.Wpf] [(unknown file)](0)[06:16:23]
+[INFO] ============================== [(unknown file)](0)[06:16:23]
+[INFO] Adding Assembly [ProtoGeometry] [(unknown file)](0)[06:16:23]
+[INFO] Loaded [ProtoGeometry] [(unknown file)](0)[06:16:23]
+[INFO] ============================== [(unknown file)](0)[06:16:23]
+[INFO] Adding Assembly [DSCoreNodes] [(unknown file)](0)[06:16:23]
+[INFO] Loaded [DSCoreNodes] [(unknown file)](0)[06:16:23]
+[INFO] ============================== [(unknown file)](0)[06:16:23]
+[INFO] Adding Assembly [DSOffice] [(unknown file)](0)[06:16:23]
+[INFO] Loaded [DSOffice] [(unknown file)](0)[06:16:23]
+[INFO] ============================== [(unknown file)](0)[06:16:23]
+[INFO] Adding Assembly [Tessellation] [(unknown file)](0)[06:16:23]
+[INFO] Loaded [Tessellation] [(unknown file)](0)[06:16:23]
+[INFO] ============================== [(unknown file)](0)[06:16:23]
+[INFO] Adding Assembly [Rhino3dmIO] [(unknown file)](0)[06:16:23]
+[INFO] Loaded [Rhino3dmIO] [(unknown file)](0)[06:16:23]
+[INFO] ============================== [(unknown file)](0)[06:16:23]
+[INFO] Adding Assembly [RhinoCommon] [(unknown file)](0)[06:16:23]
+[INFO] Loaded [RhinoCommon] [(unknown file)](0)[06:16:23]
+[WARNING] *** Assembly Skiped. Not in target list: mscorlib [(unknown file)](0)[06:16:23]
+[WARNING] *** Assembly Skiped. Not in target list: System [(unknown file)](0)[06:16:23]
+[WARNING] *** Assembly Skiped. Not in target list: IronPython.SQLite [(unknown file)](0)[06:16:23]
+[INFO] Parsing Assembly: IronPython.Wpf [(unknown file)](0)[06:16:23]
+[INFO] Parsing Assembly: ProtoGeometry [(unknown file)](0)[06:16:23]
+[INFO] Parsing Assembly: DSCoreNodes [(unknown file)](0)[06:16:23]
+[INFO] Parsing Assembly: DSOffice [(unknown file)](0)[06:16:23]
+[INFO] Parsing Assembly: Tessellation [(unknown file)](0)[06:16:23]
+[INFO] Parsing Assembly: Rhino3dmIO [(unknown file)](0)[06:16:23]
+[INFO] Parsing Assembly: RhinoCommon [(unknown file)](0)[06:16:23]
+[INFO] >>> Modules and Assemblies Loaded. [(unknown file)](0)[06:16:23]
+[INFO] {
+  "DSCoreNodes.DLL": [
+    {
+      "DSCore": "<module 'DSCore' (CLS module from DSCoreNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+      "DSCore.IO": "<module 'IO' (CLS module from DSCoreNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+    }
+  ], 
+  "DSOffice.DLL": [
+    {
+      "DSOffice": "<module 'DSOffice' (CLS module from DSOffice, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+    }
+  ], 
+  "IronPython.Wpf.dll": [
+    {
+      "IronPython": "<module 'IronPython' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>", 
+      "IronPython.Modules": "<module 'Modules' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>"
+    }
+  ], 
+  "ProtoGeometry.DLL": [
+    {
+      "Autodesk": "<module 'Autodesk' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+      "Autodesk.DesignScript": "<module 'DesignScript' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+      "Autodesk.DesignScript.Geometry": "<module 'Geometry' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+      "Autodesk.DesignScript.Geometry.Core": "<module 'Core' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+      "Autodesk.DesignScript.Geometry.TSpline": "<module 'TSpline' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+    }
+  ], 
+  "Rhino3dmIO.DLL": [
+    {
+      "Rhino": "<module 'Rhino' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.Collections": "<module 'Collections' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.Display": "<module 'Display' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.DocObjects": "<module 'DocObjects' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.DocObjects.Custom": "<module 'Custom' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.FileIO": "<module 'FileIO' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.Geometry": "<module 'Geometry' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.Geometry.Collections": "<module 'Collections' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.Geometry.Intersect": "<module 'Intersect' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.Render": "<module 'Render' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.Runtime": "<module 'Runtime' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.Runtime.InteropWrappers": "<module 'InteropWrappers' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+      "Rhino.UI": "<module 'UI' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+    }
+  ], 
+  "RhinoCommon.DLL": [
+    {
+      "Rhino": "<module 'Rhino' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.ApplicationSettings": "<module 'ApplicationSettings' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Collections": "<module 'Collections' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Commands": "<module 'Commands' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Display": "<module 'Display' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.DocObjects": "<module 'DocObjects' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.DocObjects.Custom": "<module 'Custom' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.DocObjects.Tables": "<module 'Tables' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.FileIO": "<module 'FileIO' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Geometry": "<module 'Geometry' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Geometry.Collections": "<module 'Collections' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Geometry.Intersect": "<module 'Intersect' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Geometry.Morphs": "<module 'Morphs' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Input": "<module 'Input' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Input.Custom": "<module 'Custom' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.PlugIns": "<module 'PlugIns' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Render": "<module 'Render' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Render.Fields": "<module 'Fields' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Render.UI": "<module 'UI' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Runtime": "<module 'Runtime' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.Runtime.InteropWrappers": "<module 'InteropWrappers' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.UI": "<module 'UI' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+      "Rhino.UI.Gumball": "<module 'Gumball' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+    }
+  ], 
+  "Tessellation.DLL": [
+    {
+      "Tessellation": "<module 'Tessellation' (CLS module from Tessellation, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+      "Tessellation.Adapters": "<module 'Adapters' (CLS module from Tessellation, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+    }
+  ], 
+  "__builtins__": [
+    {
+      "clr": "<module 'clr' (built-in)>"
+    }, 
+    {
+      "wpf": "<module 'wpf' (built-in)>"
+    }
+  ]
+} [(unknown file)](0)[06:16:23]
+[INFO] ** LOG LEVEL: INFO [(unknown file)](0)[06:17:43]
+[INFO] ============================== [(unknown file)](0)[06:17:44]
+[INFO] Adding Assembly [IronPython.Wpf] [(unknown file)](0)[06:17:44]
+[INFO] Loaded [IronPython.Wpf] [(unknown file)](0)[06:17:44]
+[INFO] ============================== [(unknown file)](0)[06:17:44]
+[INFO] Adding Assembly [ProtoGeometry] [(unknown file)](0)[06:17:44]
+[INFO] Loaded [ProtoGeometry] [(unknown file)](0)[06:17:44]
+[INFO] ============================== [(unknown file)](0)[06:17:44]
+[INFO] Adding Assembly [DSCoreNodes] [(unknown file)](0)[06:17:44]
+[INFO] Loaded [DSCoreNodes] [(unknown file)](0)[06:17:44]
+[INFO] ============================== [(unknown file)](0)[06:17:44]
+[INFO] Adding Assembly [DSOffice] [(unknown file)](0)[06:17:44]
+[INFO] Loaded [DSOffice] [(unknown file)](0)[06:17:44]
+[INFO] ============================== [(unknown file)](0)[06:17:44]
+[INFO] Adding Assembly [Tessellation] [(unknown file)](0)[06:17:44]
+[INFO] Loaded [Tessellation] [(unknown file)](0)[06:17:44]
+[INFO] ============================== [(unknown file)](0)[06:17:44]
+[INFO] Adding Assembly [Rhino3dmIO] [(unknown file)](0)[06:17:44]
+[INFO] Loaded [Rhino3dmIO] [(unknown file)](0)[06:17:44]
+[INFO] ============================== [(unknown file)](0)[06:17:44]
+[INFO] Adding Assembly [RhinoCommon] [(unknown file)](0)[06:17:44]
+[INFO] Loaded [RhinoCommon] [(unknown file)](0)[06:17:44]
+[WARNING] *** Assembly Skiped. Not in target list: mscorlib [(unknown file)](0)[06:17:44]
+[WARNING] *** Assembly Skiped. Not in target list: System [(unknown file)](0)[06:17:44]
+[WARNING] *** Assembly Skiped. Not in target list: IronPython.SQLite [(unknown file)](0)[06:17:44]
+[INFO] Parsing Assembly: IronPython.Wpf [(unknown file)](0)[06:17:44]
+[INFO] Parsing Assembly: ProtoGeometry [(unknown file)](0)[06:17:44]
+[INFO] Parsing Assembly: DSCoreNodes [(unknown file)](0)[06:17:44]
+[INFO] Parsing Assembly: DSOffice [(unknown file)](0)[06:17:44]
+[INFO] Parsing Assembly: Tessellation [(unknown file)](0)[06:17:44]
+[INFO] Parsing Assembly: Rhino3dmIO [(unknown file)](0)[06:17:44]
+[INFO] Parsing Assembly: RhinoCommon [(unknown file)](0)[06:17:44]
+[INFO] >>> Modules and Assemblies Loaded. [(unknown file)](0)[06:17:44]
+[INFO] {
+  "DSCoreNodes.DLL": {
+    "DSCore": "<module 'DSCore' (CLS module from DSCoreNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "DSCore.IO": "<module 'IO' (CLS module from DSCoreNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "DSOffice.DLL": {
+    "DSOffice": "<module 'DSOffice' (CLS module from DSOffice, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "IronPython.Wpf.dll": {
+    "IronPython": "<module 'IronPython' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>", 
+    "IronPython.Modules": "<module 'Modules' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>"
+  }, 
+  "ProtoGeometry.DLL": {
+    "Autodesk": "<module 'Autodesk' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.DesignScript": "<module 'DesignScript' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.DesignScript.Geometry": "<module 'Geometry' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.DesignScript.Geometry.Core": "<module 'Core' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.DesignScript.Geometry.TSpline": "<module 'TSpline' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "Rhino3dmIO.DLL": {
+    "Rhino": "<module 'Rhino' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Collections": "<module 'Collections' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Display": "<module 'Display' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.DocObjects": "<module 'DocObjects' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.DocObjects.Custom": "<module 'Custom' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.FileIO": "<module 'FileIO' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Geometry": "<module 'Geometry' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Geometry.Collections": "<module 'Collections' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Geometry.Intersect": "<module 'Intersect' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Render": "<module 'Render' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Runtime": "<module 'Runtime' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Runtime.InteropWrappers": "<module 'InteropWrappers' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.UI": "<module 'UI' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "RhinoCommon.DLL": {
+    "Rhino": "<module 'Rhino' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.ApplicationSettings": "<module 'ApplicationSettings' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Collections": "<module 'Collections' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Commands": "<module 'Commands' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Display": "<module 'Display' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.DocObjects": "<module 'DocObjects' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.DocObjects.Custom": "<module 'Custom' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.DocObjects.Tables": "<module 'Tables' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.FileIO": "<module 'FileIO' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry": "<module 'Geometry' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry.Collections": "<module 'Collections' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry.Intersect": "<module 'Intersect' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry.Morphs": "<module 'Morphs' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Input": "<module 'Input' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Input.Custom": "<module 'Custom' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.PlugIns": "<module 'PlugIns' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Render": "<module 'Render' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Render.Fields": "<module 'Fields' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Render.UI": "<module 'UI' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Runtime": "<module 'Runtime' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Runtime.InteropWrappers": "<module 'InteropWrappers' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.UI": "<module 'UI' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.UI.Gumball": "<module 'Gumball' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+  }, 
+  "Tessellation.DLL": {
+    "Tessellation": "<module 'Tessellation' (CLS module from Tessellation, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "Tessellation.Adapters": "<module 'Adapters' (CLS module from Tessellation, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "__builtins__": [
+    {
+      "clr": "<module 'clr' (built-in)>"
+    }, 
+    {
+      "wpf": "<module 'wpf' (built-in)>"
+    }
+  ]
+} [(unknown file)](0)[06:17:44]
+[INFO] ** LOG LEVEL: INFO [(unknown file)](0)[06:19:23]
+[INFO] ============================== [(unknown file)](0)[06:19:23]
+[INFO] Adding Assembly [IronPython.Wpf] [(unknown file)](0)[06:19:23]
+[INFO] Loaded [IronPython.Wpf] [(unknown file)](0)[06:19:23]
+[INFO] ============================== [(unknown file)](0)[06:19:23]
+[INFO] Adding Assembly [ProtoGeometry] [(unknown file)](0)[06:19:23]
+[INFO] Loaded [ProtoGeometry] [(unknown file)](0)[06:19:23]
+[INFO] ============================== [(unknown file)](0)[06:19:23]
+[INFO] Adding Assembly [DSCoreNodes] [(unknown file)](0)[06:19:23]
+[INFO] Loaded [DSCoreNodes] [(unknown file)](0)[06:19:23]
+[INFO] ============================== [(unknown file)](0)[06:19:23]
+[INFO] Adding Assembly [DSOffice] [(unknown file)](0)[06:19:23]
+[INFO] Loaded [DSOffice] [(unknown file)](0)[06:19:23]
+[INFO] ============================== [(unknown file)](0)[06:19:23]
+[INFO] Adding Assembly [Tessellation] [(unknown file)](0)[06:19:23]
+[INFO] Loaded [Tessellation] [(unknown file)](0)[06:19:23]
+[INFO] ============================== [(unknown file)](0)[06:19:23]
+[INFO] Adding Assembly [Rhino3dmIO] [(unknown file)](0)[06:19:23]
+[INFO] Loaded [Rhino3dmIO] [(unknown file)](0)[06:19:23]
+[INFO] ============================== [(unknown file)](0)[06:19:23]
+[INFO] Adding Assembly [RhinoCommon] [(unknown file)](0)[06:19:23]
+[INFO] Loaded [RhinoCommon] [(unknown file)](0)[06:19:23]
+[WARNING] *** Assembly Skiped. Not in target list: mscorlib [(unknown file)](0)[06:19:23]
+[WARNING] *** Assembly Skiped. Not in target list: System [(unknown file)](0)[06:19:23]
+[WARNING] *** Assembly Skiped. Not in target list: IronPython.SQLite [(unknown file)](0)[06:19:23]
+[INFO] Parsing Assembly: IronPython.Wpf [(unknown file)](0)[06:19:23]
+[INFO] Parsing Assembly: ProtoGeometry [(unknown file)](0)[06:19:23]
+[INFO] Parsing Assembly: DSCoreNodes [(unknown file)](0)[06:19:23]
+[INFO] Parsing Assembly: DSOffice [(unknown file)](0)[06:19:23]
+[INFO] Parsing Assembly: Tessellation [(unknown file)](0)[06:19:23]
+[INFO] Parsing Assembly: Rhino3dmIO [(unknown file)](0)[06:19:23]
+[INFO] Parsing Assembly: RhinoCommon [(unknown file)](0)[06:19:23]
+[INFO] >>> Modules and Assemblies Loaded. [(unknown file)](0)[06:19:23]
+[INFO] {
+  "DSCoreNodes.DLL": {
+    "DSCore": "<module 'DSCore' (CLS module from DSCoreNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "DSCore.IO": "<module 'IO' (CLS module from DSCoreNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "DSOffice.DLL": {
+    "DSOffice": "<module 'DSOffice' (CLS module from DSOffice, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "IronPython.Wpf.dll": {
+    "IronPython": "<module 'IronPython' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>", 
+    "IronPython.Modules": "<module 'Modules' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>"
+  }, 
+  "ProtoGeometry.DLL": {
+    "Autodesk": "<module 'Autodesk' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.DesignScript": "<module 'DesignScript' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.DesignScript.Geometry": "<module 'Geometry' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.DesignScript.Geometry.Core": "<module 'Core' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.DesignScript.Geometry.TSpline": "<module 'TSpline' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "Rhino3dmIO.DLL": {
+    "Rhino": "<module 'Rhino' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Collections": "<module 'Collections' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Display": "<module 'Display' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.DocObjects": "<module 'DocObjects' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.DocObjects.Custom": "<module 'Custom' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.FileIO": "<module 'FileIO' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Geometry": "<module 'Geometry' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Geometry.Collections": "<module 'Collections' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Geometry.Intersect": "<module 'Intersect' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Render": "<module 'Render' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Runtime": "<module 'Runtime' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Runtime.InteropWrappers": "<module 'InteropWrappers' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.UI": "<module 'UI' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "RhinoCommon.DLL": {
+    "Rhino": "<module 'Rhino' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.ApplicationSettings": "<module 'ApplicationSettings' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Collections": "<module 'Collections' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Commands": "<module 'Commands' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Display": "<module 'Display' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.DocObjects": "<module 'DocObjects' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.DocObjects.Custom": "<module 'Custom' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.DocObjects.Tables": "<module 'Tables' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.FileIO": "<module 'FileIO' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry": "<module 'Geometry' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry.Collections": "<module 'Collections' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry.Intersect": "<module 'Intersect' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry.Morphs": "<module 'Morphs' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Input": "<module 'Input' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Input.Custom": "<module 'Custom' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.PlugIns": "<module 'PlugIns' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Render": "<module 'Render' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Render.Fields": "<module 'Fields' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Render.UI": "<module 'UI' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Runtime": "<module 'Runtime' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Runtime.InteropWrappers": "<module 'InteropWrappers' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.UI": "<module 'UI' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.UI.Gumball": "<module 'Gumball' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+  }, 
+  "Tessellation.DLL": {
+    "Tessellation": "<module 'Tessellation' (CLS module from Tessellation, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "Tessellation.Adapters": "<module 'Adapters' (CLS module from Tessellation, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "__builtins__": {
+    "clr": "<module 'clr' (built-in)>", 
+    "wpf": "<module 'wpf' (built-in)>"
+  }
+} [(unknown file)](0)[06:19:23]
+[INFO] ** LOG LEVEL: INFO [(unknown file)](0)[06:19:56]
+[INFO] ============================== [(unknown file)](0)[06:19:57]
+[INFO] Adding Assembly [IronPython.Wpf] [(unknown file)](0)[06:19:57]
+[INFO] Loaded [IronPython.Wpf] [(unknown file)](0)[06:19:57]
+[INFO] ============================== [(unknown file)](0)[06:19:57]
+[INFO] Adding Assembly [ProtoGeometry] [(unknown file)](0)[06:19:57]
+[INFO] Loaded [ProtoGeometry] [(unknown file)](0)[06:19:57]
+[INFO] ============================== [(unknown file)](0)[06:19:57]
+[INFO] Adding Assembly [DSCoreNodes] [(unknown file)](0)[06:19:57]
+[INFO] Loaded [DSCoreNodes] [(unknown file)](0)[06:19:57]
+[INFO] ============================== [(unknown file)](0)[06:19:57]
+[INFO] Adding Assembly [DSOffice] [(unknown file)](0)[06:19:57]
+[INFO] Loaded [DSOffice] [(unknown file)](0)[06:19:57]
+[INFO] ============================== [(unknown file)](0)[06:19:57]
+[INFO] Adding Assembly [Tessellation] [(unknown file)](0)[06:19:57]
+[INFO] Loaded [Tessellation] [(unknown file)](0)[06:19:57]
+[INFO] ============================== [(unknown file)](0)[06:19:57]
+[INFO] Adding Assembly [Rhino3dmIO] [(unknown file)](0)[06:19:57]
+[INFO] Loaded [Rhino3dmIO] [(unknown file)](0)[06:19:57]
+[INFO] ============================== [(unknown file)](0)[06:19:57]
+[INFO] Adding Assembly [RhinoCommon] [(unknown file)](0)[06:19:57]
+[INFO] Loaded [RhinoCommon] [(unknown file)](0)[06:19:57]
+[WARNING] *** Assembly Skiped. Not in target list: mscorlib [(unknown file)](0)[06:19:57]
+[WARNING] *** Assembly Skiped. Not in target list: System [(unknown file)](0)[06:19:57]
+[WARNING] *** Assembly Skiped. Not in target list: IronPython.SQLite [(unknown file)](0)[06:19:57]
+[INFO] Parsing Assembly: IronPython.Wpf [(unknown file)](0)[06:19:57]
+[INFO] Parsing Assembly: ProtoGeometry [(unknown file)](0)[06:19:57]
+[INFO] Parsing Assembly: DSCoreNodes [(unknown file)](0)[06:19:57]
+[INFO] Parsing Assembly: DSOffice [(unknown file)](0)[06:19:57]
+[INFO] Parsing Assembly: Tessellation [(unknown file)](0)[06:19:57]
+[INFO] Parsing Assembly: Rhino3dmIO [(unknown file)](0)[06:19:57]
+[INFO] Parsing Assembly: RhinoCommon [(unknown file)](0)[06:19:57]
+[INFO] >>> Modules and Assemblies Loaded. [(unknown file)](0)[06:19:57]
+[INFO] {
+  "DSCoreNodes.DLL": {
+    "DSCore": "<module 'DSCore' (CLS module from DSCoreNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "DSCore.IO": "<module 'IO' (CLS module from DSCoreNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "DSOffice.DLL": {
+    "DSOffice": "<module 'DSOffice' (CLS module from DSOffice, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "IronPython.Wpf.dll": {
+    "IronPython": "<module 'IronPython' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>", 
+    "IronPython.Modules": "<module 'Modules' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>"
+  }, 
+  "ProtoGeometry.DLL": {
+    "Autodesk": "<module 'Autodesk' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.DesignScript": "<module 'DesignScript' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.DesignScript.Geometry": "<module 'Geometry' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.DesignScript.Geometry.Core": "<module 'Core' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.DesignScript.Geometry.TSpline": "<module 'TSpline' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "Rhino3dmIO.DLL": {
+    "Rhino": "<module 'Rhino' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Collections": "<module 'Collections' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Display": "<module 'Display' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.DocObjects": "<module 'DocObjects' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.DocObjects.Custom": "<module 'Custom' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.FileIO": "<module 'FileIO' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Geometry": "<module 'Geometry' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Geometry.Collections": "<module 'Collections' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Geometry.Intersect": "<module 'Intersect' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Render": "<module 'Render' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Runtime": "<module 'Runtime' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Runtime.InteropWrappers": "<module 'InteropWrappers' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.UI": "<module 'UI' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "RhinoCommon.DLL": {
+    "Rhino": "<module 'Rhino' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.ApplicationSettings": "<module 'ApplicationSettings' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Collections": "<module 'Collections' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Commands": "<module 'Commands' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Display": "<module 'Display' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.DocObjects": "<module 'DocObjects' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.DocObjects.Custom": "<module 'Custom' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.DocObjects.Tables": "<module 'Tables' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.FileIO": "<module 'FileIO' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry": "<module 'Geometry' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry.Collections": "<module 'Collections' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry.Intersect": "<module 'Intersect' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry.Morphs": "<module 'Morphs' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Input": "<module 'Input' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Input.Custom": "<module 'Custom' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.PlugIns": "<module 'PlugIns' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Render": "<module 'Render' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Render.Fields": "<module 'Fields' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Render.UI": "<module 'UI' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Runtime": "<module 'Runtime' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Runtime.InteropWrappers": "<module 'InteropWrappers' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.UI": "<module 'UI' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.UI.Gumball": "<module 'Gumball' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+  }, 
+  "Tessellation.DLL": {
+    "Tessellation": "<module 'Tessellation' (CLS module from Tessellation, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "Tessellation.Adapters": "<module 'Adapters' (CLS module from Tessellation, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "__builtins__": {
+    "clr": "<module 'clr' (built-in)>", 
+    "wpf": "<module 'wpf' (built-in)>"
+  }
+} [(unknown file)](0)[06:19:57]
+[INFO] Processing [wpf] [(unknown file)](0)[06:19:58]
+[INFO] ============================== [(unknown file)](0)[06:19:58]
+[INFO] Done [(unknown file)](0)[06:19:58]
+[INFO] ============================== [(unknown file)](0)[06:19:58]
+[INFO] Processing [clr] [(unknown file)](0)[06:19:58]
+[INFO] ============================== [(unknown file)](0)[06:19:58]
+[INFO] Done [(unknown file)](0)[06:19:59]
+[INFO] ============================== [(unknown file)](0)[06:19:59]
+[INFO] Processing [Autodesk.DesignScript.Geometry.TSpline] [(unknown file)](0)[06:19:59]
+[INFO] ============================== [(unknown file)](0)[06:19:59]
+[INFO] Done [(unknown file)](0)[06:19:59]
+[INFO] ============================== [(unknown file)](0)[06:19:59]
+[INFO] ** LOG LEVEL: INFO [(unknown file)](0)[06:23:27]
+[INFO] ============================== [(unknown file)](0)[06:23:27]
+[INFO] Adding Assembly [IronPython.Wpf] [(unknown file)](0)[06:23:28]
+[INFO] Loaded [IronPython.Wpf] [(unknown file)](0)[06:23:28]
+[INFO] ============================== [(unknown file)](0)[06:23:28]
+[INFO] Adding Assembly [ProtoGeometry] [(unknown file)](0)[06:23:28]
+[INFO] Loaded [ProtoGeometry] [(unknown file)](0)[06:23:28]
+[INFO] ============================== [(unknown file)](0)[06:23:28]
+[INFO] Adding Assembly [DSCoreNodes] [(unknown file)](0)[06:23:28]
+[INFO] Loaded [DSCoreNodes] [(unknown file)](0)[06:23:28]
+[INFO] ============================== [(unknown file)](0)[06:23:28]
+[INFO] Adding Assembly [DSOffice] [(unknown file)](0)[06:23:28]
+[INFO] Loaded [DSOffice] [(unknown file)](0)[06:23:28]
+[INFO] ============================== [(unknown file)](0)[06:23:28]
+[INFO] Adding Assembly [Tessellation] [(unknown file)](0)[06:23:28]
+[INFO] Loaded [Tessellation] [(unknown file)](0)[06:23:28]
+[INFO] ============================== [(unknown file)](0)[06:23:28]
+[INFO] Adding Assembly [Rhino3dmIO] [(unknown file)](0)[06:23:28]
+[INFO] Loaded [Rhino3dmIO] [(unknown file)](0)[06:23:28]
+[INFO] ============================== [(unknown file)](0)[06:23:28]
+[INFO] Adding Assembly [RhinoCommon] [(unknown file)](0)[06:23:28]
+[INFO] Loaded [RhinoCommon] [(unknown file)](0)[06:23:28]
+[WARNING] *** Assembly Skiped. Not in target list: mscorlib [(unknown file)](0)[06:23:28]
+[WARNING] *** Assembly Skiped. Not in target list: System [(unknown file)](0)[06:23:28]
+[WARNING] *** Assembly Skiped. Not in target list: IronPython.SQLite [(unknown file)](0)[06:23:28]
+[INFO] Parsing Assembly: IronPython.Wpf [(unknown file)](0)[06:23:28]
+[INFO] Parsing Assembly: ProtoGeometry [(unknown file)](0)[06:23:28]
+[INFO] Parsing Assembly: DSCoreNodes [(unknown file)](0)[06:23:28]
+[INFO] Parsing Assembly: DSOffice [(unknown file)](0)[06:23:28]
+[INFO] Parsing Assembly: Tessellation [(unknown file)](0)[06:23:28]
+[INFO] Parsing Assembly: Rhino3dmIO [(unknown file)](0)[06:23:28]
+[INFO] Parsing Assembly: RhinoCommon [(unknown file)](0)[06:23:28]
+[INFO] >>> Modules and Assemblies Loaded. [(unknown file)](0)[06:23:28]
+[INFO] {
+  "DSCoreNodes.DLL": {
+    "DSCore": "<module 'DSCore' (CLS module from DSCoreNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "DSCore.IO": "<module 'IO' (CLS module from DSCoreNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "DSOffice.DLL": {
+    "DSOffice": "<module 'DSOffice' (CLS module from DSOffice, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "IronPython.Wpf.dll": {
+    "IronPython": "<module 'IronPython' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>", 
+    "IronPython.Modules": "<module 'Modules' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>"
+  }, 
+  "ProtoGeometry.DLL": {
+    "Autodesk": "<module 'Autodesk' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.DesignScript": "<module 'DesignScript' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.DesignScript.Geometry": "<module 'Geometry' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.DesignScript.Geometry.Core": "<module 'Core' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.DesignScript.Geometry.TSpline": "<module 'TSpline' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "Rhino3dmIO.DLL": {
+    "Rhino": "<module 'Rhino' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Collections": "<module 'Collections' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Display": "<module 'Display' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.DocObjects": "<module 'DocObjects' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.DocObjects.Custom": "<module 'Custom' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.FileIO": "<module 'FileIO' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Geometry": "<module 'Geometry' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Geometry.Collections": "<module 'Collections' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Geometry.Intersect": "<module 'Intersect' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Render": "<module 'Render' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Runtime": "<module 'Runtime' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.Runtime.InteropWrappers": "<module 'InteropWrappers' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Rhino.UI": "<module 'UI' (CLS module from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "RhinoCommon.DLL": {
+    "Rhino": "<module 'Rhino' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.ApplicationSettings": "<module 'ApplicationSettings' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Collections": "<module 'Collections' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Commands": "<module 'Commands' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Display": "<module 'Display' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.DocObjects": "<module 'DocObjects' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.DocObjects.Custom": "<module 'Custom' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.DocObjects.Tables": "<module 'Tables' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.FileIO": "<module 'FileIO' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry": "<module 'Geometry' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry.Collections": "<module 'Collections' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry.Intersect": "<module 'Intersect' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry.Morphs": "<module 'Morphs' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Input": "<module 'Input' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Input.Custom": "<module 'Custom' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.PlugIns": "<module 'PlugIns' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Render": "<module 'Render' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Render.Fields": "<module 'Fields' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Render.UI": "<module 'UI' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Runtime": "<module 'Runtime' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Runtime.InteropWrappers": "<module 'InteropWrappers' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.UI": "<module 'UI' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.UI.Gumball": "<module 'Gumball' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+  }, 
+  "Tessellation.DLL": {
+    "Tessellation": "<module 'Tessellation' (CLS module from Tessellation, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "Tessellation.Adapters": "<module 'Adapters' (CLS module from Tessellation, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+  }, 
+  "__builtins__": {
+    "clr": "<module 'clr' (built-in)>", 
+    "wpf": "<module 'wpf' (built-in)>"
+  }
+} [(unknown file)](0)[06:23:28]
+[INFO] Processing [wpf] [(unknown file)](0)[06:23:29]
+[INFO] ============================== [(unknown file)](0)[06:23:29]
+[INFO] Done [(unknown file)](0)[06:23:29]
+[INFO] ============================== [(unknown file)](0)[06:23:29]
+[INFO] Deleted Module: wpf [(unknown file)](0)[06:23:29]
+[INFO] Processing [clr] [(unknown file)](0)[06:23:29]
+[INFO] ============================== [(unknown file)](0)[06:23:29]
+[INFO] Done [(unknown file)](0)[06:23:30]
+[INFO] ============================== [(unknown file)](0)[06:23:30]
+[INFO] Deleted Module: clr [(unknown file)](0)[06:23:30]
+[INFO] Processing [Autodesk.DesignScript.Geometry.TSpline] [(unknown file)](0)[06:23:30]
+[INFO] ============================== [(unknown file)](0)[06:23:30]
+[INFO] Done [(unknown file)](0)[06:23:30]
+[INFO] ============================== [(unknown file)](0)[06:23:30]
+[INFO] Could not delete: Autodesk.DesignScript.Geometry.TSpline [(unknown file)](0)[06:23:30]
+[INFO] Processing [Autodesk.DesignScript.Geometry.Core] [(unknown file)](0)[06:23:30]
+[INFO] ============================== [(unknown file)](0)[06:23:30]
+[INFO] Done [(unknown file)](0)[06:23:30]
+[INFO] ============================== [(unknown file)](0)[06:23:30]
+[INFO] Could not delete: Autodesk.DesignScript.Geometry.Core [(unknown file)](0)[06:23:30]
+[INFO] Processing [Autodesk.DesignScript] [(unknown file)](0)[06:23:30]
+[INFO] ============================== [(unknown file)](0)[06:23:30]
+[INFO] Done [(unknown file)](0)[06:23:30]
+[INFO] ============================== [(unknown file)](0)[06:23:30]
+[INFO] Could not delete: Autodesk.DesignScript [(unknown file)](0)[06:23:30]
+[INFO] Processing [Autodesk] [(unknown file)](0)[06:23:30]
+[INFO] ============================== [(unknown file)](0)[06:23:30]
+[INFO] Done [(unknown file)](0)[06:23:30]
+[INFO] ============================== [(unknown file)](0)[06:23:30]
+[INFO] Deleted Module: Autodesk [(unknown file)](0)[06:23:30]
+[INFO] Processing [Autodesk.DesignScript.Geometry] [(unknown file)](0)[06:23:30]
+[INFO] ============================== [(unknown file)](0)[06:23:30]
+[INFO] Done [(unknown file)](0)[06:23:31]
+[INFO] ============================== [(unknown file)](0)[06:23:31]
+[INFO] Could not delete: Autodesk.DesignScript.Geometry [(unknown file)](0)[06:23:31]
+[INFO] Processing [DSOffice] [(unknown file)](0)[06:23:31]
+[INFO] ============================== [(unknown file)](0)[06:23:31]
+[INFO] Done [(unknown file)](0)[06:23:31]
+[INFO] ============================== [(unknown file)](0)[06:23:31]
+[INFO] Deleted Module: DSOffice [(unknown file)](0)[06:23:31]
+[INFO] Processing [Rhino.Runtime.InteropWrappers] [(unknown file)](0)[06:23:31]
+[INFO] ============================== [(unknown file)](0)[06:23:31]
+[INFO] Done [(unknown file)](0)[06:23:32]
+[INFO] ============================== [(unknown file)](0)[06:23:32]
+[INFO] Could not delete: Rhino.Runtime.InteropWrappers [(unknown file)](0)[06:23:32]
+[INFO] Processing [Rhino.DocObjects.Custom] [(unknown file)](0)[06:23:32]
+[INFO] ============================== [(unknown file)](0)[06:23:32]
+[INFO] Done [(unknown file)](0)[06:23:34]
+[INFO] ============================== [(unknown file)](0)[06:23:34]
+[INFO] Could not delete: Rhino.DocObjects.Custom [(unknown file)](0)[06:23:34]
+[INFO] Processing [Rhino.Geometry] [(unknown file)](0)[06:23:34]
+[INFO] ============================== [(unknown file)](0)[06:23:34]
+[INFO] Done [(unknown file)](0)[06:23:43]
+[INFO] ============================== [(unknown file)](0)[06:23:43]
+[INFO] Could not delete: Rhino.Geometry [(unknown file)](0)[06:23:43]
+[INFO] Processing [Rhino.UI] [(unknown file)](0)[06:23:43]
+[INFO] ============================== [(unknown file)](0)[06:23:43]
+[INFO] Done [(unknown file)](0)[06:23:44]
+[INFO] ============================== [(unknown file)](0)[06:23:44]
+[INFO] Could not delete: Rhino.UI [(unknown file)](0)[06:23:44]
+[INFO] Processing [Rhino.DocObjects] [(unknown file)](0)[06:23:44]
+[INFO] ============================== [(unknown file)](0)[06:23:44]
+[INFO] Done [(unknown file)](0)[06:23:47]
+[INFO] ============================== [(unknown file)](0)[06:23:47]
+[INFO] Could not delete: Rhino.DocObjects [(unknown file)](0)[06:23:47]
+[INFO] Processing [Rhino.Display] [(unknown file)](0)[06:23:47]
+[INFO] ============================== [(unknown file)](0)[06:23:47]
+[INFO] Done [(unknown file)](0)[06:23:50]
+[INFO] ============================== [(unknown file)](0)[06:23:50]
+[INFO] Could not delete: Rhino.Display [(unknown file)](0)[06:23:50]
+[INFO] Processing [Rhino.Collections] [(unknown file)](0)[06:23:50]
+[INFO] ============================== [(unknown file)](0)[06:23:50]
+[INFO] Done [(unknown file)](0)[06:23:51]
+[INFO] ============================== [(unknown file)](0)[06:23:51]
+[INFO] Could not delete: Rhino.Collections [(unknown file)](0)[06:23:51]
+[INFO] Processing [Rhino.Geometry.Collections] [(unknown file)](0)[06:23:51]
+[INFO] ============================== [(unknown file)](0)[06:23:51]
+[INFO] Done [(unknown file)](0)[06:23:52]
+[INFO] ============================== [(unknown file)](0)[06:23:52]
+[INFO] Could not delete: Rhino.Geometry.Collections [(unknown file)](0)[06:23:52]
+[INFO] Processing [Rhino.FileIO] [(unknown file)](0)[06:23:52]
+[INFO] ============================== [(unknown file)](0)[06:23:52]
+[INFO] Done [(unknown file)](0)[06:23:53]
+[INFO] ============================== [(unknown file)](0)[06:23:53]
+[INFO] Could not delete: Rhino.FileIO [(unknown file)](0)[06:23:53]
+[INFO] Processing [Rhino.Render] [(unknown file)](0)[06:23:53]
+[INFO] ============================== [(unknown file)](0)[06:23:53]
+[INFO] Done [(unknown file)](0)[06:23:56]
+[INFO] ============================== [(unknown file)](0)[06:23:56]
+[INFO] Could not delete: Rhino.Render [(unknown file)](0)[06:23:56]
+[INFO] Processing [Rhino] [(unknown file)](0)[06:23:56]
+[INFO] ============================== [(unknown file)](0)[06:23:56]
+[INFO] Done [(unknown file)](0)[06:23:56]
+[INFO] ============================== [(unknown file)](0)[06:23:56]
+[INFO] Deleted Module: Rhino [(unknown file)](0)[06:23:56]
+[INFO] Processing [Rhino.Geometry.Intersect] [(unknown file)](0)[06:23:56]
+[INFO] ============================== [(unknown file)](0)[06:23:56]
+[INFO] Done [(unknown file)](0)[06:23:57]
+[INFO] ============================== [(unknown file)](0)[06:23:57]
+[INFO] Could not delete: Rhino.Geometry.Intersect [(unknown file)](0)[06:23:57]
+[INFO] Processing [Rhino.Runtime] [(unknown file)](0)[06:23:57]
+[INFO] ============================== [(unknown file)](0)[06:23:57]
+[INFO] Done [(unknown file)](0)[06:23:58]
+[INFO] ============================== [(unknown file)](0)[06:23:58]
+[INFO] Could not delete: Rhino.Runtime [(unknown file)](0)[06:23:58]
+[INFO] Processing [Rhino.Collections] [(unknown file)](0)[06:23:58]
+[INFO] ============================== [(unknown file)](0)[06:23:58]
+[INFO] Done [(unknown file)](0)[06:23:58]
+[INFO] ============================== [(unknown file)](0)[06:23:58]
+[INFO] Could not delete: Rhino.Collections [(unknown file)](0)[06:23:58]
+[INFO] Processing [Rhino.Geometry.Collections] [(unknown file)](0)[06:23:58]
+[INFO] ============================== [(unknown file)](0)[06:23:58]
+[INFO] Done [(unknown file)](0)[06:23:59]
+[INFO] ============================== [(unknown file)](0)[06:23:59]
+[INFO] Could not delete: Rhino.Geometry.Collections [(unknown file)](0)[06:23:59]
+[INFO] Processing [Rhino.Geometry.Intersect] [(unknown file)](0)[06:23:59]
+[INFO] ============================== [(unknown file)](0)[06:23:59]
+[INFO] Done [(unknown file)](0)[06:24:00]
+[INFO] ============================== [(unknown file)](0)[06:24:00]
+[INFO] Could not delete: Rhino.Geometry.Intersect [(unknown file)](0)[06:24:00]
+[INFO] Processing [Rhino.DocObjects.Custom] [(unknown file)](0)[06:24:00]
+[INFO] ============================== [(unknown file)](0)[06:24:00]
+[INFO] Done [(unknown file)](0)[06:24:01]
+[INFO] ============================== [(unknown file)](0)[06:24:01]
+[INFO] Could not delete: Rhino.DocObjects.Custom [(unknown file)](0)[06:24:01]
+[INFO] Processing [Rhino.Geometry] [(unknown file)](0)[06:24:01]
+[INFO] ============================== [(unknown file)](0)[06:24:01]
+[INFO] Done [(unknown file)](0)[06:24:09]
+[INFO] ============================== [(unknown file)](0)[06:24:09]
+[INFO] Could not delete: Rhino.Geometry [(unknown file)](0)[06:24:09]
+[INFO] Processing [Rhino.DocObjects] [(unknown file)](0)[06:24:09]
+[INFO] ============================== [(unknown file)](0)[06:24:09]
+[INFO] Done [(unknown file)](0)[06:24:12]
+[INFO] ============================== [(unknown file)](0)[06:24:12]
+[INFO] Could not delete: Rhino.DocObjects [(unknown file)](0)[06:24:12]
+[INFO] Processing [Rhino.Input] [(unknown file)](0)[06:24:12]
+[INFO] ============================== [(unknown file)](0)[06:24:12]
+[INFO] Done [(unknown file)](0)[06:24:13]
+[INFO] ============================== [(unknown file)](0)[06:24:13]
+[INFO] Could not delete: Rhino.Input [(unknown file)](0)[06:24:13]
+[INFO] Processing [Rhino.FileIO] [(unknown file)](0)[06:24:13]
+[INFO] ============================== [(unknown file)](0)[06:24:13]
+[INFO] Done [(unknown file)](0)[06:24:14]
+[INFO] ============================== [(unknown file)](0)[06:24:14]
+[INFO] Could not delete: Rhino.FileIO [(unknown file)](0)[06:24:14]
+[INFO] Processing [Rhino.Render.Fields] [(unknown file)](0)[06:24:14]
+[INFO] ============================== [(unknown file)](0)[06:24:14]
+[INFO] Done [(unknown file)](0)[06:24:14]
+[INFO] ============================== [(unknown file)](0)[06:24:14]
+[INFO] Could not delete: Rhino.Render.Fields [(unknown file)](0)[06:24:14]
+[INFO] Processing [Rhino.Runtime.InteropWrappers] [(unknown file)](0)[06:24:14]
+[INFO] ============================== [(unknown file)](0)[06:24:14]
+[INFO] Done [(unknown file)](0)[06:24:15]
+[INFO] ============================== [(unknown file)](0)[06:24:15]
+[INFO] Could not delete: Rhino.Runtime.InteropWrappers [(unknown file)](0)[06:24:15]
+[INFO] Processing [Rhino] [(unknown file)](0)[06:24:15]
+[INFO] ============================== [(unknown file)](0)[06:24:15]
+[INFO] Done [(unknown file)](0)[06:24:16]
+[INFO] ============================== [(unknown file)](0)[06:24:16]
+[INFO] Deleted Module: Rhino [(unknown file)](0)[06:24:16]
+[INFO] Processing [Rhino.Render] [(unknown file)](0)[06:24:16]
+[INFO] ============================== [(unknown file)](0)[06:24:16]
+[INFO] Done [(unknown file)](0)[06:24:18]
+[INFO] ============================== [(unknown file)](0)[06:24:18]
+[INFO] Could not delete: Rhino.Render [(unknown file)](0)[06:24:18]
+[INFO] Processing [Rhino.Geometry.Morphs] [(unknown file)](0)[06:24:18]
+[INFO] ============================== [(unknown file)](0)[06:24:18]
+[INFO] Done [(unknown file)](0)[06:24:18]
+[INFO] ============================== [(unknown file)](0)[06:24:18]
+[INFO] Could not delete: Rhino.Geometry.Morphs [(unknown file)](0)[06:24:18]
+[INFO] Processing [Rhino.UI] [(unknown file)](0)[06:24:18]
+[INFO] ============================== [(unknown file)](0)[06:24:18]
+[INFO] Done [(unknown file)](0)[06:24:19]
+[INFO] ============================== [(unknown file)](0)[06:24:19]
+[INFO] Could not delete: Rhino.UI [(unknown file)](0)[06:24:19]
+[INFO] Processing [Rhino.Commands] [(unknown file)](0)[06:24:19]
+[INFO] ============================== [(unknown file)](0)[06:24:19]
+[INFO] Done [(unknown file)](0)[06:24:19]
+[INFO] ============================== [(unknown file)](0)[06:24:19]
+[INFO] Could not delete: Rhino.Commands [(unknown file)](0)[06:24:19]
+[INFO] Processing [Rhino.UI.Gumball] [(unknown file)](0)[06:24:19]
+[INFO] ============================== [(unknown file)](0)[06:24:19]
+[INFO] Done [(unknown file)](0)[06:24:19]
+[INFO] ============================== [(unknown file)](0)[06:24:19]
+[INFO] Could not delete: Rhino.UI.Gumball [(unknown file)](0)[06:24:19]
+[INFO] Processing [Rhino.PlugIns] [(unknown file)](0)[06:24:19]
+[INFO] ============================== [(unknown file)](0)[06:24:19]
+[INFO] Done [(unknown file)](0)[06:24:21]
+[INFO] ============================== [(unknown file)](0)[06:24:21]
+[INFO] Could not delete: Rhino.PlugIns [(unknown file)](0)[06:24:21]
+[INFO] Processing [Rhino.Display] [(unknown file)](0)[06:24:21]
+[INFO] ============================== [(unknown file)](0)[06:24:21]
+[INFO] Done [(unknown file)](0)[06:24:23]
+[INFO] ============================== [(unknown file)](0)[06:24:23]
+[INFO] Could not delete: Rhino.Display [(unknown file)](0)[06:24:23]
+[INFO] Processing [Rhino.Input.Custom] [(unknown file)](0)[06:24:23]
+[INFO] ============================== [(unknown file)](0)[06:24:23]
+[INFO] Done [(unknown file)](0)[06:24:25]
+[INFO] ============================== [(unknown file)](0)[06:24:25]
+[INFO] Could not delete: Rhino.Input.Custom [(unknown file)](0)[06:24:25]
+[INFO] Processing [Rhino.Render.UI] [(unknown file)](0)[06:24:25]
+[INFO] ============================== [(unknown file)](0)[06:24:25]
+[INFO] Done [(unknown file)](0)[06:24:25]
+[INFO] ============================== [(unknown file)](0)[06:24:25]
+[INFO] Could not delete: Rhino.Render.UI [(unknown file)](0)[06:24:25]
+[INFO] Processing [Rhino.DocObjects.Tables] [(unknown file)](0)[06:24:25]
+[INFO] ============================== [(unknown file)](0)[06:24:25]
+[INFO] Done [(unknown file)](0)[06:24:26]
+[INFO] ============================== [(unknown file)](0)[06:24:26]
+[INFO] Could not delete: Rhino.DocObjects.Tables [(unknown file)](0)[06:24:26]
+[INFO] Processing [Rhino.Runtime] [(unknown file)](0)[06:24:26]
+[INFO] ============================== [(unknown file)](0)[06:24:26]
+[INFO] Done [(unknown file)](0)[06:24:27]
+[INFO] ============================== [(unknown file)](0)[06:24:27]
+[INFO] Could not delete: Rhino.Runtime [(unknown file)](0)[06:24:27]
+[INFO] Processing [Rhino.ApplicationSettings] [(unknown file)](0)[06:24:27]
+[INFO] ============================== [(unknown file)](0)[06:24:27]
+[INFO] Done [(unknown file)](0)[06:24:28]
+[INFO] ============================== [(unknown file)](0)[06:24:28]
+[INFO] Could not delete: Rhino.ApplicationSettings [(unknown file)](0)[06:24:28]
+[INFO] Processing [Tessellation.Adapters] [(unknown file)](0)[06:24:28]
+[INFO] ============================== [(unknown file)](0)[06:24:28]
+[INFO] Done [(unknown file)](0)[06:24:28]
+[INFO] ============================== [(unknown file)](0)[06:24:28]
+[INFO] Could not delete: Tessellation.Adapters [(unknown file)](0)[06:24:28]
+[INFO] Processing [Tessellation] [(unknown file)](0)[06:24:28]
+[INFO] ============================== [(unknown file)](0)[06:24:28]
+[INFO] Done [(unknown file)](0)[06:24:28]
+[INFO] ============================== [(unknown file)](0)[06:24:28]
+[INFO] Deleted Module: Tessellation [(unknown file)](0)[06:24:28]
+[INFO] Processing [IronPython] [(unknown file)](0)[06:24:28]
+[INFO] ============================== [(unknown file)](0)[06:24:28]
+[INFO] Done [(unknown file)](0)[06:24:28]
+[INFO] ============================== [(unknown file)](0)[06:24:28]
+[INFO] Deleted Module: IronPython [(unknown file)](0)[06:24:28]
+[INFO] Processing [IronPython.Modules] [(unknown file)](0)[06:24:28]
+[INFO] ============================== [(unknown file)](0)[06:24:28]
+[INFO] Done [(unknown file)](0)[06:24:28]
+[INFO] ============================== [(unknown file)](0)[06:24:28]
+[INFO] Could not delete: IronPython.Modules [(unknown file)](0)[06:24:28]
+[INFO] Processing [DSCore] [(unknown file)](0)[06:24:28]
+[INFO] ============================== [(unknown file)](0)[06:24:28]
+[INFO] Done [(unknown file)](0)[06:24:28]
+[INFO] ============================== [(unknown file)](0)[06:24:28]
+[INFO] Deleted Module: DSCore [(unknown file)](0)[06:24:28]
+[INFO] Processing [DSCore.IO] [(unknown file)](0)[06:24:28]
+[INFO] ============================== [(unknown file)](0)[06:24:28]
+[INFO] Done [(unknown file)](0)[06:24:29]
+[INFO] ============================== [(unknown file)](0)[06:24:29]
+[INFO] Could not delete: DSCore.IO [(unknown file)](0)[06:24:29]
+[INFO] Stubs Created [(unknown file)](0)[06:24:29]

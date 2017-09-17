@@ -31,12 +31,12 @@ BUILTIN_MODULES = ['clr', 'wpf']
 # TODO:
 LOADABLE_ASSEMBLIES = [
    'IronPython.Wpf',
-   'PresentationCore',
-   'WindowsBase',
-   'System.Drawing',
-   'System',
-   'PresentationFramework',
-   'System.Windows.Forms',
+   # 'PresentationCore',
+   # 'WindowsBase',
+   # 'System.Drawing',
+   # 'System',
+   # 'PresentationFramework',
+   # 'System.Windows.Forms',
 
    'ProtoGeometry',
    'DSCoreNodes',

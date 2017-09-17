@@ -37,7 +37,7 @@ import System
 
 # Ensure Proper CWD is set. This ensure proper running from within Revit
 # os.chdir(os.path.dirname(__file__))
-from config import PROJECT_DIR, SYS_PATHS, STUBS_DIR, STUBS_JSON_DIR
+from config import PROJECT_DIR, SYS_PATHS, STUBS_DIR
 from config import LOADABLE_ASSEMBLIES, BUILTIN_MODULES
 from config import OVERWRITE_EXISTING
 from utils.logger import logger
@@ -56,7 +56,7 @@ def iter_module(module_name, module, module_path=None, namespaces=None):
     Recursively iterate through all namespaces in assembly
     """
     if not namespaces:
-        namespaces = []
+        namespaces = {}
 
     for submodule_name, submodule in vars(module).iteritems():
         if not is_namespace(submodule):
@@ -65,7 +65,7 @@ def iter_module(module_name, module, module_path=None, namespaces=None):
             submodule_path = '.'.join([module_path, submodule_name])
         else:
             submodule_path = submodule_name
-        namespaces.append({submodule_path: repr(submodule)})
+        namespaces[submodule_path] = repr(submodule)
         iter_module(submodule_name, submodule, submodule_path,
                     namespaces=namespaces)
     return namespaces
@@ -84,67 +84,79 @@ def load_assemblies(assemblies):
             logger.info('Loaded [{}]'.format(assembly_name))
 
 def crawl_loaded_references():
-    """
-    Crawl Assemblies To Get All Namespaces
-    Returns flat_namespace Dictionary
-    """
-    flat_namespaces = defaultdict(list)
+    """ Crawl Loaded assemblies to get Namespaces. """
+    namespaces_dict = {}
     for assembly in clr.References:
         assembly_name = assembly.GetName().Name
         assembly_path = assembly.CodeBase
         assembly_filename = os.path.basename(assembly_path)
         if assembly_name in LOADABLE_ASSEMBLIES:
             logger.info('Parsing Assembly: {}'.format(assembly_name))
-            flat_namespaces[assembly_filename].append(iter_module(assembly_name, assembly))
+            namespaces_dict[assembly_filename] = iter_module(assembly_name, assembly)
         else:
             logger.warning('*** Assembly Skiped. Not in target list: {}'.format(assembly_name))
-    return flat_namespaces
+    return namespaces_dict
 
-def make_stubs(module_path, overwrite=False):
-    """ Actually Make Stubs """
-    # Skip if exists and
-    path = os.path.join(STUBS_DIR, *namespace.split('.'))
+def crawl_builtin_modules(builtin_modules):
+    """ Crawl Built in  Modules """
+    builtin_dict = {}
+    for module_name in builtin_modules:
+        importlib.import_module(module_name)
+        builtin_dict[module_name] = str(sys.modules[module_name])
+    return builtin_dict
+
+def stub_exists(module_path):
+    """ Check if Stub exists """
+    path = os.path.join(STUBS_DIR, *module_path.split('.'))
     exists = os.path.exists(path) or os.path.exists(path + '.py')
+    return exists
 
-    if exists and not overwrite:
-        logger.info('Skipping [{}]'.format(namespace))
-        return
-
+def make_stubs(module_path):
+    """ Actually Make Stubs """
     try:
-        logger.info('Processing [{}]'.format(namespace))
+        logger.info('Processing [{}]'.format(module_path))
         logger.info('='*30)
-        process_one(namespace, None, True, STUBS_DIR)
+        process_one(module_path, None, True, STUBS_DIR)
     except Exception as errmsg:
-        logger.error('Could not process namespace: {}'.format(module))
+        logger.error('Could not process module_path: {}'.format(module))
         logger.error(errmsg)
     else:
         logger.info('Done')
     logger.info('='*30)
 
+def delete_module(module_path):
+    try:
+        del sys.modules[module_path]
+    except:
+        logger.info('Could not delete: {}'.format(module_path))
+    else:
+        logger.info('Deleted Module: {}'.format(module_path))
+
+def create_json(namespaces_dict):
+    filepath = os.path.join(STUBS_DIR, '{}.json'.format(STUBS_DIR))
+    with open(json_filepath, 'w') as fp:
+        json.dump(namespaces_dict, fp, indent=2)
 
 def run():
     load_assemblies(LOADABLE_ASSEMBLIES)
-    flat_namespaces = crawl_loaded_references()
-    flat_namespaces['__builtins__'] = []
-    for module_name in BUILTIN_MODULES:
-        importlib.import_module(module_name)
-        flat_namespaces['__builtins__'].append({module_name:str(sys.modules[module_name])})
-
+    namespaces_dict = crawl_loaded_references()
+    builtins_dict = crawl_builtin_modules(BUILTIN_MODULES)
+    namespaces_dict.update({'__builtins__': builtins_dict})
+    logger.info('#'*30)
     logger.info('>>> Modules and Assemblies Loaded.')
-    logger.info( json.dumps(flat_namespaces, indent=2, sort_keys=True))
-    print( json.dumps(flat_namespaces, indent=2, sort_keys=True))
-    with open('stubs2.json', 'w') as fp:
-        json.dump(flat_namespaces, fp, indent=2)
-
-    if raw_input('Write Stubs ({}) [y] ?'.format(STUBS_DIR)) == 'y':
-        for assembly, modules in flat_namespaces.items():
-            for module_name, module in modules.items():
-                make_stubs(module, overwrite=OVERWRITE_EXISTING)
-                del module
-        print('Stubs Created')
+    logger.info( json.dumps(namespaces_dict, indent=2, sort_keys=True))
+    if raw_input('Write Stubs ({}) [y] ?'.format(STUBS_DIR)) != 'y':
+        logger.info('No Stubs Created')
     else:
-        print('No Stubs Created')
-
+        for assembly, modules in namespaces_dict.items():
+            for module_path in modules.keys():
+                if not stub_exists(module_path) or OVERWRITE_EXISTING:
+                    make_stubs(module_path)
+                    delete_module(module_path)
+                else:
+                    logger.info('Skipping [{}]'.format(module_path))
+        logger.info('Stubs Created')
+        create_json(namespaces_dict)
 run()
 
 
