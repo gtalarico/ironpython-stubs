@@ -4,9 +4,9 @@ import re
 import json
 import time
 from pprint import pprint
-from docopt import docopt
 
-from logger import logger
+from utils.docopt import docopt
+from utils.logger import logger
 
 __doc__ = """
     IronPython-Stubs
