@@ -1,13 +1,10 @@
 
-Notes:
-  Revit Api Takes about 3 min
-  System Takes about 5-7 min
-  Most others are less than 1-2 min
-
 Core:
- ☐ Add revit.py to run from RPS
+ ☐ Investigate: Rhino.Geometry Blank and DesignScript.Geometry ? Rebuild to check
  ☐ Integrate process.py into CLI
- ☐ Add VS Code Image
+ ☐ Logo
+ ✔ Add VS Code Image @done (17-09-18 02:56)
+ ✔ Add revit.py to run from RPS @done (17-09-18 02:56)
  ✔ Re-do Readme, add instructions for Sublime, Atom, and VSCode @high @done (17-09-18 01:37)
  ✔ Finish contributing Instruction @done (17-09-18 01:37)
  ✔ Add instructions for Setting up @done (17-09-18 01:36)
@@ -43,3 +40,7 @@ Core:
   Grasshopper:
     ✔ Grasshopper @done (17-09-18 02:14)
     ✔ GH_IO @done (17-09-18 02:14)
+Speed Notes:
+  Revit Api Takes about 3 min
+  System Takes about 5-7 min
+  Most others are less than 1-2 min
