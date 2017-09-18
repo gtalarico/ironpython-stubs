@@ -54,7 +54,7 @@ __doc__ = """
       --no-json                 Don't write json file [default: False].
       -h, --help                Show this screen.
 
-    """.format(out_dir='release\\stubs', version=__version__)
+    """.format(out_dir='stubs', version=__version__)
 
 arguments = docopt(__doc__, version=__version__)
 # logger.info(arguments)
@@ -65,13 +65,16 @@ option_output_dir = arguments['--output-dir']
 option_overwrite = arguments['--overwrite']
 option_no_json = not arguments['--no-json']
 
+
 PROJECT_DIR = os.getcwd()  # Must execute from project dir
+PKG_DIR = os.path.dirname(__file__)
 PATHS, BUILTINS, ASSEMBLIES
 [sys.path.append(p) for p in PATHS] # Add Paths
+release_dir = os.path.join(PKG_DIR, 'release', option_output_dir)
 
 if arguments['make']:
     timer = Timer()
-    make(option_output_dir, assemblies=[option_assembly],
+    make(release_dir, assemblies=[option_assembly],
         builtins=None, overwrite=False)
     print('Done: {} seconds'.format(timer.stop()))
 # if arguments['make_all']:

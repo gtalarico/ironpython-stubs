@@ -26,6 +26,7 @@ Gui Talarico
 import os
 import sys
 import json
+import time
 from collections import defaultdict
 from pprint import pprint
 import importlib
@@ -126,8 +127,9 @@ def delete_module(module_path):
         logger.info('Deleted Module: {}'.format(module_path))
 
 def create_json(output_dir, namespaces_dict):
-    filepath = os.path.join(output_dir, '{}.json'.format(output_dir))
-    with open(json_filepath, 'w') as fp:
+    now = str(time.time()).split('.')[0]
+    filepath = os.path.join(output_dir, '{}-{}.json'.format(output_dir, now))
+    with open(filepath, 'w') as fp:
         json.dump(namespaces_dict, fp, indent=2)
 
 def make(output_dir, assemblies=None, builtins=None, overwrite=False):
@@ -161,7 +163,7 @@ def make(output_dir, assemblies=None, builtins=None, overwrite=False):
                 else:
                     logger.info('Skipping [{}]'.format(module_path))
         logger.info('Stubs Created')
-        create_json(namespaces_dict)
+        create_json(output_dir, namespaces_dict)
 
 
 
