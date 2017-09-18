@@ -134,18 +134,19 @@ def make(output_dir, assembly_or_builtin, overwrite=False, quiet=False):
     print('='*80)
     logger.info('Making [{}]'.format(assembly_or_builtin))
     try:
+        clr.AddReference(assembly_or_builtin)
+    except:
+        # clr did not work Worked, Try as BuiltIn
         importlib.import_module(assembly_or_builtin)
-    except ImportError:
-        # Is not Module, Parse as Assembly Name
+        builtin_name = assembly_or_builtin
+        builtin_dict = {builtin_name: str(sys.modules[builtin_name])}
+        assembly_dict = {'__builtins__': builtin_dict}
+    else:
+        # Clr Worked Parse as Assembly Name
         assembly_name = assembly_or_builtin
         load_assemblies(assembly_name)
         namespaces_dict = crawl_loaded_references(assembly_name)
         assembly_dict = namespaces_dict
-    else:
-        # Import Worked, Name is BuiltIn
-        builtin_name = assembly_or_builtin
-        builtin_dict = {builtin_name: str(sys.modules[builtin_name])}
-        assembly_dict = {'__builtins__': builtin_dict}
 
     if not assembly_dict:
         raise Exception('No namspaces to process')
