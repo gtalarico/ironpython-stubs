@@ -35,7 +35,7 @@ ASSEMBLIES = [
     'RhinoCommon',
     # | Grasshopper
     'Grasshopper',
-    # 'GH_IO',
+    'GH_IO',
     # 'GH_Util',
     ]
 

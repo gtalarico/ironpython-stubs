@@ -1,0 +1,8 @@
+{
+  "GH_IO.DLL": {
+    "GH_IO.Serialization": "<module 'Serialization' (CLS module from GH_IO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a29997d2e6b4f97)>", 
+    "GH_IO.UserInterface": "<module 'UserInterface' (CLS module from GH_IO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a29997d2e6b4f97)>", 
+    "GH_IO.Types": "<module 'Types' (CLS module from GH_IO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a29997d2e6b4f97)>", 
+    "GH_IO": "<module 'GH_IO' (CLS module from GH_IO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a29997d2e6b4f97)>"
+  }
+}
