@@ -48,7 +48,6 @@ def is_namespace(something):
 
 def load_assemblies(assembly_name):
     """ Load Assemblies using clr.AddReference """
-    logger.info('='*30)
     try:
         logger.info('Adding Assembly [{}]'.format(assembly_name))
         clr.AddReference(assembly_name)
@@ -103,15 +102,14 @@ def stub_exists(output_dir, module_path):
 def create_stubs(output_dir, module_path):
     """ Actually Make Stubs """
     try:
-        logger.info('Processing [{}]'.format(module_path))
         logger.info('='*30)
+        logger.info('Processing [{}]'.format(module_path))
         process_one(module_path, None, True, output_dir)
     except Exception as errmsg:
         logger.error('Could not process module_path: {}'.format(module_path))
         logger.error(errmsg)
     else:
         logger.info('Done')
-    logger.info('='*30)
 
 def delete_module(module_path):
     """ Delete Module after it has been processed """
@@ -124,16 +122,17 @@ def delete_module(module_path):
 
 def dump_json_log(namespaces_dict):
     json_dir = os.path.join(os.getcwd(), 'logs')
-    now = str(time.time()).split('.')[0]
+    # now = str(time.time()).split('.')[0]
     name = '-'.join(namespaces_dict.keys())
-    filepath = os.path.join(json_dir, '{}-{}.json'.format(name, now))
+    filepath = os.path.join(json_dir, '{}.json'.format(name))
     with open(filepath, 'w') as fp:
         json.dump(namespaces_dict, fp, indent=2)
 
 def make(output_dir, assembly_or_builtin, overwrite=False, quiet=False):
     """ Main Processing Function """
-
     assembly_dict = {}
+    print('='*80)
+    logger.info('Making [{}]'.format(assembly_or_builtin))
     try:
         importlib.import_module(assembly_or_builtin)
     except ImportError:
@@ -145,8 +144,8 @@ def make(output_dir, assembly_or_builtin, overwrite=False, quiet=False):
     else:
         # Import Worked, Name is BuiltIn
         builtin_name = assembly_or_builtin
-        builtin_dict = {module_name: str(sys.modules[builtin_name])}
-        assembly_dict = {'__builtins__': builtins_dict}
+        builtin_dict = {builtin_name: str(sys.modules[builtin_name])}
+        assembly_dict = {'__builtins__': builtin_dict}
 
     if not assembly_dict:
         raise Exception('No namspaces to process')

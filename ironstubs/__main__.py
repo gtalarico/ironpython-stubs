@@ -78,21 +78,27 @@ if arguments['--debug']:
 # PROJECT_DIR = os.getcwd()  # Must execute from project dir
 PKG_DIR = os.path.dirname(__file__)
 PROJECT_DIR = os.path.dirname(PKG_DIR)
-release_dir = os.path.join(PKG_DIR, 'release', option_output_dir)
+release_dir = os.path.join(PROJECT_DIR, 'release', option_output_dir)
 os.chdir(PROJECT_DIR)
 
-[sys.path.append(p) for p in PATHS] # Add Paths
+# Add Paths
+PATHS.append(os.path.join(PROJECT_DIR, 'bin'))
+[sys.path.append(p) for p in PATHS]
+
+# Additional Paths from Options
 if option_directory:
     sys.path.append(option_directory)
 
-# logger.info(arguments)
+logger.debug(sys.path)
+logger.debug(arguments)
+logger.debug(ASSEMBLIES)
 if arguments['make']:
     timer = Timer()
     if not option_all:
         ASSEMBLIES = [option_assembly_name]
 
     for assembly_name in ASSEMBLIES:
-        assembly_dict = make(release_dir, option_assembly_name,
+        assembly_dict = make(release_dir, assembly_name,
                              overwrite=option_overwrite, quiet=option_all)
         if option_json:
             dump_json_log(assembly_dict)
