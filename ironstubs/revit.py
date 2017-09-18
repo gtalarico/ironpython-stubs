@@ -26,51 +26,14 @@ Gui Talarico
 import sys
 import os
 import json
+from pprint import pprint
 
-from utils.docopt import docopt
 from utils.logger import logger
 from utils.helper import Timer
 from default_settings import PATHS, BUILTINS, ASSEMBLIES
 from make_stubs import make, dump_json_log
 
-__version__ = '1.0.0'
-__doc__ = """
-    IronPython-Stubs | {version}
-
-    IronPython Stubs Generator
-
-    Usage:
-      ironstubs
-      ironstubs make (<assembly-name>|--all) [options]
-
-    Examples:
-      ipy -m ironstubs RhinoCommon --overwrite
-
-    Options:
-        <assembly-name>         Name of Dll Assembly to load
-        --all                   Process all Assemblies in the default_settings.py
-
-        --folder=<dir>          Name of Output Directory [default: {out_dir}]
-        --directory=<dir>       Additional Directory to add to Path [default: ]
-        --overwrite             Force Overwrite if stub already exists [default: False].
-        --no-json               Disables Json Log
-        --debug                 Enables Debug Messages
-        -h, --help              Show this screen.
-
-    """.format(out_dir='stubs', version=__version__)
-
-arguments = docopt(__doc__, version=__version__)
-
-# OPTIONS
-option_assembly_name = arguments['<assembly-name>']
-option_all = arguments['--all']
-option_output_dir = arguments['--folder']
-option_overwrite = arguments['--overwrite']
-option_json = not arguments['--no-json']
-option_directory = arguments['--directory']
-
-if arguments['--debug']:
-    logger.enable_debug()
+# logger.enable_debug()
 
 # PROJECT_DIR = os.getcwd()  # Must execute from project dir
 PKG_DIR = os.path.dirname(__file__)
