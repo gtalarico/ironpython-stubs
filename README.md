@@ -3,7 +3,7 @@
 Stubs for common IronPython CLR assemblies.
 These stubs are intended to be used by the autocomplete engine of editors like Atom, Sublime, and Visual Studio Code.
 
-# Why IronPython Stubs?
+## Why IronPython Stubs?
 
 If your are writing python code that targets IronPython, and using modules loaded through the Common Language Runtime (clr),
 your editor's autocomplete engine (which runs on regular python) will not be able to access those non-native modules.
@@ -21,19 +21,23 @@ Demo
 
 ![autocomplete-demo](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/gifs/autocomplete-demo.gif)
 
-#### Documentation
+------------------------------------
+
+# Documentation
 
 [Wiki](https://github.com/gtalarico/ironpython-stubs/wiki)
 
 If you haven't yet, read [Note on Performance](https://github.com/gtalarico/ironpython-stubs/wiki/A-Note-on-Performance)
 Large Namespaces such as `Autodesk.Revit.DB` can take a long time to be parsed and cached and might not show up right away.
 
-## Known Issues
+------------------------------------
+
+### Known Issues
 * Performance is not great for some of the larger classes. If you know how this can be improved please let me know.
 * Some of the function/constructor signatures are missing or incorrect. This is a problem with Generator3. Please send a PR or let me know if you have a fix.
 * Overloaded Methods do not show correct arguments
 
-## Credits
+### Credits
 This project is a fork of the repository started by Gary Edwards on [Gitlab](https://gitlab.com/reje/revit-python-stubs).
 Thank you for your work Gary - and thank you [Ehsan](https://github.com/eirannejad) for pointing me to it.
 
