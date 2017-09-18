@@ -22,8 +22,8 @@ Core:
     ✔ WindowsBase @done (17-09-17 15:56)
     ✔ System.Drawing @done (17-09-17 15:56)
     ✔ PresentationFramework @done (17-09-17 15:56)
-    ☐ System.Windows.Forms
-    ☐ System
+    ✔ System.Windows.Forms @done (17-09-18 02:14)
+    ✔ System @done (17-09-18 02:14)
        ☐ System.Threading
        ☐ System.Reflections
        ☐ System.Cryptography
@@ -33,13 +33,13 @@ Core:
     ✔ DSOffice @done (17-09-17 15:56)
     ✔ Tessellation @done (17-09-17 15:56)
   Revit:
-    ☐ RevitAPI'
-    ☐ RevitAPIUI
-    ☐ RevitServices'
-    ☐ RevitNodes'
+    ✔ RevitAPI' @done (17-09-18 02:14)
+    ✔ RevitAPIUI @done (17-09-18 02:14)
+    ✔ RevitServices' @done (17-09-18 02:14)
+    ✔ RevitNodes' @done (17-09-18 02:14)
   Rhino:
     ✔ Rhino3dmIO @done (17-09-17 15:56)
     ✔ RhinoCommon @done (17-09-17 15:56)
   Grasshopper:
-    ☐ Grasshopper
-    ☐ GH_IO
+    ✔ Grasshopper @done (17-09-18 02:14)
+    ✔ GH_IO @done (17-09-18 02:14)
