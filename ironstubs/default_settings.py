@@ -10,6 +10,8 @@ PATHS = [
     'C:\\Program Files\\Dynamo\Dynamo Revit\\1.2\\Revit_2017',
     # | Rhino
     'C:\\Program Files\\Rhinoceros 5 (64-bit)\\System',
+    # Grasshopper
+    'C:\\Users\\gtalarico\\AppData\\Roaming\\McNeel\\Rhinoceros\\5.0\\Plug-ins\\Grasshopper (b45a29b1-4343-4035-989e-044e8580d9cf)\\0.9.76.0'
     ]
 
 ASSEMBLIES = [
@@ -32,8 +34,8 @@ ASSEMBLIES = [
     'Rhino3dmIO',
     'RhinoCommon',
     # | Grasshopper
+    'Grasshopper',
     # 'GH_IO',
-    # 'Grasshopper',
     # 'GH_Util',
     ]
 
