@@ -1,6 +1,9 @@
 import Rhino
 Rhino.Geometry.Point3d()
 
+import Rhino
+
+
 from Autodesk.Revit.DB import Wall
 
 from Autodesk.Revit.UI import Events

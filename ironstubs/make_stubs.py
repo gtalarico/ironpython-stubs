@@ -88,7 +88,7 @@ def crawl_loaded_references(assemblies):
             logger.info('Parsing Assembly: {}'.format(assembly_name))
             namespaces_dict[assembly_filename] = iter_module(assembly_name, assembly)
         else:
-            logger.warning('Assembly Skiped. Not in target list: {}'.format(assembly_name))
+            logger.debug('Assembly Skiped. Not in target list: {}'.format(assembly_name))
     return namespaces_dict
 
 def crawl_builtin_modules(builtin_modules):
@@ -112,19 +112,20 @@ def create_stubs(output_dir, module_path):
         logger.info('='*30)
         process_one(module_path, None, True, output_dir)
     except Exception as errmsg:
-        logger.error('Could not process module_path: {}'.format(module))
+        logger.error('Could not process module_path: {}'.format(module_path))
         logger.error(errmsg)
     else:
         logger.info('Done')
     logger.info('='*30)
 
 def delete_module(module_path):
+    """ Delete Module after it has been processed """
     try:
         del sys.modules[module_path]
-    except:
-        logger.info('Could not delete: {}'.format(module_path))
+    except Exception as exc:
+        logger.debug('Could not delete: {}'.format(module_path))
     else:
-        logger.info('Deleted Module: {}'.format(module_path))
+        logger.debug('Deleted Module: {}'.format(module_path))
 
 def create_json(output_dir, namespaces_dict):
     now = str(time.time()).split('.')[0]
@@ -132,7 +133,7 @@ def create_json(output_dir, namespaces_dict):
     with open(filepath, 'w') as fp:
         json.dump(namespaces_dict, fp, indent=2)
 
-def make(output_dir, assemblies=None, builtins=None, overwrite=False):
+def make(output_dir, assembly=None, builtins=None, overwrite=False):
     # TODO: Handle assemblies or builtins automatically
 
     namespaces_to_process = {}
@@ -147,9 +148,8 @@ def make(output_dir, assemblies=None, builtins=None, overwrite=False):
     if not namespaces_to_process:
         raise Exception('No namspaces to process')
 
-    logger.info('#'*30)
-    logger.info('Modules and Assemblies Loaded: ')
-    logger.info([v.keys() for v in namespaces_to_process.values()])
+    modules = [v.keys() for v in namespaces_to_process.values()]
+    logger.info('Modules and Assemblies Loaded: {}'.format(modules))
     logger.debug( json.dumps(namespaces_dict, indent=2, sort_keys=True))
 
     if raw_input('>>> Write Stubs ({}) [y/n] [n]:\n>>> '.format(output_dir)) != 'y':
@@ -159,9 +159,11 @@ def make(output_dir, assemblies=None, builtins=None, overwrite=False):
             for module_path in modules.keys():
                 if not stub_exists(output_dir, module_path) or overwrite:
                     create_stubs(output_dir, module_path)
-                    delete_module(module_path)
                 else:
-                    logger.info('Skipping [{}]'.format(module_path))
+                    logger.info('Skipping [{}] Already Exists'.format(module_path))
+            for module_path in module.keys()
+                delete_module(module_path)
+
         logger.info('Stubs Created')
         create_json(output_dir, namespaces_dict)
 

@@ -40,28 +40,30 @@ __version__ = '1.0.0'
 __doc__ = """
     IronPython-Stubs | {version}
 
+    IronPython Stubs Generator
+
     Usage:
       ironstubs
-      ironstubs make <assembly-name> [--output-dir=<DIR>] [-o --overwrite] [--no-json]
-      ironstubs --version
+      ironstubs make (<assembly-name>|--all) [--directory=<dir>] [--overwrite] [--no-json]
 
     Examples:
       ipy -m ironstubs RhinoCommon
 
     Options:
-      -d DIR, --output-dir=DIR  Path of Output Directory [default: {out_dir}]
-      --overwrite               Force Overwrite if stub already exists [default: False].
-      --no-json                 Don't write json file [default: False].
-      -h, --help                Show this screen.
+        --all                         Process all Assemblies in the default_settings.py
+        --directory=<dir>             Path of Output Directory [default: {out_dir}]
+        --overwrite             Force Overwrite if stub already exists [default: False].
+        --no-json                     Don't write json file [default: False].
+        -h, --help                    Show this screen.
 
     """.format(out_dir='stubs', version=__version__)
 
 arguments = docopt(__doc__, version=__version__)
-# logger.info(arguments)
 
 # OPTIONS
 option_assembly = arguments['<assembly-name>']
-option_output_dir = arguments['--output-dir']
+option_all = arguments['--all']
+option_output_dir = arguments['--directory']
 option_overwrite = arguments['--overwrite']
 option_no_json = not arguments['--no-json']
 
@@ -71,12 +73,14 @@ PKG_DIR = os.path.dirname(__file__)
 PATHS, BUILTINS, ASSEMBLIES
 [sys.path.append(p) for p in PATHS] # Add Paths
 release_dir = os.path.join(PKG_DIR, 'release', option_output_dir)
+# logger.info(arguments)
 
 if arguments['make']:
     timer = Timer()
     make(release_dir, assemblies=[option_assembly],
-        builtins=None, overwrite=False)
+        builtins=None, overwrite=option_overwrite)
     print('Done: {} seconds'.format(timer.stop()))
+
 # if arguments['make_all']:
     # make(option_output_dir, assemblies=None, builtins=None, overwrite=False):
 
