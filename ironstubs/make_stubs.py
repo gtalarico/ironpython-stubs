@@ -23,8 +23,6 @@ https://github.com/gtalarico/ironpython-stubs
 Gui Talarico
 """
 
-__version__ = '0.2.0'
-
 import os
 import sys
 import json
@@ -37,14 +35,9 @@ import System
 
 # Ensure Proper CWD is set. This ensure proper running from within Revit
 # os.chdir(os.path.dirname(__file__))
-from config import PROJECT_DIR, SYS_PATHS, STUBS_DIR
-from config import LOADABLE_ASSEMBLIES, BUILTIN_MODULES
-from config import OVERWRITE_EXISTING
 from utils.logger import logger
 from generator3.generator3 import process_one
 
-# Add Paths
-[sys.path.append(p) for p in SYS_PATHS]
 
 def is_namespace(something):
     """ Returns True if object is Namespace: Module """
@@ -105,18 +98,18 @@ def crawl_builtin_modules(builtin_modules):
         builtin_dict[module_name] = str(sys.modules[module_name])
     return builtin_dict
 
-def stub_exists(module_path):
+def stub_exists(output_dir, module_path):
     """ Check if Stub exists """
-    path = os.path.join(STUBS_DIR, *module_path.split('.'))
+    path = os.path.join(output_dir, *module_path.split('.'))
     exists = os.path.exists(path) or os.path.exists(path + '.py')
     return exists
 
-def make_stubs(module_path):
+def create_stubs(output_dir, module_path):
     """ Actually Make Stubs """
     try:
         logger.info('Processing [{}]'.format(module_path))
         logger.info('='*30)
-        process_one(module_path, None, True, STUBS_DIR)
+        process_one(module_path, None, True, output_dir)
     except Exception as errmsg:
         logger.error('Could not process module_path: {}'.format(module))
         logger.error(errmsg)
@@ -132,32 +125,40 @@ def delete_module(module_path):
     else:
         logger.info('Deleted Module: {}'.format(module_path))
 
-def create_json(namespaces_dict):
-    filepath = os.path.join(STUBS_DIR, '{}.json'.format(STUBS_DIR))
+def create_json(output_dir, namespaces_dict):
+    filepath = os.path.join(output_dir, '{}.json'.format(output_dir))
     with open(json_filepath, 'w') as fp:
         json.dump(namespaces_dict, fp, indent=2)
 
-def run():
-    load_assemblies(LOADABLE_ASSEMBLIES)
-    namespaces_dict = crawl_loaded_references()
-    builtins_dict = crawl_builtin_modules(BUILTIN_MODULES)
-    namespaces_dict.update({'__builtins__': builtins_dict})
+def make(output_dir, assemblies=None, builtins=None, overwrite=False):
+    namespaces_to_process = {}
+    if assemblies:
+        load_assemblies(assemblies)
+        namespaces_dict = crawl_loaded_references()
+        namespaces_to_process.update(namespaces_dict)
+    if builtins:
+        builtins_dict = crawl_builtin_modules(builtins)
+        namespaces_to_process.update({'__builtins__': builtins_dict})
+
+    if not namespaces_to_process:
+        raise Exception('No namspaces to process')
+
     logger.info('#'*30)
-    logger.info('>>> Modules and Assemblies Loaded.')
+    logger.info('>>> Modules and Assemblies Loaded:')
     logger.info( json.dumps(namespaces_dict, indent=2, sort_keys=True))
-    if raw_input('Write Stubs ({}) [y] ?'.format(STUBS_DIR)) != 'y':
+
+    if raw_input('Write Stubs ({}) [y/n] [n]: '.format(output_dir)) != 'y':
         logger.info('No Stubs Created')
     else:
         for assembly, modules in namespaces_dict.items():
             for module_path in modules.keys():
-                if not stub_exists(module_path) or OVERWRITE_EXISTING:
-                    make_stubs(module_path)
+                if not stub_exists(output_dir, module_path) or overwrite:
+                    create_stubs(output_dir, module_path)
                     delete_module(module_path)
                 else:
                     logger.info('Skipping [{}]'.format(module_path))
         logger.info('Stubs Created')
         create_json(namespaces_dict)
-run()
 
 
 

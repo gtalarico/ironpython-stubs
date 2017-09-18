@@ -1,4 +1,28 @@
-""" Process Stub
+""" Stub Generator for IronPython
+
+Extended script based on script developed by Gary Edwards at:
+gitlab.com/reje/revit-python-stubs
+
+This is uses a slightly modify version of generator3,
+github.com/JetBrains/intellij-community/blob/master/python/helpers/generator3.py
+
+Iterates through a list of targeted assemblies and generates stub directories
+for the namespaces using pycharm's generator3.
+
+Note:
+    Some files ended up too large for Jedi to handle and would cause
+    memory errors and crashes - 1mb+ in a single files was enough to
+    cause problems. To fix this, there is a separate module that creates
+    a compressed version of the stubs, but it also split large file
+    into separate files to deal with jedi.
+    These directories will show up in the stubs as (X_parts)
+
+
+MIT LICENSE
+https://github.com/gtalarico/ironpython-stubs
+Gui Talarico
+
+--------------------------------------------------------------------------
 
 Large files, such as `System/__init__.py` or `Revit/DB/__init__.py`
 can exceed memory limits and crash the system.

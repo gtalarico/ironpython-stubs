@@ -1,3 +1,28 @@
+""" Stub Generator for IronPython
+
+Extended script based on script developed by Gary Edwards at:
+gitlab.com/reje/revit-python-stubs
+
+This is uses a slightly modify version of generator3,
+github.com/JetBrains/intellij-community/blob/master/python/helpers/generator3.py
+
+Iterates through a list of targeted assemblies and generates stub directories
+for the namespaces using pycharm's generator3.
+
+Note:
+    Some files ended up too large for Jedi to handle and would cause
+    memory errors and crashes - 1mb+ in a single files was enough to
+    cause problems. To fix this, there is a separate module that creates
+    a compressed version of the stubs, but it also split large file
+    into separate files to deal with jedi.
+    These directories will show up in the stubs as (X_parts)
+
+
+MIT LICENSE
+https://github.com/gtalarico/ironpython-stubs
+Gui Talarico
+"""
+
 import sys
 import os
 import re
@@ -7,95 +32,50 @@ from pprint import pprint
 
 from utils.docopt import docopt
 from utils.logger import logger
-
-__doc__ = """
-    IronPython-Stubs
-
-    Usage:
-      chm_parser parse_pages <year> <in-html-dir> [--output=<DIR>] [--json-directory=<DIR>]
-                                [--start-index=<INT>] [--end-index=<INT>] [--no-minify]
-                                [--no-html] [--no-json] [--html-test-mode] [--single-file=<FILE>]
-      chm_parser parse_namespaces <year> <hhc-filepath> [--json-directory=<DIR>] [--no-minify]
-      chm_parser parse_members <year> <hhk-filepath> <in-html-dir> <db-index-filepath> [--json-directory=<DIR>] [--no-minify]
-                                                                                       [--no-html] [--no-json]
-      chm_parser merge <out-2015> [--no-json]
-      chm_parser bootstrap <out-html-dir> <db-index.json> <out-merge-dir>
-      chm_parser parse_news <year> <whastnew> [--output=<DIR>]
-      chm_parser upload <db-index.json>
-      chm_parser -h | --help
-      chm_parser --version
-
-    Options:
-      --output DIR           Html output directory [default: {default_out_dir}].
-      --json-directory DIR   Json output directory filepath [default: {json_out_dir}].
-      --no-minify            Disable minify output [default: False].
-      --start-index INT      Start index [default: ].
-      --end-index INT        End index [default: ].
-      --single-file FILE     Testing Mode. Injects <html> and other tags.
-      --html-test-mode       Testing Mode. Injects <html> and other tags [default: False].
-      --no-json              Don't write json file [default: False].
-      --no-html              Don't write html files [default: False].
-      -h --help              Show this screen.
-
-    """.format(default_out_dir=DEFAULT_OUT_HTML_DIR,
-               json_out_dir=DEFAULT_OUT_JSON_DIR)
-
-# TODO: Improve path/args
-# TODO: Create batch command for all
+from utils.helper import Timer
+from default_settings import PATHS, BUILTINS, ASSEMBLIES, IN_REVIT
+from make_stubs import make
 
 __version__ = '1.0.0'
+__doc__ = """
+    IronPython-Stubs | {version}
+
+    Usage:
+      ironstubs
+      ironstubs make <assembly-name> [-d --output-dir] [-o --overwrite] [--no-json]
+      ironstubs make_all [-d --output-dir] [-o --overwrite] [--no-json]
+      ironstubs --version
+
+    Examples:
+      ipy -m ironstubs RhinoCommon
+
+    Options:
+      --output-dir           Path of Output Directory [default: release\\stubs]
+      -f <file>              Text file with list of assembly names
+      --overwrite            Force Overwrite if stub already exists [default: False].
+      --no-json              Don't write json file [default: False].
+      -h, --help             Show this screen.
+
+    """.format(version=__version__)
+
 arguments = docopt(__doc__, version=__version__)
 # logger.info(arguments)
 
-# Global Option
-minify_json = not arguments['--no-minify']
-year = arguments['<year>']
-out_json_dir = arguments['--json-directory'].format(year=year)
+# OPTIONS
+option_assembly = arguments['<assembly-name>']
+option_assembly_file = arguments['-f']
+option_output_dir = arguments['--output-dir']
+option_overwrite = arguments['--overwrite']
+option_no_json = not arguments['--no-json']
 
-make_html = not arguments['--no-html']
-make_json = not arguments['--no-json']
+PROJECT_DIR = os.getcwd()  # Must execute from project dir
+PATHS, BUILTINS, ASSEMBLIES, IN_REVIT
+[sys.path.append(p) for p in SYS_PATHS] # Add Paths
 
-if arguments['--start-index']:
-    MIN = int(arguments['--start-index'])
-else:
-    MIN = None
-if arguments['--end-index']:
-    MAX = int(arguments['--end-index'])
-else:
-    MAX = None
+if arguments['make']:
+    # timer = Timer()
+    # print('Done: {} seconds'.format(timer.stop()))
+if arguments['make_all']:
+    make(option_output_dir, assemblies=None, builtins=None, overwrite=False):
 
-############################
-# UPLOAD TO CONSTRUCTOR.IO #
-############################
-if arguments['upload']:
-    db_index_path = arguments['<db-index.json>']
-    upload(db_index_path)
-
-
-##############
-# PARSE NEWS #
-##############
-if arguments['parse_news']:
-    whatsnew_html_path = arguments['<whastnew>']
-    out_whatsnew_html = arguments['--output'].format(year=year)
-
-    soup = parse_news(whatsnew_html_path)
-    filename = '{year}.htm'.format(year=year)
-    write_html(soup.prettify(), filename, directory=out_whatsnew_html)
-
-    print('Done.')
-
-############################
-# Bootstrap #
-############################
-if arguments['bootstrap']:
-    timer = Timer()
-
-    out_html_dir = arguments['<out-html-dir>']
-    db_index_path = arguments['<db-index.json>']
-    out_merge_dir = arguments['<out-merge-dir>']
-
-    bootstrap(db_index_path, out_html_dir, out_merge_dir)
-
-    print('Done: {} seconds'.format(timer.stop()))
 

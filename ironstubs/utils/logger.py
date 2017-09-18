@@ -41,5 +41,5 @@ log_levels = {50: 'CRITICAL',
 
 dictConfig(LOGGER_CONFIG)
 logger = logging.getLogger()
-logger.info('** LOG LEVEL: {}'.format(log_levels[logger.getEffectiveLevel()]))
+logger.debug('** LOG LEVEL: {}'.format(log_levels[logger.getEffectiveLevel()]))
 
