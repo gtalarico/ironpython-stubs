@@ -64,39 +64,36 @@ def iter_module(module_name, module, module_path=None, namespaces=None):
                     namespaces=namespaces)
     return namespaces
 
-def load_assemblies(assemblies):
+def load_assemblies(assembly_name):
     """ Load Assemblies using clr.AddReference """
-    for assembly_name in assemblies:
-        logger.info('='*30)
-        try:
-            logger.info('Adding Assembly [{}]'.format(assembly_name))
-            clr.AddReference(assembly_name)
-        except Exception as errmsg:
-            logger.error('Could not load assembly: {}'.format(assembly_name))
-            logger.error(errmsg)
-        else:
-            logger.info('Loaded [{}]'.format(assembly_name))
+    logger.info('='*30)
+    try:
+        logger.info('Adding Assembly [{}]'.format(assembly_name))
+        clr.AddReference(assembly_name)
+    except Exception as errmsg:
+        logger.error('Could not load assembly: {}'.format(assembly_name))
+        logger.error(errmsg)
+    else:
+        logger.info('Loaded [{}]'.format(assembly_name))
 
-def crawl_loaded_references(assemblies):
+def crawl_loaded_references(target_assembly_name):
     """ Crawl Loaded assemblies to get Namespaces. """
     namespaces_dict = {}
     for assembly in clr.References:
         assembly_name = assembly.GetName().Name
         assembly_path = assembly.CodeBase
         assembly_filename = os.path.basename(assembly_path)
-        if assembly_name in assemblies:
+        if assembly_name == target_assembly_name:
             logger.info('Parsing Assembly: {}'.format(assembly_name))
             namespaces_dict[assembly_filename] = iter_module(assembly_name, assembly)
         else:
             logger.debug('Assembly Skiped. Not in target list: {}'.format(assembly_name))
     return namespaces_dict
 
-def crawl_builtin_modules(builtin_modules):
-    """ Crawl Built in  Modules """
+def crawl_builtin_modules(builtin_name):
+    """ Crawl Built in  Modules. Assumes it has already been loaded """
     builtin_dict = {}
-    for module_name in builtin_modules:
-        importlib.import_module(module_name)
-        builtin_dict[module_name] = str(sys.modules[module_name])
+    builtin_dict[module_name] = str(sys.modules[builtin_name])
     return builtin_dict
 
 def stub_exists(output_dir, module_path):
@@ -133,16 +130,24 @@ def create_json(output_dir, namespaces_dict):
     with open(filepath, 'w') as fp:
         json.dump(namespaces_dict, fp, indent=2)
 
-def make(output_dir, assembly=None, builtins=None, overwrite=False):
+def make(output_dir, assembly_or_builtin, overwrite=False):
     # TODO: Handle assemblies or builtins automatically
-
     namespaces_to_process = {}
-    if assemblies:
-        load_assemblies(assemblies)
-        namespaces_dict = crawl_loaded_references(assemblies)
+    assembly_name, builtin_name = None, None
+
+    try:
+        importlib.import_module(assembly_or_builtin)
+    except:
+        assembly_name = assembly_or_builtin
+    else:
+        builtin_name = assembly_or_builtin
+
+    if assembly_name:
+        load_assemblies(assembly_name)
+        namespaces_dict = crawl_loaded_references(assembly_name)
         namespaces_to_process.update(namespaces_dict)
-    if builtins:
-        builtins_dict = crawl_builtin_modules(builtins)
+    if builtin_name:
+        builtins_dict = crawl_builtin_modules(builtin_name)
         namespaces_to_process.update({'__builtins__': builtins_dict})
 
     if not namespaces_to_process:
