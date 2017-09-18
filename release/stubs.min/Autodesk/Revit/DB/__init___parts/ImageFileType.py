@@ -1,7 +1,9 @@
 class ImageFileType(Enum,IComparable,IFormattable,IConvertible):
  """
- This enum is used to define exported file type.
- 
+ This enum is used to define exported file type.
+
+ 
+
  enum ImageFileType,values: BMP (0),JPEGLossless (1),JPEGMedium (2),JPEGSmallest (3),PNG (4),TARGA (5),TIFF (6)
  """
  def __eq__(self,*args):

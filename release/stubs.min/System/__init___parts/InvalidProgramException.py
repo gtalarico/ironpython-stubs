@@ -1,9 +1,13 @@
 class InvalidProgramException(SystemException,ISerializable,_Exception):
  """
- The exception that is thrown when a program contains invalid Microsoft intermediate language (MSIL) or metadata. Generally this indicates a bug in the compiler that generated the program.
- 
- InvalidProgramException()
- InvalidProgramException(message: str)
+ The exception that is thrown when a program contains invalid Microsoft intermediate language (MSIL) or metadata. Generally this indicates a bug in the compiler that generated the program.
+
+ 
+
+ InvalidProgramException()
+
+ InvalidProgramException(message: str)
+
  InvalidProgramException(message: str,inner: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,8 +22,10 @@ class InvalidProgramException(SystemException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,inner=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
   __new__(cls: type,message: str,inner: Exception)
   """
   pass

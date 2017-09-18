@@ -1,7 +1,9 @@
 class SolidGeometry(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing possible ways of exporting solids in 3D views.
- 
+ An enumerated type listing possible ways of exporting solids in 3D views.
+
+ 
+
  enum SolidGeometry,values: ACIS (1),Polymesh (0)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class RelatedImageListAttribute(Attribute,_Attribute):
  """
- Indicates which System.Windows.Forms.ImageList a property is related to.
- 
+ Indicates which System.Windows.Forms.ImageList a property is related to.
+
+ 
+
  RelatedImageListAttribute(relatedImageList: str)
  """
  def __init__(self,*args):
@@ -12,10 +14,14 @@ class RelatedImageListAttribute(Attribute,_Attribute):
   """ __new__(cls: type,relatedImageList: str) """
   pass
  RelatedImageList=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the name of the related System.Windows.Forms.ImageList
-
-Get: RelatedImageList(self: RelatedImageListAttribute) -> str
-
+ """Gets the name of the related System.Windows.Forms.ImageList
+
+
+
+Get: RelatedImageList(self: RelatedImageListAttribute) -> str
+
+
+
 """
 
 

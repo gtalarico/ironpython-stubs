@@ -1,7 +1,9 @@
 class AnalyticalAlignmentMethod(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies how analytical model is being aligned in space
- 
+ Specifies how analytical model is being aligned in space
+
+ 
+
  enum AnalyticalAlignmentMethod,values: AutoDetect (0),ManuallyAdjusted (2),Projection (1),Varies (3)
  """
  def __eq__(self,*args):

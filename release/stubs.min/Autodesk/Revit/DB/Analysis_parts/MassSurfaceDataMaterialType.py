@@ -1,7 +1,9 @@
 class MassSurfaceDataMaterialType(Enum,IComparable,IFormattable,IConvertible):
  """
- Indicates how the visualization material for the MassSurfaceData is calculated.
- 
+ Indicates how the visualization material for the MassSurfaceData is calculated.
+
+ 
+
  enum MassSurfaceDataMaterialType,values: MaterialByConstruction (-2),NormalMaterial (0)
  """
  def __eq__(self,*args):

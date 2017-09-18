@@ -19,45 +19,69 @@ class LineSegment(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  EndParameter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Parameter associated with the end point.
-
-Get: EndParameter(self: LineSegment) -> float
-
+ """Parameter associated with the end point.
+
+
+
+Get: EndParameter(self: LineSegment) -> float
+
+
+
 """
 
  EndPoint=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """End point of the line segment.
-
-Get: EndPoint(self: LineSegment) -> XYZ
-
+ """End point of the line segment.
+
+
+
+Get: EndPoint(self: LineSegment) -> XYZ
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: LineSegment) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: LineSegment) -> bool
+
+
+
 """
 
  LineProperties=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Access to the line (pen) properties of the line
-
-Get: LineProperties(self: LineSegment) -> LineProperties
-
+ """Access to the line (pen) properties of the line
+
+
+
+Get: LineProperties(self: LineSegment) -> LineProperties
+
+
+
 """
 
  StartParameter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Parameter associated with the start point.
-
-Get: StartParameter(self: LineSegment) -> float
-
+ """Parameter associated with the start point.
+
+
+
+Get: StartParameter(self: LineSegment) -> float
+
+
+
 """
 
  StartPoint=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Start point of the line segment.
-
-Get: StartPoint(self: LineSegment) -> XYZ
-
+ """Start point of the line segment.
+
+
+
+Get: StartPoint(self: LineSegment) -> XYZ
+
+
+
 """
 
 

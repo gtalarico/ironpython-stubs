@@ -1,9 +1,13 @@
 class InvalidTimeZoneException(Exception,ISerializable,_Exception):
  """
- The exception that is thrown when time zone information is invalid.
- 
- InvalidTimeZoneException(message: str)
- InvalidTimeZoneException(message: str,innerException: Exception)
+ The exception that is thrown when time zone information is invalid.
+
+ 
+
+ InvalidTimeZoneException(message: str)
+
+ InvalidTimeZoneException(message: str,innerException: Exception)
+
  InvalidTimeZoneException()
  """
  def add_SerializeObjectState(self,*args):
@@ -18,9 +22,12 @@ class InvalidTimeZoneException(Exception,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,innerException=None):
   """
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,innerException: Exception)
-  __new__(cls: type,info: SerializationInfo,context: StreamingContext)
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,innerException: Exception)
+
+  __new__(cls: type,info: SerializationInfo,context: StreamingContext)
+
   __new__(cls: type)
   """
   pass

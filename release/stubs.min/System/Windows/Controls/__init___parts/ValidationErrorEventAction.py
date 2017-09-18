@@ -1,7 +1,9 @@
 class ValidationErrorEventAction(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes whether a System.Windows.Controls.ValidationError object has been added or cleared.
- 
+ Describes whether a System.Windows.Controls.ValidationError object has been added or cleared.
+
+ 
+
  enum ValidationErrorEventAction,values: Added (0),Removed (1)
  """
  def __eq__(self,*args):

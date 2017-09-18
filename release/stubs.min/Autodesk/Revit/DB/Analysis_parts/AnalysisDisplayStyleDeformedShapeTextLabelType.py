@@ -1,7 +1,9 @@
 class AnalysisDisplayStyleDeformedShapeTextLabelType(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines text visualization types for deformed shape settings of analysis display style.
- 
+ Defines text visualization types for deformed shape settings of analysis display style.
+
+ 
+
  enum AnalysisDisplayStyleDeformedShapeTextLabelType,values: ShowAll (0),ShowNone (1),ShowPredefined (2)
  """
  def __eq__(self,*args):

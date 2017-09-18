@@ -1,9 +1,13 @@
 class ConstructionType(Enum,IComparable,IFormattable,IConvertible):
  """
- This enumeration specifies the available analytical construction types
-    like external walls,windows etc. for use in the detailed analytical
-    energy model.
- 
+ This enumeration specifies the available analytical construction types
+
+    like external walls,windows etc. for use in the detailed analytical
+
+    energy model.
+
+ 
+
  enum ConstructionType,values: Ceiling (4),Door (6),ExteriorWall (0),ExteriorWindow (7),Floor (5),InteriorWall (1),InteriorWindow (8),Roof (3),Skylight (9),Slab (2)
  """
  def __eq__(self,*args):

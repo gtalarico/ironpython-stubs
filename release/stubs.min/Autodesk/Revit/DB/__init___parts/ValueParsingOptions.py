@@ -1,7 +1,9 @@
 class ValueParsingOptions(object,IDisposable):
  """
- Options for parsing strings into numbers with units.
- 
+ Options for parsing strings into numbers with units.
+
+ 
+
  ValueParsingOptions()
  """
  def Dispose(self):
@@ -9,11 +11,16 @@ class ValueParsingOptions(object,IDisposable):
   pass
  def GetFormatOptions(self):
   """
-  GetFormatOptions(self: ValueParsingOptions) -> FormatOptions
-  
-   Gets the FormatOptions to optionally override the default settings in the Units 
-    class.
-  
+  GetFormatOptions(self: ValueParsingOptions) -> FormatOptions
+
+  
+
+   Gets the FormatOptions to optionally override the default settings in the Units 
+
+    class.
+
+  
+
    Returns: A copy of the FormatOptions.
   """
   pass
@@ -22,11 +29,16 @@ class ValueParsingOptions(object,IDisposable):
   pass
  def SetFormatOptions(self,formatOptions):
   """
-  SetFormatOptions(self: ValueParsingOptions,formatOptions: FormatOptions)
-   Sets the FormatOptions to optionally override the default settings in the Units 
-    class.
-  
-  
+  SetFormatOptions(self: ValueParsingOptions,formatOptions: FormatOptions)
+
+   Sets the FormatOptions to optionally override the default settings in the Units 
+
+    class.
+
+  
+
+  
+
    formatOptions: The FormatOptions.
   """
   pass
@@ -43,18 +55,27 @@ class ValueParsingOptions(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  AllowedValues=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The allowable range of values to be parsed.
-
-Get: AllowedValues(self: ValueParsingOptions) -> AllowedValues
-
-Set: AllowedValues(self: ValueParsingOptions)=value
+ """The allowable range of values to be parsed.
+
+
+
+Get: AllowedValues(self: ValueParsingOptions) -> AllowedValues
+
+
+
+Set: AllowedValues(self: ValueParsingOptions)=value
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ValueParsingOptions) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ValueParsingOptions) -> bool
+
+
+
 """
 
 

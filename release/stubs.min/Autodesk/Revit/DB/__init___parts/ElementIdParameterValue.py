@@ -1,8 +1,11 @@
 class ElementIdParameterValue(ParameterValue,IDisposable):
  """
- A class that holds a ElementId value of a parameter element.
- 
- ElementIdParameterValue(value: ElementId)
+ A class that holds a ElementId value of a parameter element.
+
+ 
+
+ ElementIdParameterValue(value: ElementId)
+
  ElementIdParameterValue()
  """
  def Dispose(self):
@@ -23,16 +26,22 @@ class ElementIdParameterValue(ParameterValue,IDisposable):
  @staticmethod
  def __new__(self,value=None):
   """
-  __new__(cls: type,value: ElementId)
+  __new__(cls: type,value: ElementId)
+
   __new__(cls: type)
   """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The stored value
-
-Get: Value(self: ElementIdParameterValue) -> ElementId
-
-Set: Value(self: ElementIdParameterValue)=value
+ """The stored value
+
+
+
+Get: Value(self: ElementIdParameterValue) -> ElementId
+
+
+
+Set: Value(self: ElementIdParameterValue)=value
+
 """
 
 

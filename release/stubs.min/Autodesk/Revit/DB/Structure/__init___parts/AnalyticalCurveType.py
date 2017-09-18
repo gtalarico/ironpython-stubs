@@ -1,7 +1,9 @@
 class AnalyticalCurveType(Enum,IComparable,IFormattable,IConvertible):
  """
- Identifies what type of Analytical Model curves should be extracted.
- 
+ Identifies what type of Analytical Model curves should be extracted.
+
+ 
+
  enum AnalyticalCurveType,values: ActiveCurves (3),AllRigidLinks (6),ApproximatedCurves (4),BaseCurve (5),RawCurves (0),RigidLinkHead (1),RigidLinkTail (2)
  """
  def __eq__(self,*args):

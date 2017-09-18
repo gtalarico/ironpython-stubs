@@ -1,23 +1,32 @@
 class BindingMap(DefinitionBindingMap,IDisposable,IEnumerable):
  """
- The parameters BindingMap contains all the parameter bindings that exist in the
+ The parameters BindingMap contains all the parameter bindings that exist in the
+
  Autodesk Revit project.
  """
  def Clear(self):
   """
-  Clear(self: BindingMap)
+  Clear(self: BindingMap)
+
    This method is used to remove all the items in the map.
   """
   pass
  def Contains(self,key):
   """
-  Contains(self: BindingMap,key: Definition) -> bool
-  
-   The Contains method is used to check if the parameter binding exists for one 
-    definition.
-  
-  
-   key: A parameter definition which can be an existing definition or one from a shared 
+  Contains(self: BindingMap,key: Definition) -> bool
+
+  
+
+   The Contains method is used to check if the parameter binding exists for one 
+
+    definition.
+
+  
+
+  
+
+   key: A parameter definition which can be an existing definition or one from a shared 
+
     parameters file.
   """
   pass
@@ -26,62 +35,108 @@ class BindingMap(DefinitionBindingMap,IDisposable,IEnumerable):
   pass
  def Erase(self,key):
   """
-  Erase(self: BindingMap,key: Definition) -> int
-  
+  Erase(self: BindingMap,key: Definition) -> int
+
+  
+
    This method is used to erase one item in the map.
   """
   pass
  def Insert(self,key,item,parameterGroup=None):
   """
-  Insert(self: BindingMap,key: Definition,item: Binding) -> bool
-  
-   Creates a new parameter binding between a parameter and a set of categories.
-  
-   key: A parameter definition which can be an existing definition or one from a shared 
-    parameters file.
-  
-   item: An InstanceBinding or TypeBinding object which contains the set of categories 
-    to which the parameter should be bound.
-  
-  Insert(self: BindingMap,key: Definition,item: Binding,parameterGroup: BuiltInParameterGroup) -> bool
-  
-   Creates a new parameter binding between a parameter and a set of categories in 
-    a specified group.
-  
-  
-   key: A parameter definition which can be an existing definition or one from a shared 
-    parameters file.
-  
-   item: An InstanceBinding or TypeBinding object which contains the set of categories 
-    to which the parameter should be bound.
-  
+  Insert(self: BindingMap,key: Definition,item: Binding) -> bool
+
+  
+
+   Creates a new parameter binding between a parameter and a set of categories.
+
+  
+
+   key: A parameter definition which can be an existing definition or one from a shared 
+
+    parameters file.
+
+  
+
+   item: An InstanceBinding or TypeBinding object which contains the set of categories 
+
+    to which the parameter should be bound.
+
+  
+
+  Insert(self: BindingMap,key: Definition,item: Binding,parameterGroup: BuiltInParameterGroup) -> bool
+
+  
+
+   Creates a new parameter binding between a parameter and a set of categories in 
+
+    a specified group.
+
+  
+
+  
+
+   key: A parameter definition which can be an existing definition or one from a shared 
+
+    parameters file.
+
+  
+
+   item: An InstanceBinding or TypeBinding object which contains the set of categories 
+
+    to which the parameter should be bound.
+
+  
+
    parameterGroup: The GroupID of the parameter definition.
   """
   pass
  def ReInsert(self,key,item,parameterGroup=None):
   """
-  ReInsert(self: BindingMap,key: Definition,item: Binding) -> bool
-  
-   Removes an existing parameter and creates a new binding for a given parameter.
-  
-   key: A parameter definition which can be an existing definition or one from a shared 
-    parameters file.
-  
-   item: An InstanceBinding or TypeBinding object which contains the set of categories 
-    to which the parameter should be bound.
-  
-  ReInsert(self: BindingMap,key: Definition,item: Binding,parameterGroup: BuiltInParameterGroup) -> bool
-  
-   Removes an existing parameter and creates a new binding for a given parameter 
-    in a specified group.
-  
-  
-   key: A parameter definition which can be an existing definition or one from a shared 
-    parameters file.
-  
-   item: An InstanceBinding or TypeBinding object which contains the set of categories 
-    to which the parameter should be bound.
-  
+  ReInsert(self: BindingMap,key: Definition,item: Binding) -> bool
+
+  
+
+   Removes an existing parameter and creates a new binding for a given parameter.
+
+  
+
+   key: A parameter definition which can be an existing definition or one from a shared 
+
+    parameters file.
+
+  
+
+   item: An InstanceBinding or TypeBinding object which contains the set of categories 
+
+    to which the parameter should be bound.
+
+  
+
+  ReInsert(self: BindingMap,key: Definition,item: Binding,parameterGroup: BuiltInParameterGroup) -> bool
+
+  
+
+   Removes an existing parameter and creates a new binding for a given parameter 
+
+    in a specified group.
+
+  
+
+  
+
+   key: A parameter definition which can be an existing definition or one from a shared 
+
+    parameters file.
+
+  
+
+   item: An InstanceBinding or TypeBinding object which contains the set of categories 
+
+    to which the parameter should be bound.
+
+  
+
    parameterGroup: The GroupID of the parameter definition.
   """
   pass
@@ -93,11 +148,16 @@ class BindingMap(DefinitionBindingMap,IDisposable,IEnumerable):
   pass
  def Remove(self,key):
   """
-  Remove(self: BindingMap,key: Definition) -> bool
-  
-   The Remove method is used to remove a parameter binding.
-  
-   key: A parameter definition which can be an existing definition or one from a shared 
+  Remove(self: BindingMap,key: Definition) -> bool
+
+  
+
+   The Remove method is used to remove a parameter binding.
+
+  
+
+   key: A parameter definition which can be an existing definition or one from a shared 
+
     parameters file.
   """
   pass

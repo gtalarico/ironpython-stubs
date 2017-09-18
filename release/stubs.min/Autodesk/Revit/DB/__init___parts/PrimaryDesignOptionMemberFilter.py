@@ -1,8 +1,11 @@
 class PrimaryDesignOptionMemberFilter(ElementSlowFilter,IDisposable):
  """
- A filter used to find elements contained in any primary design option of any design option set.
- 
- PrimaryDesignOptionMemberFilter(inverted: bool)
+ A filter used to find elements contained in any primary design option of any design option set.
+
+ 
+
+ PrimaryDesignOptionMemberFilter(inverted: bool)
+
  PrimaryDesignOptionMemberFilter()
  """
  def Dispose(self):
@@ -23,7 +26,8 @@ class PrimaryDesignOptionMemberFilter(ElementSlowFilter,IDisposable):
  @staticmethod
  def __new__(self,inverted=None):
   """
-  __new__(cls: type,inverted: bool)
+  __new__(cls: type,inverted: bool)
+
   __new__(cls: type)
   """
   pass

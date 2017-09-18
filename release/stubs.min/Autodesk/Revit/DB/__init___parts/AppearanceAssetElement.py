@@ -3,15 +3,24 @@ class AppearanceAssetElement(Element,IDisposable):
  @staticmethod
  def Create(document,name,asset):
   """
-  Create(document: Document,name: str,asset: Asset) -> AppearanceAssetElement
-  
-   Creates a new AppearancAssetElement.
-  
-   document: The document in which to create the AppearanceAssetElement.
-   name: The name of the AppearanceAssetElement.
-   asset: The rendering asset of the element.
-   Returns: The new AppearanceAssetElement.
-     Note that document will own this pointer,
+  Create(document: Document,name: str,asset: Asset) -> AppearanceAssetElement
+
+  
+
+   Creates a new AppearancAssetElement.
+
+  
+
+   document: The document in which to create the AppearanceAssetElement.
+
+   name: The name of the AppearanceAssetElement.
+
+   asset: The rendering asset of the element.
+
+   Returns: The new AppearanceAssetElement.
+
+     Note that document will own this pointer,
+
     you should access it without owning it.
   """
   pass
@@ -21,11 +30,16 @@ class AppearanceAssetElement(Element,IDisposable):
  @staticmethod
  def GetAppearanceAssetElementByName(doc,name):
   """
-  GetAppearanceAssetElementByName(doc: Document,name: str) -> AppearanceAssetElement
-  
-   Gets an AppearanceAssetElement by name.
-  
-   doc: Document containing the AppearanceAssetElement.
+  GetAppearanceAssetElementByName(doc: Document,name: str) -> AppearanceAssetElement
+
+  
+
+   Gets an AppearanceAssetElement by name.
+
+  
+
+   doc: Document containing the AppearanceAssetElement.
+
    name: Name of the AppearanceAssetElement.
   """
   pass
@@ -34,9 +48,12 @@ class AppearanceAssetElement(Element,IDisposable):
   pass
  def GetRenderingAsset(self):
   """
-  GetRenderingAsset(self: AppearanceAssetElement) -> Asset
-  
-   Gets the rendering asset for the appearance asset element.
+  GetRenderingAsset(self: AppearanceAssetElement) -> Asset
+
+  
+
+   Gets the rendering asset for the appearance asset element.
+
    Returns: The rendering asset held by this appearance asset element.
   """
   pass
@@ -48,9 +65,12 @@ class AppearanceAssetElement(Element,IDisposable):
   pass
  def SetRenderingAsset(self,asset):
   """
-  SetRenderingAsset(self: AppearanceAssetElement,asset: Asset)
-   Sets the rendering asset for the appearance asset element.
-  
+  SetRenderingAsset(self: AppearanceAssetElement,asset: Asset)
+
+   Sets the rendering asset for the appearance asset element.
+
+  
+
    asset: The new rendering asset.It should be an appearance asset.
   """
   pass

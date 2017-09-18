@@ -1,7 +1,9 @@
 class SYSKIND(Enum,IComparable,IFormattable,IConvertible):
  """
- Use System.Runtime.InteropServices.ComTypes.SYSKIND instead.
- 
+ Use System.Runtime.InteropServices.ComTypes.SYSKIND instead.
+
+ 
+
  enum SYSKIND,values: SYS_MAC (2),SYS_WIN16 (0),SYS_WIN32 (1)
  """
  def __eq__(self,*args):

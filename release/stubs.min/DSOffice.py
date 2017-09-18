@@ -37,27 +37,42 @@ class Excel(object):
  @staticmethod
  def ReadExcelFile(file):
   """
-  ReadExcelFile(file: str) -> WorkBook
+  ReadExcelFile(file: str) -> WorkBook
+
   ReadExcelFile(file: FileInfo) -> WorkBook
   """
   pass
  @staticmethod
  def ReadFromFile(file,sheetName,readAsStrings):
   """
-  ReadFromFile(file: FileInfo,sheetName: str,readAsStrings: bool) -> Array[Array[object]]
-  
-   Read data from a Microsoft Excel spreadsheet. Data is read by row and
-      returned 
-    in a series of lists by row. Rows and columns are zero-indexed;
-      for example,
-    the value in cell A1 will appear in the data list at [0,0].
-      This node requires 
-    Microsoft Excel to be installed.
-  
-  
-   file: File representing the Microsoft Excel spreadsheet.
-   sheetName: Name of the worksheet containing the data.
-   readAsStrings: toggle to switch between reading Excel file as strings only or not
+  ReadFromFile(file: FileInfo,sheetName: str,readAsStrings: bool) -> Array[Array[object]]
+
+  
+
+   Read data from a Microsoft Excel spreadsheet. Data is read by row and
+
+      returned 
+
+    in a series of lists by row. Rows and columns are zero-indexed;
+
+      for example,
+
+    the value in cell A1 will appear in the data list at [0,0].
+
+      This node requires 
+
+    Microsoft Excel to be installed.
+
+  
+
+  
+
+   file: File representing the Microsoft Excel spreadsheet.
+
+   sheetName: Name of the worksheet containing the data.
+
+   readAsStrings: toggle to switch between reading Excel file as strings only or not
+
    Returns: Rows of data from the Excel worksheet.
   """
   pass
@@ -72,24 +87,42 @@ class Excel(object):
  @staticmethod
  def WriteToFile(filePath,sheetName,startRow,startCol,data,overWrite):
   """
-  WriteToFile(filePath: str,sheetName: str,startRow: int,startCol: int,data: Array[Array[object]],overWrite: bool) -> Array[Array[object]]
-  
-   Write data to a Microsoft Excel spreadsheet. Data is written by row
-      with 
-    sublists to be written in successive rows. Rows and columns are
-      zero-indexed; 
-    for example,the value in the data list at [0,0] will
-      be written to cell A1. 
-    Null values and empty lists are written to Excel 
-      as empty cells. This node 
-    requires Microsoft Excel to be installed.
-  
-  
-   filePath: File path to the Microsoft Excel spreadsheet.
-   sheetName: Name of the workseet to write data to.
-   startRow: Start row for writing data. Enter 0 for A,1 for B,etc.
-   startCol: Start column for writing data. Enter 0 for col 1,1 for column 2,ect.
-   data: Data to write to the spreadsheet.
+  WriteToFile(filePath: str,sheetName: str,startRow: int,startCol: int,data: Array[Array[object]],overWrite: bool) -> Array[Array[object]]
+
+  
+
+   Write data to a Microsoft Excel spreadsheet. Data is written by row
+
+      with 
+
+    sublists to be written in successive rows. Rows and columns are
+
+      zero-indexed; 
+
+    for example,the value in the data list at [0,0] will
+
+      be written to cell A1. 
+
+    Null values and empty lists are written to Excel 
+
+      as empty cells. This node 
+
+    requires Microsoft Excel to be installed.
+
+  
+
+  
+
+   filePath: File path to the Microsoft Excel spreadsheet.
+
+   sheetName: Name of the workseet to write data to.
+
+   startRow: Start row for writing data. Enter 0 for A,1 for B,etc.
+
+   startCol: Start column for writing data. Enter 0 for col 1,1 for column 2,ect.
+
+   data: Data to write to the spreadsheet.
+
    Returns: Data written to the spreadsheet.
   """
   pass

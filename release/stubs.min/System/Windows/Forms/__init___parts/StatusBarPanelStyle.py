@@ -1,7 +1,9 @@
 class StatusBarPanelStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies whether a System.Windows.Forms.StatusBarPanel object on a System.Windows.Forms.StatusBar control is owner-drawn or system-drawn.
- 
+ Specifies whether a System.Windows.Forms.StatusBarPanel object on a System.Windows.Forms.StatusBar control is owner-drawn or system-drawn.
+
+ 
+
  enum StatusBarPanelStyle,values: OwnerDraw (2),Text (1)
  """
  def __eq__(self,*args):

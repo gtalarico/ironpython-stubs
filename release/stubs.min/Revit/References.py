@@ -13,9 +13,12 @@ class RayBounce(object):
  @staticmethod
  def ByOriginDirection(origin,direction,maxBounces,view):
   """
-  ByOriginDirection(origin: Point,direction: Vector,maxBounces: int,view: View3D) -> Dictionary[str,object]
-  
-   Returns positions and elements hit by ray bounce from the specified origin 
+  ByOriginDirection(origin: Point,direction: Vector,maxBounces: int,view: View3D) -> Dictionary[str,object]
+
+  
+
+   Returns positions and elements hit by ray bounce from the specified origin 
+
     point and direction
   """
   pass

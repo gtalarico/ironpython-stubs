@@ -1,7 +1,9 @@
 class ConceptualConstructionRoofType(Enum,IComparable,IFormattable,IConvertible):
  """
- ConceptualConstructionType values for Roofs.
- 
+ ConceptualConstructionType values for Roofs.
+
+ 
+
  enum ConceptualConstructionRoofType,values: HighInsulationCoolRoof (0),HighInsulationDarkRoof (1),InvalidRoofTypeConstruction (-1),LowInsulationCoolRoof (4),LowInsulationDarkRoof (5),NoInsulationDarkRoof (6),NumRoofTypeConstruction (7),TypicalInsulationCoolRoof (2),TypicalInsulationDarkRoof (3)
  """
  def __eq__(self,*args):

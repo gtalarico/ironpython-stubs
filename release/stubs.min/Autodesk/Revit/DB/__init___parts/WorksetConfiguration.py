@@ -1,9 +1,13 @@
 class WorksetConfiguration(object,IDisposable):
  """
- A configuration class that is passed in to methods that open Revit documents to specify which user-created worksets are opened/closed.
- 
- WorksetConfiguration(option: WorksetConfigurationOption)
- WorksetConfiguration()
+ A configuration class that is passed in to methods that open Revit documents to specify which user-created worksets are opened/closed.
+
+ 
+
+ WorksetConfiguration(option: WorksetConfigurationOption)
+
+ WorksetConfiguration()
+
  WorksetConfiguration(other: WorksetConfiguration)
  """
  def Close(self,worksetsToClose):
@@ -30,8 +34,10 @@ class WorksetConfiguration(object,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,option: WorksetConfigurationOption)
-  __new__(cls: type)
+  __new__(cls: type,option: WorksetConfigurationOption)
+
+  __new__(cls: type)
+
   __new__(cls: type,other: WorksetConfiguration)
   """
   pass
@@ -39,10 +45,14 @@ class WorksetConfiguration(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: WorksetConfiguration) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: WorksetConfiguration) -> bool
+
+
+
 """
 
 

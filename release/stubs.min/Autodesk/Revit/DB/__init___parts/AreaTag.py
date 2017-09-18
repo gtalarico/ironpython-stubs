@@ -22,18 +22,27 @@ class AreaTag(SpatialElementTag,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Area=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The area that the tag is associated with.
-
-Get: Area(self: AreaTag) -> Area
-
+ """The area that the tag is associated with.
+
+
+
+Get: Area(self: AreaTag) -> Area
+
+
+
 """
 
  AreaTagType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The tag type.
-
-Get: AreaTagType(self: AreaTag) -> AreaTagType
-
-Set: AreaTagType(self: AreaTag)=value
+ """The tag type.
+
+
+
+Get: AreaTagType(self: AreaTag) -> AreaTagType
+
+
+
+Set: AreaTagType(self: AreaTag)=value
+
 """
 
 

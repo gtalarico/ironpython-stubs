@@ -1,7 +1,9 @@
 class WallFunction(Enum,IComparable,IFormattable,IConvertible):
  """
- Indicates the function of a specified WallType,as specified in the parameter FUNCTION_PARAM on the WallType.
- 
+ Indicates the function of a specified WallType,as specified in the parameter FUNCTION_PARAM on the WallType.
+
+ 
+
  enum WallFunction,values: Coreshaft (5),Exterior (1),Foundation (2),Interior (0),Retaining (3),Soffit (4)
  """
  def __eq__(self,*args):

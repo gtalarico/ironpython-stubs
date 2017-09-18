@@ -9,37 +9,56 @@ class InsulationLiningBase(MEPCurve,IDisposable):
  @staticmethod
  def GetInsulationIds(document,elemId):
   """
-  GetInsulationIds(document: Document,elemId: ElementId) -> ICollection[ElementId]
-  
-   Returns the ids of the insulation elements associated to a given element.
-  
-   document: The document.
-   elemId: The element.
+  GetInsulationIds(document: Document,elemId: ElementId) -> ICollection[ElementId]
+
+  
+
+   Returns the ids of the insulation elements associated to a given element.
+
+  
+
+   document: The document.
+
+   elemId: The element.
+
    Returns: A collection of the ids of the insulation elements.
   """
   pass
  @staticmethod
  def GetLiningIds(document,elemId):
   """
-  GetLiningIds(document: Document,elemId: ElementId) -> ICollection[ElementId]
-  
-   Returns the ids of the lining elements associated to a given element.
-  
-   document: The document.
-   elemId: The element.
+  GetLiningIds(document: Document,elemId: ElementId) -> ICollection[ElementId]
+
+  
+
+   Returns the ids of the lining elements associated to a given element.
+
+  
+
+   document: The document.
+
+   elemId: The element.
+
    Returns: A collection of the ids of the lining elements.
   """
   pass
  @staticmethod
  def IsValidThickness(thickness):
   """
-  IsValidThickness(thickness: float) -> bool
-  
-   Identifies if the given thickness value is valid for assignment to insulation 
-    or lining elements.
-  
-  
-   thickness: Thickness of the insulation and lining elements.
+  IsValidThickness(thickness: float) -> bool
+
+  
+
+   Identifies if the given thickness value is valid for assignment to insulation 
+
+    or lining elements.
+
+  
+
+  
+
+   thickness: Thickness of the insulation and lining elements.
+
    Returns: True if the thickness is valid,false otherwise.
   """
   pass
@@ -59,18 +78,27 @@ class InsulationLiningBase(MEPCurve,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  HostElementId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The id of the host element for the insulation or lining element.
-
-Get: HostElementId(self: InsulationLiningBase) -> ElementId
-
+ """The id of the host element for the insulation or lining element.
+
+
+
+Get: HostElementId(self: InsulationLiningBase) -> ElementId
+
+
+
 """
 
  Thickness=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Thickness of the insulation or lining element.
-
-Get: Thickness(self: InsulationLiningBase) -> float
-
-Set: Thickness(self: InsulationLiningBase)=value
+ """Thickness of the insulation or lining element.
+
+
+
+Get: Thickness(self: InsulationLiningBase) -> float
+
+
+
+Set: Thickness(self: InsulationLiningBase)=value
+
 """
 
 

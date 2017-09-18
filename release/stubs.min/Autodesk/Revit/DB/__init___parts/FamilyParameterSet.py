@@ -1,12 +1,15 @@
 class FamilyParameterSet(APIObject,IDisposable,IEnumerable):
  """
- A set that contains FamilyParameter objects.
- 
+ A set that contains FamilyParameter objects.
+
+ 
+
  FamilyParameterSet()
  """
  def Clear(self):
   """
-  Clear(self: FamilyParameterSet)
+  Clear(self: FamilyParameterSet)
+
    Removes every item from the set,rendering it empty.
   """
   pass
@@ -21,17 +24,23 @@ class FamilyParameterSet(APIObject,IDisposable,IEnumerable):
   pass
  def ForwardIterator(self):
   """
-  ForwardIterator(self: FamilyParameterSet) -> FamilyParameterSetIterator
-  
-   Retrieve a forward moving iterator to the set.
+  ForwardIterator(self: FamilyParameterSet) -> FamilyParameterSetIterator
+
+  
+
+   Retrieve a forward moving iterator to the set.
+
    Returns: Returns a forward moving iterator to the set.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: FamilyParameterSet) -> IEnumerator
-  
-   Retrieve a forward moving iterator to the set.
+  GetEnumerator(self: FamilyParameterSet) -> IEnumerator
+
+  
+
+   Retrieve a forward moving iterator to the set.
+
    Returns: Returns a forward moving iterator to the set.
   """
   pass
@@ -46,9 +55,12 @@ class FamilyParameterSet(APIObject,IDisposable,IEnumerable):
   pass
  def ReverseIterator(self):
   """
-  ReverseIterator(self: FamilyParameterSet) -> FamilyParameterSetIterator
-  
-   Retrieve a backward moving iterator to the set.
+  ReverseIterator(self: FamilyParameterSet) -> FamilyParameterSetIterator
+
+  
+
+   Retrieve a backward moving iterator to the set.
+
    Returns: Returns a backward moving iterator to the set.
   """
   pass
@@ -65,17 +77,25 @@ class FamilyParameterSet(APIObject,IDisposable,IEnumerable):
   """ __iter__(self: IEnumerable) -> object """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Test to see if the set is empty.
-
-Get: IsEmpty(self: FamilyParameterSet) -> bool
-
+ """Test to see if the set is empty.
+
+
+
+Get: IsEmpty(self: FamilyParameterSet) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the number of objects that are in the set.
-
-Get: Size(self: FamilyParameterSet) -> int
-
+ """Returns the number of objects that are in the set.
+
+
+
+Get: Size(self: FamilyParameterSet) -> int
+
+
+
 """
 
 

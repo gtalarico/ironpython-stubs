@@ -1,8 +1,11 @@
 class ElementMulticlassFilter(ElementQuickFilter,IDisposable):
  """
- A filter used to match elements by their class,where more than one class of element may be passed.
- 
- ElementMulticlassFilter(typeList: IList[Type],inverted: bool)
+ A filter used to match elements by their class,where more than one class of element may be passed.
+
+ 
+
+ ElementMulticlassFilter(typeList: IList[Type],inverted: bool)
+
  ElementMulticlassFilter(typeList: IList[Type])
  """
  def Dispose(self):
@@ -23,7 +26,8 @@ class ElementMulticlassFilter(ElementQuickFilter,IDisposable):
  @staticmethod
  def __new__(self,typeList,inverted=None):
   """
-  __new__(cls: type,typeList: IList[Type],inverted: bool)
+  __new__(cls: type,typeList: IList[Type],inverted: bool)
+
   __new__(cls: type,typeList: IList[Type])
   """
   pass

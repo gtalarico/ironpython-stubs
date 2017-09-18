@@ -1,7 +1,9 @@
 class WebBrowserEncryptionLevel(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies constants that define the encryption methods used by documents displayed in the System.Windows.Forms.WebBrowser control.
- 
+ Specifies constants that define the encryption methods used by documents displayed in the System.Windows.Forms.WebBrowser control.
+
+ 
+
  enum WebBrowserEncryptionLevel,values: Bit128 (6),Bit40 (3),Bit56 (4),Fortezza (5),Insecure (0),Mixed (1),Unknown (2)
  """
  def __eq__(self,*args):

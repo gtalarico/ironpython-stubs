@@ -1,7 +1,9 @@
 class HorizontalAlignmentStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Declares the horizontal alignment style of font.
- 
+ Declares the horizontal alignment style of font.
+
+ 
+
  enum HorizontalAlignmentStyle,values: Center (1),Left (0),Right (2)
  """
  def __eq__(self,*args):

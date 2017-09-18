@@ -1,7 +1,9 @@
 class CurveArrArray(APIObject,IDisposable,IEnumerable):
  """
- An array that can contain any type of object.
- 
+ An array that can contain any type of object.
+
+ 
+
  CurveArrArray()
  """
  def Append(self,item):
@@ -9,7 +11,8 @@ class CurveArrArray(APIObject,IDisposable,IEnumerable):
   pass
  def Clear(self):
   """
-  Clear(self: CurveArrArray)
+  Clear(self: CurveArrArray)
+
    Removes every item from the array,rendering it empty.
   """
   pass
@@ -18,17 +21,23 @@ class CurveArrArray(APIObject,IDisposable,IEnumerable):
   pass
  def ForwardIterator(self):
   """
-  ForwardIterator(self: CurveArrArray) -> CurveArrArrayIterator
-  
-   Retrieve a forward moving iterator to the array.
+  ForwardIterator(self: CurveArrArray) -> CurveArrArrayIterator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: CurveArrArray) -> IEnumerator
-  
-   Retrieve a forward moving iterator to the array.
+  GetEnumerator(self: CurveArrArray) -> IEnumerator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
@@ -43,9 +52,12 @@ class CurveArrArray(APIObject,IDisposable,IEnumerable):
   pass
  def ReverseIterator(self):
   """
-  ReverseIterator(self: CurveArrArray) -> CurveArrArrayIterator
-  
-   Retrieve a backward moving iterator to the array.
+  ReverseIterator(self: CurveArrArray) -> CurveArrArrayIterator
+
+  
+
+   Retrieve a backward moving iterator to the array.
+
    Returns: Returns a backward moving iterator to the array.
   """
   pass
@@ -68,17 +80,25 @@ class CurveArrArray(APIObject,IDisposable,IEnumerable):
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Test to see if the array is empty.
-
-Get: IsEmpty(self: CurveArrArray) -> bool
-
+ """Test to see if the array is empty.
+
+
+
+Get: IsEmpty(self: CurveArrArray) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the number of objects that are in the array.
-
-Get: Size(self: CurveArrArray) -> int
-
+ """Returns the number of objects that are in the array.
+
+
+
+Get: Size(self: CurveArrArray) -> int
+
+
+
 """
 
 

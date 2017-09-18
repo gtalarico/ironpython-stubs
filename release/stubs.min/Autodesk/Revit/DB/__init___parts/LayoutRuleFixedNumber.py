@@ -1,7 +1,9 @@
 class LayoutRuleFixedNumber(LayoutRule,IDisposable):
  """
- This class indicate the layout rule of a Beam System is Fixed-Number.
- 
+ This class indicate the layout rule of a Beam System is Fixed-Number.
+
+ 
+
  LayoutRuleFixedNumber(numberOfLines: int)
  """
  def Dispose(self):
@@ -27,11 +29,16 @@ class LayoutRuleFixedNumber(LayoutRule,IDisposable):
   """ __new__(cls: type,numberOfLines: int) """
   pass
  NumberOfLines=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get or set the number of the beams in a beam system.
-
-Get: NumberOfLines(self: LayoutRuleFixedNumber) -> int
-
-Set: NumberOfLines(self: LayoutRuleFixedNumber)=value
+ """Get or set the number of the beams in a beam system.
+
+
+
+Get: NumberOfLines(self: LayoutRuleFixedNumber) -> int
+
+
+
+Set: NumberOfLines(self: LayoutRuleFixedNumber)=value
+
 """
 
 

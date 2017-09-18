@@ -1,7 +1,9 @@
 class TickBarPlacement(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the placement of a System.Windows.Controls.Primitives.TickBar with respect to the System.Windows.Controls.Primitives.Track of a System.Windows.Controls.Slider control.
- 
+ Specifies the placement of a System.Windows.Controls.Primitives.TickBar with respect to the System.Windows.Controls.Primitives.Track of a System.Windows.Controls.Slider control.
+
+ 
+
  enum TickBarPlacement,values: Bottom (3),Left (0),Right (2),Top (1)
  """
  def __eq__(self,*args):

@@ -16,17 +16,25 @@ class AssemblyDifferenceMemberCount(AssemblyDifference,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Count1=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Number of members in the first assembly
-
-Get: Count1(self: AssemblyDifferenceMemberCount) -> int
-
+ """Number of members in the first assembly
+
+
+
+Get: Count1(self: AssemblyDifferenceMemberCount) -> int
+
+
+
 """
 
  Count2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Number of members in the second assembly
-
-Get: Count2(self: AssemblyDifferenceMemberCount) -> int
-
+ """Number of members in the second assembly
+
+
+
+Get: Count2(self: AssemblyDifferenceMemberCount) -> int
+
+
+
 """
 
 

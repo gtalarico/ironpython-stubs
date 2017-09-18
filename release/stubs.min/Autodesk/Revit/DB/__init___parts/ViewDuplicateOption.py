@@ -1,7 +1,9 @@
 class ViewDuplicateOption(Enum,IComparable,IFormattable,IConvertible):
  """
- Options for duplicating views
- 
+ Options for duplicating views
+
+ 
+
  enum ViewDuplicateOption,values: AsDependent (1),Duplicate (0),WithDetailing (2)
  """
  def __eq__(self,*args):

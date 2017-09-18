@@ -1,8 +1,11 @@
 class TilePatternsBuiltIn(Enum,IComparable,IFormattable,IConvertible):
  """
- Revit's built-in tile patterns.
- See Autodesk.Revit.DB.TilePattern.
- 
+ Revit's built-in tile patterns.
+
+ See Autodesk.Revit.DB.TilePattern.
+
+ 
+
  enum TilePatternsBuiltIn,values: Arrows (11),HalfStep (5),Hexagon (4),Octagon (13),OctagonRotate (14),Rectangle (1),RectangleCheckerboard (8),Rhomboid (3),RhomboidCheckerboard (9),ThirdStep (6),Triangle_Bent (2),Triangle_Flat (15),TriangleCheckerboard_Bent (7),TriangleCheckerboard_Flat (16),TriangleStep_Bent (10),ZigZag (12)
  """
  def __eq__(self,*args):

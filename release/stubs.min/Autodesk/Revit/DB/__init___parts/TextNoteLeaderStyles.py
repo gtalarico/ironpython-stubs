@@ -1,7 +1,9 @@
 class TextNoteLeaderStyles(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all the Leader styles.
- 
+ An enumerated type listing all the Leader styles.
+
+ 
+
  enum TextNoteLeaderStyles,values: LCS_NONE (0),LCS_ONE_SEG_ARC (2),LCS_ONE_SEG_LINE (1),LCS_TWO_SEG_LINE (3)
  """
  def __eq__(self,*args):

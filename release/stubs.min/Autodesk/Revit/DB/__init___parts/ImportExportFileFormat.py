@@ -1,7 +1,9 @@
 class ImportExportFileFormat(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes formats supported by import / export.
- 
+ Describes formats supported by import / export.
+
+ 
+
  enum ImportExportFileFormat,values: Civil3D (10),DGN (9),DWF (2),DWFX (4),DWG (1),DXF (12),FBX (7),GBXML (6),IFC (14),Image (8),Inventor (11),NWC (15),SAT (13)
  """
  def __eq__(self,*args):

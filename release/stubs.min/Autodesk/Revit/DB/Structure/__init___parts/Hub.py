@@ -8,25 +8,34 @@ class Hub(Element,IDisposable):
   pass
  def GetHubConnectorManager(self):
   """
-  GetHubConnectorManager(self: Hub) -> ConnectorManager
-  
-   Retrieves the ConnectorManager of the Hub.
+  GetHubConnectorManager(self: Hub) -> ConnectorManager
+
+  
+
+   Retrieves the ConnectorManager of the Hub.
+
    Returns: The ConnectorManager.
   """
   pass
  def GetOrigin(self):
   """
-  GetOrigin(self: Hub) -> XYZ
-  
-   Retrieves position of a Hub if such position is a 3D point.
+  GetOrigin(self: Hub) -> XYZ
+
+  
+
+   Retrieves position of a Hub if such position is a 3D point.
+
    Returns: The origin.
   """
   pass
  def HasOrigin(self):
   """
-  HasOrigin(self: Hub) -> bool
-  
-   Provides information if Hub has a specific location at point in 3D space.
+  HasOrigin(self: Hub) -> bool
+
+  
+
+   Provides information if Hub has a specific location at point in 3D space.
+
    Returns: True if the Hub has a specific location at point in 3D space.
   """
   pass

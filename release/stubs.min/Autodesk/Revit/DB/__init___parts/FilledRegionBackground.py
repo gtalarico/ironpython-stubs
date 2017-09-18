@@ -1,7 +1,9 @@
 class FilledRegionBackground(Enum,IComparable,IFormattable,IConvertible):
  """
- The filled region background types.
- 
+ The filled region background types.
+
+ 
+
  enum FilledRegionBackground,values: Opaque (0),Transparent (1)
  """
  def __eq__(self,*args):

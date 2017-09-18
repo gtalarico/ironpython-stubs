@@ -19,11 +19,16 @@ class ElectricalEquipment(MEPModel,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  DistributionSystem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """get or set the Distribution System for the Electrical Equipment.
-
-Get: DistributionSystem(self: ElectricalEquipment) -> DistributionSysType
-
-Set: DistributionSystem(self: ElectricalEquipment)=value
+ """get or set the Distribution System for the Electrical Equipment.
+
+
+
+Get: DistributionSystem(self: ElectricalEquipment) -> DistributionSysType
+
+
+
+Set: DistributionSystem(self: ElectricalEquipment)=value
+
 """
 
 

@@ -1,7 +1,9 @@
 class DistributionType(Enum,IComparable,IFormattable,IConvertible):
  """
- The type of the distribution
- 
+ The type of the distribution
+
+ 
+
  enum DistributionType,values: Uniform (0),VaryingLength (1)
  """
  def __eq__(self,*args):

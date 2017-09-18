@@ -1,7 +1,9 @@
 class HorizontalTextAlignment(Enum,IComparable,IFormattable,IConvertible):
  """
- Supported kinds of text horizontal alignment within the text containing box.
- 
+ Supported kinds of text horizontal alignment within the text containing box.
+
+ 
+
  enum HorizontalTextAlignment,values: Center (2),Left (0),Right (1)
  """
  def __eq__(self,*args):

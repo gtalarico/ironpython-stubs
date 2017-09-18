@@ -19,24 +19,36 @@ class FolderItemInfo(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  ElementId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The folder parameter Id
-
-Get: ElementId(self: FolderItemInfo) -> ElementId
-
+ """The folder parameter Id
+
+
+
+Get: ElementId(self: FolderItemInfo) -> ElementId
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: FolderItemInfo) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: FolderItemInfo) -> bool
+
+
+
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The folder name
-
-Get: Name(self: FolderItemInfo) -> str
-
+ """The folder name
+
+
+
+Get: Name(self: FolderItemInfo) -> str
+
+
+
 """
 
 

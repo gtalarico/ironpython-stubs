@@ -22,10 +22,14 @@ class AreaReinforcementCurve(CurveElement,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Curve=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the 3D curve forming part of the boundary of an Area Reinforcement element.
-
-Get: Curve(self: AreaReinforcementCurve) -> Curve
-
+ """Returns the 3D curve forming part of the boundary of an Area Reinforcement element.
+
+
+
+Get: Curve(self: AreaReinforcementCurve) -> Curve
+
+
+
 """
 
 

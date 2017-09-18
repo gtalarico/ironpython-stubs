@@ -5,36 +5,51 @@ class CableTraySizeIterator(object,IEnumerator[MEPSize],IDisposable,IEnumerator)
   pass
  def GetCurrent(self):
   """
-  GetCurrent(self: CableTraySizeIterator) -> MEPSize
-  
-   Returns the current MEPSize.
+  GetCurrent(self: CableTraySizeIterator) -> MEPSize
+
+  
+
+   Returns the current MEPSize.
+
    Returns: The current MEPSize.
   """
   pass
  def HasCurrent(self):
   """
-  HasCurrent(self: CableTraySizeIterator) -> bool
-  
-   Identifies if the iterator has a current item.
+  HasCurrent(self: CableTraySizeIterator) -> bool
+
+  
+
+   Identifies if the iterator has a current item.
+
    Returns: True if there is a current item.
   """
   pass
  def IsDone(self):
   """
-  IsDone(self: CableTraySizeIterator) -> bool
-  
-   Identifies if the iteration has completed.
-   Returns: True if the iteration has no more items.  False if there are more items to be 
+  IsDone(self: CableTraySizeIterator) -> bool
+
+  
+
+   Identifies if the iteration has completed.
+
+   Returns: True if the iteration has no more items.  False if there are more items to be 
+
     iterated.
   """
   pass
  def MoveNext(self):
   """
-  MoveNext(self: CableTraySizeIterator) -> bool
-  
-   Increments the iterator to the next item.
-   Returns: True if there is a next available item in this iterator.
-     False if the 
+  MoveNext(self: CableTraySizeIterator) -> bool
+
+  
+
+   Increments the iterator to the next item.
+
+   Returns: True if there is a next available item in this iterator.
+
+     False if the 
+
     iterator has completed all available items.
   """
   pass
@@ -46,7 +61,8 @@ class CableTraySizeIterator(object,IEnumerator[MEPSize],IDisposable,IEnumerator)
   pass
  def Reset(self):
   """
-  Reset(self: CableTraySizeIterator)
+  Reset(self: CableTraySizeIterator)
+
    Resets the iterator to the initial state.
   """
   pass
@@ -69,17 +85,25 @@ class CableTraySizeIterator(object,IEnumerator[MEPSize],IDisposable,IEnumerator)
   """ __repr__(self: object) -> str """
   pass
  Current=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the item at the current position of the iterator.
-
-Get: Current(self: CableTraySizeIterator) -> MEPSize
-
+ """Gets the item at the current position of the iterator.
+
+
+
+Get: Current(self: CableTraySizeIterator) -> MEPSize
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: CableTraySizeIterator) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: CableTraySizeIterator) -> bool
+
+
+
 """
 
 

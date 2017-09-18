@@ -1,9 +1,13 @@
 class ExecutionEngineException(SystemException,ISerializable,_Exception):
  """
- The exception that is thrown when there is an internal error in the execution engine of the common language runtime. This class cannot be inherited.
- 
- ExecutionEngineException()
- ExecutionEngineException(message: str)
+ The exception that is thrown when there is an internal error in the execution engine of the common language runtime. This class cannot be inherited.
+
+ 
+
+ ExecutionEngineException()
+
+ ExecutionEngineException(message: str)
+
  ExecutionEngineException(message: str,innerException: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,8 +22,10 @@ class ExecutionEngineException(SystemException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,innerException=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
   __new__(cls: type,message: str,innerException: Exception)
   """
   pass

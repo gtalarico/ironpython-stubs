@@ -1,7 +1,9 @@
 class PropOverrideMode(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing ways how overridden object styles get exported.
- 
+ An enumerated type listing ways how overridden object styles get exported.
+
+ 
+
  enum PropOverrideMode,values: ByEntity (0),ByLayer (1),NewLayer (2)
  """
  def __eq__(self,*args):

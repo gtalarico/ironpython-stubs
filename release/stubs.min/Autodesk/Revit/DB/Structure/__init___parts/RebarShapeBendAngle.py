@@ -1,14 +1,23 @@
 class RebarShapeBendAngle(Enum,IComparable,IFormattable,IConvertible):
  """
- A bend in a rebar shape has an angular range
-    specified by one of these values. The angles refer to
-    the angle swept out by one segment as it is bent
-    relative to another. That is,an "Obtuse" bend results
-    in two segments that meet at an angle that is less
-    than 90 degrees when measured internally. Put another
-    way,to create an equilateral triangle,you would need
-    two "Obtuse" bends.
- 
+ A bend in a rebar shape has an angular range
+
+    specified by one of these values. The angles refer to
+
+    the angle swept out by one segment as it is bent
+
+    relative to another. That is,an "Obtuse" bend results
+
+    in two segments that meet at an angle that is less
+
+    than 90 degrees when measured internally. Put another
+
+    way,to create an equilateral triangle,you would need
+
+    two "Obtuse" bends.
+
+ 
+
  enum RebarShapeBendAngle,values: Acute (1),Obtuse (3),Right (2)
  """
  def __eq__(self,*args):

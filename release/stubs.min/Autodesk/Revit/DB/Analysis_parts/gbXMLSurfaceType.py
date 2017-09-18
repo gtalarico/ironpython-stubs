@@ -1,8 +1,11 @@
 class gbXMLSurfaceType(Enum,IComparable,IFormattable,IConvertible):
  """
- This enumeration corresponds to the surfaceType attribute in gbXML
-    and identifies the type of surface defined.
- 
+ This enumeration corresponds to the surfaceType attribute in gbXML
+
+    and identifies the type of surface defined.
+
+ 
+
  enum gbXMLSurfaceType,values: Ceiling (7),ExteriorWall (1),InteriorFloor (3),InteriorWall (0),NoOfSurfaceTypes (12),RaisedFloor (10),Roof (2),Shade (4),SlabOnGrade (11),SurfaceAir (8),UndergroundCeiling (9),UndergroundSlab (6),UndergroundWall (5)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class RoutingPreferenceRuleGroupType(Enum,IComparable,IFormattable,IConvertible):
  """
- Add more rule group type here.
- 
+ Add more rule group type here.
+
+ 
+
  enum RoutingPreferenceRuleGroupType,values: Caps (10),Crosses (3),Elbows (1),Junctions (2),MechanicalJoints (6),Segments (0),Transitions (4),TransitionsOvalToRound (9),TransitionsRectangularToOval (8),TransitionsRectangularToRound (7),Undefined (-1),Unions (5)
  """
  def __eq__(self,*args):

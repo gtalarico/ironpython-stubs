@@ -1,9 +1,13 @@
 class RebarShapeConstraint180DegreeBendRadius(RebarShapeConstraint,IDisposable):
  """
- A constraint which can be applied to a RebarShapeSegment,and causes the segment
-    to be replaced with a 180-degree arc. The associated parameter drives
-    the radius of the arc.
- 
+ A constraint which can be applied to a RebarShapeSegment,and causes the segment
+
+    to be replaced with a 180-degree arc. The associated parameter drives
+
+    the radius of the arc.
+
+ 
+
  RebarShapeConstraint180DegreeBendRadius(paramId: ElementId,refType: RebarShapeArcReferenceType)
  """
  def Dispose(self):
@@ -26,10 +30,14 @@ class RebarShapeConstraint180DegreeBendRadius(RebarShapeConstraint,IDisposable):
   """ __new__(cls: type,paramId: ElementId,refType: RebarShapeArcReferenceType) """
   pass
  ArcReferenceType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """A choice of rule for measuring the radius.
-
-Get: ArcReferenceType(self: RebarShapeConstraint180DegreeBendRadius) -> RebarShapeArcReferenceType
-
+ """A choice of rule for measuring the radius.
+
+
+
+Get: ArcReferenceType(self: RebarShapeConstraint180DegreeBendRadius) -> RebarShapeArcReferenceType
+
+
+
 """
 
 

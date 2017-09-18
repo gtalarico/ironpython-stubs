@@ -1,16 +1,23 @@
 class TableLayoutControlCollection(ControlCollection,IList,ICollection,IEnumerable,ICloneable):
  """
- Represents a collection of child controls in a table layout container.
- 
+ Represents a collection of child controls in a table layout container.
+
+ 
+
  TableLayoutControlCollection(container: TableLayoutPanel)
  """
  def Add(self,*__args):
   """
-  Add(self: TableLayoutControlCollection,control: Control,column: int,row: int)
-   Adds the specified control to the collection and positions it at the specified cell.
-  
-   control: The control to add.
-   column: The column in which control will be placed.
+  Add(self: TableLayoutControlCollection,control: Control,column: int,row: int)
+
+   Adds the specified control to the collection and positions it at the specified cell.
+
+  
+
+   control: The control to add.
+
+   column: The column in which control will be placed.
+
    row: The row in which control will be placed.
   """
   pass
@@ -31,10 +38,14 @@ class TableLayoutControlCollection(ControlCollection,IList,ICollection,IEnumerab
   """ __new__(cls: type,container: TableLayoutPanel) """
   pass
  Container=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the parent System.Windows.Forms.TableLayoutPanel that contains the controls in the collection.
-
-Get: Container(self: TableLayoutControlCollection) -> TableLayoutPanel
-
+ """Gets the parent System.Windows.Forms.TableLayoutPanel that contains the controls in the collection.
+
+
+
+Get: Container(self: TableLayoutControlCollection) -> TableLayoutPanel
+
+
+
 """
 
 

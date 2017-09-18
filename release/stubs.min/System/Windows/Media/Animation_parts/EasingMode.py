@@ -1,7 +1,9 @@
 class EasingMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines the modes in which classes derived from System.Windows.Media.Animation.EasingFunctionBase perform their easing.
- 
+ Defines the modes in which classes derived from System.Windows.Media.Animation.EasingFunctionBase perform their easing.
+
+ 
+
  enum EasingMode,values: EaseIn (0),EaseInOut (2),EaseOut (1)
  """
  def __eq__(self,*args):

@@ -16,17 +16,25 @@ class AssemblyMemberDifferentType(AssemblyMemberDifference,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  TypeId1=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Type id of the first assembly member
-
-Get: TypeId1(self: AssemblyMemberDifferentType) -> ElementId
-
+ """Type id of the first assembly member
+
+
+
+Get: TypeId1(self: AssemblyMemberDifferentType) -> ElementId
+
+
+
 """
 
  TypeId2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Type id of the second assembly member
-
-Get: TypeId2(self: AssemblyMemberDifferentType) -> ElementId
-
+ """Type id of the second assembly member
+
+
+
+Get: TypeId2(self: AssemblyMemberDifferentType) -> ElementId
+
+
+
 """
 
 

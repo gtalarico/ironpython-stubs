@@ -19,18 +19,27 @@ class DefinitionGroup(APIObject,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Definitions=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The Definitions property returns an object that contains all the shared parameter
-definitions within the group.
-
-Get: Definitions(self: DefinitionGroup) -> Definitions
-
+ """The Definitions property returns an object that contains all the shared parameter
+
+definitions within the group.
+
+
+
+Get: Definitions(self: DefinitionGroup) -> Definitions
+
+
+
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the name of the parameter group.
-
-Get: Name(self: DefinitionGroup) -> str
-
+ """Returns the name of the parameter group.
+
+
+
+Get: Name(self: DefinitionGroup) -> str
+
+
+
 """
 
 

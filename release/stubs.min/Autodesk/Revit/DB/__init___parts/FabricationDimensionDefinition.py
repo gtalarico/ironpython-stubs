@@ -19,38 +19,58 @@ class FabricationDimensionDefinition(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsModifiable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """If the fabrication dimension is modifiable by user.
-
-Get: IsModifiable(self: FabricationDimensionDefinition) -> bool
-
+ """If the fabrication dimension is modifiable by user.
+
+
+
+Get: IsModifiable(self: FabricationDimensionDefinition) -> bool
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: FabricationDimensionDefinition) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: FabricationDimensionDefinition) -> bool
+
+
+
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Fabrication dimension name.
-
-Get: Name(self: FabricationDimensionDefinition) -> str
-
+ """Fabrication dimension name.
+
+
+
+Get: Name(self: FabricationDimensionDefinition) -> str
+
+
+
 """
 
  Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Fabrication dimension type.
-
-Get: Type(self: FabricationDimensionDefinition) -> FabricationDimensionType
-
+ """Fabrication dimension type.
+
+
+
+Get: Type(self: FabricationDimensionDefinition) -> FabricationDimensionType
+
+
+
 """
 
  UnitType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Fabrication dimension unit type.
-
-Get: UnitType(self: FabricationDimensionDefinition) -> FabricationDimensionUnitType
-
+ """Fabrication dimension unit type.
+
+
+
+Get: UnitType(self: FabricationDimensionDefinition) -> FabricationDimensionUnitType
+
+
+
 """
 
 

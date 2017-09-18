@@ -1,7 +1,9 @@
 class CalendarMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies whether a System.Windows.Controls.Calendar displays a month,year,or decade.
- 
+ Specifies whether a System.Windows.Controls.Calendar displays a month,year,or decade.
+
+ 
+
  enum CalendarMode,values: Decade (2),Month (0),Year (1)
  """
  def __eq__(self,*args):

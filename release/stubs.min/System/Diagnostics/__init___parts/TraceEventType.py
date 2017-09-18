@@ -1,7 +1,9 @@
 class TraceEventType(Enum,IComparable,IFormattable,IConvertible):
  """
- Identifies the type of event that has caused the trace.
- 
+ Identifies the type of event that has caused the trace.
+
+ 
+
  enum TraceEventType,values: Critical (1),Error (2),Information (8),Resume (2048),Start (256),Stop (512),Suspend (1024),Transfer (4096),Verbose (16),Warning (4)
  """
  def __eq__(self,*args):

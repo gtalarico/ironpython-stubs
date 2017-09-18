@@ -1,7 +1,9 @@
 class DataGridViewPaintParts(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines values for specifying the parts of a System.Windows.Forms.DataGridViewCell that are to be painted.
- 
+ Defines values for specifying the parts of a System.Windows.Forms.DataGridViewCell that are to be painted.
+
+ 
+
  enum (flags) DataGridViewPaintParts,values: All (127),Background (1),Border (2),ContentBackground (4),ContentForeground (8),ErrorIcon (16),Focus (32),None (0),SelectionBackground (64)
  """
  def __eq__(self,*args):

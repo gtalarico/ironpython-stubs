@@ -3,13 +3,20 @@ class WallFoundation(HostObject,IDisposable):
  @staticmethod
  def Create(document,typeId,wallId):
   """
-  Create(document: Document,typeId: ElementId,wallId: ElementId) -> WallFoundation
-  
-   Creates a new wall foundation within the project.
-  
-   document: The document.
-   typeId: The id of the wall foundation type of the newly created wall foundation.
-   wallId: The id of the host wall of the newly created wall foundation.
+  Create(document: Document,typeId: ElementId,wallId: ElementId) -> WallFoundation
+
+  
+
+   Creates a new wall foundation within the project.
+
+  
+
+   document: The document.
+
+   typeId: The id of the wall foundation type of the newly created wall foundation.
+
+   wallId: The id of the host wall of the newly created wall foundation.
+
    Returns: If successful,returns the newly created wall foundation,ll otherwise.
   """
   pass
@@ -21,8 +28,10 @@ class WallFoundation(HostObject,IDisposable):
   pass
  def GetFoundationType(self):
   """
-  GetFoundationType(self: WallFoundation) -> WallFoundationType
-  
+  GetFoundationType(self: WallFoundation) -> WallFoundationType
+
+  
+
    Gets an object that represents the type of the foundation.
   """
   pass
@@ -34,7 +43,8 @@ class WallFoundation(HostObject,IDisposable):
   pass
  def SetFoundationType(self,type):
   """
-  SetFoundationType(self: WallFoundation,type: WallFoundationType)
+  SetFoundationType(self: WallFoundation,type: WallFoundationType)
+
    Sets an object that represents the type of the foundation.
   """
   pass
@@ -48,10 +58,14 @@ class WallFoundation(HostObject,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  WallId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the id of the host wall.
-
-Get: WallId(self: WallFoundation) -> ElementId
-
+ """Returns the id of the host wall.
+
+
+
+Get: WallId(self: WallFoundation) -> ElementId
+
+
+
 """
 
 

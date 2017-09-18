@@ -1,10 +1,15 @@
 class ArgumentNullException(ArgumentException,ISerializable,_Exception):
  """
- The exception that is thrown when a null reference (Nothing in Visual Basic) is passed to a method that does not accept it as a valid argument.
- 
- ArgumentNullException()
- ArgumentNullException(paramName: str)
- ArgumentNullException(message: str,innerException: Exception)
+ The exception that is thrown when a null reference (Nothing in Visual Basic) is passed to a method that does not accept it as a valid argument.
+
+ 
+
+ ArgumentNullException()
+
+ ArgumentNullException(paramName: str)
+
+ ArgumentNullException(message: str,innerException: Exception)
+
  ArgumentNullException(paramName: str,message: str)
  """
  def add_SerializeObjectState(self,*args):
@@ -19,10 +24,14 @@ class ArgumentNullException(ArgumentException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type)
-  __new__(cls: type,paramName: str)
-  __new__(cls: type,message: str,innerException: Exception)
-  __new__(cls: type,paramName: str,message: str)
+  __new__(cls: type)
+
+  __new__(cls: type,paramName: str)
+
+  __new__(cls: type,message: str,innerException: Exception)
+
+  __new__(cls: type,paramName: str,message: str)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

@@ -1,7 +1,9 @@
 class VerticalAlignmentStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Declares the vertical alignment style of font.
- 
+ Declares the vertical alignment style of font.
+
+ 
+
  enum VerticalAlignmentStyle,values: Bottom (8),Middle (4),Top (0)
  """
  def __eq__(self,*args):

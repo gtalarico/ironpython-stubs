@@ -1,10 +1,15 @@
 class COMException(ExternalException,ISerializable,_Exception):
  """
- The exception that is thrown when an unrecognized HRESULT is returned from a COM method call.
- 
- COMException()
- COMException(message: str)
- COMException(message: str,inner: Exception)
+ The exception that is thrown when an unrecognized HRESULT is returned from a COM method call.
+
+ 
+
+ COMException()
+
+ COMException(message: str)
+
+ COMException(message: str,inner: Exception)
+
  COMException(message: str,errorCode: int)
  """
  def add_SerializeObjectState(self,*args):
@@ -15,10 +20,14 @@ class COMException(ExternalException,ISerializable,_Exception):
   pass
  def ToString(self):
   """
-  ToString(self: COMException) -> str
-  
-   Converts the contents of the exception to a string.
-   Returns: A string containing the System.Exception.HResult,System.Exception.Message,
+  ToString(self: COMException) -> str
+
+  
+
+   Converts the contents of the exception to a string.
+
+   Returns: A string containing the System.Exception.HResult,System.Exception.Message,
+
     System.Exception.InnerException,and System.Exception.StackTrace properties of the exception.
   """
   pass
@@ -28,10 +37,14 @@ class COMException(ExternalException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,*__args):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,inner: Exception)
-  __new__(cls: type,message: str,errorCode: int)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,inner: Exception)
+
+  __new__(cls: type,message: str,errorCode: int)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

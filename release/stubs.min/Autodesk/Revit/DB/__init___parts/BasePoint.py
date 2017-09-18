@@ -22,10 +22,14 @@ class BasePoint(Element,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  IsShared=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates whether the base point is shared.
-
-Get: IsShared(self: BasePoint) -> bool
-
+ """Indicates whether the base point is shared.
+
+
+
+Get: IsShared(self: BasePoint) -> bool
+
+
+
 """
 
 

@@ -10,8 +10,10 @@
 
 class DesignToFabricationConverter(object,IDisposable):
  """
- This class represents the MEP design to fabrication part convert tool.
- 
+ This class represents the MEP design to fabrication part convert tool.
+
+ 
+
  DesignToFabricationConverter(document: Document)
  """
  def Convert(self,selection,serviceId):
@@ -22,52 +24,73 @@ class DesignToFabricationConverter(object,IDisposable):
   pass
  def GetConvertedFabricationParts(self):
   """
-  GetConvertedFabricationParts(self: DesignToFabricationConverter) -> ISet[ElementId]
-  
+  GetConvertedFabricationParts(self: DesignToFabricationConverter) -> ISet[ElementId]
+
+  
+
    Gets the set of element identifiers for newly created fabrication parts.
   """
   pass
  def GetConvertedFabricationPartsWithInvalidConnections(self):
   """
-  GetConvertedFabricationPartsWithInvalidConnections(self: DesignToFabricationConverter) -> IDictionary[ElementId,ElementId]
-  
+  GetConvertedFabricationPartsWithInvalidConnections(self: DesignToFabricationConverter) -> IDictionary[ElementId,ElementId]
+
+  
+
    Gets the collection of converted fabrication parts with invalid connections.
   """
   pass
  def GetDesignElementAndFabricationPartsWithDifferentOffsets(self):
   """
-  GetDesignElementAndFabricationPartsWithDifferentOffsets(self: DesignToFabricationConverter) -> IDictionary[ElementId,ISet[ElementId]]
-  
-   Gets the collection of design elements that failed to convert and the 
-    associated set of fabrication parts with different offsets.
-  
-   Returns: A map of design element identifiers that were not converted and the associated 
+  GetDesignElementAndFabricationPartsWithDifferentOffsets(self: DesignToFabricationConverter) -> IDictionary[ElementId,ISet[ElementId]]
+
+  
+
+   Gets the collection of design elements that failed to convert and the 
+
+    associated set of fabrication parts with different offsets.
+
+  
+
+   Returns: A map of design element identifiers that were not converted and the associated 
+
     set fabrication parts left with different offsets.
   """
   pass
  def GetDesignElementAndFabricationPartsWithOpenConnectors(self):
   """
-  GetDesignElementAndFabricationPartsWithOpenConnectors(self: DesignToFabricationConverter) -> IDictionary[ElementId,ISet[ElementId]]
-  
-   Gets the collection of design elements that failed to convert and the 
-    associated set of fabrication parts with open connectors.
-  
-   Returns: A map of design element identifiers that were not converted and the associated 
+  GetDesignElementAndFabricationPartsWithOpenConnectors(self: DesignToFabricationConverter) -> IDictionary[ElementId,ISet[ElementId]]
+
+  
+
+   Gets the collection of design elements that failed to convert and the 
+
+    associated set of fabrication parts with open connectors.
+
+  
+
+   Returns: A map of design element identifiers that were not converted and the associated 
+
     set fabrication parts left with open connectors.
   """
   pass
  def GetElementsWithOpenConnector(self):
   """
-  GetElementsWithOpenConnector(self: DesignToFabricationConverter) -> ISet[ElementId]
-  
-   Gets the set of fabrication part or MEP design element identifiers with open 
+  GetElementsWithOpenConnector(self: DesignToFabricationConverter) -> ISet[ElementId]
+
+  
+
+   Gets the set of fabrication part or MEP design element identifiers with open 
+
     connectors,caused by fittings failing to convert.
   """
   pass
  def GetPartialConvertFailureResults(self):
   """
-  GetPartialConvertFailureResults(self: DesignToFabricationConverter) -> IList[PartialFailureResults]
-  
+  GetPartialConvertFailureResults(self: DesignToFabricationConverter) -> IList[PartialFailureResults]
+
+  
+
    Gets the partial failure results.
   """
   pass
@@ -91,18 +114,24 @@ class DesignToFabricationConverter(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: DesignToFabricationConverter) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: DesignToFabricationConverter) -> bool
+
+
+
 """
 
 
 
 class DesignToFabricationConverterResult(Enum,IComparable,IFormattable,IConvertible):
  """
- Possible results from invoking the DesignToFabricationConverter.
- 
+ Possible results from invoking the DesignToFabricationConverter.
+
+ 
+
  enum DesignToFabricationConverterResult,values: PartialFailure (1),Success (0)
  """
  def __eq__(self,*args):
@@ -135,8 +164,10 @@ class DesignToFabricationConverterResult(Enum,IComparable,IFormattable,IConverti
 
 class FabricationPartFitResult(Enum,IComparable,IFormattable,IConvertible):
  """
- Fabrication part stretch/fill result.
- 
+ Fabrication part stretch/fill result.
+
+ 
+
  enum FabricationPartFitResult,values: BadDimensions (4),DimensionLocked (3),IncompatibleConnection (7),IncompatibleGeometry (1),MisalignedEnds (2),OffsetRequired (8),ShapeMismatch (5),SizeMismatch (6),Success (0),Unsupported (255)
  """
  def __eq__(self,*args):
@@ -180,22 +211,32 @@ class FabricationPartRouteEnd(object,IDisposable):
  @staticmethod
  def CreateFromCenterline(element,ptAt):
   """
-  CreateFromCenterline(element: Element,ptAt: XYZ) -> FabricationPartRouteEnd
-  
-   Create fabrication routing end from centreline point on straight element.
-  
-   element: The straight element that the centerline is on.
-   ptAt: A point along the straight element where the fitting to be cut in should be 
+  CreateFromCenterline(element: Element,ptAt: XYZ) -> FabricationPartRouteEnd
+
+  
+
+   Create fabrication routing end from centreline point on straight element.
+
+  
+
+   element: The straight element that the centerline is on.
+
+   ptAt: A point along the straight element where the fitting to be cut in should be 
+
     positioned.
   """
   pass
  @staticmethod
  def CreateFromConnector(connnector):
   """
-  CreateFromConnector(connnector: Connector) -> FabricationPartRouteEnd
-  
-   Create fabrication routing end from connector end point.
-  
+  CreateFromConnector(connnector: Connector) -> FabricationPartRouteEnd
+
+  
+
+   Create fabrication routing end from connector end point.
+
+  
+
    connnector: The connector that the route will connect to. Must not already be connected.
   """
   pass
@@ -218,10 +259,14 @@ class FabricationPartRouteEnd(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: FabricationPartRouteEnd) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: FabricationPartRouteEnd) -> bool
+
+
+
 """
 
 
@@ -231,13 +276,20 @@ class FabricationUtils(object):
  @staticmethod
  def ValidateConnectivity(pAdoc,pConn1,pConn2):
   """
-  ValidateConnectivity(pAdoc: Document,pConn1: Connector,pConn2: Connector) -> bool
-  
-   Check if two connectors are valid to connect directly without couplings
-  
-   pAdoc: The document.
-   pConn1: First connector to check.
-   pConn2: Second connector to check against.
+  ValidateConnectivity(pAdoc: Document,pConn1: Connector,pConn2: Connector) -> bool
+
+  
+
+   Check if two connectors are valid to connect directly without couplings
+
+  
+
+   pAdoc: The document.
+
+   pConn1: First connector to check.
+
+   pConn2: Second connector to check against.
+
    Returns: True if connection is valid,false otherwise.
   """
   pass
@@ -248,8 +300,10 @@ class FabricationUtils(object):
 
 class PartialFailureResults(Enum,IComparable,IFormattable,IConvertible):
  """
- Possible results of the partial failure from invoking the DesignToFabricationConverter.
- 
+ Possible results of the partial failure from invoking the DesignToFabricationConverter.
+
+ 
+
  enum PartialFailureResults,values: HaveDifferentOffsets (3),HaveOpenConnectors (2),InvalidConnections (1),NoMatchingSize (4),NotAllPartsConverted (0)
  """
  def __eq__(self,*args):
@@ -285,8 +339,10 @@ class PartialFailureResults(Enum,IComparable,IFormattable,IConvertible):
 
 class ValidationStatus(Enum,IComparable,IFormattable,IConvertible):
  """
- Lists the validation type of the fabrication part.
- 
+ Lists the validation type of the fabrication part.
+
+ 
+
  enum ValidationStatus,values: InvalidDimensions (1),NoMaterial (2),Valid (0)
  """
  def __eq__(self,*args):

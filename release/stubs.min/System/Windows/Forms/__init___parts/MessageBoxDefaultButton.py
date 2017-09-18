@@ -1,7 +1,9 @@
 class MessageBoxDefaultButton(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies constants defining the default button on a System.Windows.Forms.MessageBox.
- 
+ Specifies constants defining the default button on a System.Windows.Forms.MessageBox.
+
+ 
+
  enum MessageBoxDefaultButton,values: Button1 (0),Button2 (256),Button3 (512)
  """
  def __eq__(self,*args):

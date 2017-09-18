@@ -1,8 +1,11 @@
 class ElementStructuralTypeFilter(ElementQuickFilter,IDisposable):
  """
- A filter used to find elements matching a structural type.
- 
- ElementStructuralTypeFilter(structuralType: StructuralType,inverted: bool)
+ A filter used to find elements matching a structural type.
+
+ 
+
+ ElementStructuralTypeFilter(structuralType: StructuralType,inverted: bool)
+
  ElementStructuralTypeFilter(structuralType: StructuralType)
  """
  def Dispose(self):
@@ -23,15 +26,20 @@ class ElementStructuralTypeFilter(ElementQuickFilter,IDisposable):
  @staticmethod
  def __new__(self,structuralType,inverted=None):
   """
-  __new__(cls: type,structuralType: StructuralType,inverted: bool)
+  __new__(cls: type,structuralType: StructuralType,inverted: bool)
+
   __new__(cls: type,structuralType: StructuralType)
   """
   pass
  StructuralType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The structural type.
-
-Get: StructuralType(self: ElementStructuralTypeFilter) -> StructuralType
-
+ """The structural type.
+
+
+
+Get: StructuralType(self: ElementStructuralTypeFilter) -> StructuralType
+
+
+
 """
 
 

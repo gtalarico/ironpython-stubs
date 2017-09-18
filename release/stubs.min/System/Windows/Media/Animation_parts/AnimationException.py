@@ -14,24 +14,36 @@ class AnimationException(SystemException,ISerializable,_Exception):
  def __str__(self,*args):
   pass
  Clock=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the clock that generates the animated values.
-
-Get: Clock(self: AnimationException) -> AnimationClock
-
+ """Gets the clock that generates the animated values.
+
+
+
+Get: Clock(self: AnimationException) -> AnimationClock
+
+
+
 """
 
  Property=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the animated dependency property.
-
-Get: Property(self: AnimationException) -> DependencyProperty
-
+ """Gets the animated dependency property.
+
+
+
+Get: Property(self: AnimationException) -> DependencyProperty
+
+
+
 """
 
  Target=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the animated object.
-
-Get: Target(self: AnimationException) -> IAnimatable
-
+ """Gets the animated object.
+
+
+
+Get: Target(self: AnimationException) -> IAnimatable
+
+
+
 """
 
 

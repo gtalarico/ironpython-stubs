@@ -1,7 +1,9 @@
 class AutoSizeMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
- 
+ Specifies how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
+
+ 
+
  enum AutoSizeMode,values: GrowAndShrink (0),GrowOnly (1)
  """
  def __eq__(self,*args):

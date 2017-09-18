@@ -2,12 +2,18 @@ class FamilySizeTable(object,IDisposable):
  """ Contains size information for a family. """
  def AsValueString(self,row,column):
   """
-  AsValueString(self: FamilySizeTable,row: int,column: int) -> str
-  
-   Gets the table cell value as a string.
-  
-   row: The table row.
-   column: The table column.
+  AsValueString(self: FamilySizeTable,row: int,column: int) -> str
+
+  
+
+   Gets the table cell value as a string.
+
+  
+
+   row: The table row.
+
+   column: The table column.
+
    Returns: The table cell value as a string.
   """
   pass
@@ -16,21 +22,31 @@ class FamilySizeTable(object,IDisposable):
   pass
  def GetColumnHeader(self,index):
   """
-  GetColumnHeader(self: FamilySizeTable,index: int) -> FamilySizeTableColumn
-  
-   Gets a column of the table at at given index.
-  
-   index: Index of the column.
+  GetColumnHeader(self: FamilySizeTable,index: int) -> FamilySizeTableColumn
+
+  
+
+   Gets a column of the table at at given index.
+
+  
+
+   index: Index of the column.
+
    Returns: The column at the given index.
   """
   pass
  def IsValidColumnIndex(self,index):
   """
-  IsValidColumnIndex(self: FamilySizeTable,index: int) -> bool
-  
-   Checks if the column index is valid.
-  
-   index: The index of the column.
+  IsValidColumnIndex(self: FamilySizeTable,index: int) -> bool
+
+  
+
+   Checks if the column index is valid.
+
+  
+
+   index: The index of the column.
+
    Returns: True if the column index is valid,false otherwise.
   """
   pass
@@ -50,24 +66,36 @@ class FamilySizeTable(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: FamilySizeTable) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: FamilySizeTable) -> bool
+
+
+
 """
 
  NumberOfColumns=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Number of columns in the table.
-
-Get: NumberOfColumns(self: FamilySizeTable) -> int
-
+ """Number of columns in the table.
+
+
+
+Get: NumberOfColumns(self: FamilySizeTable) -> int
+
+
+
 """
 
  NumberOfRows=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Number of rows in the table.
-
-Get: NumberOfRows(self: FamilySizeTable) -> int
-
+ """Number of rows in the table.
+
+
+
+Get: NumberOfRows(self: FamilySizeTable) -> int
+
+
+
 """
 
 

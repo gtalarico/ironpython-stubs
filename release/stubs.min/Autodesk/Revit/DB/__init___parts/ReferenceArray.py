@@ -1,20 +1,26 @@
 class ReferenceArray(APIObject,IDisposable,IEnumerable):
  """
- An array that contains reference objects.
- 
+ An array that contains reference objects.
+
+ 
+
  ReferenceArray()
  """
  def Append(self,item):
   """
-  Append(self: ReferenceArray,item: Reference)
-   Add the reference to the end of the array.
-  
+  Append(self: ReferenceArray,item: Reference)
+
+   Add the reference to the end of the array.
+
+  
+
    item: The reference to be added.
   """
   pass
  def Clear(self):
   """
-  Clear(self: ReferenceArray)
+  Clear(self: ReferenceArray)
+
    Removes every reference from the array,rendering it empty.
   """
   pass
@@ -23,27 +29,38 @@ class ReferenceArray(APIObject,IDisposable,IEnumerable):
   pass
  def ForwardIterator(self):
   """
-  ForwardIterator(self: ReferenceArray) -> ReferenceArrayIterator
-  
-   Retrieve a forward moving iterator to the array.
+  ForwardIterator(self: ReferenceArray) -> ReferenceArrayIterator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: ReferenceArray) -> IEnumerator
-  
-   Retrieve a forward moving iterator to the array.
+  GetEnumerator(self: ReferenceArray) -> IEnumerator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
  def Insert(self,item,index):
   """
-  Insert(self: ReferenceArray,item: Reference,index: int)
-   Insert the specified reference into the array.
-  
-   item: The reference to be inserted into the array.
-   index: The reference will be inserted before this index.
+  Insert(self: ReferenceArray,item: Reference,index: int)
+
+   Insert the specified reference into the array.
+
+  
+
+   item: The reference to be inserted into the array.
+
+   index: The reference will be inserted before this index.
+
    Returns: Returns whether the reference was inserted into the array.
   """
   pass
@@ -55,9 +72,12 @@ class ReferenceArray(APIObject,IDisposable,IEnumerable):
   pass
  def ReverseIterator(self):
   """
-  ReverseIterator(self: ReferenceArray) -> ReferenceArrayIterator
-  
-   Retrieve a backward moving iterator to the array.
+  ReverseIterator(self: ReferenceArray) -> ReferenceArrayIterator
+
+  
+
+   Retrieve a backward moving iterator to the array.
+
    Returns: Returns a backward moving iterator to the array.
   """
   pass
@@ -80,17 +100,25 @@ class ReferenceArray(APIObject,IDisposable,IEnumerable):
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Test to see if the array is empty.
-
-Get: IsEmpty(self: ReferenceArray) -> bool
-
+ """Test to see if the array is empty.
+
+
+
+Get: IsEmpty(self: ReferenceArray) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the number of references that are in the array.
-
-Get: Size(self: ReferenceArray) -> int
-
+ """Returns the number of references that are in the array.
+
+
+
+Get: Size(self: ReferenceArray) -> int
+
+
+
 """
 
 

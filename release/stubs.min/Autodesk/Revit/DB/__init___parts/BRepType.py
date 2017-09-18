@@ -1,7 +1,9 @@
 class BRepType(Enum,IComparable,IFormattable,IConvertible):
  """
- This class defines an enumerative type used to specify the type of output geometry expected from a BRepBuilder.
- 
+ This class defines an enumerative type used to specify the type of output geometry expected from a BRepBuilder.
+
+ 
+
  enum BRepType,values: OpenShell (0),Solid (1),Void (2)
  """
  def __eq__(self,*args):

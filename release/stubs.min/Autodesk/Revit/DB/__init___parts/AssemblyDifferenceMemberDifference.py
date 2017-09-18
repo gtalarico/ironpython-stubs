@@ -16,24 +16,36 @@ class AssemblyDifferenceMemberDifference(AssemblyDifference,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  MemberDifference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Difference between the assembly members
-
-Get: MemberDifference(self: AssemblyDifferenceMemberDifference) -> AssemblyMemberDifference
-
+ """Difference between the assembly members
+
+
+
+Get: MemberDifference(self: AssemblyDifferenceMemberDifference) -> AssemblyMemberDifference
+
+
+
 """
 
  MemberId1=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Id of the member in the first assembly
-
-Get: MemberId1(self: AssemblyDifferenceMemberDifference) -> ElementId
-
+ """Id of the member in the first assembly
+
+
+
+Get: MemberId1(self: AssemblyDifferenceMemberDifference) -> ElementId
+
+
+
 """
 
  MemberId2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Id of the member in the second assembly
-
-Get: MemberId2(self: AssemblyDifferenceMemberDifference) -> ElementId
-
+ """Id of the member in the second assembly
+
+
+
+Get: MemberId2(self: AssemblyDifferenceMemberDifference) -> ElementId
+
+
+
 """
 
 

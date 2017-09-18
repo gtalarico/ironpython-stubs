@@ -5,28 +5,40 @@ class ComponentRepeaterIterator(object,IEnumerator[ComponentRepeaterSlot],IDispo
   pass
  def GetCurrent(self):
   """
-  GetCurrent(self: ComponentRepeaterIterator) -> ComponentRepeaterSlot
-  
-   Returns the current repeater slot.
+  GetCurrent(self: ComponentRepeaterIterator) -> ComponentRepeaterSlot
+
+  
+
+   Returns the current repeater slot.
+
    Returns: The current slot.
   """
   pass
  def IsDone(self):
   """
-  IsDone(self: ComponentRepeaterIterator) -> bool
-  
-   Identifies if the iteration has completed.
-   Returns: True if the iteration has no more items.  False if there are more items to be 
+  IsDone(self: ComponentRepeaterIterator) -> bool
+
+  
+
+   Identifies if the iteration has completed.
+
+   Returns: True if the iteration has no more items.  False if there are more items to be 
+
     iterated.
   """
   pass
  def MoveNext(self):
   """
-  MoveNext(self: ComponentRepeaterIterator) -> bool
-  
-   Increments the iterator to the next item.
-   Returns: True if there is a next available item in this iterator.
-     False if the 
+  MoveNext(self: ComponentRepeaterIterator) -> bool
+
+  
+
+   Increments the iterator to the next item.
+
+   Returns: True if there is a next available item in this iterator.
+
+     False if the 
+
     iterator has completed all available items.
   """
   pass
@@ -38,7 +50,8 @@ class ComponentRepeaterIterator(object,IEnumerator[ComponentRepeaterSlot],IDispo
   pass
  def Reset(self):
   """
-  Reset(self: ComponentRepeaterIterator)
+  Reset(self: ComponentRepeaterIterator)
+
    Resets the iterator to the initial state.
   """
   pass
@@ -61,17 +74,25 @@ class ComponentRepeaterIterator(object,IEnumerator[ComponentRepeaterSlot],IDispo
   """ __repr__(self: object) -> str """
   pass
  Current=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the item at the current position of the iterator.
-
-Get: Current(self: ComponentRepeaterIterator) -> ComponentRepeaterSlot
-
+ """Gets the item at the current position of the iterator.
+
+
+
+Get: Current(self: ComponentRepeaterIterator) -> ComponentRepeaterSlot
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ComponentRepeaterIterator) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ComponentRepeaterIterator) -> bool
+
+
+
 """
 
 

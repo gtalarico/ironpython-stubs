@@ -3,11 +3,16 @@ class BuildingPadType(HostObjAttributes,IDisposable):
  @staticmethod
  def CreateDefault(document):
   """
-  CreateDefault(document: Document) -> BuildingPadType
-  
-   Creates a BuildingPadType element and adds it to the document.
-  
-   document: The document to be modified.
+  CreateDefault(document: Document) -> BuildingPadType
+
+  
+
+   Creates a BuildingPadType element and adds it to the document.
+
+  
+
+   document: The document to be modified.
+
    Returns: The new BuildingPadType element.
   """
   pass
@@ -33,10 +38,14 @@ class BuildingPadType(HostObjAttributes,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  ThermalProperties=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The calculated and settable thermal properties of the BuildingPadType
-
-Get: ThermalProperties(self: BuildingPadType) -> ThermalProperties
-
+ """The calculated and settable thermal properties of the BuildingPadType
+
+
+
+Get: ThermalProperties(self: BuildingPadType) -> ThermalProperties
+
+
+
 """
 
 

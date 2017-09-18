@@ -1,7 +1,9 @@
 class ConceptualConstructionFloorSlabType(Enum,IComparable,IFormattable,IConvertible):
  """
- ConceptualConstructionType values for Floors.
- 
+ ConceptualConstructionType values for Floors.
+
+ 
+
  enum ConceptualConstructionFloorSlabType,values: HighMassConstructionColdClimateSlabInsulation (5),HighMassConstructionFrigidClimateSlabInsulation (4),HighMassConstructionTypicalNoInsulation (6),InvalidFloorSlabTypeConstruction (-1),LightweightConstructionHighInsulation (0),LightweightConstructionLowInsulation (2),LightweightConstructionNoInsulationInterior (3),LightweightConstructionTypicalInsulation (1),NumFloorSlabTypeConstruction (7)
  """
  def __eq__(self,*args):

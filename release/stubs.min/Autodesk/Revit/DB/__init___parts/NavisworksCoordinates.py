@@ -1,7 +1,9 @@
 class NavisworksCoordinates(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing possible Coordinates of Navisworks Exporter.
- 
+ An enumerated type listing possible Coordinates of Navisworks Exporter.
+
+ 
+
  enum NavisworksCoordinates,values: Internal (0),Shared (1)
  """
  def __eq__(self,*args):

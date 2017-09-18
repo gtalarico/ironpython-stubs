@@ -1,7 +1,9 @@
 class EnergyAnalysisSurfaceType(Enum,IComparable,IFormattable,IConvertible):
  """
- Analytical surface types.
- 
+ Analytical surface types.
+
+ 
+
  enum EnergyAnalysisSurfaceType,values: Air (7),Ceiling (3),ExteriorFloor (5),ExteriorWall (1),InteriorFloor (4),InteriorWall (2),Roof (0),Shading (6),Underground (8)
  """
  def __eq__(self,*args):

@@ -22,17 +22,25 @@ class Area(SpatialElement,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  AreaScheme=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The area scheme.
-
-Get: AreaScheme(self: Area) -> AreaScheme
-
+ """The area scheme.
+
+
+
+Get: AreaScheme(self: Area) -> AreaScheme
+
+
+
 """
 
  IsGrossInterior=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The boolean value that indicates whether the area is gross interior.
-
-Get: IsGrossInterior(self: Area) -> bool
-
+ """The boolean value that indicates whether the area is gross interior.
+
+
+
+Get: IsGrossInterior(self: Area) -> bool
+
+
+
 """
 
 

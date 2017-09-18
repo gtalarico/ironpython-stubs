@@ -1,7 +1,9 @@
 class SearchOption(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies whether to search the current directory,or the current directory and all subdirectories.
- 
+ Specifies whether to search the current directory,or the current directory and all subdirectories.
+
+ 
+
  enum SearchOption,values: AllDirectories (1),TopDirectoryOnly (0)
  """
  def __eq__(self,*args):

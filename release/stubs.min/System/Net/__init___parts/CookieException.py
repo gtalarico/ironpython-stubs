@@ -1,7 +1,9 @@
 class CookieException(FormatException,ISerializable,_Exception):
  """
- The exception that is thrown when an error is made adding a System.Net.Cookie to a System.Net.CookieContainer.
- 
+ The exception that is thrown when an error is made adding a System.Net.Cookie to a System.Net.CookieContainer.
+
+ 
+
  CookieException()
  """
  def add_SerializeObjectState(self,*args):
@@ -9,16 +11,26 @@ class CookieException(FormatException,ISerializable,_Exception):
   pass
  def GetObjectData(self,serializationInfo,streamingContext):
   """
-  GetObjectData(self: CookieException,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo instance with the data needed to 
-    serialize the System.Net.CookieException.
-  
-  
-   serializationInfo: The object that holds the serialized object data. The 
-    System.Runtime.Serialization.SerializationInfo to populate with data.
-  
-   streamingContext: The contextual information about the source or destination. A 
-    System.Runtime.Serialization.StreamingContext that specifies the destination for this 
+  GetObjectData(self: CookieException,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
+
+   Populates a System.Runtime.Serialization.SerializationInfo instance with the data needed to 
+
+    serialize the System.Net.CookieException.
+
+  
+
+  
+
+   serializationInfo: The object that holds the serialized object data. The 
+
+    System.Runtime.Serialization.SerializationInfo to populate with data.
+
+  
+
+   streamingContext: The contextual information about the source or destination. A 
+
+    System.Runtime.Serialization.StreamingContext that specifies the destination for this 
+
     serialization.
   """
   pass
@@ -31,7 +43,8 @@ class CookieException(FormatException,ISerializable,_Exception):
  @staticmethod
  def __new__(self):
   """
-  __new__(cls: type)
+  __new__(cls: type)
+
   __new__(cls: type,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
   """
   pass

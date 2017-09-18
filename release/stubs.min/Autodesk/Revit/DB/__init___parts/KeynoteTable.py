@@ -9,11 +9,16 @@ class KeynoteTable(KeyBasedTreeEntryTable,IDisposable):
  @staticmethod
  def GetKeynoteTable(aDoc):
   """
-  GetKeynoteTable(aDoc: Document) -> KeynoteTable
-  
-   Gets the KeynoteTable from a Revit document.
-  
-   aDoc: The Revit document.
+  GetKeynoteTable(aDoc: Document) -> KeynoteTable
+
+  
+
+   Gets the KeynoteTable from a Revit document.
+
+  
+
+   aDoc: The Revit document.
+
    Returns: The KeynoteTable.
   """
   pass

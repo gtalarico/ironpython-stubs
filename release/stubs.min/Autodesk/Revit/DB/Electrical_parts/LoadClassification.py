@@ -1,7 +1,9 @@
 class LoadClassification(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type to list all demand factor classifications.
- 
+ An enumerated type to list all demand factor classifications.
+
+ 
+
  enum LoadClassification,values: Hvac (3),Lighting (2),Power (1),Undefined (0)
  """
  def __eq__(self,*args):

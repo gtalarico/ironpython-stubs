@@ -1,7 +1,9 @@
 class ConduitSize(object,IDisposable):
  """
- Stores the basic size information for a conduit.
- 
+ Stores the basic size information for a conduit.
+
+ 
+
  ConduitSize(nominalDiameter: float,innerDiameter: float,outerDiameter: float,bendRadius: float,usedInSizeLists: bool,usedInSizing: bool)
  """
  def Dispose(self):
@@ -27,52 +29,80 @@ class ConduitSize(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  BendRadius=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Minimum bend radius
-
-Get: BendRadius(self: ConduitSize) -> float
-
+ """Minimum bend radius
+
+
+
+Get: BendRadius(self: ConduitSize) -> float
+
+
+
 """
 
  InnerDiameter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Inner diameter
-
-Get: InnerDiameter(self: ConduitSize) -> float
-
+ """Inner diameter
+
+
+
+Get: InnerDiameter(self: ConduitSize) -> float
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ConduitSize) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ConduitSize) -> bool
+
+
+
 """
 
  NominalDiameter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Nominal diameter
-
-Get: NominalDiameter(self: ConduitSize) -> float
-
+ """Nominal diameter
+
+
+
+Get: NominalDiameter(self: ConduitSize) -> float
+
+
+
 """
 
  OuterDiameter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Outer diameter
-
-Get: OuterDiameter(self: ConduitSize) -> float
-
+ """Outer diameter
+
+
+
+Get: OuterDiameter(self: ConduitSize) -> float
+
+
+
 """
 
  UsedInSizeLists=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Whether it is used in size lists.
-
-Get: UsedInSizeLists(self: ConduitSize) -> bool
-
+ """Whether it is used in size lists.
+
+
+
+Get: UsedInSizeLists(self: ConduitSize) -> bool
+
+
+
 """
 
  UsedInSizing=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Whether is used in sizing.
-
-Get: UsedInSizing(self: ConduitSize) -> bool
-
+ """Whether is used in sizing.
+
+
+
+Get: UsedInSizing(self: ConduitSize) -> bool
+
+
+
 """
 
 

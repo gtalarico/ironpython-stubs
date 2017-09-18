@@ -22,24 +22,36 @@ class NestedFamilyTypeReference(Element,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  CategoryId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Category Id of the referenced family
-
-Get: CategoryId(self: NestedFamilyTypeReference) -> ElementId
-
+ """Category Id of the referenced family
+
+
+
+Get: CategoryId(self: NestedFamilyTypeReference) -> ElementId
+
+
+
 """
 
  FamilyName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Name of the referenced family
-
-Get: FamilyName(self: NestedFamilyTypeReference) -> str
-
+ """Name of the referenced family
+
+
+
+Get: FamilyName(self: NestedFamilyTypeReference) -> str
+
+
+
 """
 
  TypeName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Type of the referenced family
-
-Get: TypeName(self: NestedFamilyTypeReference) -> str
-
+ """Type of the referenced family
+
+
+
+Get: TypeName(self: NestedFamilyTypeReference) -> str
+
+
+
 """
 
 

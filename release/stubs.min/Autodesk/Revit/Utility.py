@@ -15,44 +15,66 @@ class AssetProperty(object,IDisposable):
   pass
  def GetAllConnectedProperties(self):
   """
-  GetAllConnectedProperties(self: AssetProperty) -> IList[AssetProperty]
-  
-   Gets the list of the connected properties.
-     Connected properties are the 
-    detachable properties of an AssetProperty.
-     e.g. diffuse property can have 
-    texture as its connected property. It can also detach texture on runtime.
-  
+  GetAllConnectedProperties(self: AssetProperty) -> IList[AssetProperty]
+
+  
+
+   Gets the list of the connected properties.
+
+     Connected properties are the 
+
+    detachable properties of an AssetProperty.
+
+     e.g. diffuse property can have 
+
+    texture as its connected property. It can also detach texture on runtime.
+
+  
+
    Returns: A list of the connected properties.
   """
   pass
  def GetConnectedPropertiesNames(self):
   """
-  GetConnectedPropertiesNames(self: AssetProperty) -> IList[str]
-  
-   Gets names of all connected properties.
+  GetConnectedPropertiesNames(self: AssetProperty) -> IList[str]
+
+  
+
+   Gets names of all connected properties.
+
    Returns: A list of the names of the connected properties.
   """
   pass
  def GetConnectedProperty(self,*__args):
   """
-  GetConnectedProperty(self: AssetProperty,index: int) -> AssetProperty
-  
-   Gets one connected property with specified index.
-   Returns: The AProperty of that index.
-  GetConnectedProperty(self: AssetProperty,name: str) -> AssetProperty
-  
-   Gets a connected property by its name.
-  
-   name: Name of the property.
+  GetConnectedProperty(self: AssetProperty,index: int) -> AssetProperty
+
+  
+
+   Gets one connected property with specified index.
+
+   Returns: The AProperty of that index.
+
+  GetConnectedProperty(self: AssetProperty,name: str) -> AssetProperty
+
+  
+
+   Gets a connected property by its name.
+
+  
+
+   name: Name of the property.
+
    Returns: The property with the specified name.
   """
   pass
  @staticmethod
  def GetTypeName(type):
   """
-  GetTypeName(type: AssetPropertyType) -> str
-  
+  GetTypeName(type: AssetPropertyType) -> str
+
+  
+
    Get the name of the AssetProperty
   """
   pass
@@ -72,39 +94,60 @@ class AssetProperty(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsReadOnly=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Identifies if the object is read-only or modifiable.
-   If true,the object may not be modified.  If false,the object's contents may be modified.
-
-Get: IsReadOnly(self: AssetProperty) -> bool
-
+ """Identifies if the object is read-only or modifiable.
+
+   If true,the object may not be modified.  If false,the object's contents may be modified.
+
+
+
+Get: IsReadOnly(self: AssetProperty) -> bool
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: AssetProperty) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: AssetProperty) -> bool
+
+
+
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the name of the AssetProperty
-
-Get: Name(self: AssetProperty) -> str
-
+ """Get the name of the AssetProperty
+
+
+
+Get: Name(self: AssetProperty) -> str
+
+
+
 """
 
  NumberOfConnectedProperties=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The number of currently connected properties.
-
-Get: NumberOfConnectedProperties(self: AssetProperty) -> int
-
+ """The number of currently connected properties.
+
+
+
+Get: NumberOfConnectedProperties(self: AssetProperty) -> int
+
+
+
 """
 
  Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the type of the AssetProperty
-
-Get: Type(self: AssetProperty) -> AssetPropertyType
-
+ """Returns the type of the AssetProperty
+
+
+
+Get: Type(self: AssetProperty) -> AssetPropertyType
+
+
+
 """
 
 
@@ -130,10 +173,14 @@ class AssetProperties(AssetProperty,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the number of the AssetProperty(s) in the object.
-
-Get: Size(self: AssetProperties) -> int
-
+ """Gets the number of the AssetProperty(s) in the object.
+
+
+
+Get: Size(self: AssetProperties) -> int
+
+
+
 """
 
 
@@ -159,24 +206,36 @@ class Asset(AssetProperties,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  AssetType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Type of the item the asset represents.
-
-Get: AssetType(self: Asset) -> AssetType
-
+ """Type of the item the asset represents.
+
+
+
+Get: AssetType(self: Asset) -> AssetType
+
+
+
 """
 
  LibraryName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The name of the library the asset belongs to.
-
-Get: LibraryName(self: Asset) -> str
-
+ """The name of the library the asset belongs to.
+
+
+
+Get: LibraryName(self: Asset) -> str
+
+
+
 """
 
  Title=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The title of the asset.
-
-Get: Title(self: Asset) -> str
-
+ """The title of the asset.
+
+
+
+Get: Title(self: Asset) -> str
+
+
+
 """
 
 
@@ -199,10 +258,14 @@ class AssetPropertyBoolean(AssetProperty,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the value of the property
-
-Get: Value(self: AssetPropertyBoolean) -> bool
-
+ """Get the value of the property
+
+
+
+Get: Value(self: AssetPropertyBoolean) -> bool
+
+
+
 """
 
 
@@ -225,17 +288,25 @@ class AssetPropertyDistance(AssetProperty,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  DisplayUnitType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The unit type of the property
-
-Get: DisplayUnitType(self: AssetPropertyDistance) -> DisplayUnitType
-
+ """The unit type of the property
+
+
+
+Get: DisplayUnitType(self: AssetPropertyDistance) -> DisplayUnitType
+
+
+
 """
 
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The value of the property
-
-Get: Value(self: AssetPropertyDistance) -> float
-
+ """The value of the property
+
+
+
+Get: Value(self: AssetPropertyDistance) -> float
+
+
+
 """
 
 
@@ -258,10 +329,14 @@ class AssetPropertyDouble(AssetProperty,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the value of the property
-
-Get: Value(self: AssetPropertyDouble) -> float
-
+ """Get the value of the property
+
+
+
+Get: Value(self: AssetPropertyDouble) -> float
+
+
+
 """
 
 
@@ -284,10 +359,14 @@ class AssetPropertyDoubleArray2d(AssetProperty,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the value of the property
-
-Get: Value(self: AssetPropertyDoubleArray2d) -> DoubleArray
-
+ """Get the value of the property
+
+
+
+Get: Value(self: AssetPropertyDoubleArray2d) -> DoubleArray
+
+
+
 """
 
 
@@ -310,10 +389,14 @@ class AssetPropertyDoubleArray3d(AssetProperty,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the value of the property
-
-Get: Value(self: AssetPropertyDoubleArray3d) -> DoubleArray
-
+ """Get the value of the property
+
+
+
+Get: Value(self: AssetPropertyDoubleArray3d) -> DoubleArray
+
+
+
 """
 
 
@@ -336,10 +419,14 @@ class AssetPropertyDoubleArray4d(AssetProperty,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the value of the property
-
-Get: Value(self: AssetPropertyDoubleArray4d) -> DoubleArray
-
+ """Get the value of the property
+
+
+
+Get: Value(self: AssetPropertyDoubleArray4d) -> DoubleArray
+
+
+
 """
 
 
@@ -362,10 +449,14 @@ class AssetPropertyDoubleMatrix44(AssetProperty,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the value of the property
-
-Get: Value(self: AssetPropertyDoubleMatrix44) -> DoubleArray
-
+ """Get the value of the property
+
+
+
+Get: Value(self: AssetPropertyDoubleMatrix44) -> DoubleArray
+
+
+
 """
 
 
@@ -388,10 +479,14 @@ class AssetPropertyEnum(AssetProperty,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the value of the property
-
-Get: Value(self: AssetPropertyEnum) -> int
-
+ """Get the value of the property
+
+
+
+Get: Value(self: AssetPropertyEnum) -> int
+
+
+
 """
 
 
@@ -414,10 +509,14 @@ class AssetPropertyFloat(AssetProperty,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the value of the property
-
-Get: Value(self: AssetPropertyFloat) -> Single
-
+ """Get the value of the property
+
+
+
+Get: Value(self: AssetPropertyFloat) -> Single
+
+
+
 """
 
 
@@ -429,8 +528,10 @@ class AssetPropertyFloatArray(AssetProperty,IDisposable):
   pass
  def GetValue(self):
   """
-  GetValue(self: AssetPropertyFloatArray) -> IList[Single]
-  
+  GetValue(self: AssetPropertyFloatArray) -> IList[Single]
+
+  
+
    Get the value of the property.
   """
   pass
@@ -465,10 +566,14 @@ class AssetPropertyInt64(AssetProperty,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the value of the property.
-
-Get: Value(self: AssetPropertyInt64) -> Int64
-
+ """Get the value of the property.
+
+
+
+Get: Value(self: AssetPropertyInt64) -> Int64
+
+
+
 """
 
 
@@ -491,10 +596,14 @@ class AssetPropertyInteger(AssetProperty,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the value of the property
-
-Get: Value(self: AssetPropertyInteger) -> int
-
+ """Get the value of the property
+
+
+
+Get: Value(self: AssetPropertyInteger) -> int
+
+
+
 """
 
 
@@ -506,8 +615,10 @@ class AssetPropertyList(AssetProperty,IDisposable):
   pass
  def GetValue(self):
   """
-  GetValue(self: AssetPropertyList) -> IList[AssetProperty]
-  
+  GetValue(self: AssetPropertyList) -> IList[AssetProperty]
+
+  
+
    Gets collection of properties stored in this property list.
   """
   pass
@@ -560,10 +671,14 @@ class AssetPropertyString(AssetProperty,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the value of the property
-
-Get: Value(self: AssetPropertyString) -> str
-
+ """Get the value of the property
+
+
+
+Get: Value(self: AssetPropertyString) -> str
+
+
+
 """
 
 
@@ -586,18 +701,24 @@ class AssetPropertyTime(AssetProperty,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the value of the property
-
-Get: Value(self: AssetPropertyTime) -> DateTime
-
+ """Get the value of the property
+
+
+
+Get: Value(self: AssetPropertyTime) -> DateTime
+
+
+
 """
 
 
 
 class AssetPropertyType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing AssetProperty Types in Revit.
- 
+ An enumerated type listing AssetProperty Types in Revit.
+
+ 
+
  enum AssetPropertyType,values: APT_Asset (15),APT_Boolean (2),APT_Distance (14),APT_Double (6),APT_Double44 (10),APT_DoubleArray2d (7),APT_DoubleArray3d (8),APT_DoubleArray4d (9),APT_Enum (3),APT_Float (5),APT_FloatArray (20),APT_Int64 (17),APT_Integer (4),APT_List (19),APT_Properties (1),APT_Reference (16),APT_String (11),APT_Time (12),APT_UInt64 (18),APT_Unknown (0)
  """
  def __eq__(self,*args):
@@ -664,34 +785,47 @@ class AssetPropertyUInt64(AssetProperty,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the value of the property.
-
-Get: Value(self: AssetPropertyUInt64) -> UInt64
-
+ """Get the value of the property.
+
+
+
+Get: Value(self: AssetPropertyUInt64) -> UInt64
+
+
+
 """
 
 
 
 class AssetSet(APIObject,IDisposable,IEnumerable):
  """
- A set that contains assets.
- 
+ A set that contains assets.
+
+ 
+
  AssetSet()
  """
  def Clear(self):
   """
-  Clear(self: AssetSet)
+  Clear(self: AssetSet)
+
    Removes every asset from the set,rendering it empty.
   """
   pass
  def Contains(self,item):
   """
-  Contains(self: AssetSet,item: Asset) -> bool
-  
-   Tests for the existence of a asset within the set.
-  
-   item: The asset to be searched for.
-   Returns: The Contains method returns True if the asset is within the set,otherwise 
+  Contains(self: AssetSet,item: Asset) -> bool
+
+  
+
+   Tests for the existence of a asset within the set.
+
+  
+
+   item: The asset to be searched for.
+
+   Returns: The Contains method returns True if the asset is within the set,otherwise 
+
     False.
   """
   pass
@@ -700,37 +834,53 @@ class AssetSet(APIObject,IDisposable,IEnumerable):
   pass
  def Erase(self,item):
   """
-  Erase(self: AssetSet,item: Asset) -> int
-  
-   Removes a specified asset from the set.
-  
-   item: The asset to be erased.
+  Erase(self: AssetSet,item: Asset) -> int
+
+  
+
+   Removes a specified asset from the set.
+
+  
+
+   item: The asset to be erased.
+
    Returns: The number of assets that were erased from the set.
   """
   pass
  def ForwardIterator(self):
   """
-  ForwardIterator(self: AssetSet) -> AssetSetIterator
-  
-   Retrieve a forward moving iterator to the set.
+  ForwardIterator(self: AssetSet) -> AssetSetIterator
+
+  
+
+   Retrieve a forward moving iterator to the set.
+
    Returns: Returns a forward moving iterator to the set.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: AssetSet) -> IEnumerator
-  
-   Retrieve a forward moving iterator to the set.
+  GetEnumerator(self: AssetSet) -> IEnumerator
+
+  
+
+   Retrieve a forward moving iterator to the set.
+
    Returns: Returns a forward moving iterator to the set.
   """
   pass
  def Insert(self,item):
   """
-  Insert(self: AssetSet,item: Asset) -> bool
-  
-   Insert the specified asset into the set.
-  
-   item: The asset to be inserted into the set.
+  Insert(self: AssetSet,item: Asset) -> bool
+
+  
+
+   Insert the specified asset into the set.
+
+  
+
+   item: The asset to be inserted into the set.
+
    Returns: Returns whether the asset was inserted into the set.
   """
   pass
@@ -742,9 +892,12 @@ class AssetSet(APIObject,IDisposable,IEnumerable):
   pass
  def ReverseIterator(self):
   """
-  ReverseIterator(self: AssetSet) -> AssetSetIterator
-  
-   Retrieve a backward moving iterator to the set.
+  ReverseIterator(self: AssetSet) -> AssetSetIterator
+
+  
+
+   Retrieve a backward moving iterator to the set.
+
    Returns: Returns a backward moving iterator to the set.
   """
   pass
@@ -761,25 +914,35 @@ class AssetSet(APIObject,IDisposable,IEnumerable):
   """ __iter__(self: IEnumerable) -> object """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Test to see if the set is empty.
-
-Get: IsEmpty(self: AssetSet) -> bool
-
+ """Test to see if the set is empty.
+
+
+
+Get: IsEmpty(self: AssetSet) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the number of assets that are in the set.
-
-Get: Size(self: AssetSet) -> int
-
+ """Returns the number of assets that are in the set.
+
+
+
+Get: Size(self: AssetSet) -> int
+
+
+
 """
 
 
 
 class AssetSetIterator(APIObject,IDisposable,IEnumerator):
  """
- An iterator to a asset set.
- 
+ An iterator to a asset set.
+
+ 
+
  AssetSetIterator()
  """
  def Dispose(self):
@@ -787,13 +950,20 @@ class AssetSetIterator(APIObject,IDisposable,IEnumerator):
   pass
  def MoveNext(self):
   """
-  MoveNext(self: AssetSetIterator) -> bool
-  
-   Move the iterator one item forward.
-   Returns: Returns True if the iterator was successfully moved forward one item and the 
-    Current
-     property will return a valid item. False will be returned 
-    it the iterator has reached the end of
+  MoveNext(self: AssetSetIterator) -> bool
+
+  
+
+   Move the iterator one item forward.
+
+   Returns: Returns True if the iterator was successfully moved forward one item and the 
+
+    Current
+
+     property will return a valid item. False will be returned 
+
+    it the iterator has reached the end of
+
      the set.
   """
   pass
@@ -808,7 +978,8 @@ class AssetSetIterator(APIObject,IDisposable,IEnumerator):
   pass
  def Reset(self):
   """
-  Reset(self: AssetSetIterator)
+  Reset(self: AssetSetIterator)
+
    Bring the iterator back to the start of the set.
   """
   pass
@@ -825,18 +996,24 @@ class AssetSetIterator(APIObject,IDisposable,IEnumerator):
   """ __iter__(self: IEnumerator) -> object """
   pass
  Current=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Retrieves the item that is the current focus of the iterator.
-
-Get: Current(self: AssetSetIterator) -> object
-
+ """Retrieves the item that is the current focus of the iterator.
+
+
+
+Get: Current(self: AssetSetIterator) -> object
+
+
+
 """
 
 
 
 class AssetType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated to list Asset Types in Revit.
- 
+ An enumerated to list Asset Types in Revit.
+
+ 
+
  enum AssetType,values: Appearance (4),Content (5)
  """
  def __eq__(self,*args):

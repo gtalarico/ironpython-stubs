@@ -1,7 +1,9 @@
 class PartType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all MEP family part types. A part type typically provides one unique set of type parameters that defines this part.
- 
+ An enumerated type listing all MEP family part types. A part type typically provides one unique set of type parameters that defines this part.
+
+ 
+
  enum PartType,values: AttachesTo (3),BreaksInto (4),Cap (9),ChannelCableTrayCross (37),ChannelCableTrayElbow (35),ChannelCableTrayMultiPort (42),ChannelCableTrayOffset (41),ChannelCableTrayTee (38),ChannelCableTrayTransition (39),ChannelCableTrayUnion (40),ChannelCableTrayVerticalElbow (36),Cross (8),Damper (23),DuctMounted (1),Elbow (5),EndCap (53),EquipmentSwitch (18),HandrailBracketHardware (54),Handrails (58),InlineSensor (51),JunctionBox (2),JunctionBoxCross (31),JunctionBoxElbow (34),JunctionBoxTee (30),LadderCableTrayCross (45),LadderCableTrayElbow (43),LadderCableTrayMultiPort (50),LadderCableTrayOffset (49),LadderCableTrayTee (46),LadderCableTrayTransition (47),LadderCableTrayUnion (48),LadderCableTrayVerticalElbow (44),LateralCross (26),LateralTee (25),MultiPort (28),Normal (0),Offset (12),OtherPanel (17),PanelBoard (14),PanelBracketHardware (55),Pants (27),PipeFlange (32),PipeMechanicalCoupling (60),Rails (57),Sensor (52),SpudAdjustable (22),SpudPerpendicular (21),Switch (19),SwitchBoard (16),TapAdjustable (11),TapPerpendicular (10),Tee (6),TerminationHardware (56),TopRails (59),Transformer (15),Transition (7),Undefined (-1),Union (13),ValveBreaksInto (20),ValveNormal (29),Wye (24)
  """
  def __eq__(self,*args):

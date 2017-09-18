@@ -1,7 +1,9 @@
 class PanningMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies how System.Windows.Controls.ScrollViewer reacts to touch manipulation.
- 
+ Specifies how System.Windows.Controls.ScrollViewer reacts to touch manipulation.
+
+ 
+
  enum PanningMode,values: Both (3),HorizontalFirst (4),HorizontalOnly (1),None (0),VerticalFirst (5),VerticalOnly (2)
  """
  def __eq__(self,*args):

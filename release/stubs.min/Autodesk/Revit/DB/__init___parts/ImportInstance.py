@@ -8,9 +8,12 @@ class ImportInstance(Instance,IDisposable):
   pass
  def GetVisibility(self):
   """
-  GetVisibility(self: ImportInstance) -> FamilyElementVisibility
-  
-   Gets the visibility for the import instance in a family document.
+  GetVisibility(self: ImportInstance) -> FamilyElementVisibility
+
+  
+
+   Gets the visibility for the import instance in a family document.
+
    Returns: A copy of visibility settings for the import instance in a family document.
   """
   pass
@@ -22,7 +25,8 @@ class ImportInstance(Instance,IDisposable):
   pass
  def SetVisibility(self,visibility):
   """
-  SetVisibility(self: ImportInstance,visibility: FamilyElementVisibility)
+  SetVisibility(self: ImportInstance,visibility: FamilyElementVisibility)
+
    Sets the visibility for the import instance in a family document.
   """
   pass
@@ -36,10 +40,14 @@ class ImportInstance(Instance,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  IsLinked=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Identifies whether this instance is a linked object rather than imported one.
-
-Get: IsLinked(self: ImportInstance) -> bool
-
+ """Identifies whether this instance is a linked object rather than imported one.
+
+
+
+Get: IsLinked(self: ImportInstance) -> bool
+
+
+
 """
 
 

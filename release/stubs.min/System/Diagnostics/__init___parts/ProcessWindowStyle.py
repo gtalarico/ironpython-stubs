@@ -1,7 +1,9 @@
 class ProcessWindowStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Specified how a new window should appear when the system starts a process.
- 
+ Specified how a new window should appear when the system starts a process.
+
+ 
+
  enum ProcessWindowStyle,values: Hidden (1),Maximized (3),Minimized (2),Normal (0)
  """
  def __eq__(self,*args):

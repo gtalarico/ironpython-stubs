@@ -1,9 +1,13 @@
 class MassSurfaceDataSource(Enum,IComparable,IFormattable,IConvertible):
  """
- Indicates whether values for the properties of the MassSurfaceData
-    are synchronized with the EnergyDataSettings of the
-    document or instead,serve as overrides of those settings.
- 
+ Indicates whether values for the properties of the MassSurfaceData
+
+    are synchronized with the EnergyDataSettings of the
+
+    document or instead,serve as overrides of those settings.
+
+ 
+
  enum MassSurfaceDataSource,values: EnergyData (0),Invalid (-1),Surface (1)
  """
  def __eq__(self,*args):

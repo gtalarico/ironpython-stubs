@@ -19,10 +19,14 @@ class PaperSize(APIObject,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Retrieve the paper size name of current project.
-
-Get: Name(self: PaperSize) -> str
-
+ """Retrieve the paper size name of current project.
+
+
+
+Get: Name(self: PaperSize) -> str
+
+
+
 """
 
 

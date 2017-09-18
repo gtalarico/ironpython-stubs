@@ -1,8 +1,11 @@
 class BentFabricStraightWiresLocation(Enum,IComparable,IFormattable,IConvertible):
  """
- Bent Fabric straight wires location.
-    The side on wich straight wires will be loacted is determined by the start and end point of the first bent profile segment that specifies the direction of the curve loop on plane.
- 
+ Bent Fabric straight wires location.
+
+    The side on wich straight wires will be loacted is determined by the start and end point of the first bent profile segment that specifies the direction of the curve loop on plane.
+
+ 
+
  enum BentFabricStraightWiresLocation,values: Left (1),Right (0)
  """
  def __eq__(self,*args):

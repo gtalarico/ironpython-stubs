@@ -1,7 +1,9 @@
 class ProgressBarStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the style that a System.Windows.Forms.ProgressBar uses to indicate the progress of an operation.
- 
+ Specifies the style that a System.Windows.Forms.ProgressBar uses to indicate the progress of an operation.
+
+ 
+
  enum ProgressBarStyle,values: Blocks (0),Continuous (1),Marquee (2)
  """
  def __eq__(self,*args):

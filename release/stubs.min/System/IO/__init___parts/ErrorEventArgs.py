@@ -1,14 +1,19 @@
 class ErrorEventArgs(EventArgs):
  """
- Provides data for the System.IO.FileSystemWatcher.Error event.
- 
+ Provides data for the System.IO.FileSystemWatcher.Error event.
+
+ 
+
  ErrorEventArgs(exception: Exception)
  """
  def GetException(self):
   """
-  GetException(self: ErrorEventArgs) -> Exception
-  
-   Gets the System.Exception that represents the error that occurred.
+  GetException(self: ErrorEventArgs) -> Exception
+
+  
+
+   Gets the System.Exception that represents the error that occurred.
+
    Returns: An System.Exception that represents the error that occurred.
   """
   pass

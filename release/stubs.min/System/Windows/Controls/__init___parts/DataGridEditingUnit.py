@@ -1,7 +1,9 @@
 class DataGridEditingUnit(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines constants that specify whether editing is enabled on a cell level or on a row level.
- 
+ Defines constants that specify whether editing is enabled on a cell level or on a row level.
+
+ 
+
  enum DataGridEditingUnit,values: Cell (0),Row (1)
  """
  def __eq__(self,*args):

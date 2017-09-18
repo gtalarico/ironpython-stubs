@@ -22,10 +22,14 @@ class AreaScheme(Element,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  IsGrossBuildingArea=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates if the area scheme is a Gross Building Area scheme.
-
-Get: IsGrossBuildingArea(self: AreaScheme) -> bool
-
+ """Indicates if the area scheme is a Gross Building Area scheme.
+
+
+
+Get: IsGrossBuildingArea(self: AreaScheme) -> bool
+
+
+
 """
 
 

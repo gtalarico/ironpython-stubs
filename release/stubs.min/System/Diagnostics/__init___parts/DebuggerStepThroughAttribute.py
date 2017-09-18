@@ -1,7 +1,9 @@
 class DebuggerStepThroughAttribute(Attribute,_Attribute):
  """
- Instructs the debugger to step through the code instead of stepping into the code. This class cannot be inherited.
- 
+ Instructs the debugger to step through the code instead of stepping into the code. This class cannot be inherited.
+
+ 
+
  DebuggerStepThroughAttribute()
  """
  def __init__(self,*args):

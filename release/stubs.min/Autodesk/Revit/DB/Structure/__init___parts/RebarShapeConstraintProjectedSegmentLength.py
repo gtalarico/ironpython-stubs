@@ -1,8 +1,11 @@
 class RebarShapeConstraintProjectedSegmentLength(RebarShapeConstraint,IDisposable):
  """
- A constraint that measures the length of a segment as measured by projecting onto a direction
-    that is not parallel to the segment.
- 
+ A constraint that measures the length of a segment as measured by projecting onto a direction
+
+    that is not parallel to the segment.
+
+ 
+
  RebarShapeConstraintProjectedSegmentLength(paramId: ElementId,direction: UV,tripleProductSign: int,refType0: RebarShapeSegmentEndReferenceType,refType1: RebarShapeSegmentEndReferenceType)
  """
  def Dispose(self):
@@ -10,12 +13,18 @@ class RebarShapeConstraintProjectedSegmentLength(RebarShapeConstraint,IDisposabl
   pass
  def GetSegmentEndReferenceType(self,index):
   """
-  GetSegmentEndReferenceType(self: RebarShapeConstraintProjectedSegmentLength,index: int) -> RebarShapeSegmentEndReferenceType
-  
-   Choice of two possibilities for the start and end references of the length 
-    constraint.
-  
-  
+  GetSegmentEndReferenceType(self: RebarShapeConstraintProjectedSegmentLength,index: int) -> RebarShapeSegmentEndReferenceType
+
+  
+
+   Choice of two possibilities for the start and end references of the length 
+
+    constraint.
+
+  
+
+  
+
    index: Which reference on the constraint. Either 0 or 1.
   """
   pass
@@ -36,23 +45,37 @@ class RebarShapeConstraintProjectedSegmentLength(RebarShapeConstraint,IDisposabl
   """ __new__(cls: type,paramId: ElementId,direction: UV,tripleProductSign: int,refType0: RebarShapeSegmentEndReferenceType,refType1: RebarShapeSegmentEndReferenceType) """
   pass
  Direction=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """A vector specifying the direction of the constraint. The direction is fixed,
-   and the shape is always constructed so that the segment
-   direction has a positive dot product with this vector.
-
-Get: Direction(self: RebarShapeConstraintProjectedSegmentLength) -> UV
-
+ """A vector specifying the direction of the constraint. The direction is fixed,
+
+   and the shape is always constructed so that the segment
+
+   direction has a positive dot product with this vector.
+
+
+
+Get: Direction(self: RebarShapeConstraintProjectedSegmentLength) -> UV
+
+
+
 """
 
  TripleProductSign=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Sign of the z-coordinate of the cross
-   product of the Direction property with the segment vector.
-   TripleProductSign is 1 if the segment direction is to be on the left of
-   the constraint direction,
-   or -1 if the segment direction is to be on the right.
-
-Get: TripleProductSign(self: RebarShapeConstraintProjectedSegmentLength) -> int
-
+ """Sign of the z-coordinate of the cross
+
+   product of the Direction property with the segment vector.
+
+   TripleProductSign is 1 if the segment direction is to be on the left of
+
+   the constraint direction,
+
+   or -1 if the segment direction is to be on the right.
+
+
+
+Get: TripleProductSign(self: RebarShapeConstraintProjectedSegmentLength) -> int
+
+
+
 """
 
 

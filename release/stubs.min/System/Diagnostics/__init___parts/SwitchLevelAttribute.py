@@ -1,7 +1,9 @@
 class SwitchLevelAttribute(Attribute,_Attribute):
  """
- Identifies the level type for a switch.
- 
+ Identifies the level type for a switch.
+
+ 
+
  SwitchLevelAttribute(switchLevelType: Type)
  """
  def __init__(self,*args):
@@ -12,11 +14,16 @@ class SwitchLevelAttribute(Attribute,_Attribute):
   """ __new__(cls: type,switchLevelType: Type) """
   pass
  SwitchLevelType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the type that determines whether a trace should be written.
-
-Get: SwitchLevelType(self: SwitchLevelAttribute) -> Type
-
-Set: SwitchLevelType(self: SwitchLevelAttribute)=value
+ """Gets or sets the type that determines whether a trace should be written.
+
+
+
+Get: SwitchLevelType(self: SwitchLevelAttribute) -> Type
+
+
+
+Set: SwitchLevelType(self: SwitchLevelAttribute)=value
+
 """
 
 

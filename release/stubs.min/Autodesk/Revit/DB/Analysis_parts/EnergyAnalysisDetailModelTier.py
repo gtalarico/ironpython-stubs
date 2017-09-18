@@ -1,7 +1,9 @@
 class EnergyAnalysisDetailModelTier(Enum,IComparable,IFormattable,IConvertible):
  """
- Level of computation for energy analysis model.
- 
+ Level of computation for energy analysis model.
+
+ 
+
  enum EnergyAnalysisDetailModelTier,values: Final (3),FirstLevelBoundaries (1),NotComputed (0),SecondLevelBoundaries (2)
  """
  def __eq__(self,*args):

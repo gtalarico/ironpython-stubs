@@ -1,8 +1,11 @@
 class PreviewFamilyVisibilityMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Modes that control visibility of family elements depending on
-    the currently applied Element Visibility Settings of a view.
- 
+ Modes that control visibility of family elements depending on
+
+    the currently applied Element Visibility Settings of a view.
+
+ 
+
  enum PreviewFamilyVisibilityMode,values: Off (0),On (1),Uncut (2)
  """
  def __eq__(self,*args):

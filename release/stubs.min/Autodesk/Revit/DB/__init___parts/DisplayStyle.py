@@ -1,7 +1,9 @@
 class DisplayStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Display type of the view.
- 
+ Display type of the view.
+
+ 
+
  enum DisplayStyle,values: FlatColors (7),HLR (2),Raytrace (9),Realistic (6),RealisticWithEdges (8),Rendering (5),Shading (3),ShadingWithEdges (4),Undefined (0),Wireframe (1)
  """
  def __eq__(self,*args):

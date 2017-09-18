@@ -1,7 +1,9 @@
 class GridResizeDirection(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies whether a System.Windows.Controls.GridSplitter control redistributes space between rows or between columns.
- 
+ Specifies whether a System.Windows.Controls.GridSplitter control redistributes space between rows or between columns.
+
+ 
+
  enum GridResizeDirection,values: Auto (0),Columns (1),Rows (2)
  """
  def __eq__(self,*args):

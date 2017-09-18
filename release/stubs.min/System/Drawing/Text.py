@@ -12,20 +12,24 @@ class FontCollection(object,IDisposable):
  """ Provides a base class for installed and private font collections. """
  def Dispose(self):
   """
-  Dispose(self: FontCollection)
+  Dispose(self: FontCollection)
+
    Releases all resources used by this System.Drawing.Text.FontCollection.
   """
   pass
  def __enter__(self,*args):
   """
-  __enter__(self: IDisposable) -> object
-  
+  __enter__(self: IDisposable) -> object
+
+  
+
    Provides the implementation of __enter__ for objects which implement IDisposable.
   """
   pass
  def __exit__(self,*args):
   """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+
    Provides the implementation of __exit__ for objects which implement IDisposable.
   """
   pass
@@ -36,18 +40,24 @@ class FontCollection(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Families=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the array of System.Drawing.FontFamily objects associated with this System.Drawing.Text.FontCollection.
-
-Get: Families(self: FontCollection) -> Array[FontFamily]
-
+ """Gets the array of System.Drawing.FontFamily objects associated with this System.Drawing.Text.FontCollection.
+
+
+
+Get: Families(self: FontCollection) -> Array[FontFamily]
+
+
+
 """
 
 
 
 class GenericFontFamilies(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies a generic System.Drawing.FontFamily object.
- 
+ Specifies a generic System.Drawing.FontFamily object.
+
+ 
+
  enum GenericFontFamilies,values: Monospace (2),SansSerif (1),Serif (0)
  """
  def __eq__(self,*args):
@@ -81,8 +91,10 @@ class GenericFontFamilies(Enum,IComparable,IFormattable,IConvertible):
 
 class HotkeyPrefix(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the type of display for hot-key prefixes that relate to text.
- 
+ Specifies the type of display for hot-key prefixes that relate to text.
+
+ 
+
  enum HotkeyPrefix,values: Hide (2),None (0),Show (1)
  """
  def __eq__(self,*args):
@@ -116,30 +128,40 @@ class HotkeyPrefix(Enum,IComparable,IFormattable,IConvertible):
 
 class InstalledFontCollection(FontCollection,IDisposable):
  """
- Represents the fonts installed on the system. This class cannot be inherited.
- 
+ Represents the fonts installed on the system. This class cannot be inherited.
+
+ 
+
  InstalledFontCollection()
  """
  def Dispose(self):
   """
-  Dispose(self: FontCollection,disposing: bool)
-   Releases the unmanaged resources used by the System.Drawing.Text.FontCollection and optionally 
-    releases the managed resources.
-  
-  
+  Dispose(self: FontCollection,disposing: bool)
+
+   Releases the unmanaged resources used by the System.Drawing.Text.FontCollection and optionally 
+
+    releases the managed resources.
+
+  
+
+  
+
    disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def __enter__(self,*args):
   """
-  __enter__(self: IDisposable) -> object
-  
+  __enter__(self: IDisposable) -> object
+
+  
+
    Provides the implementation of __enter__ for objects which implement IDisposable.
   """
   pass
  def __exit__(self,*args):
   """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+
    Provides the implementation of __exit__ for objects which implement IDisposable.
   """
   pass
@@ -149,24 +171,33 @@ class InstalledFontCollection(FontCollection,IDisposable):
 
 class PrivateFontCollection(FontCollection,IDisposable):
  """
- Provides a collection of font families built from font files that are provided by the client application.
- 
+ Provides a collection of font families built from font files that are provided by the client application.
+
+ 
+
  PrivateFontCollection()
  """
  def AddFontFile(self,filename):
   """
-  AddFontFile(self: PrivateFontCollection,filename: str)
-   Adds a font from the specified file to this System.Drawing.Text.PrivateFontCollection.
-  
+  AddFontFile(self: PrivateFontCollection,filename: str)
+
+   Adds a font from the specified file to this System.Drawing.Text.PrivateFontCollection.
+
+  
+
    filename: A System.String that contains the file name of the font to add.
   """
   pass
  def AddMemoryFont(self,memory,length):
   """
-  AddMemoryFont(self: PrivateFontCollection,memory: IntPtr,length: int)
-   Adds a font contained in system memory to this System.Drawing.Text.PrivateFontCollection.
-  
-   memory: The memory address of the font to add.
+  AddMemoryFont(self: PrivateFontCollection,memory: IntPtr,length: int)
+
+   Adds a font contained in system memory to this System.Drawing.Text.PrivateFontCollection.
+
+  
+
+   memory: The memory address of the font to add.
+
    length: The memory length of the font to add.
   """
   pass
@@ -175,14 +206,17 @@ class PrivateFontCollection(FontCollection,IDisposable):
   pass
  def __enter__(self,*args):
   """
-  __enter__(self: IDisposable) -> object
-  
+  __enter__(self: IDisposable) -> object
+
+  
+
    Provides the implementation of __enter__ for objects which implement IDisposable.
   """
   pass
  def __exit__(self,*args):
   """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+
    Provides the implementation of __exit__ for objects which implement IDisposable.
   """
   pass
@@ -192,8 +226,10 @@ class PrivateFontCollection(FontCollection,IDisposable):
 
 class TextRenderingHint(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the quality of text rendering.
- 
+ Specifies the quality of text rendering.
+
+ 
+
  enum TextRenderingHint,values: AntiAlias (4),AntiAliasGridFit (3),ClearTypeGridFit (5),SingleBitPerPixel (2),SingleBitPerPixelGridFit (1),SystemDefault (0)
  """
  def __eq__(self,*args):

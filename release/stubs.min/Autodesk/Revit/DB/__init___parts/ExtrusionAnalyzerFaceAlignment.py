@@ -1,7 +1,9 @@
 class ExtrusionAnalyzerFaceAlignment(Enum,IComparable,IFormattable,IConvertible):
  """
- Indicates whether a face of the solid analyzed by ExtrusionAnalyzer is fully aligned,partially aligned,or unaligned with faces of the extrusion.
- 
+ Indicates whether a face of the solid analyzed by ExtrusionAnalyzer is fully aligned,partially aligned,or unaligned with faces of the extrusion.
+
+ 
+
  enum ExtrusionAnalyzerFaceAlignment,values: FullyAligned (0),PartiallyAligned (1),Unaligned (2)
  """
  def __eq__(self,*args):

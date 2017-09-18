@@ -1,7 +1,9 @@
 class DataGridClipboardCopyMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines constants that specify whether users can copy data from a System.Windows.Controls.DataGrid control to the Clipboard and whether column header values are included.
- 
+ Defines constants that specify whether users can copy data from a System.Windows.Controls.DataGrid control to the Clipboard and whether column header values are included.
+
+ 
+
  enum DataGridClipboardCopyMode,values: ExcludeHeader (1),IncludeHeader (2),None (0)
  """
  def __eq__(self,*args):

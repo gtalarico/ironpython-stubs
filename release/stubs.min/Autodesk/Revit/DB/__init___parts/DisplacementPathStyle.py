@@ -1,7 +1,9 @@
 class DisplacementPathStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Used to control the graphical representation of a  DisplacementPath element.
- 
+ Used to control the graphical representation of a  DisplacementPath element.
+
+ 
+
  enum DisplacementPathStyle,values: Jogged (1),Straight (0)
  """
  def __eq__(self,*args):

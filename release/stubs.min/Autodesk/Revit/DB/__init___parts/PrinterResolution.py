@@ -1,7 +1,9 @@
 class PrinterResolution(Enum,IComparable,IFormattable,IConvertible):
  """
- Controls the resolution level in rendering settings.
- 
+ Controls the resolution level in rendering settings.
+
+ 
+
  enum PrinterResolution,values: High (2),Low (0),Medium (1),VeryHigh (3)
  """
  def __eq__(self,*args):

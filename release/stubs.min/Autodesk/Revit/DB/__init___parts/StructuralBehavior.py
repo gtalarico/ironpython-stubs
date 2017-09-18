@@ -1,7 +1,9 @@
 class StructuralBehavior(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies whether structural elements behave orthotropically,isotropically,or transverse-isotropically.
- 
+ Specifies whether structural elements behave orthotropically,isotropically,or transverse-isotropically.
+
+ 
+
  enum StructuralBehavior,values: Isotropic (0),Orthotropic (1),TransverseIsotropic (2)
  """
  def __eq__(self,*args):

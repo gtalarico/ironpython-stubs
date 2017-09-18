@@ -1,7 +1,9 @@
 class FieldDomainPointsByParameter(FieldDomainPoints,IDisposable):
  """
- Represents a set of one-dimensional point coordinates (defined usually on curve)
- 
+ Represents a set of one-dimensional point coordinates (defined usually on curve)
+
+ 
+
  FieldDomainPointsByParameter(points: IList[float])
  """
  def Dispose(self):

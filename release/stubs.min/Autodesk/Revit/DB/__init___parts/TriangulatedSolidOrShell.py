@@ -5,15 +5,24 @@ class TriangulatedSolidOrShell(object,IDisposable):
   pass
  def GetShellComponent(self,componentIndex):
   """
-  GetShellComponent(self: TriangulatedSolidOrShell,componentIndex: int) -> TriangulatedShellComponent
-  
-   Returns the specified shell component of a solid or shell. Input componentIndex 
-    must lie
-     between 0 and ShellComponentCount-1,inclusive. The returned 
-    TriangulatedShellComponent
-     should not be modified by the caller.
-  
-  
+  GetShellComponent(self: TriangulatedSolidOrShell,componentIndex: int) -> TriangulatedShellComponent
+
+  
+
+   Returns the specified shell component of a solid or shell. Input componentIndex 
+
+    must lie
+
+     between 0 and ShellComponentCount-1,inclusive. The returned 
+
+    TriangulatedShellComponent
+
+     should not be modified by the caller.
+
+  
+
+  
+
      Returns: The component.
   """
   pass
@@ -33,17 +42,25 @@ class TriangulatedSolidOrShell(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: TriangulatedSolidOrShell) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: TriangulatedSolidOrShell) -> bool
+
+
+
 """
 
  ShellComponentCount=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The number of TriangulatedShellComponents that this TriangulatedSolidOrShell contains.
-
-Get: ShellComponentCount(self: TriangulatedSolidOrShell) -> int
-
+ """The number of TriangulatedShellComponents that this TriangulatedSolidOrShell contains.
+
+
+
+Get: ShellComponentCount(self: TriangulatedSolidOrShell) -> int
+
+
+
 """
 
 

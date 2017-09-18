@@ -1,7 +1,9 @@
 class FailureDefinitionId(GuidEnum):
  """
- The unique identifier of a FailureDefinition.
- 
+ The unique identifier of a FailureDefinition.
+
+ 
+
  FailureDefinitionId(guid: Guid)
  """
  @staticmethod

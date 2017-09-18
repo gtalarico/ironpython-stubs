@@ -1,7 +1,9 @@
 class PopupAnimation(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes how a System.Windows.Controls.Primitives.Popup control animates when it opens.
- 
+ Describes how a System.Windows.Controls.Primitives.Popup control animates when it opens.
+
+ 
+
  enum PopupAnimation,values: Fade (1),None (0),Scroll (3),Slide (2)
  """
  def __eq__(self,*args):

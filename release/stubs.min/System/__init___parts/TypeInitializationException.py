@@ -1,7 +1,9 @@
 class TypeInitializationException(SystemException,ISerializable,_Exception):
  """
- The exception that is thrown as a wrapper around the exception thrown by the class initializer. This class cannot be inherited.
- 
+ The exception that is thrown as a wrapper around the exception thrown by the class initializer. This class cannot be inherited.
+
+ 
+
  TypeInitializationException(fullTypeName: str,innerException: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -9,15 +11,24 @@ class TypeInitializationException(SystemException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: TypeInitializationException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo object with the type name and additional 
-    exception information.
-  
-  
-   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about 
-    the exception being thrown.
-  
-   context: The System.Runtime.Serialization.StreamingContext that contains contextual information about the 
+  GetObjectData(self: TypeInitializationException,info: SerializationInfo,context: StreamingContext)
+
+   Sets the System.Runtime.Serialization.SerializationInfo object with the type name and additional 
+
+    exception information.
+
+  
+
+  
+
+   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about 
+
+    the exception being thrown.
+
+  
+
+   context: The System.Runtime.Serialization.StreamingContext that contains contextual information about the 
+
     source or destination.
   """
   pass
@@ -36,10 +47,14 @@ class TypeInitializationException(SystemException,ISerializable,_Exception):
  def __str__(self,*args):
   pass
  TypeName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the fully qualified name of the type that fails to initialize.
-
-Get: TypeName(self: TypeInitializationException) -> str
-
+ """Gets the fully qualified name of the type that fails to initialize.
+
+
+
+Get: TypeName(self: TypeInitializationException) -> str
+
+
+
 """
 
 

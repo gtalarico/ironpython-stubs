@@ -1,7 +1,9 @@
 class TabControlAction(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines values representing System.Windows.Forms.TabControl events.
- 
+ Defines values representing System.Windows.Forms.TabControl events.
+
+ 
+
  enum TabControlAction,values: Deselected (3),Deselecting (2),Selected (1),Selecting (0)
  """
  def __eq__(self,*args):

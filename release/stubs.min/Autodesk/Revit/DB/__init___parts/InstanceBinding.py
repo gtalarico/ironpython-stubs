@@ -1,9 +1,13 @@
 class InstanceBinding(ElementBinding,IDisposable):
  """
- The InstanceBinding object is used to signify a binding between a parameter
- definition and a parameter on each instance of an element,such as a wall.
- 
- InstanceBinding(categories: CategorySet)
+ The InstanceBinding object is used to signify a binding between a parameter
+
+ definition and a parameter on each instance of an element,such as a wall.
+
+ 
+
+ InstanceBinding(categories: CategorySet)
+
  InstanceBinding()
  """
  def Dispose(self):
@@ -27,7 +31,8 @@ class InstanceBinding(ElementBinding,IDisposable):
  @staticmethod
  def __new__(self,categories=None):
   """
-  __new__(cls: type,categories: CategorySet)
+  __new__(cls: type,categories: CategorySet)
+
   __new__(cls: type)
   """
   pass

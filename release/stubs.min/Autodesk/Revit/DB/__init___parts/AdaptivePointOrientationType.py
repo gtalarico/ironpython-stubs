@@ -1,7 +1,9 @@
 class AdaptivePointOrientationType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type containing possible orientation types for Adaptive Points.
- 
+ An enumerated type containing possible orientation types for Adaptive Points.
+
+ 
+
  enum AdaptivePointOrientationType,values: ToGlobalXYZ (7),ToGlobalZthenHost (6),ToHost (2),ToHostAndLoopSystem (3),ToInstance (9),ToInstanceZthenHost (8)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class DirectShapeReferencingOption(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type containing possible referencing options for DirectShapes.
- 
+ An enumerated type containing possible referencing options for DirectShapes.
+
+ 
+
  enum DirectShapeReferencingOption,values: NotReferenceable (0),Referenceable (1)
  """
  def __eq__(self,*args):

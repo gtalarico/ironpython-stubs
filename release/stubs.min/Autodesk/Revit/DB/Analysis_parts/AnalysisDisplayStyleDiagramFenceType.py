@@ -1,7 +1,9 @@
 class AnalysisDisplayStyleDiagramFenceType(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines fence visualization types for diagram settings of analysis display style.
- 
+ Defines fence visualization types for diagram settings of analysis display style.
+
+ 
+
  enum AnalysisDisplayStyleDiagramFenceType,values: ShowAll (0),ShowNone (1),ShowPredefined (2)
  """
  def __eq__(self,*args):

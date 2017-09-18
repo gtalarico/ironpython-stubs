@@ -1,7 +1,9 @@
 class TaskDialogCommandLinkId(Enum,IComparable,IFormattable,IConvertible):
  """
- Enum to specify the Id of CommandLink.
- 
+ Enum to specify the Id of CommandLink.
+
+ 
+
  enum TaskDialogCommandLinkId,values: CommandLink1 (1001),CommandLink2 (1002),CommandLink3 (1003),CommandLink4 (1004)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class AnalyticalDirection(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies a direction for manipulating analytical model.
- 
+ Specifies a direction for manipulating analytical model.
+
+ 
+
  enum AnalyticalDirection,values: Any (6),Horizontal (3),HorizontalEnd (5),HorizontalStart (4),Vertical (0),VerticalBottom (2),VerticalTop (1),X (7),Y (8),Z (9)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class CheckState(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the state of a control,such as a check box,that can be checked,unchecked,or set to an indeterminate state.
- 
+ Specifies the state of a control,such as a check box,that can be checked,unchecked,or set to an indeterminate state.
+
+ 
+
  enum CheckState,values: Checked (1),Indeterminate (2),Unchecked (0)
  """
  def __eq__(self,*args):

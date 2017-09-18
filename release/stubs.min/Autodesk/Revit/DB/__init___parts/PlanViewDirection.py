@@ -1,7 +1,9 @@
 class PlanViewDirection(Enum,IComparable,IFormattable,IConvertible):
  """
- This enumerated type represents the possible directions for a plan view.
- 
+ This enumerated type represents the possible directions for a plan view.
+
+ 
+
  enum PlanViewDirection,values: Down (0),Undefined (-1),Up (1)
  """
  def __eq__(self,*args):

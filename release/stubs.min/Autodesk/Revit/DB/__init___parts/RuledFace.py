@@ -19,17 +19,25 @@ class RuledFace(Face,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  IsExtruded=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Determines if this is an extruded ruled surface.
-
-Get: IsExtruded(self: RuledFace) -> bool
-
+ """Determines if this is an extruded ruled surface.
+
+
+
+Get: IsExtruded(self: RuledFace) -> bool
+
+
+
 """
 
  RulingsAreParallel=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Determines if the rulings of this ruled surface are parallel.
-
-Get: RulingsAreParallel(self: RuledFace) -> bool
-
+ """Determines if the rulings of this ruled surface are parallel.
+
+
+
+Get: RulingsAreParallel(self: RuledFace) -> bool
+
+
+
 """
 
 

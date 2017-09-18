@@ -1,7 +1,9 @@
 class SpatialElementBoundaryLocation(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing boundary options of spatial element geometry calculation.
- 
+ An enumerated type listing boundary options of spatial element geometry calculation.
+
+ 
+
  enum SpatialElementBoundaryLocation,values: Center (1),CoreBoundary (2),CoreCenter (3),Finish (0)
  """
  def __eq__(self,*args):

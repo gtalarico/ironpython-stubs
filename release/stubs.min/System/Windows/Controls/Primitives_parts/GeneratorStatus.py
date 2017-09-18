@@ -1,7 +1,9 @@
 class GeneratorStatus(Enum,IComparable,IFormattable,IConvertible):
  """
- Used by System.Windows.Controls.ItemContainerGenerator to indicate the status of its item generation.
- 
+ Used by System.Windows.Controls.ItemContainerGenerator to indicate the status of its item generation.
+
+ 
+
  enum GeneratorStatus,values: ContainersGenerated (2),Error (3),GeneratingContainers (1),NotStarted (0)
  """
  def __eq__(self,*args):

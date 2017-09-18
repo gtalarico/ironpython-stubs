@@ -1,7 +1,9 @@
 class FailureSeverity(Enum,IComparable,IFormattable,IConvertible):
  """
- Enum represents severity of a failure.
- 
+ Enum represents severity of a failure.
+
+ 
+
  enum FailureSeverity,values: DocumentCorruption (3),Error (2),None (0),Warning (1)
  """
  def __eq__(self,*args):

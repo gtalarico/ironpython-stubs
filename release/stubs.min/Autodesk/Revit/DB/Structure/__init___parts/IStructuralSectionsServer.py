@@ -2,13 +2,20 @@ class IStructuralSectionsServer(IExternalServer):
  """ Interface for the section type parameter server to implement. """
  def StructuralSectionsUpdate(self,data):
   """
-  StructuralSectionsUpdate(self: IStructuralSectionsServer,data: StructuralSectionsServiceData) -> bool
-  
-   The server's method that will be called when Revit User clicks the Section Type 
-    parameter's button in the family dialog.
-  
-  
-   data: The Section Type data.
+  StructuralSectionsUpdate(self: IStructuralSectionsServer,data: StructuralSectionsServiceData) -> bool
+
+  
+
+   The server's method that will be called when Revit User clicks the Section Type 
+
+    parameter's button in the family dialog.
+
+  
+
+  
+
+   data: The Section Type data.
+
    Returns: Indicates whether the section type parameter server is executed successfully.
   """
   pass

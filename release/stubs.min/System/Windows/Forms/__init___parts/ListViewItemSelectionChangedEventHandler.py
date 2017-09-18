@@ -1,7 +1,9 @@
 class ListViewItemSelectionChangedEventHandler(MulticastDelegate,ICloneable,ISerializable):
  """
- Represents the method that will handle the System.Windows.Forms.ListView.ItemSelectionChanged event of a System.Windows.Forms.ListView.
- 
+ Represents the method that will handle the System.Windows.Forms.ListView.ItemSelectionChanged event of a System.Windows.Forms.ListView.
+
+ 
+
  ListViewItemSelectionChangedEventHandler(object: object,method: IntPtr)
  """
  def BeginInvoke(self,sender,e,callback,object):
@@ -9,24 +11,37 @@ class ListViewItemSelectionChangedEventHandler(MulticastDelegate,ICloneable,ISer
   pass
  def CombineImpl(self,*args):
   """
-  CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
-  
-   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
-  
-   follow: The delegate to combine with this delegate.
+  CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
+
+  
+
+   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+
+  
+
+   follow: The delegate to combine with this delegate.
+
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
   """
   pass
  def DynamicInvokeImpl(self,*args):
   """
-  DynamicInvokeImpl(self: Delegate,args: Array[object]) -> object
-  
-   Dynamically invokes (late-bound) the method represented by the current delegate.
-  
-   args: An array of objects that are the arguments to pass to the method represented by the current 
-    delegate.-or- null,if the method represented by the current delegate does not require 
-    arguments.
-  
+  DynamicInvokeImpl(self: Delegate,args: Array[object]) -> object
+
+  
+
+   Dynamically invokes (late-bound) the method represented by the current delegate.
+
+  
+
+   args: An array of objects that are the arguments to pass to the method represented by the current 
+
+    delegate.-or- null,if the method represented by the current delegate does not require 
+
+    arguments.
+
+  
+
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -35,9 +50,12 @@ class ListViewItemSelectionChangedEventHandler(MulticastDelegate,ICloneable,ISer
   pass
  def GetMethodImpl(self,*args):
   """
-  GetMethodImpl(self: MulticastDelegate) -> MethodInfo
-  
-   Returns a static method represented by the current System.MulticastDelegate.
+  GetMethodImpl(self: MulticastDelegate) -> MethodInfo
+
+  
+
+   Returns a static method represented by the current System.MulticastDelegate.
+
    Returns: A static method represented by the current System.MulticastDelegate.
   """
   pass
@@ -46,14 +64,22 @@ class ListViewItemSelectionChangedEventHandler(MulticastDelegate,ICloneable,ISer
   pass
  def RemoveImpl(self,*args):
   """
-  RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
-  
-   Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-    the specified delegate.
-  
-  
-   value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without 
+  RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
+
+  
+
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
+
+    the specified delegate.
+
+  
+
+  
+
+   value: The delegate to search for in the invocation list.
+
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without 
+
     value in its invocation list; otherwise,this instance with its original invocation list.
   """
   pass

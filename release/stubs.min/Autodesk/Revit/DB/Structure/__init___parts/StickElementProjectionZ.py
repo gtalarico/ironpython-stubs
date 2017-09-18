@@ -1,7 +1,9 @@
 class StickElementProjectionZ(Enum,IComparable,IFormattable,IConvertible):
  """
- Presets for given Analytical Projection.
- 
+ Presets for given Analytical Projection.
+
+ 
+
  enum StickElementProjectionZ,values: Bottom (3),Center (2),LocationLine (0),Plane (4),Top (1),Varies (5)
  """
  def __eq__(self,*args):

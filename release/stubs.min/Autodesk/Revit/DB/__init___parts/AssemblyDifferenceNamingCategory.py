@@ -16,17 +16,25 @@ class AssemblyDifferenceNamingCategory(AssemblyDifference,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  NamingCategoryId1=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Naming category id of the first assembly
-
-Get: NamingCategoryId1(self: AssemblyDifferenceNamingCategory) -> ElementId
-
+ """Naming category id of the first assembly
+
+
+
+Get: NamingCategoryId1(self: AssemblyDifferenceNamingCategory) -> ElementId
+
+
+
 """
 
  NamingCategoryId2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Naming category id of the second assembly
-
-Get: NamingCategoryId2(self: AssemblyDifferenceNamingCategory) -> ElementId
-
+ """Naming category id of the second assembly
+
+
+
+Get: NamingCategoryId2(self: AssemblyDifferenceNamingCategory) -> ElementId
+
+
+
 """
 
 

@@ -13,11 +13,16 @@ class BaseUriHelper(object):
  @staticmethod
  def GetBaseUri(element):
   """
-  GetBaseUri(element: DependencyObject) -> Uri
-  
-   Gets the value of the BaseUri�attached property for a specified System.Windows.UIElement.
-  
-   element: The element from which the property value is read.
+  GetBaseUri(element: DependencyObject) -> Uri
+
+  
+
+   Gets the value of the BaseUri�attached property for a specified System.Windows.UIElement.
+
+  
+
+   element: The element from which the property value is read.
+
    Returns: The base URI of a given element.
   """
   pass

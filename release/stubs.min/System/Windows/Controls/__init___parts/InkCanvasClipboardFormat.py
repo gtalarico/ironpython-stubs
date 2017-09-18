@@ -1,7 +1,9 @@
 class InkCanvasClipboardFormat(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the formats that an System.Windows.Controls.InkCanvas will accept from the Clipboard.
- 
+ Specifies the formats that an System.Windows.Controls.InkCanvas will accept from the Clipboard.
+
+ 
+
  enum InkCanvasClipboardFormat,values: InkSerializedFormat (0),Text (1),Xaml (2)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class FillBehavior(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies how a System.Windows.Media.Animation.Timeline behaves when it is outside its active period but its parent is inside its active or hold period.
- 
+ Specifies how a System.Windows.Media.Animation.Timeline behaves when it is outside its active period but its parent is inside its active or hold period.
+
+ 
+
  enum FillBehavior,values: HoldEnd (0),Stop (1)
  """
  def __eq__(self,*args):

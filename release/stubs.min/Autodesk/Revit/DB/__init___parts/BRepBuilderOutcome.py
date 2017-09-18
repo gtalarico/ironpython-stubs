@@ -1,7 +1,9 @@
 class BRepBuilderOutcome(Enum,IComparable,IFormattable,IConvertible):
  """
- This enumerated type corresponds to  possible outcomes returned by BRepBuilder functions.
- 
+ This enumerated type corresponds to  possible outcomes returned by BRepBuilder functions.
+
+ 
+
  enum BRepBuilderOutcome,values: Failure (1),Success (0)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class CircuitLoadCalculationMethod(Enum,IComparable,IFormattable,IConvertible):
  """
- Methods to calculate circuit loads
- 
+ Methods to calculate circuit loads
+
+ 
+
  enum CircuitLoadCalculationMethod,values: SumApparentLoad (1),SumTrueLoadAndReactiveLoad (0)
  """
  def __eq__(self,*args):

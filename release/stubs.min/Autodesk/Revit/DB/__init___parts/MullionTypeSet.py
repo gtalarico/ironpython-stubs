@@ -1,23 +1,32 @@
 class MullionTypeSet(APIObject,IDisposable,IEnumerable):
  """
- A set that contains mullion types.
- 
+ A set that contains mullion types.
+
+ 
+
  MullionTypeSet()
  """
  def Clear(self):
   """
-  Clear(self: MullionTypeSet)
+  Clear(self: MullionTypeSet)
+
    Removes every mullion type from the set,rendering it empty.
   """
   pass
  def Contains(self,item):
   """
-  Contains(self: MullionTypeSet,item: MullionType) -> bool
-  
-   Tests for the existence of a mullion type within the set.
-  
-   item: The mullion type to be searched for.
-   Returns: The Contains method returns True if the mullion type is within the set,
+  Contains(self: MullionTypeSet,item: MullionType) -> bool
+
+  
+
+   Tests for the existence of a mullion type within the set.
+
+  
+
+   item: The mullion type to be searched for.
+
+   Returns: The Contains method returns True if the mullion type is within the set,
+
     otherwise False.
   """
   pass
@@ -26,37 +35,53 @@ class MullionTypeSet(APIObject,IDisposable,IEnumerable):
   pass
  def Erase(self,item):
   """
-  Erase(self: MullionTypeSet,item: MullionType) -> int
-  
-   Removes a specified mullion type from the set.
-  
-   item: The mullion type to be erased.
+  Erase(self: MullionTypeSet,item: MullionType) -> int
+
+  
+
+   Removes a specified mullion type from the set.
+
+  
+
+   item: The mullion type to be erased.
+
    Returns: The number of mullion types that were erased from the set.
   """
   pass
  def ForwardIterator(self):
   """
-  ForwardIterator(self: MullionTypeSet) -> MullionTypeSetIterator
-  
-   Retrieve a forward moving iterator to the set.
+  ForwardIterator(self: MullionTypeSet) -> MullionTypeSetIterator
+
+  
+
+   Retrieve a forward moving iterator to the set.
+
    Returns: Returns a forward moving iterator to the set.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: MullionTypeSet) -> IEnumerator
-  
-   Retrieve a forward moving iterator to the set.
+  GetEnumerator(self: MullionTypeSet) -> IEnumerator
+
+  
+
+   Retrieve a forward moving iterator to the set.
+
    Returns: Returns a forward moving iterator to the set.
   """
   pass
  def Insert(self,item):
   """
-  Insert(self: MullionTypeSet,item: MullionType) -> bool
-  
-   Insert the specified mullion type into the set.
-  
-   item: The mullion type to be inserted into the set.
+  Insert(self: MullionTypeSet,item: MullionType) -> bool
+
+  
+
+   Insert the specified mullion type into the set.
+
+  
+
+   item: The mullion type to be inserted into the set.
+
    Returns: Returns whether the mullion type was inserted into the set.
   """
   pass
@@ -68,9 +93,12 @@ class MullionTypeSet(APIObject,IDisposable,IEnumerable):
   pass
  def ReverseIterator(self):
   """
-  ReverseIterator(self: MullionTypeSet) -> MullionTypeSetIterator
-  
-   Retrieve a backward moving iterator to the set.
+  ReverseIterator(self: MullionTypeSet) -> MullionTypeSetIterator
+
+  
+
+   Retrieve a backward moving iterator to the set.
+
    Returns: Returns a backward moving iterator to the set.
   """
   pass
@@ -87,17 +115,25 @@ class MullionTypeSet(APIObject,IDisposable,IEnumerable):
   """ __iter__(self: IEnumerable) -> object """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Test to see if the set is empty.
-
-Get: IsEmpty(self: MullionTypeSet) -> bool
-
+ """Test to see if the set is empty.
+
+
+
+Get: IsEmpty(self: MullionTypeSet) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the number of mullion types that are in the set.
-
-Get: Size(self: MullionTypeSet) -> int
-
+ """Returns the number of mullion types that are in the set.
+
+
+
+Get: Size(self: MullionTypeSet) -> int
+
+
+
 """
 
 

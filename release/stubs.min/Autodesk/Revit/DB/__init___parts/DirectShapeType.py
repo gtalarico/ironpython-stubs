@@ -2,28 +2,44 @@ class DirectShapeType(ElementType,IDisposable):
  """ The type element associated with a DirectShape element. This element includes data reused by DirectShape elements of the same type. """
  def AppendShape(self,*__args):
   """
-  AppendShape(self: DirectShapeType,pGeomArr: IList[GeometryObject])AppendShape(self: DirectShapeType,pGeomArr: IList[GeometryObject],viewType: DirectShapeTargetViewType)AppendShape(self: DirectShapeType,ShapeBuilder: ShapeBuilder)
-   Append shape built by the supplied ShapeBuilderObject to shape representation 
-    stored in this DirectShapeType.
-     The data stored in the supplied 
-    ShapeBuilder object will be cleared.
-  
-  
+  AppendShape(self: DirectShapeType,pGeomArr: IList[GeometryObject])AppendShape(self: DirectShapeType,pGeomArr: IList[GeometryObject],viewType: DirectShapeTargetViewType)AppendShape(self: DirectShapeType,ShapeBuilder: ShapeBuilder)
+
+   Append shape built by the supplied ShapeBuilderObject to shape representation 
+
+    stored in this DirectShapeType.
+
+     The data stored in the supplied 
+
+    ShapeBuilder object will be cleared.
+
+  
+
+  
+
    ShapeBuilder: The ShapeBuilder object that was used to build the shape to be appended.
   """
   pass
  @staticmethod
  def Create(document,name,categoryId):
   """
-  Create(document: Document,name: str,categoryId: ElementId) -> DirectShapeType
-  
-   Creates a DirectShapeType element.
-  
-   document: The document that will contain the new element.
-   name: Name of the DirectShapeType.
-   categoryId: Id of the category assigned to this DirectShapeType. Must be a valid category 
-    id.
-  
+  Create(document: Document,name: str,categoryId: ElementId) -> DirectShapeType
+
+  
+
+   Creates a DirectShapeType element.
+
+  
+
+   document: The document that will contain the new element.
+
+   name: Name of the DirectShapeType.
+
+   categoryId: Id of the category assigned to this DirectShapeType. Must be a valid category 
+
+    id.
+
+  
+
    Returns: The new DirectShapeType.
   """
   pass
@@ -35,7 +51,8 @@ class DirectShapeType(ElementType,IDisposable):
   pass
  def IsValidShape(self,shape,viewType=None):
   """
-  IsValidShape(self: DirectShapeType,shape: IList[GeometryObject]) -> bool
+  IsValidShape(self: DirectShapeType,shape: IList[GeometryObject]) -> bool
+
   IsValidShape(self: DirectShapeType,shape: IList[GeometryObject],viewType: DirectShapeTargetViewType) -> bool
   """
   pass
@@ -47,16 +64,26 @@ class DirectShapeType(ElementType,IDisposable):
   pass
  def SetShape(self,*__args):
   """
-  SetShape(self: DirectShapeType,pGeomArr: IList[GeometryObject])SetShape(self: DirectShapeType,pBuilder: ShapeBuilder)
-   Sets the shape of this object to the one accumulated in the supplied Builder 
-    object.
-     If the new shape is identical to the old one,the old shape will be 
-    kept.
-  
-  
-   pBuilder: A ShapeBuilder object that was used to successfully build geometry to store in 
-    this DirectShapeType. The built shape will be
-     transferred to the 
+  SetShape(self: DirectShapeType,pGeomArr: IList[GeometryObject])SetShape(self: DirectShapeType,pBuilder: ShapeBuilder)
+
+   Sets the shape of this object to the one accumulated in the supplied Builder 
+
+    object.
+
+     If the new shape is identical to the old one,the old shape will be 
+
+    kept.
+
+  
+
+  
+
+   pBuilder: A ShapeBuilder object that was used to successfully build geometry to store in 
+
+    this DirectShapeType. The built shape will be
+
+     transferred to the 
+
     DirectShapeType,and the ShapeBuilder object will be reset.
   """
   pass

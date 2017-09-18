@@ -2,7 +2,8 @@ class APIObject(object,IDisposable):
  """ Supports all objects in the Autodesk Revit API hierarchy. """
  def Dispose(self):
   """
-  Dispose(self: APIObject)
+  Dispose(self: APIObject)
+
    Causes the object to release immediately any resources it may be utilizing.
   """
   pass
@@ -25,10 +26,14 @@ class APIObject(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsReadOnly=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Identifies if the object is read-only or modifiable.
-
-Get: IsReadOnly(self: APIObject) -> bool
-
+ """Identifies if the object is read-only or modifiable.
+
+
+
+Get: IsReadOnly(self: APIObject) -> bool
+
+
+
 """
 
 

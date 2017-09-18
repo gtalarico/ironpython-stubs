@@ -1,7 +1,9 @@
 class AssemblyRegistrationFlags(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines a set of flags used when registering assemblies.
- 
+ Defines a set of flags used when registering assemblies.
+
+ 
+
  enum (flags) AssemblyRegistrationFlags,values: None (0),SetCodeBase (1)
  """
  def __eq__(self,*args):

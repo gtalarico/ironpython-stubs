@@ -1,7 +1,9 @@
 class ConceptualConstructionWindowSkylightType(Enum,IComparable,IFormattable,IConvertible):
  """
- ConceptualConstructionType values for Windows and Skylights
- 
+ ConceptualConstructionType values for Windows and Skylights
+
+ 
+
  enum ConceptualConstructionWindowSkylightType,values: DoublePaneClearHighestPerformanceLowEHighVisTransLowSHGC (8),DoublePaneClearLowEColdClimateHighSHGC (6),DoublePaneClearLowEHotClimateLowSHGC (7),DoublePaneClearNoCoating (3),DoublePaneReflective (5),DoublePaneTinted (4),InvalidWindowSkylightTypeConstruction (-1),NumWindowSkylightTypeConstruction (11),QuadPaneClearLowEHotOrColdClimate (10),SinglePaneClearNoCoating (0),SinglePaneReflective (2),SinglePaneTinted (1),TriplePaneClearLowEHotOrColdClimate (9)
  """
  def __eq__(self,*args):

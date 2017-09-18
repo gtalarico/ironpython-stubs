@@ -1,8 +1,11 @@
 class ReinforcementAbbreviationTag(object,IDisposable):
  """
- This class is used to access the Area or Path Reinforcement abbreviation tag data.
-    It stores abbreviation tag value and abbreviation type.
- 
+ This class is used to access the Area or Path Reinforcement abbreviation tag data.
+
+    It stores abbreviation tag value and abbreviation type.
+
+ 
+
  ReinforcementAbbreviationTag(typeTag: ReinforcementAbbreviationTagType,abbreviationTag: str)
  """
  def Dispose(self):
@@ -28,24 +31,36 @@ class ReinforcementAbbreviationTag(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  AbbreviationTag=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The abbreviation tag value.
-
-Get: AbbreviationTag(self: ReinforcementAbbreviationTag) -> str
-
+ """The abbreviation tag value.
+
+
+
+Get: AbbreviationTag(self: ReinforcementAbbreviationTag) -> str
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ReinforcementAbbreviationTag) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ReinforcementAbbreviationTag) -> bool
+
+
+
 """
 
  TypeTag=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The abbreviation tag type.
-
-Get: TypeTag(self: ReinforcementAbbreviationTag) -> ReinforcementAbbreviationTagType
-
+ """The abbreviation tag type.
+
+
+
+Get: TypeTag(self: ReinforcementAbbreviationTag) -> ReinforcementAbbreviationTagType
+
+
+
 """
 
 

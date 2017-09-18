@@ -1,7 +1,9 @@
 class AccessControlType(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies whether an System.Security.AccessControl.AccessRule object is used to allow or deny access. These values are not flags,and they cannot be combined.
- 
+ Specifies whether an System.Security.AccessControl.AccessRule object is used to allow or deny access. These values are not flags,and they cannot be combined.
+
+ 
+
  enum AccessControlType,values: Allow (0),Deny (1)
  """
  def __eq__(self,*args):

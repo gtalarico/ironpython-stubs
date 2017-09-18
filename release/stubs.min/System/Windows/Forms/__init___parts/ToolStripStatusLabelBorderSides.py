@@ -1,7 +1,9 @@
 class ToolStripStatusLabelBorderSides(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies which sides of a System.Windows.Forms.ToolStripStatusLabel have borders.
- 
+ Specifies which sides of a System.Windows.Forms.ToolStripStatusLabel have borders.
+
+ 
+
  enum (flags) ToolStripStatusLabelBorderSides,values: All (15),Bottom (8),Left (1),None (0),Right (4),Top (2)
  """
  def __eq__(self,*args):

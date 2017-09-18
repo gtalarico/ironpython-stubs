@@ -1,9 +1,13 @@
 class DataConversionMonitorScope(object,IDisposable):
  """
- This class is used to regsiter an application-supplied object that implements IDataConversionMonitor.
-    Creating the object registers an implementation of IDataConversionMonitor supplied as constructor argument.
-    When the scope object is destroyed,that object is unregistered.
- 
+ This class is used to regsiter an application-supplied object that implements IDataConversionMonitor.
+
+    Creating the object registers an implementation of IDataConversionMonitor supplied as constructor argument.
+
+    When the scope object is destroyed,that object is unregistered.
+
+ 
+
  DataConversionMonitorScope(IDCM: IDataConversionMonitor)
  """
  def Dispose(self):
@@ -29,10 +33,14 @@ class DataConversionMonitorScope(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: DataConversionMonitorScope) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: DataConversionMonitorScope) -> bool
+
+
+
 """
 
 

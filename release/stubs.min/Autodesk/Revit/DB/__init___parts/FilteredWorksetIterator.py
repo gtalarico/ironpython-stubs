@@ -5,27 +5,39 @@ class FilteredWorksetIterator(object,IEnumerator[Workset],IDisposable,IEnumerato
   pass
  def GetCurrent(self):
   """
-  GetCurrent(self: FilteredWorksetIterator) -> Workset
-  
-   The current workset found by the iterator.
+  GetCurrent(self: FilteredWorksetIterator) -> Workset
+
+  
+
+   The current workset found by the iterator.
+
    Returns: The workset.
   """
   pass
  def IsDone(self):
   """
-  IsDone(self: FilteredWorksetIterator) -> bool
-  
-   Identifies if the iteration has completed.
-   Returns: True if the iteration has no more matching worksets.  False if there are more 
+  IsDone(self: FilteredWorksetIterator) -> bool
+
+  
+
+   Identifies if the iteration has completed.
+
+   Returns: True if the iteration has no more matching worksets.  False if there are more 
+
     worksets to be iterated.
   """
   pass
  def MoveNext(self):
   """
-  MoveNext(self: FilteredWorksetIterator) -> bool
-  
-   Increments the iterator to the next workset passing the filter.
-   Returns: True if there is another available workset passing the filter in this iterator.
+  MoveNext(self: FilteredWorksetIterator) -> bool
+
+  
+
+   Increments the iterator to the next workset passing the filter.
+
+   Returns: True if there is another available workset passing the filter in this iterator.
+
+
     
      False if the iterator has completed all available worksets.
   """
@@ -38,7 +50,8 @@ class FilteredWorksetIterator(object,IEnumerator[Workset],IDisposable,IEnumerato
   pass
  def Reset(self):
   """
-  Reset(self: FilteredWorksetIterator)
+  Reset(self: FilteredWorksetIterator)
+
    Resets the iterator to the beginning.
   """
   pass
@@ -61,17 +74,25 @@ class FilteredWorksetIterator(object,IEnumerator[Workset],IDisposable,IEnumerato
   """ __repr__(self: object) -> str """
   pass
  Current=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the item at the current position of the iterator.
-
-Get: Current(self: FilteredWorksetIterator) -> Workset
-
+ """Gets the item at the current position of the iterator.
+
+
+
+Get: Current(self: FilteredWorksetIterator) -> Workset
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: FilteredWorksetIterator) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: FilteredWorksetIterator) -> bool
+
+
+
 """
 
 

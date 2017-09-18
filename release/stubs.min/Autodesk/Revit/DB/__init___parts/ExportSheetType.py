@@ -1,7 +1,9 @@
 class ExportSheetType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing possible Sheet type.
- 
+ An enumerated type listing possible Sheet type.
+
+ 
+
  enum ExportSheetType,values: ST_Current (0),ST_Select (2),ST_Visible (1)
  """
  def __eq__(self,*args):

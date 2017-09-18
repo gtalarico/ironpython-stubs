@@ -1,10 +1,15 @@
 class RebarShapeArcReferenceType(Enum,IComparable,IFormattable,IConvertible):
  """
- A Rebar Shape Definition constraint that is
-    measured to a bend must take the bar diameter into
-    account by specifying whether it measures to
-    the exterior,centerline,or interior of the bend.
- 
+ A Rebar Shape Definition constraint that is
+
+    measured to a bend must take the bar diameter into
+
+    account by specifying whether it measures to
+
+    the exterior,centerline,or interior of the bend.
+
+ 
+
  enum RebarShapeArcReferenceType,values: Centerline (0),External (1),Internal (-1)
  """
  def __eq__(self,*args):

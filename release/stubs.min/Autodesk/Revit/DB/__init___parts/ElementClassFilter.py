@@ -1,8 +1,11 @@
 class ElementClassFilter(ElementQuickFilter,IDisposable):
  """
- A filter used to match elements by their class.
- 
- ElementClassFilter(type: Type,inverted: bool)
+ A filter used to match elements by their class.
+
+ 
+
+ ElementClassFilter(type: Type,inverted: bool)
+
  ElementClassFilter(type: Type)
  """
  def Dispose(self):
@@ -10,9 +13,12 @@ class ElementClassFilter(ElementQuickFilter,IDisposable):
   pass
  def GetElementClass(self):
   """
-  GetElementClass(self: ElementClassFilter) -> Type
-  
-   The class for the filter.
+  GetElementClass(self: ElementClassFilter) -> Type
+
+  
+
+   The class for the filter.
+
    Returns: The class.
   """
   pass
@@ -31,7 +37,8 @@ class ElementClassFilter(ElementQuickFilter,IDisposable):
  @staticmethod
  def __new__(self,type,inverted=None):
   """
-  __new__(cls: type,type: Type,inverted: bool)
+  __new__(cls: type,type: Type,inverted: bool)
+
   __new__(cls: type,type: Type)
   """
   pass

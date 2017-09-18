@@ -22,26 +22,40 @@ class Extrusion(GenericForm,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  EndOffset=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The offset of the end of the extrusion relative to the sketch plane.
-
-Get: EndOffset(self: Extrusion) -> float
-
-Set: EndOffset(self: Extrusion)=value
+ """The offset of the end of the extrusion relative to the sketch plane.
+
+
+
+Get: EndOffset(self: Extrusion) -> float
+
+
+
+Set: EndOffset(self: Extrusion)=value
+
 """
 
  Sketch=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the Sketch of the Extrusion.
-
-Get: Sketch(self: Extrusion) -> Sketch
-
+ """Returns the Sketch of the Extrusion.
+
+
+
+Get: Sketch(self: Extrusion) -> Sketch
+
+
+
 """
 
  StartOffset=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The offset of the start of the extrusion relative to the sketch plane.
-
-Get: StartOffset(self: Extrusion) -> float
-
-Set: StartOffset(self: Extrusion)=value
+ """The offset of the start of the extrusion relative to the sketch plane.
+
+
+
+Get: StartOffset(self: Extrusion) -> float
+
+
+
+Set: StartOffset(self: Extrusion)=value
+
 """
 
 

@@ -1,7 +1,9 @@
 class ExportColorMode(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing export color mode.
- 
+ An enumerated type listing export color mode.
+
+ 
+
  enum ExportColorMode,values: IndexColors (0),TrueColor (1)
  """
  def __eq__(self,*args):

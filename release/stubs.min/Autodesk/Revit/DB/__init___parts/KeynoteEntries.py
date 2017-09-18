@@ -6,22 +6,38 @@ class KeynoteEntries(KeyBasedTreeEntries,IEnumerable[KeyBasedTreeEntry],IEnumera
  @staticmethod
  def LoadKeynoteEntriesFromFile(filePath,keynoteContent):
   """
-  LoadKeynoteEntriesFromFile(filePath: str,keynoteContent: KeyBasedTreeEntriesLoadContent) -> bool
-  
-   Loads the contents of a keynote text file into the provided 
-    KeyBasedTreeEntriesLoadContent.
-  
-  
-   filePath: The full path of the existing keynotefile.
-   keynoteContent: The keynote entries read from the filePath will be added to this object.
-     A 
-    KeyBasedTreeEntriesLoadContent object will also be updated to contain status 
-    information,
-     including information about any errors that occurred while 
-    reading the keynote entries from
-     the specified file.
-  
-   Returns: True if reading the keynote file succeeds; False if the keynote file cannot be 
+  LoadKeynoteEntriesFromFile(filePath: str,keynoteContent: KeyBasedTreeEntriesLoadContent) -> bool
+
+  
+
+   Loads the contents of a keynote text file into the provided 
+
+    KeyBasedTreeEntriesLoadContent.
+
+  
+
+  
+
+   filePath: The full path of the existing keynotefile.
+
+   keynoteContent: The keynote entries read from the filePath will be added to this object.
+
+     A 
+
+    KeyBasedTreeEntriesLoadContent object will also be updated to contain status 
+
+    information,
+
+     including information about any errors that occurred while 
+
+    reading the keynote entries from
+
+     the specified file.
+
+  
+
+   Returns: True if reading the keynote file succeeds; False if the keynote file cannot be 
+
     read.
   """
   pass

@@ -29,17 +29,25 @@ class ApplicationClosingEventArgs(RevitAPIPreEventArgs,IDisposable):
 class CommandEventArgs(RevitEventArgs):
  """ The base class of the command Executed and CanExecute event arguments. """
  ActiveDocument=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The active document.
-
-Get: ActiveDocument(self: CommandEventArgs) -> Document
-
+ """The active document.
+
+
+
+Get: ActiveDocument(self: CommandEventArgs) -> Document
+
+
+
 """
 
  CommandId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The command id.
-
-Get: CommandId(self: CommandEventArgs) -> RevitCommandId
-
+ """The command id.
+
+
+
+Get: CommandId(self: CommandEventArgs) -> RevitCommandId
+
+
+
 """
 
 
@@ -47,11 +55,16 @@ Get: CommandId(self: CommandEventArgs) -> RevitCommandId
 class BeforeExecutedEventArgs(CommandEventArgs):
  """ The event arguments used by AddInCommandBinding's BeforeExecuted event. """
  UsingCommandData=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates whether or not the Revit journal will include custom data populated by the application associated with this command.
-
-Get: UsingCommandData(self: BeforeExecutedEventArgs) -> bool
-
-Set: UsingCommandData(self: BeforeExecutedEventArgs)=value
+ """Indicates whether or not the Revit journal will include custom data populated by the application associated with this command.
+
+
+
+Get: UsingCommandData(self: BeforeExecutedEventArgs) -> bool
+
+
+
+Set: UsingCommandData(self: BeforeExecutedEventArgs)=value
+
 """
 
 
@@ -60,32 +73,45 @@ class CanExecuteEventArgs(CommandEventArgs):
  """ The event arguments used by AddInCommandBinding's CanExecute event. """
  def GetSelectedCategoryIds(self):
   """
-  GetSelectedCategoryIds(self: CanExecuteEventArgs) -> ICollection[ElementId]
-  
+  GetSelectedCategoryIds(self: CanExecuteEventArgs) -> ICollection[ElementId]
+
+  
+
    Gets the category ids of selected elements.
   """
   pass
  CanExecute=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The value that indicates whether the Command associated with this event can be executed.
-
-Get: CanExecute(self: CanExecuteEventArgs) -> bool
-
-Set: CanExecute(self: CanExecuteEventArgs)=value
+ """The value that indicates whether the Command associated with this event can be executed.
+
+
+
+Get: CanExecute(self: CanExecuteEventArgs) -> bool
+
+
+
+Set: CanExecute(self: CanExecuteEventArgs)=value
+
 """
 
 
 
 class RibbonItemEventArgs(EventArgs):
  """
- The base class of the RibbonItem event arguments which have UIApplication property.
- 
+ The base class of the RibbonItem event arguments which have UIApplication property.
+
+ 
+
  RibbonItemEventArgs()
  """
  Application=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The current UIApplication.
-
-Get: Application(self: RibbonItemEventArgs) -> UIApplication
-
+ """The current UIApplication.
+
+
+
+Get: Application(self: RibbonItemEventArgs) -> UIApplication
+
+
+
 """
 
 
@@ -93,32 +119,44 @@ Get: Application(self: RibbonItemEventArgs) -> UIApplication
 class ComboBoxCurrentChangedEventArgs(RibbonItemEventArgs):
  """ The event arguments used by ComboBox's CurrentChanged event. """
  NewValue=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The current item for the ComboBox after the change.
-
-Get: NewValue(self: ComboBoxCurrentChangedEventArgs) -> ComboBoxMember
-
+ """The current item for the ComboBox after the change.
+
+
+
+Get: NewValue(self: ComboBoxCurrentChangedEventArgs) -> ComboBoxMember
+
+
+
 """
 
  OldValue=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The current item for the ComboBox before the change.
-
-Get: OldValue(self: ComboBoxCurrentChangedEventArgs) -> ComboBoxMember
-
+ """The current item for the ComboBox before the change.
+
+
+
+Get: OldValue(self: ComboBoxCurrentChangedEventArgs) -> ComboBoxMember
+
+
+
 """
 
 
 
 class ComboBoxDropDownClosedEventArgs(RibbonItemEventArgs):
  """
- The event arguments used by ComboBox's DropDownClosed event.
- 
+ The event arguments used by ComboBox's DropDownClosed event.
+
+ 
+
  ComboBoxDropDownClosedEventArgs()
  """
 
 class ComboBoxDropDownOpenedEventArgs(RibbonItemEventArgs):
  """
- The event arguments used by ComboBox's DropDownOpened event.
- 
+ The event arguments used by ComboBox's DropDownOpened event.
+
+ 
+
  ComboBoxDropDownOpenedEventArgs()
  """
 
@@ -129,13 +167,20 @@ class DialogBoxData(APIObject,IDisposable):
   pass
  def OverrideResult(self,result):
   """
-  OverrideResult(self: DialogBoxData,result: int) -> bool
-  
-   Call this method to cause the Autodesk Revit dialog to be dismissed with the 
-    specified return value.
-  
-  
-   result: The result code you wish the Revit dialog to return.
+  OverrideResult(self: DialogBoxData,result: int) -> bool
+
+  
+
+   Call this method to cause the Autodesk Revit dialog to be dismissed with the 
+
+    specified return value.
+
+  
+
+  
+
+   result: The result code you wish the Revit dialog to return.
+
    Returns: Returns true if the result code was accepted.
   """
   pass
@@ -155,10 +200,14 @@ class DialogBoxData(APIObject,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  HelpId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """An ID that represents the dialog that has been displayed.
-
-Get: HelpId(self: DialogBoxData) -> int
-
+ """An ID that represents the dialog that has been displayed.
+
+
+
+Get: HelpId(self: DialogBoxData) -> int
+
+
+
 """
 
 
@@ -170,13 +219,20 @@ class DialogBoxShowingEventArgs(RevitAPIPreEventArgs,IDisposable):
   pass
  def OverrideResult(self,resultCode):
   """
-  OverrideResult(self: DialogBoxShowingEventArgs,resultCode: int) -> bool
-  
-   Call this method to cause the Autodesk Revit dialog to be dismissed with the 
-    specified return value.
-  
-  
-   resultCode: The result code you wish the Revit dialog to return.
+  OverrideResult(self: DialogBoxShowingEventArgs,resultCode: int) -> bool
+
+  
+
+   Call this method to cause the Autodesk Revit dialog to be dismissed with the 
+
+    specified return value.
+
+  
+
+  
+
+   resultCode: The result code you wish the Revit dialog to return.
+
    Returns: True if the result code was accepted.
   """
   pass
@@ -193,17 +249,25 @@ class DialogBoxShowingEventArgs(RevitAPIPreEventArgs,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  DialogId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """A unique string identifier for DialogBox and TaskDialog type dialogs in Revit.
-
-Get: DialogId(self: DialogBoxShowingEventArgs) -> str
-
+ """A unique string identifier for DialogBox and TaskDialog type dialogs in Revit.
+
+
+
+Get: DialogId(self: DialogBoxShowingEventArgs) -> str
+
+
+
 """
 
  HelpId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """An ID that represents the dialog that has been displayed.
-
-Get: HelpId(self: DialogBoxShowingEventArgs) -> int
-
+ """An ID that represents the dialog that has been displayed.
+
+
+
+Get: HelpId(self: DialogBoxShowingEventArgs) -> int
+
+
+
 """
 
 
@@ -212,10 +276,14 @@ class DisplayingOptionsDialogEventArgs(RevitAPIPreEventArgs,IDisposable):
  """ The event arguments used by DisplayingOptionDialog event. """
  def AddTab(self,newTabName,tabbedDialogExtension):
   """
-  AddTab(self: DisplayingOptionsDialogEventArgs,newTabName: str,tabbedDialogExtension: TabbedDialogExtension)
-   Add tab to option dialog with tab name and handler information.
-  
-   newTabName: The new tab page name.
+  AddTab(self: DisplayingOptionsDialogEventArgs,newTabName: str,tabbedDialogExtension: TabbedDialogExtension)
+
+   Add tab to option dialog with tab name and handler information.
+
+  
+
+   newTabName: The new tab page name.
+
    tabbedDialogExtension: The handlers information for the new tab page.
   """
   pass
@@ -235,10 +303,14 @@ class DisplayingOptionsDialogEventArgs(RevitAPIPreEventArgs,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  PagesCount=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The count of pages in the options dialog (include the default pages added by Revit).
-
-Get: PagesCount(self: DisplayingOptionsDialogEventArgs) -> int
-
+ """The count of pages in the options dialog (include the default pages added by Revit).
+
+
+
+Get: PagesCount(self: DisplayingOptionsDialogEventArgs) -> int
+
+
+
 """
 
 
@@ -261,17 +333,25 @@ class DockableFrameFocusChangedEventArgs(RevitAPISingleEventArgs,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  FocusGained=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """True if the pane is being activated,false if it is being inactivated.
-
-Get: FocusGained(self: DockableFrameFocusChangedEventArgs) -> bool
-
+ """True if the pane is being activated,false if it is being inactivated.
+
+
+
+Get: FocusGained(self: DockableFrameFocusChangedEventArgs) -> bool
+
+
+
 """
 
  PaneId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The identifier for dockable pane.
-
-Get: PaneId(self: DockableFrameFocusChangedEventArgs) -> DockablePaneId
-
+ """The identifier for dockable pane.
+
+
+
+Get: PaneId(self: DockableFrameFocusChangedEventArgs) -> DockablePaneId
+
+
+
 """
 
 
@@ -294,17 +374,25 @@ class DockableFrameVisibilityChangedEventArgs(RevitAPISingleEventArgs,IDisposabl
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  DockableFrameShown=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """True if the pane is being shown,false if it is being hidden.
-
-Get: DockableFrameShown(self: DockableFrameVisibilityChangedEventArgs) -> bool
-
+ """True if the pane is being shown,false if it is being hidden.
+
+
+
+Get: DockableFrameShown(self: DockableFrameVisibilityChangedEventArgs) -> bool
+
+
+
 """
 
  PaneId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The identifier for dockable pane.
-
-Get: PaneId(self: DockableFrameVisibilityChangedEventArgs) -> DockablePaneId
-
+ """The identifier for dockable pane.
+
+
+
+Get: PaneId(self: DockableFrameVisibilityChangedEventArgs) -> DockablePaneId
+
+
+
 """
 
 
@@ -313,8 +401,10 @@ class ExecutedEventArgs(CommandEventArgs):
  """ The event arguments used by AddInCommandBinding's Executed event. """
  def GetJournalData(self):
   """
-  GetJournalData(self: ExecutedEventArgs) -> IDictionary[str,str]
-  
+  GetJournalData(self: ExecutedEventArgs) -> IDictionary[str,str]
+
+  
+
    Gets the journal data associated to this command (on journal playback).
   """
   pass
@@ -329,44 +419,62 @@ class FabricationPartBrowserChangedEventArgs(RevitAPISingleEventArgs,IDisposable
   pass
  def GetAllSolutionsPartsTypeCounts(self):
   """
-  GetAllSolutionsPartsTypeCounts(self: FabricationPartBrowserChangedEventArgs) -> IDictionary[ElementId,int]
-  
+  GetAllSolutionsPartsTypeCounts(self: FabricationPartBrowserChangedEventArgs) -> IDictionary[ElementId,int]
+
+  
+
    Returns the total fabrication part type usage count in all routing solutions.
   """
   pass
  def GetCurrentSolutionPartTypeIds(self):
   """
-  GetCurrentSolutionPartTypeIds(self: FabricationPartBrowserChangedEventArgs) -> ISet[ElementId]
-  
-   Returns set of fabrication part types that are used in the currently selected 
-    solution.
-  
+  GetCurrentSolutionPartTypeIds(self: FabricationPartBrowserChangedEventArgs) -> ISet[ElementId]
+
+  
+
+   Returns set of fabrication part types that are used in the currently selected 
+
+    solution.
+
+  
+
    Returns: The set of ElementIds.
   """
   pass
  def GetFabricationPartTypeIds(self):
   """
-  GetFabricationPartTypeIds(self: FabricationPartBrowserChangedEventArgs) -> ISet[ElementId]
-  
-   Returns set of fabrication part types in use in the routing solution mode.
-   Returns: The set of ElementIds for for fabrication part types that is in use in routing 
+  GetFabricationPartTypeIds(self: FabricationPartBrowserChangedEventArgs) -> ISet[ElementId]
+
+  
+
+   Returns set of fabrication part types in use in the routing solution mode.
+
+   Returns: The set of ElementIds for for fabrication part types that is in use in routing 
+
     solution mode.
   """
   pass
  def GetFilteredSolutionsPartsTypeCounts(self):
   """
-  GetFilteredSolutionsPartsTypeCounts(self: FabricationPartBrowserChangedEventArgs) -> IDictionary[ElementId,int]
-  
-   Returns the active fabrication part type usage count in fitlered routing 
+  GetFilteredSolutionsPartsTypeCounts(self: FabricationPartBrowserChangedEventArgs) -> IDictionary[ElementId,int]
+
+  
+
+   Returns the active fabrication part type usage count in fitlered routing 
+
     solutions.
   """
   pass
  def GetRequiredFabricationPartTypeIds(self):
   """
-  GetRequiredFabricationPartTypeIds(self: FabricationPartBrowserChangedEventArgs) -> ISet[ElementId]
-  
-   Returns set of required fabrication part types in use in routing solution mode.
-   Returns: The set of ElementIds for for required fabrication part types that is in use in 
+  GetRequiredFabricationPartTypeIds(self: FabricationPartBrowserChangedEventArgs) -> ISet[ElementId]
+
+  
+
+   Returns set of required fabrication part types in use in routing solution mode.
+
+   Returns: The set of ElementIds for for required fabrication part types that is in use in 
+
     routing solution mode.
   """
   pass
@@ -383,32 +491,46 @@ class FabricationPartBrowserChangedEventArgs(RevitAPISingleEventArgs,IDisposable
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  NumberOfSolutions=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The number of active solutions in routing solution mode.
-
-Get: NumberOfSolutions(self: FabricationPartBrowserChangedEventArgs) -> int
-
+ """The number of active solutions in routing solution mode.
+
+
+
+Get: NumberOfSolutions(self: FabricationPartBrowserChangedEventArgs) -> int
+
+
+
 """
 
  Operation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The operation associated with this event
-
-Get: Operation(self: FabricationPartBrowserChangedEventArgs) -> FabricationPartBrowserOperation
-
+ """The operation associated with this event
+
+
+
+Get: Operation(self: FabricationPartBrowserChangedEventArgs) -> FabricationPartBrowserOperation
+
+
+
 """
 
  ServiceId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The identifier for the fabrication service.
-
-Get: ServiceId(self: FabricationPartBrowserChangedEventArgs) -> int
-
+ """The identifier for the fabrication service.
+
+
+
+Get: ServiceId(self: FabricationPartBrowserChangedEventArgs) -> int
+
+
+
 """
 
 
 
 class FabricationPartBrowserOperation(Enum,IComparable,IFormattable,IConvertible):
  """
- Operations for the FabricationPartBrowserChangedEventArgs Event
- 
+ Operations for the FabricationPartBrowserChangedEventArgs Event
+
+ 
+
  enum FabricationPartBrowserOperation,values: CreatedRoutingSolutions (4),FinishRoutingSolutionMode (6),HideBrowser (1),RoutingSolutionChanged (5),ShowBrowser (0),ShowService (2),StartRoutingSolutionMode (3),UnknownOperation (-1)
  """
  def __eq__(self,*args):
@@ -455,11 +577,16 @@ class IdlingEventArgs(RevitAPIPreEventArgs,IDisposable):
   pass
  def SetRaiseWithoutDelay(self):
   """
-  SetRaiseWithoutDelay(self: IdlingEventArgs)
-   Sets the next invocation of the idling event to be called promptly,
-     rather 
-    than relying on the default recurrence of idling from the Revit application. 
-    For more
+  SetRaiseWithoutDelay(self: IdlingEventArgs)
+
+   Sets the next invocation of the idling event to be called promptly,
+
+     rather 
+
+    than relying on the default recurrence of idling from the Revit application. 
+
+    For more
+
      details see the remarks describing the Idling event.
   """
   pass
@@ -475,7 +602,8 @@ class IdlingEventArgs(RevitAPIPreEventArgs,IDisposable):
 
 class MessageBoxData(DialogBoxData,IDisposable):
  """
- An object that represents a simple message box that prompts the user
+ An object that represents a simple message box that prompts the user
+
  for some action.
  """
  def Dispose(self):
@@ -497,17 +625,25 @@ class MessageBoxData(DialogBoxData,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  DialogType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """An integer that describes the standard windows type of the dialog box.
-
-Get: DialogType(self: MessageBoxData) -> int
-
+ """An integer that describes the standard windows type of the dialog box.
+
+
+
+Get: DialogType(self: MessageBoxData) -> int
+
+
+
 """
 
  Message=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The message that has been displayed in the dialog box.
-
-Get: Message(self: MessageBoxData) -> str
-
+ """The message that has been displayed in the dialog box.
+
+
+
+Get: Message(self: MessageBoxData) -> str
+
+
+
 """
 
 
@@ -530,17 +666,25 @@ class MessageBoxShowingEventArgs(DialogBoxShowingEventArgs,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  DialogType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """An integer that describes the standard Windows type of the dialog box.
-
-Get: DialogType(self: MessageBoxShowingEventArgs) -> int
-
+ """An integer that describes the standard Windows type of the dialog box.
+
+
+
+Get: DialogType(self: MessageBoxShowingEventArgs) -> int
+
+
+
 """
 
  Message=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The message that has been displayed in the dialog box.
-
-Get: Message(self: MessageBoxShowingEventArgs) -> str
-
+ """The message that has been displayed in the dialog box.
+
+
+
+Get: Message(self: MessageBoxShowingEventArgs) -> str
+
+
+
 """
 
 
@@ -563,18 +707,24 @@ class TaskDialogShowingEventArgs(DialogBoxShowingEventArgs,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Message=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The message that has been displayed in the dialog box.
-
-Get: Message(self: TaskDialogShowingEventArgs) -> str
-
+ """The message that has been displayed in the dialog box.
+
+
+
+Get: Message(self: TaskDialogShowingEventArgs) -> str
+
+
+
 """
 
 
 
 class TextBoxEnterPressedEventArgs(RibbonItemEventArgs):
  """
- The event arguments used by TextBox's EnterPressed event.
- 
+ The event arguments used by TextBox's EnterPressed event.
+
+ 
+
  TextBoxEnterPressedEventArgs()
  """
 
@@ -596,17 +746,25 @@ class ViewActivatedEventArgs(RevitAPIPostDocEventArgs,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  CurrentActiveView=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The view that has just become active.
-
-Get: CurrentActiveView(self: ViewActivatedEventArgs) -> View
-
+ """The view that has just become active.
+
+
+
+Get: CurrentActiveView(self: ViewActivatedEventArgs) -> View
+
+
+
 """
 
  PreviousActiveView=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The previously active view.
-
-Get: PreviousActiveView(self: ViewActivatedEventArgs) -> View
-
+ """The previously active view.
+
+
+
+Get: PreviousActiveView(self: ViewActivatedEventArgs) -> View
+
+
+
 """
 
 
@@ -629,17 +787,25 @@ class ViewActivatingEventArgs(RevitAPIPreDocEventArgs,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  CurrentActiveView=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The view that is currently active.
-
-Get: CurrentActiveView(self: ViewActivatingEventArgs) -> View
-
+ """The view that is currently active.
+
+
+
+Get: CurrentActiveView(self: ViewActivatingEventArgs) -> View
+
+
+
 """
 
  NewActiveView=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The view that is going to become active.
-
-Get: NewActiveView(self: ViewActivatingEventArgs) -> View
-
+ """The view that is going to become active.
+
+
+
+Get: NewActiveView(self: ViewActivatingEventArgs) -> View
+
+
+
 """
 
 

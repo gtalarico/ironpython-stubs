@@ -1,9 +1,13 @@
 class ExportFontInfo(object,IDisposable):
  """
- A value used to represent the info stored in an Autodesk.Revit.DB.ExportFontTable.
- 
- ExportFontInfo(destinationFontName: str)
- ExportFontInfo()
+ A value used to represent the info stored in an Autodesk.Revit.DB.ExportFontTable.
+
+ 
+
+ ExportFontInfo(destinationFontName: str)
+
+ ExportFontInfo()
+
  ExportFontInfo(other: ExportFontInfo)
  """
  def Dispose(self):
@@ -24,8 +28,10 @@ class ExportFontInfo(object,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,destinationFontName: str)
-  __new__(cls: type)
+  __new__(cls: type,destinationFontName: str)
+
+  __new__(cls: type)
+
   __new__(cls: type,other: ExportFontInfo)
   """
   pass
@@ -33,18 +39,27 @@ class ExportFontInfo(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  DestinationFontName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The destination font name (the name of the font in the exported format).
-
-Get: DestinationFontName(self: ExportFontInfo) -> str
-
-Set: DestinationFontName(self: ExportFontInfo)=value
+ """The destination font name (the name of the font in the exported format).
+
+
+
+Get: DestinationFontName(self: ExportFontInfo) -> str
+
+
+
+Set: DestinationFontName(self: ExportFontInfo)=value
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ExportFontInfo) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ExportFontInfo) -> bool
+
+
+
 """
 
 

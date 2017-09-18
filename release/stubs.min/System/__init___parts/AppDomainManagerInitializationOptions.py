@@ -1,7 +1,9 @@
 class AppDomainManagerInitializationOptions(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the action that a custom application domain manager takes when initializing a new domain.
- 
+ Specifies the action that a custom application domain manager takes when initializing a new domain.
+
+ 
+
  enum (flags) AppDomainManagerInitializationOptions,values: None (0),RegisterWithHost (1)
  """
  def __eq__(self,*args):

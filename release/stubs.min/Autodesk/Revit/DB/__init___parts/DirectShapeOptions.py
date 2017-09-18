@@ -19,25 +19,38 @@ class DirectShapeOptions(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: DirectShapeOptions) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: DirectShapeOptions) -> bool
+
+
+
 """
 
  ReferencingOption=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Whether or not the geometry stored in a DirectShape or DirectShapeType object may be referenced.
-
-Get: ReferencingOption(self: DirectShapeOptions) -> DirectShapeReferencingOption
-
-Set: ReferencingOption(self: DirectShapeOptions)=value
+ """Whether or not the geometry stored in a DirectShape or DirectShapeType object may be referenced.
+
+
+
+Get: ReferencingOption(self: DirectShapeOptions) -> DirectShapeReferencingOption
+
+
+
+Set: ReferencingOption(self: DirectShapeOptions)=value
+
 """
 
  RoomBoundingOption=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Identifies whether the DirectShape supports an option for the "Room Bounding" parameter to permit participation in room boundary calculations.
-
-Get: RoomBoundingOption(self: DirectShapeOptions) -> DirectShapeRoomBoundingOption
-
+ """Identifies whether the DirectShape supports an option for the "Room Bounding" parameter to permit participation in room boundary calculations.
+
+
+
+Get: RoomBoundingOption(self: DirectShapeOptions) -> DirectShapeRoomBoundingOption
+
+
+
 """
 
 

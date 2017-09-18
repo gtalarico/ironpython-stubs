@@ -5,19 +5,27 @@ class SweptProfile(object,IDisposable):
   pass
  def GetDrivingCurve(self):
   """
-  GetDrivingCurve(self: SweptProfile) -> Curve
-  
-   Provides access to the curve that dictates the path of the swept profile.
+  GetDrivingCurve(self: SweptProfile) -> Curve
+
+  
+
+   Provides access to the curve that dictates the path of the swept profile.
+
    Returns: A curve that defines the path of the swept profile.
   """
   pass
  def GetSweptProfile(self):
   """
-  GetSweptProfile(self: SweptProfile) -> Profile
-  
-   Returns an object that describes the profile that is swept along the driving 
-    curve.
-  
+  GetSweptProfile(self: SweptProfile) -> Profile
+
+  
+
+   Returns an object that describes the profile that is swept along the driving 
+
+    curve.
+
+  
+
    Returns: A geometric profile object.
   """
   pass
@@ -37,24 +45,36 @@ class SweptProfile(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  EndSetBack=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The distance from the end of the driving curve to the point where the sweep actually ends.
-
-Get: EndSetBack(self: SweptProfile) -> float
-
+ """The distance from the end of the driving curve to the point where the sweep actually ends.
+
+
+
+Get: EndSetBack(self: SweptProfile) -> float
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: SweptProfile) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: SweptProfile) -> bool
+
+
+
 """
 
  StartSetBack=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The distance from the start of the driving curve to the point where the sweep actually begins.
-
-Get: StartSetBack(self: SweptProfile) -> float
-
+ """The distance from the start of the driving curve to the point where the sweep actually begins.
+
+
+
+Get: StartSetBack(self: SweptProfile) -> float
+
+
+
 """
 
 

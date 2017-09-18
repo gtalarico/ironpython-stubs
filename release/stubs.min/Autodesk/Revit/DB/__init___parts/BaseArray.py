@@ -8,17 +8,23 @@ class BaseArray(Element,IDisposable):
   pass
  def GetCopiedMemberIds(self):
   """
-  GetCopiedMemberIds(self: BaseArray) -> ICollection[ElementId]
-  
-   Retrieves the copied member Ids of the Array.
+  GetCopiedMemberIds(self: BaseArray) -> ICollection[ElementId]
+
+  
+
+   Retrieves the copied member Ids of the Array.
+
    Returns: The copied member Ids of the Array
   """
   pass
  def GetOriginalMemberIds(self):
   """
-  GetOriginalMemberIds(self: BaseArray) -> ICollection[ElementId]
-  
-   Retrieves the original member Ids of the Array.
+  GetOriginalMemberIds(self: BaseArray) -> ICollection[ElementId]
+
+  
+
+   Retrieves the original member Ids of the Array.
+
    Returns: The original member Ids of the Array
   """
   pass
@@ -38,25 +44,38 @@ class BaseArray(Element,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Label=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The family parameter label of the BaseArray.
-
-Get: Label(self: BaseArray) -> FamilyParameter
-
-Set: Label(self: BaseArray)=value
+ """The family parameter label of the BaseArray.
+
+
+
+Get: Label(self: BaseArray) -> FamilyParameter
+
+
+
+Set: Label(self: BaseArray)=value
+
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get and Set the Name property
-
-Set: Name(self: BaseArray)=value
+ """Get and Set the Name property
+
+
+
+Set: Name(self: BaseArray)=value
+
 """
 
  NumMembers=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Retrieves or changes the number of the arrayed members.
-
-Get: NumMembers(self: BaseArray) -> int
-
-Set: NumMembers(self: BaseArray)=value
+ """Retrieves or changes the number of the arrayed members.
+
+
+
+Get: NumMembers(self: BaseArray) -> int
+
+
+
+Set: NumMembers(self: BaseArray)=value
+
 """
 
 

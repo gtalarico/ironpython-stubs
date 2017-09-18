@@ -1,10 +1,15 @@
 class BoundingBoxContainsPointFilter(ElementQuickFilter,IDisposable):
  """
- A filter used to match elements with a bounding box that contains the given point.
- 
- BoundingBoxContainsPointFilter(point: XYZ,tolerance: float,inverted: bool)
- BoundingBoxContainsPointFilter(point: XYZ,tolerance: float)
- BoundingBoxContainsPointFilter(point: XYZ,inverted: bool)
+ A filter used to match elements with a bounding box that contains the given point.
+
+ 
+
+ BoundingBoxContainsPointFilter(point: XYZ,tolerance: float,inverted: bool)
+
+ BoundingBoxContainsPointFilter(point: XYZ,tolerance: float)
+
+ BoundingBoxContainsPointFilter(point: XYZ,inverted: bool)
+
  BoundingBoxContainsPointFilter(point: XYZ)
  """
  def Dispose(self):
@@ -25,26 +30,39 @@ class BoundingBoxContainsPointFilter(ElementQuickFilter,IDisposable):
  @staticmethod
  def __new__(self,point,*__args):
   """
-  __new__(cls: type,point: XYZ,tolerance: float,inverted: bool)
-  __new__(cls: type,point: XYZ,tolerance: float)
-  __new__(cls: type,point: XYZ,inverted: bool)
+  __new__(cls: type,point: XYZ,tolerance: float,inverted: bool)
+
+  __new__(cls: type,point: XYZ,tolerance: float)
+
+  __new__(cls: type,point: XYZ,inverted: bool)
+
   __new__(cls: type,point: XYZ)
   """
   pass
  Point=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The XYZ point to use when matching element bounding boxes.
-
-Get: Point(self: BoundingBoxContainsPointFilter) -> XYZ
-
-Set: Point(self: BoundingBoxContainsPointFilter)=value
+ """The XYZ point to use when matching element bounding boxes.
+
+
+
+Get: Point(self: BoundingBoxContainsPointFilter) -> XYZ
+
+
+
+Set: Point(self: BoundingBoxContainsPointFilter)=value
+
 """
 
  Tolerance=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Allows control over the match criteria by using a tolerance in the geometry comparison. It is suggested to use this in cases where trivial differences should be considered when matching elements.
-
-Get: Tolerance(self: BoundingBoxContainsPointFilter) -> float
-
-Set: Tolerance(self: BoundingBoxContainsPointFilter)=value
+ """Allows control over the match criteria by using a tolerance in the geometry comparison. It is suggested to use this in cases where trivial differences should be considered when matching elements.
+
+
+
+Get: Tolerance(self: BoundingBoxContainsPointFilter) -> float
+
+
+
+Set: Tolerance(self: BoundingBoxContainsPointFilter)=value
+
 """
 
 

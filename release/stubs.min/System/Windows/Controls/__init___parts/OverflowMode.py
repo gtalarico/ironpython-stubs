@@ -1,7 +1,9 @@
 class OverflowMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies how System.Windows.Controls.ToolBar items are placed in the main toolbar panel and in the overflow panel.
- 
+ Specifies how System.Windows.Controls.ToolBar items are placed in the main toolbar panel and in the overflow panel.
+
+ 
+
  enum OverflowMode,values: Always (1),AsNeeded (0),Never (2)
  """
  def __eq__(self,*args):

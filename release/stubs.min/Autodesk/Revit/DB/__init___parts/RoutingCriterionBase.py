@@ -5,9 +5,12 @@ class RoutingCriterionBase(object,IDisposable):
   pass
  def IsEqual(self,pOther):
   """
-  IsEqual(self: RoutingCriterionBase,pOther: RoutingCriterionBase) -> bool
-  
-   Verify if two criteria are the same.
+  IsEqual(self: RoutingCriterionBase,pOther: RoutingCriterionBase) -> bool
+
+  
+
+   Verify if two criteria are the same.
+
    Returns: True if the criterion is equal to the other,false otherwise
   """
   pass
@@ -27,10 +30,14 @@ class RoutingCriterionBase(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: RoutingCriterionBase) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: RoutingCriterionBase) -> bool
+
+
+
 """
 
 

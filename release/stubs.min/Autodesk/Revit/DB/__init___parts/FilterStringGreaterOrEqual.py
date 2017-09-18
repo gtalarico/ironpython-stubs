@@ -1,7 +1,9 @@
 class FilterStringGreaterOrEqual(FilterStringRuleEvaluator,IDisposable):
  """
- Tests whether string values from the document would sort after or match a certain string.
- 
+ Tests whether string values from the document would sort after or match a certain string.
+
+ 
+
  FilterStringGreaterOrEqual()
  """
  def Dispose(self):

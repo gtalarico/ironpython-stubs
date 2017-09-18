@@ -1,7 +1,9 @@
 class FlowDirection(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines constants that specify the direction in which consecutive user interface (UI) elements are placed in a linear layout container
- 
+ Defines constants that specify the direction in which consecutive user interface (UI) elements are placed in a linear layout container
+
+ 
+
  enum FlowDirection,values: BottomUp (3),LeftToRight (0),RightToLeft (2),TopDown (1)
  """
  def __eq__(self,*args):

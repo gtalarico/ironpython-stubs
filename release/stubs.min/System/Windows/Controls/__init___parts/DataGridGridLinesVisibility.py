@@ -1,7 +1,9 @@
 class DataGridGridLinesVisibility(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines constants that specify the visibility of the grid lines in a System.Windows.Controls.DataGrid.
- 
+ Defines constants that specify the visibility of the grid lines in a System.Windows.Controls.DataGrid.
+
+ 
+
  enum DataGridGridLinesVisibility,values: All (0),Horizontal (1),None (2),Vertical (3)
  """
  def __eq__(self,*args):

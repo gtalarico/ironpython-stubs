@@ -1,7 +1,9 @@
 class SolidCurveIntersectionMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Represents the types of results available for calculating the intersection between a solid and a curve.
- 
+ Represents the types of results available for calculating the intersection between a solid and a curve.
+
+ 
+
  enum SolidCurveIntersectionMode,values: CurveSegmentsInside (0),CurveSegmentsOutside (1)
  """
  def __eq__(self,*args):

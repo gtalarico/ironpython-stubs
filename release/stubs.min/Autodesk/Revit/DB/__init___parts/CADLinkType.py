@@ -1,9 +1,13 @@
 class CADLinkType(ElementType,IDisposable):
  """
- CADLinkType represents both CAD links and CAD imports. The
-    function IsLink can be used to distinguish between the two.
-    CAD imports are not ExternalFileReferences; they are brought
-    completely into the document and maintain no connection to
+ CADLinkType represents both CAD links and CAD imports. The
+
+    function IsLink can be used to distinguish between the two.
+
+    CAD imports are not ExternalFileReferences; they are brought
+
+    completely into the document and maintain no connection to
+
     their original file.
  """
  def Dispose(self):

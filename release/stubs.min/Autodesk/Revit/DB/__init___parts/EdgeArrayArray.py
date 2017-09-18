@@ -1,20 +1,26 @@
 class EdgeArrayArray(APIObject,IDisposable,IEnumerable):
  """
- An array of edge arrays.
- 
+ An array of edge arrays.
+
+ 
+
  EdgeArrayArray()
  """
  def Append(self,item):
   """
-  Append(self: EdgeArrayArray,item: EdgeArray)
-   Add the edge array to the end of the array.
-  
+  Append(self: EdgeArrayArray,item: EdgeArray)
+
+   Add the edge array to the end of the array.
+
+  
+
    item: The edge array to be added.
   """
   pass
  def Clear(self):
   """
-  Clear(self: EdgeArrayArray)
+  Clear(self: EdgeArrayArray)
+
    Removes every edge array from the array,rendering it empty.
   """
   pass
@@ -23,27 +29,38 @@ class EdgeArrayArray(APIObject,IDisposable,IEnumerable):
   pass
  def ForwardIterator(self):
   """
-  ForwardIterator(self: EdgeArrayArray) -> EdgeArrayArrayIterator
-  
-   Retrieve a forward moving iterator to the array.
+  ForwardIterator(self: EdgeArrayArray) -> EdgeArrayArrayIterator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: EdgeArrayArray) -> IEnumerator
-  
-   Retrieve a forward moving iterator to the array.
+  GetEnumerator(self: EdgeArrayArray) -> IEnumerator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
  def Insert(self,item,index):
   """
-  Insert(self: EdgeArrayArray,item: EdgeArray,index: int)
-   Insert the specified edge array into the array.
-  
-   item: The edge array to be inserted into the array.
-   index: The edge array will be inserted before this index.
+  Insert(self: EdgeArrayArray,item: EdgeArray,index: int)
+
+   Insert the specified edge array into the array.
+
+  
+
+   item: The edge array to be inserted into the array.
+
+   index: The edge array will be inserted before this index.
+
    Returns: Returns whether the edge array was inserted into the array.
   """
   pass
@@ -55,9 +72,12 @@ class EdgeArrayArray(APIObject,IDisposable,IEnumerable):
   pass
  def ReverseIterator(self):
   """
-  ReverseIterator(self: EdgeArrayArray) -> EdgeArrayArrayIterator
-  
-   Retrieve a backward moving iterator to the array.
+  ReverseIterator(self: EdgeArrayArray) -> EdgeArrayArrayIterator
+
+  
+
+   Retrieve a backward moving iterator to the array.
+
    Returns: Returns a backward moving iterator to the array.
   """
   pass
@@ -80,17 +100,25 @@ class EdgeArrayArray(APIObject,IDisposable,IEnumerable):
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Test to see if the array is empty.
-
-Get: IsEmpty(self: EdgeArrayArray) -> bool
-
+ """Test to see if the array is empty.
+
+
+
+Get: IsEmpty(self: EdgeArrayArray) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the number of edge arrays that are in the array.
-
-Get: Size(self: EdgeArrayArray) -> int
-
+ """Returns the number of edge arrays that are in the array.
+
+
+
+Get: Size(self: EdgeArrayArray) -> int
+
+
+
 """
 
 

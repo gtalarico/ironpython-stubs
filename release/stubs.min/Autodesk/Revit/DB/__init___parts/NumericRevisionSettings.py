@@ -1,9 +1,13 @@
 class NumericRevisionSettings(object,IDisposable):
  """
- Contains settings that apply to Revisions with the Numeric RevisionNumberType.
- 
- NumericRevisionSettings(startNumber: int,prefix: str,suffix: str)
- NumericRevisionSettings()
+ Contains settings that apply to Revisions with the Numeric RevisionNumberType.
+
+ 
+
+ NumericRevisionSettings(startNumber: int,prefix: str,suffix: str)
+
+ NumericRevisionSettings()
+
  NumericRevisionSettings(other: NumericRevisionSettings)
  """
  def Dispose(self):
@@ -11,19 +15,27 @@ class NumericRevisionSettings(object,IDisposable):
   pass
  def IsEqual(self,other):
   """
-  IsEqual(self: NumericRevisionSettings,other: NumericRevisionSettings) -> bool
-  
-   Determines whether a specified NumericRevisionSettings is the same as 'this'.
-  
-   other: The specified NumericRevisionSettings with which to compare.
+  IsEqual(self: NumericRevisionSettings,other: NumericRevisionSettings) -> bool
+
+  
+
+   Determines whether a specified NumericRevisionSettings is the same as 'this'.
+
+  
+
+   other: The specified NumericRevisionSettings with which to compare.
+
    Returns: True,if two NumericRevisionSettings are the same.
   """
   pass
  def IsValid(self):
   """
-  IsValid(self: NumericRevisionSettings) -> bool
-  
-   Determines whether the NumericRevisionSettings object is in a valid state.
+  IsValid(self: NumericRevisionSettings) -> bool
+
+  
+
+   Determines whether the NumericRevisionSettings object is in a valid state.
+
    Returns: True if the NumericRevisionSettings is valid.
   """
   pass
@@ -42,8 +54,10 @@ class NumericRevisionSettings(object,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,startNumber: int,prefix: str,suffix: str)
-  __new__(cls: type)
+  __new__(cls: type,startNumber: int,prefix: str,suffix: str)
+
+  __new__(cls: type)
+
   __new__(cls: type,other: NumericRevisionSettings)
   """
   pass
@@ -51,34 +65,53 @@ class NumericRevisionSettings(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: NumericRevisionSettings) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: NumericRevisionSettings) -> bool
+
+
+
 """
 
  Prefix=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The prefix string that will be prepended to the number of each revision with Numeric RevisionNumberingType.
-
-Get: Prefix(self: NumericRevisionSettings) -> str
-
-Set: Prefix(self: NumericRevisionSettings)=value
+ """The prefix string that will be prepended to the number of each revision with Numeric RevisionNumberingType.
+
+
+
+Get: Prefix(self: NumericRevisionSettings) -> str
+
+
+
+Set: Prefix(self: NumericRevisionSettings)=value
+
 """
 
  StartNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The start number for the sequence.
-
-Get: StartNumber(self: NumericRevisionSettings) -> int
-
-Set: StartNumber(self: NumericRevisionSettings)=value
+ """The start number for the sequence.
+
+
+
+Get: StartNumber(self: NumericRevisionSettings) -> int
+
+
+
+Set: StartNumber(self: NumericRevisionSettings)=value
+
 """
 
  Suffix=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The suffix string that will be appended to the number of each revision with Numeric RevisionNumberingType.
-
-Get: Suffix(self: NumericRevisionSettings) -> str
-
-Set: Suffix(self: NumericRevisionSettings)=value
+ """The suffix string that will be appended to the number of each revision with Numeric RevisionNumberingType.
+
+
+
+Get: Suffix(self: NumericRevisionSettings) -> str
+
+
+
+Set: Suffix(self: NumericRevisionSettings)=value
+
 """
 
 

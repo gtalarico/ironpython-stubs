@@ -1,7 +1,9 @@
 class GridViewColumnHeaderRole(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines the state or role of a System.Windows.Controls.GridViewColumnHeader control.
- 
+ Defines the state or role of a System.Windows.Controls.GridViewColumnHeader control.
+
+ 
+
  enum GridViewColumnHeaderRole,values: Floating (1),Normal (0),Padding (2)
  """
  def __eq__(self,*args):

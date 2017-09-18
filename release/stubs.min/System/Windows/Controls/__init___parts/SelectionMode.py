@@ -1,7 +1,9 @@
 class SelectionMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines the selection behavior for a System.Windows.Controls.ListBox.
- 
+ Defines the selection behavior for a System.Windows.Controls.ListBox.
+
+ 
+
  enum SelectionMode,values: Extended (2),Multiple (1),Single (0)
  """
  def __eq__(self,*args):

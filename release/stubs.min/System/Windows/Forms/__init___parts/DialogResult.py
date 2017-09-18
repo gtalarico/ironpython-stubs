@@ -1,7 +1,9 @@
 class DialogResult(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies identifiers to indicate the return value of a dialog box.
- 
+ Specifies identifiers to indicate the return value of a dialog box.
+
+ 
+
  enum DialogResult,values: Abort (3),Cancel (2),Ignore (5),No (7),None (0),OK (1),Retry (4),Yes (6)
  """
  def __eq__(self,*args):

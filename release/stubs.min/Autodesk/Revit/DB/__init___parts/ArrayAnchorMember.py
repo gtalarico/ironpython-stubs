@@ -1,7 +1,9 @@
 class ArrayAnchorMember(Enum,IComparable,IFormattable,IConvertible):
  """
- Represents the possible choices for how the translation or rotation is used to place each member of the array.
- 
+ Represents the possible choices for how the translation or rotation is used to place each member of the array.
+
+ 
+
  enum ArrayAnchorMember,values: Last (1),Second (0)
  """
  def __eq__(self,*args):

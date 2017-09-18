@@ -6,24 +6,36 @@ class ElementIntersectsFilter(ElementSlowFilter,IDisposable):
  @staticmethod
  def IsCategorySupported(element):
   """
-  IsCategorySupported(element: Element) -> bool
-  
-   Identifies if the input element is of a category supported by element 
-    intersection filters.
-  
-  
-   element: The element.
+  IsCategorySupported(element: Element) -> bool
+
+  
+
+   Identifies if the input element is of a category supported by element 
+
+    intersection filters.
+
+  
+
+  
+
+   element: The element.
+
    Returns: True if the element category is supported,false otherwise.
   """
   pass
  @staticmethod
  def IsElementSupported(element):
   """
-  IsElementSupported(element: Element) -> bool
-  
-   Identifies if the input element is supported by element intersection filters.
-  
-   element: The element.
+  IsElementSupported(element: Element) -> bool
+
+  
+
+   Identifies if the input element is supported by element intersection filters.
+
+  
+
+   element: The element.
+
    Returns: True if the element is supported,false otherwise.
   """
   pass

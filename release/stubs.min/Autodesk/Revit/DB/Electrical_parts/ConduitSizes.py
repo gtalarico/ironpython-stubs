@@ -2,11 +2,16 @@ class ConduitSizes(object,IEnumerable[ConduitSize],IEnumerable,IDisposable):
  """ Class ConduitSizeSet being used to store the conduit sizes. """
  def Contains(self,nominalDiameter):
   """
-  Contains(self: ConduitSizes,nominalDiameter: float) -> bool
-  
-   Checks whether a conduit size with the nominal diameter exists.
-  
-   nominalDiameter: Nominal diameter.
+  Contains(self: ConduitSizes,nominalDiameter: float) -> bool
+
+  
+
+   Checks whether a conduit size with the nominal diameter exists.
+
+  
+
+   nominalDiameter: Nominal diameter.
+
    Returns: True if a conduit size with the nominal diameter exists.
   """
   pass
@@ -15,16 +20,21 @@ class ConduitSizes(object,IEnumerable[ConduitSize],IEnumerable,IDisposable):
   pass
  def GetConduitSizesIterator(self):
   """
-  GetConduitSizesIterator(self: ConduitSizes) -> ConduitSizeIterator
-  
+  GetConduitSizesIterator(self: ConduitSizes) -> ConduitSizeIterator
+
+  
+
    Returns a ConduitSizeIterator to the conduit sizes.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: ConduitSizes) -> IEnumerator[ConduitSize]
-  
-   Returns an enumerator that iterates through a collection.
+  GetEnumerator(self: ConduitSizes) -> IEnumerator[ConduitSize]
+
+  
+
+   Returns an enumerator that iterates through a collection.
+
    Returns: An IEnumerator object that can be used to iterate through the collection.
   """
   pass
@@ -50,17 +60,25 @@ class ConduitSizes(object,IEnumerable[ConduitSize],IEnumerable,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Count=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Count of the items contained in the collection.
-
-Get: Count(self: ConduitSizes) -> int
-
+ """Count of the items contained in the collection.
+
+
+
+Get: Count(self: ConduitSizes) -> int
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ConduitSizes) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ConduitSizes) -> bool
+
+
+
 """
 
 

@@ -19,38 +19,58 @@ class City(APIObject,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Latitude=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Latitude of the city
-
-Get: Latitude(self: City) -> float
-
+ """Latitude of the city
+
+
+
+Get: Latitude(self: City) -> float
+
+
+
 """
 
  Longitude=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Longitude of the city
-
-Get: Longitude(self: City) -> float
-
+ """Longitude of the city
+
+
+
+Get: Longitude(self: City) -> float
+
+
+
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The name of the city
-
-Get: Name(self: City) -> str
-
+ """The name of the city
+
+
+
+Get: Name(self: City) -> str
+
+
+
 """
 
  TimeZone=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Time-zone in which the city resides
-
-Get: TimeZone(self: City) -> float
-
+ """Time-zone in which the city resides
+
+
+
+Get: TimeZone(self: City) -> float
+
+
+
 """
 
  WeatherStation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """An identifier for the nearest weather station
-
-Get: WeatherStation(self: City) -> str
-
+ """An identifier for the nearest weather station
+
+
+
+Get: WeatherStation(self: City) -> str
+
+
+
 """
 
 

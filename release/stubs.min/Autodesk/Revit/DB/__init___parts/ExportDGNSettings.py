@@ -3,20 +3,34 @@ class ExportDGNSettings(Element,IDisposable):
  @staticmethod
  def Create(document,name,options=None):
   """
-  Create(document: Document,name: str) -> ExportDGNSettings
-  
-   Create a DGN export settings with default values.
-  
-   document: Document where created settings is saved.
-   name: The name specified to this settings.
-   Returns: The new DGN export settings instance.
-  Create(document: Document,name: str,options: DGNExportOptions) -> ExportDGNSettings
-  
-   Create DGN export settings with specified values in DGNExportOptions.
-  
-   document: Document where created settings is saved.
-   name: The name specified to this settings.
-   options: The options which will be stored in these settings.
+  Create(document: Document,name: str) -> ExportDGNSettings
+
+  
+
+   Create a DGN export settings with default values.
+
+  
+
+   document: Document where created settings is saved.
+
+   name: The name specified to this settings.
+
+   Returns: The new DGN export settings instance.
+
+  Create(document: Document,name: str,options: DGNExportOptions) -> ExportDGNSettings
+
+  
+
+   Create DGN export settings with specified values in DGNExportOptions.
+
+  
+
+   document: Document where created settings is saved.
+
+   name: The name specified to this settings.
+
+   options: The options which will be stored in these settings.
+
    Returns: The new DGN export settings instance.
   """
   pass
@@ -28,20 +42,28 @@ class ExportDGNSettings(Element,IDisposable):
   pass
  def GetDGNExportOptions(self):
   """
-  GetDGNExportOptions(self: ExportDGNSettings) -> DGNExportOptions
-  
-   Gets the options stored in the these settings.
+  GetDGNExportOptions(self: ExportDGNSettings) -> DGNExportOptions
+
+  
+
+   Gets the options stored in the these settings.
+
    Returns: The options.
   """
   pass
  @staticmethod
  def ListNames(aDoc):
   """
-  ListNames(aDoc: Document) -> IList[str]
-  
-   Returns a list of names of dgn export settings.
-  
-   aDoc: A Revit document to retrieve names from
+  ListNames(aDoc: Document) -> IList[str]
+
+  
+
+   Returns a list of names of dgn export settings.
+
+  
+
+   aDoc: A Revit document to retrieve names from
+
    Returns: An array of strings representing names of predefined setups.
   """
   pass
@@ -50,9 +72,12 @@ class ExportDGNSettings(Element,IDisposable):
   pass
  def SetDGNExportOptions(self,options):
   """
-  SetDGNExportOptions(self: ExportDGNSettings,options: DGNExportOptions)
-   Sets the options stored in these settings.
-  
+  SetDGNExportOptions(self: ExportDGNSettings,options: DGNExportOptions)
+
+   Sets the options stored in these settings.
+
+  
+
    options: The options.
   """
   pass

@@ -1,7 +1,9 @@
 class SlabShapeCreaseType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all Crease types of Slab Shape Edit.
- 
+ An enumerated type listing all Crease types of Slab Shape Edit.
+
+ 
+
  enum SlabShapeCreaseType,values: Auto (3),Boundary (1),Invalid (0),UserDrawn (2)
  """
  def __eq__(self,*args):

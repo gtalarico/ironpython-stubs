@@ -3,9 +3,12 @@ class PanelScheduleSheetInstance(Element,IDisposable):
  @staticmethod
  def Create(ADoc,scheduleId,DBView):
   """
-  Create(ADoc: Document,scheduleId: ElementId,DBView: View) -> PanelScheduleSheetInstance
-  
-   Creates a new instance of panel schedule on sheet and adds it to the document.
+  Create(ADoc: Document,scheduleId: ElementId,DBView: View) -> PanelScheduleSheetInstance
+
+  
+
+   Creates a new instance of panel schedule on sheet and adds it to the document.
+
    Returns: The newly created panel schedule sheet instance element.
   """
   pass
@@ -17,9 +20,12 @@ class PanelScheduleSheetInstance(Element,IDisposable):
   pass
  def GetSchedule(self):
   """
-  GetSchedule(self: PanelScheduleSheetInstance) -> PanelScheduleView
-  
-   Gets the panel schedule view.
+  GetSchedule(self: PanelScheduleSheetInstance) -> PanelScheduleView
+
+  
+
+   Gets the panel schedule view.
+
    Returns: The panel schedule view element.
   """
   pass
@@ -31,9 +37,12 @@ class PanelScheduleSheetInstance(Element,IDisposable):
   pass
  def SplitSegment(self,iSeg):
   """
-  SplitSegment(self: PanelScheduleSheetInstance,iSeg: int) -> bool
-  
-   Split the panel schedule into
+  SplitSegment(self: PanelScheduleSheetInstance,iSeg: int) -> bool
+
+  
+
+   Split the panel schedule into
+
      Thrown if the index is out of bounds.
   """
   pass
@@ -47,19 +56,29 @@ class PanelScheduleSheetInstance(Element,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Origin=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The sheet instance offset in drawing sheet coordinates.
-
-Get: Origin(self: PanelScheduleSheetInstance) -> XYZ
-
-Set: Origin(self: PanelScheduleSheetInstance)=value
+ """The sheet instance offset in drawing sheet coordinates.
+
+
+
+Get: Origin(self: PanelScheduleSheetInstance) -> XYZ
+
+
+
+Set: Origin(self: PanelScheduleSheetInstance)=value
+
 """
 
  ScheduleId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The panel schedule id.
-
-Get: ScheduleId(self: PanelScheduleSheetInstance) -> ElementId
-
-Set: ScheduleId(self: PanelScheduleSheetInstance)=value
+ """The panel schedule id.
+
+
+
+Get: ScheduleId(self: PanelScheduleSheetInstance) -> ElementId
+
+
+
+Set: ScheduleId(self: PanelScheduleSheetInstance)=value
+
 """
 
 

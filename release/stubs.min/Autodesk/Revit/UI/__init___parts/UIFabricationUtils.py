@@ -3,45 +3,54 @@ class UIFabricationUtils(object):
  @staticmethod
  def GetOpenConnectorIndicatorAwayColor():
   """
-  GetOpenConnectorIndicatorAwayColor() -> Color
-  
+  GetOpenConnectorIndicatorAwayColor() -> Color
+
+  
+
    Gets the color of the open connector indicator in away direction.
   """
   pass
  @staticmethod
  def GetOpenConnectorIndicatorPlanColor():
   """
-  GetOpenConnectorIndicatorPlanColor() -> Color
-  
+  GetOpenConnectorIndicatorPlanColor() -> Color
+
+  
+
    Gets the color of the open connector indicator in plan view.
   """
   pass
  @staticmethod
  def GetOpenConnectorIndicatorTowardsColor():
   """
-  GetOpenConnectorIndicatorTowardsColor() -> Color
-  
+  GetOpenConnectorIndicatorTowardsColor() -> Color
+
+  
+
    Gets the color of the open connector indicator in towards direction.
   """
   pass
  @staticmethod
  def SetOpenConnectorIndicatorAwayColor(color):
   """
-  SetOpenConnectorIndicatorAwayColor(color: Color)
+  SetOpenConnectorIndicatorAwayColor(color: Color)
+
    Sets the color of the open connector indicator in away direction
   """
   pass
  @staticmethod
  def SetOpenConnectorIndicatorPlanColor(color):
   """
-  SetOpenConnectorIndicatorPlanColor(color: Color)
+  SetOpenConnectorIndicatorPlanColor(color: Color)
+
    Sets the color of the open connector indicator in plan view.
   """
   pass
  @staticmethod
  def SetOpenConnectorIndicatorTowardsColor(color):
   """
-  SetOpenConnectorIndicatorTowardsColor(color: Color)
+  SetOpenConnectorIndicatorTowardsColor(color: Color)
+
    Sets the color of the open connector indicator in towards direction
   """
   pass

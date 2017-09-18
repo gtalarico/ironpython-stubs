@@ -1,7 +1,9 @@
 class FilterStringRule(FilterValueRule,IDisposable):
  """
- A filter rule that operates on string values in a Revit project.
- 
+ A filter rule that operates on string values in a Revit project.
+
+ 
+
  FilterStringRule(valueProvider: FilterableValueProvider,evaluator: FilterStringRuleEvaluator,ruleString: str,caseSensitive: bool)
  """
  def Dispose(self):
@@ -9,8 +11,10 @@ class FilterStringRule(FilterValueRule,IDisposable):
   pass
  def GetEvaluator(self):
   """
-  GetEvaluator(self: FilterStringRule) -> FilterStringRuleEvaluator
-  
+  GetEvaluator(self: FilterStringRule) -> FilterStringRuleEvaluator
+
+  
+
    Gets the evaluator that implements the test for this rule.
   """
   pass
@@ -19,7 +23,8 @@ class FilterStringRule(FilterValueRule,IDisposable):
   pass
  def SetEvaluator(self,evaluator):
   """
-  SetEvaluator(self: FilterStringRule,evaluator: FilterStringRuleEvaluator)
+  SetEvaluator(self: FilterStringRule,evaluator: FilterStringRuleEvaluator)
+
    Sets the evaluator that implements the test for this rule.
   """
   pass
@@ -37,11 +42,16 @@ class FilterStringRule(FilterValueRule,IDisposable):
   """ __new__(cls: type,valueProvider: FilterableValueProvider,evaluator: FilterStringRuleEvaluator,ruleString: str,caseSensitive: bool) """
   pass
  RuleString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The user-supplied string against which strings from a Revit document will be tested.
-
-Get: RuleString(self: FilterStringRule) -> str
-
-Set: RuleString(self: FilterStringRule)=value
+ """The user-supplied string against which strings from a Revit document will be tested.
+
+
+
+Get: RuleString(self: FilterStringRule) -> str
+
+
+
+Set: RuleString(self: FilterStringRule)=value
+
 """
 
 

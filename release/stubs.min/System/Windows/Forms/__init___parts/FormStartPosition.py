@@ -1,7 +1,9 @@
 class FormStartPosition(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the initial position of a form.
- 
+ Specifies the initial position of a form.
+
+ 
+
  enum FormStartPosition,values: CenterParent (4),CenterScreen (1),Manual (0),WindowsDefaultBounds (3),WindowsDefaultLocation (2)
  """
  def __eq__(self,*args):

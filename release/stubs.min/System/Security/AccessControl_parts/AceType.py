@@ -1,7 +1,9 @@
 class AceType(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines the available access control entry (ACE) types.
- 
+ Defines the available access control entry (ACE) types.
+
+ 
+
  enum AceType,values: AccessAllowed (0),AccessAllowedCallback (9),AccessAllowedCallbackObject (11),AccessAllowedCompound (4),AccessAllowedObject (5),AccessDenied (1),AccessDeniedCallback (10),AccessDeniedCallbackObject (12),AccessDeniedObject (6),MaxDefinedAceType (16),SystemAlarm (3),SystemAlarmCallback (14),SystemAlarmCallbackObject (16),SystemAlarmObject (8),SystemAudit (2),SystemAuditCallback (13),SystemAuditCallbackObject (15),SystemAuditObject (7)
  """
  def __eq__(self,*args):

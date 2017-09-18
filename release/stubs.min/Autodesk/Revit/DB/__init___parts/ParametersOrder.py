@@ -1,7 +1,9 @@
 class ParametersOrder(Enum,IComparable,IFormattable,IConvertible):
  """
- The order of the parameters.
- 
+ The order of the parameters.
+
+ 
+
  enum ParametersOrder,values: Ascending (0),Descending (1)
  """
  def __eq__(self,*args):

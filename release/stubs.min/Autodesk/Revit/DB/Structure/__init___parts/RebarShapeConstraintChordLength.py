@@ -1,8 +1,11 @@
 class RebarShapeConstraintChordLength(RebarShapeConstraint,IDisposable):
  """
- A constraint that can be applied to a RebarShapeDefinitionByArc
-    and drives the straight distance between the arc endpoints.
- 
+ A constraint that can be applied to a RebarShapeDefinitionByArc
+
+    and drives the straight distance between the arc endpoints.
+
+ 
+
  RebarShapeConstraintChordLength(paramId: ElementId)
  """
  def Dispose(self):

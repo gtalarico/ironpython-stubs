@@ -1,8 +1,11 @@
 class SaveModifiedLinksOptions(Enum,IComparable,IFormattable,IConvertible):
  """
- Class giving options when saving linked files which have been modified
-    in-memory by shared coordinates operations.
- 
+ Class giving options when saving linked files which have been modified
+
+    in-memory by shared coordinates operations.
+
+ 
+
  enum SaveModifiedLinksOptions,values: DisableSharedPositioning (2),DoNotSaveLinks (1),SaveLinks (0)
  """
  def __eq__(self,*args):

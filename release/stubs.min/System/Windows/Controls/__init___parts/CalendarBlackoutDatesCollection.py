@@ -1,12 +1,15 @@
 class CalendarBlackoutDatesCollection(ObservableCollection[CalendarDateRange],IList[CalendarDateRange],ICollection[CalendarDateRange],IEnumerable[CalendarDateRange],IEnumerable,IList,ICollection,IReadOnlyList[CalendarDateRange],IReadOnlyCollection[CalendarDateRange],INotifyCollectionChanged,INotifyPropertyChanged):
  """
- Represents a collection of non-selectable dates in a System.Windows.Controls.Calendar.
- 
+ Represents a collection of non-selectable dates in a System.Windows.Controls.Calendar.
+
+ 
+
  CalendarBlackoutDatesCollection(owner: Calendar)
  """
  def AddDatesInPast(self):
   """
-  AddDatesInPast(self: CalendarBlackoutDatesCollection)
+  AddDatesInPast(self: CalendarBlackoutDatesCollection)
+
    Adds all dates before System.DateTime.Today to the collection.
   """
   pass
@@ -15,15 +18,19 @@ class CalendarBlackoutDatesCollection(ObservableCollection[CalendarDateRange],IL
   pass
  def BlockReentrancy(self,*args):
   """
-  BlockReentrancy(self: ObservableCollection[CalendarDateRange]) -> IDisposable
-  
-   Disallows reentrant attempts to change this collection.
+  BlockReentrancy(self: ObservableCollection[CalendarDateRange]) -> IDisposable
+
+  
+
+   Disallows reentrant attempts to change this collection.
+
    Returns: An System.IDisposable object that can be used to dispose of the object.
   """
   pass
  def CheckReentrancy(self,*args):
   """
-  CheckReentrancy(self: ObservableCollection[CalendarDateRange])
+  CheckReentrancy(self: ObservableCollection[CalendarDateRange])
+
    Checks for reentrant attempts to change this collection.
   """
   pass
@@ -32,30 +39,49 @@ class CalendarBlackoutDatesCollection(ObservableCollection[CalendarDateRange],IL
   pass
  def Contains(self,*__args):
   """
-  Contains(self: CalendarBlackoutDatesCollection,start: DateTime,end: DateTime) -> bool
-  
-   Returns a value that represents whether this collection contains the specified range of dates.
-  
-   start: The start of the date range.
-   end: The end of the date range.
-   Returns: true if all dates in the range are contained in the collection; otherwise,false.
-  Contains(self: CalendarBlackoutDatesCollection,date: DateTime) -> bool
-  
-   Returns a value that represents whether this collection contains the specified date.
-  
-   date: The date to search for.
+  Contains(self: CalendarBlackoutDatesCollection,start: DateTime,end: DateTime) -> bool
+
+  
+
+   Returns a value that represents whether this collection contains the specified range of dates.
+
+  
+
+   start: The start of the date range.
+
+   end: The end of the date range.
+
+   Returns: true if all dates in the range are contained in the collection; otherwise,false.
+
+  Contains(self: CalendarBlackoutDatesCollection,date: DateTime) -> bool
+
+  
+
+   Returns a value that represents whether this collection contains the specified date.
+
+  
+
+   date: The date to search for.
+
    Returns: true if the collection contains the specified date; otherwise,false.
   """
   pass
  def ContainsAny(self,range):
   """
-  ContainsAny(self: CalendarBlackoutDatesCollection,range: CalendarDateRange) -> bool
-  
-   Returns a value that represents whether this collection contains any dates in the specified 
-    range of dates.
-  
-  
-   range: The range of dates to search for.
+  ContainsAny(self: CalendarBlackoutDatesCollection,range: CalendarDateRange) -> bool
+
+  
+
+   Returns a value that represents whether this collection contains any dates in the specified 
+
+    range of dates.
+
+  
+
+  
+
+   range: The range of dates to search for.
+
    Returns: true if any dates in the range are contained in the collection; otherwise,false.
   """
   pass
@@ -64,26 +90,36 @@ class CalendarBlackoutDatesCollection(ObservableCollection[CalendarDateRange],IL
   pass
  def MoveItem(self,*args):
   """
-  MoveItem(self: ObservableCollection[CalendarDateRange],oldIndex: int,newIndex: int)
-   Moves the item at the specified index to a new location in the collection.
-  
-   oldIndex: The zero-based index specifying the location of the item to be moved.
+  MoveItem(self: ObservableCollection[CalendarDateRange],oldIndex: int,newIndex: int)
+
+   Moves the item at the specified index to a new location in the collection.
+
+  
+
+   oldIndex: The zero-based index specifying the location of the item to be moved.
+
    newIndex: The zero-based index specifying the new location of the item.
   """
   pass
  def OnCollectionChanged(self,*args):
   """
-  OnCollectionChanged(self: ObservableCollection[CalendarDateRange],e: NotifyCollectionChangedEventArgs)
-   Raises the System.Collections.ObjectModel.ObservableCollection event with the provided arguments.
-  
+  OnCollectionChanged(self: ObservableCollection[CalendarDateRange],e: NotifyCollectionChangedEventArgs)
+
+   Raises the System.Collections.ObjectModel.ObservableCollection event with the provided arguments.
+
+  
+
    e: Arguments of the event being raised.
   """
   pass
  def OnPropertyChanged(self,*args):
   """
-  OnPropertyChanged(self: ObservableCollection[CalendarDateRange],e: PropertyChangedEventArgs)
-   Raises the System.Collections.ObjectModel.ObservableCollection event with the provided arguments.
-  
+  OnPropertyChanged(self: ObservableCollection[CalendarDateRange],e: PropertyChangedEventArgs)
+
+   Raises the System.Collections.ObjectModel.ObservableCollection event with the provided arguments.
+
+  
+
    e: Arguments of the event being raised.
   """
   pass
@@ -113,8 +149,10 @@ class CalendarBlackoutDatesCollection(ObservableCollection[CalendarDateRange],IL
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  Items=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a System.Collections.Generic.IList wrapper around the System.Collections.ObjectModel.Collection.
-
+ """Gets a System.Collections.Generic.IList wrapper around the System.Collections.ObjectModel.Collection.
+
+
+
 """
 
 

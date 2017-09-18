@@ -1,7 +1,9 @@
 class FilterDoubleRule(FilterNumericValueRule,IDisposable):
  """
- A filter rule that operates on double-precision numeric values in a Revit project.
- 
+ A filter rule that operates on double-precision numeric values in a Revit project.
+
+ 
+
  FilterDoubleRule(valueProvider: FilterableValueProvider,evaluator: FilterNumericRuleEvaluator,ruleValue: float,epsilon: float)
  """
  def Dispose(self):
@@ -24,19 +26,29 @@ class FilterDoubleRule(FilterNumericValueRule,IDisposable):
   """ __new__(cls: type,valueProvider: FilterableValueProvider,evaluator: FilterNumericRuleEvaluator,ruleValue: float,epsilon: float) """
   pass
  Epsilon=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The tolerance within which two floating-point values may be considered equal.
-
-Get: Epsilon(self: FilterDoubleRule) -> float
-
-Set: Epsilon(self: FilterDoubleRule)=value
+ """The tolerance within which two floating-point values may be considered equal.
+
+
+
+Get: Epsilon(self: FilterDoubleRule) -> float
+
+
+
+Set: Epsilon(self: FilterDoubleRule)=value
+
 """
 
  RuleValue=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The user-supplied value against which values from a Revit document will be tested.
-
-Get: RuleValue(self: FilterDoubleRule) -> float
-
-Set: RuleValue(self: FilterDoubleRule)=value
+ """The user-supplied value against which values from a Revit document will be tested.
+
+
+
+Get: RuleValue(self: FilterDoubleRule) -> float
+
+
+
+Set: RuleValue(self: FilterDoubleRule)=value
+
 """
 
 

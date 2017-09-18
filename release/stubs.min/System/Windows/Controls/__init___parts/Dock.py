@@ -1,7 +1,9 @@
 class Dock(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the System.Windows.Controls.Dock position of a child element that is inside a System.Windows.Controls.DockPanel.
- 
+ Specifies the System.Windows.Controls.Dock position of a child element that is inside a System.Windows.Controls.DockPanel.
+
+ 
+
  enum Dock,values: Bottom (3),Left (0),Right (2),Top (1)
  """
  def __eq__(self,*args):

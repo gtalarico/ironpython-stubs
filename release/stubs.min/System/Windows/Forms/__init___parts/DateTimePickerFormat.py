@@ -1,7 +1,9 @@
 class DateTimePickerFormat(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the date and time format the System.Windows.Forms.DateTimePicker control displays.
- 
+ Specifies the date and time format the System.Windows.Forms.DateTimePicker control displays.
+
+ 
+
  enum DateTimePickerFormat,values: Custom (8),Long (1),Short (2),Time (4)
  """
  def __eq__(self,*args):

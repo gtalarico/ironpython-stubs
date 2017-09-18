@@ -19,31 +19,47 @@ class FaceSecondDerivatives(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: FaceSecondDerivatives) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: FaceSecondDerivatives) -> bool
+
+
+
 """
 
  MixedDerivative=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The mixed derivative.
-
-Get: MixedDerivative(self: FaceSecondDerivatives) -> XYZ
-
+ """The mixed derivative.
+
+
+
+Get: MixedDerivative(self: FaceSecondDerivatives) -> XYZ
+
+
+
 """
 
  UUDerivative=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The second derivative with respect to U.
-
-Get: UUDerivative(self: FaceSecondDerivatives) -> XYZ
-
+ """The second derivative with respect to U.
+
+
+
+Get: UUDerivative(self: FaceSecondDerivatives) -> XYZ
+
+
+
 """
 
  VVDerivative=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The second derivative with respect to V.
-
-Get: VVDerivative(self: FaceSecondDerivatives) -> XYZ
-
+ """The second derivative with respect to V.
+
+
+
+Get: VVDerivative(self: FaceSecondDerivatives) -> XYZ
+
+
+
 """
 
 

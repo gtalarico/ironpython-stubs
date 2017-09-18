@@ -1,7 +1,9 @@
 class BracePlanRepresentation(Enum,IComparable,IFormattable,IConvertible):
  """
- The possible representations for braces in plan views.
- 
+ The possible representations for braces in plan views.
+
+ 
+
  enum BracePlanRepresentation,values: LineWithAngle (2),ParallelLine (1)
  """
  def __eq__(self,*args):

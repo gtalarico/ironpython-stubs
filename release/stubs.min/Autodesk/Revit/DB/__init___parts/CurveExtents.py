@@ -19,24 +19,36 @@ class CurveExtents(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  EndParameter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The end parameter of the curve extents.
-
-Get: EndParameter(self: CurveExtents) -> float
-
+ """The end parameter of the curve extents.
+
+
+
+Get: EndParameter(self: CurveExtents) -> float
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: CurveExtents) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: CurveExtents) -> bool
+
+
+
 """
 
  StartParameter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The start parameter of the curve extents.
-
-Get: StartParameter(self: CurveExtents) -> float
-
+ """The start parameter of the curve extents.
+
+
+
+Get: StartParameter(self: CurveExtents) -> float
+
+
+
 """
 
 

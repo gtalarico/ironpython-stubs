@@ -1,7 +1,9 @@
 class PanelScheduleType(Enum,IComparable,IFormattable,IConvertible):
  """
- This enum declares the panel schedule type.
- 
+ This enum declares the panel schedule type.
+
+ 
+
  enum PanelScheduleType,values: Branch (0),Data (2),Switchboard (1),Unknown (-1)
  """
  def __eq__(self,*args):

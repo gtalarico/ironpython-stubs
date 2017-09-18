@@ -1,9 +1,13 @@
 class UnauthorizedAccessException(SystemException,ISerializable,_Exception):
  """
- The exception that is thrown when the operating system denies access because of an I/O error or a specific type of security error.
- 
- UnauthorizedAccessException()
- UnauthorizedAccessException(message: str)
+ The exception that is thrown when the operating system denies access because of an I/O error or a specific type of security error.
+
+ 
+
+ UnauthorizedAccessException()
+
+ UnauthorizedAccessException(message: str)
+
  UnauthorizedAccessException(message: str,inner: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,9 +22,12 @@ class UnauthorizedAccessException(SystemException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,inner=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,inner: Exception)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,inner: Exception)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

@@ -1,7 +1,9 @@
 class SubfaceType(Enum,IComparable,IFormattable,IConvertible):
  """
- Meaning of a subface's type.
- 
+ Meaning of a subface's type.
+
+ 
+
  enum SubfaceType,values: Bottom (0),Side (2),Top (1)
  """
  def __eq__(self,*args):

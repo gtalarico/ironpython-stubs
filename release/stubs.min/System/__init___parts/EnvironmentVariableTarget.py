@@ -1,7 +1,9 @@
 class EnvironmentVariableTarget(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the location where an environment variable is stored or retrieved in a set or get operation.
- 
+ Specifies the location where an environment variable is stored or retrieved in a set or get operation.
+
+ 
+
  enum EnvironmentVariableTarget,values: Machine (2),Process (0),User (1)
  """
  def __eq__(self,*args):

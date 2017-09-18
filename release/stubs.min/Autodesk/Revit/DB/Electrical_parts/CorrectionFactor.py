@@ -19,17 +19,25 @@ class CorrectionFactor(APIObject,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Factor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get factor value of wire correction factor.
-
-Get: Factor(self: CorrectionFactor) -> float
-
+ """Get factor value of wire correction factor.
+
+
+
+Get: Factor(self: CorrectionFactor) -> float
+
+
+
 """
 
  Temperature=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get temperature which is used for specifying correction factor.
-
-Get: Temperature(self: CorrectionFactor) -> Int64
-
+ """Get temperature which is used for specifying correction factor.
+
+
+
+Get: Temperature(self: CorrectionFactor) -> Int64
+
+
+
 """
 
 

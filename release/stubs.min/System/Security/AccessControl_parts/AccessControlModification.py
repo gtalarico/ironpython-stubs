@@ -1,7 +1,9 @@
 class AccessControlModification(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the type of access control modification to perform. This enumeration is used by methods of the System.Security.AccessControl.ObjectSecurity class and its descendents.
- 
+ Specifies the type of access control modification to perform. This enumeration is used by methods of the System.Security.AccessControl.ObjectSecurity class and its descendents.
+
+ 
+
  enum AccessControlModification,values: Add (0),Remove (3),RemoveAll (4),RemoveSpecific (5),Reset (2),Set (1)
  """
  def __eq__(self,*args):

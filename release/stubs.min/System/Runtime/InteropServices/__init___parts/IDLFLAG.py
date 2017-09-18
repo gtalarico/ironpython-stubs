@@ -1,7 +1,9 @@
 class IDLFLAG(Enum,IComparable,IFormattable,IConvertible):
  """
- Use System.Runtime.InteropServices.ComTypes.IDLFLAG instead.
- 
+ Use System.Runtime.InteropServices.ComTypes.IDLFLAG instead.
+
+ 
+
  enum (flags) IDLFLAG,values: IDLFLAG_FIN (1),IDLFLAG_FLCID (4),IDLFLAG_FOUT (2),IDLFLAG_FRETVAL (8),IDLFLAG_NONE (0)
  """
  def __eq__(self,*args):

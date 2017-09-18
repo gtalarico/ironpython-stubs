@@ -1,7 +1,9 @@
 class AreaFilter(ElementSlowFilter,IDisposable):
  """
- A filter used to match areas.
- 
+ A filter used to match areas.
+
+ 
+
  AreaFilter()
  """
  def Dispose(self):

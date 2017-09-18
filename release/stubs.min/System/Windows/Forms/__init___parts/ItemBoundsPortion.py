@@ -1,7 +1,9 @@
 class ItemBoundsPortion(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies a portion of the list view item from which to retrieve the bounding rectangle.
- 
+ Specifies a portion of the list view item from which to retrieve the bounding rectangle.
+
+ 
+
  enum ItemBoundsPortion,values: Entire (0),Icon (1),ItemOnly (3),Label (2)
  """
  def __eq__(self,*args):

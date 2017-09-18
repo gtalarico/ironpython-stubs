@@ -1,8 +1,11 @@
 class RebarShapeConstraintSagittaLength(RebarShapeConstraint,IDisposable):
  """
- A constraint that can be applied to a RebarShapeDefinitionByArc
-    and drives the height of the arc.
- 
+ A constraint that can be applied to a RebarShapeDefinitionByArc
+
+    and drives the height of the arc.
+
+ 
+
  RebarShapeConstraintSagittaLength(paramId: ElementId)
  """
  def Dispose(self):

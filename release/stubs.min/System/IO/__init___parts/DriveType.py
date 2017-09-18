@@ -1,7 +1,9 @@
 class DriveType(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines constants for drive types,including CDRom,Fixed,Network,NoRootDirectory,Ram,Removable,and Unknown.
- 
+ Defines constants for drive types,including CDRom,Fixed,Network,NoRootDirectory,Ram,Removable,and Unknown.
+
+ 
+
  enum DriveType,values: CDRom (5),Fixed (3),Network (4),NoRootDirectory (1),Ram (6),Removable (2),Unknown (0)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class TrussCurveType(Enum,IComparable,IFormattable,IConvertible):
  """
- Types of curves created in truss families.
- 
+ Types of curves created in truss families.
+
+ 
+
  enum TrussCurveType,values: BottomChord (2),NonTrussCurve (0),TopChord (1),Web (3)
  """
  def __eq__(self,*args):

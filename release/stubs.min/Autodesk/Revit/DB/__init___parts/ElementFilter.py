@@ -5,21 +5,36 @@ class ElementFilter(object,IDisposable):
   pass
  def PassesFilter(self,*__args):
   """
-  PassesFilter(self: ElementFilter,element: Element) -> bool
-  
-   Applies the filter to a given element.
-  
-   element: The element.
-   Returns: True if the element is accepted by the filter.  False if the element is 
-    rejected.
-  
-  PassesFilter(self: ElementFilter,document: Document,id: ElementId) -> bool
-  
-   Applies the filter to a given element.
-  
-   document: The document.
-   id: The element id.
-   Returns: True if the element is accepted by the filter.  False if the element is 
+  PassesFilter(self: ElementFilter,element: Element) -> bool
+
+  
+
+   Applies the filter to a given element.
+
+  
+
+   element: The element.
+
+   Returns: True if the element is accepted by the filter.  False if the element is 
+
+    rejected.
+
+  
+
+  PassesFilter(self: ElementFilter,document: Document,id: ElementId) -> bool
+
+  
+
+   Applies the filter to a given element.
+
+  
+
+   document: The document.
+
+   id: The element id.
+
+   Returns: True if the element is accepted by the filter.  False if the element is 
+
     rejected.
   """
   pass
@@ -39,18 +54,27 @@ class ElementFilter(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Inverted=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """True if the results of the filter are inverted; elements that would normally be accepted by this filter will be rejected,
-   and elements that would normally be rejected will be accepted.
-
-Get: Inverted(self: ElementFilter) -> bool
-
+ """True if the results of the filter are inverted; elements that would normally be accepted by this filter will be rejected,
+
+   and elements that would normally be rejected will be accepted.
+
+
+
+Get: Inverted(self: ElementFilter) -> bool
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ElementFilter) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ElementFilter) -> bool
+
+
+
 """
 
 

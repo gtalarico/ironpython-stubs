@@ -1,7 +1,9 @@
 class ColumnHeaderStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the styles of the column headers in a System.Windows.Forms.ListView control.
- 
+ Specifies the styles of the column headers in a System.Windows.Forms.ListView control.
+
+ 
+
  enum ColumnHeaderStyle,values: Clickable (2),Nonclickable (1),None (0)
  """
  def __eq__(self,*args):

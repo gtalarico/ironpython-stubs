@@ -3,18 +3,30 @@ class FaceWall(HostObject,IDisposable):
  @staticmethod
  def Create(document,wallType,locationLine,faceReference):
   """
-  Create(document: Document,wallType: ElementId,locationLine: WallLocationLine,faceReference: Reference) -> FaceWall
-  
-   Creates a new instance of a wall attached to a non-vertical massing face.
-  
-   document: The document.
-   wallType: The wall type.  This must be a wall type accepted by 
-    IsWallTypeValidForFaceWall()
-  
-   locationLine: The alignment of the wall location line.
-   faceReference: The reference from the massing face.  This must pass 
-    IsValidFaceReferenceForFaceWall()
-  
+  Create(document: Document,wallType: ElementId,locationLine: WallLocationLine,faceReference: Reference) -> FaceWall
+
+  
+
+   Creates a new instance of a wall attached to a non-vertical massing face.
+
+  
+
+   document: The document.
+
+   wallType: The wall type.  This must be a wall type accepted by 
+
+    IsWallTypeValidForFaceWall()
+
+  
+
+   locationLine: The alignment of the wall location line.
+
+   faceReference: The reference from the massing face.  This must pass 
+
+    IsValidFaceReferenceForFaceWall()
+
+  
+
    Returns: The newly created face wall.
   """
   pass
@@ -27,24 +39,36 @@ class FaceWall(HostObject,IDisposable):
  @staticmethod
  def IsValidFaceReferenceForFaceWall(document,faceReference):
   """
-  IsValidFaceReferenceForFaceWall(document: Document,faceReference: Reference) -> bool
-  
-   Identifies if a reference may be used as the parent of a face wall.
-  
-   document: The document.
-   faceReference: The reference.
+  IsValidFaceReferenceForFaceWall(document: Document,faceReference: Reference) -> bool
+
+  
+
+   Identifies if a reference may be used as the parent of a face wall.
+
+  
+
+   document: The document.
+
+   faceReference: The reference.
+
    Returns: True if the reference is valid as a parent to a face wall,false otherwise.
   """
   pass
  @staticmethod
  def IsWallTypeValidForFaceWall(document,wallType):
   """
-  IsWallTypeValidForFaceWall(document: Document,wallType: ElementId) -> bool
-  
-   Identifies if a wall type may be applied to a face wall.
-  
-   document: The document.
-   wallType: The wall type.
+  IsWallTypeValidForFaceWall(document: Document,wallType: ElementId) -> bool
+
+  
+
+   Identifies if a wall type may be applied to a face wall.
+
+  
+
+   document: The document.
+
+   wallType: The wall type.
+
    Returns: True if the wall type is valid for face wall,false otherwise.
   """
   pass

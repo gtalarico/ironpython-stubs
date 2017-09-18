@@ -3,26 +3,46 @@ class BRepBuilderEdgeGeometry(object,IDisposable):
  @staticmethod
  def Create(*__args):
   """
-  Create(curve: Curve) -> BRepBuilderEdgeGeometry
-  
-   Construct BRepBuilderEdgeGeometry based on any GCurve,including GLine and 
-    GArc.
-     The curve will be simplified if possible,and the concrete type of 
-    the returned value will reflect
-     that simplification: 
-    BRepBuilderLinearEdgeGeometry if the curve could be simplified to a line,
-     
-    BRepBuilderArcEdgeGeometry if it could be simplified to an arc,
-    BRepBuilderGenericCurveEdgeGeometry
-     otherwise.
-  
-  
-   curve: The 3D curve for this edge. This BRepBuilderEdgeGeometry stores a copy of the 
-    input curve.
-  
-  Create(startPoint: XYZ,endPoint: XYZ) -> BRepBuilderEdgeGeometry
-  
-   Constructs a BRepBuilderEdgeGeometry representing a straight line between the 
+  Create(curve: Curve) -> BRepBuilderEdgeGeometry
+
+  
+
+   Construct BRepBuilderEdgeGeometry based on any GCurve,including GLine and 
+
+    GArc.
+
+     The curve will be simplified if possible,and the concrete type of 
+
+    the returned value will reflect
+
+     that simplification: 
+
+    BRepBuilderLinearEdgeGeometry if the curve could be simplified to a line,
+
+     
+
+    BRepBuilderArcEdgeGeometry if it could be simplified to an arc,
+
+    BRepBuilderGenericCurveEdgeGeometry
+
+     otherwise.
+
+  
+
+  
+
+   curve: The 3D curve for this edge. This BRepBuilderEdgeGeometry stores a copy of the 
+
+    input curve.
+
+  
+
+  Create(startPoint: XYZ,endPoint: XYZ) -> BRepBuilderEdgeGeometry
+
+  
+
+   Constructs a BRepBuilderEdgeGeometry representing a straight line between the 
+
     two given points.
   """
   pass
@@ -45,10 +65,14 @@ class BRepBuilderEdgeGeometry(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: BRepBuilderEdgeGeometry) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: BRepBuilderEdgeGeometry) -> bool
+
+
+
 """
 
 

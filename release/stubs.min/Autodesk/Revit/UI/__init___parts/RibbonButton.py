@@ -5,28 +5,44 @@ class RibbonButton(RibbonItem):
   """ __new__(cls: type,item: RibbonButton,parentId: str) """
   pass
  Image=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The image of the button.
-
-Get: Image(self: RibbonButton) -> ImageSource
-
-Set: Image(self: RibbonButton)=value
+ """The image of the button.
+
+
+
+Get: Image(self: RibbonButton) -> ImageSource
+
+
+
+Set: Image(self: RibbonButton)=value
+
 """
 
  IsEnabledByContext=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates if this button can be executed. True if the pushbutton is permitted to be executed based on the 
-current Revit context (active document,active view and active tool). False if the pushbutton is disabled because 
-of the active context.
-
-Get: IsEnabledByContext(self: RibbonButton) -> bool
-
+ """Indicates if this button can be executed. True if the pushbutton is permitted to be executed based on the 
+
+current Revit context (active document,active view and active tool). False if the pushbutton is disabled because 
+
+of the active context.
+
+
+
+Get: IsEnabledByContext(self: RibbonButton) -> bool
+
+
+
 """
 
  LargeImage=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The large image shown on the button.
-
-Get: LargeImage(self: RibbonButton) -> ImageSource
-
-Set: LargeImage(self: RibbonButton)=value
+ """The large image shown on the button.
+
+
+
+Get: LargeImage(self: RibbonButton) -> ImageSource
+
+
+
+Set: LargeImage(self: RibbonButton)=value
+
 """
 
 

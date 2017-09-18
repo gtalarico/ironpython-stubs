@@ -19,76 +19,119 @@ class CameraInfo(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  FarDistance=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Distance from eye point to far plane of view frustum along the view direction.
-
-Get: FarDistance(self: CameraInfo) -> float
-
+ """Distance from eye point to far plane of view frustum along the view direction.
+
+
+
+Get: FarDistance(self: CameraInfo) -> float
+
+
+
 """
 
  HorizontalExtent=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Distance between left and right planes on the target plane.
-
-Get: HorizontalExtent(self: CameraInfo) -> float
-
+ """Distance between left and right planes on the target plane.
+
+
+
+Get: HorizontalExtent(self: CameraInfo) -> float
+
+
+
 """
 
  IsPerspective=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Identifies whether the projection is orthographic or perspective
-
-Get: IsPerspective(self: CameraInfo) -> bool
-
+ """Identifies whether the projection is orthographic or perspective
+
+
+
+Get: IsPerspective(self: CameraInfo) -> bool
+
+
+
 """
 
  IsPespective=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Identifies whether the projection is orthographic or perspective
-
-Get: IsPespective(self: CameraInfo) -> bool
-
+ """Identifies whether the projection is orthographic or perspective
+
+
+
+Get: IsPespective(self: CameraInfo) -> bool
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: CameraInfo) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: CameraInfo) -> bool
+
+
+
 """
 
  NearDistance=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Distance from eye point to near plane of view frustum along the view direction.
-
-Get: NearDistance(self: CameraInfo) -> float
-
+ """Distance from eye point to near plane of view frustum along the view direction.
+
+
+
+Get: NearDistance(self: CameraInfo) -> float
+
+
+
 """
 
  RightOffset=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Distance that the target plane is offset towards the right
-   where right is normal to both Up direction and View direction.
-   This offset shifts both left and right planes.
-
-Get: RightOffset(self: CameraInfo) -> float
-
+ """Distance that the target plane is offset towards the right
+
+   where right is normal to both Up direction and View direction.
+
+   This offset shifts both left and right planes.
+
+
+
+Get: RightOffset(self: CameraInfo) -> float
+
+
+
 """
 
  TargetDistance=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Distance from eye point along view direction to target plane.
-
-Get: TargetDistance(self: CameraInfo) -> float
-
+ """Distance from eye point along view direction to target plane.
+
+
+
+Get: TargetDistance(self: CameraInfo) -> float
+
+
+
 """
 
  UpOffset=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Distance that the target plane is offset in the direction of
-   the Up direction. This offset shifts both top and bottom planes.
-
-Get: UpOffset(self: CameraInfo) -> float
-
+ """Distance that the target plane is offset in the direction of
+
+   the Up direction. This offset shifts both top and bottom planes.
+
+
+
+Get: UpOffset(self: CameraInfo) -> float
+
+
+
 """
 
  VerticalExtent=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Distance between top and bottom planes on the target plane.
-
-Get: VerticalExtent(self: CameraInfo) -> float
-
+ """Distance between top and bottom planes on the target plane.
+
+
+
+Get: VerticalExtent(self: CameraInfo) -> float
+
+
+
 """
 
 

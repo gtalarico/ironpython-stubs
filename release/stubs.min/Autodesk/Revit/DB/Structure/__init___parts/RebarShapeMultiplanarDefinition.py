@@ -1,7 +1,9 @@
 class RebarShapeMultiplanarDefinition(object,IDisposable):
  """
- A specification for a simple 3D rebar shape.
- 
+ A specification for a simple 3D rebar shape.
+
+ 
+
  RebarShapeMultiplanarDefinition(outOfPlaneBendDiameter: float)
  """
  def Dispose(self):
@@ -12,7 +14,8 @@ class RebarShapeMultiplanarDefinition(object,IDisposable):
   pass
  def SetPresenceOfSegments(self,isDuplicateShapePresent,isStartConnectorPresent,isEndConnectorPresent):
   """
-  SetPresenceOfSegments(self: RebarShapeMultiplanarDefinition,isDuplicateShapePresent: bool,isStartConnectorPresent: bool,isEndConnectorPresent: bool)
+  SetPresenceOfSegments(self: RebarShapeMultiplanarDefinition,isDuplicateShapePresent: bool,isStartConnectorPresent: bool,isEndConnectorPresent: bool)
+
    Simultaneously set the presence of all 3D segments.
   """
   pass
@@ -33,53 +36,85 @@ class RebarShapeMultiplanarDefinition(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  DepthParamId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Id of the parameter driving the multiplanar depth.
-   The depth is measured center-to-center of the bar.
-   A valid shape parameter must be assigned to DepthParamId before
-   the MultiplanarDefinition can be used in RebarShape creation.
-
-Get: DepthParamId(self: RebarShapeMultiplanarDefinition) -> ElementId
-
-Set: DepthParamId(self: RebarShapeMultiplanarDefinition)=value
+ """Id of the parameter driving the multiplanar depth.
+
+   The depth is measured center-to-center of the bar.
+
+   A valid shape parameter must be assigned to DepthParamId before
+
+   the MultiplanarDefinition can be used in RebarShape creation.
+
+
+
+Get: DepthParamId(self: RebarShapeMultiplanarDefinition) -> ElementId
+
+
+
+Set: DepthParamId(self: RebarShapeMultiplanarDefinition)=value
+
 """
 
  IsDuplicateShapePresent=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Whether the shape definition includes an offset
-   copy of the 2D shape.
-
-Get: IsDuplicateShapePresent(self: RebarShapeMultiplanarDefinition) -> bool
-
+ """Whether the shape definition includes an offset
+
+   copy of the 2D shape.
+
+
+
+Get: IsDuplicateShapePresent(self: RebarShapeMultiplanarDefinition) -> bool
+
+
+
 """
 
  IsEndConnectorPresent=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Whether a perpendicular segment is constructed
-   from the end of the 2D shape.
-
-Get: IsEndConnectorPresent(self: RebarShapeMultiplanarDefinition) -> bool
-
+ """Whether a perpendicular segment is constructed
+
+   from the end of the 2D shape.
+
+
+
+Get: IsEndConnectorPresent(self: RebarShapeMultiplanarDefinition) -> bool
+
+
+
 """
 
  IsStartConnectorPresent=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Whether a perpendicular segment is constructed
-   from the start of the 2D shape.
-
-Get: IsStartConnectorPresent(self: RebarShapeMultiplanarDefinition) -> bool
-
+ """Whether a perpendicular segment is constructed
+
+   from the start of the 2D shape.
+
+
+
+Get: IsStartConnectorPresent(self: RebarShapeMultiplanarDefinition) -> bool
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: RebarShapeMultiplanarDefinition) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: RebarShapeMultiplanarDefinition) -> bool
+
+
+
 """
 
  OutOfPlaneBendDiameter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Bend diameter to be applied to the connector segments.
-
-Get: OutOfPlaneBendDiameter(self: RebarShapeMultiplanarDefinition) -> float
-
-Set: OutOfPlaneBendDiameter(self: RebarShapeMultiplanarDefinition)=value
+ """Bend diameter to be applied to the connector segments.
+
+
+
+Get: OutOfPlaneBendDiameter(self: RebarShapeMultiplanarDefinition) -> float
+
+
+
+Set: OutOfPlaneBendDiameter(self: RebarShapeMultiplanarDefinition)=value
+
 """
 
 

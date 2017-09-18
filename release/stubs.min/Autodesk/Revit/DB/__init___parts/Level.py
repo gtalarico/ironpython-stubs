@@ -3,12 +3,18 @@ class Level(DatumPlane,IDisposable):
  @staticmethod
  def Create(document,elevation):
   """
-  Create(document: Document,elevation: float) -> Level
-  
-   Creates a new instance of level based on an input elevation.
-  
-   document: The document in which the new instance is created
-   elevation: The elevation of the level to be created.
+  Create(document: Document,elevation: float) -> Level
+
+  
+
+   Creates a new instance of level based on an input elevation.
+
+  
+
+   document: The document in which the new instance is created
+
+   elevation: The elevation of the level to be created.
+
    Returns: The newly created level instance.
   """
   pass
@@ -20,8 +26,10 @@ class Level(DatumPlane,IDisposable):
   pass
  def GetPlaneReference(self):
   """
-  GetPlaneReference(self: Level) -> Reference
-  
+  GetPlaneReference(self: Level) -> Reference
+
+  
+
    Returns a reference to this element as a plane.
   """
   pass
@@ -41,19 +49,29 @@ class Level(DatumPlane,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Elevation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Retrieves or changes the elevation above or below the ground level.
-
-Get: Elevation(self: Level) -> float
-
-Set: Elevation(self: Level)=value
+ """Retrieves or changes the elevation above or below the ground level.
+
+
+
+Get: Elevation(self: Level) -> float
+
+
+
+Set: Elevation(self: Level)=value
+
 """
 
  ProjectElevation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Retrieves the elevation relative to project origin,no matter
-   what values of the Elevation Base parameter is set.
-
-Get: ProjectElevation(self: Level) -> float
-
+ """Retrieves the elevation relative to project origin,no matter
+
+   what values of the Elevation Base parameter is set.
+
+
+
+Get: ProjectElevation(self: Level) -> float
+
+
+
 """
 
 

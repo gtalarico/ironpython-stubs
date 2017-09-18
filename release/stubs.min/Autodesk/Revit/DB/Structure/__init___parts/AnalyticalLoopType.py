@@ -1,7 +1,9 @@
 class AnalyticalLoopType(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies kind of analytical model loop.
- 
+ Specifies kind of analytical model loop.
+
+ 
+
  enum AnalyticalLoopType,values: All (0),External (1),Filled (3),Internal (2),Void (4)
  """
  def __eq__(self,*args):

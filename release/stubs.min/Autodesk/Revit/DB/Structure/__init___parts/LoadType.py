@@ -1,7 +1,9 @@
 class LoadType(Enum,IComparable,IFormattable,IConvertible):
  """
- This enum declares types of Loads.
- 
+ This enum declares types of Loads.
+
+ 
+
  enum LoadType,values: Area (2),Line (1),Point (0)
  """
  def __eq__(self,*args):

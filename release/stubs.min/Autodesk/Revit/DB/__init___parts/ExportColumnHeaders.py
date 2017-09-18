@@ -1,7 +1,9 @@
 class ExportColumnHeaders(Enum,IComparable,IFormattable,IConvertible):
  """
- Options for exporting column headers in schedule view export.
- 
+ Options for exporting column headers in schedule view export.
+
+ 
+
  enum ExportColumnHeaders,values: MultipleRows (2),None (0),OneRow (1)
  """
  def __eq__(self,*args):

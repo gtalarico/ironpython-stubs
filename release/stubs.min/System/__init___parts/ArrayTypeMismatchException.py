@@ -1,9 +1,13 @@
 class ArrayTypeMismatchException(SystemException,ISerializable,_Exception):
  """
- The exception that is thrown when an attempt is made to store an element of the wrong type within an array.
- 
- ArrayTypeMismatchException()
- ArrayTypeMismatchException(message: str)
+ The exception that is thrown when an attempt is made to store an element of the wrong type within an array.
+
+ 
+
+ ArrayTypeMismatchException()
+
+ ArrayTypeMismatchException(message: str)
+
  ArrayTypeMismatchException(message: str,innerException: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,9 +22,12 @@ class ArrayTypeMismatchException(SystemException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,innerException=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,innerException: Exception)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,innerException: Exception)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

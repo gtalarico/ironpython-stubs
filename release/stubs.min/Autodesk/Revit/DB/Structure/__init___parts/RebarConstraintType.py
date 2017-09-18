@@ -1,7 +1,9 @@
 class RebarConstraintType(Enum,IComparable,IFormattable,IConvertible):
  """
- The various types of constraints that can be applied to a RebarConstrainedHandle.
- 
+ The various types of constraints that can be applied to a RebarConstrainedHandle.
+
+ 
+
  enum RebarConstraintType,values: FixedDistanceToHostFace (0),ToCover (1),ToOtherRebar (2)
  """
  def __eq__(self,*args):

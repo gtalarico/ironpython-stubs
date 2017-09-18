@@ -5,7 +5,8 @@ class ReferencePlane(DatumPlane,IDisposable):
   pass
  def Flip(self):
   """
-  Flip(self: ReferencePlane)
+  Flip(self: ReferencePlane)
+
    Flips the orientation of the reference plane.
   """
   pass
@@ -14,17 +15,23 @@ class ReferencePlane(DatumPlane,IDisposable):
   pass
  def GetPlane(self):
   """
-  GetPlane(self: ReferencePlane) -> Plane
-  
-   Returns the geometry plane to which the reference plane is assigned.
+  GetPlane(self: ReferencePlane) -> Plane
+
+  
+
+   Returns the geometry plane to which the reference plane is assigned.
+
    Returns: The geometry plane to which the reference plane is assigned.
   """
   pass
  def GetReference(self):
   """
-  GetReference(self: ReferencePlane) -> Reference
-  
-   Returns the geometry reference of the reference plane.
+  GetReference(self: ReferencePlane) -> Reference
+
+  
+
+   Returns the geometry reference of the reference plane.
+
    Returns: The geometry reference of the reference plane.
   """
   pass
@@ -44,42 +51,66 @@ class ReferencePlane(DatumPlane,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  BubbleEnd=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The bubble end of the reference plane.
-
-Get: BubbleEnd(self: ReferencePlane) -> XYZ
-
-Set: BubbleEnd(self: ReferencePlane)=value
+ """The bubble end of the reference plane.
+
+
+
+Get: BubbleEnd(self: ReferencePlane) -> XYZ
+
+
+
+Set: BubbleEnd(self: ReferencePlane)=value
+
 """
 
  Direction=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The direction of the reference plane.
-
-Get: Direction(self: ReferencePlane) -> XYZ
-
-Set: Direction(self: ReferencePlane)=value
+ """The direction of the reference plane.
+
+
+
+Get: Direction(self: ReferencePlane) -> XYZ
+
+
+
+Set: Direction(self: ReferencePlane)=value
+
 """
 
  FreeEnd=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The free end of the reference plane.
-
-Get: FreeEnd(self: ReferencePlane) -> XYZ
-
-Set: FreeEnd(self: ReferencePlane)=value
+ """The free end of the reference plane.
+
+
+
+Get: FreeEnd(self: ReferencePlane) -> XYZ
+
+
+
+Set: FreeEnd(self: ReferencePlane)=value
+
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The name property of the reference plane.
-
-Get: Name(self: ReferencePlane) -> str
-
-Set: Name(self: ReferencePlane)=value
+ """The name property of the reference plane.
+
+
+
+Get: Name(self: ReferencePlane) -> str
+
+
+
+Set: Name(self: ReferencePlane)=value
+
 """
 
  Normal=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The normal vector of the reference plane.
-
-Get: Normal(self: ReferencePlane) -> XYZ
-
+ """The normal vector of the reference plane.
+
+
+
+Get: Normal(self: ReferencePlane) -> XYZ
+
+
+
 """
 
 

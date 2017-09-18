@@ -2,34 +2,52 @@ class TemperatureRatingType(ElementType,IDisposable):
  """ Represents temperature rating type definition information. """
  def AddCorrectionFactor(self,temperature,factor):
   """
-  AddCorrectionFactor(self: TemperatureRatingType,temperature: Int64,factor: float) -> CorrectionFactor
-  
-   Add a new electrical correction factor type to this temperature rating type.
-  
-   temperature: Temperature of correction factor to be added.
-   factor: Factor of correction factor to be added.
+  AddCorrectionFactor(self: TemperatureRatingType,temperature: Int64,factor: float) -> CorrectionFactor
+
+  
+
+   Add a new electrical correction factor type to this temperature rating type.
+
+  
+
+   temperature: Temperature of correction factor to be added.
+
+   factor: Factor of correction factor to be added.
+
    Returns: New constructed correction factor.
   """
   pass
  def AddInsulationType(self,name):
   """
-  AddInsulationType(self: TemperatureRatingType,name: str) -> InsulationType
-  
-   Add a new kind of insulation type into this temperature rating type.
-  
-   name: Name of insulation type symbol to be constructed and added.
+  AddInsulationType(self: TemperatureRatingType,name: str) -> InsulationType
+
+  
+
+   Add a new kind of insulation type into this temperature rating type.
+
+  
+
+   name: Name of insulation type symbol to be constructed and added.
+
    Returns: Constructed insulation type instance.
   """
   pass
  def AddWireSize(self,size,ampacity,diameter):
   """
-  AddWireSize(self: TemperatureRatingType,size: str,ampacity: Int64,diameter: float) -> WireSize
-  
-   Add a new kind of wire size type into this temperature rating type.
-  
-   size: Size of wire size.
-   ampacity: Ampacity of wire size to be added.
-   diameter: Diameter of wire size to be added.
+  AddWireSize(self: TemperatureRatingType,size: str,ampacity: Int64,diameter: float) -> WireSize
+
+  
+
+   Add a new kind of wire size type into this temperature rating type.
+
+  
+
+   size: Size of wire size.
+
+   ampacity: Ampacity of wire size to be added.
+
+   diameter: Diameter of wire size to be added.
+
    Returns: Constructed wire size type.
   """
   pass
@@ -44,28 +62,40 @@ class TemperatureRatingType(ElementType,IDisposable):
   pass
  def RemoveCorrectionFactor(self,correctionFactor):
   """
-  RemoveCorrectionFactor(self: TemperatureRatingType,correctionFactor: CorrectionFactor)
-   Remove an existing correction factor from this temperature rating type in Revit 
-    MEP project.
-  
-  
-   correctionFactor: The correction factor to be removed.
+  RemoveCorrectionFactor(self: TemperatureRatingType,correctionFactor: CorrectionFactor)
+
+   Remove an existing correction factor from this temperature rating type in Revit 
+
+    MEP project.
+
+  
+
+  
+
+   correctionFactor: The correction factor to be removed.
+
    Returns: New constructed correction factor.
   """
   pass
  def RemoveInsulationType(self,insulationType):
   """
-  RemoveInsulationType(self: TemperatureRatingType,insulationType: InsulationType)
-   Remove an existing insulation type from this temperature rating type.
-  
+  RemoveInsulationType(self: TemperatureRatingType,insulationType: InsulationType)
+
+   Remove an existing insulation type from this temperature rating type.
+
+  
+
    insulationType: Insulation type to be removed.
   """
   pass
  def RemoveWireSize(self,wireSize):
   """
-  RemoveWireSize(self: TemperatureRatingType,wireSize: WireSize)
-   Remove an existing wire size type from this temperature rating type.
-  
+  RemoveWireSize(self: TemperatureRatingType,wireSize: WireSize)
+
+   Remove an existing wire size type from this temperature rating type.
+
+  
+
    wireSize: The wire size type to be removed.
   """
   pass
@@ -82,44 +112,67 @@ class TemperatureRatingType(ElementType,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  CorrectionFactors=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get all correction factors defined in this temperature rating type and its corresponding material type.
-
-Get: CorrectionFactors(self: TemperatureRatingType) -> CorrectionFactorSet
-
+ """Get all correction factors defined in this temperature rating type and its corresponding material type.
+
+
+
+Get: CorrectionFactors(self: TemperatureRatingType) -> CorrectionFactorSet
+
+
+
 """
 
  InsulationTypes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get all insulation types defined in this temperature rating type and its corresponding material type.
-
-Get: InsulationTypes(self: TemperatureRatingType) -> InsulationTypeSet
-
+ """Get all insulation types defined in this temperature rating type and its corresponding material type.
+
+
+
+Get: InsulationTypes(self: TemperatureRatingType) -> InsulationTypeSet
+
+
+
 """
 
  IsInUse=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicate whether the temperature rating type is in use.
-
-Get: IsInUse(self: TemperatureRatingType) -> bool
-
+ """Indicate whether the temperature rating type is in use.
+
+
+
+Get: IsInUse(self: TemperatureRatingType) -> bool
+
+
+
 """
 
  MaterialType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the material type information which this temperature rating type belongs to.
-
-Get: MaterialType(self: TemperatureRatingType) -> WireMaterialType
-
+ """Get the material type information which this temperature rating type belongs to.
+
+
+
+Get: MaterialType(self: TemperatureRatingType) -> WireMaterialType
+
+
+
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get name of temperature rating type.
-
-Set: Name(self: TemperatureRatingType)=value
+ """Get name of temperature rating type.
+
+
+
+Set: Name(self: TemperatureRatingType)=value
+
 """
 
  WireSizes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get all electrical wire sizes defined in this temperature rating type and its corresponding material type.
-
-Get: WireSizes(self: TemperatureRatingType) -> WireSizeSet
-
+ """Get all electrical wire sizes defined in this temperature rating type and its corresponding material type.
+
+
+
+Get: WireSizes(self: TemperatureRatingType) -> WireSizeSet
+
+
+
 """
 
 

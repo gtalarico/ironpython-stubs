@@ -19,17 +19,25 @@ class DefinitionFile(APIObject,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Filename=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """This property returns the physical filename of the shared parameters file on disk.
-
-Get: Filename(self: DefinitionFile) -> str
-
+ """This property returns the physical filename of the shared parameters file on disk.
+
+
+
+Get: Filename(self: DefinitionFile) -> str
+
+
+
 """
 
  Groups=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Return a map of shared parameter definition groups contained within the file.
-
-Get: Groups(self: DefinitionFile) -> DefinitionGroups
-
+ """Return a map of shared parameter definition groups contained within the file.
+
+
+
+Get: Groups(self: DefinitionFile) -> DefinitionGroups
+
+
+
 """
 
 

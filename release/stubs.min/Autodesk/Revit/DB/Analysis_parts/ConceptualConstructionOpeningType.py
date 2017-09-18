@@ -1,7 +1,9 @@
 class ConceptualConstructionOpeningType(Enum,IComparable,IFormattable,IConvertible):
  """
- ConceptualConstructionType values for Openings.
- 
+ ConceptualConstructionType values for Openings.
+
+ 
+
  enum ConceptualConstructionOpeningType,values: Air (0),InvalidOpeningTypeConstruction (-1),NumOpeningTypeConstruction (1)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class PageOrientationType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all Page Orientation types of Print Setting.
- 
+ An enumerated type listing all Page Orientation types of Print Setting.
+
+ 
+
  enum PageOrientationType,values: Landscape (1),Portrait (0)
  """
  def __eq__(self,*args):

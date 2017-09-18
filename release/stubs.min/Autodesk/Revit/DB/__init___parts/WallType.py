@@ -22,32 +22,49 @@ class WallType(HostObjAttributes,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Function=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The wall function.
-
-Get: Function(self: WallType) -> WallFunction
-
-Set: Function(self: WallType)=value
+ """The wall function.
+
+
+
+Get: Function(self: WallType) -> WallFunction
+
+
+
+Set: Function(self: WallType)=value
+
 """
 
  Kind=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The nature of the wall.
-
-Get: Kind(self: WallType) -> WallKind
-
+ """The nature of the wall.
+
+
+
+Get: Kind(self: WallType) -> WallKind
+
+
+
 """
 
  ThermalProperties=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The calculated and settable thermal properties of the WallType
-
-Get: ThermalProperties(self: WallType) -> ThermalProperties
-
+ """The calculated and settable thermal properties of the WallType
+
+
+
+Get: ThermalProperties(self: WallType) -> ThermalProperties
+
+
+
 """
 
  Width=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The overall thickness of this type of wall.
-
-Get: Width(self: WallType) -> float
-
+ """The overall thickness of this type of wall.
+
+
+
+Get: Width(self: WallType) -> float
+
+
+
 """
 
 

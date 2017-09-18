@@ -1,7 +1,9 @@
 class MaterialFunctionAssignment(Enum,IComparable,IFormattable,IConvertible):
  """
- Used in class CompoundStructure to specify the function of a layer.
- 
+ Used in class CompoundStructure to specify the function of a layer.
+
+ 
+
  enum MaterialFunctionAssignment,values: Finish1 (4),Finish2 (5),Insulation (3),Membrane (100),None (0),StructuralDeck (200),Structure (1),Substrate (2)
  """
  def __eq__(self,*args):

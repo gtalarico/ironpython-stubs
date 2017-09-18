@@ -1,8 +1,11 @@
 class BuildingType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all of the built-in parameter groups supported by Autodesk
- Revit.
- 
+ An enumerated type listing all of the built-in parameter groups supported by Autodesk
+
+ Revit.
+
+ 
+
  enum BuildingType,values: kAutomotiveFacility (0),kConventionCenter (1),kCourthouse (2),kDiningBarLoungeOrLeisure (3),kDiningCafeteriaFastFood (4),kDiningFamily (5),kDormitory (6),kExerciseCenter (7),kFireStation (8),kGymnasium (9),kHospitalOrHealthcare (10),kHotel (11),kLibrary (12),kManufacturing (13),kMotel (14),kMotionPictureTheatre (15),kMultiFamily (16),kMuseum (17),kNoOfBuildingTypes (-1),kOffice (18),kParkingGarage (19),kPenitentiary (20),kPerformingArtsTheater (21),kPoliceStation (22),kPostOffice (23),kReligiousBuilding (24),kRetail (25),kSchoolOrUniversity (26),kSportsArena (27),kTownHall (28),kTransportation (29),kWarehouse (30),kWorkshop (31)
  """
  def __eq__(self,*args):

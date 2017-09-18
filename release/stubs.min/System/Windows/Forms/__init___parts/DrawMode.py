@@ -1,7 +1,9 @@
 class DrawMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies how the elements of a control are drawn.
- 
+ Specifies how the elements of a control are drawn.
+
+ 
+
  enum DrawMode,values: Normal (0),OwnerDrawFixed (1),OwnerDrawVariable (2)
  """
  def __eq__(self,*args):

@@ -5,94 +5,137 @@ class AnalyticalModelSketchComponent(object,IDisposable):
   pass
  def EnableAutoDetect(self):
   """
-  EnableAutoDetect(self: AnalyticalModelSketchComponent)
+  EnableAutoDetect(self: AnalyticalModelSketchComponent)
+
    Enables Auto-detect on Sketch Component.
   """
   pass
  def GetAnalyticalAlignmentMethod(self):
   """
-  GetAnalyticalAlignmentMethod(self: AnalyticalModelSketchComponent) -> AnalyticalAlignmentMethod
-  
-   Retrieves Analytical Alignment Method preset for Sketch Component.
+  GetAnalyticalAlignmentMethod(self: AnalyticalModelSketchComponent) -> AnalyticalAlignmentMethod
+
+  
+
+   Retrieves Analytical Alignment Method preset for Sketch Component.
+
    Returns: Indicates whether Alignment Method is at Auto-Detect or Projection
   """
   pass
  def GetAnalyticalProjectionDatumPlane(self):
   """
-  GetAnalyticalProjectionDatumPlane(self: AnalyticalModelSketchComponent) -> ElementId
-  
-   Retrieves Datum Plane ElementId for Analytical Projection
-   Returns: Represents Datum used for Analytical Projection,if Analytical Projection Type 
-    indicates that a
-     Datum Plane is to be used.  Otherwise,invalidElementId is 
+  GetAnalyticalProjectionDatumPlane(self: AnalyticalModelSketchComponent) -> ElementId
+
+  
+
+   Retrieves Datum Plane ElementId for Analytical Projection
+
+   Returns: Represents Datum used for Analytical Projection,if Analytical Projection Type 
+
+    indicates that a
+
+     Datum Plane is to be used.  Otherwise,invalidElementId is 
+
     returned.
   """
   pass
  def GetAnalyticalProjectionType(self):
   """
-  GetAnalyticalProjectionType(self: AnalyticalModelSketchComponent) -> AnalyticalProjectionType
-  
-   Retrieves Analytical Projection Type preset for Sketch Component.
+  GetAnalyticalProjectionType(self: AnalyticalModelSketchComponent) -> AnalyticalProjectionType
+
+  
+
+   Retrieves Analytical Projection Type preset for Sketch Component.
+
    Returns: Indicates whether Analytical Projection is at a preset,or refers to a Datum.
   """
   pass
  def GetAutoDetectMatchedElements(self):
   """
-  GetAutoDetectMatchedElements(self: AnalyticalModelSketchComponent) -> ICollection[ElementId]
-  
-   Retrieves ElementIds that Sketch Component is Auto-detecting against.
+  GetAutoDetectMatchedElements(self: AnalyticalModelSketchComponent) -> ICollection[ElementId]
+
+  
+
+   Retrieves ElementIds that Sketch Component is Auto-detecting against.
+
    Returns: Set of ElementIds that Sketch Component is auto-detecting against.
   """
   pass
  def GetComponentElementId(self):
   """
-  GetComponentElementId(self: AnalyticalModelSketchComponent) -> ElementId
-  
-   Retrieves ElementId of Sketch Component,if such an operation makes sense.
-   Returns: ElementId of Sketch Component.
-     If the operation does not make sense 
-    (perhaps because the Sketch abstraction does not
-     translate one-to-one to 
+  GetComponentElementId(self: AnalyticalModelSketchComponent) -> ElementId
+
+  
+
+   Retrieves ElementId of Sketch Component,if such an operation makes sense.
+
+   Returns: ElementId of Sketch Component.
+
+     If the operation does not make sense 
+
+    (perhaps because the Sketch abstraction does not
+
+     translate one-to-one to 
+
     ElementIds),then this will return invalidElementId.
   """
   pass
  def IsAutoDetectEnabled(self):
   """
-  IsAutoDetectEnabled(self: AnalyticalModelSketchComponent) -> bool
-  
-   Indicates whether Auto-detect is enabled on the given Sketch component.
+  IsAutoDetectEnabled(self: AnalyticalModelSketchComponent) -> bool
+
+  
+
+   Indicates whether Auto-detect is enabled on the given Sketch component.
+
    Returns: True if Auto-detect is enabled,false otherwise.
   """
   pass
  def IsValidAnalyticalAlignmentMethod(self,alignmentMethod):
   """
-  IsValidAnalyticalAlignmentMethod(self: AnalyticalModelSketchComponent,alignmentMethod: AnalyticalAlignmentMethod) -> bool
-  
-   Indicates whether Analytical Alignment Method is valid for Sketch Component.
-  
-   alignmentMethod: Analytical Alignment Method preset to test for validity.
+  IsValidAnalyticalAlignmentMethod(self: AnalyticalModelSketchComponent,alignmentMethod: AnalyticalAlignmentMethod) -> bool
+
+  
+
+   Indicates whether Analytical Alignment Method is valid for Sketch Component.
+
+  
+
+   alignmentMethod: Analytical Alignment Method preset to test for validity.
+
    Returns: True means alignment method is valid,false otherwise.
   """
   pass
  def IsValidAnalyticalProjectionType(self,projectionType):
   """
-  IsValidAnalyticalProjectionType(self: AnalyticalModelSketchComponent,projectionType: AnalyticalProjectionType) -> bool
-  
-   Indicates whether Analytical Projection Type is valid for Sketch Component.
-  
-   projectionType: Analytical Projection Type preset to test for validity.
+  IsValidAnalyticalProjectionType(self: AnalyticalModelSketchComponent,projectionType: AnalyticalProjectionType) -> bool
+
+  
+
+   Indicates whether Analytical Projection Type is valid for Sketch Component.
+
+  
+
+   projectionType: Analytical Projection Type preset to test for validity.
+
    Returns: True is projection type is valid,false otherwise.
   """
   pass
  def IsValidDatumPlaneForProjection(self,datumPlaneId):
   """
-  IsValidDatumPlaneForProjection(self: AnalyticalModelSketchComponent,datumPlaneId: ElementId) -> bool
-  
-   Indicates whether Datum Plane is valid Analytical Projection of Sketch 
-    Component.
-  
-  
-   datumPlaneId: ElementId identifying Datum Plane.
+  IsValidDatumPlaneForProjection(self: AnalyticalModelSketchComponent,datumPlaneId: ElementId) -> bool
+
+  
+
+   Indicates whether Datum Plane is valid Analytical Projection of Sketch 
+
+    Component.
+
+  
+
+  
+
+   datumPlaneId: ElementId identifying Datum Plane.
+
    Returns: True if Datum Plane is valid; false otherwise.
   """
   pass
@@ -101,25 +144,34 @@ class AnalyticalModelSketchComponent(object,IDisposable):
   pass
  def SetAnalyticalAlignmentMethod(self,alignmentMethod):
   """
-  SetAnalyticalAlignmentMethod(self: AnalyticalModelSketchComponent,alignmentMethod: AnalyticalAlignmentMethod)
-   Sets the Alignment Method to the supplied Analytical Alignment Method
-  
+  SetAnalyticalAlignmentMethod(self: AnalyticalModelSketchComponent,alignmentMethod: AnalyticalAlignmentMethod)
+
+   Sets the Alignment Method to the supplied Analytical Alignment Method
+
+  
+
    alignmentMethod: Analytical Alignment Method which the Analytical Model should use for alignment.
   """
   pass
  def SetAnalyticalProjectionDatumPlane(self,datumPlaneId):
   """
-  SetAnalyticalProjectionDatumPlane(self: AnalyticalModelSketchComponent,datumPlaneId: ElementId)
-   Sets the Analytical Projection to supplied Datum Plane.
-  
+  SetAnalyticalProjectionDatumPlane(self: AnalyticalModelSketchComponent,datumPlaneId: ElementId)
+
+   Sets the Analytical Projection to supplied Datum Plane.
+
+  
+
    datumPlaneId: Identifies Datum Plane ElementId.
   """
   pass
  def SetAnalyticalProjectionType(self,projectionType):
   """
-  SetAnalyticalProjectionType(self: AnalyticalModelSketchComponent,projectionType: AnalyticalProjectionType)
-   Sets the Analytical Projection to the supplied Analytical Projection Type.
-  
+  SetAnalyticalProjectionType(self: AnalyticalModelSketchComponent,projectionType: AnalyticalProjectionType)
+
+   Sets the Analytical Projection to the supplied Analytical Projection Type.
+
+  
+
    projectionType: Analytical Projection Type to which the Analytical Model should project.
   """
   pass
@@ -136,10 +188,14 @@ class AnalyticalModelSketchComponent(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: AnalyticalModelSketchComponent) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: AnalyticalModelSketchComponent) -> bool
+
+
+
 """
 
 

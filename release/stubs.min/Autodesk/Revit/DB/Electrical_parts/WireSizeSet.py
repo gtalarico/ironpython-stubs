@@ -1,23 +1,32 @@
 class WireSizeSet(APIObject,IDisposable,IEnumerable):
  """
- A set that contains wire sizes.
- 
+ A set that contains wire sizes.
+
+ 
+
  WireSizeSet()
  """
  def Clear(self):
   """
-  Clear(self: WireSizeSet)
+  Clear(self: WireSizeSet)
+
    Removes every wire size from the set,rendering it empty.
   """
   pass
  def Contains(self,item):
   """
-  Contains(self: WireSizeSet,item: WireSize) -> bool
-  
-   Tests for the existence of a wire size within the set.
-  
-   item: The wire size to be searched for.
-   Returns: The Contains method returns True if the wire size is within the set,otherwise 
+  Contains(self: WireSizeSet,item: WireSize) -> bool
+
+  
+
+   Tests for the existence of a wire size within the set.
+
+  
+
+   item: The wire size to be searched for.
+
+   Returns: The Contains method returns True if the wire size is within the set,otherwise 
+
     False.
   """
   pass
@@ -26,37 +35,53 @@ class WireSizeSet(APIObject,IDisposable,IEnumerable):
   pass
  def Erase(self,item):
   """
-  Erase(self: WireSizeSet,item: WireSize) -> int
-  
-   Removes a specified wire size from the set.
-  
-   item: The wire size to be erased.
+  Erase(self: WireSizeSet,item: WireSize) -> int
+
+  
+
+   Removes a specified wire size from the set.
+
+  
+
+   item: The wire size to be erased.
+
    Returns: The number of wire sizes that were erased from the set.
   """
   pass
  def ForwardIterator(self):
   """
-  ForwardIterator(self: WireSizeSet) -> WireSizeSetIterator
-  
-   Retrieve a forward moving iterator to the set.
+  ForwardIterator(self: WireSizeSet) -> WireSizeSetIterator
+
+  
+
+   Retrieve a forward moving iterator to the set.
+
    Returns: Returns a forward moving iterator to the set.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: WireSizeSet) -> IEnumerator
-  
-   Retrieve a forward moving iterator to the set.
+  GetEnumerator(self: WireSizeSet) -> IEnumerator
+
+  
+
+   Retrieve a forward moving iterator to the set.
+
    Returns: Returns a forward moving iterator to the set.
   """
   pass
  def Insert(self,item):
   """
-  Insert(self: WireSizeSet,item: WireSize) -> bool
-  
-   Insert the specified wire size into the set.
-  
-   item: The wire size to be inserted into the set.
+  Insert(self: WireSizeSet,item: WireSize) -> bool
+
+  
+
+   Insert the specified wire size into the set.
+
+  
+
+   item: The wire size to be inserted into the set.
+
    Returns: Returns whether the wire size was inserted into the set.
   """
   pass
@@ -68,9 +93,12 @@ class WireSizeSet(APIObject,IDisposable,IEnumerable):
   pass
  def ReverseIterator(self):
   """
-  ReverseIterator(self: WireSizeSet) -> WireSizeSetIterator
-  
-   Retrieve a backward moving iterator to the set.
+  ReverseIterator(self: WireSizeSet) -> WireSizeSetIterator
+
+  
+
+   Retrieve a backward moving iterator to the set.
+
    Returns: Returns a backward moving iterator to the set.
   """
   pass
@@ -87,17 +115,25 @@ class WireSizeSet(APIObject,IDisposable,IEnumerable):
   """ __iter__(self: IEnumerable) -> object """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Test to see if the set is empty.
-
-Get: IsEmpty(self: WireSizeSet) -> bool
-
+ """Test to see if the set is empty.
+
+
+
+Get: IsEmpty(self: WireSizeSet) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the number of wire sizes that are in the set.
-
-Get: Size(self: WireSizeSet) -> int
-
+ """Returns the number of wire sizes that are in the set.
+
+
+
+Get: Size(self: WireSizeSet) -> int
+
+
+
 """
 
 

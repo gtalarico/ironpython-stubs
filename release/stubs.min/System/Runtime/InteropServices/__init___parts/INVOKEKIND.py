@@ -1,7 +1,9 @@
 class INVOKEKIND(Enum,IComparable,IFormattable,IConvertible):
  """
- Use System.Runtime.InteropServices.ComTypes.INVOKEKIND instead.
- 
+ Use System.Runtime.InteropServices.ComTypes.INVOKEKIND instead.
+
+ 
+
  enum INVOKEKIND,values: INVOKE_FUNC (1),INVOKE_PROPERTYGET (2),INVOKE_PROPERTYPUT (4),INVOKE_PROPERTYPUTREF (8)
  """
  def __eq__(self,*args):

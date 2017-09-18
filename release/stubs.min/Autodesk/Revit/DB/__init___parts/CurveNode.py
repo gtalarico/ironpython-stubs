@@ -5,9 +5,12 @@ class CurveNode(ModelCurveNode,IDisposable):
   pass
  def GetCurve(self):
   """
-  GetCurve(self: CurveNode) -> Curve
-  
-   Returns the geometric curve object corresponding to the node.
+  GetCurve(self: CurveNode) -> Curve
+
+  
+
+   Returns the geometric curve object corresponding to the node.
+
    Returns: The curve.
   """
   pass

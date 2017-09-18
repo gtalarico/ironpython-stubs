@@ -2,18 +2,25 @@ class IWindowTarget:
  """ Defines the communication layer between a control and the Win32 API. """
  def OnHandleChange(self,newHandle):
   """
-  OnHandleChange(self: IWindowTarget,newHandle: IntPtr)
-   Sets the handle of the System.Windows.Forms.IWindowTarget to the specified handle.
-  
+  OnHandleChange(self: IWindowTarget,newHandle: IntPtr)
+
+   Sets the handle of the System.Windows.Forms.IWindowTarget to the specified handle.
+
+  
+
    newHandle: The new handle of the System.Windows.Forms.IWindowTarget.
   """
   pass
  def OnMessage(self,m):
   """
-  OnMessage(self: IWindowTarget,m: Message) -> Message
-  
-   Processes the Windows messages.
-  
+  OnMessage(self: IWindowTarget,m: Message) -> Message
+
+  
+
+   Processes the Windows messages.
+
+  
+
    m: The Windows message to process.
   """
   pass

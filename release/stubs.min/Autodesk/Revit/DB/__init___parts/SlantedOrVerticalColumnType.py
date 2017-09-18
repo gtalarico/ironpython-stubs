@@ -1,7 +1,9 @@
 class SlantedOrVerticalColumnType(Enum,IComparable,IFormattable,IConvertible):
  """
- This enum class is used for the BuiltInParameter SLANTED_COLUMN_TYPE_PARAM.
- 
+ This enum class is used for the BuiltInParameter SLANTED_COLUMN_TYPE_PARAM.
+
+ 
+
  enum SlantedOrVerticalColumnType,values: CT_Angle (1),CT_EndPoint (2),CT_Vertical (0)
  """
  def __eq__(self,*args):

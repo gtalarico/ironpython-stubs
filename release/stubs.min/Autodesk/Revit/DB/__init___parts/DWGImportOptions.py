@@ -1,8 +1,11 @@
 class DWGImportOptions(BaseImportOptions,IDisposable):
  """
- The import options used by importing DWG or DXF format file.
- 
- DWGImportOptions(option: DWGImportOptions)
+ The import options used by importing DWG or DXF format file.
+
+ 
+
+ DWGImportOptions(option: DWGImportOptions)
+
  DWGImportOptions()
  """
  def Dispose(self):
@@ -10,8 +13,10 @@ class DWGImportOptions(BaseImportOptions,IDisposable):
   pass
  def GetLineWeights(self):
   """
-  GetLineWeights(self: DWGImportOptions) -> IList[int]
-  
+  GetLineWeights(self: DWGImportOptions) -> IList[int]
+
+  
+
    Gets array of line weights.
   """
   pass
@@ -33,7 +38,8 @@ class DWGImportOptions(BaseImportOptions,IDisposable):
  @staticmethod
  def __new__(self,option=None):
   """
-  __new__(cls: type,option: DWGImportOptions)
+  __new__(cls: type,option: DWGImportOptions)
+
   __new__(cls: type)
   """
   pass

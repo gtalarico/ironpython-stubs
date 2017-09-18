@@ -1,7 +1,9 @@
 class ColumnAttachmentCutStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Control the handling of columns that intersect their targets.
- 
+ Control the handling of columns that intersect their targets.
+
+ 
+
  enum ColumnAttachmentCutStyle,values: CutColumn (0),CutTarget (1),None (2)
  """
  def __eq__(self,*args):

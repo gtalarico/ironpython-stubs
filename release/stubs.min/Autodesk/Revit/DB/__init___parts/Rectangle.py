@@ -1,9 +1,13 @@
 class Rectangle(object,IDisposable):
  """
- Stores a set of four integers that represent the left,top,right and bottom of a rectangle.
- 
- Rectangle(left: int,top: int,right: int,bottom: int)
- Rectangle()
+ Stores a set of four integers that represent the left,top,right and bottom of a rectangle.
+
+ 
+
+ Rectangle(left: int,top: int,right: int,bottom: int)
+
+ Rectangle()
+
  Rectangle(other: Rectangle)
  """
  def Dispose(self):
@@ -11,9 +15,12 @@ class Rectangle(object,IDisposable):
   pass
  def IsNormalized(self):
   """
-  IsNormalized(self: Rectangle) -> bool
-  
-   Returns true if the rectangle coordinates are normalized to the screen 
+  IsNormalized(self: Rectangle) -> bool
+
+  
+
+   Returns true if the rectangle coordinates are normalized to the screen 
+
     coordinate space; that is,left is less than right and top is less than bottom.
   """
   pass
@@ -32,8 +39,10 @@ class Rectangle(object,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,left: int,top: int,right: int,bottom: int)
-  __new__(cls: type)
+  __new__(cls: type,left: int,top: int,right: int,bottom: int)
+
+  __new__(cls: type)
+
   __new__(cls: type,other: Rectangle)
   """
   pass
@@ -41,42 +50,66 @@ class Rectangle(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Bottom=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The y-coordinate of the bottom-right corner of the rectangle.
-
-Get: Bottom(self: Rectangle) -> int
-
-Set: Bottom(self: Rectangle)=value
+ """The y-coordinate of the bottom-right corner of the rectangle.
+
+
+
+Get: Bottom(self: Rectangle) -> int
+
+
+
+Set: Bottom(self: Rectangle)=value
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: Rectangle) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: Rectangle) -> bool
+
+
+
 """
 
  Left=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The x-coordinate of the top-left corner of the rectangle.
-
-Get: Left(self: Rectangle) -> int
-
-Set: Left(self: Rectangle)=value
+ """The x-coordinate of the top-left corner of the rectangle.
+
+
+
+Get: Left(self: Rectangle) -> int
+
+
+
+Set: Left(self: Rectangle)=value
+
 """
 
  Right=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The x-coordinate of the bottom-right corner of the rectangle.
-
-Get: Right(self: Rectangle) -> int
-
-Set: Right(self: Rectangle)=value
+ """The x-coordinate of the bottom-right corner of the rectangle.
+
+
+
+Get: Right(self: Rectangle) -> int
+
+
+
+Set: Right(self: Rectangle)=value
+
 """
 
  Top=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The y-coordinate of the top-left corner of the rectangle.
-
-Get: Top(self: Rectangle) -> int
-
-Set: Top(self: Rectangle)=value
+ """The y-coordinate of the top-left corner of the rectangle.
+
+
+
+Get: Top(self: Rectangle) -> int
+
+
+
+Set: Top(self: Rectangle)=value
+
 """
 
 

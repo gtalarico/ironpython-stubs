@@ -3,12 +3,18 @@ class PhaseFilter(Element,IDisposable):
  @staticmethod
  def Create(document,name):
   """
-  Create(document: Document,name: str) -> PhaseFilter
-  
-   Creates a new phase filter with default status presentation.
-  
-   document: The document.
-   name: The name.
+  Create(document: Document,name: str) -> PhaseFilter
+
+  
+
+   Creates a new phase filter with default status presentation.
+
+  
+
+   document: The document.
+
+   name: The name.
+
    Returns: The newly created phase filter.
   """
   pass
@@ -20,11 +26,16 @@ class PhaseFilter(Element,IDisposable):
   pass
  def GetPhaseStatusPresentation(self,status):
   """
-  GetPhaseStatusPresentation(self: PhaseFilter,status: ElementOnPhaseStatus) -> PhaseStatusPresentation
-  
-   Gets the phase status presentation.
-  
-   status: The element phase status.
+  GetPhaseStatusPresentation(self: PhaseFilter,status: ElementOnPhaseStatus) -> PhaseStatusPresentation
+
+  
+
+   Gets the phase status presentation.
+
+  
+
+   status: The element phase status.
+
    Returns: The phase status presentation.
   """
   pass
@@ -36,10 +47,14 @@ class PhaseFilter(Element,IDisposable):
   pass
  def SetPhaseStatusPresentation(self,status,presentation):
   """
-  SetPhaseStatusPresentation(self: PhaseFilter,status: ElementOnPhaseStatus,presentation: PhaseStatusPresentation)
-   Sets the phase status presentation.
-  
-   status: The element phase status.
+  SetPhaseStatusPresentation(self: PhaseFilter,status: ElementOnPhaseStatus,presentation: PhaseStatusPresentation)
+
+   Sets the phase status presentation.
+
+  
+
+   status: The element phase status.
+
    presentation: The phase status presentation.
   """
   pass
@@ -53,10 +68,14 @@ class PhaseFilter(Element,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  IsDefault=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates whether this filter is the default one.
-
-Get: IsDefault(self: PhaseFilter) -> bool
-
+ """Indicates whether this filter is the default one.
+
+
+
+Get: IsDefault(self: PhaseFilter) -> bool
+
+
+
 """
 
 

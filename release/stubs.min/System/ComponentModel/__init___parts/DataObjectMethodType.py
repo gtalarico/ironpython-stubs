@@ -1,7 +1,9 @@
 class DataObjectMethodType(Enum,IComparable,IFormattable,IConvertible):
  """
- Identifies the type of data operation performed by a method,as specified by the System.ComponentModel.DataObjectMethodAttribute applied to the method.
- 
+ Identifies the type of data operation performed by a method,as specified by the System.ComponentModel.DataObjectMethodAttribute applied to the method.
+
+ 
+
  enum DataObjectMethodType,values: Delete (4),Fill (0),Insert (3),Select (1),Update (2)
  """
  def __eq__(self,*args):

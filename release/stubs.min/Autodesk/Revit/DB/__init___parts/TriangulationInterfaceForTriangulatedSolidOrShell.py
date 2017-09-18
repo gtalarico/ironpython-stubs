@@ -1,8 +1,11 @@
 class TriangulationInterfaceForTriangulatedSolidOrShell(TriangulationInterface,IDisposable):
  """
- This class is used to call FacetingUtils::convertTrianglesToQuads with a triangulation defined
-    by a TriangulatedSolidOrShell.
- 
+ This class is used to call FacetingUtils::convertTrianglesToQuads with a triangulation defined
+
+    by a TriangulatedSolidOrShell.
+
+ 
+
  TriangulationInterfaceForTriangulatedSolidOrShell(externalTriangulatedSolidOrShell: TriangulatedSolidOrShell)
  """
  def Dispose(self):

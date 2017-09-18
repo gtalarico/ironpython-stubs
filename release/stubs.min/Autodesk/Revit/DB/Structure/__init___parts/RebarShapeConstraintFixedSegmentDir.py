@@ -1,8 +1,11 @@
 class RebarShapeConstraintFixedSegmentDir(RebarShapeConstraint,IDisposable):
  """
- A constraint that can be applied to a RebarShapeSegment and fixes the
-    direction of the segment in UV-space.
- 
+ A constraint that can be applied to a RebarShapeSegment and fixes the
+
+    direction of the segment in UV-space.
+
+ 
+
  RebarShapeConstraintFixedSegmentDir(dir: UV)
  """
  def Dispose(self):
@@ -25,11 +28,16 @@ class RebarShapeConstraintFixedSegmentDir(RebarShapeConstraint,IDisposable):
   """ __new__(cls: type,dir: UV) """
   pass
  Direction=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The direction of the RebarShapeSegment in UV-space.
-
-Get: Direction(self: RebarShapeConstraintFixedSegmentDir) -> UV
-
-Set: Direction(self: RebarShapeConstraintFixedSegmentDir)=value
+ """The direction of the RebarShapeSegment in UV-space.
+
+
+
+Get: Direction(self: RebarShapeConstraintFixedSegmentDir) -> UV
+
+
+
+Set: Direction(self: RebarShapeConstraintFixedSegmentDir)=value
+
 """
 
 

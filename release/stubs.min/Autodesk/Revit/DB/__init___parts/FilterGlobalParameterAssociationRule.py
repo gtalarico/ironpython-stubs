@@ -1,7 +1,9 @@
 class FilterGlobalParameterAssociationRule(FilterNumericValueRule,IDisposable):
  """
- A filter rule that operates on global parameters ElementId values in a Revit project.
- 
+ A filter rule that operates on global parameters ElementId values in a Revit project.
+
+ 
+
  FilterGlobalParameterAssociationRule(valueProvider: FilterableValueProvider,evaluator: FilterNumericRuleEvaluator,ruleValue: ElementId)
  """
  def Dispose(self):
@@ -24,11 +26,16 @@ class FilterGlobalParameterAssociationRule(FilterNumericValueRule,IDisposable):
   """ __new__(cls: type,valueProvider: FilterableValueProvider,evaluator: FilterNumericRuleEvaluator,ruleValue: ElementId) """
   pass
  RuleValue=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The user-supplied global parameter value against which values from a Revit document will be tested.
-
-Get: RuleValue(self: FilterGlobalParameterAssociationRule) -> ElementId
-
-Set: RuleValue(self: FilterGlobalParameterAssociationRule)=value
+ """The user-supplied global parameter value against which values from a Revit document will be tested.
+
+
+
+Get: RuleValue(self: FilterGlobalParameterAssociationRule) -> ElementId
+
+
+
+Set: RuleValue(self: FilterGlobalParameterAssociationRule)=value
+
 """
 
 

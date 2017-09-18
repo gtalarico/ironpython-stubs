@@ -1,7 +1,9 @@
 class UriIdnScope(Enum,IComparable,IFormattable,IConvertible):
  """
- Provides the possible values for the configuration setting of the System.Configuration.IdnElement in the System.Configuration namespace.
- 
+ Provides the possible values for the configuration setting of the System.Configuration.IdnElement in the System.Configuration namespace.
+
+ 
+
  enum UriIdnScope,values: All (2),AllExceptIntranet (1),None (0)
  """
  def __eq__(self,*args):

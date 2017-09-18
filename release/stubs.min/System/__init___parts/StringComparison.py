@@ -1,7 +1,9 @@
 class StringComparison(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the culture,case,and sort rules to be used by certain overloads of the System.String.Compare(System.String,System.String) and System.String.Equals(System.Object) methods.
- 
+ Specifies the culture,case,and sort rules to be used by certain overloads of the System.String.Compare(System.String,System.String) and System.String.Equals(System.Object) methods.
+
+ 
+
  enum StringComparison,values: CurrentCulture (0),CurrentCultureIgnoreCase (1),InvariantCulture (2),InvariantCultureIgnoreCase (3),Ordinal (4),OrdinalIgnoreCase (5)
  """
  def __eq__(self,*args):

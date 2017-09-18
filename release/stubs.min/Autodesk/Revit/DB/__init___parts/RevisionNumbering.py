@@ -1,7 +1,9 @@
 class RevisionNumbering(Enum,IComparable,IFormattable,IConvertible):
  """
- The options for how revision numbers should be displayed on sheets within a project.
- 
+ The options for how revision numbers should be displayed on sheets within a project.
+
+ 
+
  enum RevisionNumbering,values: PerProject (0),PerSheet (1)
  """
  def __eq__(self,*args):

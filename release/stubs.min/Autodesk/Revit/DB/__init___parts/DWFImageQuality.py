@@ -1,7 +1,9 @@
 class DWFImageQuality(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing possible image quality for DWF Export.
- 
+ An enumerated type listing possible image quality for DWF Export.
+
+ 
+
  enum DWFImageQuality,values: Default (10),High (13),Low (11),Medium (12)
  """
  def __eq__(self,*args):

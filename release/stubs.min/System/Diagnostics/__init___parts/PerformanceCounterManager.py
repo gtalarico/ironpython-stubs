@@ -1,7 +1,9 @@
 class PerformanceCounterManager(object,ICollectData):
  """
- Prepares performance data for the performance.dll the system loads when working with performance counters.
- 
+ Prepares performance data for the performance.dll the system loads when working with performance counters.
+
+ 
+
  PerformanceCounterManager()
  """
  def __init__(self,*args):

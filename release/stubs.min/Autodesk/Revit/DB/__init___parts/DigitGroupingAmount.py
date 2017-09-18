@@ -1,7 +1,9 @@
 class DigitGroupingAmount(Enum,IComparable,IFormattable,IConvertible):
  """
- The number of digits in each group when numbers are formatted with digit grouping.
- 
+ The number of digits in each group when numbers are formatted with digit grouping.
+
+ 
+
  enum DigitGroupingAmount,values: Three (1),Two (0)
  """
  def __eq__(self,*args):

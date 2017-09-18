@@ -1,7 +1,9 @@
 class DataGridLengthUnitType(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines constants that specify how elements in a System.Windows.Controls.DataGrid are sized.
- 
+ Defines constants that specify how elements in a System.Windows.Controls.DataGrid are sized.
+
+ 
+
  enum DataGridLengthUnitType,values: Auto (0),Pixel (1),SizeToCells (2),SizeToHeader (3),Star (4)
  """
  def __eq__(self,*args):

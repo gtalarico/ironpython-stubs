@@ -16,27 +16,42 @@ class GradientBackgroundSettings(BackgroundSettings,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  GroundColor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The color of the ground.
-
-Get: GroundColor(self: GradientBackgroundSettings) -> Color
-
-Set: GroundColor(self: GradientBackgroundSettings)=value
+ """The color of the ground.
+
+
+
+Get: GroundColor(self: GradientBackgroundSettings) -> Color
+
+
+
+Set: GroundColor(self: GradientBackgroundSettings)=value
+
 """
 
  HorizonColor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The color of the horizon.
-
-Get: HorizonColor(self: GradientBackgroundSettings) -> Color
-
-Set: HorizonColor(self: GradientBackgroundSettings)=value
+ """The color of the horizon.
+
+
+
+Get: HorizonColor(self: GradientBackgroundSettings) -> Color
+
+
+
+Set: HorizonColor(self: GradientBackgroundSettings)=value
+
 """
 
  SkyColor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The color of the top of the sky.
-
-Get: SkyColor(self: GradientBackgroundSettings) -> Color
-
-Set: SkyColor(self: GradientBackgroundSettings)=value
+ """The color of the top of the sky.
+
+
+
+Get: SkyColor(self: GradientBackgroundSettings) -> Color
+
+
+
+Set: SkyColor(self: GradientBackgroundSettings)=value
+
 """
 
 

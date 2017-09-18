@@ -1,7 +1,9 @@
 class SemaphoreRights(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the access control rights that can be applied to named system semaphore objects.
- 
+ Specifies the access control rights that can be applied to named system semaphore objects.
+
+ 
+
  enum (flags) SemaphoreRights,values: ChangePermissions (262144),Delete (65536),FullControl (2031619),Modify (2),ReadPermissions (131072),Synchronize (1048576),TakeOwnership (524288)
  """
  def __eq__(self,*args):

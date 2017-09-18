@@ -1,7 +1,9 @@
 class DllImportAttribute(Attribute,_Attribute):
  """
- Indicates that the attributed method is exposed by an unmanaged dynamic-link library (DLL) as a static entry point.
- 
+ Indicates that the attributed method is exposed by an unmanaged dynamic-link library (DLL) as a static entry point.
+
+ 
+
  DllImportAttribute(dllName: str)
  """
  def __init__(self,*args):
@@ -12,10 +14,14 @@ class DllImportAttribute(Attribute,_Attribute):
   """ __new__(cls: type,dllName: str) """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the name of the DLL file that contains the entry point.
-
-Get: Value(self: DllImportAttribute) -> str
-
+ """Gets the name of the DLL file that contains the entry point.
+
+
+
+Get: Value(self: DllImportAttribute) -> str
+
+
+
 """
 
 

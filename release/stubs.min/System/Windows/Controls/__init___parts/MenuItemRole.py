@@ -1,7 +1,9 @@
 class MenuItemRole(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines the different roles that a System.Windows.Controls.MenuItem can have.
- 
+ Defines the different roles that a System.Windows.Controls.MenuItem can have.
+
+ 
+
  enum MenuItemRole,values: SubmenuHeader (3),SubmenuItem (2),TopLevelHeader (1),TopLevelItem (0)
  """
  def __eq__(self,*args):

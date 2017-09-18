@@ -1,7 +1,9 @@
 class ScheduleHorizontalAlignment(Enum,IComparable,IFormattable,IConvertible):
  """
- Horizontal alignment of data in a schedule.
- 
+ Horizontal alignment of data in a schedule.
+
+ 
+
  enum ScheduleHorizontalAlignment,values: Center (1),Left (0),Right (2)
  """
  def __eq__(self,*args):

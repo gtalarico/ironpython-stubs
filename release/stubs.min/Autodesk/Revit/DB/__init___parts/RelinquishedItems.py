@@ -5,15 +5,19 @@ class RelinquishedItems(object,IDisposable):
   pass
  def GetRelinquishedElements(self):
   """
-  GetRelinquishedElements(self: RelinquishedItems) -> ICollection[ElementId]
-  
+  GetRelinquishedElements(self: RelinquishedItems) -> ICollection[ElementId]
+
+  
+
    The elements that were relinquished by the current user.
   """
   pass
  def GetRelinquishedWorksets(self):
   """
-  GetRelinquishedWorksets(self: RelinquishedItems) -> ICollection[WorksetId]
-  
+  GetRelinquishedWorksets(self: RelinquishedItems) -> ICollection[WorksetId]
+
+  
+
    The elements that were relinquished by the current user.
   """
   pass
@@ -33,10 +37,14 @@ class RelinquishedItems(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: RelinquishedItems) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: RelinquishedItems) -> bool
+
+
+
 """
 
 

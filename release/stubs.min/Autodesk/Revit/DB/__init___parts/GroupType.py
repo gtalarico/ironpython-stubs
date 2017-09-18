@@ -22,10 +22,14 @@ class GroupType(ElementType,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Groups=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Retrieve a set of all the groups that have this type.
-
-Get: Groups(self: GroupType) -> GroupSet
-
+ """Retrieve a set of all the groups that have this type.
+
+
+
+Get: Groups(self: GroupType) -> GroupSet
+
+
+
 """
 
 

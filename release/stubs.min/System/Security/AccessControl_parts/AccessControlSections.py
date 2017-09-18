@@ -1,7 +1,9 @@
 class AccessControlSections(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies which sections of a security descriptor to save or load.
- 
+ Specifies which sections of a security descriptor to save or load.
+
+ 
+
  enum (flags) AccessControlSections,values: Access (2),All (15),Audit (1),Group (8),None (0),Owner (4)
  """
  def __eq__(self,*args):

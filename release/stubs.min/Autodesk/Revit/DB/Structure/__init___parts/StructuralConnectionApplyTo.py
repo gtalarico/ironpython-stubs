@@ -1,7 +1,9 @@
 class StructuralConnectionApplyTo(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type that represents the type of structural locations to which a connection annotation may be applied.
- 
+ An enumerated type that represents the type of structural locations to which a connection annotation may be applied.
+
+ 
+
  enum StructuralConnectionApplyTo,values: BeamsAndBraces (0),ColumnBase (2),ColumnTop (1),Connection (3)
  """
  def __eq__(self,*args):

@@ -8,8 +8,10 @@ class FootPrintRoof(RoofBase,IDisposable):
   pass
  def GetProfiles(self):
   """
-  GetProfiles(self: FootPrintRoof) -> ModelCurveArrArray
-  
+  GetProfiles(self: FootPrintRoof) -> ModelCurveArrArray
+
+  
+
    Retrieve all the curveLoops of FootPrintRoof.
   """
   pass
@@ -29,10 +31,14 @@ class FootPrintRoof(RoofBase,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  CurtainGrids=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Retrieve all the CurtainGrid objects of a FootPrintRoof.
-
-Get: CurtainGrids(self: FootPrintRoof) -> CurtainGridSet
-
+ """Retrieve all the CurtainGrid objects of a FootPrintRoof.
+
+
+
+Get: CurtainGrids(self: FootPrintRoof) -> CurtainGridSet
+
+
+
 """
 
 

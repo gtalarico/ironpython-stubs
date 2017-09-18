@@ -1,9 +1,13 @@
 class ValueAtPoint(ValueAtPointBase,IDisposable):
  """
- Stores values at one domain point.
-    Each value corresponds to a "measurement" for which this value was calculated.
- 
- ValueAtPoint(otherObject: ValueAtPoint)
+ Stores values at one domain point.
+
+    Each value corresponds to a "measurement" for which this value was calculated.
+
+ 
+
+ ValueAtPoint(otherObject: ValueAtPoint)
+
  ValueAtPoint(values: IList[float])
  """
  def Dispose(self):
@@ -24,7 +28,8 @@ class ValueAtPoint(ValueAtPointBase,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,otherObject: ValueAtPoint)
+  __new__(cls: type,otherObject: ValueAtPoint)
+
   __new__(cls: type,values: IList[float])
   """
   pass

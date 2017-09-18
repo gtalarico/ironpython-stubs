@@ -1,8 +1,11 @@
 class gbXMLServiceType(Enum,IComparable,IFormattable,IConvertible):
  """
- This enumeration corresponds to the systemType attribute in gbXML
-    and is used for specifying the service for the building or space.
- 
+ This enumeration corresponds to the systemType attribute in gbXML
+
+    and is used for specifying the service for the building or space.
+
+ 
+
  enum gbXMLServiceType,values: ActiveChilledBeams (22),CentralHeatingConvectors (1),CentralHeatingHotAir (3),CentralHeatingRadiantFloor (2),CentralHeatingRadiators (0),ConstantVolumeDualDuct (20),ConstantVolumeFixedOA (16),ConstantVolumeTerminalReheat (18),ConstantVolumeVariableOA (17),FanCoilSystem (14),ForcedConvectionHeaterFlue (8),ForcedConvectionHeaterNoFlue (9),InductionSystem (15),MultizoneHotDeckColdDeck (19),NoOfServiceTypes (28),NoServiceType (-1),OtherRoomHeater (4),RadiantCooledCeilings (21),RadiantHeaterFlue (5),RadiantHeaterMultiburner (7),RadiantHeaterNoFlue (6),SplitSystemsWithMechanicalVentilation (26),SplitSystemsWithMechanicalVentilationWithCooling (27),SplitSystemsWithNaturalVentilation (25),VariableRefrigerantFlow (24),VAVDualDuct (11),VAVIndoorPackagedCabinet (12),VAVSingleDuct (10),VAVTerminalReheat (13),WaterLoopHeatPump (23)
  """
  def __eq__(self,*args):

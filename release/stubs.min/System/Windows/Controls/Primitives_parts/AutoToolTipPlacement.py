@@ -1,7 +1,9 @@
 class AutoToolTipPlacement(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes the means by which the automatic System.Windows.Controls.ToolTip is positioned on a System.Windows.Controls.Slider control.
- 
+ Describes the means by which the automatic System.Windows.Controls.ToolTip is positioned on a System.Windows.Controls.Slider control.
+
+ 
+
  enum AutoToolTipPlacement,values: BottomRight (2),None (0),TopLeft (1)
  """
  def __eq__(self,*args):

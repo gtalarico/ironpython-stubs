@@ -1,14 +1,19 @@
 class RoutingPreferenceRule(object,IDisposable):
  """
- A class representing a rule set in MEP routing preferences.
- 
+ A class representing a rule set in MEP routing preferences.
+
+ 
+
  RoutingPreferenceRule(MEPPartId: ElementId,description: str)
  """
  def AddCriterion(self,myCriterion):
   """
-  AddCriterion(self: RoutingPreferenceRule,myCriterion: RoutingCriterionBase)
-   Adds a new routing criterion.
-  
+  AddCriterion(self: RoutingPreferenceRule,myCriterion: RoutingCriterionBase)
+
+   Adds a new routing criterion.
+
+  
+
    myCriterion: The criterion to add.
   """
   pass
@@ -17,9 +22,12 @@ class RoutingPreferenceRule(object,IDisposable):
   pass
  def GetCriterion(self,index):
   """
-  GetCriterion(self: RoutingPreferenceRule,index: int) -> RoutingCriterionBase
-  
-   Gets the specified criteria.
+  GetCriterion(self: RoutingPreferenceRule,index: int) -> RoutingCriterionBase
+
+  
+
+   Gets the specified criteria.
+
    Returns: The criterion at the specified zero-based index position.
   """
   pass
@@ -28,9 +36,12 @@ class RoutingPreferenceRule(object,IDisposable):
   pass
  def RemoveCriteron(self,index):
   """
-  RemoveCriteron(self: RoutingPreferenceRule,index: int)
-   Removes an existing criterion.
-  
+  RemoveCriteron(self: RoutingPreferenceRule,index: int)
+
+   Removes an existing criterion.
+
+  
+
    index: The index position of removed routing preference rule in the group.
   """
   pass
@@ -51,38 +62,58 @@ class RoutingPreferenceRule(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The description of the routing preference rule.
-
-Get: Description(self: RoutingPreferenceRule) -> str
-
+ """The description of the routing preference rule.
+
+
+
+Get: Description(self: RoutingPreferenceRule) -> str
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: RoutingPreferenceRule) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: RoutingPreferenceRule) -> bool
+
+
+
 """
 
  MEPPartId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The referenced MEPPart (segment or fitting) type in this rule. It may be InvalidElementId if no MEPPart will be allowed when the conditions satisfy the criteria in this rule.
-
-Get: MEPPartId(self: RoutingPreferenceRule) -> ElementId
-
+ """The referenced MEPPart (segment or fitting) type in this rule. It may be InvalidElementId if no MEPPart will be allowed when the conditions satisfy the criteria in this rule.
+
+
+
+Get: MEPPartId(self: RoutingPreferenceRule) -> ElementId
+
+
+
 """
 
  NumberOfCriteria=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the number of routing criteria.
-
-Get: NumberOfCriteria(self: RoutingPreferenceRule) -> int
-
+ """Gets the number of routing criteria.
+
+
+
+Get: NumberOfCriteria(self: RoutingPreferenceRule) -> int
+
+
+
 """
 
  RoutingPreferenceManager=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the routing preference manager that owns this rule.
-
-Get: RoutingPreferenceManager(self: RoutingPreferenceRule) -> RoutingPreferenceManager
-
+ """Gets the routing preference manager that owns this rule.
+
+
+
+Get: RoutingPreferenceManager(self: RoutingPreferenceRule) -> RoutingPreferenceManager
+
+
+
 """
 
 

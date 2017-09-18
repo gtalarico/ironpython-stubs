@@ -9,32 +9,47 @@ class CableTrayConduitBase(MEPCurve,IDisposable):
  @staticmethod
  def IsValidEndPoints(startPoint,endPoint):
   """
-  IsValidEndPoints(startPoint: XYZ,endPoint: XYZ) -> bool
-  
-   Identifies if two end points are valid.
-  
-   startPoint: The start point of the location line.
-   endPoint: The end point of the location line.
+  IsValidEndPoints(startPoint: XYZ,endPoint: XYZ) -> bool
+
+  
+
+   Identifies if two end points are valid.
+
+  
+
+   startPoint: The start point of the location line.
+
+   endPoint: The end point of the location line.
+
    Returns: True if the two end points are valid,false otherwise.
   """
   pass
  @staticmethod
  def IsValidLevelId(document,levelId):
   """
-  IsValidLevelId(document: Document,levelId: ElementId) -> bool
-  
-   Identifies if a level id is valid.
-  
-   document: The document.
-   levelId: The level id.
+  IsValidLevelId(document: Document,levelId: ElementId) -> bool
+
+  
+
+   Identifies if a level id is valid.
+
+  
+
+   document: The document.
+
+   levelId: The level id.
+
    Returns: True if the level id is valid,false otherwise.
   """
   pass
  def IsWithFitting(self):
   """
-  IsWithFitting(self: CableTrayConduitBase) -> bool
-  
-   Return whether its cable tray/conduit type is with fitting
+  IsWithFitting(self: CableTrayConduitBase) -> bool
+
+  
+
+   Return whether its cable tray/conduit type is with fitting
+
    Returns: return true if its type is with fitting type.
   """
   pass
@@ -54,10 +69,14 @@ class CableTrayConduitBase(MEPCurve,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  RunId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The id of the run to which this element belongs.
-
-Get: RunId(self: CableTrayConduitBase) -> ElementId
-
+ """The id of the run to which this element belongs.
+
+
+
+Get: RunId(self: CableTrayConduitBase) -> ElementId
+
+
+
 """
 
 

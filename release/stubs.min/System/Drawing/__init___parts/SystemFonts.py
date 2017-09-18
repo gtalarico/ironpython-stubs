@@ -3,12 +3,18 @@ class SystemFonts(object):
  @staticmethod
  def GetFontByName(systemFontName):
   """
-  GetFontByName(systemFontName: str) -> Font
-  
-   Returns a font object that corresponds to the specified system font name.
-  
-   systemFontName: The name of the system font you need a font object for.
-   Returns: A System.Drawing.Font if the specified name matches a value in System.Drawing.SystemFonts; 
+  GetFontByName(systemFontName: str) -> Font
+
+  
+
+   Returns a font object that corresponds to the specified system font name.
+
+  
+
+   systemFontName: The name of the system font you need a font object for.
+
+   Returns: A System.Drawing.Font if the specified name matches a value in System.Drawing.SystemFonts; 
+
     otherwise,null.
   """
   pass

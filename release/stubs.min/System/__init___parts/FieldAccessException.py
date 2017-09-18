@@ -1,9 +1,13 @@
 class FieldAccessException(MemberAccessException,ISerializable,_Exception):
  """
- The exception that is thrown when there is an invalid attempt to access a private or protected field inside a class.
- 
- FieldAccessException()
- FieldAccessException(message: str)
+ The exception that is thrown when there is an invalid attempt to access a private or protected field inside a class.
+
+ 
+
+ FieldAccessException()
+
+ FieldAccessException(message: str)
+
  FieldAccessException(message: str,inner: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,9 +22,12 @@ class FieldAccessException(MemberAccessException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,inner=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,inner: Exception)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,inner: Exception)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

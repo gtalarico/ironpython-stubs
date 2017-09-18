@@ -1,8 +1,11 @@
 class BorderTile(Enum,IComparable,IFormattable,IConvertible):
  """
- Options for controlling tiles that overlap the face boundary.
- See Autodesk.Revit.DB.DividedSurface.
- 
+ Options for controlling tiles that overlap the face boundary.
+
+ See Autodesk.Revit.DB.DividedSurface.
+
+ 
+
  enum BorderTile,values: Empty (0),Overhanging (2),Partial (1)
  """
  def __eq__(self,*args):

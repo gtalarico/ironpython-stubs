@@ -12,29 +12,42 @@ class RevisionCloud(Element,IDisposable):
   pass
  def GetSheetIds(self):
   """
-  GetSheetIds(self: RevisionCloud) -> ISet[ElementId]
-  
-   Returns the ids of the ViewSheets where this RevisionCloud may appear and 
-    contribute to the sheet's revision schedule.
-  
+  GetSheetIds(self: RevisionCloud) -> ISet[ElementId]
+
+  
+
+   Returns the ids of the ViewSheets where this RevisionCloud may appear and 
+
+    contribute to the sheet's revision schedule.
+
+  
+
    Returns: The ids of the ViewSheets where this RevisionCloud may appear.
   """
   pass
  def GetSketchCurves(self):
   """
-  GetSketchCurves(self: RevisionCloud) -> IList[Curve]
-  
-   Returns copies of the Curves that form this RevisionCloud.
+  GetSketchCurves(self: RevisionCloud) -> IList[Curve]
+
+  
+
+   Returns copies of the Curves that form this RevisionCloud.
+
    Returns: Copies of the sketched curves that form this RevisionCloud.
   """
   pass
  def IsRevisionIssued(self):
   """
-  IsRevisionIssued(self: RevisionCloud) -> bool
-  
-   Indicates whether the Revision associated with this RevisionCloud has been 
-    issued.
-  
+  IsRevisionIssued(self: RevisionCloud) -> bool
+
+  
+
+   Indicates whether the Revision associated with this RevisionCloud has been 
+
+    issued.
+
+  
+
    Returns: True if the Revision has been issued,False otherwise.
   """
   pass
@@ -54,11 +67,16 @@ class RevisionCloud(Element,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  RevisionId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The Revision associated with this RevisionCloud.
-
-Get: RevisionId(self: RevisionCloud) -> ElementId
-
-Set: RevisionId(self: RevisionCloud)=value
+ """The Revision associated with this RevisionCloud.
+
+
+
+Get: RevisionId(self: RevisionCloud) -> ElementId
+
+
+
+Set: RevisionId(self: RevisionCloud)=value
+
 """
 
 

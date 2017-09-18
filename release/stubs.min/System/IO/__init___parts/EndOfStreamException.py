@@ -1,9 +1,13 @@
 class EndOfStreamException(IOException,ISerializable,_Exception):
  """
- The exception that is thrown when reading is attempted past the end of a stream.
- 
- EndOfStreamException()
- EndOfStreamException(message: str)
+ The exception that is thrown when reading is attempted past the end of a stream.
+
+ 
+
+ EndOfStreamException()
+
+ EndOfStreamException(message: str)
+
  EndOfStreamException(message: str,innerException: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,9 +22,12 @@ class EndOfStreamException(IOException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,innerException=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,innerException: Exception)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,innerException: Exception)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

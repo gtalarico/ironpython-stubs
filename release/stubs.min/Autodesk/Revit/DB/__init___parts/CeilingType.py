@@ -22,10 +22,14 @@ class CeilingType(HostObjAttributes,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  ThermalProperties=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The calculated and settable thermal properties of the CeilingType
-
-Get: ThermalProperties(self: CeilingType) -> ThermalProperties
-
+ """The calculated and settable thermal properties of the CeilingType
+
+
+
+Get: ThermalProperties(self: CeilingType) -> ThermalProperties
+
+
+
 """
 
 

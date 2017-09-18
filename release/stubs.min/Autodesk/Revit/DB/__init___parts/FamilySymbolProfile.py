@@ -19,43 +19,68 @@ class FamilySymbolProfile(SweepProfile,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Angle=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The angle of the rotation of the profile in radians.
-
-Get: Angle(self: FamilySymbolProfile) -> float
-
-Set: Angle(self: FamilySymbolProfile)=value
+ """The angle of the rotation of the profile in radians.
+
+
+
+Get: Angle(self: FamilySymbolProfile) -> float
+
+
+
+Set: Angle(self: FamilySymbolProfile)=value
+
 """
 
  IsFlipped=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates if the symbol profile is flipped or not.
-
-Get: IsFlipped(self: FamilySymbolProfile) -> bool
-
-Set: IsFlipped(self: FamilySymbolProfile)=value
+ """Indicates if the symbol profile is flipped or not.
+
+
+
+Get: IsFlipped(self: FamilySymbolProfile) -> bool
+
+
+
+Set: IsFlipped(self: FamilySymbolProfile)=value
+
 """
 
  Profile=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the family symbol of the profile.
-
-Get: Profile(self: FamilySymbolProfile) -> FamilySymbol
-
-Set: Profile(self: FamilySymbolProfile)=value
+ """Returns the family symbol of the profile.
+
+
+
+Get: Profile(self: FamilySymbolProfile) -> FamilySymbol
+
+
+
+Set: Profile(self: FamilySymbolProfile)=value
+
 """
 
  XOffset=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The offset of the profile to the origin of the sketch plane in the X direction.
-
-Get: XOffset(self: FamilySymbolProfile) -> float
-
-Set: XOffset(self: FamilySymbolProfile)=value
+ """The offset of the profile to the origin of the sketch plane in the X direction.
+
+
+
+Get: XOffset(self: FamilySymbolProfile) -> float
+
+
+
+Set: XOffset(self: FamilySymbolProfile)=value
+
 """
 
  YOffset=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The offset of the profile to the origin of the sketch plane in the Y direction.
-
-Get: YOffset(self: FamilySymbolProfile) -> float
-
-Set: YOffset(self: FamilySymbolProfile)=value
+ """The offset of the profile to the origin of the sketch plane in the Y direction.
+
+
+
+Get: YOffset(self: FamilySymbolProfile) -> float
+
+
+
+Set: YOffset(self: FamilySymbolProfile)=value
+
 """
 
 

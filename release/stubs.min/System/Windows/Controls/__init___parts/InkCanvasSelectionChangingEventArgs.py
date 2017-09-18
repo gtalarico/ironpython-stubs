@@ -2,17 +2,23 @@ class InkCanvasSelectionChangingEventArgs(CancelEventArgs):
  """ Provides data for the System.Windows.Controls.InkCanvas.SelectionChanging. """
  def GetSelectedElements(self):
   """
-  GetSelectedElements(self: InkCanvasSelectionChangingEventArgs) -> ReadOnlyCollection[UIElement]
-  
-   Returns the selected elements.
+  GetSelectedElements(self: InkCanvasSelectionChangingEventArgs) -> ReadOnlyCollection[UIElement]
+
+  
+
+   Returns the selected elements.
+
    Returns: The selected elements.
   """
   pass
  def GetSelectedStrokes(self):
   """
-  GetSelectedStrokes(self: InkCanvasSelectionChangingEventArgs) -> StrokeCollection
-  
-   Returns the selected strokes.
+  GetSelectedStrokes(self: InkCanvasSelectionChangingEventArgs) -> StrokeCollection
+
+  
+
+   Returns the selected strokes.
+
    Returns: The selected strokes.
   """
   pass
@@ -21,9 +27,12 @@ class InkCanvasSelectionChangingEventArgs(CancelEventArgs):
   pass
  def SetSelectedStrokes(self,selectedStrokes):
   """
-  SetSelectedStrokes(self: InkCanvasSelectionChangingEventArgs,selectedStrokes: StrokeCollection)
-   Sets the selected strokes.
-  
+  SetSelectedStrokes(self: InkCanvasSelectionChangingEventArgs,selectedStrokes: StrokeCollection)
+
+   Sets the selected strokes.
+
+  
+
    selectedStrokes: The strokes to select.
   """
   pass

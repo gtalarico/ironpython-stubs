@@ -1,7 +1,9 @@
 class FilterCategoryRule(FilterRule,IDisposable):
  """
- A filter rule that matches elements of a set of categories.
- 
+ A filter rule that matches elements of a set of categories.
+
+ 
+
  FilterCategoryRule(categories: ICollection[ElementId])
  """
  @staticmethod
@@ -13,8 +15,10 @@ class FilterCategoryRule(FilterRule,IDisposable):
   pass
  def GetCategories(self):
   """
-  GetCategories(self: FilterCategoryRule) -> ICollection[ElementId]
-  
+  GetCategories(self: FilterCategoryRule) -> ICollection[ElementId]
+
+  
+
    Gets the rule's categories.
   """
   pass

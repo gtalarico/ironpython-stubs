@@ -1,7 +1,9 @@
 class StretchDirection(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes how scaling applies to content and restricts scaling to named axis types.
- 
+ Describes how scaling applies to content and restricts scaling to named axis types.
+
+ 
+
  enum StretchDirection,values: Both (2),DownOnly (1),UpOnly (0)
  """
  def __eq__(self,*args):

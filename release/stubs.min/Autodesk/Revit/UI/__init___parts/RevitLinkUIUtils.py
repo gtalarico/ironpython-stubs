@@ -1,6 +1,7 @@
 class RevitLinkUIUtils(object):
  """
- A class containing functions for displaying user interface related to
+ A class containing functions for displaying user interface related to
+
     Revit links.
  """
  @staticmethod

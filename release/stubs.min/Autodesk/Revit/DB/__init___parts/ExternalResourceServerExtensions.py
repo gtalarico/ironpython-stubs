@@ -5,9 +5,12 @@ class ExternalResourceServerExtensions(object,IDisposable):
   pass
  def GetRevitLinkOperations(self):
   """
-  GetRevitLinkOperations(self: ExternalResourceServerExtensions) -> RevitLinkOperations
-  
-   Gets the specific methods supported by the external resource of Revit Links.
+  GetRevitLinkOperations(self: ExternalResourceServerExtensions) -> RevitLinkOperations
+
+  
+
+   Gets the specific methods supported by the external resource of Revit Links.
+
    Returns: The specific methods supported by the external resource of Revit Links.
   """
   pass
@@ -27,10 +30,14 @@ class ExternalResourceServerExtensions(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ExternalResourceServerExtensions) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ExternalResourceServerExtensions) -> bool
+
+
+
 """
 
 

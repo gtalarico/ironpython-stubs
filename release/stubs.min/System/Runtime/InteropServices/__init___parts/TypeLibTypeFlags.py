@@ -1,7 +1,9 @@
 class TypeLibTypeFlags(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes the original settings of the System.Runtime.InteropServices.TYPEFLAGS in the COM type library from which the type was imported.
- 
+ Describes the original settings of the System.Runtime.InteropServices.TYPEFLAGS in the COM type library from which the type was imported.
+
+ 
+
  enum (flags) TypeLibTypeFlags,values: FAggregatable (1024),FAppObject (1),FCanCreate (2),FControl (32),FDispatchable (4096),FDual (64),FHidden (16),FLicensed (4),FNonExtensible (128),FOleAutomation (256),FPreDeclId (8),FReplaceable (2048),FRestricted (512),FReverseBind (8192)
  """
  def __eq__(self,*args):

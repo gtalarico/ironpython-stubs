@@ -1,7 +1,9 @@
 class DataGridRowDetailsVisibilityMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines constants that specify when System.Windows.Controls.DataGrid row details are displayed.
- 
+ Defines constants that specify when System.Windows.Controls.DataGrid row details are displayed.
+
+ 
+
  enum DataGridRowDetailsVisibilityMode,values: Collapsed (0),Visible (1),VisibleWhenSelected (2)
  """
  def __eq__(self,*args):

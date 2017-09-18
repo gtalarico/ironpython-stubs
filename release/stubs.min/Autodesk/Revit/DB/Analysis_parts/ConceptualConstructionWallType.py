@@ -1,7 +1,9 @@
 class ConceptualConstructionWallType(Enum,IComparable,IFormattable,IConvertible):
  """
- ConceptualConstructionType values for Walls.
- 
+ ConceptualConstructionType values for Walls.
+
+ 
+
  enum ConceptualConstructionWallType,values: HighMassConstructionHighInsulation (5),HighMassConstructionNoInsulationInterior (8),HighMassConstructionTypicalColdClimateInsulation (6),HighMassConstructionTypicalMildClimateInsulation (7),InvalidExteriorWallTypeConstruction (-1),LightweightConstructionHighInsulation (0),LightweightConstructionLowInsulation (3),LightweightConstructionNoInsulationInterior (4),LightweightConstructionTypicalColdClimateInsulation (1),LightweightConstructionTypicalMildClimateInsulation (2),NumWallTypeConstruction (9)
  """
  def __eq__(self,*args):

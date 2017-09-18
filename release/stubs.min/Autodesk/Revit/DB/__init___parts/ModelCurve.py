@@ -2,7 +2,8 @@ class ModelCurve(CurveElement,IDisposable):
  """ A model element that exists in 3D space and is visible in all views of a Revit project. """
  def ChangeToReferenceLine(self):
   """
-  ChangeToReferenceLine(self: ModelCurve)
+  ChangeToReferenceLine(self: ModelCurve)
+
    Changes this curve to a reference curve.
   """
   pass
@@ -14,9 +15,12 @@ class ModelCurve(CurveElement,IDisposable):
   pass
  def GetVisibility(self):
   """
-  GetVisibility(self: ModelCurve) -> FamilyElementVisibility
-  
-   Gets the visibility for the model curve in a family document.
+  GetVisibility(self: ModelCurve) -> FamilyElementVisibility
+
+  
+
+   Gets the visibility for the model curve in a family document.
+
    Returns: A copy of visibility settings for the model curve in a family document.
   """
   pass
@@ -28,7 +32,8 @@ class ModelCurve(CurveElement,IDisposable):
   pass
  def SetVisibility(self,visibility):
   """
-  SetVisibility(self: ModelCurve,visibility: FamilyElementVisibility)
+  SetVisibility(self: ModelCurve,visibility: FamilyElementVisibility)
+
    Sets the visibility for the model curve in a family document.
   """
   pass
@@ -42,26 +47,40 @@ class ModelCurve(CurveElement,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  IsReferenceLine=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates if this curve is a reference curve.
-
-Get: IsReferenceLine(self: ModelCurve) -> bool
-
+ """Indicates if this curve is a reference curve.
+
+
+
+Get: IsReferenceLine(self: ModelCurve) -> bool
+
+
+
 """
 
  Subcategory=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The subcategory.
-
-Get: Subcategory(self: ModelCurve) -> GraphicsStyle
-
-Set: Subcategory(self: ModelCurve)=value
+ """The subcategory.
+
+
+
+Get: Subcategory(self: ModelCurve) -> GraphicsStyle
+
+
+
+Set: Subcategory(self: ModelCurve)=value
+
 """
 
  TrussCurveType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The truss curve type of this model curve.
-
-Get: TrussCurveType(self: ModelCurve) -> TrussCurveType
-
-Set: TrussCurveType(self: ModelCurve)=value
+ """The truss curve type of this model curve.
+
+
+
+Get: TrussCurveType(self: ModelCurve) -> TrussCurveType
+
+
+
+Set: TrussCurveType(self: ModelCurve)=value
+
 """
 
 

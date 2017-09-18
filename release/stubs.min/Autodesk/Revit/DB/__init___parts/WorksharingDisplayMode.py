@@ -1,7 +1,9 @@
 class WorksharingDisplayMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Indicates which worksharing display mode a view is in.
- 
+ Indicates which worksharing display mode a view is in.
+
+ 
+
  enum WorksharingDisplayMode,values: CheckoutStatus (1),ModelUpdates (3),Off (0),Owners (2),Worksets (4)
  """
  def __eq__(self,*args):

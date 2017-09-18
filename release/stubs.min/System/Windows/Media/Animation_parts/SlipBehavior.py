@@ -1,7 +1,9 @@
 class SlipBehavior(Enum,IComparable,IFormattable,IConvertible):
  """
- Indicates how a System.Windows.Media.Animation.ParallelTimeline will behave when one or more of its System.Windows.Media.Animation.Timeline children slips.
- 
+ Indicates how a System.Windows.Media.Animation.ParallelTimeline will behave when one or more of its System.Windows.Media.Animation.Timeline children slips.
+
+ 
+
  enum SlipBehavior,values: Grow (0),Slip (1)
  """
  def __eq__(self,*args):

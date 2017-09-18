@@ -3,11 +3,16 @@ class SystemPens(object):
  @staticmethod
  def FromSystemColor(c):
   """
-  FromSystemColor(c: Color) -> Pen
-  
-   Creates a System.Drawing.Pen from the specified System.Drawing.Color.
-  
-   c: The System.Drawing.Color for the new System.Drawing.Pen.
+  FromSystemColor(c: Color) -> Pen
+
+  
+
+   Creates a System.Drawing.Pen from the specified System.Drawing.Color.
+
+  
+
+   c: The System.Drawing.Color for the new System.Drawing.Pen.
+
    Returns: The System.Drawing.Pen this method creates.
   """
   pass

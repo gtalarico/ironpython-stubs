@@ -1,7 +1,9 @@
 class TreeViewHitTestLocations(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines constants that represent areas of a System.Windows.Forms.TreeView or System.Windows.Forms.TreeNode.
- 
+ Defines constants that represent areas of a System.Windows.Forms.TreeView or System.Windows.Forms.TreeNode.
+
+ 
+
  enum (flags) TreeViewHitTestLocations,values: AboveClientArea (256),BelowClientArea (512),Image (2),Indent (8),Label (4),LeftOfClientArea (2048),None (1),PlusMinus (16),RightOfClientArea (1024),RightOfLabel (32),StateImage (64)
  """
  def __eq__(self,*args):

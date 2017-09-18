@@ -8,8 +8,10 @@ class ExtrusionRoof(RoofBase,IDisposable):
   pass
  def GetProfile(self):
   """
-  GetProfile(self: ExtrusionRoof) -> ModelCurveArray
-  
+  GetProfile(self: ExtrusionRoof) -> ModelCurveArray
+
+  
+
    Retrieve the Profile of ExtrusionRoof.
   """
   pass
@@ -29,10 +31,14 @@ class ExtrusionRoof(RoofBase,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  CurtainGrids=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Retrieve all the CurtainGrid objects of a curtain Roof.
-
-Get: CurtainGrids(self: ExtrusionRoof) -> CurtainGridSet
-
+ """Retrieve all the CurtainGrid objects of a curtain Roof.
+
+
+
+Get: CurtainGrids(self: ExtrusionRoof) -> CurtainGridSet
+
+
+
 """
 
 

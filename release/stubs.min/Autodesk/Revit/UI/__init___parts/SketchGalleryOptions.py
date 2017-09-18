@@ -1,7 +1,9 @@
 class SketchGalleryOptions(Enum,IComparable,IFormattable,IConvertible):
  """
- Enumerates all the sketch options.
- 
+ Enumerates all the sketch options.
+
+ 
+
  enum SketchGalleryOptions,values: SGO_Arc3Point (6),SGO_ArcCenterEnds (7),SGO_ArcFillet (9),SGO_ArcTanEnd (8),SGO_Circle (5),SGO_CircumscribedPolygon (4),SGO_Default (0),SGO_FullEllipse (12),SGO_InscribedPolygon (3),SGO_LandingSquare (25),SGO_LandingWithTwoRuns (30),SGO_Line (1),SGO_PartialEllipse (13),SGO_PickFaces (15),SGO_PickLines (14),SGO_PickPoints (20),SGO_PickRoofs (18),SGO_PickSupports (17),SGO_PickWalls (16),SGO_Point (19),SGO_PointElement (21),SGO_Rect (2),SGO_RunArcCenterEnds (24),SGO_RunArcFullStep (23),SGO_RunLine (22),SGO_SketchLanding (32),SGO_SketchRun (31),SGO_Spline (10),SGO_SplineByPoints (11),SGO_SupportPickLine (28),SGO_WinderLShape (26),SGO_WinderPattern (27),SGO_WinderUShape (29)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class MassZoneMaterialType(Enum,IComparable,IFormattable,IConvertible):
  """
- MassZone material type.
- 
+ MassZone material type.
+
+ 
+
  enum MassZoneMaterialType,values: MaterialBySurfaceType (-2),NormalMaterial (0)
  """
  def __eq__(self,*args):

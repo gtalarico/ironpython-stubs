@@ -1,7 +1,9 @@
 class ConceptualConstructionShadeType(Enum,IComparable,IFormattable,IConvertible):
  """
- ConceptualConstructionType values for Shades.
- 
+ ConceptualConstructionType values for Shades.
+
+ 
+
  enum ConceptualConstructionShadeType,values: BasicShade (0),InvalidShadeTypeConstruction (-1),NumShadeTypeConstruction (1)
  """
  def __eq__(self,*args):

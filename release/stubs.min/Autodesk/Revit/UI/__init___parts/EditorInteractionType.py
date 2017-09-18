@@ -1,7 +1,9 @@
 class EditorInteractionType(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines the type of interactions a pane has with the active editor when it becomes active in the Revit UI.
- 
+ Defines the type of interactions a pane has with the active editor when it becomes active in the Revit UI.
+
+ 
+
  enum EditorInteractionType,values: Dismiss (0),KeepAlive (1)
  """
  def __eq__(self,*args):

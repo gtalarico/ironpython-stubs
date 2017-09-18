@@ -1,23 +1,37 @@
 class ShapeImporter(object,IDisposable):
  """
- An utility class that supports conversion of geometry stored in an external format into a Revit geometry objects.
- 
+ An utility class that supports conversion of geometry stored in an external format into a Revit geometry objects.
+
+ 
+
  ShapeImporter()
  """
  def Convert(self,document,filename):
   """
-  Convert(self: ShapeImporter,document: Document,filename: str) -> IList[GeometryObject]
-  
-   Converts the geometry stored in the external format into a collection of Revit 
-    geometry objects.
-  
-  
-   document: The Revit document where the resulting Revit geometry objects will be used. 
-    This document may need to be modified
-     to store dependent elements such as 
-    graphics styles and/or materials.
-  
-   filename: The full path to the input file.
+  Convert(self: ShapeImporter,document: Document,filename: str) -> IList[GeometryObject]
+
+  
+
+   Converts the geometry stored in the external format into a collection of Revit 
+
+    geometry objects.
+
+  
+
+  
+
+   document: The Revit document where the resulting Revit geometry objects will be used. 
+
+    This document may need to be modified
+
+     to store dependent elements such as 
+
+    graphics styles and/or materials.
+
+  
+
+   filename: The full path to the input file.
+
    Returns: A collection of Revit geometry objects created from the incoming data.
   """
   pass
@@ -27,9 +41,12 @@ class ShapeImporter(object,IDisposable):
  @staticmethod
  def IsServiceAvailable():
   """
-  IsServiceAvailable() -> bool
-  
-   Checks whether the data conversion service is available.
+  IsServiceAvailable() -> bool
+
+  
+
+   Checks whether the data conversion service is available.
+
    Returns: True if the data conversion service is available,false otherwise.
   """
   pass
@@ -49,18 +66,27 @@ class ShapeImporter(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  InputFormat=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The format of the incoming data.
-
-Get: InputFormat(self: ShapeImporter) -> ShapeImporterSourceFormat
-
-Set: InputFormat(self: ShapeImporter)=value
+ """The format of the incoming data.
+
+
+
+Get: InputFormat(self: ShapeImporter) -> ShapeImporterSourceFormat
+
+
+
+Set: InputFormat(self: ShapeImporter)=value
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ShapeImporter) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ShapeImporter) -> bool
+
+
+
 """
 
 

@@ -22,33 +22,51 @@ class Revolution(GenericForm,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Axis=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the Axis of the Revolution.
-
-Get: Axis(self: Revolution) -> ModelLine
-
+ """Returns the Axis of the Revolution.
+
+
+
+Get: Axis(self: Revolution) -> ModelLine
+
+
+
 """
 
  EndAngle=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The end angle of the revolution relative to the sketch plane.
-
-Get: EndAngle(self: Revolution) -> float
-
-Set: EndAngle(self: Revolution)=value
+ """The end angle of the revolution relative to the sketch plane.
+
+
+
+Get: EndAngle(self: Revolution) -> float
+
+
+
+Set: EndAngle(self: Revolution)=value
+
 """
 
  Sketch=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the Sketch of the Revolution.
-
-Get: Sketch(self: Revolution) -> Sketch
-
+ """Returns the Sketch of the Revolution.
+
+
+
+Get: Sketch(self: Revolution) -> Sketch
+
+
+
 """
 
  StartAngle=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The start angle of the revolution relative to the sketch plane.
-
-Get: StartAngle(self: Revolution) -> float
-
-Set: StartAngle(self: Revolution)=value
+ """The start angle of the revolution relative to the sketch plane.
+
+
+
+Get: StartAngle(self: Revolution) -> float
+
+
+
+Set: StartAngle(self: Revolution)=value
+
 """
 
 

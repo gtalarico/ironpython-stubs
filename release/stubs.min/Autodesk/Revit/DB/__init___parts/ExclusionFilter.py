@@ -1,7 +1,9 @@
 class ExclusionFilter(ElementQuickFilter,IDisposable):
  """
- A filter used to exclude a set of elements automatically.
- 
+ A filter used to exclude a set of elements automatically.
+
+ 
+
  ExclusionFilter(idsToExclude: ICollection[ElementId])
  """
  def Dispose(self):
@@ -9,9 +11,12 @@ class ExclusionFilter(ElementQuickFilter,IDisposable):
   pass
  def GetIdsToExclude(self):
   """
-  GetIdsToExclude(self: ExclusionFilter) -> ICollection[ElementId]
-  
-   Returns the ids to be excluded by this filter.
+  GetIdsToExclude(self: ExclusionFilter) -> ICollection[ElementId]
+
+  
+
+   Returns the ids to be excluded by this filter.
+
    Returns: The collection of ids to exclude.
   """
   pass

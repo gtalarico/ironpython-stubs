@@ -1,7 +1,9 @@
 class SelectiveScrollingOrientation(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the direction that System.Windows.Controls.Primitives.SelectiveScrollingGrid panels can scroll.
- 
+ Specifies the direction that System.Windows.Controls.Primitives.SelectiveScrollingGrid panels can scroll.
+
+ 
+
  enum SelectiveScrollingOrientation,values: Both (3),Horizontal (1),None (0),Vertical (2)
  """
  def __eq__(self,*args):

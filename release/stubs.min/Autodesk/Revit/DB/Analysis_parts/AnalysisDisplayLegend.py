@@ -22,11 +22,16 @@ class AnalysisDisplayLegend(Element,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Height=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The height,in sheet size,of the legend's rectangle
-
-Get: Height(self: AnalysisDisplayLegend) -> float
-
-Set: Height(self: AnalysisDisplayLegend)=value
+ """The height,in sheet size,of the legend's rectangle
+
+
+
+Get: Height(self: AnalysisDisplayLegend) -> float
+
+
+
+Set: Height(self: AnalysisDisplayLegend)=value
+
 """
 
 

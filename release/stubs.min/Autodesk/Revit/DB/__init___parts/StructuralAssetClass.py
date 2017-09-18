@@ -1,7 +1,9 @@
 class StructuralAssetClass(Enum,IComparable,IFormattable,IConvertible):
  """
- Represents the type of material described by a structural asset.  This enum value is returned by Autodesk::Revit::DB::StructuralAsset::StructuralAssetClass.
- 
+ Represents the type of material described by a structural asset.  This enum value is returned by Autodesk::Revit::DB::StructuralAsset::StructuralAssetClass.
+
+ 
+
  enum StructuralAssetClass,values: Basic (1),Concrete (4),Gas (7),Generic (2),Liquid (6),Metal (3),Plastic (8),Undefined (0),Wood (5)
  """
  def __eq__(self,*args):

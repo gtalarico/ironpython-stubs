@@ -1,7 +1,9 @@
 class SpatialFieldPrimitiveHideMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines modes which can be used by a SpatialFieldPrimitive to hide the original referenced element.
- 
+ Defines modes which can be used by a SpatialFieldPrimitive to hide the original referenced element.
+
+ 
+
  enum SpatialFieldPrimitiveHideMode,values: Default (0),HideNone (1),HideOnlyReference (2),HideWholeElement (3)
  """
  def __eq__(self,*args):

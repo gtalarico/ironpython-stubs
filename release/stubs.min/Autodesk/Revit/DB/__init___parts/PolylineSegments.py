@@ -5,9 +5,12 @@ class PolylineSegments(object,IDisposable):
   pass
  def GetVertices(self):
   """
-  GetVertices(self: PolylineSegments) -> IList[XYZ]
-  
-   Returns an array of vertices of the polyline segments.
+  GetVertices(self: PolylineSegments) -> IList[XYZ]
+
+  
+
+   Returns an array of vertices of the polyline segments.
+
    Returns: Array of XYZ points.
   """
   pass
@@ -27,52 +30,80 @@ class PolylineSegments(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  EndLocalParameter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Local parameter associated with the end point.
-
-Get: EndLocalParameter(self: PolylineSegments) -> float
-
+ """Local parameter associated with the end point.
+
+
+
+Get: EndLocalParameter(self: PolylineSegments) -> float
+
+
+
 """
 
  EndParameter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Parameter associated with the end point.
-
-Get: EndParameter(self: PolylineSegments) -> float
-
+ """Parameter associated with the end point.
+
+
+
+Get: EndParameter(self: PolylineSegments) -> float
+
+
+
 """
 
  IsFilled=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates whether the area enclosed by the polyline is to be filled or not.
-
-Get: IsFilled(self: PolylineSegments) -> bool
-
+ """Indicates whether the area enclosed by the polyline is to be filled or not.
+
+
+
+Get: IsFilled(self: PolylineSegments) -> bool
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: PolylineSegments) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: PolylineSegments) -> bool
+
+
+
 """
 
  LineProperties=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Access to the line (pen) properties of the polyline
-
-Get: LineProperties(self: PolylineSegments) -> LineProperties
-
+ """Access to the line (pen) properties of the polyline
+
+
+
+Get: LineProperties(self: PolylineSegments) -> LineProperties
+
+
+
 """
 
  StartLocalParameter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Local parameter associated with the start point.
-
-Get: StartLocalParameter(self: PolylineSegments) -> float
-
+ """Local parameter associated with the start point.
+
+
+
+Get: StartLocalParameter(self: PolylineSegments) -> float
+
+
+
 """
 
  StartParameter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Parameter associated with the start point.
-
-Get: StartParameter(self: PolylineSegments) -> float
-
+ """Parameter associated with the start point.
+
+
+
+Get: StartParameter(self: PolylineSegments) -> float
+
+
+
 """
 
 

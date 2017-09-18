@@ -1,8 +1,11 @@
 class DWGExportOptions(ACADExportOptions,IDisposable):
  """
- The export options used by exporting DWG format file.
- 
- DWGExportOptions(option: DWGExportOptions)
+ The export options used by exporting DWG format file.
+
+ 
+
+ DWGExportOptions(option: DWGExportOptions)
+
  DWGExportOptions()
  """
  def Dispose(self):
@@ -11,14 +14,22 @@ class DWGExportOptions(ACADExportOptions,IDisposable):
  @staticmethod
  def GetPredefinedOptions(document,setup):
   """
-  GetPredefinedOptions(document: Document,setup: str) -> DWGExportOptions
-  
-   Returns an instance DWGExportOptions containing settings from a predefined 
-    export setup.
-  
-  
-   document: A Revit project document to retrieve the setup from.
-   setup: The name of a predefined export setup from the specified document.
+  GetPredefinedOptions(document: Document,setup: str) -> DWGExportOptions
+
+  
+
+   Returns an instance DWGExportOptions containing settings from a predefined 
+
+    export setup.
+
+  
+
+  
+
+   document: A Revit project document to retrieve the setup from.
+
+   setup: The name of a predefined export setup from the specified document.
+
    Returns: An instance of predefined DWGExportOptions,or ll if the name was not found.
   """
   pass
@@ -37,17 +48,24 @@ class DWGExportOptions(ACADExportOptions,IDisposable):
  @staticmethod
  def __new__(self,option=None):
   """
-  __new__(cls: type,option: DWGExportOptions)
+  __new__(cls: type,option: DWGExportOptions)
+
   __new__(cls: type)
   """
   pass
  MergedViews=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Whether to merge all views in one file (via XRefs).
-   Default value is false for mergedViews.
-
-Get: MergedViews(self: DWGExportOptions) -> bool
-
-Set: MergedViews(self: DWGExportOptions)=value
+ """Whether to merge all views in one file (via XRefs).
+
+   Default value is false for mergedViews.
+
+
+
+Get: MergedViews(self: DWGExportOptions) -> bool
+
+
+
+Set: MergedViews(self: DWGExportOptions)=value
+
 """
 
 

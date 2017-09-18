@@ -1,7 +1,9 @@
 class InsertKeyMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Represents the insertion mode used by text boxes.
- 
+ Represents the insertion mode used by text boxes.
+
+ 
+
  enum InsertKeyMode,values: Default (0),Insert (1),Overwrite (2)
  """
  def __eq__(self,*args):

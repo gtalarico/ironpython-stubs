@@ -1,7 +1,9 @@
 class RibbonItemType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all the toolbar item styles.
- 
+ An enumerated type listing all the toolbar item styles.
+
+ 
+
  enum RibbonItemType,values: ComboBox (6),ComboBoxMember (5),PulldownButton (1),PushButton (0),RadioButtonGroup (4),SplitButton (2),TextBox (7),ToggleButton (3)
  """
  def __eq__(self,*args):

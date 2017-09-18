@@ -1,7 +1,9 @@
 class SlabShapeVertexType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all Vertex types of Slab Shape Edit.
- 
+ An enumerated type listing all Vertex types of Slab Shape Edit.
+
+ 
+
  enum SlabShapeVertexType,values: Corner (1),Edge (2),Interior (3),Invalid (0)
  """
  def __eq__(self,*args):

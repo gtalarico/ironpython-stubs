@@ -1,7 +1,9 @@
 class ClockState(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes the potential states of a timeline's System.Windows.Media.Animation.Clock object.
- 
+ Describes the potential states of a timeline's System.Windows.Media.Animation.Clock object.
+
+ 
+
  enum ClockState,values: Active (0),Filling (1),Stopped (2)
  """
  def __eq__(self,*args):

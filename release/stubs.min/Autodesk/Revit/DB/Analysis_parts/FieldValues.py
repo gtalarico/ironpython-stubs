@@ -1,11 +1,17 @@
 class FieldValues(object,IDisposable):
  """
- Contains values corresponding to domain points.
-    Each domain point may have an array of values,each corresponding to a separate "measurement" for which this value was calculated.
- 
- FieldValues(otherObject: FieldValues)
- FieldValues(vectorAtPoint: IList[VectorAtPoint])
- FieldValues(valueAtPoint: IList[ValueAtPoint],unitDirection: XYZ)
+ Contains values corresponding to domain points.
+
+    Each domain point may have an array of values,each corresponding to a separate "measurement" for which this value was calculated.
+
+ 
+
+ FieldValues(otherObject: FieldValues)
+
+ FieldValues(vectorAtPoint: IList[VectorAtPoint])
+
+ FieldValues(valueAtPoint: IList[ValueAtPoint],unitDirection: XYZ)
+
  FieldValues(valueAtPoint: IList[ValueAtPoint])
  """
  def Dispose(self):
@@ -26,9 +32,12 @@ class FieldValues(object,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,otherObject: FieldValues)
-  __new__(cls: type,vectorAtPoint: IList[VectorAtPoint])
-  __new__(cls: type,valueAtPoint: IList[ValueAtPoint],unitDirection: XYZ)
+  __new__(cls: type,otherObject: FieldValues)
+
+  __new__(cls: type,vectorAtPoint: IList[VectorAtPoint])
+
+  __new__(cls: type,valueAtPoint: IList[ValueAtPoint],unitDirection: XYZ)
+
   __new__(cls: type,valueAtPoint: IList[ValueAtPoint])
   """
   pass
@@ -36,10 +45,14 @@ class FieldValues(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: FieldValues) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: FieldValues) -> bool
+
+
+
 """
 
 

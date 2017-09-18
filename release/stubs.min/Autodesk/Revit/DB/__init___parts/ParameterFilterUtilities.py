@@ -1,14 +1,18 @@
 class ParameterFilterUtilities(object):
  """
- Contains static utility functions for enumerating the categories and parameters that
+ Contains static utility functions for enumerating the categories and parameters that
+
     are available for use by ParameterFilterElement objects.
  """
  @staticmethod
  def GetAllFilterableCategories():
   """
-  GetAllFilterableCategories() -> ICollection[ElementId]
-  
-   Returns the set of categories that may be used in a ParameterFilterElement.
+  GetAllFilterableCategories() -> ICollection[ElementId]
+
+  
+
+   Returns the set of categories that may be used in a ParameterFilterElement.
+
    Returns: The set of all filterable categories.
   """
   pass
@@ -23,12 +27,18 @@ class ParameterFilterUtilities(object):
  @staticmethod
  def IsParameterApplicable(element,parameter):
   """
-  IsParameterApplicable(element: Element,parameter: ElementId) -> bool
-  
-   Used to determine whether the element supports the given parameter.
-  
-   element: The element to query for support of the given parameter.
-   parameter: The parameter for which to query support.
+  IsParameterApplicable(element: Element,parameter: ElementId) -> bool
+
+  
+
+   Used to determine whether the element supports the given parameter.
+
+  
+
+   element: The element to query for support of the given parameter.
+
+   parameter: The parameter for which to query support.
+
    Returns: True if the element supports the given parameter,false otherwise.
   """
   pass

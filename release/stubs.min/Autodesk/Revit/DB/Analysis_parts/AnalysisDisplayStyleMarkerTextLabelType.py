@@ -1,7 +1,9 @@
 class AnalysisDisplayStyleMarkerTextLabelType(Enum,IComparable,IFormattable,IConvertible):
  """
- Text label visualization types for Markers and Text settings of analysis display style.
- 
+ Text label visualization types for Markers and Text settings of analysis display style.
+
+ 
+
  enum AnalysisDisplayStyleMarkerTextLabelType,values: ShowAll (0),ShowNone (1),ShowPredefined (2)
  """
  def __eq__(self,*args):

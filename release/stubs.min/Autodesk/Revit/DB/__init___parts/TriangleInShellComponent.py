@@ -1,9 +1,13 @@
 class TriangleInShellComponent(object,IDisposable):
  """
- This class represents a triangle in a TriangulatedShellComponent object. The triangle is
-    defined by its vertices,which are specified by their indices in the
-    TriangulatedShellComponent's array of vertices.
- 
+ This class represents a triangle in a TriangulatedShellComponent object. The triangle is
+
+    defined by its vertices,which are specified by their indices in the
+
+    TriangulatedShellComponent's array of vertices.
+
+ 
+
  TriangleInShellComponent(other: TriangleInShellComponent)
  """
  def Dispose(self):
@@ -29,31 +33,47 @@ class TriangleInShellComponent(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: TriangleInShellComponent) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: TriangleInShellComponent) -> bool
+
+
+
 """
 
  VertexIndex0=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Index of the triangle's first vertex in the TriangulatedShellComponent's array of vertices.
-
-Get: VertexIndex0(self: TriangleInShellComponent) -> int
-
+ """Index of the triangle's first vertex in the TriangulatedShellComponent's array of vertices.
+
+
+
+Get: VertexIndex0(self: TriangleInShellComponent) -> int
+
+
+
 """
 
  VertexIndex1=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Index of the triangle's second vertex in the TriangulatedShellComponent's array of vertices.
-
-Get: VertexIndex1(self: TriangleInShellComponent) -> int
-
+ """Index of the triangle's second vertex in the TriangulatedShellComponent's array of vertices.
+
+
+
+Get: VertexIndex1(self: TriangleInShellComponent) -> int
+
+
+
 """
 
  VertexIndex2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Index of the triangle's third vertex in the TriangulatedShellComponent's array of vertices.
-
-Get: VertexIndex2(self: TriangleInShellComponent) -> int
-
+ """Index of the triangle's third vertex in the TriangulatedShellComponent's array of vertices.
+
+
+
+Get: VertexIndex2(self: TriangleInShellComponent) -> int
+
+
+
 """
 
 

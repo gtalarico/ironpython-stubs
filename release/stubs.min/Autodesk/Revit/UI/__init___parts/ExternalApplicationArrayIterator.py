@@ -31,8 +31,10 @@ class ExternalApplicationArrayIterator(APIObject,IDisposable,IEnumerator):
   """ __iter__(self: IEnumerator) -> object """
   pass
  Current=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Current(self: ExternalApplicationArrayIterator) -> object
-
+ """Get: Current(self: ExternalApplicationArrayIterator) -> object
+
+
+
 """
 
 

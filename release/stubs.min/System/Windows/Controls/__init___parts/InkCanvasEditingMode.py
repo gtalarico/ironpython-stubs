@@ -1,7 +1,9 @@
 class InkCanvasEditingMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the editing mode for the System.Windows.Controls.InkCanvas
- 
+ Specifies the editing mode for the System.Windows.Controls.InkCanvas
+
+ 
+
  enum InkCanvasEditingMode,values: EraseByPoint (5),EraseByStroke (6),GestureOnly (2),Ink (1),InkAndGesture (3),None (0),Select (4)
  """
  def __eq__(self,*args):

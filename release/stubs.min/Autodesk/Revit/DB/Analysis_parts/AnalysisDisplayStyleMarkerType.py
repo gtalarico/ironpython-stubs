@@ -1,7 +1,9 @@
 class AnalysisDisplayStyleMarkerType(Enum,IComparable,IFormattable,IConvertible):
  """
- Marker types for Markers and Text settings of analysis display style.
- 
+ Marker types for Markers and Text settings of analysis display style.
+
+ 
+
  enum AnalysisDisplayStyleMarkerType,values: Circle (0),Square (1),Triangle (2)
  """
  def __eq__(self,*args):

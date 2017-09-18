@@ -1,7 +1,9 @@
 class ReinforcementAbbreviationObjectType(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines the type of desired reinforcement object for abbreviation tags.
- 
+ Defines the type of desired reinforcement object for abbreviation tags.
+
+ 
+
  enum ReinforcementAbbreviationObjectType,values: Area (0),Path (1)
  """
  def __eq__(self,*args):

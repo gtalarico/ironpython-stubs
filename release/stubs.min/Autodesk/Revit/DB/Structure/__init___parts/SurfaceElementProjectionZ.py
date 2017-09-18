@@ -1,7 +1,9 @@
 class SurfaceElementProjectionZ(Enum,IComparable,IFormattable,IConvertible):
  """
- Presets for given Analytical Projection Z.
- 
+ Presets for given Analytical Projection Z.
+
+ 
+
  enum SurfaceElementProjectionZ,values: BottomOrExterior (2),CenterOfCore (3),CenterOfElement (1),Plane (4),TopOrInterior (0)
  """
  def __eq__(self,*args):

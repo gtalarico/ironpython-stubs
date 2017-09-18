@@ -1,7 +1,9 @@
 class ColorDepthType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all Color Depth types of Print Setting.
- 
+ An enumerated type listing all Color Depth types of Print Setting.
+
+ 
+
  enum ColorDepthType,values: BlackLine (0),Color (2),GrayScale (1)
  """
  def __eq__(self,*args):

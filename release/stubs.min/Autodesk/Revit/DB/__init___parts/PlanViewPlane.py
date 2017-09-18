@@ -1,7 +1,9 @@
 class PlanViewPlane(Enum,IComparable,IFormattable,IConvertible):
  """
- Locations where view range offsets can be specified.
- 
+ Locations where view range offsets can be specified.
+
+ 
+
  enum PlanViewPlane,values: BottomClipPlane (2),CutPlane (0),TopClipPlane (1),UnderlayBottom (4),ViewDepthPlane (3)
  """
  def __eq__(self,*args):

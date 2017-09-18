@@ -1,8 +1,11 @@
 class FamilyHostingBehavior(Enum,IComparable,IFormattable,IConvertible):
  """
- Types of hosts into/onto which a family can be hosted.
-    For informative purposes only. Does not affect anything in Revit!
- 
+ Types of hosts into/onto which a family can be hosted.
+
+    For informative purposes only. Does not affect anything in Revit!
+
+ 
+
  enum FamilyHostingBehavior,values: Ceiling (3),Face (5),Floor (2),None (0),Roof (4),Wall (1)
  """
  def __eq__(self,*args):

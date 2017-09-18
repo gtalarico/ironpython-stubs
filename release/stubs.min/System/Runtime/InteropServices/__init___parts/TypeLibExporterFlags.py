@@ -1,7 +1,9 @@
 class TypeLibExporterFlags(Enum,IComparable,IFormattable,IConvertible):
  """
- Indicates how a type library should be produced.
- 
+ Indicates how a type library should be produced.
+
+ 
+
  enum (flags) TypeLibExporterFlags,values: CallerResolvedReferences (2),ExportAs32Bit (16),ExportAs64Bit (32),None (0),OldNames (4),OnlyReferenceRegistered (1)
  """
  def __eq__(self,*args):

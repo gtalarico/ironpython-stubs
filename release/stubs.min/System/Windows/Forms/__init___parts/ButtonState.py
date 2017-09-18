@@ -1,7 +1,9 @@
 class ButtonState(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the appearance of a button.
- 
+ Specifies the appearance of a button.
+
+ 
+
  enum (flags) ButtonState,values: All (18176),Checked (1024),Flat (16384),Inactive (256),Normal (0),Pushed (512)
  """
  def __eq__(self,*args):

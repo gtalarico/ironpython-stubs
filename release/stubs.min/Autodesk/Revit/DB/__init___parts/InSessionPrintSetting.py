@@ -19,10 +19,14 @@ class InSessionPrintSetting(object,IPrintSetting,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  PrintParameters=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the Parameters of Print Setup.
-
-Get: PrintParameters(self: InSessionPrintSetting) -> PrintParameters
-
+ """Returns the Parameters of Print Setup.
+
+
+
+Get: PrintParameters(self: InSessionPrintSetting) -> PrintParameters
+
+
+
 """
 
 

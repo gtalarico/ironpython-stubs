@@ -5,17 +5,28 @@ class DocumentVersion(object,IDisposable):
   pass
  def IsEqual(self,other):
   """
-  IsEqual(self: DocumentVersion,other: DocumentVersion) -> bool
-  
-   Checks whether two DocumentVersions are identical.
-     They are identical if 
-    both the GUID and number of saves
-     are equal. If two DocumentVersions are 
-    identical,they
-     come from the same document,with the same set of changes.
-  
-  
-   other: The DocumentVersion to compare to this DocumentVersion.
+  IsEqual(self: DocumentVersion,other: DocumentVersion) -> bool
+
+  
+
+   Checks whether two DocumentVersions are identical.
+
+     They are identical if 
+
+    both the GUID and number of saves
+
+     are equal. If two DocumentVersions are 
+
+    identical,they
+
+     come from the same document,with the same set of changes.
+
+  
+
+  
+
+   other: The DocumentVersion to compare to this DocumentVersion.
+
    Returns: True if the two DocumentVersions are equal. False otherwise.
   """
   pass
@@ -35,27 +46,42 @@ class DocumentVersion(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: DocumentVersion) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: DocumentVersion) -> bool
+
+
+
 """
 
  NumberOfSaves=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The number of times the document has been saved. The save number and GUID
-   are both necessary to uniquely identify a document version.
-
-Get: NumberOfSaves(self: DocumentVersion) -> int
-
+ """The number of times the document has been saved. The save number and GUID
+
+   are both necessary to uniquely identify a document version.
+
+
+
+Get: NumberOfSaves(self: DocumentVersion) -> int
+
+
+
 """
 
  VersionGUID=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The GUID portion of the DocumentVersion. The GUID is updated when changes
-   are made to the document,but may not update with every change to the document.
-   The GUID and save number are both necessary to uniquely identify a document version.
-
-Get: VersionGUID(self: DocumentVersion) -> Guid
-
+ """The GUID portion of the DocumentVersion. The GUID is updated when changes
+
+   are made to the document,but may not update with every change to the document.
+
+   The GUID and save number are both necessary to uniquely identify a document version.
+
+
+
+Get: VersionGUID(self: DocumentVersion) -> Guid
+
+
+
 """
 
 

@@ -19,11 +19,16 @@ class InSessionViewSheetSet(object,IViewSheetSet,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Views=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The views.
-
-Get: Views(self: InSessionViewSheetSet) -> ViewSet
-
-Set: Views(self: InSessionViewSheetSet)=value
+ """The views.
+
+
+
+Get: Views(self: InSessionViewSheetSet) -> ViewSet
+
+
+
+Set: Views(self: InSessionViewSheetSet)=value
+
 """
 
 

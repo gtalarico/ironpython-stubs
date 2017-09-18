@@ -8,19 +8,27 @@ class Instance(Element,IDisposable):
   pass
  def GetTotalTransform(self):
   """
-  GetTotalTransform(self: Instance) -> Transform
-  
-   Gets the total transform,which includes the true north transform for instances 
-    like import instances.
-  
+  GetTotalTransform(self: Instance) -> Transform
+
+  
+
+   Gets the total transform,which includes the true north transform for instances 
+
+    like import instances.
+
+  
+
    Returns: The calculated total transform.
   """
   pass
  def GetTransform(self):
   """
-  GetTransform(self: Instance) -> Transform
-  
-   Gets the transform of the instance.
+  GetTransform(self: Instance) -> Transform
+
+  
+
+   Gets the transform of the instance.
+
    Returns: The inherent transform.
   """
   pass

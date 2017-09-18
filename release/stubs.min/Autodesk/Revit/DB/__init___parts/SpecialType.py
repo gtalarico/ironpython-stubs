@@ -1,8 +1,11 @@
 class SpecialType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing special types that can appear in an Autodesk.Revit.DB.ExportLayerTable.
-    These types do not represent an independent category in Revit,but can be mapped to specific layers on export.
- 
+ An enumerated type listing special types that can appear in an Autodesk.Revit.DB.ExportLayerTable.
+
+    These types do not represent an independent category in Revit,but can be mapped to specific layers on export.
+
+ 
+
  enum SpecialType,values: Default (-1),ExteriorWall (2),FoundationWall (3),InteriorWall (1),RetainingWall (4)
  """
  def __eq__(self,*args):

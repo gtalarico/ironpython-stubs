@@ -16,10 +16,14 @@ class ModelCurveNode(RenderNode,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  LineProperties=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Access to the line (pen) properties of the curve being drawn
-
-Get: LineProperties(self: ModelCurveNode) -> LineProperties
-
+ """Access to the line (pen) properties of the curve being drawn
+
+
+
+Get: LineProperties(self: ModelCurveNode) -> LineProperties
+
+
+
 """
 
 

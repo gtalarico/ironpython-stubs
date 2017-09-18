@@ -2,8 +2,10 @@ class PolyLine(GeometryObject,IDisposable):
  """ A polyline. """
  def Clone(self):
   """
-  Clone(self: PolyLine) -> PolyLine
-  
+  Clone(self: PolyLine) -> PolyLine
+
+  
+
    Returns a copy of this polyline.
   """
   pass
@@ -16,41 +18,56 @@ class PolyLine(GeometryObject,IDisposable):
   pass
  def Evaluate(self,param):
   """
-  Evaluate(self: PolyLine,param: float) -> XYZ
-  
-   Evaluates a parameter on the polyline.
-  
-   param: The parameter to be evaluated. It is expected to be in [0,1] interval mapped to 
+  Evaluate(self: PolyLine,param: float) -> XYZ
+
+  
+
+   Evaluates a parameter on the polyline.
+
+  
+
+   param: The parameter to be evaluated. It is expected to be in [0,1] interval mapped to 
+
     the bounds of the whole polyline.
   """
   pass
  def GetCoordinate(self,index):
   """
-  GetCoordinate(self: PolyLine,index: int) -> XYZ
-  
-   Gets the coordinate point of the specified index.
-  
+  GetCoordinate(self: PolyLine,index: int) -> XYZ
+
+  
+
+   Gets the coordinate point of the specified index.
+
+  
+
    index: The index of the coordinates.
   """
   pass
  def GetCoordinates(self):
   """
-  GetCoordinates(self: PolyLine) -> IList[XYZ]
-  
+  GetCoordinates(self: PolyLine) -> IList[XYZ]
+
+  
+
    Gets the coordinate points of the polyline.
   """
   pass
  def GetOutline(self):
   """
-  GetOutline(self: PolyLine) -> Outline
-  
+  GetOutline(self: PolyLine) -> Outline
+
+  
+
    Gets the outline of the polyline.
   """
   pass
  def GetTransformed(self,transform):
   """
-  GetTransformed(self: PolyLine,transform: Transform) -> PolyLine
-  
+  GetTransformed(self: PolyLine,transform: Transform) -> PolyLine
+
+  
+
    Gets the copy of the polyline which is applied the specified transformation.
   """
   pass
@@ -70,10 +87,14 @@ class PolyLine(GeometryObject,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  NumberOfCoordinates=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the number of the coordinate points.
-
-Get: NumberOfCoordinates(self: PolyLine) -> int
-
+ """Gets the number of the coordinate points.
+
+
+
+Get: NumberOfCoordinates(self: PolyLine) -> int
+
+
+
 """
 
 

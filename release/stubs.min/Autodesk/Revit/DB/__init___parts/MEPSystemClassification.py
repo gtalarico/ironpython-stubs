@@ -1,8 +1,11 @@
 class MEPSystemClassification(Enum,IComparable,IFormattable,IConvertible):
  """
- This enumeration is used to classify MEP connectors and systems
-    and drives certain behavior for a particular system type
- 
+ This enumeration is used to classify MEP connectors and systems
+
+    and drives certain behavior for a particular system type
+
+ 
+
  enum MEPSystemClassification,values: CableTrayConduit (32),Communication (14),CondensateDrain (15),Controls (13),DataCircuit (5),DomesticColdWater (20),DomesticHotWater (19),ExhaustAir (3),FireAlarm (11),FireProtectDry (24),FireProtectOther (26),FireProtectPreaction (25),FireProtectWet (23),Fitting (28),Global (29),NurseCall (12),OtherAir (4),OtherPipe (22),PowerBalanced (30),PowerCircuit (6),PowerUnBalanced (31),Recirculation (21),ReturnAir (2),ReturnHydronic (8),Sanitary (16),Security (10),Storm (18),SupplyAir (1),SupplyHydronic (7),SwitchTopology (27),Telephone (9),UndefinedSystemClassification (0),Vent (17)
  """
  def __eq__(self,*args):

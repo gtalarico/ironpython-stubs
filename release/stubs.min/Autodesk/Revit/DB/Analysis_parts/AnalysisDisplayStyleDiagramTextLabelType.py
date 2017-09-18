@@ -1,7 +1,9 @@
 class AnalysisDisplayStyleDiagramTextLabelType(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines text label visualization types for diagram settings of analysis display style.
- 
+ Defines text label visualization types for diagram settings of analysis display style.
+
+ 
+
  enum AnalysisDisplayStyleDiagramTextLabelType,values: ShowAll (0),ShowNone (1),ShowPredefined (2)
  """
  def __eq__(self,*args):

@@ -12,7 +12,8 @@ class FormattableString(object,IFormattable):
   pass
  def ToString(self,formatProvider=None):
   """
-  ToString(self: FormattableString) -> str
+  ToString(self: FormattableString) -> str
+
   ToString(self: FormattableString,formatProvider: IFormatProvider) -> str
   """
   pass
@@ -28,13 +29,17 @@ class FormattableString(object,IFormattable):
  def __str__(self,*args):
   pass
  ArgumentCount=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ArgumentCount(self: FormattableString) -> int
-
+ """Get: ArgumentCount(self: FormattableString) -> int
+
+
+
 """
 
  Format=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Format(self: FormattableString) -> str
-
+ """Get: Format(self: FormattableString) -> str
+
+
+
 """
 
 

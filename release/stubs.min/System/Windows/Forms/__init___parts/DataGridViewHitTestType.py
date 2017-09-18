@@ -1,7 +1,9 @@
 class DataGridViewHitTestType(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies a location in a System.Windows.Forms.DataGridView control.
- 
+ Specifies a location in a System.Windows.Forms.DataGridView control.
+
+ 
+
  enum DataGridViewHitTestType,values: Cell (1),ColumnHeader (2),HorizontalScrollBar (5),None (0),RowHeader (3),TopLeftHeader (4),VerticalScrollBar (6)
  """
  def __eq__(self,*args):

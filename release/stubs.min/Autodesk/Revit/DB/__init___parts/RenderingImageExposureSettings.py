@@ -19,50 +19,79 @@ class RenderingImageExposureSettings(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  ExposureValue=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The value of rendering image exposure.
-
-Get: ExposureValue(self: RenderingImageExposureSettings) -> float
-
-Set: ExposureValue(self: RenderingImageExposureSettings)=value
+ """The value of rendering image exposure.
+
+
+
+Get: ExposureValue(self: RenderingImageExposureSettings) -> float
+
+
+
+Set: ExposureValue(self: RenderingImageExposureSettings)=value
+
 """
 
  Highlights=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The highlights value.
-
-Get: Highlights(self: RenderingImageExposureSettings) -> float
-
-Set: Highlights(self: RenderingImageExposureSettings)=value
+ """The highlights value.
+
+
+
+Get: Highlights(self: RenderingImageExposureSettings) -> float
+
+
+
+Set: Highlights(self: RenderingImageExposureSettings)=value
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: RenderingImageExposureSettings) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: RenderingImageExposureSettings) -> bool
+
+
+
 """
 
  Saturation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The value of rendering image saturation.
-
-Get: Saturation(self: RenderingImageExposureSettings) -> float
-
-Set: Saturation(self: RenderingImageExposureSettings)=value
+ """The value of rendering image saturation.
+
+
+
+Get: Saturation(self: RenderingImageExposureSettings) -> float
+
+
+
+Set: Saturation(self: RenderingImageExposureSettings)=value
+
 """
 
  Shadows=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The shadows value.
-
-Get: Shadows(self: RenderingImageExposureSettings) -> float
-
-Set: Shadows(self: RenderingImageExposureSettings)=value
+ """The shadows value.
+
+
+
+Get: Shadows(self: RenderingImageExposureSettings) -> float
+
+
+
+Set: Shadows(self: RenderingImageExposureSettings)=value
+
 """
 
  WhitePoint=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The white point value.
-
-Get: WhitePoint(self: RenderingImageExposureSettings) -> float
-
-Set: WhitePoint(self: RenderingImageExposureSettings)=value
+ """The white point value.
+
+
+
+Get: WhitePoint(self: RenderingImageExposureSettings) -> float
+
+
+
+Set: WhitePoint(self: RenderingImageExposureSettings)=value
+
 """
 
 

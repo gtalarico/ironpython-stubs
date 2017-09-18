@@ -1,7 +1,9 @@
 class NurbsSurfaceData(object,IDisposable):
  """
- A class used to represent the definition of a NURBS surface.
- 
+ A class used to represent the definition of a NURBS surface.
+
+ 
+
  NurbsSurfaceData(other: NurbsSurfaceData)
  """
  @staticmethod
@@ -13,37 +15,48 @@ class NurbsSurfaceData(object,IDisposable):
   pass
  def GetControlPoints(self):
   """
-  GetControlPoints(self: NurbsSurfaceData) -> IList[XYZ]
-  
+  GetControlPoints(self: NurbsSurfaceData) -> IList[XYZ]
+
+  
+
    Get the list of control points.
   """
   pass
  def GetKnotsU(self):
   """
-  GetKnotsU(self: NurbsSurfaceData) -> IList[float]
-  
+  GetKnotsU(self: NurbsSurfaceData) -> IList[float]
+
+  
+
    Get the list of knots in the u-direction.
   """
   pass
  def GetKnotsV(self):
   """
-  GetKnotsV(self: NurbsSurfaceData) -> IList[float]
-  
+  GetKnotsV(self: NurbsSurfaceData) -> IList[float]
+
+  
+
    Get the list of knots in the v-direction.
   """
   pass
  def GetWeights(self):
   """
-  GetWeights(self: NurbsSurfaceData) -> IList[float]
-  
+  GetWeights(self: NurbsSurfaceData) -> IList[float]
+
+  
+
    Get the list of weights.
   """
   pass
  def IsValid(self):
   """
-  IsValid(self: NurbsSurfaceData) -> bool
-  
-   Check if the object contains a valid NurbsSurfaceData.
+  IsValid(self: NurbsSurfaceData) -> bool
+
+  
+
+   Check if the object contains a valid NurbsSurfaceData.
+
    Returns: True if it is a valid NurbsSurfaceData,false otherwise.
   """
   pass
@@ -67,43 +80,68 @@ class NurbsSurfaceData(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  DegreeU=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The degree of the spline in the u-direction.
-
-Get: DegreeU(self: NurbsSurfaceData) -> int
-
+ """The degree of the spline in the u-direction.
+
+
+
+Get: DegreeU(self: NurbsSurfaceData) -> int
+
+
+
 """
 
  DegreeV=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The degree of the spline in the v-direction.
-
-Get: DegreeV(self: NurbsSurfaceData) -> int
-
+ """The degree of the spline in the v-direction.
+
+
+
+Get: DegreeV(self: NurbsSurfaceData) -> int
+
+
+
 """
 
  IsRational=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Tells if the spline is rational or not.
-   If it is true (rational),then the NURBS is a piecewise rational polynomial function.
-   If it is false (non-rational),then the NURBS is a piecewise polynomial function.
-
-Get: IsRational(self: NurbsSurfaceData) -> bool
-
+ """Tells if the spline is rational or not.
+
+   If it is true (rational),then the NURBS is a piecewise rational polynomial function.
+
+   If it is false (non-rational),then the NURBS is a piecewise polynomial function.
+
+
+
+Get: IsRational(self: NurbsSurfaceData) -> bool
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: NurbsSurfaceData) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: NurbsSurfaceData) -> bool
+
+
+
 """
 
  ReverseOrientation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """If true,the surface's orientation is opposite to the canonical parametric orientation,otherwise it is the same.
-   The canonical parametric orientation is a counter-clockwise sense of rotation in the uv-parameter plane.
-   Extrinsically,the oriented normal vector for the canonical parametric orientation points in the direction of
-   the cross product dS/du x dS/dv,which S(u,v) is the parameterized surface.
-
-Get: ReverseOrientation(self: NurbsSurfaceData) -> bool
-
+ """If true,the surface's orientation is opposite to the canonical parametric orientation,otherwise it is the same.
+
+   The canonical parametric orientation is a counter-clockwise sense of rotation in the uv-parameter plane.
+
+   Extrinsically,the oriented normal vector for the canonical parametric orientation points in the direction of
+
+   the cross product dS/du x dS/dv,which S(u,v) is the parameterized surface.
+
+
+
+Get: ReverseOrientation(self: NurbsSurfaceData) -> bool
+
+
+
 """
 
 

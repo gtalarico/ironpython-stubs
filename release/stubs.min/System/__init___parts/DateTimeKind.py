@@ -1,7 +1,9 @@
 class DateTimeKind(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies whether a System.DateTime object represents a local time,a Coordinated Universal Time (UTC),or is not specified as either local time or UTC.
- 
+ Specifies whether a System.DateTime object represents a local time,a Coordinated Universal Time (UTC),or is not specified as either local time or UTC.
+
+ 
+
  enum DateTimeKind,values: Local (2),Unspecified (0),Utc (1)
  """
  def __eq__(self,*args):

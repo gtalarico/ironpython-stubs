@@ -1,7 +1,9 @@
 class DataGridSelectionUnit(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines constants that specify whether cells,rows,or both,are used for selection in a System.Windows.Controls.DataGrid control.
- 
+ Defines constants that specify whether cells,rows,or both,are used for selection in a System.Windows.Controls.DataGrid control.
+
+ 
+
  enum DataGridSelectionUnit,values: Cell (0),CellOrRowHeader (2),FullRow (1)
  """
  def __eq__(self,*args):

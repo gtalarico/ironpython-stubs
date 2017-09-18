@@ -1,27 +1,40 @@
 class Definitions(object,IEnumerable[Definition],IEnumerable,IDisposable):
  """
- A base class that supports the addition of new parameter definitions.
- 
+ A base class that supports the addition of new parameter definitions.
+
+ 
+
  Definitions()
  """
  def Contains(self,definition):
   """
-  Contains(self: Definitions,definition: Definition) -> bool
-  
-   Tests for the existence of a definition within the set.
-  
-   definition: The definition to look for.
+  Contains(self: Definitions,definition: Definition) -> bool
+
+  
+
+   Tests for the existence of a definition within the set.
+
+  
+
+   definition: The definition to look for.
+
    Returns: True if the definition was found,false otherwise.
   """
   pass
  def Create(self,option):
   """
-  Create(self: Definitions,option: ExternalDefinitionCreationOptions) -> Definition
-  
-   Creates a new parameter definition using specified options.
-  
-   option: The options used to create the new parameter definition.
-   Returns: If successful a reference to the new parameter definition is returned,
+  Create(self: Definitions,option: ExternalDefinitionCreationOptions) -> Definition
+
+  
+
+   Creates a new parameter definition using specified options.
+
+  
+
+   option: The options used to create the new parameter definition.
+
+   Returns: If successful a reference to the new parameter definition is returned,
+
     otherwise ll.
   """
   pass
@@ -30,9 +43,12 @@ class Definitions(object,IEnumerable[Definition],IEnumerable,IDisposable):
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: Definitions) -> IEnumerator[Definition]
-  
-   Retrieves an enumerator to the collection.
+  GetEnumerator(self: Definitions) -> IEnumerator[Definition]
+
+  
+
+   Retrieves an enumerator to the collection.
+
    Returns: The enumerator.
   """
   pass
@@ -58,17 +74,25 @@ class Definitions(object,IEnumerable[Definition],IEnumerable,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Identifies if the definitions collection is empty.
-
-Get: IsEmpty(self: Definitions) -> bool
-
+ """Identifies if the definitions collection is empty.
+
+
+
+Get: IsEmpty(self: Definitions) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The number of definitions in the collection.
-
-Get: Size(self: Definitions) -> int
-
+ """The number of definitions in the collection.
+
+
+
+Get: Size(self: Definitions) -> int
+
+
+
 """
 
 

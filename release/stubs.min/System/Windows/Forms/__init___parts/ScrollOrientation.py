@@ -1,7 +1,9 @@
 class ScrollOrientation(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the scroll bar orientation for the System.Windows.Forms.ScrollBar.Scroll event.
- 
+ Specifies the scroll bar orientation for the System.Windows.Forms.ScrollBar.Scroll event.
+
+ 
+
  enum ScrollOrientation,values: HorizontalScroll (0),VerticalScroll (1)
  """
  def __eq__(self,*args):

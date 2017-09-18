@@ -1,7 +1,9 @@
 class BrowserOrganizationType(Enum,IComparable,IFormattable,IConvertible):
  """
- Enumerated type representing the type of browser organization.
- 
+ Enumerated type representing the type of browser organization.
+
+ 
+
  enum BrowserOrganizationType,values: Families (2),Sheets (1),Views (0)
  """
  def __eq__(self,*args):

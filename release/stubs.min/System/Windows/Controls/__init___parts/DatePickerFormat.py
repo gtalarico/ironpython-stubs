@@ -1,7 +1,9 @@
 class DatePickerFormat(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies date formats for a System.Windows.Controls.DatePicker.
- 
+ Specifies date formats for a System.Windows.Controls.DatePicker.
+
+ 
+
  enum DatePickerFormat,values: Long (0),Short (1)
  """
  def __eq__(self,*args):

@@ -22,17 +22,25 @@ class Path3d(SketchBase,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  AllCurveLoops=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get all the Curve Loops of Path3d.
-
-Get: AllCurveLoops(self: Path3d) -> CurveArrArray
-
+ """Get all the Curve Loops of Path3d.
+
+
+
+Get: AllCurveLoops(self: Path3d) -> CurveArrArray
+
+
+
 """
 
  NumCurveLoops=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the Number of Curve Loops of Path3d.
-
-Get: NumCurveLoops(self: Path3d) -> int
-
+ """Get the Number of Curve Loops of Path3d.
+
+
+
+Get: NumCurveLoops(self: Path3d) -> int
+
+
+
 """
 
 

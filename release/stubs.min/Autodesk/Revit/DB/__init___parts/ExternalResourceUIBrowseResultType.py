@@ -1,7 +1,9 @@
 class ExternalResourceUIBrowseResultType(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes the type of external resource browsing result.
- 
+ Describes the type of external resource browsing result.
+
+ 
+
  enum ExternalResourceUIBrowseResultType,values: FolderNotFound (1),ResourceNotFound (2),Success (0)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class SourceLevels(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the levels of trace messages filtered by the source switch and event type filter.
- 
+ Specifies the levels of trace messages filtered by the source switch and event type filter.
+
+ 
+
  enum (flags) SourceLevels,values: ActivityTracing (65280),All (-1),Critical (1),Error (3),Information (15),Off (0),Verbose (31),Warning (7)
  """
  def __eq__(self,*args):

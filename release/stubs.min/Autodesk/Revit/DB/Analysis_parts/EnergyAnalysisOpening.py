@@ -5,9 +5,12 @@ class EnergyAnalysisOpening(Element,IDisposable):
   pass
  def GetAnalyticalSurface(self):
   """
-  GetAnalyticalSurface(self: EnergyAnalysisOpening) -> EnergyAnalysisSurface
-  
-   Gets the associative analytical parent surface element.
+  GetAnalyticalSurface(self: EnergyAnalysisOpening) -> EnergyAnalysisSurface
+
+  
+
+   Gets the associative analytical parent surface element.
+
    Returns: The associative analytical parent surface element.
   """
   pass
@@ -16,8 +19,10 @@ class EnergyAnalysisOpening(Element,IDisposable):
   pass
  def GetPolyloop(self):
   """
-  GetPolyloop(self: EnergyAnalysisOpening) -> Polyloop
-  
+  GetPolyloop(self: EnergyAnalysisOpening) -> Polyloop
+
+  
+
    Gets the planar polygon describing the opening geometry.
   """
   pass
@@ -37,73 +42,113 @@ class EnergyAnalysisOpening(Element,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  CADLinkUniqueId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The unique id of the originating CAD object's link (linked document) associated with this opening.
-
-Get: CADLinkUniqueId(self: EnergyAnalysisOpening) -> str
-
+ """The unique id of the originating CAD object's link (linked document) associated with this opening.
+
+
+
+Get: CADLinkUniqueId(self: EnergyAnalysisOpening) -> str
+
+
+
 """
 
  CADObjectUniqueId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The unique id of the originating CAD object (model element) associated with this opening.
-
-Get: CADObjectUniqueId(self: EnergyAnalysisOpening) -> str
-
+ """The unique id of the originating CAD object (model element) associated with this opening.
+
+
+
+Get: CADObjectUniqueId(self: EnergyAnalysisOpening) -> str
+
+
+
 """
 
  Corner=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The lower-left coordinate for the analytical rectangular geometry viewed from outside.
-
-Get: Corner(self: EnergyAnalysisOpening) -> XYZ
-
+ """The lower-left coordinate for the analytical rectangular geometry viewed from outside.
+
+
+
+Get: Corner(self: EnergyAnalysisOpening) -> XYZ
+
+
+
 """
 
  Height=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The height of the analytical rectangular geometry.
-
-Get: Height(self: EnergyAnalysisOpening) -> float
-
+ """The height of the analytical rectangular geometry.
+
+
+
+Get: Height(self: EnergyAnalysisOpening) -> float
+
+
+
 """
 
  OpeningId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The unique identifier for the opening.
-
-Get: OpeningId(self: EnergyAnalysisOpening) -> str
-
+ """The unique identifier for the opening.
+
+
+
+Get: OpeningId(self: EnergyAnalysisOpening) -> str
+
+
+
 """
 
  OpeningName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The unique name identifier for the opening.
-
-Get: OpeningName(self: EnergyAnalysisOpening) -> str
-
+ """The unique name identifier for the opening.
+
+
+
+Get: OpeningName(self: EnergyAnalysisOpening) -> str
+
+
+
 """
 
  OpeningType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The analytical opening type.
-
-Get: OpeningType(self: EnergyAnalysisOpening) -> EnergyAnalysisOpeningType
-
+ """The analytical opening type.
+
+
+
+Get: OpeningType(self: EnergyAnalysisOpening) -> EnergyAnalysisOpeningType
+
+
+
 """
 
  OriginatingElementDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The description for the originating Revit element.
-
-Get: OriginatingElementDescription(self: EnergyAnalysisOpening) -> str
-
+ """The description for the originating Revit element.
+
+
+
+Get: OriginatingElementDescription(self: EnergyAnalysisOpening) -> str
+
+
+
 """
 
  Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The gbXML opening type attribute.
-
-Get: Type(self: EnergyAnalysisOpening) -> gbXMLOpeningType
-
+ """The gbXML opening type attribute.
+
+
+
+Get: Type(self: EnergyAnalysisOpening) -> gbXMLOpeningType
+
+
+
 """
 
  Width=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The width of the analytical rectangular geometry.
-
-Get: Width(self: EnergyAnalysisOpening) -> float
-
+ """The width of the analytical rectangular geometry.
+
+
+
+Get: Width(self: EnergyAnalysisOpening) -> float
+
+
+
 """
 
 

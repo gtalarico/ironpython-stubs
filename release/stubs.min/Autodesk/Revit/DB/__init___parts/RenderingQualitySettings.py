@@ -5,29 +5,42 @@ class RenderingQualitySettings(object,IDisposable):
   pass
  def IsCustomQuality(self):
   """
-  IsCustomQuality(self: RenderingQualitySettings) -> bool
-  
-   Checks if the current rendering quality is custom or not.
+  IsCustomQuality(self: RenderingQualitySettings) -> bool
+
+  
+
+   Checks if the current rendering quality is custom or not.
+
    Returns: True if the current rendering quality is custom,false otherwise.
   """
   pass
  def IsValidRenderLevel(self,value):
   """
-  IsValidRenderLevel(self: RenderingQualitySettings,value: int) -> bool
-  
-   Validate the render level is between 1 and 40
-  
-   value: The render level value to validate.
+  IsValidRenderLevel(self: RenderingQualitySettings,value: int) -> bool
+
+  
+
+   Validate the render level is between 1 and 40
+
+  
+
+   value: The render level value to validate.
+
    Returns: True if the render level value is in the proper range,false otherwise.
   """
   pass
  def IsValidRenderTime(self,value):
   """
-  IsValidRenderTime(self: RenderingQualitySettings,value: int) -> bool
-  
-   Validate the render time is between 1 and 32768.
-  
-   value: The render time value to validate.
+  IsValidRenderTime(self: RenderingQualitySettings,value: int) -> bool
+
+  
+
+   Validate the render time is between 1 and 32768.
+
+  
+
+   value: The render time value to validate.
+
    Returns: True if the value is in the proper range,false otherwise.
   """
   pass
@@ -47,50 +60,79 @@ class RenderingQualitySettings(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: RenderingQualitySettings) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: RenderingQualitySettings) -> bool
+
+
+
 """
 
  LightAndMaterialAccuracyMode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """A value that controls light and material accuracy mode.
-
-Get: LightAndMaterialAccuracyMode(self: RenderingQualitySettings) -> LightAndMaterialAccuracyMode
-
-Set: LightAndMaterialAccuracyMode(self: RenderingQualitySettings)=value
+ """A value that controls light and material accuracy mode.
+
+
+
+Get: LightAndMaterialAccuracyMode(self: RenderingQualitySettings) -> LightAndMaterialAccuracyMode
+
+
+
+Set: LightAndMaterialAccuracyMode(self: RenderingQualitySettings)=value
+
 """
 
  RenderDuration=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """A value that controls render duration.
-
-Get: RenderDuration(self: RenderingQualitySettings) -> RenderDuration
-
-Set: RenderDuration(self: RenderingQualitySettings)=value
+ """A value that controls render duration.
+
+
+
+Get: RenderDuration(self: RenderingQualitySettings) -> RenderDuration
+
+
+
+Set: RenderDuration(self: RenderingQualitySettings)=value
+
 """
 
  RenderingQuality=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The quality applied for rendering.
-
-Get: RenderingQuality(self: RenderingQualitySettings) -> RenderingQuality
-
-Set: RenderingQuality(self: RenderingQualitySettings)=value
+ """The quality applied for rendering.
+
+
+
+Get: RenderingQuality(self: RenderingQualitySettings) -> RenderingQuality
+
+
+
+Set: RenderingQuality(self: RenderingQualitySettings)=value
+
 """
 
  RenderLevel=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The render target level as a numerical value between 1 and 40.
-
-Get: RenderLevel(self: RenderingQualitySettings) -> int
-
-Set: RenderLevel(self: RenderingQualitySettings)=value
+ """The render target level as a numerical value between 1 and 40.
+
+
+
+Get: RenderLevel(self: RenderingQualitySettings) -> int
+
+
+
+Set: RenderLevel(self: RenderingQualitySettings)=value
+
 """
 
  RenderTime=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The render target time as a numerical value between 1 and 32768.
-
-Get: RenderTime(self: RenderingQualitySettings) -> int
-
-Set: RenderTime(self: RenderingQualitySettings)=value
+ """The render target time as a numerical value between 1 and 32768.
+
+
+
+Get: RenderTime(self: RenderingQualitySettings) -> int
+
+
+
+Set: RenderTime(self: RenderingQualitySettings)=value
+
 """
 
 

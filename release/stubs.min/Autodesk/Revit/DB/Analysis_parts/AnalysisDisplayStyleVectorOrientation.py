@@ -1,7 +1,9 @@
 class AnalysisDisplayStyleVectorOrientation(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines vector orientation for vector settings of analysis display style.
- 
+ Defines vector orientation for vector settings of analysis display style.
+
+ 
+
  enum AnalysisDisplayStyleVectorOrientation,values: ArcAroundVectorAxis (1),Linear (0)
  """
  def __eq__(self,*args):

@@ -19,11 +19,16 @@ class LocationCurve(Location,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Curve=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Provides the ability to get and set the curve of a curve based element.
-
-Get: Curve(self: LocationCurve) -> Curve
-
-Set: Curve(self: LocationCurve)=value
+ """Provides the ability to get and set the curve of a curve based element.
+
+
+
+Get: Curve(self: LocationCurve) -> Curve
+
+
+
+Set: Curve(self: LocationCurve)=value
+
 """
 
 

@@ -1,7 +1,9 @@
 class ReloadLatestOptions(object,IDisposable):
  """
- Options to control behavior of pure reload latest (not part of synchronize with central).
- 
+ Options to control behavior of pure reload latest (not part of synchronize with central).
+
+ 
+
  ReloadLatestOptions()
  """
  def Dispose(self):
@@ -23,10 +25,14 @@ class ReloadLatestOptions(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ReloadLatestOptions) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ReloadLatestOptions) -> bool
+
+
+
 """
 
 

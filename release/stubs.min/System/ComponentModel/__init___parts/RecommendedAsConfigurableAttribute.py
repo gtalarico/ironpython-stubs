@@ -1,32 +1,45 @@
 class RecommendedAsConfigurableAttribute(Attribute,_Attribute):
  """
- Specifies that the property can be used as an application setting.
- 
+ Specifies that the property can be used as an application setting.
+
+ 
+
  RecommendedAsConfigurableAttribute(recommendedAsConfigurable: bool)
  """
  def Equals(self,obj):
   """
-  Equals(self: RecommendedAsConfigurableAttribute,obj: object) -> bool
-  
-   Indicates whether this instance and a specified object are equal.
-  
-   obj: Another object to compare to.
+  Equals(self: RecommendedAsConfigurableAttribute,obj: object) -> bool
+
+  
+
+   Indicates whether this instance and a specified object are equal.
+
+  
+
+   obj: Another object to compare to.
+
    Returns: true if obj is equal to this instance; otherwise,false.
   """
   pass
  def GetHashCode(self):
   """
-  GetHashCode(self: RecommendedAsConfigurableAttribute) -> int
-  
-   Returns the hash code for this instance.
+  GetHashCode(self: RecommendedAsConfigurableAttribute) -> int
+
+  
+
+   Returns the hash code for this instance.
+
    Returns: A hash code for the current System.ComponentModel.RecommendedAsConfigurableAttribute.
   """
   pass
  def IsDefaultAttribute(self):
   """
-  IsDefaultAttribute(self: RecommendedAsConfigurableAttribute) -> bool
-  
-   Indicates whether the value of this instance is the default value for the class.
+  IsDefaultAttribute(self: RecommendedAsConfigurableAttribute) -> bool
+
+  
+
+   Indicates whether the value of this instance is the default value for the class.
+
    Returns: true if this instance is the default attribute for the class; otherwise,false.
   """
   pass
@@ -43,10 +56,14 @@ class RecommendedAsConfigurableAttribute(Attribute,_Attribute):
  def __ne__(self,*args):
   pass
  RecommendedAsConfigurable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a value indicating whether the property this attribute is bound to can be used as an application setting.
-
-Get: RecommendedAsConfigurable(self: RecommendedAsConfigurableAttribute) -> bool
-
+ """Gets a value indicating whether the property this attribute is bound to can be used as an application setting.
+
+
+
+Get: RecommendedAsConfigurable(self: RecommendedAsConfigurableAttribute) -> bool
+
+
+
 """
 
 

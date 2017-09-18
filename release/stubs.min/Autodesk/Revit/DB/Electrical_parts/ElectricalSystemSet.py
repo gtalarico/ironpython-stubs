@@ -1,12 +1,15 @@
 class ElectricalSystemSet(APIObject,IDisposable,IEnumerable):
  """
- A set that can contain any type of object.
- 
+ A set that can contain any type of object.
+
+ 
+
  ElectricalSystemSet()
  """
  def Clear(self):
   """
-  Clear(self: ElectricalSystemSet)
+  Clear(self: ElectricalSystemSet)
+
    Removes every item from the set,rendering it empty.
   """
   pass
@@ -21,17 +24,23 @@ class ElectricalSystemSet(APIObject,IDisposable,IEnumerable):
   pass
  def ForwardIterator(self):
   """
-  ForwardIterator(self: ElectricalSystemSet) -> ElectricalSystemSetIterator
-  
-   Retrieve a forward moving iterator to the set.
+  ForwardIterator(self: ElectricalSystemSet) -> ElectricalSystemSetIterator
+
+  
+
+   Retrieve a forward moving iterator to the set.
+
    Returns: Returns a forward moving iterator to the set.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: ElectricalSystemSet) -> IEnumerator
-  
-   Retrieve a forward moving iterator to the set.
+  GetEnumerator(self: ElectricalSystemSet) -> IEnumerator
+
+  
+
+   Retrieve a forward moving iterator to the set.
+
    Returns: Returns a forward moving iterator to the set.
   """
   pass
@@ -46,9 +55,12 @@ class ElectricalSystemSet(APIObject,IDisposable,IEnumerable):
   pass
  def ReverseIterator(self):
   """
-  ReverseIterator(self: ElectricalSystemSet) -> ElectricalSystemSetIterator
-  
-   Retrieve a backward moving iterator to the set.
+  ReverseIterator(self: ElectricalSystemSet) -> ElectricalSystemSetIterator
+
+  
+
+   Retrieve a backward moving iterator to the set.
+
    Returns: Returns a backward moving iterator to the set.
   """
   pass
@@ -65,17 +77,25 @@ class ElectricalSystemSet(APIObject,IDisposable,IEnumerable):
   """ __iter__(self: IEnumerable) -> object """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Test to see if the set is empty.
-
-Get: IsEmpty(self: ElectricalSystemSet) -> bool
-
+ """Test to see if the set is empty.
+
+
+
+Get: IsEmpty(self: ElectricalSystemSet) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the number of objects that are in the set.
-
-Get: Size(self: ElectricalSystemSet) -> int
-
+ """Returns the number of objects that are in the set.
+
+
+
+Get: Size(self: ElectricalSystemSet) -> int
+
+
+
 """
 
 

@@ -1,7 +1,9 @@
 class ImageLayout(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the position of the image on the control.
- 
+ Specifies the position of the image on the control.
+
+ 
+
  enum ImageLayout,values: Center (2),None (0),Stretch (3),Tile (1),Zoom (4)
  """
  def __eq__(self,*args):

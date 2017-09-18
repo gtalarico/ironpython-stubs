@@ -2,19 +2,27 @@ class SiteLocation(ElementType,IDisposable):
  """ Contains the geographical location information for the project's site. """
  def ConvertFromProjectTime(self,projectTime):
   """
-  ConvertFromProjectTime(self: SiteLocation,projectTime: DateTime) -> DateTime
-  
-   Converts project time to UTC time.
-  
+  ConvertFromProjectTime(self: SiteLocation,projectTime: DateTime) -> DateTime
+
+  
+
+   Converts project time to UTC time.
+
+  
+
    projectTime: The project time.
   """
   pass
  def ConvertToProjectTime(self,inputTime):
   """
-  ConvertToProjectTime(self: SiteLocation,inputTime: DateTime) -> DateTime
-  
-   Converts local time or UTC time to project time.
-  
+  ConvertToProjectTime(self: SiteLocation,inputTime: DateTime) -> DateTime
+
+  
+
+   Converts local time or UTC time to project time.
+
+  
+
    inputTime: The input local time or UTC time.
   """
   pass
@@ -40,49 +48,77 @@ class SiteLocation(ElementType,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Elevation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The Elevation of the site location.
-
-Get: Elevation(self: SiteLocation) -> float
-
+ """The Elevation of the site location.
+
+
+
+Get: Elevation(self: SiteLocation) -> float
+
+
+
 """
 
  Latitude=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The latitude of the site location.
-
-Get: Latitude(self: SiteLocation) -> float
-
-Set: Latitude(self: SiteLocation)=value
+ """The latitude of the site location.
+
+
+
+Get: Latitude(self: SiteLocation) -> float
+
+
+
+Set: Latitude(self: SiteLocation)=value
+
 """
 
  Longitude=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The longitude of the site location.
-
-Get: Longitude(self: SiteLocation) -> float
-
-Set: Longitude(self: SiteLocation)=value
+ """The longitude of the site location.
+
+
+
+Get: Longitude(self: SiteLocation) -> float
+
+
+
+Set: Longitude(self: SiteLocation)=value
+
 """
 
  PlaceName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The place name of the site.
-
-Get: PlaceName(self: SiteLocation) -> str
-
-Set: PlaceName(self: SiteLocation)=value
+ """The place name of the site.
+
+
+
+Get: PlaceName(self: SiteLocation) -> str
+
+
+
+Set: PlaceName(self: SiteLocation)=value
+
 """
 
  TimeZone=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Time-zone that contains the site
-
-Get: TimeZone(self: SiteLocation) -> float
-
-Set: TimeZone(self: SiteLocation)=value
+ """Time-zone that contains the site
+
+
+
+Get: TimeZone(self: SiteLocation) -> float
+
+
+
+Set: TimeZone(self: SiteLocation)=value
+
 """
 
  WeatherStationName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The name of the weather station at the site location.
-
-Get: WeatherStationName(self: SiteLocation) -> str
-
+ """The name of the weather station at the site location.
+
+
+
+Get: WeatherStationName(self: SiteLocation) -> str
+
+
+
 """
 
 

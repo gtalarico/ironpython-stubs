@@ -1,7 +1,9 @@
 class HttpResponseHeader(Enum,IComparable,IFormattable,IConvertible):
  """
- The HTTP headers that can be specified in a server response.
- 
+ The HTTP headers that can be specified in a server response.
+
+ 
+
  enum HttpResponseHeader,values: AcceptRanges (20),Age (21),Allow (10),CacheControl (0),Connection (1),ContentEncoding (13),ContentLanguage (14),ContentLength (11),ContentLocation (15),ContentMd5 (16),ContentRange (17),ContentType (12),Date (2),ETag (22),Expires (18),KeepAlive (3),LastModified (19),Location (23),Pragma (4),ProxyAuthenticate (24),RetryAfter (25),Server (26),SetCookie (27),Trailer (5),TransferEncoding (6),Upgrade (7),Vary (28),Via (8),Warning (9),WwwAuthenticate (29)
  """
  def __eq__(self,*args):

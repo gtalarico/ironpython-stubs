@@ -1,7 +1,9 @@
 class MarginType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all Margin types of Print Setting.
- 
+ An enumerated type listing all Margin types of Print Setting.
+
+ 
+
  enum MarginType,values: NoMargin (0),PrinterLimit (1),UserDefined (2)
  """
  def __eq__(self,*args):

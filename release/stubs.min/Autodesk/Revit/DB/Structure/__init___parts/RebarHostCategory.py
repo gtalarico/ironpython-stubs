@@ -1,7 +1,9 @@
 class RebarHostCategory(Enum,IComparable,IFormattable,IConvertible):
  """
- Rebar host category
- 
+ Rebar host category
+
+ 
+
  enum RebarHostCategory,values: Floor (5),Other (0),Part (1),SlabEdge (8),Stairs (7),StructuralColumn (2),StructuralFoundation (6),StructuralFraming (3),Wall (4)
  """
  def __eq__(self,*args):

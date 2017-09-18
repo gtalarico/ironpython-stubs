@@ -1,7 +1,9 @@
 class RebarPresentationMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Bar presentation mode
- 
+ Bar presentation mode
+
+ 
+
  enum RebarPresentationMode,values: All (0),FirstLast (1),Middle (2),Select (3)
  """
  def __eq__(self,*args):

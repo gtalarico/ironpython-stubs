@@ -71,8 +71,10 @@ class Double(object):
  @staticmethod
  def __new__(self,*args): #cannot find CLR constructor
   """
-  __new__(cls: type,s: IList[Byte]) -> object
-  __new__(cls: type,x: object) -> object
+  __new__(cls: type,s: IList[Byte]) -> object
+
+  __new__(cls: type,x: object) -> object
+
   __new__(cls: type) -> object
   """
   pass

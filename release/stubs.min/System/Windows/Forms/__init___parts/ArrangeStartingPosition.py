@@ -1,7 +1,9 @@
 class ArrangeStartingPosition(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the starting position that the system uses to arrange minimized windows.
- 
+ Specifies the starting position that the system uses to arrange minimized windows.
+
+ 
+
  enum (flags) ArrangeStartingPosition,values: BottomLeft (0),BottomRight (1),Hide (8),TopLeft (2),TopRight (3)
  """
  def __eq__(self,*args):

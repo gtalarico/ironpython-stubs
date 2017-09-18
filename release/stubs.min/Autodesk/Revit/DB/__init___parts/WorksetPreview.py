@@ -19,45 +19,69 @@ class WorksetPreview(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Id of the workset.
-
-Get: Id(self: WorksetPreview) -> WorksetId
-
+ """Id of the workset.
+
+
+
+Get: Id(self: WorksetPreview) -> WorksetId
+
+
+
 """
 
  IsDefaultWorkset=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Whether the workset is the default one.
-
-Get: IsDefaultWorkset(self: WorksetPreview) -> bool
-
+ """Whether the workset is the default one.
+
+
+
+Get: IsDefaultWorkset(self: WorksetPreview) -> bool
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: WorksetPreview) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: WorksetPreview) -> bool
+
+
+
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Name of the workset.
-
-Get: Name(self: WorksetPreview) -> str
-
+ """Name of the workset.
+
+
+
+Get: Name(self: WorksetPreview) -> str
+
+
+
 """
 
  Owner=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """User name of the workset.
-
-Get: Owner(self: WorksetPreview) -> str
-
+ """User name of the workset.
+
+
+
+Get: Owner(self: WorksetPreview) -> str
+
+
+
 """
 
  UniqueId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """UniqueId of the workset.
-
-Get: UniqueId(self: WorksetPreview) -> Guid
-
+ """UniqueId of the workset.
+
+
+
+Get: UniqueId(self: WorksetPreview) -> Guid
+
+
+
 """
 
 

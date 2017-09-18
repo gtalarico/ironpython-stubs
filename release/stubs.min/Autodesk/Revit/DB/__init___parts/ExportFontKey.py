@@ -1,9 +1,13 @@
 class ExportFontKey(object,IDisposable):
  """
- A key used to represent an item stored in an Autodesk.Revit.DB.ExportFontTable.
- 
- ExportFontKey(originalFontName: str)
- ExportFontKey()
+ A key used to represent an item stored in an Autodesk.Revit.DB.ExportFontTable.
+
+ 
+
+ ExportFontKey(originalFontName: str)
+
+ ExportFontKey()
+
  ExportFontKey(other: ExportFontKey)
  """
  def Dispose(self):
@@ -24,8 +28,10 @@ class ExportFontKey(object,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,originalFontName: str)
-  __new__(cls: type)
+  __new__(cls: type,originalFontName: str)
+
+  __new__(cls: type)
+
   __new__(cls: type,other: ExportFontKey)
   """
   pass
@@ -33,18 +39,27 @@ class ExportFontKey(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ExportFontKey) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ExportFontKey) -> bool
+
+
+
 """
 
  OriginalFontName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The original font name.
-
-Get: OriginalFontName(self: ExportFontKey) -> str
-
-Set: OriginalFontName(self: ExportFontKey)=value
+ """The original font name.
+
+
+
+Get: OriginalFontName(self: ExportFontKey) -> str
+
+
+
+Set: OriginalFontName(self: ExportFontKey)=value
+
 """
 
 

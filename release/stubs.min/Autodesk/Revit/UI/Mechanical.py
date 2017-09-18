@@ -15,17 +15,23 @@ class DuctFittingAndAccessoryPressureDropUIData(object,IDisposable):
   pass
  def GetUIDataItems(self):
   """
-  GetUIDataItems(self: DuctFittingAndAccessoryPressureDropUIData) -> IList[DuctFittingAndAccessoryPressureDropUIDataItem]
-  
-   Gets all UI data items stored in the UI data.
+  GetUIDataItems(self: DuctFittingAndAccessoryPressureDropUIData) -> IList[DuctFittingAndAccessoryPressureDropUIDataItem]
+
+  
+
+   Gets all UI data items stored in the UI data.
+
    Returns: An array of UI data items.
   """
   pass
  def GetUnits(self):
   """
-  GetUnits(self: DuctFittingAndAccessoryPressureDropUIData) -> Units
-  
-   Gets units.
+  GetUnits(self: DuctFittingAndAccessoryPressureDropUIData) -> Units
+
+  
+
+   Gets units.
+
    Returns: The Units object.
   """
   pass
@@ -45,10 +51,14 @@ class DuctFittingAndAccessoryPressureDropUIData(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: DuctFittingAndAccessoryPressureDropUIData) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: DuctFittingAndAccessoryPressureDropUIData) -> bool
+
+
+
 """
 
 
@@ -60,18 +70,25 @@ class DuctFittingAndAccessoryPressureDropUIDataItem(object,IDisposable):
   pass
  def GetDuctFittingAndAccessoryData(self):
   """
-  GetDuctFittingAndAccessoryData(self: DuctFittingAndAccessoryPressureDropUIDataItem) -> DuctFittingAndAccessoryData
-  
-   Gets the fitting data stored in the UI data item.
+  GetDuctFittingAndAccessoryData(self: DuctFittingAndAccessoryPressureDropUIDataItem) -> DuctFittingAndAccessoryData
+
+  
+
+   Gets the fitting data stored in the UI data item.
+
    Returns: The fitting data stored in the UI data item.
   """
   pass
  def GetEntity(self):
   """
-  GetEntity(self: DuctFittingAndAccessoryPressureDropUIDataItem) -> Entity
-  
-   Returns the entity set by UI server.
-     or an invalid entity otherwise.
+  GetEntity(self: DuctFittingAndAccessoryPressureDropUIDataItem) -> Entity
+
+  
+
+   Returns the entity set by UI server.
+
+     or an invalid entity otherwise.
+
    Returns: The returned Entity.
   """
   pass
@@ -80,9 +97,12 @@ class DuctFittingAndAccessoryPressureDropUIDataItem(object,IDisposable):
   pass
  def SetEntity(self,entity):
   """
-  SetEntity(self: DuctFittingAndAccessoryPressureDropUIDataItem,entity: Entity)
-   Stores the entity in the UI data item.
-  
+  SetEntity(self: DuctFittingAndAccessoryPressureDropUIDataItem,entity: Entity)
+
+   Stores the entity in the UI data item.
+
+  
+
    entity: The Entity to be stored.
   """
   pass
@@ -99,10 +119,14 @@ class DuctFittingAndAccessoryPressureDropUIDataItem(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: DuctFittingAndAccessoryPressureDropUIDataItem) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: DuctFittingAndAccessoryPressureDropUIDataItem) -> bool
+
+
+
 """
 
 
@@ -111,21 +135,31 @@ class IDuctFittingAndAccessoryPressureDropUIServer(IExternalServer):
  """ Interface for external servers providing optional UI for duct fitting and duct accessory coefficient calculation. """
  def GetDBServerId(self):
   """
-  GetDBServerId(self: IDuctFittingAndAccessoryPressureDropUIServer) -> Guid
-  
-   Returns the Id of the corresponding DB server for which this server provides an 
-    optional UI.
-  
+  GetDBServerId(self: IDuctFittingAndAccessoryPressureDropUIServer) -> Guid
+
+  
+
+   Returns the Id of the corresponding DB server for which this server provides an 
+
+    optional UI.
+
+  
+
    Returns: The Id of the DB server.
   """
   pass
  def ShowSettings(self,data):
   """
-  ShowSettings(self: IDuctFittingAndAccessoryPressureDropUIServer,data: DuctFittingAndAccessoryPressureDropUIData) -> bool
-  
-   Shows the settings UI.
-  
-   data: The input data of the calculation.
+  ShowSettings(self: IDuctFittingAndAccessoryPressureDropUIServer,data: DuctFittingAndAccessoryPressureDropUIData) -> bool
+
+  
+
+   Shows the settings UI.
+
+  
+
+   data: The input data of the calculation.
+
    Returns: True if the user makes any changes in the UI,false otherwise.
   """
   pass

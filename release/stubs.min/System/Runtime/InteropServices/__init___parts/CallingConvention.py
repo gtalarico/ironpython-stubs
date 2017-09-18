@@ -1,7 +1,9 @@
 class CallingConvention(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the calling convention required to call methods implemented in unmanaged code.
- 
+ Specifies the calling convention required to call methods implemented in unmanaged code.
+
+ 
+
  enum CallingConvention,values: Cdecl (2),FastCall (5),StdCall (3),ThisCall (4),Winapi (1)
  """
  def __eq__(self,*args):

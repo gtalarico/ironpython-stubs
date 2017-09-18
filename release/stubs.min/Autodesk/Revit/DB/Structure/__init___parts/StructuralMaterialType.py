@@ -1,7 +1,9 @@
 class StructuralMaterialType(Enum,IComparable,IFormattable,IConvertible):
  """
- Represents the structural material type.  This enum value is returned by Autodesk::Revit::DB::FamilyInstance::StructuralMaterialType.
- 
+ Represents the structural material type.  This enum value is returned by Autodesk::Revit::DB::FamilyInstance::StructuralMaterialType.
+
+ 
+
  enum StructuralMaterialType,values: Aluminum (7),Concrete (2),Generic (6),Other (4),PrecastConcrete (5),Steel (1),Undefined (0),Wood (3)
  """
  def __eq__(self,*args):

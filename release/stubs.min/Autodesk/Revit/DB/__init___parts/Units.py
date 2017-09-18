@@ -1,7 +1,9 @@
 class Units(object,IDisposable):
  """
- A document's default settings for formatting numbers with units.
- 
+ A document's default settings for formatting numbers with units.
+
+ 
+
  Units(unitSystem: UnitSystem)
  """
  def Dispose(self):
@@ -9,31 +11,44 @@ class Units(object,IDisposable):
   pass
  def GetFormatOptions(self,unitType):
   """
-  GetFormatOptions(self: Units,unitType: UnitType) -> FormatOptions
-  
-   Gets the default FormatOptions for a unit type.
-  
-   unitType: The unit type.
+  GetFormatOptions(self: Units,unitType: UnitType) -> FormatOptions
+
+  
+
+   Gets the default FormatOptions for a unit type.
+
+  
+
+   unitType: The unit type.
+
    Returns: A copy of the FormatOptions.
   """
   pass
  @staticmethod
  def GetModifiableUnitTypes():
   """
-  GetModifiableUnitTypes() -> IList[UnitType]
-  
-   Gets all unit types for which the default FormatOptions can be modified.
+  GetModifiableUnitTypes() -> IList[UnitType]
+
+  
+
+   Gets all unit types for which the default FormatOptions can be modified.
+
    Returns: The unit types for which the FormatOptions can be modified.
   """
   pass
  @staticmethod
  def IsModifiableUnitType(unitType):
   """
-  IsModifiableUnitType(unitType: UnitType) -> bool
-  
-   Checks whether the default FormatOptions can be modified for a given unit type.
-  
-   unitType: The unit type to check.
+  IsModifiableUnitType(unitType: UnitType) -> bool
+
+  
+
+   Checks whether the default FormatOptions can be modified for a given unit type.
+
+  
+
+   unitType: The unit type to check.
+
    Returns: True if the FormatOptions can be modified,false otherwise.
   """
   pass
@@ -42,10 +57,14 @@ class Units(object,IDisposable):
   pass
  def SetFormatOptions(self,unitType,options):
   """
-  SetFormatOptions(self: Units,unitType: UnitType,options: FormatOptions)
-   Sets the default FormatOptions for a unit type.
-  
-   unitType: The unit type.
+  SetFormatOptions(self: Units,unitType: UnitType,options: FormatOptions)
+
+   Sets the default FormatOptions for a unit type.
+
+  
+
+   unitType: The unit type.
+
    options: The ForrmatOptions.
   """
   pass
@@ -66,34 +85,53 @@ class Units(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  DecimalSymbol=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The symbol used to separate the integer and fractional parts of a number.
-
-Get: DecimalSymbol(self: Units) -> DecimalSymbol
-
-Set: DecimalSymbol(self: Units)=value
+ """The symbol used to separate the integer and fractional parts of a number.
+
+
+
+Get: DecimalSymbol(self: Units) -> DecimalSymbol
+
+
+
+Set: DecimalSymbol(self: Units)=value
+
 """
 
  DigitGroupingAmount=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The number of digits in each group when numbers are formatted with digit grouping.
-
-Get: DigitGroupingAmount(self: Units) -> DigitGroupingAmount
-
-Set: DigitGroupingAmount(self: Units)=value
+ """The number of digits in each group when numbers are formatted with digit grouping.
+
+
+
+Get: DigitGroupingAmount(self: Units) -> DigitGroupingAmount
+
+
+
+Set: DigitGroupingAmount(self: Units)=value
+
 """
 
  DigitGroupingSymbol=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The symbol used to separate groups of digits when numbers are formatted with digit grouping.
-
-Get: DigitGroupingSymbol(self: Units) -> DigitGroupingSymbol
-
-Set: DigitGroupingSymbol(self: Units)=value
+ """The symbol used to separate groups of digits when numbers are formatted with digit grouping.
+
+
+
+Get: DigitGroupingSymbol(self: Units) -> DigitGroupingSymbol
+
+
+
+Set: DigitGroupingSymbol(self: Units)=value
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: Units) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: Units) -> bool
+
+
+
 """
 
 

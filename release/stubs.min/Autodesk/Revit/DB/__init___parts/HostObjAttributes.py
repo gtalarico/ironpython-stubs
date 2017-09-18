@@ -8,8 +8,10 @@ class HostObjAttributes(ElementType,IDisposable):
   pass
  def GetCompoundStructure(self):
   """
-  GetCompoundStructure(self: HostObjAttributes) -> CompoundStructure
-  
+  GetCompoundStructure(self: HostObjAttributes) -> CompoundStructure
+
+  
+
    Returns an object that represents the compound structure of the element.
   """
   pass
@@ -18,7 +20,8 @@ class HostObjAttributes(ElementType,IDisposable):
   pass
  def SetCompoundStructure(self,compoundStructure):
   """
-  SetCompoundStructure(self: HostObjAttributes,compoundStructure: CompoundStructure)
+  SetCompoundStructure(self: HostObjAttributes,compoundStructure: CompoundStructure)
+
    Sets the compound structure of the element.
   """
   pass

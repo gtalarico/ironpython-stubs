@@ -1,7 +1,9 @@
 class FormWindowState(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies how a form window is displayed.
- 
+ Specifies how a form window is displayed.
+
+ 
+
  enum FormWindowState,values: Maximized (2),Minimized (1),Normal (0)
  """
  def __eq__(self,*args):

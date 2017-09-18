@@ -19,24 +19,36 @@ class MEPModel(APIObject,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  AssignedElectricalSystems=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Retrieves the electrical systems this electrical panel currently is assigned to.
-
-Get: AssignedElectricalSystems(self: MEPModel) -> ElectricalSystemSet
-
+ """Retrieves the electrical systems this electrical panel currently is assigned to.
+
+
+
+Get: AssignedElectricalSystems(self: MEPModel) -> ElectricalSystemSet
+
+
+
 """
 
  ConnectorManager=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Retrieves the Connector Manager from this MEPModel.
-
-Get: ConnectorManager(self: MEPModel) -> ConnectorManager
-
+ """Retrieves the Connector Manager from this MEPModel.
+
+
+
+Get: ConnectorManager(self: MEPModel) -> ConnectorManager
+
+
+
 """
 
  ElectricalSystems=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Retrieves the electrical systems that are currently created using this MEPModel.
-
-Get: ElectricalSystems(self: MEPModel) -> ElectricalSystemSet
-
+ """Retrieves the electrical systems that are currently created using this MEPModel.
+
+
+
+Get: ElectricalSystems(self: MEPModel) -> ElectricalSystemSet
+
+
+
 """
 
 

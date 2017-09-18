@@ -1,7 +1,9 @@
 class ClickMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies when the System.Windows.Controls.Primitives.ButtonBase.Click event should be raised.
- 
+ Specifies when the System.Windows.Controls.Primitives.ButtonBase.Click event should be raised.
+
+ 
+
  enum ClickMode,values: Hover (2),Press (1),Release (0)
  """
  def __eq__(self,*args):

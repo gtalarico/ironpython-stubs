@@ -1,7 +1,9 @@
 class SpatialElementBoundaryOptions(object,IDisposable):
  """
- Options that can be passed to a SpatialElementBoundaryCalculator to influence the results of the calculation.
- 
+ Options that can be passed to a SpatialElementBoundaryCalculator to influence the results of the calculation.
+
+ 
+
  SpatialElementBoundaryOptions()
  """
  def Dispose(self):
@@ -23,26 +25,40 @@ class SpatialElementBoundaryOptions(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: SpatialElementBoundaryOptions) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: SpatialElementBoundaryOptions) -> bool
+
+
+
 """
 
  SpatialElementBoundaryLocation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The boundary of spatial element for geometry calculation.
-
-Get: SpatialElementBoundaryLocation(self: SpatialElementBoundaryOptions) -> SpatialElementBoundaryLocation
-
-Set: SpatialElementBoundaryLocation(self: SpatialElementBoundaryOptions)=value
+ """The boundary of spatial element for geometry calculation.
+
+
+
+Get: SpatialElementBoundaryLocation(self: SpatialElementBoundaryOptions) -> SpatialElementBoundaryLocation
+
+
+
+Set: SpatialElementBoundaryLocation(self: SpatialElementBoundaryOptions)=value
+
 """
 
  StoreFreeBoundaryFaces=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates whether to include the free boundary faces in the result.
-
-Get: StoreFreeBoundaryFaces(self: SpatialElementBoundaryOptions) -> bool
-
-Set: StoreFreeBoundaryFaces(self: SpatialElementBoundaryOptions)=value
+ """Indicates whether to include the free boundary faces in the result.
+
+
+
+Get: StoreFreeBoundaryFaces(self: SpatialElementBoundaryOptions) -> bool
+
+
+
+Set: StoreFreeBoundaryFaces(self: SpatialElementBoundaryOptions)=value
+
 """
 
 

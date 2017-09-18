@@ -1,7 +1,9 @@
 class MediaState(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the states that can be applied to a System.Windows.Controls.MediaElement for the System.Windows.Controls.MediaElement.LoadedBehavior and System.Windows.Controls.MediaElement.UnloadedBehavior properties.
- 
+ Specifies the states that can be applied to a System.Windows.Controls.MediaElement for the System.Windows.Controls.MediaElement.LoadedBehavior and System.Windows.Controls.MediaElement.UnloadedBehavior properties.
+
+ 
+
  enum MediaState,values: Close (2),Manual (0),Pause (3),Play (1),Stop (4)
  """
  def __eq__(self,*args):

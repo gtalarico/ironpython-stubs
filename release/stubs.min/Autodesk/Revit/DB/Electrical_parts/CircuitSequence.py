@@ -1,7 +1,9 @@
 class CircuitSequence(Enum,IComparable,IFormattable,IConvertible):
  """
- Options of circuit sequence for assigning circuit to circuits across panel.
- 
+ Options of circuit sequence for assigning circuit to circuits across panel.
+
+ 
+
  enum CircuitSequence,values: GroupByPhase (1),Numerical (0),OddThenEven (2)
  """
  def __eq__(self,*args):

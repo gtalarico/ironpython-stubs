@@ -1,9 +1,13 @@
 class SystemException(Exception,ISerializable,_Exception):
  """
- Defines the base class for predefined exceptions in the System namespace.
- 
- SystemException()
- SystemException(message: str)
+ Defines the base class for predefined exceptions in the System namespace.
+
+ 
+
+ SystemException()
+
+ SystemException(message: str)
+
  SystemException(message: str,innerException: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,9 +22,12 @@ class SystemException(Exception,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,innerException=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,innerException: Exception)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,innerException: Exception)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

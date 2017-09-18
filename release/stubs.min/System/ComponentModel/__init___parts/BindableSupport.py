@@ -1,7 +1,9 @@
 class BindableSupport(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies values to indicate whether a property can be bound to a data element or another property.
- 
+ Specifies values to indicate whether a property can be bound to a data element or another property.
+
+ 
+
  enum BindableSupport,values: Default (2),No (0),Yes (1)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class ExportPaperFormat(Enum,IComparable,IFormattable,IConvertible):
  """
- Paper formats supported by DWF export
- 
+ Paper formats supported by DWF export
+
+ 
+
  enum ExportPaperFormat,values: ANSI_A (1),ANSI_B (2),ANSI_C (3),ANSI_D (4),ANSI_E (5),ARCH_A (15),ARCH_B (16),ARCH_C (17),ARCH_D (18),ARCH_E (19),ARCH_E1 (20),ARCH_E2 (21),ARCH_E3 (22),Default (0),ISO_A0 (10),ISO_A1 (9),ISO_A2 (8),ISO_A3 (7),ISO_A4 (6),ISO_B1 (14),ISO_B2 (13),ISO_B3 (12),ISO_B4 (11)
  """
  def __eq__(self,*args):

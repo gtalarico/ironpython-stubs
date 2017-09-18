@@ -1,7 +1,9 @@
 class RebarLayoutRule(Enum,IComparable,IFormattable,IConvertible):
  """
- The rule for how the rebars in rebar set are laid out
- 
+ The rule for how the rebars in rebar set are laid out
+
+ 
+
  enum RebarLayoutRule,values: FixedNumber (1),MaximumSpacing (2),MinimumClearSpacing (4),NumberWithSpacing (3),Single (0)
  """
  def __eq__(self,*args):

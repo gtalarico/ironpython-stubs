@@ -1,7 +1,9 @@
 class ScheduleHeadingOrientation(Enum,IComparable,IFormattable,IConvertible):
  """
- Orientation of schedule heading.
- 
+ Orientation of schedule heading.
+
+ 
+
  enum ScheduleHeadingOrientation,values: Horizontal (0),Vertical (1)
  """
  def __eq__(self,*args):

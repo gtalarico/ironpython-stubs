@@ -1,7 +1,9 @@
 class TextElementBackground(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all the background mode for the built-in parameter TEXT_BACKGROUND.
- 
+ An enumerated type listing all the background mode for the built-in parameter TEXT_BACKGROUND.
+
+ 
+
  enum TextElementBackground,values: TBGR_OPAQUE (0),TBGR_TRANSPARENT (1)
  """
  def __eq__(self,*args):

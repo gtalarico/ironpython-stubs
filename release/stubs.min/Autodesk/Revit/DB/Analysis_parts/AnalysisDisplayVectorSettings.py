@@ -1,8 +1,11 @@
 class AnalysisDisplayVectorSettings(object,IDisposable):
  """
- Contains vector settings for analysis display style element.
- 
- AnalysisDisplayVectorSettings()
+ Contains vector settings for analysis display style element.
+
+ 
+
+ AnalysisDisplayVectorSettings()
+
  AnalysisDisplayVectorSettings(other: AnalysisDisplayVectorSettings)
  """
  def Dispose(self):
@@ -10,11 +13,16 @@ class AnalysisDisplayVectorSettings(object,IDisposable):
   pass
  def IsEqual(self,other):
   """
-  IsEqual(self: AnalysisDisplayVectorSettings,other: AnalysisDisplayVectorSettings) -> bool
-  
-   Compares two vector settings objects.
-  
-   other: Vector settings object to compare with.
+  IsEqual(self: AnalysisDisplayVectorSettings,other: AnalysisDisplayVectorSettings) -> bool
+
+  
+
+   Compares two vector settings objects.
+
+  
+
+   other: Vector settings object to compare with.
+
    Returns: True if objects are equal,false otherwise.
   """
   pass
@@ -33,7 +41,8 @@ class AnalysisDisplayVectorSettings(object,IDisposable):
  @staticmethod
  def __new__(self,other=None):
   """
-  __new__(cls: type)
+  __new__(cls: type)
+
   __new__(cls: type,other: AnalysisDisplayVectorSettings)
   """
   pass
@@ -41,66 +50,105 @@ class AnalysisDisplayVectorSettings(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  ArrowheadScale=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Type of arrow head scaling.
-
-Get: ArrowheadScale(self: AnalysisDisplayVectorSettings) -> AnalysisDisplayStyleVectorArrowheadScale
-
-Set: ArrowheadScale(self: AnalysisDisplayVectorSettings)=value
+ """Type of arrow head scaling.
+
+
+
+Get: ArrowheadScale(self: AnalysisDisplayVectorSettings) -> AnalysisDisplayStyleVectorArrowheadScale
+
+
+
+Set: ArrowheadScale(self: AnalysisDisplayVectorSettings)=value
+
 """
 
  ArrowLineWeight=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Line weight assigned to arrow lines for vectors.
-
-Get: ArrowLineWeight(self: AnalysisDisplayVectorSettings) -> int
-
-Set: ArrowLineWeight(self: AnalysisDisplayVectorSettings)=value
+ """Line weight assigned to arrow lines for vectors.
+
+
+
+Get: ArrowLineWeight(self: AnalysisDisplayVectorSettings) -> int
+
+
+
+Set: ArrowLineWeight(self: AnalysisDisplayVectorSettings)=value
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: AnalysisDisplayVectorSettings) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: AnalysisDisplayVectorSettings) -> bool
+
+
+
 """
 
  Rounding=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Increment to which numeric values of analysis results are rounded in vectors.
-
-Get: Rounding(self: AnalysisDisplayVectorSettings) -> float
-
-Set: Rounding(self: AnalysisDisplayVectorSettings)=value
+ """Increment to which numeric values of analysis results are rounded in vectors.
+
+
+
+Get: Rounding(self: AnalysisDisplayVectorSettings) -> float
+
+
+
+Set: Rounding(self: AnalysisDisplayVectorSettings)=value
+
 """
 
  TextTypeId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Element id of text associated with the settings.
-
-Get: TextTypeId(self: AnalysisDisplayVectorSettings) -> ElementId
-
-Set: TextTypeId(self: AnalysisDisplayVectorSettings)=value
+ """Element id of text associated with the settings.
+
+
+
+Get: TextTypeId(self: AnalysisDisplayVectorSettings) -> ElementId
+
+
+
+Set: TextTypeId(self: AnalysisDisplayVectorSettings)=value
+
 """
 
  VectorOrientation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Vector orientation.
-
-Get: VectorOrientation(self: AnalysisDisplayVectorSettings) -> AnalysisDisplayStyleVectorOrientation
-
-Set: VectorOrientation(self: AnalysisDisplayVectorSettings)=value
+ """Vector orientation.
+
+
+
+Get: VectorOrientation(self: AnalysisDisplayVectorSettings) -> AnalysisDisplayStyleVectorOrientation
+
+
+
+Set: VectorOrientation(self: AnalysisDisplayVectorSettings)=value
+
 """
 
  VectorPosition=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Vector position.
-
-Get: VectorPosition(self: AnalysisDisplayVectorSettings) -> AnalysisDisplayStyleVectorPosition
-
-Set: VectorPosition(self: AnalysisDisplayVectorSettings)=value
+ """Vector position.
+
+
+
+Get: VectorPosition(self: AnalysisDisplayVectorSettings) -> AnalysisDisplayStyleVectorPosition
+
+
+
+Set: VectorPosition(self: AnalysisDisplayVectorSettings)=value
+
 """
 
  VectorTextType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Type of vector text visualization.
-
-Get: VectorTextType(self: AnalysisDisplayVectorSettings) -> AnalysisDisplayStyleVectorTextType
-
-Set: VectorTextType(self: AnalysisDisplayVectorSettings)=value
+ """Type of vector text visualization.
+
+
+
+Get: VectorTextType(self: AnalysisDisplayVectorSettings) -> AnalysisDisplayStyleVectorTextType
+
+
+
+Set: VectorTextType(self: AnalysisDisplayVectorSettings)=value
+
 """
 
 

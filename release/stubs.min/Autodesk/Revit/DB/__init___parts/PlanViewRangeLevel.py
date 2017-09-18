@@ -1,7 +1,9 @@
 class PlanViewRangeLevel(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type representing the options for seting the range for a plan view.
- 
+ An enumerated type representing the options for seting the range for a plan view.
+
+ 
+
  enum PlanViewRangeLevel,values: Above (-2),Below (-4),Current (-3),Unlimited (-1),Unused (-5)
  """
  def __eq__(self,*args):

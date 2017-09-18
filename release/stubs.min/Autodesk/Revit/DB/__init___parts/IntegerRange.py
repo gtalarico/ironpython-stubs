@@ -19,24 +19,36 @@ class IntegerRange(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  High=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The upper limit of the range
-
-Get: High(self: IntegerRange) -> int
-
+ """The upper limit of the range
+
+
+
+Get: High(self: IntegerRange) -> int
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: IntegerRange) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: IntegerRange) -> bool
+
+
+
 """
 
  Low=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The lower limit of the range
-
-Get: Low(self: IntegerRange) -> int
-
+ """The lower limit of the range
+
+
+
+Get: Low(self: IntegerRange) -> int
+
+
+
 """
 
 

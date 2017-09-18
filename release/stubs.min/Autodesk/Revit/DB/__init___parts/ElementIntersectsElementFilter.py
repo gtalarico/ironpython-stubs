@@ -1,8 +1,11 @@
 class ElementIntersectsElementFilter(ElementIntersectsFilter,IDisposable):
  """
- A filter to find elements that intersect the solid geometry of a given element.
- 
- ElementIntersectsElementFilter(element: Element,inverted: bool)
+ A filter to find elements that intersect the solid geometry of a given element.
+
+ 
+
+ ElementIntersectsElementFilter(element: Element,inverted: bool)
+
  ElementIntersectsElementFilter(element: Element)
  """
  def Dispose(self):
@@ -10,9 +13,12 @@ class ElementIntersectsElementFilter(ElementIntersectsFilter,IDisposable):
   pass
  def GetElement(self):
   """
-  GetElement(self: ElementIntersectsElementFilter) -> Element
-  
-   Gets the target element.
+  GetElement(self: ElementIntersectsElementFilter) -> Element
+
+  
+
+   Gets the target element.
+
    Returns: The element.
   """
   pass
@@ -31,7 +37,8 @@ class ElementIntersectsElementFilter(ElementIntersectsFilter,IDisposable):
  @staticmethod
  def __new__(self,element,inverted=None):
   """
-  __new__(cls: type,element: Element,inverted: bool)
+  __new__(cls: type,element: Element,inverted: bool)
+
   __new__(cls: type,element: Element)
   """
   pass

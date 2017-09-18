@@ -5,14 +5,22 @@ class HostObject(Element,IDisposable):
   pass
  def FindInserts(self,addRectOpenings,includeShadows,includeEmbeddedWalls,includeSharedEmbeddedInserts):
   """
-  FindInserts(self: HostObject,addRectOpenings: bool,includeShadows: bool,includeEmbeddedWalls: bool,includeSharedEmbeddedInserts: bool) -> IList[ElementId]
-  
-   Gets the ids of the instances inserted into this host object.
-  
-   addRectOpenings: True if rectangular openings should be included in the return.
-   includeShadows: True if shadows should be included in the return.
-   includeEmbeddedWalls: True if embedded walls should be included in the return.
-   includeSharedEmbeddedInserts: True if shared embedded inserts should be included in the return.
+  FindInserts(self: HostObject,addRectOpenings: bool,includeShadows: bool,includeEmbeddedWalls: bool,includeSharedEmbeddedInserts: bool) -> IList[ElementId]
+
+  
+
+   Gets the ids of the instances inserted into this host object.
+
+  
+
+   addRectOpenings: True if rectangular openings should be included in the return.
+
+   includeShadows: True if shadows should be included in the return.
+
+   includeEmbeddedWalls: True if embedded walls should be included in the return.
+
+   includeSharedEmbeddedInserts: True if shared embedded inserts should be included in the return.
+
    Returns: All the insertable instances' ids.
   """
   pass

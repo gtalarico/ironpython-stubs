@@ -1,9 +1,13 @@
 class UVGridlineType(Enum,IComparable,IFormattable,IConvertible):
  """
- A choice between U-gridlines or V-gridlines of a divided surface
-    U Gridlines
-    V Gridlines
- 
+ A choice between U-gridlines or V-gridlines of a divided surface
+
+    U Gridlines
+
+    V Gridlines
+
+ 
+
  enum UVGridlineType,values: U (0),V (1)
  """
  def __eq__(self,*args):

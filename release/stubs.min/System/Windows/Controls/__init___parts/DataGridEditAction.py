@@ -1,7 +1,9 @@
 class DataGridEditAction(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines constants that specify whether an edit is being canceled or committed.
- 
+ Defines constants that specify whether an edit is being canceled or committed.
+
+ 
+
  enum DataGridEditAction,values: Cancel (0),Commit (1)
  """
  def __eq__(self,*args):

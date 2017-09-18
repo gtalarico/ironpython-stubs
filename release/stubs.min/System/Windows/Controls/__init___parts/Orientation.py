@@ -1,7 +1,9 @@
 class Orientation(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines the different orientations that a control or layout can have.
- 
+ Defines the different orientations that a control or layout can have.
+
+ 
+
  enum Orientation,values: Horizontal (0),Vertical (1)
  """
  def __eq__(self,*args):

@@ -2,7 +2,8 @@ class FabricationHostedInfo(object,IDisposable):
  """ The fabrication hosted element information. """
  def DisconnectFromHost(self):
   """
-  DisconnectFromHost(self: FabricationHostedInfo)
+  DisconnectFromHost(self: FabricationHostedInfo)
+
    Disconnects the part from the host.
   """
   pass
@@ -11,22 +12,33 @@ class FabricationHostedInfo(object,IDisposable):
   pass
  def GetBearerCenterline(self):
   """
-  GetBearerCenterline(self: FabricationHostedInfo) -> Line
-  
-   Gets the centerline of the bearer. The method is applicable only for bearer 
-    hanger.
-  
+  GetBearerCenterline(self: FabricationHostedInfo) -> Line
+
+  
+
+   Gets the centerline of the bearer. The method is applicable only for bearer 
+
+    hanger.
+
+  
+
    Returns: The centerline of the bearer.
   """
   pass
  def PlaceOnHost(self,hostId,hostConnector,distance):
   """
-  PlaceOnHost(self: FabricationHostedInfo,hostId: ElementId,hostConnector: Connector,distance: float)
-   Places the part on the specified host.
-  
-   hostId: Id of the host fabrication part.
-   hostConnector: The connector of the host.
-   distance: The distance from the connector to place the hosted part. Units are in feet 
+  PlaceOnHost(self: FabricationHostedInfo,hostId: ElementId,hostConnector: Connector,distance: float)
+
+   Places the part on the specified host.
+
+  
+
+   hostId: Id of the host fabrication part.
+
+   hostConnector: The connector of the host.
+
+   distance: The distance from the connector to place the hosted part. Units are in feet 
+
     (ft).
   """
   pass
@@ -46,17 +58,25 @@ class FabricationHostedInfo(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  HostId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the Id of the host.
-
-Get: HostId(self: FabricationHostedInfo) -> ElementId
-
+ """Returns the Id of the host.
+
+
+
+Get: HostId(self: FabricationHostedInfo) -> ElementId
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: FabricationHostedInfo) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: FabricationHostedInfo) -> bool
+
+
+
 """
 
 

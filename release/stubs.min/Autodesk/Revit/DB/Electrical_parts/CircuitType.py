@@ -1,7 +1,9 @@
 class CircuitType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all the possible circuit types.
- 
+ An enumerated type listing all the possible circuit types.
+
+ 
+
  enum CircuitType,values: Circuit (0),Space (2),Spare (1)
  """
  def __eq__(self,*args):

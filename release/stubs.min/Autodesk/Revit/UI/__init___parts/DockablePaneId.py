@@ -1,7 +1,9 @@
 class DockablePaneId(GuidEnum):
  """
- Identifier for a pane that participates in the Revit docking window system.
- 
+ Identifier for a pane that participates in the Revit docking window system.
+
+ 
+
  DockablePaneId(guid: Guid)
  """
  @staticmethod

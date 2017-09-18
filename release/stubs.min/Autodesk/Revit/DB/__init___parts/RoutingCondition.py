@@ -1,8 +1,11 @@
 class RoutingCondition(object,IDisposable):
  """
- RoutingCondition represents routing information that is used as input when determining if a routing criterion,
-    such as minimum or maximum diameter,is met.
- 
+ RoutingCondition represents routing information that is used as input when determining if a routing criterion,
+
+    such as minimum or maximum diameter,is met.
+
+ 
+
  RoutingCondition(diameter: float)
  """
  def Dispose(self):
@@ -28,17 +31,25 @@ class RoutingCondition(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Diameter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The diameter of the segment or fitting specified for the routing condition.
-
-Get: Diameter(self: RoutingCondition) -> float
-
+ """The diameter of the segment or fitting specified for the routing condition.
+
+
+
+Get: Diameter(self: RoutingCondition) -> float
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: RoutingCondition) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: RoutingCondition) -> bool
+
+
+
 """
 
 

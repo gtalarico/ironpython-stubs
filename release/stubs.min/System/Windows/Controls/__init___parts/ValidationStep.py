@@ -1,7 +1,9 @@
 class ValidationStep(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies when a System.Windows.Controls.ValidationRule runs.
- 
+ Specifies when a System.Windows.Controls.ValidationRule runs.
+
+ 
+
  enum ValidationStep,values: CommittedValue (3),ConvertedProposedValue (1),RawProposedValue (0),UpdatedValue (2)
  """
  def __eq__(self,*args):

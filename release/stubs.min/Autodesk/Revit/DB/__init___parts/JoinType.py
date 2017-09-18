@@ -1,8 +1,11 @@
 class JoinType(Enum,IComparable,IFormattable,IConvertible):
  """
- The type of join at the end of an element. The join type affects only the graphic treatment,i.e.
- cleaning of the end,not the physical join behavior.
- 
+ The type of join at the end of an element. The join type affects only the graphic treatment,i.e.
+
+ cleaning of the end,not the physical join behavior.
+
+ 
+
  enum JoinType,values: Abut (0),Extension (3),Miter (1),None (-1),SquareOff (2)
  """
  def __eq__(self,*args):

@@ -3,19 +3,32 @@ class FabricReinSpanSymbol(IndependentTag,IDisposable):
  @staticmethod
  def Create(document,viewId,hostId,point,symbolId):
   """
-  Create(document: Document,viewId: ElementId,hostId: LinkElementId,point: XYZ,symbolId: ElementId) -> FabricReinSpanSymbol
-  
-   Places a new instance of the Structural Fabric Reinforcement Symbol into the 
-    project relative to a particular FabricSheet and View.
-  
-  
-   document: The document.
-   viewId: The id of the view in which the symbol should appear.
-   hostId: The ElementId of FabricSheet (either in the document,or linked from another 
-    document).
-  
-   point: The span symbol's head position.
-   symbolId: The id of the family symbol of this symbol.
+  Create(document: Document,viewId: ElementId,hostId: LinkElementId,point: XYZ,symbolId: ElementId) -> FabricReinSpanSymbol
+
+  
+
+   Places a new instance of the Structural Fabric Reinforcement Symbol into the 
+
+    project relative to a particular FabricSheet and View.
+
+  
+
+  
+
+   document: The document.
+
+   viewId: The id of the view in which the symbol should appear.
+
+   hostId: The ElementId of FabricSheet (either in the document,or linked from another 
+
+    document).
+
+  
+
+   point: The span symbol's head position.
+
+   symbolId: The id of the family symbol of this symbol.
+
    Returns: A reference to the newly-created symbol.
   """
   pass

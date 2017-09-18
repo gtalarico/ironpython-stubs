@@ -1,7 +1,9 @@
 class AnalysisMode(Enum,IComparable,IFormattable,IConvertible):
  """
- This enum is used to define the Energy Analysis Model.
- 
+ This enum is used to define the Energy Analysis Model.
+
+ 
+
  enum AnalysisMode,values: BuildingElements (0),ConceptualMasses (1),ConceptualMassesAndBuildingElements (2)
  """
  def __eq__(self,*args):

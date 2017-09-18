@@ -5,10 +5,14 @@ class CodeCheckingParameterServiceData(object,IDisposable):
   pass
  def GetCurrentElements(self):
   """
-  GetCurrentElements(self: CodeCheckingParameterServiceData) -> IList[ElementId]
-  
-   Returns the list of Ids of the current elements.
-   Returns: Ids of the current elements. Contains the analytical model element to which the 
+  GetCurrentElements(self: CodeCheckingParameterServiceData) -> IList[ElementId]
+
+  
+
+   Returns the list of Ids of the current elements.
+
+   Returns: Ids of the current elements. Contains the analytical model element to which the 
+
     code checking parameter belongs.
   """
   pass
@@ -28,17 +32,25 @@ class CodeCheckingParameterServiceData(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Document=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The current document.
-
-Get: Document(self: CodeCheckingParameterServiceData) -> Document
-
+ """The current document.
+
+
+
+Get: Document(self: CodeCheckingParameterServiceData) -> Document
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: CodeCheckingParameterServiceData) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: CodeCheckingParameterServiceData) -> bool
+
+
+
 """
 
 

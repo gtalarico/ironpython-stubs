@@ -1,8 +1,11 @@
 class MaterialPropertyPathType(Enum,IComparable,IFormattable,IConvertible):
  """
- Enum class indicating kinds of paths which ExternalFileReferenceType.Material
-    references can have.
- 
+ Enum class indicating kinds of paths which ExternalFileReferenceType.Material
+
+    references can have.
+
+ 
+
  enum MaterialPropertyPathType,values: Bump (3),Cutouts (2),FinishBumps (4),General (0),ReliefPattern (5),Transparency (1),Weathering (6)
  """
  def __eq__(self,*args):

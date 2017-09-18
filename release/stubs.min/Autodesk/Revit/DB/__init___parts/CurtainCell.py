@@ -19,17 +19,25 @@ class CurtainCell(APIObject,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  CurveLoops=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The cell boundaries on the reference face. The boundaries can have more than one CurveLoop. Each item in the returned array represents a CurveLoop containing 3 or more than 3 edges.
-
-Get: CurveLoops(self: CurtainCell) -> CurveArrArray
-
+ """The cell boundaries on the reference face. The boundaries can have more than one CurveLoop. Each item in the returned array represents a CurveLoop containing 3 or more than 3 edges.
+
+
+
+Get: CurveLoops(self: CurtainCell) -> CurveArrArray
+
+
+
 """
 
  PlanarizedCurveLoops=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The planarized curve loops for cell boundaries. The boundaries can have more than one CurveLoop. Each item in the returned array represents a CurveLoop containing 3 or more than 3 edges.
-
-Get: PlanarizedCurveLoops(self: CurtainCell) -> CurveArrArray
-
+ """The planarized curve loops for cell boundaries. The boundaries can have more than one CurveLoop. Each item in the returned array represents a CurveLoop containing 3 or more than 3 edges.
+
+
+
+Get: PlanarizedCurveLoops(self: CurtainCell) -> CurveArrArray
+
+
+
 """
 
 

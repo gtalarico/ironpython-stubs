@@ -10,17 +10,24 @@
 
 class Claim(object):
  """
- Claim(reader: BinaryReader)
- Claim(reader: BinaryReader,subject: ClaimsIdentity)
- Claim(type: str,value: str)
- Claim(type: str,value: str,valueType: str)
- Claim(type: str,value: str,valueType: str,issuer: str)
- Claim(type: str,value: str,valueType: str,issuer: str,originalIssuer: str)
+ Claim(reader: BinaryReader)
+
+ Claim(reader: BinaryReader,subject: ClaimsIdentity)
+
+ Claim(type: str,value: str)
+
+ Claim(type: str,value: str,valueType: str)
+
+ Claim(type: str,value: str,valueType: str,issuer: str)
+
+ Claim(type: str,value: str,valueType: str,issuer: str,originalIssuer: str)
+
  Claim(type: str,value: str,valueType: str,issuer: str,originalIssuer: str,subject: ClaimsIdentity)
  """
  def Clone(self,identity=None):
   """
-  Clone(self: Claim,identity: ClaimsIdentity) -> Claim
+  Clone(self: Claim,identity: ClaimsIdentity) -> Claim
+
   Clone(self: Claim) -> Claim
   """
   pass
@@ -33,67 +40,98 @@ class Claim(object):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,reader: BinaryReader)
-  __new__(cls: type,reader: BinaryReader,subject: ClaimsIdentity)
-  __new__(cls: type,type: str,value: str)
-  __new__(cls: type,type: str,value: str,valueType: str)
-  __new__(cls: type,type: str,value: str,valueType: str,issuer: str)
-  __new__(cls: type,type: str,value: str,valueType: str,issuer: str,originalIssuer: str)
-  __new__(cls: type,type: str,value: str,valueType: str,issuer: str,originalIssuer: str,subject: ClaimsIdentity)
-  __new__(cls: type,other: Claim)
+  __new__(cls: type,reader: BinaryReader)
+
+  __new__(cls: type,reader: BinaryReader,subject: ClaimsIdentity)
+
+  __new__(cls: type,type: str,value: str)
+
+  __new__(cls: type,type: str,value: str,valueType: str)
+
+  __new__(cls: type,type: str,value: str,valueType: str,issuer: str)
+
+  __new__(cls: type,type: str,value: str,valueType: str,issuer: str,originalIssuer: str)
+
+  __new__(cls: type,type: str,value: str,valueType: str,issuer: str,originalIssuer: str,subject: ClaimsIdentity)
+
+  __new__(cls: type,other: Claim)
+
   __new__(cls: type,other: Claim,subject: ClaimsIdentity)
   """
   pass
  CustomSerializationData=property(lambda self: object(),lambda self,v: None,lambda self: None)
 
  Issuer=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Issuer(self: Claim) -> str
-
+ """Get: Issuer(self: Claim) -> str
+
+
+
 """
 
  OriginalIssuer=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OriginalIssuer(self: Claim) -> str
-
+ """Get: OriginalIssuer(self: Claim) -> str
+
+
+
 """
 
  Properties=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Properties(self: Claim) -> IDictionary[str,str]
-
+ """Get: Properties(self: Claim) -> IDictionary[str,str]
+
+
+
 """
 
  Subject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Subject(self: Claim) -> ClaimsIdentity
-
+ """Get: Subject(self: Claim) -> ClaimsIdentity
+
+
+
 """
 
  Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Type(self: Claim) -> str
-
+ """Get: Type(self: Claim) -> str
+
+
+
 """
 
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Value(self: Claim) -> str
-
+ """Get: Value(self: Claim) -> str
+
+
+
 """
 
  ValueType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ValueType(self: Claim) -> str
-
+ """Get: ValueType(self: Claim) -> str
+
+
+
 """
 
 
 
 class ClaimsIdentity(object,IIdentity):
  """
- ClaimsIdentity()
- ClaimsIdentity(identity: IIdentity)
- ClaimsIdentity(claims: IEnumerable[Claim])
- ClaimsIdentity(authenticationType: str)
- ClaimsIdentity(claims: IEnumerable[Claim],authenticationType: str)
- ClaimsIdentity(identity: IIdentity,claims: IEnumerable[Claim])
- ClaimsIdentity(authenticationType: str,nameType: str,roleType: str)
- ClaimsIdentity(claims: IEnumerable[Claim],authenticationType: str,nameType: str,roleType: str)
- ClaimsIdentity(identity: IIdentity,claims: IEnumerable[Claim],authenticationType: str,nameType: str,roleType: str)
+ ClaimsIdentity()
+
+ ClaimsIdentity(identity: IIdentity)
+
+ ClaimsIdentity(claims: IEnumerable[Claim])
+
+ ClaimsIdentity(authenticationType: str)
+
+ ClaimsIdentity(claims: IEnumerable[Claim],authenticationType: str)
+
+ ClaimsIdentity(identity: IIdentity,claims: IEnumerable[Claim])
+
+ ClaimsIdentity(authenticationType: str,nameType: str,roleType: str)
+
+ ClaimsIdentity(claims: IEnumerable[Claim],authenticationType: str,nameType: str,roleType: str)
+
+ ClaimsIdentity(identity: IIdentity,claims: IEnumerable[Claim],authenticationType: str,nameType: str,roleType: str)
+
  ClaimsIdentity(reader: BinaryReader)
  """
  def AddClaim(self,claim):
@@ -110,13 +148,15 @@ class ClaimsIdentity(object,IIdentity):
   pass
  def FindAll(self,*__args):
   """
-  FindAll(self: ClaimsIdentity,type: str) -> IEnumerable[Claim]
+  FindAll(self: ClaimsIdentity,type: str) -> IEnumerable[Claim]
+
   FindAll(self: ClaimsIdentity,match: Predicate[Claim]) -> IEnumerable[Claim]
   """
   pass
  def FindFirst(self,*__args):
   """
-  FindFirst(self: ClaimsIdentity,type: str) -> Claim
+  FindFirst(self: ClaimsIdentity,type: str) -> Claim
+
   FindFirst(self: ClaimsIdentity,match: Predicate[Claim]) -> Claim
   """
   pass
@@ -125,7 +165,8 @@ class ClaimsIdentity(object,IIdentity):
   pass
  def HasClaim(self,*__args):
   """
-  HasClaim(self: ClaimsIdentity,type: str,value: str) -> bool
+  HasClaim(self: ClaimsIdentity,type: str,value: str) -> bool
+
   HasClaim(self: ClaimsIdentity,match: Predicate[Claim]) -> bool
   """
   pass
@@ -144,18 +185,30 @@ class ClaimsIdentity(object,IIdentity):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type)
-  __new__(cls: type,identity: IIdentity)
-  __new__(cls: type,claims: IEnumerable[Claim])
-  __new__(cls: type,authenticationType: str)
-  __new__(cls: type,claims: IEnumerable[Claim],authenticationType: str)
-  __new__(cls: type,identity: IIdentity,claims: IEnumerable[Claim])
-  __new__(cls: type,authenticationType: str,nameType: str,roleType: str)
-  __new__(cls: type,claims: IEnumerable[Claim],authenticationType: str,nameType: str,roleType: str)
-  __new__(cls: type,identity: IIdentity,claims: IEnumerable[Claim],authenticationType: str,nameType: str,roleType: str)
-  __new__(cls: type,reader: BinaryReader)
-  __new__(cls: type,other: ClaimsIdentity)
-  __new__(cls: type,info: SerializationInfo,context: StreamingContext)
+  __new__(cls: type)
+
+  __new__(cls: type,identity: IIdentity)
+
+  __new__(cls: type,claims: IEnumerable[Claim])
+
+  __new__(cls: type,authenticationType: str)
+
+  __new__(cls: type,claims: IEnumerable[Claim],authenticationType: str)
+
+  __new__(cls: type,identity: IIdentity,claims: IEnumerable[Claim])
+
+  __new__(cls: type,authenticationType: str,nameType: str,roleType: str)
+
+  __new__(cls: type,claims: IEnumerable[Claim],authenticationType: str,nameType: str,roleType: str)
+
+  __new__(cls: type,identity: IIdentity,claims: IEnumerable[Claim],authenticationType: str,nameType: str,roleType: str)
+
+  __new__(cls: type,reader: BinaryReader)
+
+  __new__(cls: type,other: ClaimsIdentity)
+
+  __new__(cls: type,info: SerializationInfo,context: StreamingContext)
+
   __new__(cls: type,info: SerializationInfo)
   """
   pass
@@ -165,53 +218,74 @@ class ClaimsIdentity(object,IIdentity):
   """ __repr__(self: object) -> str """
   pass
  Actor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Actor(self: ClaimsIdentity) -> ClaimsIdentity
-
-Set: Actor(self: ClaimsIdentity)=value
+ """Get: Actor(self: ClaimsIdentity) -> ClaimsIdentity
+
+
+
+Set: Actor(self: ClaimsIdentity)=value
+
 """
 
  AuthenticationType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AuthenticationType(self: ClaimsIdentity) -> str
-
+ """Get: AuthenticationType(self: ClaimsIdentity) -> str
+
+
+
 """
 
  BootstrapContext=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BootstrapContext(self: ClaimsIdentity) -> object
-
-Set: BootstrapContext(self: ClaimsIdentity)=value
+ """Get: BootstrapContext(self: ClaimsIdentity) -> object
+
+
+
+Set: BootstrapContext(self: ClaimsIdentity)=value
+
 """
 
  Claims=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Claims(self: ClaimsIdentity) -> IEnumerable[Claim]
-
+ """Get: Claims(self: ClaimsIdentity) -> IEnumerable[Claim]
+
+
+
 """
 
  CustomSerializationData=property(lambda self: object(),lambda self,v: None,lambda self: None)
 
  IsAuthenticated=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsAuthenticated(self: ClaimsIdentity) -> bool
-
+ """Get: IsAuthenticated(self: ClaimsIdentity) -> bool
+
+
+
 """
 
  Label=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Label(self: ClaimsIdentity) -> str
-
-Set: Label(self: ClaimsIdentity)=value
+ """Get: Label(self: ClaimsIdentity) -> str
+
+
+
+Set: Label(self: ClaimsIdentity)=value
+
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Name(self: ClaimsIdentity) -> str
-
+ """Get: Name(self: ClaimsIdentity) -> str
+
+
+
 """
 
  NameClaimType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NameClaimType(self: ClaimsIdentity) -> str
-
+ """Get: NameClaimType(self: ClaimsIdentity) -> str
+
+
+
 """
 
  RoleClaimType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: RoleClaimType(self: ClaimsIdentity) -> str
-
+ """Get: RoleClaimType(self: ClaimsIdentity) -> str
+
+
+
 """
 
 
@@ -222,10 +296,14 @@ Set: Label(self: ClaimsIdentity)=value
 
 class ClaimsPrincipal(object,IPrincipal):
  """
- ClaimsPrincipal()
- ClaimsPrincipal(identity: IIdentity)
- ClaimsPrincipal(identities: IEnumerable[ClaimsIdentity])
- ClaimsPrincipal(principal: IPrincipal)
+ ClaimsPrincipal()
+
+ ClaimsPrincipal(identity: IIdentity)
+
+ ClaimsPrincipal(identities: IEnumerable[ClaimsIdentity])
+
+ ClaimsPrincipal(principal: IPrincipal)
+
  ClaimsPrincipal(reader: BinaryReader)
  """
  def AddIdentities(self,identities):
@@ -242,13 +320,15 @@ class ClaimsPrincipal(object,IPrincipal):
   pass
  def FindAll(self,*__args):
   """
-  FindAll(self: ClaimsPrincipal,type: str) -> IEnumerable[Claim]
+  FindAll(self: ClaimsPrincipal,type: str) -> IEnumerable[Claim]
+
   FindAll(self: ClaimsPrincipal,match: Predicate[Claim]) -> IEnumerable[Claim]
   """
   pass
  def FindFirst(self,*__args):
   """
-  FindFirst(self: ClaimsPrincipal,type: str) -> Claim
+  FindFirst(self: ClaimsPrincipal,type: str) -> Claim
+
   FindFirst(self: ClaimsPrincipal,match: Predicate[Claim]) -> Claim
   """
   pass
@@ -257,7 +337,8 @@ class ClaimsPrincipal(object,IPrincipal):
   pass
  def HasClaim(self,*__args):
   """
-  HasClaim(self: ClaimsPrincipal,type: str,value: str) -> bool
+  HasClaim(self: ClaimsPrincipal,type: str,value: str) -> bool
+
   HasClaim(self: ClaimsPrincipal,match: Predicate[Claim]) -> bool
   """
   pass
@@ -276,11 +357,16 @@ class ClaimsPrincipal(object,IPrincipal):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type)
-  __new__(cls: type,identities: IEnumerable[ClaimsIdentity])
-  __new__(cls: type,identity: IIdentity)
-  __new__(cls: type,principal: IPrincipal)
-  __new__(cls: type,reader: BinaryReader)
+  __new__(cls: type)
+
+  __new__(cls: type,identities: IEnumerable[ClaimsIdentity])
+
+  __new__(cls: type,identity: IIdentity)
+
+  __new__(cls: type,principal: IPrincipal)
+
+  __new__(cls: type,reader: BinaryReader)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass
@@ -290,20 +376,26 @@ class ClaimsPrincipal(object,IPrincipal):
   """ __repr__(self: object) -> str """
   pass
  Claims=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Claims(self: ClaimsPrincipal) -> IEnumerable[Claim]
-
+ """Get: Claims(self: ClaimsPrincipal) -> IEnumerable[Claim]
+
+
+
 """
 
  CustomSerializationData=property(lambda self: object(),lambda self,v: None,lambda self: None)
 
  Identities=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Identities(self: ClaimsPrincipal) -> IEnumerable[ClaimsIdentity]
-
+ """Get: Identities(self: ClaimsPrincipal) -> IEnumerable[ClaimsIdentity]
+
+
+
 """
 
  Identity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Identity(self: ClaimsPrincipal) -> IIdentity
-
+ """Get: Identity(self: ClaimsPrincipal) -> IIdentity
+
+
+
 """
 
 

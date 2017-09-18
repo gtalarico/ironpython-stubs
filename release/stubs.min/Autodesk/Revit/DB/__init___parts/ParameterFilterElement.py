@@ -1,25 +1,29 @@
 class ParameterFilterElement(FilterElement,IDisposable):
  """
- Admits elements that satisfy two conditions:
+ Admits elements that satisfy two conditions:
+
     The element's category must be one of a certain set of allowed categories.The element must pass a series of filter rules.
  """
  @staticmethod
  def AllRuleParametersApplicable(*__args):
   """
-  AllRuleParametersApplicable(self: ParameterFilterElement,rules: IList[FilterRule]) -> bool
+  AllRuleParametersApplicable(self: ParameterFilterElement,rules: IList[FilterRule]) -> bool
+
   AllRuleParametersApplicable(aDocument: Document,categories: ICollection[ElementId],rules: IList[FilterRule]) -> bool
   """
   pass
  def ClearRules(self):
   """
-  ClearRules(self: ParameterFilterElement)
+  ClearRules(self: ParameterFilterElement)
+
    Removes all rules from this filter.
   """
   pass
  @staticmethod
  def Create(aDocument,name,categories,rules=None):
   """
-  Create(aDocument: Document,name: str,categories: ICollection[ElementId]) -> ParameterFilterElement
+  Create(aDocument: Document,name: str,categories: ICollection[ElementId]) -> ParameterFilterElement
+
   Create(aDocument: Document,name: str,categories: ICollection[ElementId],rules: IList[FilterRule]) -> ParameterFilterElement
   """
   pass
@@ -31,39 +35,56 @@ class ParameterFilterElement(FilterElement,IDisposable):
   pass
  def GetCategories(self):
   """
-  GetCategories(self: ParameterFilterElement) -> ICollection[ElementId]
-  
+  GetCategories(self: ParameterFilterElement) -> ICollection[ElementId]
+
+  
+
    Gets the categories admitted by this filter.
   """
   pass
  @staticmethod
  def GetRuleParameter(rule):
   """
-  GetRuleParameter(rule: FilterRule) -> ElementId
-  
-   Returns the parameter for a given filter rule.
-  
-   rule: The rule to query.
+  GetRuleParameter(rule: FilterRule) -> ElementId
+
+  
+
+   Returns the parameter for a given filter rule.
+
+  
+
+   rule: The rule to query.
+
    Returns: The identifier of the rule's parameter.
   """
   pass
  def GetRuleParameters(self):
   """
-  GetRuleParameters(self: ParameterFilterElement) -> IList[ElementId]
-  
-   Retrieves a list of the parameters associated with each rule in the filter.
-     
-    The order of the resulting array corresponds to the order in which the 
-    associated
-     filter rules are applied.
-  
+  GetRuleParameters(self: ParameterFilterElement) -> IList[ElementId]
+
+  
+
+   Retrieves a list of the parameters associated with each rule in the filter.
+
+     
+
+    The order of the resulting array corresponds to the order in which the 
+
+    associated
+
+     filter rules are applied.
+
+  
+
    Returns: An array of parameter identifiers.
   """
   pass
  def GetRules(self):
   """
-  GetRules(self: ParameterFilterElement) -> IList[FilterRule]
-  
+  GetRules(self: ParameterFilterElement) -> IList[FilterRule]
+
+  
+
    Returns the rules of this filter,in the order in which they are applied.
   """
   pass

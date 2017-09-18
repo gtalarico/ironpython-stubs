@@ -5,19 +5,27 @@ class ExportLineweightTableIterator(object,IEnumerator[KeyValuePair[ExportLinewe
   pass
  def IsDone(self):
   """
-  IsDone(self: ExportLineweightTableIterator) -> bool
-  
-   Identifies if the iteration has completed.
-   Returns: True if the iteration has no more items. False if there are more items to be 
+  IsDone(self: ExportLineweightTableIterator) -> bool
+
+  
+
+   Identifies if the iteration has completed.
+
+   Returns: True if the iteration has no more items. False if there are more items to be 
+
     iterated.
   """
   pass
  def MoveNext(self):
   """
-  MoveNext(self: ExportLineweightTableIterator) -> bool
-  
-   Increments the iterator to the next item.
-   Returns: True if the iteration has no more items. False if there are more items to be 
+  MoveNext(self: ExportLineweightTableIterator) -> bool
+
+  
+
+   Increments the iterator to the next item.
+
+   Returns: True if the iteration has no more items. False if there are more items to be 
+
     iterated.
   """
   pass
@@ -29,7 +37,8 @@ class ExportLineweightTableIterator(object,IEnumerator[KeyValuePair[ExportLinewe
   pass
  def Reset(self):
   """
-  Reset(self: ExportLineweightTableIterator)
+  Reset(self: ExportLineweightTableIterator)
+
    Resets the iterator to the initial state.
   """
   pass
@@ -52,17 +61,25 @@ class ExportLineweightTableIterator(object,IEnumerator[KeyValuePair[ExportLinewe
   """ __repr__(self: object) -> str """
   pass
  Current=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the item at the current position of the iterator.
-
-Get: Current(self: ExportLineweightTableIterator) -> KeyValuePair[ExportLineweightKey,ExportLineweightInfo]
-
+ """Gets the item at the current position of the iterator.
+
+
+
+Get: Current(self: ExportLineweightTableIterator) -> KeyValuePair[ExportLineweightKey,ExportLineweightInfo]
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ExportLineweightTableIterator) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ExportLineweightTableIterator) -> bool
+
+
+
 """
 
 

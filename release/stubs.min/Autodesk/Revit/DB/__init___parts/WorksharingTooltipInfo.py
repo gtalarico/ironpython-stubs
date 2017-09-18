@@ -5,12 +5,18 @@ class WorksharingTooltipInfo(object,IDisposable):
   pass
  def GetRequesters(self):
   """
-  GetRequesters(self: WorksharingTooltipInfo) -> IList[str]
-  
-   The ordered list of unique user names of users who have outstanding editing 
-    requests for
-     the specified element.
-  
+  GetRequesters(self: WorksharingTooltipInfo) -> IList[str]
+
+  
+
+   The ordered list of unique user names of users who have outstanding editing 
+
+    requests for
+
+     the specified element.
+
+  
+
    Returns: The ordered list of unique user names.
   """
   pass
@@ -30,32 +36,49 @@ class WorksharingTooltipInfo(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Creator=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The user name of the user who created the element.
-
-Get: Creator(self: WorksharingTooltipInfo) -> str
-
+ """The user name of the user who created the element.
+
+
+
+Get: Creator(self: WorksharingTooltipInfo) -> str
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: WorksharingTooltipInfo) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: WorksharingTooltipInfo) -> bool
+
+
+
 """
 
  LastChangedBy=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The user name of the most recent user who saved a user change of this element
-   to the central model.
-
-Get: LastChangedBy(self: WorksharingTooltipInfo) -> str
-
+ """The user name of the most recent user who saved a user change of this element
+
+   to the central model.
+
+
+
+Get: LastChangedBy(self: WorksharingTooltipInfo) -> str
+
+
+
 """
 
  Owner=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The current owner of the element or empty string if no one owns the element.
-
-Get: Owner(self: WorksharingTooltipInfo) -> str
-
+ """The current owner of the element or empty string if no one owns the element.
+
+
+
+Get: Owner(self: WorksharingTooltipInfo) -> str
+
+
+
 """
 
 

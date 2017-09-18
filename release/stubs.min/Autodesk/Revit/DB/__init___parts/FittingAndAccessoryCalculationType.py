@@ -1,7 +1,9 @@
 class FittingAndAccessoryCalculationType(Enum,IComparable,IFormattable,IConvertible):
  """
- Enum of fitting and accessory pressure drop calculation type.
- 
+ Enum of fitting and accessory pressure drop calculation type.
+
+ 
+
  enum FittingAndAccessoryCalculationType,values: CalculateDefaultSettings (2),CalculatePressureDrop (1),Undefined (0),ValidateCurrentSettings (4)
  """
  def __eq__(self,*args):

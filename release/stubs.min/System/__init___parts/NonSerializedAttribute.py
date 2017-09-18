@@ -1,7 +1,9 @@
 class NonSerializedAttribute(Attribute,_Attribute):
  """
- Indicates that a field of a serializable class should not be serialized. This class cannot be inherited.
- 
+ Indicates that a field of a serializable class should not be serialized. This class cannot be inherited.
+
+ 
+
  NonSerializedAttribute()
  """
  def __init__(self,*args):

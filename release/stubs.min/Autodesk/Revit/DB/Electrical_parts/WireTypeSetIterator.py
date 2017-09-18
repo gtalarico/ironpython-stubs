@@ -1,7 +1,9 @@
 class WireTypeSetIterator(APIObject,IDisposable,IEnumerator):
  """
- An iterator to a wire type set.
- 
+ An iterator to a wire type set.
+
+ 
+
  WireTypeSetIterator()
  """
  def Dispose(self):
@@ -9,13 +11,20 @@ class WireTypeSetIterator(APIObject,IDisposable,IEnumerator):
   pass
  def MoveNext(self):
   """
-  MoveNext(self: WireTypeSetIterator) -> bool
-  
-   Move the iterator one item forward.
-   Returns: Returns True if the iterator was successfully moved forward one item and the 
-    Current
-     property will return a valid item. False will be returned 
-    it the iterator has reached the end of
+  MoveNext(self: WireTypeSetIterator) -> bool
+
+  
+
+   Move the iterator one item forward.
+
+   Returns: Returns True if the iterator was successfully moved forward one item and the 
+
+    Current
+
+     property will return a valid item. False will be returned 
+
+    it the iterator has reached the end of
+
      the set.
   """
   pass
@@ -30,7 +39,8 @@ class WireTypeSetIterator(APIObject,IDisposable,IEnumerator):
   pass
  def Reset(self):
   """
-  Reset(self: WireTypeSetIterator)
+  Reset(self: WireTypeSetIterator)
+
    Bring the iterator back to the start of the set.
   """
   pass
@@ -47,10 +57,14 @@ class WireTypeSetIterator(APIObject,IDisposable,IEnumerator):
   """ __iter__(self: IEnumerator) -> object """
   pass
  Current=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Retrieves the item that is the current focus of the iterator.
-
-Get: Current(self: WireTypeSetIterator) -> object
-
+ """Retrieves the item that is the current focus of the iterator.
+
+
+
+Get: Current(self: WireTypeSetIterator) -> object
+
+
+
 """
 
 

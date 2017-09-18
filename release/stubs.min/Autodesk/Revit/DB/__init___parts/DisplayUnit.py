@@ -1,7 +1,9 @@
 class DisplayUnit(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes the type of Revit display unit,metric or imperial.
- 
+ Describes the type of Revit display unit,metric or imperial.
+
+ 
+
  enum DisplayUnit,values: IMPERIAL (1),METRIC (0)
  """
  def __eq__(self,*args):

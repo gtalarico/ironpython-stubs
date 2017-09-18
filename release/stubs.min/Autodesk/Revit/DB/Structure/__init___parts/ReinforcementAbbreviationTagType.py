@@ -1,7 +1,9 @@
 class ReinforcementAbbreviationTagType(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines all types of abbreviation tags for Area and Path Reinforcement objects.
- 
+ Defines all types of abbreviation tags for Area and Path Reinforcement objects.
+
+ 
+
  enum ReinforcementAbbreviationTagType,values: AreaReinforcementBottomMajor (2),AreaReinforcementBottomMinor (3),AreaReinforcementExteriorMajor (6),AreaReinforcementExteriorMinor (7),AreaReinforcementInteriorMajor (4),AreaReinforcementInteriorMinor (5),AreaReinforcementLayerEachFace (9),AreaReinforcementLayerEachWay (8),AreaReinforcementTopMajor (0),AreaReinforcementTopMinor (1),PathReinforcementAlternating (14),PathReinforcementAlternatingBarOffset (15),PathReinforcementBottom (11),PathReinforcementExterior (13),PathReinforcementInterior (12),PathReinforcementTop (10)
  """
  def __eq__(self,*args):

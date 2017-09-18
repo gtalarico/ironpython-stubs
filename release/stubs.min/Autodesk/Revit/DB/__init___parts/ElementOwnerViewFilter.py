@@ -1,8 +1,11 @@
 class ElementOwnerViewFilter(ElementQuickFilter,IDisposable):
  """
- A filter used to match elements which are owned by a particular view.
- 
- ElementOwnerViewFilter(viewId: ElementId,inverted: bool)
+ A filter used to match elements which are owned by a particular view.
+
+ 
+
+ ElementOwnerViewFilter(viewId: ElementId,inverted: bool)
+
  ElementOwnerViewFilter(viewId: ElementId)
  """
  def Dispose(self):
@@ -23,15 +26,20 @@ class ElementOwnerViewFilter(ElementQuickFilter,IDisposable):
  @staticmethod
  def __new__(self,viewId,inverted=None):
   """
-  __new__(cls: type,viewId: ElementId,inverted: bool)
+  __new__(cls: type,viewId: ElementId,inverted: bool)
+
   __new__(cls: type,viewId: ElementId)
   """
   pass
  ViewId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The view id.
-
-Get: ViewId(self: ElementOwnerViewFilter) -> ElementId
-
+ """The view id.
+
+
+
+Get: ViewId(self: ElementOwnerViewFilter) -> ElementId
+
+
+
 """
 
 

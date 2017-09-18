@@ -1,7 +1,9 @@
 class PARAMFLAG(Enum,IComparable,IFormattable,IConvertible):
  """
- Use System.Runtime.InteropServices.ComTypes.PARAMFLAG instead.
- 
+ Use System.Runtime.InteropServices.ComTypes.PARAMFLAG instead.
+
+ 
+
  enum (flags) PARAMFLAG,values: PARAMFLAG_FHASCUSTDATA (64),PARAMFLAG_FHASDEFAULT (32),PARAMFLAG_FIN (1),PARAMFLAG_FLCID (4),PARAMFLAG_FOPT (16),PARAMFLAG_FOUT (2),PARAMFLAG_FRETVAL (8),PARAMFLAG_NONE (0)
  """
  def __eq__(self,*args):

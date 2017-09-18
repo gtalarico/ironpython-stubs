@@ -1,7 +1,9 @@
 class LicenseUsageMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies when the System.ComponentModel.License can be used.
- 
+ Specifies when the System.ComponentModel.License can be used.
+
+ 
+
  enum LicenseUsageMode,values: Designtime (1),Runtime (0)
  """
  def __eq__(self,*args):

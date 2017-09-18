@@ -1,22 +1,30 @@
 class PlanCircuitSet(APIObject,IDisposable,IEnumerable):
  """
- A set that can contain any number of plan circuit objects.
- 
+ A set that can contain any number of plan circuit objects.
+
+ 
+
  PlanCircuitSet()
  """
  def Clear(self):
   """
-  Clear(self: PlanCircuitSet)
+  Clear(self: PlanCircuitSet)
+
    Removes every item from the set,rendering it empty.
   """
   pass
  def Contains(self,item):
   """
-  Contains(self: PlanCircuitSet,item: PlanCircuit) -> bool
-  
-   Tests for the existence of an item within the set.
-  
-   item: The item to be searched for.
+  Contains(self: PlanCircuitSet,item: PlanCircuit) -> bool
+
+  
+
+   Tests for the existence of an item within the set.
+
+  
+
+   item: The item to be searched for.
+
    Returns: The Contains method returns True if the item is within the set,otherwise False.
   """
   pass
@@ -25,37 +33,53 @@ class PlanCircuitSet(APIObject,IDisposable,IEnumerable):
   pass
  def Erase(self,item):
   """
-  Erase(self: PlanCircuitSet,item: PlanCircuit) -> int
-  
-   Removes a specified object from the set.
-  
-   item: The item to be erased.
+  Erase(self: PlanCircuitSet,item: PlanCircuit) -> int
+
+  
+
+   Removes a specified object from the set.
+
+  
+
+   item: The item to be erased.
+
    Returns: The number of items that were erased from the set.
   """
   pass
  def ForwardIterator(self):
   """
-  ForwardIterator(self: PlanCircuitSet) -> PlanCircuitSetIterator
-  
-   Retrieve a forward moving iterator to the set.
+  ForwardIterator(self: PlanCircuitSet) -> PlanCircuitSetIterator
+
+  
+
+   Retrieve a forward moving iterator to the set.
+
    Returns: Returns a forward moving iterator to the set.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: PlanCircuitSet) -> IEnumerator
-  
-   Retrieve a forward moving iterator to the set.
+  GetEnumerator(self: PlanCircuitSet) -> IEnumerator
+
+  
+
+   Retrieve a forward moving iterator to the set.
+
    Returns: Returns a forward moving iterator to the set.
   """
   pass
  def Insert(self,item):
   """
-  Insert(self: PlanCircuitSet,item: PlanCircuit) -> bool
-  
-   Insert the specified item into the set.
-  
-   item: The item to be inserted into the set.
+  Insert(self: PlanCircuitSet,item: PlanCircuit) -> bool
+
+  
+
+   Insert the specified item into the set.
+
+  
+
+   item: The item to be inserted into the set.
+
    Returns: Returns whether the item was inserted into the set.
   """
   pass
@@ -67,9 +91,12 @@ class PlanCircuitSet(APIObject,IDisposable,IEnumerable):
   pass
  def ReverseIterator(self):
   """
-  ReverseIterator(self: PlanCircuitSet) -> PlanCircuitSetIterator
-  
-   Retrieve a backward moving iterator to the set.
+  ReverseIterator(self: PlanCircuitSet) -> PlanCircuitSetIterator
+
+  
+
+   Retrieve a backward moving iterator to the set.
+
    Returns: Returns a backward moving iterator to the set.
   """
   pass
@@ -86,17 +113,25 @@ class PlanCircuitSet(APIObject,IDisposable,IEnumerable):
   """ __iter__(self: IEnumerable) -> object """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Test to see if the set is empty.
-
-Get: IsEmpty(self: PlanCircuitSet) -> bool
-
+ """Test to see if the set is empty.
+
+
+
+Get: IsEmpty(self: PlanCircuitSet) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the number of objects that are in the set.
-
-Get: Size(self: PlanCircuitSet) -> int
-
+ """Returns the number of objects that are in the set.
+
+
+
+Get: Size(self: PlanCircuitSet) -> int
+
+
+
 """
 
 

@@ -1,7 +1,9 @@
 class PaperPlacementType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all Paper Placement types of Print Setting.
- 
+ An enumerated type listing all Paper Placement types of Print Setting.
+
+ 
+
  enum PaperPlacementType,values: Center (0),Margins (1)
  """
  def __eq__(self,*args):

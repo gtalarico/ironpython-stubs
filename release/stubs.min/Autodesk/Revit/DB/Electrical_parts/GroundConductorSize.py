@@ -19,24 +19,36 @@ class GroundConductorSize(APIObject,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Ampacity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get ampacity which is used for specifying size,the unit is ampere.
-
-Get: Ampacity(self: GroundConductorSize) -> Int64
-
+ """Get ampacity which is used for specifying size,the unit is ampere.
+
+
+
+Get: Ampacity(self: GroundConductorSize) -> Int64
+
+
+
 """
 
  ConductorSize=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get conductor size corresponding to specific ampacity.
-
-Get: ConductorSize(self: GroundConductorSize) -> str
-
+ """Get conductor size corresponding to specific ampacity.
+
+
+
+Get: ConductorSize(self: GroundConductorSize) -> str
+
+
+
 """
 
  MaterialBelongTo=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the material type which include this ground conductor size information.
-
-Get: MaterialBelongTo(self: GroundConductorSize) -> WireMaterialType
-
+ """Get the material type which include this ground conductor size information.
+
+
+
+Get: MaterialBelongTo(self: GroundConductorSize) -> WireMaterialType
+
+
+
 """
 
 

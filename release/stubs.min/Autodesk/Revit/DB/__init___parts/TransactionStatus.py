@@ -1,8 +1,11 @@
 class TransactionStatus(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing the possible statuses associated with a Transaction,TransactionGroup,or SubTransaction,
-    or the result of a particular method call on one of those objects.
- 
+ An enumerated type listing the possible statuses associated with a Transaction,TransactionGroup,or SubTransaction,
+
+    or the result of a particular method call on one of those objects.
+
+ 
+
  enum TransactionStatus,values: Committed (3),Error (5),Pending (4),Proceed (6),RolledBack (2),Started (1),Uninitialized (0)
  """
  def __eq__(self,*args):

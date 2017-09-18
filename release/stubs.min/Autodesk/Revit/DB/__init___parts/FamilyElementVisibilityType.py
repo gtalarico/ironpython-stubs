@@ -1,7 +1,9 @@
 class FamilyElementVisibilityType(Enum,IComparable,IFormattable,IConvertible):
  """
- Indicates the Visibility type of generic forms.
- 
+ Indicates the Visibility type of generic forms.
+
+ 
+
  enum FamilyElementVisibilityType,values: Model (0),ViewSpecific (1)
  """
  def __eq__(self,*args):

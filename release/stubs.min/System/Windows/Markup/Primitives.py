@@ -12,40 +12,58 @@ class MarkupWriter(object,IDisposable):
  """ Provides methods to write an object to XAML format. """
  def Dispose(self):
   """
-  Dispose(self: MarkupWriter)
+  Dispose(self: MarkupWriter)
+
    Releases the resources used by the System.Windows.Markup.Primitives.MarkupWriter.
   """
   pass
  @staticmethod
  def GetMarkupObjectFor(instance,manager=None):
   """
-  GetMarkupObjectFor(instance: object,manager: XamlDesignerSerializationManager) -> MarkupObject
-  
-   Creates an instance of a System.Windows.Markup.Primitives.MarkupObject from the specified object 
-    and the specified serialization manager.
-  
-  
-   instance: An object that will be the root of the serialized tree.
-   manager: The serialization manager.
-   Returns: A markup object that enables navigating through the tree of objects.
-  GetMarkupObjectFor(instance: object) -> MarkupObject
-  
-   Creates an instance of a System.Windows.Markup.Primitives.MarkupObject from the specified object.
-  
-   instance: An object that will be the root of the serialized tree.
+  GetMarkupObjectFor(instance: object,manager: XamlDesignerSerializationManager) -> MarkupObject
+
+  
+
+   Creates an instance of a System.Windows.Markup.Primitives.MarkupObject from the specified object 
+
+    and the specified serialization manager.
+
+  
+
+  
+
+   instance: An object that will be the root of the serialized tree.
+
+   manager: The serialization manager.
+
+   Returns: A markup object that enables navigating through the tree of objects.
+
+  GetMarkupObjectFor(instance: object) -> MarkupObject
+
+  
+
+   Creates an instance of a System.Windows.Markup.Primitives.MarkupObject from the specified object.
+
+  
+
+   instance: An object that will be the root of the serialized tree.
+
    Returns: A markup object that enables navigating through the tree of objects.
   """
   pass
  def __enter__(self,*args):
   """
-  __enter__(self: IDisposable) -> object
-  
+  __enter__(self: IDisposable) -> object
+
+  
+
    Provides the implementation of __enter__ for objects which implement IDisposable.
   """
   pass
  def __exit__(self,*args):
   """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+
    Provides the implementation of __exit__ for objects which implement IDisposable.
   """
   pass

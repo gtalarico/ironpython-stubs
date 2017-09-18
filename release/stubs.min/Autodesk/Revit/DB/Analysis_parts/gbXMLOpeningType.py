@@ -1,8 +1,11 @@
 class gbXMLOpeningType(Enum,IComparable,IFormattable,IConvertible):
  """
- This enumeration corresponds to the openingType attribute in gbXML
-    and identifies the type of opening defined.
- 
+ This enumeration corresponds to the openingType attribute in gbXML
+
+    and identifies the type of opening defined.
+
+ 
+
  enum gbXMLOpeningType,values: FixedSkylight (2),FixedWindow (0),NonSlidingDoor (5),NoOfOpeningTypes (7),OpeningAir (6),OperableSkylight (3),OperableWindow (1),SlidingDoor (4)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class LayoutRuleMaximumSpacing(LayoutRule,IDisposable):
  """
- This class indicate the layout rule of a Beam System is Max-Spacing.
- 
+ This class indicate the layout rule of a Beam System is Max-Spacing.
+
+ 
+
  LayoutRuleMaximumSpacing(spacing: float)
  """
  def Dispose(self):
@@ -27,11 +29,16 @@ class LayoutRuleMaximumSpacing(LayoutRule,IDisposable):
   """ __new__(cls: type,spacing: float) """
   pass
  Spacing=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get or set the spacing of the beam system.
-
-Get: Spacing(self: LayoutRuleMaximumSpacing) -> float
-
-Set: Spacing(self: LayoutRuleMaximumSpacing)=value
+ """Get or set the spacing of the beam system.
+
+
+
+Get: Spacing(self: LayoutRuleMaximumSpacing) -> float
+
+
+
+Set: Spacing(self: LayoutRuleMaximumSpacing)=value
+
 """
 
 

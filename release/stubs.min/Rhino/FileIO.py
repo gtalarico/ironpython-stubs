@@ -10,9 +10,12 @@
 
 class BinaryArchiveException(IOException,ISerializable,_Exception):
  """
- Thrown by BinaryArchiveReader and BinaryArchiveWriter classes when
-    an IO error has occured.
- 
+ Thrown by BinaryArchiveReader and BinaryArchiveWriter classes when
+
+    an IO error has occured.
+
+ 
+
  BinaryArchiveException(message: str)
  """
  def add_SerializeObjectState(self,*args):
@@ -38,7 +41,8 @@ class BinaryArchiveFile(object,IDisposable):
   pass
  def Dispose(self):
   """
-  Dispose(self: BinaryArchiveFile)
+  Dispose(self: BinaryArchiveFile)
+
    Actively reclaims unmanaged resources that this instance uses.
   """
   pass
@@ -47,14 +51,17 @@ class BinaryArchiveFile(object,IDisposable):
   pass
  def __enter__(self,*args):
   """
-  __enter__(self: IDisposable) -> object
-  
+  __enter__(self: IDisposable) -> object
+
+  
+
    Provides the implementation of __enter__ for objects which implement IDisposable.
   """
   pass
  def __exit__(self,*args):
   """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+
    Provides the implementation of __exit__ for objects which implement IDisposable.
   """
   pass
@@ -69,13 +76,17 @@ class BinaryArchiveFile(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Reader=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Reader(self: BinaryArchiveFile) -> BinaryArchiveReader
-
+ """Get: Reader(self: BinaryArchiveFile) -> BinaryArchiveReader
+
+
+
 """
 
  Writer=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Writer(self: BinaryArchiveFile) -> BinaryArchiveWriter
-
+ """Get: Writer(self: BinaryArchiveFile) -> BinaryArchiveWriter
+
+
+
 """
 
 
@@ -116,499 +127,726 @@ class BinaryArchiveMode(Enum,IComparable,IFormattable,IConvertible):
 
 class BinaryArchiveReader(object):
  """
- Represents an entity that is capable of reading a binary archive and
+ Represents an entity that is capable of reading a binary archive and
+
     instantiating strongly-typed objects.
  """
  def AtEnd(self):
   """
-  AtEnd(self: BinaryArchiveReader) -> bool
-  
+  AtEnd(self: BinaryArchiveReader) -> bool
+
+  
+
    true if at end of a file
   """
   pass
  def Dump3dmChunk(self,log):
   """
-  Dump3dmChunk(self: BinaryArchiveReader,log: TextLog) -> UInt32
-  
-   Fnction for studying contents of a file.  The primary use is as an aid
-     to help dig 
-    through files that have been damaged (bad disks,transmission
-     errors,etc.) If an 
-    error is found,a line that begins with the word
-     "ERROR" is printed.
-  
-  
-   log: log where information is printed to
-   Returns: 0 if something went wrong,otherwise the typecode of the chunk that
-     was just 
+  Dump3dmChunk(self: BinaryArchiveReader,log: TextLog) -> UInt32
+
+  
+
+   Fnction for studying contents of a file.  The primary use is as an aid
+
+     to help dig 
+
+    through files that have been damaged (bad disks,transmission
+
+     errors,etc.) If an 
+
+    error is found,a line that begins with the word
+
+     "ERROR" is printed.
+
+  
+
+  
+
+   log: log where information is printed to
+
+   Returns: 0 if something went wrong,otherwise the typecode of the chunk that
+
+     was just 
+
     studied.
   """
   pass
  def Read3dmChunkVersion(self,major,minor):
   """
-  Read3dmChunkVersion(self: BinaryArchiveReader) -> (int,int)
-  
-   A chunk version is a single byte that encodes a major.minor
-     version number.  Useful 
-    when creating I/O code for 3dm chunks
-     that may change in the future.  Increment the 
-    minor version 
-     number if new information is added to the end of the chunk. 
-      
-      Increment the major version if the format of the chunk changes
-     in some other 
-    way.
-  
+  Read3dmChunkVersion(self: BinaryArchiveReader) -> (int,int)
+
+  
+
+   A chunk version is a single byte that encodes a major.minor
+
+     version number.  Useful 
+
+    when creating I/O code for 3dm chunks
+
+     that may change in the future.  Increment the 
+
+    minor version 
+
+     number if new information is added to the end of the chunk. 
+
+      
+
+      Increment the major version if the format of the chunk changes
+
+     in some other 
+
+    way.
+
+  
+
    Returns: true on successful read.
   """
   pass
  def Read3dmStartSection(self,version,comment):
   """
-  Read3dmStartSection(self: BinaryArchiveReader) -> (bool,int,str)
+  Read3dmStartSection(self: BinaryArchiveReader) -> (bool,int,str)
+
    Returns: true on success
   """
   pass
  def ReadBool(self):
   """
-  ReadBool(self: BinaryArchiveReader) -> bool
-  
-   Reads a System.Boolean from the archive.
+  ReadBool(self: BinaryArchiveReader) -> bool
+
+  
+
+   Reads a System.Boolean from the archive.
+
    Returns: The value that was read.
   """
   pass
  def ReadBoolArray(self):
   """
-  ReadBoolArray(self: BinaryArchiveReader) -> Array[bool]
-  
-   Reads an array of System.Boolean from the archive.
-     An array is returned even if the 
-    input was another enumerable type.
-  
+  ReadBoolArray(self: BinaryArchiveReader) -> Array[bool]
+
+  
+
+   Reads an array of System.Boolean from the archive.
+
+     An array is returned even if the 
+
+    input was another enumerable type.
+
+  
+
    Returns: The array that was read.
   """
   pass
  def ReadBoundingBox(self):
   """
-  ReadBoundingBox(self: BinaryArchiveReader) -> BoundingBox
-  
-   Reads a Rhino.Geometry.BoundingBox from the archive.
+  ReadBoundingBox(self: BinaryArchiveReader) -> BoundingBox
+
+  
+
+   Reads a Rhino.Geometry.BoundingBox from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadByte(self):
   """
-  ReadByte(self: BinaryArchiveReader) -> Byte
-  
-   Reads a System.Byte from the archive.
+  ReadByte(self: BinaryArchiveReader) -> Byte
+
+  
+
+   Reads a System.Byte from the archive.
+
    Returns: The value that was read.
   """
   pass
  def ReadByteArray(self):
   """
-  ReadByteArray(self: BinaryArchiveReader) -> Array[Byte]
-  
-   Reads an array of System.Byte from the archive.
-     An array is returned even if the 
-    input was another enumerable type.
-  
+  ReadByteArray(self: BinaryArchiveReader) -> Array[Byte]
+
+  
+
+   Reads an array of System.Byte from the archive.
+
+     An array is returned even if the 
+
+    input was another enumerable type.
+
+  
+
    Returns: The array that was read.
   """
   pass
  def ReadColor(self):
   """
-  ReadColor(self: BinaryArchiveReader) -> Color
-  
-   Reads a System.Drawing.Color from the archive.
+  ReadColor(self: BinaryArchiveReader) -> Color
+
+  
+
+   Reads a System.Drawing.Color from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadCompressedBuffer(self):
   """
-  ReadCompressedBuffer(self: BinaryArchiveReader) -> Array[Byte]
-  
-   Reads an array of compressed System.Byte information from the archive and uncompresses it.
-    
-     An array is returned even if the input was another enumerable type.
-  
+  ReadCompressedBuffer(self: BinaryArchiveReader) -> Array[Byte]
+
+  
+
+   Reads an array of compressed System.Byte information from the archive and uncompresses it.
+
+    
+
+     An array is returned even if the input was another enumerable type.
+
+  
+
    Returns: The array that was read.
   """
   pass
  def ReadDictionary(self):
   """
-  ReadDictionary(self: BinaryArchiveReader) -> ArchivableDictionary
-  
-   Reads a complete Rhino.Collections.ArchivableDictionary from the archive.
+  ReadDictionary(self: BinaryArchiveReader) -> ArchivableDictionary
+
+  
+
+   Reads a complete Rhino.Collections.ArchivableDictionary from the archive.
+
    Returns: The newly instantiated object.
   """
   pass
  def ReadDouble(self):
   """
-  ReadDouble(self: BinaryArchiveReader) -> float
-  
-   Reads a System.Double from the archive.
+  ReadDouble(self: BinaryArchiveReader) -> float
+
+  
+
+   Reads a System.Double from the archive.
+
    Returns: The value that was read.
   """
   pass
  def ReadDoubleArray(self):
   """
-  ReadDoubleArray(self: BinaryArchiveReader) -> Array[float]
-  
-   Reads an array of System.Double from the archive.
-     An array is returned even if the 
-    input was another enumerable type.
-  
+  ReadDoubleArray(self: BinaryArchiveReader) -> Array[float]
+
+  
+
+   Reads an array of System.Double from the archive.
+
+     An array is returned even if the 
+
+    input was another enumerable type.
+
+  
+
    Returns: The array that was read.
   """
   pass
  def ReadFont(self):
   """
-  ReadFont(self: BinaryArchiveReader) -> Font
-  
-   Reads a System.Drawing.Font from the archive.
+  ReadFont(self: BinaryArchiveReader) -> Font
+
+  
+
+   Reads a System.Drawing.Font from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadGeometry(self):
   """
-  ReadGeometry(self: BinaryArchiveReader) -> GeometryBase
-  
-   Reads a Rhino.Geometry.GeometryBase-derived object from the archive.
-     The 
-    Rhino.Geometry.GeometryBase class is abstract.
-  
+  ReadGeometry(self: BinaryArchiveReader) -> GeometryBase
+
+  
+
+   Reads a Rhino.Geometry.GeometryBase-derived object from the archive.
+
+     The 
+
+    Rhino.Geometry.GeometryBase class is abstract.
+
+  
+
    Returns: The element that was read.
   """
   pass
  def ReadGuid(self):
   """
-  ReadGuid(self: BinaryArchiveReader) -> Guid
-  
-   Reads a System.Guid from the archive.
+  ReadGuid(self: BinaryArchiveReader) -> Guid
+
+  
+
+   Reads a System.Guid from the archive.
+
    Returns: The value that was read.
   """
   pass
  def ReadGuidArray(self):
   """
-  ReadGuidArray(self: BinaryArchiveReader) -> Array[Guid]
-  
-   Reads an array of System.Guid from the archive.
-     An array is returned even if the 
-    input was another enumerable type.
-  
+  ReadGuidArray(self: BinaryArchiveReader) -> Array[Guid]
+
+  
+
+   Reads an array of System.Guid from the archive.
+
+     An array is returned even if the 
+
+    input was another enumerable type.
+
+  
+
    Returns: The array that was read.
   """
   pass
  def ReadInt(self):
   """
-  ReadInt(self: BinaryArchiveReader) -> int
-  
-   Reads a System.Int32 from the archive.
+  ReadInt(self: BinaryArchiveReader) -> int
+
+  
+
+   Reads a System.Int32 from the archive.
+
    Returns: The value that was read.
   """
   pass
  def ReadInt64(self):
   """
-  ReadInt64(self: BinaryArchiveReader) -> Int64
-  
-   Reads a System.Int64 from the archive.
+  ReadInt64(self: BinaryArchiveReader) -> Int64
+
+  
+
+   Reads a System.Int64 from the archive.
+
    Returns: The value that was read.
   """
   pass
  def ReadIntArray(self):
   """
-  ReadIntArray(self: BinaryArchiveReader) -> Array[int]
-  
-   Reads an array of System.Int32 from the archive.
-     An array is returned even if the 
-    input was another enumerable type.
-  
+  ReadIntArray(self: BinaryArchiveReader) -> Array[int]
+
+  
+
+   Reads an array of System.Int32 from the archive.
+
+     An array is returned even if the 
+
+    input was another enumerable type.
+
+  
+
    Returns: The array that was read.
   """
   pass
  def ReadInterval(self):
   """
-  ReadInterval(self: BinaryArchiveReader) -> Interval
-  
-   Reads a Rhino.Geometry.Interval from the archive.
+  ReadInterval(self: BinaryArchiveReader) -> Interval
+
+  
+
+   Reads a Rhino.Geometry.Interval from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadLine(self):
   """
-  ReadLine(self: BinaryArchiveReader) -> Line
-  
-   Reads a Rhino.Geometry.Line from the archive.
+  ReadLine(self: BinaryArchiveReader) -> Line
+
+  
+
+   Reads a Rhino.Geometry.Line from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadMeshingParameters(self):
   """
-  ReadMeshingParameters(self: BinaryArchiveReader) -> MeshingParameters
-  
-   Reads a Rhino.Geometry.MeshingParameters from the archive.
+  ReadMeshingParameters(self: BinaryArchiveReader) -> MeshingParameters
+
+  
+
+   Reads a Rhino.Geometry.MeshingParameters from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadObjRef(self):
   """
-  ReadObjRef(self: BinaryArchiveReader) -> ObjRef
-  
-   Reads a Rhino.DocObjects.ObjRef from the archive
+  ReadObjRef(self: BinaryArchiveReader) -> ObjRef
+
+  
+
+   Reads a Rhino.DocObjects.ObjRef from the archive
+
    Returns: the element that was read
   """
   pass
  def ReadObjRefArray(self):
   """
-  ReadObjRefArray(self: BinaryArchiveReader) -> Array[ObjRef]
-  
-   Reads an array of System.Double from the archive.
-     An array is returned even if the 
-    input was another enumerable type.
-  
+  ReadObjRefArray(self: BinaryArchiveReader) -> Array[ObjRef]
+
+  
+
+   Reads an array of System.Double from the archive.
+
+     An array is returned even if the 
+
+    input was another enumerable type.
+
+  
+
    Returns: The array that was read.
   """
   pass
  def ReadPlane(self):
   """
-  ReadPlane(self: BinaryArchiveReader) -> Plane
-  
-   Reads a Rhino.Geometry.Plane from the archive.
+  ReadPlane(self: BinaryArchiveReader) -> Plane
+
+  
+
+   Reads a Rhino.Geometry.Plane from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadPoint(self):
   """
-  ReadPoint(self: BinaryArchiveReader) -> Point
-  
-   Reads a System.Drawing.Point from the archive.
+  ReadPoint(self: BinaryArchiveReader) -> Point
+
+  
+
+   Reads a System.Drawing.Point from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadPoint2d(self):
   """
-  ReadPoint2d(self: BinaryArchiveReader) -> Point2d
-  
-   Reads a Rhino.Geometry.Point2d from the archive.
+  ReadPoint2d(self: BinaryArchiveReader) -> Point2d
+
+  
+
+   Reads a Rhino.Geometry.Point2d from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadPoint3d(self):
   """
-  ReadPoint3d(self: BinaryArchiveReader) -> Point3d
-  
-   Reads a Rhino.Geometry.Point3d from the archive.
+  ReadPoint3d(self: BinaryArchiveReader) -> Point3d
+
+  
+
+   Reads a Rhino.Geometry.Point3d from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadPoint3f(self):
   """
-  ReadPoint3f(self: BinaryArchiveReader) -> Point3f
-  
-   Reads a Rhino.Geometry.Point3f from the archive.
+  ReadPoint3f(self: BinaryArchiveReader) -> Point3f
+
+  
+
+   Reads a Rhino.Geometry.Point3f from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadPoint4d(self):
   """
-  ReadPoint4d(self: BinaryArchiveReader) -> Point4d
-  
-   Reads a Rhino.Geometry.Point4d from the archive.
+  ReadPoint4d(self: BinaryArchiveReader) -> Point4d
+
+  
+
+   Reads a Rhino.Geometry.Point4d from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadPointF(self):
   """
-  ReadPointF(self: BinaryArchiveReader) -> PointF
-  
-   Reads a System.Drawing.PointF from the archive.
+  ReadPointF(self: BinaryArchiveReader) -> PointF
+
+  
+
+   Reads a System.Drawing.PointF from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadRay3d(self):
   """
-  ReadRay3d(self: BinaryArchiveReader) -> Ray3d
-  
-   Reads a Rhino.Geometry.Ray3d from the archive.
+  ReadRay3d(self: BinaryArchiveReader) -> Ray3d
+
+  
+
+   Reads a Rhino.Geometry.Ray3d from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadRectangle(self):
   """
-  ReadRectangle(self: BinaryArchiveReader) -> Rectangle
-  
-   Reads a System.Drawing.Rectangle from the archive.
+  ReadRectangle(self: BinaryArchiveReader) -> Rectangle
+
+  
+
+   Reads a System.Drawing.Rectangle from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadRectangleF(self):
   """
-  ReadRectangleF(self: BinaryArchiveReader) -> RectangleF
-  
-   Reads a System.Drawing.RectangleF from the archive.
+  ReadRectangleF(self: BinaryArchiveReader) -> RectangleF
+
+  
+
+   Reads a System.Drawing.RectangleF from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadSByte(self):
   """
-  ReadSByte(self: BinaryArchiveReader) -> SByte
-  
-   Reads a System.SByte from the archive.
+  ReadSByte(self: BinaryArchiveReader) -> SByte
+
+  
+
+   Reads a System.SByte from the archive.
+
    Returns: The value that was read.
   """
   pass
  def ReadSByteArray(self):
   """
-  ReadSByteArray(self: BinaryArchiveReader) -> Array[SByte]
-  
-   Reads an array of System.SByte from the archive.
-     An array is returned even if the 
-    input was another enumerable type.
-  
+  ReadSByteArray(self: BinaryArchiveReader) -> Array[SByte]
+
+  
+
+   Reads an array of System.SByte from the archive.
+
+     An array is returned even if the 
+
+    input was another enumerable type.
+
+  
+
    Returns: The array that was read.
   """
   pass
  def ReadShort(self):
   """
-  ReadShort(self: BinaryArchiveReader) -> Int16
-  
-   Reads a System.Int16 from the archive.
+  ReadShort(self: BinaryArchiveReader) -> Int16
+
+  
+
+   Reads a System.Int16 from the archive.
+
    Returns: The value that was read.
   """
   pass
  def ReadShortArray(self):
   """
-  ReadShortArray(self: BinaryArchiveReader) -> Array[Int16]
-  
-   Reads an array of System.Int16 from the archive.
-     An array is returned even if the 
-    input was another enumerable type.
-  
+  ReadShortArray(self: BinaryArchiveReader) -> Array[Int16]
+
+  
+
+   Reads an array of System.Int16 from the archive.
+
+     An array is returned even if the 
+
+    input was another enumerable type.
+
+  
+
    Returns: The array that was read.
   """
   pass
  def ReadSingle(self):
   """
-  ReadSingle(self: BinaryArchiveReader) -> Single
-  
-   Reads a System.Single from the archive.
+  ReadSingle(self: BinaryArchiveReader) -> Single
+
+  
+
+   Reads a System.Single from the archive.
+
    Returns: The value that was read.
   """
   pass
  def ReadSingleArray(self):
   """
-  ReadSingleArray(self: BinaryArchiveReader) -> Array[Single]
-  
-   Reads an array of System.Single from the archive.
-     An array is returned even if the 
-    input was another enumerable type.
-  
+  ReadSingleArray(self: BinaryArchiveReader) -> Array[Single]
+
+  
+
+   Reads an array of System.Single from the archive.
+
+     An array is returned even if the 
+
+    input was another enumerable type.
+
+  
+
    Returns: The array that was read.
   """
   pass
  def ReadSize(self):
   """
-  ReadSize(self: BinaryArchiveReader) -> Size
-  
-   Reads a System.Drawing.Size from the archive.
+  ReadSize(self: BinaryArchiveReader) -> Size
+
+  
+
+   Reads a System.Drawing.Size from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadSizeF(self):
   """
-  ReadSizeF(self: BinaryArchiveReader) -> SizeF
-  
-   Reads a System.Drawing.SizeF from the archive.
+  ReadSizeF(self: BinaryArchiveReader) -> SizeF
+
+  
+
+   Reads a System.Drawing.SizeF from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadString(self):
   """
-  ReadString(self: BinaryArchiveReader) -> str
-  
-   Reads a System.String from the archive.
+  ReadString(self: BinaryArchiveReader) -> str
+
+  
+
+   Reads a System.String from the archive.
+
    Returns: The value that was read.
   """
   pass
  def ReadStringArray(self):
   """
-  ReadStringArray(self: BinaryArchiveReader) -> Array[str]
-  
-   Reads an array of System.String from the archive.
-     An array is returned even if the 
-    input was another enumerable type.
-  
+  ReadStringArray(self: BinaryArchiveReader) -> Array[str]
+
+  
+
+   Reads an array of System.String from the archive.
+
+     An array is returned even if the 
+
+    input was another enumerable type.
+
+  
+
    Returns: The array that was read.
   """
   pass
  def ReadTransform(self):
   """
-  ReadTransform(self: BinaryArchiveReader) -> Transform
-  
-   Reads a Rhino.Geometry.Transform from the archive.
+  ReadTransform(self: BinaryArchiveReader) -> Transform
+
+  
+
+   Reads a Rhino.Geometry.Transform from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadUInt(self):
   """
-  ReadUInt(self: BinaryArchiveReader) -> UInt32
-  
-   Reads a System.UInt32 from the archive.
+  ReadUInt(self: BinaryArchiveReader) -> UInt32
+
+  
+
+   Reads a System.UInt32 from the archive.
+
    Returns: The value that was read.
   """
   pass
  def ReadUShort(self):
   """
-  ReadUShort(self: BinaryArchiveReader) -> UInt16
-  
-   Reads a System.UInt16 from the archive.
+  ReadUShort(self: BinaryArchiveReader) -> UInt16
+
+  
+
+   Reads a System.UInt16 from the archive.
+
    Returns: The value that was read.
   """
   pass
  def ReadVector2d(self):
   """
-  ReadVector2d(self: BinaryArchiveReader) -> Vector2d
-  
-   Reads a Rhino.Geometry.Vector2d from the archive.
+  ReadVector2d(self: BinaryArchiveReader) -> Vector2d
+
+  
+
+   Reads a Rhino.Geometry.Vector2d from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadVector3d(self):
   """
-  ReadVector3d(self: BinaryArchiveReader) -> Vector3d
-  
-   Reads a Rhino.Geometry.Vector3d from the archive.
+  ReadVector3d(self: BinaryArchiveReader) -> Vector3d
+
+  
+
+   Reads a Rhino.Geometry.Vector3d from the archive.
+
    Returns: The element that was read.
   """
   pass
  def ReadVector3f(self):
   """
-  ReadVector3f(self: BinaryArchiveReader) -> Vector3f
-  
-   Reads a Rhino.Geometry.Vector3f from the archive.
+  ReadVector3f(self: BinaryArchiveReader) -> Vector3f
+
+  
+
+   Reads a Rhino.Geometry.Vector3f from the archive.
+
    Returns: The element that was read.
   """
   pass
  Archive3dmVersion=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """If a 3dm archive is being read or written,then this is the
-   version of the 3dm archive format (1,2,3,4 or 5).
-   0  a 3dm archive is not being read/written
-   1  a version 1 3dm archive is being read/written
-   2  a version 2 3dm archive is being read/written
-   3  a version 3 3dm archive is being read/written
-   4  a version 4 3dm archive is being read/written
-   5  an old version 5 3dm archive is being read
-   50 a version 5 3dm archive is being read/written.
-
-Get: Archive3dmVersion(self: BinaryArchiveReader) -> int
-
+ """If a 3dm archive is being read or written,then this is the
+
+   version of the 3dm archive format (1,2,3,4 or 5).
+
+   0  a 3dm archive is not being read/written
+
+   1  a version 1 3dm archive is being read/written
+
+   2  a version 2 3dm archive is being read/written
+
+   3  a version 3 3dm archive is being read/written
+
+   4  a version 4 3dm archive is being read/written
+
+   5  an old version 5 3dm archive is being read
+
+   50 a version 5 3dm archive is being read/written.
+
+
+
+Get: Archive3dmVersion(self: BinaryArchiveReader) -> int
+
+
+
 """
 
  ReadErrorOccured=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets whether en error occurred during reading.
-
-Get: ReadErrorOccured(self: BinaryArchiveReader) -> bool
-
-Set: ReadErrorOccured(self: BinaryArchiveReader)=value
+ """Gets or sets whether en error occurred during reading.
+
+
+
+Get: ReadErrorOccured(self: BinaryArchiveReader) -> bool
+
+
+
+Set: ReadErrorOccured(self: BinaryArchiveReader)=value
+
 """
 
 
@@ -617,29 +855,47 @@ class BinaryArchiveWriter(object):
  """ Represents an entity that is able to write data to an archive. """
  def Write3dmChunkVersion(self,major,minor):
   """
-  Write3dmChunkVersion(self: BinaryArchiveWriter,major: int,minor: int)
-   A chunk version is a single byte that encodes a major.minor
-     version number.  Useful 
-    when creating I/O code for 3dm chunks
-     that may change in the future.  Increment the 
-    minor version 
-     number if new information is added to the end of the chunk. 
-      
-      Increment the major version if the format of the chunk changes
-     in some other 
-    way.
-  
-  
-   major: 0 to 15.
-   minor: 0 to 16.
+  Write3dmChunkVersion(self: BinaryArchiveWriter,major: int,minor: int)
+
+   A chunk version is a single byte that encodes a major.minor
+
+     version number.  Useful 
+
+    when creating I/O code for 3dm chunks
+
+     that may change in the future.  Increment the 
+
+    minor version 
+
+     number if new information is added to the end of the chunk. 
+
+      
+
+      Increment the major version if the format of the chunk changes
+
+     in some other 
+
+    way.
+
+  
+
+  
+
+   major: 0 to 15.
+
+   minor: 0 to 16.
+
    Returns: true on successful read.
   """
   pass
  def WriteBool(self,value):
   """
-  WriteBool(self: BinaryArchiveWriter,value: bool)
-   Writes a System.Boolean value to the archive.
-  
+  WriteBool(self: BinaryArchiveWriter,value: bool)
+
+   Writes a System.Boolean value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
@@ -648,17 +904,23 @@ class BinaryArchiveWriter(object):
   pass
  def WriteBoundingBox(self,value):
   """
-  WriteBoundingBox(self: BinaryArchiveWriter,value: BoundingBox)
-   Writes a Rhino.Geometry.BoundingBox value to the archive.
-  
+  WriteBoundingBox(self: BinaryArchiveWriter,value: BoundingBox)
+
+   Writes a Rhino.Geometry.BoundingBox value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WriteByte(self,value):
   """
-  WriteByte(self: BinaryArchiveWriter,value: Byte)
-   Writes a System.Byte value to the archive.
-  
+  WriteByte(self: BinaryArchiveWriter,value: Byte)
+
+   Writes a System.Byte value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
@@ -667,9 +929,12 @@ class BinaryArchiveWriter(object):
   pass
  def WriteColor(self,value):
   """
-  WriteColor(self: BinaryArchiveWriter,value: Color)
-   Writes a System.Drawing.Color value to the archive.
-  
+  WriteColor(self: BinaryArchiveWriter,value: Color)
+
+   Writes a System.Drawing.Color value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
@@ -678,17 +943,23 @@ class BinaryArchiveWriter(object):
   pass
  def WriteDictionary(self,dictionary):
   """
-  WriteDictionary(self: BinaryArchiveWriter,dictionary: ArchivableDictionary)
-   Delivers the complete content of a dictionary to the archive.
-  
+  WriteDictionary(self: BinaryArchiveWriter,dictionary: ArchivableDictionary)
+
+   Delivers the complete content of a dictionary to the archive.
+
+  
+
    dictionary: A dictionary to archive.
   """
   pass
  def WriteDouble(self,value):
   """
-  WriteDouble(self: BinaryArchiveWriter,value: float)
-   Writes a System.Double value to the archive.
-  
+  WriteDouble(self: BinaryArchiveWriter,value: float)
+
+   Writes a System.Double value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
@@ -697,25 +968,34 @@ class BinaryArchiveWriter(object):
   pass
  def WriteFont(self,value):
   """
-  WriteFont(self: BinaryArchiveWriter,value: Font)
-   Writes a System.Drawing.Font value to the archive.
-  
+  WriteFont(self: BinaryArchiveWriter,value: Font)
+
+   Writes a System.Drawing.Font value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WriteGeometry(self,value):
   """
-  WriteGeometry(self: BinaryArchiveWriter,value: GeometryBase)
-   Writes a Rhino.Geometry.GeometryBase value to the archive.
-  
+  WriteGeometry(self: BinaryArchiveWriter,value: GeometryBase)
+
+   Writes a Rhino.Geometry.GeometryBase value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WriteGuid(self,value):
   """
-  WriteGuid(self: BinaryArchiveWriter,value: Guid)
-   Writes a System.Guid value to the archive.
-  
+  WriteGuid(self: BinaryArchiveWriter,value: Guid)
+
+   Writes a System.Guid value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
@@ -724,17 +1004,23 @@ class BinaryArchiveWriter(object):
   pass
  def WriteInt(self,value):
   """
-  WriteInt(self: BinaryArchiveWriter,value: int)
-   Writes a System.Int32 value to the archive.
-  
+  WriteInt(self: BinaryArchiveWriter,value: int)
+
+   Writes a System.Int32 value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WriteInt64(self,value):
   """
-  WriteInt64(self: BinaryArchiveWriter,value: Int64)
-   Writes a System.Int64 value to the archive.
-  
+  WriteInt64(self: BinaryArchiveWriter,value: Int64)
+
+   Writes a System.Int64 value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
@@ -743,32 +1029,43 @@ class BinaryArchiveWriter(object):
   pass
  def WriteInterval(self,value):
   """
-  WriteInterval(self: BinaryArchiveWriter,value: Interval)
-   Writes a Rhino.Geometry.Interval value to the archive.
-  
+  WriteInterval(self: BinaryArchiveWriter,value: Interval)
+
+   Writes a Rhino.Geometry.Interval value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WriteLine(self,value):
   """
-  WriteLine(self: BinaryArchiveWriter,value: Line)
-   Writes a Rhino.Geometry.Line value to the archive.
-  
+  WriteLine(self: BinaryArchiveWriter,value: Line)
+
+   Writes a Rhino.Geometry.Line value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WriteMeshingParameters(self,value):
   """
-  WriteMeshingParameters(self: BinaryArchiveWriter,value: MeshingParameters)
-   Writes a Rhino.Geometry.MeshingParameters value to the archive.
-  
+  WriteMeshingParameters(self: BinaryArchiveWriter,value: MeshingParameters)
+
+   Writes a Rhino.Geometry.MeshingParameters value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WriteObjRef(self,objref):
   """
-  WriteObjRef(self: BinaryArchiveWriter,objref: ObjRef)
-   Writes a Rhino.DocObjects.ObjRef to the archive
+  WriteObjRef(self: BinaryArchiveWriter,objref: ObjRef)
+
+   Writes a Rhino.DocObjects.ObjRef to the archive
+
    Returns: the element that was read
   """
   pass
@@ -777,89 +1074,122 @@ class BinaryArchiveWriter(object):
   pass
  def WritePlane(self,value):
   """
-  WritePlane(self: BinaryArchiveWriter,value: Plane)
-   Writes a Rhino.Geometry.Plane value to the archive.
-  
+  WritePlane(self: BinaryArchiveWriter,value: Plane)
+
+   Writes a Rhino.Geometry.Plane value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WritePoint(self,value):
   """
-  WritePoint(self: BinaryArchiveWriter,value: Point)
-   Writes a System.Drawing.Point value to the archive.
-  
+  WritePoint(self: BinaryArchiveWriter,value: Point)
+
+   Writes a System.Drawing.Point value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WritePoint2d(self,value):
   """
-  WritePoint2d(self: BinaryArchiveWriter,value: Point2d)
-   Writes a Rhino.Geometry.Point2d value to the archive.
-  
+  WritePoint2d(self: BinaryArchiveWriter,value: Point2d)
+
+   Writes a Rhino.Geometry.Point2d value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WritePoint3d(self,value):
   """
-  WritePoint3d(self: BinaryArchiveWriter,value: Point3d)
-   Writes a Rhino.Geometry.Point3d value to the archive.
-  
+  WritePoint3d(self: BinaryArchiveWriter,value: Point3d)
+
+   Writes a Rhino.Geometry.Point3d value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WritePoint3f(self,value):
   """
-  WritePoint3f(self: BinaryArchiveWriter,value: Point3f)
-   Writes a Rhino.Geometry.Point3f value to the archive.
-  
+  WritePoint3f(self: BinaryArchiveWriter,value: Point3f)
+
+   Writes a Rhino.Geometry.Point3f value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WritePoint4d(self,value):
   """
-  WritePoint4d(self: BinaryArchiveWriter,value: Point4d)
-   Writes a Rhino.Geometry.Point4d value to the archive.
-  
+  WritePoint4d(self: BinaryArchiveWriter,value: Point4d)
+
+   Writes a Rhino.Geometry.Point4d value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WritePointF(self,value):
   """
-  WritePointF(self: BinaryArchiveWriter,value: PointF)
-   Writes a System.Drawing.PointF value to the archive.
-  
+  WritePointF(self: BinaryArchiveWriter,value: PointF)
+
+   Writes a System.Drawing.PointF value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WriteRay3d(self,value):
   """
-  WriteRay3d(self: BinaryArchiveWriter,value: Ray3d)
-   Writes a Rhino.Geometry.Ray3d value to the archive.
-  
+  WriteRay3d(self: BinaryArchiveWriter,value: Ray3d)
+
+   Writes a Rhino.Geometry.Ray3d value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WriteRectangle(self,value):
   """
-  WriteRectangle(self: BinaryArchiveWriter,value: Rectangle)
-   Writes a System.Drawing.Rectangle value to the archive.
-  
+  WriteRectangle(self: BinaryArchiveWriter,value: Rectangle)
+
+   Writes a System.Drawing.Rectangle value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WriteRectangleF(self,value):
   """
-  WriteRectangleF(self: BinaryArchiveWriter,value: RectangleF)
-   Writes a System.Drawing.RectangleF value to the archive.
-  
+  WriteRectangleF(self: BinaryArchiveWriter,value: RectangleF)
+
+   Writes a System.Drawing.RectangleF value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WriteSByte(self,value):
   """
-  WriteSByte(self: BinaryArchiveWriter,value: SByte)
-   Writes a System.SByte value to the archive.
-  
+  WriteSByte(self: BinaryArchiveWriter,value: SByte)
+
+   Writes a System.SByte value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
@@ -868,9 +1198,12 @@ class BinaryArchiveWriter(object):
   pass
  def WriteShort(self,value):
   """
-  WriteShort(self: BinaryArchiveWriter,value: Int16)
-   Writes a System.Int16 value to the archive.
-  
+  WriteShort(self: BinaryArchiveWriter,value: Int16)
+
+   Writes a System.Int16 value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
@@ -879,9 +1212,12 @@ class BinaryArchiveWriter(object):
   pass
  def WriteSingle(self,value):
   """
-  WriteSingle(self: BinaryArchiveWriter,value: Single)
-   Writes a System.Single value to the archive.
-  
+  WriteSingle(self: BinaryArchiveWriter,value: Single)
+
+   Writes a System.Single value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
@@ -890,25 +1226,34 @@ class BinaryArchiveWriter(object):
   pass
  def WriteSize(self,value):
   """
-  WriteSize(self: BinaryArchiveWriter,value: Size)
-   Writes a System.Drawing.Size value to the archive.
-  
+  WriteSize(self: BinaryArchiveWriter,value: Size)
+
+   Writes a System.Drawing.Size value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WriteSizeF(self,value):
   """
-  WriteSizeF(self: BinaryArchiveWriter,value: SizeF)
-   Writes a System.Drawing.SizeF value to the archive.
-  
+  WriteSizeF(self: BinaryArchiveWriter,value: SizeF)
+
+   Writes a System.Drawing.SizeF value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WriteString(self,value):
   """
-  WriteString(self: BinaryArchiveWriter,value: str)
-   Writes a System.String value to the archive.
-  
+  WriteString(self: BinaryArchiveWriter,value: str)
+
+   Writes a System.String value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
@@ -917,310 +1262,480 @@ class BinaryArchiveWriter(object):
   pass
  def WriteTransform(self,value):
   """
-  WriteTransform(self: BinaryArchiveWriter,value: Transform)
-   Writes a Rhino.Geometry.Transform value to the archive.
-  
+  WriteTransform(self: BinaryArchiveWriter,value: Transform)
+
+   Writes a Rhino.Geometry.Transform value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WriteUInt(self,value):
   """
-  WriteUInt(self: BinaryArchiveWriter,value: UInt32)
-   Writes a System.UInt32 value to the archive.
-  
+  WriteUInt(self: BinaryArchiveWriter,value: UInt32)
+
+   Writes a System.UInt32 value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WriteUShort(self,value):
   """
-  WriteUShort(self: BinaryArchiveWriter,value: UInt16)
-   Writes a System.UInt16 value to the archive.
-  
+  WriteUShort(self: BinaryArchiveWriter,value: UInt16)
+
+   Writes a System.UInt16 value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WriteVector2d(self,value):
   """
-  WriteVector2d(self: BinaryArchiveWriter,value: Vector2d)
-   Writes a Rhino.Geometry.Vector2d value to the archive.
-  
+  WriteVector2d(self: BinaryArchiveWriter,value: Vector2d)
+
+   Writes a Rhino.Geometry.Vector2d value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WriteVector3d(self,value):
   """
-  WriteVector3d(self: BinaryArchiveWriter,value: Vector3d)
-   Writes a Rhino.Geometry.Vector3d value to the archive.
-  
+  WriteVector3d(self: BinaryArchiveWriter,value: Vector3d)
+
+   Writes a Rhino.Geometry.Vector3d value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  def WriteVector3f(self,value):
   """
-  WriteVector3f(self: BinaryArchiveWriter,value: Vector3f)
-   Writes a Rhino.Geometry.Vector3f value to the archive.
-  
+  WriteVector3f(self: BinaryArchiveWriter,value: Vector3f)
+
+   Writes a Rhino.Geometry.Vector3f value to the archive.
+
+  
+
    value: A value to write.
   """
   pass
  Archive3dmVersion=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """If a 3dm archive is being read or written,then this is the
-   version of the 3dm archive format (1,2,3,4 or 5).
-   0  a 3dm archive is not being read/written
-   1  a version 1 3dm archive is being read/written
-   2  a version 2 3dm archive is being read/written
-   3  a version 3 3dm archive is being read/written
-   4  a version 4 3dm archive is being read/written
-   5  an old version 5 3dm archive is being read
-   50 a version 5 3dm archive is being read/written.
-
-Get: Archive3dmVersion(self: BinaryArchiveWriter) -> int
-
+ """If a 3dm archive is being read or written,then this is the
+
+   version of the 3dm archive format (1,2,3,4 or 5).
+
+   0  a 3dm archive is not being read/written
+
+   1  a version 1 3dm archive is being read/written
+
+   2  a version 2 3dm archive is being read/written
+
+   3  a version 3 3dm archive is being read/written
+
+   4  a version 4 3dm archive is being read/written
+
+   5  an old version 5 3dm archive is being read
+
+   50 a version 5 3dm archive is being read/written.
+
+
+
+Get: Archive3dmVersion(self: BinaryArchiveWriter) -> int
+
+
+
 """
 
  WriteErrorOccured=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets whether an error occurred.
-
-Get: WriteErrorOccured(self: BinaryArchiveWriter) -> bool
-
-Set: WriteErrorOccured(self: BinaryArchiveWriter)=value
+ """Gets or sets whether an error occurred.
+
+
+
+Get: WriteErrorOccured(self: BinaryArchiveWriter) -> bool
+
+
+
+Set: WriteErrorOccured(self: BinaryArchiveWriter)=value
+
 """
 
 
 
 class File3dm(object,IDisposable):
  """
- Represents a 3dm file,which is stored using the OpenNURBS file standard.
-    The 3dm format is the main Rhinoceros storage format.Visit http://www.opennurbs.com/ for more details.
- 
+ Represents a 3dm file,which is stored using the OpenNURBS file standard.
+
+    The 3dm format is the main Rhinoceros storage format.Visit http://www.opennurbs.com/ for more details.
+
+ 
+
  File3dm()
  """
  def Audit(self,attemptRepair,repairCount,errors,warnings):
   """
-  Audit(self: File3dm,attemptRepair: bool) -> (int,int,str,Array[int])
-  
-   Check a model to make sure it is valid and,if possible
-     and requested,attempt to 
-    repair.
-  
-  
-   attemptRepair: if true and a problem is found,the problem is repaired.
-   Returns: <0 (model has serious errors),
-     0 (model is ok),
-     >0 (number of problems 
+  Audit(self: File3dm,attemptRepair: bool) -> (int,int,str,Array[int])
+
+  
+
+   Check a model to make sure it is valid and,if possible
+
+     and requested,attempt to 
+
+    repair.
+
+  
+
+  
+
+   attemptRepair: if true and a problem is found,the problem is repaired.
+
+   Returns: <0 (model has serious errors),
+
+     0 (model is ok),
+
+     >0 (number of problems 
+
     that were found)
   """
   pass
  def Dispose(self):
   """
-  Dispose(self: File3dm)
+  Dispose(self: File3dm)
+
    Actively reclaims unmanaged resources that this instance uses.
   """
   pass
  def Dump(self):
   """
-  Dump(self: File3dm) -> str
-  
-   Prepares a text dump of the entire model.
+  Dump(self: File3dm) -> str
+
+  
+
+   Prepares a text dump of the entire model.
+
    Returns: The text dump.
   """
   pass
  def DumpSummary(self):
   """
-  DumpSummary(self: File3dm) -> str
-  
-   Prepares a text dump of model properties and settings.
+  DumpSummary(self: File3dm) -> str
+
+  
+
+   Prepares a text dump of model properties and settings.
+
    Returns: The text dump.
   """
   pass
  def DumpToTextLog(self,log):
   """
-  DumpToTextLog(self: File3dm,log: TextLog)
+  DumpToTextLog(self: File3dm,log: TextLog)
+
    Prepares a text dump of the entire model.
   """
   pass
  def IsValid(self,errors):
   """
-  IsValid(self: File3dm,errors: TextLog) -> bool
-  
-   Checks a model to make sure it is valid.
-  
-   errors: if errors are found,a description of the problem is put in this variable.
-   Returns: true if the model is valid.
-  IsValid(self: File3dm) -> (bool,str)
-  
-   Checks a model to make sure it is valid.
+  IsValid(self: File3dm,errors: TextLog) -> bool
+
+  
+
+   Checks a model to make sure it is valid.
+
+  
+
+   errors: if errors are found,a description of the problem is put in this variable.
+
+   Returns: true if the model is valid.
+
+  IsValid(self: File3dm) -> (bool,str)
+
+  
+
+   Checks a model to make sure it is valid.
+
    Returns: true if the model is valid.
   """
   pass
  def Polish(self):
   """
-  Polish(self: File3dm)
-   Quickly fills in the little details,like making sure there is at least
-     one layer 
-    and table indices make sense.  For a full blown check and repair,
+  Polish(self: File3dm)
+
+   Quickly fills in the little details,like making sure there is at least
+
+     one layer 
+
+    and table indices make sense.  For a full blown check and repair,
+
      call Audit(true).
   """
   pass
  @staticmethod
  def Read(path,tableTypeFilterFilter=None,objectTypeFilter=None):
   """
-  Read(path: str,tableTypeFilterFilter: TableTypeFilter,objectTypeFilter: ObjectTypeFilter) -> File3dm
-  Read(path: str) -> File3dm
-  
-   Reads a 3dm file from a specified location.
-  
-   path: The file to read.
+  Read(path: str,tableTypeFilterFilter: TableTypeFilter,objectTypeFilter: ObjectTypeFilter) -> File3dm
+
+  Read(path: str) -> File3dm
+
+  
+
+   Reads a 3dm file from a specified location.
+
+  
+
+   path: The file to read.
+
    Returns: new File3dm on success,null on error.
   """
   pass
  @staticmethod
  def ReadApplicationData(path,applicationName,applicationUrl,applicationDetails):
   """
-  ReadApplicationData(path: str) -> (str,str,str)
-  
-   Reads only the application information from an existing 3dm file.
-  
+  ReadApplicationData(path: str) -> (str,str,str)
+
+  
+
+   Reads only the application information from an existing 3dm file.
+
+  
+
    path: A location on disk or network.
   """
   pass
  @staticmethod
  def ReadArchiveVersion(path):
   """
-  ReadArchiveVersion(path: str) -> int
-  
-   Reads only the archive 3dm version from an existing 3dm file.
-  
-   path: The file from which to read the archive version.
+  ReadArchiveVersion(path: str) -> int
+
+  
+
+   Reads only the archive 3dm version from an existing 3dm file.
+
+  
+
+   path: The file from which to read the archive version.
+
    Returns: The 3dm file archive version.
   """
   pass
  @staticmethod
  def ReadNotes(path):
   """
-  ReadNotes(path: str) -> str
-  
-   Reads only the notes from an existing 3dm file.
-  
-   path: The file from which to read the notes.
+  ReadNotes(path: str) -> str
+
+  
+
+   Reads only the notes from an existing 3dm file.
+
+  
+
+   path: The file from which to read the notes.
+
    Returns: The 3dm file notes.
   """
   pass
  @staticmethod
  def ReadPreviewImage(path):
   """
-  ReadPreviewImage(path: str) -> Bitmap
-  
-   Attempts to read the preview image out of a 3dm file.
-  
-   path: The location of the file.
+  ReadPreviewImage(path: str) -> Bitmap
+
+  
+
+   Attempts to read the preview image out of a 3dm file.
+
+  
+
+   path: The location of the file.
+
    Returns: A bitmap,or null on failure.
   """
   pass
  @staticmethod
  def ReadRevisionHistory(path,createdBy,lastEditedBy,revision,createdOn,lastEditedOn):
   """
-  ReadRevisionHistory(path: str) -> (bool,str,str,int,DateTime,DateTime)
-  
-   Quickly check a file for it's revision information.  This function does
-     not read 
-    the entire file,just what it needs to get revision information out
-  
-  
-   path: path to the 3dm file
+  ReadRevisionHistory(path: str) -> (bool,str,str,int,DateTime,DateTime)
+
+  
+
+   Quickly check a file for it's revision information.  This function does
+
+     not read 
+
+    the entire file,just what it needs to get revision information out
+
+  
+
+  
+
+   path: path to the 3dm file
+
    Returns: true on success
   """
   pass
  @staticmethod
  def ReadWithLog(path,*__args):
   """
-  ReadWithLog(path: str) -> (File3dm,str)
-  
-   Read a 3dm file from a specified location and log any archive
-     reading errors.
-  
-   path: The file to read.
-   Returns: New File3dm on success,null on error.
+  ReadWithLog(path: str) -> (File3dm,str)
+
+  
+
+   Read a 3dm file from a specified location and log any archive
+
+     reading errors.
+
+  
+
+   path: The file to read.
+
+   Returns: New File3dm on success,null on error.
+
   ReadWithLog(path: str,tableTypeFilterFilter: TableTypeFilter,objectTypeFilter: ObjectTypeFilter) -> (File3dm,str)
   """
   pass
  def Write(self,path,*__args):
   """
-  Write(self: File3dm,path: str,options: File3dmWriteOptions) -> bool
-  
-   Writes contents of this model to an openNURBS archive. I STRONGLY
-     suggested that 
-    you call Polish() before calling Write so that your
-     file has all the "fluff" that 
-    makes it complete.  If the model is
-     not valid,then Write will refuse to write it.
-  
-  
-   path: The file name to use for writing.
-   Returns: true if archive is written with no error.
-     false if errors occur.
-  Write(self: File3dm,path: str,version: int) -> bool
-  
-   Writes contents of this model to an openNURBS archive. I STRONGLY
-     suggested that 
-    you call Polish() before calling Write so that your
-     file has all the "fluff" that 
-    makes it complete.  If the model is
-     not valid,then Write will refuse to write it.
-  
-  
-   path: The file name to use for writing.
-   version: Version of the openNURBS archive to write.  Must be 2,3,4,or 5.
-     Rhino 2.x can 
-    read version 2 files.
-     Rhino 3.x can read version 2 and 3 files.
-     Rhino 
-    4.x can read version 2,3 and 4 files.
-     Rhino 5.x can read version 2,3,4,and 5 
-    files.
-     Use version 5 when possible.
-  
-   Returns: true if archive is written with no error.
+  Write(self: File3dm,path: str,options: File3dmWriteOptions) -> bool
+
+  
+
+   Writes contents of this model to an openNURBS archive. I STRONGLY
+
+     suggested that 
+
+    you call Polish() before calling Write so that your
+
+     file has all the "fluff" that 
+
+    makes it complete.  If the model is
+
+     not valid,then Write will refuse to write it.
+
+  
+
+  
+
+   path: The file name to use for writing.
+
+   Returns: true if archive is written with no error.
+
+     false if errors occur.
+
+  Write(self: File3dm,path: str,version: int) -> bool
+
+  
+
+   Writes contents of this model to an openNURBS archive. I STRONGLY
+
+     suggested that 
+
+    you call Polish() before calling Write so that your
+
+     file has all the "fluff" that 
+
+    makes it complete.  If the model is
+
+     not valid,then Write will refuse to write it.
+
+  
+
+  
+
+   path: The file name to use for writing.
+
+   version: Version of the openNURBS archive to write.  Must be 2,3,4,or 5.
+
+     Rhino 2.x can 
+
+    read version 2 files.
+
+     Rhino 3.x can read version 2 and 3 files.
+
+     Rhino 
+
+    4.x can read version 2,3 and 4 files.
+
+     Rhino 5.x can read version 2,3,4,and 5 
+
+    files.
+
+     Use version 5 when possible.
+
+  
+
+   Returns: true if archive is written with no error.
+
      false if errors occur.
   """
   pass
  def WriteWithLog(self,path,version,errorLog):
   """
-  WriteWithLog(self: File3dm,path: str,version: int) -> (bool,str)
-  
-   Writes contents of this model to an openNURBS archive. I STRONGLY
-     suggested that 
-    you call Polish() before calling Write so that your
-     file has all the "fluff" that 
-    makes it complete.  If the model is
-     not valid,then Write will refuse to write it.
-  
-  
-   path: Version of the openNURBS archive to write.  Must be 2,3,4,or 5.
-     Rhino 2.x can 
-    read version 2 files.
-     Rhino 3.x can read version 2 and 3 files.
-     Rhino 
-    4.x can read version 2,3 and 4 files.
-     Rhino 5.x can read version 2,3,4,and 5 
-    files.
-     Use version 5 when possible.
-  
-   version: A version number.
-   Returns: true if archive is written with no error.
+  WriteWithLog(self: File3dm,path: str,version: int) -> (bool,str)
+
+  
+
+   Writes contents of this model to an openNURBS archive. I STRONGLY
+
+     suggested that 
+
+    you call Polish() before calling Write so that your
+
+     file has all the "fluff" that 
+
+    makes it complete.  If the model is
+
+     not valid,then Write will refuse to write it.
+
+  
+
+  
+
+   path: Version of the openNURBS archive to write.  Must be 2,3,4,or 5.
+
+     Rhino 2.x can 
+
+    read version 2 files.
+
+     Rhino 3.x can read version 2 and 3 files.
+
+     Rhino 
+
+    4.x can read version 2,3 and 4 files.
+
+     Rhino 5.x can read version 2,3,4,and 5 
+
+    files.
+
+     Use version 5 when possible.
+
+  
+
+   version: A version number.
+
+   Returns: true if archive is written with no error.
+
      false if errors occur.
   """
   pass
  def __enter__(self,*args):
   """
-  __enter__(self: IDisposable) -> object
-  
+  __enter__(self: IDisposable) -> object
+
+  
+
    Provides the implementation of __enter__ for objects which implement IDisposable.
   """
   pass
  def __exit__(self,*args):
   """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+
    Provides the implementation of __exit__ for objects which implement IDisposable.
   """
   pass
@@ -1231,167 +1746,265 @@ class File3dm(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  ApplicationDetails=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets details for the application that wrote this file.
-
-Get: ApplicationDetails(self: File3dm) -> str
-
-Set: ApplicationDetails(self: File3dm)=value
+ """Gets or sets details for the application that wrote this file.
+
+
+
+Get: ApplicationDetails(self: File3dm) -> str
+
+
+
+Set: ApplicationDetails(self: File3dm)=value
+
 """
 
  ApplicationName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the name of the application that wrote this file.
-
-Get: ApplicationName(self: File3dm) -> str
-
-Set: ApplicationName(self: File3dm)=value
+ """Gets or sets the name of the application that wrote this file.
+
+
+
+Get: ApplicationName(self: File3dm) -> str
+
+
+
+Set: ApplicationName(self: File3dm)=value
+
 """
 
  ApplicationUrl=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a URL for the application that wrote this file.
-
-Get: ApplicationUrl(self: File3dm) -> str
-
-Set: ApplicationUrl(self: File3dm)=value
+ """Gets or sets a URL for the application that wrote this file.
+
+
+
+Get: ApplicationUrl(self: File3dm) -> str
+
+
+
+Set: ApplicationUrl(self: File3dm)=value
+
 """
 
  Created=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the DateTime that this file was originally created. If the
-   value is not set in the 3dm file,then DateTime.MinValue is returned
-
-Get: Created(self: File3dm) -> DateTime
-
+ """Get the DateTime that this file was originally created. If the
+
+   value is not set in the 3dm file,then DateTime.MinValue is returned
+
+
+
+Get: Created(self: File3dm) -> DateTime
+
+
+
 """
 
  CreatedBy=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a string that names the user who created the file.
-
-Get: CreatedBy(self: File3dm) -> str
-
+ """Gets a string that names the user who created the file.
+
+
+
+Get: CreatedBy(self: File3dm) -> str
+
+
+
 """
 
  DimStyles=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Dimension Styles in this file
-
-Get: DimStyles(self: File3dm) -> IList[DimensionStyle]
-
+ """Dimension Styles in this file
+
+
+
+Get: DimStyles(self: File3dm) -> IList[DimensionStyle]
+
+
+
 """
 
  HatchPatterns=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Hatch patterns in this file
-
-Get: HatchPatterns(self: File3dm) -> IList[HatchPattern]
-
+ """Hatch patterns in this file
+
+
+
+Get: HatchPatterns(self: File3dm) -> IList[HatchPattern]
+
+
+
 """
 
  HistoryRecords=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """History records stored in this file
-
-Get: HistoryRecords(self: File3dm) -> File3dmHistoryRecordTable
-
+ """History records stored in this file
+
+
+
+Get: HistoryRecords(self: File3dm) -> File3dmHistoryRecordTable
+
+
+
 """
 
  InstanceDefinitions=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Instance definitions in this file
-
-Get: InstanceDefinitions(self: File3dm) -> IList[InstanceDefinitionGeometry]
-
+ """Instance definitions in this file
+
+
+
+Get: InstanceDefinitions(self: File3dm) -> IList[InstanceDefinitionGeometry]
+
+
+
 """
 
  LastEdited=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the DateTime that this file was last edited. If the
-   value is not set in the 3dm file,then DateTime.MinValue is returned
-
-Get: LastEdited(self: File3dm) -> DateTime
-
+ """Get the DateTime that this file was last edited. If the
+
+   value is not set in the 3dm file,then DateTime.MinValue is returned
+
+
+
+Get: LastEdited(self: File3dm) -> DateTime
+
+
+
 """
 
  LastEditedBy=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a string that names the user who last edited the file.
-
-Get: LastEditedBy(self: File3dm) -> str
-
+ """Gets a string that names the user who last edited the file.
+
+
+
+Get: LastEditedBy(self: File3dm) -> str
+
+
+
 """
 
  Layers=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Layers in this file.
-
-Get: Layers(self: File3dm) -> IList[Layer]
-
+ """Layers in this file.
+
+
+
+Get: Layers(self: File3dm) -> IList[Layer]
+
+
+
 """
 
  Linetypes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Linetypes in this file.
-
-Get: Linetypes(self: File3dm) -> IList[Linetype]
-
+ """Linetypes in this file.
+
+
+
+Get: Linetypes(self: File3dm) -> IList[Linetype]
+
+
+
 """
 
  Materials=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Materials in this file.
-
-Get: Materials(self: File3dm) -> IList[Material]
-
+ """Materials in this file.
+
+
+
+Get: Materials(self: File3dm) -> IList[Material]
+
+
+
 """
 
  NamedViews=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Named view list
-
-Get: NamedViews(self: File3dm) -> IList[ViewInfo]
-
+ """Named view list
+
+
+
+Get: NamedViews(self: File3dm) -> IList[ViewInfo]
+
+
+
 """
 
  Notes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the model notes.
-
-Get: Notes(self: File3dm) -> File3dmNotes
-
-Set: Notes(self: File3dm)=value
+ """Gets or sets the model notes.
+
+
+
+Get: Notes(self: File3dm) -> File3dmNotes
+
+
+
+Set: Notes(self: File3dm)=value
+
 """
 
  Objects=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets access to the Rhino.FileIO.File3dmObjectTable class associated with this file,
-   which contains all objects.
-
-Get: Objects(self: File3dm) -> File3dmObjectTable
-
+ """Gets access to the Rhino.FileIO.File3dmObjectTable class associated with this file,
+
+   which contains all objects.
+
+
+
+Get: Objects(self: File3dm) -> File3dmObjectTable
+
+
+
 """
 
  PlugInData=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Custom plug-in data in this file.  This data is not attached to any geometry or attributes
-
-Get: PlugInData(self: File3dm) -> File3dmPlugInDataTable
-
+ """Custom plug-in data in this file.  This data is not attached to any geometry or attributes
+
+
+
+Get: PlugInData(self: File3dm) -> File3dmPlugInDataTable
+
+
+
 """
 
  Revision=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the revision number.
-
-Get: Revision(self: File3dm) -> int
-
-Set: Revision(self: File3dm)=value
+ """Gets or sets the revision number.
+
+
+
+Get: Revision(self: File3dm) -> int
+
+
+
+Set: Revision(self: File3dm)=value
+
 """
 
  Settings=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Settings include tolerance,and unit system,and defaults used
-   for creating views and objects.
-
-Get: Settings(self: File3dm) -> File3dmSettings
-
+ """Settings include tolerance,and unit system,and defaults used
+
+   for creating views and objects.
+
+
+
+Get: Settings(self: File3dm) -> File3dmSettings
+
+
+
 """
 
  StartSectionComments=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the start section comments,which are the comments with which the 3dm file begins.
-
-Get: StartSectionComments(self: File3dm) -> str
-
-Set: StartSectionComments(self: File3dm)=value
+ """Gets or sets the start section comments,which are the comments with which the 3dm file begins.
+
+
+
+Get: StartSectionComments(self: File3dm) -> str
+
+
+
+Set: StartSectionComments(self: File3dm)=value
+
 """
 
  Views=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Views that represent the RhinoViews which are displayed when Rhino loads this file
-
-Get: Views(self: File3dm) -> IList[ViewInfo]
-
+ """Views that represent the RhinoViews which are displayed when Rhino loads this file
+
+
+
+Get: Views(self: File3dm) -> IList[ViewInfo]
+
+
+
 """
 
 
@@ -1403,63 +2016,93 @@ class File3dmHistoryRecordTable(object):
  """ Table of custom data provided by plug-ins """
  def Clear(self):
   """
-  Clear(self: File3dmHistoryRecordTable)
+  Clear(self: File3dmHistoryRecordTable)
+
    Remove all entries from this table
   """
   pass
  def Dump(self):
   """
-  Dump(self: File3dmHistoryRecordTable) -> str
-  
-   Prepares a text dump of table.
+  Dump(self: File3dmHistoryRecordTable) -> str
+
+  
+
+   Prepares a text dump of table.
+
    Returns: A string containing the dump.
   """
   pass
  Count=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the number of history records in this table.
-
-Get: Count(self: File3dmHistoryRecordTable) -> int
-
+ """Gets the number of history records in this table.
+
+
+
+Get: Count(self: File3dmHistoryRecordTable) -> int
+
+
+
 """
 
 
 
 class File3dmNotes(object):
  """
- Represents the notes information stored in a 3dm file.
- 
+ Represents the notes information stored in a 3dm file.
+
+ 
+
  File3dmNotes()
  """
  IsHtml=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the text format. If the format is HTML,true; false otherwise.
-
-Get: IsHtml(self: File3dmNotes) -> bool
-
-Set: IsHtml(self: File3dmNotes)=value
+ """Gets or sets the text format. If the format is HTML,true; false otherwise.
+
+
+
+Get: IsHtml(self: File3dmNotes) -> bool
+
+
+
+Set: IsHtml(self: File3dmNotes)=value
+
 """
 
  IsVisible=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the notes visibility. If the notes are visible,true; false otherwise.
-
-Get: IsVisible(self: File3dmNotes) -> bool
-
-Set: IsVisible(self: File3dmNotes)=value
+ """Gets or sets the notes visibility. If the notes are visible,true; false otherwise.
+
+
+
+Get: IsVisible(self: File3dmNotes) -> bool
+
+
+
+Set: IsVisible(self: File3dmNotes)=value
+
 """
 
  Notes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the text content of the notes.
-
-Get: Notes(self: File3dmNotes) -> str
-
-Set: Notes(self: File3dmNotes)=value
+ """Gets or sets the text content of the notes.
+
+
+
+Get: Notes(self: File3dmNotes) -> str
+
+
+
+Set: Notes(self: File3dmNotes)=value
+
 """
 
  WindowRectangle=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the position of the Notes when they were saved.
-
-Get: WindowRectangle(self: File3dmNotes) -> Rectangle
-
-Set: WindowRectangle(self: File3dmNotes)=value
+ """Gets or sets the position of the Notes when they were saved.
+
+
+
+Get: WindowRectangle(self: File3dmNotes) -> Rectangle
+
+
+
+Set: WindowRectangle(self: File3dmNotes)=value
+
 """
 
 
@@ -1467,492 +2110,842 @@ Set: WindowRectangle(self: File3dmNotes)=value
 class File3dmObject(object):
  """ Used to store geometry table object definition and attributes in a File3dm. """
  Attributes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the attributes that are linked with this document object.
-
-Get: Attributes(self: File3dmObject) -> ObjectAttributes
-
+ """Gets the attributes that are linked with this document object.
+
+
+
+Get: Attributes(self: File3dmObject) -> ObjectAttributes
+
+
+
 """
 
  Geometry=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the geometry that is linked with this document object.
-
-Get: Geometry(self: File3dmObject) -> GeometryBase
-
+ """Gets the geometry that is linked with this document object.
+
+
+
+Get: Geometry(self: File3dmObject) -> GeometryBase
+
+
+
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the Name of the object. Equivalent to this.Attributes.Name.
-
-Get: Name(self: File3dmObject) -> str
-
-Set: Name(self: File3dmObject)=value
+ """Gets or sets the Name of the object. Equivalent to this.Attributes.Name.
+
+
+
+Get: Name(self: File3dmObject) -> str
+
+
+
+Set: Name(self: File3dmObject)=value
+
 """
 
 
 
 class File3dmObjectTable(object,IEnumerable[File3dmObject],IEnumerable,IRhinoTable[File3dmObject]):
  """
- Represents a simple object table for a file that is open externally.
+ Represents a simple object table for a file that is open externally.
+
     This class mimics Rhino.DocObjects.Tables.ObjectTable while providing external eccess to the file.
  """
  def AddArc(self,arc,attributes=None):
   """
-  AddArc(self: File3dmObjectTable,arc: Arc,attributes: ObjectAttributes) -> Guid
-  
-   Adds a curve object to the document representing an arc.
-  
-   arc: An arc to add.
-   attributes: attributes to apply to arc.
-   Returns: A unique identifier for the object.
-  AddArc(self: File3dmObjectTable,arc: Arc) -> Guid
-  
-   Adds a curve object to the document representing an arc.
-  
-   arc: An arc.
+  AddArc(self: File3dmObjectTable,arc: Arc,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds a curve object to the document representing an arc.
+
+  
+
+   arc: An arc to add.
+
+   attributes: attributes to apply to arc.
+
+   Returns: A unique identifier for the object.
+
+  AddArc(self: File3dmObjectTable,arc: Arc) -> Guid
+
+  
+
+   Adds a curve object to the document representing an arc.
+
+  
+
+   arc: An arc.
+
    Returns: A unique identifier for the object.
   """
   pass
  def AddBrep(self,brep,attributes=None):
   """
-  AddBrep(self: File3dmObjectTable,brep: Brep,attributes: ObjectAttributes) -> Guid
-  
-   Adds a brep object to Rhino.
-  
-   brep: A duplicate of this brep is added to Rhino.
-   attributes: Attributes to apply to brep.
-   Returns: A unique identifier for the object.
-  AddBrep(self: File3dmObjectTable,brep: Brep) -> Guid
-  
-   Adds a brep object to Rhino.
-  
-   brep: A duplicate of this brep is added to Rhino.
+  AddBrep(self: File3dmObjectTable,brep: Brep,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds a brep object to Rhino.
+
+  
+
+   brep: A duplicate of this brep is added to Rhino.
+
+   attributes: Attributes to apply to brep.
+
+   Returns: A unique identifier for the object.
+
+  AddBrep(self: File3dmObjectTable,brep: Brep) -> Guid
+
+  
+
+   Adds a brep object to Rhino.
+
+  
+
+   brep: A duplicate of this brep is added to Rhino.
+
    Returns: A unique identifier for the object.
   """
   pass
  def AddCircle(self,circle,attributes=None):
   """
-  AddCircle(self: File3dmObjectTable,circle: Circle,attributes: ObjectAttributes) -> Guid
-  
-   Adds a curve object to the document representing a circle.
-  
-   circle: A circle to add.
-   attributes: attributes to apply to circle.
-   Returns: A unique identifier for the object.
-  AddCircle(self: File3dmObjectTable,circle: Circle) -> Guid
-  
-   Adds a curve object to the document representing a circle.
-  
-   circle: A circle to add.
+  AddCircle(self: File3dmObjectTable,circle: Circle,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds a curve object to the document representing a circle.
+
+  
+
+   circle: A circle to add.
+
+   attributes: attributes to apply to circle.
+
+   Returns: A unique identifier for the object.
+
+  AddCircle(self: File3dmObjectTable,circle: Circle) -> Guid
+
+  
+
+   Adds a curve object to the document representing a circle.
+
+  
+
+   circle: A circle to add.
+
    Returns: A unique identifier for the object.
   """
   pass
  def AddClippingPlane(self,plane,uMagnitude,vMagnitude,*__args):
   """
-  AddClippingPlane(self: File3dmObjectTable,plane: Plane,uMagnitude: float,vMagnitude: float,clippedViewportIds: IEnumerable[Guid],attributes: ObjectAttributes) -> Guid
-  AddClippingPlane(self: File3dmObjectTable,plane: Plane,uMagnitude: float,vMagnitude: float,clippedViewportIds: IEnumerable[Guid]) -> Guid
-  AddClippingPlane(self: File3dmObjectTable,plane: Plane,uMagnitude: float,vMagnitude: float,clippedViewportId: Guid) -> Guid
-  
-   Adds a clipping plane object to Rhino.
-  
-   plane: A plane.
-   uMagnitude: The size in U direction.
-   vMagnitude: The size in V direction.
-   clippedViewportId: The viewport id that the new clipping plane will clip.
+  AddClippingPlane(self: File3dmObjectTable,plane: Plane,uMagnitude: float,vMagnitude: float,clippedViewportIds: IEnumerable[Guid],attributes: ObjectAttributes) -> Guid
+
+  AddClippingPlane(self: File3dmObjectTable,plane: Plane,uMagnitude: float,vMagnitude: float,clippedViewportIds: IEnumerable[Guid]) -> Guid
+
+  AddClippingPlane(self: File3dmObjectTable,plane: Plane,uMagnitude: float,vMagnitude: float,clippedViewportId: Guid) -> Guid
+
+  
+
+   Adds a clipping plane object to Rhino.
+
+  
+
+   plane: A plane.
+
+   uMagnitude: The size in U direction.
+
+   vMagnitude: The size in V direction.
+
+   clippedViewportId: The viewport id that the new clipping plane will clip.
+
    Returns: A unique identifier for the object.
   """
   pass
  def AddCurve(self,curve,attributes=None):
   """
-  AddCurve(self: File3dmObjectTable,curve: Curve,attributes: ObjectAttributes) -> Guid
-  
-   Adds a curve object to the table.
-  
-   curve: A duplicate of this curve is added to Rhino.
-   attributes: Attributes to apply to curve.
-   Returns: A unique identifier for the object.
-  AddCurve(self: File3dmObjectTable,curve: Curve) -> Guid
-  
-   Adds a curve object to the table.
-  
-   curve: A curve to add.
+  AddCurve(self: File3dmObjectTable,curve: Curve,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds a curve object to the table.
+
+  
+
+   curve: A duplicate of this curve is added to Rhino.
+
+   attributes: Attributes to apply to curve.
+
+   Returns: A unique identifier for the object.
+
+  AddCurve(self: File3dmObjectTable,curve: Curve) -> Guid
+
+  
+
+   Adds a curve object to the table.
+
+  
+
+   curve: A curve to add.
+
    Returns: A unique identifier for the object.
   """
   pass
  def AddEllipse(self,ellipse,attributes=None):
   """
-  AddEllipse(self: File3dmObjectTable,ellipse: Ellipse,attributes: ObjectAttributes) -> Guid
-  
-   Adds a curve object to the document representing an ellipse.
-  
-   ellipse: An ellipse to add.
-   attributes: attributes to apply to ellipse.
-   Returns: A unique identifier for the object.
-  AddEllipse(self: File3dmObjectTable,ellipse: Ellipse) -> Guid
-  
-   Adds a curve object to the document representing an ellipse.
-  
-   ellipse: An ellipse to add.
+  AddEllipse(self: File3dmObjectTable,ellipse: Ellipse,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds a curve object to the document representing an ellipse.
+
+  
+
+   ellipse: An ellipse to add.
+
+   attributes: attributes to apply to ellipse.
+
+   Returns: A unique identifier for the object.
+
+  AddEllipse(self: File3dmObjectTable,ellipse: Ellipse) -> Guid
+
+  
+
+   Adds a curve object to the document representing an ellipse.
+
+  
+
+   ellipse: An ellipse to add.
+
    Returns: A unique identifier for the object.
   """
   pass
  def AddExtrusion(self,extrusion,attributes=None):
   """
-  AddExtrusion(self: File3dmObjectTable,extrusion: Extrusion,attributes: ObjectAttributes) -> Guid
-  
-   Adds an extrusion object to Rhino.
-  
-   extrusion: A duplicate of this extrusion is added to Rhino.
-   attributes: Attributes to link to the object.
-   Returns: A unique identifier for the object.
-  AddExtrusion(self: File3dmObjectTable,extrusion: Extrusion) -> Guid
-  
-   Adds an extrusion object to Rhino.
-  
-   extrusion: A duplicate of this extrusion is added to Rhino.
+  AddExtrusion(self: File3dmObjectTable,extrusion: Extrusion,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds an extrusion object to Rhino.
+
+  
+
+   extrusion: A duplicate of this extrusion is added to Rhino.
+
+   attributes: Attributes to link to the object.
+
+   Returns: A unique identifier for the object.
+
+  AddExtrusion(self: File3dmObjectTable,extrusion: Extrusion) -> Guid
+
+  
+
+   Adds an extrusion object to Rhino.
+
+  
+
+   extrusion: A duplicate of this extrusion is added to Rhino.
+
    Returns: A unique identifier for the object.
   """
   pass
  def AddHatch(self,hatch,attributes=None):
   """
-  AddHatch(self: File3dmObjectTable,hatch: Hatch,attributes: ObjectAttributes) -> Guid
-  
-   Adds a hatch to the document.
-  
-   hatch: A hatch.
-   attributes: Attributes to apply to brep.
-   Returns: A unique identifier for the hatch,or System.Guid.Empty on failure.
-  AddHatch(self: File3dmObjectTable,hatch: Hatch) -> Guid
-  
-   Adds a hatch to the document.
-  
-   hatch: A hatch.
+  AddHatch(self: File3dmObjectTable,hatch: Hatch,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds a hatch to the document.
+
+  
+
+   hatch: A hatch.
+
+   attributes: Attributes to apply to brep.
+
+   Returns: A unique identifier for the hatch,or System.Guid.Empty on failure.
+
+  AddHatch(self: File3dmObjectTable,hatch: Hatch) -> Guid
+
+  
+
+   Adds a hatch to the document.
+
+  
+
+   hatch: A hatch.
+
    Returns: A unique identifier for the hatch,or System.Guid.Empty on failure.
   """
   pass
  def AddLeader(self,*__args):
   """
-  AddLeader(self: File3dmObjectTable,text: str,plane: Plane,points: IEnumerable[Point2d]) -> Guid
-  AddLeader(self: File3dmObjectTable,text: str,points: IEnumerable[Point3d]) -> Guid
-  AddLeader(self: File3dmObjectTable,points: IEnumerable[Point3d]) -> Guid
-  AddLeader(self: File3dmObjectTable,plane: Plane,points: IEnumerable[Point2d]) -> Guid
-  AddLeader(self: File3dmObjectTable,plane: Plane,points: IEnumerable[Point2d],attributes: ObjectAttributes) -> Guid
+  AddLeader(self: File3dmObjectTable,text: str,plane: Plane,points: IEnumerable[Point2d]) -> Guid
+
+  AddLeader(self: File3dmObjectTable,text: str,points: IEnumerable[Point3d]) -> Guid
+
+  AddLeader(self: File3dmObjectTable,points: IEnumerable[Point3d]) -> Guid
+
+  AddLeader(self: File3dmObjectTable,plane: Plane,points: IEnumerable[Point2d]) -> Guid
+
+  AddLeader(self: File3dmObjectTable,plane: Plane,points: IEnumerable[Point2d],attributes: ObjectAttributes) -> Guid
+
   AddLeader(self: File3dmObjectTable,text: str,plane: Plane,points: IEnumerable[Point2d],attributes: ObjectAttributes) -> Guid
   """
   pass
  def AddLine(self,*__args):
   """
-  AddLine(self: File3dmObjectTable,line: Line) -> Guid
-  
-   Adds a line object to Rhino.
-   Returns: A unique identifier for the object.
-  AddLine(self: File3dmObjectTable,line: Line,attributes: ObjectAttributes) -> Guid
-  
-   Adds a line object to Rhino.
-  
-   line: A line.
-   attributes: Attributes to apply to line.
-   Returns: A unique identifier for the object.
-  AddLine(self: File3dmObjectTable,from: Point3d,to: Point3d) -> Guid
-  
-   Adds a line object to Rhino.
-  
-   from: A line start point.
-   to: A line end point.
-   Returns: A unique identifier of new rhino object.
-  AddLine(self: File3dmObjectTable,from: Point3d,to: Point3d,attributes: ObjectAttributes) -> Guid
-  
-   Adds a line object to Rhino.
-  
-   from: The start point of the line.
-   to: The end point of the line.
-   attributes: Attributes to apply to line.
+  AddLine(self: File3dmObjectTable,line: Line) -> Guid
+
+  
+
+   Adds a line object to Rhino.
+
+   Returns: A unique identifier for the object.
+
+  AddLine(self: File3dmObjectTable,line: Line,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds a line object to Rhino.
+
+  
+
+   line: A line.
+
+   attributes: Attributes to apply to line.
+
+   Returns: A unique identifier for the object.
+
+  AddLine(self: File3dmObjectTable,from: Point3d,to: Point3d) -> Guid
+
+  
+
+   Adds a line object to Rhino.
+
+  
+
+   from: A line start point.
+
+   to: A line end point.
+
+   Returns: A unique identifier of new rhino object.
+
+  AddLine(self: File3dmObjectTable,from: Point3d,to: Point3d,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds a line object to Rhino.
+
+  
+
+   from: The start point of the line.
+
+   to: The end point of the line.
+
+   attributes: Attributes to apply to line.
+
    Returns: A unique identifier for the object.
   """
   pass
  def AddLinearDimension(self,dimension,attributes=None):
   """
-  AddLinearDimension(self: File3dmObjectTable,dimension: LinearDimension,attributes: ObjectAttributes) -> Guid
-  
-   Adds a linear dimension to the 3dm file object table.
-  
-   dimension: A dimension.
-   attributes: Attributes to apply to dimension.
-   Returns: A unique identifier for the object.
-  AddLinearDimension(self: File3dmObjectTable,dimension: LinearDimension) -> Guid
-  
-   Adds a linear dimension to the 3dm file object table.
-  
-   dimension: A dimension.
+  AddLinearDimension(self: File3dmObjectTable,dimension: LinearDimension,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds a linear dimension to the 3dm file object table.
+
+  
+
+   dimension: A dimension.
+
+   attributes: Attributes to apply to dimension.
+
+   Returns: A unique identifier for the object.
+
+  AddLinearDimension(self: File3dmObjectTable,dimension: LinearDimension) -> Guid
+
+  
+
+   Adds a linear dimension to the 3dm file object table.
+
+  
+
+   dimension: A dimension.
+
    Returns: A unique identifier for the object.
   """
   pass
  def AddMesh(self,mesh,attributes=None):
   """
-  AddMesh(self: File3dmObjectTable,mesh: Mesh,attributes: ObjectAttributes) -> Guid
-  
-   Adds a mesh object to Rhino.
-  
-   mesh: A duplicate of this mesh is added to Rhino.
-   attributes: Attributes to link to the object.
-   Returns: A unique identifier for the object.
-  AddMesh(self: File3dmObjectTable,mesh: Mesh) -> Guid
-  
-   Adds a mesh object to Rhino.
-  
-   mesh: A duplicate of this mesh is added to Rhino.
+  AddMesh(self: File3dmObjectTable,mesh: Mesh,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds a mesh object to Rhino.
+
+  
+
+   mesh: A duplicate of this mesh is added to Rhino.
+
+   attributes: Attributes to link to the object.
+
+   Returns: A unique identifier for the object.
+
+  AddMesh(self: File3dmObjectTable,mesh: Mesh) -> Guid
+
+  
+
+   Adds a mesh object to Rhino.
+
+  
+
+   mesh: A duplicate of this mesh is added to Rhino.
+
    Returns: A unique identifier for the object.
   """
   pass
  def AddPoint(self,*__args):
   """
-  AddPoint(self: File3dmObjectTable,point: Point3f) -> Guid
-  
-   Adds a point object to the document.
-  
-   point: location of point.
-   Returns: A unique identifier for the object.
-  AddPoint(self: File3dmObjectTable,point: Point3f,attributes: ObjectAttributes) -> Guid
-  
-   Adds a point object to the document.
-  
-   point: location of point.
-   attributes: attributes to apply to point.
-   Returns: A unique identifier for the object.
-  AddPoint(self: File3dmObjectTable,point: Point3d,attributes: ObjectAttributes) -> Guid
-  
-   Adds a point object to the document.
-  
-   point: A location for point.
-   attributes: attributes to apply to point.
-   Returns: A unique identifier for the object.
-  AddPoint(self: File3dmObjectTable,x: float,y: float,z: float) -> Guid
-  
-   Adds a point object to the table.
-  
-   x: X component of point coordinate.
-   y: Y component of point coordinate.
-   z: Z component of point coordinate.
-   Returns: id of new object.
-  AddPoint(self: File3dmObjectTable,point: Point3d) -> Guid
-  
-   Adds a point object to the table.
-  
-   point: A location for point.
+  AddPoint(self: File3dmObjectTable,point: Point3f) -> Guid
+
+  
+
+   Adds a point object to the document.
+
+  
+
+   point: location of point.
+
+   Returns: A unique identifier for the object.
+
+  AddPoint(self: File3dmObjectTable,point: Point3f,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds a point object to the document.
+
+  
+
+   point: location of point.
+
+   attributes: attributes to apply to point.
+
+   Returns: A unique identifier for the object.
+
+  AddPoint(self: File3dmObjectTable,point: Point3d,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds a point object to the document.
+
+  
+
+   point: A location for point.
+
+   attributes: attributes to apply to point.
+
+   Returns: A unique identifier for the object.
+
+  AddPoint(self: File3dmObjectTable,x: float,y: float,z: float) -> Guid
+
+  
+
+   Adds a point object to the table.
+
+  
+
+   x: X component of point coordinate.
+
+   y: Y component of point coordinate.
+
+   z: Z component of point coordinate.
+
+   Returns: id of new object.
+
+  AddPoint(self: File3dmObjectTable,point: Point3d) -> Guid
+
+  
+
+   Adds a point object to the table.
+
+  
+
+   point: A location for point.
+
    Returns: Id of new object.
   """
   pass
  def AddPointCloud(self,*__args):
   """
-  AddPointCloud(self: File3dmObjectTable,points: IEnumerable[Point3d]) -> Guid
-  AddPointCloud(self: File3dmObjectTable,points: IEnumerable[Point3d],attributes: ObjectAttributes) -> Guid
-  AddPointCloud(self: File3dmObjectTable,cloud: PointCloud) -> Guid
-  
-   Adds a point cloud object to the document.
-  
-   cloud: PointCloud to add.
-   Returns: A unique identifier for the object.
-  AddPointCloud(self: File3dmObjectTable,cloud: PointCloud,attributes: ObjectAttributes) -> Guid
-  
-   Adds a point cloud object to the document.
-  
-   cloud: PointCloud to add.
-   attributes: attributes to apply to point cloud.
+  AddPointCloud(self: File3dmObjectTable,points: IEnumerable[Point3d]) -> Guid
+
+  AddPointCloud(self: File3dmObjectTable,points: IEnumerable[Point3d],attributes: ObjectAttributes) -> Guid
+
+  AddPointCloud(self: File3dmObjectTable,cloud: PointCloud) -> Guid
+
+  
+
+   Adds a point cloud object to the document.
+
+  
+
+   cloud: PointCloud to add.
+
+   Returns: A unique identifier for the object.
+
+  AddPointCloud(self: File3dmObjectTable,cloud: PointCloud,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds a point cloud object to the document.
+
+  
+
+   cloud: PointCloud to add.
+
+   attributes: attributes to apply to point cloud.
+
    Returns: A unique identifier for the object.
   """
   pass
  def AddPoints(self,points,attributes=None):
   """
-  AddPoints(self: File3dmObjectTable,points: IEnumerable[Point3f]) -> Array[Guid]
-  AddPoints(self: File3dmObjectTable,points: IEnumerable[Point3f],attributes: ObjectAttributes) -> Array[Guid]
-  AddPoints(self: File3dmObjectTable,points: IEnumerable[Point3d]) -> Array[Guid]
+  AddPoints(self: File3dmObjectTable,points: IEnumerable[Point3f]) -> Array[Guid]
+
+  AddPoints(self: File3dmObjectTable,points: IEnumerable[Point3f],attributes: ObjectAttributes) -> Array[Guid]
+
+  AddPoints(self: File3dmObjectTable,points: IEnumerable[Point3d]) -> Array[Guid]
+
   AddPoints(self: File3dmObjectTable,points: IEnumerable[Point3d],attributes: ObjectAttributes) -> Array[Guid]
   """
   pass
  def AddPolyline(self,points,attributes=None):
   """
-  AddPolyline(self: File3dmObjectTable,points: IEnumerable[Point3d],attributes: ObjectAttributes) -> Guid
+  AddPolyline(self: File3dmObjectTable,points: IEnumerable[Point3d],attributes: ObjectAttributes) -> Guid
+
   AddPolyline(self: File3dmObjectTable,points: IEnumerable[Point3d]) -> Guid
   """
   pass
  def AddSphere(self,sphere,attributes=None):
   """
-  AddSphere(self: File3dmObjectTable,sphere: Sphere,attributes: ObjectAttributes) -> Guid
-  
-   Adds a surface object to the document representing a sphere.
-  
-   sphere: A sphere to add.
-   attributes: Attributes to link with the sphere.
-   Returns: A unique identifier for the object.
-  AddSphere(self: File3dmObjectTable,sphere: Sphere) -> Guid
-  
-   Adds a surface object to the document representing a sphere.
-  
-   sphere: A sphere to add.
+  AddSphere(self: File3dmObjectTable,sphere: Sphere,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds a surface object to the document representing a sphere.
+
+  
+
+   sphere: A sphere to add.
+
+   attributes: Attributes to link with the sphere.
+
+   Returns: A unique identifier for the object.
+
+  AddSphere(self: File3dmObjectTable,sphere: Sphere) -> Guid
+
+  
+
+   Adds a surface object to the document representing a sphere.
+
+  
+
+   sphere: A sphere to add.
+
    Returns: A unique identifier for the object.
   """
   pass
  def AddSurface(self,surface,attributes=None):
   """
-  AddSurface(self: File3dmObjectTable,surface: Surface,attributes: ObjectAttributes) -> Guid
-  
-   Adds a surface object to Rhino.
-  
-   surface: A duplicate of this surface is added to Rhino.
-   attributes: Attributes to link to the object.
-   Returns: A unique identifier for the object.
-  AddSurface(self: File3dmObjectTable,surface: Surface) -> Guid
-  
-   Adds a surface object to Rhino.
-  
-   surface: A duplicate of this surface is added to Rhino.
+  AddSurface(self: File3dmObjectTable,surface: Surface,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds a surface object to Rhino.
+
+  
+
+   surface: A duplicate of this surface is added to Rhino.
+
+   attributes: Attributes to link to the object.
+
+   Returns: A unique identifier for the object.
+
+  AddSurface(self: File3dmObjectTable,surface: Surface) -> Guid
+
+  
+
+   Adds a surface object to Rhino.
+
+  
+
+   surface: A duplicate of this surface is added to Rhino.
+
    Returns: A unique identifier for the object.
   """
   pass
  def AddText(self,*__args):
   """
-  AddText(self: File3dmObjectTable,text: str,plane: Plane,height: float,fontName: str,bold: bool,italic: bool,justification: TextJustification) -> Guid
-  
-   Adds an annotation text object to the document.
-  
-   text: Text string.
-   plane: Plane of text.
-   height: Height of text.
-   fontName: Name of FontFace.
-   bold: Bold flag.
-   italic: Italic flag.
-   justification: The justification of the text.
-   Returns: The Guid of the newly added object or Guid.Empty on failure.
-  AddText(self: File3dmObjectTable,text: str,plane: Plane,height: float,fontName: str,bold: bool,italic: bool,justification: TextJustification,attributes: ObjectAttributes) -> Guid
-  
-   Adds an annotation text object to the document.
-  
-   text: Text string.
-   plane: Plane of text.
-   height: Height of text.
-   fontName: Name of FontFace.
-   bold: Bold flag.
-   italic: Italic flag.
-   justification: The justification of the text.
-   attributes: Attributes to link to the object.
-   Returns: The Guid of the newly added object or Guid.Empty on failure.
-  AddText(self: File3dmObjectTable,text: str,plane: Plane,height: float,fontName: str,bold: bool,italic: bool,attributes: ObjectAttributes) -> Guid
-  
-   Adds an annotation text object to the document.
-  
-   text: Text string.
-   plane: Plane of text.
-   height: Height of text.
-   fontName: Name of FontFace.
-   bold: Bold flag.
-   italic: Italic flag.
-   attributes: Object Attributes.
-   Returns: The Guid of the newly added object or Guid.Empty on failure.
-  AddText(self: File3dmObjectTable,text3d: Text3d) -> Guid
-  
-   Adds an annotation text object to the document.
-  
-   text3d: The text object to add.
-   Returns: The Guid of the newly added object or Guid.Empty on failure.
-  AddText(self: File3dmObjectTable,text3d: Text3d,attributes: ObjectAttributes) -> Guid
-  
-   Adds an annotation text object to the document.
-  
-   text3d: The text object to add.
-   attributes: Attributes to link to the object.
-   Returns: The Guid of the newly added object or Guid.Empty on failure.
-  AddText(self: File3dmObjectTable,text: str,plane: Plane,height: float,fontName: str,bold: bool,italic: bool) -> Guid
-  
-   Adds an annotation text object to the document.
-  
-   text: Text string.
-   plane: Plane of text.
-   height: Height of text.
-   fontName: Name of FontFace.
-   bold: Bold flag.
-   italic: Italic flag.
+  AddText(self: File3dmObjectTable,text: str,plane: Plane,height: float,fontName: str,bold: bool,italic: bool,justification: TextJustification) -> Guid
+
+  
+
+   Adds an annotation text object to the document.
+
+  
+
+   text: Text string.
+
+   plane: Plane of text.
+
+   height: Height of text.
+
+   fontName: Name of FontFace.
+
+   bold: Bold flag.
+
+   italic: Italic flag.
+
+   justification: The justification of the text.
+
+   Returns: The Guid of the newly added object or Guid.Empty on failure.
+
+  AddText(self: File3dmObjectTable,text: str,plane: Plane,height: float,fontName: str,bold: bool,italic: bool,justification: TextJustification,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds an annotation text object to the document.
+
+  
+
+   text: Text string.
+
+   plane: Plane of text.
+
+   height: Height of text.
+
+   fontName: Name of FontFace.
+
+   bold: Bold flag.
+
+   italic: Italic flag.
+
+   justification: The justification of the text.
+
+   attributes: Attributes to link to the object.
+
+   Returns: The Guid of the newly added object or Guid.Empty on failure.
+
+  AddText(self: File3dmObjectTable,text: str,plane: Plane,height: float,fontName: str,bold: bool,italic: bool,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds an annotation text object to the document.
+
+  
+
+   text: Text string.
+
+   plane: Plane of text.
+
+   height: Height of text.
+
+   fontName: Name of FontFace.
+
+   bold: Bold flag.
+
+   italic: Italic flag.
+
+   attributes: Object Attributes.
+
+   Returns: The Guid of the newly added object or Guid.Empty on failure.
+
+  AddText(self: File3dmObjectTable,text3d: Text3d) -> Guid
+
+  
+
+   Adds an annotation text object to the document.
+
+  
+
+   text3d: The text object to add.
+
+   Returns: The Guid of the newly added object or Guid.Empty on failure.
+
+  AddText(self: File3dmObjectTable,text3d: Text3d,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds an annotation text object to the document.
+
+  
+
+   text3d: The text object to add.
+
+   attributes: Attributes to link to the object.
+
+   Returns: The Guid of the newly added object or Guid.Empty on failure.
+
+  AddText(self: File3dmObjectTable,text: str,plane: Plane,height: float,fontName: str,bold: bool,italic: bool) -> Guid
+
+  
+
+   Adds an annotation text object to the document.
+
+  
+
+   text: Text string.
+
+   plane: Plane of text.
+
+   height: Height of text.
+
+   fontName: Name of FontFace.
+
+   bold: Bold flag.
+
+   italic: Italic flag.
+
    Returns: The Guid of the newly added object or Guid.Empty on failure.
   """
   pass
  def AddTextDot(self,*__args):
   """
-  AddTextDot(self: File3dmObjectTable,dot: TextDot) -> Guid
-  
-   Adds a text dot object to Rhino.
-  
-   dot: The text dot.
-   Returns: A unique identifier for the object.
-  AddTextDot(self: File3dmObjectTable,dot: TextDot,attributes: ObjectAttributes) -> Guid
-  
-   Adds a text dot object to Rhino.
-  
-   dot: The text dot.
-   attributes: Attributes to link with curve.
-   Returns: A unique identifier for the object.
-  AddTextDot(self: File3dmObjectTable,text: str,location: Point3d) -> Guid
-  
-   Adds a text dot object to the table.
-  
-   text: The text.
-   location: The location.
-   Returns: A unique identifier for the object.
-  AddTextDot(self: File3dmObjectTable,text: str,location: Point3d,attributes: ObjectAttributes) -> Guid
-  
-   Adds a text dot object to the table.
-  
-   text: The text.
-   location: The location.
-   attributes: Attributes to link with curve.
+  AddTextDot(self: File3dmObjectTable,dot: TextDot) -> Guid
+
+  
+
+   Adds a text dot object to Rhino.
+
+  
+
+   dot: The text dot.
+
+   Returns: A unique identifier for the object.
+
+  AddTextDot(self: File3dmObjectTable,dot: TextDot,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds a text dot object to Rhino.
+
+  
+
+   dot: The text dot.
+
+   attributes: Attributes to link with curve.
+
+   Returns: A unique identifier for the object.
+
+  AddTextDot(self: File3dmObjectTable,text: str,location: Point3d) -> Guid
+
+  
+
+   Adds a text dot object to the table.
+
+  
+
+   text: The text.
+
+   location: The location.
+
+   Returns: A unique identifier for the object.
+
+  AddTextDot(self: File3dmObjectTable,text: str,location: Point3d,attributes: ObjectAttributes) -> Guid
+
+  
+
+   Adds a text dot object to the table.
+
+  
+
+   text: The text.
+
+   location: The location.
+
+   attributes: Attributes to link with curve.
+
    Returns: A unique identifier for the object.
   """
   pass
  def Delete(self,*__args):
   """
-  Delete(self: File3dmObjectTable,objectIds: IEnumerable[Guid]) -> int
-  Delete(self: File3dmObjectTable,objectId: Guid) -> bool
-  
-   Deletes object from document.
-  
-   objectId: Id of the object to delete.
-   Returns: true on success,false on failure.
-  Delete(self: File3dmObjectTable,obj: File3dmObject) -> bool
-  
-   Deletes object from document.
-  
-   obj: The object to delete.
+  Delete(self: File3dmObjectTable,objectIds: IEnumerable[Guid]) -> int
+
+  Delete(self: File3dmObjectTable,objectId: Guid) -> bool
+
+  
+
+   Deletes object from document.
+
+  
+
+   objectId: Id of the object to delete.
+
+   Returns: true on success,false on failure.
+
+  Delete(self: File3dmObjectTable,obj: File3dmObject) -> bool
+
+  
+
+   Deletes object from document.
+
+  
+
+   obj: The object to delete.
+
    Returns: true on success,false on failure.
   """
   pass
  def Dump(self):
   """
-  Dump(self: File3dmObjectTable) -> str
-  
-   Prepares a text dump of object table.
+  Dump(self: File3dmObjectTable) -> str
+
+  
+
+   Prepares a text dump of object table.
+
    Returns: A string containing the dump.
   """
   pass
  def FindByLayer(self,layer):
   """
-  FindByLayer(self: File3dmObjectTable,layer: str) -> Array[File3dmObject]
-  
-   Finds all File3dmObject that are in a given layer.
-  
-   layer: Layer to search.
+  FindByLayer(self: File3dmObjectTable,layer: str) -> Array[File3dmObject]
+
+  
+
+   Finds all File3dmObject that are in a given layer.
+
+  
+
+   layer: Layer to search.
+
    Returns: Array of objects that belong to the specified group or null if no objects could be found.
   """
   pass
  def GetBoundingBox(self):
   """
-  GetBoundingBox(self: File3dmObjectTable) -> BoundingBox
-  
-   Gets the bounding box containing every object in this table.
+  GetBoundingBox(self: File3dmObjectTable) -> BoundingBox
+
+  
+
+   Gets the bounding box containing every object in this table.
+
    Returns: The computed bounding box.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: File3dmObjectTable) -> IEnumerator[File3dmObject]
-  
-   Gets the enumerator that visits any Rhino.FileIO.File3dmObject in this table.
+  GetEnumerator(self: File3dmObjectTable) -> IEnumerator[File3dmObject]
+
+  
+
+   Gets the enumerator that visits any Rhino.FileIO.File3dmObject in this table.
+
    Returns: The enumerator.
   """
   pass
@@ -1972,10 +2965,14 @@ class File3dmObjectTable(object,IEnumerable[File3dmObject],IEnumerable,IRhinoTab
   """ __repr__(self: object) -> str """
   pass
  Count=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the number of File3dmObjects in this table.
-
-Get: Count(self: File3dmObjectTable) -> int
-
+ """Gets the number of File3dmObjects in this table.
+
+
+
+Get: Count(self: File3dmObjectTable) -> int
+
+
+
 """
 
 
@@ -1983,10 +2980,14 @@ Get: Count(self: File3dmObjectTable) -> int
 class File3dmPlugInData(object):
  """ Custom data in the file supplied by a plug-in """
  PlugInId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Plug-in this data is associated with
-
-Get: PlugInId(self: File3dmPlugInData) -> Guid
-
+ """Plug-in this data is associated with
+
+
+
+Get: PlugInId(self: File3dmPlugInData) -> Guid
+
+
+
 """
 
 
@@ -1995,23 +2996,30 @@ class File3dmPlugInDataTable(object,IEnumerable[File3dmPlugInData],IEnumerable,I
  """ Table of custom data provided by plug-ins """
  def Clear(self):
   """
-  Clear(self: File3dmPlugInDataTable)
+  Clear(self: File3dmPlugInDataTable)
+
    Remove all entries from this table
   """
   pass
  def Dump(self):
   """
-  Dump(self: File3dmPlugInDataTable) -> str
-  
-   Prepares a text dump of table.
+  Dump(self: File3dmPlugInDataTable) -> str
+
+  
+
+   Prepares a text dump of table.
+
    Returns: A string containing the dump.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: File3dmPlugInDataTable) -> IEnumerator[File3dmPlugInData]
-  
-   Gets the enumerator that visits any Rhino.FileIO.File3dmPlugInData in this table.
+  GetEnumerator(self: File3dmPlugInDataTable) -> IEnumerator[File3dmPlugInData]
+
+  
+
+   Gets the enumerator that visits any Rhino.FileIO.File3dmPlugInData in this table.
+
    Returns: The enumerator.
   """
   pass
@@ -2031,10 +3039,14 @@ class File3dmPlugInDataTable(object,IEnumerable[File3dmPlugInData],IEnumerable,I
   """ __repr__(self: object) -> str """
   pass
  Count=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the number of File3dmPlugInData in this table.
-
-Get: Count(self: File3dmPlugInDataTable) -> int
-
+ """Gets the number of File3dmPlugInData in this table.
+
+
+
+Get: Count(self: File3dmPlugInDataTable) -> int
+
+
+
 """
 
 
@@ -2042,134 +3054,223 @@ Get: Count(self: File3dmPlugInDataTable) -> int
 class File3dmSettings(object):
  """ Contains settings used within the whole 3dm file. """
  ModelAbsoluteTolerance=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the model space absolute tolerance.
-
-Get: ModelAbsoluteTolerance(self: File3dmSettings) -> float
-
-Set: ModelAbsoluteTolerance(self: File3dmSettings)=value
+ """Gets or sets the model space absolute tolerance.
+
+
+
+Get: ModelAbsoluteTolerance(self: File3dmSettings) -> float
+
+
+
+Set: ModelAbsoluteTolerance(self: File3dmSettings)=value
+
 """
 
  ModelAngleToleranceDegrees=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the model space angle tolerance.
-
-Get: ModelAngleToleranceDegrees(self: File3dmSettings) -> float
-
-Set: ModelAngleToleranceDegrees(self: File3dmSettings)=value
+ """Gets or sets the model space angle tolerance.
+
+
+
+Get: ModelAngleToleranceDegrees(self: File3dmSettings) -> float
+
+
+
+Set: ModelAngleToleranceDegrees(self: File3dmSettings)=value
+
 """
 
  ModelAngleToleranceRadians=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the model space angle tolerance.
-
-Get: ModelAngleToleranceRadians(self: File3dmSettings) -> float
-
-Set: ModelAngleToleranceRadians(self: File3dmSettings)=value
+ """Gets or sets the model space angle tolerance.
+
+
+
+Get: ModelAngleToleranceRadians(self: File3dmSettings) -> float
+
+
+
+Set: ModelAngleToleranceRadians(self: File3dmSettings)=value
+
 """
 
  ModelBasepoint=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the model basepoint that is used when the file is read as an instance definition.
-   This point is mapped to the origin in the instance definition.
-
-Get: ModelBasepoint(self: File3dmSettings) -> Point3d
-
-Set: ModelBasepoint(self: File3dmSettings)=value
+ """Gets or sets the model basepoint that is used when the file is read as an instance definition.
+
+   This point is mapped to the origin in the instance definition.
+
+
+
+Get: ModelBasepoint(self: File3dmSettings) -> Point3d
+
+
+
+Set: ModelBasepoint(self: File3dmSettings)=value
+
 """
 
  ModelRelativeTolerance=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the model space relative tolerance.
-
-Get: ModelRelativeTolerance(self: File3dmSettings) -> float
-
-Set: ModelRelativeTolerance(self: File3dmSettings)=value
+ """Gets or sets the model space relative tolerance.
+
+
+
+Get: ModelRelativeTolerance(self: File3dmSettings) -> float
+
+
+
+Set: ModelRelativeTolerance(self: File3dmSettings)=value
+
 """
 
  ModelUnitSystem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the model unit system,using Rhino.UnitSystem enumeration.
-
-Get: ModelUnitSystem(self: File3dmSettings) -> UnitSystem
-
-Set: ModelUnitSystem(self: File3dmSettings)=value
+ """Gets or sets the model unit system,using Rhino.UnitSystem enumeration.
+
+
+
+Get: ModelUnitSystem(self: File3dmSettings) -> UnitSystem
+
+
+
+Set: ModelUnitSystem(self: File3dmSettings)=value
+
 """
 
  ModelUrl=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a Uniform Resource Locator (URL) direction for the model.
-
-Get: ModelUrl(self: File3dmSettings) -> str
-
-Set: ModelUrl(self: File3dmSettings)=value
+ """Gets or sets a Uniform Resource Locator (URL) direction for the model.
+
+
+
+Get: ModelUrl(self: File3dmSettings) -> str
+
+
+
+Set: ModelUrl(self: File3dmSettings)=value
+
 """
 
  PageAbsoluteTolerance=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the page space absolute tolerance.
-
-Get: PageAbsoluteTolerance(self: File3dmSettings) -> float
-
-Set: PageAbsoluteTolerance(self: File3dmSettings)=value
+ """Gets or sets the page space absolute tolerance.
+
+
+
+Get: PageAbsoluteTolerance(self: File3dmSettings) -> float
+
+
+
+Set: PageAbsoluteTolerance(self: File3dmSettings)=value
+
 """
 
  PageAngleToleranceDegrees=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the page space angle tolerance.
-
-Get: PageAngleToleranceDegrees(self: File3dmSettings) -> float
-
-Set: PageAngleToleranceDegrees(self: File3dmSettings)=value
+ """Gets or sets the page space angle tolerance.
+
+
+
+Get: PageAngleToleranceDegrees(self: File3dmSettings) -> float
+
+
+
+Set: PageAngleToleranceDegrees(self: File3dmSettings)=value
+
 """
 
  PageAngleToleranceRadians=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the page space angle tolerance.
-
-Get: PageAngleToleranceRadians(self: File3dmSettings) -> float
-
-Set: PageAngleToleranceRadians(self: File3dmSettings)=value
+ """Gets or sets the page space angle tolerance.
+
+
+
+Get: PageAngleToleranceRadians(self: File3dmSettings) -> float
+
+
+
+Set: PageAngleToleranceRadians(self: File3dmSettings)=value
+
 """
 
  PageRelativeTolerance=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the page space relative tolerance.
-
-Get: PageRelativeTolerance(self: File3dmSettings) -> float
-
-Set: PageRelativeTolerance(self: File3dmSettings)=value
+ """Gets or sets the page space relative tolerance.
+
+
+
+Get: PageRelativeTolerance(self: File3dmSettings) -> float
+
+
+
+Set: PageRelativeTolerance(self: File3dmSettings)=value
+
 """
 
  PageUnitSystem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the page unit system,using Rhino.UnitSystem enumeration.
-
-Get: PageUnitSystem(self: File3dmSettings) -> UnitSystem
-
-Set: PageUnitSystem(self: File3dmSettings)=value
+ """Gets or sets the page unit system,using Rhino.UnitSystem enumeration.
+
+
+
+Get: PageUnitSystem(self: File3dmSettings) -> UnitSystem
+
+
+
+Set: PageUnitSystem(self: File3dmSettings)=value
+
 """
 
 
 
 class File3dmTypeCodes(object):
  """
- Typecode format 4 bytes long
-    
-    x xxxxxxxxxxxxxxx,x xxx xxxx xxxx x x xx
-    | |      | |      | |  |
-    |  |  |     |
-    |  |  |   |    +---  "stuff" bit
-    |  |  |   |
-    |  |  |   +-- specific codes
-    |  |  |
-    |  |  +-- RESERVED - DO NOT USE (should be 0) (will be used to control CRC on/off)
-    |  |
-    |  +-- category:_000 0000 0000 0001  Legacy geometry TCODE_LEGACY_GEOMETRY
-    |      _000 0000 0000 0010  openNURBS object   TCODE_OPENNURBS_OBJECT
-    |      _000 0000 0000 0100  -- RESERVED - DO NOT USE (should be 0 in any typecode) -- 
-    |      _000 0000 0000 1000  -- RESERVED - DO NOT USE (should be 0 in any typecode) --      
-    |      _000 0000 0001 0000  Geometry     TCODE_GEOMETRY
-    |      _000 0000 0010 0000  Annotation
-    |      _000 0000 0100 0000  Display Attributes TCODE_DISPLAY
-    |      _000 0000 1000 0000  Rendering    TCODE_RENDER  
-    |      _000 0001 0000 0000       
-    |      _000 0010 0000 0000  Interface    TCODE_INTERFACE 
-    |      _000 0100 0000 0000  -- RESERVED - DO NOT USE (should be 0 in any typecode) --
-    |      _000 1000 0000 0000  Tolerances   TCODE_TOLERANCE
-    |      _001 0000 0000 0000  Tables    TCODE_TABLE 
-    |      _010 0000 0000 0000  Table record    TCODE_TABLEREC
-    |      _100 0000 0000 0000  User information   TCODE_USER
-    | 
-    +-- format: 0 - data size in header  - data block follows TCODE_SHORT
+ Typecode format 4 bytes long
+
+    
+
+    x xxxxxxxxxxxxxxx,x xxx xxxx xxxx x x xx
+
+    | |      | |      | |  |
+
+    |  |  |     |
+
+    |  |  |   |    +---  "stuff" bit
+
+    |  |  |   |
+
+    |  |  |   +-- specific codes
+
+    |  |  |
+
+    |  |  +-- RESERVED - DO NOT USE (should be 0) (will be used to control CRC on/off)
+
+    |  |
+
+    |  +-- category:_000 0000 0000 0001  Legacy geometry TCODE_LEGACY_GEOMETRY
+
+    |      _000 0000 0000 0010  openNURBS object   TCODE_OPENNURBS_OBJECT
+
+    |      _000 0000 0000 0100  -- RESERVED - DO NOT USE (should be 0 in any typecode) -- 
+
+    |      _000 0000 0000 1000  -- RESERVED - DO NOT USE (should be 0 in any typecode) --      
+
+    |      _000 0000 0001 0000  Geometry     TCODE_GEOMETRY
+
+    |      _000 0000 0010 0000  Annotation
+
+    |      _000 0000 0100 0000  Display Attributes TCODE_DISPLAY
+
+    |      _000 0000 1000 0000  Rendering    TCODE_RENDER  
+
+    |      _000 0001 0000 0000       
+
+    |      _000 0010 0000 0000  Interface    TCODE_INTERFACE 
+
+    |      _000 0100 0000 0000  -- RESERVED - DO NOT USE (should be 0 in any typecode) --
+
+    |      _000 1000 0000 0000  Tolerances   TCODE_TOLERANCE
+
+    |      _001 0000 0000 0000  Tables    TCODE_TABLE 
+
+    |      _010 0000 0000 0000  Table record    TCODE_TABLEREC
+
+    |      _100 0000 0000 0000  User information   TCODE_USER
+
+    | 
+
+    +-- format: 0 - data size in header  - data block follows TCODE_SHORT
+
        1 - data in header - no data block follows
  """
  TCODE_ANALYSIS_MESH=None
@@ -2586,40 +3687,62 @@ class File3dmTypeCodes(object):
 
 class File3dmWriteOptions(object):
  """
- Options used by File3dm.Write
- 
+ Options used by File3dm.Write
+
+ 
+
  File3dmWriteOptions()
  """
  SaveAnalysisMeshes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Include analysis meshes in the file. Default is true
-
-Get: SaveAnalysisMeshes(self: File3dmWriteOptions) -> bool
-
-Set: SaveAnalysisMeshes(self: File3dmWriteOptions)=value
+ """Include analysis meshes in the file. Default is true
+
+
+
+Get: SaveAnalysisMeshes(self: File3dmWriteOptions) -> bool
+
+
+
+Set: SaveAnalysisMeshes(self: File3dmWriteOptions)=value
+
 """
 
  SaveRenderMeshes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Include Render meshes in the file. Default is true
-
-Get: SaveRenderMeshes(self: File3dmWriteOptions) -> bool
-
-Set: SaveRenderMeshes(self: File3dmWriteOptions)=value
+ """Include Render meshes in the file. Default is true
+
+
+
+Get: SaveRenderMeshes(self: File3dmWriteOptions) -> bool
+
+
+
+Set: SaveRenderMeshes(self: File3dmWriteOptions)=value
+
 """
 
  SaveUserData=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Include custom user data in the file. Default is true
-
-Get: SaveUserData(self: File3dmWriteOptions) -> bool
-
-Set: SaveUserData(self: File3dmWriteOptions)=value
+ """Include custom user data in the file. Default is true
+
+
+
+Get: SaveUserData(self: File3dmWriteOptions) -> bool
+
+
+
+Set: SaveUserData(self: File3dmWriteOptions)=value
+
 """
 
  Version=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """File version. Default is 5
-
-Get: Version(self: File3dmWriteOptions) -> int
-
-Set: Version(self: File3dmWriteOptions)=value
+ """File version. Default is 5
+
+
+
+Get: Version(self: File3dmWriteOptions) -> int
+
+
+
+Set: Version(self: File3dmWriteOptions)=value
+
 """
 
 
@@ -2631,14 +3754,17 @@ class FileReadOptions(object,IDisposable):
   pass
  def __enter__(self,*args):
   """
-  __enter__(self: IDisposable) -> object
-  
+  __enter__(self: IDisposable) -> object
+
+  
+
    Provides the implementation of __enter__ for objects which implement IDisposable.
   """
   pass
  def __exit__(self,*args):
   """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+
    Provides the implementation of __exit__ for objects which implement IDisposable.
   """
   pass
@@ -2649,89 +3775,151 @@ class FileReadOptions(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  BatchMode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """true means you cannot ask questions during reading. (no dialogs,no "getters",etc.)
-
-Get: BatchMode(self: FileReadOptions) -> bool
-
-Set: BatchMode(self: FileReadOptions)=value
+ """true means you cannot ask questions during reading. (no dialogs,no "getters",etc.)
+
+
+
+Get: BatchMode(self: FileReadOptions) -> bool
+
+
+
+Set: BatchMode(self: FileReadOptions)=value
+
 """
 
  ImportMode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """true means we are merging whatever is being read into an existing document.
-    This means you need to consider things like:
-   
-   If the information being read is in a different unit system,it should be
-   scaled if UseScaleGeometry is true.
-   
-   There can be existing layers,fonts,materials,dimension styles,hatch
-   patterns,and so on with the same name as items being read from the file.
-
-Get: ImportMode(self: FileReadOptions) -> bool
-
-Set: ImportMode(self: FileReadOptions)=value
+ """true means we are merging whatever is being read into an existing document.
+
+    This means you need to consider things like:
+
+   
+
+   If the information being read is in a different unit system,it should be
+
+   scaled if UseScaleGeometry is true.
+
+   
+
+   There can be existing layers,fonts,materials,dimension styles,hatch
+
+   patterns,and so on with the same name as items being read from the file.
+
+
+
+Get: ImportMode(self: FileReadOptions) -> bool
+
+
+
+Set: ImportMode(self: FileReadOptions)=value
+
 """
 
  ImportReferenceMode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """true means we are reading information for a work session reference model
-   or a linked instance definition.
-
-Get: ImportReferenceMode(self: FileReadOptions) -> bool
-
-Set: ImportReferenceMode(self: FileReadOptions)=value
+ """true means we are reading information for a work session reference model
+
+   or a linked instance definition.
+
+
+
+Get: ImportReferenceMode(self: FileReadOptions) -> bool
+
+
+
+Set: ImportReferenceMode(self: FileReadOptions)=value
+
 """
 
  InsertMode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """true means we are reading information that will be used to create an
-   instance definition or some other type of "inserting" that is supported
-   by Rhino's "Insert" command.
-
-Get: InsertMode(self: FileReadOptions) -> bool
-
-Set: InsertMode(self: FileReadOptions)=value
+ """true means we are reading information that will be used to create an
+
+   instance definition or some other type of "inserting" that is supported
+
+   by Rhino's "Insert" command.
+
+
+
+Get: InsertMode(self: FileReadOptions) -> bool
+
+
+
+Set: InsertMode(self: FileReadOptions)=value
+
 """
 
  NewMode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """true means we are reading template information in something like
-   a OnFileNew event.
-
-Get: NewMode(self: FileReadOptions) -> bool
-
-Set: NewMode(self: FileReadOptions)=value
+ """true means we are reading template information in something like
+
+   a OnFileNew event.
+
+
+
+Get: NewMode(self: FileReadOptions) -> bool
+
+
+
+Set: NewMode(self: FileReadOptions)=value
+
 """
 
  OpenMode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """true means we are reading the information into an empty document.  This
-   means you need to consider things like:
-   Setting the unit system (if the file has a unit system)Creating a default layer if one is not there.Setting up appropriate views when you're finished reading.
-
-Get: OpenMode(self: FileReadOptions) -> bool
-
-Set: OpenMode(self: FileReadOptions)=value
+ """true means we are reading the information into an empty document.  This
+
+   means you need to consider things like:
+
+   Setting the unit system (if the file has a unit system)Creating a default layer if one is not there.Setting up appropriate views when you're finished reading.
+
+
+
+Get: OpenMode(self: FileReadOptions) -> bool
+
+
+
+Set: OpenMode(self: FileReadOptions)=value
+
 """
 
  ScaleGeometry=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """true: If ImportMode is true and the geometry in the file being read has
-   a unit system different from the model's unit system,then apply the unit
-   conversion scale to the file's geometry before adding it to the model.
-   
-   false: Do not scale. Once case where this happens is when an instance
-   definition is read from a file and the model space instance references
-   have been scaled. In case the instance definition geometry cannot be
-   scaled or the net result is that the size of the instance reference
-   object is scaled by the square of the scale factor.
-
-Get: ScaleGeometry(self: FileReadOptions) -> bool
-
-Set: ScaleGeometry(self: FileReadOptions)=value
+ """true: If ImportMode is true and the geometry in the file being read has
+
+   a unit system different from the model's unit system,then apply the unit
+
+   conversion scale to the file's geometry before adding it to the model.
+
+   
+
+   false: Do not scale. Once case where this happens is when an instance
+
+   definition is read from a file and the model space instance references
+
+   have been scaled. In case the instance definition geometry cannot be
+
+   scaled or the net result is that the size of the instance reference
+
+   object is scaled by the square of the scale factor.
+
+
+
+Get: ScaleGeometry(self: FileReadOptions) -> bool
+
+
+
+Set: ScaleGeometry(self: FileReadOptions)=value
+
 """
 
  UseScaleGeometry=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """If this parameter is true,then no questions are asked when unit conversion
-   scaling is optional and the setting specified by ScaleGeometry is used.
-
-Get: UseScaleGeometry(self: FileReadOptions) -> bool
-
-Set: UseScaleGeometry(self: FileReadOptions)=value
+ """If this parameter is true,then no questions are asked when unit conversion
+
+   scaling is optional and the setting specified by ScaleGeometry is used.
+
+
+
+Get: UseScaleGeometry(self: FileReadOptions) -> bool
+
+
+
+Set: UseScaleGeometry(self: FileReadOptions)=value
+
 """
 
 
@@ -2743,13 +3931,17 @@ class FileType(object):
   """ __new__(cls: type,extension: str,description: str) """
   pass
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: FileType) -> str
-
+ """Get: Description(self: FileType) -> str
+
+
+
 """
 
  Extension=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Extension(self: FileType) -> str
-
+ """Get: Extension(self: FileType) -> str
+
+
+
 """
 
 
@@ -2761,14 +3953,17 @@ class FileWriteOptions(object,IDisposable):
   pass
  def __enter__(self,*args):
   """
-  __enter__(self: IDisposable) -> object
-  
+  __enter__(self: IDisposable) -> object
+
+  
+
    Provides the implementation of __enter__ for objects which implement IDisposable.
   """
   pass
  def __exit__(self,*args):
   """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+
    Provides the implementation of __exit__ for objects which implement IDisposable.
   """
   pass
@@ -2779,166 +3974,236 @@ class FileWriteOptions(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  ApplyTransform=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ApplyTransform(self: FileWriteOptions) -> bool
-
-Set: ApplyTransform(self: FileWriteOptions)=value
+ """Get: ApplyTransform(self: FileWriteOptions) -> bool
+
+
+
+Set: ApplyTransform(self: FileWriteOptions)=value
+
 """
 
  FileVersion=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: FileVersion(self: FileWriteOptions) -> int
-
-Set: FileVersion(self: FileWriteOptions)=value
+ """Get: FileVersion(self: FileWriteOptions) -> int
+
+
+
+Set: FileVersion(self: FileWriteOptions)=value
+
 """
 
  IncludeBitmapTable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IncludeBitmapTable(self: FileWriteOptions) -> bool
-
-Set: IncludeBitmapTable(self: FileWriteOptions)=value
+ """Get: IncludeBitmapTable(self: FileWriteOptions) -> bool
+
+
+
+Set: IncludeBitmapTable(self: FileWriteOptions)=value
+
 """
 
  IncludeHistory=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IncludeHistory(self: FileWriteOptions) -> bool
-
-Set: IncludeHistory(self: FileWriteOptions)=value
+ """Get: IncludeHistory(self: FileWriteOptions) -> bool
+
+
+
+Set: IncludeHistory(self: FileWriteOptions)=value
+
 """
 
  IncludePreviewImage=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IncludePreviewImage(self: FileWriteOptions) -> bool
-
-Set: IncludePreviewImage(self: FileWriteOptions)=value
+ """Get: IncludePreviewImage(self: FileWriteOptions) -> bool
+
+
+
+Set: IncludePreviewImage(self: FileWriteOptions)=value
+
 """
 
  IncludeRenderMeshes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IncludeRenderMeshes(self: FileWriteOptions) -> bool
-
-Set: IncludeRenderMeshes(self: FileWriteOptions)=value
+ """Get: IncludeRenderMeshes(self: FileWriteOptions) -> bool
+
+
+
+Set: IncludeRenderMeshes(self: FileWriteOptions)=value
+
 """
 
  SuppressDialogBoxes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SuppressDialogBoxes(self: FileWriteOptions) -> bool
-
-Set: SuppressDialogBoxes(self: FileWriteOptions)=value
+ """Get: SuppressDialogBoxes(self: FileWriteOptions) -> bool
+
+
+
+Set: SuppressDialogBoxes(self: FileWriteOptions)=value
+
 """
 
  WriteAsTemplate=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WriteAsTemplate(self: FileWriteOptions) -> bool
-
-Set: WriteAsTemplate(self: FileWriteOptions)=value
+ """Get: WriteAsTemplate(self: FileWriteOptions) -> bool
+
+
+
+Set: WriteAsTemplate(self: FileWriteOptions)=value
+
 """
 
  WriteGeometryOnly=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WriteGeometryOnly(self: FileWriteOptions) -> bool
-
-Set: WriteGeometryOnly(self: FileWriteOptions)=value
+ """Get: WriteGeometryOnly(self: FileWriteOptions) -> bool
+
+
+
+Set: WriteGeometryOnly(self: FileWriteOptions)=value
+
 """
 
  WriteSelectedObjectsOnly=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WriteSelectedObjectsOnly(self: FileWriteOptions) -> bool
-
-Set: WriteSelectedObjectsOnly(self: FileWriteOptions)=value
+ """Get: WriteSelectedObjectsOnly(self: FileWriteOptions) -> bool
+
+
+
+Set: WriteSelectedObjectsOnly(self: FileWriteOptions)=value
+
 """
 
  WriteUserData=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WriteUserData(self: FileWriteOptions) -> bool
-
-Set: WriteUserData(self: FileWriteOptions)=value
+ """Get: WriteUserData(self: FileWriteOptions) -> bool
+
+
+
+Set: WriteUserData(self: FileWriteOptions)=value
+
 """
 
  Xform=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Xform(self: FileWriteOptions) -> Transform
-
-Set: Xform(self: FileWriteOptions)=value
+ """Get: Xform(self: FileWriteOptions) -> Transform
+
+
+
+Set: Xform(self: FileWriteOptions)=value
+
 """
 
 
 
 class SerializationOptions(object):
  """
- Contains options for serializing -or storing- data,
-    such as Rhino version and user data.
- 
+ Contains options for serializing -or storing- data,
+
+    such as Rhino version and user data.
+
+ 
+
  SerializationOptions()
  """
  RhinoVersion=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating the Rhino version.
-
-Get: RhinoVersion(self: SerializationOptions) -> int
-
-Set: RhinoVersion(self: SerializationOptions)=value
+ """Gets or sets a value indicating the Rhino version.
+
+
+
+Get: RhinoVersion(self: SerializationOptions) -> int
+
+
+
+Set: RhinoVersion(self: SerializationOptions)=value
+
 """
 
  WriteUserData=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether to write user data.
-
-Get: WriteUserData(self: SerializationOptions) -> bool
-
-Set: WriteUserData(self: SerializationOptions)=value
+ """Gets or sets a value indicating whether to write user data.
+
+
+
+Get: WriteUserData(self: SerializationOptions) -> bool
+
+
+
+Set: WriteUserData(self: SerializationOptions)=value
+
 """
 
 
 
 class TextLog(object,IDisposable):
  """
- Used for collecting text data
- 
- TextLog()
+ Used for collecting text data
+
+ 
+
+ TextLog()
+
  TextLog(filename: str)
  """
  def Dispose(self):
   """
-  Dispose(self: TextLog)
+  Dispose(self: TextLog)
+
    Actively reclaims unmanaged resources that this instance uses.
   """
   pass
  def PopIndent(self):
   """
-  PopIndent(self: TextLog)
+  PopIndent(self: TextLog)
+
    Decrease the indentation level
   """
   pass
  def Print(self,*__args):
   """
-  Print(self: TextLog,format: str,arg0: object,arg1: object)
-   Send formatted text to the textlog
-  Print(self: TextLog,format: str,arg0: object)
-   Send formatted text to the textlog
-  Print(self: TextLog,text: str)
+  Print(self: TextLog,format: str,arg0: object,arg1: object)
+
+   Send formatted text to the textlog
+
+  Print(self: TextLog,format: str,arg0: object)
+
+   Send formatted text to the textlog
+
+  Print(self: TextLog,text: str)
+
    Send text to the textlog
   """
   pass
  def PrintWrappedText(self,text,lineLength):
   """
-  PrintWrappedText(self: TextLog,text: str,lineLength: int)
+  PrintWrappedText(self: TextLog,text: str,lineLength: int)
+
    Send text wrapped at a set line length
   """
   pass
  def PushIndent(self):
   """
-  PushIndent(self: TextLog)
+  PushIndent(self: TextLog)
+
    Increase the indentation level
   """
   pass
  def ToString(self):
   """
-  ToString(self: TextLog) -> str
-  
-   If the TextLog was constructed using the empty constructor,then the text
-     
-    information is stored in a runtime string.  The contents of this string
-     is 
+  ToString(self: TextLog) -> str
+
+  
+
+   If the TextLog was constructed using the empty constructor,then the text
+
+     
+
+    information is stored in a runtime string.  The contents of this string
+
+     is 
+
     retrieved using ToString for this case
   """
   pass
  def __enter__(self,*args):
   """
-  __enter__(self: IDisposable) -> object
-  
+  __enter__(self: IDisposable) -> object
+
+  
+
    Provides the implementation of __enter__ for objects which implement IDisposable.
   """
   pass
  def __exit__(self,*args):
   """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+
    Provides the implementation of __exit__ for objects which implement IDisposable.
   """
   pass
@@ -2948,7 +4213,8 @@ class TextLog(object,IDisposable):
  @staticmethod
  def __new__(self,filename=None):
   """
-  __new__(cls: type)
+  __new__(cls: type)
+
   __new__(cls: type,filename: str)
   """
   pass
@@ -2958,11 +4224,16 @@ class TextLog(object,IDisposable):
  def __str__(self,*args):
   pass
  IndentSize=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """0: one tab per indent. >0: number of spaces per indent
-
-Get: IndentSize(self: TextLog) -> int
-
-Set: IndentSize(self: TextLog)=value
+ """0: one tab per indent. >0: number of spaces per indent
+
+
+
+Get: IndentSize(self: TextLog) -> int
+
+
+
+Set: IndentSize(self: TextLog)=value
+
 """
 
 

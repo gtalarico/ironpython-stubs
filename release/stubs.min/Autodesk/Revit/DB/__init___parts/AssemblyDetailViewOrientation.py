@@ -1,7 +1,9 @@
 class AssemblyDetailViewOrientation(Enum,IComparable,IFormattable,IConvertible):
  """
- Orientation of the Assembly Detail View.
- 
+ Orientation of the Assembly Detail View.
+
+ 
+
  enum AssemblyDetailViewOrientation,values: DetailSectionA (1),DetailSectionB (2),ElevationBack (8),ElevationBottom (4),ElevationFront (7),ElevationLeft (5),ElevationRight (6),ElevationTop (3),HorizontalDetail (0)
  """
  def __eq__(self,*args):

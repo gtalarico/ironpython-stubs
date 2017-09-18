@@ -1,7 +1,9 @@
 class AdaptivePointType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type containing possible types for Adaptive Points.
- 
+ An enumerated type containing possible types for Adaptive Points.
+
+ 
+
  enum AdaptivePointType,values: PlacementPoint (1),ReferencePoint (0),ShapeHandlePoint (2)
  """
  def __eq__(self,*args):

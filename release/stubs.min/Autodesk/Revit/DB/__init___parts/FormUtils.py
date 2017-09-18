@@ -7,7 +7,8 @@ class FormUtils(object):
  @staticmethod
  def DissolveForms(ADoc,elements,BondingPointSet=None):
   """
-  DissolveForms(ADoc: Document,elements: ICollection[ElementId]) -> (ICollection[ElementId],ICollection[ElementId])
+  DissolveForms(ADoc: Document,elements: ICollection[ElementId]) -> (ICollection[ElementId],ICollection[ElementId])
+
   DissolveForms(ADoc: Document,elements: ICollection[ElementId]) -> ICollection[ElementId]
   """
   pass

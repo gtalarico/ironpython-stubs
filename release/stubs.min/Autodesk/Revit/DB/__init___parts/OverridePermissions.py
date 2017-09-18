@@ -1,7 +1,9 @@
 class OverridePermissions(Enum,IComparable,IFormattable,IConvertible):
  """
- Types of overrides that can be applied to a category.
- 
+ Types of overrides that can be applied to a category.
+
+ 
+
  enum OverridePermissions,values: CutFills (4),CutLines (3),Halftone (2),ProjectionFills (6),ProjectionLines (5),Surfaces (7),ViewDetailLevel (1)
  """
  def __eq__(self,*args):

@@ -3,17 +3,28 @@ class Ellipse(Curve,IDisposable):
  @staticmethod
  def Create(center,xRadius,yRadius,xAxis,yAxis,startParameter,endParameter):
   """
-  Create(center: XYZ,xRadius: float,yRadius: float,xAxis: XYZ,yAxis: XYZ,startParameter: float,endParameter: float) -> Ellipse
-  
-   Creates a new geometric ellipse or elliptical arc object.
-  
-   center: The center.
-   xRadius: The x vector radius of the ellipse.
-   yRadius: The y vector radius of the ellipse.
-   xAxis: The x axis to define the ellipse plane.  Must be normalized.
-   yAxis: The y axis to define the ellipse plane.   Must be normalized.
-   startParameter: The raw parameter value at the start of the ellipse.
-   endParameter: The raw parameter value at the end of the ellipse.
+  Create(center: XYZ,xRadius: float,yRadius: float,xAxis: XYZ,yAxis: XYZ,startParameter: float,endParameter: float) -> Ellipse
+
+  
+
+   Creates a new geometric ellipse or elliptical arc object.
+
+  
+
+   center: The center.
+
+   xRadius: The x vector radius of the ellipse.
+
+   yRadius: The y vector radius of the ellipse.
+
+   xAxis: The x axis to define the ellipse plane.  Must be normalized.
+
+   yAxis: The y axis to define the ellipse plane.   Must be normalized.
+
+   startParameter: The raw parameter value at the start of the ellipse.
+
+   endParameter: The raw parameter value at the end of the ellipse.
+
    Returns: The new ellipse or elliptical arc.
   """
   pass
@@ -36,45 +47,69 @@ class Ellipse(Curve,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Center=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the center of the ellipse.
-
-Get: Center(self: Ellipse) -> XYZ
-
+ """Returns the center of the ellipse.
+
+
+
+Get: Center(self: Ellipse) -> XYZ
+
+
+
 """
 
  Normal=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the normal to the plane in which the ellipse is defined.
-
-Get: Normal(self: Ellipse) -> XYZ
-
+ """Returns the normal to the plane in which the ellipse is defined.
+
+
+
+Get: Normal(self: Ellipse) -> XYZ
+
+
+
 """
 
  RadiusX=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the X vector radius of the ellipse.
-
-Get: RadiusX(self: Ellipse) -> float
-
+ """Returns the X vector radius of the ellipse.
+
+
+
+Get: RadiusX(self: Ellipse) -> float
+
+
+
 """
 
  RadiusY=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the Y vector radius of the ellipse.
-
-Get: RadiusY(self: Ellipse) -> float
-
+ """Returns the Y vector radius of the ellipse.
+
+
+
+Get: RadiusY(self: Ellipse) -> float
+
+
+
 """
 
  XDirection=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The X direction.
-
-Get: XDirection(self: Ellipse) -> XYZ
-
+ """The X direction.
+
+
+
+Get: XDirection(self: Ellipse) -> XYZ
+
+
+
 """
 
  YDirection=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The Y direction.
-
-Get: YDirection(self: Ellipse) -> XYZ
-
+ """The Y direction.
+
+
+
+Get: YDirection(self: Ellipse) -> XYZ
+
+
+
 """
 
 

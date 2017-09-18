@@ -1,7 +1,9 @@
 class GeneratorDirection(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the direction in which item generation will occur. System.Windows.Controls.Primitives.GeneratorDirection is used by erload:System.Windows.Controls.Primitives.IItemContainerGenerator.StartAt.
- 
+ Specifies the direction in which item generation will occur. System.Windows.Controls.Primitives.GeneratorDirection is used by erload:System.Windows.Controls.Primitives.IItemContainerGenerator.StartAt.
+
+ 
+
  enum GeneratorDirection,values: Backward (1),Forward (0)
  """
  def __eq__(self,*args):

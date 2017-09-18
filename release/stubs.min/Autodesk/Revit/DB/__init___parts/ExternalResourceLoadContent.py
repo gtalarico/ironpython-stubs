@@ -1,6 +1,7 @@
 class ExternalResourceLoadContent(object,IDisposable):
  """
- This class contains the actual content data and other results of an external resource load operation that are
+ This class contains the actual content data and other results of an external resource load operation that are
+
     returned by an IExternalResourceServer to Revit.
  """
  def Dispose(self):
@@ -22,27 +23,42 @@ class ExternalResourceLoadContent(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ExternalResourceLoadContent) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ExternalResourceLoadContent) -> bool
+
+
+
 """
 
  LoadStatus=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """A value to indicate the status of an external resource load operation.  IExternalResourceServers
-   should set this in the LoadResource() method.
-
-Get: LoadStatus(self: ExternalResourceLoadContent) -> ExternalResourceLoadStatus
-
-Set: LoadStatus(self: ExternalResourceLoadContent)=value
+ """A value to indicate the status of an external resource load operation.  IExternalResourceServers
+
+   should set this in the LoadResource() method.
+
+
+
+Get: LoadStatus(self: ExternalResourceLoadContent) -> ExternalResourceLoadStatus
+
+
+
+Set: LoadStatus(self: ExternalResourceLoadContent)=value
+
 """
 
  Version=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The version of the external data that the server is providing in this object.
-
-Get: Version(self: ExternalResourceLoadContent) -> str
-
-Set: Version(self: ExternalResourceLoadContent)=value
+ """The version of the external data that the server is providing in this object.
+
+
+
+Get: Version(self: ExternalResourceLoadContent) -> str
+
+
+
+Set: Version(self: ExternalResourceLoadContent)=value
+
 """
 
 

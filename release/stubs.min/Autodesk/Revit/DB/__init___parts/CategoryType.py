@@ -1,7 +1,9 @@
 class CategoryType(Enum,IComparable,IFormattable,IConvertible):
  """
- The type of category.
- 
+ The type of category.
+
+ 
+
  enum CategoryType,values: AnalyticalModel (5),Annotation (2),Internal (4),Invalid (0),Model (1)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class SunAndShadowType(Enum,IComparable,IFormattable,IConvertible):
  """
- Enum of sun study type.
- 
+ Enum of sun study type.
+
+ 
+
  enum SunAndShadowType,values: Lighting (3),MultiDayStudy (2),OneDayStudy (1),StillImage (0)
  """
  def __eq__(self,*args):

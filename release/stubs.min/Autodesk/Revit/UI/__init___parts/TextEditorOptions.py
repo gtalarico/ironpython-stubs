@@ -6,9 +6,12 @@ class TextEditorOptions(object,IDisposable):
  @staticmethod
  def GetTextEditorOptions():
   """
-  GetTextEditorOptions() -> TextEditorOptions
-  
-   Returns the current Revit instance's TextEditorOptions.
+  GetTextEditorOptions() -> TextEditorOptions
+
+  
+
+   Returns the current Revit instance's TextEditorOptions.
+
    Returns: The TextEditorOptions for the current Revit instance.
   """
   pass
@@ -28,26 +31,40 @@ class TextEditorOptions(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: TextEditorOptions) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: TextEditorOptions) -> bool
+
+
+
 """
 
  ShowBorder=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Show the border box around the text during editing.
-
-Get: ShowBorder(self: TextEditorOptions) -> bool
-
-Set: ShowBorder(self: TextEditorOptions)=value
+ """Show the border box around the text during editing.
+
+
+
+Get: ShowBorder(self: TextEditorOptions) -> bool
+
+
+
+Set: ShowBorder(self: TextEditorOptions)=value
+
 """
 
  ShowOpaqueBackground=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Show opaque background behind the text during editing.
-
-Get: ShowOpaqueBackground(self: TextEditorOptions) -> bool
-
-Set: ShowOpaqueBackground(self: TextEditorOptions)=value
+ """Show opaque background behind the text during editing.
+
+
+
+Get: ShowOpaqueBackground(self: TextEditorOptions) -> bool
+
+
+
+Set: ShowOpaqueBackground(self: TextEditorOptions)=value
+
 """
 
 

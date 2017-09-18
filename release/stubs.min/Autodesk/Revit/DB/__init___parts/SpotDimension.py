@@ -22,18 +22,27 @@ class SpotDimension(Dimension,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Location=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get a location point object. This is the location of the spot dimension.
-
-Get: Location(self: SpotDimension) -> Location
-
+ """Get a location point object. This is the location of the spot dimension.
+
+
+
+Get: Location(self: SpotDimension) -> Location
+
+
+
 """
 
  SpotDimensionType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The dimension style of this dimension.
-
-Get: SpotDimensionType(self: SpotDimension) -> SpotDimensionType
-
-Set: SpotDimensionType(self: SpotDimension)=value
+ """The dimension style of this dimension.
+
+
+
+Get: SpotDimensionType(self: SpotDimension) -> SpotDimensionType
+
+
+
+Set: SpotDimensionType(self: SpotDimension)=value
+
 """
 
 

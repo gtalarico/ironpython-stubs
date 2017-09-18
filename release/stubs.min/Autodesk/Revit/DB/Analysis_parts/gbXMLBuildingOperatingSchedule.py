@@ -1,8 +1,11 @@
 class gbXMLBuildingOperatingSchedule(Enum,IComparable,IFormattable,IConvertible):
  """
- Enumerations for gbXML (Green Building XML) format,used for energy
-    analysis,schema version 0.34.
- 
+ Enumerations for gbXML (Green Building XML) format,used for energy
+
+    analysis,schema version 0.34.
+
+ 
+
  enum gbXMLBuildingOperatingSchedule,values: DefaultOperatingSchedule (0),KindergartenThruTwelveGradeSchool (7),NoOfOperatingScheduleEnums (11),TheaterPerformingArts (9),TwelveHourFiveDayFacility (6),TwelveHourSevenDayFacility (4),TwelveHourSixDayFacility (5),TwentyFourHourHourFiveDayFacility (3),TwentyFourHourHourSixDayFacility (2),TwentyFourHourSevenDayFacility (1),Worship (10),YearRoundSchool (8)
  """
  def __eq__(self,*args):

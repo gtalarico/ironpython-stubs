@@ -5,55 +5,84 @@ class FabricationService(object,IDisposable):
   pass
  def GetButton(self,groupIndex,buttonIndex):
   """
-  GetButton(self: FabricationService,groupIndex: int,buttonIndex: int) -> FabricationServiceButton
-  
-   Gets the service button for a given group index and button index from the 
-    service.
-  
-  
-   groupIndex: The group index.
-   buttonIndex: The button index.
+  GetButton(self: FabricationService,groupIndex: int,buttonIndex: int) -> FabricationServiceButton
+
+  
+
+   Gets the service button for a given group index and button index from the 
+
+    service.
+
+  
+
+  
+
+   groupIndex: The group index.
+
+   buttonIndex: The button index.
+
    Returns: The service button
   """
   pass
  def GetButtonCount(self,group):
   """
-  GetButtonCount(self: FabricationService,group: int) -> int
-  
-   Gets the number of buttons for a given group in the service.
-  
-   group: The index of the group
+  GetButtonCount(self: FabricationService,group: int) -> int
+
+  
+
+   Gets the number of buttons for a given group in the service.
+
+  
+
+   group: The index of the group
+
    Returns: The number of buttons.
   """
   pass
  def GetGroupName(self,group):
   """
-  GetGroupName(self: FabricationService,group: int) -> str
-  
-   Gets the name of a group based on group index.
-  
-   group: The index of the group.
+  GetGroupName(self: FabricationService,group: int) -> str
+
+  
+
+   Gets the name of a group based on group index.
+
+  
+
+   group: The index of the group.
+
    Returns: The name of the group.
   """
   pass
  def IsValidButtonIndex(self,groupIndex,buttonIndex):
   """
-  IsValidButtonIndex(self: FabricationService,groupIndex: int,buttonIndex: int) -> bool
-  
-   Validates the button index.
-  
-   groupIndex: The group index.
-   buttonIndex: The button index to check.
+  IsValidButtonIndex(self: FabricationService,groupIndex: int,buttonIndex: int) -> bool
+
+  
+
+   Validates the button index.
+
+  
+
+   groupIndex: The group index.
+
+   buttonIndex: The button index to check.
+
    Returns: True if larger or equal to 0 and less than GroupCount.
   """
   pass
  def IsValidGroupIndex(self,groupIndex):
   """
-  IsValidGroupIndex(self: FabricationService,groupIndex: int) -> bool
-  
-   Validates the group index.
-  
-   groupIndex: The group index to check.
+  IsValidGroupIndex(self: FabricationService,groupIndex: int) -> bool
+
+  
+
+   Validates the group index.
+
+  
+
+   groupIndex: The group index to check.
+
    Returns: True if larger or equal to 0 and less than GroupCount.
   """
   pass
@@ -73,45 +102,69 @@ class FabricationService(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Abbreviation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The short name of service.
-
-Get: Abbreviation(self: FabricationService) -> str
-
+ """The short name of service.
+
+
+
+Get: Abbreviation(self: FabricationService) -> str
+
+
+
 """
 
  FabricationSystemName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The fabrication system name of the service.
-
-Get: FabricationSystemName(self: FabricationService) -> str
-
+ """The fabrication system name of the service.
+
+
+
+Get: FabricationSystemName(self: FabricationService) -> str
+
+
+
 """
 
  GroupCount=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The number of groups in the service.
-
-Get: GroupCount(self: FabricationService) -> int
-
+ """The number of groups in the service.
+
+
+
+Get: GroupCount(self: FabricationService) -> int
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: FabricationService) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: FabricationService) -> bool
+
+
+
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The name of the service.
-
-Get: Name(self: FabricationService) -> str
-
+ """The name of the service.
+
+
+
+Get: Name(self: FabricationService) -> str
+
+
+
 """
 
  ServiceId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The service identifier of the service.
-
-Get: ServiceId(self: FabricationService) -> int
-
+ """The service identifier of the service.
+
+
+
+Get: ServiceId(self: FabricationService) -> int
+
+
+
 """
 
 

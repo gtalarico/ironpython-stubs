@@ -1,9 +1,13 @@
 class SEHException(ExternalException,ISerializable,_Exception):
  """
- Represents structured exception handling (SEH) errors.
- 
- SEHException()
- SEHException(message: str)
+ Represents structured exception handling (SEH) errors.
+
+ 
+
+ SEHException()
+
+ SEHException(message: str)
+
  SEHException(message: str,inner: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -11,11 +15,16 @@ class SEHException(ExternalException,ISerializable,_Exception):
   pass
  def CanResume(self):
   """
-  CanResume(self: SEHException) -> bool
-  
-   Indicates whether the exception can be recovered from,and whether the code can continue from 
-    the point at which the exception was thrown.
-  
+  CanResume(self: SEHException) -> bool
+
+  
+
+   Indicates whether the exception can be recovered from,and whether the code can continue from 
+
+    the point at which the exception was thrown.
+
+  
+
    Returns: Always false,because resumable exceptions are not implemented.
   """
   pass
@@ -28,9 +37,12 @@ class SEHException(ExternalException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,inner=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,inner: Exception)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,inner: Exception)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

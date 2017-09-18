@@ -1,6 +1,7 @@
 class ViewSheetSet(Element,IDisposable,IViewSheetSet):
  """
- Represents ViewSheetSets stored in a document.
+ Represents ViewSheetSets stored in a document.
+
  ViewSheetSets can be stored so that the same printing task can be executed multiple times.
  """
  def Dispose(self):
@@ -25,19 +26,29 @@ class ViewSheetSet(Element,IDisposable,IViewSheetSet):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The view sheet set name.
-
-Get: Name(self: ViewSheetSet) -> str
-
-Set: Name(self: ViewSheetSet)=value
+ """The view sheet set name.
+
+
+
+Get: Name(self: ViewSheetSet) -> str
+
+
+
+Set: Name(self: ViewSheetSet)=value
+
 """
 
  Views=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The views.
-
-Get: Views(self: ViewSheetSet) -> ViewSet
-
-Set: Views(self: ViewSheetSet)=value
+ """The views.
+
+
+
+Get: Views(self: ViewSheetSet) -> ViewSet
+
+
+
+Set: Views(self: ViewSheetSet)=value
+
 """
 
 

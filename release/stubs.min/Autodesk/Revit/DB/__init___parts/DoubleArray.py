@@ -1,7 +1,9 @@
 class DoubleArray(APIObject,IDisposable,IEnumerable):
  """
- An array that contains doubles.
- 
+ An array that contains doubles.
+
+ 
+
  DoubleArray()
  """
  def Append(self,item):
@@ -9,7 +11,8 @@ class DoubleArray(APIObject,IDisposable,IEnumerable):
   pass
  def Clear(self):
   """
-  Clear(self: DoubleArray)
+  Clear(self: DoubleArray)
+
    Removes every double from the array,rendering it empty.
   """
   pass
@@ -18,17 +21,23 @@ class DoubleArray(APIObject,IDisposable,IEnumerable):
   pass
  def ForwardIterator(self):
   """
-  ForwardIterator(self: DoubleArray) -> DoubleArrayIterator
-  
-   Retrieve a forward moving iterator to the array.
+  ForwardIterator(self: DoubleArray) -> DoubleArrayIterator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: DoubleArray) -> IEnumerator
-  
-   Retrieve a forward moving iterator to the array.
+  GetEnumerator(self: DoubleArray) -> IEnumerator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
@@ -43,9 +52,12 @@ class DoubleArray(APIObject,IDisposable,IEnumerable):
   pass
  def ReverseIterator(self):
   """
-  ReverseIterator(self: DoubleArray) -> DoubleArrayIterator
-  
-   Retrieve a backward moving iterator to the array.
+  ReverseIterator(self: DoubleArray) -> DoubleArrayIterator
+
+  
+
+   Retrieve a backward moving iterator to the array.
+
    Returns: Returns a backward moving iterator to the array.
   """
   pass
@@ -68,17 +80,25 @@ class DoubleArray(APIObject,IDisposable,IEnumerable):
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Test to see if the array is empty.
-
-Get: IsEmpty(self: DoubleArray) -> bool
-
+ """Test to see if the array is empty.
+
+
+
+Get: IsEmpty(self: DoubleArray) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the number of doubles that are in the array.
-
-Get: Size(self: DoubleArray) -> int
-
+ """Returns the number of doubles that are in the array.
+
+
+
+Get: Size(self: DoubleArray) -> int
+
+
+
 """
 
 

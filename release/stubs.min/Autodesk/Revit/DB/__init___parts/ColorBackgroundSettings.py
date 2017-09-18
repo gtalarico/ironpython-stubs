@@ -16,11 +16,16 @@ class ColorBackgroundSettings(BackgroundSettings,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Color=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The color of the rendering background.
-
-Get: Color(self: ColorBackgroundSettings) -> Color
-
-Set: Color(self: ColorBackgroundSettings)=value
+ """The color of the rendering background.
+
+
+
+Get: Color(self: ColorBackgroundSettings) -> Color
+
+
+
+Set: Color(self: ColorBackgroundSettings)=value
+
 """
 
 

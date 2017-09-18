@@ -1,10 +1,15 @@
 class DistributionOfNormals(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumeration containing the choices of how normal vectors are assigned
-    and distributed along the surface of a polymesh. Planar faces would typically
-    have only normal vector associated,but curved faces can have a different
-    normal either for each facet (triangle) or each point of the tessellated polymesh.
- 
+ An enumeration containing the choices of how normal vectors are assigned
+
+    and distributed along the surface of a polymesh. Planar faces would typically
+
+    have only normal vector associated,but curved faces can have a different
+
+    normal either for each facet (triangle) or each point of the tessellated polymesh.
+
+ 
+
  enum DistributionOfNormals,values: AtEachPoint (0),OnEachFacet (2),OnePerFace (1)
  """
  def __eq__(self,*args):

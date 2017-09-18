@@ -22,11 +22,16 @@ class CableTrayConduitRunBase(Element,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Length=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The length of the whole (cable tray or conduit) run
-   default 0.0
-
-Get: Length(self: CableTrayConduitRunBase) -> float
-
+ """The length of the whole (cable tray or conduit) run
+
+   default 0.0
+
+
+
+Get: Length(self: CableTrayConduitRunBase) -> float
+
+
+
 """
 
 

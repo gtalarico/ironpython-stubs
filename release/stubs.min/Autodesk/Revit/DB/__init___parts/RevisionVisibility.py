@@ -1,7 +1,9 @@
 class RevisionVisibility(Enum,IComparable,IFormattable,IConvertible):
  """
- Determines whether Revision Clouds and Revision Tags will be visible in the project.
- 
+ Determines whether Revision Clouds and Revision Tags will be visible in the project.
+
+ 
+
  enum RevisionVisibility,values: CloudAndTagVisible (1),Hidden (0),TagVisible (2)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class LayoutRuleFixedDistance(LayoutRule,IDisposable):
  """
- This class indicate the layout rule of a Beam System is Fixed-Distance.
- 
+ This class indicate the layout rule of a Beam System is Fixed-Distance.
+
+ 
+
  LayoutRuleFixedDistance(spacing: float,justifyType: BeamSystemJustifyType)
  """
  def Dispose(self):
@@ -27,19 +29,29 @@ class LayoutRuleFixedDistance(LayoutRule,IDisposable):
   """ __new__(cls: type,spacing: float,justifyType: BeamSystemJustifyType) """
   pass
  JustifyType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get or set the type of justification.
-
-Get: JustifyType(self: LayoutRuleFixedDistance) -> BeamSystemJustifyType
-
-Set: JustifyType(self: LayoutRuleFixedDistance)=value
+ """Get or set the type of justification.
+
+
+
+Get: JustifyType(self: LayoutRuleFixedDistance) -> BeamSystemJustifyType
+
+
+
+Set: JustifyType(self: LayoutRuleFixedDistance)=value
+
 """
 
  Spacing=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get or set spacing of the Beam System.
-
-Get: Spacing(self: LayoutRuleFixedDistance) -> float
-
-Set: Spacing(self: LayoutRuleFixedDistance)=value
+ """Get or set spacing of the Beam System.
+
+
+
+Get: Spacing(self: LayoutRuleFixedDistance) -> float
+
+
+
+Set: Spacing(self: LayoutRuleFixedDistance)=value
+
 """
 
 

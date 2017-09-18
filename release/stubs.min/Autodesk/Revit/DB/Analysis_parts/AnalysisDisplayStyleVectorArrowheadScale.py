@@ -1,7 +1,9 @@
 class AnalysisDisplayStyleVectorArrowheadScale(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines arrow head scaling for vector settings of analysis display style.
- 
+ Defines arrow head scaling for vector settings of analysis display style.
+
+ 
+
  enum AnalysisDisplayStyleVectorArrowheadScale,values: Length10Percent (2),Length15Percent (3),Length20Percent (4),Length5Percent (1),NoScaling (0)
  """
  def __eq__(self,*args):

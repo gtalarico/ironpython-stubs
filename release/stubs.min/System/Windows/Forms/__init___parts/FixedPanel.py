@@ -1,7 +1,9 @@
 class FixedPanel(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies that System.Windows.Forms.SplitContainer.Panel1,System.Windows.Forms.SplitContainer.Panel2,or neither panel is fixed.
- 
+ Specifies that System.Windows.Forms.SplitContainer.Panel1,System.Windows.Forms.SplitContainer.Panel2,or neither panel is fixed.
+
+ 
+
  enum FixedPanel,values: None (0),Panel1 (1),Panel2 (2)
  """
  def __eq__(self,*args):

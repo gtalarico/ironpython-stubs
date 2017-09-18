@@ -9,11 +9,16 @@ class FilledRegionType(LineAndTextAttrSymbol,IDisposable):
  @staticmethod
  def IsValidLineWeight(lineWeight):
   """
-  IsValidLineWeight(lineWeight: int) -> bool
-  
-   Indicates whether the given line weight value is valid.
-  
-   lineWeight: The line weight.
+  IsValidLineWeight(lineWeight: int) -> bool
+
+  
+
+   Indicates whether the given line weight value is valid.
+
+  
+
+   lineWeight: The line weight.
+
    Returns: True if it is a valid line weight value,false otherwise.
   """
   pass
@@ -33,35 +38,55 @@ class FilledRegionType(LineAndTextAttrSymbol,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Background=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The background.
-
-Get: Background(self: FilledRegionType) -> FilledRegionBackground
-
-Set: Background(self: FilledRegionType)=value
+ """The background.
+
+
+
+Get: Background(self: FilledRegionType) -> FilledRegionBackground
+
+
+
+Set: Background(self: FilledRegionType)=value
+
 """
 
  Color=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The color of the fill pattern.
-
-Get: Color(self: FilledRegionType) -> Color
-
-Set: Color(self: FilledRegionType)=value
+ """The color of the fill pattern.
+
+
+
+Get: Color(self: FilledRegionType) -> Color
+
+
+
+Set: Color(self: FilledRegionType)=value
+
 """
 
  FillPatternId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The fill pattern Id.
-
-Get: FillPatternId(self: FilledRegionType) -> ElementId
-
-Set: FillPatternId(self: FilledRegionType)=value
+ """The fill pattern Id.
+
+
+
+Get: FillPatternId(self: FilledRegionType) -> ElementId
+
+
+
+Set: FillPatternId(self: FilledRegionType)=value
+
 """
 
  LineWeight=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The line weight of the fill pattern.
-
-Get: LineWeight(self: FilledRegionType) -> int
-
-Set: LineWeight(self: FilledRegionType)=value
+ """The line weight of the fill pattern.
+
+
+
+Get: LineWeight(self: FilledRegionType) -> int
+
+
+
+Set: LineWeight(self: FilledRegionType)=value
+
 """
 
 

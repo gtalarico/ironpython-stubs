@@ -1,7 +1,9 @@
 class ElementReferenceType(Enum,IComparable,IFormattable,IConvertible):
  """
- Element reference types.
- 
+ Element reference types.
+
+ 
+
  enum ElementReferenceType,values: REFERENCE_TYPE_CUT_EDGE (5),REFERENCE_TYPE_FOREIGN (3),REFERENCE_TYPE_INSTANCE (4),REFERENCE_TYPE_LINEAR (1),REFERENCE_TYPE_MESH (6),REFERENCE_TYPE_NONE (0),REFERENCE_TYPE_SURFACE (2)
  """
  def __eq__(self,*args):

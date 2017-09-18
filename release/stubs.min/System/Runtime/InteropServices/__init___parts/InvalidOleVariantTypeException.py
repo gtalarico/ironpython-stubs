@@ -1,9 +1,13 @@
 class InvalidOleVariantTypeException(SystemException,ISerializable,_Exception):
  """
- The exception thrown by the marshaler when it encounters an argument of a variant type that can not be marshaled to managed code.
- 
- InvalidOleVariantTypeException()
- InvalidOleVariantTypeException(message: str)
+ The exception thrown by the marshaler when it encounters an argument of a variant type that can not be marshaled to managed code.
+
+ 
+
+ InvalidOleVariantTypeException()
+
+ InvalidOleVariantTypeException(message: str)
+
  InvalidOleVariantTypeException(message: str,inner: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,9 +22,12 @@ class InvalidOleVariantTypeException(SystemException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,inner=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,inner: Exception)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,inner: Exception)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

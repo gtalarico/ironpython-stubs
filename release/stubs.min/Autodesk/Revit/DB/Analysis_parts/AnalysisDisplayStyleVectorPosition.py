@@ -1,7 +1,9 @@
 class AnalysisDisplayStyleVectorPosition(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines vector position for vector settings of analysis display style.
- 
+ Defines vector position for vector settings of analysis display style.
+
+ 
+
  enum AnalysisDisplayStyleVectorPosition,values: FromDataPoint (1),ToDataPoint (0)
  """
  def __eq__(self,*args):

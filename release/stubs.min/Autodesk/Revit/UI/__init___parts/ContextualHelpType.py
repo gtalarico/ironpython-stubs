@@ -1,7 +1,9 @@
 class ContextualHelpType(Enum,IComparable,IFormattable,IConvertible):
  """
- Represents the contextual help type.
- 
+ Represents the contextual help type.
+
+ 
+
  enum ContextualHelpType,values: ChmFile (3),ContextId (1),None (0),Url (2)
  """
  def __eq__(self,*args):

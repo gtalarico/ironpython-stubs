@@ -46,13 +46,17 @@ class ExternalApplicationArray(APIObject,IDisposable,IEnumerable):
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsEmpty(self: ExternalApplicationArray) -> bool
-
+ """Get: IsEmpty(self: ExternalApplicationArray) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Size(self: ExternalApplicationArray) -> int
-
+ """Get: Size(self: ExternalApplicationArray) -> int
+
+
+
 """
 
 

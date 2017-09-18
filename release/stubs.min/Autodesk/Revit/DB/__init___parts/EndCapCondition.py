@@ -1,7 +1,9 @@
 class EndCapCondition(Enum,IComparable,IFormattable,IConvertible):
  """
- Used by CompoundStructure to describe which shell layers participate in end wrapping.
- 
+ Used by CompoundStructure to describe which shell layers participate in end wrapping.
+
+ 
+
  enum EndCapCondition,values: Exterior (1),Interior (2),NoEndCap (3),None (0)
  """
  def __eq__(self,*args):

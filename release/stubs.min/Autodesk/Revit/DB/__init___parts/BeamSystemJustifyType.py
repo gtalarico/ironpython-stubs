@@ -1,7 +1,9 @@
 class BeamSystemJustifyType(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes the justify method of beamsystem.
- 
+ Describes the justify method of beamsystem.
+
+ 
+
  enum BeamSystemJustifyType,values: Beginning (3),Center (1),DirectionLine (4),End (2)
  """
  def __eq__(self,*args):

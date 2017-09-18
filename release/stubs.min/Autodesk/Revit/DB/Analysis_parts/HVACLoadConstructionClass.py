@@ -1,7 +1,9 @@
 class HVACLoadConstructionClass(Enum,IComparable,IFormattable,IConvertible):
  """
- Enumerated type listing options for construction class for HVAC analysis.
- 
+ Enumerated type listing options for construction class for HVAC analysis.
+
+ 
+
  enum HVACLoadConstructionClass,values: LooseConstruction (0),MediumConstruction (1),NoneConstruction (3),TightConstruction (2)
  """
  def __eq__(self,*args):

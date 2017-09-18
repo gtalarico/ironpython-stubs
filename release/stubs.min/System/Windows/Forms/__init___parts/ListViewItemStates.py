@@ -1,7 +1,9 @@
 class ListViewItemStates(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines constants that represent the possible states of a System.Windows.Forms.ListViewItem.
- 
+ Defines constants that represent the possible states of a System.Windows.Forms.ListViewItem.
+
+ 
+
  enum (flags) ListViewItemStates,values: Checked (8),Default (32),Focused (16),Grayed (2),Hot (64),Indeterminate (256),Marked (128),Selected (1),ShowKeyboardCues (512)
  """
  def __eq__(self,*args):

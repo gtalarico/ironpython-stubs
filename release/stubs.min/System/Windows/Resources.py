@@ -10,8 +10,10 @@
 
 class AssemblyAssociatedContentFileAttribute(Attribute,_Attribute):
  """
- This attribute is interpreted during the Extensible Application Markup Language (XAML) compilation process to associate loose content with a Windows Presentation Foundation (WPF) application.
- 
+ This attribute is interpreted during the Extensible Application Markup Language (XAML) compilation process to associate loose content with a Windows Presentation Foundation (WPF) application.
+
+ 
+
  AssemblyAssociatedContentFileAttribute(relativeContentFilePath: str)
  """
  def __init__(self,*args):
@@ -22,10 +24,14 @@ class AssemblyAssociatedContentFileAttribute(Attribute,_Attribute):
   """ __new__(cls: type,relativeContentFilePath: str) """
   pass
  RelativeContentFilePath=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the path to the associated content.
-
-Get: RelativeContentFilePath(self: AssemblyAssociatedContentFileAttribute) -> str
-
+ """Gets the path to the associated content.
+
+
+
+Get: RelativeContentFilePath(self: AssemblyAssociatedContentFileAttribute) -> str
+
+
+
 """
 
 

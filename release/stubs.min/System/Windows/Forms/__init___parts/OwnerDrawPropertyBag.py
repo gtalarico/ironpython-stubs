@@ -3,39 +3,62 @@ class OwnerDrawPropertyBag(MarshalByRefObject,ISerializable):
  @staticmethod
  def Copy(value):
   """
-  Copy(value: OwnerDrawPropertyBag) -> OwnerDrawPropertyBag
-  
-   Copies an System.Windows.Forms.OwnerDrawPropertyBag.
-  
-   value: The System.Windows.Forms.OwnerDrawPropertyBag to be copied.
+  Copy(value: OwnerDrawPropertyBag) -> OwnerDrawPropertyBag
+
+  
+
+   Copies an System.Windows.Forms.OwnerDrawPropertyBag.
+
+  
+
+   value: The System.Windows.Forms.OwnerDrawPropertyBag to be copied.
+
    Returns: A new System.Windows.Forms.OwnerDrawPropertyBag.
   """
   pass
  def IsEmpty(self):
   """
-  IsEmpty(self: OwnerDrawPropertyBag) -> bool
-  
-   Returns whether the System.Windows.Forms.OwnerDrawPropertyBag contains all default values.
-   Returns: true if the System.Windows.Forms.OwnerDrawPropertyBag contains all default values; otherwise,
+  IsEmpty(self: OwnerDrawPropertyBag) -> bool
+
+  
+
+   Returns whether the System.Windows.Forms.OwnerDrawPropertyBag contains all default values.
+
+   Returns: true if the System.Windows.Forms.OwnerDrawPropertyBag contains all default values; otherwise,
+
     false.
   """
   pass
  def MemberwiseClone(self,*args):
   """
-  MemberwiseClone(self: MarshalByRefObject,cloneIdentity: bool) -> MarshalByRefObject
-  
-   Creates a shallow copy of the current System.MarshalByRefObject object.
-  
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
-    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-    identity to its clone,which will cause remoting client calls to be routed to the remote server 
-    object.
-  
-   Returns: A shallow copy of the current System.MarshalByRefObject object.
-  MemberwiseClone(self: object) -> object
-  
-   Creates a shallow copy of the current System.Object.
+  MemberwiseClone(self: MarshalByRefObject,cloneIdentity: bool) -> MarshalByRefObject
+
+  
+
+   Creates a shallow copy of the current System.MarshalByRefObject object.
+
+  
+
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+
+    object.
+
+  
+
+   Returns: A shallow copy of the current System.MarshalByRefObject object.
+
+  MemberwiseClone(self: object) -> object
+
+  
+
+   Creates a shallow copy of the current System.Object.
+
    Returns: A shallow copy of the current System.Object.
   """
   pass
@@ -49,27 +72,42 @@ class OwnerDrawPropertyBag(MarshalByRefObject,ISerializable):
  def __reduce_ex__(self,*args):
   pass
  BackColor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the background color for the component.
-
-Get: BackColor(self: OwnerDrawPropertyBag) -> Color
-
-Set: BackColor(self: OwnerDrawPropertyBag)=value
+ """Gets or sets the background color for the component.
+
+
+
+Get: BackColor(self: OwnerDrawPropertyBag) -> Color
+
+
+
+Set: BackColor(self: OwnerDrawPropertyBag)=value
+
 """
 
  Font=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the font of the text displayed by the component.
-
-Get: Font(self: OwnerDrawPropertyBag) -> Font
-
-Set: Font(self: OwnerDrawPropertyBag)=value
+ """Gets or sets the font of the text displayed by the component.
+
+
+
+Get: Font(self: OwnerDrawPropertyBag) -> Font
+
+
+
+Set: Font(self: OwnerDrawPropertyBag)=value
+
 """
 
  ForeColor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the foreground color of the component.
-
-Get: ForeColor(self: OwnerDrawPropertyBag) -> Color
-
-Set: ForeColor(self: OwnerDrawPropertyBag)=value
+ """Gets or sets the foreground color of the component.
+
+
+
+Get: ForeColor(self: OwnerDrawPropertyBag) -> Color
+
+
+
+Set: ForeColor(self: OwnerDrawPropertyBag)=value
+
 """
 
 

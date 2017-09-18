@@ -1,7 +1,9 @@
 class DataGridViewSelectionMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes how cells of a DataGridView control can be selected.
- 
+ Describes how cells of a DataGridView control can be selected.
+
+ 
+
  enum DataGridViewSelectionMode,values: CellSelect (0),ColumnHeaderSelect (4),FullColumnSelect (2),FullRowSelect (1),RowHeaderSelect (3)
  """
  def __eq__(self,*args):

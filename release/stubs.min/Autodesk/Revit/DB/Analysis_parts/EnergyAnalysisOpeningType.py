@@ -1,7 +1,9 @@
 class EnergyAnalysisOpeningType(Enum,IComparable,IFormattable,IConvertible):
  """
- Analytical opening types.
- 
+ Analytical opening types.
+
+ 
+
  enum EnergyAnalysisOpeningType,values: Air (3),Door (0),Skylight (2),Window (1)
  """
  def __eq__(self,*args):

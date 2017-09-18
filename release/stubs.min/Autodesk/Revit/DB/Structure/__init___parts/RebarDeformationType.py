@@ -1,7 +1,9 @@
 class RebarDeformationType(Enum,IComparable,IFormattable,IConvertible):
  """
- Bar deformation type
- 
+ Bar deformation type
+
+ 
+
  enum RebarDeformationType,values: Deformed (0),Plain (1)
  """
  def __eq__(self,*args):

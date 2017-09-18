@@ -5,11 +5,16 @@ class KeyBasedTreeEntryError(object,IDisposable):
   pass
  def GetEntry(self):
   """
-  GetEntry(self: KeyBasedTreeEntryError) -> KeyBasedTreeEntry
-  
-   Gets the entry for which an error occurred while building the 
-    KeyBasedTreeEntries object.
-  
+  GetEntry(self: KeyBasedTreeEntryError) -> KeyBasedTreeEntry
+
+  
+
+   Gets the entry for which an error occurred while building the 
+
+    KeyBasedTreeEntries object.
+
+  
+
    Returns: A copy of the KeyBasedTreeEntry.
   """
   pass
@@ -29,18 +34,27 @@ class KeyBasedTreeEntryError(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  ErrorType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates which of possible types of problems with loading and/or building
-   a KeyBasedTreeEntries that this KeyBasedTreeEntryError represents.
-
-Get: ErrorType(self: KeyBasedTreeEntryError) -> KeyBasedTreeEntryErrorType
-
+ """Indicates which of possible types of problems with loading and/or building
+
+   a KeyBasedTreeEntries that this KeyBasedTreeEntryError represents.
+
+
+
+Get: ErrorType(self: KeyBasedTreeEntryError) -> KeyBasedTreeEntryErrorType
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: KeyBasedTreeEntryError) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: KeyBasedTreeEntryError) -> bool
+
+
+
 """
 
 

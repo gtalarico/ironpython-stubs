@@ -1,7 +1,9 @@
 class ConditionalAttribute(Attribute,_Attribute):
  """
- Indicates to compilers that a method call or attribute should be ignored unless a specified conditional compilation symbol is defined.
- 
+ Indicates to compilers that a method call or attribute should be ignored unless a specified conditional compilation symbol is defined.
+
+ 
+
  ConditionalAttribute(conditionString: str)
  """
  def __init__(self,*args):
@@ -14,10 +16,14 @@ class ConditionalAttribute(Attribute,_Attribute):
  def __reduce_ex__(self,*args):
   pass
  ConditionString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the conditional compilation symbol that is associated with the System.Diagnostics.ConditionalAttribute attribute.
-
-Get: ConditionString(self: ConditionalAttribute) -> str
-
+ """Gets the conditional compilation symbol that is associated with the System.Diagnostics.ConditionalAttribute attribute.
+
+
+
+Get: ConditionString(self: ConditionalAttribute) -> str
+
+
+
 """
 
 

@@ -1,7 +1,9 @@
 class ContextStaticAttribute(Attribute,_Attribute):
  """
- Indicates that the value of a static field is unique for a particular context.
- 
+ Indicates that the value of a static field is unique for a particular context.
+
+ 
+
  ContextStaticAttribute()
  """
  def __init__(self,*args):

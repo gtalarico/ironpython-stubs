@@ -1,7 +1,9 @@
 class ToolboxItemFilterType(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines identifiers used to indicate the type of filter that a System.ComponentModel.ToolboxItemFilterAttribute uses.
- 
+ Defines identifiers used to indicate the type of filter that a System.ComponentModel.ToolboxItemFilterAttribute uses.
+
+ 
+
  enum ToolboxItemFilterType,values: Allow (0),Custom (1),Prevent (2),Require (3)
  """
  def __eq__(self,*args):

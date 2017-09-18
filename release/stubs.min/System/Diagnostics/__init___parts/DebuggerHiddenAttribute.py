@@ -1,7 +1,9 @@
 class DebuggerHiddenAttribute(Attribute,_Attribute):
  """
- Specifies the System.Diagnostics.DebuggerHiddenAttribute. This class cannot be inherited.
- 
+ Specifies the System.Diagnostics.DebuggerHiddenAttribute. This class cannot be inherited.
+
+ 
+
  DebuggerHiddenAttribute()
  """
  def __init__(self,*args):

@@ -1,7 +1,9 @@
 class ProjectPosition(APIObject,IDisposable):
  """
- An object that is used to represent a geographical offset and rotation.
- 
+ An object that is used to represent a geographical offset and rotation.
+
+ 
+
  ProjectPosition(ew: float,ns: float,elevation: float,angle: float)
  """
  def Dispose(self):
@@ -27,35 +29,55 @@ class ProjectPosition(APIObject,IDisposable):
   """ __new__(cls: type,ew: float,ns: float,elevation: float,angle: float) """
   pass
  Angle=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Angle from True North
-
-Get: Angle(self: ProjectPosition) -> float
-
-Set: Angle(self: ProjectPosition)=value
+ """Angle from True North
+
+
+
+Get: Angle(self: ProjectPosition) -> float
+
+
+
+Set: Angle(self: ProjectPosition)=value
+
 """
 
  EastWest=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """East/West offset
-
-Get: EastWest(self: ProjectPosition) -> float
-
-Set: EastWest(self: ProjectPosition)=value
+ """East/West offset
+
+
+
+Get: EastWest(self: ProjectPosition) -> float
+
+
+
+Set: EastWest(self: ProjectPosition)=value
+
 """
 
  Elevation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Elevation above ground level.
-
-Get: Elevation(self: ProjectPosition) -> float
-
-Set: Elevation(self: ProjectPosition)=value
+ """Elevation above ground level.
+
+
+
+Get: Elevation(self: ProjectPosition) -> float
+
+
+
+Set: Elevation(self: ProjectPosition)=value
+
 """
 
  NorthSouth=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """North/South offset
-
-Get: NorthSouth(self: ProjectPosition) -> float
-
-Set: NorthSouth(self: ProjectPosition)=value
+ """North/South offset
+
+
+
+Get: NorthSouth(self: ProjectPosition) -> float
+
+
+
+Set: NorthSouth(self: ProjectPosition)=value
+
 """
 
 

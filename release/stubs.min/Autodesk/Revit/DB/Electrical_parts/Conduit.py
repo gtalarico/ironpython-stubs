@@ -3,22 +3,38 @@ class Conduit(CableTrayConduitBase,IDisposable):
  @staticmethod
  def Create(document,conduitType,startPoint,endPoint,levelId):
   """
-  Create(document: Document,conduitType: ElementId,startPoint: XYZ,endPoint: XYZ,levelId: ElementId) -> Conduit
-  
-   Creates a new instance of conduit.
-  
-   document: The document.
-   conduitType: The conduit type.  This must be a conduit type accepted by 
-    isValidConduitType().
-     If the input conduit type is InvalidElementId,the 
-    default conduit type from the document will be used.
-  
-   startPoint: The start point of the conduit location line.
-   endPoint: The end point of the conduit location line.
-   levelId: The element id of the level which this conduit based.
-     If the input level id 
-    is invalidElementId=-1,the nearest level will be used.
-  
+  Create(document: Document,conduitType: ElementId,startPoint: XYZ,endPoint: XYZ,levelId: ElementId) -> Conduit
+
+  
+
+   Creates a new instance of conduit.
+
+  
+
+   document: The document.
+
+   conduitType: The conduit type.  This must be a conduit type accepted by 
+
+    isValidConduitType().
+
+     If the input conduit type is InvalidElementId,the 
+
+    default conduit type from the document will be used.
+
+  
+
+   startPoint: The start point of the conduit location line.
+
+   endPoint: The end point of the conduit location line.
+
+   levelId: The element id of the level which this conduit based.
+
+     If the input level id 
+
+    is invalidElementId=-1,the nearest level will be used.
+
+  
+
    Returns: The newly created conduit.
   """
   pass
@@ -31,12 +47,18 @@ class Conduit(CableTrayConduitBase,IDisposable):
  @staticmethod
  def IsValidConduitType(document,conduitType):
   """
-  IsValidConduitType(document: Document,conduitType: ElementId) -> bool
-  
-   Identifies if a conduit type is valid.
-  
-   document: The document.
-   conduitType: The conduit type.
+  IsValidConduitType(document: Document,conduitType: ElementId) -> bool
+
+  
+
+   Identifies if a conduit type is valid.
+
+  
+
+   document: The document.
+
+   conduitType: The conduit type.
+
    Returns: True if the conduit type is valid,false otherwise.
   """
   pass

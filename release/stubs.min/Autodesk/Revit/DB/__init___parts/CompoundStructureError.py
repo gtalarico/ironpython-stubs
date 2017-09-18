@@ -1,7 +1,9 @@
 class CompoundStructureError(Enum,IComparable,IFormattable,IConvertible):
  """
- When CompoundStructure::isValid() returns false,it uses these values to indicate precise nature of defect.
- 
+ When CompoundStructure::isValid() returns false,it uses these values to indicate precise nature of defect.
+
+ 
+
  enum CompoundStructureError,values: BadShellOrder (0),BadShellsStructure (5),CoreTooThin (1),DeckCantBoundAbove (12),DeckCantBoundBelow (13),ExtensibleRegionsNotContiguousAlongBottom (17),ExtensibleRegionsNotContiguousAlongTop (16),InvalidMaterialId (15),InvalidProfileId (18),MembraneTooThick (3),NonmembraneTooThin (4),ThinOuterLayer (6),VarThickLayerCantBeZero (14),VerticalUnusedLayer (7),VerticalWrongOrderCoreExterior (9),VerticalWrongOrderCoreInterior (10),VerticalWrongOrderLayer (8),VerticalWrongOrderMembrane (11)
  """
  def __eq__(self,*args):

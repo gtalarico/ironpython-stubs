@@ -1,7 +1,9 @@
 class ExportEnergyModelType(Enum,IComparable,IFormattable,IConvertible):
  """
- This enum is used to define if energy model used for gbXML export should be based on rooms/spaces or building elements.
- 
+ This enum is used to define if energy model used for gbXML export should be based on rooms/spaces or building elements.
+
+ 
+
  enum ExportEnergyModelType,values: BuildingElement (1),SpatialElement (0)
  """
  def __eq__(self,*args):

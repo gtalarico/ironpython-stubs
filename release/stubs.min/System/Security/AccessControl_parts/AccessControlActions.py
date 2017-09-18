@@ -1,7 +1,9 @@
 class AccessControlActions(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the actions that are permitted for securable objects.
- 
+ Specifies the actions that are permitted for securable objects.
+
+ 
+
  enum (flags) AccessControlActions,values: Change (2),None (0),View (1)
  """
  def __eq__(self,*args):

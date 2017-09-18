@@ -1,7 +1,9 @@
 class FlowDocumentReaderViewingMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Names viewing modes for the System.Windows.Controls.FlowDocumentReader control.
- 
+ Names viewing modes for the System.Windows.Controls.FlowDocumentReader control.
+
+ 
+
  enum FlowDocumentReaderViewingMode,values: Page (0),Scroll (2),TwoPage (1)
  """
  def __eq__(self,*args):

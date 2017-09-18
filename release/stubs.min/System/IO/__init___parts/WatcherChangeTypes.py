@@ -1,7 +1,9 @@
 class WatcherChangeTypes(Enum,IComparable,IFormattable,IConvertible):
  """
- Changes that might occur to a file or directory.
- 
+ Changes that might occur to a file or directory.
+
+ 
+
  enum (flags) WatcherChangeTypes,values: All (15),Changed (4),Created (1),Deleted (2),Renamed (8)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class AnalysisDisplayStyleColorSettingsType(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines types for color settings of analysis display style.
- 
+ Defines types for color settings of analysis display style.
+
+ 
+
  enum AnalysisDisplayStyleColorSettingsType,values: GradientColor (0),SolidColorRanges (1)
  """
  def __eq__(self,*args):

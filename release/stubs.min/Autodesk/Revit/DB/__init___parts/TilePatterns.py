@@ -1,6 +1,7 @@
 class TilePatterns(APIObject,IDisposable):
  """
- The TilePatterns object is an interface for retrieving the TilePattern objects
+ The TilePatterns object is an interface for retrieving the TilePattern objects
+
  within the Document.
  """
  def Dispose(self):
@@ -8,10 +9,14 @@ class TilePatterns(APIObject,IDisposable):
   pass
  def GetTilePattern(self,tilePatternBuiltIn):
   """
-  GetTilePattern(self: TilePatterns,tilePatternBuiltIn: TilePatternsBuiltIn) -> TilePattern
-  
-   Retrieve a TilePattern object from a built-in type.
-   Returns: A TilePattern object,or ll if the document is not a 
+  GetTilePattern(self: TilePatterns,tilePatternBuiltIn: TilePatternsBuiltIn) -> TilePattern
+
+  
+
+   Retrieve a TilePattern object from a built-in type.
+
+   Returns: A TilePattern object,or ll if the document is not a 
+
   Massing Family.
   """
   pass

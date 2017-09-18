@@ -1,7 +1,9 @@
 class DragDropEffects(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the possible effects of a drag-and-drop operation.
- 
+ Specifies the possible effects of a drag-and-drop operation.
+
+ 
+
  enum (flags) DragDropEffects,values: All (-2147483645),Copy (1),Link (4),Move (2),None (0),Scroll (-2147483648)
  """
  def __eq__(self,*args):

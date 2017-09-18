@@ -1,7 +1,9 @@
 class ImageResolution(Enum,IComparable,IFormattable,IConvertible):
  """
- This enum is used to define image resolution in order to calculate the image size.
- 
+ This enum is used to define image resolution in order to calculate the image size.
+
+ 
+
  enum ImageResolution,values: DPI_150 (1),DPI_300 (2),DPI_600 (3),DPI_72 (0)
  """
  def __eq__(self,*args):

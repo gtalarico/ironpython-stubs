@@ -1,7 +1,9 @@
 class AttachmentType(Enum,IComparable,IFormattable,IConvertible):
  """
- Enum determining whether a link is an attachment or an overlay
- 
+ Enum determining whether a link is an attachment or an overlay
+
+ 
+
  enum AttachmentType,values: Attachment (3),Overlay (2)
  """
  def __eq__(self,*args):

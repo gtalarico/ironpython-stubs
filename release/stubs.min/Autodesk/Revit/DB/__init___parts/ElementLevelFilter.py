@@ -1,8 +1,11 @@
 class ElementLevelFilter(ElementSlowFilter,IDisposable):
  """
- A filter used to match elements by their associated level.
- 
- ElementLevelFilter(levelId: ElementId,inverted: bool)
+ A filter used to match elements by their associated level.
+
+ 
+
+ ElementLevelFilter(levelId: ElementId,inverted: bool)
+
  ElementLevelFilter(levelId: ElementId)
  """
  def Dispose(self):
@@ -23,15 +26,20 @@ class ElementLevelFilter(ElementSlowFilter,IDisposable):
  @staticmethod
  def __new__(self,levelId,inverted=None):
   """
-  __new__(cls: type,levelId: ElementId,inverted: bool)
+  __new__(cls: type,levelId: ElementId,inverted: bool)
+
   __new__(cls: type,levelId: ElementId)
   """
   pass
  LevelId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The id of the level that will be matched to elements' associated level.
-
-Get: LevelId(self: ElementLevelFilter) -> ElementId
-
+ """The id of the level that will be matched to elements' associated level.
+
+
+
+Get: LevelId(self: ElementLevelFilter) -> ElementId
+
+
+
 """
 
 

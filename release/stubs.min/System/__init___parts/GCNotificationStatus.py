@@ -1,7 +1,9 @@
 class GCNotificationStatus(Enum,IComparable,IFormattable,IConvertible):
  """
- Provides information about the current registration for notification of the next full garbage collection.
- 
+ Provides information about the current registration for notification of the next full garbage collection.
+
+ 
+
  enum GCNotificationStatus,values: Canceled (2),Failed (1),NotApplicable (4),Succeeded (0),Timeout (3)
  """
  def __eq__(self,*args):

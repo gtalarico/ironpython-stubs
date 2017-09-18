@@ -22,10 +22,14 @@ class FaceSplitter(Element,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  SplitElementId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The id of the element whose face is split by this element.
-
-Get: SplitElementId(self: FaceSplitter) -> ElementId
-
+ """The id of the element whose face is split by this element.
+
+
+
+Get: SplitElementId(self: FaceSplitter) -> ElementId
+
+
+
 """
 
 

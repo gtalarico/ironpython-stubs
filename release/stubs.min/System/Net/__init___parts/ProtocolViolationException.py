@@ -1,8 +1,11 @@
 class ProtocolViolationException(InvalidOperationException,ISerializable,_Exception):
  """
- The exception that is thrown when an error is made while using a network protocol.
- 
- ProtocolViolationException()
+ The exception that is thrown when an error is made while using a network protocol.
+
+ 
+
+ ProtocolViolationException()
+
  ProtocolViolationException(message: str)
  """
  def add_SerializeObjectState(self,*args):
@@ -10,13 +13,20 @@ class ProtocolViolationException(InvalidOperationException,ISerializable,_Except
   pass
  def GetObjectData(self,serializationInfo,streamingContext):
   """
-  GetObjectData(self: ProtocolViolationException,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo with the data required to serialize 
-    the target object.
-  
-  
-   serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
-   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this 
+  GetObjectData(self: ProtocolViolationException,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
+
+   Populates a System.Runtime.Serialization.SerializationInfo with the data required to serialize 
+
+    the target object.
+
+  
+
+  
+
+   serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
+
+   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this 
+
     serialization.
   """
   pass
@@ -29,8 +39,10 @@ class ProtocolViolationException(InvalidOperationException,ISerializable,_Except
  @staticmethod
  def __new__(self,message=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
   __new__(cls: type,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
   """
   pass

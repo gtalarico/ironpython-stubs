@@ -1,7 +1,9 @@
 class RenderNodeAction(Enum,IComparable,IFormattable,IConvertible):
  """
- Enumerated actions for processing a render node during custom export.
- 
+ Enumerated actions for processing a render node during custom export.
+
+ 
+
  enum RenderNodeAction,values: Proceed (0),Skip (1)
  """
  def __eq__(self,*args):

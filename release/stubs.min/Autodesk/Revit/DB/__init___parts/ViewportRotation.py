@@ -1,7 +1,9 @@
 class ViewportRotation(Enum,IComparable,IFormattable,IConvertible):
  """
- Rotation of the viewport
- 
+ Rotation of the viewport
+
+ 
+
  enum ViewportRotation,values: Clockwise (1),Counterclockwise (2),None (0)
  """
  def __eq__(self,*args):

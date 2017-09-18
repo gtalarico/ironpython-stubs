@@ -1,7 +1,9 @@
 class WallSide(Enum,IComparable,IFormattable,IConvertible):
  """
- Represents the possible sides of a wall where a sweep or reveal may be attached.
- 
+ Represents the possible sides of a wall where a sweep or reveal may be attached.
+
+ 
+
  enum WallSide,values: Exterior (0),Interior (1)
  """
  def __eq__(self,*args):

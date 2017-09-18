@@ -1,7 +1,9 @@
 class ZoomType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all Zoom types of Print Setting.
- 
+ An enumerated type listing all Zoom types of Print Setting.
+
+ 
+
  enum ZoomType,values: FitToPage (0),Zoom (1)
  """
  def __eq__(self,*args):

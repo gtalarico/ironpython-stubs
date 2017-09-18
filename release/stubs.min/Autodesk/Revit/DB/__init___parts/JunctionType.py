@@ -1,7 +1,9 @@
 class JunctionType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all the junction types for MEP curve types.
- 
+ An enumerated type listing all the junction types for MEP curve types.
+
+ 
+
  enum JunctionType,values: Tap (0),Tee (1)
  """
  def __eq__(self,*args):

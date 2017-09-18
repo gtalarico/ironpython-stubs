@@ -1,7 +1,9 @@
 class ScheduleFieldType(Enum,IComparable,IFormattable,IConvertible):
  """
- The type of data displayed in a schedule field.
- 
+ The type of data displayed in a schedule field.
+
+ 
+
  enum ScheduleFieldType,values: Analytical (17),CombinedParameter (20),Count (2),ElementType (1),Formula (5),FromRoom (8),Instance (0),Material (11),MaterialQuantity (12),Percentage (6),PhysicalInstance (19),PhysicalType (18),ProjectInfo (10),RevitLinkInstance (13),RevitLinkType (14),Room (7),Space (16),StructuralMaterial (15),ToRoom (9),ViewBased (4)
  """
  def __eq__(self,*args):

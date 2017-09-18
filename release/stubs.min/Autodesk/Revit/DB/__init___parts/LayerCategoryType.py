@@ -1,7 +1,9 @@
 class LayerCategoryType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing category types supported in an ExportLayerTable.
- 
+ An enumerated type listing category types supported in an ExportLayerTable.
+
+ 
+
  enum LayerCategoryType,values: AnalyticalModel (2),Annotation (1),Imported (3),Model (0),Modifier (4),Unsorted (-1)
  """
  def __eq__(self,*args):

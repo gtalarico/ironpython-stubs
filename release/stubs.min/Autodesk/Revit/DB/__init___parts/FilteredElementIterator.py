@@ -5,27 +5,39 @@ class FilteredElementIterator(object,IEnumerator[Element],IDisposable,IEnumerato
   pass
  def GetCurrent(self):
   """
-  GetCurrent(self: FilteredElementIterator) -> Element
-  
-   The current element found by the iterator.
+  GetCurrent(self: FilteredElementIterator) -> Element
+
+  
+
+   The current element found by the iterator.
+
    Returns: The element.
   """
   pass
  def IsDone(self):
   """
-  IsDone(self: FilteredElementIterator) -> bool
-  
-   Identifies if the iteration has completed.
-   Returns: True if the iteration has no more matching elements.  False if there are more 
+  IsDone(self: FilteredElementIterator) -> bool
+
+  
+
+   Identifies if the iteration has completed.
+
+   Returns: True if the iteration has no more matching elements.  False if there are more 
+
     element ids to be iterated.
   """
   pass
  def MoveNext(self):
   """
-  MoveNext(self: FilteredElementIterator) -> bool
-  
-   Increments the iterator to the next element passing the filter.
-   Returns: True if there is another available element passing the filter in this iterator.
+  MoveNext(self: FilteredElementIterator) -> bool
+
+  
+
+   Increments the iterator to the next element passing the filter.
+
+   Returns: True if there is another available element passing the filter in this iterator.
+
+
     
      False if the iterator has completed all available elements.
   """
@@ -38,7 +50,8 @@ class FilteredElementIterator(object,IEnumerator[Element],IDisposable,IEnumerato
   pass
  def Reset(self):
   """
-  Reset(self: FilteredElementIterator)
+  Reset(self: FilteredElementIterator)
+
    Resets the iterator to the beginning.
   """
   pass
@@ -61,17 +74,25 @@ class FilteredElementIterator(object,IEnumerator[Element],IDisposable,IEnumerato
   """ __repr__(self: object) -> str """
   pass
  Current=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the item at the current position of the iterator.
-
-Get: Current(self: FilteredElementIterator) -> Element
-
+ """Gets the item at the current position of the iterator.
+
+
+
+Get: Current(self: FilteredElementIterator) -> Element
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: FilteredElementIterator) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: FilteredElementIterator) -> bool
+
+
+
 """
 
 

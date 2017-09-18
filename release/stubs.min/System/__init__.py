@@ -9,32 +9,48 @@
 
 def Action(p_object,method): # real signature unknown; restored from __doc__
  """
- Encapsulates a method that has no parameters and does not return a value.
- 
+ Encapsulates a method that has no parameters and does not return a value.
+
+ 
+
  Action(object: object,method: IntPtr)
  """
  pass
 def EventHandler(p_object,method): # real signature unknown; restored from __doc__
  """
- Represents the method that will handle an event that has no event data.
- 
+ Represents the method that will handle an event that has no event data.
+
+ 
+
  EventHandler(object: object,method: IntPtr)
  """
  pass
 def Func(*args,**kwargs): # real signature unknown
  """
- A TypeCollision is used when we have a collision between
-    two types with the same name.  Currently this is only possible w/ generic
-    methods that should logically have arity as a portion of their name. For eg:
-      System.EventHandler and System.EventHandler[T]
-      System.Nullable and System.Nullable[T]
-      System.IComparable and System.IComparable[T]
-    
-    The TypeCollision provides an indexer but also is a real type.  When used
-    as a real type it is the non-generic form of the type.
-    
-    The indexer allows the user to disambiguate between the generic and
-    non-generic versions.  Therefore users must always provide additional
+ A TypeCollision is used when we have a collision between
+
+    two types with the same name.  Currently this is only possible w/ generic
+
+    methods that should logically have arity as a portion of their name. For eg:
+
+      System.EventHandler and System.EventHandler[T]
+
+      System.Nullable and System.Nullable[T]
+
+      System.IComparable and System.IComparable[T]
+
+    
+
+    The TypeCollision provides an indexer but also is a real type.  When used
+
+    as a real type it is the non-generic form of the type.
+
+    
+
+    The indexer allows the user to disambiguate between the generic and
+
+    non-generic versions.  Therefore users must always provide additional
+
     information to get the generic version.
  """
  pass
@@ -52,9 +68,12 @@ def ValueTuple(*args,**kwargs): # real signature unknown
  pass
 def WeakReference(target): # real signature unknown; restored from __doc__
  """
- Represents a weak reference,which references an object while still allowing that object to be reclaimed by garbage collection.
- 
- WeakReference(target: object)
+ Represents a weak reference,which references an object while still allowing that object to be reclaimed by garbage collection.
+
+ 
+
+ WeakReference(target: object)
+
  WeakReference(target: object,trackResurrection: bool)
  """
  pass

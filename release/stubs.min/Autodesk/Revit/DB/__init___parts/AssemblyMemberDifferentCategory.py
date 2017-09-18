@@ -16,17 +16,25 @@ class AssemblyMemberDifferentCategory(AssemblyMemberDifference,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  CategoryId1=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Category id of the first assembly member
-
-Get: CategoryId1(self: AssemblyMemberDifferentCategory) -> ElementId
-
+ """Category id of the first assembly member
+
+
+
+Get: CategoryId1(self: AssemblyMemberDifferentCategory) -> ElementId
+
+
+
 """
 
  CategoryId2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Category id of the second assembly member
-
-Get: CategoryId2(self: AssemblyMemberDifferentCategory) -> ElementId
-
+ """Category id of the second assembly member
+
+
+
+Get: CategoryId2(self: AssemblyMemberDifferentCategory) -> ElementId
+
+
+
 """
 
 

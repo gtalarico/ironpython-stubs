@@ -1,7 +1,9 @@
 class DataGridViewRowHeadersWidthSizeMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines values for specifying how the row header width is adjusted.
- 
+ Defines values for specifying how the row header width is adjusted.
+
+ 
+
  enum DataGridViewRowHeadersWidthSizeMode,values: AutoSizeToAllHeaders (2),AutoSizeToDisplayedHeaders (3),AutoSizeToFirstHeader (4),DisableResizing (1),EnableResizing (0)
  """
  def __eq__(self,*args):

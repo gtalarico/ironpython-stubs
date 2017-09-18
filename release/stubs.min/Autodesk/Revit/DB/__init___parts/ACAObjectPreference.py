@@ -1,9 +1,13 @@
 class ACAObjectPreference(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing possible ways to generate geometry of an ACA object
-    Revit object parameters used to generate geometry of the exported ACA object.
-    Revit object geometry is used to generate geometry of the exported ACA object. That may produce better geometric fidelity in some cases.
- 
+ An enumerated type listing possible ways to generate geometry of an ACA object
+
+    Revit object parameters used to generate geometry of the exported ACA object.
+
+    Revit object geometry is used to generate geometry of the exported ACA object. That may produce better geometric fidelity in some cases.
+
+ 
+
  enum ACAObjectPreference,values: Geometry (1),Object (0)
  """
  def __eq__(self,*args):

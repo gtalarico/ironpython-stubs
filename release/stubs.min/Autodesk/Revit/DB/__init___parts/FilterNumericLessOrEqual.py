@@ -1,7 +1,9 @@
 class FilterNumericLessOrEqual(FilterNumericRuleEvaluator,IDisposable):
  """
- Tests whether numeric values from the document are less than or equal to a certain value
- 
+ Tests whether numeric values from the document are less than or equal to a certain value
+
+ 
+
  FilterNumericLessOrEqual()
  """
  def Dispose(self):

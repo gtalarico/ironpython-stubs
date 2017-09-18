@@ -1,8 +1,11 @@
 class ElementWorksetFilter(ElementQuickFilter,IDisposable):
  """
- A filter used to match elements which reside in a given workset.
- 
- ElementWorksetFilter(worksetId: WorksetId,inverted: bool)
+ A filter used to match elements which reside in a given workset.
+
+ 
+
+ ElementWorksetFilter(worksetId: WorksetId,inverted: bool)
+
  ElementWorksetFilter(worksetId: WorksetId)
  """
  def Dispose(self):
@@ -23,15 +26,20 @@ class ElementWorksetFilter(ElementQuickFilter,IDisposable):
  @staticmethod
  def __new__(self,worksetId,inverted=None):
   """
-  __new__(cls: type,worksetId: WorksetId,inverted: bool)
+  __new__(cls: type,worksetId: WorksetId,inverted: bool)
+
   __new__(cls: type,worksetId: WorksetId)
   """
   pass
  WorksetId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The workset id.
-
-Get: WorksetId(self: ElementWorksetFilter) -> WorksetId
-
+ """The workset id.
+
+
+
+Get: WorksetId(self: ElementWorksetFilter) -> WorksetId
+
+
+
 """
 
 

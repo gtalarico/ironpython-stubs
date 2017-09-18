@@ -1,7 +1,9 @@
 class ObjectAceFlags(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the presence of object types for Access Control Entries (ACEs).
- 
+ Specifies the presence of object types for Access Control Entries (ACEs).
+
+ 
+
  enum (flags) ObjectAceFlags,values: InheritedObjectAceTypePresent (2),None (0),ObjectAceTypePresent (1)
  """
  def __eq__(self,*args):

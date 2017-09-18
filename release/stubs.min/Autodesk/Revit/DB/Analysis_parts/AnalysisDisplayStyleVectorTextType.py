@@ -1,7 +1,9 @@
 class AnalysisDisplayStyleVectorTextType(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines text visualization types for vector settings of analysis display style.
- 
+ Defines text visualization types for vector settings of analysis display style.
+
+ 
+
  enum AnalysisDisplayStyleVectorTextType,values: ShowAll (0),ShowNone (1),ShowPredefined (2)
  """
  def __eq__(self,*args):

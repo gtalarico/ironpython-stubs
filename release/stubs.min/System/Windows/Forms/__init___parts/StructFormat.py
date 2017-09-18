@@ -1,7 +1,9 @@
 class StructFormat(Enum,IComparable,IFormattable,IConvertible):
  """
- This enumeration is not used.
- 
+ This enumeration is not used.
+
+ 
+
  enum StructFormat,values: Ansi (1),Auto (3),Unicode (2)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class NeutralMode(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type to list the neutral mode for wire type.
- 
+ An enumerated type to list the neutral mode for wire type.
+
+ 
+
  enum NeutralMode,values: HotConductorSize (0),UnbalancedCurrent (1)
  """
  def __eq__(self,*args):

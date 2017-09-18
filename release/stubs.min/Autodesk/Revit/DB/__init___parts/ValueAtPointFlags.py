@@ -1,8 +1,11 @@
 class ValueAtPointFlags(Enum,IComparable,IFormattable,IConvertible):
  """
- Enumerated type containing flags related to the display on particular points.
-    Enumerated type that stores bit values of flags that can be set at any domain point.
- 
+ Enumerated type containing flags related to the display on particular points.
+
+    Enumerated type that stores bit values of flags that can be set at any domain point.
+
+ 
+
  enum ValueAtPointFlags,values: DisplayFence (2),DisplayText (1),None (0)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class ExportUnit(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing possible target units for CAD Export.
- 
+ An enumerated type listing possible target units for CAD Export.
+
+ 
+
  enum ExportUnit,values: Centimeter (4),Default (0),Foot (2),Inch (1),Meter (5),Millimeter (3)
  """
  def __eq__(self,*args):

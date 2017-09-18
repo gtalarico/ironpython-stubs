@@ -3,14 +3,22 @@ class BuildingEnvelopeAnalyzer(object,IDisposable):
  @staticmethod
  def Create(document,options):
   """
-  Create(document: Document,options: BuildingEnvelopeAnalyzerOptions) -> BuildingEnvelopeAnalyzer
-  
-   Creates a new analyzer.
-  
-   document: The document that contains the physical model of the building.
-   options: Options for the method analyzing the building elements for the building 
-    envelope.
-  
+  Create(document: Document,options: BuildingEnvelopeAnalyzerOptions) -> BuildingEnvelopeAnalyzer
+
+  
+
+   Creates a new analyzer.
+
+  
+
+   document: The document that contains the physical model of the building.
+
+   options: Options for the method analyzing the building elements for the building 
+
+    envelope.
+
+  
+
    Returns: The created analyzer.
   """
   pass
@@ -19,30 +27,44 @@ class BuildingEnvelopeAnalyzer(object,IDisposable):
   pass
  def GetBoundingElements(self):
   """
-  GetBoundingElements(self: BuildingEnvelopeAnalyzer) -> IList[LinkElementId]
-  
-   Returns the collection of building elements exposed to the outside forming the 
-    building envelope.
-  
+  GetBoundingElements(self: BuildingEnvelopeAnalyzer) -> IList[LinkElementId]
+
+  
+
+   Returns the collection of building elements exposed to the outside forming the 
+
+    building envelope.
+
+  
+
    Returns: The ids of the building elements in the envelope.
   """
   pass
  def GetBoundingElementsForSpaceVolume(self,spaceVolume):
   """
-  GetBoundingElementsForSpaceVolume(self: BuildingEnvelopeAnalyzer,spaceVolume: int) -> IList[LinkElementId]
-  
-   Returns the collection of bounding building elements for an enclosed space 
-    volume.
-  
+  GetBoundingElementsForSpaceVolume(self: BuildingEnvelopeAnalyzer,spaceVolume: int) -> IList[LinkElementId]
+
+  
+
+   Returns the collection of bounding building elements for an enclosed space 
+
+    volume.
+
+  
+
    Returns: The ids of the bounding building elements for the enclosed space volume.
   """
   pass
  def GetCenterPointsForConnectedGridCellsInSpaceVolume(self,spaceVolume):
   """
-  GetCenterPointsForConnectedGridCellsInSpaceVolume(self: BuildingEnvelopeAnalyzer,spaceVolume: int) -> IList[XYZ]
-  
-   Returns the collection of connected cells in an enclosed space volume.
-   Returns: The center points for the connected analytical grid cells in the enclosed space 
+  GetCenterPointsForConnectedGridCellsInSpaceVolume(self: BuildingEnvelopeAnalyzer,spaceVolume: int) -> IList[XYZ]
+
+  
+
+   Returns the collection of connected cells in an enclosed space volume.
+
+   Returns: The center points for the connected analytical grid cells in the enclosed space 
+
     volume.
   """
   pass
@@ -62,10 +84,14 @@ class BuildingEnvelopeAnalyzer(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: BuildingEnvelopeAnalyzer) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: BuildingEnvelopeAnalyzer) -> bool
+
+
+
 """
 
 

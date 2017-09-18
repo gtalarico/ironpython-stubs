@@ -1,7 +1,9 @@
 class AssemblyLoadEventArgs(EventArgs):
  """
- Provides data for the System.AppDomain.AssemblyLoad event.
- 
+ Provides data for the System.AppDomain.AssemblyLoad event.
+
+ 
+
  AssemblyLoadEventArgs(loadedAssembly: Assembly)
  """
  @staticmethod
@@ -9,10 +11,14 @@ class AssemblyLoadEventArgs(EventArgs):
   """ __new__(cls: type,loadedAssembly: Assembly) """
   pass
  LoadedAssembly=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets an System.Reflection.Assembly that represents the currently loaded assembly.
-
-Get: LoadedAssembly(self: AssemblyLoadEventArgs) -> Assembly
-
+ """Gets an System.Reflection.Assembly that represents the currently loaded assembly.
+
+
+
+Get: LoadedAssembly(self: AssemblyLoadEventArgs) -> Assembly
+
+
+
 """
 
 

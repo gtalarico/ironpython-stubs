@@ -1,9 +1,13 @@
 class AnalysisDisplayColorEntry(object,IDisposable):
  """
- Contains one entry of intermediate colors in color settings for analysis display style.
- 
- AnalysisDisplayColorEntry(color: Color)
- AnalysisDisplayColorEntry(color: Color,value: float)
+ Contains one entry of intermediate colors in color settings for analysis display style.
+
+ 
+
+ AnalysisDisplayColorEntry(color: Color)
+
+ AnalysisDisplayColorEntry(color: Color,value: float)
+
  AnalysisDisplayColorEntry()
  """
  def Dispose(self):
@@ -11,19 +15,27 @@ class AnalysisDisplayColorEntry(object,IDisposable):
   pass
  def HasValue(self):
   """
-  HasValue(self: AnalysisDisplayColorEntry) -> bool
-  
-   Check if color entry has associated value.
+  HasValue(self: AnalysisDisplayColorEntry) -> bool
+
+  
+
+   Check if color entry has associated value.
+
    Returns: True if entry has a value associated with it,false otherwise.
   """
   pass
  def IsEqual(self,other):
   """
-  IsEqual(self: AnalysisDisplayColorEntry,other: AnalysisDisplayColorEntry) -> bool
-  
-   Compare color entries.
-  
-   other: Color entry to compare to.
+  IsEqual(self: AnalysisDisplayColorEntry,other: AnalysisDisplayColorEntry) -> bool
+
+  
+
+   Compare color entries.
+
+  
+
+   other: Color entry to compare to.
+
    Returns: True if color entries are equal,false otherwise.
   """
   pass
@@ -42,8 +54,10 @@ class AnalysisDisplayColorEntry(object,IDisposable):
  @staticmethod
  def __new__(self,color=None,value=None):
   """
-  __new__(cls: type,color: Color)
-  __new__(cls: type,color: Color,value: float)
+  __new__(cls: type,color: Color)
+
+  __new__(cls: type,color: Color,value: float)
+
   __new__(cls: type)
   """
   pass
@@ -51,24 +65,36 @@ class AnalysisDisplayColorEntry(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Color=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Color associated with color entry.
-
-Get: Color(self: AnalysisDisplayColorEntry) -> Color
-
+ """Color associated with color entry.
+
+
+
+Get: Color(self: AnalysisDisplayColorEntry) -> Color
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: AnalysisDisplayColorEntry) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: AnalysisDisplayColorEntry) -> bool
+
+
+
 """
 
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Value associated with color entry.
-
-Get: Value(self: AnalysisDisplayColorEntry) -> float
-
+ """Value associated with color entry.
+
+
+
+Get: Value(self: AnalysisDisplayColorEntry) -> float
+
+
+
 """
 
 

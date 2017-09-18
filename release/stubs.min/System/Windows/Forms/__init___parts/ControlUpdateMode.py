@@ -1,7 +1,9 @@
 class ControlUpdateMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Determines when changes to a data source value get propagated to the corresponding data-bound control property.
- 
+ Determines when changes to a data source value get propagated to the corresponding data-bound control property.
+
+ 
+
  enum ControlUpdateMode,values: Never (1),OnPropertyChanged (0)
  """
  def __eq__(self,*args):

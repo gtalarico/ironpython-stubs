@@ -2,11 +2,16 @@ class IFileReaderService:
  """ Defines a method that opens a file from the current directory. """
  def OpenFileFromSource(self,relativePath):
   """
-  OpenFileFromSource(self: IFileReaderService,relativePath: str) -> Stream
-  
-   Opens a file from the current directory.
-  
-   relativePath: The file to open.
+  OpenFileFromSource(self: IFileReaderService,relativePath: str) -> Stream
+
+  
+
+   Opens a file from the current directory.
+
+  
+
+   relativePath: The file to open.
+
    Returns: A stream of the specified file.
   """
   pass

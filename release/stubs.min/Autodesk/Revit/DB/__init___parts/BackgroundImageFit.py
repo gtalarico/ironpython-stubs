@@ -1,7 +1,9 @@
 class BackgroundImageFit(Enum,IComparable,IFormattable,IConvertible):
  """
- Indicates the background image fit type in rendering settings.
- 
+ Indicates the background image fit type in rendering settings.
+
+ 
+
  enum BackgroundImageFit,values: Horizontal (42),None (0),Stretch (43),Vertical (41)
  """
  def __eq__(self,*args):

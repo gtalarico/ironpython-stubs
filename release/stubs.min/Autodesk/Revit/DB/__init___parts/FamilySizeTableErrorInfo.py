@@ -1,7 +1,9 @@
 class FamilySizeTableErrorInfo(object,IDisposable):
  """
- Error information generated from the CSV file import of a FamilySizeTable.
- 
+ Error information generated from the CSV file import of a FamilySizeTable.
+
+ 
+
  FamilySizeTableErrorInfo()
  """
  def Dispose(self):
@@ -23,45 +25,69 @@ class FamilySizeTableErrorInfo(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  FamilySizeTableErrorType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The error type.
-
-Get: FamilySizeTableErrorType(self: FamilySizeTableErrorInfo) -> FamilySizeTableErrorType
-
+ """The error type.
+
+
+
+Get: FamilySizeTableErrorType(self: FamilySizeTableErrorInfo) -> FamilySizeTableErrorType
+
+
+
 """
 
  FilePath=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The path of the imported CSV file.
-
-Get: FilePath(self: FamilySizeTableErrorInfo) -> str
-
+ """The path of the imported CSV file.
+
+
+
+Get: FilePath(self: FamilySizeTableErrorInfo) -> str
+
+
+
 """
 
  InvalidColumnIndex=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The index of the invalid column.
-
-Get: InvalidColumnIndex(self: FamilySizeTableErrorInfo) -> int
-
+ """The index of the invalid column.
+
+
+
+Get: InvalidColumnIndex(self: FamilySizeTableErrorInfo) -> int
+
+
+
 """
 
  InvalidHeaderText=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The invalid header text.
-
-Get: InvalidHeaderText(self: FamilySizeTableErrorInfo) -> str
-
+ """The invalid header text.
+
+
+
+Get: InvalidHeaderText(self: FamilySizeTableErrorInfo) -> str
+
+
+
 """
 
  InvalidRowIndex=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The index of the invalid row.
-
-Get: InvalidRowIndex(self: FamilySizeTableErrorInfo) -> int
-
+ """The index of the invalid row.
+
+
+
+Get: InvalidRowIndex(self: FamilySizeTableErrorInfo) -> int
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: FamilySizeTableErrorInfo) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: FamilySizeTableErrorInfo) -> bool
+
+
+
 """
 
 

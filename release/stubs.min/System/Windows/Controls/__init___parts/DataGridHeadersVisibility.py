@@ -1,7 +1,9 @@
 class DataGridHeadersVisibility(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines constants that specify the visibility of row and column headers in a System.Windows.Controls.DataGrid.
- 
+ Defines constants that specify the visibility of row and column headers in a System.Windows.Controls.DataGrid.
+
+ 
+
  enum (flags) DataGridHeadersVisibility,values: All (3),Column (1),None (0),Row (2)
  """
  def __eq__(self,*args):

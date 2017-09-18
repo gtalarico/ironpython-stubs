@@ -1,7 +1,9 @@
 class LayoutRuleClearSpacing(LayoutRule,IDisposable):
  """
- This class indicate the layout rule of a Beam System is Clear-Spacing.
- 
+ This class indicate the layout rule of a Beam System is Clear-Spacing.
+
+ 
+
  LayoutRuleClearSpacing(spacing: float,justifyType: BeamSystemJustifyType)
  """
  def Dispose(self):
@@ -27,19 +29,29 @@ class LayoutRuleClearSpacing(LayoutRule,IDisposable):
   """ __new__(cls: type,spacing: float,justifyType: BeamSystemJustifyType) """
   pass
  JustifyType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get or set the type of justification.
-
-Get: JustifyType(self: LayoutRuleClearSpacing) -> BeamSystemJustifyType
-
-Set: JustifyType(self: LayoutRuleClearSpacing)=value
+ """Get or set the type of justification.
+
+
+
+Get: JustifyType(self: LayoutRuleClearSpacing) -> BeamSystemJustifyType
+
+
+
+Set: JustifyType(self: LayoutRuleClearSpacing)=value
+
 """
 
  Spacing=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get or set the spacing of the beam system.
-
-Get: Spacing(self: LayoutRuleClearSpacing) -> float
-
-Set: Spacing(self: LayoutRuleClearSpacing)=value
+ """Get or set the spacing of the beam system.
+
+
+
+Get: Spacing(self: LayoutRuleClearSpacing) -> float
+
+
+
+Set: Spacing(self: LayoutRuleClearSpacing)=value
+
 """
 
 

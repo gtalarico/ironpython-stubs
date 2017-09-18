@@ -1,8 +1,11 @@
 class PanelSchedulePhaseLoadType(Enum,IComparable,IFormattable,IConvertible):
  """
- Declares the panel schedule type.  The comments for each enum type show
-    a simple example of how the layout would look when applied to a panel schedule
- 
+ Declares the panel schedule type.  The comments for each enum type show
+
+    a simple example of how the layout would look when applied to a panel schedule
+
+ 
+
  enum PanelSchedulePhaseLoadType,values: LoadsByPhase (4),LoadsByPhaseInSharedColumns (3),LoadsByPhaseInSplitColumns (1),MirroredPhaseColumns (2),NoLoadInformation (0),SeperatePhaseLoadsPerCircuit (6),TotalLoadOnlyPerCircuit (5)
  """
  def __eq__(self,*args):

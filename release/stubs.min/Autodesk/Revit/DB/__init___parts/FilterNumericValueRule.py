@@ -5,8 +5,10 @@ class FilterNumericValueRule(FilterValueRule,IDisposable):
   pass
  def GetEvaluator(self):
   """
-  GetEvaluator(self: FilterNumericValueRule) -> FilterNumericRuleEvaluator
-  
+  GetEvaluator(self: FilterNumericValueRule) -> FilterNumericRuleEvaluator
+
+  
+
    Gets the evaluator that implements the test for this rule.
   """
   pass
@@ -15,7 +17,8 @@ class FilterNumericValueRule(FilterValueRule,IDisposable):
   pass
  def SetEvaluator(self,evaluator):
   """
-  SetEvaluator(self: FilterNumericValueRule,evaluator: FilterNumericRuleEvaluator)
+  SetEvaluator(self: FilterNumericValueRule,evaluator: FilterNumericRuleEvaluator)
+
    Sets the evaluator that implements the test for this rule.
   """
   pass

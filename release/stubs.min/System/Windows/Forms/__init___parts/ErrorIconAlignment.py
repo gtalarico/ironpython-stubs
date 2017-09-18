@@ -1,7 +1,9 @@
 class ErrorIconAlignment(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies constants indicating the locations that an error icon can appear in relation to the control with an error.
- 
+ Specifies constants indicating the locations that an error icon can appear in relation to the control with an error.
+
+ 
+
  enum ErrorIconAlignment,values: BottomLeft (4),BottomRight (5),MiddleLeft (2),MiddleRight (3),TopLeft (0),TopRight (1)
  """
  def __eq__(self,*args):

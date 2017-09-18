@@ -1,7 +1,9 @@
 class RichTextBoxSelectionTypes(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the type of selection in a System.Windows.Forms.RichTextBox control.
- 
+ Specifies the type of selection in a System.Windows.Forms.RichTextBox control.
+
+ 
+
  enum (flags) RichTextBoxSelectionTypes,values: Empty (0),MultiChar (4),MultiObject (8),Object (2),Text (1)
  """
  def __eq__(self,*args):

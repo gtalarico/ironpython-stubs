@@ -9,20 +9,34 @@ class FilterElement(Element,IDisposable):
  @staticmethod
  def IsNameUnique(*__args):
   """
-  IsNameUnique(self: FilterElement,name: str) -> bool
-  
-   Determines whether a potential filter element name is unique.
-  
-   name: The candidate name.
-  IsNameUnique(aDocument: Document,name: str) -> bool
-  
-   Determines whether the given name could be applied to a new FilterElement,
-     
-    or if it could not be applied because the name is already in use.
-  
-  
-   aDocument: The document in which the name is being tested for uniqueness.
-   name: The name tested for uniqueness.
+  IsNameUnique(self: FilterElement,name: str) -> bool
+
+  
+
+   Determines whether a potential filter element name is unique.
+
+  
+
+   name: The candidate name.
+
+  IsNameUnique(aDocument: Document,name: str) -> bool
+
+  
+
+   Determines whether the given name could be applied to a new FilterElement,
+
+     
+
+    or if it could not be applied because the name is already in use.
+
+  
+
+  
+
+   aDocument: The document in which the name is being tested for uniqueness.
+
+   name: The name tested for uniqueness.
+
    Returns: Returns true if the name is unique,and false otherwise.
   """
   pass

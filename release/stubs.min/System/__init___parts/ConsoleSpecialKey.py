@@ -1,7 +1,9 @@
 class ConsoleSpecialKey(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies combinations of modifier and console keys that can interrupt the current process.
- 
+ Specifies combinations of modifier and console keys that can interrupt the current process.
+
+ 
+
  enum ConsoleSpecialKey,values: ControlBreak (1),ControlC (0)
  """
  def __eq__(self,*args):

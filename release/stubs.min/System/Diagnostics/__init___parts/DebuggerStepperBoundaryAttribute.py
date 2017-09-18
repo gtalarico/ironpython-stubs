@@ -1,7 +1,9 @@
 class DebuggerStepperBoundaryAttribute(Attribute,_Attribute):
  """
- Indicates the code following the attribute is to be executed in run,not step,mode.
- 
+ Indicates the code following the attribute is to be executed in run,not step,mode.
+
+ 
+
  DebuggerStepperBoundaryAttribute()
  """
  def __init__(self,*args):

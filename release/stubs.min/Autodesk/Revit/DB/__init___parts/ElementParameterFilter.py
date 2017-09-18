@@ -1,10 +1,15 @@
 class ElementParameterFilter(ElementSlowFilter,IDisposable):
  """
- A filter used to match elements by one or more parameter filter rules.
- 
- ElementParameterFilter(filterRules: IList[FilterRule],inverted: bool)
- ElementParameterFilter(filterRules: IList[FilterRule])
- ElementParameterFilter(filterRule: FilterRule,inverted: bool)
+ A filter used to match elements by one or more parameter filter rules.
+
+ 
+
+ ElementParameterFilter(filterRules: IList[FilterRule],inverted: bool)
+
+ ElementParameterFilter(filterRules: IList[FilterRule])
+
+ ElementParameterFilter(filterRule: FilterRule,inverted: bool)
+
  ElementParameterFilter(filterRule: FilterRule)
  """
  def Dispose(self):
@@ -12,9 +17,12 @@ class ElementParameterFilter(ElementSlowFilter,IDisposable):
   pass
  def GetRules(self):
   """
-  GetRules(self: ElementParameterFilter) -> IList[FilterRule]
-  
-   Returns the set of rules contained in this filter.
+  GetRules(self: ElementParameterFilter) -> IList[FilterRule]
+
+  
+
+   Returns the set of rules contained in this filter.
+
    Returns: A copy of the set of rules.
   """
   pass
@@ -33,9 +41,12 @@ class ElementParameterFilter(ElementSlowFilter,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,filterRules: IList[FilterRule],inverted: bool)
-  __new__(cls: type,filterRules: IList[FilterRule])
-  __new__(cls: type,filterRule: FilterRule,inverted: bool)
+  __new__(cls: type,filterRules: IList[FilterRule],inverted: bool)
+
+  __new__(cls: type,filterRules: IList[FilterRule])
+
+  __new__(cls: type,filterRule: FilterRule,inverted: bool)
+
   __new__(cls: type,filterRule: FilterRule)
   """
   pass

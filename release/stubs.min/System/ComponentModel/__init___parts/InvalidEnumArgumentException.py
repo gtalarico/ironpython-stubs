@@ -1,10 +1,15 @@
 class InvalidEnumArgumentException(ArgumentException,ISerializable,_Exception):
  """
- The exception thrown when using invalid arguments that are enumerators.
- 
- InvalidEnumArgumentException()
- InvalidEnumArgumentException(message: str)
- InvalidEnumArgumentException(message: str,innerException: Exception)
+ The exception thrown when using invalid arguments that are enumerators.
+
+ 
+
+ InvalidEnumArgumentException()
+
+ InvalidEnumArgumentException(message: str)
+
+ InvalidEnumArgumentException(message: str,innerException: Exception)
+
  InvalidEnumArgumentException(argumentName: str,invalidValue: int,enumClass: Type)
  """
  def add_SerializeObjectState(self,*args):
@@ -19,10 +24,14 @@ class InvalidEnumArgumentException(ArgumentException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,innerException: Exception)
-  __new__(cls: type,argumentName: str,invalidValue: int,enumClass: Type)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,innerException: Exception)
+
+  __new__(cls: type,argumentName: str,invalidValue: int,enumClass: Type)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

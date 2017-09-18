@@ -1,7 +1,9 @@
 class AutoCompleteMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the mode for the automatic completion feature used in the System.Windows.Forms.ComboBox and System.Windows.Forms.TextBox controls.
- 
+ Specifies the mode for the automatic completion feature used in the System.Windows.Forms.ComboBox and System.Windows.Forms.TextBox controls.
+
+ 
+
  enum AutoCompleteMode,values: Append (2),None (0),Suggest (1),SuggestAppend (3)
  """
  def __eq__(self,*args):

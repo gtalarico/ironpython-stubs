@@ -1,7 +1,9 @@
 class GenericUriParserOptions(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies options for a System.UriParser.
- 
+ Specifies options for a System.UriParser.
+
+ 
+
  enum (flags) GenericUriParserOptions,values: AllowEmptyAuthority (2),Default (0),DontCompressPath (128),DontConvertPathBackslashes (64),DontUnescapePathDotsAndSlashes (256),GenericAuthority (1),Idn (512),IriParsing (1024),NoFragment (32),NoPort (8),NoQuery (16),NoUserInfo (4)
  """
  def __eq__(self,*args):

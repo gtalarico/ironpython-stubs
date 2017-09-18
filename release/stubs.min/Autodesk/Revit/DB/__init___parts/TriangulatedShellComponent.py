@@ -1,11 +1,13 @@
 class TriangulatedShellComponent(object,IDisposable):
  """
- This class represents a triangulated boundary component of a solid or a
+ This class represents a triangulated boundary component of a solid or a
+
     triangulated connected component of a shell.
  """
  def Clear(self):
   """
-  Clear(self: TriangulatedShellComponent)
+  Clear(self: TriangulatedShellComponent)
+
    Empties the contents of this TriangulatedShellComponent.
   """
   pass
@@ -14,21 +16,31 @@ class TriangulatedShellComponent(object,IDisposable):
   pass
  def GetTriangle(self,triangleIndex):
   """
-  GetTriangle(self: TriangulatedShellComponent,triangleIndex: int) -> TriangleInShellComponent
-  
-   Returns the triangle corresponding to the given index.
-  
-   triangleIndex: The index of the triangle (between 0 and TriangleCount-1,inclusive).
+  GetTriangle(self: TriangulatedShellComponent,triangleIndex: int) -> TriangleInShellComponent
+
+  
+
+   Returns the triangle corresponding to the given index.
+
+  
+
+   triangleIndex: The index of the triangle (between 0 and TriangleCount-1,inclusive).
+
    Returns: The triangle.
   """
   pass
  def GetVertex(self,vertexIndex):
   """
-  GetVertex(self: TriangulatedShellComponent,vertexIndex: int) -> XYZ
-  
-   Returns the vertex with a given index.
-  
-   vertexIndex: The index of the vertex (between 0 and getVertexCount()-1,inclusive).
+  GetVertex(self: TriangulatedShellComponent,vertexIndex: int) -> XYZ
+
+  
+
+   Returns the vertex with a given index.
+
+  
+
+   vertexIndex: The index of the vertex (between 0 and getVertexCount()-1,inclusive).
+
    Returns: A copy of the requested vertex.
   """
   pass
@@ -48,32 +60,49 @@ class TriangulatedShellComponent(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsClosed=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """True if and only if the triangulation represents a topologically closed shell
-   (i.e.,each edge is shared by two triangles).
-
-Get: IsClosed(self: TriangulatedShellComponent) -> bool
-
+ """True if and only if the triangulation represents a topologically closed shell
+
+   (i.e.,each edge is shared by two triangles).
+
+
+
+Get: IsClosed(self: TriangulatedShellComponent) -> bool
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: TriangulatedShellComponent) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: TriangulatedShellComponent) -> bool
+
+
+
 """
 
  TriangleCount=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The number of triangles in the triangulation.
-
-Get: TriangleCount(self: TriangulatedShellComponent) -> int
-
+ """The number of triangles in the triangulation.
+
+
+
+Get: TriangleCount(self: TriangulatedShellComponent) -> int
+
+
+
 """
 
  VertexCount=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The number of vertices in the triangulation.
-
-Get: VertexCount(self: TriangulatedShellComponent) -> int
-
+ """The number of vertices in the triangulation.
+
+
+
+Get: VertexCount(self: TriangulatedShellComponent) -> int
+
+
+
 """
 
 

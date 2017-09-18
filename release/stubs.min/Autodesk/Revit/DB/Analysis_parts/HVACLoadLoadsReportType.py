@@ -1,7 +1,9 @@
 class HVACLoadLoadsReportType(Enum,IComparable,IFormattable,IConvertible):
  """
- Enumerated type listing possible types of reports generated for HVAC loads.
- 
+ Enumerated type listing possible types of reports generated for HVAC loads.
+
+ 
+
  enum HVACLoadLoadsReportType,values: DetailedReport (3),NoReport (0),SimpleReport (1),StandardReport (2)
  """
  def __eq__(self,*args):

@@ -3,11 +3,16 @@ class UIThemeManager(object):
  @staticmethod
  def GetThemeName(frameTheme):
   """
-  GetThemeName(frameTheme: UITheme) -> str
-  
-   Gets the theme name for the given theme type.
-  
-   frameTheme: The theme.
+  GetThemeName(frameTheme: UITheme) -> str
+
+  
+
+   Gets the theme name for the given theme type.
+
+  
+
+   frameTheme: The theme.
+
    Returns: The name of the theme.
   """
   pass

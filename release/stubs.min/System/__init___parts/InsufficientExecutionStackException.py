@@ -1,9 +1,13 @@
 class InsufficientExecutionStackException(SystemException,ISerializable,_Exception):
  """
- The exception that is thrown when there is insufficient execution stack available to allow most methods to execute.
- 
- InsufficientExecutionStackException()
- InsufficientExecutionStackException(message: str)
+ The exception that is thrown when there is insufficient execution stack available to allow most methods to execute.
+
+ 
+
+ InsufficientExecutionStackException()
+
+ InsufficientExecutionStackException(message: str)
+
  InsufficientExecutionStackException(message: str,innerException: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,8 +22,10 @@ class InsufficientExecutionStackException(SystemException,ISerializable,_Excepti
  @staticmethod
  def __new__(self,message=None,innerException=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
   __new__(cls: type,message: str,innerException: Exception)
   """
   pass

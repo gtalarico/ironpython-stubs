@@ -2,9 +2,12 @@ class Solid(GeometryObject,IDisposable):
  """ A 3d solid. """
  def ComputeCentroid(self):
   """
-  ComputeCentroid(self: Solid) -> XYZ
-  
-   Returns the Centroid of this solid.
+  ComputeCentroid(self: Solid) -> XYZ
+
+  
+
+   Returns the Centroid of this solid.
+
    Returns: The XYZ point of the Centroid of this solid.
   """
   pass
@@ -13,19 +16,27 @@ class Solid(GeometryObject,IDisposable):
   pass
  def GetBoundingBox(self):
   """
-  GetBoundingBox(self: Solid) -> BoundingBoxXYZ
-  
+  GetBoundingBox(self: Solid) -> BoundingBoxXYZ
+
+  
+
    Retrieves a box that circumscribes the solid geometry.
   """
   pass
  def IntersectWithCurve(self,curve,options):
   """
-  IntersectWithCurve(self: Solid,curve: Curve,options: SolidCurveIntersectionOptions) -> SolidCurveIntersection
-  
-   Calculates and returns the intersection between a curve and this solid.
-  
-   curve: The curve.
-   options: The options.  If NULL,the default options will be used.
+  IntersectWithCurve(self: Solid,curve: Curve,options: SolidCurveIntersectionOptions) -> SolidCurveIntersection
+
+  
+
+   Calculates and returns the intersection between a curve and this solid.
+
+  
+
+   curve: The curve.
+
+   options: The options.  If NULL,the default options will be used.
+
    Returns: The intersection results.
   """
   pass
@@ -45,31 +56,47 @@ class Solid(GeometryObject,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Edges=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The edges that belong to the solid.
-
-Get: Edges(self: Solid) -> EdgeArray
-
+ """The edges that belong to the solid.
+
+
+
+Get: Edges(self: Solid) -> EdgeArray
+
+
+
 """
 
  Faces=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The faces that belong to the solid.
-
-Get: Faces(self: Solid) -> FaceArray
-
+ """The faces that belong to the solid.
+
+
+
+Get: Faces(self: Solid) -> FaceArray
+
+
+
 """
 
  SurfaceArea=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the total surface area of this solid.
-
-Get: SurfaceArea(self: Solid) -> float
-
+ """Returns the total surface area of this solid.
+
+
+
+Get: SurfaceArea(self: Solid) -> float
+
+
+
 """
 
  Volume=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the signed volume of this solid.
-
-Get: Volume(self: Solid) -> float
-
+ """Returns the signed volume of this solid.
+
+
+
+Get: Volume(self: Solid) -> float
+
+
+
 """
 
 

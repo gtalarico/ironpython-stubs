@@ -1,8 +1,11 @@
 class DWFImportOptions(object,IDisposable):
  """
- The import options used by importing DWF or DWFx format file.
- 
- DWFImportOptions(option: DWFImportOptions)
+ The import options used by importing DWF or DWFx format file.
+
+ 
+
+ DWFImportOptions(option: DWFImportOptions)
+
  DWFImportOptions(views: IList[ElementId])
  """
  def Dispose(self):
@@ -10,9 +13,12 @@ class DWFImportOptions(object,IDisposable):
   pass
  def GetSheetViews(self):
   """
-  GetSheetViews(self: DWFImportOptions) -> IList[ElementId]
-  
-   Get sheet views where DWF markups are imported.
+  GetSheetViews(self: DWFImportOptions) -> IList[ElementId]
+
+  
+
+   Get sheet views where DWF markups are imported.
+
    Returns: An array of sheet views
   """
   pass
@@ -34,7 +40,8 @@ class DWFImportOptions(object,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,option: DWFImportOptions)
+  __new__(cls: type,option: DWFImportOptions)
+
   __new__(cls: type,views: IList[ElementId])
   """
   pass
@@ -42,10 +49,14 @@ class DWFImportOptions(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: DWFImportOptions) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: DWFImportOptions) -> bool
+
+
+
 """
 
 

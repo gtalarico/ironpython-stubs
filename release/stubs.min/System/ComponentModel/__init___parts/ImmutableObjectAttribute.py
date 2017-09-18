@@ -1,30 +1,41 @@
 class ImmutableObjectAttribute(Attribute,_Attribute):
  """
- Specifies that an object has no subproperties capable of being edited. This class cannot be inherited.
- 
+ Specifies that an object has no subproperties capable of being edited. This class cannot be inherited.
+
+ 
+
  ImmutableObjectAttribute(immutable: bool)
  """
  def Equals(self,obj):
   """
-  Equals(self: ImmutableObjectAttribute,obj: object) -> bool
-  
-   obj: An System.Object to compare with this instance or null.
+  Equals(self: ImmutableObjectAttribute,obj: object) -> bool
+
+  
+
+   obj: An System.Object to compare with this instance or null.
+
    Returns: true if obj equals the type and value of this instance; otherwise,false.
   """
   pass
  def GetHashCode(self):
   """
-  GetHashCode(self: ImmutableObjectAttribute) -> int
-  
-   Returns the hash code for this instance.
+  GetHashCode(self: ImmutableObjectAttribute) -> int
+
+  
+
+   Returns the hash code for this instance.
+
    Returns: A hash code for the current System.ComponentModel.ImmutableObjectAttribute.
   """
   pass
  def IsDefaultAttribute(self):
   """
-  IsDefaultAttribute(self: ImmutableObjectAttribute) -> bool
-  
-   Indicates whether the value of this instance is the default value.
+  IsDefaultAttribute(self: ImmutableObjectAttribute) -> bool
+
+  
+
+   Indicates whether the value of this instance is the default value.
+
    Returns: true if this instance is the default attribute for the class; otherwise,false.
   """
   pass
@@ -41,10 +52,14 @@ class ImmutableObjectAttribute(Attribute,_Attribute):
  def __ne__(self,*args):
   pass
  Immutable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets whether the object is immutable.
-
-Get: Immutable(self: ImmutableObjectAttribute) -> bool
-
+ """Gets whether the object is immutable.
+
+
+
+Get: Immutable(self: ImmutableObjectAttribute) -> bool
+
+
+
 """
 
 

@@ -1,7 +1,9 @@
 class gbXMLExportBuildingEnvelope(Enum,IComparable,IFormattable,IConvertible):
  """
- Indicates the determination method for the building envelope
- 
+ Indicates the determination method for the building envelope
+
+ 
+
  enum gbXMLExportBuildingEnvelope,values: IdentifyExteriorElements (1),UseFunctionParameter (0)
  """
  def __eq__(self,*args):

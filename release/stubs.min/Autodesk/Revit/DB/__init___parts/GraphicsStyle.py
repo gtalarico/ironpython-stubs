@@ -22,17 +22,25 @@ class GraphicsStyle(Element,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  GraphicsStyleCategory=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The graphics style category.
-
-Get: GraphicsStyleCategory(self: GraphicsStyle) -> Category
-
+ """The graphics style category.
+
+
+
+Get: GraphicsStyleCategory(self: GraphicsStyle) -> Category
+
+
+
 """
 
  GraphicsStyleType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The graphics style type.
-
-Get: GraphicsStyleType(self: GraphicsStyle) -> GraphicsStyleType
-
+ """The graphics style type.
+
+
+
+Get: GraphicsStyleType(self: GraphicsStyle) -> GraphicsStyleType
+
+
+
 """
 
 

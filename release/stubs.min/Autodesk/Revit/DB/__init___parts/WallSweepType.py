@@ -1,7 +1,9 @@
 class WallSweepType(Enum,IComparable,IFormattable,IConvertible):
  """
- Represents the possible types for methods affecting wall sweeps or reveals.
- 
+ Represents the possible types for methods affecting wall sweeps or reveals.
+
+ 
+
  enum WallSweepType,values: Reveal (1),Sweep (0)
  """
  def __eq__(self,*args):

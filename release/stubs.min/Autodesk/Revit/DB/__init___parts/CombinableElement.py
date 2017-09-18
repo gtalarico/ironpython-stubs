@@ -22,10 +22,14 @@ class CombinableElement(Element,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Combinations=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The geometry combinations that this element belongs to.
-
-Get: Combinations(self: CombinableElement) -> GeomCombinationSet
-
+ """The geometry combinations that this element belongs to.
+
+
+
+Get: Combinations(self: CombinableElement) -> GeomCombinationSet
+
+
+
 """
 
 

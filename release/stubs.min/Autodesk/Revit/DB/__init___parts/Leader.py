@@ -19,40 +19,62 @@ class Leader(APIObject,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Anchor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Anchor point of the Leader
-
-Get: Anchor(self: Leader) -> XYZ
-
+ """Anchor point of the Leader
+
+
+
+Get: Anchor(self: Leader) -> XYZ
+
+
+
 """
 
  Elbow=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Elbow point of the Leader.
-
-Get: Elbow(self: Leader) -> XYZ
-
-Set: Elbow(self: Leader)=value
+ """Elbow point of the Leader.
+
+
+
+Get: Elbow(self: Leader) -> XYZ
+
+
+
+Set: Elbow(self: Leader)=value
+
 """
 
  End=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """End point of the Leader.
-
-Get: End(self: Leader) -> XYZ
-
-Set: End(self: Leader)=value
+ """End point of the Leader.
+
+
+
+Get: End(self: Leader) -> XYZ
+
+
+
+Set: End(self: Leader)=value
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: Leader) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: Leader) -> bool
+
+
+
 """
 
  LeaderShape=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Geometric style of the leader
-
-Get: LeaderShape(self: Leader) -> LeaderShape
-
+ """Geometric style of the leader
+
+
+
+Get: LeaderShape(self: Leader) -> LeaderShape
+
+
+
 """
 
 

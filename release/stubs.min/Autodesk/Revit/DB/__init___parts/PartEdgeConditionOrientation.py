@@ -1,7 +1,9 @@
 class PartEdgeConditionOrientation(Enum,IComparable,IFormattable,IConvertible):
  """
- Relative orientation of the right/lower and left/upper edge condition profiles.
- 
+ Relative orientation of the right/lower and left/upper edge condition profiles.
+
+ 
+
  enum PartEdgeConditionOrientation,values: Complement (0),Mirrored (1),MirroredAndRotated (2)
  """
  def __eq__(self,*args):

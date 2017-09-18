@@ -1,7 +1,9 @@
 class ThermalMaterialType(Enum,IComparable,IFormattable,IConvertible):
  """
- Represents the thermal material type.
- 
+ Represents the thermal material type.
+
+ 
+
  enum ThermalMaterialType,values: Gas (1),Liquid (2),Solid (3),Undefined (0)
  """
  def __eq__(self,*args):

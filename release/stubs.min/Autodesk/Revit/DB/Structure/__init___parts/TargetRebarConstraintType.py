@@ -1,8 +1,11 @@
 class TargetRebarConstraintType(Enum,IComparable,IFormattable,IConvertible):
  """
- A type used to identify the particular part of a Stirrup style rebar to which
-    a Standard style rebar's handle is constrained.
- 
+ A type used to identify the particular part of a Stirrup style rebar to which
+
+    a Standard style rebar's handle is constrained.
+
+ 
+
  enum TargetRebarConstraintType,values: BarBend (5),Edge (3),EndOfBar (2),HookBend (6),OutOfPlaneExtent (4),RebarPlane (0),StartOfBar (1)
  """
  def __eq__(self,*args):

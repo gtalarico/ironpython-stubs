@@ -1,7 +1,9 @@
 class DimensionStyleType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type containing possible style types of dimensions.
- 
+ An enumerated type containing possible style types of dimensions.
+
+ 
+
  enum DimensionStyleType,values: Angular (1),ArcLength (3),Diameter (9),Linear (0),LinearFixed (7),Radial (2),SpotCoordinate (5),SpotElevation (4),SpotSlope (8)
  """
  def __eq__(self,*args):

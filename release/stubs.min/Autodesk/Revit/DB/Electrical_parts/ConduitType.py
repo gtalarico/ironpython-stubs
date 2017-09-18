@@ -22,10 +22,14 @@ class ConduitType(MEPCurveType,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  IsWithFitting=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Whether this conduit type is with fitting
-
-Get: IsWithFitting(self: ConduitType) -> bool
-
+ """Whether this conduit type is with fitting
+
+
+
+Get: IsWithFitting(self: ConduitType) -> bool
+
+
+
 """
 
 

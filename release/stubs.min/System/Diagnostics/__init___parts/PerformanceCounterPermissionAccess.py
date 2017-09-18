@@ -1,7 +1,9 @@
 class PerformanceCounterPermissionAccess(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines access levels used by System.Diagnostics.PerformanceCounter permission classes.
- 
+ Defines access levels used by System.Diagnostics.PerformanceCounter permission classes.
+
+ 
+
  enum (flags) PerformanceCounterPermissionAccess,values: Administer (7),Browse (1),Instrument (3),None (0),Read (1),Write (2)
  """
  def __eq__(self,*args):

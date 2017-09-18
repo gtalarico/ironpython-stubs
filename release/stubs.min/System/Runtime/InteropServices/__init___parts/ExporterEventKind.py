@@ -1,7 +1,9 @@
 class ExporterEventKind(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes the callbacks that the type library exporter makes when exporting a type library.
- 
+ Describes the callbacks that the type library exporter makes when exporting a type library.
+
+ 
+
  enum ExporterEventKind,values: ERROR_REFTOINVALIDASSEMBLY (2),NOTIF_CONVERTWARNING (1),NOTIF_TYPECONVERTED (0)
  """
  def __eq__(self,*args):

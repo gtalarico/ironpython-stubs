@@ -1,7 +1,9 @@
 class PointCloudColorMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Color mode of a point cloud or part of a point cloud
- 
+ Color mode of a point cloud or part of a point cloud
+
+ 
+
  enum PointCloudColorMode,values: Elevation (2),FixedColor (1),Intensity (3),NoOverride (0),Normals (4)
  """
  def __eq__(self,*args):

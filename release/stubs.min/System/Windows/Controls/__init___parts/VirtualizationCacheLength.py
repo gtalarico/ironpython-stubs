@@ -1,11 +1,13 @@
 class VirtualizationCacheLength(object,IEquatable[VirtualizationCacheLength]):
  """
- VirtualizationCacheLength(cacheBeforeViewport: float,cacheAfterViewport: float)
+ VirtualizationCacheLength(cacheBeforeViewport: float,cacheAfterViewport: float)
+
  VirtualizationCacheLength(cacheBeforeAndAfterViewport: float)
  """
  def Equals(self,*__args):
   """
-  Equals(self: VirtualizationCacheLength,cacheLength: VirtualizationCacheLength) -> bool
+  Equals(self: VirtualizationCacheLength,cacheLength: VirtualizationCacheLength) -> bool
+
   Equals(self: VirtualizationCacheLength,oCompare: object) -> bool
   """
   pass
@@ -24,8 +26,10 @@ class VirtualizationCacheLength(object,IEquatable[VirtualizationCacheLength]):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,cacheBeforeAndAfterViewport: float)
-  __new__(cls: type,cacheBeforeViewport: float,cacheAfterViewport: float)
+  __new__(cls: type,cacheBeforeAndAfterViewport: float)
+
+  __new__(cls: type,cacheBeforeViewport: float,cacheAfterViewport: float)
+
   __new__[VirtualizationCacheLength]() -> VirtualizationCacheLength
   """
   pass
@@ -37,13 +41,17 @@ class VirtualizationCacheLength(object,IEquatable[VirtualizationCacheLength]):
  def __str__(self,*args):
   pass
  CacheAfterViewport=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CacheAfterViewport(self: VirtualizationCacheLength) -> float
-
+ """Get: CacheAfterViewport(self: VirtualizationCacheLength) -> float
+
+
+
 """
 
  CacheBeforeViewport=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CacheBeforeViewport(self: VirtualizationCacheLength) -> float
-
+ """Get: CacheBeforeViewport(self: VirtualizationCacheLength) -> float
+
+
+
 """
 
 

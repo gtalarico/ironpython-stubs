@@ -1,7 +1,9 @@
 class DocumentType(Enum,IComparable,IFormattable,IConvertible):
  """
- Types of Revit documents.
- 
+ Types of Revit documents.
+
+ 
+
  enum DocumentType,values: BuildingComponent (4),Family (1),IFC (3),Other (100),Project (0),Template (2)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class TextNoteLeaderTypes(Enum,IComparable,IFormattable,IConvertible):
  """
- Types of text-note leaders
- 
+ Types of text-note leaders
+
+ 
+
  enum TextNoteLeaderTypes,values: TNLT_ARC_L (2),TNLT_ARC_R (3),TNLT_STRAIGHT_L (0),TNLT_STRAIGHT_R (1)
  """
  def __eq__(self,*args):

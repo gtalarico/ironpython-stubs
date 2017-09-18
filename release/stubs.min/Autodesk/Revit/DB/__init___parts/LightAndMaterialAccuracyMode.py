@@ -1,7 +1,9 @@
 class LightAndMaterialAccuracyMode(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type containing possible Light and Material Accuracy modes for Raytracer render.
- 
+ An enumerated type containing possible Light and Material Accuracy modes for Raytracer render.
+
+ 
+
  enum LightAndMaterialAccuracyMode,values: Advanced (2),Simplified (1)
  """
  def __eq__(self,*args):

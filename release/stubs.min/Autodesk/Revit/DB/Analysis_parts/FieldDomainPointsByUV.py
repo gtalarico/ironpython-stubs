@@ -1,8 +1,11 @@
 class FieldDomainPointsByUV(FieldDomainPoints,IDisposable):
  """
- Represents a set of two-dimensional point coordinates (defined usually on surface)
- 
- FieldDomainPointsByUV(points: IList[UV],uCoordinates: ICollection[float],vCoordinates: ICollection[float])
+ Represents a set of two-dimensional point coordinates (defined usually on surface)
+
+ 
+
+ FieldDomainPointsByUV(points: IList[UV],uCoordinates: ICollection[float],vCoordinates: ICollection[float])
+
  FieldDomainPointsByUV(points: IList[UV])
  """
  def Dispose(self):
@@ -26,7 +29,8 @@ class FieldDomainPointsByUV(FieldDomainPoints,IDisposable):
  @staticmethod
  def __new__(self,points,uCoordinates=None,vCoordinates=None):
   """
-  __new__(cls: type,points: IList[UV],uCoordinates: ICollection[float],vCoordinates: ICollection[float])
+  __new__(cls: type,points: IList[UV],uCoordinates: ICollection[float],vCoordinates: ICollection[float])
+
   __new__(cls: type,points: IList[UV])
   """
   pass

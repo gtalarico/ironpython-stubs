@@ -1,8 +1,11 @@
 class ServerPath(ModelPath,IDisposable):
  """
- This class represents a path to a Revit Server location,rather than a
-    location on disk or a network drive.
- 
+ This class represents a path to a Revit Server location,rather than a
+
+    location on disk or a network drive.
+
+ 
+
  ServerPath(centralServerLocation: str,path: str)
  """
  def Dispose(self):

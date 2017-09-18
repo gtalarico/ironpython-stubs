@@ -1,7 +1,9 @@
 class ListControlConvertEventArgs(ConvertEventArgs):
  """
- Provides data for the System.Windows.Forms.ListControl.Format event.
- 
+ Provides data for the System.Windows.Forms.ListControl.Format event.
+
+ 
+
  ListControlConvertEventArgs(value: object,desiredType: Type,listItem: object)
  """
  @staticmethod
@@ -9,10 +11,14 @@ class ListControlConvertEventArgs(ConvertEventArgs):
   """ __new__(cls: type,value: object,desiredType: Type,listItem: object) """
   pass
  ListItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a data source item.
-
-Get: ListItem(self: ListControlConvertEventArgs) -> object
-
+ """Gets a data source item.
+
+
+
+Get: ListItem(self: ListControlConvertEventArgs) -> object
+
+
+
 """
 
 

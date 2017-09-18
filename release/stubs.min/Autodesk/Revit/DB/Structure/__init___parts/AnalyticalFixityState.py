@@ -1,7 +1,9 @@
 class AnalyticalFixityState(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the fixity setting of individual degrees of freedom in analytical release conditions.
- 
+ Specifies the fixity setting of individual degrees of freedom in analytical release conditions.
+
+ 
+
  enum AnalyticalFixityState,values: Fixed (0),Released (1),Spring (2)
  """
  def __eq__(self,*args):

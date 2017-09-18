@@ -1,7 +1,9 @@
 class DataExchangeMessageId(Enum,IComparable,IFormattable,IConvertible):
  """
- Predefined message ids for DataExchangeLog.
- 
+ Predefined message ids for DataExchangeLog.
+
+ 
+
  enum DataExchangeMessageId,values: EmptyObject (10),GenericError (6),InvalidDataSet (5),InvalidRenderingStyle (9),InvalidSourceObject (4),None (0),ObjectCreated (2),ObjectNotConverted (8),ObjectNotSupported (7),UnexpectedResult (3),UnitOfProgressCompleted (1)
  """
  def __eq__(self,*args):

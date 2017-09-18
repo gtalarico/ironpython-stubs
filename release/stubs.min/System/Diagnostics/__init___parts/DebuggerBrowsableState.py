@@ -1,7 +1,9 @@
 class DebuggerBrowsableState(Enum,IComparable,IFormattable,IConvertible):
  """
- Provides display instructions for the debugger.
- 
+ Provides display instructions for the debugger.
+
+ 
+
  enum DebuggerBrowsableState,values: Collapsed (2),Never (0),RootHidden (3)
  """
  def __eq__(self,*args):

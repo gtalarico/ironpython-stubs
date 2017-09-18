@@ -1,8 +1,11 @@
 class LinePattern(object,IDisposable):
  """
- Represents a line pattern definition.
- 
- LinePattern(name: str)
+ Represents a line pattern definition.
+
+ 
+
+ LinePattern(name: str)
+
  LinePattern()
  """
  def Dispose(self):
@@ -10,9 +13,12 @@ class LinePattern(object,IDisposable):
   pass
  def GetSegments(self):
   """
-  GetSegments(self: LinePattern) -> IList[LinePatternSegment]
-  
-   Gets the sequence of segments that defines this line pattern.
+  GetSegments(self: LinePattern) -> IList[LinePatternSegment]
+
+  
+
+   Gets the sequence of segments that defines this line pattern.
+
    Returns: The sequence of segments.
   """
   pass
@@ -34,7 +40,8 @@ class LinePattern(object,IDisposable):
  @staticmethod
  def __new__(self,name=None):
   """
-  __new__(cls: type,name: str)
+  __new__(cls: type,name: str)
+
   __new__(cls: type)
   """
   pass
@@ -42,18 +49,27 @@ class LinePattern(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: LinePattern) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: LinePattern) -> bool
+
+
+
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Line pattern name.
-
-Get: Name(self: LinePattern) -> str
-
-Set: Name(self: LinePattern)=value
+ """Line pattern name.
+
+
+
+Get: Name(self: LinePattern) -> str
+
+
+
+Set: Name(self: LinePattern)=value
+
 """
 
 

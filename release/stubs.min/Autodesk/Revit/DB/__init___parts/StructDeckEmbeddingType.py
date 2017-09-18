@@ -1,7 +1,9 @@
 class StructDeckEmbeddingType(Enum,IComparable,IFormattable,IConvertible):
  """
- Used in class CompoundStructure to specify the usage of a layer whose function is StructuralDeck.
- 
+ Used in class CompoundStructure to specify the usage of a layer whose function is StructuralDeck.
+
+ 
+
  enum StructDeckEmbeddingType,values: Invalid (-1),MergeWithLayerAbove (0),Standalone (1)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class CalendarSelectionMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies whether a single or multiple dates can be selected in a System.Windows.Controls.Calendar.
- 
+ Specifies whether a single or multiple dates can be selected in a System.Windows.Controls.Calendar.
+
+ 
+
  enum CalendarSelectionMode,values: MultipleRange (2),None (3),SingleDate (0),SingleRange (1)
  """
  def __eq__(self,*args):

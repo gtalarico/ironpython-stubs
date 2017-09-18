@@ -1,7 +1,9 @@
 class LinkedFileStatus(Enum,IComparable,IFormattable,IConvertible):
  """
- Enum displaying the loaded status of a linked file
- 
+ Enum displaying the loaded status of a linked file
+
+ 
+
  enum LinkedFileStatus,values: CanBeUpgraded (4),Imported (2),InClosedWorkset (5),Invalid (-1),Loaded (0),LocallyUnloaded (6),NotFound (3),Unloaded (1)
  """
  def __eq__(self,*args):

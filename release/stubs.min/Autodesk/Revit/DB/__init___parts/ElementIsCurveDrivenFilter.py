@@ -1,8 +1,11 @@
 class ElementIsCurveDrivenFilter(ElementQuickFilter,IDisposable):
  """
- A filter used to match elements which are curve driven.
- 
- ElementIsCurveDrivenFilter(inverted: bool)
+ A filter used to match elements which are curve driven.
+
+ 
+
+ ElementIsCurveDrivenFilter(inverted: bool)
+
  ElementIsCurveDrivenFilter()
  """
  def Dispose(self):
@@ -23,7 +26,8 @@ class ElementIsCurveDrivenFilter(ElementQuickFilter,IDisposable):
  @staticmethod
  def __new__(self,inverted=None):
   """
-  __new__(cls: type,inverted: bool)
+  __new__(cls: type,inverted: bool)
+
   __new__(cls: type)
   """
   pass

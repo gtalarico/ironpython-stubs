@@ -1,7 +1,9 @@
 class UnderlayOrientation(Enum,IComparable,IFormattable,IConvertible):
  """
- Indicates how elements in the underlay are viewed.
- 
+ Indicates how elements in the underlay are viewed.
+
+ 
+
  enum UnderlayOrientation,values: LookingDown (0),LookingUp (1)
  """
  def __eq__(self,*args):

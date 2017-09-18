@@ -5,20 +5,29 @@ class FailureDefinitionRegistry(object,IDisposable):
   pass
  def FindFailureDefinition(self,id):
   """
-  FindFailureDefinition(self: FailureDefinitionRegistry,id: FailureDefinitionId) -> FailureDefinitionAccessor
-  
-   Finds a specific FailureDefinition by a given FailureDefinitionId.
-  
-   id: The id of the FailureDefinition.
-   Returns: The accessor of the found FailureDefinition,or null,if the FailureDefinition 
+  FindFailureDefinition(self: FailureDefinitionRegistry,id: FailureDefinitionId) -> FailureDefinitionAccessor
+
+  
+
+   Finds a specific FailureDefinition by a given FailureDefinitionId.
+
+  
+
+   id: The id of the FailureDefinition.
+
+   Returns: The accessor of the found FailureDefinition,or null,if the FailureDefinition 
+
     was not found.
   """
   pass
  def ListAllFailureDefinitions(self):
   """
-  ListAllFailureDefinitions(self: FailureDefinitionRegistry) -> IList[FailureDefinitionAccessor]
-  
-   Retrieves all the registered FailureDefinitions.
+  ListAllFailureDefinitions(self: FailureDefinitionRegistry) -> IList[FailureDefinitionAccessor]
+
+  
+
+   Retrieves all the registered FailureDefinitions.
+
    Returns: All the registered FailureDefinitions.
   """
   pass
@@ -38,10 +47,14 @@ class FailureDefinitionRegistry(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: FailureDefinitionRegistry) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: FailureDefinitionRegistry) -> bool
+
+
+
 """
 
 

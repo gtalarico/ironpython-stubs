@@ -1,7 +1,9 @@
 class AuthorizationRuleCollection(ReadOnlyCollectionBase,ICollection,IEnumerable):
  """
- Represents a collection of System.Security.AccessControl.AuthorizationRule objects.
- 
+ Represents a collection of System.Security.AccessControl.AuthorizationRule objects.
+
+ 
+
  AuthorizationRuleCollection()
  """
  def AddRule(self,rule):
@@ -9,10 +11,14 @@ class AuthorizationRuleCollection(ReadOnlyCollectionBase,ICollection,IEnumerable
   pass
  def CopyTo(self,rules,index):
   """
-  CopyTo(self: AuthorizationRuleCollection,rules: Array[AuthorizationRule],index: int)
-   Copies the contents of the collection to an array.
-  
-   rules: An array to which to copy the contents of the collection.
+  CopyTo(self: AuthorizationRuleCollection,rules: Array[AuthorizationRule],index: int)
+
+   Copies the contents of the collection to an array.
+
+  
+
+   rules: An array to which to copy the contents of the collection.
+
    index: The zero-based index from which to begin copying.
   """
   pass
@@ -26,8 +32,10 @@ class AuthorizationRuleCollection(ReadOnlyCollectionBase,ICollection,IEnumerable
   """ __iter__(self: IEnumerable) -> object """
   pass
  InnerList=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the list of elements contained in the System.Collections.ReadOnlyCollectionBase instance.
-
+ """Gets the list of elements contained in the System.Collections.ReadOnlyCollectionBase instance.
+
+
+
 """
 
 

@@ -1,144 +1,249 @@
 class RebarShapeDefinitionBySegments(RebarShapeDefinition,IDisposable):
  """
- Definition of a shape in terms of one or more straight segments of rebar,
-    with arc bends between the segments.
- 
+ Definition of a shape in terms of one or more straight segments of rebar,
+
+    with arc bends between the segments.
+
+ 
+
  RebarShapeDefinitionBySegments(doc: Document,numberOfSegments: int)
  """
  def AddBendDefaultRadius(self,vertexIndex,turn,angle):
   """
-  AddBendDefaultRadius(self: RebarShapeDefinitionBySegments,vertexIndex: int,turn: RebarShapeVertexTurn,angle: RebarShapeBendAngle)
-   Specify a default-radius bend.
-  
-   vertexIndex: Index of the vertex (1 to NumberOfVertices - 2).
-   turn: Specify turn direction (RebarShapeVertexTurn::Left or 
-    RebarShapeVertexTurn::Right).
-  
+  AddBendDefaultRadius(self: RebarShapeDefinitionBySegments,vertexIndex: int,turn: RebarShapeVertexTurn,angle: RebarShapeBendAngle)
+
+   Specify a default-radius bend.
+
+  
+
+   vertexIndex: Index of the vertex (1 to NumberOfVertices - 2).
+
+   turn: Specify turn direction (RebarShapeVertexTurn::Left or 
+
+    RebarShapeVertexTurn::Right).
+
+  
+
    angle: Specify whether the bend is acute,obtuse,etc.
   """
   pass
  def AddBendVariableRadius(self,vertexIndex,turn,angle,paramId,measureIncludingBarThickness):
   """
-  AddBendVariableRadius(self: RebarShapeDefinitionBySegments,vertexIndex: int,turn: RebarShapeVertexTurn,angle: RebarShapeBendAngle,paramId: ElementId,measureIncludingBarThickness: bool)
-   Specify a variable-radius bend.
-  
-   vertexIndex: Index of the vertex (1 to NumberOfVertices - 2).
-   turn: Specify turn direction (RebarShapeVertexTurn::Left or 
-    RebarShapeVertexTurn::Right).
-  
-   angle: Specify whether the bend is acute,obtuse,etc.
-   paramId: Id of a parameter driving the radius.
-   measureIncludingBarThickness: If true,the radius is measured to the outside of the
-     bend; if false,it is 
+  AddBendVariableRadius(self: RebarShapeDefinitionBySegments,vertexIndex: int,turn: RebarShapeVertexTurn,angle: RebarShapeBendAngle,paramId: ElementId,measureIncludingBarThickness: bool)
+
+   Specify a variable-radius bend.
+
+  
+
+   vertexIndex: Index of the vertex (1 to NumberOfVertices - 2).
+
+   turn: Specify turn direction (RebarShapeVertexTurn::Left or 
+
+    RebarShapeVertexTurn::Right).
+
+  
+
+   angle: Specify whether the bend is acute,obtuse,etc.
+
+   paramId: Id of a parameter driving the radius.
+
+   measureIncludingBarThickness: If true,the radius is measured to the outside of the
+
+     bend; if false,it is 
+
     measured to the inside.
   """
   pass
  def AddConstraintParallelToSegment(self,iSegment,paramId,measureToOutsideOfBend0,measureToOutsideOfBend1):
   """
-  AddConstraintParallelToSegment(self: RebarShapeDefinitionBySegments,iSegment: int,paramId: ElementId,measureToOutsideOfBend0: bool,measureToOutsideOfBend1: bool)
-   Constrain the length of a segment by parameterizing its length.
-  
-   iSegment: Index of the segment (0 to NumberOfSegments - 1).
-   paramId: Id of a parameter to drive the constraint. To obtain the id of a shared 
-    parameter,
-     call RebarShape.GetElementIdForExternalDefinition().
-  
-   measureToOutsideOfBend0: Choose between two possibilities for the first reference of the length 
-    dimension. If false,the reference is at the point where the bend begins; 
-    equivalently,at the projection of the bend centerpoint onto the segment. If 
-    true,the reference is moved outward by a distance equal to the bend radius 
-    plus the bar diameter; if the bend is a right angle or greater,this is 
-    equivalent to putting the reference at the outer face of the bend.
-  
-   measureToOutsideOfBend1: Choose between two possibilities for the second reference of the length 
+  AddConstraintParallelToSegment(self: RebarShapeDefinitionBySegments,iSegment: int,paramId: ElementId,measureToOutsideOfBend0: bool,measureToOutsideOfBend1: bool)
+
+   Constrain the length of a segment by parameterizing its length.
+
+  
+
+   iSegment: Index of the segment (0 to NumberOfSegments - 1).
+
+   paramId: Id of a parameter to drive the constraint. To obtain the id of a shared 
+
+    parameter,
+
+     call RebarShape.GetElementIdForExternalDefinition().
+
+  
+
+   measureToOutsideOfBend0: Choose between two possibilities for the first reference of the length 
+
+    dimension. If false,the reference is at the point where the bend begins; 
+
+    equivalently,at the projection of the bend centerpoint onto the segment. If 
+
+    true,the reference is moved outward by a distance equal to the bend radius 
+
+    plus the bar diameter; if the bend is a right angle or greater,this is 
+
+    equivalent to putting the reference at the outer face of the bend.
+
+  
+
+   measureToOutsideOfBend1: Choose between two possibilities for the second reference of the length 
+
     dimension.
   """
   pass
  def AddConstraintToSegment(self,iSegment,paramId,constraintDirCoordX,constraintDirCoordY,signOfZCoordOfCrossProductOfConstraintDirBySegmentDir,measureToOutsideOfBend0,measureToOutsideOfBend1):
   """
-  AddConstraintToSegment(self: RebarShapeDefinitionBySegments,iSegment: int,paramId: ElementId,constraintDirCoordX: float,constraintDirCoordY: float,signOfZCoordOfCrossProductOfConstraintDirBySegmentDir: int,measureToOutsideOfBend0: bool,measureToOutsideOfBend1: bool)
-   Add a constraint that helps determine the length of a segment.
-  
-   iSegment: Index of the segment (0 to NumberOfSegments - 1).
-   paramId: Id of a parameter to drive the constraint.
-     To obtain the id of a shared 
-    parameter,
-     call RebarShape.GetElementIdForExternalDefinition().
-  
-   constraintDirCoordX: The x-coordinate of a 2D vector specifying the constraint direction.
-   constraintDirCoordY: The y-coordinate of a 2D vector specifying the constraint direction.
-   signOfZCoordOfCrossProductOfConstraintDirBySegmentDir: Legal values are 1 and -1. For a fixed-direction segment,this value is 
-    ignored. For a variable-direction segment,this value is combined with the 
-    constraint length (the nonnegative value associated with 'param') to determine 
-    the direction of the segment. For example,a segment whose direction vector 
-    lies in the upper-right quadrant of the plane,and whose x-axis projected 
-    length is A and whose y-axis projected length is B,could be created by 
-    calling: AddConstraintToSegment(iSegment,paramA,1.0,0.0,1,...) 
-    AddConstraintToSegment(iSegment,paramB,0.0,1.0,-1,...)
-  
-   measureToOutsideOfBend0: Choose between two possibilities for the first reference of the length 
-    dimension. If false,the reference is at the point where the bend begins; 
-    equivalently,at the projection of the bend centerpoint onto the segment. If 
-    true,the reference is moved outward by a distance equal to the bend radius 
-    plus the bar diameter; if the bend is a right angle or greater,this is 
-    equivalent to putting the reference at the outer face of the bend.
-  
-   measureToOutsideOfBend1: Choose between two possibilities for the second reference of the length 
+  AddConstraintToSegment(self: RebarShapeDefinitionBySegments,iSegment: int,paramId: ElementId,constraintDirCoordX: float,constraintDirCoordY: float,signOfZCoordOfCrossProductOfConstraintDirBySegmentDir: int,measureToOutsideOfBend0: bool,measureToOutsideOfBend1: bool)
+
+   Add a constraint that helps determine the length of a segment.
+
+  
+
+   iSegment: Index of the segment (0 to NumberOfSegments - 1).
+
+   paramId: Id of a parameter to drive the constraint.
+
+     To obtain the id of a shared 
+
+    parameter,
+
+     call RebarShape.GetElementIdForExternalDefinition().
+
+  
+
+   constraintDirCoordX: The x-coordinate of a 2D vector specifying the constraint direction.
+
+   constraintDirCoordY: The y-coordinate of a 2D vector specifying the constraint direction.
+
+   signOfZCoordOfCrossProductOfConstraintDirBySegmentDir: Legal values are 1 and -1. For a fixed-direction segment,this value is 
+
+    ignored. For a variable-direction segment,this value is combined with the 
+
+    constraint length (the nonnegative value associated with 'param') to determine 
+
+    the direction of the segment. For example,a segment whose direction vector 
+
+    lies in the upper-right quadrant of the plane,and whose x-axis projected 
+
+    length is A and whose y-axis projected length is B,could be created by 
+
+    calling: AddConstraintToSegment(iSegment,paramA,1.0,0.0,1,...) 
+
+    AddConstraintToSegment(iSegment,paramB,0.0,1.0,-1,...)
+
+  
+
+   measureToOutsideOfBend0: Choose between two possibilities for the first reference of the length 
+
+    dimension. If false,the reference is at the point where the bend begins; 
+
+    equivalently,at the projection of the bend centerpoint onto the segment. If 
+
+    true,the reference is moved outward by a distance equal to the bend radius 
+
+    plus the bar diameter; if the bend is a right angle or greater,this is 
+
+    equivalent to putting the reference at the outer face of the bend.
+
+  
+
+   measureToOutsideOfBend1: Choose between two possibilities for the second reference of the length 
+
     dimension.
   """
   pass
  def AddListeningDimensionBendToBend(self,paramId,constraintDirCoordX,constraintDirCoordY,iSegment0,iEnd0,iSegment1,iEnd1):
   """
-  AddListeningDimensionBendToBend(self: RebarShapeDefinitionBySegments,paramId: ElementId,constraintDirCoordX: float,constraintDirCoordY: float,iSegment0: int,iEnd0: int,iSegment1: int,iEnd1: int)
-   Specify a dimension between two bends,measured by a read-only parameter.
-  
-   paramId: Id of a parameter to report the length of the dimension. The parameter will be 
-    read-only
-     on Rebar instances.
-  
-   constraintDirCoordX: The x-coordinate of a 2D vector specifying the constraint direction.
-   constraintDirCoordY: The y-coordinate of a 2D vector specifying the constraint direction.
-   iSegment0: Index of the first segment (0 to NumberOfSegments - 1).
-   iEnd0: End (0 or 1) of the first segment.
-   iSegment1: Index of the second segment (0 to NumberOfSegments - 1).
+  AddListeningDimensionBendToBend(self: RebarShapeDefinitionBySegments,paramId: ElementId,constraintDirCoordX: float,constraintDirCoordY: float,iSegment0: int,iEnd0: int,iSegment1: int,iEnd1: int)
+
+   Specify a dimension between two bends,measured by a read-only parameter.
+
+  
+
+   paramId: Id of a parameter to report the length of the dimension. The parameter will be 
+
+    read-only
+
+     on Rebar instances.
+
+  
+
+   constraintDirCoordX: The x-coordinate of a 2D vector specifying the constraint direction.
+
+   constraintDirCoordY: The y-coordinate of a 2D vector specifying the constraint direction.
+
+   iSegment0: Index of the first segment (0 to NumberOfSegments - 1).
+
+   iEnd0: End (0 or 1) of the first segment.
+
+   iSegment1: Index of the second segment (0 to NumberOfSegments - 1).
+
    iEnd1: End (0 or 1) of the second segment.
   """
   pass
  def AddListeningDimensionSegmentToBend(self,paramId,constraintDirCoordX,constraintDirCoordY,iSegment0,iSegment1,iEnd1):
   """
-  AddListeningDimensionSegmentToBend(self: RebarShapeDefinitionBySegments,paramId: ElementId,constraintDirCoordX: float,constraintDirCoordY: float,iSegment0: int,iSegment1: int,iEnd1: int)
-   Specify a dimension perpendicular to one fixed-direction segment,
-     referring 
-    to that segment and some other bend in the shape,
-     measured by a read-only 
-    parameter.
-  
-  
-   paramId: Id of a parameter to report the length of the dimension. The parameter will be 
-    read-only
-     on Rebar instances.
-  
-   constraintDirCoordX: The x-coordinate of a 2D vector specifying the constraint direction.
-   constraintDirCoordY: The y-coordinate of a 2D vector specifying the constraint direction.
-   iSegment0: Index of the first segment (0 to NumberOfSegments - 1).
-   iSegment1: Index of the second segment (0 to NumberOfSegments - 1).
+  AddListeningDimensionSegmentToBend(self: RebarShapeDefinitionBySegments,paramId: ElementId,constraintDirCoordX: float,constraintDirCoordY: float,iSegment0: int,iSegment1: int,iEnd1: int)
+
+   Specify a dimension perpendicular to one fixed-direction segment,
+
+     referring 
+
+    to that segment and some other bend in the shape,
+
+     measured by a read-only 
+
+    parameter.
+
+  
+
+  
+
+   paramId: Id of a parameter to report the length of the dimension. The parameter will be 
+
+    read-only
+
+     on Rebar instances.
+
+  
+
+   constraintDirCoordX: The x-coordinate of a 2D vector specifying the constraint direction.
+
+   constraintDirCoordY: The y-coordinate of a 2D vector specifying the constraint direction.
+
+   iSegment0: Index of the first segment (0 to NumberOfSegments - 1).
+
+   iSegment1: Index of the second segment (0 to NumberOfSegments - 1).
+
    iEnd1: End (0 or 1) of the second segment.
   """
   pass
  def AddListeningDimensionSegmentToSegment(self,paramId,constraintDirCoordX,constraintDirCoordY,iSegment0,iSegment1):
   """
-  AddListeningDimensionSegmentToSegment(self: RebarShapeDefinitionBySegments,paramId: ElementId,constraintDirCoordX: float,constraintDirCoordY: float,iSegment0: int,iSegment1: int)
-   Specify a dimension perpendicular to two fixed-direction segments,measured by 
-    a read-only parameter.
-  
-  
-   paramId: Id of a parameter to report the length of the dimension. The parameter will be 
-    read-only
-     on Rebar instances.
-  
-   constraintDirCoordX: The x-coordinate of a 2D vector specifying the constraint direction.
-   constraintDirCoordY: The y-coordinate of a 2D vector specifying the constraint direction.
-   iSegment0: Index of the first segment (0 to NumberOfSegments - 1).
+  AddListeningDimensionSegmentToSegment(self: RebarShapeDefinitionBySegments,paramId: ElementId,constraintDirCoordX: float,constraintDirCoordY: float,iSegment0: int,iSegment1: int)
+
+   Specify a dimension perpendicular to two fixed-direction segments,measured by 
+
+    a read-only parameter.
+
+  
+
+  
+
+   paramId: Id of a parameter to report the length of the dimension. The parameter will be 
+
+    read-only
+
+     on Rebar instances.
+
+  
+
+   constraintDirCoordX: The x-coordinate of a 2D vector specifying the constraint direction.
+
+   constraintDirCoordY: The y-coordinate of a 2D vector specifying the constraint direction.
+
+   iSegment0: Index of the first segment (0 to NumberOfSegments - 1).
+
    iSegment1: Index of the second segment (0 to NumberOfSegments - 1).
   """
   pass
@@ -147,21 +252,31 @@ class RebarShapeDefinitionBySegments(RebarShapeDefinition,IDisposable):
   pass
  def GetSegment(self,segmentIndex):
   """
-  GetSegment(self: RebarShapeDefinitionBySegments,segmentIndex: int) -> RebarShapeSegment
-  
-   Return a reference to one of the segments in the definition.
-  
-   segmentIndex: Index of the segment (0 to NumberOfSegments - 1).
+  GetSegment(self: RebarShapeDefinitionBySegments,segmentIndex: int) -> RebarShapeSegment
+
+  
+
+   Return a reference to one of the segments in the definition.
+
+  
+
+   segmentIndex: Index of the segment (0 to NumberOfSegments - 1).
+
    Returns: The requested segment.
   """
   pass
  def GetVertex(self,vertexIndex):
   """
-  GetVertex(self: RebarShapeDefinitionBySegments,vertexIndex: int) -> RebarShapeVertex
-  
-   Return a reference to one of the vertices in the definition.
-  
-   vertexIndex: Index of the vertex (0 to NumberOfVertices - 1).
+  GetVertex(self: RebarShapeDefinitionBySegments,vertexIndex: int) -> RebarShapeVertex
+
+  
+
+   Return a reference to one of the vertices in the definition.
+
+  
+
+   vertexIndex: Index of the vertex (0 to NumberOfVertices - 1).
+
    Returns: The requested vertex.
   """
   pass
@@ -170,53 +285,85 @@ class RebarShapeDefinitionBySegments(RebarShapeDefinition,IDisposable):
   pass
  def RemoveParameterFromSegment(self,iSegment,paramId):
   """
-  RemoveParameterFromSegment(self: RebarShapeDefinitionBySegments,iSegment: int,paramId: ElementId)
-   Remove constraints from a segment.
-  
-   iSegment: Index of the segment (0 to NumberOfSegments - 1).
+  RemoveParameterFromSegment(self: RebarShapeDefinitionBySegments,iSegment: int,paramId: ElementId)
+
+   Remove constraints from a segment.
+
+  
+
+   iSegment: Index of the segment (0 to NumberOfSegments - 1).
+
    paramId: Id of a parameter driving one or more constraints.
   """
   pass
  def SetSegmentAs180DegreeBend(self,iSegment,paramId=None,measureToOutsideOfBend=None):
   """
-  SetSegmentAs180DegreeBend(self: RebarShapeDefinitionBySegments,iSegment: int)
-   Indicates that a segment is a "virtual" segment introduced to describe a 
-    180-degree bend. The radius of the bend will be taken from the Bar Type.
-  
-  
-   iSegment: Index of the segment (0 to NumberOfSegments - 1).
-  SetSegmentAs180DegreeBend(self: RebarShapeDefinitionBySegments,iSegment: int,paramId: ElementId,measureToOutsideOfBend: bool)
-   Indicate that a segment is a "virtual" segment introduced to describe a 
-    180-degree bend. The radius of the bend will be driven by radiusParam.
-  
-  
-   iSegment: Index of the segment (0 to NumberOfSegments - 1).
-   paramId: Id of a parameter to drive the radius.
-     To obtain the id of a shared 
-    parameter,
-     call RebarShape.GetElementIdForExternalDefinition().
-  
-   measureToOutsideOfBend: Choose between two possibilities for the references of the radius dimension.
-    
-     If true,measure to the exterior face of the bar. If false,measure to the 
+  SetSegmentAs180DegreeBend(self: RebarShapeDefinitionBySegments,iSegment: int)
+
+   Indicates that a segment is a "virtual" segment introduced to describe a 
+
+    180-degree bend. The radius of the bend will be taken from the Bar Type.
+
+  
+
+  
+
+   iSegment: Index of the segment (0 to NumberOfSegments - 1).
+
+  SetSegmentAs180DegreeBend(self: RebarShapeDefinitionBySegments,iSegment: int,paramId: ElementId,measureToOutsideOfBend: bool)
+
+   Indicate that a segment is a "virtual" segment introduced to describe a 
+
+    180-degree bend. The radius of the bend will be driven by radiusParam.
+
+  
+
+  
+
+   iSegment: Index of the segment (0 to NumberOfSegments - 1).
+
+   paramId: Id of a parameter to drive the radius.
+
+     To obtain the id of a shared 
+
+    parameter,
+
+     call RebarShape.GetElementIdForExternalDefinition().
+
+  
+
+   measureToOutsideOfBend: Choose between two possibilities for the references of the radius dimension.
+
+    
+
+     If true,measure to the exterior face of the bar. If false,measure to the 
+
     interior face.
   """
   pass
  def SetSegmentFixedDirection(self,iSegment,vecCoordX,vecCoordY):
   """
-  SetSegmentFixedDirection(self: RebarShapeDefinitionBySegments,iSegment: int,vecCoordX: float,vecCoordY: float)
-   Fix the direction of a segment.
-  
-   iSegment: Index of the segment (0 to NumberOfSegments - 1).
-   vecCoordX: The x-coordinate of a 2D vector specifying the segment direction.
+  SetSegmentFixedDirection(self: RebarShapeDefinitionBySegments,iSegment: int,vecCoordX: float,vecCoordY: float)
+
+   Fix the direction of a segment.
+
+  
+
+   iSegment: Index of the segment (0 to NumberOfSegments - 1).
+
+   vecCoordX: The x-coordinate of a 2D vector specifying the segment direction.
+
    vecCoordY: The y-coordinate of a 2D vector specifying the segment direction.
   """
   pass
  def SetSegmentVariableDirection(self,iSegment):
   """
-  SetSegmentVariableDirection(self: RebarShapeDefinitionBySegments,iSegment: int)
-   Remove the fixed direction from a segment.
-  
+  SetSegmentVariableDirection(self: RebarShapeDefinitionBySegments,iSegment: int)
+
+   Remove the fixed direction from a segment.
+
+  
+
    iSegment: Index of the segment (0 to NumberOfSegments - 1).
   """
   pass
@@ -234,27 +381,42 @@ class RebarShapeDefinitionBySegments(RebarShapeDefinition,IDisposable):
   """ __new__(cls: type,doc: Document,numberOfSegments: int) """
   pass
  MajorSegmentIndex=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Index of a segment that can be considered the most important. Revit
-   attempts to preserve the orientation of this segment when a Rebar instance
-   changes its RebarShape to one with a different number of segments.
-
-Get: MajorSegmentIndex(self: RebarShapeDefinitionBySegments) -> int
-
-Set: MajorSegmentIndex(self: RebarShapeDefinitionBySegments)=value
+ """Index of a segment that can be considered the most important. Revit
+
+   attempts to preserve the orientation of this segment when a Rebar instance
+
+   changes its RebarShape to one with a different number of segments.
+
+
+
+Get: MajorSegmentIndex(self: RebarShapeDefinitionBySegments) -> int
+
+
+
+Set: MajorSegmentIndex(self: RebarShapeDefinitionBySegments)=value
+
 """
 
  NumberOfSegments=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The number of straight segments in this shape.
-
-Get: NumberOfSegments(self: RebarShapeDefinitionBySegments) -> int
-
+ """The number of straight segments in this shape.
+
+
+
+Get: NumberOfSegments(self: RebarShapeDefinitionBySegments) -> int
+
+
+
 """
 
  NumberOfVertices=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The number of vertices in this shape,always equal to NumberOfSegments + 1.
-
-Get: NumberOfVertices(self: RebarShapeDefinitionBySegments) -> int
-
+ """The number of vertices in this shape,always equal to NumberOfSegments + 1.
+
+
+
+Get: NumberOfVertices(self: RebarShapeDefinitionBySegments) -> int
+
+
+
 """
 
 

@@ -1,7 +1,9 @@
 class DockPosition(Enum,IComparable,IFormattable,IConvertible):
  """
- Which part of the Revit application frame the pane should dock to.
- 
+ Which part of the Revit application frame the pane should dock to.
+
+ 
+
  enum DockPosition,values: Bottom (59422),Floating (59423),Left (59420),Right (59421),Tabbed (59424),Top (59419)
  """
  def __eq__(self,*args):

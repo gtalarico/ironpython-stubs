@@ -1,7 +1,9 @@
 class ExportRange(Enum,IComparable,IFormattable,IConvertible):
  """
- This enum is used to define what view,part of the view,or list of views will be exported.
- 
+ This enum is used to define what view,part of the view,or list of views will be exported.
+
+ 
+
  enum ExportRange,values: CurrentView (0),SetOfViews (2),VisibleRegionOfCurrentView (1)
  """
  def __eq__(self,*args):

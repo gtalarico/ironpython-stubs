@@ -3,28 +3,50 @@ class ExportDWGSettings(Element,IDisposable):
  @staticmethod
  def Create(document,name,options=None):
   """
-  Create(document: Document,name: str) -> ExportDWGSettings
-  
-   Create a DWG export settings with default values.
-  
-   document: Document where created settings is saved.
-   name: The name specified to this settings.
-   Returns: The new DWG export settings instance.
-  Create(document: Document,name: str,options: DWGExportOptions) -> ExportDWGSettings
-  
-   Create a DWG export settings with default values.
-  
-   document: Document where created settings is saved.
-   name: The name specified to this settings.
-   options: Initialize settings by using values in DWGExportOptions.
-   Returns: The new DWG export settings instance.
-  Create(document: Document,name: str,options: DXFExportOptions) -> ExportDWGSettings
-  
-   Create a DWG export settings with default values.
-  
-   document: Document where created settings is saved.
-   name: The name specified to this settings.
-   options: Initialize settings by using values in DXFExportOptions.
+  Create(document: Document,name: str) -> ExportDWGSettings
+
+  
+
+   Create a DWG export settings with default values.
+
+  
+
+   document: Document where created settings is saved.
+
+   name: The name specified to this settings.
+
+   Returns: The new DWG export settings instance.
+
+  Create(document: Document,name: str,options: DWGExportOptions) -> ExportDWGSettings
+
+  
+
+   Create a DWG export settings with default values.
+
+  
+
+   document: Document where created settings is saved.
+
+   name: The name specified to this settings.
+
+   options: Initialize settings by using values in DWGExportOptions.
+
+   Returns: The new DWG export settings instance.
+
+  Create(document: Document,name: str,options: DXFExportOptions) -> ExportDWGSettings
+
+  
+
+   Create a DWG export settings with default values.
+
+  
+
+   document: Document where created settings is saved.
+
+   name: The name specified to this settings.
+
+   options: Initialize settings by using values in DXFExportOptions.
+
    Returns: The new DWG export settings instance.
   """
   pass
@@ -36,28 +58,39 @@ class ExportDWGSettings(Element,IDisposable):
   pass
  def GetDWGExportOptions(self):
   """
-  GetDWGExportOptions(self: ExportDWGSettings) -> DWGExportOptions
-  
-   Gets the options stored in the these settings.
+  GetDWGExportOptions(self: ExportDWGSettings) -> DWGExportOptions
+
+  
+
+   Gets the options stored in the these settings.
+
    Returns: The options.
   """
   pass
  def GetDXFExportOptions(self):
   """
-  GetDXFExportOptions(self: ExportDWGSettings) -> DXFExportOptions
-  
-   Gets the options stored in the these settings.
+  GetDXFExportOptions(self: ExportDWGSettings) -> DXFExportOptions
+
+  
+
+   Gets the options stored in the these settings.
+
    Returns: The options
   """
   pass
  @staticmethod
  def ListNames(aDoc):
   """
-  ListNames(aDoc: Document) -> IList[str]
-  
-   Returns a list of names of dwg/dxf export settings.
-  
-   aDoc: A Revit document to retrieve names from.
+  ListNames(aDoc: Document) -> IList[str]
+
+  
+
+   Returns a list of names of dwg/dxf export settings.
+
+  
+
+   aDoc: A Revit document to retrieve names from.
+
    Returns: An array of strings representing names of predefined setups.
   """
   pass
@@ -66,17 +99,23 @@ class ExportDWGSettings(Element,IDisposable):
   pass
  def SetDWGExportOptions(self,options):
   """
-  SetDWGExportOptions(self: ExportDWGSettings,options: DWGExportOptions)
-   Sets the options stored in these settings.
-  
+  SetDWGExportOptions(self: ExportDWGSettings,options: DWGExportOptions)
+
+   Sets the options stored in these settings.
+
+  
+
    options: The options.
   """
   pass
  def SetDXFExportOptions(self,options):
   """
-  SetDXFExportOptions(self: ExportDWGSettings,options: DXFExportOptions)
-   Sets the options stored in these settings.
-  
+  SetDXFExportOptions(self: ExportDWGSettings,options: DXFExportOptions)
+
+   Sets the options stored in these settings.
+
+  
+
    options: The options.
   """
   pass

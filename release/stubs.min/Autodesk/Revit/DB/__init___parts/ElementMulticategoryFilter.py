@@ -1,10 +1,15 @@
 class ElementMulticategoryFilter(ElementQuickFilter,IDisposable):
  """
- A filter used to find elements whose category matches any of a given set of categories.
- 
- ElementMulticategoryFilter(categories: ICollection[BuiltInCategory],inverted: bool)
- ElementMulticategoryFilter(categories: ICollection[BuiltInCategory])
- ElementMulticategoryFilter(categoryIds: ICollection[ElementId],inverted: bool)
+ A filter used to find elements whose category matches any of a given set of categories.
+
+ 
+
+ ElementMulticategoryFilter(categories: ICollection[BuiltInCategory],inverted: bool)
+
+ ElementMulticategoryFilter(categories: ICollection[BuiltInCategory])
+
+ ElementMulticategoryFilter(categoryIds: ICollection[ElementId],inverted: bool)
+
  ElementMulticategoryFilter(categoryIds: ICollection[ElementId])
  """
  def Dispose(self):
@@ -12,9 +17,12 @@ class ElementMulticategoryFilter(ElementQuickFilter,IDisposable):
   pass
  def GetCategoryIds(self):
   """
-  GetCategoryIds(self: ElementMulticategoryFilter) -> ICollection[ElementId]
-  
-   Gets the category ids assigned to this filter.
+  GetCategoryIds(self: ElementMulticategoryFilter) -> ICollection[ElementId]
+
+  
+
+   Gets the category ids assigned to this filter.
+
    Returns: The category ids.
   """
   pass
@@ -33,9 +41,12 @@ class ElementMulticategoryFilter(ElementQuickFilter,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,categories: ICollection[BuiltInCategory],inverted: bool)
-  __new__(cls: type,categories: ICollection[BuiltInCategory])
-  __new__(cls: type,categoryIds: ICollection[ElementId],inverted: bool)
+  __new__(cls: type,categories: ICollection[BuiltInCategory],inverted: bool)
+
+  __new__(cls: type,categories: ICollection[BuiltInCategory])
+
+  __new__(cls: type,categoryIds: ICollection[ElementId],inverted: bool)
+
   __new__(cls: type,categoryIds: ICollection[ElementId])
   """
   pass

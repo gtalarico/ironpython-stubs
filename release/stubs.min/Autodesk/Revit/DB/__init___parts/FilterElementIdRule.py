@@ -1,7 +1,9 @@
 class FilterElementIdRule(FilterNumericValueRule,IDisposable):
  """
- A filter rule that operates on ElementId values in a Revit project.
- 
+ A filter rule that operates on ElementId values in a Revit project.
+
+ 
+
  FilterElementIdRule(valueProvider: FilterableValueProvider,evaluator: FilterNumericRuleEvaluator,ruleValue: ElementId)
  """
  def Dispose(self):
@@ -24,11 +26,16 @@ class FilterElementIdRule(FilterNumericValueRule,IDisposable):
   """ __new__(cls: type,valueProvider: FilterableValueProvider,evaluator: FilterNumericRuleEvaluator,ruleValue: ElementId) """
   pass
  RuleValue=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The user-supplied value against which values from a Revit document will be tested.
-
-Get: RuleValue(self: FilterElementIdRule) -> ElementId
-
-Set: RuleValue(self: FilterElementIdRule)=value
+ """The user-supplied value against which values from a Revit document will be tested.
+
+
+
+Get: RuleValue(self: FilterElementIdRule) -> ElementId
+
+
+
+Set: RuleValue(self: FilterElementIdRule)=value
+
 """
 
 

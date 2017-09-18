@@ -19,28 +19,44 @@ class ExternalCommandData(APIObject,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Application=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Retrieves an object that represents the current Application for 
-external command.
-
-Get: Application(self: ExternalCommandData) -> UIApplication
-
-Set: Application(self: ExternalCommandData)=value
+ """Retrieves an object that represents the current Application for 
+
+external command.
+
+
+
+Get: Application(self: ExternalCommandData) -> UIApplication
+
+
+
+Set: Application(self: ExternalCommandData)=value
+
 """
 
  JournalData=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """A data map that can be used to read and write data to the Autodesk Revit journal file.
-
-Get: JournalData(self: ExternalCommandData) -> IDictionary[str,str]
-
-Set: JournalData(self: ExternalCommandData)=value
+ """A data map that can be used to read and write data to the Autodesk Revit journal file.
+
+
+
+Get: JournalData(self: ExternalCommandData) -> IDictionary[str,str]
+
+
+
+Set: JournalData(self: ExternalCommandData)=value
+
 """
 
  View=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Retrieves an object that represents the View external command work on.
-
-Get: View(self: ExternalCommandData) -> View
-
-Set: View(self: ExternalCommandData)=value
+ """Retrieves an object that represents the View external command work on.
+
+
+
+Get: View(self: ExternalCommandData) -> View
+
+
+
+Set: View(self: ExternalCommandData)=value
+
 """
 
 

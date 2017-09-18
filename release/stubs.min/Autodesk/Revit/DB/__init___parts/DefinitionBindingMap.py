@@ -1,12 +1,15 @@
 class DefinitionBindingMap(APIObject,IDisposable,IEnumerable):
  """
- A map that contains mappings of parameter definitions to parameter bindings.
- 
+ A map that contains mappings of parameter definitions to parameter bindings.
+
+ 
+
  DefinitionBindingMap()
  """
  def Clear(self):
   """
-  Clear(self: DefinitionBindingMap)
+  Clear(self: DefinitionBindingMap)
+
    Removes every binding from the map,rendering it empty.
   """
   pass
@@ -21,17 +24,23 @@ class DefinitionBindingMap(APIObject,IDisposable,IEnumerable):
   pass
  def ForwardIterator(self):
   """
-  ForwardIterator(self: DefinitionBindingMap) -> DefinitionBindingMapIterator
-  
-   Retrieve a forward moving iterator to the map.
+  ForwardIterator(self: DefinitionBindingMap) -> DefinitionBindingMapIterator
+
+  
+
+   Retrieve a forward moving iterator to the map.
+
    Returns: Returns a forward moving iterator to the map.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: DefinitionBindingMap) -> IEnumerator
-  
-   Retrieve a forward moving iterator to the map.
+  GetEnumerator(self: DefinitionBindingMap) -> IEnumerator
+
+  
+
+   Retrieve a forward moving iterator to the map.
+
    Returns: Returns a forward moving iterator to the map.
   """
   pass
@@ -46,9 +55,12 @@ class DefinitionBindingMap(APIObject,IDisposable,IEnumerable):
   pass
  def ReverseIterator(self):
   """
-  ReverseIterator(self: DefinitionBindingMap) -> DefinitionBindingMapIterator
-  
-   Retrieve a backward moving iterator to the map.
+  ReverseIterator(self: DefinitionBindingMap) -> DefinitionBindingMapIterator
+
+  
+
+   Retrieve a backward moving iterator to the map.
+
    Returns: Returns a backward moving iterator to the map.
   """
   pass
@@ -71,17 +83,25 @@ class DefinitionBindingMap(APIObject,IDisposable,IEnumerable):
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Test to see if the map is empty.
-
-Get: IsEmpty(self: DefinitionBindingMap) -> bool
-
+ """Test to see if the map is empty.
+
+
+
+Get: IsEmpty(self: DefinitionBindingMap) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the number of bindings that are in the map.
-
-Get: Size(self: DefinitionBindingMap) -> int
-
+ """Returns the number of bindings that are in the map.
+
+
+
+Get: Size(self: DefinitionBindingMap) -> int
+
+
+
 """
 
 

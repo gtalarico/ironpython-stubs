@@ -1,8 +1,11 @@
 class RebarShapeSegmentEndReferenceType(Enum,IComparable,IFormattable,IConvertible):
  """
- A choice of two reference points for one end of a constraint driving the length of
-    a RebarShapeSegment.
- 
+ A choice of two reference points for one end of a constraint driving the length of
+
+    a RebarShapeSegment.
+
+ 
+
  enum RebarShapeSegmentEndReferenceType,values: Exterior (1),Straight (0)
  """
  def __eq__(self,*args):

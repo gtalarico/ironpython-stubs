@@ -1,7 +1,9 @@
 class DataGridSelectionMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines constants that specify whether single or multiple item selections are supported by a System.Windows.Controls.DataGrid control.
- 
+ Defines constants that specify whether single or multiple item selections are supported by a System.Windows.Controls.DataGrid control.
+
+ 
+
  enum DataGridSelectionMode,values: Extended (1),Single (0)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class StructuralInstanceUsage(Enum,IComparable,IFormattable,IConvertible):
  """
- Represents the structural usage of a family instance.
- 
+ Represents the structural usage of a family instance.
+
+ 
+
  enum StructuralInstanceUsage,values: Automatic (10),Brace (7),Column (2),Girder (3),HorizontalBracing (8),Joist (4),KickerBracing (9),Other (6),Purlin (5),TrussChord (11),TrussWeb (12),Undefined (0),Wall (1)
  """
  def __eq__(self,*args):

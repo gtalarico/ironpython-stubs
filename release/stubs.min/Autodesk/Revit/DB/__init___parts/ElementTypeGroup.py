@@ -1,7 +1,9 @@
 class ElementTypeGroup(Enum,IComparable,IFormattable,IConvertible):
  """
- The element type group.
- 
+ The element type group.
+
+ 
+
  enum ElementTypeGroup,values: AnalyticalLinkType (136),AngularDimensionType (37),ArcLengthDimensionType (38),AreaLoadType (82),AreaReinforcementType (87),AttachedDetailGroupType (34),BeamSystemType (54),BuildingPadType (43),CableTrayType (122),CalloutType (22),CeilingType (6),ColorFillType (143),ConduitType (123),ContourLabelingType (46),CorniceType (16),CurtainSystemType (58),DecalType (45),DetailGroupType (33),DiameterDimensionType (126),DuctInsulationType (120),DuctLiningType (121),DuctType (97),EdgeSlabType (50),EndTreatmentType (146),FabricAreaType (90),FabricSheetType (91),FasciaType (48),FilledRegionType (35),FlexDuctType (98),FlexPipeType (101),FloorType (4),FootingSlabType (5),GridType (8),GutterType (49),LevelType (9),LinearDimensionType (10),LineLoadType (83),ModelGroupType (32),ModelTextType (14),MultiReferenceAnnotationType (140),PathReinforcementType (88),PipeInsulationType (119),PipeType (100),PointLoadType (84),RadialDimensionType (36),RailingsTypeForRamps (1),RailingsTypeForStairs (0),RampType (28),RebarBarType (85),RebarContainerType (144),ReferenceViewerType (21),RepeatingDetailType (53),RevealType (17),RoofSoffitType (47),RoofType (3),SpotCoordinateType (106),SpotElevationType (11),SpotSlopeType (108),StairsBySketchType (7),StairsRailingType (30),StairsType (127),StructuralConnectionHandlerType (145),TagNoteType (13),TextNoteType (12),ViewportType (19),ViewType3D (62),ViewTypeCeilingPlan (72),ViewTypeCostReport (67),ViewTypeDetailView (74),ViewTypeDrafting (69),ViewTypeElevation (75),ViewTypeFloorPlan (71),ViewTypeGraphScheduleColumn (107),ViewTypeLegend (66),ViewTypeLoadsReport (78),ViewTypePanelSchedule (80),ViewTypePressureLossReport (79),ViewTypeRendering (64),ViewTypeSchedule (65),ViewTypeSection (73),ViewTypeSheet (68),ViewTypeStructuralElevation (76),ViewTypeStructuralPlan (70),ViewTypeWalkthrough (63),WallFoundationType (109),WallType (2),WireType (102)
  """
  def __eq__(self,*args):

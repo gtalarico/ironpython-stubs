@@ -2,9 +2,12 @@ class CurtainSystem(CurtainSystemBase,IDisposable):
  """ Provides access to the CurtainSystem object in Autodesk Revit. """
  def AddCurtainGrid(self,face):
   """
-  AddCurtainGrid(self: CurtainSystem,face: Reference)
-   Add CurtainGrid on the specified face for the CurtainSystem.
-  
+  AddCurtainGrid(self: CurtainSystem,face: Reference)
+
+   Add CurtainGrid on the specified face for the CurtainSystem.
+
+  
+
    face: The face new CurtainGrid will be created on.
   """
   pass
@@ -19,9 +22,12 @@ class CurtainSystem(CurtainSystemBase,IDisposable):
   pass
  def RemoveCurtainGrid(self,face):
   """
-  RemoveCurtainGrid(self: CurtainSystem,face: Reference)
-   Remove CurtainGrid from the specified face for the CurtainSystem.
-  
+  RemoveCurtainGrid(self: CurtainSystem,face: Reference)
+
+   Remove CurtainGrid from the specified face for the CurtainSystem.
+
+  
+
    face: The face CurtainGrid will be removed from.
   """
   pass
@@ -38,18 +44,27 @@ class CurtainSystem(CurtainSystemBase,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  CurtainGrids=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get all the CurtainGrid object of this CurtainSystem. Each CurtainGrid corresponds to one face.
-
-Get: CurtainGrids(self: CurtainSystem) -> CurtainGridSet
-
+ """Get all the CurtainGrid object of this CurtainSystem. Each CurtainGrid corresponds to one face.
+
+
+
+Get: CurtainGrids(self: CurtainSystem) -> CurtainGridSet
+
+
+
 """
 
  CurtainSystemType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """get or set the type of the CurtainSystem.
-
-Get: CurtainSystemType(self: CurtainSystem) -> CurtainSystemType
-
-Set: CurtainSystemType(self: CurtainSystem)=value
+ """get or set the type of the CurtainSystem.
+
+
+
+Get: CurtainSystemType(self: CurtainSystem) -> CurtainSystemType
+
+
+
+Set: CurtainSystemType(self: CurtainSystem)=value
+
 """
 
 

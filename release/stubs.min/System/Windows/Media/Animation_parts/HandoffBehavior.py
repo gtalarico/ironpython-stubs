@@ -1,7 +1,9 @@
 class HandoffBehavior(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies how new animations interact with any existing ones that are already applied to a property.
- 
+ Specifies how new animations interact with any existing ones that are already applied to a property.
+
+ 
+
  enum HandoffBehavior,values: Compose (1),SnapshotAndReplace (0)
  """
  def __eq__(self,*args):

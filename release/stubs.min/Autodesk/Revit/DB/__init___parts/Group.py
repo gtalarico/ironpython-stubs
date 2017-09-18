@@ -8,11 +8,16 @@ class Group(Element,IDisposable):
   pass
  def GetMemberIds(self):
   """
-  GetMemberIds(self: Group) -> IList[ElementId]
-  
-   Retrieves all the member ElementIds of the group.
-   Returns: An ordered list of the members within the group. The order of this
-  list can be 
+  GetMemberIds(self: Group) -> IList[ElementId]
+
+  
+
+   Retrieves all the member ElementIds of the group.
+
+   Returns: An ordered list of the members within the group. The order of this
+
+  list can be 
+
     used to match members between other instances of the group.
   """
   pass
@@ -24,9 +29,12 @@ class Group(Element,IDisposable):
   pass
  def UngroupMembers(self):
   """
-  UngroupMembers(self: Group) -> ICollection[ElementId]
-  
-   Ungroups the group.
+  UngroupMembers(self: Group) -> ICollection[ElementId]
+
+  
+
+   Ungroups the group.
+
    Returns: If successful,the ids of the members of group are returned.
   """
   pass
@@ -40,18 +48,27 @@ class Group(Element,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  GroupType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get or set the type of the group.
-
-Get: GroupType(self: Group) -> GroupType
-
-Set: GroupType(self: Group)=value
+ """Get or set the type of the group.
+
+
+
+Get: GroupType(self: Group) -> GroupType
+
+
+
+Set: GroupType(self: Group)=value
+
 """
 
  Location=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """This property is used to find the physical location of a group within project.
-
-Get: Location(self: Group) -> Location
-
+ """This property is used to find the physical location of a group within project.
+
+
+
+Get: Location(self: Group) -> Location
+
+
+
 """
 
 

@@ -1,7 +1,9 @@
 class ReleaseType(Enum,IComparable,IFormattable,IConvertible):
  """
- The release type.
- 
+ The release type.
+
+ 
+
  enum ReleaseType,values: BendingMoment (2),Fixed (0),Pinned (1),UserDefined (3)
  """
  def __eq__(self,*args):

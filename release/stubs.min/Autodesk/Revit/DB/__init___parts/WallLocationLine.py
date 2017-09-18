@@ -1,7 +1,9 @@
 class WallLocationLine(Enum,IComparable,IFormattable,IConvertible):
  """
- This enumerated type represents the options for alignment of a wall's location line.
- 
+ This enumerated type represents the options for alignment of a wall's location line.
+
+ 
+
  enum WallLocationLine,values: CoreCenterline (1),CoreExterior (4),CoreInterior (5),FinishFaceExterior (2),FinishFaceInterior (3),WallCenterline (0)
  """
  def __eq__(self,*args):

@@ -1,20 +1,26 @@
 class FaceArray(APIObject,IDisposable,IEnumerable):
  """
- An array that contains faces.
- 
+ An array that contains faces.
+
+ 
+
  FaceArray()
  """
  def Append(self,item):
   """
-  Append(self: FaceArray,item: Face)
-   Add the face to the end of the array.
-  
+  Append(self: FaceArray,item: Face)
+
+   Add the face to the end of the array.
+
+  
+
    item: The face to be added.
   """
   pass
  def Clear(self):
   """
-  Clear(self: FaceArray)
+  Clear(self: FaceArray)
+
    Removes every face from the array,rendering it empty.
   """
   pass
@@ -23,27 +29,38 @@ class FaceArray(APIObject,IDisposable,IEnumerable):
   pass
  def ForwardIterator(self):
   """
-  ForwardIterator(self: FaceArray) -> FaceArrayIterator
-  
-   Retrieve a forward moving iterator to the array.
+  ForwardIterator(self: FaceArray) -> FaceArrayIterator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: FaceArray) -> IEnumerator
-  
-   Retrieve a forward moving iterator to the array.
+  GetEnumerator(self: FaceArray) -> IEnumerator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
  def Insert(self,item,index):
   """
-  Insert(self: FaceArray,item: Face,index: int)
-   Insert the specified face into the array.
-  
-   item: The face to be inserted into the array.
-   index: The face will be inserted before this index.
+  Insert(self: FaceArray,item: Face,index: int)
+
+   Insert the specified face into the array.
+
+  
+
+   item: The face to be inserted into the array.
+
+   index: The face will be inserted before this index.
+
    Returns: Returns whether the face was inserted into the array.
   """
   pass
@@ -55,9 +72,12 @@ class FaceArray(APIObject,IDisposable,IEnumerable):
   pass
  def ReverseIterator(self):
   """
-  ReverseIterator(self: FaceArray) -> FaceArrayIterator
-  
-   Retrieve a backward moving iterator to the array.
+  ReverseIterator(self: FaceArray) -> FaceArrayIterator
+
+  
+
+   Retrieve a backward moving iterator to the array.
+
    Returns: Returns a backward moving iterator to the array.
   """
   pass
@@ -80,17 +100,25 @@ class FaceArray(APIObject,IDisposable,IEnumerable):
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Test to see if the array is empty.
-
-Get: IsEmpty(self: FaceArray) -> bool
-
+ """Test to see if the array is empty.
+
+
+
+Get: IsEmpty(self: FaceArray) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the number of faces that are in the array.
-
-Get: Size(self: FaceArray) -> int
-
+ """Returns the number of faces that are in the array.
+
+
+
+Get: Size(self: FaceArray) -> int
+
+
+
 """
 
 

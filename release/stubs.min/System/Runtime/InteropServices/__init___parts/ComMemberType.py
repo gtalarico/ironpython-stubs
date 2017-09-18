@@ -1,7 +1,9 @@
 class ComMemberType(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes the type of a COM member.
- 
+ Describes the type of a COM member.
+
+ 
+
  enum ComMemberType,values: Method (0),PropGet (1),PropSet (2)
  """
  def __eq__(self,*args):

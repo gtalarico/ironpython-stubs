@@ -1,8 +1,11 @@
 class MeshFromGeometryOperationIssue(Enum,IComparable,IFormattable,IConvertible):
  """
- Issues,which can be encountered while building a mesh as a
-    fallback for geometrical operations.
- 
+ Issues,which can be encountered while building a mesh as a
+
+    fallback for geometrical operations.
+
+ 
+
  enum MeshFromGeometryOperationIssue,values: AllFine (0),CurveLoopsWithoutCurvesInInput (4),EmptyCurveLoopsInInput (3),InputCurveLoopProblemWithFallback (6),InputCurveLoopWrongOpenFlag (7),InternalError (12),InternalMissingError (11),InternalUtilityError (10),MissingCurveLoopsInInput (2),MissingCurvesInInputLoop (9),NonContinuousInputCurveLoop (8),NonPlanarProfileLoop (5),NotSetYet (13),NoUsableCurveLoopsInInput (1),NumberOfIssueTypes (14)
  """
  def __eq__(self,*args):

@@ -8,11 +8,16 @@ class CableTrayType(MEPCurveType,IDisposable):
   pass
  def IsValidBendMultiplier(self,bendMultiplier):
   """
-  IsValidBendMultiplier(self: CableTrayType,bendMultiplier: float) -> bool
-  
-   Identifies if the input bend multiplier is valid.
-  
-   bendMultiplier: The bend multiplier to check.
+  IsValidBendMultiplier(self: CableTrayType,bendMultiplier: float) -> bool
+
+  
+
+   Identifies if the input bend multiplier is valid.
+
+  
+
+   bendMultiplier: The bend multiplier to check.
+
    Returns: True if the value is acceptable,false otherwise.
   """
   pass
@@ -32,25 +37,38 @@ class CableTrayType(MEPCurveType,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  BendMultiplier=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Bend multiplier.
-
-Get: BendMultiplier(self: CableTrayType) -> float
-
-Set: BendMultiplier(self: CableTrayType)=value
+ """Bend multiplier.
+
+
+
+Get: BendMultiplier(self: CableTrayType) -> float
+
+
+
+Set: BendMultiplier(self: CableTrayType)=value
+
 """
 
  IsWithFitting=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Whether this cable tray type is with fitting
-
-Get: IsWithFitting(self: CableTrayType) -> bool
-
+ """Whether this cable tray type is with fitting
+
+
+
+Get: IsWithFitting(self: CableTrayType) -> bool
+
+
+
 """
 
  ShapeType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Shape of this cable tray type.
-
-Get: ShapeType(self: CableTrayType) -> CableTrayShape
-
+ """Shape of this cable tray type.
+
+
+
+Get: ShapeType(self: CableTrayType) -> CableTrayShape
+
+
+
 """
 
 

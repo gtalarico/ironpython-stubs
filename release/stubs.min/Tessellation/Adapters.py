@@ -11,13 +11,17 @@
 class Cell2(TriangulationCell[Vertex2,Cell2]):
  """ Cell2() """
  Centroid=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Centroid(self: Cell2) -> Point
-
+ """Get: Centroid(self: Cell2) -> Point
+
+
+
 """
 
  Circumcenter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Circumcenter(self: Cell2) -> Point
-
+ """Get: Circumcenter(self: Cell2) -> Point
+
+
+
 """
 
 
@@ -48,9 +52,12 @@ class Vertex2(object,IVertex,IGraphicItem):
   """ __repr__(self: object) -> str """
   pass
  Position=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Position(self: Vertex2) -> Array[float]
-
-Set: Position(self: Vertex2)=value
+ """Get: Position(self: Vertex2) -> Array[float]
+
+
+
+Set: Position(self: Vertex2)=value
+
 """
 
 

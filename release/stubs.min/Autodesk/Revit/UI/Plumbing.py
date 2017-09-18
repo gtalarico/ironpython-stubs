@@ -12,21 +12,31 @@ class IPipeFittingAndAccessoryPressureDropUIServer(IExternalServer):
  """ Interface for external servers providing optional UI for pipe fitting and pipe accessory coefficient calculation. """
  def GetDBServerId(self):
   """
-  GetDBServerId(self: IPipeFittingAndAccessoryPressureDropUIServer) -> Guid
-  
-   Returns the Id of the corresponding DB server for which this server provides an 
-    optional UI.
-  
+  GetDBServerId(self: IPipeFittingAndAccessoryPressureDropUIServer) -> Guid
+
+  
+
+   Returns the Id of the corresponding DB server for which this server provides an 
+
+    optional UI.
+
+  
+
    Returns: The Id of the DB server.
   """
   pass
  def ShowSettings(self,data):
   """
-  ShowSettings(self: IPipeFittingAndAccessoryPressureDropUIServer,data: PipeFittingAndAccessoryPressureDropUIData) -> bool
-  
-   Shows the settings UI.
-  
-   data: The input data of the calculation.
+  ShowSettings(self: IPipeFittingAndAccessoryPressureDropUIServer,data: PipeFittingAndAccessoryPressureDropUIData) -> bool
+
+  
+
+   Shows the settings UI.
+
+  
+
+   data: The input data of the calculation.
+
    Returns: True if the user makes any changes in the UI,false otherwise.
   """
   pass
@@ -41,17 +51,23 @@ class PipeFittingAndAccessoryPressureDropUIData(object,IDisposable):
   pass
  def GetUIDataItems(self):
   """
-  GetUIDataItems(self: PipeFittingAndAccessoryPressureDropUIData) -> IList[PipeFittingAndAccessoryPressureDropUIDataItem]
-  
-   Gets all UI data items stored in the UI data.
+  GetUIDataItems(self: PipeFittingAndAccessoryPressureDropUIData) -> IList[PipeFittingAndAccessoryPressureDropUIDataItem]
+
+  
+
+   Gets all UI data items stored in the UI data.
+
    Returns: An array of UI data items.
   """
   pass
  def GetUnits(self):
   """
-  GetUnits(self: PipeFittingAndAccessoryPressureDropUIData) -> Units
-  
-   Gets units.
+  GetUnits(self: PipeFittingAndAccessoryPressureDropUIData) -> Units
+
+  
+
+   Gets units.
+
    Returns: The Units object.
   """
   pass
@@ -71,10 +87,14 @@ class PipeFittingAndAccessoryPressureDropUIData(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: PipeFittingAndAccessoryPressureDropUIData) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: PipeFittingAndAccessoryPressureDropUIData) -> bool
+
+
+
 """
 
 
@@ -86,18 +106,25 @@ class PipeFittingAndAccessoryPressureDropUIDataItem(object,IDisposable):
   pass
  def GetEntity(self):
   """
-  GetEntity(self: PipeFittingAndAccessoryPressureDropUIDataItem) -> Entity
-  
-   Returns the entity set by UI server.
-     or an invalid entity otherwise.
+  GetEntity(self: PipeFittingAndAccessoryPressureDropUIDataItem) -> Entity
+
+  
+
+   Returns the entity set by UI server.
+
+     or an invalid entity otherwise.
+
    Returns: The returned Entity.
   """
   pass
  def GetPipeFittingAndAccessoryData(self):
   """
-  GetPipeFittingAndAccessoryData(self: PipeFittingAndAccessoryPressureDropUIDataItem) -> PipeFittingAndAccessoryData
-  
-   Gets the fitting data stored in the UI data item.
+  GetPipeFittingAndAccessoryData(self: PipeFittingAndAccessoryPressureDropUIDataItem) -> PipeFittingAndAccessoryData
+
+  
+
+   Gets the fitting data stored in the UI data item.
+
    Returns: The fitting data stored in the UI data item.
   """
   pass
@@ -106,9 +133,12 @@ class PipeFittingAndAccessoryPressureDropUIDataItem(object,IDisposable):
   pass
  def SetEntity(self,entity):
   """
-  SetEntity(self: PipeFittingAndAccessoryPressureDropUIDataItem,entity: Entity)
-   Stores the entity in the UI data item.
-  
+  SetEntity(self: PipeFittingAndAccessoryPressureDropUIDataItem,entity: Entity)
+
+   Stores the entity in the UI data item.
+
+  
+
    entity: The Entity to be stored.
   """
   pass
@@ -125,10 +155,14 @@ class PipeFittingAndAccessoryPressureDropUIDataItem(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: PipeFittingAndAccessoryPressureDropUIDataItem) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: PipeFittingAndAccessoryPressureDropUIDataItem) -> bool
+
+
+
 """
 
 

@@ -8,8 +8,10 @@ class DefaultDllImportSearchPathsAttribute(Attribute,_Attribute):
   """ __new__(cls: type,paths: DllImportSearchPath) """
   pass
  Paths=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Paths(self: DefaultDllImportSearchPathsAttribute) -> DllImportSearchPath
-
+ """Get: Paths(self: DefaultDllImportSearchPathsAttribute) -> DllImportSearchPath
+
+
+
 """
 
 

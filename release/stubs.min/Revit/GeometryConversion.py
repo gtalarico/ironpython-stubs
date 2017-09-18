@@ -13,23 +13,40 @@ class CurveUtils(object):
  @staticmethod
  def CurvesAreSimilar(a,b):
   """
-  CurvesAreSimilar(a: Curve,b: Curve) -> bool
-  
-   This method uses basic checks to compare curves for similarity.
-     It 
-    starts by comparing the curves' end points. Curves which have similar
-     
-    end points but different directions will not be regarded as similar,
-      
-      because directionality is important in Revit for other purposes. 
-    
-     Depending on the curve type,other comparisons are then performed.
-  
-  
-   a: The first curve.
-   b: The second curve.
-   Returns: Returns true if the curves are similar within Tolerance,and 
-     
+  CurvesAreSimilar(a: Curve,b: Curve) -> bool
+
+  
+
+   This method uses basic checks to compare curves for similarity.
+
+     It 
+
+    starts by comparing the curves' end points. Curves which have similar
+
+     
+
+    end points but different directions will not be regarded as similar,
+
+      
+
+      because directionality is important in Revit for other purposes. 
+
+    
+
+     Depending on the curve type,other comparisons are then performed.
+
+  
+
+  
+
+   a: The first curve.
+
+   b: The second curve.
+
+   Returns: Returns true if the curves are similar within Tolerance,and 
+
+     
+
     false if they are not.
   """
   pass
@@ -65,11 +82,16 @@ class DynamoToRevitBRep(object):
  @staticmethod
  def ToRevitType(*__args):
   """
-  ToRevitType(surf: Surface,performHostUnitConversion: bool,materialId: ElementId) -> GeometryObject
-  
-   this method attempts to construct a BRep from a surface.
-  ToRevitType(sol: Solid,performHostUnitConversion: bool,materialId: ElementId) -> GeometryObject
-  
+  ToRevitType(surf: Surface,performHostUnitConversion: bool,materialId: ElementId) -> GeometryObject
+
+  
+
+   this method attempts to construct a BRep from a surface.
+
+  ToRevitType(sol: Solid,performHostUnitConversion: bool,materialId: ElementId) -> GeometryObject
+
+  
+
    this method attempts to construct a BRep from a closed solid.
   """
   pass
@@ -83,17 +105,22 @@ class GeometryObjectConverter(object):
  @staticmethod
  def Convert(geom,reference,transform):
   """
-  Convert(geom: GeometryObject,reference: Reference,transform: CoordinateSystem) -> object
-  
-   Convert a GeometryObject to an applicable ProtoGeometry type.
+  Convert(geom: GeometryObject,reference: Reference,transform: CoordinateSystem) -> object
+
+  
+
+   Convert a GeometryObject to an applicable ProtoGeometry type.
+
    Returns: A Geometry type.  Null if there's no suitable conversion.
   """
   pass
  @staticmethod
  def ConvertToMany(solid,reference,transform):
   """
-  ConvertToMany(solid: Solid,reference: Reference,transform: CoordinateSystem) -> IEnumerable[object]
-  
+  ConvertToMany(solid: Solid,reference: Reference,transform: CoordinateSystem) -> IEnumerable[object]
+
+  
+
    Get the edges and faces from the solid and convert them
   """
   pass
@@ -113,7 +140,8 @@ class GeometryPrimitiveConverter(object):
  @staticmethod
  def GetPerpendicular(*__args):
   """
-  GetPerpendicular(vector: Vector) -> Vector
+  GetPerpendicular(vector: Vector) -> Vector
+
   GetPerpendicular(xyz: XYZ) -> XYZ
   """
   pass
@@ -132,7 +160,8 @@ class GeometryPrimitiveConverter(object):
  @staticmethod
  def ToPlane(plane,convertUnits):
   """
-  ToPlane(plane: Plane,convertUnits: bool) -> Plane
+  ToPlane(plane: Plane,convertUnits: bool) -> Plane
+
   ToPlane(plane: Plane,convertUnits: bool) -> Plane
   """
   pass
@@ -147,8 +176,10 @@ class GeometryPrimitiveConverter(object):
  @staticmethod
  def ToProtoType(*__args):
   """
-  ToProtoType(uv: UV) -> UV
-  ToProtoType(point: Point,convertUnits: bool) -> Point
+  ToProtoType(uv: UV) -> UV
+
+  ToProtoType(point: Point,convertUnits: bool) -> Point
+
   ToProtoType(xyz: BoundingBoxXYZ,convertUnits: bool) -> BoundingBox
   """
   pass
@@ -163,8 +194,10 @@ class GeometryPrimitiveConverter(object):
  @staticmethod
  def ToRevitType(*__args):
   """
-  ToRevitType(vec: Vector,convertUnits: bool) -> XYZ
-  ToRevitType(pt: Point,convertUnits: bool) -> XYZ
+  ToRevitType(vec: Vector,convertUnits: bool) -> XYZ
+
+  ToRevitType(pt: Point,convertUnits: bool) -> XYZ
+
   ToRevitType(bb: BoundingBox,convertUnits: bool) -> BoundingBoxXYZ
   """
   pass
@@ -179,15 +212,18 @@ class GeometryPrimitiveConverter(object):
  @staticmethod
  def ToXyz(*__args):
   """
-  ToXyz(vec: Vector,convertUnits: bool) -> XYZ
+  ToXyz(vec: Vector,convertUnits: bool) -> XYZ
+
   ToXyz(pt: Point,convertUnits: bool) -> XYZ
   """
   pass
  @staticmethod
  def ToXyzs(list,convertUnits):
   """
-  ToXyzs(list: Array[Vector],convertUnits: bool) -> Array[XYZ]
-  ToXyzs(list: Array[Point],convertUnits: bool) -> Array[XYZ]
+  ToXyzs(list: Array[Vector],convertUnits: bool) -> Array[XYZ]
+
+  ToXyzs(list: Array[Point],convertUnits: bool) -> Array[XYZ]
+
   ToXyzs(list: List[Point],convertUnits: bool) -> List[XYZ]
   """
   pass
@@ -215,14 +251,22 @@ class NurbsUtils(object):
  @staticmethod
  def ElevateBezierDegree(crv,finalDegree):
   """
-  ElevateBezierDegree(crv: NurbsCurve,finalDegree: int) -> NurbsCurve
-  
-   Elevate the degree of a Bezier curve (represented in NURBS form) to a given 
-    degree
-     without changing the shape
-  
-  
-   crv: The curve
+  ElevateBezierDegree(crv: NurbsCurve,finalDegree: int) -> NurbsCurve
+
+  
+
+   Elevate the degree of a Bezier curve (represented in NURBS form) to a given 
+
+    degree
+
+     without changing the shape
+
+  
+
+  
+
+   crv: The curve
+
    finalDegree: The requested degree
   """
   pass
@@ -240,21 +284,30 @@ class PolygonContainment(object):
  @staticmethod
  def GetQuadrant(vertex,p):
   """
-  GetQuadrant(vertex: UV,p: UV) -> int
-  
-   Determine the quadrant of a polygon vertex 
-     relative to the test 
+  GetQuadrant(vertex: UV,p: UV) -> int
+
+  
+
+   Determine the quadrant of a polygon vertex 
+
+     relative to the test 
+
     point.
   """
   pass
  @staticmethod
  def GetXIntercept(p,q,y):
   """
-  GetXIntercept(p: UV,q: UV,y: float) -> float
-  
-   Determine the X intercept of a polygon edge 
-     with a horizontal 
-    line at the Y value of the 
+  GetXIntercept(p: UV,q: UV,y: float) -> float
+
+  
+
+   Determine the X intercept of a polygon edge 
+
+     with a horizontal 
+
+    line at the Y value of the 
+
      test point.
   """
   pass
@@ -275,7 +328,8 @@ class ProtoToRevitCurve(object):
  @staticmethod
  def ToRevitType(*__args):
   """
-  ToRevitType(pcrv: PolyCurve,performHostUnitConversion: bool) -> CurveLoop
+  ToRevitType(pcrv: PolyCurve,performHostUnitConversion: bool) -> CurveLoop
+
   ToRevitType(crv: Curve,performHostUnitConversion: bool) -> Curve
   """
   pass
@@ -289,17 +343,22 @@ class ProtoToRevitMesh(object):
  @staticmethod
  def CreateBoundingBoxMeshForErrors(minPoint,maxPoint,performHostUnitConversion):
   """
-  CreateBoundingBoxMeshForErrors(minPoint: Point,maxPoint: Point,performHostUnitConversion: bool) -> IList[GeometryObject]
-  
-   This is to create a bounding box mesh for geometries which have errors during 
+  CreateBoundingBoxMeshForErrors(minPoint: Point,maxPoint: Point,performHostUnitConversion: bool) -> IList[GeometryObject]
+
+  
+
+   This is to create a bounding box mesh for geometries which have errors during 
+
     the tessellating process
   """
   pass
  @staticmethod
  def ToRevitType(*__args):
   """
-  ToRevitType(mesh: Mesh,target: TessellatedShapeBuilderTarget,fallback: TessellatedShapeBuilderFallback,MaterialId: ElementId,performHostUnitConversion: bool) -> IList[GeometryObject]
-  ToRevitType(solid: Solid,target: TessellatedShapeBuilderTarget,fallback: TessellatedShapeBuilderFallback,MaterialId: ElementId,performHostUnitConversion: bool) -> IList[GeometryObject]
+  ToRevitType(mesh: Mesh,target: TessellatedShapeBuilderTarget,fallback: TessellatedShapeBuilderFallback,MaterialId: ElementId,performHostUnitConversion: bool) -> IList[GeometryObject]
+
+  ToRevitType(solid: Solid,target: TessellatedShapeBuilderTarget,fallback: TessellatedShapeBuilderFallback,MaterialId: ElementId,performHostUnitConversion: bool) -> IList[GeometryObject]
+
   ToRevitType(srf: Surface,target: TessellatedShapeBuilderTarget,fallback: TessellatedShapeBuilderFallback,MaterialId: ElementId,performHostUnitConversion: bool) -> IList[GeometryObject]
   """
   pass
@@ -314,8 +373,10 @@ class RevitToProtoCurve(object):
  @staticmethod
  def ToProtoType(*__args):
   """
-  ToProtoType(geom: PolyLine,performHostUnitConversion: bool) -> PolyCurve
-  ToProtoType(revitCurves: CurveArray,performHostUnitConversion: bool) -> PolyCurve
+  ToProtoType(geom: PolyLine,performHostUnitConversion: bool) -> PolyCurve
+
+  ToProtoType(revitCurves: CurveArray,performHostUnitConversion: bool) -> PolyCurve
+
   ToProtoType(revitCurve: Curve,performHostUnitConversion: bool,referenceOverride: Reference) -> Curve
   """
   pass
@@ -340,7 +401,8 @@ class RevitToProtoMesh(object):
  @staticmethod
  def ToProtoType(*__args):
   """
-  ToProtoType(meshArray: IEnumerable[Mesh],performHostUnitConversion: bool) -> Array[Mesh]
+  ToProtoType(meshArray: IEnumerable[Mesh],performHostUnitConversion: bool) -> Array[Mesh]
+
   ToProtoType(mesh: Mesh,performHostUnitConversion: bool) -> Mesh
   """
   pass
@@ -362,17 +424,23 @@ class RevitToProtoSolid(object):
 
 class SurfaceExtractor(object):
  """
- This class is required to extract the underlying surface representation from a Revit Face.
+ This class is required to extract the underlying surface representation from a Revit Face.
+
     All Face types are supported.
  """
  @staticmethod
  def ExtractSurface(face,edgeLoops):
   """
-  ExtractSurface(face: HermiteFace,edgeLoops: IEnumerable[PolyCurve]) -> Surface
-  ExtractSurface(face: RevolvedFace,edgeLoops: IEnumerable[PolyCurve]) -> Surface
-  ExtractSurface(face: RuledFace,edgeLoops: IEnumerable[PolyCurve]) -> Surface
-  ExtractSurface(face: PlanarFace,edgeLoops: IEnumerable[PolyCurve]) -> Surface
-  ExtractSurface(face: CylindricalFace,edgeLoops: IEnumerable[PolyCurve]) -> Surface
+  ExtractSurface(face: HermiteFace,edgeLoops: IEnumerable[PolyCurve]) -> Surface
+
+  ExtractSurface(face: RevolvedFace,edgeLoops: IEnumerable[PolyCurve]) -> Surface
+
+  ExtractSurface(face: RuledFace,edgeLoops: IEnumerable[PolyCurve]) -> Surface
+
+  ExtractSurface(face: PlanarFace,edgeLoops: IEnumerable[PolyCurve]) -> Surface
+
+  ExtractSurface(face: CylindricalFace,edgeLoops: IEnumerable[PolyCurve]) -> Surface
+
   ExtractSurface(face: ConicalFace,edgeLoops: IEnumerable[PolyCurve]) -> Surface
   """
   pass

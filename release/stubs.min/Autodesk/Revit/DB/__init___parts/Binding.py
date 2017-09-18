@@ -1,6 +1,7 @@
 class Binding(APIObject,IDisposable):
  """
- Binding objects are used to take a parameter definition and bind it to one or
+ Binding objects are used to take a parameter definition and bind it to one or
+
  more categories.
  """
  def Dispose(self):

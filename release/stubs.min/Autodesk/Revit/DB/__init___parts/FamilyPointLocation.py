@@ -5,9 +5,12 @@ class FamilyPointLocation(APIObject,IDisposable):
   pass
  def GetLocation(self):
   """
-  GetLocation(self: FamilyPointLocation) -> Transform
-  
-   Gets the location of the point.
+  GetLocation(self: FamilyPointLocation) -> Transform
+
+  
+
+   Gets the location of the point.
+
    Returns: The location of the point.
   """
   pass
@@ -27,24 +30,36 @@ class FamilyPointLocation(APIObject,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: FamilyPointLocation) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: FamilyPointLocation) -> bool
+
+
+
 """
 
  Location=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The location of the point.
-
-Get: Location(self: FamilyPointLocation) -> Transform
-
+ """The location of the point.
+
+
+
+Get: Location(self: FamilyPointLocation) -> Transform
+
+
+
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The name of the corresponding reference point in the Family document.
-
-Get: Name(self: FamilyPointLocation) -> str
-
+ """The name of the corresponding reference point in the Family document.
+
+
+
+Get: Name(self: FamilyPointLocation) -> str
+
+
+
 """
 
 

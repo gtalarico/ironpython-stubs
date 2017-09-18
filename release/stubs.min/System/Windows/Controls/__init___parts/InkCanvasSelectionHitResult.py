@@ -1,7 +1,9 @@
 class InkCanvasSelectionHitResult(Enum,IComparable,IFormattable,IConvertible):
  """
- Identifies the various parts of a selection adorner on an System.Windows.Controls.InkCanvas.
- 
+ Identifies the various parts of a selection adorner on an System.Windows.Controls.InkCanvas.
+
+ 
+
  enum InkCanvasSelectionHitResult,values: Bottom (6),BottomLeft (7),BottomRight (5),Left (8),None (0),Right (4),Selection (9),Top (2),TopLeft (1),TopRight (3)
  """
  def __eq__(self,*args):

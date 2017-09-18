@@ -1,7 +1,9 @@
 class ReferenceType(Enum,IComparable,IFormattable,IConvertible):
  """
- Reference types of curve element.
- 
+ Reference types of curve element.
+
+ 
+
  enum ReferenceType,values: None (0),StrongReference (2),WeakReference (1)
  """
  def __eq__(self,*args):

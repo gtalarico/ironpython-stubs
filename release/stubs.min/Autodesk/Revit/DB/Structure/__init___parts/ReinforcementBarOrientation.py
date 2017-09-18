@@ -1,7 +1,9 @@
 class ReinforcementBarOrientation(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes the bar orientation at Path Reinforcement.
- 
+ Describes the bar orientation at Path Reinforcement.
+
+ 
+
  enum ReinforcementBarOrientation,values: BottomOrInterior (2),FarSide (3),NearSide (1),TopOrExterior (0)
  """
  def __eq__(self,*args):

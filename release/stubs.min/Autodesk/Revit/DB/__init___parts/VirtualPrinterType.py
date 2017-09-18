@@ -1,7 +1,9 @@
 class VirtualPrinterType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated to list Virtual Printer Types in Revit.
- 
+ An enumerated to list Virtual Printer Types in Revit.
+
+ 
+
  enum VirtualPrinterType,values: AdobePDF (1),DWFWriter (2),None (0),XPSWriter (3)
  """
  def __eq__(self,*args):

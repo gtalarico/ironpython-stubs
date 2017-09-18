@@ -1,6 +1,7 @@
 class Progress(object,IProgress[T]):
  """
- Progress[T]()
+ Progress[T]()
+
  Progress[T](handler: Action[T])
  """
  def OnReport(self,*args):
@@ -12,7 +13,8 @@ class Progress(object,IProgress[T]):
  @staticmethod
  def __new__(self,handler=None):
   """
-  __new__(cls: type)
+  __new__(cls: type)
+
   __new__(cls: type,handler: Action[T])
   """
   pass

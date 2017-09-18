@@ -19,31 +19,47 @@ class PlanarFace(Face,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  FaceNormal=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Normal of the planar face.
-
-Get: FaceNormal(self: PlanarFace) -> XYZ
-
+ """Normal of the planar face.
+
+
+
+Get: FaceNormal(self: PlanarFace) -> XYZ
+
+
+
 """
 
  Origin=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Origin of the surface.
-
-Get: Origin(self: PlanarFace) -> XYZ
-
+ """Origin of the surface.
+
+
+
+Get: Origin(self: PlanarFace) -> XYZ
+
+
+
 """
 
  XVector=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The X-vector of the planar face.
-
-Get: XVector(self: PlanarFace) -> XYZ
-
+ """The X-vector of the planar face.
+
+
+
+Get: XVector(self: PlanarFace) -> XYZ
+
+
+
 """
 
  YVector=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The Y-vector of the planar face.
-
-Get: YVector(self: PlanarFace) -> XYZ
-
+ """The Y-vector of the planar face.
+
+
+
+Get: YVector(self: PlanarFace) -> XYZ
+
+
+
 """
 
 

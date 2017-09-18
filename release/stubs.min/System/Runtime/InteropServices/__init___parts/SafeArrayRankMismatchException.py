@@ -1,9 +1,13 @@
 class SafeArrayRankMismatchException(SystemException,ISerializable,_Exception):
  """
- The exception thrown when the rank of an incoming SAFEARRAY does not match the rank specified in the managed signature.
- 
- SafeArrayRankMismatchException()
- SafeArrayRankMismatchException(message: str)
+ The exception thrown when the rank of an incoming SAFEARRAY does not match the rank specified in the managed signature.
+
+ 
+
+ SafeArrayRankMismatchException()
+
+ SafeArrayRankMismatchException(message: str)
+
  SafeArrayRankMismatchException(message: str,inner: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,9 +22,12 @@ class SafeArrayRankMismatchException(SystemException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,inner=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,inner: Exception)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,inner: Exception)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

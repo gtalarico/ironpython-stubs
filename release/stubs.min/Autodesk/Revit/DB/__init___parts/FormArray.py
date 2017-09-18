@@ -1,7 +1,9 @@
 class FormArray(APIObject,IDisposable,IEnumerable):
  """
- An array that contains form objects.
- 
+ An array that contains form objects.
+
+ 
+
  FormArray()
  """
  def Append(self,item):
@@ -9,7 +11,8 @@ class FormArray(APIObject,IDisposable,IEnumerable):
   pass
  def Clear(self):
   """
-  Clear(self: FormArray)
+  Clear(self: FormArray)
+
    Removes every form from the array,rendering it empty.
   """
   pass
@@ -18,17 +21,23 @@ class FormArray(APIObject,IDisposable,IEnumerable):
   pass
  def ForwardIterator(self):
   """
-  ForwardIterator(self: FormArray) -> FormArrayIterator
-  
-   Retrieve a forward moving iterator to the array.
+  ForwardIterator(self: FormArray) -> FormArrayIterator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: FormArray) -> IEnumerator
-  
-   Retrieve a forward moving iterator to the array.
+  GetEnumerator(self: FormArray) -> IEnumerator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
@@ -43,9 +52,12 @@ class FormArray(APIObject,IDisposable,IEnumerable):
   pass
  def ReverseIterator(self):
   """
-  ReverseIterator(self: FormArray) -> FormArrayIterator
-  
-   Retrieve a backward moving iterator to the array.
+  ReverseIterator(self: FormArray) -> FormArrayIterator
+
+  
+
+   Retrieve a backward moving iterator to the array.
+
    Returns: Returns a backward moving iterator to the array.
   """
   pass
@@ -68,17 +80,25 @@ class FormArray(APIObject,IDisposable,IEnumerable):
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Test to see if the array is empty.
-
-Get: IsEmpty(self: FormArray) -> bool
-
+ """Test to see if the array is empty.
+
+
+
+Get: IsEmpty(self: FormArray) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the number of forms that are in the array.
-
-Get: Size(self: FormArray) -> int
-
+ """Returns the number of forms that are in the array.
+
+
+
+Get: Size(self: FormArray) -> int
+
+
+
 """
 
 

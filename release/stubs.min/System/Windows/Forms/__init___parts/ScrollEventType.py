@@ -1,7 +1,9 @@
 class ScrollEventType(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the type of action used to raise the System.Windows.Forms.ScrollBar.Scroll event.
- 
+ Specifies the type of action used to raise the System.Windows.Forms.ScrollBar.Scroll event.
+
+ 
+
  enum ScrollEventType,values: EndScroll (8),First (6),LargeDecrement (2),LargeIncrement (3),Last (7),SmallDecrement (0),SmallIncrement (1),ThumbPosition (4),ThumbTrack (5)
  """
  def __eq__(self,*args):

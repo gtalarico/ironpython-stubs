@@ -1,7 +1,9 @@
 class UriKind(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines the kinds of System.Uris for the System.Uri.IsWellFormedUriString(System.String,System.UriKind) and several erload:System.Uri.#ctor methods.
- 
+ Defines the kinds of System.Uris for the System.Uri.IsWellFormedUriString(System.String,System.UriKind) and several erload:System.Uri.#ctor methods.
+
+ 
+
  enum UriKind,values: Absolute (1),Relative (2),RelativeOrAbsolute (0)
  """
  def __eq__(self,*args):

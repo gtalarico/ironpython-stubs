@@ -1,8 +1,11 @@
 class ViewDisplayBackgroundImageFlags(Enum,IComparable,IFormattable,IConvertible):
  """
- A collection of bit flags that control how the background image is positioned
-    in relation to the crop region (or the view boundary).
- 
+ A collection of bit flags that control how the background image is positioned
+
+    in relation to the crop region (or the view boundary).
+
+ 
+
  enum ViewDisplayBackgroundImageFlags,values: FitToScreen (1),FixedAspectRatio (2),None (0),UseTiling (4)
  """
  def __eq__(self,*args):

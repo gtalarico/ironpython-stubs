@@ -3,17 +3,28 @@ class PathReinSpanSymbol(IndependentTag,IDisposable):
  @staticmethod
  def Create(document,viewId,hostId,point,symbolId):
   """
-  Create(document: Document,viewId: ElementId,hostId: LinkElementId,point: XYZ,symbolId: ElementId) -> PathReinSpanSymbol
-  
-   Creates a new instance of PathReinSpanSymbol in the project.
-  
-   document: The document.
-   viewId: The id of the view in which the symbol should appear.
-   hostId: The ElementId of PathReinforcement (either in the document,or linked from 
-    another document).
-  
-   point: The span symbol's head position.
-   symbolId: The family symbol id of this element.
+  Create(document: Document,viewId: ElementId,hostId: LinkElementId,point: XYZ,symbolId: ElementId) -> PathReinSpanSymbol
+
+  
+
+   Creates a new instance of PathReinSpanSymbol in the project.
+
+  
+
+   document: The document.
+
+   viewId: The id of the view in which the symbol should appear.
+
+   hostId: The ElementId of PathReinforcement (either in the document,or linked from 
+
+    another document).
+
+  
+
+   point: The span symbol's head position.
+
+   symbolId: The family symbol id of this element.
+
    Returns: A reference to newly created span symbol.
   """
   pass

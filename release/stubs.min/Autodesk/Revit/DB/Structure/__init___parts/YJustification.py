@@ -1,7 +1,9 @@
 class YJustification(Enum,IComparable,IFormattable,IConvertible):
  """
- The justification of the framing element in Y.
- 
+ The justification of the framing element in Y.
+
+ 
+
  enum YJustification,values: Center (1),Left (0),Origin (2),Right (3)
  """
  def __eq__(self,*args):

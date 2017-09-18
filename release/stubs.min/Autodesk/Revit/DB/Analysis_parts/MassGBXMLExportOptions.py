@@ -1,8 +1,11 @@
 class MassGBXMLExportOptions(object,IDisposable):
  """
- Options used when exporting a gbXML file from a mass model document.
- 
- MassGBXMLExportOptions(massZoneIds: IList[ElementId])
+ Options used when exporting a gbXML file from a mass model document.
+
+ 
+
+ MassGBXMLExportOptions(massZoneIds: IList[ElementId])
+
  MassGBXMLExportOptions(massZoneIds: IList[ElementId],massIds: IList[ElementId])
  """
  def Dispose(self):
@@ -10,20 +13,29 @@ class MassGBXMLExportOptions(object,IDisposable):
   pass
  def GetMassIds(self):
   """
-  GetMassIds(self: MassGBXMLExportOptions) -> IList[ElementId]
-  
-   Gets a list of masses to use as shading surfaces in the exported gbXML--these 
-    masses must not have mass floors or mass zones so as not to end up with 
-    duplicate surface information in the gbXML output.
-  
+  GetMassIds(self: MassGBXMLExportOptions) -> IList[ElementId]
+
+  
+
+   Gets a list of masses to use as shading surfaces in the exported gbXML--these 
+
+    masses must not have mass floors or mass zones so as not to end up with 
+
+    duplicate surface information in the gbXML output.
+
+  
+
    Returns: The ids of the masses.
   """
   pass
  def GetMassZoneIds(self):
   """
-  GetMassZoneIds(self: MassGBXMLExportOptions) -> IList[ElementId]
-  
-   Gets a list of mass zones to analyze in the exported gbXML.
+  GetMassZoneIds(self: MassGBXMLExportOptions) -> IList[ElementId]
+
+  
+
+   Gets a list of mass zones to analyze in the exported gbXML.
+
    Returns: The ids of the mass zone.
   """
   pass
@@ -42,7 +54,8 @@ class MassGBXMLExportOptions(object,IDisposable):
  @staticmethod
  def __new__(self,massZoneIds,massIds=None):
   """
-  __new__(cls: type,massZoneIds: IList[ElementId])
+  __new__(cls: type,massZoneIds: IList[ElementId])
+
   __new__(cls: type,massZoneIds: IList[ElementId],massIds: IList[ElementId])
   """
   pass
@@ -50,10 +63,14 @@ class MassGBXMLExportOptions(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: MassGBXMLExportOptions) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: MassGBXMLExportOptions) -> bool
+
+
+
 """
 
 

@@ -1,20 +1,26 @@
 class LeaderArray(APIObject,IDisposable,IEnumerable):
  """
- An array that can contain any number of leaders.
- 
+ An array that can contain any number of leaders.
+
+ 
+
  LeaderArray()
  """
  def Append(self,item):
   """
-  Append(self: LeaderArray,item: Leader)
-   Add the item to the end of the array.
-  
+  Append(self: LeaderArray,item: Leader)
+
+   Add the item to the end of the array.
+
+  
+
    item: The item to be added.
   """
   pass
  def Clear(self):
   """
-  Clear(self: LeaderArray)
+  Clear(self: LeaderArray)
+
    Removes every item from the array,rendering it empty.
   """
   pass
@@ -23,27 +29,38 @@ class LeaderArray(APIObject,IDisposable,IEnumerable):
   pass
  def ForwardIterator(self):
   """
-  ForwardIterator(self: LeaderArray) -> LeaderArrayIterator
-  
-   Retrieve a forward moving iterator to the array.
+  ForwardIterator(self: LeaderArray) -> LeaderArrayIterator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: LeaderArray) -> IEnumerator
-  
-   Retrieve a forward moving iterator to the array.
+  GetEnumerator(self: LeaderArray) -> IEnumerator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
  def Insert(self,item,index):
   """
-  Insert(self: LeaderArray,item: Leader,index: int)
-   Insert the specified item into the array.
-  
-   item: The item to be inserted into the array.
-   index: The item will be inserted before this index.
+  Insert(self: LeaderArray,item: Leader,index: int)
+
+   Insert the specified item into the array.
+
+  
+
+   item: The item to be inserted into the array.
+
+   index: The item will be inserted before this index.
+
    Returns: Returns whether the item was inserted into the array.
   """
   pass
@@ -55,9 +72,12 @@ class LeaderArray(APIObject,IDisposable,IEnumerable):
   pass
  def ReverseIterator(self):
   """
-  ReverseIterator(self: LeaderArray) -> LeaderArrayIterator
-  
-   Retrieve a backward moving iterator to the array.
+  ReverseIterator(self: LeaderArray) -> LeaderArrayIterator
+
+  
+
+   Retrieve a backward moving iterator to the array.
+
    Returns: Returns a backward moving iterator to the array.
   """
   pass
@@ -80,17 +100,25 @@ class LeaderArray(APIObject,IDisposable,IEnumerable):
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Test to see if the array is empty.
-
-Get: IsEmpty(self: LeaderArray) -> bool
-
+ """Test to see if the array is empty.
+
+
+
+Get: IsEmpty(self: LeaderArray) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the number of objects that are in the array.
-
-Get: Size(self: LeaderArray) -> int
-
+ """Returns the number of objects that are in the array.
+
+
+
+Get: Size(self: LeaderArray) -> int
+
+
+
 """
 
 

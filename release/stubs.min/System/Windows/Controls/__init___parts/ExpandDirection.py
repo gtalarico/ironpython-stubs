@@ -1,7 +1,9 @@
 class ExpandDirection(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the direction in which an System.Windows.Controls.Expander control opens.
- 
+ Specifies the direction in which an System.Windows.Controls.Expander control opens.
+
+ 
+
  enum ExpandDirection,values: Down (0),Left (2),Right (3),Up (1)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class FamilySizeTableErrorType(Enum,IComparable,IFormattable,IConvertible):
  """
- The set of errors that can be returned when importing a FamilySizeTable from a CSV file.
- 
+ The set of errors that can be returned when importing a FamilySizeTable from a CSV file.
+
+ 
+
  enum FamilySizeTableErrorType,values: CannotOpenFile (1),CannotParseColumnHeader (4),CannotReadFile (2),FileNotFound (0),IncorrectNumberOfColumns (5),InvalidHeaderSeparator (3),Undefined (-1)
  """
  def __eq__(self,*args):

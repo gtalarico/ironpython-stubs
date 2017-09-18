@@ -1,8 +1,11 @@
 class StructLayoutAttribute(Attribute,_Attribute):
  """
- Lets you control the physical layout of the data fields of a class or structure.
- 
- StructLayoutAttribute(layoutKind: LayoutKind)
+ Lets you control the physical layout of the data fields of a class or structure.
+
+ 
+
+ StructLayoutAttribute(layoutKind: LayoutKind)
+
  StructLayoutAttribute(layoutKind: Int16)
  """
  def __init__(self,*args):
@@ -11,15 +14,20 @@ class StructLayoutAttribute(Attribute,_Attribute):
  @staticmethod
  def __new__(self,layoutKind):
   """
-  __new__(cls: type,layoutKind: LayoutKind)
+  __new__(cls: type,layoutKind: LayoutKind)
+
   __new__(cls: type,layoutKind: Int16)
   """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the System.Runtime.InteropServices.LayoutKind value that specifies how the class or structure is arranged.
-
-Get: Value(self: StructLayoutAttribute) -> LayoutKind
-
+ """Gets the System.Runtime.InteropServices.LayoutKind value that specifies how the class or structure is arranged.
+
+
+
+Get: Value(self: StructLayoutAttribute) -> LayoutKind
+
+
+
 """
 
 

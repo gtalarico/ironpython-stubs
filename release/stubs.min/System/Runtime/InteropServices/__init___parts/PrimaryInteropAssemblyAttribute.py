@@ -1,7 +1,9 @@
 class PrimaryInteropAssemblyAttribute(Attribute,_Attribute):
  """
- Indicates that the attributed assembly is a primary interop assembly.
- 
+ Indicates that the attributed assembly is a primary interop assembly.
+
+ 
+
  PrimaryInteropAssemblyAttribute(major: int,minor: int)
  """
  def __init__(self,*args):
@@ -12,17 +14,25 @@ class PrimaryInteropAssemblyAttribute(Attribute,_Attribute):
   """ __new__(cls: type,major: int,minor: int) """
   pass
  MajorVersion=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the major version number of the type library for which this assembly is the primary interop assembly.
-
-Get: MajorVersion(self: PrimaryInteropAssemblyAttribute) -> int
-
+ """Gets the major version number of the type library for which this assembly is the primary interop assembly.
+
+
+
+Get: MajorVersion(self: PrimaryInteropAssemblyAttribute) -> int
+
+
+
 """
 
  MinorVersion=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the minor version number of the type library for which this assembly is the primary interop assembly.
-
-Get: MinorVersion(self: PrimaryInteropAssemblyAttribute) -> int
-
+ """Gets the minor version number of the type library for which this assembly is the primary interop assembly.
+
+
+
+Get: MinorVersion(self: PrimaryInteropAssemblyAttribute) -> int
+
+
+
 """
 
 

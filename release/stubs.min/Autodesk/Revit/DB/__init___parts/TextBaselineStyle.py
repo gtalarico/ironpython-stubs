@@ -1,7 +1,9 @@
 class TextBaselineStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Supported styles of text position relative to the normal baseline.
- 
+ Supported styles of text position relative to the normal baseline.
+
+ 
+
  enum TextBaselineStyle,values: Normal (0),Subscript (1),Superscript (2)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class EnergyAnalysisDetailModelOptions(object,IDisposable):
  """
- Options that govern the calculations for the generation of the energy analysis detail model.
- 
+ Options that govern the calculations for the generation of the energy analysis detail model.
+
+ 
+
  EnergyAnalysisDetailModelOptions()
  """
  def Dispose(self):
@@ -23,50 +25,79 @@ class EnergyAnalysisDetailModelOptions(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  EnergyModelType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """It indicates whether the energy model is based on rooms/spaces or building elements.
-
-Get: EnergyModelType(self: EnergyAnalysisDetailModelOptions) -> EnergyModelType
-
-Set: EnergyModelType(self: EnergyAnalysisDetailModelOptions)=value
+ """It indicates whether the energy model is based on rooms/spaces or building elements.
+
+
+
+Get: EnergyModelType(self: EnergyAnalysisDetailModelOptions) -> EnergyModelType
+
+
+
+Set: EnergyModelType(self: EnergyAnalysisDetailModelOptions)=value
+
 """
 
  ExportMullions=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates if to specify the setting for exporting mullions.
-
-Get: ExportMullions(self: EnergyAnalysisDetailModelOptions) -> bool
-
-Set: ExportMullions(self: EnergyAnalysisDetailModelOptions)=value
+ """Indicates if to specify the setting for exporting mullions.
+
+
+
+Get: ExportMullions(self: EnergyAnalysisDetailModelOptions) -> bool
+
+
+
+Set: ExportMullions(self: EnergyAnalysisDetailModelOptions)=value
+
 """
 
  IncludeShadingSurfaces=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates if to set and get the setting for if shading surfaces should be included.
-
-Get: IncludeShadingSurfaces(self: EnergyAnalysisDetailModelOptions) -> bool
-
-Set: IncludeShadingSurfaces(self: EnergyAnalysisDetailModelOptions)=value
+ """Indicates if to set and get the setting for if shading surfaces should be included.
+
+
+
+Get: IncludeShadingSurfaces(self: EnergyAnalysisDetailModelOptions) -> bool
+
+
+
+Set: IncludeShadingSurfaces(self: EnergyAnalysisDetailModelOptions)=value
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: EnergyAnalysisDetailModelOptions) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: EnergyAnalysisDetailModelOptions) -> bool
+
+
+
 """
 
  SimplifyCurtainSystems=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates if to specify the setting for simplified curtain systems.
-
-Get: SimplifyCurtainSystems(self: EnergyAnalysisDetailModelOptions) -> bool
-
-Set: SimplifyCurtainSystems(self: EnergyAnalysisDetailModelOptions)=value
+ """Indicates if to specify the setting for simplified curtain systems.
+
+
+
+Get: SimplifyCurtainSystems(self: EnergyAnalysisDetailModelOptions) -> bool
+
+
+
+Set: SimplifyCurtainSystems(self: EnergyAnalysisDetailModelOptions)=value
+
 """
 
  Tier=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Level of computation for energy analysis model.
-
-Get: Tier(self: EnergyAnalysisDetailModelOptions) -> EnergyAnalysisDetailModelTier
-
-Set: Tier(self: EnergyAnalysisDetailModelOptions)=value
+ """Level of computation for energy analysis model.
+
+
+
+Get: Tier(self: EnergyAnalysisDetailModelOptions) -> EnergyAnalysisDetailModelTier
+
+
+
+Set: Tier(self: EnergyAnalysisDetailModelOptions)=value
+
 """
 
 

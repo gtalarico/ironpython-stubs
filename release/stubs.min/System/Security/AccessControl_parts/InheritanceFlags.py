@@ -1,7 +1,9 @@
 class InheritanceFlags(Enum,IComparable,IFormattable,IConvertible):
  """
- Inheritance flags specify the semantics of inheritance for access control entries (ACEs).
- 
+ Inheritance flags specify the semantics of inheritance for access control entries (ACEs).
+
+ 
+
  enum (flags) InheritanceFlags,values: ContainerInherit (1),None (0),ObjectInherit (2)
  """
  def __eq__(self,*args):

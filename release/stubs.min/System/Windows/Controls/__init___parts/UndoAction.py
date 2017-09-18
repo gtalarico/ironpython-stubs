@@ -1,7 +1,9 @@
 class UndoAction(Enum,IComparable,IFormattable,IConvertible):
  """
- How the undo stack caused or is affected by a text change.
- 
+ How the undo stack caused or is affected by a text change.
+
+ 
+
  enum UndoAction,values: Clear (4),Create (5),Merge (1),None (0),Redo (3),Undo (2)
  """
  def __eq__(self,*args):

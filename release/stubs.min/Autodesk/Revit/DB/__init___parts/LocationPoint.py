@@ -19,18 +19,27 @@ class LocationPoint(Location,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Point=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The physical location of the element.
-
-Get: Point(self: LocationPoint) -> XYZ
-
-Set: Point(self: LocationPoint)=value
+ """The physical location of the element.
+
+
+
+Get: Point(self: LocationPoint) -> XYZ
+
+
+
+Set: Point(self: LocationPoint)=value
+
 """
 
  Rotation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The angle of rotation around the insertion point,in radians.
-
-Get: Rotation(self: LocationPoint) -> float
-
+ """The angle of rotation around the insertion point,in radians.
+
+
+
+Get: Rotation(self: LocationPoint) -> float
+
+
+
 """
 
 

@@ -1,7 +1,9 @@
 class ScrollEventType(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes the behavior that caused a System.Windows.Controls.Primitives.ScrollBar.Scroll event for a System.Windows.Controls.Primitives.ScrollBar control.
- 
+ Describes the behavior that caused a System.Windows.Controls.Primitives.ScrollBar.Scroll event for a System.Windows.Controls.Primitives.ScrollBar control.
+
+ 
+
  enum ScrollEventType,values: EndScroll (0),First (1),LargeDecrement (2),LargeIncrement (3),Last (4),SmallDecrement (5),SmallIncrement (6),ThumbPosition (7),ThumbTrack (8)
  """
  def __eq__(self,*args):

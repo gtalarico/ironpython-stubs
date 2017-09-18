@@ -1,8 +1,11 @@
 class KeynoteEntry(KeyBasedTreeEntry,IDisposable):
  """
- Represents an entry in the keynote table,containing the key value,keynote text,and parent key (if applicable).
- 
- KeynoteEntry(key: str,text: str)
+ Represents an entry in the keynote table,containing the key value,keynote text,and parent key (if applicable).
+
+ 
+
+ KeynoteEntry(key: str,text: str)
+
  KeynoteEntry(key: str,parentKey: str,text: str)
  """
  def Dispose(self):
@@ -23,15 +26,20 @@ class KeynoteEntry(KeyBasedTreeEntry,IDisposable):
  @staticmethod
  def __new__(self,key,*__args):
   """
-  __new__(cls: type,key: str,text: str)
+  __new__(cls: type,key: str,text: str)
+
   __new__(cls: type,key: str,parentKey: str,text: str)
   """
   pass
  KeynoteText=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The text associated with this KeynoteEntry.
-
-Get: KeynoteText(self: KeynoteEntry) -> str
-
+ """The text associated with this KeynoteEntry.
+
+
+
+Get: KeynoteText(self: KeynoteEntry) -> str
+
+
+
 """
 
 

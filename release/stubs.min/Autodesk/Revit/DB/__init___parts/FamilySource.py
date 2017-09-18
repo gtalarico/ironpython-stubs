@@ -1,7 +1,9 @@
 class FamilySource(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes which version of the family to be loaded.
- 
+ Describes which version of the family to be loaded.
+
+ 
+
  enum FamilySource,values: Family (1),Project (0)
  """
  def __eq__(self,*args):

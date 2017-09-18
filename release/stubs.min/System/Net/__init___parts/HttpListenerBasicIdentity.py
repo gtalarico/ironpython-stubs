@@ -1,7 +1,9 @@
 class HttpListenerBasicIdentity(GenericIdentity,IIdentity):
  """
- Holds the user name and password from a basic authentication request.
- 
+ Holds the user name and password from a basic authentication request.
+
+ 
+
  HttpListenerBasicIdentity(username: str,password: str)
  """
  def CreateClaim(self,*args):
@@ -23,10 +25,14 @@ class HttpListenerBasicIdentity(GenericIdentity,IIdentity):
  CustomSerializationData=property(lambda self: object(),lambda self,v: None,lambda self: None)
 
  Password=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates the password from a basic authentication attempt.
-
-Get: Password(self: HttpListenerBasicIdentity) -> str
-
+ """Indicates the password from a basic authentication attempt.
+
+
+
+Get: Password(self: HttpListenerBasicIdentity) -> str
+
+
+
 """
 
 

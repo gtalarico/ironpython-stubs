@@ -1,7 +1,9 @@
 class OverflowAction(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies how to handle entries in an event log that has reached its maximum file size.
- 
+ Specifies how to handle entries in an event log that has reached its maximum file size.
+
+ 
+
  enum OverflowAction,values: DoNotOverwrite (-1),OverwriteAsNeeded (0),OverwriteOlder (1)
  """
  def __eq__(self,*args):

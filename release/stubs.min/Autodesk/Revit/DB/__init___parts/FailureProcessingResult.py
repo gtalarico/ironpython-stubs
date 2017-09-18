@@ -1,8 +1,11 @@
 class FailureProcessingResult(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type representing the result achieved by any of the available types of failure handlers:
-    FailuresPreprocessor,the handler of FailuresProcessing event or a FailuresProcessor.
- 
+ An enumerated type representing the result achieved by any of the available types of failure handlers:
+
+    FailuresPreprocessor,the handler of FailuresProcessing event or a FailuresProcessor.
+
+ 
+
  enum FailureProcessingResult,values: Continue (0),ProceedWithCommit (1),ProceedWithRollBack (2),WaitForUserInput (3)
  """
  def __eq__(self,*args):

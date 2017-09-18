@@ -1,7 +1,9 @@
 class ConnectionWarning(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all the reasons for connectivity failure.
- 
+ An enumerated type listing all the reasons for connectivity failure.
+
+ 
+
  enum ConnectionWarning,values: Alignment (1),Connectivity (4),Shape (3),Size (2),Unknown (0)
  """
  def __eq__(self,*args):

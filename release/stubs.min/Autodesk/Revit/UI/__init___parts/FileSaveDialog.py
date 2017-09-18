@@ -1,8 +1,11 @@
 class FileSaveDialog(FileDialog,IDisposable):
  """
- This class allows an add-in to prompt the user with the Revit dialog used to navigate to and select an existing
-    or new file path.  This dialog is typically used to enter a file name for saving or exporting.
- 
+ This class allows an add-in to prompt the user with the Revit dialog used to navigate to and select an existing
+
+    or new file path.  This dialog is typically used to enter a file name for saving or exporting.
+
+ 
+
  FileSaveDialog(filter: str)
  """
  def Dispose(self):
@@ -25,11 +28,16 @@ class FileSaveDialog(FileDialog,IDisposable):
   """ __new__(cls: type,filter: str) """
   pass
  InitialFileName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The initial file name to be shown for this save operation.
-
-Get: InitialFileName(self: FileSaveDialog) -> str
-
-Set: InitialFileName(self: FileSaveDialog)=value
+ """The initial file name to be shown for this save operation.
+
+
+
+Get: InitialFileName(self: FileSaveDialog) -> str
+
+
+
+Set: InitialFileName(self: FileSaveDialog)=value
+
 """
 
 

@@ -5,50 +5,69 @@ class AnalyticalModelSupport(object,IDisposable):
   pass
  def GetCurve(self):
   """
-  GetCurve(self: AnalyticalModelSupport) -> Curve
-  
-   Retrieves the curve providing support.
+  GetCurve(self: AnalyticalModelSupport) -> Curve
+
+  
+
+   Retrieves the curve providing support.
+
    Returns: Represents the curve providing support,if the Support Type is Curve Support.
   """
   pass
  def GetFace(self):
   """
-  GetFace(self: AnalyticalModelSupport) -> Face
-  
-   Retrieves surface providing support,
-   Returns: Surface representing the surface providing support,if the Support Type is 
+  GetFace(self: AnalyticalModelSupport) -> Face
+
+  
+
+   Retrieves surface providing support,
+
+   Returns: Surface representing the surface providing support,if the Support Type is 
+
     Surface Support.
   """
   pass
  def GetPoint(self):
   """
-  GetPoint(self: AnalyticalModelSupport) -> XYZ
-  
-   Retrieves the point providing support.
+  GetPoint(self: AnalyticalModelSupport) -> XYZ
+
+  
+
+   Retrieves the point providing support.
+
    Returns: Represents the point providing support,if the Support Type is Point Support.
   """
   pass
  def GetPriority(self):
   """
-  GetPriority(self: AnalyticalModelSupport) -> AnalyticalSupportPriority
-  
-   Retrieves the priority of the support provided.
+  GetPriority(self: AnalyticalModelSupport) -> AnalyticalSupportPriority
+
+  
+
+   Retrieves the priority of the support provided.
+
    Returns: Indicates the support priority,as determined by Analytical Support Checking
   """
   pass
  def GetSupportingElement(self):
   """
-  GetSupportingElement(self: AnalyticalModelSupport) -> ElementId
-  
-   Retrieves the actual Element Id providing support.
+  GetSupportingElement(self: AnalyticalModelSupport) -> ElementId
+
+  
+
+   Retrieves the actual Element Id providing support.
+
    Returns: Represents Element that provides support.
   """
   pass
  def GetSupportType(self):
   """
-  GetSupportType(self: AnalyticalModelSupport) -> AnalyticalSupportType
-  
-   Gets the type of support provided.
+  GetSupportType(self: AnalyticalModelSupport) -> AnalyticalSupportType
+
+  
+
+   Gets the type of support provided.
+
    Returns: Indicates type of support provided.
   """
   pass
@@ -68,10 +87,14 @@ class AnalyticalModelSupport(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: AnalyticalModelSupport) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: AnalyticalModelSupport) -> bool
+
+
+
 """
 
 

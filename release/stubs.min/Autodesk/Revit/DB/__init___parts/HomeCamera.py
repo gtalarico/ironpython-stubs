@@ -1,7 +1,9 @@
 class HomeCamera(object,IDisposable):
  """
- A structure that contains information about the camera and view for the Home view orientation stored in the model.
- 
+ A structure that contains information about the camera and view for the Home view orientation stored in the model.
+
+ 
+
  HomeCamera(other: HomeCamera)
  """
  def Dispose(self):
@@ -27,87 +29,135 @@ class HomeCamera(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  BottomAngleOfFieldOfView=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The bottom angle of the field of view.
-
-Get: BottomAngleOfFieldOfView(self: HomeCamera) -> float
-
+ """The bottom angle of the field of view.
+
+
+
+Get: BottomAngleOfFieldOfView(self: HomeCamera) -> float
+
+
+
 """
 
  Center=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The zoom or orbit center.
-
-Get: Center(self: HomeCamera) -> XYZ
-
+ """The zoom or orbit center.
+
+
+
+Get: Center(self: HomeCamera) -> XYZ
+
+
+
 """
 
  EyePosition=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The eye position point.
-
-Get: EyePosition(self: HomeCamera) -> XYZ
-
+ """The eye position point.
+
+
+
+Get: EyePosition(self: HomeCamera) -> XYZ
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: HomeCamera) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: HomeCamera) -> bool
+
+
+
 """
 
  LeftAngleOfFieldOfView=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The left angle of the field of view.
-
-Get: LeftAngleOfFieldOfView(self: HomeCamera) -> float
-
+ """The left angle of the field of view.
+
+
+
+Get: LeftAngleOfFieldOfView(self: HomeCamera) -> float
+
+
+
 """
 
  OrthogonalProjectionHeight=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The height of orthogonal projection view volume.
-
-Get: OrthogonalProjectionHeight(self: HomeCamera) -> float
-
+ """The height of orthogonal projection view volume.
+
+
+
+Get: OrthogonalProjectionHeight(self: HomeCamera) -> float
+
+
+
 """
 
  OrthogonalProjectionWidth=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The width of orthogonal projection view volume.
-
-Get: OrthogonalProjectionWidth(self: HomeCamera) -> float
-
+ """The width of orthogonal projection view volume.
+
+
+
+Get: OrthogonalProjectionWidth(self: HomeCamera) -> float
+
+
+
 """
 
  Pivot=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The pivot point.
-
-Get: Pivot(self: HomeCamera) -> XYZ
-
+ """The pivot point.
+
+
+
+Get: Pivot(self: HomeCamera) -> XYZ
+
+
+
 """
 
  RightAngleOfFieldOfView=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The right angle of the field of view.
-
-Get: RightAngleOfFieldOfView(self: HomeCamera) -> float
-
+ """The right angle of the field of view.
+
+
+
+Get: RightAngleOfFieldOfView(self: HomeCamera) -> float
+
+
+
 """
 
  TopAngleOfFieldOfView=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The top angle of the field of view.
-
-Get: TopAngleOfFieldOfView(self: HomeCamera) -> float
-
+ """The top angle of the field of view.
+
+
+
+Get: TopAngleOfFieldOfView(self: HomeCamera) -> float
+
+
+
 """
 
  UpDirection=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The up direction vector.
-
-Get: UpDirection(self: HomeCamera) -> XYZ
-
+ """The up direction vector.
+
+
+
+Get: UpDirection(self: HomeCamera) -> XYZ
+
+
+
 """
 
  ViewId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The id of the view which is associated to this document's Home view orientation.
-
-Get: ViewId(self: HomeCamera) -> ElementId
-
+ """The id of the view which is associated to this document's Home view orientation.
+
+
+
+Get: ViewId(self: HomeCamera) -> ElementId
+
+
+
 """
 
 

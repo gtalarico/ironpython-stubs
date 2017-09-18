@@ -1,7 +1,9 @@
 class DataGridViewElementStates(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the user interface (UI) state of a element within a System.Windows.Forms.DataGridView control.
- 
+ Specifies the user interface (UI) state of a element within a System.Windows.Forms.DataGridView control.
+
+ 
+
  enum (flags) DataGridViewElementStates,values: Displayed (1),Frozen (2),None (0),ReadOnly (4),Resizable (8),ResizableSet (16),Selected (32),Visible (64)
  """
  def __eq__(self,*args):

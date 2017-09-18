@@ -1,7 +1,9 @@
 class FilterNumericGreater(FilterNumericRuleEvaluator,IDisposable):
  """
- Tests whether numeric values from the document are greater than a certain value
- 
+ Tests whether numeric values from the document are greater than a certain value
+
+ 
+
  FilterNumericGreater()
  """
  def Dispose(self):

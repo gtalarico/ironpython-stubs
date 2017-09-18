@@ -10,42 +10,59 @@
 
 class AbstractAnalysisDisplay(object,IDisposable):
  """
- Superclass for all Revit Analysis Display types
-    
-    Note: We're using the user facing name from Revit (Analysis Display),rather than the same name that the Revit API
+ Superclass for all Revit Analysis Display types
+
+    
+
+    Note: We're using the user facing name from Revit (Analysis Display),rather than the same name that the Revit API
+
     uses (Spatial Field)
  """
  def GetAnalysisResultSchemaIndex(self,*args):
   """
-  GetAnalysisResultSchemaIndex(self: AbstractAnalysisDisplay,resultsSchemaName: str,resultsDescription: str,unitType: Type) -> int
-  
+  GetAnalysisResultSchemaIndex(self: AbstractAnalysisDisplay,resultsSchemaName: str,resultsDescription: str,unitType: Type) -> int
+
+  
+
    Get the AnalysisResultsSchemaIndex for the SpatialFieldManager
   """
   pass
  def GetElementAndPrimitiveIdFromTrace(self,*args):
   """
-  GetElementAndPrimitiveIdFromTrace(self: AbstractAnalysisDisplay) -> Tuple[SpatialFieldManager,List[int]]
-  
+  GetElementAndPrimitiveIdFromTrace(self: AbstractAnalysisDisplay) -> Tuple[SpatialFieldManager,List[int]]
+
+  
+
    Set the SpatialFieldManager PrimitiveId from Thread Local Storage
   """
   pass
  def GetSpatialFieldManagerFromView(self,*args):
   """
-  GetSpatialFieldManagerFromView(view: View,numValuesPerAnalysisPoint: UInt32) -> SpatialFieldManager
-  
-   Get the SpatialFieldManager for a particular view.  This is a singleton for 
-    every view.  Note that the 
-     number of values per analysis point is 
-    ignored if the SpatialFieldManager has already been obtained
-     for 
-    this view.  This field cannot be mutated once the SpatialFieldManager is set 
-    for a partiular 
+  GetSpatialFieldManagerFromView(view: View,numValuesPerAnalysisPoint: UInt32) -> SpatialFieldManager
+
+  
+
+   Get the SpatialFieldManager for a particular view.  This is a singleton for 
+
+    every view.  Note that the 
+
+     number of values per analysis point is 
+
+    ignored if the SpatialFieldManager has already been obtained
+
+     for 
+
+    this view.  This field cannot be mutated once the SpatialFieldManager is set 
+
+    for a partiular 
+
      view.
   """
   pass
  def InternalSetSpatialFieldManager(self,*args):
   """
-  InternalSetSpatialFieldManager(self: AbstractAnalysisDisplay,manager: SpatialFieldManager)
+  InternalSetSpatialFieldManager(self: AbstractAnalysisDisplay,manager: SpatialFieldManager)
+
    Set the SpatialFieldManager
   """
   pass
@@ -54,8 +71,10 @@ class AbstractAnalysisDisplay(object,IDisposable):
   pass
  def SetElementAndPrimitiveIdsForTrace(self,*args):
   """
-  SetElementAndPrimitiveIdsForTrace(self: AbstractAnalysisDisplay)
-   Set the current SpatialFieldManager and PrimitiveId in Thread Local Storage
+  SetElementAndPrimitiveIdsForTrace(self: AbstractAnalysisDisplay)
+
+   Set the current SpatialFieldManager and PrimitiveId in Thread Local Storage
+
   SetElementAndPrimitiveIdsForTrace(self: AbstractAnalysisDisplay,manager: SpatialFieldManager,primitiveIds: List[int])
   """
   pass
@@ -72,15 +91,19 @@ class AbstractAnalysisDisplay(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Document=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """A reference to the current document
-
+ """A reference to the current document
+
+
+
 """
 
  PrimitiveIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
 
  SpatialFieldManager=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The SpatialFieldManager governing this SpatialFieldPrimitive
-
+ """The SpatialFieldManager governing this SpatialFieldPrimitive
+
+
+
 """
 
 
@@ -90,51 +113,75 @@ class FaceAnalysisDisplay(AbstractAnalysisDisplay,IDisposable):
  @staticmethod
  def ByViewAndFaceAnalysisData(view,data,name,description,unitType):
   """
-  ByViewAndFaceAnalysisData(view: View,data: SurfaceData,name: str,description: str,unitType: Type) -> FaceAnalysisDisplay
-  
-   Show a colored Face Analysis Display in the Revit view.
-  
-   view: The view into which you want to draw the analysis results.
-   data: A collection of SurfaceData objects.
-   name: An optional analysis results name to show on the results legend.
-   description: An optional analysis results description to show on the results legend.
-   unitType: An optional Unit type to provide conversions in the analysis results.
+  ByViewAndFaceAnalysisData(view: View,data: SurfaceData,name: str,description: str,unitType: Type) -> FaceAnalysisDisplay
+
+  
+
+   Show a colored Face Analysis Display in the Revit view.
+
+  
+
+   view: The view into which you want to draw the analysis results.
+
+   data: A collection of SurfaceData objects.
+
+   name: An optional analysis results name to show on the results legend.
+
+   description: An optional analysis results description to show on the results legend.
+
+   unitType: An optional Unit type to provide conversions in the analysis results.
+
    Returns: A FaceAnalysisDisplay object.
   """
   pass
  @staticmethod
  def ByViewFacePointsAndValues(view,surface,sampleLocations,samples,name,description,unitType):
   """
-  ByViewFacePointsAndValues(view: View,surface: Surface,sampleLocations: Array[UV],samples: Array[float],name: str,description: str,unitType: Type) -> FaceAnalysisDisplay
-  
-   Show a colored Face Analysis Display in the Revit view.
-  
-   view: The view into which you want to draw the analysis results.
-   sampleLocations: The locations at which you want to create analysis values.
-   samples: The analysis values at the given locations.
-   name: An optional analysis results name to show on the results legend.
-   description: An optional analysis results description to show on the results legend.
-   unitType: An optional Unit type to provide conversions in the analysis results.
+  ByViewFacePointsAndValues(view: View,surface: Surface,sampleLocations: Array[UV],samples: Array[float],name: str,description: str,unitType: Type) -> FaceAnalysisDisplay
+
+  
+
+   Show a colored Face Analysis Display in the Revit view.
+
+  
+
+   view: The view into which you want to draw the analysis results.
+
+   sampleLocations: The locations at which you want to create analysis values.
+
+   samples: The analysis values at the given locations.
+
+   name: An optional analysis results name to show on the results legend.
+
+   description: An optional analysis results description to show on the results legend.
+
+   unitType: An optional Unit type to provide conversions in the analysis results.
+
    Returns: A FaceAnalysisDisplay object.
   """
   pass
  def GetAnalysisResultSchemaIndex(self,*args):
   """
-  GetAnalysisResultSchemaIndex(self: AbstractAnalysisDisplay,resultsSchemaName: str,resultsDescription: str,unitType: Type) -> int
-  
+  GetAnalysisResultSchemaIndex(self: AbstractAnalysisDisplay,resultsSchemaName: str,resultsDescription: str,unitType: Type) -> int
+
+  
+
    Get the AnalysisResultsSchemaIndex for the SpatialFieldManager
   """
   pass
  def GetElementAndPrimitiveIdFromTrace(self,*args):
   """
-  GetElementAndPrimitiveIdFromTrace(self: AbstractAnalysisDisplay) -> Tuple[SpatialFieldManager,List[int]]
-  
+  GetElementAndPrimitiveIdFromTrace(self: AbstractAnalysisDisplay) -> Tuple[SpatialFieldManager,List[int]]
+
+  
+
    Set the SpatialFieldManager PrimitiveId from Thread Local Storage
   """
   pass
  def InternalSetSpatialFieldManager(self,*args):
   """
-  InternalSetSpatialFieldManager(self: AbstractAnalysisDisplay,manager: SpatialFieldManager)
+  InternalSetSpatialFieldManager(self: AbstractAnalysisDisplay,manager: SpatialFieldManager)
+
    Set the SpatialFieldManager
   """
   pass
@@ -143,8 +190,10 @@ class FaceAnalysisDisplay(AbstractAnalysisDisplay,IDisposable):
   pass
  def SetElementAndPrimitiveIdsForTrace(self,*args):
   """
-  SetElementAndPrimitiveIdsForTrace(self: AbstractAnalysisDisplay)
-   Set the current SpatialFieldManager and PrimitiveId in Thread Local Storage
+  SetElementAndPrimitiveIdsForTrace(self: AbstractAnalysisDisplay)
+
+   Set the current SpatialFieldManager and PrimitiveId in Thread Local Storage
+
   SetElementAndPrimitiveIdsForTrace(self: AbstractAnalysisDisplay,manager: SpatialFieldManager,primitiveIds: List[int])
   """
   pass
@@ -164,8 +213,10 @@ class FaceAnalysisDisplay(AbstractAnalysisDisplay,IDisposable):
  PrimitiveIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
 
  SpatialFieldManager=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The SpatialFieldManager governing this SpatialFieldPrimitive
-
+ """The SpatialFieldManager governing this SpatialFieldPrimitive
+
+
+
 """
 
 
@@ -175,45 +226,68 @@ class PointAnalysisDisplay(AbstractAnalysisDisplay,IDisposable):
  @staticmethod
  def ByViewAndPointAnalysisData(view,data,name,description,unitType):
   """
-  ByViewAndPointAnalysisData(view: View,data: PointData,name: str,description: str,unitType: Type) -> PointAnalysisDisplay
-  
-   Show a colored Point Analysis Display in the Revit view.
-  
-   view: The view into which you want to draw the analysis results.
-   data: A list of PointData objects.
-   name: An optional analysis results name to show on the results legend.
-   description: An optional analysis results description to show on the results legend.
-   unitType: An optional Unit type to provide conversions in the analysis results.
+  ByViewAndPointAnalysisData(view: View,data: PointData,name: str,description: str,unitType: Type) -> PointAnalysisDisplay
+
+  
+
+   Show a colored Point Analysis Display in the Revit view.
+
+  
+
+   view: The view into which you want to draw the analysis results.
+
+   data: A list of PointData objects.
+
+   name: An optional analysis results name to show on the results legend.
+
+   description: An optional analysis results description to show on the results legend.
+
+   unitType: An optional Unit type to provide conversions in the analysis results.
+
    Returns: An PointAnalysisDisplay object.
   """
   pass
  @staticmethod
  def ByViewPointsAndValues(view,sampleLocations,samples,name,description,unitType):
   """
-  ByViewPointsAndValues(view: View,sampleLocations: Array[Point],samples: Array[float],name: str,description: str,unitType: Type) -> PointAnalysisDisplay
-  
-   Show a colored Point Analysis Display in the Revit view.
-  
-   view: The view into which you want to draw the analysis results.
-   sampleLocations: The locations at which you want to create analysis values.
-   samples: The analysis values at the given locations.
-   name: An optional analysis results name to show on the results legend.
-   description: An optional analysis results description to show on the results legend.
-   unitType: An optional Unit type to provide conversions in the analysis results.
+  ByViewPointsAndValues(view: View,sampleLocations: Array[Point],samples: Array[float],name: str,description: str,unitType: Type) -> PointAnalysisDisplay
+
+  
+
+   Show a colored Point Analysis Display in the Revit view.
+
+  
+
+   view: The view into which you want to draw the analysis results.
+
+   sampleLocations: The locations at which you want to create analysis values.
+
+   samples: The analysis values at the given locations.
+
+   name: An optional analysis results name to show on the results legend.
+
+   description: An optional analysis results description to show on the results legend.
+
+   unitType: An optional Unit type to provide conversions in the analysis results.
+
    Returns: An PointAnalysisDisplay object.
   """
   pass
  def GetAnalysisResultSchemaIndex(self,*args):
   """
-  GetAnalysisResultSchemaIndex(self: AbstractAnalysisDisplay,resultsSchemaName: str,resultsDescription: str,unitType: Type) -> int
-  
+  GetAnalysisResultSchemaIndex(self: AbstractAnalysisDisplay,resultsSchemaName: str,resultsDescription: str,unitType: Type) -> int
+
+  
+
    Get the AnalysisResultsSchemaIndex for the SpatialFieldManager
   """
   pass
  def GetElementAndPrimitiveIdFromTrace(self,*args):
   """
-  GetElementAndPrimitiveIdFromTrace(self: AbstractAnalysisDisplay) -> Tuple[SpatialFieldManager,List[int]]
-  
+  GetElementAndPrimitiveIdFromTrace(self: AbstractAnalysisDisplay) -> Tuple[SpatialFieldManager,List[int]]
+
+  
+
    Set the SpatialFieldManager PrimitiveId from Thread Local Storage
   """
   pass
@@ -222,7 +296,8 @@ class PointAnalysisDisplay(AbstractAnalysisDisplay,IDisposable):
   pass
  def InternalSetSpatialFieldManager(self,*args):
   """
-  InternalSetSpatialFieldManager(self: AbstractAnalysisDisplay,manager: SpatialFieldManager)
+  InternalSetSpatialFieldManager(self: AbstractAnalysisDisplay,manager: SpatialFieldManager)
+
    Set the SpatialFieldManager
   """
   pass
@@ -234,8 +309,10 @@ class PointAnalysisDisplay(AbstractAnalysisDisplay,IDisposable):
   pass
  def SetElementAndPrimitiveIdsForTrace(self,*args):
   """
-  SetElementAndPrimitiveIdsForTrace(self: AbstractAnalysisDisplay)
-   Set the current SpatialFieldManager and PrimitiveId in Thread Local Storage
+  SetElementAndPrimitiveIdsForTrace(self: AbstractAnalysisDisplay)
+
+   Set the current SpatialFieldManager and PrimitiveId in Thread Local Storage
+
   SetElementAndPrimitiveIdsForTrace(self: AbstractAnalysisDisplay,manager: SpatialFieldManager,primitiveIds: List[int])
   """
   pass
@@ -251,15 +328,18 @@ class PointAnalysisDisplay(AbstractAnalysisDisplay,IDisposable):
  PrimitiveIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
 
  SpatialFieldManager=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The SpatialFieldManager governing this SpatialFieldPrimitive
-
+ """The SpatialFieldManager governing this SpatialFieldPrimitive
+
+
+
 """
 
 
 
 class SpmPrimitiveIdListPair(object,ISerializable):
  """
- SpmPrimitiveIdListPair()
+ SpmPrimitiveIdListPair()
+
  SpmPrimitiveIdListPair(info: SerializationInfo,context: StreamingContext)
  """
  def GetObjectData(self,info,context):
@@ -271,7 +351,8 @@ class SpmPrimitiveIdListPair(object,ISerializable):
  @staticmethod
  def __new__(self,info=None,context=None):
   """
-  __new__(cls: type)
+  __new__(cls: type)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass
@@ -281,25 +362,35 @@ class SpmPrimitiveIdListPair(object,ISerializable):
   """ __repr__(self: object) -> str """
   pass
  PrimitiveIDs=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PrimitiveIDs(self: SpmPrimitiveIdListPair) -> List[int]
-
-Set: PrimitiveIDs(self: SpmPrimitiveIdListPair)=value
+ """Get: PrimitiveIDs(self: SpmPrimitiveIdListPair) -> List[int]
+
+
+
+Set: PrimitiveIDs(self: SpmPrimitiveIdListPair)=value
+
 """
 
  SpatialFieldManagerID=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SpatialFieldManagerID(self: SpmPrimitiveIdListPair) -> int
-
-Set: SpatialFieldManagerID(self: SpmPrimitiveIdListPair)=value
+ """Get: SpatialFieldManagerID(self: SpmPrimitiveIdListPair) -> int
+
+
+
+Set: SpatialFieldManagerID(self: SpmPrimitiveIdListPair)=value
+
 """
 
 
 
 class SpmPrimitiveIdPair(object,ISerializable):
  """
- Hold a pair of element ID of SpatialFieldManager and primitive ID to
-    support serialization.
- 
- SpmPrimitiveIdPair()
+ Hold a pair of element ID of SpatialFieldManager and primitive ID to
+
+    support serialization.
+
+ 
+
+ SpmPrimitiveIdPair()
+
  SpmPrimitiveIdPair(info: SerializationInfo,context: StreamingContext)
  """
  def GetObjectData(self,info,context):
@@ -311,7 +402,8 @@ class SpmPrimitiveIdPair(object,ISerializable):
  @staticmethod
  def __new__(self,info=None,context=None):
   """
-  __new__(cls: type)
+  __new__(cls: type)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass
@@ -321,15 +413,21 @@ class SpmPrimitiveIdPair(object,ISerializable):
   """ __repr__(self: object) -> str """
   pass
  PrimitiveIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PrimitiveIds(self: SpmPrimitiveIdPair) -> List[int]
-
-Set: PrimitiveIds(self: SpmPrimitiveIdPair)=value
+ """Get: PrimitiveIds(self: SpmPrimitiveIdPair) -> List[int]
+
+
+
+Set: PrimitiveIds(self: SpmPrimitiveIdPair)=value
+
 """
 
  SpatialFieldManagerID=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SpatialFieldManagerID(self: SpmPrimitiveIdPair) -> int
-
-Set: SpatialFieldManagerID(self: SpmPrimitiveIdPair)=value
+ """Get: SpatialFieldManagerID(self: SpmPrimitiveIdPair) -> int
+
+
+
+Set: SpatialFieldManagerID(self: SpmPrimitiveIdPair)=value
+
 """
 
 
@@ -339,50 +437,73 @@ class VectorAnalysisDisplay(AbstractAnalysisDisplay,IDisposable):
  @staticmethod
  def ByViewAndVectorAnalysisData(view,data,name,description,unitType):
   """
-  ByViewAndVectorAnalysisData(view: View,data: VectorData,name: str,description: str,unitType: Type) -> VectorAnalysisDisplay
-  
-   Show a Vector Analysis Display in the Revit view.
-  
-   view: The view into which you want to draw the analysis results.
-   data: A list of VectorData objects.
-   name: An optional analysis results name to show on the results legend.
-   description: An optional analysis results description to show on the results legend.
-   unitType: An optional Unit type to provide conversions in the analysis results.
+  ByViewAndVectorAnalysisData(view: View,data: VectorData,name: str,description: str,unitType: Type) -> VectorAnalysisDisplay
+
+  
+
+   Show a Vector Analysis Display in the Revit view.
+
+  
+
+   view: The view into which you want to draw the analysis results.
+
+   data: A list of VectorData objects.
+
+   name: An optional analysis results name to show on the results legend.
+
+   description: An optional analysis results description to show on the results legend.
+
+   unitType: An optional Unit type to provide conversions in the analysis results.
+
    Returns: A VectorAnalysisDisplay object.
   """
   pass
  @staticmethod
  def ByViewPointsAndVectorValues(view,sampleLocations,samples,name,description,unitType):
   """
-  ByViewPointsAndVectorValues(view: View,sampleLocations: Array[Point],samples: Array[Vector],name: str,description: str,unitType: Type) -> VectorAnalysisDisplay
-  
-   Show a Vector Analysis Display in the Revit view.
-  
-   view: The view into which you want to draw the analysis results.
-   samples: The analysis values at the given locations.
-   name: An optional analysis results name to show on the results legend.
-   description: An optional analysis results description to show on the results legend.
-   unitType: An optional Unit type to provide conversions in the analysis results.
+  ByViewPointsAndVectorValues(view: View,sampleLocations: Array[Point],samples: Array[Vector],name: str,description: str,unitType: Type) -> VectorAnalysisDisplay
+
+  
+
+   Show a Vector Analysis Display in the Revit view.
+
+  
+
+   view: The view into which you want to draw the analysis results.
+
+   samples: The analysis values at the given locations.
+
+   name: An optional analysis results name to show on the results legend.
+
+   description: An optional analysis results description to show on the results legend.
+
+   unitType: An optional Unit type to provide conversions in the analysis results.
+
    Returns: A VectorAnalysisDisplay object.
   """
   pass
  def GetAnalysisResultSchemaIndex(self,*args):
   """
-  GetAnalysisResultSchemaIndex(self: AbstractAnalysisDisplay,resultsSchemaName: str,resultsDescription: str,unitType: Type) -> int
-  
+  GetAnalysisResultSchemaIndex(self: AbstractAnalysisDisplay,resultsSchemaName: str,resultsDescription: str,unitType: Type) -> int
+
+  
+
    Get the AnalysisResultsSchemaIndex for the SpatialFieldManager
   """
   pass
  def GetElementAndPrimitiveIdFromTrace(self,*args):
   """
-  GetElementAndPrimitiveIdFromTrace(self: AbstractAnalysisDisplay) -> Tuple[SpatialFieldManager,List[int]]
-  
+  GetElementAndPrimitiveIdFromTrace(self: AbstractAnalysisDisplay) -> Tuple[SpatialFieldManager,List[int]]
+
+  
+
    Set the SpatialFieldManager PrimitiveId from Thread Local Storage
   """
   pass
  def InternalSetSpatialFieldManager(self,*args):
   """
-  InternalSetSpatialFieldManager(self: AbstractAnalysisDisplay,manager: SpatialFieldManager)
+  InternalSetSpatialFieldManager(self: AbstractAnalysisDisplay,manager: SpatialFieldManager)
+
    Set the SpatialFieldManager
   """
   pass
@@ -391,8 +512,10 @@ class VectorAnalysisDisplay(AbstractAnalysisDisplay,IDisposable):
   pass
  def SetElementAndPrimitiveIdsForTrace(self,*args):
   """
-  SetElementAndPrimitiveIdsForTrace(self: AbstractAnalysisDisplay)
-   Set the current SpatialFieldManager and PrimitiveId in Thread Local Storage
+  SetElementAndPrimitiveIdsForTrace(self: AbstractAnalysisDisplay)
+
+   Set the current SpatialFieldManager and PrimitiveId in Thread Local Storage
+
   SetElementAndPrimitiveIdsForTrace(self: AbstractAnalysisDisplay,manager: SpatialFieldManager,primitiveIds: List[int])
   """
   pass
@@ -408,8 +531,10 @@ class VectorAnalysisDisplay(AbstractAnalysisDisplay,IDisposable):
  PrimitiveIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
 
  SpatialFieldManager=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The SpatialFieldManager governing this SpatialFieldPrimitive
-
+ """The SpatialFieldManager governing this SpatialFieldPrimitive
+
+
+
 """
 
 

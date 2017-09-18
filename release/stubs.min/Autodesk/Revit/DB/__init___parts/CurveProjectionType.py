@@ -1,7 +1,9 @@
 class CurveProjectionType(Enum,IComparable,IFormattable,IConvertible):
  """
- This attribute indicates how the curve will be projected to the surface if the curve is sketched on the surface.
- 
+ This attribute indicates how the curve will be projected to the surface if the curve is sketched on the surface.
+
+ 
+
  enum CurveProjectionType,values: FollowSurfaceUV (2),FromTopDown (0),ParallelToLevel (1)
  """
  def __eq__(self,*args):

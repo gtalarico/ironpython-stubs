@@ -1,7 +1,9 @@
 class RelinquishOptions(object,IDisposable):
  """
- Options to control behavior of relinquishing ownership of elements and worksets.
- 
+ Options to control behavior of relinquishing ownership of elements and worksets.
+
+ 
+
  RelinquishOptions(relinquishEverything: bool)
  """
  def Dispose(self):
@@ -27,55 +29,89 @@ class RelinquishOptions(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  CheckedOutElements=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """True means all elements checked out by the current user should be relinquished.
-   False means none of these are relinquished.
-
-Get: CheckedOutElements(self: RelinquishOptions) -> bool
-
-Set: CheckedOutElements(self: RelinquishOptions)=value
+ """True means all elements checked out by the current user should be relinquished.
+
+   False means none of these are relinquished.
+
+
+
+Get: CheckedOutElements(self: RelinquishOptions) -> bool
+
+
+
+Set: CheckedOutElements(self: RelinquishOptions)=value
+
 """
 
  FamilyWorksets=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """True means all family worksets owned by the current user should be relinquished.
-   False means none of these are relinquished.
-
-Get: FamilyWorksets(self: RelinquishOptions) -> bool
-
-Set: FamilyWorksets(self: RelinquishOptions)=value
+ """True means all family worksets owned by the current user should be relinquished.
+
+   False means none of these are relinquished.
+
+
+
+Get: FamilyWorksets(self: RelinquishOptions) -> bool
+
+
+
+Set: FamilyWorksets(self: RelinquishOptions)=value
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: RelinquishOptions) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: RelinquishOptions) -> bool
+
+
+
 """
 
  StandardWorksets=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """True means all project standards worksets owned by the current user should be relinquished.
-   False means none of these are relinquished.
-
-Get: StandardWorksets(self: RelinquishOptions) -> bool
-
-Set: StandardWorksets(self: RelinquishOptions)=value
+ """True means all project standards worksets owned by the current user should be relinquished.
+
+   False means none of these are relinquished.
+
+
+
+Get: StandardWorksets(self: RelinquishOptions) -> bool
+
+
+
+Set: StandardWorksets(self: RelinquishOptions)=value
+
 """
 
  UserWorksets=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """True means all user-created worksets owned by the current user should be relinquished.
-   False means none of these are relinquished.
-
-Get: UserWorksets(self: RelinquishOptions) -> bool
-
-Set: UserWorksets(self: RelinquishOptions)=value
+ """True means all user-created worksets owned by the current user should be relinquished.
+
+   False means none of these are relinquished.
+
+
+
+Get: UserWorksets(self: RelinquishOptions) -> bool
+
+
+
+Set: UserWorksets(self: RelinquishOptions)=value
+
 """
 
  ViewWorksets=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """True means all view worksets owned by the current user should be relinquished.
-   False means none of these are relinquished.
-
-Get: ViewWorksets(self: RelinquishOptions) -> bool
-
-Set: ViewWorksets(self: RelinquishOptions)=value
+ """True means all view worksets owned by the current user should be relinquished.
+
+   False means none of these are relinquished.
+
+
+
+Get: ViewWorksets(self: RelinquishOptions) -> bool
+
+
+
+Set: ViewWorksets(self: RelinquishOptions)=value
+
 """
 
 

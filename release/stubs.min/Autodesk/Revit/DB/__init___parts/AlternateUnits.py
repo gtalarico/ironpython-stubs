@@ -1,7 +1,9 @@
 class AlternateUnits(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing the locations where Alternate units may be displayed in dimensions.
- 
+ An enumerated type listing the locations where Alternate units may be displayed in dimensions.
+
+ 
+
  enum AlternateUnits,values: Below (2),None (0),Right (1)
  """
  def __eq__(self,*args):

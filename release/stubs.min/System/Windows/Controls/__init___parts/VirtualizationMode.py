@@ -1,7 +1,9 @@
 class VirtualizationMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the method the System.Windows.Controls.VirtualizingStackPanel uses to manage virtualizing its child items.
- 
+ Specifies the method the System.Windows.Controls.VirtualizingStackPanel uses to manage virtualizing its child items.
+
+ 
+
  enum VirtualizationMode,values: Recycling (1),Standard (0)
  """
  def __eq__(self,*args):

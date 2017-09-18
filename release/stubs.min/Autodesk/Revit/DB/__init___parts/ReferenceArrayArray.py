@@ -1,7 +1,9 @@
 class ReferenceArrayArray(APIObject,IDisposable,IEnumerable):
  """
- An array that contains ReferenceArray objects.
- 
+ An array that contains ReferenceArray objects.
+
+ 
+
  ReferenceArrayArray()
  """
  def Append(self,item):
@@ -9,7 +11,8 @@ class ReferenceArrayArray(APIObject,IDisposable,IEnumerable):
   pass
  def Clear(self):
   """
-  Clear(self: ReferenceArrayArray)
+  Clear(self: ReferenceArrayArray)
+
    Removes every ReferenceArray from the array,rendering it empty.
   """
   pass
@@ -18,17 +21,23 @@ class ReferenceArrayArray(APIObject,IDisposable,IEnumerable):
   pass
  def ForwardIterator(self):
   """
-  ForwardIterator(self: ReferenceArrayArray) -> ReferenceArrayArrayIterator
-  
-   Retrieve a forward moving iterator to the array.
+  ForwardIterator(self: ReferenceArrayArray) -> ReferenceArrayArrayIterator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: ReferenceArrayArray) -> IEnumerator
-  
-   Retrieve a forward moving iterator to the array.
+  GetEnumerator(self: ReferenceArrayArray) -> IEnumerator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
@@ -43,9 +52,12 @@ class ReferenceArrayArray(APIObject,IDisposable,IEnumerable):
   pass
  def ReverseIterator(self):
   """
-  ReverseIterator(self: ReferenceArrayArray) -> ReferenceArrayArrayIterator
-  
-   Retrieve a backward moving iterator to the array.
+  ReverseIterator(self: ReferenceArrayArray) -> ReferenceArrayArrayIterator
+
+  
+
+   Retrieve a backward moving iterator to the array.
+
    Returns: Returns a backward moving iterator to the array.
   """
   pass
@@ -68,17 +80,25 @@ class ReferenceArrayArray(APIObject,IDisposable,IEnumerable):
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Test to see if the array is empty.
-
-Get: IsEmpty(self: ReferenceArrayArray) -> bool
-
+ """Test to see if the array is empty.
+
+
+
+Get: IsEmpty(self: ReferenceArrayArray) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the number of ReferenceArrays that are in the array.
-
-Get: Size(self: ReferenceArrayArray) -> int
-
+ """Returns the number of ReferenceArrays that are in the array.
+
+
+
+Get: Size(self: ReferenceArrayArray) -> int
+
+
+
 """
 
 

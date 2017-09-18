@@ -22,17 +22,25 @@ class Sketch(SketchBase,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Profile=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the Profile of the Sketch.
-
-Get: Profile(self: Sketch) -> CurveArrArray
-
+ """Returns the Profile of the Sketch.
+
+
+
+Get: Profile(self: Sketch) -> CurveArrArray
+
+
+
 """
 
  SketchPlane=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the Sketch Plane of the Sketch.
-
-Get: SketchPlane(self: Sketch) -> SketchPlane
-
+ """Returns the Sketch Plane of the Sketch.
+
+
+
+Get: SketchPlane(self: Sketch) -> SketchPlane
+
+
+
 """
 
 

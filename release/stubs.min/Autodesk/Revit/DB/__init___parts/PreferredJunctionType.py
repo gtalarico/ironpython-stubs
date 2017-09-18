@@ -1,7 +1,9 @@
 class PreferredJunctionType(Enum,IComparable,IFormattable,IConvertible):
  """
- Enumerated type representing the possible options for the preferred junction for a routine preference rule.
- 
+ Enumerated type representing the possible options for the preferred junction for a routine preference rule.
+
+ 
+
  enum PreferredJunctionType,values: Tap (1),Tee (0)
  """
  def __eq__(self,*args):

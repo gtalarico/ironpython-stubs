@@ -1,9 +1,13 @@
 class ElectricalDemandFactorRule(Enum,IComparable,IFormattable,IConvertible):
  """
- This enum describes the different demand factor rule types available to the application.
-    Within a demand factor a rule will be referenced and the user will have to enter values
-    corresponding to that rule.
- 
+ This enum describes the different demand factor rule types available to the application.
+
+    Within a demand factor a rule will be referenced and the user will have to enter values
+
+    corresponding to that rule.
+
+ 
+
  enum ElectricalDemandFactorRule,values: Constant (0),LoadTable (2),LoadTablePerPortion (4),QuantityTable (1),QuantityTablePerPortion (3)
  """
  def __eq__(self,*args):

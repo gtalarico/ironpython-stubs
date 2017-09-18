@@ -1,7 +1,9 @@
 class GraphicsStyleType(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes the type of graphics style.
- 
+ Describes the type of graphics style.
+
+ 
+
  enum GraphicsStyleType,values: Cut (2),Projection (1)
  """
  def __eq__(self,*args):

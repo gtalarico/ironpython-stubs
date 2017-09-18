@@ -1,7 +1,9 @@
 class FindReferenceTarget(Enum,IComparable,IFormattable,IConvertible):
  """
- The type of reference to find
- 
+ The type of reference to find
+
+ 
+
  enum FindReferenceTarget,values: All (31),Curve (8),Edge (4),Element (1),Face (16),Mesh (2)
  """
  def __eq__(self,*args):

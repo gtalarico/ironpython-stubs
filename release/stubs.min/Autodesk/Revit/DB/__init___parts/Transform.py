@@ -1,69 +1,105 @@
 class Transform(APIObject,IDisposable):
  """
- A transformation of the affine 3-space.
- 
+ A transformation of the affine 3-space.
+
+ 
+
  Transform(source: Transform)
  """
  def AlmostEqual(self,right):
   """
-  AlmostEqual(self: Transform,right: Transform) -> bool
-  
-   Determines whether this transformation and the specified transformation are the 
-    same within the tolerance (1.0e-09).
-  
-  
-   right: The transformation to compare with this transformation.
+  AlmostEqual(self: Transform,right: Transform) -> bool
+
+  
+
+   Determines whether this transformation and the specified transformation are the 
+
+    same within the tolerance (1.0e-09).
+
+  
+
+  
+
+   right: The transformation to compare with this transformation.
+
    Returns: True if the two transformations are equal; otherwise,false.
   """
   pass
  @staticmethod
  def CreateReflection(plane):
   """
-  CreateReflection(plane: Plane) -> Transform
-  
-   Creates a transform that represents a reflection across the given plane.
-  
-   plane: The plane.
+  CreateReflection(plane: Plane) -> Transform
+
+  
+
+   Creates a transform that represents a reflection across the given plane.
+
+  
+
+   plane: The plane.
+
    Returns: The new transform.
   """
   pass
  @staticmethod
  def CreateRotation(axis,angle):
   """
-  CreateRotation(axis: XYZ,angle: float) -> Transform
-  
-   Creates a transform that represents a rotation about the given axis at (0,0,
-    0).
-  
-  
-   axis: The rotation axis.
-   angle: The angle.
+  CreateRotation(axis: XYZ,angle: float) -> Transform
+
+  
+
+   Creates a transform that represents a rotation about the given axis at (0,0,
+
+    0).
+
+  
+
+  
+
+   axis: The rotation axis.
+
+   angle: The angle.
+
    Returns: The new transform.
   """
   pass
  @staticmethod
  def CreateRotationAtPoint(axis,angle,origin):
   """
-  CreateRotationAtPoint(axis: XYZ,angle: float,origin: XYZ) -> Transform
-  
-   Creates a transform that represents a rotation about the given axis at the 
-    specified point.
-  
-  
-   axis: The rotation axis.
-   angle: The angle.
-   origin: The origin point.
+  CreateRotationAtPoint(axis: XYZ,angle: float,origin: XYZ) -> Transform
+
+  
+
+   Creates a transform that represents a rotation about the given axis at the 
+
+    specified point.
+
+  
+
+  
+
+   axis: The rotation axis.
+
+   angle: The angle.
+
+   origin: The origin point.
+
    Returns: The new transform.
   """
   pass
  @staticmethod
  def CreateTranslation(vector):
   """
-  CreateTranslation(vector: XYZ) -> Transform
-  
-   Creates a transform that represents a translation via the specified vector.
-  
-   vector: The translation vector.
+  CreateTranslation(vector: XYZ) -> Transform
+
+  
+
+   Creates a transform that represents a translation via the specified vector.
+
+  
+
+   vector: The translation vector.
+
    Returns: The new transform.
   """
   pass
@@ -72,33 +108,50 @@ class Transform(APIObject,IDisposable):
   pass
  def Multiply(self,right):
   """
-  Multiply(self: Transform,right: Transform) -> Transform
-  
-   Multiplies this transformation by the specified transformation and returns the 
-    result.
-  
-  
-   right: The specified transformation.
+  Multiply(self: Transform,right: Transform) -> Transform
+
+  
+
+   Multiplies this transformation by the specified transformation and returns the 
+
+    result.
+
+  
+
+  
+
+   right: The specified transformation.
+
    Returns: The transformation equal to the composition of the two transformations.
   """
   pass
  def OfPoint(self,point):
   """
-  OfPoint(self: Transform,point: XYZ) -> XYZ
-  
-   Applies the transformation to the point and returns the result.
-  
-   point: The point to transform.
+  OfPoint(self: Transform,point: XYZ) -> XYZ
+
+  
+
+   Applies the transformation to the point and returns the result.
+
+  
+
+   point: The point to transform.
+
    Returns: The transformed point.
   """
   pass
  def OfVector(self,vec):
   """
-  OfVector(self: Transform,vec: XYZ) -> XYZ
-  
-   Applies the transform to the vector
-  
-   vec: The vector to be transformed
+  OfVector(self: Transform,vec: XYZ) -> XYZ
+
+  
+
+   Applies the transform to the vector
+
+  
+
+   vec: The vector to be transformed
+
    Returns: The new vector after transform
   """
   pass
@@ -110,23 +163,35 @@ class Transform(APIObject,IDisposable):
   pass
  def ScaleBasis(self,scale):
   """
-  ScaleBasis(self: Transform,scale: float) -> Transform
-  
-   Scales the basis vectors of this transformation and returns the result.
-  
-   scale: The scale value.
+  ScaleBasis(self: Transform,scale: float) -> Transform
+
+  
+
+   Scales the basis vectors of this transformation and returns the result.
+
+  
+
+   scale: The scale value.
+
    Returns: The transformation equal to the composition of the two transformations.
   """
   pass
  def ScaleBasisAndOrigin(self,scale):
   """
-  ScaleBasisAndOrigin(self: Transform,scale: float) -> Transform
-  
-   Scales the basis vectors and the origin of this transformation and returns the 
-    result.
-  
-  
-   scale: The scale value.
+  ScaleBasisAndOrigin(self: Transform,scale: float) -> Transform
+
+  
+
+   Scales the basis vectors and the origin of this transformation and returns the 
+
+    result.
+
+  
+
+  
+
+   scale: The scale value.
+
    Returns: The transformation equal to the composition of the two transformations.
   """
   pass
@@ -148,94 +213,148 @@ class Transform(APIObject,IDisposable):
   pass
  def __rmul__(self,*args):
   """
-  __rmul__(left: Transform,right: Transform) -> Transform
-  
-   Multiplies the two specified transforms.
-  
-   left: The first transformation.
-   right: The second transformation.
+  __rmul__(left: Transform,right: Transform) -> Transform
+
+  
+
+   Multiplies the two specified transforms.
+
+  
+
+   left: The first transformation.
+
+   right: The second transformation.
+
    Returns: The transformation equal to the composition of the two transformations.
   """
   pass
  BasisX=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The basis of the X axis of this transformation.
-
-Get: BasisX(self: Transform) -> XYZ
-
-Set: BasisX(self: Transform)=value
+ """The basis of the X axis of this transformation.
+
+
+
+Get: BasisX(self: Transform) -> XYZ
+
+
+
+Set: BasisX(self: Transform)=value
+
 """
 
  BasisY=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The basis of the Y axis of this transformation.
-
-Get: BasisY(self: Transform) -> XYZ
-
-Set: BasisY(self: Transform)=value
+ """The basis of the Y axis of this transformation.
+
+
+
+Get: BasisY(self: Transform) -> XYZ
+
+
+
+Set: BasisY(self: Transform)=value
+
 """
 
  BasisZ=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The basis of the Z axis of this transformation.
-
-Get: BasisZ(self: Transform) -> XYZ
-
-Set: BasisZ(self: Transform)=value
+ """The basis of the Z axis of this transformation.
+
+
+
+Get: BasisZ(self: Transform) -> XYZ
+
+
+
+Set: BasisZ(self: Transform)=value
+
 """
 
  Determinant=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The determinant of this transformation.
-
-Get: Determinant(self: Transform) -> float
-
+ """The determinant of this transformation.
+
+
+
+Get: Determinant(self: Transform) -> float
+
+
+
 """
 
  HasReflection=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The boolean value that indicates whether this transformation produces reflection.
-
-Get: HasReflection(self: Transform) -> bool
-
+ """The boolean value that indicates whether this transformation produces reflection.
+
+
+
+Get: HasReflection(self: Transform) -> bool
+
+
+
 """
 
  Inverse=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The inverse transformation of this transformation.
-
-Get: Inverse(self: Transform) -> Transform
-
+ """The inverse transformation of this transformation.
+
+
+
+Get: Inverse(self: Transform) -> Transform
+
+
+
 """
 
  IsConformal=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The boolean value that indicates whether this transformation is conformal.
-
-Get: IsConformal(self: Transform) -> bool
-
+ """The boolean value that indicates whether this transformation is conformal.
+
+
+
+Get: IsConformal(self: Transform) -> bool
+
+
+
 """
 
  IsIdentity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The boolean value that indicates whether this transformation is an identity.
-
-Get: IsIdentity(self: Transform) -> bool
-
+ """The boolean value that indicates whether this transformation is an identity.
+
+
+
+Get: IsIdentity(self: Transform) -> bool
+
+
+
 """
 
  IsTranslation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The boolean value that indicates whether this transformation is a translation.
-
-Get: IsTranslation(self: Transform) -> bool
-
+ """The boolean value that indicates whether this transformation is a translation.
+
+
+
+Get: IsTranslation(self: Transform) -> bool
+
+
+
 """
 
  Origin=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Defines the origin of the old coordinate system in the new coordinate system.
-
-Get: Origin(self: Transform) -> XYZ
-
-Set: Origin(self: Transform)=value
+ """Defines the origin of the old coordinate system in the new coordinate system.
+
+
+
+Get: Origin(self: Transform) -> XYZ
+
+
+
+Set: Origin(self: Transform)=value
+
 """
 
  Scale=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The real number that represents the scale of the transformation.
-
-Get: Scale(self: Transform) -> float
-
+ """The real number that represents the scale of the transformation.
+
+
+
+Get: Scale(self: Transform) -> float
+
+
+
 """
 
 

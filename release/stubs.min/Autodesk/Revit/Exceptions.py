@@ -15,10 +15,14 @@ class ApplicationException(Exception,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: ApplicationException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: ApplicationException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -37,10 +41,14 @@ class ApplicationException(Exception,ISerializable,_Exception):
  def __str__(self,*args):
   pass
  FunctionId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The information of the function throwing the exception.
-
-Get: FunctionId(self: ApplicationException) -> FunctionId
-
+ """The information of the function throwing the exception.
+
+
+
+Get: FunctionId(self: ApplicationException) -> FunctionId
+
+
+
 """
 
 
@@ -52,10 +60,14 @@ class ArgumentException(ApplicationException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: ArgumentException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: ArgumentException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -74,17 +86,25 @@ class ArgumentException(ApplicationException,ISerializable,_Exception):
  def __str__(self,*args):
   pass
  Message=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the error message and the parameter name,or only the error message if no parameter name is set.
-
-Get: Message(self: ArgumentException) -> str
-
+ """Gets the error message and the parameter name,or only the error message if no parameter name is set.
+
+
+
+Get: Message(self: ArgumentException) -> str
+
+
+
 """
 
  ParamName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the name of the parameter that causes this exception.
-
-Get: ParamName(self: ArgumentException) -> str
-
+ """Gets the name of the parameter that causes this exception.
+
+
+
+Get: ParamName(self: ArgumentException) -> str
+
+
+
 """
 
 
@@ -96,10 +116,14 @@ class ArgumentNullException(ArgumentException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: ArgumentNullException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: ArgumentNullException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -125,10 +149,14 @@ class ArgumentOutOfRangeException(ArgumentException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: ArgumentOutOfRangeException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: ArgumentOutOfRangeException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -154,10 +182,14 @@ class ArgumentsInconsistentException(ArgumentException,ISerializable,_Exception)
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: ArgumentsInconsistentException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: ArgumentsInconsistentException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -183,10 +215,14 @@ class InvalidOperationException(ApplicationException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: InvalidOperationException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: InvalidOperationException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -212,10 +248,14 @@ class AutoJoinFailedException(InvalidOperationException,ISerializable,_Exception
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: AutoJoinFailedException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: AutoJoinFailedException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -236,8 +276,10 @@ class AutoJoinFailedException(InvalidOperationException,ISerializable,_Exception
 
 class BackgroundTaskCancelledException(ApplicationException,ISerializable,_Exception):
  """
- The exception thrown when Revit cancels a background operation. Third-party 
- developers are not expected to catch and handle this exception. Instead,if allowed
+ The exception thrown when Revit cancels a background operation. Third-party 
+
+ developers are not expected to catch and handle this exception. Instead,if allowed
+
  to propagate back to Revit code,it will be handled by Revit.
  """
  def add_SerializeObjectState(self,*args):
@@ -245,10 +287,14 @@ class BackgroundTaskCancelledException(ApplicationException,ISerializable,_Excep
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: BackgroundTaskCancelledException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: BackgroundTaskCancelledException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -269,7 +315,8 @@ class BackgroundTaskCancelledException(ApplicationException,ISerializable,_Excep
 
 class CannotOpenBothCentralAndLocalException(InvalidOperationException,ISerializable,_Exception):
  """
- The exception thrown when both a central model
+ The exception thrown when both a central model
+
  and also a local file for the same central model are opened in the same session.
  """
  def add_SerializeObjectState(self,*args):
@@ -277,10 +324,14 @@ class CannotOpenBothCentralAndLocalException(InvalidOperationException,ISerializ
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: CannotOpenBothCentralAndLocalException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: CannotOpenBothCentralAndLocalException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -301,8 +352,10 @@ class CannotOpenBothCentralAndLocalException(InvalidOperationException,ISerializ
 
 class CentralModelException(ApplicationException,ISerializable,_Exception):
  """
- The base class for exceptions that are 
- common to both file-based and server-based central models or 
+ The base class for exceptions that are 
+
+ common to both file-based and server-based central models or 
+
  specific to just file-based central models.
  """
  def add_SerializeObjectState(self,*args):
@@ -310,10 +363,14 @@ class CentralModelException(ApplicationException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: CentralModelException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: CentralModelException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -339,10 +396,14 @@ class CentralFileCommunicationException(CentralModelException,ISerializable,_Exc
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: CentralFileCommunicationException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: CentralFileCommunicationException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -363,7 +424,8 @@ class CentralFileCommunicationException(CentralModelException,ISerializable,_Exc
 
 class CentralModelAccessDeniedException(CentralModelException,ISerializable,_Exception):
  """
- The exceptions thrown when a central model can be reached but 
+ The exceptions thrown when a central model can be reached but 
+
  access is denied due to a lack of access privileges.
  """
  def add_SerializeObjectState(self,*args):
@@ -371,10 +433,14 @@ class CentralModelAccessDeniedException(CentralModelException,ISerializable,_Exc
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: CentralModelAccessDeniedException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: CentralModelAccessDeniedException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -400,10 +466,14 @@ class CentralModelAlreadyExistsException(CentralModelException,ISerializable,_Ex
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: CentralModelAlreadyExistsException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: CentralModelAlreadyExistsException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -424,7 +494,8 @@ class CentralModelAlreadyExistsException(CentralModelException,ISerializable,_Ex
 
 class CentralModelContentionException(CentralModelException,ISerializable,_Exception):
  """
- The exception thrown when a central model is busy (locked) 
+ The exception thrown when a central model is busy (locked) 
+
  and the operation is canceled.
  """
  def add_SerializeObjectState(self,*args):
@@ -432,10 +503,14 @@ class CentralModelContentionException(CentralModelException,ISerializable,_Excep
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: CentralModelContentionException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: CentralModelContentionException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -461,10 +536,14 @@ class CorruptModelException(ApplicationException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: CorruptModelException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: CorruptModelException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -490,10 +569,14 @@ class IOException(ApplicationException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: IOException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: IOException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -519,10 +602,14 @@ class DirectoryNotFoundException(IOException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: DirectoryNotFoundException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: DirectoryNotFoundException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -543,8 +630,10 @@ class DirectoryNotFoundException(IOException,ISerializable,_Exception):
 
 class DisabledDisciplineException(InvalidOperationException,ISerializable,_Exception):
  """
- The exception that is thrown when the function cannot execute because
- a discipline is disabled. The exception specifies which discipline(s) would let 
+ The exception that is thrown when the function cannot execute because
+
+ a discipline is disabled. The exception specifies which discipline(s) would let 
+
  the operation succeed.
  """
  def add_SerializeObjectState(self,*args):
@@ -552,10 +641,14 @@ class DisabledDisciplineException(InvalidOperationException,ISerializable,_Excep
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: DisabledDisciplineException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: DisabledDisciplineException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -581,10 +674,14 @@ class ExternalApplicationException(ApplicationException,ISerializable,_Exception
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: ExternalApplicationException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: ExternalApplicationException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -610,10 +707,14 @@ class FamilyContextException(InvalidOperationException,ISerializable,_Exception)
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: FamilyContextException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: FamilyContextException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -639,10 +740,14 @@ class FileAccessException(IOException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: FileAccessException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: FileAccessException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -668,10 +773,14 @@ class FileArgumentAlreadyExistsException(ArgumentException,ISerializable,_Except
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: FileArgumentAlreadyExistsException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: FileArgumentAlreadyExistsException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -697,10 +806,14 @@ class FileArgumentNotFoundException(ArgumentException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: FileArgumentNotFoundException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: FileArgumentNotFoundException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -726,10 +839,14 @@ class FileNotFoundException(IOException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: FileNotFoundException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: FileNotFoundException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -755,10 +872,14 @@ class ForbiddenForDynamicUpdateException(InvalidOperationException,ISerializable
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: ForbiddenForDynamicUpdateException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: ForbiddenForDynamicUpdateException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -781,10 +902,14 @@ class FunctionId(object,ISerializable):
  """ The information of a function throwing an exception. """
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: FunctionId,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: FunctionId,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -801,24 +926,36 @@ class FunctionId(object,ISerializable):
   """ __repr__(self: object) -> str """
   pass
  File=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The name of the file including the function throwing an exception.
-
-Get: File(self: FunctionId) -> str
-
+ """The name of the file including the function throwing an exception.
+
+
+
+Get: File(self: FunctionId) -> str
+
+
+
 """
 
  Function=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The name of the function throwing an exception.
-
-Get: Function(self: FunctionId) -> str
-
+ """The name of the function throwing an exception.
+
+
+
+Get: Function(self: FunctionId) -> str
+
+
+
 """
 
  Line=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The line number of the function throwing an exception.
-
-Get: Line(self: FunctionId) -> int
-
+ """The line number of the function throwing an exception.
+
+
+
+Get: Line(self: FunctionId) -> int
+
+
+
 """
 
 
@@ -830,10 +967,14 @@ class InapplicableDataException(InvalidOperationException,ISerializable,_Excepti
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: InapplicableDataException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: InapplicableDataException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -854,7 +995,8 @@ class InapplicableDataException(InvalidOperationException,ISerializable,_Excepti
 
 class InsufficientResourcesException(InvalidOperationException,ISerializable,_Exception):
  """
- The exception that is thrown when the OS runs out of resources,
+ The exception that is thrown when the OS runs out of resources,
+
  e.g. memory,disk space,or USER or GDI objects.
  """
  def add_SerializeObjectState(self,*args):
@@ -862,10 +1004,14 @@ class InsufficientResourcesException(InvalidOperationException,ISerializable,_Ex
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: InsufficientResourcesException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: InsufficientResourcesException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -891,10 +1037,14 @@ class InternalException(ApplicationException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: InternalException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: InternalException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -920,10 +1070,14 @@ class InvalidDataStreamException(IOException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: InvalidDataStreamException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: InvalidDataStreamException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -949,10 +1103,14 @@ class InvalidObjectException(InvalidOperationException,ISerializable,_Exception)
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: InvalidObjectException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: InvalidObjectException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -973,7 +1131,8 @@ class InvalidObjectException(InvalidOperationException,ISerializable,_Exception)
 
 class InvalidPathArgumentException(ArgumentException,ISerializable,_Exception):
  """
- The exception that is thrown when a method received a pathname as an argument,but the pathname is 
+ The exception that is thrown when a method received a pathname as an argument,but the pathname is 
+
  illegal: too long,invalid characters,etc.
  """
  def add_SerializeObjectState(self,*args):
@@ -981,10 +1140,14 @@ class InvalidPathArgumentException(ArgumentException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: InvalidPathArgumentException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: InvalidPathArgumentException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -1010,10 +1173,14 @@ class ModificationForbiddenException(InvalidOperationException,ISerializable,_Ex
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: ModificationForbiddenException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: ModificationForbiddenException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -1039,10 +1206,14 @@ class ModificationOutsideTransactionException(InvalidOperationException,ISeriali
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: ModificationOutsideTransactionException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: ModificationOutsideTransactionException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -1063,7 +1234,8 @@ class ModificationOutsideTransactionException(InvalidOperationException,ISeriali
 
 class NotTransmittedModelException(InvalidOperationException,ISerializable,_Exception):
  """
- The exception thrown when OpenOptions were provided to deal with
+ The exception thrown when OpenOptions were provided to deal with
+
  a transmitted model,but the model is not transmitted.
  """
  def add_SerializeObjectState(self,*args):
@@ -1071,10 +1243,14 @@ class NotTransmittedModelException(InvalidOperationException,ISerializable,_Exce
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: NotTransmittedModelException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: NotTransmittedModelException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -1100,10 +1276,14 @@ class ObjectAccessException(InvalidOperationException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: ObjectAccessException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: ObjectAccessException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -1129,10 +1309,14 @@ class OperationCanceledException(ApplicationException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: OperationCanceledException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: OperationCanceledException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -1158,10 +1342,14 @@ class OptionalFunctionalityNotAvailableException(InvalidOperationException,ISeri
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: OptionalFunctionalityNotAvailableException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: OptionalFunctionalityNotAvailableException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -1182,7 +1370,8 @@ class OptionalFunctionalityNotAvailableException(InvalidOperationException,ISeri
 
 class OutdatedDirectlyOpenedCentralException(CentralModelException,ISerializable,_Exception):
  """
- The exception thrown when a central model is opened directly and its copy in the session is 
+ The exception thrown when a central model is opened directly and its copy in the session is 
+
  outdated.  If the operation is supported for local files,first resave as local,and try again.
  """
  def add_SerializeObjectState(self,*args):
@@ -1190,10 +1379,14 @@ class OutdatedDirectlyOpenedCentralException(CentralModelException,ISerializable
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: OutdatedDirectlyOpenedCentralException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: OutdatedDirectlyOpenedCentralException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -1219,10 +1412,14 @@ class RegenerationFailedException(InvalidOperationException,ISerializable,_Excep
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: RegenerationFailedException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: RegenerationFailedException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -1248,10 +1445,14 @@ class RevitServerException(ApplicationException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: RevitServerException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: RevitServerException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -1277,10 +1478,14 @@ class RevitServerCollaborationNotAvailableException(RevitServerException,ISerial
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: RevitServerCollaborationNotAvailableException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: RevitServerCollaborationNotAvailableException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -1306,10 +1511,14 @@ class RevitServerCommunicationException(RevitServerException,ISerializable,_Exce
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: RevitServerCommunicationException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: RevitServerCommunicationException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -1335,10 +1544,14 @@ class RevitServerInternalException(RevitServerException,ISerializable,_Exception
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: RevitServerInternalException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: RevitServerInternalException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -1364,10 +1577,14 @@ class RevitServerUnauthenticatedUserException(RevitServerException,ISerializable
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: RevitServerUnauthenticatedUserException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: RevitServerUnauthenticatedUserException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -1393,10 +1610,14 @@ class RevitServerUnauthorizedException(RevitServerException,ISerializable,_Excep
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: RevitServerUnauthorizedException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: RevitServerUnauthorizedException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -1422,10 +1643,14 @@ class TransientElementCreationException(InvalidOperationException,ISerializable,
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: TransientElementCreationException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: TransientElementCreationException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -1446,7 +1671,8 @@ class TransientElementCreationException(InvalidOperationException,ISerializable,
 
 class TransmittedModelException(InvalidOperationException,ISerializable,_Exception):
  """
- The exception thrown when model was transmitted (sent by eTransmit)
+ The exception thrown when model was transmitted (sent by eTransmit)
+
  and insufficient OpenOptions were provided to handle its transmitted flag.
  """
  def add_SerializeObjectState(self,*args):
@@ -1454,10 +1680,14 @@ class TransmittedModelException(InvalidOperationException,ISerializable,_Excepti
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: TransmittedModelException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: TransmittedModelException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass
@@ -1478,7 +1708,8 @@ class TransmittedModelException(InvalidOperationException,ISerializable,_Excepti
 
 class WrongUserException(InvalidOperationException,ISerializable,_Exception):
  """
- The exception thrown when a local model is manipulated under 
+ The exception thrown when a local model is manipulated under 
+
  a different username than it was created with.
  """
  def add_SerializeObjectState(self,*args):
@@ -1486,10 +1717,14 @@ class WrongUserException(InvalidOperationException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: WrongUserException,info: SerializationInfo,context: StreamingContext)
-   Retrieves data needed to serialize the target object.
-  
-   info: Data needed to serialize or deserialize the object.
+  GetObjectData(self: WrongUserException,info: SerializationInfo,context: StreamingContext)
+
+   Retrieves data needed to serialize the target object.
+
+  
+
+   info: Data needed to serialize or deserialize the object.
+
    context: The destination of the serialized stream.
   """
   pass

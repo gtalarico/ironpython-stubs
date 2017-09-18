@@ -1,7 +1,9 @@
 class AnalyzesAsType(Enum,IComparable,IFormattable,IConvertible):
  """
- This enum class is used for the BuiltInParameter STRUCTURAL_ANALYZES_AS.
- 
+ This enum class is used for the BuiltInParameter STRUCTURAL_ANALYZES_AS.
+
+ 
+
  enum AnalyzesAsType,values: AA_Gravity (1),AA_GravityLateral (8),AA_Hanger (0),AA_Lateral (2),AA_Mat (4),AA_Not_For_Analysis (6),AA_SlabOneWay (3),AA_SlabOnGrade (5),AA_SlabTwoWay (7)
  """
  def __eq__(self,*args):

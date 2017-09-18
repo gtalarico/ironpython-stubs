@@ -1,7 +1,9 @@
 class ColumnAttachmentJustification(Enum,IComparable,IFormattable,IConvertible):
  """
- Control the column extent in cases where the target is not a uniform height.
- 
+ Control the column extent in cases where the target is not a uniform height.
+
+ 
+
  enum ColumnAttachmentJustification,values: Maximum (2),Midpoint (1),Minimum (0),Tangent (3)
  """
  def __eq__(self,*args):

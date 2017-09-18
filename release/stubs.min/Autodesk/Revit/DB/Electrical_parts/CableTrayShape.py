@@ -1,7 +1,9 @@
 class CableTrayShape(Enum,IComparable,IFormattable,IConvertible):
  """
- Enum of cable tray shape
- 
+ Enum of cable tray shape
+
+ 
+
  enum CableTrayShape,values: Channel (1),Invalid (0),Ladder (2)
  """
  def __eq__(self,*args):

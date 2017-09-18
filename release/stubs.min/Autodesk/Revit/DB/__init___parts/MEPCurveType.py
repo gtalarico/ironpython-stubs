@@ -22,82 +22,131 @@ class MEPCurveType(HostObjAttributes,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Cross=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The default cross fitting of the MEP curve type.
-
-Get: Cross(self: MEPCurveType) -> FamilySymbol
-
-Set: Cross(self: MEPCurveType)=value
+ """The default cross fitting of the MEP curve type.
+
+
+
+Get: Cross(self: MEPCurveType) -> FamilySymbol
+
+
+
+Set: Cross(self: MEPCurveType)=value
+
 """
 
  Elbow=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The default elbow fitting of the MEP curve type.
-
-Get: Elbow(self: MEPCurveType) -> FamilySymbol
-
-Set: Elbow(self: MEPCurveType)=value
+ """The default elbow fitting of the MEP curve type.
+
+
+
+Get: Elbow(self: MEPCurveType) -> FamilySymbol
+
+
+
+Set: Elbow(self: MEPCurveType)=value
+
 """
 
  MultiShapeTransition=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The default multi shape transition fitting of the MEP curve type.
-
-Get: MultiShapeTransition(self: MEPCurveType) -> FamilySymbol
-
-Set: MultiShapeTransition(self: MEPCurveType)=value
+ """The default multi shape transition fitting of the MEP curve type.
+
+
+
+Get: MultiShapeTransition(self: MEPCurveType) -> FamilySymbol
+
+
+
+Set: MultiShapeTransition(self: MEPCurveType)=value
+
 """
 
  PreferredJunctionType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The preferred junction type of the MEP curve type.
-
-Get: PreferredJunctionType(self: MEPCurveType) -> JunctionType
-
-Set: PreferredJunctionType(self: MEPCurveType)=value
+ """The preferred junction type of the MEP curve type.
+
+
+
+Get: PreferredJunctionType(self: MEPCurveType) -> JunctionType
+
+
+
+Set: PreferredJunctionType(self: MEPCurveType)=value
+
 """
 
  Roughness=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The roughness of the MEP curve type.  For PipeTypes,please use Segment::Roughness
-
-Get: Roughness(self: MEPCurveType) -> float
-
-Set: Roughness(self: MEPCurveType)=value
+ """The roughness of the MEP curve type.  For PipeTypes,please use Segment::Roughness
+
+
+
+Get: Roughness(self: MEPCurveType) -> float
+
+
+
+Set: Roughness(self: MEPCurveType)=value
+
 """
 
  RoutingPreferenceManager=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The RoutingPreferenceManager for the MEPCurveType
-
-Get: RoutingPreferenceManager(self: MEPCurveType) -> RoutingPreferenceManager
-
+ """The RoutingPreferenceManager for the MEPCurveType
+
+
+
+Get: RoutingPreferenceManager(self: MEPCurveType) -> RoutingPreferenceManager
+
+
+
 """
 
  Tap=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The default tap fitting of the MEP curve type.
-
-Get: Tap(self: MEPCurveType) -> FamilySymbol
-
-Set: Tap(self: MEPCurveType)=value
+ """The default tap fitting of the MEP curve type.
+
+
+
+Get: Tap(self: MEPCurveType) -> FamilySymbol
+
+
+
+Set: Tap(self: MEPCurveType)=value
+
 """
 
  Tee=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The default tee fitting of the MEP curve type.
-
-Get: Tee(self: MEPCurveType) -> FamilySymbol
-
-Set: Tee(self: MEPCurveType)=value
+ """The default tee fitting of the MEP curve type.
+
+
+
+Get: Tee(self: MEPCurveType) -> FamilySymbol
+
+
+
+Set: Tee(self: MEPCurveType)=value
+
 """
 
  Transition=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The default transition fitting of the MEP curve type.
-
-Get: Transition(self: MEPCurveType) -> FamilySymbol
-
-Set: Transition(self: MEPCurveType)=value
+ """The default transition fitting of the MEP curve type.
+
+
+
+Get: Transition(self: MEPCurveType) -> FamilySymbol
+
+
+
+Set: Transition(self: MEPCurveType)=value
+
 """
 
  Union=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The default union fitting of the MEP curve type.
-
-Get: Union(self: MEPCurveType) -> FamilySymbol
-
-Set: Union(self: MEPCurveType)=value
+ """The default union fitting of the MEP curve type.
+
+
+
+Get: Union(self: MEPCurveType) -> FamilySymbol
+
+
+
+Set: Union(self: MEPCurveType)=value
+
 """
 
 

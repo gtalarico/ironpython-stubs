@@ -1,17 +1,24 @@
 class ElectricalLoadClassification(Element,IDisposable):
  """
- The ElectricalLoadClassification class represents a serialized version of an instance of
+ The ElectricalLoadClassification class represents a serialized version of an instance of
+
     load classification.
  """
  @staticmethod
  def Create(ADoc,strName):
   """
-  Create(ADoc: Document,strName: str) -> ElectricalLoadClassification
-  
-   Creates a new instance of load classification and adds it to the document.
-  
-   ADoc: The document where the element will be created and added.
-   strName: The name of the electrical load classification to be created.
+  Create(ADoc: Document,strName: str) -> ElectricalLoadClassification
+
+  
+
+   Creates a new instance of load classification and adds it to the document.
+
+  
+
+   ADoc: The document where the element will be created and added.
+
+   strName: The name of the electrical load classification to be created.
+
    Returns: The newly created load classification element.
   """
   pass
@@ -37,74 +44,118 @@ class ElectricalLoadClassification(Element,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  ActualElectricalLoadLabel=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The name template for the actual load parameter on the load classification.
-
-Get: ActualElectricalLoadLabel(self: ElectricalLoadClassification) -> str
-
-Set: ActualElectricalLoadLabel(self: ElectricalLoadClassification)=value
+ """The name template for the actual load parameter on the load classification.
+
+
+
+Get: ActualElectricalLoadLabel(self: ElectricalLoadClassification) -> str
+
+
+
+Set: ActualElectricalLoadLabel(self: ElectricalLoadClassification)=value
+
 """
 
  DemandFactorId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The demand factor definition this load classification element uses.
-
-Get: DemandFactorId(self: ElectricalLoadClassification) -> ElementId
-
-Set: DemandFactorId(self: ElectricalLoadClassification)=value
+ """The demand factor definition this load classification element uses.
+
+
+
+Get: DemandFactorId(self: ElectricalLoadClassification) -> ElementId
+
+
+
+Set: DemandFactorId(self: ElectricalLoadClassification)=value
+
 """
 
  LoadSummaryDemandFactorLabel=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The name template for the demand factor parameter of the load classification.
-
-Get: LoadSummaryDemandFactorLabel(self: ElectricalLoadClassification) -> str
-
-Set: LoadSummaryDemandFactorLabel(self: ElectricalLoadClassification)=value
+ """The name template for the demand factor parameter of the load classification.
+
+
+
+Get: LoadSummaryDemandFactorLabel(self: ElectricalLoadClassification) -> str
+
+
+
+Set: LoadSummaryDemandFactorLabel(self: ElectricalLoadClassification)=value
+
 """
 
  Motor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates if this load classification is to be used for motors.
-
-Get: Motor(self: ElectricalLoadClassification) -> bool
-
+ """Indicates if this load classification is to be used for motors.
+
+
+
+Get: Motor(self: ElectricalLoadClassification) -> bool
+
+
+
 """
 
  PanelConnectedCurrentLabel=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The name template for the connected current parameter on the load classification.
-
-Get: PanelConnectedCurrentLabel(self: ElectricalLoadClassification) -> str
-
-Set: PanelConnectedCurrentLabel(self: ElectricalLoadClassification)=value
+ """The name template for the connected current parameter on the load classification.
+
+
+
+Get: PanelConnectedCurrentLabel(self: ElectricalLoadClassification) -> str
+
+
+
+Set: PanelConnectedCurrentLabel(self: ElectricalLoadClassification)=value
+
 """
 
  PanelConnectedLabel=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The name template for the connected load parameter of the load classification.
-
-Get: PanelConnectedLabel(self: ElectricalLoadClassification) -> str
-
-Set: PanelConnectedLabel(self: ElectricalLoadClassification)=value
+ """The name template for the connected load parameter of the load classification.
+
+
+
+Get: PanelConnectedLabel(self: ElectricalLoadClassification) -> str
+
+
+
+Set: PanelConnectedLabel(self: ElectricalLoadClassification)=value
+
 """
 
  PanelEstimatedCurrentLabel=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The name template for the estimated current parameter on the load classification.
-
-Get: PanelEstimatedCurrentLabel(self: ElectricalLoadClassification) -> str
-
-Set: PanelEstimatedCurrentLabel(self: ElectricalLoadClassification)=value
+ """The name template for the estimated current parameter on the load classification.
+
+
+
+Get: PanelEstimatedCurrentLabel(self: ElectricalLoadClassification) -> str
+
+
+
+Set: PanelEstimatedCurrentLabel(self: ElectricalLoadClassification)=value
+
 """
 
  PanelEstimatedLabel=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The name template for the estimated demand parameter on the load classification.
-
-Get: PanelEstimatedLabel(self: ElectricalLoadClassification) -> str
-
-Set: PanelEstimatedLabel(self: ElectricalLoadClassification)=value
+ """The name template for the estimated demand parameter on the load classification.
+
+
+
+Get: PanelEstimatedLabel(self: ElectricalLoadClassification) -> str
+
+
+
+Set: PanelEstimatedLabel(self: ElectricalLoadClassification)=value
+
 """
 
  SpaceLoadClass=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The electrical load class associated with a space.
-
-Get: SpaceLoadClass(self: ElectricalLoadClassification) -> ElectricalLoadClassificationSpace
-
-Set: SpaceLoadClass(self: ElectricalLoadClassification)=value
+ """The electrical load class associated with a space.
+
+
+
+Get: SpaceLoadClass(self: ElectricalLoadClassification) -> ElectricalLoadClassificationSpace
+
+
+
+Set: SpaceLoadClass(self: ElectricalLoadClassification)=value
+
 """
 
 

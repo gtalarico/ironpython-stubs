@@ -5,9 +5,12 @@ class LinkNode(GroupNode,IDisposable):
   pass
  def GetDocument(self):
   """
-  GetDocument(self: LinkNode) -> Document
-  
-   Returns the document associated with the link.
+  GetDocument(self: LinkNode) -> Document
+
+  
+
+   Returns the document associated with the link.
+
    Returns: Instance of a Document
   """
   pass

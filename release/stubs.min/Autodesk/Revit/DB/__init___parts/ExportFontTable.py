@@ -1,32 +1,45 @@
 class ExportFontTable(object,IEnumerable[KeyValuePair[ExportFontKey,ExportFontInfo]],IEnumerable,IDisposable):
  """
- A table supporting a mapping of Revit font names to font names that will be set
-    in the target export format.
- 
+ A table supporting a mapping of Revit font names to font names that will be set
+
+    in the target export format.
+
+ 
+
  ExportFontTable()
  """
  def Add(self,exportFontKey,exportFontInfo):
   """
-  Add(self: ExportFontTable,exportFontKey: ExportFontKey,exportFontInfo: ExportFontInfo)
-   Inserts a (key,info) pair into Export font table.
-  
-   exportFontKey: The export font key to be added.
+  Add(self: ExportFontTable,exportFontKey: ExportFontKey,exportFontInfo: ExportFontInfo)
+
+   Inserts a (key,info) pair into Export font table.
+
+  
+
+   exportFontKey: The export font key to be added.
+
    exportFontInfo: The export font info to be added.
   """
   pass
  def Clear(self):
   """
-  Clear(self: ExportFontTable)
+  Clear(self: ExportFontTable)
+
    Removes all contents stored in the table.
   """
   pass
  def ContainsKey(self,exportfontKey):
   """
-  ContainsKey(self: ExportFontTable,exportfontKey: ExportFontKey) -> bool
-  
-   Checks whether a font key exists in the table.
-  
-   exportfontKey: The export font Key.
+  ContainsKey(self: ExportFontTable,exportfontKey: ExportFontKey) -> bool
+
+  
+
+   Checks whether a font key exists in the table.
+
+  
+
+   exportfontKey: The export font Key.
+
    Returns: True if the font key exists in the table.
   """
   pass
@@ -35,44 +48,62 @@ class ExportFontTable(object,IEnumerable[KeyValuePair[ExportFontKey,ExportFontIn
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: ExportFontTable) -> IEnumerator[KeyValuePair[ExportFontKey,ExportFontInfo]]
-  
-   Returns an enumerator that iterates through a collection.
+  GetEnumerator(self: ExportFontTable) -> IEnumerator[KeyValuePair[ExportFontKey,ExportFontInfo]]
+
+  
+
+   Returns an enumerator that iterates through a collection.
+
    Returns: An IEnumerator object that can be used to iterate through the collection.
   """
   pass
  def GetExportFontInfo(self,exportFontKey):
   """
-  GetExportFontInfo(self: ExportFontTable,exportFontKey: ExportFontKey) -> ExportFontInfo
-  
-   Gets a copy of the font info associated to the input font key.
-  
-   exportFontKey: The export font Key.
+  GetExportFontInfo(self: ExportFontTable,exportFontKey: ExportFontKey) -> ExportFontInfo
+
+  
+
+   Gets a copy of the font info associated to the input font key.
+
+  
+
+   exportFontKey: The export font Key.
+
    Returns: Returns the fontInfo for this key.
   """
   pass
  def GetFontTableIterator(self):
   """
-  GetFontTableIterator(self: ExportFontTable) -> ExportFontTableIterator
-  
-   Returns a FontTableIterator that iterates through the collection.
-   Returns: A FontTableIterator object that can be used to iterate through key-value pairs 
+  GetFontTableIterator(self: ExportFontTable) -> ExportFontTableIterator
+
+  
+
+   Returns a FontTableIterator that iterates through the collection.
+
+   Returns: A FontTableIterator object that can be used to iterate through key-value pairs 
+
     in the collection.
   """
   pass
  def GetKeys(self):
   """
-  GetKeys(self: ExportFontTable) -> IList[ExportFontKey]
-  
-   Returns a collection of the keys stored in this table.
+  GetKeys(self: ExportFontTable) -> IList[ExportFontKey]
+
+  
+
+   Returns a collection of the keys stored in this table.
+
    Returns: The collection of keys.
   """
   pass
  def GetValues(self):
   """
-  GetValues(self: ExportFontTable) -> IList[ExportFontInfo]
-  
-   Returns a collection of the values stored in this table.
+  GetValues(self: ExportFontTable) -> IList[ExportFontInfo]
+
+  
+
+   Returns a collection of the values stored in this table.
+
    Returns: The collection of values.
   """
   pass
@@ -81,9 +112,12 @@ class ExportFontTable(object,IEnumerable[KeyValuePair[ExportFontKey,ExportFontIn
   pass
  def Remove(self,exportFontKey):
   """
-  Remove(self: ExportFontTable,exportFontKey: ExportFontKey)
-   Removes the pair (key,info) by font key.
-  
+  Remove(self: ExportFontTable,exportFontKey: ExportFontKey)
+
+   Removes the pair (key,info) by font key.
+
+  
+
    exportFontKey: The export font key.
   """
   pass
@@ -115,17 +149,25 @@ class ExportFontTable(object,IEnumerable[KeyValuePair[ExportFontKey,ExportFontIn
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  Count=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Count of the items contained in the collection.
-
-Get: Count(self: ExportFontTable) -> int
-
+ """Count of the items contained in the collection.
+
+
+
+Get: Count(self: ExportFontTable) -> int
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ExportFontTable) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ExportFontTable) -> bool
+
+
+
 """
 
 

@@ -1,7 +1,9 @@
 class ElementOnPhaseStatus(Enum,IComparable,IFormattable,IConvertible):
  """
- The statuses that an element can have with respect to a given phase.
- 
+ The statuses that an element can have with respect to a given phase.
+
+ 
+
  enum ElementOnPhaseStatus,values: Demolished (3),Existing (2),Future (6),New (4),None (0),Past (1),Temporary (5)
  """
  def __eq__(self,*args):

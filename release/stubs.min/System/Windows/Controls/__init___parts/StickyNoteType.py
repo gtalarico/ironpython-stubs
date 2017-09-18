@@ -1,7 +1,9 @@
 class StickyNoteType(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies whether a System.Windows.Controls.StickyNoteControl accepts text or ink.
- 
+ Specifies whether a System.Windows.Controls.StickyNoteControl accepts text or ink.
+
+ 
+
  enum StickyNoteType,values: Ink (1),Text (0)
  """
  def __eq__(self,*args):

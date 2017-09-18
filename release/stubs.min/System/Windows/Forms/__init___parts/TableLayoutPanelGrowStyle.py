@@ -1,7 +1,9 @@
 class TableLayoutPanelGrowStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies how a System.Windows.Forms.TableLayoutPanel will gain additional rows or columns after its existing cells are full.
- 
+ Specifies how a System.Windows.Forms.TableLayoutPanel will gain additional rows or columns after its existing cells are full.
+
+ 
+
  enum TableLayoutPanelGrowStyle,values: AddColumns (2),AddRows (1),FixedSize (0)
  """
  def __eq__(self,*args):

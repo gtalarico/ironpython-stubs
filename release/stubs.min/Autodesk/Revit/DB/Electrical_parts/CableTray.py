@@ -3,22 +3,38 @@ class CableTray(CableTrayConduitBase,IDisposable):
  @staticmethod
  def Create(document,cabletrayType,startPoint,endPoint,levelId):
   """
-  Create(document: Document,cabletrayType: ElementId,startPoint: XYZ,endPoint: XYZ,levelId: ElementId) -> CableTray
-  
-   Creates a new instance of cable tray.
-  
-   document: The document.
-   cabletrayType: The cable tray type.  This must be a cable tray type accepted by 
-    isValidCableTrayType().
-     If the input cable tray type is InvalidElementId,
-    the default cable tray type from the document will be used.
-  
-   startPoint: The start point of the cable tray location line.
-   endPoint: The end point of the cable tray location line.
-   levelId: The element id of the level which this cable tray based.
-     If the input level 
-    id is invalidElementId=-1,the nearest level will be used.
-  
+  Create(document: Document,cabletrayType: ElementId,startPoint: XYZ,endPoint: XYZ,levelId: ElementId) -> CableTray
+
+  
+
+   Creates a new instance of cable tray.
+
+  
+
+   document: The document.
+
+   cabletrayType: The cable tray type.  This must be a cable tray type accepted by 
+
+    isValidCableTrayType().
+
+     If the input cable tray type is InvalidElementId,
+
+    the default cable tray type from the document will be used.
+
+  
+
+   startPoint: The start point of the cable tray location line.
+
+   endPoint: The end point of the cable tray location line.
+
+   levelId: The element id of the level which this cable tray based.
+
+     If the input level 
+
+    id is invalidElementId=-1,the nearest level will be used.
+
+  
+
    Returns: The newly created cable tray.
   """
   pass
@@ -30,31 +46,45 @@ class CableTray(CableTrayConduitBase,IDisposable):
   pass
  def GetShapeType(self):
   """
-  GetShapeType(self: CableTray) -> CableTrayShape
-  
-   Returns the shape type for the cable tray.
+  GetShapeType(self: CableTray) -> CableTrayShape
+
+  
+
+   Returns the shape type for the cable tray.
+
    Returns: The shape type.
   """
   pass
  @staticmethod
  def IsValidCableTrayType(document,cabletrayType):
   """
-  IsValidCableTrayType(document: Document,cabletrayType: ElementId) -> bool
-  
-   Identifies if a cable tray type is valid.
-  
-   document: The document.
-   cabletrayType: The cable tray type.
+  IsValidCableTrayType(document: Document,cabletrayType: ElementId) -> bool
+
+  
+
+   Identifies if a cable tray type is valid.
+
+  
+
+   document: The document.
+
+   cabletrayType: The cable tray type.
+
    Returns: True if the cable tray type is valid,false otherwise.
   """
   pass
  def IsValidRungSpace(self,rungSpace):
   """
-  IsValidRungSpace(self: CableTray,rungSpace: float) -> bool
-  
-   Identifies if the input rung space is valid.
-  
-   rungSpace: The rung space to check.
+  IsValidRungSpace(self: CableTray,rungSpace: float) -> bool
+
+  
+
+   Identifies if the input rung space is valid.
+
+  
+
+   rungSpace: The rung space to check.
+
    Returns: True if the value is acceptable,false otherwise.
   """
   pass
@@ -74,19 +104,29 @@ class CableTray(CableTrayConduitBase,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  CurveNormal=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The up-direction vector of the cable tray.
-
-Get: CurveNormal(self: CableTray) -> XYZ
-
-Set: CurveNormal(self: CableTray)=value
+ """The up-direction vector of the cable tray.
+
+
+
+Get: CurveNormal(self: CableTray) -> XYZ
+
+
+
+Set: CurveNormal(self: CableTray)=value
+
 """
 
  RungSpace=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Distance between two rungs for the ladder cable tray.
-
-Get: RungSpace(self: CableTray) -> float
-
-Set: RungSpace(self: CableTray)=value
+ """Distance between two rungs for the ladder cable tray.
+
+
+
+Get: RungSpace(self: CableTray) -> float
+
+
+
+Set: RungSpace(self: CableTray)=value
+
 """
 
 

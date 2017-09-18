@@ -2,9 +2,12 @@ class SlabEdge(HostedSweep,IDisposable):
  """ An object that represents a slab edge within the Autodesk Revit project. """
  def AddSegment(self,targetRef):
   """
-  AddSegment(self: SlabEdge,targetRef: Reference)
-   Add segments to the slab edge.
-  
+  AddSegment(self: SlabEdge,targetRef: Reference)
+
+   Add segments to the slab edge.
+
+  
+
    targetRef: Segment's reference on which want to be added.
   """
   pass
@@ -30,11 +33,16 @@ class SlabEdge(HostedSweep,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  SlabEdgeType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Retrieves/set an object that represents the type of the SlabEdge.
-
-Get: SlabEdgeType(self: SlabEdge) -> SlabEdgeType
-
-Set: SlabEdgeType(self: SlabEdge)=value
+ """Retrieves/set an object that represents the type of the SlabEdge.
+
+
+
+Get: SlabEdgeType(self: SlabEdge) -> SlabEdgeType
+
+
+
+Set: SlabEdgeType(self: SlabEdge)=value
+
 """
 
 

@@ -1,7 +1,9 @@
 class ExternalDBApplicationResult(Enum,IComparable,IFormattable,IConvertible):
  """
- Informs Autodesk Revit of the status of your external db application after execution.
- 
+ Informs Autodesk Revit of the status of your external db application after execution.
+
+ 
+
  enum ExternalDBApplicationResult,values: Failed (-1),Succeeded (0)
  """
  def __eq__(self,*args):

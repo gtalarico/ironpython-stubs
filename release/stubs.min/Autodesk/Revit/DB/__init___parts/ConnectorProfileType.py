@@ -1,7 +1,9 @@
 class ConnectorProfileType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all connector profile types
- 
+ An enumerated type listing all connector profile types
+
+ 
+
  enum ConnectorProfileType,values: Invalid (-1),Oval (2),Rectangular (1),Round (0)
  """
  def __eq__(self,*args):

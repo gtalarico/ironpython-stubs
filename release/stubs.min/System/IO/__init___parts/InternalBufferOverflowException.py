@@ -1,9 +1,13 @@
 class InternalBufferOverflowException(SystemException,ISerializable,_Exception):
  """
- The exception thrown when the internal buffer overflows.
- 
- InternalBufferOverflowException()
- InternalBufferOverflowException(message: str)
+ The exception thrown when the internal buffer overflows.
+
+ 
+
+ InternalBufferOverflowException()
+
+ InternalBufferOverflowException(message: str)
+
  InternalBufferOverflowException(message: str,inner: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,9 +22,12 @@ class InternalBufferOverflowException(SystemException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,inner=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,inner: Exception)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,inner: Exception)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

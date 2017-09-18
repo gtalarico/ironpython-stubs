@@ -2,7 +2,8 @@ class IRevertibleChangeTracking(IChangeTracking):
  """ Provides support for rolling back the changes """
  def RejectChanges(self):
   """
-  RejectChanges(self: IRevertibleChangeTracking)
+  RejectChanges(self: IRevertibleChangeTracking)
+
     """
   pass
  def __init__(self,*args):

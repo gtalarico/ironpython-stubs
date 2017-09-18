@@ -1,7 +1,9 @@
 class PowerFactorStateType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all the possible power factor state types for a connector object.
- 
+ An enumerated type listing all the possible power factor state types for a connector object.
+
+ 
+
  enum PowerFactorStateType,values: Lagging (1),Leading (0)
  """
  def __eq__(self,*args):

@@ -1,9 +1,13 @@
 class InvalidDataException(SystemException,ISerializable,_Exception):
  """
- The exception that is thrown when a data stream is in an invalid format.
- 
- InvalidDataException()
- InvalidDataException(message: str)
+ The exception that is thrown when a data stream is in an invalid format.
+
+ 
+
+ InvalidDataException()
+
+ InvalidDataException(message: str)
+
  InvalidDataException(message: str,innerException: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,8 +22,10 @@ class InvalidDataException(SystemException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,innerException=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
   __new__(cls: type,message: str,innerException: Exception)
   """
   pass

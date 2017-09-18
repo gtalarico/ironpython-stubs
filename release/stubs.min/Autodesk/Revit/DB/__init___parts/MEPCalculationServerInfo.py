@@ -1,9 +1,13 @@
 class MEPCalculationServerInfo(object,IDisposable):
  """
- a struct to hold the information about a MEP calucation servers
- 
- MEPCalculationServerInfo(other: MEPCalculationServerInfo)
- MEPCalculationServerInfo(server: IExternalServer)
+ a struct to hold the information about a MEP calucation servers
+
+ 
+
+ MEPCalculationServerInfo(other: MEPCalculationServerInfo)
+
+ MEPCalculationServerInfo(server: IExternalServer)
+
  MEPCalculationServerInfo()
  """
  def Dispose(self):
@@ -12,11 +16,16 @@ class MEPCalculationServerInfo(object,IDisposable):
  @staticmethod
  def GetMEPCalculationServerInfo(famInst):
   """
-  GetMEPCalculationServerInfo(famInst: FamilyInstance) -> MEPCalculationServerInfo
-  
-   Gets a MEPCalculationServerInfo by family instance.
-  
-   famInst: The family instance.
+  GetMEPCalculationServerInfo(famInst: FamilyInstance) -> MEPCalculationServerInfo
+
+  
+
+   Gets a MEPCalculationServerInfo by family instance.
+
+  
+
+   famInst: The family instance.
+
    Returns: The MEPCalculationServerInfo.
   """
   pass
@@ -35,8 +44,10 @@ class MEPCalculationServerInfo(object,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,other: MEPCalculationServerInfo)
-  __new__(cls: type,server: IExternalServer)
+  __new__(cls: type,other: MEPCalculationServerInfo)
+
+  __new__(cls: type,server: IExternalServer)
+
   __new__(cls: type)
   """
   pass
@@ -44,34 +55,53 @@ class MEPCalculationServerInfo(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The Description of the server.
-
-Get: Description(self: MEPCalculationServerInfo) -> str
-
-Set: Description(self: MEPCalculationServerInfo)=value
+ """The Description of the server.
+
+
+
+Get: Description(self: MEPCalculationServerInfo) -> str
+
+
+
+Set: Description(self: MEPCalculationServerInfo)=value
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: MEPCalculationServerInfo) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: MEPCalculationServerInfo) -> bool
+
+
+
 """
 
  ServerId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The Id of the server.
-
-Get: ServerId(self: MEPCalculationServerInfo) -> Guid
-
-Set: ServerId(self: MEPCalculationServerInfo)=value
+ """The Id of the server.
+
+
+
+Get: ServerId(self: MEPCalculationServerInfo) -> Guid
+
+
+
+Set: ServerId(self: MEPCalculationServerInfo)=value
+
 """
 
  ServerName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The Name of the server.
-
-Get: ServerName(self: MEPCalculationServerInfo) -> str
-
-Set: ServerName(self: MEPCalculationServerInfo)=value
+ """The Name of the server.
+
+
+
+Get: ServerName(self: MEPCalculationServerInfo) -> str
+
+
+
+Set: ServerName(self: MEPCalculationServerInfo)=value
+
 """
 
 

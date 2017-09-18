@@ -1,8 +1,11 @@
 class TessellatedShapeBuilderTarget(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes what TessellatedShapeBuilder
-    should generate,if possible.
- 
+ Describes what TessellatedShapeBuilder
+
+    should generate,if possible.
+
+ 
+
  enum TessellatedShapeBuilderTarget,values: AnyGeometry (1),Mesh (2),Solid (0)
  """
  def __eq__(self,*args):

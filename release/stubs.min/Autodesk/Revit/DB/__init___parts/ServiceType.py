@@ -1,8 +1,11 @@
 class ServiceType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all of the built-in parameter groups supported by Autodesk
- Revit.
- 
+ An enumerated type listing all of the built-in parameter groups supported by Autodesk
+
+ Revit.
+
+ 
+
  enum ServiceType,values: kActiveChilledBeams (22),kCentralHeatingConvectors (1),kCentralHeatingHotAir (3),kCentralHeatingRadiantFloor (2),kCentralHeatingRadiators (0),kConstantVolumeDualDuct (20),kConstantVolumeFixedOA (16),kConstantVolumeTerminalReheat (18),kConstantVolumeVariableOA (17),kFanCoilSystem (14),kForcedConvectionHeaterFlue (8),kForcedConvectionHeaterNoFlue (9),kInductionSystem (15),kMultizoneHotDeckColdDeck (19),kNoServiceType (-1),kOtherRoomHeater (4),kRadiantCooledCeilings (21),kRadiantHeaterFlue (5),kRadiantHeaterMultiburner (7),kRadiantHeaterNoFlue (6),kSplitSystemsWithMechanicalVentilation (26),kSplitSystemsWithMechanicalVentilationWithCooling (27),kSplitSystemsWithNaturalVentilation (25),kVariableRefrigerantFlow (24),kVAVDualDuct (11),kVAVIndoorPackagedCabinet (12),kVAVSingleDuct (10),kVAVTerminalReheat (13),kWaterLoopHeatPump (23)
  """
  def __eq__(self,*args):

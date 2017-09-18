@@ -1,7 +1,9 @@
 class SizeGripStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the style of the sizing grip on a System.Windows.Forms.Form.
- 
+ Specifies the style of the sizing grip on a System.Windows.Forms.Form.
+
+ 
+
  enum SizeGripStyle,values: Auto (0),Hide (2),Show (1)
  """
  def __eq__(self,*args):

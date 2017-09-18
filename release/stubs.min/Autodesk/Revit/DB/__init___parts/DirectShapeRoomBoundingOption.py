@@ -1,7 +1,9 @@
 class DirectShapeRoomBoundingOption(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type containing possible room bounding settings for DirectShapes.
- 
+ An enumerated type containing possible room bounding settings for DirectShapes.
+
+ 
+
  enum DirectShapeRoomBoundingOption,values: NotApplicable (0),SetByParameter (1)
  """
  def __eq__(self,*args):

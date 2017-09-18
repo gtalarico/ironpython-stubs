@@ -1,7 +1,9 @@
 class FaceIntersectionFaceResult(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing the possible results of a face-face intersection calculation.
- 
+ An enumerated type listing the possible results of a face-face intersection calculation.
+
+ 
+
  enum FaceIntersectionFaceResult,values: Intersecting (0),NonIntersecting (1)
  """
  def __eq__(self,*args):

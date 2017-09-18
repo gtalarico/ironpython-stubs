@@ -1,7 +1,9 @@
 class UnmanagedFunctionPointerAttribute(Attribute,_Attribute):
  """
- Controls the marshaling behavior of a delegate signature passed as an unmanaged function pointer to or from unmanaged code. This class cannot be inherited.
- 
+ Controls the marshaling behavior of a delegate signature passed as an unmanaged function pointer to or from unmanaged code. This class cannot be inherited.
+
+ 
+
  UnmanagedFunctionPointerAttribute(callingConvention: CallingConvention)
  """
  def __init__(self,*args):
@@ -12,10 +14,14 @@ class UnmanagedFunctionPointerAttribute(Attribute,_Attribute):
   """ __new__(cls: type,callingConvention: CallingConvention) """
   pass
  CallingConvention=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the value of the calling convention.
-
-Get: CallingConvention(self: UnmanagedFunctionPointerAttribute) -> CallingConvention
-
+ """Gets the value of the calling convention.
+
+
+
+Get: CallingConvention(self: UnmanagedFunctionPointerAttribute) -> CallingConvention
+
+
+
 """
 
 

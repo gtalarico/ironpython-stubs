@@ -6,12 +6,18 @@ class DesignOption(Element,IDisposable):
  @staticmethod
  def GetActiveDesignOptionId(document):
   """
-  GetActiveDesignOptionId(document: Document) -> ElementId
-  
-   Gets the active design option id for the current design option set.
-  
-   document: The document.
-   Returns: The active design option id. It can be invalid id if there is no active design 
+  GetActiveDesignOptionId(document: Document) -> ElementId
+
+  
+
+   Gets the active design option id for the current design option set.
+
+  
+
+   document: The document.
+
+   Returns: The active design option id. It can be invalid id if there is no active design 
+
     option in the model.
   """
   pass
@@ -34,10 +40,14 @@ class DesignOption(Element,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  IsPrimary=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Determines whether this is a primary design option.
-
-Get: IsPrimary(self: DesignOption) -> bool
-
+ """Determines whether this is a primary design option.
+
+
+
+Get: IsPrimary(self: DesignOption) -> bool
+
+
+
 """
 
 

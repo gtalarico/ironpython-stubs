@@ -1,7 +1,9 @@
 class PopupPrimaryAxis(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes the direction to move a System.Windows.Controls.Primitives.Popup control to increase the amount of the System.Windows.Controls.Primitives.Popup that is visible.
- 
+ Describes the direction to move a System.Windows.Controls.Primitives.Popup control to increase the amount of the System.Windows.Controls.Primitives.Popup that is visible.
+
+ 
+
  enum PopupPrimaryAxis,values: Horizontal (1),None (0),Vertical (2)
  """
  def __eq__(self,*args):

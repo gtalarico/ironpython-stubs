@@ -1,7 +1,9 @@
 class TrussMemberType(Enum,IComparable,IFormattable,IConvertible):
  """
- Indicates the "kind" of a truss member.
- 
+ Indicates the "kind" of a truss member.
+
+ 
+
  enum TrussMemberType,values: ETK_TrussBottomChord (2),ETK_TrussDiagWeb (4),ETK_TrussTopChord (1),ETK_TrussVertWeb (3),ETK_Unknown (0)
  """
  def __eq__(self,*args):

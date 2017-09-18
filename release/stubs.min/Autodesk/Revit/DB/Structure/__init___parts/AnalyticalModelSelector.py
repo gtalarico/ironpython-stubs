@@ -1,10 +1,15 @@
 class AnalyticalModelSelector(object,IDisposable):
  """
- Defines a portion of an Analytical Model for an Element.
- 
- AnalyticalModelSelector(curve: Curve)
- AnalyticalModelSelector(curve: Curve,inCurveSelector: AnalyticalCurveSelector)
- AnalyticalModelSelector()
+ Defines a portion of an Analytical Model for an Element.
+
+ 
+
+ AnalyticalModelSelector(curve: Curve)
+
+ AnalyticalModelSelector(curve: Curve,inCurveSelector: AnalyticalCurveSelector)
+
+ AnalyticalModelSelector()
+
  AnalyticalModelSelector(inCurveSelector: AnalyticalCurveSelector)
  """
  def Dispose(self):
@@ -25,9 +30,12 @@ class AnalyticalModelSelector(object,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,curve: Curve)
-  __new__(cls: type,curve: Curve,inCurveSelector: AnalyticalCurveSelector)
-  __new__(cls: type)
+  __new__(cls: type,curve: Curve)
+
+  __new__(cls: type,curve: Curve,inCurveSelector: AnalyticalCurveSelector)
+
+  __new__(cls: type)
+
   __new__(cls: type,inCurveSelector: AnalyticalCurveSelector)
   """
   pass
@@ -35,18 +43,27 @@ class AnalyticalModelSelector(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  CurveSelector=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The portion of the curve to be selected.
-
-Get: CurveSelector(self: AnalyticalModelSelector) -> AnalyticalCurveSelector
-
-Set: CurveSelector(self: AnalyticalModelSelector)=value
+ """The portion of the curve to be selected.
+
+
+
+Get: CurveSelector(self: AnalyticalModelSelector) -> AnalyticalCurveSelector
+
+
+
+Set: CurveSelector(self: AnalyticalModelSelector)=value
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: AnalyticalModelSelector) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: AnalyticalModelSelector) -> bool
+
+
+
 """
 
 

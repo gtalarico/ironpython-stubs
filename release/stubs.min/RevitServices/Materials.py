@@ -18,18 +18,24 @@ class MaterialsManager(object):
   """ Reset() """
   pass
  DynamoErrorMaterialId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DynamoErrorMaterialId(self: MaterialsManager) -> ElementId
-
+ """Get: DynamoErrorMaterialId(self: MaterialsManager) -> ElementId
+
+
+
 """
 
  DynamoGStyleId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DynamoGStyleId(self: MaterialsManager) -> ElementId
-
+ """Get: DynamoGStyleId(self: MaterialsManager) -> ElementId
+
+
+
 """
 
  DynamoMaterialId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DynamoMaterialId(self: MaterialsManager) -> ElementId
-
+ """Get: DynamoMaterialId(self: MaterialsManager) -> ElementId
+
+
+
 """
 
 

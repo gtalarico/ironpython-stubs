@@ -1,7 +1,9 @@
 class TaskDialogResult(Enum,IComparable,IFormattable,IConvertible):
  """
- Enum to specify the task dialog result.
- 
+ Enum to specify the task dialog result.
+
+ 
+
  enum TaskDialogResult,values: Cancel (2),Close (8),CommandLink1 (1001),CommandLink2 (1002),CommandLink3 (1003),CommandLink4 (1004),No (7),None (0),Ok (1),Retry (4),Yes (6)
  """
  def __eq__(self,*args):

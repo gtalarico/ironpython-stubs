@@ -1,8 +1,11 @@
 class CurveElementFilter(ElementSlowFilter,IDisposable):
  """
- A filter used to pass curve elements which are of a specific type.
- 
- CurveElementFilter(curveElementType: CurveElementType,inverted: bool)
+ A filter used to pass curve elements which are of a specific type.
+
+ 
+
+ CurveElementFilter(curveElementType: CurveElementType,inverted: bool)
+
  CurveElementFilter(curveElementType: CurveElementType)
  """
  def Dispose(self):
@@ -23,15 +26,20 @@ class CurveElementFilter(ElementSlowFilter,IDisposable):
  @staticmethod
  def __new__(self,curveElementType,inverted=None):
   """
-  __new__(cls: type,curveElementType: CurveElementType,inverted: bool)
+  __new__(cls: type,curveElementType: CurveElementType,inverted: bool)
+
   __new__(cls: type,curveElementType: CurveElementType)
   """
   pass
  CurveElementType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The curve element type.
-
-Get: CurveElementType(self: CurveElementFilter) -> CurveElementType
-
+ """The curve element type.
+
+
+
+Get: CurveElementType(self: CurveElementFilter) -> CurveElementType
+
+
+
 """
 
 

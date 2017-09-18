@@ -1,8 +1,11 @@
 class DGNImportOptions(BaseImportOptions,IDisposable):
  """
- The import options used to import DGN format files.
- 
- DGNImportOptions(option: DGNImportOptions)
+ The import options used to import DGN format files.
+
+ 
+
+ DGNImportOptions(option: DGNImportOptions)
+
  DGNImportOptions()
  """
  def Dispose(self):
@@ -23,26 +26,39 @@ class DGNImportOptions(BaseImportOptions,IDisposable):
  @staticmethod
  def __new__(self,option=None):
   """
-  __new__(cls: type,option: DGNImportOptions)
+  __new__(cls: type,option: DGNImportOptions)
+
   __new__(cls: type)
   """
   pass
  DGNModelViewName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The model view name to be imported.
-   Need user give a model view name to specify which model view need to be imported into Revit
-
-Get: DGNModelViewName(self: DGNImportOptions) -> str
-
-Set: DGNModelViewName(self: DGNImportOptions)=value
+ """The model view name to be imported.
+
+   Need user give a model view name to specify which model view need to be imported into Revit
+
+
+
+Get: DGNModelViewName(self: DGNImportOptions) -> str
+
+
+
+Set: DGNModelViewName(self: DGNImportOptions)=value
+
 """
 
  IgnoreUnsupportedElementWarning=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """If true,ignore warning messages about unsupported elements in the DGN file.
-   If false,the import process is aborted if imported dgn files have unsupported elements.
-
-Get: IgnoreUnsupportedElementWarning(self: DGNImportOptions) -> bool
-
-Set: IgnoreUnsupportedElementWarning(self: DGNImportOptions)=value
+ """If true,ignore warning messages about unsupported elements in the DGN file.
+
+   If false,the import process is aborted if imported dgn files have unsupported elements.
+
+
+
+Get: IgnoreUnsupportedElementWarning(self: DGNImportOptions) -> bool
+
+
+
+Set: IgnoreUnsupportedElementWarning(self: DGNImportOptions)=value
+
 """
 
 

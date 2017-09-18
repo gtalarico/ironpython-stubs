@@ -1,7 +1,9 @@
 class ExternalFileReferenceType(Enum,IComparable,IFormattable,IConvertible):
  """
- Enum class indicating kinds of external file references
- 
+ Enum class indicating kinds of external file references
+
+ 
+
  enum ExternalFileReferenceType,values: AssemblyCodeTable (7),CADLink (2),Decal (5),DWFMarkup (3),KeynoteTable (4),Material (6),None (0),RevitLink (1)
  """
  def __eq__(self,*args):

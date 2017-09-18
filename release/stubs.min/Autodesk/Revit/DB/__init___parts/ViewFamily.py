@@ -1,7 +1,9 @@
 class ViewFamily(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type that corresponds to the type of a Revit view.
- 
+ An enumerated type that corresponds to the type of a Revit view.
+
+ 
+
  enum ViewFamily,values: AreaPlan (110),CeilingPlan (111),CostReport (106),Detail (113),Drafting (108),Elevation (114),FloorPlan (109),GraphicalColumnSchedule (119),ImageView (104),Invalid (101),Legend (117),LoadsReport (115),PanelSchedule (118),PressureLossReport (116),Schedule (105),Section (112),Sheet (107),StructuralPlan (120),ThreeDimensional (102),Walkthrough (103)
  """
  def __eq__(self,*args):

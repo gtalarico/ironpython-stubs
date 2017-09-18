@@ -1,8 +1,11 @@
 class Options(APIObject,IDisposable):
  """
- User preferences for parsing of geometry.
- 
- Options(pOptions: Options)
+ User preferences for parsing of geometry.
+
+ 
+
+ Options(pOptions: Options)
+
  Options()
  """
  def Dispose(self):
@@ -26,52 +29,85 @@ class Options(APIObject,IDisposable):
  @staticmethod
  def __new__(self,pOptions=None):
   """
-  __new__(cls: type,pOptions: Options)
+  __new__(cls: type,pOptions: Options)
+
   __new__(cls: type)
   """
   pass
  ComputeReferences=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Determines whether or not references to geometric objects are computed.
-
-Get: ComputeReferences(self: Options) -> bool
-
- Checks whether references to geometric objects are computed.
-
-Set: ComputeReferences(self: Options)
- Enables computing of references to geometric objects.
-=value
+ """Determines whether or not references to geometric objects are computed.
+
+
+
+Get: ComputeReferences(self: Options) -> bool
+
+
+
+ Checks whether references to geometric objects are computed.
+
+
+
+Set: ComputeReferences(self: Options)
+
+ Enables computing of references to geometric objects.
+
+=value
+
 """
 
  DetailLevel=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The detail level for the geometry extracted with these options.
-
-Get: DetailLevel(self: Options) -> ViewDetailLevel
-
- Returns the preferred detail level.
-
-Set: DetailLevel(self: Options)
- Sets the preferred detail level.
-=value
+ """The detail level for the geometry extracted with these options.
+
+
+
+Get: DetailLevel(self: Options) -> ViewDetailLevel
+
+
+
+ Returns the preferred detail level.
+
+
+
+Set: DetailLevel(self: Options)
+
+ Sets the preferred detail level.
+
+=value
+
 """
 
  IncludeNonVisibleObjects=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Whether to extract element geometry objects not set as Visible.  The default is false.
-
-Get: IncludeNonVisibleObjects(self: Options) -> bool
-
-Set: IncludeNonVisibleObjects(self: Options)=value
+ """Whether to extract element geometry objects not set as Visible.  The default is false.
+
+
+
+Get: IncludeNonVisibleObjects(self: Options) -> bool
+
+
+
+Set: IncludeNonVisibleObjects(self: Options)=value
+
 """
 
  View=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The view used for geometry extraction.
-
-Get: View(self: Options) -> View
-
- Retrieves the view that was set for this object.
-
-Set: View(self: Options)
- Sets the view that drives extraction of geometry.
-=value
+ """The view used for geometry extraction.
+
+
+
+Get: View(self: Options) -> View
+
+
+
+ Retrieves the view that was set for this object.
+
+
+
+Set: View(self: Options)
+
+ Sets the view that drives extraction of geometry.
+
+=value
+
 """
 
 

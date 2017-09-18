@@ -1,7 +1,9 @@
 class GenericUriParser(UriParser):
  """
- A customizable parser for a hierarchical URI.
- 
+ A customizable parser for a hierarchical URI.
+
+ 
+
  GenericUriParser(options: GenericUriParserOptions)
  """
  @staticmethod

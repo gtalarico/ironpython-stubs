@@ -1,32 +1,45 @@
 class ExportLineweightTable(object,IEnumerable[KeyValuePair[ExportLineweightKey,ExportLineweightInfo]],IEnumerable,IDisposable):
  """
- A table supporting a mapping of line weights in Revit to line weight names that will be set
-    in the target export format.
- 
+ A table supporting a mapping of line weights in Revit to line weight names that will be set
+
+    in the target export format.
+
+ 
+
  ExportLineweightTable()
  """
  def Add(self,exportLineweightKey,exportLineweightInfo):
   """
-  Add(self: ExportLineweightTable,exportLineweightKey: ExportLineweightKey,exportLineweightInfo: ExportLineweightInfo)
-   Inserts a (key,info) pair into Export line weight table.
-  
-   exportLineweightKey: The export line weight Key to be added.
+  Add(self: ExportLineweightTable,exportLineweightKey: ExportLineweightKey,exportLineweightInfo: ExportLineweightInfo)
+
+   Inserts a (key,info) pair into Export line weight table.
+
+  
+
+   exportLineweightKey: The export line weight Key to be added.
+
    exportLineweightInfo: The export line weight info to be added.
   """
   pass
  def Clear(self):
   """
-  Clear(self: ExportLineweightTable)
+  Clear(self: ExportLineweightTable)
+
    Removes all contents stored in Export line weight table.
   """
   pass
  def ContainsKey(self,exportLineweightKey):
   """
-  ContainsKey(self: ExportLineweightTable,exportLineweightKey: ExportLineweightKey) -> bool
-  
-   Checks whether a line weight key exists in the table.
-  
-   exportLineweightKey: The export line weight key.
+  ContainsKey(self: ExportLineweightTable,exportLineweightKey: ExportLineweightKey) -> bool
+
+  
+
+   Checks whether a line weight key exists in the table.
+
+  
+
+   exportLineweightKey: The export line weight key.
+
    Returns: True if the line weight exists in the table.
   """
   pass
@@ -35,46 +48,66 @@ class ExportLineweightTable(object,IEnumerable[KeyValuePair[ExportLineweightKey,
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: ExportLineweightTable) -> IEnumerator[KeyValuePair[ExportLineweightKey,ExportLineweightInfo]]
-  
-   Returns an enumerator that iterates through a collection.
+  GetEnumerator(self: ExportLineweightTable) -> IEnumerator[KeyValuePair[ExportLineweightKey,ExportLineweightInfo]]
+
+  
+
+   Returns an enumerator that iterates through a collection.
+
    Returns: An IEnumerator object that can be used to iterate through the collection.
   """
   pass
  def GetExportLineweightInfo(self,exportLineweightKey):
   """
-  GetExportLineweightInfo(self: ExportLineweightTable,exportLineweightKey: ExportLineweightKey) -> ExportLineweightInfo
-  
-   Gets a copy of the ExportLineweightInfo corresponding to the given 
-    ExportLineweightKey.
-  
-  
-   exportLineweightKey: The export line weight Key.
+  GetExportLineweightInfo(self: ExportLineweightTable,exportLineweightKey: ExportLineweightKey) -> ExportLineweightInfo
+
+  
+
+   Gets a copy of the ExportLineweightInfo corresponding to the given 
+
+    ExportLineweightKey.
+
+  
+
+  
+
+   exportLineweightKey: The export line weight Key.
+
    Returns: Returns the line weight info for this key.
   """
   pass
  def GetKeys(self):
   """
-  GetKeys(self: ExportLineweightTable) -> IList[ExportLineweightKey]
-  
-   Gets all the keys stored in the map.
+  GetKeys(self: ExportLineweightTable) -> IList[ExportLineweightKey]
+
+  
+
+   Gets all the keys stored in the map.
+
    Returns: The keys.
   """
   pass
  def GetLineweightTableIterator(self):
   """
-  GetLineweightTableIterator(self: ExportLineweightTable) -> ExportLineweightTableIterator
-  
-   Returns a ExportLineweightTableIterator that iterates through the collection.
-   Returns: A ExportLineweightTableIterator object that can be used to iterate through 
+  GetLineweightTableIterator(self: ExportLineweightTable) -> ExportLineweightTableIterator
+
+  
+
+   Returns a ExportLineweightTableIterator that iterates through the collection.
+
+   Returns: A ExportLineweightTableIterator object that can be used to iterate through 
+
     key-value pairs in the collection.
   """
   pass
  def GetValues(self):
   """
-  GetValues(self: ExportLineweightTable) -> IList[ExportLineweightInfo]
-  
-   Returns all the values stored in the map.
+  GetValues(self: ExportLineweightTable) -> IList[ExportLineweightInfo]
+
+  
+
+   Returns all the values stored in the map.
+
    Returns: The info.
   """
   pass
@@ -83,9 +116,12 @@ class ExportLineweightTable(object,IEnumerable[KeyValuePair[ExportLineweightKey,
   pass
  def Remove(self,exportLineweightKey):
   """
-  Remove(self: ExportLineweightTable,exportLineweightKey: ExportLineweightKey)
-   Removes the pair (key,info) corresponding to the given ExportLineweightKey.
-  
+  Remove(self: ExportLineweightTable,exportLineweightKey: ExportLineweightKey)
+
+   Removes the pair (key,info) corresponding to the given ExportLineweightKey.
+
+  
+
    exportLineweightKey: The export line weight key
   """
   pass
@@ -117,17 +153,25 @@ class ExportLineweightTable(object,IEnumerable[KeyValuePair[ExportLineweightKey,
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  Count=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Count of the items contained in the collection.
-
-Get: Count(self: ExportLineweightTable) -> int
-
+ """Count of the items contained in the collection.
+
+
+
+Get: Count(self: ExportLineweightTable) -> int
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ExportLineweightTable) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ExportLineweightTable) -> bool
+
+
+
 """
 
 

@@ -30,25 +30,35 @@ class DocumentManager(object):
   """ Regenerate() """
   pass
  ActiveDocumentHashCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ActiveDocumentHashCode(self: DocumentManager) -> int
-
+ """Get: ActiveDocumentHashCode(self: DocumentManager) -> int
+
+
+
 """
 
  CurrentDBDocument=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CurrentDBDocument(self: DocumentManager) -> Document
-
+ """Get: CurrentDBDocument(self: DocumentManager) -> Document
+
+
+
 """
 
  CurrentUIApplication=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CurrentUIApplication(self: DocumentManager) -> UIApplication
-
-Set: CurrentUIApplication(self: DocumentManager)=value
+ """Get: CurrentUIApplication(self: DocumentManager) -> UIApplication
+
+
+
+Set: CurrentUIApplication(self: DocumentManager)=value
+
 """
 
  CurrentUIDocument=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CurrentUIDocument(self: DocumentManager) -> UIDocument
-
-Set: CurrentUIDocument(self: DocumentManager)=value
+ """Get: CurrentUIDocument(self: DocumentManager) -> UIDocument
+
+
+
+Set: CurrentUIDocument(self: DocumentManager)=value
+
 """
 
 
@@ -151,28 +161,35 @@ class ElementIDLifecycleManager(object):
 
 class ElementUUID(object):
  """
- ElementUUID()
+ ElementUUID()
+
  ElementUUID(uuid: str)
  """
  @staticmethod
  def __new__(self,uuid=None):
   """
-  __new__(cls: type)
+  __new__(cls: type)
+
   __new__(cls: type,uuid: str)
   """
   pass
  UUID=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UUID(self: ElementUUID) -> str
-
-Set: UUID(self: ElementUUID)=value
+ """Get: UUID(self: ElementUUID) -> str
+
+
+
+Set: UUID(self: ElementUUID)=value
+
 """
 
 
 
 class MultipleSerializableId(object,ISerializable):
  """
- MultipleSerializableId()
- MultipleSerializableId(elements: IEnumerable[Element])
+ MultipleSerializableId()
+
+ MultipleSerializableId(elements: IEnumerable[Element])
+
  MultipleSerializableId(info: SerializationInfo,context: StreamingContext)
  """
  def Equals(self,other):
@@ -196,8 +213,10 @@ class MultipleSerializableId(object,ISerializable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type)
-  __new__(cls: type,elements: IEnumerable[Element])
+  __new__(cls: type)
+
+  __new__(cls: type,elements: IEnumerable[Element])
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass
@@ -209,22 +228,29 @@ class MultipleSerializableId(object,ISerializable):
   """ __repr__(self: object) -> str """
   pass
  IntIDs=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IntIDs(self: MultipleSerializableId) -> List[int]
-
-Set: IntIDs(self: MultipleSerializableId)=value
+ """Get: IntIDs(self: MultipleSerializableId) -> List[int]
+
+
+
+Set: IntIDs(self: MultipleSerializableId)=value
+
 """
 
  StringIDs=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: StringIDs(self: MultipleSerializableId) -> List[str]
-
-Set: StringIDs(self: MultipleSerializableId)=value
+ """Get: StringIDs(self: MultipleSerializableId) -> List[str]
+
+
+
+Set: StringIDs(self: MultipleSerializableId)=value
+
 """
 
 
 
 class SerializableId(object,ISerializable):
  """
- SerializableId()
+ SerializableId()
+
  SerializableId(info: SerializationInfo,context: StreamingContext)
  """
  def Equals(self,other):
@@ -245,7 +271,8 @@ class SerializableId(object,ISerializable):
  @staticmethod
  def __new__(self,info=None,context=None):
   """
-  __new__(cls: type)
+  __new__(cls: type)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass
@@ -257,15 +284,21 @@ class SerializableId(object,ISerializable):
   """ __repr__(self: object) -> str """
   pass
  IntID=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IntID(self: SerializableId) -> int
-
-Set: IntID(self: SerializableId)=value
+ """Get: IntID(self: SerializableId) -> int
+
+
+
+Set: IntID(self: SerializableId)=value
+
 """
 
  StringID=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: StringID(self: SerializableId) -> str
-
-Set: StringID(self: SerializableId)=value
+ """Get: StringID(self: SerializableId) -> str
+
+
+
+Set: StringID(self: SerializableId)=value
+
 """
 
 

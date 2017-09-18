@@ -1,7 +1,9 @@
 class TypeLibVarFlags(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes the original settings of the System.Runtime.InteropServices.VARFLAGS in the COM type library from which the variable was imported.
- 
+ Describes the original settings of the System.Runtime.InteropServices.VARFLAGS in the COM type library from which the variable was imported.
+
+ 
+
  enum (flags) TypeLibVarFlags,values: FBindable (4),FDefaultBind (32),FDefaultCollelem (256),FDisplayBind (16),FHidden (64),FImmediateBind (4096),FNonBrowsable (1024),FReadOnly (1),FReplaceable (2048),FRequestEdit (8),FRestricted (128),FSource (2),FUiDefault (512)
  """
  def __eq__(self,*args):

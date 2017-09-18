@@ -1,8 +1,11 @@
 class AnalysisDisplayMarkersAndTextSettings(object,IDisposable):
  """
- Contains markers and text settings for analysis display style element.
- 
- AnalysisDisplayMarkersAndTextSettings()
+ Contains markers and text settings for analysis display style element.
+
+ 
+
+ AnalysisDisplayMarkersAndTextSettings()
+
  AnalysisDisplayMarkersAndTextSettings(other: AnalysisDisplayMarkersAndTextSettings)
  """
  def Dispose(self):
@@ -10,11 +13,16 @@ class AnalysisDisplayMarkersAndTextSettings(object,IDisposable):
   pass
  def IsEqual(self,other):
   """
-  IsEqual(self: AnalysisDisplayMarkersAndTextSettings,other: AnalysisDisplayMarkersAndTextSettings) -> bool
-  
-   Compares two colored surface settings objects.
-  
-   other: Markers and text settings object to compare with.
+  IsEqual(self: AnalysisDisplayMarkersAndTextSettings,other: AnalysisDisplayMarkersAndTextSettings) -> bool
+
+  
+
+   Compares two colored surface settings objects.
+
+  
+
+   other: Markers and text settings object to compare with.
+
    Returns: True if objects are equal,false otherwise.
   """
   pass
@@ -33,7 +41,8 @@ class AnalysisDisplayMarkersAndTextSettings(object,IDisposable):
  @staticmethod
  def __new__(self,other=None):
   """
-  __new__(cls: type)
+  __new__(cls: type)
+
   __new__(cls: type,other: AnalysisDisplayMarkersAndTextSettings)
   """
   pass
@@ -41,50 +50,79 @@ class AnalysisDisplayMarkersAndTextSettings(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: AnalysisDisplayMarkersAndTextSettings) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: AnalysisDisplayMarkersAndTextSettings) -> bool
+
+
+
 """
 
  MarkerSize=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Size of marker.
-
-Get: MarkerSize(self: AnalysisDisplayMarkersAndTextSettings) -> float
-
-Set: MarkerSize(self: AnalysisDisplayMarkersAndTextSettings)=value
+ """Size of marker.
+
+
+
+Get: MarkerSize(self: AnalysisDisplayMarkersAndTextSettings) -> float
+
+
+
+Set: MarkerSize(self: AnalysisDisplayMarkersAndTextSettings)=value
+
 """
 
  MarkerType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Type of marker.
-
-Get: MarkerType(self: AnalysisDisplayMarkersAndTextSettings) -> AnalysisDisplayStyleMarkerType
-
-Set: MarkerType(self: AnalysisDisplayMarkersAndTextSettings)=value
+ """Type of marker.
+
+
+
+Get: MarkerType(self: AnalysisDisplayMarkersAndTextSettings) -> AnalysisDisplayStyleMarkerType
+
+
+
+Set: MarkerType(self: AnalysisDisplayMarkersAndTextSettings)=value
+
 """
 
  Rounding=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Increment to which numeric values of analysis results are rounded in markers.
-
-Get: Rounding(self: AnalysisDisplayMarkersAndTextSettings) -> float
-
-Set: Rounding(self: AnalysisDisplayMarkersAndTextSettings)=value
+ """Increment to which numeric values of analysis results are rounded in markers.
+
+
+
+Get: Rounding(self: AnalysisDisplayMarkersAndTextSettings) -> float
+
+
+
+Set: Rounding(self: AnalysisDisplayMarkersAndTextSettings)=value
+
 """
 
  TextLabelType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Type of diagram text label visualization.
-
-Get: TextLabelType(self: AnalysisDisplayMarkersAndTextSettings) -> AnalysisDisplayStyleMarkerTextLabelType
-
-Set: TextLabelType(self: AnalysisDisplayMarkersAndTextSettings)=value
+ """Type of diagram text label visualization.
+
+
+
+Get: TextLabelType(self: AnalysisDisplayMarkersAndTextSettings) -> AnalysisDisplayStyleMarkerTextLabelType
+
+
+
+Set: TextLabelType(self: AnalysisDisplayMarkersAndTextSettings)=value
+
 """
 
  TextTypeId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Element id of text associated with the settings.
-
-Get: TextTypeId(self: AnalysisDisplayMarkersAndTextSettings) -> ElementId
-
-Set: TextTypeId(self: AnalysisDisplayMarkersAndTextSettings)=value
+ """Element id of text associated with the settings.
+
+
+
+Get: TextTypeId(self: AnalysisDisplayMarkersAndTextSettings) -> ElementId
+
+
+
+Set: TextTypeId(self: AnalysisDisplayMarkersAndTextSettings)=value
+
 """
 
 

@@ -1,7 +1,9 @@
 class PlacementMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes the placement of where a System.Windows.Controls.Primitives.Popup control appears on the screen.
- 
+ Describes the placement of where a System.Windows.Controls.Primitives.Popup control appears on the screen.
+
+ 
+
  enum PlacementMode,values: Absolute (0),AbsolutePoint (5),Bottom (2),Center (3),Custom (11),Left (9),Mouse (7),MousePoint (8),Relative (1),RelativePoint (6),Right (4),Top (10)
  """
  def __eq__(self,*args):

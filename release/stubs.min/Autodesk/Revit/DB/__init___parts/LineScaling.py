@@ -1,7 +1,9 @@
 class LineScaling(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing possible LineType scaling modes.
- 
+ An enumerated type listing possible LineType scaling modes.
+
+ 
+
  enum LineScaling,values: ModelSpace (1),PaperSpace (2),ViewScale (0)
  """
  def __eq__(self,*args):

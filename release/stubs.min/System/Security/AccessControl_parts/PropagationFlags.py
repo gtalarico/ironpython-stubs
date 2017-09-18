@@ -1,7 +1,9 @@
 class PropagationFlags(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies how Access Control Entries (ACEs) are propagated to child objects.  These flags are significant only if inheritance flags are present.
- 
+ Specifies how Access Control Entries (ACEs) are propagated to child objects.  These flags are significant only if inheritance flags are present.
+
+ 
+
  enum (flags) PropagationFlags,values: InheritOnly (2),None (0),NoPropagateInherit (1)
  """
  def __eq__(self,*args):

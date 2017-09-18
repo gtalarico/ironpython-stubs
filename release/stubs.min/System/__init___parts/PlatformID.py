@@ -1,7 +1,9 @@
 class PlatformID(Enum,IComparable,IFormattable,IConvertible):
  """
- Identifies the operating system,or platform,supported by an assembly.
- 
+ Identifies the operating system,or platform,supported by an assembly.
+
+ 
+
  enum PlatformID,values: MacOSX (6),Unix (4),Win32NT (2),Win32S (0),Win32Windows (1),WinCE (3),Xbox (5)
  """
  def __eq__(self,*args):

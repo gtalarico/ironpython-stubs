@@ -1,7 +1,9 @@
 class ToolBarTextAlign(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the alignment of text on the toolbar button control.
- 
+ Specifies the alignment of text on the toolbar button control.
+
+ 
+
  enum ToolBarTextAlign,values: Right (1),Underneath (0)
  """
  def __eq__(self,*args):

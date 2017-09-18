@@ -2,9 +2,12 @@ class Polyloop(object,IDisposable):
  """ A Polyloop represent a planar polygon with ordered points. """
  def ComputeArea(self):
   """
-  ComputeArea(self: Polyloop) -> float
-  
-   Gets the area for this polygon.
+  ComputeArea(self: Polyloop) -> float
+
+  
+
+   Gets the area for this polygon.
+
    Returns: The area for this polygon.
   """
   pass
@@ -13,9 +16,12 @@ class Polyloop(object,IDisposable):
   pass
  def GetPoints(self):
   """
-  GetPoints(self: Polyloop) -> IList[XYZ]
-  
-   Gets the array of points in the polygon
+  GetPoints(self: Polyloop) -> IList[XYZ]
+
+  
+
+   Gets the array of points in the polygon
+
    Returns: The array of points in the polygon
   """
   pass
@@ -35,24 +41,36 @@ class Polyloop(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Centroid=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The polygon centroid.
-
-Get: Centroid(self: Polyloop) -> XYZ
-
+ """The polygon centroid.
+
+
+
+Get: Centroid(self: Polyloop) -> XYZ
+
+
+
 """
 
  Direction=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The direction for the outward normal for this polygon.
-
-Get: Direction(self: Polyloop) -> XYZ
-
+ """The direction for the outward normal for this polygon.
+
+
+
+Get: Direction(self: Polyloop) -> XYZ
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: Polyloop) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: Polyloop) -> bool
+
+
+
 """
 
 

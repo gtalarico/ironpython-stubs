@@ -1,7 +1,9 @@
 class FilterInverseRule(FilterRule,IDisposable):
  """
- A filter rule that inverts the boolean values returned by the rule it contains.
- 
+ A filter rule that inverts the boolean values returned by the rule it contains.
+
+ 
+
  FilterInverseRule(innerRule: FilterRule)
  """
  def Dispose(self):
@@ -9,8 +11,10 @@ class FilterInverseRule(FilterRule,IDisposable):
   pass
  def GetInnerRule(self):
   """
-  GetInnerRule(self: FilterInverseRule) -> FilterRule
-  
+  GetInnerRule(self: FilterInverseRule) -> FilterRule
+
+  
+
    Gets the rule being inverted.
   """
   pass
@@ -19,9 +23,12 @@ class FilterInverseRule(FilterRule,IDisposable):
   pass
  def SetInnerRule(self,innerRule):
   """
-  SetInnerRule(self: FilterInverseRule,innerRule: FilterRule)
-   Gets the rule being inverted.
-  
+  SetInnerRule(self: FilterInverseRule,innerRule: FilterRule)
+
+   Gets the rule being inverted.
+
+  
+
    innerRule: The rule to invert.
   """
   pass

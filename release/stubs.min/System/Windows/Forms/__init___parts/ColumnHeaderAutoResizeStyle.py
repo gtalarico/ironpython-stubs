@@ -1,7 +1,9 @@
 class ColumnHeaderAutoResizeStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies how a column contained in a System.Windows.Forms.ListView should be resized.
- 
+ Specifies how a column contained in a System.Windows.Forms.ListView should be resized.
+
+ 
+
  enum ColumnHeaderAutoResizeStyle,values: ColumnContent (2),HeaderSize (1),None (0)
  """
  def __eq__(self,*args):

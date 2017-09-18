@@ -5,8 +5,10 @@ class DataErrorsChangedEventArgs(EventArgs):
   """ __new__(cls: type,propertyName: str) """
   pass
  PropertyName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PropertyName(self: DataErrorsChangedEventArgs) -> str
-
+ """Get: PropertyName(self: DataErrorsChangedEventArgs) -> str
+
+
+
 """
 
 

@@ -1,7 +1,9 @@
 class SpellingReform(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the spelling reform rules used by the spellchecker of the text editing control (i.e. System.Windows.Controls.TextBox or System.Windows.Controls.RichTextBox).
- 
+ Specifies the spelling reform rules used by the spellchecker of the text editing control (i.e. System.Windows.Controls.TextBox or System.Windows.Controls.RichTextBox).
+
+ 
+
  enum SpellingReform,values: Postreform (2),PreAndPostreform (0),Prereform (1)
  """
  def __eq__(self,*args):

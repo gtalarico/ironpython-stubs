@@ -1,7 +1,9 @@
 class OutAttribute(Attribute,_Attribute):
  """
- Indicates that data should be marshaled from callee back to caller.
- 
+ Indicates that data should be marshaled from callee back to caller.
+
+ 
+
  OutAttribute()
  """
  def __init__(self,*args):

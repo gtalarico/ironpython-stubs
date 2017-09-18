@@ -3,12 +3,18 @@ class ComponentRepeater(Element,IDisposable,IEnumerable[ComponentRepeaterSlot],I
  @staticmethod
  def CanElementBeRepeated(ADoc,elementId):
   """
-  CanElementBeRepeated(ADoc: Document,elementId: ElementId) -> bool
-  
-   Determines whether an element can be repeated using the RepeatElements method.
-  
-   ADoc: The document containing the element.
-   elementId: The element to be tested.
+  CanElementBeRepeated(ADoc: Document,elementId: ElementId) -> bool
+
+  
+
+   Determines whether an element can be repeated using the RepeatElements method.
+
+  
+
+   ADoc: The document containing the element.
+
+   elementId: The element to be tested.
+
    Returns: True if the element can be repeated.
   """
   pass
@@ -20,21 +26,31 @@ class ComponentRepeater(Element,IDisposable,IEnumerable[ComponentRepeaterSlot],I
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: ComponentRepeater) -> IEnumerator[ComponentRepeaterSlot]
-  
-   Returns an enumerator that iterates through a collection.
+  GetEnumerator(self: ComponentRepeater) -> IEnumerator[ComponentRepeaterSlot]
+
+  
+
+   Returns an enumerator that iterates through a collection.
+
    Returns: An IEnumerator object that can be used to iterate through the collection.
   """
   pass
  def IsTypeValidForRepeater(self,typeId):
   """
-  IsTypeValidForRepeater(self: ComponentRepeater,typeId: ElementId) -> bool
-  
-   Determines whether given family type can be used as the default type for the 
-    repeater.
-  
-  
-   typeId: The element id of the type.
+  IsTypeValidForRepeater(self: ComponentRepeater,typeId: ElementId) -> bool
+
+  
+
+   Determines whether given family type can be used as the default type for the 
+
+    repeater.
+
+  
+
+  
+
+   typeId: The element id of the type.
+
    Returns: True if the family type can be used as the default type for the repeater.
   """
   pass
@@ -68,18 +84,27 @@ class ComponentRepeater(Element,IDisposable,IEnumerable[ComponentRepeaterSlot],I
   """ __iter__(self: IEnumerable) -> object """
   pass
  DefaultFamilyType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The default family type for the component repeater.
-
-Get: DefaultFamilyType(self: ComponentRepeater) -> ElementId
-
-Set: DefaultFamilyType(self: ComponentRepeater)=value
+ """The default family type for the component repeater.
+
+
+
+Get: DefaultFamilyType(self: ComponentRepeater) -> ElementId
+
+
+
+Set: DefaultFamilyType(self: ComponentRepeater)=value
+
 """
 
  DimensionCount=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The dimension count of the component repeater.
-
-Get: DimensionCount(self: ComponentRepeater) -> int
-
+ """The dimension count of the component repeater.
+
+
+
+Get: DimensionCount(self: ComponentRepeater) -> int
+
+
+
 """
 
 

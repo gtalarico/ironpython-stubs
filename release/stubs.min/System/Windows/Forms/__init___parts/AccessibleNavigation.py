@@ -1,7 +1,9 @@
 class AccessibleNavigation(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies values for navigating among accessible objects.
- 
+ Specifies values for navigating among accessible objects.
+
+ 
+
  enum AccessibleNavigation,values: Down (2),FirstChild (7),LastChild (8),Left (3),Next (5),Previous (6),Right (4),Up (1)
  """
  def __eq__(self,*args):

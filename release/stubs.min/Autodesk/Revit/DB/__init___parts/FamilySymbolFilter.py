@@ -1,7 +1,9 @@
 class FamilySymbolFilter(ElementQuickFilter,IDisposable):
  """
- A filter used to find all family symbols of the given family.
- 
+ A filter used to find all family symbols of the given family.
+
+ 
+
  FamilySymbolFilter(familyId: ElementId)
  """
  def Dispose(self):
@@ -24,10 +26,14 @@ class FamilySymbolFilter(ElementQuickFilter,IDisposable):
   """ __new__(cls: type,familyId: ElementId) """
   pass
  FamilyId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The family id.
-
-Get: FamilyId(self: FamilySymbolFilter) -> ElementId
-
+ """The family id.
+
+
+
+Get: FamilyId(self: FamilySymbolFilter) -> ElementId
+
+
+
 """
 
 

@@ -1,7 +1,9 @@
 class ScrollBars(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies which scroll bars will be visible on a control.
- 
+ Specifies which scroll bars will be visible on a control.
+
+ 
+
  enum ScrollBars,values: Both (3),Horizontal (1),None (0),Vertical (2)
  """
  def __eq__(self,*args):

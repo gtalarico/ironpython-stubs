@@ -1,7 +1,9 @@
 class ImportedFromTypeLibAttribute(Attribute,_Attribute):
  """
- Indicates that the types defined within an assembly were originally defined in a type library.
- 
+ Indicates that the types defined within an assembly were originally defined in a type library.
+
+ 
+
  ImportedFromTypeLibAttribute(tlbFile: str)
  """
  def __init__(self,*args):
@@ -12,10 +14,14 @@ class ImportedFromTypeLibAttribute(Attribute,_Attribute):
   """ __new__(cls: type,tlbFile: str) """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the name of the original type library file.
-
-Get: Value(self: ImportedFromTypeLibAttribute) -> str
-
+ """Gets the name of the original type library file.
+
+
+
+Get: Value(self: ImportedFromTypeLibAttribute) -> str
+
+
+
 """
 
 

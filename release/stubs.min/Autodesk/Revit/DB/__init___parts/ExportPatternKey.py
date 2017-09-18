@@ -1,9 +1,13 @@
 class ExportPatternKey(object,IDisposable):
  """
- A key used to represent an item stored in an Autodesk.Revit.DB.ExportPatternTable.
- 
- ExportPatternKey(originalFillPatternType: FillPatternTarget,originalFillPatternName: str)
- ExportPatternKey()
+ A key used to represent an item stored in an Autodesk.Revit.DB.ExportPatternTable.
+
+ 
+
+ ExportPatternKey(originalFillPatternType: FillPatternTarget,originalFillPatternName: str)
+
+ ExportPatternKey()
+
  ExportPatternKey(other: ExportPatternKey)
  """
  def Dispose(self):
@@ -24,8 +28,10 @@ class ExportPatternKey(object,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,originalFillPatternType: FillPatternTarget,originalFillPatternName: str)
-  __new__(cls: type)
+  __new__(cls: type,originalFillPatternType: FillPatternTarget,originalFillPatternName: str)
+
+  __new__(cls: type)
+
   __new__(cls: type,other: ExportPatternKey)
   """
   pass
@@ -33,26 +39,40 @@ class ExportPatternKey(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ExportPatternKey) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ExportPatternKey) -> bool
+
+
+
 """
 
  OriginalFillPatternName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The original FillPattern name.
-
-Get: OriginalFillPatternName(self: ExportPatternKey) -> str
-
-Set: OriginalFillPatternName(self: ExportPatternKey)=value
+ """The original FillPattern name.
+
+
+
+Get: OriginalFillPatternName(self: ExportPatternKey) -> str
+
+
+
+Set: OriginalFillPatternName(self: ExportPatternKey)=value
+
 """
 
  OriginalFillPatternType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The original FillPattern type.
-
-Get: OriginalFillPatternType(self: ExportPatternKey) -> FillPatternTarget
-
-Set: OriginalFillPatternType(self: ExportPatternKey)=value
+ """The original FillPattern type.
+
+
+
+Get: OriginalFillPatternType(self: ExportPatternKey) -> FillPatternTarget
+
+
+
+Set: OriginalFillPatternType(self: ExportPatternKey)=value
+
 """
 
 

@@ -1,7 +1,9 @@
 class ScrollBarVisibility(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the visibility of a System.Windows.Controls.Primitives.ScrollBar for scrollable content.
- 
+ Specifies the visibility of a System.Windows.Controls.Primitives.ScrollBar for scrollable content.
+
+ 
+
  enum ScrollBarVisibility,values: Auto (1),Disabled (0),Hidden (2),Visible (3)
  """
  def __eq__(self,*args):

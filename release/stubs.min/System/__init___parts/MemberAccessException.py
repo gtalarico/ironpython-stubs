@@ -1,9 +1,13 @@
 class MemberAccessException(SystemException,ISerializable,_Exception):
  """
- The exception that is thrown when an attempt to access a class member fails.
- 
- MemberAccessException(message: str)
- MemberAccessException()
+ The exception that is thrown when an attempt to access a class member fails.
+
+ 
+
+ MemberAccessException(message: str)
+
+ MemberAccessException()
+
  MemberAccessException(message: str,inner: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,9 +22,12 @@ class MemberAccessException(SystemException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,inner=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,inner: Exception)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,inner: Exception)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

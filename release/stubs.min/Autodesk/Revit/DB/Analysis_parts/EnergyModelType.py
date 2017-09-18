@@ -1,7 +1,9 @@
 class EnergyModelType(Enum,IComparable,IFormattable,IConvertible):
  """
- This enum is used to define if the energy model is based on rooms/spaces or building elements.
- 
+ This enum is used to define if the energy model is based on rooms/spaces or building elements.
+
+ 
+
  enum EnergyModelType,values: BuildingElement (1),SpatialElement (0)
  """
  def __eq__(self,*args):

@@ -1,12 +1,15 @@
 class FamilyTypeSet(APIObject,IDisposable,IEnumerable):
  """
- A set that contains FamilyType objects.
- 
+ A set that contains FamilyType objects.
+
+ 
+
  FamilyTypeSet()
  """
  def Clear(self):
   """
-  Clear(self: FamilyTypeSet)
+  Clear(self: FamilyTypeSet)
+
    Removes every item from the set,rendering it empty.
   """
   pass
@@ -21,17 +24,23 @@ class FamilyTypeSet(APIObject,IDisposable,IEnumerable):
   pass
  def ForwardIterator(self):
   """
-  ForwardIterator(self: FamilyTypeSet) -> FamilyTypeSetIterator
-  
-   Retrieve a forward moving iterator to the set.
+  ForwardIterator(self: FamilyTypeSet) -> FamilyTypeSetIterator
+
+  
+
+   Retrieve a forward moving iterator to the set.
+
    Returns: Returns a forward moving iterator to the set.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: FamilyTypeSet) -> IEnumerator
-  
-   Retrieve a forward moving iterator to the set.
+  GetEnumerator(self: FamilyTypeSet) -> IEnumerator
+
+  
+
+   Retrieve a forward moving iterator to the set.
+
    Returns: Returns a forward moving iterator to the set.
   """
   pass
@@ -46,9 +55,12 @@ class FamilyTypeSet(APIObject,IDisposable,IEnumerable):
   pass
  def ReverseIterator(self):
   """
-  ReverseIterator(self: FamilyTypeSet) -> FamilyTypeSetIterator
-  
-   Retrieve a backward moving iterator to the set.
+  ReverseIterator(self: FamilyTypeSet) -> FamilyTypeSetIterator
+
+  
+
+   Retrieve a backward moving iterator to the set.
+
    Returns: Returns a backward moving iterator to the set.
   """
   pass
@@ -65,17 +77,25 @@ class FamilyTypeSet(APIObject,IDisposable,IEnumerable):
   """ __iter__(self: IEnumerable) -> object """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Test to see if the set is empty.
-
-Get: IsEmpty(self: FamilyTypeSet) -> bool
-
+ """Test to see if the set is empty.
+
+
+
+Get: IsEmpty(self: FamilyTypeSet) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the number of objects that are in the set.
-
-Get: Size(self: FamilyTypeSet) -> int
-
+ """Returns the number of objects that are in the set.
+
+
+
+Get: Size(self: FamilyTypeSet) -> int
+
+
+
 """
 
 

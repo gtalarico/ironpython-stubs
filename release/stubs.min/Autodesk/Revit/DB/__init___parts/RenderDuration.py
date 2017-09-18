@@ -1,7 +1,9 @@
 class RenderDuration(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type containing possible duration types to do Raytracer render.
- 
+ An enumerated type containing possible duration types to do Raytracer render.
+
+ 
+
  enum RenderDuration,values: ByLevel (0),ByTime (1),UntilSatisfactory (2)
  """
  def __eq__(self,*args):

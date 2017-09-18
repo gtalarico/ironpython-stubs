@@ -1,7 +1,9 @@
 class ItemCheckedEventArgs(EventArgs):
  """
- Provides data for the System.Windows.Forms.ListView.ItemChecked event of the System.Windows.Forms.ListView control.
- 
+ Provides data for the System.Windows.Forms.ListView.ItemChecked event of the System.Windows.Forms.ListView control.
+
+ 
+
  ItemCheckedEventArgs(item: ListViewItem)
  """
  def __getitem__(self,*args):
@@ -12,10 +14,14 @@ class ItemCheckedEventArgs(EventArgs):
   """ __new__(cls: type,item: ListViewItem) """
   pass
  Item=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the System.Windows.Forms.ListViewItem whose checked state is changing.
-
-Get: Item(self: ItemCheckedEventArgs) -> ListViewItem
-
+ """Gets the System.Windows.Forms.ListViewItem whose checked state is changing.
+
+
+
+Get: Item(self: ItemCheckedEventArgs) -> ListViewItem
+
+
+
 """
 
 

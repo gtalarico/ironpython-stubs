@@ -1,9 +1,13 @@
 class TessellatedBuildIssueType(Enum,IComparable,IFormattable,IConvertible):
  """
- Issues,which can be encountered while building a polymesh,
-    or a shell,or a solid from data,describing
-    tessellated shapes.
- 
+ Issues,which can be encountered while building a polymesh,
+
+    or a shell,or a solid from data,describing
+
+    tessellated shapes.
+
+ 
+
  enum TessellatedBuildIssueType,values: AllFine (0),DegenOriginalLoop (18),EdgeTraversalForFlip (24),EdgeTwiceUsedByFace (20),EmptyFace (1),EmptyLoop (2),FaceWithIslands (15),InconsistentInnerOuterOriginalLoopCCW (19),InconsitentMultiEdgeTraversalForFlip (25),InternalError (28),InternalLightError (29),InternalMissingError (30),InternalUtilityError (27),IntersectingOriginalLoops (14),LoopOnBestFitSelfIntersects (13),LostAllLoops (9),LostTooManyLoopVertices (6),NonManifoldEdge (21),NonPlanarFace (10),NotSetYet (32),NumberOfIssueTypes (33),OriginalLoopGeomAcuteAngle (7),OriginalLoopMeshAcuteAngle (8),OriginalLoopsProximity (16),OriginalPointsTooFarFromTheirPlane (11),OuterLoopIsNotFirst (17),OverlappingAdjacentFaces (22),PartitionPointsTooFarFromTrueEdge (23),TooFewOriginalVertices (3),TooShortOriginalLoopGeomSegment (5),TooShortOriginalLoopMeshSegment (4),TooSmallVertexSegementDistInFinalLoop (26),TooSmallVertexSegementDistInOriginalLoop (12),UnarticulatedNonManifoldEdge (31)
  """
  def __eq__(self,*args):

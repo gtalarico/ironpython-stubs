@@ -21,9 +21,12 @@ class EntityTags(object):
   """ __new__(cls: type,tags: Dictionary[str,object],parent: DesignScriptEntity) """
   pass
  Parent=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Parent(self: EntityTags) -> DesignScriptEntity
-
-Set: Parent(self: EntityTags)=value
+ """Get: Parent(self: EntityTags) -> DesignScriptEntity
+
+
+
+Set: Parent(self: EntityTags)=value
+
 """
 
 

@@ -1,9 +1,13 @@
 class GridSegmentDirection(Enum,IComparable,IFormattable,IConvertible):
  """
- Specify one of the four adjacent segments to a
- GridNode.
- See Autodesk.Revit.DB.DividedSurface.
- 
+ Specify one of the four adjacent segments to a
+
+ GridNode.
+
+ See Autodesk.Revit.DB.DividedSurface.
+
+ 
+
  enum GridSegmentDirection,values: NegativeU (1),NegativeV (3),PositiveU (0),PositiveV (2)
  """
  def __eq__(self,*args):

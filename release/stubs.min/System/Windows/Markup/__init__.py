@@ -10,7 +10,8 @@
 
 class ValueSerializerAttribute(Attribute,_Attribute):
  """
- ValueSerializerAttribute(valueSerializerType: Type)
+ ValueSerializerAttribute(valueSerializerType: Type)
+
  ValueSerializerAttribute(valueSerializerTypeName: str)
  """
  def __init__(self,*args):
@@ -19,18 +20,23 @@ class ValueSerializerAttribute(Attribute,_Attribute):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,valueSerializerType: Type)
+  __new__(cls: type,valueSerializerType: Type)
+
   __new__(cls: type,valueSerializerTypeName: str)
   """
   pass
  ValueSerializerType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ValueSerializerType(self: ValueSerializerAttribute) -> Type
-
+ """Get: ValueSerializerType(self: ValueSerializerAttribute) -> Type
+
+
+
 """
 
  ValueSerializerTypeName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ValueSerializerTypeName(self: ValueSerializerAttribute) -> str
-
+ """Get: ValueSerializerTypeName(self: ValueSerializerAttribute) -> str
+
+
+
 """
 
 

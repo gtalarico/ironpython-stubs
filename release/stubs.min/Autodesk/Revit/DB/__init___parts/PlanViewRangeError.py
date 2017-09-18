@@ -1,7 +1,9 @@
 class PlanViewRangeError(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes errors in the location of planes in a PlanViewRange object.
- 
+ Describes errors in the location of planes in a PlanViewRange object.
+
+ 
+
  enum PlanViewRangeError,values: BottomClipAboveCutPlane (1),TopClipBelowCutPlane (0),ViewDepthAboveBottomClip (2),ViewDepthBelowTopClip (3)
  """
  def __eq__(self,*args):

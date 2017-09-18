@@ -1,7 +1,9 @@
 class CapitalizationForLoadNames(Enum,IComparable,IFormattable,IConvertible):
  """
- Enumerated type listing the options for how electrical load names should be capitalized.
- 
+ Enumerated type listing the options for how electrical load names should be capitalized.
+
+ 
+
  enum CapitalizationForLoadNames,values: Initial (1),Sentence (2),SourceParameters (0),Upper (3)
  """
  def __eq__(self,*args):

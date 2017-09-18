@@ -1,7 +1,9 @@
 class FabricationDimensionUnitType(Enum,IComparable,IFormattable,IConvertible):
  """
- Fabrication dimension unit type.
- 
+ Fabrication dimension unit type.
+
+ 
+
  enum FabricationDimensionUnitType,values: Angular (2),Linear (1),NoUnits (0)
  """
  def __eq__(self,*args):

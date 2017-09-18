@@ -8,8 +8,10 @@ class Blend(GenericForm,IDisposable):
   pass
  def GetVertexConnectionMap(self):
   """
-  GetVertexConnectionMap(self: Blend) -> VertexIndexPairArray
-  
+  GetVertexConnectionMap(self: Blend) -> VertexIndexPairArray
+
+  
+
    Gets the mapping between the vertices in the top and bottom profiles.
   """
   pass
@@ -21,7 +23,8 @@ class Blend(GenericForm,IDisposable):
   pass
  def SetVertexConnectionMap(self,vertexMap):
   """
-  SetVertexConnectionMap(self: Blend,vertexMap: VertexIndexPairArray)
+  SetVertexConnectionMap(self: Blend,vertexMap: VertexIndexPairArray)
+
    Sets the mapping between the vertices in the top and bottom profiles.
   """
   pass
@@ -35,47 +38,73 @@ class Blend(GenericForm,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  BottomOffset=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The offset of the bottom end of the blend relative to the sketch plane.
-
-Get: BottomOffset(self: Blend) -> float
-
-Set: BottomOffset(self: Blend)=value
+ """The offset of the bottom end of the blend relative to the sketch plane.
+
+
+
+Get: BottomOffset(self: Blend) -> float
+
+
+
+Set: BottomOffset(self: Blend)=value
+
 """
 
  BottomProfile=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The curves which make up the bottom profile of the sketch.
-
-Get: BottomProfile(self: Blend) -> CurveArrArray
-
+ """The curves which make up the bottom profile of the sketch.
+
+
+
+Get: BottomProfile(self: Blend) -> CurveArrArray
+
+
+
 """
 
  BottomSketch=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the Bottom Sketch of the Blend.
-
-Get: BottomSketch(self: Blend) -> Sketch
-
+ """Returns the Bottom Sketch of the Blend.
+
+
+
+Get: BottomSketch(self: Blend) -> Sketch
+
+
+
 """
 
  TopOffset=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The offset of the top end of the blend relative to the sketch plane.
-
-Get: TopOffset(self: Blend) -> float
-
-Set: TopOffset(self: Blend)=value
+ """The offset of the top end of the blend relative to the sketch plane.
+
+
+
+Get: TopOffset(self: Blend) -> float
+
+
+
+Set: TopOffset(self: Blend)=value
+
 """
 
  TopProfile=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The curves which make up the top profile of the sketch.
-
-Get: TopProfile(self: Blend) -> CurveArrArray
-
+ """The curves which make up the top profile of the sketch.
+
+
+
+Get: TopProfile(self: Blend) -> CurveArrArray
+
+
+
 """
 
  TopSketch=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the Top Sketch of the Blend.
-
-Get: TopSketch(self: Blend) -> Sketch
-
+ """Returns the Top Sketch of the Blend.
+
+
+
+Get: TopSketch(self: Blend) -> Sketch
+
+
+
 """
 
 

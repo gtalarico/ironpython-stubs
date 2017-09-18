@@ -1,7 +1,9 @@
 class LeaderAtachement(Enum,IComparable,IFormattable,IConvertible):
  """
- Supported kinds of vertical attachments of a leader to a text note.
- 
+ Supported kinds of vertical attachments of a leader to a text note.
+
+ 
+
  enum LeaderAtachement,values: BottomLine (2),Midpoint (1),TopLine (0)
  """
  def __eq__(self,*args):

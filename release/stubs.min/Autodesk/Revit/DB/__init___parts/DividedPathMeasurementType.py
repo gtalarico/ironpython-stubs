@@ -1,7 +1,9 @@
 class DividedPathMeasurementType(Enum,IComparable,IFormattable,IConvertible):
  """
- DividedPath measurement type.
- 
+ DividedPath measurement type.
+
+ 
+
  enum DividedPathMeasurementType,values: ChordLength (0),SegmentLength (1)
  """
  def __eq__(self,*args):

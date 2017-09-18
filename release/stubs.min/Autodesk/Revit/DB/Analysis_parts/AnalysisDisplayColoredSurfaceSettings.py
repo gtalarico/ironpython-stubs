@@ -1,8 +1,11 @@
 class AnalysisDisplayColoredSurfaceSettings(object,IDisposable):
  """
- Contains colored surface settings for analysis display style element.
- 
- AnalysisDisplayColoredSurfaceSettings()
+ Contains colored surface settings for analysis display style element.
+
+ 
+
+ AnalysisDisplayColoredSurfaceSettings()
+
  AnalysisDisplayColoredSurfaceSettings(other: AnalysisDisplayColoredSurfaceSettings)
  """
  def Dispose(self):
@@ -10,11 +13,16 @@ class AnalysisDisplayColoredSurfaceSettings(object,IDisposable):
   pass
  def IsEqual(self,other):
   """
-  IsEqual(self: AnalysisDisplayColoredSurfaceSettings,other: AnalysisDisplayColoredSurfaceSettings) -> bool
-  
-   Compares two colored surface settings objects.
-  
-   other: Colored surface settings object to compare with.
+  IsEqual(self: AnalysisDisplayColoredSurfaceSettings,other: AnalysisDisplayColoredSurfaceSettings) -> bool
+
+  
+
+   Compares two colored surface settings objects.
+
+  
+
+   other: Colored surface settings object to compare with.
+
    Returns: True if objects are equal,false otherwise.
   """
   pass
@@ -33,7 +41,8 @@ class AnalysisDisplayColoredSurfaceSettings(object,IDisposable):
  @staticmethod
  def __new__(self,other=None):
   """
-  __new__(cls: type)
+  __new__(cls: type)
+
   __new__(cls: type,other: AnalysisDisplayColoredSurfaceSettings)
   """
   pass
@@ -41,42 +50,66 @@ class AnalysisDisplayColoredSurfaceSettings(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  GridColor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Color of grid lines.
-
-Get: GridColor(self: AnalysisDisplayColoredSurfaceSettings) -> Color
-
-Set: GridColor(self: AnalysisDisplayColoredSurfaceSettings)=value
+ """Color of grid lines.
+
+
+
+Get: GridColor(self: AnalysisDisplayColoredSurfaceSettings) -> Color
+
+
+
+Set: GridColor(self: AnalysisDisplayColoredSurfaceSettings)=value
+
 """
 
  GridLineWeight=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Line weight of grid lines.
-
-Get: GridLineWeight(self: AnalysisDisplayColoredSurfaceSettings) -> int
-
-Set: GridLineWeight(self: AnalysisDisplayColoredSurfaceSettings)=value
+ """Line weight of grid lines.
+
+
+
+Get: GridLineWeight(self: AnalysisDisplayColoredSurfaceSettings) -> int
+
+
+
+Set: GridLineWeight(self: AnalysisDisplayColoredSurfaceSettings)=value
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: AnalysisDisplayColoredSurfaceSettings) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: AnalysisDisplayColoredSurfaceSettings) -> bool
+
+
+
 """
 
  ShowContourLines=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """If true,show contour lines in the analysis display.
-
-Get: ShowContourLines(self: AnalysisDisplayColoredSurfaceSettings) -> bool
-
-Set: ShowContourLines(self: AnalysisDisplayColoredSurfaceSettings)=value
+ """If true,show contour lines in the analysis display.
+
+
+
+Get: ShowContourLines(self: AnalysisDisplayColoredSurfaceSettings) -> bool
+
+
+
+Set: ShowContourLines(self: AnalysisDisplayColoredSurfaceSettings)=value
+
 """
 
  ShowGridLines=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """If true,show grid lines in the analysis display.
-
-Get: ShowGridLines(self: AnalysisDisplayColoredSurfaceSettings) -> bool
-
-Set: ShowGridLines(self: AnalysisDisplayColoredSurfaceSettings)=value
+ """If true,show grid lines in the analysis display.
+
+
+
+Get: ShowGridLines(self: AnalysisDisplayColoredSurfaceSettings) -> bool
+
+
+
+Set: ShowGridLines(self: AnalysisDisplayColoredSurfaceSettings)=value
+
 """
 
 

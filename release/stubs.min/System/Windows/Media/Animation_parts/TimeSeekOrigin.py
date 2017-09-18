@@ -1,7 +1,9 @@
 class TimeSeekOrigin(Enum,IComparable,IFormattable,IConvertible):
  """
- Indicates the origin of a seek operation. The offset of the seek operation is relative to this origin.
- 
+ Indicates the origin of a seek operation. The offset of the seek operation is relative to this origin.
+
+ 
+
  enum TimeSeekOrigin,values: BeginTime (0),Duration (1)
  """
  def __eq__(self,*args):

@@ -3,20 +3,29 @@ class ChangeType(object,IDisposable):
  @staticmethod
  def ConcatenateChangeTypes(changeType1,changeType2):
   """
-  ConcatenateChangeTypes(changeType1: ChangeType,changeType2: ChangeType) -> ChangeType
-  
-   Creates a ChangeType that is a union of the two input ChangeTypes
-  
-   changeType1: First input ChangeType to be concatenated
-   changeType2: Second input ChangeType to be concatenated
+  ConcatenateChangeTypes(changeType1: ChangeType,changeType2: ChangeType) -> ChangeType
+
+  
+
+   Creates a ChangeType that is a union of the two input ChangeTypes
+
+  
+
+   changeType1: First input ChangeType to be concatenated
+
+   changeType2: Second input ChangeType to be concatenated
+
    Returns: A new ChangeType that is a concatenation/union of the input change types
   """
   pass
  def Contains(self,changeType):
   """
-  Contains(self: ChangeType,changeType: ChangeType) -> bool
-  
-   Checks whether this ChangeType contains the input ChangeType
+  Contains(self: ChangeType,changeType: ChangeType) -> bool
+
+  
+
+   Checks whether this ChangeType contains the input ChangeType
+
    Returns: True if input changeType is contained by this ChangeType
   """
   pass
@@ -25,11 +34,16 @@ class ChangeType(object,IDisposable):
   pass
  def IsIdentical(self,changeType):
   """
-  IsIdentical(self: ChangeType,changeType: ChangeType) -> bool
-  
-   Compares if two ChangeTypes are identical
-  
-   changeType: Input ChangeType to be compared
+  IsIdentical(self: ChangeType,changeType: ChangeType) -> bool
+
+  
+
+   Compares if two ChangeTypes are identical
+
+  
+
+   changeType: Input ChangeType to be compared
+
    Returns: True if the this ChangeType and input ChangeType are identical
   """
   pass
@@ -49,10 +63,14 @@ class ChangeType(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ChangeType) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ChangeType) -> bool
+
+
+
 """
 
 

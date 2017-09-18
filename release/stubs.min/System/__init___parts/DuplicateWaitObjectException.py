@@ -1,10 +1,15 @@
 class DuplicateWaitObjectException(ArgumentException,ISerializable,_Exception):
  """
- The exception that is thrown when an object appears more than once in an array of synchronization objects.
- 
- DuplicateWaitObjectException()
- DuplicateWaitObjectException(parameterName: str)
- DuplicateWaitObjectException(parameterName: str,message: str)
+ The exception that is thrown when an object appears more than once in an array of synchronization objects.
+
+ 
+
+ DuplicateWaitObjectException()
+
+ DuplicateWaitObjectException(parameterName: str)
+
+ DuplicateWaitObjectException(parameterName: str,message: str)
+
  DuplicateWaitObjectException(message: str,innerException: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -19,10 +24,14 @@ class DuplicateWaitObjectException(ArgumentException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type)
-  __new__(cls: type,parameterName: str)
-  __new__(cls: type,parameterName: str,message: str)
-  __new__(cls: type,message: str,innerException: Exception)
+  __new__(cls: type)
+
+  __new__(cls: type,parameterName: str)
+
+  __new__(cls: type,parameterName: str,message: str)
+
+  __new__(cls: type,message: str,innerException: Exception)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

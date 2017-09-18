@@ -1,10 +1,15 @@
 class ElementCategoryFilter(ElementQuickFilter,IDisposable):
  """
- A filter used to match elements by their category.
- 
- ElementCategoryFilter(category: BuiltInCategory,inverted: bool)
- ElementCategoryFilter(category: BuiltInCategory)
- ElementCategoryFilter(categoryId: ElementId,inverted: bool)
+ A filter used to match elements by their category.
+
+ 
+
+ ElementCategoryFilter(category: BuiltInCategory,inverted: bool)
+
+ ElementCategoryFilter(category: BuiltInCategory)
+
+ ElementCategoryFilter(categoryId: ElementId,inverted: bool)
+
  ElementCategoryFilter(categoryId: ElementId)
  """
  def Dispose(self):
@@ -25,17 +30,24 @@ class ElementCategoryFilter(ElementQuickFilter,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,category: BuiltInCategory,inverted: bool)
-  __new__(cls: type,category: BuiltInCategory)
-  __new__(cls: type,categoryId: ElementId,inverted: bool)
+  __new__(cls: type,category: BuiltInCategory,inverted: bool)
+
+  __new__(cls: type,category: BuiltInCategory)
+
+  __new__(cls: type,categoryId: ElementId,inverted: bool)
+
   __new__(cls: type,categoryId: ElementId)
   """
   pass
  CategoryId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The category id.
-
-Get: CategoryId(self: ElementCategoryFilter) -> ElementId
-
+ """The category id.
+
+
+
+Get: CategoryId(self: ElementCategoryFilter) -> ElementId
+
+
+
 """
 
 

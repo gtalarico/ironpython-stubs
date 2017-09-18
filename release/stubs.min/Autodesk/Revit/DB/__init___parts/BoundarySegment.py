@@ -5,9 +5,12 @@ class BoundarySegment(object,IDisposable):
   pass
  def GetCurve(self):
   """
-  GetCurve(self: BoundarySegment) -> Curve
-  
-   Get a copy of the curve that is formed along this boundary.
+  GetCurve(self: BoundarySegment) -> Curve
+
+  
+
+   Get a copy of the curve that is formed along this boundary.
+
    Returns: A copy of the curve.
   """
   pass
@@ -27,25 +30,38 @@ class BoundarySegment(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  ElementId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Retrieve the id of the element that produces this boundary segment.
-   If the segment is created from an element in a link,this is the id of the RevitLinkInstance.
-
-Get: ElementId(self: BoundarySegment) -> ElementId
-
+ """Retrieve the id of the element that produces this boundary segment.
+
+   If the segment is created from an element in a link,this is the id of the RevitLinkInstance.
+
+
+
+Get: ElementId(self: BoundarySegment) -> ElementId
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: BoundarySegment) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: BoundarySegment) -> bool
+
+
+
 """
 
  LinkElementId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Retrieve the element id of the element in a link instance that forms this boundary.
-
-Get: LinkElementId(self: BoundarySegment) -> ElementId
-
+ """Retrieve the element id of the element in a link instance that forms this boundary.
+
+
+
+Get: LinkElementId(self: BoundarySegment) -> ElementId
+
+
+
 """
 
 

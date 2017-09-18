@@ -1,7 +1,9 @@
 class PathAnimationSource(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the output property value of the path that is used to drive the animation.
- 
+ Specifies the output property value of the path that is used to drive the animation.
+
+ 
+
  enum PathAnimationSource,values: Angle (2),X (0),Y (1)
  """
  def __eq__(self,*args):

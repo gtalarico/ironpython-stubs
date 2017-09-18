@@ -1,7 +1,9 @@
 class DataGridLineStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the style of gridlines in a System.Windows.Forms.DataGrid.
- 
+ Specifies the style of gridlines in a System.Windows.Forms.DataGrid.
+
+ 
+
  enum DataGridLineStyle,values: None (0),Solid (1)
  """
  def __eq__(self,*args):

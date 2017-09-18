@@ -1,7 +1,9 @@
 class GridResizeBehavior(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the rows or columns that are resized by a System.Windows.Controls.GridSplitter control.
- 
+ Specifies the rows or columns that are resized by a System.Windows.Controls.GridSplitter control.
+
+ 
+
  enum GridResizeBehavior,values: BasedOnAlignment (0),CurrentAndNext (1),PreviousAndCurrent (2),PreviousAndNext (3)
  """
  def __eq__(self,*args):

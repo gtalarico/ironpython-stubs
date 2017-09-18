@@ -3,14 +3,22 @@ class DeleteElements(FailureResolution,IDisposable):
  @staticmethod
  def Create(document,*__args):
   """
-  Create(document: Document,ids: ISet[ElementId]) -> FailureResolution
-  Create(document: Document,ids: IList[ElementId]) -> FailureResolution
-  Create(document: Document,id: ElementId) -> FailureResolution
-  
-   Creates an instance of the DeleteElements resolution.
-  
-   document: The document which owns the element to delete.
-   id: The id of the element that will be deleted when this resolution is chosen.
+  Create(document: Document,ids: ISet[ElementId]) -> FailureResolution
+
+  Create(document: Document,ids: IList[ElementId]) -> FailureResolution
+
+  Create(document: Document,id: ElementId) -> FailureResolution
+
+  
+
+   Creates an instance of the DeleteElements resolution.
+
+  
+
+   document: The document which owns the element to delete.
+
+   id: The id of the element that will be deleted when this resolution is chosen.
+
    Returns: The instance of the DeletedElements resolution.
   """
   pass

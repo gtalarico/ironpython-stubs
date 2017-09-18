@@ -3,11 +3,16 @@ class FabricWireType(ElementType,IDisposable):
  @staticmethod
  def CreateDefaultFabricWireType(ADoc):
   """
-  CreateDefaultFabricWireType(ADoc: Document) -> ElementId
-  
-   Creates a new FabricWireType object with a default name.
-  
-   ADoc: The document.
+  CreateDefaultFabricWireType(ADoc: Document) -> ElementId
+
+  
+
+   Creates a new FabricWireType object with a default name.
+
+  
+
+   ADoc: The document.
+
    Returns: The newly created type id.
   """
   pass
@@ -33,19 +38,29 @@ class FabricWireType(ElementType,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  BendDiameter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Determines the bending diameter of the wire.
-
-Get: BendDiameter(self: FabricWireType) -> float
-
-Set: BendDiameter(self: FabricWireType)=value
+ """Determines the bending diameter of the wire.
+
+
+
+Get: BendDiameter(self: FabricWireType) -> float
+
+
+
+Set: BendDiameter(self: FabricWireType)=value
+
 """
 
  WireDiameter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Determines the diameter of the wire.
-
-Get: WireDiameter(self: FabricWireType) -> float
-
-Set: WireDiameter(self: FabricWireType)=value
+ """Determines the diameter of the wire.
+
+
+
+Get: WireDiameter(self: FabricWireType) -> float
+
+
+
+Set: WireDiameter(self: FabricWireType)=value
+
 """
 
 

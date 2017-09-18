@@ -1,7 +1,9 @@
 class PowerLineStatus(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the system power status.
- 
+ Specifies the system power status.
+
+ 
+
  enum PowerLineStatus,values: Offline (0),Online (1),Unknown (255)
  """
  def __eq__(self,*args):

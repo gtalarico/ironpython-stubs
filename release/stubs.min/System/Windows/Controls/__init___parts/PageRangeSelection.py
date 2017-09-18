@@ -1,7 +1,9 @@
 class PageRangeSelection(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies whether all the pages or only a limited range will be processed by an operation,usually printing.
- 
+ Specifies whether all the pages or only a limited range will be processed by an operation,usually printing.
+
+ 
+
  enum PageRangeSelection,values: AllPages (0),CurrentPage (2),SelectedPages (3),UserPages (1)
  """
  def __eq__(self,*args):

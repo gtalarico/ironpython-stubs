@@ -1,7 +1,9 @@
 class FabricLapSplicePosition(Enum,IComparable,IFormattable,IConvertible):
  """
- Fabric lap splice position in the fabric distribution
- 
+ Fabric lap splice position in the fabric distribution
+
+ 
+
  enum FabricLapSplicePosition,values: Aligned (0),MajorHalfwayStagger (1),MajorPassingStagger (2),MinorHalfwayStagger (3),MinorPassingStagger (4)
  """
  def __eq__(self,*args):

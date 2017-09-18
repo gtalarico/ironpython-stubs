@@ -1,9 +1,13 @@
 class DoubleClickTarget(Enum,IComparable,IFormattable,IConvertible):
  """
- Elements that support double-click in Revit.  Note that this is meant to cover cases
-    where the element itself is a double-click target.  Individual controls that are targets
-    are handled separately.
- 
+ Elements that support double-click in Revit.  Note that this is meant to cover cases
+
+    where the element itself is a double-click target.  Individual controls that are targets
+
+    are handled separately.
+
+ 
+
  enum DoubleClickTarget,values: Assembly (3),ComponentStairs (5),Family (0),Group (4),OutsideViewOnSheet (6),SketchedElement (1),ViewOnSheet (2)
  """
  def __eq__(self,*args):

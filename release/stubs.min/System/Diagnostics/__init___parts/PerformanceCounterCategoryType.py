@@ -1,7 +1,9 @@
 class PerformanceCounterCategoryType(Enum,IComparable,IFormattable,IConvertible):
  """
- Indicates whether the performance counter category can have multiple instances.
- 
+ Indicates whether the performance counter category can have multiple instances.
+
+ 
+
  enum PerformanceCounterCategoryType,values: MultiInstance (1),SingleInstance (0),Unknown (-1)
  """
  def __eq__(self,*args):

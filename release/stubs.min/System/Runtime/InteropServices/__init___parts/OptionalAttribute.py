@@ -1,7 +1,9 @@
 class OptionalAttribute(Attribute,_Attribute):
  """
- Indicates that a parameter is optional.
- 
+ Indicates that a parameter is optional.
+
+ 
+
  OptionalAttribute()
  """
  def __init__(self,*args):

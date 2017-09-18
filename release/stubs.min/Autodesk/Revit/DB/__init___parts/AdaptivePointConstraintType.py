@@ -1,7 +1,9 @@
 class AdaptivePointConstraintType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type containing possible constraint types for Adaptive Points.
- 
+ An enumerated type containing possible constraint types for Adaptive Points.
+
+ 
+
  enum AdaptivePointConstraintType,values: Axis_X (4),Axis_Y (5),Axis_Z (6),None (0),Plane_XY (3),Plane_YZ (1),Plane_ZX (2)
  """
  def __eq__(self,*args):

@@ -28,23 +28,31 @@ class VisualTreeChangeEventArgs(EventArgs):
   """ __new__(cls: type,parent: DependencyObject,child: DependencyObject,childIndex: int,changeType: VisualTreeChangeType) """
   pass
  ChangeType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ChangeType(self: VisualTreeChangeEventArgs) -> VisualTreeChangeType
-
+ """Get: ChangeType(self: VisualTreeChangeEventArgs) -> VisualTreeChangeType
+
+
+
 """
 
  Child=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Child(self: VisualTreeChangeEventArgs) -> DependencyObject
-
+ """Get: Child(self: VisualTreeChangeEventArgs) -> DependencyObject
+
+
+
 """
 
  ChildIndex=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ChildIndex(self: VisualTreeChangeEventArgs) -> int
-
+ """Get: ChildIndex(self: VisualTreeChangeEventArgs) -> int
+
+
+
 """
 
  Parent=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Parent(self: VisualTreeChangeEventArgs) -> DependencyObject
-
+ """Get: Parent(self: VisualTreeChangeEventArgs) -> DependencyObject
+
+
+
 """
 
 
@@ -86,18 +94,24 @@ class XamlSourceInfo(object):
   """ __new__(cls: type,sourceUri: Uri,lineNumber: int,linePosition: int) """
   pass
  LineNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LineNumber(self: XamlSourceInfo) -> int
-
+ """Get: LineNumber(self: XamlSourceInfo) -> int
+
+
+
 """
 
  LinePosition=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LinePosition(self: XamlSourceInfo) -> int
-
+ """Get: LinePosition(self: XamlSourceInfo) -> int
+
+
+
 """
 
  SourceUri=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SourceUri(self: XamlSourceInfo) -> Uri
-
+ """Get: SourceUri(self: XamlSourceInfo) -> Uri
+
+
+
 """
 
 

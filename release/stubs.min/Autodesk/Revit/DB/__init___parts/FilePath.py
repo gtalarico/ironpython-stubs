@@ -1,8 +1,11 @@
 class FilePath(ModelPath,IDisposable):
  """
- This class represents a path on a disk or network location,but
-    not a path to a Revit server location.
- 
+ This class represents a path on a disk or network location,but
+
+    not a path to a Revit server location.
+
+ 
+
  FilePath(path: str)
  """
  def Dispose(self):

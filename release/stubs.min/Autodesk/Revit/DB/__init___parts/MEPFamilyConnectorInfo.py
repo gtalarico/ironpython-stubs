@@ -5,21 +5,31 @@ class MEPFamilyConnectorInfo(MEPConnectorInfo,IDisposable):
   pass
  def GetAssociateFamilyParameterId(self,connectorParameterId):
   """
-  GetAssociateFamilyParameterId(self: MEPFamilyConnectorInfo,connectorParameterId: ElementId) -> ElementId
-  
-   Gets the associate family parameter id of the specified connector parameter id.
-  
-   connectorParameterId: connectorParameterId is defined in the family connector element.
-   Returns: Returns valid ElementId if the connectorParameterId associates to one family 
+  GetAssociateFamilyParameterId(self: MEPFamilyConnectorInfo,connectorParameterId: ElementId) -> ElementId
+
+  
+
+   Gets the associate family parameter id of the specified connector parameter id.
+
+  
+
+   connectorParameterId: connectorParameterId is defined in the family connector element.
+
+   Returns: Returns valid ElementId if the connectorParameterId associates to one family 
+
     parameter; otherwise returns invalid ElementId.
   """
   pass
  def GetConnectorParameterValue(self,connectorParameterId):
   """
-  GetConnectorParameterValue(self: MEPFamilyConnectorInfo,connectorParameterId: ElementId) -> ParameterValue
-  
-   Gets the parameter value of the specified connector parameter id.
-  
+  GetConnectorParameterValue(self: MEPFamilyConnectorInfo,connectorParameterId: ElementId) -> ParameterValue
+
+  
+
+   Gets the parameter value of the specified connector parameter id.
+
+  
+
    connectorParameterId: connectorParameterId is defined in the family connector element.
   """
   pass

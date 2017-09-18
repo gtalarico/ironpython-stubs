@@ -1,7 +1,9 @@
 class RebarCouplerError(Enum,IComparable,IFormattable,IConvertible):
  """
- Error states for the Rebar Coupler
- 
+ Error states for the Rebar Coupler
+
+ 
+
  enum RebarCouplerError,values: BarSegementsAreNotParallel (6),BarSegmentsAreNotOnSameLine (7),BarSegmentSmallerThanEngagement (13),BarsNotTouching (3),CurvesOtherThanLine (12),DifferentLayout (2),InconsistentShape (8),IncorrectEndTreatmentCoupler (5),IncorrectEndTreatmentHook (4),IncorrectInputData (1),InvalidDiameter (9),ValidationSuccessfuly (0),VaryingDistanceBetweenDistributionsBars (14)
  """
  def __eq__(self,*args):

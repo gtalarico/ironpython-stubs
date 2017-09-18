@@ -1,7 +1,9 @@
 class PropertySort(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies how properties are sorted in the System.Windows.Forms.PropertyGrid.
- 
+ Specifies how properties are sorted in the System.Windows.Forms.PropertyGrid.
+
+ 
+
  enum PropertySort,values: Alphabetical (1),Categorized (2),CategorizedAlphabetical (3),NoSort (0)
  """
  def __eq__(self,*args):

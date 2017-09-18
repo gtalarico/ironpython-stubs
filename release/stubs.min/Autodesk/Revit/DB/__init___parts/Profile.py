@@ -2,8 +2,10 @@ class Profile(GeometryObject,IDisposable):
  """ A geometric profile consisting of a loop of curves. """
  def Clone(self):
   """
-  Clone(self: Profile) -> Profile
-  
+  Clone(self: Profile) -> Profile
+
+  
+
    Returns a copy of this profile.
   """
   pass
@@ -26,18 +28,27 @@ class Profile(GeometryObject,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Curves=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Retrieve the curves that make up the boundary of the profile.
-
-Get: Curves(self: Profile) -> CurveArray
-
+ """Retrieve the curves that make up the boundary of the profile.
+
+
+
+Get: Curves(self: Profile) -> CurveArray
+
+
+
 """
 
  Filled=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get or set whether the profile is filled.
-
-Get: Filled(self: Profile) -> bool
-
-Set: Filled(self: Profile)=value
+ """Get or set whether the profile is filled.
+
+
+
+Get: Filled(self: Profile) -> bool
+
+
+
+Set: Filled(self: Profile)=value
+
 """
 
 

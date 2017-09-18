@@ -2,15 +2,19 @@ class EditScope(object,IDisposable):
  """ The base class for a scope object that provides special access and limitations related to editing certain elements. """
  def Cancel(self):
   """
-  Cancel(self: EditScope)
+  Cancel(self: EditScope)
+
    Cancels the edit scope.
   """
   pass
  def Commit(self,failurePreprocessor):
   """
-  Commit(self: EditScope,failurePreprocessor: IFailuresPreprocessor)
-   Finishes the edit scope.
-  
+  Commit(self: EditScope,failurePreprocessor: IFailuresPreprocessor)
+
+   Finishes the edit scope.
+
+  
+
    failurePreprocessor: Callback to be invoked in the beginning of failure processing.
   """
   pass
@@ -33,17 +37,25 @@ class EditScope(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsActive=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Tells if the EditScope is active. In other words,the EditScope has started but not committed/canceled yet.
-
-Get: IsActive(self: EditScope) -> bool
-
+ """Tells if the EditScope is active. In other words,the EditScope has started but not committed/canceled yet.
+
+
+
+Get: IsActive(self: EditScope) -> bool
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: EditScope) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: EditScope) -> bool
+
+
+
 """
 
 

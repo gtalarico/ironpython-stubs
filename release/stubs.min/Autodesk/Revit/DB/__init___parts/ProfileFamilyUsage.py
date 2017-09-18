@@ -1,7 +1,9 @@
 class ProfileFamilyUsage(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all types of profile families.
- 
+ An enumerated type listing all types of profile families.
+
+ 
+
  enum ProfileFamilyUsage,values: Any (0),ContinuousFooting (10),Fascia (3),Gutter (4),Mullion (8),Railing (6),Reveal (2),SlabEdge (5),SlabMetalDeck (9),StairNosing (7),StairRiser (12),StairSupport (13),StairTread (11),WallSweep (1)
  """
  def __eq__(self,*args):

@@ -1,9 +1,13 @@
 class ExportLinetypeKey(object,IDisposable):
  """
- A key used to represent an item stored in an Autodesk.Revit.DB.ExportLinetypeTable.
- 
- ExportLinetypeKey(originalLinetypeName: str)
- ExportLinetypeKey()
+ A key used to represent an item stored in an Autodesk.Revit.DB.ExportLinetypeTable.
+
+ 
+
+ ExportLinetypeKey(originalLinetypeName: str)
+
+ ExportLinetypeKey()
+
  ExportLinetypeKey(other: ExportLinetypeKey)
  """
  def Dispose(self):
@@ -24,8 +28,10 @@ class ExportLinetypeKey(object,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,originalLinetypeName: str)
-  __new__(cls: type)
+  __new__(cls: type,originalLinetypeName: str)
+
+  __new__(cls: type)
+
   __new__(cls: type,other: ExportLinetypeKey)
   """
   pass
@@ -33,18 +39,27 @@ class ExportLinetypeKey(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ExportLinetypeKey) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ExportLinetypeKey) -> bool
+
+
+
 """
 
  OriginalLinetypeName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The original linetype name.
-
-Get: OriginalLinetypeName(self: ExportLinetypeKey) -> str
-
-Set: OriginalLinetypeName(self: ExportLinetypeKey)=value
+ """The original linetype name.
+
+
+
+Get: OriginalLinetypeName(self: ExportLinetypeKey) -> str
+
+
+
+Set: OriginalLinetypeName(self: ExportLinetypeKey)=value
+
 """
 
 

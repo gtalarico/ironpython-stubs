@@ -1,9 +1,13 @@
 class gbXMLConditionType(Enum,IComparable,IFormattable,IConvertible):
  """
- This enumeration corresponds to the conditionType attribute in gbXML.
-    The enumerated attribute identifies the type of heating,cooling,
-    or ventilation the space has.
- 
+ This enumeration corresponds to the conditionType attribute in gbXML.
+
+    The enumerated attribute identifies the type of heating,cooling,
+
+    or ventilation the space has.
+
+ 
+
  enum gbXMLConditionType,values: Cooled (1),Heated (0),HeatedAndCooled (2),NaturallyVentedOnly (5),NoConditionType (-1),NoOfConditionTypes (6),Unconditioned (3),Vented (4)
  """
  def __eq__(self,*args):

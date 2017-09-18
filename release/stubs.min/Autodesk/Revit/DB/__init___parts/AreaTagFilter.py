@@ -1,7 +1,9 @@
 class AreaTagFilter(ElementSlowFilter,IDisposable):
  """
- A filter used to match area tags.
- 
+ A filter used to match area tags.
+
+ 
+
  AreaTagFilter()
  """
  def Dispose(self):

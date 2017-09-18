@@ -1,7 +1,9 @@
 class Base64FormattingOptions(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies whether relevant erload:System.Convert.ToBase64CharArray and erload:System.Convert.ToBase64String methods insert line breaks in their output.
- 
+ Specifies whether relevant erload:System.Convert.ToBase64CharArray and erload:System.Convert.ToBase64String methods insert line breaks in their output.
+
+ 
+
  enum (flags) Base64FormattingOptions,values: InsertLineBreaks (1),None (0)
  """
  def __eq__(self,*args):

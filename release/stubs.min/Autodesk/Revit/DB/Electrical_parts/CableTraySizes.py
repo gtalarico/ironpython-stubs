@@ -2,28 +2,40 @@ class CableTraySizes(Element,IDisposable,IEnumerable[MEPSize],IEnumerable):
  """ Cable tray sizes. """
  def AddSize(self,sizeInfo):
   """
-  AddSize(self: CableTraySizes,sizeInfo: MEPSize)
-   Inserts a new MEPSize into the cable tray sizes.
-     For cable tray,the 
-    nominal diameter of MEPSize is used .
-  
-  
+  AddSize(self: CableTraySizes,sizeInfo: MEPSize)
+
+   Inserts a new MEPSize into the cable tray sizes.
+
+     For cable tray,the 
+
+    nominal diameter of MEPSize is used .
+
+  
+
+  
+
    sizeInfo: The new MEPSize to be added.
   """
   pass
  def ClearAll(self):
   """
-  ClearAll(self: CableTraySizes)
+  ClearAll(self: CableTraySizes)
+
    Removes all MEPSizes in the cable tray sizes.
   """
   pass
  def Contains(self,nominalDiameter):
   """
-  Contains(self: CableTraySizes,nominalDiameter: float) -> bool
-  
-   Checks whether a cable tray size with the nominal diameter exists.
-  
-   nominalDiameter: Nominal diameter.
+  Contains(self: CableTraySizes,nominalDiameter: float) -> bool
+
+  
+
+   Checks whether a cable tray size with the nominal diameter exists.
+
+  
+
+   nominalDiameter: Nominal diameter.
+
    Returns: True if a cable tray size with the nominal diameter exists.
   """
   pass
@@ -36,33 +48,45 @@ class CableTraySizes(Element,IDisposable,IEnumerable[MEPSize],IEnumerable):
  @staticmethod
  def GetCableTraySizes(aDoc):
   """
-  GetCableTraySizes(aDoc: Document) -> CableTraySizes
-  
-   Gets the cable tray sizes of the project.
-  
-   aDoc: The document.
+  GetCableTraySizes(aDoc: Document) -> CableTraySizes
+
+  
+
+   Gets the cable tray sizes of the project.
+
+  
+
+   aDoc: The document.
+
    Returns: The cable tray sizes of the project.
   """
   pass
  def GetCableTraySizesIterator(self):
   """
-  GetCableTraySizesIterator(self: CableTraySizes) -> CableTraySizeIterator
-  
+  GetCableTraySizesIterator(self: CableTraySizes) -> CableTraySizeIterator
+
+  
+
    Returns a CableTraySizeIterator to the MEP cable tray sizes.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: CableTraySizes) -> IEnumerator[MEPSize]
-  
-   Returns an enumerator that iterates through a collection.
+  GetEnumerator(self: CableTraySizes) -> IEnumerator[MEPSize]
+
+  
+
+   Returns an enumerator that iterates through a collection.
+
    Returns: An IEnumerator object that can be used to iterate through the collection.
   """
   pass
  def GetSizeCount(self):
   """
-  GetSizeCount(self: CableTraySizes) -> int
-  
+  GetSizeCount(self: CableTraySizes) -> int
+
+  
+
    Gets the size count of the cable tray size table.
   """
   pass
@@ -71,12 +95,18 @@ class CableTraySizes(Element,IDisposable,IEnumerable[MEPSize],IEnumerable):
   pass
  def RemoveSize(self,sizeInfo):
   """
-  RemoveSize(self: CableTraySizes,sizeInfo: MEPSize)
-   Erases the existing MEPSize.
-     For cable tray,the nominal diameter is used 
-    in MEPSize.
-  
-  
+  RemoveSize(self: CableTraySizes,sizeInfo: MEPSize)
+
+   Erases the existing MEPSize.
+
+     For cable tray,the nominal diameter is used 
+
+    in MEPSize.
+
+  
+
+  
+
    sizeInfo: The MEPSize to be removed..
   """
   pass

@@ -1,17 +1,25 @@
 class FailureMessage(object,IDisposable):
  """
- Represents a message describing a failure of an operation in Revit.
- 
+ Represents a message describing a failure of an operation in Revit.
+
+ 
+
  FailureMessage(id: FailureDefinitionId)
  """
  def AddResolution(self,type,resolution):
   """
-  AddResolution(self: FailureMessage,type: FailureResolutionType,resolution: FailureResolution) -> FailureMessage
-  
-   Adds a resolution for the failure.
-  
-   type: The type of the resolution.
-   resolution: The resolution.
+  AddResolution(self: FailureMessage,type: FailureResolutionType,resolution: FailureResolution) -> FailureMessage
+
+  
+
+   Adds a resolution for the failure.
+
+  
+
+   type: The type of the resolution.
+
+   resolution: The resolution.
+
    Returns: The FailureMessage.
   """
   pass
@@ -20,67 +28,93 @@ class FailureMessage(object,IDisposable):
   pass
  def GetAdditionalElements(self):
   """
-  GetAdditionalElements(self: FailureMessage) -> ICollection[ElementId]
-  
-   Retrieves list of the additional reference elements for the failure.
+  GetAdditionalElements(self: FailureMessage) -> ICollection[ElementId]
+
+  
+
+   Retrieves list of the additional reference elements for the failure.
+
    Returns: The additional elements.
   """
   pass
  def GetDefaultResolutionCaption(self):
   """
-  GetDefaultResolutionCaption(self: FailureMessage) -> str
-  
-   Retrieves the caption of the default resolution of the failure.
+  GetDefaultResolutionCaption(self: FailureMessage) -> str
+
+  
+
+   Retrieves the caption of the default resolution of the failure.
+
    Returns: The caption of the default resolution of the failure.
   """
   pass
  def GetDescriptionText(self):
   """
-  GetDescriptionText(self: FailureMessage) -> str
-  
-   Retrieves the description text of the failure.
+  GetDescriptionText(self: FailureMessage) -> str
+
+  
+
+   Retrieves the description text of the failure.
+
    Returns: The description text.
   """
   pass
  def GetFailingElements(self):
   """
-  GetFailingElements(self: FailureMessage) -> ICollection[ElementId]
-  
-   Retrieves list of the elements that have caused the failure.
+  GetFailingElements(self: FailureMessage) -> ICollection[ElementId]
+
+  
+
+   Retrieves list of the elements that have caused the failure.
+
    Returns: The elements that have caused the failure.
   """
   pass
  def GetFailureDefinitionId(self):
   """
-  GetFailureDefinitionId(self: FailureMessage) -> FailureDefinitionId
-  
-   Retrieves the id of the failure definition for the failure.
+  GetFailureDefinitionId(self: FailureMessage) -> FailureDefinitionId
+
+  
+
+   Retrieves the id of the failure definition for the failure.
+
    Returns: The id of the FailureDefinition for the failure.
   """
   pass
  def GetSeverity(self):
   """
-  GetSeverity(self: FailureMessage) -> FailureSeverity
-  
-   Retrieves the severity of the failure.
+  GetSeverity(self: FailureMessage) -> FailureSeverity
+
+  
+
+   Retrieves the severity of the failure.
+
    Returns: The severity of the failure.
   """
   pass
  def HasResolutionOfType(self,type):
   """
-  HasResolutionOfType(self: FailureMessage,type: FailureResolutionType) -> bool
-  
-   Checks if failure has a resolution of a given type.
-  
-   type: The type of resolution.
+  HasResolutionOfType(self: FailureMessage,type: FailureResolutionType) -> bool
+
+  
+
+   Checks if failure has a resolution of a given type.
+
+  
+
+   type: The type of resolution.
+
    Returns: True if the failure has a type of resolutions,else false.
   """
   pass
  def HasResolutions(self):
   """
-  HasResolutions(self: FailureMessage) -> bool
-  
-   Checks if the failure has any resolutions.
+  HasResolutions(self: FailureMessage) -> bool
+
+  
+
+   Checks if the failure has any resolutions.
+
    Returns: True if the failure has any resolutions,false otherwise.
   """
   pass
@@ -89,11 +123,16 @@ class FailureMessage(object,IDisposable):
   pass
  def SetAdditionalElement(self,additionalElement):
   """
-  SetAdditionalElement(self: FailureMessage,additionalElement: ElementId) -> FailureMessage
-  
-   Sets the additional reference element for the failure.
-  
-   additionalElement: The additional element.
+  SetAdditionalElement(self: FailureMessage,additionalElement: ElementId) -> FailureMessage
+
+  
+
+   Sets the additional reference element for the failure.
+
+  
+
+   additionalElement: The additional element.
+
    Returns: The FailureMessage.
   """
   pass
@@ -102,11 +141,16 @@ class FailureMessage(object,IDisposable):
   pass
  def SetFailingElement(self,id):
   """
-  SetFailingElement(self: FailureMessage,id: ElementId) -> FailureMessage
-  
-   Sets the element that has caused the failure.
-  
-   id: The element that has caused the failure.
+  SetFailingElement(self: FailureMessage,id: ElementId) -> FailureMessage
+
+  
+
+   Sets the element that has caused the failure.
+
+  
+
+   id: The element that has caused the failure.
+
    Returns: The FailureMessage.
   """
   pass
@@ -130,10 +174,14 @@ class FailureMessage(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: FailureMessage) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: FailureMessage) -> bool
+
+
+
 """
 
 

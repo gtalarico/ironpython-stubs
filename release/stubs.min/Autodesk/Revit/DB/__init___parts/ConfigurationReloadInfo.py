@@ -1,7 +1,9 @@
 class ConfigurationReloadInfo(object,IDisposable):
  """
- This object contains information returned by a reload of the fabrication configuration.
- 
+ This object contains information returned by a reload of the fabrication configuration.
+
+ 
+
  ConfigurationReloadInfo()
  """
  def Dispose(self):
@@ -9,9 +11,12 @@ class ConfigurationReloadInfo(object,IDisposable):
   pass
  def GetConnectivityValidation(self):
   """
-  GetConnectivityValidation(self: ConfigurationReloadInfo) -> ConnectionValidationInfo
-  
-   Returns information about the post-reload connectivity validation.
+  GetConnectivityValidation(self: ConfigurationReloadInfo) -> ConnectionValidationInfo
+
+  
+
+   Returns information about the post-reload connectivity validation.
+
    Returns: Information about the post-reload connectivity validation.
   """
   pass
@@ -31,24 +36,36 @@ class ConfigurationReloadInfo(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Disconnects=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The number of disconnections caused by the reload.
-
-Get: Disconnects(self: ConfigurationReloadInfo) -> int
-
+ """The number of disconnections caused by the reload.
+
+
+
+Get: Disconnects(self: ConfigurationReloadInfo) -> int
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ConfigurationReloadInfo) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ConfigurationReloadInfo) -> bool
+
+
+
 """
 
  ProfileNotAvailable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The current profile is not available in the disk configuration.
-
-Get: ProfileNotAvailable(self: ConfigurationReloadInfo) -> bool
-
+ """The current profile is not available in the disk configuration.
+
+
+
+Get: ProfileNotAvailable(self: ConfigurationReloadInfo) -> bool
+
+
+
 """
 
 

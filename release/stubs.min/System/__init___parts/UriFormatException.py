@@ -1,9 +1,13 @@
 class UriFormatException(FormatException,ISerializable,_Exception):
  """
- The exception that is thrown when an invalid Uniform Resource Identifier (URI) is detected.
- 
- UriFormatException()
- UriFormatException(textString: str)
+ The exception that is thrown when an invalid Uniform Resource Identifier (URI) is detected.
+
+ 
+
+ UriFormatException()
+
+ UriFormatException(textString: str)
+
  UriFormatException(textString: str,e: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,9 +22,12 @@ class UriFormatException(FormatException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,textString=None,e=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,textString: str)
-  __new__(cls: type,textString: str,e: Exception)
+  __new__(cls: type)
+
+  __new__(cls: type,textString: str)
+
+  __new__(cls: type,textString: str,e: Exception)
+
   __new__(cls: type,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
   """
   pass

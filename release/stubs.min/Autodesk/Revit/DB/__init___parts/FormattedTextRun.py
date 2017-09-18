@@ -19,73 +19,113 @@ class FormattedTextRun(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  BaselineStyle=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies the style of the text as related to the baseline position.
-
-Get: BaselineStyle(self: FormattedTextRun) -> TextBaselineStyle
-
+ """Specifies the style of the text as related to the baseline position.
+
+
+
+Get: BaselineStyle(self: FormattedTextRun) -> TextBaselineStyle
+
+
+
 """
 
  Bold=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates whether this text run uses Bold text.
-
-Get: Bold(self: FormattedTextRun) -> bool
-
+ """Indicates whether this text run uses Bold text.
+
+
+
+Get: Bold(self: FormattedTextRun) -> bool
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: FormattedTextRun) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: FormattedTextRun) -> bool
+
+
+
 """
 
  Italic=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates whether this text run uses Italic text.
-
-Get: Italic(self: FormattedTextRun) -> bool
-
+ """Indicates whether this text run uses Italic text.
+
+
+
+Get: Italic(self: FormattedTextRun) -> bool
+
+
+
 """
 
  ListStyle=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies the style of a paragraph if the paragraph is a list.
-
-Get: ListStyle(self: FormattedTextRun) -> TextListStyle
-
+ """Specifies the style of a paragraph if the paragraph is a list.
+
+
+
+Get: ListStyle(self: FormattedTextRun) -> TextListStyle
+
+
+
 """
 
  NewLine=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates whether this text run starts on a new line.
-
-Get: NewLine(self: FormattedTextRun) -> bool
-
+ """Indicates whether this text run starts on a new line.
+
+
+
+Get: NewLine(self: FormattedTextRun) -> bool
+
+
+
 """
 
  NewParagraph=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates whether this text run starts a new paragraph.
-
-Get: NewParagraph(self: FormattedTextRun) -> bool
-
+ """Indicates whether this text run starts a new paragraph.
+
+
+
+Get: NewParagraph(self: FormattedTextRun) -> bool
+
+
+
 """
 
  TabNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """For a text run that starts at a tab stop,this value indicates the number of the tab stop.
-
-Get: TabNumber(self: FormattedTextRun) -> int
-
+ """For a text run that starts at a tab stop,this value indicates the number of the tab stop.
+
+
+
+Get: TabNumber(self: FormattedTextRun) -> int
+
+
+
 """
 
  Text=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The text segment in this text run.
-
-Get: Text(self: FormattedTextRun) -> str
-
+ """The text segment in this text run.
+
+
+
+Get: Text(self: FormattedTextRun) -> str
+
+
+
 """
 
  Underlined=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates whether this text run uses Underlined text.
-
-Get: Underlined(self: FormattedTextRun) -> bool
-
+ """Indicates whether this text run uses Underlined text.
+
+
+
+Get: Underlined(self: FormattedTextRun) -> bool
+
+
+
 """
 
 

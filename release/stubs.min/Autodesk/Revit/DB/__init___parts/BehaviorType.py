@@ -1,7 +1,9 @@
 class BehaviorType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all the behavior type for MEP Components.
- 
+ An enumerated type listing all the behavior type for MEP Components.
+
+ 
+
  enum BehaviorType,values: BaseObject (1024),Bend (2),Branch (4),BreakInto (32),Coupling (2097152),ElectricalBaseObject (65536),EndCap (2048),Flange (8192),Flat_Tap (1048576),Flex (262144),Hanger (524288),Inline (16),Intersection (8),Invalid (0),MechanicalCoupling (16384),Normal (1),OrientToCenterLine (128),OrientToFace (256),OrientToObject (64),Oval_CentreLine_Tap (8388608),Round_CentreLine_Tap (4194304),Straight (131072),SystemMember (512),Valve (4096),VerticalBend (32768)
  """
  def __eq__(self,*args):

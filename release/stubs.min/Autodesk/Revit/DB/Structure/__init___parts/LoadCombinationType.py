@@ -1,7 +1,9 @@
 class LoadCombinationType(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies load combination type.
- 
+ Specifies load combination type.
+
+ 
+
  enum LoadCombinationType,values: Combination (0),Envelope (1)
  """
  def __eq__(self,*args):

@@ -1,10 +1,15 @@
 class IOException(SystemException,ISerializable,_Exception):
  """
- The exception that is thrown when an I/O error occurs.
- 
- IOException()
- IOException(message: str)
- IOException(message: str,hresult: int)
+ The exception that is thrown when an I/O error occurs.
+
+ 
+
+ IOException()
+
+ IOException(message: str)
+
+ IOException(message: str,hresult: int)
+
  IOException(message: str,innerException: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -19,10 +24,14 @@ class IOException(SystemException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,*__args):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,hresult: int)
-  __new__(cls: type,message: str,innerException: Exception)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,hresult: int)
+
+  __new__(cls: type,message: str,innerException: Exception)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

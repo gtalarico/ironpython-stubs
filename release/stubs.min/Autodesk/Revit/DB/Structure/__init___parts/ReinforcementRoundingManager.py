@@ -19,32 +19,49 @@ class ReinforcementRoundingManager(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Element=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The owner of the reinforcement rounding overrides.
-
-Get: Element(self: ReinforcementRoundingManager) -> Element
-
+ """The owner of the reinforcement rounding overrides.
+
+
+
+Get: Element(self: ReinforcementRoundingManager) -> Element
+
+
+
 """
 
  IsActiveOnElement=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Defines whether reinforcement rounding is activated for the particular element.
-
-Get: IsActiveOnElement(self: ReinforcementRoundingManager) -> bool
-
-Set: IsActiveOnElement(self: ReinforcementRoundingManager)=value
+ """Defines whether reinforcement rounding is activated for the particular element.
+
+
+
+Get: IsActiveOnElement(self: ReinforcementRoundingManager) -> bool
+
+
+
+Set: IsActiveOnElement(self: ReinforcementRoundingManager)=value
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ReinforcementRoundingManager) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ReinforcementRoundingManager) -> bool
+
+
+
 """
 
  LengthDisplayUnit=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The length units used when displaying the reinforcement rounding values.
-
-Get: LengthDisplayUnit(self: ReinforcementRoundingManager) -> DisplayUnitType
-
+ """The length units used when displaying the reinforcement rounding values.
+
+
+
+Get: LengthDisplayUnit(self: ReinforcementRoundingManager) -> DisplayUnitType
+
+
+
 """
 
 

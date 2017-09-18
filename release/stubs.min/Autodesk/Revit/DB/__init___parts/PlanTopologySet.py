@@ -1,22 +1,30 @@
 class PlanTopologySet(APIObject,IDisposable,IEnumerable):
  """
- A set that can contain any number of plan topology objects.
- 
+ A set that can contain any number of plan topology objects.
+
+ 
+
  PlanTopologySet()
  """
  def Clear(self):
   """
-  Clear(self: PlanTopologySet)
+  Clear(self: PlanTopologySet)
+
    Removes every item from the set,rendering it empty.
   """
   pass
  def Contains(self,item):
   """
-  Contains(self: PlanTopologySet,item: PlanTopology) -> bool
-  
-   Tests for the existence of an item within the set.
-  
-   item: The item to be searched for.
+  Contains(self: PlanTopologySet,item: PlanTopology) -> bool
+
+  
+
+   Tests for the existence of an item within the set.
+
+  
+
+   item: The item to be searched for.
+
    Returns: The Contains method returns True if the item is within the set,otherwise False.
   """
   pass
@@ -25,37 +33,53 @@ class PlanTopologySet(APIObject,IDisposable,IEnumerable):
   pass
  def Erase(self,item):
   """
-  Erase(self: PlanTopologySet,item: PlanTopology) -> int
-  
-   Removes a specified object from the set.
-  
-   item: The item to be erased.
+  Erase(self: PlanTopologySet,item: PlanTopology) -> int
+
+  
+
+   Removes a specified object from the set.
+
+  
+
+   item: The item to be erased.
+
    Returns: The number of items that were erased from the set.
   """
   pass
  def ForwardIterator(self):
   """
-  ForwardIterator(self: PlanTopologySet) -> PlanTopologySetIterator
-  
-   Retrieve a forward moving iterator to the set.
+  ForwardIterator(self: PlanTopologySet) -> PlanTopologySetIterator
+
+  
+
+   Retrieve a forward moving iterator to the set.
+
    Returns: Returns a forward moving iterator to the set.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: PlanTopologySet) -> IEnumerator
-  
-   Retrieve a forward moving iterator to the set.
+  GetEnumerator(self: PlanTopologySet) -> IEnumerator
+
+  
+
+   Retrieve a forward moving iterator to the set.
+
    Returns: Returns a forward moving iterator to the set.
   """
   pass
  def Insert(self,item):
   """
-  Insert(self: PlanTopologySet,item: PlanTopology) -> bool
-  
-   Insert the specified item into the set.
-  
-   item: The item to be inserted into the set.
+  Insert(self: PlanTopologySet,item: PlanTopology) -> bool
+
+  
+
+   Insert the specified item into the set.
+
+  
+
+   item: The item to be inserted into the set.
+
    Returns: Returns whether the item was inserted into the set.
   """
   pass
@@ -67,9 +91,12 @@ class PlanTopologySet(APIObject,IDisposable,IEnumerable):
   pass
  def ReverseIterator(self):
   """
-  ReverseIterator(self: PlanTopologySet) -> PlanTopologySetIterator
-  
-   Retrieve a backward moving iterator to the set.
+  ReverseIterator(self: PlanTopologySet) -> PlanTopologySetIterator
+
+  
+
+   Retrieve a backward moving iterator to the set.
+
    Returns: Returns a backward moving iterator to the set.
   """
   pass
@@ -86,17 +113,25 @@ class PlanTopologySet(APIObject,IDisposable,IEnumerable):
   """ __iter__(self: IEnumerable) -> object """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Test to see if the set is empty.
-
-Get: IsEmpty(self: PlanTopologySet) -> bool
-
+ """Test to see if the set is empty.
+
+
+
+Get: IsEmpty(self: PlanTopologySet) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the number of objects that are in the set.
-
-Get: Size(self: PlanTopologySet) -> int
-
+ """Returns the number of objects that are in the set.
+
+
+
+Get: Size(self: PlanTopologySet) -> int
+
+
+
 """
 
 

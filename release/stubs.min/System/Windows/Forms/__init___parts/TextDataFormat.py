@@ -1,7 +1,9 @@
 class TextDataFormat(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the formats used with text-related methods of the System.Windows.Forms.Clipboard and System.Windows.Forms.DataObject classes.
- 
+ Specifies the formats used with text-related methods of the System.Windows.Forms.Clipboard and System.Windows.Forms.DataObject classes.
+
+ 
+
  enum TextDataFormat,values: CommaSeparatedValue (4),Html (3),Rtf (2),Text (0),UnicodeText (1)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class SelectionFilterAction(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type containing the type of actions that may be taken with a selection filter applied to a point cloud.
- 
+ An enumerated type containing the type of actions that may be taken with a selection filter applied to a point cloud.
+
+ 
+
  enum SelectionFilterAction,values: Highlight (1),Isolate (2),None (0)
  """
  def __eq__(self,*args):

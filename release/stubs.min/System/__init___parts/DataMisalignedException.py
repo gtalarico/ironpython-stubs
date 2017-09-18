@@ -1,9 +1,13 @@
 class DataMisalignedException(SystemException,ISerializable,_Exception):
  """
- The exception that is thrown when a unit of data is read from or written to an address that is not a multiple of the data size. This class cannot be inherited.
- 
- DataMisalignedException()
- DataMisalignedException(message: str)
+ The exception that is thrown when a unit of data is read from or written to an address that is not a multiple of the data size. This class cannot be inherited.
+
+ 
+
+ DataMisalignedException()
+
+ DataMisalignedException(message: str)
+
  DataMisalignedException(message: str,innerException: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,8 +22,10 @@ class DataMisalignedException(SystemException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,innerException=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
   __new__(cls: type,message: str,innerException: Exception)
   """
   pass

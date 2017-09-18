@@ -1,7 +1,9 @@
 class StringFormatFlags(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the display and layout information for text strings.
- 
+ Specifies the display and layout information for text strings.
+
+ 
+
  enum (flags) StringFormatFlags,values: DirectionRightToLeft (1),DirectionVertical (2),DisplayFormatControl (32),FitBlackBox (4),LineLimit (8192),MeasureTrailingSpaces (2048),NoClip (16384),NoFontFallback (1024),NoWrap (4096)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class Domain(Enum,IComparable,IFormattable,IConvertible):
  """
- Enumeration of connector domain types
- 
+ Enumeration of connector domain types
+
+ 
+
  enum Domain,values: DomainCableTrayConduit (4),DomainElectrical (2),DomainHvac (1),DomainPiping (3),DomainUndefined (0)
  """
  def __eq__(self,*args):

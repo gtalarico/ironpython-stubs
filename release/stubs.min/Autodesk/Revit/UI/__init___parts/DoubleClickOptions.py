@@ -5,31 +5,45 @@ class DoubleClickOptions(object,IDisposable):
   pass
  def GetAction(self,target):
   """
-  GetAction(self: DoubleClickOptions,target: DoubleClickTarget) -> DoubleClickAction
-  
-   Returns the active user's desired action for a particular double-click target.
-  
-   target: The target to check.
+  GetAction(self: DoubleClickOptions,target: DoubleClickTarget) -> DoubleClickAction
+
+  
+
+   Returns the active user's desired action for a particular double-click target.
+
+  
+
+   target: The target to check.
+
    Returns: The user's desired action for the specified target.
   """
   pass
  @staticmethod
  def GetDoubleClickOptions():
   """
-  GetDoubleClickOptions() -> DoubleClickOptions
-  
-   Returns the current user's DoubleClickOptions.
+  GetDoubleClickOptions() -> DoubleClickOptions
+
+  
+
+   Returns the current user's DoubleClickOptions.
+
    Returns: The DoubleClickOptions for the current user.
   """
   pass
  def IsSupportedAction(self,target,action):
   """
-  IsSupportedAction(self: DoubleClickOptions,target: DoubleClickTarget,action: DoubleClickAction) -> bool
-  
-   Checks whether the specified double-click target supports the specified action.
-  
-   target: The double-click target to check.
-   action: The desired double-click action.
+  IsSupportedAction(self: DoubleClickOptions,target: DoubleClickTarget,action: DoubleClickAction) -> bool
+
+  
+
+   Checks whether the specified double-click target supports the specified action.
+
+  
+
+   target: The double-click target to check.
+
+   action: The desired double-click action.
+
    Returns: True if the target supports the specified action,false otherwise.
   """
   pass
@@ -38,10 +52,14 @@ class DoubleClickOptions(object,IDisposable):
   pass
  def SetAction(self,target,action):
   """
-  SetAction(self: DoubleClickOptions,target: DoubleClickTarget,action: DoubleClickAction)
-   Changes the double-click action associated with a specified target.
-  
-   target: The double-click target whose action will be changed.
+  SetAction(self: DoubleClickOptions,target: DoubleClickTarget,action: DoubleClickAction)
+
+   Changes the double-click action associated with a specified target.
+
+  
+
+   target: The double-click target whose action will be changed.
+
    action: The action to assign to the target.
   """
   pass
@@ -58,10 +76,14 @@ class DoubleClickOptions(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: DoubleClickOptions) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: DoubleClickOptions) -> bool
+
+
+
 """
 
 

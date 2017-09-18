@@ -8,9 +8,12 @@ class ParameterElement(Element,IDisposable):
   pass
  def GetDefinition(self):
   """
-  GetDefinition(self: ParameterElement) -> InternalDefinition
-  
-   Get the definition representing this parameter element.
+  GetDefinition(self: ParameterElement) -> InternalDefinition
+
+  
+
+   Get the definition representing this parameter element.
+
    Returns: The parameter.
   """
   pass

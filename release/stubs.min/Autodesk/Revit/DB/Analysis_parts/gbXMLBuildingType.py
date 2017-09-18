@@ -1,8 +1,11 @@
 class gbXMLBuildingType(Enum,IComparable,IFormattable,IConvertible):
  """
- This enumeration corresponds to the buildingType attribute in gbXML and
-    is used to specify the most predominant building use type.
- 
+ This enumeration corresponds to the buildingType attribute in gbXML and
+
+    is used to specify the most predominant building use type.
+
+ 
+
  enum gbXMLBuildingType,values: AutomotiveFacility (0),ConventionCenter (1),Courthouse (2),DiningBarLoungeOrLeisure (3),DiningCafeteriaFastFood (4),DiningFamily (5),Dormitory (6),ExerciseCenter (7),FireStation (8),Gymnasium (9),HospitalOrHealthcare (10),Hotel (11),Library (12),Manufacturing (13),Motel (14),MotionPictureTheatre (15),MultiFamily (16),Museum (17),NoBuildingType (-1),NoOfBuildingTypes (33),Office (18),ParkingGarage (19),Penitentiary (20),PerformingArtsTheater (21),PoliceStation (22),PostOffice (23),ReligiousBuilding (24),Retail (25),SchoolOrUniversity (26),SingleFamily (27),SportsArena (28),TownHall (29),Transportation (30),Warehouse (31),Workshop (32)
  """
  def __eq__(self,*args):

@@ -1,9 +1,13 @@
 class StackOverflowException(SystemException,ISerializable,_Exception):
  """
- The exception that is thrown when the execution stack overflows because it contains too many nested method calls. This class cannot be inherited.
- 
- StackOverflowException()
- StackOverflowException(message: str)
+ The exception that is thrown when the execution stack overflows because it contains too many nested method calls. This class cannot be inherited.
+
+ 
+
+ StackOverflowException()
+
+ StackOverflowException(message: str)
+
  StackOverflowException(message: str,innerException: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,8 +22,10 @@ class StackOverflowException(SystemException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,innerException=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
   __new__(cls: type,message: str,innerException: Exception)
   """
   pass

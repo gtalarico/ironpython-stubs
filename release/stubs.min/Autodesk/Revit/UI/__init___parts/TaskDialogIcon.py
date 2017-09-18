@@ -1,7 +1,9 @@
 class TaskDialogIcon(Enum,IComparable,IFormattable,IConvertible):
  """
- Standard icons to be used in the task dialog.
- 
+ Standard icons to be used in the task dialog.
+
+ 
+
  enum TaskDialogIcon,values: TaskDialogIconNone (0),TaskDialogIconWarning (65535)
  """
  def __eq__(self,*args):

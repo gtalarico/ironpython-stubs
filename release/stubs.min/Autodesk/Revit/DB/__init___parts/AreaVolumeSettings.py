@@ -6,11 +6,16 @@ class AreaVolumeSettings(Element,IDisposable):
  @staticmethod
  def GetAreaVolumeSettings(aDoc):
   """
-  GetAreaVolumeSettings(aDoc: Document) -> AreaVolumeSettings
-  
-   Get the area and volume settings of the project.
-  
-   aDoc: The document.
+  GetAreaVolumeSettings(aDoc: Document) -> AreaVolumeSettings
+
+  
+
+   Get the area and volume settings of the project.
+
+  
+
+   aDoc: The document.
+
    Returns: The area and volume settings of the project.
   """
   pass
@@ -19,11 +24,16 @@ class AreaVolumeSettings(Element,IDisposable):
   pass
  def GetSpatialElementBoundaryLocation(self,spType):
   """
-  GetSpatialElementBoundaryLocation(self: AreaVolumeSettings,spType: SpatialElementType) -> SpatialElementBoundaryLocation
-  
-   Gets the spatial element boundary location based on spatial element type.
-  
-   spType: The spatial element type.
+  GetSpatialElementBoundaryLocation(self: AreaVolumeSettings,spType: SpatialElementType) -> SpatialElementBoundaryLocation
+
+  
+
+   Gets the spatial element boundary location based on spatial element type.
+
+  
+
+   spType: The spatial element type.
+
    Returns: The boundary location.
   """
   pass
@@ -35,10 +45,14 @@ class AreaVolumeSettings(Element,IDisposable):
   pass
  def SetSpatialElementBoundaryLocation(self,spatialElementBoundaryLocation,spType):
   """
-  SetSpatialElementBoundaryLocation(self: AreaVolumeSettings,spatialElementBoundaryLocation: SpatialElementBoundaryLocation,spType: SpatialElementType)
-   Sets the spatial element boundary location of a spatial element type.
-  
-   spatialElementBoundaryLocation: The boundary location.
+  SetSpatialElementBoundaryLocation(self: AreaVolumeSettings,spatialElementBoundaryLocation: SpatialElementBoundaryLocation,spType: SpatialElementType)
+
+   Sets the spatial element boundary location of a spatial element type.
+
+  
+
+   spatialElementBoundaryLocation: The boundary location.
+
    spType: The spatial element type.
   """
   pass
@@ -52,11 +66,16 @@ class AreaVolumeSettings(Element,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  ComputeVolumes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """True to enable volume computation.  False to disable it.
-
-Get: ComputeVolumes(self: AreaVolumeSettings) -> bool
-
-Set: ComputeVolumes(self: AreaVolumeSettings)=value
+ """True to enable volume computation.  False to disable it.
+
+
+
+Get: ComputeVolumes(self: AreaVolumeSettings) -> bool
+
+
+
+Set: ComputeVolumes(self: AreaVolumeSettings)=value
+
 """
 
 

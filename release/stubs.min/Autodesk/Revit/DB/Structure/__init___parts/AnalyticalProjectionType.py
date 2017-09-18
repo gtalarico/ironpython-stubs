@@ -1,8 +1,11 @@
 class AnalyticalProjectionType(Enum,IComparable,IFormattable,IConvertible):
  """
- Presets for given Analytical Projection.  Combined with AnalyticalDirection,this abstracts
-    Analytical Projections for all Structural Elements
- 
+ Presets for given Analytical Projection.  Combined with AnalyticalDirection,this abstracts
+
+    Analytical Projections for all Structural Elements
+
+ 
+
  enum AnalyticalProjectionType,values: AutoDetect (5),Bottom (2),Center (1),CenterOfCore (11),DatumPlane (8),Default (10),Invalid (6),LocationLine (12),NotApplicable (9),SideOne (3),SideTwo (4),SketchCurve (7),Top (0),Varies (13)
  """
  def __eq__(self,*args):

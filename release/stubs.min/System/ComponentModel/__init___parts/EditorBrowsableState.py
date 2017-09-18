@@ -1,7 +1,9 @@
 class EditorBrowsableState(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the browsable state of a property or method from within an editor.
- 
+ Specifies the browsable state of a property or method from within an editor.
+
+ 
+
  enum EditorBrowsableState,values: Advanced (2),Always (0),Never (1)
  """
  def __eq__(self,*args):

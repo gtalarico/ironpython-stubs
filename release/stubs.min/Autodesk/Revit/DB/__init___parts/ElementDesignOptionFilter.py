@@ -1,8 +1,11 @@
 class ElementDesignOptionFilter(ElementQuickFilter,IDisposable):
  """
- A filter used to find elements contained within a particular design option.
- 
- ElementDesignOptionFilter(designOptionId: ElementId,inverted: bool)
+ A filter used to find elements contained within a particular design option.
+
+ 
+
+ ElementDesignOptionFilter(designOptionId: ElementId,inverted: bool)
+
  ElementDesignOptionFilter(designOptionId: ElementId)
  """
  def Dispose(self):
@@ -23,15 +26,20 @@ class ElementDesignOptionFilter(ElementQuickFilter,IDisposable):
  @staticmethod
  def __new__(self,designOptionId,inverted=None):
   """
-  __new__(cls: type,designOptionId: ElementId,inverted: bool)
+  __new__(cls: type,designOptionId: ElementId,inverted: bool)
+
   __new__(cls: type,designOptionId: ElementId)
   """
   pass
  DesignOptionId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The design option id.
-
-Get: DesignOptionId(self: ElementDesignOptionFilter) -> ElementId
-
+ """The design option id.
+
+
+
+Get: DesignOptionId(self: ElementDesignOptionFilter) -> ElementId
+
+
+
 """
 
 

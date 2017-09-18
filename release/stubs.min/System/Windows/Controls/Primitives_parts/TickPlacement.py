@@ -1,7 +1,9 @@
 class TickPlacement(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the position of tick marks in a System.Windows.Controls.Slider control with respect to the System.Windows.Controls.Primitives.Track that the control implements.
- 
+ Specifies the position of tick marks in a System.Windows.Controls.Slider control with respect to the System.Windows.Controls.Primitives.Track that the control implements.
+
+ 
+
  enum TickPlacement,values: Both (3),BottomRight (2),None (0),TopLeft (1)
  """
  def __eq__(self,*args):

@@ -2,15 +2,19 @@ class IExternalEventHandler:
  """ An interface to be executed when an external event is raised. """
  def Execute(self,app):
   """
-  Execute(self: IExternalEventHandler,app: UIApplication)
+  Execute(self: IExternalEventHandler,app: UIApplication)
+
    This method is called to handle the external event.
   """
   pass
  def GetName(self):
   """
-  GetName(self: IExternalEventHandler) -> str
-  
-   String identification of the event handler.
+  GetName(self: IExternalEventHandler) -> str
+
+  
+
+   String identification of the event handler.
+
    Returns: The event's name
   """
   pass

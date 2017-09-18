@@ -1,7 +1,9 @@
 class AnalyticalSupportType(Enum,IComparable,IFormattable,IConvertible):
  """
- Indicates what kind of support another Element provides -- Point,Surface,or Curve.
- 
+ Indicates what kind of support another Element provides -- Point,Surface,or Curve.
+
+ 
+
  enum AnalyticalSupportType,values: CurveSupport (2),PointSupport (1),SurfaceSupport (3),UnknownSupport (0)
  """
  def __eq__(self,*args):

@@ -1,8 +1,11 @@
 class IntegerParameterValue(ParameterValue,IDisposable):
  """
- A class that holds an Integer value of a parameter element.
- 
- IntegerParameterValue(value: int)
+ A class that holds an Integer value of a parameter element.
+
+ 
+
+ IntegerParameterValue(value: int)
+
  IntegerParameterValue()
  """
  def Dispose(self):
@@ -23,16 +26,22 @@ class IntegerParameterValue(ParameterValue,IDisposable):
  @staticmethod
  def __new__(self,value=None):
   """
-  __new__(cls: type,value: int)
+  __new__(cls: type,value: int)
+
   __new__(cls: type)
   """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The stored value
-
-Get: Value(self: IntegerParameterValue) -> int
-
-Set: Value(self: IntegerParameterValue)=value
+ """The stored value
+
+
+
+Get: Value(self: IntegerParameterValue) -> int
+
+
+
+Set: Value(self: IntegerParameterValue)=value
+
 """
 
 

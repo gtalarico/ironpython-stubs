@@ -1,7 +1,9 @@
 class StructuralType(Enum,IComparable,IFormattable,IConvertible):
  """
- Represents the structural type of a family instance.
- 
+ Represents the structural type of a family instance.
+
+ 
+
  enum StructuralType,values: Beam (1),Brace (2),Column (3),Footing (4),NonStructural (0),UnknownFraming (5)
  """
  def __eq__(self,*args):

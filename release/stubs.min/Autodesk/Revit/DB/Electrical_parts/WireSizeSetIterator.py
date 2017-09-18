@@ -1,7 +1,9 @@
 class WireSizeSetIterator(APIObject,IDisposable,IEnumerator):
  """
- An iterator to a wire size set.
- 
+ An iterator to a wire size set.
+
+ 
+
  WireSizeSetIterator()
  """
  def Dispose(self):
@@ -9,13 +11,20 @@ class WireSizeSetIterator(APIObject,IDisposable,IEnumerator):
   pass
  def MoveNext(self):
   """
-  MoveNext(self: WireSizeSetIterator) -> bool
-  
-   Move the iterator one item forward.
-   Returns: Returns True if the iterator was successfully moved forward one item and the 
-    Current
-     property will return a valid item. False will be returned 
-    it the iterator has reached the end of
+  MoveNext(self: WireSizeSetIterator) -> bool
+
+  
+
+   Move the iterator one item forward.
+
+   Returns: Returns True if the iterator was successfully moved forward one item and the 
+
+    Current
+
+     property will return a valid item. False will be returned 
+
+    it the iterator has reached the end of
+
      the set.
   """
   pass
@@ -30,7 +39,8 @@ class WireSizeSetIterator(APIObject,IDisposable,IEnumerator):
   pass
  def Reset(self):
   """
-  Reset(self: WireSizeSetIterator)
+  Reset(self: WireSizeSetIterator)
+
    Bring the iterator back to the start of the set.
   """
   pass
@@ -47,10 +57,14 @@ class WireSizeSetIterator(APIObject,IDisposable,IEnumerator):
   """ __iter__(self: IEnumerator) -> object """
   pass
  Current=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Retrieves the item that is the current focus of the iterator.
-
-Get: Current(self: WireSizeSetIterator) -> object
-
+ """Retrieves the item that is the current focus of the iterator.
+
+
+
+Get: Current(self: WireSizeSetIterator) -> object
+
+
+
 """
 
 

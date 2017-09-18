@@ -5,20 +5,29 @@ class DocumentPreviewSettings(object,IDisposable):
   pass
  def ForceViewUpdate(self,forceViewUpdate):
   """
-  ForceViewUpdate(self: DocumentPreviewSettings,forceViewUpdate: bool)
-   Sets Revit to update the preview view if necessary.
-  
-   forceViewUpdate: True to force update of the preview view.  False to skip update if necessary 
+  ForceViewUpdate(self: DocumentPreviewSettings,forceViewUpdate: bool)
+
+   Sets Revit to update the preview view if necessary.
+
+  
+
+   forceViewUpdate: True to force update of the preview view.  False to skip update if necessary 
+
     (the default).
   """
   pass
  def IsViewIdValidForPreview(self,viewId):
   """
-  IsViewIdValidForPreview(self: DocumentPreviewSettings,viewId: ElementId) -> bool
-  
-   Identifies if the view id is valid as a preview view id.
-  
-   viewId: The view id.
+  IsViewIdValidForPreview(self: DocumentPreviewSettings,viewId: ElementId) -> bool
+
+  
+
+   Identifies if the view id is valid as a preview view id.
+
+  
+
+   viewId: The view id.
+
    Returns: True if the view id is valid for preview,false otherwise.
   """
   pass
@@ -38,25 +47,38 @@ class DocumentPreviewSettings(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: DocumentPreviewSettings) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: DocumentPreviewSettings) -> bool
+
+
+
 """
 
  IsViewUpdateForced=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Identifies if Revit will update the preview view if necessary.
-
-Get: IsViewUpdateForced(self: DocumentPreviewSettings) -> bool
-
+ """Identifies if Revit will update the preview view if necessary.
+
+
+
+Get: IsViewUpdateForced(self: DocumentPreviewSettings) -> bool
+
+
+
 """
 
  PreviewViewId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The view id that will be used to generate the preview.
-
-Get: PreviewViewId(self: DocumentPreviewSettings) -> ElementId
-
-Set: PreviewViewId(self: DocumentPreviewSettings)=value
+ """The view id that will be used to generate the preview.
+
+
+
+Get: PreviewViewId(self: DocumentPreviewSettings) -> ElementId
+
+
+
+Set: PreviewViewId(self: DocumentPreviewSettings)=value
+
 """
 
 

@@ -1,7 +1,9 @@
 class UnhandledExceptionMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines where a Windows Forms application should send unhandled exceptions.
- 
+ Defines where a Windows Forms application should send unhandled exceptions.
+
+ 
+
  enum UnhandledExceptionMode,values: Automatic (0),CatchException (2),ThrowException (1)
  """
  def __eq__(self,*args):

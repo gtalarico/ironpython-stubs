@@ -1,6 +1,7 @@
 class ItemContainerTemplateKey(TemplateKey,ISupportInitialize):
  """
- ItemContainerTemplateKey()
+ ItemContainerTemplateKey()
+
  ItemContainerTemplateKey(dataType: object)
  """
  def __init__(self,*args):
@@ -9,7 +10,8 @@ class ItemContainerTemplateKey(TemplateKey,ISupportInitialize):
  @staticmethod
  def __new__(self,dataType=None):
   """
-  __new__(cls: type)
+  __new__(cls: type)
+
   __new__(cls: type,dataType: object)
   """
   pass

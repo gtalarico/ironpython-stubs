@@ -1,7 +1,9 @@
 class FabricSheetLayoutPattern(Enum,IComparable,IFormattable,IConvertible):
  """
- The pattern for how the wires in Fabric Sheet are laid out.
- 
+ The pattern for how the wires in Fabric Sheet are laid out.
+
+ 
+
  enum FabricSheetLayoutPattern,values: ActualSpacing (0),FixedNumber (1),MaximumSpacing (2),NumberWithSpacing (3),QuantitativeSpacing (4)
  """
  def __eq__(self,*args):

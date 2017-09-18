@@ -5,9 +5,12 @@ class RebarShapeVertex(object,IDisposable):
   pass
  def GetConstraints(self):
   """
-  GetConstraints(self: RebarShapeVertex) -> IList[RebarShapeConstraint]
-  
-   Retrieve the list of constraints associated with this vertex.
+  GetConstraints(self: RebarShapeVertex) -> IList[RebarShapeConstraint]
+
+  
+
+   Retrieve the list of constraints associated with this vertex.
+
    Returns: The list of constraints.
   """
   pass
@@ -30,28 +33,44 @@ class RebarShapeVertex(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  BendAngle=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The range of permissible angles at this bend.
-
-Get: BendAngle(self: RebarShapeVertex) -> RebarShapeBendAngle
-
-Set: BendAngle(self: RebarShapeVertex)=value
+ """The range of permissible angles at this bend.
+
+
+
+Get: BendAngle(self: RebarShapeVertex) -> RebarShapeBendAngle
+
+
+
+Set: BendAngle(self: RebarShapeVertex)=value
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: RebarShapeVertex) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: RebarShapeVertex) -> bool
+
+
+
 """
 
  Turn=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The sense of the turn. The Turn property must be set to Left or Right on each internal vertex
-   before the RebarShapeDefinitionBySegments is used.
-   Default is permissible for the first and last vertex,since they do not correspond to bends.
-
-Get: Turn(self: RebarShapeVertex) -> RebarShapeVertexTurn
-
-Set: Turn(self: RebarShapeVertex)=value
+ """The sense of the turn. The Turn property must be set to Left or Right on each internal vertex
+
+   before the RebarShapeDefinitionBySegments is used.
+
+   Default is permissible for the first and last vertex,since they do not correspond to bends.
+
+
+
+Get: Turn(self: RebarShapeVertex) -> RebarShapeVertexTurn
+
+
+
+Set: Turn(self: RebarShapeVertex)=value
+
 """
 
 

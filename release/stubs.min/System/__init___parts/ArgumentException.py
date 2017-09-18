@@ -1,11 +1,17 @@
 class ArgumentException(SystemException,ISerializable,_Exception):
  """
- The exception that is thrown when one of the arguments provided to a method is not valid.
- 
- ArgumentException()
- ArgumentException(message: str)
- ArgumentException(message: str,innerException: Exception)
- ArgumentException(message: str,paramName: str,innerException: Exception)
+ The exception that is thrown when one of the arguments provided to a method is not valid.
+
+ 
+
+ ArgumentException()
+
+ ArgumentException(message: str)
+
+ ArgumentException(message: str,innerException: Exception)
+
+ ArgumentException(message: str,paramName: str,innerException: Exception)
+
  ArgumentException(message: str,paramName: str)
  """
  def add_SerializeObjectState(self,*args):
@@ -13,12 +19,18 @@ class ArgumentException(SystemException,ISerializable,_Exception):
   pass
  def GetObjectData(self,info,context):
   """
-  GetObjectData(self: ArgumentException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo object with the parameter name and 
-    additional exception information.
-  
-  
-   info: The object that holds the serialized object data.
+  GetObjectData(self: ArgumentException,info: SerializationInfo,context: StreamingContext)
+
+   Sets the System.Runtime.Serialization.SerializationInfo object with the parameter name and 
+
+    additional exception information.
+
+  
+
+  
+
+   info: The object that holds the serialized object data.
+
    context: The contextual information about the source or destination.
   """
   pass
@@ -31,11 +43,16 @@ class ArgumentException(SystemException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,*__args):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,innerException: Exception)
-  __new__(cls: type,message: str,paramName: str,innerException: Exception)
-  __new__(cls: type,message: str,paramName: str)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,innerException: Exception)
+
+  __new__(cls: type,message: str,paramName: str,innerException: Exception)
+
+  __new__(cls: type,message: str,paramName: str)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass
@@ -44,17 +61,25 @@ class ArgumentException(SystemException,ISerializable,_Exception):
  def __str__(self,*args):
   pass
  Message=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the error message and the parameter name,or only the error message if no parameter name is set.
-
-Get: Message(self: ArgumentException) -> str
-
+ """Gets the error message and the parameter name,or only the error message if no parameter name is set.
+
+
+
+Get: Message(self: ArgumentException) -> str
+
+
+
 """
 
  ParamName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the name of the parameter that causes this exception.
-
-Get: ParamName(self: ArgumentException) -> str
-
+ """Gets the name of the parameter that causes this exception.
+
+
+
+Get: ParamName(self: ArgumentException) -> str
+
+
+
 """
 
 

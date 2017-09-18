@@ -1,9 +1,13 @@
 class NotSupportedException(SystemException,ISerializable,_Exception):
  """
- The exception that is thrown when an invoked method is not supported,or when there is an attempt to read,seek,or write to a stream that does not support the invoked functionality.
- 
- NotSupportedException()
- NotSupportedException(message: str)
+ The exception that is thrown when an invoked method is not supported,or when there is an attempt to read,seek,or write to a stream that does not support the invoked functionality.
+
+ 
+
+ NotSupportedException()
+
+ NotSupportedException(message: str)
+
  NotSupportedException(message: str,innerException: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,9 +22,12 @@ class NotSupportedException(SystemException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,innerException=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,innerException: Exception)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,innerException: Exception)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

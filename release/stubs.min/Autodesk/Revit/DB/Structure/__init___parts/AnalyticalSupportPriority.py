@@ -1,7 +1,9 @@
 class AnalyticalSupportPriority(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines how "highly" another Element is giving support for one Element.
- 
+ Defines how "highly" another Element is giving support for one Element.
+
+ 
+
  enum AnalyticalSupportPriority,values: FourthHigestPriority (4),HighestPriority (1),SecondHighestPriority (2),ThirdHighestPriority (3),UnknownPriority (0)
  """
  def __eq__(self,*args):

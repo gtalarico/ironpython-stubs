@@ -1,9 +1,13 @@
 class RebarStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Describes the usage style of a RebarShape.
-    The style affects the bend radius and the set of allowable hooks.
-    It also affects Rebar instance auto-constraining behavior.
- 
+ Describes the usage style of a RebarShape.
+
+    The style affects the bend radius and the set of allowable hooks.
+
+    It also affects Rebar instance auto-constraining behavior.
+
+ 
+
  enum RebarStyle,values: Standard (0),StirrupTie (1)
  """
  def __eq__(self,*args):

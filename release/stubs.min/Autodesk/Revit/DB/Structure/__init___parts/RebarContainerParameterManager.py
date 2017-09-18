@@ -2,50 +2,84 @@ class RebarContainerParameterManager(object,IDisposable):
  """ Provides implementation of RebarContainer parameters overrides. """
  def AddOverride(self,paramId,value):
   """
-  AddOverride(self: RebarContainerParameterManager,paramId: ElementId,value: int)
-   Adds an override for the given parameter as its value will be displayed for the 
-    Rebar Container element.
-  
-  
-   paramId: The id of the parameter
-   value: The override value of the parameter.
-  AddOverride(self: RebarContainerParameterManager,paramId: ElementId,value: float)
-   Adds an override for the given parameter as its value will be displayed for the 
-    Rebar Container element.
-  
-  
-   paramId: The id of the parameter
-   value: The override value of the parameter.
-  AddOverride(self: RebarContainerParameterManager,paramId: ElementId,value: ElementId)
-   Adds an override for the given parameter as its value will be displayed for the 
-    Rebar Container element.
-  
-  
-   paramId: The id of the parameter
-   value: The override value of the parameter.
-  AddOverride(self: RebarContainerParameterManager,paramId: ElementId,value: str)
-   Adds an override for the given parameter as its value will be displayed for the 
-    Rebar Container element.
-  
-  
-   paramId: The id of the parameter
+  AddOverride(self: RebarContainerParameterManager,paramId: ElementId,value: int)
+
+   Adds an override for the given parameter as its value will be displayed for the 
+
+    Rebar Container element.
+
+  
+
+  
+
+   paramId: The id of the parameter
+
+   value: The override value of the parameter.
+
+  AddOverride(self: RebarContainerParameterManager,paramId: ElementId,value: float)
+
+   Adds an override for the given parameter as its value will be displayed for the 
+
+    Rebar Container element.
+
+  
+
+  
+
+   paramId: The id of the parameter
+
+   value: The override value of the parameter.
+
+  AddOverride(self: RebarContainerParameterManager,paramId: ElementId,value: ElementId)
+
+   Adds an override for the given parameter as its value will be displayed for the 
+
+    Rebar Container element.
+
+  
+
+  
+
+   paramId: The id of the parameter
+
+   value: The override value of the parameter.
+
+  AddOverride(self: RebarContainerParameterManager,paramId: ElementId,value: str)
+
+   Adds an override for the given parameter as its value will be displayed for the 
+
+    Rebar Container element.
+
+  
+
+  
+
+   paramId: The id of the parameter
+
    value: The override value of the parameter.
   """
   pass
  def AddSharedParameterAsOverride(self,paramId):
   """
-  AddSharedParameterAsOverride(self: RebarContainerParameterManager,paramId: ElementId)
-   Adds a shared parameter as one of the parameter overrides stored by this Rebar 
-    Container element.
-  
-  
+  AddSharedParameterAsOverride(self: RebarContainerParameterManager,paramId: ElementId)
+
+   Adds a shared parameter as one of the parameter overrides stored by this Rebar 
+
+    Container element.
+
+  
+
+  
+
    paramId: The id of the shared parameter element
   """
   pass
  def ClearOverrides(self):
   """
-  ClearOverrides(self: RebarContainerParameterManager)
-   Clears any overridden values from all parameters of the associated 
+  ClearOverrides(self: RebarContainerParameterManager)
+
+   Clears any overridden values from all parameters of the associated 
+
     RebarContainer element.
   """
   pass
@@ -54,31 +88,46 @@ class RebarContainerParameterManager(object,IDisposable):
   pass
  def IsOverriddenParameterModifiable(self,paramId):
   """
-  IsOverriddenParameterModifiable(self: RebarContainerParameterManager,paramId: ElementId) -> bool
-  
-   Checks if overridden parameter is modifiable.
-  
-   paramId: Overridden parameter id
+  IsOverriddenParameterModifiable(self: RebarContainerParameterManager,paramId: ElementId) -> bool
+
+  
+
+   Checks if overridden parameter is modifiable.
+
+  
+
+   paramId: Overridden parameter id
+
    Returns: True if the parameter is modifiable,false if the parameter is readonly.
   """
   pass
  def IsParameterOverridden(self,paramId):
   """
-  IsParameterOverridden(self: RebarContainerParameterManager,paramId: ElementId) -> bool
-  
-   Checks if the parameter has an override
-  
-   paramId: The id of the parameter element
+  IsParameterOverridden(self: RebarContainerParameterManager,paramId: ElementId) -> bool
+
+  
+
+   Checks if the parameter has an override
+
+  
+
+   paramId: The id of the parameter element
+
    Returns: True if the parameter has an override
   """
   pass
  def IsRebarContainerParameter(self,paramId):
   """
-  IsRebarContainerParameter(self: RebarContainerParameterManager,paramId: ElementId) -> bool
-  
-   Checks if the parameter is a Rebar Container parameter
-  
-   paramId: The id of the parameter element
+  IsRebarContainerParameter(self: RebarContainerParameterManager,paramId: ElementId) -> bool
+
+  
+
+   Checks if the parameter is a Rebar Container parameter
+
+  
+
+   paramId: The id of the parameter element
+
    Returns: True if the parameter is  a Rebar Container parameter
   """
   pass
@@ -87,25 +136,34 @@ class RebarContainerParameterManager(object,IDisposable):
   pass
  def RemoveOverride(self,paramId):
   """
-  RemoveOverride(self: RebarContainerParameterManager,paramId: ElementId)
-   Removes an overridden value from the given parameter.
-  
+  RemoveOverride(self: RebarContainerParameterManager,paramId: ElementId)
+
+   Removes an overridden value from the given parameter.
+
+  
+
    paramId: The id of the parameter
   """
   pass
  def SetOverriddenParameterModifiable(self,paramId):
   """
-  SetOverriddenParameterModifiable(self: RebarContainerParameterManager,paramId: ElementId)
-   Sets this overridden parameter to be modifiable.
-  
+  SetOverriddenParameterModifiable(self: RebarContainerParameterManager,paramId: ElementId)
+
+   Sets this overridden parameter to be modifiable.
+
+  
+
    paramId: Overridden parameter id
   """
   pass
  def SetOverriddenParameterReadonly(self,paramId):
   """
-  SetOverriddenParameterReadonly(self: RebarContainerParameterManager,paramId: ElementId)
-   Sets this overridden parameter to be readonly.
-  
+  SetOverriddenParameterReadonly(self: RebarContainerParameterManager,paramId: ElementId)
+
+   Sets this overridden parameter to be readonly.
+
+  
+
    paramId: Overridden parameter id
   """
   pass
@@ -122,10 +180,14 @@ class RebarContainerParameterManager(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: RebarContainerParameterManager) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: RebarContainerParameterManager) -> bool
+
+
+
 """
 
 

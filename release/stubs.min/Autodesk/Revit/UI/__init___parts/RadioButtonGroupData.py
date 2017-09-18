@@ -1,7 +1,9 @@
 class RadioButtonGroupData(RibbonItemData):
  """
- This class contains information necessary to construct a ribbon gallery in the Ribbon.
- 
+ This class contains information necessary to construct a ribbon gallery in the Ribbon.
+
+ 
+
  RadioButtonGroupData(name: str)
  """
  @staticmethod

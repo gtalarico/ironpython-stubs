@@ -1,9 +1,13 @@
 class IndexOutOfRangeException(SystemException,ISerializable,_Exception):
  """
- The exception that is thrown when an attempt is made to access an element of an array with an index that is outside the bounds of the array. This class cannot be inherited.
- 
- IndexOutOfRangeException()
- IndexOutOfRangeException(message: str)
+ The exception that is thrown when an attempt is made to access an element of an array with an index that is outside the bounds of the array. This class cannot be inherited.
+
+ 
+
+ IndexOutOfRangeException()
+
+ IndexOutOfRangeException(message: str)
+
  IndexOutOfRangeException(message: str,innerException: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,8 +22,10 @@ class IndexOutOfRangeException(SystemException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,innerException=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
   __new__(cls: type,message: str,innerException: Exception)
   """
   pass

@@ -3,12 +3,18 @@ class ViewDrafting(View,IDisposable):
  @staticmethod
  def Create(document,viewFamilyTypeId):
   """
-  Create(document: Document,viewFamilyTypeId: ElementId) -> ViewDrafting
-  
-   Creates a new ViewDrafting in the model.
-  
-   document: The document in which the new drafting view will be created.
-   viewFamilyTypeId: The id of the ViewFamilyType that should be assigned to the new drafting view.
+  Create(document: Document,viewFamilyTypeId: ElementId) -> ViewDrafting
+
+  
+
+   Creates a new ViewDrafting in the model.
+
+  
+
+   document: The document in which the new drafting view will be created.
+
+   viewFamilyTypeId: The id of the ViewFamilyType that should be assigned to the new drafting view.
+
    Returns: The newly created drafting view.
   """
   pass

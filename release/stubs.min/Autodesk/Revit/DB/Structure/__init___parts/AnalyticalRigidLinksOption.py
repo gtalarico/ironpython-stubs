@@ -1,7 +1,9 @@
 class AnalyticalRigidLinksOption(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies how Rigid Links will be made for the Analytical Model.
- 
+ Specifies how Rigid Links will be made for the Analytical Model.
+
+ 
+
  enum AnalyticalRigidLinksOption,values: Disabled (1),Enabled (0),FromColumn (2)
  """
  def __eq__(self,*args):

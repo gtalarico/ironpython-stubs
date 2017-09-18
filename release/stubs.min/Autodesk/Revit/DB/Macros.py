@@ -10,8 +10,10 @@
 
 class AddInIdAttribute(Attribute,_Attribute):
  """
- The custom AddInId attribute for Macros macros use only.
- 
+ The custom AddInId attribute for Macros macros use only.
+
+ 
+
  AddInIdAttribute(addInIdStr: str)
  """
  def __init__(self,*args):
@@ -22,18 +24,24 @@ class AddInIdAttribute(Attribute,_Attribute):
   """ __new__(cls: type,addInIdStr: str) """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """AddInId guid value.
-
-Get: Value(self: AddInIdAttribute) -> ValueType
-
+ """AddInId guid value.
+
+
+
+Get: Value(self: AddInIdAttribute) -> ValueType
+
+
+
 """
 
 
 
 class ApplicationEntryPoint(Application,IDisposable,IEntryPoint):
  """
- For Revit Macros use only.
- 
+ For Revit Macros use only.
+
+ 
+
  ApplicationEntryPoint()
  """
  def Dispose(self):
@@ -44,13 +52,15 @@ class ApplicationEntryPoint(Application,IDisposable,IEntryPoint):
   pass
  def FinishInitializationEO(self):
   """
-  FinishInitializationEO(self: ApplicationEntryPoint)
+  FinishInitializationEO(self: ApplicationEntryPoint)
+
    For Revit Macros internal use only.
   """
   pass
  def Initialize(self,obj,addinFolder):
   """
-  Initialize(self: ApplicationEntryPoint,obj: object,addinFolder: str)
+  Initialize(self: ApplicationEntryPoint,obj: object,addinFolder: str)
+
    For Revit Macros internal use only.
   """
   pass
@@ -59,7 +69,8 @@ class ApplicationEntryPoint(Application,IDisposable,IEntryPoint):
   pass
  def OnShutdownEO(self):
   """
-  OnShutdownEO(self: ApplicationEntryPoint)
+  OnShutdownEO(self: ApplicationEntryPoint)
+
    For Revit Macros internal use only.
   """
   pass
@@ -76,10 +87,14 @@ class ApplicationEntryPoint(Application,IDisposable,IEntryPoint):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  AddinFolder=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The full path to the Revit Macros module.
-
-Get: AddinFolder(self: ApplicationEntryPoint) -> str
-
+ """The full path to the Revit Macros module.
+
+
+
+Get: AddinFolder(self: ApplicationEntryPoint) -> str
+
+
+
 """
 
  PrimaryCookie=property(lambda self: object(),lambda self,v: None,lambda self: None)
@@ -88,8 +103,10 @@ Get: AddinFolder(self: ApplicationEntryPoint) -> str
 
 class DocumentEntryPoint(Document,IDisposable,IEntryPoint):
  """
- For Revit Macros use only.
- 
+ For Revit Macros use only.
+
+ 
+
  DocumentEntryPoint()
  """
  def Dispose(self):
@@ -100,13 +117,15 @@ class DocumentEntryPoint(Document,IDisposable,IEntryPoint):
   pass
  def FinishInitializationEO(self):
   """
-  FinishInitializationEO(self: DocumentEntryPoint)
+  FinishInitializationEO(self: DocumentEntryPoint)
+
    For Revit Macros internal use only.
   """
   pass
  def Initialize(self,obj,addinFolder):
   """
-  Initialize(self: DocumentEntryPoint,obj: object,addinFolder: str)
+  Initialize(self: DocumentEntryPoint,obj: object,addinFolder: str)
+
    For Revit Macros internal use only.
   """
   pass
@@ -115,7 +134,8 @@ class DocumentEntryPoint(Document,IDisposable,IEntryPoint):
   pass
  def OnShutdownEO(self):
   """
-  OnShutdownEO(self: DocumentEntryPoint)
+  OnShutdownEO(self: DocumentEntryPoint)
+
    For Revit Macros internal use only.
   """
   pass
@@ -135,10 +155,14 @@ class DocumentEntryPoint(Document,IDisposable,IEntryPoint):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  AddinFolder=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The full path to the Revit Macros module.
-
-Get: AddinFolder(self: DocumentEntryPoint) -> str
-
+ """The full path to the Revit Macros module.
+
+
+
+Get: AddinFolder(self: DocumentEntryPoint) -> str
+
+
+
 """
 
  PrimaryCookie=property(lambda self: object(),lambda self,v: None,lambda self: None)
@@ -160,16 +184,20 @@ class IEntryPoint:
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  AddinFolder=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AddinFolder(self: IEntryPoint) -> str
-
+ """Get: AddinFolder(self: IEntryPoint) -> str
+
+
+
 """
 
 
 
 class VendorIdAttribute(Attribute,_Attribute):
  """
- The custom VendorId attribute for Macros macros use only.
- 
+ The custom VendorId attribute for Macros macros use only.
+
+ 
+
  VendorIdAttribute(vendorIdStr: str)
  """
  def __init__(self,*args):
@@ -180,10 +208,14 @@ class VendorIdAttribute(Attribute,_Attribute):
   """ __new__(cls: type,vendorIdStr: str) """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """AddInId VendorId value.
-
-Get: Value(self: VendorIdAttribute) -> str
-
+ """AddInId VendorId value.
+
+
+
+Get: Value(self: VendorIdAttribute) -> str
+
+
+
 """
 
 

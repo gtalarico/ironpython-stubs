@@ -1,8 +1,11 @@
 class CurveElementType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing the curve element types that can be used when filtering elements
-    (via CurveElementFilter).
- 
+ An enumerated type listing the curve element types that can be used when filtering elements
+
+    (via CurveElementFilter).
+
+ 
+
  enum CurveElementType,values: AreaSeparation (7),Cloud (11),CurveByPoints (8),DetailCurve (2),Insulation (10),Invalid (0),ModelCurve (1),ReferenceLine (4),RepeatingDetail (9),RoomSeparation (6),SpaceSeparation (5),SymbolicCurve (3)
  """
  def __eq__(self,*args):

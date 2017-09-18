@@ -1,7 +1,9 @@
 class NumberSystemDisplayRule(Enum,IComparable,IFormattable,IConvertible):
  """
- The available options for display of numeric values in the number system.
- 
+ The available options for display of numeric values in the number system.
+
+ 
+
  enum NumberSystemDisplayRule,values: All (0),Even (2),Odd (1),StartAndEnd (3)
  """
  def __eq__(self,*args):

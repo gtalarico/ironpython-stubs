@@ -1,7 +1,9 @@
 class FieldDomainPointsByXYZ(FieldDomainPoints,IDisposable):
  """
- Represents a set of three-dimensional point coordinates
- 
+ Represents a set of three-dimensional point coordinates
+
+ 
+
  FieldDomainPointsByXYZ(points: IList[XYZ])
  """
  def Dispose(self):

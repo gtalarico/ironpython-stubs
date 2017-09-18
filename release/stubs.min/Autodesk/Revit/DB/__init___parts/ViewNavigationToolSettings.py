@@ -8,32 +8,47 @@ class ViewNavigationToolSettings(Element,IDisposable):
   pass
  def GetHomeCamera(self):
   """
-  GetHomeCamera(self: ViewNavigationToolSettings) -> HomeCamera
-  
-   Gets a copy of the structure containing information about the store Home view 
-    orientation.
-  
-   Returns: A copy of the structure containing information about the store Home view 
-    orientation,or
+  GetHomeCamera(self: ViewNavigationToolSettings) -> HomeCamera
+
+  
+
+   Gets a copy of the structure containing information about the store Home view 
+
+    orientation.
+
+  
+
+   Returns: A copy of the structure containing information about the store Home view 
+
+    orientation,or
+
      ll if there is no home view set for this document.
   """
   pass
  @staticmethod
  def GetViewNavigationToolSettings(pADoc):
   """
-  GetViewNavigationToolSettings(pADoc: Document) -> ViewNavigationToolSettings
-  
-   Gets the instance of the settings for the given document.
-  
-   pADoc: The document.
+  GetViewNavigationToolSettings(pADoc: Document) -> ViewNavigationToolSettings
+
+  
+
+   Gets the instance of the settings for the given document.
+
+  
+
+   pADoc: The document.
+
    Returns: The instance of the settings for the given document.
   """
   pass
  def IsHomeCameraSet(self):
   """
-  IsHomeCameraSet(self: ViewNavigationToolSettings) -> bool
-  
-   Checks if the home view is set in the settings.
+  IsHomeCameraSet(self: ViewNavigationToolSettings) -> bool
+
+  
+
+   Checks if the home view is set in the settings.
+
    Returns: Returns true if home view is set,otherwise false.
   """
   pass

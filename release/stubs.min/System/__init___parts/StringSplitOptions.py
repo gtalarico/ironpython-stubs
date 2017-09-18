@@ -1,7 +1,9 @@
 class StringSplitOptions(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies whether applicable erload:System.String.Split method overloads include or omit empty substrings from the return value.
- 
+ Specifies whether applicable erload:System.String.Split method overloads include or omit empty substrings from the return value.
+
+ 
+
  enum (flags) StringSplitOptions,values: None (0),RemoveEmptyEntries (1)
  """
  def __eq__(self,*args):

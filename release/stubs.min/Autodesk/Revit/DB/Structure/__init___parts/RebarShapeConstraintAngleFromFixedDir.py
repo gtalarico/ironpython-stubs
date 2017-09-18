@@ -1,8 +1,11 @@
 class RebarShapeConstraintAngleFromFixedDir(RebarShapeConstraint,IDisposable):
  """
- A constraint which can be applied to a RebarShapeSegment and drives the angle
-    of the segment relative to a fixed direction in UV-space.
- 
+ A constraint which can be applied to a RebarShapeSegment and drives the angle
+
+    of the segment relative to a fixed direction in UV-space.
+
+ 
+
  RebarShapeConstraintAngleFromFixedDir(paramId: ElementId,sign: int,direction: UV)
  """
  def Dispose(self):
@@ -25,21 +28,33 @@ class RebarShapeConstraintAngleFromFixedDir(RebarShapeConstraint,IDisposable):
   """ __new__(cls: type,paramId: ElementId,sign: int,direction: UV) """
   pass
  Direction=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """A fixed direction in UV-space. The parameter will drive
-   the segment's angle relative to this direction.
-
-Get: Direction(self: RebarShapeConstraintAngleFromFixedDir) -> UV
-
-Set: Direction(self: RebarShapeConstraintAngleFromFixedDir)=value
+ """A fixed direction in UV-space. The parameter will drive
+
+   the segment's angle relative to this direction.
+
+
+
+Get: Direction(self: RebarShapeConstraintAngleFromFixedDir) -> UV
+
+
+
+Set: Direction(self: RebarShapeConstraintAngleFromFixedDir)=value
+
 """
 
  Sign=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """When the sign is 1,the Direction is rotated clockwise by the angle's value.
-   When -1,the Direction is rotated counter-clockwise.
-
-Get: Sign(self: RebarShapeConstraintAngleFromFixedDir) -> int
-
-Set: Sign(self: RebarShapeConstraintAngleFromFixedDir)=value
+ """When the sign is 1,the Direction is rotated clockwise by the angle's value.
+
+   When -1,the Direction is rotated counter-clockwise.
+
+
+
+Get: Sign(self: RebarShapeConstraintAngleFromFixedDir) -> int
+
+
+
+Set: Sign(self: RebarShapeConstraintAngleFromFixedDir)=value
+
 """
 
 

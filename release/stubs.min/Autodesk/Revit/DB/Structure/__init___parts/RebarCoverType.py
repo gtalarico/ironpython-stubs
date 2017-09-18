@@ -3,8 +3,10 @@ class RebarCoverType(ElementType,IDisposable):
  @staticmethod
  def Create(doc,name,coverDistance):
   """
-  Create(doc: Document,name: str,coverDistance: float) -> RebarCoverType
-  
+  Create(doc: Document,name: str,coverDistance: float) -> RebarCoverType
+
+  
+
    Creates a new CoverType in the document.
   """
   pass
@@ -30,11 +32,16 @@ class RebarCoverType(ElementType,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  CoverDistance=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """A distance that can be used as a concrete cover value in a document.
-
-Get: CoverDistance(self: RebarCoverType) -> float
-
-Set: CoverDistance(self: RebarCoverType)=value
+ """A distance that can be used as a concrete cover value in a document.
+
+
+
+Get: CoverDistance(self: RebarCoverType) -> float
+
+
+
+Set: CoverDistance(self: RebarCoverType)=value
+
 """
 
 

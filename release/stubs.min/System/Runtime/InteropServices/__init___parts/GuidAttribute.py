@@ -1,7 +1,9 @@
 class GuidAttribute(Attribute,_Attribute):
  """
- Supplies an explicit System.Guid when an automatic GUID is undesirable.
- 
+ Supplies an explicit System.Guid when an automatic GUID is undesirable.
+
+ 
+
  GuidAttribute(guid: str)
  """
  def __init__(self,*args):
@@ -12,10 +14,14 @@ class GuidAttribute(Attribute,_Attribute):
   """ __new__(cls: type,guid: str) """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the System.Guid of the class.
-
-Get: Value(self: GuidAttribute) -> str
-
+ """Gets the System.Guid of the class.
+
+
+
+Get: Value(self: GuidAttribute) -> str
+
+
+
 """
 
 

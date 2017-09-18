@@ -10,8 +10,10 @@
 
 class AssemblyTargetedPatchBandAttribute(Attribute,_Attribute):
  """
- Specifies patch band information for targeted patching of the .NET Framework.
- 
+ Specifies patch band information for targeted patching of the .NET Framework.
+
+ 
+
  AssemblyTargetedPatchBandAttribute(targetedPatchBand: str)
  """
  def __init__(self,*args):
@@ -22,10 +24,14 @@ class AssemblyTargetedPatchBandAttribute(Attribute,_Attribute):
   """ __new__(cls: type,targetedPatchBand: str) """
   pass
  TargetedPatchBand=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the patch band.
-
-Get: TargetedPatchBand(self: AssemblyTargetedPatchBandAttribute) -> str
-
+ """Gets the patch band.
+
+
+
+Get: TargetedPatchBand(self: AssemblyTargetedPatchBandAttribute) -> str
+
+
+
 """
 
 
@@ -62,8 +68,10 @@ class GCLargeObjectHeapCompactionMode(Enum,IComparable,IFormattable,IConvertible
 
 class GCLatencyMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Adjusts the time that the garbage collector intrudes in your application.
- 
+ Adjusts the time that the garbage collector intrudes in your application.
+
+ 
+
  enum GCLatencyMode,values: Batch (0),Interactive (1),LowLatency (2),NoGCRegion (4),SustainedLowLatency (3)
  """
  def __eq__(self,*args):
@@ -107,26 +115,32 @@ class GCSettings(object):
 
 class MemoryFailPoint(CriticalFinalizerObject,IDisposable):
  """
- Checks for sufficient memory resources prior to execution. This class cannot be inherited.
- 
+ Checks for sufficient memory resources prior to execution. This class cannot be inherited.
+
+ 
+
  MemoryFailPoint(sizeInMegabytes: int)
  """
  def Dispose(self):
   """
-  Dispose(self: MemoryFailPoint)
+  Dispose(self: MemoryFailPoint)
+
    Releases all resources used by the System.Runtime.MemoryFailPoint.
   """
   pass
  def __enter__(self,*args):
   """
-  __enter__(self: IDisposable) -> object
-  
+  __enter__(self: IDisposable) -> object
+
+  
+
    Provides the implementation of __enter__ for objects which implement IDisposable.
   """
   pass
  def __exit__(self,*args):
   """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+
    Provides the implementation of __exit__ for objects which implement IDisposable.
   """
   pass
@@ -156,8 +170,10 @@ class ProfileOptimization(object):
 
 class TargetedPatchingOptOutAttribute(Attribute,_Attribute):
  """
- Indicates that the .NET Framework class library method to which this attribute is applied is unlikely to be affected by servicing releases,and therefore is eligible to be inlined across Native Image Generator (NGen) images.
- 
+ Indicates that the .NET Framework class library method to which this attribute is applied is unlikely to be affected by servicing releases,and therefore is eligible to be inlined across Native Image Generator (NGen) images.
+
+ 
+
  TargetedPatchingOptOutAttribute(reason: str)
  """
  def __init__(self,*args):
@@ -168,10 +184,14 @@ class TargetedPatchingOptOutAttribute(Attribute,_Attribute):
   """ __new__(cls: type,reason: str) """
   pass
  Reason=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the reason why the method to which this attribute is applied is considered to be eligible for inlining across Native Image Generator (NGen) images.
-
-Get: Reason(self: TargetedPatchingOptOutAttribute) -> str
-
+ """Gets the reason why the method to which this attribute is applied is considered to be eligible for inlining across Native Image Generator (NGen) images.
+
+
+
+Get: Reason(self: TargetedPatchingOptOutAttribute) -> str
+
+
+
 """
 
 

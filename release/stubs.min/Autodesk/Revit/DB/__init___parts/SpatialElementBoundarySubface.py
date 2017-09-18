@@ -5,27 +5,38 @@ class SpatialElementBoundarySubface(object,IDisposable):
   pass
  def GetBoundingElementFace(self):
   """
-  GetBoundingElementFace(self: SpatialElementBoundarySubface) -> Face
-  
-   Returns the face of the bounding element.
+  GetBoundingElementFace(self: SpatialElementBoundarySubface) -> Face
+
+  
+
+   Returns the face of the bounding element.
+
    Returns: The face of the bounding element.
   """
   pass
  def GetSpatialElementFace(self):
   """
-  GetSpatialElementFace(self: SpatialElementBoundarySubface) -> Face
-  
-   Returns the face of the spatial element's 3D geometry.
+  GetSpatialElementFace(self: SpatialElementBoundarySubface) -> Face
+
+  
+
+   Returns the face of the spatial element's 3D geometry.
+
    Returns: The face of the spatial element's 3D geometry.
   """
   pass
  def GetSubface(self):
   """
-  GetSubface(self: SpatialElementBoundarySubface) -> Face
-  
-   Returns a face that represents the portion of the room face bounded by the 
-    boundary element.
-  
+  GetSubface(self: SpatialElementBoundarySubface) -> Face
+
+  
+
+   Returns a face that represents the portion of the room face bounded by the 
+
+    boundary element.
+
+  
+
    Returns: The sub-face.
   """
   pass
@@ -45,38 +56,58 @@ class SpatialElementBoundarySubface(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: SpatialElementBoundarySubface) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: SpatialElementBoundarySubface) -> bool
+
+
+
 """
 
  SpatialBoundaryElement=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Element that gave rise to this room face.
-
-Get: SpatialBoundaryElement(self: SpatialElementBoundarySubface) -> LinkElementId
-
+ """Element that gave rise to this room face.
+
+
+
+Get: SpatialBoundaryElement(self: SpatialElementBoundarySubface) -> LinkElementId
+
+
+
 """
 
  SubfaceArisesFromElementFace=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates if the subface is coincident with a portion of a (possibly offset) face of the element.
-
-Get: SubfaceArisesFromElementFace(self: SpatialElementBoundarySubface) -> bool
-
+ """Indicates if the subface is coincident with a portion of a (possibly offset) face of the element.
+
+
+
+Get: SubfaceArisesFromElementFace(self: SpatialElementBoundarySubface) -> bool
+
+
+
 """
 
  SubfaceType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Type of the subface.
-
-Get: SubfaceType(self: SpatialElementBoundarySubface) -> SubfaceType
-
+ """Type of the subface.
+
+
+
+Get: SubfaceType(self: SpatialElementBoundarySubface) -> SubfaceType
+
+
+
 """
 
  Valid=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates if the subface instance is valid and can be used.
-
-Get: Valid(self: SpatialElementBoundarySubface) -> bool
-
+ """Indicates if the subface instance is valid and can be used.
+
+
+
+Get: Valid(self: SpatialElementBoundarySubface) -> bool
+
+
+
 """
 
 

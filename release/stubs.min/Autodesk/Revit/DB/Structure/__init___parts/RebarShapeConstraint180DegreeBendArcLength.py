@@ -1,9 +1,13 @@
 class RebarShapeConstraint180DegreeBendArcLength(RebarShapeConstraint,IDisposable):
  """
- A constraint which can be applied to a RebarShapeSegment,and causes the segment
-    to be replaced with a 180-degree arc. The associated parameter drives
-    the arc length.
- 
+ A constraint which can be applied to a RebarShapeSegment,and causes the segment
+
+    to be replaced with a 180-degree arc. The associated parameter drives
+
+    the arc length.
+
+ 
+
  RebarShapeConstraint180DegreeBendArcLength(paramId: ElementId)
  """
  def Dispose(self):

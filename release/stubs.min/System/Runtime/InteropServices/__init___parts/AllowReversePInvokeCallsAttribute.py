@@ -1,7 +1,9 @@
 class AllowReversePInvokeCallsAttribute(Attribute,_Attribute):
  """
- Allows an unmanaged method to call a managed method.
- 
+ Allows an unmanaged method to call a managed method.
+
+ 
+
  AllowReversePInvokeCallsAttribute()
  """
  def __init__(self,*args):

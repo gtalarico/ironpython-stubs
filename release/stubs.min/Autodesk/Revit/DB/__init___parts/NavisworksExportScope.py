@@ -1,7 +1,9 @@
 class NavisworksExportScope(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing possible "Element Scopes" of Navisworks Exporter.
- 
+ An enumerated type listing possible "Element Scopes" of Navisworks Exporter.
+
+ 
+
  enum NavisworksExportScope,values: Model (0),SelectedElements (2),View (1)
  """
  def __eq__(self,*args):

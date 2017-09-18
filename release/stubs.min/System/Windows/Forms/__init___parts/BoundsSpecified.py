@@ -1,7 +1,9 @@
 class BoundsSpecified(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the bounds of the control to use when defining a control's size and position.
- 
+ Specifies the bounds of the control to use when defining a control's size and position.
+
+ 
+
  enum (flags) BoundsSpecified,values: All (15),Height (8),Location (3),None (0),Size (12),Width (4),X (1),Y (2)
  """
  def __eq__(self,*args):

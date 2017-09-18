@@ -1,8 +1,11 @@
 class SKPImportOptions(BaseImportOptions,IDisposable):
  """
- The import options used to import SKP format files.
- 
- SKPImportOptions(option: SKPImportOptions)
+ The import options used to import SKP format files.
+
+ 
+
+ SKPImportOptions(option: SKPImportOptions)
+
  SKPImportOptions()
  """
  def Dispose(self):
@@ -23,7 +26,8 @@ class SKPImportOptions(BaseImportOptions,IDisposable):
  @staticmethod
  def __new__(self,option=None):
   """
-  __new__(cls: type,option: SKPImportOptions)
+  __new__(cls: type,option: SKPImportOptions)
+
   __new__(cls: type)
   """
   pass

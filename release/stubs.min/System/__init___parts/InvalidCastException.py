@@ -1,10 +1,15 @@
 class InvalidCastException(SystemException,ISerializable,_Exception):
  """
- The exception that is thrown for invalid casting or explicit conversion.
- 
- InvalidCastException()
- InvalidCastException(message: str)
- InvalidCastException(message: str,innerException: Exception)
+ The exception that is thrown for invalid casting or explicit conversion.
+
+ 
+
+ InvalidCastException()
+
+ InvalidCastException(message: str)
+
+ InvalidCastException(message: str,innerException: Exception)
+
  InvalidCastException(message: str,errorCode: int)
  """
  def add_SerializeObjectState(self,*args):
@@ -19,10 +24,14 @@ class InvalidCastException(SystemException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,*__args):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,innerException: Exception)
-  __new__(cls: type,info: SerializationInfo,context: StreamingContext)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,innerException: Exception)
+
+  __new__(cls: type,info: SerializationInfo,context: StreamingContext)
+
   __new__(cls: type,message: str,errorCode: int)
   """
   pass

@@ -1,7 +1,9 @@
 class RasterQualityType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing the options for raster quality.
- 
+ An enumerated type listing the options for raster quality.
+
+ 
+
  enum RasterQualityType,values: High (300),Low (72),Medium (150),Presentation (600)
  """
  def __eq__(self,*args):

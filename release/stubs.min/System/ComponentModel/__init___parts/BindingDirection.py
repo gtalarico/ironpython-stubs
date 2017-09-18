@@ -1,7 +1,9 @@
 class BindingDirection(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies whether the template can be bound one way or two ways.
- 
+ Specifies whether the template can be bound one way or two ways.
+
+ 
+
  enum BindingDirection,values: OneWay (0),TwoWay (1)
  """
  def __eq__(self,*args):

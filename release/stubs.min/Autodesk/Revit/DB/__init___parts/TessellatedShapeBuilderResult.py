@@ -1,6 +1,7 @@
 class TessellatedShapeBuilderResult(object,IDisposable):
  """
- Describes what TessellatedShapeBuilder has
+ Describes what TessellatedShapeBuilder has
+
     construct.
  """
  def Dispose(self):
@@ -8,35 +9,54 @@ class TessellatedShapeBuilderResult(object,IDisposable):
   pass
  def GetGeometricalObjects(self):
   """
-  GetGeometricalObjects(self: TessellatedShapeBuilderResult) -> IList[GeometryObject]
-  
-   When called the first time,returns geometrical objects which were built.
-     
-    Later calls will throw exceptions.
-  
+  GetGeometricalObjects(self: TessellatedShapeBuilderResult) -> IList[GeometryObject]
+
+  
+
+   When called the first time,returns geometrical objects which were built.
+
+     
+
+    Later calls will throw exceptions.
+
+  
+
    Returns: Geometrical object which were built.
   """
   pass
  def GetIssuesForFaceSet(self,setIndex):
   """
-  GetIssuesForFaceSet(self: TessellatedShapeBuilderResult,setIndex: int) -> IList[TessellatedBuildIssue]
-  
-   Returns the array of issues encountered while processing
-     a face set with 
-    index 'setIndex'.
-  
-  
-   setIndex: Index of the face set.
-   Returns: Array of issues encountered while processing a face set
-     with index 
+  GetIssuesForFaceSet(self: TessellatedShapeBuilderResult,setIndex: int) -> IList[TessellatedBuildIssue]
+
+  
+
+   Returns the array of issues encountered while processing
+
+     a face set with 
+
+    index 'setIndex'.
+
+  
+
+  
+
+   setIndex: Index of the face set.
+
+   Returns: Array of issues encountered while processing a face set
+
+     with index 
+
     'setIndex'.
   """
   pass
  def GetNumberOfFaceSets(self):
   """
-  GetNumberOfFaceSets(self: TessellatedShapeBuilderResult) -> int
-  
-   Gets number of face sets for which 'this' result was obtained.
+  GetNumberOfFaceSets(self: TessellatedShapeBuilderResult) -> int
+
+  
+
+   Gets number of face sets for which 'this' result was obtained.
+
    Returns: The number of face sets.
   """
   pass
@@ -56,35 +76,55 @@ class TessellatedShapeBuilderResult(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  AreObjectsAvailable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Shows whether 'issues' still contains the original data or whether
-   these data have already been relinquished by 'getGeometricalObjects'.
-   The former is true,the later is false.
-
-Get: AreObjectsAvailable(self: TessellatedShapeBuilderResult) -> bool
-
+ """Shows whether 'issues' still contains the original data or whether
+
+   these data have already been relinquished by 'getGeometricalObjects'.
+
+   The former is true,the later is false.
+
+
+
+Get: AreObjectsAvailable(self: TessellatedShapeBuilderResult) -> bool
+
+
+
 """
 
  HasInvalidData=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Whether there were any inconsistencies in the face sets,
-   stored in the tessellated shape builder while building
-   geometrical objects.
-
-Get: HasInvalidData(self: TessellatedShapeBuilderResult) -> bool
-
+ """Whether there were any inconsistencies in the face sets,
+
+   stored in the tessellated shape builder while building
+
+   geometrical objects.
+
+
+
+Get: HasInvalidData(self: TessellatedShapeBuilderResult) -> bool
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: TessellatedShapeBuilderResult) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: TessellatedShapeBuilderResult) -> bool
+
+
+
 """
 
  Outcome=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """What kinds of geometrical objects were built.
-
-Get: Outcome(self: TessellatedShapeBuilderResult) -> TessellatedShapeBuilderOutcome
-
+ """What kinds of geometrical objects were built.
+
+
+
+Get: Outcome(self: TessellatedShapeBuilderResult) -> TessellatedShapeBuilderOutcome
+
+
+
 """
 
 

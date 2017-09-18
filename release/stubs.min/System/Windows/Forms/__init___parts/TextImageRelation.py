@@ -1,7 +1,9 @@
 class TextImageRelation(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the position of the text and image relative to each other on a control.
- 
+ Specifies the position of the text and image relative to each other on a control.
+
+ 
+
  enum TextImageRelation,values: ImageAboveText (1),ImageBeforeText (4),Overlay (0),TextAboveImage (2),TextBeforeImage (8)
  """
  def __eq__(self,*args):

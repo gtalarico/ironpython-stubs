@@ -1,9 +1,13 @@
 class PlatformNotSupportedException(NotSupportedException,ISerializable,_Exception):
  """
- The exception that is thrown when a feature does not run on a particular platform.
- 
- PlatformNotSupportedException()
- PlatformNotSupportedException(message: str)
+ The exception that is thrown when a feature does not run on a particular platform.
+
+ 
+
+ PlatformNotSupportedException()
+
+ PlatformNotSupportedException(message: str)
+
  PlatformNotSupportedException(message: str,inner: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,9 +22,12 @@ class PlatformNotSupportedException(NotSupportedException,ISerializable,_Excepti
  @staticmethod
  def __new__(self,message=None,inner=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,inner: Exception)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,inner: Exception)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

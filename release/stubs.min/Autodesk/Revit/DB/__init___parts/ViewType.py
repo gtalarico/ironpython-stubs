@@ -1,7 +1,9 @@
 class ViewType(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing available view types.
- 
+ An enumerated type listing available view types.
+
+ 
+
  enum ViewType,values: AreaPlan (116),CeilingPlan (2),ColumnSchedule (122),CostReport (119),Detail (118),DraftingView (10),DrawingSheet (6),Elevation (3),EngineeringPlan (115),FloorPlan (1),Internal (214),Legend (11),LoadsReport (120),PanelSchedule (123),PresureLossReport (121),ProjectBrowser (7),Rendering (125),Report (8),Schedule (5),Section (117),SystemBrowser (12),ThreeD (4),Undefined (0),Walkthrough (124)
  """
  def __eq__(self,*args):

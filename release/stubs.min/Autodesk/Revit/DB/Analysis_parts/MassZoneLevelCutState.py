@@ -1,11 +1,17 @@
 class MassZoneLevelCutState(Enum,IComparable,IFormattable,IConvertible):
  """
- The relationship between lower level or upper level and the MassZone.
-    The MassZone is not intersected by this level,this level just happens to be the nearest upper or lower level.
-    The MassZone was created by cutting its source geometry with this level.  The level cuts through the MassZone geometry.
-    One or more faces of the MassZone are coincident with this level and the level does not otherwise cut through or intersect
-    the MassZone geometry.
- 
+ The relationship between lower level or upper level and the MassZone.
+
+    The MassZone is not intersected by this level,this level just happens to be the nearest upper or lower level.
+
+    The MassZone was created by cutting its source geometry with this level.  The level cuts through the MassZone geometry.
+
+    One or more faces of the MassZone are coincident with this level and the level does not otherwise cut through or intersect
+
+    the MassZone geometry.
+
+ 
+
  enum MassZoneLevelCutState,values: Cut (1),NotCut (0),NotCutButCoincident (2)
  """
  def __eq__(self,*args):

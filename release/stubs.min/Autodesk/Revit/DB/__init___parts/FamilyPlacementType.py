@@ -1,7 +1,9 @@
 class FamilyPlacementType(Enum,IComparable,IFormattable,IConvertible):
  """
- The type of placement required for a given family.
- 
+ The type of placement required for a given family.
+
+ 
+
  enum FamilyPlacementType,values: Adaptive (8),CurveBased (5),CurveBasedDetail (6),CurveDrivenStructural (7),Invalid (9),OneLevelBased (0),OneLevelBasedHosted (1),TwoLevelsBased (2),ViewBased (3),WorkPlaneBased (4)
  """
  def __eq__(self,*args):

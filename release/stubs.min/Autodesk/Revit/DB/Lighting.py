@@ -12,8 +12,10 @@ class LossFactor(object,IDisposable):
  """ This class is the base class for calculating lighting loss factor. """
  def Clone(self):
   """
-  Clone(self: LossFactor) -> LossFactor
-  
+  Clone(self: LossFactor) -> LossFactor
+
+  
+
    Creates a copy of the LossFactor derived object.
   """
   pass
@@ -36,27 +38,39 @@ class LossFactor(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: LossFactor) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: LossFactor) -> bool
+
+
+
 """
 
  LossFactorValue=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The calculated loss factor value
-
-Get: LossFactorValue(self: LossFactor) -> float
-
+ """The calculated loss factor value
+
+
+
+Get: LossFactorValue(self: LossFactor) -> float
+
+
+
 """
 
 
 
 class AdvancedLossFactor(LossFactor,IDisposable):
  """
- This class encapsulates advanced lighting loss factor calculation.
- 
- AdvancedLossFactor(other: AdvancedLossFactor)
- AdvancedLossFactor(ballastLossFactorIn: float,lampLumenDepreciationIn: float,lampTiltLossFactorIn: float,luminaireDirtDepreciationIn: float,surfaceDepreciationLossFactorIn: float,temperatureLossFactorIn: float,voltageLossFactorIn: float)
+ This class encapsulates advanced lighting loss factor calculation.
+
+ 
+
+ AdvancedLossFactor(other: AdvancedLossFactor)
+
+ AdvancedLossFactor(ballastLossFactorIn: float,lampLumenDepreciationIn: float,lampTiltLossFactorIn: float,luminaireDirtDepreciationIn: float,surfaceDepreciationLossFactorIn: float,temperatureLossFactorIn: float,voltageLossFactorIn: float)
+
  AdvancedLossFactor()
  """
  def Dispose(self):
@@ -77,75 +91,116 @@ class AdvancedLossFactor(LossFactor,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,other: AdvancedLossFactor)
-  __new__(cls: type,ballastLossFactorIn: float,lampLumenDepreciationIn: float,lampTiltLossFactorIn: float,luminaireDirtDepreciationIn: float,surfaceDepreciationLossFactorIn: float,temperatureLossFactorIn: float,voltageLossFactorIn: float)
+  __new__(cls: type,other: AdvancedLossFactor)
+
+  __new__(cls: type,ballastLossFactorIn: float,lampLumenDepreciationIn: float,lampTiltLossFactorIn: float,luminaireDirtDepreciationIn: float,surfaceDepreciationLossFactorIn: float,temperatureLossFactorIn: float,voltageLossFactorIn: float)
+
   __new__(cls: type)
   """
   pass
  BallastLossFactor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The ballast loss factor.
-
-Get: BallastLossFactor(self: AdvancedLossFactor) -> float
-
-Set: BallastLossFactor(self: AdvancedLossFactor)=value
+ """The ballast loss factor.
+
+
+
+Get: BallastLossFactor(self: AdvancedLossFactor) -> float
+
+
+
+Set: BallastLossFactor(self: AdvancedLossFactor)=value
+
 """
 
  LampLumenDepreciation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The lamp lumen depreciation loss factor.
-
-Get: LampLumenDepreciation(self: AdvancedLossFactor) -> float
-
-Set: LampLumenDepreciation(self: AdvancedLossFactor)=value
+ """The lamp lumen depreciation loss factor.
+
+
+
+Get: LampLumenDepreciation(self: AdvancedLossFactor) -> float
+
+
+
+Set: LampLumenDepreciation(self: AdvancedLossFactor)=value
+
 """
 
  LampTiltLossFactor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The lamp tilt loss factor.
-
-Get: LampTiltLossFactor(self: AdvancedLossFactor) -> float
-
-Set: LampTiltLossFactor(self: AdvancedLossFactor)=value
+ """The lamp tilt loss factor.
+
+
+
+Get: LampTiltLossFactor(self: AdvancedLossFactor) -> float
+
+
+
+Set: LampTiltLossFactor(self: AdvancedLossFactor)=value
+
 """
 
  LuminaireDirtDepreciation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The luminaire dirt depreciation loss factor.
-
-Get: LuminaireDirtDepreciation(self: AdvancedLossFactor) -> float
-
-Set: LuminaireDirtDepreciation(self: AdvancedLossFactor)=value
+ """The luminaire dirt depreciation loss factor.
+
+
+
+Get: LuminaireDirtDepreciation(self: AdvancedLossFactor) -> float
+
+
+
+Set: LuminaireDirtDepreciation(self: AdvancedLossFactor)=value
+
 """
 
  SurfaceDepreciationLossFactor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The surface depreciation loss factor.
-
-Get: SurfaceDepreciationLossFactor(self: AdvancedLossFactor) -> float
-
-Set: SurfaceDepreciationLossFactor(self: AdvancedLossFactor)=value
+ """The surface depreciation loss factor.
+
+
+
+Get: SurfaceDepreciationLossFactor(self: AdvancedLossFactor) -> float
+
+
+
+Set: SurfaceDepreciationLossFactor(self: AdvancedLossFactor)=value
+
 """
 
  TemperatureLossFactor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The temperature loss factor.
-
-Get: TemperatureLossFactor(self: AdvancedLossFactor) -> float
-
-Set: TemperatureLossFactor(self: AdvancedLossFactor)=value
+ """The temperature loss factor.
+
+
+
+Get: TemperatureLossFactor(self: AdvancedLossFactor) -> float
+
+
+
+Set: TemperatureLossFactor(self: AdvancedLossFactor)=value
+
 """
 
  VoltageLossFactor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The voltage loss factor.
-
-Get: VoltageLossFactor(self: AdvancedLossFactor) -> float
-
-Set: VoltageLossFactor(self: AdvancedLossFactor)=value
+ """The voltage loss factor.
+
+
+
+Get: VoltageLossFactor(self: AdvancedLossFactor) -> float
+
+
+
+Set: VoltageLossFactor(self: AdvancedLossFactor)=value
+
 """
 
 
 
 class BasicLossFactor(LossFactor,IDisposable):
  """
- This class encapsulates basic lighting loss factor calculation.
- 
- BasicLossFactor(other: BasicLossFactor)
- BasicLossFactor(lossFactorIn: float)
+ This class encapsulates basic lighting loss factor calculation.
+
+ 
+
+ BasicLossFactor(other: BasicLossFactor)
+
+ BasicLossFactor(lossFactorIn: float)
+
  BasicLossFactor()
  """
  def Dispose(self):
@@ -166,17 +221,24 @@ class BasicLossFactor(LossFactor,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,other: BasicLossFactor)
-  __new__(cls: type,lossFactorIn: float)
+  __new__(cls: type,other: BasicLossFactor)
+
+  __new__(cls: type,lossFactorIn: float)
+
   __new__(cls: type)
   """
   pass
  LossFactor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The loss factor.
-
-Get: LossFactor(self: BasicLossFactor) -> float
-
-Set: LossFactor(self: BasicLossFactor)=value
+ """The loss factor.
+
+
+
+Get: LossFactor(self: BasicLossFactor) -> float
+
+
+
+Set: LossFactor(self: BasicLossFactor)=value
+
 """
 
 
@@ -185,8 +247,10 @@ class LightShape(object,IDisposable):
  """ This class is the base class for specifying light shape. """
  def Clone(self):
   """
-  Clone(self: LightShape) -> LightShape
-  
+  Clone(self: LightShape) -> LightShape
+
+  
+
    Creates a copy of the LightShape derived object.
   """
   pass
@@ -209,20 +273,28 @@ class LightShape(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: LightShape) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: LightShape) -> bool
+
+
+
 """
 
 
 
 class CircleLightShape(LightShape,IDisposable):
  """
- This class encapsulates a circle light shape.
- 
- CircleLightShape(other: CircleLightShape)
- CircleLightShape(emitDiameter: float)
+ This class encapsulates a circle light shape.
+
+ 
+
+ CircleLightShape(other: CircleLightShape)
+
+ CircleLightShape(emitDiameter: float)
+
  CircleLightShape()
  """
  def Dispose(self):
@@ -243,25 +315,34 @@ class CircleLightShape(LightShape,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,other: CircleLightShape)
-  __new__(cls: type,emitDiameter: float)
+  __new__(cls: type,other: CircleLightShape)
+
+  __new__(cls: type,emitDiameter: float)
+
   __new__(cls: type)
   """
   pass
  EmitDiameter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The emit diameter.
-
-Get: EmitDiameter(self: CircleLightShape) -> float
-
-Set: EmitDiameter(self: CircleLightShape)=value
+ """The emit diameter.
+
+
+
+Get: EmitDiameter(self: CircleLightShape) -> float
+
+
+
+Set: EmitDiameter(self: CircleLightShape)=value
+
 """
 
 
 
 class ColorPreset(Enum,IComparable,IFormattable,IConvertible):
  """
- Preset values of initial colors for specific lighting types
- 
+ Preset values of initial colors for specific lighting types
+
+ 
+
  enum ColorPreset,values: D50 (1),D65 (0),FluorescentCool (7),FluorescentDayLight (9),FluorescentLightWhite (10),FluorescentWarm (6),FluorescentWhite (8),Halogen (2),HighPressureSodium (12),Incandescent (3),LowPressureSodium (13),Mercury (14),MetalHalide (11),PhosphorMercury (15),Quartz (5),Xenon (4)
  """
  def __eq__(self,*args):
@@ -310,8 +391,10 @@ class InitialColor(object,IDisposable):
  """ This class is the base class for calculating initial light color. """
  def Clone(self):
   """
-  Clone(self: InitialColor) -> InitialColor
-  
+  Clone(self: InitialColor) -> InitialColor
+
+  
+
    Creates a copy of the InitialColor derived object.
   """
   pass
@@ -334,26 +417,37 @@ class InitialColor(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: InitialColor) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: InitialColor) -> bool
+
+
+
 """
 
  TemperatureValue=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The light color temperature value in Kelvins.
-
-Get: TemperatureValue(self: InitialColor) -> float
-
+ """The light color temperature value in Kelvins.
+
+
+
+Get: TemperatureValue(self: InitialColor) -> float
+
+
+
 """
 
 
 
 class CustomInitialColor(InitialColor,IDisposable):
  """
- This class encapsulates a custom initial lighting color.
- 
- CustomInitialColor(other: CustomInitialColor)
+ This class encapsulates a custom initial lighting color.
+
+ 
+
+ CustomInitialColor(other: CustomInitialColor)
+
  CustomInitialColor(temperature: float)
  """
  def Dispose(self):
@@ -374,16 +468,22 @@ class CustomInitialColor(InitialColor,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,other: CustomInitialColor)
+  __new__(cls: type,other: CustomInitialColor)
+
   __new__(cls: type,temperature: float)
   """
   pass
  Temperature=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The custom color temperature value.
-
-Get: Temperature(self: CustomInitialColor) -> float
-
-Set: Temperature(self: CustomInitialColor)=value
+ """The custom color temperature value.
+
+
+
+Get: Temperature(self: CustomInitialColor) -> float
+
+
+
+Set: Temperature(self: CustomInitialColor)=value
+
 """
 
 
@@ -392,8 +492,10 @@ class LightDistribution(object,IDisposable):
  """ This class is the base class for specifying light distribution. """
  def Clone(self):
   """
-  Clone(self: LightDistribution) -> LightDistribution
-  
+  Clone(self: LightDistribution) -> LightDistribution
+
+  
+
    Creates a copy of the LightDistribution derived object.
   """
   pass
@@ -416,19 +518,26 @@ class LightDistribution(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: LightDistribution) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: LightDistribution) -> bool
+
+
+
 """
 
 
 
 class HemisphericalLightDistribution(LightDistribution,IDisposable):
  """
- This class encapsulates a hemispherical light distribution.
- 
- HemisphericalLightDistribution(other: HemisphericalLightDistribution)
+ This class encapsulates a hemispherical light distribution.
+
+ 
+
+ HemisphericalLightDistribution(other: HemisphericalLightDistribution)
+
  HemisphericalLightDistribution()
  """
  def Dispose(self):
@@ -449,7 +558,8 @@ class HemisphericalLightDistribution(LightDistribution,IDisposable):
  @staticmethod
  def __new__(self,other=None):
   """
-  __new__(cls: type,other: HemisphericalLightDistribution)
+  __new__(cls: type,other: HemisphericalLightDistribution)
+
   __new__(cls: type)
   """
   pass
@@ -458,8 +568,10 @@ class InitialIntensity(object,IDisposable):
  """ This class is the base class for calculating lighting initial intensity. """
  def Clone(self):
   """
-  Clone(self: InitialIntensity) -> InitialIntensity
-  
+  Clone(self: InitialIntensity) -> InitialIntensity
+
+  
+
    Creates a copy of the InitialIntensity derived object.
   """
   pass
@@ -482,26 +594,37 @@ class InitialIntensity(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  InitialIntensityValue=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The calculated initial intensity value.
-
-Get: InitialIntensityValue(self: InitialIntensity) -> float
-
+ """The calculated initial intensity value.
+
+
+
+Get: InitialIntensityValue(self: InitialIntensity) -> float
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: InitialIntensity) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: InitialIntensity) -> bool
+
+
+
 """
 
 
 
 class InitialFluxIntensity(InitialIntensity,IDisposable):
  """
- This class encapsulates initial flux intensity calculation.
- 
- InitialFluxIntensity(other: InitialFluxIntensity)
+ This class encapsulates initial flux intensity calculation.
+
+ 
+
+ InitialFluxIntensity(other: InitialFluxIntensity)
+
  InitialFluxIntensity(flux: float)
  """
  def Dispose(self):
@@ -522,25 +645,34 @@ class InitialFluxIntensity(InitialIntensity,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,other: InitialFluxIntensity)
+  __new__(cls: type,other: InitialFluxIntensity)
+
   __new__(cls: type,flux: float)
   """
   pass
  Flux=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The flux intensity value.
-
-Get: Flux(self: InitialFluxIntensity) -> float
-
-Set: Flux(self: InitialFluxIntensity)=value
+ """The flux intensity value.
+
+
+
+Get: Flux(self: InitialFluxIntensity) -> float
+
+
+
+Set: Flux(self: InitialFluxIntensity)=value
+
 """
 
 
 
 class InitialIlluminanceIntensity(InitialIntensity,IDisposable):
  """
- This class encapsulates initial illuminance intensity calculation.
- 
- InitialIlluminanceIntensity(other: InitialIlluminanceIntensity)
+ This class encapsulates initial illuminance intensity calculation.
+
+ 
+
+ InitialIlluminanceIntensity(other: InitialIlluminanceIntensity)
+
  InitialIlluminanceIntensity(distance: float,illuminance: float)
  """
  def Dispose(self):
@@ -561,33 +693,47 @@ class InitialIlluminanceIntensity(InitialIntensity,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,other: InitialIlluminanceIntensity)
+  __new__(cls: type,other: InitialIlluminanceIntensity)
+
   __new__(cls: type,distance: float,illuminance: float)
   """
   pass
  Distance=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The illuminance intensity distance value.
-
-Get: Distance(self: InitialIlluminanceIntensity) -> float
-
-Set: Distance(self: InitialIlluminanceIntensity)=value
+ """The illuminance intensity distance value.
+
+
+
+Get: Distance(self: InitialIlluminanceIntensity) -> float
+
+
+
+Set: Distance(self: InitialIlluminanceIntensity)=value
+
 """
 
  Illuminance=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The illuminance intensity value.
-
-Get: Illuminance(self: InitialIlluminanceIntensity) -> float
-
-Set: Illuminance(self: InitialIlluminanceIntensity)=value
+ """The illuminance intensity value.
+
+
+
+Get: Illuminance(self: InitialIlluminanceIntensity) -> float
+
+
+
+Set: Illuminance(self: InitialIlluminanceIntensity)=value
+
 """
 
 
 
 class InitialLuminousIntensity(InitialIntensity,IDisposable):
  """
- This class encapsulates initial luminous intensity calculation.
- 
- InitialLuminousIntensity(other: InitialLuminousIntensity)
+ This class encapsulates initial luminous intensity calculation.
+
+ 
+
+ InitialLuminousIntensity(other: InitialLuminousIntensity)
+
  InitialLuminousIntensity(luminosity: float)
  """
  def Dispose(self):
@@ -608,25 +754,34 @@ class InitialLuminousIntensity(InitialIntensity,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,other: InitialLuminousIntensity)
+  __new__(cls: type,other: InitialLuminousIntensity)
+
   __new__(cls: type,luminosity: float)
   """
   pass
  Luminosity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The luminosity value.
-
-Get: Luminosity(self: InitialLuminousIntensity) -> float
-
-Set: Luminosity(self: InitialLuminousIntensity)=value
+ """The luminosity value.
+
+
+
+Get: Luminosity(self: InitialLuminousIntensity) -> float
+
+
+
+Set: Luminosity(self: InitialLuminousIntensity)=value
+
 """
 
 
 
 class InitialWattageIntensity(InitialIntensity,IDisposable):
  """
- This class encapsulates initial wattage intensity calculation.
- 
- InitialWattageIntensity(other: InitialWattageIntensity)
+ This class encapsulates initial wattage intensity calculation.
+
+ 
+
+ InitialWattageIntensity(other: InitialWattageIntensity)
+
  InitialWattageIntensity(efficacy: float,wattage: float)
  """
  def Dispose(self):
@@ -647,32 +802,45 @@ class InitialWattageIntensity(InitialIntensity,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,other: InitialWattageIntensity)
+  __new__(cls: type,other: InitialWattageIntensity)
+
   __new__(cls: type,efficacy: float,wattage: float)
   """
   pass
  Efficacy=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The efficacy value.
-
-Get: Efficacy(self: InitialWattageIntensity) -> float
-
-Set: Efficacy(self: InitialWattageIntensity)=value
+ """The efficacy value.
+
+
+
+Get: Efficacy(self: InitialWattageIntensity) -> float
+
+
+
+Set: Efficacy(self: InitialWattageIntensity)=value
+
 """
 
  Wattage=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The wattage value.
-
-Get: Wattage(self: InitialWattageIntensity) -> float
-
-Set: Wattage(self: InitialWattageIntensity)=value
+ """The wattage value.
+
+
+
+Get: Wattage(self: InitialWattageIntensity) -> float
+
+
+
+Set: Wattage(self: InitialWattageIntensity)=value
+
 """
 
 
 
 class LightDimmingColor(Enum,IComparable,IFormattable,IConvertible):
  """
- Tags for specific light dimming colors
- 
+ Tags for specific light dimming colors
+
+ 
+
  enum LightDimmingColor,values: Incandescent (1),None (0)
  """
  def __eq__(self,*args):
@@ -705,8 +873,10 @@ class LightDimmingColor(Enum,IComparable,IFormattable,IConvertible):
 
 class LightDistributionStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Tags for specific light distribution styles
- 
+ Tags for specific light distribution styles
+
+ 
+
  enum LightDistributionStyle,values: Hemispherical (1),PhotometricWeb (3),Spherical (0),Spot (2)
  """
  def __eq__(self,*args):
@@ -746,62 +916,87 @@ class LightFamily(object,IDisposable):
   pass
  def GetLightDistributionStyle(self):
   """
-  GetLightDistributionStyle(self: LightFamily) -> LightDistributionStyle
-  
+  GetLightDistributionStyle(self: LightFamily) -> LightDistributionStyle
+
+  
+
    Returns a LightDistributionStyle value for the light distribution
   """
   pass
  @staticmethod
  def GetLightFamily(document):
   """
-  GetLightFamily(document: Document) -> LightFamily
-  
-   Creates a light family object from the given family document
-  
-   document: The family document
+  GetLightFamily(document: Document) -> LightFamily
+
+  
+
+   Creates a light family object from the given family document
+
+  
+
+   document: The family document
+
    Returns: The newly created LightFamily object
   """
   pass
  def GetLightShapeStyle(self):
   """
-  GetLightShapeStyle(self: LightFamily) -> LightShapeStyle
-  
+  GetLightShapeStyle(self: LightFamily) -> LightShapeStyle
+
+  
+
    Returns a LightShapeStyle value for the light shape
   """
   pass
  def GetLightSourceTransform(self):
   """
-  GetLightSourceTransform(self: LightFamily) -> Transform
-  
-   Returns a Transform value for the transform of light source.
+  GetLightSourceTransform(self: LightFamily) -> Transform
+
+  
+
+   Returns a Transform value for the transform of light source.
+
    Returns: The light source transform.
   """
   pass
  def GetLightType(self,index):
   """
-  GetLightType(self: LightFamily,index: int) -> LightType
-  
-   Return a LightType object for the light type at the given index
-  
-   index: The index of the light type
+  GetLightType(self: LightFamily,index: int) -> LightType
+
+  
+
+   Return a LightType object for the light type at the given index
+
+  
+
+   index: The index of the light type
+
    Returns: A LightType object for the light type at the given index
   """
   pass
  def GetLightTypeName(self,index):
   """
-  GetLightTypeName(self: LightFamily,index: int) -> str
-  
-   Return the name for the light type at the given index
-  
-   index: The index of the light type
+  GetLightTypeName(self: LightFamily,index: int) -> str
+
+  
+
+   Return the name for the light type at the given index
+
+  
+
+   index: The index of the light type
+
    Returns: The name of the light type at the given index
   """
   pass
  def GetNumberOfLightTypes(self):
   """
-  GetNumberOfLightTypes(self: LightFamily) -> int
-  
-   Return the number of light types contained in this light family
+  GetNumberOfLightTypes(self: LightFamily) -> int
+
+  
+
+   Return the number of light types contained in this light family
+
    Returns: The number of light types contained in this light family
   """
   pass
@@ -810,17 +1005,23 @@ class LightFamily(object,IDisposable):
   pass
  def SetLightDistributionStyle(self,lightDistributionStyle):
   """
-  SetLightDistributionStyle(self: LightFamily,lightDistributionStyle: LightDistributionStyle)
-   Set the light distribution style to the given shape distribution
-  
+  SetLightDistributionStyle(self: LightFamily,lightDistributionStyle: LightDistributionStyle)
+
+   Set the light distribution style to the given shape distribution
+
+  
+
    lightDistributionStyle: The light distribution style to set the light distribution type to
   """
   pass
  def SetLightShapeStyle(self,lightShapeStyle):
   """
-  SetLightShapeStyle(self: LightFamily,lightShapeStyle: LightShapeStyle)
-   Set the light shape style to the given shape style
-  
+  SetLightShapeStyle(self: LightFamily,lightShapeStyle: LightShapeStyle)
+
+   Set the light shape style to the given shape style
+
+  
+
    lightShapeStyle: The light shape style value to set the light shape style to
   """
   pass
@@ -837,10 +1038,14 @@ class LightFamily(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: LightFamily) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: LightFamily) -> bool
+
+
+
 """
 
 
@@ -849,9 +1054,12 @@ class LightGroup(object,IDisposable):
  """ This class represents a set of lights grouped together for easier management of various lighting scenarios """
  def AddLight(self,lightId):
   """
-  AddLight(self: LightGroup,lightId: ElementId)
-   Add a new light instance to the group
-  
+  AddLight(self: LightGroup,lightId: ElementId)
+
+   Add a new light instance to the group
+
+  
+
    lightId: The ID of the light instance to add to the group
   """
   pass
@@ -860,9 +1068,12 @@ class LightGroup(object,IDisposable):
   pass
  def GetLights(self):
   """
-  GetLights(self: LightGroup) -> ICollection[ElementId]
-  
-   Get the set of contained light instances
+  GetLights(self: LightGroup) -> ICollection[ElementId]
+
+  
+
+   Get the set of contained light instances
+
      The set of light instances
   """
   pass
@@ -871,9 +1082,12 @@ class LightGroup(object,IDisposable):
   pass
  def RemoveLight(self,lightId):
   """
-  RemoveLight(self: LightGroup,lightId: ElementId)
-   Remove the given light instance from the set of light instances in this group
-  
+  RemoveLight(self: LightGroup,lightId: ElementId)
+
+   Remove the given light instance from the set of light instances in this group
+
+  
+
    lightId: The light instance to remove
   """
   pass
@@ -890,25 +1104,38 @@ class LightGroup(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The ElementId of the LightGroup
-
-Get: Id(self: LightGroup) -> ElementId
-
+ """The ElementId of the LightGroup
+
+
+
+Get: Id(self: LightGroup) -> ElementId
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: LightGroup) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: LightGroup) -> bool
+
+
+
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The name of the LightGroup
-
-Get: Name(self: LightGroup) -> str
-
-Set: Name(self: LightGroup)=value
+ """The name of the LightGroup
+
+
+
+Get: Name(self: LightGroup) -> str
+
+
+
+Set: Name(self: LightGroup)=value
+
 """
 
 
@@ -917,19 +1144,27 @@ class LightGroupManager(object,IDisposable):
  """ This class represents a set of light groups that are used for easier management of various lighting scenarios """
  def CreateGroup(self,name):
   """
-  CreateGroup(self: LightGroupManager,name: str) -> LightGroup
-  
-   Create a new LightGroup object with the given name
-  
-   name: The name to use for the new LightGroup object
+  CreateGroup(self: LightGroupManager,name: str) -> LightGroup
+
+  
+
+   Create a new LightGroup object with the given name
+
+  
+
+   name: The name to use for the new LightGroup object
+
    Returns: The new LightGroup object that was created
   """
   pass
  def DeleteGroup(self,groupId):
   """
-  DeleteGroup(self: LightGroupManager,groupId: ElementId)
-   Remove the given LightGroup object from the set of LightGroup objects
-  
+  DeleteGroup(self: LightGroupManager,groupId: ElementId)
+
+   Remove the given LightGroup object from the set of LightGroup objects
+
+  
+
    groupId: The Id of the LightGroup object to remove
   """
   pass
@@ -938,50 +1173,73 @@ class LightGroupManager(object,IDisposable):
   pass
  def GetGroups(self):
   """
-  GetGroups(self: LightGroupManager) -> IList[LightGroup]
-  
-   Get the set of contained LightGroup objects
+  GetGroups(self: LightGroupManager) -> IList[LightGroup]
+
+  
+
+   Get the set of contained LightGroup objects
+
      The set of LightGroup objects
   """
   pass
  def GetLightDimmer(self,viewId,lightId):
   """
-  GetLightDimmer(self: LightGroupManager,viewId: ElementId,lightId: ElementId) -> float
-  
-   Gets the dimmer value for the given light for rendering the given view
-  
-   viewId: The Id of the view
+  GetLightDimmer(self: LightGroupManager,viewId: ElementId,lightId: ElementId) -> float
+
+  
+
+   Gets the dimmer value for the given light for rendering the given view
+
+  
+
+   viewId: The Id of the view
+
    lightId: The Id of the light to turn on or off
   """
   pass
  @staticmethod
  def GetLightGroupManager(document):
   """
-  GetLightGroupManager(document: Document) -> LightGroupManager
-  
-   Creates a light group manager object from the given document
-  
-   document: The document the manager is from
+  GetLightGroupManager(document: Document) -> LightGroupManager
+
+  
+
+   Creates a light group manager object from the given document
+
+  
+
+   document: The document the manager is from
+
    Returns: The newly created Light group manager object
   """
   pass
  def IsLightGroupOn(self,viewId,groupId):
   """
-  IsLightGroupOn(self: LightGroupManager,viewId: ElementId,groupId: ElementId) -> bool
-  
-   Returns true if the given light group is on
-  
-   viewId: The Id of the view
+  IsLightGroupOn(self: LightGroupManager,viewId: ElementId,groupId: ElementId) -> bool
+
+  
+
+   Returns true if the given light group is on
+
+  
+
+   viewId: The Id of the view
+
    groupId: The Id of the light group
   """
   pass
  def IsLightOn(self,viewId,lightId):
   """
-  IsLightOn(self: LightGroupManager,viewId: ElementId,lightId: ElementId) -> bool
-  
-   Returns true if the given light is on for rendering the given view
-  
-   viewId: The Id of the view
+  IsLightOn(self: LightGroupManager,viewId: ElementId,lightId: ElementId) -> bool
+
+  
+
+   Returns true if the given light is on for rendering the given view
+
+  
+
+   viewId: The Id of the view
+
    lightId: The Id of the light
   """
   pass
@@ -990,35 +1248,54 @@ class LightGroupManager(object,IDisposable):
   pass
  def SetLightDimmer(self,viewId,lightId,dimmingValue):
   """
-  SetLightDimmer(self: LightGroupManager,viewId: ElementId,lightId: ElementId,dimmingValue: float)
-   Sets the dimmer value for the given light for rendering the given view
-  
-   viewId: The Id of the view
-   lightId: The Id of the light to turn on or off
+  SetLightDimmer(self: LightGroupManager,viewId: ElementId,lightId: ElementId,dimmingValue: float)
+
+   Sets the dimmer value for the given light for rendering the given view
+
+  
+
+   viewId: The Id of the view
+
+   lightId: The Id of the light to turn on or off
+
    dimmingValue: The dimmer value to set int the range of [0.0,1.0]
   """
   pass
  def SetLightGroupOn(self,viewId,groupId,turnOn):
   """
-  SetLightGroupOn(self: LightGroupManager,viewId: ElementId,groupId: ElementId,turnOn: bool)
-   Turns the given light group on or off for rendering the given view depending on 
-    the bool argument
-  
-  
-   viewId: The Id of the view
-   groupId: The Id of the light group
+  SetLightGroupOn(self: LightGroupManager,viewId: ElementId,groupId: ElementId,turnOn: bool)
+
+   Turns the given light group on or off for rendering the given view depending on 
+
+    the bool argument
+
+  
+
+  
+
+   viewId: The Id of the view
+
+   groupId: The Id of the light group
+
    turnOn: Turns the light group on if true,off if false
   """
   pass
  def SetLightOn(self,viewId,lightId,turnOn):
   """
-  SetLightOn(self: LightGroupManager,viewId: ElementId,lightId: ElementId,turnOn: bool)
-   Turns the given light on or off for rendering the given view depending on the 
-    bool argument
-  
-  
-   viewId: The Id of the view
-   lightId: The Id of the light to turn on or off
+  SetLightOn(self: LightGroupManager,viewId: ElementId,lightId: ElementId,turnOn: bool)
+
+   Turns the given light on or off for rendering the given view depending on the 
+
+    bool argument
+
+  
+
+  
+
+   viewId: The Id of the view
+
+   lightId: The Id of the light to turn on or off
+
    turnOn: Turns the light on if true,off if false
   """
   pass
@@ -1035,18 +1312,24 @@ class LightGroupManager(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: LightGroupManager) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: LightGroupManager) -> bool
+
+
+
 """
 
 
 
 class LightShapeStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Tags for specific light shape styles
- 
+ Tags for specific light shape styles
+
+ 
+
  enum LightShapeStyle,values: Circle (3),Line (1),Point (0),Rectangle (2)
  """
  def __eq__(self,*args):
@@ -1086,60 +1369,82 @@ class LightType(object,IDisposable):
   pass
  def GetInitialColor(self):
   """
-  GetInitialColor(self: LightType) -> InitialColor
-  
+  GetInitialColor(self: LightType) -> InitialColor
+
+  
+
    Return a copy of an object derived from InitialColor
   """
   pass
  def GetInitialIntensity(self):
   """
-  GetInitialIntensity(self: LightType) -> InitialIntensity
-  
+  GetInitialIntensity(self: LightType) -> InitialIntensity
+
+  
+
    Return a copy of an object derived from InitialIntensity
   """
   pass
  def GetLightDistribution(self):
   """
-  GetLightDistribution(self: LightType) -> LightDistribution
-  
+  GetLightDistribution(self: LightType) -> LightDistribution
+
+  
+
    Return a copy of an object derived from LightDistribution
   """
   pass
  def GetLightShape(self):
   """
-  GetLightShape(self: LightType) -> LightShape
-  
+  GetLightShape(self: LightType) -> LightShape
+
+  
+
    Return a copy of an object derived from LightShape
   """
   pass
  @staticmethod
  def GetLightType(document,typeId):
   """
-  GetLightType(document: Document,typeId: ElementId) -> LightType
-  
-   Creates a light type object from the given document and family type ID
-  
-   document: The document the typeId is from
-   typeId: The ID of the light family type
+  GetLightType(document: Document,typeId: ElementId) -> LightType
+
+  
+
+   Creates a light type object from the given document and family type ID
+
+  
+
+   document: The document the typeId is from
+
+   typeId: The ID of the light family type
+
    Returns: The newly created LightType object
   """
   pass
  @staticmethod
  def GetLightTypeFromInstance(document,instanceId):
   """
-  GetLightTypeFromInstance(document: Document,instanceId: ElementId) -> LightType
-  
-   Creates a light type object from the given document and element ID
-  
-   document: The document the instanceId is from
-   instanceId: The ID of the light fixture instance
+  GetLightTypeFromInstance(document: Document,instanceId: ElementId) -> LightType
+
+  
+
+   Creates a light type object from the given document and element ID
+
+  
+
+   document: The document the instanceId is from
+
+   instanceId: The ID of the light fixture instance
+
    Returns: The newly created LightType object
   """
   pass
  def GetLossFactor(self):
   """
-  GetLossFactor(self: LightType) -> LossFactor
-  
+  GetLossFactor(self: LightType) -> LossFactor
+
+  
+
    Return a copy of an object derived from LossFactor
   """
   pass
@@ -1148,43 +1453,60 @@ class LightType(object,IDisposable):
   pass
  def SetInitialColor(self,initialColor):
   """
-  SetInitialColor(self: LightType,initialColor: InitialColor)
-   Replace the current initial color object with the given object
-  
-   initialColor: An object derived from an InitialColor object
-     The object pointed to is 
+  SetInitialColor(self: LightType,initialColor: InitialColor)
+
+   Replace the current initial color object with the given object
+
+  
+
+   initialColor: An object derived from an InitialColor object
+
+     The object pointed to is 
+
     cloned internally
   """
   pass
  def SetInitialIntensity(self,initialIntensity):
   """
-  SetInitialIntensity(self: LightType,initialIntensity: InitialIntensity)
-   Replace the current initial intensity object with the given object
-  
+  SetInitialIntensity(self: LightType,initialIntensity: InitialIntensity)
+
+   Replace the current initial intensity object with the given object
+
+  
+
    initialIntensity: An object derived from an InitialIntensity object
   """
   pass
  def SetLightDistribution(self,lightDistribution):
   """
-  SetLightDistribution(self: LightType,lightDistribution: LightDistribution)
-   Replace the current LightDistribution object with the given object
-  
+  SetLightDistribution(self: LightType,lightDistribution: LightDistribution)
+
+   Replace the current LightDistribution object with the given object
+
+  
+
    lightDistribution: An instance of an object derived from LightDistribution
   """
   pass
  def SetLightShape(self,lightShape):
   """
-  SetLightShape(self: LightType,lightShape: LightShape)
-   Replace the current LightShape object with the given object
-  
+  SetLightShape(self: LightType,lightShape: LightShape)
+
+   Replace the current LightShape object with the given object
+
+  
+
    lightShape: An instance of an object derived from LightShape
   """
   pass
  def SetLossFactor(self,lossFactor):
   """
-  SetLossFactor(self: LightType,lossFactor: LossFactor)
-   Replace the current loss factor object with the given object
-  
+  SetLossFactor(self: LightType,lossFactor: LossFactor)
+
+   Replace the current loss factor object with the given object
+
+  
+
    lossFactor: An object derived from a LossFactor object
   """
   pass
@@ -1201,36 +1523,54 @@ class LightType(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  ColorFilter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The light filter color.
-
-Get: ColorFilter(self: LightType) -> Color
-
-Set: ColorFilter(self: LightType)=value
+ """The light filter color.
+
+
+
+Get: ColorFilter(self: LightType) -> Color
+
+
+
+Set: ColorFilter(self: LightType)=value
+
 """
 
  DimmingColor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The dimming temperature value in Kelvins.
-
-Get: DimmingColor(self: LightType) -> LightDimmingColor
-
-Set: DimmingColor(self: LightType)=value
+ """The dimming temperature value in Kelvins.
+
+
+
+Get: DimmingColor(self: LightType) -> LightDimmingColor
+
+
+
+Set: DimmingColor(self: LightType)=value
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: LightType) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: LightType) -> bool
+
+
+
 """
 
 
 
 class LineLightShape(LightShape,IDisposable):
  """
- This class encapsulates a line light shape.
- 
- LineLightShape(other: LineLightShape)
- LineLightShape(emitLength: float)
+ This class encapsulates a line light shape.
+
+ 
+
+ LineLightShape(other: LineLightShape)
+
+ LineLightShape(emitLength: float)
+
  LineLightShape()
  """
  def Dispose(self):
@@ -1251,26 +1591,36 @@ class LineLightShape(LightShape,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,other: LineLightShape)
-  __new__(cls: type,emitLength: float)
+  __new__(cls: type,other: LineLightShape)
+
+  __new__(cls: type,emitLength: float)
+
   __new__(cls: type)
   """
   pass
  EmitLength=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The emit length.
-
-Get: EmitLength(self: LineLightShape) -> float
-
-Set: EmitLength(self: LineLightShape)=value
+ """The emit length.
+
+
+
+Get: EmitLength(self: LineLightShape) -> float
+
+
+
+Set: EmitLength(self: LineLightShape)=value
+
 """
 
 
 
 class PhotometricWebLightDistribution(LightDistribution,IDisposable):
  """
- This class encapsulates a photometric web light distribution.
- 
- PhotometricWebLightDistribution(other: PhotometricWebLightDistribution)
+ This class encapsulates a photometric web light distribution.
+
+ 
+
+ PhotometricWebLightDistribution(other: PhotometricWebLightDistribution)
+
  PhotometricWebLightDistribution(photometricWebFile: str,tiltAngle: float)
  """
  def Dispose(self):
@@ -1291,33 +1641,47 @@ class PhotometricWebLightDistribution(LightDistribution,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,other: PhotometricWebLightDistribution)
+  __new__(cls: type,other: PhotometricWebLightDistribution)
+
   __new__(cls: type,photometricWebFile: str,tiltAngle: float)
   """
   pass
  PhotometricWebFile=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The filename of an IES photometric web file.
-
-Get: PhotometricWebFile(self: PhotometricWebLightDistribution) -> str
-
-Set: PhotometricWebFile(self: PhotometricWebLightDistribution)=value
+ """The filename of an IES photometric web file.
+
+
+
+Get: PhotometricWebFile(self: PhotometricWebLightDistribution) -> str
+
+
+
+Set: PhotometricWebFile(self: PhotometricWebLightDistribution)=value
+
 """
 
  TiltAngle=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The tilt angle.
-
-Get: TiltAngle(self: PhotometricWebLightDistribution) -> float
-
-Set: TiltAngle(self: PhotometricWebLightDistribution)=value
+ """The tilt angle.
+
+
+
+Get: TiltAngle(self: PhotometricWebLightDistribution) -> float
+
+
+
+Set: TiltAngle(self: PhotometricWebLightDistribution)=value
+
 """
 
 
 
 class PointLightShape(LightShape,IDisposable):
  """
- This class encapsulates a point light shape.
- 
- PointLightShape(other: PointLightShape)
+ This class encapsulates a point light shape.
+
+ 
+
+ PointLightShape(other: PointLightShape)
+
  PointLightShape()
  """
  def Dispose(self):
@@ -1338,16 +1702,20 @@ class PointLightShape(LightShape,IDisposable):
  @staticmethod
  def __new__(self,other=None):
   """
-  __new__(cls: type,other: PointLightShape)
+  __new__(cls: type,other: PointLightShape)
+
   __new__(cls: type)
   """
   pass
 
 class PresetInitialColor(InitialColor,IDisposable):
  """
- This class encapsulates a preset initial lighting color.
- 
- PresetInitialColor(other: PresetInitialColor)
+ This class encapsulates a preset initial lighting color.
+
+ 
+
+ PresetInitialColor(other: PresetInitialColor)
+
  PresetInitialColor(presetIn: ColorPreset)
  """
  def Dispose(self):
@@ -1368,26 +1736,36 @@ class PresetInitialColor(InitialColor,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,other: PresetInitialColor)
+  __new__(cls: type,other: PresetInitialColor)
+
   __new__(cls: type,presetIn: ColorPreset)
   """
   pass
  Preset=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The preset value
-
-Get: Preset(self: PresetInitialColor) -> ColorPreset
-
-Set: Preset(self: PresetInitialColor)=value
+ """The preset value
+
+
+
+Get: Preset(self: PresetInitialColor) -> ColorPreset
+
+
+
+Set: Preset(self: PresetInitialColor)=value
+
 """
 
 
 
 class RectangleLightShape(LightShape,IDisposable):
  """
- This class encapsulates a rectangle light shape.
- 
- RectangleLightShape(other: RectangleLightShape)
- RectangleLightShape(emitLength: float,emitWidth: float)
+ This class encapsulates a rectangle light shape.
+
+ 
+
+ RectangleLightShape(other: RectangleLightShape)
+
+ RectangleLightShape(emitLength: float,emitWidth: float)
+
  RectangleLightShape()
  """
  def Dispose(self):
@@ -1408,34 +1786,49 @@ class RectangleLightShape(LightShape,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,other: RectangleLightShape)
-  __new__(cls: type,emitLength: float,emitWidth: float)
+  __new__(cls: type,other: RectangleLightShape)
+
+  __new__(cls: type,emitLength: float,emitWidth: float)
+
   __new__(cls: type)
   """
   pass
  EmitLength=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The emit length.
-
-Get: EmitLength(self: RectangleLightShape) -> float
-
-Set: EmitLength(self: RectangleLightShape)=value
+ """The emit length.
+
+
+
+Get: EmitLength(self: RectangleLightShape) -> float
+
+
+
+Set: EmitLength(self: RectangleLightShape)=value
+
 """
 
  EmitWidth=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The emit width.
-
-Get: EmitWidth(self: RectangleLightShape) -> float
-
-Set: EmitWidth(self: RectangleLightShape)=value
+ """The emit width.
+
+
+
+Get: EmitWidth(self: RectangleLightShape) -> float
+
+
+
+Set: EmitWidth(self: RectangleLightShape)=value
+
 """
 
 
 
 class SphericalLightDistribution(LightDistribution,IDisposable):
  """
- This class encapsulates a spherical light distribution.
- 
- SphericalLightDistribution(other: SphericalLightDistribution)
+ This class encapsulates a spherical light distribution.
+
+ 
+
+ SphericalLightDistribution(other: SphericalLightDistribution)
+
  SphericalLightDistribution()
  """
  def Dispose(self):
@@ -1456,17 +1849,22 @@ class SphericalLightDistribution(LightDistribution,IDisposable):
  @staticmethod
  def __new__(self,other=None):
   """
-  __new__(cls: type,other: SphericalLightDistribution)
+  __new__(cls: type,other: SphericalLightDistribution)
+
   __new__(cls: type)
   """
   pass
 
 class SpotLightDistribution(LightDistribution,IDisposable):
  """
- This class encapsulates a spot light distribution.
- 
- SpotLightDistribution(other: SpotLightDistribution)
- SpotLightDistribution(spotBeamAngle: float,spotFieldAngle: float,tiltAngle: float)
+ This class encapsulates a spot light distribution.
+
+ 
+
+ SpotLightDistribution(other: SpotLightDistribution)
+
+ SpotLightDistribution(spotBeamAngle: float,spotFieldAngle: float,tiltAngle: float)
+
  SpotLightDistribution()
  """
  def Dispose(self):
@@ -1487,33 +1885,50 @@ class SpotLightDistribution(LightDistribution,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,other: SpotLightDistribution)
-  __new__(cls: type,spotBeamAngle: float,spotFieldAngle: float,tiltAngle: float)
+  __new__(cls: type,other: SpotLightDistribution)
+
+  __new__(cls: type,spotBeamAngle: float,spotFieldAngle: float,tiltAngle: float)
+
   __new__(cls: type)
   """
   pass
  SpotBeamAngle=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The spot beam angle.
-
-Get: SpotBeamAngle(self: SpotLightDistribution) -> float
-
-Set: SpotBeamAngle(self: SpotLightDistribution)=value
+ """The spot beam angle.
+
+
+
+Get: SpotBeamAngle(self: SpotLightDistribution) -> float
+
+
+
+Set: SpotBeamAngle(self: SpotLightDistribution)=value
+
 """
 
  SpotFieldAngle=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The spot field angle.
-
-Get: SpotFieldAngle(self: SpotLightDistribution) -> float
-
-Set: SpotFieldAngle(self: SpotLightDistribution)=value
+ """The spot field angle.
+
+
+
+Get: SpotFieldAngle(self: SpotLightDistribution) -> float
+
+
+
+Set: SpotFieldAngle(self: SpotLightDistribution)=value
+
 """
 
  TiltAngle=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The tilt angle.
-
-Get: TiltAngle(self: SpotLightDistribution) -> float
-
-Set: TiltAngle(self: SpotLightDistribution)=value
+ """The tilt angle.
+
+
+
+Get: TiltAngle(self: SpotLightDistribution) -> float
+
+
+
+Set: TiltAngle(self: SpotLightDistribution)=value
+
 """
 
 

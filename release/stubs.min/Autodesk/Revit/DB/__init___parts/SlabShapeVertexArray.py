@@ -1,20 +1,26 @@
 class SlabShapeVertexArray(APIObject,IDisposable,IEnumerable):
  """
- An array that can contain any number of vertices used in Slab Shape Editing.
- 
+ An array that can contain any number of vertices used in Slab Shape Editing.
+
+ 
+
  SlabShapeVertexArray()
  """
  def Append(self,item):
   """
-  Append(self: SlabShapeVertexArray,item: SlabShapeVertex)
-   Add the item to the end of the array.
-  
+  Append(self: SlabShapeVertexArray,item: SlabShapeVertex)
+
+   Add the item to the end of the array.
+
+  
+
    item: The item to be added.
   """
   pass
  def Clear(self):
   """
-  Clear(self: SlabShapeVertexArray)
+  Clear(self: SlabShapeVertexArray)
+
    Removes every item from the array,rendering it empty.
   """
   pass
@@ -23,27 +29,38 @@ class SlabShapeVertexArray(APIObject,IDisposable,IEnumerable):
   pass
  def ForwardIterator(self):
   """
-  ForwardIterator(self: SlabShapeVertexArray) -> SlabShapeVertexArrayIterator
-  
-   Retrieve a forward moving iterator to the array.
+  ForwardIterator(self: SlabShapeVertexArray) -> SlabShapeVertexArrayIterator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: SlabShapeVertexArray) -> IEnumerator
-  
-   Retrieve a forward moving iterator to the array.
+  GetEnumerator(self: SlabShapeVertexArray) -> IEnumerator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
  def Insert(self,item,index):
   """
-  Insert(self: SlabShapeVertexArray,item: SlabShapeVertex,index: int)
-   Insert the specified item into the array.
-  
-   item: The item to be inserted into the array.
-   index: The item will be inserted before this index.
+  Insert(self: SlabShapeVertexArray,item: SlabShapeVertex,index: int)
+
+   Insert the specified item into the array.
+
+  
+
+   item: The item to be inserted into the array.
+
+   index: The item will be inserted before this index.
+
    Returns: Returns whether the item was inserted into the array.
   """
   pass
@@ -55,9 +72,12 @@ class SlabShapeVertexArray(APIObject,IDisposable,IEnumerable):
   pass
  def ReverseIterator(self):
   """
-  ReverseIterator(self: SlabShapeVertexArray) -> SlabShapeVertexArrayIterator
-  
-   Retrieve a backward moving iterator to the array.
+  ReverseIterator(self: SlabShapeVertexArray) -> SlabShapeVertexArrayIterator
+
+  
+
+   Retrieve a backward moving iterator to the array.
+
    Returns: Returns a backward moving iterator to the array.
   """
   pass
@@ -80,17 +100,25 @@ class SlabShapeVertexArray(APIObject,IDisposable,IEnumerable):
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Test to see if the array is empty.
-
-Get: IsEmpty(self: SlabShapeVertexArray) -> bool
-
+ """Test to see if the array is empty.
+
+
+
+Get: IsEmpty(self: SlabShapeVertexArray) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the number of objects that are in the array.
-
-Get: Size(self: SlabShapeVertexArray) -> int
-
+ """Returns the number of objects that are in the array.
+
+
+
+Get: Size(self: SlabShapeVertexArray) -> int
+
+
+
 """
 
 

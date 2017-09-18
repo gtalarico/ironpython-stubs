@@ -2,7 +2,8 @@ class AnnotationSymbol(FamilyInstance,IDisposable):
  """ This object represents a symbol of the Generic Annotation. """
  def addLeader(self):
   """
-  addLeader(self: AnnotationSymbol)
+  addLeader(self: AnnotationSymbol)
+
    add a leader to this annotation symbol.
   """
   pass
@@ -11,9 +12,12 @@ class AnnotationSymbol(FamilyInstance,IDisposable):
   pass
  def duplicate(self):
   """
-  duplicate(self: AnnotationSymbol) -> AnnotationSymbol
-  
-   Duplicate this annotation symbol.
+  duplicate(self: AnnotationSymbol) -> AnnotationSymbol
+
+  
+
+   Duplicate this annotation symbol.
+
    Returns: Pointer to the new annotation symbol.
   """
   pass
@@ -22,8 +26,10 @@ class AnnotationSymbol(FamilyInstance,IDisposable):
   pass
  def GetLeaders(self):
   """
-  GetLeaders(self: AnnotationSymbol) -> IList[Leader]
-  
+  GetLeaders(self: AnnotationSymbol) -> IList[Leader]
+
+  
+
    Returns a collection of leaders currently attached to the annotation.
   """
   pass
@@ -32,7 +38,8 @@ class AnnotationSymbol(FamilyInstance,IDisposable):
   pass
  def removeLeader(self):
   """
-  removeLeader(self: AnnotationSymbol)
+  removeLeader(self: AnnotationSymbol)
+
    remove a leader of this annotation symbol.
   """
   pass
@@ -49,11 +56,16 @@ class AnnotationSymbol(FamilyInstance,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  AnnotationSymbolType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The AnnotationSymbol style of this AnnotationSymbol.
-
-Get: AnnotationSymbolType(self: AnnotationSymbol) -> AnnotationSymbolType
-
-Set: AnnotationSymbolType(self: AnnotationSymbol)=value
+ """The AnnotationSymbol style of this AnnotationSymbol.
+
+
+
+Get: AnnotationSymbolType(self: AnnotationSymbol) -> AnnotationSymbolType
+
+
+
+Set: AnnotationSymbolType(self: AnnotationSymbol)=value
+
 """
 
 

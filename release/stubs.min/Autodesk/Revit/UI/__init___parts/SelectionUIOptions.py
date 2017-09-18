@@ -6,24 +6,36 @@ class SelectionUIOptions(object,IDisposable):
  @staticmethod
  def ElementSelectsAsPinned(document,element):
   """
-  ElementSelectsAsPinned(document: Document,element: Element) -> bool
-  
-   Checks whether the specified element will be treated as pinned for the purposes 
-    of selection.
-  
-  
-   document: The document containing the element.
-   element: The element to check.
-   Returns: True if the specified element should be treated as pinned for selection 
+  ElementSelectsAsPinned(document: Document,element: Element) -> bool
+
+  
+
+   Checks whether the specified element will be treated as pinned for the purposes 
+
+    of selection.
+
+  
+
+  
+
+   document: The document containing the element.
+
+   element: The element to check.
+
+   Returns: True if the specified element should be treated as pinned for selection 
+
     purposes,false otherwise.
   """
   pass
  @staticmethod
  def GetSelectionUIOptions():
   """
-  GetSelectionUIOptions() -> SelectionUIOptions
-  
-   Returns the current user's SelectionOptions.
+  GetSelectionUIOptions() -> SelectionUIOptions
+
+  
+
+   Returns the current user's SelectionOptions.
+
    Returns: The SelectionOptions for the current user.
   """
   pass
@@ -43,50 +55,79 @@ class SelectionUIOptions(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  DragOnSelection=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates whether elements can be dragged immediately when they are selected.
-
-Get: DragOnSelection(self: SelectionUIOptions) -> bool
-
-Set: DragOnSelection(self: SelectionUIOptions)=value
+ """Indicates whether elements can be dragged immediately when they are selected.
+
+
+
+Get: DragOnSelection(self: SelectionUIOptions) -> bool
+
+
+
+Set: DragOnSelection(self: SelectionUIOptions)=value
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: SelectionUIOptions) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: SelectionUIOptions) -> bool
+
+
+
 """
 
  SelectFaces=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates whether elements can be selected by clicking on the interior of a face.
-
-Get: SelectFaces(self: SelectionUIOptions) -> bool
-
-Set: SelectFaces(self: SelectionUIOptions)=value
+ """Indicates whether elements can be selected by clicking on the interior of a face.
+
+
+
+Get: SelectFaces(self: SelectionUIOptions) -> bool
+
+
+
+Set: SelectFaces(self: SelectionUIOptions)=value
+
 """
 
  SelectLinks=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates whether Revit and CAD link instances can be selected.
-
-Get: SelectLinks(self: SelectionUIOptions) -> bool
-
-Set: SelectLinks(self: SelectionUIOptions)=value
+ """Indicates whether Revit and CAD link instances can be selected.
+
+
+
+Get: SelectLinks(self: SelectionUIOptions) -> bool
+
+
+
+Set: SelectLinks(self: SelectionUIOptions)=value
+
 """
 
  SelectPinned=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates whether pinned elements can be selected.
-
-Get: SelectPinned(self: SelectionUIOptions) -> bool
-
-Set: SelectPinned(self: SelectionUIOptions)=value
+ """Indicates whether pinned elements can be selected.
+
+
+
+Get: SelectPinned(self: SelectionUIOptions) -> bool
+
+
+
+Set: SelectPinned(self: SelectionUIOptions)=value
+
 """
 
  SelectUnderlay=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates whether elements that are displayed as underlay can be selected.
-
-Get: SelectUnderlay(self: SelectionUIOptions) -> bool
-
-Set: SelectUnderlay(self: SelectionUIOptions)=value
+ """Indicates whether elements that are displayed as underlay can be selected.
+
+
+
+Get: SelectUnderlay(self: SelectionUIOptions) -> bool
+
+
+
+Set: SelectUnderlay(self: SelectionUIOptions)=value
+
 """
 
 

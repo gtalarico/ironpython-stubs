@@ -1,7 +1,9 @@
 class ColorSelectionDialog(object,IDisposable):
  """
- Allows display of the Revit Color dialog.
- 
+ Allows display of the Revit Color dialog.
+
+ 
+
  ColorSelectionDialog()
  """
  def Dispose(self):
@@ -12,10 +14,14 @@ class ColorSelectionDialog(object,IDisposable):
   pass
  def Show(self):
   """
-  Show(self: ColorSelectionDialog) -> ItemSelectionDialogResult
-  
-   Shows the Revit Color dialog as a modal dialog.
-   Returns: A status indicating whether the user selected a color or cancelled the dialog 
+  Show(self: ColorSelectionDialog) -> ItemSelectionDialogResult
+
+  
+
+   Shows the Revit Color dialog as a modal dialog.
+
+   Returns: A status indicating whether the user selected a color or cancelled the dialog 
+
     without making a selection.
   """
   pass
@@ -32,25 +38,38 @@ class ColorSelectionDialog(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ColorSelectionDialog) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ColorSelectionDialog) -> bool
+
+
+
 """
 
  OriginalColor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The original color.
-
-Get: OriginalColor(self: ColorSelectionDialog) -> Color
-
-Set: OriginalColor(self: ColorSelectionDialog)=value
+ """The original color.
+
+
+
+Get: OriginalColor(self: ColorSelectionDialog) -> Color
+
+
+
+Set: OriginalColor(self: ColorSelectionDialog)=value
+
 """
 
  SelectedColor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The new color selected by the user.
-
-Get: SelectedColor(self: ColorSelectionDialog) -> Color
-
+ """The new color selected by the user.
+
+
+
+Get: SelectedColor(self: ColorSelectionDialog) -> Color
+
+
+
 """
 
 

@@ -1,6 +1,7 @@
 class DetailCurve(CurveElement,IDisposable):
  """
- A curve that is used to create a detail drawing. 
+ A curve that is used to create a detail drawing. 
+
  A detail curve is visible only in the view in which it is drawn.
  """
  def Dispose(self):

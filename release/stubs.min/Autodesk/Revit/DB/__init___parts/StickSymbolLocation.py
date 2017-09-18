@@ -1,7 +1,9 @@
 class StickSymbolLocation(Enum,IComparable,IFormattable,IConvertible):
  """
- Indicates the stick symbol location on the UI,which is used for the BuiltInParameter STRUCTURAL_STICK_SYMBOL_LOCATION.
- 
+ Indicates the stick symbol location on the UI,which is used for the BuiltInParameter STRUCTURAL_STICK_SYMBOL_LOCATION.
+
+ 
+
  enum StickSymbolLocation,values: StickViewBottom (2),StickViewCenter (0),StickViewLocLine (3),StickViewTop (1)
  """
  def __eq__(self,*args):

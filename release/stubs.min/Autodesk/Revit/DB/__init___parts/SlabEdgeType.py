@@ -1,6 +1,7 @@
 class SlabEdgeType(HostedSweepType,IDisposable):
  """
- An object that represents the slab edge type
+ An object that represents the slab edge type
+
  in Autodesk Revit.
  """
  def Dispose(self):

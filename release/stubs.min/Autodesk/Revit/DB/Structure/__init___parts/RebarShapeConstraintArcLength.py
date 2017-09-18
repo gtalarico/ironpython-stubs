@@ -1,7 +1,9 @@
 class RebarShapeConstraintArcLength(RebarShapeConstraint,IDisposable):
  """
- An arc-length constraint associated with an arc in a RebarShapeDefinition.
- 
+ An arc-length constraint associated with an arc in a RebarShapeDefinition.
+
+ 
+
  RebarShapeConstraintArcLength(paramId: ElementId)
  """
  def Dispose(self):

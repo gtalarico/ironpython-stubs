@@ -1,7 +1,9 @@
 class FilterStringEndsWith(FilterStringRuleEvaluator,IDisposable):
  """
- Tests whether string values from the document end with a certain string.
- 
+ Tests whether string values from the document end with a certain string.
+
+ 
+
  FilterStringEndsWith()
  """
  def Dispose(self):

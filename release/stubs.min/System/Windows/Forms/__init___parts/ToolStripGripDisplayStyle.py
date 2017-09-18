@@ -1,7 +1,9 @@
 class ToolStripGripDisplayStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the orientation of the System.Windows.Forms.ToolStrip move handle (grip).
- 
+ Specifies the orientation of the System.Windows.Forms.ToolStrip move handle (grip).
+
+ 
+
  enum ToolStripGripDisplayStyle,values: Horizontal (0),Vertical (1)
  """
  def __eq__(self,*args):

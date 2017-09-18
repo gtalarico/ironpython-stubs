@@ -1,9 +1,13 @@
 class VectorAtPoint(ValueAtPointBase,IDisposable):
  """
- Stores vectors at one domain point.
-    Each vector corresponds to a "measurement" for which this vector was calculated.
- 
- VectorAtPoint(otherObject: VectorAtPoint)
+ Stores vectors at one domain point.
+
+    Each vector corresponds to a "measurement" for which this vector was calculated.
+
+ 
+
+ VectorAtPoint(otherObject: VectorAtPoint)
+
  VectorAtPoint(vectors: IList[XYZ])
  """
  def Dispose(self):
@@ -24,7 +28,8 @@ class VectorAtPoint(ValueAtPointBase,IDisposable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,otherObject: VectorAtPoint)
+  __new__(cls: type,otherObject: VectorAtPoint)
+
   __new__(cls: type,vectors: IList[XYZ])
   """
   pass

@@ -1,7 +1,9 @@
 class ImportPlacement(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing possible placement modes for imported drawings.
- 
+ An enumerated type listing possible placement modes for imported drawings.
+
+ 
+
  enum ImportPlacement,values: Centered (2),Origin (1),Shared (3),Site (0)
  """
  def __eq__(self,*args):

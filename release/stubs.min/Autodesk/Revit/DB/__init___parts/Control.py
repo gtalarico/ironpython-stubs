@@ -22,24 +22,36 @@ class Control(Element,IDisposable):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Origin=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The control origin.
-
-Get: Origin(self: Control) -> XYZ
-
+ """The control origin.
+
+
+
+Get: Origin(self: Control) -> XYZ
+
+
+
 """
 
  Shape=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The control shape.
-
-Get: Shape(self: Control) -> ControlShape
-
+ """The control shape.
+
+
+
+Get: Shape(self: Control) -> ControlShape
+
+
+
 """
 
  View=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The view.
-
-Get: View(self: Control) -> View
-
+ """The view.
+
+
+
+Get: View(self: Control) -> View
+
+
+
 """
 
 

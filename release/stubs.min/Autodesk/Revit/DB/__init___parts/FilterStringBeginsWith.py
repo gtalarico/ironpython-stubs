@@ -1,7 +1,9 @@
 class FilterStringBeginsWith(FilterStringRuleEvaluator,IDisposable):
  """
- Tests whether string values from the document begin with a certain string.
- 
+ Tests whether string values from the document begin with a certain string.
+
+ 
+
  FilterStringBeginsWith()
  """
  def Dispose(self):

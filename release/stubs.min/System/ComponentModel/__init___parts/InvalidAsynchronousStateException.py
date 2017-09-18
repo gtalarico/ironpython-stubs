@@ -1,9 +1,13 @@
 class InvalidAsynchronousStateException(ArgumentException,ISerializable,_Exception):
  """
- Thrown when a thread on which an operation should execute no longer exists or has no message loop.
- 
- InvalidAsynchronousStateException()
- InvalidAsynchronousStateException(message: str)
+ Thrown when a thread on which an operation should execute no longer exists or has no message loop.
+
+ 
+
+ InvalidAsynchronousStateException()
+
+ InvalidAsynchronousStateException(message: str)
+
  InvalidAsynchronousStateException(message: str,innerException: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,9 +22,12 @@ class InvalidAsynchronousStateException(ArgumentException,ISerializable,_Excepti
  @staticmethod
  def __new__(self,message=None,innerException=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,innerException: Exception)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,innerException: Exception)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

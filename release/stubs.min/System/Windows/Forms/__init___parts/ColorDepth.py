@@ -1,7 +1,9 @@
 class ColorDepth(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the number of colors used to display an image in an System.Windows.Forms.ImageList control.
- 
+ Specifies the number of colors used to display an image in an System.Windows.Forms.ImageList control.
+
+ 
+
  enum ColorDepth,values: Depth16Bit (16),Depth24Bit (24),Depth32Bit (32),Depth4Bit (4),Depth8Bit (8)
  """
  def __eq__(self,*args):

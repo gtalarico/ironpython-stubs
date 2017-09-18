@@ -3,11 +3,16 @@ class AreaReinforcementType(ElementType,IDisposable):
  @staticmethod
  def CreateDefaultAreaReinforcementType(aDoc):
   """
-  CreateDefaultAreaReinforcementType(aDoc: Document) -> ElementId
-  
-   Creates a new AreaReinforcementType object with a default name.
-  
-   aDoc: The document.
+  CreateDefaultAreaReinforcementType(aDoc: Document) -> ElementId
+
+  
+
+   Creates a new AreaReinforcementType object with a default name.
+
+  
+
+   aDoc: The document.
+
    Returns: The newly created type id.
   """
   pass

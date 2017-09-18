@@ -1,7 +1,9 @@
 class ClassInterfaceType(Enum,IComparable,IFormattable,IConvertible):
  """
- Identifies the type of class interface that is generated for a class.
- 
+ Identifies the type of class interface that is generated for a class.
+
+ 
+
  enum ClassInterfaceType,values: AutoDispatch (1),AutoDual (2),None (0)
  """
  def __eq__(self,*args):

@@ -1,7 +1,9 @@
 class MouseButtons(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies constants that define which mouse button was pressed.
- 
+ Specifies constants that define which mouse button was pressed.
+
+ 
+
  enum (flags) MouseButtons,values: Left (1048576),Middle (4194304),None (0),Right (2097152),XButton1 (8388608),XButton2 (16777216)
  """
  def __eq__(self,*args):

@@ -1,13 +1,17 @@
 class ICentralLockedCallback:
  """
- An interface that may be used to control Revit's behavior when it tries to lock central
+ An interface that may be used to control Revit's behavior when it tries to lock central
+
     and is blocked because another user already has locked central.
  """
  def ShouldWaitForLockAvailability(self):
   """
-  ShouldWaitForLockAvailability(self: ICentralLockedCallback) -> bool
-  
-   Returns whether Revit should wait and try again to acquire the lock on central.
+  ShouldWaitForLockAvailability(self: ICentralLockedCallback) -> bool
+
+  
+
+   Returns whether Revit should wait and try again to acquire the lock on central.
+
    Returns: True means wait and try again later.  False means immediately give up.
   """
   pass

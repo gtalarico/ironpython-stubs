@@ -1,7 +1,9 @@
 class KeyTimeType(Enum,IComparable,IFormattable,IConvertible):
  """
- Represents the different types that may represent a System.Windows.Media.Animation.KeyTime instance.
- 
+ Represents the different types that may represent a System.Windows.Media.Animation.KeyTime instance.
+
+ 
+
  enum KeyTimeType,values: Paced (3),Percent (1),TimeSpan (2),Uniform (0)
  """
  def __eq__(self,*args):

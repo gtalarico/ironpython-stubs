@@ -1,8 +1,11 @@
 class TypeBinding(ElementBinding,IDisposable):
  """
- TypeBinding objects are used to bind a property to a Revit type,such as a wall type.
- 
- TypeBinding(categories: CategorySet)
+ TypeBinding objects are used to bind a property to a Revit type,such as a wall type.
+
+ 
+
+ TypeBinding(categories: CategorySet)
+
  TypeBinding()
  """
  def Dispose(self):
@@ -26,7 +29,8 @@ class TypeBinding(ElementBinding,IDisposable):
  @staticmethod
  def __new__(self,categories=None):
   """
-  __new__(cls: type,categories: CategorySet)
+  __new__(cls: type,categories: CategorySet)
+
   __new__(cls: type)
   """
   pass

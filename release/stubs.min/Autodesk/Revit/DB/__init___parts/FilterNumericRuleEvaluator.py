@@ -5,24 +5,42 @@ class FilterNumericRuleEvaluator(object,IDisposable):
   pass
  def Evaluate(self,lhs,rhs,epsilon=None):
   """
-  Evaluate(self: FilterNumericRuleEvaluator,lhs: float,rhs: float,epsilon: float) -> bool
-  
-   Derived classes override this method to implement the test that determines
-     
-    whether the two given double-precision values satisfy the desired condition or 
-    not.
-  
-  
-   lhs: A value from an element in the document.
-   rhs: The user-supplied value against which values from the document are tested.
-   epsilon: Defines the tolerance within which two values may be considered equal.
-   Returns: True if the given arguments satisfy the condition,otherwise false.
-  Evaluate(self: FilterNumericRuleEvaluator,lhs: int,rhs: int) -> bool
-  
-   Derived classes should override this method to implement the desired test.
-  
-   lhs: A value from an element in the document.
-   rhs: The user-supplied value against which values from the document are tested.
+  Evaluate(self: FilterNumericRuleEvaluator,lhs: float,rhs: float,epsilon: float) -> bool
+
+  
+
+   Derived classes override this method to implement the test that determines
+
+     
+
+    whether the two given double-precision values satisfy the desired condition or 
+
+    not.
+
+  
+
+  
+
+   lhs: A value from an element in the document.
+
+   rhs: The user-supplied value against which values from the document are tested.
+
+   epsilon: Defines the tolerance within which two values may be considered equal.
+
+   Returns: True if the given arguments satisfy the condition,otherwise false.
+
+  Evaluate(self: FilterNumericRuleEvaluator,lhs: int,rhs: int) -> bool
+
+  
+
+   Derived classes should override this method to implement the desired test.
+
+  
+
+   lhs: A value from an element in the document.
+
+   rhs: The user-supplied value against which values from the document are tested.
+
    Returns: True if lhs,rhs satisfy the condition implemented by this evaluator.
   """
   pass
@@ -42,10 +60,14 @@ class FilterNumericRuleEvaluator(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: FilterNumericRuleEvaluator) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: FilterNumericRuleEvaluator) -> bool
+
+
+
 """
 
 

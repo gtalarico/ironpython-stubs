@@ -1,9 +1,13 @@
 class RankException(SystemException,ISerializable,_Exception):
  """
- The exception that is thrown when an array with the wrong number of dimensions is passed to a method.
- 
- RankException()
- RankException(message: str)
+ The exception that is thrown when an array with the wrong number of dimensions is passed to a method.
+
+ 
+
+ RankException()
+
+ RankException(message: str)
+
  RankException(message: str,innerException: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,9 +22,12 @@ class RankException(SystemException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,innerException=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,innerException: Exception)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,innerException: Exception)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

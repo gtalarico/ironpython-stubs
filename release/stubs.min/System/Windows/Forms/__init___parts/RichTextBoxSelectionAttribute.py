@@ -1,7 +1,9 @@
 class RichTextBoxSelectionAttribute(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies whether any characters in the current selection have the style or attribute.
- 
+ Specifies whether any characters in the current selection have the style or attribute.
+
+ 
+
  enum RichTextBoxSelectionAttribute,values: All (1),Mixed (-1),None (0)
  """
  def __eq__(self,*args):

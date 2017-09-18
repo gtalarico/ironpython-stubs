@@ -1,6 +1,7 @@
 class ConduitSizeSettingIterator(object,IEnumerator[KeyValuePair[str,ConduitSizes]],IDisposable,IEnumerator):
  """
- An iterator to a set of items from ConduitSizeSettings. Each item is a KeyValuePair(System::String^,ConduitSizes).
+ An iterator to a set of items from ConduitSizeSettings. Each item is a KeyValuePair(System::String^,ConduitSizes).
+
     ElementId is the id of the conduit standard type.
  """
  def Dispose(self):
@@ -8,31 +9,46 @@ class ConduitSizeSettingIterator(object,IEnumerator[KeyValuePair[str,ConduitSize
   pass
  def HasCurrent(self):
   """
-  HasCurrent(self: ConduitSizeSettingIterator) -> bool
-  
-   Identifies whether the iterator has a current item.
-     There is no current 
-    item if the iterator has not started yet or has been done.
-  
+  HasCurrent(self: ConduitSizeSettingIterator) -> bool
+
+  
+
+   Identifies whether the iterator has a current item.
+
+     There is no current 
+
+    item if the iterator has not started yet or has been done.
+
+  
+
    Returns: True if there is a current item.
   """
   pass
  def IsDone(self):
   """
-  IsDone(self: ConduitSizeSettingIterator) -> bool
-  
-   Identifies if the iteration has completed.
-   Returns: True if the iteration has no more items.  False if there are more items to be 
+  IsDone(self: ConduitSizeSettingIterator) -> bool
+
+  
+
+   Identifies if the iteration has completed.
+
+   Returns: True if the iteration has no more items.  False if there are more items to be 
+
     iterated.
   """
   pass
  def MoveNext(self):
   """
-  MoveNext(self: ConduitSizeSettingIterator) -> bool
-  
-   Increments the enumerator to the next item.
-   Returns: True if there is a next available item in this enumerator.
-     False if the 
+  MoveNext(self: ConduitSizeSettingIterator) -> bool
+
+  
+
+   Increments the enumerator to the next item.
+
+   Returns: True if there is a next available item in this enumerator.
+
+     False if the 
+
     enumerator has completed all available items.
   """
   pass
@@ -44,7 +60,8 @@ class ConduitSizeSettingIterator(object,IEnumerator[KeyValuePair[str,ConduitSize
   pass
  def Reset(self):
   """
-  Reset(self: ConduitSizeSettingIterator)
+  Reset(self: ConduitSizeSettingIterator)
+
    Resets the iterator to the initial state.
   """
   pass
@@ -67,17 +84,25 @@ class ConduitSizeSettingIterator(object,IEnumerator[KeyValuePair[str,ConduitSize
   """ __repr__(self: object) -> str """
   pass
  Current=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the item at the current position of the iterator.
-
-Get: Current(self: ConduitSizeSettingIterator) -> KeyValuePair[str,ConduitSizes]
-
+ """Gets the item at the current position of the iterator.
+
+
+
+Get: Current(self: ConduitSizeSettingIterator) -> KeyValuePair[str,ConduitSizes]
+
+
+
 """
 
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ConduitSizeSettingIterator) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ConduitSizeSettingIterator) -> bool
+
+
+
 """
 
 

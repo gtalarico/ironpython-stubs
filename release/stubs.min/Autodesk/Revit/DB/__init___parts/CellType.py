@@ -1,7 +1,9 @@
 class CellType(Enum,IComparable,IFormattable,IConvertible):
  """
- Declares the cell data type.
- 
+ Declares the cell data type.
+
+ 
+
  enum CellType,values: CalculatedValue (5),CombinedParameter (4),Graphic (1),Inherited (3),Parameter (2),ParameterText (6),Text (0)
  """
  def __eq__(self,*args):

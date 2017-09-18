@@ -1,8 +1,11 @@
 class BoundingBoxUV(object,IDisposable):
  """
- A two-dimensional rectangle,parallel to the coordinate axes.
- 
- BoundingBoxUV(min_u: float,min_v: float,max_u: float,max_v: float)
+ A two-dimensional rectangle,parallel to the coordinate axes.
+
+ 
+
+ BoundingBoxUV(min_u: float,min_v: float,max_u: float,max_v: float)
+
  BoundingBoxUV()
  """
  def Dispose(self):
@@ -23,7 +26,8 @@ class BoundingBoxUV(object,IDisposable):
  @staticmethod
  def __new__(self,min_u=None,min_v=None,max_u=None,max_v=None):
   """
-  __new__(cls: type,min_u: float,min_v: float,max_u: float,max_v: float)
+  __new__(cls: type,min_u: float,min_v: float,max_u: float,max_v: float)
+
   __new__(cls: type)
   """
   pass
@@ -31,19 +35,29 @@ class BoundingBoxUV(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  Max=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Maximum coordinates (upper-right corner of the box).
-
-Get: Max(self: BoundingBoxUV) -> UV
-
-Set: Max(self: BoundingBoxUV)=value
+ """Maximum coordinates (upper-right corner of the box).
+
+
+
+Get: Max(self: BoundingBoxUV) -> UV
+
+
+
+Set: Max(self: BoundingBoxUV)=value
+
 """
 
  Min=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Minimum coordinates (lower-left corner of the box).
-
-Get: Min(self: BoundingBoxUV) -> UV
-
-Set: Min(self: BoundingBoxUV)=value
+ """Minimum coordinates (lower-left corner of the box).
+
+
+
+Get: Min(self: BoundingBoxUV) -> UV
+
+
+
+Set: Min(self: BoundingBoxUV)=value
+
 """
 
 

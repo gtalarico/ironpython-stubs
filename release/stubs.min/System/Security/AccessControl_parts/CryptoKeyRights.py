@@ -1,7 +1,9 @@
 class CryptoKeyRights(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the cryptographic key operation for which an authorization rule controls access or auditing.
- 
+ Specifies the cryptographic key operation for which an authorization rule controls access or auditing.
+
+ 
+
  enum (flags) CryptoKeyRights,values: ChangePermissions (262144),Delete (65536),FullControl (2032027),GenericAll (268435456),GenericExecute (536870912),GenericRead (-2147483648),GenericWrite (1073741824),ReadAttributes (128),ReadData (1),ReadExtendedAttributes (8),ReadPermissions (131072),Synchronize (1048576),TakeOwnership (524288),WriteAttributes (256),WriteData (2),WriteExtendedAttributes (16)
  """
  def __eq__(self,*args):

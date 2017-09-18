@@ -2,23 +2,30 @@ class IObserver:
  # no doc
  def OnCompleted(self):
   """
-  OnCompleted(self: IObserver[T])
+  OnCompleted(self: IObserver[T])
+
    Notifies the observer that the provider has finished sending push-based notifications.
   """
   pass
  def OnError(self,error):
   """
-  OnError(self: IObserver[T],error: Exception)
-   Notifies the observer that the provider has experienced an error condition.
-  
+  OnError(self: IObserver[T],error: Exception)
+
+   Notifies the observer that the provider has experienced an error condition.
+
+  
+
    error: An object that provides additional information about the error.
   """
   pass
  def OnNext(self,value):
   """
-  OnNext(self: IObserver[T],value: T)
-   Provides the observer with new data.
-  
+  OnNext(self: IObserver[T],value: T)
+
+   Provides the observer with new data.
+
+  
+
    value: The current notification information.
   """
   pass

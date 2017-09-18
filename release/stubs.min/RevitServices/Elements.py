@@ -21,26 +21,41 @@ class ElementDeleteDelegate(MulticastDelegate,ICloneable,ISerializable):
   pass
  def CombineImpl(self,*args):
   """
-  CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
-  
-   Combines this System.Delegate with the specified System.Delegate to form a new 
-    delegate.
-  
-  
-   follow: The delegate to combine with this delegate.
+  CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
+
+  
+
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+
+    delegate.
+
+  
+
+  
+
+   follow: The delegate to combine with this delegate.
+
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
   """
   pass
  def DynamicInvokeImpl(self,*args):
   """
-  DynamicInvokeImpl(self: Delegate,args: Array[object]) -> object
-  
-   Dynamically invokes (late-bound) the method represented by the current delegate.
-  
-   args: An array of objects that are the arguments to pass to the method represented by 
-    the current delegate.-or- null,if the method represented by the current 
-    delegate does not require arguments.
-  
+  DynamicInvokeImpl(self: Delegate,args: Array[object]) -> object
+
+  
+
+   Dynamically invokes (late-bound) the method represented by the current delegate.
+
+  
+
+   args: An array of objects that are the arguments to pass to the method represented by 
+
+    the current delegate.-or- null,if the method represented by the current 
+
+    delegate does not require arguments.
+
+  
+
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -49,9 +64,12 @@ class ElementDeleteDelegate(MulticastDelegate,ICloneable,ISerializable):
   pass
  def GetMethodImpl(self,*args):
   """
-  GetMethodImpl(self: MulticastDelegate) -> MethodInfo
-  
-   Returns a static method represented by the current System.MulticastDelegate.
+  GetMethodImpl(self: MulticastDelegate) -> MethodInfo
+
+  
+
+   Returns a static method represented by the current System.MulticastDelegate.
+
    Returns: A static method represented by the current System.MulticastDelegate.
   """
   pass
@@ -60,15 +78,24 @@ class ElementDeleteDelegate(MulticastDelegate,ICloneable,ISerializable):
   pass
  def RemoveImpl(self,*args):
   """
-  RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
-  
-   Removes an element from the invocation list of this System.MulticastDelegate 
-    that is equal to the specified delegate.
-  
-  
-   value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new 
-    System.Delegate without value in its invocation list; otherwise,this instance 
+  RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
+
+  
+
+   Removes an element from the invocation list of this System.MulticastDelegate 
+
+    that is equal to the specified delegate.
+
+  
+
+  
+
+   value: The delegate to search for in the invocation list.
+
+   Returns: If value is found in the invocation list for this instance,then a new 
+
+    System.Delegate without value in its invocation list; otherwise,this instance 
+
     with its original invocation list.
   """
   pass
@@ -122,26 +149,41 @@ class ElementUpdateDelegate(MulticastDelegate,ICloneable,ISerializable):
   pass
  def CombineImpl(self,*args):
   """
-  CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
-  
-   Combines this System.Delegate with the specified System.Delegate to form a new 
-    delegate.
-  
-  
-   follow: The delegate to combine with this delegate.
+  CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
+
+  
+
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+
+    delegate.
+
+  
+
+  
+
+   follow: The delegate to combine with this delegate.
+
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
   """
   pass
  def DynamicInvokeImpl(self,*args):
   """
-  DynamicInvokeImpl(self: Delegate,args: Array[object]) -> object
-  
-   Dynamically invokes (late-bound) the method represented by the current delegate.
-  
-   args: An array of objects that are the arguments to pass to the method represented by 
-    the current delegate.-or- null,if the method represented by the current 
-    delegate does not require arguments.
-  
+  DynamicInvokeImpl(self: Delegate,args: Array[object]) -> object
+
+  
+
+   Dynamically invokes (late-bound) the method represented by the current delegate.
+
+  
+
+   args: An array of objects that are the arguments to pass to the method represented by 
+
+    the current delegate.-or- null,if the method represented by the current 
+
+    delegate does not require arguments.
+
+  
+
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -150,9 +192,12 @@ class ElementUpdateDelegate(MulticastDelegate,ICloneable,ISerializable):
   pass
  def GetMethodImpl(self,*args):
   """
-  GetMethodImpl(self: MulticastDelegate) -> MethodInfo
-  
-   Returns a static method represented by the current System.MulticastDelegate.
+  GetMethodImpl(self: MulticastDelegate) -> MethodInfo
+
+  
+
+   Returns a static method represented by the current System.MulticastDelegate.
+
    Returns: A static method represented by the current System.MulticastDelegate.
   """
   pass
@@ -161,15 +206,24 @@ class ElementUpdateDelegate(MulticastDelegate,ICloneable,ISerializable):
   pass
  def RemoveImpl(self,*args):
   """
-  RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
-  
-   Removes an element from the invocation list of this System.MulticastDelegate 
-    that is equal to the specified delegate.
-  
-  
-   value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new 
-    System.Delegate without value in its invocation list; otherwise,this instance 
+  RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
+
+  
+
+   Removes an element from the invocation list of this System.MulticastDelegate 
+
+    that is equal to the specified delegate.
+
+  
+
+  
+
+   value: The delegate to search for in the invocation list.
+
+   Returns: If value is found in the invocation list for this instance,then a new 
+
+    System.Delegate without value in its invocation list; otherwise,this instance 
+
     with its original invocation list.
   """
   pass
@@ -190,26 +244,41 @@ class ElementUpdateDelegateElementId(MulticastDelegate,ICloneable,ISerializable)
   pass
  def CombineImpl(self,*args):
   """
-  CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
-  
-   Combines this System.Delegate with the specified System.Delegate to form a new 
-    delegate.
-  
-  
-   follow: The delegate to combine with this delegate.
+  CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
+
+  
+
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+
+    delegate.
+
+  
+
+  
+
+   follow: The delegate to combine with this delegate.
+
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
   """
   pass
  def DynamicInvokeImpl(self,*args):
   """
-  DynamicInvokeImpl(self: Delegate,args: Array[object]) -> object
-  
-   Dynamically invokes (late-bound) the method represented by the current delegate.
-  
-   args: An array of objects that are the arguments to pass to the method represented by 
-    the current delegate.-or- null,if the method represented by the current 
-    delegate does not require arguments.
-  
+  DynamicInvokeImpl(self: Delegate,args: Array[object]) -> object
+
+  
+
+   Dynamically invokes (late-bound) the method represented by the current delegate.
+
+  
+
+   args: An array of objects that are the arguments to pass to the method represented by 
+
+    the current delegate.-or- null,if the method represented by the current 
+
+    delegate does not require arguments.
+
+  
+
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -218,9 +287,12 @@ class ElementUpdateDelegateElementId(MulticastDelegate,ICloneable,ISerializable)
   pass
  def GetMethodImpl(self,*args):
   """
-  GetMethodImpl(self: MulticastDelegate) -> MethodInfo
-  
-   Returns a static method represented by the current System.MulticastDelegate.
+  GetMethodImpl(self: MulticastDelegate) -> MethodInfo
+
+  
+
+   Returns a static method represented by the current System.MulticastDelegate.
+
    Returns: A static method represented by the current System.MulticastDelegate.
   """
   pass
@@ -229,15 +301,24 @@ class ElementUpdateDelegateElementId(MulticastDelegate,ICloneable,ISerializable)
   pass
  def RemoveImpl(self,*args):
   """
-  RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
-  
-   Removes an element from the invocation list of this System.MulticastDelegate 
-    that is equal to the specified delegate.
-  
-  
-   value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new 
-    System.Delegate without value in its invocation list; otherwise,this instance 
+  RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
+
+  
+
+   Removes an element from the invocation list of this System.MulticastDelegate 
+
+    that is equal to the specified delegate.
+
+  
+
+  
+
+   value: The delegate to search for in the invocation list.
+
+   Returns: If value is found in the invocation list for this instance,then a new 
+
+    System.Delegate without value in its invocation list; otherwise,this instance 
+
     with its original invocation list.
   """
   pass
@@ -261,23 +342,31 @@ class ElementUpdateEventArgs(EventArgs):
   """ __new__(cls: type,doc: Document,elements: IEnumerable[ElementId],transactions: IEnumerable[str],operation: UpdateType) """
   pass
  Elements=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Elements(self: ElementUpdateEventArgs) -> IEnumerable[ElementId]
-
+ """Get: Elements(self: ElementUpdateEventArgs) -> IEnumerable[ElementId]
+
+
+
 """
 
  Operation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Operation(self: ElementUpdateEventArgs) -> UpdateType
-
+ """Get: Operation(self: ElementUpdateEventArgs) -> UpdateType
+
+
+
 """
 
  RevitDocument=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: RevitDocument(self: ElementUpdateEventArgs) -> Document
-
+ """Get: RevitDocument(self: ElementUpdateEventArgs) -> Document
+
+
+
 """
 
  Transactions=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Transactions(self: ElementUpdateEventArgs) -> IEnumerable[str]
-
+ """Get: Transactions(self: ElementUpdateEventArgs) -> IEnumerable[str]
+
+
+
 """
 
 
@@ -338,8 +427,10 @@ class RevitServicesUpdater(object):
   """ UnRegisterAllChangeHooks(self: RevitServicesUpdater) """
   pass
  DocumentToWatch=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DocumentToWatch(self: RevitServicesUpdater) -> Document
-
+ """Get: DocumentToWatch(self: RevitServicesUpdater) -> Document
+
+
+
 """
 
 
@@ -380,21 +471,30 @@ class UpdaterArgs(EventArgs):
   """ __new__(cls: type,added: ICollection[ElementId],modified: ICollection[ElementId],deleted: ICollection[ElementId]) """
   pass
  Added=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Added(self: UpdaterArgs) -> ICollection[ElementId]
-
-Set: Added(self: UpdaterArgs)=value
+ """Get: Added(self: UpdaterArgs) -> ICollection[ElementId]
+
+
+
+Set: Added(self: UpdaterArgs)=value
+
 """
 
  Deleted=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Deleted(self: UpdaterArgs) -> ICollection[ElementId]
-
-Set: Deleted(self: UpdaterArgs)=value
+ """Get: Deleted(self: UpdaterArgs) -> ICollection[ElementId]
+
+
+
+Set: Deleted(self: UpdaterArgs)=value
+
 """
 
  Modified=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Modified(self: UpdaterArgs) -> ICollection[ElementId]
-
-Set: Modified(self: UpdaterArgs)=value
+ """Get: Modified(self: UpdaterArgs) -> ICollection[ElementId]
+
+
+
+Set: Modified(self: UpdaterArgs)=value
+
 """
 
 
@@ -406,26 +506,41 @@ class UpdaterHandler(MulticastDelegate,ICloneable,ISerializable):
   pass
  def CombineImpl(self,*args):
   """
-  CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
-  
-   Combines this System.Delegate with the specified System.Delegate to form a new 
-    delegate.
-  
-  
-   follow: The delegate to combine with this delegate.
+  CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
+
+  
+
+   Combines this System.Delegate with the specified System.Delegate to form a new 
+
+    delegate.
+
+  
+
+  
+
+   follow: The delegate to combine with this delegate.
+
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
   """
   pass
  def DynamicInvokeImpl(self,*args):
   """
-  DynamicInvokeImpl(self: Delegate,args: Array[object]) -> object
-  
-   Dynamically invokes (late-bound) the method represented by the current delegate.
-  
-   args: An array of objects that are the arguments to pass to the method represented by 
-    the current delegate.-or- null,if the method represented by the current 
-    delegate does not require arguments.
-  
+  DynamicInvokeImpl(self: Delegate,args: Array[object]) -> object
+
+  
+
+   Dynamically invokes (late-bound) the method represented by the current delegate.
+
+  
+
+   args: An array of objects that are the arguments to pass to the method represented by 
+
+    the current delegate.-or- null,if the method represented by the current 
+
+    delegate does not require arguments.
+
+  
+
    Returns: The object returned by the method represented by the delegate.
   """
   pass
@@ -434,9 +549,12 @@ class UpdaterHandler(MulticastDelegate,ICloneable,ISerializable):
   pass
  def GetMethodImpl(self,*args):
   """
-  GetMethodImpl(self: MulticastDelegate) -> MethodInfo
-  
-   Returns a static method represented by the current System.MulticastDelegate.
+  GetMethodImpl(self: MulticastDelegate) -> MethodInfo
+
+  
+
+   Returns a static method represented by the current System.MulticastDelegate.
+
    Returns: A static method represented by the current System.MulticastDelegate.
   """
   pass
@@ -445,15 +563,24 @@ class UpdaterHandler(MulticastDelegate,ICloneable,ISerializable):
   pass
  def RemoveImpl(self,*args):
   """
-  RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
-  
-   Removes an element from the invocation list of this System.MulticastDelegate 
-    that is equal to the specified delegate.
-  
-  
-   value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new 
-    System.Delegate without value in its invocation list; otherwise,this instance 
+  RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
+
+  
+
+   Removes an element from the invocation list of this System.MulticastDelegate 
+
+    that is equal to the specified delegate.
+
+  
+
+  
+
+   value: The delegate to search for in the invocation list.
+
+   Returns: If value is found in the invocation list for this instance,then a new 
+
+    System.Delegate without value in its invocation list; otherwise,this instance 
+
     with its original invocation list.
   """
   pass

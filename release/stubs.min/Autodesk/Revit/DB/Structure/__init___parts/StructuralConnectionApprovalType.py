@@ -3,11 +3,16 @@ class StructuralConnectionApprovalType(ElementType,IDisposable):
  @staticmethod
  def Create(doc,name):
   """
-  Create(doc: Document,name: str) -> StructuralConnectionApprovalType
-  
-   Creates a new StructuralConnectionApprovalType.
-  
-   name: A name for the new approval type. It must be unique within the document.
+  Create(doc: Document,name: str) -> StructuralConnectionApprovalType
+
+  
+
+   Creates a new StructuralConnectionApprovalType.
+
+  
+
+   name: A name for the new approval type. It must be unique within the document.
+
    Returns: Created connection approval type.
   """
   pass
@@ -24,9 +29,12 @@ class StructuralConnectionApprovalType(ElementType,IDisposable):
  @staticmethod
  def IsValidApprovalTypeName(doc,name):
   """
-  IsValidApprovalTypeName(doc: Document,name: str) -> bool
-  
-   Verifies if the provided approval name is unique in the document.
+  IsValidApprovalTypeName(doc: Document,name: str) -> bool
+
+  
+
+   Verifies if the provided approval name is unique in the document.
+
    Returns: True if approval type name is unique.
   """
   pass

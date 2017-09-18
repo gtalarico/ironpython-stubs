@@ -1,7 +1,9 @@
 class TextAlignMask(Enum,IComparable,IFormattable,IConvertible):
  """
- An enumerated type listing all the Text align mask.
- 
+ An enumerated type listing all the Text align mask.
+
+ 
+
  enum TextAlignMask,values: horzAlignMask (448),vertAlignMask (3584)
  """
  def __eq__(self,*args):

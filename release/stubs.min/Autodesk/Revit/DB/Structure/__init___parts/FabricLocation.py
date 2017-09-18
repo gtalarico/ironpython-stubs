@@ -1,7 +1,9 @@
 class FabricLocation(Enum,IComparable,IFormattable,IConvertible):
  """
- Fabric location in the host
- 
+ Fabric location in the host
+
+ 
+
  enum FabricLocation,values: BottomOrInternal (1),TopOrExternal (0)
  """
  def __eq__(self,*args):

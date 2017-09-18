@@ -1,7 +1,9 @@
 class Color(APIObject,IDisposable):
  """
- Represents a color in Autodesk Revit.
- 
+ Represents a color in Autodesk Revit.
+
+ 
+
  Color(red: Byte,green: Byte,blue: Byte)
  """
  def Dispose(self):
@@ -27,34 +29,53 @@ class Color(APIObject,IDisposable):
   """ __new__(cls: type,red: Byte,green: Byte,blue: Byte) """
   pass
  Blue=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the blue channel of the color.  Setting a channel is obsolete in Autodesk Revit 2013.  Please create a new color instead.
-
-Get: Blue(self: Color) -> Byte
-
-Set: Blue(self: Color)=value
+ """Get the blue channel of the color.  Setting a channel is obsolete in Autodesk Revit 2013.  Please create a new color instead.
+
+
+
+Get: Blue(self: Color) -> Byte
+
+
+
+Set: Blue(self: Color)=value
+
 """
 
  Green=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the green channel of the color.  Setting a channel is obsolete in Autodesk Revit 2013.  Please create a new color instead.
-
-Get: Green(self: Color) -> Byte
-
-Set: Green(self: Color)=value
+ """Get the green channel of the color.  Setting a channel is obsolete in Autodesk Revit 2013.  Please create a new color instead.
+
+
+
+Get: Green(self: Color) -> Byte
+
+
+
+Set: Green(self: Color)=value
+
 """
 
  IsValid=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Identifies if the color represents a valid color,or an uninitialized/invalid value.
-
-Get: IsValid(self: Color) -> bool
-
+ """Identifies if the color represents a valid color,or an uninitialized/invalid value.
+
+
+
+Get: IsValid(self: Color) -> bool
+
+
+
 """
 
  Red=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get the red channel of the color.  Setting a channel is obsolete in Autodesk Revit 2013.  Please create a new color instead.
-
-Get: Red(self: Color) -> Byte
-
-Set: Red(self: Color)=value
+ """Get the red channel of the color.  Setting a channel is obsolete in Autodesk Revit 2013.  Please create a new color instead.
+
+
+
+Get: Red(self: Color) -> Byte
+
+
+
+Set: Red(self: Color)=value
+
 """
 
 

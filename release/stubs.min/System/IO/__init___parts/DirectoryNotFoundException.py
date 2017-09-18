@@ -1,9 +1,13 @@
 class DirectoryNotFoundException(IOException,ISerializable,_Exception):
  """
- The exception that is thrown when part of a file or directory cannot be found.
- 
- DirectoryNotFoundException()
- DirectoryNotFoundException(message: str)
+ The exception that is thrown when part of a file or directory cannot be found.
+
+ 
+
+ DirectoryNotFoundException()
+
+ DirectoryNotFoundException(message: str)
+
  DirectoryNotFoundException(message: str,innerException: Exception)
  """
  def add_SerializeObjectState(self,*args):
@@ -18,9 +22,12 @@ class DirectoryNotFoundException(IOException,ISerializable,_Exception):
  @staticmethod
  def __new__(self,message=None,innerException=None):
   """
-  __new__(cls: type)
-  __new__(cls: type,message: str)
-  __new__(cls: type,message: str,innerException: Exception)
+  __new__(cls: type)
+
+  __new__(cls: type,message: str)
+
+  __new__(cls: type,message: str,innerException: Exception)
+
   __new__(cls: type,info: SerializationInfo,context: StreamingContext)
   """
   pass

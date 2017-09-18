@@ -1,20 +1,26 @@
 class ModelCurveArray(APIObject,IDisposable,IEnumerable):
  """
- An array that contains model curves.
- 
+ An array that contains model curves.
+
+ 
+
  ModelCurveArray()
  """
  def Append(self,item):
   """
-  Append(self: ModelCurveArray,item: ModelCurve)
-   Add the model curve to the end of the array.
-  
+  Append(self: ModelCurveArray,item: ModelCurve)
+
+   Add the model curve to the end of the array.
+
+  
+
    item: The model curve to be added.
   """
   pass
  def Clear(self):
   """
-  Clear(self: ModelCurveArray)
+  Clear(self: ModelCurveArray)
+
    Removes every model curve from the array,rendering it empty.
   """
   pass
@@ -23,27 +29,38 @@ class ModelCurveArray(APIObject,IDisposable,IEnumerable):
   pass
  def ForwardIterator(self):
   """
-  ForwardIterator(self: ModelCurveArray) -> ModelCurveArrayIterator
-  
-   Retrieve a forward moving iterator to the array.
+  ForwardIterator(self: ModelCurveArray) -> ModelCurveArrayIterator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: ModelCurveArray) -> IEnumerator
-  
-   Retrieve a forward moving iterator to the array.
+  GetEnumerator(self: ModelCurveArray) -> IEnumerator
+
+  
+
+   Retrieve a forward moving iterator to the array.
+
    Returns: Returns a forward moving iterator to the array.
   """
   pass
  def Insert(self,item,index):
   """
-  Insert(self: ModelCurveArray,item: ModelCurve,index: int)
-   Insert the specified model curve into the array.
-  
-   item: The model curve to be inserted into the array.
-   index: The model curve will be inserted before this index.
+  Insert(self: ModelCurveArray,item: ModelCurve,index: int)
+
+   Insert the specified model curve into the array.
+
+  
+
+   item: The model curve to be inserted into the array.
+
+   index: The model curve will be inserted before this index.
+
    Returns: Returns whether the model curve was inserted into the array.
   """
   pass
@@ -55,9 +72,12 @@ class ModelCurveArray(APIObject,IDisposable,IEnumerable):
   pass
  def ReverseIterator(self):
   """
-  ReverseIterator(self: ModelCurveArray) -> ModelCurveArrayIterator
-  
-   Retrieve a backward moving iterator to the array.
+  ReverseIterator(self: ModelCurveArray) -> ModelCurveArrayIterator
+
+  
+
+   Retrieve a backward moving iterator to the array.
+
    Returns: Returns a backward moving iterator to the array.
   """
   pass
@@ -80,17 +100,25 @@ class ModelCurveArray(APIObject,IDisposable,IEnumerable):
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsEmpty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Test to see if the array is empty.
-
-Get: IsEmpty(self: ModelCurveArray) -> bool
-
+ """Test to see if the array is empty.
+
+
+
+Get: IsEmpty(self: ModelCurveArray) -> bool
+
+
+
 """
 
  Size=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Returns the number of model curves that are in the array.
-
-Get: Size(self: ModelCurveArray) -> int
-
+ """Returns the number of model curves that are in the array.
+
+
+
+Get: Size(self: ModelCurveArray) -> int
+
+
+
 """
 
 

@@ -5,37 +5,57 @@ class WorksetTable(object,IDisposable):
   pass
  def GetActiveWorksetId(self):
   """
-  GetActiveWorksetId(self: WorksetTable) -> WorksetId
-  
-   Returns the active workset's WorksetId.
+  GetActiveWorksetId(self: WorksetTable) -> WorksetId
+
+  
+
+   Returns the active workset's WorksetId.
+
    Returns: WorksetId of the active workset.
   """
   pass
  def GetWorkset(self,*__args):
   """
-  GetWorkset(self: WorksetTable,id: WorksetId) -> Workset
-  
-   Returns the workset from a input WorksetId.
-  
-   id: Id of a workset.
-   Returns: The returned workset. ll if there is no workset in this table with this Id.
-  GetWorkset(self: WorksetTable,guid: Guid) -> Workset
-  
-   Returns the workset from a input Guid.
-  
-   guid: Guid of the workset.
+  GetWorkset(self: WorksetTable,id: WorksetId) -> Workset
+
+  
+
+   Returns the workset from a input WorksetId.
+
+  
+
+   id: Id of a workset.
+
+   Returns: The returned workset. ll if there is no workset in this table with this Id.
+
+  GetWorkset(self: WorksetTable,guid: Guid) -> Workset
+
+  
+
+   Returns the workset from a input Guid.
+
+  
+
+   guid: Guid of the workset.
+
    Returns: The returned workset. ll if there is no workset in this table with this Id.
   """
   pass
  @staticmethod
  def IsWorksetNameUnique(aDoc,name):
   """
-  IsWorksetNameUnique(aDoc: Document,name: str) -> bool
-  
-   Checks if the given workset name is unique in the document.
-  
-   aDoc: The document in which the workset is accessed.
-   name: The workset name.
+  IsWorksetNameUnique(aDoc: Document,name: str) -> bool
+
+  
+
+   Checks if the given workset name is unique in the document.
+
+  
+
+   aDoc: The document in which the workset is accessed.
+
+   name: The workset name.
+
    Returns: True if this given workset name is unique in the document,false otherwise.
   """
   pass
@@ -45,19 +65,27 @@ class WorksetTable(object,IDisposable):
  @staticmethod
  def RenameWorkset(aDoc,worksetId,name):
   """
-  RenameWorkset(aDoc: Document,worksetId: WorksetId,name: str)
-   Renames the workset.
-  
-   aDoc: The document in which the workset is accessed.
-   worksetId: The workset Id.
+  RenameWorkset(aDoc: Document,worksetId: WorksetId,name: str)
+
+   Renames the workset.
+
+  
+
+   aDoc: The document in which the workset is accessed.
+
+   worksetId: The workset Id.
+
    name: The workset name.
   """
   pass
  def SetActiveWorksetId(self,worksetId):
   """
-  SetActiveWorksetId(self: WorksetTable,worksetId: WorksetId)
-   Sets the active workset.
-  
+  SetActiveWorksetId(self: WorksetTable,worksetId: WorksetId)
+
+   Sets the active workset.
+
+  
+
    worksetId: The workset Id.
   """
   pass
@@ -74,10 +102,14 @@ class WorksetTable(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: WorksetTable) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: WorksetTable) -> bool
+
+
+
 """
 
 

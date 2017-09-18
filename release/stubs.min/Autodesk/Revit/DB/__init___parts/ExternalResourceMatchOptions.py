@@ -1,7 +1,9 @@
 class ExternalResourceMatchOptions(object,IDisposable):
  """
- Represents match options used to filter external resources when listing them from external resource server.
- 
+ Represents match options used to filter external resources when listing them from external resource server.
+
+ 
+
  ExternalResourceMatchOptions(resourceType: ExternalResourceType)
  """
  def Dispose(self):
@@ -27,17 +29,25 @@ class ExternalResourceMatchOptions(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  IsValidObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Specifies whether the .NET object represents a valid Revit entity.
-
-Get: IsValidObject(self: ExternalResourceMatchOptions) -> bool
-
+ """Specifies whether the .NET object represents a valid Revit entity.
+
+
+
+Get: IsValidObject(self: ExternalResourceMatchOptions) -> bool
+
+
+
 """
 
  ResourceType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """The desired resource type which external resources should match.
-
-Get: ResourceType(self: ExternalResourceMatchOptions) -> ExternalResourceType
-
+ """The desired resource type which external resources should match.
+
+
+
+Get: ResourceType(self: ExternalResourceMatchOptions) -> ExternalResourceType
+
+
+
 """
 
 

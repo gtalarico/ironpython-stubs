@@ -3,17 +3,28 @@ class RebarSystemSpanSymbol(IndependentTag,IDisposable):
  @staticmethod
  def Create(document,viewId,hostId,point,symbolId):
   """
-  Create(document: Document,viewId: ElementId,hostId: LinkElementId,point: XYZ,symbolId: ElementId) -> RebarSystemSpanSymbol
-  
-   Creates a new instance of RebarSystemSpanSymbol in the project.
-  
-   document: The document.
-   viewId: The id of the view in which the symbol should appear.
-   hostId: The ElementId of AreaReinforcement (either in the document,or linked from 
-    another document).
-  
-   point: The span symbol's head position.
-   symbolId: The id of the family symbol of this symbol.
+  Create(document: Document,viewId: ElementId,hostId: LinkElementId,point: XYZ,symbolId: ElementId) -> RebarSystemSpanSymbol
+
+  
+
+   Creates a new instance of RebarSystemSpanSymbol in the project.
+
+  
+
+   document: The document.
+
+   viewId: The id of the view in which the symbol should appear.
+
+   hostId: The ElementId of AreaReinforcement (either in the document,or linked from 
+
+    another document).
+
+  
+
+   point: The span symbol's head position.
+
+   symbolId: The id of the family symbol of this symbol.
+
    Returns: A reference to newly created span symbol.
   """
   pass

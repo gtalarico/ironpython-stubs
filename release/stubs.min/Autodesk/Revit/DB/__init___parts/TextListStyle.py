@@ -1,7 +1,9 @@
 class TextListStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Supported styles of text list paragraphs.
- 
+ Supported styles of text list paragraphs.
+
+ 
+
  enum TextListStyle,values: Bullet (1),LetterLowercase (3),LetterUppercase (4),None (0),NumberArabic (2),NumberRomanLowercase (5),NumberRomanUppercase (6)
  """
  def __eq__(self,*args):

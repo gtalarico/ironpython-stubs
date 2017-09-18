@@ -1,7 +1,9 @@
 class CollectionChangeAction(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies how the collection is changed.
- 
+ Specifies how the collection is changed.
+
+ 
+
  enum CollectionChangeAction,values: Add (1),Refresh (3),Remove (2)
  """
  def __eq__(self,*args):
