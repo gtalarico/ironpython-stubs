@@ -1,0 +1,45 @@
+
+Notes:
+  Revit Api Takes about 3 min
+  System Takes about 5-7 min
+  Most others are less than 1-2 min
+
+Core:
+ ☐ Add revit.py to run from RPS
+ ☐ Integrate process.py into CLI
+ ☐ Add VS Code Image
+ ✔ Re-do Readme, add instructions for Sublime, Atom, and VSCode @high @done (17-09-18 01:37)
+ ✔ Finish contributing Instruction @done (17-09-18 01:37)
+ ✔ Add instructions for Setting up @done (17-09-18 01:36)
+ ✔ Create CmdLine application @high @done (17-09-17 23:49)
+ ✔ Implement Logger @high @done (17-09-17 16:16)
+
+  IronPython:
+    ✔ clr @done (17-09-17 15:56)
+    ✔ IronPython.Wpf @done (17-09-17 15:56)
+  DotNET:
+    ✔ PresentationCore @done (17-09-17 15:56)
+    ✔ WindowsBase @done (17-09-17 15:56)
+    ✔ System.Drawing @done (17-09-17 15:56)
+    ✔ PresentationFramework @done (17-09-17 15:56)
+    ☐ System.Windows.Forms
+    ☐ System
+       ☐ System.Threading
+       ☐ System.Reflections
+       ☐ System.Cryptography
+  Dynamo:
+    ✔ ProtoGeometry @done (17-09-17 15:56)
+    ✔ DSCoreNodes @done (17-09-17 15:56)
+    ✔ DSOffice @done (17-09-17 15:56)
+    ✔ Tessellation @done (17-09-17 15:56)
+  Revit:
+    ☐ RevitAPI'
+    ☐ RevitAPIUI
+    ☐ RevitServices'
+    ☐ RevitNodes'
+  Rhino:
+    ✔ Rhino3dmIO @done (17-09-17 15:56)
+    ✔ RhinoCommon @done (17-09-17 15:56)
+  Grasshopper:
+    ☐ Grasshopper
+    ☐ GH_IO
