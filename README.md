@@ -27,10 +27,20 @@ Demo
 
 [Wiki](https://github.com/gtalarico/ironpython-stubs/wiki)
 
+The [wiki](https://github.com/gtalarico/ironpython-stubs/wiki) has step-by-step instructions for setting up your stubs for Atom, Sublime, and Visual Studio Code.
+
 If you haven't yet, read [Note on Performance](https://github.com/gtalarico/ironpython-stubs/wiki/A-Note-on-Performance)
 Large Namespaces such as `Autodesk.Revit.DB` can take a long time to be parsed and cached and might not show up right away.
 
 ------------------------------------
+
+# Contribute - WIP
+
+### Generate Stubs
+`ipy -m ironstubs make RhinoCommon`
+`ipy -m ironstubs make --all`
+### Process Stubs
+WIP
 
 ### Known Issues
 * Performance is not great for some of the larger classes. If you know how this can be improved please let me know.
