@@ -123,10 +123,9 @@ def delete_module(module_path):
         logger.debug('Deleted Module: {}'.format(module_path))
 
 def dump_json_log(namespaces_dict):
-    output_dir = os.path.join(os.getcwd(), 'logs')
+    json_dir = os.path.join(os.getcwd(), 'logs')
     now = str(time.time()).split('.')[0]
     name = '-'.join(namespaces_dict.keys())
-    json_dir = os.path.dirname(output_dir)
     filepath = os.path.join(json_dir, '{}-{}.json'.format(name, now))
     with open(filepath, 'w') as fp:
         json.dump(namespaces_dict, fp, indent=2)
