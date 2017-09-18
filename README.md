@@ -17,8 +17,6 @@ The stubs include doc strings as well as constructor/function/method signatures.
 This repository contains the code to create these stubs, and also stores an
 a version of them that can be used by autocomplete-python.
 
-Demo
-
 ![sublime-large-demo](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/sublime/sublime-demo-large.gif)
 
 ------------------------------------
@@ -28,6 +26,8 @@ Demo
 [Wiki](https://github.com/gtalarico/ironpython-stubs/wiki)
 
 The [wiki](https://github.com/gtalarico/ironpython-stubs/wiki) has step-by-step instructions for setting up your stubs for Atom, Sublime, and Visual Studio Code.
+
+For a list of supported Assemblies, see [this list](https://github.com/gtalarico/ironpython-stubs/tree/master/logs)
 
 If you haven't yet, read [Note on Performance](https://github.com/gtalarico/ironpython-stubs/wiki/A-Note-on-Performance)
 Large Namespaces such as `Autodesk.Revit.DB` can take a long time to be parsed and cached and might not show up right away.
