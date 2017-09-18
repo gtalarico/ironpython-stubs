@@ -9,14 +9,14 @@ class RepeatBehavior(object,IFormattable):
   """
   Equals(repeatBehavior1: RepeatBehavior,repeatBehavior2: RepeatBehavior) -> bool
   
-   Indicates whether the two specified 
-    System.Windows.Media.Animation.RepeatBehavior structures are equal.
+   Indicates whether the two specified System.Windows.Media.Animation.RepeatBehavior structures are 
+    equal.
   
   
    repeatBehavior1: The first value to compare.
    repeatBehavior2: The second value to compare.
-   Returns: true if both the type and repeat behavior of repeatBehavior1 are equal to that 
-    of repeatBehavior2; otherwise,false.
+   Returns: true if both the type and repeat behavior of repeatBehavior1 are equal to that of 
+    repeatBehavior2; otherwise,false.
   
   Equals(self: RepeatBehavior,repeatBehavior: RepeatBehavior) -> bool
   
@@ -25,16 +25,16 @@ class RepeatBehavior(object,IFormattable):
   
   
    repeatBehavior: The value to compare to this instance.
-   Returns: true if both the type and repeat behavior of repeatBehavior are equal to this 
-    instance; otherwise,false.
+   Returns: true if both the type and repeat behavior of repeatBehavior are equal to this instance; 
+    otherwise,false.
   
   Equals(self: RepeatBehavior,value: object) -> bool
   
    Indicates whether this instance is equal to the specified object.
   
    value: The object to compare with this instance.
-   Returns: true if value is a System.Windows.Media.Animation.RepeatBehavior that 
-    represents the same repeat behavior as this instance; otherwise,false.
+   Returns: true if value is a System.Windows.Media.Animation.RepeatBehavior that represents the same repeat 
+    behavior as this instance; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -49,18 +49,15 @@ class RepeatBehavior(object,IFormattable):
   """
   ToString(self: RepeatBehavior,formatProvider: IFormatProvider) -> str
   
-   Returns a string representation of this 
-    System.Windows.Media.Animation.RepeatBehavior instance with the specified 
-    format.
+   Returns a string representation of this System.Windows.Media.Animation.RepeatBehavior instance 
+    with the specified format.
   
   
    formatProvider: The format used to construct the return value.
    Returns: A string representation of this instance.
   ToString(self: RepeatBehavior) -> str
   
-   Returns a string representation of this 
-    System.Windows.Media.Animation.RepeatBehavior instance.
-  
+   Returns a string representation of this System.Windows.Media.Animation.RepeatBehavior instance.
    Returns: A string representation of this instance.
   """
   pass
@@ -76,10 +73,9 @@ class RepeatBehavior(object,IFormattable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__[RepeatBehavior]() -> RepeatBehavior
-  
   __new__(cls: type,count: float)
-  __new__(cls: type,duration: TimeSpan)
+  __new__(cls: type,duration: TimeSpan)
+  __new__[RepeatBehavior]() -> RepeatBehavior
   """
   pass
  def __ne__(self,*args):

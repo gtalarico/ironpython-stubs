@@ -8,14 +8,11 @@ class CustomPopupPlacement(object):
   """
   Equals(self: CustomPopupPlacement,o: object) -> bool
   
-   Compares this structure with another 
-    System.Windows.Controls.Primitives.CustomPopupPlacement structure to determine 
-    whether they are equal.
+   Compares this structure with another System.Windows.Controls.Primitives.CustomPopupPlacement 
+    structure to determine whether they are equal.
   
   
-   o: The System.Windows.Controls.Primitives.CustomPopupPlacement structure to 
-    compare.
-  
+   o: The System.Windows.Controls.Primitives.CustomPopupPlacement structure to compare.
    Returns: true if the structures have the same values; otherwise,false.
   """
   pass
@@ -33,9 +30,8 @@ class CustomPopupPlacement(object):
  @staticmethod
  def __new__(self,point,primaryAxis):
   """
-  __new__[CustomPopupPlacement]() -> CustomPopupPlacement
-  
-  __new__(cls: type,point: Point,primaryAxis: PopupPrimaryAxis)
+  __new__(cls: type,point: Point,primaryAxis: PopupPrimaryAxis)
+  __new__[CustomPopupPlacement]() -> CustomPopupPlacement
   """
   pass
  def __ne__(self,*args):

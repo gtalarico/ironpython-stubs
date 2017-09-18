@@ -28,8 +28,7 @@ class GridTableStylesCollection(BaseCollection,ICollection,IEnumerable,IList):
   """
   Contains(self: GridTableStylesCollection,name: str) -> bool
   
-   Gets a value indicating whether the 
-    System.Windows.Forms.GridTableStylesCollection contains the 
+   Gets a value indicating whether the System.Windows.Forms.GridTableStylesCollection contains the 
     System.Windows.Forms.DataGridTableStyle specified by name.
   
   
@@ -39,9 +38,8 @@ class GridTableStylesCollection(BaseCollection,ICollection,IEnumerable,IList):
    Returns: true if the specified table style exists in the collection; otherwise,false.
   Contains(self: GridTableStylesCollection,table: DataGridTableStyle) -> bool
   
-   Gets a value indicating whether the 
-    System.Windows.Forms.GridTableStylesCollection contains the specified 
-    System.Windows.Forms.DataGridTableStyle.
+   Gets a value indicating whether the System.Windows.Forms.GridTableStylesCollection contains the 
+    specified System.Windows.Forms.DataGridTableStyle.
   
   
    table: The System.Windows.Forms.DataGridTableStyle to look for.
@@ -54,11 +52,11 @@ class GridTableStylesCollection(BaseCollection,ICollection,IEnumerable,IList):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -70,9 +68,7 @@ class GridTableStylesCollection(BaseCollection,ICollection,IEnumerable,IList):
  def OnCollectionChanged(self,*args):
   """
   OnCollectionChanged(self: GridTableStylesCollection,e: CollectionChangeEventArgs)
-   Raises the System.Windows.Forms.GridTableStylesCollection.CollectionChanged 
-    event.
-  
+   Raises the System.Windows.Forms.GridTableStylesCollection.CollectionChanged event.
   
    e: A System.ComponentModel.CollectionChangeEventArgs containing the event data.
   """
@@ -103,8 +99,7 @@ class GridTableStylesCollection(BaseCollection,ICollection,IEnumerable,IList):
    Determines whether the System.Collections.IList contains a specific value.
   
    value: The object to locate in the System.Collections.IList.
-   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,
-    false.
+   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,false.
   """
   pass
  def __getitem__(self,*args):

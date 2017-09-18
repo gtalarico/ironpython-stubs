@@ -6,8 +6,8 @@ class IDataGridViewEditingCell:
   
    Retrieves the formatted value of the cell.
   
-   context: A bitwise combination of System.Windows.Forms.DataGridViewDataErrorContexts 
-    values that specifies the context in which the data is needed.
+   context: A bitwise combination of System.Windows.Forms.DataGridViewDataErrorContexts values that 
+    specifies the context in which the data is needed.
   
    Returns: An System.Object that represents the formatted version of the cell contents.
   """

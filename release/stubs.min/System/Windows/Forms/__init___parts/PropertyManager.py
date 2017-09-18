@@ -17,16 +17,14 @@ class PropertyManager(BindingManagerBase):
   """
   GetItemProperties(self: BindingManagerBase,listType: Type,offset: int,dataSources: ArrayList,listAccessors: ArrayList) -> PropertyDescriptorCollection
   
-   Gets the list of properties of the items managed by this 
-    System.Windows.Forms.BindingManagerBase.
-  
+   Gets the list of properties of the items managed by this System.Windows.Forms.BindingManagerBase.
   
    listType: The System.Type of the bound list.
    offset: A counter used to recursively call the method.
    dataSources: An System.Collections.ArrayList containing the data sources.
    listAccessors: An System.Collections.ArrayList containing the table's bound properties.
-   Returns: A System.ComponentModel.PropertyDescriptorCollection that represents the 
-    property descriptors for the binding.
+   Returns: A System.ComponentModel.PropertyDescriptorCollection that represents the property descriptors 
+    for the binding.
   
   GetItemProperties(self: BindingManagerBase,dataSources: ArrayList,listAccessors: ArrayList) -> PropertyDescriptorCollection
   
@@ -36,8 +34,8 @@ class PropertyManager(BindingManagerBase):
   
    dataSources: An System.Collections.ArrayList containing the data sources.
    listAccessors: An System.Collections.ArrayList containing the table's bound properties.
-   Returns: A System.ComponentModel.PropertyDescriptorCollection that represents the 
-    property descriptors for the binding.
+   Returns: A System.ComponentModel.PropertyDescriptorCollection that represents the property descriptors 
+    for the binding.
   """
   pass
  def RemoveAt(self,index):

@@ -14,15 +14,15 @@ class FileLoadException(IOException,ISerializable,_Exception):
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: FileLoadException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo with the file name and 
-    additional exception information.
+   Sets the System.Runtime.Serialization.SerializationInfo with the file name and additional 
+    exception information.
   
   
-   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized 
-    object data about the exception being thrown.
+   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about 
+    the exception being thrown.
   
-   context: The System.Runtime.Serialization.StreamingContext that contains contextual 
-    information about the source or destination.
+   context: The System.Runtime.Serialization.StreamingContext that contains contextual information about the 
+    source or destination.
   """
   pass
  def remove_SerializeObjectState(self,*args):
@@ -32,12 +32,12 @@ class FileLoadException(IOException,ISerializable,_Exception):
   """
   ToString(self: FileLoadException) -> str
   
-   Returns the fully qualified name of the current exception,and possibly the 
-    error message,the name of the inner exception,and the stack trace.
+   Returns the fully qualified name of the current exception,and possibly the error message,the 
+    name of the inner exception,and the stack trace.
   
-   Returns: A string containing the fully qualified name of this exception,and possibly 
-    the error message,the name of the inner exception,and the stack trace,
-    depending on which System.IO.FileLoadException constructor is used.
+   Returns: A string containing the fully qualified name of this exception,and possibly the error message,
+    the name of the inner exception,and the stack trace,depending on which 
+    System.IO.FileLoadException constructor is used.
   """
   pass
  def __init__(self,*args):

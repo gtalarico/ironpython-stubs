@@ -102,8 +102,8 @@ class IPAddress(object):
   
    Converts an IP address string to an System.Net.IPAddress instance.
   
-   ipString: A string that contains an IP address in dotted-quad notation for IPv4 and in 
-    colon-hexadecimal notation for IPv6.
+   ipString: A string that contains an IP address in dotted-quad notation for IPv4 and in colon-hexadecimal 
+    notation for IPv6.
   
    Returns: An System.Net.IPAddress instance.
   """
@@ -113,8 +113,8 @@ class IPAddress(object):
   ToString(self: IPAddress) -> str
   
    Converts an Internet address to its standard notation.
-   Returns: A string that contains the IP address in either IPv4 dotted-quad or in IPv6 
-    colon-hexadecimal notation.
+   Returns: A string that contains the IP address in either IPv4 dotted-quad or in IPv6 colon-hexadecimal 
+    notation.
   """
   pass
  @staticmethod

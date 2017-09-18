@@ -8,13 +8,10 @@ class ExtenderProvidedPropertyAttribute(Attribute,_Attribute):
   """
   Equals(self: ExtenderProvidedPropertyAttribute,obj: object) -> bool
   
-   Determines whether the specified System.Object is equal to the current 
-    System.Object.
-  
+   Determines whether the specified System.Object is equal to the current System.Object.
   
    obj: An System.Object to compare with this instance or null.
-   Returns: true if the specified System.Object is equal to the current System.Object; 
-    otherwise,false.
+   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -29,8 +26,8 @@ class ExtenderProvidedPropertyAttribute(Attribute,_Attribute):
   """
   IsDefaultAttribute(self: ExtenderProvidedPropertyAttribute) -> bool
   
-   Provides an indication whether the value of this instance is the default value 
-    for the derived class.
+   Provides an indication whether the value of this instance is the default value for the derived 
+    class.
   
    Returns: true if this instance is the default attribute for the class; otherwise,false.
   """

@@ -11,9 +11,7 @@ class UCOMIRunningObjectTable:
   """
   GetObject(self: UCOMIRunningObjectTable,pmkObjectName: UCOMIMoniker) -> object
   
-   Returns the registered object if the supplied object name is registered as 
-    running.
-  
+   Returns the registered object if the supplied object name is registered as running.
   
    pmkObjectName: Reference to the moniker to search for in the ROT.
   """
@@ -22,9 +20,7 @@ class UCOMIRunningObjectTable:
   """
   GetTimeOfLastChange(self: UCOMIRunningObjectTable,pmkObjectName: UCOMIMoniker) -> FILETIME
   
-   Searches for this moniker in the ROT and reports the recorded time of change,
-    if present.
-  
+   Searches for this moniker in the ROT and reports the recorded time of change,if present.
   
    pmkObjectName: Reference to the moniker to search for in the ROT.
   """
@@ -32,9 +28,7 @@ class UCOMIRunningObjectTable:
  def IsRunning(self,pmkObjectName):
   """
   IsRunning(self: UCOMIRunningObjectTable,pmkObjectName: UCOMIMoniker)
-   Determines if the specified moniker is currently registered in the Running 
-    Object Table.
-  
+   Determines if the specified moniker is currently registered in the Running Object Table.
   
    pmkObjectName: Reference to the moniker to search for in the Running Object Table.
   """
@@ -43,8 +37,8 @@ class UCOMIRunningObjectTable:
   """
   NoteChangeTime(self: UCOMIRunningObjectTable,dwRegister: int,pfiletime: FILETIME) -> FILETIME
   
-   Makes a note of the time that a particular object has changed so 
-    IMoniker::GetTimeOfLastChange can report an appropriate change time.
+   Makes a note of the time that a particular object has changed so IMoniker::GetTimeOfLastChange 
+    can report an appropriate change time.
   
   
    dwRegister: The ROT entry of the changed object.
@@ -57,8 +51,8 @@ class UCOMIRunningObjectTable:
   
    Registers that the supplied object has entered the running state.
   
-   grfFlags: Specifies whether the Running Object Table's (ROT) reference to punkObject is 
-    weak or strong,and controls access to the object through its entry in the ROT.
+   grfFlags: Specifies whether the Running Object Table's (ROT) reference to punkObject is weak or strong,
+    and controls access to the object through its entry in the ROT.
   
    punkObject: Reference to the object being registered as running.
    pmkObjectName: Reference to the moniker that identifies punkObject.

@@ -598,7 +598,7 @@ Get: VertexTolerance(self: Application) -> float
  FileExporting=None
  FileImported=None
  FileImporting=None
- IsLoggedIn=True
+ IsLoggedIn=False
  MinimumThickness=0.0026041666666666665
  ProgressChanged=None
  ViewPrinted=None

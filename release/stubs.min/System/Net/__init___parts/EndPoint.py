@@ -4,9 +4,7 @@ class EndPoint(object):
   """
   Create(self: EndPoint,socketAddress: SocketAddress) -> EndPoint
   
-   Creates an System.Net.EndPoint instance from a System.Net.SocketAddress 
-    instance.
-  
+   Creates an System.Net.EndPoint instance from a System.Net.SocketAddress instance.
   
    socketAddress: The socket address that serves as the endpoint for a connection.
    Returns: A new System.Net.EndPoint instance that is initialized from the specified 

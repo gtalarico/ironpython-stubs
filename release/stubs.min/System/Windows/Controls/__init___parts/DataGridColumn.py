@@ -23,49 +23,44 @@ class DataGridColumn(DependencyObject):
   """
   GenerateEditingElement(self: DataGridColumn,cell: DataGridCell,dataItem: object) -> FrameworkElement
   
-   When overridden in a derived class,gets an editing element that is bound to 
-    the System.Windows.Controls.DataGridBoundColumn.Binding property value of the 
-    column.
+   When overridden in a derived class,gets an editing element that is bound to the 
+    System.Windows.Controls.DataGridBoundColumn.Binding property value of the column.
   
   
    cell: The cell that will contain the generated element.
    dataItem: The data item that is represented by the row that contains the intended cell.
-   Returns: A new editing element that is bound to the 
-    System.Windows.Controls.DataGridBoundColumn.Binding property value of the 
-    column.
+   Returns: A new editing element that is bound to the System.Windows.Controls.DataGridBoundColumn.Binding 
+    property value of the column.
   """
   pass
  def GenerateElement(self,*args):
   """
   GenerateElement(self: DataGridColumn,cell: DataGridCell,dataItem: object) -> FrameworkElement
   
-   When overridden in a derived class,gets a read-only element that is bound to 
-    the System.Windows.Controls.DataGridBoundColumn.Binding property value of the 
-    column.
+   When overridden in a derived class,gets a read-only element that is bound to the 
+    System.Windows.Controls.DataGridBoundColumn.Binding property value of the column.
   
   
    cell: The cell that will contain the generated element.
    dataItem: The data item that is represented by the row that contains the intended cell.
-   Returns: A new read-only element that is bound to the 
-    System.Windows.Controls.DataGridBoundColumn.Binding property value of the 
-    column.
+   Returns: A new read-only element that is bound to the System.Windows.Controls.DataGridBoundColumn.Binding 
+    property value of the column.
   """
   pass
  def GetCellContent(self,*__args):
   """
   GetCellContent(self: DataGridColumn,dataGridRow: DataGridRow) -> FrameworkElement
   
-   Retrieves the System.Windows.Controls.ContentControl.Content property value for 
-    the cell at the intersection of this column and the specified row.
+   Retrieves the System.Windows.Controls.ContentControl.Content property value for the cell at the 
+    intersection of this column and the specified row.
   
   
    dataGridRow: The row that contains the intended cell.
    Returns: The cell content; or null,if the cell is not found.
   GetCellContent(self: DataGridColumn,dataItem: object) -> FrameworkElement
   
-   Gets the System.Windows.Controls.ContentControl.Content property value for the 
-    cell at the intersection of this column and the row that represents the 
-    specified data item.
+   Gets the System.Windows.Controls.ContentControl.Content property value for the cell at the 
+    intersection of this column and the row that represents the specified data item.
   
   
    dataItem: The data item that is represented by the row that contains the intended cell.
@@ -75,8 +70,8 @@ class DataGridColumn(DependencyObject):
  def NotifyPropertyChanged(self,*args):
   """
   NotifyPropertyChanged(self: DataGridColumn,propertyName: str)
-   Notifies the System.Windows.Controls.DataGrid that contains this column that a 
-    column property has changed.
+   Notifies the System.Windows.Controls.DataGrid that contains this column that a column property 
+    has changed.
   
   
    propertyName: The name of the column property that changed.
@@ -86,9 +81,8 @@ class DataGridColumn(DependencyObject):
   """
   OnCoerceIsReadOnly(self: DataGridColumn,baseValue: bool) -> bool
   
-   Determines the value of the System.Windows.Controls.DataGridColumn.IsReadOnly 
-    property based on the property rules of the System.Windows.Controls.DataGrid 
-    that contains this column.
+   Determines the value of the System.Windows.Controls.DataGridColumn.IsReadOnly property based on 
+    the property rules of the System.Windows.Controls.DataGrid that contains this column.
   
   
    baseValue: The value that was passed to the delegate.
@@ -100,9 +94,7 @@ class DataGridColumn(DependencyObject):
   """
   OnCopyingCellClipboardContent(self: DataGridColumn,item: object) -> object
   
-   Raises the System.Windows.Controls.DataGridColumn.CopyingCellClipboardContent 
-    event.
-  
+   Raises the System.Windows.Controls.DataGridColumn.CopyingCellClipboardContent event.
   
    item: The data context for the selected element.
    Returns: An object that represents the content of the cell.
@@ -111,9 +103,7 @@ class DataGridColumn(DependencyObject):
  def OnPastingCellClipboardContent(self,item,cellContent):
   """
   OnPastingCellClipboardContent(self: DataGridColumn,item: object,cellContent: object)
-   Raises the System.Windows.Controls.DataGridColumn.PastingCellClipboardContent 
-    event.
-  
+   Raises the System.Windows.Controls.DataGridColumn.PastingCellClipboardContent event.
   
    item: The data context for the selected element.
    cellContent: The content to paste into the cell.
@@ -127,15 +117,15 @@ class DataGridColumn(DependencyObject):
   
    editingElement: The element that the column displays for a cell in editing mode.
    editingEventArgs: Information about the user gesture that is causing a cell to enter editing mode.
-   Returns: When returned by a derived class,the unedited cell value. This implementation 
-    returns null in all cases.
+   Returns: When returned by a derived class,the unedited cell value. This implementation returns null in 
+    all cases.
   """
   pass
  def RefreshCellContent(self,*args):
   """
   RefreshCellContent(self: DataGridColumn,element: FrameworkElement,propertyName: str)
-   When overridden in a derived class,updates the contents of a cell in the 
-    column in response to a column property value that changed.
+   When overridden in a derived class,updates the contents of a cell in the column in response to 
+    a column property value that changed.
   
   
    element: The cell to update.

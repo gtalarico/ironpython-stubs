@@ -3,15 +3,21 @@ class License(object,IDisposable):
  def Dispose(self):
   """
   Dispose(self: License)
-   When overridden in a derived class,disposes of the resources used by the 
-    license.
+   When overridden in a derived class,disposes of the resources used by the license.
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

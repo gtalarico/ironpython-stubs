@@ -14,11 +14,11 @@ class PrivilegeNotHeldException(UnauthorizedAccessException,ISerializable,_Excep
   GetObjectData(self: PrivilegeNotHeldException,info: SerializationInfo,context: StreamingContext)
    Sets the info parameter with information about the exception.
   
-   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized 
-    object data about the exception being thrown.
+   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about 
+    the exception being thrown.
   
-   context: The System.Runtime.Serialization.StreamingContext that contains contextual 
-    information about the source or destination.
+   context: The System.Runtime.Serialization.StreamingContext that contains contextual information about the 
+    source or destination.
   """
   pass
  def remove_SerializeObjectState(self,*args):

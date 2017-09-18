@@ -5,8 +5,8 @@ class Switch(object):
   GetSupportedAttributes(self: Switch) -> Array[str]
   
    Gets the custom attributes supported by the switch.
-   Returns: A string array that contains the names of the custom attributes supported by 
-    the switch,or null if there no custom attributes are supported.
+   Returns: A string array that contains the names of the custom attributes supported by the switch,or null 
+    if there no custom attributes are supported.
   """
   pass
  def OnSwitchSettingChanged(self,*args):

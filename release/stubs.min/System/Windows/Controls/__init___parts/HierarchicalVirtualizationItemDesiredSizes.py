@@ -15,9 +15,8 @@ class HierarchicalVirtualizationItemDesiredSizes(object):
  @staticmethod
  def __new__(self,logicalSize,logicalSizeInViewport,logicalSizeBeforeViewport,logicalSizeAfterViewport,pixelSize,pixelSizeInViewport,pixelSizeBeforeViewport,pixelSizeAfterViewport):
   """
-  __new__[HierarchicalVirtualizationItemDesiredSizes]() -> HierarchicalVirtualizationItemDesiredSizes
-  
-  __new__(cls: type,logicalSize: Size,logicalSizeInViewport: Size,logicalSizeBeforeViewport: Size,logicalSizeAfterViewport: Size,pixelSize: Size,pixelSizeInViewport: Size,pixelSizeBeforeViewport: Size,pixelSizeAfterViewport: Size)
+  __new__(cls: type,logicalSize: Size,logicalSizeInViewport: Size,logicalSizeBeforeViewport: Size,logicalSizeAfterViewport: Size,pixelSize: Size,pixelSizeInViewport: Size,pixelSizeBeforeViewport: Size,pixelSizeAfterViewport: Size)
+  __new__[HierarchicalVirtualizationItemDesiredSizes]() -> HierarchicalVirtualizationItemDesiredSizes
   """
   pass
  def __ne__(self,*args):

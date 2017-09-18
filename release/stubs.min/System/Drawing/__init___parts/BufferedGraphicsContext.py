@@ -8,27 +8,25 @@ class BufferedGraphicsContext(object,IDisposable):
   """
   Allocate(self: BufferedGraphicsContext,targetDC: IntPtr,targetRectangle: Rectangle) -> BufferedGraphics
   
-   Creates a graphics buffer of the specified size using the pixel format of the 
-    specified System.Drawing.Graphics.
+   Creates a graphics buffer of the specified size using the pixel format of the specified 
+    System.Drawing.Graphics.
   
   
-   targetDC: An System.IntPtr to a device context to match the pixel format of the new 
-    buffer to.
-  
+   targetDC: An System.IntPtr to a device context to match the pixel format of the new buffer to.
    targetRectangle: A System.Drawing.Rectangle indicating the size of the buffer to create.
-   Returns: A System.Drawing.BufferedGraphics that can be used to draw to a buffer of the 
-    specified dimensions.
+   Returns: A System.Drawing.BufferedGraphics that can be used to draw to a buffer of the specified 
+    dimensions.
   
   Allocate(self: BufferedGraphicsContext,targetGraphics: Graphics,targetRectangle: Rectangle) -> BufferedGraphics
   
-   Creates a graphics buffer of the specified size using the pixel format of the 
-    specified System.Drawing.Graphics.
+   Creates a graphics buffer of the specified size using the pixel format of the specified 
+    System.Drawing.Graphics.
   
   
    targetGraphics: The System.Drawing.Graphics to match the pixel format for the new buffer to.
    targetRectangle: A System.Drawing.Rectangle indicating the size of the buffer to create.
-   Returns: A System.Drawing.BufferedGraphics that can be used to draw to a buffer of the 
-    specified dimensions.
+   Returns: A System.Drawing.BufferedGraphics that can be used to draw to a buffer of the specified 
+    dimensions.
   """
   pass
  def Dispose(self):
@@ -40,15 +38,22 @@ class BufferedGraphicsContext(object,IDisposable):
  def Invalidate(self):
   """
   Invalidate(self: BufferedGraphicsContext)
-   Disposes of the current graphics buffer,if a buffer has been allocated and has 
-    not yet been disposed.
+   Disposes of the current graphics buffer,if a buffer has been allocated and has not yet been 
+    disposed.
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

@@ -34,15 +34,14 @@ class TypedReference(object):
   """
   MakeTypedReference(target: object,flds: Array[FieldInfo]) -> TypedReference
   
-   Makes a TypedReference for a field identified by a specified object and list of 
-    field descriptions.
+   Makes a TypedReference for a field identified by a specified object and list of field 
+    descriptions.
   
   
    target: An object that contains the field described by the first element of flds.
-   flds: A list of field descriptions where each element describes a field that contains 
-    the field described by the succeeding element. Each described field must be a 
-    value type. The field descriptions must be RuntimeFieldInfo objects supplied by 
-    the type system.
+   flds: A list of field descriptions where each element describes a field that contains the field 
+    described by the succeeding element. Each described field must be a value type. The field 
+    descriptions must be RuntimeFieldInfo objects supplied by the type system.
   
    Returns: A System.TypedReference for the field described by the last element of flds.
   """

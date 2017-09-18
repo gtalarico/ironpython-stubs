@@ -8,8 +8,8 @@ class ScrollBarRenderer(object):
   
    g: The System.Drawing.Graphics used to draw the scroll arrow.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the scroll arrow.
-   state: One of the System.Windows.Forms.VisualStyles.ScrollBarArrowButtonState values 
-    that specifies the visual state of the scroll arrow.
+   state: One of the System.Windows.Forms.VisualStyles.ScrollBarArrowButtonState values that specifies the 
+    visual state of the scroll arrow.
   """
   pass
  @staticmethod
@@ -20,22 +20,20 @@ class ScrollBarRenderer(object):
   
    g: The System.Drawing.Graphics used to draw the scroll box.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the scroll box.
-   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that 
-    specifies the visual state of the scroll box.
+   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that specifies the visual 
+    state of the scroll box.
   """
   pass
  @staticmethod
  def DrawHorizontalThumbGrip(g,bounds,state):
   """
   DrawHorizontalThumbGrip(g: Graphics,bounds: Rectangle,state: ScrollBarState)
-   Draws a grip on a horizontal scroll box (also known as the thumb) with visual 
-    styles.
-  
+   Draws a grip on a horizontal scroll box (also known as the thumb) with visual styles.
   
    g: The System.Drawing.Graphics used to draw the scroll box grip.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the scroll box grip.
-   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that 
-    specifies the visual state of the scroll box grip.
+   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that specifies the visual 
+    state of the scroll box grip.
   """
   pass
  @staticmethod
@@ -46,8 +44,8 @@ class ScrollBarRenderer(object):
   
    g: The System.Drawing.Graphics used to draw the scroll bar track.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the scroll bar track.
-   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that 
-    specifies the visual state of the scroll bar track.
+   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that specifies the visual 
+    state of the scroll bar track.
   """
   pass
  @staticmethod
@@ -58,8 +56,8 @@ class ScrollBarRenderer(object):
   
    g: The System.Drawing.Graphics used to draw the scroll bar track.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the scroll bar track.
-   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that 
-    specifies the visual state of the scroll bar track.
+   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that specifies the visual 
+    state of the scroll bar track.
   """
   pass
  @staticmethod
@@ -70,8 +68,8 @@ class ScrollBarRenderer(object):
   
    g: The System.Drawing.Graphics used to draw the scroll bar track.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the scroll bar track.
-   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that 
-    specifies the visual state of the scroll bar track.
+   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that specifies the visual 
+    state of the scroll bar track.
   """
   pass
  @staticmethod
@@ -82,8 +80,8 @@ class ScrollBarRenderer(object):
   
    g: The System.Drawing.Graphics used to draw the sizing handle.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the sizing handle.
-   state: One of the System.Windows.Forms.VisualStyles.ScrollBarSizeBoxState values that 
-    specifies the visual state of the sizing handle.
+   state: One of the System.Windows.Forms.VisualStyles.ScrollBarSizeBoxState values that specifies the 
+    visual state of the sizing handle.
   """
   pass
  @staticmethod
@@ -94,8 +92,8 @@ class ScrollBarRenderer(object):
   
    g: The System.Drawing.Graphics used to draw the scroll bar track.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the scroll bar track.
-   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that 
-    specifies the visual state of the scroll bar track.
+   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that specifies the visual 
+    state of the scroll bar track.
   """
   pass
  @staticmethod
@@ -106,22 +104,20 @@ class ScrollBarRenderer(object):
   
    g: The System.Drawing.Graphics used to draw the scroll box.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the scroll box.
-   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that 
-    specifies the visual state of the scroll box.
+   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that specifies the visual 
+    state of the scroll box.
   """
   pass
  @staticmethod
  def DrawVerticalThumbGrip(g,bounds,state):
   """
   DrawVerticalThumbGrip(g: Graphics,bounds: Rectangle,state: ScrollBarState)
-   Draws a grip on a vertical scroll box (also known as the thumb) with visual 
-    styles.
-  
+   Draws a grip on a vertical scroll box (also known as the thumb) with visual styles.
   
    g: The System.Drawing.Graphics used to draw the scroll box grip.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the scroll box grip.
-   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that 
-    specifies the visual state of the scroll box grip.
+   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that specifies the visual 
+    state of the scroll box grip.
   """
   pass
  @staticmethod
@@ -132,8 +128,8 @@ class ScrollBarRenderer(object):
    Returns the size of the sizing handle.
   
    g: The System.Drawing.Graphics this operation will use.
-   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that 
-    specifies the visual state of the sizing handle.
+   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that specifies the visual 
+    state of the sizing handle.
   
    Returns: A System.Drawing.Size that specifies the size of the sizing handle.
   """
@@ -146,8 +142,8 @@ class ScrollBarRenderer(object):
    Returns the size of the scroll box grip.
   
    g: The System.Drawing.Graphics this operation will use.
-   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that 
-    specifies the visual state of the scroll box grip.
+   state: One of the System.Windows.Forms.VisualStyles.ScrollBarState values that specifies the visual 
+    state of the scroll box grip.
   
    Returns: A System.Drawing.Size that specifies the size of the scroll box grip.
   """

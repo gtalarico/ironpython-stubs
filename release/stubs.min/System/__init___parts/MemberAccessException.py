@@ -2,8 +2,8 @@ class MemberAccessException(SystemException,ISerializable,_Exception):
  """
  The exception that is thrown when an attempt to access a class member fails.
  
- MemberAccessException()
  MemberAccessException(message: str)
+ MemberAccessException()
  MemberAccessException(message: str,inner: Exception)
  """
  def add_SerializeObjectState(self,*args):

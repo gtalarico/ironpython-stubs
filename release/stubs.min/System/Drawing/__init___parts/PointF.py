@@ -12,18 +12,14 @@ class PointF(object):
    Translates a given System.Drawing.PointF by a specified System.Drawing.SizeF.
   
    pt: The System.Drawing.PointF to translate.
-   sz: The System.Drawing.SizeF that specifies the numbers to add to the coordinates 
-    of pt.
-  
+   sz: The System.Drawing.SizeF that specifies the numbers to add to the coordinates of pt.
    Returns: The translated System.Drawing.PointF.
   Add(pt: PointF,sz: Size) -> PointF
   
    Translates a given System.Drawing.PointF by the specified System.Drawing.Size.
   
    pt: The System.Drawing.PointF to translate.
-   sz: The System.Drawing.Size that specifies the numbers to add to the coordinates of 
-    pt.
-  
+   sz: The System.Drawing.Size that specifies the numbers to add to the coordinates of pt.
    Returns: The translated System.Drawing.PointF.
   """
   pass
@@ -31,13 +27,13 @@ class PointF(object):
   """
   Equals(self: PointF,obj: object) -> bool
   
-   Specifies whether this System.Drawing.PointF contains the same coordinates as 
-    the specified System.Object.
+   Specifies whether this System.Drawing.PointF contains the same coordinates as the specified 
+    System.Object.
   
   
    obj: The System.Object to test.
-   Returns: This method returns true if obj is a System.Drawing.PointF and has the same 
-    coordinates as this System.Drawing.Point.
+   Returns: This method returns true if obj is a System.Drawing.PointF and has the same coordinates as this 
+    System.Drawing.Point.
   """
   pass
  def GetHashCode(self):
@@ -45,8 +41,7 @@ class PointF(object):
   GetHashCode(self: PointF) -> int
   
    Returns a hash code for this System.Drawing.PointF structure.
-   Returns: An integer value that specifies a hash value for this System.Drawing.PointF 
-    structure.
+   Returns: An integer value that specifies a hash value for this System.Drawing.PointF structure.
   """
   pass
  @staticmethod
@@ -57,18 +52,14 @@ class PointF(object):
    Translates a System.Drawing.PointF by the negative of a specified size.
   
    pt: The System.Drawing.PointF to translate.
-   sz: The System.Drawing.SizeF that specifies the numbers to subtract from the 
-    coordinates of pt.
-  
+   sz: The System.Drawing.SizeF that specifies the numbers to subtract from the coordinates of pt.
    Returns: The translated System.Drawing.PointF.
   Subtract(pt: PointF,sz: Size) -> PointF
   
    Translates a System.Drawing.PointF by the negative of a specified size.
   
    pt: The System.Drawing.PointF to translate.
-   sz: The System.Drawing.Size that specifies the numbers to subtract from the 
-    coordinates of pt.
-  
+   sz: The System.Drawing.Size that specifies the numbers to subtract from the coordinates of pt.
    Returns: The translated System.Drawing.PointF.
   """
   pass
@@ -89,8 +80,9 @@ class PointF(object):
  @staticmethod
  def __new__(self,x,y):
   """
-  __new__(cls: type,x: Single,y: Single)
-  __new__[PointF]() -> PointF
+  __new__[PointF]() -> PointF
+  
+  __new__(cls: type,x: Single,y: Single)
   """
   pass
  def __ne__(self,*args):

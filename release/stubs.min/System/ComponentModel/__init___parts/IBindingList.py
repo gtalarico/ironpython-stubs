@@ -3,12 +3,9 @@ class IBindingList(IList,ICollection,IEnumerable):
  def AddIndex(self,property):
   """
   AddIndex(self: IBindingList,property: PropertyDescriptor)
-   Adds the System.ComponentModel.PropertyDescriptor to the indexes used for 
-    searching.
+   Adds the System.ComponentModel.PropertyDescriptor to the indexes used for searching.
   
-  
-   property: The System.ComponentModel.PropertyDescriptor to add to the indexes used for 
-    searching.
+   property: The System.ComponentModel.PropertyDescriptor to add to the indexes used for searching.
   """
   pass
  def AddNew(self):
@@ -34,33 +31,27 @@ class IBindingList(IList,ICollection,IEnumerable):
   """
   Find(self: IBindingList,property: PropertyDescriptor,key: object) -> int
   
-   Returns the index of the row that has the given 
-    System.ComponentModel.PropertyDescriptor.
-  
+   Returns the index of the row that has the given System.ComponentModel.PropertyDescriptor.
   
    property: The System.ComponentModel.PropertyDescriptor to search on.
    key: The value of the property parameter to search for.
-   Returns: The index of the row that has the given 
-    System.ComponentModel.PropertyDescriptor.
+   Returns: The index of the row that has the given System.ComponentModel.PropertyDescriptor.
   """
   pass
  def RemoveIndex(self,property):
   """
   RemoveIndex(self: IBindingList,property: PropertyDescriptor)
-   Removes the System.ComponentModel.PropertyDescriptor from the indexes used for 
-    searching.
+   Removes the System.ComponentModel.PropertyDescriptor from the indexes used for searching.
   
-  
-   property: The System.ComponentModel.PropertyDescriptor to remove from the indexes used 
-    for searching.
+   property: The System.ComponentModel.PropertyDescriptor to remove from the indexes used for searching.
   """
   pass
  def RemoveSort(self):
   """
   RemoveSort(self: IBindingList)
    Removes any sort applied using 
-    System.ComponentModel.IBindingList.ApplySort(System.ComponentModel.PropertyDescr
-    iptor,System.ComponentModel.ListSortDirection).
+    System.ComponentModel.IBindingList.ApplySort(System.ComponentModel.PropertyDescriptor,System.Comp
+    onentModel.ListSortDirection).
   """
   pass
  def __contains__(self,*args):
@@ -70,8 +61,7 @@ class IBindingList(IList,ICollection,IEnumerable):
    Determines whether the System.Collections.IList contains a specific value.
   
    value: The object to locate in the System.Collections.IList.
-   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,
-    false.
+   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,false.
   """
   pass
  def __init__(self,*args):

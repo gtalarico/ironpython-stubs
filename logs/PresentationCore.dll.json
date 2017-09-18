@@ -1,0 +1,28 @@
+{
+  "PresentationCore.dll": {
+    "System.Windows.Media.TextFormatting": "<module 'TextFormatting' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.IO.Packaging": "<module 'Packaging' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Interop": "<module 'Interop' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Media.Media3D.Converters": "<module 'Converters' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Documents": "<module 'Documents' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Media.Media3D": "<module 'Media3D' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Navigation": "<module 'Navigation' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Input": "<module 'Input' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Ink": "<module 'Ink' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Input.StylusPlugIns": "<module 'StylusPlugIns' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Automation.Peers": "<module 'Peers' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Markup": "<module 'Markup' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Automation": "<module 'Automation' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Diagnostics": "<module 'Diagnostics' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System": "<module 'System' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Media.Animation": "<module 'Animation' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows": "<module 'Windows' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Media.Imaging": "<module 'Imaging' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Media": "<module 'Media' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Media.Converters": "<module 'Converters' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.IO": "<module 'IO' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Input.StylusWisp": "<module 'StylusWisp' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Media.Effects": "<module 'Effects' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Resources": "<module 'Resources' (CLS module from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+  }
+}

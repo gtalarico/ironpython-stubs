@@ -40,9 +40,7 @@ class Dialogs(object):
         
             Displays the standard modal color picker dialog for floating point colors.
         
-            parent: Parent window for this dialog, should always pass this if calling from a form or user 
-             control.
-        
+            parent: Parent window for this dialog, should always pass this if calling from a form or user control.
             color: The initial color to set the picker to and also accepts the user's choice.
             allowAlpha: Specifies if the color picker should allow changes to the alpha channel or not.
             Returns: true if a color was picked, false if the user canceled the picker dialog.
@@ -111,14 +109,14 @@ class Dialogs(object):
         
             message: Message box text content.
             title: Message box title text.
-            buttons: One of the System.Windows.Forms.MessageBoxButtons values that specifies which buttons to 
-             display in the message box.
-        
-            icon: One of the System.Windows.Forms.MessageBoxIcon values that specifies which icon to display 
+            buttons: One of the System.Windows.Forms.MessageBoxButtons values that specifies which buttons to display 
              in the message box.
         
-            defaultButton: One of the System.Windows.Forms.MessageBoxDefaultButton values that specifies the default 
-             button for the message box.
+            icon: One of the System.Windows.Forms.MessageBoxIcon values that specifies which icon to display in 
+             the message box.
+        
+            defaultButton: One of the System.Windows.Forms.MessageBoxDefaultButton values that specifies the default button 
+             for the message box.
         
             Returns: One of the System.Windows.Forms.DialogResult values.
         ShowMessageBox(message: str, title: str, buttons: MessageBoxButtons, icon: MessageBoxIcon) -> DialogResult
@@ -127,11 +125,11 @@ class Dialogs(object):
         
             message: Message box text content.
             title: Message box title text.
-            buttons: One of the System.Windows.Forms.MessageBoxButtons values that specifies which buttons to 
-             display in the message box.
-        
-            icon: One of the System.Windows.Forms.MessageBoxIcon values that specifies which icon to display 
+            buttons: One of the System.Windows.Forms.MessageBoxButtons values that specifies which buttons to display 
              in the message box.
+        
+            icon: One of the System.Windows.Forms.MessageBoxIcon values that specifies which icon to display in 
+             the message box.
         
             Returns: One of the System.Windows.Forms.DialogResult values.
         ShowMessageBox(message: str, title: str) -> DialogResult
@@ -170,8 +168,8 @@ class Dialogs(object):
             Displays Rhino's single layer selection dialog.
         
             layerIndex: Initial layer for the dialog, and will receive selected
-                    layer if function 
-             returns DialogResult.OK.
+                    layer if function returns 
+             DialogResult.OK.
         
             dialogTitle: The dialog title.
             showNewLayerButton: true if the new layer button will be visible.
@@ -192,10 +190,10 @@ class Dialogs(object):
         ShowSemiModal(form: Form) -> DialogResult
         
             Show a windows form that is modal in the sense that this function does not return until
-          
-                       the form is closed, but also allows for interaction with other elements of the 
-             Rhino
-                    user interface.
+                
+                 the form is closed, but also allows for interaction with other elements of the Rhino
+               
+                  user interface.
         
         
             form: The form must have buttons that are assigned to the "AcceptButton" and "CancelButton".
@@ -222,9 +220,7 @@ class Dialogs(object):
         StringBoxRects() -> Array[Rectangle]
         
             FOR INTERNAL TESTING
-                    Ignore - this is for internal testing and will be 
-             removed.
-        
+                    Ignore - this is for internal testing and will be removed.
             Returns: On Windows (.NET)
                     {X=0,Y=0,Width=300,Height=126}
                       
@@ -349,14 +345,14 @@ class LOC(object):
         """
         COMMANDNAME(english: str) -> str
         
-            Command names that need to be localized should call this function. The COMMANDNAME 
-             function doesn't actually
+            Command names that need to be localized should call this function. The COMMANDNAME function 
+             doesn't actually
                      do anything but return the original string. The 
              LocalizationProcessor application walks
-                     through the source code of a project 
-             and looks for LOC.COMMANDNAME and builds a record for each command
-                     name for 
-             the translators that can be used by developers in a commands overridden 
+                     through the source code of a project and 
+             looks for LOC.COMMANDNAME and builds a record for each command
+                     name for the 
+             translators that can be used by developers in a commands overridden 
              Rhino.Commands.Command.LocalName
                      which should call 
              Rhino.UI.Localization.LocalizeCommandName(EnglishName)
@@ -375,32 +371,29 @@ class LOC(object):
              function
                      doesn't actually do anything but return the original string. The 
              LocalizationProcessor application walks
-                     through the source code of a project 
-             and looks for LOC.CON. The function is then replaced with a
+                     through the source code of a project and 
+             looks for LOC.CON. The function is then replaced with a
                      call to 
              Localization.LocalizeCommandOptionName using a unique context ID.
         
         
             english: [in] The English string to localize.
             assemblyFromObject: [in] The object that identifies the assembly that owns the command option name.
-            Returns: Returns localized string pair with both the English and local names set to the English 
-             value.
-        
+            Returns: Returns localized string pair with both the English and local names set to the English value.
         CON(english: str) -> LocalizeStringPair
         
             Command option name strings that need to be localized should call this function. The CON 
              function
                      doesn't actually do anything but return the original string. The 
              LocalizationProcessor application walks
-                     through the source code of a project 
-             and looks for LOC.CON. The function is then replaced with a
+                     through the source code of a project and 
+             looks for LOC.CON. The function is then replaced with a
                      call to 
              Localization.LocalizeCommandOptionName using a unique context ID.
         
         
             english: [in] The English string to localize.
-            Returns: Returns localized string pair with both the English and local names set to the English 
-             value.
+            Returns: Returns localized string pair with both the English and local names set to the English value.
         """
         pass
 
@@ -413,32 +406,29 @@ class LOC(object):
              function
                      doesn't actually do anything but return the original string. The 
              LocalizationProcessor application walks
-                     through the source code of a project 
-             and looks for LOC.COV. The function is then replaced with a
+                     through the source code of a project and 
+             looks for LOC.COV. The function is then replaced with a
                      call to 
              Localization.LocalizeCommandOptionValue using a unique context ID.
         
         
             engilsh: [in] The English string to localize.
             assemblyFromObject: [in] The object that identifies the assembly that owns the command option value.
-            Returns: Returns localized string pair with both the English and local names set to the English 
-             value.
-        
+            Returns: Returns localized string pair with both the English and local names set to the English value.
         COV(engilsh: str) -> LocalizeStringPair
         
             Command option name strings that need to be localized should call this function. The COV 
              function
                      doesn't actually do anything but return the original string. The 
              LocalizationProcessor application walks
-                     through the source code of a project 
-             and looks for LOC.COV. The function is then replaced with a
+                     through the source code of a project and 
+             looks for LOC.COV. The function is then replaced with a
                      call to 
              Localization.LocalizeCommandOptionValue using a unique context ID.
         
         
             engilsh: [in] The English string to localize.
-            Returns: Returns localized string pair with both the English and local names set to the English 
-             value.
+            Returns: Returns localized string pair with both the English and local names set to the English value.
         """
         pass
 
@@ -454,14 +444,14 @@ class LOC(object):
             Returns: English name.
         STR(english: str) -> str
         
-            Strings that need to be localized should call this function. The STR function doesn't 
-             actually
-                     do anything but return the original string. The 
-             LocalizationProcessor application walks
-                     through the source code of a project 
-             and looks for LOC.STR. The function is then replaced with a
-                     call to 
-             Localization.LocalizeString using a unique context ID.
+            Strings that need to be localized should call this function. The STR function doesn't actually
+         
+                         do anything but return the original string. The LocalizationProcessor application 
+             walks
+                     through the source code of a project and looks for LOC.STR. The function is 
+             then replaced with a
+                     call to Localization.LocalizeString using a unique context 
+             ID.
         
         
             english: [in] The English string to localize.
@@ -499,8 +489,8 @@ class Localization(object):
         """
         GetAssemblyFromObject(assemblyOrObject: object) -> Assembly
         
-            Check to see if the passed object is an assembly, if not then get the assembly that owns 
-             the object type.
+            Check to see if the passed object is an assembly, if not then get the assembly that owns the 
+             object type.
         
         
             assemblyOrObject: An assembly or an object from an assembly.
@@ -559,18 +549,18 @@ class Localization(object):
         """
         LocalizeForm(form: Control)
             A form or user control should call this in its constructor if it wants to be localized
-           
-                       the typical constructor for a localize form would look like:
-                     
-             MyForm::MyForm()
-                     {
+                 
+                 the typical constructor for a localize form would look like:
+                     MyForm::MyForm()
+        
+                          {
                        SuspendLayout();
-                       
-             InitializeComponent();
-                       Rhino.UI.Localize.LocalizeForm( this );
-                   
-                 ResumeLayout(true);
-                     }
+                       InitializeComponent();
+                 
+                   Rhino.UI.Localize.LocalizeForm( this );
+                       ResumeLayout(true);
+                     
+             }
         """
         pass
 
@@ -579,10 +569,10 @@ class Localization(object):
         """
         LocalizeString(english: str, assemblyOrObject: object, contextId: int) -> str
         
-            Returns localized version of a given English string. This function should be autogenerated 
-             by the
-                    RmaLDotNetLocalizationProcessor application for every function that 
-             uses RMASTR.
+            Returns localized version of a given English string. This function should be autogenerated by 
+             the
+                    RmaLDotNetLocalizationProcessor application for every function that uses 
+             RMASTR.
         
         
             english: The text in English.
@@ -591,10 +581,10 @@ class Localization(object):
             Returns: The localized string.
         LocalizeString(english: str, contextId: int) -> str
         
-            Returns localized version of a given English string. This function should be autogenerated 
-             by the
-                    RmaLDotNetLocalizationProcessor application for every function that 
-             uses RMASTR.
+            Returns localized version of a given English string. This function should be autogenerated by 
+             the
+                    RmaLDotNetLocalizationProcessor application for every function that uses 
+             RMASTR.
         
         
             english: The text in English.
@@ -608,19 +598,19 @@ class Localization(object):
         """
         LocalizeToolStripItemCollection(parent: Control, collection: ToolStripItemCollection)
             A form or user control should call this in its constructor if it wants to localize
-               
-                   context menus that are set on the fly and not assigned to a forms control in design
-        
-                          studio.
+                     
+             context menus that are set on the fly and not assigned to a forms control in design
+                    
+              studio.
                      MyForm::MyForm()
                      {
-                       
-             SuspendLayout();
-                       InitializeComponent();
+                       SuspendLayout();
+               
+                     InitializeComponent();
                        
              Rhino.UI.Localize.LocalizeToolStripItemCollection( this, this.MyToolStrip.Items );
-               
-                   }
+                     
+             }
         """
         pass
 
@@ -756,8 +746,8 @@ class MouseCursor(object):
         """
         SetToolTip(tooltip: str)
             Sets a cursor tooltip string shown next to the mouse cursor.
-                    Overrides all 
-             cursor tooltip panes.
+                    Overrides all cursor 
+             tooltip panes.
         
         
             tooltip: The text to show.
@@ -784,8 +774,8 @@ class ObjectPropertiesPage(object):
         
             active: If true then this page is on top otherwise it is about to be hidden.
             Returns: If true then the page is hidden and the requested page is not
-                    activated 
-             otherwise will not allow you to change the current page.
+                    activated otherwise 
+             will not allow you to change the current page.
                     Default returns true
         """
         pass
@@ -937,8 +927,8 @@ class StackedDialogPage(object):
         
             active: If true then this page is on top otherwise it is about to be hidden.
             Returns: If true then the page is hidden and the requested page is not
-                    activated 
-             otherwise will not allow you to change the current page.
+                    activated otherwise 
+             will not allow you to change the current page.
                     Default returns true
         """
         pass
@@ -949,8 +939,8 @@ class StackedDialogPage(object):
         
             Called when stacked dialog OK button is pressed.
             Returns: If return value is true then the dialog will be closed. A return of false means
-                  
-               there was an error and dialog remains open so page can be properly updated.
+                    
+             there was an error and dialog remains open so page can be properly updated.
         """
         pass
 
@@ -1102,18 +1092,18 @@ class Panels(object):
         """
         RegisterPanel(plugin: PlugIn, panelType: Type, caption: str, icon: Icon)
             You typically register your panel class in your plug-in's OnLoad function.
-                    
-             This informs Rhino of the existence of your panel class
+                    This 
+             informs Rhino of the existence of your panel class
         
         
             plugin: Plug-in this panel is associated with
             panelType: Class type to construct when a panel is shown.  Currently only types
-                    that 
-             implement the IWin32Window interface are supported. The requirements
-                    for the 
-             class are that it has a parameterless constructor and have a
-                    GuidAttribute 
-             applied with a unique Guid
+                    that implement 
+             the IWin32Window interface are supported. The requirements
+                    for the class are that 
+             it has a parameterless constructor and have a
+                    GuidAttribute applied with a unique 
+             Guid
         
             icon: Use a 32bit depth icon in order to get proper transparency
         """
@@ -1342,15 +1332,15 @@ class StatusBar(object):
             upperLimit: The upper limit of the progress meter's range.
             label: The short description of the progress (e.g. "Calculating", "Meshing", etc)
             embedLabel: If true, then the label will be embeded in the progress meter.
-                    If false, then 
-             the label will appear to the left of the progress meter.
+                    If false, then the 
+             label will appear to the left of the progress meter.
         
             showPercentComplete: If true, then the percent complete will appear in the progress meter.
             Returns: 1 - The progress meter was created successfully.
-                    0 - The progress meter was 
-             not created.
-                    -1 - The progress meter was not created because some other 
-             process has already created it.
+                    0 - The progress meter was not 
+             created.
+                    -1 - The progress meter was not created because some other process has 
+             already created it.
         """
         pass
 
@@ -1364,12 +1354,12 @@ class StatusBar(object):
             position: The new value. This can be stated in absolute terms, or relative compared to the current 
              position.
                     The interval bounds are specified when you first show the bar using 
-             Rhino.UI.StatusBar.ShowProgressMeter(System.Int32,System.Int32,System.String,System.Boolean
-             ,System.Boolean).
+             Rhino.UI.StatusBar.ShowProgressMeter(System.Int32,System.Int32,System.String,System.Boolean,Syste
+             m.Boolean).
         
             absolute: If true, then the progress meter is moved to position.
-                    If false, then the 
-             progress meter is moved position from the current position (relative).
+                    If false, then the progress 
+             meter is moved position from the current position (relative).
         
             Returns: The previous position if successful.
         """

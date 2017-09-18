@@ -12,8 +12,8 @@ class TypeLoadException(SystemException,ISerializable,_Exception):
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: TypeLoadException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo object with the class 
-    name,method name,resource ID,and additional exception information.
+   Sets the System.Runtime.Serialization.SerializationInfo object with the class name,method name,
+    resource ID,and additional exception information.
   
   
    info: The object that holds the serialized object data.

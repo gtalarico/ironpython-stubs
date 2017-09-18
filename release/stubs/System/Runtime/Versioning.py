@@ -2,7 +2,7 @@
 # module System.Runtime.Versioning calls itself Versioning
 # from mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -108,26 +108,24 @@ class FrameworkName(object, IEquatable[FrameworkName]):
         """
         Equals(self: FrameworkName, other: FrameworkName) -> bool
         
-            Returns a value that indicates whether this 
-             System.Runtime.Versioning.FrameworkName instance represents the same .NET 
-             Framework version as a specified System.Runtime.Versioning.FrameworkName 
-             instance.
+            Returns a value that indicates whether this System.Runtime.Versioning.FrameworkName instance 
+             represents the same .NET Framework version as a specified 
+             System.Runtime.Versioning.FrameworkName instance.
         
         
             other: The object to compare to the current instance.
-            Returns: true if every component of the current System.Runtime.Versioning.FrameworkName 
-             object matches the corresponding component of other; otherwise, false.
+            Returns: true if every component of the current System.Runtime.Versioning.FrameworkName object matches 
+             the corresponding component of other; otherwise, false.
         
         Equals(self: FrameworkName, obj: object) -> bool
         
-            Returns a value that indicates whether this 
-             System.Runtime.Versioning.FrameworkName instance represents the same .NET 
-             Framework version as a specified object.
+            Returns a value that indicates whether this System.Runtime.Versioning.FrameworkName instance 
+             represents the same .NET Framework version as a specified object.
         
         
             obj: The object to compare to the current instance.
-            Returns: true if every component of the current System.Runtime.Versioning.FrameworkName 
-             object matches the corresponding component of obj; otherwise, false.
+            Returns: true if every component of the current System.Runtime.Versioning.FrameworkName object matches 
+             the corresponding component of obj; otherwise, false.
         """
         pass
 
@@ -144,9 +142,7 @@ class FrameworkName(object, IEquatable[FrameworkName]):
         """
         ToString(self: FrameworkName) -> str
         
-            Returns the string representation of this 
-             System.Runtime.Versioning.FrameworkName object.
-        
+            Returns the string representation of this System.Runtime.Versioning.FrameworkName object.
             Returns: A string that represents this System.Runtime.Versioning.FrameworkName object.
         """
         pass
@@ -358,8 +354,8 @@ class VersioningHelper(object):
         """
         MakeVersionSafeName(name: str, from: ResourceScope, to: ResourceScope) -> str
         
-            Returns a version-safe name based on the specified resource name and the 
-             intended resource consumption source.
+            Returns a version-safe name based on the specified resource name and the intended resource 
+             consumption source.
         
         
             name: The name of the resource.
@@ -368,8 +364,8 @@ class VersioningHelper(object):
             Returns: A version-safe name.
         MakeVersionSafeName(name: str, from: ResourceScope, to: ResourceScope, type: Type) -> str
         
-            Returns a version-safe name based on the specified resource name, the intended 
-             resource consumption scope, and the type using the resource.
+            Returns a version-safe name based on the specified resource name, the intended resource 
+             consumption scope, and the type using the resource.
         
         
             name: The name of the resource.

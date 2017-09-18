@@ -2,7 +2,7 @@
 # module System.Windows.Input.StylusPlugIns calls itself StylusPlugIns
 # from PresentationCore,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -13,53 +13,44 @@ class StylusPlugIn(object):
  def OnAdded(self,*args):
   """
   OnAdded(self: StylusPlugIn)
-   Occurs when the System.Windows.Input.StylusPlugIns.StylusPlugIn is added to an 
-    element.
+   Occurs when the System.Windows.Input.StylusPlugIns.StylusPlugIn is added to an element.
   """
   pass
  def OnEnabledChanged(self,*args):
   """
   OnEnabledChanged(self: StylusPlugIn)
-   Occurs when the System.Windows.Input.StylusPlugIns.StylusPlugIn.Enabled 
-    property changes.
+   Occurs when the System.Windows.Input.StylusPlugIns.StylusPlugIn.Enabled property changes.
   """
   pass
  def OnIsActiveForInputChanged(self,*args):
   """
   OnIsActiveForInputChanged(self: StylusPlugIn)
-   Occurs when the 
-    System.Windows.Input.StylusPlugIns.StylusPlugIn.IsActiveForInput property 
+   Occurs when the System.Windows.Input.StylusPlugIns.StylusPlugIn.IsActiveForInput property 
     changes.
   """
   pass
  def OnRemoved(self,*args):
   """
   OnRemoved(self: StylusPlugIn)
-   Occurs when the System.Windows.Input.StylusPlugIns.StylusPlugIn is removed from 
-    an element.
+   Occurs when the System.Windows.Input.StylusPlugIns.StylusPlugIn is removed from an element.
   """
   pass
  def OnStylusDown(self,*args):
   """
   OnStylusDown(self: StylusPlugIn,rawStylusInput: RawStylusInput)
-   Occurs on a thread in the pen thread pool when the tablet pen touches the 
-    digitizer.
+   Occurs on a thread in the pen thread pool when the tablet pen touches the digitizer.
   
-  
-   rawStylusInput: A System.Windows.Input.StylusPlugIns.RawStylusInput that contains information 
-    about input from the pen.
+   rawStylusInput: A System.Windows.Input.StylusPlugIns.RawStylusInput that contains information about input from 
+    the pen.
   """
   pass
  def OnStylusDownProcessed(self,*args):
   """
   OnStylusDownProcessed(self: StylusPlugIn,callbackData: object,targetVerified: bool)
-   Occurs on the application UI (user interface) thread when the tablet pen 
-    touches the digitizer.
-  
+   Occurs on the application UI (user interface) thread when the tablet pen touches the digitizer.
   
    callbackData: The object that the application passed to the 
-    System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed(System.Obj
-    ect) method.
+    System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed(System.Object) method.
   
    targetVerified: true if the pen's input was correctly routed to the 
     System.Windows.Input.StylusPlugIns.StylusPlugIn; otherwise,false.
@@ -70,8 +61,8 @@ class StylusPlugIn(object):
   OnStylusEnter(self: StylusPlugIn,rawStylusInput: RawStylusInput,confirmed: bool)
    Occurs on a pen thread when the cursor enters the bounds of an element.
   
-   rawStylusInput: A System.Windows.Input.StylusPlugIns.RawStylusInput that contains information 
-    about input from the pen.
+   rawStylusInput: A System.Windows.Input.StylusPlugIns.RawStylusInput that contains information about input from 
+    the pen.
   
    confirmed: true if the pen actually entered the bounds of the element; otherwise,false.
   """
@@ -81,8 +72,8 @@ class StylusPlugIn(object):
   OnStylusLeave(self: StylusPlugIn,rawStylusInput: RawStylusInput,confirmed: bool)
    Occurs on a pen thread when the cursor leaves the bounds of an element.
   
-   rawStylusInput: A System.Windows.Input.StylusPlugIns.RawStylusInput that contains information 
-    about input from the pen.
+   rawStylusInput: A System.Windows.Input.StylusPlugIns.RawStylusInput that contains information about input from 
+    the pen.
   
    confirmed: true if the pen actually left the bounds of the element; otherwise,false.
   """
@@ -92,20 +83,17 @@ class StylusPlugIn(object):
   OnStylusMove(self: StylusPlugIn,rawStylusInput: RawStylusInput)
    Occurs on a pen thread when the tablet pen moves on the digitizer.
   
-   rawStylusInput: A System.Windows.Input.StylusPlugIns.RawStylusInput that contains information 
-    about input from the pen.
+   rawStylusInput: A System.Windows.Input.StylusPlugIns.RawStylusInput that contains information about input from 
+    the pen.
   """
   pass
  def OnStylusMoveProcessed(self,*args):
   """
   OnStylusMoveProcessed(self: StylusPlugIn,callbackData: object,targetVerified: bool)
-   Occurs on the application UI (user interface) thread when the tablet pen moves 
-    on the digitizer.
-  
+   Occurs on the application UI (user interface) thread when the tablet pen moves on the digitizer.
   
    callbackData: The object that the application passed to the 
-    System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed(System.Obj
-    ect) method.
+    System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed(System.Object) method.
   
    targetVerified: true if the pen's input was correctly routed to the 
     System.Windows.Input.StylusPlugIns.StylusPlugIn; otherwise,false.
@@ -116,20 +104,19 @@ class StylusPlugIn(object):
   OnStylusUp(self: StylusPlugIn,rawStylusInput: RawStylusInput)
    Occurs on a pen thread when the user lifts the tablet pen from the digitizer.
   
-   rawStylusInput: A System.Windows.Input.StylusPlugIns.RawStylusInput that contains information 
-    about input from the pen.
+   rawStylusInput: A System.Windows.Input.StylusPlugIns.RawStylusInput that contains information about input from 
+    the pen.
   """
   pass
  def OnStylusUpProcessed(self,*args):
   """
   OnStylusUpProcessed(self: StylusPlugIn,callbackData: object,targetVerified: bool)
-   Occurs on the application UI (user interface) thread when the user lifts the 
-    tablet pen from the digitizer.
+   Occurs on the application UI (user interface) thread when the user lifts the tablet pen from the 
+    digitizer.
   
   
    callbackData: The object that the application passed to the 
-    System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed(System.Obj
-    ect) method.
+    System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed(System.Object) method.
   
    targetVerified: true if the pen's input was correctly routed to the 
     System.Windows.Input.StylusPlugIns.StylusPlugIn; otherwise,false.
@@ -183,16 +170,10 @@ class DynamicRenderer(StylusPlugIn):
  def OnDraw(self,*args):
   """
   OnDraw(self: DynamicRenderer,drawingContext: DrawingContext,stylusPoints: StylusPointCollection,geometry: Geometry,fillBrush: Brush)
-   Draws the ink in real-time so it appears to "flow" from the tablet pen or other 
-    pointing device.
+   Draws the ink in real-time so it appears to "flow" from the tablet pen or other pointing device.
   
-  
-   drawingContext: The System.Windows.Media.DrawingContext object onto which the stroke is 
-    rendered.
-  
-   stylusPoints: The System.Windows.Input.StylusPointCollection that represents the segment of 
-    the stroke to draw.
-  
+   drawingContext: The System.Windows.Media.DrawingContext object onto which the stroke is rendered.
+   stylusPoints: The System.Windows.Input.StylusPointCollection that represents the segment of the stroke to draw.
    geometry: A System.Windows.Media.Geometry that represents the path of the mouse pointer.
    fillBrush: A Brush that specifies the appearance of the current stroke.
   """
@@ -200,8 +181,7 @@ class DynamicRenderer(StylusPlugIn):
  def OnDrawingAttributesReplaced(self,*args):
   """
   OnDrawingAttributesReplaced(self: DynamicRenderer)
-   Occurs when the 
-    System.Windows.Input.StylusPlugIns.DynamicRenderer.DrawingAttributes property 
+   Occurs when the System.Windows.Input.StylusPlugIns.DynamicRenderer.DrawingAttributes property 
     changes.
   """
   pass

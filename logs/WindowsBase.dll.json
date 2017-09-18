@@ -1,0 +1,24 @@
+{
+  "WindowsBase.dll": {
+    "System.Windows": "<module 'Windows' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Markup": "<module 'Markup' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Security": "<module 'Security' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Security.Permissions": "<module 'Permissions' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.IO": "<module 'IO' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Converters": "<module 'Converters' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Interop": "<module 'Interop' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Threading": "<module 'Threading' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Input": "<module 'Input' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Diagnostics": "<module 'Diagnostics' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Media.Converters": "<module 'Converters' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Collections": "<module 'Collections' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System": "<module 'System' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Collections.Specialized": "<module 'Specialized' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.IO.Packaging": "<module 'Packaging' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Media": "<module 'Media' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Security.RightsManagement": "<module 'RightsManagement' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.ComponentModel": "<module 'ComponentModel' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Markup.Primitives": "<module 'Primitives' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Data": "<module 'Data' (CLS module from WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+  }
+}

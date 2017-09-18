@@ -7,7 +7,6 @@ class ContainerFilterService(object):
    Filters the component collection.
   
    components: The component collection to filter.
-   Returns: A System.ComponentModel.ComponentCollection that represents a modified 
-    collection.
+   Returns: A System.ComponentModel.ComponentCollection that represents a modified collection.
   """
   pass

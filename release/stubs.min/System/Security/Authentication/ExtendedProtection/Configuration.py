@@ -2,7 +2,7 @@
 # module System.Security.Authentication.ExtendedProtection.Configuration calls itself Configuration
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -19,16 +19,15 @@ class ExtendedProtectionPolicyElement(ConfigurationElement):
   BuildPolicy(self: ExtendedProtectionPolicyElement) -> ExtendedProtectionPolicy
   
    The 
-    System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtecti
-    onPolicyElement.BuildPolicy method builds a new 
-    System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy 
-    instance based on the properties set on the 
-    System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtecti
-    onPolicyElement class.
+    System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement.B
+    uildPolicy method builds a new 
+    System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy instance based on the 
+    properties set on the 
+    System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement 
+    class.
   
-   Returns: A new 
-    System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy 
-    instance that represents the extended protection policy created.
+   Returns: A new System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy instance that 
+    represents the extended protection policy created.
   """
   pass
  CustomServiceNames=property(lambda self: object(),lambda self,v: None,lambda self: None)
@@ -110,20 +109,16 @@ class ServiceNameElementCollection(ConfigurationElementCollection,ICollection,IE
   """
   Add(self: ServiceNameElementCollection,element: ServiceNameElement)
    The 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    ntCollection.Add(System.Security.Authentication.ExtendedProtection.Configuration
-    .ServiceNameElement) method adds a 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    nt instance to this 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    ntCollection.
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Add(
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement) method adds 
+    a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance to 
+    this 
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
   
   
-   element: The 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    nt instance to add to this 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    ntCollection.
+   element: The System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance 
+    to add to this 
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
   """
   pass
  def BaseAdd(self,*args):
@@ -131,22 +126,17 @@ class ServiceNameElementCollection(ConfigurationElementCollection,ICollection,IE
   BaseAdd(self: ConfigurationElementCollection,index: int,element: ConfigurationElement)
    Adds a configuration element to the configuration element collection.
   
-   index: The index location at which to add the specified 
-    System.Configuration.ConfigurationElement.
-  
+   index: The index location at which to add the specified System.Configuration.ConfigurationElement.
    element: The System.Configuration.ConfigurationElement to add.
   BaseAdd(self: ConfigurationElementCollection,element: ConfigurationElement,throwIfExists: bool)
    Adds a configuration element to the configuration element collection.
   
    element: The System.Configuration.ConfigurationElement to add.
-   throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement 
-    specified is already contained in the 
-    System.Configuration.ConfigurationElementCollection; otherwise,false.
+   throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already 
+    contained in the System.Configuration.ConfigurationElementCollection; otherwise,false.
   
   BaseAdd(self: ConfigurationElementCollection,element: ConfigurationElement)
-   Adds a configuration element to the 
-    System.Configuration.ConfigurationElementCollection.
-  
+   Adds a configuration element to the System.Configuration.ConfigurationElementCollection.
   
    element: The System.Configuration.ConfigurationElement to add.
   """
@@ -170,29 +160,25 @@ class ServiceNameElementCollection(ConfigurationElementCollection,ICollection,IE
    Returns the configuration element with the specified key.
   
    key: The key of the element to return.
-   Returns: The System.Configuration.ConfigurationElement with the specified key; 
-    otherwise,null.
+   Returns: The System.Configuration.ConfigurationElement with the specified key; otherwise,null.
   """
   pass
  def BaseGetAllKeys(self,*args):
   """
   BaseGetAllKeys(self: ConfigurationElementCollection) -> Array[object]
   
-   Returns an array of the keys for all of the configuration elements contained in 
-    the System.Configuration.ConfigurationElementCollection.
+   Returns an array of the keys for all of the configuration elements contained in the 
+    System.Configuration.ConfigurationElementCollection.
   
-   Returns: An array that contains the keys for all of the 
-    System.Configuration.ConfigurationElement objects contained in the 
-    System.Configuration.ConfigurationElementCollection.
+   Returns: An array that contains the keys for all of the System.Configuration.ConfigurationElement objects 
+    contained in the System.Configuration.ConfigurationElementCollection.
   """
   pass
  def BaseGetKey(self,*args):
   """
   BaseGetKey(self: ConfigurationElementCollection,index: int) -> object
   
-   Gets the key for the System.Configuration.ConfigurationElement at the specified 
-    index location.
-  
+   Gets the key for the System.Configuration.ConfigurationElement at the specified index location.
   
    index: The index location for the System.Configuration.ConfigurationElement.
    Returns: The key for the specified System.Configuration.ConfigurationElement.
@@ -205,22 +191,20 @@ class ServiceNameElementCollection(ConfigurationElementCollection,ICollection,IE
    The index of the specified System.Configuration.ConfigurationElement.
   
    element: The System.Configuration.ConfigurationElement for the specified index location.
-   Returns: The index of the specified System.Configuration.ConfigurationElement; 
-    otherwise,-1.
+   Returns: The index of the specified System.Configuration.ConfigurationElement; otherwise,-1.
   """
   pass
  def BaseIsRemoved(self,*args):
   """
   BaseIsRemoved(self: ConfigurationElementCollection,key: object) -> bool
   
-   Gets a value indicating whether the System.Configuration.ConfigurationElement 
-    with the specified key has been removed from the 
-    System.Configuration.ConfigurationElementCollection.
+   Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified 
+    key has been removed from the System.Configuration.ConfigurationElementCollection.
   
   
    key: The key of the element to check.
-   Returns: true if the System.Configuration.ConfigurationElement with the specified key 
-    has been removed; otherwise,false. The default is false.
+   Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; 
+    otherwise,false. The default is false.
   """
   pass
  def BaseRemove(self,*args):
@@ -234,9 +218,7 @@ class ServiceNameElementCollection(ConfigurationElementCollection,ICollection,IE
  def BaseRemoveAt(self,*args):
   """
   BaseRemoveAt(self: ConfigurationElementCollection,index: int)
-   Removes the System.Configuration.ConfigurationElement at the specified index 
-    location.
-  
+   Removes the System.Configuration.ConfigurationElement at the specified index location.
   
    index: The index location of the System.Configuration.ConfigurationElement to remove.
   """
@@ -245,10 +227,9 @@ class ServiceNameElementCollection(ConfigurationElementCollection,ICollection,IE
   """
   Clear(self: ServiceNameElementCollection)
    The 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    ntCollection.Clear method removes all configuration element objects from this 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    ntCollection.
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Clea
+    r method removes all configuration element objects from this 
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
   """
   pass
  def CreateNewElement(self,*args):
@@ -256,9 +237,7 @@ class ServiceNameElementCollection(ConfigurationElementCollection,ICollection,IE
   CreateNewElement(self: ServiceNameElementCollection) -> ConfigurationElement
   CreateNewElement(self: ConfigurationElementCollection,elementName: str) -> ConfigurationElement
   
-   Creates a new System.Configuration.ConfigurationElement when overridden in a 
-    derived class.
-  
+   Creates a new System.Configuration.ConfigurationElement when overridden in a derived class.
   
    elementName: The name of the System.Configuration.ConfigurationElement to create.
    Returns: A new System.Configuration.ConfigurationElement.
@@ -283,10 +262,10 @@ class ServiceNameElementCollection(ConfigurationElementCollection,ICollection,IE
    Returns the transformed version of the specified assembly name.
   
    assemblyName: The name of the assembly.
-   Returns: The transformed version of the assembly name. If no transformer is available,
-    the assemblyName parameter value is returned unchanged. The 
-    System.Configuration.Configuration.TypeStringTransformer property is null if no 
-    transformer is available.
+   Returns: The transformed version of the assembly name. If no transformer is available,the assemblyName 
+    parameter value is returned unchanged. The 
+    System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is 
+    available.
   """
   pass
  def GetTransformedTypeString(self,*args):
@@ -296,10 +275,10 @@ class ServiceNameElementCollection(ConfigurationElementCollection,ICollection,IE
    Returns the transformed version of the specified type name.
   
    typeName: The name of the type.
-   Returns: The transformed version of the specified type name. If no transformer is 
-    available,the typeName parameter value is returned unchanged. The 
-    System.Configuration.Configuration.TypeStringTransformer property is null if no 
-    transformer is available.
+   Returns: The transformed version of the specified type name. If no transformer is available,the typeName 
+    parameter value is returned unchanged. The 
+    System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is 
+    available.
   """
   pass
  def get_Item(self,*__args):
@@ -313,25 +292,19 @@ class ServiceNameElementCollection(ConfigurationElementCollection,ICollection,IE
   IndexOf(self: ServiceNameElementCollection,element: ServiceNameElement) -> int
   
    The 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    ntCollection.IndexOf(System.Security.Authentication.ExtendedProtection.Configura
-    tion.ServiceNameElement) method retrieves the index of the specified 
-    configuration element in this 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    ntCollection.
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Inde
+    xOf(System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement) method 
+    retrieves the index of the specified configuration element in this 
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
   
   
-   element: The 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    nt instance to retrieve the index of in this 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    ntCollection.
+   element: The System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance 
+    to retrieve the index of in this 
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
   
    Returns: The index of the specified 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    nt in this 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    ntCollection.
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement in this 
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
   """
   pass
  def Init(self,*args):
@@ -343,45 +316,41 @@ class ServiceNameElementCollection(ConfigurationElementCollection,ICollection,IE
  def InitializeDefault(self,*args):
   """
   InitializeDefault(self: ConfigurationElement)
-   Used to initialize a default set of values for the 
-    System.Configuration.ConfigurationElement object.
+   Used to initialize a default set of values for the System.Configuration.ConfigurationElement 
+    object.
   """
   pass
  def IsElementName(self,*args):
   """
   IsElementName(self: ConfigurationElementCollection,elementName: str) -> bool
   
-   Indicates whether the specified System.Configuration.ConfigurationElement 
-    exists in the System.Configuration.ConfigurationElementCollection.
+   Indicates whether the specified System.Configuration.ConfigurationElement exists in the 
+    System.Configuration.ConfigurationElementCollection.
   
   
    elementName: The name of the element to verify.
-   Returns: true if the element exists in the collection; otherwise,false. The default is 
-    false.
+   Returns: true if the element exists in the collection; otherwise,false. The default is false.
   """
   pass
  def IsElementRemovable(self,*args):
   """
   IsElementRemovable(self: ConfigurationElementCollection,element: ConfigurationElement) -> bool
   
-   Gets a value indicating whether the specified 
-    System.Configuration.ConfigurationElement can be removed from the 
-    System.Configuration.ConfigurationElementCollection.
+   Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be 
+    removed from the System.Configuration.ConfigurationElementCollection.
   
   
    element: The element to check.
-   Returns: true if the specified System.Configuration.ConfigurationElement can be removed 
-    from this System.Configuration.ConfigurationElementCollection; otherwise,
-    false. The default is true.
+   Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this 
+    System.Configuration.ConfigurationElementCollection; otherwise,false. The default is true.
   """
   pass
  def IsModified(self,*args):
   """
   IsModified(self: ConfigurationElementCollection) -> bool
   
-   Indicates whether this System.Configuration.ConfigurationElementCollection has 
-    been modified since it was last saved or loaded when overridden in a derived 
-    class.
+   Indicates whether this System.Configuration.ConfigurationElementCollection has been modified 
+    since it was last saved or loaded when overridden in a derived class.
   
    Returns: true if any contained element has been modified; otherwise,false
   """
@@ -389,9 +358,8 @@ class ServiceNameElementCollection(ConfigurationElementCollection,ICollection,IE
  def ListErrors(self,*args):
   """
   ListErrors(self: ConfigurationElement,errorList: IList)
-   Adds the invalid-property errors in this 
-    System.Configuration.ConfigurationElement object,and in all subelements,to 
-    the passed list.
+   Adds the invalid-property errors in this System.Configuration.ConfigurationElement object,and 
+    in all subelements,to the passed list.
   
   
    errorList: An object that implements the System.Collections.IList interface.
@@ -401,14 +369,11 @@ class ServiceNameElementCollection(ConfigurationElementCollection,ICollection,IE
   """
   OnDeserializeUnrecognizedAttribute(self: ConfigurationElement,name: str,value: str) -> bool
   
-   Gets a value indicating whether an unknown attribute is encountered during 
-    deserialization.
-  
+   Gets a value indicating whether an unknown attribute is encountered during deserialization.
   
    name: The name of the unrecognized attribute.
    value: The value of the unrecognized attribute.
-   Returns: true when an unknown attribute is encountered while deserializing; otherwise,
-    false.
+   Returns: true when an unknown attribute is encountered while deserializing; otherwise,false.
   """
   pass
  def OnDeserializeUnrecognizedElement(self,*args):
@@ -419,8 +384,8 @@ class ServiceNameElementCollection(ConfigurationElementCollection,ICollection,IE
   
    elementName: The name of the unrecognized element.
    reader: An input stream that reads XML from the configuration file.
-   Returns: true if the unrecognized element was deserialized successfully; otherwise,
-    false. The default is false.
+   Returns: true if the unrecognized element was deserialized successfully; otherwise,false. The default is 
+    false.
   """
   pass
  def OnRequiredPropertyNotFound(self,*args):
@@ -452,98 +417,89 @@ class ServiceNameElementCollection(ConfigurationElementCollection,ICollection,IE
   """
   Remove(self: ServiceNameElementCollection,name: str)
    The 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    ntCollection.Remove(System.Security.Authentication.ExtendedProtection.Configurat
-    ion.ServiceNameElement) method removes a 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    nt instance from this 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    ntCollection based on the System.String specified.
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Remo
+    ve(System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement) method 
+    removes a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement 
+    instance from this 
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection 
+    based on the System.String specified.
   
   
    name: A System.String that represents the 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    nt instance to remove from this 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    ntCollection
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance to 
+    remove from this 
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection
   
   Remove(self: ServiceNameElementCollection,element: ServiceNameElement)
    The 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    ntCollection.Remove(System.Security.Authentication.ExtendedProtection.Configurat
-    ion.ServiceNameElement) method removes a 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    nt instance from this 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    ntCollection.
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Remo
+    ve(System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement) method 
+    removes a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement 
+    instance from this 
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
   
   
-   element: The 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    nt instance to remove from this 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    ntCollection.
+   element: The System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance 
+    to remove from this 
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
   """
   pass
  def RemoveAt(self,index):
   """
   RemoveAt(self: ServiceNameElementCollection,index: int)
    The 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    ntCollection.Remove(System.Security.Authentication.ExtendedProtection.Configurat
-    ion.ServiceNameElement) method removes a 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    nt instance from this 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    ntCollection based on the index specified.
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Remo
+    ve(System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement) method 
+    removes a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement 
+    instance from this 
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection 
+    based on the index specified.
   
   
    index: The index of the 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    nt instance to remove from this 
-    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEleme
-    ntCollection.
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance to 
+    remove from this 
+    System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
   """
   pass
  def Reset(self,*args):
   """
   Reset(self: ConfigurationElementCollection,parentElement: ConfigurationElement)
-   Resets the System.Configuration.ConfigurationElementCollection to its 
-    unmodified state when overridden in a derived class.
+   Resets the System.Configuration.ConfigurationElementCollection to its unmodified state when 
+    overridden in a derived class.
   
   
-   parentElement: The System.Configuration.ConfigurationElement representing the collection 
-    parent element,if any; otherwise,null.
+   parentElement: The System.Configuration.ConfigurationElement representing the collection parent element,if 
+    any; otherwise,null.
   """
   pass
  def ResetModified(self,*args):
   """
   ResetModified(self: ConfigurationElementCollection)
-   Resets the value of the 
-    System.Configuration.ConfigurationElementCollection.IsModified property to 
-    false when overridden in a derived class.
+   Resets the value of the System.Configuration.ConfigurationElementCollection.IsModified property 
+    to false when overridden in a derived class.
   """
   pass
  def SerializeElement(self,*args):
   """
   SerializeElement(self: ConfigurationElementCollection,writer: XmlWriter,serializeCollectionKey: bool) -> bool
   
-   Writes the configuration data to an XML element in the configuration file when 
-    overridden in a derived class.
+   Writes the configuration data to an XML element in the configuration file when overridden in a 
+    derived class.
   
   
    writer: Output stream that writes XML to the configuration file.
    serializeCollectionKey: true to serialize the collection key; otherwise,false.
-   Returns: true if the System.Configuration.ConfigurationElementCollection was written to 
-    the configuration file successfully.
+   Returns: true if the System.Configuration.ConfigurationElementCollection was written to the configuration 
+    file successfully.
   """
   pass
  def SerializeToXmlElement(self,*args):
   """
   SerializeToXmlElement(self: ConfigurationElement,writer: XmlWriter,elementName: str) -> bool
   
-   Writes the outer tags of this configuration element to the configuration file 
-    when implemented in a derived class.
+   Writes the outer tags of this configuration element to the configuration file when implemented 
+    in a derived class.
   
   
    writer: The System.Xml.XmlWriter that writes to the configuration file.
@@ -564,9 +520,8 @@ class ServiceNameElementCollection(ConfigurationElementCollection,ICollection,IE
  def SetReadOnly(self,*args):
   """
   SetReadOnly(self: ConfigurationElementCollection)
-   Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly 
-    property for the System.Configuration.ConfigurationElementCollection object and 
-    for all sub-elements.
+   Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly property for the 
+    System.Configuration.ConfigurationElementCollection object and for all sub-elements.
   """
   pass
  def set_Item(self,*__args):
@@ -575,18 +530,18 @@ class ServiceNameElementCollection(ConfigurationElementCollection,ICollection,IE
  def Unmerge(self,*args):
   """
   Unmerge(self: ConfigurationElementCollection,sourceElement: ConfigurationElement,parentElement: ConfigurationElement,saveMode: ConfigurationSaveMode)
-   Reverses the effect of merging configuration information from different levels 
-    of the configuration hierarchy
+   Reverses the effect of merging configuration information from different levels of the 
+    configuration hierarchy
   
   
-   sourceElement: A System.Configuration.ConfigurationElement object at the current level 
-    containing a merged view of the properties.
+   sourceElement: A System.Configuration.ConfigurationElement object at the current level containing a merged view 
+    of the properties.
   
-   parentElement: The parent System.Configuration.ConfigurationElement object of the current 
-    element,or null if this is the top level.
+   parentElement: The parent System.Configuration.ConfigurationElement object of the current element,or null if 
+    this is the top level.
   
-   saveMode: A System.Configuration.ConfigurationSaveMode enumerated value that determines 
-    which property values to include.
+   saveMode: A System.Configuration.ConfigurationSaveMode enumerated value that determines which property 
+    values to include.
   """
   pass
  def __add__(self,*args):

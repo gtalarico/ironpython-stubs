@@ -3,9 +3,7 @@ class UCOMIEnumVARIANT:
  def Clone(self,ppenum):
   """
   Clone(self: UCOMIEnumVARIANT,ppenum: int)
-   Creates another enumerator that contains the same enumeration state as the 
-    current one.
-  
+   Creates another enumerator that contains the same enumeration state as the current one.
   
    ppenum: On successful return,a reference to the newly created enumerator.
   """
@@ -18,11 +16,8 @@ class UCOMIEnumVARIANT:
   
    celt: The number of elements to return in rgelt.
    rgvar: On successful return,a reference to the enumerated elements.
-   pceltFetched: On successful return,a reference to the actual number of elements enumerated 
-    in rgelt.
-  
-   Returns: S_OK if the pceltFetched parameter equals the celt parameter; otherwise,
-    S_FALSE.
+   pceltFetched: On successful return,a reference to the actual number of elements enumerated in rgelt.
+   Returns: S_OK if the pceltFetched parameter equals the celt parameter; otherwise,S_FALSE.
   """
   pass
  def Reset(self):
@@ -40,8 +35,7 @@ class UCOMIEnumVARIANT:
    Skips over a specified number of items in the enumeration sequence.
   
    celt: The number of elements to skip in the enumeration.
-   Returns: S_OK if the number of elements skipped equals celt parameter; otherwise,
-    S_FALSE.
+   Returns: S_OK if the number of elements skipped equals celt parameter; otherwise,S_FALSE.
   """
   pass
  def __init__(self,*args):

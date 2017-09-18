@@ -7,9 +7,7 @@ class TableLayoutControlCollection(ControlCollection,IList,ICollection,IEnumerab
  def Add(self,*__args):
   """
   Add(self: TableLayoutControlCollection,control: Control,column: int,row: int)
-   Adds the specified control to the collection and positions it at the specified 
-    cell.
-  
+   Adds the specified control to the collection and positions it at the specified cell.
   
    control: The control to add.
    column: The column in which control will be placed.

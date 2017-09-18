@@ -9,15 +9,15 @@ class ErrorProvider(Component,IComponent,IDisposable,IExtenderProvider,ISupportI
  def BindToDataAndErrors(self,newDataSource,newDataMember):
   """
   BindToDataAndErrors(self: ErrorProvider,newDataSource: object,newDataMember: str)
-   Provides a method to set both the System.Windows.Forms.ErrorProvider.DataSource 
-    and System.Windows.Forms.ErrorProvider.DataMember at run time.
+   Provides a method to set both the System.Windows.Forms.ErrorProvider.DataSource and 
+    System.Windows.Forms.ErrorProvider.DataMember at run time.
   
   
-   newDataSource: A data set based on the System.Collections.IList interface to be monitored for 
-    errors. Typically,this is a System.Data.DataSet to be monitored for errors.
+   newDataSource: A data set based on the System.Collections.IList interface to be monitored for errors. 
+    Typically,this is a System.Data.DataSet to be monitored for errors.
   
-   newDataMember: A collection within the newDataSource to monitor for errors. Typically,this 
-    will be a System.Data.DataTable.
+   newDataMember: A collection within the newDataSource to monitor for errors. Typically,this will be a 
+    System.Data.DataTable.
   """
   pass
  def CanExtend(self,extendee):
@@ -27,9 +27,9 @@ class ErrorProvider(Component,IComponent,IDisposable,IExtenderProvider,ISupportI
    Gets a value indicating whether a control can be extended.
   
    extendee: The control to be extended.
-   Returns: true if the control can be extended; otherwise,false.This property will be 
-    true if the object is a System.Windows.Forms.Control and is not a 
-    System.Windows.Forms.Form or System.Windows.Forms.ToolBar.
+   Returns: true if the control can be extended; otherwise,false.This property will be true if the object 
+    is a System.Windows.Forms.Control and is not a System.Windows.Forms.Form or 
+    System.Windows.Forms.ToolBar.
   """
   pass
  def Clear(self):
@@ -41,8 +41,7 @@ class ErrorProvider(Component,IComponent,IDisposable,IExtenderProvider,ISupportI
  def Dispose(self):
   """
   Dispose(self: ErrorProvider,disposing: bool)
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetError(self,control):
@@ -59,13 +58,11 @@ class ErrorProvider(Component,IComponent,IDisposable,IExtenderProvider,ISupportI
   """
   GetIconAlignment(self: ErrorProvider,control: Control) -> ErrorIconAlignment
   
-   Gets a value indicating where the error icon should be placed in relation to 
-    the control.
-  
+   Gets a value indicating where the error icon should be placed in relation to the control.
   
    control: The control to get the icon location for.
-   Returns: One of the System.Windows.Forms.ErrorIconAlignment values. The default icon 
-    alignment is System.Windows.Forms.ErrorIconAlignment.MiddleRight.
+   Returns: One of the System.Windows.Forms.ErrorIconAlignment values. The default icon alignment is 
+    System.Windows.Forms.ErrorIconAlignment.MiddleRight.
   """
   pass
  def GetIconPadding(self,control):
@@ -82,14 +79,13 @@ class ErrorProvider(Component,IComponent,IDisposable,IExtenderProvider,ISupportI
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -98,11 +94,11 @@ class ErrorProvider(Component,IComponent,IDisposable,IExtenderProvider,ISupportI
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -125,16 +121,13 @@ class ErrorProvider(Component,IComponent,IDisposable,IExtenderProvider,ISupportI
    Sets the error description string for the specified control.
   
    control: The control to set the error description string for.
-   value: The error description string,or null or System.String.Empty to remove the 
-    error.
+   value: The error description string,or null or System.String.Empty to remove the error.
   """
   pass
  def SetIconAlignment(self,control,value):
   """
   SetIconAlignment(self: ErrorProvider,control: Control,value: ErrorIconAlignment)
-   Sets the location where the error icon should be placed in relation to the 
-    control.
-  
+   Sets the location where the error icon should be placed in relation to the control.
   
    control: The control to set the icon location for.
    value: One of the System.Windows.Forms.ErrorIconAlignment values.
@@ -143,9 +136,7 @@ class ErrorProvider(Component,IComponent,IDisposable,IExtenderProvider,ISupportI
  def SetIconPadding(self,control,padding):
   """
   SetIconPadding(self: ErrorProvider,control: Control,padding: int)
-   Sets the amount of extra space to leave between the specified control and the 
-    error icon.
-  
+   Sets the amount of extra space to leave between the specified control and the error icon.
   
    control: The control to set the padding for.
    padding: The number of pixels to add between the icon and the control.
@@ -154,16 +145,22 @@ class ErrorProvider(Component,IComponent,IDisposable,IExtenderProvider,ISupportI
  def UpdateBinding(self):
   """
   UpdateBinding(self: ErrorProvider)
-   Provides a method to update the bindings of the 
-    System.Windows.Forms.ErrorProvider.DataSource,
+   Provides a method to update the bindings of the System.Windows.Forms.ErrorProvider.DataSource,
     System.Windows.Forms.ErrorProvider.DataMember,and the error text.
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

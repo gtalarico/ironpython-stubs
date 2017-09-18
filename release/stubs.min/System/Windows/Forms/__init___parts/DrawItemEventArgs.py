@@ -9,8 +9,7 @@ class DrawItemEventArgs(EventArgs):
   """
   DrawBackground(self: DrawItemEventArgs)
    Draws the background within the bounds specified in the 
-    erload:System.Windows.Forms.DrawItemEventArgs.#ctor constructor and with the 
-    appropriate color.
+    erload:System.Windows.Forms.DrawItemEventArgs.#ctor constructor and with the appropriate color.
   """
   pass
  def DrawFocusRectangle(self):

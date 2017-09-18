@@ -2,7 +2,7 @@
 # module System.Windows.Forms calls itself Forms
 # from System.Windows.Forms,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -275,6 +275,8 @@ from __init___parts.DockingBehavior import DockingBehavior
 from __init___parts.DockStyle import DockStyle
 from __init___parts.UpDownBase import UpDownBase
 from __init___parts.DomainUpDown import DomainUpDown
+from __init___parts.DpiChangedEventArgs import DpiChangedEventArgs
+from __init___parts.DpiChangedEventHandler import DpiChangedEventHandler
 from __init___parts.DragAction import DragAction
 from __init___parts.DragDropEffects import DragDropEffects
 from __init___parts.DragEventArgs import DragEventArgs

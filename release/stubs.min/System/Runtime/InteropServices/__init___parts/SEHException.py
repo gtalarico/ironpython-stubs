@@ -13,8 +13,8 @@ class SEHException(ExternalException,ISerializable,_Exception):
   """
   CanResume(self: SEHException) -> bool
   
-   Indicates whether the exception can be recovered from,and whether the code can 
-    continue from the point at which the exception was thrown.
+   Indicates whether the exception can be recovered from,and whether the code can continue from 
+    the point at which the exception was thrown.
   
    Returns: Always false,because resumable exceptions are not implemented.
   """

@@ -11,8 +11,8 @@ class TimeSpan(object,IComparable,IComparable[TimeSpan],IEquatable[TimeSpan],IFo
   """
   Add(self: TimeSpan,ts: TimeSpan) -> TimeSpan
   
-   Returns a new System.TimeSpan object whose value is the sum of the specified 
-    System.TimeSpan object and this instance.
+   Returns a new System.TimeSpan object whose value is the sum of the specified System.TimeSpan 
+    object and this instance.
   
   
    ts: The time interval to add.
@@ -24,84 +24,73 @@ class TimeSpan(object,IComparable,IComparable[TimeSpan],IEquatable[TimeSpan],IFo
   """
   Compare(t1: TimeSpan,t2: TimeSpan) -> int
   
-   Compares two System.TimeSpan values and returns an integer that indicates 
-    whether the first value is shorter than,equal to,or longer than the second 
-    value.
+   Compares two System.TimeSpan values and returns an integer that indicates whether the first 
+    value is shorter than,equal to,or longer than the second value.
   
   
    t1: The first time interval to compare.
    t2: The second time interval to compare.
-   Returns: One of the following values.Value Description -1 t1 is shorter than t2. 0 t1 is 
-    equal to t2. 1 t1 is longer than t2.
+   Returns: One of the following values.Value Description -1 t1 is shorter than t2. 0 t1 is equal to t2. 1 
+    t1 is longer than t2.
   """
   pass
  def CompareTo(self,value):
   """
   CompareTo(self: TimeSpan,value: TimeSpan) -> int
   
-   Compares this instance to a specified System.TimeSpan object and returns an 
-    integer that indicates whether this instance is shorter than,equal to,or 
-    longer than the System.TimeSpan object.
+   Compares this instance to a specified System.TimeSpan object and returns an integer that 
+    indicates whether this instance is shorter than,equal to,or longer than the System.TimeSpan 
+    object.
   
   
    value: An object to compare to this instance.
-   Returns: A signed number indicating the relative values of this instance and value.Value 
-    Description A negative integer This instance is shorter than value. Zero This 
-    instance is equal to value. A positive integer This instance is longer than 
-    value.
+   Returns: A signed number indicating the relative values of this instance and value.Value Description A 
+    negative integer This instance is shorter than value. Zero This instance is equal to value. A 
+    positive integer This instance is longer than value.
   
   CompareTo(self: TimeSpan,value: object) -> int
   
-   Compares this instance to a specified object and returns an integer that 
-    indicates whether this instance is shorter than,equal to,or longer than the 
-    specified object.
+   Compares this instance to a specified object and returns an integer that indicates whether this 
+    instance is shorter than,equal to,or longer than the specified object.
   
   
    value: An object to compare,or null.
-   Returns: One of the following values.Value Description -1 This instance is shorter than 
-    value. 0 This instance is equal to value. 1 This instance is longer than 
-    value.-or- value is null.
+   Returns: One of the following values.Value Description -1 This instance is shorter than value. 0 This 
+    instance is equal to value. 1 This instance is longer than value.-or- value is null.
   """
   pass
  def Duration(self):
   """
   Duration(self: TimeSpan) -> TimeSpan
   
-   Returns a new System.TimeSpan object whose value is the absolute value of the 
-    current System.TimeSpan object.
+   Returns a new System.TimeSpan object whose value is the absolute value of the current 
+    System.TimeSpan object.
   
-   Returns: A new object whose value is the absolute value of the current System.TimeSpan 
-    object.
+   Returns: A new object whose value is the absolute value of the current System.TimeSpan object.
   """
   pass
  def Equals(self,*__args):
   """
   Equals(t1: TimeSpan,t2: TimeSpan) -> bool
   
-   Returns a value that indicates whether two specified instances of 
-    System.TimeSpan are equal.
-  
+   Returns a value that indicates whether two specified instances of System.TimeSpan are equal.
   
    t1: The first time interval to compare.
    t2: The second time interval to compare.
    Returns: true if the values of t1 and t2 are equal; otherwise,false.
   Equals(self: TimeSpan,obj: TimeSpan) -> bool
   
-   Returns a value indicating whether this instance is equal to a specified 
-    System.TimeSpan object.
-  
+   Returns a value indicating whether this instance is equal to a specified System.TimeSpan object.
   
    obj: An object to compare with this instance.
-   Returns: true if obj represents the same time interval as this instance; otherwise,
-    false.
-  
+   Returns: true if obj represents the same time interval as this instance; otherwise,false.
   Equals(self: TimeSpan,value: object) -> bool
   
    Returns a value indicating whether this instance is equal to a specified object.
   
    value: An object to compare with this instance.
-   Returns: true if value is a System.TimeSpan object that represents the same time 
-    interval as the current System.TimeSpan structure; otherwise,false.
+   Returns: true if value is a System.TimeSpan object that represents the same time interval as the current 
+    System.TimeSpan structure; otherwise,false.
   """
   pass
  @staticmethod
@@ -109,8 +98,8 @@ class TimeSpan(object,IComparable,IComparable[TimeSpan],IEquatable[TimeSpan],IFo
   """
   FromDays(value: float) -> TimeSpan
   
-   Returns a System.TimeSpan that represents a specified number of days,where the 
-    specification is accurate to the nearest millisecond.
+   Returns a System.TimeSpan that represents a specified number of days,where the specification is 
+    accurate to the nearest millisecond.
   
   
    value: A number of days,accurate to the nearest millisecond.
@@ -122,8 +111,8 @@ class TimeSpan(object,IComparable,IComparable[TimeSpan],IEquatable[TimeSpan],IFo
   """
   FromHours(value: float) -> TimeSpan
   
-   Returns a System.TimeSpan that represents a specified number of hours,where 
-    the specification is accurate to the nearest millisecond.
+   Returns a System.TimeSpan that represents a specified number of hours,where the specification 
+    is accurate to the nearest millisecond.
   
   
    value: A number of hours accurate to the nearest millisecond.
@@ -146,8 +135,8 @@ class TimeSpan(object,IComparable,IComparable[TimeSpan],IEquatable[TimeSpan],IFo
   """
   FromMinutes(value: float) -> TimeSpan
   
-   Returns a System.TimeSpan that represents a specified number of minutes,where 
-    the specification is accurate to the nearest millisecond.
+   Returns a System.TimeSpan that represents a specified number of minutes,where the specification 
+    is accurate to the nearest millisecond.
   
   
    value: A number of minutes,accurate to the nearest millisecond.
@@ -159,8 +148,8 @@ class TimeSpan(object,IComparable,IComparable[TimeSpan],IEquatable[TimeSpan],IFo
   """
   FromSeconds(value: float) -> TimeSpan
   
-   Returns a System.TimeSpan that represents a specified number of seconds,where 
-    the specification is accurate to the nearest millisecond.
+   Returns a System.TimeSpan that represents a specified number of seconds,where the specification 
+    is accurate to the nearest millisecond.
   
   
    value: A number of seconds,accurate to the nearest millisecond.
@@ -172,8 +161,8 @@ class TimeSpan(object,IComparable,IComparable[TimeSpan],IEquatable[TimeSpan],IFo
   """
   FromTicks(value: Int64) -> TimeSpan
   
-   Returns a System.TimeSpan that represents a specified time,where the 
-    specification is in units of ticks.
+   Returns a System.TimeSpan that represents a specified time,where the specification is in units 
+    of ticks.
   
   
    value: A number of ticks that represent a time.
@@ -192,11 +181,8 @@ class TimeSpan(object,IComparable,IComparable[TimeSpan],IEquatable[TimeSpan],IFo
   """
   Negate(self: TimeSpan) -> TimeSpan
   
-   Returns a new System.TimeSpan object whose value is the negated value of this 
-    instance.
-  
-   Returns: A new object with the same numeric value as this instance,but with the 
-    opposite sign.
+   Returns a new System.TimeSpan object whose value is the negated value of this instance.
+   Returns: A new object with the same numeric value as this instance,but with the opposite sign.
   """
   pass
  @staticmethod
@@ -204,8 +190,8 @@ class TimeSpan(object,IComparable,IComparable[TimeSpan],IEquatable[TimeSpan],IFo
   """
   Parse(input: str,formatProvider: IFormatProvider) -> TimeSpan
   
-   Converts the string representation of a time interval to its System.TimeSpan 
-    equivalent by using the specified culture-specific format information.
+   Converts the string representation of a time interval to its System.TimeSpan equivalent by using 
+    the specified culture-specific format information.
   
   
    input: A string that specifies the time interval to convert.
@@ -213,9 +199,7 @@ class TimeSpan(object,IComparable,IComparable[TimeSpan],IEquatable[TimeSpan],IFo
    Returns: A time interval that corresponds to input,as specified by formatProvider.
   Parse(s: str) -> TimeSpan
   
-   Converts the string representation of a time interval to its System.TimeSpan 
-    equivalent.
-  
+   Converts the string representation of a time interval to its System.TimeSpan equivalent.
   
    s: A string that specifies the time interval to convert.
    Returns: A time interval that corresponds to s.
@@ -226,113 +210,95 @@ class TimeSpan(object,IComparable,IComparable[TimeSpan],IEquatable[TimeSpan],IFo
   """
   ParseExact(input: str,format: str,formatProvider: IFormatProvider,styles: TimeSpanStyles) -> TimeSpan
   
-   Converts the string representation of a time interval to its System.TimeSpan 
-    equivalent by using the specified format,culture-specific format information,
-    and styles. The format of the string representation must match the specified 
-    format exactly.
+   Converts the string representation of a time interval to its System.TimeSpan equivalent by using 
+    the specified format,culture-specific format information,and styles. The format of the string 
+    representation must match the specified format exactly.
   
   
    input: A string that specifies the time interval to convert.
    format: A standard or custom format string that defines the required format of input.
    formatProvider: An object that provides culture-specific formatting information.
-   styles: A bitwise combination of enumeration values that defines the style elements 
-    that may be present in input.
+   styles: A bitwise combination of enumeration values that defines the style elements that may be present 
+    in input.
   
-   Returns: A time interval that corresponds to input,as specified by format,
-    formatProvider,and styles.
-  
+   Returns: A time interval that corresponds to input,as specified by format,formatProvider,and styles.
   ParseExact(input: str,formats: Array[str],formatProvider: IFormatProvider,styles: TimeSpanStyles) -> TimeSpan
   
-   Converts the string representation of a time interval to its System.TimeSpan 
-    equivalent by using the specified formats,culture-specific format information,
-    and styles. The format of the string representation must match one of the 
-    specified formats exactly.
+   Converts the string representation of a time interval to its System.TimeSpan equivalent by using 
+    the specified formats,culture-specific format information,and styles. The format of the string 
+    representation must match one of the specified formats exactly.
   
   
    input: A string that specifies the time interval to convert.
-   formats: A array of standard or custom format strings that define the required format of 
-    input.
-  
+   formats: A array of standard or custom format strings that define the required format of input.
    formatProvider: An object that provides culture-specific formatting information.
-   styles: A bitwise combination of enumeration values that defines the style elements 
-    that may be present in input.
+   styles: A bitwise combination of enumeration values that defines the style elements that may be present 
+    in input.
   
-   Returns: A time interval that corresponds to input,as specified by formats,
-    formatProvider,and styles.
-  
+   Returns: A time interval that corresponds to input,as specified by formats,formatProvider,and styles.
   ParseExact(input: str,format: str,formatProvider: IFormatProvider) -> TimeSpan
   
-   Converts the string representation of a time interval to its System.TimeSpan 
-    equivalent by using the specified format and culture-specific format 
-    information. The format of the string representation must match the specified 
-    format exactly.
+   Converts the string representation of a time interval to its System.TimeSpan equivalent by using 
+    the specified format and culture-specific format information. The format of the string 
+    representation must match the specified format exactly.
   
   
    input: A string that specifies the time interval to convert.
    format: A standard or custom format string that defines the required format of input.
    formatProvider: An object that provides culture-specific formatting information.
-   Returns: A time interval that corresponds to input,as specified by format and 
-    formatProvider.
-  
+   Returns: A time interval that corresponds to input,as specified by format and formatProvider.
   ParseExact(input: str,formats: Array[str],formatProvider: IFormatProvider) -> TimeSpan
   
-   Converts the string representation of a time interval to its System.TimeSpan 
-    equivalent by using the specified array of format strings and culture-specific 
-    format information. The format of the string representation must match one of 
-    the specified formats exactly.
+   Converts the string representation of a time interval to its System.TimeSpan equivalent by using 
+    the specified array of format strings and culture-specific format information. The format of the 
+    string representation must match one of the specified formats exactly.
   
   
    input: A string that specifies the time interval to convert.
-   formats: A array of standard or custom format strings that defines the required format 
-    of input.
-  
+   formats: A array of standard or custom format strings that defines the required format of input.
    formatProvider: An object that provides culture-specific formatting information.
-   Returns: A time interval that corresponds to input,as specified by formats and 
-    formatProvider.
+   Returns: A time interval that corresponds to input,as specified by formats and formatProvider.
   """
   pass
  def Subtract(self,ts):
   """
   Subtract(self: TimeSpan,ts: TimeSpan) -> TimeSpan
   
-   Returns a new System.TimeSpan object whose value is the difference between the 
-    specified System.TimeSpan object and this instance.
+   Returns a new System.TimeSpan object whose value is the difference between the specified 
+    System.TimeSpan object and this instance.
   
   
    ts: The time interval to be subtracted.
-   Returns: A new time interval whose value is the result of the value of this instance 
-    minus the value of ts.
+   Returns: A new time interval whose value is the result of the value of this instance minus the value of 
+    ts.
   """
   pass
  def ToString(self,format=None,formatProvider=None):
   """
   ToString(self: TimeSpan,format: str,formatProvider: IFormatProvider) -> str
   
-   Converts the value of the current System.TimeSpan object to its equivalent 
-    string representation by using the specified format and culture-specific 
-    formatting information.
+   Converts the value of the current System.TimeSpan object to its equivalent string representation 
+    by using the specified format and culture-specific formatting information.
   
   
    format: A standard or custom System.TimeSpan format string.
    formatProvider: An object that supplies culture-specific formatting information.
-   Returns: The string representation of the current System.TimeSpan value,as specified by 
-    format and formatProvider.
+   Returns: The string representation of the current System.TimeSpan value,as specified by format and 
+    formatProvider.
   
   ToString(self: TimeSpan,format: str) -> str
   
-   Converts the value of the current System.TimeSpan object to its equivalent 
-    string representation by using the specified format.
+   Converts the value of the current System.TimeSpan object to its equivalent string representation 
+    by using the specified format.
   
   
    format: A standard or custom System.TimeSpan format string.
-   Returns: The string representation of the current System.TimeSpan value in the format 
-    specified by the format parameter.
+   Returns: The string representation of the current System.TimeSpan value in the format specified by the 
+    format parameter.
   
   ToString(self: TimeSpan) -> str
   
-   Converts the value of the current System.TimeSpan object to its equivalent 
-    string representation.
-  
+   Converts the value of the current System.TimeSpan object to its equivalent string representation.
    Returns: The string representation of the current System.TimeSpan value.
   """
   pass
@@ -341,31 +307,29 @@ class TimeSpan(object,IComparable,IComparable[TimeSpan],IEquatable[TimeSpan],IFo
   """
   TryParse(input: str,formatProvider: IFormatProvider) -> (bool,TimeSpan)
   
-   Converts the string representation of a time interval to its System.TimeSpan 
-    equivalent by using the specified culture-specific formatting information,and 
-    returns a value that indicates whether the conversion succeeded.
+   Converts the string representation of a time interval to its System.TimeSpan equivalent by using 
+    the specified culture-specific formatting information,and returns a value that indicates 
+    whether the conversion succeeded.
   
   
    input: A string that specifies the time interval to convert.
    formatProvider: An object that supplies culture-specific formatting information.
-   Returns: true if input was converted successfully; otherwise,false. This operation 
-    returns false if the input parameter is null or System.String.Empty,has an 
-    invalid format,represents a time interval that is less than 
-    System.TimeSpan.MinValue or greater than System.TimeSpan.MaxValue,or has at 
-    least one days,hours,minutes,or seconds component outside its valid range.
+   Returns: true if input was converted successfully; otherwise,false. This operation returns false if the 
+    input parameter is null or System.String.Empty,has an invalid format,represents a time 
+    interval that is less than System.TimeSpan.MinValue or greater than System.TimeSpan.MaxValue,or 
+    has at least one days,hours,minutes,or seconds component outside its valid range.
   
   TryParse(s: str) -> (bool,TimeSpan)
   
-   Converts the string representation of a time interval to its System.TimeSpan 
-    equivalent and returns a value that indicates whether the conversion succeeded.
+   Converts the string representation of a time interval to its System.TimeSpan equivalent and 
+    returns a value that indicates whether the conversion succeeded.
   
   
    s: A string that specifies the time interval to convert.
-   Returns: true if s was converted successfully; otherwise,false. This operation returns 
-    false if the s parameter is null or System.String.Empty,has an invalid format,
-    represents a time interval that is less than System.TimeSpan.MinValue or 
-    greater than System.TimeSpan.MaxValue,or has at least one days,hours,
-    minutes,or seconds component outside its valid range.
+   Returns: true if s was converted successfully; otherwise,false. This operation returns false if the s 
+    parameter is null or System.String.Empty,has an invalid format,represents a time interval that 
+    is less than System.TimeSpan.MinValue or greater than System.TimeSpan.MaxValue,or has at least 
+    one days,hours,minutes,or seconds component outside its valid range.
   """
   pass
  @staticmethod
@@ -373,11 +337,10 @@ class TimeSpan(object,IComparable,IComparable[TimeSpan],IEquatable[TimeSpan],IFo
   """
   TryParseExact(input: str,format: str,formatProvider: IFormatProvider,styles: TimeSpanStyles) -> (bool,TimeSpan)
   
-   Converts the string representation of a time interval to its System.TimeSpan 
-    equivalent by using the specified format,culture-specific format information,
-    and styles,and returns a value that indicates whether the conversion 
-    succeeded. The format of the string representation must match the specified 
-    format exactly.
+   Converts the string representation of a time interval to its System.TimeSpan equivalent by using 
+    the specified format,culture-specific format information,and styles,and returns a value that 
+    indicates whether the conversion succeeded. The format of the string representation must match 
+    the specified format exactly.
   
   
    input: A string that specifies the time interval to convert.
@@ -387,27 +350,23 @@ class TimeSpan(object,IComparable,IComparable[TimeSpan],IEquatable[TimeSpan],IFo
    Returns: true if input was converted successfully; otherwise,false.
   TryParseExact(input: str,formats: Array[str],formatProvider: IFormatProvider,styles: TimeSpanStyles) -> (bool,TimeSpan)
   
-   Converts the specified string representation of a time interval to its 
-    System.TimeSpan equivalent by using the specified formats,culture-specific 
-    format information,and styles,and returns a value that indicates whether the 
-    conversion succeeded. The format of the string representation must match one of 
-    the specified formats exactly.
+   Converts the specified string representation of a time interval to its System.TimeSpan 
+    equivalent by using the specified formats,culture-specific format information,and styles,and 
+    returns a value that indicates whether the conversion succeeded. The format of the string 
+    representation must match one of the specified formats exactly.
   
   
    input: A string that specifies the time interval to convert.
-   formats: A array of standard or custom format strings that define the acceptable formats 
-    of input.
-  
+   formats: A array of standard or custom format strings that define the acceptable formats of input.
    formatProvider: An object that supplies culture-specific formatting information.
    styles: One or more enumeration values that indicate the style of input.
    Returns: true if input was converted successfully; otherwise,false.
   TryParseExact(input: str,format: str,formatProvider: IFormatProvider) -> (bool,TimeSpan)
   
-   Converts the string representation of a time interval to its System.TimeSpan 
-    equivalent by using the specified format and culture-specific format 
-    information,and returns a value that indicates whether the conversion 
-    succeeded. The format of the string representation must match the specified 
-    format exactly.
+   Converts the string representation of a time interval to its System.TimeSpan equivalent by using 
+    the specified format and culture-specific format information,and returns a value that indicates 
+    whether the conversion succeeded. The format of the string representation must match the 
+    specified format exactly.
   
   
    input: A string that specifies the time interval to convert.
@@ -416,17 +375,14 @@ class TimeSpan(object,IComparable,IComparable[TimeSpan],IEquatable[TimeSpan],IFo
    Returns: true if input was converted successfully; otherwise,false.
   TryParseExact(input: str,formats: Array[str],formatProvider: IFormatProvider) -> (bool,TimeSpan)
   
-   Converts the specified string representation of a time interval to its 
-    System.TimeSpan equivalent by using the specified formats and culture-specific 
-    format information,and returns a value that indicates whether the conversion 
-    succeeded. The format of the string representation must match one of the 
-    specified formats exactly.
+   Converts the specified string representation of a time interval to its System.TimeSpan 
+    equivalent by using the specified formats and culture-specific format information,and returns a 
+    value that indicates whether the conversion succeeded. The format of the string representation 
+    must match one of the specified formats exactly.
   
   
    input: A string that specifies the time interval to convert.
-   formats: A array of standard or custom format strings that define the acceptable formats 
-    of input.
-  
+   formats: A array of standard or custom format strings that define the acceptable formats of input.
    formatProvider: An object that provides culture-specific formatting information.
    Returns: true if input was converted successfully; otherwise,false.
   """

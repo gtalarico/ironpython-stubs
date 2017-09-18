@@ -1,68 +1,12 @@
 # encoding: utf-8
 # module System.Windows.Diagnostics calls itself Diagnostics
-# from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+# from PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
 # classes
-
-class ResourceDictionaryDiagnostics(object):
-    # no doc
-    GenericResourceDictionaries = None
-    GenericResourceDictionaryLoaded = None
-    ThemedResourceDictionaries = None
-    ThemedResourceDictionaryLoaded = None
-    ThemedResourceDictionaryUnloaded = None
-    __all__ = [
-        'GenericResourceDictionaryLoaded',
-        'ThemedResourceDictionaryLoaded',
-        'ThemedResourceDictionaryUnloaded',
-    ]
-
-
-class ResourceDictionaryInfo(object):
-    # no doc
-    Assembly = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Assembly(self: ResourceDictionaryInfo) -> Assembly
-
-"""
-
-    ResourceDictionary = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: ResourceDictionary(self: ResourceDictionaryInfo) -> ResourceDictionary
-
-"""
-
-    ResourceDictionaryAssembly = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: ResourceDictionaryAssembly(self: ResourceDictionaryInfo) -> Assembly
-
-"""
-
-    SourceUri = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: SourceUri(self: ResourceDictionaryInfo) -> Uri
-
-"""
-
-
-
-class ResourceDictionaryLoadedEventArgs(EventArgs):
-    # no doc
-    ResourceDictionaryInfo = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: ResourceDictionaryInfo(self: ResourceDictionaryLoadedEventArgs) -> ResourceDictionaryInfo
-
-"""
-
-
-
-class ResourceDictionaryUnloadedEventArgs(EventArgs):
-    # no doc
-    ResourceDictionaryInfo = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: ResourceDictionaryInfo(self: ResourceDictionaryUnloadedEventArgs) -> ResourceDictionaryInfo
-
-"""
-
-
 
 class VisualDiagnostics(object):
     # no doc

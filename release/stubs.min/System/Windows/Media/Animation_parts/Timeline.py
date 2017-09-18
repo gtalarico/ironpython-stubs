@@ -4,9 +4,7 @@ class Timeline(Animatable,ISealable,IAnimatable,IResource):
   """
   AllocateClock(self: Timeline) -> Clock
   
-   Creates a System.Windows.Media.Animation.Clock for this 
-    System.Windows.Media.Animation.Timeline.
-  
+   Creates a System.Windows.Media.Animation.Clock for this System.Windows.Media.Animation.Timeline.
    Returns: A clock for this System.Windows.Media.Animation.Timeline.
   """
   pass
@@ -14,19 +12,18 @@ class Timeline(Animatable,ISealable,IAnimatable,IResource):
   """
   Clone(self: Timeline) -> Timeline
   
-   Creates a modifiable clone of this System.Windows.Media.Animation.Timeline,
-    making deep copies of this object's values.
+   Creates a modifiable clone of this System.Windows.Media.Animation.Timeline,making deep copies 
+    of this object's values.
   
-   Returns: A modifiable clone of the current object. The cloned object's 
-    System.Windows.Freezable.IsFrozen property is false even if the source's 
-    System.Windows.Freezable.IsFrozen property is true.
+   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen 
+    property is false even if the source's System.Windows.Freezable.IsFrozen property is true.
   """
   pass
  def CloneCore(self,*args):
   """
   CloneCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a clone (deep copy) of the specified 
-    System.Windows.Freezable using base (non-animated) property values.
+   Makes the instance a clone (deep copy) of the specified System.Windows.Freezable using base 
+    (non-animated) property values.
   
   
    sourceFreezable: The object to clone.
@@ -36,19 +33,18 @@ class Timeline(Animatable,ISealable,IAnimatable,IResource):
   """
   CloneCurrentValue(self: Timeline) -> Timeline
   
-   Creates a modifiable clone of this System.Windows.Media.Animation.Timeline 
-    object,making deep copies of this object's current values.
+   Creates a modifiable clone of this System.Windows.Media.Animation.Timeline object,making deep 
+    copies of this object's current values.
   
-   Returns: A modifiable clone of the current object. The cloned object's 
-    System.Windows.Freezable.IsFrozen property is false even if the source's 
-    System.Windows.Freezable.IsFrozen property is true.
+   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen 
+    property is false even if the source's System.Windows.Freezable.IsFrozen property is true.
   """
   pass
  def CloneCurrentValueCore(self,*args):
   """
   CloneCurrentValueCore(self: Freezable,sourceFreezable: Freezable)
-   Makes the instance a modifiable clone (deep copy) of the specified 
-    System.Windows.Freezable using current property values.
+   Makes the instance a modifiable clone (deep copy) of the specified System.Windows.Freezable 
+    using current property values.
   
   
    sourceFreezable: The System.Windows.Freezable to be cloned.
@@ -61,38 +57,35 @@ class Timeline(Animatable,ISealable,IAnimatable,IResource):
    Creates a new System.Windows.Media.Animation.Clock from this 
     System.Windows.Media.Animation.Timeline and specifies whether the new 
     System.Windows.Media.Animation.Clock is controllable. If this 
-    System.Windows.Media.Animation.Timeline has children,a tree of clocks is 
-    created with this System.Windows.Media.Animation.Timeline as the root.
+    System.Windows.Media.Animation.Timeline has children,a tree of clocks is created with this 
+    System.Windows.Media.Animation.Timeline as the root.
   
   
    hasControllableRoot: true if the root System.Windows.Media.Animation.Clock returned should return a 
     System.Windows.Media.Animation.ClockController from its 
     System.Windows.Media.Animation.Clock.Controller property so that the 
-    System.Windows.Media.Animation.Clock tree can be interactively controlled; 
-    otherwise,false.
+    System.Windows.Media.Animation.Clock tree can be interactively controlled; otherwise,false.
   
    Returns: A new System.Windows.Media.Animation.Clock constructed from this 
-    System.Windows.Media.Animation.Timeline. If this 
-    System.Windows.Media.Animation.Timeline is a 
-    System.Windows.Media.Animation.TimelineGroup that contains child timelines,a 
-    tree of System.Windows.Media.Animation.Clock objects is created with a 
-    controllable System.Windows.Media.Animation.Clock created from this 
-    System.Windows.Media.Animation.Timeline as the root.
+    System.Windows.Media.Animation.Timeline. If this System.Windows.Media.Animation.Timeline is a 
+    System.Windows.Media.Animation.TimelineGroup that contains child timelines,a tree of 
+    System.Windows.Media.Animation.Clock objects is created with a controllable 
+    System.Windows.Media.Animation.Clock created from this System.Windows.Media.Animation.Timeline 
+    as the root.
   
   CreateClock(self: Timeline) -> Clock
   
    Creates a new,controllable System.Windows.Media.Animation.Clock from this 
-    System.Windows.Media.Animation.Timeline. If this 
-    System.Windows.Media.Animation.Timeline has children,a tree of clocks is 
-    created with this System.Windows.Media.Animation.Timeline as the root.
+    System.Windows.Media.Animation.Timeline. If this System.Windows.Media.Animation.Timeline has 
+    children,a tree of clocks is created with this System.Windows.Media.Animation.Timeline as the 
+    root.
   
    Returns: A new,controllable System.Windows.Media.Animation.Clock constructed from this 
-    System.Windows.Media.Animation.Timeline. If this 
-    System.Windows.Media.Animation.Timeline is a 
-    System.Windows.Media.Animation.TimelineGroup that contains child timelines,a 
-    tree of System.Windows.Media.Animation.Clock objects is created with a 
-    controllable System.Windows.Media.Animation.Clock created from this 
-    System.Windows.Media.Animation.Timeline as the root.
+    System.Windows.Media.Animation.Timeline. If this System.Windows.Media.Animation.Timeline is a 
+    System.Windows.Media.Animation.TimelineGroup that contains child timelines,a tree of 
+    System.Windows.Media.Animation.Clock objects is created with a controllable 
+    System.Windows.Media.Animation.Clock created from this System.Windows.Media.Animation.Timeline 
+    as the root.
   """
   pass
  def CreateInstance(self,*args):
@@ -107,8 +100,8 @@ class Timeline(Animatable,ISealable,IAnimatable,IResource):
   """
   CreateInstanceCore(self: Freezable) -> Freezable
   
-   When implemented in a derived class,creates a new instance of the 
-    System.Windows.Freezable derived class.
+   When implemented in a derived class,creates a new instance of the System.Windows.Freezable 
+    derived class.
   
    Returns: The new instance.
   """
@@ -117,24 +110,21 @@ class Timeline(Animatable,ISealable,IAnimatable,IResource):
   """
   FreezeCore(self: Timeline,isChecking: bool) -> bool
   
-   Makes this System.Windows.Media.Animation.Timeline unmodifiable or determines 
-    whether it can be made unmodifiable.
+   Makes this System.Windows.Media.Animation.Timeline unmodifiable or determines whether it can be 
+    made unmodifiable.
   
   
    isChecking: true to check if this instance can be frozen; false to freeze this instance.
-   Returns: If isChecking is true,this method returns true if this instance can be made 
-    read-only,or false if it cannot be made read-only. If isChecking is false,
-    this method returns true if this instance is now read-only,or false if it 
-    cannot be made read-only,with the side effect of having begun to change the 
-    frozen status of this object.
+   Returns: If isChecking is true,this method returns true if this instance can be made read-only,or false 
+    if it cannot be made read-only. If isChecking is false,this method returns true if this 
+    instance is now read-only,or false if it cannot be made read-only,with the side effect of 
+    having begun to change the frozen status of this object.
   """
   pass
  def GetAsFrozenCore(self,*args):
   """
   GetAsFrozenCore(self: Timeline,sourceFreezable: Freezable)
-   Makes this instance a clone of the specified 
-    System.Windows.Media.Animation.Timeline object.
-  
+   Makes this instance a clone of the specified System.Windows.Media.Animation.Timeline object.
   
    sourceFreezable: The System.Windows.Media.Animation.Timeline instance to clone.
   """
@@ -142,9 +132,8 @@ class Timeline(Animatable,ISealable,IAnimatable,IResource):
  def GetCurrentValueAsFrozenCore(self,*args):
   """
   GetCurrentValueAsFrozenCore(self: Timeline,sourceFreezable: Freezable)
-   Makes this instance a frozen clone of the specified 
-    System.Windows.Media.Animation.Timeline. Resource references,data bindings,
-    and animations are not copied,but their current values are.
+   Makes this instance a frozen clone of the specified System.Windows.Media.Animation.Timeline. 
+    Resource references,data bindings,and animations are not copied,but their current values are.
   
   
    sourceFreezable: The System.Windows.Media.Animation.Timeline to copy and freeze.
@@ -155,9 +144,7 @@ class Timeline(Animatable,ISealable,IAnimatable,IResource):
   """
   GetDesiredFrameRate(timeline: Timeline) -> Nullable[int]
   
-   Gets the desired frame rate of the specified 
-    System.Windows.Media.Animation.Timeline.
-  
+   Gets the desired frame rate of the specified System.Windows.Media.Animation.Timeline.
   
    timeline: The timeline from which to retrieve the desired frame rate.
    Returns: The desired frame rate of this timeline. The default value is null.
@@ -167,35 +154,29 @@ class Timeline(Animatable,ISealable,IAnimatable,IResource):
   """
   GetNaturalDuration(self: Timeline,clock: Clock) -> Duration
   
-   Returns the length of a single iteration of this 
-    System.Windows.Media.Animation.Timeline.
-  
+   Returns the length of a single iteration of this System.Windows.Media.Animation.Timeline.
   
    clock: The System.Windows.Media.Animation.Clock that was created for this 
     System.Windows.Media.Animation.Timeline.
   
-   Returns: The length of a single iteration of this 
-    System.Windows.Media.Animation.Timeline,or System.Windows.Duration.Automatic 
-    if the natural duration is unknown.
+   Returns: The length of a single iteration of this System.Windows.Media.Animation.Timeline,or 
+    System.Windows.Duration.Automatic if the natural duration is unknown.
   """
   pass
  def GetNaturalDurationCore(self,*args):
   """
   GetNaturalDurationCore(self: Timeline,clock: Clock) -> Duration
   
-   Returns the length of a single iteration of this 
-    System.Windows.Media.Animation.Timeline. This method provides the 
-    implementation for 
-    System.Windows.Media.Animation.Timeline.GetNaturalDuration(System.Windows.Media.
-    Animation.Clock).
+   Returns the length of a single iteration of this System.Windows.Media.Animation.Timeline. This 
+    method provides the implementation for 
+    System.Windows.Media.Animation.Timeline.GetNaturalDuration(System.Windows.Media.Animation.Clock).
   
   
    clock: The System.Windows.Media.Animation.Clock that was created for this 
     System.Windows.Media.Animation.Timeline.
   
-   Returns: The length of a single iteration of this 
-    System.Windows.Media.Animation.Timeline,or System.Windows.Duration.Automatic 
-    if the natural duration is unknown.
+   Returns: The length of a single iteration of this System.Windows.Media.Animation.Timeline,or 
+    System.Windows.Duration.Automatic if the natural duration is unknown.
   """
   pass
  def OnChanged(self,*args):
@@ -207,8 +188,8 @@ class Timeline(Animatable,ISealable,IAnimatable,IResource):
  def OnFreezablePropertyChanged(self,*args):
   """
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject,property: DependencyProperty)
-   This member supports the Windows Presentation Foundation (WPF) infrastructure 
-    and is not intended to be used directly from your code.
+   This member supports the Windows Presentation Foundation (WPF) infrastructure and is not 
+    intended to be used directly from your code.
   
   
    oldValue: The previous value of the data member.
@@ -227,23 +208,20 @@ class Timeline(Animatable,ISealable,IAnimatable,IResource):
   """
   OnPropertyChanged(self: Freezable,e: DependencyPropertyChangedEventArgs)
    Overrides the System.Windows.DependencyObject implementation of 
-    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
-    rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
-    handlers in response to a changing dependency property of type 
-    System.Windows.Freezable.
+    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventAr
+    gs) to also invoke any System.Windows.Freezable.Changed handlers in response to a changing 
+    dependency property of type System.Windows.Freezable.
   
   
-   e: Event data that contains information about which property changed,and its old 
-    and new values.
+   e: Event data that contains information about which property changed,and its old and new values.
   """
   pass
  def ReadPreamble(self,*args):
   """
   ReadPreamble(self: Freezable)
-   Ensures that the System.Windows.Freezable is being accessed from a valid 
-    thread. Inheritors of System.Windows.Freezable must call this method at the 
-    beginning of any API that reads data members that are not dependency 
-    properties.
+   Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of 
+    System.Windows.Freezable must call this method at the beginning of any API that reads data 
+    members that are not dependency properties.
   """
   pass
  @staticmethod
@@ -254,40 +232,29 @@ class Timeline(Animatable,ISealable,IAnimatable,IResource):
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize 
-    the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize the value for 
+    the provided dependency property.
   
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; 
-    otherwise,false.
-  
-  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
+   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
   """
   pass
  def WritePostscript(self,*args):
   """
   WritePostscript(self: Freezable)
-   Raises the System.Windows.Freezable.Changed event for the 
-    System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
-    method. Classes that derive from System.Windows.Freezable should call this 
-    method at the end of any API that modifies class members that are not stored as 
+   Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes 
+    its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable 
+    should call this method at the end of any API that modifies class members that are not stored as 
     dependency properties.
   """
   pass
  def WritePreamble(self,*args):
   """
   WritePreamble(self: Freezable)
-   Verifies that the System.Windows.Freezable is not frozen and that it is being 
-    accessed from a valid threading context. System.Windows.Freezable inheritors 
-    should call this method at the beginning of any API that writes to data members 
-    that are not dependency properties.
+   Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a 
+    valid threading context. System.Windows.Freezable inheritors should call this method at the 
+    beginning of any API that writes to data members that are not dependency properties.
   """
   pass
  def __init__(self,*args):

@@ -3,8 +3,7 @@ class IObserver:
  def OnCompleted(self):
   """
   OnCompleted(self: IObserver[T])
-   Notifies the observer that the provider has finished sending push-based 
-    notifications.
+   Notifies the observer that the provider has finished sending push-based notifications.
   """
   pass
  def OnError(self,error):

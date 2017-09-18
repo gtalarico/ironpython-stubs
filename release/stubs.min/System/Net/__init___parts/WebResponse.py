@@ -12,24 +12,21 @@ class WebResponse(MarshalByRefObject,ISerializable,IDisposable):
  def GetObjectData(self,*args):
   """
   GetObjectData(self: WebResponse,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo with the data that 
-    is needed to serialize the target object.
+   Populates a System.Runtime.Serialization.SerializationInfo with the data that is needed to 
+    serialize the target object.
   
   
    serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
-   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination 
-    for this serialization.
+   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this 
+    serialization.
   """
   pass
  def GetResponseStream(self):
   """
   GetResponseStream(self: WebResponse) -> Stream
   
-   When overridden in a descendant class,returns the data stream from the 
-    Internet resource.
-  
-   Returns: An instance of the System.IO.Stream class for reading data from the Internet 
-    resource.
+   When overridden in a descendant class,returns the data stream from the Internet resource.
+   Returns: An instance of the System.IO.Stream class for reading data from the Internet resource.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -38,11 +35,11 @@ class WebResponse(MarshalByRefObject,ISerializable,IDisposable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -52,10 +49,17 @@ class WebResponse(MarshalByRefObject,ISerializable,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

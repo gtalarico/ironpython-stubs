@@ -9,8 +9,8 @@ class DnsPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWa
   Copy(self: DnsPermission) -> IPermission
   
    Creates an identical copy of the current permission instance.
-   Returns: A new instance of the System.Net.DnsPermission class that is an identical copy 
-    of the current instance.
+   Returns: A new instance of the System.Net.DnsPermission class that is an identical copy of the current 
+    instance.
   """
   pass
  def FromXml(self,securityElement):
@@ -25,16 +25,15 @@ class DnsPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWa
   """
   Intersect(self: DnsPermission,target: IPermission) -> IPermission
   
-   Creates a permission instance that is the intersection of the current 
-    permission instance and the specified permission instance.
+   Creates a permission instance that is the intersection of the current permission instance and 
+    the specified permission instance.
   
   
    target: The System.Net.DnsPermission instance to intersect with the current instance.
-   Returns: A System.Net.DnsPermission instance that represents the intersection of the 
-    current System.Net.DnsPermission instance with the specified 
-    System.Net.DnsPermission instance,or null if the intersection is empty. If 
-    both the current instance and target are unrestricted,this method returns a 
-    new System.Net.DnsPermission instance that is unrestricted; otherwise,it 
+   Returns: A System.Net.DnsPermission instance that represents the intersection of the current 
+    System.Net.DnsPermission instance with the specified System.Net.DnsPermission instance,or null 
+    if the intersection is empty. If both the current instance and target are unrestricted,this 
+    method returns a new System.Net.DnsPermission instance that is unrestricted; otherwise,it 
     returns null.
   """
   pass
@@ -42,15 +41,13 @@ class DnsPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWa
   """
   IsSubsetOf(self: DnsPermission,target: IPermission) -> bool
   
-   Determines whether the current permission instance is a subset of the specified 
-    permission instance.
+   Determines whether the current permission instance is a subset of the specified permission 
+    instance.
   
   
-   target: The second System.Net.DnsPermission instance to be tested for the subset 
-    relationship.
-  
-   Returns: false if the current instance is unrestricted and target is either null or 
-    unrestricted; otherwise,true.
+   target: The second System.Net.DnsPermission instance to be tested for the subset relationship.
+   Returns: false if the current instance is unrestricted and target is either null or unrestricted; 
+    otherwise,true.
   """
   pass
  def IsUnrestricted(self):
@@ -66,28 +63,25 @@ class DnsPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWa
   """
   ToXml(self: DnsPermission) -> SecurityElement
   
-   Creates an XML encoding of a System.Net.DnsPermission instance and its current 
-    state.
-  
-   Returns: A System.Security.SecurityElement instance that contains an XML-encoded 
-    representation of the security object,including state information.
+   Creates an XML encoding of a System.Net.DnsPermission instance and its current state.
+   Returns: A System.Security.SecurityElement instance that contains an XML-encoded representation of the 
+    security object,including state information.
   """
   pass
  def Union(self,target):
   """
   Union(self: DnsPermission,target: IPermission) -> IPermission
   
-   Creates a permission instance that is the union of the current permission 
-    instance and the specified permission instance.
+   Creates a permission instance that is the union of the current permission instance and the 
+    specified permission instance.
   
   
    target: The System.Net.DnsPermission instance to combine with the current instance.
    Returns: A System.Net.DnsPermission instance that represents the union of the current 
-    System.Net.DnsPermission instance with the specified System.Net.DnsPermission 
-    instance. If target is null,this method returns a copy of the current 
-    instance. If the current instance or target is unrestricted,this method 
-    returns a System.Net.DnsPermission instance that is unrestricted; otherwise,it 
-    returns a System.Net.DnsPermission instance that is restricted.
+    System.Net.DnsPermission instance with the specified System.Net.DnsPermission instance. If 
+    target is null,this method returns a copy of the current instance. If the current instance or 
+    target is unrestricted,this method returns a System.Net.DnsPermission instance that is 
+    unrestricted; otherwise,it returns a System.Net.DnsPermission instance that is restricted.
   """
   pass
  def __init__(self,*args):

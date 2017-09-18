@@ -3,9 +3,7 @@ class IWindowTarget:
  def OnHandleChange(self,newHandle):
   """
   OnHandleChange(self: IWindowTarget,newHandle: IntPtr)
-   Sets the handle of the System.Windows.Forms.IWindowTarget to the specified 
-    handle.
-  
+   Sets the handle of the System.Windows.Forms.IWindowTarget to the specified handle.
   
    newHandle: The new handle of the System.Windows.Forms.IWindowTarget.
   """

@@ -9,15 +9,15 @@ class FileSystemInfo(MarshalByRefObject,ISerializable):
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: FileSystemInfo,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo object with the file 
-    name and additional exception information.
+   Sets the System.Runtime.Serialization.SerializationInfo object with the file name and additional 
+    exception information.
   
   
-   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized 
-    object data about the exception being thrown.
+   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about 
+    the exception being thrown.
   
-   context: The System.Runtime.Serialization.StreamingContext that contains contextual 
-    information about the source or destination.
+   context: The System.Runtime.Serialization.StreamingContext that contains contextual information about the 
+    source or destination.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -26,11 +26,11 @@ class FileSystemInfo(MarshalByRefObject,ISerializable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object

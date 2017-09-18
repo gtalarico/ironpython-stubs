@@ -4,8 +4,8 @@ class Buffer(object):
  def BlockCopy(src,srcOffset,dst,dstOffset,count):
   """
   BlockCopy(src: Array,srcOffset: int,dst: Array,dstOffset: int,count: int)
-   Copies a specified number of bytes from a source array starting at a particular 
-    offset to a destination array starting at a particular offset.
+   Copies a specified number of bytes from a source array starting at a particular offset to a 
+    destination array starting at a particular offset.
   
   
    src: The source buffer.
@@ -46,9 +46,7 @@ class Buffer(object):
  def SetByte(array,index,value):
   """
   SetByte(array: Array,index: int,value: Byte)
-   Assigns a specified value to a byte at a particular location in a specified 
-    array.
-  
+   Assigns a specified value to a byte at a particular location in a specified array.
   
    array: An array.
    index: A location in the array.

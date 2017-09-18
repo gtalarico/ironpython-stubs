@@ -8,8 +8,8 @@ class FileInfo(FileSystemInfo,ISerializable):
   """
   AppendText(self: FileInfo) -> StreamWriter
   
-   Creates a System.IO.StreamWriter that appends text to the file represented by 
-    this instance of the System.IO.FileInfo.
+   Creates a System.IO.StreamWriter that appends text to the file represented by this instance of 
+    the System.IO.FileInfo.
   
    Returns: A new StreamWriter.
   """
@@ -18,20 +18,16 @@ class FileInfo(FileSystemInfo,ISerializable):
   """
   CopyTo(self: FileInfo,destFileName: str,overwrite: bool) -> FileInfo
   
-   Copies an existing file to a new file,allowing the overwriting of an existing 
-    file.
-  
+   Copies an existing file to a new file,allowing the overwriting of an existing file.
   
    destFileName: The name of the new file to copy to.
    overwrite: true to allow an existing file to be overwritten; otherwise,false.
-   Returns: A new file,or an overwrite of an existing file if overwrite is true. If the 
-    file exists and overwrite is false,an System.IO.IOException is thrown.
+   Returns: A new file,or an overwrite of an existing file if overwrite is true. If the file exists and 
+    overwrite is false,an System.IO.IOException is thrown.
   
   CopyTo(self: FileInfo,destFileName: str) -> FileInfo
   
-   Copies an existing file to a new file,disallowing the overwriting of an 
-    existing file.
-  
+   Copies an existing file to a new file,disallowing the overwriting of an existing file.
   
    destFileName: The name of the new file to copy to.
    Returns: A new file with a fully qualified path.
@@ -56,8 +52,8 @@ class FileInfo(FileSystemInfo,ISerializable):
  def Decrypt(self):
   """
   Decrypt(self: FileInfo)
-   Decrypts a file that was encrypted by the current account using the 
-    System.IO.FileInfo.Encrypt method.
+   Decrypts a file that was encrypted by the current account using the System.IO.FileInfo.Encrypt 
+    method.
   """
   pass
  def Delete(self):
@@ -69,33 +65,31 @@ class FileInfo(FileSystemInfo,ISerializable):
  def Encrypt(self):
   """
   Encrypt(self: FileInfo)
-   Encrypts a file so that only the account used to encrypt the file can decrypt 
-    it.
+   Encrypts a file so that only the account used to encrypt the file can decrypt it.
   """
   pass
  def GetAccessControl(self,includeSections=None):
   """
   GetAccessControl(self: FileInfo,includeSections: AccessControlSections) -> FileSecurity
   
-   Gets a System.Security.AccessControl.FileSecurity object that encapsulates the 
-    specified type of access control list (ACL) entries for the file described by 
-    the current System.IO.FileInfo object.
+   Gets a System.Security.AccessControl.FileSecurity object that encapsulates the specified type of 
+    access control list (ACL) entries for the file described by the current System.IO.FileInfo 
+    object.
   
   
-   includeSections: One of the System.Security.AccessControl.AccessControlSections values that 
-    specifies which group of access control entries to retrieve.
+   includeSections: One of the System.Security.AccessControl.AccessControlSections values that specifies which group 
+    of access control entries to retrieve.
   
-   Returns: A System.Security.AccessControl.FileSecurity object that encapsulates the 
-    access control rules for the current file.
+   Returns: A System.Security.AccessControl.FileSecurity object that encapsulates the access control rules 
+    for the current file.
   
   GetAccessControl(self: FileInfo) -> FileSecurity
   
-   Gets a System.Security.AccessControl.FileSecurity object that encapsulates the 
-    access control list (ACL) entries for the file described by the current 
-    System.IO.FileInfo object.
+   Gets a System.Security.AccessControl.FileSecurity object that encapsulates the access control 
+    list (ACL) entries for the file described by the current System.IO.FileInfo object.
   
-   Returns: A System.Security.AccessControl.FileSecurity object that encapsulates the 
-    access control rules for the current file.
+   Returns: A System.Security.AccessControl.FileSecurity object that encapsulates the access control rules 
+    for the current file.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -104,11 +98,11 @@ class FileInfo(FileSystemInfo,ISerializable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -120,9 +114,7 @@ class FileInfo(FileSystemInfo,ISerializable):
  def MoveTo(self,destFileName):
   """
   MoveTo(self: FileInfo,destFileName: str)
-   Moves a specified file to a new location,providing the option to specify a new 
-    file name.
-  
+   Moves a specified file to a new location,providing the option to specify a new file name.
   
    destFileName: The path to move the file to,which can specify a different file name.
   """
@@ -131,41 +123,37 @@ class FileInfo(FileSystemInfo,ISerializable):
   """
   Open(self: FileInfo,mode: FileMode,access: FileAccess,share: FileShare) -> FileStream
   
-   Opens a file in the specified mode with read,write,or read/write access and 
-    the specified sharing option.
+   Opens a file in the specified mode with read,write,or read/write access and the specified 
+    sharing option.
   
   
-   mode: A System.IO.FileMode constant specifying the mode (for example,Open or Append) 
-    in which to open the file.
+   mode: A System.IO.FileMode constant specifying the mode (for example,Open or Append) in which to open 
+    the file.
   
-   access: A System.IO.FileAccess constant specifying whether to open the file with Read,
-    Write,or ReadWrite file access.
+   access: A System.IO.FileAccess constant specifying whether to open the file with Read,Write,or 
+    ReadWrite file access.
   
-   share: A System.IO.FileShare constant specifying the type of access other FileStream 
-    objects have to this file.
+   share: A System.IO.FileShare constant specifying the type of access other FileStream objects have to 
+    this file.
   
-   Returns: A System.IO.FileStream object opened with the specified mode,access,and 
-    sharing options.
-  
+   Returns: A System.IO.FileStream object opened with the specified mode,access,and sharing options.
   Open(self: FileInfo,mode: FileMode,access: FileAccess) -> FileStream
   
    Opens a file in the specified mode with read,write,or read/write access.
   
-   mode: A System.IO.FileMode constant specifying the mode (for example,Open or Append) 
-    in which to open the file.
+   mode: A System.IO.FileMode constant specifying the mode (for example,Open or Append) in which to open 
+    the file.
   
-   access: A System.IO.FileAccess constant specifying whether to open the file with Read,
-    Write,or ReadWrite file access.
+   access: A System.IO.FileAccess constant specifying whether to open the file with Read,Write,or 
+    ReadWrite file access.
   
-   Returns: A System.IO.FileStream object opened in the specified mode and access,and 
-    unshared.
-  
+   Returns: A System.IO.FileStream object opened in the specified mode and access,and unshared.
   Open(self: FileInfo,mode: FileMode) -> FileStream
   
    Opens a file in the specified mode.
   
-   mode: A System.IO.FileMode constant specifying the mode (for example,Open or Append) 
-    in which to open the file.
+   mode: A System.IO.FileMode constant specifying the mode (for example,Open or Append) in which to open 
+    the file.
   
    Returns: A file opened in the specified mode,with read/write access and unshared.
   """
@@ -182,9 +170,7 @@ class FileInfo(FileSystemInfo,ISerializable):
   """
   OpenText(self: FileInfo) -> StreamReader
   
-   Creates a System.IO.StreamReader with UTF8 encoding that reads from an existing 
-    text file.
-  
+   Creates a System.IO.StreamReader with UTF8 encoding that reads from an existing text file.
    Returns: A new StreamReader with UTF8 encoding.
   """
   pass
@@ -200,46 +186,46 @@ class FileInfo(FileSystemInfo,ISerializable):
   """
   Replace(self: FileInfo,destinationFileName: str,destinationBackupFileName: str,ignoreMetadataErrors: bool) -> FileInfo
   
-   Replaces the contents of a specified file with the file described by the 
-    current System.IO.FileInfo object,deleting the original file,and creating a 
-    backup of the replaced file.  Also specifies whether to ignore merge errors.
+   Replaces the contents of a specified file with the file described by the current 
+    System.IO.FileInfo object,deleting the original file,and creating a backup of the replaced 
+    file.  Also specifies whether to ignore merge errors.
   
   
    destinationFileName: The name of a file to replace with the current file.
-   destinationBackupFileName: The name of a file with which to create a backup of the file described by the 
+   destinationBackupFileName: The name of a file with which to create a backup of the file described by the destFileName 
+    parameter.
+  
+   ignoreMetadataErrors: true to ignore merge errors (such as attributes and ACLs) from the replaced file to the 
+    replacement file; otherwise false.
+  
+   Returns: A System.IO.FileInfo object that encapsulates information about the file described by the 
     destFileName parameter.
-  
-   ignoreMetadataErrors: true to ignore merge errors (such as attributes and ACLs) from the replaced 
-    file to the replacement file; otherwise false.
-  
-   Returns: A System.IO.FileInfo object that encapsulates information about the file 
-    described by the destFileName parameter.
   
   Replace(self: FileInfo,destinationFileName: str,destinationBackupFileName: str) -> FileInfo
   
-   Replaces the contents of a specified file with the file described by the 
-    current System.IO.FileInfo object,deleting the original file,and creating a 
-    backup of the replaced file.
+   Replaces the contents of a specified file with the file described by the current 
+    System.IO.FileInfo object,deleting the original file,and creating a backup of the replaced 
+    file.
   
   
    destinationFileName: The name of a file to replace with the current file.
-   destinationBackupFileName: The name of a file with which to create a backup of the file described by the 
-    destFileName parameter.
+   destinationBackupFileName: The name of a file with which to create a backup of the file described by the destFileName 
+    parameter.
   
-   Returns: A System.IO.FileInfo object that encapsulates information about the file 
-    described by the destFileName parameter.
+   Returns: A System.IO.FileInfo object that encapsulates information about the file described by the 
+    destFileName parameter.
   """
   pass
  def SetAccessControl(self,fileSecurity):
   """
   SetAccessControl(self: FileInfo,fileSecurity: FileSecurity)
    Applies access control list (ACL) entries described by a 
-    System.Security.AccessControl.FileSecurity object to the file described by the 
-    current System.IO.FileInfo object.
+    System.Security.AccessControl.FileSecurity object to the file described by the current 
+    System.IO.FileInfo object.
   
   
-   fileSecurity: A System.Security.AccessControl.FileSecurity object that describes an access 
-    control list (ACL) entry to apply to the current file.
+   fileSecurity: A System.Security.AccessControl.FileSecurity object that describes an access control list (ACL) 
+    entry to apply to the current file.
   """
   pass
  def ToString(self):

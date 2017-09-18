@@ -7,13 +7,12 @@ class BaseCollection(MarshalByRefObject,ICollection,IEnumerable):
  def CopyTo(self,ar,index):
   """
   CopyTo(self: BaseCollection,ar: Array,index: int)
-   Copies all the elements of the current one-dimensional System.Array to the 
-    specified one-dimensional System.Array starting at the specified destination 
-    System.Array index.
+   Copies all the elements of the current one-dimensional System.Array to the specified 
+    one-dimensional System.Array starting at the specified destination System.Array index.
   
   
-   ar: The one-dimensional System.Array that is the destination of the elements copied 
-    from the current Array.
+   ar: The one-dimensional System.Array that is the destination of the elements copied from the current 
+    Array.
   
    index: The zero-based relative index in ar at which copying begins.
   """
@@ -32,11 +31,11 @@ class BaseCollection(MarshalByRefObject,ICollection,IEnumerable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object

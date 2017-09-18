@@ -7,12 +7,12 @@ class ObjectAce(QualifiedAce):
  def GetBinaryForm(self,binaryForm,offset):
   """
   GetBinaryForm(self: ObjectAce,binaryForm: Array[Byte],offset: int)
-   Marshals the contents of the System.Security.AccessControl.ObjectAce object 
-    into the specified byte array beginning at the specified offset.
+   Marshals the contents of the System.Security.AccessControl.ObjectAce object into the specified 
+    byte array beginning at the specified offset.
   
   
-   binaryForm: The byte array into which the contents of the 
-    System.Security.AccessControl.ObjectAce is marshaled.
+   binaryForm: The byte array into which the contents of the System.Security.AccessControl.ObjectAce is 
+    marshaled.
   
    offset: The offset at which to start marshaling.
   """
@@ -22,13 +22,13 @@ class ObjectAce(QualifiedAce):
   """
   MaxOpaqueLength(isCallback: bool) -> int
   
-   Returns the maximum allowed length,in bytes,of an opaque data BLOB for 
-    callback Access Control Entries (ACEs).
+   Returns the maximum allowed length,in bytes,of an opaque data BLOB for callback Access Control 
+    Entries (ACEs).
   
   
    isCallback: True if the System.Security.AccessControl.ObjectAce is a callback ACE type.
-   Returns: The maximum allowed length,in bytes,of an opaque data BLOB for callback 
-    Access Control Entries (ACEs).
+   Returns: The maximum allowed length,in bytes,of an opaque data BLOB for callback Access Control Entries 
+    (ACEs).
   """
   pass
  @staticmethod

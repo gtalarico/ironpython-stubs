@@ -9,11 +9,11 @@ class DataGridViewCellPaintingEventArgs(HandledEventArgs):
   Paint(self: DataGridViewCellPaintingEventArgs,clipBounds: Rectangle,paintParts: DataGridViewPaintParts)
    Paints the specified parts of the cell for the area in the specified bounds.
   
-   clipBounds: A System.Drawing.Rectangle that specifies the area of the 
-    System.Windows.Forms.DataGridView to be painted.
+   clipBounds: A System.Drawing.Rectangle that specifies the area of the System.Windows.Forms.DataGridView to 
+    be painted.
   
-   paintParts: A bitwise combination of System.Windows.Forms.DataGridViewPaintParts values 
-    specifying the parts to paint.
+   paintParts: A bitwise combination of System.Windows.Forms.DataGridViewPaintParts values specifying the parts 
+    to paint.
   """
   pass
  def PaintBackground(self,clipBounds,cellsPaintSelectionBackground):
@@ -21,15 +21,14 @@ class DataGridViewCellPaintingEventArgs(HandledEventArgs):
   PaintBackground(self: DataGridViewCellPaintingEventArgs,clipBounds: Rectangle,cellsPaintSelectionBackground: bool)
    Paints the cell background for the area in the specified bounds.
   
-   clipBounds: A System.Drawing.Rectangle that specifies the area of the 
-    System.Windows.Forms.DataGridView to be painted.
+   clipBounds: A System.Drawing.Rectangle that specifies the area of the System.Windows.Forms.DataGridView to 
+    be painted.
   
    cellsPaintSelectionBackground: true to paint the background of the specified bounds with the color of the 
     System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor property of the 
-    System.Windows.Forms.DataGridViewCell.InheritedStyle; false to paint the 
-    background of the specified bounds with the color of the 
-    System.Windows.Forms.DataGridViewCellStyle.BackColor property of the 
-    System.Windows.Forms.DataGridViewCell.InheritedStyle.
+    System.Windows.Forms.DataGridViewCell.InheritedStyle; false to paint the background of the 
+    specified bounds with the color of the System.Windows.Forms.DataGridViewCellStyle.BackColor 
+    property of the System.Windows.Forms.DataGridViewCell.InheritedStyle.
   """
   pass
  def PaintContent(self,clipBounds):
@@ -37,8 +36,8 @@ class DataGridViewCellPaintingEventArgs(HandledEventArgs):
   PaintContent(self: DataGridViewCellPaintingEventArgs,clipBounds: Rectangle)
    Paints the cell content for the area in the specified bounds.
   
-   clipBounds: A System.Drawing.Rectangle that specifies the area of the 
-    System.Windows.Forms.DataGridView to be painted.
+   clipBounds: A System.Drawing.Rectangle that specifies the area of the System.Windows.Forms.DataGridView to 
+    be painted.
   """
   pass
  @staticmethod

@@ -8,15 +8,13 @@ class DataGridViewCheckBoxColumn(DataGridViewColumn,ICloneable,IDisposable,IComp
  def Dispose(self):
   """
   Dispose(self: DataGridViewColumn,disposing: bool)
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def OnDataGridViewChanged(self,*args):
   """
   OnDataGridViewChanged(self: DataGridViewBand)
-   Called when the band is associated with a different 
-    System.Windows.Forms.DataGridView.
+   Called when the band is associated with a different System.Windows.Forms.DataGridView.
   """
   pass
  def RaiseCellClick(self,*args):
@@ -56,8 +54,7 @@ class DataGridViewCheckBoxColumn(DataGridViewColumn,ICloneable,IDisposable,IComp
   RaiseDataError(self: DataGridViewElement,e: DataGridViewDataErrorEventArgs)
    Raises the System.Windows.Forms.DataGridView.DataError event.
   
-   e: A System.Windows.Forms.DataGridViewDataErrorEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.DataGridViewDataErrorEventArgs that contains the event data.
   """
   pass
  def RaiseMouseWheel(self,*args):
@@ -75,10 +72,17 @@ class DataGridViewCheckBoxColumn(DataGridViewColumn,ICloneable,IDisposable,IComp
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

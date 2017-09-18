@@ -10,9 +10,9 @@ class DiscretionaryAcl(CommonAcl,ICollection,IEnumerable):
   """
   AddAccess(self: DiscretionaryAcl,accessType: AccessControlType,sid: SecurityIdentifier,accessMask: int,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,objectFlags: ObjectAceFlags,objectType: Guid,inheritedObjectType: Guid)
    Adds an Access Control Entry (ACE) with the specified settings to the current 
-    System.Security.AccessControl.DiscretionaryAcl object. Use this method for 
-    directory object Access Control Lists (ACLs) when specifying the object type or 
-    the inherited object type for the new ACE.
+    System.Security.AccessControl.DiscretionaryAcl object. Use this method for directory object 
+    Access Control Lists (ACLs) when specifying the object type or the inherited object type for the 
+    new ACE.
   
   
    accessType: The type of access control (allow or deny) to add.
@@ -20,9 +20,7 @@ class DiscretionaryAcl(CommonAcl,ICollection,IEnumerable):
    accessMask: The access rule for the new ACE.
    inheritanceFlags: Flags that specify the inheritance properties of the new ACE.
    propagationFlags: Flags that specify the inheritance propagation properties for the new ACE.
-   objectFlags: Flags that specify if the objectType and inheritedObjectType parameters contain 
-    non-null values.
-  
+   objectFlags: Flags that specify if the objectType and inheritedObjectType parameters contain non-null values.
    objectType: The identity of the class of objects to which the new ACE applies.
    inheritedObjectType: The identity of the class of child objects which can inherit the new ACE.
   AddAccess(self: DiscretionaryAcl,accessType: AccessControlType,sid: SecurityIdentifier,rule: ObjectAccessRule)AddAccess(self: DiscretionaryAcl,accessType: AccessControlType,sid: SecurityIdentifier,accessMask: int,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags)
@@ -42,31 +40,20 @@ class DiscretionaryAcl(CommonAcl,ICollection,IEnumerable):
   RemoveAccess(self: DiscretionaryAcl,accessType: AccessControlType,sid: SecurityIdentifier,accessMask: int,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,objectFlags: ObjectAceFlags,objectType: Guid,inheritedObjectType: Guid) -> bool
   
    Removes the specified access control rule from the current 
-    System.Security.AccessControl.DiscretionaryAcl object. Use this method for 
-    directory object Access Control Lists (ACLs) when specifying the object type or 
-    the inherited object type.
+    System.Security.AccessControl.DiscretionaryAcl object. Use this method for directory object 
+    Access Control Lists (ACLs) when specifying the object type or the inherited object type.
   
   
    accessType: The type of access control (allow or deny) to remove.
-   sid: The System.Security.Principal.SecurityIdentifier for which to remove an access 
-    control rule.
-  
+   sid: The System.Security.Principal.SecurityIdentifier for which to remove an access control rule.
    accessMask: The access mask for the access control rule to be removed.
-   inheritanceFlags: Flags that specify the inheritance properties of the access control rule to be 
+   inheritanceFlags: Flags that specify the inheritance properties of the access control rule to be removed.
+   propagationFlags: Flags that specify the inheritance propagation properties for the access control rule to be 
     removed.
   
-   propagationFlags: Flags that specify the inheritance propagation properties for the access 
-    control rule to be removed.
-  
-   objectFlags: Flags that specify if the objectType and inheritedObjectType parameters contain 
-    non-null values.
-  
-   objectType: The identity of the class of objects to which the removed access control rule 
-    applies.
-  
-   inheritedObjectType: The identity of the class of child objects which can inherit the removed access 
-    control rule.
-  
+   objectFlags: Flags that specify if the objectType and inheritedObjectType parameters contain non-null values.
+   objectType: The identity of the class of objects to which the removed access control rule applies.
+   inheritedObjectType: The identity of the class of child objects which can inherit the removed access control rule.
    Returns: true if this method successfully removes the specified access; otherwise,false.
   RemoveAccess(self: DiscretionaryAcl,accessType: AccessControlType,sid: SecurityIdentifier,rule: ObjectAccessRule) -> bool
   RemoveAccess(self: DiscretionaryAcl,accessType: AccessControlType,sid: SecurityIdentifier,accessMask: int,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags) -> bool
@@ -76,14 +63,10 @@ class DiscretionaryAcl(CommonAcl,ICollection,IEnumerable):
   
   
    accessType: The type of access control (allow or deny) to remove.
-   sid: The System.Security.Principal.SecurityIdentifier for which to remove an access 
-    control rule.
-  
+   sid: The System.Security.Principal.SecurityIdentifier for which to remove an access control rule.
    accessMask: The access mask for the rule to be removed.
    inheritanceFlags: Flags that specify the inheritance properties of the rule to be removed.
-   propagationFlags: Flags that specify the inheritance propagation properties for the rule to be 
-    removed.
-  
+   propagationFlags: Flags that specify the inheritance propagation properties for the rule to be removed.
    Returns: true if this method successfully removes the specified access; otherwise,false.
   """
   pass
@@ -91,21 +74,17 @@ class DiscretionaryAcl(CommonAcl,ICollection,IEnumerable):
   """
   RemoveAccessSpecific(self: DiscretionaryAcl,accessType: AccessControlType,sid: SecurityIdentifier,accessMask: int,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,objectFlags: ObjectAceFlags,objectType: Guid,inheritedObjectType: Guid)
    Removes the specified Access Control Entry (ACE) from the current 
-    System.Security.AccessControl.DiscretionaryAcl object. Use this method for 
-    directory object Access Control Lists (ACLs) when specifying the object type or 
-    the inherited object type for the ACE to be removed.
+    System.Security.AccessControl.DiscretionaryAcl object. Use this method for directory object 
+    Access Control Lists (ACLs) when specifying the object type or the inherited object type for the 
+    ACE to be removed.
   
   
    accessType: The type of access control (allow or deny) to remove.
    sid: The System.Security.Principal.SecurityIdentifier for which to remove an ACE.
    accessMask: The access mask for the ACE to be removed.
    inheritanceFlags: Flags that specify the inheritance properties of the ACE to be removed.
-   propagationFlags: Flags that specify the inheritance propagation properties for the ACE to be 
-    removed.
-  
-   objectFlags: Flags that specify if the objectType and inheritedObjectType parameters contain 
-    non-null values.
-  
+   propagationFlags: Flags that specify the inheritance propagation properties for the ACE to be removed.
+   objectFlags: Flags that specify if the objectType and inheritedObjectType parameters contain non-null values.
    objectType: The identity of the class of objects to which the removed ACE applies.
    inheritedObjectType: The identity of the class of child objects which can inherit the removed ACE.
   RemoveAccessSpecific(self: DiscretionaryAcl,accessType: AccessControlType,sid: SecurityIdentifier,rule: ObjectAccessRule)RemoveAccessSpecific(self: DiscretionaryAcl,accessType: AccessControlType,sid: SecurityIdentifier,accessMask: int,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags)
@@ -117,15 +96,14 @@ class DiscretionaryAcl(CommonAcl,ICollection,IEnumerable):
    sid: The System.Security.Principal.SecurityIdentifier for which to remove an ACE.
    accessMask: The access mask for the ACE to be removed.
    inheritanceFlags: Flags that specify the inheritance properties of the ACE to be removed.
-   propagationFlags: Flags that specify the inheritance propagation properties for the ACE to be 
-    removed.
+   propagationFlags: Flags that specify the inheritance propagation properties for the ACE to be removed.
   """
   pass
  def SetAccess(self,accessType,sid,*__args):
   """
   SetAccess(self: DiscretionaryAcl,accessType: AccessControlType,sid: SecurityIdentifier,accessMask: int,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,objectFlags: ObjectAceFlags,objectType: Guid,inheritedObjectType: Guid)
-   Sets the specified access control for the specified 
-    System.Security.Principal.SecurityIdentifier object.
+   Sets the specified access control for the specified System.Security.Principal.SecurityIdentifier 
+    object.
   
   
    accessType: The type of access control (allow or deny) to set.
@@ -133,14 +111,12 @@ class DiscretionaryAcl(CommonAcl,ICollection,IEnumerable):
    accessMask: The access rule for the new ACE.
    inheritanceFlags: Flags that specify the inheritance properties of the new ACE.
    propagationFlags: Flags that specify the inheritance propagation properties for the new ACE.
-   objectFlags: Flags that specify if the objectType and inheritedObjectType parameters contain 
-    non-null values.
-  
+   objectFlags: Flags that specify if the objectType and inheritedObjectType parameters contain non-null values.
    objectType: The identity of the class of objects to which the new ACE applies.
    inheritedObjectType: The identity of the class of child objects which can inherit the new ACE.
   SetAccess(self: DiscretionaryAcl,accessType: AccessControlType,sid: SecurityIdentifier,rule: ObjectAccessRule)SetAccess(self: DiscretionaryAcl,accessType: AccessControlType,sid: SecurityIdentifier,accessMask: int,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags)
-   Sets the specified access control for the specified 
-    System.Security.Principal.SecurityIdentifier object.
+   Sets the specified access control for the specified System.Security.Principal.SecurityIdentifier 
+    object.
   
   
    accessType: The type of access control (allow or deny) to set.

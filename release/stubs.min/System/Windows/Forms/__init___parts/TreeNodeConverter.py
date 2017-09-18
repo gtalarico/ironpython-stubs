@@ -8,8 +8,8 @@ class TreeNodeConverter(TypeConverter):
   """
   CanConvertTo(self: TreeNodeConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Gets a value indicating whether this converter can convert an object to the 
-    given destination type using the context.
+   Gets a value indicating whether this converter can convert an object to the given destination 
+    type using the context.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -22,9 +22,7 @@ class TreeNodeConverter(TypeConverter):
   ConvertTo(self: TreeNodeConverter,context: ITypeDescriptorContext,culture: CultureInfo,value: object,destinationType: Type) -> object
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   culture: A System.Globalization.CultureInfo. If null is passed,the current culture is 
-    assumed.
-  
+   culture: A System.Globalization.CultureInfo. If null is passed,the current culture is assumed.
    value: The System.Object to convert.
    destinationType: The System.Type to convert the value parameter to.
    Returns: An System.Object that represents the converted value.

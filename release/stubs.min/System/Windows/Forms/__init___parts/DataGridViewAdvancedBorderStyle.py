@@ -13,13 +13,13 @@ class DataGridViewAdvancedBorderStyle(object,ICloneable):
   
   
    other: An System.Object to be compared.
-   Returns: true if other is a System.Windows.Forms.DataGridViewAdvancedBorderStyle and the 
-    values for the System.Windows.Forms.DataGridViewAdvancedBorderStyle.Top,
+   Returns: true if other is a System.Windows.Forms.DataGridViewAdvancedBorderStyle and the values for the 
+    System.Windows.Forms.DataGridViewAdvancedBorderStyle.Top,
     System.Windows.Forms.DataGridViewAdvancedBorderStyle.Bottom,
     System.Windows.Forms.DataGridViewAdvancedBorderStyle.Left,and 
-    System.Windows.Forms.DataGridViewAdvancedBorderStyle.Right properties are equal 
-    to their counterpart in the current 
-    System.Windows.Forms.DataGridViewAdvancedBorderStyle; otherwise,false.
+    System.Windows.Forms.DataGridViewAdvancedBorderStyle.Right properties are equal to their 
+    counterpart in the current System.Windows.Forms.DataGridViewAdvancedBorderStyle; otherwise,
+    false.
   """
   pass
  def GetHashCode(self):
@@ -29,11 +29,8 @@ class DataGridViewAdvancedBorderStyle(object,ICloneable):
   """
   ToString(self: DataGridViewAdvancedBorderStyle) -> str
   
-   Returns a string that represents the 
-    System.Windows.Forms.DataGridViewAdvancedBorderStyle.
-  
-   Returns: A string that represents the 
-    System.Windows.Forms.DataGridViewAdvancedBorderStyle.
+   Returns a string that represents the System.Windows.Forms.DataGridViewAdvancedBorderStyle.
+   Returns: A string that represents the System.Windows.Forms.DataGridViewAdvancedBorderStyle.
   """
   pass
  def __eq__(self,*args):

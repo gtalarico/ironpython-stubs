@@ -8,23 +8,20 @@ class RunInstallerAttribute(Attribute,_Attribute):
   """
   Equals(self: RunInstallerAttribute,obj: object) -> bool
   
-   Determines whether the value of the specified 
-    System.ComponentModel.RunInstallerAttribute is equivalent to the current 
-    System.ComponentModel.RunInstallerAttribute.
+   Determines whether the value of the specified System.ComponentModel.RunInstallerAttribute is 
+    equivalent to the current System.ComponentModel.RunInstallerAttribute.
   
   
    obj: The object to compare.
-   Returns: true if the specified System.ComponentModel.RunInstallerAttribute is equal to 
-    the current System.ComponentModel.RunInstallerAttribute; otherwise,false.
+   Returns: true if the specified System.ComponentModel.RunInstallerAttribute is equal to the current 
+    System.ComponentModel.RunInstallerAttribute; otherwise,false.
   """
   pass
  def GetHashCode(self):
   """
   GetHashCode(self: RunInstallerAttribute) -> int
   
-   Generates a hash code for the current 
-    System.ComponentModel.RunInstallerAttribute.
-  
+   Generates a hash code for the current System.ComponentModel.RunInstallerAttribute.
    Returns: A hash code for the current System.ComponentModel.RunInstallerAttribute.
   """
   pass
@@ -33,8 +30,7 @@ class RunInstallerAttribute(Attribute,_Attribute):
   IsDefaultAttribute(self: RunInstallerAttribute) -> bool
   
    Determines if this attribute is the default.
-   Returns: true if the attribute is the default value for this attribute class; otherwise,
-    false.
+   Returns: true if the attribute is the default value for this attribute class; otherwise,false.
   """
   pass
  def __eq__(self,*args):

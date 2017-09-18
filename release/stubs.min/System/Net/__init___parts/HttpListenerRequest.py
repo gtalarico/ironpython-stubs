@@ -6,11 +6,11 @@ class HttpListenerRequest(object):
   
    Begins an asynchronous request for the client's X.509 v.3 certificate.
   
-   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the 
-    operation is complete.
+   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is 
+    complete.
   
-   state: A user-defined object that contains information about the operation. This 
-    object is passed to the callback delegate when the operation completes.
+   state: A user-defined object that contains information about the operation. This object is passed to 
+    the callback delegate when the operation completes.
   
    Returns: An System.IAsyncResult that indicates the status of the operation.
   """
@@ -30,8 +30,8 @@ class HttpListenerRequest(object):
   GetClientCertificate(self: HttpListenerRequest) -> X509Certificate2
   
    Retrieves the client's X.509 v.3 certificate.
-   Returns: A System.Security.Cryptography.X509Certificates object that contains the 
-    client's X.509 v.3 certificate.
+   Returns: A System.Security.Cryptography.X509Certificates object that contains the client's X.509 v.3 
+    certificate.
   """
   pass
  def GetClientCertificateAsync(self):

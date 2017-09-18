@@ -30,8 +30,8 @@ class CommandLineOption(object):
         IsValidOptionValueName(optionValue: str) -> bool
         
             Test a string to see if it can be used as an option value in RhinoGet::AddCommandOption,
-         
-                        RhinoGet::AddCommandOptionToggle, or RhinoGet::AddCommandOptionList.
+               
+                  RhinoGet::AddCommandOptionToggle, or RhinoGet::AddCommandOptionList.
         
         
             optionValue: The string to be tested.
@@ -145,16 +145,16 @@ class GetBaseClass(object, IDisposable):
         """
         AcceptColor(self: GetBaseClass, enable: bool)
             If you want to allow the user to be able to type in a color r,g,b or name
-                    
-             during GetPoint.Get(), GetObject::GetObjects(), etc., then call AcceptColor(true)
-                
-                 before calling GetPoint()/GetObject(). If the user chooses to type in a color,
-               
-                  then the result code GetResult.Color is returned and you can use RhinoGet.Color()
-           
-                      to get the value of the color.  If the get accepts points, then the user will not
-             
-                    be able to type in r,g,b colors but will be able to type color names.
+                    during 
+             GetPoint.Get(), GetObject::GetObjects(), etc., then call AcceptColor(true)
+                    before 
+             calling GetPoint()/GetObject(). If the user chooses to type in a color,
+                    then the 
+             result code GetResult.Color is returned and you can use RhinoGet.Color()
+                    to get the 
+             value of the color.  If the get accepts points, then the user will not
+                    be able to 
+             type in r,g,b colors but will be able to type color names.
         
         
             enable: true if user is able to type a color.
@@ -169,10 +169,10 @@ class GetBaseClass(object, IDisposable):
         """
         AcceptNothing(self: GetBaseClass, enable: bool)
             If you want to allow the user to be able to press enter in order to
-                    skip 
-             selecting a something in GetPoint.Get(), GetObject::GetObjects(),
-                    etc., then 
-             call AcceptNothing( true ) beforehand.
+                    skip selecting 
+             a something in GetPoint.Get(), GetObject::GetObjects(),
+                    etc., then call 
+             AcceptNothing( true ) beforehand.
         
         
             enable: true if user is able to press enter in order to skip selecting.
@@ -183,22 +183,22 @@ class GetBaseClass(object, IDisposable):
         """
         AcceptNumber(self: GetBaseClass, enable: bool, acceptZero: bool)
             If you want to allow the user to be able to type in a number during GetPoint.Get(),
-              
-                   GetObject::GetObjects(), etc., then call AcceptNumber() beforehand.
-                    If 
-             the user chooses to type in a number, then the result code GetResult.Number is
-                   
-              returned and you can use RhinoGet.Number() to get the value of the number. If you
-               
-                  are using GetPoint and you want "0" to return (0,0,0) instead of the number zero, 
-          
-                       then set acceptZero = false.
+                    
+             GetObject::GetObjects(), etc., then call AcceptNumber() beforehand.
+                    If the user 
+             chooses to type in a number, then the result code GetResult.Number is
+                    returned and 
+             you can use RhinoGet.Number() to get the value of the number. If you
+                    are using 
+             GetPoint and you want "0" to return (0,0,0) instead of the number zero, 
+                    then set 
+             acceptZero = false.
         
         
             enable: true if user is able to type a number.
             acceptZero: If you are using GetPoint and you want "0" to return (0,0,0) instead of the number zero, 
-        
-                         then set acceptZero = false.
+              
+                   then set acceptZero = false.
         """
         pass
 
@@ -206,12 +206,12 @@ class GetBaseClass(object, IDisposable):
         """
         AcceptPoint(self: GetBaseClass, enable: bool)
             If you want to allow the user to be able to type in a point then call AcceptPoint(true)
-          
-                       before calling GetPoint()/GetObject(). If the user chooses to type in a number, 
-             then
-                    the result code GetResult.Point is returned and you can use 
-             RhinoGet.Point()
-                    to get the value of the point.
+                
+                 before calling GetPoint()/GetObject(). If the user chooses to type in a number, then
+               
+                  the result code GetResult.Point is returned and you can use RhinoGet.Point()
+                    
+             to get the value of the point.
         
         
             enable: true if user is able to type in a point.
@@ -222,13 +222,12 @@ class GetBaseClass(object, IDisposable):
         """
         AcceptString(self: GetBaseClass, enable: bool)
             If you want to allow the user to be able to type in a string during GetPoint.Get(),
-              
-                   GetObject::GetObjects(), etc., then call AcceptString(true) before calling
-                 
-                GetPoint()/GetObject(). If the user chooses to type in a string, then the result code
-         
-                        GetResult.String is returned and you can use RhinoGet.String() to get the value 
-             of the string.
+                    
+             GetObject::GetObjects(), etc., then call AcceptString(true) before calling
+                    
+             GetPoint()/GetObject(). If the user chooses to type in a string, then the result code
+                  
+               GetResult.String is returned and you can use RhinoGet.String() to get the value of the string.
         
         
             enable: true if user is able to type a string.
@@ -336,8 +335,8 @@ class GetBaseClass(object, IDisposable):
             englishName: Must only consist of letters and numbers (no characters list periods, spaces, or dashes)
             numberValue: Current value.
             prompt: option prompt shown if the user selects this option.  If null or empty, then the
-                 
-                option name is used as the get number prompt.
+                    
+             option name is used as the get number prompt.
         
             Returns: option index value (>0) or 0 if option cannot be added.
         AddOptionDouble(self: GetBaseClass, optionName: LocalizeStringPair, numberValue: OptionDouble, prompt: str) -> (int, OptionDouble)
@@ -347,8 +346,8 @@ class GetBaseClass(object, IDisposable):
             optionName: Must only consist of letters and numbers (no characters list periods, spaces, or dashes)
             numberValue: The current number value.
             prompt: option prompt shown if the user selects this option.  If null or empty, then the
-                 
-                option name is used as the get number prompt.
+                    
+             option name is used as the get number prompt.
         
             Returns: option index value (>0) or 0 if option cannot be added.
         """
@@ -385,8 +384,8 @@ class GetBaseClass(object, IDisposable):
             englishName: Must only consist of letters and numbers (no characters list periods, spaces, or dashes)
             intValue: The current integer value.
             prompt: option prompt shown if the user selects this option.  If null or empty, then the
-                 
-                option name is used as the get number prompt.
+                    
+             option name is used as the get number prompt.
         
             Returns: option index value (>0) or 0 if option cannot be added.
         AddOptionInteger(self: GetBaseClass, optionName: LocalizeStringPair, intValue: OptionInteger, prompt: str) -> (int, OptionInteger)
@@ -396,8 +395,8 @@ class GetBaseClass(object, IDisposable):
             optionName: Must only consist of letters and numbers (no characters list periods, spaces, or dashes)
             intValue: The current integer value.
             prompt: option prompt shown if the user selects this option.  If null or empty, then the
-                 
-                option name is used as the get number prompt.
+                    
+             option name is used as the get number prompt.
         
             Returns: option index value (>0) or 0 if option cannot be added.
         """
@@ -492,8 +491,8 @@ class GetBaseClass(object, IDisposable):
         GotDefault(self: GetBaseClass) -> bool
         
             Returns true if user pressed Enter to accept a default point, number,
-                    or 
-             string set using SetDefaultPoint, SetDefaultNumber, or SetDefaultString.
+                    or string set 
+             using SetDefaultPoint, SetDefaultNumber, or SetDefaultString.
         
             Returns: true if the result if the default point, number or string set. Otherwise, false.
         """
@@ -504,8 +503,8 @@ class GetBaseClass(object, IDisposable):
         Line2d(self: GetBaseClass) -> Array[Point]
         
             Returns two points defining the location in the view window of the 2d line selected
-              
-                   in GetPoint::Get2dLine().
+                    
+             in GetPoint::Get2dLine().
                     (0,0) = upper left corner of window.
         
             Returns: An array with two 2D points.
@@ -534,16 +533,15 @@ class GetBaseClass(object, IDisposable):
         PickRectangle(self: GetBaseClass) -> Rectangle
         
             If the get was a GetObjects() and the mouse was used to select the objects,
+                    then 
+             the returned rect has left < right and top < bottom. This rect
+                    is the Windows GDI 
+             screen coordinates of the picking rectangle.
+                    RhinoViewport.GetPickXform( pick_rect, 
+             pick_xform )
+                    will calculate the picking transformation that was used.
                     
-             then the returned rect has left < right and top < bottom. This rect
-                    is the 
-             Windows GDI screen coordinates of the picking rectangle.
-                    
-             RhinoViewport.GetPickXform( pick_rect, pick_xform )
-                    will calculate the 
-             picking transformation that was used.
-                    In all other cases, 
-             left=right=top=bottom=0;
+             In all other cases, left=right=top=bottom=0;
         
             Returns: The picking rectangle; or 0 in the specified cases.
         """
@@ -562,9 +560,9 @@ class GetBaseClass(object, IDisposable):
         """
         Point2d(self: GetBaseClass) -> Point
         
-            Returns location in view of point in selected in GetPoint::Get() or 
-             GetPoint::Get2dPoint().
-                    (0,0) = upper left corner of window.
+            Returns location in view of point in selected in GetPoint::Get() or GetPoint::Get2dPoint().
+            
+                     (0,0) = upper left corner of window.
         
             Returns: The location.
         """
@@ -579,11 +577,11 @@ class GetBaseClass(object, IDisposable):
         """
         Rectangle2d(self: GetBaseClass) -> Rectangle
         
-            Returns the location in the view of the 2d rectangle selected in 
-             GetPoint::Get2dRectangle().
-                    rect.left < rect.right and rect.top < rect.bottom
-             
-                    (0,0) = upper left corner of window.
+            Returns the location in the view of the 2d rectangle selected in GetPoint::Get2dRectangle().
+           
+                      rect.left < rect.right and rect.top < rect.bottom
+                    (0,0) = upper left 
+             corner of window.
         
             Returns: The rectangle.
         """
@@ -611,11 +609,10 @@ class GetBaseClass(object, IDisposable):
         """
         SetCommandPromptDefault(self: GetBaseClass, defaultValue: str)
             Sets message that describes what default value will be used if the user presses enter.
-           
-                      This description appears in angle brackets <> in the command prompt window. You 
-             do
-                    not need to provide a default value description unless you explicity 
-             enable AcceptNothing.
+                 
+                This description appears in angle brackets <> in the command prompt window. You do
+                  
+               not need to provide a default value description unless you explicity enable AcceptNothing.
         
         
             defaultValue: description of default value.
@@ -625,9 +622,7 @@ class GetBaseClass(object, IDisposable):
     def SetDefaultColor(self, defaultColor):
         """
         SetDefaultColor(self: GetBaseClass, defaultColor: Color)
-            Sets a color as default value that will be returned if the user presses ENTER key during 
-             the get.
-        
+            Sets a color as default value that will be returned if the user presses ENTER key during the get.
         
             defaultColor: value for default color.
         """
@@ -636,8 +631,8 @@ class GetBaseClass(object, IDisposable):
     def SetDefaultInteger(self, defaultValue):
         """
         SetDefaultInteger(self: GetBaseClass, defaultValue: int)
-            Sets a number as default value that will be returned if the user presses ENTER key during 
-             the get.
+            Sets a number as default value that will be returned if the user presses ENTER key during the 
+             get.
         
         
             defaultValue: value for default number.
@@ -647,8 +642,8 @@ class GetBaseClass(object, IDisposable):
     def SetDefaultNumber(self, defaultNumber):
         """
         SetDefaultNumber(self: GetBaseClass, defaultNumber: float)
-            Sets a number as default value that will be returned if the user presses ENTER key during 
-             the get.
+            Sets a number as default value that will be returned if the user presses ENTER key during the 
+             get.
         
         
             defaultNumber: value for default number.
@@ -658,8 +653,8 @@ class GetBaseClass(object, IDisposable):
     def SetDefaultPoint(self, point):
         """
         SetDefaultPoint(self: GetBaseClass, point: Point3d)
-            Sets a point as default value that will be returned if the user presses the ENTER key 
-             during the get.
+            Sets a point as default value that will be returned if the user presses the ENTER key during the 
+             get.
         
         
             point: value for default point.
@@ -670,8 +665,8 @@ class GetBaseClass(object, IDisposable):
         """
         SetDefaultString(self: GetBaseClass, defaultValue: str)
             Sets a string as default value that will be returned
-                    if the user presses 
-             ENTER key during the get.
+                    if the user presses ENTER key 
+             during the get.
         
         
             defaultValue: value for default string.
@@ -682,8 +677,8 @@ class GetBaseClass(object, IDisposable):
         """
         SetWaitDuration(self: GetBaseClass, milliseconds: int)
             Sets the wait duration (in milliseconds) of the getter. If the duration passes without 
-          
-                       the user making a decision, the GetResult.Timeout code is returned.
+                
+                 the user making a decision, the GetResult.Timeout code is returned.
         
         
             milliseconds: Number of milliseconds to wait.
@@ -703,8 +698,8 @@ class GetBaseClass(object, IDisposable):
         """
         Vector(self: GetBaseClass) -> Vector3d
         
-            Gets a direction if Get*() returns GetResult.Point (Set by some digitizers, but in general 
-             it's (0,0,0).
+            Gets a direction if Get*() returns GetResult.Point (Set by some digitizers, but in general it's 
+             (0,0,0).
         
             Returns: The vector chosen by the user.
         """
@@ -824,8 +819,8 @@ class GetInteger(GetBaseClass, IDisposable):
         """
         SetLowerLimit(self: GetInteger, lowerLimit: int, strictlyGreaterThan: bool)
             Sets a lower limit on the number that can be returned.
-                    By default there is no 
-             lower limit.
+                    By default there is no lower 
+             limit.
         
         
             lowerLimit: smallest acceptable number.
@@ -837,8 +832,8 @@ class GetInteger(GetBaseClass, IDisposable):
         """
         SetUpperLimit(self: GetInteger, upperLimit: int, strictlyLessThan: bool)
             Sets an upper limit on the number that can be returned.
-                    By default there is 
-             no upper limit.
+                    By default there is no 
+             upper limit.
         
         
             upperLimit: largest acceptable number.
@@ -890,8 +885,8 @@ class GetLine(object, IDisposable):
         """
         EnableFromBothSidesOption(self: GetLine, on: bool)
             If true, then the "BothSides" option shows up when the
-                    start point is 
-             inteactively picked.
+                    start point is inteactively 
+             picked.
         """
         pass
 
@@ -914,8 +909,8 @@ class GetLine(object, IDisposable):
         """
         SetFirstPoint(self: GetLine, point: Point3d)
             Use SetFirstPoint to specify the line's starting point and skip
-                    the start 
-             point interactive picking
+                    the start point 
+             interactive picking
         """
         pass
 
@@ -1085,8 +1080,8 @@ class GetNumber(GetBaseClass, IDisposable):
         """
         SetLowerLimit(self: GetNumber, lowerLimit: float, strictlyGreaterThan: bool)
             Sets a lower limit on the number that can be returned.
-                    By default there is no 
-             lower limit.
+                    By default there is no lower 
+             limit.
         
         
             lowerLimit: smallest acceptable number.
@@ -1098,8 +1093,8 @@ class GetNumber(GetBaseClass, IDisposable):
         """
         SetUpperLimit(self: GetNumber, upperLimit: float, strictlyLessThan: bool)
             Sets an upper limit on the number that can be returned.
-                    By default there is 
-             no upper limit.
+                    By default there is no 
+             upper limit.
         
         
             upperLimit: largest acceptable number.
@@ -1138,16 +1133,14 @@ class GetObject(GetBaseClass, IDisposable):
         CustomGeometryFilter(self: GetObject, rhObject: RhinoObject, geometry: GeometryBase, componentIndex: ComponentIndex) -> bool
         
             Checks geometry to see if it can be selected.
-                    Override to provide fancy 
-             filtering.
-        
+                    Override to provide fancy filtering.
         
             rhObject: parent object being considered.
             geometry: geometry being considered.
             componentIndex: if >= 0, geometry is a proper sub-part of object->Geometry() with componentIndex.
             Returns: The default returns true unless you've set a custom geometry filter. If a custom
-                 
-                filter has been set, that delegate is called
+                    
+             filter has been set, that delegate is called
         """
         pass
 
@@ -1163,12 +1156,12 @@ class GetObject(GetBaseClass, IDisposable):
         """
         EnableClearObjectsOnEntry(self: GetObject, enable: bool)
             By default the picked object list is cleared when GetObject.GetObjects() is called.
-              
-                   If you are reusing a GetObject class and do not want the existing object list
-              
-                   cleared when you call Input, then call EnableClearObjectsOnEntry(false) before
-             
-                    calling GetObjects().
+                    
+             If you are reusing a GetObject class and do not want the existing object list
+                    
+             cleared when you call Input, then call EnableClearObjectsOnEntry(false) before
+                    
+             calling GetObjects().
         
         
             enable: The state to set.
@@ -1179,10 +1172,10 @@ class GetObject(GetBaseClass, IDisposable):
         """
         EnableHighlight(self: GetObject, enable: bool)
             By default, any object post-pick selected by GetObjects() is highlighted.
-                    If 
-             you want to post-pick objects and not have them automatically highlight,
-                    then 
-             call EnableHighlight = false.
+                    If you 
+             want to post-pick objects and not have them automatically highlight,
+                    then call 
+             EnableHighlight = false.
         """
         pass
 
@@ -1190,14 +1183,13 @@ class GetObject(GetBaseClass, IDisposable):
         """
         EnableIgnoreGrips(self: GetObject, enable: bool)
             By default, post selection will select objects with grips on. If you do
-                    not 
-             want to be able to post select objects with grips on, then call
-                    
-             EnableIgnoreGrips = false. The ability to preselect an object with grips
-                    on 
-             is determined by the value returned by the virtual
-                    
-             RhinoObject.IsSelectableWithGripsOn.
+                    not want to 
+             be able to post select objects with grips on, then call
+                    EnableIgnoreGrips = false. 
+             The ability to preselect an object with grips
+                    on is determined by the value 
+             returned by the virtual
+                    RhinoObject.IsSelectableWithGripsOn.
         """
         pass
 
@@ -1217,8 +1209,8 @@ class GetObject(GetBaseClass, IDisposable):
             ignoreUnacceptablePreselectedObjects: If true and some acceptable objects are pre-selected, then any unacceptable
                     
              pre-selected objects are ignored. If false and any unacceptable are pre-selected,
-                
-                 then the user is forced to post-select.
+                    
+             then the user is forced to post-select.
         """
         pass
 
@@ -1228,10 +1220,10 @@ class GetObject(GetBaseClass, IDisposable):
             By default, when GetObject.GetObjects is called with minimumNumber > 0
                     and 
              maximumNumber = 0, the command prompt automatically includes "Press Enter
-                    
-             when done" after the user has selected at least minimumNumber of objects. If
-                    
-             you want to prohibit the addition of the "Press Enter when done", then call
+                    when 
+             done" after the user has selected at least minimumNumber of objects. If
+                    you want to 
+             prohibit the addition of the "Press Enter when done", then call
                     
              EnablePressEnterWhenDonePrompt = false;
         """
@@ -1241,12 +1233,12 @@ class GetObject(GetBaseClass, IDisposable):
         """
         EnableSelPrevious(self: GetObject, enable: bool)
             By default, any object selected during a command becomes part of the
-                    
-             "previous selection set" and can be reselected by the SelPrev command.
-                    If you 
-             need to select objects but do not want them to be selected by
-                    a subsquent 
-             call to SelPrev, then call EnableSelPrev = false.
+                    "previous 
+             selection set" and can be reselected by the SelPrev command.
+                    If you need to select 
+             objects but do not want them to be selected by
+                    a subsquent call to SelPrev, then 
+             call EnableSelPrev = false.
         """
         pass
 
@@ -1254,12 +1246,12 @@ class GetObject(GetBaseClass, IDisposable):
         """
         EnableUnselectObjectsOnExit(self: GetObject, enable: bool)
             By default any objects in the object list are unselected when GetObject.GetObjects()
-             
-                    exits with any return code besides Object. If you want to leave the objects
+                   
+              exits with any return code besides Object. If you want to leave the objects
+                    
+             selected when non-object input is returned, then call EnableUnselectObjectsOnExit(false)
                
-                  selected when non-object input is returned, then call 
-             EnableUnselectObjectsOnExit(false)
-                    before calling GetObjects().
+                  before calling GetObjects().
         
         
             enable: The state to set.
@@ -1273,10 +1265,10 @@ class GetObject(GetBaseClass, IDisposable):
             Call to select a single object.
             Returns: Success - objects selected.
                     Cancel - user pressed ESCAPE to cancel the get.
-         
-                        See GetResults for other possible values that may be returned when options, 
-             numbers,
-                    etc., are acceptable responses.
+               
+                  See GetResults for other possible values that may be returned when options, numbers,
+              
+                   etc., are acceptable responses.
         """
         pass
 
@@ -1288,21 +1280,21 @@ class GetObject(GetBaseClass, IDisposable):
         
             minimumNumber: minimum number of objects to select.
             maximumNumber: maximum number of objects to select.
-                    If 0, then the user must press enter to 
-             finish object selection.
-                    If -1, then object selection stops as soon as there 
-             are at least minimumNumber of object selected.
-                    If >0, then the picking stops 
-             when there are maximumNumber objects.  If a window pick, crossing
-                    pick, or 
-             Sel* command attempts to add more than maximumNumber, then the attempt is ignored.
+                    If 0, then the user must press enter to finish 
+             object selection.
+                    If -1, then object selection stops as soon as there are at least 
+             minimumNumber of object selected.
+                    If >0, then the picking stops when there are 
+             maximumNumber objects.  If a window pick, crossing
+                    pick, or Sel* command attempts 
+             to add more than maximumNumber, then the attempt is ignored.
         
             Returns: Success - objects selected.
                     Cancel - user pressed ESCAPE to cancel the get.
-         
-                        See GetResults for other possible values that may be returned when options, 
-             numbers,
-                    etc., are acceptable responses.
+               
+                  See GetResults for other possible values that may be returned when options, numbers,
+              
+                   etc., are acceptable responses.
         """
         pass
 
@@ -1338,13 +1330,13 @@ class GetObject(GetBaseClass, IDisposable):
         """
         SetPressEnterWhenDonePrompt(self: GetObject, prompt: str)
             The default prompt when EnablePressEnterWhenDonePrompt is enabled is "Press Enter
-                
-                 when done". Use this function to specify a different string to be appended.
+                    
+             when done". Use this function to specify a different string to be appended.
         
         
             prompt: The text that will be displayed just after the prompt,
-                    after the selection 
-             has been made.
+                    after the selection has been 
+             made.
         """
         pass
 
@@ -1534,9 +1526,9 @@ class GetObjectGeometryFilter(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the 
-             current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current 
+             delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1563,14 +1555,13 @@ class GetObjectGeometryFilter(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal 
-             to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
+             the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
-             without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
+             value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -1603,8 +1594,8 @@ class GetOption(GetBaseClass, IDisposable):
         Get(self: GetOption) -> GetResult
         
             Call to get an option. A return value of "option" means the user selected
-                    a 
-             valid option. Use Option() the determine which option.
+                    a valid 
+             option. Use Option() the determine which option.
         
             Returns: If the user chose an option, then Rhino.Input.GetResult.Option; another enumeration value 
              otherwise.
@@ -1681,8 +1672,8 @@ class GetPoint(GetBaseClass, IDisposable):
         """
         ClearConstraints(self: GetPoint)
             Removes any explicit constraints added by calls to GetPoint::Constraint() and enable
-             
-                    the built-in constraint options.
+                   
+              the built-in constraint options.
         """
         pass
 
@@ -1708,12 +1699,12 @@ class GetPoint(GetBaseClass, IDisposable):
         
             curve: A curve to use as constraint.
             allowPickingPointOffObject: defines whether the point pick is allowed to happen off object. When false,
-                    a 
-             "no no" cursor is shown when the cursor is not on the object. When true,
-                    a 
-             normal point picking cursor is used and the marker is visible also when
-                    the 
-             cursor is not on the object.
+                    a "no 
+             no" cursor is shown when the cursor is not on the object. When true,
+                    a normal point 
+             picking cursor is used and the marker is visible also when
+                    the cursor is not on the 
+             object.
         
             Returns: true if constraint could be applied.
         Constrain(self: GetPoint, cylinder: Cylinder) -> bool
@@ -1728,12 +1719,12 @@ class GetPoint(GetBaseClass, IDisposable):
         
             surface: A surface to use as constraint.
             allowPickingPointOffObject: defines whether the point pick is allowed to happen off object. When false,
-                    a 
-             "no no" cursor is shown when the cursor is not on the object. When true,
-                    a 
-             normal point picking cursor is used and the marker is visible also when
-                    the 
-             cursor is not on the object.
+                    a "no 
+             no" cursor is shown when the cursor is not on the object. When true,
+                    a normal point 
+             picking cursor is used and the marker is visible also when
+                    the cursor is not on the 
+             object.
         
             Returns: true if constraint could be applied.
         Constrain(self: GetPoint, mesh: Mesh, allowPickingPointOffObject: bool) -> bool
@@ -1742,12 +1733,12 @@ class GetPoint(GetBaseClass, IDisposable):
         
             mesh: A mesh to use as constraint.
             allowPickingPointOffObject: defines whether the point pick is allowed to happen off object. When false,
-                    a 
-             "no no" cursor is shown when the cursor is not on the object. When true,
-                    a 
-             normal point picking cursor is used and the marker is visible also when
-                    the 
-             cursor is not on the object.
+                    a "no 
+             no" cursor is shown when the cursor is not on the object. When true,
+                    a normal point 
+             picking cursor is used and the marker is visible also when
+                    the cursor is not on the 
+             object.
         
             Returns: true if constraint could be applied.
         Constrain(self: GetPoint, brep: Brep, wireDensity: int, faceIndex: int, allowPickingPointOffObject: bool) -> bool
@@ -1755,21 +1746,18 @@ class GetPoint(GetBaseClass, IDisposable):
             Constrains the picked point to lie on a brep.
         
             brep: A brep to use as constraint.
-            wireDensity: When wire_density<0, isocurve intersection snapping is turned off, when wire_density>=0, 
-             the value
-                    defines the isocurve density used for isocurve intersection 
-             snapping.
+            wireDensity: When wire_density<0, isocurve intersection snapping is turned off, when wire_density>=0, the 
+             value
+                    defines the isocurve density used for isocurve intersection snapping.
         
-            faceIndex: When face_index <0, constrain to whole brep. When face_index >=0, constrain to individual 
-             face.
-        
+            faceIndex: When face_index <0, constrain to whole brep. When face_index >=0, constrain to individual face.
             allowPickingPointOffObject: defines whether the point pick is allowed to happen off object. When false,
-                    a 
-             "no no" cursor is shown when the cursor is not on the object. When true,
-                    a 
-             normal point picking cursor is used and the marker is visible also when
-                    the 
-             cursor is not on the object.
+                    a "no 
+             no" cursor is shown when the cursor is not on the object. When true,
+                    a normal point 
+             picking cursor is used and the marker is visible also when
+                    the cursor is not on the 
+             object.
         
             Returns: true if constraint could be applied.
         Constrain(self: GetPoint, sphere: Sphere) -> bool
@@ -1819,8 +1807,8 @@ class GetPoint(GetBaseClass, IDisposable):
             Sets distance constraint from base point.
         
             distance: pass UnsetValue to clear this constraint. Pass 0.0 to disable the
-                    ability to 
-             set this constraint by typing a number during GetPoint.
+                    ability to set 
+             this constraint by typing a number during GetPoint.
         """
         pass
 
@@ -1829,21 +1817,21 @@ class GetPoint(GetBaseClass, IDisposable):
         ConstrainToConstructionPlane(self: GetPoint, throughBasePoint: bool) -> bool
         
             If enabled, the picked point is constrained to be on the active construction plane.
-              
-                   If the base point is set, then the point is constrained to be on the plane that 
-             contains
-                    the base point and is parallel to the active construction plane. By 
-             default this
-                    constraint is enabled.
+                    
+             If the base point is set, then the point is constrained to be on the plane that contains
+               
+                  the base point and is parallel to the active construction plane. By default this
+                  
+               constraint is enabled.
         
         
             throughBasePoint: true if the base point should be used as compulsory level reference.
-            Returns: If true and the base point is set, then the point is constrained to be on the plane 
-             parallel
-                    to the construction plane that passes through the base point, even 
-             when planar mode is off.
-                    If throughBasePoint is false, then the base point 
-             shift only happens if planar mode is on.
+            Returns: If true and the base point is set, then the point is constrained to be on the plane parallel
+           
+                      to the construction plane that passes through the base point, even when planar mode is 
+             off.
+                    If throughBasePoint is false, then the base point shift only happens if planar 
+             mode is on.
         """
         pass
 
@@ -1851,8 +1839,8 @@ class GetPoint(GetBaseClass, IDisposable):
         """
         ConstrainToTargetPlane(self: GetPoint)
             Constrains point to lie on a plane that is parallel to the
-                    viewing plane and 
-             passes through the view's target point.
+                    viewing plane and passes 
+             through the view's target point.
         """
         pass
 
@@ -1861,11 +1849,11 @@ class GetPoint(GetBaseClass, IDisposable):
         ConstrainToVirtualCPlaneIntersection(self: GetPoint, plane: Plane) -> bool
         
             If enabled, the picked point is constrained to be on the 
-                    intersection of the 
-             plane and the virtual CPlane going through
+                    intersection of the plane 
+             and the virtual CPlane going through
                     the plane origin.
-                    If 
-             the planes are parallel, the constraint works just like planar constraint.
+                    If the planes 
+             are parallel, the constraint works just like planar constraint.
         
         
             plane: The plane used for the plane - virtual CPlane intersection.
@@ -1880,16 +1868,13 @@ class GetPoint(GetBaseClass, IDisposable):
     def DrawLineFromPoint(self, startPoint, showDistanceInStatusBar):
         """
         DrawLineFromPoint(self: GetPoint, startPoint: Point3d, showDistanceInStatusBar: bool)
-            Use DrawLineFromPoint() if you want a dynamic line drawn from a point to the point being 
-             picked.
-        
+            Use DrawLineFromPoint() if you want a dynamic line drawn from a point to the point being picked.
         
             startPoint: The line is drawn from startPoint to the point being picked. If the base
-                    
-             point has not been set, then it is set to startPoint.
+                    point has 
+             not been set, then it is set to startPoint.
         
-            showDistanceInStatusBar: if true, the distance from the basePoint to the point begin picked is shown in the status 
-             bar.
+            showDistanceInStatusBar: if true, the distance from the basePoint to the point begin picked is shown in the status bar.
         """
         pass
 
@@ -1928,8 +1913,7 @@ class GetPoint(GetBaseClass, IDisposable):
         EnableDrawLineFromPoint(self: GetPoint, enable: bool)
             Controls drawing of dynamic a line from the start point.
         
-            enable: if true, a dynamic line is drawn from the DrawLineFromPoint startPoint to the point being 
-             picked.
+            enable: if true, a dynamic line is drawn from the DrawLineFromPoint startPoint to the point being picked.
         """
         pass
 
@@ -1937,10 +1921,10 @@ class GetPoint(GetBaseClass, IDisposable):
         """
         EnableSnapToCurves(self: GetPoint, enable: bool)
             If you want GetPoint() to try to snap to curves when the mouse is near a curve
-                   
-              (like the center point in the Circle command when the AroundCurve option is on),
-                
-                 then enable the snap to curves option.
+                    
+             (like the center point in the Circle command when the AroundCurve option is on),
+                    
+             then enable the snap to curves option.
         
         
             enable: Whether points should be enabled.
@@ -1952,28 +1936,28 @@ class GetPoint(GetBaseClass, IDisposable):
         Get(self: GetPoint) -> GetResult
         
             After setting up options and so on, call GetPoint::Get to get a 3d point. The
-                    
-             point is retrieved when the mouse goes down.
+                    point 
+             is retrieved when the mouse goes down.
         
         Get(self: GetPoint, onMouseUp: bool, get2DPoint: bool) -> GetResult
         
             After setting up options and so on, call this method to get a 2d or 3d point.
         
             onMouseUp: If false, the point is returned when the left mouse button goes down.
-                    If 
-             true, the point is returned when the left mouse button goes up.
+                    If true, the 
+             point is returned when the left mouse button goes up.
         
             get2DPoint: If true then get a 2d point otherwise get a 2d point
-            Returns: Rhino.Input.GetResult.Point if the user chose a 3d point; Rhino.Input.GetResult.Point2d if 
-             the user chose a 2d point; other enumeration value otherwise.
+            Returns: Rhino.Input.GetResult.Point if the user chose a 3d point; Rhino.Input.GetResult.Point2d if the 
+             user chose a 2d point; other enumeration value otherwise.
         
         Get(self: GetPoint, onMouseUp: bool) -> GetResult
         
             After setting up options and so on, call this method to get a 3d point.
         
             onMouseUp: If false, the point is returned when the left mouse button goes down.
-                    If 
-             true, the point is returned when the left mouse button goes up.
+                    If true, the 
+             point is returned when the left mouse button goes up.
         
             Returns: Rhino.Input.GetResult.Point if the user chose a point; other enumeration value otherwise.
         """
@@ -2002,10 +1986,10 @@ class GetPoint(GetBaseClass, IDisposable):
         InterruptMouseMove(self: GetPoint) -> bool
         
             If you have lengthy computations in OnMouseMove() and/or DymanicDraw()
-                    
-             overrides, then periodically call InterruptMouseMove() to see if you
-                    should 
-             interrupt your work because the mouse has moved again.
+                    overrides, 
+             then periodically call InterruptMouseMove() to see if you
+                    should interrupt your 
+             work because the mouse has moved again.
         
             Returns: true if you should interrupt your work; false otherwise.
         """
@@ -2032,8 +2016,8 @@ class GetPoint(GetBaseClass, IDisposable):
     def OnMouseMove(self, *args): #cannot find CLR method
         """
         OnMouseMove(self: GetPoint, e: GetPointMouseEventArgs)
-            Calls the Rhino.Input.Custom.GetPoint.MouseMove event and can/should be called by 
-             overriding implementation.
+            Calls the Rhino.Input.Custom.GetPoint.MouseMove event and can/should be called by overriding 
+             implementation.
         
         
             e: Current argument for the event.
@@ -2044,14 +2028,14 @@ class GetPoint(GetBaseClass, IDisposable):
         """
         OnPostDrawObjects(self: GetPoint, e: DrawEventArgs)
             In the "rare" case that you need to draw some depth buffered geometry during
-                    
-             a GetPoint operation, override the OnPostDrawObjects function.
-                    NOTE!! 
-             Overriding this function comes with a significant performance penalty because the
-                
-                 scene needs to be fully regenerated every frame where the standard
-                    
-             DynamicDraw event draws temporary decorations (geometry) on top of a static scene.
+                    a 
+             GetPoint operation, override the OnPostDrawObjects function.
+                    NOTE!! Overriding this 
+             function comes with a significant performance penalty because the
+                    scene needs to be 
+             fully regenerated every frame where the standard
+                    DynamicDraw event draws temporary 
+             decorations (geometry) on top of a static scene.
         
         
             e: Current argument for the event.
@@ -2078,8 +2062,8 @@ class GetPoint(GetBaseClass, IDisposable):
             Permits the use of the control key to define a line constraint.
         
             permitMode: 0: no elevator modes are permitted
-                    1: fixed plane elevator mode (like the 
-             Line command)
+                    1: fixed plane elevator mode (like the Line 
+             command)
                     2: cplane elevator mode (like object dragging)
         """
         pass
@@ -2087,9 +2071,7 @@ class GetPoint(GetBaseClass, IDisposable):
     def PermitFromOption(self, permit):
         """
         PermitFromOption(self: GetPoint, permit: bool)
-            Control the availability of the built-in "From" option. By default, the "From" option is 
-             enabled.
-        
+            Control the availability of the built-in "From" option. By default, the "From" option is enabled.
         
             permit: if true, then the "From" option is automatically avaiable in GetPoint.
         """
@@ -2099,8 +2081,8 @@ class GetPoint(GetBaseClass, IDisposable):
         """
         PermitObjectSnap(self: GetPoint, permit: bool)
             By default, object snaps like "end", "near", etc. are controled by the user.
-                    
-             If you want to disable this ability, then call PermitObjectSnap(false).
+                    If you 
+             want to disable this ability, then call PermitObjectSnap(false).
         
         
             permit: true to permit snapping to objects.
@@ -2112,8 +2094,8 @@ class GetPoint(GetBaseClass, IDisposable):
         PermitOrthoSnap(self: GetPoint, permit: bool)
             Controls availability of ortho snap. Default is true.
         
-            permit: if true, then GetPoint pays attention to the Rhino "ortho snap" and "planar snap" settings
-             
+            permit: if true, then GetPoint pays attention to the Rhino "ortho snap" and "planar snap" settings
+             
                     reported by ModelAidSettings.Ortho and ModelAidSettings.Planar.
         """
         pass
@@ -2141,8 +2123,8 @@ class GetPoint(GetBaseClass, IDisposable):
         PointOnObject(self: GetPoint) -> ObjRef
         
             Call this function to see if the point was on an object. If the point was
-                    on 
-             an object an ObjRef is returned; otherwise null is returned.
+                    on an 
+             object an ObjRef is returned; otherwise null is returned.
         
             Returns: A point object reference.
         """
@@ -2155,8 +2137,8 @@ class GetPoint(GetBaseClass, IDisposable):
         
             basePoint: The new base point.
             showDistanceInStatusBar: If true, then the distance from base_point to the current point will be in the
-                   
-              status bar distance pane.
+                    
+             status bar distance pane.
         """
         pass
 
@@ -2342,10 +2324,9 @@ class GetTransform(GetPoint, IDisposable):
         """
         AddTransformObjects(self: GetTransform, list: TransformObjectList)
             Adds any objects you want transformed and grips you want transformed.
-                    Make 
-             sure no duplicates are in the list and that no grip ownwers are
-                    passed in as 
-             objects.
+                    Make sure no 
+             duplicates are in the list and that no grip ownwers are
+                    passed in as objects.
         
         
             list: A custom transform object list.
@@ -2357,8 +2338,8 @@ class GetTransform(GetPoint, IDisposable):
         CalculateTransform(self: GetTransform, viewport: RhinoViewport, point: Point3d) -> Transform
         
             Retrieves the final transformation.
-                    Override this virtual function to provide 
-             your own custom transformation method.
+                    Override this virtual function to provide your 
+             own custom transformation method.
         
         
             viewport: A Rhino viewport that the user is using.
@@ -2402,8 +2383,8 @@ class GetTransform(GetPoint, IDisposable):
     def OnMouseMove(self, *args): #cannot find CLR method
         """
         OnMouseMove(self: GetPoint, e: GetPointMouseEventArgs)
-            Calls the Rhino.Input.Custom.GetPoint.MouseMove event and can/should be called by 
-             overriding implementation.
+            Calls the Rhino.Input.Custom.GetPoint.MouseMove event and can/should be called by overriding 
+             implementation.
         
         
             e: Current argument for the event.
@@ -2414,14 +2395,14 @@ class GetTransform(GetPoint, IDisposable):
         """
         OnPostDrawObjects(self: GetPoint, e: DrawEventArgs)
             In the "rare" case that you need to draw some depth buffered geometry during
-                    
-             a GetPoint operation, override the OnPostDrawObjects function.
-                    NOTE!! 
-             Overriding this function comes with a significant performance penalty because the
-                
-                 scene needs to be fully regenerated every frame where the standard
-                    
-             DynamicDraw event draws temporary decorations (geometry) on top of a static scene.
+                    a 
+             GetPoint operation, override the OnPostDrawObjects function.
+                    NOTE!! Overriding this 
+             function comes with a significant performance penalty because the
+                    scene needs to be 
+             fully regenerated every frame where the standard
+                    DynamicDraw event draws temporary 
+             decorations (geometry) on top of a static scene.
         
         
             e: Current argument for the event.
@@ -2723,8 +2704,8 @@ class PickContext(object, IDisposable):
         """
         UpdateClippingPlanes(self: PickContext)
             Updates the clipping plane information in pick region. The
-                    SetClippingPlanes 
-             and View fields must be called before calling
+                    SetClippingPlanes and 
+             View fields must be called before calling
                     UpdateClippingPlanes().
         """
         pass

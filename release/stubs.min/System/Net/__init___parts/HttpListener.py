@@ -7,8 +7,8 @@ class HttpListener(object,IDisposable):
  def Abort(self):
   """
   Abort(self: HttpListener)
-   Shuts down the System.Net.HttpListener object immediately,discarding all 
-    currently queued requests.
+   Shuts down the System.Net.HttpListener object immediately,discarding all currently queued 
+    requests.
   """
   pass
  def BeginGetContext(self,callback,state):
@@ -17,14 +17,13 @@ class HttpListener(object,IDisposable):
   
    Begins asynchronously retrieving an incoming request.
   
-   callback: An System.AsyncCallback delegate that references the method to invoke when a 
-    client request is available.
+   callback: An System.AsyncCallback delegate that references the method to invoke when a client request is 
+    available.
   
-   state: A user-defined object that contains information about the operation. This 
-    object is passed to the callback delegate when the operation completes.
+   state: A user-defined object that contains information about the operation. This object is passed to 
+    the callback delegate when the operation completes.
   
-   Returns: An System.IAsyncResult object that indicates the status of the asynchronous 
-    operation.
+   Returns: An System.IAsyncResult object that indicates the status of the asynchronous operation.
   """
   pass
  def Close(self):
@@ -39,9 +38,7 @@ class HttpListener(object,IDisposable):
   
    Completes an asynchronous operation to retrieve an incoming client request.
   
-   asyncResult: An System.IAsyncResult object that was obtained when the asynchronous operation 
-    was started.
-  
+   asyncResult: An System.IAsyncResult object that was obtained when the asynchronous operation was started.
    Returns: An System.Net.HttpListenerContext object that represents the client request.
   """
   pass
@@ -69,10 +66,17 @@ class HttpListener(object,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

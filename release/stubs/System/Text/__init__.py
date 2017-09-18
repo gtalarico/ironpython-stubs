@@ -2,7 +2,7 @@
 # module System.Text calls itself Text
 # from mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -14,8 +14,8 @@ class Encoding(object, ICloneable):
         """
         Clone(self: Encoding) -> object
         
-            When overridden in a derived class, creates a shallow copy of the current 
-             System.Text.Encoding object.
+            When overridden in a derived class, creates a shallow copy of the current System.Text.Encoding 
+             object.
         
             Returns: A copy of the current System.Text.Encoding object.
         """
@@ -33,8 +33,8 @@ class Encoding(object, ICloneable):
             bytes: The array of bytes to convert.
             index: The index of the first element of bytes to convert.
             count: The number of bytes to convert.
-            Returns: An array of type System.Byte containing the result of converting a range of 
-             bytes in bytes from srcEncoding to dstEncoding.
+            Returns: An array of type System.Byte containing the result of converting a range of bytes in bytes from 
+             srcEncoding to dstEncoding.
         
         Convert(srcEncoding: Encoding, dstEncoding: Encoding, bytes: Array[Byte]) -> Array[Byte]
         
@@ -43,8 +43,8 @@ class Encoding(object, ICloneable):
             srcEncoding: The encoding format of bytes.
             dstEncoding: The target encoding format.
             bytes: The bytes to convert.
-            Returns: An array of type System.Byte containing the results of converting bytes from 
-             srcEncoding to dstEncoding.
+            Returns: An array of type System.Byte containing the results of converting bytes from srcEncoding to 
+             dstEncoding.
         """
         pass
 
@@ -55,8 +55,8 @@ class Encoding(object, ICloneable):
             Determines whether the specified System.Object is equal to the current instance.
         
             value: The System.Object to compare with the current instance.
-            Returns: true if value is an instance of System.Text.Encoding and is equal to the 
-             current instance; otherwise, false.
+            Returns: true if value is an instance of System.Text.Encoding and is equal to the current instance; 
+             otherwise, false.
         """
         pass
 
@@ -64,8 +64,8 @@ class Encoding(object, ICloneable):
         """
         GetByteCount(self: Encoding, chars: Array[Char], index: int, count: int) -> int
         
-            When overridden in a derived class, calculates the number of bytes produced by 
-             encoding a set of characters from the specified character array.
+            When overridden in a derived class, calculates the number of bytes produced by encoding a set of 
+             characters from the specified character array.
         
         
             chars: The character array containing the set of characters to encode.
@@ -74,8 +74,8 @@ class Encoding(object, ICloneable):
             Returns: The number of bytes produced by encoding the specified characters.
         GetByteCount(self: Encoding, chars: Char*, count: int) -> int
         
-            When overridden in a derived class, calculates the number of bytes produced by 
-             encoding a set of characters starting at the specified character pointer.
+            When overridden in a derived class, calculates the number of bytes produced by encoding a set of 
+             characters starting at the specified character pointer.
         
         
             chars: A pointer to the first character to encode.
@@ -83,18 +83,16 @@ class Encoding(object, ICloneable):
             Returns: The number of bytes produced by encoding the specified characters.
         GetByteCount(self: Encoding, chars: Array[Char]) -> int
         
-            When overridden in a derived class, calculates the number of bytes produced by 
-             encoding all the characters in the specified character array.
+            When overridden in a derived class, calculates the number of bytes produced by encoding all the 
+             characters in the specified character array.
         
         
             chars: The character array containing the characters to encode.
-            Returns: The number of bytes produced by encoding all the characters in the specified 
-             character array.
-        
+            Returns: The number of bytes produced by encoding all the characters in the specified character array.
         GetByteCount(self: Encoding, s: str) -> int
         
-            When overridden in a derived class, calculates the number of bytes produced by 
-             encoding the characters in the specified string.
+            When overridden in a derived class, calculates the number of bytes produced by encoding the 
+             characters in the specified string.
         
         
             s: The string containing the set of characters to encode.
@@ -106,16 +104,16 @@ class Encoding(object, ICloneable):
         """
         GetBytes(self: Encoding, s: str) -> Array[Byte]
         
-            When overridden in a derived class, encodes all the characters in the specified 
-             string into a sequence of bytes.
+            When overridden in a derived class, encodes all the characters in the specified string into a 
+             sequence of bytes.
         
         
             s: The string containing the characters to encode.
             Returns: A byte array containing the results of encoding the specified set of characters.
         GetBytes(self: Encoding, s: str, charIndex: int, charCount: int, bytes: Array[Byte], byteIndex: int) -> int
         
-            When overridden in a derived class, encodes a set of characters from the 
-             specified string into the specified byte array.
+            When overridden in a derived class, encodes a set of characters from the specified string into 
+             the specified byte array.
         
         
             s: The string containing the set of characters to encode.
@@ -126,32 +124,28 @@ class Encoding(object, ICloneable):
             Returns: The actual number of bytes written into bytes.
         GetBytes(self: Encoding, chars: Char*, charCount: int, bytes: Byte*, byteCount: int) -> int
         
-            When overridden in a derived class, encodes a set of characters starting at the 
-             specified character pointer into a sequence of bytes that are stored starting 
-             at the specified byte pointer.
+            When overridden in a derived class, encodes a set of characters starting at the specified 
+             character pointer into a sequence of bytes that are stored starting at the specified byte 
+             pointer.
         
         
             chars: A pointer to the first character to encode.
             charCount: The number of characters to encode.
-            bytes: A pointer to the location at which to start writing the resulting sequence of 
-             bytes.
-        
+            bytes: A pointer to the location at which to start writing the resulting sequence of bytes.
             byteCount: The maximum number of bytes to write.
-            Returns: The actual number of bytes written at the location indicated by the bytes 
-             parameter.
-        
+            Returns: The actual number of bytes written at the location indicated by the bytes parameter.
         GetBytes(self: Encoding, chars: Array[Char]) -> Array[Byte]
         
-            When overridden in a derived class, encodes all the characters in the specified 
-             character array into a sequence of bytes.
+            When overridden in a derived class, encodes all the characters in the specified character array 
+             into a sequence of bytes.
         
         
             chars: The character array containing the characters to encode.
             Returns: A byte array containing the results of encoding the specified set of characters.
         GetBytes(self: Encoding, chars: Array[Char], index: int, count: int) -> Array[Byte]
         
-            When overridden in a derived class, encodes a set of characters from the 
-             specified character array into a sequence of bytes.
+            When overridden in a derived class, encodes a set of characters from the specified character 
+             array into a sequence of bytes.
         
         
             chars: The character array containing the set of characters to encode.
@@ -160,8 +154,8 @@ class Encoding(object, ICloneable):
             Returns: A byte array containing the results of encoding the specified set of characters.
         GetBytes(self: Encoding, chars: Array[Char], charIndex: int, charCount: int, bytes: Array[Byte], byteIndex: int) -> int
         
-            When overridden in a derived class, encodes a set of characters from the 
-             specified character array into the specified byte array.
+            When overridden in a derived class, encodes a set of characters from the specified character 
+             array into the specified byte array.
         
         
             chars: The character array containing the set of characters to encode.
@@ -177,9 +171,8 @@ class Encoding(object, ICloneable):
         """
         GetCharCount(self: Encoding, bytes: Byte*, count: int) -> int
         
-            When overridden in a derived class, calculates the number of characters 
-             produced by decoding a sequence of bytes starting at the specified byte 
-             pointer.
+            When overridden in a derived class, calculates the number of characters produced by decoding a 
+             sequence of bytes starting at the specified byte pointer.
         
         
             bytes: A pointer to the first byte to decode.
@@ -187,8 +180,8 @@ class Encoding(object, ICloneable):
             Returns: The number of characters produced by decoding the specified sequence of bytes.
         GetCharCount(self: Encoding, bytes: Array[Byte], index: int, count: int) -> int
         
-            When overridden in a derived class, calculates the number of characters 
-             produced by decoding a sequence of bytes from the specified byte array.
+            When overridden in a derived class, calculates the number of characters produced by decoding a 
+             sequence of bytes from the specified byte array.
         
         
             bytes: The byte array containing the sequence of bytes to decode.
@@ -197,8 +190,8 @@ class Encoding(object, ICloneable):
             Returns: The number of characters produced by decoding the specified sequence of bytes.
         GetCharCount(self: Encoding, bytes: Array[Byte]) -> int
         
-            When overridden in a derived class, calculates the number of characters 
-             produced by decoding all the bytes in the specified byte array.
+            When overridden in a derived class, calculates the number of characters produced by decoding all 
+             the bytes in the specified byte array.
         
         
             bytes: The byte array containing the sequence of bytes to decode.
@@ -210,8 +203,8 @@ class Encoding(object, ICloneable):
         """
         GetChars(self: Encoding, bytes: Array[Byte], byteIndex: int, byteCount: int, chars: Array[Char], charIndex: int) -> int
         
-            When overridden in a derived class, decodes a sequence of bytes from the 
-             specified byte array into the specified character array.
+            When overridden in a derived class, decodes a sequence of bytes from the specified byte array 
+             into the specified character array.
         
         
             bytes: The byte array containing the sequence of bytes to decode.
@@ -222,41 +215,33 @@ class Encoding(object, ICloneable):
             Returns: The actual number of characters written into chars.
         GetChars(self: Encoding, bytes: Byte*, byteCount: int, chars: Char*, charCount: int) -> int
         
-            When overridden in a derived class, decodes a sequence of bytes starting at the 
-             specified byte pointer into a set of characters that are stored starting at the 
-             specified character pointer.
+            When overridden in a derived class, decodes a sequence of bytes starting at the specified byte 
+             pointer into a set of characters that are stored starting at the specified character pointer.
         
         
             bytes: A pointer to the first byte to decode.
             byteCount: The number of bytes to decode.
-            chars: A pointer to the location at which to start writing the resulting set of 
-             characters.
-        
+            chars: A pointer to the location at which to start writing the resulting set of characters.
             charCount: The maximum number of characters to write.
-            Returns: The actual number of characters written at the location indicated by the chars 
-             parameter.
-        
+            Returns: The actual number of characters written at the location indicated by the chars parameter.
         GetChars(self: Encoding, bytes: Array[Byte]) -> Array[Char]
         
-            When overridden in a derived class, decodes all the bytes in the specified byte 
-             array into a set of characters.
+            When overridden in a derived class, decodes all the bytes in the specified byte array into a set 
+             of characters.
         
         
             bytes: The byte array containing the sequence of bytes to decode.
-            Returns: A character array containing the results of decoding the specified sequence of 
-             bytes.
-        
+            Returns: A character array containing the results of decoding the specified sequence of bytes.
         GetChars(self: Encoding, bytes: Array[Byte], index: int, count: int) -> Array[Char]
         
-            When overridden in a derived class, decodes a sequence of bytes from the 
-             specified byte array into a set of characters.
+            When overridden in a derived class, decodes a sequence of bytes from the specified byte array 
+             into a set of characters.
         
         
             bytes: The byte array containing the sequence of bytes to decode.
             index: The index of the first byte to decode.
             count: The number of bytes to decode.
-            Returns: A character array containing the results of decoding the specified sequence of 
-             bytes.
+            Returns: A character array containing the results of decoding the specified sequence of bytes.
         """
         pass
 
@@ -264,11 +249,10 @@ class Encoding(object, ICloneable):
         """
         GetDecoder(self: Encoding) -> Decoder
         
-            When overridden in a derived class, obtains a decoder that converts an encoded 
-             sequence of bytes into a sequence of characters.
+            When overridden in a derived class, obtains a decoder that converts an encoded sequence of bytes 
+             into a sequence of characters.
         
-            Returns: A System.Text.Decoder that converts an encoded sequence of bytes into a 
-             sequence of characters.
+            Returns: A System.Text.Decoder that converts an encoded sequence of bytes into a sequence of characters.
         """
         pass
 
@@ -276,11 +260,11 @@ class Encoding(object, ICloneable):
         """
         GetEncoder(self: Encoding) -> Encoder
         
-            When overridden in a derived class, obtains an encoder that converts a sequence 
-             of Unicode characters into an encoded sequence of bytes.
+            When overridden in a derived class, obtains an encoder that converts a sequence of Unicode 
+             characters into an encoded sequence of bytes.
         
-            Returns: A System.Text.Encoder that converts a sequence of Unicode characters into an 
-             encoded sequence of bytes.
+            Returns: A System.Text.Encoder that converts a sequence of Unicode characters into an encoded sequence of 
+             bytes.
         """
         pass
 
@@ -292,55 +276,51 @@ class Encoding(object, ICloneable):
             Returns the encoding associated with the specified code page name.
         
             name: The code page name of the preferred encoding. Any value returned by the 
-             System.Text.Encoding.WebName property is valid. Possible values are listed in 
-             the Name column of the table that appears in the System.Text.Encoding class 
-             topic.
+             System.Text.Encoding.WebName property is valid. Possible values are listed in the Name column of 
+             the table that appears in the System.Text.Encoding class topic.
         
             Returns: The encoding  associated with the specified code page.
         GetEncoding(name: str, encoderFallback: EncoderFallback, decoderFallback: DecoderFallback) -> Encoding
         
-            Returns the encoding associated with the specified code page name. Parameters 
-             specify an error handler for characters that cannot be encoded and byte 
-             sequences that cannot be decoded.
+            Returns the encoding associated with the specified code page name. Parameters specify an error 
+             handler for characters that cannot be encoded and byte sequences that cannot be decoded.
         
         
             name: The code page name of the preferred encoding. Any value returned by the 
-             System.Text.Encoding.WebName property is valid. Possible values are listed in 
-             the Name column of the table that appears in the System.Text.Encoding class 
-             topic.
+             System.Text.Encoding.WebName property is valid. Possible values are listed in the Name column of 
+             the table that appears in the System.Text.Encoding class topic.
         
-            encoderFallback: An object that provides an error-handling procedure when a character cannot be 
-             encoded with the current encoding.
+            encoderFallback: An object that provides an error-handling procedure when a character cannot be encoded with the 
+             current encoding.
         
-            decoderFallback: An object that provides an error-handling procedure when a byte sequence cannot 
-             be decoded with the current encoding.
+            decoderFallback: An object that provides an error-handling procedure when a byte sequence cannot be decoded with 
+             the current encoding.
         
             Returns: The encoding that is associated with the specified code page.
         GetEncoding(codepage: int) -> Encoding
         
             Returns the encoding associated with the specified code page identifier.
         
-            codepage: The code page identifier of the preferred encoding. Possible values are listed 
-             in the Code Page column of the table that appears in the System.Text.Encoding 
-             class topic.-or- 0 (zero), to use the default encoding.
+            codepage: The code page identifier of the preferred encoding. Possible values are listed in the Code Page 
+             column of the table that appears in the System.Text.Encoding class topic.-or- 0 (zero), to use 
+             the default encoding.
         
             Returns: The encoding that is associated with the specified code page.
         GetEncoding(codepage: int, encoderFallback: EncoderFallback, decoderFallback: DecoderFallback) -> Encoding
         
-            Returns the encoding associated with the specified code page identifier. 
-             Parameters specify an error handler for characters that cannot be encoded and 
-             byte sequences that cannot be decoded.
+            Returns the encoding associated with the specified code page identifier. Parameters specify an 
+             error handler for characters that cannot be encoded and byte sequences that cannot be decoded.
         
         
-            codepage: The code page identifier of the preferred encoding. Possible values are listed 
-             in the Code Page column of the table that appears in the System.Text.Encoding 
-             class topic.-or- 0 (zero), to use the default encoding.
+            codepage: The code page identifier of the preferred encoding. Possible values are listed in the Code Page 
+             column of the table that appears in the System.Text.Encoding class topic.-or- 0 (zero), to use 
+             the default encoding.
         
-            encoderFallback: An object that provides an error-handling procedure when a character cannot be 
-             encoded with the current encoding.
+            encoderFallback: An object that provides an error-handling procedure when a character cannot be encoded with the 
+             current encoding.
         
-            decoderFallback: An object that provides an error-handling procedure when a byte sequence cannot 
-             be decoded with the current encoding.
+            decoderFallback: An object that provides an error-handling procedure when a byte sequence cannot be decoded with 
+             the current encoding.
         
             Returns: The encoding that is associated with the specified code page.
         """
@@ -369,13 +349,12 @@ class Encoding(object, ICloneable):
         """
         GetMaxByteCount(self: Encoding, charCount: int) -> int
         
-            When overridden in a derived class, calculates the maximum number of bytes 
-             produced by encoding the specified number of characters.
+            When overridden in a derived class, calculates the maximum number of bytes produced by encoding 
+             the specified number of characters.
         
         
             charCount: The number of characters to encode.
-            Returns: The maximum number of bytes produced by encoding the specified number of 
-             characters.
+            Returns: The maximum number of bytes produced by encoding the specified number of characters.
         """
         pass
 
@@ -383,13 +362,12 @@ class Encoding(object, ICloneable):
         """
         GetMaxCharCount(self: Encoding, byteCount: int) -> int
         
-            When overridden in a derived class, calculates the maximum number of characters 
-             produced by decoding the specified number of bytes.
+            When overridden in a derived class, calculates the maximum number of characters produced by 
+             decoding the specified number of bytes.
         
         
             byteCount: The number of bytes to decode.
-            Returns: The maximum number of characters produced by decoding the specified number of 
-             bytes.
+            Returns: The maximum number of characters produced by decoding the specified number of bytes.
         """
         pass
 
@@ -397,11 +375,9 @@ class Encoding(object, ICloneable):
         """
         GetPreamble(self: Encoding) -> Array[Byte]
         
-            When overridden in a derived class, returns a sequence of bytes that specifies 
-             the encoding used.
-        
-            Returns: A byte array containing a sequence of bytes that specifies the encoding 
-             used.-or- A byte array of length zero, if a preamble is not required.
+            When overridden in a derived class, returns a sequence of bytes that specifies the encoding used.
+            Returns: A byte array containing a sequence of bytes that specifies the encoding used.-or- A byte array 
+             of length zero, if a preamble is not required.
         """
         pass
 
@@ -409,26 +385,22 @@ class Encoding(object, ICloneable):
         """
         GetString(self: Encoding, bytes: Array[Byte], index: int, count: int) -> str
         
-            When overridden in a derived class, decodes a sequence of bytes from the 
-             specified byte array into a string.
+            When overridden in a derived class, decodes a sequence of bytes from the specified byte array 
+             into a string.
         
         
             bytes: The byte array containing the sequence of bytes to decode.
             index: The index of the first byte to decode.
             count: The number of bytes to decode.
-            Returns: A System.String containing the results of decoding the specified sequence of 
-             bytes.
-        
+            Returns: A System.String containing the results of decoding the specified sequence of bytes.
         GetString(self: Encoding, bytes: Array[Byte]) -> str
         
-            When overridden in a derived class, decodes all the bytes in the specified byte 
-             array into a string.
+            When overridden in a derived class, decodes all the bytes in the specified byte array into a 
+             string.
         
         
             bytes: The byte array containing the sequence of bytes to decode.
-            Returns: A System.String containing the results of decoding the specified sequence of 
-             bytes.
-        
+            Returns: A System.String containing the results of decoding the specified sequence of bytes.
         GetString(self: Encoding, bytes: Byte*, byteCount: int) -> str
         """
         pass
@@ -437,22 +409,21 @@ class Encoding(object, ICloneable):
         """
         IsAlwaysNormalized(self: Encoding, form: NormalizationForm) -> bool
         
-            When overridden in a derived class, gets a value indicating whether the current 
-             encoding is always normalized, using the specified normalization form.
+            When overridden in a derived class, gets a value indicating whether the current encoding is 
+             always normalized, using the specified normalization form.
         
         
             form: One of the System.Text.NormalizationForm values.
-            Returns: true if the current System.Text.Encoding object is always normalized using the 
-             specified System.Text.NormalizationForm value; otherwise, false. The default is 
-             false.
+            Returns: true if the current System.Text.Encoding object is always normalized using the specified 
+             System.Text.NormalizationForm value; otherwise, false. The default is false.
         
         IsAlwaysNormalized(self: Encoding) -> bool
         
-            Gets a value indicating whether the current encoding is always normalized, 
-             using the default normalization form.
+            Gets a value indicating whether the current encoding is always normalized, using the default 
+             normalization form.
         
-            Returns: true if the current System.Text.Encoding is always normalized; otherwise, 
-             false. The default is false.
+            Returns: true if the current System.Text.Encoding is always normalized; otherwise, false. The default is 
+             false.
         """
         pass
 
@@ -608,8 +579,8 @@ class ASCIIEncoding(Encoding, ICloneable):
         """
         GetByteCount(self: ASCIIEncoding, chars: Char*, count: int) -> int
         
-            Calculates the number of bytes produced by encoding a set of characters 
-             starting at the specified character pointer.
+            Calculates the number of bytes produced by encoding a set of characters starting at the 
+             specified character pointer.
         
         
             chars: A pointer to the first character to encode.
@@ -617,16 +588,16 @@ class ASCIIEncoding(Encoding, ICloneable):
             Returns: The number of bytes produced by encoding the specified characters.
         GetByteCount(self: ASCIIEncoding, chars: str) -> int
         
-            Calculates the number of bytes produced by encoding the characters in the 
-             specified System.String.
+            Calculates the number of bytes produced by encoding the characters in the specified 
+             System.String.
         
         
             chars: The System.String containing the set of characters to encode.
             Returns: The number of bytes produced by encoding the specified characters.
         GetByteCount(self: ASCIIEncoding, chars: Array[Char], index: int, count: int) -> int
         
-            Calculates the number of bytes produced by encoding a set of characters from 
-             the specified character array.
+            Calculates the number of bytes produced by encoding a set of characters from the specified 
+             character array.
         
         
             chars: The character array containing the set of characters to encode.
@@ -640,22 +611,18 @@ class ASCIIEncoding(Encoding, ICloneable):
         """
         GetBytes(self: ASCIIEncoding, chars: Char*, charCount: int, bytes: Byte*, byteCount: int) -> int
         
-            Encodes a set of characters starting at the specified character pointer into a 
-             sequence of bytes that are stored starting at the specified byte pointer.
+            Encodes a set of characters starting at the specified character pointer into a sequence of bytes 
+             that are stored starting at the specified byte pointer.
         
         
             chars: A pointer to the first character to encode.
             charCount: The number of characters to encode.
-            bytes: A pointer to the location at which to start writing the resulting sequence of 
-             bytes.
-        
+            bytes: A pointer to the location at which to start writing the resulting sequence of bytes.
             byteCount: The maximum number of bytes to write.
             Returns: The actual number of bytes written at the location indicated by bytes.
         GetBytes(self: ASCIIEncoding, chars: Array[Char], charIndex: int, charCount: int, bytes: Array[Byte], byteIndex: int) -> int
         
-            Encodes a set of characters from the specified character array into the 
-             specified byte array.
-        
+            Encodes a set of characters from the specified character array into the specified byte array.
         
             chars: The character array containing the set of characters to encode.
             charIndex: The index of the first character to encode.
@@ -665,9 +632,7 @@ class ASCIIEncoding(Encoding, ICloneable):
             Returns: The actual number of bytes written into bytes.
         GetBytes(self: ASCIIEncoding, chars: str, charIndex: int, charCount: int, bytes: Array[Byte], byteIndex: int) -> int
         
-            Encodes a set of characters from the specified System.String into the specified 
-             byte array.
-        
+            Encodes a set of characters from the specified System.String into the specified byte array.
         
             chars: The System.String containing the set of characters to encode.
             charIndex: The index of the first character to encode.
@@ -682,8 +647,8 @@ class ASCIIEncoding(Encoding, ICloneable):
         """
         GetCharCount(self: ASCIIEncoding, bytes: Byte*, count: int) -> int
         
-            Calculates the number of characters produced by decoding a sequence of bytes 
-             starting at the specified byte pointer.
+            Calculates the number of characters produced by decoding a sequence of bytes starting at the 
+             specified byte pointer.
         
         
             bytes: A pointer to the first byte to decode.
@@ -691,8 +656,8 @@ class ASCIIEncoding(Encoding, ICloneable):
             Returns: The number of characters produced by decoding the specified sequence of bytes.
         GetCharCount(self: ASCIIEncoding, bytes: Array[Byte], index: int, count: int) -> int
         
-            Calculates the number of characters produced by decoding a sequence of bytes 
-             from the specified byte array.
+            Calculates the number of characters produced by decoding a sequence of bytes from the specified 
+             byte array.
         
         
             bytes: The byte array containing the sequence of bytes to decode.
@@ -706,22 +671,18 @@ class ASCIIEncoding(Encoding, ICloneable):
         """
         GetChars(self: ASCIIEncoding, bytes: Byte*, byteCount: int, chars: Char*, charCount: int) -> int
         
-            Decodes a sequence of bytes starting at the specified byte pointer into a set 
-             of characters that are stored starting at the specified character pointer.
+            Decodes a sequence of bytes starting at the specified byte pointer into a set of characters that 
+             are stored starting at the specified character pointer.
         
         
             bytes: A pointer to the first byte to decode.
             byteCount: The number of bytes to decode.
-            chars: A pointer to the location at which to start writing the resulting set of 
-             characters.
-        
+            chars: A pointer to the location at which to start writing the resulting set of characters.
             charCount: The maximum number of characters to write.
             Returns: The actual number of characters written at the location indicated by chars.
         GetChars(self: ASCIIEncoding, bytes: Array[Byte], byteIndex: int, byteCount: int, chars: Array[Char], charIndex: int) -> int
         
-            Decodes a sequence of bytes from the specified byte array into the specified 
-             character array.
-        
+            Decodes a sequence of bytes from the specified byte array into the specified character array.
         
             bytes: The byte array containing the sequence of bytes to decode.
             byteIndex: The index of the first byte to decode.
@@ -736,11 +697,11 @@ class ASCIIEncoding(Encoding, ICloneable):
         """
         GetDecoder(self: ASCIIEncoding) -> Decoder
         
-            Obtains a decoder that converts an ASCII encoded sequence of bytes into a 
-             sequence of Unicode characters.
+            Obtains a decoder that converts an ASCII encoded sequence of bytes into a sequence of Unicode 
+             characters.
         
-            Returns: A System.Text.Decoder that converts an ASCII encoded sequence of bytes into a 
-             sequence of Unicode characters.
+            Returns: A System.Text.Decoder that converts an ASCII encoded sequence of bytes into a sequence of 
+             Unicode characters.
         """
         pass
 
@@ -748,11 +709,11 @@ class ASCIIEncoding(Encoding, ICloneable):
         """
         GetEncoder(self: ASCIIEncoding) -> Encoder
         
-            Obtains an encoder that converts a sequence of Unicode characters into an ASCII 
-             encoded sequence of bytes.
+            Obtains an encoder that converts a sequence of Unicode characters into an ASCII encoded sequence 
+             of bytes.
         
-            Returns: An System.Text.Encoder that converts a sequence of Unicode characters into an 
-             ASCII encoded sequence of bytes.
+            Returns: An System.Text.Encoder that converts a sequence of Unicode characters into an ASCII encoded 
+             sequence of bytes.
         """
         pass
 
@@ -760,13 +721,10 @@ class ASCIIEncoding(Encoding, ICloneable):
         """
         GetMaxByteCount(self: ASCIIEncoding, charCount: int) -> int
         
-            Calculates the maximum number of bytes produced by encoding the specified 
-             number of characters.
-        
+            Calculates the maximum number of bytes produced by encoding the specified number of characters.
         
             charCount: The number of characters to encode.
-            Returns: The maximum number of bytes produced by encoding the specified number of 
-             characters.
+            Returns: The maximum number of bytes produced by encoding the specified number of characters.
         """
         pass
 
@@ -774,13 +732,10 @@ class ASCIIEncoding(Encoding, ICloneable):
         """
         GetMaxCharCount(self: ASCIIEncoding, byteCount: int) -> int
         
-            Calculates the maximum number of characters produced by decoding the specified 
-             number of bytes.
-        
+            Calculates the maximum number of characters produced by decoding the specified number of bytes.
         
             byteCount: The number of bytes to decode.
-            Returns: The maximum number of characters produced by decoding the specified number of 
-             bytes.
+            Returns: The maximum number of characters produced by decoding the specified number of bytes.
         """
         pass
 
@@ -793,8 +748,7 @@ class ASCIIEncoding(Encoding, ICloneable):
             bytes: The byte array containing the sequence of bytes to decode.
             byteIndex: The index of the first byte to decode.
             byteCount: The number of bytes to decode.
-            Returns: A System.String containing the results of decoding the specified sequence of 
-             bytes.
+            Returns: A System.String containing the results of decoding the specified sequence of bytes.
         """
         pass
 
@@ -820,8 +774,8 @@ class Decoder(object):
         """
         Convert(self: Decoder, bytes: Byte*, byteCount: int, chars: Char*, charCount: int, flush: bool) -> (int, int, bool)
         
-            Converts a buffer of encoded bytes to UTF-16 encoded characters and stores the 
-             result in another buffer.
+            Converts a buffer of encoded bytes to UTF-16 encoded characters and stores the result in another 
+             buffer.
         
         
             bytes: The address of a buffer that contains the byte sequences to convert.
@@ -831,8 +785,8 @@ class Decoder(object):
             flush: true to indicate no further data is to be converted; otherwise, false.
         Convert(self: Decoder, bytes: Array[Byte], byteIndex: int, byteCount: int, chars: Array[Char], charIndex: int, charCount: int, flush: bool) -> (int, int, bool)
         
-            Converts an array of encoded bytes to UTF-16 encoded characters and stores the 
-             result in a byte array.
+            Converts an array of encoded bytes to UTF-16 encoded characters and stores the result in a byte 
+             array.
         
         
             bytes: A byte array to convert.
@@ -849,48 +803,46 @@ class Decoder(object):
         """
         GetCharCount(self: Decoder, bytes: Byte*, count: int, flush: bool) -> int
         
-            When overridden in a derived class, calculates the number of characters 
-             produced by decoding a sequence of bytes starting at the specified byte 
-             pointer. A parameter indicates whether to clear the internal state of the 
-             decoder after the calculation.
+            When overridden in a derived class, calculates the number of characters produced by decoding a 
+             sequence of bytes starting at the specified byte pointer. A parameter indicates whether to clear 
+             the internal state of the decoder after the calculation.
         
         
             bytes: A pointer to the first byte to decode.
             count: The number of bytes to decode.
-            flush: true to simulate clearing the internal state of the encoder after the 
-             calculation; otherwise, false.
+            flush: true to simulate clearing the internal state of the encoder after the calculation; otherwise, 
+             false.
         
-            Returns: The number of characters produced by decoding the specified sequence of bytes 
-             and any bytes in the internal buffer.
+            Returns: The number of characters produced by decoding the specified sequence of bytes and any bytes in 
+             the internal buffer.
         
         GetCharCount(self: Decoder, bytes: Array[Byte], index: int, count: int, flush: bool) -> int
         
-            When overridden in a derived class, calculates the number of characters 
-             produced by decoding a sequence of bytes from the specified byte array. A 
-             parameter indicates whether to clear the internal state of the decoder after 
-             the calculation.
+            When overridden in a derived class, calculates the number of characters produced by decoding a 
+             sequence of bytes from the specified byte array. A parameter indicates whether to clear the 
+             internal state of the decoder after the calculation.
         
         
             bytes: The byte array containing the sequence of bytes to decode.
             index: The index of the first byte to decode.
             count: The number of bytes to decode.
-            flush: true to simulate clearing the internal state of the encoder after the 
-             calculation; otherwise, false.
+            flush: true to simulate clearing the internal state of the encoder after the calculation; otherwise, 
+             false.
         
-            Returns: The number of characters produced by decoding the specified sequence of bytes 
-             and any bytes in the internal buffer.
+            Returns: The number of characters produced by decoding the specified sequence of bytes and any bytes in 
+             the internal buffer.
         
         GetCharCount(self: Decoder, bytes: Array[Byte], index: int, count: int) -> int
         
-            When overridden in a derived class, calculates the number of characters 
-             produced by decoding a sequence of bytes from the specified byte array.
+            When overridden in a derived class, calculates the number of characters produced by decoding a 
+             sequence of bytes from the specified byte array.
         
         
             bytes: The byte array containing the sequence of bytes to decode.
             index: The index of the first byte to decode.
             count: The number of bytes to decode.
-            Returns: The number of characters produced by decoding the specified sequence of bytes 
-             and any bytes in the internal buffer.
+            Returns: The number of characters produced by decoding the specified sequence of bytes and any bytes in 
+             the internal buffer.
         """
         pass
 
@@ -898,31 +850,23 @@ class Decoder(object):
         """
         GetChars(self: Decoder, bytes: Byte*, byteCount: int, chars: Char*, charCount: int, flush: bool) -> int
         
-            When overridden in a derived class, decodes a sequence of bytes starting at the 
-             specified byte pointer and any bytes in the internal buffer into a set of 
-             characters that are stored starting at the specified character pointer. A 
-             parameter indicates whether to clear the internal state of the decoder after 
-             the conversion.
+            When overridden in a derived class, decodes a sequence of bytes starting at the specified byte 
+             pointer and any bytes in the internal buffer into a set of characters that are stored starting 
+             at the specified character pointer. A parameter indicates whether to clear the internal state of 
+             the decoder after the conversion.
         
         
             bytes: A pointer to the first byte to decode.
             byteCount: The number of bytes to decode.
-            chars: A pointer to the location at which to start writing the resulting set of 
-             characters.
-        
+            chars: A pointer to the location at which to start writing the resulting set of characters.
             charCount: The maximum number of characters to write.
-            flush: true to clear the internal state of the decoder after the conversion; 
-             otherwise, false.
-        
-            Returns: The actual number of characters written at the location indicated by the chars 
-             parameter.
-        
+            flush: true to clear the internal state of the decoder after the conversion; otherwise, false.
+            Returns: The actual number of characters written at the location indicated by the chars parameter.
         GetChars(self: Decoder, bytes: Array[Byte], byteIndex: int, byteCount: int, chars: Array[Char], charIndex: int, flush: bool) -> int
         
-            When overridden in a derived class, decodes a sequence of bytes from the 
-             specified byte array and any bytes in the internal buffer into the specified 
-             character array. A parameter indicates whether to clear the internal state of 
-             the decoder after the conversion.
+            When overridden in a derived class, decodes a sequence of bytes from the specified byte array 
+             and any bytes in the internal buffer into the specified character array. A parameter indicates 
+             whether to clear the internal state of the decoder after the conversion.
         
         
             bytes: The byte array containing the sequence of bytes to decode.
@@ -930,15 +874,12 @@ class Decoder(object):
             byteCount: The number of bytes to decode.
             chars: The character array to contain the resulting set of characters.
             charIndex: The index at which to start writing the resulting set of characters.
-            flush: true to clear the internal state of the decoder after the conversion; 
-             otherwise, false.
-        
+            flush: true to clear the internal state of the decoder after the conversion; otherwise, false.
             Returns: The actual number of characters written into the chars parameter.
         GetChars(self: Decoder, bytes: Array[Byte], byteIndex: int, byteCount: int, chars: Array[Char], charIndex: int) -> int
         
-            When overridden in a derived class, decodes a sequence of bytes from the 
-             specified byte array and any bytes in the internal buffer into the specified 
-             character array.
+            When overridden in a derived class, decodes a sequence of bytes from the specified byte array 
+             and any bytes in the internal buffer into the specified character array.
         
         
             bytes: The byte array containing the sequence of bytes to decode.
@@ -1018,13 +959,12 @@ class DecoderExceptionFallback(DecoderFallback):
         """
         Equals(self: DecoderExceptionFallback, value: object) -> bool
         
-            Indicates whether the current System.Text.DecoderExceptionFallback object and a 
-             specified object are equal.
+            Indicates whether the current System.Text.DecoderExceptionFallback object and a specified object 
+             are equal.
         
         
             value: An object that derives from the System.Text.DecoderExceptionFallback class.
-            Returns: true if value is not null and is a System.Text.DecoderExceptionFallback object; 
-             otherwise, false.
+            Returns: true if value is not null and is a System.Text.DecoderExceptionFallback object; otherwise, false.
         """
         pass
 
@@ -1033,8 +973,7 @@ class DecoderExceptionFallback(DecoderFallback):
         GetHashCode(self: DecoderExceptionFallback) -> int
         
             Retrieves the hash code for this instance.
-            Returns: The return value is always the same arbitrary value, and has no special 
-             significance.
+            Returns: The return value is always the same arbitrary value, and has no special significance.
         """
         pass
 
@@ -1060,14 +999,14 @@ class DecoderFallbackBuffer(object):
         """
         Fallback(self: DecoderFallbackBuffer, bytesUnknown: Array[Byte], index: int) -> bool
         
-            When overridden in a derived class, prepares the fallback buffer to handle the 
-             specified input byte sequence.
+            When overridden in a derived class, prepares the fallback buffer to handle the specified input 
+             byte sequence.
         
         
             bytesUnknown: An input array of bytes.
             index: The index position of a byte in bytesUnknown.
-            Returns: true if the fallback buffer can process bytesUnknown; false if the fallback 
-             buffer ignores bytesUnknown.
+            Returns: true if the fallback buffer can process bytesUnknown; false if the fallback buffer ignores 
+             bytesUnknown.
         """
         pass
 
@@ -1075,9 +1014,7 @@ class DecoderFallbackBuffer(object):
         """
         GetNextChar(self: DecoderFallbackBuffer) -> Char
         
-            When overridden in a derived class, retrieves the next character in the 
-             fallback buffer.
-        
+            When overridden in a derived class, retrieves the next character in the fallback buffer.
             Returns: The next character in the fallback buffer.
         """
         pass
@@ -1087,11 +1024,11 @@ class DecoderFallbackBuffer(object):
         MovePrevious(self: DecoderFallbackBuffer) -> bool
         
             When overridden in a derived class, causes the next call to the 
-             System.Text.DecoderFallbackBuffer.GetNextChar method to access the data buffer 
-             character position that is prior to the current character position.
+             System.Text.DecoderFallbackBuffer.GetNextChar method to access the data buffer character 
+             position that is prior to the current character position.
         
-            Returns: true if the System.Text.DecoderFallbackBuffer.MovePrevious operation was 
-             successful; otherwise, false.
+            Returns: true if the System.Text.DecoderFallbackBuffer.MovePrevious operation was successful; otherwise, 
+             false.
         """
         pass
 
@@ -1121,17 +1058,16 @@ class DecoderExceptionFallbackBuffer(DecoderFallbackBuffer):
         """
         Fallback(self: DecoderExceptionFallbackBuffer, bytesUnknown: Array[Byte], index: int) -> bool
         
-            Throws System.Text.DecoderFallbackException when the input byte sequence cannot 
-             be decoded. The nominal return value is not used.
+            Throws System.Text.DecoderFallbackException when the input byte sequence cannot be decoded. The 
+             nominal return value is not used.
         
         
             bytesUnknown: An input array of bytes.
             index: The index position of a byte in the input.
             Returns: None. No value is returned because the 
-             System.Text.DecoderExceptionFallbackBuffer.Fallback(System.Byte[],System.Int32) 
-             method always throws an exception. The nominal return value is true. A return 
-             value is defined, although it is unchanging, because this method implements an 
-             abstract method.
+             System.Text.DecoderExceptionFallbackBuffer.Fallback(System.Byte[],System.Int32) method always 
+             throws an exception. The nominal return value is true. A return value is defined, although it is 
+             unchanging, because this method implements an abstract method.
         """
         pass
 
@@ -1140,9 +1076,8 @@ class DecoderExceptionFallbackBuffer(DecoderFallbackBuffer):
         GetNextChar(self: DecoderExceptionFallbackBuffer) -> Char
         
             Retrieves the next character in the exception data buffer.
-            Returns: The return value is always the Unicode character NULL (U+0000). A return value 
-             is defined, although it is unchanging, because this method implements an 
-             abstract method.
+            Returns: The return value is always the Unicode character NULL (U+0000). A return value is defined, 
+             although it is unchanging, because this method implements an abstract method.
         """
         pass
 
@@ -1150,12 +1085,11 @@ class DecoderExceptionFallbackBuffer(DecoderFallbackBuffer):
         """
         MovePrevious(self: DecoderExceptionFallbackBuffer) -> bool
         
-            Causes the next call to System.Text.DecoderExceptionFallbackBuffer.GetNextChar 
-             to access the exception data buffer character position that is prior to the 
-             current position.
+            Causes the next call to System.Text.DecoderExceptionFallbackBuffer.GetNextChar to access the 
+             exception data buffer character position that is prior to the current position.
         
-            Returns: The return value is always false. A return value is defined, although it is 
-             unchanging, because this method implements an abstract method.
+            Returns: The return value is always false. A return value is defined, although it is unchanging, because 
+             this method implements an abstract method.
         """
         pass
 
@@ -1232,11 +1166,11 @@ class DecoderReplacementFallback(DecoderFallback):
         """
         CreateFallbackBuffer(self: DecoderReplacementFallback) -> DecoderFallbackBuffer
         
-            Creates a System.Text.DecoderFallbackBuffer object that is initialized with the 
-             replacement string of this System.Text.DecoderReplacementFallback object.
+            Creates a System.Text.DecoderFallbackBuffer object that is initialized with the replacement 
+             string of this System.Text.DecoderReplacementFallback object.
         
-            Returns: A System.Text.DecoderFallbackBuffer object that specifies a string to use 
-             instead of the original decoding operation input.
+            Returns: A System.Text.DecoderFallbackBuffer object that specifies a string to use instead of the 
+             original decoding operation input.
         """
         pass
 
@@ -1250,9 +1184,9 @@ class DecoderReplacementFallback(DecoderFallback):
         
             value: A System.Text.DecoderReplacementFallback object.
             Returns: true if value is a System.Text.DecoderReplacementFallback object having a 
-             System.Text.DecoderReplacementFallback.DefaultString property that is equal to 
-             the System.Text.DecoderReplacementFallback.DefaultString property of the 
-             current System.Text.DecoderReplacementFallback object; otherwise, false.
+             System.Text.DecoderReplacementFallback.DefaultString property that is equal to the 
+             System.Text.DecoderReplacementFallback.DefaultString property of the current 
+             System.Text.DecoderReplacementFallback object; otherwise, false.
         """
         pass
 
@@ -1260,9 +1194,7 @@ class DecoderReplacementFallback(DecoderFallback):
         """
         GetHashCode(self: DecoderReplacementFallback) -> int
         
-            Retrieves the hash code for the value of the 
-             System.Text.DecoderReplacementFallback object.
-        
+            Retrieves the hash code for the value of the System.Text.DecoderReplacementFallback object.
             Returns: The hash code of the value of the object.
         """
         pass
@@ -1311,11 +1243,8 @@ class DecoderReplacementFallbackBuffer(DecoderFallbackBuffer):
             Prepares the replacement fallback buffer to use the current replacement string.
         
             bytesUnknown: An input byte sequence. This parameter is ignored unless an exception is thrown.
-            index: The index position of the byte in bytesUnknown. This parameter is ignored in 
-             this operation.
-        
-            Returns: true if the replacement string is not empty; false if the replacement string is 
-             empty.
+            index: The index position of the byte in bytesUnknown. This parameter is ignored in this operation.
+            Returns: true if the replacement string is not empty; false if the replacement string is empty.
         """
         pass
 
@@ -1332,13 +1261,11 @@ class DecoderReplacementFallbackBuffer(DecoderFallbackBuffer):
         """
         MovePrevious(self: DecoderReplacementFallbackBuffer) -> bool
         
-            Causes the next call to 
-             System.Text.DecoderReplacementFallbackBuffer.GetNextChar to access the 
-             character position in the replacement fallback buffer prior to the current 
-             character position.
+            Causes the next call to System.Text.DecoderReplacementFallbackBuffer.GetNextChar to access the 
+             character position in the replacement fallback buffer prior to the current character position.
         
-            Returns: true if the System.Text.DecoderReplacementFallbackBuffer.MovePrevious operation 
-             was successful; otherwise, false.
+            Returns: true if the System.Text.DecoderReplacementFallbackBuffer.MovePrevious operation was successful; 
+             otherwise, false.
         """
         pass
 
@@ -1370,8 +1297,8 @@ class Encoder(object):
         """
         Convert(self: Encoder, chars: Char*, charCount: int, bytes: Byte*, byteCount: int, flush: bool) -> (int, int, bool)
         
-            Converts a buffer of Unicode characters to an encoded byte sequence and stores 
-             the result in another buffer.
+            Converts a buffer of Unicode characters to an encoded byte sequence and stores the result in 
+             another buffer.
         
         
             chars: The address of a string of UTF-16 encoded characters to convert.
@@ -1381,8 +1308,8 @@ class Encoder(object):
             flush: true to indicate no further data is to be converted; otherwise, false.
         Convert(self: Encoder, chars: Array[Char], charIndex: int, charCount: int, bytes: Array[Byte], byteIndex: int, byteCount: int, flush: bool) -> (int, int, bool)
         
-            Converts an array of Unicode characters to an encoded byte sequence and stores 
-             the result in an array of bytes.
+            Converts an array of Unicode characters to an encoded byte sequence and stores the result in an 
+             array of bytes.
         
         
             chars: An array of characters to convert.
@@ -1399,36 +1326,34 @@ class Encoder(object):
         """
         GetByteCount(self: Encoder, chars: Char*, count: int, flush: bool) -> int
         
-            When overridden in a derived class, calculates the number of bytes produced by 
-             encoding a set of characters starting at the specified character pointer. A 
-             parameter indicates whether to clear the internal state of the encoder after 
-             the calculation.
+            When overridden in a derived class, calculates the number of bytes produced by encoding a set of 
+             characters starting at the specified character pointer. A parameter indicates whether to clear 
+             the internal state of the encoder after the calculation.
         
         
             chars: A pointer to the first character to encode.
             count: The number of characters to encode.
-            flush: true to simulate clearing the internal state of the encoder after the 
-             calculation; otherwise, false.
+            flush: true to simulate clearing the internal state of the encoder after the calculation; otherwise, 
+             false.
         
-            Returns: The number of bytes produced by encoding the specified characters and any 
-             characters in the internal buffer.
+            Returns: The number of bytes produced by encoding the specified characters and any characters in the 
+             internal buffer.
         
         GetByteCount(self: Encoder, chars: Array[Char], index: int, count: int, flush: bool) -> int
         
-            When overridden in a derived class, calculates the number of bytes produced by 
-             encoding a set of characters from the specified character array. A parameter 
-             indicates whether to clear the internal state of the encoder after the 
-             calculation.
+            When overridden in a derived class, calculates the number of bytes produced by encoding a set of 
+             characters from the specified character array. A parameter indicates whether to clear the 
+             internal state of the encoder after the calculation.
         
         
             chars: The character array containing the set of characters to encode.
             index: The index of the first character to encode.
             count: The number of characters to encode.
-            flush: true to simulate clearing the internal state of the encoder after the 
-             calculation; otherwise, false.
+            flush: true to simulate clearing the internal state of the encoder after the calculation; otherwise, 
+             false.
         
-            Returns: The number of bytes produced by encoding the specified characters and any 
-             characters in the internal buffer.
+            Returns: The number of bytes produced by encoding the specified characters and any characters in the 
+             internal buffer.
         """
         pass
 
@@ -1436,31 +1361,23 @@ class Encoder(object):
         """
         GetBytes(self: Encoder, chars: Char*, charCount: int, bytes: Byte*, byteCount: int, flush: bool) -> int
         
-            When overridden in a derived class, encodes a set of characters starting at the 
-             specified character pointer and any characters in the internal buffer into a 
-             sequence of bytes that are stored starting at the specified byte pointer. A 
-             parameter indicates whether to clear the internal state of the encoder after 
-             the conversion.
+            When overridden in a derived class, encodes a set of characters starting at the specified 
+             character pointer and any characters in the internal buffer into a sequence of bytes that are 
+             stored starting at the specified byte pointer. A parameter indicates whether to clear the 
+             internal state of the encoder after the conversion.
         
         
             chars: A pointer to the first character to encode.
             charCount: The number of characters to encode.
-            bytes: A pointer to the location at which to start writing the resulting sequence of 
-             bytes.
-        
+            bytes: A pointer to the location at which to start writing the resulting sequence of bytes.
             byteCount: The maximum number of bytes to write.
-            flush: true to clear the internal state of the encoder after the conversion; 
-             otherwise, false.
-        
-            Returns: The actual number of bytes written at the location indicated by the bytes 
-             parameter.
-        
+            flush: true to clear the internal state of the encoder after the conversion; otherwise, false.
+            Returns: The actual number of bytes written at the location indicated by the bytes parameter.
         GetBytes(self: Encoder, chars: Array[Char], charIndex: int, charCount: int, bytes: Array[Byte], byteIndex: int, flush: bool) -> int
         
-            When overridden in a derived class, encodes a set of characters from the 
-             specified character array and any characters in the internal buffer into the 
-             specified byte array. A parameter indicates whether to clear the internal state 
-             of the encoder after the conversion.
+            When overridden in a derived class, encodes a set of characters from the specified character 
+             array and any characters in the internal buffer into the specified byte array. A parameter 
+             indicates whether to clear the internal state of the encoder after the conversion.
         
         
             chars: The character array containing the set of characters to encode.
@@ -1468,9 +1385,7 @@ class Encoder(object):
             charCount: The number of characters to encode.
             bytes: The byte array to contain the resulting sequence of bytes.
             byteIndex: The index at which to start writing the resulting sequence of bytes.
-            flush: true to clear the internal state of the encoder after the conversion; 
-             otherwise, false.
-        
+            flush: true to clear the internal state of the encoder after the conversion; otherwise, false.
             Returns: The actual number of bytes written into bytes.
         """
         pass
@@ -1543,8 +1458,8 @@ class EncoderExceptionFallback(EncoderFallback):
         """
         Equals(self: EncoderExceptionFallback, value: object) -> bool
         
-            Indicates whether the current System.Text.EncoderExceptionFallback object and a 
-             specified object are equal.
+            Indicates whether the current System.Text.EncoderExceptionFallback object and a specified object 
+             are equal.
         
         
             value: An object that derives from the System.Text.EncoderExceptionFallback class.
@@ -1558,8 +1473,7 @@ class EncoderExceptionFallback(EncoderFallback):
         GetHashCode(self: EncoderExceptionFallback) -> int
         
             Retrieves the hash code for this instance.
-            Returns: The return value is always the same arbitrary value, and has no special 
-             significance.
+            Returns: The return value is always the same arbitrary value, and has no special significance.
         """
         pass
 
@@ -1585,26 +1499,26 @@ class EncoderFallbackBuffer(object):
         """
         Fallback(self: EncoderFallbackBuffer, charUnknownHigh: Char, charUnknownLow: Char, index: int) -> bool
         
-            When overridden in a derived class, prepares the fallback buffer to handle the 
-             specified surrogate pair.
+            When overridden in a derived class, prepares the fallback buffer to handle the specified 
+             surrogate pair.
         
         
             charUnknownHigh: The high surrogate of the input pair.
             charUnknownLow: The low surrogate of the input pair.
             index: The index position of the surrogate pair in the input buffer.
-            Returns: true if the fallback buffer can process charUnknownHigh and charUnknownLow; 
-             false if the fallback buffer ignores the surrogate pair.
+            Returns: true if the fallback buffer can process charUnknownHigh and charUnknownLow; false if the 
+             fallback buffer ignores the surrogate pair.
         
         Fallback(self: EncoderFallbackBuffer, charUnknown: Char, index: int) -> bool
         
-            When overridden in a derived class, prepares the fallback buffer to handle the 
-             specified input character.
+            When overridden in a derived class, prepares the fallback buffer to handle the specified input 
+             character.
         
         
             charUnknown: An input character.
             index: The index position of the character in the input buffer.
-            Returns: true if the fallback buffer can process charUnknown; false if the fallback 
-             buffer ignores charUnknown.
+            Returns: true if the fallback buffer can process charUnknown; false if the fallback buffer ignores 
+             charUnknown.
         """
         pass
 
@@ -1612,9 +1526,7 @@ class EncoderFallbackBuffer(object):
         """
         GetNextChar(self: EncoderFallbackBuffer) -> Char
         
-            When overridden in a derived class, retrieves the next character in the 
-             fallback buffer.
-        
+            When overridden in a derived class, retrieves the next character in the fallback buffer.
             Returns: The next character in the fallback buffer.
         """
         pass
@@ -1624,11 +1536,11 @@ class EncoderFallbackBuffer(object):
         MovePrevious(self: EncoderFallbackBuffer) -> bool
         
             When overridden in a derived class, causes the next call to the 
-             System.Text.EncoderFallbackBuffer.GetNextChar method to access the data buffer 
-             character position that is prior to the current character position.
+             System.Text.EncoderFallbackBuffer.GetNextChar method to access the data buffer character 
+             position that is prior to the current character position.
         
-            Returns: true if the System.Text.EncoderFallbackBuffer.MovePrevious operation was 
-             successful; otherwise, false.
+            Returns: true if the System.Text.EncoderFallbackBuffer.MovePrevious operation was successful; otherwise, 
+             false.
         """
         pass
 
@@ -1658,29 +1570,28 @@ class EncoderExceptionFallbackBuffer(EncoderFallbackBuffer):
         """
         Fallback(self: EncoderExceptionFallbackBuffer, charUnknownHigh: Char, charUnknownLow: Char, index: int) -> bool
         
-            Throws an exception because the input character cannot be encoded. Parameters 
-             specify the value and index position of the surrogate pair in the input, and 
-             the nominal return value is not used.
+            Throws an exception because the input character cannot be encoded. Parameters specify the value 
+             and index position of the surrogate pair in the input, and the nominal return value is not used.
         
         
             charUnknownHigh: The high surrogate of the input pair.
             charUnknownLow: The low surrogate of the input pair.
             index: The index position of the surrogate pair in the input buffer.
             Returns: None. No value is returned because the 
-             System.Text.EncoderExceptionFallbackBuffer.Fallback(System.Char,System.Char,Syst
-             em.Int32) method always throws an exception.
+             System.Text.EncoderExceptionFallbackBuffer.Fallback(System.Char,System.Char,System.Int32) method 
+             always throws an exception.
         
         Fallback(self: EncoderExceptionFallbackBuffer, charUnknown: Char, index: int) -> bool
         
-            Throws an exception because the input character cannot be encoded. Parameters 
-             specify the value and index position of the character that cannot be converted.
+            Throws an exception because the input character cannot be encoded. Parameters specify the value 
+             and index position of the character that cannot be converted.
         
         
             charUnknown: An input character.
             index: The index position of the character in the input buffer.
             Returns: None. No value is returned because the 
-             System.Text.EncoderExceptionFallbackBuffer.Fallback(System.Char,System.Int32) 
-             method always throws an exception.
+             System.Text.EncoderExceptionFallbackBuffer.Fallback(System.Char,System.Int32) method always 
+             throws an exception.
         """
         pass
 
@@ -1689,9 +1600,8 @@ class EncoderExceptionFallbackBuffer(EncoderFallbackBuffer):
         GetNextChar(self: EncoderExceptionFallbackBuffer) -> Char
         
             Retrieves the next character in the exception fallback buffer.
-            Returns: The return value is always the Unicode character, NULL (U+0000). A return value 
-             is defined, although it is unchanging, because this method implements an 
-             abstract method.
+            Returns: The return value is always the Unicode character, NULL (U+0000). A return value is defined, 
+             although it is unchanging, because this method implements an abstract method.
         """
         pass
 
@@ -1699,12 +1609,11 @@ class EncoderExceptionFallbackBuffer(EncoderFallbackBuffer):
         """
         MovePrevious(self: EncoderExceptionFallbackBuffer) -> bool
         
-            Causes the next call to the 
-             System.Text.EncoderExceptionFallbackBuffer.GetNextChar method to access the 
-             exception data buffer character position that is prior to the current position.
+            Causes the next call to the System.Text.EncoderExceptionFallbackBuffer.GetNextChar method to 
+             access the exception data buffer character position that is prior to the current position.
         
-            Returns: The return value is always false.A return value is defined, although it is 
-             unchanging, because this method implements an abstract method.
+            Returns: The return value is always false.A return value is defined, although it is unchanging, because 
+             this method implements an abstract method.
         """
         pass
 
@@ -1802,11 +1711,11 @@ class EncoderReplacementFallback(EncoderFallback):
         """
         CreateFallbackBuffer(self: EncoderReplacementFallback) -> EncoderFallbackBuffer
         
-            Creates a System.Text.EncoderFallbackBuffer object that is initialized with the 
-             replacement string of this System.Text.EncoderReplacementFallback object.
+            Creates a System.Text.EncoderFallbackBuffer object that is initialized with the replacement 
+             string of this System.Text.EncoderReplacementFallback object.
         
-            Returns: A System.Text.EncoderFallbackBuffer object equal to this 
-             System.Text.EncoderReplacementFallback object.
+            Returns: A System.Text.EncoderFallbackBuffer object equal to this System.Text.EncoderReplacementFallback 
+             object.
         """
         pass
 
@@ -1819,9 +1728,9 @@ class EncoderReplacementFallback(EncoderFallback):
         
         
             value: A System.Text.EncoderReplacementFallback object.
-            Returns: true if the value parameter specifies an System.Text.EncoderReplacementFallback 
-             object and the replacement string of that object is equal to the replacement 
-             string of this System.Text.EncoderReplacementFallback object; otherwise, false.
+            Returns: true if the value parameter specifies an System.Text.EncoderReplacementFallback object and the 
+             replacement string of that object is equal to the replacement string of this 
+             System.Text.EncoderReplacementFallback object; otherwise, false.
         """
         pass
 
@@ -1829,9 +1738,7 @@ class EncoderReplacementFallback(EncoderFallback):
         """
         GetHashCode(self: EncoderReplacementFallback) -> int
         
-            Retrieves the hash code for the value of the 
-             System.Text.EncoderReplacementFallback object.
-        
+            Retrieves the hash code for the value of the System.Text.EncoderReplacementFallback object.
             Returns: The hash code of the value of the object.
         """
         pass
@@ -1877,29 +1784,24 @@ class EncoderReplacementFallbackBuffer(EncoderFallbackBuffer):
         """
         Fallback(self: EncoderReplacementFallbackBuffer, charUnknownHigh: Char, charUnknownLow: Char, index: int) -> bool
         
-            Indicates whether a replacement string can be used when an input surrogate pair 
-             cannot be encoded, or whether the surrogate pair can be ignored. Parameters 
-             specify the surrogate pair and the index position of the pair in the input.
+            Indicates whether a replacement string can be used when an input surrogate pair cannot be 
+             encoded, or whether the surrogate pair can be ignored. Parameters specify the surrogate pair and 
+             the index position of the pair in the input.
         
         
             charUnknownHigh: The high surrogate of the input pair.
             charUnknownLow: The low surrogate of the input pair.
             index: The index position of the surrogate pair in the input buffer.
-            Returns: true if the replacement string is not empty; false if the replacement string is 
-             empty.
-        
+            Returns: true if the replacement string is not empty; false if the replacement string is empty.
         Fallback(self: EncoderReplacementFallbackBuffer, charUnknown: Char, index: int) -> bool
         
             Prepares the replacement fallback buffer to use the current replacement string.
         
-            charUnknown: An input character. This parameter is ignored in this operation unless an 
-             exception is thrown.
+            charUnknown: An input character. This parameter is ignored in this operation unless an exception is thrown.
+            index: The index position of the character in the input buffer. This parameter is ignored in this 
+             operation.
         
-            index: The index position of the character in the input buffer. This parameter is 
-             ignored in this operation.
-        
-            Returns: true if the replacement string is not empty; false if the replacement string is 
-             empty.
+            Returns: true if the replacement string is not empty; false if the replacement string is empty.
         """
         pass
 
@@ -1908,8 +1810,7 @@ class EncoderReplacementFallbackBuffer(EncoderFallbackBuffer):
         GetNextChar(self: EncoderReplacementFallbackBuffer) -> Char
         
             Retrieves the next character in the replacement fallback buffer.
-            Returns: The next Unicode character in the replacement fallback buffer that the 
-             application can encode.
+            Returns: The next Unicode character in the replacement fallback buffer that the application can encode.
         """
         pass
 
@@ -1917,13 +1818,12 @@ class EncoderReplacementFallbackBuffer(EncoderFallbackBuffer):
         """
         MovePrevious(self: EncoderReplacementFallbackBuffer) -> bool
         
-            Causes the next call to the 
-             System.Text.EncoderReplacementFallbackBuffer.GetNextChar method to access the 
-             character position in the replacement fallback buffer prior to the current 
-             character position.
+            Causes the next call to the System.Text.EncoderReplacementFallbackBuffer.GetNextChar method to 
+             access the character position in the replacement fallback buffer prior to the current character 
+             position.
         
-            Returns: true if the System.Text.EncoderReplacementFallbackBuffer.MovePrevious operation 
-             was successful; otherwise, false.
+            Returns: true if the System.Text.EncoderReplacementFallbackBuffer.MovePrevious operation was successful; 
+             otherwise, false.
         """
         pass
 
@@ -1969,11 +1869,10 @@ class EncodingInfo(object):
         """
         GetEncoding(self: EncodingInfo) -> Encoding
         
-            Returns a System.Text.Encoding object that corresponds to the current 
-             System.Text.EncodingInfo object.
+            Returns a System.Text.Encoding object that corresponds to the current System.Text.EncodingInfo 
+             object.
         
-            Returns: A System.Text.Encoding object that corresponds to the current 
-             System.Text.EncodingInfo object.
+            Returns: A System.Text.Encoding object that corresponds to the current System.Text.EncodingInfo object.
         """
         pass
 
@@ -2089,48 +1988,42 @@ class StringBuilder(object, ISerializable):
         """
         Append(self: StringBuilder, value: Decimal) -> StringBuilder
         
-            Appends the string representation of a specified decimal number to this 
-             instance.
-        
+            Appends the string representation of a specified decimal number to this instance.
         
             value: The value to append.
             Returns: A reference to this instance after the append operation has completed.
         Append(self: StringBuilder, value: UInt16) -> StringBuilder
         
-            Appends the string representation of a specified 16-bit unsigned integer to 
-             this instance.
-        
+            Appends the string representation of a specified 16-bit unsigned integer to this instance.
         
             value: The value to append.
             Returns: A reference to this instance after the append operation has completed.
         Append(self: StringBuilder, value: float) -> StringBuilder
         
-            Appends the string representation of a specified double-precision 
-             floating-point number to this instance.
+            Appends the string representation of a specified double-precision floating-point number to this 
+             instance.
         
         
             value: The value to append.
             Returns: A reference to this instance after the append operation has completed.
         Append(self: StringBuilder, value: Int64) -> StringBuilder
         
-            Appends the string representation of a specified 64-bit signed integer to this 
-             instance.
-        
+            Appends the string representation of a specified 64-bit signed integer to this instance.
         
             value: The value to append.
             Returns: A reference to this instance after the append operation has completed.
         Append(self: StringBuilder, value: Single) -> StringBuilder
         
-            Appends the string representation of a specified single-precision 
-             floating-point number to this instance.
+            Appends the string representation of a specified single-precision floating-point number to this 
+             instance.
         
         
             value: The value to append.
             Returns: A reference to this instance after the append operation has completed.
         Append(self: StringBuilder, value: Array[Char]) -> StringBuilder
         
-            Appends the string representation of the Unicode characters in a specified 
-             array to this instance.
+            Appends the string representation of the Unicode characters in a specified array to this 
+             instance.
         
         
             value: The array of characters to append.
@@ -2144,17 +2037,13 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the append operation has completed.
         Append(self: StringBuilder, value: UInt32) -> StringBuilder
         
-            Appends the string representation of a specified 32-bit unsigned integer to 
-             this instance.
-        
+            Appends the string representation of a specified 32-bit unsigned integer to this instance.
         
             value: The value to append.
             Returns: A reference to this instance after the append operation has completed.
         Append(self: StringBuilder, value: UInt64) -> StringBuilder
         
-            Appends the string representation of a specified 64-bit unsigned integer to 
-             this instance.
-        
+            Appends the string representation of a specified 64-bit unsigned integer to this instance.
         
             value: The value to append.
             Returns: A reference to this instance after the append operation has completed.
@@ -2180,8 +2069,8 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the append operation has completed.
         Append(self: StringBuilder, value: Char, repeatCount: int) -> StringBuilder
         
-            Appends a specified number of copies of the string representation of a Unicode 
-             character to this instance.
+            Appends a specified number of copies of the string representation of a Unicode character to this 
+             instance.
         
         
             value: The character to append.
@@ -2189,9 +2078,7 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the append operation has completed.
         Append(self: StringBuilder, value: Array[Char], startIndex: int, charCount: int) -> StringBuilder
         
-            Appends the string representation of a specified subarray of Unicode characters 
-             to this instance.
-        
+            Appends the string representation of a specified subarray of Unicode characters to this instance.
         
             value: A character array.
             startIndex: The starting position in value.
@@ -2199,41 +2086,31 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the append operation has completed.
         Append(self: StringBuilder, value: Int16) -> StringBuilder
         
-            Appends the string representation of a specified 16-bit signed integer to this 
-             instance.
-        
+            Appends the string representation of a specified 16-bit signed integer to this instance.
         
             value: The value to append.
             Returns: A reference to this instance after the append operation has completed.
         Append(self: StringBuilder, value: int) -> StringBuilder
         
-            Appends the string representation of a specified 32-bit signed integer to this 
-             instance.
-        
+            Appends the string representation of a specified 32-bit signed integer to this instance.
         
             value: The value to append.
             Returns: A reference to this instance after the append operation has completed.
         Append(self: StringBuilder, value: Char) -> StringBuilder
         
-            Appends the string representation of a specified Unicode character to this 
-             instance.
-        
+            Appends the string representation of a specified Unicode character to this instance.
         
             value: The Unicode character to append.
             Returns: A reference to this instance after the append operation has completed.
         Append(self: StringBuilder, value: SByte) -> StringBuilder
         
-            Appends the string representation of a specified 8-bit signed integer to this 
-             instance.
-        
+            Appends the string representation of a specified 8-bit signed integer to this instance.
         
             value: The value to append.
             Returns: A reference to this instance after the append operation has completed.
         Append(self: StringBuilder, value: Byte) -> StringBuilder
         
-            Appends the string representation of a specified 8-bit unsigned integer to this 
-             instance.
-        
+            Appends the string representation of a specified 8-bit unsigned integer to this instance.
         
             value: The value to append.
             Returns: A reference to this instance after the append operation has completed.
@@ -2246,72 +2123,70 @@ class StringBuilder(object, ISerializable):
         AppendFormat(self: StringBuilder, provider: IFormatProvider, format: str, arg0: object) -> StringBuilder
         AppendFormat(self: StringBuilder, provider: IFormatProvider, format: str, *args: Array[object]) -> StringBuilder
         
-            Appends the string returned by processing a composite format string, which 
-             contains zero or more format items, to this instance. Each format item is 
-             replaced by the string representation of a corresponding argument in a 
-             parameter array using a specified format provider.
+            Appends the string returned by processing a composite format string, which contains zero or more 
+             format items, to this instance. Each format item is replaced by the string representation of a 
+             corresponding argument in a parameter array using a specified format provider.
         
         
             provider: An object that supplies culture-specific formatting information.
             format: A composite format string (see Remarks).
             args: An array of objects to format.
-            Returns: A reference to this instance after the append operation has completed. After 
-             the append operation, this instance contains any data that existed before the 
-             operation, suffixed by a copy of format where any format specification is 
-             replaced by the string representation of the corresponding object argument.
+            Returns: A reference to this instance after the append operation has completed. After the append 
+             operation, this instance contains any data that existed before the operation, suffixed by a copy 
+             of format where any format specification is replaced by the string representation of the 
+             corresponding object argument.
         
         AppendFormat(self: StringBuilder, provider: IFormatProvider, format: str, arg0: object, arg1: object, arg2: object) -> StringBuilder
         AppendFormat(self: StringBuilder, format: str, arg0: object, arg1: object) -> StringBuilder
         
-            Appends the string returned by processing a composite format string, which 
-             contains zero or more format items, to this instance. Each format item is 
-             replaced by the string representation of either of two arguments.
+            Appends the string returned by processing a composite format string, which contains zero or more 
+             format items, to this instance. Each format item is replaced by the string representation of 
+             either of two arguments.
         
         
             format: A composite format string (see Remarks).
             arg0: The first object to format.
             arg1: The second object to format.
-            Returns: A reference to this instance with format appended. Each format item in format 
-             is replaced by the string representation of the corresponding object argument.
+            Returns: A reference to this instance with format appended. Each format item in format is replaced by the 
+             string representation of the corresponding object argument.
         
         AppendFormat(self: StringBuilder, format: str, arg0: object) -> StringBuilder
         
-            Appends the string returned by processing a composite format string, which 
-             contains zero or more format items, to this instance. Each format item is 
-             replaced by the string representation of a single argument.
+            Appends the string returned by processing a composite format string, which contains zero or more 
+             format items, to this instance. Each format item is replaced by the string representation of a 
+             single argument.
         
         
             format: A composite format string (see Remarks).
             arg0: An object to format.
-            Returns: A reference to this instance with format appended. Each format item in format 
-             is replaced by the string representation of arg0.
+            Returns: A reference to this instance with format appended. Each format item in format is replaced by the 
+             string representation of arg0.
         
         AppendFormat(self: StringBuilder, format: str, *args: Array[object]) -> StringBuilder
         
-            Appends the string returned by processing a composite format string, which 
-             contains zero or more format items, to this instance. Each format item is 
-             replaced by the string representation of a corresponding argument in a 
-             parameter array.
+            Appends the string returned by processing a composite format string, which contains zero or more 
+             format items, to this instance. Each format item is replaced by the string representation of a 
+             corresponding argument in a parameter array.
         
         
             format: A composite format string (see Remarks).
             args: An array of objects to format.
-            Returns: A reference to this instance with format appended. Each format item in format 
-             is replaced by the string representation of the corresponding object argument.
+            Returns: A reference to this instance with format appended. Each format item in format is replaced by the 
+             string representation of the corresponding object argument.
         
         AppendFormat(self: StringBuilder, format: str, arg0: object, arg1: object, arg2: object) -> StringBuilder
         
-            Appends the string returned by processing a composite format string, which 
-             contains zero or more format items, to this instance. Each format item is 
-             replaced by the string representation of either of three arguments.
+            Appends the string returned by processing a composite format string, which contains zero or more 
+             format items, to this instance. Each format item is replaced by the string representation of 
+             either of three arguments.
         
         
             format: A composite format string (see Remarks).
             arg0: The first object to format.
             arg1: The second object to format.
             arg2: The third object to format.
-            Returns: A reference to this instance with format appended. Each format item in format 
-             is replaced by the string representation of the corresponding object argument.
+            Returns: A reference to this instance with format appended. Each format item in format is replaced by the 
+             string representation of the corresponding object argument.
         """
         pass
 
@@ -2319,17 +2194,15 @@ class StringBuilder(object, ISerializable):
         """
         AppendLine(self: StringBuilder, value: str) -> StringBuilder
         
-            Appends a copy of the specified string followed by the default line terminator 
-             to the end of the current System.Text.StringBuilder object.
+            Appends a copy of the specified string followed by the default line terminator to the end of the 
+             current System.Text.StringBuilder object.
         
         
             value: The string to append.
             Returns: A reference to this instance after the append operation has completed.
         AppendLine(self: StringBuilder) -> StringBuilder
         
-            Appends the default line terminator to the end of the current 
-             System.Text.StringBuilder object.
-        
+            Appends the default line terminator to the end of the current System.Text.StringBuilder object.
             Returns: A reference to this instance after the append operation has completed.
         """
         pass
@@ -2346,17 +2219,15 @@ class StringBuilder(object, ISerializable):
     def CopyTo(self, sourceIndex, destination, destinationIndex, count):
         """
         CopyTo(self: StringBuilder, sourceIndex: int, destination: Array[Char], destinationIndex: int, count: int)
-            Copies the characters from a specified segment of this instance to a specified 
-             segment of a destination System.Char array.
+            Copies the characters from a specified segment of this instance to a specified segment of a 
+             destination System.Char array.
         
         
-            sourceIndex: The starting position in this instance where characters will be copied from. 
-             The index is zero-based.
+            sourceIndex: The starting position in this instance where characters will be copied from. The index is 
+             zero-based.
         
             destination: The array where characters will be copied.
-            destinationIndex: The starting position in destination where characters will be copied. The index 
-             is zero-based.
-        
+            destinationIndex: The starting position in destination where characters will be copied. The index is zero-based.
             count: The number of characters to be copied.
         """
         pass
@@ -2365,8 +2236,8 @@ class StringBuilder(object, ISerializable):
         """
         EnsureCapacity(self: StringBuilder, capacity: int) -> int
         
-            Ensures that the capacity of this instance of System.Text.StringBuilder is at 
-             least the specified value.
+            Ensures that the capacity of this instance of System.Text.StringBuilder is at least the 
+             specified value.
         
         
             capacity: The minimum capacity to ensure.
@@ -2381,9 +2252,8 @@ class StringBuilder(object, ISerializable):
             Returns a value indicating whether this instance is equal to a specified object.
         
             sb: An object to compare with this instance, or null.
-            Returns: true if this instance and sb have equal string, 
-             System.Text.StringBuilder.Capacity, and System.Text.StringBuilder.MaxCapacity 
-             values; otherwise, false.
+            Returns: true if this instance and sb have equal string, System.Text.StringBuilder.Capacity, and 
+             System.Text.StringBuilder.MaxCapacity values; otherwise, false.
         """
         pass
 
@@ -2391,8 +2261,8 @@ class StringBuilder(object, ISerializable):
         """
         Insert(self: StringBuilder, index: int, value: Single) -> StringBuilder
         
-            Inserts the string representation of a single-precision floating point number 
-             into this instance at the specified character position.
+            Inserts the string representation of a single-precision floating point number into this instance 
+             at the specified character position.
         
         
             index: The position in this instance where insertion begins.
@@ -2400,8 +2270,8 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the insert operation has completed.
         Insert(self: StringBuilder, index: int, value: float) -> StringBuilder
         
-            Inserts the string representation of a double-precision floating-point number 
-             into this instance at the specified character position.
+            Inserts the string representation of a double-precision floating-point number into this instance 
+             at the specified character position.
         
         
             index: The position in this instance where insertion begins.
@@ -2409,8 +2279,8 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the insert operation has completed.
         Insert(self: StringBuilder, index: int, value: int) -> StringBuilder
         
-            Inserts the string representation of a specified 32-bit signed integer into 
-             this instance at the specified character position.
+            Inserts the string representation of a specified 32-bit signed integer into this instance at the 
+             specified character position.
         
         
             index: The position in this instance where insertion begins.
@@ -2418,8 +2288,8 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the insert operation has completed.
         Insert(self: StringBuilder, index: int, value: Int64) -> StringBuilder
         
-            Inserts the string representation of a 64-bit signed integer into this instance 
-             at the specified character position.
+            Inserts the string representation of a 64-bit signed integer into this instance at the specified 
+             character position.
         
         
             index: The position in this instance where insertion begins.
@@ -2427,8 +2297,8 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the insert operation has completed.
         Insert(self: StringBuilder, index: int, value: Decimal) -> StringBuilder
         
-            Inserts the string representation of a decimal number into this instance at the 
-             specified character position.
+            Inserts the string representation of a decimal number into this instance at the specified 
+             character position.
         
         
             index: The position in this instance where insertion begins.
@@ -2436,8 +2306,8 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the insert operation has completed.
         Insert(self: StringBuilder, index: int, value: UInt64) -> StringBuilder
         
-            Inserts the string representation of a 64-bit unsigned integer into this 
-             instance at the specified character position.
+            Inserts the string representation of a 64-bit unsigned integer into this instance at the 
+             specified character position.
         
         
             index: The position in this instance where insertion begins.
@@ -2445,8 +2315,8 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the insert operation has completed.
         Insert(self: StringBuilder, index: int, value: object) -> StringBuilder
         
-            Inserts the string representation of an object into this instance at the 
-             specified character position.
+            Inserts the string representation of an object into this instance at the specified character 
+             position.
         
         
             index: The position in this instance where insertion begins.
@@ -2454,8 +2324,8 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the insert operation has completed.
         Insert(self: StringBuilder, index: int, value: UInt16) -> StringBuilder
         
-            Inserts the string representation of a 16-bit unsigned integer into this 
-             instance at the specified character position.
+            Inserts the string representation of a 16-bit unsigned integer into this instance at the 
+             specified character position.
         
         
             index: The position in this instance where insertion begins.
@@ -2463,8 +2333,8 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the insert operation has completed.
         Insert(self: StringBuilder, index: int, value: UInt32) -> StringBuilder
         
-            Inserts the string representation of a 32-bit unsigned integer into this 
-             instance at the specified character position.
+            Inserts the string representation of a 32-bit unsigned integer into this instance at the 
+             specified character position.
         
         
             index: The position in this instance where insertion begins.
@@ -2472,8 +2342,8 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the insert operation has completed.
         Insert(self: StringBuilder, index: int, value: bool) -> StringBuilder
         
-            Inserts the string representation of a Boolean value into this instance at the 
-             specified character position.
+            Inserts the string representation of a Boolean value into this instance at the specified 
+             character position.
         
         
             index: The position in this instance where insertion begins.
@@ -2481,8 +2351,8 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the insert operation has completed.
         Insert(self: StringBuilder, index: int, value: SByte) -> StringBuilder
         
-            Inserts the string representation of a specified 8-bit signed integer into this 
-             instance at the specified character position.
+            Inserts the string representation of a specified 8-bit signed integer into this instance at the 
+             specified character position.
         
         
             index: The position in this instance where insertion begins.
@@ -2490,8 +2360,8 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the insert operation has completed.
         Insert(self: StringBuilder, index: int, value: str, count: int) -> StringBuilder
         
-            Inserts one or more copies of a specified string into this instance at the 
-             specified character position.
+            Inserts one or more copies of a specified string into this instance at the specified character 
+             position.
         
         
             index: The position in this instance where insertion begins.
@@ -2507,8 +2377,8 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the insert operation has completed.
         Insert(self: StringBuilder, index: int, value: Byte) -> StringBuilder
         
-            Inserts the string representation of a specified 8-bit unsigned integer into 
-             this instance at the specified character position.
+            Inserts the string representation of a specified 8-bit unsigned integer into this instance at 
+             the specified character position.
         
         
             index: The position in this instance where insertion begins.
@@ -2516,8 +2386,8 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the insert operation has completed.
         Insert(self: StringBuilder, index: int, value: Array[Char]) -> StringBuilder
         
-            Inserts the string representation of a specified array of Unicode characters 
-             into this instance at the specified character position.
+            Inserts the string representation of a specified array of Unicode characters into this instance 
+             at the specified character position.
         
         
             index: The position in this instance where insertion begins.
@@ -2525,8 +2395,8 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the insert operation has completed.
         Insert(self: StringBuilder, index: int, value: Array[Char], startIndex: int, charCount: int) -> StringBuilder
         
-            Inserts the string representation of a specified subarray of Unicode characters 
-             into this instance at the specified character position.
+            Inserts the string representation of a specified subarray of Unicode characters into this 
+             instance at the specified character position.
         
         
             index: The position in this instance where insertion begins.
@@ -2536,8 +2406,8 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the insert operation has completed.
         Insert(self: StringBuilder, index: int, value: Int16) -> StringBuilder
         
-            Inserts the string representation of a specified 16-bit signed integer into 
-             this instance at the specified character position.
+            Inserts the string representation of a specified 16-bit signed integer into this instance at the 
+             specified character position.
         
         
             index: The position in this instance where insertion begins.
@@ -2545,8 +2415,8 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance after the insert operation has completed.
         Insert(self: StringBuilder, index: int, value: Char) -> StringBuilder
         
-            Inserts the string representation of a specified Unicode character into this 
-             instance at the specified character position.
+            Inserts the string representation of a specified Unicode character into this instance at the 
+             specified character position.
         
         
             index: The position in this instance where insertion begins.
@@ -2571,8 +2441,8 @@ class StringBuilder(object, ISerializable):
         """
         Replace(self: StringBuilder, oldChar: Char, newChar: Char) -> StringBuilder
         
-            Replaces all occurrences of a specified character in this instance with another 
-             specified character.
+            Replaces all occurrences of a specified character in this instance with another specified 
+             character.
         
         
             oldChar: The character to replace.
@@ -2580,40 +2450,36 @@ class StringBuilder(object, ISerializable):
             Returns: A reference to this instance with oldChar replaced by newChar.
         Replace(self: StringBuilder, oldChar: Char, newChar: Char, startIndex: int, count: int) -> StringBuilder
         
-            Replaces, within a substring of this instance, all occurrences of a specified 
-             character with another specified character.
+            Replaces, within a substring of this instance, all occurrences of a specified character with 
+             another specified character.
         
         
             oldChar: The character to replace.
             newChar: The character that replaces oldChar.
             startIndex: The position in this instance where the substring begins.
             count: The length of the substring.
-            Returns: A reference to this instance with oldChar replaced by newChar in the range from 
-             startIndex to startIndex + count -1.
+            Returns: A reference to this instance with oldChar replaced by newChar in the range from startIndex to 
+             startIndex + count -1.
         
         Replace(self: StringBuilder, oldValue: str, newValue: str) -> StringBuilder
         
-            Replaces all occurrences of a specified string in this instance with another 
-             specified string.
-        
+            Replaces all occurrences of a specified string in this instance with another specified string.
         
             oldValue: The string to replace.
             newValue: The string that replaces oldValue, or null.
-            Returns: A reference to this instance with all instances of oldValue replaced by 
-             newValue.
-        
+            Returns: A reference to this instance with all instances of oldValue replaced by newValue.
         Replace(self: StringBuilder, oldValue: str, newValue: str, startIndex: int, count: int) -> StringBuilder
         
-            Replaces, within a substring of this instance, all occurrences of a specified 
-             string with another specified string.
+            Replaces, within a substring of this instance, all occurrences of a specified string with 
+             another specified string.
         
         
             oldValue: The string to replace.
             newValue: The string that replaces oldValue, or null.
             startIndex: The position in this instance where the substring begins.
             count: The length of the substring.
-            Returns: A reference to this instance with all instances of oldValue replaced by 
-             newValue in the range from startIndex to startIndex + count - 1.
+            Returns: A reference to this instance with all instances of oldValue replaced by newValue in the range 
+             from startIndex to startIndex + count - 1.
         """
         pass
 
@@ -2700,9 +2566,9 @@ class UnicodeEncoding(Encoding, ICloneable):
     """
     Represents a UTF-16 encoding of Unicode characters.
     
+    UnicodeEncoding(bigEndian: bool, byteOrderMark: bool, throwOnInvalidBytes: bool)
     UnicodeEncoding()
-    UnicodeEncoding(bigEndian: bool, byteOrderMark: bool)
-    UnicodeEncoding(bigEndian: bool, byteOrderMark: bool, throwOnInvalidBytes: bool)
+    UnicodeEncoding(bigEndian: bool, byteOrderMark: bool)
     """
     def Equals(self, value):
         """
@@ -2713,8 +2579,8 @@ class UnicodeEncoding(Encoding, ICloneable):
         
         
             value: The System.Object to compare with the current object.
-            Returns: true if value is an instance of System.Text.UnicodeEncoding and is equal to the 
-             current object; otherwise, false.
+            Returns: true if value is an instance of System.Text.UnicodeEncoding and is equal to the current object; 
+             otherwise, false.
         """
         pass
 
@@ -2722,8 +2588,8 @@ class UnicodeEncoding(Encoding, ICloneable):
         """
         GetByteCount(self: UnicodeEncoding, chars: Char*, count: int) -> int
         
-            Calculates the number of bytes produced by encoding a set of characters 
-             starting at the specified character pointer.
+            Calculates the number of bytes produced by encoding a set of characters starting at the 
+             specified character pointer.
         
         
             chars: A pointer to the first character to encode.
@@ -2731,16 +2597,16 @@ class UnicodeEncoding(Encoding, ICloneable):
             Returns: The number of bytes produced by encoding the specified characters.
         GetByteCount(self: UnicodeEncoding, s: str) -> int
         
-            Calculates the number of bytes produced by encoding the characters in the 
-             specified System.String.
+            Calculates the number of bytes produced by encoding the characters in the specified 
+             System.String.
         
         
             s: The System.String containing the set of characters to encode.
             Returns: The number of bytes produced by encoding the specified characters.
         GetByteCount(self: UnicodeEncoding, chars: Array[Char], index: int, count: int) -> int
         
-            Calculates the number of bytes produced by encoding a set of characters from 
-             the specified character array.
+            Calculates the number of bytes produced by encoding a set of characters from the specified 
+             character array.
         
         
             chars: The character array containing the set of characters to encode.
@@ -2754,24 +2620,18 @@ class UnicodeEncoding(Encoding, ICloneable):
         """
         GetBytes(self: UnicodeEncoding, chars: Char*, charCount: int, bytes: Byte*, byteCount: int) -> int
         
-            Encodes a set of characters starting at the specified character pointer into a 
-             sequence of bytes that are stored starting at the specified byte pointer.
+            Encodes a set of characters starting at the specified character pointer into a sequence of bytes 
+             that are stored starting at the specified byte pointer.
         
         
             chars: A pointer to the first character to encode.
             charCount: The number of characters to encode.
-            bytes: A pointer to the location at which to start writing the resulting sequence of 
-             bytes.
-        
+            bytes: A pointer to the location at which to start writing the resulting sequence of bytes.
             byteCount: The maximum number of bytes to write.
-            Returns: The actual number of bytes written at the location indicated by the bytes 
-             parameter.
-        
+            Returns: The actual number of bytes written at the location indicated by the bytes parameter.
         GetBytes(self: UnicodeEncoding, chars: Array[Char], charIndex: int, charCount: int, bytes: Array[Byte], byteIndex: int) -> int
         
-            Encodes a set of characters from the specified character array into the 
-             specified byte array.
-        
+            Encodes a set of characters from the specified character array into the specified byte array.
         
             chars: The character array containing the set of characters to encode.
             charIndex: The index of the first character to encode.
@@ -2781,9 +2641,7 @@ class UnicodeEncoding(Encoding, ICloneable):
             Returns: The actual number of bytes written into bytes.
         GetBytes(self: UnicodeEncoding, s: str, charIndex: int, charCount: int, bytes: Array[Byte], byteIndex: int) -> int
         
-            Encodes a set of characters from the specified System.String into the specified 
-             byte array.
-        
+            Encodes a set of characters from the specified System.String into the specified byte array.
         
             s: The System.String containing the set of characters to encode.
             charIndex: The index of the first character to encode.
@@ -2798,8 +2656,8 @@ class UnicodeEncoding(Encoding, ICloneable):
         """
         GetCharCount(self: UnicodeEncoding, bytes: Byte*, count: int) -> int
         
-            Calculates the number of characters produced by decoding a sequence of bytes 
-             starting at the specified byte pointer.
+            Calculates the number of characters produced by decoding a sequence of bytes starting at the 
+             specified byte pointer.
         
         
             bytes: A pointer to the first byte to decode.
@@ -2807,8 +2665,8 @@ class UnicodeEncoding(Encoding, ICloneable):
             Returns: The number of characters produced by decoding the specified sequence of bytes.
         GetCharCount(self: UnicodeEncoding, bytes: Array[Byte], index: int, count: int) -> int
         
-            Calculates the number of characters produced by decoding a sequence of bytes 
-             from the specified byte array.
+            Calculates the number of characters produced by decoding a sequence of bytes from the specified 
+             byte array.
         
         
             bytes: The byte array containing the sequence of bytes to decode.
@@ -2822,24 +2680,18 @@ class UnicodeEncoding(Encoding, ICloneable):
         """
         GetChars(self: UnicodeEncoding, bytes: Byte*, byteCount: int, chars: Char*, charCount: int) -> int
         
-            Decodes a sequence of bytes starting at the specified byte pointer into a set 
-             of characters that are stored starting at the specified character pointer.
+            Decodes a sequence of bytes starting at the specified byte pointer into a set of characters that 
+             are stored starting at the specified character pointer.
         
         
             bytes: A pointer to the first byte to decode.
             byteCount: The number of bytes to decode.
-            chars: A pointer to the location at which to start writing the resulting set of 
-             characters.
-        
+            chars: A pointer to the location at which to start writing the resulting set of characters.
             charCount: The maximum number of characters to write.
-            Returns: The actual number of characters written at the location indicated by the chars 
-             parameter.
-        
+            Returns: The actual number of characters written at the location indicated by the chars parameter.
         GetChars(self: UnicodeEncoding, bytes: Array[Byte], byteIndex: int, byteCount: int, chars: Array[Char], charIndex: int) -> int
         
-            Decodes a sequence of bytes from the specified byte array into the specified 
-             character array.
-        
+            Decodes a sequence of bytes from the specified byte array into the specified character array.
         
             bytes: The byte array containing the sequence of bytes to decode.
             byteIndex: The index of the first byte to decode.
@@ -2854,11 +2706,11 @@ class UnicodeEncoding(Encoding, ICloneable):
         """
         GetDecoder(self: UnicodeEncoding) -> Decoder
         
-            Obtains a decoder that converts a UTF-16 encoded sequence of bytes into a 
-             sequence of Unicode characters.
+            Obtains a decoder that converts a UTF-16 encoded sequence of bytes into a sequence of Unicode 
+             characters.
         
-            Returns: A System.Text.Decoder that converts a UTF-16 encoded sequence of bytes into a 
-             sequence of Unicode characters.
+            Returns: A System.Text.Decoder that converts a UTF-16 encoded sequence of bytes into a sequence of 
+             Unicode characters.
         """
         pass
 
@@ -2866,11 +2718,11 @@ class UnicodeEncoding(Encoding, ICloneable):
         """
         GetEncoder(self: UnicodeEncoding) -> Encoder
         
-            Obtains an encoder that converts a sequence of Unicode characters into a UTF-16 
-             encoded sequence of bytes.
+            Obtains an encoder that converts a sequence of Unicode characters into a UTF-16 encoded sequence 
+             of bytes.
         
-            Returns: A System.Text.Encoder object that converts a sequence of Unicode characters 
-             into a UTF-16 encoded sequence of bytes.
+            Returns: A System.Text.Encoder object that converts a sequence of Unicode characters into a UTF-16 
+             encoded sequence of bytes.
         """
         pass
 
@@ -2887,13 +2739,10 @@ class UnicodeEncoding(Encoding, ICloneable):
         """
         GetMaxByteCount(self: UnicodeEncoding, charCount: int) -> int
         
-            Calculates the maximum number of bytes produced by encoding the specified 
-             number of characters.
-        
+            Calculates the maximum number of bytes produced by encoding the specified number of characters.
         
             charCount: The number of characters to encode.
-            Returns: The maximum number of bytes produced by encoding the specified number of 
-             characters.
+            Returns: The maximum number of bytes produced by encoding the specified number of characters.
         """
         pass
 
@@ -2901,13 +2750,10 @@ class UnicodeEncoding(Encoding, ICloneable):
         """
         GetMaxCharCount(self: UnicodeEncoding, byteCount: int) -> int
         
-            Calculates the maximum number of characters produced by decoding the specified 
-             number of bytes.
-        
+            Calculates the maximum number of characters produced by decoding the specified number of bytes.
         
             byteCount: The number of bytes to decode.
-            Returns: The maximum number of characters produced by decoding the specified number of 
-             bytes.
+            Returns: The maximum number of characters produced by decoding the specified number of bytes.
         """
         pass
 
@@ -2915,12 +2761,11 @@ class UnicodeEncoding(Encoding, ICloneable):
         """
         GetPreamble(self: UnicodeEncoding) -> Array[Byte]
         
-            Returns a Unicode byte order mark encoded in UTF-16 format, if the constructor 
-             for this instance requests a byte order mark.
+            Returns a Unicode byte order mark encoded in UTF-16 format, if the constructor for this instance 
+             requests a byte order mark.
         
-            Returns: A byte array containing the Unicode byte order mark, if the constructor for 
-             this instance requests a byte order mark. Otherwise, this method returns a byte 
-             array of length zero.
+            Returns: A byte array containing the Unicode byte order mark, if the constructor for this instance 
+             requests a byte order mark. Otherwise, this method returns a byte array of length zero.
         """
         pass
 
@@ -2933,8 +2778,7 @@ class UnicodeEncoding(Encoding, ICloneable):
             bytes: The byte array containing the sequence of bytes to decode.
             index: The index of the first byte to decode.
             count: The number of bytes to decode.
-            Returns: A System.String object containing the results of decoding the specified 
-             sequence of bytes.
+            Returns: A System.String object containing the results of decoding the specified sequence of bytes.
         """
         pass
 
@@ -2976,13 +2820,13 @@ class UTF32Encoding(Encoding, ICloneable):
         """
         Equals(self: UTF32Encoding, value: object) -> bool
         
-            Determines whether the specified System.Object is equal to the current 
-             System.Text.UTF32Encoding object.
+            Determines whether the specified System.Object is equal to the current System.Text.UTF32Encoding 
+             object.
         
         
             value: The System.Object to compare with the current object.
-            Returns: true if value is an instance of System.Text.UTF32Encoding and is equal to the 
-             current object; otherwise, false.
+            Returns: true if value is an instance of System.Text.UTF32Encoding and is equal to the current object; 
+             otherwise, false.
         """
         pass
 
@@ -2990,8 +2834,8 @@ class UTF32Encoding(Encoding, ICloneable):
         """
         GetByteCount(self: UTF32Encoding, chars: Char*, count: int) -> int
         
-            Calculates the number of bytes produced by encoding a set of characters 
-             starting at the specified character pointer.
+            Calculates the number of bytes produced by encoding a set of characters starting at the 
+             specified character pointer.
         
         
             chars: A pointer to the first character to encode.
@@ -2999,16 +2843,16 @@ class UTF32Encoding(Encoding, ICloneable):
             Returns: The number of bytes produced by encoding the specified characters.
         GetByteCount(self: UTF32Encoding, s: str) -> int
         
-            Calculates the number of bytes produced by encoding the characters in the 
-             specified System.String.
+            Calculates the number of bytes produced by encoding the characters in the specified 
+             System.String.
         
         
             s: The System.String containing the set of characters to encode.
             Returns: The number of bytes produced by encoding the specified characters.
         GetByteCount(self: UTF32Encoding, chars: Array[Char], index: int, count: int) -> int
         
-            Calculates the number of bytes produced by encoding a set of characters from 
-             the specified character array.
+            Calculates the number of bytes produced by encoding a set of characters from the specified 
+             character array.
         
         
             chars: The character array containing the set of characters to encode.
@@ -3022,24 +2866,18 @@ class UTF32Encoding(Encoding, ICloneable):
         """
         GetBytes(self: UTF32Encoding, chars: Char*, charCount: int, bytes: Byte*, byteCount: int) -> int
         
-            Encodes a set of characters starting at the specified character pointer into a 
-             sequence of bytes that are stored starting at the specified byte pointer.
+            Encodes a set of characters starting at the specified character pointer into a sequence of bytes 
+             that are stored starting at the specified byte pointer.
         
         
             chars: A pointer to the first character to encode.
             charCount: The number of characters to encode.
-            bytes: A pointer to the location at which to start writing the resulting sequence of 
-             bytes.
-        
+            bytes: A pointer to the location at which to start writing the resulting sequence of bytes.
             byteCount: The maximum number of bytes to write.
-            Returns: The actual number of bytes written at the location indicated by the bytes 
-             parameter.
-        
+            Returns: The actual number of bytes written at the location indicated by the bytes parameter.
         GetBytes(self: UTF32Encoding, chars: Array[Char], charIndex: int, charCount: int, bytes: Array[Byte], byteIndex: int) -> int
         
-            Encodes a set of characters from the specified character array into the 
-             specified byte array.
-        
+            Encodes a set of characters from the specified character array into the specified byte array.
         
             chars: The character array containing the set of characters to encode.
             charIndex: The index of the first character to encode.
@@ -3049,9 +2887,7 @@ class UTF32Encoding(Encoding, ICloneable):
             Returns: The actual number of bytes written into bytes.
         GetBytes(self: UTF32Encoding, s: str, charIndex: int, charCount: int, bytes: Array[Byte], byteIndex: int) -> int
         
-            Encodes a set of characters from the specified System.String into the specified 
-             byte array.
-        
+            Encodes a set of characters from the specified System.String into the specified byte array.
         
             s: The System.String containing the set of characters to encode.
             charIndex: The index of the first character to encode.
@@ -3066,8 +2902,8 @@ class UTF32Encoding(Encoding, ICloneable):
         """
         GetCharCount(self: UTF32Encoding, bytes: Byte*, count: int) -> int
         
-            Calculates the number of characters produced by decoding a sequence of bytes 
-             starting at the specified byte pointer.
+            Calculates the number of characters produced by decoding a sequence of bytes starting at the 
+             specified byte pointer.
         
         
             bytes: A pointer to the first byte to decode.
@@ -3075,8 +2911,8 @@ class UTF32Encoding(Encoding, ICloneable):
             Returns: The number of characters produced by decoding the specified sequence of bytes.
         GetCharCount(self: UTF32Encoding, bytes: Array[Byte], index: int, count: int) -> int
         
-            Calculates the number of characters produced by decoding a sequence of bytes 
-             from the specified byte array.
+            Calculates the number of characters produced by decoding a sequence of bytes from the specified 
+             byte array.
         
         
             bytes: The byte array containing the sequence of bytes to decode.
@@ -3090,22 +2926,18 @@ class UTF32Encoding(Encoding, ICloneable):
         """
         GetChars(self: UTF32Encoding, bytes: Byte*, byteCount: int, chars: Char*, charCount: int) -> int
         
-            Decodes a sequence of bytes starting at the specified byte pointer into a set 
-             of characters that are stored starting at the specified character pointer.
+            Decodes a sequence of bytes starting at the specified byte pointer into a set of characters that 
+             are stored starting at the specified character pointer.
         
         
             bytes: A pointer to the first byte to decode.
             byteCount: The number of bytes to decode.
-            chars: A pointer to the location at which to start writing the resulting set of 
-             characters.
-        
+            chars: A pointer to the location at which to start writing the resulting set of characters.
             charCount: The maximum number of characters to write.
             Returns: The actual number of characters written at the location indicated by chars.
         GetChars(self: UTF32Encoding, bytes: Array[Byte], byteIndex: int, byteCount: int, chars: Array[Char], charIndex: int) -> int
         
-            Decodes a sequence of bytes from the specified byte array into the specified 
-             character array.
-        
+            Decodes a sequence of bytes from the specified byte array into the specified character array.
         
             bytes: The byte array containing the sequence of bytes to decode.
             byteIndex: The index of the first byte to decode.
@@ -3120,11 +2952,11 @@ class UTF32Encoding(Encoding, ICloneable):
         """
         GetDecoder(self: UTF32Encoding) -> Decoder
         
-            Obtains a decoder that converts a UTF-32 encoded sequence of bytes into a 
-             sequence of Unicode characters.
+            Obtains a decoder that converts a UTF-32 encoded sequence of bytes into a sequence of Unicode 
+             characters.
         
-            Returns: A System.Text.Decoder that converts a UTF-32 encoded sequence of bytes into a 
-             sequence of Unicode characters.
+            Returns: A System.Text.Decoder that converts a UTF-32 encoded sequence of bytes into a sequence of 
+             Unicode characters.
         """
         pass
 
@@ -3132,11 +2964,11 @@ class UTF32Encoding(Encoding, ICloneable):
         """
         GetEncoder(self: UTF32Encoding) -> Encoder
         
-            Obtains an encoder that converts a sequence of Unicode characters into a UTF-32 
-             encoded sequence of bytes.
+            Obtains an encoder that converts a sequence of Unicode characters into a UTF-32 encoded sequence 
+             of bytes.
         
-            Returns: A System.Text.Encoder that converts a sequence of Unicode characters into a 
-             UTF-32 encoded sequence of bytes.
+            Returns: A System.Text.Encoder that converts a sequence of Unicode characters into a UTF-32 encoded 
+             sequence of bytes.
         """
         pass
 
@@ -3153,13 +2985,10 @@ class UTF32Encoding(Encoding, ICloneable):
         """
         GetMaxByteCount(self: UTF32Encoding, charCount: int) -> int
         
-            Calculates the maximum number of bytes produced by encoding the specified 
-             number of characters.
-        
+            Calculates the maximum number of bytes produced by encoding the specified number of characters.
         
             charCount: The number of characters to encode.
-            Returns: The maximum number of bytes produced by encoding the specified number of 
-             characters.
+            Returns: The maximum number of bytes produced by encoding the specified number of characters.
         """
         pass
 
@@ -3167,13 +2996,10 @@ class UTF32Encoding(Encoding, ICloneable):
         """
         GetMaxCharCount(self: UTF32Encoding, byteCount: int) -> int
         
-            Calculates the maximum number of characters produced by decoding the specified 
-             number of bytes.
-        
+            Calculates the maximum number of characters produced by decoding the specified number of bytes.
         
             byteCount: The number of bytes to decode.
-            Returns: The maximum number of characters produced by decoding the specified number of 
-             bytes.
+            Returns: The maximum number of characters produced by decoding the specified number of bytes.
         """
         pass
 
@@ -3181,12 +3007,11 @@ class UTF32Encoding(Encoding, ICloneable):
         """
         GetPreamble(self: UTF32Encoding) -> Array[Byte]
         
-            Returns a Unicode byte order mark encoded in UTF-32 format, if the constructor 
-             for this instance requests a byte order mark.
+            Returns a Unicode byte order mark encoded in UTF-32 format, if the constructor for this instance 
+             requests a byte order mark.
         
-            Returns: A byte array containing the Unicode byte order mark, if the constructor for 
-             this instance requests a byte order mark. Otherwise, this method returns a byte 
-             array of length zero.
+            Returns: A byte array containing the Unicode byte order mark, if the constructor for this instance 
+             requests a byte order mark. Otherwise, this method returns a byte array of length zero.
         """
         pass
 
@@ -3199,8 +3024,7 @@ class UTF32Encoding(Encoding, ICloneable):
             bytes: The byte array containing the sequence of bytes to decode.
             index: The index of the first byte to decode.
             count: The number of bytes to decode.
-            Returns: A System.String containing the results of decoding the specified sequence of 
-             bytes.
+            Returns: A System.String containing the results of decoding the specified sequence of bytes.
         """
         pass
 
@@ -3253,8 +3077,8 @@ class UTF7Encoding(Encoding, ICloneable):
         """
         GetByteCount(self: UTF7Encoding, chars: Char*, count: int) -> int
         
-            Calculates the number of bytes produced by encoding a set of characters 
-             starting at the specified character pointer.
+            Calculates the number of bytes produced by encoding a set of characters starting at the 
+             specified character pointer.
         
         
             chars: A pointer to the first character to encode.
@@ -3262,16 +3086,16 @@ class UTF7Encoding(Encoding, ICloneable):
             Returns: The number of bytes produced by encoding the specified characters.
         GetByteCount(self: UTF7Encoding, s: str) -> int
         
-            Calculates the number of bytes produced by encoding the characters in the 
-             specified System.String object.
+            Calculates the number of bytes produced by encoding the characters in the specified 
+             System.String object.
         
         
             s: The System.String object containing the set of characters to encode.
             Returns: The number of bytes produced by encoding the specified characters.
         GetByteCount(self: UTF7Encoding, chars: Array[Char], index: int, count: int) -> int
         
-            Calculates the number of bytes produced by encoding a set of characters from 
-             the specified character array.
+            Calculates the number of bytes produced by encoding a set of characters from the specified 
+             character array.
         
         
             chars: The character array containing the set of characters to encode.
@@ -3285,22 +3109,18 @@ class UTF7Encoding(Encoding, ICloneable):
         """
         GetBytes(self: UTF7Encoding, chars: Char*, charCount: int, bytes: Byte*, byteCount: int) -> int
         
-            Encodes a set of characters starting at the specified character pointer into a 
-             sequence of bytes that are stored starting at the specified byte pointer.
+            Encodes a set of characters starting at the specified character pointer into a sequence of bytes 
+             that are stored starting at the specified byte pointer.
         
         
             chars: A pointer to the first character to encode.
             charCount: The number of characters to encode.
-            bytes: A pointer to the location at which to start writing the resulting sequence of 
-             bytes.
-        
+            bytes: A pointer to the location at which to start writing the resulting sequence of bytes.
             byteCount: The maximum number of bytes to write.
             Returns: The actual number of bytes written at the location indicated by bytes.
         GetBytes(self: UTF7Encoding, chars: Array[Char], charIndex: int, charCount: int, bytes: Array[Byte], byteIndex: int) -> int
         
-            Encodes a set of characters from the specified character array into the 
-             specified byte array.
-        
+            Encodes a set of characters from the specified character array into the specified byte array.
         
             chars: The character array containing the set of characters to encode.
             charIndex: The index of the first character to encode.
@@ -3310,9 +3130,7 @@ class UTF7Encoding(Encoding, ICloneable):
             Returns: The actual number of bytes written into bytes.
         GetBytes(self: UTF7Encoding, s: str, charIndex: int, charCount: int, bytes: Array[Byte], byteIndex: int) -> int
         
-            Encodes a set of characters from the specified System.String into the specified 
-             byte array.
-        
+            Encodes a set of characters from the specified System.String into the specified byte array.
         
             s: The System.String containing the set of characters to encode.
             charIndex: The index of the first character to encode.
@@ -3327,8 +3145,8 @@ class UTF7Encoding(Encoding, ICloneable):
         """
         GetCharCount(self: UTF7Encoding, bytes: Byte*, count: int) -> int
         
-            Calculates the number of characters produced by decoding a sequence of bytes 
-             starting at the specified byte pointer.
+            Calculates the number of characters produced by decoding a sequence of bytes starting at the 
+             specified byte pointer.
         
         
             bytes: A pointer to the first byte to decode.
@@ -3336,8 +3154,8 @@ class UTF7Encoding(Encoding, ICloneable):
             Returns: The number of characters produced by decoding the specified sequence of bytes.
         GetCharCount(self: UTF7Encoding, bytes: Array[Byte], index: int, count: int) -> int
         
-            Calculates the number of characters produced by decoding a sequence of bytes 
-             from the specified byte array.
+            Calculates the number of characters produced by decoding a sequence of bytes from the specified 
+             byte array.
         
         
             bytes: The byte array containing the sequence of bytes to decode.
@@ -3351,22 +3169,18 @@ class UTF7Encoding(Encoding, ICloneable):
         """
         GetChars(self: UTF7Encoding, bytes: Byte*, byteCount: int, chars: Char*, charCount: int) -> int
         
-            Decodes a sequence of bytes starting at the specified byte pointer into a set 
-             of characters that are stored starting at the specified character pointer.
+            Decodes a sequence of bytes starting at the specified byte pointer into a set of characters that 
+             are stored starting at the specified character pointer.
         
         
             bytes: A pointer to the first byte to decode.
             byteCount: The number of bytes to decode.
-            chars: A pointer to the location at which to start writing the resulting set of 
-             characters.
-        
+            chars: A pointer to the location at which to start writing the resulting set of characters.
             charCount: The maximum number of characters to write.
             Returns: The actual number of characters written at the location indicated by chars.
         GetChars(self: UTF7Encoding, bytes: Array[Byte], byteIndex: int, byteCount: int, chars: Array[Char], charIndex: int) -> int
         
-            Decodes a sequence of bytes from the specified byte array into the specified 
-             character array.
-        
+            Decodes a sequence of bytes from the specified byte array into the specified character array.
         
             bytes: The byte array containing the sequence of bytes to decode.
             byteIndex: The index of the first byte to decode.
@@ -3381,11 +3195,11 @@ class UTF7Encoding(Encoding, ICloneable):
         """
         GetDecoder(self: UTF7Encoding) -> Decoder
         
-            Obtains a decoder that converts a UTF-7 encoded sequence of bytes into a 
-             sequence of Unicode characters.
+            Obtains a decoder that converts a UTF-7 encoded sequence of bytes into a sequence of Unicode 
+             characters.
         
-            Returns: A System.Text.Decoder that converts a UTF-7 encoded sequence of bytes into a 
-             sequence of Unicode characters.
+            Returns: A System.Text.Decoder that converts a UTF-7 encoded sequence of bytes into a sequence of Unicode 
+             characters.
         """
         pass
 
@@ -3393,11 +3207,11 @@ class UTF7Encoding(Encoding, ICloneable):
         """
         GetEncoder(self: UTF7Encoding) -> Encoder
         
-            Obtains an encoder that converts a sequence of Unicode characters into a UTF-7 
-             encoded sequence of bytes.
+            Obtains an encoder that converts a sequence of Unicode characters into a UTF-7 encoded sequence 
+             of bytes.
         
-            Returns: A System.Text.Encoder that converts a sequence of Unicode characters into a 
-             UTF-7 encoded sequence of bytes.
+            Returns: A System.Text.Encoder that converts a sequence of Unicode characters into a UTF-7 encoded 
+             sequence of bytes.
         """
         pass
 
@@ -3414,13 +3228,10 @@ class UTF7Encoding(Encoding, ICloneable):
         """
         GetMaxByteCount(self: UTF7Encoding, charCount: int) -> int
         
-            Calculates the maximum number of bytes produced by encoding the specified 
-             number of characters.
-        
+            Calculates the maximum number of bytes produced by encoding the specified number of characters.
         
             charCount: The number of characters to encode.
-            Returns: The maximum number of bytes produced by encoding the specified number of 
-             characters.
+            Returns: The maximum number of bytes produced by encoding the specified number of characters.
         """
         pass
 
@@ -3428,13 +3239,10 @@ class UTF7Encoding(Encoding, ICloneable):
         """
         GetMaxCharCount(self: UTF7Encoding, byteCount: int) -> int
         
-            Calculates the maximum number of characters produced by decoding the specified 
-             number of bytes.
-        
+            Calculates the maximum number of characters produced by decoding the specified number of bytes.
         
             byteCount: The number of bytes to decode.
-            Returns: The maximum number of characters produced by decoding the specified number of 
-             bytes.
+            Returns: The maximum number of characters produced by decoding the specified number of bytes.
         """
         pass
 
@@ -3447,8 +3255,7 @@ class UTF7Encoding(Encoding, ICloneable):
             bytes: The byte array containing the sequence of bytes to decode.
             index: The index of the first byte to decode.
             count: The number of bytes to decode.
-            Returns: A System.String containing the results of decoding the specified sequence of 
-             bytes.
+            Returns: A System.String containing the results of decoding the specified sequence of bytes.
         """
         pass
 
@@ -3487,13 +3294,13 @@ class UTF8Encoding(Encoding, ICloneable):
         """
         Equals(self: UTF8Encoding, value: object) -> bool
         
-            Determines whether the specified System.Object is equal to the current 
-             System.Text.UTF8Encoding object.
+            Determines whether the specified System.Object is equal to the current System.Text.UTF8Encoding 
+             object.
         
         
             value: The System.Object to compare with the current instance.
-            Returns: true if value is an instance of System.Text.UTF8Encoding and is equal to the 
-             current object; otherwise, false.
+            Returns: true if value is an instance of System.Text.UTF8Encoding and is equal to the current object; 
+             otherwise, false.
         """
         pass
 
@@ -3501,8 +3308,8 @@ class UTF8Encoding(Encoding, ICloneable):
         """
         GetByteCount(self: UTF8Encoding, chars: Char*, count: int) -> int
         
-            Calculates the number of bytes produced by encoding a set of characters 
-             starting at the specified character pointer.
+            Calculates the number of bytes produced by encoding a set of characters starting at the 
+             specified character pointer.
         
         
             chars: A pointer to the first character to encode.
@@ -3510,16 +3317,16 @@ class UTF8Encoding(Encoding, ICloneable):
             Returns: The number of bytes produced by encoding the specified characters.
         GetByteCount(self: UTF8Encoding, chars: str) -> int
         
-            Calculates the number of bytes produced by encoding the characters in the 
-             specified System.String.
+            Calculates the number of bytes produced by encoding the characters in the specified 
+             System.String.
         
         
             chars: The System.String containing the set of characters to encode.
             Returns: The number of bytes produced by encoding the specified characters.
         GetByteCount(self: UTF8Encoding, chars: Array[Char], index: int, count: int) -> int
         
-            Calculates the number of bytes produced by encoding a set of characters from 
-             the specified character array.
+            Calculates the number of bytes produced by encoding a set of characters from the specified 
+             character array.
         
         
             chars: The character array containing the set of characters to encode.
@@ -3533,22 +3340,18 @@ class UTF8Encoding(Encoding, ICloneable):
         """
         GetBytes(self: UTF8Encoding, chars: Char*, charCount: int, bytes: Byte*, byteCount: int) -> int
         
-            Encodes a set of characters starting at the specified character pointer into a 
-             sequence of bytes that are stored starting at the specified byte pointer.
+            Encodes a set of characters starting at the specified character pointer into a sequence of bytes 
+             that are stored starting at the specified byte pointer.
         
         
             chars: A pointer to the first character to encode.
             charCount: The number of characters to encode.
-            bytes: A pointer to the location at which to start writing the resulting sequence of 
-             bytes.
-        
+            bytes: A pointer to the location at which to start writing the resulting sequence of bytes.
             byteCount: The maximum number of bytes to write.
             Returns: The actual number of bytes written at the location indicated by bytes.
         GetBytes(self: UTF8Encoding, chars: Array[Char], charIndex: int, charCount: int, bytes: Array[Byte], byteIndex: int) -> int
         
-            Encodes a set of characters from the specified character array into the 
-             specified byte array.
-        
+            Encodes a set of characters from the specified character array into the specified byte array.
         
             chars: The character array containing the set of characters to encode.
             charIndex: The index of the first character to encode.
@@ -3558,9 +3361,7 @@ class UTF8Encoding(Encoding, ICloneable):
             Returns: The actual number of bytes written into bytes.
         GetBytes(self: UTF8Encoding, s: str, charIndex: int, charCount: int, bytes: Array[Byte], byteIndex: int) -> int
         
-            Encodes a set of characters from the specified System.String into the specified 
-             byte array.
-        
+            Encodes a set of characters from the specified System.String into the specified byte array.
         
             s: The System.String containing the set of characters to encode.
             charIndex: The index of the first character to encode.
@@ -3575,8 +3376,8 @@ class UTF8Encoding(Encoding, ICloneable):
         """
         GetCharCount(self: UTF8Encoding, bytes: Byte*, count: int) -> int
         
-            Calculates the number of characters produced by decoding a sequence of bytes 
-             starting at the specified byte pointer.
+            Calculates the number of characters produced by decoding a sequence of bytes starting at the 
+             specified byte pointer.
         
         
             bytes: A pointer to the first byte to decode.
@@ -3584,8 +3385,8 @@ class UTF8Encoding(Encoding, ICloneable):
             Returns: The number of characters produced by decoding the specified sequence of bytes.
         GetCharCount(self: UTF8Encoding, bytes: Array[Byte], index: int, count: int) -> int
         
-            Calculates the number of characters produced by decoding a sequence of bytes 
-             from the specified byte array.
+            Calculates the number of characters produced by decoding a sequence of bytes from the specified 
+             byte array.
         
         
             bytes: The byte array containing the sequence of bytes to decode.
@@ -3599,22 +3400,18 @@ class UTF8Encoding(Encoding, ICloneable):
         """
         GetChars(self: UTF8Encoding, bytes: Byte*, byteCount: int, chars: Char*, charCount: int) -> int
         
-            Decodes a sequence of bytes starting at the specified byte pointer into a set 
-             of characters that are stored starting at the specified character pointer.
+            Decodes a sequence of bytes starting at the specified byte pointer into a set of characters that 
+             are stored starting at the specified character pointer.
         
         
             bytes: A pointer to the first byte to decode.
             byteCount: The number of bytes to decode.
-            chars: A pointer to the location at which to start writing the resulting set of 
-             characters.
-        
+            chars: A pointer to the location at which to start writing the resulting set of characters.
             charCount: The maximum number of characters to write.
             Returns: The actual number of characters written at the location indicated by chars.
         GetChars(self: UTF8Encoding, bytes: Array[Byte], byteIndex: int, byteCount: int, chars: Array[Char], charIndex: int) -> int
         
-            Decodes a sequence of bytes from the specified byte array into the specified 
-             character array.
-        
+            Decodes a sequence of bytes from the specified byte array into the specified character array.
         
             bytes: The byte array containing the sequence of bytes to decode.
             byteIndex: The index of the first byte to decode.
@@ -3629,11 +3426,11 @@ class UTF8Encoding(Encoding, ICloneable):
         """
         GetDecoder(self: UTF8Encoding) -> Decoder
         
-            Obtains a decoder that converts a UTF-8 encoded sequence of bytes into a 
-             sequence of Unicode characters.
+            Obtains a decoder that converts a UTF-8 encoded sequence of bytes into a sequence of Unicode 
+             characters.
         
-            Returns: A System.Text.Decoder that converts a UTF-8 encoded sequence of bytes into a 
-             sequence of Unicode characters.
+            Returns: A System.Text.Decoder that converts a UTF-8 encoded sequence of bytes into a sequence of Unicode 
+             characters.
         """
         pass
 
@@ -3641,11 +3438,11 @@ class UTF8Encoding(Encoding, ICloneable):
         """
         GetEncoder(self: UTF8Encoding) -> Encoder
         
-            Obtains an encoder that converts a sequence of Unicode characters into a UTF-8 
-             encoded sequence of bytes.
+            Obtains an encoder that converts a sequence of Unicode characters into a UTF-8 encoded sequence 
+             of bytes.
         
-            Returns: A System.Text.Encoder that converts a sequence of Unicode characters into a 
-             UTF-8 encoded sequence of bytes.
+            Returns: A System.Text.Encoder that converts a sequence of Unicode characters into a UTF-8 encoded 
+             sequence of bytes.
         """
         pass
 
@@ -3662,13 +3459,10 @@ class UTF8Encoding(Encoding, ICloneable):
         """
         GetMaxByteCount(self: UTF8Encoding, charCount: int) -> int
         
-            Calculates the maximum number of bytes produced by encoding the specified 
-             number of characters.
-        
+            Calculates the maximum number of bytes produced by encoding the specified number of characters.
         
             charCount: The number of characters to encode.
-            Returns: The maximum number of bytes produced by encoding the specified number of 
-             characters.
+            Returns: The maximum number of bytes produced by encoding the specified number of characters.
         """
         pass
 
@@ -3676,13 +3470,10 @@ class UTF8Encoding(Encoding, ICloneable):
         """
         GetMaxCharCount(self: UTF8Encoding, byteCount: int) -> int
         
-            Calculates the maximum number of characters produced by decoding the specified 
-             number of bytes.
-        
+            Calculates the maximum number of characters produced by decoding the specified number of bytes.
         
             byteCount: The number of bytes to decode.
-            Returns: The maximum number of characters produced by decoding the specified number of 
-             bytes.
+            Returns: The maximum number of characters produced by decoding the specified number of bytes.
         """
         pass
 
@@ -3690,12 +3481,11 @@ class UTF8Encoding(Encoding, ICloneable):
         """
         GetPreamble(self: UTF8Encoding) -> Array[Byte]
         
-            Returns a Unicode byte order mark encoded in UTF-8 format, if the constructor 
-             for this instance requests a byte order mark.
+            Returns a Unicode byte order mark encoded in UTF-8 format, if the constructor for this instance 
+             requests a byte order mark.
         
-            Returns: A byte array containing the Unicode byte order mark, if the constructor for 
-             this instance requests a byte order mark. Otherwise, this method returns a byte 
-             array of length zero.
+            Returns: A byte array containing the Unicode byte order mark, if the constructor for this instance 
+             requests a byte order mark. Otherwise, this method returns a byte array of length zero.
         """
         pass
 
@@ -3708,8 +3498,7 @@ class UTF8Encoding(Encoding, ICloneable):
             bytes: The byte array containing the sequence of bytes to decode.
             index: The index of the first byte to decode.
             count: The number of bytes to decode.
-            Returns: A System.String containing the results of decoding the specified sequence of 
-             bytes.
+            Returns: A System.String containing the results of decoding the specified sequence of bytes.
         """
         pass
 

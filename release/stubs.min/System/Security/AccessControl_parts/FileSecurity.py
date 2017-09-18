@@ -2,14 +2,14 @@ class FileSecurity(FileSystemSecurity):
  """
  Represents the access control and audit security for a file. This class cannot be inherited.
  
- FileSecurity()
- FileSecurity(fileName: str,includeSections: AccessControlSections)
+ FileSecurity(fileName: str,includeSections: AccessControlSections)
+ FileSecurity()
  """
  def AddAccessRule(self,rule):
   """
   AddAccessRule(self: CommonObjectSecurity,rule: AccessRule)
-   Adds the specified access rule to the Discretionary Access Control List (DACL) 
-    associated with this System.Security.AccessControl.CommonObjectSecurity object.
+   Adds the specified access rule to the Discretionary Access Control List (DACL) associated with 
+    this System.Security.AccessControl.CommonObjectSecurity object.
   
   
    rule: The access rule to add.
@@ -18,8 +18,8 @@ class FileSecurity(FileSystemSecurity):
  def AddAuditRule(self,rule):
   """
   AddAuditRule(self: CommonObjectSecurity,rule: AuditRule)
-   Adds the specified audit rule to the System Access Control List (SACL) 
-    associated with this System.Security.AccessControl.CommonObjectSecurity object.
+   Adds the specified audit rule to the System Access Control List (SACL) associated with this 
+    System.Security.AccessControl.CommonObjectSecurity object.
   
   
    rule: The audit rule to add.
@@ -29,9 +29,9 @@ class FileSecurity(FileSystemSecurity):
   """
   RemoveAccessRule(self: CommonObjectSecurity,rule: AccessRule) -> bool
   
-   Removes access rules that contain the same security identifier and access mask 
-    as the specified access rule from the Discretionary Access Control List (DACL) 
-    associated with this System.Security.AccessControl.CommonObjectSecurity object.
+   Removes access rules that contain the same security identifier and access mask as the specified 
+    access rule from the Discretionary Access Control List (DACL) associated with this 
+    System.Security.AccessControl.CommonObjectSecurity object.
   
   
    rule: The access rule to remove.
@@ -41,9 +41,9 @@ class FileSecurity(FileSystemSecurity):
  def RemoveAccessRuleAll(self,rule):
   """
   RemoveAccessRuleAll(self: CommonObjectSecurity,rule: AccessRule)
-   Removes all access rules that have the same security identifier as the 
-    specified access rule from the Discretionary Access Control List (DACL) 
-    associated with this System.Security.AccessControl.CommonObjectSecurity object.
+   Removes all access rules that have the same security identifier as the specified access rule 
+    from the Discretionary Access Control List (DACL) associated with this 
+    System.Security.AccessControl.CommonObjectSecurity object.
   
   
    rule: The access rule to remove.
@@ -52,8 +52,8 @@ class FileSecurity(FileSystemSecurity):
  def RemoveAccessRuleSpecific(self,rule):
   """
   RemoveAccessRuleSpecific(self: CommonObjectSecurity,rule: AccessRule)
-   Removes all access rules that exactly match the specified access rule from the 
-    Discretionary Access Control List (DACL) associated with this 
+   Removes all access rules that exactly match the specified access rule from the Discretionary 
+    Access Control List (DACL) associated with this 
     System.Security.AccessControl.CommonObjectSecurity object.
   
   
@@ -64,9 +64,9 @@ class FileSecurity(FileSystemSecurity):
   """
   RemoveAuditRule(self: CommonObjectSecurity,rule: AuditRule) -> bool
   
-   Removes audit rules that contain the same security identifier and access mask 
-    as the specified audit rule from the System Access Control List (SACL) 
-    associated with this System.Security.AccessControl.CommonObjectSecurity object.
+   Removes audit rules that contain the same security identifier and access mask as the specified 
+    audit rule from the System Access Control List (SACL) associated with this 
+    System.Security.AccessControl.CommonObjectSecurity object.
   
   
    rule: The audit rule to remove.
@@ -76,8 +76,8 @@ class FileSecurity(FileSystemSecurity):
  def RemoveAuditRuleAll(self,rule):
   """
   RemoveAuditRuleAll(self: CommonObjectSecurity,rule: AuditRule)
-   Removes all audit rules that have the same security identifier as the specified 
-    audit rule from the System Access Control List (SACL) associated with this 
+   Removes all audit rules that have the same security identifier as the specified audit rule from 
+    the System Access Control List (SACL) associated with this 
     System.Security.AccessControl.CommonObjectSecurity object.
   
   
@@ -87,9 +87,9 @@ class FileSecurity(FileSystemSecurity):
  def RemoveAuditRuleSpecific(self,rule):
   """
   RemoveAuditRuleSpecific(self: CommonObjectSecurity,rule: AuditRule)
-   Removes all audit rules that exactly match the specified audit rule from the 
-    System Access Control List (SACL) associated with this 
-    System.Security.AccessControl.CommonObjectSecurity object.
+   Removes all audit rules that exactly match the specified audit rule from the System Access 
+    Control List (SACL) associated with this System.Security.AccessControl.CommonObjectSecurity 
+    object.
   
   
    rule: The audit rule to remove.
@@ -98,9 +98,9 @@ class FileSecurity(FileSystemSecurity):
  def ResetAccessRule(self,rule):
   """
   ResetAccessRule(self: CommonObjectSecurity,rule: AccessRule)
-   Removes all access rules in the Discretionary Access Control List (DACL) 
-    associated with this System.Security.AccessControl.CommonObjectSecurity object 
-    and then adds the specified access rule.
+   Removes all access rules in the Discretionary Access Control List (DACL) associated with this 
+    System.Security.AccessControl.CommonObjectSecurity object and then adds the specified access 
+    rule.
   
   
    rule: The access rule to reset.
@@ -109,10 +109,10 @@ class FileSecurity(FileSystemSecurity):
  def SetAccessRule(self,rule):
   """
   SetAccessRule(self: CommonObjectSecurity,rule: AccessRule)
-   Removes all access rules that contain the same security identifier and 
-    qualifier as the specified access rule in the Discretionary Access Control List 
-    (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity 
-    object and then adds the specified access rule.
+   Removes all access rules that contain the same security identifier and qualifier as the 
+    specified access rule in the Discretionary Access Control List (DACL) associated with this 
+    System.Security.AccessControl.CommonObjectSecurity object and then adds the specified access 
+    rule.
   
   
    rule: The access rule to set.
@@ -121,10 +121,10 @@ class FileSecurity(FileSystemSecurity):
  def SetAuditRule(self,rule):
   """
   SetAuditRule(self: CommonObjectSecurity,rule: AuditRule)
-   Removes all audit rules that contain the same security identifier and qualifier 
-    as the specified audit rule in the System Access Control List (SACL) associated 
-    with this System.Security.AccessControl.CommonObjectSecurity object and then 
-    adds the specified audit rule.
+   Removes all audit rules that contain the same security identifier and qualifier as the specified 
+    audit rule in the System Access Control List (SACL) associated with this 
+    System.Security.AccessControl.CommonObjectSecurity object and then adds the specified audit 
+    rule.
   
   
    rule: The audit rule to set.

@@ -11,13 +11,11 @@ class BindableAttribute(Attribute,_Attribute):
   """
   Equals(self: BindableAttribute,obj: object) -> bool
   
-   Determines whether two System.ComponentModel.BindableAttribute objects are 
-    equal.
-  
+   Determines whether two System.ComponentModel.BindableAttribute objects are equal.
   
    obj: The object to compare.
-   Returns: true if the specified System.ComponentModel.BindableAttribute is equal to the 
-    current System.ComponentModel.BindableAttribute; false if it is not equal.
+   Returns: true if the specified System.ComponentModel.BindableAttribute is equal to the current 
+    System.ComponentModel.BindableAttribute; false if it is not equal.
   """
   pass
  def GetHashCode(self):
@@ -33,8 +31,7 @@ class BindableAttribute(Attribute,_Attribute):
   IsDefaultAttribute(self: BindableAttribute) -> bool
   
    Determines if this attribute is the default.
-   Returns: true if the attribute is the default value for this attribute class; otherwise,
-    false.
+   Returns: true if the attribute is the default value for this attribute class; otherwise,false.
   """
   pass
  def __eq__(self,*args):

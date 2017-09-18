@@ -22,13 +22,12 @@ class Padding(object):
   """
   Equals(self: Padding,other: object) -> bool
   
-   Determines whether the value of the specified object is equivalent to the 
-    current System.Windows.Forms.Padding.
+   Determines whether the value of the specified object is equivalent to the current 
+    System.Windows.Forms.Padding.
   
   
    other: The object to compare to the current System.Windows.Forms.Padding.
-   Returns: true if the System.Windows.Forms.Padding objects are equivalent; otherwise,
-    false.
+   Returns: true if the System.Windows.Forms.Padding objects are equivalent; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -48,8 +47,8 @@ class Padding(object):
   
    p1: A System.Windows.Forms.Padding.
    p2: A System.Windows.Forms.Padding.
-   Returns: A System.Windows.Forms.Padding that contains the result of the subtraction of 
-    one specified System.Windows.Forms.Padding value from another.
+   Returns: A System.Windows.Forms.Padding that contains the result of the subtraction of one specified 
+    System.Windows.Forms.Padding value from another.
   """
   pass
  def ToString(self):
@@ -69,10 +68,9 @@ class Padding(object):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__[Padding]() -> Padding
-  
   __new__(cls: type,all: int)
-  __new__(cls: type,left: int,top: int,right: int,bottom: int)
+  __new__(cls: type,left: int,top: int,right: int,bottom: int)
+  __new__[Padding]() -> Padding
   """
   pass
  def __ne__(self,*args):
@@ -81,8 +79,8 @@ class Padding(object):
   """
   __radd__(p1: Padding,p2: Padding) -> Padding
   
-   Performs vector addition on the two specified System.Windows.Forms.Padding 
-    objects,resulting in a new System.Windows.Forms.Padding.
+   Performs vector addition on the two specified System.Windows.Forms.Padding objects,resulting in 
+    a new System.Windows.Forms.Padding.
   
   
    p1: The first System.Windows.Forms.Padding to add.
@@ -94,8 +92,8 @@ class Padding(object):
   """
   __rsub__(p1: Padding,p2: Padding) -> Padding
   
-   Performs vector subtraction on the two specified System.Windows.Forms.Padding 
-    objects,resulting in a new System.Windows.Forms.Padding.
+   Performs vector subtraction on the two specified System.Windows.Forms.Padding objects,resulting 
+    in a new System.Windows.Forms.Padding.
   
   
    p1: The System.Windows.Forms.Padding to subtract from (the minuend).

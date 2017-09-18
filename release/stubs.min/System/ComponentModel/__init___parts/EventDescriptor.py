@@ -12,8 +12,8 @@ class EventDescriptor(MemberDescriptor):
  def RemoveEventHandler(self,component,value):
   """
   RemoveEventHandler(self: EventDescriptor,component: object,value: Delegate)
-   When overridden in a derived class,unbinds the delegate from the component so 
-    that the delegate will no longer receive events from the component.
+   When overridden in a derived class,unbinds the delegate from the component so that the delegate 
+    will no longer receive events from the component.
   
   
    component: The component that the delegate is bound to.

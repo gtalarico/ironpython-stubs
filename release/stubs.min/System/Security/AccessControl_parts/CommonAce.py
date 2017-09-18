@@ -7,12 +7,12 @@ class CommonAce(QualifiedAce):
  def GetBinaryForm(self,binaryForm,offset):
   """
   GetBinaryForm(self: CommonAce,binaryForm: Array[Byte],offset: int)
-   Marshals the contents of the System.Security.AccessControl.CommonAce object 
-    into the specified byte array beginning at the specified offset.
+   Marshals the contents of the System.Security.AccessControl.CommonAce object into the specified 
+    byte array beginning at the specified offset.
   
   
-   binaryForm: The byte array into which the contents of the 
-    System.Security.AccessControl.CommonAce object is marshaled.
+   binaryForm: The byte array into which the contents of the System.Security.AccessControl.CommonAce object is 
+    marshaled.
   
    offset: The offset at which to start marshaling.
   """
@@ -22,13 +22,11 @@ class CommonAce(QualifiedAce):
   """
   MaxOpaqueLength(isCallback: bool) -> int
   
-   Gets the maximum allowed length of an opaque data BLOB for callback access 
-    control entries (ACEs).
+   Gets the maximum allowed length of an opaque data BLOB for callback access control entries 
+    (ACEs).
   
   
-   isCallback: true to specify that the System.Security.AccessControl.CommonAce object is a 
-    callback ACE type.
-  
+   isCallback: true to specify that the System.Security.AccessControl.CommonAce object is a callback ACE type.
    Returns: The allowed length of an opaque data BLOB.
   """
   pass

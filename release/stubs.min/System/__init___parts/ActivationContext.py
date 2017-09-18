@@ -5,8 +5,8 @@ class ActivationContext(object,IDisposable,ISerializable):
   """
   CreatePartialActivationContext(identity: ApplicationIdentity,manifestPaths: Array[str]) -> ActivationContext
   
-   Initializes a new instance of the System.ActivationContext class using the 
-    specified application identity and array of manifest paths.
+   Initializes a new instance of the System.ActivationContext class using the specified application 
+    identity and array of manifest paths.
   
   
    identity: An object that identifies an application.
@@ -14,8 +14,8 @@ class ActivationContext(object,IDisposable,ISerializable):
    Returns: An object with the specified application identity and array of manifest paths.
   CreatePartialActivationContext(identity: ApplicationIdentity) -> ActivationContext
   
-   Initializes a new instance of the System.ActivationContext class using the 
-    specified application identity.
+   Initializes a new instance of the System.ActivationContext class using the specified application 
+    identity.
   
   
    identity: An object that identifies an application.
@@ -29,10 +29,17 @@ class ActivationContext(object,IDisposable,ISerializable):
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

@@ -14,8 +14,8 @@ class WebException(InvalidOperationException,ISerializable,_Exception):
  def GetObjectData(self,serializationInfo,streamingContext):
   """
   GetObjectData(self: WebException,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo instance with the 
-    data needed to serialize the System.Net.WebException.
+   Populates a System.Runtime.Serialization.SerializationInfo instance with the data needed to 
+    serialize the System.Net.WebException.
   
   
    serializationInfo: The System.Runtime.Serialization.SerializationInfo to be used.

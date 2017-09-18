@@ -8,10 +8,9 @@ class PerformanceCounterPermissionAttribute(CodeAccessSecurityAttribute,_Attribu
   """
   CreatePermission(self: PerformanceCounterPermissionAttribute) -> IPermission
   
-   Creates the permission based on the requested access levels that are set 
-    through the 
-    System.Diagnostics.PerformanceCounterPermissionAttribute.PermissionAccess 
-    property on the attribute.
+   Creates the permission based on the requested access levels that are set through the 
+    System.Diagnostics.PerformanceCounterPermissionAttribute.PermissionAccess property on the 
+    attribute.
   
    Returns: An System.Security.IPermission that represents the created permission.
   """

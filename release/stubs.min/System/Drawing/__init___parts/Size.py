@@ -10,8 +10,8 @@ class Size(object):
   """
   Add(sz1: Size,sz2: Size) -> Size
   
-   Adds the width and height of one System.Drawing.Size structure to the width and 
-    height of another System.Drawing.Size structure.
+   Adds the width and height of one System.Drawing.Size structure to the width and height of 
+    another System.Drawing.Size structure.
   
   
    sz1: The first System.Drawing.Size structure to add.
@@ -24,9 +24,8 @@ class Size(object):
   """
   Ceiling(value: SizeF) -> Size
   
-   Converts the specified System.Drawing.SizeF structure to a System.Drawing.Size 
-    structure by rounding the values of the System.Drawing.Size structure to the 
-    next higher integer values.
+   Converts the specified System.Drawing.SizeF structure to a System.Drawing.Size structure by 
+    rounding the values of the System.Drawing.Size structure to the next higher integer values.
   
   
    value: The System.Drawing.SizeF structure to convert.
@@ -37,8 +36,8 @@ class Size(object):
   """
   Equals(self: Size,obj: object) -> bool
   
-   Tests to see whether the specified object is a System.Drawing.Size structure 
-    with the same dimensions as this System.Drawing.Size structure.
+   Tests to see whether the specified object is a System.Drawing.Size structure with the same 
+    dimensions as this System.Drawing.Size structure.
   
   
    obj: The System.Object to test.
@@ -51,8 +50,7 @@ class Size(object):
   GetHashCode(self: Size) -> int
   
    Returns a hash code for this System.Drawing.Size structure.
-   Returns: An integer value that specifies a hash value for this System.Drawing.Size 
-    structure.
+   Returns: An integer value that specifies a hash value for this System.Drawing.Size structure.
   """
   pass
  @staticmethod
@@ -60,9 +58,8 @@ class Size(object):
   """
   Round(value: SizeF) -> Size
   
-   Converts the specified System.Drawing.SizeF structure to a System.Drawing.Size 
-    structure by rounding the values of the System.Drawing.SizeF structure to the 
-    nearest integer values.
+   Converts the specified System.Drawing.SizeF structure to a System.Drawing.Size structure by 
+    rounding the values of the System.Drawing.SizeF structure to the nearest integer values.
   
   
    value: The System.Drawing.SizeF structure to convert.
@@ -74,8 +71,8 @@ class Size(object):
   """
   Subtract(sz1: Size,sz2: Size) -> Size
   
-   Subtracts the width and height of one System.Drawing.Size structure from the 
-    width and height of another System.Drawing.Size structure.
+   Subtracts the width and height of one System.Drawing.Size structure from the width and height of 
+    another System.Drawing.Size structure.
   
   
    sz1: The System.Drawing.Size structure on the left side of the subtraction operator.
@@ -87,9 +84,7 @@ class Size(object):
   """
   ToString(self: Size) -> str
   
-   Creates a human-readable string that represents this System.Drawing.Size 
-    structure.
-  
+   Creates a human-readable string that represents this System.Drawing.Size structure.
    Returns: A string that represents this System.Drawing.Size.
   """
   pass
@@ -98,9 +93,8 @@ class Size(object):
   """
   Truncate(value: SizeF) -> Size
   
-   Converts the specified System.Drawing.SizeF structure to a System.Drawing.Size 
-    structure by truncating the values of the System.Drawing.SizeF structure to the 
-    next lower integer values.
+   Converts the specified System.Drawing.SizeF structure to a System.Drawing.Size structure by 
+    truncating the values of the System.Drawing.SizeF structure to the next lower integer values.
   
   
    value: The System.Drawing.SizeF structure to convert.
@@ -116,9 +110,10 @@ class Size(object):
  @staticmethod
  def __new__(self,*__args):
   """
+  __new__[Size]() -> Size
+  
   __new__(cls: type,pt: Point)
-  __new__(cls: type,width: int,height: int)
-  __new__[Size]() -> Size
+  __new__(cls: type,width: int,height: int)
   """
   pass
  def __ne__(self,*args):
@@ -127,8 +122,8 @@ class Size(object):
   """
   __radd__(sz1: Size,sz2: Size) -> Size
   
-   Adds the width and height of one System.Drawing.Size structure to the width and 
-    height of another System.Drawing.Size structure.
+   Adds the width and height of one System.Drawing.Size structure to the width and height of 
+    another System.Drawing.Size structure.
   
   
    sz1: The first System.Drawing.Size to add.
@@ -140,8 +135,8 @@ class Size(object):
   """
   __rsub__(sz1: Size,sz2: Size) -> Size
   
-   Subtracts the width and height of one System.Drawing.Size structure from the 
-    width and height of another System.Drawing.Size structure.
+   Subtracts the width and height of one System.Drawing.Size structure from the width and height of 
+    another System.Drawing.Size structure.
   
   
    sz1: The System.Drawing.Size structure on the left side of the subtraction operator.

@@ -9,21 +9,20 @@ class CryptoKeySecurity(NativeObjectSecurity):
   """
   AccessRuleFactory(self: CryptoKeySecurity,identityReference: IdentityReference,accessMask: int,isInherited: bool,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,type: AccessControlType) -> AccessRule
   
-   Initializes a new instance of the System.Security.AccessControl.AccessRule 
-    class with the specified values.
+   Initializes a new instance of the System.Security.AccessControl.AccessRule class with the 
+    specified values.
   
   
-   identityReference: The identity to which the access rule applies.  It must be an object that can 
-    be cast as a System.Security.Principal.SecurityIdentifier.
+   identityReference: The identity to which the access rule applies.  It must be an object that can be cast as a 
+    System.Security.Principal.SecurityIdentifier.
   
-   accessMask: The access mask of this rule. The access mask is a 32-bit collection of 
-    anonymous bits,the meaning of which is defined by the individual integrators.
+   accessMask: The access mask of this rule. The access mask is a 32-bit collection of anonymous bits,the 
+    meaning of which is defined by the individual integrators.
   
    isInherited: true if this rule is inherited from a parent container.
    inheritanceFlags: Specifies the inheritance properties of the access rule.
-   propagationFlags: Specifies whether inherited access rules are automatically propagated. The 
-    propagation flags are ignored if inheritanceFlags is set to 
-    System.Security.AccessControl.InheritanceFlags.None.
+   propagationFlags: Specifies whether inherited access rules are automatically propagated. The propagation flags are 
+    ignored if inheritanceFlags is set to System.Security.AccessControl.InheritanceFlags.None.
   
    type: Specifies the valid access control type.
    Returns: The System.Security.AccessControl.AccessRule object that this method creates.
@@ -32,8 +31,8 @@ class CryptoKeySecurity(NativeObjectSecurity):
  def AddAccessRule(self,rule):
   """
   AddAccessRule(self: CryptoKeySecurity,rule: CryptoKeyAccessRule)
-   Adds the specified access rule to the Discretionary Access Control List (DACL) 
-    associated with this System.Security.AccessControl.CryptoKeySecurity object.
+   Adds the specified access rule to the Discretionary Access Control List (DACL) associated with 
+    this System.Security.AccessControl.CryptoKeySecurity object.
   
   
    rule: The access rule to add.
@@ -42,8 +41,8 @@ class CryptoKeySecurity(NativeObjectSecurity):
  def AddAuditRule(self,rule):
   """
   AddAuditRule(self: CryptoKeySecurity,rule: CryptoKeyAuditRule)
-   Adds the specified audit rule to the System Access Control List (SACL) 
-    associated with this System.Security.AccessControl.CryptoKeySecurity object.
+   Adds the specified audit rule to the System Access Control List (SACL) associated with this 
+    System.Security.AccessControl.CryptoKeySecurity object.
   
   
    rule: The audit rule to add.
@@ -53,21 +52,20 @@ class CryptoKeySecurity(NativeObjectSecurity):
   """
   AuditRuleFactory(self: CryptoKeySecurity,identityReference: IdentityReference,accessMask: int,isInherited: bool,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,flags: AuditFlags) -> AuditRule
   
-   Initializes a new instance of the System.Security.AccessControl.AuditRule class 
-    with the specified values.
+   Initializes a new instance of the System.Security.AccessControl.AuditRule class with the 
+    specified values.
   
   
-   identityReference: The identity to which the audit rule applies.  It must be an object that can be 
-    cast as a System.Security.Principal.SecurityIdentifier.
+   identityReference: The identity to which the audit rule applies.  It must be an object that can be cast as a 
+    System.Security.Principal.SecurityIdentifier.
   
-   accessMask: The access mask of this rule. The access mask is a 32-bit collection of 
-    anonymous bits,the meaning of which is defined by the individual integrators.
+   accessMask: The access mask of this rule. The access mask is a 32-bit collection of anonymous bits,the 
+    meaning of which is defined by the individual integrators.
   
    isInherited: true if this rule is inherited from a parent container.
    inheritanceFlags: Specifies the inheritance properties of the audit rule.
-   propagationFlags: Specifies whether inherited audit rules are automatically propagated. The 
-    propagation flags are ignored if inheritanceFlags is set to 
-    System.Security.AccessControl.InheritanceFlags.None.
+   propagationFlags: Specifies whether inherited audit rules are automatically propagated. The propagation flags are 
+    ignored if inheritanceFlags is set to System.Security.AccessControl.InheritanceFlags.None.
   
    flags: Specifies the conditions for which the rule is audited.
    Returns: The System.Security.AccessControl.AuditRule object that this method creates.
@@ -77,9 +75,9 @@ class CryptoKeySecurity(NativeObjectSecurity):
   """
   RemoveAccessRule(self: CryptoKeySecurity,rule: CryptoKeyAccessRule) -> bool
   
-   Removes access rules that contain the same security identifier and access mask 
-    as the specified access rule from the Discretionary Access Control List (DACL) 
-    associated with this System.Security.AccessControl.CryptoKeySecurity object.
+   Removes access rules that contain the same security identifier and access mask as the specified 
+    access rule from the Discretionary Access Control List (DACL) associated with this 
+    System.Security.AccessControl.CryptoKeySecurity object.
   
   
    rule: The access rule to remove.
@@ -89,9 +87,9 @@ class CryptoKeySecurity(NativeObjectSecurity):
  def RemoveAccessRuleAll(self,rule):
   """
   RemoveAccessRuleAll(self: CryptoKeySecurity,rule: CryptoKeyAccessRule)
-   Removes all access rules that have the same security identifier as the 
-    specified access rule from the Discretionary Access Control List (DACL) 
-    associated with this System.Security.AccessControl.CryptoKeySecurity object.
+   Removes all access rules that have the same security identifier as the specified access rule 
+    from the Discretionary Access Control List (DACL) associated with this 
+    System.Security.AccessControl.CryptoKeySecurity object.
   
   
    rule: The access rule to remove.
@@ -100,9 +98,9 @@ class CryptoKeySecurity(NativeObjectSecurity):
  def RemoveAccessRuleSpecific(self,rule):
   """
   RemoveAccessRuleSpecific(self: CryptoKeySecurity,rule: CryptoKeyAccessRule)
-   Removes all access rules that exactly match the specified access rule from the 
-    Discretionary Access Control List (DACL) associated with this 
-    System.Security.AccessControl.CryptoKeySecurity object.
+   Removes all access rules that exactly match the specified access rule from the Discretionary 
+    Access Control List (DACL) associated with this System.Security.AccessControl.CryptoKeySecurity 
+    object.
   
   
    rule: The access rule to remove.
@@ -112,9 +110,9 @@ class CryptoKeySecurity(NativeObjectSecurity):
   """
   RemoveAuditRule(self: CryptoKeySecurity,rule: CryptoKeyAuditRule) -> bool
   
-   Removes audit rules that contain the same security identifier and access mask 
-    as the specified audit rule from the System Access Control List (SACL) 
-    associated with this System.Security.AccessControl.CryptoKeySecurity object.
+   Removes audit rules that contain the same security identifier and access mask as the specified 
+    audit rule from the System Access Control List (SACL) associated with this 
+    System.Security.AccessControl.CryptoKeySecurity object.
   
   
    rule: The audit rule to remove.
@@ -124,8 +122,8 @@ class CryptoKeySecurity(NativeObjectSecurity):
  def RemoveAuditRuleAll(self,rule):
   """
   RemoveAuditRuleAll(self: CryptoKeySecurity,rule: CryptoKeyAuditRule)
-   Removes all audit rules that have the same security identifier as the specified 
-    audit rule from the System Access Control List (SACL) associated with this 
+   Removes all audit rules that have the same security identifier as the specified audit rule from 
+    the System Access Control List (SACL) associated with this 
     System.Security.AccessControl.CryptoKeySecurity object.
   
   
@@ -135,9 +133,8 @@ class CryptoKeySecurity(NativeObjectSecurity):
  def RemoveAuditRuleSpecific(self,rule):
   """
   RemoveAuditRuleSpecific(self: CryptoKeySecurity,rule: CryptoKeyAuditRule)
-   Removes all audit rules that exactly match the specified audit rule from the 
-    System Access Control List (SACL) associated with this 
-    System.Security.AccessControl.CryptoKeySecurity object.
+   Removes all audit rules that exactly match the specified audit rule from the System Access 
+    Control List (SACL) associated with this System.Security.AccessControl.CryptoKeySecurity object.
   
   
    rule: The audit rule to remove.
@@ -146,9 +143,8 @@ class CryptoKeySecurity(NativeObjectSecurity):
  def ResetAccessRule(self,rule):
   """
   ResetAccessRule(self: CryptoKeySecurity,rule: CryptoKeyAccessRule)
-   Removes all access rules in the Discretionary Access Control List (DACL) 
-    associated with this System.Security.AccessControl.CryptoKeySecurity object and 
-    then adds the specified access rule.
+   Removes all access rules in the Discretionary Access Control List (DACL) associated with this 
+    System.Security.AccessControl.CryptoKeySecurity object and then adds the specified access rule.
   
   
    rule: The access rule to reset.
@@ -157,10 +153,9 @@ class CryptoKeySecurity(NativeObjectSecurity):
  def SetAccessRule(self,rule):
   """
   SetAccessRule(self: CryptoKeySecurity,rule: CryptoKeyAccessRule)
-   Removes all access rules that contain the same security identifier and 
-    qualifier as the specified access rule in the Discretionary Access Control List 
-    (DACL) associated with this System.Security.AccessControl.CryptoKeySecurity 
-    object and then adds the specified access rule.
+   Removes all access rules that contain the same security identifier and qualifier as the 
+    specified access rule in the Discretionary Access Control List (DACL) associated with this 
+    System.Security.AccessControl.CryptoKeySecurity object and then adds the specified access rule.
   
   
    rule: The access rule to set.
@@ -169,10 +164,9 @@ class CryptoKeySecurity(NativeObjectSecurity):
  def SetAuditRule(self,rule):
   """
   SetAuditRule(self: CryptoKeySecurity,rule: CryptoKeyAuditRule)
-   Removes all audit rules that contain the same security identifier and qualifier 
-    as the specified audit rule in the System Access Control List (SACL) associated 
-    with this System.Security.AccessControl.CryptoKeySecurity object and then adds 
-    the specified audit rule.
+   Removes all audit rules that contain the same security identifier and qualifier as the specified 
+    audit rule in the System Access Control List (SACL) associated with this 
+    System.Security.AccessControl.CryptoKeySecurity object and then adds the specified audit rule.
   
   
    rule: The audit rule to set.

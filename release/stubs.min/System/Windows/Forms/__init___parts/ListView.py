@@ -11,9 +11,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
     System.Windows.Forms.AccessibleEvents for the specified child control .
   
   
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
-    applications of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    objectID: The identifier of the System.Windows.Forms.AccessibleObject.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,childID: int)
@@ -21,21 +19,19 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
     System.Windows.Forms.AccessibleEvents for the specified child control.
   
   
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
-    applications of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   """
   pass
  def ArrangeIcons(self,value=None):
   """
   ArrangeIcons(self: ListView)
-   Arranges items in the control when they are displayed as icons based on the 
-    value of the System.Windows.Forms.ListView.Alignment property.
+   Arranges items in the control when they are displayed as icons based on the value of the 
+    System.Windows.Forms.ListView.Alignment property.
   
   ArrangeIcons(self: ListView,value: ListViewAlignment)
-   Arranges items in the control when they are displayed as icons with a specified 
-    alignment setting.
+   Arranges items in the control when they are displayed as icons with a specified alignment 
+    setting.
   
   
    value: One of the System.Windows.Forms.ListViewAlignment values.
@@ -61,8 +57,8 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
  def BeginUpdate(self):
   """
   BeginUpdate(self: ListView)
-   Prevents the control from drawing until the 
-    System.Windows.Forms.ListView.EndUpdate method is called.
+   Prevents the control from drawing until the System.Windows.Forms.ListView.EndUpdate method is 
+    called.
   """
   pass
  def Clear(self):
@@ -84,8 +80,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   CreateControlsInstance(self: Control) -> ControlCollection
   
    Creates a new instance of the control collection for the control.
-   Returns: A new instance of System.Windows.Forms.Control.ControlCollection assigned to 
-    the control.
+   Returns: A new instance of System.Windows.Forms.Control.ControlCollection assigned to the control.
   """
   pass
  def CreateHandle(self,*args):
@@ -109,12 +104,11 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
  def Dispose(self):
   """
   Dispose(self: ListView,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.ListView and 
-    optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.ListView and optionally 
+    releases the managed resources.
   
   
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def EndUpdate(self):
@@ -127,8 +121,8 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
  def EnsureVisible(self,index):
   """
   EnsureVisible(self: ListView,index: int)
-   Ensures that the specified item is visible within the control,scrolling the 
-    contents of the control if necessary.
+   Ensures that the specified item is visible within the control,scrolling the contents of the 
+    control if necessary.
   
   
    index: The zero-based index of the item to scroll into view.
@@ -139,54 +133,45 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   FindItemWithText(self: ListView,text: str,includeSubItemsInSearch: bool,startIndex: int,isPrefixSearch: bool) -> ListViewItem
   
    Finds the first System.Windows.Forms.ListViewItem or 
-    System.Windows.Forms.ListViewItem.ListViewSubItem,if indicated,that begins 
-    with the specified text value. The search starts at the specified index.
+    System.Windows.Forms.ListViewItem.ListViewSubItem,if indicated,that begins with the specified 
+    text value. The search starts at the specified index.
   
   
    text: The text to search for.
    includeSubItemsInSearch: true to include subitems in the search; otherwise,false.
    startIndex: The index of the item at which to start the search.
    isPrefixSearch: true to allow partial matches; otherwise,false.
-   Returns: The first System.Windows.Forms.ListViewItem that begins with the specified text 
-    value.
-  
+   Returns: The first System.Windows.Forms.ListViewItem that begins with the specified text value.
   FindItemWithText(self: ListView,text: str,includeSubItemsInSearch: bool,startIndex: int) -> ListViewItem
   
    Finds the first System.Windows.Forms.ListViewItem or 
-    System.Windows.Forms.ListViewItem.ListViewSubItem,if indicated,that begins 
-    with the specified text value. The search starts at the specified index.
+    System.Windows.Forms.ListViewItem.ListViewSubItem,if indicated,that begins with the specified 
+    text value. The search starts at the specified index.
   
   
    text: The text to search for.
    includeSubItemsInSearch: true to include subitems in the search; otherwise,false.
    startIndex: The index of the item at which to start the search.
-   Returns: The first System.Windows.Forms.ListViewItem that begins with the specified text 
-    value.
-  
+   Returns: The first System.Windows.Forms.ListViewItem that begins with the specified text value.
   FindItemWithText(self: ListView,text: str) -> ListViewItem
   
-   Finds the first System.Windows.Forms.ListViewItem that begins with the 
-    specified text value.
-  
+   Finds the first System.Windows.Forms.ListViewItem that begins with the specified text value.
   
    text: The text to search for.
-   Returns: The first System.Windows.Forms.ListViewItem that begins with the specified text 
-    value.
+   Returns: The first System.Windows.Forms.ListViewItem that begins with the specified text value.
   """
   pass
  def FindNearestItem(self,*__args):
   """
   FindNearestItem(self: ListView,searchDirection: SearchDirectionHint,x: int,y: int) -> ListViewItem
   
-   Finds the next item from the given x- and y-coordinates,searching in the 
-    specified direction.
-  
+   Finds the next item from the given x- and y-coordinates,searching in the specified direction.
   
    searchDirection: One of the System.Windows.Forms.SearchDirectionHint values.
    x: The x-coordinate for the point at which to begin searching.
    y: The y-coordinate for the point at which to begin searching.
-   Returns: The System.Windows.Forms.ListViewItem that is closest to the given coordinates,
-    searching in the specified direction.
+   Returns: The System.Windows.Forms.ListViewItem that is closest to the given coordinates,searching in the 
+    specified direction.
   
   FindNearestItem(self: ListView,dir: SearchDirectionHint,point: Point) -> ListViewItem
   
@@ -194,8 +179,8 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   
    dir: One of the System.Windows.Forms.SearchDirectionHint values.
    point: The point at which to begin searching.
-   Returns: The System.Windows.Forms.ListViewItem that is closest to the given point,
-    searching in the specified direction.
+   Returns: The System.Windows.Forms.ListViewItem that is closest to the given point,searching in the 
+    specified direction.
   """
   pass
  def GetAccessibilityObjectById(self,*args):
@@ -224,48 +209,38 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   
    Retrieves the item at the specified location.
   
-   x: The x-coordinate of the location to search for an item (expressed in client 
-    coordinates).
-  
-   y: The y-coordinate of the location to search for an item (expressed in client 
-    coordinates).
-  
-   Returns: A System.Windows.Forms.ListViewItem that represents the item at the specified 
-    position. If there is no item at the specified location,the method returns 
-    null.
+   x: The x-coordinate of the location to search for an item (expressed in client coordinates).
+   y: The y-coordinate of the location to search for an item (expressed in client coordinates).
+   Returns: A System.Windows.Forms.ListViewItem that represents the item at the specified position. If there 
+    is no item at the specified location,the method returns null.
   """
   pass
  def GetItemRect(self,index,portion=None):
   """
   GetItemRect(self: ListView,index: int,portion: ItemBoundsPortion) -> Rectangle
   
-   Retrieves the specified portion of the bounding rectangle for a specific item 
-    within the list view control.
+   Retrieves the specified portion of the bounding rectangle for a specific item within the list 
+    view control.
   
   
-   index: The zero-based index of the item within the 
-    System.Windows.Forms.ListView.ListViewItemCollection whose bounding rectangle 
-    you want to return.
+   index: The zero-based index of the item within the System.Windows.Forms.ListView.ListViewItemCollection 
+    whose bounding rectangle you want to return.
   
-   portion: One of the System.Windows.Forms.ItemBoundsPortion values that represents a 
-    portion of the System.Windows.Forms.ListViewItem for which to retrieve the 
-    bounding rectangle.
+   portion: One of the System.Windows.Forms.ItemBoundsPortion values that represents a portion of the 
+    System.Windows.Forms.ListViewItem for which to retrieve the bounding rectangle.
   
-   Returns: A System.Drawing.Rectangle that represents the bounding rectangle for the 
-    specified portion of the specified System.Windows.Forms.ListViewItem.
+   Returns: A System.Drawing.Rectangle that represents the bounding rectangle for the specified portion of 
+    the specified System.Windows.Forms.ListViewItem.
   
   GetItemRect(self: ListView,index: int) -> Rectangle
   
-   Retrieves the bounding rectangle for a specific item within the list view 
-    control.
+   Retrieves the bounding rectangle for a specific item within the list view control.
   
+   index: The zero-based index of the item within the System.Windows.Forms.ListView.ListViewItemCollection 
+    whose bounding rectangle you want to return.
   
-   index: The zero-based index of the item within the 
-    System.Windows.Forms.ListView.ListViewItemCollection whose bounding rectangle 
-    you want to return.
-  
-   Returns: A System.Drawing.Rectangle that represents the bounding rectangle of the 
-    specified System.Windows.Forms.ListViewItem.
+   Returns: A System.Drawing.Rectangle that represents the bounding rectangle of the specified 
+    System.Windows.Forms.ListViewItem.
   """
   pass
  def GetScaledBounds(self,*args):
@@ -274,29 +249,25 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   
    Retrieves the bounds within which the control is scaled.
   
-   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the 
-    display bounds.
-  
+   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display bounds.
    factor: The height and width of the control's bounds.
-   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the 
-    bounds of the control to use when defining its size and position.
+   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of the 
+    control to use when defining its size and position.
   
-   Returns: A System.Drawing.Rectangle representing the bounds within which the control is 
-    scaled.
+   Returns: A System.Drawing.Rectangle representing the bounds within which the control is scaled.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetStyle(self,*args):
@@ -323,19 +294,19 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   
    Provides item information,given x- and y-coordinates.
   
-   x: The x-coordinate at which to retrieve the item information. The coordinate is 
-    relative to the upper-left corner of the control.
+   x: The x-coordinate at which to retrieve the item information. The coordinate is relative to the 
+    upper-left corner of the control.
   
-   y: The y-coordinate at which to retrieve the item information. The coordinate is 
-    relative to the upper-left corner of the control.
+   y: The y-coordinate at which to retrieve the item information. The coordinate is relative to the 
+    upper-left corner of the control.
   
    Returns: A System.Windows.Forms.ListViewHitTestInfo.
   HitTest(self: ListView,point: Point) -> ListViewHitTestInfo
   
    Provides item information,given a point.
   
-   point: The System.Drawing.Point at which to retrieve the item information. The 
-    coordinates are relative to the upper-left corner of the control.
+   point: The System.Drawing.Point at which to retrieve the item information. The coordinates are relative 
+    to the upper-left corner of the control.
   
    Returns: A System.Windows.Forms.ListViewHitTestInfo.
   """
@@ -349,9 +320,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
  def InvokeGotFocus(self,*args):
   """
   InvokeGotFocus(self: Control,toInvoke: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.GotFocus event for the specified 
-    control.
-  
+   Raises the System.Windows.Forms.Control.GotFocus event for the specified control.
   
    toInvoke: The System.Windows.Forms.Control to assign the event to.
    e: An System.EventArgs that contains the event data.
@@ -360,9 +329,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
  def InvokeLostFocus(self,*args):
   """
   InvokeLostFocus(self: Control,toInvoke: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.LostFocus event for the specified 
-    control.
-  
+   Raises the System.Windows.Forms.Control.LostFocus event for the specified control.
   
    toInvoke: The System.Windows.Forms.Control to assign the event to.
    e: An System.EventArgs that contains the event data.
@@ -373,9 +340,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   InvokeOnClick(self: Control,toInvoke: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.Click event for the specified control.
   
-   toInvoke: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Click event to.
-  
+   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event to.
    e: An System.EventArgs that contains the event data.
   """
   pass
@@ -384,9 +349,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   InvokePaint(self: Control,c: Control,e: PaintEventArgs)
    Raises the System.Windows.Forms.Control.Paint event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Paint event to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -395,9 +358,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   InvokePaintBackground(self: Control,c: Control,e: PaintEventArgs)
    Raises the PaintBackground event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Paint event to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -408,8 +369,8 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
    Determines if a character is an input character that the control recognizes.
   
    charCode: The character to test.
-   Returns: true if the character should be sent directly to the control and not 
-    preprocessed; otherwise,false.
+   Returns: true if the character should be sent directly to the control and not preprocessed; otherwise,
+    false.
   """
   pass
  def IsInputKey(self,*args):
@@ -426,11 +387,11 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -442,8 +403,8 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
  def NotifyInvalidate(self,*args):
   """
   NotifyInvalidate(self: Control,invalidatedArea: Rectangle)
-   Raises the System.Windows.Forms.Control.Invalidated event with a specified 
-    region of the control to invalidate.
+   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the control 
+    to invalidate.
   
   
    invalidatedArea: A System.Drawing.Rectangle representing the area to invalidate.
@@ -574,8 +535,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   OnColumnWidthChanging(self: ListView,e: ColumnWidthChangingEventArgs)
    Raises the System.Windows.Forms.ListView.ColumnWidthChanging event.
   
-   e: A System.Windows.Forms.ColumnWidthChangingEventArgs  that contains the event 
-    data.
+   e: A System.Windows.Forms.ColumnWidthChangingEventArgs  that contains the event data.
   """
   pass
  def OnContextMenuChanged(self,*args):
@@ -640,6 +600,12 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
    e: An System.EventArgs that contains the event data.
   """
   pass
+ def OnDpiChangedAfterParent(self,*args):
+  """ OnDpiChangedAfterParent(self: Control,e: EventArgs) """
+  pass
+ def OnDpiChangedBeforeParent(self,*args):
+  """ OnDpiChangedBeforeParent(self: Control,e: EventArgs) """
+  pass
  def OnDragDrop(self,*args):
   """
   OnDragDrop(self: Control,drgevent: DragEventArgs)
@@ -677,8 +643,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   OnDrawColumnHeader(self: ListView,e: DrawListViewColumnHeaderEventArgs)
    Raises the System.Windows.Forms.ListView.DrawColumnHeader event.
   
-   e: A System.Windows.Forms.DrawListViewColumnHeaderEventArgs that contains the 
-    event data.
+   e: A System.Windows.Forms.DrawListViewColumnHeaderEventArgs that contains the event data.
   """
   pass
  def OnDrawItem(self,*args):
@@ -694,8 +659,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   OnDrawSubItem(self: ListView,e: DrawListViewSubItemEventArgs)
    Raises the System.Windows.Forms.ListView.DrawSubItem event.
   
-   e: A System.Windows.Forms.DrawListViewSubItemEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.DrawListViewSubItemEventArgs that contains the event data.
   """
   pass
  def OnEnabledChanged(self,*args):
@@ -819,8 +783,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   OnItemMouseHover(self: ListView,e: ListViewItemMouseHoverEventArgs)
    Raises the System.Windows.Forms.ListView.ItemMouseHover event.
   
-   e: A System.Windows.Forms.ListViewItemMouseHoverEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.ListViewItemMouseHoverEventArgs that contains the event data.
   """
   pass
  def OnItemSelectionChanged(self,*args):
@@ -828,8 +791,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   OnItemSelectionChanged(self: ListView,e: ListViewItemSelectionChangedEventArgs)
    Raises the System.Windows.Forms.ListView.ItemSelectionChanged event.
   
-   e: A System.Windows.Forms.ListViewItemSelectionChangedEventArgs that contains the 
-    event data.
+   e: A System.Windows.Forms.ListViewItemSelectionChangedEventArgs that contains the event data.
   """
   pass
  def OnKeyDown(self,*args):
@@ -1011,16 +973,14 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   OnPaintBackground(self: Control,pevent: PaintEventArgs)
    Paints the background of the control.
   
-   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the 
-    control to paint.
+   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the control to paint.
   """
   pass
  def OnParentBackColorChanged(self,*args):
   """
   OnParentBackColorChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BackColorChanged event when the 
-    System.Windows.Forms.Control.BackColor property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BackColor property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1030,8 +990,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   """
   OnParentBackgroundImageChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the 
-    System.Windows.Forms.Control.BackgroundImage property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BackgroundImage property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1041,8 +1000,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   """
   OnParentBindingContextChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BindingContextChanged event when the 
-    System.Windows.Forms.Control.BindingContext property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BindingContext property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1066,8 +1024,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   """
   OnParentEnabledChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.EnabledChanged event when the 
-    System.Windows.Forms.Control.Enabled property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Enabled property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1077,8 +1034,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   """
   OnParentFontChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.Control.Font property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Font property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1088,8 +1044,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   """
   OnParentForeColorChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.ForeColorChanged event when the 
-    System.Windows.Forms.Control.ForeColor property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.ForeColor property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1099,8 +1054,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   """
   OnParentRightToLeftChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.RightToLeftChanged event when the 
-    System.Windows.Forms.Control.RightToLeft property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.RightToLeft property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1110,8 +1064,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   """
   OnParentVisibleChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.VisibleChanged event when the 
-    System.Windows.Forms.Control.Visible property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Visible property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1160,8 +1113,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   OnRetrieveVirtualItem(self: ListView,e: RetrieveVirtualItemEventArgs)
    Raises the System.Windows.Forms.ListView.RetrieveVirtualItem event.
   
-   e: A System.Windows.Forms.RetrieveVirtualItemEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.RetrieveVirtualItemEventArgs that contains the event data.
   """
   pass
  def OnRightToLeftChanged(self,*args):
@@ -1185,8 +1137,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   OnSearchForVirtualItem(self: ListView,e: SearchForVirtualItemEventArgs)
    Raises the System.Windows.Forms.ListView.SearchForVirtualItem event.
   
-   e: A System.Windows.Forms.SearchForVirtualItemEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.SearchForVirtualItemEventArgs that contains the event data.
   """
   pass
  def OnSelectedIndexChanged(self,*args):
@@ -1262,12 +1213,10 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
  def OnVirtualItemsSelectionRangeChanged(self,*args):
   """
   OnVirtualItemsSelectionRangeChanged(self: ListView,e: ListViewVirtualItemsSelectionRangeChangedEventArgs)
-   Raises the System.Windows.Forms.ListView.VirtualItemsSelectionRangeChanged 
-    event.
+   Raises the System.Windows.Forms.ListView.VirtualItemsSelectionRangeChanged event.
   
-  
-   e: A System.Windows.Forms.ListViewVirtualItemsSelectionRangeChangedEventArgs that 
-    contains the event data.
+   e: A System.Windows.Forms.ListViewVirtualItemsSelectionRangeChangedEventArgs that contains the 
+    event data.
   """
   pass
  def OnVisibleChanged(self,*args):
@@ -1284,8 +1233,8 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   
    Processes a command key.
   
-   msg: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: true if the character was processed by the control; otherwise,false.
@@ -1317,8 +1266,8 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   
    Processes a key message and generates the appropriate control events.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1329,8 +1278,8 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   
    Processes a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1341,8 +1290,8 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   
    Previews a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1354,8 +1303,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
    Processes a mnemonic character.
   
    charCode: The character to process.
-   Returns: true if the character was processed as a mnemonic by the control; otherwise,
-    false.
+   Returns: true if the character was processed as a mnemonic by the control; otherwise,false.
   """
   pass
  def RaiseDragEvent(self,*args):
@@ -1397,8 +1345,8 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
  def RealizeProperties(self,*args):
   """
   RealizeProperties(self: ListView)
-   Initializes the properties of the System.Windows.Forms.ListView control that 
-    manage the appearance of the control.
+   Initializes the properties of the System.Windows.Forms.ListView control that manage the 
+    appearance of the control.
   """
   pass
  def RecreateHandle(self,*args):
@@ -1414,9 +1362,11 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   
    startIndex: The index for the first item in the range to be redrawn.
    endIndex: The index for the last item of the range to be redrawn.
-   invalidateOnly: true to invalidate the range of items; false to invalidate and repaint the 
-    items.
+   invalidateOnly: true to invalidate the range of items; false to invalidate and repaint the items.
   """
+  pass
+ def RescaleConstantsForDpi(self,*args):
+  """ RescaleConstantsForDpi(self: Control,deviceDpiOld: int,deviceDpiNew: int) """
   pass
  def ResetMouseEventArgs(self,*args):
   """
@@ -1436,18 +1386,16 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
    Returns: One of the System.Drawing.ContentAlignment values.
   RtlTranslateAlignment(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the 
-    appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
+    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
   RtlTranslateAlignment(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the 
-    appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
+    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1470,9 +1418,8 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   """
   RtlTranslateHorizontal(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the 
-    appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
+    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1483,9 +1430,8 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   """
   RtlTranslateLeftRight(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the 
-    appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
+    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
@@ -1498,8 +1444,8 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
    Scales a control's location,size,padding and margin.
   
    factor: The factor by which the height and width of the control will be scaled.
-   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the 
-    control to use when defining its size and position.
+   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to use 
+    when defining its size and position.
   """
   pass
  def ScaleCore(self,*args):
@@ -1514,8 +1460,8 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
  def Select(self):
   """
   Select(self: Control,directed: bool,forward: bool)
-   Activates a child control. Optionally specifies the direction in the tab order 
-    to select the control from.
+   Activates a child control. Optionally specifies the direction in the tab order to select the 
+    control from.
   
   
    directed: true to specify the direction of the control to select; otherwise,false.
@@ -1525,8 +1471,8 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
  def SetAutoSizeMode(self,*args):
   """
   SetAutoSizeMode(self: Control,mode: AutoSizeMode)
-   Sets a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
+   Sets a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize 
+    property is enabled.
   
   
    mode: One of the System.Windows.Forms.AutoSizeMode values.
@@ -1556,9 +1502,7 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
  def SetStyle(self,*args):
   """
   SetStyle(self: Control,flag: ControlStyles,value: bool)
-   Sets a specified System.Windows.Forms.ControlStyles flag to either true or 
-    false.
-  
+   Sets a specified System.Windows.Forms.ControlStyles flag to either true or false.
   
    flag: The System.Windows.Forms.ControlStyles bit to set.
    value: true to apply the specified style to the control; otherwise,false.
@@ -1584,15 +1528,10 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   """
   SizeFromClientSize(self: Control,clientSize: Size) -> Size
   
-   Determines the size of the entire control from the height and width of its 
-    client area.
+   Determines the size of the entire control from the height and width of its client area.
   
-  
-   clientSize: A System.Drawing.Size value representing the height and width of the control's 
-    client area.
-  
-   Returns: A System.Drawing.Size value representing the height and width of the entire 
-    control.
+   clientSize: A System.Drawing.Size value representing the height and width of the control's client area.
+   Returns: A System.Drawing.Size value representing the height and width of the entire control.
   """
   pass
  def Sort(self):
@@ -1606,17 +1545,15 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   ToString(self: ListView) -> str
   
    Returns a string representation of the System.Windows.Forms.ListView control.
-   Returns: A string that states the control type,the count of items in the 
-    System.Windows.Forms.ListView control,and the type of the first item in the 
-    System.Windows.Forms.ListView,if the count is not 0.
+   Returns: A string that states the control type,the count of items in the System.Windows.Forms.ListView 
+    control,and the type of the first item in the System.Windows.Forms.ListView,if the count is 
+    not 0.
   """
   pass
  def UpdateBounds(self,*args):
   """
   UpdateBounds(self: Control,x: int,y: int,width: int,height: int,clientWidth: int,clientHeight: int)
-   Updates the bounds of the control with the specified size,location,and client 
-    size.
-  
+   Updates the bounds of the control with the specified size,location,and client size.
   
    x: The System.Drawing.Point.X coordinate of the control.
    y: The System.Drawing.Point.Y coordinate of the control.
@@ -1663,10 +1600,17 @@ class ListView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlace
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

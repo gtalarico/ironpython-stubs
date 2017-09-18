@@ -22,8 +22,7 @@ class Int32AnimationUsingKeyFrames(Int32AnimationBase,ISealable,IAnimatable,IRes
     System.Windows.Media.Animation.Int32AnimationUsingKeyFrames.
   
   
-   childText: The text added to the 
-    System.Windows.Media.Animation.Int32AnimationUsingKeyFrames.
+   childText: The text added to the System.Windows.Media.Animation.Int32AnimationUsingKeyFrames.
   """
   pass
  def AllocateClock(self,*args):
@@ -40,24 +39,22 @@ class Int32AnimationUsingKeyFrames(Int32AnimationBase,ISealable,IAnimatable,IRes
   """
   Clone(self: Int32AnimationUsingKeyFrames) -> Int32AnimationUsingKeyFrames
   
-   Creates a modifiable clone of this 
-    System.Windows.Media.Animation.Int32AnimationUsingKeyFrames,making deep copies 
-    of this object's values. When copying dependency properties,this method copies 
-    resource references and data bindings (but they might no longer resolve) but 
-    not animations or their current values.
+   Creates a modifiable clone of this System.Windows.Media.Animation.Int32AnimationUsingKeyFrames,
+    making deep copies of this object's values. When copying dependency properties,this method 
+    copies resource references and data bindings (but they might no longer resolve) but not 
+    animations or their current values.
   
-   Returns: A modifiable clone of the current object. The cloned object's 
-    System.Windows.Freezable.IsFrozen property will be false even if the source's 
-    System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen 
+    property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCore(self,*args):
   """
   CloneCore(self: Int32AnimationUsingKeyFrames,sourceFreezable: Freezable)
    Makes this instance a deep copy of the specified 
-    System.Windows.Media.Animation.Int32AnimationUsingKeyFrames. When copying 
-    dependency properties,this method copies resource references and data bindings 
-    (but they might no longer resolve) but not animations or their current values.
+    System.Windows.Media.Animation.Int32AnimationUsingKeyFrames. When copying dependency properties,
+    this method copies resource references and data bindings (but they might no longer resolve) but 
+    not animations or their current values.
   
   
    sourceFreezable: The System.Windows.Media.Animation.Int32AnimationUsingKeyFrames to clone.
@@ -67,23 +64,20 @@ class Int32AnimationUsingKeyFrames(Int32AnimationBase,ISealable,IAnimatable,IRes
   """
   CloneCurrentValue(self: Int32AnimationUsingKeyFrames) -> Int32AnimationUsingKeyFrames
   
-   Creates a modifiable clone of this 
-    System.Windows.Media.Animation.Int32AnimationUsingKeyFrames object,making deep 
-    copies of this object's current values. Resource references,data bindings,and 
-    animations are not copied,but their current values are.
+   Creates a modifiable clone of this System.Windows.Media.Animation.Int32AnimationUsingKeyFrames 
+    object,making deep copies of this object's current values. Resource references,data bindings,
+    and animations are not copied,but their current values are.
   
-   Returns: A modifiable clone of the current object. The cloned object's 
-    System.Windows.Freezable.IsFrozen property will be false even if the source's 
-    System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen 
+    property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCurrentValueCore(self,*args):
   """
   CloneCurrentValueCore(self: Int32AnimationUsingKeyFrames,sourceFreezable: Freezable)
    Makes this instance a modifiable deep copy of the specified 
-    System.Windows.Media.Animation.Int32AnimationUsingKeyFrames using current 
-    property values. Resource references,data bindings,and animations are not 
-    copied,but their current values are.
+    System.Windows.Media.Animation.Int32AnimationUsingKeyFrames using current property values. 
+    Resource references,data bindings,and animations are not copied,but their current values are.
   
   
    sourceFreezable: The System.Windows.Media.Animation.Int32AnimationUsingKeyFrames to clone.
@@ -101,9 +95,7 @@ class Int32AnimationUsingKeyFrames(Int32AnimationBase,ISealable,IAnimatable,IRes
   """
   CreateInstanceCore(self: Int32AnimationUsingKeyFrames) -> Freezable
   
-   Creates a new instance of 
-    System.Windows.Media.Animation.Int32AnimationUsingKeyFrames.
-  
+   Creates a new instance of System.Windows.Media.Animation.Int32AnimationUsingKeyFrames.
    Returns: A new instance of System.Windows.Media.Animation.Int32AnimationUsingKeyFrames.
   """
   pass
@@ -111,20 +103,17 @@ class Int32AnimationUsingKeyFrames(Int32AnimationBase,ISealable,IAnimatable,IRes
   """
   FreezeCore(self: Int32AnimationUsingKeyFrames,isChecking: bool) -> bool
   
-   Makes this instance of 
-    System.Windows.Media.Animation.Int32AnimationUsingKeyFrames object unmodifiable 
-    or determines whether it can be made unmodifiable..
+   Makes this instance of System.Windows.Media.Animation.Int32AnimationUsingKeyFrames object 
+    unmodifiable or determines whether it can be made unmodifiable..
   
   
-   isChecking: true if this method should simply determine whether this instance can be 
-    frozen. false if this instance should actually freeze itself when this method 
-    is called.
+   isChecking: true if this method should simply determine whether this instance can be frozen. false if this 
+    instance should actually freeze itself when this method is called.
   
-   Returns: If isChecking is true,this method returns true if this instance can be made 
-    read-only,or false if it cannot be made read-only. If isChecking is false,
-    this method returns true if this instance is now read-only,or false if it 
-    cannot be made read-only,with the side effect of having begun to change the 
-    frozen status of this object.
+   Returns: If isChecking is true,this method returns true if this instance can be made read-only,or false 
+    if it cannot be made read-only. If isChecking is false,this method returns true if this 
+    instance is now read-only,or false if it cannot be made read-only,with the side effect of 
+    having begun to change the frozen status of this object.
   """
   pass
  def GetAsFrozenCore(self,*args):
@@ -141,34 +130,30 @@ class Int32AnimationUsingKeyFrames(Int32AnimationBase,ISealable,IAnimatable,IRes
   """
   GetCurrentValueAsFrozenCore(self: Int32AnimationUsingKeyFrames,source: Freezable)
    Makes this instance a frozen clone of the specified 
-    System.Windows.Media.Animation.Int32AnimationUsingKeyFrames. Resource 
-    references,data bindings,and animations are not copied,but their current 
-    values are.
+    System.Windows.Media.Animation.Int32AnimationUsingKeyFrames. Resource references,data bindings,
+    and animations are not copied,but their current values are.
   
   
-   source: The System.Windows.Media.Animation.Int32AnimationUsingKeyFrames to copy and 
-    freeze.
+   source: The System.Windows.Media.Animation.Int32AnimationUsingKeyFrames to copy and freeze.
   """
   pass
  def GetCurrentValueCore(self,*args):
   """
   GetCurrentValueCore(self: Int32AnimationUsingKeyFrames,defaultOriginValue: int,defaultDestinationValue: int,animationClock: AnimationClock) -> int
   
-   Calculates a value that represents the current value of the property being 
-    animated,as determined by this instance of 
-    System.Windows.Media.Animation.Int32AnimationUsingKeyFrames.
+   Calculates a value that represents the current value of the property being animated,as 
+    determined by this instance of System.Windows.Media.Animation.Int32AnimationUsingKeyFrames.
   
   
-   defaultOriginValue: The suggested origin value,used if the animation does not have its own 
-    explicitly set start value.
+   defaultOriginValue: The suggested origin value,used if the animation does not have its own explicitly set start 
+    value.
   
-   defaultDestinationValue: The suggested destination value,used if the animation does not have its own 
-    explicitly set end value.
+   defaultDestinationValue: The suggested destination value,used if the animation does not have its own explicitly set end 
+    value.
   
    animationClock: An System.Windows.Media.Animation.AnimationClock that generates the 
     System.Windows.Media.Animation.Clock.CurrentTime or 
-    System.Windows.Media.Animation.Clock.CurrentProgress used by the host 
-    animation.
+    System.Windows.Media.Animation.Clock.CurrentProgress used by the host animation.
   
    Returns: The calculated value of the property,as determined by the current instance.
   """
@@ -177,45 +162,41 @@ class Int32AnimationUsingKeyFrames(Int32AnimationBase,ISealable,IAnimatable,IRes
   """
   GetNaturalDuration(self: Timeline,clock: Clock) -> Duration
   
-   Returns the length of a single iteration of this 
-    System.Windows.Media.Animation.Timeline.
-  
+   Returns the length of a single iteration of this System.Windows.Media.Animation.Timeline.
   
    clock: The System.Windows.Media.Animation.Clock that was created for this 
     System.Windows.Media.Animation.Timeline.
   
-   Returns: The length of a single iteration of this 
-    System.Windows.Media.Animation.Timeline,or System.Windows.Duration.Automatic 
-    if the natural duration is unknown.
+   Returns: The length of a single iteration of this System.Windows.Media.Animation.Timeline,or 
+    System.Windows.Duration.Automatic if the natural duration is unknown.
   """
   pass
  def GetNaturalDurationCore(self,*args):
   """
   GetNaturalDurationCore(self: Int32AnimationUsingKeyFrames,clock: Clock) -> Duration
   
-   Provide a custom natural System.Windows.Duration when the 
-    System.Windows.Duration property is set to System.Windows.Duration.Automatic.
+   Provide a custom natural System.Windows.Duration when the System.Windows.Duration property is 
+    set to System.Windows.Duration.Automatic.
   
   
    clock: The System.Windows.Media.Animation.Clock whose natural duration is desired.
-   Returns: If the last key frame of this animation is a 
-    System.Windows.Media.Animation.KeyTime,then this value is used as the 
-    System.Windows.Media.Animation.Clock.NaturalDuration; otherwise it will be one 
-    second.
+   Returns: If the last key frame of this animation is a System.Windows.Media.Animation.KeyTime,then this 
+    value is used as the System.Windows.Media.Animation.Clock.NaturalDuration; otherwise it will be 
+    one second.
   """
   pass
  def OnChanged(self,*args):
   """
   OnChanged(self: Int32AnimationUsingKeyFrames)
-   Called when the current 
-    System.Windows.Media.Animation.Int32AnimationUsingKeyFrames object is modified.
+   Called when the current System.Windows.Media.Animation.Int32AnimationUsingKeyFrames object is 
+    modified.
   """
   pass
  def OnFreezablePropertyChanged(self,*args):
   """
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject,property: DependencyProperty)
-   This member supports the Windows Presentation Foundation (WPF) infrastructure 
-    and is not intended to be used directly from your code.
+   This member supports the Windows Presentation Foundation (WPF) infrastructure and is not 
+    intended to be used directly from your code.
   
   
    oldValue: The previous value of the data member.
@@ -234,23 +215,20 @@ class Int32AnimationUsingKeyFrames(Int32AnimationBase,ISealable,IAnimatable,IRes
   """
   OnPropertyChanged(self: Freezable,e: DependencyPropertyChangedEventArgs)
    Overrides the System.Windows.DependencyObject implementation of 
-    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
-    rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
-    handlers in response to a changing dependency property of type 
-    System.Windows.Freezable.
+    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventAr
+    gs) to also invoke any System.Windows.Freezable.Changed handlers in response to a changing 
+    dependency property of type System.Windows.Freezable.
   
   
-   e: Event data that contains information about which property changed,and its old 
-    and new values.
+   e: Event data that contains information about which property changed,and its old and new values.
   """
   pass
  def ReadPreamble(self,*args):
   """
   ReadPreamble(self: Freezable)
-   Ensures that the System.Windows.Freezable is being accessed from a valid 
-    thread. Inheritors of System.Windows.Freezable must call this method at the 
-    beginning of any API that reads data members that are not dependency 
-    properties.
+   Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of 
+    System.Windows.Freezable must call this method at the beginning of any API that reads data 
+    members that are not dependency properties.
   """
   pass
  def ShouldSerializeKeyFrames(self):
@@ -258,9 +236,8 @@ class Int32AnimationUsingKeyFrames(Int32AnimationBase,ISealable,IAnimatable,IRes
   ShouldSerializeKeyFrames(self: Int32AnimationUsingKeyFrames) -> bool
   
    Returns true if the value of the 
-    System.Windows.Media.Animation.Int32AnimationUsingKeyFrames.KeyFrames property 
-    of this instance of System.Windows.Media.Animation.Int32AnimationUsingKeyFrames 
-    should be value-serialized.
+    System.Windows.Media.Animation.Int32AnimationUsingKeyFrames.KeyFrames property of this instance 
+    of System.Windows.Media.Animation.Int32AnimationUsingKeyFrames should be value-serialized.
   
    Returns: true if the property value should be serialized; otherwise,false.
   """
@@ -269,40 +246,29 @@ class Int32AnimationUsingKeyFrames(Int32AnimationBase,ISealable,IAnimatable,IRes
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize 
-    the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize the value for 
+    the provided dependency property.
   
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; 
-    otherwise,false.
-  
-  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
+   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
   """
   pass
  def WritePostscript(self,*args):
   """
   WritePostscript(self: Freezable)
-   Raises the System.Windows.Freezable.Changed event for the 
-    System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
-    method. Classes that derive from System.Windows.Freezable should call this 
-    method at the end of any API that modifies class members that are not stored as 
+   Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes 
+    its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable 
+    should call this method at the end of any API that modifies class members that are not stored as 
     dependency properties.
   """
   pass
  def WritePreamble(self,*args):
   """
   WritePreamble(self: Freezable)
-   Verifies that the System.Windows.Freezable is not frozen and that it is being 
-    accessed from a valid threading context. System.Windows.Freezable inheritors 
-    should call this method at the beginning of any API that writes to data members 
-    that are not dependency properties.
+   Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a 
+    valid threading context. System.Windows.Freezable inheritors should call this method at the 
+    beginning of any API that writes to data members that are not dependency properties.
   """
   pass
  def __init__(self,*args):

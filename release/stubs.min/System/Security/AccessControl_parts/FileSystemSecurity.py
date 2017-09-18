@@ -4,40 +4,35 @@ class FileSystemSecurity(NativeObjectSecurity):
   """
   AccessRuleFactory(self: FileSystemSecurity,identityReference: IdentityReference,accessMask: int,isInherited: bool,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,type: AccessControlType) -> AccessRule
   
-   Initializes a new instance of the 
-    System.Security.AccessControl.FileSystemAccessRule class that represents a new 
-    access control rule for the specified user,with the specified access rights,
+   Initializes a new instance of the System.Security.AccessControl.FileSystemAccessRule class that 
+    represents a new access control rule for the specified user,with the specified access rights,
     access control,and flags.
   
   
-   identityReference: An System.Security.Principal.IdentityReference object that represents a user 
-    account.
-  
+   identityReference: An System.Security.Principal.IdentityReference object that represents a user account.
    accessMask: An integer that specifies an access type.
    isInherited: true if the access rule is inherited; otherwise,false.
-   inheritanceFlags: One of the System.Security.AccessControl.InheritanceFlags values that specifies 
-    how to propagate access masks to child objects.
+   inheritanceFlags: One of the System.Security.AccessControl.InheritanceFlags values that specifies how to propagate 
+    access masks to child objects.
   
-   propagationFlags: One of the System.Security.AccessControl.PropagationFlags values that specifies 
-    how to propagate Access Control Entries (ACEs) to child objects.
+   propagationFlags: One of the System.Security.AccessControl.PropagationFlags values that specifies how to propagate 
+    Access Control Entries (ACEs) to child objects.
   
-   type: One of the System.Security.AccessControl.AccessControlType values that 
-    specifies whether access is allowed or denied.
+   type: One of the System.Security.AccessControl.AccessControlType values that specifies whether access 
+    is allowed or denied.
   
-   Returns: A new System.Security.AccessControl.FileSystemAccessRule object that represents 
-    a new access control rule for the specified user,with the specified access 
-    rights,access control,and flags.
+   Returns: A new System.Security.AccessControl.FileSystemAccessRule object that represents a new access 
+    control rule for the specified user,with the specified access rights,access control,and 
+    flags.
   """
   pass
  def AddAccessRule(self,rule):
   """
   AddAccessRule(self: FileSystemSecurity,rule: FileSystemAccessRule)
-   Adds the specified access control list (ACL) permission to the current file or 
-    directory.
+   Adds the specified access control list (ACL) permission to the current file or directory.
   
-  
-   rule: A System.Security.AccessControl.FileSystemAccessRule object that represents an 
-    access control list (ACL) permission to add to a file or directory.
+   rule: A System.Security.AccessControl.FileSystemAccessRule object that represents an access control 
+    list (ACL) permission to add to a file or directory.
   """
   pass
  def AddAuditRule(self,rule):
@@ -45,47 +40,44 @@ class FileSystemSecurity(NativeObjectSecurity):
   AddAuditRule(self: FileSystemSecurity,rule: FileSystemAuditRule)
    Adds the specified audit rule to the current file or directory.
   
-   rule: A System.Security.AccessControl.FileSystemAuditRule  object that represents an 
-    audit rule to add to a file or directory.
+   rule: A System.Security.AccessControl.FileSystemAuditRule  object that represents an audit rule to add 
+    to a file or directory.
   """
   pass
  def AuditRuleFactory(self,identityReference,accessMask,isInherited,inheritanceFlags,propagationFlags,flags):
   """
   AuditRuleFactory(self: FileSystemSecurity,identityReference: IdentityReference,accessMask: int,isInherited: bool,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,flags: AuditFlags) -> AuditRule
   
-   Initializes a new instance of the 
-    System.Security.AccessControl.FileSystemAuditRule class representing the 
-    specified audit rule for the specified user.
+   Initializes a new instance of the System.Security.AccessControl.FileSystemAuditRule class 
+    representing the specified audit rule for the specified user.
   
   
-   identityReference: An System.Security.Principal.IdentityReference object that represents a user 
-    account.
-  
+   identityReference: An System.Security.Principal.IdentityReference object that represents a user account.
    accessMask: An integer that specifies an access type.
    isInherited: true if the access rule is inherited; otherwise,false.
-   inheritanceFlags: One of the System.Security.AccessControl.InheritanceFlags values that specifies 
-    how to propagate access masks to child objects.
+   inheritanceFlags: One of the System.Security.AccessControl.InheritanceFlags values that specifies how to propagate 
+    access masks to child objects.
   
-   propagationFlags: One of the System.Security.AccessControl.PropagationFlags values that specifies 
-    how to propagate Access Control Entries (ACEs) to child objects.
+   propagationFlags: One of the System.Security.AccessControl.PropagationFlags values that specifies how to propagate 
+    Access Control Entries (ACEs) to child objects.
   
-   flags: One of the System.Security.AccessControl.AuditFlags values that specifies the 
-    type of auditing to perform.
+   flags: One of the System.Security.AccessControl.AuditFlags values that specifies the type of auditing 
+    to perform.
   
-   Returns: A new System.Security.AccessControl.FileSystemAuditRule object representing the 
-    specified audit rule for the specified user.
+   Returns: A new System.Security.AccessControl.FileSystemAuditRule object representing the specified audit 
+    rule for the specified user.
   """
   pass
  def RemoveAccessRule(self,rule):
   """
   RemoveAccessRule(self: FileSystemSecurity,rule: FileSystemAccessRule) -> bool
   
-   Removes all matching allow or deny access control list (ACL) permissions from 
-    the current file or directory.
+   Removes all matching allow or deny access control list (ACL) permissions from the current file 
+    or directory.
   
   
-   rule: A System.Security.AccessControl.FileSystemAccessRule object that represents an 
-    access control list (ACL) permission to remove from a file or directory.
+   rule: A System.Security.AccessControl.FileSystemAccessRule object that represents an access control 
+    list (ACL) permission to remove from a file or directory.
   
    Returns: true if the access rule was removed; otherwise,false.
   """
@@ -93,37 +85,33 @@ class FileSystemSecurity(NativeObjectSecurity):
  def RemoveAccessRuleAll(self,rule):
   """
   RemoveAccessRuleAll(self: FileSystemSecurity,rule: FileSystemAccessRule)
-   Removes all access control list (ACL) permissions for the specified user from 
-    the current file or directory.
+   Removes all access control list (ACL) permissions for the specified user from the current file 
+    or directory.
   
   
-   rule: A System.Security.AccessControl.FileSystemAccessRule object that specifies a 
-    user whose access control list (ACL) permissions should be removed from a file 
-    or directory.
+   rule: A System.Security.AccessControl.FileSystemAccessRule object that specifies a user whose access 
+    control list (ACL) permissions should be removed from a file or directory.
   """
   pass
  def RemoveAccessRuleSpecific(self,rule):
   """
   RemoveAccessRuleSpecific(self: FileSystemSecurity,rule: FileSystemAccessRule)
-   Removes a single matching allow or deny access control list (ACL) permission 
-    from the current file or directory.
+   Removes a single matching allow or deny access control list (ACL) permission from the current 
+    file or directory.
   
   
-   rule: A System.Security.AccessControl.FileSystemAccessRule object that specifies a 
-    user whose access control list (ACL) permissions should be removed from a file 
-    or directory.
+   rule: A System.Security.AccessControl.FileSystemAccessRule object that specifies a user whose access 
+    control list (ACL) permissions should be removed from a file or directory.
   """
   pass
  def RemoveAuditRule(self,rule):
   """
   RemoveAuditRule(self: FileSystemSecurity,rule: FileSystemAuditRule) -> bool
   
-   Removes all matching allow or deny audit rules from the current file or 
-    directory.
+   Removes all matching allow or deny audit rules from the current file or directory.
   
-  
-   rule: A System.Security.AccessControl.FileSystemAuditRule  object that represents an 
-    audit rule to remove from a file or directory.
+   rule: A System.Security.AccessControl.FileSystemAuditRule  object that represents an audit rule to 
+    remove from a file or directory.
   
    Returns: true if the audit rule was removed; otherwise,false
   """
@@ -131,45 +119,39 @@ class FileSystemSecurity(NativeObjectSecurity):
  def RemoveAuditRuleAll(self,rule):
   """
   RemoveAuditRuleAll(self: FileSystemSecurity,rule: FileSystemAuditRule)
-   Removes all audit rules for the specified user from the current file or 
-    directory.
+   Removes all audit rules for the specified user from the current file or directory.
   
-  
-   rule: A System.Security.AccessControl.FileSystemAuditRule object that specifies a 
-    user whose audit rules should be removed from a file or directory.
+   rule: A System.Security.AccessControl.FileSystemAuditRule object that specifies a user whose audit 
+    rules should be removed from a file or directory.
   """
   pass
  def RemoveAuditRuleSpecific(self,rule):
   """
   RemoveAuditRuleSpecific(self: FileSystemSecurity,rule: FileSystemAuditRule)
-   Removes a single matching allow or deny audit rule from the current file or 
-    directory.
+   Removes a single matching allow or deny audit rule from the current file or directory.
   
-  
-   rule: A System.Security.AccessControl.FileSystemAuditRule  object that represents an 
-    audit rule to remove from a file or directory.
+   rule: A System.Security.AccessControl.FileSystemAuditRule  object that represents an audit rule to 
+    remove from a file or directory.
   """
   pass
  def ResetAccessRule(self,rule):
   """
   ResetAccessRule(self: FileSystemSecurity,rule: FileSystemAccessRule)
-   Adds the specified access control list (ACL) permission to the current file or 
-    directory and removes all matching ACL permissions.
+   Adds the specified access control list (ACL) permission to the current file or directory and 
+    removes all matching ACL permissions.
   
   
-   rule: A System.Security.AccessControl.FileSystemAccessRule object that represents an 
-    access control list (ACL) permission to add to a file or directory.
+   rule: A System.Security.AccessControl.FileSystemAccessRule object that represents an access control 
+    list (ACL) permission to add to a file or directory.
   """
   pass
  def SetAccessRule(self,rule):
   """
   SetAccessRule(self: FileSystemSecurity,rule: FileSystemAccessRule)
-   Sets the specified access control list (ACL) permission for the current file or 
-    directory.
+   Sets the specified access control list (ACL) permission for the current file or directory.
   
-  
-   rule: A System.Security.AccessControl.FileSystemAccessRule object that represents an 
-    access control list (ACL) permission to set for a file or directory.
+   rule: A System.Security.AccessControl.FileSystemAccessRule object that represents an access control 
+    list (ACL) permission to set for a file or directory.
   """
   pass
  def SetAuditRule(self,rule):
@@ -177,8 +159,8 @@ class FileSystemSecurity(NativeObjectSecurity):
   SetAuditRule(self: FileSystemSecurity,rule: FileSystemAuditRule)
    Sets the specified audit rule for the current file or directory.
   
-   rule: A System.Security.AccessControl.FileSystemAuditRule object that represents an 
-    audit rule to set for a file or directory.
+   rule: A System.Security.AccessControl.FileSystemAuditRule object that represents an audit rule to set 
+    for a file or directory.
   """
   pass
  AccessRightType=property(lambda self: object(),lambda self,v: None,lambda self: None)

@@ -8,9 +8,7 @@ class PaddingConverter(TypeConverter):
   """
   CanConvertFrom(self: PaddingConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Returns whether this converter can convert an object of one type to the type of 
-    this converter.
-  
+   Returns whether this converter can convert an object of one type to the type of this converter.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    sourceType: A System.Type that represents the type you wish to convert from.
@@ -21,8 +19,8 @@ class PaddingConverter(TypeConverter):
   """
   CanConvertTo(self: PaddingConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Returns whether this converter can convert the object to the specified type,
-    using the specified context.
+   Returns whether this converter can convert the object to the specified type,using the specified 
+    context.
   
   
    destinationType: A T:System.Type that represents the type you want to convert to.
@@ -43,9 +41,7 @@ class PaddingConverter(TypeConverter):
   ConvertTo(self: PaddingConverter,context: ITypeDescriptorContext,culture: CultureInfo,value: object,destinationType: Type) -> object
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   culture: A System.Globalization.CultureInfo. If null is passed,the current culture is 
-    assumed.
-  
+   culture: A System.Globalization.CultureInfo. If null is passed,the current culture is assumed.
    value: The System.Object to convert.
    destinationType: The System.Type to convert the value parameter to.
   """
@@ -54,15 +50,14 @@ class PaddingConverter(TypeConverter):
   """
   CreateInstance(self: PaddingConverter,context: ITypeDescriptorContext,propertyValues: IDictionary) -> object
   
-   Creates an instance of the type that this System.ComponentModel.TypeConverter 
-    is associated with,using the specified context,given a set of property values 
-    for the object.
+   Creates an instance of the type that this System.ComponentModel.TypeConverter is associated 
+    with,using the specified context,given a set of property values for the object.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    propertyValues: An System.Collections.IDictionary of new property values.
-   Returns: An System.Object representing the given System.Collections.IDictionary,or null 
-    if the object cannot be created. This method always returns null.
+   Returns: An System.Object representing the given System.Collections.IDictionary,or null if the object 
+    cannot be created. This method always returns null.
   """
   pass
  def GetCreateInstanceSupported(self,context=None):

@@ -13,13 +13,11 @@ class ContextMenuService(object):
   """
   GetContextMenu(element: DependencyObject) -> ContextMenu
   
-   Gets the value of the System.Windows.Controls.ContextMenuService.ContextMenu 
-    property of the specified object.
+   Gets the value of the System.Windows.Controls.ContextMenuService.ContextMenu property of the 
+    specified object.
   
   
-   element: Object to query concerning the System.Windows.FrameworkElement.ContextMenu 
-    property.
-  
+   element: Object to query concerning the System.Windows.FrameworkElement.ContextMenu property.
    Returns: Value of the System.Windows.Controls.ContextMenuService.ContextMenu property.
   """
   pass
@@ -28,13 +26,11 @@ class ContextMenuService(object):
   """
   GetHasDropShadow(element: DependencyObject) -> bool
   
-   Gets a value that indicates whether the System.Windows.Controls.ContextMenu has 
-    a drop shadow.
-  
+   Gets a value that indicates whether the System.Windows.Controls.ContextMenu has a drop shadow.
   
    element: Object to query concerning whether it has a drop shadow.
-   Returns: A Boolean value,true if the System.Windows.Controls.ContextMenu has a drop 
-    shadow; false otherwise.
+   Returns: A Boolean value,true if the System.Windows.Controls.ContextMenu has a drop shadow; false 
+    otherwise.
   """
   pass
  @staticmethod
@@ -42,16 +38,14 @@ class ContextMenuService(object):
   """
   GetHorizontalOffset(element: DependencyObject) -> float
   
-   Gets the value of the 
-    System.Windows.Controls.ContextMenuService.HorizontalOffset property of the 
-    specified object.
+   Gets the value of the System.Windows.Controls.ContextMenuService.HorizontalOffset property of 
+    the specified object.
   
   
-   element: Object to query concerning the 
-    System.Windows.Controls.ContextMenuService.HorizontalOffset property.
+   element: Object to query concerning the System.Windows.Controls.ContextMenuService.HorizontalOffset 
+    property.
   
-   Returns: Value of the System.Windows.Controls.ContextMenuService.HorizontalOffset 
-    property.
+   Returns: Value of the System.Windows.Controls.ContextMenuService.HorizontalOffset property.
   """
   pass
  @staticmethod
@@ -59,13 +53,11 @@ class ContextMenuService(object):
   """
   GetIsEnabled(element: DependencyObject) -> bool
   
-   Gets the value of the System.Windows.Controls.ContextMenuService.IsEnabled 
-    property of the specified object.
+   Gets the value of the System.Windows.Controls.ContextMenuService.IsEnabled property of the 
+    specified object.
   
   
-   element: Object to query concerning the 
-    System.Windows.Controls.ContextMenuService.IsEnabled property.
-  
+   element: Object to query concerning the System.Windows.Controls.ContextMenuService.IsEnabled property.
    Returns: Value of the System.Windows.Controls.ContextMenuService.IsEnabled property.
   """
   pass
@@ -74,13 +66,11 @@ class ContextMenuService(object):
   """
   GetPlacement(element: DependencyObject) -> PlacementMode
   
-   Gets the value of the System.Windows.Controls.ContextMenuService.Placement 
-    property of the specified object.
+   Gets the value of the System.Windows.Controls.ContextMenuService.Placement property of the 
+    specified object.
   
   
-   element: Object to query concerning the 
-    System.Windows.Controls.ContextMenuService.Placement  property.
-  
+   element: Object to query concerning the System.Windows.Controls.ContextMenuService.Placement  property.
    Returns: Value of the System.Windows.Controls.ContextMenuService.Placement property.
   """
   pass
@@ -89,16 +79,14 @@ class ContextMenuService(object):
   """
   GetPlacementRectangle(element: DependencyObject) -> Rect
   
-   Gets the value of the 
-    System.Windows.Controls.ContextMenuService.PlacementRectangle property of the 
-    specified object.
+   Gets the value of the System.Windows.Controls.ContextMenuService.PlacementRectangle property of 
+    the specified object.
   
   
-   element: Object to query concerning the 
-    System.Windows.Controls.ContextMenuService.PlacementRectangle property.
+   element: Object to query concerning the System.Windows.Controls.ContextMenuService.PlacementRectangle 
+    property.
   
-   Returns: Value of the System.Windows.Controls.ContextMenuService.PlacementRectangle 
-    property.
+   Returns: Value of the System.Windows.Controls.ContextMenuService.PlacementRectangle property.
   """
   pass
  @staticmethod
@@ -106,16 +94,14 @@ class ContextMenuService(object):
   """
   GetPlacementTarget(element: DependencyObject) -> UIElement
   
-   Gets the value of the 
-    System.Windows.Controls.ContextMenuService.PlacementTarget property of the 
+   Gets the value of the System.Windows.Controls.ContextMenuService.PlacementTarget property of the 
     specified object.
   
   
-   element: Object to query concerning the 
-    System.Windows.Controls.ContextMenuService.PlacementTarget property.
+   element: Object to query concerning the System.Windows.Controls.ContextMenuService.PlacementTarget 
+    property.
   
-   Returns: Value of the System.Windows.Controls.ContextMenuService.PlacementTarget 
-    property.
+   Returns: Value of the System.Windows.Controls.ContextMenuService.PlacementTarget property.
   """
   pass
  @staticmethod
@@ -123,12 +109,12 @@ class ContextMenuService(object):
   """
   GetShowOnDisabled(element: DependencyObject) -> bool
   
-   Gets the value of the System.Windows.Controls.ContextMenuService.ShowOnDisabled 
-    property of the specified object.
+   Gets the value of the System.Windows.Controls.ContextMenuService.ShowOnDisabled property of the 
+    specified object.
   
   
-   element: Object to query concerning the 
-    System.Windows.Controls.ContextMenuService.ShowOnDisabled property.
+   element: Object to query concerning the System.Windows.Controls.ContextMenuService.ShowOnDisabled 
+    property.
   
    Returns: Value of the System.Windows.Controls.ContextMenuService.ShowOnDisabled property.
   """
@@ -138,12 +124,12 @@ class ContextMenuService(object):
   """
   GetVerticalOffset(element: DependencyObject) -> float
   
-   Gets the value of the System.Windows.Controls.ContextMenuService.VerticalOffset 
-    property of the specified object.
+   Gets the value of the System.Windows.Controls.ContextMenuService.VerticalOffset property of the 
+    specified object.
   
   
-   element: Object to query concerning the 
-    System.Windows.Controls.ContextMenuService.VerticalOffset property.
+   element: Object to query concerning the System.Windows.Controls.ContextMenuService.VerticalOffset 
+    property.
   
    Returns: Value of the System.Windows.Controls.ContextMenuService.VerticalOffset property.
   """
@@ -160,8 +146,8 @@ class ContextMenuService(object):
  def SetContextMenu(element,value):
   """
   SetContextMenu(element: DependencyObject,value: ContextMenu)
-   Sets the value of the System.Windows.Controls.ContextMenuService.ContextMenu 
-    property of the specified object.
+   Sets the value of the System.Windows.Controls.ContextMenuService.ContextMenu property of the 
+    specified object.
   
   
    element: Object to set the property on.
@@ -172,22 +158,19 @@ class ContextMenuService(object):
  def SetHasDropShadow(element,value):
   """
   SetHasDropShadow(element: DependencyObject,value: bool)
-   Sets a value that indicates whether the System.Windows.Controls.ContextMenu has 
-    a drop shadow.
-  
+   Sets a value that indicates whether the System.Windows.Controls.ContextMenu has a drop shadow.
   
    element: Object to set the property on.
-   value: Boolean value to set,true if the System.Windows.Controls.ContextMenu has a 
-    drop shadow; false otherwise.
+   value: Boolean value to set,true if the System.Windows.Controls.ContextMenu has a drop shadow; false 
+    otherwise.
   """
   pass
  @staticmethod
  def SetHorizontalOffset(element,value):
   """
   SetHorizontalOffset(element: DependencyObject,value: float)
-   Sets the value of the 
-    System.Windows.Controls.ContextMenuService.HorizontalOffset property of the 
-    specified object.
+   Sets the value of the System.Windows.Controls.ContextMenuService.HorizontalOffset property of 
+    the specified object.
   
   
    element: Object to set the value on.
@@ -198,8 +181,8 @@ class ContextMenuService(object):
  def SetIsEnabled(element,value):
   """
   SetIsEnabled(element: DependencyObject,value: bool)
-   Sets the value of the System.Windows.Controls.ContextMenuService.IsEnabled 
-    property of the specified object.
+   Sets the value of the System.Windows.Controls.ContextMenuService.IsEnabled property of the 
+    specified object.
   
   
    element: Object to set value on.
@@ -210,8 +193,8 @@ class ContextMenuService(object):
  def SetPlacement(element,value):
   """
   SetPlacement(element: DependencyObject,value: PlacementMode)
-   Sets the value of the System.Windows.Controls.ContextMenuService.Placement  
-    property of the specified object.
+   Sets the value of the System.Windows.Controls.ContextMenuService.Placement  property of the 
+    specified object.
   
   
    element: Object to set the value on.
@@ -222,9 +205,8 @@ class ContextMenuService(object):
  def SetPlacementRectangle(element,value):
   """
   SetPlacementRectangle(element: DependencyObject,value: Rect)
-   Sets the value of the 
-    System.Windows.Controls.ContextMenuService.PlacementRectangle property of the 
-    specified object.
+   Sets the value of the System.Windows.Controls.ContextMenuService.PlacementRectangle property of 
+    the specified object.
   
   
    element: Object to set the value on.
@@ -235,8 +217,7 @@ class ContextMenuService(object):
  def SetPlacementTarget(element,value):
   """
   SetPlacementTarget(element: DependencyObject,value: UIElement)
-   Sets the value of the 
-    System.Windows.Controls.ContextMenuService.PlacementTarget property of the 
+   Sets the value of the System.Windows.Controls.ContextMenuService.PlacementTarget property of the 
     specified object.
   
   
@@ -248,8 +229,8 @@ class ContextMenuService(object):
  def SetShowOnDisabled(element,value):
   """
   SetShowOnDisabled(element: DependencyObject,value: bool)
-   Sets the value of the System.Windows.Controls.ContextMenuService.ShowOnDisabled 
-    property of the specified object.
+   Sets the value of the System.Windows.Controls.ContextMenuService.ShowOnDisabled property of the 
+    specified object.
   
   
    element: Object to set value on.
@@ -260,8 +241,8 @@ class ContextMenuService(object):
  def SetVerticalOffset(element,value):
   """
   SetVerticalOffset(element: DependencyObject,value: float)
-   Sets the value of the System.Windows.Controls.ContextMenuService.VerticalOffset 
-    property of the specified object.
+   Sets the value of the System.Windows.Controls.ContextMenuService.VerticalOffset property of the 
+    specified object.
   
   
    element: Object to set value on.

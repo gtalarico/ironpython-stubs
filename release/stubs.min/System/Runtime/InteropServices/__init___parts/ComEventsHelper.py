@@ -17,9 +17,7 @@ class ComEventsHelper(object):
   """
   Remove(rcw: object,iid: Guid,dispid: int,d: Delegate) -> Delegate
   
-   Removes a delegate from the invocation list of events originating from a COM 
-    object.
-  
+   Removes a delegate from the invocation list of events originating from a COM object.
   
    rcw: The COM object the delegate is attached to.
    iid: The identifier of the source interface used by the COM object to trigger events.

@@ -34,25 +34,18 @@ class Message(object):
   """
   GetLParam(self: Message,cls: Type) -> object
   
-   Gets the System.Windows.Forms.Message.LParam value and converts the value to an 
-    object.
+   Gets the System.Windows.Forms.Message.LParam value and converts the value to an object.
   
-  
-   cls: The type to use to create an instance. This type must be declared as a 
-    structure type.
-  
-   Returns: An System.Object that represents an instance of the class specified by the cls 
-    parameter,with the data from the System.Windows.Forms.Message.LParam field of 
-    the message.
+   cls: The type to use to create an instance. This type must be declared as a structure type.
+   Returns: An System.Object that represents an instance of the class specified by the cls parameter,with 
+    the data from the System.Windows.Forms.Message.LParam field of the message.
   """
   pass
  def ToString(self):
   """
   ToString(self: Message) -> str
   
-   Returns a System.String that represents the current 
-    System.Windows.Forms.Message.
-  
+   Returns a System.String that represents the current System.Windows.Forms.Message.
    Returns: A System.String that represents the current System.Windows.Forms.Message.
   """
   pass

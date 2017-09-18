@@ -7,8 +7,7 @@ class MarshalByValueComponent(object,IComponent,IDisposable,IServiceProvider):
  def Dispose(self):
   """
   Dispose(self: MarshalByValueComponent)
-   Releases all resources used by the 
-    System.ComponentModel.MarshalByValueComponent.
+   Releases all resources used by the System.ComponentModel.MarshalByValueComponent.
   """
   pass
  def GetService(self,service):
@@ -25,18 +24,25 @@ class MarshalByValueComponent(object,IComponent,IDisposable,IServiceProvider):
   """
   ToString(self: MarshalByValueComponent) -> str
   
-   Returns a System.String containing the name of the 
-    System.ComponentModel.Component,if any. This method should not be overridden.
+   Returns a System.String containing the name of the System.ComponentModel.Component,if any. This 
+    method should not be overridden.
   
-   Returns: A System.String containing the name of the System.ComponentModel.Component,if 
-    any.null if the System.ComponentModel.Component is unnamed.
+   Returns: A System.String containing the name of the System.ComponentModel.Component,if any.null if the 
+    System.ComponentModel.Component is unnamed.
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

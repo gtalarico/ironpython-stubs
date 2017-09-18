@@ -19,9 +19,7 @@ class DataGridCellInfo(object):
   """
   GetHashCode(self: DataGridCellInfo) -> int
   
-   Returns a hash code for the current System.Windows.Controls.DataGridCellInfo 
-    structure.
-  
+   Returns a hash code for the current System.Windows.Controls.DataGridCellInfo structure.
    Returns: A hash code for the structure.
   """
   pass
@@ -34,10 +32,9 @@ class DataGridCellInfo(object):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__[DataGridCellInfo]() -> DataGridCellInfo
-  
   __new__(cls: type,item: object,column: DataGridColumn)
-  __new__(cls: type,cell: DataGridCell)
+  __new__(cls: type,cell: DataGridCell)
+  __new__[DataGridCellInfo]() -> DataGridCellInfo
   """
   pass
  def __ne__(self,*args):

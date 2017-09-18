@@ -5,42 +5,33 @@ class FileVersionInfo(object):
   """
   GetVersionInfo(fileName: str) -> FileVersionInfo
   
-   Returns a System.Diagnostics.FileVersionInfo representing the version 
-    information associated with the specified file.
+   Returns a System.Diagnostics.FileVersionInfo representing the version information associated 
+    with the specified file.
   
   
-   fileName: The fully qualified path and name of the file to retrieve the version 
-    information for.
-  
-   Returns: A System.Diagnostics.FileVersionInfo containing information about the file. If 
-    the file did not contain version information,the 
-    System.Diagnostics.FileVersionInfo contains only the name of the file 
-    requested.
+   fileName: The fully qualified path and name of the file to retrieve the version information for.
+   Returns: A System.Diagnostics.FileVersionInfo containing information about the file. If the file did not 
+    contain version information,the System.Diagnostics.FileVersionInfo contains only the name of 
+    the file requested.
   """
   pass
  def ToString(self):
   """
   ToString(self: FileVersionInfo) -> str
   
-   Returns a partial list of properties in the System.Diagnostics.FileVersionInfo 
-    and their values.
-  
+   Returns a partial list of properties in the System.Diagnostics.FileVersionInfo and their values.
    Returns: A list of the following properties in this class and their values: 
-    System.Diagnostics.FileVersionInfo.FileName,
-    System.Diagnostics.FileVersionInfo.InternalName,
+    System.Diagnostics.FileVersionInfo.FileName,System.Diagnostics.FileVersionInfo.InternalName,
     System.Diagnostics.FileVersionInfo.OriginalFilename,
     System.Diagnostics.FileVersionInfo.FileVersion,
     System.Diagnostics.FileVersionInfo.FileDescription,
     System.Diagnostics.FileVersionInfo.ProductName,
-    System.Diagnostics.FileVersionInfo.ProductVersion,
-    System.Diagnostics.FileVersionInfo.IsDebug,
-    System.Diagnostics.FileVersionInfo.IsPatched,
-    System.Diagnostics.FileVersionInfo.IsPreRelease,
+    System.Diagnostics.FileVersionInfo.ProductVersion,System.Diagnostics.FileVersionInfo.IsDebug,
+    System.Diagnostics.FileVersionInfo.IsPatched,System.Diagnostics.FileVersionInfo.IsPreRelease,
     System.Diagnostics.FileVersionInfo.IsPrivateBuild,
-    System.Diagnostics.FileVersionInfo.IsSpecialBuild,System.Diagnostics.FileVersion
-    Info.Language.If the file did not contain version information,this list will 
-    contain only the name of the requested file. Boolean values will be false,and 
-    all other entries will be null.
+    System.Diagnostics.FileVersionInfo.IsSpecialBuild,System.Diagnostics.FileVersionInfo.Language.If 
+    the file did not contain version information,this list will contain only the name of the 
+    requested file. Boolean values will be false,and all other entries will be null.
   """
   pass
  Comments=property(lambda self: object(),lambda self,v: None,lambda self: None)

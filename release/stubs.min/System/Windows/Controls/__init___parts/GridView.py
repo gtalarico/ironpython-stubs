@@ -7,9 +7,7 @@ class GridView(ViewBase,IAddChild):
  def AddChild(self,*args):
   """
   AddChild(self: GridView,column: object)
-   Adds a System.Windows.Controls.GridViewColumn object to a 
-    System.Windows.Controls.GridView.
-  
+   Adds a System.Windows.Controls.GridViewColumn object to a System.Windows.Controls.GridView.
   
    column: The column to add
   """
@@ -25,9 +23,7 @@ class GridView(ViewBase,IAddChild):
  def ClearItem(self,*args):
   """
   ClearItem(self: GridView,item: ListViewItem)
-   Removes all settings,bindings,and styling from a 
-    System.Windows.Controls.ListViewItem.
-  
+   Removes all settings,bindings,and styling from a System.Windows.Controls.ListViewItem.
   
    item: The System.Windows.Controls.ListViewItem to clear.
   """
@@ -52,9 +48,7 @@ class GridView(ViewBase,IAddChild):
   """
   GetColumnCollection(element: DependencyObject) -> GridViewColumnCollection
   
-   Gets the contents of the System.Windows.Controls.GridView.ColumnCollection�
-    attached property.
-  
+   Gets the contents of the System.Windows.Controls.GridView.ColumnCollection�attached property.
   
    element: The System.Windows.DependencyObject that is associated with the collection.
    Returns: The System.Windows.Controls.GridView.ColumnCollection of the specified 
@@ -65,21 +59,19 @@ class GridView(ViewBase,IAddChild):
   """
   OnPropertyChanged(self: DependencyObject,e: DependencyPropertyChangedEventArgs)
    Invoked whenever the effective value of any dependency property on this 
-    System.Windows.DependencyObject has been updated. The specific dependency 
-    property that changed is reported in the event data.
+    System.Windows.DependencyObject has been updated. The specific dependency property that changed 
+    is reported in the event data.
   
   
-   e: Event data that will contain the dependency property identifier of interest,
-    the property metadata for the type,and old and new values.
-  
-  OnPropertyChanged(self: Window_16$17,e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: Label_17$18,e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: TextBox_18$19,e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: Button_19$20,e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: CheckBox_20$21,e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: ComboBox_21$22,e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: Separator_22$23,e: DependencyPropertyChangedEventArgs)
+   e: Event data that will contain the dependency property identifier of interest,the property 
+    metadata for the type,and old and new values.
   """
   pass
  def PrepareItem(self,*args):
   """
   PrepareItem(self: GridView,item: ListViewItem)
-   Prepares a System.Windows.Controls.ListViewItem for display according to the 
-    definition of this System.Windows.Controls.GridView object.
+   Prepares a System.Windows.Controls.ListViewItem for display according to the definition of this 
+    System.Windows.Controls.GridView object.
   
   
    item: The System.Windows.Controls.ListViewItem to display.
@@ -89,9 +81,7 @@ class GridView(ViewBase,IAddChild):
  def SetColumnCollection(element,collection):
   """
   SetColumnCollection(element: DependencyObject,collection: GridViewColumnCollection)
-   Sets the contents of the System.Windows.Controls.GridView.ColumnCollection�
-    attached property.
-  
+   Sets the contents of the System.Windows.Controls.GridView.ColumnCollection�attached property.
   
    element: The System.Windows.Controls.GridView object.
    collection: The System.Windows.Controls.GridViewColumnCollection object to assign.
@@ -102,47 +92,33 @@ class GridView(ViewBase,IAddChild):
   """
   ShouldSerializeColumnCollection(obj: DependencyObject) -> bool
   
-   Determines whether to serialize the 
-    System.Windows.Controls.GridView.ColumnCollection�attached property.
+   Determines whether to serialize the System.Windows.Controls.GridView.ColumnCollection�attached 
+    property.
   
   
-   obj: The object on which the System.Windows.Controls.GridView.ColumnCollection is 
-    set.
-  
-   Returns: true if the System.Windows.Controls.GridView.ColumnCollection must be 
-    serialized; otherwise,false.
+   obj: The object on which the System.Windows.Controls.GridView.ColumnCollection is set.
+   Returns: true if the System.Windows.Controls.GridView.ColumnCollection must be serialized; otherwise,
+    false.
   """
   pass
  def ShouldSerializeProperty(self,*args):
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize 
-    the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize the value for 
+    the provided dependency property.
   
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; 
-    otherwise,false.
-  
-  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
+   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
   """
   pass
  def ToString(self):
   """
   ToString(self: GridView) -> str
   
-   Returns the string representation of the System.Windows.Controls.GridView 
-    object.
-  
-   Returns: A string that indicates the number of columns in the 
-    System.Windows.Controls.GridView.
+   Returns the string representation of the System.Windows.Controls.GridView object.
+   Returns: A string that indicates the number of columns in the System.Windows.Controls.GridView.
   """
   pass
  def __init__(self,*args):

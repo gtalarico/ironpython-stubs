@@ -11,8 +11,8 @@ class UCOMIPersistFile:
   """
   GetCurFile(self: UCOMIPersistFile) -> str
   
-   Retrieves either the absolute path to current working file of the object,or if 
-    there is no current working file,the default filename prompt of the object.
+   Retrieves either the absolute path to current working file of the object,or if there is no 
+    current working file,the default filename prompt of the object.
   """
   pass
  def IsDirty(self):
@@ -20,8 +20,8 @@ class UCOMIPersistFile:
   IsDirty(self: UCOMIPersistFile) -> int
   
    Checks an object for changes since it was last saved to its current file.
-   Returns: S_OK if the file has changed since it was last saved; S_FALSE if the file has 
-    not changed since it was last saved.
+   Returns: S_OK if the file has changed since it was last saved; S_FALSE if the file has not changed since 
+    it was last saved.
   """
   pass
  def Load(self,pszFileName,dwMode):
@@ -30,8 +30,8 @@ class UCOMIPersistFile:
    Opens the specified file and initializes an object from the file contents.
   
    pszFileName: A zero-terminated string containing the absolute path of the file to open.
-   dwMode: A combination of values from the STGM enumeration to indicate the access mode 
-    in which to open pszFileName.
+   dwMode: A combination of values from the STGM enumeration to indicate the access mode in which to open 
+    pszFileName.
   """
   pass
  def Save(self,pszFileName,fRemember):
@@ -39,9 +39,7 @@ class UCOMIPersistFile:
   Save(self: UCOMIPersistFile,pszFileName: str,fRemember: bool)
    Saves a copy of the object into the specified file.
   
-   pszFileName: A zero-terminated string containing the absolute path of the file to which the 
-    object is saved.
-  
+   pszFileName: A zero-terminated string containing the absolute path of the file to which the object is saved.
    fRemember: Indicates whether pszFileName is to be used as the current working file.
   """
   pass

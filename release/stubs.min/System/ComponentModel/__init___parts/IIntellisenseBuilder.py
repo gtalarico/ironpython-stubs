@@ -9,8 +9,8 @@ class IIntellisenseBuilder:
    language: The language service that is calling the builder.
    value: The expression being edited.
    newValue: The new value.
-   Returns: true if the value should be replaced with newValue; otherwise,false (if the 
-    user cancels,for example).
+   Returns: true if the value should be replaced with newValue; otherwise,false (if the user cancels,for 
+    example).
   """
   pass
  def __init__(self,*args):

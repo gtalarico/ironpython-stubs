@@ -4,9 +4,7 @@ class TableLayoutStyleCollection(object,IList,ICollection,IEnumerable):
   """
   Add(self: TableLayoutStyleCollection,style: TableLayoutStyle) -> int
   
-   Adds a new System.Windows.Forms.TableLayoutStyle to the end of the current 
-    collection.
-  
+   Adds a new System.Windows.Forms.TableLayoutStyle to the end of the current collection.
   
    style: The System.Windows.Forms.TableLayoutStyle to add to the 
     System.Windows.Forms.TableLayoutStyleCollection.
@@ -17,8 +15,8 @@ class TableLayoutStyleCollection(object,IList,ICollection,IEnumerable):
  def Clear(self):
   """
   Clear(self: TableLayoutStyleCollection)
-   Disassociates the collection from its associated 
-    System.Windows.Forms.TableLayoutPanel and empties the collection.
+   Disassociates the collection from its associated System.Windows.Forms.TableLayoutPanel and 
+    empties the collection.
   """
   pass
  def RemoveAt(self,index):
@@ -39,8 +37,7 @@ class TableLayoutStyleCollection(object,IList,ICollection,IEnumerable):
    Determines whether the System.Collections.IList contains a specific value.
   
    value: The object to locate in the System.Collections.IList.
-   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,
-    false.
+   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,false.
   """
   pass
  def __getitem__(self,*args):

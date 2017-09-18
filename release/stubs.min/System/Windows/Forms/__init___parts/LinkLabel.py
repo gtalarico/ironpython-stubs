@@ -11,9 +11,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
     System.Windows.Forms.AccessibleEvents for the specified child control .
   
   
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
-    applications of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    objectID: The identifier of the System.Windows.Forms.AccessibleObject.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,childID: int)
@@ -21,9 +19,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
     System.Windows.Forms.AccessibleEvents for the specified child control.
   
   
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
-    applications of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   """
   pass
@@ -31,26 +27,22 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   """
   CalcImageRenderBounds(self: Label,image: Image,r: Rectangle,align: ContentAlignment) -> Rectangle
   
-   Determines the size and location of an image drawn within the 
-    System.Windows.Forms.Label control based on the alignment of the control.
+   Determines the size and location of an image drawn within the System.Windows.Forms.Label control 
+    based on the alignment of the control.
   
   
-   image: The System.Drawing.Image used to determine size and location when drawn within 
-    the control.
-  
+   image: The System.Drawing.Image used to determine size and location when drawn within the control.
    r: A System.Drawing.Rectangle that represents the area to draw the image in.
    align: The alignment of content within the control.
-   Returns: A System.Drawing.Rectangle that represents the size and location of the 
-    specified image within the control.
+   Returns: A System.Drawing.Rectangle that represents the size and location of the specified image within 
+    the control.
   """
   pass
  def CreateAccessibilityInstance(self,*args):
   """
   CreateAccessibilityInstance(self: LinkLabel) -> AccessibleObject
   
-   Creates a new accessibility object for the System.Windows.Forms.LinkLabel 
-    control.
-  
+   Creates a new accessibility object for the System.Windows.Forms.LinkLabel control.
    Returns: A new System.Windows.Forms.AccessibleObject for the control.
   """
   pass
@@ -59,16 +51,14 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   CreateControlsInstance(self: Control) -> ControlCollection
   
    Creates a new instance of the control collection for the control.
-   Returns: A new instance of System.Windows.Forms.Control.ControlCollection assigned to 
-    the control.
+   Returns: A new instance of System.Windows.Forms.Control.ControlCollection assigned to the control.
   """
   pass
  def CreateHandle(self,*args):
   """
   CreateHandle(self: LinkLabel)
-   Creates a handle for this control. This method is called by the .NET Framework,
-    this should not be called. Inheriting classes should always call 
-    base.createHandle when overriding this method.
+   Creates a handle for this control. This method is called by the .NET Framework,this should not 
+    be called. Inheriting classes should always call base.createHandle when overriding this method.
   """
   pass
  def DefWndProc(self,*args):
@@ -89,12 +79,11 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
  def Dispose(self):
   """
   Dispose(self: Label,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.Label and 
-    optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.Label and optionally releases 
+    the managed resources.
   
   
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def DrawImage(self,*args):
@@ -134,29 +123,25 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   
    Retrieves the bounds within which the control is scaled.
   
-   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the 
-    display bounds.
-  
+   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display bounds.
    factor: The height and width of the control's bounds.
-   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the 
-    bounds of the control to use when defining its size and position.
+   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of the 
+    control to use when defining its size and position.
   
-   Returns: A System.Drawing.Rectangle representing the bounds within which the control is 
-    scaled.
+   Returns: A System.Drawing.Rectangle representing the bounds within which the control is scaled.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetStyle(self,*args):
@@ -186,9 +171,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
  def InvokeGotFocus(self,*args):
   """
   InvokeGotFocus(self: Control,toInvoke: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.GotFocus event for the specified 
-    control.
-  
+   Raises the System.Windows.Forms.Control.GotFocus event for the specified control.
   
    toInvoke: The System.Windows.Forms.Control to assign the event to.
    e: An System.EventArgs that contains the event data.
@@ -197,9 +180,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
  def InvokeLostFocus(self,*args):
   """
   InvokeLostFocus(self: Control,toInvoke: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.LostFocus event for the specified 
-    control.
-  
+   Raises the System.Windows.Forms.Control.LostFocus event for the specified control.
   
    toInvoke: The System.Windows.Forms.Control to assign the event to.
    e: An System.EventArgs that contains the event data.
@@ -210,9 +191,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   InvokeOnClick(self: Control,toInvoke: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.Click event for the specified control.
   
-   toInvoke: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Click event to.
-  
+   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event to.
    e: An System.EventArgs that contains the event data.
   """
   pass
@@ -221,9 +200,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   InvokePaint(self: Control,c: Control,e: PaintEventArgs)
    Raises the System.Windows.Forms.Control.Paint event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Paint event to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -232,9 +209,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   InvokePaintBackground(self: Control,c: Control,e: PaintEventArgs)
    Raises the PaintBackground event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Paint event to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -245,16 +220,16 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
    Determines if a character is an input character that the control recognizes.
   
    charCode: The character to test.
-   Returns: true if the character should be sent directly to the control and not 
-    preprocessed; otherwise,false.
+   Returns: true if the character should be sent directly to the control and not preprocessed; otherwise,
+    false.
   """
   pass
  def IsInputKey(self,*args):
   """
   IsInputKey(self: Control,keyData: Keys) -> bool
   
-   Determines whether the specified key is a regular input key or a special key 
-    that requires preprocessing.
+   Determines whether the specified key is a regular input key or a special key that requires 
+    preprocessing.
   
   
    keyData: One of the System.Windows.Forms.Keys values.
@@ -267,11 +242,11 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -283,8 +258,8 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
  def NotifyInvalidate(self,*args):
   """
   NotifyInvalidate(self: Control,invalidatedArea: Rectangle)
-   Raises the System.Windows.Forms.Control.Invalidated event with a specified 
-    region of the control to invalidate.
+   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the control 
+    to invalidate.
   
   
    invalidatedArea: A System.Drawing.Rectangle representing the area to invalidate.
@@ -424,6 +399,12 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
    e: An System.EventArgs that contains the event data.
   """
   pass
+ def OnDpiChangedAfterParent(self,*args):
+  """ OnDpiChangedAfterParent(self: Control,e: EventArgs) """
+  pass
+ def OnDpiChangedBeforeParent(self,*args):
+  """ OnDpiChangedBeforeParent(self: Control,e: EventArgs) """
+  pass
  def OnDragDrop(self,*args):
   """
   OnDragDrop(self: Control,drgevent: DragEventArgs)
@@ -547,10 +528,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
  def OnKeyDown(self,*args):
   """
   OnKeyDown(self: LinkLabel,e: KeyEventArgs)
-   Raises the 
-    System.Windows.Forms.Control.OnKeyDown(System.Windows.Forms.KeyEventArgs) 
-    event.
-  
+   Raises the System.Windows.Forms.Control.OnKeyDown(System.Windows.Forms.KeyEventArgs) event.
   
    e: A System.Windows.Forms.KeyEventArgs that contains the event data.
   """
@@ -592,8 +570,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   OnLinkClicked(self: LinkLabel,e: LinkLabelLinkClickedEventArgs)
    Raises the System.Windows.Forms.LinkLabel.LinkClicked event.
   
-   e: A System.Windows.Forms.LinkLabelLinkClickedEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.LinkLabelLinkClickedEventArgs that contains the event data.
   """
   pass
  def OnLocationChanged(self,*args):
@@ -647,10 +624,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
  def OnMouseDown(self,*args):
   """
   OnMouseDown(self: LinkLabel,e: MouseEventArgs)
-   Raises the 
-    System.Windows.Forms.Control.OnMouseDown(System.Windows.Forms.MouseEventArgs) 
-    event.
-  
+   Raises the System.Windows.Forms.Control.OnMouseDown(System.Windows.Forms.MouseEventArgs) event.
   
    e: A System.Windows.Forms.MouseEventArgs that contains the event data.
   """
@@ -680,10 +654,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
  def OnMouseMove(self,*args):
   """
   OnMouseMove(self: LinkLabel,e: MouseEventArgs)
-   Raises the 
-    System.Windows.Forms.Control.OnMouseMove(System.Windows.Forms.MouseEventArgs) 
-    event.
-  
+   Raises the System.Windows.Forms.Control.OnMouseMove(System.Windows.Forms.MouseEventArgs) event.
   
    e: A System.Windows.Forms.MouseEventArgs that contains the event data.
   """
@@ -691,10 +662,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
  def OnMouseUp(self,*args):
   """
   OnMouseUp(self: LinkLabel,e: MouseEventArgs)
-   Raises the 
-    System.Windows.Forms.Control.OnMouseUp(System.Windows.Forms.MouseEventArgs) 
-    event.
-  
+   Raises the System.Windows.Forms.Control.OnMouseUp(System.Windows.Forms.MouseEventArgs) event.
   
    e: A System.Windows.Forms.MouseEventArgs that contains the event data.
   """
@@ -734,10 +702,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
  def OnPaint(self,*args):
   """
   OnPaint(self: LinkLabel,e: PaintEventArgs)
-   Raises the 
-    System.Windows.Forms.Control.OnPaint(System.Windows.Forms.PaintEventArgs) 
-    event.
-  
+   Raises the System.Windows.Forms.Control.OnPaint(System.Windows.Forms.PaintEventArgs) event.
   
    e: A System.Windows.Forms.PaintEventArgs that contains the event data.
   """
@@ -754,8 +719,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   """
   OnParentBackColorChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BackColorChanged event when the 
-    System.Windows.Forms.Control.BackColor property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BackColor property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -765,8 +729,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   """
   OnParentBackgroundImageChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the 
-    System.Windows.Forms.Control.BackgroundImage property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BackgroundImage property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -776,8 +739,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   """
   OnParentBindingContextChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BindingContextChanged event when the 
-    System.Windows.Forms.Control.BindingContext property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BindingContext property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -801,8 +763,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   """
   OnParentEnabledChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.EnabledChanged event when the 
-    System.Windows.Forms.Control.Enabled property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Enabled property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -812,8 +773,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   """
   OnParentFontChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.Control.Font property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Font property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -823,8 +783,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   """
   OnParentForeColorChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.ForeColorChanged event when the 
-    System.Windows.Forms.Control.ForeColor property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.ForeColor property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -834,8 +793,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   """
   OnParentRightToLeftChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.RightToLeftChanged event when the 
-    System.Windows.Forms.Control.RightToLeft property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.RightToLeft property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -845,8 +803,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   """
   OnParentVisibleChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.VisibleChanged event when the 
-    System.Windows.Forms.Control.Visible property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Visible property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -984,8 +941,8 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   
    x: The horizontal coordinate of the point to search for a link.
    y: The vertical coordinate of the point to search for a link.
-   Returns: A System.Windows.Forms.LinkLabel.Link representing the link located at the 
-    specified coordinates. If the point does not contain a link,null is returned.
+   Returns: A System.Windows.Forms.LinkLabel.Link representing the link located at the specified 
+    coordinates. If the point does not contain a link,null is returned.
   """
   pass
  def ProcessCmdKey(self,*args):
@@ -994,8 +951,8 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   
    Processes a command key.
   
-   msg: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: true if the character was processed by the control; otherwise,false.
@@ -1027,8 +984,8 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   
    Processes a key message and generates the appropriate control events.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1039,8 +996,8 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   
    Processes a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1051,8 +1008,8 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   
    Previews a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1062,8 +1019,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   ProcessMnemonic(self: Label,charCode: Char) -> bool
   
    charCode: The character to process.
-   Returns: true if the character was processed as a mnemonic by the control; otherwise,
-    false.
+   Returns: true if the character was processed as a mnemonic by the control; otherwise,false.
   """
   pass
  def RaiseDragEvent(self,*args):
@@ -1108,6 +1064,9 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
    Forces the re-creation of the handle for the control.
   """
   pass
+ def RescaleConstantsForDpi(self,*args):
+  """ RescaleConstantsForDpi(self: Control,deviceDpiOld: int,deviceDpiNew: int) """
+  pass
  def ResetMouseEventArgs(self,*args):
   """
   ResetMouseEventArgs(self: Control)
@@ -1126,18 +1085,16 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
    Returns: One of the System.Drawing.ContentAlignment values.
   RtlTranslateAlignment(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the 
-    appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
+    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
   RtlTranslateAlignment(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the 
-    appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
+    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1160,9 +1117,8 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   """
   RtlTranslateHorizontal(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the 
-    appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
+    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1173,9 +1129,8 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   """
   RtlTranslateLeftRight(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the 
-    appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
+    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
@@ -1188,8 +1143,8 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
    Scales a control's location,size,padding and margin.
   
    factor: The factor by which the height and width of the control will be scaled.
-   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the 
-    control to use when defining its size and position.
+   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to use 
+    when defining its size and position.
   """
   pass
  def ScaleCore(self,*args):
@@ -1211,8 +1166,8 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
  def SetAutoSizeMode(self,*args):
   """
   SetAutoSizeMode(self: Control,mode: AutoSizeMode)
-   Sets a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
+   Sets a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize 
+    property is enabled.
   
   
    mode: One of the System.Windows.Forms.AutoSizeMode values.
@@ -1227,8 +1182,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
    y: New right of the control.
    width: New width of the control.
    height: New height of the control.
-   specified: Which values were specified. This parameter reflects user intent,not which 
-    values have changed.
+   specified: Which values were specified. This parameter reflects user intent,not which values have changed.
   """
   pass
  def SetClientSizeCore(self,*args):
@@ -1243,9 +1197,7 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
  def SetStyle(self,*args):
   """
   SetStyle(self: Control,flag: ControlStyles,value: bool)
-   Sets a specified System.Windows.Forms.ControlStyles flag to either true or 
-    false.
-  
+   Sets a specified System.Windows.Forms.ControlStyles flag to either true or false.
   
    flag: The System.Windows.Forms.ControlStyles bit to set.
    value: true to apply the specified style to the control; otherwise,false.
@@ -1271,23 +1223,16 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   """
   SizeFromClientSize(self: Control,clientSize: Size) -> Size
   
-   Determines the size of the entire control from the height and width of its 
-    client area.
+   Determines the size of the entire control from the height and width of its client area.
   
-  
-   clientSize: A System.Drawing.Size value representing the height and width of the control's 
-    client area.
-  
-   Returns: A System.Drawing.Size value representing the height and width of the entire 
-    control.
+   clientSize: A System.Drawing.Size value representing the height and width of the control's client area.
+   Returns: A System.Drawing.Size value representing the height and width of the entire control.
   """
   pass
  def UpdateBounds(self,*args):
   """
   UpdateBounds(self: Control,x: int,y: int,width: int,height: int,clientWidth: int,clientHeight: int)
-   Updates the bounds of the control with the specified size,location,and client 
-    size.
-  
+   Updates the bounds of the control with the specified size,location,and client size.
   
    x: The System.Drawing.Point.X coordinate of the control.
    y: The System.Drawing.Point.Y coordinate of the control.
@@ -1328,10 +1273,17 @@ class LinkLabel(Label,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceO
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

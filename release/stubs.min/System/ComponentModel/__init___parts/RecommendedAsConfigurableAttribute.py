@@ -19,8 +19,7 @@ class RecommendedAsConfigurableAttribute(Attribute,_Attribute):
   GetHashCode(self: RecommendedAsConfigurableAttribute) -> int
   
    Returns the hash code for this instance.
-   Returns: A hash code for the current 
-    System.ComponentModel.RecommendedAsConfigurableAttribute.
+   Returns: A hash code for the current System.ComponentModel.RecommendedAsConfigurableAttribute.
   """
   pass
  def IsDefaultAttribute(self):

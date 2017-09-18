@@ -4,17 +4,13 @@ class OSFeature(FeatureSupport,IFeatureSupport):
   """
   GetVersionPresent(self: OSFeature,feature: object) -> Version
   
-   Retrieves the version of the specified feature currently available on the 
-    system.
+   Retrieves the version of the specified feature currently available on the system.
   
-  
-   feature: The feature whose version is requested,either 
-    System.Windows.Forms.OSFeature.LayeredWindows or 
+   feature: The feature whose version is requested,either System.Windows.Forms.OSFeature.LayeredWindows or 
     System.Windows.Forms.OSFeature.Themes.
   
-   Returns: A System.Version representing the version of the specified operating system 
-    feature currently available on the system; or null if the feature cannot be 
-    found.
+   Returns: A System.Version representing the version of the specified operating system feature currently 
+    available on the system; or null if the feature cannot be found.
   """
   pass
  @staticmethod
@@ -22,8 +18,8 @@ class OSFeature(FeatureSupport,IFeatureSupport):
   """
   IsPresent(enumVal: SystemParameter) -> bool
   
-   Retrieves a value indicating whether the operating system supports the 
-    specified feature or metric.
+   Retrieves a value indicating whether the operating system supports the specified feature or 
+    metric.
   
   
    enumVal: A System.Windows.Forms.SystemParameter representing the feature to search for.

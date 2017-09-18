@@ -17,8 +17,8 @@ class TimeZoneInfo(object,IEquatable[TimeZoneInfo],ISerializable,IDeserializatio
    dateTime: The date and time to convert.
    sourceTimeZone: The time zone of dateTime.
    destinationTimeZone: The time zone to convert dateTime to.
-   Returns: The date and time in the destination time zone that corresponds to the dateTime 
-    parameter in the source time zone.
+   Returns: The date and time in the destination time zone that corresponds to the dateTime parameter in the 
+    source time zone.
   
   ConvertTime(dateTime: DateTime,destinationTimeZone: TimeZoneInfo) -> DateTime
   
@@ -46,23 +46,19 @@ class TimeZoneInfo(object,IEquatable[TimeZoneInfo],ISerializable,IDeserializatio
    dateTime: The date and time to convert.
    sourceTimeZoneId: The identifier of the source time zone.
    destinationTimeZoneId: The identifier of the destination time zone.
-   Returns: The date and time in the destination time zone that corresponds to the dateTime 
-    parameter in the source time zone.
+   Returns: The date and time in the destination time zone that corresponds to the dateTime parameter in the 
+    source time zone.
   
   ConvertTimeBySystemTimeZoneId(dateTime: DateTime,destinationTimeZoneId: str) -> DateTime
   
-   Converts a time to the time in another time zone based on the time zone's 
-    identifier.
-  
+   Converts a time to the time in another time zone based on the time zone's identifier.
   
    dateTime: The date and time to convert.
    destinationTimeZoneId: The identifier of the destination time zone.
    Returns: The date and time in the destination time zone.
   ConvertTimeBySystemTimeZoneId(dateTimeOffset: DateTimeOffset,destinationTimeZoneId: str) -> DateTimeOffset
   
-   Converts a time to the time in another time zone based on the time zone's 
-    identifier.
-  
+   Converts a time to the time in another time zone based on the time zone's identifier.
   
    dateTimeOffset: The date and time to convert.
    destinationTimeZoneId: The identifier of the destination time zone.
@@ -74,16 +70,13 @@ class TimeZoneInfo(object,IEquatable[TimeZoneInfo],ISerializable,IDeserializatio
   """
   ConvertTimeFromUtc(dateTime: DateTime,destinationTimeZone: TimeZoneInfo) -> DateTime
   
-   Converts a Coordinated Universal Time (UTC) to the time in a specified time 
-    zone.
-  
+   Converts a Coordinated Universal Time (UTC) to the time in a specified time zone.
   
    dateTime: The Coordinated Universal Time (UTC).
    destinationTimeZone: The time zone to convert dateTime to.
-   Returns: The date and time in the destination time zone. Its System.DateTime.Kind 
-    property is System.DateTimeKind.Utc if destinationTimeZone is 
-    System.TimeZoneInfo.Utc; otherwise,its System.DateTime.Kind property is 
-    System.DateTimeKind.Unspecified.
+   Returns: The date and time in the destination time zone. Its System.DateTime.Kind property is 
+    System.DateTimeKind.Utc if destinationTimeZone is System.TimeZoneInfo.Utc; otherwise,its 
+    System.DateTime.Kind property is System.DateTimeKind.Unspecified.
   """
   pass
  @staticmethod
@@ -95,18 +88,16 @@ class TimeZoneInfo(object,IEquatable[TimeZoneInfo],ISerializable,IDeserializatio
   
    dateTime: The date and time to convert.
    sourceTimeZone: The time zone of dateTime.
-   Returns: The Coordinated Universal Time (UTC) that corresponds to the dateTime 
-    parameter. The System.DateTime object's System.DateTime.Kind property is always 
-    set to System.DateTimeKind.Utc.
+   Returns: The Coordinated Universal Time (UTC) that corresponds to the dateTime parameter. The 
+    System.DateTime object's System.DateTime.Kind property is always set to System.DateTimeKind.Utc.
   
   ConvertTimeToUtc(dateTime: DateTime) -> DateTime
   
    Converts the current date and time to Coordinated Universal Time (UTC).
   
    dateTime: The date and time to convert.
-   Returns: The Coordinated Universal Time (UTC) that corresponds to the dateTime 
-    parameter. The System.DateTime value's System.DateTime.Kind property is always 
-    set to System.DateTimeKind.Utc.
+   Returns: The Coordinated Universal Time (UTC) that corresponds to the dateTime parameter. The 
+    System.DateTime value's System.DateTime.Kind property is always set to System.DateTimeKind.Utc.
   """
   pass
  @staticmethod
@@ -116,14 +107,13 @@ class TimeZoneInfo(object,IEquatable[TimeZoneInfo],ISerializable,IDeserializatio
   CreateCustomTimeZone(id: str,baseUtcOffset: TimeSpan,displayName: str,standardDisplayName: str,daylightDisplayName: str,adjustmentRules: Array[AdjustmentRule]) -> TimeZoneInfo
   CreateCustomTimeZone(id: str,baseUtcOffset: TimeSpan,displayName: str,standardDisplayName: str) -> TimeZoneInfo
   
-   Creates a custom time zone with a specified identifier,an offset from 
-    Coordinated Universal Time (UTC),a display name,and a standard time display 
-    name.
+   Creates a custom time zone with a specified identifier,an offset from Coordinated Universal 
+    Time (UTC),a display name,and a standard time display name.
   
   
    id: The time zone's identifier.
-   baseUtcOffset: An object that represents the time difference between this time zone and 
-    Coordinated Universal Time (UTC).
+   baseUtcOffset: An object that represents the time difference between this time zone and Coordinated Universal 
+    Time (UTC).
   
    displayName: The display name of the new time zone.
    standardDisplayName: The name of the new time zone's standard time.
@@ -135,8 +125,8 @@ class TimeZoneInfo(object,IEquatable[TimeZoneInfo],ISerializable,IDeserializatio
   Equals(self: TimeZoneInfo,obj: object) -> bool
   Equals(self: TimeZoneInfo,other: TimeZoneInfo) -> bool
   
-   Determines whether the current System.TimeZoneInfo object and another 
-    System.TimeZoneInfo object are equal.
+   Determines whether the current System.TimeZoneInfo object and another System.TimeZoneInfo object 
+    are equal.
   
   
    other: A second object to compare with the current object.
@@ -148,13 +138,9 @@ class TimeZoneInfo(object,IEquatable[TimeZoneInfo],ISerializable,IDeserializatio
   """
   FindSystemTimeZoneById(id: str) -> TimeZoneInfo
   
-   Retrieves a System.TimeZoneInfo object from the registry based on its 
-    identifier.
+   Retrieves a System.TimeZoneInfo object from the registry based on its identifier.
   
-  
-   id: The time zone identifier,which corresponds to the System.TimeZoneInfo.Id 
-    property.
-  
+   id: The time zone identifier,which corresponds to the System.TimeZoneInfo.Id property.
    Returns: An object whose identifier is the value of the id parameter.
   """
   pass
@@ -163,9 +149,7 @@ class TimeZoneInfo(object,IEquatable[TimeZoneInfo],ISerializable,IDeserializatio
   """
   FromSerializedString(source: str) -> TimeZoneInfo
   
-   Deserializes a string to re-create an original serialized System.TimeZoneInfo 
-    object.
-  
+   Deserializes a string to re-create an original serialized System.TimeZoneInfo object.
   
    source: The string representation of the serialized System.TimeZoneInfo object.
    Returns: The original serialized object.
@@ -175,8 +159,8 @@ class TimeZoneInfo(object,IEquatable[TimeZoneInfo],ISerializable,IDeserializatio
   """
   GetAdjustmentRules(self: TimeZoneInfo) -> Array[AdjustmentRule]
   
-   Retrieves an array of System.TimeZoneInfo.AdjustmentRule objects that apply to 
-    the current System.TimeZoneInfo object.
+   Retrieves an array of System.TimeZoneInfo.AdjustmentRule objects that apply to the current 
+    System.TimeZoneInfo object.
   
    Returns: An array of objects for this time zone.
   """
@@ -185,34 +169,31 @@ class TimeZoneInfo(object,IEquatable[TimeZoneInfo],ISerializable,IDeserializatio
   """
   GetAmbiguousTimeOffsets(self: TimeZoneInfo,dateTime: DateTime) -> Array[TimeSpan]
   
-   Returns information about the possible dates and times that an ambiguous date 
-    and time can be mapped to.
+   Returns information about the possible dates and times that an ambiguous date and time can be 
+    mapped to.
   
   
    dateTime: A date and time.
-   Returns: An array of objects that represents possible Coordinated Universal Time (UTC) 
-    offsets that a particular date and time can be mapped to.
+   Returns: An array of objects that represents possible Coordinated Universal Time (UTC) offsets that a 
+    particular date and time can be mapped to.
   
   GetAmbiguousTimeOffsets(self: TimeZoneInfo,dateTimeOffset: DateTimeOffset) -> Array[TimeSpan]
   
-   Returns information about the possible dates and times that an ambiguous date 
-    and time can be mapped to.
+   Returns information about the possible dates and times that an ambiguous date and time can be 
+    mapped to.
   
   
    dateTimeOffset: A date and time.
-   Returns: An array of objects that represents possible Coordinated Universal Time (UTC) 
-    offsets that a particular date and time can be mapped to.
+   Returns: An array of objects that represents possible Coordinated Universal Time (UTC) offsets that a 
+    particular date and time can be mapped to.
   """
   pass
  def GetHashCode(self):
   """
   GetHashCode(self: TimeZoneInfo) -> int
   
-   Serves as a hash function for hashing algorithms and data structures such as 
-    hash tables.
-  
-   Returns: A 32-bit signed integer that serves as the hash code for this 
-    System.TimeZoneInfo object.
+   Serves as a hash function for hashing algorithms and data structures such as hash tables.
+   Returns: A 32-bit signed integer that serves as the hash code for this System.TimeZoneInfo object.
   """
   pass
  @staticmethod
@@ -220,8 +201,8 @@ class TimeZoneInfo(object,IEquatable[TimeZoneInfo],ISerializable,IDeserializatio
   """
   GetSystemTimeZones() -> ReadOnlyCollection[TimeZoneInfo]
   
-   Returns a sorted collection of all the time zones about which information is 
-    available on the local system.
+   Returns a sorted collection of all the time zones about which information is available on the 
+    local system.
   
    Returns: A read-only collection of System.TimeZoneInfo objects.
   """
@@ -230,78 +211,74 @@ class TimeZoneInfo(object,IEquatable[TimeZoneInfo],ISerializable,IDeserializatio
   """
   GetUtcOffset(self: TimeZoneInfo,dateTime: DateTime) -> TimeSpan
   
-   Calculates the offset or difference between the time in this time zone and 
-    Coordinated Universal Time (UTC) for a particular date and time.
+   Calculates the offset or difference between the time in this time zone and Coordinated Universal 
+    Time (UTC) for a particular date and time.
   
   
    dateTime: The date and time to determine the offset for.
    Returns: An object that indicates the time difference between the two time zones.
   GetUtcOffset(self: TimeZoneInfo,dateTimeOffset: DateTimeOffset) -> TimeSpan
   
-   Calculates the offset or difference between the time in this time zone and 
-    Coordinated Universal Time (UTC) for a particular date and time.
+   Calculates the offset or difference between the time in this time zone and Coordinated Universal 
+    Time (UTC) for a particular date and time.
   
   
    dateTimeOffset: The date and time to determine the offset for.
-   Returns: An object that indicates the time difference between Coordinated Universal Time 
-    (UTC) and the current time zone.
+   Returns: An object that indicates the time difference between Coordinated Universal Time (UTC) and the 
+    current time zone.
   """
   pass
  def HasSameRules(self,other):
   """
   HasSameRules(self: TimeZoneInfo,other: TimeZoneInfo) -> bool
   
-   Indicates whether the current object and another System.TimeZoneInfo object 
-    have the same adjustment rules.
+   Indicates whether the current object and another System.TimeZoneInfo object have the same 
+    adjustment rules.
   
   
    other: A second object to compare with the current System.TimeZoneInfo object.
-   Returns: true if the two time zones have identical adjustment rules and an identical 
-    base offset; otherwise,false.
+   Returns: true if the two time zones have identical adjustment rules and an identical base offset; 
+    otherwise,false.
   """
   pass
  def IsAmbiguousTime(self,*__args):
   """
   IsAmbiguousTime(self: TimeZoneInfo,dateTime: DateTime) -> bool
   
-   Determines whether a particular date and time in a particular time zone is 
-    ambiguous and can be mapped to two or more Coordinated Universal Time (UTC) 
-    times.
+   Determines whether a particular date and time in a particular time zone is ambiguous and can be 
+    mapped to two or more Coordinated Universal Time (UTC) times.
   
   
    dateTime: A date and time value.
    Returns: true if the dateTime parameter is ambiguous; otherwise,false.
   IsAmbiguousTime(self: TimeZoneInfo,dateTimeOffset: DateTimeOffset) -> bool
   
-   Determines whether a particular date and time in a particular time zone is 
-    ambiguous and can be mapped to two or more Coordinated Universal Time (UTC) 
-    times.
+   Determines whether a particular date and time in a particular time zone is ambiguous and can be 
+    mapped to two or more Coordinated Universal Time (UTC) times.
   
   
    dateTimeOffset: A date and time.
-   Returns: true if the dateTimeOffset parameter is ambiguous in the current time zone; 
-    otherwise,false.
+   Returns: true if the dateTimeOffset parameter is ambiguous in the current time zone; otherwise,false.
   """
   pass
  def IsDaylightSavingTime(self,*__args):
   """
   IsDaylightSavingTime(self: TimeZoneInfo,dateTime: DateTime) -> bool
   
-   Indicates whether a specified date and time falls in the range of daylight 
-    saving time for the time zone of the current System.TimeZoneInfo object.
+   Indicates whether a specified date and time falls in the range of daylight saving time for the 
+    time zone of the current System.TimeZoneInfo object.
   
   
    dateTime: A date and time value.
    Returns: true if the dateTime parameter is a daylight saving time; otherwise,false.
   IsDaylightSavingTime(self: TimeZoneInfo,dateTimeOffset: DateTimeOffset) -> bool
   
-   Indicates whether a specified date and time falls in the range of daylight 
-    saving time for the time zone of the current System.TimeZoneInfo object.
+   Indicates whether a specified date and time falls in the range of daylight saving time for the 
+    time zone of the current System.TimeZoneInfo object.
   
   
    dateTimeOffset: A date and time value.
-   Returns: true if the dateTimeOffset parameter is a daylight saving time; otherwise,
-    false.
+   Returns: true if the dateTimeOffset parameter is a daylight saving time; otherwise,false.
   """
   pass
  def IsInvalidTime(self,dateTime):
@@ -327,8 +304,8 @@ class TimeZoneInfo(object,IEquatable[TimeZoneInfo],ISerializable,IDeserializatio
   ToString(self: TimeZoneInfo) -> str
   
    Returns the current System.TimeZoneInfo object's display name.
-   Returns: The value of the System.TimeZoneInfo.DisplayName property of the current 
-    System.TimeZoneInfo object.
+   Returns: The value of the System.TimeZoneInfo.DisplayName property of the current System.TimeZoneInfo 
+    object.
   """
   pass
  def __eq__(self,*args):

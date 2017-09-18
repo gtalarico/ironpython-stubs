@@ -5,36 +5,34 @@ class _Assembly:
   CreateInstance(self: _Assembly,typeName: str,ignoreCase: bool,bindingAttr: BindingFlags,binder: Binder,args: Array[object],culture: CultureInfo,activationAttributes: Array[object]) -> object
   
    Provides COM objects with version-independent access to the 
-    System.Reflection.Assembly.CreateInstance(System.String,System.Boolean,System.Re
-    flection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalizat
-    ion.CultureInfo,System.Object[]) method.
+    System.Reflection.Assembly.CreateInstance(System.String,System.Boolean,System.Reflection.BindingF
+    lags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo,System.Object[]) 
+    method.
   
   
    typeName: The System.Type.FullName of the type to locate.
    ignoreCase: true to ignore the case of the type name; otherwise,false.
-   bindingAttr: A bitmask that affects how the search is conducted. The value is a combination 
-    of bit flags from System.Reflection.BindingFlags.
+   bindingAttr: A bitmask that affects how the search is conducted. The value is a combination of bit flags from 
+    System.Reflection.BindingFlags.
   
-   binder: An object that enables the binding,coercion of argument types,invocation of 
-    members,and retrieval of MemberInfo objects via reflection. If binder is null,
-    the default binder is used.
+   binder: An object that enables the binding,coercion of argument types,invocation of members,and 
+    retrieval of MemberInfo objects via reflection. If binder is null,the default binder is used.
   
-   args: An array of type Object containing the arguments to be passed to the 
-    constructor. This array of arguments must match in number,order,and type the 
-    parameters of the constructor to be invoked. If the default constructor is 
-    desired,args must be an empty array or null.
+   args: An array of type Object containing the arguments to be passed to the constructor. This array of 
+    arguments must match in number,order,and type the parameters of the constructor to be invoked. 
+    If the default constructor is desired,args must be an empty array or null.
   
-   culture: An instance of CultureInfo used to govern the coercion of types. If this is 
-    null,the CultureInfo for the current thread is used. (This is necessary to 
-    convert a String that represents 1000 to a Double value,for example,since 
-    1000 is represented differently by different cultures.)
+   culture: An instance of CultureInfo used to govern the coercion of types. If this is null,the 
+    CultureInfo for the current thread is used. (This is necessary to convert a String that 
+    represents 1000 to a Double value,for example,since 1000 is represented differently by 
+    different cultures.)
   
-   activationAttributes: An array of type Object containing one or more activation attributes that can 
-    participate in the activation. An example of an activation attribute is: 
+   activationAttributes: An array of type Object containing one or more activation attributes that can participate in the 
+    activation. An example of an activation attribute is: 
     URLAttribute(http://hostname/appname/objectURI)
   
-   Returns: An instance of Object representing the type and matching the specified 
-    criteria,or null if typeName is not found.
+   Returns: An instance of Object representing the type and matching the specified criteria,or null if 
+    typeName is not found.
   
   CreateInstance(self: _Assembly,typeName: str,ignoreCase: bool) -> object
   
@@ -44,10 +42,9 @@ class _Assembly:
   
    typeName: The System.Type.FullName of the type to locate.
    ignoreCase: true to ignore the case of the type name; otherwise,false.
-   Returns: An instance of System.Object representing the type,with culture,arguments,
-    binder,and activation attributes set to null,and 
-    System.Reflection.BindingFlags set to Public or Instance,or null if typeName 
-    is not found.
+   Returns: An instance of System.Object representing the type,with culture,arguments,binder,and 
+    activation attributes set to null,and System.Reflection.BindingFlags set to Public or Instance,
+    or null if typeName is not found.
   
   CreateInstance(self: _Assembly,typeName: str) -> object
   
@@ -56,23 +53,21 @@ class _Assembly:
   
   
    typeName: The System.Type.FullName of the type to locate.
-   Returns: An instance of System.Object representing the type,with culture,arguments,
-    binder,and activation attributes set to null,and 
-    System.Reflection.BindingFlags set to Public or Instance,or null if typeName 
-    is not found.
+   Returns: An instance of System.Object representing the type,with culture,arguments,binder,and 
+    activation attributes set to null,and System.Reflection.BindingFlags set to Public or Instance,
+    or null if typeName is not found.
   """
   pass
  def Equals(self,other):
   """
   Equals(self: _Assembly,other: object) -> bool
   
-   Provides COM objects with version-independent access to the 
-    System.Object.Equals(System.Object) method.
+   Provides COM objects with version-independent access to the System.Object.Equals(System.Object) 
+    method.
   
   
    other: The System.Object to compare with the current System.Object.
-   Returns: true if the specified System.Object is equal to the current System.Object; 
-    otherwise,false.
+   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,false.
   """
   pass
  def GetCustomAttributes(self,*__args):
@@ -88,14 +83,13 @@ class _Assembly:
   GetCustomAttributes(self: _Assembly,attributeType: Type,inherit: bool) -> Array[object]
   
    Provides COM objects with version-independent access to the 
-    System.Reflection.Assembly.GetCustomAttributes(System.Type,System.Boolean) 
-    method.
+    System.Reflection.Assembly.GetCustomAttributes(System.Type,System.Boolean) method.
   
   
    attributeType: The System.Type for which the custom attributes are to be returned.
    inherit: This argument is ignored for objects of type System.Reflection.Assembly.
-   Returns: An array of type System.Object containing the custom attributes for this 
-    assembly as specified by attributeType.
+   Returns: An array of type System.Object containing the custom attributes for this assembly as specified 
+    by attributeType.
   """
   pass
  def GetExportedTypes(self):
@@ -105,8 +99,8 @@ class _Assembly:
    Provides COM objects with version-independent access to the 
     System.Reflection.Assembly.GetExportedTypes property.
   
-   Returns: An array of System.Type objects that represent the types defined in this 
-    assembly that are visible outside the assembly.
+   Returns: An array of System.Type objects that represent the types defined in this assembly that are 
+    visible outside the assembly.
   """
   pass
  def GetFile(self,name):
@@ -133,8 +127,8 @@ class _Assembly:
    Returns: An array of System.IO.FileStream objects.
   GetFiles(self: _Assembly) -> Array[FileStream]
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.Assembly.GetFiles method.
+   Provides COM objects with version-independent access to the System.Reflection.Assembly.GetFiles 
+    method.
   
    Returns: An array of System.IO.FileStream objects.
   """
@@ -143,9 +137,7 @@ class _Assembly:
   """
   GetHashCode(self: _Assembly) -> int
   
-   Provides COM objects with version-independent access to the 
-    System.Object.GetHashCode method.
-  
+   Provides COM objects with version-independent access to the System.Object.GetHashCode method.
    Returns: A hash code for the current System.Object.
   """
   pass
@@ -176,8 +168,8 @@ class _Assembly:
   
   
    resourceName: The case-sensitive name of the resource.
-   Returns: A System.Reflection.ManifestResourceInfo object populated with information 
-    about the resource's topology,or null if the resource is not found.
+   Returns: A System.Reflection.ManifestResourceInfo object populated with information about the resource's 
+    topology,or null if the resource is not found.
   """
   pass
  def GetManifestResourceNames(self):
@@ -203,8 +195,7 @@ class _Assembly:
   GetManifestResourceStream(self: _Assembly,type: Type,name: str) -> Stream
   
    Provides COM objects with version-independent access to the 
-    System.Reflection.Assembly.GetManifestResourceStream(System.Type,System.String) 
-    method.
+    System.Reflection.Assembly.GetManifestResourceStream(System.Type,System.String) method.
   
   
    type: The type whose namespace is used to scope the manifest resource name.
@@ -250,15 +241,14 @@ class _Assembly:
     System.Reflection.Assembly.GetName(System.Boolean) method.
   
   
-   copiedName: true to set the System.Reflection.Assembly.CodeBase to the location of the 
-    assembly after it was shadow copied; false to set 
-    System.Reflection.Assembly.CodeBase to the original location.
+   copiedName: true to set the System.Reflection.Assembly.CodeBase to the location of the assembly after it was 
+    shadow copied; false to set System.Reflection.Assembly.CodeBase to the original location.
   
    Returns: An System.Reflection.AssemblyName for this assembly.
   GetName(self: _Assembly) -> AssemblyName
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.Assembly.GetName method.
+   Provides COM objects with version-independent access to the System.Reflection.Assembly.GetName 
+    method.
   
    Returns: An System.Reflection.AssemblyName for this assembly.
   """
@@ -267,8 +257,8 @@ class _Assembly:
   """
   GetObjectData(self: _Assembly,info: SerializationInfo,context: StreamingContext)
    Provides COM objects with version-independent access to the 
-    System.Reflection.Assembly.GetObjectData(System.Runtime.Serialization.Serializat
-    ionInfo,System.Runtime.Serialization.StreamingContext) method.
+    System.Reflection.Assembly.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Ru
+    ntime.Serialization.StreamingContext) method.
   
   
    info: The object to be populated with serialization information.
@@ -282,8 +272,8 @@ class _Assembly:
    Provides COM objects with version-independent access to the 
     System.Reflection.Assembly.GetReferencedAssemblies method.
   
-   Returns: An array of type System.Reflection.AssemblyName containing all the assemblies 
-    referenced by this assembly.
+   Returns: An array of type System.Reflection.AssemblyName containing all the assemblies referenced by this 
+    assembly.
   """
   pass
  def GetSatelliteAssembly(self,culture,version=None):
@@ -291,8 +281,8 @@ class _Assembly:
   GetSatelliteAssembly(self: _Assembly,culture: CultureInfo,version: Version) -> Assembly
   
    Provides COM objects with version-independent access to the 
-    System.Reflection.Assembly.GetSatelliteAssembly(System.Globalization.CultureInfo
-    ,System.Version) method.
+    System.Reflection.Assembly.GetSatelliteAssembly(System.Globalization.CultureInfo,System.Version) 
+    method.
   
   
    culture: The specified culture.
@@ -301,8 +291,7 @@ class _Assembly:
   GetSatelliteAssembly(self: _Assembly,culture: CultureInfo) -> Assembly
   
    Provides COM objects with version-independent access to the 
-    System.Reflection.Assembly.GetSatelliteAssembly(System.Globalization.CultureInfo
-    ) method.
+    System.Reflection.Assembly.GetSatelliteAssembly(System.Globalization.CultureInfo) method.
   
   
    culture: The specified culture.
@@ -323,8 +312,7 @@ class _Assembly:
   GetType(self: _Assembly,name: str,throwOnError: bool,ignoreCase: bool) -> Type
   
    Provides COM objects with version-independent access to the 
-    System.Reflection.Assembly.GetType(System.String,System.Boolean,System.Boolean) 
-    method.
+    System.Reflection.Assembly.GetType(System.String,System.Boolean,System.Boolean) method.
   
   
    name: The full name of the type.
@@ -333,9 +321,7 @@ class _Assembly:
    Returns: A System.Type object that represents the specified class.
   GetType(self: _Assembly) -> Type
   
-   Provides COM objects with version-independent access to the 
-    System.Object.GetType method.
-  
+   Provides COM objects with version-independent access to the System.Object.GetType method.
    Returns: A System.Type object.
   GetType(self: _Assembly,name: str) -> Type
   
@@ -344,19 +330,17 @@ class _Assembly:
   
   
    name: The full name of the type.
-   Returns: A System.Type object that represents the specified class,or null if the class 
-    is not found.
+   Returns: A System.Type object that represents the specified class,or null if the class is not found.
   """
   pass
  def GetTypes(self):
   """
   GetTypes(self: _Assembly) -> Array[Type]
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.Assembly.GetTypes method.
+   Provides COM objects with version-independent access to the System.Reflection.Assembly.GetTypes 
+    method.
   
-   Returns: An array of type System.Type containing objects for all the types defined in 
-    this assembly.
+   Returns: An array of type System.Type containing objects for all the types defined in this assembly.
   """
   pass
  def IsDefined(self,attributeType,inherit):
@@ -369,8 +353,7 @@ class _Assembly:
   
    attributeType: The System.Type of the custom attribute to be checked for this assembly.
    inherit: This argument is ignored for objects of this type.
-   Returns: true if a custom attribute identified by the specified System.Type is defined; 
-    otherwise,false.
+   Returns: true if a custom attribute identified by the specified System.Type is defined; otherwise,false.
   """
   pass
  def LoadModule(self,moduleName,rawModule,rawSymbolStore=None):
@@ -378,16 +361,13 @@ class _Assembly:
   LoadModule(self: _Assembly,moduleName: str,rawModule: Array[Byte],rawSymbolStore: Array[Byte]) -> Module
   
    Provides COM objects with version-independent access to the 
-    System.Reflection.Assembly.LoadModule(System.String,System.Byte[],System.Byte[])
-     method.
+    System.Reflection.Assembly.LoadModule(System.String,System.Byte[],System.Byte[]) method.
   
   
    moduleName: Name of the module. Must correspond to a file name in this assembly's manifest.
-   rawModule: A byte array that is a COFF-based image containing an emitted module,or a 
-    resource.
-  
-   rawSymbolStore: A byte array containing the raw bytes representing the symbols for the module. 
-    Must be null if this is a resource file.
+   rawModule: A byte array that is a COFF-based image containing an emitted module,or a resource.
+   rawSymbolStore: A byte array containing the raw bytes representing the symbols for the module. Must be null if 
+    this is a resource file.
   
    Returns: The loaded module.
   LoadModule(self: _Assembly,moduleName: str,rawModule: Array[Byte]) -> Module
@@ -397,9 +377,7 @@ class _Assembly:
   
   
    moduleName: Name of the module. Must correspond to a file name in this assembly's manifest.
-   rawModule: A byte array that is a COFF-based image containing an emitted module,or a 
-    resource.
-  
+   rawModule: A byte array that is a COFF-based image containing an emitted module,or a resource.
    Returns: The loaded Module.
   """
   pass
@@ -407,11 +385,11 @@ class _Assembly:
   """
   ToString(self: _Assembly) -> str
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.Assembly.ToString method.
+   Provides COM objects with version-independent access to the System.Reflection.Assembly.ToString 
+    method.
   
-   Returns: The full name of the assembly,or the class name if the full name of the 
-    assembly cannot be determined.
+   Returns: The full name of the assembly,or the class name if the full name of the assembly cannot be 
+    determined.
   """
   pass
  def __eq__(self,*args):

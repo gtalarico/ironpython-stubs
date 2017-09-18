@@ -15,8 +15,8 @@ class NotFiniteNumberException(ArithmeticException,ISerializable,_Exception):
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: NotFiniteNumberException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo object with the invalid 
-    number and additional exception information.
+   Sets the System.Runtime.Serialization.SerializationInfo object with the invalid number and 
+    additional exception information.
   
   
    info: The object that holds the serialized object data.

@@ -54,9 +54,10 @@ class Excel(object):
         ReadFromFile(file: FileInfo, sheetName: str, readAsStrings: bool) -> Array[Array[object]]
         
             Read data from a Microsoft Excel spreadsheet. Data is read by row and
-                        returned in a series of lists by row. Rows and columns 
-             are zero-indexed;
-                        for example, the value in cell A1 will appear in the data list at [0,0].
+                        returned 
+             in a series of lists by row. Rows and columns are zero-indexed;
+                        for example, 
+             the value in cell A1 will appear in the data list at [0,0].
                         This node requires 
              Microsoft Excel to be installed.
         
@@ -84,12 +85,14 @@ class Excel(object):
         WriteToFile(filePath: str, sheetName: str, startRow: int, startCol: int, data: Array[Array[object]], overWrite: bool) -> Array[Array[object]]
         
             Write data to a Microsoft Excel spreadsheet. Data is written by row
-                        with sublists to be written in successive rows. Rows and 
-             columns are
-                        zero-indexed; for example, the value in the data list at [0,0] will
-                        be written to cell A1. Null 
-             values and empty lists are written to Excel 
-                        as empty cells. This node requires Microsoft Excel to be installed.
+                        with 
+             sublists to be written in successive rows. Rows and columns are
+                        zero-indexed; 
+             for example, the value in the data list at [0,0] will
+                        be written to cell A1. 
+             Null values and empty lists are written to Excel 
+                        as empty cells. This node 
+             requires Microsoft Excel to be installed.
         
         
             filePath: File path to the Microsoft Excel spreadsheet.

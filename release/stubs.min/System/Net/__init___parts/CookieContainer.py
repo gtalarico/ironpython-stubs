@@ -14,25 +14,20 @@ class CookieContainer(object):
    uri: The URI of the System.Net.Cookie to be added to the System.Net.CookieContainer.
    cookie: The System.Net.Cookie to be added to the System.Net.CookieContainer.
   Add(self: CookieContainer,uri: Uri,cookies: CookieCollection)
-   Adds the contents of a System.Net.CookieCollection to the 
-    System.Net.CookieContainer for a particular URI.
+   Adds the contents of a System.Net.CookieCollection to the System.Net.CookieContainer for a 
+    particular URI.
   
   
-   uri: The URI of the System.Net.CookieCollection to be added to the 
-    System.Net.CookieContainer.
-  
+   uri: The URI of the System.Net.CookieCollection to be added to the System.Net.CookieContainer.
    cookies: The System.Net.CookieCollection to be added to the System.Net.CookieContainer.
   Add(self: CookieContainer,cookie: Cookie)
-   Adds a System.Net.Cookie to a System.Net.CookieContainer. This method uses the 
-    domain from the System.Net.Cookie to determine which domain collection to 
-    associate the System.Net.Cookie with.
+   Adds a System.Net.Cookie to a System.Net.CookieContainer. This method uses the domain from the 
+    System.Net.Cookie to determine which domain collection to associate the System.Net.Cookie with.
   
   
    cookie: The System.Net.Cookie to be added to the System.Net.CookieContainer.
   Add(self: CookieContainer,cookies: CookieCollection)
-   Adds the contents of a System.Net.CookieCollection to the 
-    System.Net.CookieContainer.
-  
+   Adds the contents of a System.Net.CookieCollection to the System.Net.CookieContainer.
   
    cookies: The System.Net.CookieCollection to be added to the System.Net.CookieContainer.
   """
@@ -41,38 +36,38 @@ class CookieContainer(object):
   """
   GetCookieHeader(self: CookieContainer,uri: Uri) -> str
   
-   Gets the HTTP cookie header that contains the HTTP cookies that represent the 
-    System.Net.Cookie instances that are associated with a specific URI.
+   Gets the HTTP cookie header that contains the HTTP cookies that represent the System.Net.Cookie 
+    instances that are associated with a specific URI.
   
   
    uri: The URI of the System.Net.Cookie instances desired.
-   Returns: An HTTP cookie header,with strings representing System.Net.Cookie instances 
-    delimited by semicolons.
+   Returns: An HTTP cookie header,with strings representing System.Net.Cookie instances delimited by 
+    semicolons.
   """
   pass
  def GetCookies(self,uri):
   """
   GetCookies(self: CookieContainer,uri: Uri) -> CookieCollection
   
-   Gets a System.Net.CookieCollection that contains the System.Net.Cookie 
-    instances that are associated with a specific URI.
+   Gets a System.Net.CookieCollection that contains the System.Net.Cookie instances that are 
+    associated with a specific URI.
   
   
    uri: The URI of the System.Net.Cookie instances desired.
-   Returns: A System.Net.CookieCollection that contains the System.Net.Cookie instances 
-    that are associated with a specific URI.
+   Returns: A System.Net.CookieCollection that contains the System.Net.Cookie instances that are associated 
+    with a specific URI.
   """
   pass
  def SetCookies(self,uri,cookieHeader):
   """
   SetCookies(self: CookieContainer,uri: Uri,cookieHeader: str)
-   Adds System.Net.Cookie instances for one or more cookies from an HTTP cookie 
-    header to the System.Net.CookieContainer for a specific URI.
+   Adds System.Net.Cookie instances for one or more cookies from an HTTP cookie header to the 
+    System.Net.CookieContainer for a specific URI.
   
   
    uri: The URI of the System.Net.CookieCollection.
-   cookieHeader: The contents of an HTTP set-cookie header as returned by a HTTP server,with 
-    System.Net.Cookie instances delimited by commas.
+   cookieHeader: The contents of an HTTP set-cookie header as returned by a HTTP server,with System.Net.Cookie 
+    instances delimited by commas.
   """
   pass
  def __add__(self,*args):

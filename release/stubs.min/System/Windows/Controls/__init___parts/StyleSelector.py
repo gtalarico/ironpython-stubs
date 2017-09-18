@@ -8,9 +8,7 @@ class StyleSelector(object):
   """
   SelectStyle(self: StyleSelector,item: object,container: DependencyObject) -> Style
   
-   When overridden in a derived class,returns a System.Windows.Style based on 
-    custom logic.
-  
+   When overridden in a derived class,returns a System.Windows.Style based on custom logic.
   
    item: The content.
    container: The element to which the style will be applied.

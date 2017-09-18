@@ -10,11 +10,11 @@ class AppDomainManager(MarshalByRefObject):
   
    Indicates whether the specified operation is allowed in the application domain.
   
-   state: A subclass of System.Security.SecurityState that identifies the operation whose 
-    security status is requested.
+   state: A subclass of System.Security.SecurityState that identifies the operation whose security status 
+    is requested.
   
-   Returns: true if the host allows the operation specified by state to be performed in the 
-    application domain; otherwise,false.
+   Returns: true if the host allows the operation specified by state to be performed in the application 
+    domain; otherwise,false.
   """
   pass
  def CreateDomain(self,friendlyName,securityInfo,appDomainInfo):
@@ -24,8 +24,8 @@ class AppDomainManager(MarshalByRefObject):
    Returns a new or existing application domain.
   
    friendlyName: The friendly name of the domain.
-   securityInfo: An object that contains evidence mapped through the security policy to 
-    establish a top-of-stack permission set.
+   securityInfo: An object that contains evidence mapped through the security policy to establish a top-of-stack 
+    permission set.
   
    appDomainInfo: An object that contains application domain initialization information.
    Returns: A new or existing application domain.
@@ -38,8 +38,8 @@ class AppDomainManager(MarshalByRefObject):
    Provides a helper method to create an application domain.
   
    friendlyName: The friendly name of the domain.
-   securityInfo: An object that contains evidence mapped through the security policy to 
-    establish a top-of-stack permission set.
+   securityInfo: An object that contains evidence mapped through the security policy to establish a top-of-stack 
+    permission set.
   
    appDomainInfo: An object that contains application domain initialization information.
    Returns: A newly created application domain.

@@ -1,0 +1,6 @@
+{
+  "IronPython.Wpf.dll": {
+    "IronPython": "<module 'IronPython' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>", 
+    "IronPython.Modules": "<module 'Modules' (CLS module from IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1)>"
+  }
+}

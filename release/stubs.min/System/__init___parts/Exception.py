@@ -13,28 +13,26 @@ class Exception(object,ISerializable,_Exception):
   """
   GetBaseException(self: Exception) -> Exception
   
-   When overridden in a derived class,returns the System.Exception that is the 
-    root cause of one or more subsequent exceptions.
+   When overridden in a derived class,returns the System.Exception that is the root cause of one 
+    or more subsequent exceptions.
   
-   Returns: The first exception thrown in a chain of exceptions. If the 
-    System.Exception.InnerException property of the current exception is a null 
-    reference (Nothing in Visual Basic),this property returns the current 
-    exception.
+   Returns: The first exception thrown in a chain of exceptions. If the System.Exception.InnerException 
+    property of the current exception is a null reference (Nothing in Visual Basic),this property 
+    returns the current exception.
   """
   pass
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: Exception,info: SerializationInfo,context: StreamingContext)
-   When overridden in a derived class,sets the 
-    System.Runtime.Serialization.SerializationInfo with information about the 
-    exception.
+   When overridden in a derived class,sets the System.Runtime.Serialization.SerializationInfo with 
+    information about the exception.
   
   
-   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized 
-    object data about the exception being thrown.
+   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about 
+    the exception being thrown.
   
-   context: The System.Runtime.Serialization.StreamingContext that contains contextual 
-    information about the source or destination.
+   context: The System.Runtime.Serialization.StreamingContext that contains contextual information about the 
+    source or destination.
   """
   pass
  def GetType(self):
@@ -42,8 +40,7 @@ class Exception(object,ISerializable,_Exception):
   GetType(self: Exception) -> Type
   
    Gets the runtime type of the current instance.
-   Returns: A System.Type object that represents the exact runtime type of the current 
-    instance.
+   Returns: A System.Type object that represents the exact runtime type of the current instance.
   """
   pass
  def remove_SerializeObjectState(self,*args):

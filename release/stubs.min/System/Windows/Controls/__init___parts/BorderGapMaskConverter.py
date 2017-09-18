@@ -12,13 +12,12 @@ class BorderGapMaskConverter(object,IMultiValueConverter):
     System.Windows.Controls.GroupBox control.
   
   
-   values: An array of three numbers that represent the System.Windows.Controls.GroupBox 
-    control parameters.  See Remarks for more information.
+   values: An array of three numbers that represent the System.Windows.Controls.GroupBox control 
+    parameters.  See Remarks for more information.
   
    targetType: This parameter is not used.
    parameter: The width of the visible line to the left of the 
-    System.Windows.Controls.HeaderedContentControl.Header in the 
-    System.Windows.Controls.GroupBox.
+    System.Windows.Controls.HeaderedContentControl.Header in the System.Windows.Controls.GroupBox.
   
    culture: This parameter is not used.
    Returns: A System.Windows.Media.VisualBrush that draws the border around a 

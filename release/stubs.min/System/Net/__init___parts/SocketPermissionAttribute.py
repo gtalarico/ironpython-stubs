@@ -9,8 +9,8 @@ class SocketPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
   CreatePermission(self: SocketPermissionAttribute) -> IPermission
   
    Creates and returns a new instance of the System.Net.SocketPermission class.
-   Returns: An instance of the System.Net.SocketPermission class that corresponds to the 
-    security declaration.
+   Returns: An instance of the System.Net.SocketPermission class that corresponds to the security 
+    declaration.
   """
   pass
  def __init__(self,*args):

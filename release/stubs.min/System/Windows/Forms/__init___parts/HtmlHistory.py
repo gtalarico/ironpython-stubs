@@ -5,8 +5,8 @@ class HtmlHistory(object,IDisposable):
   Back(self: HtmlHistory,numberBack: int)
    Navigates backward in the navigation stack by the specified number of entries.
   
-   numberBack: The number of entries to navigate backward in the navigation stack. This number 
-    must be a positive integer.
+   numberBack: The number of entries to navigate backward in the navigation stack. This number must be a 
+    positive integer.
   """
   pass
  def Dispose(self):
@@ -20,8 +20,8 @@ class HtmlHistory(object,IDisposable):
   Forward(self: HtmlHistory,numberForward: int)
    Navigates forward in the navigation stack by the specified number of entries.
   
-   numberForward: The number of entries to navigate forward in the navigation stack. This number 
-    must be a positive integer.
+   numberForward: The number of entries to navigate forward in the navigation stack. This number must be a 
+    positive integer.
   """
   pass
  def Go(self,*__args):
@@ -33,9 +33,9 @@ class HtmlHistory(object,IDisposable):
   Go(self: HtmlHistory,urlString: str)
    Navigates to the specified Uniform Resource Locator (URL).
   
-   urlString: The URL you want to display. This may be a relative or virtual URL (for 
-    example,page.html,path/page.html,or /path/to/page.html),in which case the 
-    current Web page's URL is used as a base.
+   urlString: The URL you want to display. This may be a relative or virtual URL (for example,page.html,
+    path/page.html,or /path/to/page.html),in which case the current Web page's URL is used as a 
+    base.
   
   Go(self: HtmlHistory,url: Uri)
    Navigates to the specified Uniform Resource Locator (URL).
@@ -44,10 +44,17 @@ class HtmlHistory(object,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

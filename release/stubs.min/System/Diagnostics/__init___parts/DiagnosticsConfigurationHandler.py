@@ -8,14 +8,12 @@ class DiagnosticsConfigurationHandler(object,IConfigurationSectionHandler):
   """
   Create(self: DiagnosticsConfigurationHandler,parent: object,configContext: object,section: XmlNode) -> object
   
-   Parses the configuration settings for the <system.diagnostics> Element section 
-    of configuration files.
+   Parses the configuration settings for the <system.diagnostics> Element section of configuration 
+    files.
   
   
    parent: The object inherited from the parent path
-   configContext: Reserved. Used in ASP.NET to convey the virtual path of the configuration being 
-    evaluated.
-  
+   configContext: Reserved. Used in ASP.NET to convey the virtual path of the configuration being evaluated.
    section: The root XML node at the section to handle.
    Returns: A new configuration object,in the form of a System.Collections.Hashtable.
   """

@@ -9,13 +9,11 @@ class ToolTip(Component,IComponent,IDisposable,IExtenderProvider):
   """
   CanExtend(self: ToolTip,target: object) -> bool
   
-   Returns true if the ToolTip can offer an extender property to the specified 
-    target component.
-  
+   Returns true if the ToolTip can offer an extender property to the specified target component.
   
    target: The target object to add an extender property to.
-   Returns: true if the System.Windows.Forms.ToolTip class can offer one or more extender 
-    properties; otherwise,false.
+   Returns: true if the System.Windows.Forms.ToolTip class can offer one or more extender properties; 
+    otherwise,false.
   """
   pass
  def Dispose(self):
@@ -23,22 +21,20 @@ class ToolTip(Component,IComponent,IDisposable,IExtenderProvider):
   Dispose(self: ToolTip,disposing: bool)
    Disposes of the System.Windows.Forms.ToolTip component.
   
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetToolTip(self,control):
@@ -47,9 +43,7 @@ class ToolTip(Component,IComponent,IDisposable,IExtenderProvider):
   
    Retrieves the ToolTip text associated with the specified control.
   
-   control: The System.Windows.Forms.Control for which to retrieve the 
-    System.Windows.Forms.ToolTip text.
-  
+   control: The System.Windows.Forms.Control for which to retrieve the System.Windows.Forms.ToolTip text.
    Returns: A System.String containing the ToolTip text for the specified control.
   """
   pass
@@ -58,8 +52,8 @@ class ToolTip(Component,IComponent,IDisposable,IExtenderProvider):
   Hide(self: ToolTip,win: IWin32Window)
    Hides the specified ToolTip window.
   
-   win: The System.Windows.Forms.IWin32Window of the associated window or control that 
-    the ToolTip is associated with.
+   win: The System.Windows.Forms.IWin32Window of the associated window or control that the ToolTip is 
+    associated with.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -68,11 +62,11 @@ class ToolTip(Component,IComponent,IDisposable,IExtenderProvider):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -99,73 +93,65 @@ class ToolTip(Component,IComponent,IDisposable,IExtenderProvider):
  def Show(self,text,window,*__args):
   """
   Show(self: ToolTip,text: str,window: IWin32Window,point: Point,duration: int)
-   Sets the ToolTip text associated with the specified control,and then displays 
-    the ToolTip for the specified duration at the specified relative position.
+   Sets the ToolTip text associated with the specified control,and then displays the ToolTip for 
+    the specified duration at the specified relative position.
   
   
    text: A System.String containing the new ToolTip text.
    window: The System.Windows.Forms.Control to display the ToolTip for.
-   point: A System.Drawing.Point containing the offset,in pixels,relative to the 
-    upper-left corner of the associated control window,to display the ToolTip.
+   point: A System.Drawing.Point containing the offset,in pixels,relative to the upper-left corner of 
+    the associated control window,to display the ToolTip.
   
-   duration: An System.Int32 containing the duration,in milliseconds,to display the 
-    ToolTip.
-  
+   duration: An System.Int32 containing the duration,in milliseconds,to display the ToolTip.
   Show(self: ToolTip,text: str,window: IWin32Window,x: int,y: int)
-   Sets the ToolTip text associated with the specified control,and then displays 
-    the ToolTip modally at the specified relative position.
+   Sets the ToolTip text associated with the specified control,and then displays the ToolTip 
+    modally at the specified relative position.
   
   
    text: A System.String containing the new ToolTip text.
    window: The System.Windows.Forms.Control to display the ToolTip for.
-   x: The horizontal offset,in pixels,relative to the upper-left corner of the 
-    associated control window,to display the ToolTip.
+   x: The horizontal offset,in pixels,relative to the upper-left corner of the associated control 
+    window,to display the ToolTip.
   
-   y: The vertical offset,in pixels,relative to the upper-left corner of the 
-    associated control window,to display the ToolTip.
+   y: The vertical offset,in pixels,relative to the upper-left corner of the associated control 
+    window,to display the ToolTip.
   
   Show(self: ToolTip,text: str,window: IWin32Window,x: int,y: int,duration: int)
-   Sets the ToolTip text associated with the specified control,and then displays 
-    the ToolTip for the specified duration at the specified relative position.
+   Sets the ToolTip text associated with the specified control,and then displays the ToolTip for 
+    the specified duration at the specified relative position.
   
   
    text: A System.String containing the new ToolTip text.
    window: The System.Windows.Forms.Control to display the ToolTip for.
-   x: The horizontal offset,in pixels,relative to the upper-left corner of the 
-    associated control window,to display the ToolTip.
+   x: The horizontal offset,in pixels,relative to the upper-left corner of the associated control 
+    window,to display the ToolTip.
   
-   y: The vertical offset,in pixels,relative to the upper-left corner of the 
-    associated control window,to display the ToolTip.
+   y: The vertical offset,in pixels,relative to the upper-left corner of the associated control 
+    window,to display the ToolTip.
   
-   duration: An System.Int32 containing the duration,in milliseconds,to display the 
-    ToolTip.
-  
+   duration: An System.Int32 containing the duration,in milliseconds,to display the ToolTip.
   Show(self: ToolTip,text: str,window: IWin32Window)
-   Sets the ToolTip text associated with the specified control,and displays the 
-    ToolTip modally.
-  
+   Sets the ToolTip text associated with the specified control,and displays the ToolTip modally.
   
    text: A System.String containing the new ToolTip text.
    window: The System.Windows.Forms.Control to display the ToolTip for.
   Show(self: ToolTip,text: str,window: IWin32Window,duration: int)
-   Sets the ToolTip text associated with the specified control,and then displays 
-    the ToolTip for the specified duration.
+   Sets the ToolTip text associated with the specified control,and then displays the ToolTip for 
+    the specified duration.
   
   
    text: A System.String containing the new ToolTip text.
    window: The System.Windows.Forms.Control to display the ToolTip for.
-   duration: An System.Int32 containing the duration,in milliseconds,to display the 
-    ToolTip.
-  
+   duration: An System.Int32 containing the duration,in milliseconds,to display the ToolTip.
   Show(self: ToolTip,text: str,window: IWin32Window,point: Point)
-   Sets the ToolTip text associated with the specified control,and then displays 
-    the ToolTip modally at the specified relative position.
+   Sets the ToolTip text associated with the specified control,and then displays the ToolTip 
+    modally at the specified relative position.
   
   
    text: A System.String containing the new ToolTip text.
    window: The System.Windows.Forms.Control to display the ToolTip for.
-   point: A System.Drawing.Point containing the offset,in pixels,relative to the 
-    upper-left corner of the associated control window,to display the ToolTip.
+   point: A System.Drawing.Point containing the offset,in pixels,relative to the upper-left corner of 
+    the associated control window,to display the ToolTip.
   """
   pass
  def StopTimer(self,*args):
@@ -183,10 +169,17 @@ class ToolTip(Component,IComponent,IDisposable,IExtenderProvider):
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

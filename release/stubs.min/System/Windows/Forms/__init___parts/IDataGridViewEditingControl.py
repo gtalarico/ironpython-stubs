@@ -3,9 +3,7 @@ class IDataGridViewEditingControl:
  def ApplyCellStyleToEditingControl(self,dataGridViewCellStyle):
   """
   ApplyCellStyleToEditingControl(self: IDataGridViewEditingControl,dataGridViewCellStyle: DataGridViewCellStyle)
-   Changes the control's user interface (UI) to be consistent with the specified 
-    cell style.
-  
+   Changes the control's user interface (UI) to be consistent with the specified cell style.
   
    dataGridViewCellStyle: The System.Windows.Forms.DataGridViewCellStyle to use as the model for the UI.
   """
@@ -14,17 +12,16 @@ class IDataGridViewEditingControl:
   """
   EditingControlWantsInputKey(self: IDataGridViewEditingControl,keyData: Keys,dataGridViewWantsInputKey: bool) -> bool
   
-   Determines whether the specified key is a regular input key that the editing 
-    control should process or a special key that the 
-    System.Windows.Forms.DataGridView should process.
+   Determines whether the specified key is a regular input key that the editing control should 
+    process or a special key that the System.Windows.Forms.DataGridView should process.
   
   
    keyData: A System.Windows.Forms.Keys that represents the key that was pressed.
-   dataGridViewWantsInputKey: true when the System.Windows.Forms.DataGridView wants to process the 
-    System.Windows.Forms.Keys in keyData; otherwise,false.
+   dataGridViewWantsInputKey: true when the System.Windows.Forms.DataGridView wants to process the System.Windows.Forms.Keys 
+    in keyData; otherwise,false.
   
-   Returns: true if the specified key is a regular input key that should be handled by the 
-    editing control; otherwise,false.
+   Returns: true if the specified key is a regular input key that should be handled by the editing control; 
+    otherwise,false.
   """
   pass
  def GetEditingControlFormattedValue(self,context):
@@ -33,8 +30,8 @@ class IDataGridViewEditingControl:
   
    Retrieves the formatted value of the cell.
   
-   context: A bitwise combination of System.Windows.Forms.DataGridViewDataErrorContexts 
-    values that specifies the context in which the data is needed.
+   context: A bitwise combination of System.Windows.Forms.DataGridViewDataErrorContexts values that 
+    specifies the context in which the data is needed.
   
    Returns: An System.Object that represents the formatted version of the cell contents.
   """

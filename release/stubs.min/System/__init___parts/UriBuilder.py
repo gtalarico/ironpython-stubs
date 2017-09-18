@@ -14,13 +14,11 @@ class UriBuilder(object):
   """
   Equals(self: UriBuilder,rparam: object) -> bool
   
-   Compares an existing System.Uri instance with the contents of the 
-    System.UriBuilder for equality.
-  
+   Compares an existing System.Uri instance with the contents of the System.UriBuilder for equality.
   
    rparam: The object to compare with the current instance.
-   Returns: true if rparam represents the same System.Uri as the System.Uri constructed by 
-    this System.UriBuilder instance; otherwise,false.
+   Returns: true if rparam represents the same System.Uri as the System.Uri constructed by this 
+    System.UriBuilder instance; otherwise,false.
   """
   pass
  def GetHashCode(self):

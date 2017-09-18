@@ -1,8 +1,8 @@
 # encoding: utf-8
 # module System.IO calls itself IO
-# from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,WindowsBase,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,PresentationCore,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
+# from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -25,7 +25,6 @@ from __init___parts.ErrorEventHandler import ErrorEventHandler
 from __init___parts.File import File
 from __init___parts.FileAccess import FileAccess
 from __init___parts.FileAttributes import FileAttributes
-from __init___parts.FileFormatException import FileFormatException
 from __init___parts.FileInfo import FileInfo
 from __init___parts.FileLoadException import FileLoadException
 from __init___parts.FileMode import FileMode

@@ -4,21 +4,19 @@ class UCOMIConnectionPointContainer:
   """
   EnumConnectionPoints(self: UCOMIConnectionPointContainer) -> UCOMIEnumConnectionPoints
   
-   Creates an enumerator of all the connection points supported in the connectable 
-    object,one connection point per IID.
+   Creates an enumerator of all the connection points supported in the connectable object,one 
+    connection point per IID.
   """
   pass
  def FindConnectionPoint(self,riid,ppCP):
   """
   FindConnectionPoint(self: UCOMIConnectionPointContainer,riid: Guid) -> (Guid,UCOMIConnectionPoint)
   
-   Asks the connectable object if it has a connection point for a particular IID,
-    and if so,returns the IConnectionPoint interface pointer to that connection 
-    point.
+   Asks the connectable object if it has a connection point for a particular IID,and if so,
+    returns the IConnectionPoint interface pointer to that connection point.
   
   
-   riid: A reference to the outgoing interface IID whose connection point is being 
-    requested.
+   riid: A reference to the outgoing interface IID whose connection point is being requested.
   """
   pass
  def __init__(self,*args):

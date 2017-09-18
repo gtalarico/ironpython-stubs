@@ -8,11 +8,9 @@ class EventLogPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
   """
   CreatePermission(self: EventLogPermissionAttribute) -> IPermission
   
-   Creates the permission based on the 
-    System.Diagnostics.EventLogPermissionAttribute.MachineName property and the 
-    requested access levels that are set through the 
-    System.Diagnostics.EventLogPermissionAttribute.PermissionAccess property on the 
-    attribute.
+   Creates the permission based on the System.Diagnostics.EventLogPermissionAttribute.MachineName 
+    property and the requested access levels that are set through the 
+    System.Diagnostics.EventLogPermissionAttribute.PermissionAccess property on the attribute.
   
    Returns: An System.Security.IPermission that represents the created permission.
   """

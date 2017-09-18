@@ -5,13 +5,10 @@ class LayoutInformation(object):
   """
   GetLayoutClip(element: FrameworkElement) -> Geometry
   
-   Returns a System.Windows.Media.Geometry that represents the visible region of 
-    an element.
-  
+   Returns a System.Windows.Media.Geometry that represents the visible region of an element.
   
    element: The System.Windows.FrameworkElement whose layout clip is desired.
-   Returns: A System.Windows.Media.Geometry that represents the visible region of an 
-    element.
+   Returns: A System.Windows.Media.Geometry that represents the visible region of an element.
   """
   pass
  @staticmethod
@@ -19,15 +16,15 @@ class LayoutInformation(object):
   """
   GetLayoutExceptionElement(dispatcher: Dispatcher) -> UIElement
   
-   Returns a System.Windows.UIElement that was being processed by the layout 
-    engine at the moment of an unhandled exception.
+   Returns a System.Windows.UIElement that was being processed by the layout engine at the moment 
+    of an unhandled exception.
   
   
-   dispatcher: The System.Windows.Threading.Dispatcher object that defines the scope of the 
-    operation. There is one dispatcher per layout engine instance.
+   dispatcher: The System.Windows.Threading.Dispatcher object that defines the scope of the operation. There is 
+    one dispatcher per layout engine instance.
   
-   Returns: A System.Windows.UIElement that was being processed by the layout engine at the 
-    moment of an unhandled exception.
+   Returns: A System.Windows.UIElement that was being processed by the layout engine at the moment of an 
+    unhandled exception.
   """
   pass
  @staticmethod
@@ -35,8 +32,8 @@ class LayoutInformation(object):
   """
   GetLayoutSlot(element: FrameworkElement) -> Rect
   
-   Returns a System.Windows.Rect that represents the layout partition that is 
-    reserved for a child element.
+   Returns a System.Windows.Rect that represents the layout partition that is reserved for a child 
+    element.
   
   
    element: The System.Windows.FrameworkElement whose layout slot is desired.

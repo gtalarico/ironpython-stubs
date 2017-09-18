@@ -8,8 +8,7 @@ class DataGridHyperlinkColumn(DataGridBoundColumn):
   """
   OnContentBindingChanged(self: DataGridHyperlinkColumn,oldBinding: BindingBase,newBinding: BindingBase)
    Notifies the System.Windows.Controls.DataGrid when the 
-    System.Windows.Controls.DataGridHyperlinkColumn.ContentBinding property 
-    changes.
+    System.Windows.Controls.DataGridHyperlinkColumn.ContentBinding property changes.
   
   
    oldBinding: The previous binding.

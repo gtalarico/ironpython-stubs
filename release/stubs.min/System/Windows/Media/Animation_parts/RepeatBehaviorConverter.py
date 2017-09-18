@@ -44,8 +44,8 @@ class RepeatBehaviorConverter(TypeConverter):
   """
   ConvertTo(self: RepeatBehaviorConverter,context: ITypeDescriptorContext,cultureInfo: CultureInfo,value: object,destinationType: Type) -> object
   
-   Converts an instance of System.Windows.Media.Animation.RepeatBehavior to a 
-    supported destination type.
+   Converts an instance of System.Windows.Media.Animation.RepeatBehavior to a supported destination 
+    type.
   
   
    context: Context information required for conversion.

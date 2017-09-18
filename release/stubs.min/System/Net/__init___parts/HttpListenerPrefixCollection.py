@@ -5,8 +5,8 @@ class HttpListenerPrefixCollection(object,ICollection[str],IEnumerable[str],IEnu
   Add(self: HttpListenerPrefixCollection,uriPrefix: str)
    Adds a Uniform Resource Identifier (URI) prefix to the collection.
   
-   uriPrefix: A System.String that identifies the URI information that is compared in 
-    incoming requests. The prefix must be terminated with a forward slash ("/").
+   uriPrefix: A System.String that identifies the URI information that is compared in incoming requests. The 
+    prefix must be terminated with a forward slash ("/").
   """
   pass
  def Clear(self):
@@ -19,35 +19,28 @@ class HttpListenerPrefixCollection(object,ICollection[str],IEnumerable[str],IEnu
   """
   Contains(self: HttpListenerPrefixCollection,uriPrefix: str) -> bool
   
-   Returns a System.Boolean value that indicates whether the specified prefix is 
-    contained in the collection.
+   Returns a System.Boolean value that indicates whether the specified prefix is contained in the 
+    collection.
   
   
-   uriPrefix: A System.String that contains the Uniform Resource Identifier (URI) prefix to 
-    test.
-  
-   Returns: true if this collection contains the prefix specified by uriPrefix; otherwise,
-    false.
+   uriPrefix: A System.String that contains the Uniform Resource Identifier (URI) prefix to test.
+   Returns: true if this collection contains the prefix specified by uriPrefix; otherwise,false.
   """
   pass
  def CopyTo(self,array,offset):
   """
   CopyTo(self: HttpListenerPrefixCollection,array: Array[str],offset: int)
-   Copies the contents of an System.Net.HttpListenerPrefixCollection to the 
-    specified string array.
+   Copies the contents of an System.Net.HttpListenerPrefixCollection to the specified string array.
   
-  
-   array: The one dimensional string array that receives the Uniform Resource Identifier 
-    (URI) prefix strings in this collection.
+   array: The one dimensional string array that receives the Uniform Resource Identifier (URI) prefix 
+    strings in this collection.
   
    offset: The zero-based index in array at which copying begins.
   CopyTo(self: HttpListenerPrefixCollection,array: Array,offset: int)
-   Copies the contents of an System.Net.HttpListenerPrefixCollection to the 
-    specified array.
+   Copies the contents of an System.Net.HttpListenerPrefixCollection to the specified array.
   
-  
-   array: The one dimensional System.Array that receives the Uniform Resource Identifier 
-    (URI) prefix strings in this collection.
+   array: The one dimensional System.Array that receives the Uniform Resource Identifier (URI) prefix 
+    strings in this collection.
   
    offset: The zero-based index in array at which copying begins.
   """
@@ -57,21 +50,21 @@ class HttpListenerPrefixCollection(object,ICollection[str],IEnumerable[str],IEnu
   GetEnumerator(self: HttpListenerPrefixCollection) -> IEnumerator[str]
   
    Returns an object that can be used to iterate through the collection.
-   Returns: An object that implements the System.Collections.IEnumerator interface and 
-    provides access to the strings in this collection.
+   Returns: An object that implements the System.Collections.IEnumerator interface and provides access to 
+    the strings in this collection.
   """
   pass
  def Remove(self,uriPrefix):
   """
   Remove(self: HttpListenerPrefixCollection,uriPrefix: str) -> bool
   
-   Removes the specified Uniform Resource Identifier (URI) from the list of 
-    prefixes handled by the System.Net.HttpListener object.
+   Removes the specified Uniform Resource Identifier (URI) from the list of prefixes handled by the 
+    System.Net.HttpListener object.
   
   
    uriPrefix: A System.String that contains the URI prefix to remove.
-   Returns: true if the uriPrefix was found in the System.Net.HttpListenerPrefixCollection 
-    and removed; otherwise false.
+   Returns: true if the uriPrefix was found in the System.Net.HttpListenerPrefixCollection and removed; 
+    otherwise false.
   """
   pass
  def __add__(self,*args):

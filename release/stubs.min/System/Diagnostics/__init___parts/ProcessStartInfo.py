@@ -2,9 +2,9 @@ class ProcessStartInfo(object):
  """
  Specifies a set of values that are used when you start a process.
  
+ ProcessStartInfo()
  ProcessStartInfo(fileName: str)
- ProcessStartInfo(fileName: str,arguments: str)
- ProcessStartInfo()
+ ProcessStartInfo(fileName: str,arguments: str)
  """
  @staticmethod
  def __new__(self,fileName=None,arguments=None):

@@ -8,8 +8,8 @@ class TimeSpanConverter(TypeConverter):
   """
   CanConvertFrom(self: TimeSpanConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Gets a value indicating whether this converter can convert an object in the 
-    given source type to a System.TimeSpan using the specified context.
+   Gets a value indicating whether this converter can convert an object in the given source type to 
+    a System.TimeSpan using the specified context.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -21,8 +21,8 @@ class TimeSpanConverter(TypeConverter):
   """
   CanConvertTo(self: TimeSpanConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Gets a value indicating whether this converter can convert an object to the 
-    given destination type using the context.
+   Gets a value indicating whether this converter can convert an object to the given destination 
+    type using the context.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -37,9 +37,7 @@ class TimeSpanConverter(TypeConverter):
    Converts the given object to a System.TimeSpan.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   culture: An optional System.Globalization.CultureInfo. If not supplied,the current 
-    culture is assumed.
-  
+   culture: An optional System.Globalization.CultureInfo. If not supplied,the current culture is assumed.
    value: The System.Object to convert.
    Returns: An System.Object that represents the converted value.
   """

@@ -1,8 +1,8 @@
 # encoding: utf-8
 # module System.Windows.Resources calls itself Resources
-# from PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,PresentationCore,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
+# from PresentationCore,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -25,45 +25,6 @@ class AssemblyAssociatedContentFileAttribute(Attribute,_Attribute):
  """Gets the path to the associated content.
 
 Get: RelativeContentFilePath(self: AssemblyAssociatedContentFileAttribute) -> str
-
-"""
-
-
-
-class ContentTypes(object):
- """
- Supports Extensible Application Markup Language (XAML) as a content type and resource.
- 
- ContentTypes()
- """
- XamlContentType='applicaton/xaml+xml'
-
-
-class StreamResourceInfo(object):
- """
- Stores information for a stream resource used in Windows Presentation Foundation (WPF),such as images.
- 
- StreamResourceInfo()
- StreamResourceInfo(stream: Stream,contentType: str)
- """
- @staticmethod
- def __new__(self,stream=None,contentType=None):
-  """
-  __new__(cls: type)
-  __new__(cls: type,stream: Stream,contentType: str)
-  """
-  pass
- ContentType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the content type of a stream.
-
-Get: ContentType(self: StreamResourceInfo) -> str
-
-"""
-
- Stream=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the actual stream of the resource.
-
-Get: Stream(self: StreamResourceInfo) -> Stream
 
 """
 

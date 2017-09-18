@@ -2,7 +2,7 @@
 # module System.Windows.Forms.PropertyGridInternal calls itself PropertyGridInternal
 # from System.Windows.Forms,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -13,9 +13,8 @@ class IRootGridEntry:
  def ResetBrowsableAttributes(self):
   """
   ResetBrowsableAttributes(self: IRootGridEntry)
-   Resets the 
-    System.Windows.Forms.PropertyGridInternal.IRootGridEntry.BrowsableAttributes 
-    property to the default value.
+   Resets the System.Windows.Forms.PropertyGridInternal.IRootGridEntry.BrowsableAttributes property 
+    to the default value.
   """
   pass
  def ShowCategories(self,showCategories):
@@ -48,13 +47,11 @@ class PropertiesTab(PropertyTab,IExtenderProvider):
  def Dispose(self):
   """
   Dispose(self: PropertyTab,disposing: bool)
-   Releases the unmanaged resources used by the 
-    System.Windows.Forms.Design.PropertyTab and optionally releases the managed 
-    resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.Design.PropertyTab and 
+    optionally releases the managed resources.
   
   
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetDefaultProperty(self,obj):
@@ -67,24 +64,19 @@ class PropertiesTab(PropertyTab,IExtenderProvider):
   """
   GetProperties(self: PropertiesTab,context: ITypeDescriptorContext,component: object,attributes: Array[Attribute]) -> PropertyDescriptorCollection
   
-   context: An System.ComponentModel.ITypeDescriptorContext that indicates the context to 
-    retrieve properties from.
+   context: An System.ComponentModel.ITypeDescriptorContext that indicates the context to retrieve 
+    properties from.
   
    component: The component to retrieve properties from.
-   attributes: An array of type System.Attribute that indicates the attributes of the 
-    properties to retrieve.
-  
-   Returns: A System.ComponentModel.PropertyDescriptorCollection that contains the 
-    properties matching the specified context and attributes.
+   attributes: An array of type System.Attribute that indicates the attributes of the properties to retrieve.
+   Returns: A System.ComponentModel.PropertyDescriptorCollection that contains the properties matching the 
+    specified context and attributes.
   
   GetProperties(self: PropertiesTab,component: object,attributes: Array[Attribute]) -> PropertyDescriptorCollection
   
    component: The component to retrieve properties from.
-   attributes: An array of type System.Attribute that indicates the attributes of the 
-    properties to retrieve.
-  
-   Returns: A System.ComponentModel.PropertyDescriptorCollection that contains the 
-    properties.
+   attributes: An array of type System.Attribute that indicates the attributes of the properties to retrieve.
+   Returns: A System.ComponentModel.PropertyDescriptorCollection that contains the properties.
   """
   pass
  def __init__(self,*args):

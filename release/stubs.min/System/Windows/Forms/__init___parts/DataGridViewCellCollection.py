@@ -19,8 +19,7 @@ class DataGridViewCellCollection(BaseCollection,ICollection,IEnumerable,IList):
   AddRange(self: DataGridViewCellCollection,*dataGridViewCells: Array[DataGridViewCell])
    Adds an array of cells to the collection.
   
-   dataGridViewCells: The array of System.Windows.Forms.DataGridViewCell objects to add to the 
-    collection.
+   dataGridViewCells: The array of System.Windows.Forms.DataGridViewCell objects to add to the collection.
   """
   pass
  def Clear(self):
@@ -42,9 +41,7 @@ class DataGridViewCellCollection(BaseCollection,ICollection,IEnumerable,IList):
  def CopyTo(self,*__args):
   """
   CopyTo(self: DataGridViewCellCollection,array: Array[DataGridViewCell],index: int)
-   Copies the entire collection of cells into an array at a specified location 
-    within the array.
-  
+   Copies the entire collection of cells into an array at a specified location within the array.
   
    array: The destination array to which the contents will be copied.
    index: The index of the element in array at which to start copying.
@@ -57,8 +54,8 @@ class DataGridViewCellCollection(BaseCollection,ICollection,IEnumerable,IList):
    Returns the index of the specified cell.
   
    dataGridViewCell: The cell to locate in the collection.
-   Returns: The zero-based index of the value of dataGridViewCell parameter,if it is found 
-    in the collection; otherwise,-1.
+   Returns: The zero-based index of the value of dataGridViewCell parameter,if it is found in the 
+    collection; otherwise,-1.
   """
   pass
  def Insert(self,index,dataGridViewCell):
@@ -76,11 +73,11 @@ class DataGridViewCellCollection(BaseCollection,ICollection,IEnumerable,IList):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -92,9 +89,7 @@ class DataGridViewCellCollection(BaseCollection,ICollection,IEnumerable,IList):
  def OnCollectionChanged(self,*args):
   """
   OnCollectionChanged(self: DataGridViewCellCollection,e: CollectionChangeEventArgs)
-   Raises the System.Windows.Forms.DataGridViewCellCollection.CollectionChanged 
-    event.
-  
+   Raises the System.Windows.Forms.DataGridViewCellCollection.CollectionChanged event.
   
    e: A System.ComponentModel.CollectionChangeEventArgs that contains the event data.
   """
@@ -125,8 +120,7 @@ class DataGridViewCellCollection(BaseCollection,ICollection,IEnumerable,IList):
    Determines whether the System.Collections.IList contains a specific value.
   
    value: The object to locate in the System.Collections.IList.
-   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,
-    false.
+   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,false.
   """
   pass
  def __getitem__(self,*args):

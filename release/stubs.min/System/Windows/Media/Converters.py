@@ -1,8 +1,8 @@
 # encoding: utf-8
 # module System.Windows.Media.Converters calls itself Converters
-# from WindowsBase,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,PresentationCore,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
+# from PresentationCore,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -75,8 +75,8 @@ class BrushValueSerializer(ValueSerializer):
   """
   CanConvertFromString(self: BrushValueSerializer,value: str,context: IValueSerializerContext) -> bool
   
-   Determines if conversion from a given System.String to an instance of 
-    System.Windows.Media.Brush is possible.
+   Determines if conversion from a given System.String to an instance of System.Windows.Media.Brush 
+    is possible.
   
   
    value: String to evaluate for conversion.
@@ -88,9 +88,7 @@ class BrushValueSerializer(ValueSerializer):
   """
   CanConvertToString(self: BrushValueSerializer,value: object,context: IValueSerializerContext) -> bool
   
-   Determines if an instance of System.Windows.Media.Brush can be converted to a 
-    System.String.
-  
+   Determines if an instance of System.Windows.Media.Brush can be converted to a System.String.
   
    value: Instance of System.Windows.Media.Brush to evaluate for conversion.
    context: Context information used for conversion.
@@ -116,8 +114,7 @@ class BrushValueSerializer(ValueSerializer):
   
    value: Instance of System.Windows.Media.Brush to evaluate for conversion.
    context: Context information used for conversion.
-   Returns: A System.String representation of the supplied System.Windows.Media.Brush 
-    object.
+   Returns: A System.String representation of the supplied System.Windows.Media.Brush object.
   """
   pass
 
@@ -131,8 +128,8 @@ class CacheModeValueSerializer(ValueSerializer):
   """
   CanConvertFromString(self: CacheModeValueSerializer,value: str,context: IValueSerializerContext) -> bool
   
-   Determines whether the specified System.String can be converted to an instance 
-    of System.Windows.Media.CacheMode.
+   Determines whether the specified System.String can be converted to an instance of 
+    System.Windows.Media.CacheMode.
   
   
    value: A System.String to evaluate for conversion.
@@ -144,8 +141,8 @@ class CacheModeValueSerializer(ValueSerializer):
   """
   CanConvertToString(self: CacheModeValueSerializer,value: object,context: IValueSerializerContext) -> bool
   
-   Determines whether the specified instance of System.Windows.Media.CacheMode can 
-    be converted to a System.String.
+   Determines whether the specified instance of System.Windows.Media.CacheMode can be converted to 
+    a System.String.
   
   
    value: An instance of System.Windows.Media.CacheMode to evaluate for conversion.
@@ -172,8 +169,7 @@ class CacheModeValueSerializer(ValueSerializer):
   
    value: An instance of System.Windows.Media.CacheMode to evaluate for conversion.
    context: Context information that is used for conversion.
-   Returns: A System.String representation of the specified System.Windows.Media.CacheMode 
-    object.
+   Returns: A System.String representation of the specified System.Windows.Media.CacheMode object.
   """
   pass
 
@@ -207,8 +203,8 @@ class DoubleCollectionValueSerializer(ValueSerializer):
   """
   CanConvertToString(self: DoubleCollectionValueSerializer,value: object,context: IValueSerializerContext) -> bool
   
-   Determines if an instance of System.Windows.Media.DoubleCollection can be 
-    converted to a System.String.
+   Determines if an instance of System.Windows.Media.DoubleCollection can be converted to a 
+    System.String.
   
   
    value: Instance of System.Windows.Media.DoubleCollection to evaluate for conversion.
@@ -224,22 +220,18 @@ class DoubleCollectionValueSerializer(ValueSerializer):
   
    value: System.String value to convert into a System.Windows.Media.DoubleCollection.
    context: Context information used for conversion.
-   Returns: A new instance of System.Windows.Media.DoubleCollection based on the supplied 
-    value.
+   Returns: A new instance of System.Windows.Media.DoubleCollection based on the supplied value.
   """
   pass
  def ConvertToString(self,value,context):
   """
   ConvertToString(self: DoubleCollectionValueSerializer,value: object,context: IValueSerializerContext) -> str
   
-   Converts an instance of System.Windows.Media.DoubleCollection to a 
-    System.String.
-  
+   Converts an instance of System.Windows.Media.DoubleCollection to a System.String.
   
    value: Instance of System.Windows.Media.DoubleCollection to evaluate for conversion.
    context: Context information used for conversion.
-   Returns: A System.String representation of the supplied 
-    System.Windows.Media.DoubleCollection object.
+   Returns: A System.String representation of the supplied System.Windows.Media.DoubleCollection object.
   """
   pass
 
@@ -273,9 +265,7 @@ class GeometryValueSerializer(ValueSerializer):
   """
   CanConvertToString(self: GeometryValueSerializer,value: object,context: IValueSerializerContext) -> bool
   
-   Determines if an instance of System.Windows.Media.Geometry can be converted to 
-    a System.String.
-  
+   Determines if an instance of System.Windows.Media.Geometry can be converted to a System.String.
   
    value: Instance of System.Windows.Media.Geometry to evaluate for conversion.
    context: Context information used for conversion.
@@ -301,8 +291,7 @@ class GeometryValueSerializer(ValueSerializer):
   
    value: Instance of System.Windows.Media.Geometry to evaluate for conversion.
    context: Context information used for conversion.
-   Returns: A System.String representation of the supplied System.Windows.Media.Geometry 
-    object.
+   Returns: A System.String representation of the supplied System.Windows.Media.Geometry object.
   """
   pass
 
@@ -320,8 +309,7 @@ class Int32CollectionValueSerializer(ValueSerializer):
   
    value: Instance of System.Windows.Media.Int32Collection to evaluate for conversion.
    context: Context information used for conversion.
-   Returns: A System.String representation of the supplied 
-    System.Windows.Media.Int32Collection object.
+   Returns: A System.String representation of the supplied System.Windows.Media.Int32Collection object.
   """
   pass
  def CanConvertToString(self,value,context):
@@ -332,16 +320,15 @@ class Int32CollectionValueSerializer(ValueSerializer):
   
    value: System.String value to convert into a System.Windows.Media.Int32Collection.
    context: Context information used for conversion.
-   Returns: A new instance of System.Windows.Media.Int32Collection based on the supplied 
-    value.
+   Returns: A new instance of System.Windows.Media.Int32Collection based on the supplied value.
   """
   pass
  def ConvertFromString(self,value,context):
   """
   ConvertFromString(self: Int32CollectionValueSerializer,value: str,context: IValueSerializerContext) -> object
   
-   Determines if an instance of System.Windows.Media.Int32Collection can be 
-    converted to a System.String.
+   Determines if an instance of System.Windows.Media.Int32Collection can be converted to a 
+    System.String.
   
   
    value: Instance of System.Windows.Media.Int32Collection to evaluate for conversion.
@@ -360,62 +347,6 @@ class Int32CollectionValueSerializer(ValueSerializer):
    value: String to evaluate for conversion.
    context: Context information used for conversion.
    Returns: true if the value can be converted; otherwise,false.
-  """
-  pass
-
-class MatrixValueSerializer(ValueSerializer):
- """
- Converts instances of System.String to and from instances of System.Windows.Media.Matrix.
- 
- MatrixValueSerializer()
- """
- def CanConvertFromString(self,value,context):
-  """
-  CanConvertFromString(self: MatrixValueSerializer,value: str,context: IValueSerializerContext) -> bool
-  
-   Determines if conversion from a given System.String to an instance of 
-    System.Windows.Media.Matrix is possible.
-  
-  
-   value: String to evaluate for conversion.
-   context: Context information used for conversion.
-   Returns: true if the value can be converted; otherwise,false.
-  """
-  pass
- def CanConvertToString(self,value,context):
-  """
-  CanConvertToString(self: MatrixValueSerializer,value: object,context: IValueSerializerContext) -> bool
-  
-   Determines if an instance of System.Windows.Media.Matrix can be converted to a 
-    System.String.
-  
-  
-   value: Instance of System.Windows.Media.Matrix to evaluate for conversion.
-   context: Context information used for conversion.
-   Returns: true if value can be converted into a System.String; otherwise,false.
-  """
-  pass
- def ConvertFromString(self,value,context):
-  """
-  ConvertFromString(self: MatrixValueSerializer,value: str,context: IValueSerializerContext) -> object
-  
-   Converts a System.String into a System.Windows.Media.Matrix.
-  
-   value: System.String value to convert into a System.Windows.Media.Matrix.
-   context: Context information used for conversion.
-   Returns: A new instance of System.Windows.Media.Matrix based on the supplied value.
-  """
-  pass
- def ConvertToString(self,value,context):
-  """
-  ConvertToString(self: MatrixValueSerializer,value: object,context: IValueSerializerContext) -> str
-  
-   Converts an instance of System.Windows.Media.Matrix to a System.String.
-  
-   value: Instance of System.Windows.Media.Matrix to evaluate for conversion.
-   context: Context information used for conversion.
-   Returns: A System.String representation of the supplied System.Windows.Media.Matrix 
-    object.
   """
   pass
 
@@ -442,13 +373,11 @@ class PathFigureCollectionValueSerializer(ValueSerializer):
   """
   CanConvertToString(self: PathFigureCollectionValueSerializer,value: object,context: IValueSerializerContext) -> bool
   
-   Determines if an instance of System.Windows.Media.PathFigureCollection can be 
-    converted to a System.String.
+   Determines if an instance of System.Windows.Media.PathFigureCollection can be converted to a 
+    System.String.
   
   
-   value: Instance of System.Windows.Media.PathFigureCollection to evaluate for 
-    conversion.
-  
+   value: Instance of System.Windows.Media.PathFigureCollection to evaluate for conversion.
    context: Context information used for conversion.
    Returns: true if value can be converted into a System.String; otherwise,false.
   """
@@ -461,24 +390,18 @@ class PathFigureCollectionValueSerializer(ValueSerializer):
   
    value: System.String value to convert into a System.Windows.Media.PathFigureCollection.
    context: Context information used for conversion.
-   Returns: A new instance of System.Windows.Media.PathFigureCollection based on the 
-    supplied value.
+   Returns: A new instance of System.Windows.Media.PathFigureCollection based on the supplied value.
   """
   pass
  def ConvertToString(self,value,context):
   """
   ConvertToString(self: PathFigureCollectionValueSerializer,value: object,context: IValueSerializerContext) -> str
   
-   Converts an instance of System.Windows.Media.PathFigureCollection to a 
-    System.String
+   Converts an instance of System.Windows.Media.PathFigureCollection to a System.String
   
-  
-   value: Instance of System.Windows.Media.PathFigureCollection to evaluate for 
-    conversion.
-  
+   value: Instance of System.Windows.Media.PathFigureCollection to evaluate for conversion.
    context: Context information used for conversion.
-   Returns: A System.String representation of the supplied 
-    System.Windows.Media.PathFigureCollection object.
+   Returns: A System.String representation of the supplied System.Windows.Media.PathFigureCollection object.
   """
   pass
 
@@ -505,8 +428,8 @@ class PointCollectionValueSerializer(ValueSerializer):
   """
   CanConvertToString(self: PointCollectionValueSerializer,value: object,context: IValueSerializerContext) -> bool
   
-   Determines if an instance of System.Windows.Media.PointCollection can be 
-    converted to a System.String.
+   Determines if an instance of System.Windows.Media.PointCollection can be converted to a 
+    System.String.
   
   
    value: Instance of System.Windows.Media.PointCollection to evaluate for conversion.
@@ -522,8 +445,7 @@ class PointCollectionValueSerializer(ValueSerializer):
   
    value: System.String value to convert into a System.Windows.Media.PointCollection.
    context: Context information used for conversion.
-   Returns: A new instance of System.Windows.Media.PointCollection based on the supplied 
-    value.
+   Returns: A new instance of System.Windows.Media.PointCollection based on the supplied value.
   """
   pass
  def ConvertToString(self,value,context):
@@ -534,8 +456,7 @@ class PointCollectionValueSerializer(ValueSerializer):
   
    value: Instance of System.Windows.Media.PointCollection to evaluate for conversion.
    context: Context information used for conversion.
-   Returns: A System.String representation of the supplied 
-    System.Windows.Media.PointCollection object.
+   Returns: A System.String representation of the supplied System.Windows.Media.PointCollection object.
   """
   pass
 
@@ -569,9 +490,7 @@ class TransformValueSerializer(ValueSerializer):
   """
   CanConvertToString(self: TransformValueSerializer,value: object,context: IValueSerializerContext) -> bool
   
-   Determines if an instance of System.Windows.Media.Transform can be converted to 
-    a System.String.
-  
+   Determines if an instance of System.Windows.Media.Transform can be converted to a System.String.
   
    value: Instance of System.Windows.Media.Transform to evaluate for conversion.
    context: Context information used for conversion.
@@ -597,8 +516,7 @@ class TransformValueSerializer(ValueSerializer):
   
    value: Instance of System.Windows.Media.Transform to evaluate for conversion.
    context: Context information used for conversion.
-   Returns: A System.String representation of the supplied System.Windows.Media.Transform 
-    object.
+   Returns: A System.String representation of the supplied System.Windows.Media.Transform object.
   """
   pass
 
@@ -632,8 +550,8 @@ class VectorCollectionValueSerializer(ValueSerializer):
   """
   CanConvertToString(self: VectorCollectionValueSerializer,value: object,context: IValueSerializerContext) -> bool
   
-   Determines if an instance of System.Windows.Media.VectorCollection can be 
-    converted to a System.String.
+   Determines if an instance of System.Windows.Media.VectorCollection can be converted to a 
+    System.String.
   
   
    value: Instance of System.Windows.Media.VectorCollection to evaluate for conversion.
@@ -649,22 +567,18 @@ class VectorCollectionValueSerializer(ValueSerializer):
   
    value: System.String value to convert into a System.Windows.Media.VectorCollection.
    context: Context information used for conversion.
-   Returns: A new instance of System.Windows.Media.VectorCollection based on the supplied 
-    value.
+   Returns: A new instance of System.Windows.Media.VectorCollection based on the supplied value.
   """
   pass
  def ConvertToString(self,value,context):
   """
   ConvertToString(self: VectorCollectionValueSerializer,value: object,context: IValueSerializerContext) -> str
   
-   Converts an instance of System.Windows.Media.VectorCollection to a 
-    System.String.
-  
+   Converts an instance of System.Windows.Media.VectorCollection to a System.String.
   
    value: Instance of System.Windows.Media.VectorCollection to evaluate for conversion.
    context: Context information used for conversion.
-   Returns: A System.String representation of the supplied 
-    System.Windows.Media.VectorCollection object.
+   Returns: A System.String representation of the supplied System.Windows.Media.VectorCollection object.
   """
   pass
 

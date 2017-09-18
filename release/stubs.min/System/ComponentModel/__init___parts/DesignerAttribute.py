@@ -17,8 +17,7 @@ class DesignerAttribute(Attribute,_Attribute):
   
   
    obj: The object to test the value equality of.
-   Returns: true if the value of the given object is equal to that of the current; 
-    otherwise,false.
+   Returns: true if the value of the given object is equal to that of the current; otherwise,false.
   """
   pass
  def GetHashCode(self):

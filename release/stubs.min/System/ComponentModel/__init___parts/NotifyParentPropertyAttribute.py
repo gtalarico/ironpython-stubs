@@ -8,9 +8,7 @@ class NotifyParentPropertyAttribute(Attribute,_Attribute):
   """
   Equals(self: NotifyParentPropertyAttribute,obj: object) -> bool
   
-   Gets a value indicating whether the specified object is the same as the current 
-    object.
-  
+   Gets a value indicating whether the specified object is the same as the current object.
   
    obj: The object to test for equality.
    Returns: true if the object is the same as this object; otherwise,false.
@@ -28,11 +26,11 @@ class NotifyParentPropertyAttribute(Attribute,_Attribute):
   """
   IsDefaultAttribute(self: NotifyParentPropertyAttribute) -> bool
   
-   Gets a value indicating whether the current value of the attribute is the 
-    default value for the attribute.
+   Gets a value indicating whether the current value of the attribute is the default value for the 
+    attribute.
   
-   Returns: true if the current value of the attribute is the default value of the 
-    attribute; otherwise,false.
+   Returns: true if the current value of the attribute is the default value of the attribute; otherwise,
+    false.
   """
   pass
  def __eq__(self,*args):

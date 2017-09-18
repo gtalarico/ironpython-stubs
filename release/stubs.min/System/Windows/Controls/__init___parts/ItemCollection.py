@@ -7,8 +7,7 @@ class ItemCollection(CollectionView,ICollectionView,IEnumerable,INotifyCollectio
    Adds an item to the System.Windows.Controls.ItemCollection.
   
    newItem: The item to add to the collection.
-   Returns: The zero-based index at which the object is added or -1 if the item cannot be 
-    added.
+   Returns: The zero-based index at which the object is added or -1 if the item cannot be added.
   """
   pass
  def add_CollectionChanged(self,*args):
@@ -20,8 +19,7 @@ class ItemCollection(CollectionView,ICollectionView,IEnumerable,INotifyCollectio
  def Clear(self):
   """
   Clear(self: ItemCollection)
-   Clears the collection and releases the references on all items currently in the 
-    collection.
+   Clears the collection and releases the references on all items currently in the collection.
   """
   pass
  def ClearChangeLog(self,*args):
@@ -40,16 +38,14 @@ class ItemCollection(CollectionView,ICollectionView,IEnumerable,INotifyCollectio
    Returns a value that indicates whether the specified item is in this view.
   
    containItem: The object to check.
-   Returns: true to indicate that the item belongs to this collection and passes the active 
-    filter; otherwise,false.
+   Returns: true to indicate that the item belongs to this collection and passes the active filter; 
+    otherwise,false.
   """
   pass
  def CopyTo(self,array,index):
   """
   CopyTo(self: ItemCollection,array: Array,index: int)
-   Copies the elements of the collection to an array,starting at a particular 
-    array index.
-  
+   Copies the elements of the collection to an array,starting at a particular array index.
   
    array: The destination array to copy to.
    index: The zero-based index in the destination array.
@@ -59,9 +55,7 @@ class ItemCollection(CollectionView,ICollectionView,IEnumerable,INotifyCollectio
   """
   DeferRefresh(self: ItemCollection) -> IDisposable
   
-   Enters a defer cycle that you can use to merge changes to the view and delay 
-    automatic refresh.
-  
+   Enters a defer cycle that you can use to merge changes to the view and delay automatic refresh.
    Returns: An System.IDisposable object that you can use to dispose of the calling object.
   """
   pass
@@ -85,8 +79,7 @@ class ItemCollection(CollectionView,ICollectionView,IEnumerable,INotifyCollectio
    Returns the index in this collection where the specified item is located.
   
    item: The object to look for in the collection.
-   Returns: The index of the item in the collection,or -1 if the item does not exist in 
-    the collection.
+   Returns: The index of the item in the collection,or -1 if the item does not exist in the collection.
   """
   pass
  def Insert(self,insertIndex,insertItem):
@@ -107,45 +100,37 @@ class ItemCollection(CollectionView,ICollectionView,IEnumerable,INotifyCollectio
   
   
    item: The item to set as the System.Windows.Controls.ItemCollection.CurrentItem.
-   Returns: true to indicate that the resulting 
-    System.Windows.Controls.ItemCollection.CurrentItem is an item within the view; 
-    otherwise,false.
+   Returns: true to indicate that the resulting System.Windows.Controls.ItemCollection.CurrentItem is an 
+    item within the view; otherwise,false.
   """
   pass
  def MoveCurrentToFirst(self):
   """
   MoveCurrentToFirst(self: ItemCollection) -> bool
   
-   Sets the first item in the view as the 
-    System.Windows.Controls.ItemCollection.CurrentItem.
-  
-   Returns: true to indicate that the resulting 
-    System.Windows.Controls.ItemCollection.CurrentItem is an item within the view; 
-    otherwise,false.
+   Sets the first item in the view as the System.Windows.Controls.ItemCollection.CurrentItem.
+   Returns: true to indicate that the resulting System.Windows.Controls.ItemCollection.CurrentItem is an 
+    item within the view; otherwise,false.
   """
   pass
  def MoveCurrentToLast(self):
   """
   MoveCurrentToLast(self: ItemCollection) -> bool
   
-   Sets the last item in the view as the 
-    System.Windows.Controls.ItemCollection.CurrentItem.
-  
-   Returns: true to indicate that the resulting 
-    System.Windows.Controls.ItemCollection.CurrentItem is an item within the view; 
-    otherwise,false.
+   Sets the last item in the view as the System.Windows.Controls.ItemCollection.CurrentItem.
+   Returns: true to indicate that the resulting System.Windows.Controls.ItemCollection.CurrentItem is an 
+    item within the view; otherwise,false.
   """
   pass
  def MoveCurrentToNext(self):
   """
   MoveCurrentToNext(self: ItemCollection) -> bool
   
-   Sets the item after the System.Windows.Controls.ItemCollection.CurrentItem in 
-    the view as the System.Windows.Controls.ItemCollection.CurrentItem.
+   Sets the item after the System.Windows.Controls.ItemCollection.CurrentItem in the view as the 
+    System.Windows.Controls.ItemCollection.CurrentItem.
   
-   Returns: true to indicate that the resulting 
-    System.Windows.Controls.ItemCollection.CurrentItem is an item within the view; 
-    otherwise,false.
+   Returns: true to indicate that the resulting System.Windows.Controls.ItemCollection.CurrentItem is an 
+    item within the view; otherwise,false.
   """
   pass
  def MoveCurrentToPosition(self,position):
@@ -159,21 +144,19 @@ class ItemCollection(CollectionView,ICollectionView,IEnumerable,INotifyCollectio
    position: The zero-based index of the item to set as the 
     System.Windows.Controls.ItemCollection.CurrentItem.
   
-   Returns: true to indicate that the resulting 
-    System.Windows.Controls.ItemCollection.CurrentItem is an item within the view; 
-    otherwise,false.
+   Returns: true to indicate that the resulting System.Windows.Controls.ItemCollection.CurrentItem is an 
+    item within the view; otherwise,false.
   """
   pass
  def MoveCurrentToPrevious(self):
   """
   MoveCurrentToPrevious(self: ItemCollection) -> bool
   
-   Sets the item before the System.Windows.Controls.ItemCollection.CurrentItem in 
-    the view as the System.Windows.Controls.ItemCollection.CurrentItem.
+   Sets the item before the System.Windows.Controls.ItemCollection.CurrentItem in the view as the 
+    System.Windows.Controls.ItemCollection.CurrentItem.
   
-   Returns: true  to indicate that the resulting 
-    System.Windows.Controls.ItemCollection.CurrentItem is an item within the view; 
-    otherwise,false.
+   Returns: true  to indicate that the resulting System.Windows.Controls.ItemCollection.CurrentItem is an 
+    item within the view; otherwise,false.
   """
   pass
  def OKToChangeCurrent(self,*args):
@@ -193,12 +176,12 @@ class ItemCollection(CollectionView,ICollectionView,IEnumerable,INotifyCollectio
   """
   OnBeginChangeLogging(self: CollectionView,args: NotifyCollectionChangedEventArgs)
    Called by the base class to notify the derived class that an 
-    System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged event 
-    has been posted to the message queue.
+    System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged event has been posted 
+    to the message queue.
   
   
-   args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object that 
-    is added to the change log.
+   args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object that is added to the 
+    change log.
   """
   pass
  def OnCollectionChanged(self,*args):
@@ -207,14 +190,14 @@ class ItemCollection(CollectionView,ICollectionView,IEnumerable,INotifyCollectio
    Raises the System.Windows.Data.CollectionView.CollectionChanged event.
   
    sender: The sender of the event.
-   args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to 
-    pass to the event handler.
+   args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to pass to the event 
+    handler.
   
   OnCollectionChanged(self: CollectionView,args: NotifyCollectionChangedEventArgs)
    Raises the System.Windows.Data.CollectionView.CollectionChanged event.
   
-   args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to 
-    pass to the event handler.
+   args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to pass to the event 
+    handler.
   """
   pass
  def OnCurrentChanged(self,*args):
@@ -226,21 +209,18 @@ class ItemCollection(CollectionView,ICollectionView,IEnumerable,INotifyCollectio
  def OnCurrentChanging(self,*args):
   """
   OnCurrentChanging(self: CollectionView,args: CurrentChangingEventArgs)
-   Raises the System.Windows.Data.CollectionView.CurrentChanging event with the 
-    specified arguments.
-  
+   Raises the System.Windows.Data.CollectionView.CurrentChanging event with the specified arguments.
   
    args: Information about the event.
   OnCurrentChanging(self: CollectionView)
-   Raises a System.Windows.Data.CollectionView.CurrentChanging event that is not 
-    cancelable.
+   Raises a System.Windows.Data.CollectionView.CurrentChanging event that is not cancelable.
   """
   pass
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: CollectionView,e: PropertyChangedEventArgs)
-   Raises the System.ComponentModel.INotifyPropertyChanged.PropertyChanged event 
-    using the specified arguments.
+   Raises the System.ComponentModel.INotifyPropertyChanged.PropertyChanged event using the 
+    specified arguments.
   
   
    e: Arguments of the event being raised.
@@ -253,8 +233,8 @@ class ItemCollection(CollectionView,ICollectionView,IEnumerable,INotifyCollectio
    Returns a value that indicates whether the specified item belongs to this view.
   
    item: The object to test.
-   Returns: true to indicate that the specified item belongs to this view or there is no 
-    filter set on this collection view; otherwise,false.
+   Returns: true to indicate that the specified item belongs to this view or there is no filter set on this 
+    collection view; otherwise,false.
   """
   pass
  def ProcessCollectionChanged(self,*args):
@@ -262,8 +242,7 @@ class ItemCollection(CollectionView,ICollectionView,IEnumerable,INotifyCollectio
   ProcessCollectionChanged(self: CollectionView,args: NotifyCollectionChangedEventArgs)
    When overridden in a derived class,processes a single change on the UI�thread.
   
-   args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to 
-    process.
+   args: The System.Collections.Specialized.NotifyCollectionChangedEventArgs object to process.
   """
   pass
  def ProcessPendingChanges(self,*args):
@@ -272,8 +251,8 @@ class ItemCollection(CollectionView,ICollectionView,IEnumerable,INotifyCollectio
  def RefreshOrDefer(self,*args):
   """
   RefreshOrDefer(self: CollectionView)
-   Refreshes the view or specifies that the view needs to be refreshed when the 
-    defer cycle completes.
+   Refreshes the view or specifies that the view needs to be refreshed when the defer cycle 
+    completes.
   """
   pass
  def RefreshOverride(self,*args):
@@ -306,14 +285,12 @@ class ItemCollection(CollectionView,ICollectionView,IEnumerable,INotifyCollectio
   SetCurrent(self: CollectionView,newItem: object,newPosition: int,count: int)
    Sets the specified item and index as the values of the 
     System.Windows.Data.CollectionView.CurrentItem and 
-    System.Windows.Data.CollectionView.CurrentPosition properties. This method can 
-    be called from a constructor of a derived class.
+    System.Windows.Data.CollectionView.CurrentPosition properties. This method can be called from a 
+    constructor of a derived class.
   
   
    newItem: The item to set as the System.Windows.Data.CollectionView.CurrentItem.
-   newPosition: The value to set as the System.Windows.Data.CollectionView.CurrentPosition 
-    property value.
-  
+   newPosition: The value to set as the System.Windows.Data.CollectionView.CurrentPosition property value.
    count: The number of items in the System.Windows.Data.CollectionView.
   SetCurrent(self: CollectionView,newItem: object,newPosition: int)
    Sets the specified item and index as the values of the 
@@ -322,8 +299,7 @@ class ItemCollection(CollectionView,ICollectionView,IEnumerable,INotifyCollectio
   
   
    newItem: The item to set as the System.Windows.Data.CollectionView.CurrentItem.
-   newPosition: The value to set as the System.Windows.Data.CollectionView.CurrentPosition 
-    property value.
+   newPosition: The value to set as the System.Windows.Data.CollectionView.CurrentPosition property value.
   """
   pass
  def __add__(self,*args):
@@ -336,8 +312,7 @@ class ItemCollection(CollectionView,ICollectionView,IEnumerable,INotifyCollectio
    Determines whether the System.Collections.IList contains a specific value.
   
    value: The object to locate in the System.Collections.IList.
-   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,
-    false.
+   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,false.
   """
   pass
  def __getitem__(self,*args):

@@ -8,14 +8,14 @@ class LicenseContext(object,IServiceProvider):
   """
   GetSavedLicenseKey(self: LicenseContext,type: Type,resourceAssembly: Assembly) -> str
   
-   When overridden in a derived class,returns a saved license key for the 
-    specified type,from the specified resource assembly.
+   When overridden in a derived class,returns a saved license key for the specified type,from the 
+    specified resource assembly.
   
   
    type: A System.Type that represents the type of component.
    resourceAssembly: An System.Reflection.Assembly with the license key.
-   Returns: The System.ComponentModel.License.LicenseKey for the specified type. This 
-    method returns null unless you override it.
+   Returns: The System.ComponentModel.License.LicenseKey for the specified type. This method returns null 
+    unless you override it.
   """
   pass
  def GetService(self,type):

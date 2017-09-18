@@ -13,13 +13,12 @@ class ToolTipService(object):
   """
   GetBetweenShowDelay(element: DependencyObject) -> int
   
-   Gets the value of the System.Windows.Controls.ToolTipService.BetweenShowDelay�
-    attached property for an object.
+   Gets the value of the System.Windows.Controls.ToolTipService.BetweenShowDelay�attached property 
+    for an object.
   
   
    element: The object from which the property value is read.
-   Returns: The object's System.Windows.Controls.ToolTipService.BetweenShowDelay property 
-    value.
+   Returns: The object's System.Windows.Controls.ToolTipService.BetweenShowDelay property value.
   """
   pass
  @staticmethod
@@ -27,13 +26,12 @@ class ToolTipService(object):
   """
   GetHasDropShadow(element: DependencyObject) -> bool
   
-   Gets the value of the System.Windows.Controls.ToolTipService.HasDropShadow�
-    attached property for an object.
+   Gets the value of the System.Windows.Controls.ToolTipService.HasDropShadow�attached property for 
+    an object.
   
   
    element: The object from which the property value is read.
-   Returns: The object's System.Windows.Controls.ToolTipService.HasDropShadow property 
-    value.
+   Returns: The object's System.Windows.Controls.ToolTipService.HasDropShadow property value.
   """
   pass
  @staticmethod
@@ -41,13 +39,12 @@ class ToolTipService(object):
   """
   GetHorizontalOffset(element: DependencyObject) -> float
   
-   Gets the value of the System.Windows.Controls.ToolTipService.HorizontalOffset�
-    attached property for an object.
+   Gets the value of the System.Windows.Controls.ToolTipService.HorizontalOffset�attached property 
+    for an object.
   
   
    element: The object from which the property value is read.
-   Returns: The object's System.Windows.Controls.ToolTipService.HorizontalOffset property 
-    value.
+   Returns: The object's System.Windows.Controls.ToolTipService.HorizontalOffset property value.
   """
   pass
  @staticmethod
@@ -55,13 +52,12 @@ class ToolTipService(object):
   """
   GetInitialShowDelay(element: DependencyObject) -> int
   
-   Gets the value of the System.Windows.Controls.ToolTipService.InitialShowDelay�
-    attached property for an object.
+   Gets the value of the System.Windows.Controls.ToolTipService.InitialShowDelay�attached property 
+    for an object.
   
   
    element: The object from which the property value is read.
-   Returns: The object's System.Windows.Controls.ToolTipService.InitialShowDelay property 
-    value.
+   Returns: The object's System.Windows.Controls.ToolTipService.InitialShowDelay property value.
   """
   pass
  @staticmethod
@@ -69,8 +65,8 @@ class ToolTipService(object):
   """
   GetIsEnabled(element: DependencyObject) -> bool
   
-   Gets the value of the System.Windows.Controls.ToolTipService.IsEnabled�attached 
-    property for an object.
+   Gets the value of the System.Windows.Controls.ToolTipService.IsEnabled�attached property for an 
+    object.
   
   
    element: The object from which the property value is read.
@@ -82,8 +78,8 @@ class ToolTipService(object):
   """
   GetIsOpen(element: DependencyObject) -> bool
   
-   Gets the value of the System.Windows.Controls.ToolTipService.IsOpen�attached 
-    property for an object.
+   Gets the value of the System.Windows.Controls.ToolTipService.IsOpen�attached property for an 
+    object.
   
   
    element: The object from which the property value is read.
@@ -95,8 +91,8 @@ class ToolTipService(object):
   """
   GetPlacement(element: DependencyObject) -> PlacementMode
   
-   Gets the value of the System.Windows.Controls.ToolTipService.Placement�attached 
-    property for an object.
+   Gets the value of the System.Windows.Controls.ToolTipService.Placement�attached property for an 
+    object.
   
   
    element: The object from which the property value is read.
@@ -108,13 +104,12 @@ class ToolTipService(object):
   """
   GetPlacementRectangle(element: DependencyObject) -> Rect
   
-   Gets the value of the System.Windows.Controls.ToolTipService.PlacementRectangle�
-    attached property for an object.
+   Gets the value of the System.Windows.Controls.ToolTipService.PlacementRectangle�attached 
+    property for an object.
   
   
    element: The object from which the property value is read.
-   Returns: The object's System.Windows.Controls.ToolTipService.PlacementRectangle property 
-    value.
+   Returns: The object's System.Windows.Controls.ToolTipService.PlacementRectangle property value.
   """
   pass
  @staticmethod
@@ -122,13 +117,12 @@ class ToolTipService(object):
   """
   GetPlacementTarget(element: DependencyObject) -> UIElement
   
-   Gets the value of the System.Windows.Controls.ToolTipService.PlacementTarget�
-    attached property for an object.
+   Gets the value of the System.Windows.Controls.ToolTipService.PlacementTarget�attached property 
+    for an object.
   
   
    element: The object from which the property value is read.
-   Returns: The object's System.Windows.Controls.ToolTipService.PlacementTarget property 
-    value.
+   Returns: The object's System.Windows.Controls.ToolTipService.PlacementTarget property value.
   """
   pass
  @staticmethod
@@ -136,8 +130,8 @@ class ToolTipService(object):
   """
   GetShowDuration(element: DependencyObject) -> int
   
-   Gets the value of the System.Windows.Controls.ToolTipService.ShowDuration�
-    attached property for an object.
+   Gets the value of the System.Windows.Controls.ToolTipService.ShowDuration�attached property for 
+    an object.
   
   
    element: The object from which the property value is read.
@@ -149,13 +143,12 @@ class ToolTipService(object):
   """
   GetShowOnDisabled(element: DependencyObject) -> bool
   
-   Gets the value of the System.Windows.Controls.ToolTipService.ShowOnDisabled�
-    attached property for an object.
+   Gets the value of the System.Windows.Controls.ToolTipService.ShowOnDisabled�attached property 
+    for an object.
   
   
    element: The object from which the property value is read.
-   Returns: The object's System.Windows.Controls.ToolTipService.ShowOnDisabled property 
-    value.
+   Returns: The object's System.Windows.Controls.ToolTipService.ShowOnDisabled property value.
   """
   pass
  @staticmethod
@@ -163,8 +156,8 @@ class ToolTipService(object):
   """
   GetToolTip(element: DependencyObject) -> object
   
-   Gets the value of the System.Windows.Controls.ToolTipService.ToolTip�attached 
-    property for an object.
+   Gets the value of the System.Windows.Controls.ToolTipService.ToolTip�attached property for an 
+    object.
   
   
    element: The object from which the property value is read.
@@ -176,13 +169,12 @@ class ToolTipService(object):
   """
   GetVerticalOffset(element: DependencyObject) -> float
   
-   Gets the value of the System.Windows.Controls.ToolTipService.VerticalOffset�
-    attached property for an object.
+   Gets the value of the System.Windows.Controls.ToolTipService.VerticalOffset�attached property 
+    for an object.
   
   
    element: The object from which the property value is read.
-   Returns: The object's System.Windows.Controls.ToolTipService.VerticalOffset property 
-    value.
+   Returns: The object's System.Windows.Controls.ToolTipService.VerticalOffset property value.
   """
   pass
  @staticmethod
@@ -197,8 +189,8 @@ class ToolTipService(object):
  def SetBetweenShowDelay(element,value):
   """
   SetBetweenShowDelay(element: DependencyObject,value: int)
-   Sets the value of the System.Windows.Controls.ToolTipService.BetweenShowDelay�
-    attached property for an object.
+   Sets the value of the System.Windows.Controls.ToolTipService.BetweenShowDelay�attached property 
+    for an object.
   
   
    element: The object to which the attached property is written.
@@ -209,8 +201,8 @@ class ToolTipService(object):
  def SetHasDropShadow(element,value):
   """
   SetHasDropShadow(element: DependencyObject,value: bool)
-   Sets the value of the System.Windows.Controls.ToolTipService.HasDropShadow�
-    attached property for an object.
+   Sets the value of the System.Windows.Controls.ToolTipService.HasDropShadow�attached property for 
+    an object.
   
   
    element: The object to which the attached property is written.
@@ -221,8 +213,8 @@ class ToolTipService(object):
  def SetHorizontalOffset(element,value):
   """
   SetHorizontalOffset(element: DependencyObject,value: float)
-   Sets the value of the System.Windows.Controls.ToolTipService.HorizontalOffset�
-    attached property for an object.
+   Sets the value of the System.Windows.Controls.ToolTipService.HorizontalOffset�attached property 
+    for an object.
   
   
    element: The object to which the attached property is written.
@@ -233,8 +225,8 @@ class ToolTipService(object):
  def SetInitialShowDelay(element,value):
   """
   SetInitialShowDelay(element: DependencyObject,value: int)
-   Sets the value of the System.Windows.Controls.ToolTipService.InitialShowDelay�
-    attached property for an object.
+   Sets the value of the System.Windows.Controls.ToolTipService.InitialShowDelay�attached property 
+    for an object.
   
   
    element: The object to which the attached property is written.
@@ -245,8 +237,8 @@ class ToolTipService(object):
  def SetIsEnabled(element,value):
   """
   SetIsEnabled(element: DependencyObject,value: bool)
-   Sets the value of the System.Windows.Controls.ToolTipService.IsEnabled�attached 
-    property for an object.
+   Sets the value of the System.Windows.Controls.ToolTipService.IsEnabled�attached property for an 
+    object.
   
   
    element: The object to which the attached property is written.
@@ -257,8 +249,8 @@ class ToolTipService(object):
  def SetPlacement(element,value):
   """
   SetPlacement(element: DependencyObject,value: PlacementMode)
-   Sets the value of the System.Windows.Controls.ToolTipService.Placement�attached 
-    property for an object.
+   Sets the value of the System.Windows.Controls.ToolTipService.Placement�attached property for an 
+    object.
   
   
    element: The object to which the attached property is written.
@@ -269,8 +261,8 @@ class ToolTipService(object):
  def SetPlacementRectangle(element,value):
   """
   SetPlacementRectangle(element: DependencyObject,value: Rect)
-   Sets the value of the System.Windows.Controls.ToolTipService.PlacementRectangle�
-    attached property for an object.
+   Sets the value of the System.Windows.Controls.ToolTipService.PlacementRectangle�attached 
+    property for an object.
   
   
    element: The object to which the attached property is written.
@@ -281,8 +273,8 @@ class ToolTipService(object):
  def SetPlacementTarget(element,value):
   """
   SetPlacementTarget(element: DependencyObject,value: UIElement)
-   Sets the value of the System.Windows.Controls.ToolTipService.PlacementTarget�
-    attached property for an object.
+   Sets the value of the System.Windows.Controls.ToolTipService.PlacementTarget�attached property 
+    for an object.
   
   
    element: The object to which the attached property is written.
@@ -293,8 +285,8 @@ class ToolTipService(object):
  def SetShowDuration(element,value):
   """
   SetShowDuration(element: DependencyObject,value: int)
-   Sets the value of the System.Windows.Controls.ToolTipService.ShowDuration�
-    attached property for an object.
+   Sets the value of the System.Windows.Controls.ToolTipService.ShowDuration�attached property for 
+    an object.
   
   
    element: The object to which the attached property is written.
@@ -305,8 +297,8 @@ class ToolTipService(object):
  def SetShowOnDisabled(element,value):
   """
   SetShowOnDisabled(element: DependencyObject,value: bool)
-   Sets the value of the System.Windows.Controls.ToolTipService.ShowOnDisabled�
-    attached property for an object.
+   Sets the value of the System.Windows.Controls.ToolTipService.ShowOnDisabled�attached property 
+    for an object.
   
   
    element: The object to which the attached property is written.
@@ -317,8 +309,8 @@ class ToolTipService(object):
  def SetToolTip(element,value):
   """
   SetToolTip(element: DependencyObject,value: object)
-   Sets the value of the System.Windows.Controls.ToolTipService.ToolTip�attached�
-    property for an object.
+   Sets the value of the System.Windows.Controls.ToolTipService.ToolTip�attached�property for an 
+    object.
   
   
    element: The object to which the attached property is written.
@@ -329,8 +321,8 @@ class ToolTipService(object):
  def SetVerticalOffset(element,value):
   """
   SetVerticalOffset(element: DependencyObject,value: float)
-   Sets the value of the System.Windows.Controls.ToolTipService.VerticalOffset�
-    attached property for an object.
+   Sets the value of the System.Windows.Controls.ToolTipService.VerticalOffset�attached property 
+    for an object.
   
   
    element: The object to which the attached property is written.

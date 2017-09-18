@@ -7,8 +7,7 @@ class ColumnDefinitionCollection(object,IList[ColumnDefinition],ICollection[Colu
     System.Windows.Controls.ColumnDefinitionCollection.
   
   
-   value: Identifies the System.Windows.Controls.ColumnDefinition to add to the 
-    collection.
+   value: Identifies the System.Windows.Controls.ColumnDefinition to add to the collection.
   """
   pass
  def Clear(self):
@@ -21,33 +20,33 @@ class ColumnDefinitionCollection(object,IList[ColumnDefinition],ICollection[Colu
   """
   Contains(self: ColumnDefinitionCollection,value: ColumnDefinition) -> bool
   
-   Determines whether a given System.Windows.Controls.ColumnDefinition exists 
-    within a System.Windows.Controls.ColumnDefinitionCollection.
+   Determines whether a given System.Windows.Controls.ColumnDefinition exists within a 
+    System.Windows.Controls.ColumnDefinitionCollection.
   
   
    value: Identifies the System.Windows.Controls.ColumnDefinition that is being tested.
-   Returns: true if the System.Windows.Controls.ColumnDefinition exists within the 
-    collection; otherwise false.
+   Returns: true if the System.Windows.Controls.ColumnDefinition exists within the collection; otherwise 
+    false.
   """
   pass
  def CopyTo(self,array,index):
   """
   CopyTo(self: ColumnDefinitionCollection,array: Array[ColumnDefinition],index: int)
-   Copies an array of System.Windows.Controls.ColumnDefinition objects to a given 
-    index position within a System.Windows.Controls.ColumnDefinitionCollection.
+   Copies an array of System.Windows.Controls.ColumnDefinition objects to a given index position 
+    within a System.Windows.Controls.ColumnDefinitionCollection.
   
   
    array: An array of System.Windows.Controls.ColumnDefinition objects.
-   index: Identifies the index position within array to which the 
-    System.Windows.Controls.ColumnDefinition objects are copied.
+   index: Identifies the index position within array to which the System.Windows.Controls.ColumnDefinition 
+    objects are copied.
   """
   pass
  def IndexOf(self,value):
   """
   IndexOf(self: ColumnDefinitionCollection,value: ColumnDefinition) -> int
   
-   Returns the index position of a given System.Windows.Controls.ColumnDefinition 
-    within a System.Windows.Controls.ColumnDefinitionCollection.
+   Returns the index position of a given System.Windows.Controls.ColumnDefinition within a 
+    System.Windows.Controls.ColumnDefinitionCollection.
   
   
    value: The System.Windows.Controls.ColumnDefinition whose index position is desired.
@@ -57,8 +56,8 @@ class ColumnDefinitionCollection(object,IList[ColumnDefinition],ICollection[Colu
  def Insert(self,index,value):
   """
   Insert(self: ColumnDefinitionCollection,index: int,value: ColumnDefinition)
-   Inserts a System.Windows.Controls.ColumnDefinition at the specified index 
-    position within a System.Windows.Controls.ColumnDefinitionCollection.
+   Inserts a System.Windows.Controls.ColumnDefinition at the specified index position within a 
+    System.Windows.Controls.ColumnDefinitionCollection.
   
   
    index: The position within the collection where the item is inserted.
@@ -74,20 +73,19 @@ class ColumnDefinitionCollection(object,IList[ColumnDefinition],ICollection[Colu
   
   
    value: The System.Windows.Controls.ColumnDefinition to remove from the collection.
-   Returns: true if the System.Windows.Controls.ColumnDefinition was found in the 
-    collection and removed; otherwise,false.
+   Returns: true if the System.Windows.Controls.ColumnDefinition was found in the collection and removed; 
+    otherwise,false.
   """
   pass
  def RemoveAt(self,index):
   """
   RemoveAt(self: ColumnDefinitionCollection,index: int)
    Removes a System.Windows.Controls.ColumnDefinition from a 
-    System.Windows.Controls.ColumnDefinitionCollection at the specified index 
-    position.
+    System.Windows.Controls.ColumnDefinitionCollection at the specified index position.
   
   
-   index: The position within the collection at which the 
-    System.Windows.Controls.ColumnDefinition is removed.
+   index: The position within the collection at which the System.Windows.Controls.ColumnDefinition is 
+    removed.
   """
   pass
  def RemoveRange(self,index,count):
@@ -97,11 +95,11 @@ class ColumnDefinitionCollection(object,IList[ColumnDefinition],ICollection[Colu
     System.Windows.Controls.ColumnDefinitionCollection.
   
   
-   index: The position within the collection at which the first 
-    System.Windows.Controls.ColumnDefinition is removed.
+   index: The position within the collection at which the first System.Windows.Controls.ColumnDefinition 
+    is removed.
   
-   count: The total number of System.Windows.Controls.ColumnDefinition objects to remove 
-    from the collection.
+   count: The total number of System.Windows.Controls.ColumnDefinition objects to remove from the 
+    collection.
   """
   pass
  def __add__(self,*args):
@@ -115,8 +113,7 @@ class ColumnDefinitionCollection(object,IList[ColumnDefinition],ICollection[Colu
    Determines whether the System.Collections.IList contains a specific value.
   
    value: The object to locate in the System.Collections.IList.
-   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,
-    false.
+   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,false.
   """
   pass
  def __getitem__(self,*args):

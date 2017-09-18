@@ -4,15 +4,15 @@ class ITypedList:
   """
   GetItemProperties(self: ITypedList,listAccessors: Array[PropertyDescriptor]) -> PropertyDescriptorCollection
   
-   Returns the System.ComponentModel.PropertyDescriptorCollection that represents 
-    the properties on each item used to bind data.
+   Returns the System.ComponentModel.PropertyDescriptorCollection that represents the properties on 
+    each item used to bind data.
   
   
-   listAccessors: An array of System.ComponentModel.PropertyDescriptor objects to find in the 
-    collection as bindable. This can be null.
+   listAccessors: An array of System.ComponentModel.PropertyDescriptor objects to find in the collection as 
+    bindable. This can be null.
   
-   Returns: The System.ComponentModel.PropertyDescriptorCollection that represents the 
-    properties on each item used to bind data.
+   Returns: The System.ComponentModel.PropertyDescriptorCollection that represents the properties on each 
+    item used to bind data.
   """
   pass
  def GetListName(self,listAccessors):
@@ -21,8 +21,8 @@ class ITypedList:
   
    Returns the name of the list.
   
-   listAccessors: An array of System.ComponentModel.PropertyDescriptor objects,for which the 
-    list name is returned. This can be null.
+   listAccessors: An array of System.ComponentModel.PropertyDescriptor objects,for which the list name is 
+    returned. This can be null.
   
    Returns: The name of the list.
   """

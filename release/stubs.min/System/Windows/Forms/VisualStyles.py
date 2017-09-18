@@ -2,7 +2,7 @@
 # module System.Windows.Forms.VisualStyles calls itself VisualStyles
 # from System.Windows.Forms,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -1875,20 +1875,16 @@ class VisualStyleElement(object):
   """
   CreateElement(className: str,part: int,state: int) -> VisualStyleElement
   
-   Creates a new visual style element from the specified class,part,and state 
-    values.
+   Creates a new visual style element from the specified class,part,and state values.
   
-  
-   className: A string that represents the class name of the visual style element to be 
-    created.
-  
+   className: A string that represents the class name of the visual style element to be created.
    part: A value that represents the part of the visual style element to be created.
    state: A value that represents the state of the visual style element to be created.
    Returns: A System.Windows.Forms.VisualStyles.VisualStyleElement with the 
     System.Windows.Forms.VisualStyles.VisualStyleElement.ClassName,
     System.Windows.Forms.VisualStyles.VisualStyleElement.Part,and 
-    System.Windows.Forms.VisualStyles.VisualStyleElement.State properties 
-    initialized to the className,part,and state parameters.
+    System.Windows.Forms.VisualStyles.VisualStyleElement.State properties initialized to the 
+    className,part,and state parameters.
   """
   pass
  ClassName=property(lambda self: object(),lambda self,v: None,lambda self: None)
@@ -1951,9 +1947,9 @@ class VisualStyleInformation(object):
  DisplayName='Aero style'
  IsEnabledByUser=True
  IsSupportedByOS=True
- MinimumColorDepth=15
+ MinimumColorDepth=0
  Size='NormalSize'
- SupportsFlatMenus=True
+ SupportsFlatMenus=False
  TextControlBorder=None
  Url=''
  Version=''
@@ -1970,18 +1966,16 @@ class VisualStyleRenderer(object):
  def DrawBackground(self,dc,bounds,clipRectangle=None):
   """
   DrawBackground(self: VisualStyleRenderer,dc: IDeviceContext,bounds: Rectangle,clipRectangle: Rectangle)
-   Draws the background image of the current visual style element within the 
-    specified bounding rectangle and clipped to the specified clipping rectangle.
+   Draws the background image of the current visual style element within the specified bounding 
+    rectangle and clipped to the specified clipping rectangle.
   
   
    dc: The System.Drawing.IDeviceContext used to draw the background image.
    bounds: A System.Drawing.Rectangle in which the background image is drawn.
-   clipRectangle: A System.Drawing.Rectangle that defines a clipping rectangle for the drawing 
-    operation.
-  
+   clipRectangle: A System.Drawing.Rectangle that defines a clipping rectangle for the drawing operation.
   DrawBackground(self: VisualStyleRenderer,dc: IDeviceContext,bounds: Rectangle)
-   Draws the background image of the current visual style element within the 
-    specified bounding rectangle.
+   Draws the background image of the current visual style element within the specified bounding 
+    rectangle.
   
   
    dc: The System.Drawing.IDeviceContext used to draw the background image.
@@ -1998,25 +1992,19 @@ class VisualStyleRenderer(object):
    bounds: The System.Drawing.Rectangle whose bounds define the edges to draw.
    edges: A bitwise combination of the System.Windows.Forms.VisualStyles.Edges values.
    style: A bitwise combination of the System.Windows.Forms.VisualStyles.EdgeStyle values.
-   effects: A bitwise combination of the System.Windows.Forms.VisualStyles.EdgeEffects 
-    values.
-  
-   Returns: A System.Drawing.Rectangle that represents the interior of the bounds 
-    parameter,minus the edges that were drawn.
+   effects: A bitwise combination of the System.Windows.Forms.VisualStyles.EdgeEffects values.
+   Returns: A System.Drawing.Rectangle that represents the interior of the bounds parameter,minus the edges 
+    that were drawn.
   """
   pass
  def DrawImage(self,g,bounds,*__args):
   """
   DrawImage(self: VisualStyleRenderer,g: Graphics,bounds: Rectangle,imageList: ImageList,imageIndex: int)
-   Draws the image from the specified System.Windows.Forms.ImageList within the 
-    specified bounds.
-  
+   Draws the image from the specified System.Windows.Forms.ImageList within the specified bounds.
   
    g: The System.Drawing.Graphics used to draw the image.
    bounds: A System.Drawing.Rectangle in which the image is drawn.
-   imageList: An System.Windows.Forms.ImageList that contains the System.Drawing.Image to 
-    draw.
-  
+   imageList: An System.Windows.Forms.ImageList that contains the System.Drawing.Image to draw.
    imageIndex: The index of the System.Drawing.Image within imageList to draw.
   DrawImage(self: VisualStyleRenderer,g: Graphics,bounds: Rectangle,image: Image)
    Draws the specified image within the specified bounds.
@@ -2031,10 +2019,10 @@ class VisualStyleRenderer(object):
   DrawParentBackground(self: VisualStyleRenderer,dc: IDeviceContext,bounds: Rectangle,childControl: Control)
    Draws the background of a control's parent in the specified area.
   
-   dc: The System.Drawing.IDeviceContext used to draw the background of the parent of 
-    childControl. This object typically belongs to the child control.
+   dc: The System.Drawing.IDeviceContext used to draw the background of the parent of childControl. 
+    This object typically belongs to the child control.
   
-   bounds: A System.Drawing.Rectangle in which to draw the parent control's background. 
+   bounds: A System.Drawing.Rectangle in which to draw the parent control's background. This rectangle 
     
    childControl: The control whose parent's background will be drawn.
   """
@@ -2042,8 +2030,8 @@ class VisualStyleRenderer(object):
  def DrawText(self,dc,bounds,textToDraw,drawDisabled=None,flags=None):
   """
   DrawText(self: VisualStyleRenderer,dc: IDeviceContext,bounds: Rectangle,textToDraw: str,drawDisabled: bool,flags: TextFormatFlags)
-   Draws text in the specified bounding rectangle with the option of displaying 
-    disabled text and applying other text formatting.
+   Draws text in the specified bounding rectangle with the option of displaying disabled text and 
+    applying other text formatting.
   
   
    dc: The System.Drawing.IDeviceContext used to draw the text.
@@ -2073,11 +2061,11 @@ class VisualStyleRenderer(object):
    Returns the content area for the background of the current visual style element.
   
    dc: The System.Drawing.IDeviceContext this operation will use.
-   bounds: A System.Drawing.Rectangle that contains the entire background area of the 
-    current visual style element.
+   bounds: A System.Drawing.Rectangle that contains the entire background area of the current visual style 
+    element.
   
-   Returns: A System.Drawing.Rectangle that contains the content area for the background of 
-    the current visual style element.
+   Returns: A System.Drawing.Rectangle that contains the content area for the background of the current 
+    visual style element.
   """
   pass
  def GetBackgroundExtent(self,dc,contentBounds):
@@ -2087,11 +2075,9 @@ class VisualStyleRenderer(object):
    Returns the entire background area for the current visual style element.
   
    dc: The System.Drawing.IDeviceContext this operation will use.
-   contentBounds: A System.Drawing.Rectangle that contains the content area of the current visual 
-    style element.
-  
-   Returns: A System.Drawing.Rectangle that contains the entire background area of the 
-    current visual style element.
+   contentBounds: A System.Drawing.Rectangle that contains the content area of the current visual style element.
+   Returns: A System.Drawing.Rectangle that contains the entire background area of the current visual style 
+    element.
   """
   pass
  def GetBackgroundRegion(self,dc,bounds):
@@ -2101,300 +2087,250 @@ class VisualStyleRenderer(object):
    Returns the region for the background of the current visual style element.
   
    dc: The System.Drawing.IDeviceContext this operation will use.
-   bounds: A System.Drawing.Rectangle that contains the entire background area of the 
-    current visual style element.
+   bounds: A System.Drawing.Rectangle that contains the entire background area of the current visual style 
+    element.
   
-   Returns: The System.Drawing.Region that contains the background of the current visual 
-    style element.
+   Returns: The System.Drawing.Region that contains the background of the current visual style element.
   """
   pass
  def GetBoolean(self,prop):
   """
   GetBoolean(self: VisualStyleRenderer,prop: BooleanProperty) -> bool
   
-   Returns the value of the specified Boolean property for the current visual 
-    style element.
+   Returns the value of the specified Boolean property for the current visual style element.
   
+   prop: One of the System.Windows.Forms.VisualStyles.BooleanProperty values that specifies which 
+    property value to retrieve for the current visual style element.
   
-   prop: One of the System.Windows.Forms.VisualStyles.BooleanProperty values that 
-    specifies which property value to retrieve for the current visual style 
-    element.
-  
-   Returns: true if the property specified by the prop parameter is true for the current 
-    visual style element; otherwise,false.
+   Returns: true if the property specified by the prop parameter is true for the current visual style 
+    element; otherwise,false.
   """
   pass
  def GetColor(self,prop):
   """
   GetColor(self: VisualStyleRenderer,prop: ColorProperty) -> Color
   
-   Returns the value of the specified color property for the current visual style 
-    element.
+   Returns the value of the specified color property for the current visual style element.
   
+   prop: One of the System.Windows.Forms.VisualStyles.ColorProperty values that specifies which property 
+    value to retrieve for the current visual style element.
   
-   prop: One of the System.Windows.Forms.VisualStyles.ColorProperty values that 
-    specifies which property value to retrieve for the current visual style 
-    element.
-  
-   Returns: A System.Drawing.Color that contains the value of the property specified by the 
-    prop parameter for the current visual style element.
+   Returns: A System.Drawing.Color that contains the value of the property specified by the prop parameter 
+    for the current visual style element.
   """
   pass
  def GetEnumValue(self,prop):
   """
   GetEnumValue(self: VisualStyleRenderer,prop: EnumProperty) -> int
   
-   Returns the value of the specified enumerated type property for the current 
-    visual style element.
+   Returns the value of the specified enumerated type property for the current visual style element.
   
+   prop: One of the System.Windows.Forms.VisualStyles.EnumProperty values that specifies which property 
+    value to retrieve for the current visual style element.
   
-   prop: One of the System.Windows.Forms.VisualStyles.EnumProperty values that specifies 
-    which property value to retrieve for the current visual style element.
-  
-   Returns: The integer value of the property specified by the prop parameter for the 
-    current visual style element.
+   Returns: The integer value of the property specified by the prop parameter for the current visual style 
+    element.
   """
   pass
  def GetFilename(self,prop):
   """
   GetFilename(self: VisualStyleRenderer,prop: FilenameProperty) -> str
   
-   Returns the value of the specified file name property for the current visual 
-    style element.
+   Returns the value of the specified file name property for the current visual style element.
   
+   prop: One of the System.Windows.Forms.VisualStyles.FilenameProperty values that specifies which 
+    property value to retrieve for the current visual style element.
   
-   prop: One of the System.Windows.Forms.VisualStyles.FilenameProperty values that 
-    specifies which property value to retrieve for the current visual style 
-    element.
-  
-   Returns: A System.String that contains the value of the property specified by the prop 
-    parameter for the current visual style element.
+   Returns: A System.String that contains the value of the property specified by the prop parameter for the 
+    current visual style element.
   """
   pass
  def GetFont(self,dc,prop):
   """
   GetFont(self: VisualStyleRenderer,dc: IDeviceContext,prop: FontProperty) -> Font
   
-   Returns the value of the specified font property for the current visual style 
-    element.
-  
+   Returns the value of the specified font property for the current visual style element.
   
    dc: The System.Drawing.IDeviceContext this operation will use.
-   prop: One of the System.Windows.Forms.VisualStyles.FontProperty values that specifies 
-    which property value to retrieve for the current visual style element.
+   prop: One of the System.Windows.Forms.VisualStyles.FontProperty values that specifies which property 
+    value to retrieve for the current visual style element.
   
-   Returns: A System.Drawing.Font that contains the value of the property specified by the 
-    prop parameter for the current visual style element.
+   Returns: A System.Drawing.Font that contains the value of the property specified by the prop parameter 
+    for the current visual style element.
   """
   pass
  def GetInteger(self,prop):
   """
   GetInteger(self: VisualStyleRenderer,prop: IntegerProperty) -> int
   
-   Returns the value of the specified integer property for the current visual 
-    style element.
+   Returns the value of the specified integer property for the current visual style element.
   
+   prop: One of the System.Windows.Forms.VisualStyles.IntegerProperty values that specifies which 
+    property value to retrieve for the current visual style element.
   
-   prop: One of the System.Windows.Forms.VisualStyles.IntegerProperty values that 
-    specifies which property value to retrieve for the current visual style 
-    element.
-  
-   Returns: The integer value of the property specified by the prop parameter for the 
-    current visual style element.
+   Returns: The integer value of the property specified by the prop parameter for the current visual style 
+    element.
   """
   pass
  def GetMargins(self,dc,prop):
   """
   GetMargins(self: VisualStyleRenderer,dc: IDeviceContext,prop: MarginProperty) -> Padding
   
-   Returns the value of the specified margins property for the current visual 
-    style element.
-  
+   Returns the value of the specified margins property for the current visual style element.
   
    dc: The System.Drawing.IDeviceContext this operation will use.
-   prop: One of the System.Windows.Forms.VisualStyles.MarginProperty values that 
-    specifies which property value to retrieve for the current visual style 
-    element.
+   prop: One of the System.Windows.Forms.VisualStyles.MarginProperty values that specifies which property 
+    value to retrieve for the current visual style element.
   
-   Returns: A System.Windows.Forms.Padding that contains the value of the property 
-    specified by the prop parameter for the current visual style element.
+   Returns: A System.Windows.Forms.Padding that contains the value of the property specified by the prop 
+    parameter for the current visual style element.
   """
   pass
  def GetPartSize(self,dc,*__args):
   """
   GetPartSize(self: VisualStyleRenderer,dc: IDeviceContext,bounds: Rectangle,type: ThemeSizeType) -> Size
   
-   Returns the value of the specified size property of the current visual style 
-    part using the specified drawing bounds.
+   Returns the value of the specified size property of the current visual style part using the 
+    specified drawing bounds.
   
   
    dc: The System.Drawing.IDeviceContext this operation will use.
-   bounds: A System.Drawing.Rectangle that contains the area in which the part will be 
-    drawn.
+   bounds: A System.Drawing.Rectangle that contains the area in which the part will be drawn.
+   type: One of the System.Windows.Forms.VisualStyles.ThemeSizeType values that specifies which size 
+    value to retrieve for the part.
   
-   type: One of the System.Windows.Forms.VisualStyles.ThemeSizeType values that 
-    specifies which size value to retrieve for the part.
-  
-   Returns: A System.Drawing.Size that contains the size specified by the type parameter 
-    for the current visual style part.
+   Returns: A System.Drawing.Size that contains the size specified by the type parameter for the current 
+    visual style part.
   
   GetPartSize(self: VisualStyleRenderer,dc: IDeviceContext,type: ThemeSizeType) -> Size
   
-   Returns the value of the specified size property of the current visual style 
-    part.
-  
+   Returns the value of the specified size property of the current visual style part.
   
    dc: The System.Drawing.IDeviceContext this operation will use.
-   type: One of the System.Windows.Forms.VisualStyles.ThemeSizeType values that 
-    specifies which size value to retrieve for the part.
+   type: One of the System.Windows.Forms.VisualStyles.ThemeSizeType values that specifies which size 
+    value to retrieve for the part.
   
-   Returns: A System.Drawing.Size that contains the size specified by the type parameter 
-    for the current visual style part.
+   Returns: A System.Drawing.Size that contains the size specified by the type parameter for the current 
+    visual style part.
   """
   pass
  def GetPoint(self,prop):
   """
   GetPoint(self: VisualStyleRenderer,prop: PointProperty) -> Point
   
-   Returns the value of the specified point property for the current visual style 
-    element.
+   Returns the value of the specified point property for the current visual style element.
   
+   prop: One of the System.Windows.Forms.VisualStyles.PointProperty values that specifies which property 
+    value to retrieve for the current visual style element.
   
-   prop: One of the System.Windows.Forms.VisualStyles.PointProperty values that 
-    specifies which property value to retrieve for the current visual style 
-    element.
-  
-   Returns: A System.Drawing.Point that contains the value of the property specified by the 
-    prop parameter for the current visual style element.
+   Returns: A System.Drawing.Point that contains the value of the property specified by the prop parameter 
+    for the current visual style element.
   """
   pass
  def GetString(self,prop):
   """
   GetString(self: VisualStyleRenderer,prop: StringProperty) -> str
   
-   Returns the value of the specified string property for the current visual style 
-    element.
+   Returns the value of the specified string property for the current visual style element.
   
+   prop: One of the System.Windows.Forms.VisualStyles.StringProperty values that specifies which property 
+    value to retrieve for the current visual style element.
   
-   prop: One of the System.Windows.Forms.VisualStyles.StringProperty values that 
-    specifies which property value to retrieve for the current visual style 
-    element.
-  
-   Returns: A System.String that contains the value of the property specified by the prop 
-    parameter for the current visual style element.
+   Returns: A System.String that contains the value of the property specified by the prop parameter for the 
+    current visual style element.
   """
   pass
  def GetTextExtent(self,dc,*__args):
   """
   GetTextExtent(self: VisualStyleRenderer,dc: IDeviceContext,bounds: Rectangle,textToDraw: str,flags: TextFormatFlags) -> Rectangle
   
-   Returns the size and location of the specified string when drawn with the font 
-    of the current visual style element within the specified initial bounding 
-    rectangle.
+   Returns the size and location of the specified string when drawn with the font of the current 
+    visual style element within the specified initial bounding rectangle.
   
   
    dc: The System.Drawing.IDeviceContext this operation will use.
    bounds: A System.Drawing.Rectangle used to control the flow and wrapping of the text.
    textToDraw: The string to measure.
    flags: A bitwise combination of the System.Windows.Forms.TextFormatFlags values.
-   Returns: A System.Drawing.Rectangle that contains the area required to fit the rendered 
-    text.
-  
+   Returns: A System.Drawing.Rectangle that contains the area required to fit the rendered text.
   GetTextExtent(self: VisualStyleRenderer,dc: IDeviceContext,textToDraw: str,flags: TextFormatFlags) -> Rectangle
   
-   Returns the size and location of the specified string when drawn with the font 
-    of the current visual style element.
+   Returns the size and location of the specified string when drawn with the font of the current 
+    visual style element.
   
   
    dc: The System.Drawing.IDeviceContext this operation will use.
    textToDraw: The string to measure.
    flags: A bitwise combination of the System.Windows.Forms.TextFormatFlags values.
-   Returns: A System.Drawing.Rectangle that contains the area required to fit the rendered 
-    text.
+   Returns: A System.Drawing.Rectangle that contains the area required to fit the rendered text.
   """
   pass
  def GetTextMetrics(self,dc):
   """
   GetTextMetrics(self: VisualStyleRenderer,dc: IDeviceContext) -> TextMetrics
   
-   Retrieves information about the font specified by the current visual style 
-    element.
-  
+   Retrieves information about the font specified by the current visual style element.
   
    dc: The System.Drawing.IDeviceContext this operation will use.
-   Returns: A System.Windows.Forms.VisualStyles.TextMetrics that provides information about 
-    the font specified by the current visual style element.
+   Returns: A System.Windows.Forms.VisualStyles.TextMetrics that provides information about the font 
+    specified by the current visual style element.
   """
   pass
  def HitTestBackground(self,*__args):
   """
   HitTestBackground(self: VisualStyleRenderer,dc: IDeviceContext,backgroundRectangle: Rectangle,hRgn: IntPtr,pt: Point,options: HitTestOptions) -> HitTestCode
   
-   Returns a hit test code indicating whether the point is contained in the 
-    background of the current visual style element and within the specified region.
+   Returns a hit test code indicating whether the point is contained in the background of the 
+    current visual style element and within the specified region.
   
   
    dc: The System.Drawing.IDeviceContext this operation will use.
-   backgroundRectangle: A System.Drawing.Rectangle that contains the background of the current visual 
-    style element.
-  
-   hRgn: A Windows handle to a System.Drawing.Region that specifies the bounds of the 
-    hit test area within the background.
+   backgroundRectangle: A System.Drawing.Rectangle that contains the background of the current visual style element.
+   hRgn: A Windows handle to a System.Drawing.Region that specifies the bounds of the hit test area 
+    within the background.
   
    pt: The System.Drawing.Point to test.
-   options: A bitwise combination of the System.Windows.Forms.VisualStyles.HitTestOptions 
-    values.
-  
-   Returns: A System.Windows.Forms.VisualStyles.HitTestCode that describes where pt is 
-    located in the background of the current visual style element.
+   options: A bitwise combination of the System.Windows.Forms.VisualStyles.HitTestOptions values.
+   Returns: A System.Windows.Forms.VisualStyles.HitTestCode that describes where pt is located in the 
+    background of the current visual style element.
   
   HitTestBackground(self: VisualStyleRenderer,g: Graphics,backgroundRectangle: Rectangle,region: Region,pt: Point,options: HitTestOptions) -> HitTestCode
   
-   Returns a hit test code indicating whether the point is contained in the 
-    background of the current visual style element and within the specified bounds.
+   Returns a hit test code indicating whether the point is contained in the background of the 
+    current visual style element and within the specified bounds.
   
   
    g: The System.Drawing.Graphics this operation will use.
-   backgroundRectangle: A System.Drawing.Rectangle that contains the background of the current visual 
-    style element.
-  
-   region: A System.Drawing.Region that specifies the bounds of the hit test area within 
-    the background.
-  
+   backgroundRectangle: A System.Drawing.Rectangle that contains the background of the current visual style element.
+   region: A System.Drawing.Region that specifies the bounds of the hit test area within the background.
    pt: The System.Drawing.Point to test.
-   options: A bitwise combination of the System.Windows.Forms.VisualStyles.HitTestOptions 
-    values.
-  
-   Returns: A System.Windows.Forms.VisualStyles.HitTestCode that describes where pt is 
-    located in the background of the current visual style element,if at all.
+   options: A bitwise combination of the System.Windows.Forms.VisualStyles.HitTestOptions values.
+   Returns: A System.Windows.Forms.VisualStyles.HitTestCode that describes where pt is located in the 
+    background of the current visual style element,if at all.
   
   HitTestBackground(self: VisualStyleRenderer,dc: IDeviceContext,backgroundRectangle: Rectangle,pt: Point,options: HitTestOptions) -> HitTestCode
   
-   Returns a hit test code indicating whether a point is contained in the 
-    background of the current visual style element.
+   Returns a hit test code indicating whether a point is contained in the background of the current 
+    visual style element.
   
   
    dc: The System.Drawing.IDeviceContext this operation will use.
-   backgroundRectangle: A System.Drawing.Rectangle that contains the background of the current visual 
-    style element.
-  
+   backgroundRectangle: A System.Drawing.Rectangle that contains the background of the current visual style element.
    pt: The System.Drawing.Point to test.
-   options: A bitwise combination of the System.Windows.Forms.VisualStyles.HitTestOptions 
-    values.
-  
-   Returns: A System.Windows.Forms.VisualStyles.HitTestCode that describes where pt is 
-    located in the background of the current visual style element.
+   options: A bitwise combination of the System.Windows.Forms.VisualStyles.HitTestOptions values.
+   Returns: A System.Windows.Forms.VisualStyles.HitTestCode that describes where pt is located in the 
+    background of the current visual style element.
   """
   pass
  def IsBackgroundPartiallyTransparent(self):
   """
   IsBackgroundPartiallyTransparent(self: VisualStyleRenderer) -> bool
   
-   Indicates whether the background of the current visual style element has any 
-    semitransparent or alpha-blended pieces.
+   Indicates whether the background of the current visual style element has any semitransparent or 
+    alpha-blended pieces.
   
-   Returns: true if the background of the current visual style element has any 
-    semitransparent or alpha-blended pieces; otherwise,false.
+   Returns: true if the background of the current visual style element has any semitransparent or 
+    alpha-blended pieces; otherwise,false.
   """
   pass
  @staticmethod
@@ -2402,43 +2338,33 @@ class VisualStyleRenderer(object):
   """
   IsElementDefined(element: VisualStyleElement) -> bool
   
-   Determines whether the specified visual style element is defined by the current 
-    visual style.
+   Determines whether the specified visual style element is defined by the current visual style.
   
+   element: A System.Windows.Forms.VisualStyles.VisualStyleElement whose class and part combination will be 
+    verified.
   
-   element: A System.Windows.Forms.VisualStyles.VisualStyleElement whose class and part 
-    combination will be verified.
-  
-   Returns: true if the combination of the 
-    System.Windows.Forms.VisualStyles.VisualStyleElement.ClassName and 
-    System.Windows.Forms.VisualStyles.VisualStyleElement.Part properties of element 
-    are defined; otherwise,false.
+   Returns: true if the combination of the System.Windows.Forms.VisualStyles.VisualStyleElement.ClassName 
+    and System.Windows.Forms.VisualStyles.VisualStyleElement.Part properties of element are defined; 
+    otherwise,false.
   """
   pass
  def SetParameters(self,*__args):
   """
   SetParameters(self: VisualStyleRenderer,className: str,part: int,state: int)
-   Sets this System.Windows.Forms.VisualStyles.VisualStyleRenderer to the visual 
-    style element represented by the specified class,part,and state values.
+   Sets this System.Windows.Forms.VisualStyles.VisualStyleRenderer to the visual style element 
+    represented by the specified class,part,and state values.
   
   
-   className: The new value of the 
-    System.Windows.Forms.VisualStyles.VisualStyleRenderer.Class property.
-  
-   part: The new value of the System.Windows.Forms.VisualStyles.VisualStyleRenderer.Part 
-    property.
-  
-   state: The new value of the 
-    System.Windows.Forms.VisualStyles.VisualStyleRenderer.State property.
-  
+   className: The new value of the System.Windows.Forms.VisualStyles.VisualStyleRenderer.Class property.
+   part: The new value of the System.Windows.Forms.VisualStyles.VisualStyleRenderer.Part property.
+   state: The new value of the System.Windows.Forms.VisualStyles.VisualStyleRenderer.State property.
   SetParameters(self: VisualStyleRenderer,element: VisualStyleElement)
-   Sets this System.Windows.Forms.VisualStyles.VisualStyleRenderer to the visual 
-    style element represented by the specified 
-    System.Windows.Forms.VisualStyles.VisualStyleElement.
+   Sets this System.Windows.Forms.VisualStyles.VisualStyleRenderer to the visual style element 
+    represented by the specified System.Windows.Forms.VisualStyles.VisualStyleElement.
   
   
-   element: A System.Windows.Forms.VisualStyles.VisualStyleElement that specifies the new 
-    values of the System.Windows.Forms.VisualStyles.VisualStyleRenderer.Class,
+   element: A System.Windows.Forms.VisualStyles.VisualStyleElement that specifies the new values of the 
+    System.Windows.Forms.VisualStyles.VisualStyleRenderer.Class,
     System.Windows.Forms.VisualStyles.VisualStyleRenderer.Part,and 
     System.Windows.Forms.VisualStyles.VisualStyleRenderer.State properties.
   """

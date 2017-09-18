@@ -27,12 +27,9 @@ class TreeNode(MarshalByRefObject,ICloneable,ISerializable):
   Collapse(self: TreeNode)
    Collapses the tree node.
   Collapse(self: TreeNode,ignoreChildren: bool)
-   Collapses the System.Windows.Forms.TreeNode and optionally collapses its 
-    children.
+   Collapses the System.Windows.Forms.TreeNode and optionally collapses its children.
   
-  
-   ignoreChildren: true to leave the child nodes in their current state; false to collapse the 
-    child nodes.
+   ignoreChildren: true to leave the child nodes in their current state; false to collapse the child nodes.
   """
   pass
  def Deserialize(self,*args):
@@ -45,8 +42,8 @@ class TreeNode(MarshalByRefObject,ICloneable,ISerializable):
    serializationInfo: The System.Runtime.Serialization.SerializationInfo that describes the 
     System.Windows.Forms.TreeNode.
   
-   context: The System.Runtime.Serialization.StreamingContext that indicates the state of 
-    the stream during deserialization.
+   context: The System.Runtime.Serialization.StreamingContext that indicates the state of the stream during 
+    deserialization.
   """
   pass
  def EndEdit(self,cancel):
@@ -54,15 +51,15 @@ class TreeNode(MarshalByRefObject,ICloneable,ISerializable):
   EndEdit(self: TreeNode,cancel: bool)
    Ends the editing of the tree node label.
   
-   cancel: true if the editing of the tree node label text was canceled without being 
-    saved; otherwise,false.
+   cancel: true if the editing of the tree node label text was canceled without being saved; otherwise,
+    false.
   """
   pass
  def EnsureVisible(self):
   """
   EnsureVisible(self: TreeNode)
-   Ensures that the tree node is visible,expanding tree nodes and scrolling the 
-    tree view control as necessary.
+   Ensures that the tree node is visible,expanding tree nodes and scrolling the tree view control 
+    as necessary.
   """
   pass
  def Expand(self):
@@ -82,14 +79,12 @@ class TreeNode(MarshalByRefObject,ICloneable,ISerializable):
   """
   FromHandle(tree: TreeView,handle: IntPtr) -> TreeNode
   
-   Returns the tree node with the specified handle and assigned to the specified 
-    tree view control.
-  
+   Returns the tree node with the specified handle and assigned to the specified tree view control.
   
    tree: The System.Windows.Forms.TreeView that contains the tree node.
    handle: The handle of the tree node.
-   Returns: A System.Windows.Forms.TreeNode that represents the tree node assigned to the 
-    specified System.Windows.Forms.TreeView control with the specified handle.
+   Returns: A System.Windows.Forms.TreeNode that represents the tree node assigned to the specified 
+    System.Windows.Forms.TreeView control with the specified handle.
   """
   pass
  def GetNodeCount(self,includeSubTrees):
@@ -98,11 +93,10 @@ class TreeNode(MarshalByRefObject,ICloneable,ISerializable):
   
    Returns the number of child tree nodes.
   
-   includeSubTrees: true if the resulting count includes all tree nodes indirectly rooted at this 
-    tree node; otherwise,false.
+   includeSubTrees: true if the resulting count includes all tree nodes indirectly rooted at this tree node; 
+    otherwise,false.
   
-   Returns: The number of child tree nodes assigned to the 
-    System.Windows.Forms.TreeNode.Nodes collection.
+   Returns: The number of child tree nodes assigned to the System.Windows.Forms.TreeNode.Nodes collection.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -111,11 +105,11 @@ class TreeNode(MarshalByRefObject,ICloneable,ISerializable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -140,8 +134,8 @@ class TreeNode(MarshalByRefObject,ICloneable,ISerializable):
    si: The System.Runtime.Serialization.SerializationInfo that describes the 
     System.Windows.Forms.TreeNode.
   
-   context: The System.Runtime.Serialization.StreamingContext that indicates the state of 
-    the stream during serialization
+   context: The System.Runtime.Serialization.StreamingContext that indicates the state of the stream during 
+    serialization
   """
   pass
  def Toggle(self):

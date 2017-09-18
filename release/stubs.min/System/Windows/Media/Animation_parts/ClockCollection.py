@@ -20,8 +20,8 @@ class ClockCollection(object,ICollection[Clock],IEnumerable[Clock],IEnumerable):
   """
   Contains(self: ClockCollection,item: Clock) -> bool
   
-   Indicates whether the System.Windows.Media.Animation.ClockCollection contains 
-    the specified System.Windows.Media.Animation.Clock object.
+   Indicates whether the System.Windows.Media.Animation.ClockCollection contains the specified 
+    System.Windows.Media.Animation.Clock object.
   
   
    item: The object to locate.
@@ -32,8 +32,8 @@ class ClockCollection(object,ICollection[Clock],IEnumerable[Clock],IEnumerable):
   """
   CopyTo(self: ClockCollection,array: Array[Clock],index: int)
    Copies the System.Windows.Media.Animation.Clock objects of this 
-    System.Windows.Media.Animation.ClockCollection to an array of Clocks,starting 
-    at the specified index position.
+    System.Windows.Media.Animation.ClockCollection to an array of Clocks,starting at the specified 
+    index position.
   
   
    array: The destination array.
@@ -44,8 +44,8 @@ class ClockCollection(object,ICollection[Clock],IEnumerable[Clock],IEnumerable):
   """
   Equals(objA: ClockCollection,objB: ClockCollection) -> bool
   
-   Indicates whether the two specified 
-    System.Windows.Media.Animation.ClockCollection collections are equal.
+   Indicates whether the two specified System.Windows.Media.Animation.ClockCollection collections 
+    are equal.
   
   
    objA: The first value to compare.

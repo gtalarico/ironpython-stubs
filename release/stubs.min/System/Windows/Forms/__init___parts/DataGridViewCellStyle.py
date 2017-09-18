@@ -21,21 +21,18 @@ class DataGridViewCellStyle(object,ICloneable):
   Clone(self: DataGridViewCellStyle) -> DataGridViewCellStyle
   
    Creates an exact copy of this System.Windows.Forms.DataGridViewCellStyle.
-   Returns: A System.Windows.Forms.DataGridViewCellStyle that represents an exact copy of 
-    this cell style.
+   Returns: A System.Windows.Forms.DataGridViewCellStyle that represents an exact copy of this cell style.
   """
   pass
  def Equals(self,o):
   """
   Equals(self: DataGridViewCellStyle,o: object) -> bool
   
-   Returns a value indicating whether this instance is equivalent to the specified 
-    object.
-  
+   Returns a value indicating whether this instance is equivalent to the specified object.
   
    o: An object to compare with this instance,or null.
-   Returns: true if o is a System.Windows.Forms.DataGridViewCellStyle and has the same 
-    property values as this instance; otherwise,false.
+   Returns: true if o is a System.Windows.Forms.DataGridViewCellStyle and has the same property values as 
+    this instance; otherwise,false.
   """
   pass
  def GetHashCode(self):

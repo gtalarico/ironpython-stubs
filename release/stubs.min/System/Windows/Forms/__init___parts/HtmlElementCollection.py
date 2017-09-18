@@ -16,8 +16,7 @@ class HtmlElementCollection(object,ICollection,IEnumerable):
   GetEnumerator(self: HtmlElementCollection) -> IEnumerator
   
    Returns an enumerator that iterates through a collection.
-   Returns: An System.Collections.IEnumerator that can be used to iterate through the 
-    collection.
+   Returns: An System.Collections.IEnumerator that can be used to iterate through the collection.
   """
   pass
  def __getitem__(self,*args):

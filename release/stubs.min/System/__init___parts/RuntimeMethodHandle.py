@@ -4,9 +4,7 @@ class RuntimeMethodHandle(object,ISerializable):
   """
   Equals(self: RuntimeMethodHandle,handle: RuntimeMethodHandle) -> bool
   
-   Indicates whether this instance is equal to a specified 
-    System.RuntimeMethodHandle.
-  
+   Indicates whether this instance is equal to a specified System.RuntimeMethodHandle.
   
    handle: A System.RuntimeMethodHandle to compare to this instance.
    Returns: true if handle is equal to the value of this instance; otherwise,false.
@@ -15,8 +13,8 @@ class RuntimeMethodHandle(object,ISerializable):
    Indicates whether this instance is equal to a specified object.
   
    obj: A System.Object to compare to this instance.
-   Returns: true if obj is a System.RuntimeMethodHandle and equal to the value of this 
-    instance; otherwise,false.
+   Returns: true if obj is a System.RuntimeMethodHandle and equal to the value of this instance; otherwise,
+    false.
   """
   pass
  def GetFunctionPointer(self):
@@ -38,8 +36,8 @@ class RuntimeMethodHandle(object,ISerializable):
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: RuntimeMethodHandle,info: SerializationInfo,context: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo with the data 
-    necessary to deserialize the field represented by this instance.
+   Populates a System.Runtime.Serialization.SerializationInfo with the data necessary to 
+    deserialize the field represented by this instance.
   
   
    info: The object to populate with serialization information.

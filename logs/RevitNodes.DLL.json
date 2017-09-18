@@ -1,0 +1,17 @@
+{
+  "RevitNodes.DLL": {
+    "Revit.GeometryObjects": "<module 'GeometryObjects' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "Revit.Graphics": "<module 'Graphics' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "Revit.GeometryConversion": "<module 'GeometryConversion' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "Revit.Elements.Views": "<module 'Views' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "Revit.AnalysisDisplay": "<module 'AnalysisDisplay' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "Revit.Application": "<module 'Application' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "Revit.Filter": "<module 'Filter' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "Revit": "<module 'Revit' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "Revit.References": "<module 'References' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "Revit.GeometryReferences": "<module 'GeometryReferences' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "Revit.Elements.InternalUtilities": "<module 'InternalUtilities' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "Revit.Transaction": "<module 'Transaction' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "Revit.Elements": "<module 'Elements' (CLS module from RevitNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

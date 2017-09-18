@@ -15,9 +15,8 @@ class HierarchicalVirtualizationConstraints(object):
  @staticmethod
  def __new__(self,cacheLength,cacheLengthUnit,viewport):
   """
-  __new__[HierarchicalVirtualizationConstraints]() -> HierarchicalVirtualizationConstraints
-  
-  __new__(cls: type,cacheLength: VirtualizationCacheLength,cacheLengthUnit: VirtualizationCacheLengthUnit,viewport: Rect)
+  __new__(cls: type,cacheLength: VirtualizationCacheLength,cacheLengthUnit: VirtualizationCacheLengthUnit,viewport: Rect)
+  __new__[HierarchicalVirtualizationConstraints]() -> HierarchicalVirtualizationConstraints
   """
   pass
  def __ne__(self,*args):

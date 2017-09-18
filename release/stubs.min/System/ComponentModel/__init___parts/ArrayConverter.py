@@ -21,15 +21,13 @@ class ArrayConverter(CollectionConverter):
   """
   GetProperties(self: ArrayConverter,context: ITypeDescriptorContext,value: object,attributes: Array[Attribute]) -> PropertyDescriptorCollection
   
-   Gets a collection of properties for the type of array specified by the value 
-    parameter.
-  
+   Gets a collection of properties for the type of array specified by the value parameter.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    value: An System.Object that specifies the type of array to get the properties for.
    attributes: An array of type System.Attribute that will be used as a filter.
-   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that 
-    are exposed for an array,or null if there are no properties.
+   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed for an 
+    array,or null if there are no properties.
   """
   pass
  def GetPropertiesSupported(self,context=None):
@@ -40,8 +38,8 @@ class ArrayConverter(CollectionConverter):
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    Returns: true because 
-    System.ComponentModel.ArrayConverter.GetProperties(System.ComponentModel.ITypeDe
-    scriptorContext,System.Object,System.Attribute[]) should be called to find the 
-    properties of this object. This method never returns false.
+    System.ComponentModel.ArrayConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,S
+    ystem.Object,System.Attribute[]) should be called to find the properties of this object. This 
+    method never returns false.
   """
   pass

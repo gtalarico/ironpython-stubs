@@ -8,9 +8,7 @@ class HelpProvider(Component,IComponent,IDisposable,IExtenderProvider):
   """
   CanExtend(self: HelpProvider,target: object) -> bool
   
-   Specifies whether this object can provide its extender properties to the 
-    specified object.
-  
+   Specifies whether this object can provide its extender properties to the specified object.
   
    target: The object that the externder properties are provided to.
    Returns: true if this object can provide its extender properties; otherwise,false.
@@ -19,12 +17,11 @@ class HelpProvider(Component,IComponent,IDisposable,IExtenderProvider):
  def Dispose(self):
   """
   Dispose(self: Component,disposing: bool)
-   Releases the unmanaged resources used by the System.ComponentModel.Component 
-    and optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.ComponentModel.Component and optionally 
+    releases the managed resources.
   
   
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetHelpKeyword(self,ctl):
@@ -34,22 +31,20 @@ class HelpProvider(Component,IComponent,IDisposable,IExtenderProvider):
    Returns the Help keyword for the specified control.
   
    ctl: A System.Windows.Forms.Control from which to retrieve the Help topic.
-   Returns: The Help keyword associated with this control,or null if the 
-    System.Windows.Forms.HelpProvider is currently configured to display the entire 
-    Help file or is configured to provide a Help string.
+   Returns: The Help keyword associated with this control,or null if the System.Windows.Forms.HelpProvider 
+    is currently configured to display the entire Help file or is configured to provide a Help 
+    string.
   """
   pass
  def GetHelpNavigator(self,ctl):
   """
   GetHelpNavigator(self: HelpProvider,ctl: Control) -> HelpNavigator
   
-   Returns the current System.Windows.Forms.HelpNavigator setting for the 
-    specified control.
-  
+   Returns the current System.Windows.Forms.HelpNavigator setting for the specified control.
   
    ctl: A System.Windows.Forms.Control from which to retrieve the Help navigator.
-   Returns: The System.Windows.Forms.HelpNavigator setting for the specified control. The 
-    default is System.Windows.Forms.HelpNavigator.AssociateIndex.
+   Returns: The System.Windows.Forms.HelpNavigator setting for the specified control. The default is 
+    System.Windows.Forms.HelpNavigator.AssociateIndex.
   """
   pass
  def GetHelpString(self,ctl):
@@ -66,23 +61,20 @@ class HelpProvider(Component,IComponent,IDisposable,IExtenderProvider):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetShowHelp(self,ctl):
   """
   GetShowHelp(self: HelpProvider,ctl: Control) -> bool
   
-   Returns a value indicating whether the specified control's Help should be 
-    displayed.
-  
+   Returns a value indicating whether the specified control's Help should be displayed.
   
    ctl: A System.Windows.Forms.Control for which Help will be displayed.
    Returns: true if Help will be displayed for the control; otherwise,false.
@@ -94,11 +86,11 @@ class HelpProvider(Component,IComponent,IDisposable,IExtenderProvider):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -118,21 +110,17 @@ class HelpProvider(Component,IComponent,IDisposable,IExtenderProvider):
  def SetHelpKeyword(self,ctl,keyword):
   """
   SetHelpKeyword(self: HelpProvider,ctl: Control,keyword: str)
-   Specifies the keyword used to retrieve Help when the user invokes Help for the 
-    specified control.
+   Specifies the keyword used to retrieve Help when the user invokes Help for the specified control.
   
-  
-   ctl: A System.Windows.Forms.Control that specifies the control for which to set the 
-    Help topic.
-  
+   ctl: A System.Windows.Forms.Control that specifies the control for which to set the Help topic.
    keyword: The Help keyword to associate with the control.
   """
   pass
  def SetHelpNavigator(self,ctl,navigator):
   """
   SetHelpNavigator(self: HelpProvider,ctl: Control,navigator: HelpNavigator)
-   Specifies the Help command to use when retrieving Help from the Help file for 
-    the specified control.
+   Specifies the Help command to use when retrieving Help from the Help file for the specified 
+    control.
   
   
    ctl: A System.Windows.Forms.Control for which to set the Help keyword.
@@ -166,10 +154,17 @@ class HelpProvider(Component,IComponent,IDisposable,IExtenderProvider):
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

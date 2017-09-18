@@ -9,13 +9,12 @@ class RawSecurityDescriptor(GenericSecurityDescriptor):
  def SetFlags(self,flags):
   """
   SetFlags(self: RawSecurityDescriptor,flags: ControlFlags)
-   Sets the System.Security.AccessControl.RawSecurityDescriptor.ControlFlags 
-    property of this System.Security.AccessControl.RawSecurityDescriptor object to 
-    the specified value.
+   Sets the System.Security.AccessControl.RawSecurityDescriptor.ControlFlags property of this 
+    System.Security.AccessControl.RawSecurityDescriptor object to the specified value.
   
   
-   flags: One or more values of the System.Security.AccessControl.ControlFlags 
-    enumeration combined with a logical OR operation.
+   flags: One or more values of the System.Security.AccessControl.ControlFlags enumeration combined with a 
+    logical OR operation.
   """
   pass
  @staticmethod

@@ -57,13 +57,20 @@ from collections import defaultdict
 import json
 from pprint import pprint
 
-join = os.path.join
-project_dir = os.getcwd()  # Must execute from project dir
+
+#############################################################################
+#TODO: Integrate with CLI
+#TODO: FIX Vars
+#TODO: FIX Character Replacement + Optimize
+#############################################################################
 
 ##########
 # CONFIG #
 ##########
-SAVE_PATH = os.path.join(project_dir, 'stubs')
+join = os.path.join
+project_dir = os.getcwd()  # Must execute from project dir
+
+SAVE_PATH = os.path.join(project_dir, 'release', 'stubs2')
 LIMIT_IN_KB = 200
 FILESIZE_LIMITE = LIMIT_IN_KB * 1024
 
@@ -85,9 +92,10 @@ def write_source(filepath, source):
     print('File Written: {}'.format(filepath))
 
 target_files = []
-
 TESTING = False
 # TESTING = True
+print('Starting...')
+print(SAVE_PATH)
 
 for root, subfolders, files in os.walk(SAVE_PATH):
     py_files = [f for f in files if f.endswith('.py')]
@@ -96,7 +104,7 @@ for root, subfolders, files in os.walk(SAVE_PATH):
         filesize = os.path.getsize(filepath)
         filedir = os.path.dirname(filepath)
 
-        new_filedir = filedir.replace('\stubs', '\stubs.min')
+        new_filedir = filedir.replace('\stubs2', '\stubs2.min')
         new_filepath = os.path.join(new_filedir, filename)
         source = read_source(filepath)
 

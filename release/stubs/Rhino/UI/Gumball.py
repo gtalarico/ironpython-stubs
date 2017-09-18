@@ -470,8 +470,8 @@ class GumballObject(object, IDisposable):
             frame: The frame.
             frameBoundingBox: Bounding box with respect to frame.
             Returns: true if input is valid and gumball is set. false if input is not valid.
-                  
-               In this case, gumball is set to the default.
+                    In this 
+             case, gumball is set to the default.
         
         SetFromBoundingBox(self: GumballObject, boundingBox: BoundingBox) -> bool
         """

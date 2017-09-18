@@ -7,27 +7,23 @@ class Byte(object,IComparable,IFormattable,IConvertible,IComparable[Byte],IEquat
   """
   CompareTo(self: Byte,value: Byte) -> int
   
-   Compares this instance to a specified 8-bit unsigned integer and returns an 
-    indication of their relative values.
-  
-  
-   value: An 8-bit unsigned integer to compare.
-   Returns: A signed integer that indicates the relative order of this instance and 
-    value.Return Value Description Less than zero This instance is less than value. 
-    Zero This instance is equal to value. Greater than zero This instance is 
-    greater than value.
-  
-  CompareTo(self: Byte,value: object) -> int
-  
-   Compares this instance to a specified object and returns an indication of their 
+   Compares this instance to a specified 8-bit unsigned integer and returns an indication of their 
     relative values.
   
   
+   value: An 8-bit unsigned integer to compare.
+   Returns: A signed integer that indicates the relative order of this instance and value.Return Value 
+    Description Less than zero This instance is less than value. Zero This instance is equal to 
+    value. Greater than zero This instance is greater than value.
+  
+  CompareTo(self: Byte,value: object) -> int
+  
+   Compares this instance to a specified object and returns an indication of their relative values.
+  
    value: An object to compare,or null.
-   Returns: A signed integer that indicates the relative order of this instance and 
-    value.Return Value Description Less than zero This instance is less than value. 
-    Zero This instance is equal to value. Greater than zero This instance is 
-    greater than value.-or- value is null.
+   Returns: A signed integer that indicates the relative order of this instance and value.Return Value 
+    Description Less than zero This instance is less than value. Zero This instance is equal to 
+    value. Greater than zero This instance is greater than value.-or- value is null.
   """
   pass
  def conjugate(self,*args):
@@ -37,8 +33,8 @@ class Byte(object,IComparable,IFormattable,IConvertible,IComparable[Byte],IEquat
   """
   Equals(self: Byte,obj: Byte) -> bool
   
-   Returns a value indicating whether this instance and a specified System.Byte 
-    object represent the same value.
+   Returns a value indicating whether this instance and a specified System.Byte object represent 
+    the same value.
   
   
    obj: An object to compare to this instance.
@@ -48,8 +44,8 @@ class Byte(object,IComparable,IFormattable,IConvertible,IComparable[Byte],IEquat
    Returns a value indicating whether this instance is equal to a specified object.
   
    obj: An object to compare with this instance,or null.
-   Returns: true if obj is an instance of System.Byte and equals the value of this 
-    instance; otherwise,false.
+   Returns: true if obj is an instance of System.Byte and equals the value of this instance; otherwise,
+    false.
   """
   pass
  def GetHashCode(self):
@@ -73,32 +69,31 @@ class Byte(object,IComparable,IFormattable,IConvertible,IComparable[Byte],IEquat
   """
   Parse(s: str,provider: IFormatProvider) -> Byte
   
-   Converts the string representation of a number in a specified culture-specific 
-    format to its System.Byte equivalent.
+   Converts the string representation of a number in a specified culture-specific format to its 
+    System.Byte equivalent.
   
   
    s: A string that contains a number to convert. The string is interpreted using the 
     System.Globalization.NumberStyles.Integer style.
   
-   provider: An object that supplies culture-specific parsing information about s. If 
-    provider is null,the thread current culture is used.
+   provider: An object that supplies culture-specific parsing information about s. If provider is null,the 
+    thread current culture is used.
   
    Returns: A byte value that is equivalent to the number contained in s.
   Parse(s: str,style: NumberStyles,provider: IFormatProvider) -> Byte
   
-   Converts the string representation of a number in a specified style and 
-    culture-specific format to its System.Byte equivalent.
+   Converts the string representation of a number in a specified style and culture-specific format 
+    to its System.Byte equivalent.
   
   
-   s: A string that contains a number to convert. The string is interpreted using the 
-    style specified by style.
+   s: A string that contains a number to convert. The string is interpreted using the style specified 
+    by style.
   
-   style: A bitwise combination of enumeration values that indicates the style elements 
-    that can be present in s. A typical value to specify is 
-    System.Globalization.NumberStyles.Integer.
+   style: A bitwise combination of enumeration values that indicates the style elements that can be 
+    present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
   
-   provider: An object that supplies culture-specific information about the format of s. If 
-    provider is null,the thread current culture is used.
+   provider: An object that supplies culture-specific information about the format of s. If provider is null,
+    the thread current culture is used.
   
    Returns: A byte value that is equivalent to the number contained in s.
   Parse(s: str) -> Byte
@@ -111,16 +106,15 @@ class Byte(object,IComparable,IFormattable,IConvertible,IComparable[Byte],IEquat
    Returns: A byte value that is equivalent to the number contained in s.
   Parse(s: str,style: NumberStyles) -> Byte
   
-   Converts the string representation of a number in a specified style to its 
-    System.Byte equivalent.
+   Converts the string representation of a number in a specified style to its System.Byte 
+    equivalent.
   
   
-   s: A string that contains a number to convert. The string is interpreted using the 
-    style specified by style.
+   s: A string that contains a number to convert. The string is interpreted using the style specified 
+    by style.
   
-   style: A bitwise combination of enumeration values that indicates the style elements 
-    that can be present in s. A typical value to specify is 
-    System.Globalization.NumberStyles.Integer.
+   style: A bitwise combination of enumeration values that indicates the style elements that can be 
+    present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
   
    Returns: A byte value that is equivalent to the number contained in s.
   """
@@ -129,44 +123,40 @@ class Byte(object,IComparable,IFormattable,IConvertible,IComparable[Byte],IEquat
   """
   ToString(self: Byte,provider: IFormatProvider) -> str
   
-   Converts the numeric value of the current System.Byte object to its equivalent 
-    string representation using the specified culture-specific formatting 
-    information.
+   Converts the numeric value of the current System.Byte object to its equivalent string 
+    representation using the specified culture-specific formatting information.
   
   
    provider: An object that supplies culture-specific formatting information.
-   Returns: The string representation of the value of this object in the format specified 
-    by the provider parameter.
+   Returns: The string representation of the value of this object in the format specified by the provider 
+    parameter.
   
   ToString(self: Byte,format: str,provider: IFormatProvider) -> str
   
-   Converts the value of the current System.Byte object to its equivalent string 
-    representation using the specified format and culture-specific formatting 
-    information.
+   Converts the value of the current System.Byte object to its equivalent string representation 
+    using the specified format and culture-specific formatting information.
   
   
    format: A standard or custom numeric format string.
    provider: An object that supplies culture-specific formatting information.
-   Returns: The string representation of the current System.Byte object,formatted as 
-    specified by the format and provider parameters.
+   Returns: The string representation of the current System.Byte object,formatted as specified by the 
+    format and provider parameters.
   
   ToString(self: Byte) -> str
   
-   Converts the value of the current System.Byte object to its equivalent string 
-    representation.
-  
-   Returns: The string representation of the value of this object,which consists of a 
-    sequence of digits that range from 0 to 9 with no leading zeroes.
+   Converts the value of the current System.Byte object to its equivalent string representation.
+   Returns: The string representation of the value of this object,which consists of a sequence of digits 
+    that range from 0 to 9 with no leading zeroes.
   
   ToString(self: Byte,format: str) -> str
   
-   Converts the value of the current System.Byte object to its equivalent string 
-    representation using the specified format.
+   Converts the value of the current System.Byte object to its equivalent string representation 
+    using the specified format.
   
   
    format: A numeric format string.
-   Returns: The string representation of the current System.Byte object,formatted as 
-    specified by the format parameter.
+   Returns: The string representation of the current System.Byte object,formatted as specified by the 
+    format parameter.
   """
   pass
  @staticmethod
@@ -174,27 +164,25 @@ class Byte(object,IComparable,IFormattable,IConvertible,IComparable[Byte],IEquat
   """
   TryParse(s: str,style: NumberStyles,provider: IFormatProvider) -> (bool,Byte)
   
-   Converts the string representation of a number in a specified style and 
-    culture-specific format to its System.Byte equivalent. A return value indicates 
-    whether the conversion succeeded or failed.
+   Converts the string representation of a number in a specified style and culture-specific format 
+    to its System.Byte equivalent. A return value indicates whether the conversion succeeded or 
+    failed.
   
   
-   s: A string containing a number to convert. The string is interpreted using the 
-    style specified by style.
+   s: A string containing a number to convert. The string is interpreted using the style specified by 
+    style.
   
-   style: A bitwise combination of enumeration values that indicates the style elements 
-    that can be present in s. A typical value to specify is 
-    System.Globalization.NumberStyles.Integer.
+   style: A bitwise combination of enumeration values that indicates the style elements that can be 
+    present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
   
-   provider: An object that supplies culture-specific formatting information about s. If 
-    provider is null,the thread current culture is used.
+   provider: An object that supplies culture-specific formatting information about s. If provider is null,
+    the thread current culture is used.
   
    Returns: true if s was converted successfully; otherwise,false.
   TryParse(s: str) -> (bool,Byte)
   
-   Tries to convert the string representation of a number to its System.Byte 
-    equivalent,and returns a value that indicates whether the conversion 
-    succeeded.
+   Tries to convert the string representation of a number to its System.Byte equivalent,and 
+    returns a value that indicates whether the conversion succeeded.
   
   
    s: A string that contains a number to convert. The string is interpreted using the 

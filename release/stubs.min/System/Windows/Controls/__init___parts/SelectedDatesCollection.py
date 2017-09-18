@@ -7,8 +7,8 @@ class SelectedDatesCollection(ObservableCollection[DateTime],IList[DateTime],ICo
  def AddRange(self,start,end):
   """
   AddRange(self: SelectedDatesCollection,start: DateTime,end: DateTime)
-   Adds all the dates in the specified range,which includes the first and last 
-    dates,to the collection.
+   Adds all the dates in the specified range,which includes the first and last dates,to the 
+    collection.
   
   
    start: The first date to add to the collection.
@@ -50,9 +50,7 @@ class SelectedDatesCollection(ObservableCollection[DateTime],IList[DateTime],ICo
  def OnCollectionChanged(self,*args):
   """
   OnCollectionChanged(self: ObservableCollection[DateTime],e: NotifyCollectionChangedEventArgs)
-   Raises the System.Collections.ObjectModel.ObservableCollection event with the 
-    provided arguments.
-  
+   Raises the System.Collections.ObjectModel.ObservableCollection event with the provided arguments.
   
    e: Arguments of the event being raised.
   """
@@ -60,9 +58,7 @@ class SelectedDatesCollection(ObservableCollection[DateTime],IList[DateTime],ICo
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: ObservableCollection[DateTime],e: PropertyChangedEventArgs)
-   Raises the System.Collections.ObjectModel.ObservableCollection event with the 
-    provided arguments.
-  
+   Raises the System.Collections.ObjectModel.ObservableCollection event with the provided arguments.
   
    e: Arguments of the event being raised.
   """

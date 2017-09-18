@@ -4,36 +4,32 @@ class DirectoryObjectSecurity(ObjectSecurity):
   """
   AccessRuleFactory(self: DirectoryObjectSecurity,identityReference: IdentityReference,accessMask: int,isInherited: bool,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,type: AccessControlType,objectType: Guid,inheritedObjectType: Guid) -> AccessRule
   
-   Initializes a new instance of the System.Security.AccessControl.AccessRule 
-    class with the specified values.
+   Initializes a new instance of the System.Security.AccessControl.AccessRule class with the 
+    specified values.
   
   
-   identityReference: The identity to which the access rule applies.  It must be an object that can 
-    be cast as a System.Security.Principal.SecurityIdentifier.
+   identityReference: The identity to which the access rule applies.  It must be an object that can be cast as a 
+    System.Security.Principal.SecurityIdentifier.
   
-   accessMask: The access mask of this rule. The access mask is a 32-bit collection of 
-    anonymous bits,the meaning of which is defined by the individual integrators.
+   accessMask: The access mask of this rule. The access mask is a 32-bit collection of anonymous bits,the 
+    meaning of which is defined by the individual integrators.
   
    isInherited: true if this rule is inherited from a parent container.
    inheritanceFlags: Specifies the inheritance properties of the access rule.
-   propagationFlags: Specifies whether inherited access rules are automatically propagated. The 
-    propagation flags are ignored if inheritanceFlags is set to 
-    System.Security.AccessControl.InheritanceFlags.None.
+   propagationFlags: Specifies whether inherited access rules are automatically propagated. The propagation flags are 
+    ignored if inheritanceFlags is set to System.Security.AccessControl.InheritanceFlags.None.
   
    type: Specifies the valid access control type.
    objectType: The identity of the class of objects to which the new access rule applies.
-   inheritedObjectType: The identity of the class of child objects which can inherit the new access 
-    rule.
-  
+   inheritedObjectType: The identity of the class of child objects which can inherit the new access rule.
    Returns: The System.Security.AccessControl.AccessRule object that this method creates.
   """
   pass
  def AddAccessRule(self,*args):
   """
   AddAccessRule(self: DirectoryObjectSecurity,rule: ObjectAccessRule)
-   Adds the specified access rule to the Discretionary Access Control List (DACL) 
-    associated with this System.Security.AccessControl.DirectoryObjectSecurity 
-    object.
+   Adds the specified access rule to the Discretionary Access Control List (DACL) associated with 
+    this System.Security.AccessControl.DirectoryObjectSecurity object.
   
   
    rule: The access rule to add.
@@ -42,9 +38,8 @@ class DirectoryObjectSecurity(ObjectSecurity):
  def AddAuditRule(self,*args):
   """
   AddAuditRule(self: DirectoryObjectSecurity,rule: ObjectAuditRule)
-   Adds the specified audit rule to the System Access Control List (SACL) 
-    associated with this System.Security.AccessControl.DirectoryObjectSecurity 
-    object.
+   Adds the specified audit rule to the System Access Control List (SACL) associated with this 
+    System.Security.AccessControl.DirectoryObjectSecurity object.
   
   
    rule: The audit rule to add.
@@ -54,21 +49,20 @@ class DirectoryObjectSecurity(ObjectSecurity):
   """
   AuditRuleFactory(self: DirectoryObjectSecurity,identityReference: IdentityReference,accessMask: int,isInherited: bool,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,flags: AuditFlags,objectType: Guid,inheritedObjectType: Guid) -> AuditRule
   
-   Initializes a new instance of the System.Security.AccessControl.AuditRule class 
-    with the specified values.
+   Initializes a new instance of the System.Security.AccessControl.AuditRule class with the 
+    specified values.
   
   
-   identityReference: The identity to which the audit rule applies.  It must be an object that can be 
-    cast as a System.Security.Principal.SecurityIdentifier.
+   identityReference: The identity to which the audit rule applies.  It must be an object that can be cast as a 
+    System.Security.Principal.SecurityIdentifier.
   
-   accessMask: The access mask of this rule. The access mask is a 32-bit collection of 
-    anonymous bits,the meaning of which is defined by the individual integrators.
+   accessMask: The access mask of this rule. The access mask is a 32-bit collection of anonymous bits,the 
+    meaning of which is defined by the individual integrators.
   
    isInherited: true if this rule is inherited from a parent container.
    inheritanceFlags: Specifies the inheritance properties of the audit rule.
-   propagationFlags: Specifies whether inherited audit rules are automatically propagated. The 
-    propagation flags are ignored if inheritanceFlags is set to 
-    System.Security.AccessControl.InheritanceFlags.None.
+   propagationFlags: Specifies whether inherited audit rules are automatically propagated. The propagation flags are 
+    ignored if inheritanceFlags is set to System.Security.AccessControl.InheritanceFlags.None.
   
    flags: Specifies the conditions for which the rule is audited.
    objectType: The identity of the class of objects to which the new audit rule applies.
@@ -80,15 +74,12 @@ class DirectoryObjectSecurity(ObjectSecurity):
   """
   GetAccessRules(self: DirectoryObjectSecurity,includeExplicit: bool,includeInherited: bool,targetType: Type) -> AuthorizationRuleCollection
   
-   Gets a collection of the access rules associated with the specified security 
-    identifier.
-  
+   Gets a collection of the access rules associated with the specified security identifier.
   
    includeExplicit: true to include access rules explicitly set for the object.
    includeInherited: true to include inherited access rules.
-   targetType: The security identifier for which to retrieve access rules. This must be an 
-    object that can be cast as a System.Security.Principal.SecurityIdentifier 
-    object.
+   targetType: The security identifier for which to retrieve access rules. This must be an object that can be 
+    cast as a System.Security.Principal.SecurityIdentifier object.
   
    Returns: The collection of access rules associated with the specified 
     System.Security.Principal.SecurityIdentifier object.
@@ -98,15 +89,12 @@ class DirectoryObjectSecurity(ObjectSecurity):
   """
   GetAuditRules(self: DirectoryObjectSecurity,includeExplicit: bool,includeInherited: bool,targetType: Type) -> AuthorizationRuleCollection
   
-   Gets a collection of the audit rules associated with the specified security 
-    identifier.
-  
+   Gets a collection of the audit rules associated with the specified security identifier.
   
    includeExplicit: true to include audit rules explicitly set for the object.
    includeInherited: true to include inherited audit rules.
-   targetType: The security identifier for which to retrieve audit rules. This must be an 
-    object that can be cast as a System.Security.Principal.SecurityIdentifier 
-    object.
+   targetType: The security identifier for which to retrieve audit rules. This must be an object that can be 
+    cast as a System.Security.Principal.SecurityIdentifier object.
   
    Returns: The collection of audit rules associated with the specified 
     System.Security.Principal.SecurityIdentifier object.
@@ -116,10 +104,9 @@ class DirectoryObjectSecurity(ObjectSecurity):
   """
   RemoveAccessRule(self: DirectoryObjectSecurity,rule: ObjectAccessRule) -> bool
   
-   Removes access rules that contain the same security identifier and access mask 
-    as the specified access rule from the Discretionary Access Control List (DACL) 
-    associated with this System.Security.AccessControl.DirectoryObjectSecurity 
-    object.
+   Removes access rules that contain the same security identifier and access mask as the specified 
+    access rule from the Discretionary Access Control List (DACL) associated with this 
+    System.Security.AccessControl.DirectoryObjectSecurity object.
   
   
    rule: The access rule to remove.
@@ -129,10 +116,9 @@ class DirectoryObjectSecurity(ObjectSecurity):
  def RemoveAccessRuleAll(self,*args):
   """
   RemoveAccessRuleAll(self: DirectoryObjectSecurity,rule: ObjectAccessRule)
-   Removes all access rules that have the same security identifier as the 
-    specified access rule from the Discretionary Access Control List (DACL) 
-    associated with this System.Security.AccessControl.DirectoryObjectSecurity 
-    object.
+   Removes all access rules that have the same security identifier as the specified access rule 
+    from the Discretionary Access Control List (DACL) associated with this 
+    System.Security.AccessControl.DirectoryObjectSecurity object.
   
   
    rule: The access rule to remove.
@@ -141,8 +127,8 @@ class DirectoryObjectSecurity(ObjectSecurity):
  def RemoveAccessRuleSpecific(self,*args):
   """
   RemoveAccessRuleSpecific(self: DirectoryObjectSecurity,rule: ObjectAccessRule)
-   Removes all access rules that exactly match the specified access rule from the 
-    Discretionary Access Control List (DACL) associated with this 
+   Removes all access rules that exactly match the specified access rule from the Discretionary 
+    Access Control List (DACL) associated with this 
     System.Security.AccessControl.DirectoryObjectSecurity object.
   
   
@@ -153,9 +139,9 @@ class DirectoryObjectSecurity(ObjectSecurity):
   """
   RemoveAuditRule(self: DirectoryObjectSecurity,rule: ObjectAuditRule) -> bool
   
-   Removes audit rules that contain the same security identifier and access mask 
-    as the specified audit rule from the System Access Control List (SACL) 
-    associated with this System.Security.AccessControl.CommonObjectSecurity object.
+   Removes audit rules that contain the same security identifier and access mask as the specified 
+    audit rule from the System Access Control List (SACL) associated with this 
+    System.Security.AccessControl.CommonObjectSecurity object.
   
   
    rule: The audit rule to remove.
@@ -165,8 +151,8 @@ class DirectoryObjectSecurity(ObjectSecurity):
  def RemoveAuditRuleAll(self,*args):
   """
   RemoveAuditRuleAll(self: DirectoryObjectSecurity,rule: ObjectAuditRule)
-   Removes all audit rules that have the same security identifier as the specified 
-    audit rule from the System Access Control List (SACL) associated with this 
+   Removes all audit rules that have the same security identifier as the specified audit rule from 
+    the System Access Control List (SACL) associated with this 
     System.Security.AccessControl.DirectoryObjectSecurity object.
   
   
@@ -176,9 +162,9 @@ class DirectoryObjectSecurity(ObjectSecurity):
  def RemoveAuditRuleSpecific(self,*args):
   """
   RemoveAuditRuleSpecific(self: DirectoryObjectSecurity,rule: ObjectAuditRule)
-   Removes all audit rules that exactly match the specified audit rule from the 
-    System Access Control List (SACL) associated with this 
-    System.Security.AccessControl.DirectoryObjectSecurity object.
+   Removes all audit rules that exactly match the specified audit rule from the System Access 
+    Control List (SACL) associated with this System.Security.AccessControl.DirectoryObjectSecurity 
+    object.
   
   
    rule: The audit rule to remove.
@@ -187,9 +173,9 @@ class DirectoryObjectSecurity(ObjectSecurity):
  def ResetAccessRule(self,*args):
   """
   ResetAccessRule(self: DirectoryObjectSecurity,rule: ObjectAccessRule)
-   Removes all access rules in the Discretionary Access Control List (DACL) 
-    associated with this System.Security.AccessControl.DirectoryObjectSecurity 
-    object and then adds the specified access rule.
+   Removes all access rules in the Discretionary Access Control List (DACL) associated with this 
+    System.Security.AccessControl.DirectoryObjectSecurity object and then adds the specified access 
+    rule.
   
   
    rule: The access rule to reset.
@@ -198,11 +184,10 @@ class DirectoryObjectSecurity(ObjectSecurity):
  def SetAccessRule(self,*args):
   """
   SetAccessRule(self: DirectoryObjectSecurity,rule: ObjectAccessRule)
-   Removes all access rules that contain the same security identifier and 
-    qualifier as the specified access rule in the Discretionary Access Control List 
-    (DACL) associated with this 
-    System.Security.AccessControl.DirectoryObjectSecurity object and then adds the 
-    specified access rule.
+   Removes all access rules that contain the same security identifier and qualifier as the 
+    specified access rule in the Discretionary Access Control List (DACL) associated with this 
+    System.Security.AccessControl.DirectoryObjectSecurity object and then adds the specified access 
+    rule.
   
   
    rule: The access rule to set.
@@ -211,10 +196,10 @@ class DirectoryObjectSecurity(ObjectSecurity):
  def SetAuditRule(self,*args):
   """
   SetAuditRule(self: DirectoryObjectSecurity,rule: ObjectAuditRule)
-   Removes all audit rules that contain the same security identifier and qualifier 
-    as the specified audit rule in the System Access Control List (SACL) associated 
-    with this System.Security.AccessControl.DirectoryObjectSecurity object and then 
-    adds the specified audit rule.
+   Removes all audit rules that contain the same security identifier and qualifier as the specified 
+    audit rule in the System Access Control List (SACL) associated with this 
+    System.Security.AccessControl.DirectoryObjectSecurity object and then adds the specified audit 
+    rule.
   
   
    rule: The audit rule to set.

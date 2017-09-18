@@ -8,8 +8,8 @@ class DataGridCell(object):
   """
   Equals(self: DataGridCell,o: object) -> bool
   
-   Gets a value indicating whether the System.Windows.Forms.DataGridCell is 
-    identical to a second System.Windows.Forms.DataGridCell.
+   Gets a value indicating whether the System.Windows.Forms.DataGridCell is identical to a second 
+    System.Windows.Forms.DataGridCell.
   
   
    o: An object you are to comparing.
@@ -39,9 +39,8 @@ class DataGridCell(object):
  @staticmethod
  def __new__(self,r,c):
   """
-  __new__[DataGridCell]() -> DataGridCell
-  
-  __new__(cls: type,r: int,c: int)
+  __new__(cls: type,r: int,c: int)
+  __new__[DataGridCell]() -> DataGridCell
   """
   pass
  def __ne__(self,*args):

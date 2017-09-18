@@ -34,29 +34,24 @@ class UIElementCollection(object,IList,ICollection,IEnumerable):
   """
   Contains(self: UIElementCollection,element: UIElement) -> bool
   
-   Determines whether a specified element is in the 
-    System.Windows.Controls.UIElementCollection.
-  
+   Determines whether a specified element is in the System.Windows.Controls.UIElementCollection.
   
    element: The element to find.
-   Returns: true if the specified System.Windows.UIElement is found in the collection; 
-    otherwise,false.
+   Returns: true if the specified System.Windows.UIElement is found in the collection; otherwise,false.
   """
   pass
  def CopyTo(self,array,index):
   """
   CopyTo(self: UIElementCollection,array: Array[UIElement],index: int)
-   Copies a System.Windows.UIElement from a 
-    System.Windows.Controls.UIElementCollection to an array,starting at a 
-    specified index position.
+   Copies a System.Windows.UIElement from a System.Windows.Controls.UIElementCollection to an 
+    array,starting at a specified index position.
   
   
    array: An array of System.Windows.UIElement objects.
    index: The index position of the element where copying begins.
   CopyTo(self: UIElementCollection,array: Array,index: int)
-   Copies a System.Windows.UIElement from a 
-    System.Windows.Controls.UIElementCollection to an array,starting at a 
-    specified index position.
+   Copies a System.Windows.UIElement from a System.Windows.Controls.UIElementCollection to an 
+    array,starting at a specified index position.
   
   
    array: An array into which the collection is copied.
@@ -67,9 +62,7 @@ class UIElementCollection(object,IList,ICollection,IEnumerable):
   """
   GetEnumerator(self: UIElementCollection) -> IEnumerator
   
-   Returns an enumerator that can iterate the 
-    System.Windows.Controls.UIElementCollection.
-  
+   Returns an enumerator that can iterate the System.Windows.Controls.UIElementCollection.
    Returns: An System.Collections.IEnumerator that can list the members of this collection.
   """
   pass
@@ -88,8 +81,8 @@ class UIElementCollection(object,IList,ICollection,IEnumerable):
  def Insert(self,index,element):
   """
   Insert(self: UIElementCollection,index: int,element: UIElement)
-   Inserts an element into a System.Windows.Controls.UIElementCollection at the 
-    specified index position.
+   Inserts an element into a System.Windows.Controls.UIElementCollection at the specified index 
+    position.
   
   
    index: The index position where you want to insert the element.
@@ -99,9 +92,7 @@ class UIElementCollection(object,IList,ICollection,IEnumerable):
  def Remove(self,element):
   """
   Remove(self: UIElementCollection,element: UIElement)
-   Removes the specified element from a 
-    System.Windows.Controls.UIElementCollection.
-  
+   Removes the specified element from a System.Windows.Controls.UIElementCollection.
   
    element: The element to remove from the collection.
   """
@@ -126,9 +117,7 @@ class UIElementCollection(object,IList,ICollection,IEnumerable):
  def SetLogicalParent(self,*args):
   """
   SetLogicalParent(self: UIElementCollection,element: UIElement)
-   Sets the logical parent of an element in a 
-    System.Windows.Controls.UIElementCollection.
-  
+   Sets the logical parent of an element in a System.Windows.Controls.UIElementCollection.
   
    element: The System.Windows.UIElement whose logical parent is set.
   """
@@ -143,8 +132,7 @@ class UIElementCollection(object,IList,ICollection,IEnumerable):
    Determines whether the System.Collections.IList contains a specific value.
   
    value: The object to locate in the System.Collections.IList.
-   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,
-    false.
+   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,false.
   """
   pass
  def __getitem__(self,*args):

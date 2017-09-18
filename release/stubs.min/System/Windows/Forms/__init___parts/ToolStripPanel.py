@@ -11,9 +11,7 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
     System.Windows.Forms.AccessibleEvents for the specified child control .
   
   
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
-    applications of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    objectID: The identifier of the System.Windows.Forms.AccessibleObject.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,childID: int)
@@ -21,9 +19,7 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
     System.Windows.Forms.AccessibleEvents for the specified child control.
   
   
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
-    applications of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   """
   pass
@@ -79,13 +75,11 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
  def Dispose(self):
   """
   Dispose(self: ToolStripPanel,disposing: bool)
-   Releases the unmanaged resources used by the 
-    System.Windows.Forms.ToolStripPanel and optionally releases the managed 
-    resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.ToolStripPanel and optionally 
+    releases the managed resources.
   
   
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def EndInit(self):
@@ -120,15 +114,12 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   
    Retrieves the bounds within which the control is scaled.
   
-   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the 
-    display bounds.
-  
+   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display bounds.
    factor: The height and width of the control's bounds.
-   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the 
-    bounds of the control to use when defining its size and position.
+   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of the 
+    control to use when defining its size and position.
   
-   Returns: A System.Drawing.Rectangle representing the bounds within which the control is 
-    scaled.
+   Returns: A System.Drawing.Rectangle representing the bounds within which the control is scaled.
   """
   pass
  def GetScrollState(self,*args):
@@ -145,14 +136,13 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetStyle(self,*args):
@@ -182,9 +172,7 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
  def InvokeGotFocus(self,*args):
   """
   InvokeGotFocus(self: Control,toInvoke: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.GotFocus event for the specified 
-    control.
-  
+   Raises the System.Windows.Forms.Control.GotFocus event for the specified control.
   
    toInvoke: The System.Windows.Forms.Control to assign the event to.
    e: An System.EventArgs that contains the event data.
@@ -193,9 +181,7 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
  def InvokeLostFocus(self,*args):
   """
   InvokeLostFocus(self: Control,toInvoke: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.LostFocus event for the specified 
-    control.
-  
+   Raises the System.Windows.Forms.Control.LostFocus event for the specified control.
   
    toInvoke: The System.Windows.Forms.Control to assign the event to.
    e: An System.EventArgs that contains the event data.
@@ -206,9 +192,7 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   InvokeOnClick(self: Control,toInvoke: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.Click event for the specified control.
   
-   toInvoke: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Click event to.
-  
+   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event to.
    e: An System.EventArgs that contains the event data.
   """
   pass
@@ -217,9 +201,7 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   InvokePaint(self: Control,c: Control,e: PaintEventArgs)
    Raises the System.Windows.Forms.Control.Paint event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Paint event to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -228,9 +210,7 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   InvokePaintBackground(self: Control,c: Control,e: PaintEventArgs)
    Raises the PaintBackground event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Paint event to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -241,16 +221,16 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
    Determines if a character is an input character that the control recognizes.
   
    charCode: The character to test.
-   Returns: true if the character should be sent directly to the control and not 
-    preprocessed; otherwise,false.
+   Returns: true if the character should be sent directly to the control and not preprocessed; otherwise,
+    false.
   """
   pass
  def IsInputKey(self,*args):
   """
   IsInputKey(self: Control,keyData: Keys) -> bool
   
-   Determines whether the specified key is a regular input key or a special key 
-    that requires preprocessing.
+   Determines whether the specified key is a regular input key or a special key that requires 
+    preprocessing.
   
   
    keyData: One of the System.Windows.Forms.Keys values.
@@ -260,44 +240,35 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
  def Join(self,toolStripToDrag,*__args):
   """
   Join(self: ToolStripPanel,toolStripToDrag: ToolStrip,row: int)
-   Adds the specified System.Windows.Forms.ToolStrip to a 
-    System.Windows.Forms.ToolStripPanel in the specified row.
+   Adds the specified System.Windows.Forms.ToolStrip to a System.Windows.Forms.ToolStripPanel in 
+    the specified row.
   
   
-   toolStripToDrag: The System.Windows.Forms.ToolStrip to add to the 
-    System.Windows.Forms.ToolStripPanel.
-  
-   row: An System.Int32 representing the System.Windows.Forms.ToolStripPanelRow to 
-    which the System.Windows.Forms.ToolStrip is added.
+   toolStripToDrag: The System.Windows.Forms.ToolStrip to add to the System.Windows.Forms.ToolStripPanel.
+   row: An System.Int32 representing the System.Windows.Forms.ToolStripPanelRow to which the 
+    System.Windows.Forms.ToolStrip is added.
   
   Join(self: ToolStripPanel,toolStripToDrag: ToolStrip,x: int,y: int)
-   Adds the specified System.Windows.Forms.ToolStrip to a 
-    System.Windows.Forms.ToolStripPanel at the specified coordinates.
+   Adds the specified System.Windows.Forms.ToolStrip to a System.Windows.Forms.ToolStripPanel at 
+    the specified coordinates.
   
   
-   toolStripToDrag: The System.Windows.Forms.ToolStrip to add to the 
-    System.Windows.Forms.ToolStripPanel.
-  
+   toolStripToDrag: The System.Windows.Forms.ToolStrip to add to the System.Windows.Forms.ToolStripPanel.
    x: The horizontal client coordinate,in pixels.
    y: The vertical client coordinate,in pixels.
   Join(self: ToolStripPanel,toolStripToDrag: ToolStrip,location: Point)
-   Adds the specified System.Windows.Forms.ToolStrip to a 
-    System.Windows.Forms.ToolStripPanel at the specified location.
+   Adds the specified System.Windows.Forms.ToolStrip to a System.Windows.Forms.ToolStripPanel at 
+    the specified location.
   
   
-   toolStripToDrag: The System.Windows.Forms.ToolStrip to add to the 
-    System.Windows.Forms.ToolStripPanel.
-  
-   location: A System.Drawing.Point value representing the x- and y-client coordinates,in 
-    pixels,of the new location for the System.Windows.Forms.ToolStrip.
+   toolStripToDrag: The System.Windows.Forms.ToolStrip to add to the System.Windows.Forms.ToolStripPanel.
+   location: A System.Drawing.Point value representing the x- and y-client coordinates,in pixels,of the new 
+    location for the System.Windows.Forms.ToolStrip.
   
   Join(self: ToolStripPanel,toolStripToDrag: ToolStrip)
-   Adds the specified System.Windows.Forms.ToolStrip to a 
-    System.Windows.Forms.ToolStripPanel.
+   Adds the specified System.Windows.Forms.ToolStrip to a System.Windows.Forms.ToolStripPanel.
   
-  
-   toolStripToDrag: The System.Windows.Forms.ToolStrip to add to the 
-    System.Windows.Forms.ToolStripPanel.
+   toolStripToDrag: The System.Windows.Forms.ToolStrip to add to the System.Windows.Forms.ToolStripPanel.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -306,11 +277,11 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -322,8 +293,8 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
  def NotifyInvalidate(self,*args):
   """
   NotifyInvalidate(self: Control,invalidatedArea: Rectangle)
-   Raises the System.Windows.Forms.Control.Invalidated event with a specified 
-    region of the control to invalidate.
+   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the control 
+    to invalidate.
   
   
    invalidatedArea: A System.Drawing.Rectangle representing the area to invalidate.
@@ -467,6 +438,12 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   
    e: An System.EventArgs that contains the event data.
   """
+  pass
+ def OnDpiChangedAfterParent(self,*args):
+  """ OnDpiChangedAfterParent(self: Control,e: EventArgs) """
+  pass
+ def OnDpiChangedBeforeParent(self,*args):
+  """ OnDpiChangedBeforeParent(self: Control,e: EventArgs) """
   pass
  def OnDragDrop(self,*args):
   """
@@ -774,8 +751,7 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   """
   OnParentBackColorChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BackColorChanged event when the 
-    System.Windows.Forms.Control.BackColor property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BackColor property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -785,8 +761,7 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   """
   OnParentBackgroundImageChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the 
-    System.Windows.Forms.Control.BackgroundImage property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BackgroundImage property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -796,8 +771,7 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   """
   OnParentBindingContextChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BindingContextChanged event when the 
-    System.Windows.Forms.Control.BindingContext property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BindingContext property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -823,8 +797,7 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   """
   OnParentEnabledChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.EnabledChanged event when the 
-    System.Windows.Forms.Control.Enabled property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Enabled property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -834,8 +807,7 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   """
   OnParentFontChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.Control.Font property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Font property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -845,8 +817,7 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   """
   OnParentForeColorChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.ForeColorChanged event when the 
-    System.Windows.Forms.Control.ForeColor property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.ForeColor property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -856,8 +827,7 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   """
   OnParentRightToLeftChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.RightToLeftChanged event when the 
-    System.Windows.Forms.Control.RightToLeft property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.RightToLeft property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -867,8 +837,7 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   """
   OnParentVisibleChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.VisibleChanged event when the 
-    System.Windows.Forms.Control.Visible property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Visible property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1016,20 +985,17 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
     System.Windows.Forms.ToolStripPanel client area.
   
   
-   clientLocation: A System.Drawing.Point used as a reference to find the 
-    System.Windows.Forms.ToolStripPanelRow.
-  
-   Returns: The System.Windows.Forms.ToolStripPanelRow that contains the 
-    raftingContainerPoint,or null if no such 
-    System.Windows.Forms.ToolStripPanelRow exists.
+   clientLocation: A System.Drawing.Point used as a reference to find the System.Windows.Forms.ToolStripPanelRow.
+   Returns: The System.Windows.Forms.ToolStripPanelRow that contains the raftingContainerPoint,or null if 
+    no such System.Windows.Forms.ToolStripPanelRow exists.
   """
   pass
  def ProcessCmdKey(self,*args):
   """
   ProcessCmdKey(self: ContainerControl,msg: Message,keyData: Keys) -> (bool,Message)
   
-   msg: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: true if the character was processed by the control; otherwise,false.
@@ -1057,8 +1023,8 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   
    Processes a key message and generates the appropriate control events.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1069,8 +1035,8 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   
    Processes a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1081,8 +1047,8 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   
    Previews a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1092,8 +1058,7 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   ProcessMnemonic(self: ContainerControl,charCode: Char) -> bool
   
    charCode: The character to process.
-   Returns: true if the character was processed as a mnemonic by the control; otherwise,
-    false.
+   Returns: true if the character was processed as a mnemonic by the control; otherwise,false.
   """
   pass
  def ProcessTabKey(self,*args):
@@ -1102,8 +1067,8 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   
    Selects the next available control and makes it the active control.
   
-   forward: true to cycle forward through the controls in the 
-    System.Windows.Forms.ContainerControl; otherwise,false.
+   forward: true to cycle forward through the controls in the System.Windows.Forms.ContainerControl; 
+    otherwise,false.
   
    Returns: true if a control is selected; otherwise,false.
   """
@@ -1150,6 +1115,9 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
    Forces the re-creation of the handle for the control.
   """
   pass
+ def RescaleConstantsForDpi(self,*args):
+  """ RescaleConstantsForDpi(self: Control,deviceDpiOld: int,deviceDpiNew: int) """
+  pass
  def ResetMouseEventArgs(self,*args):
   """
   ResetMouseEventArgs(self: Control)
@@ -1168,18 +1136,16 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
    Returns: One of the System.Drawing.ContentAlignment values.
   RtlTranslateAlignment(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the 
-    appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
+    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
   RtlTranslateAlignment(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the 
-    appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
+    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1202,9 +1168,8 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   """
   RtlTranslateHorizontal(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the 
-    appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
+    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1215,9 +1180,8 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   """
   RtlTranslateLeftRight(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the 
-    appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
+    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
@@ -1228,8 +1192,8 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   """
   ScaleControl(self: ScrollableControl,factor: SizeF,specified: BoundsSpecified)
    factor: The factor by which the height and width of the control will be scaled.
-   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the 
-    control to use when defining its size and position.
+   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to use 
+    when defining its size and position.
   """
   pass
  def ScaleCore(self,*args):
@@ -1246,8 +1210,8 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
    Calculates the scroll offset to the specified child control.
   
    activeControl: The child control to scroll into view.
-   Returns: The upper-left hand System.Drawing.Point of the display area relative to the 
-    client area required to scroll the control into view.
+   Returns: The upper-left hand System.Drawing.Point of the display area relative to the client area 
+    required to scroll the control into view.
   """
   pass
  def Select(self):
@@ -1260,8 +1224,8 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
  def SetAutoSizeMode(self,*args):
   """
   SetAutoSizeMode(self: Control,mode: AutoSizeMode)
-   Sets a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
+   Sets a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize 
+    property is enabled.
   
   
    mode: One of the System.Windows.Forms.AutoSizeMode values.
@@ -1293,11 +1257,8 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   SetDisplayRectLocation(self: ScrollableControl,x: int,y: int)
    Positions the display window to the specified value.
   
-   x: The horizontal offset at which to position the 
-    System.Windows.Forms.ScrollableControl.
-  
-   y: The vertical offset at which to position the 
-    System.Windows.Forms.ScrollableControl.
+   x: The horizontal offset at which to position the System.Windows.Forms.ScrollableControl.
+   y: The vertical offset at which to position the System.Windows.Forms.ScrollableControl.
   """
   pass
  def SetScrollState(self,*args):
@@ -1312,9 +1273,7 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
  def SetStyle(self,*args):
   """
   SetStyle(self: Control,flag: ControlStyles,value: bool)
-   Sets a specified System.Windows.Forms.ControlStyles flag to either true or 
-    false.
-  
+   Sets a specified System.Windows.Forms.ControlStyles flag to either true or false.
   
    flag: The System.Windows.Forms.ControlStyles bit to set.
    value: true to apply the specified style to the control; otherwise,false.
@@ -1340,23 +1299,16 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   """
   SizeFromClientSize(self: Control,clientSize: Size) -> Size
   
-   Determines the size of the entire control from the height and width of its 
-    client area.
+   Determines the size of the entire control from the height and width of its client area.
   
-  
-   clientSize: A System.Drawing.Size value representing the height and width of the control's 
-    client area.
-  
-   Returns: A System.Drawing.Size value representing the height and width of the entire 
-    control.
+   clientSize: A System.Drawing.Size value representing the height and width of the control's client area.
+   Returns: A System.Drawing.Size value representing the height and width of the entire control.
   """
   pass
  def UpdateBounds(self,*args):
   """
   UpdateBounds(self: Control,x: int,y: int,width: int,height: int,clientWidth: int,clientHeight: int)
-   Updates the bounds of the control with the specified size,location,and client 
-    size.
-  
+   Updates the bounds of the control with the specified size,location,and client size.
   
    x: The System.Drawing.Point.X coordinate of the control.
    y: The System.Drawing.Point.Y coordinate of the control.
@@ -1403,10 +1355,17 @@ class ToolStripPanel(ContainerControl,IComponent,IDisposable,IOleControl,IOleObj
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

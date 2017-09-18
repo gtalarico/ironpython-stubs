@@ -25,15 +25,15 @@ class HttpWebRequest(WebRequest,ISerializable):
    from: The position at which to start sending data.
    to: The position at which to stop sending data.
   AddRange(self: HttpWebRequest,rangeSpecifier: str,range: Int64)
-   Adds a Range header to a request for a specific range from the beginning or end 
-    of the requested data.
+   Adds a Range header to a request for a specific range from the beginning or end of the requested 
+    data.
   
   
    rangeSpecifier: The description of the range.
    range: The starting or ending point of the range.
   AddRange(self: HttpWebRequest,rangeSpecifier: str,range: int)
-   Adds a Range header to a request for a specific range from the beginning or end 
-    of the requested data.
+   Adds a Range header to a request for a specific range from the beginning or end of the requested 
+    data.
   
   
    rangeSpecifier: The description of the range.
@@ -49,14 +49,14 @@ class HttpWebRequest(WebRequest,ISerializable):
    from: The position at which to start sending data.
    to: The position at which to stop sending data.
   AddRange(self: HttpWebRequest,range: Int64)
-   Adds a byte range header to a request for a specific range from the beginning 
-    or end of the requested data.
+   Adds a byte range header to a request for a specific range from the beginning or end of the 
+    requested data.
   
   
    range: The starting or ending point of the range.
   AddRange(self: HttpWebRequest,range: int)
-   Adds a byte range header to a request for a specific range from the beginning 
-    or end of the requested data.
+   Adds a byte range header to a request for a specific range from the beginning or end of the 
+    requested data.
   
   
    range: The starting or ending point of the range.
@@ -66,9 +66,7 @@ class HttpWebRequest(WebRequest,ISerializable):
   """
   BeginGetRequestStream(self: HttpWebRequest,callback: AsyncCallback,state: object) -> IAsyncResult
   
-   Begins an asynchronous request for a System.IO.Stream object to use to write 
-    data.
-  
+   Begins an asynchronous request for a System.IO.Stream object to use to write data.
   
    callback: The System.AsyncCallback delegate.
    state: The state object for this request.
@@ -90,8 +88,8 @@ class HttpWebRequest(WebRequest,ISerializable):
   """
   EndGetRequestStream(self: HttpWebRequest,asyncResult: IAsyncResult) -> (Stream,TransportContext)
   
-   Ends an asynchronous request for a System.IO.Stream object to use to write data 
-    and outputs the System.Net.TransportContext associated with the stream.
+   Ends an asynchronous request for a System.IO.Stream object to use to write data and outputs the 
+    System.Net.TransportContext associated with the stream.
   
   
    asyncResult: The pending request for a stream.
@@ -117,13 +115,13 @@ class HttpWebRequest(WebRequest,ISerializable):
  def GetObjectData(self,*args):
   """
   GetObjectData(self: HttpWebRequest,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo with the data 
-    required to serialize the target object.
+   Populates a System.Runtime.Serialization.SerializationInfo with the data required to serialize 
+    the target object.
   
   
    serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
-   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination 
-    for this serialization.
+   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this 
+    serialization.
   """
   pass
  def GetRequestStream(self,context=None):
@@ -154,11 +152,11 @@ class HttpWebRequest(WebRequest,ISerializable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object

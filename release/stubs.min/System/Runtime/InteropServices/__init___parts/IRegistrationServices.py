@@ -22,10 +22,9 @@ class IRegistrationServices:
   """
   GetRegistrableTypesInAssembly(self: IRegistrationServices,assembly: Assembly) -> Array[Type]
   
-   Retrieves a list of classes in an assembly that would be registered by a call 
-    to 
-    System.Runtime.InteropServices.IRegistrationServices.RegisterAssembly(System.Ref
-    lection.Assembly,System.Runtime.InteropServices.AssemblyRegistrationFlags).
+   Retrieves a list of classes in an assembly that would be registered by a call to 
+    System.Runtime.InteropServices.IRegistrationServices.RegisterAssembly(System.Reflection.Assembly,
+    System.Runtime.InteropServices.AssemblyRegistrationFlags).
   
   
    assembly: The assembly to search for classes.
@@ -39,11 +38,11 @@ class IRegistrationServices:
    Registers the classes in a managed assembly to enable creation from COM.
   
    assembly: The assembly to be registered.
-   flags: An System.Runtime.InteropServices.AssemblyRegistrationFlags value indicating 
-    any special settings needed when registering assembly.
+   flags: An System.Runtime.InteropServices.AssemblyRegistrationFlags value indicating any special 
+    settings needed when registering assembly.
   
-   Returns: true if assembly contains types that were successfully registered; otherwise 
-    false if the assembly contains no eligible types.
+   Returns: true if assembly contains types that were successfully registered; otherwise false if the 
+    assembly contains no eligible types.
   """
   pass
  def RegisterTypeForComClients(self,type,g):
@@ -83,8 +82,8 @@ class IRegistrationServices:
    Unregisters the classes in a managed assembly.
   
    assembly: The assembly to be unregistered.
-   Returns: true if assembly contains types that were successfully unregistered; otherwise 
-    false if the assembly contains no eligible types.
+   Returns: true if assembly contains types that were successfully unregistered; otherwise false if the 
+    assembly contains no eligible types.
   """
   pass
  def __init__(self,*args):

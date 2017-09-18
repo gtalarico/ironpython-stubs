@@ -6,29 +6,25 @@ class UCOMIMoniker:
   
    Uses the moniker to bind to the object it identifies.
   
-   pbc: A reference to the IBindCtx interface on the bind context object used in this 
-    binding operation.
+   pbc: A reference to the IBindCtx interface on the bind context object used in this binding operation.
+   pmkToLeft: A reference to the moniker to the left of this moniker,if the moniker is part of a composite 
+    moniker.
   
-   pmkToLeft: A reference to the moniker to the left of this moniker,if the moniker is part 
-    of a composite moniker.
-  
-   riidResult: The interface identifier (IID) of the interface the client intends to use to 
-    communicate with the object that the moniker identifies.
+   riidResult: The interface identifier (IID) of the interface the client intends to use to communicate with 
+    the object that the moniker identifies.
   """
   pass
  def BindToStorage(self,pbc,pmkToLeft,riid,ppvObj):
   """
   BindToStorage(self: UCOMIMoniker,pbc: UCOMIBindCtx,pmkToLeft: UCOMIMoniker,riid: Guid) -> (Guid,object)
   
-   Retrieves an interface pointer to the storage that contains the object 
-    identified by the moniker.
+   Retrieves an interface pointer to the storage that contains the object identified by the moniker.
   
+   pbc: A reference to the IBindCtx interface on the bind context object used during this binding 
+    operation.
   
-   pbc: A reference to the IBindCtx interface on the bind context object used during 
-    this binding operation.
-  
-   pmkToLeft: A reference to the moniker to the left of this moniker,if the moniker is part 
-    of a composite moniker.
+   pmkToLeft: A reference to the moniker to the left of this moniker,if the moniker is part of a composite 
+    moniker.
   
    riid: The interface identifier (IID) of the storage interface requested.
   """
@@ -37,41 +33,31 @@ class UCOMIMoniker:
   """
   CommonPrefixWith(self: UCOMIMoniker,pmkOther: UCOMIMoniker) -> UCOMIMoniker
   
-   Creates a new moniker based on the common prefix that this moniker shares with 
-    another moniker.
+   Creates a new moniker based on the common prefix that this moniker shares with another moniker.
   
-  
-   pmkOther: A reference to the IMoniker interface on another moniker to compare with this 
-    for a common prefix.
+   pmkOther: A reference to the IMoniker interface on another moniker to compare with this for a common 
+    prefix.
   """
   pass
  def ComposeWith(self,pmkRight,fOnlyIfNotGeneric,ppmkComposite):
   """
   ComposeWith(self: UCOMIMoniker,pmkRight: UCOMIMoniker,fOnlyIfNotGeneric: bool) -> UCOMIMoniker
   
-   Combines the current moniker with another moniker,creating a new composite 
-    moniker.
+   Combines the current moniker with another moniker,creating a new composite moniker.
   
-  
-   pmkRight: A reference to the IMoniker interface on the moniker to compose onto the end of 
-    this moniker.
-  
-   fOnlyIfNotGeneric: If true,the caller requires a nongeneric composition,so the operation 
-    proceeds only if pmkRight is a moniker class that this moniker can compose with 
-    in some way other than forming a generic composite. If false,the method can 
-    create a generic composite if necessary.
+   pmkRight: A reference to the IMoniker interface on the moniker to compose onto the end of this moniker.
+   fOnlyIfNotGeneric: If true,the caller requires a nongeneric composition,so the operation proceeds only if 
+    pmkRight is a moniker class that this moniker can compose with in some way other than forming a 
+    generic composite. If false,the method can create a generic composite if necessary.
   """
   pass
  def Enum(self,fForward,ppenumMoniker):
   """
   Enum(self: UCOMIMoniker,fForward: bool) -> UCOMIEnumMoniker
   
-   Supplies a pointer to an enumerator that can enumerate the components of a 
-    composite moniker.
+   Supplies a pointer to an enumerator that can enumerate the components of a composite moniker.
   
-  
-   fForward: If true,enumerates the monikers from left to right. If false,enumerates from 
-    right to left.
+   fForward: If true,enumerates the monikers from left to right. If false,enumerates from right to left.
   """
   pass
  def GetClassID(self,pClassID):
@@ -88,8 +74,8 @@ class UCOMIMoniker:
    Gets the display name,which is a user-readable representation of this moniker.
   
    pbc: A reference to the bind context to use in this operation.
-   pmkToLeft: A reference to the moniker to the left of this moniker,if the moniker is part 
-    of a composite moniker.
+   pmkToLeft: A reference to the moniker to the left of this moniker,if the moniker is part of a composite 
+    moniker.
   """
   pass
  def GetSizeMax(self,pcbSize):
@@ -103,13 +89,11 @@ class UCOMIMoniker:
   """
   GetTimeOfLastChange(self: UCOMIMoniker,pbc: UCOMIBindCtx,pmkToLeft: UCOMIMoniker) -> FILETIME
   
-   Provides a number representing the time the object identified by this moniker 
-    was last changed.
-  
+   Provides a number representing the time the object identified by this moniker was last changed.
   
    pbc: A reference to the bind context to be used in this binding operation.
-   pmkToLeft: A reference to the moniker to the left of this moniker,if the moniker is part 
-    of a composite moniker.
+   pmkToLeft: A reference to the moniker to the left of this moniker,if the moniker is part of a composite 
+    moniker.
   """
   pass
  def Hash(self,pdwHash):
@@ -123,8 +107,8 @@ class UCOMIMoniker:
   """
   Inverse(self: UCOMIMoniker) -> UCOMIMoniker
   
-   Provides a moniker that,when composed to the right of this moniker or one of 
-    similar structure,composes to nothing.
+   Provides a moniker that,when composed to the right of this moniker or one of similar structure,
+    composes to nothing.
   """
   pass
  def IsDirty(self):
@@ -132,16 +116,13 @@ class UCOMIMoniker:
   IsDirty(self: UCOMIMoniker) -> int
   
    Checks the object for changes since it was last saved.
-   Returns: An S_OKHRESULT value if the object has changed; otherwise,an S_FALSEHRESULT 
-    value.
+   Returns: An S_OKHRESULT value if the object has changed; otherwise,an S_FALSEHRESULT value.
   """
   pass
  def IsEqual(self,pmkOtherMoniker):
   """
   IsEqual(self: UCOMIMoniker,pmkOtherMoniker: UCOMIMoniker)
-   Compares this moniker with a specified moniker and indicates whether they are 
-    identical.
-  
+   Compares this moniker with a specified moniker and indicates whether they are identical.
   
    pmkOtherMoniker: A reference to the moniker to be used for comparison.
   """
@@ -149,14 +130,10 @@ class UCOMIMoniker:
  def IsRunning(self,pbc,pmkToLeft,pmkNewlyRunning):
   """
   IsRunning(self: UCOMIMoniker,pbc: UCOMIBindCtx,pmkToLeft: UCOMIMoniker,pmkNewlyRunning: UCOMIMoniker)
-   Determines whether the object that is identified by this moniker is currently 
-    loaded and running.
-  
+   Determines whether the object that is identified by this moniker is currently loaded and running.
   
    pbc: A reference to the bind context to be used in this binding operation.
-   pmkToLeft: A reference to the moniker to the left of this moniker if this moniker is part 
-    of a composite.
-  
+   pmkToLeft: A reference to the moniker to the left of this moniker if this moniker is part of a composite.
    pmkNewlyRunning: A reference to the moniker most recently added to the Running Object Table.
   """
   pass
@@ -179,14 +156,12 @@ class UCOMIMoniker:
   """
   ParseDisplayName(self: UCOMIMoniker,pbc: UCOMIBindCtx,pmkToLeft: UCOMIMoniker,pszDisplayName: str) -> (int,UCOMIMoniker)
   
-   Reads as many characters of the specified display name as it understands and 
-    builds a moniker corresponding to the portion read.
+   Reads as many characters of the specified display name as it understands and builds a moniker 
+    corresponding to the portion read.
   
   
    pbc: A reference to the bind context to be used in this binding operation.
-   pmkToLeft: A reference to the moniker that has been built out of the display name up to 
-    this point.
-  
+   pmkToLeft: A reference to the moniker that has been built out of the display name up to this point.
    pszDisplayName: A reference to the string containing the remaining display name to parse.
   """
   pass
@@ -194,13 +169,11 @@ class UCOMIMoniker:
   """
   Reduce(self: UCOMIMoniker,pbc: UCOMIBindCtx,dwReduceHowFar: int,ppmkToLeft: UCOMIMoniker) -> (UCOMIMoniker,UCOMIMoniker)
   
-   Returns a reduced moniker which is another moniker that refers to the same 
-    object as this moniker but can be bound with equal or greater efficiency.
+   Returns a reduced moniker which is another moniker that refers to the same object as this 
+    moniker but can be bound with equal or greater efficiency.
   
   
-   pbc: A reference to the IBindCtx interface on the bind context to be used in this 
-    binding operation.
-  
+   pbc: A reference to the IBindCtx interface on the bind context to be used in this binding operation.
    dwReduceHowFar: Specifies how far this moniker should be reduced.
    ppmkToLeft: A reference to the moniker to the left of this moniker.
   """
@@ -209,8 +182,8 @@ class UCOMIMoniker:
   """
   RelativePathTo(self: UCOMIMoniker,pmkOther: UCOMIMoniker) -> UCOMIMoniker
   
-   Supplies a moniker that,when appended to this moniker (or one with a similar 
-    structure),yields the specified moniker.
+   Supplies a moniker that,when appended to this moniker (or one with a similar structure),yields 
+    the specified moniker.
   
   
    pmkOther: A reference to the moniker to which a relative path should be taken.

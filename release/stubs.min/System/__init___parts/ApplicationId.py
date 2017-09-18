@@ -16,8 +16,8 @@ class ApplicationId(object):
   """
   Equals(self: ApplicationId,o: object) -> bool
   
-   Determines whether the specified System.ApplicationId object is equivalent to 
-    the current System.ApplicationId.
+   Determines whether the specified System.ApplicationId object is equivalent to the current 
+    System.ApplicationId.
   
   
    o: The System.ApplicationId object to compare to the current System.ApplicationId.

@@ -4,21 +4,19 @@ class InputLanguageCollection(ReadOnlyCollectionBase,ICollection,IEnumerable):
   """
   Contains(self: InputLanguageCollection,value: InputLanguage) -> bool
   
-   Gets a value indicating whether the 
-    System.Windows.Forms.InputLanguageCollection contains the specified 
-    System.Windows.Forms.InputLanguage.
+   Gets a value indicating whether the System.Windows.Forms.InputLanguageCollection contains the 
+    specified System.Windows.Forms.InputLanguage.
   
   
    value: The System.Windows.Forms.InputLanguage to locate.
-   Returns: true if the System.Windows.Forms.InputLanguage is contained in the collection; 
-    otherwise,false.
+   Returns: true if the System.Windows.Forms.InputLanguage is contained in the collection; otherwise,false.
   """
   pass
  def CopyTo(self,array,index):
   """
   CopyTo(self: InputLanguageCollection,array: Array[InputLanguage],index: int)
-   Copies the System.Windows.Forms.InputLanguageCollection values to a 
-    one-dimensional System.Array at the specified index.
+   Copies the System.Windows.Forms.InputLanguageCollection values to a one-dimensional System.Array 
+    at the specified index.
   
   
    array: The one-dimensional array that is the destination of the values copied from 

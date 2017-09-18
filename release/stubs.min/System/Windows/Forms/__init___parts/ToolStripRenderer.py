@@ -8,8 +8,7 @@ class ToolStripRenderer(object):
    Creates a gray-scale copy of a given image.
   
    normalImage: The image to be copied.
-   Returns: An System.Drawing.Image that is a copy of the given image,but with a 
-    gray-scale color matrix.
+   Returns: An System.Drawing.Image that is a copy of the given image,but with a gray-scale color matrix.
   """
   pass
  def DrawArrow(self,e):
@@ -17,8 +16,7 @@ class ToolStripRenderer(object):
   DrawArrow(self: ToolStripRenderer,e: ToolStripArrowRenderEventArgs)
    Draws an arrow on a System.Windows.Forms.ToolStripItem.
   
-   e: A System.Windows.Forms.ToolStripArrowRenderEventArgs that contains data to draw 
-    the arrow.
+   e: A System.Windows.Forms.ToolStripArrowRenderEventArgs that contains data to draw the arrow.
   """
   pass
  def DrawButtonBackground(self,e):
@@ -26,8 +24,8 @@ class ToolStripRenderer(object):
   DrawButtonBackground(self: ToolStripRenderer,e: ToolStripItemRenderEventArgs)
    Draws the background for a System.Windows.Forms.ToolStripButton.
   
-   e: The System.Windows.Forms.ToolStripItemRenderEventArgs that contains data to 
-    draw the button's background.
+   e: The System.Windows.Forms.ToolStripItemRenderEventArgs that contains data to draw the button's 
+    background.
   """
   pass
  def DrawDropDownButtonBackground(self,e):
@@ -35,8 +33,8 @@ class ToolStripRenderer(object):
   DrawDropDownButtonBackground(self: ToolStripRenderer,e: ToolStripItemRenderEventArgs)
    Draws the background for a System.Windows.Forms.ToolStripDropDownButton.
   
-   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the data to 
-    draw the drop-down button's background.
+   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the data to draw the drop-down 
+    button's background.
   """
   pass
  def DrawGrip(self,e):
@@ -44,8 +42,8 @@ class ToolStripRenderer(object):
   DrawGrip(self: ToolStripRenderer,e: ToolStripGripRenderEventArgs)
    Draws a move handle on a System.Windows.Forms.ToolStrip.
   
-   e: A System.Windows.Forms.ToolStripGripRenderEventArgs that contains the data to 
-    draw the move handle.
+   e: A System.Windows.Forms.ToolStripGripRenderEventArgs that contains the data to draw the move 
+    handle.
   """
   pass
  def DrawImageMargin(self,e):
@@ -53,8 +51,8 @@ class ToolStripRenderer(object):
   DrawImageMargin(self: ToolStripRenderer,e: ToolStripRenderEventArgs)
    Draws the space around an image on a System.Windows.Forms.ToolStrip.
   
-   e: A System.Windows.Forms.ToolStripRenderEventArgs that contains the data to draw 
-    the space around the image.
+   e: A System.Windows.Forms.ToolStripRenderEventArgs that contains the data to draw the space around 
+    the image.
   """
   pass
  def DrawItemBackground(self,e):
@@ -62,19 +60,19 @@ class ToolStripRenderer(object):
   DrawItemBackground(self: ToolStripRenderer,e: ToolStripItemRenderEventArgs)
    Draws the background for a System.Windows.Forms.ToolStripItem.
   
-   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the data to 
-    draw the background of the item.
+   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the data to draw the 
+    background of the item.
   """
   pass
  def DrawItemCheck(self,e):
   """
   DrawItemCheck(self: ToolStripRenderer,e: ToolStripItemImageRenderEventArgs)
-   Draws an image on a System.Windows.Forms.ToolStripItem that indicates the item 
-    is in a selected state.
+   Draws an image on a System.Windows.Forms.ToolStripItem that indicates the item is in a selected 
+    state.
   
   
-   e: A System.Windows.Forms.ToolStripItemImageRenderEventArgs that contains the data 
-    to draw the selected image.
+   e: A System.Windows.Forms.ToolStripItemImageRenderEventArgs that contains the data to draw the 
+    selected image.
   """
   pass
  def DrawItemImage(self,e):
@@ -82,8 +80,8 @@ class ToolStripRenderer(object):
   DrawItemImage(self: ToolStripRenderer,e: ToolStripItemImageRenderEventArgs)
    Draws an image on a System.Windows.Forms.ToolStripItem.
   
-   e: A System.Windows.Forms.ToolStripItemImageRenderEventArgs that contains the data 
-    to draw the image.
+   e: A System.Windows.Forms.ToolStripItemImageRenderEventArgs that contains the data to draw the 
+    image.
   """
   pass
  def DrawItemText(self,e):
@@ -91,8 +89,7 @@ class ToolStripRenderer(object):
   DrawItemText(self: ToolStripRenderer,e: ToolStripItemTextRenderEventArgs)
    Draws text on a System.Windows.Forms.ToolStripItem.
   
-   e: A System.Windows.Forms.ToolStripItemTextRenderEventArgs that contains the data 
-    to draw the text.
+   e: A System.Windows.Forms.ToolStripItemTextRenderEventArgs that contains the data to draw the text.
   """
   pass
  def DrawLabelBackground(self,e):
@@ -100,8 +97,8 @@ class ToolStripRenderer(object):
   DrawLabelBackground(self: ToolStripRenderer,e: ToolStripItemRenderEventArgs)
    Draws the background for a System.Windows.Forms.ToolStripLabel.
   
-   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the data to 
-    draw the background for the label.
+   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the data to draw the 
+    background for the label.
   """
   pass
  def DrawMenuItemBackground(self,e):
@@ -109,8 +106,8 @@ class ToolStripRenderer(object):
   DrawMenuItemBackground(self: ToolStripRenderer,e: ToolStripItemRenderEventArgs)
    Draws the background for a System.Windows.Forms.ToolStripMenuItem.
   
-   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the data to 
-    draw the background for the menu item.
+   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the data to draw the 
+    background for the menu item.
   """
   pass
  def DrawOverflowButtonBackground(self,e):
@@ -118,8 +115,7 @@ class ToolStripRenderer(object):
   DrawOverflowButtonBackground(self: ToolStripRenderer,e: ToolStripItemRenderEventArgs)
    Draws the background for an overflow button.
   
-   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event data.
   """
   pass
  def DrawSeparator(self,e):
@@ -127,8 +123,8 @@ class ToolStripRenderer(object):
   DrawSeparator(self: ToolStripRenderer,e: ToolStripSeparatorRenderEventArgs)
    Draws a System.Windows.Forms.ToolStripSeparator.
   
-   e: A System.Windows.Forms.ToolStripSeparatorRenderEventArgs that contains the data 
-    to draw the System.Windows.Forms.ToolStripSeparator.
+   e: A System.Windows.Forms.ToolStripSeparatorRenderEventArgs that contains the data to draw the 
+    System.Windows.Forms.ToolStripSeparator.
   """
   pass
  def DrawSplitButton(self,e):
@@ -136,8 +132,7 @@ class ToolStripRenderer(object):
   DrawSplitButton(self: ToolStripRenderer,e: ToolStripItemRenderEventArgs)
    Draws a System.Windows.Forms.ToolStripSplitButton.
   
-   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event data.
   """
   pass
  def DrawStatusStripSizingGrip(self,e):
@@ -153,8 +148,8 @@ class ToolStripRenderer(object):
   DrawToolStripBackground(self: ToolStripRenderer,e: ToolStripRenderEventArgs)
    Draws the background for a System.Windows.Forms.ToolStrip.
   
-   e: A System.Windows.Forms.ToolStripRenderEventArgs that contains the data to draw 
-    the background for the System.Windows.Forms.ToolStrip.
+   e: A System.Windows.Forms.ToolStripRenderEventArgs that contains the data to draw the background 
+    for the System.Windows.Forms.ToolStrip.
   """
   pass
  def DrawToolStripBorder(self,e):
@@ -162,8 +157,8 @@ class ToolStripRenderer(object):
   DrawToolStripBorder(self: ToolStripRenderer,e: ToolStripRenderEventArgs)
    Draws the border for a System.Windows.Forms.ToolStrip.
   
-   e: A System.Windows.Forms.ToolStripRenderEventArgs that contains the data to draw 
-    the border for the System.Windows.Forms.ToolStrip.
+   e: A System.Windows.Forms.ToolStripRenderEventArgs that contains the data to draw the border for 
+    the System.Windows.Forms.ToolStrip.
   """
   pass
  def DrawToolStripContentPanelBackground(self,e):
@@ -171,8 +166,7 @@ class ToolStripRenderer(object):
   DrawToolStripContentPanelBackground(self: ToolStripRenderer,e: ToolStripContentPanelRenderEventArgs)
    Draws the background of the System.Windows.Forms.ToolStripContentPanel.
   
-   e: A System.Windows.Forms.ToolStripContentPanelRenderEventArgs that contains the 
-    event data.
+   e: A System.Windows.Forms.ToolStripContentPanelRenderEventArgs that contains the event data.
   """
   pass
  def DrawToolStripPanelBackground(self,e):
@@ -180,8 +174,7 @@ class ToolStripRenderer(object):
   DrawToolStripPanelBackground(self: ToolStripRenderer,e: ToolStripPanelRenderEventArgs)
    Draws the background of the System.Windows.Forms.ToolStripPanel.
   
-   e: A System.Windows.Forms.ToolStripPanelRenderEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.ToolStripPanelRenderEventArgs that contains the event data.
   """
   pass
  def DrawToolStripStatusLabelBackground(self,e):
@@ -189,15 +182,14 @@ class ToolStripRenderer(object):
   DrawToolStripStatusLabelBackground(self: ToolStripRenderer,e: ToolStripItemRenderEventArgs)
    Draws the background of the System.Windows.Forms.ToolStripStatusLabel.
   
-   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event data.
   """
   pass
  def Initialize(self,*args):
   """
   Initialize(self: ToolStripRenderer,toolStrip: ToolStrip)
-   When overridden in a derived class,provides for custom initialization of the 
-    given System.Windows.Forms.ToolStrip.
+   When overridden in a derived class,provides for custom initialization of the given 
+    System.Windows.Forms.ToolStrip.
   
   
    toolStrip: The System.Windows.Forms.ToolStrip to be initialized.
@@ -214,8 +206,8 @@ class ToolStripRenderer(object):
  def InitializeItem(self,*args):
   """
   InitializeItem(self: ToolStripRenderer,item: ToolStripItem)
-   When overridden in a derived class,provides for custom initialization of the 
-    given System.Windows.Forms.ToolStripItem.
+   When overridden in a derived class,provides for custom initialization of the given 
+    System.Windows.Forms.ToolStripItem.
   
   
    item: The System.Windows.Forms.ToolStripItem to be initialized.
@@ -234,8 +226,7 @@ class ToolStripRenderer(object):
   OnRenderArrow(self: ToolStripRenderer,e: ToolStripArrowRenderEventArgs)
    Raises the System.Windows.Forms.ToolStripRenderer.RenderArrow event.
   
-   e: A System.Windows.Forms.ToolStripArrowRenderEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.ToolStripArrowRenderEventArgs that contains the event data.
   """
   pass
  def OnRenderButtonBackground(self,*args):
@@ -249,12 +240,9 @@ class ToolStripRenderer(object):
  def OnRenderDropDownButtonBackground(self,*args):
   """
   OnRenderDropDownButtonBackground(self: ToolStripRenderer,e: ToolStripItemRenderEventArgs)
-   Raises the 
-    System.Windows.Forms.ToolStripRenderer.RenderDropDownButtonBackground event.
+   Raises the System.Windows.Forms.ToolStripRenderer.RenderDropDownButtonBackground event.
   
-  
-   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event data.
   """
   pass
  def OnRenderGrip(self,*args):
@@ -262,8 +250,7 @@ class ToolStripRenderer(object):
   OnRenderGrip(self: ToolStripRenderer,e: ToolStripGripRenderEventArgs)
    Raises the System.Windows.Forms.ToolStripRenderer.RenderGrip event.
   
-   e: A System.Windows.Forms.ToolStripGripRenderEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.ToolStripGripRenderEventArgs that contains the event data.
   """
   pass
  def OnRenderImageMargin(self,*args):
@@ -278,12 +265,11 @@ class ToolStripRenderer(object):
   """
   OnRenderItemBackground(self: ToolStripRenderer,e: ToolStripItemRenderEventArgs)
    Raises the 
-    System.Windows.Forms.ToolStripSystemRenderer.OnRenderItemBackground(System.Windo
-    ws.Forms.ToolStripItemRenderEventArgs) event.
+    System.Windows.Forms.ToolStripSystemRenderer.OnRenderItemBackground(System.Windows.Forms.ToolStri
+    pItemRenderEventArgs) event.
   
   
-   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event data.
   """
   pass
  def OnRenderItemCheck(self,*args):
@@ -291,8 +277,7 @@ class ToolStripRenderer(object):
   OnRenderItemCheck(self: ToolStripRenderer,e: ToolStripItemImageRenderEventArgs)
    Raises the System.Windows.Forms.ToolStripRenderer.RenderItemCheck event.
   
-   e: A System.Windows.Forms.ToolStripItemImageRenderEventArgs that contains the 
-    event data.
+   e: A System.Windows.Forms.ToolStripItemImageRenderEventArgs that contains the event data.
   """
   pass
  def OnRenderItemImage(self,*args):
@@ -300,8 +285,7 @@ class ToolStripRenderer(object):
   OnRenderItemImage(self: ToolStripRenderer,e: ToolStripItemImageRenderEventArgs)
    Raises the System.Windows.Forms.ToolStripRenderer.RenderItemImage event.
   
-   e: A System.Windows.Forms.ToolStripItemImageRenderEventArgs that contains the 
-    event data.
+   e: A System.Windows.Forms.ToolStripItemImageRenderEventArgs that contains the event data.
   """
   pass
  def OnRenderItemText(self,*args):
@@ -309,8 +293,7 @@ class ToolStripRenderer(object):
   OnRenderItemText(self: ToolStripRenderer,e: ToolStripItemTextRenderEventArgs)
    Raises the System.Windows.Forms.ToolStripRenderer.RenderItemText event.
   
-   e: A System.Windows.Forms.ToolStripItemTextRenderEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.ToolStripItemTextRenderEventArgs that contains the event data.
   """
   pass
  def OnRenderLabelBackground(self,*args):
@@ -318,30 +301,23 @@ class ToolStripRenderer(object):
   OnRenderLabelBackground(self: ToolStripRenderer,e: ToolStripItemRenderEventArgs)
    Raises the System.Windows.Forms.ToolStripRenderer.RenderLabelBackground event.
   
-   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event data.
   """
   pass
  def OnRenderMenuItemBackground(self,*args):
   """
   OnRenderMenuItemBackground(self: ToolStripRenderer,e: ToolStripItemRenderEventArgs)
-   Raises the System.Windows.Forms.ToolStripRenderer.RenderMenuItemBackground 
-    event.
+   Raises the System.Windows.Forms.ToolStripRenderer.RenderMenuItemBackground event.
   
-  
-   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event data.
   """
   pass
  def OnRenderOverflowButtonBackground(self,*args):
   """
   OnRenderOverflowButtonBackground(self: ToolStripRenderer,e: ToolStripItemRenderEventArgs)
-   Raises the 
-    System.Windows.Forms.ToolStripRenderer.RenderOverflowButtonBackground event.
+   Raises the System.Windows.Forms.ToolStripRenderer.RenderOverflowButtonBackground event.
   
-  
-   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event data.
   """
   pass
  def OnRenderSeparator(self,*args):
@@ -349,28 +325,24 @@ class ToolStripRenderer(object):
   OnRenderSeparator(self: ToolStripRenderer,e: ToolStripSeparatorRenderEventArgs)
    Raises the System.Windows.Forms.ToolStripRenderer.RenderSeparator event.
   
-   e: A System.Windows.Forms.ToolStripSeparatorRenderEventArgs that contains the 
-    event data.
+   e: A System.Windows.Forms.ToolStripSeparatorRenderEventArgs that contains the event data.
   """
   pass
  def OnRenderSplitButtonBackground(self,*args):
   """
   OnRenderSplitButtonBackground(self: ToolStripRenderer,e: ToolStripItemRenderEventArgs)
    Raises the 
-    System.Windows.Forms.ToolStripRenderer.OnRenderSplitButtonBackground(System.Wind
-    ows.Forms.ToolStripItemRenderEventArgs) event.
+    System.Windows.Forms.ToolStripRenderer.OnRenderSplitButtonBackground(System.Windows.Forms.ToolStr
+    ipItemRenderEventArgs) event.
   
   
-   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event data.
   """
   pass
  def OnRenderStatusStripSizingGrip(self,*args):
   """
   OnRenderStatusStripSizingGrip(self: ToolStripRenderer,e: ToolStripRenderEventArgs)
-   Raises the System.Windows.Forms.ToolStripRenderer.RenderStatusStripSizingGrip 
-    event.
-  
+   Raises the System.Windows.Forms.ToolStripRenderer.RenderStatusStripSizingGrip event.
   
    e: A System.Windows.Forms.ToolStripRenderEventArgs that contains the event data.
   """
@@ -378,9 +350,7 @@ class ToolStripRenderer(object):
  def OnRenderToolStripBackground(self,*args):
   """
   OnRenderToolStripBackground(self: ToolStripRenderer,e: ToolStripRenderEventArgs)
-   Raises the System.Windows.Forms.ToolStripRenderer.RenderToolStripBackground 
-    event.
-  
+   Raises the System.Windows.Forms.ToolStripRenderer.RenderToolStripBackground event.
   
    e: A System.Windows.Forms.ToolStripRenderEventArgs that contains the event data.
   """
@@ -396,36 +366,25 @@ class ToolStripRenderer(object):
  def OnRenderToolStripContentPanelBackground(self,*args):
   """
   OnRenderToolStripContentPanelBackground(self: ToolStripRenderer,e: ToolStripContentPanelRenderEventArgs)
-   Raises the 
-    System.Windows.Forms.ToolStripRenderer.RenderToolStripContentPanelBackground 
-    event.
+   Raises the System.Windows.Forms.ToolStripRenderer.RenderToolStripContentPanelBackground event.
   
-  
-   e: A System.Windows.Forms.ToolStripContentPanelRenderEventArgs that contains the 
-    event data.
+   e: A System.Windows.Forms.ToolStripContentPanelRenderEventArgs that contains the event data.
   """
   pass
  def OnRenderToolStripPanelBackground(self,*args):
   """
   OnRenderToolStripPanelBackground(self: ToolStripRenderer,e: ToolStripPanelRenderEventArgs)
-   Raises the 
-    System.Windows.Forms.ToolStripRenderer.RenderToolStripPanelBackground event.
+   Raises the System.Windows.Forms.ToolStripRenderer.RenderToolStripPanelBackground event.
   
-  
-   e: A System.Windows.Forms.ToolStripPanelRenderEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.ToolStripPanelRenderEventArgs that contains the event data.
   """
   pass
  def OnRenderToolStripStatusLabelBackground(self,*args):
   """
   OnRenderToolStripStatusLabelBackground(self: ToolStripRenderer,e: ToolStripItemRenderEventArgs)
-   Raises the 
-    System.Windows.Forms.ToolStripRenderer.RenderToolStripStatusLabelBackground 
-    event.
+   Raises the System.Windows.Forms.ToolStripRenderer.RenderToolStripStatusLabelBackground event.
   
-  
-   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.ToolStripItemRenderEventArgs that contains the event data.
   """
   pass
  def ScaleArrowOffsetsIfNeeded(self,*args):

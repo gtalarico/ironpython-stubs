@@ -1,0 +1,11 @@
+{
+  "RevitServices.DLL": {
+    "RevitServices.Threading": "<module 'Threading' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "RevitServices.Materials": "<module 'Materials' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "RevitServices.Persistence": "<module 'Persistence' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "RevitServices.EventHandler": "<module 'EventHandler' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "RevitServices.Elements": "<module 'Elements' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "RevitServices": "<module 'RevitServices' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "RevitServices.Transactions": "<module 'Transactions' (CLS module from RevitServices, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

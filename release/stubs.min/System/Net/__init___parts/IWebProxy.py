@@ -7,8 +7,7 @@ class IWebProxy:
    Returns the URI of a proxy.
   
    destination: A System.Uri that specifies the requested Internet resource.
-   Returns: A System.Uri instance that contains the URI of the proxy used to contact 
-    destination.
+   Returns: A System.Uri instance that contains the URI of the proxy used to contact destination.
   """
   pass
  def IsBypassed(self,host):

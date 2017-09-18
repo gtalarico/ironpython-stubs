@@ -21,27 +21,20 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
   """
   CreateGridColumn(self: DataGridTableStyle,prop: PropertyDescriptor,isDefault: bool) -> DataGridColumnStyle
   
-   Creates a System.Windows.Forms.DataGridColumnStyle using the specified property 
-    descriptor. Specifies whether the System.Windows.Forms.DataGridColumnStyle is a 
-    default column style.
+   Creates a System.Windows.Forms.DataGridColumnStyle using the specified property descriptor. 
+    Specifies whether the System.Windows.Forms.DataGridColumnStyle is a default column style.
   
   
-   prop: The System.ComponentModel.PropertyDescriptor used to create the column style 
-    object.
-  
-   isDefault: Specifies whether the System.Windows.Forms.DataGridColumnStyle is a default 
-    column style. This parameter is read-only.
+   prop: The System.ComponentModel.PropertyDescriptor used to create the column style object.
+   isDefault: Specifies whether the System.Windows.Forms.DataGridColumnStyle is a default column style. This 
+    parameter is read-only.
   
    Returns: The newly created System.Windows.Forms.DataGridColumnStyle.
   CreateGridColumn(self: DataGridTableStyle,prop: PropertyDescriptor) -> DataGridColumnStyle
   
-   Creates a System.Windows.Forms.DataGridColumnStyle,using the specified 
-    property descriptor.
+   Creates a System.Windows.Forms.DataGridColumnStyle,using the specified property descriptor.
   
-  
-   prop: The System.ComponentModel.PropertyDescriptor used to create the column style 
-    object.
-  
+   prop: The System.ComponentModel.PropertyDescriptor used to create the column style object.
    Returns: The newly created System.Windows.Forms.DataGridColumnStyle.
   """
   pass
@@ -52,8 +45,7 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
     System.Windows.Forms.DataGridTableStyle.
   
   
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def EndEdit(self,gridColumn,rowNumber,shouldAbort):
@@ -64,8 +56,8 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
   
    gridColumn: The System.Windows.Forms.DataGridColumnStyle to edit.
    rowNumber: The number of the edited row.
-   shouldAbort: A value indicating whether the operation should be stopped; true if it should 
-    stop; otherwise,false.
+   shouldAbort: A value indicating whether the operation should be stopped; true if it should stop; otherwise,
+    false.
   
    Returns: true if the edit operation ends successfully; otherwise,false.
   """
@@ -74,14 +66,13 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -90,11 +81,11 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -114,9 +105,7 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
  def OnAlternatingBackColorChanged(self,*args):
   """
   OnAlternatingBackColorChanged(self: DataGridTableStyle,e: EventArgs)
-   Raises the System.Windows.Forms.DataGridTableStyle.AlternatingBackColorChanged 
-    event.
-  
+   Raises the System.Windows.Forms.DataGridTableStyle.AlternatingBackColorChanged event.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -132,9 +121,7 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
  def OnColumnHeadersVisibleChanged(self,*args):
   """
   OnColumnHeadersVisibleChanged(self: DataGridTableStyle,e: EventArgs)
-   Raises the System.Windows.Forms.DataGridTableStyle.ColumnHeadersVisibleChanged 
-    event.
-  
+   Raises the System.Windows.Forms.DataGridTableStyle.ColumnHeadersVisibleChanged event.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -214,9 +201,7 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
  def OnPreferredColumnWidthChanged(self,*args):
   """
   OnPreferredColumnWidthChanged(self: DataGridTableStyle,e: EventArgs)
-   Raises the System.Windows.Forms.DataGridTableStyle.PreferredColumnWidthChanged 
-    event.
-  
+   Raises the System.Windows.Forms.DataGridTableStyle.PreferredColumnWidthChanged event.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -224,9 +209,7 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
  def OnPreferredRowHeightChanged(self,*args):
   """
   OnPreferredRowHeightChanged(self: DataGridTableStyle,e: EventArgs)
-   Raises the System.Windows.Forms.DataGridTableStyle.PreferredRowHeightChanged 
-    event.
-  
+   Raises the System.Windows.Forms.DataGridTableStyle.PreferredRowHeightChanged event.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -242,9 +225,7 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
  def OnRowHeadersVisibleChanged(self,*args):
   """
   OnRowHeadersVisibleChanged(self: DataGridTableStyle,e: EventArgs)
-   Raises the System.Windows.Forms.DataGridTableStyle.RowHeadersVisibleChanged 
-    event.
-  
+   Raises the System.Windows.Forms.DataGridTableStyle.RowHeadersVisibleChanged event.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -260,9 +241,7 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
  def OnSelectionBackColorChanged(self,*args):
   """
   OnSelectionBackColorChanged(self: DataGridTableStyle,e: EventArgs)
-   Raises the System.Windows.Forms.DataGridTableStyle.SelectionBackColorChanged 
-    event.
-  
+   Raises the System.Windows.Forms.DataGridTableStyle.SelectionBackColorChanged event.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -270,9 +249,7 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
  def OnSelectionForeColorChanged(self,*args):
   """
   OnSelectionForeColorChanged(self: DataGridTableStyle,e: EventArgs)
-   Raises the System.Windows.Forms.DataGridTableStyle.SelectionForeColorChanged 
-    event.
-  
+   Raises the System.Windows.Forms.DataGridTableStyle.SelectionForeColorChanged event.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -280,87 +257,78 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
  def ResetAlternatingBackColor(self):
   """
   ResetAlternatingBackColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.AlternatingBackColor 
-    property to its default value.
+   Resets the System.Windows.Forms.DataGridTableStyle.AlternatingBackColor property to its default 
+    value.
   """
   pass
  def ResetBackColor(self):
   """
   ResetBackColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.BackColor property to its 
-    default value.
+   Resets the System.Windows.Forms.DataGridTableStyle.BackColor property to its default value.
   """
   pass
  def ResetForeColor(self):
   """
   ResetForeColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.ForeColor property to its 
-    default value.
+   Resets the System.Windows.Forms.DataGridTableStyle.ForeColor property to its default value.
   """
   pass
  def ResetGridLineColor(self):
   """
   ResetGridLineColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.GridLineColor property to 
-    its default value.
+   Resets the System.Windows.Forms.DataGridTableStyle.GridLineColor property to its default value.
   """
   pass
  def ResetHeaderBackColor(self):
   """
   ResetHeaderBackColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.HeaderBackColor property to 
-    its default value.
+   Resets the System.Windows.Forms.DataGridTableStyle.HeaderBackColor property to its default value.
   """
   pass
  def ResetHeaderFont(self):
   """
   ResetHeaderFont(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.HeaderFont property to its 
-    default value.
+   Resets the System.Windows.Forms.DataGridTableStyle.HeaderFont property to its default value.
   """
   pass
  def ResetHeaderForeColor(self):
   """
   ResetHeaderForeColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.HeaderForeColor property to 
-    its default value.
+   Resets the System.Windows.Forms.DataGridTableStyle.HeaderForeColor property to its default value.
   """
   pass
  def ResetLinkColor(self):
   """
   ResetLinkColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.LinkColor property to its 
-    default value.
+   Resets the System.Windows.Forms.DataGridTableStyle.LinkColor property to its default value.
   """
   pass
  def ResetLinkHoverColor(self):
   """
   ResetLinkHoverColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.LinkHoverColor property to 
-    its default value.
+   Resets the System.Windows.Forms.DataGridTableStyle.LinkHoverColor property to its default value.
   """
   pass
  def ResetSelectionBackColor(self):
   """
   ResetSelectionBackColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.SelectionBackColor property 
-    to its default value.
+   Resets the System.Windows.Forms.DataGridTableStyle.SelectionBackColor property to its default 
+    value.
   """
   pass
  def ResetSelectionForeColor(self):
   """
   ResetSelectionForeColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.SelectionForeColor property 
-    to its default value.
+   Resets the System.Windows.Forms.DataGridTableStyle.SelectionForeColor property to its default 
+    value.
   """
   pass
  def ShouldSerializeAlternatingBackColor(self,*args):
   """
   ShouldSerializeAlternatingBackColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the 
-    System.Windows.Forms.DataGridTableStyle.AlternatingBackColor property should be 
-    persisted.
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.AlternatingBackColor property 
+    should be persisted.
   
    Returns: true if the property value has changed from its default; otherwise,false.
   """
@@ -369,8 +337,8 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
   """
   ShouldSerializeBackColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the System.Windows.Forms.DataGridTableStyle.BackColor 
-    property should be persisted.
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.BackColor property should be 
+    persisted.
   
    Returns: true if the property value has changed from its default; otherwise,false.
   """
@@ -379,8 +347,8 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
   """
   ShouldSerializeForeColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the System.Windows.Forms.DataGridTableStyle.ForeColor 
-    property should be persisted.
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.ForeColor property should be 
+    persisted.
   
    Returns: true if the property value has changed from its default; otherwise,false.
   """
@@ -389,8 +357,8 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
   """
   ShouldSerializeGridLineColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the System.Windows.Forms.DataGridTableStyle.GridLineColor 
-    property should be persisted.
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.GridLineColor property should be 
+    persisted.
   
    Returns: true if the property value has changed from its default; otherwise,false.
   """
@@ -399,8 +367,8 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
   """
   ShouldSerializeHeaderBackColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the System.Windows.Forms.DataGridTableStyle.HeaderBackColor 
-    property should be persisted.
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.HeaderBackColor property should be 
+    persisted.
   
    Returns: true if the property value has changed from its default; otherwise,false.
   """
@@ -409,8 +377,8 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
   """
   ShouldSerializeHeaderForeColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the System.Windows.Forms.DataGridTableStyle.HeaderForeColor 
-    property should be persisted.
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.HeaderForeColor property should be 
+    persisted.
   
    Returns: true if the property value has changed from its default; otherwise,false.
   """
@@ -419,8 +387,8 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
   """
   ShouldSerializeLinkColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the System.Windows.Forms.DataGridTableStyle.LinkColor 
-    property should be persisted.
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.LinkColor property should be 
+    persisted.
   
    Returns: true if the property value has changed from its default; otherwise,false.
   """
@@ -429,8 +397,8 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
   """
   ShouldSerializeLinkHoverColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the System.Windows.Forms.DataGridTableStyle.LinkHoverColor 
-    property should be persisted.
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.LinkHoverColor property should be 
+    persisted.
   
    Returns: true if the property value has changed from its default; otherwise,false.
   """
@@ -439,9 +407,8 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
   """
   ShouldSerializePreferredRowHeight(self: DataGridTableStyle) -> bool
   
-   Indicates whether the 
-    System.Windows.Forms.DataGridTableStyle.PreferredRowHeight property should be 
-    persisted.
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.PreferredRowHeight property should 
+    be persisted.
   
    Returns: true if the property value has changed from its default; otherwise,false.
   """
@@ -450,9 +417,8 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
   """
   ShouldSerializeSelectionBackColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the 
-    System.Windows.Forms.DataGridTableStyle.SelectionBackColor property should be 
-    persisted.
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.SelectionBackColor property should 
+    be persisted.
   
    Returns: true if the property value has changed from its default; otherwise,false.
   """
@@ -461,18 +427,24 @@ class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingServic
   """
   ShouldSerializeSelectionForeColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the 
-    System.Windows.Forms.DataGridTableStyle.SelectionForeColor property should be 
-    persisted.
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.SelectionForeColor property should 
+    be persisted.
   
    Returns: true if the property value has changed from its default; otherwise,false.
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

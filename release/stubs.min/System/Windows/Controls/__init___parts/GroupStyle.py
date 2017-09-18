@@ -10,9 +10,7 @@ class GroupStyle(object,INotifyPropertyChanged):
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: GroupStyle,e: PropertyChangedEventArgs)
-   Raises the System.Windows.Controls.GroupStyle.PropertyChanged event using the 
-    provided arguments.
-  
+   Raises the System.Windows.Controls.GroupStyle.PropertyChanged event using the provided arguments.
   
    e: Arguments of the event being raised.
   """

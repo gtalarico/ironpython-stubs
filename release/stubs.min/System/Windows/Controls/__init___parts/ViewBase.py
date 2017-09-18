@@ -20,9 +20,9 @@ class ViewBase(DependencyObject):
    parent: The System.Windows.Controls.ListView control to use to create the 
     System.Windows.Automation.Peers.ListViewAutomationPeer.
   
-   Returns: The System.Windows.Automation.Peers.IViewAutomationPeer interface that 
-    implements the System.Windows.Automation.Peers.ListViewAutomationPeer for a 
-    custom System.Windows.Controls.ListView.View.
+   Returns: The System.Windows.Automation.Peers.IViewAutomationPeer interface that implements the 
+    System.Windows.Automation.Peers.ListViewAutomationPeer for a custom 
+    System.Windows.Controls.ListView.View.
   """
   pass
  def PrepareItem(self,*args):

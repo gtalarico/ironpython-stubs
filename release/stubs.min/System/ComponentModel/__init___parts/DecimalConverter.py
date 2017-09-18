@@ -8,8 +8,8 @@ class DecimalConverter(BaseNumberConverter):
   """
   CanConvertTo(self: DecimalConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Gets a value indicating whether this converter can convert an object to the 
-    given destination type using the context.
+   Gets a value indicating whether this converter can convert an object to the given destination 
+    type using the context.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -24,9 +24,7 @@ class DecimalConverter(BaseNumberConverter):
    Converts the given value object to a System.Decimal using the arguments.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   culture: An optional System.Globalization.CultureInfo. If not supplied,the current 
-    culture is assumed.
-  
+   culture: An optional System.Globalization.CultureInfo. If not supplied,the current culture is assumed.
    value: The System.Object to convert.
    destinationType: The System.Type to convert the value to.
    Returns: An System.Object that represents the converted value.

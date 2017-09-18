@@ -4,8 +4,8 @@ class BaseNumberConverter(TypeConverter):
   """
   CanConvertFrom(self: BaseNumberConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Determines if this converter can convert an object in the given source type to 
-    the native type of the converter.
+   Determines if this converter can convert an object in the given source type to the native type 
+    of the converter.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -17,8 +17,8 @@ class BaseNumberConverter(TypeConverter):
   """
   CanConvertTo(self: BaseNumberConverter,context: ITypeDescriptorContext,t: Type) -> bool
   
-   Returns a value indicating whether this converter can convert an object to the 
-    given destination type using the context.
+   Returns a value indicating whether this converter can convert an object to the given destination 
+    type using the context.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -33,9 +33,7 @@ class BaseNumberConverter(TypeConverter):
    Converts the given object to the converter's native type.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   culture: A System.Globalization.CultureInfo that specifies the culture to represent the 
-    number.
-  
+   culture: A System.Globalization.CultureInfo that specifies the culture to represent the number.
    value: The object to convert.
    Returns: An System.Object that represents the converted value.
   """
@@ -47,9 +45,7 @@ class BaseNumberConverter(TypeConverter):
    Converts the specified object to another type.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   culture: A System.Globalization.CultureInfo that specifies the culture to represent the 
-    number.
-  
+   culture: A System.Globalization.CultureInfo that specifies the culture to represent the number.
    value: The object to convert.
    destinationType: The type to convert the object to.
    Returns: An System.Object that represents the converted value.

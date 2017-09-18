@@ -8,8 +8,8 @@ class NullableConverter(TypeConverter):
   """
   CanConvertFrom(self: NullableConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Returns whether this converter can convert an object of the given type to the 
-    type of this converter,using the specified context.
+   Returns whether this converter can convert an object of the given type to the type of this 
+    converter,using the specified context.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext  that provides a format context.
@@ -21,8 +21,8 @@ class NullableConverter(TypeConverter):
   """
   CanConvertTo(self: NullableConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Returns whether this converter can convert the object to the specified type,
-    using the specified context.
+   Returns whether this converter can convert the object to the specified type,using the specified 
+    context.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -34,8 +34,8 @@ class NullableConverter(TypeConverter):
   """
   ConvertFrom(self: NullableConverter,context: ITypeDescriptorContext,culture: CultureInfo,value: object) -> object
   
-   Converts the given object to the type of this converter,using the specified 
-    context and culture information.
+   Converts the given object to the type of this converter,using the specified context and culture 
+    information.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -48,8 +48,8 @@ class NullableConverter(TypeConverter):
   """
   ConvertTo(self: NullableConverter,context: ITypeDescriptorContext,culture: CultureInfo,value: object,destinationType: Type) -> object
   
-   Converts the given value object to the specified type,using the specified 
-    context and culture information.
+   Converts the given value object to the specified type,using the specified context and culture 
+    information.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -65,8 +65,8 @@ class NullableConverter(TypeConverter):
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    propertyValues: An System.Collections.IDictionary of new property values.
-   Returns: An System.Object representing the given System.Collections.IDictionary,or null 
-    if the object cannot be created. This method always returns null.
+   Returns: An System.Object representing the given System.Collections.IDictionary,or null if the object 
+    cannot be created. This method always returns null.
   """
   pass
  def GetCreateInstanceSupported(self,context=None):
@@ -75,8 +75,8 @@ class NullableConverter(TypeConverter):
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    Returns: true if changing a property on this object requires a call to 
-    System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionar
-    y) to create a new value; otherwise,false.
+    System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a 
+    new value; otherwise,false.
   """
   pass
  def GetProperties(self,*__args):
@@ -86,8 +86,8 @@ class NullableConverter(TypeConverter):
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    value: An System.Object that specifies the type of array for which to get properties.
    attributes: An array of type System.Attribute that is used as a filter.
-   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that 
-    are exposed for this data type,or null if there are no properties.
+   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed for 
+    this data type,or null if there are no properties.
   """
   pass
  def GetPropertiesSupported(self,context=None):
@@ -95,22 +95,20 @@ class NullableConverter(TypeConverter):
   GetPropertiesSupported(self: NullableConverter,context: ITypeDescriptorContext) -> bool
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   Returns: true if System.ComponentModel.TypeConverter.GetProperties(System.Object) should 
-    be called to find the properties of this object; otherwise,false.
+   Returns: true if System.ComponentModel.TypeConverter.GetProperties(System.Object) should be called to 
+    find the properties of this object; otherwise,false.
   """
   pass
  def GetStandardValues(self,context=None):
   """
   GetStandardValues(self: NullableConverter,context: ITypeDescriptorContext) -> StandardValuesCollection
   
-   context: An System.ComponentModel.ITypeDescriptorContext that provides a format context 
-    that can be used to extract additional information about the environment from 
-    which this converter is invoked. This parameter or properties of this parameter 
-    can be null.
+   context: An System.ComponentModel.ITypeDescriptorContext that provides a format context that can be used 
+    to extract additional information about the environment from which this converter is invoked. 
+    This parameter or properties of this parameter can be null.
   
-   Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a 
-    standard set of valid values,or null if the data type does not support a 
-    standard set of values.
+   Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of 
+    valid values,or null if the data type does not support a standard set of values.
   """
   pass
  def GetStandardValuesExclusive(self,context=None):
@@ -118,9 +116,9 @@ class NullableConverter(TypeConverter):
   GetStandardValuesExclusive(self: NullableConverter,context: ITypeDescriptorContext) -> bool
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection 
-    returned from System.ComponentModel.TypeConverter.GetStandardValues is an 
-    exhaustive list of possible values; false if other values are possible.
+   Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
+    System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of possible values; 
+    false if other values are possible.
   """
   pass
  def GetStandardValuesSupported(self,context=None):
@@ -128,8 +126,8 @@ class NullableConverter(TypeConverter):
   GetStandardValuesSupported(self: NullableConverter,context: ITypeDescriptorContext) -> bool
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   Returns: true if System.ComponentModel.TypeConverter.GetStandardValues should be called 
-    to find a common set of values the object supports; otherwise,false.
+   Returns: true if System.ComponentModel.TypeConverter.GetStandardValues should be called to find a common 
+    set of values the object supports; otherwise,false.
   """
   pass
  def IsValid(self,*__args):

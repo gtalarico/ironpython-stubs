@@ -8,13 +8,13 @@ class ColorConverter(TypeConverter):
   """
   CanConvertFrom(self: ColorConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Determines if this converter can convert an object in the given source type to 
-    the native type of the converter.
+   Determines if this converter can convert an object in the given source type to the native type 
+    of the converter.
   
   
-   context: An System.ComponentModel.ITypeDescriptorContext that provides a format context. 
-    You can use this object to get additional information about the environment 
-    from which this converter is being invoked.
+   context: An System.ComponentModel.ITypeDescriptorContext that provides a format context. You can use this 
+    object to get additional information about the environment from which this converter is being 
+    invoked.
   
    sourceType: The type from which you want to convert.
    Returns: true if this object can perform the conversion; otherwise,false.
@@ -24,8 +24,8 @@ class ColorConverter(TypeConverter):
   """
   CanConvertTo(self: ColorConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Returns a value indicating whether this converter can convert an object to the 
-    given destination type using the context.
+   Returns a value indicating whether this converter can convert an object to the given destination 
+    type using the context.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -39,13 +39,10 @@ class ColorConverter(TypeConverter):
   
    Converts the given object to the converter's native type.
   
-   context: A System.ComponentModel.TypeDescriptor that provides a format context. You can 
-    use this object to get additional information about the environment from which 
-    this converter is being invoked.
+   context: A System.ComponentModel.TypeDescriptor that provides a format context. You can use this object 
+    to get additional information about the environment from which this converter is being invoked.
   
-   culture: A System.Globalization.CultureInfo that specifies the culture to represent the 
-    color.
-  
+   culture: A System.Globalization.CultureInfo that specifies the culture to represent the color.
    value: The object to convert.
    Returns: An System.Object representing the converted value.
   """
@@ -56,14 +53,11 @@ class ColorConverter(TypeConverter):
   
    Converts the specified object to another type.
   
-   context: A formatter context. Use this object to extract additional information about 
-    the environment from which this converter is being invoked. Always check 
-    whether this value is null. Also,properties on the context object may return 
-    null.
+   context: A formatter context. Use this object to extract additional information about the environment 
+    from which this converter is being invoked. Always check whether this value is null. Also,
+    properties on the context object may return null.
   
-   culture: A System.Globalization.CultureInfo that specifies the culture to represent the 
-    color.
-  
+   culture: A System.Globalization.CultureInfo that specifies the culture to represent the color.
    value: The object to convert.
    destinationType: The type to convert the object to.
    Returns: An System.Object representing the converted value.
@@ -73,32 +67,27 @@ class ColorConverter(TypeConverter):
   """
   GetStandardValues(self: ColorConverter,context: ITypeDescriptorContext) -> StandardValuesCollection
   
-   Retrieves a collection containing a set of standard values for the data type 
-    for which this validator is designed. This will return null if the data type 
-    does not support a standard set of values.
+   Retrieves a collection containing a set of standard values for the data type for which this 
+    validator is designed. This will return null if the data type does not support a standard set of 
+    values.
   
   
-   context: A formatter context. Use this object to extract additional information about 
-    the environment from which this converter is being invoked. Always check 
-    whether this value is null. Also,properties on the context object may return 
-    null.
+   context: A formatter context. Use this object to extract additional information about the environment 
+    from which this converter is being invoked. Always check whether this value is null. Also,
+    properties on the context object may return null.
   
-   Returns: A collection containing null or a standard set of valid values. The default 
-    implementation always returns null.
+   Returns: A collection containing null or a standard set of valid values. The default implementation 
+    always returns null.
   """
   pass
  def GetStandardValuesSupported(self,context=None):
   """
   GetStandardValuesSupported(self: ColorConverter,context: ITypeDescriptorContext) -> bool
   
-   Determines if this object supports a standard set of values that can be chosen 
-    from a list.
+   Determines if this object supports a standard set of values that can be chosen from a list.
   
-  
-   context: A System.ComponentModel.TypeDescriptor through which additional context can be 
-    provided.
-  
-   Returns: true if erload:System.Drawing.ColorConverter.GetStandardValues must be called 
-    to find a common set of values the object supports; otherwise,false.
+   context: A System.ComponentModel.TypeDescriptor through which additional context can be provided.
+   Returns: true if erload:System.Drawing.ColorConverter.GetStandardValues must be called to find a common 
+    set of values the object supports; otherwise,false.
   """
   pass

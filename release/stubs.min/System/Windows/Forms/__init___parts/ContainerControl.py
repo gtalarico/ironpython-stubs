@@ -11,9 +11,7 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
     System.Windows.Forms.AccessibleEvents for the specified child control .
   
   
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
-    applications of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    objectID: The identifier of the System.Windows.Forms.AccessibleObject.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,childID: int)
@@ -21,9 +19,7 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
     System.Windows.Forms.AccessibleEvents for the specified child control.
   
   
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
-    applications of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   """
   pass
@@ -46,8 +42,7 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   CreateControlsInstance(self: Control) -> ControlCollection
   
    Creates a new instance of the control collection for the control.
-   Returns: A new instance of System.Windows.Forms.Control.ControlCollection assigned to 
-    the control.
+   Returns: A new instance of System.Windows.Forms.Control.ControlCollection assigned to the control.
   """
   pass
  def CreateHandle(self,*args):
@@ -74,8 +69,7 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
  def Dispose(self):
   """
   Dispose(self: ContainerControl,disposing: bool)
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetAccessibilityObjectById(self,*args):
@@ -104,15 +98,12 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   
    Retrieves the bounds within which the control is scaled.
   
-   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the 
-    display bounds.
-  
+   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display bounds.
    factor: The height and width of the control's bounds.
-   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the 
-    bounds of the control to use when defining its size and position.
+   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of the 
+    control to use when defining its size and position.
   
-   Returns: A System.Drawing.Rectangle representing the bounds within which the control is 
-    scaled.
+   Returns: A System.Drawing.Rectangle representing the bounds within which the control is scaled.
   """
   pass
  def GetScrollState(self,*args):
@@ -129,14 +120,13 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetStyle(self,*args):
@@ -166,9 +156,7 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
  def InvokeGotFocus(self,*args):
   """
   InvokeGotFocus(self: Control,toInvoke: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.GotFocus event for the specified 
-    control.
-  
+   Raises the System.Windows.Forms.Control.GotFocus event for the specified control.
   
    toInvoke: The System.Windows.Forms.Control to assign the event to.
    e: An System.EventArgs that contains the event data.
@@ -177,9 +165,7 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
  def InvokeLostFocus(self,*args):
   """
   InvokeLostFocus(self: Control,toInvoke: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.LostFocus event for the specified 
-    control.
-  
+   Raises the System.Windows.Forms.Control.LostFocus event for the specified control.
   
    toInvoke: The System.Windows.Forms.Control to assign the event to.
    e: An System.EventArgs that contains the event data.
@@ -190,9 +176,7 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   InvokeOnClick(self: Control,toInvoke: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.Click event for the specified control.
   
-   toInvoke: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Click event to.
-  
+   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event to.
    e: An System.EventArgs that contains the event data.
   """
   pass
@@ -201,9 +185,7 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   InvokePaint(self: Control,c: Control,e: PaintEventArgs)
    Raises the System.Windows.Forms.Control.Paint event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Paint event to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -212,9 +194,7 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   InvokePaintBackground(self: Control,c: Control,e: PaintEventArgs)
    Raises the PaintBackground event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Paint event to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -225,16 +205,16 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
    Determines if a character is an input character that the control recognizes.
   
    charCode: The character to test.
-   Returns: true if the character should be sent directly to the control and not 
-    preprocessed; otherwise,false.
+   Returns: true if the character should be sent directly to the control and not preprocessed; otherwise,
+    false.
   """
   pass
  def IsInputKey(self,*args):
   """
   IsInputKey(self: Control,keyData: Keys) -> bool
   
-   Determines whether the specified key is a regular input key or a special key 
-    that requires preprocessing.
+   Determines whether the specified key is a regular input key or a special key that requires 
+    preprocessing.
   
   
    keyData: One of the System.Windows.Forms.Keys values.
@@ -247,11 +227,11 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -263,8 +243,8 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
  def NotifyInvalidate(self,*args):
   """
   NotifyInvalidate(self: Control,invalidatedArea: Rectangle)
-   Raises the System.Windows.Forms.Control.Invalidated event with a specified 
-    region of the control to invalidate.
+   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the control 
+    to invalidate.
   
   
    invalidatedArea: A System.Drawing.Rectangle representing the area to invalidate.
@@ -408,6 +388,12 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   
    e: An System.EventArgs that contains the event data.
   """
+  pass
+ def OnDpiChangedAfterParent(self,*args):
+  """ OnDpiChangedAfterParent(self: Control,e: EventArgs) """
+  pass
+ def OnDpiChangedBeforeParent(self,*args):
+  """ OnDpiChangedBeforeParent(self: Control,e: EventArgs) """
   pass
  def OnDragDrop(self,*args):
   """
@@ -717,8 +703,7 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   """
   OnParentBackColorChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BackColorChanged event when the 
-    System.Windows.Forms.Control.BackColor property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BackColor property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -728,8 +713,7 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   """
   OnParentBackgroundImageChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the 
-    System.Windows.Forms.Control.BackgroundImage property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BackgroundImage property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -739,8 +723,7 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   """
   OnParentBindingContextChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BindingContextChanged event when the 
-    System.Windows.Forms.Control.BindingContext property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BindingContext property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -764,8 +747,7 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   """
   OnParentEnabledChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.EnabledChanged event when the 
-    System.Windows.Forms.Control.Enabled property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Enabled property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -775,8 +757,7 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   """
   OnParentFontChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.Control.Font property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Font property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -786,8 +767,7 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   """
   OnParentForeColorChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.ForeColorChanged event when the 
-    System.Windows.Forms.Control.ForeColor property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.ForeColor property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -797,8 +777,7 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   """
   OnParentRightToLeftChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.RightToLeftChanged event when the 
-    System.Windows.Forms.Control.RightToLeft property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.RightToLeft property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -808,8 +787,7 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   """
   OnParentVisibleChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.VisibleChanged event when the 
-    System.Windows.Forms.Control.Visible property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Visible property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -949,8 +927,8 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   """
   ProcessCmdKey(self: ContainerControl,msg: Message,keyData: Keys) -> (bool,Message)
   
-   msg: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: true if the character was processed by the control; otherwise,false.
@@ -978,8 +956,8 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   
    Processes a key message and generates the appropriate control events.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -990,8 +968,8 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   
    Processes a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1002,8 +980,8 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   
    Previews a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1013,8 +991,7 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   ProcessMnemonic(self: ContainerControl,charCode: Char) -> bool
   
    charCode: The character to process.
-   Returns: true if the character was processed as a mnemonic by the control; otherwise,
-    false.
+   Returns: true if the character was processed as a mnemonic by the control; otherwise,false.
   """
   pass
  def ProcessTabKey(self,*args):
@@ -1023,8 +1000,8 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   
    Selects the next available control and makes it the active control.
   
-   forward: true to cycle forward through the controls in the 
-    System.Windows.Forms.ContainerControl; otherwise,false.
+   forward: true to cycle forward through the controls in the System.Windows.Forms.ContainerControl; 
+    otherwise,false.
   
    Returns: true if a control is selected; otherwise,false.
   """
@@ -1071,6 +1048,9 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
    Forces the re-creation of the handle for the control.
   """
   pass
+ def RescaleConstantsForDpi(self,*args):
+  """ RescaleConstantsForDpi(self: Control,deviceDpiOld: int,deviceDpiNew: int) """
+  pass
  def ResetMouseEventArgs(self,*args):
   """
   ResetMouseEventArgs(self: Control)
@@ -1089,18 +1069,16 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
    Returns: One of the System.Drawing.ContentAlignment values.
   RtlTranslateAlignment(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the 
-    appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
+    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
   RtlTranslateAlignment(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the 
-    appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
+    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1123,9 +1101,8 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   """
   RtlTranslateHorizontal(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the 
-    appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
+    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1136,9 +1113,8 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   """
   RtlTranslateLeftRight(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the 
-    appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
+    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
@@ -1149,8 +1125,8 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   """
   ScaleControl(self: ScrollableControl,factor: SizeF,specified: BoundsSpecified)
    factor: The factor by which the height and width of the control will be scaled.
-   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the 
-    control to use when defining its size and position.
+   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to use 
+    when defining its size and position.
   """
   pass
  def ScaleCore(self,*args):
@@ -1167,8 +1143,8 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
    Calculates the scroll offset to the specified child control.
   
    activeControl: The child control to scroll into view.
-   Returns: The upper-left hand System.Drawing.Point of the display area relative to the 
-    client area required to scroll the control into view.
+   Returns: The upper-left hand System.Drawing.Point of the display area relative to the client area 
+    required to scroll the control into view.
   """
   pass
  def Select(self):
@@ -1181,8 +1157,8 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
  def SetAutoSizeMode(self,*args):
   """
   SetAutoSizeMode(self: Control,mode: AutoSizeMode)
-   Sets a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
+   Sets a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize 
+    property is enabled.
   
   
    mode: One of the System.Windows.Forms.AutoSizeMode values.
@@ -1214,11 +1190,8 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   SetDisplayRectLocation(self: ScrollableControl,x: int,y: int)
    Positions the display window to the specified value.
   
-   x: The horizontal offset at which to position the 
-    System.Windows.Forms.ScrollableControl.
-  
-   y: The vertical offset at which to position the 
-    System.Windows.Forms.ScrollableControl.
+   x: The horizontal offset at which to position the System.Windows.Forms.ScrollableControl.
+   y: The vertical offset at which to position the System.Windows.Forms.ScrollableControl.
   """
   pass
  def SetScrollState(self,*args):
@@ -1233,9 +1206,7 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
  def SetStyle(self,*args):
   """
   SetStyle(self: Control,flag: ControlStyles,value: bool)
-   Sets a specified System.Windows.Forms.ControlStyles flag to either true or 
-    false.
-  
+   Sets a specified System.Windows.Forms.ControlStyles flag to either true or false.
   
    flag: The System.Windows.Forms.ControlStyles bit to set.
    value: true to apply the specified style to the control; otherwise,false.
@@ -1261,23 +1232,16 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   """
   SizeFromClientSize(self: Control,clientSize: Size) -> Size
   
-   Determines the size of the entire control from the height and width of its 
-    client area.
+   Determines the size of the entire control from the height and width of its client area.
   
-  
-   clientSize: A System.Drawing.Size value representing the height and width of the control's 
-    client area.
-  
-   Returns: A System.Drawing.Size value representing the height and width of the entire 
-    control.
+   clientSize: A System.Drawing.Size value representing the height and width of the control's client area.
+   Returns: A System.Drawing.Size value representing the height and width of the entire control.
   """
   pass
  def UpdateBounds(self,*args):
   """
   UpdateBounds(self: Control,x: int,y: int,width: int,height: int,clientWidth: int,clientHeight: int)
-   Updates the bounds of the control with the specified size,location,and client 
-    size.
-  
+   Updates the bounds of the control with the specified size,location,and client size.
   
    x: The System.Drawing.Point.X coordinate of the control.
    y: The System.Drawing.Point.Y coordinate of the control.
@@ -1318,56 +1282,47 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   """
   Validate(self: ContainerControl,checkAutoValidate: bool) -> bool
   
-   Verifies the value of the control that is losing focus; conditionally dependent 
-    on whether automatic validation is turned on.
+   Verifies the value of the control that is losing focus; conditionally dependent on whether 
+    automatic validation is turned on.
   
   
-   checkAutoValidate: If true,the value of the System.Windows.Forms.ContainerControl.AutoValidate 
-    property is used to determine if validation should be performed; if false,
-    validation is unconditionally performed.
+   checkAutoValidate: If true,the value of the System.Windows.Forms.ContainerControl.AutoValidate property is used to 
+    determine if validation should be performed; if false,validation is unconditionally performed.
   
    Returns: true if validation is successful; otherwise,false. If called from the 
-    System.Windows.Forms.Control.Validating or 
-    System.Windows.Forms.Control.Validated event handlers,this method will always 
-    return false.
+    System.Windows.Forms.Control.Validating or System.Windows.Forms.Control.Validated event 
+    handlers,this method will always return false.
   
   Validate(self: ContainerControl) -> bool
   
    Verifies the value of the control losing focus by causing the 
-    System.Windows.Forms.Control.Validating and 
-    System.Windows.Forms.Control.Validated events to occur,in that order.
+    System.Windows.Forms.Control.Validating and System.Windows.Forms.Control.Validated events to 
+    occur,in that order.
   
    Returns: true if validation is successful; otherwise,false. If called from the 
-    System.Windows.Forms.Control.Validating or 
-    System.Windows.Forms.Control.Validated event handlers,this method will always 
-    return false.
+    System.Windows.Forms.Control.Validating or System.Windows.Forms.Control.Validated event 
+    handlers,this method will always return false.
   """
   pass
  def ValidateChildren(self,validationConstraints=None):
   """
   ValidateChildren(self: ContainerControl,validationConstraints: ValidationConstraints) -> bool
   
-   Causes all of the child controls within a control that support validation to 
-    validate their data.
+   Causes all of the child controls within a control that support validation to validate their data.
   
+   validationConstraints: Places restrictions on which controls have their System.Windows.Forms.Control.Validating event 
+    raised.
   
-   validationConstraints: Places restrictions on which controls have their 
-    System.Windows.Forms.Control.Validating event raised.
-  
-   Returns: true if all of the children validated successfully; otherwise,false. If called 
-    from the System.Windows.Forms.Control.Validating or 
-    System.Windows.Forms.Control.Validated event handlers,this method will always 
-    return false.
+   Returns: true if all of the children validated successfully; otherwise,false. If called from the 
+    System.Windows.Forms.Control.Validating or System.Windows.Forms.Control.Validated event 
+    handlers,this method will always return false.
   
   ValidateChildren(self: ContainerControl) -> bool
   
-   Causes all of the child controls within a control that support validation to 
-    validate their data.
-  
-   Returns: true if all of the children validated successfully; otherwise,false. If called 
-    from the System.Windows.Forms.Control.Validating or 
-    System.Windows.Forms.Control.Validated event handlers,this method will always 
-    return false.
+   Causes all of the child controls within a control that support validation to validate their data.
+   Returns: true if all of the children validated successfully; otherwise,false. If called from the 
+    System.Windows.Forms.Control.Validating or System.Windows.Forms.Control.Validated event 
+    handlers,this method will always return false.
   """
   pass
  def WndProc(self,*args):
@@ -1380,10 +1335,17 @@ class ContainerControl(ScrollableControl,IComponent,IDisposable,IOleControl,IOle
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

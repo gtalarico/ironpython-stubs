@@ -2,7 +2,7 @@
 # module System.Web calls itself Web
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -19,8 +19,8 @@ class AspNetHostingPermission(CodeAccessPermission,IPermission,ISecurityEncodabl
   """
   Copy(self: AspNetHostingPermission) -> IPermission
   
-   When implemented by a derived class,creates and returns an identical copy of 
-    the current permission object.
+   When implemented by a derived class,creates and returns an identical copy of the current 
+    permission object.
   
    Returns: A copy of the current permission object.
   """
@@ -30,36 +30,35 @@ class AspNetHostingPermission(CodeAccessPermission,IPermission,ISecurityEncodabl
   FromXml(self: AspNetHostingPermission,securityElement: SecurityElement)
    Reconstructs a permission object with a specified state from an XML encoding.
   
-   securityElement: The System.Security.SecurityElement containing the XML encoding to use to 
-    reconstruct the permission object.
+   securityElement: The System.Security.SecurityElement containing the XML encoding to use to reconstruct the 
+    permission object.
   """
   pass
  def Intersect(self,target):
   """
   Intersect(self: AspNetHostingPermission,target: IPermission) -> IPermission
   
-   When implemented by a derived class,creates and returns a permission that is 
-    the intersection of the current permission and the specified permission.
+   When implemented by a derived class,creates and returns a permission that is the intersection 
+    of the current permission and the specified permission.
   
   
-   target: A permission to combine with the current permission. It must be of the same 
-    type as the current permission.
+   target: A permission to combine with the current permission. It must be of the same type as the current 
+    permission.
   
-   Returns: An System.Security.IPermission that represents the intersection of the current 
-    permission and the specified permission; otherwise,null if the intersection is 
-    empty.
+   Returns: An System.Security.IPermission that represents the intersection of the current permission and 
+    the specified permission; otherwise,null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
   IsSubsetOf(self: AspNetHostingPermission,target: IPermission) -> bool
   
-   Returns a value indicating whether the current permission is a subset of the 
-    specified permission.
+   Returns a value indicating whether the current permission is a subset of the specified 
+    permission.
   
   
-   target: The System.Security.IPermission to combine with the current permission. It must 
-    be of the same type as the current System.Security.IPermission.
+   target: The System.Security.IPermission to combine with the current permission. It must be of the same 
+    type as the current System.Security.IPermission.
   
    Returns: true if the current System.Security.IPermission is a subset of the specified 
     System.Security.IPermission; otherwise,false.
@@ -69,11 +68,11 @@ class AspNetHostingPermission(CodeAccessPermission,IPermission,ISecurityEncodabl
   """
   IsUnrestricted(self: AspNetHostingPermission) -> bool
   
-   Returns a value indicating whether unrestricted access to the resource that is 
-    protected by the current permission is allowed.
+   Returns a value indicating whether unrestricted access to the resource that is protected by the 
+    current permission is allowed.
   
-   Returns: true if unrestricted use of the resource protected by the permission is 
-    allowed; otherwise,false.
+   Returns: true if unrestricted use of the resource protected by the permission is allowed; otherwise,
+    false.
   """
   pass
  def ToXml(self):
@@ -81,23 +80,21 @@ class AspNetHostingPermission(CodeAccessPermission,IPermission,ISecurityEncodabl
   ToXml(self: AspNetHostingPermission) -> SecurityElement
   
    Creates an XML encoding of the permission object and its current state.
-   Returns: A System.Security.SecurityElement containing the XML encoding of the permission 
-    object,including any state information.
+   Returns: A System.Security.SecurityElement containing the XML encoding of the permission object,
+    including any state information.
   """
   pass
  def Union(self,target):
   """
   Union(self: AspNetHostingPermission,target: IPermission) -> IPermission
   
-   Creates a permission that is the union of the current permission and the 
-    specified permission.
+   Creates a permission that is the union of the current permission and the specified permission.
   
+   target: A permission to combine with the current permission. It must be of the same type as the current 
+    permission.
   
-   target: A permission to combine with the current permission. It must be of the same 
-    type as the current permission.
-  
-   Returns: An System.Security.IPermission that represents the union of the current 
-    permission and the specified permission.
+   Returns: An System.Security.IPermission that represents the union of the current permission and the 
+    specified permission.
   """
   pass
  def __init__(self,*args):
@@ -134,12 +131,10 @@ class AspNetHostingPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
   """
   CreatePermission(self: AspNetHostingPermissionAttribute) -> IPermission
   
-   Creates a new System.Web.AspNetHostingPermission with the permission level 
-    previously set by the System.Web.AspNetHostingPermissionAttribute.Level 
-    property.
+   Creates a new System.Web.AspNetHostingPermission with the permission level previously set by the 
+    System.Web.AspNetHostingPermissionAttribute.Level property.
   
-   Returns: An System.Security.IPermission that is the new 
-    System.Web.AspNetHostingPermission.
+   Returns: An System.Security.IPermission that is the new System.Web.AspNetHostingPermission.
   """
   pass
  def __init__(self,*args):

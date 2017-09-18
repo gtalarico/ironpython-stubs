@@ -41,9 +41,7 @@ class AutoCompleteStringCollection(object,IList,ICollection,IEnumerable):
  def CopyTo(self,array,index):
   """
   CopyTo(self: AutoCompleteStringCollection,array: Array[str],index: int)
-   Copies an array of System.String objects into the collection,starting at the 
-    specified position.
-  
+   Copies an array of System.String objects into the collection,starting at the specified position.
   
    array: The System.String objects to add to the collection.
    index: The position within the collection at which to start the insertion.
@@ -81,9 +79,7 @@ class AutoCompleteStringCollection(object,IList,ICollection,IEnumerable):
  def OnCollectionChanged(self,*args):
   """
   OnCollectionChanged(self: AutoCompleteStringCollection,e: CollectionChangeEventArgs)
-   Raises the System.Windows.Forms.AutoCompleteStringCollection.CollectionChanged 
-    event.
-  
+   Raises the System.Windows.Forms.AutoCompleteStringCollection.CollectionChanged event.
   
    e: A System.ComponentModel.CollectionChangeEventArgs that contains the event data.
   """
@@ -114,8 +110,7 @@ class AutoCompleteStringCollection(object,IList,ICollection,IEnumerable):
    Determines whether the System.Collections.IList contains a specific value.
   
    value: The object to locate in the System.Collections.IList.
-   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,
-    false.
+   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,false.
   """
   pass
  def __getitem__(self,*args):

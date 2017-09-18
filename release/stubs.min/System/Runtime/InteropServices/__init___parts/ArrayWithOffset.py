@@ -8,15 +8,13 @@ class ArrayWithOffset(object):
   """
   Equals(self: ArrayWithOffset,obj: ArrayWithOffset) -> bool
   
-   Indicates whether the specified System.Runtime.InteropServices.ArrayWithOffset 
-    object matches the current instance.
+   Indicates whether the specified System.Runtime.InteropServices.ArrayWithOffset object matches 
+    the current instance.
   
   
-   obj: An System.Runtime.InteropServices.ArrayWithOffset object to compare with this 
-    instance.
-  
-   Returns: true if the specified System.Runtime.InteropServices.ArrayWithOffset object 
-    matches the current instance; otherwise,false.
+   obj: An System.Runtime.InteropServices.ArrayWithOffset object to compare with this instance.
+   Returns: true if the specified System.Runtime.InteropServices.ArrayWithOffset object matches the current 
+    instance; otherwise,false.
   
   Equals(self: ArrayWithOffset,obj: object) -> bool
   
@@ -25,17 +23,14 @@ class ArrayWithOffset(object):
   
   
    obj: Object to compare with this instance.
-   Returns: true if the object matches this System.Runtime.InteropServices.ArrayWithOffset; 
-    otherwise,false.
+   Returns: true if the object matches this System.Runtime.InteropServices.ArrayWithOffset; otherwise,false.
   """
   pass
  def GetArray(self):
   """
   GetArray(self: ArrayWithOffset) -> object
   
-   Returns the managed array referenced by this 
-    System.Runtime.InteropServices.ArrayWithOffset.
-  
+   Returns the managed array referenced by this System.Runtime.InteropServices.ArrayWithOffset.
    Returns: The managed array this instance references.
   """
   pass
@@ -51,8 +46,8 @@ class ArrayWithOffset(object):
   """
   GetOffset(self: ArrayWithOffset) -> int
   
-   Returns the offset provided when this 
-    System.Runtime.InteropServices.ArrayWithOffset was constructed.
+   Returns the offset provided when this System.Runtime.InteropServices.ArrayWithOffset was 
+    constructed.
   
    Returns: The offset for this instance.
   """

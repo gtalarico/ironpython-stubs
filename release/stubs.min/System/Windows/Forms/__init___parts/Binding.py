@@ -42,8 +42,7 @@ class Binding(object):
  def WriteValue(self):
   """
   WriteValue(self: Binding)
-   Reads the current value from the control property and writes it to the data 
-    source.
+   Reads the current value from the control property and writes it to the data source.
   """
   pass
  @staticmethod

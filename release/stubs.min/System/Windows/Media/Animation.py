@@ -1,8 +1,8 @@
 # encoding: utf-8
 # module System.Windows.Media.Animation calls itself Animation
-# from PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,PresentationCore,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
+# from PresentationCore,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -17,7 +17,6 @@ from Animation_parts.AnimationTimeline import AnimationTimeline
 from Animation_parts.IEasingFunction import IEasingFunction
 from Animation_parts.EasingFunctionBase import EasingFunctionBase
 from Animation_parts.BackEase import BackEase
-from Animation_parts.BeginStoryboard import BeginStoryboard
 from Animation_parts.BooleanAnimationBase import BooleanAnimationBase
 from Animation_parts.IKeyFrameAnimation import IKeyFrameAnimation
 from Animation_parts.BooleanAnimationUsingKeyFrames import BooleanAnimationUsingKeyFrames
@@ -44,7 +43,6 @@ from Animation_parts.ColorAnimation import ColorAnimation
 from Animation_parts.ColorAnimationUsingKeyFrames import ColorAnimationUsingKeyFrames
 from Animation_parts.ColorKeyFrame import ColorKeyFrame
 from Animation_parts.ColorKeyFrameCollection import ColorKeyFrameCollection
-from Animation_parts.ControllableStoryboardAction import ControllableStoryboardAction
 from Animation_parts.CubicEase import CubicEase
 from Animation_parts.DecimalAnimationBase import DecimalAnimationBase
 from Animation_parts.DecimalAnimation import DecimalAnimation
@@ -84,8 +82,6 @@ from Animation_parts.SizeKeyFrame import SizeKeyFrame
 from Animation_parts.DiscreteSizeKeyFrame import DiscreteSizeKeyFrame
 from Animation_parts.StringKeyFrame import StringKeyFrame
 from Animation_parts.DiscreteStringKeyFrame import DiscreteStringKeyFrame
-from Animation_parts.ThicknessKeyFrame import ThicknessKeyFrame
-from Animation_parts.DiscreteThicknessKeyFrame import DiscreteThicknessKeyFrame
 from Animation_parts.Vector3DKeyFrame import Vector3DKeyFrame
 from Animation_parts.DiscreteVector3DKeyFrame import DiscreteVector3DKeyFrame
 from Animation_parts.VectorKeyFrame import VectorKeyFrame
@@ -110,7 +106,6 @@ from Animation_parts.EasingRectKeyFrame import EasingRectKeyFrame
 from Animation_parts.EasingRotation3DKeyFrame import EasingRotation3DKeyFrame
 from Animation_parts.EasingSingleKeyFrame import EasingSingleKeyFrame
 from Animation_parts.EasingSizeKeyFrame import EasingSizeKeyFrame
-from Animation_parts.EasingThicknessKeyFrame import EasingThicknessKeyFrame
 from Animation_parts.EasingVector3DKeyFrame import EasingVector3DKeyFrame
 from Animation_parts.EasingVectorKeyFrame import EasingVectorKeyFrame
 from Animation_parts.ElasticEase import ElasticEase
@@ -146,7 +141,6 @@ from Animation_parts.LinearRectKeyFrame import LinearRectKeyFrame
 from Animation_parts.LinearRotation3DKeyFrame import LinearRotation3DKeyFrame
 from Animation_parts.LinearSingleKeyFrame import LinearSingleKeyFrame
 from Animation_parts.LinearSizeKeyFrame import LinearSizeKeyFrame
-from Animation_parts.LinearThicknessKeyFrame import LinearThicknessKeyFrame
 from Animation_parts.LinearVector3DKeyFrame import LinearVector3DKeyFrame
 from Animation_parts.LinearVectorKeyFrame import LinearVectorKeyFrame
 from Animation_parts.MatrixAnimationBase import MatrixAnimationBase
@@ -159,7 +153,6 @@ from Animation_parts.ObjectKeyFrameCollection import ObjectKeyFrameCollection
 from Animation_parts.TimelineGroup import TimelineGroup
 from Animation_parts.ParallelTimeline import ParallelTimeline
 from Animation_parts.PathAnimationSource import PathAnimationSource
-from Animation_parts.PauseStoryboard import PauseStoryboard
 from Animation_parts.Point3DAnimationBase import Point3DAnimationBase
 from Animation_parts.Point3DAnimation import Point3DAnimation
 from Animation_parts.Point3DAnimationUsingKeyFrames import Point3DAnimationUsingKeyFrames
@@ -181,16 +174,12 @@ from Animation_parts.RectAnimationBase import RectAnimationBase
 from Animation_parts.RectAnimation import RectAnimation
 from Animation_parts.RectAnimationUsingKeyFrames import RectAnimationUsingKeyFrames
 from Animation_parts.RectKeyFrameCollection import RectKeyFrameCollection
-from Animation_parts.RemoveStoryboard import RemoveStoryboard
 from Animation_parts.RepeatBehavior import RepeatBehavior
 from Animation_parts.RepeatBehaviorConverter import RepeatBehaviorConverter
-from Animation_parts.ResumeStoryboard import ResumeStoryboard
 from Animation_parts.Rotation3DAnimationBase import Rotation3DAnimationBase
 from Animation_parts.Rotation3DAnimation import Rotation3DAnimation
 from Animation_parts.Rotation3DAnimationUsingKeyFrames import Rotation3DAnimationUsingKeyFrames
 from Animation_parts.Rotation3DKeyFrameCollection import Rotation3DKeyFrameCollection
-from Animation_parts.SeekStoryboard import SeekStoryboard
-from Animation_parts.SetStoryboardSpeedRatio import SetStoryboardSpeedRatio
 from Animation_parts.SineEase import SineEase
 from Animation_parts.SingleAnimationBase import SingleAnimationBase
 from Animation_parts.SingleAnimation import SingleAnimation
@@ -200,7 +189,6 @@ from Animation_parts.SizeAnimationBase import SizeAnimationBase
 from Animation_parts.SizeAnimation import SizeAnimation
 from Animation_parts.SizeAnimationUsingKeyFrames import SizeAnimationUsingKeyFrames
 from Animation_parts.SizeKeyFrameCollection import SizeKeyFrameCollection
-from Animation_parts.SkipStoryboardToFill import SkipStoryboardToFill
 from Animation_parts.SlipBehavior import SlipBehavior
 from Animation_parts.SplineByteKeyFrame import SplineByteKeyFrame
 from Animation_parts.SplineColorKeyFrame import SplineColorKeyFrame
@@ -216,18 +204,11 @@ from Animation_parts.SplineRectKeyFrame import SplineRectKeyFrame
 from Animation_parts.SplineRotation3DKeyFrame import SplineRotation3DKeyFrame
 from Animation_parts.SplineSingleKeyFrame import SplineSingleKeyFrame
 from Animation_parts.SplineSizeKeyFrame import SplineSizeKeyFrame
-from Animation_parts.SplineThicknessKeyFrame import SplineThicknessKeyFrame
 from Animation_parts.SplineVector3DKeyFrame import SplineVector3DKeyFrame
 from Animation_parts.SplineVectorKeyFrame import SplineVectorKeyFrame
-from Animation_parts.StopStoryboard import StopStoryboard
-from Animation_parts.Storyboard import Storyboard
 from Animation_parts.StringAnimationBase import StringAnimationBase
 from Animation_parts.StringAnimationUsingKeyFrames import StringAnimationUsingKeyFrames
 from Animation_parts.StringKeyFrameCollection import StringKeyFrameCollection
-from Animation_parts.ThicknessAnimationBase import ThicknessAnimationBase
-from Animation_parts.ThicknessAnimation import ThicknessAnimation
-from Animation_parts.ThicknessAnimationUsingKeyFrames import ThicknessAnimationUsingKeyFrames
-from Animation_parts.ThicknessKeyFrameCollection import ThicknessKeyFrameCollection
 from Animation_parts.TimelineCollection import TimelineCollection
 from Animation_parts.TimeSeekOrigin import TimeSeekOrigin
 from Animation_parts.Vector3DAnimationBase import Vector3DAnimationBase

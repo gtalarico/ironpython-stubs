@@ -10,10 +10,9 @@ class DataGridViewRowPostPaintEventArgs(EventArgs):
    Draws the focus rectangle around the specified bounds.
   
    bounds: A System.Drawing.Rectangle that specifies the focus area.
-   cellsPaintSelectionBackground: true to use the System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor 
-    property of the System.Windows.Forms.DataGridViewRow.InheritedStyle property to 
-    determine the color of the focus rectangle; false to use the 
-    System.Windows.Forms.DataGridViewCellStyle.BackColor property of the 
+   cellsPaintSelectionBackground: true to use the System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor property of the 
+    System.Windows.Forms.DataGridViewRow.InheritedStyle property to determine the color of the focus 
+    rectangle; false to use the System.Windows.Forms.DataGridViewCellStyle.BackColor property of the 
     System.Windows.Forms.DataGridViewRow.InheritedStyle property.
   """
   pass
@@ -22,11 +21,11 @@ class DataGridViewRowPostPaintEventArgs(EventArgs):
   PaintCells(self: DataGridViewRowPostPaintEventArgs,clipBounds: Rectangle,paintParts: DataGridViewPaintParts)
    Paints the specified cell parts for the area in the specified bounds.
   
-   clipBounds: A System.Drawing.Rectangle that specifies the area of the 
-    System.Windows.Forms.DataGridView to be painted.
+   clipBounds: A System.Drawing.Rectangle that specifies the area of the System.Windows.Forms.DataGridView to 
+    be painted.
   
-   paintParts: A bitwise combination of System.Windows.Forms.DataGridViewPaintParts values 
-    specifying the parts to paint.
+   paintParts: A bitwise combination of System.Windows.Forms.DataGridViewPaintParts values specifying the parts 
+    to paint.
   """
   pass
  def PaintCellsBackground(self,clipBounds,cellsPaintSelectionBackground):
@@ -34,15 +33,14 @@ class DataGridViewRowPostPaintEventArgs(EventArgs):
   PaintCellsBackground(self: DataGridViewRowPostPaintEventArgs,clipBounds: Rectangle,cellsPaintSelectionBackground: bool)
    Paints the cell backgrounds for the area in the specified bounds.
   
-   clipBounds: A System.Drawing.Rectangle that specifies the area of the 
-    System.Windows.Forms.DataGridView to be painted.
+   clipBounds: A System.Drawing.Rectangle that specifies the area of the System.Windows.Forms.DataGridView to 
+    be painted.
   
    cellsPaintSelectionBackground: true to paint the background of the specified bounds with the color of the 
     System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor property of the 
-    System.Windows.Forms.DataGridViewRow.InheritedStyle; false to paint the 
-    background of the specified bounds with the color of the 
-    System.Windows.Forms.DataGridViewCellStyle.BackColor property of the 
-    System.Windows.Forms.DataGridViewRow.InheritedStyle.
+    System.Windows.Forms.DataGridViewRow.InheritedStyle; false to paint the background of the 
+    specified bounds with the color of the System.Windows.Forms.DataGridViewCellStyle.BackColor 
+    property of the System.Windows.Forms.DataGridViewRow.InheritedStyle.
   """
   pass
  def PaintCellsContent(self,clipBounds):
@@ -50,8 +48,8 @@ class DataGridViewRowPostPaintEventArgs(EventArgs):
   PaintCellsContent(self: DataGridViewRowPostPaintEventArgs,clipBounds: Rectangle)
    Paints the cell contents for the area in the specified bounds.
   
-   clipBounds: A System.Drawing.Rectangle that specifies the area of the 
-    System.Windows.Forms.DataGridView to be painted.
+   clipBounds: A System.Drawing.Rectangle that specifies the area of the System.Windows.Forms.DataGridView to 
+    be painted.
   """
   pass
  def PaintHeader(self,*__args):
@@ -59,18 +57,16 @@ class DataGridViewRowPostPaintEventArgs(EventArgs):
   PaintHeader(self: DataGridViewRowPostPaintEventArgs,paintParts: DataGridViewPaintParts)
    Paints the specified parts of the row header of the current row.
   
-   paintParts: A bitwise combination of System.Windows.Forms.DataGridViewPaintParts values 
-    specifying the parts to paint.
+   paintParts: A bitwise combination of System.Windows.Forms.DataGridViewPaintParts values specifying the parts 
+    to paint.
   
   PaintHeader(self: DataGridViewRowPostPaintEventArgs,paintSelectionBackground: bool)
-   Paints the entire row header of the current 
-    System.Windows.Forms.DataGridViewRow.
-  
+   Paints the entire row header of the current System.Windows.Forms.DataGridViewRow.
   
    paintSelectionBackground: true to paint the row header with the color of the 
     System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor property of the 
-    System.Windows.Forms.DataGridViewRow.InheritedStyle; false to paint the row 
-    header with the System.Windows.Forms.DataGridViewCellStyle.BackColor of the 
+    System.Windows.Forms.DataGridViewRow.InheritedStyle; false to paint the row header with the 
+    System.Windows.Forms.DataGridViewCellStyle.BackColor of the 
     System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle property.
   """
   pass

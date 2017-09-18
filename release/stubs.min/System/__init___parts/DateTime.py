@@ -18,129 +18,118 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
   """
   Add(self: DateTime,value: TimeSpan) -> DateTime
   
-   Returns a new System.DateTime that adds the value of the specified 
-    System.TimeSpan to the value of this instance.
+   Returns a new System.DateTime that adds the value of the specified System.TimeSpan to the value 
+    of this instance.
   
   
    value: A positive or negative time interval.
-   Returns: An object whose value is the sum of the date and time represented by this 
-    instance and the time interval represented by value.
+   Returns: An object whose value is the sum of the date and time represented by this instance and the time 
+    interval represented by value.
   """
   pass
  def AddDays(self,value):
   """
   AddDays(self: DateTime,value: float) -> DateTime
   
-   Returns a new System.DateTime that adds the specified number of days to the 
-    value of this instance.
+   Returns a new System.DateTime that adds the specified number of days to the value of this 
+    instance.
   
   
-   value: A number of whole and fractional days. The value parameter can be negative or 
-    positive.
-  
-   Returns: An object whose value is the sum of the date and time represented by this 
-    instance and the number of days represented by value.
+   value: A number of whole and fractional days. The value parameter can be negative or positive.
+   Returns: An object whose value is the sum of the date and time represented by this instance and the 
+    number of days represented by value.
   """
   pass
  def AddHours(self,value):
   """
   AddHours(self: DateTime,value: float) -> DateTime
   
-   Returns a new System.DateTime that adds the specified number of hours to the 
-    value of this instance.
+   Returns a new System.DateTime that adds the specified number of hours to the value of this 
+    instance.
   
   
-   value: A number of whole and fractional hours. The value parameter can be negative or 
-    positive.
-  
-   Returns: An object whose value is the sum of the date and time represented by this 
-    instance and the number of hours represented by value.
+   value: A number of whole and fractional hours. The value parameter can be negative or positive.
+   Returns: An object whose value is the sum of the date and time represented by this instance and the 
+    number of hours represented by value.
   """
   pass
  def AddMilliseconds(self,value):
   """
   AddMilliseconds(self: DateTime,value: float) -> DateTime
   
-   Returns a new System.DateTime that adds the specified number of milliseconds to 
-    the value of this instance.
+   Returns a new System.DateTime that adds the specified number of milliseconds to the value of 
+    this instance.
   
   
-   value: A number of whole and fractional milliseconds. The value parameter can be 
-    negative or positive. Note that this value is rounded to the nearest integer.
+   value: A number of whole and fractional milliseconds. The value parameter can be negative or positive. 
+    Note that this value is rounded to the nearest integer.
   
-   Returns: An object whose value is the sum of the date and time represented by this 
-    instance and the number of milliseconds represented by value.
+   Returns: An object whose value is the sum of the date and time represented by this instance and the 
+    number of milliseconds represented by value.
   """
   pass
  def AddMinutes(self,value):
   """
   AddMinutes(self: DateTime,value: float) -> DateTime
   
-   Returns a new System.DateTime that adds the specified number of minutes to the 
-    value of this instance.
+   Returns a new System.DateTime that adds the specified number of minutes to the value of this 
+    instance.
   
   
-   value: A number of whole and fractional minutes. The value parameter can be negative 
-    or positive.
-  
-   Returns: An object whose value is the sum of the date and time represented by this 
-    instance and the number of minutes represented by value.
+   value: A number of whole and fractional minutes. The value parameter can be negative or positive.
+   Returns: An object whose value is the sum of the date and time represented by this instance and the 
+    number of minutes represented by value.
   """
   pass
  def AddMonths(self,months):
   """
   AddMonths(self: DateTime,months: int) -> DateTime
   
-   Returns a new System.DateTime that adds the specified number of months to the 
-    value of this instance.
+   Returns a new System.DateTime that adds the specified number of months to the value of this 
+    instance.
   
   
    months: A number of months. The months parameter can be negative or positive.
-   Returns: An object whose value is the sum of the date and time represented by this 
-    instance and months.
+   Returns: An object whose value is the sum of the date and time represented by this instance and months.
   """
   pass
  def AddSeconds(self,value):
   """
   AddSeconds(self: DateTime,value: float) -> DateTime
   
-   Returns a new System.DateTime that adds the specified number of seconds to the 
-    value of this instance.
+   Returns a new System.DateTime that adds the specified number of seconds to the value of this 
+    instance.
   
   
-   value: A number of whole and fractional seconds. The value parameter can be negative 
-    or positive.
-  
-   Returns: An object whose value is the sum of the date and time represented by this 
-    instance and the number of seconds represented by value.
+   value: A number of whole and fractional seconds. The value parameter can be negative or positive.
+   Returns: An object whose value is the sum of the date and time represented by this instance and the 
+    number of seconds represented by value.
   """
   pass
  def AddTicks(self,value):
   """
   AddTicks(self: DateTime,value: Int64) -> DateTime
   
-   Returns a new System.DateTime that adds the specified number of ticks to the 
-    value of this instance.
+   Returns a new System.DateTime that adds the specified number of ticks to the value of this 
+    instance.
   
   
-   value: A number of 100-nanosecond ticks. The value parameter can be positive or 
-    negative.
-  
-   Returns: An object whose value is the sum of the date and time represented by this 
-    instance and the time represented by value.
+   value: A number of 100-nanosecond ticks. The value parameter can be positive or negative.
+   Returns: An object whose value is the sum of the date and time represented by this instance and the time 
+    represented by value.
   """
   pass
  def AddYears(self,value):
   """
   AddYears(self: DateTime,value: int) -> DateTime
   
-   Returns a new System.DateTime that adds the specified number of years to the 
-    value of this instance.
+   Returns a new System.DateTime that adds the specified number of years to the value of this 
+    instance.
   
   
    value: A number of years. The value parameter can be negative or positive.
-   Returns: An object whose value is the sum of the date and time represented by this 
-    instance and the number of years represented by value.
+   Returns: An object whose value is the sum of the date and time represented by this instance and the 
+    number of years represented by value.
   """
   pass
  @staticmethod
@@ -148,46 +137,41 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
   """
   Compare(t1: DateTime,t2: DateTime) -> int
   
-   Compares two instances of System.DateTime and returns an integer that indicates 
-    whether the first instance is earlier than,the same as,or later than the 
-    second instance.
+   Compares two instances of System.DateTime and returns an integer that indicates whether the 
+    first instance is earlier than,the same as,or later than the second instance.
   
   
    t1: The first object to compare.
    t2: The second object to compare.
-   Returns: A signed number indicating the relative values of t1 and t2.Value Type 
-    Condition Less than zero t1 is earlier than t2. Zero t1 is the same as t2. 
-    Greater than zero t1 is later than t2.
+   Returns: A signed number indicating the relative values of t1 and t2.Value Type Condition Less than zero 
+    t1 is earlier than t2. Zero t1 is the same as t2. Greater than zero t1 is later than t2.
   """
   pass
  def CompareTo(self,value):
   """
   CompareTo(self: DateTime,value: DateTime) -> int
   
-   Compares the value of this instance to a specified System.DateTime value and 
-    returns an integer that indicates whether this instance is earlier than,the 
-    same as,or later than the specified System.DateTime value.
-  
-  
-   value: The object to compare to the current instance.
-   Returns: A signed number indicating the relative values of this instance and the value 
-    parameter.Value Description Less than zero This instance is earlier than value. 
-    Zero This instance is the same as value. Greater than zero This instance is 
-    later than value.
-  
-  CompareTo(self: DateTime,value: object) -> int
-  
-   Compares the value of this instance to a specified object that contains a 
-    specified System.DateTime value,and returns an integer that indicates whether 
-    this instance is earlier than,the same as,or later than the specified 
+   Compares the value of this instance to a specified System.DateTime value and returns an integer 
+    that indicates whether this instance is earlier than,the same as,or later than the specified 
     System.DateTime value.
   
   
+   value: The object to compare to the current instance.
+   Returns: A signed number indicating the relative values of this instance and the value parameter.Value 
+    Description Less than zero This instance is earlier than value. Zero This instance is the same 
+    as value. Greater than zero This instance is later than value.
+  
+  CompareTo(self: DateTime,value: object) -> int
+  
+   Compares the value of this instance to a specified object that contains a specified 
+    System.DateTime value,and returns an integer that indicates whether this instance is earlier 
+    than,the same as,or later than the specified System.DateTime value.
+  
+  
    value: A boxed object to compare,or null.
-   Returns: A signed number indicating the relative values of this instance and value.Value 
-    Description Less than zero This instance is earlier than value. Zero This 
-    instance is the same as value. Greater than zero This instance is later than 
-    value,or value is null.
+   Returns: A signed number indicating the relative values of this instance and value.Value Description Less 
+    than zero This instance is earlier than value. Zero This instance is the same as value. Greater 
+    than zero This instance is later than value,or value is null.
   """
   pass
  @staticmethod
@@ -199,17 +183,16 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
   
    year: The year.
    month: The month (a number ranging from 1 to 12).
-   Returns: The number of days in month for the specified year.For example,if month equals 
-    2 for February,the return value is 28 or 29 depending upon whether year is a 
-    leap year.
+   Returns: The number of days in month for the specified year.For example,if month equals 2 for February,
+    the return value is 28 or 29 depending upon whether year is a leap year.
   """
   pass
  def Equals(self,*__args):
   """
   Equals(t1: DateTime,t2: DateTime) -> bool
   
-   Returns a value indicating whether two System.DateTime instances have the same 
-    date and time value.
+   Returns a value indicating whether two System.DateTime instances have the same date and time 
+    value.
   
   
    t1: The first object to compare.
@@ -217,8 +200,8 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
    Returns: true if the two values are equal; otherwise,false.
   Equals(self: DateTime,value: DateTime) -> bool
   
-   Returns a value indicating whether the value of this instance is equal to the 
-    value of the specified System.DateTime instance.
+   Returns a value indicating whether the value of this instance is equal to the value of the 
+    specified System.DateTime instance.
   
   
    value: The object to compare to this instance.
@@ -228,8 +211,8 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
    Returns a value indicating whether this instance is equal to a specified object.
   
    value: The object to compare to this instance.
-   Returns: true if value is an instance of System.DateTime and equals the value of this 
-    instance; otherwise,false.
+   Returns: true if value is an instance of System.DateTime and equals the value of this instance; 
+    otherwise,false.
   """
   pass
  @staticmethod
@@ -237,15 +220,13 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
   """
   FromBinary(dateData: Int64) -> DateTime
   
-   Deserializes a 64-bit binary value and recreates an original serialized 
-    System.DateTime object.
+   Deserializes a 64-bit binary value and recreates an original serialized System.DateTime object.
   
+   dateData: A 64-bit signed integer that encodes the System.DateTime.Kind property in a 2-bit field and the 
+    System.DateTime.Ticks property in a 62-bit field.
   
-   dateData: A 64-bit signed integer that encodes the System.DateTime.Kind property in a 
-    2-bit field and the System.DateTime.Ticks property in a 62-bit field.
-  
-   Returns: An object that is equivalent to the System.DateTime object that was serialized 
-    by the System.DateTime.ToBinary method.
+   Returns: An object that is equivalent to the System.DateTime object that was serialized by the 
+    System.DateTime.ToBinary method.
   """
   pass
  @staticmethod
@@ -256,8 +237,8 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
    Converts the specified Windows file time to an equivalent local time.
   
    fileTime: A Windows file time expressed in ticks.
-   Returns: An object that represents the local time equivalent of the date and time 
-    represented by the fileTime parameter.
+   Returns: An object that represents the local time equivalent of the date and time represented by the 
+    fileTime parameter.
   """
   pass
  @staticmethod
@@ -268,8 +249,8 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
    Converts the specified Windows file time to an equivalent UTC time.
   
    fileTime: A Windows file time expressed in ticks.
-   Returns: An object that represents the UTC time equivalent of the date and time 
-    represented by the fileTime parameter.
+   Returns: An object that represents the UTC time equivalent of the date and time represented by the 
+    fileTime parameter.
   """
   pass
  @staticmethod
@@ -287,48 +268,42 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
   """
   GetDateTimeFormats(self: DateTime,format: Char) -> Array[str]
   
-   Converts the value of this instance to all the string representations supported 
-    by the specified standard date and time format specifier.
+   Converts the value of this instance to all the string representations supported by the specified 
+    standard date and time format specifier.
   
   
    format: A standard date and time format string (see Remarks).
-   Returns: A string array where each element is the representation of the value of this 
-    instance formatted with the format standard date and time format specifier.
+   Returns: A string array where each element is the representation of the value of this instance formatted 
+    with the format standard date and time format specifier.
   
   GetDateTimeFormats(self: DateTime,format: Char,provider: IFormatProvider) -> Array[str]
   
-   Converts the value of this instance to all the string representations supported 
-    by the specified standard date and time format specifier and culture-specific 
-    formatting information.
+   Converts the value of this instance to all the string representations supported by the specified 
+    standard date and time format specifier and culture-specific formatting information.
   
   
    format: A date and time format string (see Remarks).
-   provider: An object that supplies culture-specific formatting information about this 
-    instance.
-  
-   Returns: A string array where each element is the representation of the value of this 
-    instance formatted with one of the standard date and time format specifiers.
+   provider: An object that supplies culture-specific formatting information about this instance.
+   Returns: A string array where each element is the representation of the value of this instance formatted 
+    with one of the standard date and time format specifiers.
   
   GetDateTimeFormats(self: DateTime) -> Array[str]
   
-   Converts the value of this instance to all the string representations supported 
-    by the standard date and time format specifiers.
+   Converts the value of this instance to all the string representations supported by the standard 
+    date and time format specifiers.
   
-   Returns: A string array where each element is the representation of the value of this 
-    instance formatted with one of the standard date and time format specifiers.
+   Returns: A string array where each element is the representation of the value of this instance formatted 
+    with one of the standard date and time format specifiers.
   
   GetDateTimeFormats(self: DateTime,provider: IFormatProvider) -> Array[str]
   
-   Converts the value of this instance to all the string representations supported 
-    by the standard date and time format specifiers and the specified 
-    culture-specific formatting information.
+   Converts the value of this instance to all the string representations supported by the standard 
+    date and time format specifiers and the specified culture-specific formatting information.
   
   
-   provider: An object that supplies culture-specific formatting information about this 
-    instance.
-  
-   Returns: A string array where each element is the representation of the value of this 
-    instance formatted with one of the standard date and time format specifiers.
+   provider: An object that supplies culture-specific formatting information about this instance.
+   Returns: A string array where each element is the representation of the value of this instance formatted 
+    with one of the standard date and time format specifiers.
   """
   pass
  def GetHashCode(self):
@@ -351,13 +326,12 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
   """
   IsDaylightSavingTime(self: DateTime) -> bool
   
-   Indicates whether this instance of System.DateTime is within the daylight 
-    saving time range for the current time zone.
+   Indicates whether this instance of System.DateTime is within the daylight saving time range for 
+    the current time zone.
   
-   Returns: true if System.DateTime.Kind is System.DateTimeKind.Local or 
-    System.DateTimeKind.Unspecified and the value of this instance of 
-    System.DateTime is within the daylight saving time range for the current time 
-    zone. false if System.DateTime.Kind is System.DateTimeKind.Utc.
+   Returns: true if System.DateTime.Kind is System.DateTimeKind.Local or System.DateTimeKind.Unspecified and 
+    the value of this instance of System.DateTime is within the daylight saving time range for the 
+    current time zone. false if System.DateTime.Kind is System.DateTimeKind.Utc.
   """
   pass
  @staticmethod
@@ -376,38 +350,33 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
   """
   Parse(s: str,provider: IFormatProvider,styles: DateTimeStyles) -> DateTime
   
-   Converts the specified string representation of a date and time to its 
-    System.DateTime equivalent using the specified culture-specific format 
-    information and formatting style.
+   Converts the specified string representation of a date and time to its System.DateTime 
+    equivalent using the specified culture-specific format information and formatting style.
   
   
    s: A string containing a date and time to convert.
    provider: An object that supplies culture-specific formatting information about s.
-   styles: A bitwise combination of the enumeration values that indicates the style 
-    elements that can be present in s for the parse operation to succeed and that 
-    defines how to interpret the parsed date in relation to the current time zone 
-    or the current date. A typical value to specify is 
+   styles: A bitwise combination of the enumeration values that indicates the style elements that can be 
+    present in s for the parse operation to succeed and that defines how to interpret the parsed 
+    date in relation to the current time zone or the current date. A typical value to specify is 
     System.Globalization.DateTimeStyles.None.
   
-   Returns: An object that is equivalent to the date and time contained in s,as specified 
-    by provider and styles.
+   Returns: An object that is equivalent to the date and time contained in s,as specified by provider and 
+    styles.
   
   Parse(s: str,provider: IFormatProvider) -> DateTime
   
-   Converts the specified string representation of a date and time to its 
-    System.DateTime equivalent using the specified culture-specific format 
-    information.
+   Converts the specified string representation of a date and time to its System.DateTime 
+    equivalent using the specified culture-specific format information.
   
   
    s: A string containing a date and time to convert.
    provider: An object that supplies culture-specific format information about s.
-   Returns: An object that is equivalent to the date and time contained in s as specified 
-    by provider.
-  
+   Returns: An object that is equivalent to the date and time contained in s as specified by provider.
   Parse(s: str) -> DateTime
   
-   Converts the specified string representation of a date and time to its 
-    System.DateTime equivalent.
+   Converts the specified string representation of a date and time to its System.DateTime 
+    equivalent.
   
   
    s: A string containing a date and time to convert.
@@ -419,54 +388,51 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
   """
   ParseExact(s: str,formats: Array[str],provider: IFormatProvider,style: DateTimeStyles) -> DateTime
   
-   Converts the specified string representation of a date and time to its 
-    System.DateTime equivalent using the specified array of formats,
-    culture-specific format information,and style. The format of the string 
-    representation must match at least one of the specified formats exactly or an 
-    exception is thrown.
+   Converts the specified string representation of a date and time to its System.DateTime 
+    equivalent using the specified array of formats,culture-specific format information,and style. 
+    The format of the string representation must match at least one of the specified formats exactly 
+    or an exception is thrown.
   
   
    s: A string containing one or more dates and times to convert.
    formats: An array of allowable formats of s.
    provider: An object that supplies culture-specific format information about s.
-   style: A bitwise combination of enumeration values that indicates the permitted format 
-    of s. A typical value to specify is System.Globalization.DateTimeStyles.None.
+   style: A bitwise combination of enumeration values that indicates the permitted format of s. A typical 
+    value to specify is System.Globalization.DateTimeStyles.None.
   
-   Returns: An object that is equivalent to the date and time contained in s,as specified 
-    by formats,provider,and style.
+   Returns: An object that is equivalent to the date and time contained in s,as specified by formats,
+    provider,and style.
   
   ParseExact(s: str,format: str,provider: IFormatProvider,style: DateTimeStyles) -> DateTime
   
-   Converts the specified string representation of a date and time to its 
-    System.DateTime equivalent using the specified format,culture-specific format 
-    information,and style. The format of the string representation must match the 
-    specified format exactly or an exception is thrown.
+   Converts the specified string representation of a date and time to its System.DateTime 
+    equivalent using the specified format,culture-specific format information,and style. The 
+    format of the string representation must match the specified format exactly or an exception is 
+    thrown.
   
   
    s: A string containing a date and time to convert.
    format: A format specifier that defines the required format of s.
    provider: An object that supplies culture-specific formatting information about s.
-   style: A bitwise combination of the enumeration values that provides additional 
-    information about s,about style elements that may be present in s,or about 
-    the conversion from s to a System.DateTime value. A typical value to specify is 
-    System.Globalization.DateTimeStyles.None.
+   style: A bitwise combination of the enumeration values that provides additional information about s,
+    about style elements that may be present in s,or about the conversion from s to a 
+    System.DateTime value. A typical value to specify is System.Globalization.DateTimeStyles.None.
   
-   Returns: An object that is equivalent to the date and time contained in s,as specified 
-    by format,provider,and style.
+   Returns: An object that is equivalent to the date and time contained in s,as specified by format,
+    provider,and style.
   
   ParseExact(s: str,format: str,provider: IFormatProvider) -> DateTime
   
-   Converts the specified string representation of a date and time to its 
-    System.DateTime equivalent using the specified format and culture-specific 
-    format information. The format of the string representation must match the 
-    specified format exactly.
+   Converts the specified string representation of a date and time to its System.DateTime 
+    equivalent using the specified format and culture-specific format information. The format of the 
+    string representation must match the specified format exactly.
   
   
    s: A string that contains a date and time to convert.
    format: A format specifier that defines the required format of s.
    provider: An object that supplies culture-specific format information about s.
-   Returns: An object that is equivalent to the date and time contained in s,as specified 
-    by format and provider.
+   Returns: An object that is equivalent to the date and time contained in s,as specified by format and 
+    provider.
   """
   pass
  @staticmethod
@@ -474,19 +440,17 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
   """
   SpecifyKind(value: DateTime,kind: DateTimeKind) -> DateTime
   
-   Creates a new System.DateTime object that has the same number of ticks as the 
-    specified System.DateTime,but is designated as either local time,Coordinated 
-    Universal Time (UTC),or neither,as indicated by the specified 
-    System.DateTimeKind value.
+   Creates a new System.DateTime object that has the same number of ticks as the specified 
+    System.DateTime,but is designated as either local time,Coordinated Universal Time (UTC),or 
+    neither,as indicated by the specified System.DateTimeKind value.
   
   
    value: A date and time.
-   kind: One of the enumeration values that indicates whether the new object represents 
-    local time,UTC,or neither.
+   kind: One of the enumeration values that indicates whether the new object represents local time,UTC,
+    or neither.
   
-   Returns: A new object that has the same number of ticks as the object represented by the 
-    value parameter and the System.DateTimeKind value specified by the kind 
-    parameter.
+   Returns: A new object that has the same number of ticks as the object represented by the value parameter 
+    and the System.DateTimeKind value specified by the kind parameter.
   """
   pass
  def Subtract(self,value):
@@ -496,27 +460,27 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
    Subtracts the specified duration from this instance.
   
    value: The time interval to subtract.
-   Returns: An object that is equal to the date and time represented by this instance minus 
-    the time interval represented by value.
+   Returns: An object that is equal to the date and time represented by this instance minus the time 
+    interval represented by value.
   
   Subtract(self: DateTime,value: DateTime) -> TimeSpan
   
    Subtracts the specified date and time from this instance.
   
    value: The date and time value to subtract.
-   Returns: A time interval that is equal to the date and time represented by this instance 
-    minus the date and time represented by value.
+   Returns: A time interval that is equal to the date and time represented by this instance minus the date 
+    and time represented by value.
   """
   pass
  def ToBinary(self):
   """
   ToBinary(self: DateTime) -> Int64
   
-   Serializes the current System.DateTime object to a 64-bit binary value that 
-    subsequently can be used to recreate the System.DateTime object.
+   Serializes the current System.DateTime object to a 64-bit binary value that subsequently can be 
+    used to recreate the System.DateTime object.
   
-   Returns: A 64-bit signed integer that encodes the System.DateTime.Kind and 
-    System.DateTime.Ticks properties.
+   Returns: A 64-bit signed integer that encodes the System.DateTime.Kind and System.DateTime.Ticks 
+    properties.
   """
   pass
  def ToFileTime(self):
@@ -524,8 +488,7 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
   ToFileTime(self: DateTime) -> Int64
   
    Converts the value of the current System.DateTime object to a Windows file time.
-   Returns: The value of the current System.DateTime object expressed as a Windows file 
-    time.
+   Returns: The value of the current System.DateTime object expressed as a Windows file time.
   """
   pass
  def ToFileTimeUtc(self):
@@ -533,8 +496,7 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
   ToFileTimeUtc(self: DateTime) -> Int64
   
    Converts the value of the current System.DateTime object to a Windows file time.
-   Returns: The value of the current System.DateTime object expressed as a Windows file 
-    time.
+   Returns: The value of the current System.DateTime object expressed as a Windows file time.
   """
   pass
  def ToLocalTime(self):
@@ -542,34 +504,31 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
   ToLocalTime(self: DateTime) -> DateTime
   
    Converts the value of the current System.DateTime object to local time.
-   Returns: An object whose System.DateTime.Kind property is System.DateTimeKind.Local,and 
-    whose value is the local time equivalent to the value of the current 
-    System.DateTime object,or System.DateTime.MaxValue if the converted value is 
-    too large to be represented by a System.DateTime object,or 
-    System.DateTime.MinValue if the converted value is too small to be represented 
-    as a System.DateTime object.
+   Returns: An object whose System.DateTime.Kind property is System.DateTimeKind.Local,and whose value is 
+    the local time equivalent to the value of the current System.DateTime object,or 
+    System.DateTime.MaxValue if the converted value is too large to be represented by a 
+    System.DateTime object,or System.DateTime.MinValue if the converted value is too small to be 
+    represented as a System.DateTime object.
   """
   pass
  def ToLongDateString(self):
   """
   ToLongDateString(self: DateTime) -> str
   
-   Converts the value of the current System.DateTime object to its equivalent long 
-    date string representation.
+   Converts the value of the current System.DateTime object to its equivalent long date string 
+    representation.
   
-   Returns: A string that contains the long date string representation of the current 
-    System.DateTime object.
+   Returns: A string that contains the long date string representation of the current System.DateTime object.
   """
   pass
  def ToLongTimeString(self):
   """
   ToLongTimeString(self: DateTime) -> str
   
-   Converts the value of the current System.DateTime object to its equivalent long 
-    time string representation.
+   Converts the value of the current System.DateTime object to its equivalent long time string 
+    representation.
   
-   Returns: A string that contains the long time string representation of the current 
-    System.DateTime object.
+   Returns: A string that contains the long time string representation of the current System.DateTime object.
   """
   pass
  def ToOADate(self):
@@ -577,85 +536,77 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
   ToOADate(self: DateTime) -> float
   
    Converts the value of this instance to the equivalent OLE Automation date.
-   Returns: A double-precision floating-point number that contains an OLE Automation date 
-    equivalent to the value of this instance.
+   Returns: A double-precision floating-point number that contains an OLE Automation date equivalent to the 
+    value of this instance.
   """
   pass
  def ToShortDateString(self):
   """
   ToShortDateString(self: DateTime) -> str
   
-   Converts the value of the current System.DateTime object to its equivalent 
-    short date string representation.
+   Converts the value of the current System.DateTime object to its equivalent short date string 
+    representation.
   
-   Returns: A string that contains the short date string representation of the current 
-    System.DateTime object.
+   Returns: A string that contains the short date string representation of the current System.DateTime 
+    object.
   """
   pass
  def ToShortTimeString(self):
   """
   ToShortTimeString(self: DateTime) -> str
   
-   Converts the value of the current System.DateTime object to its equivalent 
-    short time string representation.
+   Converts the value of the current System.DateTime object to its equivalent short time string 
+    representation.
   
-   Returns: A string that contains the short time string representation of the current 
-    System.DateTime object.
+   Returns: A string that contains the short time string representation of the current System.DateTime 
+    object.
   """
   pass
  def ToString(self,*__args):
   """
   ToString(self: DateTime,provider: IFormatProvider) -> str
   
-   Converts the value of the current System.DateTime object to its equivalent 
-    string representation using the specified culture-specific format information.
+   Converts the value of the current System.DateTime object to its equivalent string representation 
+    using the specified culture-specific format information.
   
   
    provider: An object that supplies culture-specific formatting information.
-   Returns: A string representation of value of the current System.DateTime object as 
-    specified by provider.
-  
+   Returns: A string representation of value of the current System.DateTime object as specified by provider.
   ToString(self: DateTime,format: str,provider: IFormatProvider) -> str
   
-   Converts the value of the current System.DateTime object to its equivalent 
-    string representation using the specified format and culture-specific format 
-    information.
+   Converts the value of the current System.DateTime object to its equivalent string representation 
+    using the specified format and culture-specific format information.
   
   
    format: A standard or custom date and time format string.
    provider: An object that supplies culture-specific formatting information.
-   Returns: A string representation of value of the current System.DateTime object as 
-    specified by format and provider.
+   Returns: A string representation of value of the current System.DateTime object as specified by format 
+    and provider.
   
   ToString(self: DateTime) -> str
   
-   Converts the value of the current System.DateTime object to its equivalent 
-    string representation.
-  
+   Converts the value of the current System.DateTime object to its equivalent string representation.
    Returns: A string representation of the value of the current System.DateTime object.
   ToString(self: DateTime,format: str) -> str
   
-   Converts the value of the current System.DateTime object to its equivalent 
-    string representation using the specified format.
+   Converts the value of the current System.DateTime object to its equivalent string representation 
+    using the specified format.
   
   
    format: A standard or custom date and time format string (see Remarks).
-   Returns: A string representation of value of the current System.DateTime object as 
-    specified by format.
+   Returns: A string representation of value of the current System.DateTime object as specified by format.
   """
   pass
  def ToUniversalTime(self):
   """
   ToUniversalTime(self: DateTime) -> DateTime
   
-   Converts the value of the current System.DateTime object to Coordinated 
-    Universal Time (UTC).
-  
-   Returns: An object whose System.DateTime.Kind property is System.DateTimeKind.Utc,and 
-    whose value is the UTC equivalent to the value of the current System.DateTime 
-    object,or System.DateTime.MaxValue if the converted value is too large to be 
-    represented by a System.DateTime object,or System.DateTime.MinValue if the 
-    converted value is too small to be represented by a System.DateTime object.
+   Converts the value of the current System.DateTime object to Coordinated Universal Time (UTC).
+   Returns: An object whose System.DateTime.Kind property is System.DateTimeKind.Utc,and whose value is the 
+    UTC equivalent to the value of the current System.DateTime object,or System.DateTime.MaxValue 
+    if the converted value is too large to be represented by a System.DateTime object,or 
+    System.DateTime.MinValue if the converted value is too small to be represented by a 
+    System.DateTime object.
   """
   pass
  @staticmethod
@@ -663,24 +614,22 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
   """
   TryParse(s: str,provider: IFormatProvider,styles: DateTimeStyles) -> (bool,DateTime)
   
-   Converts the specified string representation of a date and time to its 
-    System.DateTime equivalent using the specified culture-specific format 
-    information and formatting style,and returns a value that indicates whether 
-    the conversion succeeded.
+   Converts the specified string representation of a date and time to its System.DateTime 
+    equivalent using the specified culture-specific format information and formatting style,and 
+    returns a value that indicates whether the conversion succeeded.
   
   
    s: A string containing a date and time to convert.
    provider: An object that supplies culture-specific formatting information about s.
-   styles: A bitwise combination of enumeration values that defines how to interpret the 
-    parsed date in relation to the current time zone or the current date. A typical 
-    value to specify is System.Globalization.DateTimeStyles.None.
+   styles: A bitwise combination of enumeration values that defines how to interpret the parsed date in 
+    relation to the current time zone or the current date. A typical value to specify is 
+    System.Globalization.DateTimeStyles.None.
   
    Returns: true if the s parameter was converted successfully; otherwise,false.
   TryParse(s: str) -> (bool,DateTime)
   
-   Converts the specified string representation of a date and time to its 
-    System.DateTime equivalent and returns a value that indicates whether the 
-    conversion succeeded.
+   Converts the specified string representation of a date and time to its System.DateTime 
+    equivalent and returns a value that indicates whether the conversion succeeded.
   
   
    s: A string containing a date and time to convert.
@@ -692,35 +641,31 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
   """
   TryParseExact(s: str,formats: Array[str],provider: IFormatProvider,style: DateTimeStyles) -> (bool,DateTime)
   
-   Converts the specified string representation of a date and time to its 
-    System.DateTime equivalent using the specified array of formats,
-    culture-specific format information,and style. The format of the string 
-    representation must match at least one of the specified formats exactly. The 
-    method returns a value that indicates whether the conversion succeeded.
+   Converts the specified string representation of a date and time to its System.DateTime 
+    equivalent using the specified array of formats,culture-specific format information,and style. 
+    The format of the string representation must match at least one of the specified formats 
+    exactly. The method returns a value that indicates whether the conversion succeeded.
   
   
    s: A string containing one or more dates and times to convert.
    formats: An array of allowable formats of s.
    provider: An object that supplies culture-specific format information about s.
-   style: A bitwise combination of enumeration values that indicates the permitted format 
-    of s. A typical value to specify is System.Globalization.DateTimeStyles.None.
+   style: A bitwise combination of enumeration values that indicates the permitted format of s. A typical 
+    value to specify is System.Globalization.DateTimeStyles.None.
   
    Returns: true if the s parameter was converted successfully; otherwise,false.
   TryParseExact(s: str,format: str,provider: IFormatProvider,style: DateTimeStyles) -> (bool,DateTime)
   
-   Converts the specified string representation of a date and time to its 
-    System.DateTime equivalent using the specified format,culture-specific format 
-    information,and style. The format of the string representation must match the 
-    specified format exactly. The method returns a value that indicates whether the 
-    conversion succeeded.
+   Converts the specified string representation of a date and time to its System.DateTime 
+    equivalent using the specified format,culture-specific format information,and style. The 
+    format of the string representation must match the specified format exactly. The method returns 
+    a value that indicates whether the conversion succeeded.
   
   
    s: A string containing a date and time to convert.
    format: The required format of s.
    provider: An object that supplies culture-specific formatting information about s.
-   style: A bitwise combination of one or more enumeration values that indicate the 
-    permitted format of s.
-  
+   style: A bitwise combination of one or more enumeration values that indicate the permitted format of s.
    Returns: true if s was converted successfully; otherwise,false.
   """
   pass
@@ -775,8 +720,8 @@ class DateTime(object,IComparable,IFormattable,IConvertible,ISerializable,ICompa
   """
   __rsub__(d1: DateTime,d2: DateTime) -> TimeSpan
   
-   Subtracts a specified date and time from another specified date and time and 
-    returns a time interval.
+   Subtracts a specified date and time from another specified date and time and returns a time 
+    interval.
   
   
    d1: The date and time value to subtract from (the minuend).

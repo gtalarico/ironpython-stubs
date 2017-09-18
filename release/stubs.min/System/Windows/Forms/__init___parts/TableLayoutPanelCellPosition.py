@@ -8,15 +8,13 @@ class TableLayoutPanelCellPosition(object):
   """
   Equals(self: TableLayoutPanelCellPosition,other: object) -> bool
   
-   Specifies whether this System.Windows.Forms.TableLayoutPanelCellPosition 
-    contains the same row and column as the specified 
-    System.Windows.Forms.TableLayoutPanelCellPosition.
+   Specifies whether this System.Windows.Forms.TableLayoutPanelCellPosition contains the same row 
+    and column as the specified System.Windows.Forms.TableLayoutPanelCellPosition.
   
   
    other: The System.Windows.Forms.TableLayoutPanelCellPosition to test.
-   Returns: true if other is a System.Windows.Forms.TableLayoutPanelCellPosition and has 
-    the same row and column as the specified 
-    System.Windows.Forms.TableLayoutPanelCellPosition; otherwise,false.
+   Returns: true if other is a System.Windows.Forms.TableLayoutPanelCellPosition and has the same row and 
+    column as the specified System.Windows.Forms.TableLayoutPanelCellPosition; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -32,9 +30,7 @@ class TableLayoutPanelCellPosition(object):
   """
   ToString(self: TableLayoutPanelCellPosition) -> str
   
-   Converts this System.Windows.Forms.TableLayoutPanelCellPosition to a human 
-    readable string.
-  
+   Converts this System.Windows.Forms.TableLayoutPanelCellPosition to a human readable string.
    Returns: A string that represents this System.Windows.Forms.TableLayoutPanelCellPosition.
   """
   pass
@@ -44,9 +40,8 @@ class TableLayoutPanelCellPosition(object):
  @staticmethod
  def __new__(self,column,row):
   """
-  __new__[TableLayoutPanelCellPosition]() -> TableLayoutPanelCellPosition
-  
-  __new__(cls: type,column: int,row: int)
+  __new__(cls: type,column: int,row: int)
+  __new__[TableLayoutPanelCellPosition]() -> TableLayoutPanelCellPosition
   """
   pass
  def __ne__(self,*args):

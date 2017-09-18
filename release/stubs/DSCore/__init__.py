@@ -402,8 +402,8 @@ class DateTime(object):
         TimeOfDay(dateTime: DateTime) -> TimeSpan
         
             Yields a new TimeSpan representing the amount of time passed since midnight of the
-               
-                      given DateTime.
+                     
+                given DateTime.
         
         
             dateTime: A DateTime.
@@ -542,15 +542,15 @@ class List(object):
         AllIndicesOf(list: IList, item: object) -> IList
         
             Given an item, returns the zero-based indices of all its occurrences
-                        in 
-             the list. If the item cannot be found, an empty list is returned.
+                        in the 
+             list. If the item cannot be found, an empty list is returned.
         
         
             list: List to search in. If this argument is null, an empty list is returned.
             item: Item to look for.
             Returns: A list of zero-based indices of all occurrences of the item if 
-                    found, or an 
-             empty list if the item does not exist in the list.
+                    found, or an empty 
+             list if the item does not exist in the list.
         """
         pass
 
@@ -567,8 +567,8 @@ class List(object):
             Cleans data of nulls and empty lists from a given list of arbitrary dimension
         
             preserveIndices: Provide an option to preserve the indices of the data
-                    such that non-trailing 
-             nulls may not be filtered out
+                    such that non-trailing nulls 
+             may not be filtered out
         
             Returns: A list cleaned of nulls and empty lists
         """
@@ -584,8 +584,8 @@ class List(object):
             list: List to generate combinations of.
             length: Length of each combination.
             replace: Whether or not items are removed once selected for combination, defaults
-                        
-             to false.
+                        to 
+             false.
         
             Returns: Combinations of the list of the given length.
         """
@@ -635,8 +635,8 @@ class List(object):
         Deconstruct(list: IList) -> IDictionary
         
             Given a list, produces the first item in the list, and a new list containing all items
-           
-                          except the first.
+                 
+                    except the first.
         
         
             list: List to be split.
@@ -676,8 +676,8 @@ class List(object):
         DropEveryNthItem(list: IList, n: int, offset: int) -> IList
         
             Removes items from the given list at indices that are multiples
-                        of the 
-             given value, after the given offset.
+                        of the given 
+             value, after the given offset.
         
         
             list: List to remove items from/
@@ -693,8 +693,8 @@ class List(object):
         DropItems(list: IList, amount: int) -> IList
         
             Removes an amount of items from the start of the list. If the amount is a negative value,
-        
-                             items are removed from the end of the list.
+              
+                       items are removed from the end of the list.
         
         
             list: List to remove items from.
@@ -709,8 +709,8 @@ class List(object):
         FilterByBoolMask(list: IList, mask: IList) -> Dictionary[str, object]
         
             Filters a sequence by lookng up corresponding indices in a separate list of
-                      
-               booleans.
+                        
+             booleans.
         
         
             list: List to filter.
@@ -725,8 +725,8 @@ class List(object):
         FirstIndexOf(list: IList, item: object) -> int
         
             Given an item, returns the zero-based index of its first occurrence 
-                        in 
-             the list. If the item cannot be found in the list, -1 is returned.
+                        in the 
+             list. If the item cannot be found in the list, -1 is returned.
         
         
             list: List to search in. If this argument is null, -1 is returned.
@@ -964,8 +964,8 @@ class List(object):
             ranges: The index ranges of the sublist elements.
                         Ex. \"{0..3,5,2}\"
             offset: The offset to apply to the sublist.
-                        Ex. the range \"0..3\" with an offset 
-             of 2 will yield
+                        Ex. the range \"0..3\" with an offset of 2 
+             will yield
                         {0,1,2,3}{2,3,4,5}{4,5,6,7}...
         
             Returns: Sublists of the given list.
@@ -978,15 +978,13 @@ class List(object):
         TakeEveryNthItem(list: IList, n: int, offset: int) -> IList
         
             Fetches items from the given list at indices that are multiples
-                        of the 
-             given value, after the given offset.
+                        of the given 
+             value, after the given offset.
         
         
             list: List to take items from.
             n: Indices that are multiples of this number (after the offset)
-                        will be 
-             fetched.
-        
+                        will be fetched.
             offset: Amount of items to be ignored from the start of the list.
             Returns: Items from the list.
         """
@@ -1011,10 +1009,10 @@ class List(object):
         Transpose(lists: IList) -> IList
         
             Swaps rows and columns in a list of lists. 
-                        If there are some rows that 
-             are shorter than others,
-                        null values are inserted as place holders in the 
-             resultant 
+                        If there are some rows that are 
+             shorter than others,
+                        null values are inserted as place holders in the resultant 
+             
                         array such that it is always rectangular.
         
         
@@ -1170,8 +1168,8 @@ class Math(object):
         Atan2(numerator: float, denominator: float) -> float
         
             Finds the inverse tangent of quotient of two numbers. Returns the angle
-                        
-             whose tangent is the ratio: numerator/denominator.
+                        whose 
+             tangent is the ratio: numerator/denominator.
         
         
             numerator: The numerator of the tangent of the angle.
@@ -1411,8 +1409,8 @@ class Math(object):
         RandomList(amount: int) -> IList
         
             Produces a list containing the given amount of random doubles
-                        in the 
-             range of [0, 1).
+                        in the range of 
+             [0, 1).
         
         
             amount: Amount of random numbers the result list will contain.
@@ -1438,8 +1436,8 @@ class Math(object):
         Round(number: float) -> float
         
             Rounds a number to the closest integral value.
-                    Note that this method returns 
-             a double-precision floating-point number instead of an integral type.
+                    Note that this method returns a 
+             double-precision floating-point number instead of an integral type.
         
         
             number: Number to round.
@@ -1788,16 +1786,16 @@ class String(object):
         Center(str: str, newWidth: int, padChars: str) -> str
         
             Increases the width of a string by encasing the original characters with spaces on
-               
-                      either side.
+                     
+                either side.
         
         
             str: String to center.
             newWidth: Total length of the string after centering.
             padChars: Character to center with, defaults to space.
             Returns: Strings center-aligned by padding them with leading and trailing
-                        
-             whitespaces for a specified total length.
+                        whitespaces 
+             for a specified total length.
         """
         pass
 
@@ -1882,8 +1880,8 @@ class String(object):
         IndexOf(str: str, searchFor: str, ignoreCase: bool) -> int
         
             Finds the zero-based index of the first occurrence of a sub-string inside a string.
-              
-                       Returns -1 if no index could be found.
+                    
+                 Returns -1 if no index could be found.
         
         
             str: A string to search in.
@@ -1929,8 +1927,8 @@ class String(object):
         LastIndexOf(str: str, searchFor: str, ignoreCase: bool) -> int
         
             Finds the zero-based index of the last occurrence of a sub-string inside a string.
-               
-                      Returns -1 if no index could be found.
+                     
+                Returns -1 if no index could be found.
         
         
             str: A string to search in.
@@ -1958,8 +1956,8 @@ class String(object):
         PadLeft(str: str, newWidth: int, padChars: str) -> str
         
             Right-aligns the characters in the given string by padding them with spaces on the left,
-         
-                            for a specified total length.
+               
+                      for a specified total length.
         
         
             str: String to pad.
@@ -1975,8 +1973,8 @@ class String(object):
         PadRight(str: str, newWidth: int, padChars: str) -> str
         
             Left-aligns the characters in the given string by padding them with spaces on the right,
-         
-                            for a specified total length.
+               
+                      for a specified total length.
         
         
             str: String to pad.
@@ -2011,8 +2009,8 @@ class String(object):
         Split(str: str, *separaters: Array[str]) -> Array[str]
         
             Divides a single string into a list of strings, with divisions
-                        determined 
-             by the given separater strings.
+                        determined by 
+             the given separater strings.
         
         
             str: String to split up.
@@ -2041,8 +2039,8 @@ class String(object):
         Substring(str: str, startIndex: int, length: int) -> str
         
             Retrieves a substring from the given string. The substring starts at the given
-                   
-                  character position and has the given length.
+                        
+             character position and has the given length.
         
         
             str: String to take substring of.
@@ -2261,8 +2259,8 @@ class TimeSpan(object):
         
             timeSpan: A TimeSpan.
             scaleFactor: Amount to scale the TimeSpan. For example, a scaling factor of 2 will yield
-                    
-             double the amount of time spanned.
+                    double 
+             the amount of time spanned.
         
             Returns: TimeSpan
         """

@@ -20,13 +20,11 @@ class Validation(object):
   """
   GetErrors(element: DependencyObject) -> ReadOnlyObservableCollection[ValidationError]
   
-   Gets the value of the System.Windows.Controls.Validation.Errors�attached 
-    property of the specified element.
+   Gets the value of the System.Windows.Controls.Validation.Errors�attached property of the 
+    specified element.
   
   
-   element: The System.Windows.UIElement or System.Windows.ContentElement object to read 
-    the value from.
-  
+   element: The System.Windows.UIElement or System.Windows.ContentElement object to read the value from.
    Returns: A System.Collections.ObjectModel.ReadOnlyObservableCollection of 
     System.Windows.Controls.ValidationError objects.
   """
@@ -36,15 +34,13 @@ class Validation(object):
   """
   GetErrorTemplate(element: DependencyObject) -> ControlTemplate
   
-   Gets the value of the System.Windows.Controls.Validation.ErrorTemplate�attached 
-    property of the specified element.
+   Gets the value of the System.Windows.Controls.Validation.ErrorTemplate�attached property of the 
+    specified element.
   
   
-   element: The System.Windows.UIElement or System.Windows.ContentElement object to read 
-    the value from.
-  
-   Returns: The System.Windows.Controls.ControlTemplate used to generate validation error 
-    feedback on the adorner layer.
+   element: The System.Windows.UIElement or System.Windows.ContentElement object to read the value from.
+   Returns: The System.Windows.Controls.ControlTemplate used to generate validation error feedback on the 
+    adorner layer.
   """
   pass
  @staticmethod
@@ -52,15 +48,13 @@ class Validation(object):
   """
   GetHasError(element: DependencyObject) -> bool
   
-   Gets the value of the System.Windows.Controls.Validation.HasError�attached 
-    property of the specified element.
+   Gets the value of the System.Windows.Controls.Validation.HasError�attached property of the 
+    specified element.
   
   
-   element: The System.Windows.UIElement or System.Windows.ContentElement object to read 
-    the value from.
-  
-   Returns: The value of the System.Windows.Controls.Validation.HasError attached property 
-    of the specified element.
+   element: The System.Windows.UIElement or System.Windows.ContentElement object to read the value from.
+   Returns: The value of the System.Windows.Controls.Validation.HasError attached property of the specified 
+    element.
   """
   pass
  @staticmethod
@@ -68,13 +62,11 @@ class Validation(object):
   """
   GetValidationAdornerSite(element: DependencyObject) -> DependencyObject
   
-   Gets the value of the System.Windows.Controls.Validation.ValidationAdornerSite 
-    attached property for the specified element.
+   Gets the value of the System.Windows.Controls.Validation.ValidationAdornerSite attached property 
+    for the specified element.
   
   
-   element: The element from which to get the 
-    System.Windows.Controls.Validation.ValidationAdornerSite.
-  
+   element: The element from which to get the System.Windows.Controls.Validation.ValidationAdornerSite.
    Returns: The value of the System.Windows.Controls.Validation.ValidationAdornerSite.
   """
   pass
@@ -83,14 +75,11 @@ class Validation(object):
   """
   GetValidationAdornerSiteFor(element: DependencyObject) -> DependencyObject
   
-   Gets the value of the 
-    System.Windows.Controls.Validation.ValidationAdornerSiteFor attached property 
-    for the specified element.
+   Gets the value of the System.Windows.Controls.Validation.ValidationAdornerSiteFor attached 
+    property for the specified element.
   
   
-   element: The element from which to get the 
-    System.Windows.Controls.Validation.ValidationAdornerSiteFor.
-  
+   element: The element from which to get the System.Windows.Controls.Validation.ValidationAdornerSiteFor.
    Returns: The value of the System.Windows.Controls.Validation.ValidationAdornerSiteFor.
   """
   pass
@@ -98,8 +87,8 @@ class Validation(object):
  def MarkInvalid(bindingExpression,validationError):
   """
   MarkInvalid(bindingExpression: BindingExpressionBase,validationError: ValidationError)
-   Marks the specified System.Windows.Data.BindingExpression object as invalid 
-    with the specified System.Windows.Controls.ValidationError object.
+   Marks the specified System.Windows.Data.BindingExpression object as invalid with the specified 
+    System.Windows.Controls.ValidationError object.
   
   
    bindingExpression: The System.Windows.Data.BindingExpression object to mark as invalid.
@@ -114,45 +103,37 @@ class Validation(object):
  def SetErrorTemplate(element,value):
   """
   SetErrorTemplate(element: DependencyObject,value: ControlTemplate)
-   Sets the value of the System.Windows.Controls.Validation.ErrorTemplate�attached 
-    property to the specified element.
+   Sets the value of the System.Windows.Controls.Validation.ErrorTemplate�attached property to the 
+    specified element.
   
   
-   element: The System.Windows.UIElement or System.Windows.ContentElement object to set 
-    value on.
-  
-   value: The System.Windows.Controls.ControlTemplate to use to generate validation error 
-    feedback on the adorner layer.
+   element: The System.Windows.UIElement or System.Windows.ContentElement object to set value on.
+   value: The System.Windows.Controls.ControlTemplate to use to generate validation error feedback on the 
+    adorner layer.
   """
   pass
  @staticmethod
  def SetValidationAdornerSite(element,value):
   """
   SetValidationAdornerSite(element: DependencyObject,value: DependencyObject)
-   Sets the System.Windows.Controls.Validation.ValidationAdornerSite attached 
-    property to the specified value on the specified element.
+   Sets the System.Windows.Controls.Validation.ValidationAdornerSite attached property to the 
+    specified value on the specified element.
   
   
-   element: The element on which to set the 
-    System.Windows.Controls.Validation.ValidationAdornerSite.
-  
-   value: The System.Windows.Controls.Validation.ValidationAdornerSite of the specified 
-    element.
+   element: The element on which to set the System.Windows.Controls.Validation.ValidationAdornerSite.
+   value: The System.Windows.Controls.Validation.ValidationAdornerSite of the specified element.
   """
   pass
  @staticmethod
  def SetValidationAdornerSiteFor(element,value):
   """
   SetValidationAdornerSiteFor(element: DependencyObject,value: DependencyObject)
-   Sets the System.Windows.Controls.Validation.ValidationAdornerSiteFor attached 
-    property to the specified value on the specified element.
+   Sets the System.Windows.Controls.Validation.ValidationAdornerSiteFor attached property to the 
+    specified value on the specified element.
   
   
-   element: The element on which to set the 
-    System.Windows.Controls.Validation.ValidationAdornerSiteFor.
-  
-   value: The System.Windows.Controls.Validation.ValidationAdornerSiteFor of the 
-    specified element.
+   element: The element on which to set the System.Windows.Controls.Validation.ValidationAdornerSiteFor.
+   value: The System.Windows.Controls.Validation.ValidationAdornerSiteFor of the specified element.
   """
   pass
  ErrorEvent=None

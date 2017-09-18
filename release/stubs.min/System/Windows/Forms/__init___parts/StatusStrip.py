@@ -11,9 +11,7 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
     System.Windows.Forms.AccessibleEvents for the specified child control .
   
   
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
-    applications of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    objectID: The identifier of the System.Windows.Forms.AccessibleObject.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,childID: int)
@@ -21,17 +19,15 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
     System.Windows.Forms.AccessibleEvents for the specified child control.
   
   
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
-    applications of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   """
   pass
  def AdjustFormScrollbars(self,*args):
   """
   AdjustFormScrollbars(self: ScrollableControl,displayScrollbars: bool)
-   Adjusts the scroll bars on the container based on the current control positions 
-    and the control currently selected.
+   Adjusts the scroll bars on the container based on the current control positions and the control 
+    currently selected.
   
   
    displayScrollbars: true to show the scroll bars; otherwise,false.
@@ -52,25 +48,20 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   CreateDefaultItem(self: StatusStrip,text: str,image: Image,onClick: EventHandler) -> ToolStripItem
   
-   Creates a default System.Windows.Forms.ToolStripStatusLabel with the specified 
-    text,image,and event handler on a new System.Windows.Forms.StatusStrip 
-    instance.
+   Creates a default System.Windows.Forms.ToolStripStatusLabel with the specified text,image,and 
+    event handler on a new System.Windows.Forms.StatusStrip instance.
   
   
-   text: The text to use for the System.Windows.Forms.ToolStripStatusLabel. If the text 
-    parameter is a hyphen (-),this method creates a 
-    System.Windows.Forms.ToolStripSeparator.
+   text: The text to use for the System.Windows.Forms.ToolStripStatusLabel. If the text parameter is a 
+    hyphen (-),this method creates a System.Windows.Forms.ToolStripSeparator.
   
-   image: The System.Drawing.Image to display on the 
-    System.Windows.Forms.ToolStripStatusLabel.
-  
-   onClick: An event handler that raises the System.Windows.Forms.Control.Click event when 
-    the System.Windows.Forms.ToolStripStatusLabel is clicked.
+   image: The System.Drawing.Image to display on the System.Windows.Forms.ToolStripStatusLabel.
+   onClick: An event handler that raises the System.Windows.Forms.Control.Click event when the 
+    System.Windows.Forms.ToolStripStatusLabel is clicked.
   
    Returns: A 
-    System.Windows.Forms.ToolStripStatusLabel.#ctor(System.String,System.Drawing.Ima
-    ge,System.EventHandler),or a System.Windows.Forms.ToolStripSeparator if the 
-    text parameter is a hyphen (-).
+    System.Windows.Forms.ToolStripStatusLabel.#ctor(System.String,System.Drawing.Image,System.EventHa
+    ndler),or a System.Windows.Forms.ToolStripSeparator if the text parameter is a hyphen (-).
   """
   pass
  def CreateHandle(self,*args):
@@ -86,8 +77,7 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
    Specifies the visual arrangement for the System.Windows.Forms.ToolStrip.
   
    layoutStyle: The visual arrangement to be applied to the System.Windows.Forms.ToolStrip.
-   Returns: One of the System.Windows.Forms.ToolStripLayoutStyle values. The default is 
-    null.
+   Returns: One of the System.Windows.Forms.ToolStripLayoutStyle values. The default is null.
   """
   pass
  def DefWndProc(self,*args):
@@ -108,12 +98,11 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
  def Dispose(self):
   """
   Dispose(self: StatusStrip,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.StatusStrip 
-    and optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.StatusStrip and optionally 
+    releases the managed resources.
   
   
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetAccessibilityObjectById(self,*args):
@@ -142,15 +131,12 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   
    Retrieves the bounds within which the control is scaled.
   
-   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the 
-    display bounds.
-  
+   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display bounds.
    factor: The height and width of the control's bounds.
-   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the 
-    bounds of the control to use when defining its size and position.
+   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of the 
+    control to use when defining its size and position.
   
-   Returns: A System.Drawing.Rectangle representing the bounds within which the control is 
-    scaled.
+   Returns: A System.Drawing.Rectangle representing the bounds within which the control is scaled.
   """
   pass
  def GetScrollState(self,*args):
@@ -167,14 +153,13 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetStyle(self,*args):
@@ -204,9 +189,7 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
  def InvokeGotFocus(self,*args):
   """
   InvokeGotFocus(self: Control,toInvoke: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.GotFocus event for the specified 
-    control.
-  
+   Raises the System.Windows.Forms.Control.GotFocus event for the specified control.
   
    toInvoke: The System.Windows.Forms.Control to assign the event to.
    e: An System.EventArgs that contains the event data.
@@ -215,9 +198,7 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
  def InvokeLostFocus(self,*args):
   """
   InvokeLostFocus(self: Control,toInvoke: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.LostFocus event for the specified 
-    control.
-  
+   Raises the System.Windows.Forms.Control.LostFocus event for the specified control.
   
    toInvoke: The System.Windows.Forms.Control to assign the event to.
    e: An System.EventArgs that contains the event data.
@@ -228,9 +209,7 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   InvokeOnClick(self: Control,toInvoke: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.Click event for the specified control.
   
-   toInvoke: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Click event to.
-  
+   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event to.
    e: An System.EventArgs that contains the event data.
   """
   pass
@@ -239,9 +218,7 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   InvokePaint(self: Control,c: Control,e: PaintEventArgs)
    Raises the System.Windows.Forms.Control.Paint event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Paint event to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -250,9 +227,7 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   InvokePaintBackground(self: Control,c: Control,e: PaintEventArgs)
    Raises the PaintBackground event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Paint event to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -263,16 +238,15 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
    Determines whether a character is an input character that the item recognizes.
   
    charCode: The character to test.
-   Returns: true if the character should be sent directly to the item and not preprocessed; 
-    otherwise,false.
+   Returns: true if the character should be sent directly to the item and not preprocessed; otherwise,false.
   """
   pass
  def IsInputKey(self,*args):
   """
   IsInputKey(self: ToolStrip,keyData: Keys) -> bool
   
-   Determines whether the specified key is a regular input key or a special key 
-    that requires preprocessing.
+   Determines whether the specified key is a regular input key or a special key that requires 
+    preprocessing.
   
   
    keyData: One of the System.Windows.Forms.Keys values.
@@ -285,11 +259,11 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -301,8 +275,8 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
  def NotifyInvalidate(self,*args):
   """
   NotifyInvalidate(self: Control,invalidatedArea: Rectangle)
-   Raises the System.Windows.Forms.Control.Invalidated event with a specified 
-    region of the control to invalidate.
+   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the control 
+    to invalidate.
   
   
    invalidatedArea: A System.Drawing.Rectangle representing the area to invalidate.
@@ -450,6 +424,12 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
    e: An System.EventArgs that contains the event data.
   """
   pass
+ def OnDpiChangedAfterParent(self,*args):
+  """ OnDpiChangedAfterParent(self: Control,e: EventArgs) """
+  pass
+ def OnDpiChangedBeforeParent(self,*args):
+  """ OnDpiChangedBeforeParent(self: Control,e: EventArgs) """
+  pass
  def OnDragDrop(self,*args):
   """
   OnDragDrop(self: Control,drgevent: DragEventArgs)
@@ -587,8 +567,7 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   OnItemClicked(self: ToolStrip,e: ToolStripItemClickedEventArgs)
    Raises the System.Windows.Forms.ToolStrip.ItemClicked event.
   
-   e: A System.Windows.Forms.ToolStripItemClickedEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.ToolStripItemClickedEventArgs that contains the event data.
   """
   pass
  def OnItemRemoved(self,*args):
@@ -810,8 +789,7 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   OnParentBackColorChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BackColorChanged event when the 
-    System.Windows.Forms.Control.BackColor property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BackColor property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -821,8 +799,7 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   OnParentBackgroundImageChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the 
-    System.Windows.Forms.Control.BackgroundImage property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BackgroundImage property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -832,8 +809,7 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   OnParentBindingContextChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BindingContextChanged event when the 
-    System.Windows.Forms.Control.BindingContext property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BindingContext property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -859,8 +835,7 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   OnParentEnabledChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.EnabledChanged event when the 
-    System.Windows.Forms.Control.Enabled property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Enabled property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -870,8 +845,7 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   OnParentFontChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.Control.Font property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Font property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -881,8 +855,7 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   OnParentForeColorChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.ForeColorChanged event when the 
-    System.Windows.Forms.Control.ForeColor property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.ForeColor property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -892,8 +865,7 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   OnParentRightToLeftChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.RightToLeftChanged event when the 
-    System.Windows.Forms.Control.RightToLeft property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.RightToLeft property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -903,8 +875,7 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   OnParentVisibleChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.VisibleChanged event when the 
-    System.Windows.Forms.Control.Visible property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Visible property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1056,8 +1027,8 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   
    Processes a command key.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: true if the character was processed by the control; otherwise,false.
@@ -1089,8 +1060,8 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   
    Processes a key message and generates the appropriate control events.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1101,8 +1072,8 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   
    Processes a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1113,8 +1084,8 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   
    Previews a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1126,8 +1097,7 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
    Processes a mnemonic character.
   
    charCode: The character to process.
-   Returns: true if the character was processed as a mnemonic by the control; otherwise,
-    false.
+   Returns: true if the character was processed as a mnemonic by the control; otherwise,false.
   """
   pass
  def RaiseDragEvent(self,*args):
@@ -1172,6 +1142,9 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
    Forces the re-creation of the handle for the control.
   """
   pass
+ def RescaleConstantsForDpi(self,*args):
+  """ RescaleConstantsForDpi(self: Control,deviceDpiOld: int,deviceDpiNew: int) """
+  pass
  def ResetMouseEventArgs(self,*args):
   """
   ResetMouseEventArgs(self: Control)
@@ -1196,18 +1169,16 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
    Returns: One of the System.Drawing.ContentAlignment values.
   RtlTranslateAlignment(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the 
-    appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
+    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
   RtlTranslateAlignment(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the 
-    appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
+    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1230,9 +1201,8 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   RtlTranslateHorizontal(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the 
-    appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
+    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1243,9 +1213,8 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   RtlTranslateLeftRight(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the 
-    appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
+    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
@@ -1256,8 +1225,8 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   ScaleControl(self: ScrollableControl,factor: SizeF,specified: BoundsSpecified)
    factor: The factor by which the height and width of the control will be scaled.
-   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the 
-    control to use when defining its size and position.
+   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to use 
+    when defining its size and position.
   """
   pass
  def ScaleCore(self,*args):
@@ -1274,15 +1243,15 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
    Calculates the scroll offset to the specified child control.
   
    activeControl: The child control to scroll into view.
-   Returns: The upper-left hand System.Drawing.Point of the display area relative to the 
-    client area required to scroll the control into view.
+   Returns: The upper-left hand System.Drawing.Point of the display area relative to the client area 
+    required to scroll the control into view.
   """
   pass
  def Select(self):
   """
   Select(self: ToolStrip,directed: bool,forward: bool)
-   Activates a child control. Optionally specifies the direction in the tab order 
-    to select the control from.
+   Activates a child control. Optionally specifies the direction in the tab order to select the 
+    control from.
   
   
    directed: true to specify the direction of the control to select; otherwise,false.
@@ -1292,8 +1261,8 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
  def SetAutoSizeMode(self,*args):
   """
   SetAutoSizeMode(self: Control,mode: AutoSizeMode)
-   Sets a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
+   Sets a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize 
+    property is enabled.
   
   
    mode: One of the System.Windows.Forms.AutoSizeMode values.
@@ -1326,11 +1295,8 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   SetDisplayRectLocation(self: ScrollableControl,x: int,y: int)
    Positions the display window to the specified value.
   
-   x: The horizontal offset at which to position the 
-    System.Windows.Forms.ScrollableControl.
-  
-   y: The vertical offset at which to position the 
-    System.Windows.Forms.ScrollableControl.
+   x: The horizontal offset at which to position the System.Windows.Forms.ScrollableControl.
+   y: The vertical offset at which to position the System.Windows.Forms.ScrollableControl.
   """
   pass
  def SetItemLocation(self,*args):
@@ -1357,9 +1323,7 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
  def SetStyle(self,*args):
   """
   SetStyle(self: Control,flag: ControlStyles,value: bool)
-   Sets a specified System.Windows.Forms.ControlStyles flag to either true or 
-    false.
-  
+   Sets a specified System.Windows.Forms.ControlStyles flag to either true or false.
   
    flag: The System.Windows.Forms.ControlStyles bit to set.
    value: true to apply the specified style to the control; otherwise,false.
@@ -1376,8 +1340,8 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
  def SetVisibleCore(self,*args):
   """
   SetVisibleCore(self: ToolStrip,visible: bool)
-   Retrieves a value that sets the System.Windows.Forms.ToolStripItem to the 
-    specified visibility state.
+   Retrieves a value that sets the System.Windows.Forms.ToolStripItem to the specified visibility 
+    state.
   
   
    visible: true if the System.Windows.Forms.ToolStripItem is visible; otherwise,false.
@@ -1387,23 +1351,16 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   SizeFromClientSize(self: Control,clientSize: Size) -> Size
   
-   Determines the size of the entire control from the height and width of its 
-    client area.
+   Determines the size of the entire control from the height and width of its client area.
   
-  
-   clientSize: A System.Drawing.Size value representing the height and width of the control's 
-    client area.
-  
-   Returns: A System.Drawing.Size value representing the height and width of the entire 
-    control.
+   clientSize: A System.Drawing.Size value representing the height and width of the control's client area.
+   Returns: A System.Drawing.Size value representing the height and width of the entire control.
   """
   pass
  def UpdateBounds(self,*args):
   """
   UpdateBounds(self: Control,x: int,y: int,width: int,height: int,clientWidth: int,clientHeight: int)
-   Updates the bounds of the control with the specified size,location,and client 
-    size.
-  
+   Updates the bounds of the control with the specified size,location,and client size.
   
    x: The System.Drawing.Point.X coordinate of the control.
    y: The System.Drawing.Point.Y coordinate of the control.
@@ -1444,10 +1401,17 @@ class StatusStrip(ToolStrip,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

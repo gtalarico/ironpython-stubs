@@ -26,8 +26,8 @@ class DesignerSerializationVisibilityAttribute(Attribute,_Attribute):
   """
   IsDefaultAttribute(self: DesignerSerializationVisibilityAttribute) -> bool
   
-   Gets a value indicating whether the current value of the attribute is the 
-    default value for the attribute.
+   Gets a value indicating whether the current value of the attribute is the default value for the 
+    attribute.
   
    Returns: true if the attribute is set to the default value; otherwise,false.
   """

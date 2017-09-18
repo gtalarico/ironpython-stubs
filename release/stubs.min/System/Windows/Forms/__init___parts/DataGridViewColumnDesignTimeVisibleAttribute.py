@@ -9,16 +9,13 @@ class DataGridViewColumnDesignTimeVisibleAttribute(Attribute,_Attribute):
   """
   Equals(self: DataGridViewColumnDesignTimeVisibleAttribute,obj: object) -> bool
   
-   Gets a value indicating whether this object is equivalent to the specified 
-    object.
-  
+   Gets a value indicating whether this object is equivalent to the specified object.
   
    obj: The System.Object to compare with the current System.Object.
    Returns: true to indicate that the specified object is a 
-    System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute instance with 
-    the same 
-    System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Visible 
-    property value as this instance; otherwise,false.
+    System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute instance with the same 
+    System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Visible property value as this 
+    instance; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -32,12 +29,11 @@ class DataGridViewColumnDesignTimeVisibleAttribute(Attribute,_Attribute):
   IsDefaultAttribute(self: DataGridViewColumnDesignTimeVisibleAttribute) -> bool
   
    Gets a value indicating whether this attribute instance is equal to the 
-    System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Default 
-    attribute value.
+    System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Default attribute value.
   
    Returns: true to indicate that this instance is equal to the 
-    System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Default 
-    instance; otherwise,false.
+    System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Default instance; otherwise,
+    false.
   """
   pass
  def __eq__(self,*args):

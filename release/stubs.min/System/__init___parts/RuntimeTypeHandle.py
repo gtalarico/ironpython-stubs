@@ -2,25 +2,23 @@ class RuntimeTypeHandle(object,ISerializable):
  """ Represents a type using an internal metadata token. """
  def Equals(self,*__args):
   """
-  Equals(self: RuntimeTypeHandle,obj: object) -> bool
+  Equals(self: RuntimeTypeHandle,handle: RuntimeTypeHandle) -> bool
   
-   Indicates whether the specified object is equal to the current 
+   Indicates whether the specified System.RuntimeTypeHandle structure is equal to the current 
     System.RuntimeTypeHandle structure.
   
   
-   obj: An object to compare to the current instance.
-   Returns: true if obj is a System.RuntimeTypeHandle structure and is equal to the value 
-    of this instance; otherwise,false.
-  
-  Equals(self: RuntimeTypeHandle,handle: RuntimeTypeHandle) -> bool
-  
-   Indicates whether the specified System.RuntimeTypeHandle structure is equal to 
-    the current System.RuntimeTypeHandle structure.
-  
-  
    handle: The System.RuntimeTypeHandle structure to compare to the current instance.
-   Returns: true if the value of handle is equal to the value of this instance; otherwise,
-    false.
+   Returns: true if the value of handle is equal to the value of this instance; otherwise,false.
+  Equals(self: RuntimeTypeHandle,obj: object) -> bool
+  
+   Indicates whether the specified object is equal to the current System.RuntimeTypeHandle 
+    structure.
+  
+  
+   obj: An object to compare to the current instance.
+   Returns: true if obj is a System.RuntimeTypeHandle structure and is equal to the value of this instance; 
+    otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -35,18 +33,16 @@ class RuntimeTypeHandle(object,ISerializable):
   """
   GetModuleHandle(self: RuntimeTypeHandle) -> ModuleHandle
   
-   Gets a handle to the module that contains the type represented by the current 
-    instance.
-  
-   Returns: A System.ModuleHandle structure representing a handle to the module that 
-    contains the type represented by the current instance.
+   Gets a handle to the module that contains the type represented by the current instance.
+   Returns: A System.ModuleHandle structure representing a handle to the module that contains the type 
+    represented by the current instance.
   """
   pass
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: RuntimeTypeHandle,info: SerializationInfo,context: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo with the data 
-    necessary to deserialize the type represented by the current instance.
+   Populates a System.Runtime.Serialization.SerializationInfo with the data necessary to 
+    deserialize the type represented by the current instance.
   
   
    info: The object to be populated with serialization information.

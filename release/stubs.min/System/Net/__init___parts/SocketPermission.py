@@ -21,8 +21,7 @@ class SocketPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStac
   Copy(self: SocketPermission) -> IPermission
   
    Creates a copy of a System.Net.SocketPermission instance.
-   Returns: A new instance of the System.Net.SocketPermission class that is a copy of the 
-    current instance.
+   Returns: A new instance of the System.Net.SocketPermission class that is a copy of the current instance.
   """
   pass
  def FromXml(self,securityElement):
@@ -37,15 +36,12 @@ class SocketPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStac
   """
   Intersect(self: SocketPermission,target: IPermission) -> IPermission
   
-   Returns the logical intersection between two System.Net.SocketPermission 
-    instances.
-  
+   Returns the logical intersection between two System.Net.SocketPermission instances.
   
    target: The System.Net.SocketPermission instance to intersect with the current instance.
-   Returns: The System.Net.SocketPermission instance that represents the intersection of 
-    two System.Net.SocketPermission instances. If the intersection is empty,the 
-    method returns null. If the target parameter is a null reference,the method 
-    returns null.
+   Returns: The System.Net.SocketPermission instance that represents the intersection of two 
+    System.Net.SocketPermission instances. If the intersection is empty,the method returns null. If 
+    the target parameter is a null reference,the method returns null.
   """
   pass
  def IsSubsetOf(self,target):
@@ -55,10 +51,9 @@ class SocketPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStac
    Determines if the current permission is a subset of the specified permission.
   
    target: A System.Net.SocketPermission that is to be tested for the subset relationship.
-   Returns: If target is null,this method returns true if the current instance defines no 
-    permissions; otherwise,false. If target is not null,this method returns true 
-    if the current instance defines a subset of target permissions; otherwise,
-    false.
+   Returns: If target is null,this method returns true if the current instance defines no permissions; 
+    otherwise,false. If target is not null,this method returns true if the current instance 
+    defines a subset of target permissions; otherwise,false.
   """
   pass
  def IsUnrestricted(self):
@@ -66,21 +61,17 @@ class SocketPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStac
   IsUnrestricted(self: SocketPermission) -> bool
   
    Checks the overall permission state of the object.
-   Returns: true if the System.Net.SocketPermission instance is created with the 
-    Unrestricted value from System.Security.Permissions.PermissionState; otherwise,
-    false.
+   Returns: true if the System.Net.SocketPermission instance is created with the Unrestricted value from 
+    System.Security.Permissions.PermissionState; otherwise,false.
   """
   pass
  def ToXml(self):
   """
   ToXml(self: SocketPermission) -> SecurityElement
   
-   Creates an XML encoding of a System.Net.SocketPermission instance and its 
-    current state.
-  
-   Returns: A System.Security.SecurityElement instance that contains an XML-encoded 
-    representation of the System.Net.SocketPermission instance,including state 
-    information.
+   Creates an XML encoding of a System.Net.SocketPermission instance and its current state.
+   Returns: A System.Security.SecurityElement instance that contains an XML-encoded representation of the 
+    System.Net.SocketPermission instance,including state information.
   """
   pass
  def Union(self,target):
@@ -91,8 +82,8 @@ class SocketPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStac
   
    target: The System.Net.SocketPermission instance to combine with the current instance.
    Returns: The System.Net.SocketPermission instance that represents the union of two 
-    System.Net.SocketPermission instances. If target parameter is null,it returns 
-    a copy of the current instance.
+    System.Net.SocketPermission instances. If target parameter is null,it returns a copy of the 
+    current instance.
   """
   pass
  def __init__(self,*args):

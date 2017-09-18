@@ -13,13 +13,9 @@ class TraceListenerCollection(object,IList,ICollection,IEnumerable):
  def AddRange(self,value):
   """
   AddRange(self: TraceListenerCollection,value: TraceListenerCollection)
-   Adds the contents of another System.Diagnostics.TraceListenerCollection to the 
-    list.
+   Adds the contents of another System.Diagnostics.TraceListenerCollection to the list.
   
-  
-   value: Another System.Diagnostics.TraceListenerCollection whose contents are added to 
-    the list.
-  
+   value: Another System.Diagnostics.TraceListenerCollection whose contents are added to the list.
   AddRange(self: TraceListenerCollection,value: Array[TraceListener])
    Adds an array of System.Diagnostics.TraceListener objects to the list.
   
@@ -45,8 +41,8 @@ class TraceListenerCollection(object,IList,ICollection,IEnumerable):
  def CopyTo(self,listeners,index):
   """
   CopyTo(self: TraceListenerCollection,listeners: Array[TraceListener],index: int)
-   Copies a section of the current System.Diagnostics.TraceListenerCollection list 
-    to the specified array at the specified index.
+   Copies a section of the current System.Diagnostics.TraceListenerCollection list to the specified 
+    array at the specified index.
   
   
    listeners: An array of type System.Array to copy the elements into.
@@ -83,9 +79,7 @@ class TraceListenerCollection(object,IList,ICollection,IEnumerable):
  def Remove(self,*__args):
   """
   Remove(self: TraceListenerCollection,name: str)
-   Removes from the collection the first System.Diagnostics.TraceListener with the 
-    specified name.
-  
+   Removes from the collection the first System.Diagnostics.TraceListener with the specified name.
   
    name: The name of the System.Diagnostics.TraceListener to remove from the list.
   Remove(self: TraceListenerCollection,listener: TraceListener)
@@ -97,12 +91,9 @@ class TraceListenerCollection(object,IList,ICollection,IEnumerable):
  def RemoveAt(self,index):
   """
   RemoveAt(self: TraceListenerCollection,index: int)
-   Removes from the collection the System.Diagnostics.TraceListener at the 
-    specified index.
+   Removes from the collection the System.Diagnostics.TraceListener at the specified index.
   
-  
-   index: The zero-based index of the System.Diagnostics.TraceListener to remove from the 
-    list.
+   index: The zero-based index of the System.Diagnostics.TraceListener to remove from the list.
   """
   pass
  def __add__(self,*args):
@@ -115,8 +106,7 @@ class TraceListenerCollection(object,IList,ICollection,IEnumerable):
    Determines whether the System.Collections.IList contains a specific value.
   
    value: The object to locate in the System.Collections.IList.
-   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,
-    false.
+   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,false.
   """
   pass
  def __getitem__(self,*args):

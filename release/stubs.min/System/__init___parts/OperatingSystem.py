@@ -15,8 +15,8 @@ class OperatingSystem(object,ICloneable,ISerializable):
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: OperatingSystem,info: SerializationInfo,context: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo object with the data 
-    necessary to deserialize this instance.
+   Populates a System.Runtime.Serialization.SerializationInfo object with the data necessary to 
+    deserialize this instance.
   
   
    info: The object to populate with serialization information.
@@ -27,12 +27,9 @@ class OperatingSystem(object,ICloneable,ISerializable):
   """
   ToString(self: OperatingSystem) -> str
   
-   Converts the value of this System.OperatingSystem object to its equivalent 
-    string representation.
-  
-   Returns: The string representation of the values returned by the 
-    System.OperatingSystem.Platform,System.OperatingSystem.Version,and 
-    System.OperatingSystem.ServicePack properties.
+   Converts the value of this System.OperatingSystem object to its equivalent string representation.
+   Returns: The string representation of the values returned by the System.OperatingSystem.Platform,
+    System.OperatingSystem.Version,and System.OperatingSystem.ServicePack properties.
   """
   pass
  def __init__(self,*args):

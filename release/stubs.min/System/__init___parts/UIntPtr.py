@@ -25,8 +25,8 @@ class UIntPtr(object,ISerializable):
    Returns a value indicating whether this instance is equal to a specified object.
   
    obj: An object to compare with this instance or null.
-   Returns: true if obj is an instance of System.UIntPtr and equals the value of this 
-    instance; otherwise,false.
+   Returns: true if obj is an instance of System.UIntPtr and equals the value of this instance; otherwise,
+    false.
   """
   pass
  def GetHashCode(self):
@@ -54,17 +54,14 @@ class UIntPtr(object,ISerializable):
   ToPointer(self: UIntPtr) -> Void*
   
    Converts the value of this instance to a pointer to an unspecified type.
-   Returns: A pointer to System.Void; that is,a pointer to memory containing data of an 
-    unspecified type.
+   Returns: A pointer to System.Void; that is,a pointer to memory containing data of an unspecified type.
   """
   pass
  def ToString(self):
   """
   ToString(self: UIntPtr) -> str
   
-   Converts the numeric value of this instance to its equivalent string 
-    representation.
-  
+   Converts the numeric value of this instance to its equivalent string representation.
    Returns: The string representation of the value of this instance.
   """
   pass
@@ -114,6 +111,6 @@ class UIntPtr(object,ISerializable):
  def __sub__(self,*args):
   """ x.__sub__(y) <==> x-y """
   pass
- Size=8
+ Size=4
  Zero=None
 

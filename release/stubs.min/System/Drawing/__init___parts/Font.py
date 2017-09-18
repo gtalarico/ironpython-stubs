@@ -34,19 +34,17 @@ class Font(MarshalByRefObject,ICloneable,ISerializable,IDisposable):
   """
   Equals(self: Font,obj: object) -> bool
   
-   Indicates whether the specified object is a System.Drawing.Font and has the 
-    same System.Drawing.Font.FontFamily,System.Drawing.Font.GdiVerticalFont,
-    System.Drawing.Font.GdiCharSet,System.Drawing.Font.Style,
-    System.Drawing.Font.Size,and System.Drawing.Font.Unit property values as this 
-    System.Drawing.Font.
+   Indicates whether the specified object is a System.Drawing.Font and has the same 
+    System.Drawing.Font.FontFamily,System.Drawing.Font.GdiVerticalFont,
+    System.Drawing.Font.GdiCharSet,System.Drawing.Font.Style,System.Drawing.Font.Size,and 
+    System.Drawing.Font.Unit property values as this System.Drawing.Font.
   
   
    obj: The object to test.
    Returns: true if the obj parameter is a System.Drawing.Font and has the same 
     System.Drawing.Font.FontFamily,System.Drawing.Font.GdiVerticalFont,
-    System.Drawing.Font.GdiCharSet,System.Drawing.Font.Style,
-    System.Drawing.Font.Size,and System.Drawing.Font.Unit property values as this 
-    System.Drawing.Font; otherwise,false.
+    System.Drawing.Font.GdiCharSet,System.Drawing.Font.Style,System.Drawing.Font.Size,and 
+    System.Drawing.Font.Unit property values as this System.Drawing.Font; otherwise,false.
   """
   pass
  @staticmethod
@@ -54,9 +52,7 @@ class Font(MarshalByRefObject,ICloneable,ISerializable,IDisposable):
   """
   FromHdc(hdc: IntPtr) -> Font
   
-   Creates a System.Drawing.Font from the specified Windows handle to a device 
-    context.
-  
+   Creates a System.Drawing.Font from the specified Windows handle to a device context.
   
    hdc: A handle to a device context.
    Returns: The System.Drawing.Font this method creates.
@@ -78,26 +74,20 @@ class Font(MarshalByRefObject,ICloneable,ISerializable,IDisposable):
   """
   FromLogFont(lf: object) -> Font
   
-   Creates a System.Drawing.Font from the specified GDI logical font (LOGFONT) 
-    structure.
+   Creates a System.Drawing.Font from the specified GDI logical font (LOGFONT) structure.
   
-  
-   lf: An System.Object that represents the GDI�LOGFONT structure from which to create 
-    the System.Drawing.Font.
+   lf: An System.Object that represents the GDI�LOGFONT structure from which to create the 
+    System.Drawing.Font.
   
    Returns: The System.Drawing.Font that this method creates.
   FromLogFont(lf: object,hdc: IntPtr) -> Font
   
-   Creates a System.Drawing.Font from the specified GDI logical font (LOGFONT) 
-    structure.
+   Creates a System.Drawing.Font from the specified GDI logical font (LOGFONT) structure.
   
+   lf: An System.Object that represents the GDI�LOGFONT structure from which to create the 
+    System.Drawing.Font.
   
-   lf: An System.Object that represents the GDI�LOGFONT structure from which to create 
-    the System.Drawing.Font.
-  
-   hdc: A handle to a device context that contains additional information about the lf 
-    structure.
-  
+   hdc: A handle to a device context that contains additional information about the lf structure.
    Returns: The System.Drawing.Font that this method creates.
   """
   pass
@@ -113,13 +103,11 @@ class Font(MarshalByRefObject,ICloneable,ISerializable,IDisposable):
   """
   GetHeight(self: Font,dpi: Single) -> Single
   
-   Returns the height,in pixels,of this System.Drawing.Font when drawn to a 
-    device with the specified vertical resolution.
+   Returns the height,in pixels,of this System.Drawing.Font when drawn to a device with the 
+    specified vertical resolution.
   
   
-   dpi: The vertical resolution,in dots per inch,used to calculate the height of the 
-    font.
-  
+   dpi: The vertical resolution,in dots per inch,used to calculate the height of the font.
    Returns: The height,in pixels,of this System.Drawing.Font.
   GetHeight(self: Font) -> Single
   
@@ -127,12 +115,12 @@ class Font(MarshalByRefObject,ICloneable,ISerializable,IDisposable):
    Returns: The line spacing,in pixels,of this font.
   GetHeight(self: Font,graphics: Graphics) -> Single
   
-   Returns the line spacing,in the current unit of a specified 
-    System.Drawing.Graphics,of this font.
+   Returns the line spacing,in the current unit of a specified System.Drawing.Graphics,of this 
+    font.
   
   
-   graphics: A System.Drawing.Graphics that holds the vertical resolution,in dots per inch,
-    of the display device as well as settings for page unit and page scale.
+   graphics: A System.Drawing.Graphics that holds the vertical resolution,in dots per inch,of the display 
+    device as well as settings for page unit and page scale.
   
    Returns: The line spacing,in pixels,of this font.
   """
@@ -143,11 +131,11 @@ class Font(MarshalByRefObject,ICloneable,ISerializable,IDisposable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -170,9 +158,7 @@ class Font(MarshalByRefObject,ICloneable,ISerializable,IDisposable):
    Creates a GDI logical font (LOGFONT) structure from this System.Drawing.Font.
   
    logFont: An System.Object that represents the LOGFONT structure that this method creates.
-   graphics: A System.Drawing.Graphics that provides additional information for the LOGFONT 
-    structure.
-  
+   graphics: A System.Drawing.Graphics that provides additional information for the LOGFONT structure.
   ToLogFont(self: Font,logFont: object)
    Creates a GDI logical font (LOGFONT) structure from this System.Drawing.Font.
   
@@ -188,13 +174,20 @@ class Font(MarshalByRefObject,ICloneable,ISerializable,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==y """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

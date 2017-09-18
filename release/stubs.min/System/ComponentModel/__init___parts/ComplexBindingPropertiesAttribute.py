@@ -17,8 +17,8 @@ class ComplexBindingPropertiesAttribute(Attribute,_Attribute):
    obj: The System.Object to compare with the current 
     System.ComponentModel.ComplexBindingPropertiesAttribute instance
   
-   Returns: true if the object is equal to the current instance; otherwise,false,
-    indicating they are not equal.
+   Returns: true if the object is equal to the current instance; otherwise,false,indicating they are not 
+    equal.
   """
   pass
  def GetHashCode(self):

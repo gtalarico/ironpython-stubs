@@ -5,8 +5,8 @@ class SpellCheck(object):
   """
   GetCustomDictionaries(textBoxBase: TextBoxBase) -> IList
   
-   Gets the collection of lexicon file locations that are used for custom spelling 
-    checkers on a specified text-editing control.
+   Gets the collection of lexicon file locations that are used for custom spelling checkers on a 
+    specified text-editing control.
   
   
    textBoxBase: The text-editing control whose collection of lexicon files is retrieved.
@@ -18,31 +18,29 @@ class SpellCheck(object):
   """
   GetIsEnabled(textBoxBase: TextBoxBase) -> bool
   
-   Returns a value that indicates whether the spelling checker is enabled on the 
-    specified text-editing control.
+   Returns a value that indicates whether the spelling checker is enabled on the specified 
+    text-editing control.
   
   
-   textBoxBase: The text-editing control to check. Example controls include 
-    System.Windows.Controls.TextBox and System.Windows.Controls.RichTextBox.
+   textBoxBase: The text-editing control to check. Example controls include System.Windows.Controls.TextBox and 
+    System.Windows.Controls.RichTextBox.
   
-   Returns: true if the spelling checker is enabled on the text-editing control; otherwise,
-    false.
+   Returns: true if the spelling checker is enabled on the text-editing control; otherwise,false.
   """
   pass
  @staticmethod
  def SetIsEnabled(textBoxBase,value):
   """
   SetIsEnabled(textBoxBase: TextBoxBase,value: bool)
-   Enables or disables the spelling checker on the specified text-editing control,
-    such as System.Windows.Controls.TextBox or System.Windows.Controls.RichTextBox.
+   Enables or disables the spelling checker on the specified text-editing control,such as 
+    System.Windows.Controls.TextBox or System.Windows.Controls.RichTextBox.
   
   
-   textBoxBase: The text-editing control on which to enable or disable the spelling checker. 
-    Example controls include System.Windows.Controls.TextBox and 
-    System.Windows.Controls.RichTextBox.
+   textBoxBase: The text-editing control on which to enable or disable the spelling checker. Example controls 
+    include System.Windows.Controls.TextBox and System.Windows.Controls.RichTextBox.
   
-   value: A Boolean value that specifies whether the spelling checker is enabled on the 
-    text-editing control.
+   value: A Boolean value that specifies whether the spelling checker is enabled on the text-editing 
+    control.
   """
   pass
  @staticmethod
@@ -51,12 +49,11 @@ class SpellCheck(object):
   SetSpellingReform(textBoxBase: TextBoxBase,value: SpellingReform)
    Determines the spelling reform rules that are used by the spelling checker.
   
-   textBoxBase: The text-editing control to which the spelling checker is applied. Example 
-    controls include System.Windows.Controls.TextBox and 
-    System.Windows.Controls.RichTextBox.
+   textBoxBase: The text-editing control to which the spelling checker is applied. Example controls include 
+    System.Windows.Controls.TextBox and System.Windows.Controls.RichTextBox.
   
-   value: The System.Windows.Controls.SpellCheck.SpellingReform value that determines the 
-    spelling reform rules.
+   value: The System.Windows.Controls.SpellCheck.SpellingReform value that determines the spelling reform 
+    rules.
   """
   pass
  CustomDictionaries=property(lambda self: object(),lambda self,v: None,lambda self: None)

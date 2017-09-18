@@ -26,15 +26,13 @@ class TimelineCollection(Animatable,ISealable,IAnimatable,IResource,IList,IColle
   """
   Clone(self: TimelineCollection) -> TimelineCollection
   
-   Creates a modifiable clone of this 
-    System.Windows.Media.Animation.TimelineCollection,making deep copies of this 
-    object's values. When copying dependency properties,this method copies 
-    resource references and data bindings (but they might no longer resolve) but 
-    not animations or their current values.
+   Creates a modifiable clone of this System.Windows.Media.Animation.TimelineCollection,making 
+    deep copies of this object's values. When copying dependency properties,this method copies 
+    resource references and data bindings (but they might no longer resolve) but not animations or 
+    their current values.
   
-   Returns: A modifiable clone of the current object. The cloned object's 
-    System.Windows.Freezable.IsFrozen property will be false even if the source's 
-    System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen 
+    property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCore(self,*args):
@@ -44,14 +42,12 @@ class TimelineCollection(Animatable,ISealable,IAnimatable,IResource,IList,IColle
   """
   CloneCurrentValue(self: TimelineCollection) -> TimelineCollection
   
-   Creates a modifiable clone of this 
-    System.Windows.Media.Animation.TimelineCollection object,making deep copies of 
-    this object's current values. Resource references,data bindings,and 
+   Creates a modifiable clone of this System.Windows.Media.Animation.TimelineCollection object,
+    making deep copies of this object's current values. Resource references,data bindings,and 
     animations are not copied,but their current values are.
   
-   Returns: A modifiable clone of the current object. The cloned object's 
-    System.Windows.Freezable.IsFrozen property will be false even if the source's 
-    System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen 
+    property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCurrentValueCore(self,*args):
@@ -61,8 +57,8 @@ class TimelineCollection(Animatable,ISealable,IAnimatable,IResource,IList,IColle
   """
   Contains(self: TimelineCollection,value: Timeline) -> bool
   
-   Determines whether the System.Windows.Media.Animation.TimelineCollection 
-    contains the specified System.Windows.Media.Animation.Timeline object.
+   Determines whether the System.Windows.Media.Animation.TimelineCollection contains the specified 
+    System.Windows.Media.Animation.Timeline object.
   
   
    value: The object to locate.
@@ -72,8 +68,8 @@ class TimelineCollection(Animatable,ISealable,IAnimatable,IResource,IList,IColle
  def CopyTo(self,array,index):
   """
   CopyTo(self: TimelineCollection,array: Array[Timeline],index: int)
-   Copies the items of the System.Windows.Media.Animation.TimelineCollection to 
-    the passed Timeline array,starting at the specified index position.
+   Copies the items of the System.Windows.Media.Animation.TimelineCollection to the passed Timeline 
+    array,starting at the specified index position.
   
   
    array: The destination array.
@@ -124,8 +120,7 @@ class TimelineCollection(Animatable,ISealable,IAnimatable,IResource,IList,IColle
   """
   Insert(self: TimelineCollection,index: int,value: Timeline)
    Inserts the specified Timeline object into this 
-    System.Windows.Media.Animation.TimelineCollection at the specified index 
-    position.
+    System.Windows.Media.Animation.TimelineCollection at the specified index position.
   
   
    index: The zero-based index position into which value is inserted.
@@ -141,8 +136,8 @@ class TimelineCollection(Animatable,ISealable,IAnimatable,IResource,IList,IColle
  def OnFreezablePropertyChanged(self,*args):
   """
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject,property: DependencyProperty)
-   This member supports the Windows Presentation Foundation (WPF) infrastructure 
-    and is not intended to be used directly from your code.
+   This member supports the Windows Presentation Foundation (WPF) infrastructure and is not 
+    intended to be used directly from your code.
   
   
    oldValue: The previous value of the data member.
@@ -161,31 +156,27 @@ class TimelineCollection(Animatable,ISealable,IAnimatable,IResource,IList,IColle
   """
   OnPropertyChanged(self: Freezable,e: DependencyPropertyChangedEventArgs)
    Overrides the System.Windows.DependencyObject implementation of 
-    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
-    rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
-    handlers in response to a changing dependency property of type 
-    System.Windows.Freezable.
+    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventAr
+    gs) to also invoke any System.Windows.Freezable.Changed handlers in response to a changing 
+    dependency property of type System.Windows.Freezable.
   
   
-   e: Event data that contains information about which property changed,and its old 
-    and new values.
+   e: Event data that contains information about which property changed,and its old and new values.
   """
   pass
  def ReadPreamble(self,*args):
   """
   ReadPreamble(self: Freezable)
-   Ensures that the System.Windows.Freezable is being accessed from a valid 
-    thread. Inheritors of System.Windows.Freezable must call this method at the 
-    beginning of any API that reads data members that are not dependency 
-    properties.
+   Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of 
+    System.Windows.Freezable must call this method at the beginning of any API that reads data 
+    members that are not dependency properties.
   """
   pass
  def Remove(self,value):
   """
   Remove(self: TimelineCollection,value: Timeline) -> bool
   
-   Removes the first occurrence of a specified 
-    System.Windows.Media.Animation.Timeline from this 
+   Removes the first occurrence of a specified System.Windows.Media.Animation.Timeline from this 
     System.Windows.Media.Animation.TimelineCollection.
   
   
@@ -196,8 +187,8 @@ class TimelineCollection(Animatable,ISealable,IAnimatable,IResource,IList,IColle
  def RemoveAt(self,index):
   """
   RemoveAt(self: TimelineCollection,index: int)
-   Removes the System.Windows.Media.Animation.Timeline at the specified index 
-    position from this System.Windows.Media.Animation.TimelineCollection.
+   Removes the System.Windows.Media.Animation.Timeline at the specified index position from this 
+    System.Windows.Media.Animation.TimelineCollection.
   
   
    index: The zero-based index position of the item to remove.
@@ -207,40 +198,29 @@ class TimelineCollection(Animatable,ISealable,IAnimatable,IResource,IList,IColle
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize 
-    the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize the value for 
+    the provided dependency property.
   
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; 
-    otherwise,false.
-  
-  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
+   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
   """
   pass
  def WritePostscript(self,*args):
   """
   WritePostscript(self: Freezable)
-   Raises the System.Windows.Freezable.Changed event for the 
-    System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
-    method. Classes that derive from System.Windows.Freezable should call this 
-    method at the end of any API that modifies class members that are not stored as 
+   Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes 
+    its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable 
+    should call this method at the end of any API that modifies class members that are not stored as 
     dependency properties.
   """
   pass
  def WritePreamble(self,*args):
   """
   WritePreamble(self: Freezable)
-   Verifies that the System.Windows.Freezable is not frozen and that it is being 
-    accessed from a valid threading context. System.Windows.Freezable inheritors 
-    should call this method at the beginning of any API that writes to data members 
-    that are not dependency properties.
+   Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a 
+    valid threading context. System.Windows.Freezable inheritors should call this method at the 
+    beginning of any API that writes to data members that are not dependency properties.
   """
   pass
  def __add__(self,*args):
@@ -254,8 +234,7 @@ class TimelineCollection(Animatable,ISealable,IAnimatable,IResource,IList,IColle
    Determines whether the System.Collections.IList contains a specific value.
   
    value: The object to locate in the System.Collections.IList.
-   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,
-    false.
+   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,false.
   """
   pass
  def __getitem__(self,*args):

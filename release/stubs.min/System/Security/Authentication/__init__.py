@@ -2,7 +2,7 @@
 # module System.Security.Authentication calls itself Authentication
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -121,7 +121,7 @@ class HashAlgorithmType(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies the algorithm used for generating message authentication codes (MACs).
  
- enum HashAlgorithmType,values: Md5 (32771),None (0),Sha1 (32772)
+ enum HashAlgorithmType,values: Md5 (32771),None (0),Sha1 (32772),Sha256 (32780),Sha384 (32781),Sha512 (32782)
  """
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -149,6 +149,9 @@ class HashAlgorithmType(Enum,IComparable,IFormattable,IConvertible):
  Md5=None
  None=None
  Sha1=None
+ Sha256=None
+ Sha384=None
+ Sha512=None
  value__=None
 
 

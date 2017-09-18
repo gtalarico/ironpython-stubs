@@ -11,13 +11,12 @@ class AppDomainSetup(object,IAppDomainSetup):
   GetConfigurationBytes(self: AppDomainSetup) -> Array[Byte]
   
    Returns the XML configuration information set by the 
-    System.AppDomainSetup.SetConfigurationBytes(System.Byte[]) method,which 
-    overrides the application's XML configuration information.
+    System.AppDomainSetup.SetConfigurationBytes(System.Byte[]) method,which overrides the 
+    application's XML configuration information.
   
    Returns: An array that contains the XML configuration information that was set by the 
-    System.AppDomainSetup.SetConfigurationBytes(System.Byte[]) method,or null if 
-    the System.AppDomainSetup.SetConfigurationBytes(System.Byte[]) method has not 
-    been called.
+    System.AppDomainSetup.SetConfigurationBytes(System.Byte[]) method,or null if the 
+    System.AppDomainSetup.SetConfigurationBytes(System.Byte[]) method has not been called.
   """
   pass
  def SetCompatibilitySwitches(self,switches):
@@ -26,12 +25,11 @@ class AppDomainSetup(object,IAppDomainSetup):
  def SetConfigurationBytes(self,value):
   """
   SetConfigurationBytes(self: AppDomainSetup,value: Array[Byte])
-   Provides XML configuration information for the application domain,overriding 
-    the application's XML configuration information.
+   Provides XML configuration information for the application domain,overriding the application's 
+    XML configuration information.
   
   
-   value: An array that contains the XML configuration information to be used for the 
-    application domain.
+   value: An array that contains the XML configuration information to be used for the application domain.
   """
   pass
  def SetNativeFunction(self,functionName,functionVersion,functionPointer):

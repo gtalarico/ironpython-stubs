@@ -4,27 +4,27 @@ class _Type:
   """
   Equals(self: _Type,o: Type) -> bool
   
-   Provides COM objects with version-independent access to the 
-    System.Type.Equals(System.Type) method.
+   Provides COM objects with version-independent access to the System.Type.Equals(System.Type) 
+    method.
   
   
-   o: The System.Type whose underlying system type is to be compared with the 
-    underlying system type of the current System.Type.
+   o: The System.Type whose underlying system type is to be compared with the underlying system type 
+    of the current System.Type.
   
-   Returns: true if the underlying system type of o is the same as the underlying system 
-    type of the current System.Type; otherwise,false.
+   Returns: true if the underlying system type of o is the same as the underlying system type of the current 
+    System.Type; otherwise,false.
   
   Equals(self: _Type,other: object) -> bool
   
-   Provides COM objects with version-independent access to the 
-    System.Type.Equals(System.Object) method.
+   Provides COM objects with version-independent access to the System.Type.Equals(System.Object) 
+    method.
   
   
-   other: The System.Object whose underlying system type is to be compared with the 
-    underlying system type of the current System.Type.
+   other: The System.Object whose underlying system type is to be compared with the underlying system type 
+    of the current System.Type.
   
-   Returns: true if the underlying system type of o is the same as the underlying system 
-    type of the current System.Type; otherwise,false.
+   Returns: true if the underlying system type of o is the same as the underlying system type of the current 
+    System.Type; otherwise,false.
   """
   pass
  def FindInterfaces(self,filter,filterCriteria):
@@ -35,16 +35,13 @@ class _Type:
     System.Type.FindInterfaces(System.Reflection.TypeFilter,System.Object) method.
   
   
-   filter: The System.Reflection.TypeFilter delegate that compares the interfaces against 
-    filterCriteria.
+   filter: The System.Reflection.TypeFilter delegate that compares the interfaces against filterCriteria.
+   filterCriteria: The search criteria that determines whether an interface should be included in the returned 
+    array.
   
-   filterCriteria: The search criteria that determines whether an interface should be included in 
-    the returned array.
-  
-   Returns: An array of System.Type objects representing a filtered list of the interfaces 
-    implemented or inherited by the current System.Type.-or- An empty array of type 
-    System.Type,if no interfaces matching the filter are implemented or inherited 
-    by the current System.Type.
+   Returns: An array of System.Type objects representing a filtered list of the interfaces implemented or 
+    inherited by the current System.Type.-or- An empty array of type System.Type,if no interfaces 
+    matching the filter are implemented or inherited by the current System.Type.
   """
   pass
  def FindMembers(self,memberType,bindingAttr,filter,filterCriteria):
@@ -52,39 +49,34 @@ class _Type:
   FindMembers(self: _Type,memberType: MemberTypes,bindingAttr: BindingFlags,filter: MemberFilter,filterCriteria: object) -> Array[MemberInfo]
   
    Provides COM objects with version-independent access to the 
-    System.Type.FindMembers(System.Reflection.MemberTypes,System.Reflection.BindingF
-    lags,System.Reflection.MemberFilter,System.Object) method.
+    System.Type.FindMembers(System.Reflection.MemberTypes,System.Reflection.BindingFlags,System.Refle
+    ction.MemberFilter,System.Object) method.
   
   
    memberType: A MemberTypes object indicating the type of member to search for.
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return null.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return null.
   
-   filter: The delegate that does the comparisons,returning true if the member currently 
-    being inspected matches the filterCriteria and false otherwise. You can use the 
-    FilterAttribute,FilterName,and FilterNameIgnoreCase delegates supplied by 
-    this class. The first uses the fields of FieldAttributes,MethodAttributes,and 
-    MethodImplAttributes as search criteria,and the other two delegates use String 
-    objects as the search criteria.
+   filter: The delegate that does the comparisons,returning true if the member currently being inspected 
+    matches the filterCriteria and false otherwise. You can use the FilterAttribute,FilterName,and 
+    FilterNameIgnoreCase delegates supplied by this class. The first uses the fields of 
+    FieldAttributes,MethodAttributes,and MethodImplAttributes as search criteria,and the other 
+    two delegates use String objects as the search criteria.
   
-   filterCriteria: The search criteria that determines whether a member is returned in the array 
-    of MemberInfo objects.The fields of FieldAttributes,MethodAttributes,and 
-    MethodImplAttributes can be used in conjunction with the FilterAttribute 
-    delegate supplied by this class.
+   filterCriteria: The search criteria that determines whether a member is returned in the array of MemberInfo 
+    objects.The fields of FieldAttributes,MethodAttributes,and MethodImplAttributes can be used in 
+    conjunction with the FilterAttribute delegate supplied by this class.
   
-   Returns: A filtered array of System.Reflection.MemberInfo objects of the specified 
-    member type.-or- An empty array of type System.Reflection.MemberInfo,if the 
-    current System.Type does not have members of type memberType that match the 
-    filter criteria.
+   Returns: A filtered array of System.Reflection.MemberInfo objects of the specified member type.-or- An 
+    empty array of type System.Reflection.MemberInfo,if the current System.Type does not have 
+    members of type memberType that match the filter criteria.
   """
   pass
  def GetArrayRank(self):
   """
   GetArrayRank(self: _Type) -> int
   
-   Provides COM objects with version-independent access to the 
-    System.Type.GetArrayRank method.
-  
+   Provides COM objects with version-independent access to the System.Type.GetArrayRank method.
    Returns: An System.Int32 containing the number of dimensions in the current System.Type.
   """
   pass
@@ -96,88 +88,78 @@ class _Type:
     System.Type.GetConstructor(System.Type[]) method.
   
   
-   types: An array of System.Type objects representing the number,order,and type of the 
-    parameters for the desired constructor.-or- An empty array of System.Type 
-    objects,to get a constructor that takes no parameters. Such an empty array is 
-    provided by the static field System.Type.EmptyTypes.
+   types: An array of System.Type objects representing the number,order,and type of the parameters for 
+    the desired constructor.-or- An empty array of System.Type objects,to get a constructor that 
+    takes no parameters. Such an empty array is provided by the static field System.Type.EmptyTypes.
   
-   Returns: A System.Reflection.ConstructorInfo object representing the public instance 
-    constructor whose parameters match the types in the parameter type array,if 
-    found; otherwise,null.
+   Returns: A System.Reflection.ConstructorInfo object representing the public instance constructor whose 
+    parameters match the types in the parameter type array,if found; otherwise,null.
   
   GetConstructor(self: _Type,bindingAttr: BindingFlags,binder: Binder,types: Array[Type],modifiers: Array[ParameterModifier]) -> ConstructorInfo
   
    Provides COM objects with version-independent access to the 
-    System.Type.GetConstructor(System.Reflection.BindingFlags,System.Reflection.Bind
-    er,System.Type[],System.Reflection.ParameterModifier[]) method.
+    System.Type.GetConstructor(System.Reflection.BindingFlags,System.Reflection.Binder,System.Type[],
+    System.Reflection.ParameterModifier[]) method.
   
   
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return null.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return null.
   
-   binder: A System.Reflection.Binder object that defines a set of properties and enables 
-    binding,which can involve selection of an overloaded method,coercion of 
-    argument types,and invocation of a member through reflection.-or- null,to use 
-    the System.Type.DefaultBinder.
+   binder: A System.Reflection.Binder object that defines a set of properties and enables binding,which 
+    can involve selection of an overloaded method,coercion of argument types,and invocation of a 
+    member through reflection.-or- null,to use the System.Type.DefaultBinder.
   
-   types: An array of System.Type objects representing the number,order,and type of the 
-    parameters for the constructor to get.-or- An empty array of the type 
-    System.Type (that is,Type[] types=new Type[0]) to get a constructor that 
-    takes no parameters.-or- System.Type.EmptyTypes.
+   types: An array of System.Type objects representing the number,order,and type of the parameters for 
+    the constructor to get.-or- An empty array of the type System.Type (that is,Type[] types=new 
+    Type[0]) to get a constructor that takes no parameters.-or- System.Type.EmptyTypes.
   
-   modifiers: An array of System.Reflection.ParameterModifier objects representing the 
-    attributes associated with the corresponding element in the parameter type 
-    array. The default binder does not process this parameter.
+   modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated 
+    with the corresponding element in the parameter type array. The default binder does not process 
+    this parameter.
   
-   Returns: A System.Reflection.ConstructorInfo object representing the constructor that 
-    matches the specified requirements,if found; otherwise,null.
+   Returns: A System.Reflection.ConstructorInfo object representing the constructor that matches the 
+    specified requirements,if found; otherwise,null.
   
   GetConstructor(self: _Type,bindingAttr: BindingFlags,binder: Binder,callConvention: CallingConventions,types: Array[Type],modifiers: Array[ParameterModifier]) -> ConstructorInfo
   
    Provides COM objects with version-independent access to the 
-    System.Type.GetConstructor(System.Reflection.BindingFlags,System.Reflection.Bind
-    er,System.Reflection.CallingConventions,System.Type[],System.Reflection.Paramete
-    rModifier[]) method.
+    System.Type.GetConstructor(System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflect
+    ion.CallingConventions,System.Type[],System.Reflection.ParameterModifier[]) method.
   
   
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return null.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return null.
   
-   binder: A System.Reflection.Binder object that defines a set of properties and enables 
-    binding,which can involve selection of an overloaded method,coercion of 
-    argument types,and invocation of a member through reflection.-or- null,to use 
-    the System.Type.DefaultBinder.
+   binder: A System.Reflection.Binder object that defines a set of properties and enables binding,which 
+    can involve selection of an overloaded method,coercion of argument types,and invocation of a 
+    member through reflection.-or- null,to use the System.Type.DefaultBinder.
   
-   callConvention: The System.Reflection.CallingConventions object that specifies the set of rules 
-    to use regarding the order and layout of arguments,how the return value is 
-    passed,what registers are used for arguments,and the stack is cleaned up.
+   callConvention: The System.Reflection.CallingConventions object that specifies the set of rules to use regarding 
+    the order and layout of arguments,how the return value is passed,what registers are used for 
+    arguments,and the stack is cleaned up.
   
-   types: An array of System.Type objects representing the number,order,and type of the 
-    parameters for the constructor to get.-or- An empty array of the type 
-    System.Type (that is,Type[] types=new Type[0]) to get a constructor that 
-    takes no parameters.
+   types: An array of System.Type objects representing the number,order,and type of the parameters for 
+    the constructor to get.-or- An empty array of the type System.Type (that is,Type[] types=new 
+    Type[0]) to get a constructor that takes no parameters.
   
-   modifiers: An array of System.Reflection.ParameterModifier objects representing the 
-    attributes associated with the corresponding element in the types array. The 
-    default binder does not process this parameter.
+   modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated 
+    with the corresponding element in the types array. The default binder does not process this 
+    parameter.
   
-   Returns: A System.Reflection.ConstructorInfo object representing the constructor that 
-    matches the specified requirements,if found; otherwise,null.
+   Returns: A System.Reflection.ConstructorInfo object representing the constructor that matches the 
+    specified requirements,if found; otherwise,null.
   """
   pass
  def GetConstructors(self,bindingAttr=None):
   """
   GetConstructors(self: _Type) -> Array[ConstructorInfo]
   
-   Provides COM objects with version-independent access to the 
-    System.Type.GetConstructors method.
-  
-   Returns: An array of System.Reflection.ConstructorInfo objects representing all the 
-    public instance constructors defined for the current System.Type,but not 
-    including the type initializer (static constructor). If no public instance 
-    constructors are defined for the current System.Type,or if the current 
-    System.Type represents a type parameter of a generic type or method definition,
-    an empty array of type System.Reflection.ConstructorInfo is returned.
+   Provides COM objects with version-independent access to the System.Type.GetConstructors method.
+   Returns: An array of System.Reflection.ConstructorInfo objects representing all the public instance 
+    constructors defined for the current System.Type,but not including the type initializer (static 
+    constructor). If no public instance constructors are defined for the current System.Type,or if 
+    the current System.Type represents a type parameter of a generic type or method definition,an 
+    empty array of type System.Reflection.ConstructorInfo is returned.
   
   GetConstructors(self: _Type,bindingAttr: BindingFlags) -> Array[ConstructorInfo]
   
@@ -185,16 +167,15 @@ class _Type:
     System.Type.GetConstructors(System.Reflection.BindingFlags) method.
   
   
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return null.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return null.
   
-   Returns: An array of System.Reflection.ConstructorInfo objects representing all 
-    constructors defined for the current System.Type that match the specified 
-    binding constraints,including the type initializer if it is defined. Returns 
-    an empty array of type System.Reflection.ConstructorInfo if no constructors are 
-    defined for the current System.Type,if none of the defined constructors match 
-    the binding constraints,or if the current System.Type represents a type 
-    parameter of a generic type or method definition.
+   Returns: An array of System.Reflection.ConstructorInfo objects representing all constructors defined for 
+    the current System.Type that match the specified binding constraints,including the type 
+    initializer if it is defined. Returns an empty array of type System.Reflection.ConstructorInfo 
+    if no constructors are defined for the current System.Type,if none of the defined constructors 
+    match the binding constraints,or if the current System.Type represents a type parameter of a 
+    generic type or method definition.
   """
   pass
  def GetCustomAttributes(self,*__args):
@@ -205,71 +186,60 @@ class _Type:
     System.Reflection.Assembly.GetCustomAttributes(System.Boolean) method.
   
   
-   inherit: Specifies whether to search this member's inheritance chain to find the 
-    attributes.
-  
-   Returns: An array of custom attributes applied to this member,or an array with zero (0) 
-    elements if no attributes have been applied.
+   inherit: Specifies whether to search this member's inheritance chain to find the attributes.
+   Returns: An array of custom attributes applied to this member,or an array with zero (0) elements if no 
+    attributes have been applied.
   
   GetCustomAttributes(self: _Type,attributeType: Type,inherit: bool) -> Array[object]
   
    Provides COM objects with version-independent access to the 
-    System.Reflection.MemberInfo.GetCustomAttributes(System.Type,System.Boolean) 
-    method.
+    System.Reflection.MemberInfo.GetCustomAttributes(System.Type,System.Boolean) method.
   
   
-   attributeType: The type of attribute to search for. Only attributes that are assignable to 
-    this type are returned.
+   attributeType: The type of attribute to search for. Only attributes that are assignable to this type are 
+    returned.
   
-   inherit: Specifies whether to search this member's inheritance chain to find the 
-    attributes.
-  
-   Returns: An array of custom attributes applied to this member,or an array with zero (0) 
-    elements if no attributes have been applied.
+   inherit: Specifies whether to search this member's inheritance chain to find the attributes.
+   Returns: An array of custom attributes applied to this member,or an array with zero (0) elements if no 
+    attributes have been applied.
   """
   pass
  def GetDefaultMembers(self):
   """
   GetDefaultMembers(self: _Type) -> Array[MemberInfo]
   
-   Provides COM objects with version-independent access to the 
-    System.Type.GetDefaultMembers method.
-  
-   Returns: An array of System.Reflection.MemberInfo objects representing all default 
-    members of the current System.Type.-or- An empty array of type 
-    System.Reflection.MemberInfo,if the current System.Type does not have default 
-    members.
+   Provides COM objects with version-independent access to the System.Type.GetDefaultMembers method.
+   Returns: An array of System.Reflection.MemberInfo objects representing all default members of the current 
+    System.Type.-or- An empty array of type System.Reflection.MemberInfo,if the current System.Type 
+    does not have default members.
   """
   pass
  def GetElementType(self):
   """
   GetElementType(self: _Type) -> Type
   
-   Provides COM objects with version-independent access to the 
-    System.Type.GetElementType method.
-  
-   Returns: The System.Type of the object encompassed or referred to by the current array,
-    pointer or reference type.-or- null if the current System.Type is not an array 
-    or a pointer,or is not passed by reference,or represents a generic type or a 
-    type parameter of a generic type or method definition.
+   Provides COM objects with version-independent access to the System.Type.GetElementType method.
+   Returns: The System.Type of the object encompassed or referred to by the current array,pointer or 
+    reference type.-or- null if the current System.Type is not an array or a pointer,or is not 
+    passed by reference,or represents a generic type or a type parameter of a generic type or 
+    method definition.
   """
   pass
  def GetEvent(self,name,bindingAttr=None):
   """
   GetEvent(self: _Type,name: str) -> EventInfo
   
-   Provides COM objects with version-independent access to the 
-    System.Type.GetEvent(System.String) method.
+   Provides COM objects with version-independent access to the System.Type.GetEvent(System.String) 
+    method.
   
   
-   name: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return null.
+   name: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return null.
   
-   Returns: An array of System.Reflection.EventInfo objects representing all events that 
-    are declared or inherited by the current System.Type that match the specified 
-    binding constraints.-or- An empty array of type System.Reflection.EventInfo,if 
-    the current System.Type does not have events,or if none of the events match 
-    the binding constraints.
+   Returns: An array of System.Reflection.EventInfo objects representing all events that are declared or 
+    inherited by the current System.Type that match the specified binding constraints.-or- An empty 
+    array of type System.Reflection.EventInfo,if the current System.Type does not have events,or 
+    if none of the events match the binding constraints.
   
   GetEvent(self: _Type,name: str,bindingAttr: BindingFlags) -> EventInfo
   
@@ -277,14 +247,14 @@ class _Type:
     System.Type.GetEvent(System.String,System.Reflection.BindingFlags) method.
   
   
-   name: The System.String containing the name of an event that is declared or inherited 
-    by the current System.Type.
+   name: The System.String containing the name of an event that is declared or inherited by the current 
+    System.Type.
   
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return null.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return null.
   
-   Returns: The System.Reflection.EventInfo object representing the specified event that is 
-    declared or inherited by the current System.Type,if found; otherwise,null.
+   Returns: The System.Reflection.EventInfo object representing the specified event that is declared or 
+    inherited by the current System.Type,if found; otherwise,null.
   """
   pass
  def GetEvents(self,bindingAttr=None):
@@ -295,37 +265,33 @@ class _Type:
     System.Type.GetEvents(System.Reflection.BindingFlags) method.
   
   
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return null.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return null.
   
-   Returns: An array of System.Reflection.EventInfo objects representing all events that 
-    are declared or inherited by the current System.Type that match the specified 
-    binding constraints.-or- An empty array of type System.Reflection.EventInfo,if 
-    the current System.Type does not have events,or if none of the events match 
-    the binding constraints.
+   Returns: An array of System.Reflection.EventInfo objects representing all events that are declared or 
+    inherited by the current System.Type that match the specified binding constraints.-or- An empty 
+    array of type System.Reflection.EventInfo,if the current System.Type does not have events,or 
+    if none of the events match the binding constraints.
   
   GetEvents(self: _Type) -> Array[EventInfo]
   
-   Provides COM objects with version-independent access to the 
-    System.Type.GetEvents method.
-  
-   Returns: An array of System.Reflection.EventInfo objects representing all the public 
-    events that are declared or inherited by the current System.Type.-or- An empty 
-    array of type System.Reflection.EventInfo,if the current System.Type does not 
-    have public events.
+   Provides COM objects with version-independent access to the System.Type.GetEvents method.
+   Returns: An array of System.Reflection.EventInfo objects representing all the public events that are 
+    declared or inherited by the current System.Type.-or- An empty array of type 
+    System.Reflection.EventInfo,if the current System.Type does not have public events.
   """
   pass
  def GetField(self,name,bindingAttr=None):
   """
   GetField(self: _Type,name: str) -> FieldInfo
   
-   Provides COM objects with version-independent access to the 
-    System.Type.GetField(System.String) method.
+   Provides COM objects with version-independent access to the System.Type.GetField(System.String) 
+    method.
   
   
    name: The System.String containing the name of the data field to get.
-   Returns: A System.Reflection.FieldInfo object representing the public field with the 
-    specified name,if found; otherwise,null.
+   Returns: A System.Reflection.FieldInfo object representing the public field with the specified name,if 
+    found; otherwise,null.
   
   GetField(self: _Type,name: str,bindingAttr: BindingFlags) -> FieldInfo
   
@@ -334,24 +300,21 @@ class _Type:
   
   
    name: The System.String containing the name of the data field to get.
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return null.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return null.
   
-   Returns: A System.Reflection.FieldInfo object representing the field that matches the 
-    specified requirements,if found; otherwise,null.
+   Returns: A System.Reflection.FieldInfo object representing the field that matches the specified 
+    requirements,if found; otherwise,null.
   """
   pass
  def GetFields(self,bindingAttr=None):
   """
   GetFields(self: _Type) -> Array[FieldInfo]
   
-   Provides COM objects with version-independent access to the 
-    System.Type.GetFields method.
-  
-   Returns: An array of System.Reflection.FieldInfo objects representing all the public 
-    fields defined for the current System.Type.-or- An empty array of type 
-    System.Reflection.FieldInfo,if no public fields are defined for the current 
-    System.Type.
+   Provides COM objects with version-independent access to the System.Type.GetFields method.
+   Returns: An array of System.Reflection.FieldInfo objects representing all the public fields defined for 
+    the current System.Type.-or- An empty array of type System.Reflection.FieldInfo,if no public 
+    fields are defined for the current System.Type.
   
   GetFields(self: _Type,bindingAttr: BindingFlags) -> Array[FieldInfo]
   
@@ -359,23 +322,20 @@ class _Type:
     System.Type.GetFields(System.Reflection.BindingFlags) method.
   
   
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return null.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return null.
   
-   Returns: An array of System.Reflection.FieldInfo objects representing all fields defined 
-    for the current System.Type that match the specified binding constraints.-or- 
-    An empty array of type System.Reflection.FieldInfo,if no fields are defined 
-    for the current System.Type,or if none of the defined fields match the binding 
-    constraints.
+   Returns: An array of System.Reflection.FieldInfo objects representing all fields defined for the current 
+    System.Type that match the specified binding constraints.-or- An empty array of type 
+    System.Reflection.FieldInfo,if no fields are defined for the current System.Type,or if none of 
+    the defined fields match the binding constraints.
   """
   pass
  def GetHashCode(self):
   """
   GetHashCode(self: _Type) -> int
   
-   Provides COM objects with version-independent access to the 
-    System.Type.GetHashCode method.
-  
+   Provides COM objects with version-independent access to the System.Type.GetHashCode method.
    Returns: An System.Int32 containing the hash code for this instance.
   """
   pass
@@ -400,11 +360,11 @@ class _Type:
     System.Type.GetInterface(System.String) method.
   
   
-   name: The System.String containing the name of the interface to get. For generic 
-    interfaces,this is the mangled name.
+   name: The System.String containing the name of the interface to get. For generic interfaces,this is 
+    the mangled name.
   
-   Returns: A System.Type object representing the interface with the specified name,
-    implemented or inherited by the current System.Type,if found; otherwise,null.
+   Returns: A System.Type object representing the interface with the specified name,implemented or 
+    inherited by the current System.Type,if found; otherwise,null.
   
   GetInterface(self: _Type,name: str,ignoreCase: bool) -> Type
   
@@ -412,14 +372,14 @@ class _Type:
     System.Type.GetInterface(System.String,System.Boolean) method.
   
   
-   name: The System.String containing the name of the interface to get. For generic 
-    interfaces,this is the mangled name.
+   name: The System.String containing the name of the interface to get. For generic interfaces,this is 
+    the mangled name.
   
-   ignoreCase: true to perform a case-insensitive search for name.-or- false to perform a 
-    case-sensitive search for name.
+   ignoreCase: true to perform a case-insensitive search for name.-or- false to perform a case-sensitive search 
+    for name.
   
-   Returns: A System.Type object representing the interface with the specified name,
-    implemented or inherited by the current System.Type,if found; otherwise,null.
+   Returns: A System.Type object representing the interface with the specified name,implemented or 
+    inherited by the current System.Type,if found; otherwise,null.
   """
   pass
  def GetInterfaceMap(self,interfaceType):
@@ -431,33 +391,31 @@ class _Type:
   
   
    interfaceType: The System.Type of the interface of which to retrieve a mapping.
-   Returns: An System.Reflection.InterfaceMapping object representing the interface mapping 
-    for interfaceType.
+   Returns: An System.Reflection.InterfaceMapping object representing the interface mapping for 
+    interfaceType.
   """
   pass
  def GetInterfaces(self):
   """
   GetInterfaces(self: _Type) -> Array[Type]
   
-   Provides COM objects with version-independent access to the 
-    System.Type.GetInterfaces method.
-  
-   Returns: An array of System.Type objects representing all the interfaces implemented or 
-    inherited by the current System.Type.-or- An empty array of type System.Type,
-    if no interfaces are implemented or inherited by the current System.Type.
+   Provides COM objects with version-independent access to the System.Type.GetInterfaces method.
+   Returns: An array of System.Type objects representing all the interfaces implemented or inherited by the 
+    current System.Type.-or- An empty array of type System.Type,if no interfaces are implemented or 
+    inherited by the current System.Type.
   """
   pass
  def GetMember(self,name,*__args):
   """
   GetMember(self: _Type,name: str) -> Array[MemberInfo]
   
-   Provides COM objects with version-independent access to the 
-    System.Type.GetMember(System.String) method.
+   Provides COM objects with version-independent access to the System.Type.GetMember(System.String) 
+    method.
   
   
    name: The System.String containing the name of the public members to get.
-   Returns: An array of System.Reflection.MemberInfo objects representing the public 
-    members with the specified name,if found; otherwise,an empty array.
+   Returns: An array of System.Reflection.MemberInfo objects representing the public members with the 
+    specified name,if found; otherwise,an empty array.
   
   GetMember(self: _Type,name: str,bindingAttr: BindingFlags) -> Array[MemberInfo]
   
@@ -466,39 +424,36 @@ class _Type:
   
   
    name: The System.String containing the name of the members to get.
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return an empty array.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return an empty array.
   
-   Returns: An array of System.Reflection.MemberInfo objects representing the public 
-    members with the specified name,if found; otherwise,an empty array.
+   Returns: An array of System.Reflection.MemberInfo objects representing the public members with the 
+    specified name,if found; otherwise,an empty array.
   
   GetMember(self: _Type,name: str,type: MemberTypes,bindingAttr: BindingFlags) -> Array[MemberInfo]
   
    Provides COM objects with version-independent access to the 
-    System.Type.GetMember(System.String,System.Reflection.MemberTypes,System.Reflect
-    ion.BindingFlags) method.
+    System.Type.GetMember(System.String,System.Reflection.MemberTypes,System.Reflection.BindingFlags)
+     method.
   
   
    name: The System.String containing the name of the members to get.
    type: The System.Reflection.MemberTypes value to search for.
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return an empty array.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return an empty array.
   
-   Returns: An array of System.Reflection.MemberInfo objects representing the public 
-    members with the specified name,if found; otherwise,an empty array.
+   Returns: An array of System.Reflection.MemberInfo objects representing the public members with the 
+    specified name,if found; otherwise,an empty array.
   """
   pass
  def GetMembers(self,bindingAttr=None):
   """
   GetMembers(self: _Type) -> Array[MemberInfo]
   
-   Provides COM objects with version-independent access to the 
-    System.Type.GetMembers method.
-  
-   Returns: An array of System.Reflection.MemberInfo objects representing all the public 
-    members of the current System.Type.-or- An empty array of type 
-    System.Reflection.MemberInfo,if the current System.Type does not have public 
-    members.
+   Provides COM objects with version-independent access to the System.Type.GetMembers method.
+   Returns: An array of System.Reflection.MemberInfo objects representing all the public members of the 
+    current System.Type.-or- An empty array of type System.Reflection.MemberInfo,if the current 
+    System.Type does not have public members.
   
   GetMembers(self: _Type,bindingAttr: BindingFlags) -> Array[MemberInfo]
   
@@ -506,14 +461,13 @@ class _Type:
     System.Type.GetMembers(System.Reflection.BindingFlags) method.
   
   
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return null.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return null.
   
-   Returns: An array of System.Reflection.MemberInfo objects representing all members 
-    defined for the current System.Type that match the specified binding 
-    constraints.-or- An empty array of type System.Reflection.MemberInfo,if no 
-    members are defined for the current System.Type,or if none of the defined 
-    members match the binding constraints.
+   Returns: An array of System.Reflection.MemberInfo objects representing all members defined for the 
+    current System.Type that match the specified binding constraints.-or- An empty array of type 
+    System.Reflection.MemberInfo,if no members are defined for the current System.Type,or if none 
+    of the defined members match the binding constraints.
   """
   pass
  def GetMethod(self,name,*__args):
@@ -521,21 +475,20 @@ class _Type:
   GetMethod(self: _Type,name: str,types: Array[Type],modifiers: Array[ParameterModifier]) -> MethodInfo
   
    Provides COM objects with version-independent access to the 
-    System.Type.GetMethod(System.String,System.Type[],System.Reflection.ParameterMod
-    ifier[]) method.
+    System.Type.GetMethod(System.String,System.Type[],System.Reflection.ParameterModifier[]) method.
   
   
    name: The System.String containing the name of the public method to get.
-   types: An array of System.Type objects representing the number,order,and type of the 
-    parameters for the method to get.-or- An empty array of the type System.Type 
-    (that is,Type[] types=new Type[0]) to get a method that takes no parameters.
+   types: An array of System.Type objects representing the number,order,and type of the parameters for 
+    the method to get.-or- An empty array of the type System.Type (that is,Type[] types=new 
+    Type[0]) to get a method that takes no parameters.
   
-   modifiers: An array of System.Reflection.ParameterModifier objects representing the 
-    attributes associated with the corresponding element in the types array. The 
-    default binder does not process this parameter.
+   modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated 
+    with the corresponding element in the types array. The default binder does not process this 
+    parameter.
   
-   Returns: A System.Reflection.MethodInfo object representing the public method that 
-    matches the specified requirements,if found; otherwise,null.
+   Returns: A System.Reflection.MethodInfo object representing the public method that matches the specified 
+    requirements,if found; otherwise,null.
   
   GetMethod(self: _Type,name: str,types: Array[Type]) -> MethodInfo
   
@@ -544,49 +497,48 @@ class _Type:
   
   
    name: The System.String containing the name of the public method to get.
-   types: An array of System.Type objects representing the number,order,and type of the 
-    parameters for the method to get.-or- An empty array of the type System.Type 
-    (that is,Type[] types=new Type[0]) to get a method that takes no parameters.
+   types: An array of System.Type objects representing the number,order,and type of the parameters for 
+    the method to get.-or- An empty array of the type System.Type (that is,Type[] types=new 
+    Type[0]) to get a method that takes no parameters.
   
-   Returns: A System.Reflection.MethodInfo object representing the public method whose 
-    parameters match the specified argument types,if found; otherwise,null.
+   Returns: A System.Reflection.MethodInfo object representing the public method whose parameters match the 
+    specified argument types,if found; otherwise,null.
   
   GetMethod(self: _Type,name: str) -> MethodInfo
   
-   Provides COM objects with version-independent access to the 
-    System.Type.GetMethod(System.String) method.
+   Provides COM objects with version-independent access to the System.Type.GetMethod(System.String) 
+    method.
   
   
    name: The System.String containing the name of the public method to get.
-   Returns: A System.Reflection.MethodInfo object representing the public method with the 
-    specified name,if found; otherwise,null.
+   Returns: A System.Reflection.MethodInfo object representing the public method with the specified name,if 
+    found; otherwise,null.
   
   GetMethod(self: _Type,name: str,bindingAttr: BindingFlags,binder: Binder,types: Array[Type],modifiers: Array[ParameterModifier]) -> MethodInfo
   
    Provides COM objects with version-independent access to the 
-    System.Type.GetMethod(System.String,System.Reflection.BindingFlags,System.Reflec
-    tion.Binder,System.Type[],System.Reflection.ParameterModifier[]) method.
+    System.Type.GetMethod(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,Syste
+    m.Type[],System.Reflection.ParameterModifier[]) method.
   
   
    name: The System.String containing the name of the method to get.
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return null.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return null.
   
-   binder: A System.Reflection.Binder object that defines a set of properties and enables 
-    binding,which can involve selection of an overloaded method,coercion of 
-    argument types,and invocation of a member through reflection.-or- null,to use 
-    the System.Type.DefaultBinder.
+   binder: A System.Reflection.Binder object that defines a set of properties and enables binding,which 
+    can involve selection of an overloaded method,coercion of argument types,and invocation of a 
+    member through reflection.-or- null,to use the System.Type.DefaultBinder.
   
-   types: An array of System.Type objects representing the number,order,and type of the 
-    parameters for the method to get.-or- An empty array of the type System.Type 
-    (that is,Type[] types=new Type[0]) to get a method that takes no parameters.
+   types: An array of System.Type objects representing the number,order,and type of the parameters for 
+    the method to get.-or- An empty array of the type System.Type (that is,Type[] types=new 
+    Type[0]) to get a method that takes no parameters.
   
-   modifiers: An array of System.Reflection.ParameterModifier objects representing the 
-    attributes associated with the corresponding element in the types array. The 
-    default binder does not process this parameter.
+   modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated 
+    with the corresponding element in the types array. The default binder does not process this 
+    parameter.
   
-   Returns: A System.Reflection.MethodInfo object representing the method that matches the 
-    specified requirements,if found; otherwise,null.
+   Returns: A System.Reflection.MethodInfo object representing the method that matches the specified 
+    requirements,if found; otherwise,null.
   
   GetMethod(self: _Type,name: str,bindingAttr: BindingFlags) -> MethodInfo
   
@@ -595,56 +547,51 @@ class _Type:
   
   
    name: The System.String containing the name of the method to get.
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return null.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return null.
   
-   Returns: A System.Reflection.MethodInfo object representing the method that matches the 
-    specified requirements,if found; otherwise,null.
+   Returns: A System.Reflection.MethodInfo object representing the method that matches the specified 
+    requirements,if found; otherwise,null.
   
   GetMethod(self: _Type,name: str,bindingAttr: BindingFlags,binder: Binder,callConvention: CallingConventions,types: Array[Type],modifiers: Array[ParameterModifier]) -> MethodInfo
   
    Provides COM objects with version-independent access to the 
-    System.Type.GetMethod(System.String,System.Reflection.BindingFlags,System.Reflec
-    tion.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection
-    .ParameterModifier[]) method.
+    System.Type.GetMethod(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,Syste
+    m.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[]) method.
   
   
    name: The System.String containing the name of the method to get.
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return null.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return null.
   
-   binder: A System.Reflection.Binder object that defines a set of properties and enables 
-    binding,which can involve selection of an overloaded method,coercion of 
-    argument types,and invocation of a member through reflection.-or- null,to use 
-    the System.Type.DefaultBinder.
+   binder: A System.Reflection.Binder object that defines a set of properties and enables binding,which 
+    can involve selection of an overloaded method,coercion of argument types,and invocation of a 
+    member through reflection.-or- null,to use the System.Type.DefaultBinder.
   
-   callConvention: The System.Reflection.CallingConventions object that specifies the set of rules 
-    to use regarding the order and layout of arguments,how the return value is 
-    passed,what registers are used for arguments,and how the stack is cleaned up.
+   callConvention: The System.Reflection.CallingConventions object that specifies the set of rules to use regarding 
+    the order and layout of arguments,how the return value is passed,what registers are used for 
+    arguments,and how the stack is cleaned up.
   
-   types: An array of System.Type objects representing the number,order,and type of the 
-    parameters for the method to get.-or- An empty array of the type System.Type 
-    (that is,Type[] types=new Type[0]) to get a method that takes no parameters.
+   types: An array of System.Type objects representing the number,order,and type of the parameters for 
+    the method to get.-or- An empty array of the type System.Type (that is,Type[] types=new 
+    Type[0]) to get a method that takes no parameters.
   
-   modifiers: An array of System.Reflection.ParameterModifier objects representing the 
-    attributes associated with the corresponding element in the types array. The 
-    default binder does not process this parameter.
+   modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated 
+    with the corresponding element in the types array. The default binder does not process this 
+    parameter.
   
-   Returns: A System.Reflection.MethodInfo object representing the method that matches the 
-    specified requirements,if found; otherwise,null.
+   Returns: A System.Reflection.MethodInfo object representing the method that matches the specified 
+    requirements,if found; otherwise,null.
   """
   pass
  def GetMethods(self,bindingAttr=None):
   """
   GetMethods(self: _Type) -> Array[MethodInfo]
   
-   Provides COM objects with version-independent access to the 
-    System.Type.GetMethods method.
-  
-   Returns: An array of System.Reflection.MethodInfo objects representing all the public 
-    methods defined for the current System.Type.-or- An empty array of type 
-    System.Reflection.MethodInfo,if no public methods are defined for the current 
-    System.Type.
+   Provides COM objects with version-independent access to the System.Type.GetMethods method.
+   Returns: An array of System.Reflection.MethodInfo objects representing all the public methods defined for 
+    the current System.Type.-or- An empty array of type System.Reflection.MethodInfo,if no public 
+    methods are defined for the current System.Type.
   
   GetMethods(self: _Type,bindingAttr: BindingFlags) -> Array[MethodInfo]
   
@@ -652,14 +599,13 @@ class _Type:
     System.Type.GetMethods(System.Reflection.BindingFlags) method.
   
   
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return null.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return null.
   
-   Returns: An array of System.Reflection.MethodInfo objects representing all methods 
-    defined for the current System.Type that match the specified binding 
-    constraints.-or- An empty array of type System.Reflection.MethodInfo,if no 
-    methods are defined for the current System.Type,or if none of the defined 
-    methods match the binding constraints.
+   Returns: An array of System.Reflection.MethodInfo objects representing all methods defined for the 
+    current System.Type that match the specified binding constraints.-or- An empty array of type 
+    System.Reflection.MethodInfo,if no methods are defined for the current System.Type,or if none 
+    of the defined methods match the binding constraints.
   """
   pass
  def GetNestedType(self,name,bindingAttr=None):
@@ -671,8 +617,8 @@ class _Type:
   
   
    name: The string containing the name of the nested type to get.
-   Returns: A System.Type object representing the public nested type with the specified 
-    name,if found; otherwise,null.
+   Returns: A System.Type object representing the public nested type with the specified name,if found; 
+    otherwise,null.
   
   GetNestedType(self: _Type,name: str,bindingAttr: BindingFlags) -> Type
   
@@ -681,52 +627,46 @@ class _Type:
   
   
    name: The string containing the name of the nested type to get.
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return null.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return null.
   
-   Returns: A System.Type object representing the nested type that matches the specified 
-    requirements,if found; otherwise,null.
+   Returns: A System.Type object representing the nested type that matches the specified requirements,if 
+    found; otherwise,null.
   """
   pass
  def GetNestedTypes(self,bindingAttr=None):
   """
   GetNestedTypes(self: _Type) -> Array[Type]
   
-   Provides COM objects with version-independent access to the 
-    System.Type.GetNestedTypes method.
-  
-   Returns: An array of System.Type objects representing all the types nested within the 
-    current System.Type.-or- An empty array of type System.Type,if no types are 
-    nested within the current System.Type.
+   Provides COM objects with version-independent access to the System.Type.GetNestedTypes method.
+   Returns: An array of System.Type objects representing all the types nested within the current 
+    System.Type.-or- An empty array of type System.Type,if no types are nested within the current 
+    System.Type.
   
   GetNestedTypes(self: _Type,bindingAttr: BindingFlags) -> Array[Type]
   
    Provides COM objects with version-independent access to the 
-    System.Type.GetNestedTypes(System.Reflection.BindingFlags) method,and searches 
-    for the types nested within the current System.Type,using the specified 
-    binding constraints.
+    System.Type.GetNestedTypes(System.Reflection.BindingFlags) method,and searches for the types 
+    nested within the current System.Type,using the specified binding constraints.
   
   
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return null.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return null.
   
-   Returns: An array of System.Type objects representing all the types nested within the 
-    current System.Type that match the specified binding constraints.-or- An empty 
-    array of type System.Type,if no types are nested within the current 
-    System.Type,or if none of the nested types match the binding constraints.
+   Returns: An array of System.Type objects representing all the types nested within the current System.Type 
+    that match the specified binding constraints.-or- An empty array of type System.Type,if no 
+    types are nested within the current System.Type,or if none of the nested types match the 
+    binding constraints.
   """
   pass
  def GetProperties(self,bindingAttr=None):
   """
   GetProperties(self: _Type) -> Array[PropertyInfo]
   
-   Provides COM objects with version-independent access to the 
-    System.Type.GetProperties method.
-  
-   Returns: An array of System.Reflection.PropertyInfo objects representing all public 
-    properties of the current System.Type.-or- An empty array of type 
-    System.Reflection.PropertyInfo,if the current System.Type does not have public 
-    properties.
+   Provides COM objects with version-independent access to the System.Type.GetProperties method.
+   Returns: An array of System.Reflection.PropertyInfo objects representing all public properties of the 
+    current System.Type.-or- An empty array of type System.Reflection.PropertyInfo,if the current 
+    System.Type does not have public properties.
   
   GetProperties(self: _Type,bindingAttr: BindingFlags) -> Array[PropertyInfo]
   
@@ -734,14 +674,13 @@ class _Type:
     System.Type.GetProperties(System.Reflection.BindingFlags) method.
   
   
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return null.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return null.
   
-   Returns: An array of System.Reflection.PropertyInfo objects representing all properties 
-    of the current System.Type that match the specified binding constraints.-or- An 
-    empty array of type System.Reflection.PropertyInfo,if the current System.Type 
-    does not have properties,or if none of the properties match the binding 
-    constraints.
+   Returns: An array of System.Reflection.PropertyInfo objects representing all properties of the current 
+    System.Type that match the specified binding constraints.-or- An empty array of type 
+    System.Reflection.PropertyInfo,if the current System.Type does not have properties,or if none 
+    of the properties match the binding constraints.
   """
   pass
  def GetProperty(self,name,*__args):
@@ -753,13 +692,12 @@ class _Type:
   
   
    name: The System.String containing the name of the public property to get.
-   types: An array of System.Type objects representing the number,order,and type of the 
-    parameters for the indexed property to get.-or- An empty array of the type 
-    System.Type (that is,Type[] types=new Type[0]) to get a property that is not 
-    indexed.
+   types: An array of System.Type objects representing the number,order,and type of the parameters for 
+    the indexed property to get.-or- An empty array of the type System.Type (that is,Type[] types=
+    new Type[0]) to get a property that is not indexed.
   
-   Returns: A System.Reflection.PropertyInfo object representing the public property whose 
-    parameters match the specified argument types,if found; otherwise,null.
+   Returns: A System.Reflection.PropertyInfo object representing the public property whose parameters match 
+    the specified argument types,if found; otherwise,null.
   
   GetProperty(self: _Type,name: str,returnType: Type) -> PropertyInfo
   
@@ -769,8 +707,8 @@ class _Type:
   
    name: The System.String containing the name of the public property to get.
    returnType: The return type of the property.
-   Returns: A System.Reflection.PropertyInfo object representing the public property with 
-    the specified name,if found; otherwise,null.
+   Returns: A System.Reflection.PropertyInfo object representing the public property with the specified 
+    name,if found; otherwise,null.
   
   GetProperty(self: _Type,name: str) -> PropertyInfo
   
@@ -779,8 +717,8 @@ class _Type:
   
   
    name: The System.String containing the name of the public property to get.
-   Returns: A System.Reflection.PropertyInfo object representing the public property with 
-    the specified name,if found; otherwise,null.
+   Returns: A System.Reflection.PropertyInfo object representing the public property with the specified 
+    name,if found; otherwise,null.
   
   GetProperty(self: _Type,name: str,returnType: Type,types: Array[Type]) -> PropertyInfo
   
@@ -790,13 +728,12 @@ class _Type:
   
    name: The System.String containing the name of the public property to get.
    returnType: The return type of the property.
-   types: An array of System.Type objects representing the number,order,and type of the 
-    parameters for the indexed property to get.-or- An empty array of the type 
-    System.Type (that is,Type[] types=new Type[0]) to get a property that is not 
-    indexed.
+   types: An array of System.Type objects representing the number,order,and type of the parameters for 
+    the indexed property to get.-or- An empty array of the type System.Type (that is,Type[] types=
+    new Type[0]) to get a property that is not indexed.
   
-   Returns: A System.Reflection.PropertyInfo object representing the public property whose 
-    parameters match the specified argument types,if found; otherwise,null.
+   Returns: A System.Reflection.PropertyInfo object representing the public property whose parameters match 
+    the specified argument types,if found; otherwise,null.
   
   GetProperty(self: _Type,name: str,bindingAttr: BindingFlags) -> PropertyInfo
   
@@ -805,79 +742,73 @@ class _Type:
   
   
    name: The System.String containing the name of the property to get.
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return null.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return null.
   
-   Returns: A System.Reflection.PropertyInfo object representing the property that matches 
-    the specified requirements,if found; otherwise,null.
+   Returns: A System.Reflection.PropertyInfo object representing the property that matches the specified 
+    requirements,if found; otherwise,null.
   
   GetProperty(self: _Type,name: str,bindingAttr: BindingFlags,binder: Binder,returnType: Type,types: Array[Type],modifiers: Array[ParameterModifier]) -> PropertyInfo
   
    Provides COM objects with version-independent access to the 
-    System.Type.GetProperty(System.String,System.Reflection.BindingFlags,System.Refl
-    ection.Binder,System.Type,System.Type[],System.Reflection.ParameterModifier[]) 
-    method.
+    System.Type.GetProperty(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,Sys
+    tem.Type,System.Type[],System.Reflection.ParameterModifier[]) method.
   
   
    name: The System.String containing the name of the property to get.
-   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted.-or- Zero,to return null.
+   bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted.-or- Zero,to return null.
   
-   binder: A System.Reflection.Binder object that defines a set of properties and enables 
-    binding,which can involve selection of an overloaded method,coercion of 
-    argument types,and invocation of a member through reflection.-or- null,to use 
-    the System.Type.DefaultBinder.
+   binder: A System.Reflection.Binder object that defines a set of properties and enables binding,which 
+    can involve selection of an overloaded method,coercion of argument types,and invocation of a 
+    member through reflection.-or- null,to use the System.Type.DefaultBinder.
   
    returnType: The return type of the property.
-   types: An array of System.Type objects representing the number,order,and type of the 
-    parameters for the indexed property to get.-or- An empty array of the type 
-    System.Type (that is,Type[] types=new Type[0]) to get a property that is not 
-    indexed.
+   types: An array of System.Type objects representing the number,order,and type of the parameters for 
+    the indexed property to get.-or- An empty array of the type System.Type (that is,Type[] types=
+    new Type[0]) to get a property that is not indexed.
   
-   modifiers: An array of System.Reflection.ParameterModifier objects representing the 
-    attributes associated with the corresponding element in the types array. The 
-    default binder does not process this parameter.
+   modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated 
+    with the corresponding element in the types array. The default binder does not process this 
+    parameter.
   
-   Returns: A System.Reflection.PropertyInfo object representing the property that matches 
-    the specified requirements,if found; otherwise,null.
+   Returns: A System.Reflection.PropertyInfo object representing the property that matches the specified 
+    requirements,if found; otherwise,null.
   
   GetProperty(self: _Type,name: str,returnType: Type,types: Array[Type],modifiers: Array[ParameterModifier]) -> PropertyInfo
   
    Provides COM objects with version-independent access to the 
-    System.Type.GetProperty(System.String,System.Type,System.Type[],System.Reflectio
-    n.ParameterModifier[]) method.
+    System.Type.GetProperty(System.String,System.Type,System.Type[],System.Reflection.ParameterModifi
+    er[]) method.
   
   
    name: The System.String containing the name of the public property to get.
    returnType: The return type of the property.
-   types: An array of System.Type objects representing the number,order,and type of the 
-    parameters for the indexed property to get.-or- An empty array of the type 
-    System.Type (that is,Type[] types=new Type[0]) to get a property that is not 
-    indexed.
+   types: An array of System.Type objects representing the number,order,and type of the parameters for 
+    the indexed property to get.-or- An empty array of the type System.Type (that is,Type[] types=
+    new Type[0]) to get a property that is not indexed.
   
-   modifiers: An array of System.Reflection.ParameterModifier objects representing the 
-    attributes associated with the corresponding element in the types array. The 
-    default binder does not process this parameter.
+   modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated 
+    with the corresponding element in the types array. The default binder does not process this 
+    parameter.
   
-   Returns: A System.Reflection.PropertyInfo object representing the public property that 
-    matches the specified requirements,if found; otherwise,null.
+   Returns: A System.Reflection.PropertyInfo object representing the public property that matches the 
+    specified requirements,if found; otherwise,null.
   """
   pass
  def GetType(self):
   """
   GetType(self: _Type) -> Type
   
-   Provides COM objects with version-independent access to the System.Type.GetType 
-    method.
-  
+   Provides COM objects with version-independent access to the System.Type.GetType method.
    Returns: The current System.Type.
   """
   pass
  def GetTypeInfo(self,iTInfo,lcid,ppTInfo):
   """
   GetTypeInfo(self: _Type,iTInfo: UInt32,lcid: UInt32,ppTInfo: IntPtr)
-   Retrieves the type information for an object,which can then be used to get the 
-    type information for an interface.
+   Retrieves the type information for an object,which can then be used to get the type information 
+    for an interface.
   
   
    iTInfo: The type information to return.
@@ -889,8 +820,7 @@ class _Type:
   """
   GetTypeInfoCount(self: _Type) -> UInt32
   
-   Retrieves the number of type information interfaces that an object provides 
-    (either 0 or 1).
+   Retrieves the number of type information interfaces that an object provides (either 0 or 1).
   """
   pass
  def Invoke(self,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr):
@@ -903,9 +833,8 @@ class _Type:
    riid: Reserved for future use. Must be IID_NULL.
    lcid: The locale context in which to interpret arguments.
    wFlags: Flags describing the context of the call.
-   pDispParams: Pointer to a structure containing an array of arguments,an array of argument 
-    DISPIDs for named arguments,and counts for the number of elements in the 
-    arrays.
+   pDispParams: Pointer to a structure containing an array of arguments,an array of argument DISPIDs for named 
+    arguments,and counts for the number of elements in the arrays.
   
    pVarResult: Pointer to the location where the result is to be stored.
    pExcepInfo: Pointer to a structure that contains exception information.
@@ -917,25 +846,22 @@ class _Type:
   InvokeMember(self: _Type,name: str,invokeAttr: BindingFlags,binder: Binder,target: object,args: Array[object]) -> object
   
    Provides COM objects with version-independent access to the 
-    System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Ref
-    lection.Binder,System.Object,System.Object[]) method.
+    System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,Sy
+    stem.Object,System.Object[]) method.
   
   
-   name: The System.String containing the name of the constructor,method,property,or 
-    field member to invoke.-or- An empty string ("") to invoke the default member. 
-    -or-For IDispatch members,a string representing the DispID,for example 
-    "[DispID=3]".
+   name: The System.String containing the name of the constructor,method,property,or field member to 
+    invoke.-or- An empty string ("") to invoke the default member. -or-For IDispatch members,a 
+    string representing the DispID,for example "[DispID=3]".
   
-   invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted. The access can be one of the BindingFlags such as 
-    Public,NonPublic,Private,InvokeMethod,GetField,and so on. The type of 
-    lookup need not be specified. If the type of lookup is omitted,
-    BindingFlags.Public | BindingFlags.Instance will apply.
+   invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted. The access can be one of the BindingFlags such as Public,NonPublic,Private,
+    InvokeMethod,GetField,and so on. The type of lookup need not be specified. If the type of 
+    lookup is omitted,BindingFlags.Public | BindingFlags.Instance will apply.
   
-   binder: A System.Reflection.Binder object that defines a set of properties and enables 
-    binding,which can involve selection of an overloaded method,coercion of 
-    argument types,and invocation of a member through reflection.-or- null,to use 
-    the System.Type.DefaultBinder.
+   binder: A System.Reflection.Binder object that defines a set of properties and enables binding,which 
+    can involve selection of an overloaded method,coercion of argument types,and invocation of a 
+    member through reflection.-or- null,to use the System.Type.DefaultBinder.
   
    target: The System.Object on which to invoke the specified member.
    args: An array containing the arguments to pass to the member to invoke.
@@ -943,74 +869,62 @@ class _Type:
   InvokeMember(self: _Type,name: str,invokeAttr: BindingFlags,binder: Binder,target: object,args: Array[object],culture: CultureInfo) -> object
   
    Provides COM objects with version-independent access to the 
-    System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Ref
-    lection.Binder,System.Object,System.Object[],System.Globalization.CultureInfo) 
-    method.
+    System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,Sy
+    stem.Object,System.Object[],System.Globalization.CultureInfo) method.
   
   
-   name: The System.String containing the name of the constructor,method,property,or 
-    field member to invoke.-or- An empty string ("") to invoke the default member. 
-    -or-For IDispatch members,a string representing the DispID,for example 
-    "[DispID=3]".
+   name: The System.String containing the name of the constructor,method,property,or field member to 
+    invoke.-or- An empty string ("") to invoke the default member. -or-For IDispatch members,a 
+    string representing the DispID,for example "[DispID=3]".
   
-   invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted. The access can be one of the BindingFlags such as 
-    Public,NonPublic,Private,InvokeMethod,GetField,and so on. The type of 
-    lookup need not be specified. If the type of lookup is omitted,
-    BindingFlags.Public | BindingFlags.Instance will apply.
+   invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted. The access can be one of the BindingFlags such as Public,NonPublic,Private,
+    InvokeMethod,GetField,and so on. The type of lookup need not be specified. If the type of 
+    lookup is omitted,BindingFlags.Public | BindingFlags.Instance will apply.
   
-   binder: A System.Reflection.Binder object that defines a set of properties and enables 
-    binding,which can involve selection of an overloaded method,coercion of 
-    argument types,and invocation of a member through reflection.-or- null,to use 
-    the System.Type.DefaultBinder.
+   binder: A System.Reflection.Binder object that defines a set of properties and enables binding,which 
+    can involve selection of an overloaded method,coercion of argument types,and invocation of a 
+    member through reflection.-or- null,to use the System.Type.DefaultBinder.
   
    target: The System.Object on which to invoke the specified member.
    args: An array containing the arguments to pass to the member to invoke.
-   culture: The System.Globalization.CultureInfo object representing the globalization 
-    locale to use,which may be necessary for locale-specific conversions,such as 
-    converting a numeric String to a Double.-or- null to use the current thread's 
-    System.Globalization.CultureInfo.
+   culture: The System.Globalization.CultureInfo object representing the globalization locale to use,which 
+    may be necessary for locale-specific conversions,such as converting a numeric String to a 
+    Double.-or- null to use the current thread's System.Globalization.CultureInfo.
   
    Returns: An System.Object representing the return value of the invoked member.
   InvokeMember(self: _Type,name: str,invokeAttr: BindingFlags,binder: Binder,target: object,args: Array[object],modifiers: Array[ParameterModifier],culture: CultureInfo,namedParameters: Array[str]) -> object
   
    Provides COM objects with version-independent access to the 
-    System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Ref
-    lection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier
-    [],System.Globalization.CultureInfo,System.String[]) method.
+    System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,Sy
+    stem.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInf
+    o,System.String[]) method.
   
   
-   name: The System.String containing the name of the constructor,method,property,or 
-    field member to invoke.-or- An empty string ("") to invoke the default member. 
-    -or-For IDispatch members,a string representing the DispID,for example 
-    "[DispID=3]".
+   name: The System.String containing the name of the constructor,method,property,or field member to 
+    invoke.-or- An empty string ("") to invoke the default member. -or-For IDispatch members,a 
+    string representing the DispID,for example "[DispID=3]".
   
-   invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify 
-    how the search is conducted. The access can be one of the BindingFlags such as 
-    Public,NonPublic,Private,InvokeMethod,GetField,and so on. The type of 
-    lookup need not be specified. If the type of lookup is omitted,
-    BindingFlags.Public | BindingFlags.Instance will apply.
+   invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
+    conducted. The access can be one of the BindingFlags such as Public,NonPublic,Private,
+    InvokeMethod,GetField,and so on. The type of lookup need not be specified. If the type of 
+    lookup is omitted,BindingFlags.Public | BindingFlags.Instance will apply.
   
-   binder: A System.Reflection.Binder object that defines a set of properties and enables 
-    binding,which can involve selection of an overloaded method,coercion of 
-    argument types,and invocation of a member through reflection.-or- null,to use 
-    the System.Type.DefaultBinder.
+   binder: A System.Reflection.Binder object that defines a set of properties and enables binding,which 
+    can involve selection of an overloaded method,coercion of argument types,and invocation of a 
+    member through reflection.-or- null,to use the System.Type.DefaultBinder.
   
    target: The System.Object on which to invoke the specified member.
    args: An array containing the arguments to pass to the member to invoke.
-   modifiers: An array of System.Reflection.ParameterModifier objects representing the 
-    attributes associated with the corresponding element in the args array. A 
-    parameter's associated attributes are stored in the member's signature. The 
-    default binder does not process this parameter.
+   modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated 
+    with the corresponding element in the args array. A parameter's associated attributes are stored 
+    in the member's signature. The default binder does not process this parameter.
   
-   culture: The System.Globalization.CultureInfo object representing the globalization 
-    locale to use,which may be necessary for locale-specific conversions,such as 
-    converting a numeric String to a Double.-or- null to use the current thread's 
-    System.Globalization.CultureInfo.
+   culture: The System.Globalization.CultureInfo object representing the globalization locale to use,which 
+    may be necessary for locale-specific conversions,such as converting a numeric String to a 
+    Double.-or- null to use the current thread's System.Globalization.CultureInfo.
   
-   namedParameters: An array containing the names of the parameters to which the values in the args 
-    array are passed.
-  
+   namedParameters: An array containing the names of the parameters to which the values in the args array are passed.
    Returns: An System.Object representing the return value of the invoked member.
   """
   pass
@@ -1023,11 +937,10 @@ class _Type:
   
   
    c: The System.Type to compare with the current System.Type.
-   Returns: true if c and the current System.Type represent the same type,or if the 
-    current System.Type is in the inheritance hierarchy of c,or if the current 
-    System.Type is an interface that c implements,or if c is a generic type 
-    parameter and the current System.Type represents one of the constraints of c. 
-    false if none of these conditions are the case,or if c is null.
+   Returns: true if c and the current System.Type represent the same type,or if the current System.Type is 
+    in the inheritance hierarchy of c,or if the current System.Type is an interface that c 
+    implements,or if c is a generic type parameter and the current System.Type represents one of 
+    the constraints of c. false if none of these conditions are the case,or if c is null.
   """
   pass
  def IsDefined(self,attributeType,inherit):
@@ -1039,11 +952,8 @@ class _Type:
   
   
    attributeType: The Type object to which the custom attributes are applied.
-   inherit: Specifies whether to search this member's inheritance chain to find the 
-    attributes.
-  
-   Returns: true if one or more instance of attributeType is applied to this member; 
-    otherwise,false.
+   inherit: Specifies whether to search this member's inheritance chain to find the attributes.
+   Returns: true if one or more instance of attributeType is applied to this member; otherwise,false.
   """
   pass
  def IsInstanceOfType(self,o):
@@ -1055,11 +965,10 @@ class _Type:
   
   
    o: The object to compare with the current System.Type.
-   Returns: true if the current System.Type is in the inheritance hierarchy of the object 
-    represented by o,or if the current System.Type is an interface that o 
-    supports. false if neither of these conditions is the case,or if o is null,or 
-    if the current System.Type is an open generic type (that is,
-    System.Type.ContainsGenericParameters returns true).
+   Returns: true if the current System.Type is in the inheritance hierarchy of the object represented by o,
+    or if the current System.Type is an interface that o supports. false if neither of these 
+    conditions is the case,or if o is null,or if the current System.Type is an open generic type 
+    (that is,System.Type.ContainsGenericParameters returns true).
   """
   pass
  def IsSubclassOf(self,c):
@@ -1071,20 +980,17 @@ class _Type:
   
   
    c: The System.Type to compare with the current System.Type.
-   Returns: true if the System.Type represented by the c parameter and the current 
-    System.Type represent classes,and the class represented by the current 
-    System.Type derives from the class represented by c; otherwise,false. This 
-    method also returns false if c and the current System.Type represent the same 
-    class.
+   Returns: true if the System.Type represented by the c parameter and the current System.Type represent 
+    classes,and the class represented by the current System.Type derives from the class represented 
+    by c; otherwise,false. This method also returns false if c and the current System.Type 
+    represent the same class.
   """
   pass
  def ToString(self):
   """
   ToString(self: _Type) -> str
   
-   Provides COM objects with version-independent access to the 
-    System.Type.ToString method.
-  
+   Provides COM objects with version-independent access to the System.Type.ToString method.
    Returns: A System.String representing the name of the current System.Type.
   """
   pass

@@ -2,7 +2,7 @@
 # module System.Windows.Annotations calls itself Annotations
 # from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -28,9 +28,7 @@ class Annotation(object, IXmlSerializable):
     def ReadXml(self, reader):
         """
         ReadXml(self: Annotation, reader: XmlReader)
-            Deserializes the System.Windows.Annotations.Annotation from a specified 
-             System.Xml.XmlReader.
-        
+            Deserializes the System.Windows.Annotations.Annotation from a specified System.Xml.XmlReader.
         
             reader: The XML reader to use to deserialize the annotation.
         """
@@ -210,9 +208,7 @@ class AnnotationAuthorChangedEventHandler(MulticastDelegate, ICloneable, ISerial
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new 
-             delegate.
-        
+            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -225,9 +221,9 @@ class AnnotationAuthorChangedEventHandler(MulticastDelegate, ICloneable, ISerial
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by 
-             the current delegate.-or- null, if the method represented by the current 
-             delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current 
+             delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -254,14 +250,13 @@ class AnnotationAuthorChangedEventHandler(MulticastDelegate, ICloneable, ISerial
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate 
-             that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
+             the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new 
-             System.Delegate without value in its invocation list; otherwise, this instance 
-             with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
+             value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -292,8 +287,7 @@ class AnnotationDocumentPaginator(DocumentPaginator):
         CancelAsync(self: AnnotationDocumentPaginator, userState: object)
             Cancels all asynchronous operations initiated with a given userState object.
         
-            userState: The unique application-defined identifier passed in the call to start the 
-             asynchronous operation.
+            userState: The unique application-defined identifier passed in the call to start the asynchronous operation.
         """
         pass
 
@@ -301,10 +295,8 @@ class AnnotationDocumentPaginator(DocumentPaginator):
         """
         ComputePageCount(self: AnnotationDocumentPaginator)
             Forces a pagination of the content, updates 
-             System.Windows.Annotations.AnnotationDocumentPaginator.PageCount with the new 
-             total, and sets 
-             System.Windows.Annotations.AnnotationDocumentPaginator.IsPageCountValid to 
-             true.
+             System.Windows.Annotations.AnnotationDocumentPaginator.PageCount with the new total, and sets 
+             System.Windows.Annotations.AnnotationDocumentPaginator.IsPageCountValid to true.
         """
         pass
 
@@ -312,10 +304,9 @@ class AnnotationDocumentPaginator(DocumentPaginator):
         """
         ComputePageCountAsync(self: AnnotationDocumentPaginator, userState: object)
             Starts an asynchronous pagination of the content, updates 
-             System.Windows.Annotations.AnnotationDocumentPaginator.PageCount with the new 
-             total, and sets 
-             System.Windows.Annotations.AnnotationDocumentPaginator.IsPageCountValid to true 
-             when it is finished.
+             System.Windows.Annotations.AnnotationDocumentPaginator.PageCount with the new total, and sets 
+             System.Windows.Annotations.AnnotationDocumentPaginator.IsPageCountValid to true when it is 
+             finished.
         
         
             userState: An application-defined object for identifying the asynchronous operation.
@@ -326,31 +317,25 @@ class AnnotationDocumentPaginator(DocumentPaginator):
         """
         GetPage(self: AnnotationDocumentPaginator, pageNumber: int) -> DocumentPage
         
-            Returns a System.Windows.Documents.DocumentPage together with associated 
-             user-annotations for a specified page number.
+            Returns a System.Windows.Documents.DocumentPage together with associated user-annotations for a 
+             specified page number.
         
         
-            pageNumber: The zero-based page number of the System.Windows.Documents.DocumentPage to 
-             return.
-        
+            pageNumber: The zero-based page number of the System.Windows.Documents.DocumentPage to return.
             Returns: The System.Windows.Documents.DocumentPage for the specified pageNumber; or 
-             System.Windows.Documents.DocumentPage.Missing, if the specified pageNumber does 
-             not exist.
+             System.Windows.Documents.DocumentPage.Missing, if the specified pageNumber does not exist.
         """
         pass
 
     def GetPageAsync(self, pageNumber, userState=None):
         """
         GetPageAsync(self: AnnotationDocumentPaginator, pageNumber: int, userState: object)
-            asynchronously returns a System.Windows.Documents.DocumentPage together with 
-             associated user-annotations for a specified page number.
+            asynchronously returns a System.Windows.Documents.DocumentPage together with associated 
+             user-annotations for a specified page number.
         
         
-            pageNumber: The zero-based page number of the System.Windows.Documents.DocumentPage to 
-             retrieve.
-        
-            userState: An application-defined object that is used to identify the asynchronous 
-             operation.
+            pageNumber: The zero-based page number of the System.Windows.Documents.DocumentPage to retrieve.
+            userState: An application-defined object that is used to identify the asynchronous operation.
         """
         pass
 
@@ -401,8 +386,8 @@ class AnnotationHelper(object):
     def ClearHighlightsForSelection(service):
         """
         ClearHighlightsForSelection(service: AnnotationService)
-            Clears all highlight annotations from the current selection of the viewer 
-             control associated with the given System.Windows.Annotations.AnnotationService.
+            Clears all highlight annotations from the current selection of the viewer control associated 
+             with the given System.Windows.Annotations.AnnotationService.
         
         
             service: The annotation service from which to remove highlight annotations.
@@ -414,8 +399,8 @@ class AnnotationHelper(object):
         """
         CreateHighlightForSelection(service: AnnotationService, author: str, highlightBrush: Brush) -> Annotation
         
-            Creates a highlight annotation on the current selection of the viewer control 
-             associated with the specified System.Windows.Annotations.AnnotationService.
+            Creates a highlight annotation on the current selection of the viewer control associated with 
+             the specified System.Windows.Annotations.AnnotationService.
         
         
             service: The annotation service to use to create the highlight annotation.
@@ -430,15 +415,13 @@ class AnnotationHelper(object):
         """
         CreateInkStickyNoteForSelection(service: AnnotationService, author: str) -> Annotation
         
-            Creates an ink sticky note annotation on the current selection of the viewer 
-             control associated with the specified 
-             System.Windows.Annotations.AnnotationService..
+            Creates an ink sticky note annotation on the current selection of the viewer control associated 
+             with the specified System.Windows.Annotations.AnnotationService..
         
         
             service: The annotation service to use to create the ink sticky note annotation.
             author: The author of the annotation.
-            Returns: The ink sticky note annotation; or null, if there is no selected content to 
-             annotate.
+            Returns: The ink sticky note annotation; or null, if there is no selected content to annotate.
         """
         pass
 
@@ -447,15 +430,13 @@ class AnnotationHelper(object):
         """
         CreateTextStickyNoteForSelection(service: AnnotationService, author: str) -> Annotation
         
-            Creates a text sticky note annotation on the current selection of the viewer 
-             control associated with the specified 
-             System.Windows.Annotations.AnnotationService.
+            Creates a text sticky note annotation on the current selection of the viewer control associated 
+             with the specified System.Windows.Annotations.AnnotationService.
         
         
             service: The annotation service to use to create the text sticky note annotation.
             author: The author of the annotation.
-            Returns: The text sticky note annotation; or null, if there is no selected content to 
-             annotate.
+            Returns: The text sticky note annotation; or null, if there is no selected content to annotate.
         """
         pass
 
@@ -463,9 +444,8 @@ class AnnotationHelper(object):
     def DeleteInkStickyNotesForSelection(service):
         """
         DeleteInkStickyNotesForSelection(service: AnnotationService)
-            Deletes ink sticky note annotations that are wholly contained within the 
-             current selection of the viewer control associated with the given 
-             System.Windows.Annotations.AnnotationService.
+            Deletes ink sticky note annotations that are wholly contained within the current selection of 
+             the viewer control associated with the given System.Windows.Annotations.AnnotationService.
         
         
             service: The annotation service from which to delete ink sticky note annotations.
@@ -476,9 +456,8 @@ class AnnotationHelper(object):
     def DeleteTextStickyNotesForSelection(service):
         """
         DeleteTextStickyNotesForSelection(service: AnnotationService)
-            Deletes text sticky note annotations that are wholly contained within the 
-             current selection of the viewer control associated with the given 
-             System.Windows.Annotations.AnnotationService.
+            Deletes text sticky note annotations that are wholly contained within the current selection of 
+             the viewer control associated with the given System.Windows.Annotations.AnnotationService.
         
         
             service: The annotation service from which to delete text sticky note annotations.
@@ -490,15 +469,14 @@ class AnnotationHelper(object):
         """
         GetAnchorInfo(service: AnnotationService, annotation: Annotation) -> IAnchorInfo
         
-            Returns an System.Windows.Annotations.IAnchorInfo object that provides 
-             anchoring information, such as the anchor location, about the specified 
-             annotation.
+            Returns an System.Windows.Annotations.IAnchorInfo object that provides anchoring information, 
+             such as the anchor location, about the specified annotation.
         
         
             service: The annotation service to use for this operation.
             annotation: The annotation to get anchoring information for.
-            Returns: An System.Windows.Annotations.IAnchorInfo object that provides anchoring 
-             information about the specified annotation, or null if it cannot be resolved.
+            Returns: An System.Windows.Annotations.IAnchorInfo object that provides anchoring information about the 
+             specified annotation, or null if it cannot be resolved.
         """
         pass
 
@@ -537,17 +515,14 @@ class AnnotationResource(object, IXmlSerializable, INotifyPropertyChanged2, INot
              System.Xml.XmlReader.
         
         
-            reader: The XML reader to deserialize the System.Windows.Annotations.AnnotationResource 
-             from.
+            reader: The XML reader to deserialize the System.Windows.Annotations.AnnotationResource from.
         """
         pass
 
     def WriteXml(self, writer):
         """
         WriteXml(self: AnnotationResource, writer: XmlWriter)
-            Serializes the System.Windows.Annotations.AnnotationResource to a specified 
-             System.Xml.XmlWriter.
-        
+            Serializes the System.Windows.Annotations.AnnotationResource to a specified System.Xml.XmlWriter.
         
             writer: The XML writer to serialize the System.Windows.Annotations.AnnotationResource.
         """
@@ -649,9 +624,7 @@ class AnnotationResourceChangedEventHandler(MulticastDelegate, ICloneable, ISeri
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new 
-             delegate.
-        
+            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -664,9 +637,9 @@ class AnnotationResourceChangedEventHandler(MulticastDelegate, ICloneable, ISeri
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by 
-             the current delegate.-or- null, if the method represented by the current 
-             delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current 
+             delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -693,14 +666,13 @@ class AnnotationResourceChangedEventHandler(MulticastDelegate, ICloneable, ISeri
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate 
-             that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
+             the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new 
-             System.Delegate without value in its invocation list; otherwise, this instance 
-             with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
+             value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -736,8 +708,7 @@ class AnnotationService(DispatcherObject):
         """
         Enable(self: AnnotationService, annotationStore: AnnotationStore)
             Enables the System.Windows.Annotations.AnnotationService for use with a given 
-             System.Windows.Annotations.Storage.AnnotationStore and displays all visible 
-             annotations.
+             System.Windows.Annotations.Storage.AnnotationStore and displays all visible annotations.
         
         
             annotationStore: The annotation store to use for reading, writing, and displaying annotations.
@@ -749,42 +720,42 @@ class AnnotationService(DispatcherObject):
         """
         GetService(viewer: FlowDocumentScrollViewer) -> AnnotationService
         
-            Returns the System.Windows.Annotations.AnnotationService associated with a 
-             specified System.Windows.Controls.FlowDocumentScrollViewer.
+            Returns the System.Windows.Annotations.AnnotationService associated with a specified 
+             System.Windows.Controls.FlowDocumentScrollViewer.
         
         
-            viewer: The document viewer control to return the 
-             System.Windows.Annotations.AnnotationService instance for.
+            viewer: The document viewer control to return the System.Windows.Annotations.AnnotationService instance 
+             for.
         
-            Returns: The System.Windows.Annotations.AnnotationService associated with the given 
-             document viewer control; or null if the specified viewer control has no 
+            Returns: The System.Windows.Annotations.AnnotationService associated with the given document viewer 
+             control; or null if the specified viewer control has no 
              System.Windows.Annotations.AnnotationService.
         
         GetService(reader: FlowDocumentReader) -> AnnotationService
         
-            Returns the System.Windows.Annotations.AnnotationService associated with a 
-             specified System.Windows.Controls.FlowDocumentReader.
+            Returns the System.Windows.Annotations.AnnotationService associated with a specified 
+             System.Windows.Controls.FlowDocumentReader.
         
         
-            reader: The document reader control to return the 
-             System.Windows.Annotations.AnnotationService instance for.
+            reader: The document reader control to return the System.Windows.Annotations.AnnotationService instance 
+             for.
         
-            Returns: The System.Windows.Annotations.AnnotationService associated with the given 
-             document reader control; or null if the specified document reader has no 
+            Returns: The System.Windows.Annotations.AnnotationService associated with the given document reader 
+             control; or null if the specified document reader has no 
              System.Windows.Annotations.AnnotationService.
         
         GetService(viewer: DocumentViewerBase) -> AnnotationService
         
-            Returns the System.Windows.Annotations.AnnotationService instance associated 
-             with a specified document viewing control.
+            Returns the System.Windows.Annotations.AnnotationService instance associated with a specified 
+             document viewing control.
         
         
-            viewer: The document viewing control to return the 
-             System.Windows.Annotations.AnnotationService instance for.
+            viewer: The document viewing control to return the System.Windows.Annotations.AnnotationService instance 
+             for.
         
-            Returns: The System.Windows.Annotations.AnnotationService associated with the given 
-             document viewing control; or null if the specified document viewing control has 
-             no System.Windows.Annotations.AnnotationService.
+            Returns: The System.Windows.Annotations.AnnotationService associated with the given document viewing 
+             control; or null if the specified document viewing control has no 
+             System.Windows.Annotations.AnnotationService.
         """
         pass
 
@@ -826,11 +797,8 @@ class ContentLocatorBase(object, INotifyPropertyChanged2, INotifyPropertyChanged
         """
         Clone(self: ContentLocatorBase) -> object
         
-            Creates a modifiable deep copy clone of this 
-             System.Windows.Annotations.ContentLocatorBase.
-        
-            Returns: A modifiable deep copy clone of this 
-             System.Windows.Annotations.ContentLocatorBase.
+            Creates a modifiable deep copy clone of this System.Windows.Annotations.ContentLocatorBase.
+            Returns: A modifiable deep copy clone of this System.Windows.Annotations.ContentLocatorBase.
         """
         pass
 
@@ -853,9 +821,7 @@ class ContentLocator(ContentLocatorBase, INotifyPropertyChanged2, INotifyPropert
         """
         Clone(self: ContentLocator) -> object
         
-            Creates a modifiable deep copy clone of this 
-             System.Windows.Annotations.ContentLocator.
-        
+            Creates a modifiable deep copy clone of this System.Windows.Annotations.ContentLocator.
             Returns: A modifiable deep copy clone of this System.Windows.Annotations.ContentLocator.
         """
         pass
@@ -872,12 +838,9 @@ class ContentLocator(ContentLocatorBase, INotifyPropertyChanged2, INotifyPropert
     def ReadXml(self, reader):
         """
         ReadXml(self: ContentLocator, reader: XmlReader)
-            Deserializes the System.Windows.Annotations.ContentLocator from a specified 
-             System.Xml.XmlReader.
+            Deserializes the System.Windows.Annotations.ContentLocator from a specified System.Xml.XmlReader.
         
-        
-            reader: The XML reader to use to deserialize the 
-             System.Windows.Annotations.ContentLocator.
+            reader: The XML reader to use to deserialize the System.Windows.Annotations.ContentLocator.
         """
         pass
 
@@ -895,21 +858,18 @@ class ContentLocator(ContentLocatorBase, INotifyPropertyChanged2, INotifyPropert
              System.Windows.Annotations.ContentLocatorPart elements to compare with this 
              System.Windows.Annotations.ContentLocator.
         
-            Returns: true if the starting sequence of System.Windows.Annotations.ContentLocatorPart 
-             elements in this System.Windows.Annotations.ContentLocator matches those in the 
-             specified locator; otherwise, false.
+            Returns: true if the starting sequence of System.Windows.Annotations.ContentLocatorPart elements in this 
+             System.Windows.Annotations.ContentLocator matches those in the specified locator; otherwise, 
+             false.
         """
         pass
 
     def WriteXml(self, writer):
         """
         WriteXml(self: ContentLocator, writer: XmlWriter)
-            Serializes the System.Windows.Annotations.ContentLocator to a specified 
-             System.Xml.XmlWriter.
+            Serializes the System.Windows.Annotations.ContentLocator to a specified System.Xml.XmlWriter.
         
-        
-            writer: The XML writer to use to serialize the 
-             System.Windows.Annotations.ContentLocator.
+            writer: The XML writer to use to serialize the System.Windows.Annotations.ContentLocator.
         """
         pass
 
@@ -936,11 +896,8 @@ class ContentLocatorGroup(ContentLocatorBase, INotifyPropertyChanged2, INotifyPr
         """
         Clone(self: ContentLocatorGroup) -> object
         
-            Creates a modifiable deep copy clone of this 
-             System.Windows.Annotations.ContentLocatorGroup.
-        
-            Returns: A modifiable deep copy clone of this 
-             System.Windows.Annotations.ContentLocatorGroup.
+            Creates a modifiable deep copy clone of this System.Windows.Annotations.ContentLocatorGroup.
+            Returns: A modifiable deep copy clone of this System.Windows.Annotations.ContentLocatorGroup.
         """
         pass
 
@@ -956,12 +913,11 @@ class ContentLocatorGroup(ContentLocatorBase, INotifyPropertyChanged2, INotifyPr
     def ReadXml(self, reader):
         """
         ReadXml(self: ContentLocatorGroup, reader: XmlReader)
-            Deserializes the System.Windows.Annotations.ContentLocatorGroup from a 
-             specified System.Xml.XmlReader.
+            Deserializes the System.Windows.Annotations.ContentLocatorGroup from a specified 
+             System.Xml.XmlReader.
         
         
-            reader: The XML reader to use to deserialize the 
-             System.Windows.Annotations.ContentLocatorGroup.
+            reader: The XML reader to use to deserialize the System.Windows.Annotations.ContentLocatorGroup.
         """
         pass
 
@@ -972,8 +928,7 @@ class ContentLocatorGroup(ContentLocatorBase, INotifyPropertyChanged2, INotifyPr
              System.Xml.XmlWriter.
         
         
-            writer: The XML writer to use to serialize the 
-             System.Windows.Annotations.ContentLocatorGroup.
+            writer: The XML writer to use to serialize the System.Windows.Annotations.ContentLocatorGroup.
         """
         pass
 
@@ -1000,11 +955,8 @@ class ContentLocatorPart(object, INotifyPropertyChanged2, INotifyPropertyChanged
         """
         Clone(self: ContentLocatorPart) -> object
         
-            Creates a modifiable deep copy clone of this 
-             System.Windows.Annotations.ContentLocatorPart.
-        
-            Returns: A modifiable deep copy clone of this 
-             System.Windows.Annotations.ContentLocatorPart.
+            Creates a modifiable deep copy clone of this System.Windows.Annotations.ContentLocatorPart.
+            Returns: A modifiable deep copy clone of this System.Windows.Annotations.ContentLocatorPart.
         """
         pass
 
@@ -1012,14 +964,13 @@ class ContentLocatorPart(object, INotifyPropertyChanged2, INotifyPropertyChanged
         """
         Equals(self: ContentLocatorPart, obj: object) -> bool
         
-            Returns a value that indicates whether a given 
-             System.Windows.Annotations.ContentLocatorPart is identical to this 
-             System.Windows.Annotations.ContentLocatorPart.
+            Returns a value that indicates whether a given System.Windows.Annotations.ContentLocatorPart is 
+             identical to this System.Windows.Annotations.ContentLocatorPart.
         
         
             obj: The part to compare for equality.
-            Returns: true if the System.Windows.Annotations.ContentLocatorPart.NameValuePairs within 
-             both parts are identical; otherwise, false.
+            Returns: true if the System.Windows.Annotations.ContentLocatorPart.NameValuePairs within both parts are 
+             identical; otherwise, false.
         """
         pass
 
@@ -1103,9 +1054,7 @@ class TextAnchor(object):
         """
         Equals(self: TextAnchor, obj: object) -> bool
         
-            Returns a value that indicates whether the text anchor is equal to the 
-             specified object.
-        
+            Returns a value that indicates whether the text anchor is equal to the specified object.
         
             obj: The object to compare to.
             Returns: true if the two instances are equal; otherwise, false.

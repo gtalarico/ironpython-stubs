@@ -7,26 +7,25 @@ class PrintDialog(object):
  def PrintDocument(self,documentPaginator,description):
   """
   PrintDocument(self: PrintDialog,documentPaginator: DocumentPaginator,description: str)
-   Prints a System.Windows.Documents.DocumentPaginator object to the 
-    System.Printing.PrintQueue that is currently selected.
+   Prints a System.Windows.Documents.DocumentPaginator object to the System.Printing.PrintQueue 
+    that is currently selected.
   
   
    documentPaginator: The System.Windows.Documents.DocumentPaginator object to print.
-   description: A description of the job that is to be printed. This text appears in the user 
-    interface (UI) of the printer.
+   description: A description of the job that is to be printed. This text appears in the user interface (UI) of 
+    the printer.
   """
   pass
  def PrintVisual(self,visual,description):
   """
   PrintVisual(self: PrintDialog,visual: Visual,description: str)
-   Prints a visual (non-text) object,which is derived from the 
-    System.Windows.Media.Visual class,to the System.Printing.PrintQueue that is 
-    currently selected.
+   Prints a visual (non-text) object,which is derived from the System.Windows.Media.Visual class,
+    to the System.Printing.PrintQueue that is currently selected.
   
   
    visual: The System.Windows.Media.Visual to print.
-   description: A description of the job that is to be printed. This text appears in the user 
-    interface (UI) of the printer.
+   description: A description of the job that is to be printed. This text appears in the user interface (UI) of 
+    the printer.
   """
   pass
  def ShowDialog(self):
@@ -34,8 +33,8 @@ class PrintDialog(object):
   ShowDialog(self: PrintDialog) -> Nullable[bool]
   
    Invokes the System.Windows.Controls.PrintDialog as a modal dialog box.
-   Returns: true if a user clicks Print; false if a user clicks Cancel; or null if a user 
-    closes the dialog box without clicking Print or Cancel.
+   Returns: true if a user clicks Print; false if a user clicks Cancel; or null if a user closes the dialog 
+    box without clicking Print or Cancel.
   """
   pass
  CurrentPageEnabled=property(lambda self: object(),lambda self,v: None,lambda self: None)

@@ -27,8 +27,7 @@ class ReadOnlyAttribute(Attribute,_Attribute):
   IsDefaultAttribute(self: ReadOnlyAttribute) -> bool
   
    Determines if this attribute is the default.
-   Returns: true if the attribute is the default value for this attribute class; otherwise,
-    false.
+   Returns: true if the attribute is the default value for this attribute class; otherwise,false.
   """
   pass
  def __eq__(self,*args):

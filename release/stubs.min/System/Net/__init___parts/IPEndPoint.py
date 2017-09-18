@@ -19,15 +19,12 @@ class IPEndPoint(EndPoint):
   """
   Equals(self: IPEndPoint,comparand: object) -> bool
   
-   Determines whether the specified System.Object is equal to the current 
-    System.Net.IPEndPoint instance.
-  
-  
-   comparand: The specified System.Object to compare with the current System.Net.IPEndPoint 
+   Determines whether the specified System.Object is equal to the current System.Net.IPEndPoint 
     instance.
   
-   Returns: true if the specified System.Object is equal to the current System.Object; 
-    otherwise,false.
+  
+   comparand: The specified System.Object to compare with the current System.Net.IPEndPoint instance.
+   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -43,8 +40,7 @@ class IPEndPoint(EndPoint):
   Serialize(self: IPEndPoint) -> SocketAddress
   
    Serializes endpoint information into a System.Net.SocketAddress instance.
-   Returns: A System.Net.SocketAddress instance containing the socket address for the 
-    endpoint.
+   Returns: A System.Net.SocketAddress instance containing the socket address for the endpoint.
   """
   pass
  def ToString(self):
@@ -52,8 +48,8 @@ class IPEndPoint(EndPoint):
   ToString(self: IPEndPoint) -> str
   
    Returns the IP address and port number of the specified endpoint.
-   Returns: A string containing the IP address and the port number of the specified 
-    endpoint (for example,192.168.1.2:80).
+   Returns: A string containing the IP address and the port number of the specified endpoint (for example,
+    192.168.1.2:80).
   """
   pass
  def __eq__(self,*args):

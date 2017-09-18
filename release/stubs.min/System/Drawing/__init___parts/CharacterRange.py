@@ -8,14 +8,12 @@ class CharacterRange(object):
   """
   Equals(self: CharacterRange,obj: object) -> bool
   
-   Gets a value indicating whether this object is equivalent to the specified 
-    object.
-  
+   Gets a value indicating whether this object is equivalent to the specified object.
   
    obj: The object to compare to for equality.
    Returns: true to indicate the specified object is an instance with the same 
-    System.Drawing.CharacterRange.First and System.Drawing.CharacterRange.Length 
-    value as this instance; otherwise,false.
+    System.Drawing.CharacterRange.First and System.Drawing.CharacterRange.Length value as this 
+    instance; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -27,8 +25,9 @@ class CharacterRange(object):
  @staticmethod
  def __new__(self,First,Length):
   """
-  __new__(cls: type,First: int,Length: int)
-  __new__[CharacterRange]() -> CharacterRange
+  __new__[CharacterRange]() -> CharacterRange
+  
+  __new__(cls: type,First: int,Length: int)
   """
   pass
  def __ne__(self,*args):

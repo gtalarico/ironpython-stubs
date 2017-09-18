@@ -3,14 +3,12 @@ class EventLogEntryCollection(object,ICollection,IEnumerable):
  def CopyTo(self,entries,index):
   """
   CopyTo(self: EventLogEntryCollection,entries: Array[EventLogEntry],index: int)
-   Copies the elements of the System.Diagnostics.EventLogEntryCollection to an 
-    array of System.Diagnostics.EventLogEntry instances,starting at a particular 
-    array index.
+   Copies the elements of the System.Diagnostics.EventLogEntryCollection to an array of 
+    System.Diagnostics.EventLogEntry instances,starting at a particular array index.
   
   
-   entries: The one-dimensional array of System.Diagnostics.EventLogEntry instances that is 
-    the destination of the elements copied from the collection. The array must have 
-    zero-based indexing.
+   entries: The one-dimensional array of System.Diagnostics.EventLogEntry instances that is the destination 
+    of the elements copied from the collection. The array must have zero-based indexing.
   
    index: The zero-based index in the array at which copying begins.
   """
@@ -19,9 +17,7 @@ class EventLogEntryCollection(object,ICollection,IEnumerable):
   """
   GetEnumerator(self: EventLogEntryCollection) -> IEnumerator
   
-   Supports a simple iteration over the System.Diagnostics.EventLogEntryCollection 
-    object.
-  
+   Supports a simple iteration over the System.Diagnostics.EventLogEntryCollection object.
    Returns: An object that can be used to iterate over the collection.
   """
   pass

@@ -7,27 +7,23 @@ class UInt32(object,IComparable,IFormattable,IConvertible,IComparable[UInt32],IE
   """
   CompareTo(self: UInt32,value: UInt32) -> int
   
-   Compares this instance to a specified 32-bit unsigned integer and returns an 
-    indication of their relative values.
-  
-  
-   value: An unsigned integer to compare.
-   Returns: A signed number indicating the relative values of this instance and 
-    value.Return value Description Less than zero This instance is less than value. 
-    Zero This instance is equal to value. Greater than zero This instance is 
-    greater than value.
-  
-  CompareTo(self: UInt32,value: object) -> int
-  
-   Compares this instance to a specified object and returns an indication of their 
+   Compares this instance to a specified 32-bit unsigned integer and returns an indication of their 
     relative values.
   
   
+   value: An unsigned integer to compare.
+   Returns: A signed number indicating the relative values of this instance and value.Return value 
+    Description Less than zero This instance is less than value. Zero This instance is equal to 
+    value. Greater than zero This instance is greater than value.
+  
+  CompareTo(self: UInt32,value: object) -> int
+  
+   Compares this instance to a specified object and returns an indication of their relative values.
+  
    value: An object to compare,or null.
-   Returns: A signed number indicating the relative values of this instance and 
-    value.Return Value Description Less than zero This instance is less than value. 
-    Zero This instance is equal to value. Greater than zero This instance is 
-    greater than value.-or- value is null.
+   Returns: A signed number indicating the relative values of this instance and value.Return Value 
+    Description Less than zero This instance is less than value. Zero This instance is equal to 
+    value. Greater than zero This instance is greater than value.-or- value is null.
   """
   pass
  def conjugate(self,*args):
@@ -37,9 +33,7 @@ class UInt32(object,IComparable,IFormattable,IConvertible,IComparable[UInt32],IE
   """
   Equals(self: UInt32,obj: UInt32) -> bool
   
-   Returns a value indicating whether this instance is equal to a specified 
-    System.UInt32.
-  
+   Returns a value indicating whether this instance is equal to a specified System.UInt32.
   
    obj: A value to compare to this instance.
    Returns: true if obj has the same value as this instance; otherwise,false.
@@ -48,8 +42,8 @@ class UInt32(object,IComparable,IFormattable,IConvertible,IComparable[UInt32],IE
    Returns a value indicating whether this instance is equal to a specified object.
   
    obj: An object to compare with this instance.
-   Returns: true if obj is an instance of System.UInt32 and equals the value of this 
-    instance; otherwise,false.
+   Returns: true if obj is an instance of System.UInt32 and equals the value of this instance; otherwise,
+    false.
   """
   pass
  def GetHashCode(self):
@@ -73,8 +67,8 @@ class UInt32(object,IComparable,IFormattable,IConvertible,IComparable[UInt32],IE
   """
   Parse(s: str,provider: IFormatProvider) -> UInt32
   
-   Converts the string representation of a number in a specified culture-specific 
-    format to its 32-bit unsigned integer equivalent.
+   Converts the string representation of a number in a specified culture-specific format to its 
+    32-bit unsigned integer equivalent.
   
   
    s: A string that represents the number to convert.
@@ -82,39 +76,35 @@ class UInt32(object,IComparable,IFormattable,IConvertible,IComparable[UInt32],IE
    Returns: A 32-bit unsigned integer equivalent to the number specified in s.
   Parse(s: str,style: NumberStyles,provider: IFormatProvider) -> UInt32
   
-   Converts the string representation of a number in a specified style and 
-    culture-specific format to its 32-bit unsigned integer equivalent.
+   Converts the string representation of a number in a specified style and culture-specific format 
+    to its 32-bit unsigned integer equivalent.
   
   
-   s: A string representing the number to convert. The string is interpreted by using 
-    the style specified by the style parameter.
+   s: A string representing the number to convert. The string is interpreted by using the style 
+    specified by the style parameter.
   
-   style: A bitwise combination of enumeration values that indicates the style elements 
-    that can be present in s. A typical value to specify is 
-    System.Globalization.NumberStyles.Integer.
+   style: A bitwise combination of enumeration values that indicates the style elements that can be 
+    present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
   
    provider: An object that supplies culture-specific formatting information about s.
    Returns: A 32-bit unsigned integer equivalent to the number specified in s.
   Parse(s: str) -> UInt32
   
-   Converts the string representation of a number to its 32-bit unsigned integer 
-    equivalent.
-  
+   Converts the string representation of a number to its 32-bit unsigned integer equivalent.
   
    s: A string representing the number to convert.
    Returns: A 32-bit unsigned integer equivalent to the number contained in s.
   Parse(s: str,style: NumberStyles) -> UInt32
   
-   Converts the string representation of a number in a specified style to its 
-    32-bit unsigned integer equivalent.
+   Converts the string representation of a number in a specified style to its 32-bit unsigned 
+    integer equivalent.
   
   
-   s: A string representing the number to convert. The string is interpreted by using 
-    the style specified by the style parameter.
+   s: A string representing the number to convert. The string is interpreted by using the style 
+    specified by the style parameter.
   
-   style: A bitwise combination of the enumeration values that specify the permitted 
-    format of s. A typical value to specify is 
-    System.Globalization.NumberStyles.Integer.
+   style: A bitwise combination of the enumeration values that specify the permitted format of s. A 
+    typical value to specify is System.Globalization.NumberStyles.Integer.
   
    Returns: A 32-bit unsigned integer equivalent to the number specified in s.
   """
@@ -123,43 +113,36 @@ class UInt32(object,IComparable,IFormattable,IConvertible,IComparable[UInt32],IE
   """
   ToString(self: UInt32,format: str) -> str
   
-   Converts the numeric value of this instance to its equivalent string 
-    representation using the specified format.
+   Converts the numeric value of this instance to its equivalent string representation using the 
+    specified format.
   
   
    format: A numeric format string.
    Returns: The string representation of the value of this instance as specified by format.
   ToString(self: UInt32,format: str,provider: IFormatProvider) -> str
   
-   Converts the numeric value of this instance to its equivalent string 
-    representation using the specified format and culture-specific format 
-    information.
+   Converts the numeric value of this instance to its equivalent string representation using the 
+    specified format and culture-specific format information.
   
   
    format: A numeric format string.
-   provider: An object that supplies culture-specific formatting information about this 
-    instance.
-  
-   Returns: The string representation of the value of this instance as specified by format 
-    and provider.
-  
+   provider: An object that supplies culture-specific formatting information about this instance.
+   Returns: The string representation of the value of this instance as specified by format and provider.
   ToString(self: UInt32) -> str
   
-   Converts the numeric value of this instance to its equivalent string 
-    representation.
-  
-   Returns: The string representation of the value of this instance,consisting of a 
-    sequence of digits ranging from 0 to 9,without a sign or leading zeroes.
+   Converts the numeric value of this instance to its equivalent string representation.
+   Returns: The string representation of the value of this instance,consisting of a sequence of digits 
+    ranging from 0 to 9,without a sign or leading zeroes.
   
   ToString(self: UInt32,provider: IFormatProvider) -> str
   
-   Converts the numeric value of this instance to its equivalent string 
-    representation using the specified culture-specific format information.
+   Converts the numeric value of this instance to its equivalent string representation using the 
+    specified culture-specific format information.
   
   
    provider: An object that supplies culture-specific formatting information.
-   Returns: The string representation of the value of this instance,which consists of a 
-    sequence of digits ranging from 0 to 9,without a sign or leading zeros.
+   Returns: The string representation of the value of this instance,which consists of a sequence of digits 
+    ranging from 0 to 9,without a sign or leading zeros.
   """
   pass
  @staticmethod
@@ -167,24 +150,23 @@ class UInt32(object,IComparable,IFormattable,IConvertible,IComparable[UInt32],IE
   """
   TryParse(s: str,style: NumberStyles,provider: IFormatProvider) -> (bool,UInt32)
   
-   Tries to convert the string representation of a number in a specified style and 
-    culture-specific format to its 32-bit unsigned integer equivalent. A return 
-    value indicates whether the conversion succeeded or failed.
+   Tries to convert the string representation of a number in a specified style and culture-specific 
+    format to its 32-bit unsigned integer equivalent. A return value indicates whether the 
+    conversion succeeded or failed.
   
   
-   s: A string that represents the number to convert. The string is interpreted by 
-    using the style specified by the style parameter.
+   s: A string that represents the number to convert. The string is interpreted by using the style 
+    specified by the style parameter.
   
-   style: A bitwise combination of enumeration values that indicates the permitted format 
-    of s. A typical value to specify is System.Globalization.NumberStyles.Integer.
+   style: A bitwise combination of enumeration values that indicates the permitted format of s. A typical 
+    value to specify is System.Globalization.NumberStyles.Integer.
   
    provider: An object that supplies culture-specific formatting information about s.
    Returns: true if s was converted successfully; otherwise,false.
   TryParse(s: str) -> (bool,UInt32)
   
-   Tries to convert the string representation of a number to its 32-bit unsigned 
-    integer equivalent. A return value indicates whether the conversion succeeded 
-    or failed.
+   Tries to convert the string representation of a number to its 32-bit unsigned integer 
+    equivalent. A return value indicates whether the conversion succeeded or failed.
   
   
    s: A string that represents the number to convert.

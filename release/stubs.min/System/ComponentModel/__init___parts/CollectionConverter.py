@@ -12,9 +12,7 @@ class CollectionConverter(TypeConverter):
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    culture: The culture to which value will be converted.
-   value: The System.Object to convert. This parameter must inherit from 
-    System.Collections.ICollection.
-  
+   value: The System.Object to convert. This parameter must inherit from System.Collections.ICollection.
    destinationType: The System.Type to convert the value to.
    Returns: An System.Object that represents the converted value.
   """
@@ -23,16 +21,15 @@ class CollectionConverter(TypeConverter):
   """
   GetProperties(self: CollectionConverter,context: ITypeDescriptorContext,value: object,attributes: Array[Attribute]) -> PropertyDescriptorCollection
   
-   Gets a collection of properties for the type of array specified by the value 
-    parameter using the specified context and attributes.
+   Gets a collection of properties for the type of array specified by the value parameter using the 
+    specified context and attributes.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    value: An System.Object that specifies the type of array to get the properties for.
    attributes: An array of type System.Attribute that will be used as a filter.
-   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that 
-    are exposed for this data type,or null if there are no properties. This method 
-    always returns null.
+   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed for 
+    this data type,or null if there are no properties. This method always returns null.
   """
   pass
  def GetPropertiesSupported(self,context=None):
@@ -43,8 +40,8 @@ class CollectionConverter(TypeConverter):
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    Returns: false because 
-    System.ComponentModel.CollectionConverter.GetProperties(System.ComponentModel.IT
-    ypeDescriptorContext,System.Object,System.Attribute[]) should not be called to 
-    find the properties of this object. This method never returns true.
+    System.ComponentModel.CollectionConverter.GetProperties(System.ComponentModel.ITypeDescriptorCont
+    ext,System.Object,System.Attribute[]) should not be called to find the properties of this 
+    object. This method never returns true.
   """
   pass

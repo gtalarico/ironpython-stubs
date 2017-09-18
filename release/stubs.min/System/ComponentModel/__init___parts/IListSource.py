@@ -4,8 +4,8 @@ class IListSource:
   """
   GetList(self: IListSource) -> IList
   
-   Returns an System.Collections.IList that can be bound to a data source from an 
-    object that does not implement an System.Collections.IList itself.
+   Returns an System.Collections.IList that can be bound to a data source from an object that does 
+    not implement an System.Collections.IList itself.
   
    Returns: An System.Collections.IList that can be bound to a data source from the object.
   """

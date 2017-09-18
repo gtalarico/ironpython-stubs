@@ -6,11 +6,9 @@ class ListViewInsertionMark(object):
   
    Retrieves the index of the item closest to the specified point.
   
-   pt: A System.Drawing.Point representing the location from which to find the nearest 
-    item.
-  
-   Returns: The index of the item closest to the specified point or -1 if the closest item 
-    is the item currently being dragged.
+   pt: A System.Drawing.Point representing the location from which to find the nearest item.
+   Returns: The index of the item closest to the specified point or -1 if the closest item is the item 
+    currently being dragged.
   """
   pass
  AppearsAfterItem=property(lambda self: object(),lambda self,v: None,lambda self: None)

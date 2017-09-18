@@ -8,12 +8,10 @@ class AlternationConverter(object,IValueConverter):
   """
   Convert(self: AlternationConverter,o: object,targetType: Type,parameter: object,culture: CultureInfo) -> object
   
-   Converts an integer to an object in the 
-    System.Windows.Controls.AlternationConverter.Values list.
+   Converts an integer to an object in the System.Windows.Controls.AlternationConverter.Values list.
   
-  
-   o: The integer to use to find an object in the 
-    System.Windows.Controls.AlternationConverter.Values property.
+   o: The integer to use to find an object in the System.Windows.Controls.AlternationConverter.Values 
+    property.
   
    targetType: The type of the binding target property.
    parameter: The converter parameter to use.
@@ -26,18 +24,13 @@ class AlternationConverter(object,IValueConverter):
   """
   ConvertBack(self: AlternationConverter,o: object,targetType: Type,parameter: object,culture: CultureInfo) -> object
   
-   Converts an object in the System.Windows.Controls.AlternationConverter.Values 
-    list to an integer.
+   Converts an object in the System.Windows.Controls.AlternationConverter.Values list to an integer.
   
-  
-   o: The object to find in the System.Windows.Controls.AlternationConverter.Values 
-    property.
-  
+   o: The object to find in the System.Windows.Controls.AlternationConverter.Values property.
    targetType: The type of the binding target property.
    parameter: The converter parameter to use.
    culture: The culture to use in the converter.
-   Returns: The index of o if it is in System.Windows.Controls.AlternationConverter.Values,
-      System.Windows.Controls.AlternationConverter.Values.
+      not exist in System.Windows.Controls.AlternationConverter.Values.
   """
   pass
  def __init__(self,*args):

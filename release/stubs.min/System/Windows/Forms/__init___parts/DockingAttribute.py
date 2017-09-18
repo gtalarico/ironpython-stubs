@@ -9,15 +9,10 @@ class DockingAttribute(Attribute,_Attribute):
   """
   Equals(self: DockingAttribute,obj: object) -> bool
   
-   Compares an arbitrary object with the System.Windows.Forms.DockingAttribute 
-    object for equality.
+   Compares an arbitrary object with the System.Windows.Forms.DockingAttribute object for equality.
   
-  
-   obj: The System.Object against which to compare this 
-    System.Windows.Forms.DockingAttribute.
-  
-   Returns: true is obj is equal to this System.Windows.Forms.DockingAttribute; otherwise,
-    false.
+   obj: The System.Object against which to compare this System.Windows.Forms.DockingAttribute.
+   Returns: true is obj is equal to this System.Windows.Forms.DockingAttribute; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -32,11 +27,8 @@ class DockingAttribute(Attribute,_Attribute):
   """
   IsDefaultAttribute(self: DockingAttribute) -> bool
   
-   Specifies whether this System.Windows.Forms.DockingAttribute is the default 
-    docking attribute.
-  
-   Returns: true is the current System.Windows.Forms.DockingAttribute is the default; 
-    otherwise,false.
+   Specifies whether this System.Windows.Forms.DockingAttribute is the default docking attribute.
+   Returns: true is the current System.Windows.Forms.DockingAttribute is the default; otherwise,false.
   """
   pass
  def __eq__(self,*args):

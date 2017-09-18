@@ -9,11 +9,8 @@ class FileDialogCustomPlace(object):
   """
   ToString(self: FileDialogCustomPlace) -> str
   
-   Returns a string that represents this 
-    System.Windows.Forms.FileDialogCustomPlace instance.
-  
-   Returns: A string that represents this System.Windows.Forms.FileDialogCustomPlace 
-    instance.
+   Returns a string that represents this System.Windows.Forms.FileDialogCustomPlace instance.
+   Returns: A string that represents this System.Windows.Forms.FileDialogCustomPlace instance.
   """
   pass
  @staticmethod

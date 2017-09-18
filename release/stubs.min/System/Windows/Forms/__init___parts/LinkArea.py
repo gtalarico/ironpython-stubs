@@ -8,13 +8,11 @@ class LinkArea(object):
   """
   Equals(self: LinkArea,o: object) -> bool
   
-   Determines whether this System.Windows.Forms.LinkArea is equal to the specified 
-    object.
-  
+   Determines whether this System.Windows.Forms.LinkArea is equal to the specified object.
   
    o: The object to compare to this System.Windows.Forms.LinkArea.
-   Returns: true if the specified object is equal to the current 
-    System.Windows.Forms.LinkArea; otherwise,false.
+   Returns: true if the specified object is equal to the current System.Windows.Forms.LinkArea; otherwise,
+    false.
   """
   pass
  def GetHashCode(self):
@@ -32,9 +30,8 @@ class LinkArea(object):
  @staticmethod
  def __new__(self,start,length):
   """
-  __new__[LinkArea]() -> LinkArea
-  
-  __new__(cls: type,start: int,length: int)
+  __new__(cls: type,start: int,length: int)
+  __new__[LinkArea]() -> LinkArea
   """
   pass
  def __ne__(self,*args):

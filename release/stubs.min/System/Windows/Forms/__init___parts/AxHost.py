@@ -7,9 +7,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
     System.Windows.Forms.AccessibleEvents for the specified child control .
   
   
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
-    applications of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    objectID: The identifier of the System.Windows.Forms.AccessibleObject.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,childID: int)
@@ -17,17 +15,14 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
     System.Windows.Forms.AccessibleEvents for the specified child control.
   
   
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
-    applications of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   """
   pass
  def AttachInterfaces(self,*args):
   """
   AttachInterfaces(self: AxHost)
-   When overridden in a derived class,attaches interfaces to the underlying 
-    ActiveX control.
+   When overridden in a derived class,attaches interfaces to the underlying ActiveX control.
   """
   pass
  def BeginInit(self):
@@ -49,8 +44,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   CreateControlsInstance(self: Control) -> ControlCollection
   
    Creates a new instance of the control collection for the control.
-   Returns: A new instance of System.Windows.Forms.Control.ControlCollection assigned to 
-    the control.
+   Returns: A new instance of System.Windows.Forms.Control.ControlCollection assigned to the control.
   """
   pass
  def CreateHandle(self,*args):
@@ -93,8 +87,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
  def Dispose(self):
   """
   Dispose(self: AxHost,disposing: bool)
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def DoVerb(self,verb):
@@ -144,13 +137,10 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   GetColorFromOleColor(color: UInt32) -> Color
   
-   Returns a System.Drawing.Color structure that corresponds to the specified OLE 
-    color value.
-  
+   Returns a System.Drawing.Color structure that corresponds to the specified OLE color value.
   
    color: The OLE color value to translate.
-   Returns: The System.Drawing.Color structure that represents the translated OLE color 
-    value.
+   Returns: The System.Drawing.Color structure that represents the translated OLE color value.
   """
   pass
  def GetFontFromIFont(self,*args):
@@ -161,8 +151,8 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   
    font: The IFont to create a System.Drawing.Font from.
    Returns: The System.Drawing.Font created from the specified IFont,
-    System.Windows.Forms.Control.DefaultFont if the font could not be created,or 
-    null if font is null.
+    System.Windows.Forms.Control.DefaultFont if the font could not be created,or null if font is 
+    null.
   """
   pass
  def GetFontFromIFontDisp(self,*args):
@@ -173,17 +163,15 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   
    font: The IFontDisp to create a System.Drawing.Font from.
    Returns: The System.Drawing.Font created from the specified IFontDisp,
-    System.Windows.Forms.Control.DefaultFont if the font could not be created,or 
-    null if font is null.
+    System.Windows.Forms.Control.DefaultFont if the font could not be created,or null if font is 
+    null.
   """
   pass
  def GetIFontDispFromFont(self,*args):
   """
   GetIFontDispFromFont(font: Font) -> object
   
-   Returns an OLE IFontDisp object created from the specified System.Drawing.Font 
-    object.
-  
+   Returns an OLE IFontDisp object created from the specified System.Drawing.Font object.
   
    font: The font to create an IFontDisp object from.
    Returns: The IFontDisp object created from the specified font or null if font is null.
@@ -193,22 +181,18 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   GetIFontFromFont(font: Font) -> object
   
-   Returns an OLE IFont object created from the specified System.Drawing.Font 
-    object.
-  
+   Returns an OLE IFont object created from the specified System.Drawing.Font object.
   
    font: The font to create an IFont object from.
-   Returns: The IFont object created from the specified font,or null if font is null or 
-    the IFont could not be created.
+   Returns: The IFont object created from the specified font,or null if font is null or the IFont could not 
+    be created.
   """
   pass
  def GetIPictureDispFromPicture(self,*args):
   """
   GetIPictureDispFromPicture(image: Image) -> object
   
-   Returns an OLE IPictureDisp object corresponding to the specified 
-    System.Drawing.Image.
-  
+   Returns an OLE IPictureDisp object corresponding to the specified System.Drawing.Image.
   
    image: The System.Drawing.Image to convert.
    Returns: An System.Object representing the OLE IPictureDisp object.
@@ -218,9 +202,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   GetIPictureFromCursor(cursor: Cursor) -> object
   
-   Returns an OLE IPicture object corresponding to the specified 
-    System.Windows.Forms.Cursor.
-  
+   Returns an OLE IPicture object corresponding to the specified System.Windows.Forms.Cursor.
   
    cursor: System.Windows.Forms.Cursor
    Returns: An System.Object representing the OLE IPicture object.
@@ -230,9 +212,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   GetIPictureFromPicture(image: Image) -> object
   
-   Returns an OLE IPicture object corresponding to the specified 
-    System.Drawing.Image.
-  
+   Returns an OLE IPicture object corresponding to the specified System.Drawing.Image.
   
    image: The System.Drawing.Image to convert.
    Returns: An System.Object representing the OLE IPicture object.
@@ -242,13 +222,11 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   GetOADateFromTime(time: DateTime) -> float
   
-   Returns an OLE Automation date that corresponds to the specified 
-    System.DateTime structure.
-  
+   Returns an OLE Automation date that corresponds to the specified System.DateTime structure.
   
    time: The System.DateTime structure to translate.
-   Returns: A double-precision floating-point number that contains an OLE Automation date 
-    equivalent to specified time value.
+   Returns: A double-precision floating-point number that contains an OLE Automation date equivalent to 
+    specified time value.
   """
   pass
  def GetOcx(self):
@@ -263,22 +241,17 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   GetOleColorFromColor(color: Color) -> UInt32
   
-   Returns an OLE color value that corresponds to the specified 
-    System.Drawing.Color structure.
-  
+   Returns an OLE color value that corresponds to the specified System.Drawing.Color structure.
   
    color: The System.Drawing.Color structure to translate.
-   Returns: The OLE color value that represents the translated System.Drawing.Color 
-    structure.
+   Returns: The OLE color value that represents the translated System.Drawing.Color structure.
   """
   pass
  def GetPictureFromIPicture(self,*args):
   """
   GetPictureFromIPicture(picture: object) -> Image
   
-   Returns an System.Drawing.Image corresponding to the specified OLE IPicture 
-    object.
-  
+   Returns an System.Drawing.Image corresponding to the specified OLE IPicture object.
   
    picture: The IPicture to convert.
    Returns: An System.Drawing.Image representing the IPicture.
@@ -288,9 +261,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   GetPictureFromIPictureDisp(picture: object) -> Image
   
-   Returns an System.Drawing.Image corresponding to the specified OLE IPictureDisp 
-    object.
-  
+   Returns an System.Drawing.Image corresponding to the specified OLE IPictureDisp object.
   
    picture: The IPictureDisp to convert.
    Returns: An System.Drawing.Image representing the IPictureDisp.
@@ -312,14 +283,13 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetStyle(self,*args):
@@ -336,9 +306,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   GetTimeFromOADate(date: float) -> DateTime
   
-   Returns a System.DateTime structure that corresponds to the specified OLE 
-    Automation date.
-  
+   Returns a System.DateTime structure that corresponds to the specified OLE Automation date.
   
    date: The OLE Automate date to translate.
    Returns: A System.DateTime that represents the same date and time as date.
@@ -375,9 +343,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
  def InvokeGotFocus(self,*args):
   """
   InvokeGotFocus(self: Control,toInvoke: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.GotFocus event for the specified 
-    control.
-  
+   Raises the System.Windows.Forms.Control.GotFocus event for the specified control.
   
    toInvoke: The System.Windows.Forms.Control to assign the event to.
    e: An System.EventArgs that contains the event data.
@@ -386,9 +352,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
  def InvokeLostFocus(self,*args):
   """
   InvokeLostFocus(self: Control,toInvoke: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.LostFocus event for the specified 
-    control.
-  
+   Raises the System.Windows.Forms.Control.LostFocus event for the specified control.
   
    toInvoke: The System.Windows.Forms.Control to assign the event to.
    e: An System.EventArgs that contains the event data.
@@ -399,9 +363,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   InvokeOnClick(self: Control,toInvoke: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.Click event for the specified control.
   
-   toInvoke: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Click event to.
-  
+   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event to.
    e: An System.EventArgs that contains the event data.
   """
   pass
@@ -410,9 +372,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   InvokePaint(self: Control,c: Control,e: PaintEventArgs)
    Raises the System.Windows.Forms.Control.Paint event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Paint event to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -421,9 +381,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   InvokePaintBackground(self: Control,c: Control,e: PaintEventArgs)
    Raises the PaintBackground event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Paint event to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -431,21 +389,19 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   IsInputChar(self: AxHost,charCode: Char) -> bool
   
-   Determines if a character is an input character that the ActiveX control 
-    recognizes.
-  
+   Determines if a character is an input character that the ActiveX control recognizes.
   
    charCode: The character to test.
-   Returns: true if the character should be sent directly to the ActiveX control and not 
-    preprocessed; otherwise,false.
+   Returns: true if the character should be sent directly to the ActiveX control and not preprocessed; 
+    otherwise,false.
   """
   pass
  def IsInputKey(self,*args):
   """
   IsInputKey(self: Control,keyData: Keys) -> bool
   
-   Determines whether the specified key is a regular input key or a special key 
-    that requires preprocessing.
+   Determines whether the specified key is a regular input key or a special key that requires 
+    preprocessing.
   
   
    keyData: One of the System.Windows.Forms.Keys values.
@@ -455,8 +411,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
  def MakeDirty(self):
   """
   MakeDirty(self: AxHost)
-   Announces to the component change service that the System.Windows.Forms.AxHost 
-    has changed.
+   Announces to the component change service that the System.Windows.Forms.AxHost has changed.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -465,11 +420,11 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -481,8 +436,8 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
  def NotifyInvalidate(self,*args):
   """
   NotifyInvalidate(self: Control,invalidatedArea: Rectangle)
-   Raises the System.Windows.Forms.Control.Invalidated event with a specified 
-    region of the control to invalidate.
+   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the control 
+    to invalidate.
   
   
    invalidatedArea: A System.Drawing.Rectangle representing the area to invalidate.
@@ -619,6 +574,12 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   
    e: An System.EventArgs that contains the event data.
   """
+  pass
+ def OnDpiChangedAfterParent(self,*args):
+  """ OnDpiChangedAfterParent(self: Control,e: EventArgs) """
+  pass
+ def OnDpiChangedBeforeParent(self,*args):
+  """ OnDpiChangedBeforeParent(self: Control,e: EventArgs) """
   pass
  def OnDragDrop(self,*args):
   """
@@ -919,16 +880,14 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   OnPaintBackground(self: Control,pevent: PaintEventArgs)
    Paints the background of the control.
   
-   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the 
-    control to paint.
+   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the control to paint.
   """
   pass
  def OnParentBackColorChanged(self,*args):
   """
   OnParentBackColorChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BackColorChanged event when the 
-    System.Windows.Forms.Control.BackColor property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BackColor property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -938,8 +897,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   OnParentBackgroundImageChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the 
-    System.Windows.Forms.Control.BackgroundImage property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BackgroundImage property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -949,8 +907,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   OnParentBindingContextChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BindingContextChanged event when the 
-    System.Windows.Forms.Control.BindingContext property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BindingContext property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -976,8 +933,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   OnParentEnabledChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.EnabledChanged event when the 
-    System.Windows.Forms.Control.Enabled property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Enabled property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -987,8 +943,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   OnParentFontChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.Control.Font property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Font property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -998,8 +953,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   OnParentForeColorChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.ForeColorChanged event when the 
-    System.Windows.Forms.Control.ForeColor property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.ForeColor property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1009,8 +963,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   OnParentRightToLeftChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.RightToLeftChanged event when the 
-    System.Windows.Forms.Control.RightToLeft property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.RightToLeft property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1020,8 +973,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   OnParentVisibleChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.VisibleChanged event when the 
-    System.Windows.Forms.Control.Visible property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Visible property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1151,9 +1103,8 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   PreProcessMessage(self: AxHost,msg: Message) -> (bool,Message)
   
-   msg: A System.Windows.Forms.Message,passed by reference,that represents the 
-    message to process. The possible values are WM_KEYDOWN,WM_SYSKEYDOWN,WM_CHAR,
-    and WM_SYSCHAR.
+   msg: A System.Windows.Forms.Message,passed by reference,that represents the message to process. The 
+    possible values are WM_KEYDOWN,WM_SYSKEYDOWN,WM_CHAR,and WM_SYSCHAR.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1164,8 +1115,8 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   
    Processes a command key.
   
-   msg: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: true if the character was processed by the control; otherwise,false.
@@ -1195,8 +1146,8 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   
    Processes a key message and generates the appropriate control events.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1207,8 +1158,8 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   
    Processes a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1219,8 +1170,8 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   
    Previews a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1230,16 +1181,15 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   ProcessMnemonic(self: AxHost,charCode: Char) -> bool
   
    charCode: The character to process.
-   Returns: true if the character was processed as a mnemonic by the control; otherwise,
-    false.
+   Returns: true if the character was processed as a mnemonic by the control; otherwise,false.
   """
   pass
  def PropsValid(self,*args):
   """
   PropsValid(self: AxHost) -> bool
   
-   Returns a value that indicates whether the hosted control is in a state in 
-    which its properties can be accessed.
+   Returns a value that indicates whether the hosted control is in a state in which its properties 
+    can be accessed.
   
    Returns: true if the properties of the hosted control can be accessed; otherwise,false.
   """
@@ -1274,35 +1224,27 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
  def RaiseOnMouseDown(self,*args):
   """
   RaiseOnMouseDown(self: AxHost,button: Int16,shift: Int16,x: int,y: int)
-   Raises the System.Windows.Forms.AxHost.MouseDown event using the specified 
-    32-bit signed integers.
+   Raises the System.Windows.Forms.AxHost.MouseDown event using the specified 32-bit signed 
+    integers.
   
   
-   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse 
-    button was pressed.
-  
+   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was pressed.
    shift: Not used.
    x: The x-coordinate of a mouse click,in pixels.
    y: The y-coordinate of a mouse click,in pixels.
   RaiseOnMouseDown(self: AxHost,button: Int16,shift: Int16,x: Single,y: Single)
-   Raises the System.Windows.Forms.AxHost.MouseDown event using the specified 
-    single-precision floating-point numbers.
+   Raises the System.Windows.Forms.AxHost.MouseDown event using the specified single-precision 
+    floating-point numbers.
   
   
-   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse 
-    button was pressed.
-  
+   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was pressed.
    shift: Not used.
    x: The x-coordinate of a mouse click,in pixels.
    y: The y-coordinate of a mouse click,in pixels.
   RaiseOnMouseDown(self: AxHost,o1: object,o2: object,o3: object,o4: object)
-   Raises the System.Windows.Forms.AxHost.MouseDown event using the specified 
-    objects.
+   Raises the System.Windows.Forms.AxHost.MouseDown event using the specified objects.
   
-  
-   o1: One of the System.Windows.Forms.MouseButtons values that indicate which mouse 
-    button was pressed.
-  
+   o1: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was pressed.
    o2: Not used.
    o3: The x-coordinate of a mouse click,in pixels.
    o4: The y-coordinate of a mouse click,in pixels.
@@ -1311,35 +1253,27 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
  def RaiseOnMouseMove(self,*args):
   """
   RaiseOnMouseMove(self: AxHost,button: Int16,shift: Int16,x: int,y: int)
-   Raises the System.Windows.Forms.AxHost.MouseMove event using the specified 
-    32-bit signed integers.
+   Raises the System.Windows.Forms.AxHost.MouseMove event using the specified 32-bit signed 
+    integers.
   
   
-   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse 
-    button was pressed.
-  
+   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was pressed.
    shift: Not used.
    x: The x-coordinate of a mouse click,in pixels.
    y: The y-coordinate of a mouse click,in pixels.
   RaiseOnMouseMove(self: AxHost,button: Int16,shift: Int16,x: Single,y: Single)
-   Raises the System.Windows.Forms.AxHost.MouseMove event using the specified 
-    single-precision floating-point numbers.
+   Raises the System.Windows.Forms.AxHost.MouseMove event using the specified single-precision 
+    floating-point numbers.
   
   
-   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse 
-    button was pressed.
-  
+   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was pressed.
    shift: Not used.
    x: The x-coordinate of a mouse click,in pixels.
    y: The y-coordinate of a mouse click,in pixels.
   RaiseOnMouseMove(self: AxHost,o1: object,o2: object,o3: object,o4: object)
-   Raises the System.Windows.Forms.AxHost.MouseMove event using the specified 
-    objects.
+   Raises the System.Windows.Forms.AxHost.MouseMove event using the specified objects.
   
-  
-   o1: One of the System.Windows.Forms.MouseButtons values that indicate which mouse 
-    button was pressed.
-  
+   o1: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was pressed.
    o2: Not used.
    o3: The x-coordinate of a mouse click,in pixels.
    o4: The y-coordinate of a mouse click,in pixels.
@@ -1348,35 +1282,25 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
  def RaiseOnMouseUp(self,*args):
   """
   RaiseOnMouseUp(self: AxHost,button: Int16,shift: Int16,x: int,y: int)
-   Raises the System.Windows.Forms.AxHost.MouseUp event using the specified 32-bit 
-    signed integers.
+   Raises the System.Windows.Forms.AxHost.MouseUp event using the specified 32-bit signed integers.
   
-  
-   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse 
-    button was pressed.
-  
+   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was pressed.
    shift: Not used.
    x: The x-coordinate of a mouse click,in pixels.
    y: The y-coordinate of a mouse click,in pixels.
   RaiseOnMouseUp(self: AxHost,button: Int16,shift: Int16,x: Single,y: Single)
-   Raises the System.Windows.Forms.AxHost.MouseUp event using the specified 
-    single-precision floating-point numbers.
+   Raises the System.Windows.Forms.AxHost.MouseUp event using the specified single-precision 
+    floating-point numbers.
   
   
-   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse 
-    button was pressed.
-  
+   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was pressed.
    shift: Not used.
    x: The x-coordinate of a mouse click,in pixels.
    y: The y-coordinate of a mouse click,in pixels.
   RaiseOnMouseUp(self: AxHost,o1: object,o2: object,o3: object,o4: object)
-   Raises the System.Windows.Forms.AxHost.MouseUp event using the specified 
-    objects.
+   Raises the System.Windows.Forms.AxHost.MouseUp event using the specified objects.
   
-  
-   o1: One of the System.Windows.Forms.MouseButtons values that indicate which mouse 
-    button was pressed.
-  
+   o1: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was pressed.
    o2: Not used.
    o3: The x-coordinate of a mouse click,in pixels.
    o4: The y-coordinate of a mouse click,in pixels.
@@ -1397,6 +1321,9 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
    Forces the re-creation of the handle for the control.
   """
   pass
+ def RescaleConstantsForDpi(self,*args):
+  """ RescaleConstantsForDpi(self: Control,deviceDpiOld: int,deviceDpiNew: int) """
+  pass
  def ResetMouseEventArgs(self,*args):
   """
   ResetMouseEventArgs(self: Control)
@@ -1415,18 +1342,16 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
    Returns: One of the System.Drawing.ContentAlignment values.
   RtlTranslateAlignment(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the 
-    appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
+    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
   RtlTranslateAlignment(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the 
-    appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
+    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1449,9 +1374,8 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   RtlTranslateHorizontal(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the 
-    appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
+    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1462,9 +1386,8 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   RtlTranslateLeftRight(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the 
-    appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
+    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
@@ -1477,8 +1400,8 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
    Scales a control's location,size,padding and margin.
   
    factor: The factor by which the height and width of the control will be scaled.
-   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the 
-    control to use when defining its size and position.
+   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to use 
+    when defining its size and position.
   """
   pass
  def ScaleCore(self,*args):
@@ -1493,8 +1416,8 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
  def Select(self):
   """
   Select(self: Control,directed: bool,forward: bool)
-   Activates a child control. Optionally specifies the direction in the tab order 
-    to select the control from.
+   Activates a child control. Optionally specifies the direction in the tab order to select the 
+    control from.
   
   
    directed: true to specify the direction of the control to select; otherwise,false.
@@ -1507,8 +1430,8 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
  def SetAutoSizeMode(self,*args):
   """
   SetAutoSizeMode(self: Control,mode: AutoSizeMode)
-   Sets a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
+   Sets a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize 
+    property is enabled.
   
   
    mode: One of the System.Windows.Forms.AutoSizeMode values.
@@ -1536,9 +1459,7 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
  def SetStyle(self,*args):
   """
   SetStyle(self: Control,flag: ControlStyles,value: bool)
-   Sets a specified System.Windows.Forms.ControlStyles flag to either true or 
-    false.
-  
+   Sets a specified System.Windows.Forms.ControlStyles flag to either true or false.
   
    flag: The System.Windows.Forms.ControlStyles bit to set.
    value: true to apply the specified style to the control; otherwise,false.
@@ -1567,8 +1488,8 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
  def ShowPropertyPages(self,control=None):
   """
   ShowPropertyPages(self: AxHost,control: Control)
-   Displays the property pages associated with the ActiveX control assigned to the 
-    specified parent control.
+   Displays the property pages associated with the ActiveX control assigned to the specified parent 
+    control.
   
   
    control: The parent System.Windows.Forms.Control of the ActiveX control.
@@ -1580,23 +1501,16 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   SizeFromClientSize(self: Control,clientSize: Size) -> Size
   
-   Determines the size of the entire control from the height and width of its 
-    client area.
+   Determines the size of the entire control from the height and width of its client area.
   
-  
-   clientSize: A System.Drawing.Size value representing the height and width of the control's 
-    client area.
-  
-   Returns: A System.Drawing.Size value representing the height and width of the entire 
-    control.
+   clientSize: A System.Drawing.Size value representing the height and width of the control's client area.
+   Returns: A System.Drawing.Size value representing the height and width of the entire control.
   """
   pass
  def UpdateBounds(self,*args):
   """
   UpdateBounds(self: Control,x: int,y: int,width: int,height: int,clientWidth: int,clientHeight: int)
-   Updates the bounds of the control with the specified size,location,and client 
-    size.
-  
+   Updates the bounds of the control with the specified size,location,and client size.
   
    x: The System.Drawing.Point.X coordinate of the control.
    y: The System.Drawing.Point.Y coordinate of the control.
@@ -1635,10 +1549,17 @@ class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceOb
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

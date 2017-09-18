@@ -15,14 +15,14 @@ class EventLogPermissionEntryCollection(CollectionBase,IList,ICollection,IEnumer
   AddRange(self: EventLogPermissionEntryCollection,value: EventLogPermissionEntryCollection)
    Appends a set of specified permission entries to this collection.
   
-   value: A System.Diagnostics.EventLogPermissionEntryCollection that contains the 
-    permission entries to add.
+   value: A System.Diagnostics.EventLogPermissionEntryCollection that contains the permission entries to 
+    add.
   
   AddRange(self: EventLogPermissionEntryCollection,value: Array[EventLogPermissionEntry])
    Appends a set of specified permission entries to this collection.
   
-   value: An array of type System.Diagnostics.EventLogPermissionEntry objects that 
-    contains the permission entries to add.
+   value: An array of type System.Diagnostics.EventLogPermissionEntry objects that contains the permission 
+    entries to add.
   """
   pass
  def Contains(self,value):
@@ -34,19 +34,19 @@ class EventLogPermissionEntryCollection(CollectionBase,IList,ICollection,IEnumer
   
   
    value: The System.Diagnostics.EventLogPermissionEntry to find.
-   Returns: true if the specified System.Diagnostics.EventLogPermissionEntry belongs to 
-    this collection; otherwise,false.
+   Returns: true if the specified System.Diagnostics.EventLogPermissionEntry belongs to this collection; 
+    otherwise,false.
   """
   pass
  def CopyTo(self,array,index):
   """
   CopyTo(self: EventLogPermissionEntryCollection,array: Array[EventLogPermissionEntry],index: int)
-   Copies the permission entries from this collection to an array,starting at a 
-    particular index of the array.
+   Copies the permission entries from this collection to an array,starting at a particular index 
+    of the array.
   
   
-   array: An array of type System.Diagnostics.EventLogPermissionEntry that receives this 
-    collection's permission entries.
+   array: An array of type System.Diagnostics.EventLogPermissionEntry that receives this collection's 
+    permission entries.
   
    index: The zero-based index at which to begin copying the permission entries.
   """
@@ -58,8 +58,8 @@ class EventLogPermissionEntryCollection(CollectionBase,IList,ICollection,IEnumer
    Determines the index of a specified permission entry in this collection.
   
    value: The permission entry to search for.
-   Returns: The zero-based index of the specified permission entry,or -1 if the permission 
-    entry was not found in the collection.
+   Returns: The zero-based index of the specified permission entry,or -1 if the permission entry was not 
+    found in the collection.
   """
   pass
  def Insert(self,index,value):
@@ -74,8 +74,7 @@ class EventLogPermissionEntryCollection(CollectionBase,IList,ICollection,IEnumer
  def OnClear(self,*args):
   """
   OnClear(self: EventLogPermissionEntryCollection)
-   Performs additional custom processes after clearing the contents of the 
-    collection.
+   Performs additional custom processes after clearing the contents of the collection.
   """
   pass
  def OnClearComplete(self,*args):
@@ -88,8 +87,8 @@ class EventLogPermissionEntryCollection(CollectionBase,IList,ICollection,IEnumer
  def OnInsert(self,*args):
   """
   OnInsert(self: EventLogPermissionEntryCollection,index: int,value: object)
-   Performs additional custom processes before a new permission entry is inserted 
-    into the collection.
+   Performs additional custom processes before a new permission entry is inserted into the 
+    collection.
   
   
    index: The zero-based index at which to insert value.
@@ -110,9 +109,7 @@ class EventLogPermissionEntryCollection(CollectionBase,IList,ICollection,IEnumer
  def OnRemove(self,*args):
   """
   OnRemove(self: EventLogPermissionEntryCollection,index: int,value: object)
-   Performs additional custom processes when removing a new permission entry from 
-    the collection.
-  
+   Performs additional custom processes when removing a new permission entry from the collection.
   
    index: The zero-based index at which value can be found.
    value: The permission entry to remove from index.

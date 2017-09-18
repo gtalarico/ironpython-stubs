@@ -8,13 +8,12 @@ class OpacityConverter(TypeConverter):
   """
   CanConvertFrom(self: OpacityConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Returns a value indicating whether this converter can convert an object of the 
-    specified source type to the native type of the converter that uses the 
-    specified context.
+   Returns a value indicating whether this converter can convert an object of the specified source 
+    type to the native type of the converter that uses the specified context.
   
   
-   context: A System.ComponentModel.ITypeDescriptorContext that provides information about 
-    the context of a type converter.
+   context: A System.ComponentModel.ITypeDescriptorContext that provides information about the context of a 
+    type converter.
   
    sourceType: The System.Type that represents the type you want to convert from.
    Returns: true if this converter can perform the conversion; otherwise,false.
@@ -26,8 +25,8 @@ class OpacityConverter(TypeConverter):
   
    Converts the specified object to the converter's native type.
   
-   context: A System.ComponentModel.ITypeDescriptorContext that provides information about 
-    the context of a type converter.
+   context: A System.ComponentModel.ITypeDescriptorContext that provides information about the context of a 
+    type converter.
   
    culture: The locale information for the conversion.
    value: The object to convert.
@@ -40,8 +39,8 @@ class OpacityConverter(TypeConverter):
   
    Converts from the converter's native type to a value of the destination type.
   
-   context: A System.ComponentModel.ITypeDescriptorContext that provides information about 
-    the context of a type converter.
+   context: A System.ComponentModel.ITypeDescriptorContext that provides information about the context of a 
+    type converter.
   
    culture: The locale information for the conversion.
    value: The value to convert.

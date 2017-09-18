@@ -11,13 +11,13 @@ class ProtocolViolationException(InvalidOperationException,ISerializable,_Except
  def GetObjectData(self,serializationInfo,streamingContext):
   """
   GetObjectData(self: ProtocolViolationException,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo with the data 
-    required to serialize the target object.
+   Populates a System.Runtime.Serialization.SerializationInfo with the data required to serialize 
+    the target object.
   
   
    serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
-   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination 
-    for this serialization.
+   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this 
+    serialization.
   """
   pass
  def remove_SerializeObjectState(self,*args):

@@ -28,8 +28,8 @@ class IScrollInfo:
   """
   MakeVisible(self: IScrollInfo,visual: Visual,rectangle: Rect) -> Rect
   
-   Forces content to scroll until the coordinate space of a 
-    System.Windows.Media.Visual object is visible.
+   Forces content to scroll until the coordinate space of a System.Windows.Media.Visual object is 
+    visible.
   
   
    visual: A System.Windows.Media.Visual that becomes visible.

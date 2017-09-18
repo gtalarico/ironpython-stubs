@@ -11,9 +11,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
     System.Windows.Forms.AccessibleEvents for the specified child control .
   
   
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
-    applications of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    objectID: The identifier of the System.Windows.Forms.AccessibleObject.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,childID: int)
@@ -21,9 +19,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
     System.Windows.Forms.AccessibleEvents for the specified child control.
   
   
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
-    applications of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   """
   pass
@@ -52,8 +48,8 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
  def AdjustFormScrollbars(self,*args):
   """
   AdjustFormScrollbars(self: Form,displayScrollbars: bool)
-   Adjusts the scroll bars on the container based on the current control positions 
-    and the control currently selected.
+   Adjusts the scroll bars on the container based on the current control positions and the control 
+    currently selected.
   
   
    displayScrollbars: true to show the scroll bars; otherwise,false.
@@ -63,8 +59,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   ApplyAutoScaling(self: Form)
    Resizes the form according to the current value of the 
-    System.Windows.Forms.Form.AutoScaleBaseSize property and the size of the 
-    current font.
+    System.Windows.Forms.Form.AutoScaleBaseSize property and the size of the current font.
   """
   pass
  def CenterToParent(self,*args):
@@ -96,15 +91,14 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
  def CreateControlsInstance(self,*args):
   """
   CreateControlsInstance(self: Form) -> ControlCollection
-   Returns: A new instance of System.Windows.Forms.Control.ControlCollection assigned to 
-    the control.
+   Returns: A new instance of System.Windows.Forms.Control.ControlCollection assigned to the control.
   """
   pass
  def CreateHandle(self,*args):
   """
   CreateHandle(self: Form)
-   Creates the handle for the form. If a derived class overrides this function,it 
-    must call the base implementation.
+   Creates the handle for the form. If a derived class overrides this function,it must call the 
+    base implementation.
   """
   pass
  def DefWndProc(self,*args):
@@ -123,12 +117,9 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
  def Dispose(self):
   """
   Dispose(self: Form,disposing: bool)
-   Disposes of the resources (other than memory) used by the 
-    System.Windows.Forms.Form.
+   Disposes of the resources (other than memory) used by the System.Windows.Forms.Form.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetAccessibilityObjectById(self,*args):
@@ -148,9 +139,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   
    Gets the size when autoscaling the form based on a specified font.
   
-   font: A System.Drawing.Font representing the font to determine the autoscaled base 
-    size of the form.
-  
+   font: A System.Drawing.Font representing the font to determine the autoscaled base size of the form.
    Returns: A System.Drawing.SizeF representing the autoscaled size of the form.
   """
   pass
@@ -168,15 +157,12 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   GetScaledBounds(self: Form,bounds: Rectangle,factor: SizeF,specified: BoundsSpecified) -> Rectangle
   
-   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the 
-    display bounds.
-  
+   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display bounds.
    factor: The height and width of the control's bounds.
-   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the 
-    bounds of the control to use when defining its size and position.
+   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of the 
+    control to use when defining its size and position.
   
-   Returns: A System.Drawing.Rectangle representing the bounds within which the control is 
-    scaled.
+   Returns: A System.Drawing.Rectangle representing the bounds within which the control is scaled.
   """
   pass
  def GetScrollState(self,*args):
@@ -193,14 +179,13 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetStyle(self,*args):
@@ -230,9 +215,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
  def InvokeGotFocus(self,*args):
   """
   InvokeGotFocus(self: Control,toInvoke: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.GotFocus event for the specified 
-    control.
-  
+   Raises the System.Windows.Forms.Control.GotFocus event for the specified control.
   
    toInvoke: The System.Windows.Forms.Control to assign the event to.
    e: An System.EventArgs that contains the event data.
@@ -241,9 +224,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
  def InvokeLostFocus(self,*args):
   """
   InvokeLostFocus(self: Control,toInvoke: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.LostFocus event for the specified 
-    control.
-  
+   Raises the System.Windows.Forms.Control.LostFocus event for the specified control.
   
    toInvoke: The System.Windows.Forms.Control to assign the event to.
    e: An System.EventArgs that contains the event data.
@@ -254,9 +235,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   InvokeOnClick(self: Control,toInvoke: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.Click event for the specified control.
   
-   toInvoke: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Click event to.
-  
+   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event to.
    e: An System.EventArgs that contains the event data.
   """
   pass
@@ -265,9 +244,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   InvokePaint(self: Control,c: Control,e: PaintEventArgs)
    Raises the System.Windows.Forms.Control.Paint event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Paint event to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -276,9 +253,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   InvokePaintBackground(self: Control,c: Control,e: PaintEventArgs)
    Raises the PaintBackground event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Paint event to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -289,16 +264,16 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
    Determines if a character is an input character that the control recognizes.
   
    charCode: The character to test.
-   Returns: true if the character should be sent directly to the control and not 
-    preprocessed; otherwise,false.
+   Returns: true if the character should be sent directly to the control and not preprocessed; otherwise,
+    false.
   """
   pass
  def IsInputKey(self,*args):
   """
   IsInputKey(self: Control,keyData: Keys) -> bool
   
-   Determines whether the specified key is a regular input key or a special key 
-    that requires preprocessing.
+   Determines whether the specified key is a regular input key or a special key that requires 
+    preprocessing.
   
   
    keyData: One of the System.Windows.Forms.Keys values.
@@ -308,12 +283,9 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
  def LayoutMdi(self,value):
   """
   LayoutMdi(self: Form,value: MdiLayout)
-   Arranges the multiple-document interface (MDI) child forms within the MDI 
-    parent form.
+   Arranges the multiple-document interface (MDI) child forms within the MDI parent form.
   
-  
-   value: One of the System.Windows.Forms.MdiLayout values that defines the layout of MDI 
-    child forms.
+   value: One of the System.Windows.Forms.MdiLayout values that defines the layout of MDI child forms.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -322,11 +294,11 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -338,8 +310,8 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
  def NotifyInvalidate(self,*args):
   """
   NotifyInvalidate(self: Control,invalidatedArea: Rectangle)
-   Raises the System.Windows.Forms.Control.Invalidated event with a specified 
-    region of the control to invalidate.
+   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the control 
+    to invalidate.
   
   
    invalidatedArea: A System.Drawing.Rectangle representing the area to invalidate.
@@ -519,6 +491,15 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
    e: An System.EventArgs that contains the event data.
   """
   pass
+ def OnDpiChanged(self,*args):
+  """ OnDpiChanged(self: Form,e: DpiChangedEventArgs) """
+  pass
+ def OnDpiChangedAfterParent(self,*args):
+  """ OnDpiChangedAfterParent(self: Control,e: EventArgs) """
+  pass
+ def OnDpiChangedBeforeParent(self,*args):
+  """ OnDpiChangedBeforeParent(self: Control,e: EventArgs) """
+  pass
  def OnDragDrop(self,*args):
   """
   OnDragDrop(self: Control,drgevent: DragEventArgs)
@@ -595,6 +576,9 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
    e: A System.Windows.Forms.FormClosingEventArgs that contains the event data.
   """
   pass
+ def OnGetDpiScaledSize(self,*args):
+  """ OnGetDpiScaledSize(self: Form,deviceDpiOld: int,deviceDpiNew: int,desiredSize: Size) -> (bool,Size) """
+  pass
  def OnGiveFeedback(self,*args):
   """
   OnGiveFeedback(self: Control,gfbevent: GiveFeedbackEventArgs)
@@ -652,8 +636,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   OnInputLanguageChanged(self: Form,e: InputLanguageChangedEventArgs)
    Raises the System.Windows.Forms.Form.InputLanguageChanged event.
   
-   e: The System.Windows.Forms.InputLanguageChangedEventArgs that contains the event 
-    data.
+   e: The System.Windows.Forms.InputLanguageChangedEventArgs that contains the event data.
   """
   pass
  def OnInputLanguageChanging(self,*args):
@@ -661,8 +644,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   OnInputLanguageChanging(self: Form,e: InputLanguageChangingEventArgs)
    Raises the System.Windows.Forms.Form.InputLanguageChanging event.
   
-   e: The System.Windows.Forms.InputLanguageChangingEventArgs that contains the event 
-    data.
+   e: The System.Windows.Forms.InputLanguageChangingEventArgs that contains the event data.
   """
   pass
  def OnInvalidated(self,*args):
@@ -915,8 +897,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   OnParentBackColorChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BackColorChanged event when the 
-    System.Windows.Forms.Control.BackColor property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BackColor property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -926,8 +907,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   OnParentBackgroundImageChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the 
-    System.Windows.Forms.Control.BackgroundImage property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BackgroundImage property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -937,8 +917,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   OnParentBindingContextChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BindingContextChanged event when the 
-    System.Windows.Forms.Control.BindingContext property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BindingContext property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -962,8 +941,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   OnParentEnabledChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.EnabledChanged event when the 
-    System.Windows.Forms.Control.Enabled property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Enabled property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -973,8 +951,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   OnParentFontChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.Control.Font property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Font property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -984,8 +961,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   OnParentForeColorChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.ForeColorChanged event when the 
-    System.Windows.Forms.Control.ForeColor property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.ForeColor property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -995,8 +971,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   OnParentRightToLeftChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.RightToLeftChanged event when the 
-    System.Windows.Forms.Control.RightToLeft property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.RightToLeft property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1006,8 +981,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   OnParentVisibleChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.VisibleChanged event when the 
-    System.Windows.Forms.Control.Visible property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Visible property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1171,12 +1145,12 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   
    Processes a command key.
   
-   msg: A System.Windows.Forms.Message,passed by reference,that represents the Win32 
-    message to process.
+   msg: A System.Windows.Forms.Message,passed by reference,that represents the Win32 message to 
+    process.
   
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
-   Returns: true if the keystroke was processed and consumed by the control; otherwise,
-    false to allow further processing.
+   Returns: true if the keystroke was processed and consumed by the control; otherwise,false to allow 
+    further processing.
   """
   pass
  def ProcessDialogChar(self,*args):
@@ -1196,8 +1170,8 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
    Processes a dialog box key.
   
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
-   Returns: true if the keystroke was processed and consumed by the control; otherwise,
-    false to allow further processing.
+   Returns: true if the keystroke was processed and consumed by the control; otherwise,false to allow 
+    further processing.
   """
   pass
  def ProcessKeyEventArgs(self,*args):
@@ -1206,8 +1180,8 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   
    Processes a key message and generates the appropriate control events.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1218,8 +1192,8 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   
    Processes a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1228,8 +1202,8 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   ProcessKeyPreview(self: Form,m: Message) -> (bool,Message)
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1241,16 +1215,15 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
    Processes a mnemonic character.
   
    charCode: The character to process.
-   Returns: true if the character was processed as a mnemonic by the control; otherwise,
-    false.
+   Returns: true if the character was processed as a mnemonic by the control; otherwise,false.
   """
   pass
  def ProcessTabKey(self,*args):
   """
   ProcessTabKey(self: Form,forward: bool) -> bool
   
-   forward: true to cycle forward through the controls in the 
-    System.Windows.Forms.ContainerControl; otherwise,false.
+   forward: true to cycle forward through the controls in the System.Windows.Forms.ContainerControl; 
+    otherwise,false.
   
    Returns: true if a control is selected; otherwise,false.
   """
@@ -1302,9 +1275,12 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   RemoveOwnedForm(self: Form,ownedForm: Form)
    Removes an owned form from this form.
   
-   ownedForm: A System.Windows.Forms.Form representing the form to remove from the list of 
-    owned forms for this form.
+   ownedForm: A System.Windows.Forms.Form representing the form to remove from the list of owned forms for 
+    this form.
   """
+  pass
+ def RescaleConstantsForDpi(self,*args):
+  """ RescaleConstantsForDpi(self: Control,deviceDpiOld: int,deviceDpiNew: int) """
   pass
  def ResetMouseEventArgs(self,*args):
   """
@@ -1324,18 +1300,16 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
    Returns: One of the System.Drawing.ContentAlignment values.
   RtlTranslateAlignment(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the 
-    appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
+    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
   RtlTranslateAlignment(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the 
-    appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
+    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1358,9 +1332,8 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   RtlTranslateHorizontal(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the 
-    appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
+    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1371,9 +1344,8 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   RtlTranslateLeftRight(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the 
-    appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
+    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
@@ -1386,8 +1358,8 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
    Scales the location,size,padding,and margin of a control.
   
    factor: The factor by which the height and width of the control are scaled.
-   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the 
-    control to use when defining its size and position.
+   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to use 
+    when defining its size and position.
   """
   pass
  def ScaleCore(self,*args):
@@ -1406,8 +1378,8 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
    Calculates the scroll offset to the specified child control.
   
    activeControl: The child control to scroll into view.
-   Returns: The upper-left hand System.Drawing.Point of the display area relative to the 
-    client area required to scroll the control into view.
+   Returns: The upper-left hand System.Drawing.Point of the display area relative to the client area 
+    required to scroll the control into view.
   """
   pass
  def Select(self):
@@ -1416,16 +1388,15 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
    Selects this form,and optionally selects the next or previous control.
   
    directed: If set to true that the active control is changed
-   forward: If directed is true,then this controls the direction in which focus is moved. 
-    If this is true,then the next control is selected; otherwise,the previous 
-    control is selected.
+   forward: If directed is true,then this controls the direction in which focus is moved. If this is true,
+    then the next control is selected; otherwise,the previous control is selected.
   """
   pass
  def SetAutoSizeMode(self,*args):
   """
   SetAutoSizeMode(self: Control,mode: AutoSizeMode)
-   Sets a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
+   Sets a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize 
+    property is enabled.
   
   
    mode: One of the System.Windows.Forms.AutoSizeMode values.
@@ -1444,8 +1415,8 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
  def SetClientSizeCore(self,*args):
   """
   SetClientSizeCore(self: Form,x: int,y: int)
-   Sets the client size of the form. This will adjust the bounds of the form to 
-    make the client size the requested size.
+   Sets the client size of the form. This will adjust the bounds of the form to make the client 
+    size the requested size.
   
   
    x: Requested width of the client region.
@@ -1477,11 +1448,8 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   SetDisplayRectLocation(self: ScrollableControl,x: int,y: int)
    Positions the display window to the specified value.
   
-   x: The horizontal offset at which to position the 
-    System.Windows.Forms.ScrollableControl.
-  
-   y: The vertical offset at which to position the 
-    System.Windows.Forms.ScrollableControl.
+   x: The horizontal offset at which to position the System.Windows.Forms.ScrollableControl.
+   y: The vertical offset at which to position the System.Windows.Forms.ScrollableControl.
   """
   pass
  def SetScrollState(self,*args):
@@ -1496,9 +1464,7 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
  def SetStyle(self,*args):
   """
   SetStyle(self: Control,flag: ControlStyles,value: bool)
-   Sets a specified System.Windows.Forms.ControlStyles flag to either true or 
-    false.
-  
+   Sets a specified System.Windows.Forms.ControlStyles flag to either true or false.
   
    flag: The System.Windows.Forms.ControlStyles bit to set.
    value: true to apply the specified style to the control; otherwise,false.
@@ -1523,8 +1489,8 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   Show(self: Form,owner: IWin32Window)
    Shows the form with the specified owner to the user.
   
-   owner: Any object that implements System.Windows.Forms.IWin32Window and represents the 
-    top-level window that will own this form.
+   owner: Any object that implements System.Windows.Forms.IWin32Window and represents the top-level window 
+    that will own this form.
   """
   pass
  def ShowDialog(self,owner=None):
@@ -1533,8 +1499,8 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   
    Shows the form as a modal dialog box with the specified owner.
   
-   owner: Any object that implements System.Windows.Forms.IWin32Window that represents 
-    the top-level window that will own the modal dialog box.
+   owner: Any object that implements System.Windows.Forms.IWin32Window that represents the top-level 
+    window that will own the modal dialog box.
   
    Returns: One of the System.Windows.Forms.DialogResult values.
   ShowDialog(self: Form) -> DialogResult
@@ -1547,15 +1513,10 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   SizeFromClientSize(self: Control,clientSize: Size) -> Size
   
-   Determines the size of the entire control from the height and width of its 
-    client area.
+   Determines the size of the entire control from the height and width of its client area.
   
-  
-   clientSize: A System.Drawing.Size value representing the height and width of the control's 
-    client area.
-  
-   Returns: A System.Drawing.Size value representing the height and width of the entire 
-    control.
+   clientSize: A System.Drawing.Size value representing the height and width of the control's client area.
+   Returns: A System.Drawing.Size value representing the height and width of the entire control.
   """
   pass
  def ToString(self):
@@ -1563,20 +1524,17 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   ToString(self: Form) -> str
   
    Gets a string representing the current instance of the form.
-   Returns: A string consisting of the fully qualified name of the form object's class,
-    with the System.Windows.Forms.Form.Text property of the form appended to the 
-    end. For example,if the form is derived from the class MyForm in the 
-    MyNamespace namespace,and the System.Windows.Forms.Form.Text property is set 
-    to Hello,World,this method will return MyNamespace.MyForm,Text: Hello,
-    World.
+   Returns: A string consisting of the fully qualified name of the form object's class,with the 
+    System.Windows.Forms.Form.Text property of the form appended to the end. For example,if the 
+    form is derived from the class MyForm in the MyNamespace namespace,and the 
+    System.Windows.Forms.Form.Text property is set to Hello,World,this method will return 
+    MyNamespace.MyForm,Text: Hello,World.
   """
   pass
  def UpdateBounds(self,*args):
   """
   UpdateBounds(self: Control,x: int,y: int,width: int,height: int,clientWidth: int,clientHeight: int)
-   Updates the bounds of the control with the specified size,location,and client 
-    size.
-  
+   Updates the bounds of the control with the specified size,location,and client size.
   
    x: The System.Drawing.Point.X coordinate of the control.
    y: The System.Drawing.Point.Y coordinate of the control.
@@ -1617,19 +1575,17 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   ValidateChildren(self: Form,validationConstraints: ValidationConstraints) -> bool
   
-   validationConstraints: Places restrictions on which controls have their 
-    System.Windows.Forms.Control.Validating event raised.
+   validationConstraints: Places restrictions on which controls have their System.Windows.Forms.Control.Validating event 
+    raised.
   
-   Returns: true if all of the children validated successfully; otherwise,false. If called 
-    from the System.Windows.Forms.Control.Validating or 
-    System.Windows.Forms.Control.Validated event handlers,this method will always 
-    return false.
+   Returns: true if all of the children validated successfully; otherwise,false. If called from the 
+    System.Windows.Forms.Control.Validating or System.Windows.Forms.Control.Validated event 
+    handlers,this method will always return false.
   
   ValidateChildren(self: Form) -> bool
-   Returns: true if all of the children validated successfully; otherwise,false. If called 
-    from the System.Windows.Forms.Control.Validating or 
-    System.Windows.Forms.Control.Validated event handlers,this method will always 
-    return false.
+   Returns: true if all of the children validated successfully; otherwise,false. If called from the 
+    System.Windows.Forms.Control.Validating or System.Windows.Forms.Control.Validated event 
+    handlers,this method will always return false.
   """
   pass
  def WndProc(self,*args):
@@ -1640,10 +1596,17 @@ class Form(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleIn
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2180,6 +2143,7 @@ Set: WindowState(self: Form)=value
  Closing=None
  ControlCollection=None
  Deactivate=None
+ DpiChanged=None
  FormClosed=None
  FormClosing=None
  HelpButtonClicked=None

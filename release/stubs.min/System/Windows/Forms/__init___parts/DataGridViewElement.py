@@ -7,8 +7,7 @@ class DataGridViewElement(object):
  def OnDataGridViewChanged(self,*args):
   """
   OnDataGridViewChanged(self: DataGridViewElement)
-   Called when the element is associated with a different 
-    System.Windows.Forms.DataGridView.
+   Called when the element is associated with a different System.Windows.Forms.DataGridView.
   """
   pass
  def RaiseCellClick(self,*args):
@@ -48,8 +47,7 @@ class DataGridViewElement(object):
   RaiseDataError(self: DataGridViewElement,e: DataGridViewDataErrorEventArgs)
    Raises the System.Windows.Forms.DataGridView.DataError event.
   
-   e: A System.Windows.Forms.DataGridViewDataErrorEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.DataGridViewDataErrorEventArgs that contains the event data.
   """
   pass
  def RaiseMouseWheel(self,*args):

@@ -12,15 +12,15 @@ class PerformanceCounter(Component,IComponent,IDisposable,ISupportInitialize):
  def BeginInit(self):
   """
   BeginInit(self: PerformanceCounter)
-   Begins the initialization of a System.Diagnostics.PerformanceCounter instance 
-    used on a form or by another component. The initialization occurs at runtime.
+   Begins the initialization of a System.Diagnostics.PerformanceCounter instance used on a form or 
+    by another component. The initialization occurs at runtime.
   """
   pass
  def Close(self):
   """
   Close(self: PerformanceCounter)
-   Closes the performance counter and frees all the resources allocated by this 
-    performance counter instance.
+   Closes the performance counter and frees all the resources allocated by this performance counter 
+    instance.
   """
   pass
  @staticmethod
@@ -34,9 +34,7 @@ class PerformanceCounter(Component,IComponent,IDisposable,ISupportInitialize):
   """
   Decrement(self: PerformanceCounter) -> Int64
   
-   Decrements the associated performance counter by one through an efficient 
-    atomic operation.
-  
+   Decrements the associated performance counter by one through an efficient atomic operation.
    Returns: The decremented counter value.
   """
   pass
@@ -46,32 +44,28 @@ class PerformanceCounter(Component,IComponent,IDisposable,ISupportInitialize):
  def EndInit(self):
   """
   EndInit(self: PerformanceCounter)
-   Ends the initialization of a System.Diagnostics.PerformanceCounter instance 
-    that is used on a form or by another component. The initialization occurs at 
-    runtime.
+   Ends the initialization of a System.Diagnostics.PerformanceCounter instance that is used on a 
+    form or by another component. The initialization occurs at runtime.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def Increment(self):
   """
   Increment(self: PerformanceCounter) -> Int64
   
-   Increments the associated performance counter by one through an efficient 
-    atomic operation.
-  
+   Increments the associated performance counter by one through an efficient atomic operation.
    Returns: The incremented counter value.
   """
   pass
@@ -79,8 +73,8 @@ class PerformanceCounter(Component,IComponent,IDisposable,ISupportInitialize):
   """
   IncrementBy(self: PerformanceCounter,value: Int64) -> Int64
   
-   Increments or decrements the value of the associated performance counter by a 
-    specified amount through an efficient atomic operation.
+   Increments or decrements the value of the associated performance counter by a specified amount 
+    through an efficient atomic operation.
   
   
    value: The value to increment by. (A negative value decrements the counter.)
@@ -93,11 +87,11 @@ class PerformanceCounter(Component,IComponent,IDisposable,ISupportInitialize):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -111,8 +105,8 @@ class PerformanceCounter(Component,IComponent,IDisposable,ISupportInitialize):
   NextSample(self: PerformanceCounter) -> CounterSample
   
    Obtains a counter sample,and returns the raw,or uncalculated,value for it.
-   Returns: A System.Diagnostics.CounterSample that represents the next raw value that the 
-    system obtains for this counter.
+   Returns: A System.Diagnostics.CounterSample that represents the next raw value that the system obtains 
+    for this counter.
   """
   pass
  def NextValue(self):
@@ -126,16 +120,22 @@ class PerformanceCounter(Component,IComponent,IDisposable,ISupportInitialize):
  def RemoveInstance(self):
   """
   RemoveInstance(self: PerformanceCounter)
-   Deletes the category instance specified by the 
-    System.Diagnostics.PerformanceCounter object 
+   Deletes the category instance specified by the System.Diagnostics.PerformanceCounter object 
     System.Diagnostics.PerformanceCounter.InstanceName property.
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

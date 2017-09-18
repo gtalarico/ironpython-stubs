@@ -3,12 +3,12 @@ class CommonAcl(GenericAcl,ICollection,IEnumerable):
  def GetBinaryForm(self,binaryForm,offset):
   """
   GetBinaryForm(self: CommonAcl,binaryForm: Array[Byte],offset: int)
-   Marshals the contents of the System.Security.AccessControl.CommonAcl object 
-    into the specified byte array beginning at the specified offset.
+   Marshals the contents of the System.Security.AccessControl.CommonAcl object into the specified 
+    byte array beginning at the specified offset.
   
   
-   binaryForm: The byte array into which the contents of the 
-    System.Security.AccessControl.CommonAcl is marshaled.
+   binaryForm: The byte array into which the contents of the System.Security.AccessControl.CommonAcl is 
+    marshaled.
   
    offset: The offset at which to start marshaling.
   """
@@ -17,8 +17,8 @@ class CommonAcl(GenericAcl,ICollection,IEnumerable):
   """
   Purge(self: CommonAcl,sid: SecurityIdentifier)
    Removes all access control entries (ACEs) contained by this 
-    System.Security.AccessControl.CommonAcl object that are associated with the 
-    specified System.Security.Principal.SecurityIdentifier object.
+    System.Security.AccessControl.CommonAcl object that are associated with the specified 
+    System.Security.Principal.SecurityIdentifier object.
   
   
    sid: The System.Security.Principal.SecurityIdentifier object to check for.

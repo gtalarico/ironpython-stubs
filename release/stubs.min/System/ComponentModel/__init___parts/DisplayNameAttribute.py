@@ -9,13 +9,10 @@ class DisplayNameAttribute(Attribute,_Attribute):
   """
   Equals(self: DisplayNameAttribute,obj: object) -> bool
   
-   Determines whether two System.ComponentModel.DisplayNameAttribute instances are 
-    equal.
-  
+   Determines whether two System.ComponentModel.DisplayNameAttribute instances are equal.
   
    obj: The System.ComponentModel.DisplayNameAttribute to test the value equality of.
-   Returns: true if the value of the given object is equal to that of the current object; 
-    otherwise,false.
+   Returns: true if the value of the given object is equal to that of the current object; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -31,8 +28,7 @@ class DisplayNameAttribute(Attribute,_Attribute):
   IsDefaultAttribute(self: DisplayNameAttribute) -> bool
   
    Determines if this attribute is the default.
-   Returns: true if the attribute is the default value for this attribute class; otherwise,
-    false.
+   Returns: true if the attribute is the default value for this attribute class; otherwise,false.
   """
   pass
  def __eq__(self,*args):

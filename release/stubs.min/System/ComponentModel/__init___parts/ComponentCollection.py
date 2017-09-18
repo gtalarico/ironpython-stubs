@@ -7,13 +7,9 @@ class ComponentCollection(ReadOnlyCollectionBase,ICollection,IEnumerable):
  def CopyTo(self,array,index):
   """
   CopyTo(self: ComponentCollection,array: Array[IComponent],index: int)
-   Copies the entire collection to an array,starting writing at the specified 
-    array index.
+   Copies the entire collection to an array,starting writing at the specified array index.
   
-  
-   array: An System.ComponentModel.IComponent array to copy the objects in the collection 
-    to.
-  
+   array: An System.ComponentModel.IComponent array to copy the objects in the collection to.
    index: The index of the array at which copying to should begin.
   """
   pass

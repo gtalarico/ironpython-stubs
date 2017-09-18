@@ -8,8 +8,8 @@ class ListViewItemConverter(ExpandableObjectConverter):
   """
   CanConvertTo(self: ListViewItemConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Gets a value indicating whether this converter can convert an object to the 
-    given destination type using the context.
+   Gets a value indicating whether this converter can convert an object to the given destination 
+    type using the context.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -23,10 +23,9 @@ class ListViewItemConverter(ExpandableObjectConverter):
   
    Converts the given object to another type.
   
-   context: A formatter context. This object can be used to extract additional information 
-    about the environment this converter is being invoked from. This may be null,
-    so you should always check. Also,properties on the context object may also 
-    return null.
+   context: A formatter context. This object can be used to extract additional information about the 
+    environment this converter is being invoked from. This may be null,so you should always check. 
+    Also,properties on the context object may also return null.
   
    culture: An optional culture info. If not supplied the current culture is assumed.
    value: The object to convert.

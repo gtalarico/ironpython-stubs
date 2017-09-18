@@ -21,8 +21,7 @@ class RuntimeEnvironment(object):
   GetRuntimeDirectory() -> str
   
    Returns the directory where the common language runtime is installed.
-   Returns: A string that contains the path to the directory where the common language 
-    runtime is installed.
+   Returns: A string that contains the path to the directory where the common language runtime is installed.
   """
   pass
  @staticmethod
@@ -42,8 +41,8 @@ class RuntimeEnvironment(object):
   """
   GetRuntimeInterfaceAsObject(clsid: Guid,riid: Guid) -> object
   
-   Returns an instance of a type that represents a COM object by a pointer to its 
-    IUnknown interface.
+   Returns an instance of a type that represents a COM object by a pointer to its IUnknown 
+    interface.
   
   
    clsid: The identifier for the desired class.
@@ -56,11 +55,9 @@ class RuntimeEnvironment(object):
   """
   GetSystemVersion() -> str
   
-   Gets the version number of the common language runtime that is running the 
-    current process.
-  
+   Gets the version number of the common language runtime that is running the current process.
    Returns: A string containing the version number of the common language runtime.
   """
   pass
- SystemConfigurationFile='C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\config\\machine.config'
+ SystemConfigurationFile='C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\config\\machine.config'
 

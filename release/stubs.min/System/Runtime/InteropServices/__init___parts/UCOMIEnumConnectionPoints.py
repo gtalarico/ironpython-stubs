@@ -4,8 +4,7 @@ class UCOMIEnumConnectionPoints:
   """
   Clone(self: UCOMIEnumConnectionPoints) -> UCOMIEnumConnectionPoints
   
-   Creates another enumerator that contains the same enumeration state as the 
-    current one.
+   Creates another enumerator that contains the same enumeration state as the current one.
   """
   pass
  def Next(self,celt,rgelt,pceltFetched):
@@ -15,8 +14,7 @@ class UCOMIEnumConnectionPoints:
    Retrieves a specified number of items in the enumeration sequence.
   
    celt: The number of IConnectionPoint references to return in rgelt.
-   Returns: S_OK if the pceltFetched parameter equals the celt parameter; otherwise,
-    S_FALSE.
+   Returns: S_OK if the pceltFetched parameter equals the celt parameter; otherwise,S_FALSE.
   """
   pass
  def Reset(self):
@@ -34,8 +32,7 @@ class UCOMIEnumConnectionPoints:
    Skips over a specified number of items in the enumeration sequence.
   
    celt: The number of elements to skip in the enumeration.
-   Returns: S_OK if the number of elements skipped equals the celt parameter; otherwise,
-    S_FALSE.
+   Returns: S_OK if the number of elements skipped equals the celt parameter; otherwise,S_FALSE.
   """
   pass
  def __init__(self,*args):

@@ -30,8 +30,8 @@ class WebHeaderCollection(NameValueCollection,ICollection,IEnumerable,ISerializa
  def AddWithoutValidate(self,*args):
   """
   AddWithoutValidate(self: WebHeaderCollection,headerName: str,headerValue: str)
-   Inserts a header into the collection without checking whether the header is on 
-    the restricted header list.
+   Inserts a header into the collection without checking whether the header is on the restricted 
+    header list.
   
   
    headerName: The header to add to the collection.
@@ -52,8 +52,7 @@ class WebHeaderCollection(NameValueCollection,ICollection,IEnumerable,ISerializa
  def BaseClear(self,*args):
   """
   BaseClear(self: NameObjectCollectionBase)
-   Removes all entries from the 
-    System.Collections.Specialized.NameObjectCollectionBase instance.
+   Removes all entries from the System.Collections.Specialized.NameObjectCollectionBase instance.
   """
   pass
  def BaseGet(self,*args):
@@ -73,8 +72,8 @@ class WebHeaderCollection(NameValueCollection,ICollection,IEnumerable,ISerializa
   
   
    name: The System.String key of the entry to get. The key can be null.
-   Returns: An System.Object that represents the value of the first entry with the 
-    specified key,if found; otherwise,null.
+   Returns: An System.Object that represents the value of the first entry with the specified key,if found; 
+    otherwise,null.
   """
   pass
  def BaseGetAllKeys(self,*args):
@@ -125,12 +124,11 @@ class WebHeaderCollection(NameValueCollection,ICollection,IEnumerable,ISerializa
   """
   BaseHasKeys(self: NameObjectCollectionBase) -> bool
   
-   Gets a value indicating whether the 
-    System.Collections.Specialized.NameObjectCollectionBase instance contains 
-    entries whose keys are not null.
+   Gets a value indicating whether the System.Collections.Specialized.NameObjectCollectionBase 
+    instance contains entries whose keys are not null.
   
-   Returns: true if the System.Collections.Specialized.NameObjectCollectionBase instance 
-    contains entries whose keys are not null; otherwise,false.
+   Returns: true if the System.Collections.Specialized.NameObjectCollectionBase instance contains entries 
+    whose keys are not null; otherwise,false.
   """
   pass
  def BaseRemove(self,*args):
@@ -161,19 +159,16 @@ class WebHeaderCollection(NameValueCollection,ICollection,IEnumerable,ISerializa
   
   
    index: The zero-based index of the entry to set.
-   value: The System.Object that represents the new value of the entry to set. The value 
-    can be null.
-  
+   value: The System.Object that represents the new value of the entry to set. The value can be null.
   BaseSet(self: NameObjectCollectionBase,name: str,value: object)
    Sets the value of the first entry with the specified key in the 
-    System.Collections.Specialized.NameObjectCollectionBase instance,if found; 
-    otherwise,adds an entry with the specified key and value into the 
+    System.Collections.Specialized.NameObjectCollectionBase instance,if found; otherwise,adds an 
+    entry with the specified key and value into the 
     System.Collections.Specialized.NameObjectCollectionBase instance.
   
   
    name: The System.String key of the entry to set. The key can be null.
-   value: The System.Object that represents the new value of the entry to set. The value 
-    can be null.
+   value: The System.Object that represents the new value of the entry to set. The value can be null.
   """
   pass
  def Clear(self):
@@ -186,17 +181,15 @@ class WebHeaderCollection(NameValueCollection,ICollection,IEnumerable,ISerializa
   """
   Get(self: WebHeaderCollection,index: int) -> str
   
-   Get the value of a particular header in the collection,specified by an index 
-    into the collection.
+   Get the value of a particular header in the collection,specified by an index into the 
+    collection.
   
   
    index: The zero-based index of the key to get from the collection.
    Returns: A System.String containing the value of the specified header.
   Get(self: WebHeaderCollection,name: str) -> str
   
-   Get the value of a particular header in the collection,specified by the name 
-    of the header.
-  
+   Get the value of a particular header in the collection,specified by the name of the header.
   
    name: The name of the Web header.
    Returns: A System.String holding the value of the specified header.
@@ -206,9 +199,7 @@ class WebHeaderCollection(NameValueCollection,ICollection,IEnumerable,ISerializa
   """
   GetEnumerator(self: WebHeaderCollection) -> IEnumerator
   
-   Returns an enumerator that can iterate through the 
-    System.Net.WebHeaderCollection instance.
-  
+   Returns an enumerator that can iterate through the System.Net.WebHeaderCollection instance.
    Returns: An System.Collections.IEnumerator for the System.Net.WebHeaderCollection.
   """
   pass
@@ -225,22 +216,20 @@ class WebHeaderCollection(NameValueCollection,ICollection,IEnumerable,ISerializa
  def GetObjectData(self,serializationInfo,streamingContext):
   """
   GetObjectData(self: WebHeaderCollection,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo with the data needed 
-    to serialize the target object.
+   Populates a System.Runtime.Serialization.SerializationInfo with the data needed to serialize the 
+    target object.
   
   
    serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
-   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination 
-    for this serialization.
+   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this 
+    serialization.
   """
   pass
  def GetValues(self,*__args):
   """
   GetValues(self: WebHeaderCollection,index: int) -> Array[str]
   
-   Gets an array of header values stored in the index position of the header 
-    collection.
-  
+   Gets an array of header values stored in the index position of the header collection.
   
    index: The header index to return.
    Returns: An array of header strings.
@@ -263,9 +252,7 @@ class WebHeaderCollection(NameValueCollection,ICollection,IEnumerable,ISerializa
   """
   IsRestricted(headerName: str,response: bool) -> bool
   
-   Tests whether the specified HTTP header can be set for the request or the 
-    response.
-  
+   Tests whether the specified HTTP header can be set for the request or the response.
   
    headerName: The header to test.
    response: Does the Framework test the response or the request?
@@ -281,8 +268,8 @@ class WebHeaderCollection(NameValueCollection,ICollection,IEnumerable,ISerializa
  def OnDeserialization(self,sender):
   """
   OnDeserialization(self: WebHeaderCollection,sender: object)
-   Implements the System.Runtime.Serialization.ISerializable interface and raises 
-    the deserialization event when the deserialization is complete.
+   Implements the System.Runtime.Serialization.ISerializable interface and raises the 
+    deserialization event when the deserialization is complete.
   
   
    sender: The source of the deserialization event.

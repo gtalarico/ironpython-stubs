@@ -31,8 +31,8 @@ class BufferedStream(Stream,IDisposable):
  def Flush(self):
   """
   Flush(self: BufferedStream)
-   Clears all buffers for this stream and causes any buffered data to be written 
-    to the underlying device.
+   Clears all buffers for this stream and causes any buffered data to be written to the underlying 
+    device.
   """
   pass
  def FlushAsync(self,cancellationToken=None):
@@ -44,11 +44,11 @@ class BufferedStream(Stream,IDisposable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -71,9 +71,9 @@ class BufferedStream(Stream,IDisposable):
   
    offset: The byte offset in the buffer at which to begin reading bytes.
    count: The number of bytes to be read.
-   Returns: The total number of bytes read into array. This can be less than the number of 
-    bytes requested if that many bytes are not currently available,or 0 if the end 
-    of the stream has been reached before any data can be read.
+   Returns: The total number of bytes read into array. This can be less than the number of bytes requested 
+    if that many bytes are not currently available,or 0 if the end of the stream has been reached 
+    before any data can be read.
   """
   pass
  def ReadAsync(self,buffer,offset,count,cancellationToken=None):
@@ -83,8 +83,8 @@ class BufferedStream(Stream,IDisposable):
   """
   ReadByte(self: BufferedStream) -> int
   
-   Reads a byte from the underlying stream and returns the byte cast to an int,or 
-    returns -1 if reading from the end of the stream.
+   Reads a byte from the underlying stream and returns the byte cast to an int,or returns -1 if 
+    reading from the end of the stream.
   
    Returns: The byte cast to an int,or -1 if reading from the end of the stream.
   """
@@ -96,8 +96,8 @@ class BufferedStream(Stream,IDisposable):
    Sets the position within the current buffered stream.
   
    offset: A byte offset relative to origin.
-   origin: A value of type System.IO.SeekOrigin indicating the reference point from which 
-    to obtain the new position.
+   origin: A value of type System.IO.SeekOrigin indicating the reference point from which to obtain the new 
+    position.
   
    Returns: The new position within the current buffered stream.
   """
@@ -107,21 +107,18 @@ class BufferedStream(Stream,IDisposable):
   SetLength(self: BufferedStream,value: Int64)
    Sets the length of the buffered stream.
   
-   value: An integer indicating the desired length of the current buffered stream in 
-    bytes.
+   value: An integer indicating the desired length of the current buffered stream in bytes.
   """
   pass
  def Write(self,array,offset,count):
   """
   Write(self: BufferedStream,array: Array[Byte],offset: int,count: int)
-   Copies bytes to the buffered stream and advances the current position within 
-    the buffered stream by the number of bytes written.
+   Copies bytes to the buffered stream and advances the current position within the buffered stream 
+    by the number of bytes written.
   
   
    array: The byte array from which to copy count bytes to the current buffered stream.
-   offset: The offset in the buffer at which to begin copying bytes to the current 
-    buffered stream.
-  
+   offset: The offset in the buffer at which to begin copying bytes to the current buffered stream.
    count: The number of bytes to be written to the current buffered stream.
   """
   pass
@@ -137,10 +134,17 @@ class BufferedStream(Stream,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

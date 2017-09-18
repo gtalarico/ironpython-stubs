@@ -3,8 +3,7 @@ class TextWriter(MarshalByRefObject,IDisposable):
  def Close(self):
   """
   Close(self: TextWriter)
-   Closes the current writer and releases any system resources associated with the 
-    writer.
+   Closes the current writer and releases any system resources associated with the writer.
   """
   pass
  def Dispose(self):
@@ -16,8 +15,8 @@ class TextWriter(MarshalByRefObject,IDisposable):
  def Flush(self):
   """
   Flush(self: TextWriter)
-   Clears all buffers for the current writer and causes any buffered data to be 
-    written to the underlying device.
+   Clears all buffers for the current writer and causes any buffered data to be written to the 
+    underlying device.
   """
   pass
  def FlushAsync(self):
@@ -29,11 +28,11 @@ class TextWriter(MarshalByRefObject,IDisposable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -60,15 +59,13 @@ class TextWriter(MarshalByRefObject,IDisposable):
   
    value: The string to write.
   Write(self: TextWriter,value: object)
-   Writes the text representation of an object to the text stream by calling 
-    ToString on that object.
+   Writes the text representation of an object to the text stream by calling ToString on that 
+    object.
   
   
    value: The object to write.
   Write(self: TextWriter,value: float)
-   Writes the text representation of an 8-byte floating-point value to the text 
-    stream.
-  
+   Writes the text representation of an 8-byte floating-point value to the text stream.
   
    value: The 8-byte floating-point value to write.
   Write(self: TextWriter,value: Decimal)
@@ -107,9 +104,7 @@ class TextWriter(MarshalByRefObject,IDisposable):
    arg0: An object to write into the formatted string.
    arg1: An object to write into the formatted string.
   Write(self: TextWriter,value: Single)
-   Writes the text representation of a 4-byte floating-point value to the text 
-    stream.
-  
+   Writes the text representation of a 4-byte floating-point value to the text stream.
   
    value: The 4-byte floating-point value to write.
   Write(self: TextWriter,buffer: Array[Char],index: int,count: int)
@@ -159,37 +154,33 @@ class TextWriter(MarshalByRefObject,IDisposable):
  def WriteLine(self,*__args):
   """
   WriteLine(self: TextWriter,value: Decimal)
-   Writes the text representation of a decimal value followed by a line terminator 
-    to the text stream.
+   Writes the text representation of a decimal value followed by a line terminator to the text 
+    stream.
   
   
    value: The decimal value to write.
   WriteLine(self: TextWriter,value: str)
    Writes a string followed by a line terminator to the text stream.
   
-   value: The string to write. If value is null,only the line termination characters are 
-    written.
-  
+   value: The string to write. If value is null,only the line termination characters are written.
   WriteLine(self: TextWriter,value: Single)
-   Writes the text representation of a 4-byte floating-point value followed by a 
-    line terminator to the text stream.
+   Writes the text representation of a 4-byte floating-point value followed by a line terminator to 
+    the text stream.
   
   
    value: The 4-byte floating-point value to write.
   WriteLine(self: TextWriter,value: float)
-   Writes the text representation of a 8-byte floating-point value followed by a 
-    line terminator to the text stream.
+   Writes the text representation of a 8-byte floating-point value followed by a line terminator to 
+    the text stream.
   
   
    value: The 8-byte floating-point value to write.
   WriteLine(self: TextWriter,value: object)
-   Writes the text representation of an object by calling ToString on this object,
-    followed by a line terminator to the text stream.
+   Writes the text representation of an object by calling ToString on this object,followed by a 
+    line terminator to the text stream.
   
   
-   value: The object to write. If value is null,only the line termination characters are 
-    written.
-  
+   value: The object to write. If value is null,only the line termination characters are written.
   WriteLine(self: TextWriter,format: str,arg0: object,arg1: object,arg2: object)
    Writes out a formatted string and a new line,using the same semantics as 
     System.String.Format(System.String,System.Object).
@@ -226,9 +217,7 @@ class TextWriter(MarshalByRefObject,IDisposable):
   
    buffer: The character array from which data is read.
   WriteLine(self: TextWriter,buffer: Array[Char],index: int,count: int)
-   Writes a subarray of characters followed by a line terminator to the text 
-    stream.
-  
+   Writes a subarray of characters followed by a line terminator to the text stream.
   
    buffer: The character array from which data is read.
    index: The index into buffer at which to begin reading.
@@ -240,32 +229,30 @@ class TextWriter(MarshalByRefObject,IDisposable):
   
    value: The character to write to the text stream.
   WriteLine(self: TextWriter,value: bool)
-   Writes the text representation of a Boolean followed by a line terminator to 
-    the text stream.
-  
+   Writes the text representation of a Boolean followed by a line terminator to the text stream.
   
    value: The Boolean to write.
   WriteLine(self: TextWriter,value: Int64)
-   Writes the text representation of an 8-byte signed integer followed by a line 
-    terminator to the text stream.
+   Writes the text representation of an 8-byte signed integer followed by a line terminator to the 
+    text stream.
   
   
    value: The 8-byte signed integer to write.
   WriteLine(self: TextWriter,value: UInt64)
-   Writes the text representation of an 8-byte unsigned integer followed by a line 
-    terminator to the text stream.
+   Writes the text representation of an 8-byte unsigned integer followed by a line terminator to 
+    the text stream.
   
   
    value: The 8-byte unsigned integer to write.
   WriteLine(self: TextWriter,value: int)
-   Writes the text representation of a 4-byte signed integer followed by a line 
-    terminator to the text stream.
+   Writes the text representation of a 4-byte signed integer followed by a line terminator to the 
+    text stream.
   
   
    value: The 4-byte signed integer to write.
   WriteLine(self: TextWriter,value: UInt32)
-   Writes the text representation of a 4-byte unsigned integer followed by a line 
-    terminator to the text stream.
+   Writes the text representation of a 4-byte unsigned integer followed by a line terminator to the 
+    text stream.
   
   
    value: The 4-byte unsigned integer to write.
@@ -281,10 +268,17 @@ class TextWriter(MarshalByRefObject,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

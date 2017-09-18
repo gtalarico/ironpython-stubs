@@ -9,20 +9,16 @@ class CriticalHandle(CriticalFinalizerObject,IDisposable):
  def Dispose(self):
   """
   Dispose(self: CriticalHandle)
-   Releases all resources used by the 
-    System.Runtime.InteropServices.CriticalHandle.
+   Releases all resources used by the System.Runtime.InteropServices.CriticalHandle.
   """
   pass
  def ReleaseHandle(self,*args):
   """
   ReleaseHandle(self: CriticalHandle) -> bool
   
-   When overridden in a derived class,executes the code required to free the 
-    handle.
-  
-   Returns: true if the handle is released successfully; otherwise,in the event of a 
-    catastrophic failure,false. In this case,it generates a releaseHandleFailed 
-    MDA Managed Debugging Assistant.
+   When overridden in a derived class,executes the code required to free the handle.
+   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,
+    false. In this case,it generates a releaseHandleFailed MDA Managed Debugging Assistant.
   """
   pass
  def SetHandle(self,*args):
@@ -40,10 +36,17 @@ class CriticalHandle(CriticalFinalizerObject,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

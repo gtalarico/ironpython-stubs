@@ -18,9 +18,7 @@ class HttpListenerResponse(object,IDisposable):
  def AppendCookie(self,cookie):
   """
   AppendCookie(self: HttpListenerResponse,cookie: Cookie)
-   Adds the specified System.Net.Cookie to the collection of cookies for this 
-    response.
-  
+   Adds the specified System.Net.Cookie to the collection of cookies for this response.
   
    cookie: The System.Net.Cookie to add to the collection to be sent with this response
   """
@@ -41,21 +39,18 @@ class HttpListenerResponse(object,IDisposable):
     System.Net.HttpListenerResponse instance.
   
   Close(self: HttpListenerResponse,responseEntity: Array[Byte],willBlock: bool)
-   Returns the specified byte array to the client and releases the resources held 
-    by this System.Net.HttpListenerResponse instance.
+   Returns the specified byte array to the client and releases the resources held by this 
+    System.Net.HttpListenerResponse instance.
   
   
    responseEntity: A System.Byte array that contains the response to send to the client.
-   willBlock: true to block execution while flushing the stream to the client; otherwise,
-    false.
+   willBlock: true to block execution while flushing the stream to the client; otherwise,false.
   """
   pass
  def CopyFrom(self,templateResponse):
   """
   CopyFrom(self: HttpListenerResponse,templateResponse: HttpListenerResponse)
-   Copies properties from the specified System.Net.HttpListenerResponse to this 
-    response.
-  
+   Copies properties from the specified System.Net.HttpListenerResponse to this response.
   
    templateResponse: The System.Net.HttpListenerResponse instance to copy.
   """
@@ -71,18 +66,23 @@ class HttpListenerResponse(object,IDisposable):
  def SetCookie(self,cookie):
   """
   SetCookie(self: HttpListenerResponse,cookie: Cookie)
-   Adds or updates a System.Net.Cookie in the collection of cookies sent with this 
-    response.
-  
+   Adds or updates a System.Net.Cookie in the collection of cookies sent with this response.
   
    cookie: A System.Net.Cookie for this response.
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

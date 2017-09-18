@@ -1,0 +1,12 @@
+{
+  "RevitAPIUI.DLL": {
+    "Autodesk.Revit.UI.Plumbing": "<module 'Plumbing' (CLS module from RevitAPIUI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.UI.Macros": "<module 'Macros' (CLS module from RevitAPIUI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.UI": "<module 'UI' (CLS module from RevitAPIUI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit": "<module 'Revit' (CLS module from RevitAPIUI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk": "<module 'Autodesk' (CLS module from RevitAPIUI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.UI.Selection": "<module 'Selection' (CLS module from RevitAPIUI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.UI.Mechanical": "<module 'Mechanical' (CLS module from RevitAPIUI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.UI.Events": "<module 'Events' (CLS module from RevitAPIUI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

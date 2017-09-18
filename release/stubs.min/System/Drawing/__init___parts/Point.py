@@ -23,9 +23,8 @@ class Point(object):
   """
   Ceiling(value: PointF) -> Point
   
-   Converts the specified System.Drawing.PointF to a System.Drawing.Point by 
-    rounding the values of the System.Drawing.PointF to the next higher integer 
-    values.
+   Converts the specified System.Drawing.PointF to a System.Drawing.Point by rounding the values of 
+    the System.Drawing.PointF to the next higher integer values.
   
   
    value: The System.Drawing.PointF to convert.
@@ -36,13 +35,12 @@ class Point(object):
   """
   Equals(self: Point,obj: object) -> bool
   
-   Specifies whether this System.Drawing.Point contains the same coordinates as 
-    the specified System.Object.
+   Specifies whether this System.Drawing.Point contains the same coordinates as the specified 
+    System.Object.
   
   
    obj: The System.Object to test.
-   Returns: true if obj is a System.Drawing.Point and has the same coordinates as this 
-    System.Drawing.Point.
+   Returns: true if obj is a System.Drawing.Point and has the same coordinates as this System.Drawing.Point.
   """
   pass
  def GetHashCode(self):
@@ -71,8 +69,8 @@ class Point(object):
   """
   Round(value: PointF) -> Point
   
-   Converts the specified System.Drawing.PointF to a System.Drawing.Point object 
-    by rounding the System.Drawing.Point values to the nearest integer.
+   Converts the specified System.Drawing.PointF to a System.Drawing.Point object by rounding the 
+    System.Drawing.Point values to the nearest integer.
   
   
    value: The System.Drawing.PointF to convert.
@@ -84,8 +82,8 @@ class Point(object):
   """
   Subtract(pt: Point,sz: Size) -> Point
   
-   Returns the result of subtracting specified System.Drawing.Size from the 
-    specified System.Drawing.Point.
+   Returns the result of subtracting specified System.Drawing.Size from the specified 
+    System.Drawing.Point.
   
   
    pt: The System.Drawing.Point to be subtracted from.
@@ -106,8 +104,8 @@ class Point(object):
   """
   Truncate(value: PointF) -> Point
   
-   Converts the specified System.Drawing.PointF to a System.Drawing.Point by 
-    truncating the values of the System.Drawing.Point.
+   Converts the specified System.Drawing.PointF to a System.Drawing.Point by truncating the values 
+    of the System.Drawing.Point.
   
   
    value: The System.Drawing.PointF to convert.
@@ -123,10 +121,11 @@ class Point(object):
  @staticmethod
  def __new__(self,*__args):
   """
+  __new__[Point]() -> Point
+  
   __new__(cls: type,x: int,y: int)
   __new__(cls: type,sz: Size)
-  __new__(cls: type,dw: int)
-  __new__[Point]() -> Point
+  __new__(cls: type,dw: int)
   """
   pass
  def __ne__(self,*args):

@@ -14,17 +14,15 @@ class WarningException(SystemException,ISerializable,_Exception):
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: WarningException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo with the parameter name 
-    and additional exception information.
+   Sets the System.Runtime.Serialization.SerializationInfo with the parameter name and additional 
+    exception information.
   
   
-   info: Stores the data that was being used to serialize or deserialize the object that 
-    the System.ComponentModel.Design.Serialization.CodeDomSerializer was 
-    serializing or deserializing.
+   info: Stores the data that was being used to serialize or deserialize the object that the 
+    System.ComponentModel.Design.Serialization.CodeDomSerializer was serializing or deserializing.
   
-   context: Describes the source and destination of the stream that generated the 
-    exception,as well as a means for serialization to retain that context and an 
-    additional caller-defined context.
+   context: Describes the source and destination of the stream that generated the exception,as well as a 
+    means for serialization to retain that context and an additional caller-defined context.
   """
   pass
  def remove_SerializeObjectState(self,*args):

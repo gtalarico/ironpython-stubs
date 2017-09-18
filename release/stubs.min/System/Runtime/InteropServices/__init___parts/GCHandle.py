@@ -4,8 +4,8 @@ class GCHandle(object):
   """
   AddrOfPinnedObject(self: GCHandle) -> IntPtr
   
-   Retrieves the address of an object in a 
-    System.Runtime.InteropServices.GCHandleType.Pinned handle.
+   Retrieves the address of an object in a System.Runtime.InteropServices.GCHandleType.Pinned 
+    handle.
   
    Returns: The address of the of the Pinned object as an System.IntPtr.
   """
@@ -18,8 +18,8 @@ class GCHandle(object):
    Allocates a handle of the specified type for the specified object.
   
    value: The object that uses the System.Runtime.InteropServices.GCHandle.
-   type: One of the System.Runtime.InteropServices.GCHandleType values,indicating the 
-    type of System.Runtime.InteropServices.GCHandle to create.
+   type: One of the System.Runtime.InteropServices.GCHandleType values,indicating the type of 
+    System.Runtime.InteropServices.GCHandle to create.
   
    Returns: A new System.Runtime.InteropServices.GCHandle of the specified type. This 
     System.Runtime.InteropServices.GCHandle must be released with 
@@ -27,31 +27,27 @@ class GCHandle(object):
   
   Alloc(value: object) -> GCHandle
   
-   Allocates a System.Runtime.InteropServices.GCHandleType.Normal handle for the 
-    specified object.
-  
+   Allocates a System.Runtime.InteropServices.GCHandleType.Normal handle for the specified object.
   
    value: The object that uses the System.Runtime.InteropServices.GCHandle.
-   Returns: A new System.Runtime.InteropServices.GCHandle that protects the object from 
-    garbage collection. This System.Runtime.InteropServices.GCHandle must be 
-    released with System.Runtime.InteropServices.GCHandle.Free when it is no longer 
-    needed.
+   Returns: A new System.Runtime.InteropServices.GCHandle that protects the object from garbage collection. 
+    This System.Runtime.InteropServices.GCHandle must be released with 
+    System.Runtime.InteropServices.GCHandle.Free when it is no longer needed.
   """
   pass
  def Equals(self,o):
   """
   Equals(self: GCHandle,o: object) -> bool
   
-   Determines whether the specified System.Runtime.InteropServices.GCHandle object 
-    is equal to the current System.Runtime.InteropServices.GCHandle object.
+   Determines whether the specified System.Runtime.InteropServices.GCHandle object is equal to the 
+    current System.Runtime.InteropServices.GCHandle object.
   
   
    o: The System.Runtime.InteropServices.GCHandle object to compare with the current 
     System.Runtime.InteropServices.GCHandle object.
   
-   Returns: true if the specified System.Runtime.InteropServices.GCHandle object is equal 
-    to the current System.Runtime.InteropServices.GCHandle object; otherwise,
-    false.
+   Returns: true if the specified System.Runtime.InteropServices.GCHandle object is equal to the current 
+    System.Runtime.InteropServices.GCHandle object; otherwise,false.
   """
   pass
  def Free(self):
@@ -65,24 +61,21 @@ class GCHandle(object):
   """
   FromIntPtr(value: IntPtr) -> GCHandle
   
-   Returns a new System.Runtime.InteropServices.GCHandle object created from a 
-    handle to a managed object.
+   Returns a new System.Runtime.InteropServices.GCHandle object created from a handle to a managed 
+    object.
   
   
-   value: An System.IntPtr handle to a managed object to create a 
-    System.Runtime.InteropServices.GCHandle object from.
+   value: An System.IntPtr handle to a managed object to create a System.Runtime.InteropServices.GCHandle 
+    object from.
   
-   Returns: A new System.Runtime.InteropServices.GCHandle object that corresponds to the 
-    value parameter.
+   Returns: A new System.Runtime.InteropServices.GCHandle object that corresponds to the value parameter.
   """
   pass
  def GetHashCode(self):
   """
   GetHashCode(self: GCHandle) -> int
   
-   Returns an identifier for the current System.Runtime.InteropServices.GCHandle 
-    object.
-  
+   Returns an identifier for the current System.Runtime.InteropServices.GCHandle object.
    Returns: An identifier for the current System.Runtime.InteropServices.GCHandle object.
   """
   pass
@@ -91,15 +84,12 @@ class GCHandle(object):
   """
   ToIntPtr(value: GCHandle) -> IntPtr
   
-   Returns the internal integer representation of a 
-    System.Runtime.InteropServices.GCHandle object.
+   Returns the internal integer representation of a System.Runtime.InteropServices.GCHandle object.
   
+   value: A System.Runtime.InteropServices.GCHandle object to retrieve an internal integer representation 
+    from.
   
-   value: A System.Runtime.InteropServices.GCHandle object to retrieve an internal 
-    integer representation from.
-  
-   Returns: An System.IntPtr object that represents a 
-    System.Runtime.InteropServices.GCHandle object.
+   Returns: An System.IntPtr object that represents a System.Runtime.InteropServices.GCHandle object.
   """
   pass
  def __eq__(self,*args):

@@ -10,26 +10,25 @@ class CounterSample(object):
   """
   Calculate(counterSample: CounterSample,nextCounterSample: CounterSample) -> Single
   
-   Calculates the performance data of the counter,using two sample points. This 
-    method is generally used for calculated performance counter types,such as 
-    averages.
+   Calculates the performance data of the counter,using two sample points. This method is 
+    generally used for calculated performance counter types,such as averages.
   
   
-   counterSample: The System.Diagnostics.CounterSample structure to use as a base point for 
-    calculating performance data.
+   counterSample: The System.Diagnostics.CounterSample structure to use as a base point for calculating 
+    performance data.
   
-   nextCounterSample: The System.Diagnostics.CounterSample structure to use as an ending point for 
-    calculating performance data.
+   nextCounterSample: The System.Diagnostics.CounterSample structure to use as an ending point for calculating 
+    performance data.
   
    Returns: The calculated performance value.
   Calculate(counterSample: CounterSample) -> Single
   
-   Calculates the performance data of the counter,using a single sample point. 
-    This method is generally used for uncalculated performance counter types.
+   Calculates the performance data of the counter,using a single sample point. This method is 
+    generally used for uncalculated performance counter types.
   
   
-   counterSample: The System.Diagnostics.CounterSample structure to use as a base point for 
-    calculating performance data.
+   counterSample: The System.Diagnostics.CounterSample structure to use as a base point for calculating 
+    performance data.
   
    Returns: The calculated performance value.
   """
@@ -38,26 +37,21 @@ class CounterSample(object):
   """
   Equals(self: CounterSample,sample: CounterSample) -> bool
   
-   Indicates whether the specified System.Diagnostics.CounterSample structure is 
-    equal to the current System.Diagnostics.CounterSample structure.
+   Indicates whether the specified System.Diagnostics.CounterSample structure is equal to the 
+    current System.Diagnostics.CounterSample structure.
   
   
-   sample: The System.Diagnostics.CounterSample structure to be compared with this 
-    instance.
-  
+   sample: The System.Diagnostics.CounterSample structure to be compared with this instance.
    Returns: true if sample is equal to the current instance; otherwise,false.
   Equals(self: CounterSample,o: object) -> bool
   
-   Indicates whether the specified structure is a System.Diagnostics.CounterSample 
-    structure and is identical to the current System.Diagnostics.CounterSample 
-    structure.
+   Indicates whether the specified structure is a System.Diagnostics.CounterSample structure and is 
+    identical to the current System.Diagnostics.CounterSample structure.
   
   
-   o: The System.Diagnostics.CounterSample structure to be compared with the current 
-    structure.
-  
-   Returns: true if o is a System.Diagnostics.CounterSample structure and is identical to 
-    the current instance; otherwise,false.
+   o: The System.Diagnostics.CounterSample structure to be compared with the current structure.
+   Returns: true if o is a System.Diagnostics.CounterSample structure and is identical to the current 
+    instance; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -74,9 +68,10 @@ class CounterSample(object):
  @staticmethod
  def __new__(self,rawValue,baseValue,counterFrequency,systemFrequency,timeStamp,timeStamp100nSec,counterType,counterTimeStamp=None):
   """
+  __new__[CounterSample]() -> CounterSample
+  
   __new__(cls: type,rawValue: Int64,baseValue: Int64,counterFrequency: Int64,systemFrequency: Int64,timeStamp: Int64,timeStamp100nSec: Int64,counterType: PerformanceCounterType)
-  __new__(cls: type,rawValue: Int64,baseValue: Int64,counterFrequency: Int64,systemFrequency: Int64,timeStamp: Int64,timeStamp100nSec: Int64,counterType: PerformanceCounterType,counterTimeStamp: Int64)
-  __new__[CounterSample]() -> CounterSample
+  __new__(cls: type,rawValue: Int64,baseValue: Int64,counterFrequency: Int64,systemFrequency: Int64,timeStamp: Int64,timeStamp100nSec: Int64,counterType: PerformanceCounterType,counterTimeStamp: Int64)
   """
   pass
  def __ne__(self,*args):

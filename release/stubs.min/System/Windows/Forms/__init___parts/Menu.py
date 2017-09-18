@@ -3,8 +3,8 @@ class Menu(Component,IComponent,IDisposable):
  def CloneMenu(self,*args):
   """
   CloneMenu(self: Menu,menuSrc: Menu)
-   Copies the System.Windows.Forms.Menu that is passed as a parameter to the 
-    current System.Windows.Forms.Menu.
+   Copies the System.Windows.Forms.Menu that is passed as a parameter to the current 
+    System.Windows.Forms.Menu.
   
   
    menuSrc: The System.Windows.Forms.Menu to copy.
@@ -21,12 +21,9 @@ class Menu(Component,IComponent,IDisposable):
  def Dispose(self):
   """
   Dispose(self: Menu,disposing: bool)
-   Disposes of the resources,other than memory,used by the 
-    System.Windows.Forms.Menu.
+   Disposes of the resources,other than memory,used by the System.Windows.Forms.Menu.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def FindMenuItem(self,type,value):
@@ -55,8 +52,7 @@ class Menu(Component,IComponent,IDisposable):
   GetContextMenu(self: Menu) -> ContextMenu
   
    Gets the System.Windows.Forms.ContextMenu that contains this menu.
-   Returns: The System.Windows.Forms.ContextMenu that contains this menu. The default is 
-    null.
+   Returns: The System.Windows.Forms.ContextMenu that contains this menu. The default is null.
   """
   pass
  def GetMainMenu(self):
@@ -71,14 +67,13 @@ class Menu(Component,IComponent,IDisposable):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -87,11 +82,11 @@ class Menu(Component,IComponent,IDisposable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -103,12 +98,10 @@ class Menu(Component,IComponent,IDisposable):
  def MergeMenu(self,menuSrc):
   """
   MergeMenu(self: Menu,menuSrc: Menu)
-   Merges the System.Windows.Forms.MenuItem objects of one menu with the current 
-    menu.
+   Merges the System.Windows.Forms.MenuItem objects of one menu with the current menu.
   
-  
-   menuSrc: The System.Windows.Forms.Menu whose menu items are merged with the menu items 
-    of the current menu.
+   menuSrc: The System.Windows.Forms.Menu whose menu items are merged with the menu items of the current 
+    menu.
   """
   pass
  def ProcessCmdKey(self,*args):
@@ -117,8 +110,8 @@ class Menu(Component,IComponent,IDisposable):
   
    Processes a command key.
   
-   msg: A System.Windows.Forms.Message,passed by reference that represents the window 
-    message to process.
+   msg: A System.Windows.Forms.Message,passed by reference that represents the window message to 
+    process.
   
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: true if the character was processed by the control; otherwise,false.
@@ -133,10 +126,17 @@ class Menu(Component,IComponent,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

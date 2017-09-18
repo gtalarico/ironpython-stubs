@@ -37,8 +37,7 @@ class IComNativeDescriptorHandler:
    Gets the default event for the specified component.
   
    component: The component to get the default event for.
-   Returns: An System.ComponentModel.EventDescriptor that represents component's default 
-    event.
+   Returns: An System.ComponentModel.EventDescriptor that represents component's default event.
   """
   pass
  def GetDefaultProperty(self,component):
@@ -48,8 +47,7 @@ class IComNativeDescriptorHandler:
    Gets the default property for the specified component.
   
    component: The component to get the default property for.
-   Returns: A System.ComponentModel.PropertyDescriptor that represents component's default 
-    property.
+   Returns: A System.ComponentModel.PropertyDescriptor that represents component's default property.
   """
   pass
  def GetEditor(self,component,baseEditorType):
@@ -109,9 +107,7 @@ class IComNativeDescriptorHandler:
   
    component: The object to which the property belongs.
    dispid: The dispatch identifier.
-   success: A System.Boolean,passed by reference,that represents whether the property was 
-    retrieved.
-  
+   success: A System.Boolean,passed by reference,that represents whether the property was retrieved.
    Returns: The value of the property that has the specified dispatch identifier.
   GetPropertyValue(self: IComNativeDescriptorHandler,component: object,propertyName: str,success: bool) -> (object,bool)
   
@@ -119,9 +115,7 @@ class IComNativeDescriptorHandler:
   
    component: The object to which the property belongs.
    propertyName: The name of the property.
-   success: A System.Boolean,passed by reference,that represents whether the property was 
-    retrieved.
-  
+   success: A System.Boolean,passed by reference,that represents whether the property was retrieved.
    Returns: The value of the property that has the specified name.
   """
   pass

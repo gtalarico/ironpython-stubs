@@ -3,17 +3,14 @@ class ITypeDescriptorContext(IServiceProvider):
  def OnComponentChanged(self):
   """
   OnComponentChanged(self: ITypeDescriptorContext)
-   Raises the 
-    System.ComponentModel.Design.IComponentChangeService.ComponentChanged event.
+   Raises the System.ComponentModel.Design.IComponentChangeService.ComponentChanged event.
   """
   pass
  def OnComponentChanging(self):
   """
   OnComponentChanging(self: ITypeDescriptorContext) -> bool
   
-   Raises the 
-    System.ComponentModel.Design.IComponentChangeService.ComponentChanging event.
-  
+   Raises the System.ComponentModel.Design.IComponentChangeService.ComponentChanging event.
    Returns: true if this object can be changed; otherwise,false.
   """
   pass

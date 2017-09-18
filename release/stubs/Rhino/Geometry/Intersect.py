@@ -13,9 +13,7 @@ class CurveIntersections(object, IDisposable, IList[IntersectionEvent], ICollect
     def CopyTo(self, array, arrayIndex):
         """
         CopyTo(self: CurveIntersections, array: Array[IntersectionEvent], arrayIndex: int)
-            Copies all intersection results into another array, departing at an index in the target 
-             array.
-        
+            Copies all intersection results into another array, departing at an index in the target array.
         
             array: The target array. This value cannot be null.
             arrayIndex: Zero-based index in which to start the copy.
@@ -136,10 +134,10 @@ class Intersection(object):
         CurveBrep(curve: Curve, brep: Brep, tolerance: float) -> (bool, Array[Curve], Array[Point3d])
         
             Intersects a curve with a Brep. This function returns the 3D points of intersection
+                    
+             and 3D overlap curves. If an error occurs while processing overlap curves, this function 
               
-                   and 3D overlap curves. If an error occurs while processing overlap curves, this 
-             function 
-                    will return false, but it will still provide partial results.
+                   will return false, but it will still provide partial results.
         
         
             curve: Curve for intersection.
@@ -173,8 +171,8 @@ class Intersection(object):
             curveA: First curve for intersection.
             curveB: Second curve for intersection.
             tolerance: Intersection tolerance. If the curves approach each other to within tolerance, 
-                  
-               an intersection is assumed.
+                    an 
+             intersection is assumed.
         
             overlapTolerance: The tolerance with which the curves are tested.
             Returns: A collection of intersection events.
@@ -204,8 +202,8 @@ class Intersection(object):
         
             curve: Curve for self-intersections.
             tolerance: Intersection tolerance. If the curve approaches itself to within tolerance, 
-                    
-             an intersection is assumed.
+                    an 
+             intersection is assumed.
         
             Returns: A collection of intersection events.
         """
@@ -222,8 +220,8 @@ class Intersection(object):
             curveDomain: Domain of surbcurve to take into consideration for Intersections.
             surface: Surface for intersection.
             tolerance: Intersection tolerance. If the curve approaches the surface to within tolerance, 
-                
-                 an intersection is assumed.
+                    
+             an intersection is assumed.
         
             overlapTolerance: The tolerance with which the curves are tested.
             Returns: A collection of intersection events.
@@ -234,8 +232,8 @@ class Intersection(object):
             curve: Curve for intersection.
             surface: Surface for intersection.
             tolerance: Intersection tolerance. If the curve approaches the surface to within tolerance, 
-                
-                 an intersection is assumed.
+                    
+             an intersection is assumed.
         
             overlapTolerance: The tolerance with which the curves are tested.
             Returns: A collection of intersection events.
@@ -252,8 +250,8 @@ class Intersection(object):
             line: Line for intersection.
             box: Box to intersect.
             tolerance: If tolerance > 0.0, then the intersection is performed against a box 
-                    that 
-             has each side moved out by tolerance.
+                    that has each 
+             side moved out by tolerance.
         
             Returns: true if the line intersects the box, false if no intersection occurs.
         LineBox(line: Line, box: BoundingBox, tolerance: float) -> (bool, Interval)
@@ -263,8 +261,8 @@ class Intersection(object):
             line: Line for intersection.
             box: BoundingBox to intersect.
             tolerance: If tolerance > 0.0, then the intersection is performed against a box 
-                    that 
-             has each side moved out by tolerance.
+                    that has each 
+             side moved out by tolerance.
         
             Returns: true if the line intersects the box, false if no intersection occurs.
         """
@@ -279,11 +277,10 @@ class Intersection(object):
         
             line: Line for intersection.
             circle: Circle for intersection.
-            Returns: If Rhino.Geometry.Intersect.LineCircleIntersection.Single is returned, only t1 and point1 
-             will have valid values. 
-                    If 
-             Rhino.Geometry.Intersect.LineCircleIntersection.Multiple is returned, t2 and point2 will 
-             also be filled out.
+            Returns: If Rhino.Geometry.Intersect.LineCircleIntersection.Single is returned, only t1 and point1 will 
+             have valid values. 
+                    If Rhino.Geometry.Intersect.LineCircleIntersection.Multiple is 
+             returned, t2 and point2 will also be filled out.
         """
         pass
 
@@ -299,12 +296,12 @@ class Intersection(object):
             Returns: If None is returned, the first point is the point on the line closest
                     to the 
              cylinder and the second point is the point on the cylinder closest to
-                    the 
-             line. 
-                    If Rhino.Geometry.Intersect.LineCylinderIntersection.Single is 
-             returned, the first point
-                    is the point on the line and the second point is 
-             the  same point on the
+                    the line. 
+          
+                       If Rhino.Geometry.Intersect.LineCylinderIntersection.Single is returned, the first 
+             point
+                    is the point on the line and the second point is the  same point on the
+             
                     cylinder.
         """
         pass
@@ -322,8 +319,8 @@ class Intersection(object):
                     
              Numerically parallel means the 2x2 matrix:
                     +AoA  -AoB-AoB  +BoB
-                    
-             is numerically singular, where A = (lineA.To - lineA.From) and B = (lineB.To-lineB.From)
+                    is 
+             numerically singular, where A = (lineA.To - lineA.From) and B = (lineB.To-lineB.From)
         
         LineLine(lineA: Line, lineB: Line, tolerance: float, finiteSegments: bool) -> (bool, float, float)
         
@@ -331,17 +328,17 @@ class Intersection(object):
         
             lineA: First line for intersection.
             lineB: Second line for intersection.
-            tolerance: If tolerance > 0.0, then an intersection is reported only if the distance between the 
-             points is <= tolerance. 
-                    If tolerance <= 0.0, then the closest point between 
-             the lines is reported.
+            tolerance: If tolerance > 0.0, then an intersection is reported only if the distance between the points is 
+             <= tolerance. 
+                    If tolerance <= 0.0, then the closest point between the lines is 
+             reported.
         
             finiteSegments: If true, the input lines are treated as finite segments. 
-                    If false, the input 
-             lines are treated as infinite lines.
+                    If false, the input lines 
+             are treated as infinite lines.
         
-            Returns: true if a closest point can be calculated and the result passes the tolerance parameter 
-             test; otherwise false.
+            Returns: true if a closest point can be calculated and the result passes the tolerance parameter test; 
+             otherwise false.
         """
         pass
 
@@ -351,10 +348,10 @@ class Intersection(object):
         LinePlane(line: Line, plane: Plane) -> (bool, float)
         
             Intersects a line and a plane. This function only returns true if the 
-                    
-             intersection result is a single point (i.e. if the line is coincident with 
-                    
-             the plane then no intersection is assumed).
+                    intersection 
+             result is a single point (i.e. if the line is coincident with 
+                    the plane then no 
+             intersection is assumed).
         
         
             line: Line for intersection.
@@ -372,13 +369,13 @@ class Intersection(object):
         
             line: Line for intersection.
             sphere: Sphere for intersection.
-            Returns: If Rhino.Geometry.Intersect.LineSphereIntersection.None is returned, the first point is 
-             the point on the line closest to the sphere and 
-                    the second point is the 
-             point on the sphere closest to the line. 
+            Returns: If Rhino.Geometry.Intersect.LineSphereIntersection.None is returned, the first point is the 
+             point on the line closest to the sphere and 
+                    the second point is the point on the 
+             sphere closest to the line. 
                     If 
-             Rhino.Geometry.Intersect.LineSphereIntersection.Single is returned, the first point is the 
-             point on the line and the second point is the 
+             Rhino.Geometry.Intersect.LineSphereIntersection.Single is returned, the first point is the point 
+             on the line and the second point is the 
                     same point on the sphere.
         """
         pass
@@ -433,8 +430,8 @@ class Intersection(object):
         
             mesh: Mesh to intersect.
             plane: Plane to intersect with.
-            Returns: An array of polylines describing the intersection loops or null (Nothing in Visual Basic) 
-             if no intersections could be found.
+            Returns: An array of polylines describing the intersection loops or null (Nothing in Visual Basic) if no 
+             intersections could be found.
         """
         pass
 
@@ -492,8 +489,8 @@ class Intersection(object):
         PlanePlane(planeA: Plane, planeB: Plane) -> (bool, Line)
         
             Intersects two planes and return the intersection line. If the planes are 
-                    
-             parallel or coincident, no intersection is assumed.
+                    parallel 
+             or coincident, no intersection is assumed.
         
         
             planeA: First plane for intersection.
@@ -513,8 +510,8 @@ class Intersection(object):
             planeB: Second plane for intersection.
             planeC: Third plane for intersection.
             Returns: true on success, false on failure. If at least two out of the three planes 
-                    
-             are parallel or coincident, failure is assumed.
+                    are 
+             parallel or coincident, failure is assumed.
         """
         pass
 
@@ -527,10 +524,10 @@ class Intersection(object):
         
             plane: Plane to intersect.
             sphere: Sphere to intersect.
-            Returns: If Rhino.Geometry.Intersect.PlaneSphereIntersection.None is returned, the 
-             intersectionCircle has a radius of zero and the center point 
-                    is the point on 
-             the plane closest to the sphere.
+            Returns: If Rhino.Geometry.Intersect.PlaneSphereIntersection.None is returned, the intersectionCircle has 
+             a radius of zero and the center point 
+                    is the point on the plane closest to the 
+             sphere.
         """
         pass
 
@@ -633,10 +630,10 @@ class IntersectionEvent(object):
         SurfaceOverlapParameter(self: IntersectionEvent) -> (Interval, Interval)
         
             If this instance records a Curve|Surface intersection event, 
-                    and the 
-             intersection type if overlap, then use this function 
-                    to get the U and V 
-             domains on the surface where the overlap occurs.
+                    and the intersection 
+             type if overlap, then use this function 
+                    to get the U and V domains on the surface 
+             where the overlap occurs.
         """
         pass
 
@@ -645,10 +642,10 @@ class IntersectionEvent(object):
         SurfacePointParameter(self: IntersectionEvent) -> (float, float)
         
             If this instance records a Curve|Surface intersection event, 
-                    and the 
-             intersection type is point, then use this function 
-                    to get the U and V 
-             parameters on the surface where the intersection occurs.
+                    and the intersection 
+             type is point, then use this function 
+                    to get the U and V parameters on the surface 
+             where the intersection occurs.
         """
         pass
 
@@ -880,15 +877,15 @@ class MeshClash(object):
         Search(meshA: Mesh, meshB: Mesh, distance: float, maxEventCount: int) -> Array[MeshClash]
         
             Searches the locations where the distance from the first mesh to the second mesh
-                 
-                is less than the provided value.
+                    is 
+             less than the provided value.
         
         
             meshA: The first mesh.
             meshB: The second mesh.
             distance: The largest distance at which there is a clash.
-                    All values smaller than this 
-             cause a clash as well.
+                    All values smaller than this cause 
+             a clash as well.
         
             maxEventCount: The maximum number of clash objects.
             Returns: An array of clash objects.

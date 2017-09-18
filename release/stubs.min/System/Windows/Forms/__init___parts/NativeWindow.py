@@ -17,8 +17,7 @@ class NativeWindow(MarshalByRefObject,IWin32Window):
   CreateHandle(self: NativeWindow,cp: CreateParams)
    Creates a window and its handle with the specified creation parameters.
   
-   cp: A System.Windows.Forms.CreateParams that specifies the creation parameters for 
-    this window.
+   cp: A System.Windows.Forms.CreateParams that specifies the creation parameters for this window.
   """
   pass
  def DefWndProc(self,m):
@@ -44,8 +43,8 @@ class NativeWindow(MarshalByRefObject,IWin32Window):
    Retrieves the window associated with the specified handle.
   
    handle: A handle to a window.
-   Returns: The System.Windows.Forms.NativeWindow associated with the specified handle. 
-    This method returns null when the handle does not have an associated window.
+   Returns: The System.Windows.Forms.NativeWindow associated with the specified handle. This method returns 
+    null when the handle does not have an associated window.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -54,11 +53,11 @@ class NativeWindow(MarshalByRefObject,IWin32Window):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -70,8 +69,7 @@ class NativeWindow(MarshalByRefObject,IWin32Window):
  def OnHandleChange(self,*args):
   """
   OnHandleChange(self: NativeWindow)
-   Specifies a notification method that is called when the handle for a window is 
-    changed.
+   Specifies a notification method that is called when the handle for a window is changed.
   """
   pass
  def OnThreadException(self,*args):
@@ -94,8 +92,7 @@ class NativeWindow(MarshalByRefObject,IWin32Window):
   
    Invokes the default window procedure associated with this window.
   
-   m: A System.Windows.Forms.Message that is associated with the current Windows 
-    message.
+   m: A System.Windows.Forms.Message that is associated with the current Windows message.
   """
   pass
  def __init__(self,*args):

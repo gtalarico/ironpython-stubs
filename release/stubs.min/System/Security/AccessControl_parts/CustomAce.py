@@ -7,12 +7,12 @@ class CustomAce(GenericAce):
  def GetBinaryForm(self,binaryForm,offset):
   """
   GetBinaryForm(self: CustomAce,binaryForm: Array[Byte],offset: int)
-   Marshals the contents of the System.Security.AccessControl.CustomAce object 
-    into the specified byte array beginning at the specified offset.
+   Marshals the contents of the System.Security.AccessControl.CustomAce object into the specified 
+    byte array beginning at the specified offset.
   
   
-   binaryForm: The byte array into which the contents of the 
-    System.Security.AccessControl.CustomAce is marshaled.
+   binaryForm: The byte array into which the contents of the System.Security.AccessControl.CustomAce is 
+    marshaled.
   
    offset: The offset at which to start marshaling.
   """
@@ -21,9 +21,7 @@ class CustomAce(GenericAce):
   """
   GetOpaque(self: CustomAce) -> Array[Byte]
   
-   Returns the opaque data associated with this 
-    System.Security.AccessControl.CustomAce object.
-  
+   Returns the opaque data associated with this System.Security.AccessControl.CustomAce object.
    Returns: An array of byte values that represents the opaque data associated with this 
     System.Security.AccessControl.CustomAce object.
   """
@@ -31,8 +29,8 @@ class CustomAce(GenericAce):
  def SetOpaque(self,opaque):
   """
   SetOpaque(self: CustomAce,opaque: Array[Byte])
-   Sets the opaque callback data associated with this 
-    System.Security.AccessControl.CustomAce object.
+   Sets the opaque callback data associated with this System.Security.AccessControl.CustomAce 
+    object.
   
   
    opaque: An array of byte values that represents the opaque callback data for this 

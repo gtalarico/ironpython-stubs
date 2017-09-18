@@ -2,7 +2,7 @@
 # module System.Drawing.Text calls itself Text
 # from System.Drawing,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -17,10 +17,17 @@ class FontCollection(object,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -116,19 +123,25 @@ class InstalledFontCollection(FontCollection,IDisposable):
  def Dispose(self):
   """
   Dispose(self: FontCollection,disposing: bool)
-   Releases the unmanaged resources used by the System.Drawing.Text.FontCollection 
-    and optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Drawing.Text.FontCollection and optionally 
+    releases the managed resources.
   
   
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -143,9 +156,7 @@ class PrivateFontCollection(FontCollection,IDisposable):
  def AddFontFile(self,filename):
   """
   AddFontFile(self: PrivateFontCollection,filename: str)
-   Adds a font from the specified file to this 
-    System.Drawing.Text.PrivateFontCollection.
-  
+   Adds a font from the specified file to this System.Drawing.Text.PrivateFontCollection.
   
    filename: A System.String that contains the file name of the font to add.
   """
@@ -153,9 +164,7 @@ class PrivateFontCollection(FontCollection,IDisposable):
  def AddMemoryFont(self,memory,length):
   """
   AddMemoryFont(self: PrivateFontCollection,memory: IntPtr,length: int)
-   Adds a font contained in system memory to this 
-    System.Drawing.Text.PrivateFontCollection.
-  
+   Adds a font contained in system memory to this System.Drawing.Text.PrivateFontCollection.
   
    memory: The memory address of the font to add.
    length: The memory length of the font to add.
@@ -165,10 +174,17 @@ class PrivateFontCollection(FontCollection,IDisposable):
   """ Dispose(self: PrivateFontCollection,disposing: bool) """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

@@ -99,4 +99,4 @@ if arguments['make']:
                              overwrite=option_overwrite, quiet=option_all)
         if option_json:
             dump_json_log(assembly_dict)
-    print('Done: {} seconds'.format(timer.stop()))
+    logger.info('Done: {} seconds'.format(timer.stop()))

@@ -14,9 +14,8 @@ class Win32Exception(ExternalException,ISerializable,_Exception):
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: Win32Exception,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo object with the file 
-    name and line number at which this System.ComponentModel.Win32Exception 
-    occurred.
+   Sets the System.Runtime.Serialization.SerializationInfo object with the file name and line 
+    number at which this System.ComponentModel.Win32Exception occurred.
   
   
    info: A System.Runtime.Serialization.SerializationInfo.

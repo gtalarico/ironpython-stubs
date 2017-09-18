@@ -25,11 +25,11 @@ class EventLogPermission(ResourcePermissionBase,IPermission,ISecurityEncodable,I
   """
   GetPermissionEntries(self: ResourcePermissionBase) -> Array[ResourcePermissionBaseEntry]
   
-   Returns an array of the System.Security.Permissions.ResourcePermissionBaseEntry 
-    objects added to this permission.
+   Returns an array of the System.Security.Permissions.ResourcePermissionBaseEntry objects added to 
+    this permission.
   
-   Returns: An array of System.Security.Permissions.ResourcePermissionBaseEntry objects 
-    that were added to this permission.
+   Returns: An array of System.Security.Permissions.ResourcePermissionBaseEntry objects that were added to 
+    this permission.
   """
   pass
  def RemovePermissionAccess(self,*args):

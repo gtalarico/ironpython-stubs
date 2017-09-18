@@ -13,8 +13,7 @@ class DesignOnlyAttribute(Attribute,_Attribute):
   
   
    obj: The object to test the value equality of.
-   Returns: true if the value of the given object is equal to that of the current; 
-    otherwise,false.
+   Returns: true if the value of the given object is equal to that of the current; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -25,8 +24,7 @@ class DesignOnlyAttribute(Attribute,_Attribute):
   IsDefaultAttribute(self: DesignOnlyAttribute) -> bool
   
    Determines if this attribute is the default.
-   Returns: true if the attribute is the default value for this attribute class; otherwise,
-    false.
+   Returns: true if the attribute is the default value for this attribute class; otherwise,false.
   """
   pass
  def __eq__(self,*args):

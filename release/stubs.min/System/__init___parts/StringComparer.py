@@ -4,27 +4,27 @@ class StringComparer(object,IComparer,IEqualityComparer,IComparer[str],IEquality
   """
   Compare(self: StringComparer,x: str,y: str) -> int
   
-   When overridden in a derived class,compares two strings and returns an 
-    indication of their relative sort order.
+   When overridden in a derived class,compares two strings and returns an indication of their 
+    relative sort order.
   
   
    x: A string to compare to y.
    y: A string to compare to x.
-   Returns: A signed integer that indicates the relative values of x and y,as shown in the 
-    following table.ValueMeaningLess than zerox is less than y.-or-x is null.Zerox 
-    is equal to y.Greater than zerox is greater than y.-or-y is null.
+   Returns: A signed integer that indicates the relative values of x and y,as shown in the following 
+    table.ValueMeaningLess than zerox is less than y.-or-x is null.Zerox is equal to y.Greater than 
+    zerox is greater than y.-or-y is null.
   
   Compare(self: StringComparer,x: object,y: object) -> int
   
-   When overridden in a derived class,compares two objects and returns an 
-    indication of their relative sort order.
+   When overridden in a derived class,compares two objects and returns an indication of their 
+    relative sort order.
   
   
    x: An object to compare to y.
    y: An object to compare to x.
-   Returns: A signed integer that indicates the relative values of x and y,as shown in the 
-    following table.ValueMeaningLess than zerox is less than y. -or-x is null.Zerox 
-    is equal to y.Greater than zerox is greater than y.-or-y is null.
+   Returns: A signed integer that indicates the relative values of x and y,as shown in the following 
+    table.ValueMeaningLess than zerox is less than y. -or-x is null.Zerox is equal to y.Greater than 
+    zerox is greater than y.-or-y is null.
   """
   pass
  @staticmethod
@@ -32,17 +32,16 @@ class StringComparer(object,IComparer,IEqualityComparer,IComparer[str],IEquality
   """
   Create(culture: CultureInfo,ignoreCase: bool) -> StringComparer
   
-   Creates a System.StringComparer object that compares strings according to the 
-    rules of a specified culture.
+   Creates a System.StringComparer object that compares strings according to the rules of a 
+    specified culture.
   
   
    culture: A culture whose linguistic rules are used to perform a string comparison.
-   ignoreCase: true to specify that comparison operations be case-insensitive; false to 
-    specify that comparison operations be case-sensitive.
+   ignoreCase: true to specify that comparison operations be case-insensitive; false to specify that comparison 
+    operations be case-sensitive.
   
-   Returns: A new System.StringComparer object that performs string comparisons according 
-    to the comparison rules used by the culture parameter and the case rule 
-    specified by the ignoreCase parameter.
+   Returns: A new System.StringComparer object that performs string comparisons according to the comparison 
+    rules used by the culture parameter and the case rule specified by the ignoreCase parameter.
   """
   pass
  def Equals(self,*__args):
@@ -53,17 +52,15 @@ class StringComparer(object,IComparer,IEqualityComparer,IComparer[str],IEquality
   
    x: A string to compare to y.
    y: A string to compare to x.
-   Returns: true if x and y refer to the same object,or x and y are equal; otherwise,
-    false.
-  
+   Returns: true if x and y refer to the same object,or x and y are equal; otherwise,false.
   Equals(self: StringComparer,x: object,y: object) -> bool
   
    When overridden in a derived class,indicates whether two objects are equal.
   
    x: An object to compare to y.
    y: An object to compare to x.
-   Returns: true if x and y refer to the same object,or x and y are both the same type of 
-    object and those objects are equal; otherwise,false.
+   Returns: true if x and y refer to the same object,or x and y are both the same type of object and those 
+    objects are equal; otherwise,false.
   """
   pass
  def GetHashCode(self,obj=None):

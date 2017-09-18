@@ -13,8 +13,8 @@ class BindingSource(Component,IComponent,IDisposable,IBindingListView,IBindingLi
    Adds an existing item to the internal list.
   
    value: An System.Object to be added to the internal list.
-   Returns: The zero-based index at which value was added to the underlying list 
-    represented by the System.Windows.Forms.BindingSource.List property.
+   Returns: The zero-based index at which value was added to the underlying list represented by the 
+    System.Windows.Forms.BindingSource.List property.
   """
   pass
  def AddNew(self):
@@ -30,19 +30,16 @@ class BindingSource(Component,IComponent,IDisposable,IBindingListView,IBindingLi
   ApplySort(self: BindingSource,sorts: ListSortDescriptionCollection)
    Sorts the data source with the specified sort descriptions.
   
-   sorts: A System.ComponentModel.ListSortDescriptionCollection containing the sort 
-    descriptions to apply to the data source.
+   sorts: A System.ComponentModel.ListSortDescriptionCollection containing the sort descriptions to apply 
+    to the data source.
   
   ApplySort(self: BindingSource,property: PropertyDescriptor,sort: ListSortDirection)
-   Sorts the data source using the specified property descriptor and sort 
-    direction.
+   Sorts the data source using the specified property descriptor and sort direction.
   
+   property: A System.ComponentModel.PropertyDescriptor that describes the property by which to sort the data 
+    source.
   
-   property: A System.ComponentModel.PropertyDescriptor that describes the property by which 
-    to sort the data source.
-  
-   sort: A System.ComponentModel.ListSortDirection indicating how the list should be 
-    sorted.
+   sort: A System.ComponentModel.ListSortDirection indicating how the list should be sorted.
   """
   pass
  def CancelEdit(self):
@@ -66,15 +63,15 @@ class BindingSource(Component,IComponent,IDisposable,IBindingListView,IBindingLi
    value: The System.Object to locate in the underlying list represented by the 
     System.Windows.Forms.BindingSource.List property. The value can be null.
   
-   Returns: true if the value parameter is found in the 
-    System.Windows.Forms.BindingSource.List; otherwise,false.
+   Returns: true if the value parameter is found in the System.Windows.Forms.BindingSource.List; otherwise,
+    false.
   """
   pass
  def CopyTo(self,arr,index):
   """
   CopyTo(self: BindingSource,arr: Array,index: int)
-   Copies the contents of the System.Windows.Forms.BindingSource.List to the 
-    specified array,starting at the specified index value.
+   Copies the contents of the System.Windows.Forms.BindingSource.List to the specified array,
+    starting at the specified index value.
   
   
    arr: The destination array.
@@ -84,12 +81,11 @@ class BindingSource(Component,IComponent,IDisposable,IBindingListView,IBindingLi
  def Dispose(self):
   """
   Dispose(self: BindingSource,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.BindingSource 
-    and optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.BindingSource and optionally 
+    releases the managed resources.
   
   
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def EndEdit(self):
@@ -111,9 +107,7 @@ class BindingSource(Component,IComponent,IDisposable,IBindingListView,IBindingLi
   
   Find(self: BindingSource,propertyName: str,key: object) -> int
   
-   Returns the index of the item in the list with the specified property name and 
-    value.
-  
+   Returns the index of the item in the list with the specified property name and value.
   
    propertyName: The name of the property to search for.
    key: The value of the item with the specified propertyName to find.
@@ -125,23 +119,20 @@ class BindingSource(Component,IComponent,IDisposable,IBindingListView,IBindingLi
   GetEnumerator(self: BindingSource) -> IEnumerator
   
    Retrieves an enumerator for the System.Windows.Forms.BindingSource.List.
-   Returns: An System.Collections.IEnumerator for the 
-    System.Windows.Forms.BindingSource.List.
+   Returns: An System.Collections.IEnumerator for the System.Windows.Forms.BindingSource.List.
   """
   pass
  def GetItemProperties(self,listAccessors):
   """
   GetItemProperties(self: BindingSource,listAccessors: Array[PropertyDescriptor]) -> PropertyDescriptorCollection
   
-   Retrieves an array of System.ComponentModel.PropertyDescriptor objects 
-    representing the bindable properties of the data source list type.
+   Retrieves an array of System.ComponentModel.PropertyDescriptor objects representing the bindable 
+    properties of the data source list type.
   
   
-   listAccessors: An array of System.ComponentModel.PropertyDescriptor objects to find in the 
-    list as bindable.
-  
-   Returns: An array of System.ComponentModel.PropertyDescriptor objects that represents 
-    the properties on this list type used to bind data.
+   listAccessors: An array of System.ComponentModel.PropertyDescriptor objects to find in the list as bindable.
+   Returns: An array of System.ComponentModel.PropertyDescriptor objects that represents the properties on 
+    this list type used to bind data.
   """
   pass
  def GetListName(self,listAccessors):
@@ -150,9 +141,7 @@ class BindingSource(Component,IComponent,IDisposable,IBindingListView,IBindingLi
   
    Gets the name of the list supplying data for the binding.
   
-   listAccessors: An array of System.ComponentModel.PropertyDescriptor objects to find in the 
-    list as bindable.
-  
+   listAccessors: An array of System.ComponentModel.PropertyDescriptor objects to find in the list as bindable.
    Returns: The name of the list supplying the data for binding.
   """
   pass
@@ -162,9 +151,7 @@ class BindingSource(Component,IComponent,IDisposable,IBindingListView,IBindingLi
   
    Gets the related currency manager for the specified data member.
   
-   dataMember: The name of column or list,within the data source to retrieve the currency 
-    manager for.
-  
+   dataMember: The name of column or list,within the data source to retrieve the currency manager for.
    Returns: The related System.Windows.Forms.CurrencyManager for the specified data member.
   """
   pass
@@ -172,29 +159,28 @@ class BindingSource(Component,IComponent,IDisposable,IBindingListView,IBindingLi
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def IndexOf(self,value):
   """
   IndexOf(self: BindingSource,value: object) -> int
   
-   Searches for the specified object and returns the index of the first occurrence 
-    within the entire list.
+   Searches for the specified object and returns the index of the first occurrence within the 
+    entire list.
   
   
    value: The System.Object to locate in the underlying list represented by the 
     System.Windows.Forms.BindingSource.List property. The value can be null.
   
-   Returns: The zero-based index of the first occurrence of the value parameter; otherwise,
-    -1 if value is not in the list.
+   Returns: The zero-based index of the first occurrence of the value parameter; otherwise,-1 if value is 
+    not in the list.
   """
   pass
  def Insert(self,index,value):
@@ -212,11 +198,11 @@ class BindingSource(Component,IComponent,IDisposable,IBindingListView,IBindingLi
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -286,8 +272,7 @@ class BindingSource(Component,IComponent,IDisposable,IBindingListView,IBindingLi
   OnDataError(self: BindingSource,e: BindingManagerDataErrorEventArgs)
    Raises the System.Windows.Forms.BindingSource.DataError event.
   
-   e: A System.Windows.Forms.BindingManagerDataErrorEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.BindingManagerDataErrorEventArgs that contains the event data.
   """
   pass
  def OnDataMemberChanged(self,*args):
@@ -366,8 +351,8 @@ class BindingSource(Component,IComponent,IDisposable,IBindingListView,IBindingLi
  def ResetBindings(self,metadataChanged):
   """
   ResetBindings(self: BindingSource,metadataChanged: bool)
-   Causes a control bound to the System.Windows.Forms.BindingSource to reread all 
-    the items in the list and refresh their displayed values.
+   Causes a control bound to the System.Windows.Forms.BindingSource to reread all the items in the 
+    list and refresh their displayed values.
   
   
    metadataChanged: true if the data schema has changed; false if only values have changed.
@@ -376,15 +361,15 @@ class BindingSource(Component,IComponent,IDisposable,IBindingListView,IBindingLi
  def ResetCurrentItem(self):
   """
   ResetCurrentItem(self: BindingSource)
-   Causes a control bound to the System.Windows.Forms.BindingSource to reread the 
-    currently selected item and refresh its displayed value.
+   Causes a control bound to the System.Windows.Forms.BindingSource to reread the currently 
+    selected item and refresh its displayed value.
   """
   pass
  def ResetItem(self,itemIndex):
   """
   ResetItem(self: BindingSource,itemIndex: int)
-   Causes a control bound to the System.Windows.Forms.BindingSource to reread the 
-    item at the specified index,and refresh its displayed value.
+   Causes a control bound to the System.Windows.Forms.BindingSource to reread the item at the 
+    specified index,and refresh its displayed value.
   
   
    itemIndex: The zero-based index of the item that has changed.
@@ -412,15 +397,21 @@ class BindingSource(Component,IComponent,IDisposable,IBindingListView,IBindingLi
    Determines whether the System.Collections.IList contains a specific value.
   
    value: The object to locate in the System.Collections.IList.
-   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,
-    false.
+   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,false.
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """

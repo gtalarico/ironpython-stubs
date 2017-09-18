@@ -133,8 +133,8 @@ class CalculateBoundingBoxEventArgs(DrawEventArgs):
         """
         IncludeBoundingBox(self: CalculateBoundingBoxEventArgs, box: BoundingBox)
             Unites a bounding box with the current display bounding box in order to ensure
-                   
-              dynamic objects in "box" are drawn.
+                    
+             dynamic objects in "box" are drawn.
         
         
             box: The box to unite.
@@ -896,8 +896,8 @@ class CustomDisplay(object, IDisposable):
         """
         AddCurve(self: CustomDisplay, curve: Curve, color: Color, thickness: int)
             Adds a new, colored curve to the display list.
-                    The curve will be duplicated 
-             so changes to the 
+                    The curve will be duplicated so 
+             changes to the 
                     original will not affect the display.
         
         
@@ -906,8 +906,8 @@ class CustomDisplay(object, IDisposable):
             thickness: Thickness of curve.
         AddCurve(self: CustomDisplay, curve: Curve, color: Color)
             Adds a new, colored curve to the display list.
-                    The curve will be duplicated 
-             so changes to the 
+                    The curve will be duplicated so 
+             changes to the 
                     original will not affect the display.
         
         
@@ -1226,8 +1226,8 @@ class DisplayBitmap(object, IDisposable):
                     for source and 
              OneMinusSourceAlpha for destination.  See OpenGL's
                     glBlendFunc for details.
-         
-                        http://www.opengl.org/sdk/docs/man/xhtml/glBlendFunc.xml
+               
+                  http://www.opengl.org/sdk/docs/man/xhtml/glBlendFunc.xml
         
         
             source: The source blend mode.
@@ -1306,11 +1306,11 @@ class DisplayConduit(object):
     def CalculateBoundingBox(self, *args): #cannot find CLR method
         """
         CalculateBoundingBox(self: DisplayConduit, e: CalculateBoundingBoxEventArgs)
-            Library developers should override this function to increase the bounding box of scene so 
-             it includes the
-                    geometry that you plan to draw in the "Draw" virtual 
-             functions.
-                    The default implementation does nothing.
+            Library developers should override this function to increase the bounding box of scene so it 
+             includes the
+                    geometry that you plan to draw in the "Draw" virtual functions.
+              
+                   The default implementation does nothing.
         
         
             e: The event argument contain the current bounding box state.
@@ -1321,14 +1321,14 @@ class DisplayConduit(object):
         """
         CalculateBoundingBoxZoomExtents(self: DisplayConduit, e: CalculateBoundingBoxEventArgs)
             If you want to participate in the Zoom Extents command with your display conduit,
-                
-                 then you will need to override ZoomExtentsBoundingBox.  Typically you could just
-             
-                    call your CalculateBoundingBox override, but you may also want to spend a little
-          
-                       more time here and compute a tighter bounding box for your conduit geometry if
-         
-                        that is needed.
+                    
+             then you will need to override ZoomExtentsBoundingBox.  Typically you could just
+                    
+             call your CalculateBoundingBox override, but you may also want to spend a little
+                    
+             more time here and compute a tighter bounding box for your conduit geometry if
+                    that 
+             is needed.
                     The default implementation does nothing.
         
         
@@ -1339,13 +1339,13 @@ class DisplayConduit(object):
     def DrawForeground(self, *args): #cannot find CLR method
         """
         DrawForeground(self: DisplayConduit, e: DrawEventArgs)
-            Called after all non-highlighted objects have been drawn and PostDrawObjects has been 
-             called.
-                    Depth writing and testing are turned OFF. If you want to draw with 
-             depth writing/testing,
+            Called after all non-highlighted objects have been drawn and PostDrawObjects has been called.
+          
+                       Depth writing and testing are turned OFF. If you want to draw with depth 
+             writing/testing,
                     see PostDrawObjects.
-                    The default 
-             implementation does nothing.
+                    The default implementation does 
+             nothing.
         
         
             e: The event argument contains the current viewport and display state.
@@ -1355,12 +1355,11 @@ class DisplayConduit(object):
     def DrawOverlay(self, *args): #cannot find CLR method
         """
         DrawOverlay(self: DisplayConduit, e: DrawEventArgs)
-            If Rhino is in a feedback mode, the draw overlay call allows for temporary geometry to be 
-             drawn on top of
-                    everything in the scene. This is similar to the dynamic draw 
-             routine that occurs with custom get point.
-                    The default implementation does 
-             nothing.
+            If Rhino is in a feedback mode, the draw overlay call allows for temporary geometry to be drawn 
+             on top of
+                    everything in the scene. This is similar to the dynamic draw routine that 
+             occurs with custom get point.
+                    The default implementation does nothing.
         
         
             e: The event argument contains the current viewport and display state.
@@ -1378,10 +1377,10 @@ class DisplayConduit(object):
         """
         PostDrawObjects(self: DisplayConduit, e: DrawEventArgs)
             Called after all non-highlighted objects have been drawn. Depth writing and testing are
-          
-                       still turned on. If you want to draw without depth writing/testing, see 
-             DrawForeground.
-                    The default implementation does nothing.
+                
+                 still turned on. If you want to draw without depth writing/testing, see DrawForeground.
+            
+                     The default implementation does nothing.
         
         
             e: The event argument contains the current viewport and display state.
@@ -1399,8 +1398,8 @@ class DisplayConduit(object):
         """
         PreDrawObjects(self: DisplayConduit, e: DrawEventArgs)
             Called before objects are been drawn. Depth writing and testing are on.
-                    The 
-             default implementation does nothing.
+                    The default 
+             implementation does nothing.
         
         
             e: The event argument contain the current viewport and display state.
@@ -1781,12 +1780,12 @@ class DisplayPipeline(object):
         CullControlPolygon() -> bool
         
             Returns a value indicating if only points on the side of the surface that
-                    
-             face the camera are displayed.
+                    face the 
+             camera are displayed.
         
             Returns: true if backfaces of surface and mesh control polygons are culled.
-                    This value 
-             is determined by the _CullControlPolygon command.
+                    This value is 
+             determined by the _CullControlPolygon command.
         """
         pass
 
@@ -1885,8 +1884,8 @@ class DisplayPipeline(object):
         """
         DrawArrow(self: DisplayPipeline, line: Line, color: Color, screenSize: float, relativeSize: float)
             Draws a single arrow object. 
-                    An arrow consists of a Shaft and an Arrow head 
-             at the end of the shaft.
+                    An arrow consists of a Shaft and an Arrow head at the 
+             end of the shaft.
         
         
             line: Arrow shaft.
@@ -1894,12 +1893,12 @@ class DisplayPipeline(object):
             screenSize: If screenSize != 0.0 then the size (in screen pixels) of the arrow head will be equal to 
              screenSize.
         
-            relativeSize: If relativeSize != 0.0 and screensize == 0.0 the size of the arrow head will be 
-             proportional to the arrow shaft length.
+            relativeSize: If relativeSize != 0.0 and screensize == 0.0 the size of the arrow head will be proportional to 
+             the arrow shaft length.
         
         DrawArrow(self: DisplayPipeline, line: Line, color: Color)
-            Draws a single arrow object. An arrow consists of a Shaft and an Arrow head at the end of 
-             the shaft.
+            Draws a single arrow object. An arrow consists of a Shaft and an Arrow head at the end of the 
+             shaft.
         
         
             line: Arrow shaft.
@@ -1915,19 +1914,19 @@ class DisplayPipeline(object):
             tip: Point of arrow head tip.
             direction: Direction in which arrow head is pointing.
             color: Color of arrow head.
-            screenSize: If screenSize != 0.0, then the size (in screen pixels) of the arrow head will be equal to 
-             the screenSize.
+            screenSize: If screenSize != 0.0, then the size (in screen pixels) of the arrow head will be equal to the 
+             screenSize.
         
-            worldSize: If worldSize != 0.0 and screensize == 0.0 the size of the arrow head will be equal to the 
-             number of units in worldSize.
+            worldSize: If worldSize != 0.0 and screensize == 0.0 the size of the arrow head will be equal to the number 
+             of units in worldSize.
         """
         pass
 
     def DrawArrows(self, lines, color):
         """
         DrawArrows(self: DisplayPipeline, lines: IEnumerable[Line], color: Color)DrawArrows(self: DisplayPipeline, lines: Array[Line], color: Color)
-            Draws a collection of arrow objects. An arrow consists of a Shaft and an Arrow head at the 
-             end of the shaft.
+            Draws a collection of arrow objects. An arrow consists of a Shaft and an Arrow head at the end 
+             of the shaft.
         
         
             lines: Arrow shafts.
@@ -1997,8 +1996,8 @@ class DisplayPipeline(object):
             size: Size (in model units) of the corner widgets.
         DrawBoxCorners(self: DisplayPipeline, box: BoundingBox, color: Color)
             Draws corner widgets of a world aligned boundingbox. 
-                    Widget size will be 5% 
-             of the Box diagonal.
+                    Widget size will be 5% of the 
+             Box diagonal.
         
         
             box: Box to draw.
@@ -2266,8 +2265,8 @@ class DisplayPipeline(object):
         """
         DrawMeshFalseColors(self: DisplayPipeline, mesh: Mesh)
             Draws the mesh faces as false color patches. 
-                    The mesh must have Vertex 
-             Colors defined for this to work.
+                    The mesh must have Vertex Colors 
+             defined for this to work.
         
         
             mesh: Mesh to draw.
@@ -2359,8 +2358,8 @@ class DisplayPipeline(object):
         DrawPointCloud(self: DisplayPipeline, cloud: PointCloud, size: int)
             Draws a point cloud.
         
-            cloud: Point cloud to draw, if the cloud has a color array, it will be used, otherwise the points 
-             will be black.
+            cloud: Point cloud to draw, if the cloud has a color array, it will be used, otherwise the points will 
+             be black.
         
             size: Size of points.
         """
@@ -2465,10 +2464,9 @@ class DisplayPipeline(object):
         """
         EnableDepthTesting(self: DisplayPipeline, enable: bool)
             Enable or disable the DepthTesting behaviour of the engine. 
-                    When 
-             DepthTesting is disabled, objects in front will no 
-                    longer occlude objects 
-             behind them.
+                    When DepthTesting is 
+             disabled, objects in front will no 
+                    longer occlude objects behind them.
         
         
             enable: true to enable DepthTesting, false to disable.
@@ -2479,8 +2477,8 @@ class DisplayPipeline(object):
         """
         EnableDepthWriting(self: DisplayPipeline, enable: bool)
             Enable or disable the DepthWriting behaviour of the engine. 
-                    When 
-             DepthWriting is disabled, drawn geometry does not affect the Z-Buffer.
+                    When DepthWriting is 
+             disabled, drawn geometry does not affect the Z-Buffer.
         
         
             enable: true to enable DepthWriting, false to disable.
@@ -2500,15 +2498,14 @@ class DisplayPipeline(object):
         """
         InterruptDrawing(self: DisplayPipeline) -> bool
         
-            Tests to see if the pipeline should stop drawing more geometry and just show what it has 
-             so far. 
-                    If a drawing operation is taking a long time, this function will 
-             return true and tell Rhino it should just 
-                    finish up and show the frame 
-             buffer. This is used in dynamic drawing operations.
+            Tests to see if the pipeline should stop drawing more geometry and just show what it has so far. 
+             
+                    If a drawing operation is taking a long time, this function will return true and 
+             tell Rhino it should just 
+                    finish up and show the frame buffer. This is used in 
+             dynamic drawing operations.
         
-            Returns: true if the pipeline should stop attempting to draw more geometry and just show the frame 
-             buffer.
+            Returns: true if the pipeline should stop attempting to draw more geometry and just show the frame buffer.
         """
         pass
 
@@ -2516,17 +2513,17 @@ class DisplayPipeline(object):
         """
         IsActive(self: DisplayPipeline, rhinoObject: RhinoObject) -> bool
         
-            Determines if an object can be visible in this viewport based on it's object type and 
-             display attributes. 
-                    This test does not check for visibility based on 
-             location of the object. 
-                    NOTE: Use CRhinoDisplayPipeline::IsVisible() to 
-             perform "visibility" 
-                          tests based on location (is some part of the 
-             object in the view frustum). 
-                          Use CRhinoDisplayPipeline::IsActive() to 
-             perform "visibility" 
-                          tests based on object type.
+            Determines if an object can be visible in this viewport based on it's object type and display 
+             attributes. 
+                    This test does not check for visibility based on location of the 
+             object. 
+                    NOTE: Use CRhinoDisplayPipeline::IsVisible() to perform "visibility" 
+            
+                           tests based on location (is some part of the object in the view frustum). 
+               
+                        Use CRhinoDisplayPipeline::IsActive() to perform "visibility" 
+                          
+             tests based on object type.
         
         
             rhinoObject: Object to test.
@@ -2540,32 +2537,32 @@ class DisplayPipeline(object):
         IsVisible(self: DisplayPipeline, bbox: BoundingBox) -> bool
         
             Test a given box for visibility inside the view frustum under the current 
-                    
-             viewport and model transformation settings.
+                    viewport 
+             and model transformation settings.
         
         
             bbox: Box to test for visibility.
             Returns: true if at least some portion of the box is visible, false if not.
         IsVisible(self: DisplayPipeline, rhinoObject: RhinoObject) -> bool
         
-            Test a given object for visibility inside the view frustum under the current viewport and 
-             model 
-                    transformation settings. This function calls a virtual IsVisibleFinal 
-             function that 
-                    subclassed pipelines can add extra tests to. In the base 
-             class, this test only tests 
-                    visibility based on the objects world 
-             coordinates location and does not pay attention 
+            Test a given object for visibility inside the view frustum under the current viewport and model 
+             
+                    transformation settings. This function calls a virtual IsVisibleFinal function that 
+             
+                    subclassed pipelines can add extra tests to. In the base class, this test only 
+             tests 
+                    visibility based on the objects world coordinates location and does not pay 
+             attention 
                     to the object's attributes.
-        
-                         
-                    NOTE: Use CRhinoDisplayPipeline::IsVisible() to perform 
-             "visibility" 
-                          tests based on location (is some part of the object in 
-             the view frustum). 
-                          Use CRhinoDisplayPipeline::IsActive() to perform 
-             "visibility" 
-                          tests based on object type.
+                    
+                    NOTE: Use 
+             CRhinoDisplayPipeline::IsVisible() to perform "visibility" 
+                          tests based on 
+             location (is some part of the object in the view frustum). 
+                          Use 
+             CRhinoDisplayPipeline::IsActive() to perform "visibility" 
+                          tests based on 
+             object type.
         
         
             rhinoObject: Object to test.
@@ -2573,8 +2570,8 @@ class DisplayPipeline(object):
         IsVisible(self: DisplayPipeline, worldCoordinate: Point3d) -> bool
         
             Test a given 3d world coordinate point for visibility inside the view 
-                    
-             frustum under the current viewport and model transformation settings.
+                    frustum 
+             under the current viewport and model transformation settings.
         
         
             worldCoordinate: Point to test for visibility.
@@ -2587,8 +2584,8 @@ class DisplayPipeline(object):
         Measure2dText(self: DisplayPipeline, text: str, definitionPoint: Point2d, middleJustified: bool, rotationRadians: float, height: int, fontFace: str) -> Rectangle
         
             Determines screen rectangle that would be drawn to using the Draw2dText(..) function
-             
-                    with the same parameters.
+                   
+              with the same parameters.
         
         
             text: text to measure.
@@ -3176,8 +3173,8 @@ class RhinoView(object):
         CaptureToBitmap(self: RhinoView, mode: DisplayModeDescription) -> Bitmap
         
             Capture View contents to a bitmap using a display mode description to define
-                    
-             how drawing is performed.
+                    how 
+             drawing is performed.
         
         
             mode: The display mode.
@@ -3185,8 +3182,8 @@ class RhinoView(object):
         CaptureToBitmap(self: RhinoView, size: Size, mode: DisplayModeDescription) -> Bitmap
         
             Capture View contents to a bitmap using a display mode description to define
-                    
-             how drawing is performed.
+                    how 
+             drawing is performed.
         
         
             size: The width and height of the returned bitmap.
@@ -3195,8 +3192,8 @@ class RhinoView(object):
         CaptureToBitmap(self: RhinoView, attributes: DisplayPipelineAttributes) -> Bitmap
         
             Captures view contents to a bitmap using display attributes to define how
-                    
-             drawing is performed.
+                    drawing 
+             is performed.
         
         
             attributes: The specific display mode attributes.
@@ -3204,8 +3201,8 @@ class RhinoView(object):
         CaptureToBitmap(self: RhinoView, size: Size, attributes: DisplayPipelineAttributes) -> Bitmap
         
             Capture View contents to a bitmap using display attributes to define how
-                    
-             drawing is performed.
+                    drawing is 
+             performed.
         
         
             size: The width and height of the returned bitmap.
@@ -3253,8 +3250,8 @@ class RhinoView(object):
         Close(self: RhinoView) -> bool
         
             Remove this View from Rhino. DO NOT attempt to use this instance of this
-                    
-             class after calling Close.
+                    class 
+             after calling Close.
         
             Returns: true on success
         """
@@ -3267,8 +3264,8 @@ class RhinoView(object):
             Creates a bitmap preview image of model.
         
             imagePath: [in] The name of the bitmap file to create.  The extension of the imagePath controls
-             
-                    the format of the bitmap file created (bmp, tga, jpg, pcx, png, tif).
+                   
+              the format of the bitmap file created (bmp, tga, jpg, pcx, png, tif).
         
             size: [in] The width and height of the bitmap in pixels.
             ignoreHighlights: true if highlighted elements should be drawn normally.
@@ -3285,8 +3282,8 @@ class RhinoView(object):
             Creates a bitmap preview image of model.
         
             imagePath: [in] The name of the bitmap file to create.  The extension of the imagePath controls
-             
-                    the format of the bitmap file created (bmp, tga, jpg, pcx, png, tif).
+                   
+              the format of the bitmap file created (bmp, tga, jpg, pcx, png, tif).
         
             size: [in] The width and height of the bitmap in pixels.
             ignoreHighlights: true if highlighted elements should be drawn normally.
@@ -3523,17 +3520,17 @@ class RhinoViewport(object, IDisposable):
         ChangeToParallelProjection(self: RhinoViewport, symmetricFrustum: bool) -> bool
         
             Use this function to change projections of valid viewports from persective to parallel.
-          
-                       It will make common additional adjustments to the frustum so the resulting views 
-             are
-                    similar. The camera location and direction will not be changed.
+                
+                 It will make common additional adjustments to the frustum so the resulting views are
+               
+                  similar. The camera location and direction will not be changed.
         
         
             symmetricFrustum: true if you want the resulting frustum to be symmetric.
-            Returns: If the current projection is parallel and bSymmetricFrustum, FrustumIsLeftRightSymmetric()
-             
-                    and FrustumIsTopBottomSymmetric() are all equal, then no changes are made and 
-             true is returned.
+            Returns: If the current projection is parallel and bSymmetricFrustum, FrustumIsLeftRightSymmetric()
+             
+                    and FrustumIsTopBottomSymmetric() are all equal, then no changes are made and true is 
+             returned.
         """
         pass
 
@@ -3542,50 +3539,48 @@ class RhinoViewport(object, IDisposable):
         ChangeToPerspectiveProjection(self: RhinoViewport, targetDistance: float, symmetricFrustum: bool, lensLength: float) -> bool
         
             Use this function to change projections of valid viewports from parallel to perspective.
-         
-                        It will make common additional adjustments to the frustum and camera location 
-             so the
-                    resulting views are similar. The camera direction and target point are 
-             not be changed.
+               
+                  It will make common additional adjustments to the frustum and camera location so the
+              
+                   resulting views are similar. The camera direction and target point are not be changed.
         
         
             targetDistance: If RhinoMath.UnsetValue this parameter is ignored. Otherwise it must be > 0 and indicates
-        
-                         which plane in the current view frustum should be perserved.
+              
+                   which plane in the current view frustum should be perserved.
         
             symmetricFrustum: true if you want the resulting frustum to be symmetric.
-            lensLength: (pass 50.0 when in doubt) 35 mm lens length to use when changing from parallel to 
-             perspective
-                    projections. If the current projection is perspective or 
-             lens_length is <= 0.0, then
-                    this parameter is ignored.
+            lensLength: (pass 50.0 when in doubt) 35 mm lens length to use when changing from parallel to perspective
+          
+                       projections. If the current projection is perspective or lens_length is <= 0.0, then
+         
+                        this parameter is ignored.
         
-            Returns: If the current projection is perspective and bSymmetricFrustum, 
-             FrustumIsLeftRightSymmetric()
-                    and FrustumIsTopBottomSymmetric() are all 
-             equal, then no changes are made and true is returned.
+            Returns: If the current projection is perspective and bSymmetricFrustum, FrustumIsLeftRightSymmetric()
+          
+                       and FrustumIsTopBottomSymmetric() are all equal, then no changes are made and true is 
+             returned.
         
         ChangeToPerspectiveProjection(self: RhinoViewport, symmetricFrustum: bool, lensLength: float) -> bool
         
             Use this function to change projections of valid viewports from parallel to perspective.
-         
-                        It will make common additional adjustments to the frustum and camera location 
-             so the
-                    resulting views are similar. The camera direction and target point are 
-             not be changed.
+               
+                  It will make common additional adjustments to the frustum and camera location so the
+              
+                   resulting views are similar. The camera direction and target point are not be changed.
         
         
             symmetricFrustum: true if you want the resulting frustum to be symmetric.
-            lensLength: (pass 50.0 when in doubt) 35 mm lens length to use when changing from parallel to 
-             perspective
-                    projections. If the current projection is perspective or 
-             lens_length is <= 0.0, then
-                    this parameter is ignored.
+            lensLength: (pass 50.0 when in doubt) 35 mm lens length to use when changing from parallel to perspective
+          
+                       projections. If the current projection is perspective or lens_length is <= 0.0, then
+         
+                        this parameter is ignored.
         
-            Returns: If the current projection is perspective and bSymmetricFrustum, 
-             FrustumIsLeftRightSymmetric()
-                    and FrustumIsTopBottomSymmetric() are all 
-             equal, then no changes are made and true is returned.
+            Returns: If the current projection is perspective and bSymmetricFrustum, FrustumIsLeftRightSymmetric()
+          
+                       and FrustumIsTopBottomSymmetric() are all equal, then no changes are made and true is 
+             returned.
         """
         pass
 
@@ -3653,8 +3648,8 @@ class RhinoViewport(object, IDisposable):
         
             sphere: The sphere.
             Returns: true if the sphere intersects the view frustum and near_dist/far_dist were set.
-                  
-               false if the sphere does not intesect the view frustum.
+                    
+             false if the sphere does not intesect the view frustum.
         
         GetDepth(self: RhinoViewport, bbox: BoundingBox) -> (bool, float, float)
         
@@ -3662,8 +3657,8 @@ class RhinoViewport(object, IDisposable):
         
             bbox: The bounding box.
             Returns: true if the bounding box intersects the view frustum and near_dist/far_dist were set.
-            
-                     false if the bounding box does not intesect the view frustum.
+                  
+               false if the bounding box does not intesect the view frustum.
         
         GetDepth(self: RhinoViewport, point: Point3d) -> (bool, float)
         
@@ -3671,8 +3666,8 @@ class RhinoViewport(object, IDisposable):
         
             point: A 3D point.
             Returns: true if the point is ing the view frustum and near_dist/far_dist were set.
-                    
-             false if the bounding box does not intesect the view frustum.
+                    false if 
+             the bounding box does not intesect the view frustum.
         """
         pass
 
@@ -3682,8 +3677,7 @@ class RhinoViewport(object, IDisposable):
         
             Get corners of far clipping plane rectangle.
             Returns: [left_bottom, right_bottom, left_top, right_top] points on success
-                    null on 
-             failure.
+                    null on failure.
         """
         pass
 
@@ -3782,8 +3776,7 @@ class RhinoViewport(object, IDisposable):
         
             Get corners of near clipping plane rectangle.
             Returns: [left_bottom, right_bottom, left_top, right_top] points on success
-                    null on 
-             failure.
+                    null on failure.
         """
         pass
 
@@ -3792,10 +3785,9 @@ class RhinoViewport(object, IDisposable):
         GetPickTransform(self: RhinoViewport, clientRectangle: Rectangle) -> Transform
         
             Takes a rectangle in screen coordinates and returns a transformation
-                    that 
-             maps the 3d frustum defined by the rectangle to a -1/+1 clipping
-                    coordinate 
-             box.
+                    that maps the 
+             3d frustum defined by the rectangle to a -1/+1 clipping
+                    coordinate box.
         
         
             clientRectangle: The client rectangle.
@@ -3803,14 +3795,14 @@ class RhinoViewport(object, IDisposable):
         GetPickTransform(self: RhinoViewport, clientPoint: Point) -> Transform
         
             Takes a rectangle in screen coordinates and returns a transformation
-                    that 
-             maps the 3d frustum defined by the rectangle to a -1/+1 clipping
-                    coordinate 
-             box. This takes a single point and inflates it by
+                    that maps the 
+             3d frustum defined by the rectangle to a -1/+1 clipping
+                    coordinate box. This takes 
+             a single point and inflates it by
                     
              Rhino.ApplicationSettings.ModelAidSettings.MousePickBoxRadius to define
-                    the 
-             screen rectangle.
+                    the screen 
+             rectangle.
         
         
             clientPoint: The client point.
@@ -3818,14 +3810,14 @@ class RhinoViewport(object, IDisposable):
         GetPickTransform(self: RhinoViewport, clientX: int, clientY: int) -> Transform
         
             Takes a rectangle in screen coordinates and returns a transformation
-                    that 
-             maps the 3d frustum defined by the rectangle to a -1/+1 clipping
-                    coordinate 
-             box. This takes a single point and inflates it by
+                    that maps the 
+             3d frustum defined by the rectangle to a -1/+1 clipping
+                    coordinate box. This takes 
+             a single point and inflates it by
                     
              Rhino.ApplicationSettings.ModelAidSettings.MousePickBoxRadius to define
-                    the 
-             screen rectangle.
+                    the screen 
+             rectangle.
         
         
             clientX: The client point X coordinate.
@@ -3839,8 +3831,8 @@ class RhinoViewport(object, IDisposable):
         GetScreenPort(self: RhinoViewport) -> (bool, int, int, int, int, int, int)
         
             Location of viewport in pixels.  These are provided so you can set the port you are using
-        
-                         and get the appropriate transformations to and from screen space.
+              
+                   and get the appropriate transformations to and from screen space.
         
             Returns: true if the operation is successful.
         """
@@ -3855,8 +3847,8 @@ class RhinoViewport(object, IDisposable):
             sourceSystem: The origin coordinate system.
             destinationSystem: The target coordinate system.
             Returns: 4x4 transformation matrix (acts on the left)
-                    Identity matrix is returned if 
-             this function fails.
+                    Identity matrix is returned if this 
+             function fails.
         """
         pass
 
@@ -3882,8 +3874,8 @@ class RhinoViewport(object, IDisposable):
         IsVisible(self: RhinoViewport, bbox: BoundingBox) -> bool
         
             Returns true if some portion of a world coordinate bounding box is
-                    
-             potentially visible in the viewing frustum.
+                    potentially 
+             visible in the viewing frustum.
         
         
             bbox: A bounding box that is tested for visibility.
@@ -3922,8 +3914,8 @@ class RhinoViewport(object, IDisposable):
         
             leftRight: left/right rotate if true, up/down rotate if false.
             angleRadians: If less than 0, rotation is to left or down.
-                    If greater than 0, rotation is 
-             to right or up.
+                    If greater than 0, rotation is to 
+             right or up.
         
             Returns: true if operation succeeded; otherwise false.
         """
@@ -3937,10 +3929,10 @@ class RhinoViewport(object, IDisposable):
         
             magnificationFactor: The scale factor.
             mode: false = perform a "dolly" magnification by moving the camera towards/away from
-                   
-              the target so that the amount of the screen subtended by an object changes.
-                    
-             true = perform a "zoom" magnification by adjusting the "lens" angle
+                    the 
+             target so that the amount of the screen subtended by an object changes.
+                    true = 
+             perform a "zoom" magnification by adjusting the "lens" angle
         
             fixedScreenPoint: A point in the sceen that should remain fixed.
             Returns: true if operation succeeded; otherwise false.
@@ -3950,10 +3942,10 @@ class RhinoViewport(object, IDisposable):
         
             magnificationFactor: The scale factor.
             mode: false = perform a "dolly" magnification by moving the camera towards/away from
-                   
-              the target so that the amount of the screen subtended by an object changes.
-                    
-             true = perform a "zoom" magnification by adjusting the "lens" angle
+                    the 
+             target so that the amount of the screen subtended by an object changes.
+                    true = 
+             perform a "zoom" magnification by adjusting the "lens" angle
         
             Returns: true if operation succeeded; otherwise false.
         """
@@ -4002,8 +3994,8 @@ class RhinoViewport(object, IDisposable):
         NextConstructionPlane(self: RhinoViewport) -> bool
         
             Sets the construction plane to the plane that was
-                    active before the last call 
-             to PreviousConstructionPlane.
+                    active before the last call to 
+             PreviousConstructionPlane.
         
             Returns: true if successful.
         """
@@ -4014,8 +4006,8 @@ class RhinoViewport(object, IDisposable):
         NextViewProjection(self: RhinoViewport) -> bool
         
             Sets the view projection and target to the settings that 
-                    were active before 
-             the last call to PrevView.
+                    were active before the 
+             last call to PrevView.
         
             Returns: true if the view stack was popped.
         """
@@ -4026,8 +4018,8 @@ class RhinoViewport(object, IDisposable):
         PopConstructionPlane(self: RhinoViewport) -> bool
         
             Sets the construction plane to the plane that was
-                    active before the last call 
-             to PushConstructionPlane.
+                    active before the last call to 
+             PushConstructionPlane.
         
             Returns: true if a construction plane was popped.
         """
@@ -4038,8 +4030,8 @@ class RhinoViewport(object, IDisposable):
         PopViewProjection(self: RhinoViewport) -> bool
         
             Sets the view projection and target to the settings at the top of
-                    the view 
-             stack and removes those settings from the view stack.
+                    the view stack 
+             and removes those settings from the view stack.
         
             Returns: true if there were settings that could be popped from the stack.
         """
@@ -4050,8 +4042,8 @@ class RhinoViewport(object, IDisposable):
         PreviousConstructionPlane(self: RhinoViewport) -> bool
         
             Sets the construction plane to the plane that was
-                    active before the last call 
-             to NextConstructionPlane
+                    active before the last call to 
+             NextConstructionPlane
                     or SetConstructionPlane.
         
             Returns: true if successful.
@@ -4063,8 +4055,8 @@ class RhinoViewport(object, IDisposable):
         PreviousViewProjection(self: RhinoViewport) -> bool
         
             Sets the view projection and target to the settings that
-                    were active before 
-             the last call to NextViewProjection.
+                    were active before the 
+             last call to NextViewProjection.
         
             Returns: true if the view stack was popped.
         """
@@ -4074,8 +4066,8 @@ class RhinoViewport(object, IDisposable):
         """
         PushConstructionPlane(self: RhinoViewport, cplane: ConstructionPlane)
             Pushes the current construction plane on the viewport's
-                    construction plane 
-             stack and sets the construction plane
+                    construction plane stack 
+             and sets the construction plane
                     to cplane.
         
         
@@ -4118,18 +4110,18 @@ class RhinoViewport(object, IDisposable):
         """
         SetCameraDirection(self: RhinoViewport, cameraDirection: Vector3d, updateTargetLocation: bool)
             Set viewport camera direction. By default the target location is changed so that
-                 
-                the vector from the camera location to the target is parallel to the camera direction.
+                    
+             the vector from the camera location to the target is parallel to the camera direction.
         
         
             cameraDirection: new camera direction.
             updateTargetLocation: if true, the target location is changed so that the vector from the camera
-                    
-             location to the target is parallel to the camera direction.
-                    If false, the 
-             target location is not changed.
-                    See the remarks section of 
-             RhinoViewport.SetTarget for important details.
+                    location 
+             to the target is parallel to the camera direction.
+                    If false, the target location is 
+             not changed.
+                    See the remarks section of RhinoViewport.SetTarget for important 
+             details.
         """
         pass
 
@@ -4137,20 +4129,20 @@ class RhinoViewport(object, IDisposable):
         """
         SetCameraLocation(self: RhinoViewport, cameraLocation: Point3d, updateTargetLocation: bool)
             Set viewport camera location. By default the target location is changed so that
+                     
+             the vector from the camera location to the target is parallel to the camera direction
                   
-                the vector from the camera location to the target is parallel to the camera direction
-         
-                         vector.
+                vector.
         
         
             cameraLocation: new camera location.
             updateTargetLocation: if true, the target location is changed so that the vector from the camera
-                    
-             location to the target is parallel to the camera direction vector.  
-                    If 
-             false, the target location is not changed. See the remarks section of
-                    
-             RhinoViewport.SetTarget for important details.
+                    location 
+             to the target is parallel to the camera direction vector.  
+                    If false, the target 
+             location is not changed. See the remarks section of
+                    RhinoViewport.SetTarget for 
+             important details.
         """
         pass
 
@@ -4158,10 +4150,10 @@ class RhinoViewport(object, IDisposable):
         """
         SetCameraLocations(self: RhinoViewport, targetLocation: Point3d, cameraLocation: Point3d)
             Set viewport camera location and target location. The camera direction vector is
-                 
-                changed so that it is parallel to the vector from the camera location to
                     
-             the target location.
+             changed so that it is parallel to the vector from the camera location to
+                    the target 
+             location.
         
         
             targetLocation: new target location.
@@ -4173,19 +4165,19 @@ class RhinoViewport(object, IDisposable):
         """
         SetCameraTarget(self: RhinoViewport, targetLocation: Point3d, updateCameraLocation: bool)
             Set viewport target point. By default the camera location
-                    is translated so 
-             that the camera direction vector is parallel
-                    to the vector from the camera 
-             location to the target location.
+                    is translated so that the 
+             camera direction vector is parallel
+                    to the vector from the camera location to the 
+             target location.
         
         
             targetLocation: new target location.
             updateCameraLocation: if true, the camera location is translated so that the camera direction
-                    
-             vector is parallel to the vector from the camera location to the target
-                    
-             location.
-                    If false, the camera location is not changed.
+                    vector is 
+             parallel to the vector from the camera location to the target
+                    location.
+                   
+              If false, the camera location is not changed.
         """
         pass
 
@@ -4250,8 +4242,8 @@ class RhinoViewport(object, IDisposable):
             projection: The "standard" projection type.
             updateTargetLocation: if true, the target location is changed so that the vector from the camera location to the 
              target
-                    is parallel to the camera direction vector.  If false, the target 
-             location is not changed.
+                    is parallel to the camera direction vector.  If false, the target location 
+             is not changed.
         
             Returns: true on success.
         """
@@ -4269,10 +4261,10 @@ class RhinoViewport(object, IDisposable):
         WorldToClient(self: RhinoViewport, worldPoint: Point3d) -> Point2d
         
             Convert a point from world coordinates in the viewport to a 2d screen
-                    point 
-             in the local coordinates of the viewport (X/Y of point is relative
-                    to top 
-             left corner of viewport on screen)
+                    point in the 
+             local coordinates of the viewport (X/Y of point is relative
+                    to top left corner of 
+             viewport on screen)
         
         
             worldPoint: The 3D point in world coordinates.
@@ -4720,8 +4712,8 @@ class VisualAnalysisMode(object):
         """
         DrawCurveObject(self: VisualAnalysisMode, curve: CurveObject, pipeline: DisplayPipeline)
             If Style==Wireframe, then the default decomposes the curve object into
-                    nurbs 
-             curve segments and calls the virtual DrawNurbsCurve for each segment.
+                    nurbs curve 
+             segments and calls the virtual DrawNurbsCurve for each segment.
         
         
             curve: A document curve object.
@@ -4758,8 +4750,8 @@ class VisualAnalysisMode(object):
         """
         DrawNurbsCurve(self: VisualAnalysisMode, obj: RhinoObject, curve: NurbsCurve, pipeline: DisplayPipeline)
             Draws a NURBS curve. This is a good function to override for
-                    analysis modes 
-             like curvature hair display.
+                    analysis modes like 
+             curvature hair display.
                     The default implementation does nothing.
         
         
@@ -4801,8 +4793,8 @@ class VisualAnalysisMode(object):
         """
         DrawPointObject(self: VisualAnalysisMode, point: PointObject, pipeline: DisplayPipeline)
             Draws one point. Override this method to add your custom behavior.
-                    The 
-             default implementation does nothing.
+                    The default 
+             implementation does nothing.
         
         
             point: A point object.
@@ -4814,10 +4806,10 @@ class VisualAnalysisMode(object):
         """
         EnableUserInterface(self: VisualAnalysisMode, on: bool)
             Turns the analysis mode's user interface on and off. For Rhino's built
-                    in 
-             modes this opens or closes the modeless dialog that controls the
-                    analysis 
-             mode's display settings.
+                    in modes 
+             this opens or closes the modeless dialog that controls the
+                    analysis mode's display 
+             settings.
         
         
             on: true if the inferface should be shown; false if it should be concealed.
@@ -4861,8 +4853,8 @@ class VisualAnalysisMode(object):
             Registers a custom visual analysis mode for use in Rhino.  It is OK to call
                     
              register multiple times for a single custom analysis mode type, since subsequent
-                 
-                register calls will notice that the type has already been registered.
+                    
+             register calls will notice that the type has already been registered.
         
         
             customAnalysisModeType: Must be a type that is a subclass of VisualAnalysisMode.
@@ -4874,8 +4866,8 @@ class VisualAnalysisMode(object):
         """
         SetUpDisplayAttributes(self: VisualAnalysisMode, obj: RhinoObject, attributes: DisplayPipelineAttributes)
             If an analysis mode needs to modify display attributes, this is the place
-                    to 
-             do it.  In particular, Style==Texture, then this function must be
+                    to do it. 
+              In particular, Style==Texture, then this function must be
                     overridden.
         
         
@@ -4888,12 +4880,12 @@ class VisualAnalysisMode(object):
         """
         UpdateVertexColors(self: VisualAnalysisMode, obj: RhinoObject, meshes: Array[Mesh])
             If Style==falseColor, then this virtual function must be overridden.
-                    Rhino 
-             calls this function when it is time for to set the false colors
-                    on the 
-             analysis mesh vertices.  For breps, there is one mesh per face.
-                    For mesh 
-             objects there is a single mesh.
+                    Rhino calls 
+             this function when it is time for to set the false colors
+                    on the analysis mesh 
+             vertices.  For breps, there is one mesh per face.
+                    For mesh objects there is a 
+             single mesh.
         
         
             obj: The object for which to update vertex colors.

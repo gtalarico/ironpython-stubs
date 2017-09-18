@@ -4,22 +4,16 @@ class TreeNodeCollection(object,IList,ICollection,IEnumerable):
   """
   Add(self: TreeNodeCollection,key: str,text: str,imageIndex: int,selectedImageIndex: int) -> TreeNode
   
-   Creates a tree node with the specified key,text,and images,and adds it to 
-    the collection.
-  
+   Creates a tree node with the specified key,text,and images,and adds it to the collection.
   
    key: The name of the tree node.
    text: The text to display in the tree node.
    imageIndex: The index of the image to display in the tree node.
-   selectedImageIndex: The index of the image to be displayed in the tree node when it is in a 
-    selected state.
-  
+   selectedImageIndex: The index of the image to be displayed in the tree node when it is in a selected state.
    Returns: The tree node that was added to the collection.
   Add(self: TreeNodeCollection,key: str,text: str,imageKey: str,selectedImageKey: str) -> TreeNode
   
-   Creates a tree node with the specified key,text,and images,and adds it to 
-    the collection.
-  
+   Creates a tree node with the specified key,text,and images,and adds it to the collection.
   
    key: The name of the tree node.
    text: The text to display in the tree node.
@@ -31,14 +25,12 @@ class TreeNodeCollection(object,IList,ICollection,IEnumerable):
    Adds a previously created tree node to the end of the tree node collection.
   
    node: The System.Windows.Forms.TreeNode to add to the collection.
-   Returns: The zero-based index value of the System.Windows.Forms.TreeNode added to the 
-    tree node collection.
+   Returns: The zero-based index value of the System.Windows.Forms.TreeNode added to the tree node 
+    collection.
   
   Add(self: TreeNodeCollection,key: str,text: str,imageKey: str) -> TreeNode
   
-   Creates a tree node with the specified key,text,and image,and adds it to the 
-    collection.
-  
+   Creates a tree node with the specified key,text,and image,and adds it to the collection.
   
    key: The name of the tree node.
    text: The text to display in the tree node.
@@ -46,28 +38,22 @@ class TreeNodeCollection(object,IList,ICollection,IEnumerable):
    Returns: The System.Windows.Forms.TreeNode that was added to the collection.
   Add(self: TreeNodeCollection,text: str) -> TreeNode
   
-   Adds a new tree node with the specified label text to the end of the current 
-    tree node collection.
+   Adds a new tree node with the specified label text to the end of the current tree node 
+    collection.
   
   
    text: The label text displayed by the System.Windows.Forms.TreeNode.
-   Returns: A System.Windows.Forms.TreeNode that represents the tree node being added to 
-    the collection.
-  
+   Returns: A System.Windows.Forms.TreeNode that represents the tree node being added to the collection.
   Add(self: TreeNodeCollection,key: str,text: str) -> TreeNode
   
-   Creates a new tree node with the specified key and text,and adds it to the 
-    collection.
-  
+   Creates a new tree node with the specified key and text,and adds it to the collection.
   
    key: The name of the tree node.
    text: The text to display in the tree node.
    Returns: The System.Windows.Forms.TreeNode that was added to the collection.
   Add(self: TreeNodeCollection,key: str,text: str,imageIndex: int) -> TreeNode
   
-   Creates a tree node with the specified key,text,and image,and adds it to the 
-    collection.
-  
+   Creates a tree node with the specified key,text,and image,and adds it to the collection.
   
    key: The name of the tree node.
    text: The text to display in the tree node.
@@ -80,8 +66,8 @@ class TreeNodeCollection(object,IList,ICollection,IEnumerable):
   AddRange(self: TreeNodeCollection,nodes: Array[TreeNode])
    Adds an array of previously created tree nodes to the collection.
   
-   nodes: An array of System.Windows.Forms.TreeNode objects representing the tree nodes 
-    to add to the collection.
+   nodes: An array of System.Windows.Forms.TreeNode objects representing the tree nodes to add to the 
+    collection.
   """
   pass
  def Clear(self):
@@ -97,8 +83,7 @@ class TreeNodeCollection(object,IList,ICollection,IEnumerable):
    Determines whether the specified tree node is a member of the collection.
   
    node: The System.Windows.Forms.TreeNode to locate in the collection.
-   Returns: true if the System.Windows.Forms.TreeNode is a member of the collection; 
-    otherwise,false.
+   Returns: true if the System.Windows.Forms.TreeNode is a member of the collection; otherwise,false.
   """
   pass
  def ContainsKey(self,key):
@@ -108,16 +93,14 @@ class TreeNodeCollection(object,IList,ICollection,IEnumerable):
    Determines whether the collection contains a tree node with the specified key.
   
    key: The name of the System.Windows.Forms.TreeNode to search for.
-   Returns: true to indicate the collection contains a System.Windows.Forms.TreeNode with 
-    the specified key; otherwise,false.
+   Returns: true to indicate the collection contains a System.Windows.Forms.TreeNode with the specified key; 
+    otherwise,false.
   """
   pass
  def CopyTo(self,dest,index):
   """
   CopyTo(self: TreeNodeCollection,dest: Array,index: int)
-   Copies the entire collection into an existing array at a specified location 
-    within the array.
-  
+   Copies the entire collection into an existing array at a specified location within the array.
   
    dest: The destination array.
    index: The index in the destination array at which storing begins.
@@ -131,17 +114,15 @@ class TreeNodeCollection(object,IList,ICollection,IEnumerable):
   
    key: The name of the tree node to search for.
    searchAllChildren: true to search child nodes of tree nodes; otherwise,false.
-   Returns: An array of System.Windows.Forms.TreeNode objects whose 
-    System.Windows.Forms.TreeNode.Name property matches the specified key.
+   Returns: An array of System.Windows.Forms.TreeNode objects whose System.Windows.Forms.TreeNode.Name 
+    property matches the specified key.
   """
   pass
  def GetEnumerator(self):
   """
   GetEnumerator(self: TreeNodeCollection) -> IEnumerator
   
-   Returns an enumerator that can be used to iterate through the tree node 
-    collection.
-  
+   Returns an enumerator that can be used to iterate through the tree node collection.
    Returns: An System.Collections.IEnumerator that represents the tree node collection.
   """
   pass
@@ -152,8 +133,7 @@ class TreeNodeCollection(object,IList,ICollection,IEnumerable):
    Returns the index of the specified tree node in the collection.
   
    node: The System.Windows.Forms.TreeNode to locate in the collection.
-   Returns: The zero-based index of the item found in the tree node collection; otherwise,
-    -1.
+   Returns: The zero-based index of the item found in the tree node collection; otherwise,-1.
   """
   pass
  def IndexOfKey(self,key):
@@ -163,16 +143,16 @@ class TreeNodeCollection(object,IList,ICollection,IEnumerable):
    Returns the index of the first occurrence of a tree node with the specified key.
   
    key: The name of the tree node to search for.
-   Returns: The zero-based index of the first occurrence of a tree node with the specified 
-    key,if found; otherwise,-1.
+   Returns: The zero-based index of the first occurrence of a tree node with the specified key,if found; 
+    otherwise,-1.
   """
   pass
  def Insert(self,index,*__args):
   """
   Insert(self: TreeNodeCollection,index: int,key: str,text: str,imageKey: str) -> TreeNode
   
-   Creates a tree node with the specified key,text,and image,and inserts it 
-    into the collection at the specified index.
+   Creates a tree node with the specified key,text,and image,and inserts it into the collection 
+    at the specified index.
   
   
    index: The location within the collection to insert the node.
@@ -182,22 +162,20 @@ class TreeNodeCollection(object,IList,ICollection,IEnumerable):
    Returns: The System.Windows.Forms.TreeNode that was inserted in the collection.
   Insert(self: TreeNodeCollection,index: int,key: str,text: str,imageIndex: int,selectedImageIndex: int) -> TreeNode
   
-   Creates a tree node with the specified key,text,and images,and inserts it 
-    into the collection at the specified index.
+   Creates a tree node with the specified key,text,and images,and inserts it into the collection 
+    at the specified index.
   
   
    index: The location within the collection to insert the node.
    key: The name of the tree node.
    text: The text to display in the tree node.
    imageIndex: The index of the image to display in the tree node.
-   selectedImageIndex: The index of the image to display in the tree node when it is in a selected 
-    state.
-  
+   selectedImageIndex: The index of the image to display in the tree node when it is in a selected state.
    Returns: The System.Windows.Forms.TreeNode that was inserted in the collection.
   Insert(self: TreeNodeCollection,index: int,key: str,text: str,imageKey: str,selectedImageKey: str) -> TreeNode
   
-   Creates a tree node with the specified key,text,and images,and inserts it 
-    into the collection at the specified index.
+   Creates a tree node with the specified key,text,and images,and inserts it into the collection 
+    at the specified index.
   
   
    index: The location within the collection to insert the node.
@@ -208,8 +186,8 @@ class TreeNodeCollection(object,IList,ICollection,IEnumerable):
    Returns: The System.Windows.Forms.TreeNode that was inserted in the collection.
   Insert(self: TreeNodeCollection,index: int,key: str,text: str,imageIndex: int) -> TreeNode
   
-   Creates a tree node with the specified key,text,and image,and inserts it 
-    into the collection at the specified index.
+   Creates a tree node with the specified key,text,and image,and inserts it into the collection 
+    at the specified index.
   
   
    index: The location within the collection to insert the node.
@@ -218,26 +196,20 @@ class TreeNodeCollection(object,IList,ICollection,IEnumerable):
    imageIndex: The index of the image to display in the tree node.
    Returns: The System.Windows.Forms.TreeNode that was inserted in the collection.
   Insert(self: TreeNodeCollection,index: int,node: TreeNode)
-   Inserts an existing tree node into the tree node collection at the specified 
-    location.
-  
+   Inserts an existing tree node into the tree node collection at the specified location.
   
    index: The indexed location within the collection to insert the tree node.
    node: The System.Windows.Forms.TreeNode to insert into the collection.
   Insert(self: TreeNodeCollection,index: int,text: str) -> TreeNode
   
-   Creates a tree node with the specified text and inserts it at the specified 
-    index.
-  
+   Creates a tree node with the specified text and inserts it at the specified index.
   
    index: The location within the collection to insert the node.
    text: The text to display in the tree node.
    Returns: The System.Windows.Forms.TreeNode that was inserted in the collection.
   Insert(self: TreeNodeCollection,index: int,key: str,text: str) -> TreeNode
   
-   Creates a tree node with the specified text and key,and inserts it into the 
-    collection.
-  
+   Creates a tree node with the specified text and key,and inserts it into the collection.
   
    index: The location within the collection to insert the node.
    key: The name of the tree node.
@@ -279,8 +251,7 @@ class TreeNodeCollection(object,IList,ICollection,IEnumerable):
    Determines whether the System.Collections.IList contains a specific value.
   
    value: The object to locate in the System.Collections.IList.
-   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,
-    false.
+   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,false.
   """
   pass
  def __getitem__(self,*args):

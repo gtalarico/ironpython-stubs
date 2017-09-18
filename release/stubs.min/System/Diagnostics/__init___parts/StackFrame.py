@@ -13,21 +13,18 @@ class StackFrame(object):
   """
   GetFileColumnNumber(self: StackFrame) -> int
   
-   Gets the column number in the file that contains the code that is executing. 
-    This information is typically extracted from the debugging symbols for the 
-    executable.
+   Gets the column number in the file that contains the code that is executing. This information is 
+    typically extracted from the debugging symbols for the executable.
   
-   Returns: The file column number,or 0 (zero) if the file column number cannot be 
-    determined.
+   Returns: The file column number,or 0 (zero) if the file column number cannot be determined.
   """
   pass
  def GetFileLineNumber(self):
   """
   GetFileLineNumber(self: StackFrame) -> int
   
-   Gets the line number in the file that contains the code that is executing. This 
-    information is typically extracted from the debugging symbols for the 
-    executable.
+   Gets the line number in the file that contains the code that is executing. This information is 
+    typically extracted from the debugging symbols for the executable.
   
    Returns: The file line number,or 0 (zero) if the file line number cannot be determined.
   """
@@ -36,8 +33,8 @@ class StackFrame(object):
   """
   GetFileName(self: StackFrame) -> str
   
-   Gets the file name that contains the code that is executing. This information 
-    is typically extracted from the debugging symbols for the executable.
+   Gets the file name that contains the code that is executing. This information is typically 
+    extracted from the debugging symbols for the executable.
   
    Returns: The file name,or null if the file name cannot be determined.
   """
@@ -46,11 +43,10 @@ class StackFrame(object):
   """
   GetILOffset(self: StackFrame) -> int
   
-   Gets the offset from the start of the Microsoft intermediate language (MSIL) 
-    code for the method that is executing. This offset might be an approximation 
-    depending on whether or not the just-in-time (JIT) compiler is generating 
-    debugging code. The generation of this debugging information is controlled by 
-    the System.Diagnostics.DebuggableAttribute.
+   Gets the offset from the start of the Microsoft intermediate language (MSIL) code for the method 
+    that is executing. This offset might be an approximation depending on whether or not the 
+    just-in-time (JIT) compiler is generating debugging code. The generation of this debugging 
+    information is controlled by the System.Diagnostics.DebuggableAttribute.
   
    Returns: The offset from the start of the MSIL code for the method that is executing.
   """
@@ -67,12 +63,11 @@ class StackFrame(object):
   """
   GetNativeOffset(self: StackFrame) -> int
   
-   Gets the offset from the start of the native just-in-time (JIT)-compiled code 
-    for the method that is being executed. The generation of this debugging 
-    information is controlled by the System.Diagnostics.DebuggableAttribute class.
+   Gets the offset from the start of the native just-in-time (JIT)-compiled code for the method 
+    that is being executed. The generation of this debugging information is controlled by the 
+    System.Diagnostics.DebuggableAttribute class.
   
-   Returns: The offset from the start of the JIT-compiled code for the method that is being 
-    executed.
+   Returns: The offset from the start of the JIT-compiled code for the method that is being executed.
   """
   pass
  def ToString(self):

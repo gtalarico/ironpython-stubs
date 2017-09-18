@@ -1,0 +1,9 @@
+{
+  "ProtoGeometry.DLL": {
+    "Autodesk.DesignScript.Geometry.TSpline": "<module 'TSpline' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.DesignScript.Geometry.Core": "<module 'Core' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.DesignScript": "<module 'DesignScript' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk": "<module 'Autodesk' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.DesignScript.Geometry": "<module 'Geometry' (CLS module from ProtoGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

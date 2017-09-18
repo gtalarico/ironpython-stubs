@@ -27,11 +27,11 @@ class DnsEndPoint(EndPoint):
   """
   ToString(self: DnsEndPoint) -> str
   
-   Returns the host name or string representation of the IP address and port 
-    number of the System.Net.DnsEndPoint.
+   Returns the host name or string representation of the IP address and port number of the 
+    System.Net.DnsEndPoint.
   
-   Returns: A string containing the address family,host name or IP address string,and the 
-    port number of the specified System.Net.DnsEndPoint.
+   Returns: A string containing the address family,host name or IP address string,and the port number of 
+    the specified System.Net.DnsEndPoint.
   """
   pass
  def __eq__(self,*args):

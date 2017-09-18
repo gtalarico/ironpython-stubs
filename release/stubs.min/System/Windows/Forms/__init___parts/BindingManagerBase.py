@@ -26,20 +26,16 @@ class BindingManagerBase(object):
   """
   GetItemProperties(self: BindingManagerBase) -> PropertyDescriptorCollection
   
-   When overridden in a derived class,gets the collection of property descriptors 
-    for the binding.
-  
-   Returns: A System.ComponentModel.PropertyDescriptorCollection that represents the 
-    property descriptors for the binding.
+   When overridden in a derived class,gets the collection of property descriptors for the binding.
+   Returns: A System.ComponentModel.PropertyDescriptorCollection that represents the property descriptors 
+    for the binding.
   """
   pass
  def GetListName(self,*args):
   """
   GetListName(self: BindingManagerBase,listAccessors: ArrayList) -> str
   
-   When overridden in a derived class,gets the name of the list supplying the 
-    data for the binding.
-  
+   When overridden in a derived class,gets the name of the list supplying the data for the binding.
   
    listAccessors: An System.Collections.ArrayList containing the table's bound properties.
    Returns: The name of the list supplying the data for the binding.
@@ -74,29 +70,27 @@ class BindingManagerBase(object):
   OnDataError(self: BindingManagerBase,e: Exception)
    Raises the System.Windows.Forms.BindingManagerBase.DataError event.
   
-   e: An System.Exception that caused the 
-    System.Windows.Forms.BindingManagerBase.DataError event to occur.
+   e: An System.Exception that caused the System.Windows.Forms.BindingManagerBase.DataError event to 
+    occur.
   """
   pass
  def PullData(self,*args):
   """
   PullData(self: BindingManagerBase)
-   Pulls data from the data-bound control into the data source,returning no 
-    information.
+   Pulls data from the data-bound control into the data source,returning no information.
   """
   pass
  def PushData(self,*args):
   """
   PushData(self: BindingManagerBase)
-   Pushes data from the data source into the data-bound control,returning no 
-    information.
+   Pushes data from the data source into the data-bound control,returning no information.
   """
   pass
  def RemoveAt(self,index):
   """
   RemoveAt(self: BindingManagerBase,index: int)
-   When overridden in a derived class,deletes the row at the specified index from 
-    the underlying list.
+   When overridden in a derived class,deletes the row at the specified index from the underlying 
+    list.
   
   
    index: The index of the row to delete.

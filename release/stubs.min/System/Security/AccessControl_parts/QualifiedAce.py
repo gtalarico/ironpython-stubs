@@ -4,18 +4,18 @@ class QualifiedAce(KnownAce):
   """
   GetOpaque(self: QualifiedAce) -> Array[Byte]
   
-   Returns the opaque callback data associated with this 
-    System.Security.AccessControl.QualifiedAce object.
+   Returns the opaque callback data associated with this System.Security.AccessControl.QualifiedAce 
+    object.
   
-   Returns: An array of byte values that represents the opaque callback data associated 
-    with this System.Security.AccessControl.QualifiedAce object.
+   Returns: An array of byte values that represents the opaque callback data associated with this 
+    System.Security.AccessControl.QualifiedAce object.
   """
   pass
  def SetOpaque(self,opaque):
   """
   SetOpaque(self: QualifiedAce,opaque: Array[Byte])
-   Sets the opaque callback data associated with this 
-    System.Security.AccessControl.QualifiedAce object.
+   Sets the opaque callback data associated with this System.Security.AccessControl.QualifiedAce 
+    object.
   
   
    opaque: An array of byte values that represents the opaque callback data for this 

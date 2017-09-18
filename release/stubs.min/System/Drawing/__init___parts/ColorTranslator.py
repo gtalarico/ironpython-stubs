@@ -5,9 +5,7 @@ class ColorTranslator(object):
   """
   FromHtml(htmlColor: str) -> Color
   
-   Translates an HTML color representation to a GDI+ System.Drawing.Color 
-    structure.
-  
+   Translates an HTML color representation to a GDI+ System.Drawing.Color structure.
   
    htmlColor: The string representation of the Html color to translate.
    Returns: The System.Drawing.Color structure that represents the translated HTML color or 
@@ -41,9 +39,7 @@ class ColorTranslator(object):
   """
   ToHtml(c: Color) -> str
   
-   Translates the specified System.Drawing.Color structure to an HTML string color 
-    representation.
-  
+   Translates the specified System.Drawing.Color structure to an HTML string color representation.
   
    c: The System.Drawing.Color structure to translate.
    Returns: The string that represents the HTML color.

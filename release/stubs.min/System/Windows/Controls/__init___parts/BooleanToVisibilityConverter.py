@@ -10,8 +10,8 @@ class BooleanToVisibilityConverter(object,IValueConverter):
   
    Converts a Boolean value to a System.Windows.Visibility enumeration value.
   
-   value: The Boolean value to convert. This value can be a standard Boolean value or a 
-    nullable Boolean value.
+   value: The Boolean value to convert. This value can be a standard Boolean value or a nullable Boolean 
+    value.
   
    targetType: This parameter is not used.
    parameter: This parameter is not used.

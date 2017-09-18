@@ -8,25 +8,24 @@ class InstanceDataCollectionCollection(DictionaryBase,IDictionary,ICollection,IE
   """
   Contains(self: InstanceDataCollectionCollection,counterName: str) -> bool
   
-   Determines whether an instance data collection for the specified counter 
-    (identified by one of the indexed System.Diagnostics.InstanceDataCollection 
-    objects) exists in the collection.
+   Determines whether an instance data collection for the specified counter (identified by one of 
+    the indexed System.Diagnostics.InstanceDataCollection objects) exists in the collection.
   
   
    counterName: The name of the performance counter.
-   Returns: true if an instance data collection containing the specified counter exists in 
-    the collection; otherwise,false.
+   Returns: true if an instance data collection containing the specified counter exists in the collection; 
+    otherwise,false.
   """
   pass
  def CopyTo(self,*__args):
   """
   CopyTo(self: InstanceDataCollectionCollection,counters: Array[InstanceDataCollection],index: int)
-   Copies an array of System.Diagnostics.InstanceDataCollection instances to the 
-    collection,at the specified index.
+   Copies an array of System.Diagnostics.InstanceDataCollection instances to the collection,at the 
+    specified index.
   
   
-   counters: An array of System.Diagnostics.InstanceDataCollection instances (identified by 
-    the counters they contain) to add to the collection.
+   counters: An array of System.Diagnostics.InstanceDataCollection instances (identified by the counters they 
+    contain) to add to the collection.
   
    index: The location at which to add the new instances.
   """
@@ -49,8 +48,8 @@ class InstanceDataCollectionCollection(DictionaryBase,IDictionary,ICollection,IE
   """
   OnGet(self: DictionaryBase,key: object,currentValue: object) -> object
   
-   Gets the element with the specified key and value in the 
-    System.Collections.DictionaryBase instance.
+   Gets the element with the specified key and value in the System.Collections.DictionaryBase 
+    instance.
   
   
    key: The key of the element to get.
@@ -129,8 +128,8 @@ class InstanceDataCollectionCollection(DictionaryBase,IDictionary,ICollection,IE
  def OnValidate(self,*args):
   """
   OnValidate(self: DictionaryBase,key: object,value: object)
-   Performs additional custom processes when validating the element with the 
-    specified key and value.
+   Performs additional custom processes when validating the element with the specified key and 
+    value.
   
   
    key: The key of the element to validate.

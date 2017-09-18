@@ -2,7 +2,7 @@ class SecurityProtocolType(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies the security protocols that are supported by the Schannel security package.
  
- enum (flags) SecurityProtocolType,values: Ssl3 (48),Tls (192),Tls11 (768),Tls12 (3072)
+ enum (flags) SecurityProtocolType,values: Ssl3 (48),SystemDefault (0),Tls (192),Tls11 (768),Tls12 (3072)
  """
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -28,6 +28,7 @@ class SecurityProtocolType(Enum,IComparable,IFormattable,IConvertible):
  def __str__(self,*args):
   pass
  Ssl3=None
+ SystemDefault=None
  Tls=None
  Tls11=None
  Tls12=None

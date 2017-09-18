@@ -1,8 +1,8 @@
 # encoding: utf-8
 # module System.ComponentModel calls itself ComponentModel
-# from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,WindowsBase,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
+# from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -48,10 +48,6 @@ from __init___parts.ComponentResourceManager import ComponentResourceManager
 from __init___parts.Container import Container
 from __init___parts.ContainerFilterService import ContainerFilterService
 from __init___parts.CultureInfoConverter import CultureInfoConverter
-from __init___parts.CurrentChangedEventManager import CurrentChangedEventManager
-from __init___parts.CurrentChangingEventArgs import CurrentChangingEventArgs
-from __init___parts.CurrentChangingEventHandler import CurrentChangingEventHandler
-from __init___parts.CurrentChangingEventManager import CurrentChangingEventManager
 from __init___parts.CustomTypeDescriptor import CustomTypeDescriptor
 from __init___parts.DataErrorsChangedEventArgs import DataErrorsChangedEventArgs
 from __init___parts.DataObjectAttribute import DataObjectAttribute
@@ -65,13 +61,9 @@ from __init___parts.DefaultBindingPropertyAttribute import DefaultBindingPropert
 from __init___parts.DefaultEventAttribute import DefaultEventAttribute
 from __init___parts.DefaultPropertyAttribute import DefaultPropertyAttribute
 from __init___parts.DefaultValueAttribute import DefaultValueAttribute
-from __init___parts.MemberDescriptor import MemberDescriptor
-from __init___parts.PropertyDescriptor import PropertyDescriptor
-from __init___parts.DependencyPropertyDescriptor import DependencyPropertyDescriptor
 from __init___parts.DescriptionAttribute import DescriptionAttribute
 from __init___parts.DesignerAttribute import DesignerAttribute
 from __init___parts.DesignerCategoryAttribute import DesignerCategoryAttribute
-from __init___parts.DesignerProperties import DesignerProperties
 from __init___parts.DesignerSerializationVisibility import DesignerSerializationVisibility
 from __init___parts.DesignerSerializationVisibilityAttribute import DesignerSerializationVisibilityAttribute
 from __init___parts.DesignOnlyAttribute import DesignOnlyAttribute
@@ -84,33 +76,25 @@ from __init___parts.EditorAttribute import EditorAttribute
 from __init___parts.EditorBrowsableAttribute import EditorBrowsableAttribute
 from __init___parts.EditorBrowsableState import EditorBrowsableState
 from __init___parts.EnumConverter import EnumConverter
-from __init___parts.ErrorsChangedEventManager import ErrorsChangedEventManager
+from __init___parts.MemberDescriptor import MemberDescriptor
 from __init___parts.EventDescriptor import EventDescriptor
 from __init___parts.EventDescriptorCollection import EventDescriptorCollection
 from __init___parts.EventHandlerList import EventHandlerList
 from __init___parts.ExpandableObjectConverter import ExpandableObjectConverter
 from __init___parts.ExtenderProvidedPropertyAttribute import ExtenderProvidedPropertyAttribute
-from __init___parts.INotifyPropertyChanged import INotifyPropertyChanged
-from __init___parts.GroupDescription import GroupDescription
 from __init___parts.GuidConverter import GuidConverter
 from __init___parts.HandledEventArgs import HandledEventArgs
 from __init___parts.HandledEventHandler import HandledEventHandler
 from __init___parts.IBindingListView import IBindingListView
 from __init___parts.IChangeTracking import IChangeTracking
-from __init___parts.ICollectionView import ICollectionView
-from __init___parts.ICollectionViewFactory import ICollectionViewFactory
-from __init___parts.ICollectionViewLiveShaping import ICollectionViewLiveShaping
 from __init___parts.IComNativeDescriptorHandler import IComNativeDescriptorHandler
 from __init___parts.IComponent import IComponent
 from __init___parts.IContainer import IContainer
 from __init___parts.ICustomTypeDescriptor import ICustomTypeDescriptor
 from __init___parts.IDataErrorInfo import IDataErrorInfo
-from __init___parts.IEditableCollectionView import IEditableCollectionView
-from __init___parts.IEditableCollectionViewAddNewItem import IEditableCollectionViewAddNewItem
 from __init___parts.IEditableObject import IEditableObject
 from __init___parts.IExtenderProvider import IExtenderProvider
 from __init___parts.IIntellisenseBuilder import IIntellisenseBuilder
-from __init___parts.IItemProperties import IItemProperties
 from __init___parts.IListSource import IListSource
 from __init___parts.ImmutableObjectAttribute import ImmutableObjectAttribute
 from __init___parts.INestedContainer import INestedContainer
@@ -120,6 +104,7 @@ from __init___parts.InheritanceAttribute import InheritanceAttribute
 from __init___parts.InheritanceLevel import InheritanceLevel
 from __init___parts.InitializationEventAttribute import InitializationEventAttribute
 from __init___parts.INotifyDataErrorInfo import INotifyDataErrorInfo
+from __init___parts.INotifyPropertyChanged import INotifyPropertyChanged
 from __init___parts.INotifyPropertyChanging import INotifyPropertyChanging
 from __init___parts.InstallerTypeAttribute import InstallerTypeAttribute
 from __init___parts.InstanceCreationEditor import InstanceCreationEditor
@@ -132,7 +117,6 @@ from __init___parts.IRevertibleChangeTracking import IRevertibleChangeTracking
 from __init___parts.ISupportInitialize import ISupportInitialize
 from __init___parts.ISupportInitializeNotification import ISupportInitializeNotification
 from __init___parts.ISynchronizeInvoke import ISynchronizeInvoke
-from __init___parts.ItemPropertyInfo import ItemPropertyInfo
 from __init___parts.ITypeDescriptorContext import ITypeDescriptorContext
 from __init___parts.ITypedList import ITypedList
 from __init___parts.License import License
@@ -158,7 +142,6 @@ from __init___parts.MaskedTextResultHint import MaskedTextResultHint
 from __init___parts.MergablePropertyAttribute import MergablePropertyAttribute
 from __init___parts.MultilineStringConverter import MultilineStringConverter
 from __init___parts.NestedContainer import NestedContainer
-from __init___parts.NewItemPlaceholderPosition import NewItemPlaceholderPosition
 from __init___parts.NotifyParentPropertyAttribute import NotifyParentPropertyAttribute
 from __init___parts.NullableConverter import NullableConverter
 from __init___parts.ParenthesizePropertyNameAttribute import ParenthesizePropertyNameAttribute
@@ -167,12 +150,10 @@ from __init___parts.ProgressChangedEventArgs import ProgressChangedEventArgs
 from __init___parts.ProgressChangedEventHandler import ProgressChangedEventHandler
 from __init___parts.PropertyChangedEventArgs import PropertyChangedEventArgs
 from __init___parts.PropertyChangedEventHandler import PropertyChangedEventHandler
-from __init___parts.PropertyChangedEventManager import PropertyChangedEventManager
 from __init___parts.PropertyChangingEventArgs import PropertyChangingEventArgs
 from __init___parts.PropertyChangingEventHandler import PropertyChangingEventHandler
+from __init___parts.PropertyDescriptor import PropertyDescriptor
 from __init___parts.PropertyDescriptorCollection import PropertyDescriptorCollection
-from __init___parts.PropertyFilterAttribute import PropertyFilterAttribute
-from __init___parts.PropertyFilterOptions import PropertyFilterOptions
 from __init___parts.PropertyTabAttribute import PropertyTabAttribute
 from __init___parts.PropertyTabScope import PropertyTabScope
 from __init___parts.ProvidePropertyAttribute import ProvidePropertyAttribute
@@ -188,8 +169,6 @@ from __init___parts.RunWorkerCompletedEventHandler import RunWorkerCompletedEven
 from __init___parts.SByteConverter import SByteConverter
 from __init___parts.SettingsBindableAttribute import SettingsBindableAttribute
 from __init___parts.SingleConverter import SingleConverter
-from __init___parts.SortDescription import SortDescription
-from __init___parts.SortDescriptionCollection import SortDescriptionCollection
 from __init___parts.StringConverter import StringConverter
 from __init___parts.SyntaxCheck import SyntaxCheck
 from __init___parts.TimeSpanConverter import TimeSpanConverter

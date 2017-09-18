@@ -13,8 +13,8 @@ class TextWriterTraceListener(TraceListener,IDisposable):
  def Close(self):
   """
   Close(self: TextWriterTraceListener)
-   Closes the System.Diagnostics.TextWriterTraceListener.Writer so that it no 
-    longer receives tracing or debugging output.
+   Closes the System.Diagnostics.TextWriterTraceListener.Writer so that it no longer receives 
+    tracing or debugging output.
   """
   pass
  def Dispose(self):
@@ -23,15 +23,13 @@ class TextWriterTraceListener(TraceListener,IDisposable):
    Disposes this System.Diagnostics.TextWriterTraceListener object.
   
    disposing: true to release managed resources; if false,
-    System.Diagnostics.TextWriterTraceListener.Dispose(System.Boolean) has no 
-    effect.
+    System.Diagnostics.TextWriterTraceListener.Dispose(System.Boolean) has no effect.
   """
   pass
  def Flush(self):
   """
   Flush(self: TextWriterTraceListener)
-   Flushes the output buffer for the 
-    System.Diagnostics.TextWriterTraceListener.Writer.
+   Flushes the output buffer for the System.Diagnostics.TextWriterTraceListener.Writer.
   """
   pass
  def GetSupportedAttributes(self,*args):
@@ -39,8 +37,8 @@ class TextWriterTraceListener(TraceListener,IDisposable):
   GetSupportedAttributes(self: TraceListener) -> Array[str]
   
    Gets the custom attributes supported by the trace listener.
-   Returns: A string array naming the custom attributes supported by the trace listener,or 
-    null if there are no custom attributes.
+   Returns: A string array naming the custom attributes supported by the trace listener,or null if there 
+    are no custom attributes.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -49,11 +47,11 @@ class TextWriterTraceListener(TraceListener,IDisposable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -65,9 +63,7 @@ class TextWriterTraceListener(TraceListener,IDisposable):
  def Write(self,*__args):
   """
   Write(self: TextWriterTraceListener,message: str)
-   Writes a message to this instance's 
-    System.Diagnostics.TextWriterTraceListener.Writer.
-  
+   Writes a message to this instance's System.Diagnostics.TextWriterTraceListener.Writer.
   
    message: A message to write.
   """
@@ -75,27 +71,33 @@ class TextWriterTraceListener(TraceListener,IDisposable):
  def WriteIndent(self,*args):
   """
   WriteIndent(self: TraceListener)
-   Writes the indent to the listener you create when you implement this class,and 
-    resets the System.Diagnostics.TraceListener.NeedIndent property to false.
+   Writes the indent to the listener you create when you implement this class,and resets the 
+    System.Diagnostics.TraceListener.NeedIndent property to false.
   """
   pass
  def WriteLine(self,*__args):
   """
   WriteLine(self: TextWriterTraceListener,message: str)
-   Writes a message to this instance's 
-    System.Diagnostics.TextWriterTraceListener.Writer followed by a line 
-    terminator. The default line terminator is a carriage return followed by a line 
-    feed (\r\n).
+   Writes a message to this instance's System.Diagnostics.TextWriterTraceListener.Writer followed 
+    by a line terminator. The default line terminator is a carriage return followed by a line feed 
+    (\r\n).
   
   
    message: A message to write.
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

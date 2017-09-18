@@ -13,17 +13,15 @@ class GeneratorPosition(object):
   
   
    o: The System.Windows.Controls.Primitives.GeneratorPosition instance to compare.
-   Returns: true if o and this instance of 
-    System.Windows.Controls.Primitives.GeneratorPosition have the same values.
+   Returns: true if o and this instance of System.Windows.Controls.Primitives.GeneratorPosition have the 
+    same values.
   """
   pass
  def GetHashCode(self):
   """
   GetHashCode(self: GeneratorPosition) -> int
   
-   Returns the hash code for this 
-    System.Windows.Controls.Primitives.GeneratorPosition.
-  
+   Returns the hash code for this System.Windows.Controls.Primitives.GeneratorPosition.
    Returns: The hash code for this System.Windows.Controls.Primitives.GeneratorPosition.
   """
   pass
@@ -34,8 +32,7 @@ class GeneratorPosition(object):
    Returns a string representation of this instance of 
     System.Windows.Controls.Primitives.GeneratorPosition.
   
-   Returns: A string representation of this instance of 
-    System.Windows.Controls.Primitives.GeneratorPosition
+   Returns: A string representation of this instance of System.Windows.Controls.Primitives.GeneratorPosition
   """
   pass
  def __eq__(self,*args):
@@ -44,9 +41,8 @@ class GeneratorPosition(object):
  @staticmethod
  def __new__(self,index,offset):
   """
-  __new__[GeneratorPosition]() -> GeneratorPosition
-  
-  __new__(cls: type,index: int,offset: int)
+  __new__(cls: type,index: int,offset: int)
+  __new__[GeneratorPosition]() -> GeneratorPosition
   """
   pass
  def __ne__(self,*args):

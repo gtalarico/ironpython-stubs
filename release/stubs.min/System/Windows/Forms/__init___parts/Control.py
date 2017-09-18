@@ -15,9 +15,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
     System.Windows.Forms.AccessibleEvents for the specified child control .
   
   
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
-    applications of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    objectID: The identifier of the System.Windows.Forms.AccessibleObject.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,childID: int)
@@ -25,9 +23,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
     System.Windows.Forms.AccessibleEvents for the specified child control.
   
   
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
-    applications of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   """
   pass
@@ -35,23 +31,23 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   """
   BeginInvoke(self: Control,method: Delegate,*args: Array[object]) -> IAsyncResult
   
-   Executes the specified delegate asynchronously with the specified arguments,on 
-    the thread that the control's underlying handle was created on.
+   Executes the specified delegate asynchronously with the specified arguments,on the thread that 
+    the control's underlying handle was created on.
   
   
-   method: A delegate to a method that takes parameters of the same number and type that 
-    are contained in the args parameter.
+   method: A delegate to a method that takes parameters of the same number and type that are contained in 
+    the args parameter.
   
-   args: An array of objects to pass as arguments to the given method. This can be null 
-    if no arguments are needed.
+   args: An array of objects to pass as arguments to the given method. This can be null if no arguments 
+    are needed.
   
    Returns: An System.IAsyncResult that represents the result of the 
     System.Windows.Forms.Control.BeginInvoke(System.Delegate) operation.
   
   BeginInvoke(self: Control,method: Delegate) -> IAsyncResult
   
-   Executes the specified delegate asynchronously on the thread that the control's 
-    underlying handle was created on.
+   Executes the specified delegate asynchronously on the thread that the control's underlying 
+    handle was created on.
   
   
    method: A delegate to a method that takes no parameters.
@@ -69,9 +65,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   """
   Contains(self: Control,ctl: Control) -> bool
   
-   Retrieves a value indicating whether the specified control is a child of the 
-    control.
-  
+   Retrieves a value indicating whether the specified control is a child of the control.
   
    ctl: The System.Windows.Forms.Control to evaluate.
    Returns: true if the specified control is a child of the control; otherwise,false.
@@ -88,8 +82,8 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
  def CreateControl(self):
   """
   CreateControl(self: Control)
-   Forces the creation of the visible control,including the creation of the 
-    handle and any visible child controls.
+   Forces the creation of the visible control,including the creation of the handle and any visible 
+    child controls.
   """
   pass
  def CreateControlsInstance(self,*args):
@@ -97,8 +91,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   CreateControlsInstance(self: Control) -> ControlCollection
   
    Creates a new instance of the control collection for the control.
-   Returns: A new instance of System.Windows.Forms.Control.ControlCollection assigned to 
-    the control.
+   Returns: A new instance of System.Windows.Forms.Control.ControlCollection assigned to the control.
   """
   pass
  def CreateGraphics(self):
@@ -133,12 +126,11 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
  def Dispose(self):
   """
   Dispose(self: Control,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.Control and 
-    its child controls and optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.Control and its child controls 
+    and optionally releases the managed resources.
   
   
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def DoDragDrop(self,data,allowedEffects):
@@ -149,9 +141,8 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   
    data: The data to drag.
    allowedEffects: One of the System.Windows.Forms.DragDropEffects values.
-   Returns: A value from the System.Windows.Forms.DragDropEffects enumeration that 
-    represents the final effect that was performed during the drag-and-drop 
-    operation.
+   Returns: A value from the System.Windows.Forms.DragDropEffects enumeration that represents the final 
+    effect that was performed during the drag-and-drop operation.
   """
   pass
  def DrawToBitmap(self,bitmap,targetBounds):
@@ -167,13 +158,12 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   """
   EndInvoke(self: Control,asyncResult: IAsyncResult) -> object
   
-   Retrieves the return value of the asynchronous operation represented by the 
-    System.IAsyncResult passed.
+   Retrieves the return value of the asynchronous operation represented by the System.IAsyncResult 
+    passed.
   
   
-   asyncResult: The System.IAsyncResult that represents a specific invoke asynchronous 
-    operation,returned when calling 
-    System.Windows.Forms.Control.BeginInvoke(System.Delegate).
+   asyncResult: The System.IAsyncResult that represents a specific invoke asynchronous operation,returned when 
+    calling System.Windows.Forms.Control.BeginInvoke(System.Delegate).
   
    Returns: The System.Object generated by the asynchronous operation.
   """
@@ -202,9 +192,8 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
    Retrieves the control that contains the specified handle.
   
    handle: The window handle (HWND) to search for.
-   Returns: The System.Windows.Forms.Control that represents the control associated with 
-    the specified handle; returns null if no control with the specified handle is 
-    found.
+   Returns: The System.Windows.Forms.Control that represents the control associated with the specified 
+    handle; returns null if no control with the specified handle is found.
   """
   pass
  @staticmethod
@@ -215,9 +204,8 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
    Returns the control that is currently associated with the specified handle.
   
    handle: The window handle (HWND) to search for.
-   Returns: A System.Windows.Forms.Control that represents the control associated with the 
-    specified handle; returns null if no control with the specified handle is 
-    found.
+   Returns: A System.Windows.Forms.Control that represents the control associated with the specified handle; 
+    returns null if no control with the specified handle is found.
   """
   pass
  def GetAccessibilityObjectById(self,*args):
@@ -246,25 +234,23 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   
    Retrieves the child control that is located at the specified coordinates.
   
-   pt: A System.Drawing.Point that contains the coordinates where you want to look for 
-    a control. Coordinates are expressed relative to the upper-left corner of the 
-    control's client area.
+   pt: A System.Drawing.Point that contains the coordinates where you want to look for a control. 
+    Coordinates are expressed relative to the upper-left corner of the control's client area.
   
-   Returns: A System.Windows.Forms.Control that represents the control that is located at 
-    the specified point.
+   Returns: A System.Windows.Forms.Control that represents the control that is located at the specified 
+    point.
   
   GetChildAtPoint(self: Control,pt: Point,skipValue: GetChildAtPointSkip) -> Control
   
-   Retrieves the child control that is located at the specified coordinates,
-    specifying whether to ignore child controls of a certain type.
+   Retrieves the child control that is located at the specified coordinates,specifying whether to 
+    ignore child controls of a certain type.
   
   
-   pt: A System.Drawing.Point that contains the coordinates where you want to look for 
-    a control. Coordinates are expressed relative to the upper-left corner of the 
-    control's client area.
+   pt: A System.Drawing.Point that contains the coordinates where you want to look for a control. 
+    Coordinates are expressed relative to the upper-left corner of the control's client area.
   
-   skipValue: One of the values of System.Windows.Forms.GetChildAtPointSkip,determining 
-    whether to ignore child controls of a certain type.
+   skipValue: One of the values of System.Windows.Forms.GetChildAtPointSkip,determining whether to ignore 
+    child controls of a certain type.
   
    Returns: The child System.Windows.Forms.Control at the specified coordinates.
   """
@@ -273,9 +259,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   """
   GetContainerControl(self: Control) -> IContainerControl
   
-   Returns the next System.Windows.Forms.ContainerControl up the control's chain 
-    of parent controls.
-  
+   Returns the next System.Windows.Forms.ContainerControl up the control's chain of parent controls.
    Returns: An System.Windows.Forms.IContainerControl,that represents the parent of the 
     System.Windows.Forms.Control.
   """
@@ -298,8 +282,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
    Retrieves the size of a rectangular area into which a control can be fitted.
   
    proposedSize: The custom-sized area for a control.
-   Returns: An ordered pair of type System.Drawing.Size representing the width and height 
-    of a rectangle.
+   Returns: An ordered pair of type System.Drawing.Size representing the width and height of a rectangle.
   """
   pass
  def GetScaledBounds(self,*args):
@@ -308,29 +291,25 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   
    Retrieves the bounds within which the control is scaled.
   
-   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the 
-    display bounds.
-  
+   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display bounds.
    factor: The height and width of the control's bounds.
-   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the 
-    bounds of the control to use when defining its size and position.
+   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of the 
+    control to use when defining its size and position.
   
-   Returns: A System.Drawing.Rectangle representing the bounds within which the control is 
-    scaled.
+   Returns: A System.Drawing.Rectangle representing the bounds within which the control is scaled.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetStyle(self,*args):
@@ -366,83 +345,74 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
  def Invalidate(self,*__args):
   """
   Invalidate(self: Control,invalidateChildren: bool)
-   Invalidates a specific region of the control and causes a paint message to be 
-    sent to the control. Optionally,invalidates the child controls assigned to the 
-    control.
+   Invalidates a specific region of the control and causes a paint message to be sent to the 
+    control. Optionally,invalidates the child controls assigned to the control.
   
   
    invalidateChildren: true to invalidate the control's child controls; otherwise,false.
   Invalidate(self: Control,rc: Rectangle)
-   Invalidates the specified region of the control (adds it to the control's 
-    update region,which is the area that will be repainted at the next paint 
-    operation),and causes a paint message to be sent to the control.
+   Invalidates the specified region of the control (adds it to the control's update region,which 
+    is the area that will be repainted at the next paint operation),and causes a paint message to 
+    be sent to the control.
   
   
    rc: A System.Drawing.Rectangle that represents the region to invalidate.
   Invalidate(self: Control,rc: Rectangle,invalidateChildren: bool)
-   Invalidates the specified region of the control (adds it to the control's 
-    update region,which is the area that will be repainted at the next paint 
-    operation),and causes a paint message to be sent to the control. Optionally,
-    invalidates the child controls assigned to the control.
+   Invalidates the specified region of the control (adds it to the control's update region,which 
+    is the area that will be repainted at the next paint operation),and causes a paint message to 
+    be sent to the control. Optionally,invalidates the child controls assigned to the control.
   
   
    rc: A System.Drawing.Rectangle that represents the region to invalidate.
    invalidateChildren: true to invalidate the control's child controls; otherwise,false.
   Invalidate(self: Control,region: Region)
-   Invalidates the specified region of the control (adds it to the control's 
-    update region,which is the area that will be repainted at the next paint 
-    operation),and causes a paint message to be sent to the control.
+   Invalidates the specified region of the control (adds it to the control's update region,which 
+    is the area that will be repainted at the next paint operation),and causes a paint message to 
+    be sent to the control.
   
   
    region: The System.Drawing.Region to invalidate.
   Invalidate(self: Control,region: Region,invalidateChildren: bool)
-   Invalidates the specified region of the control (adds it to the control's 
-    update region,which is the area that will be repainted at the next paint 
-    operation),and causes a paint message to be sent to the control. Optionally,
-    invalidates the child controls assigned to the control.
+   Invalidates the specified region of the control (adds it to the control's update region,which 
+    is the area that will be repainted at the next paint operation),and causes a paint message to 
+    be sent to the control. Optionally,invalidates the child controls assigned to the control.
   
   
    region: The System.Drawing.Region to invalidate.
    invalidateChildren: true to invalidate the control's child controls; otherwise,false.
   Invalidate(self: Control)
-   Invalidates the entire surface of the control and causes the control to be 
-    redrawn.
+   Invalidates the entire surface of the control and causes the control to be redrawn.
   """
   pass
  def Invoke(self,method,args=None):
   """
   Invoke(self: Control,method: Delegate,*args: Array[object]) -> object
   
-   Executes the specified delegate,on the thread that owns the control's 
-    underlying window handle,with the specified list of arguments.
+   Executes the specified delegate,on the thread that owns the control's underlying window handle,
+    with the specified list of arguments.
   
   
-   method: A delegate to a method that takes parameters of the same number and type that 
-    are contained in the args parameter.
+   method: A delegate to a method that takes parameters of the same number and type that are contained in 
+    the args parameter.
   
-   args: An array of objects to pass as arguments to the specified method. This 
-    parameter can be null if the method takes no arguments.
+   args: An array of objects to pass as arguments to the specified method. This parameter can be null if 
+    the method takes no arguments.
   
-   Returns: An System.Object that contains the return value from the delegate being 
-    invoked,or null if the delegate has no return value.
+   Returns: An System.Object that contains the return value from the delegate being invoked,or null if the 
+    delegate has no return value.
   
   Invoke(self: Control,method: Delegate) -> object
   
-   Executes the specified delegate on the thread that owns the control's 
-    underlying window handle.
-  
+   Executes the specified delegate on the thread that owns the control's underlying window handle.
   
    method: A delegate that contains a method to be called in the control's thread context.
-   Returns: The return value from the delegate being invoked,or null if the delegate has 
-    no return value.
+   Returns: The return value from the delegate being invoked,or null if the delegate has no return value.
   """
   pass
  def InvokeGotFocus(self,*args):
   """
   InvokeGotFocus(self: Control,toInvoke: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.GotFocus event for the specified 
-    control.
-  
+   Raises the System.Windows.Forms.Control.GotFocus event for the specified control.
   
    toInvoke: The System.Windows.Forms.Control to assign the event to.
    e: An System.EventArgs that contains the event data.
@@ -451,9 +421,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
  def InvokeLostFocus(self,*args):
   """
   InvokeLostFocus(self: Control,toInvoke: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.LostFocus event for the specified 
-    control.
-  
+   Raises the System.Windows.Forms.Control.LostFocus event for the specified control.
   
    toInvoke: The System.Windows.Forms.Control to assign the event to.
    e: An System.EventArgs that contains the event data.
@@ -464,9 +432,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   InvokeOnClick(self: Control,toInvoke: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.Click event for the specified control.
   
-   toInvoke: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Click event to.
-  
+   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event to.
    e: An System.EventArgs that contains the event data.
   """
   pass
@@ -475,9 +441,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   InvokePaint(self: Control,c: Control,e: PaintEventArgs)
    Raises the System.Windows.Forms.Control.Paint event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Paint event to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -486,9 +450,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   InvokePaintBackground(self: Control,c: Control,e: PaintEventArgs)
    Raises the PaintBackground event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Paint event to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -499,16 +461,16 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
    Determines if a character is an input character that the control recognizes.
   
    charCode: The character to test.
-   Returns: true if the character should be sent directly to the control and not 
-    preprocessed; otherwise,false.
+   Returns: true if the character should be sent directly to the control and not preprocessed; otherwise,
+    false.
   """
   pass
  def IsInputKey(self,*args):
   """
   IsInputKey(self: Control,keyData: Keys) -> bool
   
-   Determines whether the specified key is a regular input key or a special key 
-    that requires preprocessing.
+   Determines whether the specified key is a regular input key or a special key that requires 
+    preprocessing.
   
   
    keyData: One of the System.Windows.Forms.Keys values.
@@ -522,9 +484,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   
    Determines whether the CAPS LOCK,NUM LOCK,or SCROLL LOCK key is in effect.
   
-   keyVal: The CAPS LOCK,NUM LOCK,or SCROLL LOCK member of the System.Windows.Forms.Keys 
-    enumeration.
-  
+   keyVal: The CAPS LOCK,NUM LOCK,or SCROLL LOCK member of the System.Windows.Forms.Keys enumeration.
    Returns: true if the specified key or keys are in effect; otherwise,false.
   """
   pass
@@ -533,15 +493,18 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   """
   IsMnemonic(charCode: Char,text: str) -> bool
   
-   Determines if the specified character is the mnemonic character assigned to the 
-    control in the specified string.
+   Determines if the specified character is the mnemonic character assigned to the control in the 
+    specified string.
   
   
    charCode: The character to test.
    text: The string to search.
-   Returns: true if the charCode character is the mnemonic character assigned to the 
-    control; otherwise,false.
+   Returns: true if the charCode character is the mnemonic character assigned to the control; otherwise,
+    false.
   """
+  pass
+ def LogicalToDeviceUnits(self,value):
+  """ LogicalToDeviceUnits(self: Control,value: int) -> int """
   pass
  def MemberwiseClone(self,*args):
   """
@@ -549,11 +512,11 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -565,8 +528,8 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
  def NotifyInvalidate(self,*args):
   """
   NotifyInvalidate(self: Control,invalidatedArea: Rectangle)
-   Raises the System.Windows.Forms.Control.Invalidated event with a specified 
-    region of the control to invalidate.
+   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the control 
+    to invalidate.
   
   
    invalidatedArea: A System.Drawing.Rectangle representing the area to invalidate.
@@ -705,6 +668,12 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   
    e: An System.EventArgs that contains the event data.
   """
+  pass
+ def OnDpiChangedAfterParent(self,*args):
+  """ OnDpiChangedAfterParent(self: Control,e: EventArgs) """
+  pass
+ def OnDpiChangedBeforeParent(self,*args):
+  """ OnDpiChangedBeforeParent(self: Control,e: EventArgs) """
   pass
  def OnDragDrop(self,*args):
   """
@@ -1007,16 +976,14 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   OnPaintBackground(self: Control,pevent: PaintEventArgs)
    Paints the background of the control.
   
-   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the 
-    control to paint.
+   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the control to paint.
   """
   pass
  def OnParentBackColorChanged(self,*args):
   """
   OnParentBackColorChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BackColorChanged event when the 
-    System.Windows.Forms.Control.BackColor property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BackColor property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1026,8 +993,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   """
   OnParentBackgroundImageChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the 
-    System.Windows.Forms.Control.BackgroundImage property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BackgroundImage property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1037,8 +1003,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   """
   OnParentBindingContextChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BindingContextChanged event when the 
-    System.Windows.Forms.Control.BindingContext property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BindingContext property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1064,8 +1029,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   """
   OnParentEnabledChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.EnabledChanged event when the 
-    System.Windows.Forms.Control.Enabled property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Enabled property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1075,8 +1039,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   """
   OnParentFontChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.Control.Font property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Font property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1086,8 +1049,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   """
   OnParentForeColorChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.ForeColorChanged event when the 
-    System.Windows.Forms.Control.ForeColor property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.ForeColor property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1097,8 +1059,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   """
   OnParentRightToLeftChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.RightToLeftChanged event when the 
-    System.Windows.Forms.Control.RightToLeft property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.RightToLeft property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1108,8 +1069,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   """
   OnParentVisibleChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.VisibleChanged event when the 
-    System.Windows.Forms.Control.Visible property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Visible property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1240,9 +1200,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   PerformLayout(self: Control,affectedControl: Control,affectedProperty: str)
    Forces the control to apply layout logic to all its child controls.
   
-   affectedControl: A System.Windows.Forms.Control that represents the most recently changed 
-    control.
-  
+   affectedControl: A System.Windows.Forms.Control that represents the most recently changed control.
    affectedProperty: The name of the most recently changed property on the control.
   PerformLayout(self: Control)
    Forces the control to apply layout logic to all its child controls.
@@ -1255,8 +1213,8 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
    Computes the location of the specified screen point into client coordinates.
   
    p: The screen coordinate System.Drawing.Point to convert.
-   Returns: A System.Drawing.Point that represents the converted System.Drawing.Point,p,
-    in client coordinates.
+   Returns: A System.Drawing.Point that represents the converted System.Drawing.Point,p,in client 
+    coordinates.
   """
   pass
  def PointToScreen(self,p):
@@ -1266,24 +1224,20 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
    Computes the location of the specified client point into screen coordinates.
   
    p: The client coordinate System.Drawing.Point to convert.
-   Returns: A System.Drawing.Point that represents the converted System.Drawing.Point,p,
-    in screen coordinates.
+   Returns: A System.Drawing.Point that represents the converted System.Drawing.Point,p,in screen 
+    coordinates.
   """
   pass
  def PreProcessControlMessage(self,msg):
   """
   PreProcessControlMessage(self: Control,msg: Message) -> (PreProcessControlState,Message)
   
-   Preprocesses keyboard or input messages within the message loop before they are 
-    dispatched.
-  
+   Preprocesses keyboard or input messages within the message loop before they are dispatched.
   
    msg: A System.Windows.Forms.Message that represents the message to process.
-   Returns: One of the System.Windows.Forms.PreProcessControlState values,depending on 
-    whether 
-    System.Windows.Forms.Control.PreProcessMessage(System.Windows.Forms.Message@) 
-    is true or false and whether 
-    System.Windows.Forms.Control.IsInputKey(System.Windows.Forms.Keys) or 
+   Returns: One of the System.Windows.Forms.PreProcessControlState values,depending on whether 
+    System.Windows.Forms.Control.PreProcessMessage(System.Windows.Forms.Message@) is true or false 
+    and whether System.Windows.Forms.Control.IsInputKey(System.Windows.Forms.Keys) or 
     System.Windows.Forms.Control.IsInputChar(System.Char) are true or false.
   """
   pass
@@ -1291,13 +1245,10 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   """
   PreProcessMessage(self: Control,msg: Message) -> (bool,Message)
   
-   Preprocesses keyboard or input messages within the message loop before they are 
-    dispatched.
+   Preprocesses keyboard or input messages within the message loop before they are dispatched.
   
-  
-   msg: A System.Windows.Forms.Message,passed by reference,that represents the 
-    message to process. The possible values are WM_KEYDOWN,WM_SYSKEYDOWN,WM_CHAR,
-    and WM_SYSCHAR.
+   msg: A System.Windows.Forms.Message,passed by reference,that represents the message to process. The 
+    possible values are WM_KEYDOWN,WM_SYSKEYDOWN,WM_CHAR,and WM_SYSCHAR.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1308,8 +1259,8 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   
    Processes a command key.
   
-   msg: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: true if the character was processed by the control; otherwise,false.
@@ -1341,8 +1292,8 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   
    Processes a key message and generates the appropriate control events.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1353,8 +1304,8 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   
    Processes a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1365,8 +1316,8 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   
    Previews a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1378,8 +1329,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
    Processes a mnemonic character.
   
    charCode: The character to process.
-   Returns: true if the character was processed as a mnemonic by the control; otherwise,
-    false.
+   Returns: true if the character was processed as a mnemonic by the control; otherwise,false.
   """
   pass
  def RaiseDragEvent(self,*args):
@@ -1428,39 +1378,31 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   """
   RectangleToClient(self: Control,r: Rectangle) -> Rectangle
   
-   Computes the size and location of the specified screen rectangle in client 
-    coordinates.
-  
+   Computes the size and location of the specified screen rectangle in client coordinates.
   
    r: The screen coordinate System.Drawing.Rectangle to convert.
-   Returns: A System.Drawing.Rectangle that represents the converted 
-    System.Drawing.Rectangle,r,in client coordinates.
+   Returns: A System.Drawing.Rectangle that represents the converted System.Drawing.Rectangle,r,in client 
+    coordinates.
   """
   pass
  def RectangleToScreen(self,r):
   """
   RectangleToScreen(self: Control,r: Rectangle) -> Rectangle
   
-   Computes the size and location of the specified client rectangle in screen 
-    coordinates.
-  
+   Computes the size and location of the specified client rectangle in screen coordinates.
   
    r: The client coordinate System.Drawing.Rectangle to convert.
-   Returns: A System.Drawing.Rectangle that represents the converted 
-    System.Drawing.Rectangle,p,in screen coordinates.
+   Returns: A System.Drawing.Rectangle that represents the converted System.Drawing.Rectangle,p,in screen 
+    coordinates.
   """
   pass
  def ReflectMessage(self,*args):
   """
   ReflectMessage(hWnd: IntPtr,m: Message) -> (bool,Message)
   
-   Reflects the specified message to the control that is bound to the specified 
-    handle.
+   Reflects the specified message to the control that is bound to the specified handle.
   
-  
-   hWnd: An System.IntPtr representing the handle of the control to reflect the message 
-    to.
-  
+   hWnd: An System.IntPtr representing the handle of the control to reflect the message to.
    m: A System.Windows.Forms.Message representing the Windows message to reflect.
    Returns: true if the message was reflected; otherwise,false.
   """
@@ -1468,9 +1410,12 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
  def Refresh(self):
   """
   Refresh(self: Control)
-   Forces the control to invalidate its client area and immediately redraw itself 
-    and any child controls.
+   Forces the control to invalidate its client area and immediately redraw itself and any child 
+    controls.
   """
+  pass
+ def RescaleConstantsForDpi(self,*args):
+  """ RescaleConstantsForDpi(self: Control,deviceDpiOld: int,deviceDpiNew: int) """
   pass
  def ResetBackColor(self):
   """
@@ -1481,8 +1426,8 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
  def ResetBindings(self):
   """
   ResetBindings(self: Control)
-   Causes a control bound to the System.Windows.Forms.BindingSource to reread all 
-    the items in the list and refresh their displayed values.
+   Causes a control bound to the System.Windows.Forms.BindingSource to reread all the items in the 
+    list and refresh their displayed values.
   """
   pass
  def ResetCursor(self):
@@ -1518,8 +1463,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
  def ResetRightToLeft(self):
   """
   ResetRightToLeft(self: Control)
-   Resets the System.Windows.Forms.Control.RightToLeft property to its default 
-    value.
+   Resets the System.Windows.Forms.Control.RightToLeft property to its default value.
   """
   pass
  def ResetText(self):
@@ -1531,9 +1475,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
  def ResumeLayout(self,performLayout=None):
   """
   ResumeLayout(self: Control,performLayout: bool)
-   Resumes usual layout logic,optionally forcing an immediate layout of pending 
-    layout requests.
-  
+   Resumes usual layout logic,optionally forcing an immediate layout of pending layout requests.
   
    performLayout: true to execute pending layout requests; otherwise,false.
   ResumeLayout(self: Control)
@@ -1552,18 +1494,16 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
    Returns: One of the System.Drawing.ContentAlignment values.
   RtlTranslateAlignment(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the 
-    appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
+    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
   RtlTranslateAlignment(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the 
-    appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
+    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1586,9 +1526,8 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   """
   RtlTranslateHorizontal(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the 
-    appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
+    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1599,9 +1538,8 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   """
   RtlTranslateLeftRight(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the 
-    appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
+    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
@@ -1625,14 +1563,17 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
    ratio: The ratio to use for scaling.
   """
   pass
+ def ScaleBitmapLogicalToDevice(self,logicalBitmap):
+  """ ScaleBitmapLogicalToDevice(self: Control,logicalBitmap: Bitmap) -> Bitmap """
+  pass
  def ScaleControl(self,*args):
   """
   ScaleControl(self: Control,factor: SizeF,specified: BoundsSpecified)
    Scales a control's location,size,padding and margin.
   
    factor: The factor by which the height and width of the control will be scaled.
-   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the 
-    control to use when defining its size and position.
+   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to use 
+    when defining its size and position.
   """
   pass
  def ScaleCore(self,*args):
@@ -1658,14 +1599,12 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   
    ctl: The System.Windows.Forms.Control at which to start the search.
    forward: true to move forward in the tab order; false to move backward in the tab order.
-   tabStopOnly: true to ignore the controls with the System.Windows.Forms.Control.TabStop 
-    property set to false; otherwise,false.
+   tabStopOnly: true to ignore the controls with the System.Windows.Forms.Control.TabStop property set to false; 
+    otherwise,false.
   
-   nested: true to include nested (children of child controls) child controls; otherwise,
-    false.
-  
-   wrap: true to continue searching from the first control in the tab order after the 
-    last control has been reached; otherwise,false.
+   nested: true to include nested (children of child controls) child controls; otherwise,false.
+   wrap: true to continue searching from the first control in the tab order after the last control has 
+    been reached; otherwise,false.
   
    Returns: true if a control was activated; otherwise,false.
   """
@@ -1679,8 +1618,8 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
  def SetAutoSizeMode(self,*args):
   """
   SetAutoSizeMode(self: Control,mode: AutoSizeMode)
-   Sets a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
+   Sets a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize 
+    property is enabled.
   
   
    mode: One of the System.Windows.Forms.AutoSizeMode values.
@@ -1695,8 +1634,8 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
    y: The new System.Windows.Forms.Control.Top property value of the control.
    width: The new System.Windows.Forms.Control.Width property value of the control.
    height: The new System.Windows.Forms.Control.Height property value of the control.
-   specified: A bitwise combination of the System.Windows.Forms.BoundsSpecified values. For 
-    any parameter not specified,the current value will be used.
+   specified: A bitwise combination of the System.Windows.Forms.BoundsSpecified values. For any parameter not 
+    specified,the current value will be used.
   
   SetBounds(self: Control,x: int,y: int,width: int,height: int)
    Sets the bounds of the control to the specified location and size.
@@ -1731,9 +1670,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
  def SetStyle(self,*args):
   """
   SetStyle(self: Control,flag: ControlStyles,value: bool)
-   Sets a specified System.Windows.Forms.ControlStyles flag to either true or 
-    false.
-  
+   Sets a specified System.Windows.Forms.ControlStyles flag to either true or false.
   
    flag: The System.Windows.Forms.ControlStyles bit to set.
    value: true to apply the specified style to the control; otherwise,false.
@@ -1765,15 +1702,10 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   """
   SizeFromClientSize(self: Control,clientSize: Size) -> Size
   
-   Determines the size of the entire control from the height and width of its 
-    client area.
+   Determines the size of the entire control from the height and width of its client area.
   
-  
-   clientSize: A System.Drawing.Size value representing the height and width of the control's 
-    client area.
-  
-   Returns: A System.Drawing.Size value representing the height and width of the entire 
-    control.
+   clientSize: A System.Drawing.Size value representing the height and width of the control's client area.
+   Returns: A System.Drawing.Size value representing the height and width of the entire control.
   """
   pass
  def SuspendLayout(self):
@@ -1791,9 +1723,7 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
  def UpdateBounds(self,*args):
   """
   UpdateBounds(self: Control,x: int,y: int,width: int,height: int,clientWidth: int,clientHeight: int)
-   Updates the bounds of the control with the specified size,location,and client 
-    size.
-  
+   Updates the bounds of the control with the specified size,location,and client size.
   
    x: The System.Drawing.Point.X coordinate of the control.
    y: The System.Drawing.Point.Y coordinate of the control.
@@ -1834,10 +1764,17 @@ class Control(Component,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlac
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2128,6 +2065,11 @@ Get: DataBindings(self: Control) -> ControlBindingsCollection
 
  DesignMode=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets a value that indicates whether the System.ComponentModel.Component is currently in design mode.
+
+"""
+
+ DeviceDpi=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: DeviceDpi(self: Control) -> int
 
 """
 
@@ -2540,6 +2482,8 @@ Set: WindowTarget(self: Control)=value
  DefaultForeColor=None
  DockChanged=None
  DoubleClick=None
+ DpiChangedAfterParent=None
+ DpiChangedBeforeParent=None
  DragDrop=None
  DragEnter=None
  DragLeave=None

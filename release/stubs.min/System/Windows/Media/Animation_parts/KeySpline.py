@@ -2,17 +2,16 @@ class KeySpline(Freezable,ISealable,IFormattable):
  """
  This class is used by a spline key frame to define animation progress.
  
+ KeySpline(controlPoint1: Point,controlPoint2: Point)
  KeySpline()
- KeySpline(x1: float,y1: float,x2: float,y2: float)
- KeySpline(controlPoint1: Point,controlPoint2: Point)
+ KeySpline(x1: float,y1: float,x2: float,y2: float)
  """
  def CloneCore(self,*args):
   """
   CloneCore(self: KeySpline,sourceFreezable: Freezable)
-   Makes this instance a deep copy of the specified 
-    System.Windows.Media.Animation.KeySpline. When copying dependency properties,
-    this method copies resource references and data bindings (but they might no 
-    longer resolve) but not animations or their current values.
+   Makes this instance a deep copy of the specified System.Windows.Media.Animation.KeySpline. When 
+    copying dependency properties,this method copies resource references and data bindings (but 
+    they might no longer resolve) but not animations or their current values.
   
   
    sourceFreezable: The System.Windows.Media.Animation.KeySpline to clone.
@@ -22,9 +21,8 @@ class KeySpline(Freezable,ISealable,IFormattable):
   """
   CloneCurrentValueCore(self: KeySpline,sourceFreezable: Freezable)
    Makes this instance a modifiable deep copy of the specified 
-    System.Windows.Media.Animation.KeySpline using current property values. 
-    Resource references,data bindings,and animations are not copied,but their 
-    current values are.
+    System.Windows.Media.Animation.KeySpline using current property values. Resource references,
+    data bindings,and animations are not copied,but their current values are.
   
   
    sourceFreezable: The System.Windows.Media.Animation.KeySpline to clone.
@@ -50,26 +48,23 @@ class KeySpline(Freezable,ISealable,IFormattable):
   """
   FreezeCore(self: Freezable,isChecking: bool) -> bool
   
-   Makes the System.Windows.Freezable object unmodifiable or tests whether it can 
-    be made unmodifiable.
+   Makes the System.Windows.Freezable object unmodifiable or tests whether it can be made 
+    unmodifiable.
   
   
-   isChecking: true to return an indication of whether the object can be frozen (without 
-    actually freezing it); false to actually freeze the object.
+   isChecking: true to return an indication of whether the object can be frozen (without actually freezing it); 
+    false to actually freeze the object.
   
-   Returns: If isChecking is true,this method returns true if the System.Windows.Freezable 
-    can be made unmodifiable,or false if it cannot be made unmodifiable. If 
-    isChecking is false,this method returns true if the if the specified 
-    System.Windows.Freezable is now unmodifiable,or false if it cannot be made 
-    unmodifiable.
+   Returns: If isChecking is true,this method returns true if the System.Windows.Freezable can be made 
+    unmodifiable,or false if it cannot be made unmodifiable. If isChecking is false,this method 
+    returns true if the if the specified System.Windows.Freezable is now unmodifiable,or false if 
+    it cannot be made unmodifiable.
   """
   pass
  def GetAsFrozenCore(self,*args):
   """
   GetAsFrozenCore(self: KeySpline,sourceFreezable: Freezable)
-   Makes this instance a clone of the specified 
-    System.Windows.Media.Animation.KeySpline object.
-  
+   Makes this instance a clone of the specified System.Windows.Media.Animation.KeySpline object.
   
    sourceFreezable: The System.Windows.Media.Animation.KeySpline object to clone.
   """
@@ -77,9 +72,8 @@ class KeySpline(Freezable,ISealable,IFormattable):
  def GetCurrentValueAsFrozenCore(self,*args):
   """
   GetCurrentValueAsFrozenCore(self: KeySpline,sourceFreezable: Freezable)
-   Makes this instance a frozen clone of the specified 
-    System.Windows.Media.Animation.KeySpline. Resource references,data bindings,
-    and animations are not copied,but their current values are.
+   Makes this instance a frozen clone of the specified System.Windows.Media.Animation.KeySpline. 
+    Resource references,data bindings,and animations are not copied,but their current values are.
   
   
    sourceFreezable: The System.Windows.Media.Animation.KeySpline to copy and freeze.
@@ -98,15 +92,14 @@ class KeySpline(Freezable,ISealable,IFormattable):
  def OnChanged(self,*args):
   """
   OnChanged(self: KeySpline)
-   Called when the current System.Windows.Media.Animation.KeySpline object is 
-    modified.
+   Called when the current System.Windows.Media.Animation.KeySpline object is modified.
   """
   pass
  def OnFreezablePropertyChanged(self,*args):
   """
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject,property: DependencyProperty)
-   This member supports the Windows Presentation Foundation (WPF) infrastructure 
-    and is not intended to be used directly from your code.
+   This member supports the Windows Presentation Foundation (WPF) infrastructure and is not 
+    intended to be used directly from your code.
   
   
    oldValue: The previous value of the data member.
@@ -125,63 +118,48 @@ class KeySpline(Freezable,ISealable,IFormattable):
   """
   OnPropertyChanged(self: Freezable,e: DependencyPropertyChangedEventArgs)
    Overrides the System.Windows.DependencyObject implementation of 
-    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
-    rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
-    handlers in response to a changing dependency property of type 
-    System.Windows.Freezable.
+    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventAr
+    gs) to also invoke any System.Windows.Freezable.Changed handlers in response to a changing 
+    dependency property of type System.Windows.Freezable.
   
   
-   e: Event data that contains information about which property changed,and its old 
-    and new values.
+   e: Event data that contains information about which property changed,and its old and new values.
   """
   pass
  def ReadPreamble(self,*args):
   """
   ReadPreamble(self: Freezable)
-   Ensures that the System.Windows.Freezable is being accessed from a valid 
-    thread. Inheritors of System.Windows.Freezable must call this method at the 
-    beginning of any API that reads data members that are not dependency 
-    properties.
+   Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of 
+    System.Windows.Freezable must call this method at the beginning of any API that reads data 
+    members that are not dependency properties.
   """
   pass
  def ShouldSerializeProperty(self,*args):
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize 
-    the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize the value for 
+    the provided dependency property.
   
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; 
-    otherwise,false.
-  
-  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
+   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
   """
   pass
  def ToString(self,formatProvider=None):
   """
   ToString(self: KeySpline,formatProvider: IFormatProvider) -> str
   
-   Creates a string representation of this 
-    System.Windows.Media.Animation.KeySpline based on the supplied 
-    System.IFormatProvider.
+   Creates a string representation of this System.Windows.Media.Animation.KeySpline based on the 
+    supplied System.IFormatProvider.
   
   
    formatProvider: The format provider to use. If provider is null,the current culture is used.
-   Returns: A string representation of this instance of 
-    System.Windows.Media.Animation.KeySpline.
-  
+   Returns: A string representation of this instance of System.Windows.Media.Animation.KeySpline.
   ToString(self: KeySpline) -> str
   
-   Creates a string representation of this instance of 
-    System.Windows.Media.Animation.KeySpline based on the current culture.
+   Creates a string representation of this instance of System.Windows.Media.Animation.KeySpline 
+    based on the current culture.
   
    Returns: A string representation of this System.Windows.Media.Animation.KeySpline.
   """
@@ -189,20 +167,18 @@ class KeySpline(Freezable,ISealable,IFormattable):
  def WritePostscript(self,*args):
   """
   WritePostscript(self: Freezable)
-   Raises the System.Windows.Freezable.Changed event for the 
-    System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
-    method. Classes that derive from System.Windows.Freezable should call this 
-    method at the end of any API that modifies class members that are not stored as 
+   Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes 
+    its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable 
+    should call this method at the end of any API that modifies class members that are not stored as 
     dependency properties.
   """
   pass
  def WritePreamble(self,*args):
   """
   WritePreamble(self: Freezable)
-   Verifies that the System.Windows.Freezable is not frozen and that it is being 
-    accessed from a valid threading context. System.Windows.Freezable inheritors 
-    should call this method at the beginning of any API that writes to data members 
-    that are not dependency properties.
+   Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a 
+    valid threading context. System.Windows.Freezable inheritors should call this method at the 
+    beginning of any API that writes to data members that are not dependency properties.
   """
   pass
  def __format__(self,*args):

@@ -16,8 +16,8 @@ class LookupBindingPropertiesAttribute(Attribute,_Attribute):
    obj: The System.Object to compare with the current 
     System.ComponentModel.LookupBindingPropertiesAttribute instance
   
-   Returns: true if the object is equal to the current instance; otherwise,false,
-    indicating they are not equal.
+   Returns: true if the object is equal to the current instance; otherwise,false,indicating they are not 
+    equal.
   """
   pass
  def GetHashCode(self):
@@ -25,8 +25,7 @@ class LookupBindingPropertiesAttribute(Attribute,_Attribute):
   GetHashCode(self: LookupBindingPropertiesAttribute) -> int
   
    Returns the hash code for this instance.
-   Returns: A hash code for the current 
-    System.ComponentModel.LookupBindingPropertiesAttribute.
+   Returns: A hash code for the current System.ComponentModel.LookupBindingPropertiesAttribute.
   """
   pass
  def __eq__(self,*args):

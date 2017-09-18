@@ -2,7 +2,7 @@
 # module System.Windows.Markup.Localizer calls itself Localizer
 # from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -14,16 +14,13 @@ class BamlLocalizabilityResolver(object):
         """
         GetElementLocalizability(self: BamlLocalizabilityResolver, assembly: str, className: str) -> ElementLocalizability
         
-            Returns a value that indicates whether a specified type of element can be 
-             localized and, if so, whether it can be formatted inline.
+            Returns a value that indicates whether a specified type of element can be localized and, if so, 
+             whether it can be formatted inline.
         
         
             assembly: The full name of the assembly that contains BAML to be localized.
-            className: The full class name of the element that you want to retrieve localizability 
-             information for.
-        
-            Returns: An object that contains the localizability information for the specified 
-             assembly and element.
+            className: The full class name of the element that you want to retrieve localizability information for.
+            Returns: An object that contains the localizability information for the specified assembly and element.
         """
         pass
 
@@ -31,17 +28,13 @@ class BamlLocalizabilityResolver(object):
         """
         GetPropertyLocalizability(self: BamlLocalizabilityResolver, assembly: str, className: str, property: str) -> LocalizabilityAttribute
         
-            Returns a value that indicates whether a specified property of a specified type 
-             of element can be localized.
+            Returns a value that indicates whether a specified property of a specified type of element can 
+             be localized.
         
         
             assembly: The full name of the assembly that contains BAML to be localized.
-            className: The full class name of the element that you want to retrieve localizability 
-             information for.
-        
-            property: The name of the property that you want to retrieve localizability information 
-             for.
-        
+            className: The full class name of the element that you want to retrieve localizability information for.
+            property: The name of the property that you want to retrieve localizability information for.
             Returns: An object that specifies whether and how the property can be localized.
         """
         pass
@@ -80,14 +73,11 @@ class BamlLocalizableResource(object):
         """
         Equals(self: BamlLocalizableResource, other: object) -> bool
         
-            Determines whether a specified 
-             System.Windows.Markup.Localizer.BamlLocalizableResource object is equal to this 
-             object.
+            Determines whether a specified System.Windows.Markup.Localizer.BamlLocalizableResource object is 
+             equal to this object.
         
         
-            other: The System.Windows.Markup.Localizer.BamlLocalizableResource object test for 
-             equality.
-        
+            other: The System.Windows.Markup.Localizer.BamlLocalizableResource object test for equality.
             Returns: true if other is equal to this object; otherwise, false.
         """
         pass
@@ -168,20 +158,19 @@ class BamlLocalizableResourceKey(object):
         """
         Equals(self: BamlLocalizableResourceKey, other: object) -> bool
         
-            Compares an object to an instance of 
-             System.Windows.Markup.Localizer.BamlLocalizableResourceKey for equality.
+            Compares an object to an instance of System.Windows.Markup.Localizer.BamlLocalizableResourceKey 
+             for equality.
         
         
             other: The object to compare for equality.
             Returns: true if the two instances are equal; otherwise, false.
         Equals(self: BamlLocalizableResourceKey, other: BamlLocalizableResourceKey) -> bool
         
-            Compares two instances of 
-             System.Windows.Markup.Localizer.BamlLocalizableResourceKey for equality.
+            Compares two instances of System.Windows.Markup.Localizer.BamlLocalizableResourceKey for 
+             equality.
         
         
-            other: The other instance of 
-             System.Windows.Markup.Localizer.BamlLocalizableResourceKey to compare for 
+            other: The other instance of System.Windows.Markup.Localizer.BamlLocalizableResourceKey to compare for 
              equality.
         
             Returns: true if the two instances are equal; otherwise, false.
@@ -260,8 +249,7 @@ class BamlLocalizationDictionary(object, IDictionary, ICollection, IEnumerable):
     def Clear(self):
         """
         Clear(self: BamlLocalizationDictionary)
-            Deletes all resources from the 
-             System.Windows.Markup.Localizer.BamlLocalizationDictionary object.
+            Deletes all resources from the System.Windows.Markup.Localizer.BamlLocalizationDictionary object.
         """
         pass
 
@@ -269,23 +257,22 @@ class BamlLocalizationDictionary(object, IDictionary, ICollection, IEnumerable):
         """
         Contains(self: BamlLocalizationDictionary, key: BamlLocalizableResourceKey) -> bool
         
-            Determines whether a System.Windows.Markup.Localizer.BamlLocalizationDictionary 
-             object contains a resource with a specified key.
+            Determines whether a System.Windows.Markup.Localizer.BamlLocalizationDictionary object contains 
+             a resource with a specified key.
         
         
             key: The resource key to find.
-            Returns: true if the System.Windows.Markup.Localizer.BamlLocalizationDictionary object 
-             contains a resource with the specified key; otherwise, false.
+            Returns: true if the System.Windows.Markup.Localizer.BamlLocalizationDictionary object contains a 
+             resource with the specified key; otherwise, false.
         """
         pass
 
     def CopyTo(self, array, arrayIndex):
         """
         CopyTo(self: BamlLocalizationDictionary, array: Array[DictionaryEntry], arrayIndex: int)
-            Copies the contents of a 
-             System.Windows.Markup.Localizer.BamlLocalizationDictionary object to a 
-             one-dimensional array of System.Collections.DictionaryEntry objects, starting 
-             at a specified index.
+            Copies the contents of a System.Windows.Markup.Localizer.BamlLocalizationDictionary object to a 
+             one-dimensional array of System.Collections.DictionaryEntry objects, starting at a specified 
+             index.
         
         
             array: An array of objects to hold the data.
@@ -300,8 +287,7 @@ class BamlLocalizationDictionary(object, IDictionary, ICollection, IEnumerable):
             Returns an enumerator that iterates through the 
              System.Windows.Markup.Localizer.BamlLocalizationDictionary.
         
-            Returns: A specialized 
-             System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator that can 
+            Returns: A specialized System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator that can 
              iterate the contents of the dictionary.
         """
         pass
@@ -323,15 +309,14 @@ class BamlLocalizationDictionary(object, IDictionary, ICollection, IEnumerable):
 
     def __contains__(self, *args): #cannot find CLR method
         """
-        Contains(self: IDictionary, key: object) -> bool
+        __contains__(self: IDictionary, key: object) -> bool
         
-            Determines whether the System.Collections.IDictionary object contains an 
-             element with the specified key.
+            Determines whether the System.Collections.IDictionary object contains an element with the 
+             specified key.
         
         
             key: The key to locate in the System.Collections.IDictionary object.
-            Returns: true if the System.Collections.IDictionary contains an element with the key; 
-             otherwise, false.
+            Returns: true if the System.Collections.IDictionary contains an element with the key; otherwise, false.
         """
         pass
 
@@ -410,8 +395,8 @@ class BamlLocalizationDictionaryEnumerator(object, IDictionaryEnumerator, IEnume
         MoveNext(self: BamlLocalizationDictionaryEnumerator) -> bool
         
             Moves to the next item in the collection.
-            Returns: true if the enumerator successfully advances to the next element. If there are 
-             no remaining elements, this method returns false.
+            Returns: true if the enumerator successfully advances to the next element. If there are no remaining 
+             elements, this method returns false.
         """
         pass
 
@@ -422,8 +407,8 @@ class BamlLocalizationDictionaryEnumerator(object, IDictionaryEnumerator, IEnume
     def Reset(self):
         """
         Reset(self: BamlLocalizationDictionaryEnumerator)
-            Returns the enumerator to its initial position, which is before the first 
-             object in the collection.
+            Returns the enumerator to its initial position, which is before the first object in the 
+             collection.
         """
         pass
 
@@ -499,8 +484,8 @@ class BamlLocalizer(object):
     def UpdateBaml(self, target, updates):
         """
         UpdateBaml(self: BamlLocalizer, target: Stream, updates: BamlLocalizationDictionary)
-            Applies resource updates to the BAML source and writes the updated version to a 
-             specified stream in order to create a localized version of the source BAML.
+            Applies resource updates to the BAML source and writes the updated version to a specified stream 
+             in order to create a localized version of the source BAML.
         
         
             target: The stream that will receive the updated BAML.
@@ -605,9 +590,7 @@ class BamlLocalizerErrorNotifyEventHandler(MulticastDelegate, ICloneable, ISeria
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new 
-             delegate.
-        
+            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -620,9 +603,9 @@ class BamlLocalizerErrorNotifyEventHandler(MulticastDelegate, ICloneable, ISeria
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by 
-             the current delegate.-or- null, if the method represented by the current 
-             delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current 
+             delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -649,14 +632,13 @@ class BamlLocalizerErrorNotifyEventHandler(MulticastDelegate, ICloneable, ISeria
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate 
-             that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
+             the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new 
-             System.Delegate without value in its invocation list; otherwise, this instance 
-             with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
+             value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 

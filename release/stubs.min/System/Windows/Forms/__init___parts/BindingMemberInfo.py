@@ -8,14 +8,11 @@ class BindingMemberInfo(object):
   """
   Equals(self: BindingMemberInfo,otherObject: object) -> bool
   
-   Determines whether the specified object is equal to this 
-    System.Windows.Forms.BindingMemberInfo.
-  
+   Determines whether the specified object is equal to this System.Windows.Forms.BindingMemberInfo.
   
    otherObject: The object to compare for equality.
    Returns: true if otherObject is a System.Windows.Forms.BindingMemberInfo and both 
-    System.Windows.Forms.BindingMemberInfo.BindingMember strings are equal; 
-    otherwise false.
+    System.Windows.Forms.BindingMemberInfo.BindingMember strings are equal; otherwise false.
   """
   pass
  def GetHashCode(self):
@@ -32,9 +29,8 @@ class BindingMemberInfo(object):
  @staticmethod
  def __new__(self,dataMember):
   """
-  __new__[BindingMemberInfo]() -> BindingMemberInfo
-  
-  __new__(cls: type,dataMember: str)
+  __new__(cls: type,dataMember: str)
+  __new__[BindingMemberInfo]() -> BindingMemberInfo
   """
   pass
  def __ne__(self,*args):

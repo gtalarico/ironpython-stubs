@@ -17,8 +17,7 @@ class ProgressBarRenderer(object):
    Draws a set of progress bar pieces that fill a horizontal progress bar.
   
    g: The System.Drawing.Graphics used to draw the progress bar.
-   bounds: The System.Drawing.Rectangle that specifies the bounds to be filled by progress 
-    bar pieces.
+   bounds: The System.Drawing.Rectangle that specifies the bounds to be filled by progress bar pieces.
   """
   pass
  @staticmethod
@@ -38,8 +37,7 @@ class ProgressBarRenderer(object):
    Draws a set of progress bar pieces that fill a vertical progress bar.
   
    g: The System.Drawing.Graphics used to draw the progress bar.
-   bounds: The System.Drawing.Rectangle that specifies the bounds to be filled by progress 
-    bar pieces.
+   bounds: The System.Drawing.Rectangle that specifies the bounds to be filled by progress bar pieces.
   """
   pass
  ChunkSpaceThickness=0

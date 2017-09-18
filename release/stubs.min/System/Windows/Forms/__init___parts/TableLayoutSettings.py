@@ -4,13 +4,12 @@ class TableLayoutSettings(LayoutSettings,ISerializable):
   """
   GetCellPosition(self: TableLayoutSettings,control: object) -> TableLayoutPanelCellPosition
   
-   Gets the System.Windows.Forms.TableLayoutPanelCellPosition that represents the 
-    row and the column of the cell.
+   Gets the System.Windows.Forms.TableLayoutPanelCellPosition that represents the row and the 
+    column of the cell.
   
   
    control: A control contained within a cell.
-   Returns: A System.Windows.Forms.TableLayoutPanelCellPosition that represents the cell 
-    position.
+   Returns: A System.Windows.Forms.TableLayoutPanelCellPosition that represents the cell position.
   """
   pass
  def GetColumn(self,control):
@@ -56,13 +55,12 @@ class TableLayoutSettings(LayoutSettings,ISerializable):
  def SetCellPosition(self,control,cellPosition):
   """
   SetCellPosition(self: TableLayoutSettings,control: object,cellPosition: TableLayoutPanelCellPosition)
-   Sets the System.Windows.Forms.TableLayoutPanelCellPosition that represents the 
-    row and the column of the cell.
+   Sets the System.Windows.Forms.TableLayoutPanelCellPosition that represents the row and the 
+    column of the cell.
   
   
    control: A control contained within a cell.
-   cellPosition: A System.Windows.Forms.TableLayoutPanelCellPosition  that represents the cell 
-    position.
+   cellPosition: A System.Windows.Forms.TableLayoutPanelCellPosition  that represents the cell position.
   """
   pass
  def SetColumn(self,control,column):

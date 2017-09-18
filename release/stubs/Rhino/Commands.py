@@ -25,17 +25,15 @@ class Command(object):
         """
         GetCommandNames(english: bool, loaded: bool) -> Array[str]
         
-            Gets list of command names in Rhino. This list does not include Test, Alpha, or System 
-             commands.
-        
+            Gets list of command names in Rhino. This list does not include Test, Alpha, or System commands.
         
             english: if true, retrieve the english name for every command.
-                     if false, retrieve the 
-             local name for every command.
+                     if false, retrieve the local 
+             name for every command.
         
             loaded: if true, only get names of currently loaded commands.
-                    if false, get names of 
-             all registered (may not be currently loaded) commands.
+                    if false, get names of all 
+             registered (may not be currently loaded) commands.
         
             Returns: An array instance with command names. This array could be empty, but not null.
         """
@@ -46,15 +44,15 @@ class Command(object):
         """
         GetCommandStack() -> Array[Guid]
         
-            Determines if Rhino is currently running a command. Because Rhino allow for transparent 
-             commands
-                    (commands that can be run from inside of other commands), this 
-             method returns the total ids of
+            Determines if Rhino is currently running a command. Because Rhino allow for transparent commands
+             
+                    (commands that can be run from inside of other commands), this method returns the 
+             total ids of
                     active commands.
         
             Returns: Ids of running commands or null if no commands are currently running. 
-                    The 
-             "active" command is at the end of this list.
+                    The "active" 
+             command is at the end of this list.
         """
         pass
 
@@ -86,8 +84,7 @@ class Command(object):
             This is a low level tool to determine if Rhino is currently running
                     a script 
              running command like "ReadCommandFile" or the RhinoScript
-                    plug-in's 
-             "RunScript".
+                    plug-in's "RunScript".
         
             Returns: true if a script running command is active.
         """
@@ -125,9 +122,7 @@ class Command(object):
             Returns the ID of a command.
         
             name: The name of the command.
-            searchForEnglishName: true if the name is to searched in English. This ensures that a '_' is prepended to the 
-             name.
-        
+            searchForEnglishName: true if the name is to searched in English. This ensures that a '_' is prepended to the name.
             Returns: An of the command, or System.Guid.Empty on error.
         """
         pass
@@ -160,8 +155,7 @@ class Command(object):
         
             replayData: The replay history information.
             Returns: true if the operation succeeded.
-                    The default implementation always returns 
-             false.
+                    The default implementation always returns false.
         """
         pass
 
@@ -542,8 +536,8 @@ class TransformCommand(Command):
         """
         ResetGrips(self: TransformCommand, list: TransformObjectList)
             Sets dynamic grip locations back to starting grip locations. This makes things
-                   
-              like the Copy command work when grips are "copied".
+                    like 
+             the Copy command work when grips are "copied".
         
         
             list: A list of object to transform. This is a special list type.

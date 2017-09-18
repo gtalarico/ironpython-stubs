@@ -9,15 +9,14 @@ class IEditableObject:
  def CancelEdit(self):
   """
   CancelEdit(self: IEditableObject)
-   Discards changes since the last System.ComponentModel.IEditableObject.BeginEdit 
-    call.
+   Discards changes since the last System.ComponentModel.IEditableObject.BeginEdit call.
   """
   pass
  def EndEdit(self):
   """
   EndEdit(self: IEditableObject)
-   Pushes changes since the last System.ComponentModel.IEditableObject.BeginEdit 
-    or System.ComponentModel.IBindingList.AddNew call into the underlying object.
+   Pushes changes since the last System.ComponentModel.IEditableObject.BeginEdit or 
+    System.ComponentModel.IBindingList.AddNew call into the underlying object.
   """
   pass
  def __init__(self,*args):

@@ -13,9 +13,7 @@ class PropertyDescriptor(MemberDescriptor):
   """
   CanResetValue(self: PropertyDescriptor,component: object) -> bool
   
-   When overridden in a derived class,returns whether resetting an object changes 
-    its value.
-  
+   When overridden in a derived class,returns whether resetting an object changes its value.
   
    component: The component to test for reset capability.
    Returns: true if resetting the component changes its value; otherwise,false.
@@ -48,19 +46,19 @@ class PropertyDescriptor(MemberDescriptor):
    Returns a System.ComponentModel.PropertyDescriptorCollection for a given object.
   
    instance: A component to get the properties for.
-   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties for 
-    the specified component.
+   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties for the specified 
+    component.
   
   GetChildProperties(self: PropertyDescriptor,instance: object,filter: Array[Attribute]) -> PropertyDescriptorCollection
   
-   Returns a System.ComponentModel.PropertyDescriptorCollection for a given object 
-    using a specified array of attributes as a filter.
+   Returns a System.ComponentModel.PropertyDescriptorCollection for a given object using a 
+    specified array of attributes as a filter.
   
   
    instance: A component to get the properties for.
    filter: An array of type System.Attribute to use as a filter.
-   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that 
-    match the specified attributes for the specified component.
+   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that match the 
+    specified attributes for the specified component.
   
   GetChildProperties(self: PropertyDescriptor) -> PropertyDescriptorCollection
   
@@ -68,13 +66,13 @@ class PropertyDescriptor(MemberDescriptor):
    Returns: A System.ComponentModel.PropertyDescriptorCollection.
   GetChildProperties(self: PropertyDescriptor,filter: Array[Attribute]) -> PropertyDescriptorCollection
   
-   Returns a System.ComponentModel.PropertyDescriptorCollection using a specified 
-    array of attributes as a filter.
+   Returns a System.ComponentModel.PropertyDescriptorCollection using a specified array of 
+    attributes as a filter.
   
   
    filter: An array of type System.Attribute to use as a filter.
-   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that 
-    match the specified attributes.
+   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that match the 
+    specified attributes.
   """
   pass
  def GetEditor(self,editorBaseType):
@@ -83,8 +81,8 @@ class PropertyDescriptor(MemberDescriptor):
   
    Gets an editor of the specified type.
   
-   editorBaseType: The base type of editor,which is used to differentiate between multiple 
-    editors that a property supports.
+   editorBaseType: The base type of editor,which is used to differentiate between multiple editors that a property 
+    supports.
   
    Returns: An instance of the requested editor type,or null if an editor cannot be found.
   """
@@ -104,17 +102,14 @@ class PropertyDescriptor(MemberDescriptor):
    Returns a type using its name.
   
    typeName: The assembly-qualified name of the type to retrieve.
-   Returns: A System.Type that matches the given type name,or null if a match cannot be 
-    found.
+   Returns: A System.Type that matches the given type name,or null if a match cannot be found.
   """
   pass
  def GetValue(self,component):
   """
   GetValue(self: PropertyDescriptor,component: object) -> object
   
-   When overridden in a derived class,gets the current value of the property on a 
-    component.
-  
+   When overridden in a derived class,gets the current value of the property on a component.
   
    component: The component with the property for which to retrieve the value.
    Returns: The value of a property for a given component.
@@ -124,13 +119,11 @@ class PropertyDescriptor(MemberDescriptor):
   """
   GetValueChangedHandler(self: PropertyDescriptor,component: object) -> EventHandler
   
-   Retrieves the current set of ValueChanged event handlers for a specific 
-    component
-  
+   Retrieves the current set of ValueChanged event handlers for a specific component
   
    component: The component for which to retrieve event handlers.
-   Returns: A combined multicast event handler,or null if no event handlers are currently 
-    assigned to component.
+   Returns: A combined multicast event handler,or null if no event handlers are currently assigned to 
+    component.
   """
   pass
  def OnValueChanged(self,*args):
@@ -154,8 +147,8 @@ class PropertyDescriptor(MemberDescriptor):
  def ResetValue(self,component):
   """
   ResetValue(self: PropertyDescriptor,component: object)
-   When overridden in a derived class,resets the value for this property of the 
-    component to the default value.
+   When overridden in a derived class,resets the value for this property of the component to the 
+    default value.
   
   
    component: The component with the property value that is to be reset to the default value.
@@ -164,9 +157,7 @@ class PropertyDescriptor(MemberDescriptor):
  def SetValue(self,component,value):
   """
   SetValue(self: PropertyDescriptor,component: object,value: object)
-   When overridden in a derived class,sets the value of the component to a 
-    different value.
-  
+   When overridden in a derived class,sets the value of the component to a different value.
   
    component: The component with the property value that is to be set.
    value: The new value.
@@ -176,8 +167,8 @@ class PropertyDescriptor(MemberDescriptor):
   """
   ShouldSerializeValue(self: PropertyDescriptor,component: object) -> bool
   
-   When overridden in a derived class,determines a value indicating whether the 
-    value of this property needs to be persisted.
+   When overridden in a derived class,determines a value indicating whether the value of this 
+    property needs to be persisted.
   
   
    component: The component with the property to be examined for persistence.

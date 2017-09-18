@@ -7,8 +7,7 @@ class HtmlWindowCollection(object,ICollection,IEnumerable):
    Returns an enumerator that can iterate through all elements in the 
     System.Windows.Forms.HtmlWindowCollection.
   
-   Returns: The System.Collections.IEnumerator that enables enumeration of this 
-    collection's elements.
+   Returns: The System.Collections.IEnumerator that enables enumeration of this collection's elements.
   """
   pass
  def __getitem__(self,*args):

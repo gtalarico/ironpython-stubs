@@ -22,12 +22,10 @@ class Uri(object,ISerializable):
   
    Determines whether the specified host name is a valid DNS name.
   
-   name: The host name to validate. This can be an IPv4 or IPv6 address or an Internet 
-    host name.
-  
-   Returns: A System.UriHostNameType that indicates the type of the host name. If the type 
-    of the host name cannot be determined or if the host name is null or a 
-    zero-length string,this method returns System.UriHostNameType.Unknown.
+   name: The host name to validate. This can be an IPv4 or IPv6 address or an Internet host name.
+   Returns: A System.UriHostNameType that indicates the type of the host name. If the type of the host name 
+    cannot be determined or if the host name is null or a zero-length string,this method returns 
+    System.UriHostNameType.Unknown.
   """
   pass
  @staticmethod
@@ -38,8 +36,7 @@ class Uri(object,ISerializable):
    Determines whether the specified scheme name is valid.
   
    schemeName: The scheme name to validate.
-   Returns: A System.Boolean value that is true if the scheme name is valid; otherwise,
-    false.
+   Returns: A System.Boolean value that is true if the scheme name is valid; otherwise,false.
   """
   pass
  def CheckSecurity(self,*args):
@@ -57,16 +54,16 @@ class Uri(object,ISerializable):
   
    uri1: The first System.Uri.
    uri2: The second System.Uri.
-   partsToCompare: A bitwise combination of the System.UriComponents values that specifies the 
-    parts of uri1 and uri2 to compare.
+   partsToCompare: A bitwise combination of the System.UriComponents values that specifies the parts of uri1 and 
+    uri2 to compare.
   
-   compareFormat: One of the System.UriFormat values that specifies the character escaping used 
-    when the URI components are compared.
+   compareFormat: One of the System.UriFormat values that specifies the character escaping used when the URI 
+    components are compared.
   
    comparisonType: One of the System.StringComparison values.
-   Returns: An System.Int32 value that indicates the lexical relationship between the 
-    compared System.Uri components.ValueMeaningLess than zerouri1 is less than 
-    uri2.Zerouri1 equals uri2.Greater than zerouri1 is greater than uri2.
+   Returns: An System.Int32 value that indicates the lexical relationship between the compared System.Uri 
+    components.ValueMeaningLess than zerouri1 is less than uri2.Zerouri1 equals uri2.Greater than 
+    zerouri1 is greater than uri2.
   """
   pass
  def Equals(self,comparand):
@@ -75,18 +72,16 @@ class Uri(object,ISerializable):
   
    Compares two System.Uri instances for equality.
   
-   comparand: The System.Uri instance or a URI identifier to compare with the current 
-    instance.
-  
-   Returns: A System.Boolean value that is true if the two instances represent the same 
-    URI; otherwise,false.
+   comparand: The System.Uri instance or a URI identifier to compare with the current instance.
+   Returns: A System.Boolean value that is true if the two instances represent the same URI; otherwise,
+    false.
   """
   pass
  def Escape(self,*args):
   """
   Escape(self: Uri)
-   Converts any unsafe or reserved characters in the path component to their 
-    hexadecimal character representations.
+   Converts any unsafe or reserved characters in the path component to their hexadecimal character 
+    representations.
   """
   pass
  @staticmethod
@@ -129,24 +124,22 @@ class Uri(object,ISerializable):
    Gets the decimal value of a hexadecimal digit.
   
    digit: The hexadecimal digit (0-9,a-f,A-F) to convert.
-   Returns: An System.Int32 value that contains a number from 0 to 15 that corresponds to 
-    the specified hexadecimal digit.
+   Returns: An System.Int32 value that contains a number from 0 to 15 that corresponds to the specified 
+    hexadecimal digit.
   """
   pass
  def GetComponents(self,components,format):
   """
   GetComponents(self: Uri,components: UriComponents,format: UriFormat) -> str
   
-   Gets the specified components of the current instance using the specified 
-    escaping for special characters.
+   Gets the specified components of the current instance using the specified escaping for special 
+    characters.
   
   
-   components: A bitwise combination of the System.UriComponents values that specifies which 
-    parts of the current instance to return to the caller.
+   components: A bitwise combination of the System.UriComponents values that specifies which parts of the 
+    current instance to return to the caller.
   
-   format: One of the System.UriFormat values that controls how special characters are 
-    escaped.
-  
+   format: One of the System.UriFormat values that controls how special characters are escaped.
    Returns: A System.String that contains the components.
   """
   pass
@@ -164,9 +157,7 @@ class Uri(object,ISerializable):
   
    Gets the specified portion of a System.Uri instance.
   
-   part: One of the System.UriPartial values that specifies the end of the URI portion 
-    to return.
-  
+   part: One of the System.UriPartial values that specifies the end of the URI portion to return.
    Returns: A System.String that contains the specified portion of the System.Uri instance.
   """
   pass
@@ -175,11 +166,11 @@ class Uri(object,ISerializable):
   GetObjectData(self: Uri,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
    Returns the data needed to serialize the current instance.
   
-   serializationInfo: A System.Runtime.Serialization.SerializationInfo object containing the 
-    information required to serialize the System.Uri.
+   serializationInfo: A System.Runtime.Serialization.SerializationInfo object containing the information required to 
+    serialize the System.Uri.
   
-   streamingContext: A System.Runtime.Serialization.StreamingContext object containing the source 
-    and destination of the serialized stream associated with the System.Uri.
+   streamingContext: A System.Runtime.Serialization.StreamingContext object containing the source and destination of 
+    the serialized stream associated with the System.Uri.
   """
   pass
  @staticmethod
@@ -201,13 +192,10 @@ class Uri(object,ISerializable):
    Converts a specified hexadecimal representation of a character to the character.
   
    pattern: The hexadecimal representation of a character.
-   index: The location in pattern where the hexadecimal representation of a character 
-    begins.
-  
-   Returns: The character represented by the hexadecimal encoding at position index. If the 
-    character at index is not hexadecimal encoded,the character at index is 
-    returned. The value of index is incremented to point to the character following 
-    the one returned.
+   index: The location in pattern where the hexadecimal representation of a character begins.
+   Returns: The character represented by the hexadecimal encoding at position index. If the character at 
+    index is not hexadecimal encoded,the character at index is returned. The value of index is 
+    incremented to point to the character following the one returned.
   """
   pass
  def IsBadFileSystemCharacter(self,*args):
@@ -217,16 +205,15 @@ class Uri(object,ISerializable):
    Gets whether a character is invalid in a file system name.
   
    character: The System.Char to test.
-   Returns: A System.Boolean value that is true if the specified character is invalid; 
-    otherwise false.
+   Returns: A System.Boolean value that is true if the specified character is invalid; otherwise false.
   """
   pass
  def IsBaseOf(self,uri):
   """
   IsBaseOf(self: Uri,uri: Uri) -> bool
   
-   Determines whether the current System.Uri instance is a base of the specified 
-    System.Uri instance.
+   Determines whether the current System.Uri instance is a base of the specified System.Uri 
+    instance.
   
   
    uri: The specified System.Uri instance to test.
@@ -240,8 +227,8 @@ class Uri(object,ISerializable):
    Gets whether the specified character should be escaped.
   
    character: The System.Char to test.
-   Returns: A System.Boolean value that is true if the specified character should be 
-    escaped; otherwise,false.
+   Returns: A System.Boolean value that is true if the specified character should be escaped; otherwise,
+    false.
   """
   pass
  @staticmethod
@@ -252,8 +239,8 @@ class Uri(object,ISerializable):
    Determines whether a specified character is a valid hexadecimal digit.
   
    character: The character to validate.
-   Returns: A System.Boolean value that is true if the character is a valid hexadecimal 
-    digit; otherwise false.
+   Returns: A System.Boolean value that is true if the character is a valid hexadecimal digit; otherwise 
+    false.
   """
   pass
  @staticmethod
@@ -265,8 +252,8 @@ class Uri(object,ISerializable):
   
    pattern: The string to check.
    index: The location in pattern to check for hexadecimal encoding.
-   Returns: A System.Boolean value that is true if pattern is hexadecimal encoded at the 
-    specified location; otherwise,false.
+   Returns: A System.Boolean value that is true if pattern is hexadecimal encoded at the specified location; 
+    otherwise,false.
   """
   pass
  def IsReservedCharacter(self,*args):
@@ -276,16 +263,16 @@ class Uri(object,ISerializable):
    Gets whether the specified character is a reserved character.
   
    character: The System.Char to test.
-   Returns: A System.Boolean value that is true if the specified character is a reserved 
-    character otherwise,false.
+   Returns: A System.Boolean value that is true if the specified character is a reserved character 
+    otherwise,false.
   """
   pass
  def IsWellFormedOriginalString(self):
   """
   IsWellFormedOriginalString(self: Uri) -> bool
   
-   Indicates whether the string used to construct this System.Uri was well-formed 
-    and is not required to be further escaped.
+   Indicates whether the string used to construct this System.Uri was well-formed and is not 
+    required to be further escaped.
   
    Returns: A System.Boolean value that is true if the string was well-formed; else false.
   """
@@ -295,8 +282,8 @@ class Uri(object,ISerializable):
   """
   IsWellFormedUriString(uriString: str,uriKind: UriKind) -> bool
   
-   Indicates whether the string is well-formed by attempting to construct a URI 
-    with the string and ensures that the string does not require further escaping.
+   Indicates whether the string is well-formed by attempting to construct a URI with the string and 
+    ensures that the string does not require further escaping.
   
   
    uriString: The string used to attempt to construct a System.Uri.
@@ -311,11 +298,10 @@ class Uri(object,ISerializable):
    Determines the difference between two System.Uri instances.
   
    toUri: The URI to compare to the current URI.
-   Returns: If the hostname and scheme of this URI instance and toUri are the same,then 
-    this method returns a System.String that represents a relative URI that,when 
-    appended to the current URI instance,yields the toUri parameter.If the 
-    hostname or scheme is different,then this method returns a System.String that 
-    represents the toUri parameter.
+   Returns: If the hostname and scheme of this URI instance and toUri are the same,then this method returns 
+    a System.String that represents a relative URI that,when appended to the current URI instance,
+    yields the toUri parameter.If the hostname or scheme is different,then this method returns a 
+    System.String that represents the toUri parameter.
   """
   pass
  def MakeRelativeUri(self,uri):
@@ -325,17 +311,17 @@ class Uri(object,ISerializable):
    Determines the difference between two System.Uri instances.
   
    uri: The URI to compare to the current URI.
-   Returns: If the hostname and scheme of this URI instance and uri are the same,then this 
-    method returns a relative System.Uri that,when appended to the current URI 
-    instance,yields uri.If the hostname or scheme is different,then this method 
-    returns a System.Uri  that represents the uri parameter.
+   Returns: If the hostname and scheme of this URI instance and uri are the same,then this method returns a 
+    relative System.Uri that,when appended to the current URI instance,yields uri.If the hostname 
+    or scheme is different,then this method returns a System.Uri  that represents the uri 
+    parameter.
   """
   pass
  def Parse(self,*args):
   """
   Parse(self: Uri)
-   Parses the URI of the current instance to ensure it contains all the parts 
-    required for a valid URI.
+   Parses the URI of the current instance to ensure it contains all the parts required for a valid 
+    URI.
   """
   pass
  def ToString(self):
@@ -343,8 +329,8 @@ class Uri(object,ISerializable):
   ToString(self: Uri) -> str
   
    Gets a canonical string representation for the specified System.Uri instance.
-   Returns: A System.String instance that contains the unescaped canonical representation 
-    of the System.Uri instance. All characters are unescaped except #,?,and %.
+   Returns: A System.String instance that contains the unescaped canonical representation of the System.Uri 
+    instance. All characters are unescaped except #,?,and %.
   """
   pass
  @staticmethod
@@ -352,46 +338,33 @@ class Uri(object,ISerializable):
   """
   TryCreate(baseUri: Uri,relativeUri: Uri) -> (bool,Uri)
   
-   Creates a new System.Uri using the specified base and relative System.Uri 
-    instances.
-  
+   Creates a new System.Uri using the specified base and relative System.Uri instances.
   
    baseUri: The base System.Uri.
    relativeUri: The relative System.Uri to add to the base System.Uri.
-   Returns: A System.Boolean value that is true if the System.Uri was successfully created; 
-    otherwise,false.
-  
+   Returns: A System.Boolean value that is true if the System.Uri was successfully created; otherwise,false.
   TryCreate(baseUri: Uri,relativeUri: str) -> (bool,Uri)
   
-   Creates a new System.Uri using the specified base and relative System.String 
-    instances.
-  
+   Creates a new System.Uri using the specified base and relative System.String instances.
   
    baseUri: The base System.Uri.
-   relativeUri: The relative System.Uri,represented as a System.String,to add to the base 
-    System.Uri.
-  
-   Returns: A System.Boolean value that is true if the System.Uri was successfully created; 
-    otherwise,false.
-  
+   relativeUri: The relative System.Uri,represented as a System.String,to add to the base System.Uri.
+   Returns: A System.Boolean value that is true if the System.Uri was successfully created; otherwise,false.
   TryCreate(uriString: str,uriKind: UriKind) -> (bool,Uri)
   
-   Creates a new System.Uri using the specified System.String instance and a 
-    System.UriKind.
-  
+   Creates a new System.Uri using the specified System.String instance and a System.UriKind.
   
    uriString: The System.String representing the System.Uri.
    uriKind: The type of the Uri.
-   Returns: A System.Boolean value that is true if the System.Uri was successfully created; 
-    otherwise,false.
+   Returns: A System.Boolean value that is true if the System.Uri was successfully created; otherwise,false.
   """
   pass
  def Unescape(self,*args):
   """
   Unescape(self: Uri,path: str) -> str
   
-   Converts the specified string by replacing any escape sequences with their 
-    unescaped representation.
+   Converts the specified string by replacing any escape sequences with their unescaped 
+    representation.
   
   
    path: The System.String to convert.

@@ -20,9 +20,7 @@ class SendKeys(object):
  def SendWait(keys):
   """
   SendWait(keys: str)
-   Sends the given keys to the active application,and then waits for the messages 
-    to be processed.
-  
+   Sends the given keys to the active application,and then waits for the messages to be processed.
   
    keys: The string of keystrokes to send.
   """

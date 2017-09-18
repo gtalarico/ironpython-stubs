@@ -8,12 +8,10 @@ class ItemsPanelTemplate(FrameworkTemplate,INameScope,ISealable,IHaveResources,I
  def ValidateTemplatedParent(self,*args):
   """
   ValidateTemplatedParent(self: ItemsPanelTemplate,templatedParent: FrameworkElement)
-   Checks that the templated parent is a non-null 
-    System.Windows.Controls.ItemsPresenter object.
+   Checks that the templated parent is a non-null System.Windows.Controls.ItemsPresenter object.
   
-  
-   templatedParent: The element this template is applied to. This must be an 
-    System.Windows.Controls.ItemsPresenter object.
+   templatedParent: The element this template is applied to. This must be an System.Windows.Controls.ItemsPresenter 
+    object.
   """
   pass
  def __init__(self,*args):

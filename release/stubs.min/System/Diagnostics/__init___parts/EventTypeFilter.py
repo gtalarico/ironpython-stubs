@@ -10,9 +10,7 @@ class EventTypeFilter(TraceFilter):
   
    Determines whether the trace listener should trace the event.
   
-   cache: A System.Diagnostics.TraceEventCache that represents the information cache for 
-    the trace event.
-  
+   cache: A System.Diagnostics.TraceEventCache that represents the information cache for the trace event.
    source: The name of the source.
    eventType: One of the System.Diagnostics.TraceEventType values.
    id: A trace identifier number.

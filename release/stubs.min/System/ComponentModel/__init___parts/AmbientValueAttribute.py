@@ -18,15 +18,15 @@ class AmbientValueAttribute(Attribute,_Attribute):
   """
   Equals(self: AmbientValueAttribute,obj: object) -> bool
   
-   Determines whether the specified System.ComponentModel.AmbientValueAttribute is 
-    equal to the current System.ComponentModel.AmbientValueAttribute.
+   Determines whether the specified System.ComponentModel.AmbientValueAttribute is equal to the 
+    current System.ComponentModel.AmbientValueAttribute.
   
   
    obj: The System.ComponentModel.AmbientValueAttribute to compare with the current 
     System.ComponentModel.AmbientValueAttribute.
   
-   Returns: true if the specified System.ComponentModel.AmbientValueAttribute is equal to 
-    the current System.ComponentModel.AmbientValueAttribute; otherwise,false.
+   Returns: true if the specified System.ComponentModel.AmbientValueAttribute is equal to the current 
+    System.ComponentModel.AmbientValueAttribute; otherwise,false.
   """
   pass
  def GetHashCode(self):

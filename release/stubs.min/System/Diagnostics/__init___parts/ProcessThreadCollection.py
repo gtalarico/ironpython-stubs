@@ -20,17 +20,15 @@ class ProcessThreadCollection(ReadOnlyCollectionBase,ICollection,IEnumerable):
   
    Determines whether the specified process thread exists in the collection.
   
-   thread: A System.Diagnostics.ProcessThread instance that indicates the thread to find 
-    in this collection.
-  
+   thread: A System.Diagnostics.ProcessThread instance that indicates the thread to find in this collection.
    Returns: true if the thread exists in the collection; otherwise,false.
   """
   pass
  def CopyTo(self,array,index):
   """
   CopyTo(self: ProcessThreadCollection,array: Array[ProcessThread],index: int)
-   Copies an array of System.Diagnostics.ProcessThread instances to the 
-    collection,at the specified index.
+   Copies an array of System.Diagnostics.ProcessThread instances to the collection,at the 
+    specified index.
   
   
    array: An array of System.Diagnostics.ProcessThread instances to add to the collection.

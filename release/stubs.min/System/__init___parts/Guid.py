@@ -12,48 +12,41 @@ class Guid(object,IFormattable,IComparable,IComparable[Guid],IEquatable[Guid]):
   """
   CompareTo(self: Guid,value: Guid) -> int
   
-   Compares this instance to a specified System.Guid object and returns an 
-    indication of their relative values.
-  
-  
-   value: An object to compare to this instance.
-   Returns: A signed number indicating the relative values of this instance and 
-    value.Return value Description A negative integer This instance is less than 
-    value. Zero This instance is equal to value. A positive integer This instance 
-    is greater than value.
-  
-  CompareTo(self: Guid,value: object) -> int
-  
-   Compares this instance to a specified object and returns an indication of their 
+   Compares this instance to a specified System.Guid object and returns an indication of their 
     relative values.
   
   
+   value: An object to compare to this instance.
+   Returns: A signed number indicating the relative values of this instance and value.Return value 
+    Description A negative integer This instance is less than value. Zero This instance is equal to 
+    value. A positive integer This instance is greater than value.
+  
+  CompareTo(self: Guid,value: object) -> int
+  
+   Compares this instance to a specified object and returns an indication of their relative values.
+  
    value: An object to compare,or null.
-   Returns: A signed number indicating the relative values of this instance and 
-    value.Return value Description A negative integer This instance is less than 
-    value. Zero This instance is equal to value. A positive integer This instance 
-    is greater than value,or value is null.
+   Returns: A signed number indicating the relative values of this instance and value.Return value 
+    Description A negative integer This instance is less than value. Zero This instance is equal to 
+    value. A positive integer This instance is greater than value,or value is null.
   """
   pass
  def Equals(self,*__args):
   """
   Equals(self: Guid,g: Guid) -> bool
   
-   Returns a value indicating whether this instance and a specified System.Guid 
-    object represent the same value.
+   Returns a value indicating whether this instance and a specified System.Guid object represent 
+    the same value.
   
   
    g: An object to compare to this instance.
    Returns: true if g is equal to this instance; otherwise,false.
   Equals(self: Guid,o: object) -> bool
   
-   Returns a value that indicates whether this instance is equal to a specified 
-    object.
-  
+   Returns a value that indicates whether this instance is equal to a specified object.
   
    o: The object to compare with this instance.
-   Returns: true if o is a System.Guid that has the same value as this instance; otherwise,
-    false.
+   Returns: true if o is a System.Guid that has the same value as this instance; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -78,9 +71,7 @@ class Guid(object,IFormattable,IComparable,IComparable[Guid],IEquatable[Guid]):
   """
   Parse(input: str) -> Guid
   
-   Converts the string representation of a GUID to the equivalent System.Guid 
-    structure.
-  
+   Converts the string representation of a GUID to the equivalent System.Guid structure.
   
    input: The GUID to convert.
    Returns: A structure that contains the value that was parsed.
@@ -91,13 +82,13 @@ class Guid(object,IFormattable,IComparable,IComparable[Guid],IEquatable[Guid]):
   """
   ParseExact(input: str,format: str) -> Guid
   
-   Converts the string representation of a GUID to the equivalent System.Guid 
-    structure,provided that the string is in the specified format.
+   Converts the string representation of a GUID to the equivalent System.Guid structure,provided 
+    that the string is in the specified format.
   
   
    input: The GUID to convert.
-   format: One of the following specifiers that indicates the exact format to use when 
-    interpreting input: "N","D","B","P",or "X".
+   format: One of the following specifiers that indicates the exact format to use when interpreting input: 
+    "N","D","B","P",or "X".
   
    Returns: A structure that contains the value that was parsed.
   """
@@ -114,42 +105,38 @@ class Guid(object,IFormattable,IComparable,IComparable[Guid],IEquatable[Guid]):
   """
   ToString(self: Guid,format: str,provider: IFormatProvider) -> str
   
-   Returns a string representation of the value of this instance of the 
-    System.Guid structure,according to the provided format specifier and 
-    culture-specific format information.
+   Returns a string representation of the value of this instance of the System.Guid structure,
+    according to the provided format specifier and culture-specific format information.
   
   
-   format: A single format specifier that indicates how to format the value of this 
-    System.Guid. The format parameter can be "N","D","B","P",or "X". If format 
-    is null or an empty string (""),"D" is used.
+   format: A single format specifier that indicates how to format the value of this System.Guid. The format 
+    parameter can be "N","D","B","P",or "X". If format is null or an empty string (""),"D" is 
+    used.
   
    provider: (Reserved) An object that supplies culture-specific formatting services.
-   Returns: The value of this System.Guid,represented as a series of lowercase hexadecimal 
-    digits in the specified format.
+   Returns: The value of this System.Guid,represented as a series of lowercase hexadecimal digits in the 
+    specified format.
   
   ToString(self: Guid,format: str) -> str
   
-   Returns a string representation of the value of this System.Guid instance,
-    according to the provided format specifier.
+   Returns a string representation of the value of this System.Guid instance,according to the 
+    provided format specifier.
   
   
-   format: A single format specifier that indicates how to format the value of this 
-    System.Guid. The format parameter can be "N","D","B","P",or "X". If format 
-    is null or an empty string (""),"D" is used.
+   format: A single format specifier that indicates how to format the value of this System.Guid. The format 
+    parameter can be "N","D","B","P",or "X". If format is null or an empty string (""),"D" is 
+    used.
   
-   Returns: The value of this System.Guid,represented as a series of lowercase hexadecimal 
-    digits in the specified format.
+   Returns: The value of this System.Guid,represented as a series of lowercase hexadecimal digits in the 
+    specified format.
   
   ToString(self: Guid) -> str
   
-   Returns a string representation of the value of this instance in registry 
-    format.
-  
-   Returns: The value of this System.Guid,formatted using the "D" format specifier as 
-    follows: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx where the value of the GUID is 
-    represented as a series of lowercase hexadecimal digits in groups of 8,4,4,
-    4,and 12 digits and separated by hyphens. An example of a return value is 
-    "382c74c3-721d-4f34-80e5-57657b6cbc27".
+   Returns a string representation of the value of this instance in registry format.
+   Returns: The value of this System.Guid,formatted using the "D" format specifier as follows: 
+    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx where the value of the GUID is represented as a series of 
+    lowercase hexadecimal digits in groups of 8,4,4,4,and 12 digits and separated by hyphens. An 
+    example of a return value is "382c74c3-721d-4f34-80e5-57657b6cbc27".
   """
   pass
  @staticmethod
@@ -157,9 +144,7 @@ class Guid(object,IFormattable,IComparable,IComparable[Guid],IEquatable[Guid]):
   """
   TryParse(input: str) -> (bool,Guid)
   
-   Converts the string representation of a GUID to the equivalent System.Guid 
-    structure.
-  
+   Converts the string representation of a GUID to the equivalent System.Guid structure.
   
    input: The GUID to convert.
    Returns: true if the parse operation was successful; otherwise,false.
@@ -170,13 +155,13 @@ class Guid(object,IFormattable,IComparable,IComparable[Guid],IEquatable[Guid]):
   """
   TryParseExact(input: str,format: str) -> (bool,Guid)
   
-   Converts the string representation of a GUID to the equivalent System.Guid 
-    structure,provided that the string is in the specified format.
+   Converts the string representation of a GUID to the equivalent System.Guid structure,provided 
+    that the string is in the specified format.
   
   
    input: The GUID to convert.
-   format: One of the following specifiers that indicates the exact format to use when 
-    interpreting input: "N","D","B","P",or "X".
+   format: One of the following specifiers that indicates the exact format to use when interpreting input: 
+    "N","D","B","P",or "X".
   
    Returns: true if the parse operation was successful; otherwise,false.
   """

@@ -16,9 +16,9 @@ class CommonSecurityDescriptor(GenericSecurityDescriptor):
  def PurgeAccessControl(self,sid):
   """
   PurgeAccessControl(self: CommonSecurityDescriptor,sid: SecurityIdentifier)
-   Removes all access rules for the specified security identifier from the 
-    Discretionary Access Control List (DACL) associated with this 
-    System.Security.AccessControl.CommonSecurityDescriptor object.
+   Removes all access rules for the specified security identifier from the Discretionary Access 
+    Control List (DACL) associated with this System.Security.AccessControl.CommonSecurityDescriptor 
+    object.
   
   
    sid: The security identifier for which to remove access rules.
@@ -27,9 +27,8 @@ class CommonSecurityDescriptor(GenericSecurityDescriptor):
  def PurgeAudit(self,sid):
   """
   PurgeAudit(self: CommonSecurityDescriptor,sid: SecurityIdentifier)
-   Removes all audit rules for the specified security identifier from the System 
-    Access Control List (SACL) associated with this 
-    System.Security.AccessControl.CommonSecurityDescriptor object.
+   Removes all audit rules for the specified security identifier from the System Access Control 
+    List (SACL) associated with this System.Security.AccessControl.CommonSecurityDescriptor object.
   
   
    sid: The security identifier for which to remove audit rules.
@@ -38,29 +37,27 @@ class CommonSecurityDescriptor(GenericSecurityDescriptor):
  def SetDiscretionaryAclProtection(self,isProtected,preserveInheritance):
   """
   SetDiscretionaryAclProtection(self: CommonSecurityDescriptor,isProtected: bool,preserveInheritance: bool)
-   Sets the inheritance protection for the Discretionary Access Control List 
-    (DACL) associated with this 
-    System.Security.AccessControl.CommonSecurityDescriptor object. DACLs that are 
-    protected do not inherit access rules from parent containers.
+   Sets the inheritance protection for the Discretionary Access Control List (DACL) associated with 
+    this System.Security.AccessControl.CommonSecurityDescriptor object. DACLs that are protected do 
+    not inherit access rules from parent containers.
   
   
    isProtected: true to protect the DACL from inheritance.
-   preserveInheritance: true to keep inherited access rules in the DACL; false to remove inherited 
-    access rules from the DACL.
+   preserveInheritance: true to keep inherited access rules in the DACL; false to remove inherited access rules from the 
+    DACL.
   """
   pass
  def SetSystemAclProtection(self,isProtected,preserveInheritance):
   """
   SetSystemAclProtection(self: CommonSecurityDescriptor,isProtected: bool,preserveInheritance: bool)
-   Sets the inheritance protection for the System Access Control List (SACL) 
-    associated with this System.Security.AccessControl.CommonSecurityDescriptor 
-    object. SACLs that are protected do not inherit audit rules from parent 
-    containers.
+   Sets the inheritance protection for the System Access Control List (SACL) associated with this 
+    System.Security.AccessControl.CommonSecurityDescriptor object. SACLs that are protected do not 
+    inherit audit rules from parent containers.
   
   
    isProtected: true to protect the SACL from inheritance.
-   preserveInheritance: true to keep inherited audit rules in the SACL; false to remove inherited audit 
-    rules from the SACL.
+   preserveInheritance: true to keep inherited audit rules in the SACL; false to remove inherited audit rules from the 
+    SACL.
   """
   pass
  @staticmethod

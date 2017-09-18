@@ -1,0 +1,27 @@
+{
+  "RevitAPI.DLL": {
+    "Autodesk.Revit.ApplicationServices": "<module 'ApplicationServices' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.DB.Events": "<module 'Events' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.DB.Structure": "<module 'Structure' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.Attributes": "<module 'Attributes' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.DB.Architecture": "<module 'Architecture' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.DB.Macros": "<module 'Macros' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.DB.Electrical": "<module 'Electrical' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.DB.Lighting": "<module 'Lighting' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.DB": "<module 'DB' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.DB.Mechanical": "<module 'Mechanical' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.DB.ExtensibleStorage": "<module 'ExtensibleStorage' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit": "<module 'Revit' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.DB.PointClouds": "<module 'PointClouds' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.Creation": "<module 'Creation' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk": "<module 'Autodesk' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.DB.Plumbing": "<module 'Plumbing' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.DB.Structure.StructuralSections": "<module 'StructuralSections' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.Utility": "<module 'Utility' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.DB.Analysis": "<module 'Analysis' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.DB.IFC": "<module 'IFC' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.DB.Fabrication": "<module 'Fabrication' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.Exceptions": "<module 'Exceptions' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Revit.DB.ExternalService": "<module 'ExternalService' (CLS module from RevitAPI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

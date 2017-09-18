@@ -8,9 +8,7 @@ class SettingsBindableAttribute(Attribute,_Attribute):
   """
   Equals(self: SettingsBindableAttribute,obj: object) -> bool
   
-   Determines whether two System.ComponentModel.SettingsBindableAttribute objects 
-    are equal.
-  
+   Determines whether two System.ComponentModel.SettingsBindableAttribute objects are equal.
   
    obj: The value to compare to.
    Returns: true if obj equals the type and value of this instance; otherwise,false.

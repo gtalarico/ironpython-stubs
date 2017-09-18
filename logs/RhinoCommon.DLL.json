@@ -1,0 +1,27 @@
+{
+  "RhinoCommon.DLL": {
+    "Rhino.Collections": "<module 'Collections' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry.Collections": "<module 'Collections' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry.Intersect": "<module 'Intersect' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.DocObjects.Custom": "<module 'Custom' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry": "<module 'Geometry' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.DocObjects": "<module 'DocObjects' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Input": "<module 'Input' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.FileIO": "<module 'FileIO' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Render.Fields": "<module 'Fields' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Runtime.InteropWrappers": "<module 'InteropWrappers' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino": "<module 'Rhino' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Render": "<module 'Render' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Geometry.Morphs": "<module 'Morphs' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.UI": "<module 'UI' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Commands": "<module 'Commands' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.UI.Gumball": "<module 'Gumball' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.PlugIns": "<module 'PlugIns' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Display": "<module 'Display' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Input.Custom": "<module 'Custom' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Render.UI": "<module 'UI' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.DocObjects.Tables": "<module 'Tables' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.Runtime": "<module 'Runtime' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>", 
+    "Rhino.ApplicationSettings": "<module 'ApplicationSettings' (CLS module from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530)>"
+  }
+}

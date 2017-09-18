@@ -1,8 +1,8 @@
 # encoding: utf-8
 # module System
-# from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,WindowsBase,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,System.Drawing,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a,System.Windows.Forms,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,PresentationCore,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
+# from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # functions
@@ -22,7 +22,21 @@ def EventHandler(p_object,method): # real signature unknown; restored from __doc
  """
  pass
 def Func(*args,**kwargs): # real signature unknown
- """  """
+ """
+ A TypeCollision is used when we have a collision between
+    two types with the same name.  Currently this is only possible w/ generic
+    methods that should logically have arity as a portion of their name. For eg:
+      System.EventHandler and System.EventHandler[T]
+      System.Nullable and System.Nullable[T]
+      System.IComparable and System.IComparable[T]
+    
+    The TypeCollision provides an indexer but also is a real type.  When used
+    as a real type it is the non-generic form of the type.
+    
+    The indexer allows the user to disambiguate between the generic and
+    non-generic versions.  Therefore users must always provide additional
+    information to get the generic version.
+ """
  pass
 def IComparable(*args,**kwargs): # real signature unknown
  """ Defines a generalized type-specific comparison method that a value type or class implements to order or sort its instances. """
@@ -32,6 +46,9 @@ def Nullable(*args,**kwargs): # real signature unknown
  pass
 def Tuple(*args,**kwargs): # real signature unknown
  """ Provides static methods for creating tuple objects. """
+ pass
+def ValueTuple(*args,**kwargs): # real signature unknown
+ """  """
  pass
 def WeakReference(target): # real signature unknown; restored from __doc__
  """
@@ -216,6 +233,7 @@ from __init___parts.TimeSpan import TimeSpan
 from __init___parts.TimeZone import TimeZone
 from __init___parts.TimeZoneInfo import TimeZoneInfo
 from __init___parts.TimeZoneNotFoundException import TimeZoneNotFoundException
+from __init___parts.TupleExtensions import TupleExtensions
 from __init___parts.Type import Type
 from __init___parts.TypeAccessException import TypeAccessException
 from __init___parts.TypeCode import TypeCode

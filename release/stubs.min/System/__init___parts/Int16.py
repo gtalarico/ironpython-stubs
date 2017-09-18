@@ -7,29 +7,26 @@ class Int16(object,IComparable,IFormattable,IConvertible,IComparable[Int16],IEqu
   """
   CompareTo(self: Int16,value: Int16) -> int
   
-   Compares this instance to a specified 16-bit signed integer and returns an 
-    integer that indicates whether the value of this instance is less than,equal 
-    to,or greater than the value of the specified 16-bit signed integer.
+   Compares this instance to a specified 16-bit signed integer and returns an integer that 
+    indicates whether the value of this instance is less than,equal to,or greater than the value 
+    of the specified 16-bit signed integer.
   
   
    value: An integer to compare.
-   Returns: A signed number indicating the relative values of this instance and 
-    value.Return Value Description Less than zero This instance is less than value. 
-    Zero This instance is equal to value. Greater than zero This instance is 
-    greater than value.
+   Returns: A signed number indicating the relative values of this instance and value.Return Value 
+    Description Less than zero This instance is less than value. Zero This instance is equal to 
+    value. Greater than zero This instance is greater than value.
   
   CompareTo(self: Int16,value: object) -> int
   
-   Compares this instance to a specified object and returns an integer that 
-    indicates whether the value of this instance is less than,equal to,or greater 
-    than the value of the object.
+   Compares this instance to a specified object and returns an integer that indicates whether the 
+    value of this instance is less than,equal to,or greater than the value of the object.
   
   
    value: An object to compare,or null.
-   Returns: A signed number indicating the relative values of this instance and 
-    value.Return Value Description Less than zero This instance is less than value. 
-    Zero This instance is equal to value. Greater than zero This instance is 
-    greater than value.-or- value is null.
+   Returns: A signed number indicating the relative values of this instance and value.Return Value 
+    Description Less than zero This instance is less than value. Zero This instance is equal to 
+    value. Greater than zero This instance is greater than value.-or- value is null.
   """
   pass
  def conjugate(self,*args):
@@ -39,9 +36,7 @@ class Int16(object,IComparable,IFormattable,IConvertible,IComparable[Int16],IEqu
   """
   Equals(self: Int16,obj: Int16) -> bool
   
-   Returns a value indicating whether this instance is equal to a specified 
-    System.Int16 value.
-  
+   Returns a value indicating whether this instance is equal to a specified System.Int16 value.
   
    obj: An System.Int16 value to compare to this instance.
    Returns: true if obj has the same value as this instance; otherwise,false.
@@ -50,8 +45,8 @@ class Int16(object,IComparable,IFormattable,IConvertible,IComparable[Int16],IEqu
    Returns a value indicating whether this instance is equal to a specified object.
   
    obj: An object to compare to this instance.
-   Returns: true if obj is an instance of System.Int16 and equals the value of this 
-    instance; otherwise,false.
+   Returns: true if obj is an instance of System.Int16 and equals the value of this instance; otherwise,
+    false.
   """
   pass
  def GetHashCode(self):
@@ -75,48 +70,40 @@ class Int16(object,IComparable,IFormattable,IConvertible,IComparable[Int16],IEqu
   """
   Parse(s: str,provider: IFormatProvider) -> Int16
   
-   Converts the string representation of a number in a specified culture-specific 
-    format to its 16-bit signed integer equivalent.
+   Converts the string representation of a number in a specified culture-specific format to its 
+    16-bit signed integer equivalent.
   
   
    s: A string containing a number to convert.
-   provider: An System.IFormatProvider that supplies culture-specific formatting information 
-    about s.
-  
+   provider: An System.IFormatProvider that supplies culture-specific formatting information about s.
    Returns: A 16-bit signed integer equivalent to the number specified in s.
   Parse(s: str,style: NumberStyles,provider: IFormatProvider) -> Int16
   
-   Converts the string representation of a number in a specified style and 
-    culture-specific format to its 16-bit signed integer equivalent.
+   Converts the string representation of a number in a specified style and culture-specific format 
+    to its 16-bit signed integer equivalent.
   
   
    s: A string containing a number to convert.
-   style: A bitwise combination of enumeration values that indicates the style elements 
-    that can be present in s. A typical value to specify is 
-    System.Globalization.NumberStyles.Integer.
+   style: A bitwise combination of enumeration values that indicates the style elements that can be 
+    present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
   
-   provider: An System.IFormatProvider that supplies culture-specific formatting information 
-    about s.
-  
+   provider: An System.IFormatProvider that supplies culture-specific formatting information about s.
    Returns: A 16-bit signed integer equivalent to the number specified in s.
   Parse(s: str) -> Int16
   
-   Converts the string representation of a number to its 16-bit signed integer 
-    equivalent.
-  
+   Converts the string representation of a number to its 16-bit signed integer equivalent.
   
    s: A string containing a number to convert.
    Returns: A 16-bit signed integer equivalent to the number contained in s.
   Parse(s: str,style: NumberStyles) -> Int16
   
-   Converts the string representation of a number in a specified style to its 
-    16-bit signed integer equivalent.
+   Converts the string representation of a number in a specified style to its 16-bit signed integer 
+    equivalent.
   
   
    s: A string containing a number to convert.
-   style: A bitwise combination of the enumeration values that indicates the style 
-    elements that can be present in s. A typical value to specify is 
-    System.Globalization.NumberStyles.Integer.
+   style: A bitwise combination of the enumeration values that indicates the style elements that can be 
+    present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
   
    Returns: A 16-bit signed integer equivalent to the number specified in s.
   """
@@ -125,42 +112,35 @@ class Int16(object,IComparable,IFormattable,IConvertible,IComparable[Int16],IEqu
   """
   ToString(self: Int16,format: str) -> str
   
-   Converts the numeric value of this instance to its equivalent string 
-    representation,using the specified format.
+   Converts the numeric value of this instance to its equivalent string representation,using the 
+    specified format.
   
   
    format: A numeric format string.
    Returns: The string representation of the value of this instance as specified by format.
   ToString(self: Int16,format: str,provider: IFormatProvider) -> str
   
-   Converts the numeric value of this instance to its equivalent string 
-    representation using the specified format and culture-specific formatting 
-    information.
+   Converts the numeric value of this instance to its equivalent string representation using the 
+    specified format and culture-specific formatting information.
   
   
    format: A numeric format string.
    provider: An object that supplies culture-specific formatting information.
-   Returns: The string representation of the value of this instance as specified by format 
-    and provider.
-  
+   Returns: The string representation of the value of this instance as specified by format and provider.
   ToString(self: Int16) -> str
   
-   Converts the numeric value of this instance to its equivalent string 
-    representation.
-  
-   Returns: The string representation of the value of this instance,consisting of a minus 
-    sign if the value is negative,and a sequence of digits ranging from 0 to 9 
-    with no leading zeroes.
+   Converts the numeric value of this instance to its equivalent string representation.
+   Returns: The string representation of the value of this instance,consisting of a minus sign if the value 
+    is negative,and a sequence of digits ranging from 0 to 9 with no leading zeroes.
   
   ToString(self: Int16,provider: IFormatProvider) -> str
   
-   Converts the numeric value of this instance to its equivalent string 
-    representation using the specified culture-specific format information.
+   Converts the numeric value of this instance to its equivalent string representation using the 
+    specified culture-specific format information.
   
   
    provider: An System.IFormatProvider that supplies culture-specific formatting information.
-   Returns: The string representation of the value of this instance as specified by 
-    provider.
+   Returns: The string representation of the value of this instance as specified by provider.
   """
   pass
  @staticmethod
@@ -168,25 +148,23 @@ class Int16(object,IComparable,IFormattable,IConvertible,IComparable[Int16],IEqu
   """
   TryParse(s: str,style: NumberStyles,provider: IFormatProvider) -> (bool,Int16)
   
-   Converts the string representation of a number in a specified style and 
-    culture-specific format to its 16-bit signed integer equivalent. A return value 
-    indicates whether the conversion succeeded or failed.
+   Converts the string representation of a number in a specified style and culture-specific format 
+    to its 16-bit signed integer equivalent. A return value indicates whether the conversion 
+    succeeded or failed.
   
   
-   s: A string containing a number to convert. The string is interpreted using the 
-    style specified by style.
+   s: A string containing a number to convert. The string is interpreted using the style specified by 
+    style.
   
-   style: A bitwise combination of enumeration values that indicates the style elements 
-    that can be present in s. A typical value to specify is 
-    System.Globalization.NumberStyles.Integer.
+   style: A bitwise combination of enumeration values that indicates the style elements that can be 
+    present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
   
    provider: An object that supplies culture-specific formatting information about s.
    Returns: true if s was converted successfully; otherwise,false.
   TryParse(s: str) -> (bool,Int16)
   
-   Converts the string representation of a number to its 16-bit signed integer 
-    equivalent. A return value indicates whether the conversion succeeded or 
-    failed.
+   Converts the string representation of a number to its 16-bit signed integer equivalent. A return 
+    value indicates whether the conversion succeeded or failed.
   
   
    s: A string containing a number to convert.

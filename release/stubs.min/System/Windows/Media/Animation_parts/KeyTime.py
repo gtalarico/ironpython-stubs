@@ -4,17 +4,13 @@ class KeyTime(object,IEquatable[KeyTime]):
   """
   Equals(self: KeyTime,value: KeyTime) -> bool
   
-   Indicates whether this instance is equal to the specified 
-    System.Windows.Media.Animation.KeyTime.
-  
+   Indicates whether this instance is equal to the specified System.Windows.Media.Animation.KeyTime.
   
    value: The object to compare with this instance.
    Returns: true if value is equal to this instance; otherwise,false.
   Equals(keyTime1: KeyTime,keyTime2: KeyTime) -> bool
   
-   Indicates whether the two specified System.Windows.Media.Animation.KeyTime 
-    structures are equal.
-  
+   Indicates whether the two specified System.Windows.Media.Animation.KeyTime structures are equal.
   
    keyTime1: The first value to compare.
    keyTime2: The second value to compare.
@@ -24,8 +20,8 @@ class KeyTime(object,IEquatable[KeyTime]):
    Indicates whether this instance equals the specified object.
   
    value: The object to compare with this instance.
-   Returns: true if value is a System.Windows.Media.Animation.KeyTime that represents the 
-    same length of time as this instance; otherwise false.
+   Returns: true if value is a System.Windows.Media.Animation.KeyTime that represents the same length of 
+    time as this instance; otherwise false.
   """
   pass
  @staticmethod
@@ -34,13 +30,12 @@ class KeyTime(object,IEquatable[KeyTime]):
   FromPercent(percent: float) -> KeyTime
   
    Creates a new System.Windows.Media.Animation.KeyTime instance,with the 
-    System.Windows.Media.Animation.KeyTimeType property initialized to the value of 
-    the specified parameter.
+    System.Windows.Media.Animation.KeyTimeType property initialized to the value of the specified 
+    parameter.
   
   
    percent: The value of the new System.Windows.Media.Animation.KeyTime.
-   Returns: A new System.Windows.Media.Animation.KeyTime instance,initialized to the value 
-    of percent.
+   Returns: A new System.Windows.Media.Animation.KeyTime instance,initialized to the value of percent.
   """
   pass
  @staticmethod
@@ -49,13 +44,12 @@ class KeyTime(object,IEquatable[KeyTime]):
   FromTimeSpan(timeSpan: TimeSpan) -> KeyTime
   
    Creates a new System.Windows.Media.Animation.KeyTime instance,with the 
-    System.Windows.Media.Animation.KeyTimeType property initialized to the value of 
-    the specified parameter.
+    System.Windows.Media.Animation.KeyTimeType property initialized to the value of the specified 
+    parameter.
   
   
    timeSpan: The value of the new System.Windows.Media.Animation.KeyTime.
-   Returns: A new System.Windows.Media.Animation.KeyTime instance,initialized to the value 
-    of timeSpan.
+   Returns: A new System.Windows.Media.Animation.KeyTime instance,initialized to the value of timeSpan.
   """
   pass
  def GetHashCode(self):
@@ -70,9 +64,7 @@ class KeyTime(object,IEquatable[KeyTime]):
   """
   ToString(self: KeyTime) -> str
   
-   Returns a string representing this System.Windows.Media.Animation.KeyTime 
-    instance.
-  
+   Returns a string representing this System.Windows.Media.Animation.KeyTime instance.
    Returns: A string representation of this instance.
   """
   pass

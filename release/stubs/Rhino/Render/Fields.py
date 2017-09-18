@@ -22,18 +22,17 @@ class Field(object):
         """
         CreateCppPointer(self: Field, content: RenderContent, attachToPointer: IntPtr)
             Create the RDK C++ field object and set its initial value, fields are
-                    
-             added to a RenderContent.FieldDictionary in the RenderContent
-                    
-             constructor before the RenderContent C++ pointer is created, the
-                    
-             RenderContent C++ pointer is required when creating a field in order
-                    
-             for the field to get added to the RenderContent C++ Field list so this
-                   
-              method is called by RenderContent when it is safe to create the Field
-                   
-              C++ pointers.
+                    added to a 
+             RenderContent.FieldDictionary in the RenderContent
+                    constructor before the 
+             RenderContent C++ pointer is created, the
+                    RenderContent C++ pointer is required 
+             when creating a field in order
+                    for the field to get added to the RenderContent C++ 
+             Field list so this
+                    method is called by RenderContent when it is safe to create the 
+             Field
+                    C++ pointers.
         
         
             content: RenderContent.FiledDictionary that owns this Field.
@@ -314,8 +313,8 @@ class FieldDictionary(object):
         Add(self: FieldDictionary, key: str, value: Point3d) -> Point3dField
         
             Add a new Point3dField to the dictionary. This will be a data only
-                    
-             field and not show up in the content browsers.
+                    field and not 
+             show up in the content browsers.
         
         
             key: Key name for the field value to change.
@@ -327,16 +326,16 @@ class FieldDictionary(object):
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         Add(self: FieldDictionary, key: str, value: Point4d) -> Point4dField
         
             Add a new Point4dField to the dictionary. This will be a data only
-                    
-             field and not show up in the content browsers.
+                    field and not 
+             show up in the content browsers.
         
         
             key: Key name for the field value to change.
@@ -348,16 +347,16 @@ class FieldDictionary(object):
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         Add(self: FieldDictionary, key: str, value: Vector3d) -> Vector3dField
         
             Add a new Vector3dField to the dictionary. This will be a data only
-                    
-             field and not show up in the content browsers.
+                    field and not 
+             show up in the content browsers.
         
         
             key: Key name for the field value to change.
@@ -369,16 +368,16 @@ class FieldDictionary(object):
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         Add(self: FieldDictionary, key: str, value: Point2d) -> Point2dField
         
             Add a new Point2dField to the dictionary. This will be a data only
-                    
-             field and not show up in the content browsers.
+                    field and not 
+             show up in the content browsers.
         
         
             key: Key name for the field value to change.
@@ -390,16 +389,16 @@ class FieldDictionary(object):
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         Add(self: FieldDictionary, key: str, value: DateTime) -> DateTimeField
         
             Add a new DateTimeField to the dictionary. This will be a data only
-                    
-             field and not show up in the content browsers.
+                    field and not 
+             show up in the content browsers.
         
         
             key: Key name for the field value to change.
@@ -411,16 +410,16 @@ class FieldDictionary(object):
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         Add(self: FieldDictionary, key: str, value: Array[Byte]) -> ByteArrayField
         
             AddField a new ByteArrayField to the dictionary. This will be a data
-                    
-             only field and not show up in the content browsers.
+                    only field and 
+             not show up in the content browsers.
         
         
             key: Key name for the field value to change.
@@ -432,16 +431,16 @@ class FieldDictionary(object):
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         Add(self: FieldDictionary, key: str, value: Guid) -> GuidField
         
             Add a new GuidField to the dictionary. This will be a data only field
-                    
-             and not show up in the content browsers.
+                    and not show 
+             up in the content browsers.
         
         
             key: Key name for the field value to change.
@@ -453,16 +452,16 @@ class FieldDictionary(object):
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         Add(self: FieldDictionary, key: str, value: Transform) -> TransformField
         
             Add a new TransformField to the dictionary. This will be a data only
-                    
-             field and not show up in the content browsers.
+                    field and not 
+             show up in the content browsers.
         
         
             key: Key name for the field value to change.
@@ -474,16 +473,16 @@ class FieldDictionary(object):
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         Add(self: FieldDictionary, key: str, value: int) -> IntField
         
             Add a new IntField to the dictionary. This will be a data only field
-                    
-             and not show up in the content browsers.
+                    and not show 
+             up in the content browsers.
         
         
             key: Key name for the field value to change.
@@ -495,16 +494,16 @@ class FieldDictionary(object):
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         Add(self: FieldDictionary, key: str, value: Single) -> FloatField
         
             Add a new FloatField to the dictionary. This will be a data only field
-                   
-              and not show up in the content browsers.
+                    and not show 
+             up in the content browsers.
         
         
             key: Key name for the field value to change.
@@ -516,16 +515,16 @@ class FieldDictionary(object):
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         Add(self: FieldDictionary, key: str, value: str) -> StringField
         
             Add a new StringField to the dictionary.  This will be a data only
-                    
-             field and not show up in the content browsers.
+                    field and not 
+             show up in the content browsers.
         
         
             key: Key name for the field value to change.
@@ -537,16 +536,16 @@ class FieldDictionary(object):
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         Add(self: FieldDictionary, key: str, value: bool) -> BoolField
         
             Add a new BoolField to the dictionary. This will be a data only field
-                    
-             and not show up in the content browsers.
+                    and not show 
+             up in the content browsers.
         
         
             key: Key name for the field value to change.
@@ -558,16 +557,16 @@ class FieldDictionary(object):
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         Add(self: FieldDictionary, key: str, value: Color) -> Color4fField
         
             Add a new Color4fField to the dictionary. This will be a data only
-                    
-             field and not show up in the content browsers.
+                    field and not 
+             show up in the content browsers.
         
         
             key: Key name for the field value to change.
@@ -579,16 +578,16 @@ class FieldDictionary(object):
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         Add(self: FieldDictionary, key: str, value: Vector2d) -> Vector2dField
         
             Add a new Vector2dField to the dictionary. This will be a data only
-                    
-             field and not show up in the content browsers.
+                    field and not 
+             show up in the content browsers.
         
         
             key: Key name for the field value to change.
@@ -600,16 +599,16 @@ class FieldDictionary(object):
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         Add(self: FieldDictionary, key: str, value: float) -> DoubleField
         
             AddField a new DoubleField to the dictionary. This will be a data only
-                   
-              field and not show up in the content browsers.
+                    field and 
+             not show up in the content browsers.
         
         
             key: Key name for the field value to change.
@@ -621,16 +620,16 @@ class FieldDictionary(object):
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         Add(self: FieldDictionary, key: str, value: Color4f) -> Color4fField
         
             Add a new Color4fField to the dictionary. This will be a data only
-                    
-             field and not show up in the content browsers.
+                    field and not 
+             show up in the content browsers.
         
         
             key: Key name for the field value to change.
@@ -643,257 +642,242 @@ class FieldDictionary(object):
         AddTextured(self: FieldDictionary, key: str, value: Point3d, prompt: str) -> Point3dField
         
             Add a new Point3dField to the dictionary. This overload will cause the
-                   
-              field to be tagged as "textured" so that the texturing UI will appear
-                   
-              in automatic UIs.
+                    field to be 
+             tagged as "textured" so that the texturing UI will appear
+                    in automatic UIs.
         
         
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         AddTextured(self: FieldDictionary, key: str, value: Point2d, prompt: str) -> Point2dField
         
             Add a new Point2dField to the dictionary. This overload will cause the
-                   
-              field to be tagged as "textured" so that the texturing UI will appear
-                   
-              in automatic UIs.
+                    field to be 
+             tagged as "textured" so that the texturing UI will appear
+                    in automatic UIs.
         
         
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         AddTextured(self: FieldDictionary, key: str, value: Vector3d, prompt: str) -> Vector3dField
         
             Add a new Vector3dField to the dictionary. This overload will cause the
-                  
-               field to be tagged as "textured" so that the texturing UI will appear
-                  
-               in automatic UIs.
+                    field to be 
+             tagged as "textured" so that the texturing UI will appear
+                    in automatic UIs.
         
         
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         AddTextured(self: FieldDictionary, key: str, value: Point4d, prompt: str) -> Point4dField
         
             Add a new Point4dField to the dictionary. This overload will cause the
-                   
-              field to be tagged as "textured" so that the texturing UI will appear
-                   
-              in automatic UIs.
+                    field to be 
+             tagged as "textured" so that the texturing UI will appear
+                    in automatic UIs.
         
         
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         AddTextured(self: FieldDictionary, key: str, value: DateTime, prompt: str) -> DateTimeField
         
             Add a new DateTimeField to the dictionary. This overload will cause the
-                  
-               field to be tagged as "textured" so that the texturing UI will appear
-                  
-               in automatic UIs.
+                    field to be 
+             tagged as "textured" so that the texturing UI will appear
+                    in automatic UIs.
         
         
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         AddTextured(self: FieldDictionary, key: str, value: Transform, prompt: str) -> TransformField
         
             Add a new TransformField to the dictionary. This overload will cause
-                    
-             the field to be tagged as "textured" so that the texturing UI will
-                    
-             appear in automatic UIs.
+                    the field to 
+             be tagged as "textured" so that the texturing UI will
+                    appear in automatic UIs.
         
         
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         AddTextured(self: FieldDictionary, key: str, value: Guid, prompt: str) -> GuidField
         
             Add a new GuidField to the dictionary. This overload will cause the
-                    
-             field to be tagged as "textured" so that the texturing UI will appear
-                    
-             in automatic UIs.
+                    field to be 
+             tagged as "textured" so that the texturing UI will appear
+                    in automatic UIs.
         
         
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         AddTextured(self: FieldDictionary, key: str, value: Vector2d, prompt: str) -> Vector2dField
         
             Add a new Vector2dField to the dictionary. This overload will cause the
-                  
-               field to be tagged as "textured" so that the texturing UI will appear
-                  
-               in automatic UIs.
+                    field to be 
+             tagged as "textured" so that the texturing UI will appear
+                    in automatic UIs.
         
         
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         AddTextured(self: FieldDictionary, key: str, value: int, prompt: str) -> IntField
         
             Add a new IntField to the dictionary. This overload will cause the
-                    
-             field to be tagged as "textured" so that the texturing UI will appear
-                    
-             in automatic UIs.
+                    field to be 
+             tagged as "textured" so that the texturing UI will appear
+                    in automatic UIs.
         
         
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         AddTextured(self: FieldDictionary, key: str, value: bool, prompt: str) -> BoolField
         
             Add a new BoolField to the dictionary. This overload will cause the
-                    
-             field to be tagged as "textured" so that the texturing UI will appear
-                    
-             in automatic UIs.
+                    field to be 
+             tagged as "textured" so that the texturing UI will appear
+                    in automatic UIs.
         
         
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         AddTextured(self: FieldDictionary, key: str, value: str, prompt: str) -> StringField
         
             Add a new StringField to the dictionary. This overload will cause the
-                    
-             field to be tagged as "textured" so that the texturing UI will appear
-                    
-             in automatic UIs.
+                    field to be 
+             tagged as "textured" so that the texturing UI will appear
+                    in automatic UIs.
         
         
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         AddTextured(self: FieldDictionary, key: str, value: Single, prompt: str) -> FloatField
         
             Add a new FloatField to the dictionary. This overload will cause the
-                    
-             field to be tagged as "textured" so that the texturing UI will appear
-                    
-             in automatic UIs.
+                    field to be 
+             tagged as "textured" so that the texturing UI will appear
+                    in automatic UIs.
         
         
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         AddTextured(self: FieldDictionary, key: str, value: Color, prompt: str) -> Color4fField
         
             Add a new Color4fField to the dictionary. This overload will cause the
-                   
-              field to be tagged as "textured" so that the texturing UI will appear
-                   
-              in automatic UIs.
+                    field to be 
+             tagged as "textured" so that the texturing UI will appear
+                    in automatic UIs.
         
         
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         AddTextured(self: FieldDictionary, key: str, value: Color4f, prompt: str) -> Color4fField
         
             Add a new Color4fField to the dictionary. This overload will cause the
-                   
-              field to be tagged as "textured" so that the texturing UI will appear
-                   
-              in automatic UIs.
+                    field to be 
+             tagged as "textured" so that the texturing UI will appear
+                    in automatic UIs.
         
         
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         
         AddTextured(self: FieldDictionary, key: str, value: float, prompt: str) -> DoubleField
         
             Add a new DoubleField to the dictionary. This overload will cause the
-                    
-             field to be tagged as "textured" so that the texturing UI will appear
-                    
-             in automatic UIs.
+                    field to be 
+             tagged as "textured" so that the texturing UI will appear
+                    in automatic UIs.
         
         
             key: Key name for the field value to change.
             value: Initial value for this field.
             prompt: Prompt to display in the user interface (Content Browsers) if this
-                    is 
-             null or an empty string the this field is a data only field and will
-                    
-             not appear in the user interface.
+                    is null or an 
+             empty string the this field is a data only field and will
+                    not appear in the user 
+             interface.
         """
         pass
 
@@ -902,14 +886,14 @@ class FieldDictionary(object):
         ContainsField(self: FieldDictionary, fieldName: str) -> bool
         
             Call this method to determine if a this FieldsList contains a field
-                    
-             with the specified field name.
+                    with the 
+             specified field name.
         
         
             fieldName: Field to search for
             Returns: Returns true if a field with that matches fieldName is found or false
-                    
-             if it is not found.
+                    if it is not 
+             found.
         """
         pass
 
@@ -921,8 +905,8 @@ class FieldDictionary(object):
         
             fieldName: Field name to search for.
             Returns: If the field exists in the Fields dictionary then the field is returned
-                  
-               otherwise; null is returned.
+                    otherwise; 
+             null is returned.
         """
         pass
 
@@ -930,160 +914,144 @@ class FieldDictionary(object):
         """
         Set(self: FieldDictionary, key: str, value: Point2d)
             Set the field value and send the appropriate change notification to the
-                  
-               render SDK.  Will throw a InvalidOperationException exception if the key
-               
-                  name is not valid.
+                    render SDK. 
+              Will throw a InvalidOperationException exception if the key
+                    name is not valid.
         
         
             key: Key name for the field value to change.
             value: New value for this field.
         Set(self: FieldDictionary, key: str, value: Vector3d, changeContext: ChangeContexts)Set(self: FieldDictionary, key: str, value: Point3d)
             Set the field value and send the appropriate change notification to the
-                  
-               render SDK.  Will throw a InvalidOperationException exception if the key
-               
-                  name is not valid.
+                    render SDK. 
+              Will throw a InvalidOperationException exception if the key
+                    name is not valid.
         
         
             key: Key name for the field value to change.
             value: New value for this field.
         Set(self: FieldDictionary, key: str, value: Point2d, changeContext: ChangeContexts)Set(self: FieldDictionary, key: str, value: Vector2d)
             Set the field value and send the appropriate change notification to the
-                  
-               render SDK.  Will throw a InvalidOperationException exception if the key
-               
-                  name is not valid.
+                    render SDK. 
+              Will throw a InvalidOperationException exception if the key
+                    name is not valid.
         
         
             key: Key name for the field value to change.
             value: New value for this field.
         Set(self: FieldDictionary, key: str, value: Color, changeContext: ChangeContexts)Set(self: FieldDictionary, key: str, value: Vector3d)
             Set the field value and send the appropriate change notification to the
-                  
-               render SDK.  Will throw a InvalidOperationException exception if the key
-               
-                  name is not valid.
+                    render SDK. 
+              Will throw a InvalidOperationException exception if the key
+                    name is not valid.
         
         
             key: Key name for the field value to change.
             value: New value for this field.
         Set(self: FieldDictionary, key: str, value: Vector2d, changeContext: ChangeContexts)Set(self: FieldDictionary, key: str, value: Transform)
             Set the field value and send the appropriate change notification to the
-                  
-               render SDK.  Will throw a InvalidOperationException exception if the key
-               
-                  name is not valid.
+                    render SDK. 
+              Will throw a InvalidOperationException exception if the key
+                    name is not valid.
         
         
             key: Key name for the field value to change.
             value: New value for this field.
         Set(self: FieldDictionary, key: str, value: Guid, changeContext: ChangeContexts)Set(self: FieldDictionary, key: str, value: DateTime)
             Set the field value and send the appropriate change notification to the
-                  
-               render SDK.  Will throw a InvalidOperationException exception if the key
-               
-                  name is not valid.
+                    render SDK. 
+              Will throw a InvalidOperationException exception if the key
+                    name is not valid.
         
         
             key: Key name for the field value to change.
             value: New value for this field.
         Set(self: FieldDictionary, key: str, value: Transform, changeContext: ChangeContexts)Set(self: FieldDictionary, key: str, value: Point4d)
             Set the field value and send the appropriate change notification to the
-                  
-               render SDK.  Will throw a InvalidOperationException exception if the key
-               
-                  name is not valid.
+                    render SDK. 
+              Will throw a InvalidOperationException exception if the key
+                    name is not valid.
         
         
             key: Key name for the field value to change.
             value: New value for this field.
         Set(self: FieldDictionary, key: str, value: Point3d, changeContext: ChangeContexts)Set(self: FieldDictionary, key: str, value: Guid)
             Set the field value and send the appropriate change notification to the
-                  
-               render SDK.  Will throw a InvalidOperationException exception if the key
-               
-                  name is not valid.
+                    render SDK. 
+              Will throw a InvalidOperationException exception if the key
+                    name is not valid.
         
         
             key: Key name for the field value to change.
             value: New value for this field.
         Set(self: FieldDictionary, key: str, value: Point4d, changeContext: ChangeContexts)Set(self: FieldDictionary, key: str, value: bool)
             Set the field value and send the appropriate change notification to the
-                  
-               render SDK.  Will throw a InvalidOperationException exception if the key
-               
-                  name is not valid.
+                    render SDK. 
+              Will throw a InvalidOperationException exception if the key
+                    name is not valid.
         
         
             key: Key name for the field value to change.
             value: New value for this field.
         Set(self: FieldDictionary, key: str, value: str, changeContext: ChangeContexts)Set(self: FieldDictionary, key: str, value: int)
             Set the field value and send the appropriate change notification to the
-                  
-               render SDK.  Will throw a InvalidOperationException exception if the key
-               
-                  name is not valid.
+                    render SDK. 
+              Will throw a InvalidOperationException exception if the key
+                    name is not valid.
         
         
             key: Key name for the field value to change.
             value: New value for this field.
         Set(self: FieldDictionary, key: str, value: bool, changeContext: ChangeContexts)Set(self: FieldDictionary, key: str, value: Array[Byte])
             Set the field value and send the appropriate change notification to the
-                  
-               render SDK.  Will throw a InvalidOperationException exception if the key
-               
-                  name is not valid.
+                    render SDK. 
+              Will throw a InvalidOperationException exception if the key
+                    name is not valid.
         
         
             key: Key name for the field value to change.
             value: New value for this field.
         Set(self: FieldDictionary, key: str, value: DateTime, changeContext: ChangeContexts)Set(self: FieldDictionary, key: str, value: str)
             Set the field value and send the appropriate change notification to the
-                  
-               render SDK.  Will throw a InvalidOperationException exception if the key
-               
-                  name is not valid.
+                    render SDK. 
+              Will throw a InvalidOperationException exception if the key
+                    name is not valid.
         
         
             key: Key name for the field value to change.
             value: New value for this field.
         Set(self: FieldDictionary, key: str, value: Array[Byte], changeContext: ChangeContexts)Set(self: FieldDictionary, key: str, value: Color4f)
             Set the field value and send the appropriate change notification to the
-                  
-               render SDK.  Will throw a InvalidOperationException exception if the key
-               
-                  name is not valid.
+                    render SDK. 
+              Will throw a InvalidOperationException exception if the key
+                    name is not valid.
         
         
             key: Key name for the field value to change.
             value: New value for this field.
         Set(self: FieldDictionary, key: str, value: float, changeContext: ChangeContexts)Set(self: FieldDictionary, key: str, value: Color)
             Set the field value and send the appropriate change notification to the
-                  
-               render SDK.  Will throw a InvalidOperationException exception if the key
-               
-                  name is not valid.
+                    render SDK. 
+              Will throw a InvalidOperationException exception if the key
+                    name is not valid.
         
         
             key: Key name for the field value to change.
             value: New value for this field.
         Set(self: FieldDictionary, key: str, value: Color4f, changeContext: ChangeContexts)Set(self: FieldDictionary, key: str, value: Single)
             Set the field value and send the appropriate change notification to the
-                  
-               render SDK.  Will throw a InvalidOperationException exception if the key
-               
-                  name is not valid.
+                    render SDK. 
+              Will throw a InvalidOperationException exception if the key
+                    name is not valid.
         
         
             key: Key name for the field value to change.
             value: New value for this field.
         Set(self: FieldDictionary, key: str, value: int, changeContext: ChangeContexts)Set(self: FieldDictionary, key: str, value: float)
             Set the field value and send the appropriate change notification to the
-                  
-               render SDK.  Will throw a InvalidOperationException exception if the key
-               
-                  name is not valid.
+                    render SDK. 
+              Will throw a InvalidOperationException exception if the key
+                    name is not valid.
         
         
             key: Key name for the field value to change.
@@ -1112,8 +1080,8 @@ class FieldDictionary(object):
         
             key: Key name of the field to get.
             Returns: Returns true if the field is found and its tag was retrieved otherwise;
-                  
-               returns false.
+                    returns 
+             false.
         """
         pass
 
@@ -1125,8 +1093,8 @@ class FieldDictionary(object):
         
             key: Key name of the field to get a value for.
             Returns: Returns true if the key is found and the value parameter is set to the
-                   
-              field value.  Returns false if the field was not found.
+                    field value. 
+              Returns false if the field was not found.
         
         TryGetValue(self: FieldDictionary, key: str) -> (bool, Point4d)
         
@@ -1134,8 +1102,8 @@ class FieldDictionary(object):
         
             key: Key name of the field to get a value for.
             Returns: Returns true if the key is found and the value parameter is set to the
-                   
-              field value.  Returns false if the field was not found.
+                    field value. 
+              Returns false if the field was not found.
         
         TryGetValue(self: FieldDictionary, key: str) -> (bool, Vector3d)
         
@@ -1143,8 +1111,8 @@ class FieldDictionary(object):
         
             key: Key name of the field to get a value for.
             Returns: Returns true if the key is found and the value parameter is set to the
-                   
-              field value.  Returns false if the field was not found.
+                    field value. 
+              Returns false if the field was not found.
         
         TryGetValue(self: FieldDictionary, key: str) -> (bool, Point2d)
         
@@ -1152,8 +1120,8 @@ class FieldDictionary(object):
         
             key: Key name of the field to get a value for.
             Returns: Returns true if the key is found and the value parameter is set to the
-                   
-              field value.  Returns false if the field was not found.
+                    field value. 
+              Returns false if the field was not found.
         
         TryGetValue(self: FieldDictionary, key: str) -> (bool, DateTime)
         
@@ -1161,8 +1129,8 @@ class FieldDictionary(object):
         
             key: Key name of the field to get a value for.
             Returns: Returns true if the key is found and the value parameter is set to the
-                   
-              field value.  Returns false if the field was not found.
+                    field value. 
+              Returns false if the field was not found.
         
         TryGetValue(self: FieldDictionary, key: str) -> (bool, Array[Byte])
         
@@ -1170,8 +1138,8 @@ class FieldDictionary(object):
         
             key: Key name of the field to get a value for.
             Returns: Returns true if the key is found and the value parameter is set to the
-                   
-              field value.  Returns false if the field was not found.
+                    field value. 
+              Returns false if the field was not found.
         
         TryGetValue(self: FieldDictionary, key: str) -> (bool, Guid)
         
@@ -1179,8 +1147,8 @@ class FieldDictionary(object):
         
             key: Key name of the field to get a value for.
             Returns: Returns true if the key is found and the value parameter is set to the
-                   
-              field value.  Returns false if the field was not found.
+                    field value. 
+              Returns false if the field was not found.
         
         TryGetValue(self: FieldDictionary, key: str) -> (bool, Transform)
         
@@ -1188,8 +1156,8 @@ class FieldDictionary(object):
         
             key: Key name of the field to get a value for.
             Returns: Returns true if the key is found and the value parameter is set to the
-                   
-              field value.  Returns false if the field was not found.
+                    field value. 
+              Returns false if the field was not found.
         
         TryGetValue(self: FieldDictionary, key: str) -> (bool, int)
         
@@ -1197,8 +1165,8 @@ class FieldDictionary(object):
         
             key: Key name of the field to get a value for.
             Returns: Returns true if the key is found and the value parameter is set to the
-                   
-              field value.  Returns false if the field was not found.
+                    field value. 
+              Returns false if the field was not found.
         
         TryGetValue(self: FieldDictionary, key: str) -> (bool, float)
         
@@ -1206,8 +1174,8 @@ class FieldDictionary(object):
         
             key: Key name of the field to get a value for.
             Returns: Returns true if the key is found and the value parameter is set to the
-                   
-              field value.  Returns false if the field was not found.
+                    field value. 
+              Returns false if the field was not found.
         
         TryGetValue(self: FieldDictionary, key: str) -> (bool, str)
         
@@ -1215,8 +1183,8 @@ class FieldDictionary(object):
         
             key: Key name of the field to get a value for.
             Returns: Returns true if the key is found and the value parameter is set to the
-                   
-              field value.  Returns false if the field was not found.
+                    field value. 
+              Returns false if the field was not found.
         
         TryGetValue(self: FieldDictionary, key: str) -> (bool, bool)
         
@@ -1224,8 +1192,8 @@ class FieldDictionary(object):
         
             key: Key name of the field to get a value for.
             Returns: Returns true if the key is found and the value parameter is set to the
-                   
-              field value.  Returns false if the field was not found.
+                    field value. 
+              Returns false if the field was not found.
         
         TryGetValue(self: FieldDictionary, key: str) -> (bool, Color)
         
@@ -1233,8 +1201,8 @@ class FieldDictionary(object):
         
             key: Key name of the field to get a value for.
             Returns: Returns true if the key is found and the value parameter is set to the
-                   
-              field value.  Returns false if the field was not found.
+                    field value. 
+              Returns false if the field was not found.
         
         TryGetValue(self: FieldDictionary, key: str) -> (bool, Vector2d)
         
@@ -1242,8 +1210,8 @@ class FieldDictionary(object):
         
             key: Key name of the field to get a value for.
             Returns: Returns true if the key is found and the value parameter is set to the
-                   
-              field value.  Returns false if the field was not found.
+                    field value. 
+              Returns false if the field was not found.
         
         TryGetValue(self: FieldDictionary, key: str) -> (bool, Single)
         
@@ -1251,8 +1219,8 @@ class FieldDictionary(object):
         
             key: Key name of the field to get a value for.
             Returns: Returns true if the key is found and the value parameter is set to the
-                   
-              field value.  Returns false if the field was not found.
+                    field value. 
+              Returns false if the field was not found.
         
         TryGetValue(self: FieldDictionary, key: str) -> (bool, Color4f)
         
@@ -1260,8 +1228,8 @@ class FieldDictionary(object):
         
             key: Key name of the field to get a value for.
             Returns: Returns true if the key is found and the value parameter is set to the
-                   
-              field value.  Returns false if the field was not found.
+                    field value. 
+              Returns false if the field was not found.
         """
         pass
 

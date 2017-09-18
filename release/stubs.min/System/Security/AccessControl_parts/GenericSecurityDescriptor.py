@@ -3,8 +3,8 @@ class GenericSecurityDescriptor(object):
  def GetBinaryForm(self,binaryForm,offset):
   """
   GetBinaryForm(self: GenericSecurityDescriptor,binaryForm: Array[Byte],offset: int)
-   Returns an array of byte values that represents the information contained in 
-    this System.Security.AccessControl.GenericSecurityDescriptor object.
+   Returns an array of byte values that represents the information contained in this 
+    System.Security.AccessControl.GenericSecurityDescriptor object.
   
   
    binaryForm: The byte array into which the contents of the 
@@ -17,17 +17,16 @@ class GenericSecurityDescriptor(object):
   """
   GetSddlForm(self: GenericSecurityDescriptor,includeSections: AccessControlSections) -> str
   
-   Returns the Security Descriptor Definition Language (SDDL) representation of 
-    the specified sections of the security descriptor that this 
+   Returns the Security Descriptor Definition Language (SDDL) representation of the specified 
+    sections of the security descriptor that this 
     System.Security.AccessControl.GenericSecurityDescriptor object represents.
   
   
-   includeSections: Specifies which sections (access rules,audit rules,primary group,owner) of 
-    the security descriptor to get.
+   includeSections: Specifies which sections (access rules,audit rules,primary group,owner) of the security 
+    descriptor to get.
   
-   Returns: The SDDL representation of the specified sections of the security descriptor 
-    associated with this System.Security.AccessControl.GenericSecurityDescriptor 
-    object.
+   Returns: The SDDL representation of the specified sections of the security descriptor associated with 
+    this System.Security.AccessControl.GenericSecurityDescriptor object.
   """
   pass
  @staticmethod
@@ -35,14 +34,13 @@ class GenericSecurityDescriptor(object):
   """
   IsSddlConversionSupported() -> bool
   
-   Returns a boolean value that specifies whether the security descriptor 
-    associated with this  System.Security.AccessControl.GenericSecurityDescriptor 
-    object can be converted to the Security Descriptor Definition Language (SDDL) 
-    format.
+   Returns a boolean value that specifies whether the security descriptor associated with this  
+    System.Security.AccessControl.GenericSecurityDescriptor object can be converted to the Security 
+    Descriptor Definition Language (SDDL) format.
   
    Returns: true if the security descriptor associated with this  
-    System.Security.AccessControl.GenericSecurityDescriptor object can be converted 
-    to the Security Descriptor Definition Language (SDDL) format; otherwise,false.
+    System.Security.AccessControl.GenericSecurityDescriptor object can be converted to the Security 
+    Descriptor Definition Language (SDDL) format; otherwise,false.
   """
   pass
  BinaryLength=property(lambda self: object(),lambda self,v: None,lambda self: None)

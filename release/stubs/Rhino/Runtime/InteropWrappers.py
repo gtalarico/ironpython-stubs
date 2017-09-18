@@ -1110,9 +1110,7 @@ class SimpleArraySurfacePointer(object, IDisposable):
         ToNonConstArray(self: SimpleArraySurfacePointer) -> Array[Surface]
         
             Copies the unmanaged array to a managed counterpart.
-                    Elements are made 
-             non-const.
-        
+                    Elements are made non-const.
             Returns: The managed array.
         """
         pass
@@ -1153,8 +1151,7 @@ class StringHolder(object, IDisposable):
         ConstPointer(self: StringHolder) -> IntPtr
         
             C++ pointer used to access the ON_wString, managed plug-ins should
-                    never need 
-             this.
+                    never need this.
         """
         pass
 
@@ -1179,8 +1176,7 @@ class StringHolder(object, IDisposable):
         NonConstPointer(self: StringHolder) -> IntPtr
         
             C++ pointer used to access the ON_wString, managed plug-ins should
-                    never need 
-             this.
+                    never need this.
         """
         pass
 

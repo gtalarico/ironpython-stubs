@@ -8,9 +8,7 @@ class UriParser(object):
   
    uri: The URI to parse.
    components: The System.UriComponents to retrieve from uri.
-   format: One of the System.UriFormat values that controls how special characters are 
-    escaped.
-  
+   format: One of the System.UriFormat values that controls how special characters are escaped.
    Returns: A string that contains the components.
   """
   pass
@@ -87,9 +85,7 @@ class UriParser(object):
   """
   Resolve(self: UriParser,baseUri: Uri,relativeUri: Uri) -> (str,UriFormatException)
   
-   Called by System.Uri constructors and erload:System.Uri.TryCreate to resolve a 
-    relative URI.
-  
+   Called by System.Uri constructors and erload:System.Uri.TryCreate to resolve a relative URI.
   
    baseUri: A base URI.
    relativeUri: A relative URI.

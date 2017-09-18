@@ -10,58 +10,48 @@ class CounterCreationDataCollection(CollectionBase,IList,ICollection,IEnumerable
   """
   Add(self: CounterCreationDataCollection,value: CounterCreationData) -> int
   
-   Adds an instance of the System.Diagnostics.CounterCreationData class to the 
-    collection.
+   Adds an instance of the System.Diagnostics.CounterCreationData class to the collection.
   
-  
-   value: A System.Diagnostics.CounterCreationData object to append to the existing 
-    collection.
-  
+   value: A System.Diagnostics.CounterCreationData object to append to the existing collection.
    Returns: The index of the new System.Diagnostics.CounterCreationData object.
   """
   pass
  def AddRange(self,value):
   """
   AddRange(self: CounterCreationDataCollection,value: CounterCreationDataCollection)
-   Adds the specified collection of System.Diagnostics.CounterCreationData 
-    instances to the collection.
+   Adds the specified collection of System.Diagnostics.CounterCreationData instances to the 
+    collection.
   
   
-   value: A collection of System.Diagnostics.CounterCreationData instances to append to 
-    the existing collection.
+   value: A collection of System.Diagnostics.CounterCreationData instances to append to the existing 
+    collection.
   
   AddRange(self: CounterCreationDataCollection,value: Array[CounterCreationData])
-   Adds the specified array of System.Diagnostics.CounterCreationData instances to 
-    the collection.
+   Adds the specified array of System.Diagnostics.CounterCreationData instances to the collection.
   
-  
-   value: An array of System.Diagnostics.CounterCreationData instances to append to the 
-    existing collection.
+   value: An array of System.Diagnostics.CounterCreationData instances to append to the existing 
+    collection.
   """
   pass
  def Contains(self,value):
   """
   Contains(self: CounterCreationDataCollection,value: CounterCreationData) -> bool
   
-   Determines whether a System.Diagnostics.CounterCreationData instance exists in 
-    the collection.
-  
+   Determines whether a System.Diagnostics.CounterCreationData instance exists in the collection.
   
    value: The System.Diagnostics.CounterCreationData object to find in the collection.
-   Returns: true if the specified System.Diagnostics.CounterCreationData object exists in 
-    the collection; otherwise,false.
+   Returns: true if the specified System.Diagnostics.CounterCreationData object exists in the collection; 
+    otherwise,false.
   """
   pass
  def CopyTo(self,array,index):
   """
   CopyTo(self: CounterCreationDataCollection,array: Array[CounterCreationData],index: int)
-   Copies the elements of the System.Diagnostics.CounterCreationData to an array,
-    starting at the specified index of the array.
+   Copies the elements of the System.Diagnostics.CounterCreationData to an array,starting at the 
+    specified index of the array.
   
   
-   array: An array of System.Diagnostics.CounterCreationData instances to add to the 
-    collection.
-  
+   array: An array of System.Diagnostics.CounterCreationData instances to add to the collection.
    index: The location at which to add the new instances.
   """
   pass
@@ -69,24 +59,22 @@ class CounterCreationDataCollection(CollectionBase,IList,ICollection,IEnumerable
   """
   IndexOf(self: CounterCreationDataCollection,value: CounterCreationData) -> int
   
-   Returns the index of a System.Diagnostics.CounterCreationData object in the 
-    collection.
-  
+   Returns the index of a System.Diagnostics.CounterCreationData object in the collection.
   
    value: The System.Diagnostics.CounterCreationData object to locate in the collection.
-   Returns: The zero-based index of the specified System.Diagnostics.CounterCreationData,
-    if it is found,in the collection; otherwise,-1.
+   Returns: The zero-based index of the specified System.Diagnostics.CounterCreationData,if it is found,in 
+    the collection; otherwise,-1.
   """
   pass
  def Insert(self,index,value):
   """
   Insert(self: CounterCreationDataCollection,index: int,value: CounterCreationData)
-   Inserts a System.Diagnostics.CounterCreationData object into the collection,at 
-    the specified index.
+   Inserts a System.Diagnostics.CounterCreationData object into the collection,at the specified 
+    index.
   
   
-   index: The zero-based index of the location at which the 
-    System.Diagnostics.CounterCreationData is to be inserted.
+   index: The zero-based index of the location at which the System.Diagnostics.CounterCreationData is to 
+    be inserted.
   
    value: The System.Diagnostics.CounterCreationData to insert into the collection.
   """

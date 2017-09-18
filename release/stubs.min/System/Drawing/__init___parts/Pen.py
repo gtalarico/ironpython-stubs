@@ -27,11 +27,11 @@ class Pen(MarshalByRefObject,ISystemColorTracker,ICloneable,IDisposable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -43,44 +43,38 @@ class Pen(MarshalByRefObject,ISystemColorTracker,ICloneable,IDisposable):
  def MultiplyTransform(self,matrix,order=None):
   """
   MultiplyTransform(self: Pen,matrix: Matrix,order: MatrixOrder)
-   Multiplies the transformation matrix for this System.Drawing.Pen by the 
-    specified System.Drawing.Drawing2D.Matrix in the specified order.
+   Multiplies the transformation matrix for this System.Drawing.Pen by the specified 
+    System.Drawing.Drawing2D.Matrix in the specified order.
   
   
-   matrix: The System.Drawing.Drawing2D.Matrix by which to multiply the transformation 
-    matrix.
-  
+   matrix: The System.Drawing.Drawing2D.Matrix by which to multiply the transformation matrix.
    order: The order in which to perform the multiplication operation.
   MultiplyTransform(self: Pen,matrix: Matrix)
-   Multiplies the transformation matrix for this System.Drawing.Pen by the 
-    specified System.Drawing.Drawing2D.Matrix.
+   Multiplies the transformation matrix for this System.Drawing.Pen by the specified 
+    System.Drawing.Drawing2D.Matrix.
   
   
-   matrix: The System.Drawing.Drawing2D.Matrix object by which to multiply the 
-    transformation matrix.
+   matrix: The System.Drawing.Drawing2D.Matrix object by which to multiply the transformation matrix.
   """
   pass
  def ResetTransform(self):
   """
   ResetTransform(self: Pen)
-   Resets the geometric transformation matrix for this System.Drawing.Pen to 
-    identity.
+   Resets the geometric transformation matrix for this System.Drawing.Pen to identity.
   """
   pass
  def RotateTransform(self,angle,order=None):
   """
   RotateTransform(self: Pen,angle: Single,order: MatrixOrder)
-   Rotates the local geometric transformation by the specified angle in the 
-    specified order.
-  
+   Rotates the local geometric transformation by the specified angle in the specified order.
   
    angle: The angle of rotation.
-   order: A System.Drawing.Drawing2D.MatrixOrder that specifies whether to append or 
-    prepend the rotation matrix.
+   order: A System.Drawing.Drawing2D.MatrixOrder that specifies whether to append or prepend the rotation 
+    matrix.
   
   RotateTransform(self: Pen,angle: Single)
-   Rotates the local geometric transformation by the specified angle. This method 
-    prepends the rotation to the transformation.
+   Rotates the local geometric transformation by the specified angle. This method prepends the 
+    rotation to the transformation.
   
   
    angle: The angle of rotation.
@@ -89,18 +83,16 @@ class Pen(MarshalByRefObject,ISystemColorTracker,ICloneable,IDisposable):
  def ScaleTransform(self,sx,sy,order=None):
   """
   ScaleTransform(self: Pen,sx: Single,sy: Single,order: MatrixOrder)
-   Scales the local geometric transformation by the specified factors in the 
-    specified order.
-  
+   Scales the local geometric transformation by the specified factors in the specified order.
   
    sx: The factor by which to scale the transformation in the x-axis direction.
    sy: The factor by which to scale the transformation in the y-axis direction.
-   order: A System.Drawing.Drawing2D.MatrixOrder that specifies whether to append or 
-    prepend the scaling matrix.
+   order: A System.Drawing.Drawing2D.MatrixOrder that specifies whether to append or prepend the scaling 
+    matrix.
   
   ScaleTransform(self: Pen,sx: Single,sy: Single)
-   Scales the local geometric transformation by the specified factors. This method 
-    prepends the scaling matrix to the transformation.
+   Scales the local geometric transformation by the specified factors. This method prepends the 
+    scaling matrix to the transformation.
   
   
    sx: The factor by which to scale the transformation in the x-axis direction.
@@ -114,29 +106,27 @@ class Pen(MarshalByRefObject,ISystemColorTracker,ICloneable,IDisposable):
     System.Drawing.Pen.
   
   
-   startCap: A System.Drawing.Drawing2D.LineCap that represents the cap style to use at the 
-    beginning of lines drawn with this System.Drawing.Pen.
+   startCap: A System.Drawing.Drawing2D.LineCap that represents the cap style to use at the beginning of 
+    lines drawn with this System.Drawing.Pen.
   
-   endCap: A System.Drawing.Drawing2D.LineCap that represents the cap style to use at the 
-    end of lines drawn with this System.Drawing.Pen.
+   endCap: A System.Drawing.Drawing2D.LineCap that represents the cap style to use at the end of lines 
+    drawn with this System.Drawing.Pen.
   
-   dashCap: A System.Drawing.Drawing2D.LineCap that represents the cap style to use at the 
-    beginning or end of dashed lines drawn with this System.Drawing.Pen.
+   dashCap: A System.Drawing.Drawing2D.LineCap that represents the cap style to use at the beginning or end 
+    of dashed lines drawn with this System.Drawing.Pen.
   """
   pass
  def TranslateTransform(self,dx,dy,order=None):
   """
   TranslateTransform(self: Pen,dx: Single,dy: Single,order: MatrixOrder)
-   Translates the local geometric transformation by the specified dimensions in 
-    the specified order.
-  
+   Translates the local geometric transformation by the specified dimensions in the specified order.
   
    dx: The value of the translation in x.
    dy: The value of the translation in y.
    order: The order (prepend or append) in which to apply the translation.
   TranslateTransform(self: Pen,dx: Single,dy: Single)
-   Translates the local geometric transformation by the specified dimensions. This 
-    method prepends the translation to the transformation.
+   Translates the local geometric transformation by the specified dimensions. This method prepends 
+    the translation to the transformation.
   
   
    dx: The value of the translation in x.
@@ -144,10 +134,17 @@ class Pen(MarshalByRefObject,ISystemColorTracker,ICloneable,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

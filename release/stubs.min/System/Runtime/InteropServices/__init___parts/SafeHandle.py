@@ -10,9 +10,7 @@ class SafeHandle(CriticalFinalizerObject,IDisposable):
   """
   DangerousAddRef(self: SafeHandle,success: bool) -> bool
   
-   Manually increments the reference counter on 
-    System.Runtime.InteropServices.SafeHandle instances.
-  
+   Manually increments the reference counter on System.Runtime.InteropServices.SafeHandle instances.
   
    success: true if the reference counter was successfully incremented; otherwise,false.
   """
@@ -22,37 +20,32 @@ class SafeHandle(CriticalFinalizerObject,IDisposable):
   DangerousGetHandle(self: SafeHandle) -> IntPtr
   
    Returns the value of the System.Runtime.InteropServices.SafeHandle.handle field.
-   Returns: An IntPtr representing the value of the 
-    System.Runtime.InteropServices.SafeHandle.handle field. If the handle has been 
-    marked invalid with 
-    System.Runtime.InteropServices.SafeHandle.SetHandleAsInvalid,this method still 
-    returns the original handle value,which can be a stale value.
+   Returns: An IntPtr representing the value of the System.Runtime.InteropServices.SafeHandle.handle field. 
+    If the handle has been marked invalid with 
+    System.Runtime.InteropServices.SafeHandle.SetHandleAsInvalid,this method still returns the 
+    original handle value,which can be a stale value.
   """
   pass
  def DangerousRelease(self):
   """
   DangerousRelease(self: SafeHandle)
-   Manually decrements the reference counter on a 
-    System.Runtime.InteropServices.SafeHandle instance.
+   Manually decrements the reference counter on a System.Runtime.InteropServices.SafeHandle 
+    instance.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: SafeHandle)
-   Releases all resources used by the System.Runtime.InteropServices.SafeHandle 
-    class.
+   Releases all resources used by the System.Runtime.InteropServices.SafeHandle class.
   """
   pass
  def ReleaseHandle(self,*args):
   """
   ReleaseHandle(self: SafeHandle) -> bool
   
-   When overridden in a derived class,executes the code required to free the 
-    handle.
-  
-   Returns: true if the handle is released successfully; otherwise,in the event of a 
-    catastrophic failure,false. In this case,it generates a releaseHandleFailed 
-    MDA Managed Debugging Assistant.
+   When overridden in a derived class,executes the code required to free the handle.
+   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,
+    false. In this case,it generates a releaseHandleFailed MDA Managed Debugging Assistant.
   """
   pass
  def SetHandle(self,*args):
@@ -70,10 +63,17 @@ class SafeHandle(CriticalFinalizerObject,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

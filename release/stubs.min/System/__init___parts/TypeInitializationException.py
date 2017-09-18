@@ -10,15 +10,15 @@ class TypeInitializationException(SystemException,ISerializable,_Exception):
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: TypeInitializationException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo object with the type 
-    name and additional exception information.
+   Sets the System.Runtime.Serialization.SerializationInfo object with the type name and additional 
+    exception information.
   
   
-   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized 
-    object data about the exception being thrown.
+   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about 
+    the exception being thrown.
   
-   context: The System.Runtime.Serialization.StreamingContext that contains contextual 
-    information about the source or destination.
+   context: The System.Runtime.Serialization.StreamingContext that contains contextual information about the 
+    source or destination.
   """
   pass
  def remove_SerializeObjectState(self,*args):

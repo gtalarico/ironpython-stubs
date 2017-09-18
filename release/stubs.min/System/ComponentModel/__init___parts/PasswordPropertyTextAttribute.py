@@ -9,16 +9,13 @@ class PasswordPropertyTextAttribute(Attribute,_Attribute):
   """
   Equals(self: PasswordPropertyTextAttribute,o: object) -> bool
   
-   Determines whether two System.ComponentModel.PasswordPropertyTextAttribute 
-    instances are equal.
+   Determines whether two System.ComponentModel.PasswordPropertyTextAttribute instances are equal.
   
+   o: The System.ComponentModel.PasswordPropertyTextAttribute to compare with the current 
+    System.ComponentModel.PasswordPropertyTextAttribute.
   
-   o: The System.ComponentModel.PasswordPropertyTextAttribute to compare with the 
-    current System.ComponentModel.PasswordPropertyTextAttribute.
-  
-   Returns: true if the specified System.ComponentModel.PasswordPropertyTextAttribute is 
-    equal to the current System.ComponentModel.PasswordPropertyTextAttribute; 
-    otherwise,false.
+   Returns: true if the specified System.ComponentModel.PasswordPropertyTextAttribute is equal to the 
+    current System.ComponentModel.PasswordPropertyTextAttribute; otherwise,false.
   """
   pass
  def GetHashCode(self):

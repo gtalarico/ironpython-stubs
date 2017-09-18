@@ -10,9 +10,7 @@ class FileWebRequest(WebRequest,ISerializable):
   """
   BeginGetRequestStream(self: FileWebRequest,callback: AsyncCallback,state: object) -> IAsyncResult
   
-   Begins an asynchronous request for a System.IO.Stream object to use to write 
-    data.
-  
+   Begins an asynchronous request for a System.IO.Stream object to use to write data.
   
    callback: The System.AsyncCallback delegate.
    state: An object that contains state information for this request.
@@ -34,8 +32,8 @@ class FileWebRequest(WebRequest,ISerializable):
   """
   EndGetRequestStream(self: FileWebRequest,asyncResult: IAsyncResult) -> Stream
   
-   Ends an asynchronous request for a System.IO.Stream instance that the 
-    application uses to write data.
+   Ends an asynchronous request for a System.IO.Stream instance that the application uses to write 
+    data.
   
   
    asyncResult: An System.IAsyncResult that references the pending request for a stream.
@@ -49,20 +47,19 @@ class FileWebRequest(WebRequest,ISerializable):
    Ends an asynchronous request for a file system resource.
   
    asyncResult: An System.IAsyncResult that references the pending request for a response.
-   Returns: A System.Net.WebResponse that contains the response from the file system 
-    resource.
+   Returns: A System.Net.WebResponse that contains the response from the file system resource.
   """
   pass
  def GetObjectData(self,*args):
   """
   GetObjectData(self: FileWebRequest,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo with the data needed 
-    to serialize the target object.
+   Populates a System.Runtime.Serialization.SerializationInfo with the data needed to serialize the 
+    target object.
   
   
    serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
-   streamingContext: A System.Runtime.Serialization.StreamingContext  that specifies the destination 
-    for this serialization.
+   streamingContext: A System.Runtime.Serialization.StreamingContext  that specifies the destination for this 
+    serialization.
   """
   pass
  def GetRequestStream(self):
@@ -78,8 +75,7 @@ class FileWebRequest(WebRequest,ISerializable):
   GetResponse(self: FileWebRequest) -> WebResponse
   
    Returns a response to a file system request.
-   Returns: A System.Net.WebResponse that contains the response from the file system 
-    resource.
+   Returns: A System.Net.WebResponse that contains the response from the file system resource.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -88,11 +84,11 @@ class FileWebRequest(WebRequest,ISerializable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object

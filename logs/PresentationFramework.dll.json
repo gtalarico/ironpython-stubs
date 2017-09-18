@@ -1,0 +1,32 @@
+{
+  "PresentationFramework.dll": {
+    "Microsoft": "<module 'Microsoft' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.ComponentModel": "<module 'ComponentModel' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Baml2006": "<module 'Baml2006' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Markup.Localizer": "<module 'Localizer' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Documents.Serialization": "<module 'Serialization' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Shapes": "<module 'Shapes' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Controls": "<module 'Controls' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Interop": "<module 'Interop' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Annotations": "<module 'Annotations' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "Microsoft.Win32": "<module 'Win32' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Documents": "<module 'Documents' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Markup.Primitives": "<module 'Primitives' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Navigation": "<module 'Navigation' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Annotations.Storage": "<module 'Storage' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Input": "<module 'Input' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Automation.Peers": "<module 'Peers' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Markup": "<module 'Markup' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Automation": "<module 'Automation' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Controls.Primitives": "<module 'Primitives' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Diagnostics": "<module 'Diagnostics' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System": "<module 'System' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Media.Animation": "<module 'Animation' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows": "<module 'Windows' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Media": "<module 'Media' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Data": "<module 'Data' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Shell": "<module 'Shell' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Documents.DocumentStructures": "<module 'DocumentStructures' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>", 
+    "System.Windows.Resources": "<module 'Resources' (CLS module from PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35)>"
+  }
+}

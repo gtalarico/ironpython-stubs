@@ -12,9 +12,8 @@ class ToolStripManager(object):
    toolStripName: A string specifying the name of the System.Windows.Forms.ToolStrip or derived 
     System.Windows.Forms.ToolStrip type to find.
   
-   Returns: The System.Windows.Forms.ToolStrip or one of its derived types as specified by 
-    the toolStripName parameter,or null if the System.Windows.Forms.ToolStrip is 
-    not found.
+   Returns: The System.Windows.Forms.ToolStrip or one of its derived types as specified by the toolStripName 
+    parameter,or null if the System.Windows.Forms.ToolStrip is not found.
   """
   pass
  @staticmethod
@@ -22,13 +21,13 @@ class ToolStripManager(object):
   """
   IsShortcutDefined(shortcut: Keys) -> bool
   
-   Retrieves a value indicating whether the specified shortcut key is used by any 
-    of the System.Windows.Forms.ToolStrip controls of a form.
+   Retrieves a value indicating whether the specified shortcut key is used by any of the 
+    System.Windows.Forms.ToolStrip controls of a form.
   
   
    shortcut: The shortcut key for which to search.
-   Returns: true if the shortcut key is used by any System.Windows.Forms.ToolStrip on the 
-    form; otherwise,false.
+   Returns: true if the shortcut key is used by any System.Windows.Forms.ToolStrip on the form; otherwise,
+    false.
   """
   pass
  @staticmethod
@@ -46,17 +45,13 @@ class ToolStripManager(object):
  def LoadSettings(targetForm,key=None):
   """
   LoadSettings(targetForm: Form,key: str)
-   Loads settings for the specified System.Windows.Forms.Form using the specified 
-    settings key.
-  
+   Loads settings for the specified System.Windows.Forms.Form using the specified settings key.
   
    targetForm: The System.Windows.Forms.Form for which to load settings.
-   key: A System.String representing the settings key for this 
-    System.Windows.Forms.Form.
-  
+   key: A System.String representing the settings key for this System.Windows.Forms.Form.
   LoadSettings(targetForm: Form)
-   Loads settings for the given System.Windows.Forms.Form using the full name of 
-    the System.Windows.Forms.Form as the settings key.
+   Loads settings for the given System.Windows.Forms.Form using the full name of the 
+    System.Windows.Forms.Form as the settings key.
   
   
    targetForm: The System.Windows.Forms.Form whose name is also the settings key.
@@ -69,22 +64,22 @@ class ToolStripManager(object):
   
    Combines two System.Windows.Forms.ToolStrip objects of the same type.
   
-   sourceToolStrip: The System.Windows.Forms.ToolStrip to be combined with the 
-    System.Windows.Forms.ToolStrip referred to by the targetName parameter.
+   sourceToolStrip: The System.Windows.Forms.ToolStrip to be combined with the System.Windows.Forms.ToolStrip 
+    referred to by the targetName parameter.
   
-   targetName: The name of the System.Windows.Forms.ToolStrip that receives the 
-    System.Windows.Forms.ToolStrip referred to by the sourceToolStrip parameter.
+   targetName: The name of the System.Windows.Forms.ToolStrip that receives the System.Windows.Forms.ToolStrip 
+    referred to by the sourceToolStrip parameter.
   
    Returns: true if the merge is successful; otherwise,false.
   Merge(sourceToolStrip: ToolStrip,targetToolStrip: ToolStrip) -> bool
   
    Combines two System.Windows.Forms.ToolStrip objects of different types.
   
-   sourceToolStrip: The System.Windows.Forms.ToolStrip to be combined with the 
-    System.Windows.Forms.ToolStrip referred to by the targetToolStrip parameter.
+   sourceToolStrip: The System.Windows.Forms.ToolStrip to be combined with the System.Windows.Forms.ToolStrip 
+    referred to by the targetToolStrip parameter.
   
-   targetToolStrip: The System.Windows.Forms.ToolStrip that receives the 
-    System.Windows.Forms.ToolStrip referred to by the sourceToolStrip parameter.
+   targetToolStrip: The System.Windows.Forms.ToolStrip that receives the System.Windows.Forms.ToolStrip referred to 
+    by the sourceToolStrip parameter.
   
    Returns: true if the merge is successful; otherwise,false.
   """
@@ -95,31 +90,27 @@ class ToolStripManager(object):
   RevertMerge(targetName: str) -> bool
   
    Undoes a merging of two System.Windows.Forms.ToolStrip objects,returning the 
-    System.Windows.Forms.ToolStrip with the specified name to its state before the 
-    merge and nullifying all previous merge operations.
+    System.Windows.Forms.ToolStrip with the specified name to its state before the merge and 
+    nullifying all previous merge operations.
   
   
-   targetName: The name of the System.Windows.Forms.ToolStripItem for which to undo a merge 
-    operation.
-  
+   targetName: The name of the System.Windows.Forms.ToolStripItem for which to undo a merge operation.
    Returns: true if the undoing of the merge is successful; otherwise,false.
   RevertMerge(targetToolStrip: ToolStrip,sourceToolStrip: ToolStrip) -> bool
   
    Undoes a merging of two System.Windows.Forms.ToolStrip objects,returning both 
-    System.Windows.Forms.ToolStrip controls to their state before the merge and 
-    nullifying all previous merge operations.
+    System.Windows.Forms.ToolStrip controls to their state before the merge and nullifying all 
+    previous merge operations.
   
   
-   targetToolStrip: The name of the System.Windows.Forms.ToolStripItem for which to undo a merge 
-    operation.
-  
+   targetToolStrip: The name of the System.Windows.Forms.ToolStripItem for which to undo a merge operation.
    sourceToolStrip: The System.Windows.Forms.ToolStrip that was merged with the targetToolStrip.
    Returns: true if the undoing of the merge is successful; otherwise,false.
   RevertMerge(targetToolStrip: ToolStrip) -> bool
   
-   Undoes a merging of two System.Windows.Forms.ToolStrip objects,returning the 
-    specified System.Windows.Forms.ToolStrip to its state before the merge and 
-    nullifying all previous merge operations.
+   Undoes a merging of two System.Windows.Forms.ToolStrip objects,returning the specified 
+    System.Windows.Forms.ToolStrip to its state before the merge and nullifying all previous merge 
+    operations.
   
   
    targetToolStrip: The System.Windows.Forms.ToolStripItem for which to undo a merge operation.
@@ -130,17 +121,13 @@ class ToolStripManager(object):
  def SaveSettings(sourceForm,key=None):
   """
   SaveSettings(sourceForm: Form,key: str)
-   Saves settings for the specified System.Windows.Forms.Form using the specified 
-    settings key.
-  
+   Saves settings for the specified System.Windows.Forms.Form using the specified settings key.
   
    sourceForm: The System.Windows.Forms.Form for which to save settings.
-   key: A System.String representing the settings key for this 
-    System.Windows.Forms.Form.
-  
+   key: A System.String representing the settings key for this System.Windows.Forms.Form.
   SaveSettings(sourceForm: Form)
-   Saves settings for the given System.Windows.Forms.Form using the full name of 
-    the System.Windows.Forms.Form as the settings key.
+   Saves settings for the given System.Windows.Forms.Form using the full name of the 
+    System.Windows.Forms.Form as the settings key.
   
   
    sourceForm: The System.Windows.Forms.Form whose name is also the settings key.
@@ -149,5 +136,5 @@ class ToolStripManager(object):
  Renderer=None
  RendererChanged=None
  RenderMode=None
- VisualStylesEnabled=True
+ VisualStylesEnabled=False
 

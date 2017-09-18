@@ -2,7 +2,7 @@
 # module System.Net.Cache calls itself Cache
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -99,8 +99,7 @@ class RequestCachePolicy(object):
   ToString(self: RequestCachePolicy) -> str
   
    Returns a string representation of this instance.
-   Returns: A System.String containing the System.Net.Cache.RequestCachePolicy.Level for 
-    this instance.
+   Returns: A System.String containing the System.Net.Cache.RequestCachePolicy.Level for this instance.
   """
   pass
  @staticmethod

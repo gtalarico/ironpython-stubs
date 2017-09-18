@@ -36,8 +36,8 @@ class ListViewItem(object,ICloneable,ISerializable):
   Clone(self: ListViewItem) -> object
   
    Creates an identical copy of the item.
-   Returns: An object that represents an item that has the same text,image,and subitems 
-    associated with it as the cloned item.
+   Returns: An object that represents an item that has the same text,image,and subitems associated with it 
+    as the cloned item.
   """
   pass
  def Deserialize(self,*args):
@@ -45,31 +45,31 @@ class ListViewItem(object,ICloneable,ISerializable):
   Deserialize(self: ListViewItem,info: SerializationInfo,context: StreamingContext)
    Deserializes the item.
   
-   info: A System.Runtime.Serialization.SerializationInfo that holds the data needed to 
-    deserialize the item.
+   info: A System.Runtime.Serialization.SerializationInfo that holds the data needed to deserialize the 
+    item.
   
-   context: A System.Runtime.Serialization.StreamingContext that represents the source and 
-    destination of the stream being deserialized.
+   context: A System.Runtime.Serialization.StreamingContext that represents the source and destination of 
+    the stream being deserialized.
   """
   pass
  def EnsureVisible(self):
   """
   EnsureVisible(self: ListViewItem)
-   Ensures that the item is visible within the control,scrolling the contents of 
-    the control,if necessary.
+   Ensures that the item is visible within the control,scrolling the contents of the control,if 
+    necessary.
   """
   pass
  def FindNearestItem(self,searchDirection):
   """
   FindNearestItem(self: ListViewItem,searchDirection: SearchDirectionHint) -> ListViewItem
   
-   Finds the next item from the System.Windows.Forms.ListViewItem,searching in 
-    the specified direction.
+   Finds the next item from the System.Windows.Forms.ListViewItem,searching in the specified 
+    direction.
   
   
    searchDirection: One of the System.Windows.Forms.SearchDirectionHint values.
-   Returns: The System.Windows.Forms.ListViewItem that is closest to the given coordinates,
-    searching in the specified direction.
+   Returns: The System.Windows.Forms.ListViewItem that is closest to the given coordinates,searching in the 
+    specified direction.
   """
   pass
  def GetBounds(self,portion):
@@ -78,25 +78,22 @@ class ListViewItem(object,ICloneable,ISerializable):
   
    Retrieves the specified portion of the bounding rectangle for the item.
   
-   portion: One of the System.Windows.Forms.ItemBoundsPortion values that represents a 
-    portion of the item for which to retrieve the bounding rectangle.
+   portion: One of the System.Windows.Forms.ItemBoundsPortion values that represents a portion of the item 
+    for which to retrieve the bounding rectangle.
   
-   Returns: A System.Drawing.Rectangle that represents the bounding rectangle for the 
-    specified portion of the item.
+   Returns: A System.Drawing.Rectangle that represents the bounding rectangle for the specified portion of 
+    the item.
   """
   pass
  def GetSubItemAt(self,x,y):
   """
   GetSubItemAt(self: ListViewItem,x: int,y: int) -> ListViewSubItem
   
-   Returns the subitem of the System.Windows.Forms.ListViewItem at the specified 
-    coordinates.
-  
+   Returns the subitem of the System.Windows.Forms.ListViewItem at the specified coordinates.
   
    x: The x-coordinate.
    y: The y-coordinate.
-   Returns: The System.Windows.Forms.ListViewItem.ListViewSubItem at the specified x- and 
-    y-coordinates.
+   Returns: The System.Windows.Forms.ListViewItem.ListViewSubItem at the specified x- and y-coordinates.
   """
   pass
  def Remove(self):
@@ -110,11 +107,11 @@ class ListViewItem(object,ICloneable,ISerializable):
   Serialize(self: ListViewItem,info: SerializationInfo,context: StreamingContext)
    Serializes the item.
   
-   info: A System.Runtime.Serialization.SerializationInfo that holds the data needed to 
-    serialize the item.
+   info: A System.Runtime.Serialization.SerializationInfo that holds the data needed to serialize the 
+    item.
   
-   context: A System.Runtime.Serialization.StreamingContext that represents the source and 
-    destination of the stream being serialized.
+   context: A System.Runtime.Serialization.StreamingContext that represents the source and destination of 
+    the stream being serialized.
   """
   pass
  def ToString(self):

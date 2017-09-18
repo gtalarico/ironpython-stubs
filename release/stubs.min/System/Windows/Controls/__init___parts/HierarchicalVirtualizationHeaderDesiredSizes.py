@@ -15,9 +15,8 @@ class HierarchicalVirtualizationHeaderDesiredSizes(object):
  @staticmethod
  def __new__(self,logicalSize,pixelSize):
   """
-  __new__[HierarchicalVirtualizationHeaderDesiredSizes]() -> HierarchicalVirtualizationHeaderDesiredSizes
-  
-  __new__(cls: type,logicalSize: Size,pixelSize: Size)
+  __new__(cls: type,logicalSize: Size,pixelSize: Size)
+  __new__[HierarchicalVirtualizationHeaderDesiredSizes]() -> HierarchicalVirtualizationHeaderDesiredSizes
   """
   pass
  def __ne__(self,*args):

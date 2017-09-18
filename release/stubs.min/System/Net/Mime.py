@@ -2,7 +2,7 @@
 # module System.Net.Mime calls itself Mime
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -20,8 +20,8 @@ class ContentDisposition(object):
   Equals(self: ContentDisposition,rparam: object) -> bool
   
    Determines whether the content-disposition header of the specified 
-    System.Net.Mime.ContentDisposition object is equal to the content-disposition 
-    header of this object.
+    System.Net.Mime.ContentDisposition object is equal to the content-disposition header of this 
+    object.
   
   
    rparam: The System.Net.Mime.ContentDisposition object to compare with this object.
@@ -32,9 +32,7 @@ class ContentDisposition(object):
   """
   GetHashCode(self: ContentDisposition) -> int
   
-   Determines the hash code of the specified System.Net.Mime.ContentDisposition 
-    object
-  
+   Determines the hash code of the specified System.Net.Mime.ContentDisposition object
    Returns: An integer hash value.
   """
   pass
@@ -134,9 +132,8 @@ class ContentType(object):
   """
   Equals(self: ContentType,rparam: object) -> bool
   
-   Determines whether the content-type header of the specified 
-    System.Net.Mime.ContentType object is equal to the content-type header of this 
-    object.
+   Determines whether the content-type header of the specified System.Net.Mime.ContentType object 
+    is equal to the content-type header of this object.
   
   
    rparam: The System.Net.Mime.ContentType object to compare with this object.
@@ -156,8 +153,7 @@ class ContentType(object):
   ToString(self: ContentType) -> str
   
    Returns a string representation of this System.Net.Mime.ContentType object.
-   Returns: A System.String that contains the current settings for this 
-    System.Net.Mime.ContentType.
+   Returns: A System.String that contains the current settings for this System.Net.Mime.ContentType.
   """
   pass
  def __eq__(self,*args):

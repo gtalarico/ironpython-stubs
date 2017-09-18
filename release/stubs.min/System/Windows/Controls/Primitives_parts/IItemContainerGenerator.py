@@ -4,45 +4,42 @@ class IItemContainerGenerator:
   """
   GenerateNext(self: IItemContainerGenerator) -> (DependencyObject,bool)
   
-   Returns the container element used to display the next item,and whether the 
-    container element has been newly generated (realized).
+   Returns the container element used to display the next item,and whether the container element 
+    has been newly generated (realized).
   
-   Returns: A System.Windows.DependencyObject that is the container element which is used 
-    to display the next item.
+   Returns: A System.Windows.DependencyObject that is the container element which is used to display the 
+    next item.
   
   GenerateNext(self: IItemContainerGenerator) -> DependencyObject
   
    Returns the container element used to display the next item.
-   Returns: A System.Windows.DependencyObject that is the container element which is used 
-    to display the next item.
+   Returns: A System.Windows.DependencyObject that is the container element which is used to display the 
+    next item.
   """
   pass
  def GeneratorPositionFromIndex(self,itemIndex):
   """
   GeneratorPositionFromIndex(self: IItemContainerGenerator,itemIndex: int) -> GeneratorPosition
   
-   Returns the System.Windows.Controls.Primitives.GeneratorPosition object that 
-    maps to the item at the specified index.
+   Returns the System.Windows.Controls.Primitives.GeneratorPosition object that maps to the item at 
+    the specified index.
   
   
    itemIndex: The index of desired item.
-   Returns: An System.Windows.Controls.Primitives.GeneratorPosition object that maps to the 
-    item at the specified index.
+   Returns: An System.Windows.Controls.Primitives.GeneratorPosition object that maps to the item at the 
+    specified index.
   """
   pass
  def GetItemContainerGeneratorForPanel(self,panel):
   """
   GetItemContainerGeneratorForPanel(self: IItemContainerGenerator,panel: Panel) -> ItemContainerGenerator
   
-   Returns the System.Windows.Controls.ItemContainerGenerator appropriate for use 
-    by the specified panel.
+   Returns the System.Windows.Controls.ItemContainerGenerator appropriate for use by the specified 
+    panel.
   
   
-   panel: The panel for which to return an appropriate 
-    System.Windows.Controls.ItemContainerGenerator.
-  
-   Returns: An System.Windows.Controls.ItemContainerGenerator appropriate for use by the 
-    specified panel.
+   panel: The panel for which to return an appropriate System.Windows.Controls.ItemContainerGenerator.
+   Returns: An System.Windows.Controls.ItemContainerGenerator appropriate for use by the specified panel.
   """
   pass
  def IndexFromGeneratorPosition(self,position):
@@ -53,8 +50,8 @@ class IItemContainerGenerator:
     System.Windows.Controls.Primitives.GeneratorPosition.
   
   
-   position: The index of desired item.The 
-    System.Windows.Controls.Primitives.GeneratorPosition  for the desired index.
+   position: The index of desired item.The System.Windows.Controls.Primitives.GeneratorPosition  for the 
+    desired index.
   
    Returns: An System.Int32 that is the index which maps to the specified 
     System.Windows.Controls.Primitives.GeneratorPosition.
@@ -65,8 +62,7 @@ class IItemContainerGenerator:
   PrepareItemContainer(self: IItemContainerGenerator,container: DependencyObject)
    Prepares the specified element as the container for the corresponding item.
   
-   container: The container to prepare. Normally,container is the result of the previous 
-    call to 
+   container: The container to prepare. Normally,container is the result of the previous call to 
     erload:System.Windows.Controls.Primitives.IItemContainerGenerator.GenerateNext.
   """
   pass
@@ -75,8 +71,8 @@ class IItemContainerGenerator:
   Remove(self: IItemContainerGenerator,position: GeneratorPosition,count: int)
    Removes one or more generated (realized) items.
   
-   position: The System.Int32 index of the element to remove. position must refer to a 
-    previously generated (realized) item,which means its offset must be zero.
+   position: The System.Int32 index of the element to remove. position must refer to a previously generated 
+    (realized) item,which means its offset must be zero.
   
    count: The System.Int32 number of elements to remove,starting at position.
   """
@@ -93,12 +89,12 @@ class IItemContainerGenerator:
   
    Prepares the generator to generate items,starting at the specified 
     System.Windows.Controls.Primitives.GeneratorPosition,and in the specified 
-    System.Windows.Controls.Primitives.GeneratorDirection,and controlling whether 
-    or not to start at a generated (realized) item.
+    System.Windows.Controls.Primitives.GeneratorDirection,and controlling whether or not to start 
+    at a generated (realized) item.
   
   
-   position: A System.Windows.Controls.Primitives.GeneratorPosition,that specifies the 
-    position of the item to start generating items at.
+   position: A System.Windows.Controls.Primitives.GeneratorPosition,that specifies the position of the item 
+    to start generating items at.
   
    direction: Specifies the position of the item to start generating items at.
    allowStartAtRealizedItem: A System.Boolean that specifies whether to start at a generated (realized) item.
@@ -110,11 +106,11 @@ class IItemContainerGenerator:
     System.Windows.Controls.Primitives.GeneratorDirection.
   
   
-   position: A System.Windows.Controls.Primitives.GeneratorPosition,that specifies the 
-    position of the item to start generating items at.
+   position: A System.Windows.Controls.Primitives.GeneratorPosition,that specifies the position of the item 
+    to start generating items at.
   
-   direction: A System.Windows.Controls.Primitives.GeneratorDirection that specifies the 
-    direction which to generate items.
+   direction: A System.Windows.Controls.Primitives.GeneratorDirection that specifies the direction which to 
+    generate items.
   
    Returns: An System.IDisposable object that tracks the lifetime of the generation process.
   """

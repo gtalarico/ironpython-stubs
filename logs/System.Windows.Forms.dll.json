@@ -1,0 +1,14 @@
+{
+  "System.Windows.Forms.dll": {
+    "System.Windows": "<module 'Windows' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+    "System.Windows.Forms.Layout": "<module 'Layout' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+    "System.Windows.Forms.PropertyGridInternal": "<module 'PropertyGridInternal' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+    "System.Resources": "<module 'Resources' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+    "System.Windows.Forms": "<module 'Forms' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+    "System": "<module 'System' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+    "System.Windows.Forms.ComponentModel.Com2Interop": "<module 'Com2Interop' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+    "System.Windows.Forms.ComponentModel": "<module 'ComponentModel' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+    "System.Windows.Forms.VisualStyles": "<module 'VisualStyles' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>", 
+    "System.Windows.Forms.Design": "<module 'Design' (CLS module from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)>"
+  }
+}

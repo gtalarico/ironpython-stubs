@@ -19,8 +19,7 @@ class COMException(ExternalException,ISerializable,_Exception):
   
    Converts the contents of the exception to a string.
    Returns: A string containing the System.Exception.HResult,System.Exception.Message,
-    System.Exception.InnerException,and System.Exception.StackTrace properties of 
-    the exception.
+    System.Exception.InnerException,and System.Exception.StackTrace properties of the exception.
   """
   pass
  def __init__(self,*args):

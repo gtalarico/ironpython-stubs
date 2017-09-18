@@ -22,9 +22,8 @@ class DesignTimeVisibleAttribute(Attribute,_Attribute):
    Gets a value indicating if this instance is equal to the 
     System.ComponentModel.DesignTimeVisibleAttribute.Default value.
   
-   Returns: true,if this instance is equal to the 
-    System.ComponentModel.DesignTimeVisibleAttribute.Default value; otherwise,
-    false.
+   Returns: true,if this instance is equal to the System.ComponentModel.DesignTimeVisibleAttribute.Default 
+    value; otherwise,false.
   """
   pass
  def __eq__(self,*args):

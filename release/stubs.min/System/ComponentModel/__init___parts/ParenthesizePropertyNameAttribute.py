@@ -27,11 +27,11 @@ class ParenthesizePropertyNameAttribute(Attribute,_Attribute):
   """
   IsDefaultAttribute(self: ParenthesizePropertyNameAttribute) -> bool
   
-   Gets a value indicating whether the current value of the attribute is the 
-    default value for the attribute.
+   Gets a value indicating whether the current value of the attribute is the default value for the 
+    attribute.
   
-   Returns: true if the current value of the attribute is the default value of the 
-    attribute; otherwise,false.
+   Returns: true if the current value of the attribute is the default value of the attribute; otherwise,
+    false.
   """
   pass
  def __eq__(self,*args):

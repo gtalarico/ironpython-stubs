@@ -9,13 +9,11 @@ class ListBindableAttribute(Attribute,_Attribute):
   """
   Equals(self: ListBindableAttribute,obj: object) -> bool
   
-   Returns whether the object passed is equal to this 
-    System.ComponentModel.ListBindableAttribute.
-  
+   Returns whether the object passed is equal to this System.ComponentModel.ListBindableAttribute.
   
    obj: The object to test equality with.
-   Returns: true if the object passed is equal to this 
-    System.ComponentModel.ListBindableAttribute; otherwise,false.
+   Returns: true if the object passed is equal to this System.ComponentModel.ListBindableAttribute; 
+    otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -30,11 +28,11 @@ class ListBindableAttribute(Attribute,_Attribute):
   """
   IsDefaultAttribute(self: ListBindableAttribute) -> bool
   
-   Returns whether System.ComponentModel.ListBindableAttribute.ListBindable is set 
-    to the default value.
+   Returns whether System.ComponentModel.ListBindableAttribute.ListBindable is set to the default 
+    value.
   
-   Returns: true if System.ComponentModel.ListBindableAttribute.ListBindable is set to the 
-    default value; otherwise,false.
+   Returns: true if System.ComponentModel.ListBindableAttribute.ListBindable is set to the default value; 
+    otherwise,false.
   """
   pass
  def __eq__(self,*args):

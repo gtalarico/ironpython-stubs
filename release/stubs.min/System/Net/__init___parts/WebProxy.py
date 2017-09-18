@@ -19,20 +19,20 @@ class WebProxy(object,IAutoWebProxy,IWebProxy,ISerializable):
   GetDefaultProxy() -> WebProxy
   
    Reads the Internet Explorer nondynamic proxy settings.
-   Returns: A System.Net.WebProxy instance that contains the nondynamic proxy settings from 
-    Internet Explorer 5.5 and later.
+   Returns: A System.Net.WebProxy instance that contains the nondynamic proxy settings from Internet 
+    Explorer 5.5 and later.
   """
   pass
  def GetObjectData(self,*args):
   """
   GetObjectData(self: WebProxy,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo with the data that 
-    is needed to serialize the target object.
+   Populates a System.Runtime.Serialization.SerializationInfo with the data that is needed to 
+    serialize the target object.
   
   
    serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
-   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination 
-    for this serialization.
+   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this 
+    serialization.
   """
   pass
  def GetProxy(self,destination):
@@ -42,8 +42,8 @@ class WebProxy(object,IAutoWebProxy,IWebProxy,ISerializable):
    Returns the proxied URI for a request.
   
    destination: The System.Uri instance of the requested Internet resource.
-   Returns: The System.Uri instance of the Internet resource,if the resource is on the 
-    bypass list; otherwise,the System.Uri instance of the proxy.
+   Returns: The System.Uri instance of the Internet resource,if the resource is on the bypass list; 
+    otherwise,the System.Uri instance of the proxy.
   """
   pass
  def IsBypassed(self,host):

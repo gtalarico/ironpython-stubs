@@ -7,12 +7,12 @@ class CompoundAce(KnownAce):
  def GetBinaryForm(self,binaryForm,offset):
   """
   GetBinaryForm(self: CompoundAce,binaryForm: Array[Byte],offset: int)
-   Marshals the contents of the System.Security.AccessControl.CompoundAce object 
-    into the specified byte array beginning at the specified offset.
+   Marshals the contents of the System.Security.AccessControl.CompoundAce object into the specified 
+    byte array beginning at the specified offset.
   
   
-   binaryForm: The byte array into which the contents of the 
-    System.Security.AccessControl.CompoundAce is marshaled.
+   binaryForm: The byte array into which the contents of the System.Security.AccessControl.CompoundAce is 
+    marshaled.
   
    offset: The offset at which to start marshaling.
   """

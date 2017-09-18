@@ -8,9 +8,7 @@ class DataTemplateSelector(object):
   """
   SelectTemplate(self: DataTemplateSelector,item: object,container: DependencyObject) -> DataTemplate
   
-   When overridden in a derived class,returns a System.Windows.DataTemplate based 
-    on custom logic.
-  
+   When overridden in a derived class,returns a System.Windows.DataTemplate based on custom logic.
   
    item: The data object for which to select the template.
    container: The data-bound object.

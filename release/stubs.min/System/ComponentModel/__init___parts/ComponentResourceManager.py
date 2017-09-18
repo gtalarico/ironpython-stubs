@@ -11,16 +11,13 @@ class ComponentResourceManager(ResourceManager):
    Applies a resource's value to the corresponding property of the object.
   
    value: An System.Object that contains the property value to be applied.
-   objectName: A System.String that contains the name of the object to look up in the 
-    resources.
-  
+   objectName: A System.String that contains the name of the object to look up in the resources.
    culture: The culture for which to apply resources.
   ApplyResources(self: ComponentResourceManager,value: object,objectName: str)
    Applies a resource's value to the corresponding property of the object.
   
    value: An System.Object that contains the property value to be applied.
-   objectName: A System.String that contains the name of the object to look up in the 
-    resources.
+   objectName: A System.String that contains the name of the object to look up in the resources.
   """
   pass
  @staticmethod

@@ -8,8 +8,7 @@ class ArgIterator(object):
  def End(self):
   """
   End(self: ArgIterator)
-   Concludes processing of the variable-length argument list represented by this 
-    instance.
+   Concludes processing of the variable-length argument list represented by this instance.
   """
   pass
  def Equals(self,o):
@@ -34,9 +33,7 @@ class ArgIterator(object):
   """
   GetNextArg(self: ArgIterator,rth: RuntimeTypeHandle) -> TypedReference
   
-   Returns the next argument in a variable-length argument list that has a 
-    specified type.
-  
+   Returns the next argument in a variable-length argument list that has a specified type.
   
    rth: A runtime type handle that identifies the type of the argument to retrieve.
    Returns: The next argument as a System.TypedReference object.

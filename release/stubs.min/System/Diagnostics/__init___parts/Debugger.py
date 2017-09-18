@@ -17,10 +17,9 @@ class Debugger(object):
   IsLogging() -> bool
   
    Checks to see if logging is enabled by an attached debugger.
-   Returns: true if a debugger is attached and logging is enabled; otherwise,false. The 
-    attached debugger is the registered managed debugger in the DbgManagedDebugger 
-    registry key. For more information on this key,see Enabling JIT-Attach 
-    Debugging.
+   Returns: true if a debugger is attached and logging is enabled; otherwise,false. The attached debugger 
+    is the registered managed debugger in the DbgManagedDebugger registry key. For more information 
+    on this key,see Enabling JIT-Attach Debugging.
   """
   pass
  @staticmethod
@@ -29,8 +28,7 @@ class Debugger(object):
   Launch() -> bool
   
    Launches and attaches a debugger to the process.
-   Returns: true if the startup is successful or if the debugger is already attached; 
-    otherwise,false.
+   Returns: true if the startup is successful or if the debugger is already attached; otherwise,false.
   """
   pass
  @staticmethod
@@ -48,8 +46,8 @@ class Debugger(object):
  def NotifyOfCrossThreadDependency():
   """
   NotifyOfCrossThreadDependency()
-   Notifies a debugger that execution is about to enter a path that involves a 
-    cross-thread dependency.
+   Notifies a debugger that execution is about to enter a path that involves a cross-thread 
+    dependency.
   """
   pass
  DefaultCategory=None

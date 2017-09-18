@@ -5,8 +5,7 @@ class DataGridViewBand(DataGridViewElement,ICloneable,IDisposable):
   Clone(self: DataGridViewBand) -> object
   
    Creates an exact copy of this band.
-   Returns: An System.Object that represents the cloned 
-    System.Windows.Forms.DataGridViewBand.
+   Returns: An System.Object that represents the cloned System.Windows.Forms.DataGridViewBand.
   """
   pass
  def Dispose(self):
@@ -18,8 +17,7 @@ class DataGridViewBand(DataGridViewElement,ICloneable,IDisposable):
  def OnDataGridViewChanged(self,*args):
   """
   OnDataGridViewChanged(self: DataGridViewBand)
-   Called when the band is associated with a different 
-    System.Windows.Forms.DataGridView.
+   Called when the band is associated with a different System.Windows.Forms.DataGridView.
   """
   pass
  def RaiseCellClick(self,*args):
@@ -59,8 +57,7 @@ class DataGridViewBand(DataGridViewElement,ICloneable,IDisposable):
   RaiseDataError(self: DataGridViewElement,e: DataGridViewDataErrorEventArgs)
    Raises the System.Windows.Forms.DataGridView.DataError event.
   
-   e: A System.Windows.Forms.DataGridViewDataErrorEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.DataGridViewDataErrorEventArgs that contains the event data.
   """
   pass
  def RaiseMouseWheel(self,*args):
@@ -76,15 +73,21 @@ class DataGridViewBand(DataGridViewElement,ICloneable,IDisposable):
   ToString(self: DataGridViewBand) -> str
   
    Returns a string that represents the current band.
-   Returns: A System.String that represents the current 
-    System.Windows.Forms.DataGridViewBand.
+   Returns: A System.String that represents the current System.Windows.Forms.DataGridViewBand.
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

@@ -5,19 +5,17 @@ class ToolStripItem(Component,IComponent,IDisposable,IDropTarget,ISupportOleDrop
   CreateAccessibilityInstance(self: ToolStripItem) -> AccessibleObject
   
    Creates a new accessibility object for the System.Windows.Forms.ToolStripItem.
-   Returns: A new System.Windows.Forms.AccessibleObject for the 
-    System.Windows.Forms.ToolStripItem.
+   Returns: A new System.Windows.Forms.AccessibleObject for the System.Windows.Forms.ToolStripItem.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: ToolStripItem,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.ToolStripItem 
-    and optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.ToolStripItem and optionally 
+    releases the managed resources.
   
   
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def DoDragDrop(self,data,allowedEffects):
@@ -35,8 +33,8 @@ class ToolStripItem(Component,IComponent,IDisposable,IDropTarget,ISupportOleDrop
   """
   GetCurrentParent(self: ToolStripItem) -> ToolStrip
   
-   Retrieves the System.Windows.Forms.ToolStrip that is the container of the 
-    current System.Windows.Forms.ToolStripItem.
+   Retrieves the System.Windows.Forms.ToolStrip that is the container of the current 
+    System.Windows.Forms.ToolStripItem.
   
    Returns: A System.Windows.Forms.ToolStrip that is the container of the current 
     System.Windows.Forms.ToolStripItem.
@@ -49,37 +47,35 @@ class ToolStripItem(Component,IComponent,IDisposable,IDropTarget,ISupportOleDrop
    Retrieves the size of a rectangular area into which a control can be fit.
   
    constrainingSize: The custom-sized area for a control.
-   Returns: A System.Drawing.Size ordered pair,representing the width and height of a 
-    rectangle.
+   Returns: A System.Drawing.Size ordered pair,representing the width and height of a rectangle.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def Invalidate(self,r=None):
   """
   Invalidate(self: ToolStripItem,r: Rectangle)
-   Invalidates the specified region of the System.Windows.Forms.ToolStripItem by 
-    adding it to the update region of the System.Windows.Forms.ToolStripItem,which 
-    is the area that will be repainted at the next paint operation,and causes a 
-    paint message to be sent to the System.Windows.Forms.ToolStripItem.
+   Invalidates the specified region of the System.Windows.Forms.ToolStripItem by adding it to the 
+    update region of the System.Windows.Forms.ToolStripItem,which is the area that will be 
+    repainted at the next paint operation,and causes a paint message to be sent to the 
+    System.Windows.Forms.ToolStripItem.
   
   
    r: A System.Drawing.Rectangle that represents the region to invalidate.
   Invalidate(self: ToolStripItem)
-   Invalidates the entire surface of the System.Windows.Forms.ToolStripItem and 
-    causes it to be redrawn.
+   Invalidates the entire surface of the System.Windows.Forms.ToolStripItem and causes it to be 
+    redrawn.
   """
   pass
  def IsInputChar(self,*args):
@@ -89,16 +85,15 @@ class ToolStripItem(Component,IComponent,IDisposable,IDropTarget,ISupportOleDrop
    Determines whether a character is an input character that the item recognizes.
   
    charCode: The character to test.
-   Returns: true if the character should be sent directly to the item and not preprocessed; 
-    otherwise,false.
+   Returns: true if the character should be sent directly to the item and not preprocessed; otherwise,false.
   """
   pass
  def IsInputKey(self,*args):
   """
   IsInputKey(self: ToolStripItem,keyData: Keys) -> bool
   
-   Determines whether the specified key is a regular input key or a special key 
-    that requires preprocessing.
+   Determines whether the specified key is a regular input key or a special key that requires 
+    preprocessing.
   
   
    keyData: One of the System.Windows.Forms.Keys values.
@@ -111,11 +106,11 @@ class ToolStripItem(Component,IComponent,IDisposable,IDropTarget,ISupportOleDrop
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -310,8 +305,8 @@ class ToolStripItem(Component,IComponent,IDisposable,IDropTarget,ISupportOleDrop
   """
   OnOwnerFontChanged(self: ToolStripItem,e: EventArgs)
    Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.ToolStripItem.Font property has changed on the parent of 
-    the System.Windows.Forms.ToolStripItem.
+    System.Windows.Forms.ToolStripItem.Font property has changed on the parent of the 
+    System.Windows.Forms.ToolStripItem.
   
   
    e: A System.EventArgs that contains the event data.
@@ -346,8 +341,7 @@ class ToolStripItem(Component,IComponent,IDisposable,IDropTarget,ISupportOleDrop
   """
   OnParentEnabledChanged(self: ToolStripItem,e: EventArgs)
    Raises the System.Windows.Forms.ToolStripItem.EnabledChanged event when the 
-    System.Windows.Forms.ToolStripItem.Enabled property value of the item's 
-    container changes.
+    System.Windows.Forms.ToolStripItem.Enabled property value of the item's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -404,8 +398,7 @@ class ToolStripItem(Component,IComponent,IDisposable,IDropTarget,ISupportOleDrop
  def PerformClick(self):
   """
   PerformClick(self: ToolStripItem)
-   Activates the System.Windows.Forms.ToolStripItem when it is clicked with the 
-    mouse.
+   Activates the System.Windows.Forms.ToolStripItem when it is clicked with the mouse.
   """
   pass
  def ProcessCmdKey(self,*args):
@@ -414,8 +407,8 @@ class ToolStripItem(Component,IComponent,IDisposable,IDropTarget,ISupportOleDrop
   
    Processes a command key.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: false in all cases.
@@ -521,15 +514,22 @@ class ToolStripItem(Component,IComponent,IDisposable,IDropTarget,ISupportOleDrop
  def ToString(self):
   """
   ToString(self: ToolStripItem) -> str
-   Returns: A System.String containing the name of the System.ComponentModel.Component,if 
-    any,or null if the System.ComponentModel.Component is unnamed.
+   Returns: A System.String containing the name of the System.ComponentModel.Component,if any,or null if 
+    the System.ComponentModel.Component is unnamed.
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

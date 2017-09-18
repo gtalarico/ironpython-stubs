@@ -8,13 +8,9 @@ class PrintControllerWithStatusDialog(PrintController):
  def OnEndPage(self,document,e):
   """
   OnEndPage(self: PrintControllerWithStatusDialog,document: PrintDocument,e: PrintPageEventArgs)
-   Completes the control sequence that determines when and how to print a page of 
-    a document.
+   Completes the control sequence that determines when and how to print a page of a document.
   
-  
-   document: A System.Drawing.Printing.PrintDocument that represents the document currently 
-    being printed.
-  
+   document: A System.Drawing.Printing.PrintDocument that represents the document currently being printed.
    e: A System.Drawing.Printing.PrintPageEventArgs that contains the event data.
   """
   pass
@@ -23,9 +19,7 @@ class PrintControllerWithStatusDialog(PrintController):
   OnEndPrint(self: PrintControllerWithStatusDialog,document: PrintDocument,e: PrintEventArgs)
    Completes the control sequence that determines when and how to print a document.
   
-   document: A System.Drawing.Printing.PrintDocument that represents the document currently 
-    being printed.
-  
+   document: A System.Drawing.Printing.PrintDocument that represents the document currently being printed.
    e: A System.Drawing.Printing.PrintPageEventArgs that contains the event data.
   """
   pass
@@ -33,13 +27,9 @@ class PrintControllerWithStatusDialog(PrintController):
   """
   OnStartPage(self: PrintControllerWithStatusDialog,document: PrintDocument,e: PrintPageEventArgs) -> Graphics
   
-   Begins the control sequence that determines when and how to print a page of a 
-    document.
+   Begins the control sequence that determines when and how to print a page of a document.
   
-  
-   document: A System.Drawing.Printing.PrintDocument that represents the document currently 
-    being printed.
-  
+   document: A System.Drawing.Printing.PrintDocument that represents the document currently being printed.
    e: A System.Drawing.Printing.PrintPageEventArgs that contains the event data.
    Returns: A System.Drawing.Graphics object that represents a page from a 
     System.Drawing.Printing.PrintDocument.
@@ -50,9 +40,7 @@ class PrintControllerWithStatusDialog(PrintController):
   OnStartPrint(self: PrintControllerWithStatusDialog,document: PrintDocument,e: PrintEventArgs)
    Begins the control sequence that determines when and how to print a document.
   
-   document: A System.Drawing.Printing.PrintDocument that represents the document currently 
-    being printed.
-  
+   document: A System.Drawing.Printing.PrintDocument that represents the document currently being printed.
    e: A System.Drawing.Printing.PrintEventArgs that contains the event data.
   """
   pass

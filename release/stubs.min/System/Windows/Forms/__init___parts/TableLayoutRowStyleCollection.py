@@ -18,8 +18,8 @@ class TableLayoutRowStyleCollection(TableLayoutStyleCollection,IList,ICollection
   """
   Contains(self: TableLayoutRowStyleCollection,rowStyle: RowStyle) -> bool
   
-   Determines whether the System.Windows.Forms.TableLayoutRowStyleCollection 
-    contains a specific style.
+   Determines whether the System.Windows.Forms.TableLayoutRowStyleCollection contains a specific 
+    style.
   
   
    rowStyle: The System.Windows.Forms.RowStyle to locate in the 
@@ -40,8 +40,8 @@ class TableLayoutRowStyleCollection(TableLayoutStyleCollection,IList,ICollection
    rowStyle: The System.Windows.Forms.RowStyle to locate in the 
     System.Windows.Forms.TableLayoutRowStyleCollection.
   
-   Returns: The index of rowStyle if found in the 
-    System.Windows.Forms.TableLayoutRowStyleCollection; otherwise,-1.
+   Returns: The index of rowStyle if found in the System.Windows.Forms.TableLayoutRowStyleCollection; 
+    otherwise,-1.
   """
   pass
  def Insert(self,index,rowStyle):
@@ -51,9 +51,7 @@ class TableLayoutRowStyleCollection(TableLayoutStyleCollection,IList,ICollection
     System.Windows.Forms.TableLayoutRowStyleCollection at the specified position.
   
   
-   index: The zero-based index at which the System.Windows.Forms.RowStyle should be 
-    inserted.
-  
+   index: The zero-based index at which the System.Windows.Forms.RowStyle should be inserted.
    rowStyle: The System.Windows.Forms.RowStyle to insert into the 
     System.Windows.Forms.TableLayoutRowStyleCollection. The value can be null.
   """

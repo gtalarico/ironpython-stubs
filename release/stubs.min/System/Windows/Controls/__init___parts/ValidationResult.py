@@ -13,8 +13,7 @@ class ValidationResult(object):
   
   
    obj: The System.Windows.Controls.ValidationResult instance to compare.
-   Returns: true if obj and this instance of System.Windows.Controls.ValidationResult.have 
-    the same values.
+   Returns: true if obj and this instance of System.Windows.Controls.ValidationResult.have the same values.
   """
   pass
  def GetHashCode(self):

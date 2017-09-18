@@ -14,27 +14,21 @@ class MaskedTextProvider(object,ICloneable):
   """
   Add(self: MaskedTextProvider,input: str) -> bool
   
-   Adds the characters in the specified input string to the end of the formatted 
-    string.
+   Adds the characters in the specified input string to the end of the formatted string.
   
-  
-   input: A System.String containing character values to be appended to the formatted 
-    string.
-  
-   Returns: true if all the characters from the input string were added successfully; 
-    otherwise false to indicate that no characters were added.
+   input: A System.String containing character values to be appended to the formatted string.
+   Returns: true if all the characters from the input string were added successfully; otherwise false to 
+    indicate that no characters were added.
   
   Add(self: MaskedTextProvider,input: str) -> (bool,int,MaskedTextResultHint)
   
-   Adds the characters in the specified input string to the end of the formatted 
-    string,and then outputs position and descriptive information.
+   Adds the characters in the specified input string to the end of the formatted string,and then 
+    outputs position and descriptive information.
   
   
-   input: A System.String containing character values to be appended to the formatted 
-    string.
-  
-   Returns: true if all the characters from the input string were added successfully; 
-    otherwise false to indicate that no characters were added.
+   input: A System.String containing character values to be appended to the formatted string.
+   Returns: true if all the characters from the input string were added successfully; otherwise false to 
+    indicate that no characters were added.
   
   Add(self: MaskedTextProvider,input: Char) -> bool
   
@@ -44,8 +38,8 @@ class MaskedTextProvider(object,ICloneable):
    Returns: true if the input character was added successfully; otherwise false.
   Add(self: MaskedTextProvider,input: Char) -> (bool,int,MaskedTextResultHint)
   
-   Adds the specified input character to the end of the formatted string,and then 
-    outputs position and descriptive information.
+   Adds the specified input character to the end of the formatted string,and then outputs position 
+    and descriptive information.
   
   
    input: A System.Char value to be appended to the formatted string.
@@ -56,12 +50,12 @@ class MaskedTextProvider(object,ICloneable):
   """
   Clear(self: MaskedTextProvider) -> MaskedTextResultHint
   
-   Clears all the editable input characters from the formatted string,replacing 
-    them with prompt characters,and then outputs descriptive information.
+   Clears all the editable input characters from the formatted string,replacing them with prompt 
+    characters,and then outputs descriptive information.
   
   Clear(self: MaskedTextProvider)
-   Clears all the editable input characters from the formatted string,replacing 
-    them with prompt characters.
+   Clears all the editable input characters from the formatted string,replacing them with prompt 
+    characters.
   """
   pass
  def Clone(self):
@@ -69,148 +63,139 @@ class MaskedTextProvider(object,ICloneable):
   Clone(self: MaskedTextProvider) -> object
   
    Creates a copy of the current System.ComponentModel.MaskedTextProvider.
-   Returns: The System.ComponentModel.MaskedTextProvider object this method creates,cast 
-    as an object.
+   Returns: The System.ComponentModel.MaskedTextProvider object this method creates,cast as an object.
   """
   pass
  def FindAssignedEditPositionFrom(self,position,direction):
   """
   FindAssignedEditPositionFrom(self: MaskedTextProvider,position: int,direction: bool) -> int
   
-   Returns the position of the first assigned editable position after the 
-    specified position using the specified search direction.
+   Returns the position of the first assigned editable position after the specified position using 
+    the specified search direction.
   
   
    position: The zero-based position in the formatted string to start the search.
-   direction: A System.Boolean indicating the search direction; either true to search forward 
-    or false to search backward.
+   direction: A System.Boolean indicating the search direction; either true to search forward or false to 
+    search backward.
   
-   Returns: If successful,an System.Int32 representing the zero-based position of the 
-    first assigned editable position encountered; otherwise 
-    System.ComponentModel.MaskedTextProvider.InvalidIndex.
+   Returns: If successful,an System.Int32 representing the zero-based position of the first assigned 
+    editable position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
   """
   pass
  def FindAssignedEditPositionInRange(self,startPosition,endPosition,direction):
   """
   FindAssignedEditPositionInRange(self: MaskedTextProvider,startPosition: int,endPosition: int,direction: bool) -> int
   
-   Returns the position of the first assigned editable position between the 
-    specified positions using the specified search direction.
+   Returns the position of the first assigned editable position between the specified positions 
+    using the specified search direction.
   
   
    startPosition: The zero-based position in the formatted string where the search starts.
    endPosition: The zero-based position in the formatted string where the search ends.
-   direction: A System.Boolean indicating the search direction; either true to search forward 
-    or false to search backward.
+   direction: A System.Boolean indicating the search direction; either true to search forward or false to 
+    search backward.
   
-   Returns: If successful,an System.Int32 representing the zero-based position of the 
-    first assigned editable position encountered; otherwise 
-    System.ComponentModel.MaskedTextProvider.InvalidIndex.
+   Returns: If successful,an System.Int32 representing the zero-based position of the first assigned 
+    editable position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
   """
   pass
  def FindEditPositionFrom(self,position,direction):
   """
   FindEditPositionFrom(self: MaskedTextProvider,position: int,direction: bool) -> int
   
-   Returns the position of the first editable position after the specified 
-    position using the specified search direction.
+   Returns the position of the first editable position after the specified position using the 
+    specified search direction.
   
   
    position: The zero-based position in the formatted string to start the search.
-   direction: A System.Boolean indicating the search direction; either true to search forward 
-    or false to search backward.
+   direction: A System.Boolean indicating the search direction; either true to search forward or false to 
+    search backward.
   
-   Returns: If successful,an System.Int32 representing the zero-based position of the 
-    first editable position encountered; otherwise 
-    System.ComponentModel.MaskedTextProvider.InvalidIndex.
+   Returns: If successful,an System.Int32 representing the zero-based position of the first editable 
+    position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
   """
   pass
  def FindEditPositionInRange(self,startPosition,endPosition,direction):
   """
   FindEditPositionInRange(self: MaskedTextProvider,startPosition: int,endPosition: int,direction: bool) -> int
   
-   Returns the position of the first editable position between the specified 
-    positions using the specified search direction.
+   Returns the position of the first editable position between the specified positions using the 
+    specified search direction.
   
   
    startPosition: The zero-based position in the formatted string where the search starts.
    endPosition: The zero-based position in the formatted string where the search ends.
-   direction: A System.Boolean indicating the search direction; either true to search forward 
-    or false to search backward.
+   direction: A System.Boolean indicating the search direction; either true to search forward or false to 
+    search backward.
   
-   Returns: If successful,an System.Int32 representing the zero-based position of the 
-    first editable position encountered; otherwise 
-    System.ComponentModel.MaskedTextProvider.InvalidIndex.
+   Returns: If successful,an System.Int32 representing the zero-based position of the first editable 
+    position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
   """
   pass
  def FindNonEditPositionFrom(self,position,direction):
   """
   FindNonEditPositionFrom(self: MaskedTextProvider,position: int,direction: bool) -> int
   
-   Returns the position of the first non-editable position after the specified 
-    position using the specified search direction.
+   Returns the position of the first non-editable position after the specified position using the 
+    specified search direction.
   
   
    position: The zero-based position in the formatted string to start the search.
-   direction: A System.Boolean indicating the search direction; either true to search forward 
-    or false to search backward.
+   direction: A System.Boolean indicating the search direction; either true to search forward or false to 
+    search backward.
   
-   Returns: If successful,an System.Int32 representing the zero-based position of the 
-    first literal position encountered; otherwise 
-    System.ComponentModel.MaskedTextProvider.InvalidIndex.
+   Returns: If successful,an System.Int32 representing the zero-based position of the first literal 
+    position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
   """
   pass
  def FindNonEditPositionInRange(self,startPosition,endPosition,direction):
   """
   FindNonEditPositionInRange(self: MaskedTextProvider,startPosition: int,endPosition: int,direction: bool) -> int
   
-   Returns the position of the first non-editable position between the specified 
-    positions using the specified search direction.
+   Returns the position of the first non-editable position between the specified positions using 
+    the specified search direction.
   
   
    startPosition: The zero-based position in the formatted string where the search starts.
    endPosition: The zero-based position in the formatted string where the search ends.
-   direction: A System.Boolean indicating the search direction; either true to search forward 
-    or false to search backward.
+   direction: A System.Boolean indicating the search direction; either true to search forward or false to 
+    search backward.
   
-   Returns: If successful,an System.Int32 representing the zero-based position of the 
-    first literal position encountered; otherwise 
-    System.ComponentModel.MaskedTextProvider.InvalidIndex.
+   Returns: If successful,an System.Int32 representing the zero-based position of the first literal 
+    position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
   """
   pass
  def FindUnassignedEditPositionFrom(self,position,direction):
   """
   FindUnassignedEditPositionFrom(self: MaskedTextProvider,position: int,direction: bool) -> int
   
-   Returns the position of the first unassigned editable position after the 
-    specified position using the specified search direction.
+   Returns the position of the first unassigned editable position after the specified position 
+    using the specified search direction.
   
   
    position: The zero-based position in the formatted string to start the search.
-   direction: A System.Boolean indicating the search direction; either true to search forward 
-    or false to search backward.
+   direction: A System.Boolean indicating the search direction; either true to search forward or false to 
+    search backward.
   
-   Returns: If successful,an System.Int32 representing the zero-based position of the 
-    first unassigned editable position encountered; otherwise 
-    System.ComponentModel.MaskedTextProvider.InvalidIndex.
+   Returns: If successful,an System.Int32 representing the zero-based position of the first unassigned 
+    editable position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
   """
   pass
  def FindUnassignedEditPositionInRange(self,startPosition,endPosition,direction):
   """
   FindUnassignedEditPositionInRange(self: MaskedTextProvider,startPosition: int,endPosition: int,direction: bool) -> int
   
-   Returns the position of the first unassigned editable position between the 
-    specified positions using the specified search direction.
+   Returns the position of the first unassigned editable position between the specified positions 
+    using the specified search direction.
   
   
    startPosition: The zero-based position in the formatted string where the search starts.
    endPosition: The zero-based position in the formatted string where the search ends.
-   direction: A System.Boolean indicating the search direction; either true to search forward 
-    or false to search backward.
+   direction: A System.Boolean indicating the search direction; either true to search forward or false to 
+    search backward.
   
-   Returns: If successful,an System.Int32 representing the zero-based position of the 
-    first unassigned editable position encountered; otherwise 
-    System.ComponentModel.MaskedTextProvider.InvalidIndex.
+   Returns: If successful,an System.Int32 representing the zero-based position of the first unassigned 
+    editable position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
   """
   pass
  @staticmethod
@@ -218,32 +203,30 @@ class MaskedTextProvider(object,ICloneable):
   """
   GetOperationResultFromHint(hint: MaskedTextResultHint) -> bool
   
-   Determines whether the specified System.ComponentModel.MaskedTextResultHint 
-    denotes success or failure.
+   Determines whether the specified System.ComponentModel.MaskedTextResultHint denotes success or 
+    failure.
   
   
-   hint: A System.ComponentModel.MaskedTextResultHint value typically obtained as an 
-    output parameter from a previous operation.
+   hint: A System.ComponentModel.MaskedTextResultHint value typically obtained as an output parameter 
+    from a previous operation.
   
-   Returns: true if the specified System.ComponentModel.MaskedTextResultHint value 
-    represents a success; otherwise,false if it represents failure.
+   Returns: true if the specified System.ComponentModel.MaskedTextResultHint value represents a success; 
+    otherwise,false if it represents failure.
   """
   pass
  def InsertAt(self,input,position,testPosition=None,resultHint=None):
   """
   InsertAt(self: MaskedTextProvider,input: str,position: int) -> bool
   
-   Inserts the specified string at a specified position within the formatted 
-    string.
-  
+   Inserts the specified string at a specified position within the formatted string.
   
    input: The System.String to be inserted.
    position: The zero-based position in the formatted string to insert the input string.
    Returns: true if the insertion was successful; otherwise,false.
   InsertAt(self: MaskedTextProvider,input: str,position: int) -> (bool,int,MaskedTextResultHint)
   
-   Inserts the specified string at a specified position within the formatted 
-    string,returning the last insertion position and the status of the operation.
+   Inserts the specified string at a specified position within the formatted string,returning the 
+    last insertion position and the status of the operation.
   
   
    input: The System.String to be inserted.
@@ -251,17 +234,15 @@ class MaskedTextProvider(object,ICloneable):
    Returns: true if the insertion was successful; otherwise,false.
   InsertAt(self: MaskedTextProvider,input: Char,position: int) -> bool
   
-   Inserts the specified character at the specified position within the formatted 
-    string.
-  
+   Inserts the specified character at the specified position within the formatted string.
   
    input: The System.Char to be inserted.
    position: The zero-based position in the formatted string to insert the character.
    Returns: true if the insertion was successful; otherwise,false.
   InsertAt(self: MaskedTextProvider,input: Char,position: int) -> (bool,int,MaskedTextResultHint)
   
-   Inserts the specified character at the specified position within the formatted 
-    string,returning the last insertion position and the status of the operation.
+   Inserts the specified character at the specified position within the formatted string,returning 
+    the last insertion position and the status of the operation.
   
   
    input: The System.Char to be inserted.
@@ -276,8 +257,8 @@ class MaskedTextProvider(object,ICloneable):
    Determines whether the specified position is available for assignment.
   
    position: The zero-based position in the mask to test.
-   Returns: true if the specified position in the formatted string is editable and has not 
-    been assigned to yet; otherwise false.
+   Returns: true if the specified position in the formatted string is editable and has not been assigned to 
+    yet; otherwise false.
   """
   pass
  def IsEditPosition(self,position):
@@ -287,8 +268,7 @@ class MaskedTextProvider(object,ICloneable):
    Determines whether the specified position is editable.
   
    position: The zero-based position in the mask to test.
-   Returns: true if the specified position in the formatted string is editable; otherwise 
-    false.
+   Returns: true if the specified position in the formatted string is editable; otherwise false.
   """
   pass
  @staticmethod
@@ -321,16 +301,15 @@ class MaskedTextProvider(object,ICloneable):
    Determines whether the specified character is a valid password character.
   
    c: The System.Char value to test.
-   Returns: true if the specified character contains a valid password value; otherwise 
-    false.
+   Returns: true if the specified character contains a valid password value; otherwise false.
   """
   pass
  def Remove(self,testPosition=None,resultHint=None):
   """
   Remove(self: MaskedTextProvider) -> (bool,int,MaskedTextResultHint)
   
-   Removes the last assigned character from the formatted string,and then outputs 
-    the removal position and descriptive information.
+   Removes the last assigned character from the formatted string,and then outputs the removal 
+    position and descriptive information.
   
    Returns: true if the character was successfully removed; otherwise,false.
   Remove(self: MaskedTextProvider) -> bool
@@ -343,9 +322,8 @@ class MaskedTextProvider(object,ICloneable):
   """
   RemoveAt(self: MaskedTextProvider,startPosition: int,endPosition: int) -> (bool,int,MaskedTextResultHint)
   
-   Removes the assigned characters between the specified positions from the 
-    formatted string,and then outputs the removal position and descriptive 
-    information.
+   Removes the assigned characters between the specified positions from the formatted string,and 
+    then outputs the removal position and descriptive information.
   
   
    startPosition: The zero-based index of the first assigned character to remove.
@@ -353,18 +331,14 @@ class MaskedTextProvider(object,ICloneable):
    Returns: true if the character was successfully removed; otherwise,false.
   RemoveAt(self: MaskedTextProvider,startPosition: int,endPosition: int) -> bool
   
-   Removes the assigned characters between the specified positions from the 
-    formatted string.
-  
+   Removes the assigned characters between the specified positions from the formatted string.
   
    startPosition: The zero-based index of the first assigned character to remove.
    endPosition: The zero-based index of the last assigned character to remove.
    Returns: true if the character was successfully removed; otherwise,false.
   RemoveAt(self: MaskedTextProvider,position: int) -> bool
   
-   Removes the assigned character at the specified position from the formatted 
-    string.
-  
+   Removes the assigned character at the specified position from the formatted string.
   
    position: The zero-based position of the assigned character to remove.
    Returns: true if the character was successfully removed; otherwise,false.
@@ -374,8 +348,8 @@ class MaskedTextProvider(object,ICloneable):
   """
   Replace(self: MaskedTextProvider,input: str,position: int) -> bool
   
-   Replaces a range of editable characters starting at the specified position with 
-    the specified string.
+   Replaces a range of editable characters starting at the specified position with the specified 
+    string.
   
   
    input: The System.String value used to replace the existing editable characters.
@@ -383,9 +357,8 @@ class MaskedTextProvider(object,ICloneable):
    Returns: true if all the characters were successfully replaced; otherwise,false.
   Replace(self: MaskedTextProvider,input: str,position: int) -> (bool,int,MaskedTextResultHint)
   
-   Replaces a range of editable characters starting at the specified position with 
-    the specified string,and then outputs the removal position and descriptive 
-    information.
+   Replaces a range of editable characters starting at the specified position with the specified 
+    string,and then outputs the removal position and descriptive information.
   
   
    input: The System.String value used to replace the existing editable characters.
@@ -393,9 +366,8 @@ class MaskedTextProvider(object,ICloneable):
    Returns: true if all the characters were successfully replaced; otherwise,false.
   Replace(self: MaskedTextProvider,input: str,startPosition: int,endPosition: int) -> (bool,int,MaskedTextResultHint)
   
-   Replaces a range of editable characters between the specified starting and 
-    ending positions with the specified string,and then outputs the removal 
-    position and descriptive information.
+   Replaces a range of editable characters between the specified starting and ending positions with 
+    the specified string,and then outputs the removal position and descriptive information.
   
   
    input: The System.String value used to replace the existing editable characters.
@@ -404,8 +376,8 @@ class MaskedTextProvider(object,ICloneable):
    Returns: true if all the characters were successfully replaced; otherwise,false.
   Replace(self: MaskedTextProvider,input: Char,position: int) -> bool
   
-   Replaces a single character at or beyond the specified position with the 
-    specified character value.
+   Replaces a single character at or beyond the specified position with the specified character 
+    value.
   
   
    input: The System.Char value that replaces the existing value.
@@ -413,9 +385,8 @@ class MaskedTextProvider(object,ICloneable):
    Returns: true if the character was successfully replaced; otherwise,false.
   Replace(self: MaskedTextProvider,input: Char,position: int) -> (bool,int,MaskedTextResultHint)
   
-   Replaces a single character at or beyond the specified position with the 
-    specified character value,and then outputs the removal position and 
-    descriptive information.
+   Replaces a single character at or beyond the specified position with the specified character 
+    value,and then outputs the removal position and descriptive information.
   
   
    input: The System.Char value that replaces the existing value.
@@ -423,9 +394,8 @@ class MaskedTextProvider(object,ICloneable):
    Returns: true if the character was successfully replaced; otherwise,false.
   Replace(self: MaskedTextProvider,input: Char,startPosition: int,endPosition: int) -> (bool,int,MaskedTextResultHint)
   
-   Replaces a single character between the specified starting and ending positions 
-    with the specified character value,and then outputs the removal position and 
-    descriptive information.
+   Replaces a single character between the specified starting and ending positions with the 
+    specified character value,and then outputs the removal position and descriptive information.
   
   
    input: The System.Char value that replaces the existing value.
@@ -438,8 +408,8 @@ class MaskedTextProvider(object,ICloneable):
   """
   Set(self: MaskedTextProvider,input: str) -> (bool,int,MaskedTextResultHint)
   
-   Sets the formatted string to the specified input string,and then outputs the 
-    removal position and descriptive information.
+   Sets the formatted string to the specified input string,and then outputs the removal position 
+    and descriptive information.
   
   
    input: The System.String value used to set the formatted string.
@@ -464,62 +434,53 @@ class MaskedTextProvider(object,ICloneable):
   """
   ToString(self: MaskedTextProvider,includePrompt: bool,includeLiterals: bool) -> str
   
-   Returns the formatted string,optionally including prompt and literal 
-    characters.
-  
+   Returns the formatted string,optionally including prompt and literal characters.
   
    includePrompt: true to include prompt characters in the return string; otherwise,false.
    includeLiterals: true to include literal characters in the return string; otherwise,false.
-   Returns: The formatted System.String that includes all the assigned character values and 
-    optionally includes literals and prompts.
+   Returns: The formatted System.String that includes all the assigned character values and optionally 
+    includes literals and prompts.
   
   ToString(self: MaskedTextProvider,includePrompt: bool,includeLiterals: bool,startPosition: int,length: int) -> str
   
-   Returns a substring of the formatted string,optionally including prompt and 
-    literal characters.
-  
+   Returns a substring of the formatted string,optionally including prompt and literal characters.
   
    includePrompt: true to include prompt characters in the return string; otherwise,false.
    includeLiterals: true to include literal characters in the return string; otherwise,false.
    startPosition: The zero-based position in the formatted string where the output begins.
    length: The number of characters to return.
-   Returns: If successful,a substring of the formatted System.String,which includes all 
-    the assigned character values and optionally includes literals and prompts; 
-    otherwise the System.String.Empty string.
+   Returns: If successful,a substring of the formatted System.String,which includes all the assigned 
+    character values and optionally includes literals and prompts; otherwise the System.String.Empty 
+    string.
   
   ToString(self: MaskedTextProvider,ignorePasswordChar: bool,includePrompt: bool,includeLiterals: bool,startPosition: int,length: int) -> str
   
-   Returns a substring of the formatted string,optionally including prompt,
-    literal,and password characters.
+   Returns a substring of the formatted string,optionally including prompt,literal,and password 
+    characters.
   
   
-   ignorePasswordChar: true to return the actual editable characters; otherwise,false to indicate 
-    that the System.ComponentModel.MaskedTextProvider.PasswordChar property is to 
-    be honored.
+   ignorePasswordChar: true to return the actual editable characters; otherwise,false to indicate that the 
+    System.ComponentModel.MaskedTextProvider.PasswordChar property is to be honored.
   
    includePrompt: true to include prompt characters in the return string; otherwise,false.
    includeLiterals: true to return literal characters in the return string; otherwise,false.
    startPosition: The zero-based position in the formatted string where the output begins.
    length: The number of characters to return.
-   Returns: If successful,a substring of the formatted System.String,which includes all 
-    the assigned character values and optionally includes literals,prompts,and 
-    password characters; otherwise the System.String.Empty string.
+   Returns: If successful,a substring of the formatted System.String,which includes all the assigned 
+    character values and optionally includes literals,prompts,and password characters; otherwise 
+    the System.String.Empty string.
   
   ToString(self: MaskedTextProvider,ignorePasswordChar: bool,startPosition: int,length: int) -> str
   
-   Returns a substring of the formatted string,optionally including password 
-    characters.
+   Returns a substring of the formatted string,optionally including password characters.
   
-  
-   ignorePasswordChar: true to return the actual editable characters; otherwise,false to indicate 
-    that the System.ComponentModel.MaskedTextProvider.PasswordChar property is to 
-    be honored.
+   ignorePasswordChar: true to return the actual editable characters; otherwise,false to indicate that the 
+    System.ComponentModel.MaskedTextProvider.PasswordChar property is to be honored.
   
    startPosition: The zero-based position in the formatted string where the output begins.
    length: The number of characters to return.
-   Returns: If successful,a substring of the formatted System.String,which includes 
-    literals,prompts,and optionally password characters; otherwise the 
-    System.String.Empty string.
+   Returns: If successful,a substring of the formatted System.String,which includes literals,prompts,and 
+    optionally password characters; otherwise the System.String.Empty string.
   
   ToString(self: MaskedTextProvider) -> str
   
@@ -529,57 +490,48 @@ class MaskedTextProvider(object,ICloneable):
   
    Returns the formatted string,optionally including password characters.
   
-   ignorePasswordChar: true to return the actual editable characters; otherwise,false to indicate 
-    that the System.ComponentModel.MaskedTextProvider.PasswordChar property is to 
-    be honored.
+   ignorePasswordChar: true to return the actual editable characters; otherwise,false to indicate that the 
+    System.ComponentModel.MaskedTextProvider.PasswordChar property is to be honored.
   
-   Returns: The formatted System.String that includes literals,prompts,and optionally 
-    password characters.
-  
+   Returns: The formatted System.String that includes literals,prompts,and optionally password characters.
   ToString(self: MaskedTextProvider,startPosition: int,length: int) -> str
   
    Returns a substring of the formatted string.
   
    startPosition: The zero-based position in the formatted string where the output begins.
    length: The number of characters to return.
-   Returns: If successful,a substring of the formatted System.String,which includes all 
-    the assigned character values; otherwise the System.String.Empty string.
+   Returns: If successful,a substring of the formatted System.String,which includes all the assigned 
+    character values; otherwise the System.String.Empty string.
   """
   pass
  def VerifyChar(self,input,position,hint):
   """
   VerifyChar(self: MaskedTextProvider,input: Char,position: int) -> (bool,MaskedTextResultHint)
   
-   Tests whether the specified character could be set successfully at the 
-    specified position.
-  
+   Tests whether the specified character could be set successfully at the specified position.
   
    input: The System.Char value to test.
    position: The position in the mask to test the input character against.
-   Returns: true if the specified character is valid for the specified position; otherwise,
-    false.
+   Returns: true if the specified character is valid for the specified position; otherwise,false.
   """
   pass
  def VerifyEscapeChar(self,input,position):
   """
   VerifyEscapeChar(self: MaskedTextProvider,input: Char,position: int) -> bool
   
-   Tests whether the specified character would be escaped at the specified 
-    position.
-  
+   Tests whether the specified character would be escaped at the specified position.
   
    input: The System.Char value to test.
    position: The position in the mask to test the input character against.
-   Returns: true if the specified character would be escaped at the specified position; 
-    otherwise,false.
+   Returns: true if the specified character would be escaped at the specified position; otherwise,false.
   """
   pass
  def VerifyString(self,input,testPosition=None,resultHint=None):
   """
   VerifyString(self: MaskedTextProvider,input: str) -> (bool,int,MaskedTextResultHint)
   
-   Tests whether the specified string could be set successfully,and then outputs 
-    position and descriptive information.
+   Tests whether the specified string could be set successfully,and then outputs position and 
+    descriptive information.
   
   
    input: The System.String value to test.

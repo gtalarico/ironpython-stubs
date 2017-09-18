@@ -8,9 +8,7 @@ class ObjectKeyFrameCollection(Freezable,ISealable,IList,ICollection,IEnumerable
   """
   Add(self: ObjectKeyFrameCollection,keyFrame: ObjectKeyFrame) -> int
   
-   Adds an System.Windows.Media.Animation.ObjectKeyFrame to the end of this 
-    collection.
-  
+   Adds an System.Windows.Media.Animation.ObjectKeyFrame to the end of this collection.
   
    keyFrame: The System.Windows.Media.Animation.ObjectKeyFrame to add.
    Returns: The index at which the keyFrame was added.
@@ -26,24 +24,22 @@ class ObjectKeyFrameCollection(Freezable,ISealable,IList,ICollection,IEnumerable
   """
   Clone(self: ObjectKeyFrameCollection) -> ObjectKeyFrameCollection
   
-   Creates a modifiable clone of this 
-    System.Windows.Media.Animation.ObjectKeyFrameCollection,making deep copies of 
-    this object's values. When copying dependency properties,this method copies 
-    resource references and data bindings (but they might no longer resolve) but 
-    not animations or their current values.
+   Creates a modifiable clone of this System.Windows.Media.Animation.ObjectKeyFrameCollection,
+    making deep copies of this object's values. When copying dependency properties,this method 
+    copies resource references and data bindings (but they might no longer resolve) but not 
+    animations or their current values.
   
-   Returns: A modifiable clone of the current object. The cloned object's 
-    System.Windows.Freezable.IsFrozen property will be false even if the source's 
-    System.Windows.Freezable.IsFrozen property was true.
+   Returns: A modifiable clone of the current object. The cloned object's System.Windows.Freezable.IsFrozen 
+    property will be false even if the source's System.Windows.Freezable.IsFrozen property was true.
   """
   pass
  def CloneCore(self,*args):
   """
   CloneCore(self: ObjectKeyFrameCollection,sourceFreezable: Freezable)
    Makes this instance a deep copy of the specified 
-    System.Windows.Media.Animation.ObjectKeyFrameCollection. When copying 
-    dependency properties,this method copies resource references and data bindings 
-    (but they might no longer resolve) but not animations or their current values.
+    System.Windows.Media.Animation.ObjectKeyFrameCollection. When copying dependency properties,
+    this method copies resource references and data bindings (but they might no longer resolve) but 
+    not animations or their current values.
   
   
    sourceFreezable: The System.Windows.Media.Animation.ObjectKeyFrameCollection to clone.
@@ -53,9 +49,8 @@ class ObjectKeyFrameCollection(Freezable,ISealable,IList,ICollection,IEnumerable
   """
   CloneCurrentValueCore(self: ObjectKeyFrameCollection,sourceFreezable: Freezable)
    Makes this instance a modifiable deep copy of the specified 
-    System.Windows.Media.Animation.ObjectKeyFrameCollection using current property 
-    values. Resource references,data bindings,and animations are not copied,but 
-    their current values are.
+    System.Windows.Media.Animation.ObjectKeyFrameCollection using current property values. Resource 
+    references,data bindings,and animations are not copied,but their current values are.
   
   
    sourceFreezable: The System.Windows.Media.Animation.ObjectKeyFrameCollection to clone.
@@ -76,15 +71,14 @@ class ObjectKeyFrameCollection(Freezable,ISealable,IList,ICollection,IEnumerable
  def CopyTo(self,array,index):
   """
   CopyTo(self: ObjectKeyFrameCollection,array: Array[ObjectKeyFrame],index: int)
-   Copies the System.Windows.Media.Animation.ObjectKeyFrameCollection to the 
-    specified one dimensional System.Windows.Media.Animation.ObjectKeyFrame array,
-    started at the specified index of the target array.
+   Copies the System.Windows.Media.Animation.ObjectKeyFrameCollection to the specified one 
+    dimensional System.Windows.Media.Animation.ObjectKeyFrame array,started at the specified index 
+    of the target array.
   
   
-   array: The one-dimensional System.Windows.Media.Animation.ObjectKeyFrame array that is 
-    the destination of the key frames copied from this 
-    System.Windows.Media.Animation.ObjectKeyFrameCollection. The array must have 
-    zero-based indexing.
+   array: The one-dimensional System.Windows.Media.Animation.ObjectKeyFrame array that is the destination 
+    of the key frames copied from this System.Windows.Media.Animation.ObjectKeyFrameCollection. The 
+    array must have zero-based indexing.
   
    index: The zero-based index in array at which copying begins.
   """
@@ -101,9 +95,7 @@ class ObjectKeyFrameCollection(Freezable,ISealable,IList,ICollection,IEnumerable
   """
   CreateInstanceCore(self: ObjectKeyFrameCollection) -> Freezable
   
-   Creates a new,frozen instance of 
-    System.Windows.Media.Animation.ObjectKeyFrameCollection.
-  
+   Creates a new,frozen instance of System.Windows.Media.Animation.ObjectKeyFrameCollection.
    Returns: A frozen instance of System.Windows.Media.Animation.ObjectKeyFrameCollection.
   """
   pass
@@ -111,16 +103,15 @@ class ObjectKeyFrameCollection(Freezable,ISealable,IList,ICollection,IEnumerable
   """
   FreezeCore(self: ObjectKeyFrameCollection,isChecking: bool) -> bool
   
-   Makes this instance of System.Windows.Media.Animation.ObjectKeyFrameCollection 
-    unmodifiable or determines whether it can be made unmodifiable.
+   Makes this instance of System.Windows.Media.Animation.ObjectKeyFrameCollection unmodifiable or 
+    determines whether it can be made unmodifiable.
   
   
    isChecking: true to check if this instance can be frozen; false to freeze this instance.
-   Returns: If isChecking is true,this method returns true if this instance can be made 
-    read-only,or false if it cannot be made read-only. If isChecking is false,
-    this method returns true if this instance is now read-only,or false if it 
-    cannot be made read-only,with the side effect of having begun to change the 
-    frozen status of this object.
+   Returns: If isChecking is true,this method returns true if this instance can be made read-only,or false 
+    if it cannot be made read-only. If isChecking is false,this method returns true if this 
+    instance is now read-only,or false if it cannot be made read-only,with the side effect of 
+    having begun to change the frozen status of this object.
   """
   pass
  def GetAsFrozenCore(self,*args):
@@ -137,8 +128,8 @@ class ObjectKeyFrameCollection(Freezable,ISealable,IList,ICollection,IEnumerable
   """
   GetCurrentValueAsFrozenCore(self: ObjectKeyFrameCollection,sourceFreezable: Freezable)
    Makes this instance a frozen clone of the specified 
-    System.Windows.Media.Animation.ObjectKeyFrameCollection. Resource references,
-    data bindings,and animations are not copied,but their current values are.
+    System.Windows.Media.Animation.ObjectKeyFrameCollection. Resource references,data bindings,and 
+    animations are not copied,but their current values are.
   
   
    sourceFreezable: The System.Windows.Media.Animation.ObjectKeyFrameCollection to copy and freeze.
@@ -156,28 +147,24 @@ class ObjectKeyFrameCollection(Freezable,ISealable,IList,ICollection,IEnumerable
   """
   IndexOf(self: ObjectKeyFrameCollection,keyFrame: ObjectKeyFrame) -> int
   
-   Searches for the specified System.Windows.Media.Animation.ObjectKeyFrame and 
-    returns the zero-based index of the first occurrence within the entire 
-    collection.
+   Searches for the specified System.Windows.Media.Animation.ObjectKeyFrame and returns the 
+    zero-based index of the first occurrence within the entire collection.
   
   
    keyFrame: The System.Windows.Media.Animation.ObjectKeyFrame to locate in the collection.
-   Returns: The zero-based index of the first occurrence of keyFrame within the entire 
-    collection,if found; otherwise,-1.
+   Returns: The zero-based index of the first occurrence of keyFrame within the entire collection,if found; 
+    otherwise,-1.
   """
   pass
  def Insert(self,index,keyFrame):
   """
   Insert(self: ObjectKeyFrameCollection,index: int,keyFrame: ObjectKeyFrame)
-   Inserts a System.Windows.Media.Animation.ObjectKeyFrame into a specific 
-    location within the collection.
+   Inserts a System.Windows.Media.Animation.ObjectKeyFrame into a specific location within the 
+    collection.
   
   
-   index: The index position at which the System.Windows.Media.Animation.ObjectKeyFrame 
-    is inserted.
-  
-   keyFrame: The System.Windows.Media.Animation.ObjectKeyFrame object to insert in the 
-    collection.
+   index: The index position at which the System.Windows.Media.Animation.ObjectKeyFrame is inserted.
+   keyFrame: The System.Windows.Media.Animation.ObjectKeyFrame object to insert in the collection.
   """
   pass
  def OnChanged(self,*args):
@@ -189,8 +176,8 @@ class ObjectKeyFrameCollection(Freezable,ISealable,IList,ICollection,IEnumerable
  def OnFreezablePropertyChanged(self,*args):
   """
   OnFreezablePropertyChanged(self: Freezable,oldValue: DependencyObject,newValue: DependencyObject,property: DependencyProperty)
-   This member supports the Windows Presentation Foundation (WPF) infrastructure 
-    and is not intended to be used directly from your code.
+   This member supports the Windows Presentation Foundation (WPF) infrastructure and is not 
+    intended to be used directly from your code.
   
   
    oldValue: The previous value of the data member.
@@ -209,85 +196,67 @@ class ObjectKeyFrameCollection(Freezable,ISealable,IList,ICollection,IEnumerable
   """
   OnPropertyChanged(self: Freezable,e: DependencyPropertyChangedEventArgs)
    Overrides the System.Windows.DependencyObject implementation of 
-    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPrope
-    rtyChangedEventArgs) to also invoke any System.Windows.Freezable.Changed 
-    handlers in response to a changing dependency property of type 
-    System.Windows.Freezable.
+    System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventAr
+    gs) to also invoke any System.Windows.Freezable.Changed handlers in response to a changing 
+    dependency property of type System.Windows.Freezable.
   
   
-   e: Event data that contains information about which property changed,and its old 
-    and new values.
+   e: Event data that contains information about which property changed,and its old and new values.
   """
   pass
  def ReadPreamble(self,*args):
   """
   ReadPreamble(self: Freezable)
-   Ensures that the System.Windows.Freezable is being accessed from a valid 
-    thread. Inheritors of System.Windows.Freezable must call this method at the 
-    beginning of any API that reads data members that are not dependency 
-    properties.
+   Ensures that the System.Windows.Freezable is being accessed from a valid thread. Inheritors of 
+    System.Windows.Freezable must call this method at the beginning of any API that reads data 
+    members that are not dependency properties.
   """
   pass
  def Remove(self,keyFrame):
   """
   Remove(self: ObjectKeyFrameCollection,keyFrame: ObjectKeyFrame)
-   Removes a System.Windows.Media.Animation.ObjectKeyFrame object from the 
-    collection.
+   Removes a System.Windows.Media.Animation.ObjectKeyFrame object from the collection.
   
-  
-   keyFrame: Identifies the System.Windows.Media.Animation.ObjectKeyFrame to remove from the 
-    collection.
+   keyFrame: Identifies the System.Windows.Media.Animation.ObjectKeyFrame to remove from the collection.
   """
   pass
  def RemoveAt(self,index):
   """
   RemoveAt(self: ObjectKeyFrameCollection,index: int)
-   Removes the System.Windows.Media.Animation.ObjectKeyFrame at the specified 
-    index position from the collection.
+   Removes the System.Windows.Media.Animation.ObjectKeyFrame at the specified index position from 
+    the collection.
   
   
-   index: Index position of the System.Windows.Media.Animation.ObjectKeyFrame to be 
-    removed.
+   index: Index position of the System.Windows.Media.Animation.ObjectKeyFrame to be removed.
   """
   pass
  def ShouldSerializeProperty(self,*args):
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize 
-    the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize the value for 
+    the provided dependency property.
   
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; 
-    otherwise,false.
-  
-  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
+   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
   """
   pass
  def WritePostscript(self,*args):
   """
   WritePostscript(self: Freezable)
-   Raises the System.Windows.Freezable.Changed event for the 
-    System.Windows.Freezable and invokes its System.Windows.Freezable.OnChanged 
-    method. Classes that derive from System.Windows.Freezable should call this 
-    method at the end of any API that modifies class members that are not stored as 
+   Raises the System.Windows.Freezable.Changed event for the System.Windows.Freezable and invokes 
+    its System.Windows.Freezable.OnChanged method. Classes that derive from System.Windows.Freezable 
+    should call this method at the end of any API that modifies class members that are not stored as 
     dependency properties.
   """
   pass
  def WritePreamble(self,*args):
   """
   WritePreamble(self: Freezable)
-   Verifies that the System.Windows.Freezable is not frozen and that it is being 
-    accessed from a valid threading context. System.Windows.Freezable inheritors 
-    should call this method at the beginning of any API that writes to data members 
-    that are not dependency properties.
+   Verifies that the System.Windows.Freezable is not frozen and that it is being accessed from a 
+    valid threading context. System.Windows.Freezable inheritors should call this method at the 
+    beginning of any API that writes to data members that are not dependency properties.
   """
   pass
  def __add__(self,*args):
@@ -300,8 +269,7 @@ class ObjectKeyFrameCollection(Freezable,ISealable,IList,ICollection,IEnumerable
    Determines whether the System.Collections.IList contains a specific value.
   
    value: The object to locate in the System.Collections.IList.
-   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,
-    false.
+   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,false.
   """
   pass
  def __getitem__(self,*args):

@@ -3,20 +3,18 @@ class Clock(DispatcherObject):
  def DiscontinuousTimeMovement(self,*args):
   """
   DiscontinuousTimeMovement(self: Clock)
-   When implemented in a derived class,will be invoked whenever a clock repeats,
-    skips,or seeks.
+   When implemented in a derived class,will be invoked whenever a clock repeats,skips,or seeks.
   """
   pass
  def GetCanSlip(self,*args):
   """
   GetCanSlip(self: Clock) -> bool
   
-   Returns whether the System.Windows.Media.Animation.Clock has its own external 
-    time source,which may require synchronization with the timing system.
+   Returns whether the System.Windows.Media.Animation.Clock has its own external time source,which 
+    may require synchronization with the timing system.
   
-   Returns: Returns true if the System.Windows.Media.Animation.Clock has its own external 
-    source for time,which may require synchronization with the timing system; 
-    otherwise,false.
+   Returns: Returns true if the System.Windows.Media.Animation.Clock has its own external source for time,
+    which may require synchronization with the timing system; otherwise,false.
   """
   pass
  def GetCurrentTimeCore(self,*args):
@@ -24,23 +22,22 @@ class Clock(DispatcherObject):
   GetCurrentTimeCore(self: Clock) -> TimeSpan
   
    Gets this clock's current time within its current iteration.
-   Returns: The current time of this clock if it is active or filling; otherwise,
-    System.TimeSpan.Zero.
+   Returns: The current time of this clock if it is active or filling; otherwise,System.TimeSpan.Zero.
   """
   pass
  def SpeedChanged(self,*args):
   """
   SpeedChanged(self: Clock)
-   When implemented in a derived class,will be invoked whenever a clock begins,
-    skips,pauses,resumes,or when the clock's 
-    System.Windows.Media.Animation.ClockController.SpeedRatio is modified.
+   When implemented in a derived class,will be invoked whenever a clock begins,skips,pauses,
+    resumes,or when the clock's System.Windows.Media.Animation.ClockController.SpeedRatio is 
+    modified.
   """
   pass
  def Stopped(self,*args):
   """
   Stopped(self: Clock)
-   When implemented in a derived class,will be invoked whenever a clock is 
-    stopped using the System.Windows.Media.Animation.ClockController.Stop method.
+   When implemented in a derived class,will be invoked whenever a clock is stopped using the 
+    System.Windows.Media.Animation.ClockController.Stop method.
   """
   pass
  @staticmethod

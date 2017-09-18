@@ -18,9 +18,7 @@ class DataGridViewCellStyleConverter(TypeConverter):
   ConvertTo(self: DataGridViewCellStyleConverter,context: ITypeDescriptorContext,culture: CultureInfo,value: object,destinationType: Type) -> object
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   culture: A System.Globalization.CultureInfo. If null is passed,the current culture is 
-    assumed.
-  
+   culture: A System.Globalization.CultureInfo. If null is passed,the current culture is assumed.
    value: The System.Object to convert.
    destinationType: The System.Type to convert the value parameter to.
    Returns: An System.Object that represents the converted value.

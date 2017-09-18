@@ -13,11 +13,9 @@ class DataObjectFieldAttribute(Attribute,_Attribute):
   
    Returns a value indicating whether this instance is equal to a specified object.
   
-   obj: An object to compare with this instance of 
-    System.ComponentModel.DataObjectFieldAttribute.
-  
-   Returns: true if this instance is the same as the instance specified by the obj 
-    parameter; otherwise,false.
+   obj: An object to compare with this instance of System.ComponentModel.DataObjectFieldAttribute.
+   Returns: true if this instance is the same as the instance specified by the obj parameter; otherwise,
+    false.
   """
   pass
  def GetHashCode(self):

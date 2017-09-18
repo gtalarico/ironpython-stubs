@@ -10,8 +10,7 @@ class Stopwatch(object):
   GetTimestamp() -> Int64
   
    Gets the current number of ticks in the timer mechanism.
-   Returns: A long integer representing the tick counter value of the underlying timer 
-    mechanism.
+   Returns: A long integer representing the tick counter value of the underlying timer mechanism.
   """
   pass
  def Reset(self):
@@ -23,8 +22,8 @@ class Stopwatch(object):
  def Restart(self):
   """
   Restart(self: Stopwatch)
-   Stops time interval measurement,resets the elapsed time to zero,and starts 
-    measuring elapsed time.
+   Stops time interval measurement,resets the elapsed time to zero,and starts measuring elapsed 
+    time.
   """
   pass
  def Start(self):
@@ -38,8 +37,8 @@ class Stopwatch(object):
   """
   StartNew() -> Stopwatch
   
-   Initializes a new System.Diagnostics.Stopwatch instance,sets the elapsed time 
-    property to zero,and starts measuring elapsed time.
+   Initializes a new System.Diagnostics.Stopwatch instance,sets the elapsed time property to zero,
+    and starts measuring elapsed time.
   
    Returns: A System.Diagnostics.Stopwatch that has just begun measuring elapsed time.
   """

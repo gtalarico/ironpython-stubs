@@ -16,9 +16,7 @@ class TableLayoutColumnStyleCollection(TableLayoutStyleCollection,IList,ICollect
   """
   Contains(self: TableLayoutColumnStyleCollection,columnStyle: ColumnStyle) -> bool
   
-   Determines whether the specified System.Windows.Forms.ColumnStyle is in the 
-    collection.
-  
+   Determines whether the specified System.Windows.Forms.ColumnStyle is in the collection.
   
    columnStyle: The System.Windows.Forms.ColumnStyle to locate in the 
     System.Windows.Forms.TableLayoutColumnStyleCollection. The value can be null.
@@ -38,21 +36,18 @@ class TableLayoutColumnStyleCollection(TableLayoutStyleCollection,IList,ICollect
    columnStyle: The System.Windows.Forms.ColumnStyle to locate in the 
     System.Windows.Forms.TableLayoutColumnStyleCollection.
   
-   Returns: The index of columnStyle if found in the 
-    System.Windows.Forms.TableLayoutColumnStyleCollection; otherwise,-1.
+   Returns: The index of columnStyle if found in the System.Windows.Forms.TableLayoutColumnStyleCollection; 
+    otherwise,-1.
   """
   pass
  def Insert(self,index,columnStyle):
   """
   Insert(self: TableLayoutColumnStyleCollection,index: int,columnStyle: ColumnStyle)
    Inserts a System.Windows.Forms.ColumnStyle into the 
-    System.Windows.Forms.TableLayoutColumnStyleCollection at the specified 
-    position.
+    System.Windows.Forms.TableLayoutColumnStyleCollection at the specified position.
   
   
-   index: The zero-based index at which System.Windows.Forms.ColumnStyle should be 
-    inserted.
-  
+   index: The zero-based index at which System.Windows.Forms.ColumnStyle should be inserted.
    columnStyle: The System.Windows.Forms.ColumnStyle to insert into the 
     System.Windows.Forms.TableLayoutColumnStyleCollection.
   """
@@ -60,8 +55,8 @@ class TableLayoutColumnStyleCollection(TableLayoutStyleCollection,IList,ICollect
  def Remove(self,columnStyle):
   """
   Remove(self: TableLayoutColumnStyleCollection,columnStyle: ColumnStyle)
-   Removes the first occurrence of a specific System.Windows.Forms.ColumnStyle 
-    from the System.Windows.Forms.TableLayoutColumnStyleCollection.
+   Removes the first occurrence of a specific System.Windows.Forms.ColumnStyle from the 
+    System.Windows.Forms.TableLayoutColumnStyleCollection.
   
   
    columnStyle: The System.Windows.Forms.ColumnStyle to remove from the 

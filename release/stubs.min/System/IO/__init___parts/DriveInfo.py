@@ -10,8 +10,7 @@ class DriveInfo(object,ISerializable):
   GetDrives() -> Array[DriveInfo]
   
    Retrieves the drive names of all logical drives on a computer.
-   Returns: An array of type System.IO.DriveInfo that represents the logical drives on a 
-    computer.
+   Returns: An array of type System.IO.DriveInfo that represents the logical drives on a computer.
   """
   pass
  def ToString(self):

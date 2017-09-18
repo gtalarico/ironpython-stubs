@@ -12,15 +12,15 @@ class ObjectDisposedException(InvalidOperationException,ISerializable,_Exception
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: ObjectDisposedException,info: SerializationInfo,context: StreamingContext)
-   Retrieves the System.Runtime.Serialization.SerializationInfo object with the 
-    parameter name and additional exception information.
+   Retrieves the System.Runtime.Serialization.SerializationInfo object with the parameter name and 
+    additional exception information.
   
   
-   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized 
-    object data about the exception being thrown.
+   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about 
+    the exception being thrown.
   
-   context: The System.Runtime.Serialization.StreamingContext that contains contextual 
-    information about the source or destination.
+   context: The System.Runtime.Serialization.StreamingContext that contains contextual information about the 
+    source or destination.
   """
   pass
  def remove_SerializeObjectState(self,*args):

@@ -9,12 +9,10 @@ class AsyncOperation(object):
  def Post(self,d,arg):
   """
   Post(self: AsyncOperation,d: SendOrPostCallback,arg: object)
-   Invokes a delegate on the thread or context appropriate for the application 
-    model.
+   Invokes a delegate on the thread or context appropriate for the application model.
   
-  
-   d: A System.Threading.SendOrPostCallback object that wraps the delegate to be 
-    called when the operation ends.
+   d: A System.Threading.SendOrPostCallback object that wraps the delegate to be called when the 
+    operation ends.
   
    arg: An argument for the delegate contained in the d parameter.
   """
@@ -24,8 +22,8 @@ class AsyncOperation(object):
   PostOperationCompleted(self: AsyncOperation,d: SendOrPostCallback,arg: object)
    Ends the lifetime of an asynchronous operation.
   
-   d: A System.Threading.SendOrPostCallback object that wraps the delegate to be 
-    called when the operation ends.
+   d: A System.Threading.SendOrPostCallback object that wraps the delegate to be called when the 
+    operation ends.
   
    arg: An argument for the delegate contained in the d parameter.
   """

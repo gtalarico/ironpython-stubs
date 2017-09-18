@@ -5,23 +5,23 @@ class DataFormats(object):
   """
   GetFormat(id: int) -> Format
   
-   Returns a System.Windows.Forms.DataFormats.Format with the Windows Clipboard 
-    numeric ID and name for the specified ID.
+   Returns a System.Windows.Forms.DataFormats.Format with the Windows Clipboard numeric ID and name 
+    for the specified ID.
   
   
    id: The format ID.
-   Returns: A System.Windows.Forms.DataFormats.Format that has the Windows Clipboard 
-    numeric ID and the name of the format.
+   Returns: A System.Windows.Forms.DataFormats.Format that has the Windows Clipboard numeric ID and the name 
+    of the format.
   
   GetFormat(format: str) -> Format
   
-   Returns a System.Windows.Forms.DataFormats.Format with the Windows Clipboard 
-    numeric ID and name for the specified format.
+   Returns a System.Windows.Forms.DataFormats.Format with the Windows Clipboard numeric ID and name 
+    for the specified format.
   
   
    format: The format name.
-   Returns: A System.Windows.Forms.DataFormats.Format that has the Windows Clipboard 
-    numeric ID and the name of the format.
+   Returns: A System.Windows.Forms.DataFormats.Format that has the Windows Clipboard numeric ID and the name 
+    of the format.
   """
   pass
  Bitmap='Bitmap'

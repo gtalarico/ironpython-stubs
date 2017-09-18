@@ -32,9 +32,7 @@ class AggregateException(Exception,ISerializable,_Exception):
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: AggregateException,info: SerializationInfo,context: StreamingContext)
-   Initializes a new instance of the System.AggregateException class with 
-    serialized data.
-  
+   Initializes a new instance of the System.AggregateException class with serialized data.
   
    info: The object that holds the serialized object data.
    context: The contextual information about the source or destination.
@@ -50,9 +48,7 @@ class AggregateException(Exception,ISerializable,_Exception):
   """
   ToString(self: AggregateException) -> str
   
-   Creates and returns a string representation of the current 
-    System.AggregateException.
-  
+   Creates and returns a string representation of the current System.AggregateException.
    Returns: A string representation of the current exception.
   """
   pass

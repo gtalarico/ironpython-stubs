@@ -26,25 +26,17 @@ class Cursor(object,IDisposable,ISerializable):
   Draw(self: Cursor,g: Graphics,targetRect: Rectangle)
    Draws the cursor on the specified surface,within the specified bounds.
   
-   g: The System.Drawing.Graphics surface on which to draw the 
-    System.Windows.Forms.Cursor.
-  
-   targetRect: The System.Drawing.Rectangle that represents the bounds of the 
-    System.Windows.Forms.Cursor.
+   g: The System.Drawing.Graphics surface on which to draw the System.Windows.Forms.Cursor.
+   targetRect: The System.Drawing.Rectangle that represents the bounds of the System.Windows.Forms.Cursor.
   """
   pass
  def DrawStretched(self,g,targetRect):
   """
   DrawStretched(self: Cursor,g: Graphics,targetRect: Rectangle)
-   Draws the cursor in a stretched format on the specified surface,within the 
-    specified bounds.
+   Draws the cursor in a stretched format on the specified surface,within the specified bounds.
   
-  
-   g: The System.Drawing.Graphics surface on which to draw the 
-    System.Windows.Forms.Cursor.
-  
-   targetRect: The System.Drawing.Rectangle that represents the bounds of the 
-    System.Windows.Forms.Cursor.
+   g: The System.Drawing.Graphics surface on which to draw the System.Windows.Forms.Cursor.
+   targetRect: The System.Drawing.Rectangle that represents the bounds of the System.Windows.Forms.Cursor.
   """
   pass
  def Equals(self,obj):
@@ -56,8 +48,7 @@ class Cursor(object,IDisposable,ISerializable):
   
   
    obj: The System.Windows.Forms.Cursor to compare.
-   Returns: true if this cursor is equal to the specified System.Windows.Forms.Cursor; 
-    otherwise,false.
+   Returns: true if this cursor is equal to the specified System.Windows.Forms.Cursor; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -91,13 +82,20 @@ class Cursor(object,IDisposable,ISerializable):
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==y """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

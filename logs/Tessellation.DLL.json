@@ -1,0 +1,6 @@
+{
+  "Tessellation.DLL": {
+    "Tessellation.Adapters": "<module 'Adapters' (CLS module from Tessellation, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "Tessellation": "<module 'Tessellation' (CLS module from Tessellation, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

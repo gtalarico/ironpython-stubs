@@ -4,19 +4,16 @@ class AnimationClock(Clock):
   """
   GetCurrentValue(self: AnimationClock,defaultOriginValue: object,defaultDestinationValue: object) -> object
   
-   Gets the current output value of the 
-    System.Windows.Media.Animation.AnimationClock.
+   Gets the current output value of the System.Windows.Media.Animation.AnimationClock.
   
+   defaultOriginValue: The origin value provided to the clock if its animation does not have its own start value. If 
+    this clock is the first in a composition chain it will be the base value of the property being 
+    animated; otherwise it will be the value returned by the previous clock in the chain
   
-   defaultOriginValue: The origin value provided to the clock if its animation does not have its own 
-    start value. If this clock is the first in a composition chain it will be the 
-    base value of the property being animated; otherwise it will be the value 
-    returned by the previous clock in the chain
-  
-   defaultDestinationValue: The destination value provided to the clock if its animation does not have its 
-    own destination value. If this clock is the first in a composition chain it 
-    will be the base value of the property being animated; otherwise it will be the 
-    value returned by the previous clock in the chain
+   defaultDestinationValue: The destination value provided to the clock if its animation does not have its own destination 
+    value. If this clock is the first in a composition chain it will be the base value of the 
+    property being animated; otherwise it will be the value returned by the previous clock in the 
+    chain
   
    Returns: The current value of this System.Windows.Media.Animation.AnimationClock.
   """

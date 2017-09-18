@@ -7,21 +7,19 @@ class ArraySegment(object,IList[T],ICollection[T],IEnumerable[T],IEnumerable,IRe
   """
   Equals(self: ArraySegment[T],obj: ArraySegment[T]) -> bool
   
-   Determines whether the specified System.ArraySegment structure is equal to the 
-    current instance.
-  
+   Determines whether the specified System.ArraySegment structure is equal to the current instance.
   
    obj: The System.ArraySegment structure to be compared with the current instance.
-   Returns: true if the specified System.ArraySegment structure is equal to the current 
-    instance; otherwise,false.
+   Returns: true if the specified System.ArraySegment structure is equal to the current instance; otherwise,
+    false.
   
   Equals(self: ArraySegment[T],obj: object) -> bool
   
    Determines whether the specified object is equal to the current instance.
   
    obj: The object to be compared with the current instance.
-   Returns: true if the specified object is a System.ArraySegment structure and is equal to 
-    the current instance; otherwise,false.
+   Returns: true if the specified object is a System.ArraySegment structure and is equal to the current 
+    instance; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -36,13 +34,10 @@ class ArraySegment(object,IList[T],ICollection[T],IEnumerable[T],IEnumerable,IRe
   """
   __contains__(self: ICollection[T],item: T) -> bool
   
-   Determines whether the System.Collections.Generic.ICollection contains a 
-    specific value.
-  
+   Determines whether the System.Collections.Generic.ICollection contains a specific value.
   
    item: The object to locate in the System.Collections.Generic.ICollection.
-   Returns: true if item is found in the System.Collections.Generic.ICollection; otherwise,
-    false.
+   Returns: true if item is found in the System.Collections.Generic.ICollection; otherwise,false.
   """
   pass
  def __eq__(self,*args):

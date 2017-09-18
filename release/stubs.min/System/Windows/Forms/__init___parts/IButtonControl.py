@@ -3,8 +3,8 @@ class IButtonControl:
  def NotifyDefault(self,value):
   """
   NotifyDefault(self: IButtonControl,value: bool)
-   Notifies a control that it is the default button so that its appearance and 
-    behavior is adjusted accordingly.
+   Notifies a control that it is the default button so that its appearance and behavior is adjusted 
+    accordingly.
   
   
    value: true if the control should behave as a default button; otherwise false.

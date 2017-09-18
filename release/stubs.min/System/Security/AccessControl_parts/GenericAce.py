@@ -13,13 +13,9 @@ class GenericAce(object):
   """
   CreateFromBinaryForm(binaryForm: Array[Byte],offset: int) -> GenericAce
   
-   Creates a System.Security.AccessControl.GenericAce object from the specified 
-    binary data.
+   Creates a System.Security.AccessControl.GenericAce object from the specified binary data.
   
-  
-   binaryForm: The binary data from which to create the new 
-    System.Security.AccessControl.GenericAce object.
-  
+   binaryForm: The binary data from which to create the new System.Security.AccessControl.GenericAce object.
    offset: The offset at which to begin unmarshaling.
    Returns: The System.Security.AccessControl.GenericAce object this method creates.
   """
@@ -28,27 +24,26 @@ class GenericAce(object):
   """
   Equals(self: GenericAce,o: object) -> bool
   
-   Determines whether the specified System.Security.AccessControl.GenericAce 
-    object is equal to the current System.Security.AccessControl.GenericAce object.
+   Determines whether the specified System.Security.AccessControl.GenericAce object is equal to the 
+    current System.Security.AccessControl.GenericAce object.
   
   
    o: The System.Security.AccessControl.GenericAce object to compare to the current 
     System.Security.AccessControl.GenericAce object.
   
-   Returns: true if the specified System.Security.AccessControl.GenericAce object is equal 
-    to the current System.Security.AccessControl.GenericAce object; otherwise,
-    false.
+   Returns: true if the specified System.Security.AccessControl.GenericAce object is equal to the current 
+    System.Security.AccessControl.GenericAce object; otherwise,false.
   """
   pass
  def GetBinaryForm(self,binaryForm,offset):
   """
   GetBinaryForm(self: GenericAce,binaryForm: Array[Byte],offset: int)
-   Marshals the contents of the System.Security.AccessControl.GenericAce object 
-    into the specified byte array beginning at the specified offset.
+   Marshals the contents of the System.Security.AccessControl.GenericAce object into the specified 
+    byte array beginning at the specified offset.
   
   
-   binaryForm: The byte array into which the contents of the 
-    System.Security.AccessControl.GenericAce is marshaled.
+   binaryForm: The byte array into which the contents of the System.Security.AccessControl.GenericAce is 
+    marshaled.
   
    offset: The offset at which to start marshaling.
   """
@@ -57,9 +52,9 @@ class GenericAce(object):
   """
   GetHashCode(self: GenericAce) -> int
   
-   Serves as a hash function for the System.Security.AccessControl.GenericAce 
-    class. The  System.Security.AccessControl.GenericAce.GetHashCode method is 
-    suitable for use in hashing algorithms and data structures like a hash table.
+   Serves as a hash function for the System.Security.AccessControl.GenericAce class. The  
+    System.Security.AccessControl.GenericAce.GetHashCode method is suitable for use in hashing 
+    algorithms and data structures like a hash table.
   
    Returns: A hash code for the current System.Security.AccessControl.GenericAce object.
   """

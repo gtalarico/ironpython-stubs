@@ -8,8 +8,8 @@ class DataGridPreferredColumnWidthTypeConverter(TypeConverter):
   """
   CanConvertFrom(self: DataGridPreferredColumnWidthTypeConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Gets a value that specifies whether the converter can convert an object in the 
-    given source type to the native type of the converter.
+   Gets a value that specifies whether the converter can convert an object in the given source type 
+    to the native type of the converter.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.

@@ -7,24 +7,22 @@ class Math(object):
   
    Returns the absolute value of a single-precision floating-point number.
   
-   value: A number that is greater than or equal to System.Single.MinValue,but less than 
-    or equal to System.Single.MaxValue.
+   value: A number that is greater than or equal to System.Single.MinValue,but less than or equal to 
+    System.Single.MaxValue.
   
-      
-  Abs(value: float) -> float
+    Abs(value: float) -> float
   
    Returns the absolute value of a double-precision floating-point number.
   
-   value: A number that is greater than or equal to System.Double.MinValue,but less than 
-    or equal to System.Double.MaxValue.
+   value: A number that is greater than or equal to System.Double.MinValue,but less than or equal to 
+    System.Double.MaxValue.
   
-      
-  Abs(value: Decimal) -> Decimal
+    Abs(value: Decimal) -> Decimal
   
    Returns the absolute value of a System.Decimal number.
   
-   value: A number that is greater than or equal to System.Decimal.MinValue,but less 
-    than or equal to System.Decimal.MaxValue.
+   value: A number that is greater than or equal to System.Decimal.MinValue,but less than or equal to 
+    System.Decimal.MaxValue.
   
     Abs(value: Int64) -> Int64
   
@@ -63,10 +61,10 @@ class Math(object):
   
    Returns the angle whose cosine is the specified number.
   
-   d: A number representing a cosine,where d must be greater than or equal to -1,
-    but less than or equal to 1.
+   d: A number representing a cosine,where d must be greater than or equal to -1,but less than or 
+    equal to 1.
   
-      -1 or d > 1 or d equals System.Double.NaN.
+      equals System.Double.NaN.
   """
   pass
  @staticmethod
@@ -76,10 +74,10 @@ class Math(object):
   
    Returns the angle whose sine is the specified number.
   
-   d: A number representing a sine,where d must be greater than or equal to -1,but 
-    less than or equal to 1.
+   d: A number representing a sine,where d must be greater than or equal to -1,but less than or 
+    equal to 1.
   
-      if d < -1 or d > 1 or d equals System.Double.NaN.
+      1 or d equals System.Double.NaN.
   """
   pass
  @staticmethod
@@ -90,8 +88,7 @@ class Math(object):
    Returns the angle whose tangent is the specified number.
   
    d: A number representing a tangent.
-          to double precision (1.5707963267949) if d equals 
-    System.Double.PositiveInfinity.
+          System.Double.PositiveInfinity.
   """
   pass
  @staticmethod
@@ -103,10 +100,8 @@ class Math(object):
   
    y: The y coordinate of a point.
    x: The x coordinate of a point.
-      (x,y) is a point in the Cartesian plane. Observe the following: For (x,y) in 
-        the boundaries of the quadrants,the return value is the following:If y is 0 
-        System.Double.NaN,or if x and y are either System.Double.PositiveInfinity or 
-    System.Double.NegativeInfinity,the method returns System.Double.NaN.
+                either System.Double.PositiveInfinity or System.Double.NegativeInfinity,the method returns 
+    System.Double.NaN.
   """
   pass
  @staticmethod
@@ -126,25 +121,24 @@ class Math(object):
   """
   Ceiling(a: float) -> float
   
-   Returns the smallest integral value that is greater than or equal to the 
-    specified double-precision floating-point number.
+   Returns the smallest integral value that is greater than or equal to the specified 
+    double-precision floating-point number.
   
   
    a: A double-precision floating-point number.
-   Returns: The smallest integral value that is greater than or equal to a. If a is equal 
-    to System.Double.NaN,System.Double.NegativeInfinity,or 
-    System.Double.PositiveInfinity,that value is returned. Note that this method 
-    returns a System.Double instead of an integral type.
+   Returns: The smallest integral value that is greater than or equal to a. If a is equal to 
+    System.Double.NaN,System.Double.NegativeInfinity,or System.Double.PositiveInfinity,that value 
+    is returned. Note that this method returns a System.Double instead of an integral type.
   
   Ceiling(d: Decimal) -> Decimal
   
-   Returns the smallest integral value that is greater than or equal to the 
-    specified decimal number.
+   Returns the smallest integral value that is greater than or equal to the specified decimal 
+    number.
   
   
    d: A decimal number.
-   Returns: The smallest integral value that is greater than or equal to d. Note that this 
-    method returns a System.Decimal instead of an integral type.
+   Returns: The smallest integral value that is greater than or equal to d. Note that this method returns a 
+    System.Decimal instead of an integral type.
   """
   pass
  @staticmethod
@@ -155,9 +149,8 @@ class Math(object):
    Returns the cosine of the specified angle.
   
    d: An angle,measured in radians.
-   Returns: The cosine of d. If d is equal to System.Double.NaN,
-    System.Double.NegativeInfinity,or System.Double.PositiveInfinity,this method 
-    returns System.Double.NaN.
+   Returns: The cosine of d. If d is equal to System.Double.NaN,System.Double.NegativeInfinity,or 
+    System.Double.PositiveInfinity,this method returns System.Double.NaN.
   """
   pass
  @staticmethod
@@ -168,9 +161,8 @@ class Math(object):
    Returns the hyperbolic cosine of the specified angle.
   
    value: An angle,measured in radians.
-   Returns: The hyperbolic cosine of value. If value is equal to 
-    System.Double.NegativeInfinity or System.Double.PositiveInfinity,
-    System.Double.PositiveInfinity is returned. If value is equal to 
+   Returns: The hyperbolic cosine of value. If value is equal to System.Double.NegativeInfinity or 
+    System.Double.PositiveInfinity,System.Double.PositiveInfinity is returned. If value is equal to 
     System.Double.NaN,System.Double.NaN is returned.
   """
   pass
@@ -179,8 +171,8 @@ class Math(object):
   """
   DivRem(a: Int64,b: Int64) -> (Int64,Int64)
   
-   Calculates the quotient of two 64-bit signed integers and also returns the 
-    remainder in an output parameter.
+   Calculates the quotient of two 64-bit signed integers and also returns the remainder in an 
+    output parameter.
   
   
    a: The dividend.
@@ -188,8 +180,8 @@ class Math(object):
    Returns: The quotient of the specified numbers.
   DivRem(a: int,b: int) -> (int,int)
   
-   Calculates the quotient of two 32-bit signed integers and also returns the 
-    remainder in an output parameter.
+   Calculates the quotient of two 32-bit signed integers and also returns the remainder in an 
+    output parameter.
   
   
    a: The dividend.
@@ -215,14 +207,13 @@ class Math(object):
   """
   Floor(d: float) -> float
   
-   Returns the largest integer less than or equal to the specified 
-    double-precision floating-point number.
+   Returns the largest integer less than or equal to the specified double-precision floating-point 
+    number.
   
   
    d: A double-precision floating-point number.
-   Returns: The largest integer less than or equal to d. If d is equal to 
-    System.Double.NaN,System.Double.NegativeInfinity,or 
-    System.Double.PositiveInfinity,that value is returned.
+   Returns: The largest integer less than or equal to d. If d is equal to System.Double.NaN,
+    System.Double.NegativeInfinity,or System.Double.PositiveInfinity,that value is returned.
   
   Floor(d: Decimal) -> Decimal
   
@@ -237,16 +228,16 @@ class Math(object):
   """
   IEEERemainder(x: float,y: float) -> float
   
-   Returns the remainder resulting from the division of a specified number by 
-    another specified number.
+   Returns the remainder resulting from the division of a specified number by another specified 
+    number.
   
   
    x: A dividend.
    y: A divisor.
-   Returns: A number equal to x - (y Q),where Q is the quotient of x / y rounded to the 
-    nearest integer (if x / y falls halfway between two integers,the even integer 
-    is returned).If x - (y Q) is zero,the value +0 is returned if x is positive,
-    or -0 if x is negative.If y=0,System.Double.NaN is returned.
+   Returns: A number equal to x - (y Q),where Q is the quotient of x / y rounded to the nearest integer (if 
+    x / y falls halfway between two integers,the even integer is returned).If x - (y Q) is zero,
+    the value +0 is returned if x is positive,or -0 if x is negative.If y=0,System.Double.NaN is 
+    returned.
   """
   pass
  @staticmethod
@@ -258,25 +249,22 @@ class Math(object):
   
    a: A number whose logarithm is to be found.
    newBase: The base of the logarithm.
-   Returns: One of the values in the following table. (+Infinity denotes 
-    System.Double.PositiveInfinity,-Infinity denotes 
-    System.Double.NegativeInfinity,and NaN denotes 
-    System.Double.NaN.)anewBaseReturn valuea> 0(0 <newBase< 1) -or-(newBase> 
-    1)lognewBase(a)a< 0(any value)NaN(any value)newBase< 0NaNa != 1newBase=0NaNa 
-    != 1newBase=+InfinityNaNa=NaN(any value)NaN(any value)newBase=NaNNaN(any 
-    value)newBase=1NaNa=00 <newBase< 1 +Infinitya=0newBase> 1-Infinitya= 
-    +Infinity0 <newBase< 1-Infinitya= +InfinitynewBase> 1+Infinitya=1newBase=
-    00a=1newBase=+Infinity0
+   Returns: One of the values in the following table. (+Infinity denotes System.Double.PositiveInfinity,
+    -Infinity denotes System.Double.NegativeInfinity,and NaN denotes 
+    System.Double.NaN.)anewBaseReturn valuea> 0(0 <newBase< 1) -or-(newBase> 1)lognewBase(a)a< 0(any 
+    value)NaN(any value)newBase< 0NaNa != 1newBase=0NaNa != 1newBase=+InfinityNaNa=NaN(any 
+    value)NaN(any value)newBase=NaNNaN(any value)newBase=1NaNa=00 <newBase< 1 +Infinitya=
+    0newBase> 1-Infinitya= +Infinity0 <newBase< 1-Infinitya= +InfinitynewBase> 1+Infinitya=
+    1newBase=00a=1newBase=+Infinity0
   
   Log(d: float) -> float
   
    Returns the natural (base e) logarithm of a specified number.
   
    d: A number whose logarithm is to be found.
-   Returns: One of the values in the following table. d parameterReturn value Positive The 
-    natural logarithm of d; that is,ln d,or log edZero 
-    System.Double.NegativeInfinityNegative System.Double.NaNEqual to 
-    System.Double.NaNSystem.Double.NaNEqual to 
+   Returns: One of the values in the following table. d parameterReturn value Positive The natural logarithm 
+    of d; that is,ln d,or log edZero System.Double.NegativeInfinityNegative System.Double.NaNEqual 
+    to System.Double.NaNSystem.Double.NaNEqual to 
     System.Double.PositiveInfinitySystem.Double.PositiveInfinity
   """
   pass
@@ -288,9 +276,9 @@ class Math(object):
    Returns the base 10 logarithm of a specified number.
   
    d: A number whose logarithm is to be found.
-   Returns: One of the values in the following table. d parameter Return value Positive The 
-    base 10 log of d; that is,log 10d. Zero System.Double.NegativeInfinityNegative 
-    System.Double.NaNEqual to System.Double.NaNSystem.Double.NaNEqual to 
+   Returns: One of the values in the following table. d parameter Return value Positive The base 10 log of 
+    d; that is,log 10d. Zero System.Double.NegativeInfinityNegative System.Double.NaNEqual to 
+    System.Double.NaNSystem.Double.NaNEqual to 
     System.Double.PositiveInfinitySystem.Double.PositiveInfinity
   """
   pass
@@ -317,8 +305,8 @@ class Math(object):
   
    val1: The first of two single-precision floating-point numbers to compare.
    val2: The second of two single-precision floating-point numbers to compare.
-   Returns: Parameter val1 or val2,whichever is larger. If val1,or val2,or both val1 and 
-    val2 are equal to System.Single.NaN,System.Single.NaN is returned.
+   Returns: Parameter val1 or val2,whichever is larger. If val1,or val2,or both val1 and val2 are equal 
+    to System.Single.NaN,System.Single.NaN is returned.
   
   Max(val1: Decimal,val2: Decimal) -> Decimal
   
@@ -333,8 +321,8 @@ class Math(object):
   
    val1: The first of two double-precision floating-point numbers to compare.
    val2: The second of two double-precision floating-point numbers to compare.
-   Returns: Parameter val1 or val2,whichever is larger. If val1,val2,or both val1 and 
-    val2 are equal to System.Double.NaN,System.Double.NaN is returned.
+   Returns: Parameter val1 or val2,whichever is larger. If val1,val2,or both val1 and val2 are equal to 
+    System.Double.NaN,System.Double.NaN is returned.
   
   Max(val1: UInt32,val2: UInt32) -> UInt32
   
@@ -403,8 +391,8 @@ class Math(object):
   
    val1: The first of two single-precision floating-point numbers to compare.
    val2: The second of two single-precision floating-point numbers to compare.
-   Returns: Parameter val1 or val2,whichever is smaller. If val1,val2,or both val1 and 
-    val2 are equal to System.Single.NaN,System.Single.NaN is returned.
+   Returns: Parameter val1 or val2,whichever is smaller. If val1,val2,or both val1 and val2 are equal to 
+    System.Single.NaN,System.Single.NaN is returned.
   
   Min(val1: Decimal,val2: Decimal) -> Decimal
   
@@ -419,8 +407,8 @@ class Math(object):
   
    val1: The first of two double-precision floating-point numbers to compare.
    val2: The second of two double-precision floating-point numbers to compare.
-   Returns: Parameter val1 or val2,whichever is smaller. If val1,val2,or both val1 and 
-    val2 are equal to System.Double.NaN,System.Double.NaN is returned.
+   Returns: Parameter val1 or val2,whichever is smaller. If val1,val2,or both val1 and val2 are equal to 
+    System.Double.NaN,System.Double.NaN is returned.
   
   Min(val1: UInt32,val2: UInt32) -> UInt32
   
@@ -487,90 +475,77 @@ class Math(object):
   
    d: A decimal number to be rounded.
    decimals: The number of decimal places in the return value.
-   Returns: The number nearest to d that contains a number of fractional digits equal to 
-    decimals.
-  
+   Returns: The number nearest to d that contains a number of fractional digits equal to decimals.
   Round(d: Decimal) -> Decimal
   
    Rounds a decimal value to the nearest integral value.
   
    d: A decimal number to be rounded.
-   Returns: The integer nearest parameter d. If the fractional component of d is halfway 
-    between two integers,one of which is even and the other odd,the even number 
-    is returned. Note that this method returns a System.Decimal instead of an 
-    integral type.
+   Returns: The integer nearest parameter d. If the fractional component of d is halfway between two 
+    integers,one of which is even and the other odd,the even number is returned. Note that this 
+    method returns a System.Decimal instead of an integral type.
   
   Round(d: Decimal,decimals: int,mode: MidpointRounding) -> Decimal
   
-   Rounds a decimal value to a specified number of fractional digits. A parameter 
-    specifies how to round the value if it is midway between two other numbers.
+   Rounds a decimal value to a specified number of fractional digits. A parameter specifies how to 
+    round the value if it is midway between two other numbers.
   
   
    d: A decimal number to be rounded.
    decimals: The number of decimal places in the return value.
    mode: Specification for how to round d if it is midway between two other numbers.
-   Returns: The number nearest to d that contains a number of fractional digits equal to 
-    decimals. If d has fewer fractional digits than decimals,d is returned 
-    unchanged.
+   Returns: The number nearest to d that contains a number of fractional digits equal to decimals. If d has 
+    fewer fractional digits than decimals,d is returned unchanged.
   
   Round(d: Decimal,mode: MidpointRounding) -> Decimal
   
-   Rounds a decimal value to the nearest integer. A parameter specifies how to 
-    round the value if it is midway between two other numbers.
+   Rounds a decimal value to the nearest integer. A parameter specifies how to round the value if 
+    it is midway between two other numbers.
   
   
    d: A decimal number to be rounded.
    mode: Specification for how to round d if it is midway between two other numbers.
-   Returns: The integer nearest d. If d is halfway between two numbers,one of which is 
-    even and the other odd,then mode determines which of the two is returned.
+   Returns: The integer nearest d. If d is halfway between two numbers,one of which is even and the other 
+    odd,then mode determines which of the two is returned.
   
   Round(value: float,digits: int) -> float
   
-   Rounds a double-precision floating-point value to a specified number of 
-    fractional digits.
-  
+   Rounds a double-precision floating-point value to a specified number of fractional digits.
   
    value: A double-precision floating-point number to be rounded.
    digits: The number of fractional digits in the return value.
-   Returns: The number nearest to value that contains a number of fractional digits equal 
-    to digits.
-  
+   Returns: The number nearest to value that contains a number of fractional digits equal to digits.
   Round(a: float) -> float
   
    Rounds a double-precision floating-point value to the nearest integral value.
   
    a: A double-precision floating-point number to be rounded.
-   Returns: The integer nearest a. If the fractional component of a is halfway between two 
-    integers,one of which is even and the other odd,then the even number is 
-    returned. Note that this method returns a System.Double instead of an integral 
-    type.
+   Returns: The integer nearest a. If the fractional component of a is halfway between two integers,one of 
+    which is even and the other odd,then the even number is returned. Note that this method returns 
+    a System.Double instead of an integral type.
   
   Round(value: float,digits: int,mode: MidpointRounding) -> float
   
-   Rounds a double-precision floating-point value to the specified number of 
-    fractional digits. A parameter specifies how to round the value if it is midway 
-    between two other numbers.
+   Rounds a double-precision floating-point value to the specified number of fractional digits. A 
+    parameter specifies how to round the value if it is midway between two other numbers.
   
   
    value: A double-precision floating-point number to be rounded.
    digits: The number of fractional digits in the return value.
    mode: Specification for how to round value if it is midway between two other numbers.
-   Returns: The number nearest to value that has a number of fractional digits equal to 
-    digits. If value has fewer fractional digits than digits,value is returned 
-    unchanged.
+   Returns: The number nearest to value that has a number of fractional digits equal to digits. If value has 
+    fewer fractional digits than digits,value is returned unchanged.
   
   Round(value: float,mode: MidpointRounding) -> float
   
-   Rounds a double-precision floating-point value to the nearest integer. A 
-    parameter specifies how to round the value if it is midway between two other 
-    numbers.
+   Rounds a double-precision floating-point value to the nearest integer. A parameter specifies how 
+    to round the value if it is midway between two other numbers.
   
   
    value: A double-precision floating-point number to be rounded.
    mode: Specification for how to round value if it is midway between two other numbers.
-   Returns: The integer nearest value. If value is halfway between two integers,one of 
-    which is even and the other odd,then mode determines which of the two is 
-    returned.
+   Returns: The integer nearest value. If value is halfway between two integers,one of which is even and 
+    the other odd,then mode determines which of the two is returned.
   """
   pass
  @staticmethod
@@ -581,63 +556,56 @@ class Math(object):
    Returns a value indicating the sign of a single-precision floating-point number.
   
    value: A signed number.
-   Returns: A number that indicates the sign of value,as shown in the following 
-    table.Return value Meaning -1 value is less than zero. 0 value is equal to 
-    zero. 1 value is greater than zero.
+   Returns: A number that indicates the sign of value,as shown in the following table.Return value Meaning 
+    -1 value is less than zero. 0 value is equal to zero. 1 value is greater than zero.
   
   Sign(value: float) -> int
   
    Returns a value indicating the sign of a double-precision floating-point number.
   
    value: A signed number.
-   Returns: A number that indicates the sign of value,as shown in the following 
-    table.Return value Meaning -1 value is less than zero. 0 value is equal to 
-    zero. 1 value is greater than zero.
+   Returns: A number that indicates the sign of value,as shown in the following table.Return value Meaning 
+    -1 value is less than zero. 0 value is equal to zero. 1 value is greater than zero.
   
   Sign(value: Decimal) -> int
   
    Returns a value indicating the sign of a decimal number.
   
    value: A signed decimal number.
-   Returns: A number that indicates the sign of value,as shown in the following 
-    table.Return value Meaning -1 value is less than zero. 0 value is equal to 
-    zero. 1 value is greater than zero.
+   Returns: A number that indicates the sign of value,as shown in the following table.Return value Meaning 
+    -1 value is less than zero. 0 value is equal to zero. 1 value is greater than zero.
   
   Sign(value: Int64) -> int
   
    Returns a value indicating the sign of a 64-bit signed integer.
   
    value: A signed number.
-   Returns: A number that indicates the sign of value,as shown in the following 
-    table.Return value Meaning -1 value is less than zero. 0 value is equal to 
-    zero. 1 value is greater than zero.
+   Returns: A number that indicates the sign of value,as shown in the following table.Return value Meaning 
+    -1 value is less than zero. 0 value is equal to zero. 1 value is greater than zero.
   
   Sign(value: SByte) -> int
   
    Returns a value indicating the sign of an 8-bit signed integer.
   
    value: A signed number.
-   Returns: A number that indicates the sign of value,as shown in the following 
-    table.Return value Meaning -1 value is less than zero. 0 value is equal to 
-    zero. 1 value is greater than zero.
+   Returns: A number that indicates the sign of value,as shown in the following table.Return value Meaning 
+    -1 value is less than zero. 0 value is equal to zero. 1 value is greater than zero.
   
   Sign(value: Int16) -> int
   
    Returns a value indicating the sign of a 16-bit signed integer.
   
    value: A signed number.
-   Returns: A number that indicates the sign of value,as shown in the following 
-    table.Return value Meaning -1 value is less than zero. 0 value is equal to 
-    zero. 1 value is greater than zero.
+   Returns: A number that indicates the sign of value,as shown in the following table.Return value Meaning 
+    -1 value is less than zero. 0 value is equal to zero. 1 value is greater than zero.
   
   Sign(value: int) -> int
   
    Returns a value indicating the sign of a 32-bit signed integer.
   
    value: A signed number.
-   Returns: A number that indicates the sign of value,as shown in the following 
-    table.Return value Meaning -1 value is less than zero. 0 value is equal to 
-    zero. 1 value is greater than zero.
+   Returns: A number that indicates the sign of value,as shown in the following table.Return value Meaning 
+    -1 value is less than zero. 0 value is equal to zero. 1 value is greater than zero.
   """
   pass
  @staticmethod
@@ -648,9 +616,8 @@ class Math(object):
    Returns the sine of the specified angle.
   
    a: An angle,measured in radians.
-   Returns: The sine of a. If a is equal to System.Double.NaN,
-    System.Double.NegativeInfinity,or System.Double.PositiveInfinity,this method 
-    returns System.Double.NaN.
+   Returns: The sine of a. If a is equal to System.Double.NaN,System.Double.NegativeInfinity,or 
+    System.Double.PositiveInfinity,this method returns System.Double.NaN.
   """
   pass
  @staticmethod
@@ -661,9 +628,9 @@ class Math(object):
    Returns the hyperbolic sine of the specified angle.
   
    value: An angle,measured in radians.
-   Returns: The hyperbolic sine of value. If value is equal to 
-    System.Double.NegativeInfinity,System.Double.PositiveInfinity,or 
-    System.Double.NaN,this method returns a System.Double equal to value.
+   Returns: The hyperbolic sine of value. If value is equal to System.Double.NegativeInfinity,
+    System.Double.PositiveInfinity,or System.Double.NaN,this method returns a System.Double equal 
+    to value.
   """
   pass
  @staticmethod
@@ -674,8 +641,8 @@ class Math(object):
    Returns the square root of a specified number.
   
    d: A number.
-   Returns: One of the values in the following table. d parameter Return value Zero,or 
-    positive The positive square root of d. Negative System.Double.NaNEquals 
+   Returns: One of the values in the following table. d parameter Return value Zero,or positive The 
+    positive square root of d. Negative System.Double.NaNEquals 
     System.Double.NaNSystem.Double.NaNEquals 
     System.Double.PositiveInfinitySystem.Double.PositiveInfinity
   """
@@ -688,9 +655,8 @@ class Math(object):
    Returns the tangent of the specified angle.
   
    a: An angle,measured in radians.
-   Returns: The tangent of a. If a is equal to System.Double.NaN,
-    System.Double.NegativeInfinity,or System.Double.PositiveInfinity,this method 
-    returns System.Double.NaN.
+   Returns: The tangent of a. If a is equal to System.Double.NaN,System.Double.NegativeInfinity,or 
+    System.Double.PositiveInfinity,this method returns System.Double.NaN.
   """
   pass
  @staticmethod
@@ -701,10 +667,9 @@ class Math(object):
    Returns the hyperbolic tangent of the specified angle.
   
    value: An angle,measured in radians.
-   Returns: The hyperbolic tangent of value. If value is equal to 
-    System.Double.NegativeInfinity,this method returns -1. If value is equal to 
-    System.Double.PositiveInfinity,this method returns 1. If value is equal to 
-    System.Double.NaN,this method returns System.Double.NaN.
+   Returns: The hyperbolic tangent of value. If value is equal to System.Double.NegativeInfinity,this 
+    method returns -1. If value is equal to System.Double.PositiveInfinity,this method returns 1. 
+    If value is equal to System.Double.NaN,this method returns System.Double.NaN.
   """
   pass
  @staticmethod
@@ -712,24 +677,21 @@ class Math(object):
   """
   Truncate(d: float) -> float
   
-   Calculates the integral part of a specified double-precision floating-point 
-    number.
-  
+   Calculates the integral part of a specified double-precision floating-point number.
   
    d: A number to truncate.
-   Returns: The integral part of d; that is,the number that remains after any fractional 
-    digits have been discarded,or one of the values listed in the following table. 
-    dReturn 
-    valueSystem.Double.NaNSystem.Double.NaNSystem.Double.NegativeInfinitySystem.Doub
-    le.NegativeInfinitySystem.Double.PositiveInfinitySystem.Double.PositiveInfinity
+   Returns: The integral part of d; that is,the number that remains after any fractional digits have been 
+    discarded,or one of the values listed in the following table. dReturn 
+    valueSystem.Double.NaNSystem.Double.NaNSystem.Double.NegativeInfinitySystem.Double.NegativeInfini
+    tySystem.Double.PositiveInfinitySystem.Double.PositiveInfinity
   
   Truncate(d: Decimal) -> Decimal
   
    Calculates the integral part of a specified decimal number.
   
    d: A number to truncate.
-   Returns: The integral part of d; that is,the number that remains after any fractional 
-    digits have been discarded.
+   Returns: The integral part of d; that is,the number that remains after any fractional digits have been 
+    discarded.
   """
   pass
  E=2.7182818284590451

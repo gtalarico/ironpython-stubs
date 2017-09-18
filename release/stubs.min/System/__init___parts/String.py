@@ -12,7 +12,11 @@ class String(object):
  str(c: Char,count: int)
  """
  def capitalize(self,*args):
-  """ capitalize(self: str) -> str """
+  """
+  capitalize(self: str) -> str
+  
+   Returns a copy of this string converted to uppercase
+  """
   pass
  def center(self,*args):
   """
@@ -65,7 +69,20 @@ class String(object):
  def format(self,*args):
   """
   format(format_string�: str,**kwargs�: dict,*args�: Array[object]) -> str
-  format(format_string: str,*args: Array[object]) -> str
+  format(format_string: str,*args: Array[object]) -> str
+  
+   Replaces each replacement field in the string with the provided arguments.
+     
+      
+      replacement_field= "{" field_name ["!" conversion] [":" format_spec] "}"
+     
+    field_name = (identifier | integer) ("." identifier | "[" element_index "]")*
+      
+      
+     format_spec: [[fill]align][sign][#][0][width][,][.precision][type]
+     
+    
+     Conversion can be 'r' for repr or 's' for string.
   """
   pass
  def index(self,*args):
@@ -98,7 +115,16 @@ class String(object):
   """ isspace(self: str) -> bool """
   pass
  def istitle(self,*args):
-  """ istitle(self: str) -> bool """
+  """
+  istitle(self: str) -> bool
+  
+   return true if self is a titlecased string and there is at least one
+     character in 
+    self; also,uppercase characters may only follow uncased
+     characters (e.g. 
+    whitespace) and lowercase characters only cased ones.
+     return false otherwise.
+  """
   pass
  def isunicode(self,*args):
   """ isunicode(self: str) -> bool """
@@ -109,7 +135,12 @@ class String(object):
  def join(self,*args):
   """
   join(self: str,sequence: list) -> str
-  join(self: str,sequence: object) -> str
+  join(self: str,sequence: object) -> str
+  
+   Return a string which is the concatenation of the strings 
+     in the sequence seq. The 
+    separator between elements is the 
+     string providing this method
   """
   pass
  def ljust(self,*args):
@@ -162,9 +193,9 @@ class String(object):
   pass
  def rsplit(self,*args):
   """
+  rsplit(self: str) -> list
   rsplit(self: str,sep: str,maxsplit: int) -> list
-  rsplit(self: str,sep: str) -> list
-  rsplit(self: str) -> list
+  rsplit(self: str,sep: str) -> list
   """
   pass
  def rstrip(self,*args):
@@ -188,12 +219,12 @@ class String(object):
   pass
  def startswith(self,*args):
   """
-  startswith(self: str,prefix: object) -> bool
-  startswith(self: str,prefix: object,start: int) -> bool
-  startswith(self: str,prefix: object,start: int,end: int) -> bool
   startswith(self: str,prefix: str) -> bool
   startswith(self: str,prefix: str,start: int) -> bool
-  startswith(self: str,prefix: str,start: int,end: int) -> bool
+  startswith(self: str,prefix: str,start: int,end: int) -> bool
+  startswith(self: str,prefix: object) -> bool
+  startswith(self: str,prefix: object,start: int) -> bool
+  startswith(self: str,prefix: object,start: int,end: int) -> bool
   """
   pass
  def strip(self,*args):

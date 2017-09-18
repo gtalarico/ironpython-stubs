@@ -8,30 +8,25 @@ class DataGridClipboardCellContent(object):
   """
   Equals(self: DataGridClipboardCellContent,data: object) -> bool
   
-   Indicates whether the current and specified 
-    System.Windows.Controls.DataGridClipboardCellContent instances are equivalent.
+   Indicates whether the current and specified System.Windows.Controls.DataGridClipboardCellContent 
+    instances are equivalent.
   
   
-   data: The System.Windows.Controls.DataGridClipboardCellContent instance to compare 
-    with the current System.Windows.Controls.DataGridClipboardCellContent instance.
+   data: The System.Windows.Controls.DataGridClipboardCellContent instance to compare with the current 
+    System.Windows.Controls.DataGridClipboardCellContent instance.
   
-   Returns: true if the current and specified 
-    System.Windows.Controls.DataGridClipboardCellContent instances have the same 
-    System.Windows.Controls.DataGridClipboardCellContent.Item,
+   Returns: true if the current and specified System.Windows.Controls.DataGridClipboardCellContent instances 
+    have the same System.Windows.Controls.DataGridClipboardCellContent.Item,
     System.Windows.Controls.DataGridClipboardCellContent.Column,and 
-    System.Windows.Controls.DataGridClipboardCellContent.Content property values; 
-    otherwise,false.
+    System.Windows.Controls.DataGridClipboardCellContent.Content property values; otherwise,false.
   """
   pass
  def GetHashCode(self):
   """
   GetHashCode(self: DataGridClipboardCellContent) -> int
   
-   Returns the hash code for this 
-    System.Windows.Controls.DataGridClipboardCellContent instance.
-  
-   Returns: The hash code for this System.Windows.Controls.DataGridClipboardCellContent 
-    instance.
+   Returns the hash code for this System.Windows.Controls.DataGridClipboardCellContent instance.
+   Returns: The hash code for this System.Windows.Controls.DataGridClipboardCellContent instance.
   """
   pass
  def __eq__(self,*args):
@@ -43,9 +38,8 @@ class DataGridClipboardCellContent(object):
  @staticmethod
  def __new__(self,item,column,content):
   """
-  __new__[DataGridClipboardCellContent]() -> DataGridClipboardCellContent
-  
-  __new__(cls: type,item: object,column: DataGridColumn,content: object)
+  __new__(cls: type,item: object,column: DataGridColumn,content: object)
+  __new__[DataGridClipboardCellContent]() -> DataGridClipboardCellContent
   """
   pass
  def __ne__(self,*args):

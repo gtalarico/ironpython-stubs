@@ -28,8 +28,8 @@ class StackTrace(object):
   GetFrames(self: StackTrace) -> Array[StackFrame]
   
    Returns a copy of all stack frames in the current stack trace.
-   Returns: An array of type System.Diagnostics.StackFrame representing the function calls 
-    in the stack trace.
+   Returns: An array of type System.Diagnostics.StackFrame representing the function calls in the stack 
+    trace.
   """
   pass
  def ToString(self):

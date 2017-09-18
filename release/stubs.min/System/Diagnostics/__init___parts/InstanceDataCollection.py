@@ -8,9 +8,8 @@ class InstanceDataCollection(DictionaryBase,IDictionary,ICollection,IEnumerable)
   """
   Contains(self: InstanceDataCollection,instanceName: str) -> bool
   
-   Determines whether a performance instance with a specified name (identified by 
-    one of the indexed System.Diagnostics.InstanceData objects) exists in the 
-    collection.
+   Determines whether a performance instance with a specified name (identified by one of the 
+    indexed System.Diagnostics.InstanceData objects) exists in the collection.
   
   
    instanceName: The name of the instance to find in this collection.
@@ -20,12 +19,10 @@ class InstanceDataCollection(DictionaryBase,IDictionary,ICollection,IEnumerable)
  def CopyTo(self,*__args):
   """
   CopyTo(self: InstanceDataCollection,instances: Array[InstanceData],index: int)
-   Copies the items in the collection to the specified one-dimensional array at 
-    the specified index.
+   Copies the items in the collection to the specified one-dimensional array at the specified index.
   
-  
-   instances: The one-dimensional System.Array that is the destination of the values copied 
-    from the collection.
+   instances: The one-dimensional System.Array that is the destination of the values copied from the 
+    collection.
   
    index: The zero-based index value at which to add the new instances.
   """
@@ -48,8 +45,8 @@ class InstanceDataCollection(DictionaryBase,IDictionary,ICollection,IEnumerable)
   """
   OnGet(self: DictionaryBase,key: object,currentValue: object) -> object
   
-   Gets the element with the specified key and value in the 
-    System.Collections.DictionaryBase instance.
+   Gets the element with the specified key and value in the System.Collections.DictionaryBase 
+    instance.
   
   
    key: The key of the element to get.
@@ -128,8 +125,8 @@ class InstanceDataCollection(DictionaryBase,IDictionary,ICollection,IEnumerable)
  def OnValidate(self,*args):
   """
   OnValidate(self: DictionaryBase,key: object,value: object)
-   Performs additional custom processes when validating the element with the 
-    specified key and value.
+   Performs additional custom processes when validating the element with the specified key and 
+    value.
   
   
    key: The key of the element to validate.

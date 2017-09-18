@@ -1,8 +1,8 @@
 # encoding: utf-8
 # module System.Diagnostics calls itself Diagnostics
-# from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,WindowsBase,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
+# from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -69,8 +69,6 @@ from __init___parts.PerformanceCounterPermissionAttribute import PerformanceCoun
 from __init___parts.PerformanceCounterPermissionEntry import PerformanceCounterPermissionEntry
 from __init___parts.PerformanceCounterPermissionEntryCollection import PerformanceCounterPermissionEntryCollection
 from __init___parts.PerformanceCounterType import PerformanceCounterType
-from __init___parts.PresentationTraceLevel import PresentationTraceLevel
-from __init___parts.PresentationTraceSources import PresentationTraceSources
 from __init___parts.Process import Process
 from __init___parts.ProcessModule import ProcessModule
 from __init___parts.ProcessModuleCollection import ProcessModuleCollection

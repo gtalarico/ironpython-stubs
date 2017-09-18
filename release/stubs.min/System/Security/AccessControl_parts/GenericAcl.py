@@ -7,9 +7,8 @@ class GenericAcl(object,ICollection,IEnumerable):
     System.Security.AccessControl.GenericAcl into the specified array.
   
   
-   array: The array into which copies of the System.Security.AccessControl.GenericAce 
-    objects contained by the current System.Security.AccessControl.GenericAcl are 
-    placed.
+   array: The array into which copies of the System.Security.AccessControl.GenericAce objects contained by 
+    the current System.Security.AccessControl.GenericAcl are placed.
   
    index: The zero-based index of array where the copying begins.
   """
@@ -17,12 +16,12 @@ class GenericAcl(object,ICollection,IEnumerable):
  def GetBinaryForm(self,binaryForm,offset):
   """
   GetBinaryForm(self: GenericAcl,binaryForm: Array[Byte],offset: int)
-   Marshals the contents of the System.Security.AccessControl.GenericAcl object 
-    into the specified byte array beginning at the specified offset.
+   Marshals the contents of the System.Security.AccessControl.GenericAcl object into the specified 
+    byte array beginning at the specified offset.
   
   
-   binaryForm: The byte array into which the contents of the 
-    System.Security.AccessControl.GenericAcl is marshaled.
+   binaryForm: The byte array into which the contents of the System.Security.AccessControl.GenericAcl is 
+    marshaled.
   
    offset: The offset at which to start marshaling.
   """

@@ -1,5 +1,21 @@
 class SystemInformation(object):
  """ Provides information about the current system environment. """
+ @staticmethod
+ def GetBorderSizeForDpi(dpi):
+  """ GetBorderSizeForDpi(dpi: int) -> Size """
+  pass
+ @staticmethod
+ def GetHorizontalScrollBarHeightForDpi(dpi):
+  """ GetHorizontalScrollBarHeightForDpi(dpi: int) -> int """
+  pass
+ @staticmethod
+ def GetMenuFontForDpi(dpi):
+  """ GetMenuFontForDpi(dpi: int) -> Font """
+  pass
+ @staticmethod
+ def GetVerticalScrollBarWidthForDpi(dpi):
+  """ GetVerticalScrollBarWidthForDpi(dpi: int) -> int """
+  pass
  ActiveWindowTrackingDelay=0
  ArrangeDirection=None
  ArrangeStartingPosition=None
@@ -25,7 +41,7 @@ class SystemInformation(object):
  FrameBorderSize=None
  HighContrast=False
  HorizontalFocusThickness=1
- HorizontalResizeBorderThickness=4
+ HorizontalResizeBorderThickness=8
  HorizontalScrollBarArrowWidth=17
  HorizontalScrollBarHeight=17
  HorizontalScrollBarThumbWidth=17
@@ -87,7 +103,7 @@ class SystemInformation(object):
  ScreenOrientation=None
  Secure=False
  ShowSounds=False
- SizingBorderWidth=1
+ SizingBorderWidth=5
  SmallCaptionButtonSize=None
  SmallIconSize=None
  TerminalServerSession=False
@@ -98,7 +114,7 @@ class SystemInformation(object):
  UserInteractive=True
  UserName='gtalarico'
  VerticalFocusThickness=1
- VerticalResizeBorderThickness=4
+ VerticalResizeBorderThickness=8
  VerticalScrollBarArrowHeight=17
  VerticalScrollBarThumbHeight=17
  VerticalScrollBarWidth=17

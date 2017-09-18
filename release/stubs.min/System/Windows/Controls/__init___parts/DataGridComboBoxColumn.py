@@ -8,8 +8,7 @@ class DataGridComboBoxColumn(DataGridColumn):
   """
   OnSelectedItemBindingChanged(self: DataGridComboBoxColumn,oldBinding: BindingBase,newBinding: BindingBase)
    Notifies the System.Windows.Controls.DataGrid when the 
-    System.Windows.Controls.DataGridComboBoxColumn.SelectedItemBinding property 
-    changes.
+    System.Windows.Controls.DataGridComboBoxColumn.SelectedItemBinding property changes.
   
   
    oldBinding: The previous binding.
@@ -20,8 +19,7 @@ class DataGridComboBoxColumn(DataGridColumn):
   """
   OnSelectedValueBindingChanged(self: DataGridComboBoxColumn,oldBinding: BindingBase,newBinding: BindingBase)
    Notifies the System.Windows.Controls.DataGrid when the 
-    System.Windows.Controls.DataGridComboBoxColumn.SelectedValueBinding property 
-    changes.
+    System.Windows.Controls.DataGridComboBoxColumn.SelectedValueBinding property changes.
   
   
    oldBinding: The previous binding.

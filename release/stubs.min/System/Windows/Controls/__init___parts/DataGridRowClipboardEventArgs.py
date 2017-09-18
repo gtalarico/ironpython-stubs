@@ -8,9 +8,8 @@ class DataGridRowClipboardEventArgs(EventArgs):
   """
   FormatClipboardCellValues(self: DataGridRowClipboardEventArgs,format: str) -> str
   
-   Returns the 
-    System.Windows.Controls.DataGridRowClipboardEventArgs.ClipboardRowContent 
-    values as a string in the specified format.
+   Returns the System.Windows.Controls.DataGridRowClipboardEventArgs.ClipboardRowContent values as 
+    a string in the specified format.
   
   
    format: The data format in which to serialize the cell values.

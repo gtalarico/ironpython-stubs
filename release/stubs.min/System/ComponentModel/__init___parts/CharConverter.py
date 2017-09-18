@@ -8,8 +8,8 @@ class CharConverter(TypeConverter):
   """
   CanConvertFrom(self: CharConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Gets a value indicating whether this converter can convert an object in the 
-    given source type to a Unicode character object using the specified context.
+   Gets a value indicating whether this converter can convert an object in the given source type to 
+    a Unicode character object using the specified context.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -33,9 +33,7 @@ class CharConverter(TypeConverter):
   """
   ConvertTo(self: CharConverter,context: ITypeDescriptorContext,culture: CultureInfo,value: object,destinationType: Type) -> object
   
-   Converts the given value object to a Unicode character object using the 
-    arguments.
-  
+   Converts the given value object to a Unicode character object using the arguments.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    culture: The culture into which value will be converted.

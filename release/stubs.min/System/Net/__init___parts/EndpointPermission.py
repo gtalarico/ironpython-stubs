@@ -9,8 +9,7 @@ class EndpointPermission(object):
   
   
    obj: The specified System.Object
-   Returns: true if the specified System.Object is equal to the current System.Object; 
-    otherwise,false.
+   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -25,9 +24,7 @@ class EndpointPermission(object):
   """
   ToString(self: EndpointPermission) -> str
   
-   Returns a string that represents the current System.Net.EndpointPermission 
-    instance.
-  
+   Returns a string that represents the current System.Net.EndpointPermission instance.
    Returns: A string that represents the current System.Net.EndpointPermission instance.
   """
   pass

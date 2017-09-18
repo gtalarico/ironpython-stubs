@@ -5,8 +5,7 @@ class GridItemCollection(object,ICollection,IEnumerable):
   GetEnumerator(self: GridItemCollection) -> IEnumerator
   
    Returns an enumeration of all the grid items in the collection.
-   Returns: An System.Collections.IEnumerator for the 
-    System.Windows.Forms.GridItemCollection.
+   Returns: An System.Collections.IEnumerator for the System.Windows.Forms.GridItemCollection.
   """
   pass
  def __getitem__(self,*args):

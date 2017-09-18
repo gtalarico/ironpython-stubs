@@ -4,9 +4,7 @@ class MemberDescriptor(object):
   """
   CreateAttributeCollection(self: MemberDescriptor) -> AttributeCollection
   
-   Creates a collection of attributes using the array of attributes passed to the 
-    constructor.
-  
+   Creates a collection of attributes using the array of attributes passed to the constructor.
    Returns: A new System.ComponentModel.AttributeCollection that contains the 
     System.ComponentModel.MemberDescriptor.AttributeArray attributes.
   """
@@ -24,44 +22,35 @@ class MemberDescriptor(object):
  def FillAttributes(self,*args):
   """
   FillAttributes(self: MemberDescriptor,attributeList: IList)
-   When overridden in a derived class,adds the attributes of the inheriting class 
-    to the specified list of attributes in the parent class.
+   When overridden in a derived class,adds the attributes of the inheriting class to the specified 
+    list of attributes in the parent class.
   
   
-   attributeList: An System.Collections.IList that lists the attributes in the parent class. 
-    Initially,this is empty.
+   attributeList: An System.Collections.IList that lists the attributes in the parent class. Initially,this is 
+    empty.
   """
   pass
  def FindMethod(self,*args):
   """
   FindMethod(componentClass: Type,name: str,args: Array[Type],returnType: Type,publicOnly: bool) -> MethodInfo
   
-   Finds the given method through reflection,with an option to search only public 
-    methods.
-  
+   Finds the given method through reflection,with an option to search only public methods.
   
    componentClass: The component that contains the method.
    name: The name of the method to find.
-   args: An array of parameters for the method,used to choose between overloaded 
-    methods.
-  
+   args: An array of parameters for the method,used to choose between overloaded methods.
    returnType: The type to return for the method.
    publicOnly: Whether to restrict search to public methods.
-   Returns: A System.Reflection.MethodInfo that represents the method,or null if the 
-    method is not found.
-  
+   Returns: A System.Reflection.MethodInfo that represents the method,or null if the method is not found.
   FindMethod(componentClass: Type,name: str,args: Array[Type],returnType: Type) -> MethodInfo
   
    Finds the given method through reflection,searching only for public methods.
   
    componentClass: The component that contains the method.
    name: The name of the method to find.
-   args: An array of parameters for the method,used to choose between overloaded 
-    methods.
-  
+   args: An array of parameters for the method,used to choose between overloaded methods.
    returnType: The type to return for the method.
-   Returns: A System.Reflection.MethodInfo that represents the method,or null if the 
-    method is not found.
+   Returns: A System.Reflection.MethodInfo that represents the method,or null if the method is not found.
   """
   pass
  def GetHashCode(self):
@@ -89,14 +78,13 @@ class MemberDescriptor(object):
   
    Gets the component on which to invoke a method.
   
-   componentClass: A System.Type representing the type of component this 
-    System.ComponentModel.MemberDescriptor is bound to. For example,if this 
-    System.ComponentModel.MemberDescriptor describes a property,this parameter 
-    should be the class that the property is declared on.
+   componentClass: A System.Type representing the type of component this System.ComponentModel.MemberDescriptor is 
+    bound to. For example,if this System.ComponentModel.MemberDescriptor describes a property,this 
+    parameter should be the class that the property is declared on.
   
    component: An instance of the object to call.
-   Returns: An instance of the component to invoke. This method returns a visual designer 
-    when the property is attached to a visual designer.
+   Returns: An instance of the component to invoke. This method returns a visual designer when the property 
+    is attached to a visual designer.
   """
   pass
  def GetSite(self,*args):

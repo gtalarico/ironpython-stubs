@@ -18,8 +18,8 @@ class CustomBrepObject(BrepObject, IDisposable):
         """
         OnAddToDocument(self: RhinoObject, doc: RhinoDoc)
             This call informs an object it is about to be added to the list of
-                    active 
-             objects in the document.
+                    active objects 
+             in the document.
         """
         pass
 
@@ -27,8 +27,8 @@ class CustomBrepObject(BrepObject, IDisposable):
         """
         OnDeleteFromDocument(self: RhinoObject, doc: RhinoDoc)
             This call informs an object it is about to be deleted.
-                    Some objects, like 
-             clipping planes, need to do a little extra cleanup
+                    Some objects, like clipping 
+             planes, need to do a little extra cleanup
                     before they are deleted.
         """
         pass
@@ -54,8 +54,8 @@ class CustomBrepObject(BrepObject, IDisposable):
         OnPick(self: RhinoObject, context: PickContext) -> IEnumerable[ObjRef]
         
             Called to determine if this object or some sub-portion of this object should be
-                  
-               picked given a pick context.
+                    
+             picked given a pick context.
         """
         pass
 
@@ -74,8 +74,8 @@ class CustomBrepObject(BrepObject, IDisposable):
         """
         OnSpaceMorph(self: RhinoObject, morph: SpaceMorph)
             Called when a space morph has been applied to the geometry.
-                    Currently this 
-             only works for CustomMeshObject instances
+                    Currently this only 
+             works for CustomMeshObject instances
         """
         pass
 
@@ -124,8 +124,8 @@ class CustomCurveObject(CurveObject, IDisposable):
         """
         OnAddToDocument(self: RhinoObject, doc: RhinoDoc)
             This call informs an object it is about to be added to the list of
-                    active 
-             objects in the document.
+                    active objects 
+             in the document.
         """
         pass
 
@@ -133,8 +133,8 @@ class CustomCurveObject(CurveObject, IDisposable):
         """
         OnDeleteFromDocument(self: RhinoObject, doc: RhinoDoc)
             This call informs an object it is about to be deleted.
-                    Some objects, like 
-             clipping planes, need to do a little extra cleanup
+                    Some objects, like clipping 
+             planes, need to do a little extra cleanup
                     before they are deleted.
         """
         pass
@@ -160,8 +160,8 @@ class CustomCurveObject(CurveObject, IDisposable):
         OnPick(self: RhinoObject, context: PickContext) -> IEnumerable[ObjRef]
         
             Called to determine if this object or some sub-portion of this object should be
-                  
-               picked given a pick context.
+                    
+             picked given a pick context.
         """
         pass
 
@@ -180,8 +180,8 @@ class CustomCurveObject(CurveObject, IDisposable):
         """
         OnSpaceMorph(self: RhinoObject, morph: SpaceMorph)
             Called when a space morph has been applied to the geometry.
-                    Currently this 
-             only works for CustomMeshObject instances
+                    Currently this only 
+             works for CustomMeshObject instances
         """
         pass
 
@@ -197,10 +197,10 @@ class CustomCurveObject(CurveObject, IDisposable):
         SetCurve(self: CustomCurveObject, curve: Curve) -> Curve
         
             Only for developers who are defining custom subclasses of CurveObject.
-                    
-             Directly sets the internal curve geometry for this object.  Note that
-                    this 
-             function does not work with Rhino's "undo".
+                    Directly 
+             sets the internal curve geometry for this object.  Note that
+                    this function does not 
+             work with Rhino's "undo".
         
             Returns: The old curve geometry that was set for this object
         """
@@ -248,8 +248,8 @@ class CustomGripObject(GripObject, IDisposable):
         """
         OnAddToDocument(self: RhinoObject, doc: RhinoDoc)
             This call informs an object it is about to be added to the list of
-                    active 
-             objects in the document.
+                    active objects 
+             in the document.
         """
         pass
 
@@ -257,8 +257,8 @@ class CustomGripObject(GripObject, IDisposable):
         """
         OnDeleteFromDocument(self: RhinoObject, doc: RhinoDoc)
             This call informs an object it is about to be deleted.
-                    Some objects, like 
-             clipping planes, need to do a little extra cleanup
+                    Some objects, like clipping 
+             planes, need to do a little extra cleanup
                     before they are deleted.
         """
         pass
@@ -284,8 +284,8 @@ class CustomGripObject(GripObject, IDisposable):
         OnPick(self: RhinoObject, context: PickContext) -> IEnumerable[ObjRef]
         
             Called to determine if this object or some sub-portion of this object should be
-                  
-               picked given a pick context.
+                    
+             picked given a pick context.
         """
         pass
 
@@ -304,8 +304,8 @@ class CustomGripObject(GripObject, IDisposable):
         """
         OnSpaceMorph(self: RhinoObject, morph: SpaceMorph)
             Called when a space morph has been applied to the geometry.
-                    Currently this 
-             only works for CustomMeshObject instances
+                    Currently this only 
+             works for CustomMeshObject instances
         """
         pass
 
@@ -365,8 +365,8 @@ class CustomMeshObject(MeshObject, IDisposable):
         """
         OnAddToDocument(self: RhinoObject, doc: RhinoDoc)
             This call informs an object it is about to be added to the list of
-                    active 
-             objects in the document.
+                    active objects 
+             in the document.
         """
         pass
 
@@ -374,8 +374,8 @@ class CustomMeshObject(MeshObject, IDisposable):
         """
         OnDeleteFromDocument(self: RhinoObject, doc: RhinoDoc)
             This call informs an object it is about to be deleted.
-                    Some objects, like 
-             clipping planes, need to do a little extra cleanup
+                    Some objects, like clipping 
+             planes, need to do a little extra cleanup
                     before they are deleted.
         """
         pass
@@ -401,8 +401,8 @@ class CustomMeshObject(MeshObject, IDisposable):
         OnPick(self: RhinoObject, context: PickContext) -> IEnumerable[ObjRef]
         
             Called to determine if this object or some sub-portion of this object should be
-                  
-               picked given a pick context.
+                    
+             picked given a pick context.
         """
         pass
 
@@ -421,8 +421,8 @@ class CustomMeshObject(MeshObject, IDisposable):
         """
         OnSpaceMorph(self: RhinoObject, morph: SpaceMorph)
             Called when a space morph has been applied to the geometry.
-                    Currently this 
-             only works for CustomMeshObject instances
+                    Currently this only 
+             works for CustomMeshObject instances
         """
         pass
 
@@ -438,10 +438,10 @@ class CustomMeshObject(MeshObject, IDisposable):
         SetMesh(self: MeshObject, mesh: Mesh) -> Mesh
         
             Only for developers who are defining custom subclasses of MeshObject.
-                    
-             Directly sets the internal mesh geometry for this object.  Note that
-                    this 
-             function does not work with Rhino's "undo".
+                    Directly sets 
+             the internal mesh geometry for this object.  Note that
+                    this function does not work 
+             with Rhino's "undo".
         
             Returns: The old mesh geometry that was set for this object
         """
@@ -506,15 +506,9 @@ class CustomObjectGrips(object, IDisposable):
             Get neighbors.
         
             gripIndex: index of grip where the search begins.
-            dr: 1 = next grip in the first parameter direction.-1 = prev grip in the first parameter 
-             direction.
-        
-            ds: 1 = next grip in the second parameter direction.-1 = prev grip in the second parameter 
-             direction.
-        
-            dt: 1 = next grip in the third parameter direction.-1 = prev grip in the third parameter 
-             direction.
-        
+            dr: 1 = next grip in the first parameter direction.-1 = prev grip in the first parameter direction.
+            ds: 1 = next grip in the second parameter direction.-1 = prev grip in the second parameter direction.
+            dt: 1 = next grip in the third parameter direction.-1 = prev grip in the third parameter direction.
             wrap: If true and object is "closed", the search will wrap.
             Returns: Pointer to the desired neighbor or NULL if there is no neighbor.
         """
@@ -539,8 +533,8 @@ class CustomObjectGrips(object, IDisposable):
         NurbsSurface(self: CustomObjectGrips) -> NurbsSurface
         
             If the grips control a NURBS surface, this returns a pointer to that
-                    surface. 
-              You can look at but you must NEVER change this surface.
+                    surface.  You 
+             can look at but you must NEVER change this surface.
         
             Returns: A pointer to a NURBS surface or null.
         """
@@ -551,8 +545,8 @@ class CustomObjectGrips(object, IDisposable):
         NurbsSurfaceGrip(self: CustomObjectGrips, i: int, j: int) -> GripObject
         
             If the grips are control points of a NURBS surface, then this gets the
-                    index 
-             of the grip that controls the (i,j)-th cv.
+                    index of the 
+             grip that controls the (i,j)-th cv.
         
         
             i: The index in the first dimension.
@@ -565,8 +559,8 @@ class CustomObjectGrips(object, IDisposable):
         """
         OnDraw(self: CustomObjectGrips, args: GripsDrawEventArgs)
             Draws the grips. In your implementation, override this if you need to draw
-                    
-             dynamic elements and then call this base implementation to draw the grips themselves.
+                    dynamic 
+             elements and then call this base implementation to draw the grips themselves.
         
         
             args: The grips draw event arguments.
@@ -577,12 +571,12 @@ class CustomObjectGrips(object, IDisposable):
         """
         OnReset(self: CustomObjectGrips)
             Resets location of all grips to original spots and cleans up stuff that
-                    was 
-             created by dynamic dragging.  This is required when dragging is
-                    canceled or 
-             in the Copy command when grips are "copied". The override
-                    should clean up 
-             dynamic workspace stuff.
+                    was created 
+             by dynamic dragging.  This is required when dragging is
+                    canceled or in the Copy 
+             command when grips are "copied". The override
+                    should clean up dynamic workspace 
+             stuff.
         """
         pass
 
@@ -590,10 +584,10 @@ class CustomObjectGrips(object, IDisposable):
         """
         OnResetMeshes(self: CustomObjectGrips)
             Just before Rhino turns off object grips, it calls this function.
-                    If grips 
-             have modified any display meshes, they must override
-                    this function and 
-             restore the meshes to their original states.
+                    If grips have 
+             modified any display meshes, they must override
+                    this function and restore the 
+             meshes to their original states.
         """
         pass
 
@@ -601,10 +595,10 @@ class CustomObjectGrips(object, IDisposable):
         """
         OnUpdateMesh(self: CustomObjectGrips, meshType: MeshType)
             Just before Rhino shades an object with grips on, it calls this method
-                    to 
-             update the display meshes.  Grips that modify surface or mesh objects
-                    must 
-             override this function and modify the display meshes here.
+                    to update 
+             the display meshes.  Grips that modify surface or mesh objects
+                    must override this 
+             function and modify the display meshes here.
         
         
             meshType: The mesh type being updated.
@@ -681,8 +675,8 @@ class CustomPointObject(PointObject, IDisposable):
         """
         OnAddToDocument(self: RhinoObject, doc: RhinoDoc)
             This call informs an object it is about to be added to the list of
-                    active 
-             objects in the document.
+                    active objects 
+             in the document.
         """
         pass
 
@@ -690,8 +684,8 @@ class CustomPointObject(PointObject, IDisposable):
         """
         OnDeleteFromDocument(self: RhinoObject, doc: RhinoDoc)
             This call informs an object it is about to be deleted.
-                    Some objects, like 
-             clipping planes, need to do a little extra cleanup
+                    Some objects, like clipping 
+             planes, need to do a little extra cleanup
                     before they are deleted.
         """
         pass
@@ -717,8 +711,8 @@ class CustomPointObject(PointObject, IDisposable):
         OnPick(self: RhinoObject, context: PickContext) -> IEnumerable[ObjRef]
         
             Called to determine if this object or some sub-portion of this object should be
-                  
-               picked given a pick context.
+                    
+             picked given a pick context.
         """
         pass
 
@@ -737,8 +731,8 @@ class CustomPointObject(PointObject, IDisposable):
         """
         OnSpaceMorph(self: RhinoObject, morph: SpaceMorph)
             Called when a space morph has been applied to the geometry.
-                    Currently this 
-             only works for CustomMeshObject instances
+                    Currently this only 
+             works for CustomMeshObject instances
         """
         pass
 
@@ -902,9 +896,9 @@ class TurnOnGripsEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the 
-             current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current 
+             delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -931,14 +925,13 @@ class TurnOnGripsEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal 
-             to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
+             the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
-             without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
+             value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -965,12 +958,11 @@ class UserData(object, IDisposable):
         """
         Copy(source: CommonObject, destination: CommonObject)
             Expert user tool that copies user data that has a positive 
-                    CopyCount from 
-             the source object to a destination object.
-                    Generally speaking you don't need 
-             to use Copy().
-                    Simply rely on things like the copy constructors to do the 
-             right thing.
+                    CopyCount from the 
+             source object to a destination object.
+                    Generally speaking you don't need to use 
+             Copy().
+                    Simply rely on things like the copy constructors to do the right thing.
         
         
             source: A source object for the data.
@@ -991,20 +983,20 @@ class UserData(object, IDisposable):
         MoveUserDataFrom(objectWithUserData: CommonObject) -> Guid
         
             Moves the user data from objectWithUserData to a temporary data storage
-                    
-             identifierd by the return Guid.  When MoveUserDataFrom returns, the
-                    
-             objectWithUserData will not have any user data.
+                    identifierd 
+             by the return Guid.  When MoveUserDataFrom returns, the
+                    objectWithUserData will not 
+             have any user data.
         
         
             objectWithUserData: Object with user data attached.
             Returns: Guid identifier for storage of UserData that is held in a temporary list
-                    by 
-             this class. This function should be used in conjunction with MoveUserDataTo
-                    
-             to transfer the user data to a different object.
-                    Returns Guid.Empty if there 
-             was no user data to transfer.
+                    by this 
+             class. This function should be used in conjunction with MoveUserDataTo
+                    to transfer 
+             the user data to a different object.
+                    Returns Guid.Empty if there was no user data 
+             to transfer.
         """
         pass
 
@@ -1037,9 +1029,8 @@ class UserData(object, IDisposable):
         """
         OnTransform(self: UserData, transform: Transform)
             Is called when the object associated with this data is transformed. If you override this
-         
-                        function, make sure to call the base class if you want the stored Transform to 
-             be updated.
+               
+                  function, make sure to call the base class if you want the stored Transform to be updated.
         
         
             transform: The transform being applied.
@@ -1130,17 +1121,16 @@ class UnknownUserData(UserData, IDisposable):
         """
         Dispose(self: UserData, disposing: bool)
             For derived class implementers.
-                    This method is called with argument true when 
-             class user calls Dispose(), while with argument false when
-                    the Garbage 
-             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
-             resources in both cases, and can use this chance to call Dispose on disposable fields if 
-             the argument is true.Also, you must call the base virtual method within your overriding 
-             method.
+                    This method is called with argument true when class 
+             user calls Dispose(), while with argument false when
+                    the Garbage Collector invokes 
+             the finalizer, or Finalize() method.You must reclaim all used unmanaged resources in both cases, 
+             and can use this chance to call Dispose on disposable fields if the argument is true.Also, you 
+             must call the base virtual method within your overriding method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
-             Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage Collector 
+             finalizer.
         """
         pass
 
@@ -1157,9 +1147,8 @@ class UnknownUserData(UserData, IDisposable):
         """
         OnTransform(self: UserData, transform: Transform)
             Is called when the object associated with this data is transformed. If you override this
-         
-                        function, make sure to call the base class if you want the stored Transform to 
-             be updated.
+               
+                  function, make sure to call the base class if you want the stored Transform to be updated.
         
         
             transform: The transform being applied.
@@ -1220,8 +1209,8 @@ class UserDataList(object):
         Add(self: UserDataList, userdata: UserData) -> bool
         
             If the userdata is already in a different UserDataList, it
-                    will be removed 
-             from that list and added to this list.
+                    will be removed from 
+             that list and added to this list.
         
         
             userdata: Data element.
@@ -1272,17 +1261,16 @@ class UserDictionary(UserData, IDisposable):
         """
         Dispose(self: UserData, disposing: bool)
             For derived class implementers.
-                    This method is called with argument true when 
-             class user calls Dispose(), while with argument false when
-                    the Garbage 
-             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
-             resources in both cases, and can use this chance to call Dispose on disposable fields if 
-             the argument is true.Also, you must call the base virtual method within your overriding 
-             method.
+                    This method is called with argument true when class 
+             user calls Dispose(), while with argument false when
+                    the Garbage Collector invokes 
+             the finalizer, or Finalize() method.You must reclaim all used unmanaged resources in both cases, 
+             and can use this chance to call Dispose on disposable fields if the argument is true.Also, you 
+             must call the base virtual method within your overriding method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
-             Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage Collector 
+             finalizer.
         """
         pass
 
@@ -1299,9 +1287,8 @@ class UserDictionary(UserData, IDisposable):
         """
         OnTransform(self: UserData, transform: Transform)
             Is called when the object associated with this data is transformed. If you override this
-         
-                        function, make sure to call the base class if you want the stored Transform to 
-             be updated.
+               
+                  function, make sure to call the base class if you want the stored Transform to be updated.
         
         
             transform: The transform being applied.

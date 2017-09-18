@@ -7,29 +7,25 @@ class DrawListViewItemEventArgs(EventArgs):
  def DrawBackground(self):
   """
   DrawBackground(self: DrawListViewItemEventArgs)
-   Draws the background of the System.Windows.Forms.ListViewItem using its current 
-    background color.
+   Draws the background of the System.Windows.Forms.ListViewItem using its current background color.
   """
   pass
  def DrawFocusRectangle(self):
   """
   DrawFocusRectangle(self: DrawListViewItemEventArgs)
-   Draws a focus rectangle for the System.Windows.Forms.ListViewItem if it has 
-    focus.
+   Draws a focus rectangle for the System.Windows.Forms.ListViewItem if it has focus.
   """
   pass
  def DrawText(self,flags=None):
   """
   DrawText(self: DrawListViewItemEventArgs,flags: TextFormatFlags)
-   Draws the text of the System.Windows.Forms.ListViewItem using its current 
-    foreground color and formatting it with the specified 
-    System.Windows.Forms.TextFormatFlags values.
+   Draws the text of the System.Windows.Forms.ListViewItem using its current foreground color and 
+    formatting it with the specified System.Windows.Forms.TextFormatFlags values.
   
   
    flags: A bitwise combination of System.Windows.Forms.TextFormatFlags values.
   DrawText(self: DrawListViewItemEventArgs)
-   Draws the text of the System.Windows.Forms.ListViewItem using its current 
-    foreground color.
+   Draws the text of the System.Windows.Forms.ListViewItem using its current foreground color.
   """
   pass
  def __getitem__(self,*args):

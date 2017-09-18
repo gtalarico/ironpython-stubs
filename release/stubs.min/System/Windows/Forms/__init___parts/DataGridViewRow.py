@@ -10,23 +10,21 @@ class DataGridViewRow(DataGridViewBand,ICloneable,IDisposable):
   
    Modifies an input row header border style according to the specified criteria.
   
-   dataGridViewAdvancedBorderStyleInput: A System.Windows.Forms.DataGridViewAdvancedBorderStyle that represents the row 
-    header border style to modify.
+   dataGridViewAdvancedBorderStyleInput: A System.Windows.Forms.DataGridViewAdvancedBorderStyle that represents the row header border 
+    style to modify.
   
-   dataGridViewAdvancedBorderStylePlaceholder: A System.Windows.Forms.DataGridViewAdvancedBorderStyle that is used to store 
-    intermediate changes to the row header border style.
+   dataGridViewAdvancedBorderStylePlaceholder: A System.Windows.Forms.DataGridViewAdvancedBorderStyle that is used to store intermediate 
+    changes to the row header border style.
   
    singleVerticalBorderAdded: true to add a single vertical border to the result; otherwise,false.
    singleHorizontalBorderAdded: true to add a single horizontal border to the result; otherwise,false.
-   isFirstDisplayedRow: true if the row is the first row displayed in the 
-    System.Windows.Forms.DataGridView; otherwise,false.
+   isFirstDisplayedRow: true if the row is the first row displayed in the System.Windows.Forms.DataGridView; otherwise,
+    false.
   
-   isLastVisibleRow: true if the row is the last row in the System.Windows.Forms.DataGridView that 
-    has its System.Windows.Forms.DataGridViewRow.Visible property set to true; 
-    otherwise,false.
+   isLastVisibleRow: true if the row is the last row in the System.Windows.Forms.DataGridView that has its 
+    System.Windows.Forms.DataGridViewRow.Visible property set to true; otherwise,false.
   
-   Returns: A System.Windows.Forms.DataGridViewAdvancedBorderStyle that represents the new 
-    border style used.
+   Returns: A System.Windows.Forms.DataGridViewAdvancedBorderStyle that represents the new border style used.
   """
   pass
  def Clone(self):
@@ -34,8 +32,7 @@ class DataGridViewRow(DataGridViewBand,ICloneable,IDisposable):
   Clone(self: DataGridViewRow) -> object
   
    Creates an exact copy of this row.
-   Returns: An System.Object that represents the cloned 
-    System.Windows.Forms.DataGridViewRow.
+   Returns: An System.Object that represents the cloned System.Windows.Forms.DataGridViewRow.
   """
   pass
  def CreateAccessibilityInstance(self,*args):
@@ -43,8 +40,8 @@ class DataGridViewRow(DataGridViewBand,ICloneable,IDisposable):
   CreateAccessibilityInstance(self: DataGridViewRow) -> AccessibleObject
   
    Creates a new accessible object for the System.Windows.Forms.DataGridViewRow.
-   Returns: A new System.Windows.Forms.DataGridViewRow.DataGridViewRowAccessibleObject for 
-    the System.Windows.Forms.DataGridViewRow.
+   Returns: A new System.Windows.Forms.DataGridViewRow.DataGridViewRowAccessibleObject for the 
+    System.Windows.Forms.DataGridViewRow.
   """
   pass
  def CreateCells(self,dataGridView,values=None):
@@ -73,13 +70,11 @@ class DataGridViewRow(DataGridViewBand,ICloneable,IDisposable):
  def Dispose(self):
   """
   Dispose(self: DataGridViewBand,disposing: bool)
-   Releases the unmanaged resources used by the 
-    System.Windows.Forms.DataGridViewBand and optionally releases the managed 
-    resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.DataGridViewBand and 
+    optionally releases the managed resources.
   
   
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def DrawFocus(self,*args):
@@ -87,26 +82,22 @@ class DataGridViewRow(DataGridViewBand,ICloneable,IDisposable):
   DrawFocus(self: DataGridViewRow,graphics: Graphics,clipBounds: Rectangle,bounds: Rectangle,rowIndex: int,rowState: DataGridViewElementStates,cellStyle: DataGridViewCellStyle,cellsPaintSelectionBackground: bool)
    Draws a focus rectangle around the specified bounds.
   
-   graphics: The System.Drawing.Graphics used to paint the 
-    System.Windows.Forms.DataGridViewRow.
+   graphics: The System.Drawing.Graphics used to paint the System.Windows.Forms.DataGridViewRow.
+   clipBounds: A System.Drawing.Rectangle that represents the area of the System.Windows.Forms.DataGridView 
+    that needs to be painted.
   
-   clipBounds: A System.Drawing.Rectangle that represents the area of the 
-    System.Windows.Forms.DataGridView that needs to be painted.
-  
-   bounds: A System.Drawing.Rectangle that contains the bounds of the 
-    System.Windows.Forms.DataGridViewRow that is being painted.
+   bounds: A System.Drawing.Rectangle that contains the bounds of the System.Windows.Forms.DataGridViewRow 
+    that is being painted.
   
    rowIndex: The row index of the cell that is being painted.
-   rowState: A bitwise combination of System.Windows.Forms.DataGridViewElementStates values 
-    that specifies the state of the row.
+   rowState: A bitwise combination of System.Windows.Forms.DataGridViewElementStates values that specifies 
+    the state of the row.
   
-   cellStyle: The System.Windows.Forms.DataGridViewCellStyle used to paint the focus 
-    rectangle.
-  
-   cellsPaintSelectionBackground: true to use the System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor 
-    property of cellStyle as the color of the focus rectangle; false to use the 
-    System.Windows.Forms.DataGridViewCellStyle.BackColor property of cellStyle as 
-    the color of the focus rectangle.
+   cellStyle: The System.Windows.Forms.DataGridViewCellStyle used to paint the focus rectangle.
+   cellsPaintSelectionBackground: true to use the System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor property of 
+    cellStyle as the color of the focus rectangle; false to use the 
+    System.Windows.Forms.DataGridViewCellStyle.BackColor property of cellStyle as the color of the 
+    focus rectangle.
   """
   pass
  def GetContextMenuStrip(self,rowIndex):
@@ -116,8 +107,8 @@ class DataGridViewRow(DataGridViewBand,ICloneable,IDisposable):
    Gets the shortcut menu for the row.
   
    rowIndex: The index of the current row.
-   Returns: A System.Windows.Forms.ContextMenuStrip that belongs to the 
-    System.Windows.Forms.DataGridViewRow at the specified index.
+   Returns: A System.Windows.Forms.ContextMenuStrip that belongs to the System.Windows.Forms.DataGridViewRow 
+    at the specified index.
   """
   pass
  def GetErrorText(self,rowIndex):
@@ -134,14 +125,10 @@ class DataGridViewRow(DataGridViewBand,ICloneable,IDisposable):
   """
   GetPreferredHeight(self: DataGridViewRow,rowIndex: int,autoSizeRowMode: DataGridViewAutoSizeRowMode,fixedWidth: bool) -> int
   
-   Calculates the ideal height of the specified row based on the specified 
-    criteria.
-  
+   Calculates the ideal height of the specified row based on the specified criteria.
   
    rowIndex: The index of the row whose preferred height is calculated.
-   autoSizeRowMode: A System.Windows.Forms.DataGridViewAutoSizeRowMode that specifies an automatic 
-    sizing mode.
-  
+   autoSizeRowMode: A System.Windows.Forms.DataGridViewAutoSizeRowMode that specifies an automatic sizing mode.
    fixedWidth: true to calculate the preferred height for a fixed cell width; otherwise,false.
    Returns: The ideal height of the row,in pixels.
   """
@@ -153,15 +140,14 @@ class DataGridViewRow(DataGridViewBand,ICloneable,IDisposable):
    Returns a value indicating the current state of the row.
   
    rowIndex: The index of the row.
-   Returns: A bitwise combination of System.Windows.Forms.DataGridViewElementStates values 
-    indicating the row state.
+   Returns: A bitwise combination of System.Windows.Forms.DataGridViewElementStates values indicating the 
+    row state.
   """
   pass
  def OnDataGridViewChanged(self,*args):
   """
   OnDataGridViewChanged(self: DataGridViewBand)
-   Called when the band is associated with a different 
-    System.Windows.Forms.DataGridView.
+   Called when the band is associated with a different System.Windows.Forms.DataGridView.
   """
   pass
  def Paint(self,*args):
@@ -169,26 +155,23 @@ class DataGridViewRow(DataGridViewBand,ICloneable,IDisposable):
   Paint(self: DataGridViewRow,graphics: Graphics,clipBounds: Rectangle,rowBounds: Rectangle,rowIndex: int,rowState: DataGridViewElementStates,isFirstDisplayedRow: bool,isLastVisibleRow: bool)
    Paints the current row.
   
-   graphics: The System.Drawing.Graphics used to paint the 
-    System.Windows.Forms.DataGridViewRow.
+   graphics: The System.Drawing.Graphics used to paint the System.Windows.Forms.DataGridViewRow.
+   clipBounds: A System.Drawing.Rectangle that represents the area of the System.Windows.Forms.DataGridView 
+    that needs to be painted.
   
-   clipBounds: A System.Drawing.Rectangle that represents the area of the 
-    System.Windows.Forms.DataGridView that needs to be painted.
-  
-   rowBounds: A System.Drawing.Rectangle that contains the bounds of the 
-    System.Windows.Forms.DataGridViewRow that is being painted.
+   rowBounds: A System.Drawing.Rectangle that contains the bounds of the System.Windows.Forms.DataGridViewRow 
+    that is being painted.
   
    rowIndex: The row index of the cell that is being painted.
-   rowState: A bitwise combination of System.Windows.Forms.DataGridViewElementStates values 
-    that specifies the state of the row.
+   rowState: A bitwise combination of System.Windows.Forms.DataGridViewElementStates values that specifies 
+    the state of the row.
   
    isFirstDisplayedRow: true to indicate whether the current row is the first row displayed in the 
     System.Windows.Forms.DataGridView; otherwise,false.
   
    isLastVisibleRow: true to indicate whether the current row is the last row in the 
-    System.Windows.Forms.DataGridView that has the 
-    System.Windows.Forms.DataGridViewRow.Visible property set to true; otherwise,
-    false.
+    System.Windows.Forms.DataGridView that has the System.Windows.Forms.DataGridViewRow.Visible 
+    property set to true; otherwise,false.
   """
   pass
  def PaintCells(self,*args):
@@ -196,29 +179,26 @@ class DataGridViewRow(DataGridViewBand,ICloneable,IDisposable):
   PaintCells(self: DataGridViewRow,graphics: Graphics,clipBounds: Rectangle,rowBounds: Rectangle,rowIndex: int,rowState: DataGridViewElementStates,isFirstDisplayedRow: bool,isLastVisibleRow: bool,paintParts: DataGridViewPaintParts)
    Paints the cells in the current row.
   
-   graphics: The System.Drawing.Graphics used to paint the 
-    System.Windows.Forms.DataGridViewRow.
+   graphics: The System.Drawing.Graphics used to paint the System.Windows.Forms.DataGridViewRow.
+   clipBounds: A System.Drawing.Rectangle that represents the area of the System.Windows.Forms.DataGridView 
+    that needs to be painted.
   
-   clipBounds: A System.Drawing.Rectangle that represents the area of the 
-    System.Windows.Forms.DataGridView that needs to be painted.
-  
-   rowBounds: A System.Drawing.Rectangle that contains the bounds of the 
-    System.Windows.Forms.DataGridViewRow that is being painted.
+   rowBounds: A System.Drawing.Rectangle that contains the bounds of the System.Windows.Forms.DataGridViewRow 
+    that is being painted.
   
    rowIndex: The row index of the cell that is being painted.
-   rowState: A bitwise combination of System.Windows.Forms.DataGridViewElementStates values 
-    that specifies the state of the row.
+   rowState: A bitwise combination of System.Windows.Forms.DataGridViewElementStates values that specifies 
+    the state of the row.
   
    isFirstDisplayedRow: true to indicate whether the current row is the first row displayed in the 
     System.Windows.Forms.DataGridView; otherwise,false.
   
    isLastVisibleRow: true to indicate whether the current row is the last row in the 
-    System.Windows.Forms.DataGridView that has the 
-    System.Windows.Forms.DataGridViewRow.Visible property set to true; otherwise,
-    false.
+    System.Windows.Forms.DataGridView that has the System.Windows.Forms.DataGridViewRow.Visible 
+    property set to true; otherwise,false.
   
-   paintParts: A bitwise combination of System.Windows.Forms.DataGridViewPaintParts values 
-    indicating the parts of the cells to paint.
+   paintParts: A bitwise combination of System.Windows.Forms.DataGridViewPaintParts values indicating the parts 
+    of the cells to paint.
   """
   pass
  def PaintHeader(self,*args):
@@ -226,29 +206,26 @@ class DataGridViewRow(DataGridViewBand,ICloneable,IDisposable):
   PaintHeader(self: DataGridViewRow,graphics: Graphics,clipBounds: Rectangle,rowBounds: Rectangle,rowIndex: int,rowState: DataGridViewElementStates,isFirstDisplayedRow: bool,isLastVisibleRow: bool,paintParts: DataGridViewPaintParts)
    Paints the header cell of the current row.
   
-   graphics: The System.Drawing.Graphics used to paint the 
-    System.Windows.Forms.DataGridViewRow.
+   graphics: The System.Drawing.Graphics used to paint the System.Windows.Forms.DataGridViewRow.
+   clipBounds: A System.Drawing.Rectangle that represents the area of the System.Windows.Forms.DataGridView 
+    that needs to be painted.
   
-   clipBounds: A System.Drawing.Rectangle that represents the area of the 
-    System.Windows.Forms.DataGridView that needs to be painted.
-  
-   rowBounds: A System.Drawing.Rectangle that contains the bounds of the 
-    System.Windows.Forms.DataGridViewRow that is being painted.
+   rowBounds: A System.Drawing.Rectangle that contains the bounds of the System.Windows.Forms.DataGridViewRow 
+    that is being painted.
   
    rowIndex: The row index of the cell that is being painted.
-   rowState: A bitwise combination of System.Windows.Forms.DataGridViewElementStates values 
-    that specifies the state of the row.
+   rowState: A bitwise combination of System.Windows.Forms.DataGridViewElementStates values that specifies 
+    the state of the row.
   
    isFirstDisplayedRow: true to indicate that the current row is the first row displayed in the 
     System.Windows.Forms.DataGridView; otherwise,false.
   
-   isLastVisibleRow: true to indicate that the current row is the last row in the 
-    System.Windows.Forms.DataGridView that has the 
-    System.Windows.Forms.DataGridViewRow.Visible property set to true; otherwise,
+   isLastVisibleRow: true to indicate that the current row is the last row in the System.Windows.Forms.DataGridView 
+    that has the System.Windows.Forms.DataGridViewRow.Visible property set to true; otherwise,
     false.
   
-   paintParts: A bitwise combination of System.Windows.Forms.DataGridViewPaintParts values 
-    indicating the parts of the cells to paint.
+   paintParts: A bitwise combination of System.Windows.Forms.DataGridViewPaintParts values indicating the parts 
+    of the cells to paint.
   """
   pass
  def RaiseCellClick(self,*args):
@@ -288,8 +265,7 @@ class DataGridViewRow(DataGridViewBand,ICloneable,IDisposable):
   RaiseDataError(self: DataGridViewElement,e: DataGridViewDataErrorEventArgs)
    Raises the System.Windows.Forms.DataGridView.DataError event.
   
-   e: A System.Windows.Forms.DataGridViewDataErrorEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.DataGridViewDataErrorEventArgs that contains the event data.
   """
   pass
  def RaiseMouseWheel(self,*args):
@@ -306,8 +282,8 @@ class DataGridViewRow(DataGridViewBand,ICloneable,IDisposable):
   
    Sets the values of the row's cells.
   
-   values: One or more objects that represent the cell values in the row.-or-An 
-    System.Array of System.Object values.
+   values: One or more objects that represent the cell values in the row.-or-An System.Array of 
+    System.Object values.
   
    Returns: true if all values have been set; otherwise,false.
   """
@@ -321,10 +297,17 @@ class DataGridViewRow(DataGridViewBand,ICloneable,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

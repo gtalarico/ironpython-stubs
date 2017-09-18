@@ -16,21 +16,21 @@ class FontFamily(MarshalByRefObject,IDisposable):
   """
   Equals(self: FontFamily,obj: object) -> bool
   
-   Indicates whether the specified object is a System.Drawing.FontFamily and is 
-    identical to this System.Drawing.FontFamily.
+   Indicates whether the specified object is a System.Drawing.FontFamily and is identical to this 
+    System.Drawing.FontFamily.
   
   
    obj: The object to test.
-   Returns: true if obj is a System.Drawing.FontFamily and is identical to this 
-    System.Drawing.FontFamily; otherwise,false.
+   Returns: true if obj is a System.Drawing.FontFamily and is identical to this System.Drawing.FontFamily; 
+    otherwise,false.
   """
   pass
  def GetCellAscent(self,style):
   """
   GetCellAscent(self: FontFamily,style: FontStyle) -> int
   
-   Returns the cell ascent,in design units,of the System.Drawing.FontFamily of 
-    the specified style.
+   Returns the cell ascent,in design units,of the System.Drawing.FontFamily of the specified 
+    style.
   
   
    style: A System.Drawing.FontStyle that contains style information for the font.
@@ -42,13 +42,13 @@ class FontFamily(MarshalByRefObject,IDisposable):
   """
   GetCellDescent(self: FontFamily,style: FontStyle) -> int
   
-   Returns the cell descent,in design units,of the System.Drawing.FontFamily of 
-    the specified style.
+   Returns the cell descent,in design units,of the System.Drawing.FontFamily of the specified 
+    style.
   
   
    style: A System.Drawing.FontStyle that contains style information for the font.
-   Returns: The cell descent metric for this System.Drawing.FontFamily that uses the 
-    specified System.Drawing.FontStyle.
+   Returns: The cell descent metric for this System.Drawing.FontFamily that uses the specified 
+    System.Drawing.FontStyle.
   """
   pass
  def GetEmHeight(self,style):
@@ -66,13 +66,11 @@ class FontFamily(MarshalByRefObject,IDisposable):
   """
   GetFamilies(graphics: Graphics) -> Array[FontFamily]
   
-   Returns an array that contains all the System.Drawing.FontFamily objects 
-    available for the specified graphics context.
+   Returns an array that contains all the System.Drawing.FontFamily objects available for the 
+    specified graphics context.
   
   
-   graphics: The System.Drawing.Graphics object from which to return 
-    System.Drawing.FontFamily objects.
-  
+   graphics: The System.Drawing.Graphics object from which to return System.Drawing.FontFamily objects.
    Returns: An array of System.Drawing.FontFamily objects available for the specified 
     System.Drawing.Graphics object.
   """
@@ -89,9 +87,9 @@ class FontFamily(MarshalByRefObject,IDisposable):
   """
   GetLineSpacing(self: FontFamily,style: FontStyle) -> int
   
-   Returns the line spacing,in design units,of the System.Drawing.FontFamily of 
-    the specified style. The line spacing is the vertical distance between the base 
-    lines of two consecutive lines of text.
+   Returns the line spacing,in design units,of the System.Drawing.FontFamily of the specified 
+    style. The line spacing is the vertical distance between the base lines of two consecutive lines 
+    of text.
   
   
    style: The System.Drawing.FontStyle to apply.
@@ -113,9 +111,7 @@ class FontFamily(MarshalByRefObject,IDisposable):
   """
   IsStyleAvailable(self: FontFamily,style: FontStyle) -> bool
   
-   Indicates whether the specified System.Drawing.FontStyle enumeration is 
-    available.
-  
+   Indicates whether the specified System.Drawing.FontStyle enumeration is available.
   
    style: The System.Drawing.FontStyle to test.
    Returns: true if the specified System.Drawing.FontStyle is available; otherwise,false.
@@ -127,11 +123,11 @@ class FontFamily(MarshalByRefObject,IDisposable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -144,20 +140,25 @@ class FontFamily(MarshalByRefObject,IDisposable):
   """
   ToString(self: FontFamily) -> str
   
-   Converts this System.Drawing.FontFamily to a human-readable string 
-    representation.
-  
+   Converts this System.Drawing.FontFamily to a human-readable string representation.
    Returns: The string that represents this System.Drawing.FontFamily.
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==y """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

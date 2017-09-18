@@ -3,18 +3,17 @@ class IContainer(IDisposable):
  def Add(self,component,name=None):
   """
   Add(self: IContainer,component: IComponent,name: str)
-   Adds the specified System.ComponentModel.IComponent to the 
-    System.ComponentModel.IContainer at the end of the list,and assigns a name to 
-    the component.
+   Adds the specified System.ComponentModel.IComponent to the System.ComponentModel.IContainer at 
+    the end of the list,and assigns a name to the component.
   
   
    component: The System.ComponentModel.IComponent to add.
-   name: The unique,case-insensitive name to assign to the component.-or- null that 
-    leaves the component unnamed.
+   name: The unique,case-insensitive name to assign to the component.-or- null that leaves the component 
+    unnamed.
   
   Add(self: IContainer,component: IComponent)
-   Adds the specified System.ComponentModel.IComponent to the 
-    System.ComponentModel.IContainer at the end of the list.
+   Adds the specified System.ComponentModel.IComponent to the System.ComponentModel.IContainer at 
+    the end of the list.
   
   
    component: The System.ComponentModel.IComponent to add.

@@ -22,9 +22,7 @@ class HtmlElement(object):
  def DetachEventHandler(self,eventName,eventHandler):
   """
   DetachEventHandler(self: HtmlElement,eventName: str,eventHandler: EventHandler)
-   Removes an event handler from a named event on the HTML Document Object Model 
-    (DOM).
-  
+   Removes an event handler from a named event on the HTML Document Object Model (DOM).
   
    eventName: The name of the event you want to handle.
    eventHandler: The managed code that handles the event.
@@ -53,23 +51,19 @@ class HtmlElement(object):
    Retrieves the value of the named attribute on the element.
   
    attributeName: The name of the attribute. This argument is case-insensitive.
-   Returns: The value of this attribute on the element,as a System.String value. If the 
-    specified attribute does not exist on this element,returns an empty string.
+   Returns: The value of this attribute on the element,as a System.String value. If the specified attribute 
+    does not exist on this element,returns an empty string.
   """
   pass
  def GetElementsByTagName(self,tagName):
   """
   GetElementsByTagName(self: HtmlElement,tagName: str) -> HtmlElementCollection
   
-   Retrieves a collection of elements represented in HTML by the specified HTML 
-    tag.
+   Retrieves a collection of elements represented in HTML by the specified HTML tag.
   
-  
-   tagName: The name of the tag whose System.Windows.Forms.HtmlElement objects you wish to 
-    retrieve.
-  
-   Returns: An System.Windows.Forms.HtmlElementCollection containing all elements whose 
-    HTML tag name is equal to tagName.
+   tagName: The name of the tag whose System.Windows.Forms.HtmlElement objects you wish to retrieve.
+   Returns: An System.Windows.Forms.HtmlElementCollection containing all elements whose HTML tag name is 
+    equal to tagName.
   """
   pass
  def GetHashCode(self):
@@ -86,8 +80,8 @@ class HtmlElement(object):
   
    orient: Where to insert this element in relation to the current element.
    newElement: The new element to insert.
-   Returns: The System.Windows.Forms.HtmlElement that was just inserted. If insertion 
-    failed,this will return null.
+   Returns: The System.Windows.Forms.HtmlElement that was just inserted. If insertion failed,this will 
+    return null.
   """
   pass
  def InvokeMember(self,methodName,parameter=None):
@@ -98,20 +92,18 @@ class HtmlElement(object):
   
    methodName: The name of the property or method to invoke.
    parameter: A list of parameters to pass.
-   Returns: The element returned by the function,represented as an System.Object. If this 
-    System.Object is another HTML element,and you have a reference to the 
-    unmanaged MSHTML library added to your project,you can cast it to its 
-    appropriate unmanaged interface.
+   Returns: The element returned by the function,represented as an System.Object. If this System.Object is 
+    another HTML element,and you have a reference to the unmanaged MSHTML library added to your 
+    project,you can cast it to its appropriate unmanaged interface.
   
   InvokeMember(self: HtmlElement,methodName: str) -> object
   
    Executes an unexposed method on the underlying DOM element of this element.
   
    methodName: The name of the property or method to invoke.
-   Returns: The element returned by this method,represented as an System.Object. If this 
-    System.Object is another HTML element,and you have a reference to the 
-    unmanaged MSHTML library added to your project,you can cast it to its 
-    appropriate unmanaged interface.
+   Returns: The element returned by this method,represented as an System.Object. If this System.Object is 
+    another HTML element,and you have a reference to the unmanaged MSHTML library added to your 
+    project,you can cast it to its appropriate unmanaged interface.
   """
   pass
  def RaiseEvent(self,eventName):
@@ -131,12 +123,12 @@ class HtmlElement(object):
  def ScrollIntoView(self,alignWithTop):
   """
   ScrollIntoView(self: HtmlElement,alignWithTop: bool)
-   Scrolls through the document containing this element until the top or bottom 
-    edge of this element is aligned with the document's window.
+   Scrolls through the document containing this element until the top or bottom edge of this 
+    element is aligned with the document's window.
   
   
-   alignWithTop: If true,the top of the object will be displayed at the top of the window. If 
-    false,the bottom of the object will be displayed at the bottom of the window.
+   alignWithTop: If true,the top of the object will be displayed at the top of the window. If false,the bottom 
+    of the object will be displayed at the bottom of the window.
   """
   pass
  def SetAttribute(self,attributeName,value):

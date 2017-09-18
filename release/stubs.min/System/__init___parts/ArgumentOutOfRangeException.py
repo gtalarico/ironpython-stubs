@@ -14,8 +14,8 @@ class ArgumentOutOfRangeException(ArgumentException,ISerializable,_Exception):
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: ArgumentOutOfRangeException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo object with the invalid 
-    argument value and additional exception information.
+   Sets the System.Runtime.Serialization.SerializationInfo object with the invalid argument value 
+    and additional exception information.
   
   
    info: The object that holds the serialized object data.

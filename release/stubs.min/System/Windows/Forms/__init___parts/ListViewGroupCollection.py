@@ -4,42 +4,34 @@ class ListViewGroupCollection(object,IList,ICollection,IEnumerable):
   """
   Add(self: ListViewGroupCollection,key: str,headerText: str) -> ListViewGroup
   
-   Adds a new System.Windows.Forms.ListViewGroup to the collection using the 
-    specified values to initialize the System.Windows.Forms.ListViewGroup.Name and 
+   Adds a new System.Windows.Forms.ListViewGroup to the collection using the specified values to 
+    initialize the System.Windows.Forms.ListViewGroup.Name and 
     System.Windows.Forms.ListViewGroup.Header properties
   
   
-   key: The initial value of the System.Windows.Forms.ListViewGroup.Name property for 
-    the new group.
-  
-   headerText: The initial value of the System.Windows.Forms.ListViewGroup.Header property for 
-    the new group.
-  
+   key: The initial value of the System.Windows.Forms.ListViewGroup.Name property for the new group.
+   headerText: The initial value of the System.Windows.Forms.ListViewGroup.Header property for the new group.
    Returns: The new System.Windows.Forms.ListViewGroup.
   Add(self: ListViewGroupCollection,group: ListViewGroup) -> int
   
    Adds the specified System.Windows.Forms.ListViewGroup to the collection.
   
    group: The System.Windows.Forms.ListViewGroup to add to the collection.
-   Returns: The index of the group within the collection,or -1 if the group is already 
-    present in the collection.
+   Returns: The index of the group within the collection,or -1 if the group is already present in the 
+    collection.
   """
   pass
  def AddRange(self,groups):
   """
   AddRange(self: ListViewGroupCollection,groups: ListViewGroupCollection)
-   Adds the groups in an existing System.Windows.Forms.ListViewGroupCollection to 
-    the collection.
+   Adds the groups in an existing System.Windows.Forms.ListViewGroupCollection to the collection.
   
-  
-   groups: A System.Windows.Forms.ListViewGroupCollection containing the groups to add to 
-    the collection.
-  
+   groups: A System.Windows.Forms.ListViewGroupCollection containing the groups to add to the collection.
   AddRange(self: ListViewGroupCollection,groups: Array[ListViewGroup])
    Adds an array of groups to the collection.
   
-   groups: An array of type System.Windows.Forms.ListViewGroup that specifies the groups 
-    to add to the collection.
+   groups: An array of type System.Windows.Forms.ListViewGroup that specifies the groups to add to the 
+    collection.
   """
   pass
  def Clear(self):
@@ -61,8 +53,8 @@ class ListViewGroupCollection(object,IList,ICollection,IEnumerable):
  def CopyTo(self,array,index):
   """
   CopyTo(self: ListViewGroupCollection,array: Array,index: int)
-   Copies the groups in the collection to a compatible one-dimensional 
-    System.Array,starting at the specified index of the target array.
+   Copies the groups in the collection to a compatible one-dimensional System.Array,starting at 
+    the specified index of the target array.
   
   
    array: The System.Array to which the groups are copied.
@@ -81,20 +73,18 @@ class ListViewGroupCollection(object,IList,ICollection,IEnumerable):
   """
   IndexOf(self: ListViewGroupCollection,value: ListViewGroup) -> int
   
-   Returns the index of the specified System.Windows.Forms.ListViewGroup within 
-    the collection.
-  
+   Returns the index of the specified System.Windows.Forms.ListViewGroup within the collection.
   
    value: The System.Windows.Forms.ListViewGroup to locate in the collection.
-   Returns: The zero-based index of the group within the collection,or -1 if the group is 
-    not in the collection.
+   Returns: The zero-based index of the group within the collection,or -1 if the group is not in the 
+    collection.
   """
   pass
  def Insert(self,index,group):
   """
   Insert(self: ListViewGroupCollection,index: int,group: ListViewGroup)
-   Inserts the specified System.Windows.Forms.ListViewGroup into the collection at 
-    the specified index.
+   Inserts the specified System.Windows.Forms.ListViewGroup into the collection at the specified 
+    index.
   
   
    index: The index within the collection at which to insert the group.
@@ -112,12 +102,9 @@ class ListViewGroupCollection(object,IList,ICollection,IEnumerable):
  def RemoveAt(self,index):
   """
   RemoveAt(self: ListViewGroupCollection,index: int)
-   Removes the System.Windows.Forms.ListViewGroup at the specified index within 
-    the collection.
+   Removes the System.Windows.Forms.ListViewGroup at the specified index within the collection.
   
-  
-   index: The index within the collection of the System.Windows.Forms.ListViewGroup to 
-    remove.
+   index: The index within the collection of the System.Windows.Forms.ListViewGroup to remove.
   """
   pass
  def __add__(self,*args):
@@ -130,8 +117,7 @@ class ListViewGroupCollection(object,IList,ICollection,IEnumerable):
    Determines whether the System.Collections.IList contains a specific value.
   
    value: The object to locate in the System.Collections.IList.
-   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,
-    false.
+   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,false.
   """
   pass
  def __getitem__(self,*args):

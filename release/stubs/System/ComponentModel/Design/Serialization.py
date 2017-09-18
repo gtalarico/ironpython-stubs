@@ -2,7 +2,7 @@
 # module System.ComponentModel.Design.Serialization calls itself Serialization
 # from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -23,25 +23,20 @@ class ComponentSerializationService(object):
         """
         Deserialize(self: ComponentSerializationService, store: SerializationStore, container: IContainer) -> ICollection
         
-            Deserializes the given store and populates the given 
-             System.ComponentModel.IContainer with deserialized 
-             System.ComponentModel.IComponent objects.
+            Deserializes the given store and populates the given System.ComponentModel.IContainer with 
+             deserialized System.ComponentModel.IComponent objects.
         
         
-            store: The System.ComponentModel.Design.Serialization.SerializationStore to 
-             deserialize.
-        
-            container: The System.ComponentModel.IContainer to which System.ComponentModel.IComponent 
-             objects will be added.
+            store: The System.ComponentModel.Design.Serialization.SerializationStore to deserialize.
+            container: The System.ComponentModel.IContainer to which System.ComponentModel.IComponent objects will be 
+             added.
         
             Returns: A collection of objects created according to the stored state.
         Deserialize(self: ComponentSerializationService, store: SerializationStore) -> ICollection
         
             Deserializes the given store to produce a collection of objects.
         
-            store: The System.ComponentModel.Design.Serialization.SerializationStore to 
-             deserialize.
-        
+            store: The System.ComponentModel.Design.Serialization.SerializationStore to deserialize.
             Returns: A collection of objects created according to the stored state.
         """
         pass
@@ -49,40 +44,31 @@ class ComponentSerializationService(object):
     def DeserializeTo(self, store, container, validateRecycledTypes=None, applyDefaults=None):
         """
         DeserializeTo(self: ComponentSerializationService, store: SerializationStore, container: IContainer, validateRecycledTypes: bool)
-            Deserializes the given 
-             System.ComponentModel.Design.Serialization.SerializationStore to the given 
-             container, optionally validating recycled types.
+            Deserializes the given System.ComponentModel.Design.Serialization.SerializationStore to the 
+             given container, optionally validating recycled types.
         
         
-            store: The System.ComponentModel.Design.Serialization.SerializationStore to 
-             deserialize.
-        
+            store: The System.ComponentModel.Design.Serialization.SerializationStore to deserialize.
             container: The container to which System.ComponentModel.IComponent objects will be added.
-            validateRecycledTypes: true to guarantee that the deserialization will only work if applied to an 
-             object of the same type.
+            validateRecycledTypes: true to guarantee that the deserialization will only work if applied to an object of the same 
+             type.
         
         DeserializeTo(self: ComponentSerializationService, store: SerializationStore, container: IContainer)
-            Deserializes the given 
-             System.ComponentModel.Design.Serialization.SerializationStore to the given 
-             container.
+            Deserializes the given System.ComponentModel.Design.Serialization.SerializationStore to the 
+             given container.
         
         
-            store: The System.ComponentModel.Design.Serialization.SerializationStore to 
-             deserialize.
-        
+            store: The System.ComponentModel.Design.Serialization.SerializationStore to deserialize.
             container: The container to which System.ComponentModel.IComponent objects will be added.
         DeserializeTo(self: ComponentSerializationService, store: SerializationStore, container: IContainer, validateRecycledTypes: bool, applyDefaults: bool)
-            Deserializes the given 
-             System.ComponentModel.Design.Serialization.SerializationStore to the given 
-             container, optionally applying default property values.
+            Deserializes the given System.ComponentModel.Design.Serialization.SerializationStore to the 
+             given container, optionally applying default property values.
         
         
-            store: The System.ComponentModel.Design.Serialization.SerializationStore to 
-             deserialize.
-        
+            store: The System.ComponentModel.Design.Serialization.SerializationStore to deserialize.
             container: The container to which System.ComponentModel.IComponent objects will be added.
-            validateRecycledTypes: true to guarantee that the deserialization will only work if applied to an 
-             object of the same type.
+            validateRecycledTypes: true to guarantee that the deserialization will only work if applied to an object of the same 
+             type.
         
             applyDefaults: true to indicate that the default property values should be applied.
         """
@@ -92,9 +78,7 @@ class ComponentSerializationService(object):
         """
         LoadStore(self: ComponentSerializationService, stream: Stream) -> SerializationStore
         
-            Loads a System.ComponentModel.Design.Serialization.SerializationStore from a 
-             stream.
-        
+            Loads a System.ComponentModel.Design.Serialization.SerializationStore from a stream.
         
             stream: The System.IO.Stream from which the store will be loaded.
             Returns: A new System.ComponentModel.Design.Serialization.SerializationStore instance.
@@ -108,8 +92,8 @@ class ComponentSerializationService(object):
              System.ComponentModel.Design.Serialization.SerializationStore.
         
         
-            store: The System.ComponentModel.Design.Serialization.SerializationStore to which the 
-             state of value will be written.
+            store: The System.ComponentModel.Design.Serialization.SerializationStore to which the state of value 
+             will be written.
         
             value: The object to serialize.
         """
@@ -120,8 +104,8 @@ class ComponentSerializationService(object):
         SerializeAbsolute(self: ComponentSerializationService, store: SerializationStore, value: object)
             Serializes the given object, accounting for default property values.
         
-            store: The System.ComponentModel.Design.Serialization.SerializationStore to which the 
-             state of value will be serialized.
+            store: The System.ComponentModel.Design.Serialization.SerializationStore to which the state of value 
+             will be serialized.
         
             value: The object to serialize.
         """
@@ -132,8 +116,8 @@ class ComponentSerializationService(object):
         SerializeMember(self: ComponentSerializationService, store: SerializationStore, owningObject: object, member: MemberDescriptor)
             Serializes the given member on the given object.
         
-            store: The System.ComponentModel.Design.Serialization.SerializationStore to which the 
-             state of member will be serialized.
+            store: The System.ComponentModel.Design.Serialization.SerializationStore to which the state of member 
+             will be serialized.
         
             owningObject: The object to which member is attached.
             member: A System.ComponentModel.MemberDescriptor specifying the member to serialize.
@@ -143,12 +127,10 @@ class ComponentSerializationService(object):
     def SerializeMemberAbsolute(self, store, owningObject, member):
         """
         SerializeMemberAbsolute(self: ComponentSerializationService, store: SerializationStore, owningObject: object, member: MemberDescriptor)
-            Serializes the given member on the given object, accounting for the default 
-             property value.
+            Serializes the given member on the given object, accounting for the default property value.
         
-        
-            store: The System.ComponentModel.Design.Serialization.SerializationStore to which the 
-             state of member will be serialized.
+            store: The System.ComponentModel.Design.Serialization.SerializationStore to which the state of member 
+             will be serialized.
         
             owningObject: The object to which member is attached.
             member: The member to serialize.
@@ -165,9 +147,7 @@ class ContextStack(object):
     def Append(self, context):
         """
         Append(self: ContextStack, context: object)
-            Appends an object to the end of the stack, rather than pushing it onto the top 
-             of the stack.
-        
+            Appends an object to the end of the stack, rather than pushing it onto the top of the stack.
         
             context: A context object to append to the stack.
         """
@@ -246,8 +226,7 @@ class DesignerLoader(object):
     def Dispose(self):
         """
         Dispose(self: DesignerLoader)
-            Releases all resources used by the 
-             System.ComponentModel.Design.Serialization.DesignerLoader.
+            Releases all resources used by the System.ComponentModel.Design.Serialization.DesignerLoader.
         """
         pass
 
@@ -318,12 +297,10 @@ class IDesignerLoaderHost(IDesignerHost, IServiceContainer, IServiceProvider):
         EndLoad(self: IDesignerLoaderHost, baseClassName: str, successful: bool, errorCollection: ICollection)
             Ends the designer loading operation.
         
-            baseClassName: The fully qualified name of the base class of the document that this designer 
-             is designing.
-        
+            baseClassName: The fully qualified name of the base class of the document that this designer is designing.
             successful: true if the designer is successfully loaded; otherwise, false.
-            errorCollection: A collection containing the errors encountered during load, if any. If no 
-             errors were encountered, pass either an empty collection or null.
+            errorCollection: A collection containing the errors encountered during load, if any. If no errors were 
+             encountered, pass either an empty collection or null.
         """
         pass
 
@@ -368,8 +345,7 @@ class IDesignerLoaderService:
     def AddLoadDependency(self):
         """
         AddLoadDependency(self: IDesignerLoaderService)
-            Registers an external component as part of the load process managed by this 
-             interface.
+            Registers an external component as part of the load process managed by this interface.
         """
         pass
 
@@ -378,11 +354,11 @@ class IDesignerLoaderService:
         DependentLoadComplete(self: IDesignerLoaderService, successful: bool, errorCollection: ICollection)
             Signals that a dependent load has finished.
         
-            successful: true if the load of the designer is successful; false if errors prevented the 
-             load from finishing.
+            successful: true if the load of the designer is successful; false if errors prevented the load from 
+             finishing.
         
-            errorCollection: A collection of errors that occurred during the load, if any. If no errors 
-             occurred, pass either an empty collection or null.
+            errorCollection: A collection of errors that occurred during the load, if any. If no errors occurred, pass either 
+             an empty collection or null.
         """
         pass
 
@@ -391,8 +367,7 @@ class IDesignerLoaderService:
         Reload(self: IDesignerLoaderService) -> bool
         
             Reloads the design document.
-            Returns: true if the reload request is accepted, or false if the loader does not allow 
-             the reload.
+            Returns: true if the reload request is accepted, or false if the loader does not allow the reload.
         """
         pass
 
@@ -416,20 +391,16 @@ class IDesignerSerializationManager(IServiceProvider):
         """
         CreateInstance(self: IDesignerSerializationManager, type: Type, arguments: ICollection, name: str, addToContainer: bool) -> object
         
-            Creates an instance of the specified type and adds it to a collection of named 
-             instances.
-        
+            Creates an instance of the specified type and adds it to a collection of named instances.
         
             type: The data type to create.
             arguments: The arguments to pass to the constructor for this type.
-            name: The name of the object. This name can be used to access the object later 
-             through 
-             System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetInst
-             ance(System.String). If null is passed, the object is still created but cannot 
-             be accessed by name.
+            name: The name of the object. This name can be used to access the object later through 
+             System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetInstance(System.Strin
+             g). If null is passed, the object is still created but cannot be accessed by name.
         
-            addToContainer: If true, this object is added to the design container. The object must 
-             implement System.ComponentModel.IComponent for this to have any effect.
+            addToContainer: If true, this object is added to the design container. The object must implement 
+             System.ComponentModel.IComponent for this to have any effect.
         
             Returns: The newly created object instance.
         """
@@ -439,13 +410,12 @@ class IDesignerSerializationManager(IServiceProvider):
         """
         GetInstance(self: IDesignerSerializationManager, name: str) -> object
         
-            Gets an instance of a created object of the specified name, or null if that 
-             object does not exist.
+            Gets an instance of a created object of the specified name, or null if that object does not 
+             exist.
         
         
             name: The name of the object to retrieve.
-            Returns: An instance of the object with the given name, or null if no object by that 
-             name can be found.
+            Returns: An instance of the object with the given name, or null if no object by that name can be found.
         """
         pass
 
@@ -468,8 +438,7 @@ class IDesignerSerializationManager(IServiceProvider):
         
             objectType: The type of the object to get the serializer for.
             serializerType: The type of the serializer to retrieve.
-            Returns: An instance of the requested serializer, or null if no appropriate serializer 
-             can be located.
+            Returns: An instance of the requested serializer, or null if no appropriate serializer can be located.
         """
         pass
 
@@ -490,9 +459,8 @@ class IDesignerSerializationManager(IServiceProvider):
             Removes a custom serialization provider from the serialization manager.
         
             provider: The provider to remove. This object must have been added using 
-             System.ComponentModel.Design.Serialization.IDesignerSerializationManager.AddSeri
-             alizationProvider(System.ComponentModel.Design.Serialization.IDesignerSerializat
-             ionProvider).
+             System.ComponentModel.Design.Serialization.IDesignerSerializationManager.AddSerializationProvider
+             (System.ComponentModel.Design.Serialization.IDesignerSerializationProvider).
         """
         pass
 
@@ -501,10 +469,9 @@ class IDesignerSerializationManager(IServiceProvider):
         ReportError(self: IDesignerSerializationManager, errorInformation: object)
             Reports an error in serialization.
         
-            errorInformation: The error to report. This information object can be of any object type. If it 
-             is an exception, the message of the exception is extracted and reported to the 
-             user. If it is any other type, System.Object.ToString is called to display the 
-             information to the user.
+            errorInformation: The error to report. This information object can be of any object type. If it is an exception, 
+             the message of the exception is extracted and reported to the user. If it is any other type, 
+             System.Object.ToString is called to display the information to the user.
         """
         pass
 
@@ -550,13 +517,12 @@ class IDesignerSerializationProvider:
             Gets a serializer using the specified attributes.
         
             manager: The serialization manager requesting the serializer.
-            currentSerializer: An instance of the current serializer of the specified type. This can be null 
-             if no serializer of the specified type exists.
+            currentSerializer: An instance of the current serializer of the specified type. This can be null if no serializer 
+             of the specified type exists.
         
             objectType: The data type of the object to serialize.
             serializerType: The data type of the serializer to create.
-            Returns: An instance of a serializer of the type requested, or null if the request 
-             cannot be satisfied.
+            Returns: An instance of a serializer of the type requested, or null if the request cannot be satisfied.
         """
         pass
 
@@ -571,13 +537,13 @@ class IDesignerSerializationService:
         """
         Deserialize(self: IDesignerSerializationService, serializationData: object) -> ICollection
         
-            Deserializes the specified serialization data object and returns a collection 
-             of objects represented by that data.
+            Deserializes the specified serialization data object and returns a collection of objects 
+             represented by that data.
         
         
             serializationData: An object consisting of serialized data.
-            Returns: An System.Collections.ICollection of objects rebuilt from the specified 
-             serialization data object.
+            Returns: An System.Collections.ICollection of objects rebuilt from the specified serialization data 
+             object.
         """
         pass
 
@@ -585,13 +551,10 @@ class IDesignerSerializationService:
         """
         Serialize(self: IDesignerSerializationService, objects: ICollection) -> object
         
-            Serializes the specified collection of objects and stores them in a 
-             serialization data object.
-        
+            Serializes the specified collection of objects and stores them in a serialization data object.
         
             objects: A collection of objects to serialize.
-            Returns: An object that contains the serialized state of the specified collection of 
-             objects.
+            Returns: An object that contains the serialized state of the specified collection of objects.
         """
         pass
 
@@ -650,9 +613,7 @@ class InstanceDescriptor(object):
         """
         Invoke(self: InstanceDescriptor) -> object
         
-            Invokes this instance descriptor and returns the object the descriptor 
-             describes.
-        
+            Invokes this instance descriptor and returns the object the descriptor describes.
             Returns: The object this instance descriptor describes.
         """
         pass
@@ -698,18 +659,15 @@ class MemberRelationship(object):
         """
         Equals(self: MemberRelationship, obj: object) -> bool
         
-            Determines whether two 
-             System.ComponentModel.Design.Serialization.MemberRelationship instances are 
-             equal.
+            Determines whether two System.ComponentModel.Design.Serialization.MemberRelationship instances 
+             are equal.
         
         
-            obj: The System.ComponentModel.Design.Serialization.MemberRelationship to compare 
-             with the current System.ComponentModel.Design.Serialization.MemberRelationship.
+            obj: The System.ComponentModel.Design.Serialization.MemberRelationship to compare with the current 
+             System.ComponentModel.Design.Serialization.MemberRelationship.
         
-            Returns: true if the specified 
-             System.ComponentModel.Design.Serialization.MemberRelationship is equal to the 
-             current System.ComponentModel.Design.Serialization.MemberRelationship; 
-             otherwise, false.
+            Returns: true if the specified System.ComponentModel.Design.Serialization.MemberRelationship is equal to 
+             the current System.ComponentModel.Design.Serialization.MemberRelationship; otherwise, false.
         """
         pass
 
@@ -718,8 +676,7 @@ class MemberRelationship(object):
         GetHashCode(self: MemberRelationship) -> int
         
             Returns the hash code for this instance.
-            Returns: A hash code for the current 
-             System.ComponentModel.Design.Serialization.MemberRelationship.
+            Returns: A hash code for the current System.ComponentModel.Design.Serialization.MemberRelationship.
         """
         pass
 
@@ -730,8 +687,9 @@ class MemberRelationship(object):
     @staticmethod # known case of __new__
     def __new__(self, owner, member):
         """
-        __new__(cls: type, owner: object, member: MemberDescriptor)
-        __new__[MemberRelationship]() -> MemberRelationship
+        __new__[MemberRelationship]() -> MemberRelationship
+        
+        __new__(cls: type, owner: object, member: MemberDescriptor)
         """
         pass
 
@@ -772,9 +730,8 @@ class MemberRelationshipService(object):
             Gets a relationship to the given source relationship.
         
             source: The source relationship.
-            Returns: A relationship to source, or 
-             System.ComponentModel.Design.Serialization.MemberRelationship.Empty if no 
-             relationship exists.
+            Returns: A relationship to source, or System.ComponentModel.Design.Serialization.MemberRelationship.Empty 
+             if no relationship exists.
         """
         pass
 
@@ -796,8 +753,7 @@ class MemberRelationshipService(object):
         
             source: The source relationship.
             relationship: The relationship to set into the source.
-            Returns: true if a relationship between the given two objects is supported; otherwise, 
-             false.
+            Returns: true if a relationship between the given two objects is supported; otherwise, false.
         """
         pass
 
@@ -852,9 +808,7 @@ class ResolveNameEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new 
-             delegate.
-        
+            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -867,9 +821,9 @@ class ResolveNameEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by 
-             the current delegate.-or- null, if the method represented by the current 
-             delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current 
+             delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -896,14 +850,13 @@ class ResolveNameEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate 
-             that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
+             the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new 
-             System.Delegate without value in its invocation list; otherwise, this instance 
-             with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
+             value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -984,12 +937,11 @@ class SerializationStore(object, IDisposable):
         """
         Dispose(self: SerializationStore, disposing: bool)
             Releases the unmanaged resources used by the 
-             System.ComponentModel.Design.Serialization.SerializationStore and optionally 
-             releases the managed resources.
+             System.ComponentModel.Design.Serialization.SerializationStore and optionally releases the 
+             managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only 
-             unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
         """
         pass
 
@@ -1003,11 +955,18 @@ class SerializationStore(object, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method

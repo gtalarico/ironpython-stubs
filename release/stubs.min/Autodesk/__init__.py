@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Autodesk
-# from RevitAPI,Version=17.0.0.0,Culture=neutral,PublicKeyToken=null,RevitAPIUI,Version=17.0.0.0,Culture=neutral,PublicKeyToken=null,ProtoGeometry,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from RevitAPI,Version=17.0.0.0,Culture=neutral,PublicKeyToken=null,RevitAPIUI,Version=17.0.0.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports

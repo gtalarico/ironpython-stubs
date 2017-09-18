@@ -9,40 +9,38 @@ class FileSystemWatcher(Component,IComponent,IDisposable,ISupportInitialize):
  def BeginInit(self):
   """
   BeginInit(self: FileSystemWatcher)
-   Begins the initialization of a System.IO.FileSystemWatcher used on a form or 
-    used by another component. The initialization occurs at run time.
+   Begins the initialization of a System.IO.FileSystemWatcher used on a form or used by another 
+    component. The initialization occurs at run time.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: FileSystemWatcher,disposing: bool)
-   Releases the unmanaged resources used by the System.IO.FileSystemWatcher and 
-    optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.IO.FileSystemWatcher and optionally releases 
+    the managed resources.
   
   
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def EndInit(self):
   """
   EndInit(self: FileSystemWatcher)
-   Ends the initialization of a System.IO.FileSystemWatcher used on a form or used 
-    by another component. The initialization occurs at run time.
+   Ends the initialization of a System.IO.FileSystemWatcher used on a form or used by another 
+    component. The initialization occurs at run time.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -51,11 +49,11 @@ class FileSystemWatcher(Component,IComponent,IDisposable,ISupportInitialize):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -108,33 +106,36 @@ class FileSystemWatcher(Component,IComponent,IDisposable,ISupportInitialize):
   """
   WaitForChanged(self: FileSystemWatcher,changeType: WatcherChangeTypes,timeout: int) -> WaitForChangedResult
   
-   A synchronous method that returns a structure that contains specific 
-    information on the change that occurred,given the type of change you want to 
-    monitor and the time (in milliseconds) to wait before timing out.
+   A synchronous method that returns a structure that contains specific information on the change 
+    that occurred,given the type of change you want to monitor and the time (in milliseconds) to 
+    wait before timing out.
   
   
    changeType: The System.IO.WatcherChangeTypes to watch for.
    timeout: The time (in milliseconds) to wait before timing out.
-   Returns: A System.IO.WaitForChangedResult that contains specific information on the 
-    change that occurred.
-  
+   Returns: A System.IO.WaitForChangedResult that contains specific information on the change that occurred.
   WaitForChanged(self: FileSystemWatcher,changeType: WatcherChangeTypes) -> WaitForChangedResult
   
-   A synchronous method that returns a structure that contains specific 
-    information on the change that occurred,given the type of change you want to 
-    monitor.
+   A synchronous method that returns a structure that contains specific information on the change 
+    that occurred,given the type of change you want to monitor.
   
   
    changeType: The System.IO.WatcherChangeTypes to watch for.
-   Returns: A System.IO.WaitForChangedResult that contains specific information on the 
-    change that occurred.
+   Returns: A System.IO.WaitForChangedResult that contains specific information on the change that occurred.
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

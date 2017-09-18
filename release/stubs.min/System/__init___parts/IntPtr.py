@@ -25,8 +25,8 @@ class IntPtr(object,ISerializable):
    Returns a value indicating whether this instance is equal to a specified object.
   
    obj: An object to compare with this instance or null.
-   Returns: true if obj is an instance of System.IntPtr and equals the value of this 
-    instance; otherwise,false.
+   Returns: true if obj is an instance of System.IntPtr and equals the value of this instance; otherwise,
+    false.
   """
   pass
  def GetHashCode(self):
@@ -70,26 +70,23 @@ class IntPtr(object,ISerializable):
   ToPointer(self: IntPtr) -> Void*
   
    Converts the value of this instance to a pointer to an unspecified type.
-   Returns: A pointer to System.Void; that is,a pointer to memory containing data of an 
-    unspecified type.
+   Returns: A pointer to System.Void; that is,a pointer to memory containing data of an unspecified type.
   """
   pass
  def ToString(self,format=None):
   """
   ToString(self: IntPtr,format: str) -> str
   
-   Converts the numeric value of the current System.IntPtr object to its 
-    equivalent string representation.
+   Converts the numeric value of the current System.IntPtr object to its equivalent string 
+    representation.
   
   
-   format: A format specification that governs how the current System.IntPtr object is 
-    converted.
-  
+   format: A format specification that governs how the current System.IntPtr object is converted.
    Returns: The string representation of the value of the current System.IntPtr object.
   ToString(self: IntPtr) -> str
   
-   Converts the numeric value of the current System.IntPtr object to its 
-    equivalent string representation.
+   Converts the numeric value of the current System.IntPtr object to its equivalent string 
+    representation.
   
    Returns: The string representation of the value of this instance.
   """
@@ -130,6 +127,6 @@ class IntPtr(object,ISerializable):
  def __sub__(self,*args):
   """ x.__sub__(y) <==> x-y """
   pass
- Size=8
+ Size=4
  Zero=None
 

@@ -7,9 +7,8 @@ class TransportContext(object):
    Retrieves the requested channel binding.
   
    kind: The type of channel binding to retrieve.
-   Returns: The requested System.Security.Authentication.ExtendedProtection.ChannelBinding,
-    or null if the channel binding is not supported by the current transport or by 
-    the operating system.
+   Returns: The requested System.Security.Authentication.ExtendedProtection.ChannelBinding,or null if the 
+    channel binding is not supported by the current transport or by the operating system.
   """
   pass
  def GetTlsTokenBindings(self):

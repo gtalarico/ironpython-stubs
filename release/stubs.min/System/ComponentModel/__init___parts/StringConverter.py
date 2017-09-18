@@ -8,8 +8,8 @@ class StringConverter(TypeConverter):
   """
   CanConvertFrom(self: StringConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Gets a value indicating whether this converter can convert an object in the 
-    given source type to a string using the specified context.
+   Gets a value indicating whether this converter can convert an object in the given source type to 
+    a string using the specified context.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.

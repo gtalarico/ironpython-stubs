@@ -11,9 +11,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
     System.Windows.Forms.AccessibleEvents for the specified child control .
   
   
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
-    applications of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    objectID: The identifier of the System.Windows.Forms.AccessibleObject.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,childID: int)
@@ -21,9 +19,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
     System.Windows.Forms.AccessibleEvents for the specified child control.
   
   
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client 
-    applications of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   """
   pass
@@ -43,8 +39,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   CreateControlsInstance(self: Control) -> ControlCollection
   
    Creates a new instance of the control collection for the control.
-   Returns: A new instance of System.Windows.Forms.Control.ControlCollection assigned to 
-    the control.
+   Returns: A new instance of System.Windows.Forms.Control.ControlCollection assigned to the control.
   """
   pass
  def CreateHandle(self,*args):
@@ -54,9 +49,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   """
   CreateRichEditOleCallback(self: RichTextBox) -> object
   
-   Creates an IRichEditOleCallback-compatible object for handling rich-edit 
-    callback operations.
-  
+   Creates an IRichEditOleCallback-compatible object for handling rich-edit callback operations.
    Returns: An object that implements the IRichEditOleCallback interface.
   """
   pass
@@ -78,12 +71,11 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
  def Dispose(self):
   """
   Dispose(self: Control,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.Control and 
-    its child controls and optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.Control and its child controls 
+    and optionally releases the managed resources.
   
   
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def DrawToBitmap(self,bitmap,targetBounds):
@@ -99,20 +91,18 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   """
   Find(self: RichTextBox,characterSet: Array[Char]) -> int
   
-   Searches the text of a System.Windows.Forms.RichTextBox control for the first 
-    instance of a character from a list of characters.
+   Searches the text of a System.Windows.Forms.RichTextBox control for the first instance of a 
+    character from a list of characters.
   
   
    characterSet: The array of characters to search for.
-   Returns: The location within the control where the search characters were found or -1 if 
-    the search characters are not found or an empty search character set is 
-    specified in the char parameter.
+   Returns: The location within the control where the search characters were found or -1 if the search 
+    characters are not found or an empty search character set is specified in the char parameter.
   
   Find(self: RichTextBox,characterSet: Array[Char],start: int) -> int
   
-   Searches the text of a System.Windows.Forms.RichTextBox control,at a specific 
-    starting point,for the first instance of a character from a list of 
-    characters.
+   Searches the text of a System.Windows.Forms.RichTextBox control,at a specific starting point,
+    for the first instance of a character from a list of characters.
   
   
    characterSet: The array of characters to search for.
@@ -120,8 +110,8 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
    Returns: The location within the control where the search characters are found.
   Find(self: RichTextBox,characterSet: Array[Char],start: int,end: int) -> int
   
-   Searches a range of text in a System.Windows.Forms.RichTextBox control for the 
-    first instance of a character from a list of characters.
+   Searches a range of text in a System.Windows.Forms.RichTextBox control for the first instance of 
+    a character from a list of characters.
   
   
    characterSet: The array of characters to search for.
@@ -130,16 +120,14 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
    Returns: The location within the control where the search characters are found.
   Find(self: RichTextBox,str: str,start: int,end: int,options: RichTextBoxFinds) -> int
   
-   Searches the text in a System.Windows.Forms.RichTextBox control for a string 
-    within a range of text within the control and with specific options applied to 
-    the search.
+   Searches the text in a System.Windows.Forms.RichTextBox control for a string within a range of 
+    text within the control and with specific options applied to the search.
   
   
    str: The text to locate in the control.
    start: The location within the control's text at which to begin searching.
-   end: The location within the control's text at which to end searching. This value 
-    must be equal to negative one (-1) or greater than or equal to the start 
-    parameter.
+   end: The location within the control's text at which to end searching. This value must be equal to 
+    negative one (-1) or greater than or equal to the start parameter.
   
    options: A bitwise combination of the System.Windows.Forms.RichTextBoxFinds values.
    Returns: The location within the control where the search text was found.
@@ -148,14 +136,13 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
    Searches the text in a System.Windows.Forms.RichTextBox control for a string.
   
    str: The text to locate in the control.
-   Returns: The location within the control where the search text was found or -1 if the 
-    search string is not found or an empty search string is specified in the str 
-    parameter.
+   Returns: The location within the control where the search text was found or -1 if the search string is 
+    not found or an empty search string is specified in the str parameter.
   
   Find(self: RichTextBox,str: str,options: RichTextBoxFinds) -> int
   
-   Searches the text in a System.Windows.Forms.RichTextBox control for a string 
-    with specific options applied to the search.
+   Searches the text in a System.Windows.Forms.RichTextBox control for a string with specific 
+    options applied to the search.
   
   
    str: The text to locate in the control.
@@ -163,9 +150,8 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
    Returns: The location within the control where the search text was found.
   Find(self: RichTextBox,str: str,start: int,options: RichTextBoxFinds) -> int
   
-   Searches the text in a System.Windows.Forms.RichTextBox control for a string at 
-    a specific location within the control and with specific options applied to the 
-    search.
+   Searches the text in a System.Windows.Forms.RichTextBox control for a string at a specific 
+    location within the control and with specific options applied to the search.
   
   
    str: The text to locate in the control.
@@ -208,8 +194,8 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   """
   GetLineFromCharIndex(self: RichTextBox,index: int) -> int
   
-   Retrieves the line number from the specified character position within the text 
-    of the System.Windows.Forms.RichTextBox control.
+   Retrieves the line number from the specified character position within the text of the 
+    System.Windows.Forms.RichTextBox control.
   
   
    index: The character index position to search.
@@ -232,29 +218,25 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   
    Retrieves the bounds within which the control is scaled.
   
-   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the 
-    display bounds.
-  
+   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display bounds.
    factor: The height and width of the control's bounds.
-   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the 
-    bounds of the control to use when defining its size and position.
+   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of the 
+    control to use when defining its size and position.
   
-   Returns: A System.Drawing.Rectangle representing the bounds within which the control is 
-    scaled.
+   Returns: A System.Drawing.Rectangle representing the bounds within which the control is scaled.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetStyle(self,*args):
@@ -284,9 +266,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
  def InvokeGotFocus(self,*args):
   """
   InvokeGotFocus(self: Control,toInvoke: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.GotFocus event for the specified 
-    control.
-  
+   Raises the System.Windows.Forms.Control.GotFocus event for the specified control.
   
    toInvoke: The System.Windows.Forms.Control to assign the event to.
    e: An System.EventArgs that contains the event data.
@@ -295,9 +275,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
  def InvokeLostFocus(self,*args):
   """
   InvokeLostFocus(self: Control,toInvoke: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.LostFocus event for the specified 
-    control.
-  
+   Raises the System.Windows.Forms.Control.LostFocus event for the specified control.
   
    toInvoke: The System.Windows.Forms.Control to assign the event to.
    e: An System.EventArgs that contains the event data.
@@ -308,9 +286,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   InvokeOnClick(self: Control,toInvoke: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.Click event for the specified control.
   
-   toInvoke: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Click event to.
-  
+   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event to.
    e: An System.EventArgs that contains the event data.
   """
   pass
@@ -319,9 +295,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   InvokePaint(self: Control,c: Control,e: PaintEventArgs)
    Raises the System.Windows.Forms.Control.Paint event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Paint event to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -330,9 +304,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   InvokePaintBackground(self: Control,c: Control,e: PaintEventArgs)
    Raises the PaintBackground event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the 
-    System.Windows.Forms.Control.Paint event to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -343,16 +315,16 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
    Determines if a character is an input character that the control recognizes.
   
    charCode: The character to test.
-   Returns: true if the character should be sent directly to the control and not 
-    preprocessed; otherwise,false.
+   Returns: true if the character should be sent directly to the control and not preprocessed; otherwise,
+    false.
   """
   pass
  def IsInputKey(self,*args):
   """
   IsInputKey(self: TextBoxBase,keyData: Keys) -> bool
   
-   Determines whether the specified key is an input key or a special key that 
-    requires preprocessing.
+   Determines whether the specified key is an input key or a special key that requires 
+    preprocessing.
   
   
    keyData: One of the Keys value.
@@ -362,9 +334,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
  def LoadFile(self,*__args):
   """
   LoadFile(self: RichTextBox,data: Stream,fileType: RichTextBoxStreamType)
-   Loads the contents of an existing data stream into the 
-    System.Windows.Forms.RichTextBox control.
-  
+   Loads the contents of an existing data stream into the System.Windows.Forms.RichTextBox control.
   
    data: A stream of data to load into the System.Windows.Forms.RichTextBox control.
    fileType: One of the System.Windows.Forms.RichTextBoxStreamType values.
@@ -387,11 +357,11 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -403,8 +373,8 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
  def NotifyInvalidate(self,*args):
   """
   NotifyInvalidate(self: Control,invalidatedArea: Rectangle)
-   Raises the System.Windows.Forms.Control.Invalidated event with a specified 
-    region of the control to invalidate.
+   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the control 
+    to invalidate.
   
   
    invalidatedArea: A System.Drawing.Rectangle representing the area to invalidate.
@@ -567,6 +537,12 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   
    e: An System.EventArgs that contains the event data.
   """
+  pass
+ def OnDpiChangedAfterParent(self,*args):
+  """ OnDpiChangedAfterParent(self: Control,e: EventArgs) """
+  pass
+ def OnDpiChangedBeforeParent(self,*args):
+  """ OnDpiChangedBeforeParent(self: Control,e: EventArgs) """
   pass
  def OnDragDrop(self,*args):
   """
@@ -915,16 +891,14 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   OnPaintBackground(self: Control,pevent: PaintEventArgs)
    Paints the background of the control.
   
-   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the 
-    control to paint.
+   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the control to paint.
   """
   pass
  def OnParentBackColorChanged(self,*args):
   """
   OnParentBackColorChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BackColorChanged event when the 
-    System.Windows.Forms.Control.BackColor property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BackColor property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -934,8 +908,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   """
   OnParentBackgroundImageChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the 
-    System.Windows.Forms.Control.BackgroundImage property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BackgroundImage property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -945,8 +918,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   """
   OnParentBindingContextChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.BindingContextChanged event when the 
-    System.Windows.Forms.Control.BindingContext property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.BindingContext property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -972,8 +944,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   """
   OnParentEnabledChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.EnabledChanged event when the 
-    System.Windows.Forms.Control.Enabled property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Enabled property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -983,8 +954,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   """
   OnParentFontChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.Control.Font property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Font property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -994,8 +964,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   """
   OnParentForeColorChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.ForeColorChanged event when the 
-    System.Windows.Forms.Control.ForeColor property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.ForeColor property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1005,8 +974,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   """
   OnParentRightToLeftChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.RightToLeftChanged event when the 
-    System.Windows.Forms.Control.RightToLeft property value of the control's 
-    container changes.
+    System.Windows.Forms.Control.RightToLeft property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1016,8 +984,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   """
   OnParentVisibleChanged(self: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.VisibleChanged event when the 
-    System.Windows.Forms.Control.Visible property value of the control's container 
-    changes.
+    System.Windows.Forms.Control.Visible property value of the control's container changes.
   
   
    e: An System.EventArgs that contains the event data.
@@ -1181,9 +1148,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
    Processes a command key.
   
    m: A Windows Message object.
-   keyData: One of the System.Windows.Forms.Keys values that represents the shortcut key to 
-    process.
-  
+   keyData: One of the System.Windows.Forms.Keys values that represents the shortcut key to process.
    Returns: true if the command key was processed by the control; otherwise,false.
   """
   pass
@@ -1211,8 +1176,8 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   
    Processes a key message and generates the appropriate control events.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1223,8 +1188,8 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   
    Processes a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1235,8 +1200,8 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   
    Previews a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    Returns: true if the message was processed by the control; otherwise,false.
   """
@@ -1248,8 +1213,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
    Processes a mnemonic character.
   
    charCode: The character to process.
-   Returns: true if the character was processed as a mnemonic by the control; otherwise,
-    false.
+   Returns: true if the character was processed as a mnemonic by the control; otherwise,false.
   """
   pass
  def RaiseDragEvent(self,*args):
@@ -1300,6 +1264,9 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
    Reapplies the last operation that was undone in the control.
   """
   pass
+ def RescaleConstantsForDpi(self,*args):
+  """ RescaleConstantsForDpi(self: Control,deviceDpiOld: int,deviceDpiNew: int) """
+  pass
  def ResetMouseEventArgs(self,*args):
   """
   ResetMouseEventArgs(self: Control)
@@ -1318,18 +1285,16 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
    Returns: One of the System.Drawing.ContentAlignment values.
   RtlTranslateAlignment(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the 
-    appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
+    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
   RtlTranslateAlignment(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the 
-    appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
+    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1352,9 +1317,8 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   """
   RtlTranslateHorizontal(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the 
-    appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
+    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1365,9 +1329,8 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   """
   RtlTranslateLeftRight(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the 
-    appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left 
-    text.
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
+    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
@@ -1377,23 +1340,17 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
  def SaveFile(self,*__args):
   """
   SaveFile(self: RichTextBox,data: Stream,fileType: RichTextBoxStreamType)
-   Saves the contents of a System.Windows.Forms.RichTextBox control to an open 
-    data stream.
-  
+   Saves the contents of a System.Windows.Forms.RichTextBox control to an open data stream.
   
    data: The data stream that contains the file to save to.
    fileType: One of the System.Windows.Forms.RichTextBoxStreamType values.
   SaveFile(self: RichTextBox,path: str,fileType: RichTextBoxStreamType)
-   Saves the contents of the System.Windows.Forms.RichTextBox to a specific type 
-    of file.
-  
+   Saves the contents of the System.Windows.Forms.RichTextBox to a specific type of file.
   
    path: The name and location of the file to save.
    fileType: One of the System.Windows.Forms.RichTextBoxStreamType values.
   SaveFile(self: RichTextBox,path: str)
-   Saves the contents of the System.Windows.Forms.RichTextBox to a rich text 
-    format (RTF) file.
-  
+   Saves the contents of the System.Windows.Forms.RichTextBox to a rich text format (RTF) file.
   
    path: The name and location of the file to save.
   """
@@ -1404,8 +1361,8 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
    Scales a control's location,size,padding and margin.
   
    factor: The factor by which the height and width of the control will be scaled.
-   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the 
-    control to use when defining its size and position.
+   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to use 
+    when defining its size and position.
   """
   pass
  def ScaleCore(self,*args):
@@ -1420,8 +1377,8 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
  def Select(self,start=None,length=None):
   """
   Select(self: Control,directed: bool,forward: bool)
-   Activates a child control. Optionally specifies the direction in the tab order 
-    to select the control from.
+   Activates a child control. Optionally specifies the direction in the tab order to select the 
+    control from.
   
   
    directed: true to specify the direction of the control to select; otherwise,false.
@@ -1431,8 +1388,8 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
  def SetAutoSizeMode(self,*args):
   """
   SetAutoSizeMode(self: Control,mode: AutoSizeMode)
-   Sets a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
+   Sets a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize 
+    property is enabled.
   
   
    mode: One of the System.Windows.Forms.AutoSizeMode values.
@@ -1462,9 +1419,7 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
  def SetStyle(self,*args):
   """
   SetStyle(self: Control,flag: ControlStyles,value: bool)
-   Sets a specified System.Windows.Forms.ControlStyles flag to either true or 
-    false.
-  
+   Sets a specified System.Windows.Forms.ControlStyles flag to either true or false.
   
    flag: The System.Windows.Forms.ControlStyles bit to set.
    value: true to apply the specified style to the control; otherwise,false.
@@ -1490,23 +1445,16 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   """
   SizeFromClientSize(self: Control,clientSize: Size) -> Size
   
-   Determines the size of the entire control from the height and width of its 
-    client area.
+   Determines the size of the entire control from the height and width of its client area.
   
-  
-   clientSize: A System.Drawing.Size value representing the height and width of the control's 
-    client area.
-  
-   Returns: A System.Drawing.Size value representing the height and width of the entire 
-    control.
+   clientSize: A System.Drawing.Size value representing the height and width of the control's client area.
+   Returns: A System.Drawing.Size value representing the height and width of the entire control.
   """
   pass
  def UpdateBounds(self,*args):
   """
   UpdateBounds(self: Control,x: int,y: int,width: int,height: int,clientWidth: int,clientHeight: int)
-   Updates the bounds of the control with the specified size,location,and client 
-    size.
-  
+   Updates the bounds of the control with the specified size,location,and client size.
   
    x: The System.Drawing.Point.X coordinate of the control.
    y: The System.Drawing.Point.Y coordinate of the control.
@@ -1547,10 +1495,17 @@ class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOle
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

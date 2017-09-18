@@ -8,8 +8,8 @@ class DataGridLengthConverter(TypeConverter):
   """
   CanConvertFrom(self: DataGridLengthConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Determines whether an instance of the specified type can be converted to an 
-    instance of the System.Windows.Controls.DataGridLength class.
+   Determines whether an instance of the specified type can be converted to an instance of the 
+    System.Windows.Controls.DataGridLength class.
   
   
    context: An object that provides a format context.
@@ -21,8 +21,8 @@ class DataGridLengthConverter(TypeConverter):
   """
   CanConvertTo(self: DataGridLengthConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Determines whether an instance of the System.Windows.Controls.DataGridLength 
-    class can be converted to an instance of the specified type.
+   Determines whether an instance of the System.Windows.Controls.DataGridLength class can be 
+    converted to an instance of the specified type.
   
   
    context: An object that provides a format context.
@@ -34,9 +34,7 @@ class DataGridLengthConverter(TypeConverter):
   """
   ConvertFrom(self: DataGridLengthConverter,context: ITypeDescriptorContext,culture: CultureInfo,value: object) -> object
   
-   Converts the specified object to an instance of the 
-    System.Windows.Controls.DataGridLength class.
-  
+   Converts the specified object to an instance of the System.Windows.Controls.DataGridLength class.
   
    context: An object that provides a format context.
    culture: The object to use as the current culture.
@@ -48,8 +46,8 @@ class DataGridLengthConverter(TypeConverter):
   """
   ConvertTo(self: DataGridLengthConverter,context: ITypeDescriptorContext,culture: CultureInfo,value: object,destinationType: Type) -> object
   
-   Converts an instance of the System.Windows.Controls.DataGridLength class to an 
-    instance of the specified type.
+   Converts an instance of the System.Windows.Controls.DataGridLength class to an instance of the 
+    specified type.
   
   
    context: An object that provides a format context.

@@ -3,12 +3,10 @@ class IBindingListView(IBindingList,IList,ICollection,IEnumerable):
  def ApplySort(self,sorts):
   """
   ApplySort(self: IBindingListView,sorts: ListSortDescriptionCollection)
-   Sorts the data source based on the given 
-    System.ComponentModel.ListSortDescriptionCollection.
+   Sorts the data source based on the given System.ComponentModel.ListSortDescriptionCollection.
   
-  
-   sorts: The System.ComponentModel.ListSortDescriptionCollection containing the sorts to 
-    apply to the data source.
+   sorts: The System.ComponentModel.ListSortDescriptionCollection containing the sorts to apply to the 
+    data source.
   """
   pass
  def RemoveFilter(self):
@@ -24,8 +22,7 @@ class IBindingListView(IBindingList,IList,ICollection,IEnumerable):
    Determines whether the System.Collections.IList contains a specific value.
   
    value: The object to locate in the System.Collections.IList.
-   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,
-    false.
+   Returns: true if the System.Object is found in the System.Collections.IList; otherwise,false.
   """
   pass
  def __init__(self,*args):

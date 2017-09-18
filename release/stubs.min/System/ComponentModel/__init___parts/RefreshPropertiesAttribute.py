@@ -26,8 +26,8 @@ class RefreshPropertiesAttribute(Attribute,_Attribute):
   """
   IsDefaultAttribute(self: RefreshPropertiesAttribute) -> bool
   
-   Gets a value indicating whether the current value of the attribute is the 
-    default value for the attribute.
+   Gets a value indicating whether the current value of the attribute is the default value for the 
+    attribute.
   
    Returns: true if the current value of the attribute is the default; otherwise,false.
   """

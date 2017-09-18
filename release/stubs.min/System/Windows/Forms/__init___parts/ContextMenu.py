@@ -8,8 +8,8 @@ class ContextMenu(Menu,IComponent,IDisposable):
  def CloneMenu(self,*args):
   """
   CloneMenu(self: Menu,menuSrc: Menu)
-   Copies the System.Windows.Forms.Menu that is passed as a parameter to the 
-    current System.Windows.Forms.Menu.
+   Copies the System.Windows.Forms.Menu that is passed as a parameter to the current 
+    System.Windows.Forms.Menu.
   
   
    menuSrc: The System.Windows.Forms.Menu to copy.
@@ -26,12 +26,9 @@ class ContextMenu(Menu,IComponent,IDisposable):
  def Dispose(self):
   """
   Dispose(self: Menu,disposing: bool)
-   Disposes of the resources,other than memory,used by the 
-    System.Windows.Forms.Menu.
+   Disposes of the resources,other than memory,used by the System.Windows.Forms.Menu.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only 
-    unmanaged resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def FindMergePosition(self,*args):
@@ -48,14 +45,13 @@ class ContextMenu(Menu,IComponent,IDisposable):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -64,11 +60,11 @@ class ContextMenu(Menu,IComponent,IDisposable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -99,8 +95,8 @@ class ContextMenu(Menu,IComponent,IDisposable):
   
    Processes a command key.
   
-   msg: A System.Windows.Forms.Message,passed by reference,that represents the window 
-    message to process.
+   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message to 
+    process.
   
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    control: The control to which the command key applies.
@@ -109,8 +105,8 @@ class ContextMenu(Menu,IComponent,IDisposable):
   
    Processes a command key.
   
-   msg: A System.Windows.Forms.Message,passed by reference that represents the window 
-    message to process.
+   msg: A System.Windows.Forms.Message,passed by reference that represents the window message to 
+    process.
   
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: true if the character was processed by the control; otherwise,false.
@@ -119,36 +115,41 @@ class ContextMenu(Menu,IComponent,IDisposable):
  def Show(self,control,pos,alignment=None):
   """
   Show(self: ContextMenu,control: Control,pos: Point,alignment: LeftRightAlignment)
-   Displays the shortcut menu at the specified position and with the specified 
-    alignment.
+   Displays the shortcut menu at the specified position and with the specified alignment.
   
+   control: A System.Windows.Forms.Control that specifies the control with which this shortcut menu is 
+    associated.
   
-   control: A System.Windows.Forms.Control that specifies the control with which this 
-    shortcut menu is associated.
+   pos: A System.Drawing.Point that specifies the coordinates at which to display the menu. These 
+    coordinates are specified relative to the client coordinates of the control specified in the 
+    control parameter.
   
-   pos: A System.Drawing.Point that specifies the coordinates at which to display the 
-    menu. These coordinates are specified relative to the client coordinates of the 
-    control specified in the control parameter.
-  
-   alignment: A System.Windows.Forms.LeftRightAlignment that specifies the alignment of the 
-    control relative to the pos parameter.
+   alignment: A System.Windows.Forms.LeftRightAlignment that specifies the alignment of the control relative 
+    to the pos parameter.
   
   Show(self: ContextMenu,control: Control,pos: Point)
    Displays the shortcut menu at the specified position.
   
-   control: A System.Windows.Forms.Control that specifies the control with which this 
-    shortcut menu is associated.
+   control: A System.Windows.Forms.Control that specifies the control with which this shortcut menu is 
+    associated.
   
-   pos: A System.Drawing.Point that specifies the coordinates at which to display the 
-    menu. These coordinates are specified relative to the client coordinates of the 
-    control specified in the control parameter.
+   pos: A System.Drawing.Point that specifies the coordinates at which to display the menu. These 
+    coordinates are specified relative to the client coordinates of the control specified in the 
+    control parameter.
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

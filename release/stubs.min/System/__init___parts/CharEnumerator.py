@@ -11,19 +11,17 @@ class CharEnumerator(object,IEnumerator,ICloneable,IEnumerator[Char],IDisposable
  def Dispose(self):
   """
   Dispose(self: CharEnumerator)
-   Releases all resources used by the current instance of the 
-    System.CharEnumerator class.
+   Releases all resources used by the current instance of the System.CharEnumerator class.
   """
   pass
  def MoveNext(self):
   """
   MoveNext(self: CharEnumerator) -> bool
   
-   Increments the internal index of the current System.CharEnumerator object to 
-    the next character of the enumerated string.
+   Increments the internal index of the current System.CharEnumerator object to the next character 
+    of the enumerated string.
   
-   Returns: true if the index is successfully incremented and within the enumerated string; 
-    otherwise,false.
+   Returns: true if the index is successfully incremented and within the enumerated string; otherwise,false.
   """
   pass
  def next(self,*args):
@@ -32,18 +30,25 @@ class CharEnumerator(object,IEnumerator,ICloneable,IEnumerator[Char],IDisposable
  def Reset(self):
   """
   Reset(self: CharEnumerator)
-   Initializes the index to a position logically before the first character of the 
-    enumerated string.
+   Initializes the index to a position logically before the first character of the enumerated 
+    string.
   """
   pass
  def __contains__(self,*args):
   """ __contains__[Char](enumerator: IEnumerator[Char],value: Char) -> bool """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

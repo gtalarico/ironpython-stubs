@@ -11,8 +11,8 @@ class ImageList(Component,IComponent,IDisposable):
  def Draw(self,g,*__args):
   """
   Draw(self: ImageList,g: Graphics,x: int,y: int,width: int,height: int,index: int)
-   Draws the image indicated by the given index on the specified 
-    System.Drawing.Graphics using the specified location and size.
+   Draws the image indicated by the given index on the specified System.Drawing.Graphics using the 
+    specified location and size.
   
   
    g: The System.Drawing.Graphics to draw on.
@@ -22,8 +22,8 @@ class ImageList(Component,IComponent,IDisposable):
    height: The height,in pixels,of the destination image.
    index: The index of the image in the System.Windows.Forms.ImageList to draw.
   Draw(self: ImageList,g: Graphics,x: int,y: int,index: int)
-   Draws the image indicated by the given index on the specified 
-    System.Drawing.Graphics at the specified location.
+   Draws the image indicated by the given index on the specified System.Drawing.Graphics at the 
+    specified location.
   
   
    g: The System.Drawing.Graphics to draw on.
@@ -31,8 +31,8 @@ class ImageList(Component,IComponent,IDisposable):
    y: The vertical position at which to draw the image.
    index: The index of the image in the System.Windows.Forms.ImageList to draw.
   Draw(self: ImageList,g: Graphics,pt: Point,index: int)
-   Draws the image indicated by the specified index on the specified 
-    System.Drawing.Graphics at the given location.
+   Draws the image indicated by the specified index on the specified System.Drawing.Graphics at the 
+    given location.
   
   
    g: The System.Drawing.Graphics to draw on.
@@ -44,14 +44,13 @@ class ImageList(Component,IComponent,IDisposable):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
+   Returns an object that represents a service provided by the System.ComponentModel.Component or 
+    by its System.ComponentModel.Container.
   
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component 
-    does not provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or 
+    null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -60,11 +59,11 @@ class ImageList(Component,IComponent,IDisposable):
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -82,10 +81,17 @@ class ImageList(Component,IComponent,IDisposable):
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

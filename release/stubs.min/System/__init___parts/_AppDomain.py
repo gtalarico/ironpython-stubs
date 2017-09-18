@@ -13,15 +13,15 @@ class _AppDomain:
  def ClearPrivatePath(self):
   """
   ClearPrivatePath(self: _AppDomain)
-   Provides COM objects with version-independent access to the 
-    System.AppDomain.ClearPrivatePath method.
+   Provides COM objects with version-independent access to the System.AppDomain.ClearPrivatePath 
+    method.
   """
   pass
  def ClearShadowCopyPath(self):
   """
   ClearShadowCopyPath(self: _AppDomain)
-   Provides COM objects with version-independent access to the 
-    System.AppDomain.ClearShadowCopyPath method.
+   Provides COM objects with version-independent access to the System.AppDomain.ClearShadowCopyPath 
+    method.
   """
   pass
  def CreateInstance(self,assemblyName,typeName,*__args):
@@ -29,62 +29,57 @@ class _AppDomain:
   CreateInstance(self: _AppDomain,assemblyName: str,typeName: str,ignoreCase: bool,bindingAttr: BindingFlags,binder: Binder,args: Array[object],culture: CultureInfo,activationAttributes: Array[object],securityAttributes: Evidence) -> ObjectHandle
   
    Provides COM objects with version-independent access to the 
-    System.AppDomain.CreateInstance(System.String,System.String,System.Boolean,Syste
-    m.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Global
-    ization.CultureInfo,System.Object[],System.Security.Policy.Evidence) method 
-    overload.
+    System.AppDomain.CreateInstance(System.String,System.String,System.Boolean,System.Reflection.Bind
+    ingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo,System.Object[
+    ],System.Security.Policy.Evidence) method overload.
   
   
    assemblyName: The display name of the assembly. See System.Reflection.Assembly.FullName.
-   typeName: The fully qualified name of the requested type,including the namespace but not 
-    the assembly,as returned by the System.Type.FullName property.
+   typeName: The fully qualified name of the requested type,including the namespace but not the assembly,as 
+    returned by the System.Type.FullName property.
   
    ignoreCase: A Boolean value specifying whether to perform a case-sensitive search or not.
-   bindingAttr: A combination of zero or more bit flags that affect the search for the typeName 
-    constructor. If bindingAttr is zero,a case-sensitive search for public 
-    constructors is conducted.
+   bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If 
+    bindingAttr is zero,a case-sensitive search for public constructors is conducted.
   
-   binder: An object that enables the binding,coercion of argument types,invocation of 
-    members,and retrieval of System.Reflection.MemberInfo objects using 
-    reflection. If binder is null,the default binder is used.
+   binder: An object that enables the binding,coercion of argument types,invocation of members,and 
+    retrieval of System.Reflection.MemberInfo objects using reflection. If binder is null,the 
+    default binder is used.
   
-   args: The arguments to pass to the constructor. This array of arguments must match in 
-    number,order,and type the parameters of the constructor to invoke. If the 
-    default constructor is preferred,args must be an empty array or null.
+   args: The arguments to pass to the constructor. This array of arguments must match in number,order,
+    and type the parameters of the constructor to invoke. If the default constructor is preferred,
+    args must be an empty array or null.
   
-   culture: Culture-specific information that governs the coercion of args to the formal 
-    types declared for the typeName constructor. If culture is null,the 
-    System.Globalization.CultureInfo for the current thread is used.
+   culture: Culture-specific information that governs the coercion of args to the formal types declared for 
+    the typeName constructor. If culture is null,the System.Globalization.CultureInfo for the 
+    current thread is used.
   
-   activationAttributes: An array of one or more attributes that can participate in activation. 
-    Typically,an array that contains a single 
-    System.Runtime.Remoting.Activation.UrlAttribute object. The 
-    System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is 
-    required to activate a remote object.
+   activationAttributes: An array of one or more attributes that can participate in activation. Typically,an array that 
+    contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The 
+    System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a 
+    remote object.
   
    securityAttributes: Information used to authorize creation of typeName.
-   Returns: An object that is a wrapper for the new instance specified by typeName. The 
-    return value needs to be unwrapped to access the real object.
+   Returns: An object that is a wrapper for the new instance specified by typeName. The return value needs 
+    to be unwrapped to access the real object.
   
   CreateInstance(self: _AppDomain,assemblyName: str,typeName: str,activationAttributes: Array[object]) -> ObjectHandle
   
    Provides COM objects with version-independent access to the 
-    System.AppDomain.CreateInstance(System.String,System.String,System.Object[]) 
-    method overload.
+    System.AppDomain.CreateInstance(System.String,System.String,System.Object[]) method overload.
   
   
    assemblyName: The display name of the assembly. See System.Reflection.Assembly.FullName.
-   typeName: The fully qualified name of the requested type,including the namespace but not 
-    the assembly,as returned by the System.Type.FullName property.
+   typeName: The fully qualified name of the requested type,including the namespace but not the assembly,as 
+    returned by the System.Type.FullName property.
   
-   activationAttributes: An array of one or more attributes that can participate in activation. 
-    Typically,an array that contains a single 
-    System.Runtime.Remoting.Activation.UrlAttribute object. The 
-    System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is 
-    required to activate a remote object.
+   activationAttributes: An array of one or more attributes that can participate in activation. Typically,an array that 
+    contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The 
+    System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a 
+    remote object.
   
-   Returns: An object that is a wrapper for the new instance specified by typeName. The 
-    return value needs to be unwrapped to access the real object.
+   Returns: An object that is a wrapper for the new instance specified by typeName. The return value needs 
+    to be unwrapped to access the real object.
   
   CreateInstance(self: _AppDomain,assemblyName: str,typeName: str) -> ObjectHandle
   
@@ -93,11 +88,11 @@ class _AppDomain:
   
   
    assemblyName: The display name of the assembly. See System.Reflection.Assembly.FullName.
-   typeName: The fully qualified name of the requested type,including the namespace but not 
-    the assembly,as returned by the System.Type.FullName property.
+   typeName: The fully qualified name of the requested type,including the namespace but not the assembly,as 
+    returned by the System.Type.FullName property.
   
-   Returns: An object that is a wrapper for the new instance specified by typeName. The 
-    return value needs to be unwrapped to access the real object.
+   Returns: An object that is a wrapper for the new instance specified by typeName. The return value needs 
+    to be unwrapped to access the real object.
   """
   pass
  def CreateInstanceFrom(self,assemblyFile,typeName,*__args):
@@ -105,85 +100,80 @@ class _AppDomain:
   CreateInstanceFrom(self: _AppDomain,assemblyFile: str,typeName: str,ignoreCase: bool,bindingAttr: BindingFlags,binder: Binder,args: Array[object],culture: CultureInfo,activationAttributes: Array[object],securityAttributes: Evidence) -> ObjectHandle
   
    Provides COM objects with version-independent access to the 
-    System.AppDomain.CreateInstanceFrom(System.String,System.String,System.Boolean,S
-    ystem.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Gl
-    obalization.CultureInfo,System.Object[],System.Security.Policy.Evidence) method 
-    overload.
+    System.AppDomain.CreateInstanceFrom(System.String,System.String,System.Boolean,System.Reflection.
+    BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo,System.Obj
+    ect[],System.Security.Policy.Evidence) method overload.
   
   
-   assemblyFile: The name,including the path,of a file that contains an assembly that defines 
-    the requested type. The assembly is loaded using the 
-    System.Reflection.Assembly.LoadFrom(System.String)  method.
+   assemblyFile: The name,including the path,of a file that contains an assembly that defines the requested 
+    type. The assembly is loaded using the System.Reflection.Assembly.LoadFrom(System.String)  
+    method.
   
-   typeName: The fully qualified name of the requested type,including the namespace but not 
-    the assembly,as returned by the System.Type.FullName property.
+   typeName: The fully qualified name of the requested type,including the namespace but not the assembly,as 
+    returned by the System.Type.FullName property.
   
    ignoreCase: A Boolean value specifying whether to perform a case-sensitive search or not.
-   bindingAttr: A combination of zero or more bit flags that affect the search for the typeName 
-    constructor. If bindingAttr is zero,a case-sensitive search for public 
-    constructors is conducted.
+   bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If 
+    bindingAttr is zero,a case-sensitive search for public constructors is conducted.
   
-   binder: An object that enables the binding,coercion of argument types,invocation of 
-    members,and retrieval of System.Reflection.MemberInfo objects through 
-    reflection. If binder is null,the default binder is used.
+   binder: An object that enables the binding,coercion of argument types,invocation of members,and 
+    retrieval of System.Reflection.MemberInfo objects through reflection. If binder is null,the 
+    default binder is used.
   
-   args: The arguments to pass to the constructor. This array of arguments must match in 
-    number,order,and type the parameters of the constructor to invoke. If the 
-    default constructor is preferred,args must be an empty array or null.
+   args: The arguments to pass to the constructor. This array of arguments must match in number,order,
+    and type the parameters of the constructor to invoke. If the default constructor is preferred,
+    args must be an empty array or null.
   
-   culture: Culture-specific information that governs the coercion of args to the formal 
-    types declared for the typeName constructor. If culture is null,the 
-    System.Globalization.CultureInfo for the current thread is used.
+   culture: Culture-specific information that governs the coercion of args to the formal types declared for 
+    the typeName constructor. If culture is null,the System.Globalization.CultureInfo for the 
+    current thread is used.
   
-   activationAttributes: An array of one or more attributes that can participate in activation. 
-    Typically,an array that contains a single 
-    System.Runtime.Remoting.Activation.UrlAttribute object. The 
-    System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is 
-    required to activate a remote object.
+   activationAttributes: An array of one or more attributes that can participate in activation. Typically,an array that 
+    contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The 
+    System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a 
+    remote object.
   
    securityAttributes: Information used to authorize creation of typeName.
-   Returns: An object that is a wrapper for the new instance,or null if typeName is not 
-    found. The return value needs to be unwrapped to access the real object.
+   Returns: An object that is a wrapper for the new instance,or null if typeName is not found. The return 
+    value needs to be unwrapped to access the real object.
   
   CreateInstanceFrom(self: _AppDomain,assemblyFile: str,typeName: str,activationAttributes: Array[object]) -> ObjectHandle
   
    Provides COM objects with version-independent access to the 
-    System.AppDomain.CreateInstanceFrom(System.String,System.String,System.Object[])
-     method overload.
+    System.AppDomain.CreateInstanceFrom(System.String,System.String,System.Object[]) method 
+    overload.
   
   
-   assemblyFile: The name,including the path,of a file that contains an assembly that defines 
-    the requested type. The assembly is loaded using the 
-    System.Reflection.Assembly.LoadFrom(System.String)  method.
+   assemblyFile: The name,including the path,of a file that contains an assembly that defines the requested 
+    type. The assembly is loaded using the System.Reflection.Assembly.LoadFrom(System.String)  
+    method.
   
-   typeName: The fully qualified name of the requested type,including the namespace but not 
-    the assembly,as returned by the System.Type.FullName property.
+   typeName: The fully qualified name of the requested type,including the namespace but not the assembly,as 
+    returned by the System.Type.FullName property.
   
-   activationAttributes: An array of one or more attributes that can participate in activation. 
-    Typically,an array that contains a single 
-    System.Runtime.Remoting.Activation.UrlAttribute object. The 
-    System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is 
-    required to activate a remote object.
+   activationAttributes: An array of one or more attributes that can participate in activation. Typically,an array that 
+    contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The 
+    System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a 
+    remote object.
   
-   Returns: An object that is a wrapper for the new instance,or null if typeName is not 
-    found. The return value needs to be unwrapped to access the real object.
+   Returns: An object that is a wrapper for the new instance,or null if typeName is not found. The return 
+    value needs to be unwrapped to access the real object.
   
   CreateInstanceFrom(self: _AppDomain,assemblyFile: str,typeName: str) -> ObjectHandle
   
    Provides COM objects with version-independent access to the 
-    System.AppDomain.CreateInstanceFrom(System.String,System.String) method 
-    overload.
+    System.AppDomain.CreateInstanceFrom(System.String,System.String) method overload.
   
   
-   assemblyFile: The name,including the path,of a file that contains an assembly that defines 
-    the requested type. The assembly is loaded using the 
-    System.Reflection.Assembly.LoadFrom(System.String)  method.
+   assemblyFile: The name,including the path,of a file that contains an assembly that defines the requested 
+    type. The assembly is loaded using the System.Reflection.Assembly.LoadFrom(System.String)  
+    method.
   
-   typeName: The fully qualified name of the requested type,including the namespace but not 
-    the assembly,as returned by the System.Type.FullName property.
+   typeName: The fully qualified name of the requested type,including the namespace but not the assembly,as 
+    returned by the System.Type.FullName property.
   
-   Returns: An object that is a wrapper for the new instance,or null if typeName is not 
-    found. The return value needs to be unwrapped to access the real object.
+   Returns: An object that is a wrapper for the new instance,or null if typeName is not found. The return 
+    value needs to be unwrapped to access the real object.
   """
   pass
  def DefineDynamicAssembly(self,name,access,*__args):
@@ -191,16 +181,15 @@ class _AppDomain:
   DefineDynamicAssembly(self: _AppDomain,name: AssemblyName,access: AssemblyBuilderAccess,evidence: Evidence,requiredPermissions: PermissionSet,optionalPermissions: PermissionSet,refusedPermissions: PermissionSet) -> AssemblyBuilder
   
    Provides COM objects with version-independent access to the 
-    System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Ref
-    lection.Emit.AssemblyBuilderAccess,System.Security.Policy.Evidence,System.Securi
-    ty.PermissionSet,System.Security.PermissionSet,System.Security.PermissionSet) 
-    method overload.
+    System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.Asse
+    mblyBuilderAccess,System.Security.Policy.Evidence,System.Security.PermissionSet,System.Security.P
+    ermissionSet,System.Security.PermissionSet) method overload.
   
   
    name: The unique identity of the dynamic assembly.
    access: The mode in which the dynamic assembly will be accessed.
-   evidence: The evidence supplied for the dynamic assembly. The evidence is used unaltered 
-    as the final set of evidence used for policy resolution.
+   evidence: The evidence supplied for the dynamic assembly. The evidence is used unaltered as the final set 
+    of evidence used for policy resolution.
   
    requiredPermissions: The required permissions request.
    optionalPermissions: The optional permissions request.
@@ -209,15 +198,15 @@ class _AppDomain:
   DefineDynamicAssembly(self: _AppDomain,name: AssemblyName,access: AssemblyBuilderAccess,dir: str,requiredPermissions: PermissionSet,optionalPermissions: PermissionSet,refusedPermissions: PermissionSet) -> AssemblyBuilder
   
    Provides COM objects with version-independent access to the 
-    System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Ref
-    lection.Emit.AssemblyBuilderAccess,System.String,System.Security.PermissionSet,S
-    ystem.Security.PermissionSet,System.Security.PermissionSet) method overload.
+    System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.Asse
+    mblyBuilderAccess,System.String,System.Security.PermissionSet,System.Security.PermissionSet,Syste
+    m.Security.PermissionSet) method overload.
   
   
    name: The unique identity of the dynamic assembly.
    access: The mode in which the dynamic assembly will be accessed.
-   dir: The name of the directory where the assembly will be saved. If dir is null,the 
-    directory defaults to the current directory.
+   dir: The name of the directory where the assembly will be saved. If dir is null,the directory 
+    defaults to the current directory.
   
    requiredPermissions: The required permissions request.
    optionalPermissions: The optional permissions request.
@@ -226,43 +215,41 @@ class _AppDomain:
   DefineDynamicAssembly(self: _AppDomain,name: AssemblyName,access: AssemblyBuilderAccess,dir: str,evidence: Evidence,requiredPermissions: PermissionSet,optionalPermissions: PermissionSet,refusedPermissions: PermissionSet,isSynchronized: bool) -> AssemblyBuilder
   
    Provides COM objects with version-independent access to the 
-    System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Ref
-    lection.Emit.AssemblyBuilderAccess,System.String,System.Security.Policy.Evidence
-    ,System.Security.PermissionSet,System.Security.PermissionSet,System.Security.Per
-    missionSet,System.Boolean) method overload.
+    System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.Asse
+    mblyBuilderAccess,System.String,System.Security.Policy.Evidence,System.Security.PermissionSet,Sys
+    tem.Security.PermissionSet,System.Security.PermissionSet,System.Boolean) method overload.
   
   
    name: The unique identity of the dynamic assembly.
    access: The mode in which the dynamic assembly will be accessed.
-   dir: The name of the directory where the dynamic assembly will be saved. If dir is 
-    null,the directory defaults to the current directory.
+   dir: The name of the directory where the dynamic assembly will be saved. If dir is null,the 
+    directory defaults to the current directory.
   
-   evidence: The evidence supplied for the dynamic assembly. The evidence is used unaltered 
-    as the final set of evidence used for policy resolution.
+   evidence: The evidence supplied for the dynamic assembly. The evidence is used unaltered as the final set 
+    of evidence used for policy resolution.
   
    requiredPermissions: The required permissions request.
    optionalPermissions: The optional permissions request.
    refusedPermissions: The refused permissions request.
-   isSynchronized: true to synchronize the creation of modules,types,and members in the dynamic 
-    assembly; otherwise,false.
+   isSynchronized: true to synchronize the creation of modules,types,and members in the dynamic assembly; 
+    otherwise,false.
   
    Returns: Represents the dynamic assembly created.
   DefineDynamicAssembly(self: _AppDomain,name: AssemblyName,access: AssemblyBuilderAccess,dir: str,evidence: Evidence,requiredPermissions: PermissionSet,optionalPermissions: PermissionSet,refusedPermissions: PermissionSet) -> AssemblyBuilder
   
    Provides COM objects with version-independent access to the 
-    System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Ref
-    lection.Emit.AssemblyBuilderAccess,System.String,System.Security.Policy.Evidence
-    ,System.Security.PermissionSet,System.Security.PermissionSet,System.Security.Per
-    missionSet) method overload.
+    System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.Asse
+    mblyBuilderAccess,System.String,System.Security.Policy.Evidence,System.Security.PermissionSet,Sys
+    tem.Security.PermissionSet,System.Security.PermissionSet) method overload.
   
   
    name: The unique identity of the dynamic assembly.
    access: The mode in which the dynamic assembly will be accessed.
-   dir: The name of the directory where the assembly will be saved. If dir is null,the 
-    directory defaults to the current directory.
+   dir: The name of the directory where the assembly will be saved. If dir is null,the directory 
+    defaults to the current directory.
   
-   evidence: The evidence supplied for the dynamic assembly. The evidence is used unaltered 
-    as the final set of evidence used for policy resolution.
+   evidence: The evidence supplied for the dynamic assembly. The evidence is used unaltered as the final set 
+    of evidence used for policy resolution.
   
    requiredPermissions: The required permissions request.
    optionalPermissions: The optional permissions request.
@@ -271,38 +258,37 @@ class _AppDomain:
   DefineDynamicAssembly(self: _AppDomain,name: AssemblyName,access: AssemblyBuilderAccess,dir: str,evidence: Evidence) -> AssemblyBuilder
   
    Provides COM objects with version-independent access to the 
-    System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Ref
-    lection.Emit.AssemblyBuilderAccess,System.String,System.Security.Policy.Evidence
-    ) method overload.
+    System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.Asse
+    mblyBuilderAccess,System.String,System.Security.Policy.Evidence) method overload.
   
   
    name: The unique identity of the dynamic assembly.
    access: The mode in which the dynamic assembly will be accessed.
-   dir: The name of the directory where the assembly will be saved. If dir is null,the 
-    directory defaults to the current directory.
+   dir: The name of the directory where the assembly will be saved. If dir is null,the directory 
+    defaults to the current directory.
   
-   evidence: The evidence supplied for the dynamic assembly. The evidence is used unaltered 
-    as the final set of evidence used for policy resolution.
+   evidence: The evidence supplied for the dynamic assembly. The evidence is used unaltered as the final set 
+    of evidence used for policy resolution.
   
    Returns: Represents the dynamic assembly created.
   DefineDynamicAssembly(self: _AppDomain,name: AssemblyName,access: AssemblyBuilderAccess,dir: str) -> AssemblyBuilder
   
    Provides COM objects with version-independent access to the 
-    System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Ref
-    lection.Emit.AssemblyBuilderAccess,System.String) method overload.
+    System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.Asse
+    mblyBuilderAccess,System.String) method overload.
   
   
    name: The unique identity of the dynamic assembly.
    access: The mode in which the dynamic assembly will be accessed.
-   dir: The name of the directory where the assembly will be saved. If dir is null,the 
-    directory defaults to the current directory.
+   dir: The name of the directory where the assembly will be saved. If dir is null,the directory 
+    defaults to the current directory.
   
    Returns: Represents the dynamic assembly created.
   DefineDynamicAssembly(self: _AppDomain,name: AssemblyName,access: AssemblyBuilderAccess) -> AssemblyBuilder
   
    Provides COM objects with version-independent access to the 
-    System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Ref
-    lection.Emit.AssemblyBuilderAccess) method overload.
+    System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.Asse
+    mblyBuilderAccess) method overload.
   
   
    name: The unique identity of the dynamic assembly.
@@ -311,9 +297,9 @@ class _AppDomain:
   DefineDynamicAssembly(self: _AppDomain,name: AssemblyName,access: AssemblyBuilderAccess,requiredPermissions: PermissionSet,optionalPermissions: PermissionSet,refusedPermissions: PermissionSet) -> AssemblyBuilder
   
    Provides COM objects with version-independent access to the 
-    System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Ref
-    lection.Emit.AssemblyBuilderAccess,System.Security.PermissionSet,System.Security
-    .PermissionSet,System.Security.PermissionSet) method overload.
+    System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.Asse
+    mblyBuilderAccess,System.Security.PermissionSet,System.Security.PermissionSet,System.Security.Per
+    missionSet) method overload.
   
   
    name: The unique identity of the dynamic assembly.
@@ -325,15 +311,14 @@ class _AppDomain:
   DefineDynamicAssembly(self: _AppDomain,name: AssemblyName,access: AssemblyBuilderAccess,evidence: Evidence) -> AssemblyBuilder
   
    Provides COM objects with version-independent access to the 
-    System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Ref
-    lection.Emit.AssemblyBuilderAccess,System.Security.Policy.Evidence) method 
-    overload.
+    System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.Asse
+    mblyBuilderAccess,System.Security.Policy.Evidence) method overload.
   
   
    name: The unique identity of the dynamic assembly.
    access: The mode in which the dynamic assembly will be accessed.
-   evidence: The evidence supplied for the dynamic assembly. The evidence is used unaltered 
-    as the final set of evidence used for policy resolution.
+   evidence: The evidence supplied for the dynamic assembly. The evidence is used unaltered as the final set 
+    of evidence used for policy resolution.
   
    Returns: Represents the dynamic assembly created.
   """
@@ -357,8 +342,7 @@ class _AppDomain:
   
   
    other: The System.Object to compare to the current System.Object.
-   Returns: true if the specified System.Object is equal to the current System.Object; 
-    otherwise,false.
+   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,false.
   """
   pass
  def ExecuteAssembly(self,assemblyFile,assemblySecurity=None,args=None):
@@ -366,8 +350,8 @@ class _AppDomain:
   ExecuteAssembly(self: _AppDomain,assemblyFile: str,assemblySecurity: Evidence,args: Array[str]) -> int
   
    Provides COM objects with version-independent access to the 
-    System.AppDomain.ExecuteAssembly(System.String,System.Security.Policy.Evidence,S
-    ystem.String[]) method overload.
+    System.AppDomain.ExecuteAssembly(System.String,System.Security.Policy.Evidence,System.String[]) 
+    method overload.
   
   
    assemblyFile: The name of the file that contains the assembly to execute.
@@ -385,8 +369,7 @@ class _AppDomain:
   ExecuteAssembly(self: _AppDomain,assemblyFile: str,assemblySecurity: Evidence) -> int
   
    Provides COM objects with version-independent access to the 
-    System.AppDomain.ExecuteAssembly(System.String,System.Security.Policy.Evidence) 
-    method overload.
+    System.AppDomain.ExecuteAssembly(System.String,System.Security.Policy.Evidence) method overload.
   
   
    assemblyFile: The name of the file that contains the assembly to execute.
@@ -398,8 +381,8 @@ class _AppDomain:
   """
   GetAssemblies(self: _AppDomain) -> Array[Assembly]
   
-   Provides COM objects with version-independent access to the 
-    System.AppDomain.GetAssemblies method.
+   Provides COM objects with version-independent access to the System.AppDomain.GetAssemblies 
+    method.
   
    Returns: An array of assemblies in this application domain.
   """
@@ -412,8 +395,8 @@ class _AppDomain:
     System.AppDomain.GetData(System.String) method.
   
   
-   name: The name of a predefined application domain property,or the name of an 
-    application domain property you have defined.
+   name: The name of a predefined application domain property,or the name of an application domain 
+    property you have defined.
   
    Returns: The value of the name property.
   """
@@ -422,8 +405,8 @@ class _AppDomain:
   """
   GetHashCode(self: _AppDomain) -> int
   
-   Provides COM objects with version-independent access to the inherited 
-    System.Object.GetHashCode method.
+   Provides COM objects with version-independent access to the inherited System.Object.GetHashCode 
+    method.
   
    Returns: A hash code for the current System.Object.
   """
@@ -448,25 +431,23 @@ class _AppDomain:
    Provides COM objects with version-independent access to the inherited 
     System.MarshalByRefObject.GetLifetimeService method.
   
-   Returns: An object of type System.Runtime.Remoting.Lifetime.ILease used to control the 
-    lifetime policy for this instance.
+   Returns: An object of type System.Runtime.Remoting.Lifetime.ILease used to control the lifetime policy 
+    for this instance.
   """
   pass
  def GetType(self):
   """
   GetType(self: _AppDomain) -> Type
   
-   Provides COM objects with version-independent access to the 
-    System.AppDomain.GetType method.
-  
+   Provides COM objects with version-independent access to the System.AppDomain.GetType method.
    Returns: A System.Type representing the type of the current instance.
   """
   pass
  def GetTypeInfo(self,iTInfo,lcid,ppTInfo):
   """
   GetTypeInfo(self: _AppDomain,iTInfo: UInt32,lcid: UInt32,ppTInfo: IntPtr)
-   Retrieves the type information for an object,which can then be used to get the 
-    type information for an interface.
+   Retrieves the type information for an object,which can then be used to get the type information 
+    for an interface.
   
   
    iTInfo: The type information to return.
@@ -478,8 +459,7 @@ class _AppDomain:
   """
   GetTypeInfoCount(self: _AppDomain) -> UInt32
   
-   Retrieves the number of type information interfaces that an object provides 
-    (either 0 or 1).
+   Retrieves the number of type information interfaces that an object provides (either 0 or 1).
   """
   pass
  def InitializeLifetimeService(self):
@@ -502,9 +482,8 @@ class _AppDomain:
    riid: Reserved for future use. Must be IID_NULL.
    lcid: The locale context in which to interpret arguments.
    wFlags: Flags describing the context of the call.
-   pDispParams: Pointer to a structure containing an array of arguments,an array of argument 
-    DISPIDs for named arguments,and counts for the number of elements in the 
-    arrays.
+   pDispParams: Pointer to a structure containing an array of arguments,an array of argument DISPIDs for named 
+    arguments,and counts for the number of elements in the arrays.
   
    pVarResult: Pointer to the location where the result is to be stored.
    pExcepInfo: Pointer to a structure that contains exception information.
@@ -516,21 +495,19 @@ class _AppDomain:
   Load(self: _AppDomain,rawAssembly: Array[Byte],rawSymbolStore: Array[Byte],securityEvidence: Evidence) -> Assembly
   
    Provides COM objects with version-independent access to the 
-    System.AppDomain.Load(System.Byte[],System.Byte[],System.Security.Policy.Evidenc
-    e) method overload.
+    System.AppDomain.Load(System.Byte[],System.Byte[],System.Security.Policy.Evidence) method 
+    overload.
   
   
    rawAssembly: An array of type byte that is a COFF-based image containing an emitted assembly.
-   rawSymbolStore: An array of type byte containing the raw bytes representing the symbols for the 
-    assembly.
-  
+   rawSymbolStore: An array of type byte containing the raw bytes representing the symbols for the assembly.
    securityEvidence: Evidence for loading the assembly.
    Returns: The loaded assembly.
   Load(self: _AppDomain,assemblyRef: AssemblyName,assemblySecurity: Evidence) -> Assembly
   
    Provides COM objects with version-independent access to the 
-    System.AppDomain.Load(System.Reflection.AssemblyName,System.Security.Policy.Evid
-    ence) method overload.
+    System.AppDomain.Load(System.Reflection.AssemblyName,System.Security.Policy.Evidence) method 
+    overload.
   
   
    assemblyRef: An object that describes the assembly to load.
@@ -539,8 +516,7 @@ class _AppDomain:
   Load(self: _AppDomain,assemblyString: str,assemblySecurity: Evidence) -> Assembly
   
    Provides COM objects with version-independent access to the 
-    System.AppDomain.Load(System.String,System.Security.Policy.Evidence) method 
-    overload.
+    System.AppDomain.Load(System.String,System.Security.Policy.Evidence) method overload.
   
   
    assemblyString: The display name of the assembly. See System.Reflection.Assembly.FullName.
@@ -553,9 +529,7 @@ class _AppDomain:
   
   
    rawAssembly: An array of type byte that is a COFF-based image containing an emitted assembly.
-   rawSymbolStore: An array of type byte containing the raw bytes representing the symbols for the 
-    assembly.
-  
+   rawSymbolStore: An array of type byte containing the raw bytes representing the symbols for the assembly.
    Returns: The loaded assembly.
   Load(self: _AppDomain,assemblyRef: AssemblyName) -> Assembly
   
@@ -567,16 +541,16 @@ class _AppDomain:
    Returns: The loaded assembly.
   Load(self: _AppDomain,assemblyString: str) -> Assembly
   
-   Provides COM objects with version-independent access to the 
-    System.AppDomain.Load(System.String) method overload.
+   Provides COM objects with version-independent access to the System.AppDomain.Load(System.String) 
+    method overload.
   
   
    assemblyString: The display name of the assembly. See System.Reflection.Assembly.FullName.
    Returns: The loaded assembly.
   Load(self: _AppDomain,rawAssembly: Array[Byte]) -> Assembly
   
-   Provides COM objects with version-independent access to the 
-    System.AppDomain.Load(System.Byte[]) method overload.
+   Provides COM objects with version-independent access to the System.AppDomain.Load(System.Byte[]) 
+    method overload.
   
   
    rawAssembly: An array of type byte that is a COFF-based image containing an emitted assembly.
@@ -618,12 +592,11 @@ class _AppDomain:
   """
   SetPrincipalPolicy(self: _AppDomain,policy: PrincipalPolicy)
    Provides COM objects with version-independent access to the 
-    System.AppDomain.SetPrincipalPolicy(System.Security.Principal.PrincipalPolicy) 
-    method.
+    System.AppDomain.SetPrincipalPolicy(System.Security.Principal.PrincipalPolicy) method.
   
   
-   policy: One of the System.Security.Principal.PrincipalPolicy values that specifies the 
-    type of the principal object to attach to threads.
+   policy: One of the System.Security.Principal.PrincipalPolicy values that specifies the type of the 
+    principal object to attach to threads.
   """
   pass
  def SetShadowCopyPath(self,s):
@@ -640,8 +613,7 @@ class _AppDomain:
   """
   SetThreadPrincipal(self: _AppDomain,principal: IPrincipal)
    Provides COM objects with version-independent access to the 
-    System.AppDomain.SetThreadPrincipal(System.Security.Principal.IPrincipal) 
-    method.
+    System.AppDomain.SetThreadPrincipal(System.Security.Principal.IPrincipal) method.
   
   
    principal: The principal object to attach to threads.
@@ -651,12 +623,10 @@ class _AppDomain:
   """
   ToString(self: _AppDomain) -> str
   
-   Provides COM objects with version-independent access to the 
-    System.AppDomain.ToString method.
-  
-   Returns: A string formed by concatenating the literal string "Name:",the friendly name 
-    of the application domain,and either string representations of the context 
-    policies or the string "There are no context policies."
+   Provides COM objects with version-independent access to the System.AppDomain.ToString method.
+   Returns: A string formed by concatenating the literal string "Name:",the friendly name of the 
+    application domain,and either string representations of the context policies or the string 
+    "There are no context policies."
   """
   pass
  def __eq__(self,*args):

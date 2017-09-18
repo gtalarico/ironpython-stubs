@@ -8,14 +8,12 @@ class ConsoleKeyInfo(object):
   """
   Equals(self: ConsoleKeyInfo,obj: ConsoleKeyInfo) -> bool
   
-   Gets a value indicating whether the specified System.ConsoleKeyInfo object is 
-    equal to the current System.ConsoleKeyInfo object.
+   Gets a value indicating whether the specified System.ConsoleKeyInfo object is equal to the 
+    current System.ConsoleKeyInfo object.
   
   
    obj: An object to compare to the current System.ConsoleKeyInfo object.
-   Returns: true if obj is equal to the current System.ConsoleKeyInfo object; otherwise,
-    false.
-  
+   Returns: true if obj is equal to the current System.ConsoleKeyInfo object; otherwise,false.
   Equals(self: ConsoleKeyInfo,value: object) -> bool
   
    Gets a value indicating whether the specified object is equal to the current 

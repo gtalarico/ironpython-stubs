@@ -10,14 +10,13 @@ class DataGridLength(object,IEquatable[DataGridLength]):
   """
   Equals(self: DataGridLength,other: DataGridLength) -> bool
   
-   Determines whether the specified System.Windows.Controls.DataGridLength is 
-    equal to the current System.Windows.Controls.DataGridLength.
+   Determines whether the specified System.Windows.Controls.DataGridLength is equal to the current 
+    System.Windows.Controls.DataGridLength.
   
   
    other: The System.Windows.Controls.DataGridLength to compare to the current instance.
-   Returns: true if the specified object is a System.Windows.Controls.DataGridLength with 
-    the same value or sizing mode as the current 
-    System.Windows.Controls.DataGridLength; otherwise,false.
+   Returns: true if the specified object is a System.Windows.Controls.DataGridLength with the same value or 
+    sizing mode as the current System.Windows.Controls.DataGridLength; otherwise,false.
   
   Equals(self: DataGridLength,obj: object) -> bool
   
@@ -26,9 +25,8 @@ class DataGridLength(object,IEquatable[DataGridLength]):
   
   
    obj: The object to compare to the current instance.
-   Returns: true if the specified object is a System.Windows.Controls.DataGridLength with 
-    the same value or sizing mode as the current 
-    System.Windows.Controls.DataGridLength; otherwise,false.
+   Returns: true if the specified object is a System.Windows.Controls.DataGridLength with the same value or 
+    sizing mode as the current System.Windows.Controls.DataGridLength; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -56,11 +54,10 @@ class DataGridLength(object,IEquatable[DataGridLength]):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__[DataGridLength]() -> DataGridLength
-  
   __new__(cls: type,pixels: float)
   __new__(cls: type,value: float,type: DataGridLengthUnitType)
-  __new__(cls: type,value: float,type: DataGridLengthUnitType,desiredValue: float,displayValue: float)
+  __new__(cls: type,value: float,type: DataGridLengthUnitType,desiredValue: float,displayValue: float)
+  __new__[DataGridLength]() -> DataGridLength
   """
   pass
  def __ne__(self,*args):

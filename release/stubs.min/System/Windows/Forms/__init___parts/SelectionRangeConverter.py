@@ -8,9 +8,8 @@ class SelectionRangeConverter(TypeConverter):
   """
   CanConvertFrom(self: SelectionRangeConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Determines if this converter can convert an object of the specified source type 
-    to the native type of the converter by querying the supplied type descriptor 
-    context.
+   Determines if this converter can convert an object of the specified source type to the native 
+    type of the converter by querying the supplied type descriptor context.
   
   
    context: A System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -22,8 +21,8 @@ class SelectionRangeConverter(TypeConverter):
   """
   CanConvertTo(self: SelectionRangeConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Gets a value indicating whether this converter can convert an object to the 
-    specified destination type by using the specified context.
+   Gets a value indicating whether this converter can convert an object to the specified 
+    destination type by using the specified context.
   
   
    context: A System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -35,9 +34,7 @@ class SelectionRangeConverter(TypeConverter):
   """
   ConvertFrom(self: SelectionRangeConverter,context: ITypeDescriptorContext,culture: CultureInfo,value: object) -> object
   
-   Converts the specified value to the converter's native type by using the 
-    specified locale.
-  
+   Converts the specified value to the converter's native type by using the specified locale.
   
    context: A System.ComponentModel.ITypeDescriptorContext that provides a format context.
    culture: The locale information for the conversion.
@@ -49,8 +46,8 @@ class SelectionRangeConverter(TypeConverter):
   """
   ConvertTo(self: SelectionRangeConverter,context: ITypeDescriptorContext,culture: CultureInfo,value: object,destinationType: Type) -> object
   
-   Converts the specified System.Windows.Forms.SelectionRangeConverter object to 
-    another type by using the specified culture.
+   Converts the specified System.Windows.Forms.SelectionRangeConverter object to another type by 
+    using the specified culture.
   
   
    context: A System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -64,14 +61,14 @@ class SelectionRangeConverter(TypeConverter):
   """
   CreateInstance(self: SelectionRangeConverter,context: ITypeDescriptorContext,propertyValues: IDictionary) -> object
   
-   Creates a System.Windows.Forms.SelectionRange object by using the specified 
-    type descriptor and set of property values for that object.
+   Creates a System.Windows.Forms.SelectionRange object by using the specified type descriptor and 
+    set of property values for that object.
   
   
    context: A System.ComponentModel.ITypeDescriptorContext that provides a format context.
    propertyValues: An System.Collections.IDictionary that contains the new property values.
-   Returns: If successful,the newly created System.Windows.Forms.SelectionRange; 
-    otherwise,this method throws an exception.
+   Returns: If successful,the newly created System.Windows.Forms.SelectionRange; otherwise,this method 
+    throws an exception.
   """
   pass
  def GetCreateInstanceSupported(self,context=None):
@@ -79,22 +76,19 @@ class SelectionRangeConverter(TypeConverter):
   GetCreateInstanceSupported(self: SelectionRangeConverter,context: ITypeDescriptorContext) -> bool
   
    Determines if changing a value on an instance should require a call to 
-    erload:System.Windows.Forms.SelectionRangeConverter.CreateInstance to create a 
-    new value.
+    erload:System.Windows.Forms.SelectionRangeConverter.CreateInstance to create a new value.
   
   
    context: A System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   Returns: true if erload:System.Windows.Forms.SelectionRangeConverter.CreateInstance must 
-    be called to make a change to one or more properties; otherwise false.
+   Returns: true if erload:System.Windows.Forms.SelectionRangeConverter.CreateInstance must be called to 
+    make a change to one or more properties; otherwise false.
   """
   pass
  def GetProperties(self,*__args):
   """
   GetProperties(self: SelectionRangeConverter,context: ITypeDescriptorContext,value: object,attributes: Array[Attribute]) -> PropertyDescriptorCollection
   
-   Returns the set of filtered properties for the 
-    System.Windows.Forms.SelectionRange type
-  
+   Returns the set of filtered properties for the System.Windows.Forms.SelectionRange type
   
    context: A System.ComponentModel.ITypeDescriptorContext that provides a format context.
    value: An System.Object that specifies the type of array for which to get properties.
@@ -107,13 +101,12 @@ class SelectionRangeConverter(TypeConverter):
   """
   GetPropertiesSupported(self: SelectionRangeConverter,context: ITypeDescriptorContext) -> bool
   
-   Determines whether the current object supports properties that use the 
-    specified type descriptor context.
+   Determines whether the current object supports properties that use the specified type descriptor 
+    context.
   
   
    context: A System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   Returns: true if erload:System.Windows.Forms.SelectionRangeConverter.GetProperties can 
-    be called to find the properties of a System.Windows.Forms.SelectionRange 
-    object; otherwise,false.
+   Returns: true if erload:System.Windows.Forms.SelectionRangeConverter.GetProperties can be called to find 
+    the properties of a System.Windows.Forms.SelectionRange object; otherwise,false.
   """
   pass

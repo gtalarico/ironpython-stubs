@@ -9,23 +9,20 @@ class SocketAddress(object):
   """
   Equals(self: SocketAddress,comparand: object) -> bool
   
-   Determines whether the specified System.Object is equal to the current 
-    System.Net.SocketAddress instance.
+   Determines whether the specified System.Object is equal to the current System.Net.SocketAddress 
+    instance.
   
   
-   comparand: The specified System.Object to compare with the current 
-    System.Net.SocketAddress instance.
-  
-   Returns: true if the specified System.Object is equal to the current System.Object; 
-    otherwise,false.
+   comparand: The specified System.Object to compare with the current System.Net.SocketAddress instance.
+   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,false.
   """
   pass
  def GetHashCode(self):
   """
   GetHashCode(self: SocketAddress) -> int
   
-   Serves as a hash function for a particular type,suitable for use in hashing 
-    algorithms and data structures like a hash table.
+   Serves as a hash function for a particular type,suitable for use in hashing algorithms and data 
+    structures like a hash table.
   
    Returns: A hash code for the current System.Object.
   """

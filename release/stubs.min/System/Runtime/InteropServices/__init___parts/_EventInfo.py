@@ -4,8 +4,7 @@ class _EventInfo:
   """
   AddEventHandler(self: _EventInfo,target: object,handler: Delegate)
    Provides COM objects with version-independent access to the 
-    System.Reflection.EventInfo.AddEventHandler(System.Object,System.Delegate) 
-    method.
+    System.Reflection.EventInfo.AddEventHandler(System.Object,System.Delegate) method.
   
   
    target: The event source.
@@ -16,13 +15,12 @@ class _EventInfo:
   """
   Equals(self: _EventInfo,other: object) -> bool
   
-   Provides COM objects with version-independent access to the 
-    System.Object.Equals(System.Object) method.
+   Provides COM objects with version-independent access to the System.Object.Equals(System.Object) 
+    method.
   
   
    other: The System.Object to compare with the current System.Object.
-   Returns: true if the specified System.Object is equal to the current System.Object; 
-    otherwise,false.
+   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,false.
   """
   pass
  def GetAddMethod(self,nonPublic=None):
@@ -32,8 +30,8 @@ class _EventInfo:
    Provides COM objects with version-independent access to the 
     System.Reflection.EventInfo.GetAddMethod method.
   
-   Returns: A System.Reflection.MethodInfo object representing the method used to add an 
-    event-handler delegate to the event source.
+   Returns: A System.Reflection.MethodInfo object representing the method used to add an event-handler 
+    delegate to the event source.
   
   GetAddMethod(self: _EventInfo,nonPublic: bool) -> MethodInfo
   
@@ -42,8 +40,8 @@ class _EventInfo:
   
   
    nonPublic: true to return non-public methods; otherwise,false.
-   Returns: A System.Reflection.MethodInfo object representing the method used to add an 
-    event-handler delegate to the event source.
+   Returns: A System.Reflection.MethodInfo object representing the method used to add an event-handler 
+    delegate to the event source.
   """
   pass
  def GetCustomAttributes(self,*__args):
@@ -54,36 +52,29 @@ class _EventInfo:
     System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean) method.
   
   
-   inherit: true to search a member's inheritance chain to find the attributes; otherwise,
-    false.
-  
-   Returns: An array that contains all the custom attributes,or an array with zero (0) 
-    elements if no attributes are defined.
+   inherit: true to search a member's inheritance chain to find the attributes; otherwise,false.
+   Returns: An array that contains all the custom attributes,or an array with zero (0) elements if no 
+    attributes are defined.
   
   GetCustomAttributes(self: _EventInfo,attributeType: Type,inherit: bool) -> Array[object]
   
    Provides COM objects with version-independent access to the 
-    System.Reflection.MemberInfo.GetCustomAttributes(System.Type,System.Boolean) 
-    method.
+    System.Reflection.MemberInfo.GetCustomAttributes(System.Type,System.Boolean) method.
   
   
-   attributeType: The type of attribute to search for. Only attributes that are assignable to 
-    this type are returned.
+   attributeType: The type of attribute to search for. Only attributes that are assignable to this type are 
+    returned.
   
-   inherit: true to search this member's inheritance chain to find the attributes; 
-    otherwise,false.
-  
-   Returns: An array of custom attributes applied to this member,or an array with zero (0) 
-    elements if no attributes have been applied.
+   inherit: true to search this member's inheritance chain to find the attributes; otherwise,false.
+   Returns: An array of custom attributes applied to this member,or an array with zero (0) elements if no 
+    attributes have been applied.
   """
   pass
  def GetHashCode(self):
   """
   GetHashCode(self: _EventInfo) -> int
   
-   Provides COM objects with version-independent access to the 
-    System.Object.GetHashCode method.
-  
+   Provides COM objects with version-independent access to the System.Object.GetHashCode method.
    Returns: The hash code for the current instance.
   """
   pass
@@ -97,8 +88,7 @@ class _EventInfo:
    rgszNames: An array of names to be mapped.
    cNames: The count of the names to be mapped.
    lcid: The locale context in which to interpret the names.
-   rgDispId: An array allocated by the caller that receives the identifiers corresponding to 
-    the names.
+   rgDispId: An array allocated by the caller that receives the identifiers corresponding to the names.
   """
   pass
  def GetRaiseMethod(self,nonPublic=None):
@@ -116,8 +106,7 @@ class _EventInfo:
   
   
    nonPublic: true to return non-public methods; otherwise,false.
-   Returns: The System.Reflection.MethodInfo object that was called when the event was 
-    raised.
+   Returns: The System.Reflection.MethodInfo object that was called when the event was raised.
   """
   pass
  def GetRemoveMethod(self,nonPublic=None):
@@ -127,8 +116,8 @@ class _EventInfo:
    Provides COM objects with version-independent access to the 
     System.Reflection.EventInfo.GetRemoveMethod method.
   
-   Returns: A System.Reflection.MethodInfo object representing the method used to remove an 
-    event-handler delegate from the event source.
+   Returns: A System.Reflection.MethodInfo object representing the method used to remove an event-handler 
+    delegate from the event source.
   
   GetRemoveMethod(self: _EventInfo,nonPublic: bool) -> MethodInfo
   
@@ -137,25 +126,23 @@ class _EventInfo:
   
   
    nonPublic: true to return non-public methods; otherwise,false.
-   Returns: A System.Reflection.MethodInfo object representing the method used to remove an 
-    event-handler delegate from the event source.
+   Returns: A System.Reflection.MethodInfo object representing the method used to remove an event-handler 
+    delegate from the event source.
   """
   pass
  def GetType(self):
   """
   GetType(self: _EventInfo) -> Type
   
-   Provides COM objects with version-independent access to the 
-    System.Object.GetType method.
-  
+   Provides COM objects with version-independent access to the System.Object.GetType method.
    Returns: A System.Type object.
   """
   pass
  def GetTypeInfo(self,iTInfo,lcid,ppTInfo):
   """
   GetTypeInfo(self: _EventInfo,iTInfo: UInt32,lcid: UInt32,ppTInfo: IntPtr)
-   Retrieves the type information for an object,which can be used to get the type 
-    information for an interface.
+   Retrieves the type information for an object,which can be used to get the type information for 
+    an interface.
   
   
    iTInfo: The type information to return.
@@ -167,8 +154,7 @@ class _EventInfo:
   """
   GetTypeInfoCount(self: _EventInfo) -> UInt32
   
-   Retrieves the number of type information interfaces that an object provides 
-    (either 0 or 1).
+   Retrieves the number of type information interfaces that an object provides (either 0 or 1).
   """
   pass
  def Invoke(self,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr):
@@ -181,9 +167,8 @@ class _EventInfo:
    riid: Reserved for future use. Must be IID_NULL.
    lcid: The locale context in which to interpret arguments.
    wFlags: Flags describing the context of the call.
-   pDispParams: A pointer to a structure containing an array of arguments,an array of argument 
-    DISPIDs for named arguments,and counts for the number of elements in the 
-    arrays.
+   pDispParams: A pointer to a structure containing an array of arguments,an array of argument DISPIDs for 
+    named arguments,and counts for the number of elements in the arrays.
   
    pVarResult: A pointer to the location where the result will be stored.
    pExcepInfo: A pointer to a structure that contains exception information.
@@ -199,19 +184,16 @@ class _EventInfo:
   
   
    attributeType: The Type object to which the custom attributes are applied.
-   inherit: true to search this member's inheritance chain to find the attributes; 
-    otherwise,false.
-  
-   Returns: true if one or more instance of the attributeType parameter is applied to this 
-    member; otherwise,false.
+   inherit: true to search this member's inheritance chain to find the attributes; otherwise,false.
+   Returns: true if one or more instance of the attributeType parameter is applied to this member; 
+    otherwise,false.
   """
   pass
  def RemoveEventHandler(self,target,handler):
   """
   RemoveEventHandler(self: _EventInfo,target: object,handler: Delegate)
    Provides COM objects with version-independent access to the 
-    System.Reflection.EventInfo.RemoveEventHandler(System.Object,System.Delegate) 
-    method.
+    System.Reflection.EventInfo.RemoveEventHandler(System.Object,System.Delegate) method.
   
   
    target: The event source.
@@ -222,9 +204,7 @@ class _EventInfo:
   """
   ToString(self: _EventInfo) -> str
   
-   Provides COM objects with version-independent access to the 
-    System.Object.ToString method.
-  
+   Provides COM objects with version-independent access to the System.Object.ToString method.
    Returns: A string that represents the current System.Object.
   """
   pass

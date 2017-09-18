@@ -34,20 +34,14 @@ class CalendarBlackoutDatesCollection(ObservableCollection[CalendarDateRange],IL
   """
   Contains(self: CalendarBlackoutDatesCollection,start: DateTime,end: DateTime) -> bool
   
-   Returns a value that represents whether this collection contains the specified 
-    range of dates.
-  
+   Returns a value that represents whether this collection contains the specified range of dates.
   
    start: The start of the date range.
    end: The end of the date range.
-   Returns: true if all dates in the range are contained in the collection; otherwise,
-    false.
-  
+   Returns: true if all dates in the range are contained in the collection; otherwise,false.
   Contains(self: CalendarBlackoutDatesCollection,date: DateTime) -> bool
   
-   Returns a value that represents whether this collection contains the specified 
-    date.
-  
+   Returns a value that represents whether this collection contains the specified date.
   
    date: The date to search for.
    Returns: true if the collection contains the specified date; otherwise,false.
@@ -57,13 +51,12 @@ class CalendarBlackoutDatesCollection(ObservableCollection[CalendarDateRange],IL
   """
   ContainsAny(self: CalendarBlackoutDatesCollection,range: CalendarDateRange) -> bool
   
-   Returns a value that represents whether this collection contains any dates in 
-    the specified range of dates.
+   Returns a value that represents whether this collection contains any dates in the specified 
+    range of dates.
   
   
    range: The range of dates to search for.
-   Returns: true if any dates in the range are contained in the collection; otherwise,
-    false.
+   Returns: true if any dates in the range are contained in the collection; otherwise,false.
   """
   pass
  def InsertItem(self,*args):
@@ -81,9 +74,7 @@ class CalendarBlackoutDatesCollection(ObservableCollection[CalendarDateRange],IL
  def OnCollectionChanged(self,*args):
   """
   OnCollectionChanged(self: ObservableCollection[CalendarDateRange],e: NotifyCollectionChangedEventArgs)
-   Raises the System.Collections.ObjectModel.ObservableCollection event with the 
-    provided arguments.
-  
+   Raises the System.Collections.ObjectModel.ObservableCollection event with the provided arguments.
   
    e: Arguments of the event being raised.
   """
@@ -91,9 +82,7 @@ class CalendarBlackoutDatesCollection(ObservableCollection[CalendarDateRange],IL
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: ObservableCollection[CalendarDateRange],e: PropertyChangedEventArgs)
-   Raises the System.Collections.ObjectModel.ObservableCollection event with the 
-    provided arguments.
-  
+   Raises the System.Collections.ObjectModel.ObservableCollection event with the provided arguments.
   
    e: Arguments of the event being raised.
   """

@@ -19,9 +19,9 @@ class Delegate(object,ICloneable,ISerializable):
    Concatenates the invocation lists of an array of delegates.
   
    delegates: The array of delegates to combine.
-   Returns: A new delegate with an invocation list that concatenates the invocation lists 
-    of the delegates in the delegates array. Returns null if delegates is null,if 
-    delegates contains zero elements,or if every entry in delegates is null.
+   Returns: A new delegate with an invocation list that concatenates the invocation lists of the delegates 
+    in the delegates array. Returns null if delegates is null,if delegates contains zero elements,
+    or if every entry in delegates is null.
   
   Combine(a: Delegate,b: Delegate) -> Delegate
   
@@ -29,26 +29,25 @@ class Delegate(object,ICloneable,ISerializable):
   
    a: The delegate whose invocation list comes first.
    b: The delegate whose invocation list comes last.
-   Returns: A new delegate with an invocation list that concatenates the invocation lists 
-    of a and b in that order. Returns a if b is null,returns b if a is a null 
-    reference,and returns a null reference if both a and b are null references.
+   Returns: A new delegate with an invocation list that concatenates the invocation lists of a and b in that 
+    order. Returns a if b is null,returns b if a is a null reference,and returns a null reference 
+    if both a and b are null references.
   """
   pass
  def CombineImpl(self,*args):
   """
   CombineImpl(self: Delegate,d: Delegate) -> Delegate
   
-   Concatenates the invocation lists of the specified multicast (combinable) 
-    delegate and the current multicast (combinable) delegate.
+   Concatenates the invocation lists of the specified multicast (combinable) delegate and the 
+    current multicast (combinable) delegate.
   
   
-   d: The multicast (combinable) delegate whose invocation list to append to the end 
-    of the invocation list of the current multicast (combinable) delegate.
+   d: The multicast (combinable) delegate whose invocation list to append to the end of the invocation 
+    list of the current multicast (combinable) delegate.
   
-   Returns: A new multicast (combinable) delegate with an invocation list that concatenates 
-    the invocation list of the current multicast (combinable) delegate and the 
-    invocation list of d,or the current multicast (combinable) delegate if d is 
-    null.
+   Returns: A new multicast (combinable) delegate with an invocation list that concatenates the invocation 
+    list of the current multicast (combinable) delegate and the invocation list of d,or the current 
+    multicast (combinable) delegate if d is null.
   """
   pass
  @staticmethod
@@ -56,151 +55,135 @@ class Delegate(object,ICloneable,ISerializable):
   """
   CreateDelegate(type: Type,method: MethodInfo,throwOnBindFailure: bool) -> Delegate
   
-   Creates a delegate of the specified type to represent the specified static 
-    method,with the specified behavior on failure to bind.
+   Creates a delegate of the specified type to represent the specified static method,with the 
+    specified behavior on failure to bind.
   
   
    type: The System.Type of delegate to create.
-   method: The System.Reflection.MethodInfo describing the static or instance method the 
-    delegate is to represent.
+   method: The System.Reflection.MethodInfo describing the static or instance method the delegate is to 
+    represent.
   
    throwOnBindFailure: true to throw an exception if method cannot be bound; otherwise,false.
    Returns: A delegate of the specified type to represent the specified static method.
   CreateDelegate(type: Type,target: Type,method: str,ignoreCase: bool,throwOnBindFailure: bool) -> Delegate
   
-   Creates a delegate of the specified type that represents the specified static 
-    method of the specified class,with the specified case-sensitivity and the 
-    specified behavior on failure to bind.
+   Creates a delegate of the specified type that represents the specified static method of the 
+    specified class,with the specified case-sensitivity and the specified behavior on failure to 
+    bind.
   
   
    type: The System.Type of delegate to create.
    target: The System.Type representing the class that implements method.
    method: The name of the static method that the delegate is to represent.
-   ignoreCase: A Boolean indicating whether to ignore the case when comparing the name of the 
-    method.
-  
+   ignoreCase: A Boolean indicating whether to ignore the case when comparing the name of the method.
    throwOnBindFailure: true to throw an exception if method cannot be bound; otherwise,false.
-   Returns: A delegate of the specified type that represents the specified static method of 
-    the specified class.
+   Returns: A delegate of the specified type that represents the specified static method of the specified 
+    class.
   
   CreateDelegate(type: Type,firstArgument: object,method: MethodInfo) -> Delegate
   
-   Creates a delegate of the specified type that represents the specified static 
-    or instance method,with the specified first argument.
+   Creates a delegate of the specified type that represents the specified static or instance 
+    method,with the specified first argument.
   
   
    type: The System.Type of delegate to create.
-   firstArgument: The object to which the delegate is bound,or null to treat method as static 
-    (Shared in Visual Basic).
+   firstArgument: The object to which the delegate is bound,or null to treat method as static (Shared in Visual 
+    Basic).
   
-   method: The System.Reflection.MethodInfo describing the static or instance method the 
-    delegate is to represent.
+   method: The System.Reflection.MethodInfo describing the static or instance method the delegate is to 
+    represent.
   
-   Returns: A delegate of the specified type that represents the specified static or 
-    instance method.
-  
+   Returns: A delegate of the specified type that represents the specified static or instance method.
   CreateDelegate(type: Type,method: MethodInfo) -> Delegate
   
-   Creates a delegate of the specified type to represent the specified static 
-    method.
-  
+   Creates a delegate of the specified type to represent the specified static method.
   
    type: The System.Type of delegate to create.
-   method: The System.Reflection.MethodInfo describing the static or instance method the 
-    delegate is to represent. Only static methods are supported in the .NET 
-    Framework version 1.0 and 1.1.
+   method: The System.Reflection.MethodInfo describing the static or instance method the delegate is to 
+    represent. Only static methods are supported in the .NET Framework version 1.0 and 1.1.
   
    Returns: A delegate of the specified type to represent the specified static method.
   CreateDelegate(type: Type,firstArgument: object,method: MethodInfo,throwOnBindFailure: bool) -> Delegate
   
-   Creates a delegate of the specified type that represents the specified static 
-    or instance method,with the specified first argument and the specified 
-    behavior on failure to bind.
+   Creates a delegate of the specified type that represents the specified static or instance 
+    method,with the specified first argument and the specified behavior on failure to bind.
   
   
    type: A System.Type representing the type of delegate to create.
-   firstArgument: An System.Object that is the first argument of the method the delegate 
-    represents. For instance methods,it must be compatible with the instance type.
+   firstArgument: An System.Object that is the first argument of the method the delegate represents. For instance 
+    methods,it must be compatible with the instance type.
   
-   method: The System.Reflection.MethodInfo describing the static or instance method the 
-    delegate is to represent.
+   method: The System.Reflection.MethodInfo describing the static or instance method the delegate is to 
+    represent.
   
    throwOnBindFailure: true to throw an exception if method cannot be bound; otherwise,false.
-   Returns: A delegate of the specified type that represents the specified static or 
-    instance method,or null if throwOnBindFailure is false and the delegate cannot 
-    be bound to method.
+   Returns: A delegate of the specified type that represents the specified static or instance method,or 
+    null if throwOnBindFailure is false and the delegate cannot be bound to method.
   
   CreateDelegate(type: Type,target: object,method: str,ignoreCase: bool) -> Delegate
   
-   Creates a delegate of the specified type that represents the specified instance 
-    method to invoke on the specified class instance with the specified 
-    case-sensitivity.
+   Creates a delegate of the specified type that represents the specified instance method to invoke 
+    on the specified class instance with the specified case-sensitivity.
   
   
    type: The System.Type of delegate to create.
    target: The class instance on which method is invoked.
    method: The name of the instance method that the delegate is to represent.
-   ignoreCase: A Boolean indicating whether to ignore the case when comparing the name of the 
-    method.
-  
-   Returns: A delegate of the specified type that represents the specified instance method 
-    to invoke on the specified class instance.
+   ignoreCase: A Boolean indicating whether to ignore the case when comparing the name of the method.
+   Returns: A delegate of the specified type that represents the specified instance method to invoke on the 
+    specified class instance.
   
   CreateDelegate(type: Type,target: object,method: str) -> Delegate
   
-   Creates a delegate of the specified type that represents the specified instance 
-    method to invoke on the specified class instance.
+   Creates a delegate of the specified type that represents the specified instance method to invoke 
+    on the specified class instance.
   
   
    type: The System.Type of delegate to create.
    target: The class instance on which method is invoked.
    method: The name of the instance method that the delegate is to represent.
-   Returns: A delegate of the specified type that represents the specified instance method 
-    to invoke on the specified class instance.
+   Returns: A delegate of the specified type that represents the specified instance method to invoke on the 
+    specified class instance.
   
   CreateDelegate(type: Type,target: object,method: str,ignoreCase: bool,throwOnBindFailure: bool) -> Delegate
   
-   Creates a delegate of the specified type that represents the specified instance 
-    method to invoke on the specified class instance,with the specified 
-    case-sensitivity and the specified behavior on failure to bind.
+   Creates a delegate of the specified type that represents the specified instance method to invoke 
+    on the specified class instance,with the specified case-sensitivity and the specified behavior 
+    on failure to bind.
   
   
    type: The System.Type of delegate to create.
    target: The class instance on which method is invoked.
    method: The name of the instance method that the delegate is to represent.
-   ignoreCase: A Boolean indicating whether to ignore the case when comparing the name of the 
-    method.
-  
+   ignoreCase: A Boolean indicating whether to ignore the case when comparing the name of the method.
    throwOnBindFailure: true to throw an exception if method cannot be bound; otherwise,false.
-   Returns: A delegate of the specified type that represents the specified instance method 
-    to invoke on the specified class instance.
+   Returns: A delegate of the specified type that represents the specified instance method to invoke on the 
+    specified class instance.
   
   CreateDelegate(type: Type,target: Type,method: str,ignoreCase: bool) -> Delegate
   
-   Creates a delegate of the specified type that represents the specified static 
-    method of the specified class,with the specified case-sensitivity.
+   Creates a delegate of the specified type that represents the specified static method of the 
+    specified class,with the specified case-sensitivity.
   
   
    type: The System.Type of delegate to create.
    target: The System.Type representing the class that implements method.
    method: The name of the static method that the delegate is to represent.
-   ignoreCase: A Boolean indicating whether to ignore the case when comparing the name of the 
-    method.
-  
-   Returns: A delegate of the specified type that represents the specified static method of 
-    the specified class.
+   ignoreCase: A Boolean indicating whether to ignore the case when comparing the name of the method.
+   Returns: A delegate of the specified type that represents the specified static method of the specified 
+    class.
   
   CreateDelegate(type: Type,target: Type,method: str) -> Delegate
   
-   Creates a delegate of the specified type that represents the specified static 
-    method of the specified class.
+   Creates a delegate of the specified type that represents the specified static method of the 
+    specified class.
   
   
    type: The System.Type of delegate to create.
    target: The System.Type representing the class that implements method.
    method: The name of the static method that the delegate is to represent.
-   Returns: A delegate of the specified type that represents the specified static method of 
-    the specified class.
+   Returns: A delegate of the specified type that represents the specified static method of the specified 
+    class.
   """
   pass
  def DynamicInvoke(self,args):
@@ -209,9 +192,9 @@ class Delegate(object,ICloneable,ISerializable):
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by 
-    the current delegate.-or- null,if the method represented by the current 
-    delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by the current 
+    delegate.-or- null,if the method represented by the current delegate does not require 
+    arguments.
   
    Returns: The object returned by the method represented by the delegate.
   """
@@ -222,9 +205,9 @@ class Delegate(object,ICloneable,ISerializable):
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by 
-    the current delegate.-or- null,if the method represented by the current 
-    delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by the current 
+    delegate.-or- null,if the method represented by the current delegate does not require 
+    arguments.
   
    Returns: The object returned by the method represented by the delegate.
   """
@@ -233,13 +216,13 @@ class Delegate(object,ICloneable,ISerializable):
   """
   Equals(self: Delegate,obj: object) -> bool
   
-   Determines whether the specified object and the current delegate are of the 
-    same type and share the same targets,methods,and invocation list.
+   Determines whether the specified object and the current delegate are of the same type and share 
+    the same targets,methods,and invocation list.
   
   
    obj: The object to compare with the current delegate.
-   Returns: true if obj and the current delegate have the same targets,methods,and 
-    invocation list; otherwise,false.
+   Returns: true if obj and the current delegate have the same targets,methods,and invocation list; 
+    otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -263,8 +246,7 @@ class Delegate(object,ICloneable,ISerializable):
   GetMethodImpl(self: Delegate) -> MethodInfo
   
    Gets the static method represented by the current delegate.
-   Returns: A System.Reflection.MethodInfo describing the static method represented by the 
-    current delegate.
+   Returns: A System.Reflection.MethodInfo describing the static method represented by the current delegate.
   """
   pass
  def GetObjectData(self,info,context):
@@ -287,20 +269,17 @@ class Delegate(object,ICloneable,ISerializable):
   """
   Remove(source: Delegate,value: Delegate) -> Delegate
   
-   Removes the last occurrence of the invocation list of a delegate from the 
-    invocation list of another delegate.
+   Removes the last occurrence of the invocation list of a delegate from the invocation list of 
+    another delegate.
   
   
    source: The delegate from which to remove the invocation list of value.
-   value: The delegate that supplies the invocation list to remove from the invocation 
-    list of source.
-  
-   Returns: A new delegate with an invocation list formed by taking the invocation list of 
-    source and removing the last occurrence of the invocation list of value,if the 
-    invocation list of value is found within the invocation list of source. Returns 
-    source if value is null or if the invocation list of value is not found within 
-    the invocation list of source. Returns a null reference if the invocation list 
-    of value is equal to the invocation list of source or if source is a null 
+   value: The delegate that supplies the invocation list to remove from the invocation list of source.
+   Returns: A new delegate with an invocation list formed by taking the invocation list of source and 
+    removing the last occurrence of the invocation list of value,if the invocation list of value is 
+    found within the invocation list of source. Returns source if value is null or if the invocation 
+    list of value is not found within the invocation list of source. Returns a null reference if the 
+    invocation list of value is equal to the invocation list of source or if source is a null 
     reference.
   """
   pass
@@ -309,42 +288,35 @@ class Delegate(object,ICloneable,ISerializable):
   """
   RemoveAll(source: Delegate,value: Delegate) -> Delegate
   
-   Removes all occurrences of the invocation list of a delegate from the 
-    invocation list of another delegate.
+   Removes all occurrences of the invocation list of a delegate from the invocation list of another 
+    delegate.
   
   
    source: The delegate from which to remove the invocation list of value.
-   value: The delegate that supplies the invocation list to remove from the invocation 
-    list of source.
-  
-   Returns: A new delegate with an invocation list formed by taking the invocation list of 
-    source and removing all occurrences of the invocation list of value,if the 
-    invocation list of value is found within the invocation list of source. Returns 
-    source if value is null or if the invocation list of value is not found within 
-    the invocation list of source. Returns a null reference if the invocation list 
-    of value is equal to the invocation list of source,if source contains only a 
-    series of invocation lists that are equal to the invocation list of value,or 
-    if source is a null reference.
+   value: The delegate that supplies the invocation list to remove from the invocation list of source.
+   Returns: A new delegate with an invocation list formed by taking the invocation list of source and 
+    removing all occurrences of the invocation list of value,if the invocation list of value is 
+    found within the invocation list of source. Returns source if value is null or if the invocation 
+    list of value is not found within the invocation list of source. Returns a null reference if the 
+    invocation list of value is equal to the invocation list of source,if source contains only a 
+    series of invocation lists that are equal to the invocation list of value,or if source is a 
+    null reference.
   """
   pass
  def RemoveImpl(self,*args):
   """
   RemoveImpl(self: Delegate,d: Delegate) -> Delegate
   
-   Removes the invocation list of a delegate from the invocation list of another 
+   Removes the invocation list of a delegate from the invocation list of another delegate.
+  
+   d: The delegate that supplies the invocation list to remove from the invocation list of the current 
     delegate.
   
-  
-   d: The delegate that supplies the invocation list to remove from the invocation 
-    list of the current delegate.
-  
-   Returns: A new delegate with an invocation list formed by taking the invocation list of 
-    the current delegate and removing the invocation list of value,if the 
-    invocation list of value is found within the current delegate's invocation 
-    list. Returns the current delegate if value is null or if the invocation list 
-    of value is not found within the current delegate's invocation list. Returns 
-    null if the invocation list of value is equal to the current delegate's 
-    invocation list.
+   Returns: A new delegate with an invocation list formed by taking the invocation list of the current 
+    delegate and removing the invocation list of value,if the invocation list of value is found 
+    within the current delegate's invocation list. Returns the current delegate if value is null or 
+    if the invocation list of value is not found within the current delegate's invocation list. 
+    Returns null if the invocation list of value is equal to the current delegate's invocation list.
   """
   pass
  def __call__(self,*args):

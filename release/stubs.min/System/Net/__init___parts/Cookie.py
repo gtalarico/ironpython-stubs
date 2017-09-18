@@ -14,11 +14,10 @@ class Cookie(object):
    Overrides the System.Object.Equals(System.Object) method.
   
    comparand: A reference to a System.Net.Cookie.
-   Returns: Returns true if the System.Net.Cookie is equal to comparand. Two 
-    System.Net.Cookie instances are equal if their System.Net.Cookie.Name,
-    System.Net.Cookie.Value,System.Net.Cookie.Path,System.Net.Cookie.Domain,and 
-    System.Net.Cookie.Version properties are equal. System.Net.Cookie.Name and 
-    System.Net.Cookie.Domain string comparisons are case-insensitive.
+   Returns: Returns true if the System.Net.Cookie is equal to comparand. Two System.Net.Cookie instances are 
+    equal if their System.Net.Cookie.Name,System.Net.Cookie.Value,System.Net.Cookie.Path,
+    System.Net.Cookie.Domain,and System.Net.Cookie.Version properties are equal. 
+    System.Net.Cookie.Name and System.Net.Cookie.Domain string comparisons are case-insensitive.
   """
   pass
  def GetHashCode(self):
@@ -34,8 +33,8 @@ class Cookie(object):
   ToString(self: Cookie) -> str
   
    Overrides the System.Object.ToString method.
-   Returns: Returns a string representation of this System.Net.Cookie object that is 
-    suitable for including in a HTTP Cookie: request header.
+   Returns: Returns a string representation of this System.Net.Cookie object that is suitable for including 
+    in a HTTP Cookie: request header.
   """
   pass
  def __eq__(self,*args):

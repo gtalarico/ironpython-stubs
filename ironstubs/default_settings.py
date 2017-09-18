@@ -48,7 +48,7 @@ ASSEMBLIES.sort()
 REVIT_ASSEMBLIES = [
     # | Revit
     'RevitAPI',
-    'RevitAPIU',
+    'RevitAPIUI',
     'RevitServices',
     'RevitNodes',
     ]

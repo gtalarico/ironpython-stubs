@@ -7,15 +7,11 @@ class FileDialogCustomPlacesCollection(Collection[FileDialogCustomPlace],IList[F
  def Add(self,*__args):
   """
   Add(self: FileDialogCustomPlacesCollection,knownFolderGuid: Guid)
-   Adds a custom place to the 
-    System.Windows.Forms.FileDialogCustomPlacesCollection collection.
-  
+   Adds a custom place to the System.Windows.Forms.FileDialogCustomPlacesCollection collection.
   
    knownFolderGuid: A System.Guid that represents a Windows Vista Known Folder.
   Add(self: FileDialogCustomPlacesCollection,path: str)
-   Adds a custom place to the 
-    System.Windows.Forms.FileDialogCustomPlacesCollection collection.
-  
+   Adds a custom place to the System.Windows.Forms.FileDialogCustomPlacesCollection collection.
   
    path: A folder path to the custom place.
   """
@@ -32,9 +28,7 @@ class FileDialogCustomPlacesCollection(Collection[FileDialogCustomPlace],IList[F
  def RemoveItem(self,*args):
   """
   RemoveItem(self: Collection[FileDialogCustomPlace],index: int)
-   Removes the element at the specified index of the 
-    System.Collections.ObjectModel.Collection.
-  
+   Removes the element at the specified index of the System.Collections.ObjectModel.Collection.
   
    index: The zero-based index of the element to remove.
   """

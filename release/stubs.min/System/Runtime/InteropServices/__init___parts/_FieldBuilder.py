@@ -10,15 +10,14 @@ class _FieldBuilder:
    rgszNames: An array of names to be mapped.
    cNames: The count of the names to be mapped.
    lcid: The locale context in which to interpret the names.
-   rgDispId: An array allocated by the caller that receives the identifiers corresponding to 
-    the names.
+   rgDispId: An array allocated by the caller that receives the identifiers corresponding to the names.
   """
   pass
  def GetTypeInfo(self,iTInfo,lcid,ppTInfo):
   """
   GetTypeInfo(self: _FieldBuilder,iTInfo: UInt32,lcid: UInt32,ppTInfo: IntPtr)
-   Retrieves the type information for an object,which can be used to get the type 
-    information for an interface.
+   Retrieves the type information for an object,which can be used to get the type information for 
+    an interface.
   
   
    iTInfo: The type information to return.
@@ -30,8 +29,7 @@ class _FieldBuilder:
   """
   GetTypeInfoCount(self: _FieldBuilder) -> UInt32
   
-   Retrieves the number of type information interfaces that an object provides 
-    (either 0 or 1).
+   Retrieves the number of type information interfaces that an object provides (either 0 or 1).
   """
   pass
  def Invoke(self,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr):
@@ -44,9 +42,8 @@ class _FieldBuilder:
    riid: Reserved for future use. Must be IID_NULL.
    lcid: The locale context in which to interpret arguments.
    wFlags: Flags describing the context of the call.
-   pDispParams: A pointer to a structure containing an array of arguments,an array of argument 
-    DISPIDs for named arguments,and counts for the number of elements in the 
-    arrays.
+   pDispParams: A pointer to a structure containing an array of arguments,an array of argument DISPIDs for 
+    named arguments,and counts for the number of elements in the arrays.
   
    pVarResult: A pointer to the location where the result will be stored.
    pExcepInfo: A pointer to a structure that contains exception information.

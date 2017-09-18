@@ -17,8 +17,8 @@ class ToolStripDropDownItemAccessibleObject(ToolStripItemAccessibleObject,IMarsh
    Retrieves the accessible child control corresponding to the specified index.
   
    index: The zero-based index of the accessible child control.
-   Returns: An System.Windows.Forms.AccessibleObject that represents the accessible child 
-    control corresponding to the specified index.
+   Returns: An System.Windows.Forms.AccessibleObject that represents the accessible child control 
+    corresponding to the specified index.
   """
   pass
  def GetChildCount(self):
@@ -35,11 +35,11 @@ class ToolStripDropDownItemAccessibleObject(ToolStripItemAccessibleObject,IMarsh
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -51,16 +51,15 @@ class ToolStripDropDownItemAccessibleObject(ToolStripItemAccessibleObject,IMarsh
  def UseStdAccessibleObjects(self,*args):
   """
   UseStdAccessibleObjects(self: AccessibleObject,handle: IntPtr,objid: int)
-   Associates an object with an instance of an 
-    System.Windows.Forms.AccessibleObject based on the handle and the object id of 
-    the object.
+   Associates an object with an instance of an System.Windows.Forms.AccessibleObject based on the 
+    handle and the object id of the object.
   
   
    handle: An System.IntPtr that contains the handle of the object.
    objid: An Int that defines the type of object that the handle parameter refers to.
   UseStdAccessibleObjects(self: AccessibleObject,handle: IntPtr)
-   Associates an object with an instance of an 
-    System.Windows.Forms.AccessibleObject based on the handle of the object.
+   Associates an object with an instance of an System.Windows.Forms.AccessibleObject based on the 
+    handle of the object.
   
   
    handle: An System.IntPtr that contains the handle of the object.

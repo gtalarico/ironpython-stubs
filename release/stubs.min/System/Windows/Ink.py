@@ -2,7 +2,7 @@
 # module System.Windows.Ink calls itself Ink
 # from PresentationCore,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -116,11 +116,10 @@ class DrawingAttributes(object,INotifyPropertyChanged):
    Adds a custom property to the System.Windows.Ink.DrawingAttributes object.
   
    propertyDataId: The System.Guid to associate with the custom property.
-   propertyData: The value of the custom property. propertyData must be of type System.Char,
-    System.Byte,System.Int16,System.UInt16,System.Int32,System.UInt32,
-    System.Int64,System.UInt64,System.Single,System.Double,System.DateTime,
-    System.Boolean,System.String,System.Decimal or an array of these data types; 
-    however it cannot be an array of type System.String.
+   propertyData: The value of the custom property. propertyData must be of type System.Char,System.Byte,
+    System.Int16,System.UInt16,System.Int32,System.UInt32,System.Int64,System.UInt64,
+    System.Single,System.Double,System.DateTime,System.Boolean,System.String,System.Decimal or 
+    an array of these data types; however it cannot be an array of type System.String.
   """
   pass
  def Clone(self):
@@ -135,21 +134,21 @@ class DrawingAttributes(object,INotifyPropertyChanged):
   """
   ContainsPropertyData(self: DrawingAttributes,propertyDataId: Guid) -> bool
   
-   Returns a value that indicates whether the specified property data identifier 
-    is in the System.Windows.Ink.DrawingAttributes object.
+   Returns a value that indicates whether the specified property data identifier is in the 
+    System.Windows.Ink.DrawingAttributes object.
   
   
    propertyDataId: The System.Guid to locate in the System.Windows.Ink.DrawingAttributes object .
-   Returns: true if the specified property data identifier is in the 
-    System.Windows.Ink.DrawingAttributes object; otherwise,false.
+   Returns: true if the specified property data identifier is in the System.Windows.Ink.DrawingAttributes 
+    object; otherwise,false.
   """
   pass
  def Equals(self,o):
   """
   Equals(self: DrawingAttributes,o: object) -> bool
   
-   Determines whether the specified System.Windows.Ink.DrawingAttributes object is 
-    equal to the current System.Windows.Ink.DrawingAttributes object.
+   Determines whether the specified System.Windows.Ink.DrawingAttributes object is equal to the 
+    current System.Windows.Ink.DrawingAttributes object.
   
   
    o: The System.Windows.Ink.DrawingAttributes object to compare to the current 
@@ -336,9 +335,7 @@ class DrawingAttributesReplacedEventHandler(MulticastDelegate,ICloneable,ISerial
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new 
-    delegate.
-  
+   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -350,9 +347,9 @@ class DrawingAttributesReplacedEventHandler(MulticastDelegate,ICloneable,ISerial
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by 
-    the current delegate.-or- null,if the method represented by the current 
-    delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by the current 
+    delegate.-or- null,if the method represented by the current delegate does not require 
+    arguments.
   
    Returns: The object returned by the method represented by the delegate.
   """
@@ -375,14 +372,13 @@ class DrawingAttributesReplacedEventHandler(MulticastDelegate,ICloneable,ISerial
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate 
-    that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
+    the specified delegate.
   
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new 
-    System.Delegate without value in its invocation list; otherwise,this instance 
-    with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without 
+    value in its invocation list; otherwise,this instance with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -471,22 +467,20 @@ class GestureRecognizer(DependencyObject,IDisposable):
   GetEnabledGestures(self: GestureRecognizer) -> ReadOnlyCollection[ApplicationGesture]
   
    Gets the gestures that the System.Windows.Ink.GestureRecognizer recognizes.
-   Returns: An array of type System.Windows.Ink.ApplicationGesture that contains gestures 
-    the System.Windows.Ink.GestureRecognizer is set to recognize.
+   Returns: An array of type System.Windows.Ink.ApplicationGesture that contains gestures the 
+    System.Windows.Ink.GestureRecognizer is set to recognize.
   """
   pass
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: DependencyObject,e: DependencyPropertyChangedEventArgs)
    Invoked whenever the effective value of any dependency property on this 
-    System.Windows.DependencyObject has been updated. The specific dependency 
-    property that changed is reported in the event data.
+    System.Windows.DependencyObject has been updated. The specific dependency property that changed 
+    is reported in the event data.
   
   
-   e: Event data that will contain the dependency property identifier of interest,
-    the property metadata for the type,and old and new values.
-  
-  OnPropertyChanged(self: Window_16$17,e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: Label_17$18,e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: TextBox_18$19,e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: Button_19$20,e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: CheckBox_20$21,e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: ComboBox_21$22,e: DependencyPropertyChangedEventArgs)OnPropertyChanged(self: Separator_22$23,e: DependencyPropertyChangedEventArgs)
+   e: Event data that will contain the dependency property identifier of interest,the property 
+    metadata for the type,and old and new values.
   """
   pass
  def Recognize(self,strokes):
@@ -496,8 +490,8 @@ class GestureRecognizer(DependencyObject,IDisposable):
    Looks for gestures in the specified System.Windows.Ink.StrokeCollection.
   
    strokes: The System.Windows.Ink.StrokeCollection to search for gestures.
-   Returns: An array of type System.Windows.Ink.GestureRecognitionResult that contains 
-    application gestures that the System.Windows.Ink.GestureRecognizer recognized.
+   Returns: An array of type System.Windows.Ink.GestureRecognitionResult that contains application gestures 
+    that the System.Windows.Ink.GestureRecognizer recognized.
   """
   pass
  def SetEnabledGestures(self,applicationGestures):
@@ -507,28 +501,26 @@ class GestureRecognizer(DependencyObject,IDisposable):
   """
   ShouldSerializeProperty(self: DependencyObject,dp: DependencyProperty) -> bool
   
-   Returns a value that indicates whether serialization processes should serialize 
-    the value for the provided dependency property.
+   Returns a value that indicates whether serialization processes should serialize the value for 
+    the provided dependency property.
   
   
    dp: The identifier for the dependency property that should be serialized.
-   Returns: true if the dependency property that is supplied should be value-serialized; 
-    otherwise,false.
-  
-  ShouldSerializeProperty(self: Window_16$17,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Label_17$18,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: TextBox_18$19,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Button_19$20,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: CheckBox_20$21,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: ComboBox_21$22,dp: DependencyProperty) -> bool
-  ShouldSerializeProperty(self: Separator_22$23,dp: DependencyProperty) -> bool
+   Returns: true if the dependency property that is supplied should be value-serialized; otherwise,false.
   """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -647,9 +639,7 @@ class LassoSelectionChangedEventHandler(MulticastDelegate,ICloneable,ISerializab
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new 
-    delegate.
-  
+   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -661,9 +651,9 @@ class LassoSelectionChangedEventHandler(MulticastDelegate,ICloneable,ISerializab
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by 
-    the current delegate.-or- null,if the method represented by the current 
-    delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by the current 
+    delegate.-or- null,if the method represented by the current delegate does not require 
+    arguments.
   
    Returns: The object returned by the method represented by the delegate.
   """
@@ -686,14 +676,13 @@ class LassoSelectionChangedEventHandler(MulticastDelegate,ICloneable,ISerializab
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate 
-    that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
+    the specified delegate.
   
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new 
-    System.Delegate without value in its invocation list; otherwise,this instance 
-    with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without 
+    value in its invocation list; otherwise,this instance with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -752,9 +741,7 @@ class PropertyDataChangedEventHandler(MulticastDelegate,ICloneable,ISerializable
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new 
-    delegate.
-  
+   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -766,9 +753,9 @@ class PropertyDataChangedEventHandler(MulticastDelegate,ICloneable,ISerializable
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by 
-    the current delegate.-or- null,if the method represented by the current 
-    delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by the current 
+    delegate.-or- null,if the method represented by the current delegate does not require 
+    arguments.
   
    Returns: The object returned by the method represented by the delegate.
   """
@@ -791,14 +778,13 @@ class PropertyDataChangedEventHandler(MulticastDelegate,ICloneable,ISerializable
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate 
-    that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
+    the specified delegate.
   
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new 
-    System.Delegate without value in its invocation list; otherwise,this instance 
-    with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without 
+    value in its invocation list; otherwise,this instance with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -875,10 +861,9 @@ class Stroke(object,INotifyPropertyChanged):
   
    propertyDataId: The unique identifier for the property.
    propertyData: The value of the custom property. propertyData must be of type System.Char,
-    System.Byte,System.Int16,,System.UInt16,System.Int32,System.UInt32,
-    System.Int64,System.UInt64,System.Single,System.Double,System.DateTime,
-    System.Boolean,System.String,System.Decimal  or an array of these data types,
-    except System.String,which is not allowed.
+    System.Byte,System.Int16,,System.UInt16,System.Int32,System.UInt32,System.Int64,
+    System.UInt64,System.Single,System.Double,System.DateTime,System.Boolean,System.String,
+    System.Decimal  or an array of these data types,except System.String,which is not allowed.
   """
   pass
  def Clone(self):
@@ -893,8 +878,8 @@ class Stroke(object,INotifyPropertyChanged):
   """
   ContainsPropertyData(self: Stroke,propertyDataId: Guid) -> bool
   
-   Returns a value that indicates whether the System.Windows.Ink.Stroke object 
-    contains the specified custom property.
+   Returns a value that indicates whether the System.Windows.Ink.Stroke object contains the 
+    specified custom property.
   
   
    propertyDataId: The unique identifier for the property.
@@ -908,12 +893,8 @@ class Stroke(object,INotifyPropertyChanged):
     System.Windows.Media.DrawingContext and Microsoft.Ink.DrawingAttributes.
   
   
-   drawingContext: The System.Windows.Media.DrawingContext object onto which the stroke will be 
-    rendered.
-  
-   drawingAttributes: The Microsoft.Ink.DrawingAttributes object defining the attributes of the 
-    stroke that is drawn.
-  
+   drawingContext: The System.Windows.Media.DrawingContext object onto which the stroke will be rendered.
+   drawingAttributes: The Microsoft.Ink.DrawingAttributes object defining the attributes of the stroke that is drawn.
   Draw(self: Stroke,context: DrawingContext)
    Renders the System.Windows.Ink.Stroke object based upon the specified 
     System.Windows.Media.DrawingContext.
@@ -922,16 +903,12 @@ class Stroke(object,INotifyPropertyChanged):
  def DrawCore(self,*args):
   """
   DrawCore(self: Stroke,drawingContext: DrawingContext,drawingAttributes: DrawingAttributes)
-   Renders the System.Windows.Ink.Stroke on the specified 
-    System.Windows.Media.DrawingContext using the specified 
-    Microsoft.Ink.DrawingAttributes.
+   Renders the System.Windows.Ink.Stroke on the specified System.Windows.Media.DrawingContext using 
+    the specified Microsoft.Ink.DrawingAttributes.
   
   
-   drawingContext: The System.Windows.Media.DrawingContext object onto which the stroke will be 
-    rendered.
-  
-   drawingAttributes: The Microsoft.Ink.DrawingAttributes object defining the attributes of the 
-    stroke that is drawn.
+   drawingContext: The System.Windows.Media.DrawingContext object onto which the stroke will be rendered.
+   drawingAttributes: The Microsoft.Ink.DrawingAttributes object defining the attributes of the stroke that is drawn.
   """
   pass
  def GetBezierStylusPoints(self):
@@ -941,9 +918,8 @@ class Stroke(object,INotifyPropertyChanged):
    Returns the stylus points the System.Windows.Ink.Stroke uses when 
     System.Windows.Ink.DrawingAttributes.FitToCurve is true.
   
-   Returns: A System.Windows.Input.StylusPointCollection that contains the stylus points 
-    along the spine of a System.Windows.Ink.Stroke when 
-    System.Windows.Ink.DrawingAttributes.FitToCurve is true
+   Returns: A System.Windows.Input.StylusPointCollection that contains the stylus points along the spine of 
+    a System.Windows.Ink.Stroke when System.Windows.Ink.DrawingAttributes.FitToCurve is true
   """
   pass
  def GetBounds(self):
@@ -951,8 +927,8 @@ class Stroke(object,INotifyPropertyChanged):
   GetBounds(self: Stroke) -> Rect
   
    Retrieves the bounding box for the System.Windows.Ink.Stroke object.
-   Returns: A System.Windows.Rect structure defining the bounding box for the 
-    System.Windows.Ink.Stroke object.
+   Returns: A System.Windows.Rect structure defining the bounding box for the System.Windows.Ink.Stroke 
+    object.
   """
   pass
  def GetClipResult(self,*__args):
@@ -960,13 +936,13 @@ class Stroke(object,INotifyPropertyChanged):
   GetClipResult(self: Stroke,lassoPoints: IEnumerable[Point]) -> StrokeCollection
   GetClipResult(self: Stroke,bounds: Rect) -> StrokeCollection
   
-   Returns segments of the current System.Windows.Ink.Stroke that are within the 
-    specified rectangle.
+   Returns segments of the current System.Windows.Ink.Stroke that are within the specified 
+    rectangle.
   
   
    bounds: A System.Windows.Rect that specifies the area to clip.
-   Returns: A System.Windows.Ink.StrokeCollection that contains copies of the segments of 
-    the current System.Windows.Ink.Stroke that are within the bounds of bounds.
+   Returns: A System.Windows.Ink.StrokeCollection that contains copies of the segments of the current 
+    System.Windows.Ink.Stroke that are within the bounds of bounds.
   """
   pass
  def GetEraseResult(self,*__args):
@@ -975,26 +951,25 @@ class Stroke(object,INotifyPropertyChanged):
   GetEraseResult(self: Stroke,lassoPoints: IEnumerable[Point]) -> StrokeCollection
   GetEraseResult(self: Stroke,bounds: Rect) -> StrokeCollection
   
-   Returns segments of the current System.Windows.Ink.Stroke that are outside the 
-    specified rectangle.
+   Returns segments of the current System.Windows.Ink.Stroke that are outside the specified 
+    rectangle.
   
   
    bounds: A System.Windows.Rect that specifies the area to erase.
    Returns: A System.Windows.Ink.StrokeCollection that contains the segments of the current 
-    System.Windows.Ink.Stroke that are outside the bounds of the specified 
-    System.Windows.Rect.
+    System.Windows.Ink.Stroke that are outside the bounds of the specified System.Windows.Rect.
   """
   pass
  def GetGeometry(self,drawingAttributes=None):
   """
   GetGeometry(self: Stroke,drawingAttributes: DrawingAttributes) -> Geometry
   
-   Gets the System.Windows.Media.Geometry of the current System.Windows.Ink.Stroke 
-    using the specified System.Windows.Ink.DrawingAttributes.
+   Gets the System.Windows.Media.Geometry of the current System.Windows.Ink.Stroke using the 
+    specified System.Windows.Ink.DrawingAttributes.
   
   
-   drawingAttributes: The System.Windows.Ink.DrawingAttributes that determines the 
-    System.Windows.Media.Geometry of the System.Windows.Ink.Stroke.
+   drawingAttributes: The System.Windows.Ink.DrawingAttributes that determines the System.Windows.Media.Geometry of 
+    the System.Windows.Ink.Stroke.
   
    Returns: A System.Windows.Media.Geometry that represents the System.Windows.Ink.Stroke.
   GetGeometry(self: Stroke) -> Geometry
@@ -1017,8 +992,8 @@ class Stroke(object,INotifyPropertyChanged):
   """
   GetPropertyDataIds(self: Stroke) -> Array[Guid]
   
-   Retrieves the GUIDs of any custom properties associated with the 
-    System.Windows.Ink.Stroke object.
+   Retrieves the GUIDs of any custom properties associated with the System.Windows.Ink.Stroke 
+    object.
   
    Returns: An array of System.Guid objects.
   """
@@ -1029,8 +1004,8 @@ class Stroke(object,INotifyPropertyChanged):
   HitTest(self: Stroke,path: IEnumerable[Point],stylusShape: StylusShape) -> bool
   HitTest(self: Stroke,bounds: Rect,percentageWithinBounds: int) -> bool
   
-   Returns a value that indicates whether the System.Windows.Ink.Stroke is within 
-    the bounds of the specified rectangle.
+   Returns a value that indicates whether the System.Windows.Ink.Stroke is within the bounds of the 
+    specified rectangle.
   
   
    percentageWithinBounds: The percentage of the length of the System.Windows.Ink.Stroke,that must be in 
@@ -1039,16 +1014,16 @@ class Stroke(object,INotifyPropertyChanged):
    Returns: true if the current stroke is within the bounds of bounds; otherwise false.
   HitTest(self: Stroke,point: Point) -> bool
   
-   Returns a value that indicates whether current System.Windows.Ink.Stroke 
-    intersects the specified point.
+   Returns a value that indicates whether current System.Windows.Ink.Stroke intersects the 
+    specified point.
   
   
    point: The System.Windows.Point to hit test.
    Returns: true if point intersects the current stroke; otherwise,false.
   HitTest(self: Stroke,point: Point,diameter: float) -> bool
   
-   Returns a value that indicates whether current System.Windows.Ink.Stroke 
-    intersects the specified area.
+   Returns a value that indicates whether current System.Windows.Ink.Stroke intersects the 
+    specified area.
   
   
    point: The System.Windows.Point that defines the center of the area to hit test.
@@ -1063,8 +1038,7 @@ class Stroke(object,INotifyPropertyChanged):
     System.Windows.Ink.Stroke.DrawingAttributesChanged event.
   
   
-   e: The System.Windows.Ink.PropertyDataChangedEventArgs object that contains the 
-    event data.
+   e: The System.Windows.Ink.PropertyDataChangedEventArgs object that contains the event data.
   """
   pass
  def OnDrawingAttributesReplaced(self,*args):
@@ -1074,8 +1048,7 @@ class Stroke(object,INotifyPropertyChanged):
     System.Windows.Ink.Stroke.DrawingAttributesReplaced event.
   
   
-   e: The System.Windows.Ink.DrawingAttributesReplacedEventArgs object that contains 
-    the event data.
+   e: The System.Windows.Ink.DrawingAttributesReplacedEventArgs object that contains the event data.
   """
   pass
  def OnInvalidated(self,*args):
@@ -1099,8 +1072,7 @@ class Stroke(object,INotifyPropertyChanged):
     System.Windows.Ink.Stroke.PropertyDataChanged event.
   
   
-   e: The System.Windows.Ink.PropertyDataChangedEventArgs object that contains the 
-    event data.
+   e: The System.Windows.Ink.PropertyDataChangedEventArgs object that contains the event data.
   """
   pass
  def OnStylusPointsChanged(self,*args):
@@ -1130,9 +1102,7 @@ class Stroke(object,INotifyPropertyChanged):
  def Transform(self,transformMatrix,applyToStylusTip):
   """
   Transform(self: Stroke,transformMatrix: Matrix,applyToStylusTip: bool)
-   Performs a transformation based upon the specified System.Windows.Media.Matrix 
-    object.
-  
+   Performs a transformation based upon the specified System.Windows.Media.Matrix object.
   
    transformMatrix: The System.Windows.Media.Matrix object defining the transformation.
    applyToStylusTip: true to apply the transformation to the tip of the stylus; otherwise,false.
@@ -1199,10 +1169,9 @@ class StrokeCollection(Collection[Stroke],IList[Stroke],ICollection[Stroke],IEnu
   
    propertyDataId: The System.Guid to associate with the custom property.
    propertyData: The value of the custom property. propertyData must be of type System.Char,
-    System.Byte,System.Int16,,System.UInt16,System.Int32,System.UInt32,
-    System.Int64,System.UInt64,System.Single,System.Double,System.DateTime,
-    System.Boolean,System.String,System.Decimal or an array of these data types,
-    except System.String,which is not allowed.
+    System.Byte,System.Int16,,System.UInt16,System.Int32,System.UInt32,System.Int64,
+    System.UInt64,System.Single,System.Double,System.DateTime,System.Boolean,System.String,
+    System.Decimal or an array of these data types,except System.String,which is not allowed.
   """
   pass
  def ClearItems(self,*args):
@@ -1214,8 +1183,8 @@ class StrokeCollection(Collection[Stroke],IList[Stroke],ICollection[Stroke],IEnu
  def Clip(self,*__args):
   """
   Clip(self: StrokeCollection,bounds: Rect)
-   Replaces all strokes that are clipped by the specified rectangle with new 
-    strokes that do not extend beyond the specified rectangle.
+   Replaces all strokes that are clipped by the specified rectangle with new strokes that do not 
+    extend beyond the specified rectangle.
   
   
    bounds: A System.Windows.Rect that specifies the area to be clipped.
@@ -1239,8 +1208,8 @@ class StrokeCollection(Collection[Stroke],IList[Stroke],ICollection[Stroke],IEnu
   
   
    propertyDataId: The System.Guid to locate in the System.Windows.Ink.StrokeCollection.
-   Returns: true if the specified custom property identifier is in the 
-    System.Windows.Ink.StrokeCollection; otherwise,false.
+   Returns: true if the specified custom property identifier is in the System.Windows.Ink.StrokeCollection; 
+    otherwise,false.
   """
   pass
  def Draw(self,context):
@@ -1248,15 +1217,14 @@ class StrokeCollection(Collection[Stroke],IList[Stroke],ICollection[Stroke],IEnu
   Draw(self: StrokeCollection,context: DrawingContext)
    Draws the strokes in the System.Windows.Ink.StrokeCollection.
   
-   context: The System.Windows.Media.DrawingContext on which to draw the 
-    System.Windows.Ink.StrokeCollection.
+   context: The System.Windows.Media.DrawingContext on which to draw the System.Windows.Ink.StrokeCollection.
   """
   pass
  def Erase(self,*__args):
   """
   Erase(self: StrokeCollection,eraserPath: IEnumerable[Point],eraserShape: StylusShape)Erase(self: StrokeCollection,bounds: Rect)
-   Replaces all strokes that are clipped by the specified rectangle with new 
-    strokes that do not enter the bounds of the specified rectangle.
+   Replaces all strokes that are clipped by the specified rectangle with new strokes that do not 
+    enter the bounds of the specified rectangle.
   
   Erase(self: StrokeCollection,lassoPoints: IEnumerable[Point])
   """
@@ -1278,8 +1246,8 @@ class StrokeCollection(Collection[Stroke],IList[Stroke],ICollection[Stroke],IEnu
     System.Windows.Ink.StrokeCollection with a lasso (freehand) path.
   
   
-   percentageWithinLasso: The minimum percentage of each System.Windows.Ink.Stroke that must be contained 
-    within the lasso for it to be considered hit.
+   percentageWithinLasso: The minimum percentage of each System.Windows.Ink.Stroke that must be contained within the lasso 
+    for it to be considered hit.
   
    Returns: An System.Windows.Ink.IncrementalLassoHitTester that hit tests the 
     System.Windows.Ink.StrokeCollection.
@@ -1302,9 +1270,7 @@ class StrokeCollection(Collection[Stroke],IList[Stroke],ICollection[Stroke],IEnu
   """
   GetPropertyData(self: StrokeCollection,propertyDataId: Guid) -> object
   
-   Returns the value of the custom property associated with the specified 
-    System.Guid.
-  
+   Returns the value of the custom property associated with the specified System.Guid.
   
    propertyDataId: The System.Guid associated with the custom property to get.
    Returns: The value of the custom property associated with the specified System.Guid.
@@ -1324,16 +1290,16 @@ class StrokeCollection(Collection[Stroke],IList[Stroke],ICollection[Stroke],IEnu
   """
   HitTest(self: StrokeCollection,bounds: Rect,percentageWithinBounds: int) -> StrokeCollection
   
-   Returns a collection of strokes that have at least the specified percentage of 
-    length within the specified rectangle.
+   Returns a collection of strokes that have at least the specified percentage of length within the 
+    specified rectangle.
   
   
    bounds: A System.Windows.Rect that specifies the bounds to be hit tested.
-   percentageWithinBounds: The minimum required length of a Stroke that must exist within bounds for it to 
-    be considered hit.
+   percentageWithinBounds: The minimum required length of a Stroke that must exist within bounds for it to be considered 
+    hit.
   
-   Returns: A System.Windows.Ink.StrokeCollection that has strokes with at least the 
-    specified percentage within the System.Windows.Rect.
+   Returns: A System.Windows.Ink.StrokeCollection that has strokes with at least the specified percentage 
+    within the System.Windows.Rect.
   
   HitTest(self: StrokeCollection,path: IEnumerable[Point],stylusShape: StylusShape) -> StrokeCollection
   HitTest(self: StrokeCollection,lassoPoints: IEnumerable[Point],percentageWithinLasso: int) -> StrokeCollection
@@ -1342,17 +1308,14 @@ class StrokeCollection(Collection[Stroke],IList[Stroke],ICollection[Stroke],IEnu
    Returns a collection of strokes that intersect the specified point.
   
    point: The point to hit test.
-   Returns: A collection of System.Windows.Ink.Stroke objects that intersect the specified 
-    point.
-  
+   Returns: A collection of System.Windows.Ink.Stroke objects that intersect the specified point.
   HitTest(self: StrokeCollection,point: Point,diameter: float) -> StrokeCollection
   
    Returns a collection of strokes that intersect the specified area.
   
    point: The System.Windows.Point to hit test.
    diameter: The size of the area around the System.Windows.Point to hit test.
-   Returns: A collection of System.Windows.Ink.Stroke objects that intersect the specified 
-    point.
+   Returns: A collection of System.Windows.Ink.Stroke objects that intersect the specified point.
   """
   pass
  def IndexOf(self,*__args):
@@ -1370,8 +1333,7 @@ class StrokeCollection(Collection[Stroke],IList[Stroke],ICollection[Stroke],IEnu
  def InsertItem(self,*args):
   """
   InsertItem(self: StrokeCollection,index: int,stroke: Stroke)
-   Inserts a stroke into the System.Windows.Ink.StrokeCollection at the specified 
-    index.
+   Inserts a stroke into the System.Windows.Ink.StrokeCollection at the specified index.
   """
   pass
  def OnPropertyChanged(self,*args):
@@ -1393,8 +1355,7 @@ class StrokeCollection(Collection[Stroke],IList[Stroke],ICollection[Stroke],IEnu
   OnStrokesChanged(self: StrokeCollection,e: StrokeCollectionChangedEventArgs)
    Raises the System.Windows.Ink.StrokeCollection.StrokesChanged event.
   
-   e: A System.Windows.Ink.StrokeCollectionChangedEventArgs that contains the event 
-    data.
+   e: A System.Windows.Ink.StrokeCollectionChangedEventArgs that contains the event data.
   """
   pass
  def Remove(self,*__args):
@@ -1406,9 +1367,7 @@ class StrokeCollection(Collection[Stroke],IList[Stroke],ICollection[Stroke],IEnu
  def RemoveItem(self,*args):
   """
   RemoveItem(self: StrokeCollection,index: int)
-   Removes the stroke at the specified index from the 
-    System.Windows.Ink.StrokeCollection.
-  
+   Removes the stroke at the specified index from the System.Windows.Ink.StrokeCollection.
   
    index: The specified index.
   """
@@ -1446,8 +1405,8 @@ class StrokeCollection(Collection[Stroke],IList[Stroke],ICollection[Stroke],IEnu
   
    stream: The System.IO.Stream to which to save the System.Windows.Ink.StrokeCollection.
   Save(self: StrokeCollection,stream: Stream,compress: bool)
-   Saves the System.Windows.Ink.StrokeCollection to the specified System.IO.Stream 
-    and compresses it,when specified.
+   Saves the System.Windows.Ink.StrokeCollection to the specified System.IO.Stream and compresses 
+    it,when specified.
   
   
    stream: The System.IO.Stream to which to save the System.Windows.Ink.StrokeCollection.
@@ -1465,12 +1424,11 @@ class StrokeCollection(Collection[Stroke],IList[Stroke],ICollection[Stroke],IEnu
   Transform(self: StrokeCollection,transformMatrix: Matrix,applyToStylusTip: bool)
    Modifies each of the System.Windows.Ink.Stroke.StylusPoints and optionally the 
     System.Windows.Ink.DrawingAttributes.StylusTipTransform for each stroke in the 
-    System.Windows.Ink.StrokeCollection according to the specified 
-    System.Windows.Media.Matrix.
+    System.Windows.Ink.StrokeCollection according to the specified System.Windows.Media.Matrix.
   
   
-   transformMatrix: A System.Windows.Media.Matrix which specifies the transformation to perform on 
-    the System.Windows.Ink.StrokeCollection.
+   transformMatrix: A System.Windows.Media.Matrix which specifies the transformation to perform on the 
+    System.Windows.Ink.StrokeCollection.
   
    applyToStylusTip: true to apply the transformation to the tip of the stylus; otherwise,false.
   """
@@ -1548,9 +1506,7 @@ class StrokeCollectionChangedEventHandler(MulticastDelegate,ICloneable,ISerializ
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new 
-    delegate.
-  
+   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -1562,9 +1518,9 @@ class StrokeCollectionChangedEventHandler(MulticastDelegate,ICloneable,ISerializ
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by 
-    the current delegate.-or- null,if the method represented by the current 
-    delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by the current 
+    delegate.-or- null,if the method represented by the current delegate does not require 
+    arguments.
   
    Returns: The object returned by the method represented by the delegate.
   """
@@ -1587,14 +1543,13 @@ class StrokeCollectionChangedEventHandler(MulticastDelegate,ICloneable,ISerializ
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate 
-    that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
+    the specified delegate.
   
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new 
-    System.Delegate without value in its invocation list; otherwise,this instance 
-    with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without 
+    value in its invocation list; otherwise,this instance with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -1614,9 +1569,8 @@ class StrokeHitEventArgs(EventArgs):
   GetPointEraseResults(self: StrokeHitEventArgs) -> StrokeCollection
   
    Returns the strokes that are a result of the eraser path erasing a stroke.
-   Returns: A System.Windows.Ink.StrokeCollection that contains the strokes that are 
-    created after the eraser path erases part of 
-    System.Windows.Ink.StrokeHitEventArgs.HitStroke.
+   Returns: A System.Windows.Ink.StrokeCollection that contains the strokes that are created after the 
+    eraser path erases part of System.Windows.Ink.StrokeHitEventArgs.HitStroke.
   """
   pass
  HitStroke=property(lambda self: object(),lambda self,v: None,lambda self: None)
@@ -1641,9 +1595,7 @@ class StrokeHitEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new 
-    delegate.
-  
+   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -1655,9 +1607,9 @@ class StrokeHitEventHandler(MulticastDelegate,ICloneable,ISerializable):
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by 
-    the current delegate.-or- null,if the method represented by the current 
-    delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by the current 
+    delegate.-or- null,if the method represented by the current delegate does not require 
+    arguments.
   
    Returns: The object returned by the method represented by the delegate.
   """
@@ -1680,14 +1632,13 @@ class StrokeHitEventHandler(MulticastDelegate,ICloneable,ISerializable):
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate 
-    that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
+    the specified delegate.
   
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new 
-    System.Delegate without value in its invocation list; otherwise,this instance 
-    with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without 
+    value in its invocation list; otherwise,this instance with its original invocation list.
   """
   pass
  def __init__(self,*args):
@@ -1739,9 +1690,7 @@ class StylusPointsReplacedEventHandler(MulticastDelegate,ICloneable,ISerializabl
   """
   CombineImpl(self: MulticastDelegate,follow: Delegate) -> Delegate
   
-   Combines this System.Delegate with the specified System.Delegate to form a new 
-    delegate.
-  
+   Combines this System.Delegate with the specified System.Delegate to form a new delegate.
   
    follow: The delegate to combine with this delegate.
    Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -1753,9 +1702,9 @@ class StylusPointsReplacedEventHandler(MulticastDelegate,ICloneable,ISerializabl
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by 
-    the current delegate.-or- null,if the method represented by the current 
-    delegate does not require arguments.
+   args: An array of objects that are the arguments to pass to the method represented by the current 
+    delegate.-or- null,if the method represented by the current delegate does not require 
+    arguments.
   
    Returns: The object returned by the method represented by the delegate.
   """
@@ -1778,14 +1727,13 @@ class StylusPointsReplacedEventHandler(MulticastDelegate,ICloneable,ISerializabl
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate 
-    that is equal to the specified delegate.
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
+    the specified delegate.
   
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new 
-    System.Delegate without value in its invocation list; otherwise,this instance 
-    with its original invocation list.
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without 
+    value in its invocation list; otherwise,this instance with its original invocation list.
   """
   pass
  def __init__(self,*args):

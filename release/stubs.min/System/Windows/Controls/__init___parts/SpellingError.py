@@ -11,8 +11,8 @@ class SpellingError(object):
  def IgnoreAll(self):
   """
   IgnoreAll(self: SpellingError)
-   Instructs the control to ignore this error and any duplicates for the remainder 
-    of the lifetime of the control.
+   Instructs the control to ignore this error and any duplicates for the remainder of the lifetime 
+    of the control.
   """
   pass
  Suggestions=property(lambda self: object(),lambda self,v: None,lambda self: None)

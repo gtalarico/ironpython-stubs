@@ -10,16 +10,16 @@ class CookieException(FormatException,ISerializable,_Exception):
  def GetObjectData(self,serializationInfo,streamingContext):
   """
   GetObjectData(self: CookieException,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo instance with the 
-    data needed to serialize the System.Net.CookieException.
+   Populates a System.Runtime.Serialization.SerializationInfo instance with the data needed to 
+    serialize the System.Net.CookieException.
   
   
    serializationInfo: The object that holds the serialized object data. The 
     System.Runtime.Serialization.SerializationInfo to populate with data.
   
    streamingContext: The contextual information about the source or destination. A 
-    System.Runtime.Serialization.StreamingContext that specifies the destination 
-    for this serialization.
+    System.Runtime.Serialization.StreamingContext that specifies the destination for this 
+    serialization.
   """
   pass
  def remove_SerializeObjectState(self,*args):

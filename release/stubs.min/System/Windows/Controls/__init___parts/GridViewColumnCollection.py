@@ -31,9 +31,7 @@ class GridViewColumnCollection(ObservableCollection[GridViewColumn],IList[GridVi
  def InsertItem(self,*args):
   """
   InsertItem(self: GridViewColumnCollection,index: int,column: GridViewColumn)
-   Adds a System.Windows.Controls.GridViewColumn to the collection at the 
-    specified index.
-  
+   Adds a System.Windows.Controls.GridViewColumn to the collection at the specified index.
   
    index: The position to place the new System.Windows.Controls.GridViewColumn.
    column: The System.Windows.Controls.GridViewColumn to insert.
@@ -42,9 +40,7 @@ class GridViewColumnCollection(ObservableCollection[GridViewColumn],IList[GridVi
  def MoveItem(self,*args):
   """
   MoveItem(self: GridViewColumnCollection,oldIndex: int,newIndex: int)
-   Changes the position of a System.Windows.Controls.GridViewColumn in the 
-    collection.
-  
+   Changes the position of a System.Windows.Controls.GridViewColumn in the collection.
   
    oldIndex: The original position of the System.Windows.Controls.GridViewColumn.
    newIndex: The new position of the System.Windows.Controls.GridViewColumn.
@@ -63,9 +59,7 @@ class GridViewColumnCollection(ObservableCollection[GridViewColumn],IList[GridVi
  def OnPropertyChanged(self,*args):
   """
   OnPropertyChanged(self: ObservableCollection[GridViewColumn],e: PropertyChangedEventArgs)
-   Raises the System.Collections.ObjectModel.ObservableCollection event with the 
-    provided arguments.
-  
+   Raises the System.Collections.ObjectModel.ObservableCollection event with the provided arguments.
   
    e: Arguments of the event being raised.
   """
@@ -86,12 +80,12 @@ class GridViewColumnCollection(ObservableCollection[GridViewColumn],IList[GridVi
  def SetItem(self,*args):
   """
   SetItem(self: GridViewColumnCollection,index: int,column: GridViewColumn)
-   Replaces the System.Windows.Controls.GridViewColumn that is at the specified 
-    index with another System.Windows.Controls.GridViewColumn.
+   Replaces the System.Windows.Controls.GridViewColumn that is at the specified index with another 
+    System.Windows.Controls.GridViewColumn.
   
   
-   index: The position at which the new System.Windows.Controls.GridViewColumn replaces 
-    the old System.Windows.Controls.GridViewColumn.
+   index: The position at which the new System.Windows.Controls.GridViewColumn replaces the old 
+    System.Windows.Controls.GridViewColumn.
   
    column: The System.Windows.Controls.GridViewColumn to place at the specified position.
   """

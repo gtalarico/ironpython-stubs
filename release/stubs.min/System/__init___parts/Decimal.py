@@ -28,13 +28,13 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   Ceiling(d: Decimal) -> Decimal
   
-   Returns the smallest integral value that is greater than or equal to the 
-    specified decimal number.
+   Returns the smallest integral value that is greater than or equal to the specified decimal 
+    number.
   
   
    d: A decimal number.
-   Returns: The smallest integral value that is greater than or equal to the d parameter. 
-    Note that this method returns a System.Decimal instead of an integral type.
+   Returns: The smallest integral value that is greater than or equal to the d parameter. Note that this 
+    method returns a System.Decimal instead of an integral type.
   """
   pass
  @staticmethod
@@ -46,9 +46,8 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   
    d1: The first value to compare.
    d2: The second value to compare.
-   Returns: A signed number indicating the relative values of d1 and d2.Return Value 
-    Meaning Less than zero d1 is less than d2. Zero d1 and d2 are equal. Greater 
-    than zero d1 is greater than d2.
+   Returns: A signed number indicating the relative values of d1 and d2.Return Value Meaning Less than zero 
+    d1 is less than d2. Zero d1 and d2 are equal. Greater than zero d1 is greater than d2.
   """
   pass
  def CompareTo(self,value):
@@ -58,20 +57,18 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
    Compares this instance to a specified System.Decimal object.
   
    value: The object to compare with this instance.
-   Returns: A signed number indicating the relative values of this instance and 
-    value.Return Value Meaning Less than zero This instance is less than value. 
-    Zero This instance is equal to value. Greater than zero This instance is 
-    greater than value.
+   Returns: A signed number indicating the relative values of this instance and value.Return Value Meaning 
+    Less than zero This instance is less than value. Zero This instance is equal to value. Greater 
+    than zero This instance is greater than value.
   
   CompareTo(self: Decimal,value: object) -> int
   
    Compares this instance to a specified System.Object.
   
    value: The object to compare with this instance,or null.
-   Returns: A signed number indicating the relative values of this instance and 
-    value.Return Value Meaning Less than zero This instance is less than value. 
-    Zero This instance is equal to value. Greater than zero This instance is 
-    greater than value.-or- value is null.
+   Returns: A signed number indicating the relative values of this instance and value.Return Value Meaning 
+    Less than zero This instance is less than value. Zero This instance is equal to value. Greater 
+    than zero This instance is greater than value.-or- value is null.
   """
   pass
  @staticmethod
@@ -90,8 +87,8 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   Equals(d1: Decimal,d2: Decimal) -> bool
   
-   Returns a value indicating whether two specified instances of System.Decimal 
-    represent the same value.
+   Returns a value indicating whether two specified instances of System.Decimal represent the same 
+    value.
   
   
    d1: The first value to compare.
@@ -99,16 +96,16 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
    Returns: true if d1 and d2 are equal; otherwise,false.
   Equals(self: Decimal,value: Decimal) -> bool
   
-   Returns a value indicating whether this instance and a specified System.Decimal 
-    object represent the same value.
+   Returns a value indicating whether this instance and a specified System.Decimal object represent 
+    the same value.
   
   
    value: An object to compare to this instance.
    Returns: true if value is equal to this instance; otherwise,false.
   Equals(self: Decimal,value: object) -> bool
   
-   Returns a value indicating whether this instance and a specified System.Object 
-    represent the same type and value.
+   Returns a value indicating whether this instance and a specified System.Object represent the 
+    same type and value.
   
   
    value: The object to compare with this instance.
@@ -120,14 +117,11 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   Floor(d: Decimal) -> Decimal
   
-   Rounds a specified System.Decimal number to the closest integer toward negative 
-    infinity.
-  
+   Rounds a specified System.Decimal number to the closest integer toward negative infinity.
   
    d: The value to round.
-   Returns: If d has a fractional part,the next whole System.Decimal number toward 
-    negative infinity that is less than d.-or- If d doesn't have a fractional part,
-    d is returned unchanged.
+   Returns: If d has a fractional part,the next whole System.Decimal number toward negative infinity that 
+    is less than d.-or- If d doesn't have a fractional part,d is returned unchanged.
   """
   pass
  @staticmethod
@@ -135,8 +129,8 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   FromOACurrency(cy: Int64) -> Decimal
   
-   Converts the specified 64-bit signed integer,which contains an OLE Automation 
-    Currency value,to the equivalent System.Decimal value.
+   Converts the specified 64-bit signed integer,which contains an OLE Automation Currency value,
+    to the equivalent System.Decimal value.
   
   
    cy: An OLE Automation Currency value.
@@ -148,13 +142,12 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   GetBits(d: Decimal) -> Array[int]
   
-   Converts the value of a specified instance of System.Decimal to its equivalent 
-    binary representation.
+   Converts the value of a specified instance of System.Decimal to its equivalent binary 
+    representation.
   
   
    d: The value to convert.
-   Returns: A 32-bit signed integer array with four elements that contain the binary 
-    representation of d.
+   Returns: A 32-bit signed integer array with four elements that contain the binary representation of d.
   """
   pass
  def GetHashCode(self):
@@ -190,13 +183,10 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   Negate(d: Decimal) -> Decimal
   
-   Returns the result of multiplying the specified System.Decimal value by 
-    negative one.
-  
+   Returns the result of multiplying the specified System.Decimal value by negative one.
   
    d: The value to negate.
-   Returns: A decimal number with the value of d,but the opposite sign.-or- Zero,if d is 
-    zero.
+   Returns: A decimal number with the value of d,but the opposite sign.-or- Zero,if d is zero.
   """
   pass
  @staticmethod
@@ -204,33 +194,29 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   Parse(s: str,provider: IFormatProvider) -> Decimal
   
-   Converts the string representation of a number to its System.Decimal equivalent 
-    using the specified culture-specific format information.
+   Converts the string representation of a number to its System.Decimal equivalent using the 
+    specified culture-specific format information.
   
   
    s: The string representation of the number to convert.
-   provider: An System.IFormatProvider that supplies culture-specific parsing information 
-    about s.
-  
-   Returns: The System.Decimal number equivalent to the number contained in s as specified 
-    by provider.
-  
+   provider: An System.IFormatProvider that supplies culture-specific parsing information about s.
+   Returns: The System.Decimal number equivalent to the number contained in s as specified by provider.
   Parse(s: str,style: NumberStyles,provider: IFormatProvider) -> Decimal
   
-   Converts the string representation of a number to its System.Decimal equivalent 
-    using the specified style and culture-specific format.
+   Converts the string representation of a number to its System.Decimal equivalent using the 
+    specified style and culture-specific format.
   
   
    s: The string representation of the number to convert.
-   style: A bitwise combination of System.Globalization.NumberStyles values that 
-    indicates the style elements that can be present in s. A typical value to 
-    specify is System.Globalization.NumberStyles.Number.
+   style: A bitwise combination of System.Globalization.NumberStyles values that indicates the style 
+    elements that can be present in s. A typical value to specify is 
+    System.Globalization.NumberStyles.Number.
   
-   provider: An System.IFormatProvider object that supplies culture-specific information 
-    about the format of s.
+   provider: An System.IFormatProvider object that supplies culture-specific information about the format of 
+    s.
   
-   Returns: The System.Decimal number equivalent to the number contained in s as specified 
-    by style and provider.
+   Returns: The System.Decimal number equivalent to the number contained in s as specified by style and 
+    provider.
   
   Parse(s: str) -> Decimal
   
@@ -240,17 +226,16 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
    Returns: The equivalent to the number contained in s.
   Parse(s: str,style: NumberStyles) -> Decimal
   
-   Converts the string representation of a number in a specified style to its 
-    System.Decimal equivalent.
+   Converts the string representation of a number in a specified style to its System.Decimal 
+    equivalent.
   
   
    s: The string representation of the number to convert.
-   style: A bitwise combination of System.Globalization.NumberStyles values that 
-    indicates the style elements that can be present in s. A typical value to 
-    specify is System.Globalization.NumberStyles.Number.
+   style: A bitwise combination of System.Globalization.NumberStyles values that indicates the style 
+    elements that can be present in s. A typical value to specify is 
+    System.Globalization.NumberStyles.Number.
   
-   Returns: The System.Decimal number equivalent to the number contained in s as specified 
-    by style.
+   Returns: The System.Decimal number equivalent to the number contained in s as specified by style.
   """
   pass
  @staticmethod
@@ -270,37 +255,37 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   Round(d: Decimal,mode: MidpointRounding) -> Decimal
   
-   Rounds a decimal value to the nearest integer. A parameter specifies how to 
-    round the value if it is midway between two other numbers.
+   Rounds a decimal value to the nearest integer. A parameter specifies how to round the value if 
+    it is midway between two other numbers.
   
   
    d: A decimal number to round.
    mode: A value that specifies how to round d if it is midway between two other numbers.
-   Returns: The integer that is nearest to the d parameter. If d is halfway between two 
-    numbers,one of which is even and the other odd,the mode parameter determines 
-    which of the two numbers is returned.
+   Returns: The integer that is nearest to the d parameter. If d is halfway between two numbers,one of 
+    which is even and the other odd,the mode parameter determines which of the two numbers is 
+    returned.
   
   Round(d: Decimal,decimals: int,mode: MidpointRounding) -> Decimal
   
-   Rounds a decimal value to a specified precision. A parameter specifies how to 
-    round the value if it is midway between two other numbers.
+   Rounds a decimal value to a specified precision. A parameter specifies how to round the value if 
+    it is midway between two other numbers.
   
   
    d: A decimal number to round.
    decimals: The number of significant decimal places (precision) in the return value.
    mode: A value that specifies how to round d if it is midway between two other numbers.
-   Returns: The number that is nearest to the d parameter with a precision equal to the 
-    decimals parameter. If d is halfway between two numbers,one of which is even 
-    and the other odd,the mode parameter determines which of the two numbers is 
-    returned. If the precision of d is less than decimals,d is returned unchanged.
+   Returns: The number that is nearest to the d parameter with a precision equal to the decimals parameter. 
+    If d is halfway between two numbers,one of which is even and the other odd,the mode parameter 
+    determines which of the two numbers is returned. If the precision of d is less than decimals,d 
+    is returned unchanged.
   
   Round(d: Decimal) -> Decimal
   
    Rounds a decimal value to the nearest integer.
   
    d: A decimal number to round.
-   Returns: The integer that is nearest to the d parameter. If d is halfway between two 
-    integers,one of which is even and the other odd,the even number is returned.
+   Returns: The integer that is nearest to the d parameter. If d is halfway between two integers,one of 
+    which is even and the other odd,the even number is returned.
   
   Round(d: Decimal,decimals: int) -> Decimal
   
@@ -328,9 +313,7 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   ToByte(value: Decimal) -> Byte
   
-   Converts the value of the specified System.Decimal to the equivalent 8-bit 
-    unsigned integer.
-  
+   Converts the value of the specified System.Decimal to the equivalent 8-bit unsigned integer.
   
    value: The decimal number to convert.
    Returns: An 8-bit unsigned integer equivalent to value.
@@ -341,8 +324,8 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   ToDouble(d: Decimal) -> float
   
-   Converts the value of the specified System.Decimal to the equivalent 
-    double-precision floating-point number.
+   Converts the value of the specified System.Decimal to the equivalent double-precision 
+    floating-point number.
   
   
    d: The decimal number to convert.
@@ -354,9 +337,7 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   ToInt16(value: Decimal) -> Int16
   
-   Converts the value of the specified System.Decimal to the equivalent 16-bit 
-    signed integer.
-  
+   Converts the value of the specified System.Decimal to the equivalent 16-bit signed integer.
   
    value: The decimal number to convert.
    Returns: A 16-bit signed integer equivalent to value.
@@ -367,9 +348,7 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   ToInt32(d: Decimal) -> int
   
-   Converts the value of the specified System.Decimal to the equivalent 32-bit 
-    signed integer.
-  
+   Converts the value of the specified System.Decimal to the equivalent 32-bit signed integer.
   
    d: The decimal number to convert.
    Returns: A 32-bit signed integer equivalent to the value of d.
@@ -380,9 +359,7 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   ToInt64(d: Decimal) -> Int64
   
-   Converts the value of the specified System.Decimal to the equivalent 64-bit 
-    signed integer.
-  
+   Converts the value of the specified System.Decimal to the equivalent 64-bit signed integer.
   
    d: The decimal number to convert.
    Returns: A 64-bit signed integer equivalent to the value of d.
@@ -393,8 +370,8 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   ToOACurrency(value: Decimal) -> Int64
   
-   Converts the specified System.Decimal value to the equivalent OLE Automation 
-    Currency value,which is contained in a 64-bit signed integer.
+   Converts the specified System.Decimal value to the equivalent OLE Automation Currency value,
+    which is contained in a 64-bit signed integer.
   
   
    value: The decimal number to convert.
@@ -406,9 +383,7 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   ToSByte(value: Decimal) -> SByte
   
-   Converts the value of the specified System.Decimal to the equivalent 8-bit 
-    signed integer.
-  
+   Converts the value of the specified System.Decimal to the equivalent 8-bit signed integer.
   
    value: The decimal number to convert.
    Returns: An 8-bit signed integer equivalent to value.
@@ -419,8 +394,8 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   ToSingle(d: Decimal) -> Single
   
-   Converts the value of the specified System.Decimal to the equivalent 
-    single-precision floating-point number.
+   Converts the value of the specified System.Decimal to the equivalent single-precision 
+    floating-point number.
   
   
    d: The decimal number to convert.
@@ -431,36 +406,29 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   ToString(self: Decimal,provider: IFormatProvider) -> str
   
-   Converts the numeric value of this instance to its equivalent string 
-    representation using the specified culture-specific format information.
+   Converts the numeric value of this instance to its equivalent string representation using the 
+    specified culture-specific format information.
   
   
    provider: An object that supplies culture-specific formatting information.
-   Returns: The string representation of the value of this instance as specified by 
-    provider.
-  
+   Returns: The string representation of the value of this instance as specified by provider.
   ToString(self: Decimal,format: str,provider: IFormatProvider) -> str
   
-   Converts the numeric value of this instance to its equivalent string 
-    representation using the specified format and culture-specific format 
-    information.
+   Converts the numeric value of this instance to its equivalent string representation using the 
+    specified format and culture-specific format information.
   
   
    format: A numeric format string (see Remarks).
    provider: An object that supplies culture-specific formatting information.
-   Returns: The string representation of the value of this instance as specified by format 
-    and provider.
-  
+   Returns: The string representation of the value of this instance as specified by format and provider.
   ToString(self: Decimal) -> str
   
-   Converts the numeric value of this instance to its equivalent string 
-    representation.
-  
+   Converts the numeric value of this instance to its equivalent string representation.
    Returns: A string that represents the value of this instance.
   ToString(self: Decimal,format: str) -> str
   
-   Converts the numeric value of this instance to its equivalent string 
-    representation,using the specified format.
+   Converts the numeric value of this instance to its equivalent string representation,using the 
+    specified format.
   
   
    format: A standard or custom numeric format string (see Remarks).
@@ -472,9 +440,7 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   ToUInt16(value: Decimal) -> UInt16
   
-   Converts the value of the specified System.Decimal to the equivalent 16-bit 
-    unsigned integer.
-  
+   Converts the value of the specified System.Decimal to the equivalent 16-bit unsigned integer.
   
    value: The decimal number to convert.
    Returns: A 16-bit unsigned integer equivalent to the value of value.
@@ -485,9 +451,7 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   ToUInt32(d: Decimal) -> UInt32
   
-   Converts the value of the specified System.Decimal to the equivalent 32-bit 
-    unsigned integer.
-  
+   Converts the value of the specified System.Decimal to the equivalent 32-bit unsigned integer.
   
    d: The decimal number to convert.
    Returns: A 32-bit unsigned integer equivalent to the value of d.
@@ -498,9 +462,7 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   ToUInt64(d: Decimal) -> UInt64
   
-   Converts the value of the specified System.Decimal to the equivalent 64-bit 
-    unsigned integer.
-  
+   Converts the value of the specified System.Decimal to the equivalent 64-bit unsigned integer.
   
    d: The decimal number to convert.
    Returns: A 64-bit unsigned integer equivalent to the value of d.
@@ -511,9 +473,7 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   Truncate(d: Decimal) -> Decimal
   
-   Returns the integral digits of the specified System.Decimal; any fractional 
-    digits are discarded.
-  
+   Returns the integral digits of the specified System.Decimal; any fractional digits are discarded.
   
    d: The decimal number to truncate.
    Returns: The result of d rounded toward zero,to the nearest whole number.
@@ -524,22 +484,21 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   TryParse(s: str,style: NumberStyles,provider: IFormatProvider) -> (bool,Decimal)
   
-   Converts the string representation of a number to its System.Decimal equivalent 
-    using the specified style and culture-specific format. A return value indicates 
-    whether the conversion succeeded or failed.
+   Converts the string representation of a number to its System.Decimal equivalent using the 
+    specified style and culture-specific format. A return value indicates whether the conversion 
+    succeeded or failed.
   
   
    s: The string representation of the number to convert.
-   style: A bitwise combination of enumeration values that indicates the permitted format 
-    of s. A typical value to specify is System.Globalization.NumberStyles.Number.
+   style: A bitwise combination of enumeration values that indicates the permitted format of s. A typical 
+    value to specify is System.Globalization.NumberStyles.Number.
   
    provider: An object that supplies culture-specific parsing information about s.
    Returns: true if s was converted successfully; otherwise,false.
   TryParse(s: str) -> (bool,Decimal)
   
-   Converts the string representation of a number to its System.Decimal 
-    equivalent. A return value indicates whether the conversion succeeded or 
-    failed.
+   Converts the string representation of a number to its System.Decimal equivalent. A return value 
+    indicates whether the conversion succeeded or failed.
   
   
    s: The string representation of the number to convert.
@@ -606,9 +565,7 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   __pos__(d: Decimal) -> Decimal
   
-   Returns the value of the System.Decimal operand (the sign of the operand is 
-    unchanged).
-  
+   Returns the value of the System.Decimal operand (the sign of the operand is unchanged).
   
    d: The operand to return.
    Returns: The value of the operand,d.
@@ -645,9 +602,7 @@ class Decimal(object,IFormattable,IComparable,IConvertible,IDeserializationCallb
   """
   __rmod__(d1: Decimal,d2: Decimal) -> Decimal
   
-   Returns the remainder resulting from dividing two specified System.Decimal 
-    values.
-  
+   Returns the remainder resulting from dividing two specified System.Decimal values.
   
    d1: The dividend.
    d2: The divisor.

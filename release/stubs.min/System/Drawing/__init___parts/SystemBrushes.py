@@ -5,13 +5,9 @@ class SystemBrushes(object):
   """
   FromSystemColor(c: Color) -> Brush
   
-   Creates a System.Drawing.Brush from the specified System.Drawing.Color 
-    structure.
+   Creates a System.Drawing.Brush from the specified System.Drawing.Color structure.
   
-  
-   c: The System.Drawing.Color structure from which to create the 
-    System.Drawing.Brush.
-  
+   c: The System.Drawing.Color structure from which to create the System.Drawing.Brush.
    Returns: The System.Drawing.Brush this method creates.
   """
   pass

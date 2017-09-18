@@ -24,10 +24,9 @@ class VirtualizationCacheLength(object,IEquatable[VirtualizationCacheLength]):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__[VirtualizationCacheLength]() -> VirtualizationCacheLength
-  
   __new__(cls: type,cacheBeforeAndAfterViewport: float)
-  __new__(cls: type,cacheBeforeViewport: float,cacheAfterViewport: float)
+  __new__(cls: type,cacheBeforeViewport: float,cacheAfterViewport: float)
+  __new__[VirtualizationCacheLength]() -> VirtualizationCacheLength
   """
   pass
  def __ne__(self,*args):

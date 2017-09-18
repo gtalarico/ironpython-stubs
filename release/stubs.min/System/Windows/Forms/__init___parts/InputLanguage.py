@@ -18,8 +18,7 @@ class InputLanguage(object):
    Returns the input language associated with the specified culture.
   
    culture: The System.Globalization.CultureInfo that specifies the culture to convert from.
-   Returns: An System.Windows.Forms.InputLanguage that represents the previously selected 
-    input language.
+   Returns: An System.Windows.Forms.InputLanguage that represents the previously selected input language.
   """
   pass
  def GetHashCode(self):

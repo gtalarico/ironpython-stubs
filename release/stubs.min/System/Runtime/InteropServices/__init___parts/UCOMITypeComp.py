@@ -4,14 +4,13 @@ class UCOMITypeComp:
   """
   Bind(self: UCOMITypeComp,szName: str,lHashVal: int,wFlags: Int16) -> (UCOMITypeInfo,DESCKIND,BINDPTR)
   
-   Maps a name to a member of a type,or binds global variables and functions 
-    contained in a type library.
+   Maps a name to a member of a type,or binds global variables and functions contained in a type 
+    library.
   
   
    szName: The name to bind.
    lHashVal: A hash value for szName computed by LHashValOfNameSys.
-   wFlags: A flags word containing one or more of the invoke flags defined in the 
-    INVOKEKIND enumeration.
+   wFlags: A flags word containing one or more of the invoke flags defined in the INVOKEKIND enumeration.
   """
   pass
  def BindType(self,szName,lHashVal,ppTInfo,ppTComp):

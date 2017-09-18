@@ -20,8 +20,7 @@ class IUserInterfaceSection:
         
             userInterfaceSection: The UserInterfaceSection object that called this interface method.
             expanding: Will be true if the control has been createExpanded or false if it was
-                   
-              collapsed.
+                    collapsed.
         """
         pass
 
@@ -29,8 +28,8 @@ class IUserInterfaceSection:
         """
         UserInterfaceDisplayData(self: IUserInterfaceSection, userInterfaceSection: UserInterfaceSection, renderContentList: Array[RenderContent])
             Called by UserInterfaceSection when the selected content changes or a
-                    
-             content field property value changes.
+                    content field 
+             property value changes.
         
         
             userInterfaceSection: The UserInterfaceSection object that called this interface method.
@@ -60,17 +59,15 @@ class UserInterfaceSection(object):
         FromWindow(window: IWin32Window) -> UserInterfaceSection
         
             Find the UserInterfaceSection that created the specified instance of a
-                   
-              window.
-        
+                    window.
         
             window: If window is not null then look for the UserInterfaceSection that
-                    
-             created the window.
+                    created the 
+             window.
         
             Returns: If a UserInterfaceSection object is found containing a reference to
-                    
-             the requested window then return the object otherwise return null.
+                    the requested 
+             window then return the object otherwise return null.
         """
         pass
 
@@ -91,8 +88,8 @@ class UserInterfaceSection(object):
         
             id: The class Id of the section to search for.
             Returns: Returns the first section in this sections container whose window class
-                  
-               Id matches the specified Id or null if no match is found.
+                    Id matches 
+             the specified Id or null if no match is found.
         """
         pass
 
@@ -101,12 +98,12 @@ class UserInterfaceSection(object):
         GetSiblings(self: UserInterfaceSection) -> Array[UserInterfaceSection]
         
             Get a list of the RhinoCommon added content sections associated with
-                    
-             this sections container.
+                    this sections 
+             container.
         
             Returns: Returns a list of the RhinoCommon added content sections associated
-                    
-             with this sections container.
+                    with this 
+             sections container.
         """
         pass
 

@@ -4,21 +4,18 @@ class SafeBuffer(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
   """
   AcquirePointer(self: SafeBuffer,pointer: Byte*) -> Byte*
   
-   Obtains a pointer from a System.Runtime.InteropServices.SafeBuffer object for a 
-    block of memory.
-  
+   Obtains a pointer from a System.Runtime.InteropServices.SafeBuffer object for a block of memory.
   
    pointer: A byte pointer,passed by reference,to receive the pointer from within the 
-    System.Runtime.InteropServices.SafeBuffer object. You must set this pointer to 
-    null before you call this method.
+    System.Runtime.InteropServices.SafeBuffer object. You must set this pointer to null before you 
+    call this method.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: SafeHandle,disposing: bool)
-   Releases the unmanaged resources used by the 
-    System.Runtime.InteropServices.SafeHandle class specifying whether to perform a 
-    normal dispose operation.
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class 
+    specifying whether to perform a normal dispose operation.
   
   
    disposing: true for a normal dispose operation; false to finalize the handle.
@@ -27,16 +24,16 @@ class SafeBuffer(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
  def Initialize(self,*__args):
   """
   Initialize[T](self: SafeBuffer,numElements: UInt32)Initialize(self: SafeBuffer,numElements: UInt32,sizeOfEachElement: UInt32)
-   Specifies the allocation size of the memory buffer by using the specified 
-    number of elements and element size. You must call this method before you use 
-    the System.Runtime.InteropServices.SafeBuffer instance.
+   Specifies the allocation size of the memory buffer by using the specified number of elements and 
+    element size. You must call this method before you use the 
+    System.Runtime.InteropServices.SafeBuffer instance.
   
   
    numElements: The number of elements in the buffer.
    sizeOfEachElement: The size of each element in the buffer.
   Initialize(self: SafeBuffer,numBytes: UInt64)
-   Defines the allocation size of the memory region in bytes. You must call this 
-    method before you use the System.Runtime.InteropServices.SafeBuffer instance.
+   Defines the allocation size of the memory region in bytes. You must call this method before you 
+    use the System.Runtime.InteropServices.SafeBuffer instance.
   
   
    numBytes: The number of bytes in the buffer.
@@ -52,12 +49,9 @@ class SafeBuffer(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
   """
   ReleaseHandle(self: SafeHandle) -> bool
   
-   When overridden in a derived class,executes the code required to free the 
-    handle.
-  
-   Returns: true if the handle is released successfully; otherwise,in the event of a 
-    catastrophic failure,false. In this case,it generates a releaseHandleFailed 
-    MDA Managed Debugging Assistant.
+   When overridden in a derived class,executes the code required to free the handle.
+   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,
+    false. In this case,it generates a releaseHandleFailed MDA Managed Debugging Assistant.
   """
   pass
  def ReleasePointer(self):
@@ -82,10 +76,17 @@ class SafeBuffer(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
   """ WriteArray[T](self: SafeBuffer,byteOffset: UInt64,array: Array[T],index: int,count: int) """
   pass
  def __enter__(self,*args):
-  """ __enter__(self: IDisposable) -> object """
+  """
+  __enter__(self: IDisposable) -> object
+  
+   Provides the implementation of __enter__ for objects which implement IDisposable.
+  """
   pass
  def __exit__(self,*args):
-  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
+  """
+  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
+   Provides the implementation of __exit__ for objects which implement IDisposable.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

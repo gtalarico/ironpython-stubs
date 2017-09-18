@@ -19,27 +19,25 @@ class NumericUpDownAccelerationCollection(MarshalByRefObject,ICollection[Numeric
   """
   AddRange(self: NumericUpDownAccelerationCollection,*accelerations: Array[NumericUpDownAcceleration])
    Adds the elements of the specified array to the 
-    System.Windows.Forms.NumericUpDownAccelerationCollection,keeping the 
-    collection sorted.
+    System.Windows.Forms.NumericUpDownAccelerationCollection,keeping the collection sorted.
   
   
-   accelerations: An array of type System.Windows.Forms.NumericUpDownAcceleration  containing the 
-    objects to add to the collection.
+   accelerations: An array of type System.Windows.Forms.NumericUpDownAcceleration  containing the objects to add 
+    to the collection.
   """
   pass
  def Clear(self):
   """
   Clear(self: NumericUpDownAccelerationCollection)
-   Removes all elements from the 
-    System.Windows.Forms.NumericUpDownAccelerationCollection.
+   Removes all elements from the System.Windows.Forms.NumericUpDownAccelerationCollection.
   """
   pass
  def Contains(self,acceleration):
   """
   Contains(self: NumericUpDownAccelerationCollection,acceleration: NumericUpDownAcceleration) -> bool
   
-   Determines whether the System.Windows.Forms.NumericUpDownAccelerationCollection 
-    contains a specific System.Windows.Forms.NumericUpDownAcceleration.
+   Determines whether the System.Windows.Forms.NumericUpDownAccelerationCollection contains a 
+    specific System.Windows.Forms.NumericUpDownAcceleration.
   
   
    acceleration: The System.Windows.Forms.NumericUpDownAcceleration to locate in the 
@@ -52,14 +50,12 @@ class NumericUpDownAccelerationCollection(MarshalByRefObject,ICollection[Numeric
  def CopyTo(self,array,index):
   """
   CopyTo(self: NumericUpDownAccelerationCollection,array: Array[NumericUpDownAcceleration],index: int)
-   Copies the System.Windows.Forms.NumericUpDownAccelerationCollection values to a 
-    one-dimensional System.Windows.Forms.NumericUpDownAcceleration instance at the 
-    specified index.
+   Copies the System.Windows.Forms.NumericUpDownAccelerationCollection values to a one-dimensional 
+    System.Windows.Forms.NumericUpDownAcceleration instance at the specified index.
   
   
-   array: The one-dimensional System.Windows.Forms.NumericUpDownAcceleration that is the 
-    destination of the values copied from 
-    System.Windows.Forms.NumericUpDownAccelerationCollection.
+   array: The one-dimensional System.Windows.Forms.NumericUpDownAcceleration that is the destination of 
+    the values copied from System.Windows.Forms.NumericUpDownAccelerationCollection.
   
    index: The index in array where copying begins.
   """
@@ -70,11 +66,11 @@ class NumericUpDownAccelerationCollection(MarshalByRefObject,ICollection[Numeric
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which 
-    will cause the object to be assigned a new identity when it is marshaled across 
-    a remoting boundary. A value of false is usually appropriate. true to copy the 
-    current System.MarshalByRefObject object's identity to its clone,which will 
-    cause remoting client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the 
+    object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+    false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+    identity to its clone,which will cause remoting client calls to be routed to the remote server 
+    object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -87,14 +83,11 @@ class NumericUpDownAccelerationCollection(MarshalByRefObject,ICollection[Numeric
   """
   Remove(self: NumericUpDownAccelerationCollection,acceleration: NumericUpDownAcceleration) -> bool
   
-   Removes the first occurrence of the specified 
-    System.Windows.Forms.NumericUpDownAcceleration from the 
-    System.Windows.Forms.NumericUpDownAccelerationCollection.
+   Removes the first occurrence of the specified System.Windows.Forms.NumericUpDownAcceleration 
+    from the System.Windows.Forms.NumericUpDownAccelerationCollection.
   
   
-   acceleration: The System.Windows.Forms.NumericUpDownAcceleration to remove from the 
-    collection.
-  
+   acceleration: The System.Windows.Forms.NumericUpDownAcceleration to remove from the collection.
    Returns: true if the System.Windows.Forms.NumericUpDownAcceleration is removed from 
     System.Windows.Forms.NumericUpDownAccelerationCollection; otherwise,false.
   """

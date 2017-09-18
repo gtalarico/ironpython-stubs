@@ -14,8 +14,7 @@ class DescriptionAttribute(Attribute,_Attribute):
   
   
    obj: The object to test the value equality of.
-   Returns: true if the value of the given object is equal to that of the current; 
-    otherwise,false.
+   Returns: true if the value of the given object is equal to that of the current; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -28,8 +27,8 @@ class DescriptionAttribute(Attribute,_Attribute):
    Returns a value indicating whether this is the default 
     System.ComponentModel.DescriptionAttribute instance.
   
-   Returns: true,if this is the default System.ComponentModel.DescriptionAttribute 
-    instance; otherwise,false.
+   Returns: true,if this is the default System.ComponentModel.DescriptionAttribute instance; otherwise,
+    false.
   """
   pass
  def __eq__(self,*args):

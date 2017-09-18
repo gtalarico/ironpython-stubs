@@ -14,13 +14,11 @@ class FileNotFoundException(IOException,ISerializable,_Exception):
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: FileNotFoundException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo object with the file 
-    name and additional exception information.
+   Sets the System.Runtime.Serialization.SerializationInfo object with the file name and additional 
+    exception information.
   
   
-   info: The object that holds the serialized object data about the exception being 
-    thrown.
-  
+   info: The object that holds the serialized object data about the exception being thrown.
    context: The object that contains contextual information about the source or destination.
   """
   pass
@@ -31,11 +29,11 @@ class FileNotFoundException(IOException,ISerializable,_Exception):
   """
   ToString(self: FileNotFoundException) -> str
   
-   Returns the fully qualified name of this exception and possibly the error 
-    message,the name of the inner exception,and the stack trace.
+   Returns the fully qualified name of this exception and possibly the error message,the name of 
+    the inner exception,and the stack trace.
   
-   Returns: The fully qualified name of this exception and possibly the error message,the 
-    name of the inner exception,and the stack trace.
+   Returns: The fully qualified name of this exception and possibly the error message,the name of the inner 
+    exception,and the stack trace.
   """
   pass
  def __init__(self,*args):

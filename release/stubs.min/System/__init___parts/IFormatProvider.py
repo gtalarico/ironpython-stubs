@@ -7,9 +7,8 @@ class IFormatProvider:
    Returns an object that provides formatting services for the specified type.
   
    formatType: An object that specifies the type of format object to return.
-   Returns: An instance of the object specified by formatType,if the 
-    System.IFormatProvider implementation can supply that type of object; 
-    otherwise,null.
+   Returns: An instance of the object specified by formatType,if the System.IFormatProvider implementation 
+    can supply that type of object; otherwise,null.
   """
   pass
  def __init__(self,*args):

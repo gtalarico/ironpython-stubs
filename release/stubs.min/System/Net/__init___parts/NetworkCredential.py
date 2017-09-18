@@ -12,8 +12,8 @@ class NetworkCredential(object,ICredentials,ICredentialsByHost):
   """
   GetCredential(self: NetworkCredential,host: str,port: int,authenticationType: str) -> NetworkCredential
   
-   Returns an instance of the System.Net.NetworkCredential class for the specified 
-    host,port,and authentication type.
+   Returns an instance of the System.Net.NetworkCredential class for the specified host,port,and 
+    authentication type.
   
   
    host: The host computer that authenticates the client.
@@ -21,14 +21,14 @@ class NetworkCredential(object,ICredentials,ICredentialsByHost):
    authenticationType: The type of authentication requested,as defined in the 
     System.Net.IAuthenticationModule.AuthenticationType property.
   
-   Returns: A System.Net.NetworkCredential for the specified host,port,and authentication 
-    protocol,or null if there are no credentials available for the specified host,
-    port,and authentication protocol.
+   Returns: A System.Net.NetworkCredential for the specified host,port,and authentication protocol,or 
+    null if there are no credentials available for the specified host,port,and authentication 
+    protocol.
   
   GetCredential(self: NetworkCredential,uri: Uri,authType: str) -> NetworkCredential
   
-   Returns an instance of the System.Net.NetworkCredential class for the specified 
-    Uniform Resource Identifier (URI) and authentication type.
+   Returns an instance of the System.Net.NetworkCredential class for the specified Uniform Resource 
+    Identifier (URI) and authentication type.
   
   
    uri: The URI that the client provides authentication for.

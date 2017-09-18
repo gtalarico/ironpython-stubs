@@ -2,7 +2,7 @@
 # module System.Drawing calls itself Drawing
 # from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 # by generator 1.145
-# no doc
+""" NamespaceTracker represent a CLS namespace. """
 # no imports
 
 # no functions
@@ -31,24 +31,18 @@ class Image(MarshalByRefObject, ISerializable, ICloneable, IDisposable):
         """
         FromFile(filename: str, useEmbeddedColorManagement: bool) -> Image
         
-            Creates an System.Drawing.Image from the specified file using embedded color 
-             management information in that file.
+            Creates an System.Drawing.Image from the specified file using embedded color management 
+             information in that file.
         
         
-            filename: A string that contains the name of the file from which to create the 
-             System.Drawing.Image.
-        
-            useEmbeddedColorManagement: Set to true to use color management information embedded in the image file; 
-             otherwise, false.
-        
+            filename: A string that contains the name of the file from which to create the System.Drawing.Image.
+            useEmbeddedColorManagement: Set to true to use color management information embedded in the image file; otherwise, false.
             Returns: The System.Drawing.Image this method creates.
         FromFile(filename: str) -> Image
         
             Creates an System.Drawing.Image from the specified file.
         
-            filename: A string that contains the name of the file from which to create the 
-             System.Drawing.Image.
-        
+            filename: A string that contains the name of the file from which to create the System.Drawing.Image.
             Returns: The System.Drawing.Image this method creates.
         """
         pass
@@ -58,13 +52,11 @@ class Image(MarshalByRefObject, ISerializable, ICloneable, IDisposable):
         """
         FromHbitmap(hbitmap: IntPtr, hpalette: IntPtr) -> Bitmap
         
-            Creates a System.Drawing.Bitmap from a handle to a GDI bitmap and a handle to a 
-             GDI palette.
-        
+            Creates a System.Drawing.Bitmap from a handle to a GDI bitmap and a handle to a GDI palette.
         
             hbitmap: The GDI bitmap handle from which to create the System.Drawing.Bitmap.
-            hpalette: A handle to a GDI palette used to define the bitmap colors if the bitmap 
-             specified in the hBitmap parameter is not a device-independent bitmap (DIB).
+            hpalette: A handle to a GDI palette used to define the bitmap colors if the bitmap specified in the 
+             hBitmap parameter is not a device-independent bitmap (DIB).
         
             Returns: The System.Drawing.Bitmap this method creates.
         FromHbitmap(hbitmap: IntPtr) -> Bitmap
@@ -81,26 +73,22 @@ class Image(MarshalByRefObject, ISerializable, ICloneable, IDisposable):
         """
         FromStream(stream: Stream, useEmbeddedColorManagement: bool, validateImageData: bool) -> Image
         
-            Creates an System.Drawing.Image from the specified data stream, optionally 
-             using embedded color management information and validating the image data.
+            Creates an System.Drawing.Image from the specified data stream, optionally using embedded color 
+             management information and validating the image data.
         
         
             stream: A System.IO.Stream that contains the data for this System.Drawing.Image.
-            useEmbeddedColorManagement: true to use color management information embedded in the data stream; 
-             otherwise, false.
-        
+            useEmbeddedColorManagement: true to use color management information embedded in the data stream; otherwise, false.
             validateImageData: true to validate the image data; otherwise, false.
             Returns: The System.Drawing.Image this method creates.
         FromStream(stream: Stream, useEmbeddedColorManagement: bool) -> Image
         
-            Creates an System.Drawing.Image from the specified data stream, optionally 
-             using embedded color management information in that stream.
+            Creates an System.Drawing.Image from the specified data stream, optionally using embedded color 
+             management information in that stream.
         
         
             stream: A System.IO.Stream that contains the data for this System.Drawing.Image.
-            useEmbeddedColorManagement: true to use color management information embedded in the data stream; 
-             otherwise, false.
-        
+            useEmbeddedColorManagement: true to use color management information embedded in the data stream; otherwise, false.
             Returns: The System.Drawing.Image this method creates.
         FromStream(stream: Stream) -> Image
         
@@ -117,11 +105,10 @@ class Image(MarshalByRefObject, ISerializable, ICloneable, IDisposable):
         
             Gets the bounds of the image in the specified unit.
         
-            pageUnit: One of the System.Drawing.GraphicsUnit values indicating the unit of measure 
-             for the bounding rectangle.
+            pageUnit: One of the System.Drawing.GraphicsUnit values indicating the unit of measure for the bounding 
+             rectangle.
         
-            Returns: The System.Drawing.RectangleF that represents the bounds of the image, in the 
-             specified unit.
+            Returns: The System.Drawing.RectangleF that represents the bounds of the image, in the specified unit.
         """
         pass
 
@@ -129,15 +116,12 @@ class Image(MarshalByRefObject, ISerializable, ICloneable, IDisposable):
         """
         GetEncoderParameterList(self: Image, encoder: Guid) -> EncoderParameters
         
-            Returns information about the parameters supported by the specified image 
-             encoder.
-        
+            Returns information about the parameters supported by the specified image encoder.
         
             encoder: A GUID that specifies the image encoder.
             Returns: An System.Drawing.Imaging.EncoderParameters that contains an array of 
-             System.Drawing.Imaging.EncoderParameter objects. Each 
-             System.Drawing.Imaging.EncoderParameter contains information about one of the 
-             parameters supported by the specified image encoder.
+             System.Drawing.Imaging.EncoderParameter objects. Each System.Drawing.Imaging.EncoderParameter 
+             contains information about one of the parameters supported by the specified image encoder.
         """
         pass
 
@@ -147,9 +131,7 @@ class Image(MarshalByRefObject, ISerializable, ICloneable, IDisposable):
         
             Returns the number of frames of the specified dimension.
         
-            dimension: A System.Drawing.Imaging.FrameDimension that specifies the identity of the 
-             dimension type.
-        
+            dimension: A System.Drawing.Imaging.FrameDimension that specifies the identity of the dimension type.
             Returns: The number of frames in the specified dimension.
         """
         pass
@@ -159,12 +141,10 @@ class Image(MarshalByRefObject, ISerializable, ICloneable, IDisposable):
         """
         GetPixelFormatSize(pixfmt: PixelFormat) -> int
         
-            Returns the color depth, in number of bits per pixel, of the specified pixel 
-             format.
+            Returns the color depth, in number of bits per pixel, of the specified pixel format.
         
-        
-            pixfmt: The System.Drawing.Imaging.PixelFormat member that specifies the format for 
-             which to find the size.
+            pixfmt: The System.Drawing.Imaging.PixelFormat member that specifies the format for which to find the 
+             size.
         
             Returns: The color depth of the specified pixel format.
         """
@@ -190,8 +170,8 @@ class Image(MarshalByRefObject, ISerializable, ICloneable, IDisposable):
         """
         IsAlphaPixelFormat(pixfmt: PixelFormat) -> bool
         
-            Returns a value that indicates whether the pixel format for this 
-             System.Drawing.Image contains alpha information.
+            Returns a value that indicates whether the pixel format for this System.Drawing.Image contains 
+             alpha information.
         
         
             pixfmt: The System.Drawing.Imaging.PixelFormat to test.
@@ -229,11 +209,11 @@ class Image(MarshalByRefObject, ISerializable, ICloneable, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled across 
-             a remoting boundary. A value of false is usually appropriate. true to copy the 
-             current System.MarshalByRefObject object's identity to its clone, which will 
-             cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
+             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+             identity to its clone, which will cause remoting client calls to be routed to the remote server 
+             object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -257,8 +237,8 @@ class Image(MarshalByRefObject, ISerializable, ICloneable, IDisposable):
         RotateFlip(self: Image, rotateFlipType: RotateFlipType)
             Rotates, flips, or rotates and flips the System.Drawing.Image.
         
-            rotateFlipType: A System.Drawing.RotateFlipType member that specifies the type of rotation and 
-             flip to apply to the image.
+            rotateFlipType: A System.Drawing.RotateFlipType member that specifies the type of rotation and flip to apply to 
+             the image.
         """
         pass
 
@@ -268,43 +248,31 @@ class Image(MarshalByRefObject, ISerializable, ICloneable, IDisposable):
             Saves this image to the specified stream in the specified format.
         
             stream: The System.IO.Stream where the image will be saved.
-            format: An System.Drawing.Imaging.ImageFormat that specifies the format of the saved 
-             image.
-        
+            format: An System.Drawing.Imaging.ImageFormat that specifies the format of the saved image.
         Save(self: Image, stream: Stream, encoder: ImageCodecInfo, encoderParams: EncoderParameters)
-            Saves this image to the specified stream, with the specified encoder and image 
-             encoder parameters.
+            Saves this image to the specified stream, with the specified encoder and image encoder 
+             parameters.
         
         
             stream: The System.IO.Stream where the image will be saved.
             encoder: The System.Drawing.Imaging.ImageCodecInfo for this System.Drawing.Image.
-            encoderParams: An System.Drawing.Imaging.EncoderParameters that specifies parameters used by 
-             the image encoder.
-        
+            encoderParams: An System.Drawing.Imaging.EncoderParameters that specifies parameters used by the image encoder.
         Save(self: Image, filename: str, encoder: ImageCodecInfo, encoderParams: EncoderParameters)
-            Saves this System.Drawing.Image to the specified file, with the specified 
-             encoder and image-encoder parameters.
+            Saves this System.Drawing.Image to the specified file, with the specified encoder and 
+             image-encoder parameters.
         
         
-            filename: A string that contains the name of the file to which to save this 
-             System.Drawing.Image.
-        
+            filename: A string that contains the name of the file to which to save this System.Drawing.Image.
             encoder: The System.Drawing.Imaging.ImageCodecInfo for this System.Drawing.Image.
-            encoderParams: An System.Drawing.Imaging.EncoderParameters to use for this 
-             System.Drawing.Image.
-        
+            encoderParams: An System.Drawing.Imaging.EncoderParameters to use for this System.Drawing.Image.
         Save(self: Image, filename: str)
             Saves this System.Drawing.Image to the specified file or stream.
         
-            filename: A string that contains the name of the file to which to save this 
-             System.Drawing.Image.
-        
+            filename: A string that contains the name of the file to which to save this System.Drawing.Image.
         Save(self: Image, filename: str, format: ImageFormat)
             Saves this System.Drawing.Image to the specified file in the specified format.
         
-            filename: A string that contains the name of the file to which to save this 
-             System.Drawing.Image.
-        
+            filename: A string that contains the name of the file to which to save this System.Drawing.Image.
             format: The System.Drawing.Imaging.ImageFormat for this System.Drawing.Image.
         """
         pass
@@ -317,17 +285,17 @@ class Image(MarshalByRefObject, ISerializable, ICloneable, IDisposable):
         
         
             image: An System.Drawing.Image that contains the frame to add.
-            encoderParams: An System.Drawing.Imaging.EncoderParameters that holds parameters required by 
-             the image encoder that is used by the save-add operation.
+            encoderParams: An System.Drawing.Imaging.EncoderParameters that holds parameters required by the image encoder 
+             that is used by the save-add operation.
         
         SaveAdd(self: Image, encoderParams: EncoderParameters)
             Adds a frame to the file or stream specified in a previous call to the 
-             erload:System.Drawing.Image.Save method. Use this method to save selected 
-             frames from a multiple-frame image to another multiple-frame image.
+             erload:System.Drawing.Image.Save method. Use this method to save selected frames from a 
+             multiple-frame image to another multiple-frame image.
         
         
-            encoderParams: An System.Drawing.Imaging.EncoderParameters that holds parameters required by 
-             the image encoder that is used by the save-add operation.
+            encoderParams: An System.Drawing.Imaging.EncoderParameters that holds parameters required by the image encoder 
+             that is used by the save-add operation.
         """
         pass
 
@@ -337,9 +305,7 @@ class Image(MarshalByRefObject, ISerializable, ICloneable, IDisposable):
         
             Selects the frame specified by the dimension and index.
         
-            dimension: A System.Drawing.Imaging.FrameDimension that specifies the identity of the 
-             dimension type.
-        
+            dimension: A System.Drawing.Imaging.FrameDimension that specifies the identity of the dimension type.
             frameIndex: The index of the active frame.
             Returns: Always returns 0.
         """
@@ -355,11 +321,18 @@ class Image(MarshalByRefObject, ISerializable, ICloneable, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -494,27 +467,26 @@ class Bitmap(Image, ISerializable, ICloneable, IDisposable):
         """
         Clone(self: Bitmap, rect: RectangleF, format: PixelFormat) -> Bitmap
         
-            Creates a copy of the section of this System.Drawing.Bitmap defined with a 
-             specified System.Drawing.Imaging.PixelFormat enumeration.
+            Creates a copy of the section of this System.Drawing.Bitmap defined with a specified 
+             System.Drawing.Imaging.PixelFormat enumeration.
         
         
             rect: Defines the portion of this System.Drawing.Bitmap to copy.
-            format: Specifies the System.Drawing.Imaging.PixelFormat enumeration for the 
-             destination System.Drawing.Bitmap.
+            format: Specifies the System.Drawing.Imaging.PixelFormat enumeration for the destination 
+             System.Drawing.Bitmap.
         
             Returns: The System.Drawing.Bitmap that this method creates.
         Clone(self: Bitmap, rect: Rectangle, format: PixelFormat) -> Bitmap
         
-            Creates a copy of the section of this System.Drawing.Bitmap defined by 
-             System.Drawing.Rectangle structure and with a specified 
-             System.Drawing.Imaging.PixelFormat enumeration.
+            Creates a copy of the section of this System.Drawing.Bitmap defined by System.Drawing.Rectangle 
+             structure and with a specified System.Drawing.Imaging.PixelFormat enumeration.
         
         
-            rect: Defines the portion of this System.Drawing.Bitmap to copy. Coordinates are 
-             relative to this System.Drawing.Bitmap.
+            rect: Defines the portion of this System.Drawing.Bitmap to copy. Coordinates are relative to this 
+             System.Drawing.Bitmap.
         
-            format: The pixel format for the new System.Drawing.Bitmap. This must specify a value 
-             that begins with Format.
+            format: The pixel format for the new System.Drawing.Bitmap. This must specify a value that begins with 
+             Format.
         
             Returns: The new System.Drawing.Bitmap that this method creates.
         """
@@ -523,12 +495,11 @@ class Bitmap(Image, ISerializable, ICloneable, IDisposable):
     def Dispose(self):
         """
         Dispose(self: Image, disposing: bool)
-            Releases the unmanaged resources used by the System.Drawing.Image and 
-             optionally releases the managed resources.
+            Releases the unmanaged resources used by the System.Drawing.Image and optionally releases the 
+             managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only 
-             unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
         """
         pass
 
@@ -563,8 +534,8 @@ class Bitmap(Image, ISerializable, ICloneable, IDisposable):
         
             Creates a GDI bitmap object from this System.Drawing.Bitmap.
         
-            background: A System.Drawing.Color structure that specifies the background color. This 
-             parameter is ignored if the bitmap is totally opaque.
+            background: A System.Drawing.Color structure that specifies the background color. This parameter is ignored 
+             if the bitmap is totally opaque.
         
             Returns: A handle to the GDI bitmap object that this method creates.
         GetHbitmap(self: Bitmap) -> IntPtr
@@ -591,8 +562,7 @@ class Bitmap(Image, ISerializable, ICloneable, IDisposable):
         
             x: The x-coordinate of the pixel to retrieve.
             y: The y-coordinate of the pixel to retrieve.
-            Returns: A System.Drawing.Color structure that represents the color of the specified 
-             pixel.
+            Returns: A System.Drawing.Color structure that represents the color of the specified pixel.
         """
         pass
 
@@ -602,36 +572,29 @@ class Bitmap(Image, ISerializable, ICloneable, IDisposable):
         
             Locks a System.Drawing.Bitmap into system memory
         
-            rect: A rectangle structure that specifies the portion of the System.Drawing.Bitmap 
-             to lock.
+            rect: A rectangle structure that specifies the portion of the System.Drawing.Bitmap to lock.
+            flags: One of the System.Drawing.Imaging.ImageLockMode values that specifies the access level 
+             (read/write) for the System.Drawing.Bitmap.
         
-            flags: One of the System.Drawing.Imaging.ImageLockMode values that specifies the 
-             access level (read/write) for the System.Drawing.Bitmap.
+            format: One of the System.Drawing.Imaging.PixelFormat values that specifies the data format of the 
+             System.Drawing.Bitmap.
         
-            format: One of the System.Drawing.Imaging.PixelFormat values that specifies the data 
-             format of the System.Drawing.Bitmap.
-        
-            bitmapData: A System.Drawing.Imaging.BitmapData that contains information about the lock 
-             operation.
-        
-            Returns: A System.Drawing.Imaging.BitmapData that contains information about the lock 
-             operation.
-        
+            bitmapData: A System.Drawing.Imaging.BitmapData that contains information about the lock operation.
+            Returns: A System.Drawing.Imaging.BitmapData that contains information about the lock operation.
         LockBits(self: Bitmap, rect: Rectangle, flags: ImageLockMode, format: PixelFormat) -> BitmapData
         
             Locks a System.Drawing.Bitmap into system memory.
         
-            rect: A System.Drawing.Rectangle structure that specifies the portion of the 
-             System.Drawing.Bitmap to lock.
+            rect: A System.Drawing.Rectangle structure that specifies the portion of the System.Drawing.Bitmap to 
+             lock.
         
-            flags: An System.Drawing.Imaging.ImageLockMode enumeration that specifies the access 
-             level (read/write) for the System.Drawing.Bitmap.
+            flags: An System.Drawing.Imaging.ImageLockMode enumeration that specifies the access level (read/write) 
+             for the System.Drawing.Bitmap.
         
-            format: A System.Drawing.Imaging.PixelFormat enumeration that specifies the data format 
-             of this System.Drawing.Bitmap.
+            format: A System.Drawing.Imaging.PixelFormat enumeration that specifies the data format of this 
+             System.Drawing.Bitmap.
         
-            Returns: A System.Drawing.Imaging.BitmapData that contains information about this lock 
-             operation.
+            Returns: A System.Drawing.Imaging.BitmapData that contains information about this lock operation.
         """
         pass
 
@@ -640,9 +603,7 @@ class Bitmap(Image, ISerializable, ICloneable, IDisposable):
         MakeTransparent(self: Bitmap, transparentColor: Color)
             Makes the specified color transparent for this System.Drawing.Bitmap.
         
-            transparentColor: The System.Drawing.Color structure that represents the color to make 
-             transparent.
-        
+            transparentColor: The System.Drawing.Color structure that represents the color to make transparent.
         MakeTransparent(self: Bitmap)
             Makes the default transparent color transparent for this System.Drawing.Bitmap.
         """
@@ -654,11 +615,11 @@ class Bitmap(Image, ISerializable, ICloneable, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled across 
-             a remoting boundary. A value of false is usually appropriate. true to copy the 
-             current System.MarshalByRefObject object's identity to its clone, which will 
-             cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
+             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+             identity to its clone, which will cause remoting client calls to be routed to the remote server 
+             object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -675,8 +636,7 @@ class Bitmap(Image, ISerializable, ICloneable, IDisposable):
         
             x: The x-coordinate of the pixel to set.
             y: The y-coordinate of the pixel to set.
-            color: A System.Drawing.Color structure that represents the color to assign to the 
-             specified pixel.
+            color: A System.Drawing.Color structure that represents the color to assign to the specified pixel.
         """
         pass
 
@@ -695,17 +655,23 @@ class Bitmap(Image, ISerializable, ICloneable, IDisposable):
         UnlockBits(self: Bitmap, bitmapdata: BitmapData)
             Unlocks this System.Drawing.Bitmap from system memory.
         
-            bitmapdata: A System.Drawing.Imaging.BitmapData that specifies information about the lock 
-             operation.
+            bitmapdata: A System.Drawing.Imaging.BitmapData that specifies information about the lock operation.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -754,9 +720,7 @@ class Brush(MarshalByRefObject, ICloneable, IDisposable):
         """
         Clone(self: Brush) -> object
         
-            When overridden in a derived class, creates an exact copy of this 
-             System.Drawing.Brush.
-        
+            When overridden in a derived class, creates an exact copy of this System.Drawing.Brush.
             Returns: The new System.Drawing.Brush that this method creates.
         """
         pass
@@ -774,11 +738,11 @@ class Brush(MarshalByRefObject, ICloneable, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled across 
-             a remoting boundary. A value of false is usually appropriate. true to copy the 
-             current System.MarshalByRefObject object's identity to its clone, which will 
-             cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
+             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+             identity to its clone, which will cause remoting client calls to be routed to the remote server 
+             object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -798,11 +762,18 @@ class Brush(MarshalByRefObject, ICloneable, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -967,32 +938,35 @@ class BufferedGraphics(object, IDisposable):
     def Render(self, *__args):
         """
         Render(self: BufferedGraphics, targetDC: IntPtr)
-            Writes the contents of the graphics buffer to the device context associated 
-             with the specified System.IntPtr handle.
+            Writes the contents of the graphics buffer to the device context associated with the specified 
+             System.IntPtr handle.
         
         
-            targetDC: An System.IntPtr that points to the device context to which to write the 
-             contents of the graphics buffer.
+            targetDC: An System.IntPtr that points to the device context to which to write the contents of the 
+             graphics buffer.
         
         Render(self: BufferedGraphics, target: Graphics)
-            Writes the contents of the graphics buffer to the specified 
-             System.Drawing.Graphics object.
+            Writes the contents of the graphics buffer to the specified System.Drawing.Graphics object.
         
-        
-            target: A System.Drawing.Graphics object to which to write the contents of the graphics 
-             buffer.
-        
+            target: A System.Drawing.Graphics object to which to write the contents of the graphics buffer.
         Render(self: BufferedGraphics)
             Writes the contents of the graphics buffer to the default device.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1022,27 +996,25 @@ class BufferedGraphicsContext(object, IDisposable):
         """
         Allocate(self: BufferedGraphicsContext, targetDC: IntPtr, targetRectangle: Rectangle) -> BufferedGraphics
         
-            Creates a graphics buffer of the specified size using the pixel format of the 
-             specified System.Drawing.Graphics.
+            Creates a graphics buffer of the specified size using the pixel format of the specified 
+             System.Drawing.Graphics.
         
         
-            targetDC: An System.IntPtr to a device context to match the pixel format of the new 
-             buffer to.
-        
+            targetDC: An System.IntPtr to a device context to match the pixel format of the new buffer to.
             targetRectangle: A System.Drawing.Rectangle indicating the size of the buffer to create.
-            Returns: A System.Drawing.BufferedGraphics that can be used to draw to a buffer of the 
-             specified dimensions.
+            Returns: A System.Drawing.BufferedGraphics that can be used to draw to a buffer of the specified 
+             dimensions.
         
         Allocate(self: BufferedGraphicsContext, targetGraphics: Graphics, targetRectangle: Rectangle) -> BufferedGraphics
         
-            Creates a graphics buffer of the specified size using the pixel format of the 
-             specified System.Drawing.Graphics.
+            Creates a graphics buffer of the specified size using the pixel format of the specified 
+             System.Drawing.Graphics.
         
         
             targetGraphics: The System.Drawing.Graphics to match the pixel format for the new buffer to.
             targetRectangle: A System.Drawing.Rectangle indicating the size of the buffer to create.
-            Returns: A System.Drawing.BufferedGraphics that can be used to draw to a buffer of the 
-             specified dimensions.
+            Returns: A System.Drawing.BufferedGraphics that can be used to draw to a buffer of the specified 
+             dimensions.
         """
         pass
 
@@ -1056,17 +1028,24 @@ class BufferedGraphicsContext(object, IDisposable):
     def Invalidate(self):
         """
         Invalidate(self: BufferedGraphicsContext)
-            Disposes of the current graphics buffer, if a buffer has been allocated and has 
-             not yet been disposed.
+            Disposes of the current graphics buffer, if a buffer has been allocated and has not yet been 
+             disposed.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1102,14 +1081,12 @@ class CharacterRange(object):
         """
         Equals(self: CharacterRange, obj: object) -> bool
         
-            Gets a value indicating whether this object is equivalent to the specified 
-             object.
-        
+            Gets a value indicating whether this object is equivalent to the specified object.
         
             obj: The object to compare to for equality.
             Returns: true to indicate the specified object is an instance with the same 
-             System.Drawing.CharacterRange.First and System.Drawing.CharacterRange.Length 
-             value as this instance; otherwise, false.
+             System.Drawing.CharacterRange.First and System.Drawing.CharacterRange.Length value as this 
+             instance; otherwise, false.
         """
         pass
 
@@ -1124,8 +1101,9 @@ class CharacterRange(object):
     @staticmethod # known case of __new__
     def __new__(self, First, Length):
         """
-        __new__(cls: type, First: int, Length: int)
-        __new__[CharacterRange]() -> CharacterRange
+        __new__[CharacterRange]() -> CharacterRange
+        
+        __new__(cls: type, First: int, Length: int)
         """
         pass
 
@@ -1156,13 +1134,13 @@ class Color(object):
         """
         Equals(self: Color, obj: object) -> bool
         
-            Tests whether the specified object is a System.Drawing.Color structure and is 
-             equivalent to this System.Drawing.Color structure.
+            Tests whether the specified object is a System.Drawing.Color structure and is equivalent to this 
+             System.Drawing.Color structure.
         
         
             obj: The object to test.
-            Returns: true if obj is a System.Drawing.Color structure equivalent to this 
-             System.Drawing.Color structure; otherwise, false.
+            Returns: true if obj is a System.Drawing.Color structure equivalent to this System.Drawing.Color 
+             structure; otherwise, false.
         """
         pass
 
@@ -1171,34 +1149,24 @@ class Color(object):
         """
         FromArgb(alpha: int, baseColor: Color) -> Color
         
-            Creates a System.Drawing.Color structure from the specified 
-             System.Drawing.Color structure, but with the new specified alpha value. 
-             Although this method allows a 32-bit value to be passed for the alpha value, 
-             the value is limited to 8 bits.
+            Creates a System.Drawing.Color structure from the specified System.Drawing.Color structure, but 
+             with the new specified alpha value. Although this method allows a 32-bit value to be passed for 
+             the alpha value, the value is limited to 8 bits.
         
         
-            alpha: The alpha value for the new System.Drawing.Color. Valid values are 0 through 
-             255.
-        
+            alpha: The alpha value for the new System.Drawing.Color. Valid values are 0 through 255.
             baseColor: The System.Drawing.Color from which to create the new System.Drawing.Color.
             Returns: The System.Drawing.Color that this method creates.
         FromArgb(red: int, green: int, blue: int) -> Color
         
-            Creates a System.Drawing.Color structure from the specified 8-bit color values 
-             (red, green, and blue). The alpha value is implicitly 255 (fully opaque). 
-             Although this method allows a 32-bit value to be passed for each color 
-             component, the value of each component is limited to 8 bits.
+            Creates a System.Drawing.Color structure from the specified 8-bit color values (red, green, and 
+             blue). The alpha value is implicitly 255 (fully opaque). Although this method allows a 32-bit 
+             value to be passed for each color component, the value of each component is limited to 8 bits.
         
         
-            red: The red component value for the new System.Drawing.Color. Valid values are 0 
-             through 255.
-        
-            green: The green component value for the new System.Drawing.Color. Valid values are 0 
-             through 255.
-        
-            blue: The blue component value for the new System.Drawing.Color. Valid values are 0 
-             through 255.
-        
+            red: The red component value for the new System.Drawing.Color. Valid values are 0 through 255.
+            green: The green component value for the new System.Drawing.Color. Valid values are 0 through 255.
+            blue: The blue component value for the new System.Drawing.Color. Valid values are 0 through 255.
             Returns: The System.Drawing.Color that this method creates.
         FromArgb(argb: int) -> Color
         
@@ -1208,9 +1176,9 @@ class Color(object):
             Returns: The System.Drawing.Color structure that this method creates.
         FromArgb(alpha: int, red: int, green: int, blue: int) -> Color
         
-            Creates a System.Drawing.Color structure from the four ARGB component (alpha, 
-             red, green, and blue) values. Although this method allows a 32-bit value to be 
-             passed for each component, the value of each component is limited to 8 bits.
+            Creates a System.Drawing.Color structure from the four ARGB component (alpha, red, green, and 
+             blue) values. Although this method allows a 32-bit value to be passed for each component, the 
+             value of each component is limited to 8 bits.
         
         
             alpha: The alpha component. Valid values are 0 through 255.
@@ -1238,12 +1206,10 @@ class Color(object):
         """
         FromName(name: str) -> Color
         
-            Creates a System.Drawing.Color structure from the specified name of a 
-             predefined color.
+            Creates a System.Drawing.Color structure from the specified name of a predefined color.
         
-        
-            name: A string that is the name of a predefined color. Valid names are the same as 
-             the names of the elements of the System.Drawing.KnownColor enumeration.
+            name: A string that is the name of a predefined color. Valid names are the same as the names of the 
+             elements of the System.Drawing.KnownColor enumeration.
         
             Returns: The System.Drawing.Color that this method creates.
         """
@@ -1253,11 +1219,11 @@ class Color(object):
         """
         GetBrightness(self: Color) -> Single
         
-            Gets the hue-saturation-brightness (HSB) brightness value for this 
-             System.Drawing.Color structure.
+            Gets the hue-saturation-brightness (HSB) brightness value for this System.Drawing.Color 
+             structure.
         
-            Returns: The brightness of this System.Drawing.Color. The brightness ranges from 0.0 
-             through 1.0, where 0.0 represents black and 1.0 represents white.
+            Returns: The brightness of this System.Drawing.Color. The brightness ranges from 0.0 through 1.0, where 
+             0.0 represents black and 1.0 represents white.
         """
         pass
 
@@ -1274,11 +1240,11 @@ class Color(object):
         """
         GetHue(self: Color) -> Single
         
-            Gets the hue-saturation-brightness (HSB) hue value, in degrees, for this 
-             System.Drawing.Color structure.
+            Gets the hue-saturation-brightness (HSB) hue value, in degrees, for this System.Drawing.Color 
+             structure.
         
-            Returns: The hue, in degrees, of this System.Drawing.Color. The hue is measured in 
-             degrees, ranging from 0.0 through 360.0, in HSB color space.
+            Returns: The hue, in degrees, of this System.Drawing.Color. The hue is measured in degrees, ranging from 
+             0.0 through 360.0, in HSB color space.
         """
         pass
 
@@ -1286,11 +1252,11 @@ class Color(object):
         """
         GetSaturation(self: Color) -> Single
         
-            Gets the hue-saturation-brightness (HSB) saturation value for this 
-             System.Drawing.Color structure.
+            Gets the hue-saturation-brightness (HSB) saturation value for this System.Drawing.Color 
+             structure.
         
-            Returns: The saturation of this System.Drawing.Color. The saturation ranges from 0.0 
-             through 1.0, where 0.0 is grayscale and 1.0 is the most saturated.
+            Returns: The saturation of this System.Drawing.Color. The saturation ranges from 0.0 through 1.0, where 
+             0.0 is grayscale and 1.0 is the most saturated.
         """
         pass
 
@@ -1308,11 +1274,9 @@ class Color(object):
         ToKnownColor(self: Color) -> KnownColor
         
             Gets the System.Drawing.KnownColor value of this System.Drawing.Color structure.
-            Returns: An element of the System.Drawing.KnownColor enumeration, if the 
-             System.Drawing.Color is created from a predefined color by using either the 
-             System.Drawing.Color.FromName(System.String) method or the 
-             System.Drawing.Color.FromKnownColor(System.Drawing.KnownColor) method; 
-             otherwise, 0.
+            Returns: An element of the System.Drawing.KnownColor enumeration, if the System.Drawing.Color is created 
+             from a predefined color by using either the System.Drawing.Color.FromName(System.String) method 
+             or the System.Drawing.Color.FromKnownColor(System.Drawing.KnownColor) method; otherwise, 0.
         """
         pass
 
@@ -1321,11 +1285,10 @@ class Color(object):
         ToString(self: Color) -> str
         
             Converts this System.Drawing.Color structure to a human-readable string.
-            Returns: A string that is the name of this System.Drawing.Color, if the 
-             System.Drawing.Color is created from a predefined color by using either the 
-             System.Drawing.Color.FromName(System.String) method or the 
-             System.Drawing.Color.FromKnownColor(System.Drawing.KnownColor) method; 
-             otherwise, a string that consists of the ARGB component names and their values.
+            Returns: A string that is the name of this System.Drawing.Color, if the System.Drawing.Color is created 
+             from a predefined color by using either the System.Drawing.Color.FromName(System.String) method 
+             or the System.Drawing.Color.FromKnownColor(System.Drawing.KnownColor) method; otherwise, a 
+             string that consists of the ARGB component names and their values.
         """
         pass
 
@@ -1554,13 +1517,13 @@ class ColorConverter(TypeConverter):
         """
         CanConvertFrom(self: ColorConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Determines if this converter can convert an object in the given source type to 
-             the native type of the converter.
+            Determines if this converter can convert an object in the given source type to the native type 
+             of the converter.
         
         
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context. 
-             You can use this object to get additional information about the environment 
-             from which this converter is being invoked.
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context. You can use this 
+             object to get additional information about the environment from which this converter is being 
+             invoked.
         
             sourceType: The type from which you want to convert.
             Returns: true if this object can perform the conversion; otherwise, false.
@@ -1571,8 +1534,8 @@ class ColorConverter(TypeConverter):
         """
         CanConvertTo(self: ColorConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Returns a value indicating whether this converter can convert an object to the 
-             given destination type using the context.
+            Returns a value indicating whether this converter can convert an object to the given destination 
+             type using the context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -1587,13 +1550,10 @@ class ColorConverter(TypeConverter):
         
             Converts the given object to the converter's native type.
         
-            context: A System.ComponentModel.TypeDescriptor that provides a format context. You can 
-             use this object to get additional information about the environment from which 
-             this converter is being invoked.
+            context: A System.ComponentModel.TypeDescriptor that provides a format context. You can use this object 
+             to get additional information about the environment from which this converter is being invoked.
         
-            culture: A System.Globalization.CultureInfo that specifies the culture to represent the 
-             color.
-        
+            culture: A System.Globalization.CultureInfo that specifies the culture to represent the color.
             value: The object to convert.
             Returns: An System.Object representing the converted value.
         """
@@ -1605,14 +1565,11 @@ class ColorConverter(TypeConverter):
         
             Converts the specified object to another type.
         
-            context: A formatter context. Use this object to extract additional information about 
-             the environment from which this converter is being invoked. Always check 
-             whether this value is null. Also, properties on the context object may return 
-             null.
+            context: A formatter context. Use this object to extract additional information about the environment 
+             from which this converter is being invoked. Always check whether this value is null. Also, 
+             properties on the context object may return null.
         
-            culture: A System.Globalization.CultureInfo that specifies the culture to represent the 
-             color.
-        
+            culture: A System.Globalization.CultureInfo that specifies the culture to represent the color.
             value: The object to convert.
             destinationType: The type to convert the object to.
             Returns: An System.Object representing the converted value.
@@ -1623,18 +1580,17 @@ class ColorConverter(TypeConverter):
         """
         GetStandardValues(self: ColorConverter, context: ITypeDescriptorContext) -> StandardValuesCollection
         
-            Retrieves a collection containing a set of standard values for the data type 
-             for which this validator is designed. This will return null if the data type 
-             does not support a standard set of values.
+            Retrieves a collection containing a set of standard values for the data type for which this 
+             validator is designed. This will return null if the data type does not support a standard set of 
+             values.
         
         
-            context: A formatter context. Use this object to extract additional information about 
-             the environment from which this converter is being invoked. Always check 
-             whether this value is null. Also, properties on the context object may return 
-             null.
+            context: A formatter context. Use this object to extract additional information about the environment 
+             from which this converter is being invoked. Always check whether this value is null. Also, 
+             properties on the context object may return null.
         
-            Returns: A collection containing null or a standard set of valid values. The default 
-             implementation always returns null.
+            Returns: A collection containing null or a standard set of valid values. The default implementation 
+             always returns null.
         """
         pass
 
@@ -1642,15 +1598,11 @@ class ColorConverter(TypeConverter):
         """
         GetStandardValuesSupported(self: ColorConverter, context: ITypeDescriptorContext) -> bool
         
-            Determines if this object supports a standard set of values that can be chosen 
-             from a list.
+            Determines if this object supports a standard set of values that can be chosen from a list.
         
-        
-            context: A System.ComponentModel.TypeDescriptor through which additional context can be 
-             provided.
-        
-            Returns: true if erload:System.Drawing.ColorConverter.GetStandardValues must be called 
-             to find a common set of values the object supports; otherwise, false.
+            context: A System.ComponentModel.TypeDescriptor through which additional context can be provided.
+            Returns: true if erload:System.Drawing.ColorConverter.GetStandardValues must be called to find a common 
+             set of values the object supports; otherwise, false.
         """
         pass
 
@@ -1662,9 +1614,7 @@ class ColorTranslator(object):
         """
         FromHtml(htmlColor: str) -> Color
         
-            Translates an HTML color representation to a GDI+ System.Drawing.Color 
-             structure.
-        
+            Translates an HTML color representation to a GDI+ System.Drawing.Color structure.
         
             htmlColor: The string representation of the Html color to translate.
             Returns: The System.Drawing.Color structure that represents the translated HTML color or 
@@ -1701,9 +1651,7 @@ class ColorTranslator(object):
         """
         ToHtml(c: Color) -> str
         
-            Translates the specified System.Drawing.Color structure to an HTML string color 
-             representation.
-        
+            Translates the specified System.Drawing.Color structure to an HTML string color representation.
         
             c: The System.Drawing.Color structure to translate.
             Returns: The string that represents the HTML color.
@@ -1883,19 +1831,17 @@ class Font(MarshalByRefObject, ICloneable, ISerializable, IDisposable):
         """
         Equals(self: Font, obj: object) -> bool
         
-            Indicates whether the specified object is a System.Drawing.Font and has the 
-             same System.Drawing.Font.FontFamily, System.Drawing.Font.GdiVerticalFont, 
-             System.Drawing.Font.GdiCharSet, System.Drawing.Font.Style, 
-             System.Drawing.Font.Size, and System.Drawing.Font.Unit property values as this 
-             System.Drawing.Font.
+            Indicates whether the specified object is a System.Drawing.Font and has the same 
+             System.Drawing.Font.FontFamily, System.Drawing.Font.GdiVerticalFont, 
+             System.Drawing.Font.GdiCharSet, System.Drawing.Font.Style, System.Drawing.Font.Size, and 
+             System.Drawing.Font.Unit property values as this System.Drawing.Font.
         
         
             obj: The object to test.
             Returns: true if the obj parameter is a System.Drawing.Font and has the same 
              System.Drawing.Font.FontFamily, System.Drawing.Font.GdiVerticalFont, 
-             System.Drawing.Font.GdiCharSet, System.Drawing.Font.Style, 
-             System.Drawing.Font.Size, and System.Drawing.Font.Unit property values as this 
-             System.Drawing.Font; otherwise, false.
+             System.Drawing.Font.GdiCharSet, System.Drawing.Font.Style, System.Drawing.Font.Size, and 
+             System.Drawing.Font.Unit property values as this System.Drawing.Font; otherwise, false.
         """
         pass
 
@@ -1904,9 +1850,7 @@ class Font(MarshalByRefObject, ICloneable, ISerializable, IDisposable):
         """
         FromHdc(hdc: IntPtr) -> Font
         
-            Creates a System.Drawing.Font from the specified Windows handle to a device 
-             context.
-        
+            Creates a System.Drawing.Font from the specified Windows handle to a device context.
         
             hdc: A handle to a device context.
             Returns: The System.Drawing.Font this method creates.
@@ -1930,26 +1874,20 @@ class Font(MarshalByRefObject, ICloneable, ISerializable, IDisposable):
         """
         FromLogFont(lf: object) -> Font
         
-            Creates a System.Drawing.Font from the specified GDI logical font (LOGFONT) 
-             structure.
+            Creates a System.Drawing.Font from the specified GDI logical font (LOGFONT) structure.
         
-        
-            lf: An System.Object that represents the GDI�LOGFONT structure from which to create 
-             the System.Drawing.Font.
+            lf: An System.Object that represents the GDI�LOGFONT structure from which to create the 
+             System.Drawing.Font.
         
             Returns: The System.Drawing.Font that this method creates.
         FromLogFont(lf: object, hdc: IntPtr) -> Font
         
-            Creates a System.Drawing.Font from the specified GDI logical font (LOGFONT) 
-             structure.
+            Creates a System.Drawing.Font from the specified GDI logical font (LOGFONT) structure.
         
+            lf: An System.Object that represents the GDI�LOGFONT structure from which to create the 
+             System.Drawing.Font.
         
-            lf: An System.Object that represents the GDI�LOGFONT structure from which to create 
-             the System.Drawing.Font.
-        
-            hdc: A handle to a device context that contains additional information about the lf 
-             structure.
-        
+            hdc: A handle to a device context that contains additional information about the lf structure.
             Returns: The System.Drawing.Font that this method creates.
         """
         pass
@@ -1967,13 +1905,11 @@ class Font(MarshalByRefObject, ICloneable, ISerializable, IDisposable):
         """
         GetHeight(self: Font, dpi: Single) -> Single
         
-            Returns the height, in pixels, of this System.Drawing.Font when drawn to a 
-             device with the specified vertical resolution.
+            Returns the height, in pixels, of this System.Drawing.Font when drawn to a device with the 
+             specified vertical resolution.
         
         
-            dpi: The vertical resolution, in dots per inch, used to calculate the height of the 
-             font.
-        
+            dpi: The vertical resolution, in dots per inch, used to calculate the height of the font.
             Returns: The height, in pixels, of this System.Drawing.Font.
         GetHeight(self: Font) -> Single
         
@@ -1981,12 +1917,12 @@ class Font(MarshalByRefObject, ICloneable, ISerializable, IDisposable):
             Returns: The line spacing, in pixels, of this font.
         GetHeight(self: Font, graphics: Graphics) -> Single
         
-            Returns the line spacing, in the current unit of a specified 
-             System.Drawing.Graphics, of this font.
+            Returns the line spacing, in the current unit of a specified System.Drawing.Graphics, of this 
+             font.
         
         
-            graphics: A System.Drawing.Graphics that holds the vertical resolution, in dots per inch, 
-             of the display device as well as settings for page unit and page scale.
+            graphics: A System.Drawing.Graphics that holds the vertical resolution, in dots per inch, of the display 
+             device as well as settings for page unit and page scale.
         
             Returns: The line spacing, in pixels, of this font.
         """
@@ -1998,11 +1934,11 @@ class Font(MarshalByRefObject, ICloneable, ISerializable, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled across 
-             a remoting boundary. A value of false is usually appropriate. true to copy the 
-             current System.MarshalByRefObject object's identity to its clone, which will 
-             cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
+             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+             identity to its clone, which will cause remoting client calls to be routed to the remote server 
+             object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2027,9 +1963,7 @@ class Font(MarshalByRefObject, ICloneable, ISerializable, IDisposable):
             Creates a GDI logical font (LOGFONT) structure from this System.Drawing.Font.
         
             logFont: An System.Object that represents the LOGFONT structure that this method creates.
-            graphics: A System.Drawing.Graphics that provides additional information for the LOGFONT 
-             structure.
-        
+            graphics: A System.Drawing.Graphics that provides additional information for the LOGFONT structure.
         ToLogFont(self: Font, logFont: object)
             Creates a GDI logical font (LOGFONT) structure from this System.Drawing.Font.
         
@@ -2047,7 +1981,11 @@ class Font(MarshalByRefObject, ICloneable, ISerializable, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __eq__(self, *args): #cannot find CLR method
@@ -2055,7 +1993,10 @@ class Font(MarshalByRefObject, ICloneable, ISerializable, IDisposable):
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -2214,14 +2155,13 @@ class FontConverter(TypeConverter):
         """
         CanConvertFrom(self: FontConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Determines whether this converter can convert an object in the specified source 
-             type to the native type of the converter.
+            Determines whether this converter can convert an object in the specified source type to the 
+             native type of the converter.
         
         
-            context: A formatter context. This object can be used to get additional information 
-             about the environment this converter is being called from. This may be null, so 
-             you should always check. Also, properties on the context object may also return 
-             null.
+            context: A formatter context. This object can be used to get additional information about the environment 
+             this converter is being called from. This may be null, so you should always check. Also, 
+             properties on the context object may also return null.
         
             sourceType: The type you want to convert from.
             Returns: This method returns true if this object can perform the conversion.
@@ -2232,14 +2172,13 @@ class FontConverter(TypeConverter):
         """
         CanConvertTo(self: FontConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object to the 
-             given destination type using the context.
+            Gets a value indicating whether this converter can convert an object to the given destination 
+             type using the context.
         
         
             context: An ITypeDescriptorContext object that provides a format context.
             destinationType: A System.Type object that represents the type you want to convert to.
-            Returns: This method returns true if this converter can perform the conversion; 
-             otherwise, false.
+            Returns: This method returns true if this converter can perform the conversion; otherwise, false.
         """
         pass
 
@@ -2249,10 +2188,9 @@ class FontConverter(TypeConverter):
         
             Converts the specified object to the native type of the converter.
         
-            context: A formatter context. This object can be used to get additional information 
-             about the environment this converter is being called from. This may be null, so 
-             you should always check. Also, properties on the context object may also return 
-             null.
+            context: A formatter context. This object can be used to get additional information about the environment 
+             this converter is being called from. This may be null, so you should always check. Also, 
+             properties on the context object may also return null.
         
             culture: A CultureInfo object that specifies the culture used to represent the font.
             value: The object to convert.
@@ -2266,13 +2204,12 @@ class FontConverter(TypeConverter):
         
             Converts the specified object to another type.
         
-            context: A formatter context. This object can be used to get additional information 
-             about the environment this converter is being called from. This may be null, so 
-             you should always check. Also, properties on the context object may also return 
-             null.
+            context: A formatter context. This object can be used to get additional information about the environment 
+             this converter is being called from. This may be null, so you should always check. Also, 
+             properties on the context object may also return null.
         
-            culture: A System.Globalization.CultureInfo object that specifies the culture used to 
-             represent the object.
+            culture: A System.Globalization.CultureInfo object that specifies the culture used to represent the 
+             object.
         
             value: The object to convert.
             destinationType: The data type to convert the object to.
@@ -2284,20 +2221,17 @@ class FontConverter(TypeConverter):
         """
         CreateInstance(self: FontConverter, context: ITypeDescriptorContext, propertyValues: IDictionary) -> object
         
-            Creates an object of this type by using a specified set of property values for 
-             the object.
-        
+            Creates an object of this type by using a specified set of property values for the object.
         
             context: A type descriptor through which additional context can be provided.
-            propertyValues: A dictionary of new property values. The dictionary contains a series of 
-             name-value pairs, one for each property returned from the 
-             erload:System.Drawing.FontConverter.GetProperties method.
+            propertyValues: A dictionary of new property values. The dictionary contains a series of name-value pairs, one 
+             for each property returned from the erload:System.Drawing.FontConverter.GetProperties method.
         
-            Returns: The newly created object, or null if the object could not be created. The 
-             default implementation returns 
-             null.System.Drawing.FontConverter.CreateInstance(System.ComponentModel.ITypeDesc
-             riptorContext,System.Collections.IDictionary) useful for creating 
-             non-changeable objects that have changeable properties.
+            Returns: The newly created object, or null if the object could not be created. The default implementation 
+             returns 
+             null.System.Drawing.FontConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext,Sys
+             tem.Collections.IDictionary) useful for creating non-changeable objects that have changeable 
+             properties.
         """
         pass
 
@@ -2306,13 +2240,12 @@ class FontConverter(TypeConverter):
         GetCreateInstanceSupported(self: FontConverter, context: ITypeDescriptorContext) -> bool
         
             Determines whether changing a value on this object should require a call to the 
-             erload:System.Drawing.FontConverter.CreateInstance method to create a new 
-             value.
+             erload:System.Drawing.FontConverter.CreateInstance method to create a new value.
         
         
             context: A type descriptor through which additional context can be provided.
-            Returns: This method returns true if the CreateInstance object should be called when a 
-             change is made to one or more properties of this object; otherwise, false.
+            Returns: This method returns true if the CreateInstance object should be called when a change is made to 
+             one or more properties of this object; otherwise, false.
         """
         pass
 
@@ -2320,18 +2253,17 @@ class FontConverter(TypeConverter):
         """
         GetProperties(self: FontConverter, context: ITypeDescriptorContext, value: object, attributes: Array[Attribute]) -> PropertyDescriptorCollection
         
-            Retrieves the set of properties for this type. By default, a type does not have 
-             any properties to return.
+            Retrieves the set of properties for this type. By default, a type does not have any properties 
+             to return.
         
         
             context: A type descriptor through which additional context can be provided.
             value: The value of the object to get the properties for.
             attributes: An array of System.Attribute objects that describe the properties.
-            Returns: The set of properties that should be exposed for this data type. If no 
-             properties should be exposed, this may return null. The default implementation 
-             always returns null.An easy implementation of this method can call the 
-             erload:System.ComponentModel.TypeConverter.GetProperties method for the correct 
-             data type.
+            Returns: The set of properties that should be exposed for this data type. If no properties should be 
+             exposed, this may return null. The default implementation always returns null.An easy 
+             implementation of this method can call the 
+             erload:System.ComponentModel.TypeConverter.GetProperties method for the correct data type.
         """
         pass
 
@@ -2343,9 +2275,8 @@ class FontConverter(TypeConverter):
         
             context: A type descriptor through which additional context can be provided.
             Returns: This method returns true if the 
-             System.Drawing.FontConverter.GetPropertiesSupported(System.ComponentModel.ITypeD
-             escriptorContext) method should be called to find the properties of this 
-             object; otherwise, false.
+             System.Drawing.FontConverter.GetPropertiesSupported(System.ComponentModel.ITypeDescriptorContext)
+              method should be called to find the properties of this object; otherwise, false.
         """
         pass
 
@@ -2372,13 +2303,13 @@ class FontFamily(MarshalByRefObject, IDisposable):
         """
         Equals(self: FontFamily, obj: object) -> bool
         
-            Indicates whether the specified object is a System.Drawing.FontFamily and is 
-             identical to this System.Drawing.FontFamily.
+            Indicates whether the specified object is a System.Drawing.FontFamily and is identical to this 
+             System.Drawing.FontFamily.
         
         
             obj: The object to test.
-            Returns: true if obj is a System.Drawing.FontFamily and is identical to this 
-             System.Drawing.FontFamily; otherwise, false.
+            Returns: true if obj is a System.Drawing.FontFamily and is identical to this System.Drawing.FontFamily; 
+             otherwise, false.
         """
         pass
 
@@ -2386,8 +2317,8 @@ class FontFamily(MarshalByRefObject, IDisposable):
         """
         GetCellAscent(self: FontFamily, style: FontStyle) -> int
         
-            Returns the cell ascent, in design units, of the System.Drawing.FontFamily of 
-             the specified style.
+            Returns the cell ascent, in design units, of the System.Drawing.FontFamily of the specified 
+             style.
         
         
             style: A System.Drawing.FontStyle that contains style information for the font.
@@ -2400,13 +2331,13 @@ class FontFamily(MarshalByRefObject, IDisposable):
         """
         GetCellDescent(self: FontFamily, style: FontStyle) -> int
         
-            Returns the cell descent, in design units, of the System.Drawing.FontFamily of 
-             the specified style.
+            Returns the cell descent, in design units, of the System.Drawing.FontFamily of the specified 
+             style.
         
         
             style: A System.Drawing.FontStyle that contains style information for the font.
-            Returns: The cell descent metric for this System.Drawing.FontFamily that uses the 
-             specified System.Drawing.FontStyle.
+            Returns: The cell descent metric for this System.Drawing.FontFamily that uses the specified 
+             System.Drawing.FontStyle.
         """
         pass
 
@@ -2426,13 +2357,11 @@ class FontFamily(MarshalByRefObject, IDisposable):
         """
         GetFamilies(graphics: Graphics) -> Array[FontFamily]
         
-            Returns an array that contains all the System.Drawing.FontFamily objects 
-             available for the specified graphics context.
+            Returns an array that contains all the System.Drawing.FontFamily objects available for the 
+             specified graphics context.
         
         
-            graphics: The System.Drawing.Graphics object from which to return 
-             System.Drawing.FontFamily objects.
-        
+            graphics: The System.Drawing.Graphics object from which to return System.Drawing.FontFamily objects.
             Returns: An array of System.Drawing.FontFamily objects available for the specified 
              System.Drawing.Graphics object.
         """
@@ -2451,9 +2380,9 @@ class FontFamily(MarshalByRefObject, IDisposable):
         """
         GetLineSpacing(self: FontFamily, style: FontStyle) -> int
         
-            Returns the line spacing, in design units, of the System.Drawing.FontFamily of 
-             the specified style. The line spacing is the vertical distance between the base 
-             lines of two consecutive lines of text.
+            Returns the line spacing, in design units, of the System.Drawing.FontFamily of the specified 
+             style. The line spacing is the vertical distance between the base lines of two consecutive lines 
+             of text.
         
         
             style: The System.Drawing.FontStyle to apply.
@@ -2477,9 +2406,7 @@ class FontFamily(MarshalByRefObject, IDisposable):
         """
         IsStyleAvailable(self: FontFamily, style: FontStyle) -> bool
         
-            Indicates whether the specified System.Drawing.FontStyle enumeration is 
-             available.
-        
+            Indicates whether the specified System.Drawing.FontStyle enumeration is available.
         
             style: The System.Drawing.FontStyle to test.
             Returns: true if the specified System.Drawing.FontStyle is available; otherwise, false.
@@ -2492,11 +2419,11 @@ class FontFamily(MarshalByRefObject, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled across 
-             a remoting boundary. A value of false is usually appropriate. true to copy the 
-             current System.MarshalByRefObject object's identity to its clone, which will 
-             cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
+             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+             identity to its clone, which will cause remoting client calls to be routed to the remote server 
+             object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2510,15 +2437,17 @@ class FontFamily(MarshalByRefObject, IDisposable):
         """
         ToString(self: FontFamily) -> str
         
-            Converts this System.Drawing.FontFamily to a human-readable string 
-             representation.
-        
+            Converts this System.Drawing.FontFamily to a human-readable string representation.
             Returns: The string that represents this System.Drawing.FontFamily.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __eq__(self, *args): #cannot find CLR method
@@ -2526,7 +2455,10 @@ class FontFamily(MarshalByRefObject, IDisposable):
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -2624,72 +2556,64 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         """
         BeginContainer(self: Graphics, dstrect: Rectangle, srcrect: Rectangle, unit: GraphicsUnit) -> GraphicsContainer
         
-            Saves a graphics container with the current state of this 
-             System.Drawing.Graphics and opens and uses a new graphics container with the 
-             specified scale transformation.
+            Saves a graphics container with the current state of this System.Drawing.Graphics and opens and 
+             uses a new graphics container with the specified scale transformation.
         
         
-            dstrect: System.Drawing.Rectangle structure that, together with the srcrect parameter, 
-             specifies a scale transformation for the container.
+            dstrect: System.Drawing.Rectangle structure that, together with the srcrect parameter, specifies a scale 
+             transformation for the container.
         
-            srcrect: System.Drawing.Rectangle structure that, together with the dstrect parameter, 
-             specifies a scale transformation for the container.
+            srcrect: System.Drawing.Rectangle structure that, together with the dstrect parameter, specifies a scale 
+             transformation for the container.
         
-            unit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the unit 
-             of measure for the container.
+            unit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the unit of measure for the 
+             container.
         
-            Returns: This method returns a System.Drawing.Drawing2D.GraphicsContainer that 
-             represents the state of this System.Drawing.Graphics at the time of the method 
-             call.
+            Returns: This method returns a System.Drawing.Drawing2D.GraphicsContainer that represents the state of 
+             this System.Drawing.Graphics at the time of the method call.
         
         BeginContainer(self: Graphics, dstrect: RectangleF, srcrect: RectangleF, unit: GraphicsUnit) -> GraphicsContainer
         
-            Saves a graphics container with the current state of this 
-             System.Drawing.Graphics and opens and uses a new graphics container with the 
-             specified scale transformation.
+            Saves a graphics container with the current state of this System.Drawing.Graphics and opens and 
+             uses a new graphics container with the specified scale transformation.
         
         
-            dstrect: System.Drawing.RectangleF structure that, together with the srcrect parameter, 
-             specifies a scale transformation for the new graphics container.
+            dstrect: System.Drawing.RectangleF structure that, together with the srcrect parameter, specifies a scale 
+             transformation for the new graphics container.
         
-            srcrect: System.Drawing.RectangleF structure that, together with the dstrect parameter, 
-             specifies a scale transformation for the new graphics container.
+            srcrect: System.Drawing.RectangleF structure that, together with the dstrect parameter, specifies a scale 
+             transformation for the new graphics container.
         
-            unit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the unit 
-             of measure for the container.
+            unit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the unit of measure for the 
+             container.
         
-            Returns: This method returns a System.Drawing.Drawing2D.GraphicsContainer that 
-             represents the state of this System.Drawing.Graphics at the time of the method 
-             call.
+            Returns: This method returns a System.Drawing.Drawing2D.GraphicsContainer that represents the state of 
+             this System.Drawing.Graphics at the time of the method call.
         
         BeginContainer(self: Graphics) -> GraphicsContainer
         
-            Saves a graphics container with the current state of this 
-             System.Drawing.Graphics and opens and uses a new graphics container.
+            Saves a graphics container with the current state of this System.Drawing.Graphics and opens and 
+             uses a new graphics container.
         
-            Returns: This method returns a System.Drawing.Drawing2D.GraphicsContainer that 
-             represents the state of this System.Drawing.Graphics at the time of the method 
-             call.
+            Returns: This method returns a System.Drawing.Drawing2D.GraphicsContainer that represents the state of 
+             this System.Drawing.Graphics at the time of the method call.
         """
         pass
 
     def Clear(self, color):
         """
         Clear(self: Graphics, color: Color)
-            Clears the entire drawing surface and fills it with the specified background 
-             color.
+            Clears the entire drawing surface and fills it with the specified background color.
         
-        
-            color: System.Drawing.Color structure that represents the background color of the 
-             drawing surface.
+            color: System.Drawing.Color structure that represents the background color of the drawing surface.
         """
         pass
 
     def CopyFromScreen(self, *__args):
         """
         CopyFromScreen(self: Graphics, upperLeftSource: Point, upperLeftDestination: Point, blockRegionSize: Size, copyPixelOperation: CopyPixelOperation)
-            Performs a bit-block transfer of color data, corresponding to a rectangle of 
-             pixels, from the screen to the drawing surface of the System.Drawing.Graphics.
+            Performs a bit-block transfer of color data, corresponding to a rectangle of pixels, from the 
+             screen to the drawing surface of the System.Drawing.Graphics.
         
         
             upperLeftSource: The point at the upper-left corner of the source rectangle.
@@ -2697,43 +2621,33 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
             blockRegionSize: The size of the area to be transferred.
             copyPixelOperation: One of the System.Drawing.CopyPixelOperation values.
         CopyFromScreen(self: Graphics, sourceX: int, sourceY: int, destinationX: int, destinationY: int, blockRegionSize: Size, copyPixelOperation: CopyPixelOperation)
-            Performs a bit-block transfer of the color data, corresponding to a rectangle 
-             of pixels, from the screen to the drawing surface of the 
-             System.Drawing.Graphics.
+            Performs a bit-block transfer of the color data, corresponding to a rectangle of pixels, from 
+             the screen to the drawing surface of the System.Drawing.Graphics.
         
         
             sourceX: The x-coordinate of the point at the upper-left corner of the source rectangle.
             sourceY: The y-coordinate of the point at the upper-left corner of the source rectangle
-            destinationX: The x-coordinate of the point at the upper-left corner of the destination 
-             rectangle.
-        
-            destinationY: The y-coordinate of the point at the upper-left corner of the destination 
-             rectangle.
-        
+            destinationX: The x-coordinate of the point at the upper-left corner of the destination rectangle.
+            destinationY: The y-coordinate of the point at the upper-left corner of the destination rectangle.
             blockRegionSize: The size of the area to be transferred.
             copyPixelOperation: One of the System.Drawing.CopyPixelOperation values.
         CopyFromScreen(self: Graphics, upperLeftSource: Point, upperLeftDestination: Point, blockRegionSize: Size)
-            Performs a bit-block transfer of color data, corresponding to a rectangle of 
-             pixels, from the screen to the drawing surface of the System.Drawing.Graphics.
+            Performs a bit-block transfer of color data, corresponding to a rectangle of pixels, from the 
+             screen to the drawing surface of the System.Drawing.Graphics.
         
         
             upperLeftSource: The point at the upper-left corner of the source rectangle.
             upperLeftDestination: The point at the upper-left corner of the destination rectangle.
             blockRegionSize: The size of the area to be transferred.
         CopyFromScreen(self: Graphics, sourceX: int, sourceY: int, destinationX: int, destinationY: int, blockRegionSize: Size)
-            Performs a bit-block transfer of the color data, corresponding to a rectangle 
-             of pixels, from the screen to the drawing surface of the 
-             System.Drawing.Graphics.
+            Performs a bit-block transfer of the color data, corresponding to a rectangle of pixels, from 
+             the screen to the drawing surface of the System.Drawing.Graphics.
         
         
             sourceX: The x-coordinate of the point at the upper-left corner of the source rectangle.
             sourceY: The y-coordinate of the point at the upper-left corner of the source rectangle.
-            destinationX: The x-coordinate of the point at the upper-left corner of the destination 
-             rectangle.
-        
-            destinationY: The y-coordinate of the point at the upper-left corner of the destination 
-             rectangle.
-        
+            destinationX: The x-coordinate of the point at the upper-left corner of the destination rectangle.
+            destinationY: The y-coordinate of the point at the upper-left corner of the destination rectangle.
             blockRegionSize: The size of the area to be transferred.
         """
         pass
@@ -2748,70 +2662,47 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
     def DrawArc(self, pen, *__args):
         """
         DrawArc(self: Graphics, pen: Pen, x: int, y: int, width: int, height: int, startAngle: int, sweepAngle: int)
-            Draws an arc representing a portion of an ellipse specified by a pair of 
-             coordinates, a width, and a height.
+            Draws an arc representing a portion of an ellipse specified by a pair of coordinates, a width, 
+             and a height.
         
         
             pen: System.Drawing.Pen that determines the color, width, and style of the arc.
-            x: The x-coordinate of the upper-left corner of the rectangle that defines the 
-             ellipse.
-        
-            y: The y-coordinate of the upper-left corner of the rectangle that defines the 
-             ellipse.
-        
+            x: The x-coordinate of the upper-left corner of the rectangle that defines the ellipse.
+            y: The y-coordinate of the upper-left corner of the rectangle that defines the ellipse.
             width: Width of the rectangle that defines the ellipse.
             height: Height of the rectangle that defines the ellipse.
-            startAngle: Angle in degrees measured clockwise from the x-axis to the starting point of 
-             the arc.
-        
-            sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to ending 
-             point of the arc.
-        
+            startAngle: Angle in degrees measured clockwise from the x-axis to the starting point of the arc.
+            sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to ending point of the arc.
         DrawArc(self: Graphics, pen: Pen, rect: Rectangle, startAngle: Single, sweepAngle: Single)
-            Draws an arc representing a portion of an ellipse specified by a 
-             System.Drawing.Rectangle structure.
+            Draws an arc representing a portion of an ellipse specified by a System.Drawing.Rectangle 
+             structure.
         
         
             pen: System.Drawing.Pen that determines the color, width, and style of the arc.
             rect: System.Drawing.RectangleF structure that defines the boundaries of the ellipse.
-            startAngle: Angle in degrees measured clockwise from the x-axis to the starting point of 
-             the arc.
-        
-            sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to ending 
-             point of the arc.
-        
+            startAngle: Angle in degrees measured clockwise from the x-axis to the starting point of the arc.
+            sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to ending point of the arc.
         DrawArc(self: Graphics, pen: Pen, x: Single, y: Single, width: Single, height: Single, startAngle: Single, sweepAngle: Single)
-            Draws an arc representing a portion of an ellipse specified by a pair of 
-             coordinates, a width, and a height.
+            Draws an arc representing a portion of an ellipse specified by a pair of coordinates, a width, 
+             and a height.
         
         
             pen: System.Drawing.Pen that determines the color, width, and style of the arc.
-            x: The x-coordinate of the upper-left corner of the rectangle that defines the 
-             ellipse.
-        
-            y: The y-coordinate of the upper-left corner of the rectangle that defines the 
-             ellipse.
-        
+            x: The x-coordinate of the upper-left corner of the rectangle that defines the ellipse.
+            y: The y-coordinate of the upper-left corner of the rectangle that defines the ellipse.
             width: Width of the rectangle that defines the ellipse.
             height: Height of the rectangle that defines the ellipse.
-            startAngle: Angle in degrees measured clockwise from the x-axis to the starting point of 
-             the arc.
-        
-            sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to ending 
-             point of the arc.
-        
+            startAngle: Angle in degrees measured clockwise from the x-axis to the starting point of the arc.
+            sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to ending point of the arc.
         DrawArc(self: Graphics, pen: Pen, rect: RectangleF, startAngle: Single, sweepAngle: Single)
-            Draws an arc representing a portion of an ellipse specified by a 
-             System.Drawing.RectangleF structure.
+            Draws an arc representing a portion of an ellipse specified by a System.Drawing.RectangleF 
+             structure.
         
         
             pen: System.Drawing.Pen that determines the color, width, and style of the arc.
             rect: System.Drawing.RectangleF structure that defines the boundaries of the ellipse.
-            startAngle: Angle in degrees measured clockwise from the x-axis to the starting point of 
-             the arc.
-        
-            sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to ending 
-             point of the arc.
+            startAngle: Angle in degrees measured clockwise from the x-axis to the starting point of the arc.
+            sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to ending point of the arc.
         """
         pass
 
@@ -2820,33 +2711,21 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         DrawBezier(self: Graphics, pen: Pen, pt1: Point, pt2: Point, pt3: Point, pt4: Point)
             Draws a B�zier spline defined by four System.Drawing.Point structures.
         
-            pen: System.Drawing.Pen structure that determines the color, width, and style of the 
-             curve.
-        
+            pen: System.Drawing.Pen structure that determines the color, width, and style of the curve.
             pt1: System.Drawing.Point structure that represents the starting point of the curve.
-            pt2: System.Drawing.Point structure that represents the first control point for the 
-             curve.
-        
-            pt3: System.Drawing.Point structure that represents the second control point for the 
-             curve.
-        
+            pt2: System.Drawing.Point structure that represents the first control point for the curve.
+            pt3: System.Drawing.Point structure that represents the second control point for the curve.
             pt4: System.Drawing.Point structure that represents the ending point of the curve.
         DrawBezier(self: Graphics, pen: Pen, pt1: PointF, pt2: PointF, pt3: PointF, pt4: PointF)
             Draws a B�zier spline defined by four System.Drawing.PointF structures.
         
             pen: System.Drawing.Pen that determines the color, width, and style of the curve.
             pt1: System.Drawing.PointF structure that represents the starting point of the curve.
-            pt2: System.Drawing.PointF structure that represents the first control point for the 
-             curve.
-        
-            pt3: System.Drawing.PointF structure that represents the second control point for 
-             the curve.
-        
+            pt2: System.Drawing.PointF structure that represents the first control point for the curve.
+            pt3: System.Drawing.PointF structure that represents the second control point for the curve.
             pt4: System.Drawing.PointF structure that represents the ending point of the curve.
         DrawBezier(self: Graphics, pen: Pen, x1: Single, y1: Single, x2: Single, y2: Single, x3: Single, y3: Single, x4: Single, y4: Single)
-            Draws a B�zier spline defined by four ordered pairs of coordinates that 
-             represent points.
-        
+            Draws a B�zier spline defined by four ordered pairs of coordinates that represent points.
         
             pen: System.Drawing.Pen that determines the color, width, and style of the curve.
             x1: The x-coordinate of the starting point of the curve.
@@ -2863,135 +2742,118 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
     def DrawBeziers(self, pen, points):
         """
         DrawBeziers(self: Graphics, pen: Pen, points: Array[Point])
-            Draws a series of B�zier splines from an array of System.Drawing.Point 
-             structures.
-        
+            Draws a series of B�zier splines from an array of System.Drawing.Point structures.
         
             pen: System.Drawing.Pen that determines the color, width, and style of the curve.
-            points: Array of System.Drawing.Point structures that represent the points that 
-             determine the curve. The number of points in the array should be a multiple of 
-             3 plus 1, such as 4, 7, or 10.
+            points: Array of System.Drawing.Point structures that represent the points that determine the curve. The 
+             number of points in the array should be a multiple of 3 plus 1, such as 4, 7, or 10.
         
         DrawBeziers(self: Graphics, pen: Pen, points: Array[PointF])
-            Draws a series of B�zier splines from an array of System.Drawing.PointF 
-             structures.
-        
+            Draws a series of B�zier splines from an array of System.Drawing.PointF structures.
         
             pen: System.Drawing.Pen that determines the color, width, and style of the curve.
-            points: Array of System.Drawing.PointF structures that represent the points that 
-             determine the curve. The number of points in the array should be a multiple of 
-             3 plus 1, such as 4, 7, or 10.
+            points: Array of System.Drawing.PointF structures that represent the points that determine the curve. 
+             The number of points in the array should be a multiple of 3 plus 1, such as 4, 7, or 10.
         """
         pass
 
     def DrawClosedCurve(self, pen, points, tension=None, fillmode=None):
         """
         DrawClosedCurve(self: Graphics, pen: Pen, points: Array[Point])
-            Draws a closed cardinal spline defined by an array of System.Drawing.Point 
-             structures.
-        
+            Draws a closed cardinal spline defined by an array of System.Drawing.Point structures.
         
             pen: System.Drawing.Pen that determines the color, width, and height of the curve.
             points: Array of System.Drawing.Point structures that define the spline.
         DrawClosedCurve(self: Graphics, pen: Pen, points: Array[Point], tension: Single, fillmode: FillMode)
-            Draws a closed cardinal spline defined by an array of System.Drawing.Point 
-             structures using a specified tension.
+            Draws a closed cardinal spline defined by an array of System.Drawing.Point structures using a 
+             specified tension.
         
         
             pen: System.Drawing.Pen that determines the color, width, and height of the curve.
             points: Array of System.Drawing.Point structures that define the spline.
             tension: Value greater than or equal to 0.0F that specifies the tension of the curve.
-            fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how 
-             the curve is filled. This parameter is required but ignored.
+            fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how the curve is 
+             filled. This parameter is required but ignored.
         
         DrawClosedCurve(self: Graphics, pen: Pen, points: Array[PointF])
-            Draws a closed cardinal spline defined by an array of System.Drawing.PointF 
-             structures.
-        
+            Draws a closed cardinal spline defined by an array of System.Drawing.PointF structures.
         
             pen: System.Drawing.Pen that determines the color, width, and height of the curve.
             points: Array of System.Drawing.PointF structures that define the spline.
         DrawClosedCurve(self: Graphics, pen: Pen, points: Array[PointF], tension: Single, fillmode: FillMode)
-            Draws a closed cardinal spline defined by an array of System.Drawing.PointF 
-             structures using a specified tension.
+            Draws a closed cardinal spline defined by an array of System.Drawing.PointF structures using a 
+             specified tension.
         
         
             pen: System.Drawing.Pen that determines the color, width, and height of the curve.
             points: Array of System.Drawing.PointF structures that define the spline.
             tension: Value greater than or equal to 0.0F that specifies the tension of the curve.
-            fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how 
-             the curve is filled. This parameter is required but is ignored.
+            fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how the curve is 
+             filled. This parameter is required but is ignored.
         """
         pass
 
     def DrawCurve(self, pen, points, *__args):
         """
         DrawCurve(self: Graphics, pen: Pen, points: Array[Point])
-            Draws a cardinal spline through a specified array of System.Drawing.Point 
-             structures.
-        
+            Draws a cardinal spline through a specified array of System.Drawing.Point structures.
         
             pen: System.Drawing.Pen that determines the color, width, and height of the curve.
             points: Array of System.Drawing.Point structures that define the spline.
         DrawCurve(self: Graphics, pen: Pen, points: Array[Point], tension: Single)
-            Draws a cardinal spline through a specified array of System.Drawing.Point 
-             structures using a specified tension.
+            Draws a cardinal spline through a specified array of System.Drawing.Point structures using a 
+             specified tension.
         
         
             pen: System.Drawing.Pen that determines the color, width, and height of the curve.
             points: Array of System.Drawing.Point structures that define the spline.
             tension: Value greater than or equal to 0.0F that specifies the tension of the curve.
         DrawCurve(self: Graphics, pen: Pen, points: Array[Point], offset: int, numberOfSegments: int, tension: Single)
-            Draws a cardinal spline through a specified array of System.Drawing.Point 
-             structures using a specified tension.
+            Draws a cardinal spline through a specified array of System.Drawing.Point structures using a 
+             specified tension.
         
         
             pen: System.Drawing.Pen that determines the color, width, and height of the curve.
             points: Array of System.Drawing.Point structures that define the spline.
-            offset: Offset from the first element in the array of the points parameter to the 
-             starting point in the curve.
+            offset: Offset from the first element in the array of the points parameter to the starting point in the 
+             curve.
         
             numberOfSegments: Number of segments after the starting point to include in the curve.
             tension: Value greater than or equal to 0.0F that specifies the tension of the curve.
         DrawCurve(self: Graphics, pen: Pen, points: Array[PointF], offset: int, numberOfSegments: int, tension: Single)
-            Draws a cardinal spline through a specified array of System.Drawing.PointF 
-             structures using a specified tension. The drawing begins offset from the 
-             beginning of the array.
+            Draws a cardinal spline through a specified array of System.Drawing.PointF structures using a 
+             specified tension. The drawing begins offset from the beginning of the array.
         
         
             pen: System.Drawing.Pen that determines the color, width, and height of the curve.
             points: Array of System.Drawing.PointF structures that define the spline.
-            offset: Offset from the first element in the array of the points parameter to the 
-             starting point in the curve.
+            offset: Offset from the first element in the array of the points parameter to the starting point in the 
+             curve.
         
             numberOfSegments: Number of segments after the starting point to include in the curve.
             tension: Value greater than or equal to 0.0F that specifies the tension of the curve.
         DrawCurve(self: Graphics, pen: Pen, points: Array[PointF])
-            Draws a cardinal spline through a specified array of System.Drawing.PointF 
-             structures.
-        
+            Draws a cardinal spline through a specified array of System.Drawing.PointF structures.
         
             pen: System.Drawing.Pen that determines the color, width, and height of the curve.
             points: Array of System.Drawing.PointF structures that define the spline.
         DrawCurve(self: Graphics, pen: Pen, points: Array[PointF], tension: Single)
-            Draws a cardinal spline through a specified array of System.Drawing.PointF 
-             structures using a specified tension.
+            Draws a cardinal spline through a specified array of System.Drawing.PointF structures using a 
+             specified tension.
         
         
             pen: System.Drawing.Pen that determines the color, width, and height of the curve.
-            points: Array of System.Drawing.PointF structures that represent the points that define 
-             the curve.
-        
+            points: Array of System.Drawing.PointF structures that represent the points that define the curve.
             tension: Value greater than or equal to 0.0F that specifies the tension of the curve.
         DrawCurve(self: Graphics, pen: Pen, points: Array[PointF], offset: int, numberOfSegments: int)
-            Draws a cardinal spline through a specified array of System.Drawing.PointF 
-             structures. The drawing begins offset from the beginning of the array.
+            Draws a cardinal spline through a specified array of System.Drawing.PointF structures. The 
+             drawing begins offset from the beginning of the array.
         
         
             pen: System.Drawing.Pen that determines the color, width, and height of the curve.
             points: Array of System.Drawing.PointF structures that define the spline.
-            offset: Offset from the first element in the array of the points parameter to the 
-             starting point in the curve.
+            offset: Offset from the first element in the array of the points parameter to the starting point in the 
+             curve.
         
             numberOfSegments: Number of segments after the starting point to include in the curve.
         """
@@ -3005,17 +2867,13 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
             pen: System.Drawing.Pen that determines the color, width, and style of the ellipse.
             rect: System.Drawing.Rectangle structure that defines the boundaries of the ellipse.
         DrawEllipse(self: Graphics, pen: Pen, x: int, y: int, width: int, height: int)
-            Draws an ellipse defined by a bounding rectangle specified by coordinates for 
-             the upper-left corner of the rectangle, a height, and a width.
+            Draws an ellipse defined by a bounding rectangle specified by coordinates for the upper-left 
+             corner of the rectangle, a height, and a width.
         
         
             pen: System.Drawing.Pen that determines the color, width, and style of the ellipse.
-            x: The x-coordinate of the upper-left corner of the bounding rectangle that 
-             defines the ellipse.
-        
-            y: The y-coordinate of the upper-left corner of the bounding rectangle that 
-             defines the ellipse.
-        
+            x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
+            y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
             width: Width of the bounding rectangle that defines the ellipse.
             height: Height of the bounding rectangle that defines the ellipse.
         DrawEllipse(self: Graphics, pen: Pen, rect: RectangleF)
@@ -3024,17 +2882,13 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
             pen: System.Drawing.Pen that determines the color, width, and style of the ellipse.
             rect: System.Drawing.RectangleF structure that defines the boundaries of the ellipse.
         DrawEllipse(self: Graphics, pen: Pen, x: Single, y: Single, width: Single, height: Single)
-            Draws an ellipse defined by a bounding rectangle specified by a pair of 
-             coordinates, a height, and a width.
+            Draws an ellipse defined by a bounding rectangle specified by a pair of coordinates, a height, 
+             and a width.
         
         
             pen: System.Drawing.Pen that determines the color, width, and style of the ellipse.
-            x: The x-coordinate of the upper-left corner of the bounding rectangle that 
-             defines the ellipse.
-        
-            y: The y-coordinate of the upper-left corner of the bounding rectangle that 
-             defines the ellipse.
-        
+            x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
+            y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
             width: Width of the bounding rectangle that defines the ellipse.
             height: Height of the bounding rectangle that defines the ellipse.
         """
@@ -3043,19 +2897,17 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
     def DrawIcon(self, icon, *__args):
         """
         DrawIcon(self: Graphics, icon: Icon, targetRect: Rectangle)
-            Draws the image represented by the specified System.Drawing.Icon within the 
-             area specified by a System.Drawing.Rectangle structure.
+            Draws the image represented by the specified System.Drawing.Icon within the area specified by a 
+             System.Drawing.Rectangle structure.
         
         
             icon: System.Drawing.Icon to draw.
-            targetRect: System.Drawing.Rectangle structure that specifies the location and size of the 
-             resulting image on the display surface. The image contained in the icon 
-             parameter is scaled to the dimensions of this rectangular area.
+            targetRect: System.Drawing.Rectangle structure that specifies the location and size of the resulting image 
+             on the display surface. The image contained in the icon parameter is scaled to the dimensions of 
+             this rectangular area.
         
         DrawIcon(self: Graphics, icon: Icon, x: int, y: int)
-            Draws the image represented by the specified System.Drawing.Icon at the 
-             specified coordinates.
-        
+            Draws the image represented by the specified System.Drawing.Icon at the specified coordinates.
         
             icon: System.Drawing.Icon to draw.
             x: The x-coordinate of the upper-left corner of the drawn image.
@@ -3066,224 +2918,183 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
     def DrawIconUnstretched(self, icon, targetRect):
         """
         DrawIconUnstretched(self: Graphics, icon: Icon, targetRect: Rectangle)
-            Draws the image represented by the specified System.Drawing.Icon without 
-             scaling the image.
-        
+            Draws the image represented by the specified System.Drawing.Icon without scaling the image.
         
             icon: System.Drawing.Icon to draw.
-            targetRect: System.Drawing.Rectangle structure that specifies the location and size of the 
-             resulting image. The image is not scaled to fit this rectangle, but retains its 
-             original size. If the image is larger than the rectangle, it is clipped to fit 
-             inside it.
+            targetRect: System.Drawing.Rectangle structure that specifies the location and size of the resulting image. 
+             The image is not scaled to fit this rectangle, but retains its original size. If the image is 
+             larger than the rectangle, it is clipped to fit inside it.
         """
         pass
 
     def DrawImage(self, image, *__args):
         """
         DrawImage(self: Graphics, image: Image, destPoints: Array[PointF], srcRect: RectangleF, srcUnit: GraphicsUnit, imageAttr: ImageAttributes, callback: DrawImageAbort, callbackData: int)DrawImage(self: Graphics, image: Image, destPoints: Array[Point], srcRect: Rectangle, srcUnit: GraphicsUnit)
-            Draws the specified portion of the specified System.Drawing.Image at the 
-             specified location and with the specified size.
+            Draws the specified portion of the specified System.Drawing.Image at the specified location and 
+             with the specified size.
         
         
             image: System.Drawing.Image to draw.
             destPoints: Array of three System.Drawing.Point structures that define a parallelogram.
-            srcRect: System.Drawing.Rectangle structure that specifies the portion of the image 
-             object to draw.
-        
-            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units 
-             of measure used by the srcRect parameter.
+            srcRect: System.Drawing.Rectangle structure that specifies the portion of the image object to draw.
+            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used 
+             by the srcRect parameter.
         
         DrawImage(self: Graphics, image: Image, destPoints: Array[Point], srcRect: Rectangle, srcUnit: GraphicsUnit, imageAttr: ImageAttributes)
-            Draws the specified portion of the specified System.Drawing.Image at the 
-             specified location.
-        
+            Draws the specified portion of the specified System.Drawing.Image at the specified location.
         
             image: System.Drawing.Image to draw.
             destPoints: Array of three System.Drawing.Point structures that define a parallelogram.
-            srcRect: System.Drawing.Rectangle structure that specifies the portion of the image 
-             object to draw.
+            srcRect: System.Drawing.Rectangle structure that specifies the portion of the image object to draw.
+            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used 
+             by the srcRect parameter.
         
-            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units 
-             of measure used by the srcRect parameter.
-        
-            imageAttr: System.Drawing.Imaging.ImageAttributes that specifies recoloring and gamma 
-             information for the image object.
+            imageAttr: System.Drawing.Imaging.ImageAttributes that specifies recoloring and gamma information for the 
+             image object.
         
         DrawImage(self: Graphics, image: Image, destPoints: Array[PointF], srcRect: RectangleF, srcUnit: GraphicsUnit, imageAttr: ImageAttributes, callback: DrawImageAbort)DrawImage(self: Graphics, image: Image, destRect: RectangleF, srcRect: RectangleF, srcUnit: GraphicsUnit)
-            Draws the specified portion of the specified System.Drawing.Image at the 
-             specified location and with the specified size.
+            Draws the specified portion of the specified System.Drawing.Image at the specified location and 
+             with the specified size.
         
         
             image: System.Drawing.Image to draw.
-            destRect: System.Drawing.RectangleF structure that specifies the location and size of the 
-             drawn image. The image is scaled to fit the rectangle.
+            destRect: System.Drawing.RectangleF structure that specifies the location and size of the drawn image. The 
+             image is scaled to fit the rectangle.
         
-            srcRect: System.Drawing.RectangleF structure that specifies the portion of the image 
-             object to draw.
-        
-            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units 
-             of measure used by the srcRect parameter.
+            srcRect: System.Drawing.RectangleF structure that specifies the portion of the image object to draw.
+            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used 
+             by the srcRect parameter.
         
         DrawImage(self: Graphics, image: Image, destPoints: Array[PointF], srcRect: RectangleF, srcUnit: GraphicsUnit)
-            Draws the specified portion of the specified System.Drawing.Image at the 
-             specified location and with the specified size.
+            Draws the specified portion of the specified System.Drawing.Image at the specified location and 
+             with the specified size.
         
         
             image: System.Drawing.Image to draw.
             destPoints: Array of three System.Drawing.PointF structures that define a parallelogram.
-            srcRect: System.Drawing.RectangleF structure that specifies the portion of the image 
-             object to draw.
-        
-            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units 
-             of measure used by the srcRect parameter.
+            srcRect: System.Drawing.RectangleF structure that specifies the portion of the image object to draw.
+            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used 
+             by the srcRect parameter.
         
         DrawImage(self: Graphics, image: Image, destPoints: Array[PointF], srcRect: RectangleF, srcUnit: GraphicsUnit, imageAttr: ImageAttributes)
-            Draws the specified portion of the specified System.Drawing.Image at the 
-             specified location and with the specified size.
+            Draws the specified portion of the specified System.Drawing.Image at the specified location and 
+             with the specified size.
         
         
             image: System.Drawing.Image to draw.
             destPoints: Array of three System.Drawing.PointF structures that define a parallelogram.
-            srcRect: System.Drawing.RectangleF structure that specifies the portion of the image 
-             object to draw.
+            srcRect: System.Drawing.RectangleF structure that specifies the portion of the image object to draw.
+            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used 
+             by the srcRect parameter.
         
-            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units 
-             of measure used by the srcRect parameter.
-        
-            imageAttr: System.Drawing.Imaging.ImageAttributes that specifies recoloring and gamma 
-             information for the image object.
+            imageAttr: System.Drawing.Imaging.ImageAttributes that specifies recoloring and gamma information for the 
+             image object.
         
         DrawImage(self: Graphics, image: Image, destPoints: Array[Point], srcRect: Rectangle, srcUnit: GraphicsUnit, imageAttr: ImageAttributes, callback: DrawImageAbort)DrawImage(self: Graphics, image: Image, destRect: Rectangle, srcX: Single, srcY: Single, srcWidth: Single, srcHeight: Single, srcUnit: GraphicsUnit, imageAttrs: ImageAttributes, callback: DrawImageAbort, callbackData: IntPtr)DrawImage(self: Graphics, image: Image, destRect: Rectangle, srcX: int, srcY: int, srcWidth: int, srcHeight: int, srcUnit: GraphicsUnit)
-            Draws the specified portion of the specified System.Drawing.Image at the 
-             specified location and with the specified size.
+            Draws the specified portion of the specified System.Drawing.Image at the specified location and 
+             with the specified size.
         
         
             image: System.Drawing.Image to draw.
-            destRect: System.Drawing.Rectangle structure that specifies the location and size of the 
-             drawn image. The image is scaled to fit the rectangle.
+            destRect: System.Drawing.Rectangle structure that specifies the location and size of the drawn image. The 
+             image is scaled to fit the rectangle.
         
-            srcX: The x-coordinate of the upper-left corner of the portion of the source image to 
-             draw.
-        
-            srcY: The y-coordinate of the upper-left corner of the portion of the source image to 
-             draw.
-        
+            srcX: The x-coordinate of the upper-left corner of the portion of the source image to draw.
+            srcY: The y-coordinate of the upper-left corner of the portion of the source image to draw.
             srcWidth: Width of the portion of the source image to draw.
             srcHeight: Height of the portion of the source image to draw.
-            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units 
-             of measure used to determine the source rectangle.
+            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used 
+             to determine the source rectangle.
         
         DrawImage(self: Graphics, image: Image, destRect: Rectangle, srcX: int, srcY: int, srcWidth: int, srcHeight: int, srcUnit: GraphicsUnit, imageAttr: ImageAttributes, callback: DrawImageAbort)DrawImage(self: Graphics, image: Image, destRect: Rectangle, srcX: Single, srcY: Single, srcWidth: Single, srcHeight: Single, srcUnit: GraphicsUnit, imageAttrs: ImageAttributes, callback: DrawImageAbort)DrawImage(self: Graphics, image: Image, destPoints: Array[Point], srcRect: Rectangle, srcUnit: GraphicsUnit, imageAttr: ImageAttributes, callback: DrawImageAbort, callbackData: int)DrawImage(self: Graphics, image: Image, destRect: Rectangle, srcX: Single, srcY: Single, srcWidth: Single, srcHeight: Single, srcUnit: GraphicsUnit)
-            Draws the specified portion of the specified System.Drawing.Image at the 
-             specified location and with the specified size.
+            Draws the specified portion of the specified System.Drawing.Image at the specified location and 
+             with the specified size.
         
         
             image: System.Drawing.Image to draw.
-            destRect: System.Drawing.Rectangle structure that specifies the location and size of the 
-             drawn image. The image is scaled to fit the rectangle.
+            destRect: System.Drawing.Rectangle structure that specifies the location and size of the drawn image. The 
+             image is scaled to fit the rectangle.
         
-            srcX: The x-coordinate of the upper-left corner of the portion of the source image to 
-             draw.
-        
-            srcY: The y-coordinate of the upper-left corner of the portion of the source image to 
-             draw.
-        
+            srcX: The x-coordinate of the upper-left corner of the portion of the source image to draw.
+            srcY: The y-coordinate of the upper-left corner of the portion of the source image to draw.
             srcWidth: Width of the portion of the source image to draw.
             srcHeight: Height of the portion of the source image to draw.
-            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units 
-             of measure used to determine the source rectangle.
+            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used 
+             to determine the source rectangle.
         
         DrawImage(self: Graphics, image: Image, destRect: Rectangle, srcX: Single, srcY: Single, srcWidth: Single, srcHeight: Single, srcUnit: GraphicsUnit, imageAttrs: ImageAttributes)
-            Draws the specified portion of the specified System.Drawing.Image at the 
-             specified location and with the specified size.
+            Draws the specified portion of the specified System.Drawing.Image at the specified location and 
+             with the specified size.
         
         
             image: System.Drawing.Image to draw.
-            destRect: System.Drawing.Rectangle structure that specifies the location and size of the 
-             drawn image. The image is scaled to fit the rectangle.
+            destRect: System.Drawing.Rectangle structure that specifies the location and size of the drawn image. The 
+             image is scaled to fit the rectangle.
         
-            srcX: The x-coordinate of the upper-left corner of the portion of the source image to 
-             draw.
-        
-            srcY: The y-coordinate of the upper-left corner of the portion of the source image to 
-             draw.
-        
+            srcX: The x-coordinate of the upper-left corner of the portion of the source image to draw.
+            srcY: The y-coordinate of the upper-left corner of the portion of the source image to draw.
             srcWidth: Width of the portion of the source image to draw.
             srcHeight: Height of the portion of the source image to draw.
-            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units 
-             of measure used to determine the source rectangle.
+            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used 
+             to determine the source rectangle.
         
-            imageAttrs: System.Drawing.Imaging.ImageAttributes that specifies recoloring and gamma 
-             information for the image object.
+            imageAttrs: System.Drawing.Imaging.ImageAttributes that specifies recoloring and gamma information for the 
+             image object.
         
         DrawImage(self: Graphics, image: Image, destRect: Rectangle, srcX: int, srcY: int, srcWidth: int, srcHeight: int, srcUnit: GraphicsUnit, imageAttr: ImageAttributes)
-            Draws the specified portion of the specified System.Drawing.Image at the 
-             specified location and with the specified size.
+            Draws the specified portion of the specified System.Drawing.Image at the specified location and 
+             with the specified size.
         
         
             image: System.Drawing.Image to draw.
-            destRect: System.Drawing.Rectangle structure that specifies the location and size of the 
-             drawn image. The image is scaled to fit the rectangle.
+            destRect: System.Drawing.Rectangle structure that specifies the location and size of the drawn image. The 
+             image is scaled to fit the rectangle.
         
-            srcX: The x-coordinate of the upper-left corner of the portion of the source image to 
-             draw.
-        
-            srcY: The y-coordinate of the upper-left corner of the portion of the source image to 
-             draw.
-        
+            srcX: The x-coordinate of the upper-left corner of the portion of the source image to draw.
+            srcY: The y-coordinate of the upper-left corner of the portion of the source image to draw.
             srcWidth: Width of the portion of the source image to draw.
             srcHeight: Height of the portion of the source image to draw.
-            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units 
-             of measure used to determine the source rectangle.
+            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used 
+             to determine the source rectangle.
         
-            imageAttr: System.Drawing.Imaging.ImageAttributes that specifies recoloring and gamma 
-             information for the image object.
+            imageAttr: System.Drawing.Imaging.ImageAttributes that specifies recoloring and gamma information for the 
+             image object.
         
         DrawImage(self: Graphics, image: Image, destRect: Rectangle, srcX: int, srcY: int, srcWidth: int, srcHeight: int, srcUnit: GraphicsUnit, imageAttrs: ImageAttributes, callback: DrawImageAbort, callbackData: IntPtr)DrawImage(self: Graphics, image: Image, point: PointF)
-            Draws the specified System.Drawing.Image, using its original physical size, at 
-             the specified location.
+            Draws the specified System.Drawing.Image, using its original physical size, at the specified 
+             location.
         
         
             image: System.Drawing.Image to draw.
-            point: System.Drawing.PointF structure that represents the upper-left corner of the 
-             drawn image.
-        
+            point: System.Drawing.PointF structure that represents the upper-left corner of the drawn image.
         DrawImage(self: Graphics, image: Image, destRect: Rectangle, srcRect: Rectangle, srcUnit: GraphicsUnit)
-            Draws the specified portion of the specified System.Drawing.Image at the 
-             specified location and with the specified size.
+            Draws the specified portion of the specified System.Drawing.Image at the specified location and 
+             with the specified size.
         
         
             image: System.Drawing.Image to draw.
-            destRect: System.Drawing.Rectangle structure that specifies the location and size of the 
-             drawn image. The image is scaled to fit the rectangle.
+            destRect: System.Drawing.Rectangle structure that specifies the location and size of the drawn image. The 
+             image is scaled to fit the rectangle.
         
-            srcRect: System.Drawing.Rectangle structure that specifies the portion of the image 
-             object to draw.
-        
-            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units 
-             of measure used by the srcRect parameter.
+            srcRect: System.Drawing.Rectangle structure that specifies the portion of the image object to draw.
+            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used 
+             by the srcRect parameter.
         
         DrawImage(self: Graphics, image: Image, x: int, y: int)
-            Draws the specified image, using its original physical size, at the location 
-             specified by a coordinate pair.
+            Draws the specified image, using its original physical size, at the location specified by a 
+             coordinate pair.
         
         
             image: System.Drawing.Image to draw.
             x: The x-coordinate of the upper-left corner of the drawn image.
             y: The y-coordinate of the upper-left corner of the drawn image.
         DrawImage(self: Graphics, image: Image, rect: Rectangle)
-            Draws the specified System.Drawing.Image at the specified location and with the 
-             specified size.
-        
+            Draws the specified System.Drawing.Image at the specified location and with the specified size.
         
             image: System.Drawing.Image to draw.
-            rect: System.Drawing.Rectangle structure that specifies the location and size of the 
-             drawn image.
-        
+            rect: System.Drawing.Rectangle structure that specifies the location and size of the drawn image.
         DrawImage(self: Graphics, image: Image, x: int, y: int, width: int, height: int)
-            Draws the specified System.Drawing.Image at the specified location and with the 
-             specified size.
-        
+            Draws the specified System.Drawing.Image at the specified location and with the specified size.
         
             image: System.Drawing.Image to draw.
             x: The x-coordinate of the upper-left corner of the drawn image.
@@ -3291,16 +3102,16 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
             width: Width of the drawn image.
             height: Height of the drawn image.
         DrawImage(self: Graphics, image: Image, x: Single, y: Single)
-            Draws the specified System.Drawing.Image, using its original physical size, at 
-             the specified location.
+            Draws the specified System.Drawing.Image, using its original physical size, at the specified 
+             location.
         
         
             image: System.Drawing.Image to draw.
             x: The x-coordinate of the upper-left corner of the drawn image.
             y: The y-coordinate of the upper-left corner of the drawn image.
         DrawImage(self: Graphics, image: Image, destPoints: Array[Point])
-            Draws the specified System.Drawing.Image at the specified location and with the 
-             specified shape and size.
+            Draws the specified System.Drawing.Image at the specified location and with the specified shape 
+             and size.
         
         
             image: System.Drawing.Image to draw.
@@ -3311,11 +3122,11 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
             image: System.Drawing.Image to draw.
             x: The x-coordinate of the upper-left corner of the drawn image.
             y: The y-coordinate of the upper-left corner of the drawn image.
-            srcRect: System.Drawing.RectangleF structure that specifies the portion of the 
-             System.Drawing.Image to draw.
+            srcRect: System.Drawing.RectangleF structure that specifies the portion of the System.Drawing.Image to 
+             draw.
         
-            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units 
-             of measure used by the srcRect parameter.
+            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used 
+             by the srcRect parameter.
         
         DrawImage(self: Graphics, image: Image, x: int, y: int, srcRect: Rectangle, srcUnit: GraphicsUnit)
             Draws a portion of an image at a specified location.
@@ -3323,32 +3134,24 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
             image: System.Drawing.Image to draw.
             x: The x-coordinate of the upper-left corner of the drawn image.
             y: The y-coordinate of the upper-left corner of the drawn image.
-            srcRect: System.Drawing.Rectangle structure that specifies the portion of the image 
-             object to draw.
-        
-            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units 
-             of measure used by the srcRect parameter.
+            srcRect: System.Drawing.Rectangle structure that specifies the portion of the image object to draw.
+            srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used 
+             by the srcRect parameter.
         
         DrawImage(self: Graphics, image: Image, destPoints: Array[PointF])
-            Draws the specified System.Drawing.Image at the specified location and with the 
-             specified shape and size.
+            Draws the specified System.Drawing.Image at the specified location and with the specified shape 
+             and size.
         
         
             image: System.Drawing.Image to draw.
             destPoints: Array of three System.Drawing.PointF structures that define a parallelogram.
         DrawImage(self: Graphics, image: Image, rect: RectangleF)
-            Draws the specified System.Drawing.Image at the specified location and with the 
-             specified size.
-        
+            Draws the specified System.Drawing.Image at the specified location and with the specified size.
         
             image: System.Drawing.Image to draw.
-            rect: System.Drawing.RectangleF structure that specifies the location and size of the 
-             drawn image.
-        
+            rect: System.Drawing.RectangleF structure that specifies the location and size of the drawn image.
         DrawImage(self: Graphics, image: Image, x: Single, y: Single, width: Single, height: Single)
-            Draws the specified System.Drawing.Image at the specified location and with the 
-             specified size.
-        
+            Draws the specified System.Drawing.Image at the specified location and with the specified size.
         
             image: System.Drawing.Image to draw.
             x: The x-coordinate of the upper-left corner of the drawn image.
@@ -3356,32 +3159,28 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
             width: Width of the drawn image.
             height: Height of the drawn image.
         DrawImage(self: Graphics, image: Image, point: Point)
-            Draws the specified System.Drawing.Image, using its original physical size, at 
-             the specified location.
+            Draws the specified System.Drawing.Image, using its original physical size, at the specified 
+             location.
         
         
             image: System.Drawing.Image to draw.
-            point: System.Drawing.Point structure that represents the location of the upper-left 
-             corner of the drawn image.
+            point: System.Drawing.Point structure that represents the location of the upper-left corner of the 
+             drawn image.
         """
         pass
 
     def DrawImageUnscaled(self, image, *__args):
         """
         DrawImageUnscaled(self: Graphics, image: Image, rect: Rectangle)
-            Draws a specified image using its original physical size at a specified 
-             location.
-        
+            Draws a specified image using its original physical size at a specified location.
         
             image: System.Drawing.Image to draw.
-            rect: System.Drawing.Rectangle that specifies the upper-left corner of the drawn 
-             image. The X and Y properties of the rectangle specify the upper-left corner. 
-             The Width and Height properties are ignored.
+            rect: System.Drawing.Rectangle that specifies the upper-left corner of the drawn image. The X and Y 
+             properties of the rectangle specify the upper-left corner. The Width and Height properties are 
+             ignored.
         
         DrawImageUnscaled(self: Graphics, image: Image, x: int, y: int, width: int, height: int)
-            Draws a specified image using its original physical size at a specified 
-             location.
-        
+            Draws a specified image using its original physical size at a specified location.
         
             image: System.Drawing.Image to draw.
             x: The x-coordinate of the upper-left corner of the drawn image.
@@ -3389,17 +3188,13 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
             width: Not used.
             height: Not used.
         DrawImageUnscaled(self: Graphics, image: Image, point: Point)
-            Draws a specified image using its original physical size at a specified 
-             location.
-        
+            Draws a specified image using its original physical size at a specified location.
         
             image: System.Drawing.Image to draw.
-            point: System.Drawing.Point structure that specifies the upper-left corner of the 
-             drawn image.
-        
+            point: System.Drawing.Point structure that specifies the upper-left corner of the drawn image.
         DrawImageUnscaled(self: Graphics, image: Image, x: int, y: int)
-            Draws the specified image using its original physical size at the location 
-             specified by a coordinate pair.
+            Draws the specified image using its original physical size at the location specified by a 
+             coordinate pair.
         
         
             image: System.Drawing.Image to draw.
@@ -3411,8 +3206,8 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
     def DrawImageUnscaledAndClipped(self, image, rect):
         """
         DrawImageUnscaledAndClipped(self: Graphics, image: Image, rect: Rectangle)
-            Draws the specified image without scaling and clips it, if necessary, to fit in 
-             the specified rectangle.
+            Draws the specified image without scaling and clips it, if necessary, to fit in the specified 
+             rectangle.
         
         
             image: The System.Drawing.Image to draw.
@@ -3456,22 +3251,14 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
     def DrawLines(self, pen, points):
         """
         DrawLines(self: Graphics, pen: Pen, points: Array[Point])
-            Draws a series of line segments that connect an array of System.Drawing.Point 
-             structures.
+            Draws a series of line segments that connect an array of System.Drawing.Point structures.
         
-        
-            pen: System.Drawing.Pen that determines the color, width, and style of the line 
-             segments.
-        
+            pen: System.Drawing.Pen that determines the color, width, and style of the line segments.
             points: Array of System.Drawing.Point structures that represent the points to connect.
         DrawLines(self: Graphics, pen: Pen, points: Array[PointF])
-            Draws a series of line segments that connect an array of System.Drawing.PointF 
-             structures.
+            Draws a series of line segments that connect an array of System.Drawing.PointF structures.
         
-        
-            pen: System.Drawing.Pen that determines the color, width, and style of the line 
-             segments.
-        
+            pen: System.Drawing.Pen that determines the color, width, and style of the line segments.
             points: Array of System.Drawing.PointF structures that represent the points to connect.
         """
         pass
@@ -3489,82 +3276,66 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
     def DrawPie(self, pen, *__args):
         """
         DrawPie(self: Graphics, pen: Pen, rect: Rectangle, startAngle: Single, sweepAngle: Single)
-            Draws a pie shape defined by an ellipse specified by a System.Drawing.Rectangle 
-             structure and two radial lines.
+            Draws a pie shape defined by an ellipse specified by a System.Drawing.Rectangle structure and 
+             two radial lines.
         
         
             pen: System.Drawing.Pen that determines the color, width, and style of the pie shape.
-            rect: System.Drawing.Rectangle structure that represents the bounding rectangle that 
-             defines the ellipse from which the pie shape comes.
+            rect: System.Drawing.Rectangle structure that represents the bounding rectangle that defines the 
+             ellipse from which the pie shape comes.
         
-            startAngle: Angle measured in degrees clockwise from the x-axis to the first side of the 
-             pie shape.
-        
-            sweepAngle: Angle measured in degrees clockwise from the startAngle parameter to the second 
-             side of the pie shape.
+            startAngle: Angle measured in degrees clockwise from the x-axis to the first side of the pie shape.
+            sweepAngle: Angle measured in degrees clockwise from the startAngle parameter to the second side of the pie 
+             shape.
         
         DrawPie(self: Graphics, pen: Pen, x: int, y: int, width: int, height: int, startAngle: int, sweepAngle: int)
-            Draws a pie shape defined by an ellipse specified by a coordinate pair, a 
-             width, a height, and two radial lines.
+            Draws a pie shape defined by an ellipse specified by a coordinate pair, a width, a height, and 
+             two radial lines.
         
         
             pen: System.Drawing.Pen that determines the color, width, and style of the pie shape.
-            x: The x-coordinate of the upper-left corner of the bounding rectangle that 
-             defines the ellipse from which the pie shape comes.
+            x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse 
+             from which the pie shape comes.
         
-            y: The y-coordinate of the upper-left corner of the bounding rectangle that 
-             defines the ellipse from which the pie shape comes.
+            y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse 
+             from which the pie shape comes.
         
-            width: Width of the bounding rectangle that defines the ellipse from which the pie 
-             shape comes.
-        
-            height: Height of the bounding rectangle that defines the ellipse from which the pie 
-             shape comes.
-        
-            startAngle: Angle measured in degrees clockwise from the x-axis to the first side of the 
-             pie shape.
-        
-            sweepAngle: Angle measured in degrees clockwise from the startAngle parameter to the second 
-             side of the pie shape.
+            width: Width of the bounding rectangle that defines the ellipse from which the pie shape comes.
+            height: Height of the bounding rectangle that defines the ellipse from which the pie shape comes.
+            startAngle: Angle measured in degrees clockwise from the x-axis to the first side of the pie shape.
+            sweepAngle: Angle measured in degrees clockwise from the startAngle parameter to the second side of the pie 
+             shape.
         
         DrawPie(self: Graphics, pen: Pen, rect: RectangleF, startAngle: Single, sweepAngle: Single)
-            Draws a pie shape defined by an ellipse specified by a 
-             System.Drawing.RectangleF structure and two radial lines.
+            Draws a pie shape defined by an ellipse specified by a System.Drawing.RectangleF structure and 
+             two radial lines.
         
         
             pen: System.Drawing.Pen that determines the color, width, and style of the pie shape.
-            rect: System.Drawing.RectangleF structure that represents the bounding rectangle that 
-             defines the ellipse from which the pie shape comes.
+            rect: System.Drawing.RectangleF structure that represents the bounding rectangle that defines the 
+             ellipse from which the pie shape comes.
         
-            startAngle: Angle measured in degrees clockwise from the x-axis to the first side of the 
-             pie shape.
-        
-            sweepAngle: Angle measured in degrees clockwise from the startAngle parameter to the second 
-             side of the pie shape.
+            startAngle: Angle measured in degrees clockwise from the x-axis to the first side of the pie shape.
+            sweepAngle: Angle measured in degrees clockwise from the startAngle parameter to the second side of the pie 
+             shape.
         
         DrawPie(self: Graphics, pen: Pen, x: Single, y: Single, width: Single, height: Single, startAngle: Single, sweepAngle: Single)
-            Draws a pie shape defined by an ellipse specified by a coordinate pair, a 
-             width, a height, and two radial lines.
+            Draws a pie shape defined by an ellipse specified by a coordinate pair, a width, a height, and 
+             two radial lines.
         
         
             pen: System.Drawing.Pen that determines the color, width, and style of the pie shape.
-            x: The x-coordinate of the upper-left corner of the bounding rectangle that 
-             defines the ellipse from which the pie shape comes.
+            x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse 
+             from which the pie shape comes.
         
-            y: The y-coordinate of the upper-left corner of the bounding rectangle that 
-             defines the ellipse from which the pie shape comes.
+            y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse 
+             from which the pie shape comes.
         
-            width: Width of the bounding rectangle that defines the ellipse from which the pie 
-             shape comes.
-        
-            height: Height of the bounding rectangle that defines the ellipse from which the pie 
-             shape comes.
-        
-            startAngle: Angle measured in degrees clockwise from the x-axis to the first side of the 
-             pie shape.
-        
-            sweepAngle: Angle measured in degrees clockwise from the startAngle parameter to the second 
-             side of the pie shape.
+            width: Width of the bounding rectangle that defines the ellipse from which the pie shape comes.
+            height: Height of the bounding rectangle that defines the ellipse from which the pie shape comes.
+            startAngle: Angle measured in degrees clockwise from the x-axis to the first side of the pie shape.
+            sweepAngle: Angle measured in degrees clockwise from the startAngle parameter to the second side of the pie 
+             shape.
         """
         pass
 
@@ -3574,15 +3345,12 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
             Draws a polygon defined by an array of System.Drawing.Point structures.
         
             pen: System.Drawing.Pen that determines the color, width, and style of the polygon.
-            points: Array of System.Drawing.Point structures that represent the vertices of the 
-             polygon.
-        
+            points: Array of System.Drawing.Point structures that represent the vertices of the polygon.
         DrawPolygon(self: Graphics, pen: Pen, points: Array[PointF])
             Draws a polygon defined by an array of System.Drawing.PointF structures.
         
             pen: System.Drawing.Pen that determines the color, width, and style of the polygon.
-            points: Array of System.Drawing.PointF structures that represent the vertices of the 
-             polygon.
+            points: Array of System.Drawing.PointF structures that represent the vertices of the polygon.
         """
         pass
 
@@ -3599,9 +3367,7 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         DrawRectangle(self: Graphics, pen: Pen, x: Single, y: Single, width: Single, height: Single)
             Draws a rectangle specified by a coordinate pair, a width, and a height.
         
-            pen: A System.Drawing.Pen that determines the color, width, and style of the 
-             rectangle.
-        
+            pen: A System.Drawing.Pen that determines the color, width, and style of the rectangle.
             x: The x-coordinate of the upper-left corner of the rectangle to draw.
             y: The y-coordinate of the upper-left corner of the rectangle to draw.
             width: The width of the rectangle to draw.
@@ -3609,9 +3375,7 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         DrawRectangle(self: Graphics, pen: Pen, rect: Rectangle)
             Draws a rectangle specified by a System.Drawing.Rectangle structure.
         
-            pen: A System.Drawing.Pen that determines the color, width, and style of the 
-             rectangle.
-        
+            pen: A System.Drawing.Pen that determines the color, width, and style of the rectangle.
             rect: A System.Drawing.Rectangle structure that represents the rectangle to draw.
         """
         pass
@@ -3621,20 +3385,13 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         DrawRectangles(self: Graphics, pen: Pen, rects: Array[Rectangle])
             Draws a series of rectangles specified by System.Drawing.Rectangle structures.
         
-            pen: System.Drawing.Pen that determines the color, width, and style of the outlines 
-             of the rectangles.
-        
-            rects: Array of System.Drawing.Rectangle structures that represent the rectangles to 
-             draw.
-        
+            pen: System.Drawing.Pen that determines the color, width, and style of the outlines of the rectangles.
+            rects: Array of System.Drawing.Rectangle structures that represent the rectangles to draw.
         DrawRectangles(self: Graphics, pen: Pen, rects: Array[RectangleF])
             Draws a series of rectangles specified by System.Drawing.RectangleF structures.
         
-            pen: System.Drawing.Pen that determines the color, width, and style of the outlines 
-             of the rectangles.
-        
-            rects: Array of System.Drawing.RectangleF structures that represent the rectangles to 
-             draw.
+            pen: System.Drawing.Pen that determines the color, width, and style of the outlines of the rectangles.
+            rects: Array of System.Drawing.RectangleF structures that represent the rectangles to draw.
         """
         pass
 
@@ -3648,13 +3405,11 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
             s: String to draw.
             font: System.Drawing.Font that defines the text format of the string.
             brush: System.Drawing.Brush that determines the color and texture of the drawn text.
-            point: System.Drawing.PointF structure that specifies the upper-left corner of the 
-             drawn text.
-        
+            point: System.Drawing.PointF structure that specifies the upper-left corner of the drawn text.
         DrawString(self: Graphics, s: str, font: Font, brush: Brush, x: Single, y: Single, format: StringFormat)
             Draws the specified text string at the specified location with the specified 
-             System.Drawing.Brush and System.Drawing.Font objects using the formatting 
-             attributes of the specified System.Drawing.StringFormat.
+             System.Drawing.Brush and System.Drawing.Font objects using the formatting attributes of the 
+             specified System.Drawing.StringFormat.
         
         
             s: String to draw.
@@ -3662,23 +3417,21 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
             brush: System.Drawing.Brush that determines the color and texture of the drawn text.
             x: The x-coordinate of the upper-left corner of the drawn text.
             y: The y-coordinate of the upper-left corner of the drawn text.
-            format: System.Drawing.StringFormat that specifies formatting attributes, such as line 
-             spacing and alignment, that are applied to the drawn text.
+            format: System.Drawing.StringFormat that specifies formatting attributes, such as line spacing and 
+             alignment, that are applied to the drawn text.
         
         DrawString(self: Graphics, s: str, font: Font, brush: Brush, point: PointF, format: StringFormat)
             Draws the specified text string at the specified location with the specified 
-             System.Drawing.Brush and System.Drawing.Font objects using the formatting 
-             attributes of the specified System.Drawing.StringFormat.
+             System.Drawing.Brush and System.Drawing.Font objects using the formatting attributes of the 
+             specified System.Drawing.StringFormat.
         
         
             s: String to draw.
             font: System.Drawing.Font that defines the text format of the string.
             brush: System.Drawing.Brush that determines the color and texture of the drawn text.
-            point: System.Drawing.PointF structure that specifies the upper-left corner of the 
-             drawn text.
-        
-            format: System.Drawing.StringFormat that specifies formatting attributes, such as line 
-             spacing and alignment, that are applied to the drawn text.
+            point: System.Drawing.PointF structure that specifies the upper-left corner of the drawn text.
+            format: System.Drawing.StringFormat that specifies formatting attributes, such as line spacing and 
+             alignment, that are applied to the drawn text.
         
         DrawString(self: Graphics, s: str, font: Font, brush: Brush, x: Single, y: Single)
             Draws the specified text string at the specified location with the specified 
@@ -3698,36 +3451,30 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
             s: String to draw.
             font: System.Drawing.Font that defines the text format of the string.
             brush: System.Drawing.Brush that determines the color and texture of the drawn text.
-            layoutRectangle: System.Drawing.RectangleF structure that specifies the location of the drawn 
-             text.
-        
+            layoutRectangle: System.Drawing.RectangleF structure that specifies the location of the drawn text.
         DrawString(self: Graphics, s: str, font: Font, brush: Brush, layoutRectangle: RectangleF, format: StringFormat)
             Draws the specified text string in the specified rectangle with the specified 
-             System.Drawing.Brush and System.Drawing.Font objects using the formatting 
-             attributes of the specified System.Drawing.StringFormat.
+             System.Drawing.Brush and System.Drawing.Font objects using the formatting attributes of the 
+             specified System.Drawing.StringFormat.
         
         
             s: String to draw.
             font: System.Drawing.Font that defines the text format of the string.
             brush: System.Drawing.Brush that determines the color and texture of the drawn text.
-            layoutRectangle: System.Drawing.RectangleF structure that specifies the location of the drawn 
-             text.
-        
-            format: System.Drawing.StringFormat that specifies formatting attributes, such as line 
-             spacing and alignment, that are applied to the drawn text.
+            layoutRectangle: System.Drawing.RectangleF structure that specifies the location of the drawn text.
+            format: System.Drawing.StringFormat that specifies formatting attributes, such as line spacing and 
+             alignment, that are applied to the drawn text.
         """
         pass
 
     def EndContainer(self, container):
         """
         EndContainer(self: Graphics, container: GraphicsContainer)
-            Closes the current graphics container and restores the state of this 
-             System.Drawing.Graphics to the state saved by a call to the 
-             System.Drawing.Graphics.BeginContainer method.
+            Closes the current graphics container and restores the state of this System.Drawing.Graphics to 
+             the state saved by a call to the System.Drawing.Graphics.BeginContainer method.
         
         
-            container: System.Drawing.Drawing2D.GraphicsContainer that represents the container this 
-             method restores.
+            container: System.Drawing.Drawing2D.GraphicsContainer that represents the container this method restores.
         """
         pass
 
@@ -3738,16 +3485,14 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
     def ExcludeClip(self, *__args):
         """
         ExcludeClip(self: Graphics, rect: Rectangle)
-            Updates the clip region of this System.Drawing.Graphics to exclude the area 
-             specified by a System.Drawing.Rectangle structure.
+            Updates the clip region of this System.Drawing.Graphics to exclude the area specified by a 
+             System.Drawing.Rectangle structure.
         
         
-            rect: System.Drawing.Rectangle structure that specifies the rectangle to exclude from 
-             the clip region.
-        
+            rect: System.Drawing.Rectangle structure that specifies the rectangle to exclude from the clip region.
         ExcludeClip(self: Graphics, region: Region)
-            Updates the clip region of this System.Drawing.Graphics to exclude the area 
-             specified by a System.Drawing.Region.
+            Updates the clip region of this System.Drawing.Graphics to exclude the area specified by a 
+             System.Drawing.Region.
         
         
             region: System.Drawing.Region that specifies the region to exclude from the clip region.
@@ -3757,31 +3502,31 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
     def FillClosedCurve(self, brush, points, fillmode=None, tension=None):
         """
         FillClosedCurve(self: Graphics, brush: Brush, points: Array[Point])
-            Fills the interior of a closed cardinal spline curve defined by an array of 
-             System.Drawing.Point structures.
+            Fills the interior of a closed cardinal spline curve defined by an array of System.Drawing.Point 
+             structures.
         
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
             points: Array of System.Drawing.Point structures that define the spline.
         FillClosedCurve(self: Graphics, brush: Brush, points: Array[Point], fillmode: FillMode)
-            Fills the interior of a closed cardinal spline curve defined by an array of 
-             System.Drawing.Point structures using the specified fill mode.
+            Fills the interior of a closed cardinal spline curve defined by an array of System.Drawing.Point 
+             structures using the specified fill mode.
         
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
             points: Array of System.Drawing.Point structures that define the spline.
-            fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how 
-             the curve is filled.
+            fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how the curve is 
+             filled.
         
         FillClosedCurve(self: Graphics, brush: Brush, points: Array[Point], fillmode: FillMode, tension: Single)
-            Fills the interior of a closed cardinal spline curve defined by an array of 
-             System.Drawing.Point structures using the specified fill mode and tension.
+            Fills the interior of a closed cardinal spline curve defined by an array of System.Drawing.Point 
+             structures using the specified fill mode and tension.
         
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
             points: Array of System.Drawing.Point structures that define the spline.
-            fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how 
-             the curve is filled.
+            fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how the curve is 
+             filled.
         
             tension: Value greater than or equal to 0.0F that specifies the tension of the curve.
         FillClosedCurve(self: Graphics, brush: Brush, points: Array[PointF])
@@ -3798,8 +3543,8 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
             points: Array of System.Drawing.PointF structures that define the spline.
-            fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how 
-             the curve is filled.
+            fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how the curve is 
+             filled.
         
         FillClosedCurve(self: Graphics, brush: Brush, points: Array[PointF], fillmode: FillMode, tension: Single)
             Fills the interior of a closed cardinal spline curve defined by an array of 
@@ -3808,8 +3553,8 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         
             brush: A System.Drawing.Brush that determines the characteristics of the fill.
             points: Array of System.Drawing.PointF structures that define the spline.
-            fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how 
-             the curve is filled.
+            fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how the curve is 
+             filled.
         
             tension: Value greater than or equal to 0.0F that specifies the tension of the curve.
         """
@@ -3823,35 +3568,27 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
-            rect: System.Drawing.Rectangle structure that represents the bounding rectangle that 
-             defines the ellipse.
+            rect: System.Drawing.Rectangle structure that represents the bounding rectangle that defines the 
+             ellipse.
         
         FillEllipse(self: Graphics, brush: Brush, x: int, y: int, width: int, height: int)
-            Fills the interior of an ellipse defined by a bounding rectangle specified by a 
-             pair of coordinates, a width, and a height.
+            Fills the interior of an ellipse defined by a bounding rectangle specified by a pair of 
+             coordinates, a width, and a height.
         
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
-            x: The x-coordinate of the upper-left corner of the bounding rectangle that 
-             defines the ellipse.
-        
-            y: The y-coordinate of the upper-left corner of the bounding rectangle that 
-             defines the ellipse.
-        
+            x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
+            y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
             width: Width of the bounding rectangle that defines the ellipse.
             height: Height of the bounding rectangle that defines the ellipse.
         FillEllipse(self: Graphics, brush: Brush, x: Single, y: Single, width: Single, height: Single)
-            Fills the interior of an ellipse defined by a bounding rectangle specified by a 
-             pair of coordinates, a width, and a height.
+            Fills the interior of an ellipse defined by a bounding rectangle specified by a pair of 
+             coordinates, a width, and a height.
         
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
-            x: The x-coordinate of the upper-left corner of the bounding rectangle that 
-             defines the ellipse.
-        
-            y: The y-coordinate of the upper-left corner of the bounding rectangle that 
-             defines the ellipse.
-        
+            x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
+            y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
             width: Width of the bounding rectangle that defines the ellipse.
             height: Height of the bounding rectangle that defines the ellipse.
         FillEllipse(self: Graphics, brush: Brush, rect: RectangleF)
@@ -3860,8 +3597,8 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
-            rect: System.Drawing.RectangleF structure that represents the bounding rectangle that 
-             defines the ellipse.
+            rect: System.Drawing.RectangleF structure that represents the bounding rectangle that defines the 
+             ellipse.
         """
         pass
 
@@ -3878,52 +3615,40 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
     def FillPie(self, brush, *__args):
         """
         FillPie(self: Graphics, brush: Brush, x: int, y: int, width: int, height: int, startAngle: int, sweepAngle: int)
-            Fills the interior of a pie section defined by an ellipse specified by a pair 
-             of coordinates, a width, a height, and two radial lines.
+            Fills the interior of a pie section defined by an ellipse specified by a pair of coordinates, a 
+             width, a height, and two radial lines.
         
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
-            x: The x-coordinate of the upper-left corner of the bounding rectangle that 
-             defines the ellipse from which the pie section comes.
+            x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse 
+             from which the pie section comes.
         
-            y: The y-coordinate of the upper-left corner of the bounding rectangle that 
-             defines the ellipse from which the pie section comes.
+            y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse 
+             from which the pie section comes.
         
-            width: Width of the bounding rectangle that defines the ellipse from which the pie 
-             section comes.
-        
-            height: Height of the bounding rectangle that defines the ellipse from which the pie 
-             section comes.
-        
-            startAngle: Angle in degrees measured clockwise from the x-axis to the first side of the 
-             pie section.
-        
-            sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to the second 
-             side of the pie section.
+            width: Width of the bounding rectangle that defines the ellipse from which the pie section comes.
+            height: Height of the bounding rectangle that defines the ellipse from which the pie section comes.
+            startAngle: Angle in degrees measured clockwise from the x-axis to the first side of the pie section.
+            sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to the second side of the pie 
+             section.
         
         FillPie(self: Graphics, brush: Brush, x: Single, y: Single, width: Single, height: Single, startAngle: Single, sweepAngle: Single)
-            Fills the interior of a pie section defined by an ellipse specified by a pair 
-             of coordinates, a width, a height, and two radial lines.
+            Fills the interior of a pie section defined by an ellipse specified by a pair of coordinates, a 
+             width, a height, and two radial lines.
         
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
-            x: The x-coordinate of the upper-left corner of the bounding rectangle that 
-             defines the ellipse from which the pie section comes.
+            x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse 
+             from which the pie section comes.
         
-            y: The y-coordinate of the upper-left corner of the bounding rectangle that 
-             defines the ellipse from which the pie section comes.
+            y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse 
+             from which the pie section comes.
         
-            width: Width of the bounding rectangle that defines the ellipse from which the pie 
-             section comes.
-        
-            height: Height of the bounding rectangle that defines the ellipse from which the pie 
-             section comes.
-        
-            startAngle: Angle in degrees measured clockwise from the x-axis to the first side of the 
-             pie section.
-        
-            sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to the second 
-             side of the pie section.
+            width: Width of the bounding rectangle that defines the ellipse from which the pie section comes.
+            height: Height of the bounding rectangle that defines the ellipse from which the pie section comes.
+            startAngle: Angle in degrees measured clockwise from the x-axis to the first side of the pie section.
+            sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to the second side of the pie 
+             section.
         
         FillPie(self: Graphics, brush: Brush, rect: Rectangle, startAngle: Single, sweepAngle: Single)
             Fills the interior of a pie section defined by an ellipse specified by a 
@@ -3931,69 +3656,58 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
-            rect: System.Drawing.Rectangle structure that represents the bounding rectangle that 
-             defines the ellipse from which the pie section comes.
+            rect: System.Drawing.Rectangle structure that represents the bounding rectangle that defines the 
+             ellipse from which the pie section comes.
         
-            startAngle: Angle in degrees measured clockwise from the x-axis to the first side of the 
-             pie section.
-        
-            sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to the second 
-             side of the pie section.
+            startAngle: Angle in degrees measured clockwise from the x-axis to the first side of the pie section.
+            sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to the second side of the pie 
+             section.
         """
         pass
 
     def FillPolygon(self, brush, points, fillMode=None):
         """
         FillPolygon(self: Graphics, brush: Brush, points: Array[PointF], fillMode: FillMode)
-            Fills the interior of a polygon defined by an array of points specified by 
-             System.Drawing.PointF structures using the specified fill mode.
+            Fills the interior of a polygon defined by an array of points specified by System.Drawing.PointF 
+             structures using the specified fill mode.
         
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
-            points: Array of System.Drawing.PointF structures that represent the vertices of the 
-             polygon to fill.
-        
-            fillMode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines the 
-             style of the fill.
+            points: Array of System.Drawing.PointF structures that represent the vertices of the polygon to fill.
+            fillMode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines the style of the 
+             fill.
         
         FillPolygon(self: Graphics, brush: Brush, points: Array[Point], fillMode: FillMode)
-            Fills the interior of a polygon defined by an array of points specified by 
-             System.Drawing.Point structures using the specified fill mode.
+            Fills the interior of a polygon defined by an array of points specified by System.Drawing.Point 
+             structures using the specified fill mode.
         
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
-            points: Array of System.Drawing.Point structures that represent the vertices of the 
-             polygon to fill.
-        
-            fillMode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines the 
-             style of the fill.
+            points: Array of System.Drawing.Point structures that represent the vertices of the polygon to fill.
+            fillMode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines the style of the 
+             fill.
         
         FillPolygon(self: Graphics, brush: Brush, points: Array[Point])
-            Fills the interior of a polygon defined by an array of points specified by 
-             System.Drawing.Point structures.
+            Fills the interior of a polygon defined by an array of points specified by System.Drawing.Point 
+             structures.
         
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
-            points: Array of System.Drawing.Point structures that represent the vertices of the 
-             polygon to fill.
-        
+            points: Array of System.Drawing.Point structures that represent the vertices of the polygon to fill.
         FillPolygon(self: Graphics, brush: Brush, points: Array[PointF])
-            Fills the interior of a polygon defined by an array of points specified by 
-             System.Drawing.PointF structures.
+            Fills the interior of a polygon defined by an array of points specified by System.Drawing.PointF 
+             structures.
         
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
-            points: Array of System.Drawing.PointF structures that represent the vertices of the 
-             polygon to fill.
+            points: Array of System.Drawing.PointF structures that represent the vertices of the polygon to fill.
         """
         pass
 
     def FillRectangle(self, brush, *__args):
         """
         FillRectangle(self: Graphics, brush: Brush, x: int, y: int, width: int, height: int)
-            Fills the interior of a rectangle specified by a pair of coordinates, a width, 
-             and a height.
-        
+            Fills the interior of a rectangle specified by a pair of coordinates, a width, and a height.
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
             x: The x-coordinate of the upper-left corner of the rectangle to fill.
@@ -4001,16 +3715,12 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
             width: Width of the rectangle to fill.
             height: Height of the rectangle to fill.
         FillRectangle(self: Graphics, brush: Brush, rect: RectangleF)
-            Fills the interior of a rectangle specified by a System.Drawing.RectangleF 
-             structure.
-        
+            Fills the interior of a rectangle specified by a System.Drawing.RectangleF structure.
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
             rect: System.Drawing.RectangleF structure that represents the rectangle to fill.
         FillRectangle(self: Graphics, brush: Brush, x: Single, y: Single, width: Single, height: Single)
-            Fills the interior of a rectangle specified by a pair of coordinates, a width, 
-             and a height.
-        
+            Fills the interior of a rectangle specified by a pair of coordinates, a width, and a height.
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
             x: The x-coordinate of the upper-left corner of the rectangle to fill.
@@ -4018,9 +3728,7 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
             width: Width of the rectangle to fill.
             height: Height of the rectangle to fill.
         FillRectangle(self: Graphics, brush: Brush, rect: Rectangle)
-            Fills the interior of a rectangle specified by a System.Drawing.Rectangle 
-             structure.
-        
+            Fills the interior of a rectangle specified by a System.Drawing.Rectangle structure.
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
             rect: System.Drawing.Rectangle structure that represents the rectangle to fill.
@@ -4030,22 +3738,15 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
     def FillRectangles(self, brush, rects):
         """
         FillRectangles(self: Graphics, brush: Brush, rects: Array[RectangleF])
-            Fills the interiors of a series of rectangles specified by 
-             System.Drawing.RectangleF structures.
-        
+            Fills the interiors of a series of rectangles specified by System.Drawing.RectangleF structures.
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
-            rects: Array of System.Drawing.RectangleF structures that represent the rectangles to 
-             fill.
-        
+            rects: Array of System.Drawing.RectangleF structures that represent the rectangles to fill.
         FillRectangles(self: Graphics, brush: Brush, rects: Array[Rectangle])
-            Fills the interiors of a series of rectangles specified by 
-             System.Drawing.Rectangle structures.
-        
+            Fills the interiors of a series of rectangles specified by System.Drawing.Rectangle structures.
         
             brush: System.Drawing.Brush that determines the characteristics of the fill.
-            rects: Array of System.Drawing.Rectangle structures that represent the rectangles to 
-             fill.
+            rects: Array of System.Drawing.Rectangle structures that represent the rectangles to fill.
         """
         pass
 
@@ -4062,17 +3763,16 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
     def Flush(self, intention=None):
         """
         Flush(self: Graphics, intention: FlushIntention)
-            Forces execution of all pending graphics operations with the method waiting or 
-             not waiting, as specified, to return before the operations finish.
+            Forces execution of all pending graphics operations with the method waiting or not waiting, as 
+             specified, to return before the operations finish.
         
         
-            intention: Member of the System.Drawing.Drawing2D.FlushIntention enumeration that 
-             specifies whether the method returns immediately or waits for any existing 
-             operations to finish.
+            intention: Member of the System.Drawing.Drawing2D.FlushIntention enumeration that specifies whether the 
+             method returns immediately or waits for any existing operations to finish.
         
         Flush(self: Graphics)
-            Forces execution of all pending graphics operations and returns immediately 
-             without waiting for the operations to finish.
+            Forces execution of all pending graphics operations and returns immediately without waiting for 
+             the operations to finish.
         """
         pass
 
@@ -4081,24 +3781,19 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         """
         FromHdc(hdc: IntPtr, hdevice: IntPtr) -> Graphics
         
-            Creates a new System.Drawing.Graphics from the specified handle to a device 
-             context and handle to a device.
+            Creates a new System.Drawing.Graphics from the specified handle to a device context and handle 
+             to a device.
         
         
             hdc: Handle to a device context.
             hdevice: Handle to a device.
-            Returns: This method returns a new System.Drawing.Graphics for the specified device 
-             context and device.
-        
+            Returns: This method returns a new System.Drawing.Graphics for the specified device context and device.
         FromHdc(hdc: IntPtr) -> Graphics
         
-            Creates a new System.Drawing.Graphics from the specified handle to a device 
-             context.
-        
+            Creates a new System.Drawing.Graphics from the specified handle to a device context.
         
             hdc: Handle to a device context.
-            Returns: This method returns a new System.Drawing.Graphics for the specified device 
-             context.
+            Returns: This method returns a new System.Drawing.Graphics for the specified device context.
         """
         pass
 
@@ -4122,8 +3817,7 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
             Creates a new System.Drawing.Graphics from the specified handle to a window.
         
             hwnd: Handle to a window.
-            Returns: This method returns a new System.Drawing.Graphics for the specified window 
-             handle.
+            Returns: This method returns a new System.Drawing.Graphics for the specified window handle.
         """
         pass
 
@@ -4147,8 +3841,7 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
             Creates a new System.Drawing.Graphics from the specified System.Drawing.Image.
         
             image: System.Drawing.Image from which to create the new System.Drawing.Graphics.
-            Returns: This method returns a new System.Drawing.Graphics for the specified 
-             System.Drawing.Image.
+            Returns: This method returns a new System.Drawing.Graphics for the specified System.Drawing.Image.
         """
         pass
 
@@ -4175,9 +3868,7 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         """
         GetHdc(self: Graphics) -> IntPtr
         
-            Gets the handle to the device context associated with this 
-             System.Drawing.Graphics.
-        
+            Gets the handle to the device context associated with this System.Drawing.Graphics.
             Returns: Handle to the device context associated with this System.Drawing.Graphics.
         """
         pass
@@ -4189,28 +3880,28 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
             Gets the nearest color to the specified System.Drawing.Color structure.
         
             color: System.Drawing.Color structure for which to find a match.
-            Returns: A System.Drawing.Color structure that represents the nearest color to the one 
-             specified with the color parameter.
+            Returns: A System.Drawing.Color structure that represents the nearest color to the one specified with the 
+             color parameter.
         """
         pass
 
     def IntersectClip(self, *__args):
         """
         IntersectClip(self: Graphics, region: Region)
-            Updates the clip region of this System.Drawing.Graphics to the intersection of 
-             the current clip region and the specified System.Drawing.Region.
+            Updates the clip region of this System.Drawing.Graphics to the intersection of the current clip 
+             region and the specified System.Drawing.Region.
         
         
             region: System.Drawing.Region to intersect with the current region.
         IntersectClip(self: Graphics, rect: RectangleF)
-            Updates the clip region of this System.Drawing.Graphics to the intersection of 
-             the current clip region and the specified System.Drawing.RectangleF structure.
+            Updates the clip region of this System.Drawing.Graphics to the intersection of the current clip 
+             region and the specified System.Drawing.RectangleF structure.
         
         
             rect: System.Drawing.RectangleF structure to intersect with the current clip region.
         IntersectClip(self: Graphics, rect: Rectangle)
-            Updates the clip region of this System.Drawing.Graphics to the intersection of 
-             the current clip region and the specified System.Drawing.Rectangle structure.
+            Updates the clip region of this System.Drawing.Graphics to the intersection of the current clip 
+             region and the specified System.Drawing.Rectangle structure.
         
         
             rect: System.Drawing.Rectangle structure to intersect with the current clip region.
@@ -4221,105 +3912,91 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         """
         IsVisible(self: Graphics, x: int, y: int, width: int, height: int) -> bool
         
-            Indicates whether the rectangle specified by a pair of coordinates, a width, 
-             and a height is contained within the visible clip region of this 
-             System.Drawing.Graphics.
+            Indicates whether the rectangle specified by a pair of coordinates, a width, and a height is 
+             contained within the visible clip region of this System.Drawing.Graphics.
         
         
-            x: The x-coordinate of the upper-left corner of the rectangle to test for 
-             visibility.
-        
-            y: The y-coordinate of the upper-left corner of the rectangle to test for 
-             visibility.
-        
+            x: The x-coordinate of the upper-left corner of the rectangle to test for visibility.
+            y: The y-coordinate of the upper-left corner of the rectangle to test for visibility.
             width: Width of the rectangle to test for visibility.
             height: Height of the rectangle to test for visibility.
-            Returns: true if the rectangle defined by the x, y, width, and height parameters is 
-             contained within the visible clip region of this System.Drawing.Graphics; 
-             otherwise, false.
+            Returns: true if the rectangle defined by the x, y, width, and height parameters is contained within the 
+             visible clip region of this System.Drawing.Graphics; otherwise, false.
         
         IsVisible(self: Graphics, point: PointF) -> bool
         
-            Indicates whether the specified System.Drawing.PointF structure is contained 
-             within the visible clip region of this System.Drawing.Graphics.
+            Indicates whether the specified System.Drawing.PointF structure is contained within the visible 
+             clip region of this System.Drawing.Graphics.
         
         
             point: System.Drawing.PointF structure to test for visibility.
-            Returns: true if the point specified by the point parameter is contained within the 
-             visible clip region of this System.Drawing.Graphics; otherwise, false.
+            Returns: true if the point specified by the point parameter is contained within the visible clip region 
+             of this System.Drawing.Graphics; otherwise, false.
         
         IsVisible(self: Graphics, rect: RectangleF) -> bool
         
-            Indicates whether the rectangle specified by a System.Drawing.RectangleF 
-             structure is contained within the visible clip region of this 
-             System.Drawing.Graphics.
+            Indicates whether the rectangle specified by a System.Drawing.RectangleF structure is contained 
+             within the visible clip region of this System.Drawing.Graphics.
         
         
             rect: System.Drawing.RectangleF structure to test for visibility.
-            Returns: true if the rectangle specified by the rect parameter is contained within the 
-             visible clip region of this System.Drawing.Graphics; otherwise, false.
+            Returns: true if the rectangle specified by the rect parameter is contained within the visible clip 
+             region of this System.Drawing.Graphics; otherwise, false.
         
         IsVisible(self: Graphics, x: Single, y: Single, width: Single, height: Single) -> bool
         
-            Indicates whether the rectangle specified by a pair of coordinates, a width, 
-             and a height is contained within the visible clip region of this 
-             System.Drawing.Graphics.
+            Indicates whether the rectangle specified by a pair of coordinates, a width, and a height is 
+             contained within the visible clip region of this System.Drawing.Graphics.
         
         
-            x: The x-coordinate of the upper-left corner of the rectangle to test for 
-             visibility.
-        
-            y: The y-coordinate of the upper-left corner of the rectangle to test for 
-             visibility.
-        
+            x: The x-coordinate of the upper-left corner of the rectangle to test for visibility.
+            y: The y-coordinate of the upper-left corner of the rectangle to test for visibility.
             width: Width of the rectangle to test for visibility.
             height: Height of the rectangle to test for visibility.
-            Returns: true if the rectangle defined by the x, y, width, and height parameters is 
-             contained within the visible clip region of this System.Drawing.Graphics; 
-             otherwise, false.
+            Returns: true if the rectangle defined by the x, y, width, and height parameters is contained within the 
+             visible clip region of this System.Drawing.Graphics; otherwise, false.
         
         IsVisible(self: Graphics, x: int, y: int) -> bool
         
-            Indicates whether the point specified by a pair of coordinates is contained 
-             within the visible clip region of this System.Drawing.Graphics.
+            Indicates whether the point specified by a pair of coordinates is contained within the visible 
+             clip region of this System.Drawing.Graphics.
         
         
             x: The x-coordinate of the point to test for visibility.
             y: The y-coordinate of the point to test for visibility.
-            Returns: true if the point defined by the x and y parameters is contained within the 
-             visible clip region of this System.Drawing.Graphics; otherwise, false.
+            Returns: true if the point defined by the x and y parameters is contained within the visible clip region 
+             of this System.Drawing.Graphics; otherwise, false.
         
         IsVisible(self: Graphics, rect: Rectangle) -> bool
         
-            Indicates whether the rectangle specified by a System.Drawing.Rectangle 
-             structure is contained within the visible clip region of this 
-             System.Drawing.Graphics.
+            Indicates whether the rectangle specified by a System.Drawing.Rectangle structure is contained 
+             within the visible clip region of this System.Drawing.Graphics.
         
         
             rect: System.Drawing.Rectangle structure to test for visibility.
-            Returns: true if the rectangle specified by the rect parameter is contained within the 
-             visible clip region of this System.Drawing.Graphics; otherwise, false.
+            Returns: true if the rectangle specified by the rect parameter is contained within the visible clip 
+             region of this System.Drawing.Graphics; otherwise, false.
         
         IsVisible(self: Graphics, x: Single, y: Single) -> bool
         
-            Indicates whether the point specified by a pair of coordinates is contained 
-             within the visible clip region of this System.Drawing.Graphics.
+            Indicates whether the point specified by a pair of coordinates is contained within the visible 
+             clip region of this System.Drawing.Graphics.
         
         
             x: The x-coordinate of the point to test for visibility.
             y: The y-coordinate of the point to test for visibility.
-            Returns: true if the point defined by the x and y parameters is contained within the 
-             visible clip region of this System.Drawing.Graphics; otherwise, false.
+            Returns: true if the point defined by the x and y parameters is contained within the visible clip region 
+             of this System.Drawing.Graphics; otherwise, false.
         
         IsVisible(self: Graphics, point: Point) -> bool
         
-            Indicates whether the specified System.Drawing.Point structure is contained 
-             within the visible clip region of this System.Drawing.Graphics.
+            Indicates whether the specified System.Drawing.Point structure is contained within the visible 
+             clip region of this System.Drawing.Graphics.
         
         
             point: System.Drawing.Point structure to test for visibility.
-            Returns: true if the point specified by the point parameter is contained within the 
-             visible clip region of this System.Drawing.Graphics; otherwise, false.
+            Returns: true if the point specified by the point parameter is contained within the visible clip region 
+             of this System.Drawing.Graphics; otherwise, false.
         """
         pass
 
@@ -4327,20 +4004,18 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         """
         MeasureCharacterRanges(self: Graphics, text: str, font: Font, layoutRect: RectangleF, stringFormat: StringFormat) -> Array[Region]
         
-            Gets an array of System.Drawing.Region objects, each of which bounds a range of 
-             character positions within the specified string.
+            Gets an array of System.Drawing.Region objects, each of which bounds a range of character 
+             positions within the specified string.
         
         
             text: String to measure.
             font: System.Drawing.Font that defines the text format of the string.
-            layoutRect: System.Drawing.RectangleF structure that specifies the layout rectangle for the 
-             string.
+            layoutRect: System.Drawing.RectangleF structure that specifies the layout rectangle for the string.
+            stringFormat: System.Drawing.StringFormat that represents formatting information, such as line spacing, for 
+             the string.
         
-            stringFormat: System.Drawing.StringFormat that represents formatting information, such as 
-             line spacing, for the string.
-        
-            Returns: This method returns an array of System.Drawing.Region objects, each of which 
-             bounds a range of character positions within the specified string.
+            Returns: This method returns an array of System.Drawing.Region objects, each of which bounds a range of 
+             character positions within the specified string.
         """
         pass
 
@@ -4348,37 +4023,32 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         """
         MeasureString(self: Graphics, text: str, font: Font, origin: PointF, stringFormat: StringFormat) -> SizeF
         
-            Measures the specified string when drawn with the specified System.Drawing.Font 
-             and formatted with the specified System.Drawing.StringFormat.
+            Measures the specified string when drawn with the specified System.Drawing.Font and formatted 
+             with the specified System.Drawing.StringFormat.
         
         
             text: String to measure.
             font: System.Drawing.Font defines the text format of the string.
-            origin: System.Drawing.PointF structure that represents the upper-left corner of the 
-             string.
+            origin: System.Drawing.PointF structure that represents the upper-left corner of the string.
+            stringFormat: System.Drawing.StringFormat that represents formatting information, such as line spacing, for 
+             the string.
         
-            stringFormat: System.Drawing.StringFormat that represents formatting information, such as 
-             line spacing, for the string.
-        
-            Returns: This method returns a System.Drawing.SizeF structure that represents the size, 
-             in the units specified by the System.Drawing.Graphics.PageUnit property, of the 
-             string specified by the text parameter as drawn with the font parameter and the 
-             stringFormat parameter.
+            Returns: This method returns a System.Drawing.SizeF structure that represents the size, in the units 
+             specified by the System.Drawing.Graphics.PageUnit property, of the string specified by the text 
+             parameter as drawn with the font parameter and the stringFormat parameter.
         
         MeasureString(self: Graphics, text: str, font: Font, layoutArea: SizeF) -> SizeF
         
-            Measures the specified string when drawn with the specified System.Drawing.Font 
-             within the specified layout area.
+            Measures the specified string when drawn with the specified System.Drawing.Font within the 
+             specified layout area.
         
         
             text: String to measure.
             font: System.Drawing.Font defines the text format of the string.
-            layoutArea: System.Drawing.SizeF structure that specifies the maximum layout area for the 
-             text.
-        
-            Returns: This method returns a System.Drawing.SizeF structure that represents the size, 
-             in the units specified by the System.Drawing.Graphics.PageUnit property, of the 
-             string specified by the text parameter as drawn with the font parameter.
+            layoutArea: System.Drawing.SizeF structure that specifies the maximum layout area for the text.
+            Returns: This method returns a System.Drawing.SizeF structure that represents the size, in the units 
+             specified by the System.Drawing.Graphics.PageUnit property, of the string specified by the text 
+             parameter as drawn with the font parameter.
         
         MeasureString(self: Graphics, text: str, font: Font, width: int) -> SizeF
         
@@ -4387,47 +4057,41 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
             text: String to measure.
             font: System.Drawing.Font that defines the format of the string.
             width: Maximum width of the string in pixels.
-            Returns: This method returns a System.Drawing.SizeF structure that represents the size, 
-             in the units specified by the System.Drawing.Graphics.PageUnit property, of the 
-             string specified in the text parameter as drawn with the font parameter.
+            Returns: This method returns a System.Drawing.SizeF structure that represents the size, in the units 
+             specified by the System.Drawing.Graphics.PageUnit property, of the string specified in the text 
+             parameter as drawn with the font parameter.
         
         MeasureString(self: Graphics, text: str, font: Font, layoutArea: SizeF, stringFormat: StringFormat) -> (SizeF, int, int)
         
-            Measures the specified string when drawn with the specified System.Drawing.Font 
-             and formatted with the specified System.Drawing.StringFormat.
+            Measures the specified string when drawn with the specified System.Drawing.Font and formatted 
+             with the specified System.Drawing.StringFormat.
         
         
             text: String to measure.
             font: System.Drawing.Font that defines the text format of the string.
-            layoutArea: System.Drawing.SizeF structure that specifies the maximum layout area for the 
-             text.
+            layoutArea: System.Drawing.SizeF structure that specifies the maximum layout area for the text.
+            stringFormat: System.Drawing.StringFormat that represents formatting information, such as line spacing, for 
+             the string.
         
-            stringFormat: System.Drawing.StringFormat that represents formatting information, such as 
-             line spacing, for the string.
-        
-            Returns: This method returns a System.Drawing.SizeF structure that represents the size 
-             of the string, in the units specified by the System.Drawing.Graphics.PageUnit 
-             property, of the text parameter as drawn with the font parameter and the 
-             stringFormat parameter.
+            Returns: This method returns a System.Drawing.SizeF structure that represents the size of the string, in 
+             the units specified by the System.Drawing.Graphics.PageUnit property, of the text parameter as 
+             drawn with the font parameter and the stringFormat parameter.
         
         MeasureString(self: Graphics, text: str, font: Font, layoutArea: SizeF, stringFormat: StringFormat) -> SizeF
         
-            Measures the specified string when drawn with the specified System.Drawing.Font 
-             and formatted with the specified System.Drawing.StringFormat.
+            Measures the specified string when drawn with the specified System.Drawing.Font and formatted 
+             with the specified System.Drawing.StringFormat.
         
         
             text: String to measure.
             font: System.Drawing.Font defines the text format of the string.
-            layoutArea: System.Drawing.SizeF structure that specifies the maximum layout area for the 
-             text.
+            layoutArea: System.Drawing.SizeF structure that specifies the maximum layout area for the text.
+            stringFormat: System.Drawing.StringFormat that represents formatting information, such as line spacing, for 
+             the string.
         
-            stringFormat: System.Drawing.StringFormat that represents formatting information, such as 
-             line spacing, for the string.
-        
-            Returns: This method returns a System.Drawing.SizeF structure that represents the size, 
-             in the units specified by the System.Drawing.Graphics.PageUnit property, of the 
-             string specified in the text parameter as drawn with the font parameter and the 
-             stringFormat parameter.
+            Returns: This method returns a System.Drawing.SizeF structure that represents the size, in the units 
+             specified by the System.Drawing.Graphics.PageUnit property, of the string specified in the text 
+             parameter as drawn with the font parameter and the stringFormat parameter.
         
         MeasureString(self: Graphics, text: str, font: Font) -> SizeF
         
@@ -4435,26 +4099,25 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         
             text: String to measure.
             font: System.Drawing.Font that defines the text format of the string.
-            Returns: This method returns a System.Drawing.SizeF structure that represents the size, 
-             in the units specified by the System.Drawing.Graphics.PageUnit property, of the 
-             string specified by the text parameter as drawn with the font parameter.
+            Returns: This method returns a System.Drawing.SizeF structure that represents the size, in the units 
+             specified by the System.Drawing.Graphics.PageUnit property, of the string specified by the text 
+             parameter as drawn with the font parameter.
         
         MeasureString(self: Graphics, text: str, font: Font, width: int, format: StringFormat) -> SizeF
         
-            Measures the specified string when drawn with the specified System.Drawing.Font 
-             and formatted with the specified System.Drawing.StringFormat.
+            Measures the specified string when drawn with the specified System.Drawing.Font and formatted 
+             with the specified System.Drawing.StringFormat.
         
         
             text: String to measure.
             font: System.Drawing.Font that defines the text format of the string.
             width: Maximum width of the string.
-            format: System.Drawing.StringFormat that represents formatting information, such as 
-             line spacing, for the string.
+            format: System.Drawing.StringFormat that represents formatting information, such as line spacing, for 
+             the string.
         
-            Returns: This method returns a System.Drawing.SizeF structure that represents the size, 
-             in the units specified by the System.Drawing.Graphics.PageUnit property, of the 
-             string specified in the text parameter as drawn with the font parameter and the 
-             stringFormat parameter.
+            Returns: This method returns a System.Drawing.SizeF structure that represents the size, in the units 
+             specified by the System.Drawing.Graphics.PageUnit property, of the string specified in the text 
+             parameter as drawn with the font parameter and the stringFormat parameter.
         """
         pass
 
@@ -4464,11 +4127,11 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled across 
-             a remoting boundary. A value of false is usually appropriate. true to copy the 
-             current System.MarshalByRefObject object's identity to its clone, which will 
-             cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
+             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+             identity to its clone, which will cause remoting client calls to be routed to the remote server 
+             object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -4481,17 +4144,17 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
     def MultiplyTransform(self, matrix, order=None):
         """
         MultiplyTransform(self: Graphics, matrix: Matrix, order: MatrixOrder)
-            Multiplies the world transformation of this System.Drawing.Graphics and 
-             specified the System.Drawing.Drawing2D.Matrix in the specified order.
+            Multiplies the world transformation of this System.Drawing.Graphics and specified the 
+             System.Drawing.Drawing2D.Matrix in the specified order.
         
         
             matrix: 4x4 System.Drawing.Drawing2D.Matrix that multiplies the world transformation.
-            order: Member of the System.Drawing.Drawing2D.MatrixOrder enumeration that determines 
-             the order of the multiplication.
+            order: Member of the System.Drawing.Drawing2D.MatrixOrder enumeration that determines the order of the 
+             multiplication.
         
         MultiplyTransform(self: Graphics, matrix: Matrix)
-            Multiplies the world transformation of this System.Drawing.Graphics and 
-             specified the System.Drawing.Drawing2D.Matrix.
+            Multiplies the world transformation of this System.Drawing.Graphics and specified the 
+             System.Drawing.Drawing2D.Matrix.
         
         
             matrix: 4x4 System.Drawing.Drawing2D.Matrix that multiplies the world transformation.
@@ -4509,8 +4172,8 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
              System.Drawing.Graphics.GetHdc method of this System.Drawing.Graphics.
         
         
-            hdc: Handle to a device context obtained by a previous call to the 
-             System.Drawing.Graphics.GetHdc method of this System.Drawing.Graphics.
+            hdc: Handle to a device context obtained by a previous call to the System.Drawing.Graphics.GetHdc 
+             method of this System.Drawing.Graphics.
         """
         pass
 
@@ -4533,38 +4196,35 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
     def ResetTransform(self):
         """
         ResetTransform(self: Graphics)
-            Resets the world transformation matrix of this System.Drawing.Graphics to the 
-             identity matrix.
+            Resets the world transformation matrix of this System.Drawing.Graphics to the identity matrix.
         """
         pass
 
     def Restore(self, gstate):
         """
         Restore(self: Graphics, gstate: GraphicsState)
-            Restores the state of this System.Drawing.Graphics to the state represented by 
-             a System.Drawing.Drawing2D.GraphicsState.
+            Restores the state of this System.Drawing.Graphics to the state represented by a 
+             System.Drawing.Drawing2D.GraphicsState.
         
         
-            gstate: System.Drawing.Drawing2D.GraphicsState that represents the state to which to 
-             restore this System.Drawing.Graphics.
+            gstate: System.Drawing.Drawing2D.GraphicsState that represents the state to which to restore this 
+             System.Drawing.Graphics.
         """
         pass
 
     def RotateTransform(self, angle, order=None):
         """
         RotateTransform(self: Graphics, angle: Single, order: MatrixOrder)
-            Applies the specified rotation to the transformation matrix of this 
-             System.Drawing.Graphics in the specified order.
+            Applies the specified rotation to the transformation matrix of this System.Drawing.Graphics in 
+             the specified order.
         
         
             angle: Angle of rotation in degrees.
-            order: Member of the System.Drawing.Drawing2D.MatrixOrder enumeration that specifies 
-             whether the rotation is appended or prepended to the matrix transformation.
+            order: Member of the System.Drawing.Drawing2D.MatrixOrder enumeration that specifies whether the 
+             rotation is appended or prepended to the matrix transformation.
         
         RotateTransform(self: Graphics, angle: Single)
-            Applies the specified rotation to the transformation matrix of this 
-             System.Drawing.Graphics.
-        
+            Applies the specified rotation to the transformation matrix of this System.Drawing.Graphics.
         
             angle: Angle of rotation in degrees.
         """
@@ -4574,11 +4234,11 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         """
         Save(self: Graphics) -> GraphicsState
         
-            Saves the current state of this System.Drawing.Graphics and identifies the 
-             saved state with a System.Drawing.Drawing2D.GraphicsState.
+            Saves the current state of this System.Drawing.Graphics and identifies the saved state with a 
+             System.Drawing.Drawing2D.GraphicsState.
         
-            Returns: This method returns a System.Drawing.Drawing2D.GraphicsState that represents 
-             the saved state of this System.Drawing.Graphics.
+            Returns: This method returns a System.Drawing.Drawing2D.GraphicsState that represents the saved state of 
+             this System.Drawing.Graphics.
         """
         pass
 
@@ -4591,9 +4251,8 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         
             sx: Scale factor in the x direction.
             sy: Scale factor in the y direction.
-            order: Member of the System.Drawing.Drawing2D.MatrixOrder enumeration that specifies 
-             whether the scaling operation is prepended or appended to the transformation 
-             matrix.
+            order: Member of the System.Drawing.Drawing2D.MatrixOrder enumeration that specifies whether the 
+             scaling operation is prepended or appended to the transformation matrix.
         
         ScaleTransform(self: Graphics, sx: Single, sy: Single)
             Applies the specified scaling operation to the transformation matrix of this 
@@ -4608,30 +4267,30 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
     def SetClip(self, *__args):
         """
         SetClip(self: Graphics, rect: RectangleF, combineMode: CombineMode)
-            Sets the clipping region of this System.Drawing.Graphics to the result of the 
-             specified operation combining the current clip region and the rectangle 
-             specified by a System.Drawing.RectangleF structure.
+            Sets the clipping region of this System.Drawing.Graphics to the result of the specified 
+             operation combining the current clip region and the rectangle specified by a 
+             System.Drawing.RectangleF structure.
         
         
             rect: System.Drawing.RectangleF structure to combine.
-            combineMode: Member of the System.Drawing.Drawing2D.CombineMode enumeration that specifies 
-             the combining operation to use.
+            combineMode: Member of the System.Drawing.Drawing2D.CombineMode enumeration that specifies the combining 
+             operation to use.
         
         SetClip(self: Graphics, rect: RectangleF)
-            Sets the clipping region of this System.Drawing.Graphics to the rectangle 
-             specified by a System.Drawing.RectangleF structure.
+            Sets the clipping region of this System.Drawing.Graphics to the rectangle specified by a 
+             System.Drawing.RectangleF structure.
         
         
             rect: System.Drawing.RectangleF structure that represents the new clip region.
         SetClip(self: Graphics, path: GraphicsPath, combineMode: CombineMode)
-            Sets the clipping region of this System.Drawing.Graphics to the result of the 
-             specified operation combining the current clip region and the specified 
+            Sets the clipping region of this System.Drawing.Graphics to the result of the specified 
+             operation combining the current clip region and the specified 
              System.Drawing.Drawing2D.GraphicsPath.
         
         
             path: System.Drawing.Drawing2D.GraphicsPath to combine.
-            combineMode: Member of the System.Drawing.Drawing2D.CombineMode enumeration that specifies 
-             the combining operation to use.
+            combineMode: Member of the System.Drawing.Drawing2D.CombineMode enumeration that specifies the combining 
+             operation to use.
         
         SetClip(self: Graphics, path: GraphicsPath)
             Sets the clipping region of this System.Drawing.Graphics to the specified 
@@ -4640,44 +4299,43 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         
             path: System.Drawing.Drawing2D.GraphicsPath that represents the new clip region.
         SetClip(self: Graphics, rect: Rectangle, combineMode: CombineMode)
-            Sets the clipping region of this System.Drawing.Graphics to the result of the 
-             specified operation combining the current clip region and the rectangle 
-             specified by a System.Drawing.Rectangle structure.
+            Sets the clipping region of this System.Drawing.Graphics to the result of the specified 
+             operation combining the current clip region and the rectangle specified by a 
+             System.Drawing.Rectangle structure.
         
         
             rect: System.Drawing.Rectangle structure to combine.
-            combineMode: Member of the System.Drawing.Drawing2D.CombineMode enumeration that specifies 
-             the combining operation to use.
+            combineMode: Member of the System.Drawing.Drawing2D.CombineMode enumeration that specifies the combining 
+             operation to use.
         
         SetClip(self: Graphics, region: Region, combineMode: CombineMode)
-            Sets the clipping region of this System.Drawing.Graphics to the result of the 
-             specified operation combining the current clip region and the specified 
-             System.Drawing.Region.
+            Sets the clipping region of this System.Drawing.Graphics to the result of the specified 
+             operation combining the current clip region and the specified System.Drawing.Region.
         
         
             region: System.Drawing.Region to combine.
-            combineMode: Member from the System.Drawing.Drawing2D.CombineMode enumeration that specifies 
-             the combining operation to use.
+            combineMode: Member from the System.Drawing.Drawing2D.CombineMode enumeration that specifies the combining 
+             operation to use.
         
         SetClip(self: Graphics, rect: Rectangle)
-            Sets the clipping region of this System.Drawing.Graphics to the rectangle 
-             specified by a System.Drawing.Rectangle structure.
+            Sets the clipping region of this System.Drawing.Graphics to the rectangle specified by a 
+             System.Drawing.Rectangle structure.
         
         
             rect: System.Drawing.Rectangle structure that represents the new clip region.
         SetClip(self: Graphics, g: Graphics, combineMode: CombineMode)
-            Sets the clipping region of this System.Drawing.Graphics to the result of the 
-             specified combining operation of the current clip region and the 
-             System.Drawing.Graphics.Clip property of the specified System.Drawing.Graphics.
+            Sets the clipping region of this System.Drawing.Graphics to the result of the specified 
+             combining operation of the current clip region and the System.Drawing.Graphics.Clip property of 
+             the specified System.Drawing.Graphics.
         
         
             g: System.Drawing.Graphics that specifies the clip region to combine.
-            combineMode: Member of the System.Drawing.Drawing2D.CombineMode enumeration that specifies 
-             the combining operation to use.
+            combineMode: Member of the System.Drawing.Drawing2D.CombineMode enumeration that specifies the combining 
+             operation to use.
         
         SetClip(self: Graphics, g: Graphics)
-            Sets the clipping region of this System.Drawing.Graphics to the Clip property 
-             of the specified System.Drawing.Graphics.
+            Sets the clipping region of this System.Drawing.Graphics to the Clip property of the specified 
+             System.Drawing.Graphics.
         
         
             g: System.Drawing.Graphics from which to take the new clip region.
@@ -4687,47 +4345,44 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
     def TransformPoints(self, destSpace, srcSpace, pts):
         """
         TransformPoints(self: Graphics, destSpace: CoordinateSpace, srcSpace: CoordinateSpace, pts: Array[Point])
-            Transforms an array of points from one coordinate space to another using the 
-             current world and page transformations of this System.Drawing.Graphics.
+            Transforms an array of points from one coordinate space to another using the current world and 
+             page transformations of this System.Drawing.Graphics.
         
         
-            destSpace: Member of the System.Drawing.Drawing2D.CoordinateSpace enumeration that 
-             specifies the destination coordinate space.
+            destSpace: Member of the System.Drawing.Drawing2D.CoordinateSpace enumeration that specifies the 
+             destination coordinate space.
         
-            srcSpace: Member of the System.Drawing.Drawing2D.CoordinateSpace enumeration that 
-             specifies the source coordinate space.
+            srcSpace: Member of the System.Drawing.Drawing2D.CoordinateSpace enumeration that specifies the source 
+             coordinate space.
         
-            pts: Array of System.Drawing.Point structures that represents the points to 
-             transformation.
-        
+            pts: Array of System.Drawing.Point structures that represents the points to transformation.
         TransformPoints(self: Graphics, destSpace: CoordinateSpace, srcSpace: CoordinateSpace, pts: Array[PointF])
-            Transforms an array of points from one coordinate space to another using the 
-             current world and page transformations of this System.Drawing.Graphics.
+            Transforms an array of points from one coordinate space to another using the current world and 
+             page transformations of this System.Drawing.Graphics.
         
         
-            destSpace: Member of the System.Drawing.Drawing2D.CoordinateSpace enumeration that 
-             specifies the destination coordinate space.
+            destSpace: Member of the System.Drawing.Drawing2D.CoordinateSpace enumeration that specifies the 
+             destination coordinate space.
         
-            srcSpace: Member of the System.Drawing.Drawing2D.CoordinateSpace enumeration that 
-             specifies the source coordinate space.
+            srcSpace: Member of the System.Drawing.Drawing2D.CoordinateSpace enumeration that specifies the source 
+             coordinate space.
         
-            pts: Array of System.Drawing.PointF structures that represent the points to 
-             transform.
+            pts: Array of System.Drawing.PointF structures that represent the points to transform.
         """
         pass
 
     def TranslateClip(self, dx, dy):
         """
         TranslateClip(self: Graphics, dx: Single, dy: Single)
-            Translates the clipping region of this System.Drawing.Graphics by specified 
-             amounts in the horizontal and vertical directions.
+            Translates the clipping region of this System.Drawing.Graphics by specified amounts in the 
+             horizontal and vertical directions.
         
         
             dx: The x-coordinate of the translation.
             dy: The y-coordinate of the translation.
         TranslateClip(self: Graphics, dx: int, dy: int)
-            Translates the clipping region of this System.Drawing.Graphics by specified 
-             amounts in the horizontal and vertical directions.
+            Translates the clipping region of this System.Drawing.Graphics by specified amounts in the 
+             horizontal and vertical directions.
         
         
             dx: The x-coordinate of the translation.
@@ -4738,19 +4393,18 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
     def TranslateTransform(self, dx, dy, order=None):
         """
         TranslateTransform(self: Graphics, dx: Single, dy: Single, order: MatrixOrder)
-            Changes the origin of the coordinate system by applying the specified 
-             translation to the transformation matrix of this System.Drawing.Graphics in the 
-             specified order.
+            Changes the origin of the coordinate system by applying the specified translation to the 
+             transformation matrix of this System.Drawing.Graphics in the specified order.
         
         
             dx: The x-coordinate of the translation.
             dy: The y-coordinate of the translation.
-            order: Member of the System.Drawing.Drawing2D.MatrixOrder enumeration that specifies 
-             whether the translation is prepended or appended to the transformation matrix.
+            order: Member of the System.Drawing.Drawing2D.MatrixOrder enumeration that specifies whether the 
+             translation is prepended or appended to the transformation matrix.
         
         TranslateTransform(self: Graphics, dx: Single, dy: Single)
-            Changes the origin of the coordinate system by prepending the specified 
-             translation to the transformation matrix of this System.Drawing.Graphics.
+            Changes the origin of the coordinate system by prepending the specified translation to the 
+             transformation matrix of this System.Drawing.Graphics.
         
         
             dx: The x-coordinate of the translation.
@@ -4759,11 +4413,18 @@ class Graphics(MarshalByRefObject, IDisposable, IDeviceContext):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -4997,13 +4658,10 @@ class Icon(MarshalByRefObject, ISerializable, ICloneable, IDisposable):
         """
         ExtractAssociatedIcon(filePath: str) -> Icon
         
-            Returns an icon representation of an image that is contained in the specified 
-             file.
-        
+            Returns an icon representation of an image that is contained in the specified file.
         
             filePath: The path to the file that contains an image.
-            Returns: The System.Drawing.Icon representation of the image that is contained in the 
-             specified file.
+            Returns: The System.Drawing.Icon representation of the image that is contained in the specified file.
         """
         pass
 
@@ -5012,9 +4670,7 @@ class Icon(MarshalByRefObject, ISerializable, ICloneable, IDisposable):
         """
         FromHandle(handle: IntPtr) -> Icon
         
-            Creates a GDI+ System.Drawing.Icon from the specified Windows handle to an icon 
-             (HICON).
-        
+            Creates a GDI+ System.Drawing.Icon from the specified Windows handle to an icon (HICON).
         
             handle: A Windows handle to an icon.
             Returns: The System.Drawing.Icon this method creates.
@@ -5027,11 +4683,11 @@ class Icon(MarshalByRefObject, ISerializable, ICloneable, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled across 
-             a remoting boundary. A value of false is usually appropriate. true to copy the 
-             current System.MarshalByRefObject object's identity to its clone, which will 
-             cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
+             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+             identity to its clone, which will cause remoting client calls to be routed to the remote server 
+             object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -5069,11 +4725,18 @@ class Icon(MarshalByRefObject, ISerializable, ICloneable, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -5141,14 +4804,14 @@ class IconConverter(ExpandableObjectConverter):
         """
         CanConvertFrom(self: IconConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Determines whether this System.Drawing.IconConverter can convert an instance of 
-             a specified type to an System.Drawing.Icon, using the specified context.
+            Determines whether this System.Drawing.IconConverter can convert an instance of a specified type 
+             to an System.Drawing.Icon, using the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             sourceType: A System.Type that specifies the type you want to convert from.
-            Returns: This method returns true if this System.Drawing.IconConverter can perform the 
-             conversion; otherwise, false.
+            Returns: This method returns true if this System.Drawing.IconConverter can perform the conversion; 
+             otherwise, false.
         """
         pass
 
@@ -5156,15 +4819,14 @@ class IconConverter(ExpandableObjectConverter):
         """
         CanConvertTo(self: IconConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Determines whether this System.Drawing.IconConverter can convert an 
-             System.Drawing.Icon to an instance of a specified type, using the specified 
-             context.
+            Determines whether this System.Drawing.IconConverter can convert an System.Drawing.Icon to an 
+             instance of a specified type, using the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             destinationType: A System.Type that specifies the type you want to convert to.
-            Returns: This method returns true if this System.Drawing.IconConverter can perform the 
-             conversion; otherwise, false.
+            Returns: This method returns true if this System.Drawing.IconConverter can perform the conversion; 
+             otherwise, false.
         """
         pass
 
@@ -5175,12 +4837,10 @@ class IconConverter(ExpandableObjectConverter):
             Converts a specified object to an System.Drawing.Icon.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            culture: A System.Globalization.CultureInfo that holds information about a specific 
-             culture.
-        
+            culture: A System.Globalization.CultureInfo that holds information about a specific culture.
             value: The System.Object to be converted.
-            Returns: If this method succeeds, it returns the System.Drawing.Icon that it created by 
-             converting the specified object. Otherwise, it throws an exception.
+            Returns: If this method succeeds, it returns the System.Drawing.Icon that it created by converting the 
+             specified object. Otherwise, it throws an exception.
         """
         pass
 
@@ -5188,16 +4848,16 @@ class IconConverter(ExpandableObjectConverter):
         """
         ConvertTo(self: IconConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object, destinationType: Type) -> object
         
-            Converts an System.Drawing.Icon (or an object that can be cast to an 
-             System.Drawing.Icon) to a specified type.
+            Converts an System.Drawing.Icon (or an object that can be cast to an System.Drawing.Icon) to a 
+             specified type.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            culture: A System.Globalization.CultureInfo object that specifies formatting conventions 
-             used by a particular culture.
+            culture: A System.Globalization.CultureInfo object that specifies formatting conventions used by a 
+             particular culture.
         
-            value: The object to convert. This object should be of type icon or some type that can 
-             be cast to System.Drawing.Icon.
+            value: The object to convert. This object should be of type icon or some type that can be cast to 
+             System.Drawing.Icon.
         
             destinationType: The type to convert the icon to.
             Returns: This method returns the converted object.
@@ -5237,8 +4897,7 @@ class ImageAnimator(object):
             Displays a multiple-frame image as an animation.
         
             image: The System.Drawing.Image object to animate.
-            onFrameChangedHandler: An EventHandler object that specifies the method that is called when the 
-             animation frame changes.
+            onFrameChangedHandler: An EventHandler object that specifies the method that is called when the animation frame changes.
         """
         pass
 
@@ -5247,13 +4906,10 @@ class ImageAnimator(object):
         """
         CanAnimate(image: Image) -> bool
         
-            Returns a Boolean value indicating whether the specified image contains 
-             time-based frames.
-        
+            Returns a Boolean value indicating whether the specified image contains time-based frames.
         
             image: The System.Drawing.Image object to test.
-            Returns: This method returns true if the specified image contains time-based frames; 
-             otherwise, false.
+            Returns: This method returns true if the specified image contains time-based frames; otherwise, false.
         """
         pass
 
@@ -5264,8 +4920,7 @@ class ImageAnimator(object):
             Terminates a running animation.
         
             image: The System.Drawing.Image object to stop animating.
-            onFrameChangedHandler: An EventHandler object that specifies the method that is called when the 
-             animation frame changes.
+            onFrameChangedHandler: An EventHandler object that specifies the method that is called when the animation frame changes.
         """
         pass
 
@@ -5273,13 +4928,12 @@ class ImageAnimator(object):
     def UpdateFrames(image=None):
         """
         UpdateFrames()
-            Advances the frame in all images currently being animated. The new frame is 
-             drawn the next time the image is rendered.
+            Advances the frame in all images currently being animated. The new frame is drawn the next time 
+             the image is rendered.
         
         UpdateFrames(image: Image)
-            Advances the frame in the specified image. The new frame is drawn the next time 
-             the image is rendered. This method applies only to images with time-based 
-             frames.
+            Advances the frame in the specified image. The new frame is drawn the next time the image is 
+             rendered. This method applies only to images with time-based frames.
         
         
             image: The System.Drawing.Image object for which to update frames.
@@ -5297,14 +4951,14 @@ class ImageConverter(TypeConverter):
         """
         CanConvertFrom(self: ImageConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Determines whether this System.Drawing.ImageConverter can convert an instance 
-             of a specified type to an System.Drawing.Image, using the specified context.
+            Determines whether this System.Drawing.ImageConverter can convert an instance of a specified 
+             type to an System.Drawing.Image, using the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             sourceType: A System.Type that specifies the type you want to convert from.
-            Returns: This method returns true if this System.Drawing.ImageConverter can perform the 
-             conversion; otherwise, false.
+            Returns: This method returns true if this System.Drawing.ImageConverter can perform the conversion; 
+             otherwise, false.
         """
         pass
 
@@ -5312,15 +4966,14 @@ class ImageConverter(TypeConverter):
         """
         CanConvertTo(self: ImageConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Determines whether this System.Drawing.ImageConverter can convert an 
-             System.Drawing.Image to an instance of a specified type, using the specified 
-             context.
+            Determines whether this System.Drawing.ImageConverter can convert an System.Drawing.Image to an 
+             instance of a specified type, using the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             destinationType: A System.Type that specifies the type you want to convert to.
-            Returns: This method returns true if this System.Drawing.ImageConverter can perform the 
-             conversion; otherwise, false.
+            Returns: This method returns true if this System.Drawing.ImageConverter can perform the conversion; 
+             otherwise, false.
         """
         pass
 
@@ -5331,12 +4984,10 @@ class ImageConverter(TypeConverter):
             Converts a specified object to an System.Drawing.Image.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            culture: A System.Globalization.CultureInfo that holds information about a specific 
-             culture.
-        
+            culture: A System.Globalization.CultureInfo that holds information about a specific culture.
             value: The System.Object to be converted.
-            Returns: If this method succeeds, it returns the System.Drawing.Image that it created by 
-             converting the specified object. Otherwise, it throws an exception.
+            Returns: If this method succeeds, it returns the System.Drawing.Image that it created by converting the 
+             specified object. Otherwise, it throws an exception.
         """
         pass
 
@@ -5344,17 +4995,16 @@ class ImageConverter(TypeConverter):
         """
         ConvertTo(self: ImageConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object, destinationType: Type) -> object
         
-            Converts an System.Drawing.Image (or an object that can be cast to an 
-             System.Drawing.Image) to the specified type.
+            Converts an System.Drawing.Image (or an object that can be cast to an System.Drawing.Image) to 
+             the specified type.
         
         
-            context: A formatter context. This object can be used to get more information about the 
-             environment this converter is being called from. This may be null, so you 
-             should always check. Also, properties on the context object may also return 
-             null.
+            context: A formatter context. This object can be used to get more information about the environment this 
+             converter is being called from. This may be null, so you should always check. Also, properties 
+             on the context object may also return null.
         
-            culture: A System.Globalization.CultureInfo object that specifies formatting conventions 
-             used by a particular culture.
+            culture: A System.Globalization.CultureInfo object that specifies formatting conventions used by a 
+             particular culture.
         
             value: The System.Drawing.Image to convert.
             destinationType: The System.Type to convert the System.Drawing.Image to.
@@ -5371,9 +5021,8 @@ class ImageConverter(TypeConverter):
             context: A type descriptor through which additional context can be provided.
             value: The value of the object to get the properties for.
             attributes: An array of System.Attribute objects that describe the properties.
-            Returns: The set of properties that should be exposed for this data type. If no 
-             properties should be exposed, this can return null. The default implementation 
-             always returns null.
+            Returns: The set of properties that should be exposed for this data type. If no properties should be 
+             exposed, this can return null. The default implementation always returns null.
         """
         pass
 
@@ -5384,9 +5033,8 @@ class ImageConverter(TypeConverter):
             Indicates whether this object supports properties. By default, this is false.
         
             context: A type descriptor through which additional context can be provided.
-            Returns: This method returns true if the 
-             erload:System.Drawing.ImageConverter.GetProperties method should be called to 
-             find the properties of this object.
+            Returns: This method returns true if the erload:System.Drawing.ImageConverter.GetProperties method should 
+             be called to find the properties of this object.
         """
         pass
 
@@ -5401,14 +5049,13 @@ class ImageFormatConverter(TypeConverter):
         """
         CanConvertFrom(self: ImageFormatConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Indicates whether this converter can convert an object in the specified source 
-             type to the native type of the converter.
+            Indicates whether this converter can convert an object in the specified source type to the 
+             native type of the converter.
         
         
-            context: A formatter context. This object can be used to get more information about the 
-             environment this converter is being called from. This may be null, so you 
-             should always check. Also, properties on the context object may also return 
-             null.
+            context: A formatter context. This object can be used to get more information about the environment this 
+             converter is being called from. This may be null, so you should always check. Also, properties 
+             on the context object may also return null.
         
             sourceType: The type you want to convert from.
             Returns: This method returns true if this object can perform the conversion.
@@ -5419,12 +5066,12 @@ class ImageFormatConverter(TypeConverter):
         """
         CanConvertTo(self: ImageFormatConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object to the 
-             specified destination type using the context.
+            Gets a value indicating whether this converter can convert an object to the specified 
+             destination type using the context.
         
         
-            context: An System.ComponentModel.ITypeDescriptorContext that specifies the context for 
-             this type conversion.
+            context: An System.ComponentModel.ITypeDescriptorContext that specifies the context for this type 
+             conversion.
         
             destinationType: The System.Type that represents the type to which you want to convert this 
              System.Drawing.Imaging.ImageFormat object.
@@ -5439,13 +5086,12 @@ class ImageFormatConverter(TypeConverter):
         
             Converts the specified object to an System.Drawing.Imaging.ImageFormat object.
         
-            context: A formatter context. This object can be used to get more information about the 
-             environment this converter is being called from. This may be null, so you 
-             should always check. Also, properties on the context object may also return 
-             null.
+            context: A formatter context. This object can be used to get more information about the environment this 
+             converter is being called from. This may be null, so you should always check. Also, properties 
+             on the context object may also return null.
         
-            culture: A System.Globalization.CultureInfo object that specifies formatting conventions 
-             for a particular culture.
+            culture: A System.Globalization.CultureInfo object that specifies formatting conventions for a particular 
+             culture.
         
             value: The object to convert.
             Returns: The converted object.
@@ -5458,13 +5104,12 @@ class ImageFormatConverter(TypeConverter):
         
             Converts the specified object to the specified type.
         
-            context: A formatter context. This object can be used to get more information about the 
-             environment this converter is being called from. This may be null, so you 
-             should always check. Also, properties on the context object may also return 
-             null.
+            context: A formatter context. This object can be used to get more information about the environment this 
+             converter is being called from. This may be null, so you should always check. Also, properties 
+             on the context object may also return null.
         
-            culture: A System.Globalization.CultureInfo object that specifies formatting conventions 
-             for a particular culture.
+            culture: A System.Globalization.CultureInfo object that specifies formatting conventions for a particular 
+             culture.
         
             value: The object to convert.
             destinationType: The type to convert the object to.
@@ -5476,18 +5121,16 @@ class ImageFormatConverter(TypeConverter):
         """
         GetStandardValues(self: ImageFormatConverter, context: ITypeDescriptorContext) -> StandardValuesCollection
         
-            Gets a collection that contains a set of standard values for the data type this 
-             validator is designed for. Returns null if the data type does not support a 
-             standard set of values.
+            Gets a collection that contains a set of standard values for the data type this validator is 
+             designed for. Returns null if the data type does not support a standard set of values.
         
         
-            context: A formatter context. This object can be used to get more information about the 
-             environment this converter is being called from. This may be null, so you 
-             should always check. Also, properties on the context object may also return 
-             null.
+            context: A formatter context. This object can be used to get more information about the environment this 
+             converter is being called from. This may be null, so you should always check. Also, properties 
+             on the context object may also return null.
         
-            Returns: A collection that contains a standard set of valid values, or null. The default 
-             implementation always returns null.
+            Returns: A collection that contains a standard set of valid values, or null. The default implementation 
+             always returns null.
         """
         pass
 
@@ -5495,14 +5138,11 @@ class ImageFormatConverter(TypeConverter):
         """
         GetStandardValuesSupported(self: ImageFormatConverter, context: ITypeDescriptorContext) -> bool
         
-            Indicates whether this object supports a standard set of values that can be 
-             picked from a list.
-        
+            Indicates whether this object supports a standard set of values that can be picked from a list.
         
             context: A type descriptor through which additional context can be provided.
-            Returns: This method returns true if the 
-             erload:System.Drawing.ImageFormatConverter.GetStandardValues method should be 
-             called to find a common set of values the object supports.
+            Returns: This method returns true if the erload:System.Drawing.ImageFormatConverter.GetStandardValues 
+             method should be called to find a common set of values the object supports.
         """
         pass
 
@@ -5754,11 +5394,11 @@ class Pen(MarshalByRefObject, ISystemColorTracker, ICloneable, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled across 
-             a remoting boundary. A value of false is usually appropriate. true to copy the 
-             current System.MarshalByRefObject object's identity to its clone, which will 
-             cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
+             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+             identity to its clone, which will cause remoting client calls to be routed to the remote server 
+             object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -5771,46 +5411,40 @@ class Pen(MarshalByRefObject, ISystemColorTracker, ICloneable, IDisposable):
     def MultiplyTransform(self, matrix, order=None):
         """
         MultiplyTransform(self: Pen, matrix: Matrix, order: MatrixOrder)
-            Multiplies the transformation matrix for this System.Drawing.Pen by the 
-             specified System.Drawing.Drawing2D.Matrix in the specified order.
+            Multiplies the transformation matrix for this System.Drawing.Pen by the specified 
+             System.Drawing.Drawing2D.Matrix in the specified order.
         
         
-            matrix: The System.Drawing.Drawing2D.Matrix by which to multiply the transformation 
-             matrix.
-        
+            matrix: The System.Drawing.Drawing2D.Matrix by which to multiply the transformation matrix.
             order: The order in which to perform the multiplication operation.
         MultiplyTransform(self: Pen, matrix: Matrix)
-            Multiplies the transformation matrix for this System.Drawing.Pen by the 
-             specified System.Drawing.Drawing2D.Matrix.
+            Multiplies the transformation matrix for this System.Drawing.Pen by the specified 
+             System.Drawing.Drawing2D.Matrix.
         
         
-            matrix: The System.Drawing.Drawing2D.Matrix object by which to multiply the 
-             transformation matrix.
+            matrix: The System.Drawing.Drawing2D.Matrix object by which to multiply the transformation matrix.
         """
         pass
 
     def ResetTransform(self):
         """
         ResetTransform(self: Pen)
-            Resets the geometric transformation matrix for this System.Drawing.Pen to 
-             identity.
+            Resets the geometric transformation matrix for this System.Drawing.Pen to identity.
         """
         pass
 
     def RotateTransform(self, angle, order=None):
         """
         RotateTransform(self: Pen, angle: Single, order: MatrixOrder)
-            Rotates the local geometric transformation by the specified angle in the 
-             specified order.
-        
+            Rotates the local geometric transformation by the specified angle in the specified order.
         
             angle: The angle of rotation.
-            order: A System.Drawing.Drawing2D.MatrixOrder that specifies whether to append or 
-             prepend the rotation matrix.
+            order: A System.Drawing.Drawing2D.MatrixOrder that specifies whether to append or prepend the rotation 
+             matrix.
         
         RotateTransform(self: Pen, angle: Single)
-            Rotates the local geometric transformation by the specified angle. This method 
-             prepends the rotation to the transformation.
+            Rotates the local geometric transformation by the specified angle. This method prepends the 
+             rotation to the transformation.
         
         
             angle: The angle of rotation.
@@ -5820,18 +5454,16 @@ class Pen(MarshalByRefObject, ISystemColorTracker, ICloneable, IDisposable):
     def ScaleTransform(self, sx, sy, order=None):
         """
         ScaleTransform(self: Pen, sx: Single, sy: Single, order: MatrixOrder)
-            Scales the local geometric transformation by the specified factors in the 
-             specified order.
-        
+            Scales the local geometric transformation by the specified factors in the specified order.
         
             sx: The factor by which to scale the transformation in the x-axis direction.
             sy: The factor by which to scale the transformation in the y-axis direction.
-            order: A System.Drawing.Drawing2D.MatrixOrder that specifies whether to append or 
-             prepend the scaling matrix.
+            order: A System.Drawing.Drawing2D.MatrixOrder that specifies whether to append or prepend the scaling 
+             matrix.
         
         ScaleTransform(self: Pen, sx: Single, sy: Single)
-            Scales the local geometric transformation by the specified factors. This method 
-             prepends the scaling matrix to the transformation.
+            Scales the local geometric transformation by the specified factors. This method prepends the 
+             scaling matrix to the transformation.
         
         
             sx: The factor by which to scale the transformation in the x-axis direction.
@@ -5846,30 +5478,28 @@ class Pen(MarshalByRefObject, ISystemColorTracker, ICloneable, IDisposable):
              System.Drawing.Pen.
         
         
-            startCap: A System.Drawing.Drawing2D.LineCap that represents the cap style to use at the 
-             beginning of lines drawn with this System.Drawing.Pen.
+            startCap: A System.Drawing.Drawing2D.LineCap that represents the cap style to use at the beginning of 
+             lines drawn with this System.Drawing.Pen.
         
-            endCap: A System.Drawing.Drawing2D.LineCap that represents the cap style to use at the 
-             end of lines drawn with this System.Drawing.Pen.
+            endCap: A System.Drawing.Drawing2D.LineCap that represents the cap style to use at the end of lines 
+             drawn with this System.Drawing.Pen.
         
-            dashCap: A System.Drawing.Drawing2D.LineCap that represents the cap style to use at the 
-             beginning or end of dashed lines drawn with this System.Drawing.Pen.
+            dashCap: A System.Drawing.Drawing2D.LineCap that represents the cap style to use at the beginning or end 
+             of dashed lines drawn with this System.Drawing.Pen.
         """
         pass
 
     def TranslateTransform(self, dx, dy, order=None):
         """
         TranslateTransform(self: Pen, dx: Single, dy: Single, order: MatrixOrder)
-            Translates the local geometric transformation by the specified dimensions in 
-             the specified order.
-        
+            Translates the local geometric transformation by the specified dimensions in the specified order.
         
             dx: The value of the translation in x.
             dy: The value of the translation in y.
             order: The order (prepend or append) in which to apply the translation.
         TranslateTransform(self: Pen, dx: Single, dy: Single)
-            Translates the local geometric transformation by the specified dimensions. This 
-             method prepends the translation to the transformation.
+            Translates the local geometric transformation by the specified dimensions. This method prepends 
+             the translation to the transformation.
         
         
             dx: The value of the translation in x.
@@ -5878,11 +5508,18 @@ class Pen(MarshalByRefObject, ISystemColorTracker, ICloneable, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -6207,9 +5844,8 @@ class Point(object):
         """
         Ceiling(value: PointF) -> Point
         
-            Converts the specified System.Drawing.PointF to a System.Drawing.Point by 
-             rounding the values of the System.Drawing.PointF to the next higher integer 
-             values.
+            Converts the specified System.Drawing.PointF to a System.Drawing.Point by rounding the values of 
+             the System.Drawing.PointF to the next higher integer values.
         
         
             value: The System.Drawing.PointF to convert.
@@ -6221,13 +5857,12 @@ class Point(object):
         """
         Equals(self: Point, obj: object) -> bool
         
-            Specifies whether this System.Drawing.Point contains the same coordinates as 
-             the specified System.Object.
+            Specifies whether this System.Drawing.Point contains the same coordinates as the specified 
+             System.Object.
         
         
             obj: The System.Object to test.
-            Returns: true if obj is a System.Drawing.Point and has the same coordinates as this 
-             System.Drawing.Point.
+            Returns: true if obj is a System.Drawing.Point and has the same coordinates as this System.Drawing.Point.
         """
         pass
 
@@ -6259,8 +5894,8 @@ class Point(object):
         """
         Round(value: PointF) -> Point
         
-            Converts the specified System.Drawing.PointF to a System.Drawing.Point object 
-             by rounding the System.Drawing.Point values to the nearest integer.
+            Converts the specified System.Drawing.PointF to a System.Drawing.Point object by rounding the 
+             System.Drawing.Point values to the nearest integer.
         
         
             value: The System.Drawing.PointF to convert.
@@ -6273,8 +5908,8 @@ class Point(object):
         """
         Subtract(pt: Point, sz: Size) -> Point
         
-            Returns the result of subtracting specified System.Drawing.Size from the 
-             specified System.Drawing.Point.
+            Returns the result of subtracting specified System.Drawing.Size from the specified 
+             System.Drawing.Point.
         
         
             pt: The System.Drawing.Point to be subtracted from.
@@ -6297,8 +5932,8 @@ class Point(object):
         """
         Truncate(value: PointF) -> Point
         
-            Converts the specified System.Drawing.PointF to a System.Drawing.Point by 
-             truncating the values of the System.Drawing.Point.
+            Converts the specified System.Drawing.PointF to a System.Drawing.Point by truncating the values 
+             of the System.Drawing.Point.
         
         
             value: The System.Drawing.PointF to convert.
@@ -6317,10 +5952,11 @@ class Point(object):
     @staticmethod # known case of __new__
     def __new__(self, *__args):
         """
+        __new__[Point]() -> Point
+        
         __new__(cls: type, x: int, y: int)
         __new__(cls: type, sz: Size)
-        __new__(cls: type, dw: int)
-        __new__[Point]() -> Point
+        __new__(cls: type, dw: int)
         """
         pass
 
@@ -6368,14 +6004,13 @@ class PointConverter(TypeConverter):
         """
         CanConvertFrom(self: PointConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Determines if this converter can convert an object in the given source type to 
-             the native type of the converter.
+            Determines if this converter can convert an object in the given source type to the native type 
+             of the converter.
         
         
-            context: A formatter context. This object can be used to get additional information 
-             about the environment this converter is being called from. This may be null, so 
-             you should always check. Also, properties on the context object may also return 
-             null.
+            context: A formatter context. This object can be used to get additional information about the environment 
+             this converter is being called from. This may be null, so you should always check. Also, 
+             properties on the context object may also return null.
         
             sourceType: The type you want to convert from.
             Returns: true if this object can perform the conversion; otherwise, false.
@@ -6386,13 +6021,11 @@ class PointConverter(TypeConverter):
         """
         CanConvertTo(self: PointConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object to the 
-             given destination type using the context.
+            Gets a value indicating whether this converter can convert an object to the given destination 
+             type using the context.
         
         
-            context: An System.ComponentModel.ITypeDescriptorContext object that provides a format 
-             context.
-        
+            context: An System.ComponentModel.ITypeDescriptorContext object that provides a format context.
             destinationType: A System.Type object that represents the type you want to convert to.
             Returns: true if this converter can perform the conversion; otherwise, false.
         """
@@ -6404,14 +6037,12 @@ class PointConverter(TypeConverter):
         
             Converts the specified object to a System.Drawing.Point object.
         
-            context: A formatter context. This object can be used to get additional information 
-             about the environment this converter is being called from. This may be null, so 
-             you should always check. Also, properties on the context object may also return 
-             null.
+            context: A formatter context. This object can be used to get additional information about the environment 
+             this converter is being called from. This may be null, so you should always check. Also, 
+             properties on the context object may also return null.
         
-            culture: An object that contains culture specific information, such as the language, 
-             calendar, and cultural conventions associated with a specific culture. It is 
-             based on the RFC 1766 standard.
+            culture: An object that contains culture specific information, such as the language, calendar, and 
+             cultural conventions associated with a specific culture. It is based on the RFC 1766 standard.
         
             value: The object to convert.
             Returns: The converted object.
@@ -6424,14 +6055,12 @@ class PointConverter(TypeConverter):
         
             Converts the specified object to the specified type.
         
-            context: A formatter context. This object can be used to get additional information 
-             about the environment this converter is being called from. This may be null, so 
-             you should always check. Also, properties on the context object may also return 
-             null.
+            context: A formatter context. This object can be used to get additional information about the environment 
+             this converter is being called from. This may be null, so you should always check. Also, 
+             properties on the context object may also return null.
         
-            culture: An object that contains culture specific information, such as the language, 
-             calendar, and cultural conventions associated with a specific culture. It is 
-             based on the RFC 1766 standard.
+            culture: An object that contains culture specific information, such as the language, calendar, and 
+             cultural conventions associated with a specific culture. It is based on the RFC 1766 standard.
         
             value: The object to convert.
             destinationType: The type to convert the object to.
@@ -6446,13 +6075,13 @@ class PointConverter(TypeConverter):
             Creates an instance of this type given a set of property values for the object.
         
             context: A type descriptor through which additional context can be provided.
-            propertyValues: A dictionary of new property values. The dictionary contains a series of 
-             name-value pairs, one for each property returned from 
-             System.Drawing.PointConverter.GetProperties(System.ComponentModel.ITypeDescripto
-             rContext,System.Object,System.Attribute[]).
+            propertyValues: A dictionary of new property values. The dictionary contains a series of name-value pairs, one 
+             for each property returned from 
+             System.Drawing.PointConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.O
+             bject,System.Attribute[]).
         
-            Returns: The newly created object, or null if the object could not be created. The 
-             default implementation returns null.
+            Returns: The newly created object, or null if the object could not be created. The default implementation 
+             returns null.
         """
         pass
 
@@ -6461,17 +6090,15 @@ class PointConverter(TypeConverter):
         GetCreateInstanceSupported(self: PointConverter, context: ITypeDescriptorContext) -> bool
         
             Determines if changing a value on this object should require a call to 
-             System.Drawing.PointConverter.CreateInstance(System.ComponentModel.ITypeDescript
-             orContext,System.Collections.IDictionary) to create a new value.
+             System.Drawing.PointConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext,System.
+             Collections.IDictionary) to create a new value.
         
         
-            context: A System.ComponentModel.TypeDescriptor through which additional context can be 
-             provided.
-        
+            context: A System.ComponentModel.TypeDescriptor through which additional context can be provided.
             Returns: true if the 
-             System.Drawing.PointConverter.CreateInstance(System.ComponentModel.ITypeDescript
-             orContext,System.Collections.IDictionary) method should be called when a change 
-             is made to one or more properties of this object; otherwise, false.
+             System.Drawing.PointConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext,System.
+             Collections.IDictionary) method should be called when a change is made to one or more properties 
+             of this object; otherwise, false.
         """
         pass
 
@@ -6479,16 +6106,13 @@ class PointConverter(TypeConverter):
         """
         GetProperties(self: PointConverter, context: ITypeDescriptorContext, value: object, attributes: Array[Attribute]) -> PropertyDescriptorCollection
         
-            Retrieves the set of properties for this type. By default, a type does not 
-             return any properties.
-        
+            Retrieves the set of properties for this type. By default, a type does not return any properties.
         
             context: A type descriptor through which additional context can be provided.
             value: The value of the object to get the properties for.
             attributes: An array of System.Attribute objects that describe the properties.
-            Returns: The set of properties that are exposed for this data type. If no properties are 
-             exposed, this method might return null. The default implementation always 
-             returns null.
+            Returns: The set of properties that are exposed for this data type. If no properties are exposed, this 
+             method might return null. The default implementation always returns null.
         """
         pass
 
@@ -6498,13 +6122,11 @@ class PointConverter(TypeConverter):
         
             Determines if this object supports properties. By default, this is false.
         
-            context: A System.ComponentModel.TypeDescriptor through which additional context can be 
-             provided.
-        
+            context: A System.ComponentModel.TypeDescriptor through which additional context can be provided.
             Returns: true if 
-             System.Drawing.PointConverter.GetProperties(System.ComponentModel.ITypeDescripto
-             rContext,System.Object,System.Attribute[]) should be called to find the 
-             properties of this object; otherwise, false.
+             System.Drawing.PointConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.O
+             bject,System.Attribute[]) should be called to find the properties of this object; otherwise, 
+             false.
         """
         pass
 
@@ -6523,18 +6145,14 @@ class PointF(object):
             Translates a given System.Drawing.PointF by a specified System.Drawing.SizeF.
         
             pt: The System.Drawing.PointF to translate.
-            sz: The System.Drawing.SizeF that specifies the numbers to add to the coordinates 
-             of pt.
-        
+            sz: The System.Drawing.SizeF that specifies the numbers to add to the coordinates of pt.
             Returns: The translated System.Drawing.PointF.
         Add(pt: PointF, sz: Size) -> PointF
         
             Translates a given System.Drawing.PointF by the specified System.Drawing.Size.
         
             pt: The System.Drawing.PointF to translate.
-            sz: The System.Drawing.Size that specifies the numbers to add to the coordinates of 
-             pt.
-        
+            sz: The System.Drawing.Size that specifies the numbers to add to the coordinates of pt.
             Returns: The translated System.Drawing.PointF.
         """
         pass
@@ -6543,13 +6161,13 @@ class PointF(object):
         """
         Equals(self: PointF, obj: object) -> bool
         
-            Specifies whether this System.Drawing.PointF contains the same coordinates as 
-             the specified System.Object.
+            Specifies whether this System.Drawing.PointF contains the same coordinates as the specified 
+             System.Object.
         
         
             obj: The System.Object to test.
-            Returns: This method returns true if obj is a System.Drawing.PointF and has the same 
-             coordinates as this System.Drawing.Point.
+            Returns: This method returns true if obj is a System.Drawing.PointF and has the same coordinates as this 
+             System.Drawing.Point.
         """
         pass
 
@@ -6558,8 +6176,7 @@ class PointF(object):
         GetHashCode(self: PointF) -> int
         
             Returns a hash code for this System.Drawing.PointF structure.
-            Returns: An integer value that specifies a hash value for this System.Drawing.PointF 
-             structure.
+            Returns: An integer value that specifies a hash value for this System.Drawing.PointF structure.
         """
         pass
 
@@ -6571,18 +6188,14 @@ class PointF(object):
             Translates a System.Drawing.PointF by the negative of a specified size.
         
             pt: The System.Drawing.PointF to translate.
-            sz: The System.Drawing.SizeF that specifies the numbers to subtract from the 
-             coordinates of pt.
-        
+            sz: The System.Drawing.SizeF that specifies the numbers to subtract from the coordinates of pt.
             Returns: The translated System.Drawing.PointF.
         Subtract(pt: PointF, sz: Size) -> PointF
         
             Translates a System.Drawing.PointF by the negative of a specified size.
         
             pt: The System.Drawing.PointF to translate.
-            sz: The System.Drawing.Size that specifies the numbers to subtract from the 
-             coordinates of pt.
-        
+            sz: The System.Drawing.Size that specifies the numbers to subtract from the coordinates of pt.
             Returns: The translated System.Drawing.PointF.
         """
         pass
@@ -6607,8 +6220,9 @@ class PointF(object):
     @staticmethod # known case of __new__
     def __new__(self, x, y):
         """
-        __new__(cls: type, x: Single, y: Single)
-        __new__[PointF]() -> PointF
+        __new__[PointF]() -> PointF
+        
+        __new__(cls: type, x: Single, y: Single)
         """
         pass
 
@@ -6658,9 +6272,8 @@ class Rectangle(object):
         """
         Ceiling(value: RectangleF) -> Rectangle
         
-            Converts the specified System.Drawing.RectangleF structure to a 
-             System.Drawing.Rectangle structure by rounding the System.Drawing.RectangleF 
-             values to the next higher integer values.
+            Converts the specified System.Drawing.RectangleF structure to a System.Drawing.Rectangle 
+             structure by rounding the System.Drawing.RectangleF values to the next higher integer values.
         
         
             value: The System.Drawing.RectangleF structure to be converted.
@@ -6672,35 +6285,30 @@ class Rectangle(object):
         """
         Contains(self: Rectangle, rect: Rectangle) -> bool
         
-            Determines if the rectangular region represented by rect is entirely contained 
-             within this System.Drawing.Rectangle structure.
+            Determines if the rectangular region represented by rect is entirely contained within this 
+             System.Drawing.Rectangle structure.
         
         
             rect: The System.Drawing.Rectangle to test.
-            Returns: This method returns true if the rectangular region represented by rect is 
-             entirely contained within this System.Drawing.Rectangle structure; otherwise 
-             false.
+            Returns: This method returns true if the rectangular region represented by rect is entirely contained 
+             within this System.Drawing.Rectangle structure; otherwise false.
         
         Contains(self: Rectangle, pt: Point) -> bool
         
-            Determines if the specified point is contained within this 
-             System.Drawing.Rectangle structure.
-        
+            Determines if the specified point is contained within this System.Drawing.Rectangle structure.
         
             pt: The System.Drawing.Point to test.
-            Returns: This method returns true if the point represented by pt is contained within 
-             this System.Drawing.Rectangle structure; otherwise false.
+            Returns: This method returns true if the point represented by pt is contained within this 
+             System.Drawing.Rectangle structure; otherwise false.
         
         Contains(self: Rectangle, x: int, y: int) -> bool
         
-            Determines if the specified point is contained within this 
-             System.Drawing.Rectangle structure.
-        
+            Determines if the specified point is contained within this System.Drawing.Rectangle structure.
         
             x: The x-coordinate of the point to test.
             y: The y-coordinate of the point to test.
-            Returns: This method returns true if the point defined by x and y is contained within 
-             this System.Drawing.Rectangle structure; otherwise false.
+            Returns: This method returns true if the point defined by x and y is contained within this 
+             System.Drawing.Rectangle structure; otherwise false.
         """
         pass
 
@@ -6708,16 +6316,15 @@ class Rectangle(object):
         """
         Equals(self: Rectangle, obj: object) -> bool
         
-            Tests whether obj is a System.Drawing.Rectangle structure with the same 
-             location and size of this System.Drawing.Rectangle structure.
+            Tests whether obj is a System.Drawing.Rectangle structure with the same location and size of 
+             this System.Drawing.Rectangle structure.
         
         
             obj: The System.Object to test.
             Returns: This method returns true if obj is a System.Drawing.Rectangle structure and its 
-             System.Drawing.Rectangle.X, System.Drawing.Rectangle.Y, 
-             System.Drawing.Rectangle.Width, and System.Drawing.Rectangle.Height properties 
-             are equal to the corresponding properties of this System.Drawing.Rectangle 
-             structure; otherwise, false.
+             System.Drawing.Rectangle.X, System.Drawing.Rectangle.Y, System.Drawing.Rectangle.Width, and 
+             System.Drawing.Rectangle.Height properties are equal to the corresponding properties of this 
+             System.Drawing.Rectangle structure; otherwise, false.
         """
         pass
 
@@ -6728,18 +6335,10 @@ class Rectangle(object):
         
             Creates a System.Drawing.Rectangle structure with the specified edge locations.
         
-            left: The x-coordinate of the upper-left corner of this System.Drawing.Rectangle 
-             structure.
-        
-            top: The y-coordinate of the upper-left corner of this System.Drawing.Rectangle 
-             structure.
-        
-            right: The x-coordinate of the lower-right corner of this System.Drawing.Rectangle 
-             structure.
-        
-            bottom: The y-coordinate of the lower-right corner of this System.Drawing.Rectangle 
-             structure.
-        
+            left: The x-coordinate of the upper-left corner of this System.Drawing.Rectangle structure.
+            top: The y-coordinate of the upper-left corner of this System.Drawing.Rectangle structure.
+            right: The x-coordinate of the lower-right corner of this System.Drawing.Rectangle structure.
+            bottom: The y-coordinate of the lower-right corner of this System.Drawing.Rectangle structure.
             Returns: The new System.Drawing.Rectangle that this method creates.
         """
         pass
@@ -6748,8 +6347,8 @@ class Rectangle(object):
         """
         GetHashCode(self: Rectangle) -> int
         
-            Returns the hash code for this System.Drawing.Rectangle structure. For 
-             information about the use of hash codes, see System.Object.GetHashCode .
+            Returns the hash code for this System.Drawing.Rectangle structure. For information about the use 
+             of hash codes, see System.Object.GetHashCode .
         
             Returns: An integer that represents the hash code for this rectangle.
         """
@@ -6759,14 +6358,12 @@ class Rectangle(object):
         """
         Inflate(rect: Rectangle, x: int, y: int) -> Rectangle
         
-            Creates and returns an enlarged copy of the specified System.Drawing.Rectangle 
-             structure. The copy is enlarged by the specified amount. The original 
-             System.Drawing.Rectangle structure remains unmodified.
+            Creates and returns an enlarged copy of the specified System.Drawing.Rectangle structure. The 
+             copy is enlarged by the specified amount. The original System.Drawing.Rectangle structure 
+             remains unmodified.
         
         
-            rect: The System.Drawing.Rectangle with which to start. This rectangle is not 
-             modified.
-        
+            rect: The System.Drawing.Rectangle with which to start. This rectangle is not modified.
             x: The amount to inflate this System.Drawing.Rectangle horizontally.
             y: The amount to inflate this System.Drawing.Rectangle vertically.
             Returns: The enlarged System.Drawing.Rectangle.
@@ -6786,17 +6383,17 @@ class Rectangle(object):
         """
         Intersect(a: Rectangle, b: Rectangle) -> Rectangle
         
-            Returns a third System.Drawing.Rectangle structure that represents the 
-             intersection of two other System.Drawing.Rectangle structures. If there is no 
-             intersection, an empty System.Drawing.Rectangle is returned.
+            Returns a third System.Drawing.Rectangle structure that represents the intersection of two other 
+             System.Drawing.Rectangle structures. If there is no intersection, an empty 
+             System.Drawing.Rectangle is returned.
         
         
             a: A rectangle to intersect.
             b: A rectangle to intersect.
             Returns: A System.Drawing.Rectangle that represents the intersection of a and b.
         Intersect(self: Rectangle, rect: Rectangle)
-            Replaces this System.Drawing.Rectangle with the intersection of itself and the 
-             specified System.Drawing.Rectangle.
+            Replaces this System.Drawing.Rectangle with the intersection of itself and the specified 
+             System.Drawing.Rectangle.
         
         
             rect: The System.Drawing.Rectangle with which to intersect.
@@ -6833,8 +6430,8 @@ class Rectangle(object):
         """
         Round(value: RectangleF) -> Rectangle
         
-            Converts the specified System.Drawing.RectangleF to a System.Drawing.Rectangle 
-             by rounding the System.Drawing.RectangleF values to the nearest integer values.
+            Converts the specified System.Drawing.RectangleF to a System.Drawing.Rectangle by rounding the 
+             System.Drawing.RectangleF values to the nearest integer values.
         
         
             value: The System.Drawing.RectangleF to be converted.
@@ -6846,12 +6443,9 @@ class Rectangle(object):
         """
         ToString(self: Rectangle) -> str
         
-            Converts the attributes of this System.Drawing.Rectangle to a human-readable 
-             string.
-        
-            Returns: A string that contains the position, width, and height of this 
-             System.Drawing.Rectangle structure � for example, {X=20, Y=20, Width=100, 
-             Height=50}
+            Converts the attributes of this System.Drawing.Rectangle to a human-readable string.
+            Returns: A string that contains the position, width, and height of this System.Drawing.Rectangle 
+             structure � for example, {X=20, Y=20, Width=100, Height=50}
         """
         pass
 
@@ -6860,8 +6454,8 @@ class Rectangle(object):
         """
         Truncate(value: RectangleF) -> Rectangle
         
-            Converts the specified System.Drawing.RectangleF to a System.Drawing.Rectangle 
-             by truncating the System.Drawing.RectangleF values.
+            Converts the specified System.Drawing.RectangleF to a System.Drawing.Rectangle by truncating the 
+             System.Drawing.RectangleF values.
         
         
             value: The System.Drawing.RectangleF to be converted.
@@ -6880,8 +6474,8 @@ class Rectangle(object):
         
             a: A rectangle to union.
             b: A rectangle to union.
-            Returns: A System.Drawing.Rectangle structure that bounds the union of the two 
-             System.Drawing.Rectangle structures.
+            Returns: A System.Drawing.Rectangle structure that bounds the union of the two System.Drawing.Rectangle 
+             structures.
         """
         pass
 
@@ -6892,9 +6486,10 @@ class Rectangle(object):
     @staticmethod # known case of __new__
     def __new__(self, *__args):
         """
+        __new__[Rectangle]() -> Rectangle
+        
         __new__(cls: type, x: int, y: int, width: int, height: int)
-        __new__(cls: type, location: Point, size: Size)
-        __new__[Rectangle]() -> Rectangle
+        __new__(cls: type, location: Point, size: Size)
         """
         pass
 
@@ -6998,18 +6593,16 @@ class RectangleConverter(TypeConverter):
         """
         CanConvertFrom(self: RectangleConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Determines if this converter can convert an object in the given source type to 
-             the native type of the converter.
+            Determines if this converter can convert an object in the given source type to the native type 
+             of the converter.
         
         
-            context: A formatter context. This object can be used to get additional information 
-             about the environment this converter is being called from. This may be null, so 
-             you should always check. Also, properties on the context object may also return 
-             null.
+            context: A formatter context. This object can be used to get additional information about the environment 
+             this converter is being called from. This may be null, so you should always check. Also, 
+             properties on the context object may also return null.
         
             sourceType: The type you want to convert from.
-            Returns: This method returns true if this object can perform the conversion; otherwise, 
-             false.
+            Returns: This method returns true if this object can perform the conversion; otherwise, false.
         """
         pass
 
@@ -7017,17 +6610,16 @@ class RectangleConverter(TypeConverter):
         """
         CanConvertTo(self: RectangleConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object to the 
-             given destination type using the context.
+            Gets a value indicating whether this converter can convert an object to the given destination 
+             type using the context.
         
         
-            context: An System.ComponentModel.ITypeDescriptorContext object that provides a format 
-             context. This can be null, so you should always check. Also, properties on the 
-             context object can also return null.
+            context: An System.ComponentModel.ITypeDescriptorContext object that provides a format context. This can 
+             be null, so you should always check. Also, properties on the context object can also return 
+             null.
         
             destinationType: A System.Type object that represents the type you want to convert to.
-            Returns: This method returns true if this converter can perform the conversion; 
-             otherwise, false.
+            Returns: This method returns true if this converter can perform the conversion; otherwise, false.
         """
         pass
 
@@ -7037,14 +6629,13 @@ class RectangleConverter(TypeConverter):
         
             Converts the given object to a System.Drawing.Rectangle object.
         
-            context: A System.ComponentModel.ITypeDescriptorContext that can be used to get 
-             additional information about the environment this converter is being called 
-             from. This may be null, so you should always check. Also, properties on the 
-             context object may also return null.
+            context: A System.ComponentModel.ITypeDescriptorContext that can be used to get additional information 
+             about the environment this converter is being called from. This may be null, so you should 
+             always check. Also, properties on the context object may also return null.
         
-            culture: An System.Globalization.CultureInfo that contains culture specific information, 
-             such as the language, calendar, and cultural conventions associated with a 
-             specific culture. It is based on the RFC 1766 standard.
+            culture: An System.Globalization.CultureInfo that contains culture specific information, such as the 
+             language, calendar, and cultural conventions associated with a specific culture. It is based on 
+             the RFC 1766 standard.
         
             value: The object to convert.
             Returns: The converted object.
@@ -7057,14 +6648,13 @@ class RectangleConverter(TypeConverter):
         
             Converts the specified object to the specified type.
         
-            context: A System.ComponentModel.ITypeDescriptorContext that can be used to get 
-             additional information about the environment this converter is being called 
-             from. This may be null, so you should always check. Also, properties on the 
-             context object may also return null.
+            context: A System.ComponentModel.ITypeDescriptorContext that can be used to get additional information 
+             about the environment this converter is being called from. This may be null, so you should 
+             always check. Also, properties on the context object may also return null.
         
-            culture: An System.Globalization.CultureInfo that contains culture specific information, 
-             such as the language, calendar, and cultural conventions associated with a 
-             specific culture. It is based on the RFC 1766 standard.
+            culture: An System.Globalization.CultureInfo that contains culture specific information, such as the 
+             language, calendar, and cultural conventions associated with a specific culture. It is based on 
+             the RFC 1766 standard.
         
             value: The object to convert.
             destinationType: The type to convert the object to.
@@ -7076,21 +6666,18 @@ class RectangleConverter(TypeConverter):
         """
         CreateInstance(self: RectangleConverter, context: ITypeDescriptorContext, propertyValues: IDictionary) -> object
         
-            Creates an instance of this type given a set of property values for the object. 
-             This is useful for objects that are immutable but still want to provide 
-             changeable properties.
+            Creates an instance of this type given a set of property values for the object. This is useful 
+             for objects that are immutable but still want to provide changeable properties.
         
         
-            context: A System.ComponentModel.ITypeDescriptorContext through which additional context 
-             can be provided.
+            context: A System.ComponentModel.ITypeDescriptorContext through which additional context can be provided.
+            propertyValues: A dictionary of new property values. The dictionary contains a series of name-value pairs, one 
+             for each property returned from a call to the 
+             System.Drawing.RectangleConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,Syst
+             em.Object,System.Attribute[]) method.
         
-            propertyValues: A dictionary of new property values. The dictionary contains a series of 
-             name-value pairs, one for each property returned from a call to the 
-             System.Drawing.RectangleConverter.GetProperties(System.ComponentModel.ITypeDescr
-             iptorContext,System.Object,System.Attribute[]) method.
-        
-            Returns: The newly created object, or null if the object could not be created. The 
-             default implementation returns null.
+            Returns: The newly created object, or null if the object could not be created. The default implementation 
+             returns null.
         """
         pass
 
@@ -7099,15 +6686,15 @@ class RectangleConverter(TypeConverter):
         GetCreateInstanceSupported(self: RectangleConverter, context: ITypeDescriptorContext) -> bool
         
             Determines if changing a value on this object should require a call to 
-             System.Drawing.RectangleConverter.CreateInstance(System.ComponentModel.ITypeDesc
-             riptorContext,System.Collections.IDictionary) to create a new value.
+             System.Drawing.RectangleConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext,Sys
+             tem.Collections.IDictionary) to create a new value.
         
         
             context: A type descriptor through which additional context can be provided.
             Returns: This method returns true if 
-             System.Drawing.RectangleConverter.CreateInstance(System.ComponentModel.ITypeDesc
-             riptorContext,System.Collections.IDictionary) should be called when a change is 
-             made to one or more properties of this object; otherwise, false.
+             System.Drawing.RectangleConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext,Sys
+             tem.Collections.IDictionary) should be called when a change is made to one or more properties of 
+             this object; otherwise, false.
         """
         pass
 
@@ -7115,18 +6702,13 @@ class RectangleConverter(TypeConverter):
         """
         GetProperties(self: RectangleConverter, context: ITypeDescriptorContext, value: object, attributes: Array[Attribute]) -> PropertyDescriptorCollection
         
-            Retrieves the set of properties for this type. By default, a type does not 
-             return any properties.
+            Retrieves the set of properties for this type. By default, a type does not return any properties.
         
-        
-            context: A System.ComponentModel.ITypeDescriptorContext through which additional context 
-             can be provided.
-        
+            context: A System.ComponentModel.ITypeDescriptorContext through which additional context can be provided.
             value: The value of the object to get the properties for.
             attributes: An array of System.Attribute objects that describe the properties.
-            Returns: The set of properties that should be exposed for this data type. If no 
-             properties should be exposed, this may return null. The default implementation 
-             always returns null.
+            Returns: The set of properties that should be exposed for this data type. If no properties should be 
+             exposed, this may return null. The default implementation always returns null.
         """
         pass
 
@@ -7136,13 +6718,11 @@ class RectangleConverter(TypeConverter):
         
             Determines if this object supports properties. By default, this is false.
         
-            context: A System.ComponentModel.ITypeDescriptorContext through which additional context 
-             can be provided.
-        
+            context: A System.ComponentModel.ITypeDescriptorContext through which additional context can be provided.
             Returns: This method returns true if 
-             System.Drawing.RectangleConverter.GetProperties(System.ComponentModel.ITypeDescr
-             iptorContext,System.Object,System.Attribute[]) should be called to find the 
-             properties of this object; otherwise, false.
+             System.Drawing.RectangleConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,Syst
+             em.Object,System.Attribute[]) should be called to find the properties of this object; otherwise, 
+             false.
         """
         pass
 
@@ -7158,35 +6738,30 @@ class RectangleF(object):
         """
         Contains(self: RectangleF, rect: RectangleF) -> bool
         
-            Determines if the rectangular region represented by rect is entirely contained 
-             within this System.Drawing.RectangleF structure.
+            Determines if the rectangular region represented by rect is entirely contained within this 
+             System.Drawing.RectangleF structure.
         
         
             rect: The System.Drawing.RectangleF to test.
-            Returns: This method returns true if the rectangular region represented by rect is 
-             entirely contained within the rectangular region represented by this 
-             System.Drawing.RectangleF; otherwise false.
+            Returns: This method returns true if the rectangular region represented by rect is entirely contained 
+             within the rectangular region represented by this System.Drawing.RectangleF; otherwise false.
         
         Contains(self: RectangleF, pt: PointF) -> bool
         
-            Determines if the specified point is contained within this 
-             System.Drawing.RectangleF structure.
-        
+            Determines if the specified point is contained within this System.Drawing.RectangleF structure.
         
             pt: The System.Drawing.PointF to test.
-            Returns: This method returns true if the point represented by the pt parameter is 
-             contained within this System.Drawing.RectangleF structure; otherwise false.
+            Returns: This method returns true if the point represented by the pt parameter is contained within this 
+             System.Drawing.RectangleF structure; otherwise false.
         
         Contains(self: RectangleF, x: Single, y: Single) -> bool
         
-            Determines if the specified point is contained within this 
-             System.Drawing.RectangleF structure.
-        
+            Determines if the specified point is contained within this System.Drawing.RectangleF structure.
         
             x: The x-coordinate of the point to test.
             y: The y-coordinate of the point to test.
-            Returns: This method returns true if the point defined by x and y is contained within 
-             this System.Drawing.RectangleF structure; otherwise false.
+            Returns: This method returns true if the point defined by x and y is contained within this 
+             System.Drawing.RectangleF structure; otherwise false.
         """
         pass
 
@@ -7194,14 +6769,14 @@ class RectangleF(object):
         """
         Equals(self: RectangleF, obj: object) -> bool
         
-            Tests whether obj is a System.Drawing.RectangleF with the same location and 
-             size of this System.Drawing.RectangleF.
+            Tests whether obj is a System.Drawing.RectangleF with the same location and size of this 
+             System.Drawing.RectangleF.
         
         
             obj: The System.Object to test.
-            Returns: This method returns true if obj is a System.Drawing.RectangleF and its X, Y, 
-             Width, and Height properties are equal to the corresponding properties of this 
-             System.Drawing.RectangleF; otherwise, false.
+            Returns: This method returns true if obj is a System.Drawing.RectangleF and its X, Y, Width, and Height 
+             properties are equal to the corresponding properties of this System.Drawing.RectangleF; 
+             otherwise, false.
         """
         pass
 
@@ -7210,8 +6785,8 @@ class RectangleF(object):
         """
         FromLTRB(left: Single, top: Single, right: Single, bottom: Single) -> RectangleF
         
-            Creates a System.Drawing.RectangleF structure with upper-left corner and 
-             lower-right corner at the specified locations.
+            Creates a System.Drawing.RectangleF structure with upper-left corner and lower-right corner at 
+             the specified locations.
         
         
             left: The x-coordinate of the upper-left corner of the rectangular region.
@@ -7226,8 +6801,8 @@ class RectangleF(object):
         """
         GetHashCode(self: RectangleF) -> int
         
-            Gets the hash code for this System.Drawing.RectangleF structure. For 
-             information about the use of hash codes, see Object.GetHashCode.
+            Gets the hash code for this System.Drawing.RectangleF structure. For information about the use 
+             of hash codes, see Object.GetHashCode.
         
             Returns: The hash code for this System.Drawing.RectangleF.
         """
@@ -7237,9 +6812,8 @@ class RectangleF(object):
         """
         Inflate(rect: RectangleF, x: Single, y: Single) -> RectangleF
         
-            Creates and returns an enlarged copy of the specified System.Drawing.RectangleF 
-             structure. The copy is enlarged by the specified amount and the original 
-             rectangle remains unmodified.
+            Creates and returns an enlarged copy of the specified System.Drawing.RectangleF structure. The 
+             copy is enlarged by the specified amount and the original rectangle remains unmodified.
         
         
             rect: The System.Drawing.RectangleF to be copied. This rectangle is not modified.
@@ -7262,19 +6836,18 @@ class RectangleF(object):
         """
         Intersect(a: RectangleF, b: RectangleF) -> RectangleF
         
-            Returns a System.Drawing.RectangleF structure that represents the intersection 
-             of two rectangles. If there is no intersection, and empty 
-             System.Drawing.RectangleF is returned.
+            Returns a System.Drawing.RectangleF structure that represents the intersection of two 
+             rectangles. If there is no intersection, and empty System.Drawing.RectangleF is returned.
         
         
             a: A rectangle to intersect.
             b: A rectangle to intersect.
-            Returns: A third System.Drawing.RectangleF structure the size of which represents the 
-             overlapped area of the two specified rectangles.
+            Returns: A third System.Drawing.RectangleF structure the size of which represents the overlapped area of 
+             the two specified rectangles.
         
         Intersect(self: RectangleF, rect: RectangleF)
-            Replaces this System.Drawing.RectangleF structure with the intersection of 
-             itself and the specified System.Drawing.RectangleF structure.
+            Replaces this System.Drawing.RectangleF structure with the intersection of itself and the 
+             specified System.Drawing.RectangleF structure.
         
         
             rect: The rectangle to intersect.
@@ -7310,12 +6883,11 @@ class RectangleF(object):
         """
         ToString(self: RectangleF) -> str
         
-            Converts the Location and System.Drawing.Size of this System.Drawing.RectangleF 
-             to a human-readable string.
+            Converts the Location and System.Drawing.Size of this System.Drawing.RectangleF to a 
+             human-readable string.
         
-            Returns: A string that contains the position, width, and height of this 
-             System.Drawing.RectangleF structure. For example, "{X=20, Y=20, Width=100, 
-             Height=50}".
+            Returns: A string that contains the position, width, and height of this System.Drawing.RectangleF 
+             structure. For example, "{X=20, Y=20, Width=100, Height=50}".
         """
         pass
 
@@ -7324,14 +6896,14 @@ class RectangleF(object):
         """
         Union(a: RectangleF, b: RectangleF) -> RectangleF
         
-            Creates the smallest possible third rectangle that can contain both of two 
-             rectangles that form a union.
+            Creates the smallest possible third rectangle that can contain both of two rectangles that form 
+             a union.
         
         
             a: A rectangle to union.
             b: A rectangle to union.
-            Returns: A third System.Drawing.RectangleF structure that contains both of the two 
-             rectangles that form the union.
+            Returns: A third System.Drawing.RectangleF structure that contains both of the two rectangles that form 
+             the union.
         """
         pass
 
@@ -7342,9 +6914,10 @@ class RectangleF(object):
     @staticmethod # known case of __new__
     def __new__(self, *__args):
         """
+        __new__[RectangleF]() -> RectangleF
+        
         __new__(cls: type, x: Single, y: Single, width: Single, height: Single)
-        __new__(cls: type, location: PointF, size: SizeF)
-        __new__[RectangleF]() -> RectangleF
+        __new__(cls: type, location: PointF, size: SizeF)
         """
         pass
 
@@ -7461,34 +7034,25 @@ class Region(MarshalByRefObject, IDisposable):
         """
         Complement(self: Region, path: GraphicsPath)
             Updates this System.Drawing.Region to contain the portion of the specified 
-             System.Drawing.Drawing2D.GraphicsPath that does not intersect with this 
-             System.Drawing.Region.
+             System.Drawing.Drawing2D.GraphicsPath that does not intersect with this System.Drawing.Region.
         
         
-            path: The System.Drawing.Drawing2D.GraphicsPath to complement this 
-             System.Drawing.Region.
-        
+            path: The System.Drawing.Drawing2D.GraphicsPath to complement this System.Drawing.Region.
         Complement(self: Region, region: Region)
-            Updates this System.Drawing.Region to contain the portion of the specified 
-             System.Drawing.Region that does not intersect with this System.Drawing.Region.
+            Updates this System.Drawing.Region to contain the portion of the specified System.Drawing.Region 
+             that does not intersect with this System.Drawing.Region.
         
         
-            region: The System.Drawing.Region object to complement this System.Drawing.Region 
-             object.
-        
+            region: The System.Drawing.Region object to complement this System.Drawing.Region object.
         Complement(self: Region, rect: RectangleF)
             Updates this System.Drawing.Region to contain the portion of the specified 
-             System.Drawing.RectangleF structure that does not intersect with this 
-             System.Drawing.Region.
+             System.Drawing.RectangleF structure that does not intersect with this System.Drawing.Region.
         
         
-            rect: The System.Drawing.RectangleF structure to complement this 
-             System.Drawing.Region.
-        
+            rect: The System.Drawing.RectangleF structure to complement this System.Drawing.Region.
         Complement(self: Region, rect: Rectangle)
             Updates this System.Drawing.Region to contain the portion of the specified 
-             System.Drawing.Rectangle structure that does not intersect with this 
-             System.Drawing.Region.
+             System.Drawing.Rectangle structure that does not intersect with this System.Drawing.Region.
         
         
             rect: The System.Drawing.Rectangle structure to complement this System.Drawing.Region.
@@ -7506,50 +7070,43 @@ class Region(MarshalByRefObject, IDisposable):
         """
         Equals(self: Region, region: Region, g: Graphics) -> bool
         
-            Tests whether the specified System.Drawing.Region is identical to this 
-             System.Drawing.Region on the specified drawing surface.
+            Tests whether the specified System.Drawing.Region is identical to this System.Drawing.Region on 
+             the specified drawing surface.
         
         
             region: The System.Drawing.Region to test.
             g: A System.Drawing.Graphics that represents a drawing surface.
-            Returns: true if the interior of region is identical to the interior of this region when 
-             the transformation associated with the g parameter is applied; otherwise, 
-             false.
+            Returns: true if the interior of region is identical to the interior of this region when the 
+             transformation associated with the g parameter is applied; otherwise, false.
         """
         pass
 
     def Exclude(self, *__args):
         """
         Exclude(self: Region, path: GraphicsPath)
-            Updates this System.Drawing.Region to contain only the portion of its interior 
-             that does not intersect with the specified 
-             System.Drawing.Drawing2D.GraphicsPath.
+            Updates this System.Drawing.Region to contain only the portion of its interior that does not 
+             intersect with the specified System.Drawing.Drawing2D.GraphicsPath.
         
         
-            path: The System.Drawing.Drawing2D.GraphicsPath to exclude from this 
-             System.Drawing.Region.
-        
+            path: The System.Drawing.Drawing2D.GraphicsPath to exclude from this System.Drawing.Region.
         Exclude(self: Region, region: Region)
-            Updates this System.Drawing.Region to contain only the portion of its interior 
-             that does not intersect with the specified System.Drawing.Region.
+            Updates this System.Drawing.Region to contain only the portion of its interior that does not 
+             intersect with the specified System.Drawing.Region.
         
         
             region: The System.Drawing.Region to exclude from this System.Drawing.Region.
         Exclude(self: Region, rect: Rectangle)
-            Updates this System.Drawing.Region to contain only the portion of its interior 
-             that does not intersect with the specified System.Drawing.Rectangle structure.
+            Updates this System.Drawing.Region to contain only the portion of its interior that does not 
+             intersect with the specified System.Drawing.Rectangle structure.
         
         
-            rect: The System.Drawing.Rectangle structure to exclude from this 
-             System.Drawing.Region.
-        
+            rect: The System.Drawing.Rectangle structure to exclude from this System.Drawing.Region.
         Exclude(self: Region, rect: RectangleF)
-            Updates this System.Drawing.Region to contain only the portion of its interior 
-             that does not intersect with the specified System.Drawing.RectangleF structure.
+            Updates this System.Drawing.Region to contain only the portion of its interior that does not 
+             intersect with the specified System.Drawing.RectangleF structure.
         
         
-            rect: The System.Drawing.RectangleF structure to exclude from this 
-             System.Drawing.Region.
+            rect: The System.Drawing.RectangleF structure to exclude from this System.Drawing.Region.
         """
         pass
 
@@ -7558,9 +7115,7 @@ class Region(MarshalByRefObject, IDisposable):
         """
         FromHrgn(hrgn: IntPtr) -> Region
         
-            Initializes a new System.Drawing.Region from a handle to the specified existing 
-             GDI region.
-        
+            Initializes a new System.Drawing.Region from a handle to the specified existing GDI region.
         
             hrgn: A handle to an existing System.Drawing.Region.
             Returns: The new System.Drawing.Region.
@@ -7571,14 +7126,13 @@ class Region(MarshalByRefObject, IDisposable):
         """
         GetBounds(self: Region, g: Graphics) -> RectangleF
         
-            Gets a System.Drawing.RectangleF structure that represents a rectangle that 
-             bounds this System.Drawing.Region on the drawing surface of a 
-             System.Drawing.Graphics object.
+            Gets a System.Drawing.RectangleF structure that represents a rectangle that bounds this 
+             System.Drawing.Region on the drawing surface of a System.Drawing.Graphics object.
         
         
             g: The System.Drawing.Graphics on which this System.Drawing.Region is drawn.
-            Returns: A System.Drawing.RectangleF structure that represents the bounding rectangle 
-             for this System.Drawing.Region on the specified drawing surface.
+            Returns: A System.Drawing.RectangleF structure that represents the bounding rectangle for this 
+             System.Drawing.Region on the specified drawing surface.
         """
         pass
 
@@ -7586,9 +7140,7 @@ class Region(MarshalByRefObject, IDisposable):
         """
         GetHrgn(self: Region, g: Graphics) -> IntPtr
         
-            Returns a Windows handle to this System.Drawing.Region in the specified 
-             graphics context.
-        
+            Returns a Windows handle to this System.Drawing.Region in the specified graphics context.
         
             g: The System.Drawing.Graphics on which this System.Drawing.Region is drawn.
             Returns: A Windows handle to this System.Drawing.Region.
@@ -7599,11 +7151,11 @@ class Region(MarshalByRefObject, IDisposable):
         """
         GetRegionData(self: Region) -> RegionData
         
-            Returns a System.Drawing.Drawing2D.RegionData that represents the information 
-             that describes this System.Drawing.Region.
+            Returns a System.Drawing.Drawing2D.RegionData that represents the information that describes 
+             this System.Drawing.Region.
         
-            Returns: A System.Drawing.Drawing2D.RegionData that represents the information that 
-             describes this System.Drawing.Region.
+            Returns: A System.Drawing.Drawing2D.RegionData that represents the information that describes this 
+             System.Drawing.Region.
         """
         pass
 
@@ -7615,45 +7167,40 @@ class Region(MarshalByRefObject, IDisposable):
              System.Drawing.Region after the specified matrix transformation is applied.
         
         
-            matrix: A System.Drawing.Drawing2D.Matrix that represents a geometric transformation to 
-             apply to the region.
+            matrix: A System.Drawing.Drawing2D.Matrix that represents a geometric transformation to apply to the 
+             region.
         
-            Returns: An array of System.Drawing.RectangleF structures that approximate this 
-             System.Drawing.Region after the specified matrix transformation is applied.
+            Returns: An array of System.Drawing.RectangleF structures that approximate this System.Drawing.Region 
+             after the specified matrix transformation is applied.
         """
         pass
 
     def Intersect(self, *__args):
         """
         Intersect(self: Region, rect: Rectangle)
-            Updates this System.Drawing.Region to the intersection of itself with the 
-             specified System.Drawing.Rectangle structure.
+            Updates this System.Drawing.Region to the intersection of itself with the specified 
+             System.Drawing.Rectangle structure.
         
         
-            rect: The System.Drawing.Rectangle structure to intersect with this 
-             System.Drawing.Region.
-        
+            rect: The System.Drawing.Rectangle structure to intersect with this System.Drawing.Region.
         Intersect(self: Region, path: GraphicsPath)
-            Updates this System.Drawing.Region to the intersection of itself with the 
-             specified System.Drawing.Drawing2D.GraphicsPath.
+            Updates this System.Drawing.Region to the intersection of itself with the specified 
+             System.Drawing.Drawing2D.GraphicsPath.
         
         
-            path: The System.Drawing.Drawing2D.GraphicsPath to intersect with this 
-             System.Drawing.Region.
-        
+            path: The System.Drawing.Drawing2D.GraphicsPath to intersect with this System.Drawing.Region.
         Intersect(self: Region, region: Region)
-            Updates this System.Drawing.Region to the intersection of itself with the 
-             specified System.Drawing.Region.
+            Updates this System.Drawing.Region to the intersection of itself with the specified 
+             System.Drawing.Region.
         
         
             region: The System.Drawing.Region to intersect with this System.Drawing.Region.
         Intersect(self: Region, rect: RectangleF)
-            Updates this System.Drawing.Region to the intersection of itself with the 
-             specified System.Drawing.RectangleF structure.
+            Updates this System.Drawing.Region to the intersection of itself with the specified 
+             System.Drawing.RectangleF structure.
         
         
-            rect: The System.Drawing.RectangleF structure to intersect with this 
-             System.Drawing.Region.
+            rect: The System.Drawing.RectangleF structure to intersect with this System.Drawing.Region.
         """
         pass
 
@@ -7661,13 +7208,11 @@ class Region(MarshalByRefObject, IDisposable):
         """
         IsEmpty(self: Region, g: Graphics) -> bool
         
-            Tests whether this System.Drawing.Region has an empty interior on the specified 
-             drawing surface.
-        
+            Tests whether this System.Drawing.Region has an empty interior on the specified drawing surface.
         
             g: A System.Drawing.Graphics that represents a drawing surface.
-            Returns: true if the interior of this System.Drawing.Region is empty when the 
-             transformation associated with g is applied; otherwise, false.
+            Returns: true if the interior of this System.Drawing.Region is empty when the transformation associated 
+             with g is applied; otherwise, false.
         """
         pass
 
@@ -7675,13 +7220,13 @@ class Region(MarshalByRefObject, IDisposable):
         """
         IsInfinite(self: Region, g: Graphics) -> bool
         
-            Tests whether this System.Drawing.Region has an infinite interior on the 
-             specified drawing surface.
+            Tests whether this System.Drawing.Region has an infinite interior on the specified drawing 
+             surface.
         
         
             g: A System.Drawing.Graphics that represents a drawing surface.
-            Returns: true if the interior of this System.Drawing.Region is infinite when the 
-             transformation associated with g is applied; otherwise, false.
+            Returns: true if the interior of this System.Drawing.Region is infinite when the transformation 
+             associated with g is applied; otherwise, false.
         """
         pass
 
@@ -7689,39 +7234,31 @@ class Region(MarshalByRefObject, IDisposable):
         """
         IsVisible(self: Region, point: Point, g: Graphics) -> bool
         
-            Tests whether the specified System.Drawing.Point structure is contained within 
-             this System.Drawing.Region when drawn using the specified 
-             System.Drawing.Graphics.
+            Tests whether the specified System.Drawing.Point structure is contained within this 
+             System.Drawing.Region when drawn using the specified System.Drawing.Graphics.
         
         
             point: The System.Drawing.Point structure to test.
             g: A System.Drawing.Graphics that represents a graphics context.
-            Returns: true when point is contained within this System.Drawing.Region; otherwise, 
-             false.
-        
+            Returns: true when point is contained within this System.Drawing.Region; otherwise, false.
         IsVisible(self: Region, point: Point) -> bool
         
-            Tests whether the specified System.Drawing.Point structure is contained within 
-             this System.Drawing.Region.
+            Tests whether the specified System.Drawing.Point structure is contained within this 
+             System.Drawing.Region.
         
         
             point: The System.Drawing.Point structure to test.
-            Returns: true when point is contained within this System.Drawing.Region; otherwise, 
-             false.
-        
+            Returns: true when point is contained within this System.Drawing.Region; otherwise, false.
         IsVisible(self: Region, x: int, y: int, g: Graphics) -> bool
         
-            Tests whether the specified point is contained within this 
-             System.Drawing.Region object when drawn using the specified 
-             System.Drawing.Graphics object.
+            Tests whether the specified point is contained within this System.Drawing.Region object when 
+             drawn using the specified System.Drawing.Graphics object.
         
         
             x: The x-coordinate of the point to test.
             y: The y-coordinate of the point to test.
             g: A System.Drawing.Graphics that represents a graphics context.
-            Returns: true when the specified point is contained within this System.Drawing.Region; 
-             otherwise, false.
-        
+            Returns: true when the specified point is contained within this System.Drawing.Region; otherwise, false.
         IsVisible(self: Region, x: int, y: int, width: int, height: int) -> bool
         
             Tests whether any portion of the specified rectangle is contained within this 
@@ -7732,20 +7269,19 @@ class Region(MarshalByRefObject, IDisposable):
             y: The y-coordinate of the upper-left corner of the rectangle to test.
             width: The width of the rectangle to test.
             height: The height of the rectangle to test.
-            Returns: true when any portion of the specified rectangle is contained within this 
-             System.Drawing.Region; otherwise, false.
+            Returns: true when any portion of the specified rectangle is contained within this System.Drawing.Region; 
+             otherwise, false.
         
         IsVisible(self: Region, rect: Rectangle, g: Graphics) -> bool
         
-            Tests whether any portion of the specified System.Drawing.Rectangle structure 
-             is contained within this System.Drawing.Region when drawn using the specified 
-             System.Drawing.Graphics.
+            Tests whether any portion of the specified System.Drawing.Rectangle structure is contained 
+             within this System.Drawing.Region when drawn using the specified System.Drawing.Graphics.
         
         
             rect: The System.Drawing.Rectangle structure to test.
             g: A System.Drawing.Graphics that represents a graphics context.
-            Returns: true when any portion of the rect is contained within this 
-             System.Drawing.Region; otherwise, false.
+            Returns: true when any portion of the rect is contained within this System.Drawing.Region; otherwise, 
+             false.
         
         IsVisible(self: Region, x: int, y: int, width: int, height: int, g: Graphics) -> bool
         
@@ -7758,13 +7294,13 @@ class Region(MarshalByRefObject, IDisposable):
             width: The width of the rectangle to test.
             height: The height of the rectangle to test.
             g: A System.Drawing.Graphics that represents a graphics context.
-            Returns: true when any portion of the specified rectangle is contained within this 
-             System.Drawing.Region; otherwise, false.
+            Returns: true when any portion of the specified rectangle is contained within this System.Drawing.Region; 
+             otherwise, false.
         
         IsVisible(self: Region, rect: Rectangle) -> bool
         
-            Tests whether any portion of the specified System.Drawing.Rectangle structure 
-             is contained within this System.Drawing.Region.
+            Tests whether any portion of the specified System.Drawing.Rectangle structure is contained 
+             within this System.Drawing.Region.
         
         
             rect: The System.Drawing.Rectangle structure to test.
@@ -7773,9 +7309,8 @@ class Region(MarshalByRefObject, IDisposable):
         
         IsVisible(self: Region, rect: RectangleF, g: Graphics) -> bool
         
-            Tests whether any portion of the specified System.Drawing.RectangleF structure 
-             is contained within this System.Drawing.Region when drawn using the specified 
-             System.Drawing.Graphics.
+            Tests whether any portion of the specified System.Drawing.RectangleF structure is contained 
+             within this System.Drawing.Region when drawn using the specified System.Drawing.Graphics.
         
         
             rect: The System.Drawing.RectangleF structure to test.
@@ -7783,49 +7318,38 @@ class Region(MarshalByRefObject, IDisposable):
             Returns: true when rect is contained within this System.Drawing.Region; otherwise, false.
         IsVisible(self: Region, x: Single, y: Single, g: Graphics) -> bool
         
-            Tests whether the specified point is contained within this 
-             System.Drawing.Region when drawn using the specified System.Drawing.Graphics.
+            Tests whether the specified point is contained within this System.Drawing.Region when drawn 
+             using the specified System.Drawing.Graphics.
         
         
             x: The x-coordinate of the point to test.
             y: The y-coordinate of the point to test.
             g: A System.Drawing.Graphics that represents a graphics context.
-            Returns: true when the specified point is contained within this System.Drawing.Region; 
-             otherwise, false.
-        
+            Returns: true when the specified point is contained within this System.Drawing.Region; otherwise, false.
         IsVisible(self: Region, point: PointF) -> bool
         
-            Tests whether the specified System.Drawing.PointF structure is contained within 
-             this System.Drawing.Region.
-        
-        
-            point: The System.Drawing.PointF structure to test.
-            Returns: true when point is contained within this System.Drawing.Region; otherwise, 
-             false.
-        
-        IsVisible(self: Region, x: Single, y: Single) -> bool
-        
-            Tests whether the specified point is contained within this 
+            Tests whether the specified System.Drawing.PointF structure is contained within this 
              System.Drawing.Region.
         
         
+            point: The System.Drawing.PointF structure to test.
+            Returns: true when point is contained within this System.Drawing.Region; otherwise, false.
+        IsVisible(self: Region, x: Single, y: Single) -> bool
+        
+            Tests whether the specified point is contained within this System.Drawing.Region.
+        
             x: The x-coordinate of the point to test.
             y: The y-coordinate of the point to test.
-            Returns: true when the specified point is contained within this System.Drawing.Region; 
-             otherwise, false.
-        
+            Returns: true when the specified point is contained within this System.Drawing.Region; otherwise, false.
         IsVisible(self: Region, point: PointF, g: Graphics) -> bool
         
-            Tests whether the specified System.Drawing.PointF structure is contained within 
-             this System.Drawing.Region when drawn using the specified 
-             System.Drawing.Graphics.
+            Tests whether the specified System.Drawing.PointF structure is contained within this 
+             System.Drawing.Region when drawn using the specified System.Drawing.Graphics.
         
         
             point: The System.Drawing.PointF structure to test.
             g: A System.Drawing.Graphics that represents a graphics context.
-            Returns: true when point is contained within this System.Drawing.Region; otherwise, 
-             false.
-        
+            Returns: true when point is contained within this System.Drawing.Region; otherwise, false.
         IsVisible(self: Region, x: Single, y: Single, width: Single, height: Single, g: Graphics) -> bool
         
             Tests whether any portion of the specified rectangle is contained within this 
@@ -7837,19 +7361,17 @@ class Region(MarshalByRefObject, IDisposable):
             width: The width of the rectangle to test.
             height: The height of the rectangle to test.
             g: A System.Drawing.Graphics that represents a graphics context.
-            Returns: true when any portion of the specified rectangle is contained within this 
-             System.Drawing.Region; otherwise, false.
+            Returns: true when any portion of the specified rectangle is contained within this System.Drawing.Region; 
+             otherwise, false.
         
         IsVisible(self: Region, rect: RectangleF) -> bool
         
-            Tests whether any portion of the specified System.Drawing.RectangleF structure 
-             is contained within this System.Drawing.Region.
+            Tests whether any portion of the specified System.Drawing.RectangleF structure is contained 
+             within this System.Drawing.Region.
         
         
             rect: The System.Drawing.RectangleF structure to test.
-            Returns: true when any portion of rect is contained within this System.Drawing.Region; 
-             otherwise, false.
-        
+            Returns: true when any portion of rect is contained within this System.Drawing.Region; otherwise, false.
         IsVisible(self: Region, x: Single, y: Single, width: Single, height: Single) -> bool
         
             Tests whether any portion of the specified rectangle is contained within this 
@@ -7860,8 +7382,8 @@ class Region(MarshalByRefObject, IDisposable):
             y: The y-coordinate of the upper-left corner of the rectangle to test.
             width: The width of the rectangle to test.
             height: The height of the rectangle to test.
-            Returns: true when any portion of the specified rectangle is contained within this 
-             System.Drawing.Region object; otherwise, false.
+            Returns: true when any portion of the specified rectangle is contained within this System.Drawing.Region 
+             object; otherwise, false.
         """
         pass
 
@@ -7885,11 +7407,11 @@ class Region(MarshalByRefObject, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled across 
-             a remoting boundary. A value of false is usually appropriate. true to copy the 
-             current System.MarshalByRefObject object's identity to its clone, which will 
-             cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
+             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+             identity to its clone, which will cause remoting client calls to be routed to the remote server 
+             object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -7911,12 +7433,9 @@ class Region(MarshalByRefObject, IDisposable):
     def Transform(self, matrix):
         """
         Transform(self: Region, matrix: Matrix)
-            Transforms this System.Drawing.Region by the specified 
-             System.Drawing.Drawing2D.Matrix.
+            Transforms this System.Drawing.Region by the specified System.Drawing.Drawing2D.Matrix.
         
-        
-            matrix: The System.Drawing.Drawing2D.Matrix by which to transform this 
-             System.Drawing.Region.
+            matrix: The System.Drawing.Drawing2D.Matrix by which to transform this System.Drawing.Region.
         """
         pass
 
@@ -7942,9 +7461,7 @@ class Region(MarshalByRefObject, IDisposable):
              System.Drawing.Drawing2D.GraphicsPath.
         
         
-            path: The System.Drawing.Drawing2D.GraphicsPath to unite with this 
-             System.Drawing.Region.
-        
+            path: The System.Drawing.Drawing2D.GraphicsPath to unite with this System.Drawing.Region.
         Union(self: Region, region: Region)
             Updates this System.Drawing.Region to the union of itself and the specified 
              System.Drawing.Region.
@@ -7962,32 +7479,29 @@ class Region(MarshalByRefObject, IDisposable):
              System.Drawing.RectangleF structure.
         
         
-            rect: The System.Drawing.RectangleF structure to unite with this 
-             System.Drawing.Region.
+            rect: The System.Drawing.RectangleF structure to unite with this System.Drawing.Region.
         """
         pass
 
     def Xor(self, *__args):
         """
         Xor(self: Region, path: GraphicsPath)
-            Updates this System.Drawing.Region to the union minus the intersection of 
-             itself with the specified System.Drawing.Drawing2D.GraphicsPath.
+            Updates this System.Drawing.Region to the union minus the intersection of itself with the 
+             specified System.Drawing.Drawing2D.GraphicsPath.
         
         
-            path: The System.Drawing.Drawing2D.GraphicsPath to erload:System.Drawing.Region.Xor 
-             with this System.Drawing.Region.
-        
-        Xor(self: Region, region: Region)
-            Updates this System.Drawing.Region to the union minus the intersection of 
-             itself with the specified System.Drawing.Region.
-        
-        
-            region: The System.Drawing.Region to erload:System.Drawing.Region.Xor with this 
+            path: The System.Drawing.Drawing2D.GraphicsPath to erload:System.Drawing.Region.Xor with this 
              System.Drawing.Region.
         
+        Xor(self: Region, region: Region)
+            Updates this System.Drawing.Region to the union minus the intersection of itself with the 
+             specified System.Drawing.Region.
+        
+        
+            region: The System.Drawing.Region to erload:System.Drawing.Region.Xor with this System.Drawing.Region.
         Xor(self: Region, rect: RectangleF)
-            Updates this System.Drawing.Region to the union minus the intersection of 
-             itself with the specified System.Drawing.RectangleF structure.
+            Updates this System.Drawing.Region to the union minus the intersection of itself with the 
+             specified System.Drawing.RectangleF structure.
         
         
             rect: The System.Drawing.RectangleF structure to 
@@ -7995,17 +7509,21 @@ class Region(MarshalByRefObject, IDisposable):
              System.Drawing.Region.
         
         Xor(self: Region, rect: Rectangle)
-            Updates this System.Drawing.Region to the union minus the intersection of 
-             itself with the specified System.Drawing.Rectangle structure.
+            Updates this System.Drawing.Region to the union minus the intersection of itself with the 
+             specified System.Drawing.Rectangle structure.
         
         
-            rect: The System.Drawing.Rectangle structure to erload:System.Drawing.Region.Xor with 
-             this System.Drawing.Region.
+            rect: The System.Drawing.Rectangle structure to erload:System.Drawing.Region.Xor with this 
+             System.Drawing.Region.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __eq__(self, *args): #cannot find CLR method
@@ -8013,7 +7531,10 @@ class Region(MarshalByRefObject, IDisposable):
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -8102,8 +7623,8 @@ class Size(object):
         """
         Add(sz1: Size, sz2: Size) -> Size
         
-            Adds the width and height of one System.Drawing.Size structure to the width and 
-             height of another System.Drawing.Size structure.
+            Adds the width and height of one System.Drawing.Size structure to the width and height of 
+             another System.Drawing.Size structure.
         
         
             sz1: The first System.Drawing.Size structure to add.
@@ -8117,9 +7638,8 @@ class Size(object):
         """
         Ceiling(value: SizeF) -> Size
         
-            Converts the specified System.Drawing.SizeF structure to a System.Drawing.Size 
-             structure by rounding the values of the System.Drawing.Size structure to the 
-             next higher integer values.
+            Converts the specified System.Drawing.SizeF structure to a System.Drawing.Size structure by 
+             rounding the values of the System.Drawing.Size structure to the next higher integer values.
         
         
             value: The System.Drawing.SizeF structure to convert.
@@ -8131,8 +7651,8 @@ class Size(object):
         """
         Equals(self: Size, obj: object) -> bool
         
-            Tests to see whether the specified object is a System.Drawing.Size structure 
-             with the same dimensions as this System.Drawing.Size structure.
+            Tests to see whether the specified object is a System.Drawing.Size structure with the same 
+             dimensions as this System.Drawing.Size structure.
         
         
             obj: The System.Object to test.
@@ -8146,8 +7666,7 @@ class Size(object):
         GetHashCode(self: Size) -> int
         
             Returns a hash code for this System.Drawing.Size structure.
-            Returns: An integer value that specifies a hash value for this System.Drawing.Size 
-             structure.
+            Returns: An integer value that specifies a hash value for this System.Drawing.Size structure.
         """
         pass
 
@@ -8156,9 +7675,8 @@ class Size(object):
         """
         Round(value: SizeF) -> Size
         
-            Converts the specified System.Drawing.SizeF structure to a System.Drawing.Size 
-             structure by rounding the values of the System.Drawing.SizeF structure to the 
-             nearest integer values.
+            Converts the specified System.Drawing.SizeF structure to a System.Drawing.Size structure by 
+             rounding the values of the System.Drawing.SizeF structure to the nearest integer values.
         
         
             value: The System.Drawing.SizeF structure to convert.
@@ -8171,8 +7689,8 @@ class Size(object):
         """
         Subtract(sz1: Size, sz2: Size) -> Size
         
-            Subtracts the width and height of one System.Drawing.Size structure from the 
-             width and height of another System.Drawing.Size structure.
+            Subtracts the width and height of one System.Drawing.Size structure from the width and height of 
+             another System.Drawing.Size structure.
         
         
             sz1: The System.Drawing.Size structure on the left side of the subtraction operator.
@@ -8185,9 +7703,7 @@ class Size(object):
         """
         ToString(self: Size) -> str
         
-            Creates a human-readable string that represents this System.Drawing.Size 
-             structure.
-        
+            Creates a human-readable string that represents this System.Drawing.Size structure.
             Returns: A string that represents this System.Drawing.Size.
         """
         pass
@@ -8197,9 +7713,8 @@ class Size(object):
         """
         Truncate(value: SizeF) -> Size
         
-            Converts the specified System.Drawing.SizeF structure to a System.Drawing.Size 
-             structure by truncating the values of the System.Drawing.SizeF structure to the 
-             next lower integer values.
+            Converts the specified System.Drawing.SizeF structure to a System.Drawing.Size structure by 
+             truncating the values of the System.Drawing.SizeF structure to the next lower integer values.
         
         
             value: The System.Drawing.SizeF structure to convert.
@@ -8218,9 +7733,10 @@ class Size(object):
     @staticmethod # known case of __new__
     def __new__(self, *__args):
         """
+        __new__[Size]() -> Size
+        
         __new__(cls: type, pt: Point)
-        __new__(cls: type, width: int, height: int)
-        __new__[Size]() -> Size
+        __new__(cls: type, width: int, height: int)
         """
         pass
 
@@ -8231,8 +7747,8 @@ class Size(object):
         """
         __radd__(sz1: Size, sz2: Size) -> Size
         
-            Adds the width and height of one System.Drawing.Size structure to the width and 
-             height of another System.Drawing.Size structure.
+            Adds the width and height of one System.Drawing.Size structure to the width and height of 
+             another System.Drawing.Size structure.
         
         
             sz1: The first System.Drawing.Size to add.
@@ -8245,8 +7761,8 @@ class Size(object):
         """
         __rsub__(sz1: Size, sz2: Size) -> Size
         
-            Subtracts the width and height of one System.Drawing.Size structure from the 
-             width and height of another System.Drawing.Size structure.
+            Subtracts the width and height of one System.Drawing.Size structure from the width and height of 
+             another System.Drawing.Size structure.
         
         
             sz1: The System.Drawing.Size structure on the left side of the subtraction operator.
@@ -8296,14 +7812,13 @@ class SizeConverter(TypeConverter):
         """
         CanConvertFrom(self: SizeConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Determines whether this converter can convert an object in the specified source 
-             type to the native type of the converter.
+            Determines whether this converter can convert an object in the specified source type to the 
+             native type of the converter.
         
         
-            context: A System.ComponentModel.ITypeDescriptorContext that can be used to get 
-             additional information about the environment this converter is being called 
-             from. This may be null, so you should always check. Also, properties on the 
-             context object may also return null.
+            context: A System.ComponentModel.ITypeDescriptorContext that can be used to get additional information 
+             about the environment this converter is being called from. This may be null, so you should 
+             always check. Also, properties on the context object may also return null.
         
             sourceType: The type you want to convert from.
             Returns: This method returns true if this object can perform the conversion.
@@ -8314,18 +7829,16 @@ class SizeConverter(TypeConverter):
         """
         CanConvertTo(self: SizeConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object to the 
-             given destination type using the context.
+            Gets a value indicating whether this converter can convert an object to the given destination 
+             type using the context.
         
         
-            context: A System.ComponentModel.ITypeDescriptorContext that can be used to get 
-             additional information about the environment this converter is being called 
-             from. This can be null, so always check. Also, properties on the context object 
-             can return null.
+            context: A System.ComponentModel.ITypeDescriptorContext that can be used to get additional information 
+             about the environment this converter is being called from. This can be null, so always check. 
+             Also, properties on the context object can return null.
         
             destinationType: A System.Type that represents the type you want to convert to.
-            Returns: This method returns true if this converter can perform the conversion; 
-             otherwise, false.
+            Returns: This method returns true if this converter can perform the conversion; otherwise, false.
         """
         pass
 
@@ -8335,14 +7848,13 @@ class SizeConverter(TypeConverter):
         
             Converts the specified object to the converter's native type.
         
-            context: A System.ComponentModel.ITypeDescriptorContext that can be used to get 
-             additional information about the environment this converter is being called 
-             from. This may be null, so you should always check. Also, properties on the 
-             context object may also return null.
+            context: A System.ComponentModel.ITypeDescriptorContext that can be used to get additional information 
+             about the environment this converter is being called from. This may be null, so you should 
+             always check. Also, properties on the context object may also return null.
         
-            culture: An System.Globalization.CultureInfo object that contains culture specific 
-             information, such as the language, calendar, and cultural conventions 
-             associated with a specific culture. It is based on the RFC 1766 standard.
+            culture: An System.Globalization.CultureInfo object that contains culture specific information, such as 
+             the language, calendar, and cultural conventions associated with a specific culture. It is based 
+             on the RFC 1766 standard.
         
             value: The object to convert.
             Returns: The converted object.
@@ -8355,14 +7867,13 @@ class SizeConverter(TypeConverter):
         
             Converts the specified object to the specified type.
         
-            context: A System.ComponentModel.ITypeDescriptorContext that can be used to get 
-             additional information about the environment this converter is being called 
-             from. This may be null, so you should always check. Also, properties on the 
-             context object may also return null.
+            context: A System.ComponentModel.ITypeDescriptorContext that can be used to get additional information 
+             about the environment this converter is being called from. This may be null, so you should 
+             always check. Also, properties on the context object may also return null.
         
-            culture: An System.Globalization.CultureInfo object that contains culture specific 
-             information, such as the language, calendar, and cultural conventions 
-             associated with a specific culture. It is based on the RFC 1766 standard.
+            culture: An System.Globalization.CultureInfo object that contains culture specific information, such as 
+             the language, calendar, and cultural conventions associated with a specific culture. It is based 
+             on the RFC 1766 standard.
         
             value: The object to convert.
             destinationType: The type to convert the object to.
@@ -8374,21 +7885,18 @@ class SizeConverter(TypeConverter):
         """
         CreateInstance(self: SizeConverter, context: ITypeDescriptorContext, propertyValues: IDictionary) -> object
         
-            Creates an object of this type by using a specified set of property values for 
-             the object. This is useful for creating non-changeable objects that have 
-             changeable properties.
+            Creates an object of this type by using a specified set of property values for the object. This 
+             is useful for creating non-changeable objects that have changeable properties.
         
         
-            context: A System.ComponentModel.TypeDescriptor through which additional context can be 
-             provided.
+            context: A System.ComponentModel.TypeDescriptor through which additional context can be provided.
+            propertyValues: A dictionary of new property values. The dictionary contains a series of name-value pairs, one 
+             for each property returned from the 
+             System.Drawing.SizeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Ob
+             ject,System.Attribute[]) method.
         
-            propertyValues: A dictionary of new property values. The dictionary contains a series of 
-             name-value pairs, one for each property returned from the 
-             System.Drawing.SizeConverter.GetProperties(System.ComponentModel.ITypeDescriptor
-             Context,System.Object,System.Attribute[]) method.
-        
-            Returns: The newly created object, or null if the object could not be created. The 
-             default implementation returns null.
+            Returns: The newly created object, or null if the object could not be created. The default implementation 
+             returns null.
         """
         pass
 
@@ -8397,17 +7905,15 @@ class SizeConverter(TypeConverter):
         GetCreateInstanceSupported(self: SizeConverter, context: ITypeDescriptorContext) -> bool
         
             Determines whether changing a value on this object should require a call to the 
-             System.Drawing.SizeConverter.CreateInstance(System.ComponentModel.ITypeDescripto
-             rContext,System.Collections.IDictionary) method to create a new value.
+             System.Drawing.SizeConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext,System.C
+             ollections.IDictionary) method to create a new value.
         
         
-            context: A System.ComponentModel.TypeDescriptor through which additional context can be 
-             provided.
-        
+            context: A System.ComponentModel.TypeDescriptor through which additional context can be provided.
             Returns: true if the 
-             System.Drawing.SizeConverter.CreateInstance(System.ComponentModel.ITypeDescripto
-             rContext,System.Collections.IDictionary) object should be called when a change 
-             is made to one or more properties of this object.
+             System.Drawing.SizeConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext,System.C
+             ollections.IDictionary) object should be called when a change is made to one or more properties 
+             of this object.
         """
         pass
 
@@ -8415,18 +7921,15 @@ class SizeConverter(TypeConverter):
         """
         GetProperties(self: SizeConverter, context: ITypeDescriptorContext, value: object, attributes: Array[Attribute]) -> PropertyDescriptorCollection
         
-            Retrieves the set of properties for this type. By default, a type does not have 
-             any properties to return.
+            Retrieves the set of properties for this type. By default, a type does not have any properties 
+             to return.
         
         
-            context: A System.ComponentModel.TypeDescriptor through which additional context can be 
-             provided.
-        
+            context: A System.ComponentModel.TypeDescriptor through which additional context can be provided.
             value: The value of the object to get the properties for.
             attributes: An array of System.Attribute objects that describe the properties.
-            Returns: The set of properties that should be exposed for this data type. If no 
-             properties should be exposed, this may return null. The default implementation 
-             always returns null.
+            Returns: The set of properties that should be exposed for this data type. If no properties should be 
+             exposed, this may return null. The default implementation always returns null.
         """
         pass
 
@@ -8436,13 +7939,10 @@ class SizeConverter(TypeConverter):
         
             Determines whether this object supports properties. By default, this is false.
         
-            context: A System.ComponentModel.TypeDescriptor through which additional context can be 
-             provided.
-        
+            context: A System.ComponentModel.TypeDescriptor through which additional context can be provided.
             Returns: true if the 
-             System.Drawing.SizeConverter.GetProperties(System.ComponentModel.ITypeDescriptor
-             Context,System.Object,System.Attribute[]) method should be called to find the 
-             properties of this object.
+             System.Drawing.SizeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Ob
+             ject,System.Attribute[]) method should be called to find the properties of this object.
         """
         pass
 
@@ -8460,8 +7960,8 @@ class SizeF(object):
         """
         Add(sz1: SizeF, sz2: SizeF) -> SizeF
         
-            Adds the width and height of one System.Drawing.SizeF structure to the width 
-             and height of another System.Drawing.SizeF structure.
+            Adds the width and height of one System.Drawing.SizeF structure to the width and height of 
+             another System.Drawing.SizeF structure.
         
         
             sz1: The first System.Drawing.SizeF structure to add.
@@ -8474,13 +7974,13 @@ class SizeF(object):
         """
         Equals(self: SizeF, obj: object) -> bool
         
-            Tests to see whether the specified object is a System.Drawing.SizeF structure 
-             with the same dimensions as this System.Drawing.SizeF structure.
+            Tests to see whether the specified object is a System.Drawing.SizeF structure with the same 
+             dimensions as this System.Drawing.SizeF structure.
         
         
             obj: The System.Object to test.
-            Returns: This method returns true if obj is a System.Drawing.SizeF and has the same 
-             width and height as this System.Drawing.SizeF; otherwise, false.
+            Returns: This method returns true if obj is a System.Drawing.SizeF and has the same width and height as 
+             this System.Drawing.SizeF; otherwise, false.
         """
         pass
 
@@ -8489,8 +7989,7 @@ class SizeF(object):
         GetHashCode(self: SizeF) -> int
         
             Returns a hash code for this System.Drawing.Size structure.
-            Returns: An integer value that specifies a hash value for this System.Drawing.Size 
-             structure.
+            Returns: An integer value that specifies a hash value for this System.Drawing.Size structure.
         """
         pass
 
@@ -8499,14 +7998,12 @@ class SizeF(object):
         """
         Subtract(sz1: SizeF, sz2: SizeF) -> SizeF
         
-            Subtracts the width and height of one System.Drawing.SizeF structure from the 
-             width and height of another System.Drawing.SizeF structure.
+            Subtracts the width and height of one System.Drawing.SizeF structure from the width and height 
+             of another System.Drawing.SizeF structure.
         
         
             sz1: The System.Drawing.SizeF structure on the left side of the subtraction operator.
-            sz2: The System.Drawing.SizeF structure on the right side of the subtraction 
-             operator.
-        
+            sz2: The System.Drawing.SizeF structure on the right side of the subtraction operator.
             Returns: A System.Drawing.SizeF structure that is a result of the subtraction operation.
         """
         pass
@@ -8533,9 +8030,7 @@ class SizeF(object):
         """
         ToString(self: SizeF) -> str
         
-            Creates a human-readable string that represents this System.Drawing.SizeF 
-             structure.
-        
+            Creates a human-readable string that represents this System.Drawing.SizeF structure.
             Returns: A string that represents this System.Drawing.SizeF structure.
         """
         pass
@@ -8551,10 +8046,11 @@ class SizeF(object):
     @staticmethod # known case of __new__
     def __new__(self, *__args):
         """
+        __new__[SizeF]() -> SizeF
+        
         __new__(cls: type, size: SizeF)
         __new__(cls: type, pt: PointF)
-        __new__(cls: type, width: Single, height: Single)
-        __new__[SizeF]() -> SizeF
+        __new__(cls: type, width: Single, height: Single)
         """
         pass
 
@@ -8565,8 +8061,8 @@ class SizeF(object):
         """
         __radd__(sz1: SizeF, sz2: SizeF) -> SizeF
         
-            Adds the width and height of one System.Drawing.SizeF structure to the width 
-             and height of another System.Drawing.SizeF structure.
+            Adds the width and height of one System.Drawing.SizeF structure to the width and height of 
+             another System.Drawing.SizeF structure.
         
         
             sz1: The first System.Drawing.SizeF structure to add.
@@ -8579,14 +8075,12 @@ class SizeF(object):
         """
         __rsub__(sz1: SizeF, sz2: SizeF) -> SizeF
         
-            Subtracts the width and height of one System.Drawing.SizeF structure from the 
-             width and height of another System.Drawing.SizeF structure.
+            Subtracts the width and height of one System.Drawing.SizeF structure from the width and height 
+             of another System.Drawing.SizeF structure.
         
         
             sz1: The System.Drawing.SizeF structure on the left side of the subtraction operator.
-            sz2: The System.Drawing.SizeF structure on the right side of the subtraction 
-             operator.
-        
+            sz2: The System.Drawing.SizeF structure on the right side of the subtraction operator.
             Returns: A System.Drawing.SizeF that is the result of the subtraction operation.
         """
         pass
@@ -8632,13 +8126,11 @@ class SizeFConverter(TypeConverter):
         """
         CanConvertFrom(self: SizeFConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Returns a value indicating whether the converter can convert from the type 
-             specified to the System.Drawing.SizeF type, using the specified context.
+            Returns a value indicating whether the converter can convert from the type specified to the 
+             System.Drawing.SizeF type, using the specified context.
         
         
-            context: An System.ComponentModel.ITypeDescriptorContext through which additional 
-             context can be supplied.
-        
+            context: An System.ComponentModel.ITypeDescriptorContext through which additional context can be supplied.
             sourceType: A System.Type the represents the type you wish to convert from.
             Returns: true to indicate the conversion can be performed; otherwise, false.
         """
@@ -8648,13 +8140,11 @@ class SizeFConverter(TypeConverter):
         """
         CanConvertTo(self: SizeFConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Returns a value indicating whether the System.Drawing.SizeFConverter can 
-             convert a System.Drawing.SizeF to the specified type.
+            Returns a value indicating whether the System.Drawing.SizeFConverter can convert a 
+             System.Drawing.SizeF to the specified type.
         
         
-            context: An System.ComponentModel.ITypeDescriptorContext through which additional 
-             context can be supplied.
-        
+            context: An System.ComponentModel.ITypeDescriptorContext through which additional context can be supplied.
             destinationType: A System.Type that represents the type you want to convert from.
             Returns: true if this converter can perform the conversion otherwise, false.
         """
@@ -8676,9 +8166,7 @@ class SizeFConverter(TypeConverter):
         ConvertTo(self: SizeFConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object, destinationType: Type) -> object
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            culture: A System.Globalization.CultureInfo. If null is passed, the current culture is 
-             assumed.
-        
+            culture: A System.Globalization.CultureInfo. If null is passed, the current culture is assumed.
             value: The System.Object to convert.
             destinationType: The System.Type to convert the value parameter to.
             Returns: An System.Object that represents the converted value.
@@ -8689,16 +8177,14 @@ class SizeFConverter(TypeConverter):
         """
         CreateInstance(self: SizeFConverter, context: ITypeDescriptorContext, propertyValues: IDictionary) -> object
         
-            Creates an instance of a System.Drawing.SizeF with the specified property 
-             values using the specified context.
+            Creates an instance of a System.Drawing.SizeF with the specified property values using the 
+             specified context.
         
         
-            context: An System.ComponentModel.ITypeDescriptorContext through which additional 
-             context can be supplied.
-        
+            context: An System.ComponentModel.ITypeDescriptorContext through which additional context can be supplied.
             propertyValues: An System.Collections.IDictionary containing property names and values.
-            Returns: An System.Object representing the new System.Drawing.SizeF, or null if the 
-             object cannot be created.
+            Returns: An System.Object representing the new System.Drawing.SizeF, or null if the object cannot be 
+             created.
         """
         pass
 
@@ -8706,14 +8192,11 @@ class SizeFConverter(TypeConverter):
         """
         GetCreateInstanceSupported(self: SizeFConverter, context: ITypeDescriptorContext) -> bool
         
-            Returns a value indicating whether changing a value on this object requires a 
-             call to the erload:System.Drawing.SizeFConverter.CreateInstance method to 
-             create a new value.
+            Returns a value indicating whether changing a value on this object requires a call to the 
+             erload:System.Drawing.SizeFConverter.CreateInstance method to create a new value.
         
         
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context. 
-             This may be null.
-        
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context. This may be null.
             Returns: Always returns true.
         """
         pass
@@ -8722,13 +8205,11 @@ class SizeFConverter(TypeConverter):
         """
         GetProperties(self: SizeFConverter, context: ITypeDescriptorContext, value: object, attributes: Array[Attribute]) -> PropertyDescriptorCollection
         
-            Retrieves a set of properties for the System.Drawing.SizeF type using the 
-             specified context and attributes.
+            Retrieves a set of properties for the System.Drawing.SizeF type using the specified context and 
+             attributes.
         
         
-            context: An System.ComponentModel.ITypeDescriptorContext through which additional 
-             context can be supplied.
-        
+            context: An System.ComponentModel.ITypeDescriptorContext through which additional context can be supplied.
             value: The System.Object to return properties for.
             attributes: An array of System.Attribute objects that describe the properties.
             Returns: A System.ComponentModel.PropertyDescriptorCollection containing the properties.
@@ -8741,9 +8222,7 @@ class SizeFConverter(TypeConverter):
         
             Returns whether the System.Drawing.SizeF type supports properties.
         
-            context: An System.ComponentModel.ITypeDescriptorContext through which additional 
-             context can be supplied.
-        
+            context: An System.ComponentModel.ITypeDescriptorContext through which additional context can be supplied.
             Returns: Always returns true.
         """
         pass
@@ -8774,11 +8253,11 @@ class SolidBrush(Brush, ICloneable, IDisposable, ISystemColorTracker):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled across 
-             a remoting boundary. A value of false is usually appropriate. true to copy the 
-             current System.MarshalByRefObject object's identity to its clone, which will 
-             cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
+             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+             identity to its clone, which will cause remoting client calls to be routed to the remote server 
+             object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -8798,11 +8277,18 @@ class SolidBrush(Brush, ICloneable, IDisposable, ISystemColorTracker):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -8955,11 +8441,11 @@ class StringFormat(MarshalByRefObject, ICloneable, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled across 
-             a remoting boundary. A value of false is usually appropriate. true to copy the 
-             current System.MarshalByRefObject object's identity to its clone, which will 
-             cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
+             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+             identity to its clone, which will cause remoting client calls to be routed to the remote server 
+             object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -8972,41 +8458,38 @@ class StringFormat(MarshalByRefObject, ICloneable, IDisposable):
     def SetDigitSubstitution(self, language, substitute):
         """
         SetDigitSubstitution(self: StringFormat, language: int, substitute: StringDigitSubstitute)
-            Specifies the language and method to be used when local digits are substituted 
-             for western digits.
+            Specifies the language and method to be used when local digits are substituted for western 
+             digits.
         
         
-            language: A National Language Support (NLS) language identifier that identifies the 
-             language that will be used when local digits are substituted for western 
-             digits. You can pass the System.Globalization.CultureInfo.LCID property of a 
-             System.Globalization.CultureInfo object as the NLS language identifier. For 
-             example, suppose you create a System.Globalization.CultureInfo object by 
-             passing the string "ar-EG" to a System.Globalization.CultureInfo constructor. 
-             If you pass the System.Globalization.CultureInfo.LCID property of that 
-             System.Globalization.CultureInfo object along with 
-             System.Drawing.StringDigitSubstitute.Traditional to the 
-             System.Drawing.StringFormat.SetDigitSubstitution(System.Int32,System.Drawing.Str
-             ingDigitSubstitute) method, then Arabic-Indic digits will be substituted for 
-             western digits at display time.
+            language: A National Language Support (NLS) language identifier that identifies the language that will be 
+             used when local digits are substituted for western digits. You can pass the 
+             System.Globalization.CultureInfo.LCID property of a System.Globalization.CultureInfo object as 
+             the NLS language identifier. For example, suppose you create a System.Globalization.CultureInfo 
+             object by passing the string "ar-EG" to a System.Globalization.CultureInfo constructor. If you 
+             pass the System.Globalization.CultureInfo.LCID property of that System.Globalization.CultureInfo 
+             object along with System.Drawing.StringDigitSubstitute.Traditional to the 
+             System.Drawing.StringFormat.SetDigitSubstitution(System.Int32,System.Drawing.StringDigitSubstitut
+             e) method, then Arabic-Indic digits will be substituted for western digits at display time.
         
-            substitute: An element of the System.Drawing.StringDigitSubstitute enumeration that 
-             specifies how digits are displayed.
+            substitute: An element of the System.Drawing.StringDigitSubstitute enumeration that specifies how digits are 
+             displayed.
         """
         pass
 
     def SetMeasurableCharacterRanges(self, ranges):
         """
         SetMeasurableCharacterRanges(self: StringFormat, ranges: Array[CharacterRange])
-            Specifies an array of System.Drawing.CharacterRange structures that represent 
-             the ranges of characters measured by a call to the 
-             System.Drawing.Graphics.MeasureCharacterRanges(System.String,System.Drawing.Font
-             ,System.Drawing.RectangleF,System.Drawing.StringFormat) method.
+            Specifies an array of System.Drawing.CharacterRange structures that represent the ranges of 
+             characters measured by a call to the 
+             System.Drawing.Graphics.MeasureCharacterRanges(System.String,System.Drawing.Font,System.Drawing.R
+             ectangleF,System.Drawing.StringFormat) method.
         
         
-            ranges: An array of System.Drawing.CharacterRange structures that specifies the ranges 
-             of characters measured by a call to the 
-             System.Drawing.Graphics.MeasureCharacterRanges(System.String,System.Drawing.Font
-             ,System.Drawing.RectangleF,System.Drawing.StringFormat) method.
+            ranges: An array of System.Drawing.CharacterRange structures that specifies the ranges of characters 
+             measured by a call to the 
+             System.Drawing.Graphics.MeasureCharacterRanges(System.String,System.Drawing.Font,System.Drawing.R
+             ectangleF,System.Drawing.StringFormat) method.
         """
         pass
 
@@ -9015,9 +8498,7 @@ class StringFormat(MarshalByRefObject, ICloneable, IDisposable):
         SetTabStops(self: StringFormat, firstTabOffset: Single, tabStops: Array[Single])
             Sets tab stops for this System.Drawing.StringFormat object.
         
-            firstTabOffset: The number of spaces between the beginning of a line of text and the first tab 
-             stop.
-        
+            firstTabOffset: The number of spaces between the beginning of a line of text and the first tab stop.
             tabStops: An array of distances between tab stops in the units specified by the 
              System.Drawing.Graphics.PageUnit property.
         """
@@ -9033,11 +8514,18 @@ class StringFormat(MarshalByRefObject, ICloneable, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -9272,13 +8760,9 @@ class SystemBrushes(object):
         """
         FromSystemColor(c: Color) -> Brush
         
-            Creates a System.Drawing.Brush from the specified System.Drawing.Color 
-             structure.
+            Creates a System.Drawing.Brush from the specified System.Drawing.Color structure.
         
-        
-            c: The System.Drawing.Color structure from which to create the 
-             System.Drawing.Brush.
-        
+            c: The System.Drawing.Color structure from which to create the System.Drawing.Brush.
             Returns: The System.Drawing.Brush this method creates.
         """
         pass
@@ -9365,8 +8849,8 @@ class SystemFonts(object):
             Returns a font object that corresponds to the specified system font name.
         
             systemFontName: The name of the system font you need a font object for.
-            Returns: A System.Drawing.Font if the specified name matches a value in 
-             System.Drawing.SystemFonts; otherwise, null.
+            Returns: A System.Drawing.Font if the specified name matches a value in System.Drawing.SystemFonts; 
+             otherwise, null.
         """
         pass
 
@@ -9461,20 +8945,18 @@ class TextureBrush(Brush, ICloneable, IDisposable):
         Clone(self: TextureBrush) -> object
         
             Creates an exact copy of this System.Drawing.TextureBrush object.
-            Returns: The System.Drawing.TextureBrush object this method creates, cast as an 
-             System.Object object.
+            Returns: The System.Drawing.TextureBrush object this method creates, cast as an System.Object object.
         """
         pass
 
     def Dispose(self):
         """
         Dispose(self: Brush, disposing: bool)
-            Releases the unmanaged resources used by the System.Drawing.Brush and 
-             optionally releases the managed resources.
+            Releases the unmanaged resources used by the System.Drawing.Brush and optionally releases the 
+             managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only 
-             unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
         """
         pass
 
@@ -9484,11 +8966,11 @@ class TextureBrush(Brush, ICloneable, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled across 
-             a remoting boundary. A value of false is usually appropriate. true to copy the 
-             current System.MarshalByRefObject object's identity to its clone, which will 
-             cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
+             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
+             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
+             identity to its clone, which will cause remoting client calls to be routed to the remote server 
+             object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -9501,52 +8983,47 @@ class TextureBrush(Brush, ICloneable, IDisposable):
     def MultiplyTransform(self, matrix, order=None):
         """
         MultiplyTransform(self: TextureBrush, matrix: Matrix, order: MatrixOrder)
-            Multiplies the System.Drawing.Drawing2D.Matrix object that represents the local 
-             geometric transformation of this System.Drawing.TextureBrush object by the 
-             specified System.Drawing.Drawing2D.Matrix object in the specified order.
+            Multiplies the System.Drawing.Drawing2D.Matrix object that represents the local geometric 
+             transformation of this System.Drawing.TextureBrush object by the specified 
+             System.Drawing.Drawing2D.Matrix object in the specified order.
         
         
-            matrix: The System.Drawing.Drawing2D.Matrix object by which to multiply the geometric 
-             transformation.
-        
-            order: A System.Drawing.Drawing2D.MatrixOrder enumeration that specifies the order in 
-             which to multiply the two matrices.
+            matrix: The System.Drawing.Drawing2D.Matrix object by which to multiply the geometric transformation.
+            order: A System.Drawing.Drawing2D.MatrixOrder enumeration that specifies the order in which to multiply 
+             the two matrices.
         
         MultiplyTransform(self: TextureBrush, matrix: Matrix)
-            Multiplies the System.Drawing.Drawing2D.Matrix object that represents the local 
-             geometric transformation of this System.Drawing.TextureBrush object by the 
-             specified System.Drawing.Drawing2D.Matrix object by prepending the specified 
+            Multiplies the System.Drawing.Drawing2D.Matrix object that represents the local geometric 
+             transformation of this System.Drawing.TextureBrush object by the specified 
+             System.Drawing.Drawing2D.Matrix object by prepending the specified 
              System.Drawing.Drawing2D.Matrix object.
         
         
-            matrix: The System.Drawing.Drawing2D.Matrix object by which to multiply the geometric 
-             transformation.
+            matrix: The System.Drawing.Drawing2D.Matrix object by which to multiply the geometric transformation.
         """
         pass
 
     def ResetTransform(self):
         """
         ResetTransform(self: TextureBrush)
-            Resets the Transform property of this System.Drawing.TextureBrush object to 
-             identity.
+            Resets the Transform property of this System.Drawing.TextureBrush object to identity.
         """
         pass
 
     def RotateTransform(self, angle, order=None):
         """
         RotateTransform(self: TextureBrush, angle: Single, order: MatrixOrder)
-            Rotates the local geometric transformation of this System.Drawing.TextureBrush 
-             object by the specified amount in the specified order.
+            Rotates the local geometric transformation of this System.Drawing.TextureBrush object by the 
+             specified amount in the specified order.
         
         
             angle: The angle of rotation.
-            order: A System.Drawing.Drawing2D.MatrixOrder enumeration that specifies whether to 
-             append or prepend the rotation matrix.
+            order: A System.Drawing.Drawing2D.MatrixOrder enumeration that specifies whether to append or prepend 
+             the rotation matrix.
         
         RotateTransform(self: TextureBrush, angle: Single)
-            Rotates the local geometric transformation of this System.Drawing.TextureBrush 
-             object by the specified amount. This method prepends the rotation to the 
-             transformation.
+            Rotates the local geometric transformation of this System.Drawing.TextureBrush object by the 
+             specified amount. This method prepends the rotation to the transformation.
         
         
             angle: The angle of rotation.
@@ -9556,19 +9033,18 @@ class TextureBrush(Brush, ICloneable, IDisposable):
     def ScaleTransform(self, sx, sy, order=None):
         """
         ScaleTransform(self: TextureBrush, sx: Single, sy: Single, order: MatrixOrder)
-            Scales the local geometric transformation of this System.Drawing.TextureBrush 
-             object by the specified amounts in the specified order.
+            Scales the local geometric transformation of this System.Drawing.TextureBrush object by the 
+             specified amounts in the specified order.
         
         
             sx: The amount by which to scale the transformation in the x direction.
             sy: The amount by which to scale the transformation in the y direction.
-            order: A System.Drawing.Drawing2D.MatrixOrder enumeration that specifies whether to 
-             append or prepend the scaling matrix.
+            order: A System.Drawing.Drawing2D.MatrixOrder enumeration that specifies whether to append or prepend 
+             the scaling matrix.
         
         ScaleTransform(self: TextureBrush, sx: Single, sy: Single)
-            Scales the local geometric transformation of this System.Drawing.TextureBrush 
-             object by the specified amounts. This method prepends the scaling matrix to the 
-             transformation.
+            Scales the local geometric transformation of this System.Drawing.TextureBrush object by the 
+             specified amounts. This method prepends the scaling matrix to the transformation.
         
         
             sx: The amount by which to scale the transformation in the x direction.
@@ -9588,18 +9064,16 @@ class TextureBrush(Brush, ICloneable, IDisposable):
     def TranslateTransform(self, dx, dy, order=None):
         """
         TranslateTransform(self: TextureBrush, dx: Single, dy: Single, order: MatrixOrder)
-            Translates the local geometric transformation of this 
-             System.Drawing.TextureBrush object by the specified dimensions in the specified 
-             order.
+            Translates the local geometric transformation of this System.Drawing.TextureBrush object by the 
+             specified dimensions in the specified order.
         
         
             dx: The dimension by which to translate the transformation in the x direction.
             dy: The dimension by which to translate the transformation in the y direction.
             order: The order (prepend or append) in which to apply the translation.
         TranslateTransform(self: TextureBrush, dx: Single, dy: Single)
-            Translates the local geometric transformation of this 
-             System.Drawing.TextureBrush object by the specified dimensions. This method 
-             prepends the translation to the transformation.
+            Translates the local geometric transformation of this System.Drawing.TextureBrush object by the 
+             specified dimensions. This method prepends the translation to the transformation.
         
         
             dx: The dimension by which to translate the transformation in the x direction.
@@ -9608,11 +9082,18 @@ class TextureBrush(Brush, ICloneable, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """ __enter__(self: IDisposable) -> object """
+        """
+        __enter__(self: IDisposable) -> object
+        
+            Provides the implementation of __enter__ for objects which implement IDisposable.
+        """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
+        """
+        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
+            Provides the implementation of __exit__ for objects which implement IDisposable.
+        """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -9670,15 +9151,13 @@ class ToolboxBitmapAttribute(Attribute, _Attribute):
         """
         Equals(self: ToolboxBitmapAttribute, value: object) -> bool
         
-            Indicates whether the specified object is a 
-             System.Drawing.ToolboxBitmapAttribute object and is identical to this 
-             System.Drawing.ToolboxBitmapAttribute object.
+            Indicates whether the specified object is a System.Drawing.ToolboxBitmapAttribute object and is 
+             identical to this System.Drawing.ToolboxBitmapAttribute object.
         
         
             value: The System.Object to test.
-            Returns: This method returns true if value is both a 
-             System.Drawing.ToolboxBitmapAttribute object and is identical to this 
-             System.Drawing.ToolboxBitmapAttribute object.
+            Returns: This method returns true if value is both a System.Drawing.ToolboxBitmapAttribute object and is 
+             identical to this System.Drawing.ToolboxBitmapAttribute object.
         """
         pass
 
@@ -9699,84 +9178,70 @@ class ToolboxBitmapAttribute(Attribute, _Attribute):
              System.Drawing.ToolboxBitmapAttribute object.
         
         
-            type: If this System.Drawing.ToolboxBitmapAttribute object does not already have a 
-             small image, this method searches for a bitmap resource in the assembly that 
-             defines the type specified by the component type. For example, if you pass 
-             typeof(ControlA) to the type parameter, then this method searches the assembly 
-             that defines ControlA.
+            type: If this System.Drawing.ToolboxBitmapAttribute object does not already have a small image, this 
+             method searches for a bitmap resource in the assembly that defines the type specified by the 
+             component type. For example, if you pass typeof(ControlA) to the type parameter, then this 
+             method searches the assembly that defines ControlA.
         
-            large: Specifies whether this method returns a large image (true) or a small image 
-             (false). The small image is 16 by 16, and the large image is 32 by 32.
+            large: Specifies whether this method returns a large image (true) or a small image (false). The small 
+             image is 16 by 16, and the large image is 32 by 32.
         
-            Returns: An System.Drawing.Image associated with this 
-             System.Drawing.ToolboxBitmapAttribute object.
-        
+            Returns: An System.Drawing.Image associated with this System.Drawing.ToolboxBitmapAttribute object.
         GetImage(self: ToolboxBitmapAttribute, type: Type, imgName: str, large: bool) -> Image
         
             Gets the small or large System.Drawing.Image associated with this 
              System.Drawing.ToolboxBitmapAttribute object.
         
         
-            type: If this System.Drawing.ToolboxBitmapAttribute object does not already have a 
-             small image, this method searches for an embedded bitmap resource in the 
-             assembly that defines the type specified by the component type. For example, if 
-             you pass typeof(ControlA) to the type parameter, then this method searches the 
-             assembly that defines ControlA.
+            type: If this System.Drawing.ToolboxBitmapAttribute object does not already have a small image, this 
+             method searches for an embedded bitmap resource in the assembly that defines the type specified 
+             by the component type. For example, if you pass typeof(ControlA) to the type parameter, then 
+             this method searches the assembly that defines ControlA.
         
             imgName: The name of the embedded bitmap resource.
-            large: Specifies whether this method returns a large image (true) or a small image 
-             (false). The small image is 16 by 16, and the large image is 32 by 32.
+            large: Specifies whether this method returns a large image (true) or a small image (false). The small 
+             image is 16 by 16, and the large image is 32 by 32.
         
-            Returns: An System.Drawing.Image associated with this 
-             System.Drawing.ToolboxBitmapAttribute object.
-        
+            Returns: An System.Drawing.Image associated with this System.Drawing.ToolboxBitmapAttribute object.
         GetImage(self: ToolboxBitmapAttribute, type: Type) -> Image
         
-            Gets the small System.Drawing.Image associated with this 
-             System.Drawing.ToolboxBitmapAttribute object.
+            Gets the small System.Drawing.Image associated with this System.Drawing.ToolboxBitmapAttribute 
+             object.
         
         
-            type: If this System.Drawing.ToolboxBitmapAttribute object does not already have a 
-             small image, this method searches for a bitmap resource in the assembly that 
-             defines the type specified by the type parameter. For example, if you pass 
-             typeof(ControlA) to the type parameter, then this method searches the assembly 
-             that defines ControlA.
+            type: If this System.Drawing.ToolboxBitmapAttribute object does not already have a small image, this 
+             method searches for a bitmap resource in the assembly that defines the type specified by the 
+             type parameter. For example, if you pass typeof(ControlA) to the type parameter, then this 
+             method searches the assembly that defines ControlA.
         
-            Returns: The small System.Drawing.Image associated with this 
-             System.Drawing.ToolboxBitmapAttribute object.
-        
+            Returns: The small System.Drawing.Image associated with this System.Drawing.ToolboxBitmapAttribute object.
         GetImage(self: ToolboxBitmapAttribute, component: object) -> Image
         
-            Gets the small System.Drawing.Image associated with this 
-             System.Drawing.ToolboxBitmapAttribute object.
+            Gets the small System.Drawing.Image associated with this System.Drawing.ToolboxBitmapAttribute 
+             object.
         
         
-            component: If this System.Drawing.ToolboxBitmapAttribute object does not already have a 
-             small image, this method searches for a bitmap resource in the assembly that 
-             defines the type of the object specified by the component parameter. For 
-             example, if you pass an object of type ControlA to the component parameter, 
-             then this method searches the assembly that defines ControlA.
+            component: If this System.Drawing.ToolboxBitmapAttribute object does not already have a small image, this 
+             method searches for a bitmap resource in the assembly that defines the type of the object 
+             specified by the component parameter. For example, if you pass an object of type ControlA to the 
+             component parameter, then this method searches the assembly that defines ControlA.
         
-            Returns: The small System.Drawing.Image associated with this 
-             System.Drawing.ToolboxBitmapAttribute object.
-        
+            Returns: The small System.Drawing.Image associated with this System.Drawing.ToolboxBitmapAttribute object.
         GetImage(self: ToolboxBitmapAttribute, component: object, large: bool) -> Image
         
             Gets the small or large System.Drawing.Image associated with this 
              System.Drawing.ToolboxBitmapAttribute object.
         
         
-            component: If this System.Drawing.ToolboxBitmapAttribute object does not already have a 
-             small image, this method searches for a bitmap resource in the assembly that 
-             defines the type of the object specified by the component parameter. For 
-             example, if you pass an object of type ControlA to the component parameter, 
-             then this method searches the assembly that defines ControlA.
+            component: If this System.Drawing.ToolboxBitmapAttribute object does not already have a small image, this 
+             method searches for a bitmap resource in the assembly that defines the type of the object 
+             specified by the component parameter. For example, if you pass an object of type ControlA to the 
+             component parameter, then this method searches the assembly that defines ControlA.
         
-            large: Specifies whether this method returns a large image (true) or a small image 
-             (false). The small image is 16 by 16, and the large image is 32 by 32.
+            large: Specifies whether this method returns a large image (true) or a small image (false). The small 
+             image is 16 by 16, and the large image is 32 by 32.
         
-            Returns: An System.Drawing.Image object associated with this 
-             System.Drawing.ToolboxBitmapAttribute object.
+            Returns: An System.Drawing.Image object associated with this System.Drawing.ToolboxBitmapAttribute object.
         """
         pass
 
@@ -9785,18 +9250,17 @@ class ToolboxBitmapAttribute(Attribute, _Attribute):
         """
         GetImageFromResource(t: Type, imageName: str, large: bool) -> Image
         
-            Returns an System.Drawing.Image object based on a bitmap resource that is 
-             embedded in an assembly.
+            Returns an System.Drawing.Image object based on a bitmap resource that is embedded in an 
+             assembly.
         
         
-            t: This method searches for an embedded bitmap resource in the assembly that 
-             defines the type specified by the t parameter. For example, if you pass 
-             typeof(ControlA) to the t parameter, then this method searches the assembly 
-             that defines ControlA.
+            t: This method searches for an embedded bitmap resource in the assembly that defines the type 
+             specified by the t parameter. For example, if you pass typeof(ControlA) to the t parameter, then 
+             this method searches the assembly that defines ControlA.
         
             imageName: The name of the embedded bitmap resource.
-            large: Specifies whether this method returns a large image (true)or a small image 
-             (false). The small image is 16 by 16, and the large image is 32 x 32.
+            large: Specifies whether this method returns a large image (true)or a small image (false). The small 
+             image is 16 by 16, and the large image is 32 x 32.
         
             Returns: An System.Drawing.Image object based on the retrieved bitmap.
         """

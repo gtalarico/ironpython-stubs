@@ -5,9 +5,7 @@ class BitConverter(object):
   """
   DoubleToInt64Bits(value: float) -> Int64
   
-   Converts the specified double-precision floating point number to a 64-bit 
-    signed integer.
-  
+   Converts the specified double-precision floating point number to a 64-bit signed integer.
   
    value: The number to convert.
    Returns: A 64-bit signed integer whose value is equivalent to value.
@@ -36,17 +34,13 @@ class BitConverter(object):
    Returns: An array of bytes with length 8.
   GetBytes(value: float) -> Array[Byte]
   
-   Returns the specified double-precision floating point value as an array of 
-    bytes.
-  
+   Returns the specified double-precision floating point value as an array of bytes.
   
    value: The number to convert.
    Returns: An array of bytes with length 8.
   GetBytes(value: Single) -> Array[Byte]
   
-   Returns the specified single-precision floating point value as an array of 
-    bytes.
-  
+   Returns the specified single-precision floating point value as an array of bytes.
   
    value: The number to convert.
    Returns: An array of bytes with length 4.
@@ -87,9 +81,7 @@ class BitConverter(object):
   """
   Int64BitsToDouble(value: Int64) -> float
   
-   Converts the specified 64-bit signed integer to a double-precision floating 
-    point number.
-  
+   Converts the specified 64-bit signed integer to a double-precision floating point number.
   
    value: The number to convert.
    Returns: A double-precision floating point number whose value is equivalent to value.
@@ -100,9 +92,7 @@ class BitConverter(object):
   """
   ToBoolean(value: Array[Byte],startIndex: int) -> bool
   
-   Returns a Boolean value converted from one byte at a specified position in a 
-    byte array.
-  
+   Returns a Boolean value converted from one byte at a specified position in a byte array.
   
    value: An array of bytes.
    startIndex: The starting position within value.
@@ -114,9 +104,7 @@ class BitConverter(object):
   """
   ToChar(value: Array[Byte],startIndex: int) -> Char
   
-   Returns a Unicode character converted from two bytes at a specified position in 
-    a byte array.
-  
+   Returns a Unicode character converted from two bytes at a specified position in a byte array.
   
    value: An array.
    startIndex: The starting position within value.
@@ -128,14 +116,13 @@ class BitConverter(object):
   """
   ToDouble(value: Array[Byte],startIndex: int) -> float
   
-   Returns a double-precision floating point number converted from eight bytes at 
-    a specified position in a byte array.
+   Returns a double-precision floating point number converted from eight bytes at a specified 
+    position in a byte array.
   
   
    value: An array of bytes.
    startIndex: The starting position within value.
-   Returns: A double precision floating point number formed by eight bytes beginning at 
-    startIndex.
+   Returns: A double precision floating point number formed by eight bytes beginning at startIndex.
   """
   pass
  @staticmethod
@@ -143,9 +130,7 @@ class BitConverter(object):
   """
   ToInt16(value: Array[Byte],startIndex: int) -> Int16
   
-   Returns a 16-bit signed integer converted from two bytes at a specified 
-    position in a byte array.
-  
+   Returns a 16-bit signed integer converted from two bytes at a specified position in a byte array.
   
    value: An array of bytes.
    startIndex: The starting position within value.
@@ -157,8 +142,8 @@ class BitConverter(object):
   """
   ToInt32(value: Array[Byte],startIndex: int) -> int
   
-   Returns a 32-bit signed integer converted from four bytes at a specified 
-    position in a byte array.
+   Returns a 32-bit signed integer converted from four bytes at a specified position in a byte 
+    array.
   
   
    value: An array of bytes.
@@ -171,8 +156,8 @@ class BitConverter(object):
   """
   ToInt64(value: Array[Byte],startIndex: int) -> Int64
   
-   Returns a 64-bit signed integer converted from eight bytes at a specified 
-    position in a byte array.
+   Returns a 64-bit signed integer converted from eight bytes at a specified position in a byte 
+    array.
   
   
    value: An array of bytes.
@@ -185,14 +170,13 @@ class BitConverter(object):
   """
   ToSingle(value: Array[Byte],startIndex: int) -> Single
   
-   Returns a single-precision floating point number converted from four bytes at a 
-    specified position in a byte array.
+   Returns a single-precision floating point number converted from four bytes at a specified 
+    position in a byte array.
   
   
    value: An array of bytes.
    startIndex: The starting position within value.
-   Returns: A single-precision floating point number formed by four bytes beginning at 
-    startIndex.
+   Returns: A single-precision floating point number formed by four bytes beginning at startIndex.
   """
   pass
  @staticmethod
@@ -200,36 +184,36 @@ class BitConverter(object):
   """
   ToString(value: Array[Byte],startIndex: int) -> str
   
-   Converts the numeric value of each element of a specified subarray of bytes to 
-    its equivalent hexadecimal string representation.
+   Converts the numeric value of each element of a specified subarray of bytes to its equivalent 
+    hexadecimal string representation.
   
   
    value: An array of bytes.
    startIndex: The starting position within value.
-   Returns: A string of hexadecimal pairs separated by hyphens,where each pair represents 
-    the corresponding element in a subarray of value; for example,"7F-2C-4A-00".
+   Returns: A string of hexadecimal pairs separated by hyphens,where each pair represents the corresponding 
+    element in a subarray of value; for example,"7F-2C-4A-00".
   
   ToString(value: Array[Byte]) -> str
   
-   Converts the numeric value of each element of a specified array of bytes to its 
-    equivalent hexadecimal string representation.
+   Converts the numeric value of each element of a specified array of bytes to its equivalent 
+    hexadecimal string representation.
   
   
    value: An array of bytes.
-   Returns: A string of hexadecimal pairs separated by hyphens,where each pair represents 
-    the corresponding element in value; for example,"7F-2C-4A-00".
+   Returns: A string of hexadecimal pairs separated by hyphens,where each pair represents the corresponding 
+    element in value; for example,"7F-2C-4A-00".
   
   ToString(value: Array[Byte],startIndex: int,length: int) -> str
   
-   Converts the numeric value of each element of a specified subarray of bytes to 
-    its equivalent hexadecimal string representation.
+   Converts the numeric value of each element of a specified subarray of bytes to its equivalent 
+    hexadecimal string representation.
   
   
    value: An array of bytes.
    startIndex: The starting position within value.
    length: The number of array elements in value to convert.
-   Returns: A string of hexadecimal pairs separated by hyphens,where each pair represents 
-    the corresponding element in a subarray of value; for example,"7F-2C-4A-00".
+   Returns: A string of hexadecimal pairs separated by hyphens,where each pair represents the corresponding 
+    element in a subarray of value; for example,"7F-2C-4A-00".
   """
   pass
  @staticmethod
@@ -237,8 +221,8 @@ class BitConverter(object):
   """
   ToUInt16(value: Array[Byte],startIndex: int) -> UInt16
   
-   Returns a 16-bit unsigned integer converted from two bytes at a specified 
-    position in a byte array.
+   Returns a 16-bit unsigned integer converted from two bytes at a specified position in a byte 
+    array.
   
   
    value: The array of bytes.
@@ -251,8 +235,8 @@ class BitConverter(object):
   """
   ToUInt32(value: Array[Byte],startIndex: int) -> UInt32
   
-   Returns a 32-bit unsigned integer converted from four bytes at a specified 
-    position in a byte array.
+   Returns a 32-bit unsigned integer converted from four bytes at a specified position in a byte 
+    array.
   
   
    value: An array of bytes.
@@ -265,8 +249,8 @@ class BitConverter(object):
   """
   ToUInt64(value: Array[Byte],startIndex: int) -> UInt64
   
-   Returns a 64-bit unsigned integer converted from eight bytes at a specified 
-    position in a byte array.
+   Returns a 64-bit unsigned integer converted from eight bytes at a specified position in a byte 
+    array.
   
   
    value: An array of bytes.

@@ -1,0 +1,12 @@
+{
+  "System.Drawing.dll": {
+    "System.Drawing.Text": "<module 'Text' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>", 
+    "System.Drawing.Design": "<module 'Design' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>", 
+    "System.Drawing.Printing": "<module 'Printing' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>", 
+    "System.Drawing.Imaging": "<module 'Imaging' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>", 
+    "System": "<module 'System' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>", 
+    "System.Drawing.Configuration": "<module 'Configuration' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>", 
+    "System.Drawing.Drawing2D": "<module 'Drawing2D' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>", 
+    "System.Drawing": "<module 'Drawing' (CLS module from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a)>"
+  }
+}

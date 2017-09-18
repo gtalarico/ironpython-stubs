@@ -8,14 +8,13 @@ class TreeViewImageKeyConverter(ImageKeyConverter):
   """
   ConvertTo(self: TreeViewImageKeyConverter,context: ITypeDescriptorContext,culture: CultureInfo,value: object,destinationType: Type) -> object
   
-   Converts the specified object to an object of the specified type using the 
-    specified culture information and context.
+   Converts the specified object to an object of the specified type using the specified culture 
+    information and context.
   
   
-   context: A System.ComponentModel.ITypeDescriptorContext that provides a format context,
-    which can be used to extract additional information about the environment this 
-    type converter is being invoked from. This parameter or properties of this 
-    parameter can be null.
+   context: A System.ComponentModel.ITypeDescriptorContext that provides a format context,which can be used 
+    to extract additional information about the environment this type converter is being invoked 
+    from. This parameter or properties of this parameter can be null.
   
    culture: A System.Globalization.CultureInfo that provides locale information.
    value: The object to convert,typically an image key.
