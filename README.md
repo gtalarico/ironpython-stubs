@@ -1,9 +1,21 @@
 # IronPython Stubs
 
 Stubs for common IronPython CLR assemblies.
-
 These stubs are intended to be used by the autocomplete engine of editors like Atom, Sublime, and Visual Studio Code.
 
+# Why IronPython Stubs?
+
+If your are writing python code that targets IronPython, and using modules loaded through the Common Language Runtime (clr),
+your editor's autocomplete engine (which runs on regular python) will not be able to access those non-native modules.
+In other words, modules/or packages loaded through `clr.AddReference()` are not available on your autocomplete engine.
+
+The workaround here is simple: Use IronPython to crawl through these libraries,
+and create 'stubs' or ['mock objects'](https://en.wikipedia.org/wiki/Mock_object).
+These 'stubs' can then be used by the CPython autocomplete engine.
+The stubs include doc strings as well as constructor/function/method signatures.
+
+This repository contains the code to create these stubs, and also stores an
+a version of them that can be used by autocomplete-python.
 
 Demo
 
