@@ -19,8 +19,8 @@ LOGGER_CONFIG = {
           },
       "formatters": {
           "simple": {
-              "format": "[%(levelname)s] %(message)s [%(filename)s](%(lineno)d)[%(asctime)s]",
-              "datefmt": "%I:%M:%S"
+              "format": "[%(levelname)s] %(message)s [%(asctime)s]",
+              "datefmt": "%Y:%m:%d - %I:%M:%S"
               }
       },
 

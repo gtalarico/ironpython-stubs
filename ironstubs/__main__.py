@@ -33,7 +33,7 @@ from pprint import pprint
 from utils.docopt import docopt
 from utils.logger import logger
 from utils.helper import Timer
-from default_settings import PATHS, BUILTINS, ASSEMBLIES, IN_REVIT
+from default_settings import PATHS, BUILTINS, ASSEMBLIES
 from make_stubs import make
 
 __version__ = '1.0.0'
@@ -42,40 +42,39 @@ __doc__ = """
 
     Usage:
       ironstubs
-      ironstubs make <assembly-name> [-d --output-dir] [-o --overwrite] [--no-json]
-      ironstubs make_all [-d --output-dir] [-o --overwrite] [--no-json]
+      ironstubs make <assembly-name> [--output-dir=<DIR>] [-o --overwrite] [--no-json]
       ironstubs --version
 
     Examples:
       ipy -m ironstubs RhinoCommon
 
     Options:
-      --output-dir           Path of Output Directory [default: release\\stubs]
-      -f <file>              Text file with list of assembly names
-      --overwrite            Force Overwrite if stub already exists [default: False].
-      --no-json              Don't write json file [default: False].
-      -h, --help             Show this screen.
+      -d DIR, --output-dir=DIR  Path of Output Directory [default: {out_dir}]
+      --overwrite               Force Overwrite if stub already exists [default: False].
+      --no-json                 Don't write json file [default: False].
+      -h, --help                Show this screen.
 
-    """.format(version=__version__)
+    """.format(out_dir='release\\stubs', version=__version__)
 
 arguments = docopt(__doc__, version=__version__)
 # logger.info(arguments)
 
 # OPTIONS
 option_assembly = arguments['<assembly-name>']
-option_assembly_file = arguments['-f']
 option_output_dir = arguments['--output-dir']
 option_overwrite = arguments['--overwrite']
 option_no_json = not arguments['--no-json']
 
 PROJECT_DIR = os.getcwd()  # Must execute from project dir
-PATHS, BUILTINS, ASSEMBLIES, IN_REVIT
-[sys.path.append(p) for p in SYS_PATHS] # Add Paths
+PATHS, BUILTINS, ASSEMBLIES
+[sys.path.append(p) for p in PATHS] # Add Paths
 
 if arguments['make']:
-    # timer = Timer()
-    # print('Done: {} seconds'.format(timer.stop()))
-if arguments['make_all']:
-    make(option_output_dir, assemblies=None, builtins=None, overwrite=False):
+    timer = Timer()
+    make(option_output_dir, assemblies=[option_assembly],
+        builtins=None, overwrite=False)
+    print('Done: {} seconds'.format(timer.stop()))
+# if arguments['make_all']:
+    # make(option_output_dir, assemblies=None, builtins=None, overwrite=False):
 
 

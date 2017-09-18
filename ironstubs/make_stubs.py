@@ -76,18 +76,18 @@ def load_assemblies(assemblies):
         else:
             logger.info('Loaded [{}]'.format(assembly_name))
 
-def crawl_loaded_references():
+def crawl_loaded_references(assemblies):
     """ Crawl Loaded assemblies to get Namespaces. """
     namespaces_dict = {}
     for assembly in clr.References:
         assembly_name = assembly.GetName().Name
         assembly_path = assembly.CodeBase
         assembly_filename = os.path.basename(assembly_path)
-        if assembly_name in LOADABLE_ASSEMBLIES:
+        if assembly_name in assemblies:
             logger.info('Parsing Assembly: {}'.format(assembly_name))
             namespaces_dict[assembly_filename] = iter_module(assembly_name, assembly)
         else:
-            logger.warning('*** Assembly Skiped. Not in target list: {}'.format(assembly_name))
+            logger.warning('Assembly Skiped. Not in target list: {}'.format(assembly_name))
     return namespaces_dict
 
 def crawl_builtin_modules(builtin_modules):
@@ -131,10 +131,12 @@ def create_json(output_dir, namespaces_dict):
         json.dump(namespaces_dict, fp, indent=2)
 
 def make(output_dir, assemblies=None, builtins=None, overwrite=False):
+    # TODO: Handle assemblies or builtins automatically
+
     namespaces_to_process = {}
     if assemblies:
         load_assemblies(assemblies)
-        namespaces_dict = crawl_loaded_references()
+        namespaces_dict = crawl_loaded_references(assemblies)
         namespaces_to_process.update(namespaces_dict)
     if builtins:
         builtins_dict = crawl_builtin_modules(builtins)
@@ -144,10 +146,11 @@ def make(output_dir, assemblies=None, builtins=None, overwrite=False):
         raise Exception('No namspaces to process')
 
     logger.info('#'*30)
-    logger.info('>>> Modules and Assemblies Loaded:')
-    logger.info( json.dumps(namespaces_dict, indent=2, sort_keys=True))
+    logger.info('Modules and Assemblies Loaded: ')
+    logger.info([v.keys() for v in namespaces_to_process.values()])
+    logger.debug( json.dumps(namespaces_dict, indent=2, sort_keys=True))
 
-    if raw_input('Write Stubs ({}) [y/n] [n]: '.format(output_dir)) != 'y':
+    if raw_input('>>> Write Stubs ({}) [y/n] [n]:\n>>> '.format(output_dir)) != 'y':
         logger.info('No Stubs Created')
     else:
         for assembly, modules in namespaces_dict.items():

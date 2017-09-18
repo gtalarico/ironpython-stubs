@@ -1,7 +1,8 @@
 import os
+import time
 from collections import defaultdict
 from ConfigParser import ConfigParser
-from utils.logger import logger
+from .logger import logger
 
 class Timer(object):
     "Time and TimeIt Decorator"
