@@ -1,53 +1,53 @@
 # IronPython Stubs
 
 Stubs for common IronPython CLR assemblies.
-
 These stubs are intended to be used by the autocomplete engine of editors like Atom, Sublime, and Visual Studio Code.
 
+## Why IronPython Stubs?
+
+If your are writing python code that targets IronPython, and using modules loaded through the Common Language Runtime (clr),
+your editor's autocomplete engine (which runs on regular python) will not be able to access those non-native modules.
+In other words, modules/or packages loaded through `clr.AddReference()` are not available on your autocomplete engine.
+
+The workaround here is simple: Use IronPython to crawl through these libraries,
+and create 'stubs' or ['mock objects'](https://en.wikipedia.org/wiki/Mock_object).
+These 'stubs' can then be used by the CPython autocomplete engine.
+The stubs include doc strings as well as constructor/function/method signatures.
+
+This repository contains the code to create these stubs, and also stores an
+a version of them that can be used by autocomplete-python.
 
 Demo
 
 ![autocomplete-demo](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/gifs/autocomplete-demo.gif)
 
+------------------------------------
 
-#### Get this Repository
+# Documentation
 
-1. Clone this repository using git _or_ download it from [here](https://github.com/gtalarico/ironpython-stubs/archive/master.zip) and unzip it.
+[Wiki](https://github.com/gtalarico/ironpython-stubs/wiki)
 
-#### Configure your Editor
+The [wiki](https://github.com/gtalarico/ironpython-stubs/wiki) has step-by-step instructions for setting up your stubs for Atom, Sublime, and Visual Studio Code.
 
-* [Atom](https://github.com/gtalarico/ironpython-stubs/blob/dev/main/docs/atom.md)
-* [Visual Studio Code](https://github.com/gtalarico/ironpython-stubs/blob/dev/main/docs/vscode.md)
-* [Sublime](https://github.com/gtalarico/ironpython-stubs/blob/dev/main/docs/sublime.md)
+If you haven't yet, read [Note on Performance](https://github.com/gtalarico/ironpython-stubs/wiki/A-Note-on-Performance)
+Large Namespaces such as `Autodesk.Revit.DB` can take a long time to be parsed and cached and might not show up right away.
 
-----------------------------------------------------------------------
+------------------------------------
 
-If you haven't yet, read *Note on Performance* above.
-Large Namespaces such as `Autodesk.Revit.DB` do not show up right away
+# Contribute - WIP
 
-#### More Examples
+### Generate Stubs
+`ipy -m ironstubs make RhinoCommon`
+`ipy -m ironstubs make --all`
+### Process Stubs
+WIP
 
-clr
-
-![autocomplete-clr](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/gifs/autocomplete-clr.gif)
-
-autodesk
-
-![autocomplete-clr](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/gifs/autocomplete-autodesk.gif)
-
-rhino
-
-![autocomplete-clr](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/gifs/autocomplete-rhino.gif)
-
-
-## Known Issues
+### Known Issues
 * Performance is not great for some of the larger classes. If you know how this can be improved please let me know.
 * Some of the function/constructor signatures are missing or incorrect. This is a problem with Generator3. Please send a PR or let me know if you have a fix.
 * Overloaded Methods do not show correct arguments
 
-
-## Credits
-
+### Credits
 This project is a fork of the repository started by Gary Edwards on [Gitlab](https://gitlab.com/reje/revit-python-stubs).
 Thank you for your work Gary - and thank you [Ehsan](https://github.com/eirannejad) for pointing me to it.
 
