@@ -154,7 +154,7 @@ def make(output_dir, assembly_or_builtin, overwrite=False, quiet=False):
     logger.info('Modules and Assemblies Loaded: {}'.format(modules))
     logger.debug( json.dumps(assembly_dict, indent=2, sort_keys=True))
 
-    if quiet or raw_input('>>> Write Stubs ({}) [y/n] [n]:\n>>> '.format(output_dir)) != 'y':
+    if not quiet and raw_input('>>> Write Stubs ({}) [y/n] [n]:\n>>> '.format(output_dir)) != 'y':
         logger.info('No Stubs Created')
     else:
         for assembly, modules in assembly_dict.items():
