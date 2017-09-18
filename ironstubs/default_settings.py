@@ -20,9 +20,9 @@ ASSEMBLIES = [
     'PresentationFramework',
     'WindowsBase',
     # | System
-    # 'System',
-    # 'System.Drawing',
-    # 'System.Windows.Forms',
+    'System',
+    'System.Drawing',
+    'System.Windows.Forms',
     # | Dynamo
     'ProtoGeometry',
     'DSCoreNodes',
