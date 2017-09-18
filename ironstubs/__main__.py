@@ -54,6 +54,7 @@ __doc__ = """
         --all                   Process all Assemblies in the default_settings.py
 
         --folder=<dir>          Name of Output Directory [default: {out_dir}]
+        --directory=<dir>       Additional Directory to add to Path [default: ]
         --overwrite             Force Overwrite if stub already exists [default: False].
         --no-json               Disables Json Log
         --debug                 Enables Debug Messages
@@ -69,6 +70,7 @@ option_all = arguments['--all']
 option_output_dir = arguments['--folder']
 option_overwrite = arguments['--overwrite']
 option_json = not arguments['--no-json']
+option_directory = arguments['--directory']
 
 if arguments['--debug']:
     logger.enable_debug()
@@ -76,9 +78,12 @@ if arguments['--debug']:
 # PROJECT_DIR = os.getcwd()  # Must execute from project dir
 PKG_DIR = os.path.dirname(__file__)
 PROJECT_DIR = os.path.dirname(PKG_DIR)
-os.chdir(PROJECT_DIR)
-[sys.path.append(p) for p in PATHS] # Add Paths
 release_dir = os.path.join(PKG_DIR, 'release', option_output_dir)
+os.chdir(PROJECT_DIR)
+
+[sys.path.append(p) for p in PATHS] # Add Paths
+if option_directory:
+    sys.path.append(option_directory)
 
 # logger.info(arguments)
 if arguments['make']:

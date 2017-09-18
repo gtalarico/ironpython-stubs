@@ -1,0 +1,6 @@
+{
+  "DSCoreNodes.DLL": {
+    "DSCore": "<module 'DSCore' (CLS module from DSCoreNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>", 
+    "DSCore.IO": "<module 'IO' (CLS module from DSCoreNodes, Version=1.2.1.3083, Culture=neutral, PublicKeyToken=null)>"
+  }
+}
