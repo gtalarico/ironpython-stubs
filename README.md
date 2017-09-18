@@ -19,7 +19,7 @@ a version of them that can be used by autocomplete-python.
 
 Demo
 
-![autocomplete-demo](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/gifs/autocomplete-demo.gif)
+![sublime-large-demo](https://github.com/gtalarico/ironpython-stubs/blob/master/docs/sublime/sublime-demo-large.gif)
 
 ------------------------------------
 
