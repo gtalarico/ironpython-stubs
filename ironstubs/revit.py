@@ -28,38 +28,30 @@ import os
 import json
 from pprint import pprint
 
-from utils.logger import logger
-from utils.helper import Timer
-from default_settings import PATHS, BUILTINS, ASSEMBLIES
-from make_stubs import make, dump_json_log
+STUBS_FOLDER = 'stubs2'
+DUMP_JSON = True
+OVERWRITE = True
 
-# logger.enable_debug()
-
-# PROJECT_DIR = os.getcwd()  # Must execute from project dir
+# Setp Dir First
 PKG_DIR = os.path.dirname(__file__)
 PROJECT_DIR = os.path.dirname(PKG_DIR)
-release_dir = os.path.join(PROJECT_DIR, 'release', option_output_dir)
+release_dir = os.path.join(PROJECT_DIR, 'release', STUBS_FOLDER)
 os.chdir(PROJECT_DIR)
+
+from utils.logger import logger
+from utils.helper import Timer
+from default_settings import PATHS, REVIT_ASSEMBLIES
+from make_stubs import make, dump_json_log
 
 # Add Paths
 PATHS.append(os.path.join(PROJECT_DIR, 'bin'))
 [sys.path.append(p) for p in PATHS]
 
-# Additional Paths from Options
-if option_directory:
-    sys.path.append(option_directory)
-
-logger.debug(sys.path)
-logger.debug(arguments)
-logger.debug(ASSEMBLIES)
-if arguments['make']:
-    timer = Timer()
-    if not option_all:
-        ASSEMBLIES = [option_assembly_name]
-
-    for assembly_name in ASSEMBLIES:
-        assembly_dict = make(release_dir, assembly_name,
-                             overwrite=option_overwrite, quiet=option_all)
-        if option_json:
-            dump_json_log(assembly_dict)
-    print('Done: {} seconds'.format(timer.stop()))
+timer = Timer()
+for assembly_name in REVIT_ASSEMBLIES:
+    assembly_dict = make(release_dir, assembly_name,
+                         overwrite=OVERWRITE,
+                         quiet=True)
+    if DUMP_JSON:
+        dump_json_log(assembly_dict)
+print('Done: {} seconds'.format(timer.stop()))
