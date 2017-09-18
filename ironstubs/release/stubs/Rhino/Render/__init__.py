@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Rhino.Render calls itself Render
-# from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null, RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530
+# from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530
 # by generator 1.145
 """ NamespaceTracker represent a CLS namespace. """
 # no imports
@@ -14,8 +14,8 @@ class CachedTextureCoordinates(CommonObject, IDisposable, ISerializable, IList[P
         """
         Add(self: CachedTextureCoordinates, item: Point3d)
             IList implementation, this list is always read-only so calling this
-                    
-             will cause a NotSupportedException to be thrown.
+                    will 
+             cause a NotSupportedException to be thrown.
         """
         pass
 
@@ -23,8 +23,8 @@ class CachedTextureCoordinates(CommonObject, IDisposable, ISerializable, IList[P
         """
         Clear(self: CachedTextureCoordinates)
             IList implementation, this list is always read-only so calling this
-                    
-             will cause a NotSupportedException to be thrown.
+                    will 
+             cause a NotSupportedException to be thrown.
         """
         pass
 
@@ -50,15 +50,14 @@ class CachedTextureCoordinates(CommonObject, IDisposable, ISerializable, IList[P
         """
         CopyTo(self: CachedTextureCoordinates, array: Array[Point3d], arrayIndex: int)
             Copies the elements of the this collection to an System.Array,
-                    
-             starting at a particular System.Array index.
+                    starting at a 
+             particular System.Array index.
         
         
             array: The one-dimensional System.Array that is the destination of the
-                    
-             elements copied from this collection. The System.Array must have
-                    
-             zero-based indexing.
+                    elements 
+             copied from this collection. The System.Array must have
+                    zero-based indexing.
         
             arrayIndex: The zero-based index in array at which copying begins.
         """
@@ -68,17 +67,17 @@ class CachedTextureCoordinates(CommonObject, IDisposable, ISerializable, IList[P
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -106,8 +105,8 @@ class CachedTextureCoordinates(CommonObject, IDisposable, ISerializable, IList[P
         """
         Insert(self: CachedTextureCoordinates, index: int, item: Point3d)
             IList implementation, this list is always read-only so calling this
-                    
-             will cause a NotSupportedException to be thrown.
+                    will 
+             cause a NotSupportedException to be thrown.
         """
         pass
 
@@ -115,8 +114,8 @@ class CachedTextureCoordinates(CommonObject, IDisposable, ISerializable, IList[P
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -132,8 +131,8 @@ class CachedTextureCoordinates(CommonObject, IDisposable, ISerializable, IList[P
         Remove(self: CachedTextureCoordinates, item: Point3d) -> bool
         
             IList implementation, this list is always read-only so calling this
-                    
-             will cause a NotSupportedException to be thrown.
+                    will 
+             cause a NotSupportedException to be thrown.
         """
         pass
 
@@ -141,8 +140,8 @@ class CachedTextureCoordinates(CommonObject, IDisposable, ISerializable, IList[P
         """
         RemoveAt(self: CachedTextureCoordinates, index: int)
             IList implementation, this list is always read-only so calling this
-                    
-             will cause a NotSupportedException to be thrown.
+                    will 
+             cause a NotSupportedException to be thrown.
         """
         pass
 
@@ -461,12 +460,12 @@ class CustomRenderMeshProvider(object):
         """
         RegisterProviders(assembly: Assembly, pluginId: Guid)
             Call this method once from your plug-ins OnLoad override for each
-                    
-             assembly containing a custom mesh provider.  Only publicly exported
-                    
-             classes derived from CustomRenderMeshProvider with a public constructor
-                  
-               that has no parameters will get registered.
+                    assembly 
+             containing a custom mesh provider.  Only publicly exported
+                    classes derived 
+             from CustomRenderMeshProvider with a public constructor
+                    that has no 
+             parameters will get registered.
         
         
             assembly: Assembly to search for valid CustomRenderMeshProvider derived classes.
@@ -758,8 +757,8 @@ class Decals(object, IEnumerable[Decal], IEnumerable):
         Add(self: Decals, decal: Decal) -> UInt32
         
             Add a new Decal to the decals list, use Decal.Create to create
-                    a new 
-             decal instance to add.
+                    a new decal 
+             instance to add.
         """
         pass
 
@@ -1062,15 +1061,15 @@ class RenderContent(object, IDisposable):
         AddAutomaticUserInterfaceSection(self: RenderContent, caption: str, id: int) -> bool
         
             Add a new automatic user interface section, Field values which include
-                   
-              prompts will be automatically added to this section.
+                    
+             prompts will be automatically added to this section.
         
         
             caption: Expandable tab caption.
             id: Tab id which may be used later on to reference this tab.
             Returns: Returns true if the automatic tab section was added otherwise; returns
-                   
-              false on error.
+                    false 
+             on error.
         """
         pass
 
@@ -1084,12 +1083,12 @@ class RenderContent(object, IDisposable):
         AddPersistentRenderContent(renderContent: RenderContent) -> bool
         
             Add a material, environment or texture to the internal RDK document lists as
-             
-                    top level content.  The content must have been returned from
+                    
+             top level content.  The content must have been returned from
                     
              RenderContent::MakeCopy, NewContentFromType or a similar function that returns
-           
-                      a non-document content.
+                   
+              a non-document content.
         
         
             renderContent: The render content.
@@ -1102,34 +1101,33 @@ class RenderContent(object, IDisposable):
         AddUserInterfaceSection(self: RenderContent, classType: Type, caption: str, createExpanded: bool, createVisible: bool) -> UserInterfaceSection
         
             Add a new .NET control to an content expandable tab section, the height
-                  
-               of the createExpanded tabs client area will be the initial height of the
-               
-                  specified control.
+                    of 
+             the createExpanded tabs client area will be the initial height of the
+                    
+             specified control.
         
         
             classType: The control class to create and embed as a child window in the
-                    
-             expandable tab client area.  This class type must be derived from
-                    
-             IWin32Window or this method will throw an ArgumentException.  Implement
-                  
-               the IUserInterfaceSection interface in your classType to get
-                    
-             UserInterfaceSection notification.
+                    expandable tab 
+             client area.  This class type must be derived from
+                    IWin32Window or this 
+             method will throw an ArgumentException.  Implement
+                    the IUserInterfaceSection 
+             interface in your classType to get
+                    UserInterfaceSection notification.
         
             caption: Expandable tab caption.
             createExpanded: If this value is true then the new expandable tab section will
-                    
-             initially be expanded, if it is false it will be collapsed.
+                    initially be 
+             expanded, if it is false it will be collapsed.
         
             createVisible: If this value is true then the new expandable tab section will
-                    
-             initially be visible, if it is false it will be hidden.
+                    initially be 
+             visible, if it is false it will be hidden.
         
             Returns: Returns the UserInterfaceSection object used to manage the new 
-                    user 
-             control object.
+                    user control 
+             object.
         """
         pass
 
@@ -1158,25 +1156,23 @@ class RenderContent(object, IDisposable):
         ChildSlotNameFromParamName(self: RenderContent, paramName: str) -> str
         
             A "child slot" is the specific "slot" that a child (usually a texture) occupies.
-         
-                         This is generally the "use" of the child - in other words, the thing 
-             the child
-                     operates on.  Some examples are "color", "transparency".
+                 
+                 This is generally the "use" of the child - in other words, the thing the child
+               
+                   operates on.  Some examples are "color", "transparency".
         
         
-            paramName: The name of a parameter field. Since child textures will usually correspond with 
-             some
-                    parameter (they generally either replace or modify a parameter 
-             over UV space) these functions are used to
-                    specify which parameter 
-             corresponded with child slot.  If there is no correspondence, return the empty
-           
-                      string.
+            paramName: The name of a parameter field. Since child textures will usually correspond with some
+            
+                     parameter (they generally either replace or modify a parameter over UV space) 
+             these functions are used to
+                    specify which parameter corresponded with child 
+             slot.  If there is no correspondence, return the empty
+                    string.
         
             Returns: The default behavior for these functions is to return the input string.
-                  
-                Sub-classes may (in the future) override these functions to provide different 
-             mappings.
+                     
+             Sub-classes may (in the future) override these functions to provide different mappings.
         """
         pass
 
@@ -1226,8 +1222,8 @@ class RenderContent(object, IDisposable):
             document: The Rhino document containing the content.
             id: Id of the content instance to search for.
             Returns: Returns the content object with the specified Id if it is found
-                    
-             otherwise it returns null.
+                    otherwise it 
+             returns null.
         """
         pass
 
@@ -1235,23 +1231,20 @@ class RenderContent(object, IDisposable):
         """
         GetChildSlotParameter(self: RenderContent, parameterName: str, childSlotName: str) -> object
         
-            Extra requirements are a way of specifying extra functionality on parameters in 
-             the automatic UI.
-                    Implement this function to specify additional 
-             functionality for automatic UI sections or the texture summary.
-                    See 
-             IAutoUIExtraRequirements.h in the C++ RDK for string definitions for the parameter 
-             names.
+            Extra requirements are a way of specifying extra functionality on parameters in the 
+             automatic UI.
+                    Implement this function to specify additional functionality for 
+             automatic UI sections or the texture summary.
+                    See IAutoUIExtraRequirements.h 
+             in the C++ RDK for string definitions for the parameter names.
         
         
             parameterName: The parameter or field internal name to which this query applies
-            childSlotName: The extra requirement parameter, as listed in IAutoUIExtraRequirements.h in the 
-             C++ RDK
-        
+            childSlotName: The extra requirement parameter, as listed in IAutoUIExtraRequirements.h in the C++ RDK
             Returns: Call the base class if you do not support the extra requirement parameter.
-               
-                  Current supported return values are (int, bool, float, double, string, Guid, 
-             Color, Vector3d, Point3d, DateTime)
+                    
+             Current supported return values are (int, bool, float, double, string, Guid, Color, 
+             Vector3d, Point3d, DateTime)
         """
         pass
 
@@ -1260,8 +1253,8 @@ class RenderContent(object, IDisposable):
         GetParameter(self: RenderContent, parameterName: str) -> object
         
             Query the content instance for the value of a given named parameter.
-                    
-             If you do not support this parameter, call the base class.
+                    If you 
+             do not support this parameter, call the base class.
         
         
             parameterName: Name of the parameter
@@ -1273,10 +1266,10 @@ class RenderContent(object, IDisposable):
         Icon(self: RenderContent, size: Size) -> Bitmap
         
             Icon to display in the content browser, this bitmap needs to be valid for
-                
-                 the life of this content object, the content object that returns the bitmap
-          
-                       is responsible for disposing of the bitmap.
+                    the 
+             life of this content object, the content object that returns the bitmap
+                    is 
+             responsible for disposing of the bitmap.
         
         
             size: Requested icon size
@@ -1289,12 +1282,12 @@ class RenderContent(object, IDisposable):
         IsFactoryProductAcceptableAsChild(self: RenderContent, kindId: Guid, factoryKind: str, childSlotName: str) -> bool
         
             Override this method to restrict the type of acceptable child content.
-                   
-              The default implementation of this method just returns true.
+                    The 
+             default implementation of this method just returns true.
         
             Returns: Return true only if content with the specified kindId can be  accepted
-                   
-              as a child in the specified child slot.
+                    as a 
+             child in the specified child slot.
         """
         pass
 
@@ -1303,8 +1296,8 @@ class RenderContent(object, IDisposable):
         """
         LoadFromFile(filename: str) -> RenderContent
         
-            Loads content from a library file.  Does not add the content to the persistent 
-             content list.
+            Loads content from a library file.  Does not add the content to the persistent content 
+             list.
                     Use AddPersistantContent to add it to the list.
         
         
@@ -1329,16 +1322,15 @@ class RenderContent(object, IDisposable):
         OnGetDefaultsInteractive(self: RenderContent, parentWindowHandle: IntPtr) -> bool
         
             Override this method to prompt user for information necessary to
-                    
-             create a new content object.  For example, if you are created a
-                    
-             textured material you may prompt the user for a bitmap file name
-                    
-             prior to creating the textured material.
+                    create a new 
+             content object.  For example, if you are created a
+                    textured material you may 
+             prompt the user for a bitmap file name
+                    prior to creating the textured 
+             material.
         
             Returns: If true is returned the content is created otherwise the creation
-                    is 
-             aborted.
+                    is aborted.
         """
         pass
 
@@ -1347,10 +1339,10 @@ class RenderContent(object, IDisposable):
         OpenInEditor(self: RenderContent) -> bool
         
             Call this method to open the content in the relevant thumbnail editor
-                    
-             and select it for editing by the user. The content must be in the
-                    
-             document or the call will fail.
+                    and 
+             select it for editing by the user. The content must be in the
+                    document or the 
+             call will fail.
         
             Returns: Returns true on success or false on error.
         """
@@ -1361,8 +1353,8 @@ class RenderContent(object, IDisposable):
         OpenInModalEditor(self: RenderContent) -> bool
         
             Call this method to open the content in the a modal version of the editor.
-               
-                  The content must be in the document or the call will fail.
+                    
+             The content must be in the document or the call will fail.
         
             Returns: Returns true on success or false on error.
         """
@@ -1373,16 +1365,15 @@ class RenderContent(object, IDisposable):
         ParamNameFromChildSlotName(self: RenderContent, childSlotName: str) -> str
         
             A "child slot" is the specific "slot" that a child (usually a texture) occupies.
-         
-                        This is generally the "use" of the child - in other words, the thing 
-             the child
-                    operates on.  Some examples are "color", "transparency".
+                 
+                This is generally the "use" of the child - in other words, the thing the child
+                
+                 operates on.  Some examples are "color", "transparency".
         
         
             childSlotName: The named of the child slot to receive the parameter name for.
-            Returns: The default behaviour for these functions is to return the input string.  
-             Sub-classes may (in the future) override these functions to provide different 
-             mappings.
+            Returns: The default behaviour for these functions is to return the input string.  Sub-classes may 
+             (in the future) override these functions to provide different mappings.
         """
         pass
 
@@ -1391,22 +1382,22 @@ class RenderContent(object, IDisposable):
         """
         RegisterContent(assembly: Assembly, pluginId: Guid) -> Array[Type]
         
-            Call RegisterContent in your plug-in's OnLoad function in order to register all of 
-             the
-                    custom RenderContent classes in your assembly.
+            Call RegisterContent in your plug-in's OnLoad function in order to register all of the
+           
+                      custom RenderContent classes in your assembly.
         
         
             assembly: Assembly where custom content is defined, this may be a plug-in assembly
-                 
-                or another assembly referenced by the plug-in.
+                    or 
+             another assembly referenced by the plug-in.
         
             pluginId: Parent plug-in for this assembly.
             Returns: array of render content types registered on success. null on error.
         RegisterContent(plugin: PlugIn) -> Array[Type]
         
-            Call RegisterContent in your plug-in's OnLoad function in order to register all of 
-             the
-                    custom RenderContent classes in your assembly.
+            Call RegisterContent in your plug-in's OnLoad function in order to register all of the
+           
+                      custom RenderContent classes in your assembly.
         
             Returns: array of render content types registered on success. null on error.
         """
@@ -1672,14 +1663,14 @@ class RenderContentSerializer(object):
         Read(self: RenderContentSerializer, pathToFile: str) -> RenderContent
         
             Called to when importing a file, file should be parsed and converted to
-                  
-               a valid RenderContent object.
+                    a 
+             valid RenderContent object.
         
         
             pathToFile: Full path of the file to load.
             Returns: Returns a valid RenderContent object such as RenderMaterial if the file
-                  
-               was successfully parsed otherwise returns null.
+                    was 
+             successfully parsed otherwise returns null.
         """
         pass
 
@@ -1692,8 +1683,8 @@ class RenderContentSerializer(object):
             pathToFile: Full path of file to write
             renderContent: Render content to save
             previewArgs: Parameters used to generate a preview image which may be embedded in
-                    
-             the exported file.
+                    the 
+             exported file.
         """
         pass
 
@@ -1819,9 +1810,7 @@ class RenderEnvironment(RenderContent, IDisposable):
         """
         NewBasicEnvironment(environment: SimulatedEnvironment) -> RenderEnvironment
         
-            Constructs a new Rhino.Render.RenderEnvironment from a 
-             Rhino.Render.SimulatedEnvironment.
-        
+            Constructs a new Rhino.Render.RenderEnvironment from a Rhino.Render.SimulatedEnvironment.
         
             environment: The environment to create the basic environment from.
             Returns: A new basic environment.
@@ -1840,16 +1829,15 @@ class RenderEnvironment(RenderContent, IDisposable):
         OnGetDefaultsInteractive(self: RenderContent, parentWindowHandle: IntPtr) -> bool
         
             Override this method to prompt user for information necessary to
-                    
-             create a new content object.  For example, if you are created a
-                    
-             textured material you may prompt the user for a bitmap file name
-                    
-             prior to creating the textured material.
+                    create a new 
+             content object.  For example, if you are created a
+                    textured material you may 
+             prompt the user for a bitmap file name
+                    prior to creating the textured 
+             material.
         
             Returns: If true is returned the content is created otherwise the creation
-                    is 
-             aborted.
+                    is aborted.
         """
         pass
 
@@ -1949,16 +1937,15 @@ class RenderMaterial(RenderContent, IDisposable):
         OnGetDefaultsInteractive(self: RenderContent, parentWindowHandle: IntPtr) -> bool
         
             Override this method to prompt user for information necessary to
-                    
-             create a new content object.  For example, if you are created a
-                    
-             textured material you may prompt the user for a bitmap file name
-                    
-             prior to creating the textured material.
+                    create a new 
+             content object.  For example, if you are created a
+                    textured material you may 
+             prompt the user for a bitmap file name
+                    prior to creating the textured 
+             material.
         
             Returns: If true is returned the content is created otherwise the creation
-                    is 
-             aborted.
+                    is aborted.
         """
         pass
 
@@ -1966,16 +1953,14 @@ class RenderMaterial(RenderContent, IDisposable):
         """
         SimulateMaterial(self: RenderMaterial, simulation: Material, isForDataOnly: bool) -> Material
         
-            Override this function to provide a Rhino.DocObjects.Material definition for this 
-             material
+            Override this function to provide a Rhino.DocObjects.Material definition for this material
+             
                     to be used by other rendering engines including the display.
         
         
-            simulation: Set the properties of the input basic material to provide the simulation for this 
-             material.
-        
-            isForDataOnly: Called when only asking for a hash - don't write any textures to the disk - just 
-             provide the filenames they will get.
+            simulation: Set the properties of the input basic material to provide the simulation for this material.
+            isForDataOnly: Called when only asking for a hash - don't write any textures to the disk - just provide 
+             the filenames they will get.
         """
         pass
 
@@ -2080,18 +2065,16 @@ class RenderPanels(object):
         FromRenderSessionId(plugIn: PlugIn, panelType: Type, renderSessionId: Guid) -> object
         
             Get the instance of a render panel associated with a specific render
+                    session, 
+             this is useful when it is necessary to update a control from a
                     
-             session, this is useful when it is necessary to update a control from a
-                  
-               Rhino.Render.RenderPipeline
+             Rhino.Render.RenderPipeline
         
         
             plugIn: The plug-in that registered the custom user interface
             panelType: The type of panel to return
             renderSessionId: The Rhino.Render.RenderPipeline.RenderSessionId of a specific render
-                    
-             session.
-        
+                    session.
             Returns: Returns the custom panel object if found; otherwise null is returned.
         """
         pass
@@ -2100,13 +2083,12 @@ class RenderPanels(object):
         """
         RegisterPanel(self: RenderPanels, plugin: PlugIn, renderPanelType: RenderPanelType, panelType: Type, caption: str, alwaysShow: bool, initialShow: bool)
             Register custom render user interface with Rhino.  This should only be
-                   
-              done in 
-             Rhino.PlugIns.RenderPlugIn.RegisterRenderPanels(Rhino.Render.RenderPanels).  
-             Panels
-                    registered after 
-             Rhino.PlugIns.RenderPlugIn.RegisterRenderPanels(Rhino.Render.RenderPanels) is 
-             called
+                    done 
+             in Rhino.PlugIns.RenderPlugIn.RegisterRenderPanels(Rhino.Render.RenderPanels).  Panels
+           
+                      registered after 
+             Rhino.PlugIns.RenderPlugIn.RegisterRenderPanels(Rhino.Render.RenderPanels) is called
+             
                     will be ignored.
         
         
@@ -2115,8 +2097,8 @@ class RenderPanels(object):
             panelType: The type of object to be created and added to the render container.
             caption: The caption for the custom user interface.
             alwaysShow: If true the custom user interface will always be visible, if false then
-                  
-               it may be hidden or shown as requested by the user.
+                    it 
+             may be hidden or shown as requested by the user.
         
             initialShow: Initial visibility state of the custom user interface control.
         """
@@ -2199,8 +2181,8 @@ class RenderPipeline(object, IDisposable):
         ContinueModal(self: RenderPipeline) -> bool
         
             Frequently called during a rendering by the frame work in order to
-                    
-             determine if the rendering should continue.
+                    determine 
+             if the rendering should continue.
         
             Returns: Returns true if the rendering should continue.
         """
@@ -2230,8 +2212,8 @@ class RenderPipeline(object, IDisposable):
         """
         OnRenderBegin(self: RenderPipeline) -> bool
         
-            Called by the framework when it is time to start rendering, the render window will 
-             be created at this point and it is safe to start
+            Called by the framework when it is time to start rendering, the render window will be 
+             created at this point and it is safe to start
         """
         pass
 
@@ -2239,8 +2221,8 @@ class RenderPipeline(object, IDisposable):
         """
         OnRenderEnd(self: RenderPipeline, e: RenderEndEventArgs)
             Called by the framework when the user closes the render window or clicks
-                 
-                on the stop button in the render window.
+                    on 
+             the stop button in the render window.
         """
         pass
 
@@ -2252,8 +2234,8 @@ class RenderPipeline(object, IDisposable):
         """
         Render(self: RenderPipeline) -> RenderReturnCode
         
-            Call this function to render the scene normally. The function returns when 
-             rendering is complete (or cancelled).
+            Call this function to render the scene normally. The function returns when rendering is 
+             complete (or cancelled).
         
             Returns: A code that explains how rendering completed.
         """
@@ -2280,8 +2262,8 @@ class RenderPipeline(object, IDisposable):
         """
         RenderSize() -> Size
         
-            Gets the render size as specified in the ON_3dmRenderSettings. Will automatically 
-             return the correct size based on the ActiveView or custom settings.
+            Gets the render size as specified in the ON_3dmRenderSettings. Will automatically return 
+             the correct size based on the ActiveView or custom settings.
         
             Returns: The render size.
         """
@@ -2309,12 +2291,12 @@ class RenderPipeline(object, IDisposable):
             Saves the rendered image to a file.
         
             fileName: the full path to the file name to save to. If null or empty a file
-                    
-             dialog will be displayed prompting the user for a save file name.
+                    dialog 
+             will be displayed prompting the user for a save file name.
         
             Returns: Returns true if a file was written or false if a file dialog was
-                    
-             canceled or the file was not written.
+                    canceled or 
+             the file was not written.
         """
         pass
 
@@ -2380,8 +2362,8 @@ class RenderPrimitive(object, IDisposable):
         Mesh(self: RenderPrimitive) -> Mesh
         
             Returns the mesh associated with the object, this will mesh primitives
-                   
-              and always return a mesh.
+                    and 
+             always return a mesh.
         """
         pass
 
@@ -2390,16 +2372,16 @@ class RenderPrimitive(object, IDisposable):
         TryGetBox(self: RenderPrimitive) -> (bool, Box)
         
             Call this method to get a Rhino.Geometry.Box primitive for this mesh.  If this
-           
-                      meshes Rhino.Render.RenderPrimitive.PrimitiveType is not a 
+                   
+              meshes Rhino.Render.RenderPrimitive.PrimitiveType is not a 
              Rhino.Render.RenderPrimitiveType.Box
                     then the box parameter is set to 
              Rhino.Geometry.Box.Empty.
         
             Returns: Returns true if Rhino.Render.RenderPrimitive.PrimitiveType is 
              Rhino.Render.RenderPrimitiveType.Box and
-                    the box parameter was 
-             initialized otherwise returns false.
+                    the box parameter was initialized 
+             otherwise returns false.
         """
         pass
 
@@ -2408,18 +2390,18 @@ class RenderPrimitive(object, IDisposable):
         TryGetCone(self: RenderPrimitive) -> (bool, Cone, Plane)
         
             Call this method to get a Rhino.Geometry.Cone primitive for this mesh.  If this
-          
-                       meshes Rhino.Render.RenderPrimitive.PrimitiveType is not a 
+                  
+               meshes Rhino.Render.RenderPrimitive.PrimitiveType is not a 
              Rhino.Render.RenderPrimitiveType.Cone
-                    then the cone parameter is set 
-             to Rhino.Geometry.Cone.Unset and the truncation
+                    then the cone parameter is set to 
+             Rhino.Geometry.Cone.Unset and the truncation
                     parameter is set to 
              Rhino.Geometry.Plane.Unset.
         
             Returns: Returns true if Rhino.Render.RenderPrimitive.PrimitiveType is 
              Rhino.Render.RenderPrimitiveType.Cone and
-                    the cone and truncation 
-             parameters were initialized otherwise returns false.
+                    the cone and truncation parameters 
+             were initialized otherwise returns false.
         """
         pass
 
@@ -2428,11 +2410,11 @@ class RenderPrimitive(object, IDisposable):
         TryGetPlane(self: RenderPrimitive) -> (bool, PlaneSurface)
         
             Call this method to get a Rhino.Geometry.Plane primitive for this mesh.  If this
-         
-                        meshes Rhino.Render.RenderPrimitive.PrimitiveType is not a 
+                 
+                meshes Rhino.Render.RenderPrimitive.PrimitiveType is not a 
              Rhino.Render.RenderPrimitiveType.Plane
-                    then the plane parameter is 
-             set to null.
+                    then the plane parameter is set to 
+             null.
         
             Returns: Returns true if Rhino.Render.RenderPrimitive.PrimitiveType is 
              Rhino.Render.RenderPrimitiveType.Plane and
@@ -2446,11 +2428,11 @@ class RenderPrimitive(object, IDisposable):
         TryGetSphere(self: RenderPrimitive) -> (bool, Sphere)
         
             Call this method to get a sphere primitive for this mesh.  If this
-                    
-             meshes Rhino.Render.RenderPrimitive.PrimitiveType is not a 
+                    meshes 
+             Rhino.Render.RenderPrimitive.PrimitiveType is not a 
              Rhino.Render.RenderPrimitiveType.Sphere
-                    then the sphere parameter is 
-             set to Rhino.Geometry.Sphere.Unset.
+                    then the sphere parameter is set to 
+             Rhino.Geometry.Sphere.Unset.
         
             Returns: Returns true if Rhino.Render.RenderPrimitive.PrimitiveType is 
              Rhino.Render.RenderPrimitiveType.Sphere and
@@ -2558,8 +2540,8 @@ class RenderPrimitiveList(object, IDisposable):
         
             cone: Cone to add.
             truncation: The plane used to cut the cone (the non-apex end is kept). Should be
-                    
-             equal to cone.plane if not truncated.
+                    equal to 
+             cone.plane if not truncated.
         
             material: Material to add, may be null if not needed.
         Add(self: RenderPrimitiveList, mesh: Mesh, material: RenderMaterial)
@@ -2598,19 +2580,19 @@ class RenderPrimitiveList(object, IDisposable):
         Material(self: RenderPrimitiveList, index: int) -> RenderMaterial
         
             Call this method to get the render material associated with the mesh at
-                  
-               the specified index.  Will return null if there is no
-                    material 
-             associated with the requested mesh.
+                    the 
+             specified index.  Will return null if there is no
+                    material associated with 
+             the requested mesh.
         
         
             index: The zero based index of the item in the list.  Valid values are greater
-                  
-               than or equal to 0 and less than Count.
+                    than 
+             or equal to 0 and less than Count.
         
             Returns: If there is a render material associated at the requested index then
-                    
-             the material is returned otherwise null is returned.
+                    the 
+             material is returned otherwise null is returned.
         """
         pass
 
@@ -2619,21 +2601,21 @@ class RenderPrimitiveList(object, IDisposable):
         Mesh(self: RenderPrimitiveList, index: int) -> Mesh
         
             Get the mesh for the primitive at the specified index. If the item at
-                    
-             this index is a primitive type other than a mesh then it mesh
-                    
-             representation is returned.
+                    this 
+             index is a primitive type other than a mesh then it mesh
+                    representation is 
+             returned.
         
         
             index: The zero based index of the item in the list.  Valid values are greater
-                  
-               than or equal to 0 and less than Count.
+                    than 
+             or equal to 0 and less than Count.
         
             Returns: Returns the mesh for the primitive at the specified index. If the item
-                   
-              at this index is a primitive type other than a mesh then it mesh
-                    
-             representation is returned.
+                    at 
+             this index is a primitive type other than a mesh then it mesh
+                    representation 
+             is returned.
         """
         pass
 
@@ -2644,8 +2626,8 @@ class RenderPrimitiveList(object, IDisposable):
             Type of primitive object at this index.
         
             index: The zero based index of the item in the list.  Valid values are greater
-                  
-               than or equal to 0 and less than Count.
+                    than 
+             or equal to 0 and less than Count.
         
             Returns: Primitive type of the item at this index.
         """
@@ -2656,18 +2638,18 @@ class RenderPrimitiveList(object, IDisposable):
         ToMaterialArray(self: RenderPrimitiveList) -> Array[RenderMaterial]
         
             Call this method to see if there are any RenderMaterials associated
-                    
-             with the meshes.  Each primitive can optionally have a RenderMaterial
-                    
-             associated with it, if the RenderMaterial is null then check for a
+                    with the 
+             meshes.  Each primitive can optionally have a RenderMaterial
+                    associated with 
+             it, if the RenderMaterial is null then check for a
                     
              RhinoObject.RenderMaterial.
         
             Returns: Return an array that of the same size as the ToMeshArray() containing
-                    
-             the RenderMaterial associated with the mesh, may contain null entries
-                    
-             if there is no RenderMaterial associated with the custom mesh.
+                    the 
+             RenderMaterial associated with the mesh, may contain null entries
+                    if there is 
+             no RenderMaterial associated with the custom mesh.
         """
         pass
 
@@ -2676,12 +2658,12 @@ class RenderPrimitiveList(object, IDisposable):
         ToMeshArray(self: RenderPrimitiveList) -> Array[Mesh]
         
             Call this method to get a array of meshes, all primitives will get
-                    
-             meshed and the meshes will get included in the returned array.
+                    meshed and 
+             the meshes will get included in the returned array.
         
             Returns: Return an array of meshes from this list, this will convert all
-                    
-             primitives to meshes.
+                    primitives to 
+             meshes.
         """
         pass
 
@@ -2692,12 +2674,12 @@ class RenderPrimitiveList(object, IDisposable):
             Call this method to get a box at the specified index.
         
             index: The zero based index of the item in the list.  Valid values are greater
-                  
-               than or equal to 0 and less than Count.
+                    than 
+             or equal to 0 and less than Count.
         
             Returns: Return true if the index is in range and the primitive at the requested
-                  
-               index is a box otherwise returns false.
+                    index 
+             is a box otherwise returns false.
         """
         pass
 
@@ -2708,12 +2690,12 @@ class RenderPrimitiveList(object, IDisposable):
             Call this method to get a box at the specified index.
         
             index: The zero based index of the item in the list.  Valid values are greater
-                  
-               than or equal to 0 and less than Count.
+                    than 
+             or equal to 0 and less than Count.
         
             Returns: Return true if the index is in range and the primitive at the requested
-                  
-               index is a box otherwise returns false.
+                    index 
+             is a box otherwise returns false.
         """
         pass
 
@@ -2724,12 +2706,12 @@ class RenderPrimitiveList(object, IDisposable):
             Call this method to get a box at the specified index.
         
             index: The zero based index of the item in the list.  Valid values are greater
-                  
-               than or equal to 0 and less than Count.
+                    than 
+             or equal to 0 and less than Count.
         
             Returns: Return true if the index is in range and the primitive at the requested
-                  
-               index is a plane otherwise returns false.
+                    index 
+             is a plane otherwise returns false.
         """
         pass
 
@@ -2740,12 +2722,12 @@ class RenderPrimitiveList(object, IDisposable):
             Call this method to get a box at the specified index.
         
             index: The zero based index of the item in the list.  Valid values are greater
-                  
-               than or equal to 0 and less than Count.
+                    than 
+             or equal to 0 and less than Count.
         
             Returns: Return true if the index is in range and the primitive at the requested
-                  
-               index is a box otherwise returns false.
+                    index 
+             is a box otherwise returns false.
         """
         pass
 
@@ -3070,18 +3052,16 @@ class RenderTabs(object):
         FromRenderSessionId(plugIn: PlugIn, tabType: Type, renderSessionId: Guid) -> object
         
             Get the instance of a render tab associated with a specific render
+                    session, 
+             this is useful when it is necessary to update a control from a
                     
-             session, this is useful when it is necessary to update a control from a
-                  
-               Rhino.Render.RenderPipeline
+             Rhino.Render.RenderPipeline
         
         
             plugIn: The plug-in that registered the custom user interface
             tabType: The type of tab to return
             renderSessionId: The Rhino.Render.RenderPipeline.RenderSessionId of a specific render
-                    
-             session.
-        
+                    session.
             Returns: Returns the custom tab object if found; otherwise null is returned.
         """
         pass
@@ -3090,13 +3070,12 @@ class RenderTabs(object):
         """
         RegisterTab(self: RenderTabs, plugin: PlugIn, tabType: Type, caption: str, icon: Icon)
             Register custom render user interface with Rhino.  This should only be
-                   
-              done in 
-             Rhino.PlugIns.RenderPlugIn.RegisterRenderPanels(Rhino.Render.RenderPanels).  
-             Panels
-                    registered after 
-             Rhino.PlugIns.RenderPlugIn.RegisterRenderPanels(Rhino.Render.RenderPanels) is 
-             called
+                    done 
+             in Rhino.PlugIns.RenderPlugIn.RegisterRenderPanels(Rhino.Render.RenderPanels).  Panels
+           
+                      registered after 
+             Rhino.PlugIns.RenderPlugIn.RegisterRenderPanels(Rhino.Render.RenderPanels) is called
+             
                     will be ignored.
         
         
@@ -3123,10 +3102,10 @@ class RenderTexture(RenderContent, IDisposable):
         CreateEvaluator(self: RenderTexture) -> TextureEvaluator
         
             Constructs a texture evaluator. This is an independent lightweight object
-                
-                 capable of evaluating texture color throughout uvw space. May be called
-              
-                   from within a rendering shade pipeline.
+                    
+             capable of evaluating texture color throughout uvw space. May be called
+                    from 
+             within a rendering shade pipeline.
         
             Returns: A texture evaluator instance.
         """
@@ -3162,8 +3141,8 @@ class RenderTexture(RenderContent, IDisposable):
         GetOffset(self: RenderTexture) -> Vector3d
         
             Get offset value across UVW space. If the projection type is WCS or
-                    
-             other type specified in model units, then this is the offset in meters.
+                    other 
+             type specified in model units, then this is the offset in meters.
         """
         pass
 
@@ -3188,10 +3167,10 @@ class RenderTexture(RenderContent, IDisposable):
         GetRepeat(self: RenderTexture) -> Vector3d
         
             Get repeat value across UVW space. If the projection type is WCS or
-                    
-             other type specified in model units, then this is the repeat across 1
-                    
-             meter of the model.
+                    other 
+             type specified in model units, then this is the repeat across 1
+                    meter of the 
+             model.
         """
         pass
 
@@ -3244,16 +3223,15 @@ class RenderTexture(RenderContent, IDisposable):
         OnGetDefaultsInteractive(self: RenderContent, parentWindowHandle: IntPtr) -> bool
         
             Override this method to prompt user for information necessary to
-                    
-             create a new content object.  For example, if you are created a
-                    
-             textured material you may prompt the user for a bitmap file name
-                    
-             prior to creating the textured material.
+                    create a new 
+             content object.  For example, if you are created a
+                    textured material you may 
+             prompt the user for a bitmap file name
+                    prior to creating the textured 
+             material.
         
             Returns: If true is returned the content is created otherwise the creation
-                    is 
-             aborted.
+                    is aborted.
         """
         pass
 
@@ -3388,21 +3366,21 @@ class RenderWindow(object):
         AddWireframeChannel(self: RenderWindow, doc: RhinoDoc, viewport: ViewportInfo, size: Size, region: Rectangle) -> bool
         
             A wireframe channel will not be added if none of the document properties settings
-        
-                         indicate that one is needed. In other words, Rhino will not generate 
-             an empty wireframe channel
+                
+                 indicate that one is needed. In other words, Rhino will not generate an empty 
+             wireframe channel
                     just for the fun of it.
         
         
             doc: The document to display
             viewport: The view to display
             size: The size of the image without clipping (ie - if you have a region, it was the
-            
-                     size of the image before you cut the region out.
+                    
+             size of the image before you cut the region out.
         
             region: The area of the rendering you want to display.  This should match the size
-               
-                  of the render window itself (ie - the one set using SetSize)
+                    of 
+             the render window itself (ie - the one set using SetSize)
         
             Returns: Returns true if the wireframe channel was successfully added.
         """
@@ -3446,28 +3424,27 @@ class RenderWindow(object):
     def SetRGBAChannelColors(self, *__args):
         """
         SetRGBAChannelColors(self: RenderWindow, rectangle: Rectangle, colors: Array[Color4f])
-            Call this method to open the RenderWindow.StandardChannels.RGBA channel and set a 
-             block of color values
+            Call this method to open the RenderWindow.StandardChannels.RGBA channel and set a block of 
+             color values
         
         
-            rectangle: rectangle.X is the horizontal pixel position of the left edge. No validation is 
-             done on this value.
-                      The caller is responsible for ensuring that it 
-             is within the frame buffer.
-                    rectangle.Y is the vertical pixel 
-             position of the top edge. No validation is done on this value.
-                      The 
-             caller is responsible for ensuring that it is within the frame buffer.
-                   
-              rectangle.Width is the width of the rectangle in pixels. No validation is done on 
+            rectangle: rectangle.X is the horizontal pixel position of the left edge. No validation is done on 
              this value.
-                    rectangle.Height is the height of the rectangle in 
-             pixels. No validation is done on this value.
+                      The caller is responsible for ensuring that it is within the 
+             frame buffer.
+                    rectangle.Y is the vertical pixel position of the top edge. No 
+             validation is done on this value.
+                      The caller is responsible for ensuring 
+             that it is within the frame buffer.
+                    rectangle.Width is the width of the 
+             rectangle in pixels. No validation is done on this value.
+                    rectangle.Height is 
+             the height of the rectangle in pixels. No validation is done on this value.
         
             colors: Array of Color4f values used to set the RenderWindow.StandardChannels.RGBA
         SetRGBAChannelColors(self: RenderWindow, size: Size, colors: Array[Color4f])
-            Call this method to open the RenderWindow.StandardChannels.RGBA channel and set a 
-             block of color values
+            Call this method to open the RenderWindow.StandardChannels.RGBA channel and set a block of 
+             color values
         
         
             size: Size of the area to set. No validation is done on this value
@@ -3731,8 +3708,7 @@ class Sun(object, IDisposable):
                     If the date System.DateTime.KindKind is 
              System.DateTimeKind.LocalDateTimeKind.Local,
                     or 
-             System.DateTimeKind.UnspecifiedDateTimeKind.Unspecified, the date is considered 
-             local.
+             System.DateTimeKind.UnspecifiedDateTimeKind.Unspecified, the date is considered local.
         
             latitudeDegrees: The latitude, in degrees, of the location on Earth.
             longitudeDegrees: The longitude, in degrees, of the location on Earth.
@@ -3959,24 +3935,24 @@ class TextureMapping(CommonObject, IDisposable, ISerializable):
             Create a box projection texture mapping.
         
             plane: The sides of the box the box are parallel to the plane's coordinate
-                    
-             planes.  The dx, dy, dz intervals determine the location of the sides.
+                    planes.  
+             The dx, dy, dz intervals determine the location of the sides.
         
             dx: Determines the location of the front and back planes. The vector
-                    
-             plane.xaxis is perpendicular to these planes and they pass through
+                    plane.xaxis 
+             is perpendicular to these planes and they pass through
                     
              plane.PointAt(dx[0],0,0) and plane.PointAt(dx[1],0,0), respectivly.
         
             dy: Determines the location of the left and right planes. The vector
-                    
-             plane.yaxis is perpendicular to these planes and they pass through
+                    plane.yaxis 
+             is perpendicular to these planes and they pass through
                     
              plane.PointAt(0,dy[0],0) and plane.PointAt(0,dy[1],0), respectivly.
         
             dz: Determines the location of the top and bottom planes. The vector
-                    
-             plane.zaxis is perpendicular to these planes and they pass through
+                    plane.zaxis 
+             is perpendicular to these planes and they pass through
                     
              plane.PointAt(0,0,dz[0]) and plane.PointAt(0,0,dz[1]), respectivly.
         
@@ -3993,12 +3969,12 @@ class TextureMapping(CommonObject, IDisposable, ISerializable):
             Create a cylindrical projection texture mapping.
         
             cylinder: cylinder in world space used to define a cylindrical coordinate system.
-                  
-               The angular parameter maps (0,2pi) to texture "u" (0,1), The height
-                    
-             parameter maps (height[0],height[1]) to texture "v" (0,1), and the
-                    
-             radial parameter maps (0,r) to texture "w" (0,1).
+                    The 
+             angular parameter maps (0,2pi) to texture "u" (0,1), The height
+                    parameter 
+             maps (height[0],height[1]) to texture "v" (0,1), and the
+                    radial parameter 
+             maps (0,r) to texture "w" (0,1).
         
             capped: If true, the cylinder is treated as a finite capped cylinder
             Returns: TextureMapping instance if input is valid
@@ -4013,15 +3989,9 @@ class TextureMapping(CommonObject, IDisposable, ISerializable):
             Create a planar projection texture mapping
         
             plane: A plane to use for mapping.
-            dx: portion of the plane's x axis that is mapped to [0,1] (can be a decreasing 
-             interval)
-        
-            dy: portion of the plane's y axis that is mapped to [0,1] (can be a decreasing 
-             interval)
-        
-            dz: portion of the plane's z axis that is mapped to [0,1] (can be a decreasing 
-             interval)
-        
+            dx: portion of the plane's x axis that is mapped to [0,1] (can be a decreasing interval)
+            dy: portion of the plane's y axis that is mapped to [0,1] (can be a decreasing interval)
+            dz: portion of the plane's z axis that is mapped to [0,1] (can be a decreasing interval)
             Returns: TextureMapping instance if input is valid
         """
         pass
@@ -4034,12 +4004,12 @@ class TextureMapping(CommonObject, IDisposable, ISerializable):
             Create a spherical projection texture mapping.
         
             sphere: sphere in world space used to define a spherical coordinate system.
-                    
-             The longitude parameter maps (0,2pi) to texture "u" (0,1).
                     The 
-             latitude paramter maps (-pi/2,+pi/2) to texture "v" (0,1).
-                    The radial 
-             parameter maps (0,r) to texture "w" (0,1).
+             longitude parameter maps (0,2pi) to texture "u" (0,1).
+                    The latitude paramter 
+             maps (-pi/2,+pi/2) to texture "v" (0,1).
+                    The radial parameter maps (0,r) to 
+             texture "w" (0,1).
         
             Returns: TextureMapping instance if input is valid
         """
@@ -4049,17 +4019,17 @@ class TextureMapping(CommonObject, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -4067,8 +4037,8 @@ class TextureMapping(CommonObject, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -4343,16 +4313,15 @@ class TwoColorRenderTexture(RenderTexture, IDisposable):
         OnGetDefaultsInteractive(self: RenderContent, parentWindowHandle: IntPtr) -> bool
         
             Override this method to prompt user for information necessary to
-                    
-             create a new content object.  For example, if you are created a
-                    
-             textured material you may prompt the user for a bitmap file name
-                    
-             prior to creating the textured material.
+                    create a new 
+             content object.  For example, if you are created a
+                    textured material you may 
+             prompt the user for a bitmap file name
+                    prior to creating the textured 
+             material.
         
             Returns: If true is returned the content is created otherwise the creation
-                    is 
-             aborted.
+                    is aborted.
         """
         pass
 
@@ -4436,8 +4405,8 @@ class Utilities(object):
         
             pluginId: ID of render plug-in
             Returns: True if plug-in found and loaded successfully.  False if pluginId is
-                     
-             invalid or was unable to load plug-in
+                     invalid 
+             or was unable to load plug-in
         """
         pass
 

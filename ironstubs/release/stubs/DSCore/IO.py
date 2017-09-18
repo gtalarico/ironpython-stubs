@@ -16,8 +16,8 @@ class CSV(object):
         ReadFromFile(file: FileInfo) -> Array[Array[object]]
         
             Reads a text file containing comma-separated values into a two dimensional list.
-                    Outer list represents rows, inner lists represent 
-             columns.
+                 
+                Outer list represents rows, inner lists represent columns.
         
         
             file: File object to read from.
@@ -30,8 +30,8 @@ class CSV(object):
         """
         WriteToFile(filePath: str, data: Array[Array[object]])
             Write a list of lists into a file using a comma-separated values 
-                        format. Outer list represents rows, inner lists represent 
-             columns.
+                        format. 
+             Outer list represents rows, inner lists represent columns.
         
         
             filePath: Path to write to

@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Rhino.Geometry.Collections calls itself Collections
-# from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null, RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530
+# from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530
 # by generator 1.145
 """ NamespaceTracker represent a CLS namespace. """
 # no imports
@@ -18,8 +18,8 @@ class BrepCurveList(object, IEnumerable[Curve], IEnumerable, IRhinoTable[Curve])
         
             curve: A copy of the curve is added to this brep
             Returns: Index that should be used to reference the geometry.
-                    -1 is returned 
-             if the input is not acceptable.
+                    -1 is returned if the 
+             input is not acceptable.
         """
         pass
 
@@ -152,26 +152,25 @@ class BrepFaceList(object, IEnumerable[BrepFace], IEnumerable, IRhinoTable[BrepF
         Add(self: BrepFaceList, surface: Surface) -> BrepFace
         
             Add a new face to a brep.  This creates a complete face with
-                    new 
-             vertices at the surface corners, new edges along the surface
-                    
-             boundary, etc.  The loop of the returned face has four trims that
-                    
-             correspond to the south, east, north, and west side of the 
-                    surface 
-             in that order.  If you use this version of Add to
-                    add an exiting 
-             brep, then you are responsible for using a tool
-                    like JoinEdges() to 
-             hook the new face to its neighbors.
+                    new vertices at 
+             the surface corners, new edges along the surface
+                    boundary, etc.  The loop of 
+             the returned face has four trims that
+                    correspond to the south, east, north, 
+             and west side of the 
+                    surface in that order.  If you use this version of Add 
+             to
+                    add an exiting brep, then you are responsible for using a tool
+                   
+              like JoinEdges() to hook the new face to its neighbors.
         
         
             surface: surface is copied
         Add(self: BrepFaceList, surfaceIndex: int) -> BrepFace
         
             Create and add a new face to this list. An incomplete face is added.
-                    
-             The caller must create and fill in the loops used by the face.
+                    The 
+             caller must create and fill in the loops used by the face.
         
         
             surfaceIndex: index of surface in brep's Surfaces list
@@ -183,20 +182,20 @@ class BrepFaceList(object, IEnumerable[BrepFace], IEnumerable, IRhinoTable[BrepF
         AddConeFace(self: BrepFaceList, vertex: BrepVertex, edge: BrepEdge, revEdge: bool) -> BrepFace
         
             Add a new face to the brep whose surface geometry is a 
-                    ruled cone 
-             with the edge as the base and the vertex as
+                    ruled cone with the 
+             edge as the base and the vertex as
                     the apex point.
         
         
             vertex: The apex of the cone will be at this vertex.
-                    The north side of the 
-             surface's parameter
+                    The north side of the surface's 
+             parameter
                     space will be a singular point at the vertex.
         
             edge: The south side of the face's surface will run along this edge.
             revEdge: true if the new face's outer boundary orientation along
-                    the edge is 
-             opposite the orientation of edge.
+                    the edge is opposite 
+             the orientation of edge.
         """
         pass
 
@@ -205,19 +204,19 @@ class BrepFaceList(object, IEnumerable[BrepFace], IEnumerable, IRhinoTable[BrepF
         AddRuledFace(self: BrepFaceList, edgeA: BrepEdge, revEdgeA: bool, edgeB: BrepEdge, revEdgeB: bool) -> BrepFace
         
             Add a new face to the brep whose surface geometry is a 
-                    ruled surface 
-             between two edges.
+                    ruled surface between 
+             two edges.
         
         
             edgeA: The south side of the face's surface will run along edgeA.
             revEdgeA: true if the new face's outer boundary orientation along
-                    edgeA is 
-             opposite the orientation of edgeA.
+                    edgeA is opposite the 
+             orientation of edgeA.
         
             edgeB: The north side of the face's surface will run along edgeA
             revEdgeB: true if the new face's outer boundary orientation along
-                    edgeB is 
-             opposite the orientation of edgeB
+                    edgeB is opposite the 
+             orientation of edgeB
         """
         pass
 
@@ -237,12 +236,11 @@ class BrepFaceList(object, IEnumerable[BrepFace], IEnumerable, IRhinoTable[BrepF
         Flip(self: BrepFaceList, onlyReversedFaces: bool)
             Flips the orientation of faces.
         
-            onlyReversedFaces: If true, clears all BrepFace.OrientationIsReversed flags by calling 
-             BrepFace.Transpose()
-                    on each face with a true OrientationIsReversed 
-             setting.
-                    If false, all of the faces are flipped regardless of their 
-             orientation.
+            onlyReversedFaces: If true, clears all BrepFace.OrientationIsReversed flags by calling BrepFace.Transpose()
+         
+                        on each face with a true OrientationIsReversed setting.
+                    If false, 
+             all of the faces are flipped regardless of their orientation.
         """
         pass
 
@@ -277,10 +275,10 @@ class BrepFaceList(object, IEnumerable[BrepFace], IEnumerable, IRhinoTable[BrepF
         """
         ShrinkFaces(self: BrepFaceList) -> bool
         
-            Shrinks all the faces in this Brep. Sometimes the surfaces extend far beyond the 
-             trimming 
-                    boundaries of the Brep Face. This function will remove 
-             those portions of the surfaces 
+            Shrinks all the faces in this Brep. Sometimes the surfaces extend far beyond the trimming 
+             
+                    boundaries of the Brep Face. This function will remove those portions of the 
+             surfaces 
                     that are not used.
         
             Returns: true on success, false on failure.
@@ -292,8 +290,8 @@ class BrepFaceList(object, IEnumerable[BrepFace], IEnumerable, IRhinoTable[BrepF
         SplitBipolarFaces(self: BrepFaceList) -> bool
         
             Splits surfaces with two singularities, like spheres, so the results
-                    
-             have at most one singularity.
+                    have at 
+             most one singularity.
         
             Returns: true if successful.
         """
@@ -306,10 +304,9 @@ class BrepFaceList(object, IEnumerable[BrepFace], IEnumerable, IRhinoTable[BrepF
             Splits closed surfaces so they are not closed.
         
             minimumDegree: If the degree of the surface < min_degree, the surface is not split.
-                    
-             In some cases, minimumDegree = 2 is useful to preserve piecewise linear
-                  
-               surfaces.
+                    In some 
+             cases, minimumDegree = 2 is useful to preserve piecewise linear
+                    surfaces.
         
             Returns: true if successful.
         """
@@ -354,10 +351,10 @@ class BrepFaceList(object, IEnumerable[BrepFace], IEnumerable, IRhinoTable[BrepF
         StandardizeFaceSurface(self: BrepFaceList, faceIndex: int) -> bool
         
             Standardizes the relationship between a BrepFace and the 3d surface it
-                   
-              uses.  When done, the face will be the only face that references its 3d
-                 
-                surface, and the orientations of the face and 3d surface will be the same.
+                    uses.  
+             When done, the face will be the only face that references its 3d
+                    surface, and 
+             the orientations of the face and 3d surface will be the same.
         
         
             faceIndex: The index of the face.
@@ -412,17 +409,16 @@ class BrepLoopList(object, IEnumerable[BrepLoop], IEnumerable, IRhinoTable[BrepL
         Add(self: BrepLoopList, loopType: BrepLoopType, face: BrepFace) -> BrepLoop
         
             Create a new boundary loop on a face.  After you get this
-                    BrepLoop, 
-             you still need to create the vertices, edges, 
-                    and trims that define 
-             the loop.
+                    BrepLoop, you still 
+             need to create the vertices, edges, 
+                    and trims that define the loop.
         
             Returns: New loop that needs to be filled in
         Add(self: BrepLoopList, loopType: BrepLoopType) -> BrepLoop
         
             Create a new outer boundary loop that runs along the edges
-                    of the 
-             underlying surface.
+                    of the underlying 
+             surface.
         """
         pass
 
@@ -431,15 +427,15 @@ class BrepLoopList(object, IEnumerable[BrepLoop], IEnumerable, IRhinoTable[BrepL
         AddOuterLoop(self: BrepLoopList, faceIndex: int) -> BrepLoop
         
             Create a new outer boundary loop that runs along the sides
-                    of the 
-             face's surface.  All the necessary trims, edges,
-                    and vertices are 
-             created and added to the brep.
+                    of the face's 
+             surface.  All the necessary trims, edges,
+                    and vertices are created and added 
+             to the brep.
         
         
             faceIndex: index of face that needs an outer boundary
-                    that runs along the sides 
-             of its surface.
+                    that runs along the sides of its 
+             surface.
         
             Returns: New outer boundary loop that is complete.
         """
@@ -538,9 +534,7 @@ class BrepTrimList(object, IEnumerable[BrepTrim], IEnumerable, IRhinoTable[BrepT
         Add(self: BrepTrimList, rev3d: bool, edge: BrepEdge, curve2dIndex: int) -> BrepTrim
         
             Add a new trim that will be part of an inner, outer, or slit loop
-                    to 
-             the brep
-        
+                    to the brep
         
             rev3d: true if the edge and trim have opposite directions
             edge: 3d edge associated with this trim
@@ -549,9 +543,7 @@ class BrepTrimList(object, IEnumerable[BrepTrim], IEnumerable, IRhinoTable[BrepT
         Add(self: BrepTrimList, edge: BrepEdge, rev3d: bool, loop: BrepLoop, curve2dIndex: int) -> BrepTrim
         
             Add a new trim that will be part of an inner, outer, or slit loop
-                    to 
-             the brep.
-        
+                    to the brep.
         
             edge: 3d edge associated with this trim
             rev3d: true if the edge and trim have opposite directions
@@ -561,18 +553,14 @@ class BrepTrimList(object, IEnumerable[BrepTrim], IEnumerable, IRhinoTable[BrepT
         Add(self: BrepTrimList, curve2dIndex: int) -> BrepTrim
         
             Add a new trim that will be part of an inner, outer, or slit loop
-                    to 
-             the brep.
-        
+                    to the brep.
         
             curve2dIndex: index of 2d trimming curve
             Returns: New Trim
         Add(self: BrepTrimList, rev3d: bool, loop: BrepLoop, curve2dIndex: int) -> BrepTrim
         
             Add a new trim that will be part of an inner, outer, or slit loop
-                    to 
-             the brep
-        
+                    to the brep
         
             rev3d: true if the edge and trim have opposite directions
             loop: trim is appended to this loop
@@ -788,18 +776,17 @@ class MeshFaceList(object, IEnumerable[MeshFace], IEnumerable, IRhinoTable[MeshF
             Joins adjacent triangles into quads if the resulting quad is 'nice'.
         
             angleToleranceRadians: Used to compare adjacent triangles' face normals. For two triangles 
-                    
-             to be considered, the angle between their face normals has to 
+                    to be 
+             considered, the angle between their face normals has to 
                     be <= 
              angleToleranceRadians. When in doubt use RhinoMath.PI/90.0 (2 degrees).
         
             minimumDiagonalLengthRatio: ( <= 1.0) For two triangles to be considered the ratio of the 
-                    
-             resulting quad's diagonals 
-                    (length of the shortest diagonal)/(length 
-             of longest diagonal). 
-                    has to be >= minimumDiagonalLengthRatio. When 
-             in doubt us .875.
+                    resulting 
+             quad's diagonals 
+                    (length of the shortest diagonal)/(length of longest 
+             diagonal). 
+                    has to be >= minimumDiagonalLengthRatio. When in doubt us .875.
         
             Returns: true on success, false on failure.
         """
@@ -810,11 +797,11 @@ class MeshFaceList(object, IEnumerable[MeshFace], IEnumerable, IRhinoTable[MeshF
         CullDegenerateFaces(self: MeshFaceList) -> int
         
             Attempts to removes degenerate faces from the mesh.
-                    Degenerate faces 
-             are faces that contains such a combination of indices,
-                    that their 
-             final shape collapsed in a line or point.Before returning, this method also 
-             attempts to repair faces by juggling
+                    Degenerate faces are 
+             faces that contains such a combination of indices,
+                    that their final shape 
+             collapsed in a line or point.Before returning, this method also attempts to repair faces 
+             by juggling
                     vertex indices.
         
             Returns: The number of degenerate faces that were removed.
@@ -830,15 +817,15 @@ class MeshFaceList(object, IEnumerable[MeshFace], IEnumerable, IRhinoTable[MeshF
         GetConnectedFaces(self: MeshFaceList, faceIndex: int, angleRadians: float, greaterThanAngle: bool) -> Array[int]
         
             Find all connected face indices where adjacent face normals meet
-                    the 
-             criteria of angleRadians and greaterThanAngle
+                    the criteria 
+             of angleRadians and greaterThanAngle
         
         
             faceIndex: face index to start from
             angleRadians: angle to use for comparison of what is connected
             greaterThanAngle: If true angles greater than or equal to are considered connected.
-                    If 
-             false, angles less than or equal to are considerd connected.
+                    If false, 
+             angles less than or equal to are considerd connected.
         
             Returns: list of connected face indices
         """
@@ -849,16 +836,16 @@ class MeshFaceList(object, IEnumerable[MeshFace], IEnumerable, IRhinoTable[MeshF
         GetConnectedFacesToEdges(self: MeshFaceList, startFaceIndex: int, treatNonmanifoldLikeUnwelded: bool) -> Array[int]
         
             Uses startFaceIndex and finds all connected face indexes up to unwelded
-                  
-               or naked edges. If treatNonmanifoldLikeUnwelded is true then non-manifold
-              
-                   edges will be considered as unwelded or naked
+                    or 
+             naked edges. If treatNonmanifoldLikeUnwelded is true then non-manifold
+                    edges 
+             will be considered as unwelded or naked
         
         
             startFaceIndex: Initial face index
             treatNonmanifoldLikeUnwelded: True means non-manifold edges will be handled like unwelded edges, 
-                    
-             False means they aren't considered
+                    False 
+             means they aren't considered
         
             Returns: Array of connected face indexes
         """
@@ -880,11 +867,10 @@ class MeshFaceList(object, IEnumerable[MeshFace], IEnumerable, IRhinoTable[MeshF
             Returns the mesh face at the given index.
         
             index: Index of face to get. Must be larger than or equal to zero and 
-                    
-             smaller than the Face Count of the mesh.
+                    smaller than 
+             the Face Count of the mesh.
         
-            Returns: The mesh face at the given index on success or MeshFace.Unset if the index is out 
-             of range.
+            Returns: The mesh face at the given index on success or MeshFace.Unset if the index is out of range.
         """
         pass
 
@@ -904,9 +890,9 @@ class MeshFaceList(object, IEnumerable[MeshFace], IEnumerable, IRhinoTable[MeshF
         GetFaceCenter(self: MeshFaceList, faceIndex: int) -> Point3d
         
             Gets the center point of a face.
-                    For a triangular face, this is 
-             considered the centroid or barycenter.For a quad, this is considered the bimedians 
-             intersection
+                    For a triangular face, this is considered 
+             the centroid or barycenter.For a quad, this is considered the bimedians intersection
+             
                     (the avarage of four points).
         
         
@@ -966,8 +952,8 @@ class MeshFaceList(object, IEnumerable[MeshFace], IEnumerable, IRhinoTable[MeshF
         IsHidden(self: MeshFaceList, faceIndex: int) -> bool
         
             Gets a value indicating whether a face is hidden.
-                    A face is hidden 
-             if, and only if, at least one of its vertices is hidden.
+                    A face is hidden if, and 
+             only if, at least one of its vertices is hidden.
         
         
             faceIndex: A face index.
@@ -1116,9 +1102,7 @@ class MeshFaceNormalList(object, IEnumerable[Vector3f], IEnumerable, IRhinoTable
         """
         ComputeFaceNormals(self: MeshFaceNormalList) -> bool
         
-            Computes all the face normals for this mesh based on the physical shape of the 
-             mesh.
-        
+            Computes all the face normals for this mesh based on the physical shape of the mesh.
             Returns: true on success, false on failure.
         """
         pass
@@ -1289,10 +1273,10 @@ class MeshTextureCoordinateList(object, IEnumerable[Point2f], IEnumerable, IRhin
         ReverseTextureCoordinates(self: MeshTextureCoordinateList, direction: int) -> bool
         
             Reverses one coordinate direction of the texture coordinates.
-                    The 
-             region of the bitmap the texture uses does not change.
-                    Either Us or 
-             Vs direction is flipped.
+                    The region of 
+             the bitmap the texture uses does not change.
+                    Either Us or Vs direction is 
+             flipped.
         
         
             direction: 0 = first texture coordinate is reversed.1 = second texture coordinate is reversed.
@@ -1305,10 +1289,10 @@ class MeshTextureCoordinateList(object, IEnumerable[Point2f], IEnumerable, IRhin
         SetTextureCoordinate(self: MeshTextureCoordinateList, index: int, tc: Point2f) -> bool
         
             Sets or adds a texture coordinate to the Texture Coordinate List.
-                    If 
-             [index] is less than [Count], the existing coordinate at [index] will be 
-             modified.If [index] equals [Count], a new coordinate is appended to the end of the 
-             coordinate list.If [index] is larger than [Count], the function will return false.
+                    If [index] 
+             is less than [Count], the existing coordinate at [index] will be modified.If [index] 
+             equals [Count], a new coordinate is appended to the end of the coordinate list.If [index] 
+             is larger than [Count], the function will return false.
         
         
             index: Index of texture coordinate to set.
@@ -1317,10 +1301,10 @@ class MeshTextureCoordinateList(object, IEnumerable[Point2f], IEnumerable, IRhin
         SetTextureCoordinate(self: MeshTextureCoordinateList, index: int, tc: Point3f) -> bool
         
             Sets or adds a texture coordinate to the Texture Coordinate List.
-                    If 
-             [index] is less than [Count], the existing coordinate at [index] will be 
-             modified.If [index] equals [Count], a new coordinate is appended to the end of the 
-             coordinate list.If [index] is larger than [Count], the function will return false.
+                    If [index] 
+             is less than [Count], the existing coordinate at [index] will be modified.If [index] 
+             equals [Count], a new coordinate is appended to the end of the coordinate list.If [index] 
+             is larger than [Count], the function will return false.
         
         
             index: Index of texture coordinate to set.
@@ -1329,10 +1313,10 @@ class MeshTextureCoordinateList(object, IEnumerable[Point2f], IEnumerable, IRhin
         SetTextureCoordinate(self: MeshTextureCoordinateList, index: int, s: Single, t: Single) -> bool
         
             Sets or adds a texture coordinate to the Texture Coordinate List.
-                    If 
-             [index] is less than [Count], the existing coordinate at [index] will be 
-             modified.If [index] equals [Count], a new coordinate is appended to the end of the 
-             coordinate list.If [index] is larger than [Count], the function will return false.
+                    If [index] 
+             is less than [Count], the existing coordinate at [index] will be modified.If [index] 
+             equals [Count], a new coordinate is appended to the end of the coordinate list.If [index] 
+             is larger than [Count], the function will return false.
         
         
             index: Index of texture coordinate to set.
@@ -1342,10 +1326,10 @@ class MeshTextureCoordinateList(object, IEnumerable[Point2f], IEnumerable, IRhin
         SetTextureCoordinate(self: MeshTextureCoordinateList, index: int, s: float, t: float) -> bool
         
             Sets or adds a texture coordinate to the Texture Coordinate List.
-                    If 
-             [index] is less than [Count], the existing coordinate at [index] will be 
-             modified.If [index] equals [Count], a new coordinate is appended to the end of the 
-             coordinate list.If [index] is larger than [Count], the function will return false.
+                    If [index] 
+             is less than [Count], the existing coordinate at [index] will be modified.If [index] 
+             equals [Count], a new coordinate is appended to the end of the coordinate list.If [index] 
+             is larger than [Count], the function will return false.
         
         
             index: Index of texture coordinate to set.
@@ -1377,10 +1361,10 @@ class MeshTextureCoordinateList(object, IEnumerable[Point2f], IEnumerable, IRhin
         TransposeTextureCoordinates(self: MeshTextureCoordinateList) -> bool
         
             Transposes texture coordinates.
-                    The region of the bitmap the texture 
-             uses does not change.
-                    All texture coordinates rows (Us) become 
-             columns (Vs), and vice versa.
+                    The region of the bitmap the texture uses 
+             does not change.
+                    All texture coordinates rows (Us) become columns (Vs), and 
+             vice versa.
         
             Returns: true on success, false on failure.
         """
@@ -1430,9 +1414,7 @@ class MeshTopologyEdgeList(object):
         """
         CollapseEdge(self: MeshTopologyEdgeList, topologyEdgeIndex: int) -> bool
         
-            Replaces a mesh edge with a vertex at its center and update adjacent faces as 
-             needed.
-        
+            Replaces a mesh edge with a vertex at its center and update adjacent faces as needed.
         
             topologyEdgeIndex: An index of a topology edge in Rhino.Geometry.Mesh.TopologyEdges.
             Returns: true if successful.
@@ -1472,8 +1454,8 @@ class MeshTopologyEdgeList(object):
         GetEdgeIndex(self: MeshTopologyEdgeList, topologyVertex1: int, topologyVertex2: int) -> int
         
             Returns index of edge that connects topological vertices. 
-                    returns -1 
-             if no edge is found.
+                    returns -1 if no 
+             edge is found.
         
         
             topologyVertex1: The first topology vertex index.
@@ -1489,16 +1471,13 @@ class MeshTopologyEdgeList(object):
             Gets indices of edges that surround a given face.
         
             faceIndex: A face index.
-            Returns: A new array of indices to the topological edges that are connected with the 
-             specified face.
-        
+            Returns: A new array of indices to the topological edges that are connected with the specified face.
         GetEdgesForFace(self: MeshTopologyEdgeList, faceIndex: int) -> Array[int]
         
             Gets indices of edges that surround a given face.
         
             faceIndex: A face index.
-            Returns: A new array of indices to the topological edges that are connected with the 
-             specified face.
+            Returns: A new array of indices to the topological edges that are connected with the specified face.
         """
         pass
 
@@ -1518,8 +1497,8 @@ class MeshTopologyEdgeList(object):
         IsHidden(self: MeshTopologyEdgeList, topologyEdgeIndex: int) -> bool
         
             Returns true if the topological edge is hidden. The mesh topology
-                    
-             edge is hidden only if either of its mesh topology vertices is hidden.
+                    edge is 
+             hidden only if either of its mesh topology vertices is hidden.
         
         
             topologyEdgeIndex: An index of a topology edge in Rhino.Geometry.Mesh.TopologyEdges.
@@ -1554,8 +1533,8 @@ class MeshTopologyEdgeList(object):
             Divides a mesh edge to create two or more triangles
         
             topologyEdgeIndex: Edge to divide
-            t: Parameter along edge. This is the same as getting an EdgeLine and calling 
-             PointAt(t) on that line
+            t: Parameter along edge. This is the same as getting an EdgeLine and calling PointAt(t) on 
+             that line
         
             Returns: true if successful
         """
@@ -1595,8 +1574,8 @@ class MeshTopologyVertexList(object, IEnumerable[Point3f], IEnumerable, IRhinoTa
         
             topologyVertexIndex: Index of a topology vertex in Mesh.TopologyVertices.
             Returns: Indices of all faces in Mesh.Faces that are connected to this topological vertex.
-        
-                         null if no faces are connected to this vertex.
+                
+                 null if no faces are connected to this vertex.
         """
         pass
 
@@ -1608,18 +1587,18 @@ class MeshTopologyVertexList(object, IEnumerable[Point3f], IEnumerable, IRhinoTa
         
             topologyVertexIndex: index of a topology vertex in Mesh.TopologyVertices.
             sorted: if true, thr vertices are returned in a radially sorted order.
-            Returns: Indices of all topological vertices that are connected to this topological vertex.
-             
-                    null if no vertices are connected to this vertex.
+            Returns: Indices of all topological vertices that are connected to this topological vertex.
+               
+                  null if no vertices are connected to this vertex.
         
         ConnectedTopologyVertices(self: MeshTopologyVertexList, topologyVertexIndex: int) -> Array[int]
         
             Gets all topological vertices that are connected to a given vertex.
         
             topologyVertexIndex: index of a topology vertex in Mesh.TopologyVertices.
-            Returns: Indices of all topological vertices that are connected to this topological vertex.
-             
-                    null if no vertices are connected to this vertex.
+            Returns: Indices of all topological vertices that are connected to this topological vertex.
+               
+                  null if no vertices are connected to this vertex.
         """
         pass
 
@@ -1648,8 +1627,8 @@ class MeshTopologyVertexList(object, IEnumerable[Point3f], IEnumerable, IRhinoTa
         IsHidden(self: MeshTopologyVertexList, topologyVertexIndex: int) -> bool
         
             Returns true if the topological vertex is hidden. The mesh topology
-                    
-             vertex is hidden if and only if all the ON_Mesh vertices it represents is hidden.
+                    vertex is 
+             hidden if and only if all the ON_Mesh vertices it represents is hidden.
         
         
             topologyVertexIndex: index of a topology vertex in Mesh.TopologyVertices.
@@ -1673,14 +1652,14 @@ class MeshTopologyVertexList(object, IEnumerable[Point3f], IEnumerable, IRhinoTa
         SortEdges(self: MeshTopologyVertexList, topologyVertexIndex: int) -> bool
         
             Sorts the edge list for as single mesh topology vertex so that
-                    the 
-             edges are in radial order when you call ConnectedTopologyVertices.
-                    A 
-             nonmanifold edge is treated as a boundary edge with respect
-                    to 
-             sorting.  If any boundary or nonmanifold edges end at the
-                    vertex, 
-             then the first edge will be a boundary or nonmanifold edge.
+                    the edges are 
+             in radial order when you call ConnectedTopologyVertices.
+                    A nonmanifold edge 
+             is treated as a boundary edge with respect
+                    to sorting.  If any boundary or 
+             nonmanifold edges end at the
+                    vertex, then the first edge will be a boundary 
+             or nonmanifold edge.
         
         
             topologyVertexIndex: index of a topology vertex in Mesh.TopologyVertices>
@@ -1688,14 +1667,14 @@ class MeshTopologyVertexList(object, IEnumerable[Point3f], IEnumerable, IRhinoTa
         SortEdges(self: MeshTopologyVertexList) -> bool
         
             Sorts the edge list for the mesh topology vertex list so that
-                    the 
-             edges are in radial order when you call ConnectedTopologyVertices.
-                    A 
-             nonmanifold edge is treated as a boundary edge with respect
-                    to 
-             sorting.  If any boundary or nonmanifold edges end at the
-                    vertex, 
-             then the first edge will be a boundary or nonmanifold edge.
+                    the edges are 
+             in radial order when you call ConnectedTopologyVertices.
+                    A nonmanifold edge 
+             is treated as a boundary edge with respect
+                    to sorting.  If any boundary or 
+             nonmanifold edges end at the
+                    vertex, then the first edge will be a boundary 
+             or nonmanifold edge.
         
             Returns: true on success.
         """
@@ -1706,8 +1685,8 @@ class MeshTopologyVertexList(object, IEnumerable[Point3f], IEnumerable, IRhinoTa
         TopologyVertexIndex(self: MeshTopologyVertexList, vertexIndex: int) -> int
         
             Gets the topology vertex index for an existing mesh vertex in the mesh's
-                 
-                VertexList.
+                    
+             VertexList.
         
         
             vertexIndex: Index of a vertex in the Mesh.Vertices.
@@ -1774,8 +1753,8 @@ class MeshVertexColorList(object, IEnumerable[Color], IEnumerable, IRhinoTable[C
         AppendColors(self: MeshVertexColorList, colors: Array[Color]) -> bool
         
             Appends a collection of colors to the vertex color list. 
-                    For the 
-             Mesh to be valid, the number of colors must match the number of vertices.
+                    For the Mesh to be 
+             valid, the number of colors must match the number of vertices.
         
         
             colors: Colors to append.
@@ -1822,30 +1801,30 @@ class MeshVertexColorList(object, IEnumerable[Color], IEnumerable, IRhinoTable[C
         SetColor(self: MeshVertexColorList, index: int, color: Color) -> bool
         
             Sets or adds a vertex to the Vertex List.
-                    If [index] is less than 
-             [Count], the existing vertex at [index] will be modified.If [index] equals 
-             [Count], a new vertex is appended to the end of the vertex list.If [index] is 
-             larger than [Count], the function will return false.
+                    If [index] is less than [Count], 
+             the existing vertex at [index] will be modified.If [index] equals [Count], a new vertex is 
+             appended to the end of the vertex list.If [index] is larger than [Count], the function 
+             will return false.
         
         
             index: Index of vertex color to set. 
-                    If index equals Count, then the color 
-             will be appended.
+                    If index equals Count, then the color will be 
+             appended.
         
             color: Color to set, Alpha channels will be ignored.
             Returns: true on success, false on failure.
         SetColor(self: MeshVertexColorList, index: int, red: int, green: int, blue: int) -> bool
         
             Sets or adds a vertex color to the color List.
-                    If [index] is less 
-             than [Count], the existing vertex at [index] will be modified.If [index] equals 
-             [Count], a new vertex is appended to the end of the vertex list.If [index] is 
-             larger than [Count], the function will return false.
+                    If [index] is less than 
+             [Count], the existing vertex at [index] will be modified.If [index] equals [Count], a new 
+             vertex is appended to the end of the vertex list.If [index] is larger than [Count], the 
+             function will return false.
         
         
             index: Index of vertex color to set. 
-                    If index equals Count, then the color 
-             will be appended.
+                    If index equals Count, then the color will be 
+             appended.
         
             red: Red component of vertex color. Value must be in the 0~255 range.
             green: Green component of vertex color. Value must be in the 0~255 range.
@@ -1859,8 +1838,8 @@ class MeshVertexColorList(object, IEnumerable[Color], IEnumerable, IRhinoTable[C
         SetColors(self: MeshVertexColorList, colors: Array[Color]) -> bool
         
             Sets all the vertex colors in one go. For the Mesh to be valid, the number 
-              
-                   of colors must match the number of vertices.
+                    
+             of colors must match the number of vertices.
         
         
             colors: Colors to set.
@@ -1966,15 +1945,12 @@ class MeshVertexList(object, IEnumerable[Point3f], IEnumerable, IRhinoTable[Poin
         
             Merges identical vertices.
         
-            ignoreNormals: If true, vertex normals will not be taken into consideration when comparing 
-             vertices.
-        
+            ignoreNormals: If true, vertex normals will not be taken into consideration when comparing vertices.
             ignoreAdditional: If true, texture coordinates, colors, and principal curvatures 
-                    will 
-             not be taken into consideration when comparing vertices.
+                    will not be 
+             taken into consideration when comparing vertices.
         
-            Returns: true if the mesh is changed, in which case the mesh will have fewer vertices than 
-             before.
+            Returns: true if the mesh is changed, in which case the mesh will have fewer vertices than before.
         """
         pass
 
@@ -2012,14 +1988,14 @@ class MeshVertexList(object, IEnumerable[Point3f], IEnumerable, IRhinoTable[Poin
         GetTopologicalIndenticalVertices(self: MeshVertexList, vertexIndex: int) -> Array[int]
         
             Gets a list of other vertices which are "topologically" identical
-                    to 
-             this vertex.
+                    to this 
+             vertex.
         
         
             vertexIndex: A vertex index in the mesh.
             Returns: Array of indices of vertices that are topoligically the same as this vertex. The
-         
-                        array includes vertexIndex. Returns null on failure.
+                 
+                array includes vertexIndex. Returns null on failure.
         """
         pass
 
@@ -2079,10 +2055,10 @@ class MeshVertexList(object, IEnumerable[Point3f], IEnumerable, IRhinoTable[Poin
         SetVertex(self: MeshVertexList, index: int, vertex: Point3f) -> bool
         
             Sets or adds a vertex to the Vertex List.
-                    If [index] is less than 
-             [Count], the existing vertex at [index] will be modified.If [index] equals 
-             [Count], a new vertex is appended to the end of the vertex list.If [index] is 
-             larger than [Count], the function will return false.
+                    If [index] is less than [Count], 
+             the existing vertex at [index] will be modified.If [index] equals [Count], a new vertex is 
+             appended to the end of the vertex list.If [index] is larger than [Count], the function 
+             will return false.
         
         
             index: Index of vertex to set.
@@ -2091,10 +2067,10 @@ class MeshVertexList(object, IEnumerable[Point3f], IEnumerable, IRhinoTable[Poin
         SetVertex(self: MeshVertexList, index: int, vertex: Point3d) -> bool
         
             Sets or adds a vertex to the Vertex List.
-                    If [index] is less than 
-             [Count], the existing vertex at [index] will be modified.If [index] equals 
-             [Count], a new vertex is appended to the end of the vertex list.If [index] is 
-             larger than [Count], the function will return false.
+                    If [index] is less than [Count], 
+             the existing vertex at [index] will be modified.If [index] equals [Count], a new vertex is 
+             appended to the end of the vertex list.If [index] is larger than [Count], the function 
+             will return false.
         
         
             index: Index of vertex to set.
@@ -2103,10 +2079,10 @@ class MeshVertexList(object, IEnumerable[Point3f], IEnumerable, IRhinoTable[Poin
         SetVertex(self: MeshVertexList, index: int, x: Single, y: Single, z: Single) -> bool
         
             Sets or adds a vertex to the Vertex List.
-                    If [index] is less than 
-             [Count], the existing vertex at [index] will be modified.If [index] equals 
-             [Count], a new vertex is appended to the end of the vertex list.If [index] is 
-             larger than [Count], the function will return false.
+                    If [index] is less than [Count], 
+             the existing vertex at [index] will be modified.If [index] equals [Count], a new vertex is 
+             appended to the end of the vertex list.If [index] is larger than [Count], the function 
+             will return false.
         
         
             index: Index of vertex to set.
@@ -2117,10 +2093,10 @@ class MeshVertexList(object, IEnumerable[Point3f], IEnumerable, IRhinoTable[Poin
         SetVertex(self: MeshVertexList, index: int, x: float, y: float, z: float) -> bool
         
             Sets or adds a vertex to the Vertex List.
-                    If [index] is less than 
-             [Count], the existing vertex at [index] will be modified.If [index] equals 
-             [Count], a new vertex is appended to the end of the vertex list.If [index] is 
-             larger than [Count], the function will return false.
+                    If [index] is less than [Count], 
+             the existing vertex at [index] will be modified.If [index] equals [Count], a new vertex is 
+             appended to the end of the vertex list.If [index] is larger than [Count], the function 
+             will return false.
         
         
             index: Index of vertex to set.
@@ -2278,8 +2254,8 @@ class MeshVertexNormalList(object, IEnumerable[Vector3f], IEnumerable, IRhinoTab
         """
         Flip(self: MeshVertexNormalList)
             Reverses direction of all vertex normals
-                    This is the same as 
-             Mesh.Flip(true, false, false)
+                    This is the same as Mesh.Flip(true, 
+             false, false)
         """
         pass
 
@@ -2297,10 +2273,10 @@ class MeshVertexNormalList(object, IEnumerable[Vector3f], IEnumerable, IRhinoTab
         SetNormal(self: MeshVertexNormalList, index: int, normal: Vector3f) -> bool
         
             Sets or adds a vertex normal to the list.
-                    If [index] is less than 
-             [Count], the existing vertex normal at [index] will be modified.If [index] equals 
-             [Count], a new vertex normal is appended to the end of the vertex list.If [index] 
-             is larger than [Count], the function will return false.
+                    If [index] is less than [Count], 
+             the existing vertex normal at [index] will be modified.If [index] equals [Count], a new 
+             vertex normal is appended to the end of the vertex list.If [index] is larger than [Count], 
+             the function will return false.
         
         
             index: Index of vertex normal to set.
@@ -2309,10 +2285,10 @@ class MeshVertexNormalList(object, IEnumerable[Vector3f], IEnumerable, IRhinoTab
         SetNormal(self: MeshVertexNormalList, index: int, normal: Vector3d) -> bool
         
             Sets or adds a vertex normal to the list.
-                    If [index] is less than 
-             [Count], the existing vertex normal at [index] will be modified.If [index] equals 
-             [Count], a new vertex normal is appended to the end of the list.If [index] is 
-             larger than [Count], the function will return false.
+                    If [index] is less than [Count], 
+             the existing vertex normal at [index] will be modified.If [index] equals [Count], a new 
+             vertex normal is appended to the end of the list.If [index] is larger than [Count], the 
+             function will return false.
         
         
             index: Index of vertex normal to set.
@@ -2321,10 +2297,10 @@ class MeshVertexNormalList(object, IEnumerable[Vector3f], IEnumerable, IRhinoTab
         SetNormal(self: MeshVertexNormalList, index: int, x: Single, y: Single, z: Single) -> bool
         
             Sets or adds a normal to the list.
-                    If [index] is less than [Count], 
-             the existing vertex normal at [index] will be modified.If [index] equals [Count], 
-             a new vertex normal is appended to the end of the list.If [index] is larger than 
-             [Count], the function will return false.
+                    If [index] is less than [Count], the 
+             existing vertex normal at [index] will be modified.If [index] equals [Count], a new vertex 
+             normal is appended to the end of the list.If [index] is larger than [Count], the function 
+             will return false.
         
         
             index: Index of vertex normal to set.
@@ -2335,10 +2311,10 @@ class MeshVertexNormalList(object, IEnumerable[Vector3f], IEnumerable, IRhinoTab
         SetNormal(self: MeshVertexNormalList, index: int, x: float, y: float, z: float) -> bool
         
             Sets or adds a vertex normal to the list.
-                    If [index] is less than 
-             [Count], the existing vertex normal at [index] will be modified.If [index] equals 
-             [Count], a new vertex normal is appended to the end of the list.If [index] is 
-             larger than [Count], the function will return false.
+                    If [index] is less than [Count], 
+             the existing vertex normal at [index] will be modified.If [index] equals [Count], a new 
+             vertex normal is appended to the end of the list.If [index] is larger than [Count], the 
+             function will return false.
         
         
             index: Index of vertex normal to set.
@@ -2353,8 +2329,8 @@ class MeshVertexNormalList(object, IEnumerable[Vector3f], IEnumerable, IRhinoTab
         """
         SetNormals(self: MeshVertexNormalList, normals: Array[Vector3f]) -> bool
         
-            Sets all normal vectors in one go. This method destroys the current normal array 
-             if it exists.
+            Sets all normal vectors in one go. This method destroys the current normal array if it 
+             exists.
         
         
             normals: Normals for the entire mesh.
@@ -2427,10 +2403,9 @@ class NurbsCurveKnotList(object, IEnumerable[float], IEnumerable, IRhinoTable[fl
         CreatePeriodicKnots(self: NurbsCurveKnotList, knotSpacing: float) -> bool
         
             Compute a clamped, uniform, periodic knot vector based on the current
-                    
-             degree and control point count. Does not change values of control
-                    
-             vertices.
+                    degree 
+             and control point count. Does not change values of control
+                    vertices.
         
         
             knotSpacing: Spacing of subsequent knots.
@@ -2443,8 +2418,8 @@ class NurbsCurveKnotList(object, IEnumerable[float], IEnumerable, IRhinoTable[fl
         CreateUniformKnots(self: NurbsCurveKnotList, knotSpacing: float) -> bool
         
             Compute a clamped, uniform knot vector based on the current
-                    degree 
-             and control point count. Does not change values of control
+                    degree and 
+             control point count. Does not change values of control
                     vertices.
         
         
@@ -2456,12 +2431,11 @@ class NurbsCurveKnotList(object, IEnumerable[float], IEnumerable, IRhinoTable[fl
     def EnsurePrivateCopy(self):
         """
         EnsurePrivateCopy(self: NurbsCurveKnotList)
-            If you want to keep a copy of this class around by holding onto it in a variable 
-             after a command
-                    completes, call EnsurePrivateCopy to make sure that 
-             this class is not tied to the document. You can
-                    call this function as 
-             many times as you want.
+            If you want to keep a copy of this class around by holding onto it in a variable after a 
+             command
+                    completes, call EnsurePrivateCopy to make sure that this class is not 
+             tied to the document. You can
+                    call this function as many times as you want.
         """
         pass
 
@@ -2512,12 +2486,11 @@ class NurbsCurveKnotList(object, IEnumerable[float], IEnumerable, IRhinoTable[fl
         """
         SuperfluousKnot(self: NurbsCurveKnotList, start: bool) -> float
         
-            Computes the knots that are superfluous because they are not used in NURBs 
-             evaluation.
-                    These make it appear so that the first and last curve 
-             spans are different from interior spans.
-                    
-             http://wiki.mcneel.com/developer/onsuperfluousknot
+            Computes the knots that are superfluous because they are not used in NURBs evaluation.
+           
+                      These make it appear so that the first and last curve spans are different from 
+             interior spans.
+                    http://wiki.mcneel.com/developer/onsuperfluousknot
         
         
             start: true if the query targets the first knot. Otherwise, the last knot.
@@ -2580,8 +2553,8 @@ class NurbsCurvePointList(object, IEnumerable[ControlPoint], IEnumerable, IRhino
         """
         ChangeEndWeights(self: NurbsCurvePointList, w0: float, w1: float) -> bool
         
-            Use a combination of scaling and reparameterization to change the end weights to 
-             the specified values.
+            Use a combination of scaling and reparameterization to change the end weights to the 
+             specified values.
         
         
             w0: Weight for first control point.
@@ -2595,10 +2568,9 @@ class NurbsCurvePointList(object, IEnumerable[ControlPoint], IEnumerable, IRhino
         ControlPolygon(self: NurbsCurvePointList) -> Polyline
         
             Constructs a polyline through all the control points. 
-                    Note that 
-             periodic curves generate a closed polyline with fewer 
-                    points than 
-             control-points.
+                    Note that periodic 
+             curves generate a closed polyline with fewer 
+                    points than control-points.
         
             Returns: A polyline connecting all control points.
         """
@@ -2607,12 +2579,11 @@ class NurbsCurvePointList(object, IEnumerable[ControlPoint], IEnumerable, IRhino
     def EnsurePrivateCopy(self):
         """
         EnsurePrivateCopy(self: NurbsCurvePointList)
-            If you want to keep a copy of this class around by holding onto it in a variable 
-             after a command
-                    completes, call EnsurePrivateCopy to make sure that 
-             this class is not tied to the document. You can
-                    call this function as 
-             many times as you want.
+            If you want to keep a copy of this class around by holding onto it in a variable after a 
+             command
+                    completes, call EnsurePrivateCopy to make sure that this class is not 
+             tied to the document. You can
+                    call this function as many times as you want.
         """
         pass
 
@@ -2715,10 +2686,9 @@ class NurbsSurfaceKnotList(object, IEnumerable[float], IEnumerable, IRhinoTable[
         CreatePeriodicKnots(self: NurbsSurfaceKnotList, knotSpacing: float) -> bool
         
             Compute a clamped, uniform, periodic knot vector based on the current
-                    
-             degree and control point count. Does not change values of control
-                    
-             vertices.
+                    degree 
+             and control point count. Does not change values of control
+                    vertices.
         
         
             knotSpacing: Spacing of subsequent knots.
@@ -2731,8 +2701,8 @@ class NurbsSurfaceKnotList(object, IEnumerable[float], IEnumerable, IRhinoTable[
         CreateUniformKnots(self: NurbsSurfaceKnotList, knotSpacing: float) -> bool
         
             Compute a clamped, uniform knot vector based on the current
-                    degree 
-             and control point count. Does not change values of control
+                    degree and 
+             control point count. Does not change values of control
                     vertices.
         
         
@@ -2744,12 +2714,11 @@ class NurbsSurfaceKnotList(object, IEnumerable[float], IEnumerable, IRhinoTable[
     def EnsurePrivateCopy(self):
         """
         EnsurePrivateCopy(self: NurbsSurfaceKnotList)
-            If you want to keep a copy of this class around by holding onto it in a variable 
-             after a command
-                    completes, call EnsurePrivateCopy to make sure that 
-             this class is not tied to the document. You can
-                    call this function as 
-             many times as you want.
+            If you want to keep a copy of this class around by holding onto it in a variable after a 
+             command
+                    completes, call EnsurePrivateCopy to make sure that this class is not 
+             tied to the document. You can
+                    call this function as many times as you want.
         """
         pass
 
@@ -2800,12 +2769,11 @@ class NurbsSurfaceKnotList(object, IEnumerable[float], IEnumerable, IRhinoTable[
         """
         SuperfluousKnot(self: NurbsSurfaceKnotList, start: bool) -> float
         
-            Computes the knots that are superfluous because they are not used in NURBs 
-             evaluation.
-                    These make it appear so that the first and last surface 
-             spans are different from interior spans.
-                    
-             http://wiki.mcneel.com/developer/onsuperfluousknot
+            Computes the knots that are superfluous because they are not used in NURBs evaluation.
+           
+                      These make it appear so that the first and last surface spans are different from 
+             interior spans.
+                    http://wiki.mcneel.com/developer/onsuperfluousknot
         
         
             start: true if the query targets the first knot. Otherwise, the last knot.
@@ -2865,12 +2833,11 @@ class NurbsSurfacePointList(object, IEnumerable[ControlPoint], IEnumerable, IEps
     def EnsurePrivateCopy(self):
         """
         EnsurePrivateCopy(self: NurbsSurfacePointList)
-            If you want to keep a copy of this class around by holding onto it in a variable 
-             after a command
-                    completes, call EnsurePrivateCopy to make sure that 
-             this class is not tied to the document. You can
-                    call this function as 
-             many times as you want.
+            If you want to keep a copy of this class around by holding onto it in a variable after a 
+             command
+                    completes, call EnsurePrivateCopy to make sure that this class is not 
+             tied to the document. You can
+                    call this function as many times as you want.
         """
         pass
 
@@ -2898,8 +2865,8 @@ class NurbsSurfacePointList(object, IEnumerable[ControlPoint], IEnumerable, IEps
         """
         GetGrevillePoint(self: NurbsSurfacePointList, u: int, v: int) -> Point2d
         
-            Gets the Greville point (u, v) coordinates associated with the control point at 
-             the given indices.
+            Gets the Greville point (u, v) coordinates associated with the control point at the given 
+             indices.
         
         
             u: Index of control-point along surface U direction.

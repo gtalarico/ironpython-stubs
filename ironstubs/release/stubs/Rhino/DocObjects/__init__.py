@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Rhino.DocObjects calls itself DocObjects
-# from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null, RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530
+# from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530
 # by generator 1.145
 """ NamespaceTracker represent a CLS namespace. """
 # no imports
@@ -100,8 +100,8 @@ class RhinoObject(object):
         
             customGrips: The custom object grips.
             Returns: true if the call succeeded.  If you attempt to add custom grips to an
-                    
-             object that does not support custom grips, then false is returned.
+                    object 
+             that does not support custom grips, then false is returned.
         """
         pass
 
@@ -131,16 +131,16 @@ class RhinoObject(object):
         GetDynamicTransform(self: RhinoObject) -> (bool, Transform)
         
             While an object is being dynamically tranformed (dragged, rotated, ...),
-                 
-                the current transformation can be retrieved and used for creating
-                    
-             dynamic display.
+                    the 
+             current transformation can be retrieved and used for creating
+                    dynamic 
+             display.
         
             Returns: True if the object is being edited and its transformation
-                    is 
-             available.  False if the object is not being edited,
-                    in which case 
-             the identity xform is returned.
+                    is available.  
+             False if the object is not being edited,
+                    in which case the identity xform is 
+             returned.
         """
         pass
 
@@ -149,8 +149,8 @@ class RhinoObject(object):
         GetGrips(self: RhinoObject) -> Array[GripObject]
         
             Returns grips for this object If grips are enabled. If grips are not
-                    
-             enabled, returns null.
+                    enabled, 
+             returns null.
         
             Returns: An array of grip objects; or null if there are no grips.
         """
@@ -182,10 +182,10 @@ class RhinoObject(object):
         GetMaterial(self: RhinoObject, frontMaterial: bool) -> Material
         
             Gets material that this object uses based on it's attributes and the document
-            
-                     that the object is associated with.  In the rare case that a document is 
-             not
-                    associated with this object, null will be returned.
+                    
+             that the object is associated with.  In the rare case that a document is not
+                    
+             associated with this object, null will be returned.
         
         
             frontMaterial: If true, gets the material used to render the object's front side
@@ -205,21 +205,20 @@ class RhinoObject(object):
         GetRenderMaterial(self: RhinoObject, frontMaterial: bool) -> RenderMaterial
         
             Gets the RenderMaterial that this object uses based on it's attributes
-                   
-              and the document that the object is associated with. If there is no 
+                    and 
+             the document that the object is associated with. If there is no 
                     
              RenderMaterial associated with this object then null is returned.  If
-                    
-             null is returned you should call GetMaterial to get the material used
-                    
-             to render this object.
+                    null is 
+             returned you should call GetMaterial to get the material used
+                    to render this 
+             object.
         
         
             frontMaterial: If true, gets the material used to render the object's front side
-                    
-             otherwise; gets the material used to render the back side of the
-                    
-             object.
+                    otherwise; 
+             gets the material used to render the back side of the
+                    object.
         
             Returns: If there is a RenderMaterial associated with this objects' associated
                     
@@ -237,10 +236,10 @@ class RhinoObject(object):
         GetRenderMeshParameters(self: RhinoObject) -> MeshingParameters
         
             Meshing parameters that this object uses for generating render meshes. If the
-            
-                     object's attributes do not have custom meshing parameters, then the 
-             document's
-                    meshing parameters are used.
+                    
+             object's attributes do not have custom meshing parameters, then the document's
+                   
+              meshing parameters are used.
         """
         pass
 
@@ -325,9 +324,7 @@ class RhinoObject(object):
             Reports if a visual analysis mode is currently active for an object.
         
             mode: The mode to check for.
-                    Use null if you want to see if any mode is 
-             active.
-        
+                    Use null if you want to see if any mode is active.
             Returns: true if the specified analysis mode is active; otherwise false.
         InVisualAnalysisMode(self: RhinoObject) -> bool
         
@@ -352,10 +349,10 @@ class RhinoObject(object):
             Check highlight state.
         
             checkSubObjects: If true and the entire object is not highlighted, and some subset of the object
-          
-                       is highlighted, like some edges of a surface, then 3 is returned.
-              
-                   If false and the entire object is not highlighted, then zero is returned.
+                  
+               is highlighted, like some edges of a surface, then 3 is returned.
+                    If false 
+             and the entire object is not highlighted, then zero is returned.
         
             Returns: 0: object is not highlighted.1: entire object is highlighted.3: one or more proper 
              sub-objects are highlighted.
@@ -381,21 +378,21 @@ class RhinoObject(object):
             Reports if an object can be selected.
         
             ignoreSelectionState: If true, then selected objects are selectable.
-                    If false, then 
-             selected objects are not selectable.
+                    If false, then selected 
+             objects are not selectable.
         
             ignoreGripsState: If true, then objects with grips on can be selected.
-                    If false, then 
-             the value returned by the object's IsSelectableWithGripsOn() function decides if 
-             the object can be selected.
+                    If false, then the value 
+             returned by the object's IsSelectableWithGripsOn() function decides if the object can be 
+             selected.
         
             ignoreLayerLocking: If true, then objects on locked layers are selectable.
-                    If false, then 
-             objects on locked layers are not selectable.
+                    If false, then objects 
+             on locked layers are not selectable.
         
             ignoreLayerVisibility: If true, then objects on hidden layers are selectable.
-                    If false, then 
-             objects on hidden layers are not selectable.
+                    If false, then objects 
+             on hidden layers are not selectable.
         
             Returns: true if object is capable of being selected.
         """
@@ -408,19 +405,19 @@ class RhinoObject(object):
             Check selection state.
         
             checkSubObjects: (false is good default)
-                    If true and the entire object is not 
-             selected, and some subset of the object
-                    is selected, like some edges 
-             of a surface, then 3 is returned.
-                    If false and the entire object is 
-             not selected, then zero is returned.
+                    If true and the entire object is not selected, and 
+             some subset of the object
+                    is selected, like some edges of a surface, then 3 
+             is returned.
+                    If false and the entire object is not selected, then zero is 
+             returned.
         
             Returns: 0 = object is not selected.
                     1 = object is selected.
-                    2 = 
-             entire object is selected persistently.
-                    3 = one or more proper 
-             sub-objects are selected.
+                    2 = entire 
+             object is selected persistently.
+                    3 = one or more proper sub-objects are 
+             selected.
         """
         pass
 
@@ -443,8 +440,8 @@ class RhinoObject(object):
         
             componentIndex: index of subobject to check.
             ignoreSelectionState: If true, then selected objects are selectable.
-                    If false, then 
-             selected objects are not selectable.
+                    If false, then selected 
+             objects are not selectable.
         
             Returns: true if the specified subobject can be selected.
         """
@@ -466,11 +463,10 @@ class RhinoObject(object):
         MemoryEstimate(self: RhinoObject) -> UInt32
         
             Computes an estimate of the number of bytes that this object is using in memory.
-         
-                        Note that this is a runtime memory estimate and does not directly 
-             compare to the
-                    amount of space take up by the object when saved to a 
-             file.
+                 
+                Note that this is a runtime memory estimate and does not directly compare to the
+              
+                   amount of space take up by the object when saved to a file.
         
             Returns: The estimated number of bytes this object occupies in memory.
         """
@@ -481,20 +477,19 @@ class RhinoObject(object):
         MeshCount(self: RhinoObject, meshType: MeshType, parameters: MeshingParameters) -> int
         
             RhinoObjects can have several different types of meshes and 
-                    
-             different numbers of meshes.  A b-rep can have a render and 
-                    an 
-             analysis mesh on each face.  A mesh object has a single 
-                    render mesh 
-             and no analysis mesh. Curve, point, and annotation
-                    objects have no 
-             meshes.
+                    different 
+             numbers of meshes.  A b-rep can have a render and 
+                    an analysis mesh on each 
+             face.  A mesh object has a single 
+                    render mesh and no analysis mesh. Curve, 
+             point, and annotation
+                    objects have no meshes.
         
         
             meshType: type of mesh to count
             parameters: if not null and if the object can change its mesh (like a brep),
-                    then 
-             only meshes that were created with these mesh parameters are counted.
+                    then only 
+             meshes that were created with these mesh parameters are counted.
         
             Returns: number of meshes
         """
@@ -512,8 +507,8 @@ class RhinoObject(object):
         """
         OnAddToDocument(self: RhinoObject, doc: RhinoDoc)
             This call informs an object it is about to be added to the list of
-                    
-             active objects in the document.
+                    active 
+             objects in the document.
         """
         pass
 
@@ -521,10 +516,9 @@ class RhinoObject(object):
         """
         OnDeleteFromDocument(self: RhinoObject, doc: RhinoDoc)
             This call informs an object it is about to be deleted.
-                    Some objects, 
-             like clipping planes, need to do a little extra cleanup
-                    before they 
-             are deleted.
+                    Some objects, like 
+             clipping planes, need to do a little extra cleanup
+                    before they are deleted.
         """
         pass
 
@@ -539,8 +533,8 @@ class RhinoObject(object):
         """
         OnDuplicate(self: RhinoObject, source: RhinoObject)
             Called when this a new instance of this object is created and copied from
-                
-                 an existing object
+                    an 
+             existing object
         """
         pass
 
@@ -549,8 +543,8 @@ class RhinoObject(object):
         OnPick(self: RhinoObject, context: PickContext) -> IEnumerable[ObjRef]
         
             Called to determine if this object or some sub-portion of this object should be
-          
-                       picked given a pick context.
+                  
+               picked given a pick context.
         """
         pass
 
@@ -569,8 +563,8 @@ class RhinoObject(object):
         """
         OnSpaceMorph(self: RhinoObject, morph: SpaceMorph)
             Called when a space morph has been applied to the geometry.
-                    Currently 
-             this only works for CustomMeshObject instances
+                    Currently this 
+             only works for CustomMeshObject instances
         """
         pass
 
@@ -591,8 +585,8 @@ class RhinoObject(object):
             syncHighlight: If true, then the object is hightlighted if it is selected
                     and not 
              hightlighted if is is not selected.
-                    Highlighting can be and stay out 
-             of sync, as its specification is independent.
+                    Highlighting can be and stay out of sync, 
+             as its specification is independent.
         
             Returns: 0: object is not selected.1: object is selected.2: object is selected persistently.
         Select(self: RhinoObject, on: bool) -> int
@@ -607,25 +601,25 @@ class RhinoObject(object):
         
             on: The new selection state; true activates selection.
             syncHighlight: If true, then the object is highlighted if it is selected 
-                    and 
-             unhighlighted if is is not selected.
-                    Highlighting can be and stay out 
-             of sync, as its specification is independent.
+                    and unhighlighted 
+             if is is not selected.
+                    Highlighting can be and stay out of sync, as its 
+             specification is independent.
         
             persistentSelect: Objects that are persistently selected stay selected when a command terminates.
             ignoreGripsState: If true, then objects with grips on can be selected.
-                    If false, then 
-             the value returned by the object's IsSelectableWithGripsOn() function
-                    
-             decides if the object can be selected when it has grips turned on.
+                    If false, then the value 
+             returned by the object's IsSelectableWithGripsOn() function
+                    decides if the 
+             object can be selected when it has grips turned on.
         
             ignoreLayerLocking: If true, then objects on locked layers can be selected.
-                    If false, 
-             then objects on locked layers cannot be selected.
+                    If false, then 
+             objects on locked layers cannot be selected.
         
             ignoreLayerVisibility: If true, then objects on hidden layers can be selectable.
-                    If false, 
-             then objects on hidden layers cannot be selected.
+                    If false, then 
+             objects on hidden layers cannot be selected.
         
             Returns: 0: object is not selected.1: object is selected.2: object is selected persistently.
         """
@@ -640,14 +634,14 @@ class RhinoObject(object):
             componentIndex: Index of subobject to check.
             select: The new selection state; true activates selection.
             syncHighlight: (default=true)
-                    If true, then the object is highlighted if it is 
-             selected 
-                    and unhighlighted if is is not selected.
+                    If true, then the object is highlighted if it is selected 
+           
+                      and unhighlighted if is is not selected.
         
             Returns: 0: object is not selected
                     1: object is selected
-                    2: 
-             object is selected persistently.
+                    2: object is 
+             selected persistently.
         """
         pass
 
@@ -682,9 +676,7 @@ class RhinoObject(object):
         TryGetRenderPrimitiveBoundingBox(self: RhinoObject, viewport: ViewportInfo, preview: bool) -> (bool, BoundingBox)
         
             Get the bounding box for the custom render meshes associated with this
-                   
-              object.
-        
+                    object.
         
             viewport: The viewport being rendered.
             preview: Type of mesh to build, if preview is true then a smaller mesh may be
@@ -692,8 +684,8 @@ class RhinoObject(object):
              generated in less time, false is meant when actually rendering.
         
             Returns: Returns true if the bounding box was successfully calculated otherwise
-                   
-              returns false on error.
+                    
+             returns false on error.
         """
         pass
 
@@ -972,17 +964,17 @@ class BitmapEntry(CommonObject, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -990,8 +982,8 @@ class BitmapEntry(CommonObject, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -1311,17 +1303,17 @@ class DimensionStyle(CommonObject, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -1329,8 +1321,8 @@ class DimensionStyle(CommonObject, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -1660,10 +1652,9 @@ class EarthAnchorPoint(object, IDisposable):
         GetModelCompass(self: EarthAnchorPoint) -> Plane
         
             Returns a plane in model coordinates whose X axis points East,
-                    Y axis 
-             points North and Z axis points Up. The origin
-                    is set to 
-             ModelBasepoint.
+                    Y axis points 
+             North and Z axis points Up. The origin
+                    is set to ModelBasepoint.
         
             Returns: A plane value. This might be invalid on error.
         """
@@ -1674,10 +1665,10 @@ class EarthAnchorPoint(object, IDisposable):
         GetModelToEarthTransform(self: EarthAnchorPoint, modelUnitSystem: UnitSystem) -> Transform
         
             Gets a transformation from model coordinates to earth coordinates.
-                    
-             This transformation assumes the model is small enough that
-                    the 
-             curvature of the earth can be ignored.
+                    This 
+             transformation assumes the model is small enough that
+                    the curvature of the 
+             earth can be ignored.
         
         
             modelUnitSystem: The model unit system.
@@ -1845,17 +1836,17 @@ class GripObject(RhinoObject):
         NeighborGrip(self: GripObject, directionR: int, directionS: int, directionT: int, wrap: bool) -> GripObject
         
             Used to get a grip's logical neighbors, like NURBS curve, suface,
-                    and 
-             cage control point grips.
+                    and cage 
+             control point grips.
         
         
             directionR: -1 to go back one grip, +1 to move forward one grip.  For curves, surfaces
-               
-                  and cages, this is the first parameter direction.
+                    
+             and cages, this is the first parameter direction.
         
             directionS: -1 to go back one grip, +1 to move forward one grip.  For surfaces and
-                   
-              cages this is the second parameter direction.
+                    cages 
+             this is the second parameter direction.
         
             directionT: For cages this is the third parameter direction
             Returns: logical neighbor or null if the is no logical neighbor
@@ -1933,17 +1924,17 @@ class HatchPattern(CommonObject, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -1951,8 +1942,8 @@ class HatchPattern(CommonObject, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -1970,8 +1961,8 @@ class HatchPattern(CommonObject, IDisposable, ISerializable):
         
             Reads hatch pattern definitions from a file.
         
-            filename: Name of an existing file. If filename is null or empty, default hatch pattern 
-             filename is used.
+            filename: Name of an existing file. If filename is null or empty, default hatch pattern filename is 
+             used.
         
             quiet: If file doesn't exist, and quiet is false, an error meesage box is shown.
             Returns: An array of hatch patterns. This can be null, but not empty.
@@ -2265,13 +2256,12 @@ class InstanceDefinition(object):
         GetReferences(self: InstanceDefinition, wheretoLook: int) -> Array[InstanceObject]
         
             Gets a list of the CRhinoInstanceObjects (inserts) that contains
-                    a 
-             reference this instance definition.
+                    a reference 
+             this instance definition.
         
         
-            wheretoLook: 0 = get top level references in active document.1 = get top level and nested 
-             references in active document.2 = check for references from other instance 
-             definitions.
+            wheretoLook: 0 = get top level references in active document.1 = get top level and nested references in 
+             active document.2 = check for references from other instance definitions.
         
             Returns: An array of instance objects. The returned array can be empty, but not null.
         """
@@ -2283,9 +2273,8 @@ class InstanceDefinition(object):
         
             Determines whether the instance definition is referenced.
         
-            wheretoLook: 0 = check for top level references in active document.1 = check for top level and 
-             nested references in active document.2 = check for references in other instance 
-             definitions.
+            wheretoLook: 0 = check for top level references in active document.1 = check for top level and nested 
+             references in active document.2 = check for references in other instance definitions.
         
             Returns: true if the instance definition is used; otherwise false.
         """
@@ -2299,9 +2288,8 @@ class InstanceDefinition(object):
         
             index: 0 <= index < ObjectCount.
             Returns: Returns an object that is used to define the geometry.
-                    Does NOT 
-             return an object that references this definition.count the number of references to 
-             this instance.
+                    Does NOT return an 
+             object that references this definition.count the number of references to this instance.
         """
         pass
 
@@ -2309,17 +2297,15 @@ class InstanceDefinition(object):
         """
         UsesDefinition(self: InstanceDefinition, otherIdefIndex: int) -> int
         
-            Determines if this instance definition contains a reference to another instance 
-             definition.
-        
+            Determines if this instance definition contains a reference to another instance definition.
         
             otherIdefIndex: index of another instance definition.
             Returns: 0      no
-                      1      other_idef_index is the index of this instance 
-             definition
-                     >1      This InstanceDefinition uses the instance 
-             definition
-                             and the returned value is the nesting depth.
+                      1      other_idef_index is the index of this instance definition
+        
+                          >1      This InstanceDefinition uses the instance definition
+                        
+                  and the returned value is the nesting depth.
         """
         pass
 
@@ -2570,10 +2556,10 @@ class InstanceObject(RhinoObject):
             Explodes the instance reference into pieces.
         
             explodeNestedInstances: If true, then nested instance references are recursively exploded into pieces
-            
-                     until actual geometry is found. If false, an InstanceObject is added to
-          
-                       the pieces out parameter when this InstanceObject has nested references.
+                    
+             until actual geometry is found. If false, an InstanceObject is added to
+                    the 
+             pieces out parameter when this InstanceObject has nested references.
         """
         pass
 
@@ -2636,17 +2622,17 @@ class Layer(CommonObject, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -2654,9 +2640,7 @@ class Layer(CommonObject, IDisposable, ISerializable):
         """
         GetChildren(self: Layer) -> Array[Layer]
         
-            Gets immediate children of this layer. Note that child layers may have their own 
-             children.
-        
+            Gets immediate children of this layer. Note that child layers may have their own children.
             Returns: Array of child layers. null if this layer does not have any children.
         """
         pass
@@ -2667,13 +2651,12 @@ class Layer(CommonObject, IDisposable, ISerializable):
         GetDefaultLayerProperties() -> Layer
         
             Constructs a layer with the current default properties.
-                    The default 
-             layer properties are:
+                    The default layer 
+             properties are:
                     color = 
              Rhino.ApplicationSettings.AppearanceSettings.DefaultLayerColorline style = 
-             Rhino.ApplicationSettings.AppearanceSettings.DefaultLayerLineStylematerial index = 
-             -1iges level = -1mode = NormalLayername = emptylayer index = 0 (ignored by 
-             AddLayer)
+             Rhino.ApplicationSettings.AppearanceSettings.DefaultLayerLineStylematerial index = -1iges 
+             level = -1mode = NormalLayername = emptylayer index = 0 (ignored by AddLayer)
         
             Returns: A new layer instance.
         """
@@ -2684,14 +2667,14 @@ class Layer(CommonObject, IDisposable, ISerializable):
         GetPersistentLocking(self: Layer) -> bool
         
             The persistent locking setting is used for layers that can be locked by
-                  
-               a "parent" object. A common case is when a layer is a child layer
+                    a 
+             "parent" object. A common case is when a layer is a child layer
                     
              (Layer.ParentI is not nil). In this case, when a parent layer is locked,
-                 
-                then child layers are also locked. The persistent locking setting
-                    
-             determines what happens when the parent is unlocked again.
+                    then 
+             child layers are also locked. The persistent locking setting
+                    determines what 
+             happens when the parent is unlocked again.
         """
         pass
 
@@ -2700,16 +2683,15 @@ class Layer(CommonObject, IDisposable, ISerializable):
         GetPersistentVisibility(self: Layer) -> bool
         
             The persistent visbility setting is used for layers whose visibilty can
-                  
-               be changed by a "parent" object. A common case is when a layer is a
-                    
-             child layer (ParentId is not nil). In this case, when a parent layer is
-                  
-               turned off, then child layers are also turned off. The persistent
-                    
-             visibility setting determines what happens when the parent is turned on
-                  
-               again.
+                    be 
+             changed by a "parent" object. A common case is when a layer is a
+                    child layer 
+             (ParentId is not nil). In this case, when a parent layer is
+                    turned off, then 
+             child layers are also turned off. The persistent
+                    visibility setting 
+             determines what happens when the parent is turned on
+                    again.
         """
         pass
 
@@ -2728,9 +2710,7 @@ class Layer(CommonObject, IDisposable, ISerializable):
         """
         GetUserStrings(self: Layer) -> NameValueCollection
         
-            Gets a copy of all (user key string, user value string) pairs attached to this 
-             geometry.
-        
+            Gets a copy of all (user key string, user value string) pairs attached to this geometry.
             Returns: A new collection.
         """
         pass
@@ -2765,8 +2745,8 @@ class Layer(CommonObject, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -3061,8 +3041,8 @@ class Linetype(CommonObject, IDisposable, ISerializable):
         
             length: The length of the segment to be added.
             isSolid: If true, the length is interpreted as a line. If false,
-                    then the 
-             length is interpreted as a space.
+                    then the length is 
+             interpreted as a space.
         
             Returns: Index of the added segment.
         """
@@ -3093,17 +3073,17 @@ class Linetype(CommonObject, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -3121,8 +3101,8 @@ class Linetype(CommonObject, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -3153,8 +3133,8 @@ class Linetype(CommonObject, IDisposable, ISerializable):
             index: Zero based index of the segment.
             length: The length of the segment to be added in millimeters.
             isSolid: If true, the length is interpreted as a line. If false,
-                    then the 
-             length is interpreted as a space.
+                    then the length is 
+             interpreted as a space.
         
             Returns: true if the operation was successful; otherwise false.
         """
@@ -3281,17 +3261,17 @@ class Material(CommonObject, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -3339,8 +3319,8 @@ class Material(CommonObject, IDisposable, ISerializable):
         """
         GetUserStrings(self: Material) -> NameValueCollection
         
-            Gets an independent copy of the collection of (user text key, user text value) 
-             pairs attached to this object.
+            Gets an independent copy of the collection of (user text key, user text value) pairs 
+             attached to this object.
         
             Returns: A collection of key strings and values strings. This
         """
@@ -3350,8 +3330,8 @@ class Material(CommonObject, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -3744,14 +3724,14 @@ class MaterialRefs(object, IDictionary[Guid, MaterialRef], ICollection[KeyValueP
         ContainsKey(self: MaterialRefs, key: Guid) -> bool
         
             Determines whether this dictionary contains an MaterialRef with the
-                    
-             specified plug-in id.
+                    specified 
+             plug-in id.
         
         
             key: The plug-in Id used to locate a MaterialRef in this dictionary.
             Returns: true if this dictionary contains an element with the specified plug-in
-                   
-              Id; otherwise, false.
+                    Id; 
+             otherwise, false.
         """
         pass
 
@@ -3764,14 +3744,14 @@ class MaterialRefs(object, IDictionary[Guid, MaterialRef], ICollection[KeyValueP
         Create(self: MaterialRefs, createParams: MaterialRefCreateParams) -> MaterialRef
         
             Call this method to create a MaterialRef which can be used when calling
-                  
-               one of the Add methods.
+                    one 
+             of the Add methods.
         
         
             createParams: Values used to initialize the MaterialRef
             Returns: A temporary MaterialRef object, the caller is responsible for disposing
-                  
-               of this object.
+                    of 
+             this object.
         """
         pass
 
@@ -3789,14 +3769,12 @@ class MaterialRefs(object, IDictionary[Guid, MaterialRef], ICollection[KeyValueP
         Remove(self: MaterialRefs, key: Guid) -> bool
         
             Removes the MaterialRef with the specified plug-in Id from this
-                    
-             dictionary.
-        
+                    dictionary.
         
             key: The plug-in Id for the MaterialRef to remove.
             Returns: true if the MaterialRef is successfully removed; otherwise, false. This
-                  
-               method also returns false if key was not found in the original dictionary.
+                    
+             method also returns false if key was not found in the original dictionary.
         
         Remove(self: MaterialRefs, item: KeyValuePair[Guid, MaterialRef]) -> bool
         """
@@ -3810,8 +3788,8 @@ class MaterialRefs(object, IDictionary[Guid, MaterialRef], ICollection[KeyValueP
         
             key: The plug-in Id whose MaterialRef to get.
             Returns: true if this dictionary contains a MaterialRef with the specified key;
-                   
-              otherwise, false.
+                    
+             otherwise, false.
         """
         pass
 
@@ -3891,8 +3869,8 @@ class MeshObject(RhinoObject):
             Only for developers who are defining custom subclasses of MeshObject.
                     
              Directly sets the internal mesh geometry for this object.  Note that
-                    
-             this function does not work with Rhino's "undo".
+                    this 
+             function does not work with Rhino's "undo".
         
             Returns: The old mesh geometry that was set for this object
         """
@@ -3918,8 +3896,8 @@ class ObjectAttributes(CommonObject, IDisposable, ISerializable):
         """
         AddToGroup(self: ObjectAttributes, groupIndex: int)
             Adds object to the group with specified index by appending index to
-                    
-             group list.
+                    group 
+             list.
                     If the object is already in group, nothing is changed.
         
         
@@ -3955,17 +3933,17 @@ class ObjectAttributes(CommonObject, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -3989,8 +3967,8 @@ class ObjectAttributes(CommonObject, IDisposable, ISerializable):
         """
         GetGroupList(self: ObjectAttributes) -> Array[int]
         
-            Returns an array of GroupCount group indices.  If GroupCount is zero, then 
-             GetGroupList() returns null.
+            Returns an array of GroupCount group indices.  If GroupCount is zero, then GetGroupList() 
+             returns null.
         
             Returns: An array of group indices. null might be retuned in place of an empty array.
         """
@@ -4011,8 +3989,8 @@ class ObjectAttributes(CommonObject, IDisposable, ISerializable):
         """
         GetUserStrings(self: ObjectAttributes) -> NameValueCollection
         
-            Gets an independent copy of the collection of (user text key, user text value) 
-             pairs attached to this object.
+            Gets an independent copy of the collection of (user text key, user text value) pairs 
+             attached to this object.
         
             Returns: A collection of key strings and values strings. This
         """
@@ -4033,8 +4011,8 @@ class ObjectAttributes(CommonObject, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -4049,25 +4027,25 @@ class ObjectAttributes(CommonObject, IDisposable, ISerializable):
         """
         RemoveDisplayModeOverride(self: ObjectAttributes, rhinoViewportId: Guid)
             By default, objects are drawn using the display mode of the viewport that
-                
-                 the object is being drawn in. Setting a specific display mode, instructs
-             
-                    Rhino to always use that display mode, regardless of the viewport's mode.
-         
-                        This function resets an object to use the viewport's display mode.
+                    the 
+             object is being drawn in. Setting a specific display mode, instructs
+                    Rhino to 
+             always use that display mode, regardless of the viewport's mode.
+                    This 
+             function resets an object to use the viewport's display mode.
         
         
             rhinoViewportId: viewport that display mode overrides should be cleared from.
         RemoveDisplayModeOverride(self: ObjectAttributes)
             By default, objects are drawn using the display mode of the viewport that
-                
-                 the object is being drawn in. Setting a specific display mode, instructs
-             
-                    Rhino to always use that display mode, regardless of the viewport's mode.
-         
-                        This function resets an object to use the viewport's display mode for 
-             all
-                    viewports.
+                    the 
+             object is being drawn in. Setting a specific display mode, instructs
+                    Rhino to 
+             always use that display mode, regardless of the viewport's mode.
+                    This 
+             function resets an object to use the viewport's display mode for all
+                    
+             viewports.
         """
         pass
 
@@ -4082,8 +4060,8 @@ class ObjectAttributes(CommonObject, IDisposable, ISerializable):
         """
         RemoveFromGroup(self: ObjectAttributes, groupIndex: int)
             removes object from the group with specified index.
-                    If the object is 
-             not in the group, nothing is changed.
+                    If the object is not in 
+             the group, nothing is changed.
         
         
             groupIndex: The index that will be removed.
@@ -4095,12 +4073,12 @@ class ObjectAttributes(CommonObject, IDisposable, ISerializable):
         SetDisplayModeOverride(self: ObjectAttributes, mode: DisplayModeDescription, rhinoViewportId: Guid) -> bool
         
             By default, objects are drawn using the display mode of the viewport that
-                
-                 the object is being drawn in. Setting a specific display mode, instructs
-             
-                    Rhino to always use that display mode, regardless of the viewport's mode.
-         
-                        This version sets a display mode for a specific viewport.
+                    the 
+             object is being drawn in. Setting a specific display mode, instructs
+                    Rhino to 
+             always use that display mode, regardless of the viewport's mode.
+                    This version 
+             sets a display mode for a specific viewport.
         
         
             mode: The display mode.
@@ -4109,12 +4087,12 @@ class ObjectAttributes(CommonObject, IDisposable, ISerializable):
         SetDisplayModeOverride(self: ObjectAttributes, mode: DisplayModeDescription) -> bool
         
             By default, objects are drawn using the display mode of the viewport that
-                
-                 the object is being drawn in. Setting a specific display mode, instructs
-             
-                    Rhino to always use that display mode, regardless of the viewport's mode.
-         
-                        This version affects the object's display mode for all viewports.
+                    the 
+             object is being drawn in. Setting a specific display mode, instructs
+                    Rhino to 
+             always use that display mode, regardless of the viewport's mode.
+                    This version 
+             affects the object's display mode for all viewports.
         
         
             mode: The display mode.
@@ -4970,8 +4948,8 @@ class ObjRef(object, IDisposable):
         CurveParameter(self: ObjRef) -> (Curve, float)
         
             If the reference geometry is a curve or edge with a selection
-                    point, 
-             then this gets the parameter of the selection point.
+                    point, then 
+             this gets the parameter of the selection point.
         
             Returns: If the selection point was on a curve or edge, then the
                     curve/edge is 
@@ -5083,10 +5061,10 @@ class ObjRef(object, IDisposable):
         SelectionPoint(self: ObjRef) -> Point3d
         
             If the object was selected by picking a point on it, then
-                    
-             SelectionPoint() returns the point where the selection
-                    occured, 
-             otherwise it returns Point3d.Unset.
+                    SelectionPoint() 
+             returns the point where the selection
+                    occured, otherwise it returns 
+             Point3d.Unset.
         
             Returns: The point where the selection occured or Point3d.Unset on failure.
         """
@@ -5096,8 +5074,8 @@ class ObjRef(object, IDisposable):
         """
         SetSelectionComponent(self: ObjRef, componentIndex: ComponentIndex)
             When an object is selected by picking a sub-object, SetSelectionComponent
-                
-                 may be used to identify the sub-object.
+                    may 
+             be used to identify the sub-object.
         """
         pass
 
@@ -5115,10 +5093,10 @@ class ObjRef(object, IDisposable):
         SurfaceParameter(self: ObjRef) -> (Surface, float, float)
         
             If the reference geometry is a surface, brep with one face,
-                    or 
-             surface edge with a selection point, then this gets the 
-                    surface 
-             paramters of the selection point.
+                    or surface edge 
+             with a selection point, then this gets the 
+                    surface paramters of the 
+             selection point.
         
             Returns: If the selection point was on a surface, then the surface is returned.
         """
@@ -5257,10 +5235,9 @@ class ReplayHistoryData(object, IDisposable):
         GetRhinoObjRef(self: ReplayHistoryData, id: int) -> ObjRef
         
             In ReplayHistory, use GetRhinoObjRef to convert the information
-                    in a 
-             history record into the ObjRef that has up to date
-                    RhinoObject 
-             pointers
+                    in a history 
+             record into the ObjRef that has up to date
+                    RhinoObject pointers
         
         
             id: HistoryRecord value id
@@ -5731,17 +5708,17 @@ class Texture(CommonObject, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -5750,17 +5727,17 @@ class Texture(CommonObject, IDisposable, ISerializable):
         GetAlphaBlendValues(self: Texture) -> (float, float, float, float, float)
         
             If the TextureCombineMode is Blend, then the blending function
-                    for 
-             alpha is determined by
+                    for alpha is 
+             determined by
                     
                     new alpha = constant
-                   
-                          + a0*(current alpha)
+                                + 
+             a0*(current alpha)
                                 + a1*(texture alpha)
-          
-                                   + a2*min(current alpha,texture alpha)
-                              
-               + a3*max(current alpha,texture alpha)
+                                
+             + a2*min(current alpha,texture alpha)
+                                + a3*max(current 
+             alpha,texture alpha)
         """
         pass
 
@@ -5768,8 +5745,8 @@ class Texture(CommonObject, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -5784,17 +5761,17 @@ class Texture(CommonObject, IDisposable, ISerializable):
         """
         SetAlphaBlendValues(self: Texture, constant: float, a0: float, a1: float, a2: float, a3: float)
             If the TextureCombineMode is Blend, then the blending function
-                    for 
-             alpha is determined by
+                    for alpha is 
+             determined by
                     
                     new alpha = constant
-                   
-                          + a0*(current alpha)
+                                + 
+             a0*(current alpha)
                                 + a1*(texture alpha)
-          
-                                   + a2*min(current alpha,texture alpha)
-                              
-               + a3*max(current alpha,texture alpha)
+                                
+             + a2*min(current alpha,texture alpha)
+                                + a3*max(current 
+             alpha,texture alpha)
         """
         pass
 
@@ -6128,19 +6105,19 @@ class ViewportInfo(object, IDisposable, ISerializable):
         ChangeToParallelProjection(self: ViewportInfo, symmetricFrustum: bool) -> bool
         
             Use this function to change projections of valid viewports
-                    from 
-             parallel to perspective.  It will make common additional
-                    adjustments 
-             to the frustum and camera location so the resulting
-                    views are 
-             similar.  The camera direction and target point are
+                    from parallel to 
+             perspective.  It will make common additional
+                    adjustments to the frustum and 
+             camera location so the resulting
+                    views are similar.  The camera direction and 
+             target point are
                     not be changed.
-         
-                        If the current projection is parallel and symmetricFrustum,
-                   
-              FrustumIsLeftRightSymmetric() and FrustumIsTopBottomSymmetric()
-                    are 
-             all equal, then no changes are made and true is returned.
+                    If the current projection is 
+             parallel and symmetricFrustum,
+                    FrustumIsLeftRightSymmetric() and 
+             FrustumIsTopBottomSymmetric()
+                    are all equal, then no changes are made and 
+             true is returned.
         
         
             symmetricFrustum: true if you want the resulting frustum to be symmetric.
@@ -6153,34 +6130,33 @@ class ViewportInfo(object, IDisposable, ISerializable):
         ChangeToPerspectiveProjection(self: ViewportInfo, targetDistance: float, symmetricFrustum: bool, lensLength: float) -> bool
         
             Use this function to change projections of valid viewports
-                    from 
-             parallel to perspective.  It will make common additional
-                    adjustments 
-             to the frustum and camera location so the resulting
-                    views are 
-             similar.  The camera direction and target point are
+                    from parallel to 
+             perspective.  It will make common additional
+                    adjustments to the frustum and 
+             camera location so the resulting
+                    views are similar.  The camera direction and 
+             target point are
                     not changed.
-            
-                     If the current projection is perspective and symmetricFrustum,
-                   
-              IsFrustumIsLeftRightSymmetric, and IsFrustumIsTopBottomSymmetric
-                    are 
-             all equal, then no changes are made and true is returned.
+                    If the current projection is 
+             perspective and symmetricFrustum,
+                    IsFrustumIsLeftRightSymmetric, and 
+             IsFrustumIsTopBottomSymmetric
+                    are all equal, then no changes are made and 
+             true is returned.
         
         
             targetDistance: If RhinoMath.UnsetValue this parameter is ignored.
-                    Otherwise it must 
-             be > 0 and indicates which plane in the current view frustum should be perserved.
+                    Otherwise it must be > 0 
+             and indicates which plane in the current view frustum should be perserved.
         
             symmetricFrustum: true if you want the resulting frustum to be symmetric.
             lensLength: (pass 50.0 when in doubt)
                     35 mm lens length to use when changing from 
              parallel
                     to perspective projections. If the current projection
-              
-                   is perspective or lens_length is <= 0.0,
-                    then this parameter is 
-             ignored.
+                    
+             is perspective or lens_length is <= 0.0,
+                    then this parameter is ignored.
         
             Returns: true if the operation succeeded; otherwise, false.
         """
@@ -6191,22 +6167,20 @@ class ViewportInfo(object, IDisposable, ISerializable):
         ChangeToSymmetricFrustum(self: ViewportInfo, isLeftRightSymmetric: bool, isTopBottomSymmetric: bool, targetDistance: float) -> bool
         
             If needed, adjusts the current frustum so it has the 
-                    specified 
-             symmetries and adjust the camera location
-                    so the target plane remains 
-             visible.
+                    specified symmetries 
+             and adjust the camera location
+                    so the target plane remains visible.
         
         
             isLeftRightSymmetric: If true, the frustum will be adjusted so left = -right.
             isTopBottomSymmetric: If true, the frustum will be adjusted so top = -bottom.
             targetDistance: If projection is not perspective or target_distance is RhinoMath.UnsetValue,
+                    
+             then this parameter is ignored. If the projection is perspective and targetDistance
+              
+                   is not RhinoMath.UnsetValue, then it must be > 0.0 and it is used to determine
              
-                    then this parameter is ignored. If the projection is perspective and 
-             targetDistance
-                    is not RhinoMath.UnsetValue, then it must be > 0.0 and 
-             it is used to determine
-                    which plane in the old frustum will appear 
-             unchanged in the new frustum.
+                    which plane in the old frustum will appear unchanged in the new frustum.
         
             Returns: Returns true if the viewport has now a frustum with the specified symmetries.
         """
@@ -6217,41 +6191,38 @@ class ViewportInfo(object, IDisposable, ISerializable):
         ChangeToTwoPointPerspectiveProjection(self: ViewportInfo, targetDistance: float, up: Vector3d, lensLength: float) -> bool
         
             Changes projections of valid viewports
-                    to a two point perspective.  
-             It will make common additional
-                    adjustments to the frustum and camera 
-             location and direction
+                    to a two point perspective.  It will 
+             make common additional
+                    adjustments to the frustum and camera location and 
+             direction
                     so the resulting views are similar.
-                  
-               If the current projection is perspective and
-                    
-             IsFrustumIsLeftRightSymmetric is true and
-                    
-             IsFrustumIsTopBottomSymmetric is false, then no changes are
+                    If the current 
+             projection is perspective and
+                    IsFrustumIsLeftRightSymmetric is true and
+             
+                    IsFrustumIsTopBottomSymmetric is false, then no changes are
                     made and 
              true is returned.
         
         
             targetDistance: If RhinoMath.UnsetValue this parameter is ignored.  Otherwise
-                    it must 
-             be > 0 and indicates which plane in the current 
-                    view frustum should 
-             be perserved.
+                    it must be > 0 
+             and indicates which plane in the current 
+                    view frustum should be perserved.
         
             up: The locked up direction. Pass Vector3d.Zero if you want to use the world
-                 
-                axis direction that is closest to the current up direction.
-                    Pass 
-             CameraY() if you want to preserve the current up direction.
+                    axis 
+             direction that is closest to the current up direction.
+                    Pass CameraY() if you 
+             want to preserve the current up direction.
         
             lensLength: (pass 50.0 when in doubt)
                     35 mm lens length to use when changing from 
              parallel
                     to perspective projections. If the current projection
-              
-                   is perspective or lens_length is <= 0.0,
-                    then this parameter is 
-             ignored.
+                    
+             is perspective or lens_length is <= 0.0,
+                    then this parameter is ignored.
         
             Returns: true if the operation succeeded; otherwise, false.
         """
@@ -6269,14 +6240,14 @@ class ViewportInfo(object, IDisposable, ISerializable):
         DollyCamera(self: ViewportInfo, dollyVector: Vector3d) -> bool
         
             DollyCamera() does not update the frustum's clipping planes.
-                    To 
-             update the frustum's clipping planes call DollyFrustum(d)
-                    with d = 
-             dollyVector o cameraFrameZ.  To convert screen locations
-                    into a dolly 
-             vector, use GetDollyCameraVector().
-                    Does not update frustum.  To 
-             update frustum use DollyFrustum(d) with d = dollyVector o cameraFrameZ.
+                    To update the 
+             frustum's clipping planes call DollyFrustum(d)
+                    with d = dollyVector o 
+             cameraFrameZ.  To convert screen locations
+                    into a dolly vector, use 
+             GetDollyCameraVector().
+                    Does not update frustum.  To update frustum use 
+             DollyFrustum(d) with d = dollyVector o cameraFrameZ.
         
         
             dollyVector: dolly vector in world coordinates.
@@ -6289,17 +6260,17 @@ class ViewportInfo(object, IDisposable, ISerializable):
         DollyExtents(self: ViewportInfo, cameraCoordinateBoundingBox: BoundingBox, border: float) -> bool
         
             Dolly the camera location and so that the view frustum contains
-                    all 
-             of the document objects that can be seen in view.
-                    If the projection 
-             is perspective, the camera angle is not changed.
+                    all of the 
+             document objects that can be seen in view.
+                    If the projection is perspective, 
+             the camera angle is not changed.
         
         
             border: If border > 1.0, then the fustum in enlarged by this factor
-                    to 
-             provide a border around the view.  1.1 works well for
-                    parallel 
-             projections; 0.0 is suggested for perspective projections.
+                    to provide a 
+             border around the view.  1.1 works well for
+                    parallel projections; 0.0 is 
+             suggested for perspective projections.
         
             Returns: True if successful.
         DollyExtents(self: ViewportInfo, geometry: IEnumerable[GeometryBase], border: float) -> bool
@@ -6322,12 +6293,11 @@ class ViewportInfo(object, IDisposable, ISerializable):
         Extents(self: ViewportInfo, halfViewAngleRadians: float, sphere: Sphere) -> bool
         
             Extends this viewport view to include a sphere.
-                    Use Extents() as a 
-             quick way to set a viewport to so that bounding
-                    volume is inside of a 
-             viewports frustrum.
-                    The view angle is used to determine the position 
-             of the camera.
+                    Use Extents() as a quick way 
+             to set a viewport to so that bounding
+                    volume is inside of a viewports 
+             frustrum.
+                    The view angle is used to determine the position of the camera.
         
         
             halfViewAngleRadians: 1/2 smallest subtended view angle in radians.
@@ -6336,12 +6306,12 @@ class ViewportInfo(object, IDisposable, ISerializable):
         Extents(self: ViewportInfo, halfViewAngleRadians: float, bbox: BoundingBox) -> bool
         
             Extends this viewport view to include a bounding box.
-                    Use Extents() 
-             as a quick way to set a viewport to so that bounding
-                    volume is inside 
-             of a viewports frustrum.
-                    The view angle is used to determine the 
-             position of the camera.
+                    Use Extents() as a 
+             quick way to set a viewport to so that bounding
+                    volume is inside of a 
+             viewports frustrum.
+                    The view angle is used to determine the position of the 
+             camera.
         
         
             halfViewAngleRadians: 1/2 smallest subtended view angle in radians.
@@ -6355,27 +6325,27 @@ class ViewportInfo(object, IDisposable, ISerializable):
         FrustumCenterPoint(self: ViewportInfo, targetDistance: float) -> Point3d
         
             Return a point on the central axis of the view frustum.
-                    This point is 
-             a good choice for a general purpose target point.
+                    This point is a good 
+             choice for a general purpose target point.
         
         
             targetDistance: If targetDistance > 0.0, then the distance from the returned
-                    point to 
-             the camera plane will be targetDistance. Note that
-                    if the frustum is 
-             not symmetric, the distance from the
-                    returned point to the camera 
-             location will be larger than
+                    point to the 
+             camera plane will be targetDistance. Note that
+                    if the frustum is not 
+             symmetric, the distance from the
+                    returned point to the camera location will 
+             be larger than
                     targetDistance.
-                    If 
-             targetDistance == ON_UNSET_VALUE and the frustum
-                    is valid with near > 
-             0.0, then 0.5*(near + far) will be used
+                    If targetDistance == 
+             ON_UNSET_VALUE and the frustum
+                    is valid with near > 0.0, then 0.5*(near + 
+             far) will be used
                     as the targetDistance.
         
             Returns: A point on the frustum's central axis.  If the viewport or input
-                    is 
-             not valid, then ON_3dPoint::UnsetPoint is returned.
+                    is not 
+             valid, then ON_3dPoint::UnsetPoint is returned.
         """
         pass
 
@@ -6384,27 +6354,26 @@ class ViewportInfo(object, IDisposable, ISerializable):
         GetBoundingBoxDepth(self: ViewportInfo, bbox: BoundingBox) -> (bool, float, float)
         
             Gets near and far clipping distances of a bounding box.
-                    This function 
-             ignores the current value of the viewport's 
-                    near and far settings. 
-             If the viewport is a perspective
-                    projection, the it intersects the 
-             semi infinite frustum
-                    volume with the bounding box and returns the 
-             near and far
-                    distances of the intersection.  If the viewport is a 
-             parallel
-                    projection, it instersects the infinte view region with the
-        
-                         bounding box and returns the near and far distances of the
-                   
-              projection.
+                    This function ignores 
+             the current value of the viewport's 
+                    near and far settings. If the viewport 
+             is a perspective
+                    projection, the it intersects the semi infinite frustum
+            
+                     volume with the bounding box and returns the near and far
+                    distances 
+             of the intersection.  If the viewport is a parallel
+                    projection, it 
+             instersects the infinte view region with the
+                    bounding box and returns the 
+             near and far distances of the
+                    projection.
         
         
             bbox: The bounding box to sample.
-            Returns: true if the bounding box intersects the view frustum and near_dist/far_dist were 
-             set. 
-                    false if the bounding box does not intesect the view frustum.
+            Returns: true if the bounding box intersects the view frustum and near_dist/far_dist were set. 
+           
+                      false if the bounding box does not intesect the view frustum.
         """
         pass
 
@@ -6434,9 +6403,7 @@ class ViewportInfo(object, IDisposable, ISerializable):
         
             screen0: Start point.
             screen1: End point.
-            projectionPlaneDistance: Distance of projection plane from camera. When in doubt, use 
-             0.5*(frus_near+frus_far).
-        
+            projectionPlaneDistance: Distance of projection plane from camera. When in doubt, use 0.5*(frus_near+frus_far).
             Returns: The world coordinate dolly vector.
         GetDollyCameraVector(self: ViewportInfo, screenX0: int, screenY0: int, screenX1: int, screenY1: int, projectionPlaneDistance: float) -> Vector3d
         
@@ -6446,9 +6413,7 @@ class ViewportInfo(object, IDisposable, ISerializable):
             screenY0: Screen coords of start point.
             screenX1: Screen coords of end point.
             screenY1: Screen coords of end point.
-            projectionPlaneDistance: Distance of projection plane from camera. When in doubt, use 
-             0.5*(frus_near+frus_far).
-        
+            projectionPlaneDistance: Distance of projection plane from camera. When in doubt, use 0.5*(frus_near+frus_far).
             Returns: The world coordinate dolly vector.
         """
         pass
@@ -6458,10 +6423,9 @@ class ViewportInfo(object, IDisposable, ISerializable):
         GetFarPlaneCorners(self: ViewportInfo) -> Array[Point3d]
         
             Gets the corners of far clipping plane rectangle.
-                    4 points are 
-             returned in the order of bottom left, bottom right,
-                    top left, top 
-             right.
+                    4 points are returned in 
+             the order of bottom left, bottom right,
+                    top left, top right.
         
             Returns: Four corner points on success.
                     Empty array if viewport is not valid.
@@ -6482,36 +6446,36 @@ class ViewportInfo(object, IDisposable, ISerializable):
         GetFrustumLine(self: ViewportInfo, screenPoint: PointF) -> Line
         
             Gets the world coordinate line in the view frustum
-                    that projects to a 
-             point on the screen.
+                    that projects to a point 
+             on the screen.
         
         
             screenPoint: screen location
-            Returns: 3d world coordinate line segment starting on the near clipping plane and ending on 
-             the far clipping plane.
+            Returns: 3d world coordinate line segment starting on the near clipping plane and ending on the far 
+             clipping plane.
         
         GetFrustumLine(self: ViewportInfo, screenPoint: Point) -> Line
         
             Gets the world coordinate line in the view frustum
-                    that projects to a 
-             point on the screen.
+                    that projects to a point 
+             on the screen.
         
         
             screenPoint: screen location
-            Returns: 3d world coordinate line segment starting on the near clipping plane and ending on 
-             the far clipping plane.
+            Returns: 3d world coordinate line segment starting on the near clipping plane and ending on the far 
+             clipping plane.
         
         GetFrustumLine(self: ViewportInfo, screenX: float, screenY: float) -> Line
         
             Gets the world coordinate line in the view frustum
-                    that projects to a 
-             point on the screen.
+                    that projects to a point 
+             on the screen.
         
         
             screenX: (screenx,screeny) = screen location.
             screenY: (screenx,screeny) = screen location.
-            Returns: 3d world coordinate line segment starting on the near clipping plane and ending on 
-             the far clipping plane.
+            Returns: 3d world coordinate line segment starting on the near clipping plane and ending on the far 
+             clipping plane.
         """
         pass
 
@@ -6520,10 +6484,9 @@ class ViewportInfo(object, IDisposable, ISerializable):
         GetNearPlaneCorners(self: ViewportInfo) -> Array[Point3d]
         
             Gets the corners of near clipping plane rectangle.
-                    4 points are 
-             returned in the order of bottom left, bottom right,
-                    top left, top 
-             right.
+                    4 points are returned in 
+             the order of bottom left, bottom right,
+                    top left, top right.
         
             Returns: Four corner points on success.
                     Empty array if viewport is not valid.
@@ -6538,8 +6501,7 @@ class ViewportInfo(object, IDisposable, ISerializable):
         
         
             info: The System.Runtime.Serialization.SerializationInfo to populate with data.
-            context: The destination (see System.Runtime.Serialization.StreamingContext) for this 
-             serialization.
+            context: The destination (see System.Runtime.Serialization.StreamingContext) for this serialization.
         """
         pass
 
@@ -6548,27 +6510,26 @@ class ViewportInfo(object, IDisposable, ISerializable):
         GetPointDepth(self: ViewportInfo, point: Point3d) -> (bool, float)
         
             Gets the clipping distance of a point. This function ignores the
-                    
-             current value of the viewport's near and far settings. If
-                    the 
-             viewport is a perspective projection, then it intersects
-                    the semi 
-             infinite frustum volume with the bounding box and
-                    returns the near 
-             and far distances of the intersection.
-                    If the viewport is a parallel 
-             projection, it instersects the
-                    infinte view region with the bounding 
-             box and returns the
-                    near and far distances of the projection.
+                    current 
+             value of the viewport's near and far settings. If
+                    the viewport is a 
+             perspective projection, then it intersects
+                    the semi infinite frustum volume 
+             with the bounding box and
+                    returns the near and far distances of the 
+             intersection.
+                    If the viewport is a parallel projection, it instersects the
+          
+                       infinte view region with the bounding box and returns the
+                    near and 
+             far distances of the projection.
         
         
             point: A point to measure.
             Returns: true if the bounding box intersects the view frustum and
-                    
-             near_dist/far_dist were set.
-                    false if the bounding box does not 
-             intesect the view frustum.
+                    near_dist/far_dist 
+             were set.
+                    false if the bounding box does not intesect the view frustum.
         """
         pass
 
@@ -6578,16 +6539,16 @@ class ViewportInfo(object, IDisposable, ISerializable):
         
             Gets the location of viewport in pixels.
                     See documentation for 
-             Rhino.DocObjects.ViewportInfo.SetScreenPort(System.Int32,System.Int32,System.Int32,
-             System.Int32,System.Int32,System.Int32)SetScreenPort.
+             Rhino.DocObjects.ViewportInfo.SetScreenPort(System.Int32,System.Int32,System.Int32,System.I
+             nt32,System.Int32,System.Int32)SetScreenPort.
         
             Returns: The rectangle, or System.Drawing.Rectangle.EmptyEmpty rectangle on error.
         GetScreenPort(self: ViewportInfo) -> (Rectangle, int, int)
         
             Gets the location of viewport in pixels.
                     See value meanings in 
-             Rhino.DocObjects.ViewportInfo.SetScreenPort(System.Int32,System.Int32,System.Int32,
-             System.Int32,System.Int32,System.Int32)SetScreenPort.
+             Rhino.DocObjects.ViewportInfo.SetScreenPort(System.Int32,System.Int32,System.Int32,System.I
+             nt32,System.Int32,System.Int32)SetScreenPort.
         
             Returns: The rectangle, or System.Drawing.Rectangle.EmptyEmpty rectangle on error.
         """
@@ -6601,8 +6562,8 @@ class ViewportInfo(object, IDisposable, ISerializable):
         
             sphere: The sphere to sample.
             Returns: true if the sphere intersects the view frustum and near_dist/far_dist were set.
-          
-                       false if the sphere does not intesect the view frustum.
+                  
+               false if the sphere does not intesect the view frustum.
         """
         pass
 
@@ -6665,10 +6626,10 @@ class ViewportInfo(object, IDisposable, ISerializable):
         SetFrustum(self: ViewportInfo, left: float, right: float, bottom: float, top: float, nearDistance: float, farDistance: float) -> bool
         
             Sets the view frustum. If FrustumSymmetryIsLocked() is true
-                    and left 
-             != -right or bottom != -top, then they will be
-                    adjusted so the 
-             resulting frustum is symmetric.
+                    and left != 
+             -right or bottom != -top, then they will be
+                    adjusted so the resulting frustum 
+             is symmetric.
         
         
             left: A new left value.
@@ -6697,29 +6658,28 @@ class ViewportInfo(object, IDisposable, ISerializable):
             nearDistance: (>0) desired near clipping distance.
             farDistance: (>near_dist) desired near clipping distance.
             minNearDistance: If min_near_dist <= 0.0, it is ignored.
-                    If min_near_dist > 0 and 
-             near_dist < min_near_dist, then the frustum's near_dist will be increased to 
-             min_near_dist.
+                    If min_near_dist > 0 and near_dist < 
+             min_near_dist, then the frustum's near_dist will be increased to min_near_dist.
         
             minNearOverFar: If min_near_over_far <= 0.0, it is ignored.
                     If near_dist < 
              far_dist*min_near_over_far, then
-                    near_dist is increased and/or 
-             far_dist is decreased
-                    so that near_dist = far_dist*min_near_over_far.
-             
-                    If near_dist < target_dist < far_dist, then near_dist
+                    near_dist is increased and/or far_dist is 
+             decreased
+                    so that near_dist = far_dist*min_near_over_far.
+                    If 
+             near_dist < target_dist < far_dist, then near_dist
+                    near_dist is increased and 
+             far_dist is decreased so that
+                    projection precision will be good at 
+             target_dist.
+                    Otherwise, near_dist is simply set to 
                     
-             near_dist is increased and far_dist is decreased so that
-                    projection 
-             precision will be good at target_dist.
-                    Otherwise, near_dist is simply 
-             set to 
-                    far_dist*min_near_over_far.
+             far_dist*min_near_over_far.
         
             targetDistance: If target_dist <= 0.0, it is ignored.
-                    If target_dist > 0, it is used 
-             as described in the
+                    If target_dist > 0, it is used as 
+             described in the
                     description of the min_near_over_far parameter.
         
             Returns: true if operation succeeded; otherwise, false.
@@ -6745,8 +6705,8 @@ class ViewportInfo(object, IDisposable, ISerializable):
         
             Gets the location of viewport in pixels.
                     See value meanings in 
-             Rhino.DocObjects.ViewportInfo.SetScreenPort(System.Int32,System.Int32,System.Int32,
-             System.Int32,System.Int32,System.Int32)SetScreenPort.
+             Rhino.DocObjects.ViewportInfo.SetScreenPort(System.Int32,System.Int32,System.Int32,System.I
+             nt32,System.Int32,System.Int32)SetScreenPort.
         
         
             windowRectangle: A new rectangle.
@@ -6755,8 +6715,8 @@ class ViewportInfo(object, IDisposable, ISerializable):
         
             Gets the location of viewport in pixels.
                     See value meanings in 
-             Rhino.DocObjects.ViewportInfo.SetScreenPort(System.Int32,System.Int32,System.Int32,
-             System.Int32,System.Int32,System.Int32)SetScreenPort.
+             Rhino.DocObjects.ViewportInfo.SetScreenPort(System.Int32,System.Int32,System.Int32,System.I
+             nt32,System.Int32,System.Int32)SetScreenPort.
         
         
             windowRectangle: A new rectangle.
@@ -6766,30 +6726,29 @@ class ViewportInfo(object, IDisposable, ISerializable):
         SetScreenPort(self: ViewportInfo, left: int, right: int, bottom: int, top: int, near: int, far: int) -> bool
         
             Location of viewport in pixels.
-                    These are provided so you can set the 
-             port you are using
-                    and get the appropriate transformations to and 
-             from
-                    screen space.
-                    // For a Windows window
-                    
-             /      int width = width of window client area in pixels;
-                    /      int 
-             height = height of window client area in pixels;
-                    /      port_left = 
-             0;
-                    /      port_right = width;
-                    /      port_top = 0;
-             
-                    /      port_bottom = height;
-                    /      port_near = 0;
+                    These are provided so you can set the port 
+             you are using
+                    and get the appropriate transformations to and from
                    
-              /      port_far = 1;
-                    /      SetScreenPort( port_left, port_right, 
-         
-                        /                     port_bottom, port_top, 
-                    /            
-                      port_near, port_far );
+              screen space.
+                    // For a Windows window
+                    /      int width = width 
+             of window client area in pixels;
+                    /      int height = height of window client 
+             area in pixels;
+                    /      port_left = 0;
+                    /      port_right = width;
+             
+                    /      port_top = 0;
+                    /      port_bottom = height;
+                    / 
+                  port_near = 0;
+                    /      port_far = 1;
+                    /      SetScreenPort( 
+             port_left, port_right, 
+                    /                     port_bottom, port_top, 
+               
+                  /                     port_near, port_far );
         
         
             left: A left value.
@@ -6807,28 +6766,27 @@ class ViewportInfo(object, IDisposable, ISerializable):
         TargetDistance(self: ViewportInfo, useFrustumCenterFallback: bool) -> float
         
             Gets the distance from the target point to the camera plane.
-                    Note 
-             that if the frustum is not symmetric, then this distance
-                    is shorter 
-             than the distance from the target to the camera location.
+                    Note that if the 
+             frustum is not symmetric, then this distance
+                    is shorter than the distance 
+             from the target to the camera location.
         
         
             useFrustumCenterFallback: If bUseFrustumCenterFallback is false and the target point is
-                    not 
-             valid, then ON_UNSET_VALUE is returned.
-                    If bUseFrustumCenterFallback 
-             is true and the frustum is valid
-                    and current target point is not 
-             valid or is behind the camera,
+                    not valid, then 
+             ON_UNSET_VALUE is returned.
+                    If bUseFrustumCenterFallback is true and the 
+             frustum is valid
+                    and current target point is not valid or is behind the 
+             camera,
                     then 0.5*(near + far) is returned.
         
             Returns: Shortest signed distance from camera plane to target point.
-                    If the 
-             target point is on the visible side of the camera,
-                    a positive value 
-             is returned.  ON_UNSET_VALUE is returned
-                    when the input of view is 
-             not valid.
+                    If the target 
+             point is on the visible side of the camera,
+                    a positive value is returned.  
+             ON_UNSET_VALUE is returned
+                    when the input of view is not valid.
         """
         pass
 
@@ -6851,11 +6809,11 @@ class ViewportInfo(object, IDisposable, ISerializable):
         ZoomToScreenRect(self: ViewportInfo, windowRectangle: Rectangle) -> bool
         
             Zooms to a screen zone.
-                    View changing from screen input points. Handy 
-             for
-                    using a mouse to manipulate a view.
-                    
-             ZoomToScreenRect() may change camera and frustum settings.
+                    View changing from screen input points. Handy for
+           
+                      using a mouse to manipulate a view.
+                    ZoomToScreenRect() may change 
+             camera and frustum settings.
         
         
             windowRectangle: The new window rectangle in screen space.
@@ -6863,11 +6821,11 @@ class ViewportInfo(object, IDisposable, ISerializable):
         ZoomToScreenRect(self: ViewportInfo, left: int, top: int, right: int, bottom: int) -> bool
         
             Zooms to a screen zone.
-                    View changing from screen input points. Handy 
-             for
-                    using a mouse to manipulate a view.
-                    
-             ZoomToScreenRect() may change camera and frustum settings.
+                    View changing from screen input points. Handy for
+           
+                      using a mouse to manipulate a view.
+                    ZoomToScreenRect() may change 
+             camera and frustum settings.
         
         
             left: Screen coord.

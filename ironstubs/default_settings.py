@@ -1,10 +1,5 @@
 import os
 
-BUILTINS = [
-    'clr'
-    'wpf'
-    ]
-
 PATHS = [
     # Local Binaries
     os.path.join(os.getcwd(), 'bin'),
@@ -42,6 +37,14 @@ ASSEMBLIES = [
     'Grasshopper',
     'GH_Util',
     ]
+
+BUILTINS = [
+    'clr'
+    'wpf'
+    ]
+
+ASSEMBLIES.extend(BUILTINS)
+ASSEMBLIES.sort()
 
 REVIT_ASSEMBLIES = [
     # Revit

@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Rhino.Geometry calls itself Geometry
-# from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null, RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530
+# from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530
 # by generator 1.145
 """ NamespaceTracker represent a CLS namespace. """
 # no imports
@@ -15,12 +15,12 @@ class GeometryBase(CommonObject, IDisposable, ISerializable):
         ComponentIndex(self: GeometryBase) -> ComponentIndex
         
             If this piece of geometry is a component in something larger, like a BrepEdge
-            
-                     in a Brep, then this function returns the component index.
+                    
+             in a Brep, then this function returns the component index.
         
             Returns: This object's component index.  If this object is not a sub-piece of a larger
-            
-                     geometric entity, then the returned index has 
+                    
+             geometric entity, then the returned index has 
                     m_type = 
              ComponentIndex.InvalidType
                     and m_index = -1.
@@ -41,17 +41,17 @@ class GeometryBase(CommonObject, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -69,23 +69,22 @@ class GeometryBase(CommonObject, IDisposable, ISerializable):
         DuplicateShallow(self: GeometryBase) -> GeometryBase
         
             Constructs a light copy of this object. By "light", it is meant that the same
+                    
+             underlying data is used until something is done to attempt to change it. For example,
             
-                     underlying data is used until something is done to attempt to change it. 
-             For example,
-                    you could have a shallow copy of a very heavy mesh 
-             object and the same underlying
-                    data will be used when doing things 
-             like inspecting the number of faces on the mesh.
-                    If you modify the 
-             location of one of the mesh vertices, the shallow copy will create
-                    a 
-             full duplicate of the underlying mesh data and the shallow copy will become a
-            
-                     deep copy.
+                     you could have a shallow copy of a very heavy mesh object and the same underlying
+        
+                         data will be used when doing things like inspecting the number of faces on the 
+             mesh.
+                    If you modify the location of one of the mesh vertices, the shallow 
+             copy will create
+                    a full duplicate of the underlying mesh data and the shallow 
+             copy will become a
+                    deep copy.
         
             Returns: An object of the same type as this object.
-                    This behavior is 
-             overridden by implementing classes.
+                    This behavior is overridden by 
+             implementing classes.
         """
         pass
 
@@ -108,33 +107,33 @@ class GeometryBase(CommonObject, IDisposable, ISerializable):
             Boundingbox solver. Gets the world axis aligned boundingbox for the geometry.
         
             accurate: If true, a physically accurate boundingbox will be computed. 
-                    If not, 
-             a boundingbox estimate will be computed. For some geometry types there is no 
-            
-                     difference between the estimate and the accurate boundingbox. Estimated 
-             boundingboxes 
-                    can be computed much (much) faster than accurate (or 
-             "tight") bounding boxes. 
-                    Estimated bounding boxes are always similar 
-             to or larger than accurate bounding boxes.
+                    If not, a 
+             boundingbox estimate will be computed. For some geometry types there is no 
+                    
+             difference between the estimate and the accurate boundingbox. Estimated boundingboxes 
+           
+                      can be computed much (much) faster than accurate (or "tight") bounding boxes. 
+          
+                       Estimated bounding boxes are always similar to or larger than accurate bounding 
+             boxes.
         
             Returns: The boundingbox of the geometry in world coordinates or BoundingBox.Empty 
-               
-                  if not bounding box could be found.
+                    if 
+             not bounding box could be found.
         
         GetBoundingBox(self: GeometryBase, xform: Transform) -> BoundingBox
         
-            Aligned Boundingbox solver. Gets the world axis aligned boundingbox for the 
-             transformed geometry.
+            Aligned Boundingbox solver. Gets the world axis aligned boundingbox for the transformed 
+             geometry.
         
         
             xform: Transformation to apply to object prior to the BoundingBox computation. 
-                 
-                The geometry itself is not modified.
+                    The 
+             geometry itself is not modified.
         
             Returns: The accurate boundingbox of the transformed geometry in world coordinates 
-               
-                  or BoundingBox.Empty if not bounding box could be found.
+                    or 
+             BoundingBox.Empty if not bounding box could be found.
         """
         pass
 
@@ -153,9 +152,7 @@ class GeometryBase(CommonObject, IDisposable, ISerializable):
         """
         GetUserStrings(self: GeometryBase) -> NameValueCollection
         
-            Gets a copy of all (user key string, user value string) pairs attached to this 
-             geometry.
-        
+            Gets a copy of all (user key string, user value string) pairs attached to this geometry.
             Returns: A new collection.
         """
         pass
@@ -165,13 +162,12 @@ class GeometryBase(CommonObject, IDisposable, ISerializable):
         MakeDeformable(self: GeometryBase) -> bool
         
             If possible, converts the object into a form that can be accurately modified
-             
-                    with "squishy" transformations like projections, shears, an non-uniform 
-             scaling.
+                    
+             with "squishy" transformations like projections, shears, an non-uniform scaling.
         
             Returns: false if object cannot be converted to a deformable object. true if object was
-           
-                      already deformable or was converted into a deformable object.
+                   
+              already deformable or was converted into a deformable object.
         """
         pass
 
@@ -188,8 +184,8 @@ class GeometryBase(CommonObject, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -205,8 +201,8 @@ class GeometryBase(CommonObject, IDisposable, ISerializable):
         Rotate(self: GeometryBase, angleRadians: float, rotationAxis: Vector3d, rotationCenter: Point3d) -> bool
         
             Rotates the object about the specified axis. A positive rotation 
-                    
-             angle results in a counter-clockwise rotation about the axis (right hand rule).
+                    angle 
+             results in a counter-clockwise rotation about the axis (right hand rule).
         
         
             angleRadians: Angle of rotation in radians.
@@ -244,12 +240,12 @@ class GeometryBase(CommonObject, IDisposable, ISerializable):
         Transform(self: GeometryBase, xform: Transform) -> bool
         
             Transforms the geometry. If the input Transform has a SimilarityType of
-                  
-               OrientationReversing, you may want to consider flipping the transformed
-                
-                 geometry after calling this function when it makes sense. For example,
-               
-                  you may want to call Flip() on a Brep after transforming it.
+                    
+             OrientationReversing, you may want to consider flipping the transformed
+                    
+             geometry after calling this function when it makes sense. For example,
+                    you 
+             may want to call Flip() on a Brep after transforming it.
         
         
             xform: Transformation to apply to geometry.
@@ -362,17 +358,17 @@ class AnnotationBase(GeometryBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -380,8 +376,8 @@ class AnnotationBase(GeometryBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -493,17 +489,17 @@ class AngularDimension(AnnotationBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -511,8 +507,8 @@ class AngularDimension(AnnotationBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -590,13 +586,13 @@ class Arc(object, IEquatable[Arc], IEpsilonComparable[Arc]):
         
             testPoint: Point to get close to.
             Returns: Parameter (in radians) of the point on the arc that
-                    is closest to the 
-             test point. If testPoint is the center
-                    of the arc, then the starting 
-             point of the arc is
-                    (arc.Domain()[0]) returned. If no parameter could 
-             be found, 
-                    RhinoMath.UnsetValue is returned.
+                    is closest to the test 
+             point. If testPoint is the center
+                    of the arc, then the starting point of the 
+             arc is
+                    (arc.Domain()[0]) returned. If no parameter could be found, 
+                 
+                RhinoMath.UnsetValue is returned.
         """
         pass
 
@@ -608,10 +604,10 @@ class Arc(object, IEquatable[Arc], IEpsilonComparable[Arc]):
         
             testPoint: Point to get close to.
             Returns: The point on the arc that is closest to testPoint. If testPoint is
-                    
-             the center of the arc, then the starting point of the arc is returned.
-                   
-              UnsetPoint on failure.
+                    the center 
+             of the arc, then the starting point of the arc is returned.
+                    UnsetPoint on 
+             failure.
         """
         pass
 
@@ -664,8 +660,7 @@ class Arc(object, IEquatable[Arc], IEpsilonComparable[Arc]):
         """
         Reverse(self: Arc)
             Reverses the orientation of the arc. Changes the domain from [a,b]
-                    to 
-             [-b,-a].
+                    to [-b,-a].
         """
         pass
 
@@ -685,11 +680,10 @@ class Arc(object, IEquatable[Arc], IEpsilonComparable[Arc]):
         ToNurbsCurve(self: Arc) -> NurbsCurve
         
             Initializes a nurbs curve representation of this arc. 
-                    This amounts 
-             to the same as calling NurbsCurve.CreateFromArc().
+                    This amounts to the 
+             same as calling NurbsCurve.CreateFromArc().
         
-            Returns: A nurbs curve representation of this arc or null if no such representation could 
-             be made.
+            Returns: A nurbs curve representation of this arc or null if no such representation could be made.
         """
         pass
 
@@ -905,8 +899,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         """
         ChangeClosedCurveSeam(self: Curve, t: float) -> bool
         
-            If this curve is closed, then modify it so that the start/end point is at curve 
-             parameter t.
+            If this curve is closed, then modify it so that the start/end point is at curve parameter 
+             t.
         
         
             t: Curve parameter of new start/end point. The returned curves domain will start at t.
@@ -922,10 +916,9 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         
             desiredDimension: The desired dimension.
             Returns: true if the curve's dimension was already desiredDimension
-                    or if the 
-             curve's dimension was successfully changed to desiredDimension;
-                    
-             otherwise false.
+                    or if the curve's 
+             dimension was successfully changed to desiredDimension;
+                    otherwise false.
         """
         pass
 
@@ -933,33 +926,32 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         """
         ClosedCurveOrientation(self: Curve, xform: Transform) -> CurveOrientation
         
-            Determines the orientation (counterclockwise or clockwise) of a closed planar 
-             curve.
-                    Only works with simple (no self intersections) closed planar 
-             curves.
+            Determines the orientation (counterclockwise or clockwise) of a closed planar curve.
+             
+                    Only works with simple (no self intersections) closed planar curves.
         
         
             xform: Transformation to map the curve to the xy plane. If the curve is parallel
-                
-                 to the xy plane, you may pass Identity matrix.
+                    to 
+             the xy plane, you may pass Identity matrix.
         
             Returns: The orientation of this curve in the world xy-plane.
         ClosedCurveOrientation(self: Curve, plane: Plane) -> CurveOrientation
         
-            Determines the orientation (counterclockwise or clockwise) of a closed planar 
-             curve in a given plane.
-                    Only works with simple (no self 
-             intersections) closed planar curves.
+            Determines the orientation (counterclockwise or clockwise) of a closed planar curve in a 
+             given plane.
+                    Only works with simple (no self intersections) closed planar 
+             curves.
         
         
             plane: The plane in which to solve the orientation.
             Returns: The orientation of this curve in the given plane.
         ClosedCurveOrientation(self: Curve, upDirection: Vector3d) -> CurveOrientation
         
-            Determines the orientation (counterclockwise or clockwise) of a closed planar 
-             curve in a given plane.
-                    Only works with simple (no self 
-             intersections) closed planar curves.
+            Determines the orientation (counterclockwise or clockwise) of a closed planar curve in a 
+             given plane.
+                    Only works with simple (no self intersections) closed planar 
+             curves.
         
         
             upDirection: A vector that is considered "up".
@@ -972,29 +964,29 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         ClosestPoint(self: Curve, testPoint: Point3d, maximumDistance: float) -> (bool, float)
         
             Finds the parameter of the point on a curve that is closest to testPoint.
-                
-                 If the maximumDistance parameter is > 0, then only points whose distance
-             
-                    to the given point is <= maximumDistance will be returned.  Using a 
-              
-                   positive value of maximumDistance can substantially speed up the search.
+                    If 
+             the maximumDistance parameter is > 0, then only points whose distance
+                    to the 
+             given point is <= maximumDistance will be returned.  Using a 
+                    positive value 
+             of maximumDistance can substantially speed up the search.
         
         
             testPoint: Point to project.
             maximumDistance: The maximum allowed distance.
-                    Past this distance, the search is given 
-             up and false is returned.Use 0 to turn off this parameter.
+                    Past this distance, the search is given up and 
+             false is returned.Use 0 to turn off this parameter.
         
             Returns: true on success, false on failure.
         ClosestPoint(self: Curve, testPoint: Point3d) -> (bool, float)
         
             Finds parameter of the point on a curve that is closest to testPoint.
-                    
-             If the maximumDistance parameter is > 0, then only points whose distance
-                 
-                to the given point is <= maximumDistance will be returned.  Using a 
-                  
-               positive value of maximumDistance can substantially speed up the search.
+                    If the 
+             maximumDistance parameter is > 0, then only points whose distance
+                    to the 
+             given point is <= maximumDistance will be returned.  Using a 
+                    positive value 
+             of maximumDistance can substantially speed up the search.
         
         
             testPoint: Point to search from.
@@ -1030,8 +1022,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         Contains(self: Curve, testPoint: Point3d, plane: Plane, tolerance: float) -> PointContainment
         
             Computes the relationship between a point and a closed curve region. 
-                    
-             This curve must be closed or the return value will be Unset.
+                    This 
+             curve must be closed or the return value will be Unset.
         
         
             testPoint: Point to test.
@@ -1041,8 +1033,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         Contains(self: Curve, testPoint: Point3d, plane: Plane) -> PointContainment
         
             Computes the relationship between a point and a closed curve region. 
-                    
-             This curve must be closed or the return value will be Unset.
+                    This 
+             curve must be closed or the return value will be Unset.
         
         
             testPoint: Point to test.
@@ -1051,10 +1043,10 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         Contains(self: Curve, testPoint: Point3d) -> PointContainment
         
             Computes the relationship between a point and a closed curve region. 
-                    
-             This curve must be closed or the return value will be Unset.
-                    Both 
-             curve and point are projected to the World XY plane.
+                    This 
+             curve must be closed or the return value will be Unset.
+                    Both curve and point 
+             are projected to the World XY plane.
         
         
             testPoint: Point to test.
@@ -1068,22 +1060,22 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         CreateBlendCurve(curve0: Curve, t0: float, reverse0: bool, continuity0: BlendContinuity, curve1: Curve, t1: float, reverse1: bool, continuity1: BlendContinuity) -> Curve
         
             Makes a curve blend between 2 curves at the parameters specified
-                    with 
-             the directions and continuities specified
+                    with the 
+             directions and continuities specified
         
         
             curve0: First curve to blend from
             t0: Parameter on first curve for blend endpoint
             reverse0: If false, the blend will go in the natural direction of the curve.
-                    If 
-             true, the blend will go in the opposite direction to the curve
+                    If true, 
+             the blend will go in the opposite direction to the curve
         
             continuity0: continuity for the blend at the start
             curve1: Second curve to blend from
             t1: Parameter on second curve for blend endpoint
             reverse1: If false, the blend will go in the natural direction of the curve.
-                    If 
-             true, the blend will go in the opposite direction to the curve
+                    If true, 
+             the blend will go in the opposite direction to the curve
         
             continuity1: continuity for the blend at the end
             Returns: the blend curve on success. null on failure
@@ -1115,8 +1107,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         CreateBooleanDifference(curveA: Curve, curveB: Curve) -> Array[Curve]
         
             Calculates the boolean difference between two closed, planar curves. 
-                    
-             Note, curves must be co-planar.
+                    Note, 
+             curves must be co-planar.
         
         
             curveA: The first closed, planar curve.
@@ -1131,8 +1123,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         CreateBooleanIntersection(curveA: Curve, curveB: Curve) -> Array[Curve]
         
             Calculates the boolean intersection of two closed, planar curves. 
-                    
-             Note, curves must be co-planar.
+                    Note, 
+             curves must be co-planar.
         
         
             curveA: The first closed, planar curve.
@@ -1175,51 +1167,49 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         """
         CreateFilletCurves(curve0: Curve, point0: Point3d, curve1: Curve, point1: Point3d, radius: float, join: bool, trim: bool, arcExtension: bool, tolerance: float, angleTolerance: float) -> Array[Curve]
         
-            Creates a tangent arc between two curves and trims or extends the curves to the 
-             arc.
-        
+            Creates a tangent arc between two curves and trims or extends the curves to the arc.
         
             curve0: The first curve to fillet.
             point0: A point on the first curve that is near the end where the fillet will
-                    
-             be created.
+                    be 
+             created.
         
             curve1: The second curve to fillet.
             point1: A point on the second curve that is near the end where the fillet will
-                   
-              be created.
+                    be 
+             created.
         
             radius: The radius of the fillet.
             join: Join the output curves.
             trim: Trim copies of the input curves to the output fillet curve.
             arcExtension: Applies when arcs are filleted but need to be extended to meet the
-                    
-             fillet curve or chamfer line. If true, then the arc is extended
-                    
-             maintaining its validity. If false, then the arc is extended with a
-                    
-             line segment, which is joined to the arc converting it to a polycurve.
+                    fillet 
+             curve or chamfer line. If true, then the arc is extended
+                    maintaining its 
+             validity. If false, then the arc is extended with a
+                    line segment, which is 
+             joined to the arc converting it to a polycurve.
         
             tolerance: The tolerance, generally the document's absolute tolerance.
             Returns: The results of the fillet operation. The number of output curves depends
-                 
-                on the input curves and the values of the parameters that were used
-                   
-              during the fillet operation. In most cases, the output array will contain
-               
-                  either one or three curves, although two curves can be returned if the
-              
-                   radius is zero and join = false.
-                    For example, if both join and 
-             trim = true, then the output curve
-                    will be a polycurve containing the 
-             fillet curve joined with trimmed copies
-                    of the input curves. If join 
-             = false and trim = true, then three curves,
-                    the fillet curve and 
-             trimmed copies of the input curves, will be returned.
-                    If both join 
-             and trim = false, then just the fillet curve is returned.
+                    on 
+             the input curves and the values of the parameters that were used
+                    during the 
+             fillet operation. In most cases, the output array will contain
+                    either one or 
+             three curves, although two curves can be returned if the
+                    radius is zero and 
+             join = false.
+                    For example, if both join and trim = true, then the output 
+             curve
+                    will be a polycurve containing the fillet curve joined with trimmed 
+             copies
+                    of the input curves. If join = false and trim = true, then three 
+             curves,
+                    the fillet curve and trimmed copies of the input curves, will be 
+             returned.
+                    If both join and trim = false, then just the fillet curve is 
+             returned.
         """
         pass
 
@@ -1249,12 +1239,12 @@ class Curve(GeometryBase, IDisposable, ISerializable):
             curveA: A first curve.
             curveB: A second curve.
             angleToleranceRadians: The angle tolerance, in radians, used to match kinks between curves.
-                    
-             If you are unsure how to set this parameter, then either use the
-                    
-             document's angle tolerance RhinoDoc.AngleToleranceRadians,
-                    or the 
-             default value (RhinoMath.UnsetValue)
+                    If you 
+             are unsure how to set this parameter, then either use the
+                    document's angle 
+             tolerance RhinoDoc.AngleToleranceRadians,
+                    or the default value 
+             (RhinoMath.UnsetValue)
         
             Returns: The average curve, or null on error.
         """
@@ -1265,13 +1255,13 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         """
         CreateTweenCurves(curve0: Curve, curve1: Curve, numCurves: int) -> Array[Curve]
         
-            Creates curves between two open or closed input curves. Uses the control points of 
-             the curves for finding tween curves.
-                    That means the first control 
-             point of first curve is matched to first control point of the second curve and so 
-             on.
-                    There is no matching of curves direction. Caller must match input 
-             curves direction before calling the function.
+            Creates curves between two open or closed input curves. Uses the control points of the 
+             curves for finding tween curves.
+                    That means the first control point of first 
+             curve is matched to first control point of the second curve and so on.
+                    There 
+             is no matching of curves direction. Caller must match input curves direction before 
+             calling the function.
         
         
             curve0: The first, or starting, curve.
@@ -1286,15 +1276,14 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         """
         CreateTweenCurvesWithMatching(curve0: Curve, curve1: Curve, numCurves: int) -> Array[Curve]
         
-            Creates curves between two open or closed input curves. Make the structure of 
-             input curves compatible if needed.
-                    Refits the input curves to have 
-             the same structure. The resulting curves are usually more complex than input 
-             unless
-                    input curves are compatible and no refit is needed. There is 
-             no matching of curves direction.
-                    Caller must match input curves 
-             direction before calling the function.
+            Creates curves between two open or closed input curves. Make the structure of input curves 
+             compatible if needed.
+                    Refits the input curves to have the same structure. The 
+             resulting curves are usually more complex than input unless
+                    input curves are 
+             compatible and no refit is needed. There is no matching of curves direction.
+                    
+             Caller must match input curves direction before calling the function.
         
         
             curve0: The first, or starting, curve.
@@ -1309,15 +1298,15 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         """
         CreateTweenCurvesWithSampling(curve0: Curve, curve1: Curve, numCurves: int, numSamples: int) -> Array[Curve]
         
-            Creates curves between two open or closed input curves. Use sample points method 
-             to make curves compatible.
-                    This is how the algorithm workd: Divides 
-             the two curves into an equal number of points, finds the midpoint between the 
-           
-                      corresponding points on the curves and interpolates the tween curve 
-             through those points. There is no matching of curves
-                    direction. 
-             Caller must match input curves direction before calling the function.
+            Creates curves between two open or closed input curves. Use sample points method to make 
+             curves compatible.
+                    This is how the algorithm workd: Divides the two curves 
+             into an equal number of points, finds the midpoint between the 
+                    corresponding 
+             points on the curves and interpolates the tween curve through those points. There is no 
+             matching of curves
+                    direction. Caller must match input curves direction before 
+             calling the function.
         
         
             curve0: The first, or starting, curve.
@@ -1348,8 +1337,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
             t: Curve parameter to evaluate.
             derivativeCount: Number of derivatives to evaluate, must be at least 0.
             side: Side of parameter to evaluate. If the parameter is at a kink, 
-                    it 
-             makes a big difference whether the evaluation is from below or above.
+                    it makes a big 
+             difference whether the evaluation is from below or above.
         
             Returns: An array of vectors that represents all the derivatives starting at zero.
         DerivativeAt(self: Curve, t: float, derivativeCount: int) -> Array[Vector3d]
@@ -1366,17 +1355,17 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         """
         Dispose(self: Curve, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -1399,18 +1388,14 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         
             Divide the curve into a number of equal-length segments.
         
-            segmentCount: Segment count. Note that the number of division points may differ from the segment 
-             count.
-        
+            segmentCount: Segment count. Note that the number of division points may differ from the segment count.
             includeEnds: If true, then the points at the start and end of the curve are included.
             Returns: Array containing division curve parameters on success, null on failure.
         DivideByCount(self: Curve, segmentCount: int, includeEnds: bool) -> Array[float]
         
             Divide the curve into a number of equal-length segments.
         
-            segmentCount: Segment count. Note that the number of division points may differ from the segment 
-             count.
-        
+            segmentCount: Segment count. Note that the number of division points may differ from the segment count.
             includeEnds: If true, then the points at the start and end of the curve are included.
             Returns: List of curve parameters at the division points on success, null on failure.
         """
@@ -1439,9 +1424,7 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         """
         DivideEquidistant(self: Curve, distance: float) -> Array[Point3d]
         
-            Calculates 3d points on a curve where the linear distance between the points is 
-             equal.
-        
+            Calculates 3d points on a curve where the linear distance between the points is equal.
         
             distance: The distance betwen division points.
             Returns: An array of equidistant points, or null on error.
@@ -1458,8 +1441,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
             curveA: First curve to test.
             curveB: Second curve to test.
             Returns: true if both curves more or less point in the same direction, 
-                    false 
-             if they point in the opposite directions.
+                    false if they 
+             point in the opposite directions.
         """
         pass
 
@@ -1485,8 +1468,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         DuplicateSegments(self: Curve) -> Array[Curve]
         
             Polylines will be exploded into line segments. ExplodeCurves will
-                    
-             return the curves in topological order.
+                    return the 
+             curves in topological order.
         
             Returns: An array of all the segments that make up this curve.
         """
@@ -1514,28 +1497,28 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         Extend(self: Curve, t0: float, t1: float) -> Curve
         
             Where possible, analytically extends curve to include the given domain. 
-                 
-                This will not work on closed curves. The original curve will be identical to 
-             the 
-                    restriction of the resulting curve to the original curve domain.
+                    This 
+             will not work on closed curves. The original curve will be identical to the 
+                    
+             restriction of the resulting curve to the original curve domain.
         
         
             t0: Start of extension domain, if the start is not inside the 
-                    Domain of 
-             this curve, an attempt will be made to extend the curve.
-        
-            t1: End of extension domain, if the end is not inside the 
                     Domain of this 
              curve, an attempt will be made to extend the curve.
+        
+            t1: End of extension domain, if the end is not inside the 
+                    Domain of this curve, 
+             an attempt will be made to extend the curve.
         
             Returns: Extended curve on success, null on failure.
         Extend(self: Curve, domain: Interval) -> Curve
         
             Where possible, analytically extends curve to include the given domain. 
-                 
-                This will not work on closed curves. The original curve will be identical to 
-             the 
-                    restriction of the resulting curve to the original curve domain.
+                    This 
+             will not work on closed curves. The original curve will be identical to the 
+                    
+             restriction of the resulting curve to the original curve domain.
         
         
             domain: Extension domain.
@@ -1575,20 +1558,18 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         Fair(self: Curve, distanceTolerance: float, angleTolerance: float, clampStart: int, clampEnd: int, iterations: int) -> Curve
         
             Fairs a curve object. Fair works best on degree 3 (cubic) curves. Attempts to 
-           
-                      remove large curvature variations while limiting the geometry changes to 
-             be no 
-                    more than the specified tolerance.
+                   
+              remove large curvature variations while limiting the geometry changes to be no 
+                 
+                more than the specified tolerance.
         
         
             distanceTolerance: Maximum allowed distance the faired curve is allowed to deviate from the input.
-            angleTolerance: (in radians) kinks with angles <= angleTolerance are smoothed out 0.05 is a good 
-             default.
-        
+            angleTolerance: (in radians) kinks with angles <= angleTolerance are smoothed out 0.05 is a good default.
             clampStart: The number of (control vertices-1) to preserve at start. 
-                    0 = 
-             preserve start point1 = preserve start point and 1st derivative2 = preserve start 
-             point, 1st and 2nd derivative
+                    0 = preserve start 
+             point1 = preserve start point and 1st derivative2 = preserve start point, 1st and 2nd 
+             derivative
         
             clampEnd: Same as clampStart.
             iterations: The number of iteratoins to use in adjusting the curve.
@@ -1604,14 +1585,14 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         
             degree: The degree of the returned Curve. Must be bigger than 1.
             fitTolerance: The fitting tolerance. If fitTolerance is RhinoMath.UnsetValue or <=0.0,
-                 
-                the document absolute tolerance is used.
+                    the 
+             document absolute tolerance is used.
         
             angleTolerance: The kink smoothing tolerance in radians.
-                    If angleTolerance is 0.0, 
-             all kinks are smoothedIf angleTolerance is >0.0, kinks smaller than angleTolerance 
-             are smoothedIf angleTolerance is RhinoMath.UnsetValue or <0.0, the document angle 
-             tolerance is used for the kink smoothing
+                    If angleTolerance is 0.0, all kinks 
+             are smoothedIf angleTolerance is >0.0, kinks smaller than angleTolerance are smoothedIf 
+             angleTolerance is RhinoMath.UnsetValue or <0.0, the document angle tolerance is used for 
+             the kink smoothing
         
             Returns: Returns a new fitted Curve if successful, null on failure.
         """
@@ -1658,8 +1639,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         """
         GetFilletPoints(curve0: Curve, curve1: Curve, radius: float, t0Base: float, t1Base: float) -> (bool, float, float, Plane)
         
-            Finds points at which to cut a pair of curves so that a fillet of given radius can 
-             be inserted.
+            Finds points at which to cut a pair of curves so that a fillet of given radius can be 
+             inserted.
         
         
             curve0: First curve to fillet.
@@ -1686,8 +1667,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
             Get the length of a sub-section of the curve.
         
             fractionalTolerance: Desired fractional precision. 
-                    fabs(("exact" length from start to t) 
-             - arc_length)/arc_length <= fractionalTolerance.
+                    fabs(("exact" length from start to t) - 
+             arc_length)/arc_length <= fractionalTolerance.
         
             subdomain: The calculation is performed on the specified sub-domain of the curve (must be 
              non-decreasing).
@@ -1702,8 +1683,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
             Get the length of the curve.
         
             fractionalTolerance: Desired fractional precision. 
-                    fabs(("exact" length from start to t) 
-             - arc_length)/arc_length <= fractionalTolerance.
+                    fabs(("exact" length from start to t) - 
+             arc_length)/arc_length <= fractionalTolerance.
         
             Returns: The length of the curve on success, or zero on failure.
         """
@@ -1716,34 +1697,32 @@ class Curve(GeometryBase, IDisposable, ISerializable):
             Searches for a derivative, tangent, or curvature discontinuity.
         
             continuityType: Type of continuity to search for.
-            t0: Search begins at t0. If there is a discontinuity at t0, it will be ignored. This 
-             makes it
-                    possible to repeatedly call GetNextDiscontinuity() and step 
-             through the discontinuities.
+            t0: Search begins at t0. If there is a discontinuity at t0, it will be ignored. This makes it
         
-            t1: (t0 != t1)  If there is a discontinuity at t1 it will be ignored unless 
-             continuityType is
-                    a locus discontinuity type and t1 is at the start 
-             or end of the curve.
+                         possible to repeatedly call GetNextDiscontinuity() and step through the 
+             discontinuities.
+        
+            t1: (t0 != t1)  If there is a discontinuity at t1 it will be ignored unless continuityType is
+        
+                         a locus discontinuity type and t1 is at the start or end of the curve.
         
             Returns: Parametric continuity tests c = (C0_continuous, ..., G2_continuous):
-                     
-             true if a parametric discontinuity was found strictly between t0 and t1. Note well 
-             that
-                     all curves are parametrically continuous at the ends of their 
-             domains.
+                     true if 
+             a parametric discontinuity was found strictly between t0 and t1. Note well that
+                  
+                all curves are parametrically continuous at the ends of their domains.
                     
-                    Locus continuity tests c = 
-             (C0_locus_continuous, ...,G2_locus_continuous):
-                     true if a locus 
-             discontinuity was found strictly between t0 and t1 or at t1 is the at the end
-            
-                      of a curve. Note well that all open curves (IsClosed()=false) are locus 
-             discontinuous at the
+          
+                       Locus continuity tests c = (C0_locus_continuous, ...,G2_locus_continuous):
+             
+                     true if a locus discontinuity was found strictly between t0 and t1 or at t1 is the 
+             at the end
+                     of a curve. Note well that all open curves (IsClosed()=false) are 
+             locus discontinuous at the
                      ends of their domains.  All closed curves 
              (IsClosed()=true) are at least C0_locus_continuous at 
-                     the ends of 
-             their domains.
+                     the ends of their 
+             domains.
         """
         pass
 
@@ -1768,19 +1747,18 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         
             Does a NURBS curve representation of this curve exist?
             Returns: 0   unable to create NURBS representation with desired accuracy.
-                    1   
-             success - NURBS parameterization matches the curve's to the desired accuracy
-             
-                    2   success - NURBS point locus matches the curve's and the domain of the 
-             NURBS
-                                  curve is correct. However, This curve's 
-             parameterization and the
-                                  NURBS curve parameterization 
-             may not match. This situation happens
-                                  when getting 
-             NURBS representations of curves that have a
-                                  
-             transendental parameterization like circles.
+                    1   success 
+             - NURBS parameterization matches the curve's to the desired accuracy
+                    2   
+             success - NURBS point locus matches the curve's and the domain of the NURBS
+                      
+                         curve is correct. However, This curve's parameterization and the
+                     
+                          NURBS curve parameterization may not match. This situation happens
+                  
+                             when getting NURBS representations of curves that have a
+                         
+                      transendental parameterization like circles.
         """
         pass
 
@@ -1807,17 +1785,13 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         """
         IsCircle(self: Curve, tolerance: float) -> bool
         
-            Test a curve to see if it can be represented by a circle within the given 
-             tolerance.
-        
+            Test a curve to see if it can be represented by a circle within the given tolerance.
         
             tolerance: Tolerance to use when checking.
             Returns: true if the curve can be represented by a circle to within tolerance.
         IsCircle(self: Curve) -> bool
         
-            Test a curve to see if it can be represented by a circle within 
-             RhinoMath.ZeroTolerance.
-        
+            Test a curve to see if it can be represented by a circle within RhinoMath.ZeroTolerance.
             Returns: true if the Curve can be represented by a circle within tolerance.
         """
         pass
@@ -1827,37 +1801,37 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         IsClosable(self: Curve, tolerance: float) -> bool
         
             Decide if it makes sense to close off this curve by moving the endpoint 
-                 
-                to the start based on start-end gap size and length of curve as 
-                    
-             approximated by chord defined by 6 points.
+                    to 
+             the start based on start-end gap size and length of curve as 
+                    approximated by 
+             chord defined by 6 points.
         
         
             tolerance: Maximum allowable distance between start and end. 
-                    If start - end gap 
-             is greater than tolerance, this function will return false.
+                    If start - end gap is 
+             greater than tolerance, this function will return false.
         
             Returns: true if start and end points are close enough based on above conditions.
         IsClosable(self: Curve, tolerance: float, minimumAbsoluteSize: float, minimumRelativeSize: float) -> bool
         
             Decide if it makes sense to close off this curve by moving the endpoint
-                  
-               to the start based on start-end gap size and length of curve as
-                    
-             approximated by chord defined by 6 points.
+                    to 
+             the start based on start-end gap size and length of curve as
+                    approximated by 
+             chord defined by 6 points.
         
         
             tolerance: Maximum allowable distance between start and end. 
-                    If start - end gap 
-             is greater than tolerance, this function will return false.
+                    If start - end gap is 
+             greater than tolerance, this function will return false.
         
             minimumAbsoluteSize: If greater than 0.0 and none of the interior sampled points are at
-                    
-             least minimumAbsoluteSize from start, this function will return false.
+                    least 
+             minimumAbsoluteSize from start, this function will return false.
         
             minimumRelativeSize: If greater than 1.0 and chord length is less than 
-                    
-             minimumRelativeSize*gap, this function will return false.
+                    minimumRelativeSize*gap, 
+             this function will return false.
         
             Returns: true if start and end points are close enough based on above conditions.
         """
@@ -1879,17 +1853,13 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         """
         IsEllipse(self: Curve, tolerance: float) -> bool
         
-            Test a curve to see if it can be represented by an ellipse within a given 
-             tolerance.
-        
+            Test a curve to see if it can be represented by an ellipse within a given tolerance.
         
             tolerance: Tolerance to use for checking.
             Returns: true if the Curve can be represented by an ellipse within tolerance.
         IsEllipse(self: Curve) -> bool
         
-            Test a curve to see if it can be represented by an ellipse within 
-             RhinoMath.ZeroTolerance.
-        
+            Test a curve to see if it can be represented by an ellipse within RhinoMath.ZeroTolerance.
             Returns: true if the Curve can be represented by an ellipse within tolerance.
         """
         pass
@@ -1908,8 +1878,7 @@ class Curve(GeometryBase, IDisposable, ISerializable):
             Test a curve to see if it lies in a specific plane.
         
             testPlane: Plane to test for.
-            Returns: true if the maximum distance from the curve to the testPlane is <= 
-             RhinoMath.ZeroTolerance.
+            Returns: true if the maximum distance from the curve to the testPlane is <= RhinoMath.ZeroTolerance.
         """
         pass
 
@@ -1921,16 +1890,14 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         
             tolerance: Tolerance to use when checking linearity.
             Returns: true if the ends of the curve are farther than tolerance apart
-                    and 
-             the maximum distance from any point on the curve to
-                    the line segment 
-             connecting the curve ends is <= tolerance.
+                    and the 
+             maximum distance from any point on the curve to
+                    the line segment connecting 
+             the curve ends is <= tolerance.
         
         IsLinear(self: Curve) -> bool
         
-            Test a curve to see if it is linear to within RhinoMath.ZeroTolerance units 
-             (1e-12).
-        
+            Test a curve to see if it is linear to within RhinoMath.ZeroTolerance units (1e-12).
             Returns: true if the curve is linear.
         """
         pass
@@ -1942,8 +1909,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
             Test a curve for planarity.
         
             tolerance: Tolerance to use when checking.
-            Returns: true if there is a plane such that the maximum distance from the curve to the 
-             plane is <= tolerance.
+            Returns: true if there is a plane such that the maximum distance from the curve to the plane is <= 
+             tolerance.
         
         IsPlanar(self: Curve) -> bool
         
@@ -1957,13 +1924,13 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         IsPolyline(self: Curve) -> bool
         
             Several types of Curve can have the form of a polyline
-                    including a 
-             degree 1 NurbsCurve, a PolylineCurve,
-                    and a PolyCurve all of whose 
-             segments are some form of
-                    polyline. IsPolyline tests a curve to see 
-             if it can be
-                    represented as a polyline.
+                    including a degree 1 
+             NurbsCurve, a PolylineCurve,
+                    and a PolyCurve all of whose segments are some 
+             form of
+                    polyline. IsPolyline tests a curve to see if it can be
+                    
+             represented as a polyline.
         
             Returns: true if this curve can be represented as a polyline; otherwise, false.
         """
@@ -1976,9 +1943,7 @@ class Curve(GeometryBase, IDisposable, ISerializable):
             Used to quickly find short curves.
         
             tolerance: Length threshold value for "shortness".
-            subdomain: The test is performed on the interval that is the intersection of subdomain with 
-             Domain()
-        
+            subdomain: The test is performed on the interval that is the intersection of subdomain with Domain()
             Returns: true if the length of the curve is <= tolerance.
         IsShort(self: Curve, tolerance: float) -> bool
         
@@ -2002,57 +1967,43 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         """
         LengthParameter(self: Curve, segmentLength: float, subdomain: Interval) -> (bool, float)
         
-            Gets the parameter along the curve which coincides with a given length along the 
-             curve. 
-                    A fractional tolerance of 1e-8 is used in this version of the 
-             function.
+            Gets the parameter along the curve which coincides with a given length along the curve. 
+         
+                        A fractional tolerance of 1e-8 is used in this version of the function.
         
         
-            segmentLength: Length of segment to measure. Must be less than or equal to the length of the 
-             subdomain.
-        
-            subdomain: The calculation is performed on the specified sub-domain of the curve rather than 
-             the whole curve.
+            segmentLength: Length of segment to measure. Must be less than or equal to the length of the subdomain.
+            subdomain: The calculation is performed on the specified sub-domain of the curve rather than the 
+             whole curve.
         
             Returns: true on success, false on failure.
         LengthParameter(self: Curve, segmentLength: float, fractionalTolerance: float, subdomain: Interval) -> (bool, float)
         
-            Gets the parameter along the curve which coincides with a given length along the 
-             curve.
+            Gets the parameter along the curve which coincides with a given length along the curve.
         
-        
-            segmentLength: Length of segment to measure. Must be less than or equal to the length of the 
-             subdomain.
-        
+            segmentLength: Length of segment to measure. Must be less than or equal to the length of the subdomain.
             fractionalTolerance: Desired fractional precision. 
-                    fabs(("exact" length from start to t) 
-             - arc_length)/arc_length <= fractionalTolerance.
+                    fabs(("exact" length from start to t) - 
+             arc_length)/arc_length <= fractionalTolerance.
         
-            subdomain: The calculation is performed on the specified sub-domain of the curve rather than 
-             the whole curve.
+            subdomain: The calculation is performed on the specified sub-domain of the curve rather than the 
+             whole curve.
         
             Returns: true on success, false on failure.
         LengthParameter(self: Curve, segmentLength: float) -> (bool, float)
         
-            Gets the parameter along the curve which coincides with a given length along the 
-             curve. 
-                    A fractional tolerance of 1e-8 is used in this version of the 
-             function.
+            Gets the parameter along the curve which coincides with a given length along the curve. 
+         
+                        A fractional tolerance of 1e-8 is used in this version of the function.
         
         
-            segmentLength: Length of segment to measure. Must be less than or equal to the length of the 
-             curve.
-        
+            segmentLength: Length of segment to measure. Must be less than or equal to the length of the curve.
             Returns: true on success, false on failure.
         LengthParameter(self: Curve, segmentLength: float, fractionalTolerance: float) -> (bool, float)
         
-            Gets the parameter along the curve which coincides with a given length along the 
-             curve.
+            Gets the parameter along the curve which coincides with a given length along the curve.
         
-        
-            segmentLength: Length of segment to measure. Must be less than or equal to the length of the 
-             curve.
-        
+            segmentLength: Length of segment to measure. Must be less than or equal to the length of the curve.
             fractionalTolerance: Desired fractional precision.
                     fabs(("exact" length from start to t) - 
              arc_length)/arc_length <= fractionalTolerance.
@@ -2066,15 +2017,14 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         MakeClosed(self: Curve, tolerance: float) -> bool
         
             If IsClosed, just return true. Otherwise, decide if curve can be closed as 
+                    
+             follows: Linear curves polylinear curves with 2 segments, Nurbs with 3 or less 
+                  
+               control points cannot be made closed. Also, if tolerance > 0 and the gap between 
               
-                   follows: Linear curves polylinear curves with 2 segments, Nurbs with 3 or 
-             less 
-                    control points cannot be made closed. Also, if tolerance > 0 
-             and the gap between 
-                    start and end is larger than tolerance, curve 
-             cannot be made closed. 
-                    Adjust the curve's endpoint to match its 
-             start point.
+                   start and end is larger than tolerance, curve cannot be made closed. 
+                    
+             Adjust the curve's endpoint to match its start point.
         
         
             tolerance: If nonzero, and the gap is more than tolerance, curve cannot be made closed.
@@ -2087,9 +2037,7 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         """
         MakeEndsMeet(curveA: Curve, adjustStartCurveA: bool, curveB: Curve, adjustStartCurveB: bool) -> bool
         
-            Makes adjustments to the ends of one or both input curves so that they meet at a 
-             point.
-        
+            Makes adjustments to the ends of one or both input curves so that they meet at a point.
         
             curveA: 1st curve to adjust.
             adjustStartCurveA: Which end of the 1st curve to adjust: true is start, false is end.
@@ -2103,8 +2051,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: Curve)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -2112,60 +2060,60 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         """
         NormalizedLengthParameter(self: Curve, s: float, subdomain: Interval) -> (bool, float)
         
-            Input the parameter of the point on the curve that is a prescribed arc length from 
-             the start of the curve. 
-                    A fractional tolerance of 1e-8 is used in 
-             this version of the function.
+            Input the parameter of the point on the curve that is a prescribed arc length from the 
+             start of the curve. 
+                    A fractional tolerance of 1e-8 is used in this version 
+             of the function.
         
         
             s: Normalized arc length parameter. 
-                    E.g., 0 = start of curve, 1/2 = 
-             midpoint of curve, 1 = end of curve.
+                    E.g., 0 = start of curve, 1/2 = midpoint of 
+             curve, 1 = end of curve.
         
             subdomain: The calculation is performed on the specified sub-domain of the curve.
             Returns: true on success, false on failure.
         NormalizedLengthParameter(self: Curve, s: float, fractionalTolerance: float, subdomain: Interval) -> (bool, float)
         
-            Input the parameter of the point on the curve that is a prescribed arc length from 
-             the start of the curve.
+            Input the parameter of the point on the curve that is a prescribed arc length from the 
+             start of the curve.
         
         
             s: Normalized arc length parameter. 
-                    E.g., 0 = start of curve, 1/2 = 
-             midpoint of curve, 1 = end of curve.
+                    E.g., 0 = start of curve, 1/2 = midpoint of 
+             curve, 1 = end of curve.
         
             fractionalTolerance: Desired fractional precision. 
-                    fabs(("exact" length from start to t) 
-             - arc_length)/arc_length <= fractionalTolerance.
+                    fabs(("exact" length from start to t) - 
+             arc_length)/arc_length <= fractionalTolerance.
         
             subdomain: The calculation is performed on the specified sub-domain of the curve.
             Returns: true on success, false on failure.
         NormalizedLengthParameter(self: Curve, s: float) -> (bool, float)
         
-            Input the parameter of the point on the curve that is a prescribed arc length from 
-             the start of the curve. 
-                    A fractional tolerance of 1e-8 is used in 
-             this version of the function.
+            Input the parameter of the point on the curve that is a prescribed arc length from the 
+             start of the curve. 
+                    A fractional tolerance of 1e-8 is used in this version 
+             of the function.
         
         
             s: Normalized arc length parameter. 
-                    E.g., 0 = start of curve, 1/2 = 
-             midpoint of curve, 1 = end of curve.
+                    E.g., 0 = start of curve, 1/2 = midpoint of 
+             curve, 1 = end of curve.
         
             Returns: true on success, false on failure.
         NormalizedLengthParameter(self: Curve, s: float, fractionalTolerance: float) -> (bool, float)
         
-            Input the parameter of the point on the curve that is a prescribed arc length from 
-             the start of the curve.
+            Input the parameter of the point on the curve that is a prescribed arc length from the 
+             start of the curve.
         
         
             s: Normalized arc length parameter. 
-                    E.g., 0 = start of curve, 1/2 = 
-             midpoint of curve, 1 = end of curve.
+                    E.g., 0 = start of curve, 1/2 = midpoint of 
+             curve, 1 = end of curve.
         
             fractionalTolerance: Desired fractional precision. 
-                    fabs(("exact" length from start to t) 
-             - arc_length)/arc_length <= fractionalTolerance.
+                    fabs(("exact" length from start to t) - 
+             arc_length)/arc_length <= fractionalTolerance.
         
             Returns: true on success, false on failure.
         """
@@ -2175,100 +2123,94 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         """
         NormalizedLengthParameters(self: Curve, s: Array[float], absoluteTolerance: float, subdomain: Interval) -> Array[float]
         
-            Input the parameter of the point on the curve that is a prescribed arc length from 
-             the start of the curve. 
-                    A fractional tolerance of 1e-8 is used in 
-             this version of the function.
+            Input the parameter of the point on the curve that is a prescribed arc length from the 
+             start of the curve. 
+                    A fractional tolerance of 1e-8 is used in this version 
+             of the function.
         
         
             s: Array of normalized arc length parameters. 
-                    E.g., 0 = start of curve, 
-             1/2 = midpoint of curve, 1 = end of curve.
+                    E.g., 0 = start of curve, 1/2 = 
+             midpoint of curve, 1 = end of curve.
         
             absoluteTolerance: If absoluteTolerance > 0, then the difference between (s[i+1]-s[i])*curve_length 
-        
-                         and the length of the curve segment from t[i] to t[i+1] will be <= 
-             absoluteTolerance.
+                
+                 and the length of the curve segment from t[i] to t[i+1] will be <= absoluteTolerance.
         
             subdomain: The calculation is performed on the specified sub-domain of the curve. 
-                  
-               A 0.0 s value corresponds to subdomain->Min() and a 1.0 s value corresponds to 
-             subdomain->Max().
+                    A 0.0 
+             s value corresponds to subdomain->Min() and a 1.0 s value corresponds to subdomain->Max().
         
-            Returns: If successful, array of curve parameters such that the length of the curve from 
-             its start to t[i] is s[i]*curve_length. 
+            Returns: If successful, array of curve parameters such that the length of the curve from its start 
+             to t[i] is s[i]*curve_length. 
                     Null on failure.
         
         NormalizedLengthParameters(self: Curve, s: Array[float], absoluteTolerance: float, fractionalTolerance: float, subdomain: Interval) -> Array[float]
         
-            Input the parameter of the point on the curve that is a prescribed arc length from 
-             the start of the curve.
+            Input the parameter of the point on the curve that is a prescribed arc length from the 
+             start of the curve.
         
         
             s: Array of normalized arc length parameters. 
-                    E.g., 0 = start of curve, 
-             1/2 = midpoint of curve, 1 = end of curve.
+                    E.g., 0 = start of curve, 1/2 = 
+             midpoint of curve, 1 = end of curve.
         
             absoluteTolerance: If absoluteTolerance > 0, then the difference between (s[i+1]-s[i])*curve_length 
-        
-                         and the length of the curve segment from t[i] to t[i+1] will be <= 
-             absoluteTolerance.
+                
+                 and the length of the curve segment from t[i] to t[i+1] will be <= absoluteTolerance.
         
             fractionalTolerance: Desired fractional precision for each segment. 
-                    fabs("true" length - 
-             actual length)/(actual length) <= fractionalTolerance.
+                    fabs("true" length - actual 
+             length)/(actual length) <= fractionalTolerance.
         
             subdomain: The calculation is performed on the specified sub-domain of the curve. 
-                  
-               A 0.0 s value corresponds to subdomain->Min() and a 1.0 s value corresponds to 
-             subdomain->Max().
+                    A 0.0 
+             s value corresponds to subdomain->Min() and a 1.0 s value corresponds to subdomain->Max().
         
-            Returns: If successful, array of curve parameters such that the length of the curve from 
-             its start to t[i] is s[i]*curve_length. 
+            Returns: If successful, array of curve parameters such that the length of the curve from its start 
+             to t[i] is s[i]*curve_length. 
                     Null on failure.
         
         NormalizedLengthParameters(self: Curve, s: Array[float], absoluteTolerance: float) -> Array[float]
         
-            Input the parameter of the point on the curve that is a prescribed arc length from 
-             the start of the curve. 
-                    A fractional tolerance of 1e-8 is used in 
-             this version of the function.
+            Input the parameter of the point on the curve that is a prescribed arc length from the 
+             start of the curve. 
+                    A fractional tolerance of 1e-8 is used in this version 
+             of the function.
         
         
             s: Array of normalized arc length parameters. 
-                    E.g., 0 = start of curve, 
-             1/2 = midpoint of curve, 1 = end of curve.
+                    E.g., 0 = start of curve, 1/2 = 
+             midpoint of curve, 1 = end of curve.
         
             absoluteTolerance: If absoluteTolerance > 0, then the difference between (s[i+1]-s[i])*curve_length 
+                
+                 and the length of the curve segment from t[i] to t[i+1] will be <= absoluteTolerance.
         
-                         and the length of the curve segment from t[i] to t[i+1] will be <= 
-             absoluteTolerance.
-        
-            Returns: If successful, array of curve parameters such that the length of the curve from 
-             its start to t[i] is s[i]*curve_length. 
+            Returns: If successful, array of curve parameters such that the length of the curve from its start 
+             to t[i] is s[i]*curve_length. 
                     Null on failure.
         
         NormalizedLengthParameters(self: Curve, s: Array[float], absoluteTolerance: float, fractionalTolerance: float) -> Array[float]
         
-            Input the parameter of the point on the curve that is a prescribed arc length from 
-             the start of the curve.
+            Input the parameter of the point on the curve that is a prescribed arc length from the 
+             start of the curve.
         
         
             s: Array of normalized arc length parameters. 
-                    E.g., 0 = start of curve, 
-             1/2 = midpoint of curve, 1 = end of curve.
+                    E.g., 0 = start of curve, 1/2 = 
+             midpoint of curve, 1 = end of curve.
         
             absoluteTolerance: If absoluteTolerance > 0, then the difference between (s[i+1]-s[i])*curve_length 
-        
-                         and the length of the curve segment from t[i] to t[i+1] will be <= 
-             absoluteTolerance.
+                
+                 and the length of the curve segment from t[i] to t[i+1] will be <= absoluteTolerance.
         
             fractionalTolerance: Desired fractional precision for each segment. 
-                    fabs("true" length - 
-             actual length)/(actual length) <= fractionalTolerance.
+                    fabs("true" length - actual 
+             length)/(actual length) <= fractionalTolerance.
         
-            Returns: If successful, array of curve parameters such that the length of the curve from 
-             its start to t[i] is s[i]*curve_length. 
+            Returns: If successful, array of curve parameters such that the length of the curve from its start 
+             to t[i] is s[i]*curve_length. 
                     Null on failure.
         """
         pass
@@ -2278,11 +2220,10 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         Offset(self: Curve, directionPoint: Point3d, normal: Vector3d, distance: float, tolerance: float, cornerStyle: CurveOffsetCornerStyle) -> Array[Curve]
         
             Offsets this curve. If you have a nice offset, then there will be one entry in 
-          
-                       the array. If the original curve had kinks or the offset curve had self 
-             
-                    intersections, you will get multiple segments in the offset_curves[] 
-             array.
+                  
+               the array. If the original curve had kinks or the offset curve had self 
+                    
+             intersections, you will get multiple segments in the offset_curves[] array.
         
         
             directionPoint: A point that indicates the direction of the offset.
@@ -2294,11 +2235,10 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         Offset(self: Curve, plane: Plane, distance: float, tolerance: float, cornerStyle: CurveOffsetCornerStyle) -> Array[Curve]
         
             Offsets this curve. If you have a nice offset, then there will be one entry in 
-          
-                       the array. If the original curve had kinks or the offset curve had self 
-             
-                    intersections, you will get multiple segments in the offset_curves[] 
-             array.
+                  
+               the array. If the original curve had kinks or the offset curve had self 
+                    
+             intersections, you will get multiple segments in the offset_curves[] array.
         
         
             plane: Offset solution plane.
@@ -2314,17 +2254,17 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         OffsetNormalToSurface(self: Curve, surface: Surface, height: float) -> Curve
         
             Finds a curve by offsetting an existing curve normal to a surface.
-                    
-             The caller is responsible for ensuring that the curve lies on the input surface.
+                    The caller 
+             is responsible for ensuring that the curve lies on the input surface.
         
         
             surface: Surface from which normals are calculated.
             height: offset distance (distance from surface to result curve)
             Returns: Offset curve at distance height from the surface.  The offset curve is
-                   
-              interpolated through a small number of points so if the surface is irregular
-            
-                     or complicated, the result will not be a very accurate offset.
+                    
+             interpolated through a small number of points so if the surface is irregular
+                    
+             or complicated, the result will not be a very accurate offset.
         """
         pass
 
@@ -2352,8 +2292,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         OffsetOnSurface(self: Curve, surface: Surface, curveParameters: Array[float], offsetDistances: Array[float], fittingTolerance: float) -> Array[Curve]
         
             Offset this curve on a surface. This curve must lie on the surface.
-                    
-             This overload allows to specify different offsets for different curve parameters.
+                    This 
+             overload allows to specify different offsets for different curve parameters.
         
         
             surface: A surface on which to offset.
@@ -2372,9 +2312,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         OffsetOnSurface(self: Curve, face: BrepFace, throughPoint: Point2d, fittingTolerance: float) -> Array[Curve]
         
             Offset a curve on a brep face surface. This curve must lie on the surface.
-               
-                  This overload allows to specify a surface point at which the offset will 
-             pass.
+                    
+             This overload allows to specify a surface point at which the offset will pass.
         
         
             face: The brep face on which to offset.
@@ -2384,9 +2323,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         OffsetOnSurface(self: Curve, face: BrepFace, curveParameters: Array[float], offsetDistances: Array[float], fittingTolerance: float) -> Array[Curve]
         
             Offset a curve on a brep face surface. This curve must lie on the surface.
-               
-                  This overload allows to specify different offsets for different curve 
-             parameters.
+                    
+             This overload allows to specify different offsets for different curve parameters.
         
         
             face: The brep face on which to offset.
@@ -2409,10 +2347,10 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         PerpendicularFrameAt(self: Curve, t: float) -> (bool, Plane)
         
             Return a 3d frame at a parameter. This is slightly different than FrameAt in
-             
-                    that the frame is computed in a way so there is minimal rotation from one
-         
-                        frame to the next.
+                    
+             that the frame is computed in a way so there is minimal rotation from one
+                    
+             frame to the next.
         
         
             t: Evaluation parameter.
@@ -2426,10 +2364,10 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         PlanarClosedCurveRelationship(curveA: Curve, curveB: Curve, testPlane: Plane, tolerance: float) -> RegionContainment
         
             Determines whether two coplanar simple closed curves are disjoint or intersect;
-          
-                       otherwise, if the regions have a containment relationship, discovers
-           
-                      which curve encloses the other.
+                  
+               otherwise, if the regions have a containment relationship, discovers
+                    which 
+             curve encloses the other.
         
         
             curveA: A first curve.
@@ -2473,13 +2411,12 @@ class Curve(GeometryBase, IDisposable, ISerializable):
             Gets a point at a certain length along the curve. The length must be 
                     
              non-negative and less than or equal to the length of the curve. 
-                    
-             Lengths will not be wrapped when the curve is closed or periodic.
+                    Lengths will 
+             not be wrapped when the curve is closed or periodic.
         
         
             length: Length along the curve between the start point and the returned point.
-            Returns: Point on the curve at the specified length from the start point or Poin3d.Unset on 
-             failure.
+            Returns: Point on the curve at the specified length from the start point or Poin3d.Unset on failure.
         """
         pass
 
@@ -2488,15 +2425,15 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         PointAtNormalizedLength(self: Curve, length: float) -> Point3d
         
             Gets a point at a certain normalized length along the curve. The length must be 
-         
-                        between or including 0.0 and 1.0, where 0.0 equals the start of the 
-             curve and 
-                    1.0 equals the end of the curve.
+                 
+                between or including 0.0 and 1.0, where 0.0 equals the start of the curve and 
+                
+                 1.0 equals the end of the curve.
         
         
             length: Normalized length along the curve between the start point and the returned point.
-            Returns: Point on the curve at the specified normalized length from the start point or 
-             Poin3d.Unset on failure.
+            Returns: Point on the curve at the specified normalized length from the start point or Poin3d.Unset 
+             on failure.
         """
         pass
 
@@ -2573,10 +2510,10 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         """
         PullToMesh(self: Curve, mesh: Mesh, tolerance: float) -> PolylineCurve
         
-            Makes a polyline approximation of the curve and gets the closest point on the mesh 
-             for each point on the curve. 
-                    Then it "connects the points" so that 
-             you have a polyline on the mesh.
+            Makes a polyline approximation of the curve and gets the closest point on the mesh for 
+             each point on the curve. 
+                    Then it "connects the points" so that you have a 
+             polyline on the mesh.
         
         
             mesh: Mesh to project onto.
@@ -2603,14 +2540,14 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         RemoveShortSegments(self: Curve, tolerance: float) -> bool
         
             Looks for segments that are shorter than tolerance that can be removed. 
-                 
-                Does not change the domain, but it will change the relative parameterization.
+                    Does 
+             not change the domain, but it will change the relative parameterization.
         
         
             tolerance: Tolerance which defines "short" segments.
             Returns: true if removable short segments were found. 
-                    false if no removable 
-             short segments were found.
+                    false if no removable short 
+             segments were found.
         """
         pass
 
@@ -2628,8 +2565,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         SetEndPoint(self: Curve, point: Point3d) -> bool
         
             Forces the curve to end at a specified point. 
-                    Not all curve types 
-             support this operation.
+                    Not all curve types support 
+             this operation.
         
         
             point: New end point of curve.
@@ -2642,8 +2579,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         SetStartPoint(self: Curve, point: Point3d) -> bool
         
             Forces the curve to start at a specified point. 
-                    Not all curve types 
-             support this operation.
+                    Not all curve types support 
+             this operation.
         
         
             point: New start point of curve.
@@ -2656,29 +2593,28 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         Simplify(self: Curve, options: CurveSimplifyOptions, distanceTolerance: float, angleToleranceRadians: float) -> Curve
         
             Returns a geometrically equivalent PolyCurve.
-                    The PolyCurve has the 
-             following properties
-                    1. All the PolyCurve segments are LineCurve, 
-             PolylineCurve, ArcCurve, or NurbsCurve.
+                    The PolyCurve has the following 
+             properties
+                    1. All the PolyCurve segments are LineCurve, PolylineCurve, 
+             ArcCurve, or NurbsCurve.
                     
-                    2. The Nurbs 
-             Curves segments do not have fully multiple interior knots.
+                    2. The Nurbs Curves segments do not 
+             have fully multiple interior knots.
                     
-                 
-                3. Rational Nurbs curves do not have constant weights.
+                    3. Rational Nurbs curves do 
+             not have constant weights.
                     
-                  
-               4. Any segment for which IsLinear() or IsArc() is true is a Line, 
-                     
-               Polyline segment, or an Arc.
+                    4. Any segment for which IsLinear() 
+             or IsArc() is true is a Line, 
+                       Polyline segment, or an Arc.
                     
-                    5. Adjacent Colinear or 
-             Cocircular segments are combined.
+        
+                         5. Adjacent Colinear or Cocircular segments are combined.
                     
-                    6. Segments that meet 
-             with G1-continuity have there ends tuned up so
-                       that they meet with 
-             G1-continuity to within machine precision.
+              
+                   6. Segments that meet with G1-continuity have there ends tuned up so
+                       
+             that they meet with G1-continuity to within machine precision.
         
         
             options: Simplification options.
@@ -2695,8 +2631,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
             Same as SimplifyCurve, but simplifies only the last two segments at "side" end.
         
             end: If CurveEnd.Start the function simplifies the last two start 
-                    side 
-             segments, otherwise if CurveEnd.End the last two end side segments are simplified.
+                    side segments, 
+             otherwise if CurveEnd.End the last two end side segments are simplified.
         
             options: Simplification options.
             distanceTolerance: A distance tolerance for the simplification.
@@ -2710,8 +2646,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         SpanDomain(self: Curve, spanIndex: int) -> Interval
         
             Get the domain of the curve span with the given index. 
-                    Use the 
-             SpanCount property to test how many spans there are.
+                    Use the SpanCount 
+             property to test how many spans there are.
         
         
             spanIndex: Index of span.
@@ -2738,8 +2674,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         Split(self: Curve, t: float) -> Array[Curve]
         
             Splits (divides) the curve at the specified parameter. 
-                    The parameter 
-             must be in the interior of the curve's domain.
+                    The parameter must be 
+             in the interior of the curve's domain.
         
         
             t: Parameter to split the curve at in the interval returned by Domain().
@@ -2780,53 +2716,51 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         
             Gets a polyline approximation of a curve.
         
-            mainSegmentCount: If mainSegmentCount <= 0, then both subSegmentCount and mainSegmentCount are 
-             ignored. 
-                    If mainSegmentCount > 0, then subSegmentCount must be >= 1. 
-             In this 
-                    case the nurb will be broken into mainSegmentCount equally 
-             spaced 
-                    chords. If needed, each of these chords can be split into as 
-             many 
-                    subSegmentCount sub-parts if the subdivision is necessary for 
-             the 
-                    mesh to meet the other meshing constraints. In particular, if 
-         
-                        subSegmentCount = 0, then the curve is broken into mainSegmentCount 
-          
-                       pieces and no further testing is performed.
+            mainSegmentCount: If mainSegmentCount <= 0, then both subSegmentCount and mainSegmentCount are ignored. 
+           
+                      If mainSegmentCount > 0, then subSegmentCount must be >= 1. In this 
+                    
+             case the nurb will be broken into mainSegmentCount equally spaced 
+                    chords. If 
+             needed, each of these chords can be split into as many 
+                    subSegmentCount 
+             sub-parts if the subdivision is necessary for the 
+                    mesh to meet the other 
+             meshing constraints. In particular, if 
+                    subSegmentCount = 0, then the curve 
+             is broken into mainSegmentCount 
+                    pieces and no further testing is performed.
         
             subSegmentCount: An amount of subsegments.
             maxAngleRadians: ( 0 to pi ) Maximum angle (in radians) between unit tangents at 
-                    
-             adjacent vertices.
+                    adjacent 
+             vertices.
         
             maxChordLengthRatio: Maximum permitted value of 
-                    (distance chord midpoint to curve) / 
-             (length of chord).
+                    (distance chord midpoint to curve) / (length of 
+             chord).
         
             maxAspectRatio: If maxAspectRatio < 1.0, the parameter is ignored. 
-                    If 1 <= 
-             maxAspectRatio < sqrt(2), it is treated as if maxAspectRatio = sqrt(2). 
-                 
-                This parameter controls the maximum permitted value of 
-                    (length of 
-             longest chord) / (length of shortest chord).
+                    If 1 <= maxAspectRatio < 
+             sqrt(2), it is treated as if maxAspectRatio = sqrt(2). 
+                    This parameter 
+             controls the maximum permitted value of 
+                    (length of longest chord) / (length 
+             of shortest chord).
         
             tolerance: If tolerance = 0, the parameter is ignored. 
-                    This parameter controls 
-             the maximum permitted value of the 
-                    distance from the curve to the 
-             polyline.
+                    This parameter controls the 
+             maximum permitted value of the 
+                    distance from the curve to the polyline.
         
             minEdgeLength: The minimum permitted edge length.
             maxEdgeLength: If maxEdgeLength = 0, the parameter 
-                    is ignored. This parameter 
-             controls the maximum permitted edge length.
+                    is ignored. This parameter controls the 
+             maximum permitted edge length.
         
             keepStartPoint: If true the starting point of the curve 
-                    is added to the polyline. If 
-             false the starting point of the curve is 
+                    is added to the polyline. If false 
+             the starting point of the curve is 
                     not added to the polyline.
         
             curveDomain: This subdomain of the NURBS curve is approximated.
@@ -2835,53 +2769,51 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         
             Gets a polyline approximation of a curve.
         
-            mainSegmentCount: If mainSegmentCount <= 0, then both subSegmentCount and mainSegmentCount are 
-             ignored. 
-                    If mainSegmentCount > 0, then subSegmentCount must be >= 1. 
-             In this 
-                    case the nurb will be broken into mainSegmentCount equally 
-             spaced 
-                    chords. If needed, each of these chords can be split into as 
-             many 
-                    subSegmentCount sub-parts if the subdivision is necessary for 
-             the 
-                    mesh to meet the other meshing constraints. In particular, if 
-         
-                        subSegmentCount = 0, then the curve is broken into mainSegmentCount 
-          
-                       pieces and no further testing is performed.
+            mainSegmentCount: If mainSegmentCount <= 0, then both subSegmentCount and mainSegmentCount are ignored. 
+           
+                      If mainSegmentCount > 0, then subSegmentCount must be >= 1. In this 
+                    
+             case the nurb will be broken into mainSegmentCount equally spaced 
+                    chords. If 
+             needed, each of these chords can be split into as many 
+                    subSegmentCount 
+             sub-parts if the subdivision is necessary for the 
+                    mesh to meet the other 
+             meshing constraints. In particular, if 
+                    subSegmentCount = 0, then the curve 
+             is broken into mainSegmentCount 
+                    pieces and no further testing is performed.
         
             subSegmentCount: An amount of subsegments.
             maxAngleRadians: ( 0 to pi ) Maximum angle (in radians) between unit tangents at 
-                    
-             adjacent vertices.
+                    adjacent 
+             vertices.
         
             maxChordLengthRatio: Maximum permitted value of 
-                    (distance chord midpoint to curve) / 
-             (length of chord).
+                    (distance chord midpoint to curve) / (length of 
+             chord).
         
             maxAspectRatio: If maxAspectRatio < 1.0, the parameter is ignored. 
-                    If 1 <= 
-             maxAspectRatio < sqrt(2), it is treated as if maxAspectRatio = sqrt(2). 
-                 
-                This parameter controls the maximum permitted value of 
-                    (length of 
-             longest chord) / (length of shortest chord).
+                    If 1 <= maxAspectRatio < 
+             sqrt(2), it is treated as if maxAspectRatio = sqrt(2). 
+                    This parameter 
+             controls the maximum permitted value of 
+                    (length of longest chord) / (length 
+             of shortest chord).
         
             tolerance: If tolerance = 0, the parameter is ignored. 
-                    This parameter controls 
-             the maximum permitted value of the 
-                    distance from the curve to the 
-             polyline.
+                    This parameter controls the 
+             maximum permitted value of the 
+                    distance from the curve to the polyline.
         
             minEdgeLength: The minimum permitted edge length.
             maxEdgeLength: If maxEdgeLength = 0, the parameter 
-                    is ignored. This parameter 
-             controls the maximum permitted edge length.
+                    is ignored. This parameter controls the 
+             maximum permitted edge length.
         
             keepStartPoint: If true the starting point of the curve 
-                    is added to the polyline. If 
-             false the starting point of the curve is 
+                    is added to the polyline. If false 
+             the starting point of the curve is 
                     not added to the polyline.
         
             Returns: PolylineCurve on success, null on error.
@@ -2899,8 +2831,8 @@ class Curve(GeometryBase, IDisposable, ISerializable):
             Removes portions of the curve outside the specified interval.
         
             domain: Trimming interval. Portions of the curve before curve(domain[0])
-                    and 
-             after curve(domain[1]) are removed.
+                    and after 
+             curve(domain[1]) are removed.
         
             Returns: Trimmed curve if successful, null on failure.
         Trim(self: Curve, t0: float, t1: float) -> Curve
@@ -2991,14 +2923,14 @@ class Curve(GeometryBase, IDisposable, ISerializable):
             Test a curve for planarity and return the plane.
         
             tolerance: Tolerance to use when checking.
-            Returns: true if there is a plane such that the maximum distance from the curve to the 
-             plane is <= tolerance.
+            Returns: true if there is a plane such that the maximum distance from the curve to the plane is <= 
+             tolerance.
         
         TryGetPlane(self: Curve) -> (bool, Plane)
         
             Test a curve for planarity and return the plane.
-            Returns: true if there is a plane such that the maximum distance from the curve to the 
-             plane is <= RhinoMath.ZeroTolerance.
+            Returns: true if there is a plane such that the maximum distance from the curve to the plane is <= 
+             RhinoMath.ZeroTolerance.
         """
         pass
 
@@ -3007,25 +2939,25 @@ class Curve(GeometryBase, IDisposable, ISerializable):
         TryGetPolyline(self: Curve) -> (bool, Polyline, Array[float])
         
             Several types of Curve can have the form of a polyline 
-                    including a 
-             degree 1 NurbsCurve, a PolylineCurve, 
-                    and a PolyCurve all of whose 
-             segments are some form of 
-                    polyline. IsPolyline tests a curve to see 
-             if it can be 
-                    represented as a polyline.
+                    including a degree 1 
+             NurbsCurve, a PolylineCurve, 
+                    and a PolyCurve all of whose segments are some 
+             form of 
+                    polyline. IsPolyline tests a curve to see if it can be 
+                    
+             represented as a polyline.
         
             Returns: true if this curve can be represented as a polyline; otherwise, false.
         TryGetPolyline(self: Curve) -> (bool, Polyline)
         
             Several types of Curve can have the form of a polyline 
-                    including a 
-             degree 1 NurbsCurve, a PolylineCurve, 
-                    and a PolyCurve all of whose 
-             segments are some form of 
-                    polyline. IsPolyline tests a curve to see 
-             if it can be 
-                    represented as a polyline.
+                    including a degree 1 
+             NurbsCurve, a PolylineCurve, 
+                    and a PolyCurve all of whose segments are some 
+             form of 
+                    polyline. IsPolyline tests a curve to see if it can be 
+                    
+             represented as a polyline.
         
             Returns: true if this curve can be represented as a polyline; otherwise, false.
         """
@@ -3164,17 +3096,17 @@ class ArcCurve(Curve, IDisposable, ISerializable):
         """
         Dispose(self: Curve, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -3182,8 +3114,8 @@ class ArcCurve(Curve, IDisposable, ISerializable):
         """
         NonConstOperation(self: Curve)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -3529,10 +3461,10 @@ class BezierCurve(object, IDisposable):
             sourceCurve: A curve to approximate.
             distanceTolerance: The max fitting error. Use RhinoMath.SqrtEpsilon as a minimum.
             kinkTolerance: If the input curve has a g1-discontinuity with angle radian measure
-                    
-             greater than kinkTolerance at some point P, the list of beziers will
-                    
-             also have a kink at P.
+                    greater 
+             than kinkTolerance at some point P, the list of beziers will
+                    also have a kink 
+             at P.
         
             Returns: A new array of bezier curves. The array can be empty and might contain null items.
         """
@@ -3571,19 +3503,19 @@ class BezierCurve(object, IDisposable):
             Boundingbox solver. Gets the world axis aligned boundingbox for the curve.
         
             accurate: If true, a physically accurate boundingbox will be computed. 
-                    If not, 
-             a boundingbox estimate will be computed. For some geometry types there is no 
-            
-                     difference between the estimate and the accurate boundingbox. Estimated 
-             boundingboxes 
-                    can be computed much (much) faster than accurate (or 
-             "tight") bounding boxes. 
-                    Estimated bounding boxes are always similar 
-             to or larger than accurate bounding boxes.
+                    If not, a 
+             boundingbox estimate will be computed. For some geometry types there is no 
+                    
+             difference between the estimate and the accurate boundingbox. Estimated boundingboxes 
+           
+                      can be computed much (much) faster than accurate (or "tight") bounding boxes. 
+          
+                       Estimated bounding boxes are always similar to or larger than accurate bounding 
+             boxes.
         
             Returns: The boundingbox of the geometry in world coordinates or BoundingBox.Empty 
-               
-                  if not bounding box could be found.
+                    if 
+             not bounding box could be found.
         """
         pass
 
@@ -3617,8 +3549,8 @@ class BezierCurve(object, IDisposable):
         
             index: Control vertex index (0 <= index < ControlVertexCount)
             Returns: Homogenous value of control vertex. If the bezier is not
-                    rational, 
-             the weight is 1.
+                    rational, the weight 
+             is 1.
         """
         pass
 
@@ -3799,8 +3731,8 @@ class BoundingBox(object):
         
             point: Sample point.
             includeInterior: If false, the point is projected onto the boundary faces only, 
-                    
-             otherwise the interior of the box is also taken into consideration.
+                    otherwise the 
+             interior of the box is also taken into consideration.
         
             Returns: The point on or in the box that is closest to the sample point.
         ClosestPoint(self: BoundingBox, point: Point3d) -> Point3d
@@ -3817,49 +3749,45 @@ class BoundingBox(object):
         Contains(self: BoundingBox, box: BoundingBox) -> bool
         
             Determines whether this boundingbox contains another boundingbox.
-                    
-             This is the same as calling Contains(box,false).
+                    This is the 
+             same as calling Contains(box,false).
         
         
             box: Box to test.
-            Returns: true if the box is on the inside of this boundingbox, or is coincident with the 
-             surface of it.
+            Returns: true if the box is on the inside of this boundingbox, or is coincident with the surface of 
+             it.
         
         Contains(self: BoundingBox, box: BoundingBox, strict: bool) -> bool
         
             Determines whether this boundingbox contains another boundingbox.
-                    The 
-             user can choose how to treat boundingboxes with coincidents surfaces.
+                    The user 
+             can choose how to treat boundingboxes with coincidents surfaces.
         
         
             box: Box to test.
             strict: If true, the box needs to be fully on the inside of the boundingbox. 
-                    
-             I.e. coincident boxes will be considered 'outside'.
+                    I.e. 
+             coincident boxes will be considered 'outside'.
         
             Returns: true if the box is (strictly) on the inside of this BoundingBox.
         Contains(self: BoundingBox, point: Point3d) -> bool
         
-            Tests a point for boundingbox inclusion. This is the same as calling 
-             Contains(point, false)
-        
+            Tests a point for boundingbox inclusion. This is the same as calling Contains(point, false)
         
             point: Point to test.
-            Returns: true if the point is on the inside of or coincident with this boundingbox; 
-             otherwise false.
-        
+            Returns: true if the point is on the inside of or coincident with this boundingbox; otherwise false.
         Contains(self: BoundingBox, point: Point3d, strict: bool) -> bool
         
             Tests a point for BoundingBox inclusion.
         
             point: Point to test.
             strict: If true, the point needs to be fully on the inside of the BoundingBox. 
-                  
-               I.e. coincident points will be considered 'outside'.
+                    I.e. 
+             coincident points will be considered 'outside'.
         
-            Returns: If 'strict' is affirmative, true if the point is inside this boundingbox; false if 
-             it is on the surface or outside.If 'strict' is negative, true if the point is on 
-             the surface or on the inside of the boundingbox; otherwise false.
+            Returns: If 'strict' is affirmative, true if the point is inside this boundingbox; false if it is 
+             on the surface or outside.If 'strict' is negative, true if the point is on the surface or 
+             on the inside of the boundingbox; otherwise false.
         """
         pass
 
@@ -3892,8 +3820,8 @@ class BoundingBox(object):
         GetCorners(self: BoundingBox) -> Array[Point3d]
         
             Gets an array filled with the 8 corner points of this box.
-                     See 
-             remarks for the return order.
+                     See remarks for 
+             the return order.
         
             Returns: An array of 8 corners.
         """
@@ -3912,10 +3840,10 @@ class BoundingBox(object):
         """
         Inflate(self: BoundingBox, xAmount: float, yAmount: float, zAmount: float)
             Inflate the box with custom amounts in all directions. 
-                    Inflating 
-             with negative amounts may result in decreasing boxes. 
-                    InValid boxes 
-             can not be inflated.
+                    Inflating with 
+             negative amounts may result in decreasing boxes. 
+                    InValid boxes can not be 
+             inflated.
         
         
             xAmount: Amount (in model units) to inflate this box in the x direction.
@@ -3923,10 +3851,10 @@ class BoundingBox(object):
             zAmount: Amount (in model units) to inflate this box in the z direction.
         Inflate(self: BoundingBox, amount: float)
             Inflates the box with equal amounts in all directions. 
-                    Inflating 
-             with negative amounts may result in decreasing boxes. 
-                    Invalid boxes 
-             can not be inflated.
+                    Inflating with 
+             negative amounts may result in decreasing boxes. 
+                    Invalid boxes can not be 
+             inflated.
         
         
             amount: Amount (in model units) to inflate this box in all directions.
@@ -3953,17 +3881,16 @@ class BoundingBox(object):
             Determines whether a bounding box is degenerate (flat) in one or more directions.
         
             tolerance: Distances <= tolerance will be considered to be zero.  If tolerance
-                    
-             is negative (default), then a scale invarient tolerance is used.
+                    is 
+             negative (default), then a scale invarient tolerance is used.
         
             Returns: 0 = box is not degenerate
                     1 = box is a rectangle (degenerate in one 
              direction).
                     2 = box is a line (degenerate in two directions).
-               
-                  3 = box is a point (degenerate in three directions)
-                    4 = box is 
-             not valid.
+                    3 
+             = box is a point (degenerate in three directions)
+                    4 = box is not valid.
         """
         pass
 
@@ -3972,9 +3899,8 @@ class BoundingBox(object):
         MakeValid(self: BoundingBox) -> bool
         
             Ensures that the box is defined in an increasing fashion along X, Y and Z axes.
-          
-                       If the Min or Max points are unset, this function will not change the 
-             box.
+                  
+               If the Min or Max points are unset, this function will not change the box.
         
             Returns: true if the box was made valid, false if the box could not be made valid.
         """
@@ -3985,8 +3911,8 @@ class BoundingBox(object):
         PointAt(self: BoundingBox, tx: float, ty: float, tz: float) -> Point3d
         
             Evaluates the boundingbox with normalized parameters.
-                    The box has 
-             idealized side length of 1x1x1.
+                    The box has idealized 
+             side length of 1x1x1.
         
         
             tx: Normalized (between 0 and 1 is inside the box) parameter along the X direction.
@@ -4019,8 +3945,8 @@ class BoundingBox(object):
         Transform(self: BoundingBox, xform: Transform) -> bool
         
             Updates this boundingbox to be the smallest axis aligned
-                    boundingbox 
-             that contains the transformed result of its 8 original corner
+                    boundingbox that 
+             contains the transformed result of its 8 original corner
                     points.
         
         
@@ -4141,8 +4067,8 @@ class Box(object, IEpsilonComparable[Box]):
         
             box: Box to test.
             strict: If true, the boundingbox needs to be fully on the inside of this Box. 
-                   
-              I.e. coincident boxes will be considered 'outside'.
+                    I.e. 
+             coincident boxes will be considered 'outside'.
         
             Returns: true if the box is (strictly) on the inside of this Box.
         Contains(self: Box, box: Box) -> bool
@@ -4181,9 +4107,7 @@ class Box(object, IEpsilonComparable[Box]):
             Returns: true if the point is (strictly) on the inside of this Box.
         Contains(self: Box, box: BoundingBox) -> bool
         
-            Test a boundingbox for Box inclusion. This is the same as calling 
-             Contains(box,false)
-        
+            Test a boundingbox for Box inclusion. This is the same as calling Contains(box,false)
         
             box: Box to test.
             Returns: true if the box is on the inside of or coincident with this Box.
@@ -4202,9 +4126,7 @@ class Box(object, IEpsilonComparable[Box]):
         """
         FurthestPoint(self: Box, point: Point3d) -> Point3d
         
-            Finds the furthest point on the Box. The Box should be Valid for this to work 
-             properly.
-        
+            Finds the furthest point on the Box. The Box should be Valid for this to work properly.
         
             point: Sample point.
             Returns: The point on the box that is furthest from the sample point.
@@ -4224,10 +4146,9 @@ class Box(object, IEpsilonComparable[Box]):
         """
         Inflate(self: Box, xAmount: float, yAmount: float, zAmount: float)
             Inflates the box by a given offset in each direction.
-                    Inflating with 
-             negative amounts may result in decreasing boxes.
-                    InValid boxes cannot 
-             be inflated.
+                    Inflating with negative 
+             amounts may result in decreasing boxes.
+                    InValid boxes cannot be inflated.
         
         
             xAmount: Amount (in model units) to inflate this box in the x direction.
@@ -4235,10 +4156,9 @@ class Box(object, IEpsilonComparable[Box]):
             zAmount: Amount (in model units) to inflate this box in the z direction.
         Inflate(self: Box, amount: float)
             Inflates the box by a given offset in each direction.
-                    Inflating with 
-             negative amounts may result in decreasing boxes. 
-                    InValid boxes 
-             cannot be inflated.
+                    Inflating with negative 
+             amounts may result in decreasing boxes. 
+                    InValid boxes cannot be inflated.
         
         
             amount: Amount (in model units) to inflate this box in all directions.
@@ -4251,8 +4171,8 @@ class Box(object, IEpsilonComparable[Box]):
         
             Attempts to make the Box valid. This is not always possible.
             Returns: true if the box was made valid, or if it was valid to begin with. 
-                    
-             false if the box remains in a differently abled state.
+                    false if 
+             the box remains in a differently abled state.
         """
         pass
 
@@ -4261,8 +4181,8 @@ class Box(object, IEpsilonComparable[Box]):
         PointAt(self: Box, x: float, y: float, z: float) -> Point3d
         
             Evaluates the box volume at the given unitized parameters.
-                    The box 
-             has idealized side length of 1x1x1.
+                    The box has 
+             idealized side length of 1x1x1.
         
         
             x: Unitized parameter (between 0 and 1 is inside the box) along box X direction.
@@ -4276,8 +4196,8 @@ class Box(object, IEpsilonComparable[Box]):
         """
         RepositionBasePlane(self: Box, origin: Point3d)
             Repositions the origin of the Base plane for this box without affecting 
-                 
-                the physical dimensions.
+                    the 
+             physical dimensions.
         
         
             origin: The new base plane origin.
@@ -4297,10 +4217,9 @@ class Box(object, IEpsilonComparable[Box]):
         """
         Transform(self: Box, xform: Transform) -> bool
         
-            Transforms this Box using a Transformation matrix. If the Transform does not 
-             preserve 
-                    Similarity, the dimensions of the resulting box cannot be 
-             trusted.
+            Transforms this Box using a Transformation matrix. If the Transform does not preserve 
+           
+                      Similarity, the dimensions of the resulting box cannot be trusted.
         
         
             xform: Transformation matrix to apply to this Box.
@@ -4312,8 +4231,8 @@ class Box(object, IEpsilonComparable[Box]):
         """
         Union(self: Box, point: Point3d)
             Constructs a union between this Box and the given point. 
-                    This grows 
-             the box in directions so it contains the point.
+                    This grows the box 
+             in directions so it contains the point.
         
         
             point: Point to include.
@@ -4446,8 +4365,8 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         
             surface: A copy of the surface is added to this brep.
             Returns: Index that should be used to reference the geometry.
-                    -1 is returned 
-             if the input is not acceptable.
+                    -1 is returned if the 
+             input is not acceptable.
         """
         pass
 
@@ -4464,8 +4383,8 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         """
         Append(self: Brep, other: Brep)
             Appends a copy of another brep to this and updates indices of appended
-                   
-              brep parts.  Duplicates are not removed
+                    brep 
+             parts.  Duplicates are not removed
         """
         pass
 
@@ -4488,10 +4407,10 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         
             testPoint: base point to project to surface.
             maximumDistance: If maximumDistance > 0, then only points whose distance
-                    is <= 
-             maximumDistance will be returned. Using a positive
-                    value of 
-             maximumDistance can substantially speed up the search.
+                    is <= maximumDistance 
+             will be returned. Using a positive
+                    value of maximumDistance can substantially 
+             speed up the search.
         
             Returns: true if the operation succeeded; otherwise, false.
         ClosestPoint(self: Brep, testPoint: Point3d) -> Point3d
@@ -4499,8 +4418,7 @@ class Brep(GeometryBase, IDisposable, ISerializable):
             Finds a point on the brep that is closest to testPoint.
         
             testPoint: Base point to project to brep.
-            Returns: The point on the Brep closest to testPoint or Point3d.Unset if the operation 
-             failed.
+            Returns: The point on the Brep closest to testPoint or Point3d.Unset if the operation failed.
         """
         pass
 
@@ -4508,10 +4426,10 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         """
         Compact(self: Brep)
             Deletes any unreferenced objects from arrays, reindexes as needed, and
-                   
-              shrinks arrays to minimum required size. Uses CUllUnused* members to
                     
-             delete any unreferenced objects from arrays.
+             shrinks arrays to minimum required size. Uses CUllUnused* members to
+                    delete 
+             any unreferenced objects from arrays.
         """
         pass
 
@@ -4535,8 +4453,7 @@ class Brep(GeometryBase, IDisposable, ISerializable):
             trimSource: Brep face which defines the trimming curves.
             surfaceSource: The surface to trim.
             tolerance: Tolerance to use for rebuilding 3D trim curves.
-            Returns: A brep with the shape of surfaceSource and the trims of trimSource or null on 
-             failure.
+            Returns: A brep with the shape of surfaceSource and the trims of trimSource or null on failure.
         """
         pass
 
@@ -4627,13 +4544,13 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         CreateFromCone(cone: Cone, capBottom: bool) -> Brep
         
             Constructs a Brep representation of the cone with a single
-                    face for 
-             the cone, an edge along the cone seam, 
-                    and vertices at the base and 
-             apex ends of this seam edge.
-                    The optional cap is a single face with 
-             one circular edge 
-                    starting and ending at the base vertex.
+                    face for the cone, 
+             an edge along the cone seam, 
+                    and vertices at the base and apex ends of this 
+             seam edge.
+                    The optional cap is a single face with one circular edge 
+                
+                 starting and ending at the base vertex.
         
         
             cone: A cone value.
@@ -4678,12 +4595,12 @@ class Brep(GeometryBase, IDisposable, ISerializable):
             capBottom: if true end at cylinder.m_height[0] should be capped.
             capTop: if true end at cylinder.m_height[1] should be capped.
             Returns: A Brep representation of the cylinder with a single face for the cylinder,
-               
-                  an edge along the cylinder seam, and vertices at the bottom and top ends of 
-             this
-                    seam edge. The optional bottom/top caps are single faces with 
-             one circular edge
-                    starting and ending at the bottom/top vertex.
+                    an 
+             edge along the cylinder seam, and vertices at the bottom and top ends of this
+                    
+             seam edge. The optional bottom/top caps are single faces with one circular edge
+                  
+               starting and ending at the bottom/top vertex.
         """
         pass
 
@@ -4710,10 +4627,10 @@ class Brep(GeometryBase, IDisposable, ISerializable):
             Create a brep representation of a mesh
         
             trimmedTriangles: if true, triangles in the mesh will be represented by trimmed planes in
-                  
-               the brep. If false, triangles in the mesh will be represented by
-                    
-             untrimmed singular bilinear NURBS surfaces in the brep.
+                    the 
+             brep. If false, triangles in the mesh will be represented by
+                    untrimmed 
+             singular bilinear NURBS surfaces in the brep.
         """
         pass
 
@@ -4726,15 +4643,15 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         
             face: the face to offset.
             offsetDistance: An offset distance.
-            offsetTolerance: Use 0.0 to make a loose offset. Otherwise, the document's absolute tolerance is 
-             usually sufficient.
+            offsetTolerance: Use 0.0 to make a loose offset. Otherwise, the document's absolute tolerance is usually 
+             sufficient.
         
             bothSides: When true, offset to both sides of the input face.
             createSolid: When true, make a solid object.
-            Returns: A new brep if successful. The brep can be disjoint if bothSides is true and 
-             createSolid is false,
-                    or if createSolid is true and connecting the 
-             offsets with side surfaces fails.
+            Returns: A new brep if successful. The brep can be disjoint if bothSides is true and createSolid is 
+             false,
+                    or if createSolid is true and connecting the offsets with side 
+             surfaces fails.
                     null if unsuccessful.
         """
         pass
@@ -4748,16 +4665,16 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         
             surface: The surface of revolution.
             capStart: if true, the start of the revolute is not on the axis of revolution,
-                    
-             and the surface of revolution is closed, then a circular cap will be
-                    
-             added to close of the hole at the start of the revolute.
+                    and the 
+             surface of revolution is closed, then a circular cap will be
+                    added to close 
+             of the hole at the start of the revolute.
         
             capEnd: if true, the end of the revolute is not on the axis of revolution,
-                    
-             and the surface of revolution is closed, then a circular cap will be
-                    
-             added to close of the hole at the end of the revolute.
+                    and the 
+             surface of revolution is closed, then a circular cap will be
+                    added to close 
+             of the hole at the end of the revolute.
         
             Returns: A new brep, on null on error.
         """
@@ -4778,10 +4695,10 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         CreateFromSurface(surface: Surface) -> Brep
         
             Constructs a Brep from a surface. The resulting Brep has an outer boundary made
-          
-                       from four trims. The trims are ordered so that they run along the south, 
-             east,
-                    north, and then west side of the surface's parameter space.
+                  
+               from four trims. The trims are ordered so that they run along the south, east,
+                 
+                north, and then west side of the surface's parameter space.
         
         
             surface: A surface to convert.
@@ -4794,10 +4711,9 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         """
         CreateFromSweep(rail1: Curve, rail2: Curve, shape: Curve, closed: bool, tolerance: float) -> Array[Brep]
         
-            General 2 rail sweep. If you are not producing the sweep results that you are 
-             after, then
-                    use the SweepTwoRail class with options to generate the 
-             swept geometry
+            General 2 rail sweep. If you are not producing the sweep results that you are after, then
+        
+                         use the SweepTwoRail class with options to generate the swept geometry
         
         
             rail1: Rail to sweep shapes along
@@ -4809,10 +4725,9 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         CreateFromSweep(rail1: Curve, rail2: Curve, shapes: IEnumerable[Curve], closed: bool, tolerance: float) -> Array[Brep]
         CreateFromSweep(rail: Curve, shape: Curve, closed: bool, tolerance: float) -> Array[Brep]
         
-            General 1 rail sweep. If you are not producing the sweep results that you are 
-             after, then
-                    use the SweepOneRail class with options to generate the 
-             swept geometry
+            General 1 rail sweep. If you are not producing the sweep results that you are after, then
+        
+                         use the SweepOneRail class with options to generate the swept geometry
         
         
             rail: Rail to sweep shapes along
@@ -4859,23 +4774,22 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         
             rail: the path curve for the pipe
             radius: radius of the pipe
-            localBlending: If True, Local (pipe radius stays constant at the ends and changes more rapidly in 
-             the middle) is applied.
-                    If False, Global (radius is linearly blended 
-             from one end to the other, creating pipes that taper from one radius to the other) 
-             is applied
+            localBlending: If True, Local (pipe radius stays constant at the ends and changes more rapidly in the 
+             middle) is applied.
+                    If False, Global (radius is linearly blended from one end 
+             to the other, creating pipes that taper from one radius to the other) is applied
         
             cap: end cap mode
-            fitRail: If the curve is a polycurve of lines and arcs, the curve is fit and a single 
-             surface is created;
-                    otherwise the result is a polysurface with joined 
-             surfaces created from the polycurve segments.
+            fitRail: If the curve is a polycurve of lines and arcs, the curve is fit and a single surface is 
+             created;
+                    otherwise the result is a polysurface with joined surfaces created 
+             from the polycurve segments.
         
-            absoluteTolerance: The sweeping and fitting tolerance. If you are unsure what to use, then use the 
-             document's absolute tolerance
+            absoluteTolerance: The sweeping and fitting tolerance. If you are unsure what to use, then use the document's 
+             absolute tolerance
         
-            angleToleranceRadians: The angle tolerance. If you are unsure what to use, then either use the document's 
-             angle tolerance in radians
+            angleToleranceRadians: The angle tolerance. If you are unsure what to use, then either use the document's angle 
+             tolerance in radians
         
             Returns: Array of created pipes on success
         """
@@ -4916,15 +4830,14 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         CreateTrimmedSurface(trimSource: BrepFace, surfaceSource: Surface) -> Brep
         
             Constructs a Brep using the trimming information of a brep face and a surface. 
-          
-                       Surface must be roughly the same shape and in the same location as the 
-             trimming brep face.
+                  
+               Surface must be roughly the same shape and in the same location as the trimming brep 
+             face.
         
         
             trimSource: BrepFace which contains trimmingSource brep.
             surfaceSource: Surface that trims of BrepFace will be applied to.
-            Returns: A brep with the shape of surfaceSource and the trims of trimSource or null on 
-             failure.
+            Returns: A brep with the shape of surfaceSource and the trims of trimSource or null on failure.
         """
         pass
 
@@ -5004,17 +4917,17 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -5032,8 +4945,8 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         DuplicateBrep(self: Brep) -> Brep
         
             Same as Rhino.Geometry.Brep.Duplicate, but already performs a cast to a brep.
-            
-                     This cast always succeeds.
+                    
+             This cast always succeeds.
         
             Returns: A brep.
         """
@@ -5046,8 +4959,8 @@ class Brep(GeometryBase, IDisposable, ISerializable):
             Duplicate edges of this Brep.
         
             nakedOnly: If true, then only the "naked" edges are duplicated.
-                    If false, then 
-             all edges are duplicated.
+                    If false, then all edges 
+             are duplicated.
         
             Returns: Array of edge curves on success.
         DuplicateEdgeCurves(self: Brep) -> Array[Curve]
@@ -5090,15 +5003,15 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         GetArea(self: Brep) -> float
         
             Compute the Area of the Brep. If you want proper Area data with moments 
-                 
-                and error information, use the AreaMassProperties class.
+                    and 
+             error information, use the AreaMassProperties class.
         
             Returns: The area of the Brep.
         GetArea(self: Brep, relativeTolerance: float, absoluteTolerance: float) -> float
         
             Compute the Area of the Brep. If you want proper Area data with moments 
-                 
-                and error information, use the AreaMassProperties class.
+                    and 
+             error information, use the AreaMassProperties class.
         
         
             relativeTolerance: Relative tolerance to use for area calculation.
@@ -5121,8 +5034,8 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         GetVolume(self: Brep, relativeTolerance: float, absoluteTolerance: float) -> float
         
             Compute the Volume of the Brep. If you want proper Volume data with moments 
-             
-                    and error information, use the VolumeMassProperties class.
+                    
+             and error information, use the VolumeMassProperties class.
         
         
             relativeTolerance: Relative tolerance to use for area calculation.
@@ -5131,8 +5044,8 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         GetVolume(self: Brep) -> float
         
             Compute the Volume of the Brep. If you want proper Volume data with moments 
-             
-                    and error information, use the VolumeMassProperties class.
+                    
+             and error information, use the VolumeMassProperties class.
         
             Returns: The volume of the Brep.
         """
@@ -5166,26 +5079,26 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         IsPointInside(self: Brep, point: Point3d, tolerance: float, strictlyIn: bool) -> bool
         
             Determines if point is inside Brep.  This question only makes sense when
-                 
-                the brep is a closed manifold.  This function does not not check for
-                  
-               closed or manifold, so result is not valid in those cases.  Intersects
-                 
-                a line through point with brep, finds the intersection point Q closest
-                
-                 to point, and looks at face normal at Q.  If the point Q is on an edge
-               
-                  or the intersection is not transverse at Q, then another line is used.
+                    the 
+             brep is a closed manifold.  This function does not not check for
+                    closed or 
+             manifold, so result is not valid in those cases.  Intersects
+                    a line through 
+             point with brep, finds the intersection point Q closest
+                    to point, and looks 
+             at face normal at Q.  If the point Q is on an edge
+                    or the intersection is not 
+             transverse at Q, then another line is used.
         
         
             point: 3d point to test.
             tolerance: 3d distance tolerance used for intersection and determining strict inclusion.
-            
-                     A good default is RhinoMath.SqrtEpsilon.
+                    
+             A good default is RhinoMath.SqrtEpsilon.
         
             strictlyIn: if true, point is in if inside brep by at least tolerance.
-                    if false, 
-             point is in if truly in or within tolerance of boundary.
+                    if false, point is 
+             in if truly in or within tolerance of boundary.
         
             Returns: true if point is in, false if not.
         """
@@ -5195,10 +5108,10 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         """
         IsValidGeometry(self: Brep) -> (bool, str)
         
-            Expert user function that tests the brep to see if its geometry information is 
-             valid.
-                    The value of brep.IsValidTopology() must be true before 
-             brep.IsValidGeometry() can be
+            Expert user function that tests the brep to see if its geometry information is valid.
+            
+                     The value of brep.IsValidTopology() must be true before brep.IsValidGeometry() can 
+             be
                     safely called.
         
             Returns: A value that indicates whether the geometry is valid.
@@ -5210,12 +5123,11 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         IsValidTolerancesAndFlags(self: Brep) -> (bool, str)
         
             Expert user function that tests the brep to see if its tolerances and
-                    
-             flags are valid.  The values of brep.IsValidTopology() and
-                    
-             brep.IsValidGeometry() must be true before brep.IsValidTolerancesAndFlags()
-              
-                   can be safely called.
+                    flags 
+             are valid.  The values of brep.IsValidTopology() and
+                    brep.IsValidGeometry() 
+             must be true before brep.IsValidTolerancesAndFlags()
+                    can be safely called.
         
             Returns: A value that indicates
         """
@@ -5234,9 +5146,9 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         """
         Join(self: Brep, otherBrep: Brep, tolerance: float, compact: bool) -> bool
         
-            If any edges of this brep overlap edges of otherBrep, merge a copy of otherBrep 
-             into this
-                    brep joining all edges that overlap within tolerance.
+            If any edges of this brep overlap edges of otherBrep, merge a copy of otherBrep into this
+        
+                         brep joining all edges that overlap within tolerance.
         
         
             otherBrep: Brep to be added to this brep.
@@ -5282,8 +5194,8 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -5298,17 +5210,17 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         """
         RebuildTrimsForV2(self: Brep, face: BrepFace, nurbsSurface: NurbsSurface)
             No support is available for this function.
-                    Expert user function used 
-             by MakeValidForV2 to convert trim
-                    curves from one surface to its 
-             NURBS form. After calling this function,
-                    you need to change the 
-             surface of the face to a NurbsSurface.
+                    Expert user function used by 
+             MakeValidForV2 to convert trim
+                    curves from one surface to its NURBS form. 
+             After calling this function,
+                    you need to change the surface of the face to a 
+             NurbsSurface.
         
         
             face: Face whose underlying surface has a parameterization that is different
-                   
-              from its NURBS form.
+                    from 
+             its NURBS form.
         
             nurbsSurface: NURBS form of the face's underlying surface.
         """
@@ -5318,10 +5230,10 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         """
         SetTrimIsoFlags(self: Brep)
             This function can be used to set the BrepTrim::m_iso
-                    flag. It is 
-             intended to be used when creating a Brep from
-                    a definition that does 
-             not include compatible parameter space
+                    flag. It is intended to 
+             be used when creating a Brep from
+                    a definition that does not include 
+             compatible parameter space
                     type information.
         """
         pass
@@ -5330,12 +5242,12 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         """
         SetVertices(self: Brep)
             This function can be used to compute vertex information for a
-                    b-rep 
-             when everything but the Vertices array is properly filled in.
-                    It is 
-             intended to be used when creating a Brep from a 
-                    definition that does 
-             not include explicit vertex information.
+                    b-rep when 
+             everything but the Vertices array is properly filled in.
+                    It is intended to be 
+             used when creating a Brep from a 
+                    definition that does not include explicit 
+             vertex information.
         """
         pass
 
@@ -5362,10 +5274,10 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         """
         Standardize(self: Brep)
             Standardizes all trims, edges, and faces in the brep.
-                    After 
-             standardizing, there may be unused curves and surfaces in the
-                    brep.  
-             Call Brep.Compact to remove these unused curves and surfaces.
+                    After standardizing, 
+             there may be unused curves and surfaces in the
+                    brep.  Call Brep.Compact to 
+             remove these unused curves and surfaces.
         """
         pass
 
@@ -5374,18 +5286,18 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         Trim(self: Brep, cutter: Plane, intersectionTolerance: float) -> Array[Brep]
         
             Trims a Brep with an oriented cutter.  The parts of Brep that lie inside
-                 
-                (opposite the normal) of the cutter are retained while the parts to the
-               
-                  outside ( in the direction of the normal ) are discarded. A connected
-               
-                  component of Brep that does not intersect the cutter is kept if and only
-            
-                     if it is contained in the inside of Cutter.  That is the region bounded by
-             
-                    cutter opposite from the normal of cutter, or in the case of a Plane 
-             cutter
-                    the halfspace opposite from the plane normal.
+                    
+             (opposite the normal) of the cutter are retained while the parts to the
+                    
+             outside ( in the direction of the normal ) are discarded. A connected
+                    
+             component of Brep that does not intersect the cutter is kept if and only
+                    if 
+             it is contained in the inside of Cutter.  That is the region bounded by
+                    
+             cutter opposite from the normal of cutter, or in the case of a Plane cutter
+                    
+             the halfspace opposite from the plane normal.
         
         
             cutter: A cutting plane.
@@ -5394,18 +5306,18 @@ class Brep(GeometryBase, IDisposable, ISerializable):
         Trim(self: Brep, cutter: Brep, intersectionTolerance: float) -> Array[Brep]
         
             Trims a brep with an oriented cutter. The parts of the brep that lie inside
-              
-                   (opposite the normal) of the cutter are retained while the parts to the
-            
-                     outside (in the direction of the normal) are discarded.  If the Cutter is
-        
-                         closed, then a connected component of the Brep that does not intersect 
-             the
-                    cutter is kept if and only if it is contained in the inside of 
-             cutter.
-                    That is the region bounded by cutter opposite from the normal 
-             of cutter,
-                    If cutter is not closed all these components are kept.
+                    
+             (opposite the normal) of the cutter are retained while the parts to the
+                    
+             outside (in the direction of the normal) are discarded.  If the Cutter is
+                    
+             closed, then a connected component of the Brep that does not intersect the
+                    
+             cutter is kept if and only if it is contained in the inside of cutter.
+                    That 
+             is the region bounded by cutter opposite from the normal of cutter,
+                    If cutter 
+             is not closed all these components are kept.
         
         
             cutter: A cutting brep.
@@ -5422,10 +5334,10 @@ class Brep(GeometryBase, IDisposable, ISerializable):
             Attempts to convert a generic Geometry object into a Brep.
         
             geometry: Geometry to convert, not all types of GeometryBase can be represented by BReps.
-            Returns: Brep if a brep form could be created or null if this is not possible. If geometry 
-             was of type Brep to 
-                    begin with, the same object is returned, i.e. it 
-             is not duplicated.
+            Returns: Brep if a brep form could be created or null if this is not possible. If geometry was of 
+             type Brep to 
+                    begin with, the same object is returned, i.e. it is not 
+             duplicated.
         """
         pass
 
@@ -5567,17 +5479,17 @@ class CurveProxy(Curve, IDisposable, ISerializable):
         """
         Dispose(self: Curve, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -5585,8 +5497,8 @@ class CurveProxy(Curve, IDisposable, ISerializable):
         """
         NonConstOperation(self: Curve)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -5649,17 +5561,17 @@ class BrepEdge(CurveProxy, IDisposable, ISerializable):
         """
         Dispose(self: Curve, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -5677,14 +5589,14 @@ class BrepEdge(CurveProxy, IDisposable, ISerializable):
         IsSmoothManifoldEdge(self: BrepEdge, angleToleranceRadians: float) -> bool
         
             For a manifold, non-boundary edge, decides whether or not the two surfaces
-               
-                  on either side meet smoothly.
+                    on 
+             either side meet smoothly.
         
         
             angleToleranceRadians: used to decide if surface normals on either side are parallel.
             Returns: true if edge is manifold, has exactly 2 trims, and surface normals on either
-             
-                    side agree to within angle_tolerance.
+                    
+             side agree to within angle_tolerance.
         """
         pass
 
@@ -5692,8 +5604,8 @@ class BrepEdge(CurveProxy, IDisposable, ISerializable):
         """
         NonConstOperation(self: Curve)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -5892,12 +5804,12 @@ class Surface(GeometryBase, IDisposable, ISerializable):
             Constructs a rolling ball fillet between two surfaces.
         
             surfaceA: A first surface.
-            uvA: A point in the parameter space of FaceA near where the fillet is expected to hit 
-             the surface.
+            uvA: A point in the parameter space of FaceA near where the fillet is expected to hit the 
+             surface.
         
             surfaceB: A second surface.
-            uvB: A point in the parameter space of FaceB near where the fillet is expected to hit 
-             the surface.
+            uvB: A point in the parameter space of FaceB near where the fillet is expected to hit the 
+             surface.
         
             radius: A radius value.
             tolerance: A tolerance value used for approximating and intersecting offset surfaces.
@@ -5942,8 +5854,8 @@ class Surface(GeometryBase, IDisposable, ISerializable):
         Degree(self: Surface, direction: int) -> int
         
             Returns the maximum algebraic degree of any span
-                    (or a good estimate 
-             if curve spans are not algebraic).
+                    (or a good estimate if curve 
+             spans are not algebraic).
         
         
             direction: 0 gets first parameter's domain, 1 gets second parameter's domain.
@@ -5955,17 +5867,17 @@ class Surface(GeometryBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -6002,9 +5914,7 @@ class Surface(GeometryBase, IDisposable, ISerializable):
             edge: Edge to extend.  Must be North, South, East, or West.
             extensionLength: distance to extend.
             smooth: true for smooth (C-infinity) extension. 
-                    false for a C1- ruled 
-             extension.
-        
+                    false for a C1- ruled extension.
             Returns: New extended surface on success.
         """
         pass
@@ -6027,8 +5937,8 @@ class Surface(GeometryBase, IDisposable, ISerializable):
         FrameAt(self: Surface, u: float, v: float) -> (bool, Plane)
         
             Computes the orient plane on a surface given a U and V parameter.
-                    
-             This is the simple evaluation call with no error handling.
+                    This is the 
+             simple evaluation call with no error handling.
         
         
             u: A first parameter.
@@ -6046,32 +5956,31 @@ class Surface(GeometryBase, IDisposable, ISerializable):
             direction: If 0, then "u" parameter is checked. If 1, then the "v" parameter is checked.
             continuityType: The desired continuity.
             t0: Search begins at t0. If there is a discontinuity at t0, it will be ignored. 
-             
-                    This makes it possible to repeatedly call GetNextDiscontinuity and step 
-             through the discontinuities.
+                    
+             This makes it possible to repeatedly call GetNextDiscontinuity and step through the 
+             discontinuities.
         
-            t1: (t0 != t1) If there is a discontinuity at t1 is will be ingored unless c is a 
-             locus discontinuity
+            t1: (t0 != t1) If there is a discontinuity at t1 is will be ingored unless c is a locus 
+             discontinuity
                     type and t1 is at the start or end of the curve.
         
             Returns: Parametric continuity tests c = (C0_continuous, ..., G2_continuous):
+                    TRUE if 
+             a parametric discontinuity was found strictly between t0 and t1.
+                    Note well 
+             that all curves are parametrically continuous at the ends of their domains.
                     
-             TRUE if a parametric discontinuity was found strictly between t0 and t1.
-                 
-                Note well that all curves are parametrically continuous at the ends of their 
-             domains.
-                    
-                    Locus continuity tests c = 
-             (C0_locus_continuous, ...,G2_locus_continuous):
-                    TRUE if a locus 
-             discontinuity was found strictly between t0 and t1 or at t1 is the
-                    at 
-             the end of a curve. Note well that all open curves (IsClosed()=false) are locus
-          
-                       discontinuous at the ends of their domains.  All closed curves 
+        
+                         Locus continuity tests c = (C0_locus_continuous, ...,G2_locus_continuous):
+           
+                      TRUE if a locus discontinuity was found strictly between t0 and t1 or at t1 is 
+             the
+                    at the end of a curve. Note well that all open curves (IsClosed()=false) 
+             are locus
+                    discontinuous at the ends of their domains.  All closed curves 
              (IsClosed()=true) are
-                    at least C0_locus_continuous at the ends of 
-             their domains.
+                    at least C0_locus_continuous at the ends of their 
+             domains.
         """
         pass
 
@@ -6091,8 +6000,8 @@ class Surface(GeometryBase, IDisposable, ISerializable):
         GetSurfaceSize(self: Surface) -> (bool, float, float)
         
             Gets an estimate of the size of the rectangle that would be created
-                    
-             if the 3d surface where flattened into a rectangle.
+                    if the 3d 
+             surface where flattened into a rectangle.
         
             Returns: true if successful.
         """
@@ -6104,18 +6013,18 @@ class Surface(GeometryBase, IDisposable, ISerializable):
         
             Is there a NURBS surface representation of this surface.
             Returns: 0 unable to create NURBS representation with desired accuracy.
-                    1 
-             success - NURBS parameterization matches the surface's
-                    2 success - 
-             NURBS point locus matches the surface's and the
-                    domain of the NURBS 
-             surface is correct. However, This surface's
-                    parameterization and the 
-             NURBS surface parameterization may not
-                    match.  This situation happens 
-             when getting NURBS representations
-                    of surfaces that have a 
-             transendental parameterization like spheres,
+                    1 success - 
+             NURBS parameterization matches the surface's
+                    2 success - NURBS point locus 
+             matches the surface's and the
+                    domain of the NURBS surface is correct. 
+             However, This surface's
+                    parameterization and the NURBS surface 
+             parameterization may not
+                    match.  This situation happens when getting NURBS 
+             representations
+                    of surfaces that have a transendental parameterization like 
+             spheres,
                     cylinders, and cones.
         """
         pass
@@ -6137,11 +6046,11 @@ class Surface(GeometryBase, IDisposable, ISerializable):
             u: Surface u parameter to test.
             v: Surface v parameter to test.
             Returns: 0 if not a seam,
-                    1 if u == Domain(0)[i] and srf(u, v) == 
-             srf(Domain(0)[1-i], v)
-                    2 if v == Domain(1)[i] and srf(u, v) == srf(u, 
-             Domain(1)[1-i])
-                    3 if 1 and 2 are true.
+                    1 if u == Domain(0)[i] and srf(u, v) == srf(Domain(0)[1-i], 
+             v)
+                    2 if v == Domain(1)[i] and srf(u, v) == srf(u, Domain(1)[1-i])
+                   
+              3 if 1 and 2 are true.
         """
         pass
 
@@ -6154,8 +6063,8 @@ class Surface(GeometryBase, IDisposable, ISerializable):
             u: Surface u parameter to test.
             v: Surface v parameter to test.
             exact: If true, test if (u,v) is exactly at a singularity.
-                    If false, test if 
-             close enough to cause numerical problems.
+                    If false, test if close 
+             enough to cause numerical problems.
         
             Returns: true if surface is singular at (s,t)
         """
@@ -6210,9 +6119,7 @@ class Surface(GeometryBase, IDisposable, ISerializable):
             Returns: true if the surface is a portion of a cylinder.
         IsCylinder(self: Surface) -> bool
         
-            Determines if the surface is a portion of a cylinder within 
-             RhinoMath.ZeroTolerance.
-        
+            Determines if the surface is a portion of a cylinder within RhinoMath.ZeroTolerance.
             Returns: true if the surface is a portion of a cylinder.
         """
         pass
@@ -6221,21 +6128,19 @@ class Surface(GeometryBase, IDisposable, ISerializable):
         """
         IsIsoparametric(self: Surface, bbox: BoundingBox) -> IsoStatus
         
-            Determines if a 2d bounding box is iso-parameteric in the parameter space of this 
-             surface.
-        
+            Determines if a 2d bounding box is iso-parameteric in the parameter space of this surface.
         
             bbox: Bounding box to test.
-            Returns: IsoStatus flag describing the iso-parametric relationship between the surface and 
-             the bounding box.
+            Returns: IsoStatus flag describing the iso-parametric relationship between the surface and the 
+             bounding box.
         
         IsIsoparametric(self: Surface, curve: Curve) -> IsoStatus
         
             Determines if a 2d curve is iso-parameteric in the parameter space of this surface.
         
             curve: Curve to test.
-            Returns: IsoStatus flag describing the iso-parametric relationship between the surface and 
-             the curve.
+            Returns: IsoStatus flag describing the iso-parametric relationship between the surface and the 
+             curve.
         
         IsIsoparametric(self: Surface, curve: Curve, curveDomain: Interval) -> IsoStatus
         
@@ -6243,8 +6148,8 @@ class Surface(GeometryBase, IDisposable, ISerializable):
         
             curve: Curve to test.
             curveDomain: Sub domain of the curve.
-            Returns: IsoStatus flag describing the iso-parametric relationship between the surface and 
-             the curve.
+            Returns: IsoStatus flag describing the iso-parametric relationship between the surface and the 
+             curve.
         """
         pass
 
@@ -6255,16 +6160,16 @@ class Surface(GeometryBase, IDisposable, ISerializable):
             Gets isoparametric curve.
         
             direction: 0 first parameter varies and second parameter is constant
-                    e.g., point 
-             on IsoCurve(0,c) at t is srf(t,c)
-                    This is a horizontal line from left 
-             to right
-                    
-                    1 first parameter is constant and second 
-             parameter varies
-                    e.g., point on IsoCurve(1,c) at t is srf(c,t
+                    e.g., point on 
+             IsoCurve(0,c) at t is srf(t,c)
+                    This is a horizontal line from left to right
+         
+                        
+                    1 first parameter is constant and second parameter varies
                
-                  This is a vertical line from bottom to top.
+                  e.g., point on IsoCurve(1,c) at t is srf(c,t
+                    This is a vertical line 
+             from bottom to top.
         
             constantParameter: The parameter that was constant on the original surface.
             Returns: An isoparametric curve or null on error.
@@ -6275,9 +6180,7 @@ class Surface(GeometryBase, IDisposable, ISerializable):
         """
         IsPeriodic(self: Surface, direction: int) -> bool
         
-            Gets a value indicating if thr surface is periodic in a direction (default is 
-             false).
-        
+            Gets a value indicating if thr surface is periodic in a direction (default is false).
         
             direction: 0 = U, 1 = V.
             Returns: The indicating boolean value.
@@ -6292,14 +6195,13 @@ class Surface(GeometryBase, IDisposable, ISerializable):
         
             tolerance: tolerance to use when checking.
             Returns: true if there is a plane such that the maximum distance from
-                    the 
-             surface to the plane is <= tolerance.
+                    the surface to 
+             the plane is <= tolerance.
         
         IsPlanar(self: Surface) -> bool
         
             Tests a surface to see if it is planar to zero tolerance.
-            Returns: true if the surface is planar (flat) to within RhinoMath.ZeroTolerance units 
-             (1e-12).
+            Returns: true if the surface is planar (flat) to within RhinoMath.ZeroTolerance units (1e-12).
         """
         pass
 
@@ -6310,9 +6212,7 @@ class Surface(GeometryBase, IDisposable, ISerializable):
             true if surface side is collapsed to a point.
         
             side: side of parameter space to test
-                    0 = south, 1 = east, 2 = north, 3 = 
-             west.
-        
+                    0 = south, 1 = east, 2 = north, 3 = west.
             Returns: True if this specific side of the surface is singular; otherwise, false.
         """
         pass
@@ -6351,8 +6251,8 @@ class Surface(GeometryBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -6361,8 +6261,8 @@ class Surface(GeometryBase, IDisposable, ISerializable):
         NormalAt(self: Surface, u: float, v: float) -> Vector3d
         
             Computes the surface normal at a point.
-                    This is the simple evaluation 
-             call - it does not support error handling.
+                    This is the simple evaluation call - 
+             it does not support error handling.
         
         
             u: A U parameter.
@@ -6410,8 +6310,8 @@ class Surface(GeometryBase, IDisposable, ISerializable):
         
             curve3d: A curve.
             tolerance: the maximum acceptable 3d distance between from surface(curve_2d(t))
-                    
-             to the locus of points on the surface that are closest to curve_3d.
+                    to the 
+             locus of points on the surface that are closest to curve_3d.
         
             curve3dSubdomain: A subdomain of the curve to sample.
             Returns: 2d curve.
@@ -6421,8 +6321,8 @@ class Surface(GeometryBase, IDisposable, ISerializable):
         
             curve3d: The curve to pull.
             tolerance: the maximum acceptable 3d distance between from surface(curve_2d(t))
-                    
-             to the locus of points on the surface that are closest to curve_3d.
+                    to the 
+             locus of points on the surface that are closest to curve_3d.
         
             Returns: 2d curve.
         """
@@ -6435,8 +6335,8 @@ class Surface(GeometryBase, IDisposable, ISerializable):
             Computes a 3d curve that is the composite of a 2d curve and the surface map.
         
             curve2d: a 2d curve whose image is in the surface's domain.
-            tolerance: the maximum acceptable distance from the returned 3d curve to the image of 
-             curve_2d on the surface.
+            tolerance: the maximum acceptable distance from the returned 3d curve to the image of curve_2d on the 
+             surface.
         
             Returns: 3d curve.
         Pushup(self: Surface, curve2d: Curve, tolerance: float, curve2dSubdomain: Interval) -> Curve
@@ -6444,8 +6344,8 @@ class Surface(GeometryBase, IDisposable, ISerializable):
             Computes a 3d curve that is the composite of a 2d curve and the surface map.
         
             curve2d: a 2d curve whose image is in the surface's domain.
-            tolerance: the maximum acceptable distance from the returned 3d curve to the image of 
-             curve_2d on the surface.
+            tolerance: the maximum acceptable distance from the returned 3d curve to the image of curve_2d on the 
+             surface.
         
             curve2dSubdomain: The curve interval (a sub-domain of the original curve) to use.
             Returns: 3d curve.
@@ -6461,12 +6361,12 @@ class Surface(GeometryBase, IDisposable, ISerializable):
             uDegree: the output surface u degree.
             vDegree: the output surface u degree.
             uPointCount: The number of points in the output surface u direction. Must be bigger
-                   
-              than uDegree (maximum value is 1000)
+                    than 
+             uDegree (maximum value is 1000)
         
             vPointCount: The number of points in the output surface v direction. Must be bigger
-                   
-              than vDegree (maximum value is 1000)
+                    than 
+             vDegree (maximum value is 1000)
         
             Returns: new rebuilt surface on success. null on failure.
         """
@@ -6477,14 +6377,14 @@ class Surface(GeometryBase, IDisposable, ISerializable):
         Reverse(self: Surface, direction: int, inPlace: bool) -> Surface
         
             Same as Reverse, but if inPlace is set to true this Surface is modified
-                  
-               instead of a new copy being created.
+                    
+             instead of a new copy being created.
         
         
             direction: 0 for first parameter's domain, 1 for second parameter's domain.
             Returns: If inPlace is False, a new reversed surface on success. If inPlace is
-                    
-             true, this surface instance is returned on success.
+                    true, 
+             this surface instance is returned on success.
         
         Reverse(self: Surface, direction: int) -> Surface
         
@@ -6513,11 +6413,11 @@ class Surface(GeometryBase, IDisposable, ISerializable):
         
             Constructs a geodesic between 2 points, used by ShortPath command in Rhino.
         
-            start: start point of curve in parameter space. Points must be distinct in the domain of 
-             thie surface.
+            start: start point of curve in parameter space. Points must be distinct in the domain of thie 
+             surface.
         
-            end: end point of curve in parameter space. Points must be distinct in the domain of 
-             thie surface.
+            end: end point of curve in parameter space. Points must be distinct in the domain of thie 
+             surface.
         
             tolerance: tolerance used in fitting discrete solution.
             Returns: a geodesic curve on the surface on success. null on failure.
@@ -6542,14 +6442,14 @@ class Surface(GeometryBase, IDisposable, ISerializable):
             Splits (divides) the surface into two parts at the specified parameter
         
             direction: 0 = The surface is split vertically. The "west" side is returned as the first
-            
-                     surface in the array and the "east" side is returned as the second surface 
-             in
-                    the array.
-                    1 = The surface is split horizontally. The 
-             "south" side is returned as the first surface in the array and the "north"
-               
-                  side is returned as the second surfae in the array
+                    
+             surface in the array and the "east" side is returned as the second surface in
+                    
+             the array.
+                    1 = The surface is split horizontally. The "south" side is 
+             returned as the first surface in the array and the "north"
+                    side is returned 
+             as the second surfae in the array
         
             parameter: value of constant parameter in interval returned by Domain(direction)
             Returns: Array of two surfaces on success
@@ -6576,8 +6476,8 @@ class Surface(GeometryBase, IDisposable, ISerializable):
         ToNurbsSurface(self: Surface) -> NurbsSurface
         
             Gets a NURBS surface representation of this surface. Default 
-                    
-             tolerance of 0.0 is used.
+                    tolerance of 
+             0.0 is used.
         
             Returns: NurbsSurface on success, null on failure.
         """
@@ -6618,8 +6518,8 @@ class Surface(GeometryBase, IDisposable, ISerializable):
             Returns: true if the surface is a portion of a cone.
         TryGetCone(self: Surface) -> (bool, Cone)
         
-            Tests a surface to see if it is a portion of a cone within RhinoMath.ZeroTolerance 
-             and return the cone.
+            Tests a surface to see if it is a portion of a cone within RhinoMath.ZeroTolerance and 
+             return the cone.
         
             Returns: true if the surface is a portion of a cone.
         """
@@ -6635,8 +6535,8 @@ class Surface(GeometryBase, IDisposable, ISerializable):
             Returns: true if the surface is a portion of a cylinder.
         TryGetCylinder(self: Surface) -> (bool, Cylinder)
         
-            Tests a surface to see if it is a portion of a cylinder within 
-             RhinoMath.ZeroTolerance and return the cylinder.
+            Tests a surface to see if it is a portion of a cylinder within RhinoMath.ZeroTolerance and 
+             return the cylinder.
         
             Returns: true if the surface is a portion of a cylinder.
         """
@@ -6649,14 +6549,14 @@ class Surface(GeometryBase, IDisposable, ISerializable):
             Tests a surface for planarity and return the plane.
         
             tolerance: tolerance to use when checking.
-            Returns: true if there is a plane such that the maximum distance from the surface to the 
-             plane is <= tolerance.
+            Returns: true if there is a plane such that the maximum distance from the surface to the plane is 
+             <= tolerance.
         
         TryGetPlane(self: Surface) -> (bool, Plane)
         
             Tests a surface for planarity and return the plane.
-            Returns: true if there is a plane such that the maximum distance from the surface to the 
-             plane is <= RhinoMath.ZeroTolerance.
+            Returns: true if there is a plane such that the maximum distance from the surface to the plane is 
+             <= RhinoMath.ZeroTolerance.
         """
         pass
 
@@ -6685,8 +6585,8 @@ class Surface(GeometryBase, IDisposable, ISerializable):
             Returns: true if the surface is a portion of a torus.
         TryGetTorus(self: Surface) -> (bool, Torus)
         
-            Tests a surface to see if it is a portion of a torus within 
-             RhinoMath.ZeroTolerance and returns the torus.
+            Tests a surface to see if it is a portion of a torus within RhinoMath.ZeroTolerance and 
+             returns the torus.
         
             Returns: true if the surface is a portion of a torus.
         """
@@ -6747,17 +6647,17 @@ class SurfaceProxy(Surface, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -6765,8 +6665,8 @@ class SurfaceProxy(Surface, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -6855,17 +6755,17 @@ class BrepFace(SurfaceProxy, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -6916,8 +6816,8 @@ class BrepFace(SurfaceProxy, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -6940,8 +6840,8 @@ class BrepFace(SurfaceProxy, IDisposable, ISerializable):
         
             tolerance: tolerance for fitting 3d edge curves.
             rebuildSharedEdges: if false and and edge is used by this face and a neighbor, then the edge
-                 
-                will be skipped.
+                    will 
+             be skipped.
         
             rebuildVertices: if true, vertex locations are updated to lie on the surface.
             Returns: true on success.
@@ -6980,14 +6880,14 @@ class BrepFace(SurfaceProxy, IDisposable, ISerializable):
         """
         TrimAwareIsoCurve(self: BrepFace, direction: int, constantParameter: float) -> Array[Curve]
         
-            Similar to IsoCurve function, except this function pays attention to trims on 
-             faces 
+            Similar to IsoCurve function, except this function pays attention to trims on faces 
+             
                     and may return multiple curves.
         
         
             direction: Direction of isocurve.
-                    0 = Isocurve connects all points with a 
-             constant U value.1 = Isocurve connects all points with a constant V value.
+                    0 = Isocurve connects all points with a constant U 
+             value.1 = Isocurve connects all points with a constant V value.
         
             constantParameter: Surface parameter that remains identical along the isocurves.
             Returns: Isoparametric curves connecting all points with the constantParameter value.
@@ -7001,17 +6901,17 @@ class BrepFace(SurfaceProxy, IDisposable, ISerializable):
             Gets intervals where the iso curve exists on a BrepFace (trimmed surface)
         
             direction: Direction of isocurve.
-                    0 = Isocurve connects all points with a 
-             constant U value.1 = Isocurve connects all points with a constant V value.
+                    0 = Isocurve connects all points with a constant U 
+             value.1 = Isocurve connects all points with a constant V value.
         
             constantParameter: Surface parameter that remains identical along the isocurves.
             Returns: If direction = 0, the parameter space iso interval connects the 2d points
-                
-                 (intervals[i][0],iso_constant) and (intervals[i][1],iso_constant).
-                   
-              If direction = 1, the parameter space iso interval connects the 2d points
-               
-                  (iso_constant,intervals[i][0]) and (iso_constant,intervals[i][1]).
+                    
+             (intervals[i][0],iso_constant) and (intervals[i][1],iso_constant).
+                    If 
+             direction = 1, the parameter space iso interval connects the 2d points
+                    
+             (iso_constant,intervals[i][0]) and (iso_constant,intervals[i][1]).
         """
         pass
 
@@ -7108,17 +7008,17 @@ class BrepLoop(GeometryBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -7126,8 +7026,8 @@ class BrepLoop(GeometryBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -7266,10 +7166,10 @@ class BrepRegion(object):
         BoundaryBrep(self: BrepRegion) -> Brep
         
             Gets the boundary of a region as a brep object. If the region is finite,
-                 
-                the boundary will be a closed  manifold brep. The boundary may have more than 
-             one
-                    connected component.
+                    the 
+             boundary will be a closed  manifold brep. The boundary may have more than one
+                    
+             connected component.
         
             Returns: A brep or null on error.
         """
@@ -7415,17 +7315,17 @@ class BrepTrim(CurveProxy, IDisposable, ISerializable):
         """
         Dispose(self: Curve, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -7461,8 +7361,8 @@ class BrepTrim(CurveProxy, IDisposable, ISerializable):
         """
         NonConstOperation(self: Curve)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -7643,17 +7543,17 @@ class Point(GeometryBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -7661,8 +7561,8 @@ class Point(GeometryBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -7729,17 +7629,17 @@ class BrepVertex(Point, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -7756,8 +7656,8 @@ class BrepVertex(Point, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -7836,8 +7736,8 @@ class Circle(object, IEpsilonComparable[Circle]):
         
             testPoint: Point to project onto the circle.
             Returns: The point on the circle that is closest to testPoint or
-                    Point3d.Unset 
-             on failure.
+                    Point3d.Unset on 
+             failure.
         """
         pass
 
@@ -7891,8 +7791,8 @@ class Circle(object, IEpsilonComparable[Circle]):
         """
         Reverse(self: Circle)
             Reverse the orientation of the circle. Changes the domain from [a,b]
-                    
-             to [-b,-a].
+                    to 
+             [-b,-a].
         """
         pass
 
@@ -7952,11 +7852,11 @@ class Circle(object, IEpsilonComparable[Circle]):
         ToNurbsCurve(self: Circle) -> NurbsCurve
         
             Constructs a nurbs curve representation of this circle. 
-                    This amounts 
-             to the same as calling NurbsCurve.CreateFromCircle().
+                    This amounts to the 
+             same as calling NurbsCurve.CreateFromCircle().
         
-            Returns: A nurbs curve representation of this circle or null if no such representation 
-             could be made.
+            Returns: A nurbs curve representation of this circle or null if no such representation could be 
+             made.
         """
         pass
 
@@ -8131,9 +8031,7 @@ class PlaneSurface(Surface, IDisposable, ISerializable):
         """
         CreateThroughBox(plane: Plane, box: BoundingBox) -> PlaneSurface
         
-            Extends a plane into a plane surface so that the latter goes through a bounding 
-             box.
-        
+            Extends a plane into a plane surface so that the latter goes through a bounding box.
         
             plane: An original plane value.
             box: A box to use for extension boundary.
@@ -8153,17 +8051,17 @@ class PlaneSurface(Surface, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -8171,8 +8069,8 @@ class PlaneSurface(Surface, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -8230,17 +8128,17 @@ class ClippingPlaneSurface(PlaneSurface, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -8248,8 +8146,8 @@ class ClippingPlaneSurface(PlaneSurface, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -8448,9 +8346,9 @@ class Cone(object, IEpsilonComparable[Cone]):
         AngleInDegrees(self: Cone) -> float
         
             Computes the angle (in degrees) between the axis and the 
-                    side of the 
-             cone.
-                    The angle and the height have the same sign.
+                    side of the cone.
+         
+                        The angle and the height have the same sign.
         
             Returns: An angle in degrees.
         """
@@ -8461,12 +8359,11 @@ class Cone(object, IEpsilonComparable[Cone]):
         AngleInRadians(self: Cone) -> float
         
             Computes the angle (in radians) between the axis and the 
-                    side of the 
-             cone.
-                    The angle and the height have the same sign.
+                    side of the cone.
+         
+                        The angle and the height have the same sign.
         
-            Returns: Math.Atan(Radius / Height) if the height is not 0; 0 if the radius is 0; Math.PI 
-             otherwise.
+            Returns: Math.Atan(Radius / Height) if the height is not 0; 0 if the radius is 0; Math.PI otherwise.
         """
         pass
 
@@ -8483,13 +8380,13 @@ class Cone(object, IEpsilonComparable[Cone]):
         ToBrep(self: Cone, capBottom: bool) -> Brep
         
             Gets a Brep representation of the cone with a single
-                    face for the 
-             cone, an edge along the cone seam, 
-                    and vertices at the base and apex 
-             ends of this seam edge.
-                    The optional cap is a single face with one 
-             circular edge 
-                    starting and ending at the base vertex.
+                    face for the cone, an 
+             edge along the cone seam, 
+                    and vertices at the base and apex ends of this 
+             seam edge.
+                    The optional cap is a single face with one circular edge 
+                
+                 starting and ending at the base vertex.
         
         
             capBottom: true if the bottom should be filled with a surface. false otherwise.
@@ -8502,8 +8399,8 @@ class Cone(object, IEpsilonComparable[Cone]):
         ToNurbsSurface(self: Cone) -> NurbsSurface
         
             Constructs a Nurbs surface representation of this Cone. 
-                    This is 
-             synonymous with calling NurbsSurface.CreateFromCone().
+                    This is synonymous 
+             with calling NurbsSurface.CreateFromCone().
         
             Returns: A Nurbs surface representation of the cone or null.
         """
@@ -8514,8 +8411,8 @@ class Cone(object, IEpsilonComparable[Cone]):
         ToRevSurface(self: Cone) -> RevSurface
         
             Constructs a RevSurface representation of this Cone. 
-                    This is 
-             synonymous with calling RevSurface.CreateFromCone().
+                    This is synonymous with 
+             calling RevSurface.CreateFromCone().
         
             Returns: A RevSurface representation of the cone or null.
         """
@@ -9092,8 +8989,8 @@ class Cylinder(object, IEpsilonComparable[Cylinder]):
         ToBrep(self: Cylinder, capBottom: bool, capTop: bool) -> Brep
         
             Constructs a Brep representation of this Cylinder. 
-                    This is 
-             synonymous with calling NurbsSurface.CreateFromCylinder().
+                    This is synonymous with 
+             calling NurbsSurface.CreateFromCylinder().
         
         
             capBottom: If true, the bottom of the cylinder will be capped.
@@ -9119,8 +9016,8 @@ class Cylinder(object, IEpsilonComparable[Cylinder]):
         ToRevSurface(self: Cylinder) -> RevSurface
         
             Constructs a RevSurface representation of this Cylinder. 
-                    This is 
-             synonymous with calling RevSurface.CreateFromCylinder().
+                    This is synonymous 
+             with calling RevSurface.CreateFromCylinder().
         
             Returns: A RevSurface representation of the cylinder or null.
         """
@@ -9226,17 +9123,17 @@ class DetailView(GeometryBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -9244,8 +9141,8 @@ class DetailView(GeometryBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -9266,8 +9163,8 @@ class DetailView(GeometryBase, IDisposable, ISerializable):
             modelUnits: Units for model length.
             pageLength: Length on page that the modelLength should equal.
             pageUnits: Units for page length.
-            Returns: true on success. false if the DetailView projection is perspective or input values 
-             are incongruous.
+            Returns: true on success. false if the DetailView projection is perspective or input values are 
+             incongruous.
         """
         pass
 
@@ -9397,11 +9294,11 @@ class Ellipse(object, IEpsilonComparable[Ellipse]):
         ToNurbsCurve(self: Ellipse) -> NurbsCurve
         
             Constructs a nurbs curve representation of this ellipse. 
-                    This is 
-             equivalent to calling NurbsCurve.CreateFromEllipse().
+                    This is equivalent 
+             to calling NurbsCurve.CreateFromEllipse().
         
-            Returns: A nurbs curve representation of this ellipse or null if no such representation 
-             could be made.
+            Returns: A nurbs curve representation of this ellipse or null if no such representation could be 
+             made.
         """
         pass
 
@@ -9539,14 +9436,14 @@ class Extrusion(Surface, IDisposable, ISerializable):
         
             planarCurve: Planar curve used as profile
             height: If the height > 0, the bottom of the extrusion will be in plane and
-                    
-             the top will be height units above the plane.
-                    If the height < 0, the 
-             top of the extrusion will be in plane and
-                    the bottom will be height 
-             units below the plane.
-                    The plane used is the one that is returned 
-             from the curve's TryGetPlane function.
+                    the top 
+             will be height units above the plane.
+                    If the height < 0, the top of the 
+             extrusion will be in plane and
+                    the bottom will be height units below the 
+             plane.
+                    The plane used is the one that is returned from the curve's 
+             TryGetPlane function.
         
             cap: If the curve is closed and cap is true, then the resulting extrusion is capped.
             Returns: If the input is valid, then a new extrusion is returned. Otherwise null is returned
@@ -9575,9 +9472,9 @@ class Extrusion(Surface, IDisposable, ISerializable):
             Gets an extrusion form of a pipe.
         
             cylinder: IsFinite must be true.
-            otherRadius: If cylinder.Radius is less than other radius, then the cylinder will be the inside
-             
-                    of the pipe.
+            otherRadius: If cylinder.Radius is less than other radius, then the cylinder will be the inside
+               
+                  of the pipe.
         
             capTop: If true, the end at cylinder.Height2 will be capped.
             capBottom: If true, the end at cylinder.Height1 will be capped.
@@ -9589,17 +9486,17 @@ class Extrusion(Surface, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -9663,8 +9560,8 @@ class Extrusion(Surface, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -9699,9 +9596,9 @@ class Extrusion(Surface, IDisposable, ISerializable):
             profileIndex: 0 <= profileIndex < ProfileCount
                     The outer profile has index 0.
             s: 0.0 <= s <= 1.0
-                    A relative parameter controling which profile is 
-             returned.
-                    0 = bottom profile and 1 = top profile.
+                    A relative parameter controling which profile is returned.
+          
+                       0 = bottom profile and 1 = top profile.
         
             Returns: The profile.
         """
@@ -9715,10 +9612,10 @@ class Extrusion(Surface, IDisposable, ISerializable):
         
             profileParameter: Parameter on profile curve.
             Returns: -1 if profileParameter does not correspond to a point on the profile curve.
-              
-                   When the profileParameter corresponds to the end of one profile and the
-            
-                     beginning of the next profile, the index of the next profile is returned.
+                    
+             When the profileParameter corresponds to the end of one profile and the
+                    
+             beginning of the next profile, the index of the next profile is returned.
         """
         pass
 
@@ -9730,16 +9627,16 @@ class Extrusion(Surface, IDisposable, ISerializable):
         
             outerProfile: curve in the XY plane or a 2D curve.
             cap: If outerProfile is a closed curve, then cap determines if the extrusion
-                  
-               has end caps. If outerProfile is an open curve, cap is ignored.
+                    has 
+             end caps. If outerProfile is an open curve, cap is ignored.
         
             Returns: true if the profile was set. If the outer profile is closed, then the
                     
              extrusion may also have inner profiles. If the outer profile is open,
-                    
-             the extrusion may not have inner profiles. If the extrusion already
-                    
-             has a profile, the set will fail.
+                    the 
+             extrusion may not have inner profiles. If the extrusion already
+                    has a 
+             profile, the set will fail.
         """
         pass
 
@@ -9753,8 +9650,8 @@ class Extrusion(Surface, IDisposable, ISerializable):
             b: The end point.
             up: The up vector.
             Returns: true if the operation succeeded; otherwise false.
-                    Setting up=a-b will 
-             make the operation fail.
+                    Setting up=a-b will make 
+             the operation fail.
         """
         pass
 
@@ -9762,16 +9659,16 @@ class Extrusion(Surface, IDisposable, ISerializable):
         """
         ToBrep(self: Extrusion, splitKinkyFaces: bool) -> Brep
         
-            Constructs a brep form of the extrusion. The outer profile is always the first 
-             face of the brep.
-                    If there are inner profiles, additional brep faces 
-             are created for each profile. If the
-                    outer profile is closed, then 
-             end caps are added as the last two faces of the brep.
+            Constructs a brep form of the extrusion. The outer profile is always the first face of the 
+             brep.
+                    If there are inner profiles, additional brep faces are created for each 
+             profile. If the
+                    outer profile is closed, then end caps are added as the last 
+             two faces of the brep.
         
         
-            splitKinkyFaces: If true and the profiles have kinks, then the faces corresponding to those 
-             profiles are split
+            splitKinkyFaces: If true and the profiles have kinks, then the faces corresponding to those profiles are 
+             split
                     so they will be G1.
         
             Returns: A brep with a similar shape like this extrustion, or null on error.
@@ -9967,17 +9864,17 @@ class Hatch(GeometryBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -10004,8 +9901,8 @@ class Hatch(GeometryBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -10089,17 +9986,17 @@ class InstanceDefinitionGeometry(GeometryBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -10115,8 +10012,8 @@ class InstanceDefinitionGeometry(GeometryBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -10192,17 +10089,17 @@ class InstanceReferenceGeometry(GeometryBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -10210,8 +10107,8 @@ class InstanceReferenceGeometry(GeometryBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -10279,10 +10176,10 @@ class Interpolator(RhinoList[float], IList[float], ICollection[float], IEnumerab
             Sample the list of numbers with Catmull-Rom interpolation.
         
             t: Parameter to sample at. The integer portion of the parameter 
-                    
-             indicates the index of the left-hand value. If this Interpolator is cyclical, 
-           
-                      parameters will be wrapped.
+                    indicates the 
+             index of the left-hand value. If this Interpolator is cyclical, 
+                    parameters 
+             will be wrapped.
         
             Returns: The sampled value at t.
         """
@@ -10295,10 +10192,10 @@ class Interpolator(RhinoList[float], IList[float], ICollection[float], IEnumerab
             Sample the list of numbers with cosine interpolation.
         
             t: Parameter to sample at. The integer portion of the parameter 
-                    
-             indicates the index of the left-hand value. If this Interpolator is cyclical, 
-           
-                      parameters will be wrapped.
+                    indicates the 
+             index of the left-hand value. If this Interpolator is cyclical, 
+                    parameters 
+             will be wrapped.
         
             Returns: The sampled value at t.
         """
@@ -10311,10 +10208,10 @@ class Interpolator(RhinoList[float], IList[float], ICollection[float], IEnumerab
             Sample the list of numbers with cubic interpolation.
         
             t: Parameter to sample at. The integer portion of the parameter 
-                    
-             indicates the index of the left-hand value. If this Interpolator is cyclical, 
-           
-                      parameters will be wrapped.
+                    indicates the 
+             index of the left-hand value. If this Interpolator is cyclical, 
+                    parameters 
+             will be wrapped.
         
             Returns: The sampled value at t.
         """
@@ -10327,10 +10224,10 @@ class Interpolator(RhinoList[float], IList[float], ICollection[float], IEnumerab
             Sample the list of numbers with linear interpolation.
         
             t: Parameter to sample at. The integer portion of the parameter 
-                    
-             indicates the index of the left-hand value. If this Interpolator is cyclical, 
-           
-                      parameters will be wrapped.
+                    indicates the 
+             index of the left-hand value. If this Interpolator is cyclical, 
+                    parameters 
+             will be wrapped.
         
             Returns: The sampled value at t.
         """
@@ -10343,10 +10240,10 @@ class Interpolator(RhinoList[float], IList[float], ICollection[float], IEnumerab
             Sample the list of numbers with Nearest Neighbour interpolation.
         
             t: Parameter to sample at. The integer portion of the parameter 
-                    
-             indicates the index of the left-hand value. If this Interpolator is cyclical, 
-           
-                      parameters will be wrapped.
+                    indicates the 
+             index of the left-hand value. If this Interpolator is cyclical, 
+                    parameters 
+             will be wrapped.
         
             Returns: The sampled value at t.
         """
@@ -10403,14 +10300,14 @@ class Interval(object, ISerializable, IEquatable[Interval], IComparable[Interval
         CompareTo(self: Interval, other: Interval) -> int
         
             Compares this Rhino.Geometry.Interval with another interval.
-                     The 
-             lower bound has first evaluation priority.
+                     The lower bound 
+             has first evaluation priority.
         
         
             other: The other Rhino.Geometry.Interval to compare with.
-            Returns: 0: if this is identical to other-1: if this[0] < other[0]+1: if this[0] > 
-             other[0]-1: if this[0] == other[0] and this[1] < other[1]+1: if this[0] == 
-             other[0] and this[1] > other[1].
+            Returns: 0: if this is identical to other-1: if this[0] < other[0]+1: if this[0] > other[0]-1: if 
+             this[0] == other[0] and this[1] < other[1]+1: if this[0] == other[0] and this[1] > 
+             other[1].
         """
         pass
 
@@ -10455,14 +10352,14 @@ class Interval(object, ISerializable, IEquatable[Interval], IComparable[Interval
             a: The first input interval.
             b: The second input interval.
             Returns: If the intersection is not empty, then 
-                    intersection = 
-             [max(a.Min(),b.Min()), min(a.Max(),b.Max())]
-                    The interval 
-             [ON.UnsetValue,ON.UnsetValue] is considered to be
-                    the empty set 
-             interval.  The result of any intersection involving an
-                    empty set 
-             interval or disjoint intervals is the empty set interval.
+                    intersection = [max(a.Min(),b.Min()), 
+             min(a.Max(),b.Max())]
+                    The interval [ON.UnsetValue,ON.UnsetValue] is 
+             considered to be
+                    the empty set interval.  The result of any intersection 
+             involving an
+                    empty set interval or disjoint intervals is the empty set 
+             interval.
         """
         pass
 
@@ -10476,10 +10373,10 @@ class Interval(object, ISerializable, IEquatable[Interval], IComparable[Interval
             a: The first input interval.
             b: The second input interval.
             Returns: The union of an empty set and an increasing interval is the increasing interval.
-         
-                        The union of two empty sets is empty.The union of an empty set an a 
-             non-empty interval is the non-empty interval.The union of two non-empty intervals 
-             is [min(a.Min(),b.Min()), max(a.Max(),b.Max())]
+                 
+                The union of two empty sets is empty.The union of an empty set an a non-empty interval 
+             is the non-empty interval.The union of two non-empty intervals is [min(a.Min(),b.Min()), 
+             max(a.Max(),b.Max())]
         """
         pass
 
@@ -10509,16 +10406,16 @@ class Interval(object, ISerializable, IEquatable[Interval], IComparable[Interval
         
             interval: Interval to test.
             strict: If true, the other interval must be fully on the inside of the Interval.
-            Returns: true if the other interval is contained within the limits of this Interval; 
-             otherwise false.
+            Returns: true if the other interval is contained within the limits of this Interval; otherwise 
+             false.
         
         IncludesInterval(self: Interval, interval: Interval) -> bool
         
             Tests another interval for Interval inclusion.
         
             interval: Interval to test.
-            Returns: true if the other interval is contained within or is coincident with the limits of 
-             this Interval; otherwise false.
+            Returns: true if the other interval is contained within or is coincident with the limits of this 
+             Interval; otherwise false.
         """
         pass
 
@@ -10837,17 +10734,17 @@ class Leader(AnnotationBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -10855,8 +10752,8 @@ class Leader(AnnotationBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -10922,17 +10819,15 @@ class Light(GeometryBase, IDisposable, ISerializable):
             Returns: A light.
         CreateSunLight(northAngleDegrees: float, when: DateTime, latitudeDegrees: float, longitudeDegrees: float) -> Light
         
-            Constructs a light which simulates the Sun based on a given time and location on 
-             Earth.
+            Constructs a light which simulates the Sun based on a given time and location on Earth.
         
+            northAngleDegrees: The angle of North in degrees. North is the angle between positive World Y axis and model 
+             North, as measured on World XY plane.
         
-            northAngleDegrees: The angle of North in degrees. North is the angle between positive World Y axis 
-             and model North, as measured on World XY plane.
-        
-            when: The time of the measurement. The Kind property of DateTime specifies whether this 
-             is in local or universal time.
-                    Local and Undefined 
-             System.DateTimeKinddaytime kinds in this argument are considered local.
+            when: The time of the measurement. The Kind property of DateTime specifies whether this is in 
+             local or universal time.
+                    Local and Undefined System.DateTimeKinddaytime kinds 
+             in this argument are considered local.
         
             latitudeDegrees: The latitude, in degrees, of the location on Earth.
             longitudeDegrees: The longitude, in degrees, of the location on Earth.
@@ -10941,8 +10836,8 @@ class Light(GeometryBase, IDisposable, ISerializable):
         
             Constructs a light that represents the Sun.
         
-            northAngleDegrees: The angle of North in degrees. North is the angle between positive World Y axis 
-             and model North, as measured on World XY plane.
+            northAngleDegrees: The angle of North in degrees. North is the angle between positive World Y axis and model 
+             North, as measured on World XY plane.
         
             azimuthDegrees: The Azimut angle value in degrees. Azimuth is the compass angle from North.
             altitudeDegrees: The Altitude angle in degrees. Altitude is the angle above the ground plane.
@@ -10954,17 +10849,17 @@ class Light(GeometryBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -10973,8 +10868,8 @@ class Light(GeometryBase, IDisposable, ISerializable):
         GetAttenuation(self: Light, d: float) -> float
         
             Gets the attenuation settings (ignored for "directional" and "ambient" lights).
-          
-                       attenuation = 1/(a0 + d*a1 + d^2*a2) where d = distance to light.
+                  
+               attenuation = 1/(a0 + d*a1 + d^2*a2) where d = distance to light.
         
         
             d: The distance to evaluate.
@@ -10995,8 +10890,8 @@ class Light(GeometryBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -11011,8 +10906,8 @@ class Light(GeometryBase, IDisposable, ISerializable):
         """
         SetAttenuation(self: Light, a0: float, a1: float, a2: float)
             Sets the attenuation settings (ignored for "directional" and "ambient" lights).
-          
-                       attenuation = 1/(a0 + d*a1 + d^2*a2) where d = distance to light.
+                  
+               attenuation = 1/(a0 + d*a1 + d^2*a2) where d = distance to light.
         
         
             a0: The new constant attenuation divisor term.
@@ -11410,12 +11305,12 @@ class Line(object, IEquatable[Line], IEpsilonComparable[Line]):
             Extend the line by custom distances on both sides.
         
             startLength: Distance to extend the line at the start point. 
-                    Positive distance 
-             result in longer lines.
+                    Positive distance result in 
+             longer lines.
         
             endLength: Distance to extend the line at the end point. 
-                    Positive distance 
-             result in longer lines.
+                    Positive distance result in 
+             longer lines.
         
             Returns: true on success, false on failure.
         """
@@ -11426,8 +11321,8 @@ class Line(object, IEquatable[Line], IEpsilonComparable[Line]):
         ExtendThroughBox(self: Line, box: Box) -> bool
         
             Ensure the line extends all the way through a box. 
-                    Note, this does 
-             not result in the shortest possible line that overlaps the box.
+                    Note, this does not 
+             result in the shortest possible line that overlaps the box.
         
         
             box: Box to extend through.
@@ -11435,8 +11330,8 @@ class Line(object, IEquatable[Line], IEpsilonComparable[Line]):
         ExtendThroughBox(self: Line, box: Box, additionalLength: float) -> bool
         
             Ensure the line extends all the way through a box. 
-                    Note, this does 
-             not result in the shortest possible line that overlaps the box.
+                    Note, this does not 
+             result in the shortest possible line that overlaps the box.
         
         
             box: Box to extend through.
@@ -11445,8 +11340,8 @@ class Line(object, IEquatable[Line], IEpsilonComparable[Line]):
         ExtendThroughBox(self: Line, box: BoundingBox) -> bool
         
             Ensure the line extends all the way through a box. 
-                    Note, this does 
-             not result in the shortest possible line 
+                    Note, this does not 
+             result in the shortest possible line 
                     that overlaps the box.
         
         
@@ -11455,8 +11350,8 @@ class Line(object, IEquatable[Line], IEpsilonComparable[Line]):
         ExtendThroughBox(self: Line, box: BoundingBox, additionalLength: float) -> bool
         
             Ensure the line extends all the way through a box. 
-                    Note, this does 
-             not result in the shortest possible line that overlaps the box.
+                    Note, this does not 
+             result in the shortest possible line that overlaps the box.
         
         
             box: Box to extend through.
@@ -11486,8 +11381,8 @@ class Line(object, IEquatable[Line], IEpsilonComparable[Line]):
         MaximumDistanceTo(self: Line, testLine: Line) -> float
         
             Finds the largest distance between this line as a finite segment
-                    and 
-             another finite segment.
+                    and another 
+             finite segment.
         
         
             testLine: A line to test.
@@ -11495,8 +11390,8 @@ class Line(object, IEquatable[Line], IEpsilonComparable[Line]):
         MaximumDistanceTo(self: Line, testPoint: Point3d) -> float
         
             Finds the largest distance between this line as a finite segment
-                    and 
-             a test point.
+                    and a test 
+             point.
         
         
             testPoint: A point to test.
@@ -11509,8 +11404,8 @@ class Line(object, IEquatable[Line], IEpsilonComparable[Line]):
         MinimumDistanceTo(self: Line, testLine: Line) -> float
         
             Finds the shortest distance between this line as a finite segment
-                    and 
-             another finite segment.
+                    and another 
+             finite segment.
         
         
             testLine: A line to test.
@@ -11518,8 +11413,8 @@ class Line(object, IEquatable[Line], IEpsilonComparable[Line]):
         MinimumDistanceTo(self: Line, testPoint: Point3d) -> float
         
             Finds the shortest distance between this line as a finite segment
-                    and 
-             a test point.
+                    and a test 
+             point.
         
         
             testPoint: A point to test.
@@ -11543,11 +11438,10 @@ class Line(object, IEquatable[Line], IEpsilonComparable[Line]):
         ToNurbsCurve(self: Line) -> NurbsCurve
         
             Constructs a nurbs curve representation of this line. 
-                    This amounts 
-             to the same as calling NurbsCurve.CreateFromLine().
+                    This amounts to the 
+             same as calling NurbsCurve.CreateFromLine().
         
-            Returns: A nurbs curve representation of this line or null if no such representation could 
-             be made.
+            Returns: A nurbs curve representation of this line or null if no such representation could be made.
         """
         pass
 
@@ -11576,8 +11470,8 @@ class Line(object, IEquatable[Line], IEpsilonComparable[Line]):
         """
         TryCreateBetweenCurves(curve0: Curve, curve1: Curve, t0: float, t1: float, perpendicular0: bool, perpendicular1: bool) -> (bool, float, float, Line)
         
-            Creates a line segment between a pair of curves such that the line segment is 
-             either tangent or perpendicular to each of the curves.
+            Creates a line segment between a pair of curves such that the line segment is either 
+             tangent or perpendicular to each of the curves.
         
         
             curve0: The first curve.
@@ -11599,10 +11493,9 @@ class Line(object, IEquatable[Line], IEpsilonComparable[Line]):
         """
         TryGetPlane(self: Line) -> (bool, Plane)
         
-            Gets a plane that contains the line. The origin of the plane is at the start of 
-             the line.
-                    If possible, a plane parallel to the world xy, yz, or zx 
-             plane is returned.
+            Gets a plane that contains the line. The origin of the plane is at the start of the line.
+        
+                         If possible, a plane parallel to the world xy, yz, or zx plane is returned.
         
             Returns: true on success.
         """
@@ -11774,17 +11667,17 @@ class LinearDimension(AnnotationBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -11793,8 +11686,8 @@ class LinearDimension(AnnotationBase, IDisposable, ISerializable):
         """
         FromPoints(extensionLine1End: Point3d, extensionLine2End: Point3d, pointOnDimensionLine: Point3d) -> LinearDimension
         
-            Initializes a new instance of the Rhino.Geometry.LinearDimension class, based on 
-             three points.
+            Initializes a new instance of the Rhino.Geometry.LinearDimension class, based on three 
+             points.
         """
         pass
 
@@ -11802,8 +11695,8 @@ class LinearDimension(AnnotationBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -11817,8 +11710,8 @@ class LinearDimension(AnnotationBase, IDisposable, ISerializable):
     def SetLocations(self, extensionLine1End, extensionLine2End, pointOnDimensionLine):
         """
         SetLocations(self: LinearDimension, extensionLine1End: Point2d, extensionLine2End: Point2d, pointOnDimensionLine: Point2d)
-            Sets the three locations of the point, using two-dimensional points that refer to 
-             the plane of the annotation.
+            Sets the three locations of the point, using two-dimensional points that refer to the 
+             plane of the annotation.
         """
         pass
 
@@ -11939,17 +11832,17 @@ class LineCurve(Curve, IDisposable, ISerializable):
         """
         Dispose(self: Curve, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -11957,8 +11850,8 @@ class LineCurve(Curve, IDisposable, ISerializable):
         """
         NonConstOperation(self: Curve)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -12076,17 +11969,17 @@ class Matrix(object, IDisposable):
         BackSolve(self: Matrix, zeroTolerance: float, b: Array[float]) -> Array[float]
         
             Solves M*x=b where M is upper triangular with a unit diagonal and
-                    b 
-             is a column of values.
+                    b is a 
+             column of values.
         
         
             zeroTolerance: (>=0.0) used to test for "zero" values in b
-                    in underdetermined 
-             systems of equations.
+                    in underdetermined systems of 
+             equations.
         
             b: The values in B[RowCount],...,B[B.Length-1] are tested to
-                    make sure 
-             they are within "zeroTolerance".
+                    make sure they are 
+             within "zeroTolerance".
         
             Returns: Array of length ColumnCount on success. null on error.
         """
@@ -12097,17 +11990,17 @@ class Matrix(object, IDisposable):
         BackSolvePoints(self: Matrix, zeroTolerance: float, b: Array[Point3d]) -> Array[Point3d]
         
             Solves M*x=b where M is upper triangular with a unit diagonal and
-                    b 
-             is a column of 3d points.
+                    b is a 
+             column of 3d points.
         
         
             zeroTolerance: (>=0.0) used to test for "zero" values in b
-                    in underdetermined 
-             systems of equations.
+                    in underdetermined systems of 
+             equations.
         
             b: The values in B[RowCount],...,B[B.Length-1] are tested to
-                    make sure 
-             they are "zero".
+                    make sure they are 
+             "zero".
         
             Returns: Array of length ColumnCount on success. null on error.
         """
@@ -12134,10 +12027,10 @@ class Matrix(object, IDisposable):
         GetHashCode(self: Matrix) -> int
         
             Gets the hash code for this matrix. The hash code will change 
-                    when 
-             the matrix changes so you cannot change matrices while they are stored in 
-               
-                  hash tables.
+                    when the 
+             matrix changes so you cannot change matrices while they are stored in 
+                    hash 
+             tables.
         
             Returns: Hash code.
         """
@@ -12162,26 +12055,26 @@ class Matrix(object, IDisposable):
         RowReduce(self: Matrix, zeroTolerance: float, b: Array[Point3d]) -> (int, float)
         
             Row reduces a matrix as the first step in solving M*X=b where
-                    b is a 
-             column of 3d points.
+                    b is a column 
+             of 3d points.
         
         
             zeroTolerance: (>=0.0) zero tolerance for pivot test. If the absolute value of a pivot
-                  
-               is <= zero_tolerance, then the pivot is assumed to be zero.
+                    is <= 
+             zero_tolerance, then the pivot is assumed to be zero.
         
             b: An array of RowCount 3d points that is row reduced with the matrix.
             Returns: Rank of the matrix.
         RowReduce(self: Matrix, zeroTolerance: float, b: Array[float]) -> (int, float)
         
             Row reduces a matrix as the first step in solving M*X=b where
-                    b is a 
-             column of values.
+                    b is a column 
+             of values.
         
         
             zeroTolerance: (>=0.0) zero tolerance for pivot test. If the absolute value of a pivot
-                  
-               is <= zero_tolerance, then the pivot is assumed to be zero.
+                    is <= 
+             zero_tolerance, then the pivot is assumed to be zero.
         
             b: an array of RowCount values that is row reduced with the matrix.
             Returns: Rank of the matrix.
@@ -12190,8 +12083,8 @@ class Matrix(object, IDisposable):
             Row reduces a matrix to calculate rank and determinant.
         
             zeroTolerance: (>=0.0) zero tolerance for pivot test.  If a the absolute value of
-                    a 
-             pivot is <= zeroTolerance, then the pivot is assumed to be zero.
+                    a pivot is 
+             <= zeroTolerance, then the pivot is assumed to be zero.
         
             Returns: Rank of the matrix.
         """
@@ -12244,8 +12137,8 @@ class Matrix(object, IDisposable):
         Transpose(self: Matrix) -> bool
         
             Modifies this matrix to be its transpose.
-                    This is like swapping rows 
-             with columns.http://en.wikipedia.org/wiki/Transpose
+                    This is like swapping rows with 
+             columns.http://en.wikipedia.org/wiki/Transpose
         
             Returns: true if operation succeeded; otherwise false.
         """
@@ -12398,9 +12291,7 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
     def Append(self, other):
         """
         Append(self: Mesh, other: Mesh)
-            Appends a copy of another mesh to this one and updates indices of appended mesh 
-             parts.
-        
+            Appends a copy of another mesh to this one and updates indices of appended mesh parts.
         
             other: Mesh to append to this one.
         """
@@ -12418,23 +12309,21 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         ClosestMeshPoint(self: Mesh, testPoint: Point3d, maximumDistance: float) -> MeshPoint
         
             Gets the point on the mesh that is closest to a given test point. Similar to the 
-        
-                         ClosestPoint function except this returns a MeshPoint class which 
-             includes
-                    extra information beyond just the location of the closest 
-             point.
+                
+                 ClosestPoint function except this returns a MeshPoint class which includes
+                   
+              extra information beyond just the location of the closest point.
         
         
             testPoint: The source of the search.
             maximumDistance: Optional upper bound on the distance from test point to the mesh. 
-                    If 
-             you are only interested in finding a point Q on the mesh when 
+                    If you are 
+             only interested in finding a point Q on the mesh when 
                     
              testPoint.DistanceTo(Q) < maximumDistance, 
-                    then set maximumDistance 
-             to that value. 
-                    This parameter is ignored if you pass 0.0 for a 
-             maximumDistance.
+                    then set maximumDistance to that 
+             value. 
+                    This parameter is ignored if you pass 0.0 for a maximumDistance.
         
             Returns: closest point information on success. null on failure.
         """
@@ -12448,18 +12337,17 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         
             testPoint: Point to seach for.
             maximumDistance: Optional upper bound on the distance from test point to the mesh. 
-                    If 
-             you are only interested in finding a point Q on the mesh when 
+                    If you are 
+             only interested in finding a point Q on the mesh when 
                     
              testPoint.DistanceTo(Q) < maximumDistance, 
-                    then set maximumDistance 
-             to that value. 
-                    This parameter is ignored if you pass 0.0 for a 
-             maximumDistance.
+                    then set maximumDistance to that 
+             value. 
+                    This parameter is ignored if you pass 0.0 for a maximumDistance.
         
             Returns: Index of face that the closest point lies on if successful. 
-                    -1 if 
-             not successful; the value of pointOnMesh is undefined.
+                    -1 if not 
+             successful; the value of pointOnMesh is undefined.
         
         ClosestPoint(self: Mesh, testPoint: Point3d, maximumDistance: float) -> (int, Point3d)
         
@@ -12467,18 +12355,17 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         
             testPoint: Point to seach for.
             maximumDistance: Optional upper bound on the distance from test point to the mesh. 
-                    If 
-             you are only interested in finding a point Q on the mesh when 
+                    If you are 
+             only interested in finding a point Q on the mesh when 
                     
              testPoint.DistanceTo(Q) < maximumDistance, 
-                    then set maximumDistance 
-             to that value. 
-                    This parameter is ignored if you pass 0.0 for a 
-             maximumDistance.
+                    then set maximumDistance to that 
+             value. 
+                    This parameter is ignored if you pass 0.0 for a maximumDistance.
         
             Returns: Index of face that the closest point lies on if successful. 
-                    -1 if 
-             not successful; the value of pointOnMesh is undefined.
+                    -1 if not 
+             successful; the value of pointOnMesh is undefined.
         
         ClosestPoint(self: Mesh, testPoint: Point3d) -> Point3d
         
@@ -12493,33 +12380,30 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         """
         ColorAt(self: Mesh, faceIndex: int, t0: float, t1: float, t2: float, t3: float) -> Color
         
-            Evaluate a mesh normal at a set of barycentric coordinates. Barycentric 
-             coordinates must 
-                    be assigned in accordance with the rules as defined 
-             by MeshPoint.T.
+            Evaluate a mesh normal at a set of barycentric coordinates. Barycentric coordinates must 
+        
+                         be assigned in accordance with the rules as defined by MeshPoint.T.
         
         
             faceIndex: Index of triangle or quad to evaluate.
             t0: First barycentric coordinate.
             t1: Second barycentric coordinate.
             t2: Third barycentric coordinate.
-            t3: Fourth barycentric coordinate. If the face is a triangle, this coordinate will be 
-             ignored.
-        
-            Returns: The interpolated vertex color on the mesh or Color.Transparent if the faceIndex is 
-             not valid, 
-                    if the barycentric coordinates could not be evaluated, or 
-             if there are no colors defined on the mesh.
+            t3: Fourth barycentric coordinate. If the face is a triangle, this coordinate will be ignored.
+            Returns: The interpolated vertex color on the mesh or Color.Transparent if the faceIndex is not 
+             valid, 
+                    if the barycentric coordinates could not be evaluated, or if there 
+             are no colors defined on the mesh.
         
         ColorAt(self: Mesh, meshPoint: MeshPoint) -> Color
         
             Evaluate a mesh color at a set of barycentric coordinates.
         
             meshPoint: MeshPoint instance contiaining a valid Face Index and Barycentric coordinates.
-            Returns: The interpolated vertex color on the mesh or Color.Transparent if the faceIndex is 
-             not valid, 
-                    if the barycentric coordinates could not be evaluated, or 
-             if there are no colors defined on the mesh.
+            Returns: The interpolated vertex color on the mesh or Color.Transparent if the faceIndex is not 
+             valid, 
+                    if the barycentric coordinates could not be evaluated, or if there 
+             are no colors defined on the mesh.
         """
         pass
 
@@ -12528,8 +12412,8 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         Compact(self: Mesh) -> bool
         
             Removes any unreferenced objects from arrays, reindexes as needed 
-                    
-             and shrinks arrays to minimum required size.
+                    and 
+             shrinks arrays to minimum required size.
         
             Returns: true on success, false on failure.
         """
@@ -12721,12 +12605,12 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         CreatePartitions(self: Mesh, maximumVertexCount: int, maximumTriangleCount: int) -> bool
         
             In ancient times (or modern smartphone times), some rendering engines
-                    
-             were only able to process small batches of triangles and the
-                    
-             CreatePartitions() function was provided to partition the mesh into
-                    
-             subsets of vertices and faces that those rendering engines could handle.
+                    were 
+             only able to process small batches of triangles and the
+                    CreatePartitions() 
+             function was provided to partition the mesh into
+                    subsets of vertices and 
+             faces that those rendering engines could handle.
         
             Returns: true on success
         """
@@ -12736,17 +12620,17 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -12792,15 +12676,14 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         
             Explode the mesh into submeshes where a submesh is a collection of faces that are 
              contained
-                    within a closed loop of "unwelded" edges. Unwelded edges 
-             are edges where the faces that share
-                    the edge have unique mesh 
-             vertexes (not mesh topology vertexes) at both ends of the edge.
+                    within a closed loop of "unwelded" edges. Unwelded edges are edges 
+             where the faces that share
+                    the edge have unique mesh vertexes (not mesh 
+             topology vertexes) at both ends of the edge.
         
-            Returns: Array of submeshes on success; null on error. If the count in the returned array 
-             is 1, then
-                    nothing happened and the ouput is essentially a copy of 
-             the input.
+            Returns: Array of submeshes on success; null on error. If the count in the returned array is 1, 
+             then
+                    nothing happened and the ouput is essentially a copy of the input.
         """
         pass
 
@@ -12820,8 +12703,8 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         GetCachedTextureCoordinates(self: Mesh, textureMappingId: Guid) -> CachedTextureCoordinates
         
             Call this method to get cached texture coordinates for a texture
-                    
-             mapping with the specified Id.
+                    mapping with 
+             the specified Id.
         
         
             textureMappingId: Texture mapping Id
@@ -12834,14 +12717,14 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         GetNakedEdgePointStatus(self: Mesh) -> Array[bool]
         
             Returns an array of bool values equal in length to the number of vertices in this
-        
-                         mesh. Each value corresponds to a mesh vertex and is set to true if 
-             the vertex is
-                    not completely surrounded by faces.
+                
+                 mesh. Each value corresponds to a mesh vertex and is set to true if the vertex is
+            
+                     not completely surrounded by faces.
         
             Returns: An array of true/false flags that, at each index, reveals if the corresponding
-           
-                      vertex is completely surrounded by faces.
+                   
+              vertex is completely surrounded by faces.
         """
         pass
 
@@ -12850,8 +12733,8 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         GetNakedEdges(self: Mesh) -> Array[Polyline]
         
             Returns all edges of a mesh that are considered "naked" in the
-                    sense 
-             that the edge only has one face.
+                    sense that the 
+             edge only has one face.
         
             Returns: An array of polylines, or null on error.
         """
@@ -12862,8 +12745,8 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         GetOutlines(self: Mesh, viewport: RhinoViewport) -> Array[Polyline]
         
             Constructs the outlines of a mesh. The projection information in the
-                    
-             viewport is used to determine how the outlines are projected.
+                    viewport 
+             is used to determine how the outlines are projected.
         
         
             viewport: A viewport to determine projection direction.
@@ -12881,8 +12764,8 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         """
         GetPartition(self: Mesh, which: int) -> MeshPart
         
-            Retrieves a partition. See 
-             Rhino.Geometry.Mesh.CreatePartitions(System.Int32,System.Int32) for details.
+            Retrieves a partition. See Rhino.Geometry.Mesh.CreatePartitions(System.Int32,System.Int32) 
+             for details.
         
         
             which: The partition index.
@@ -12894,8 +12777,8 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         IsManifold(self: Mesh, topologicalTest: bool) -> (bool, bool, bool)
         
             Gets a value indicating whether or not the mesh is manifold. 
-                    A 
-             manifold mesh does not have any edge that borders more than two faces.
+                    A manifold mesh 
+             does not have any edge that borders more than two faces.
         
         
             topologicalTest: If true, the query treats coincident vertices as the same.
@@ -12911,16 +12794,16 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         
             point: 3d point to test.
             tolerance: (>=0) 3d distance tolerance used for ray-mesh intersection
-                    and 
-             determining strict inclusion.
+                    and determining 
+             strict inclusion.
         
             strictlyIn: If strictlyIn is true, then point must be inside mesh by at least
-                    
-             tolerance in order for this function to return true.
-                    If strictlyIn is 
-             false, then this function will return true if
-                    point is inside or the 
-             distance from point to a mesh face is <= tolerance.
+                    tolerance 
+             in order for this function to return true.
+                    If strictlyIn is false, then this 
+             function will return true if
+                    point is inside or the distance from point to a 
+             mesh face is <= tolerance.
         
             Returns: true if point is inside the solid mesh, false if not.
         """
@@ -12930,8 +12813,8 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -12939,29 +12822,26 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         """
         NormalAt(self: Mesh, faceIndex: int, t0: float, t1: float, t2: float, t3: float) -> Vector3d
         
-            Evaluate a mesh normal at a set of barycentric coordinates. Barycentric 
-             coordinates must 
-                    be assigned in accordance with the rules as defined 
-             by MeshPoint.T.
+            Evaluate a mesh normal at a set of barycentric coordinates. Barycentric coordinates must 
+        
+                         be assigned in accordance with the rules as defined by MeshPoint.T.
         
         
             faceIndex: Index of triangle or quad to evaluate.
             t0: First barycentric coordinate.
             t1: Second barycentric coordinate.
             t2: Third barycentric coordinate.
-            t3: Fourth barycentric coordinate. If the face is a triangle, this coordinate will be 
-             ignored.
-        
-            Returns: A Normal vector to the mesh or Vector3d.Unset if the faceIndex is not valid or if 
-             the barycentric coordinates could not be evaluated.
+            t3: Fourth barycentric coordinate. If the face is a triangle, this coordinate will be ignored.
+            Returns: A Normal vector to the mesh or Vector3d.Unset if the faceIndex is not valid or if the 
+             barycentric coordinates could not be evaluated.
         
         NormalAt(self: Mesh, meshPoint: MeshPoint) -> Vector3d
         
             Evaluate a mesh normal at a set of barycentric coordinates.
         
             meshPoint: MeshPoint instance contiaining a valid Face Index and Barycentric coordinates.
-            Returns: A Normal vector to the mesh or Vector3d.Unset if the faceIndex is not valid or if 
-             the barycentric coordinates could not be evaluated.
+            Returns: A Normal vector to the mesh or Vector3d.Unset if the faceIndex is not valid or if the 
+             barycentric coordinates could not be evaluated.
         """
         pass
 
@@ -12969,12 +12849,12 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         """
         Offset(self: Mesh, distance: float, solidify: bool) -> Mesh
         
-            Makes a new mesh with vertices offset a distance in the opposite direction of the 
-             existing vertex normals.
-                    Optionally, based on the value of solidify, 
-             adds the input mesh and a ribbon of faces along any naked edges.
-                    If 
-             solidify is false it acts exactly as the Offset(distance) function.
+            Makes a new mesh with vertices offset a distance in the opposite direction of the existing 
+             vertex normals.
+                    Optionally, based on the value of solidify, adds the input 
+             mesh and a ribbon of faces along any naked edges.
+                    If solidify is false it 
+             acts exactly as the Offset(distance) function.
         
         
             distance: A distance value.
@@ -12982,8 +12862,8 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
             Returns: A new mesh on success, or null on failure.
         Offset(self: Mesh, distance: float) -> Mesh
         
-            Makes a new mesh with vertices offset a distance in the opposite direction of the 
-             existing vertex normals.
+            Makes a new mesh with vertices offset a distance in the opposite direction of the existing 
+             vertex normals.
                     Same as Mesh.Offset(distance, false)
         
         
@@ -13004,27 +12884,25 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         PointAt(self: Mesh, faceIndex: int, t0: float, t1: float, t2: float, t3: float) -> Point3d
         
             Evaluates a mesh at a set of barycentric coordinates. Barycentric coordinates must 
-             
-                    be assigned in accordance with the rules as defined by MeshPoint.T.
+              
+                   be assigned in accordance with the rules as defined by MeshPoint.T.
         
         
             faceIndex: Index of triangle or quad to evaluate.
             t0: First barycentric coordinate.
             t1: Second barycentric coordinate.
             t2: Third barycentric coordinate.
-            t3: Fourth barycentric coordinate. If the face is a triangle, this coordinate will be 
-             ignored.
-        
-            Returns: A Point on the mesh or Point3d.Unset if the faceIndex is not valid or if the 
-             barycentric coordinates could not be evaluated.
+            t3: Fourth barycentric coordinate. If the face is a triangle, this coordinate will be ignored.
+            Returns: A Point on the mesh or Point3d.Unset if the faceIndex is not valid or if the barycentric 
+             coordinates could not be evaluated.
         
         PointAt(self: Mesh, meshPoint: MeshPoint) -> Point3d
         
             Evaluate a mesh at a set of barycentric coordinates.
         
             meshPoint: MeshPoint instance contiaining a valid Face Index and Barycentric coordinates.
-            Returns: A Point on the mesh or Point3d.Unset if the faceIndex is not valid or if the 
-             barycentric coordinates could not be evaluated.
+            Returns: A Point on the mesh or Point3d.Unset if the faceIndex is not valid or if the barycentric 
+             coordinates could not be evaluated.
         """
         pass
 
@@ -13039,16 +12917,14 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
             Reduce polygon count
         
             desiredPolygonCount: desired or target number of faces
-            allowDistortion: If true mesh appearance is not changed even if the target polygon count is not 
-             reached
-        
+            allowDistortion: If true mesh appearance is not changed even if the target polygon count is not reached
             accuracy: Integer from 1 to 10 telling how accurate reduction algorithm
-                     to 
-             use. Greater number gives more accurate results
+                     to use. 
+             Greater number gives more accurate results
         
             normalizeSize: If true mesh is fitted to an axis aligned unit cube until reduction is complete
-            Returns: True if mesh is successfully reduced and false if mesh could not be reduced for 
-             some reason.
+            Returns: True if mesh is successfully reduced and false if mesh could not be reduced for some 
+             reason.
         """
         pass
 
@@ -13065,8 +12941,8 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         SolidOrientation(self: Mesh) -> int
         
             Determines orientation of a "solid" mesh.
-            Returns: +1 = mesh is solid with outward facing normals.-1 = mesh is solid with inward 
-             facing normals.0 = mesh is not solid.
+            Returns: +1 = mesh is solid with outward facing normals.-1 = mesh is solid with inward facing 
+             normals.0 = mesh is not solid.
         """
         pass
 
@@ -13101,14 +12977,14 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         """
         UnifyNormals(self: Mesh) -> int
         
-            Attempts to fix inconsistencies in the directions of meshfaces for a mesh. This 
-             function
-                    does not modify the vertex normals, but rather rearranges 
-             the mesh face winding and face
-                    normals to make them all consistent. 
-             You may want to call Mesh.Normals.ComputeNormals()
-                    to recompute 
-             vertex normals after calling this functions.
+            Attempts to fix inconsistencies in the directions of meshfaces for a mesh. This function
+         
+                        does not modify the vertex normals, but rather rearranges the mesh face winding 
+             and face
+                    normals to make them all consistent. You may want to call 
+             Mesh.Normals.ComputeNormals()
+                    to recompute vertex normals after calling this 
+             functions.
         
             Returns: number of faces that were modified.
         """
@@ -13118,17 +12994,16 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         """
         Unweld(self: Mesh, angleToleranceRadians: float, modifyNormals: bool)
             Makes sure that faces sharing an edge and having a difference of normal greater
-          
-                       than or equal to angleToleranceRadians have unique vertexes along that 
-             edge,
-                    adding vertices if necessary.
+                  
+               than or equal to angleToleranceRadians have unique vertexes along that edge,
+                   
+              adding vertices if necessary.
         
         
             angleToleranceRadians: Angle at which to make unique vertices.
-            modifyNormals: Determines whether new vertex normals will have the same vertex normal as the 
-             original (false)
-                    or vertex normals made from the corrsponding face 
-             normals (true)
+            modifyNormals: Determines whether new vertex normals will have the same vertex normal as the original 
+             (false)
+                    or vertex normals made from the corrsponding face normals (true)
         """
         pass
 
@@ -13136,10 +13011,10 @@ class Mesh(GeometryBase, IDisposable, ISerializable):
         """
         Weld(self: Mesh, angleToleranceRadians: float)
             Makes sure that faces sharing an edge and having a difference of normal greater
+                  
+               than or equal to angleToleranceRadians share vertexes along that edge, vertex normals
           
-                       than or equal to angleToleranceRadians share vertexes along that edge, 
-             vertex normals
-                    are averaged.
+                       are averaged.
         
         
             angleToleranceRadians: Angle at which to weld vertices.
@@ -13282,8 +13157,8 @@ class MeshFace(object):
         Flip(self: MeshFace) -> MeshFace
         
             Reverses the orientation of the face by swapping corners. 
-                    The first 
-             corner is always maintained.
+                    The first corner 
+             is always maintained.
         """
         pass
 
@@ -13292,10 +13167,10 @@ class MeshFace(object):
         IsValid(self: MeshFace, vertexCount: int) -> bool
         
             Gets a value indicating whether or not this mesh face 
-                    is considered 
-             to be valid. Unlike the simple IsValid function, 
-                    this function takes 
-             upper bound indices into account.
+                    is considered to be 
+             valid. Unlike the simple IsValid function, 
+                    this function takes upper bound 
+             indices into account.
         
         
             vertexCount: Number of vertices in the mesh that this face is a part of.
@@ -13303,15 +13178,15 @@ class MeshFace(object):
         IsValid(self: MeshFace) -> bool
         
             Gets a value indicating whether or not this mesh face 
-                    is considered 
-             to be valid. Note that even valid mesh faces 
-                    could potentially be 
-             invalid in the context of a specific Mesh, 
-                    if one or more of the 
-             corner indices exceeds the number of 
-                    vertices on the mesh. If you 
-             want to perform a complete 
-                    validity check, use IsValid(int) instead.
+                    is considered to be 
+             valid. Note that even valid mesh faces 
+                    could potentially be invalid in the 
+             context of a specific Mesh, 
+                    if one or more of the corner indices exceeds the 
+             number of 
+                    vertices on the mesh. If you want to perform a complete 
+                 
+                validity check, use IsValid(int) instead.
         """
         pass
 
@@ -13426,10 +13301,10 @@ class MeshingParameters(object, IDisposable):
         DocumentCurrentSetting(doc: RhinoDoc) -> MeshingParameters
         
             Gets the MeshingParameters that are currently set for a document.
-                    
-             These are the same settings that are shown in the DocumentProperties
-                    
-             "mesh settings" user interface.
+                    These are 
+             the same settings that are shown in the DocumentProperties
+                    "mesh settings" 
+             user interface.
         
         
             doc: A Rhino document to query.
@@ -13690,10 +13565,10 @@ class MeshPoint(object):
         GetTriangle(self: MeshPoint) -> (bool, int, int, int)
         
             Gets the mesh face indices of the triangle where the
-                    intersection is 
-             on the face takes into consideration
-                    the way the quad was split 
-             during the intersection.
+                    intersection is on the 
+             face takes into consideration
+                    the way the quad was split during the 
+             intersection.
         """
         pass
 
@@ -13836,17 +13711,17 @@ class MorphControl(GeometryBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -13865,8 +13740,8 @@ class MorphControl(GeometryBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -13970,10 +13845,10 @@ class NurbsCurve(Curve, IDisposable, ISerializable, IEpsilonComparable[NurbsCurv
         CreateFromArc(arc: Arc) -> NurbsCurve
         
             Gets a rational degree 2 NURBS curve representation
-                    of the arc. Note 
-             that the parameterization of NURBS curve
-                    does not match arc's 
-             transcendental paramaterization.
+                    of the arc. Note that the 
+             parameterization of NURBS curve
+                    does not match arc's transcendental 
+             paramaterization.
         
             Returns: Curve on success, null on failure.
         """
@@ -13985,16 +13860,15 @@ class NurbsCurve(Curve, IDisposable, ISerializable, IEpsilonComparable[NurbsCurv
         CreateFromCircle(circle: Circle) -> NurbsCurve
         
             Gets a rational degree 2 NURBS curve representation
-                    of the circle. 
-             Note that the parameterization of NURBS curve
-                    does not match circle's 
-             transcendental paramaterization.  
-                    Use 
-             GetRadianFromNurbFormParameter() and
-                    GetParameterFromRadian() to 
-             convert between the NURBS curve 
-                    parameter and the transcendental 
-             parameter.
+                    of the circle. Note that 
+             the parameterization of NURBS curve
+                    does not match circle's transcendental 
+             paramaterization.  
+                    Use GetRadianFromNurbFormParameter() and
+                    
+             GetParameterFromRadian() to convert between the NURBS curve 
+                    parameter and 
+             the transcendental parameter.
         
             Returns: Curve on success, null on failure.
         """
@@ -14006,13 +13880,13 @@ class NurbsCurve(Curve, IDisposable, ISerializable, IEpsilonComparable[NurbsCurv
         CreateFromEllipse(ellipse: Ellipse) -> NurbsCurve
         
             Gets a rational degree 2 NURBS curve representation of the ellipse.
-                    
-             Note that the parameterization of the NURBS curve does not match
-                    with 
-             the transcendental paramaterization of the ellipsis.
+                    Note that 
+             the parameterization of the NURBS curve does not match
+                    with the 
+             transcendental paramaterization of the ellipsis.
         
-            Returns: A nurbs curve representation of this ellipse or null if no such representation 
-             could be made.
+            Returns: A nurbs curve representation of this ellipse or null if no such representation could be 
+             made.
         """
         pass
 
@@ -14031,9 +13905,7 @@ class NurbsCurve(Curve, IDisposable, ISerializable, IEpsilonComparable[NurbsCurv
         """
         CreateSpiral(railCurve: Curve, t0: float, t1: float, radiusPoint: Point3d, pitch: float, turnCount: float, radius0: float, radius1: float, pointsPerTurn: int) -> NurbsCurve
         
-            Create a C2 non-rational uniform cubic NURBS approximation of a swept helix or 
-             spiral.
-        
+            Create a C2 non-rational uniform cubic NURBS approximation of a swept helix or spiral.
         
             railCurve: The rail curve.
             t0: Starting portion of rail curve's domain to sweep along.
@@ -14043,37 +13915,37 @@ class NurbsCurve(Curve, IDisposable, ISerializable, IEpsilonComparable[NurbsCurv
              particular, this vector must not be (anti)parallel to the axis vector.
         
             pitch: The pitch. Positive values produce counter-clockwise orientation,
-                    
-             negative values produce clockwise orientation.
+                    negative 
+             values produce clockwise orientation.
         
             turnCount: The turn count. If != 0, then the resulting helix will have this many
-                    
-             turns. If = 0, then pitch must be != 0 and the approximate distance
-                    
-             between turns will be set to pitch. Positive values produce counter-clockwise
-            
-                     orientation, negitive values produce clockwise orientation.
+                    turns. 
+             If = 0, then pitch must be != 0 and the approximate distance
+                    between turns 
+             will be set to pitch. Positive values produce counter-clockwise
+                    orientation, 
+             negitive values produce clockwise orientation.
         
             radius0: The starting radius. At least one radii must benonzero. Negative values
-                  
-               are allowed.
+                    are 
+             allowed.
         
             radius1: The ending radius. At least ont radii must be nonzero. Negative values
-                   
-              are allowed.
+                    are 
+             allowed.
         
             pointsPerTurn: Number of points to intepolate per turn. Must be greater than 4.
-                    When 
-             in doubt, use 12.
+                    When in 
+             doubt, use 12.
         
             Returns: NurbsCurve on success, null on failure.
         CreateSpiral(axisStart: Point3d, axisDir: Vector3d, radiusPoint: Point3d, pitch: float, turnCount: float, radius0: float, radius1: float) -> NurbsCurve
         
             Creates a C1 cubic NURBS approximation of a helix or spiral. For a helix,
-                
-                 you may have radius0 == radius1. For a spiral radius0 == radius0 produces
-            
-                     a circle. Zero and negative radii are permissible.
+                    you 
+             may have radius0 == radius1. For a spiral radius0 == radius0 produces
+                    a 
+             circle. Zero and negative radii are permissible.
         
         
             axisStart: Helix's axis starting point or center of spiral.
@@ -14083,16 +13955,15 @@ class NurbsCurve(Curve, IDisposable, ISerializable, IEpsilonComparable[NurbsCurv
              particular, this vector must not be (anti)parallel to the axis vector.
         
             pitch: The pitch, where a spiral has a pitch = 0, and pitch > 0 is the distance
-                 
-                between the helix's "threads".
+                    
+             between the helix's "threads".
         
             turnCount: The number of turns in spiral or helix. Positive
                     values produce 
              counter-clockwise orientation, negitive values produce
-                    clockwise 
-             orientation. Note, for a helix, turnCount * pitch = length of
-                    the 
-             helix's axis.
+                    clockwise orientation. 
+             Note, for a helix, turnCount * pitch = length of
+                    the helix's axis.
         
             radius0: The starting radius.
             radius1: The ending radius.
@@ -14104,17 +13975,17 @@ class NurbsCurve(Curve, IDisposable, ISerializable, IEpsilonComparable[NurbsCurv
         """
         Dispose(self: Curve, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -14131,8 +14002,8 @@ class NurbsCurve(Curve, IDisposable, ISerializable, IEpsilonComparable[NurbsCurv
         GrevilleParameter(self: NurbsCurve, index: int) -> float
         
             Gets the greville (edit point) parameter that belongs 
-                    to the control 
-             point at the specified index.
+                    to the control point 
+             at the specified index.
         
         
             index: Index of Greville (Edit) point.
@@ -14152,8 +14023,8 @@ class NurbsCurve(Curve, IDisposable, ISerializable, IEpsilonComparable[NurbsCurv
         GrevillePoint(self: NurbsCurve, index: int) -> Point3d
         
             Gets the greville (edit point) parameter that belongs 
-                    to the control 
-             point at the specified index.
+                    to the control point 
+             at the specified index.
         
         
             index: Index of Greville (Edit) point.
@@ -14175,9 +14046,7 @@ class NurbsCurve(Curve, IDisposable, ISerializable, IEpsilonComparable[NurbsCurv
             Increase the degree of this curve.
         
             desiredDegree: The desired degree. 
-                    Degrees should be number between and including 1 
-             and 11.
-        
+                    Degrees should be number between and including 1 and 11.
             Returns: true on success, false on failure.
         """
         pass
@@ -14202,13 +14071,13 @@ class NurbsCurve(Curve, IDisposable, ISerializable, IEpsilonComparable[NurbsCurv
         MakePiecewiseBezier(self: NurbsCurve, setEndWeightsToOne: bool) -> bool
         
             Clamps ends and adds knots so the NURBS curve has bezier spans 
-                    (all 
-             distinct knots have multiplitity = degree).
+                    (all distinct 
+             knots have multiplitity = degree).
         
         
             setEndWeightsToOne: If true and the first or last weight is not one, then the first and
-                    
-             last spans are reparameterized so that the end weights are one.
+                    last 
+             spans are reparameterized so that the end weights are one.
         
             Returns: true on success, false on failure.
         """
@@ -14218,8 +14087,8 @@ class NurbsCurve(Curve, IDisposable, ISerializable, IEpsilonComparable[NurbsCurv
         """
         NonConstOperation(self: Curve)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -14235,19 +14104,19 @@ class NurbsCurve(Curve, IDisposable, ISerializable, IEpsilonComparable[NurbsCurv
         Reparameterize(self: NurbsCurve, c: float) -> bool
         
             Use a linear fractional transformation to reparameterize the NURBS curve.
-                
-                 This does not change the curve's domain.
+                    
+             This does not change the curve's domain.
         
         
             c: reparameterization constant (generally speaking, c should be > 0). The
-                   
-              control points and knots are adjusted so that
+                    
+             control points and knots are adjusted so that
                     output_nurbs(t) = 
              input_nurbs(lambda(t)), where lambda(t) = c*t/( (c-1)*t + 1 ).
-                    Note 
-             that lambda(0) = 0, lambda(1) = 1, lambda'(t) > 0, 
-                    lambda'(0) = c 
-             and lambda'(1) = 1/c.
+                    Note that 
+             lambda(0) = 0, lambda(1) = 1, lambda'(t) > 0, 
+                    lambda'(0) = c and lambda'(1) 
+             = 1/c.
         
             Returns: true if successful.
         """
@@ -14402,9 +14271,8 @@ class NurbsSurface(Surface, IDisposable, ISerializable, IEpsilonComparable[Nurbs
         
             Makes a surface from 4 corner points.
                     This is the same as calling 
-             Rhino.Geometry.NurbsSurface.CreateFromCorners(Rhino.Geometry.Point3d,Rhino.Geometry
-             .Point3d,Rhino.Geometry.Point3d,Rhino.Geometry.Point3d,System.Double) with 
-             tolerance 0.
+             Rhino.Geometry.NurbsSurface.CreateFromCorners(Rhino.Geometry.Point3d,Rhino.Geometry.Point3d
+             ,Rhino.Geometry.Point3d,Rhino.Geometry.Point3d,System.Double) with tolerance 0.
         
         
             corner1: The first corner.
@@ -14484,9 +14352,7 @@ class NurbsSurface(Surface, IDisposable, ISerializable, IEpsilonComparable[Nurbs
         """
         CreateRuledSurface(curveA: Curve, curveB: Curve) -> NurbsSurface
         
-            Constructs a ruled surface between two curves. Curves must share the same 
-             knot-vector.
-        
+            Constructs a ruled surface between two curves. Curves must share the same knot-vector.
         
             curveA: First curve.
             curveB: Second curve.
@@ -14503,17 +14369,17 @@ class NurbsSurface(Surface, IDisposable, ISerializable, IEpsilonComparable[Nurbs
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -14532,9 +14398,7 @@ class NurbsSurface(Surface, IDisposable, ISerializable, IEpsilonComparable[Nurbs
             Increase the degree of this surface in U direction.
         
             desiredDegree: The desired degree. 
-                    Degrees should be number between and including 1 
-             and 11.
-        
+                    Degrees should be number between and including 1 and 11.
             Returns: true on success, false on failure.
         """
         pass
@@ -14546,9 +14410,7 @@ class NurbsSurface(Surface, IDisposable, ISerializable, IEpsilonComparable[Nurbs
             Increase the degree of this surface in V direction.
         
             desiredDegree: The desired degree. 
-                    Degrees should be number between and including 1 
-             and 11.
-        
+                    Degrees should be number between and including 1 and 11.
             Returns: true on success, false on failure.
         """
         pass
@@ -14575,8 +14437,8 @@ class NurbsSurface(Surface, IDisposable, ISerializable, IEpsilonComparable[Nurbs
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -14680,17 +14542,17 @@ class OrdinateDimension(AnnotationBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -14698,8 +14560,8 @@ class OrdinateDimension(AnnotationBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -14804,18 +14666,18 @@ class ParticleSystem(object, IEnumerable[Particle], IEnumerable):
         Add(self: ParticleSystem, particle: Particle) -> bool
         
             Adds a particle to this ParticleSystem. A Particle can only be in one system
-             
-                    at a time.  If the Particle already exists in a different system, this 
-             function
-                    will return false. You should remove the particle from the 
-             other system first
-                    before adding it.
+                    
+             at a time.  If the Particle already exists in a different system, this function
+                  
+               will return false. You should remove the particle from the other system first
+                  
+               before adding it.
         
         
             particle: A particle to be added.
             Returns: true if this particle was added to the system or if is already in the system.
-            
-                     false if the particle already exists in a different system.
+                    
+             false if the particle already exists in a different system.
         """
         pass
 
@@ -14961,8 +14823,8 @@ class Plane(object, IEquatable[Plane], IEpsilonComparable[Plane]):
         
             testPoint: Point to get close to.
             Returns: The point on the plane that is closest to testPoint, 
-                    or 
-             Point3d.Unset on failure.
+                    or Point3d.Unset on 
+             failure.
         """
         pass
 
@@ -14971,8 +14833,8 @@ class Plane(object, IEquatable[Plane], IEpsilonComparable[Plane]):
         DistanceTo(self: Plane, testPoint: Point3d) -> float
         
             Returns the signed distance from testPoint to its projection onto this plane. 
-           
-                      If the point is below the plane, a negative distance is returned.
+                   
+              If the point is below the plane, a negative distance is returned.
         
         
             testPoint: Point to test.
@@ -15162,8 +15024,8 @@ class Plane(object, IEquatable[Plane], IEpsilonComparable[Plane]):
         
             p: evaulation point.
             Returns: returns pe[0]*p.X + pe[1]*p.Y + pe[2]*p.Z + pe[3] where
-                    pe[0], pe[1], 
-             pe[2] and pe[3] are the coeeficients of the plane equation.
+                    pe[0], pe[1], pe[2] 
+             and pe[3] are the coeeficients of the plane equation.
         """
         pass
 
@@ -15341,8 +15203,8 @@ class Point2d(object, ISerializable, IEquatable[Point2d], IComparable[Point2d], 
         Add(point1: Point2d, point2: Point2d) -> Point2d
         
             Adds a point with a point.
-                    (Provided for languages that do not 
-             support operator overloading. You can use the + operator otherwise)
+                    (Provided for languages that do not support 
+             operator overloading. You can use the + operator otherwise)
         
         
             point1: A point.
@@ -15351,8 +15213,8 @@ class Point2d(object, ISerializable, IEquatable[Point2d], IComparable[Point2d], 
         Add(vector: Vector2d, point: Point2d) -> Point2d
         
             Adds a vector with a point.
-                    (Provided for languages that do not 
-             support operator overloading. You can use the + operator otherwise)
+                    (Provided for languages that do not support 
+             operator overloading. You can use the + operator otherwise)
         
         
             vector: A vector.
@@ -15361,8 +15223,8 @@ class Point2d(object, ISerializable, IEquatable[Point2d], IComparable[Point2d], 
         Add(point: Point2d, vector: Vector2d) -> Point2d
         
             Adds a point with a vector.
-                    (Provided for languages that do not 
-             support operator overloading. You can use the + operator otherwise)
+                    (Provided for languages that do not support 
+             operator overloading. You can use the + operator otherwise)
         
         
             point: A point.
@@ -15376,13 +15238,13 @@ class Point2d(object, ISerializable, IEquatable[Point2d], IComparable[Point2d], 
         CompareTo(self: Point2d, other: Point2d) -> int
         
             Compares this Rhino.Geometry.Point2d with another Rhino.Geometry.Point2d.
-                
-                 Coordinates evaluation priority is first X, then Y.
+                    
+             Coordinates evaluation priority is first X, then Y.
         
         
             other: The other Rhino.Geometry.Point2d to use in comparison.
-            Returns: 0: if this is identical to other-1: if this.X < other.X-1: if this.X == other.X 
-             and this.Y < other.Y+1: otherwise.
+            Returns: 0: if this is identical to other-1: if this.X < other.X-1: if this.X == other.X and this.Y 
+             < other.Y+1: otherwise.
         """
         pass
 
@@ -15403,8 +15265,8 @@ class Point2d(object, ISerializable, IEquatable[Point2d], IComparable[Point2d], 
         Divide(point: Point2d, t: float) -> Point2d
         
             Divides a Rhino.Geometry.Point2d by a number.
-                    (Provided for languages 
-             that do not support operator overloading. You can use the / operator otherwise)
+                    (Provided for languages that do 
+             not support operator overloading. You can use the / operator otherwise)
         
         
             point: A point.
@@ -15431,8 +15293,8 @@ class Point2d(object, ISerializable, IEquatable[Point2d], IComparable[Point2d], 
             Returns: true if point has the same coordinates as this; otherwise false.
         Equals(self: Point2d, obj: object) -> bool
         
-            Determines whether the specified System.Object is a Point2d and has the same 
-             values as the present point.
+            Determines whether the specified System.Object is a Point2d and has the same values as the 
+             present point.
         
         
             obj: The specified object.
@@ -15455,9 +15317,8 @@ class Point2d(object, ISerializable, IEquatable[Point2d], IComparable[Point2d], 
         Multiply(t: float, point: Point2d) -> Point2d
         
             Multiplies a Rhino.Geometry.Point2d by a number.
-                    (Provided for 
-             languages that do not support operator overloading. You can use the * operator 
-             otherwise)
+                    (Provided for languages that 
+             do not support operator overloading. You can use the * operator otherwise)
         
         
             t: A number.
@@ -15466,9 +15327,8 @@ class Point2d(object, ISerializable, IEquatable[Point2d], IComparable[Point2d], 
         Multiply(point: Point2d, t: float) -> Point2d
         
             Multiplies a Rhino.Geometry.Point2d by a number.
-                    (Provided for 
-             languages that do not support operator overloading. You can use the * operator 
-             otherwise)
+                    (Provided for languages that 
+             do not support operator overloading. You can use the * operator otherwise)
         
         
             point: A point.
@@ -15483,9 +15343,8 @@ class Point2d(object, ISerializable, IEquatable[Point2d], IComparable[Point2d], 
         Subtract(point1: Point2d, point2: Point2d) -> Vector2d
         
             Subtracts the second point from the first point.
-                    (Provided for 
-             languages that do not support operator overloading. You can use the - operator 
-             otherwise)
+                    (Provided for languages that 
+             do not support operator overloading. You can use the - operator otherwise)
         
         
             point1: A point (minuend).
@@ -15494,8 +15353,8 @@ class Point2d(object, ISerializable, IEquatable[Point2d], IComparable[Point2d], 
         Subtract(point: Point2d, vector: Vector2d) -> Point2d
         
             Subtracts a vector from a point.
-                    (Provided for languages that do not 
-             support operator overloading. You can use the - operator otherwise)
+                    (Provided for languages that do not support 
+             operator overloading. You can use the - operator otherwise)
         
         
             point: A point.
@@ -15516,8 +15375,8 @@ class Point2d(object, ISerializable, IEquatable[Point2d], IComparable[Point2d], 
     def Transform(self, xform):
         """
         Transform(self: Point2d, xform: Transform)
-            Transforms the present point in place. The transformation matrix acts on the left 
-             of the point. i.e.,
+            Transforms the present point in place. The transformation matrix acts on the left of the 
+             point. i.e.,
                     result = transformation*point
         
         
@@ -15692,13 +15551,13 @@ class Point2f(object, IEquatable[Point2f], IComparable[Point2f], IComparable, IE
         CompareTo(self: Point2f, other: Point2f) -> int
         
             Compares this Rhino.Geometry.Point2f with another Rhino.Geometry.Point2f.
-                
-                 Coordinates evaluation priority is first X, then Y.
+                    
+             Coordinates evaluation priority is first X, then Y.
         
         
             other: The other Rhino.Geometry.Point2f to use in comparison.
-            Returns: 0: if this is identical to other-1: if this.X < other.X-1: if this.X == other.X 
-             and this.Y < other.Y+1: otherwise.
+            Returns: 0: if this is identical to other-1: if this.X < other.X-1: if this.X == other.X and this.Y 
+             < other.Y+1: otherwise.
         """
         pass
 
@@ -15714,16 +15573,16 @@ class Point2f(object, IEquatable[Point2f], IComparable[Point2f], IComparable, IE
         """
         Equals(self: Point2f, point: Point2f) -> bool
         
-            Determines whether the specified Rhino.Geometry.Point2f has the same values as the 
-             present point.
+            Determines whether the specified Rhino.Geometry.Point2f has the same values as the present 
+             point.
         
         
             point: The specified point.
             Returns: true if point has the same coordinates as this; otherwise false.
         Equals(self: Point2f, obj: object) -> bool
         
-            Determines whether the specified System.Object is a Rhino.Geometry.Point2f and has 
-             the same values as the present point.
+            Determines whether the specified System.Object is a Rhino.Geometry.Point2f and has the 
+             same values as the present point.
         
         
             obj: The specified object.
@@ -15837,8 +15696,7 @@ class Point3d(object, ISerializable, IEquatable[Point3d], IComparable[Point3d], 
         
             Sums up a point and a vector, and returns a new point.
                     (Provided for 
-             languages that do not support operator overloading. You can use the + operator 
-             otherwise)
+             languages that do not support operator overloading. You can use the + operator otherwise)
         
         
             point: A point.
@@ -15848,8 +15706,7 @@ class Point3d(object, ISerializable, IEquatable[Point3d], IComparable[Point3d], 
         
             Sums up a point and a vector, and returns a new point.
                     (Provided for 
-             languages that do not support operator overloading. You can use the + operator 
-             otherwise)
+             languages that do not support operator overloading. You can use the + operator otherwise)
         
         
             vector: A vector.
@@ -15858,8 +15715,8 @@ class Point3d(object, ISerializable, IEquatable[Point3d], IComparable[Point3d], 
         Add(point1: Point3d, point2: Point3d) -> Point3d
         
             Sums two Rhino.Geometry.Point3d instances.
-                    (Provided for languages 
-             that do not support operator overloading. You can use the + operator otherwise)
+                    (Provided for languages that do 
+             not support operator overloading. You can use the + operator otherwise)
         
         
             point1: A point.
@@ -15869,8 +15726,7 @@ class Point3d(object, ISerializable, IEquatable[Point3d], IComparable[Point3d], 
         
             Sums up a point and a vector, and returns a new point.
                     (Provided for 
-             languages that do not support operator overloading. You can use the + operator 
-             otherwise)
+             languages that do not support operator overloading. You can use the + operator otherwise)
         
         
             point: A point.
@@ -15889,14 +15745,13 @@ class Point3d(object, ISerializable, IEquatable[Point3d], IComparable[Point3d], 
         CompareTo(self: Point3d, other: Point3d) -> int
         
             Compares this Rhino.Geometry.Point3d with another Rhino.Geometry.Point3d.
-                
-                 Component evaluation priority is first X, then Y, then Z.
+                    
+             Component evaluation priority is first X, then Y, then Z.
         
         
             other: The other Rhino.Geometry.Point3d to use in comparison.
-            Returns: 0: if this is identical to other-1: if this.X < other.X-1: if this.X == other.X 
-             and this.Y < other.Y-1: if this.X == other.X and this.Y == other.Y and this.Z < 
-             other.Z+1: otherwise.
+            Returns: 0: if this is identical to other-1: if this.X < other.X-1: if this.X == other.X and this.Y 
+             < other.Y-1: if this.X == other.X and this.Y == other.Y and this.Z < other.Z+1: otherwise.
         """
         pass
 
@@ -15912,8 +15767,8 @@ class Point3d(object, ISerializable, IEquatable[Point3d], IComparable[Point3d], 
             Computes the distance between two points.
         
             other: Other point for distance measurement.
-            Returns: The length of the line between this and the other point; or 0 if any of the points 
-             is not valid.
+            Returns: The length of the line between this and the other point; or 0 if any of the points is not 
+             valid.
         """
         pass
 
@@ -15923,8 +15778,8 @@ class Point3d(object, ISerializable, IEquatable[Point3d], IComparable[Point3d], 
         Divide(point: Point3d, t: float) -> Point3d
         
             Divides a Rhino.Geometry.Point3d by a number.
-                    (Provided for languages 
-             that do not support operator overloading. You can use the / operator otherwise)
+                    (Provided for languages that do 
+             not support operator overloading. You can use the / operator otherwise)
         
         
             point: A point.
@@ -15945,16 +15800,16 @@ class Point3d(object, ISerializable, IEquatable[Point3d], IComparable[Point3d], 
         """
         Equals(self: Point3d, point: Point3d) -> bool
         
-            Determines whether the specified Rhino.Geometry.Point3d has the same values as the 
-             present point.
+            Determines whether the specified Rhino.Geometry.Point3d has the same values as the present 
+             point.
         
         
             point: The specified point.
             Returns: true if point has the same coordinates as this; otherwise false.
         Equals(self: Point3d, obj: object) -> bool
         
-            Determines whether the specified System.Object is a Rhino.Geometry.Point3d and has 
-             the same values as the present point.
+            Determines whether the specified System.Object is a Rhino.Geometry.Point3d and has the 
+             same values as the present point.
         
         
             obj: The specified object.
@@ -15980,10 +15835,10 @@ class Point3d(object, ISerializable, IEquatable[Point3d], IComparable[Point3d], 
             pB: Second point.
             t: Interpolation parameter. 
                     If t=0 then this point is set to pA. 
-             
-                    If t=1 then this point is set to pB. 
-                    Values of t in between 
-             0.0 and 1.0 result in points between pA and pB.
+                    
+             If t=1 then this point is set to pB. 
+                    Values of t in between 0.0 and 1.0 
+             result in points between pA and pB.
         """
         pass
 
@@ -15993,9 +15848,8 @@ class Point3d(object, ISerializable, IEquatable[Point3d], IComparable[Point3d], 
         Multiply(t: float, point: Point3d) -> Point3d
         
             Multiplies a Rhino.Geometry.Point3d by a number.
-                    (Provided for 
-             languages that do not support operator overloading. You can use the * operator 
-             otherwise)
+                    (Provided for languages that 
+             do not support operator overloading. You can use the * operator otherwise)
         
         
             t: A number.
@@ -16004,9 +15858,8 @@ class Point3d(object, ISerializable, IEquatable[Point3d], IComparable[Point3d], 
         Multiply(point: Point3d, t: float) -> Point3d
         
             Multiplies a Rhino.Geometry.Point3d by a number.
-                    (Provided for 
-             languages that do not support operator overloading. You can use the * operator 
-             otherwise)
+                    (Provided for languages that 
+             do not support operator overloading. You can use the * operator otherwise)
         
         
             point: A point.
@@ -16026,8 +15879,8 @@ class Point3d(object, ISerializable, IEquatable[Point3d], IComparable[Point3d], 
         Subtract(point1: Point3d, point2: Point3d) -> Vector3d
         
             Subtracts a point from another point.
-                    (Provided for languages that do 
-             not support operator overloading. You can use the - operator otherwise)
+                    (Provided for languages that do not 
+             support operator overloading. You can use the - operator otherwise)
         
         
             point1: A point.
@@ -16036,8 +15889,8 @@ class Point3d(object, ISerializable, IEquatable[Point3d], IComparable[Point3d], 
         Subtract(point: Point3d, vector: Vector3d) -> Point3d
         
             Subtracts a vector from a point.
-                    (Provided for languages that do not 
-             support operator overloading. You can use the - operator otherwise)
+                    (Provided for languages that do not support 
+             operator overloading. You can use the - operator otherwise)
         
         
             point: A point.
@@ -16058,8 +15911,8 @@ class Point3d(object, ISerializable, IEquatable[Point3d], IComparable[Point3d], 
     def Transform(self, xform):
         """
         Transform(self: Point3d, xform: Transform)
-            Transforms the present point in place. The transformation matrix acts on the left 
-             of the point. i.e.,
+            Transforms the present point in place. The transformation matrix acts on the left of the 
+             point. i.e.,
                     result = transformation*point
         
         
@@ -16256,17 +16109,17 @@ class Point3dGrid(GeometryBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -16274,8 +16127,8 @@ class Point3dGrid(GeometryBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -16330,14 +16183,13 @@ class Point3f(object, IEquatable[Point3f], IComparable[Point3f], IComparable, IE
         CompareTo(self: Point3f, other: Point3f) -> int
         
             Compares this Rhino.Geometry.Point3f with another Rhino.Geometry.Point3f.
-                
-                 Component evaluation priority is first X, then Y, then Z.
+                    
+             Component evaluation priority is first X, then Y, then Z.
         
         
             other: The other Rhino.Geometry.Point3d to use in comparison.
-            Returns: 0: if this is identical to other-1: if this.X < other.X-1: if this.X == other.X 
-             and this.Y < other.Y-1: if this.X == other.X and this.Y == other.Y and this.Z < 
-             other.Z+1: otherwise.
+            Returns: 0: if this is identical to other-1: if this.X < other.X-1: if this.X == other.X and this.Y 
+             < other.Y-1: if this.X == other.X and this.Y == other.Y and this.Z < other.Z+1: otherwise.
         """
         pass
 
@@ -16348,8 +16200,8 @@ class Point3f(object, IEquatable[Point3f], IComparable[Point3f], IComparable, IE
             Computes the distance between two points.
         
             other: Other point for distance measurement.
-            Returns: The length of the line between this and the other point; or 0 if any of the points 
-             is not valid.
+            Returns: The length of the line between this and the other point; or 0 if any of the points is not 
+             valid.
         """
         pass
 
@@ -16371,8 +16223,8 @@ class Point3f(object, IEquatable[Point3f], IComparable[Point3f], IComparable, IE
             Returns: true if point has the same coordinates as this; otherwise false.
         Equals(self: Point3f, obj: object) -> bool
         
-            Determines whether the specified System.Object is a Point3f and has the same 
-             values as the present point.
+            Determines whether the specified System.Object is a Point3f and has the same values as the 
+             present point.
         
         
             obj: The specified object.
@@ -16395,8 +16247,8 @@ class Point3f(object, IEquatable[Point3f], IComparable[Point3f], IComparable, IE
         Subtract(point1: Point3f, point2: Point3f) -> Vector3f
         
             Subtracts a point from another point.
-                    (Provided for languages that do 
-             not support operator overloading. You can use the - operator otherwise)
+                    (Provided for languages that do not 
+             support operator overloading. You can use the - operator otherwise)
         
         
             point1: A point.
@@ -16417,8 +16269,8 @@ class Point3f(object, IEquatable[Point3f], IComparable[Point3f], IComparable, IE
     def Transform(self, xform):
         """
         Transform(self: Point3f, xform: Transform)
-            Transforms the present point in place. The transformation matrix acts on the left 
-             of the point. i.e.,
+            Transforms the present point in place. The transformation matrix acts on the left of the 
+             point. i.e.,
                     result = transformation*point
         
         
@@ -16534,8 +16386,8 @@ class Point4d(object, ISerializable, IEquatable[Point4d], IEpsilonComparable[Poi
         Add(point1: Point4d, point2: Point4d) -> Point4d
         
             Sums two Rhino.Geometry.Point4d together.
-                    (Provided for languages 
-             that do not support operator overloading. You can use the + operator otherwise)
+                    (Provided for languages that do not 
+             support operator overloading. You can use the + operator otherwise)
         
         
             point1: First point.
@@ -16562,8 +16414,8 @@ class Point4d(object, ISerializable, IEquatable[Point4d], IEpsilonComparable[Poi
             Returns: true if point has the same value as this; otherwise false.
         Equals(self: Point4d, obj: object) -> bool
         
-            Determines whether the specified System.Object is Point4d and has same coordinates 
-             as the present point.
+            Determines whether the specified System.Object is Point4d and has same coordinates as the 
+             present point.
         
         
             obj: The specified object.
@@ -16586,8 +16438,8 @@ class Point4d(object, ISerializable, IEquatable[Point4d], IEpsilonComparable[Poi
         Multiply(point: Point4d, d: float) -> Point4d
         
             Multiplies a point by a number.
-                    (Provided for languages that do not 
-             support operator overloading. You can use the * operator otherwise)
+                    (Provided for languages that do not support 
+             operator overloading. You can use the * operator otherwise)
         
         
             point: A point.
@@ -16602,9 +16454,8 @@ class Point4d(object, ISerializable, IEquatable[Point4d], IEpsilonComparable[Poi
         Subtract(point1: Point4d, point2: Point4d) -> Point4d
         
             Subtracts the second point from the first point.
-                    (Provided for 
-             languages that do not support operator overloading. You can use the - operator 
-             otherwise)
+                    (Provided for languages that 
+             do not support operator overloading. You can use the - operator otherwise)
         
         
             point1: First point.
@@ -16665,8 +16516,8 @@ class Point4d(object, ISerializable, IEquatable[Point4d], IEpsilonComparable[Poi
         """
         __rmul__(point1: Point4d, point2: Point4d) -> float
         
-            Multiplies two Rhino.Geometry.Point4d together, returning the dot (internal) 
-             product of the two.
+            Multiplies two Rhino.Geometry.Point4d together, returning the dot (internal) product of 
+             the two.
                     This is not the cross product.
         
         
@@ -16823,17 +16674,17 @@ class PointCloud(GeometryBase, IDisposable, ISerializable, IEnumerable[PointClou
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -16906,9 +16757,7 @@ class PointCloud(GeometryBase, IDisposable, ISerializable, IEnumerable[PointClou
         """
         InsertNew(self: PointCloud, index: int) -> PointCloudItem
         
-            Inserts a new Rhino.Geometry.PointCloudItem at a specific position of the point 
-             cloud.
-        
+            Inserts a new Rhino.Geometry.PointCloudItem at a specific position of the point cloud.
         
             index: Index of new item.
             Returns: The newly inserted item.
@@ -16932,8 +16781,8 @@ class PointCloud(GeometryBase, IDisposable, ISerializable, IEnumerable[PointClou
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -17214,9 +17063,9 @@ class PolyCurve(Curve, IDisposable, ISerializable):
         Append(self: PolyCurve, curve: Curve) -> bool
         
             Appends and matches the start of the curve to the end of polycurve. 
-                    
-             This function will fail if the PolyCurve is closed or if SegmentCount > 0 and the 
-             new segment is closed.
+                    This 
+             function will fail if the PolyCurve is closed or if SegmentCount > 0 and the new segment 
+             is closed.
         
         
             curve: Segment to append.
@@ -17224,9 +17073,9 @@ class PolyCurve(Curve, IDisposable, ISerializable):
         Append(self: PolyCurve, arc: Arc) -> bool
         
             Appends and matches the start of the arc to the end of polycurve. 
-                    
-             This function will fail if the polycurve is closed or if SegmentCount > 0 and the 
-             arc is closed.
+                    This 
+             function will fail if the polycurve is closed or if SegmentCount > 0 and the arc is 
+             closed.
         
         
             arc: Arc segment to append.
@@ -17234,8 +17083,8 @@ class PolyCurve(Curve, IDisposable, ISerializable):
         Append(self: PolyCurve, line: Line) -> bool
         
             Appends and matches the start of the line to the end of polycurve. 
-                    
-             This function will fail if the polycurve is closed.
+                    This 
+             function will fail if the polycurve is closed.
         
         
             line: Line segment to append.
@@ -17257,17 +17106,17 @@ class PolyCurve(Curve, IDisposable, ISerializable):
         """
         Dispose(self: Curve, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -17276,8 +17125,8 @@ class PolyCurve(Curve, IDisposable, ISerializable):
         Duplicate(self: PolyCurve) -> GeometryBase
         
             Duplicates this polycurve.
-                    When not overridden in a derived class, 
-             this calls Rhino.Geometry.PolyCurve.DuplicatePolyCurve.
+                    When not overridden in a derived class, this calls 
+             Rhino.Geometry.PolyCurve.DuplicatePolyCurve.
         
             Returns: An exact duplicate of this curve.
         """
@@ -17299,10 +17148,10 @@ class PolyCurve(Curve, IDisposable, ISerializable):
         """
         Explode(self: PolyCurve) -> Array[Curve]
         
-            Explodes this PolyCurve into a list of Curve segments. This will not explode 
-             nested polycurves. 
-                    Call Rhino.Geometry.PolyCurve.RemoveNesting first 
-             if you need all individual segments.
+            Explodes this PolyCurve into a list of Curve segments. This will not explode nested 
+             polycurves. 
+                    Call Rhino.Geometry.PolyCurve.RemoveNesting first if you need 
+             all individual segments.
         
             Returns: An array of polycurve segments.
         """
@@ -17312,8 +17161,8 @@ class PolyCurve(Curve, IDisposable, ISerializable):
         """
         NonConstOperation(self: Curve)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -17332,8 +17181,8 @@ class PolyCurve(Curve, IDisposable, ISerializable):
         
             segmentIndex: Index of segment.
             segmentCurveParameter: Parameter on segment.
-            Returns: Polycurve evaluation parameter or UnsetValue if the polycurve curve parameter 
-             could not be computed.
+            Returns: Polycurve evaluation parameter or UnsetValue if the polycurve curve parameter could not be 
+             computed.
         """
         pass
 
@@ -17341,14 +17190,14 @@ class PolyCurve(Curve, IDisposable, ISerializable):
         """
         RemoveNesting(self: PolyCurve) -> bool
         
-            Explodes nested polycurve segments and reconstructs this curve from the shattered 
-             remains. 
-                    The result will have not have any PolyCurves as segments 
-             but it will have identical 
+            Explodes nested polycurve segments and reconstructs this curve from the shattered remains. 
+             
+                    The result will have not have any PolyCurves as segments but it will have 
+             identical 
                     locus and parameterization.
         
-            Returns: true if any nested PolyCurve was found and absorbed, false if no PolyCurve 
-             segments could be found.
+            Returns: true if any nested PolyCurve was found and absorbed, false if no PolyCurve segments could 
+             be found.
         """
         pass
 
@@ -17371,8 +17220,8 @@ class PolyCurve(Curve, IDisposable, ISerializable):
         
             polycurveParameter: Parameter on PolyCurve to convert.
             Returns: Segment curve evaluation parameter or UnsetValue if the 
-                    segment 
-             curve parameter could not be computed.
+                    segment curve 
+             parameter could not be computed.
         """
         pass
 
@@ -17384,8 +17233,8 @@ class PolyCurve(Curve, IDisposable, ISerializable):
         
             segmentIndex: Index of segment.
             Returns: The polycurve subdomain assigned to a segment curve. 
-                    Returns 
-             Interval.Unset if segment_index < 0 or segment_index >= Count().
+                    Returns Interval.Unset 
+             if segment_index < 0 or segment_index >= Count().
         """
         pass
 
@@ -17482,8 +17331,8 @@ class Polyline(Point3dList, IList[Point3d], ICollection[Point3d], IEnumerable[Po
         BreakAtAngles(self: Polyline, angle: float) -> Array[Polyline]
         
             Breaks this polyline into sections at sharp kinks. 
-                    Closed polylines 
-             will also be broken at the first and last vertex.
+                    Closed polylines will 
+             also be broken at the first and last vertex.
         
         
             angle: Angle (in radians) between adjacent segments for a break to occur.
@@ -17527,12 +17376,12 @@ class Polyline(Point3dList, IList[Point3d], ICollection[Point3d], IEnumerable[Po
         CollapseShortSegments(self: Polyline, tolerance: float) -> int
         
             Collapses all segments until none are shorter than tolerance. 
-                    This 
-             function is significantly slower than DeleteShortSegments, 
-                    since it 
-             recursively operates on the shortest segment. 
-                    When a segment is 
-             collapsed the end-points are placed in the center of the segment.
+                    This function 
+             is significantly slower than DeleteShortSegments, 
+                    since it recursively 
+             operates on the shortest segment. 
+                    When a segment is collapsed the end-points 
+             are placed in the center of the segment.
         
         
             tolerance: Tolerance to use during collapsing.
@@ -17545,8 +17394,8 @@ class Polyline(Point3dList, IList[Point3d], ICollection[Point3d], IEnumerable[Po
         DeleteShortSegments(self: Polyline, tolerance: float) -> int
         
             Removes all points that are closer than tolerance to the previous point. 
-                
-                 Start and end points are left intact.
+                    
+             Start and end points are left intact.
         
         
             tolerance: Vertices closer together than tolerance will be removed.
@@ -17570,8 +17419,8 @@ class Polyline(Point3dList, IList[Point3d], ICollection[Point3d], IEnumerable[Po
             Determines whether the polyline is closed, provided a tolerance value.
         
             tolerance: If the distance between the start and end point of the polyline 
-                    is 
-             less than tolerance, the polyline is considered to be closed.
+                    is less than 
+             tolerance, the polyline is considered to be closed.
         
             Returns: true if the polyline is closed to within tolerance, false otherwise.
         """
@@ -17582,8 +17431,8 @@ class Polyline(Point3dList, IList[Point3d], ICollection[Point3d], IEnumerable[Po
         PointAt(self: Polyline, t: float) -> Point3d
         
             Gets the point on the polyline at the given parameter. 
-                    The integer 
-             part of the parameter indicates the index of the segment.
+                    The integer part of 
+             the parameter indicates the index of the segment.
         
         
             t: Polyline parameter.
@@ -17595,8 +17444,8 @@ class Polyline(Point3dList, IList[Point3d], ICollection[Point3d], IEnumerable[Po
         """
         ReduceSegments(self: Polyline, tolerance: float) -> int
         
-            Constructs a reduction of this polyline by recursively removing the least 
-             significant segments.
+            Constructs a reduction of this polyline by recursively removing the least significant 
+             segments.
         
         
             tolerance: Tolerance for reduction. Whenever a vertex of the polyline is more 
@@ -17623,8 +17472,8 @@ class Polyline(Point3dList, IList[Point3d], ICollection[Point3d], IEnumerable[Po
         Smooth(self: Polyline, amount: float) -> bool
         
             Smoothens the polyline segments by averaging adjacent vertices. 
-                    
-             Smoothing requires a polyline with exclusively valid vertices.
+                    Smoothing 
+             requires a polyline with exclusively valid vertices.
         
         
             amount: Amount to smooth. Zero equals no smoothing, one equals complete smoothing.
@@ -17637,8 +17486,8 @@ class Polyline(Point3dList, IList[Point3d], ICollection[Point3d], IEnumerable[Po
         TangentAt(self: Polyline, t: float) -> Vector3d
         
             Gets the unit tangent vector along the polyline at the given parameter. 
-                 
-                The integer part of the parameter indicates the index of the segment.
+                    The 
+             integer part of the parameter indicates the index of the segment.
         
         
             t: Polyline parameter.
@@ -17660,8 +17509,8 @@ class Polyline(Point3dList, IList[Point3d], ICollection[Point3d], IEnumerable[Po
         TriangulateClosedPolyline(self: Polyline) -> Array[MeshFace]
         
             Attempts to create a list of triangles which represent a
-                    
-             triangulation of a closed polyline
+                    triangulation of a 
+             closed polyline
         """
         pass
 
@@ -17672,8 +17521,8 @@ class Polyline(Point3dList, IList[Point3d], ICollection[Point3d], IEnumerable[Po
             Constructs a polyline out of a parameter subdomain in this curve.
         
             domain: The subdomain of the polyline. 
-                    The integer part of the domain 
-             parameters indicate the index of the segment.
+                    The integer part of the domain parameters 
+             indicate the index of the segment.
         
             Returns: The polyline as defined by the subdomain, or null on failure.
         """
@@ -17764,17 +17613,17 @@ class PolylineCurve(Curve, IDisposable, ISerializable):
         """
         Dispose(self: Curve, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -17782,8 +17631,8 @@ class PolylineCurve(Curve, IDisposable, ISerializable):
         """
         NonConstOperation(self: Curve)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -17870,11 +17719,10 @@ class Quaternion(object, IEquatable[Quaternion], IEpsilonComparable[Quaternion])
         CrossProduct(p: Quaternion, q: Quaternion) -> Quaternion
         
             Computes the vector cross product of p and q = (0,x,y,z),
-                    where 
-             (x,y,z) = 
-             Rhino.Geometry.Vector3d.CrossProduct(Rhino.Geometry.Vector3d,Rhino.Geometry.Vector3
-             d)CrossProduct(p.Rhino.Geometry.Quaternion.VectorVector,q.Rhino.Geometry.Quaternion
-             .VectorVector).This is not the same as the quaternion product p*q.
+                    where (x,y,z) = 
+             Rhino.Geometry.Vector3d.CrossProduct(Rhino.Geometry.Vector3d,Rhino.Geometry.Vector3d)CrossP
+             roduct(p.Rhino.Geometry.Quaternion.VectorVector,q.Rhino.Geometry.Quaternion.VectorVector).T
+             his is not the same as the quaternion product p*q.
         
         
             p: A quaternion.
@@ -17900,9 +17748,7 @@ class Quaternion(object, IEquatable[Quaternion], IEpsilonComparable[Quaternion])
         """
         DistanceTo(self: Quaternion, q: Quaternion) -> float
         
-            Computes the distance or norm of the difference between this and another 
-             quaternion.
-        
+            Computes the distance or norm of the difference between this and another quaternion.
         
             q: Another quaternion.
             Returns: (this - q).Length.
@@ -17921,9 +17767,7 @@ class Quaternion(object, IEquatable[Quaternion], IEpsilonComparable[Quaternion])
         """
         Equals(self: Quaternion, obj: object) -> bool
         
-            Determines whether an object is a quaternion and has the same value of this 
-             quaternion.
-        
+            Determines whether an object is a quaternion and has the same value of this quaternion.
         
             obj: Another object to compare.
             Returns: true if obj is a quaternion and has exactly equal coefficients; otherwise false.
@@ -17950,8 +17794,8 @@ class Quaternion(object, IEquatable[Quaternion], IEpsilonComparable[Quaternion])
         GetRotation(self: Quaternion) -> (bool, Plane)
         
             Returns the frame created by applying the quaternion's rotation
-                    to 
-             the canonical world frame (1,0,0),(0,1,0),(0,0,1).
+                    to the 
+             canonical world frame (1,0,0),(0,1,0),(0,0,1).
         
             Returns: true if the operation succeeded; otherwise, false.
         GetRotation(self: Quaternion) -> (bool, float, Vector3d)
@@ -17966,10 +17810,10 @@ class Quaternion(object, IEquatable[Quaternion], IEpsilonComparable[Quaternion])
         Invert(self: Quaternion) -> bool
         
             Modifies this quaternion to become
-                    (a/L2, -b/L2, -c/L2, -d/L2),where 
-             L2 = length squared = (a*a + b*b + c*c + d*d).This is the multiplicative inverse, 
-             i.e.,
-                    (a,b,c,d)*(a/L2, -b/L2, -c/L2, -d/L2) = (1,0,0,0).
+                    (a/L2, -b/L2, -c/L2, -d/L2),where L2 = 
+             length squared = (a*a + b*b + c*c + d*d).This is the multiplicative inverse, i.e.,
+               
+                  (a,b,c,d)*(a/L2, -b/L2, -c/L2, -d/L2) = (1,0,0,0).
         
             Returns: true if successful. false if the quaternion is zero and cannot be inverted.
         """
@@ -17981,12 +17825,12 @@ class Quaternion(object, IEquatable[Quaternion], IEpsilonComparable[Quaternion])
         
             Returns 4x4 real valued matrix form of the quaternion
                     a  b  c  d
-            
-                     -b  a -d  c
+                    
+             -b  a -d  c
                     -c  d  a -b
                     -d -c  b  a
-                    
-             which has the same arithmetic properties as the quaternion.
+                    which has the 
+             same arithmetic properties as the quaternion.
         
             Returns: A transform value.
         """
@@ -18010,19 +17854,18 @@ class Quaternion(object, IEquatable[Quaternion], IEpsilonComparable[Quaternion])
         Rotate(self: Quaternion, v: Vector3d) -> Vector3d
         
             Rotates a 3d vector. This operation is also called conjugation,
-                    
-             because the result is the same as
-                    
-             (q.Conjugate()*(0,x,y,x)*q/q.LengthSquared).Vector.
+                    because the 
+             result is the same as
+                    (q.Conjugate()*(0,x,y,x)*q/q.LengthSquared).Vector.
         
         
             v: The vector to be rotated.
             Returns: R*v, where R is the rotation defined by the unit quaternion.
                     This is 
              mathematically the same as the values
-                    (Inverse(q)*(0,x,y,z)*q).Vector
-             
-                    and
+                    (Inverse(q)*(0,x,y,z)*q).Vector
+               
+                  and
                     (q.Conjugate()*(0,x,y,x)*q/q.LengthSquared).Vector.
         """
         pass
@@ -18033,10 +17876,10 @@ class Quaternion(object, IEquatable[Quaternion], IEpsilonComparable[Quaternion])
         Rotation(plane0: Plane, plane1: Plane) -> Quaternion
         
             Returns the unit quaternion that represents the the rotation that maps
-                   
-              plane0.xaxis to plane1.xaxis, plane0.yaxis to plane1.yaxis, and 
                     
-             plane0.zaxis to plane1.zaxis.
+             plane0.xaxis to plane1.xaxis, plane0.yaxis to plane1.yaxis, and 
+                    plane0.zaxis 
+             to plane1.zaxis.
         
         
             plane0: The first plane.
@@ -18045,12 +17888,11 @@ class Quaternion(object, IEquatable[Quaternion], IEpsilonComparable[Quaternion])
         Rotation(angle: float, axisOfRotation: Vector3d) -> Quaternion
         
             Returns the unit quaternion
-                    cos(angle/2), sin(angle/2)*x, 
-             sin(angle/2)*y, sin(angle/2)*z
-                    where (x,y,z) is the unit vector 
-             parallel to axis.  This is the
-                    unit quaternion that represents the 
-             rotation of angle about axis.
+                    cos(angle/2), sin(angle/2)*x, sin(angle/2)*y, 
+             sin(angle/2)*z
+                    where (x,y,z) is the unit vector parallel to axis.  This is 
+             the
+                    unit quaternion that represents the rotation of angle about axis.
         
         
             angle: An angle in radians.
@@ -18070,21 +17912,19 @@ class Quaternion(object, IEquatable[Quaternion], IEpsilonComparable[Quaternion])
         """
         SetRotation(self: Quaternion, plane0: Plane, plane1: Plane)
             Sets the quaternion to the unit quaternion which rotates
-                    plane0.xaxis 
-             to plane1.xaxis, plane0.yaxis to plane1.yaxis,
-                    and plane0.zaxis to 
-             plane1.zaxis.
+                    plane0.xaxis to 
+             plane1.xaxis, plane0.yaxis to plane1.yaxis,
+                    and plane0.zaxis to plane1.zaxis.
         
         
             plane0: The "from" rotation plane. Origin point is ignored.
             plane1: The "to" rotation plane. Origin point is ignored.
         SetRotation(self: Quaternion, angle: float, axisOfRotation: Vector3d)
-            Sets the quaternion to cos(angle/2), sin(angle/2)*x, sin(angle/2)*y, 
-             sin(angle/2)*z
-                    where (x,y,z) is the unit vector parallel to axis.  
-             This is the unit quaternion
-                    that represents the rotation of angle 
-             about axis.
+            Sets the quaternion to cos(angle/2), sin(angle/2)*x, sin(angle/2)*y, sin(angle/2)*z
+              
+                   where (x,y,z) is the unit vector parallel to axis.  This is the unit quaternion
+            
+                     that represents the rotation of angle about axis.
         
         
             angle: in radians.
@@ -18161,8 +18001,8 @@ class Quaternion(object, IEquatable[Quaternion], IEpsilonComparable[Quaternion])
         __rmul__(a: Quaternion, b: Quaternion) -> Quaternion
         
             Multiplies a quaternion with another one.
-                    Quaternion multiplication 
-             (Hamilton product) is not commutative.
+                    Quaternion multiplication (Hamilton 
+             product) is not commutative.
         
         
             a: The first term.
@@ -18176,10 +18016,10 @@ class Quaternion(object, IEquatable[Quaternion], IEpsilonComparable[Quaternion])
         __rsub__(a: Quaternion, b: Quaternion) -> Quaternion
         
             Subtracts a quaternion from another one.
-                    This computes the difference 
-             of each quaternion coefficient with its
-                    correspondant and returns a 
-             new result quaternion.
+                    This computes the difference of each 
+             quaternion coefficient with its
+                    correspondant and returns a new result 
+             quaternion.
         
         
             a: A quaternion.
@@ -18335,17 +18175,17 @@ class RadialDimension(AnnotationBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -18353,8 +18193,8 @@ class RadialDimension(AnnotationBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -18429,13 +18269,12 @@ class Ray3d(object, ISerializable, IEquatable[Ray3d], IEpsilonComparable[Ray3d])
             Returns: true if ray has the same position and direction as this; otherwise false.
         Equals(self: Ray3d, obj: object) -> bool
         
-            Determines whether the specified System.Object is a Ray3d and has the same values 
-             as the present ray.
+            Determines whether the specified System.Object is a Ray3d and has the same values as the 
+             present ray.
         
         
             obj: The specified object.
-            Returns: true if obj is a Ray3d and has the same position and direction as this; otherwise 
-             false.
+            Returns: true if obj is a Ray3d and has the same position and direction as this; otherwise false.
         """
         pass
 
@@ -18522,8 +18361,8 @@ class Rectangle3d(object, IEpsilonComparable[Rectangle3d]):
         
             point: Point to project.
             includeInterior: If false, the point is projected onto the boundary edge only, 
-                    
-             otherwise the interior of the rectangle is also taken into consideration.
+                    otherwise the 
+             interior of the rectangle is also taken into consideration.
         
             Returns: The point on the rectangle closest to the test point or Point3d.Unset on failure.
         ClosestPoint(self: Rectangle3d, point: Point3d) -> Point3d
@@ -18531,8 +18370,7 @@ class Rectangle3d(object, IEpsilonComparable[Rectangle3d]):
             Gets the point on the rectangle that is closest to a test-point.
         
             point: Point to project.
-            Returns: The point on or in the rectangle closest to the test point or Point3d.Unset on 
-             failure.
+            Returns: The point on or in the rectangle closest to the test point or Point3d.Unset on failure.
         """
         pass
 
@@ -18549,8 +18387,8 @@ class Rectangle3d(object, IEpsilonComparable[Rectangle3d]):
         
             Determines if a point is included in this rectangle.
         
-            pt: Point to test. The point will be projected onto the Rectangle plane before 
-             inclusion is determined.
+            pt: Point to test. The point will be projected onto the Rectangle plane before inclusion is 
+             determined.
         
             Returns: Point Rectangle relationship.
         """
@@ -18563,9 +18401,8 @@ class Rectangle3d(object, IEpsilonComparable[Rectangle3d]):
             Gets the corner at the given index.
         
             index: Index of corner, valid values are:
-                    0 = lower left (min-x, min-y)1 = 
-             lower right (max-x, min-y)2 = upper right (max-x, max-y)3 = upper left (min-x, 
-             max-y)
+                    0 = lower left (min-x, min-y)1 = lower 
+             right (max-x, min-y)2 = upper right (max-x, max-y)3 = upper left (min-x, max-y)
         
             Returns: The point at the given corner index.
         """
@@ -18601,8 +18438,8 @@ class Rectangle3d(object, IEpsilonComparable[Rectangle3d]):
             Gets a point along the rectangle boundary.
         
             t: Parameter along rectangle boundary. Valid values range from 0.0 to 4.0, 
-                 
-                where each integer domain represents a single boundary edge.
+                    
+             where each integer domain represents a single boundary edge.
         
             Returns: The point at the given boundary parameter.
         PointAt(self: Rectangle3d, x: float, y: float) -> Point3d
@@ -18625,9 +18462,8 @@ class Rectangle3d(object, IEpsilonComparable[Rectangle3d]):
             Recenters the base plane on one of the corners.
         
             index: Index of corner, valid values are:
-                    0 = lower left (min-x, min-y)1 = 
-             lower right (max-x, min-y)2 = upper right (max-x, max-y)3 = upper left (min-x, 
-             max-y)
+                    0 = lower left (min-x, min-y)1 = lower 
+             right (max-x, min-y)2 = upper right (max-x, max-y)3 = upper left (min-x, max-y)
         """
         pass
 
@@ -18829,9 +18665,9 @@ class RevSurface(Surface, IDisposable, ISerializable):
         Create(revoluteLine: Line, axisOfRevolution: Line) -> RevSurface
         
             Constructs a new surface of revolution from a generatrix line and an axis.
-               
-                  If the operation succeeds, results can be (truncated) cones, cylinders and 
-             circular hyperboloids.
+                    If 
+             the operation succeeds, results can be (truncated) cones, cylinders and circular 
+             hyperboloids.
         
         
             revoluteLine: A generatrix.
@@ -18840,8 +18676,8 @@ class RevSurface(Surface, IDisposable, ISerializable):
         Create(revolutePolyline: Polyline, axisOfRevolution: Line, startAngleRadians: float, endAngleRadians: float) -> RevSurface
         
             Constructs a new surface of revolution from a generatrix polyline and an axis.
-           
-                      This overload accepts a slice start and end angles.
+                   
+              This overload accepts a slice start and end angles.
         
         
             revolutePolyline: A generatrix.
@@ -18859,8 +18695,8 @@ class RevSurface(Surface, IDisposable, ISerializable):
         Create(revoluteCurve: Curve, axisOfRevolution: Line, startAngleRadians: float, endAngleRadians: float) -> RevSurface
         
             Constructs a new surface of revolution from a generatrix curve and an axis.
-              
-                   This overload accepts a slice start and end angles.
+                    
+             This overload accepts a slice start and end angles.
         
         
             revoluteCurve: A generatrix.
@@ -18878,9 +18714,9 @@ class RevSurface(Surface, IDisposable, ISerializable):
         Create(revoluteLine: Line, axisOfRevolution: Line, startAngleRadians: float, endAngleRadians: float) -> RevSurface
         
             Constructs a new surface of revolution from a generatrix line and an axis.
-               
-                  This overload accepts a slice start and end angles.Results can be (truncated) 
-             cones, cylinders and circular hyperboloids, or can fail.
+                    
+             This overload accepts a slice start and end angles.Results can be (truncated) cones, 
+             cylinders and circular hyperboloids, or can fail.
         
         
             revoluteLine: A generatrix.
@@ -18943,17 +18779,17 @@ class RevSurface(Surface, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -18961,8 +18797,8 @@ class RevSurface(Surface, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -19021,8 +18857,8 @@ class RTree(object, IDisposable):
         CreateMeshFaceTree(mesh: Mesh) -> RTree
         
             Constructs a new tree with an element for each face in the mesh.
-                    The 
-             element id is set to the index of the face.
+                    The element 
+             id is set to the index of the face.
         
         
             mesh: A mesh.
@@ -19335,8 +19171,8 @@ class Sphere(object, IEpsilonComparable[Sphere]):
             Finds the angle parameters on this sphere that are closest to a test point.
         
             testPoint: Point to project onto the sphere.
-            Returns: true on success, false on failure. This function will fail if the point it 
-             coincident with the sphere center.
+            Returns: true on success, false on failure. This function will fail if the point it coincident with 
+             the sphere center.
         """
         pass
 
@@ -19369,8 +19205,8 @@ class Sphere(object, IEpsilonComparable[Sphere]):
         LatitudeDegrees(self: Sphere, degrees: float) -> Circle
         
             Computes the parallel at a specific latitude angle.
-                    The angle is 
-             specified in degrees.
+                    The angle is specified in 
+             degrees.
         
         
             degrees: An angle in degrees for the meridian.
@@ -19383,8 +19219,8 @@ class Sphere(object, IEpsilonComparable[Sphere]):
         LatitudeRadians(self: Sphere, radians: float) -> Circle
         
             Computes the parallel at a specific latitude angle.
-                    The angle is 
-             specified in radians.
+                    The angle is specified in 
+             radians.
         
         
             radians: An angle in radians for the parallel.
@@ -19397,8 +19233,8 @@ class Sphere(object, IEpsilonComparable[Sphere]):
         LongitudeDegrees(self: Sphere, degrees: float) -> Circle
         
             Computes the meridian at a specific longitude angle.
-                    The angle is 
-             specified in degrees.
+                    The angle is specified 
+             in degrees.
         
         
             degrees: An angle in degrees.
@@ -19411,8 +19247,8 @@ class Sphere(object, IEpsilonComparable[Sphere]):
         LongitudeRadians(self: Sphere, radians: float) -> Circle
         
             Computes the meridian at a specific longitude angle.
-                    The angle is 
-             specified in radians.
+                    The angle is specified 
+             in radians.
         
         
             radians: An angle in radians.
@@ -19494,8 +19330,8 @@ class Sphere(object, IEpsilonComparable[Sphere]):
         ToNurbsSurface(self: Sphere) -> NurbsSurface
         
             Converts this sphere to its NurbsSurface representation. 
-                    This is 
-             synonymous with calling NurbsSurface.CreateFromSphere().
+                    This is synonymous 
+             with calling NurbsSurface.CreateFromSphere().
         
             Returns: A nurbs surface representation of this sphere or null.
         """
@@ -19506,8 +19342,8 @@ class Sphere(object, IEpsilonComparable[Sphere]):
         ToRevSurface(self: Sphere) -> RevSurface
         
             Converts this Sphere to a RevSurface representation. 
-                    This is 
-             synonymous with calling RevSurface.CreateFromSphere().
+                    This is synonymous with 
+             calling RevSurface.CreateFromSphere().
         
             Returns: A surface of revolution representation of this sphere or null.
         """
@@ -19518,8 +19354,8 @@ class Sphere(object, IEpsilonComparable[Sphere]):
         Transform(self: Sphere, xform: Transform) -> bool
         
             Transforms this sphere. Note that non-similarity preserving transformations 
-             
-                    cannot be applied to a sphere as that would result in an ellipsoid.
+                    
+             cannot be applied to a sphere as that would result in an ellipsoid.
         
         
             xform: Transformation matrix to apply.
@@ -19660,17 +19496,17 @@ class SumSurface(Surface, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -19678,8 +19514,8 @@ class SumSurface(Surface, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -19991,17 +19827,17 @@ class TextDot(GeometryBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -20009,8 +19845,8 @@ class TextDot(GeometryBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -20106,17 +19942,17 @@ class TextEntity(AnnotationBase, IDisposable, ISerializable):
         """
         Dispose(self: CommonObject, disposing: bool)
             For derived class implementers.
-                    This method is called with argument 
-             true when class user calls Dispose(), while with argument false when
-                    
-             the Garbage Collector invokes the finalizer, or Finalize() method.You must reclaim 
-             all used unmanaged resources in both cases, and can use this chance to call 
-             Dispose on disposable fields if the argument is true.Also, you must call the base 
-             virtual method within your overriding method.
+                    This method is called with argument true when 
+             class user calls Dispose(), while with argument false when
+                    the Garbage 
+             Collector invokes the finalizer, or Finalize() method.You must reclaim all used unmanaged 
+             resources in both cases, and can use this chance to call Dispose on disposable fields if 
+             the argument is true.Also, you must call the base virtual method within your overriding 
+             method.
         
         
-            disposing: true if the call comes from the Dispose() method; false if it comes from the 
-             Garbage Collector finalizer.
+            disposing: true if the call comes from the Dispose() method; false if it comes from the Garbage 
+             Collector finalizer.
         """
         pass
 
@@ -20133,8 +19969,8 @@ class TextEntity(AnnotationBase, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -20315,8 +20151,8 @@ class Torus(object, IEpsilonComparable[Torus]):
         ToNurbsSurface(self: Torus) -> NurbsSurface
         
             Converts this torus to its nurbs surface representation. 
-                    This is 
-             synonymous with calling NurbsSurface.CreateFromTorus().
+                    This is synonymous 
+             with calling NurbsSurface.CreateFromTorus().
         
             Returns: A nurbs surface representation of this torus, or null on error.
         """
@@ -20327,8 +20163,8 @@ class Torus(object, IEpsilonComparable[Torus]):
         ToRevSurface(self: Torus) -> RevSurface
         
             Convert this torus to a surface of revolution representation. 
-                    This 
-             is synonymous with calling RevSurface.CreateFromTorus().
+                    This is 
+             synonymous with calling RevSurface.CreateFromTorus().
         
             Returns: A surface of revolution representation of this torus, or null on error.
         """
@@ -20404,9 +20240,9 @@ class Transform(object, IComparable[Transform], IEquatable[Transform]):
         """
         ChangeBasis(initialBasisX: Vector3d, initialBasisY: Vector3d, initialBasisZ: Vector3d, finalBasisX: Vector3d, finalBasisY: Vector3d, finalBasisZ: Vector3d) -> Transform
         
-            Computes a change of basis transformation. A basis change is essentially a 
-             remapping 
-                    of geometry from one coordinate system to another.
+            Computes a change of basis transformation. A basis change is essentially a remapping 
+            
+                     of geometry from one coordinate system to another.
         
         
             initialBasisX: can be any 3d basis.
@@ -20415,21 +20251,21 @@ class Transform(object, IComparable[Transform], IEquatable[Transform]):
             finalBasisX: can be any 3d basis.
             finalBasisY: can be any 3d basis.
             finalBasisZ: can be any 3d basis.
-            Returns: A transformation matrix which orients geometry from one coordinate system to 
-             another on success.
+            Returns: A transformation matrix which orients geometry from one coordinate system to another on 
+             success.
                     Transform.Unset on failure.
         
         ChangeBasis(plane0: Plane, plane1: Plane) -> Transform
         
-            Computes a change of basis transformation. A basis change is essentially a 
-             remapping 
-                    of geometry from one coordinate system to another.
+            Computes a change of basis transformation. A basis change is essentially a remapping 
+            
+                     of geometry from one coordinate system to another.
         
         
             plane0: Coordinate system in which the geometry is currently described.
             plane1: Target coordinate system in which we want the geometry to be described.
-            Returns: A transformation matrix which orients geometry from one coordinate system to 
-             another on success.
+            Returns: A transformation matrix which orients geometry from one coordinate system to another on 
+             success.
                     Transform.Unset on failure.
         """
         pass
@@ -20439,8 +20275,8 @@ class Transform(object, IComparable[Transform], IEquatable[Transform]):
         CompareTo(self: Transform, other: Transform) -> int
         
             Compares this transform with another transform.
-                    M33 has highest 
-             value, then M32, etc..
+                    M33 has highest value, then 
+             M32, etc..
         
         
             other: Another transform.
@@ -20458,13 +20294,10 @@ class Transform(object, IComparable[Transform], IEquatable[Transform]):
             Returns: true if other has the same value as this transform; otherwise, false.
         Equals(self: Transform, obj: object) -> bool
         
-            Determines if another object is a transform and its value equals this transform 
-             value.
-        
+            Determines if another object is a transform and its value equals this transform value.
         
             obj: Another object.
-            Returns: true if obj is a transform and has the same value as this transform; otherwise, 
-             false.
+            Returns: true if obj is a transform and has the same value as this transform; otherwise, false.
         """
         pass
 
@@ -20489,11 +20322,11 @@ class Transform(object, IComparable[Transform], IEquatable[Transform]):
         Mirror(pointOnMirrorPlane: Point3d, normalToMirrorPlane: Vector3d) -> Transform
         
             Create mirror transformation matrix
-                    The mirror transform maps a point 
-             Q to 
-                    Q - (2*(Q-P)oN)*N, where
-                    P = pointOnMirrorPlane 
-             and N = normalToMirrorPlane.
+                    The mirror transform maps a point Q to 
+         
+                        Q - (2*(Q-P)oN)*N, where
+                    P = pointOnMirrorPlane and N = 
+             normalToMirrorPlane.
         
         
             pointOnMirrorPlane: Point on the mirror plane.
@@ -20508,16 +20341,15 @@ class Transform(object, IComparable[Transform], IEquatable[Transform]):
         Multiply(a: Transform, b: Transform) -> Transform
         
             Multiplies (combines) two transformations.
-                    This is the same as the * 
-             operator between two transformations.
+                    This is the same as the * operator 
+             between two transformations.
         
         
             a: First transformation.
             b: Second transformation.
             Returns: A transformation matrix that combines the effect of both input transformations. 
-         
-                        The resulting Transform gives the same result as though you'd first 
-             apply A then B.
+                 
+                The resulting Transform gives the same result as though you'd first apply A then B.
         """
         pass
 
@@ -20543,9 +20375,7 @@ class Transform(object, IComparable[Transform], IEquatable[Transform]):
         """
         Rotation(startDirection: Vector3d, endDirection: Vector3d, rotationCenter: Point3d) -> Transform
         
-            Constructs a new rotation transformation with start and end directions and 
-             rotation center.
-        
+            Constructs a new rotation transformation with start and end directions and rotation center.
         
             startDirection: A start direction.
             endDirection: An end direction.
@@ -20598,9 +20428,7 @@ class Transform(object, IComparable[Transform], IEquatable[Transform]):
         """
         Scale(plane: Plane, xScaleFactor: float, yScaleFactor: float, zScaleFactor: float) -> Transform
         
-            Constructs a new non-uniform scaling transformation with a specified scaling 
-             anchor point.
-        
+            Constructs a new non-uniform scaling transformation with a specified scaling anchor point.
         
             plane: Defines the center and orientation of the scaling operation.
             xScaleFactor: Scaling factor along the anchor plane X-Axis direction.
@@ -20609,9 +20437,7 @@ class Transform(object, IComparable[Transform], IEquatable[Transform]):
             Returns: A transformation matrix which scales geometry non-uniformly.
         Scale(anchor: Point3d, scaleFactor: float) -> Transform
         
-            Constructs a new uniform scaling transformation with a specified scaling anchor 
-             point.
-        
+            Constructs a new uniform scaling transformation with a specified scaling anchor point.
         
             anchor: Defines the anchor point of the scaling operation.
             scaleFactor: Scaling factor in all directions.
@@ -20656,10 +20482,9 @@ class Transform(object, IComparable[Transform], IEquatable[Transform]):
         TransformBoundingBox(self: Transform, bbox: BoundingBox) -> BoundingBox
         
             Computes a new boundingbox that is the smallest axis aligned
-                    
-             boundingbox that contains the transformed result of its 8 original corner
-                
-                 points.
+                    boundingbox that 
+             contains the transformed result of its 8 original corner
+                    points.
         
             Returns: A new bounding box.
         """
@@ -20675,8 +20500,8 @@ class Transform(object, IComparable[Transform], IEquatable[Transform]):
         Translation(dx: float, dy: float, dz: float) -> Transform
         
             Constructs a new translation (move) tranformation. 
-                    Right column is 
-             (dx, dy, dz, 1.0).
+                    Right column is (dx, dy, 
+             dz, 1.0).
         
         
             dx: Distance to translate (move) geometry along the world X axis.
@@ -20708,8 +20533,8 @@ class Transform(object, IComparable[Transform], IEquatable[Transform]):
             Returns: true on success. 
                     If false is returned and this Transform is Invalid, 
              inserveTransform will be set to this Transform. 
-                    If false is returned 
-             and this Transform is Valid, inverseTransform will be set to a pseudo inverse.
+                    If false is returned and 
+             this Transform is Valid, inverseTransform will be set to a pseudo inverse.
         """
         pass
 
@@ -20757,9 +20582,8 @@ class Transform(object, IComparable[Transform], IEquatable[Transform]):
             a: First transformation.
             b: Second transformation.
             Returns: A transformation matrix that combines the effect of both input transformations. 
-         
-                        The resulting Transform gives the same result as though you'd first 
-             apply A then B.
+                 
+                The resulting Transform gives the same result as though you'd first apply A then B.
         """
         pass
 
@@ -21078,13 +20902,13 @@ class Vector2d(object, ISerializable, IEquatable[Vector2d], IComparable[Vector2d
         CompareTo(self: Vector2d, other: Vector2d) -> int
         
             Compares this Rhino.Geometry.Vector2d with another Rhino.Geometry.Vector2d.
-              
-                   Components evaluation priority is first X, then Y.
+                    
+             Components evaluation priority is first X, then Y.
         
         
             other: The other Rhino.Geometry.Vector2d to use in comparison.
-            Returns: 0: if this is identical to other-1: if this.X < other.X-1: if this.X == other.X 
-             and this.Y < other.Y+1: otherwise.
+            Returns: 0: if this is identical to other-1: if this.X < other.X-1: if this.X == other.X and this.Y 
+             < other.Y+1: otherwise.
         """
         pass
 
@@ -21106,8 +20930,8 @@ class Vector2d(object, ISerializable, IEquatable[Vector2d], IComparable[Vector2d
             Returns: true if vector has the same components as this; otherwise false.
         Equals(self: Vector2d, obj: object) -> bool
         
-            Determines whether the specified System.Object is a Vector2d and has the same 
-             value as the present vector.
+            Determines whether the specified System.Object is a Vector2d and has the same value as the 
+             present vector.
         
         
             obj: The specified object.
@@ -21138,8 +20962,8 @@ class Vector2d(object, ISerializable, IEquatable[Vector2d], IComparable[Vector2d
         Unitize(self: Vector2d) -> bool
         
             Unitizes the vector in place. A unit vector has length 1 unit. 
-                    An 
-             invalid or zero length vector cannot be unitized.
+                    An invalid or 
+             zero length vector cannot be unitized.
         
             Returns: true on success or false on failure.
         """
@@ -21234,13 +21058,13 @@ class Vector2f(object, IEquatable[Vector2f], IComparable[Vector2f], IComparable,
         CompareTo(self: Vector2f, other: Vector2f) -> int
         
             Compares this Rhino.Geometry.Vector2f with another Rhino.Geometry.Vector2f.
-              
-                   Components evaluation priority is first X, then Y.
+                    
+             Components evaluation priority is first X, then Y.
         
         
             other: The other Rhino.Geometry.Vector2f to use in comparison.
-            Returns: 0: if this is identical to other-1: if this.X < other.X-1: if this.X == other.X 
-             and this.Y < other.Y+1: otherwise.
+            Returns: 0: if this is identical to other-1: if this.X < other.X-1: if this.X == other.X and this.Y 
+             < other.Y+1: otherwise.
         """
         pass
 
@@ -21262,8 +21086,8 @@ class Vector2f(object, IEquatable[Vector2f], IComparable[Vector2f], IComparable,
             Returns: true if obj is Vector2f and has the same coordinates as this; otherwise false.
         Equals(self: Vector2f, obj: object) -> bool
         
-            Determines whether the specified System.Object is a Vector2f and has the same 
-             values as the present vector.
+            Determines whether the specified System.Object is a Vector2f and has the same values as 
+             the present vector.
         
         
             obj: The specified object.
@@ -21356,8 +21180,8 @@ class Vector3d(object, ISerializable, IEquatable[Vector3d], IComparable[Vector3d
         Add(vector1: Vector3d, vector2: Vector3d) -> Vector3d
         
             Sums up two vectors.
-                    (Provided for languages that do not support 
-             operator overloading. You can use the + operator otherwise)
+                    (Provided for languages that do not support operator 
+             overloading. You can use the + operator otherwise)
         
         
             vector1: A vector.
@@ -21371,14 +21195,13 @@ class Vector3d(object, ISerializable, IEquatable[Vector3d], IComparable[Vector3d
         CompareTo(self: Vector3d, other: Vector3d) -> int
         
             Compares this Rhino.Geometry.Vector3d with another Rhino.Geometry.Vector3d.
-              
-                   Component evaluation priority is first X, then Y, then Z.
+                    
+             Component evaluation priority is first X, then Y, then Z.
         
         
             other: The other Rhino.Geometry.Vector3d to use in comparison.
-            Returns: 0: if this is identical to other-1: if this.X < other.X-1: if this.X == other.X 
-             and this.Y < other.Y-1: if this.X == other.X and this.Y == other.Y and this.Z < 
-             other.Z+1: otherwise.
+            Returns: 0: if this is identical to other-1: if this.X < other.X-1: if this.X == other.X and this.Y 
+             < other.Y-1: if this.X == other.X and this.Y == other.Y and this.Z < other.Z+1: otherwise.
         """
         pass
 
@@ -21387,17 +21210,16 @@ class Vector3d(object, ISerializable, IEquatable[Vector3d], IComparable[Vector3d
         """
         CrossProduct(a: Vector3d, b: Vector3d) -> Vector3d
         
-            Computes the cross product (or vector product, or exterior product) of two 
-             vectors.
-                    This operation is not commutative.
+            Computes the cross product (or vector product, or exterior product) of two vectors.
+              
+                   This operation is not commutative.
         
         
             a: First vector.
             b: Second vector.
             Returns: A new vector that is perpendicular to both a and b,
-                    has Length == 
-             a.Length * b.Length andwith a result that is oriented following the right hand 
-             rule.
+                    has Length == a.Length * 
+             b.Length andwith a result that is oriented following the right hand rule.
         """
         pass
 
@@ -21407,9 +21229,9 @@ class Vector3d(object, ISerializable, IEquatable[Vector3d], IComparable[Vector3d
         Divide(vector: Vector3d, t: float) -> Vector3d
         
             Divides a Rhino.Geometry.Vector3d by a number, having the effect of shrinking it.
-        
-                         (Provided for languages that do not support operator overloading. You 
-             can use the / operator otherwise)
+                
+                 (Provided for languages that do not support operator overloading. You can use the / 
+             operator otherwise)
         
         
             vector: A vector.
@@ -21436,8 +21258,8 @@ class Vector3d(object, ISerializable, IEquatable[Vector3d], IComparable[Vector3d
             Returns: true if vector has the same coordinates as this; otherwise false.
         Equals(self: Vector3d, obj: object) -> bool
         
-            Determines whether the specified System.Object is a Vector3d and has the same 
-             values as the present vector.
+            Determines whether the specified System.Object is a Vector3d and has the same values as 
+             the present vector.
         
         
             obj: The specified object.
@@ -21458,28 +21280,24 @@ class Vector3d(object, ISerializable, IEquatable[Vector3d], IComparable[Vector3d
         """
         IsParallelTo(self: Vector3d, other: Vector3d, angleTolerance: float) -> int
         
-            Determines whether this vector is parallel to another vector, within a provided 
-             tolerance.
-        
+            Determines whether this vector is parallel to another vector, within a provided tolerance.
         
             other: Vector to use for comparison.
             angleTolerance: Angle tolerance (in radians).
             Returns: Parallel indicator:
-                    +1 = both vectors are parallel.0 = vectors are 
-             not parallel or at least one of the vectors is zero.-1 = vectors are 
-             anti-parallel.
+                    +1 = both vectors are parallel.0 = vectors are not 
+             parallel or at least one of the vectors is zero.-1 = vectors are anti-parallel.
         
         IsParallelTo(self: Vector3d, other: Vector3d) -> int
         
-            Determines whether this vector is parallel to another vector, within one degree 
-             (within Pi / 180).
+            Determines whether this vector is parallel to another vector, within one degree (within Pi 
+             / 180).
         
         
             other: Vector to use for comparison.
             Returns: Parallel indicator:
-                    +1 = both vectors are parallel 0 = vectors are 
-             not parallel, or at least one of the vectors is zero-1 = vectors are 
-             anti-parallel.
+                    +1 = both vectors are parallel 0 = vectors are not 
+             parallel, or at least one of the vectors is zero-1 = vectors are anti-parallel.
         """
         pass
 
@@ -21487,20 +21305,16 @@ class Vector3d(object, ISerializable, IEquatable[Vector3d], IComparable[Vector3d
         """
         IsPerpendicularTo(self: Vector3d, other: Vector3d, angleTolerance: float) -> bool
         
-            Determines whether this vector is perpendicular to another vector, within a 
-             provided angle tolerance.
+            Determines whether this vector is perpendicular to another vector, within a provided angle 
+             tolerance.
         
         
             other: Vector to use for comparison.
             angleTolerance: Angle tolerance (in radians).
-            Returns: true if vectors form Pi-radians (90-degree) angles with each other; otherwise 
-             false.
-        
+            Returns: true if vectors form Pi-radians (90-degree) angles with each other; otherwise false.
         IsPerpendicularTo(self: Vector3d, other: Vector3d) -> bool
         
-            Test to see whether this vector is perpendicular to within one degree of another 
-             one.
-        
+            Test to see whether this vector is perpendicular to within one degree of another one.
         
             other: Vector to compare to.
             Returns: true if both vectors are perpendicular, false if otherwise.
@@ -21519,8 +21333,7 @@ class Vector3d(object, ISerializable, IEquatable[Vector3d], IComparable[Vector3d
         
             tolerance: A nonzero value used as the coordinate zero tolerance.
                     .
-            Returns: (Math.Abs(X) <= tiny_tol) AND (Math.Abs(Y) <= tiny_tol) AND (Math.Abs(Z) <= 
-             tiny_tol).
+            Returns: (Math.Abs(X) <= tiny_tol) AND (Math.Abs(Y) <= tiny_tol) AND (Math.Abs(Z) <= tiny_tol).
         """
         pass
 
@@ -21530,25 +21343,25 @@ class Vector3d(object, ISerializable, IEquatable[Vector3d], IComparable[Vector3d
         Multiply(vector1: Vector3d, vector2: Vector3d) -> float
         
             Multiplies two vectors together, returning the dot product (or inner product).
-           
-                      This differs from the cross product.
-                    (Provided for languages 
-             that do not support operator overloading. You can use the * operator otherwise)
+                   
+              This differs from the cross product.
+                    (Provided for languages that do not 
+             support operator overloading. You can use the * operator otherwise)
         
         
             vector1: A vector.
             vector2: A second vector.
             Returns: A value that results from the evaluation of v1.X*v2.X + v1.Y*v2.Y + v1.Z*v2.Z.
-           
-                      This value equals v1.Length * v2.Length * cos(alpha), where alpha is the 
-             angle between vectors.
+                   
+              This value equals v1.Length * v2.Length * cos(alpha), where alpha is the angle between 
+             vectors.
         
         Multiply(t: float, vector: Vector3d) -> Vector3d
         
             Multiplies a vector by a number, having the effect of scaling it.
-                    
-             (Provided for languages that do not support operator overloading. You can use the 
-             * operator otherwise)
+                    (Provided 
+             for languages that do not support operator overloading. You can use the * operator 
+             otherwise)
         
         
             t: A number.
@@ -21557,9 +21370,9 @@ class Vector3d(object, ISerializable, IEquatable[Vector3d], IComparable[Vector3d
         Multiply(vector: Vector3d, t: float) -> Vector3d
         
             Multiplies a vector by a number, having the effect of scaling it.
-                    
-             (Provided for languages that do not support operator overloading. You can use the 
-             * operator otherwise)
+                    (Provided 
+             for languages that do not support operator overloading. You can use the * operator 
+             otherwise)
         
         
             vector: A vector.
@@ -21574,8 +21387,8 @@ class Vector3d(object, ISerializable, IEquatable[Vector3d], IComparable[Vector3d
         Negate(vector: Vector3d) -> Vector3d
         
             Computes the opposite vector.
-                    (Provided for languages that do not 
-             support operator overloading. You can use the - unary operator otherwise)
+                    (Provided for languages that do not support 
+             operator overloading. You can use the - unary operator otherwise)
         
         
             vector: A vector to negate.
@@ -21588,8 +21401,8 @@ class Vector3d(object, ISerializable, IEquatable[Vector3d], IComparable[Vector3d
         PerpendicularTo(self: Vector3d, other: Vector3d) -> bool
         
             Sets this vector to be perpendicular to another vector. 
-                     Result is 
-             not unitized.
+                     Result is not 
+             unitized.
         
         
             other: Vector to use as guide.
@@ -21602,8 +21415,8 @@ class Vector3d(object, ISerializable, IEquatable[Vector3d], IComparable[Vector3d
         Reverse(self: Vector3d) -> bool
         
             Reverses (inverts) this vector in place.
-                     If this vector is Invalid, 
-             no changes will occur and false will be returned.
+                     If this vector is Invalid, no 
+             changes will occur and false will be returned.
         
             Returns: true on success or false if the vector is invalid.
         """
@@ -21627,9 +21440,8 @@ class Vector3d(object, ISerializable, IEquatable[Vector3d], IComparable[Vector3d
         Subtract(vector1: Vector3d, vector2: Vector3d) -> Vector3d
         
             Subtracts the second vector from the first one.
-                    (Provided for 
-             languages that do not support operator overloading. You can use the - operator 
-             otherwise)
+                    (Provided for languages that 
+             do not support operator overloading. You can use the - operator otherwise)
         
         
             vector1: A vector.
@@ -21651,8 +21463,8 @@ class Vector3d(object, ISerializable, IEquatable[Vector3d], IComparable[Vector3d
         """
         Transform(self: Vector3d, transformation: Transform)
             Transforms the vector in place.
-                    The transformation matrix acts on the 
-             left of the vector; i.e.,result = transformation*vector
+                    The transformation matrix acts on the left of 
+             the vector; i.e.,result = transformation*vector
         
         
             transformation: Transformation matrix to apply.
@@ -21664,8 +21476,8 @@ class Vector3d(object, ISerializable, IEquatable[Vector3d], IComparable[Vector3d
         Unitize(self: Vector3d) -> bool
         
             Unitizes the vector in place. A unit vector has length 1 unit. 
-                    An 
-             invalid or zero length vector cannot be unitized.
+                    An invalid or 
+             zero length vector cannot be unitized.
         
             Returns: true on success or false on failure.
         """
@@ -21691,8 +21503,8 @@ class Vector3d(object, ISerializable, IEquatable[Vector3d], IComparable[Vector3d
         
             a: First vector for angle.
             b: Second vector for angle.
-            Returns: If the input is valid, the angle (in radians) between a and b; 
-             RhinoMath.UnsetValue otherwise.
+            Returns: If the input is valid, the angle (in radians) between a and b; RhinoMath.UnsetValue 
+             otherwise.
         """
         pass
 
@@ -21775,16 +21587,16 @@ class Vector3d(object, ISerializable, IEquatable[Vector3d], IComparable[Vector3d
         __rmul__(vector1: Vector3d, vector2: Vector3d) -> float
         
             Multiplies two vectors together, returning the dot product (or inner product).
-           
-                      This differs from the cross product.
+                   
+              This differs from the cross product.
         
         
             vector1: A vector.
             vector2: A second vector.
             Returns: A value that results from the evaluation of v1.X*v2.X + v1.Y*v2.Y + v1.Z*v2.Z.
-           
-                      This value equals v1.Length * v2.Length * cos(alpha), where alpha is the 
-             angle between vectors.
+                   
+              This value equals v1.Length * v2.Length * cos(alpha), where alpha is the angle between 
+             vectors.
         
         __rmul__(t: float, vector: Vector3d) -> Vector3d
         
@@ -21922,8 +21734,7 @@ class Vector3f(object, IEquatable[Vector3f], IComparable[Vector3f], IComparable,
         
             Sums up a point and a vector, and returns a new point.
                     (Provided for 
-             languages that do not support operator overloading. You can use the + operator 
-             otherwise)
+             languages that do not support operator overloading. You can use the + operator otherwise)
         
         
             point: A point.
@@ -21937,14 +21748,13 @@ class Vector3f(object, IEquatable[Vector3f], IComparable[Vector3f], IComparable,
         CompareTo(self: Vector3f, other: Vector3f) -> int
         
             Compares this Rhino.Geometry.Vector3f with another Rhino.Geometry.Vector3f.
-              
-                   Component evaluation priority is first X, then Y, then Z.
+                    
+             Component evaluation priority is first X, then Y, then Z.
         
         
             other: The other Rhino.Geometry.Vector3f to use in comparison.
-            Returns: 0: if this is identical to other-1: if this.X < other.X-1: if this.X == other.X 
-             and this.Y < other.Y-1: if this.X == other.X and this.Y == other.Y and this.Z < 
-             other.Z+1: otherwise.
+            Returns: 0: if this is identical to other-1: if this.X < other.X-1: if this.X == other.X and this.Y 
+             < other.Y-1: if this.X == other.X and this.Y == other.Y and this.Z < other.Z+1: otherwise.
         """
         pass
 
@@ -21953,17 +21763,16 @@ class Vector3f(object, IEquatable[Vector3f], IComparable[Vector3f], IComparable,
         """
         CrossProduct(a: Vector3f, b: Vector3f) -> Vector3f
         
-            Computes the cross product (or vector product, or exterior product) of two 
-             vectors.
-                    This operation is not commutative.
+            Computes the cross product (or vector product, or exterior product) of two vectors.
+              
+                   This operation is not commutative.
         
         
             a: First vector.
             b: Second vector.
             Returns: A new vector that is perpendicular to both a and b,
-                    has Length == 
-             a.Length * b.Length andwith a result that is oriented following the right hand 
-             rule.
+                    has Length == a.Length * 
+             b.Length andwith a result that is oriented following the right hand rule.
         """
         pass
 
@@ -21985,8 +21794,8 @@ class Vector3f(object, IEquatable[Vector3f], IComparable[Vector3f], IComparable,
             Returns: true if vector has the same components as this; otherwise false.
         Equals(self: Vector3f, obj: object) -> bool
         
-            Determines whether the specified System.Object is a Vector3f and has the same 
-             values as the present vector.
+            Determines whether the specified System.Object is a Vector3f and has the same values as 
+             the present vector.
         
         
             obj: The specified object.
@@ -22009,9 +21818,9 @@ class Vector3f(object, IEquatable[Vector3f], IComparable[Vector3f], IComparable,
         Multiply(t: Single, vector: Vector3f) -> Vector3f
         
             Multiplies a vector by a number, having the effect of scaling it.
-                    
-             (Provided for languages that do not support operator overloading. You can use the 
-             * operator otherwise)
+                    (Provided 
+             for languages that do not support operator overloading. You can use the * operator 
+             otherwise)
         
         
             t: A number.
@@ -22020,9 +21829,9 @@ class Vector3f(object, IEquatable[Vector3f], IComparable[Vector3f], IComparable,
         Multiply(vector: Vector3f, t: Single) -> Vector3f
         
             Multiplies a vector by a number, having the effect of scaling it.
-                    
-             (Provided for languages that do not support operator overloading. You can use the 
-             * operator otherwise)
+                    (Provided 
+             for languages that do not support operator overloading. You can use the * operator 
+             otherwise)
         
         
             vector: A vector.
@@ -22036,8 +21845,8 @@ class Vector3f(object, IEquatable[Vector3f], IComparable[Vector3f], IComparable,
         PerpendicularTo(self: Vector3f, other: Vector3f) -> bool
         
             Sets this vector to be perpendicular to another vector. 
-                     Result is 
-             not unitized.
+                     Result is not 
+             unitized.
         
         
             other: Vector to use as guide.
@@ -22052,8 +21861,8 @@ class Vector3f(object, IEquatable[Vector3f], IComparable[Vector3f], IComparable,
             Reverses (inverts) this vector in place.
                      If this vector contains 
              RhinoMath.UnsetValue, the 
-                     reverse will also be invalid and false 
-             will be returned.
+                     reverse will also be invalid and false will be 
+             returned.
         
             Returns: true on success or false if the vector is invalid.
         """
@@ -22084,8 +21893,8 @@ class Vector3f(object, IEquatable[Vector3f], IComparable[Vector3f], IComparable,
         """
         Transform(self: Vector3f, transformation: Transform)
             Transforms the vector in place.
-                    The transformation matrix acts on the 
-             left of the vector; i.e.,result = transformation*vector
+                    The transformation matrix acts on the left of 
+             the vector; i.e.,result = transformation*vector
         
         
             transformation: Transformation matrix to apply.
@@ -22097,8 +21906,8 @@ class Vector3f(object, IEquatable[Vector3f], IComparable[Vector3f], IComparable,
         Unitize(self: Vector3f) -> bool
         
             Unitizes the vector in place. A unit vector has length 1 unit. 
-                    An 
-             invalid or zero length vector cannot be unitized.
+                    An invalid or 
+             zero length vector cannot be unitized.
         
             Returns: true on success or false on failure.
         """

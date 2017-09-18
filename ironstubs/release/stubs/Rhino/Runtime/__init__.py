@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Rhino.Runtime calls itself Runtime
-# from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null, RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530
+# from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530
 # by generator 1.145
 """ NamespaceTracker represent a CLS namespace. """
 # no imports
@@ -15,8 +15,8 @@ class AssemblyResolver(object):
         """
         AddSearchFile(file: str)
             Register another file with the Assembly Resolver. File must be a .NET assembly, 
-         
-                        so it should probably be a dll, rhp or exe.
+                 
+                so it should probably be a dll, rhp or exe.
         
         
             file: Path of file to include during Assembly Resolver events.
@@ -30,9 +30,8 @@ class AssemblyResolver(object):
             Register a custom folder with the Assembly Resolver. Folders will be 
                     
              searched recursively, so this could potentially be a very expensive operation. 
-          
-                       If at all possible, you should consider only registering individual 
-             files.
+                  
+               If at all possible, you should consider only registering individual files.
         
         
             folder: Path of folder to include during Assembly Resolver events.
@@ -67,12 +66,11 @@ class CommonObject(object, IDisposable, ISerializable):
     def EnsurePrivateCopy(self):
         """
         EnsurePrivateCopy(self: CommonObject)
-            If you want to keep a copy of this class around by holding onto it in a variable 
-             after a command
-                    completes, call EnsurePrivateCopy to make sure that 
-             this class is not tied to the document. You can
-                    call this function as 
-             many times as you want.
+            If you want to keep a copy of this class around by holding onto it in a variable after a 
+             command
+                    completes, call EnsurePrivateCopy to make sure that this class is not 
+             tied to the document. You can
+                    call this function as many times as you want.
         """
         pass
 
@@ -84,8 +82,7 @@ class CommonObject(object, IDisposable, ISerializable):
         
         
             info: The System.Runtime.Serialization.SerializationInfo to populate with data.
-            context: The destination (see System.Runtime.Serialization.StreamingContext) for this 
-             serialization.
+            context: The destination (see System.Runtime.Serialization.StreamingContext) for this serialization.
         """
         pass
 
@@ -94,8 +91,8 @@ class CommonObject(object, IDisposable, ISerializable):
         IsValidWithLog(self: CommonObject) -> (bool, str)
         
             Determines if an object is valid. Also provides a report on errors if this
-               
-                  object happens not to be valid.
+                    
+             object happens not to be valid.
         
             Returns: true if this object is valid; false otherwise.
         """
@@ -105,8 +102,8 @@ class CommonObject(object, IDisposable, ISerializable):
         """
         NonConstOperation(self: CommonObject)
             For derived classes implementers.
-                    Defines the necessary 
-             implementation to free the instance from being const.
+                    Defines the necessary implementation to 
+             free the instance from being const.
         """
         pass
 
@@ -226,17 +223,12 @@ class HostUtils(object):
             Determines if the RDK is loaded.
         
             throwOnFalse: if the RDK is not loaded, then throws a
-                    
-             Rhino.Runtime.RdkNotLoadedException.
-        
+                    Rhino.Runtime.RdkNotLoadedException.
             usePreviousResult: if true, then the last result can be used instaed of
-                    performing a 
-             full check.
-        
+                    performing a full check.
             Returns: true if the RDK is loaded; false if the RDK is not loaded. Note that the
-                 
-                Rhino.Runtime.RdkNotLoadedException will hinder the retrieval of any return 
-             value.
+                    
+             Rhino.Runtime.RdkNotLoadedException will hinder the retrieval of any return value.
         """
         pass
 
@@ -276,10 +268,10 @@ class HostUtils(object):
         DebugDumpToString(bezierCurve: BezierCurve) -> str
         
             Gets the debug dumps. This is a text description of the geometric contents.
-              
-                   DebugDump() is intended for debugging and is not suitable for creating high
-        
-                         quality text descriptions of an object.
+                    
+             DebugDump() is intended for debugging and is not suitable for creating high
+                    
+             quality text descriptions of an object.
         
         
             bezierCurve: curve to evaluate
@@ -287,10 +279,10 @@ class HostUtils(object):
         DebugDumpToString(geometry: GeometryBase) -> str
         
             Gets the debug dumps. This is a text description of the geometric contents.
-              
-                   DebugDump() is intended for debugging and is not suitable for creating high
-        
-                         quality text descriptions of an object.
+                    
+             DebugDump() is intended for debugging and is not suitable for creating high
+                    
+             quality text descriptions of an object.
         
         
             geometry: Some geometry.
@@ -303,16 +295,16 @@ class HostUtils(object):
         """
         DebugString(format: str, *args: Array[object])
             Prints a debug message to the Rhino Command Line. 
-                    The message will 
-             only appear if the SendDebugToCommandLine property is set to true.
+                    The message will only 
+             appear if the SendDebugToCommandLine property is set to true.
         
         
             format: Message to format and print.
             args: An Object array containing zero or more objects to format.
         DebugString(msg: str)
             Prints a debug message to the Rhino Command Line. 
-                    The message will 
-             only appear if the SendDebugToCommandLine property is set to true.
+                    The message will only 
+             appear if the SendDebugToCommandLine property is set to true.
         
         
             msg: Message to print.
@@ -324,8 +316,8 @@ class HostUtils(object):
         """
         DisplayOleAlerts(display: bool)
             Defines if Ole alerts ("Server busy") alerts should be visualized.
-                    
-             This function makes no sense on Mono.
+                    This 
+             function makes no sense on Mono.
         
         
             display: Whether alerts should be visible.
@@ -336,15 +328,15 @@ class HostUtils(object):
     def ExceptionReport(*__args):
         """
         ExceptionReport(source: str, ex: Exception)
-            Informs RhinoCommon of an exception that has been handled but that the developer 
-             wants to screen.
+            Informs RhinoCommon of an exception that has been handled but that the developer wants to 
+             screen.
         
         
             source: An exception source text.
             ex: An exception.
         ExceptionReport(ex: Exception)
-            Informs RhinoCommon of an exception that has been handled but that the developer 
-             wants to screen.
+            Informs RhinoCommon of an exception that has been handled but that the developer wants to 
+             screen.
         
         
             ex: An exception.
@@ -356,8 +348,8 @@ class HostUtils(object):
         """
         GetAssemblySearchPaths() -> Array[str]
         
-            Returns list of directory names where additional assemblies (plug-ins, DLLs, 
-             Grasshopper components)
+            Returns list of directory names where additional assemblies (plug-ins, DLLs, Grasshopper 
+             components)
                     may be located
         """
         pass
@@ -377,10 +369,10 @@ class HostUtils(object):
         """
         InitializeRhinoCommon()
             Makes sure all static RhinoCommon components is set up correctly. 
-                    
-             This happens automatically when a plug-in is loaded, so you probably won't 
-              
-                   have to call this method.
+                    This 
+             happens automatically when a plug-in is loaded, so you probably won't 
+                    have 
+             to call this method.
         """
         pass
 
@@ -389,10 +381,10 @@ class HostUtils(object):
         """
         InitializeZooClient()
             Initializes the ZooClient and Rhino license manager, this should get
-                    
-             called automatically when RhinoCommon is loaded so you probably won't
-                    
-             have to call this method.
+                    called 
+             automatically when RhinoCommon is loaded so you probably won't
+                    have to call 
+             this method.
         """
         pass
 
@@ -401,21 +393,20 @@ class HostUtils(object):
         """
         InPlaceConstCast(geometry: GeometryBase, makeNonConst: bool)
             DO NOT USE UNLESS YOU ARE CERTAIN ABOUT THE IMPLICATIONS.
-                    This is an 
-             expert user function which should not be needed in most
-                    cases. This 
-             function is similar to a const_cast in C++ to allow an object
-                    to be 
-             made temporarily modifiable without causing RhinoCommon to convert
+                    This is an expert 
+             user function which should not be needed in most
+                    cases. This function is 
+             similar to a const_cast in C++ to allow an object
+                    to be made temporarily 
+             modifiable without causing RhinoCommon to convert
+                    the class from const to 
+             non-const by creating a duplicate.You must call this function with a true parameter, make 
+             your
+                    modifications, and then restore the const flag by calling this function
+        
+                         again with a false parameter. If you have any questions, please
                     
-             the class from const to non-const by creating a duplicate.You must call this 
-             function with a true parameter, make your
-                    modifications, and then 
-             restore the const flag by calling this function
-                    again with a false 
-             parameter. If you have any questions, please
-                    contact McNeel developer 
-             support before using!
+             contact McNeel developer support before using!
         
         
             geometry: Some geometry.
@@ -498,10 +489,9 @@ class Interop(object):
         """
         CreateFromNativePointer(pGeometry: IntPtr) -> GeometryBase
         
-            Constructs a RhinoCommon Geometry class from a given ON_Geomety*. The ON_Geometry*
-             
-                    must be declared on the heap and its lifetime becomes controlled by 
-             RhinoCommon.
+            Constructs a RhinoCommon Geometry class from a given ON_Geomety*. The ON_Geometry*
+               
+                  must be declared on the heap and its lifetime becomes controlled by RhinoCommon.
         
         
             pGeometry: ON_Geometry*
@@ -555,10 +545,10 @@ class Interop(object):
             source: Any of the following in the RMA.OpenNURBS namespace are acceptable.
                     
              IOnSurface, OnSurface, IOnPlaneSurface, OnPlaneSurface, IOnClippingPlaneSurface,
-         
-                        OnClippingPlaneSurface, IOnNurbsSurface, OnNurbsSurfac, IOnRevSurface, 
-             OnRevSurface,
-                    IOnSumSurface, OnSumSurface.
+                 
+                OnClippingPlaneSurface, IOnNurbsSurface, OnNurbsSurfac, IOnRevSurface, OnRevSurface,
+          
+                       IOnSumSurface, OnSumSurface.
         
             Returns: RhinoCommon object on success. This will be an independent copy.
         """
@@ -569,14 +559,12 @@ class Interop(object):
         """
         NativeGeometryConstPointer(geometry: GeometryBase) -> IntPtr
         
-            Returns the underlying const ON_Geometry* for a RhinoCommon class. You should only
-             
-                    be interested in using this function if you are writing C++ code.
+            Returns the underlying const ON_Geometry* for a RhinoCommon class. You should only
+               
+                  be interested in using this function if you are writing C++ code.
         
         
-            geometry: A geometry object. This can be null and in such a case System.IntPtr.Zero is 
-             returned.
-        
+            geometry: A geometry object. This can be null and in such a case System.IntPtr.Zero is returned.
             Returns: A pointer to the const geometry.
         """
         pass
@@ -587,13 +575,11 @@ class Interop(object):
         NativeGeometryNonConstPointer(geometry: GeometryBase) -> IntPtr
         
             Returns the underlying non-const ON_Geometry* for a RhinoCommon class. You should
+                
+                 only be interested in using this function if you are writing C++ code.
         
-                         only be interested in using this function if you are writing C++ code.
         
-        
-            geometry: A geometry object. This can be null and in such a case System.IntPtr.Zero is 
-             returned.
-        
+            geometry: A geometry object. This can be null and in such a case System.IntPtr.Zero is returned.
             Returns: A pointer to the non-const geometry.
         """
         pass
@@ -625,8 +611,8 @@ class Interop(object):
         PlugInPointer(plugin: PlugIn) -> IntPtr
         
             Gets a C++ plug-in pointer for a given RhinoCommon plug-in.
-                    This is a 
-             Rhino SDK function.
+                    This is a Rhino 
+             SDK function.
         
         
             plugin: A plug-in.
@@ -639,10 +625,9 @@ class Interop(object):
         """
         RhinoObjectConstPointer(rhinoObject: RhinoObject) -> IntPtr
         
-            Returns the underlying const CRhinoObject* for a RhinoCommon class. You should 
-             only
-                    be interested in using this function if you are writing C++ 
-             code.
+            Returns the underlying const CRhinoObject* for a RhinoCommon class. You should only
+              
+                   be interested in using this function if you are writing C++ code.
         
         
             rhinoObject: A Rhino object.
@@ -852,8 +837,7 @@ class PythonScript(object):
             Executes a Python file.
         
             path: The path to the file.
-            Returns: true if the file executed. This method can throw scripting-runtime based 
-             exceptions.
+            Returns: true if the file executed. This method can throw scripting-runtime based exceptions.
         """
         pass
 
@@ -864,8 +848,7 @@ class PythonScript(object):
             Executes a Python string.
         
             script: A Python text.
-            Returns: true if the file executed. This method can throw scripting-runtime based 
-             exceptions.
+            Returns: true if the file executed. This method can throw scripting-runtime based exceptions.
         """
         pass
 
@@ -922,9 +905,7 @@ class PythonScript(object):
     def SetVariable(self, name, value):
         """
         SetVariable(self: PythonScript, name: str, value: object)
-            Sets a variable with a name and an object. Object can be null (Nothing in Visual 
-             Basic).
-        
+            Sets a variable with a name and an object. Object can be null (Nothing in Visual Basic).
         
             name: A valid variable name in Python.
             value: A valid value for that variable name.
@@ -1054,8 +1035,8 @@ class Skin(object):
         """
         ShowHelp(self: Skin)
             Called when the "help" splash screen should be shown. Default
-                    
-             implementation just calls ShowSplash()
+                    implementation 
+             just calls ShowSplash()
         """
         pass
 

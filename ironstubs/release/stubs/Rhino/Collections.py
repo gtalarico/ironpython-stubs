@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Rhino.Collections calls itself Collections
-# from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null, RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530
+# from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530
 # by generator 1.145
 """ NamespaceTracker represent a CLS namespace. """
 # no imports
@@ -49,8 +49,7 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
             Determines whether the dictionary contains the specified key.
         
             key: The key to locate.
-            Returns: true if the dictionary contains an element with the specified key; otherwise, 
-             false.
+            Returns: true if the dictionary contains an element with the specified key; otherwise, false.
         """
         pass
 
@@ -58,13 +57,12 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         """
         GetBool(self: ArchivableDictionary, key: str, defaultValue: bool) -> bool
         
-            Get value as bool, will return defaultValue unless value was created using 
-             Set(string key, bool value)
+            Get value as bool, will return defaultValue unless value was created using Set(string key, 
+             bool value)
         
         GetBool(self: ArchivableDictionary, key: str) -> bool
         
-            Get value as bool, will only succeed if value was created using Set(string key, 
-             bool value)
+            Get value as bool, will only succeed if value was created using Set(string key, bool value)
         """
         pass
 
@@ -73,14 +71,14 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         GetBytes(self: ArchivableDictionary, key: str, defaultValue: Array[Byte]) -> Array[Byte]
         
             Get value as byte[], will return defaultValue unless
-                    value was 
-             created using Set(string key, byte[] value)
+                    value was created using 
+             Set(string key, byte[] value)
         
         GetBytes(self: ArchivableDictionary, key: str) -> Array[Byte]
         
             Get value as byte[], will only succeed if value was created
-                    using 
-             Set(string key, byte[] value)
+                    using Set(string 
+             key, byte[] value)
         """
         pass
 
@@ -89,14 +87,14 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         GetDictionary(self: ArchivableDictionary, key: str, defaultValue: ArchivableDictionary) -> ArchivableDictionary
         
             Get value as ArchivableDictionary, will return defaultValue unless
-                    
-             value was created using Set(string key, ArchivableDictionary value)
+                    value was 
+             created using Set(string key, ArchivableDictionary value)
         
         GetDictionary(self: ArchivableDictionary, key: str) -> ArchivableDictionary
         
             Get value as ArchivableDictionary, will only succeed if value was created
-                
-                 using Set(string key, ArchivableDictionary value)
+                    
+             using Set(string key, ArchivableDictionary value)
         """
         pass
 
@@ -104,13 +102,13 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         """
         GetDouble(self: ArchivableDictionary, key: str, defaultValue: float) -> float
         
-            Get value as double, will only succeed if value was created using Set(string key, 
-             double value)
+            Get value as double, will only succeed if value was created using Set(string key, double 
+             value)
         
         GetDouble(self: ArchivableDictionary, key: str) -> float
         
-            Get value as double, will only succeed if value was created using Set(string key, 
-             double value)
+            Get value as double, will only succeed if value was created using Set(string key, double 
+             value)
         """
         pass
 
@@ -120,8 +118,7 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             Gets the enumerator of this dictionary.
             Returns: A System.Collections.Generic.IEnumerator, where T is an instance of 
-             System.Collections.Generic.KeyValuePair, with T0 set as string, and T1 as 
-             Syste.Object.
+             System.Collections.Generic.KeyValuePair, with T0 set as string, and T1 as Syste.Object.
         """
         pass
 
@@ -132,13 +129,13 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         """
         GetFloat(self: ArchivableDictionary, key: str, defaultValue: Single) -> Single
         
-            Get value as float, will return defaultValue unless value was created using 
-             Set(string key, float value)
+            Get value as float, will return defaultValue unless value was created using Set(string 
+             key, float value)
         
         GetFloat(self: ArchivableDictionary, key: str) -> Single
         
-            Get value as float, will only succeed if value was created using Set(string key, 
-             float value)
+            Get value as float, will only succeed if value was created using Set(string key, float 
+             value)
         """
         pass
 
@@ -146,13 +143,12 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         """
         GetGuid(self: ArchivableDictionary, key: str, defaultValue: Guid) -> Guid
         
-            Get value as Guid, will return defaultValue unless value was created using 
-             Set(string key, Guid value)
+            Get value as Guid, will return defaultValue unless value was created using Set(string key, 
+             Guid value)
         
         GetGuid(self: ArchivableDictionary, key: str) -> Guid
         
-            Get value as Guid, will only succeed if value was created using Set(string key, 
-             Guid value)
+            Get value as Guid, will only succeed if value was created using Set(string key, Guid value)
         """
         pass
 
@@ -160,8 +156,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         """
         Getint(self: ArchivableDictionary, key: str, defaultValue: int) -> int
         
-            Get value as int, will return defaultValue unless value was created using 
-             Set(string key, int value)
+            Get value as int, will return defaultValue unless value was created using Set(string key, 
+             int value)
         """
         pass
 
@@ -169,13 +165,11 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         """
         GetInteger(self: ArchivableDictionary, key: str) -> int
         
-            Get value as int, will only succeed if value was created using Set(string key, int 
-             value)
-        
+            Get value as int, will only succeed if value was created using Set(string key, int value)
         GetInteger(self: ArchivableDictionary, key: str, defaultValue: int) -> int
         
-            Get value as int, will return defaultValue unless value was created using 
-             Set(string key, int value)
+            Get value as int, will return defaultValue unless value was created using Set(string key, 
+             int value)
         """
         pass
 
@@ -183,13 +177,13 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         """
         GetPoint3d(self: ArchivableDictionary, key: str, defaultValue: Point3d) -> Point3d
         
-            Get value as Point3d, will return defaultValue unless value was created using 
-             Set(string key, Point3d value)
+            Get value as Point3d, will return defaultValue unless value was created using Set(string 
+             key, Point3d value)
         
         GetPoint3d(self: ArchivableDictionary, key: str) -> Point3d
         
-            Get value as Point3d, will only succeed if value was created using Set(string key, 
-             Point3d value)
+            Get value as Point3d, will only succeed if value was created using Set(string key, Point3d 
+             value)
         """
         pass
 
@@ -197,13 +191,13 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         """
         GetPoint3f(self: ArchivableDictionary, key: str, defaultValue: Point3f) -> Point3f
         
-            Get value as Point3f, will return defaultValue unless value was created using 
-             Set(string key, Point3f value)
+            Get value as Point3f, will return defaultValue unless value was created using Set(string 
+             key, Point3f value)
         
         GetPoint3f(self: ArchivableDictionary, key: str) -> Point3f
         
-            Get value as Point3f, will only succeed if value was created using Set(string key, 
-             Point3f value)
+            Get value as Point3f, will only succeed if value was created using Set(string key, Point3f 
+             value)
         """
         pass
 
@@ -211,13 +205,13 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         """
         GetString(self: ArchivableDictionary, key: str, defaultValue: str) -> str
         
-            Get value as string, will return defaultValue unless value was created using 
-             Set(string key, string value)
+            Get value as string, will return defaultValue unless value was created using Set(string 
+             key, string value)
         
         GetString(self: ArchivableDictionary, key: str) -> str
         
-            Get value as string, will only succeed if value was created using Set(string key, 
-             string value)
+            Get value as string, will only succeed if value was created using Set(string key, string 
+             value)
         """
         pass
 
@@ -225,13 +219,13 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         """
         GetVector3d(self: ArchivableDictionary, key: str, defaultValue: Vector3d) -> Vector3d
         
-            Get value as Vector3d, will return defaultValue unless value was created using 
-             Set(string key, Vector3d value)
+            Get value as Vector3d, will return defaultValue unless value was created using Set(string 
+             key, Vector3d value)
         
         GetVector3d(self: ArchivableDictionary, key: str) -> Vector3d
         
-            Get value as Vector3d, will only succeed if value was created using Set(string 
-             key, Vector3d value)
+            Get value as Vector3d, will only succeed if value was created using Set(string key, 
+             Vector3d value)
         """
         pass
 
@@ -243,8 +237,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: The key of the element to remove.
             Returns: true if the element is successfully found and removed; otherwise, false.
-                 
-                This method returns false if key is not found.
+                    This 
+             method returns false if key is not found.
         """
         pass
 
@@ -268,8 +262,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: The text key.
             val: A System.Double.
-                    Because System.Double has value semantics, changes 
-             to the assigning value will leave this entry unchanged.
+                    Because System.Double has value semantics, changes to the 
+             assigning value will leave this entry unchanged.
         
             Returns: true if set operation succeeded, otherwise false.
         Set(self: ArchivableDictionary, key: str, val: Single) -> bool
@@ -278,8 +272,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: The text key.
             val: A System.Single.
-                    Because System.Single has value semantics, changes 
-             to the assigning value will leave this entry unchanged.
+                    Because System.Single has value semantics, changes to the 
+             assigning value will leave this entry unchanged.
         
             Returns: true if set operation succeeded, otherwise false.
         Set(self: ArchivableDictionary, key: str, val: Guid) -> bool
@@ -288,8 +282,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: The text key.
             val: A System.Guid.
-                    Because System.Guid has value semantics, changes to 
-             the assigning value will leave this entry unchanged.
+                    Because System.Guid has value semantics, changes to the 
+             assigning value will leave this entry unchanged.
         
             Returns: true if set operation succeeded, otherwise false.
         Set(self: ArchivableDictionary, key: str, val: IEnumerable[bool]) -> bool
@@ -299,8 +293,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: The text key.
             val: A System.String.
-                    Because System.String is immutable, it is not 
-             possible to modify the object while it is in this dictionary.
+                    Because System.String is immutable, it is not possible to 
+             modify the object while it is in this dictionary.
         
             Returns: true if set operation succeeded, otherwise false.
         Set(self: ArchivableDictionary, key: str, val: Int64) -> bool
@@ -309,8 +303,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: The text key.
             val: A System.Int64.
-                    Because System.Int64 has value semantics, changes to 
-             the assigning value will leave this entry unchanged.
+                    Because System.Int64 has value semantics, changes to the 
+             assigning value will leave this entry unchanged.
         
             Returns: true if set operation succeeded, otherwise false.
         Set(self: ArchivableDictionary, key: str, val: Int16) -> bool
@@ -319,8 +313,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: The text key.
             val: A System.Int16.
-                    Because System.Int16 has value semantics, changes to 
-             the assigning value will leave this entry unchanged.
+                    Because System.Int16 has value semantics, changes to the 
+             assigning value will leave this entry unchanged.
         
             Returns: true if set operation succeeded, otherwise false.
         Set(self: ArchivableDictionary, key: str, val: SByte) -> bool
@@ -329,8 +323,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: The text key.
             val: A System.SByte.
-                    Because System.SByte has value semantics, changes to 
-             the assigning value will leave this entry unchanged.
+                    Because System.SByte has value semantics, changes to the 
+             assigning value will leave this entry unchanged.
         
             Returns: true if set operation succeeded, otherwise false.
         Set(self: ArchivableDictionary, key: str, val: UInt16) -> bool
@@ -339,8 +333,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: The text key.
             val: A System.UInt16.
-                    Because System.UInt16 has value semantics, changes 
-             to the assigning value will leave this entry unchanged.
+                    Because System.UInt16 has value semantics, changes to the 
+             assigning value will leave this entry unchanged.
         
             Returns: true if set operation succeeded, otherwise false.
         Set(self: ArchivableDictionary, key: str, val: UInt32) -> bool
@@ -349,8 +343,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: The text key.
             val: A System.UInt32.
-                    Because System.UInt32 has value semantics, changes 
-             to the assigning value will leave this entry unchanged.
+                    Because System.UInt32 has value semantics, changes to the 
+             assigning value will leave this entry unchanged.
         
             Returns: true if set operation succeeded, otherwise false.
         Set(self: ArchivableDictionary, key: str, val: int) -> bool
@@ -359,8 +353,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: The text key.
             val: A System.Int32.
-                    Because System.Int32 has value semantics, changes to 
-             the assigning value will leave this entry unchanged.
+                    Because System.Int32 has value semantics, changes to the 
+             assigning value will leave this entry unchanged.
         
             Returns: true if set operation succeeded, otherwise false.
         Set(self: ArchivableDictionary, key: str, val: IEnumerable[Byte]) -> bool
@@ -370,10 +364,9 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A value for that key.
-                    Because System.Drawing.Color has value 
-             semantics, changes to the
-                    assigning value will leave this entry 
-             unchanged.
+                    Because System.Drawing.Color has value semantics, 
+             changes to the
+                    assigning value will leave this entry unchanged.
         
             Returns: true if set operation succeeded, otherwise false.
         Set(self: ArchivableDictionary, key: str, val: IEnumerable[str]) -> bool
@@ -383,8 +376,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A value for that key.
-                    Because System.Drawing.Point has value 
-             semantics, changes to the assigning value will leave this entry unchanged.
+                    Because System.Drawing.Point has value semantics, 
+             changes to the assigning value will leave this entry unchanged.
         
         Set(self: ArchivableDictionary, key: str, val: Rectangle) -> bool
         
@@ -392,8 +385,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A value for that key.
-                    Because System.Drawing.Rectangle has value 
-             semantics, changes to the assigning value will leave this entry unchanged.
+                    Because System.Drawing.Rectangle has value semantics, 
+             changes to the assigning value will leave this entry unchanged.
         
         Set(self: ArchivableDictionary, key: str, val: PointF) -> bool
         
@@ -401,8 +394,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A value for that key.
-                    Because System.Drawing.PointF has value 
-             semantics, changes to the assigning value will leave this entry unchanged.
+                    Because System.Drawing.PointF has value semantics, 
+             changes to the assigning value will leave this entry unchanged.
         
         Set(self: ArchivableDictionary, key: str, val: IEnumerable[Guid]) -> bool
         Set(self: ArchivableDictionary, key: str, val: IEnumerable[Int16]) -> bool
@@ -416,8 +409,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: The text key.
             val: A System.Byte.
-                    Because System.Byte has value semantics, changes to 
-             the assigning value will leave this entry unchanged.
+                    Because System.Byte has value semantics, changes to the 
+             assigning value will leave this entry unchanged.
         
             Returns: true if set operation succeeded, otherwise false.
         Set(self: ArchivableDictionary, key: str, val: Point4d) -> bool
@@ -426,8 +419,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A value for that key.
-                    Because Rhino.Geometry.Point4d has value 
-             semantics, changes to the assigning value will leave this entry unchanged.
+                    Because Rhino.Geometry.Point4d has value semantics, 
+             changes to the assigning value will leave this entry unchanged.
         
         Set(self: ArchivableDictionary, key: str, val: Point3d) -> bool
         
@@ -435,8 +428,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A point for that key.
-                    Because Rhino.Geometry.Point3d has value 
-             semantics, changes to the assigning value will leave this entry unchanged.
+                    Because Rhino.Geometry.Point3d has value semantics, 
+             changes to the assigning value will leave this entry unchanged.
         
         Set(self: ArchivableDictionary, key: str, val: Vector2d) -> bool
         
@@ -444,8 +437,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A value for that key.
-                    Because Rhino.Geometry.Vector2d has value 
-             semantics, changes to the assigning value will leave this entry unchanged.
+                    Because Rhino.Geometry.Vector2d has value semantics, 
+             changes to the assigning value will leave this entry unchanged.
         
         Set(self: ArchivableDictionary, key: str, val: BoundingBox) -> bool
         
@@ -453,8 +446,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A value for that key.
-                    Because Rhino.Geometry.BoundingBox has value 
-             semantics, changes to the assigning value will leave this entry unchanged.
+                    Because Rhino.Geometry.BoundingBox has value semantics, 
+             changes to the assigning value will leave this entry unchanged.
         
         Set(self: ArchivableDictionary, key: str, val: Vector3d) -> bool
         
@@ -462,8 +455,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A value for that key.
-                    Because Rhino.Geometry.Vector3d has value 
-             semantics, changes to the assigning value will leave this entry unchanged.
+                    Because Rhino.Geometry.Vector3d has value semantics, 
+             changes to the assigning value will leave this entry unchanged.
         
         Set(self: ArchivableDictionary, key: str, val: Point2d) -> bool
         
@@ -471,8 +464,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A point for that key.
-                    Because Rhino.Geometry.Point2d has value 
-             semantics, changes to the assigning value will leave this entry unchanged.
+                    Because Rhino.Geometry.Point2d has value semantics, 
+             changes to the assigning value will leave this entry unchanged.
         
         Set(self: ArchivableDictionary, key: str, val: Size) -> bool
         
@@ -480,8 +473,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A value for that key.
-                    Because System.Drawing.Size has value 
-             semantics, changes to the assigning value will leave this entry unchanged.
+                    Because System.Drawing.Size has value semantics, 
+             changes to the assigning value will leave this entry unchanged.
         
         Set(self: ArchivableDictionary, key: str, val: RectangleF) -> bool
         
@@ -489,8 +482,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A value for that key.
-                    Because System.Drawing.RectangleF has value 
-             semantics, changes to the assigning value will leave this entry unchanged.
+                    Because System.Drawing.RectangleF has value semantics, 
+             changes to the assigning value will leave this entry unchanged.
         
         Set(self: ArchivableDictionary, key: str, val: SizeF) -> bool
         
@@ -498,8 +491,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A value for that key.
-                    Because System.Drawing.SizeF has value 
-             semantics, changes to the assigning value will leave this entry unchanged.
+                    Because System.Drawing.SizeF has value semantics, 
+             changes to the assigning value will leave this entry unchanged.
         
         Set(self: ArchivableDictionary, key: str, val: Interval) -> bool
         
@@ -507,8 +500,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A value for that key.
-                    Because Rhino.Geometry.Interval has value 
-             semantics, changes to the assigning value will leave this entry unchanged.
+                    Because Rhino.Geometry.Interval has value semantics, 
+             changes to the assigning value will leave this entry unchanged.
         
         Set(self: ArchivableDictionary, key: str, val: Font) -> bool
         
@@ -516,8 +509,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A value for that key.
-                    Because System.Drawing.Font is immutable, it is 
-             not possible to modify the object while it is in this dictionary.
+                    Because System.Drawing.Font is immutable, it is not 
+             possible to modify the object while it is in this dictionary.
         
         Set(self: ArchivableDictionary, key: str, val: Ray3d) -> bool
         
@@ -525,8 +518,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A value for that key.
-                    Because Rhino.Geometry.Ray3d has value 
-             semantics and is immutable, no changes to this object are possible.
+                    Because Rhino.Geometry.Ray3d has value semantics and is 
+             immutable, no changes to this object are possible.
         
         Set(self: ArchivableDictionary, key: str, val: GeometryBase) -> bool
         
@@ -534,10 +527,10 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A geometry object for that key.
-                    Because this class is a reference 
-             type and is mutable, changes to this object will propagate to the object inside 
-             the dictionary.It is up to the user to clone this entry when appropriate. You can 
-             use Rhino.Geometry.GeometryBase.Duplicate for this.
+                    Because this class is a reference type and is 
+             mutable, changes to this object will propagate to the object inside the dictionary.It is 
+             up to the user to clone this entry when appropriate. You can use 
+             Rhino.Geometry.GeometryBase.Duplicate for this.
         
         Set(self: ArchivableDictionary, key: str, val: MeshingParameters) -> bool
         
@@ -546,8 +539,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
             key: A text key.
             val: An object for that key.
                     Because this class is a reference type and is 
-             mutable, changes to this object will propagate to the object inside the 
-             dictionary.It is up to the user to clone this entry when appropriate.
+             mutable, changes to this object will propagate to the object inside the dictionary.It is 
+             up to the user to clone this entry when appropriate.
         
         Set(self: ArchivableDictionary, key: str, val: ObjRef) -> bool
         
@@ -555,9 +548,9 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key
             val: An object for that key
-                    Because this class is a reference type and is 
-             mutable, changes to this object will propagate to the object inside the 
-             dictionary.It is up to the user to clone this entry when appropriate.
+                    Because this class is a reference type and is mutable, 
+             changes to this object will propagate to the object inside the dictionary.It is up to the 
+             user to clone this entry when appropriate.
         
         Set(self: ArchivableDictionary, key: str, val: bool) -> bool
         
@@ -565,8 +558,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: The text key.
             val: A System.Boolean value.
-                    Because System.Boolean has value semantics, 
-             changes to the assigning value will leave this entry unchanged.
+                    Because System.Boolean has value semantics, changes 
+             to the assigning value will leave this entry unchanged.
         
             Returns: true if set operation succeeded, otherwise false.
         Set(self: ArchivableDictionary, key: str, val: IEnumerable[ObjRef]) -> bool
@@ -577,8 +570,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
             key: A text key.
             val: An object for that key.
                     Because this class is a reference type and is 
-             mutable, changes to this object will propagate to the object inside the 
-             dictionary.It is up to the user to clone this entry when appropriate.
+             mutable, changes to this object will propagate to the object inside the dictionary.It is 
+             up to the user to clone this entry when appropriate.
         
         Set(self: ArchivableDictionary, key: str, val: Plane) -> bool
         
@@ -586,8 +579,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A plane for that key.
-                    Because Rhino.Geometry.Plane has value 
-             semantics, changes to the assigning value will leave this entry unchanged.
+                    Because Rhino.Geometry.Plane has value semantics, 
+             changes to the assigning value will leave this entry unchanged.
         
         Set(self: ArchivableDictionary, key: str, val: Transform) -> bool
         
@@ -604,8 +597,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A value for that key.
-                    Because Rhino.Geometry.Line has value 
-             semantics, changes to the assigning value will leave this entry unchanged.
+                    Because Rhino.Geometry.Line has value semantics, 
+             changes to the assigning value will leave this entry unchanged.
         
         Set(self: ArchivableDictionary, key: str, val: Vector3f) -> bool
         
@@ -613,8 +606,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A value for that key.
-                    Because Rhino.Geometry.Vector3f has value 
-             semantics, changes to the assigning value will leave this entry unchanged.
+                    Because Rhino.Geometry.Vector3f has value semantics, 
+             changes to the assigning value will leave this entry unchanged.
         
         Set(self: ArchivableDictionary, key: str, val: Point3f) -> bool
         
@@ -622,8 +615,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         
             key: A text key.
             val: A value for that key.
-                    Because Rhino.Geometry.Point3f has value 
-             semantics, changes to the assigning value will leave this entry unchanged.
+                    Because Rhino.Geometry.Point3f has value semantics, 
+             changes to the assigning value will leave this entry unchanged.
         """
         pass
 
@@ -638,8 +631,7 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         """
         TryGetBool(self: ArchivableDictionary, key: str) -> (bool, bool)
         
-            Get value as bool, will only succeed if value was created using Set(string key, 
-             bool value)
+            Get value as bool, will only succeed if value was created using Set(string key, bool value)
         """
         pass
 
@@ -648,8 +640,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         TryGetBytes(self: ArchivableDictionary, key: str) -> (bool, Array[Byte])
         
             Get value as byte[], will only succeed if value was
-                    created using 
-             Set(string key, byte[] value)
+                    created using Set(string 
+             key, byte[] value)
         """
         pass
 
@@ -658,8 +650,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         TryGetDictionary(self: ArchivableDictionary, key: str) -> (bool, ArchivableDictionary)
         
             Get value as ArchivableDictionary, will only succeed if value was
-                    
-             created using Set(string key, ArchivableDictionary value)
+                    created 
+             using Set(string key, ArchivableDictionary value)
         """
         pass
 
@@ -667,8 +659,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         """
         TryGetDouble(self: ArchivableDictionary, key: str) -> (bool, float)
         
-            Get value as double, will only succeed if value was created using Set(string key, 
-             double value)
+            Get value as double, will only succeed if value was created using Set(string key, double 
+             value)
         """
         pass
 
@@ -679,8 +671,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         """
         TryGetFloat(self: ArchivableDictionary, key: str) -> (bool, Single)
         
-            Get value as float, will only succeed if value was created using Set(string key, 
-             float value)
+            Get value as float, will only succeed if value was created using Set(string key, float 
+             value)
         """
         pass
 
@@ -688,8 +680,7 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         """
         TryGetGuid(self: ArchivableDictionary, key: str) -> (bool, Guid)
         
-            Get value as Guid, will only succeed if value was created using Set(string key, 
-             Guid value)
+            Get value as Guid, will only succeed if value was created using Set(string key, Guid value)
         """
         pass
 
@@ -697,8 +688,7 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         """
         TryGetInteger(self: ArchivableDictionary, key: str) -> (bool, int)
         
-            Get value as int, will only succeed if value was created using Set(string key, int 
-             value)
+            Get value as int, will only succeed if value was created using Set(string key, int value)
         """
         pass
 
@@ -706,8 +696,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         """
         TryGetPoint3d(self: ArchivableDictionary, key: str) -> (bool, Point3d)
         
-            Get value as Point3d, will only succeed if value was created using Set(string key, 
-             Point3d value)
+            Get value as Point3d, will only succeed if value was created using Set(string key, Point3d 
+             value)
         """
         pass
 
@@ -715,8 +705,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         """
         TryGetPoint3f(self: ArchivableDictionary, key: str) -> (bool, Point3f)
         
-            Get value as Point3f, will only succeed if value was created using Set(string key, 
-             Point3f value)
+            Get value as Point3f, will only succeed if value was created using Set(string key, Point3f 
+             value)
         """
         pass
 
@@ -724,8 +714,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         """
         TryGetString(self: ArchivableDictionary, key: str) -> (bool, str)
         
-            Get value as string, will only succeed if value was created using Set(string key, 
-             string value)
+            Get value as string, will only succeed if value was created using Set(string key, string 
+             value)
         """
         pass
 
@@ -736,8 +726,7 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
             Gets the value associated with the specified key.
         
             key: The key of the value to get.
-            Returns: true if the dictionary contains an element with the specified key; otherwise, 
-             false.
+            Returns: true if the dictionary contains an element with the specified key; otherwise, false.
         """
         pass
 
@@ -745,8 +734,8 @@ class ArchivableDictionary(object, ICloneable, IDictionary[str, object], ICollec
         """
         TryGetVector3d(self: ArchivableDictionary, key: str) -> (bool, Vector3d)
         
-            Get value as Vector3d, will only succeed if value was created using Set(string 
-             key, Vector3d value)
+            Get value as Vector3d, will only succeed if value was created using Set(string key, 
+             Vector3d value)
         """
         pass
 
@@ -891,8 +880,8 @@ class CurveList(RhinoList[Curve], IList[Curve], ICollection[Curve], IEnumerable[
         Transform(self: CurveList, xform: Transform) -> bool
         
             Transform all the curves in this list. If at least a single transform failed 
-            
-                     this function returns false.
+                    
+             this function returns false.
         
         
             xform: Transformation to apply to all curves.
@@ -1091,24 +1080,23 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
             Adds the elements of the specified collection to the end of the List.
         
             collection: The collection whose elements should be added to the end of the List. 
-                   
-              The collection itself cannot be a null reference (Nothing in Visual Basic), 
-            
-                     but it can contain elements that are a null reference (Nothing in Visual 
-             Basic). 
-                    Objects in collection which cannot be represented as T will 
-             throw exceptions.
+                    The 
+             collection itself cannot be a null reference (Nothing in Visual Basic), 
+                    but 
+             it can contain elements that are a null reference (Nothing in Visual Basic). 
+                    
+             Objects in collection which cannot be represented as T will throw exceptions.
         
         AddRange(self: RhinoList[T], collection: IEnumerable[T])
             Adds the elements of the specified collection to the end of the List.
         
             collection: The collection whose elements should be added to the end of the List. 
-                   
-              The collection itself cannot be a null reference (Nothing in Visual Basic), 
-            
-                     but it can contain elements that are a null reference (Nothing in Visual 
-             Basic), 
-                    if type T is a reference type.
+                    The 
+             collection itself cannot be a null reference (Nothing in Visual Basic), 
+                    but 
+             it can contain elements that are a null reference (Nothing in Visual Basic), 
+                    
+             if type T is a reference type.
         """
         pass
 
@@ -1126,73 +1114,73 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
         BinarySearch(self: RhinoList[T], index: int, count: int, item: T, comparer: IComparer[T]) -> int
         
             Searches the entire sorted List for an element using the specified 
-                    
-             comparer and returns the zero-based index of the element.
+                    comparer 
+             and returns the zero-based index of the element.
         
         
             index: The zero-based starting index of the range to search.
             count: The length of the range to search.
             item: The object to locate. The value can be a null reference 
-                    (Nothing in 
-             Visual Basic) for reference types.
+                    (Nothing in Visual 
+             Basic) for reference types.
         
             comparer: The IComparer(T) implementation to use when comparing elements.
-                    Or a 
-             null reference (Nothing in Visual Basic) to use the default comparer 
+                    Or a null 
+             reference (Nothing in Visual Basic) to use the default comparer 
                     
              Comparer(T)::Default.
         
             Returns: The zero-based index of item in the sorted List, if item is found; 
                     
              otherwise, a negative number that is the bitwise complement of the index 
-                
-                 of the next element that is larger than item or, if there is no larger 
-             element, 
-                    the bitwise complement of Count.
+                    of 
+             the next element that is larger than item or, if there is no larger element, 
+                    
+             the bitwise complement of Count.
         
         BinarySearch(self: RhinoList[T], item: T, comparer: IComparer[T]) -> int
         
             Searches the entire sorted List for an element using the specified 
-                    
-             comparer and returns the zero-based index of the element.
+                    comparer 
+             and returns the zero-based index of the element.
         
         
             item: The object to locate. The value can be a null reference 
-                    (Nothing in 
-             Visual Basic) for reference types.
+                    (Nothing in Visual 
+             Basic) for reference types.
         
             comparer: The IComparer(T) implementation to use when comparing elements.
-                    Or a 
-             null reference (Nothing in Visual Basic) to use the default comparer 
+                    Or a null 
+             reference (Nothing in Visual Basic) to use the default comparer 
                     
              Comparer(T)::Default.
         
             Returns: The zero-based index of item in the sorted List, if item is found; 
                     
              otherwise, a negative number that is the bitwise complement of the index 
-                
-                 of the next element that is larger than item or, if there is no larger 
-             element, 
-                    the bitwise complement of Count.
+                    of 
+             the next element that is larger than item or, if there is no larger element, 
+                    
+             the bitwise complement of Count.
         
         BinarySearch(self: RhinoList[T], item: T) -> int
         
             Searches the entire sorted List for an element using the default comparer 
-               
-                  and returns the zero-based index of the element.
+                    
+             and returns the zero-based index of the element.
         
         
             item: The object to locate. The value can be a null reference 
-                    (Nothing in 
-             Visual Basic) for reference types.
+                    (Nothing in Visual 
+             Basic) for reference types.
         
             Returns: The zero-based index of item in the sorted List, if item is found; 
                     
              otherwise, a negative number that is the bitwise complement of the index 
-                
-                 of the next element that is larger than item or, if there is no larger 
-             element, 
-                    the bitwise complement of Count.
+                    of 
+             the next element that is larger than item or, if there is no larger element, 
+                    
+             the bitwise complement of Count.
         """
         pass
 
@@ -1210,8 +1198,8 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
             Determines whether an element is in the List.
         
             item: The object to locate in the List. 
-                    The value can be a null reference 
-             (Nothing in Visual Basic) for reference types.
+                    The value can be a null reference (Nothing 
+             in Visual Basic) for reference types.
         
             Returns: true if item is found in the List; otherwise, false.
         """
@@ -1230,16 +1218,14 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
         Exists(self: RhinoList[T], match: Predicate[T]) -> bool
         
             Determines whether the List contains elements that match the 
-                    
-             conditions defined by the specified predicate.
+                    conditions 
+             defined by the specified predicate.
         
         
-            match: The Predicate(T) delegate that defines the conditions of the elements to search 
-             for.
-        
+            match: The Predicate(T) delegate that defines the conditions of the elements to search for.
             Returns: true if the List contains one or more elements that match the 
-                    
-             conditions defined by the specified predicate; otherwise, false.
+                    conditions 
+             defined by the specified predicate; otherwise, false.
         """
         pass
 
@@ -1248,14 +1234,14 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
         Find(self: RhinoList[T], match: Predicate[T]) -> T
         
             Searches for an element that matches the conditions defined by the 
-                    
-             specified predicate, and returns the first occurrence within the entire List.
+                    specified 
+             predicate, and returns the first occurrence within the entire List.
         
         
             match: The Predicate(T) delegate that defines the conditions of the element to search for.
-            Returns: The first element that matches the conditions defined by the specified predicate, 
-             
-                    if found; otherwise, the default value for type T.
+            Returns: The first element that matches the conditions defined by the specified predicate, 
+               
+                  if found; otherwise, the default value for type T.
         """
         pass
 
@@ -1263,16 +1249,12 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
         """
         FindAll(self: RhinoList[T], match: Predicate[T]) -> RhinoList[T]
         
-            Retrieves all the elements that match the conditions defined by the specified 
-             predicate.
+            Retrieves all the elements that match the conditions defined by the specified predicate.
         
-        
-            match: The Predicate(T) delegate that defines the conditions of the elements to search 
-             for.
-        
+            match: The Predicate(T) delegate that defines the conditions of the elements to search for.
             Returns: A ON_List(T) containing all the elements that match the conditions 
-                    
-             defined by the specified predicate, if found; otherwise, an empty ON_List(T).
+                    defined 
+             by the specified predicate, if found; otherwise, an empty ON_List(T).
         """
         pass
 
@@ -1280,49 +1262,49 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
         """
         FindIndex(self: RhinoList[T], startIndex: int, count: int, match: Predicate[T]) -> int
         
-            Searches for an element that matches the conditions defined by the specified 
-             predicate, 
-                    and returns the zero-based index of the first occurrence 
-             within the range of elements 
-                    in the List that extends from the 
-             specified index to the last element.
+            Searches for an element that matches the conditions defined by the specified predicate, 
+         
+                        and returns the zero-based index of the first occurrence within the range of 
+             elements 
+                    in the List that extends from the specified index to the last 
+             element.
         
         
             startIndex: The zero-based starting index of the search.
             count: The number of elements in the section to search.
             match: The Predicate(T) delegate that defines the conditions of the element to search for.
             Returns: The zero-based index of the first occurrence of an element that 
-                    
-             matches the conditions defined by match, if found; otherwise, -1.
+                    matches the 
+             conditions defined by match, if found; otherwise, -1.
         
         FindIndex(self: RhinoList[T], startIndex: int, match: Predicate[T]) -> int
         
             Searches for an element that matches the conditions defined by the 
-                    
-             specified predicate, and returns the zero-based index of the first 
-                    
-             occurrence within the entire List.
+                    specified 
+             predicate, and returns the zero-based index of the first 
+                    occurrence within 
+             the entire List.
         
         
             startIndex: The zero-based starting index of the search.
             match: The Predicate(T) delegate that defines the conditions of the element to search for.
             Returns: The zero-based index of the first occurrence of an element that 
-                    
-             matches the conditions defined by match, if found; otherwise, -1.
+                    matches the 
+             conditions defined by match, if found; otherwise, -1.
         
         FindIndex(self: RhinoList[T], match: Predicate[T]) -> int
         
             Searches for an element that matches the conditions defined by the 
-                    
-             specified predicate, and returns the zero-based index of the first 
-                    
-             occurrence within the entire List.
+                    specified 
+             predicate, and returns the zero-based index of the first 
+                    occurrence within 
+             the entire List.
         
         
             match: The Predicate(T) delegate that defines the conditions of the element to search for.
             Returns: The zero-based index of the first occurrence of an element that 
-                    
-             matches the conditions defined by match, if found; otherwise, -1.
+                    matches the 
+             conditions defined by match, if found; otherwise, -1.
         """
         pass
 
@@ -1331,14 +1313,14 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
         FindLast(self: RhinoList[T], match: Predicate[T]) -> T
         
             Searches for an element that matches the conditions defined by the 
-                    
-             specified predicate, and returns the last occurrence within the entire List.
+                    specified 
+             predicate, and returns the last occurrence within the entire List.
         
         
             match: The Predicate(T) delegate that defines the conditions of the element to search for.
             Returns: The last element that matches the conditions defined by the specified predicate, 
-        
-                         if found; otherwise, the default value for type T.
+                
+                 if found; otherwise, the default value for type T.
         """
         pass
 
@@ -1347,47 +1329,47 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
         FindLastIndex(self: RhinoList[T], startIndex: int, count: int, match: Predicate[T]) -> int
         
             Searches for an element that matches the conditions defined by the 
-                    
-             specified predicate, and returns the zero-based index of the last 
-                    
-             occurrence within the entire List.
+                    specified 
+             predicate, and returns the zero-based index of the last 
+                    occurrence within 
+             the entire List.
         
         
             startIndex: The zero-based starting index of the backward search.
             count: The number of elements in the section to search.
             match: The Predicate(T) delegate that defines the conditions of the element to search for.
             Returns: The zero-based index of the last occurrence of an element that matches 
-                  
-               the conditions defined by match, if found; otherwise, -1.
+                    the 
+             conditions defined by match, if found; otherwise, -1.
         
         FindLastIndex(self: RhinoList[T], startIndex: int, match: Predicate[T]) -> int
         
             Searches for an element that matches the conditions defined by the 
-                    
-             specified predicate, and returns the zero-based index of the last 
-                    
-             occurrence within the entire List.
+                    specified 
+             predicate, and returns the zero-based index of the last 
+                    occurrence within 
+             the entire List.
         
         
             startIndex: The zero-based starting index of the backward search.
             match: The Predicate(T) delegate that defines the conditions of the element to search for.
             Returns: The zero-based index of the last occurrence of an element that matches 
-                  
-               the conditions defined by match, if found; otherwise, -1.
+                    the 
+             conditions defined by match, if found; otherwise, -1.
         
         FindLastIndex(self: RhinoList[T], match: Predicate[T]) -> int
         
             Searches for an element that matches the conditions defined by the 
-                    
-             specified predicate, and returns the zero-based index of the last 
-                    
-             occurrence within the entire List.
+                    specified 
+             predicate, and returns the zero-based index of the last 
+                    occurrence within 
+             the entire List.
         
         
             match: The Predicate(T) delegate that defines the conditions of the element to search for.
             Returns: The zero-based index of the last occurrence of an element that matches 
-                  
-               the conditions defined by match, if found; otherwise, -1.
+                    the 
+             conditions defined by match, if found; otherwise, -1.
         """
         pass
 
@@ -1426,57 +1408,57 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
         IndexOf(self: RhinoList[T], item: T, index: int, count: int) -> int
         
             Searches for the specified object and returns the zero-based index of the first 
-         
-                        occurrence within the range of elements in the List that starts at the 
-             specified 
+                 
+                occurrence within the range of elements in the List that starts at the specified 
+             
                     index and contains the specified number of elements.
         
         
             item: The object to locate in the List. 
-                    The value can be a null reference 
-             (Nothing in Visual Basic) 
+                    The value can be a null reference (Nothing 
+             in Visual Basic) 
                     for reference types.
         
             index: The zero-based starting index of the search.
             count: The number of elements in the section to search.
             Returns: The zero-based index of the first occurrence of item within 
-                    the 
-             entire List, if found; otherwise, -1.
+                    the entire List, 
+             if found; otherwise, -1.
         
         IndexOf(self: RhinoList[T], item: T, index: int) -> int
         
             Searches for the specified object and returns the zero-based index of 
-                   
-              the first occurrence within the range of elements in the List that 
-                    
-             extends from the specified index to the last element.
+                    the 
+             first occurrence within the range of elements in the List that 
+                    extends from 
+             the specified index to the last element.
         
         
             item: The object to locate in the List. 
-                    The value can be a null reference 
-             (Nothing in Visual Basic) 
+                    The value can be a null reference (Nothing 
+             in Visual Basic) 
                     for reference types.
         
             index: The zero-based starting index of the search.
             Returns: The zero-based index of the first occurrence of item within 
-                    the 
-             entire List, if found; otherwise, -1.
+                    the entire List, 
+             if found; otherwise, -1.
         
         IndexOf(self: RhinoList[T], item: T) -> int
         
             Searches for the specified object and returns the zero-based index of the 
-               
-                  first occurrence within the entire List.
+                    
+             first occurrence within the entire List.
         
         
             item: The object to locate in the List. 
-                    The value can be a null reference 
-             (Nothing in Visual Basic) 
+                    The value can be a null reference (Nothing 
+             in Visual Basic) 
                     for reference types.
         
             Returns: The zero-based index of the first occurrence of item within 
-                    the 
-             entire List, if found; otherwise, -1.
+                    the entire List, 
+             if found; otherwise, -1.
         """
         pass
 
@@ -1487,8 +1469,8 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
         
             index: The zero-based index at which item should be inserted.
             item: The object to insert. The value can be a null reference 
-                    (Nothing in 
-             Visual Basic) for reference types.
+                    (Nothing in Visual 
+             Basic) for reference types.
         """
         pass
 
@@ -1501,10 +1483,10 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
             collection: The collection whose elements should be inserted into the List. 
                     The 
              collection itself cannot be a null reference (Nothing in Visual Basic), 
-                 
-                but it can contain elements that are a null reference (Nothing in Visual 
-             Basic), 
-                    if type T is a reference type.
+                    but 
+             it can contain elements that are a null reference (Nothing in Visual Basic), 
+                    
+             if type T is a reference type.
         """
         pass
 
@@ -1513,54 +1495,54 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
         LastIndexOf(self: RhinoList[T], item: T, index: int, count: int) -> int
         
             Searches for the specified object and returns the zero-based index of the 
-               
-                  last occurrence within the range of elements in the List that contains 
-             
-                    the specified number of elements and ends at the specified index.
+                    
+             last occurrence within the range of elements in the List that contains 
+                    the 
+             specified number of elements and ends at the specified index.
         
         
             item: The object to locate in the List. 
-                    The value can be a null reference 
-             (Nothing in Visual Basic) for reference types.
+                    The value can be a null reference (Nothing 
+             in Visual Basic) for reference types.
         
             index: The zero-based starting index of the backward search.
             count: The number of elements in the section to search.
             Returns: The zero-based index of the last occurrence of item within 
-                    the 
-             entire the List, if found; otherwise, -1.
+                    the entire the 
+             List, if found; otherwise, -1.
         
         LastIndexOf(self: RhinoList[T], item: T, index: int) -> int
         
             Searches for the specified object and returns the zero-based index 
-                    
-             of the last occurrence within the range of elements in the List 
-                    that 
-             extends from the first element to the specified index.
+                    of the 
+             last occurrence within the range of elements in the List 
+                    that extends from 
+             the first element to the specified index.
         
         
             item: The object to locate in the List. 
-                    The value can be a null reference 
-             (Nothing in Visual Basic) for reference types.
+                    The value can be a null reference (Nothing 
+             in Visual Basic) for reference types.
         
             index: The zero-based starting index of the backward search.
             Returns: The zero-based index of the last occurrence of item within 
-                    the 
-             entire the List, if found; otherwise, -1.
+                    the entire the 
+             List, if found; otherwise, -1.
         
         LastIndexOf(self: RhinoList[T], item: T) -> int
         
             Searches for the specified object and returns the zero-based 
-                    index 
-             of the last occurrence within the entire List.
+                    index of the 
+             last occurrence within the entire List.
         
         
             item: The object to locate in the List. 
-                    The value can be a null reference 
-             (Nothing in Visual Basic) for reference types.
+                    The value can be a null reference (Nothing 
+             in Visual Basic) for reference types.
         
             Returns: The zero-based index of the last occurrence of item within 
-                    the 
-             entire the List, if found; otherwise, -1.
+                    the entire the 
+             List, if found; otherwise, -1.
         """
         pass
 
@@ -1582,12 +1564,12 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
             Removes the first occurrence of a specific object from the List.
         
             item: The object to remove from the List. 
-                    The value can be a null 
-             reference (Nothing in Visual Basic) for reference types.
+                    The value can be a null reference 
+             (Nothing in Visual Basic) for reference types.
         
             Returns: true if item is successfully removed; otherwise, false. 
-                    This method 
-             also returns false if item was not found in the List.
+                    This method also 
+             returns false if item was not found in the List.
         """
         pass
 
@@ -1595,9 +1577,7 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
         """
         RemoveAll(self: RhinoList[T], match: Predicate[T]) -> int
         
-            Removes the all the elements that match the conditions defined by the specified 
-             predicate.
-        
+            Removes the all the elements that match the conditions defined by the specified predicate.
         
             match: The Predicate(T) delegate that defines the conditions of the elements to remove.
             Returns: The number of elements removed from the List.
@@ -1617,10 +1597,9 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
         """
         RemoveNulls(self: RhinoList[T]) -> int
         
-            Removes all elements from the List that are null references (Nothing in Visual 
-             Basic). 
-                    This function will not do anything if T is not a Reference 
-             type.
+            Removes all elements from the List that are null references (Nothing in Visual Basic). 
+          
+                       This function will not do anything if T is not a Reference type.
         
             Returns: The number of nulls removed from the List.
         """
@@ -1656,22 +1635,22 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
             index: The zero-based starting index of the range to sort.
             count: The length of the range to sort.
             comparer: The IComparer(T) implementation to use when comparing 
-                    elements, or a 
-             null reference (Nothing in Visual Basic) to use the default 
+                    elements, or a null 
+             reference (Nothing in Visual Basic) to use the default 
                     comparer 
              Comparer(T).Default.
         
         Sort(self: RhinoList[T], keys: Array[float])
             Sort this list based on a list of numeric keys of equal length. 
-                    The 
-             keys array will not be altered.
+                    The keys 
+             array will not be altered.
         
         
             keys: Numeric keys to sort with.
         Sort(self: RhinoList[T], keys: Array[int])
             Sort this list based on a list of numeric keys of equal length. 
-                    The 
-             keys array will not be altered.
+                    The keys 
+             array will not be altered.
         
         
             keys: Numeric keys to sort with.
@@ -1681,9 +1660,8 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
             Sorts the elements in the entire list using the specified System.Comparison(T)
         
             comparer: The IComparer(T) implementation to use when comparing elements, 
-                    or a 
-             null reference (Nothing in Visual Basic) to use the default comparer 
-             Comparer(T).Default.
+                    or a null 
+             reference (Nothing in Visual Basic) to use the default comparer Comparer(T).Default.
         
         Sort(self: RhinoList[T], comparison: Comparison[T])
             Sorts the elements in the entire list using the specified comparer.
@@ -1705,8 +1683,8 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
         """
         TrimExcess(self: RhinoList[T])
             Sets the capacity to the actual number of elements in the List, 
-                    if 
-             that number is less than a threshold value.
+                    if that 
+             number is less than a threshold value.
         """
         pass
 
@@ -1718,13 +1696,11 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
              specified predicate.
         
         
-            match: The Predicate(T) delegate that defines the conditions to check against the 
-             elements.
-        
+            match: The Predicate(T) delegate that defines the conditions to check against the elements.
             Returns: true if every element in the List matches the conditions defined by 
-                    
-             the specified predicate; otherwise, false. If the list has no elements, the return 
-             value is true.
+                    the 
+             specified predicate; otherwise, false. If the list has no elements, the return value is 
+             true.
         """
         pass
 
@@ -1736,21 +1712,16 @@ class RhinoList(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, I
         """
         __contains__(self: ICollection[T], item: T) -> bool
         
-            Determines whether the System.Collections.Generic.ICollection contains a specific 
-             value.
-        
+            Determines whether the System.Collections.Generic.ICollection contains a specific value.
         
             item: The object to locate in the System.Collections.Generic.ICollection.
-            Returns: true if item is found in the System.Collections.Generic.ICollection; otherwise, 
-             false.
-        
+            Returns: true if item is found in the System.Collections.Generic.ICollection; otherwise, false.
         __contains__(self: IList, value: object) -> bool
         
             Determines whether the System.Collections.IList contains a specific value.
         
             value: The object to locate in the System.Collections.IList.
-            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, 
-             false.
+            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, false.
         """
         pass
 
@@ -1842,8 +1813,8 @@ class TransformObjectList(object, IDisposable):
     def Add(self, *__args):
         """
         Add(self: TransformObjectList, objref: ObjRef)
-            Add an ObjRef to this list. Use this to add Polyedges so the references are 
-             properly counted
+            Add an ObjRef to this list. Use this to add Polyedges so the references are properly 
+             counted
         
         Add(self: TransformObjectList, rhinoObject: RhinoObject)
             Add a RhinoObject to this list

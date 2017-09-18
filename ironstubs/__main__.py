@@ -34,7 +34,7 @@ from utils.docopt import docopt
 from utils.logger import logger
 from utils.helper import Timer
 from default_settings import PATHS, BUILTINS, ASSEMBLIES
-from make_stubs import make
+from make_stubs import make, dump_json_log
 
 __version__ = '1.0.0'
 __doc__ = """
@@ -44,44 +44,51 @@ __doc__ = """
 
     Usage:
       ironstubs
-      ironstubs make (<assembly-name>|--all) [--directory=<dir>] [--overwrite] [--no-json]
+      ironstubs make (<assembly-name>|--all) [options]
 
     Examples:
-      ipy -m ironstubs RhinoCommon
+      ipy -m ironstubs RhinoCommon --overwrite
 
     Options:
-        --all                         Process all Assemblies in the default_settings.py
-        --directory=<dir>             Path of Output Directory [default: {out_dir}]
+        <assembly-name>         Name of Dll Assembly to load
+        --all                   Process all Assemblies in the default_settings.py
+
+        --folder=<dir>          Name of Output Directory [default: {out_dir}]
         --overwrite             Force Overwrite if stub already exists [default: False].
-        --no-json                     Don't write json file [default: False].
-        -h, --help                    Show this screen.
+        --no-json               Disables Json Log
+        --debug                 Enables Debug Messages
+        -h, --help              Show this screen.
 
     """.format(out_dir='stubs', version=__version__)
 
 arguments = docopt(__doc__, version=__version__)
 
 # OPTIONS
-option_assembly = arguments['<assembly-name>']
+option_assembly_name = arguments['<assembly-name>']
 option_all = arguments['--all']
-option_output_dir = arguments['--directory']
+option_output_dir = arguments['--folder']
 option_overwrite = arguments['--overwrite']
-option_no_json = not arguments['--no-json']
+option_json = not arguments['--no-json']
 
+if arguments['--debug']:
+    logger.enable_debug()
 
-PROJECT_DIR = os.getcwd()  # Must execute from project dir
+# PROJECT_DIR = os.getcwd()  # Must execute from project dir
 PKG_DIR = os.path.dirname(__file__)
-PATHS, BUILTINS, ASSEMBLIES
+PROJECT_DIR = os.path.dirname(PKG_DIR)
+os.chdir(PROJECT_DIR)
 [sys.path.append(p) for p in PATHS] # Add Paths
 release_dir = os.path.join(PKG_DIR, 'release', option_output_dir)
-# logger.info(arguments)
 
+# logger.info(arguments)
 if arguments['make']:
     timer = Timer()
-    make(release_dir, assemblies=[option_assembly],
-        builtins=None, overwrite=option_overwrite)
+    if not option_all:
+        ASSEMBLIES = [option_assembly_name]
+
+    for assembly_name in ASSEMBLIES:
+        assembly_dict = make(release_dir, option_assembly_name,
+                             overwrite=option_overwrite, quiet=option_all)
+        if option_json:
+            dump_json_log(assembly_dict)
     print('Done: {} seconds'.format(timer.stop()))
-
-# if arguments['make_all']:
-    # make(option_output_dir, assemblies=None, builtins=None, overwrite=False):
-
-

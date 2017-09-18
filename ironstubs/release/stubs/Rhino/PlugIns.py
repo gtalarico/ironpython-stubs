@@ -77,12 +77,11 @@ class PlugIn(object):
         """
         CreateCommands(self: PlugIn)
             Called right after plug-in is created and is responsible for creating
-                    
-             all of the commands in a given plug-in.  The base class implementation
-                   
-              Constructs an instance of every publicly exported command class in your
-                 
-                plug-in's assembly.
+                    all of 
+             the commands in a given plug-in.  The base class implementation
+                    Constructs an 
+             instance of every publicly exported command class in your
+                    plug-in's assembly.
         """
         pass
 
@@ -104,8 +103,8 @@ class PlugIn(object):
             Finds the plug-in instance that was loaded from a given assembly.
         
             pluginAssembly: The plug-in assembly.
-                    You can get the assembly instance at runtime 
-             with the System.Type.Assembly instance property.
+                    You can get the assembly instance at runtime with the 
+             System.Type.Assembly instance property.
         
             Returns: The assembly plug-in instance if successful. Otherwise, null.
         """
@@ -141,9 +140,7 @@ class PlugIn(object):
         """
         GetInstalledPlugInNames(typeFilter: PlugInType, loaded: bool, unloaded: bool) -> Array[str]
         
-            Gets a list of installed plug-in names.  The list can be restricted by some 
-             filters.
-        
+            Gets a list of installed plug-in names.  The list can be restricted by some filters.
         
             typeFilter: The enumeration flags that determine which types of plug-ins are included.
             loaded: true if loaded plug-ins are returned.
@@ -163,75 +160,72 @@ class PlugIn(object):
         GetLicense(self: PlugIn, licenseCapabilities: LicenseCapabilities, textMask: str, validateDelegate: ValidateProductKeyDelegate) -> bool
         
             Verifies that there is a valid product license for your plug-in, using
-                   
-              the Rhino licensing system. If the plug-in is installed as a standalone
-                 
-                node, the locally installed license will be validated. If the plug-in
-                 
-                is installed as a network node, a loaner license will be requested by
-                 
-                the system's assigned Zoo server. If the Zoo server finds and returns 
-                
-                 a license, then this license will be validated. If no license is found,
-              
-                   then the user will be prompted to provide a license key, which will be
-             
+                    the 
+             Rhino licensing system. If the plug-in is installed as a standalone
+                    node, the 
+             locally installed license will be validated. If the plug-in
+                    is installed as a 
+             network node, a loaner license will be requested by
+                    the system's assigned Zoo 
+             server. If the Zoo server finds and returns 
+                    a license, then this license 
+             will be validated. If no license is found,
+                    then the user will be prompted to 
+             provide a license key, which will be
                     validated.
         
         
             licenseCapabilities: In the event that a license was not found, or if the user wants to change
-                
-                 the way your plug-in is licenses, then provide what capabilities your
-                
-                 license has by using this enumeration flag.
+                    the 
+             way your plug-in is licenses, then provide what capabilities your
+                    license has 
+             by using this enumeration flag.
         
             textMask: In the event that the user needs to be asked for a license, then you can
-                 
-                provide a text mask, which helps the user to distinguish between proper
-               
-                  and improper user input of your license code. Note, if you do not want
-              
-                   to use a text mask, then pass in a null value for this parameter.
-                  
-               For more information on text masks, search MSDN for the 
-             System.Windows.Forms.MaskedTextBox class.
+                    
+             provide a text mask, which helps the user to distinguish between proper
+                    and 
+             improper user input of your license code. Note, if you do not want
+                    to use a 
+             text mask, then pass in a null value for this parameter.
+                    For more information 
+             on text masks, search MSDN for the System.Windows.Forms.MaskedTextBox class.
         
             validateDelegate: Since the Rhino licensing system knows nothing about your product license,
-               
-                  you will need to validate the product license provided by the Rhino 
-                
-                 licensing system. This is done by supplying a callback function, or delegate,
-        
-                         that can be called to perform the validation.
+                    
+             you will need to validate the product license provided by the Rhino 
+                    
+             licensing system. This is done by supplying a callback function, or delegate,
+                    
+             that can be called to perform the validation.
         
             Returns: true if a valid license was found. false otherwise.
         GetLicense(self: PlugIn, productBuildType: LicenseBuildType, validateDelegate: ValidateProductKeyDelegate) -> bool
         
             Verifies that there is a valid product license for your plug-in, using
-                   
-              the Rhino licensing system. If the plug-in is installed as a standalone
-                 
-                node, the locally installed license will be validated. If the plug-in
-                 
-                is installed as a network node, a loaner license will be requested by
-                 
-                the system's assigned Zoo server. If the Zoo server finds and returns 
-                
-                 a license, then this license will be validated. If no license is found,
-              
-                   then the user will be prompted to provide a license key, which will be
-             
+                    the 
+             Rhino licensing system. If the plug-in is installed as a standalone
+                    node, the 
+             locally installed license will be validated. If the plug-in
+                    is installed as a 
+             network node, a loaner license will be requested by
+                    the system's assigned Zoo 
+             server. If the Zoo server finds and returns 
+                    a license, then this license 
+             will be validated. If no license is found,
+                    then the user will be prompted to 
+             provide a license key, which will be
                     validated.
         
         
             productBuildType: The product build contentType required by your plug-in.
             validateDelegate: Since the Rhino licensing system knows nothing about your product license,
-               
-                  you will need to validate the product license provided by the Rhino 
-                
-                 licensing system. This is done by supplying a callback function, or delegate,
-        
-                         that can be called to perform the validation.
+                    
+             you will need to validate the product license provided by the Rhino 
+                    
+             licensing system. This is done by supplying a callback function, or delegate,
+                    
+             that can be called to perform the validation.
         
             Returns: true if a valid license was found. false otherwise.
         """
@@ -242,8 +236,7 @@ class PlugIn(object):
         GetLicenseOwner(self: PlugIn) -> (bool, str, str)
         
             Get the customer name and organization used when entering the product
-                    
-             license.
+                    license.
         """
         pass
 
@@ -298,8 +291,8 @@ class PlugIn(object):
             Is called when the plug-in is being loaded.
         
             errorMessage: If a load error is returned and this string is set. This string is the 
-                  
-               error message that will be reported back to the user.
+                    error 
+             message that will be reported back to the user.
         
             Returns: An appropriate load return code.
                     The default implementation returns 
@@ -342,8 +335,8 @@ class PlugIn(object):
         """
         ReadDocument(self: PlugIn, doc: RhinoDoc, archive: BinaryArchiveReader, options: FileReadOptions)
             Called whenever a Rhino document is being loaded and plug-in user data was
-               
-                  encountered written by a plug-in with this plug-in's GUID.
+                    
+             encountered written by a plug-in with this plug-in's GUID.
         
         
             doc: A Rhino document that is being loaded.
@@ -351,8 +344,8 @@ class PlugIn(object):
                     Use 
              BinaryArchiveReader.Read*() functions to read plug-in data.
                     
-                
-                 If any BinaryArchive.Read*() functions throws an exception then
+                    If 
+             any BinaryArchive.Read*() functions throws an exception then
                     
              archive.ReadErrorOccurve will be true and you should immediately return.
         
@@ -369,10 +362,10 @@ class PlugIn(object):
         ReturnLicense(self: PlugIn) -> bool
         
             Returns, or releases, a product license that was obtained from the Rhino
-                 
-                licensing system. Note, most plug-ins do not need to call this as the
-                 
-                Rhino licensing system will return all licenses when Rhino shuts down.
+                    
+             licensing system. Note, most plug-ins do not need to call this as the
+                    Rhino 
+             licensing system will return all licenses when Rhino shuts down.
         """
         pass
 
@@ -389,20 +382,18 @@ class PlugIn(object):
         ShouldCallWriteDocument(self: PlugIn, options: FileWriteOptions) -> bool
         
             Called whenever a Rhino is about to save a .3dm file.
-                    If you want to 
-             save plug-in document data when a model is 
-                    saved in a version 5 .3dm 
-             file, then you must override this
-                    function to return true and you 
-             must override WriteDocument().
+                    If you want to save 
+             plug-in document data when a model is 
+                    saved in a version 5 .3dm file, then 
+             you must override this
+                    function to return true and you must override 
+             WriteDocument().
         
         
-            options: The file write options, such as "include preview image" and "include render 
-             meshes".
-        
+            options: The file write options, such as "include preview image" and "include render meshes".
             Returns: true if the plug-in wants to save document user data in the
-                    version 5 
-             .3dm file.  The default returns false.
+                    version 5 .3dm 
+             file.  The default returns false.
         """
         pass
 
@@ -410,27 +401,25 @@ class PlugIn(object):
         """
         WriteDocument(self: PlugIn, doc: RhinoDoc, archive: BinaryArchiveWriter, options: FileWriteOptions)
             Called when Rhino is saving a .3dm file to allow the plug-in
-                    to save 
-             document user data.
+                    to save document 
+             user data.
         
         
             doc: The Rhino document instance that is being saved.
             archive: OpenNURBS file archive object Rhino is using to write the file.
                     Use 
              BinaryArchiveWriter.Write*() functions to write plug-in data.
-                    OR use 
-             the ArchivableDictionary
+                    OR use the 
+             ArchivableDictionary
                     
-                    If any 
-             BinaryArchiveWriter.Write*() functions throw an exception, 
-                    then 
-             archive.WriteErrorOccured will be true and you should immediately return.
-                
-                 Setting archive.WriteErrorOccured to true will cause Rhino to stop saving the 
-             file.
+                    If any BinaryArchiveWriter.Write*() 
+             functions throw an exception, 
+                    then archive.WriteErrorOccured will be true 
+             and you should immediately return.
+                    Setting archive.WriteErrorOccured to true 
+             will cause Rhino to stop saving the file.
         
-            options: The file write options, such as "include preview image" and "include render 
-             meshes".
+            options: The file write options, such as "include preview image" and "include render meshes".
         """
         pass
 
@@ -494,10 +483,10 @@ class DigitizerPlugIn(PlugIn):
         EnableDigitizer(self: DigitizerPlugIn, enable: bool) -> bool
         
             Called by Rhino to enable/disable input from the digitizer.
-                    If enable 
-             is true and EnableDigitizer() returns false, then
-                    Rhino will not 
-             calibrate the digitizer.
+                    If enable is true 
+             and EnableDigitizer() returns false, then
+                    Rhino will not calibrate the 
+             digitizer.
         
         
             enable: If true, enable the digitizer. If false, disable the digitizer.
@@ -509,12 +498,12 @@ class DigitizerPlugIn(PlugIn):
         """
         SendPoint(self: DigitizerPlugIn, point: Point3d, mousebuttons: MouseButtons, shiftKey: bool, controlKey: bool)
             If the digitizer is enabled, call this function to send a point to Rhino.
-                
-                 Call this function as much as you like.  The digitizers that Rhino currently
-         
-                        supports send a point every 15 milliseconds or so. This function should 
-             be
-                    called when users press or release any digitizer button.
+                    
+             Call this function as much as you like.  The digitizers that Rhino currently
+                    
+             supports send a point every 15 milliseconds or so. This function should be
+                    
+             called when users press or release any digitizer button.
         
         
             point: 3d point in digitizer coordinates.
@@ -948,8 +937,8 @@ class LicenseUtils(object):
         AskUserForLicense(productType: int, standAlone: bool, parentWindow: IWin32Window, textMask: str, validateDelegate: ValidateProductKeyDelegate) -> bool
         
             This version of Rhino.PlugIns.LicenseUtils.AskUserForLicense
-                    is used 
-             by Rhino C++ plug-ins.
+                    is used by Rhino 
+             C++ plug-ins.
         """
         pass
 
@@ -959,14 +948,14 @@ class LicenseUtils(object):
         CheckInLicense(productId: Guid) -> bool
         
             Checks in a previously checked out license to
-                    the Zoo server from 
-             which it was checked out.
+                    the Zoo server from which it 
+             was checked out.
         
         
             productId: The Guid of the product that you want to check in.
             Returns: true if the license was checked in successful.
-                    false if not 
-             successful or on error.
+                    false if not successful or on 
+             error.
         """
         pass
 
@@ -976,14 +965,12 @@ class LicenseUtils(object):
         CheckOutLicense(productId: Guid) -> bool
         
             Checks out a license that is on loan from a Zoo server
-                    on a permanent 
-             basis.
-        
+                    on a permanent basis.
         
             productId: The Guid of the product that you want to check out.
             Returns: true if the license was checked out successful.
-                    false if not 
-             successful or on error.
+                    false if not successful or on 
+             error.
         """
         pass
 
@@ -997,8 +984,8 @@ class LicenseUtils(object):
         
             productId: The Guid of the product that you want to check in.
             Returns: true if the license was successfully converted.
-                    false if not 
-             successful or on error.
+                    false if not successful or on 
+             error.
         """
         pass
 
@@ -1017,14 +1004,14 @@ class LicenseUtils(object):
         GetLicense(validateDelegate: ValidateProductKeyDelegate, capabilities: int, textMask: str) -> bool
         
             This version of Rhino.PlugIns.LicenseUtils.GetLicense
-                    is used by 
-             Rhino C++ plug-ins.
+                    is used by Rhino C++ 
+             plug-ins.
         
         GetLicense(productType: int, validateDelegate: ValidateProductKeyDelegate) -> bool
         
             This version of Rhino.PlugIns.LicenseUtils.GetLicense
-                    is used by 
-             Rhino C++ plug-ins.
+                    is used by Rhino C++ 
+             plug-ins.
         """
         pass
 
@@ -1096,8 +1083,8 @@ class LicenseUtils(object):
         ReturnLicense(validateDelegate: ValidateProductKeyDelegate) -> bool
         
             This (internal) version of Rhino.PlugIns.LicenseUtils.ReturnLicense is used
-              
-                   is used by Rhino C++ plug-ins.
+                    
+             is used by Rhino C++ plug-ins.
         """
         pass
 
@@ -1305,12 +1292,12 @@ class RenderPlugIn(PlugIn):
         AllowChooseContent(self: RenderPlugIn, content: RenderContent) -> bool
         
             Default implementation returns true which means the content can be
-                    
-             picked from the content browser by the user. Override this method and
-                    
-             return false if you don't want to allow a certain content contentType to be
-              
-                   picked from the content browser while your render engine is current.
+                    picked 
+             from the content browser by the user. Override this method and
+                    return false 
+             if you don't want to allow a certain content contentType to be
+                    picked from 
+             the content browser while your render engine is current.
         
         
             content: A render context.
@@ -1322,25 +1309,24 @@ class RenderPlugIn(PlugIn):
         """
         CreatePreview(self: RenderPlugIn, args: CreatePreviewEventArgs)
             Creates the preview bitmap that will appear in the content editor's
+                    thumbnail 
+             display when previewing materials and environments. If this
+                    function is not 
+             overridden or the PreviewImage is not set on the
+                    args, then the internal 
+             OpenGL renderer will generate a simulation of
+                    the content.
                     
-             thumbnail display when previewing materials and environments. If this
+            
+                     This function is called with four different preview quality settings.
                     
-             function is not overridden or the PreviewImage is not set on the
-                    
-             args, then the internal OpenGL renderer will generate a simulation of
-                    
-             the content.
-                    
-                    This function is called with four 
-             different preview quality settings.
-                    The first quality level of 
-             RealtimeQuick is called on the main thread
-                    and needs to be drawn as 
-             fast as possible.  This function is called
-                    with the other three 
-             quality settings on a separate thread and are
-                    meant for generating 
-             progressively refined preview.
+             The first quality level of RealtimeQuick is called on the main thread
+                    and 
+             needs to be drawn as fast as possible.  This function is called
+                    with the 
+             other three quality settings on a separate thread and are
+                    meant for 
+             generating progressively refined preview.
         
         
             args: Event argument with several preview option state properties.
@@ -1354,10 +1340,10 @@ class RenderPlugIn(PlugIn):
                      
              thumbnail display when previewing textures in 2d (UV) mode.
                     
-                
-                  If this function is not overridden or the PreviewImage is not set on the
-            
-                      args, then the internal OpenGL renderer will generate a simulation.
+                     If 
+             this function is not overridden or the PreviewImage is not set on the
+                     args, 
+             then the internal OpenGL renderer will generate a simulation.
         
         
             args: Event argument with several preview option state properties.
@@ -1369,12 +1355,12 @@ class RenderPlugIn(PlugIn):
         EnableAssignMaterialButton(self: RenderPlugIn) -> bool
         
             Called to enable/disable the "Material" button located on the
-                    
-             "Material" tab in the Properties and Layer dialog boxes.  The default
-                    
-             return value is false which will disable the button.  If the button is
-                   
-              disabled then the OnAssignMaterial function is never called.
+                    "Material" tab 
+             in the Properties and Layer dialog boxes.  The default
+                    return value is false 
+             which will disable the button.  If the button is
+                    disabled then the 
+             OnAssignMaterial function is never called.
         """
         pass
 
@@ -1383,12 +1369,12 @@ class RenderPlugIn(PlugIn):
         EnableCreateMaterialButton(self: RenderPlugIn) -> bool
         
             Called to enable/disable the "New" button located on the "Material" in
-                   
-              the  Properties and Layer dialog boxes.  The default return value is
-                    
-             false which will disable the button.  If the button is disabled then
-                    
-             the OnEditMaterial function is never called.
+                    the  
+             Properties and Layer dialog boxes.  The default return value is
+                    false which 
+             will disable the button.  If the button is disabled then
+                    the OnEditMaterial 
+             function is never called.
         """
         pass
 
@@ -1397,12 +1383,12 @@ class RenderPlugIn(PlugIn):
         EnableEditMaterialButton(self: RenderPlugIn, doc: RhinoDoc, material: Material) -> bool
         
             Called to enable/disable the "Edit" button located on the "Material" in
-                  
-               the Properties and Layer dialog boxes.  The default return value is
-                    
-             false  which will disable the button.  If the button is disabled then
-                    
-             the OnEditMaterial function is never called.
+                    the 
+             Properties and Layer dialog boxes.  The default return value is
+                    false  which 
+             will disable the button.  If the button is disabled then
+                    the OnEditMaterial 
+             function is never called.
         """
         pass
 
@@ -1415,10 +1401,10 @@ class RenderPlugIn(PlugIn):
         OnAssignMaterial(self: RenderPlugIn, parent: IntPtr, doc: RhinoDoc, material: Material) -> (bool, Material)
         
             This function is called by the Object Properties and Layer Control
-                    
-             dialogs when the "Material" button is pressed in the "Render" tab.
-                    
-             This is only called if EnableAssignMaterialButton returns true.
+                    dialogs 
+             when the "Material" button is pressed in the "Render" tab.
+                    This is only 
+             called if EnableAssignMaterialButton returns true.
         """
         pass
 
@@ -1427,10 +1413,10 @@ class RenderPlugIn(PlugIn):
         OnCreateMaterial(self: RenderPlugIn, parent: IntPtr, doc: RhinoDoc, material: Material) -> (bool, Material)
         
             This function is called by the Object Properties and Layer Control
-                    
-             dialogs when the "New" button is pressed in the "Material" tab.  This
-                    
-             is only called if EnableCreateMaterialButton returns true.
+                    dialogs 
+             when the "New" button is pressed in the "Material" tab.  This
+                    is only called 
+             if EnableCreateMaterialButton returns true.
         """
         pass
 
@@ -1439,12 +1425,12 @@ class RenderPlugIn(PlugIn):
         OnEditMaterial(self: RenderPlugIn, parent: IntPtr, doc: RhinoDoc, material: Material) -> (bool, Material)
         
             This function is called by the Object Properties and Layer Control
-                    
-             dialogs when the "Edit" button is pressed in the "Material" tab.  This
-                   
-              is only called if EnableEditMaterialButton returns true. A return value
-                 
-                of true means the material has been updated.
+                    dialogs 
+             when the "Edit" button is pressed in the "Material" tab.  This
+                    is only called 
+             if EnableEditMaterialButton returns true. A return value
+                    of true means the 
+             material has been updated.
         """
         pass
 
@@ -1454,8 +1440,8 @@ class RenderPlugIn(PlugIn):
             This plug-in (has become)/(is no longer) the current render plug-in
         
             current: If true then this plug-in is now the current render plug-in otherwise
-                    
-             it is no longer the current render plug-in.
+                    it is 
+             no longer the current render plug-in.
         """
         pass
 
@@ -1463,8 +1449,8 @@ class RenderPlugIn(PlugIn):
         """
         RegisterCustomRenderSaveFileTypes(self: RenderPlugIn, saveFileTypes: CustomRenderSaveFileTypes)
             Override this method to add custom file types to the render window save
-                  
-               file dialog.
+                    file 
+             dialog.
         """
         pass
 
@@ -1472,10 +1458,10 @@ class RenderPlugIn(PlugIn):
         """
         RegisterRenderPanels(self: RenderPlugIn, panels: RenderPanels)
             Override this method and call 
-             Rhino.Render.RenderPanels.RegisterPanel(Rhino.PlugIns.PlugIn,Rhino.Render.RenderPan
-             elType,System.Type,System.String,System.Boolean,System.Boolean)
-                    to 
-             add custom render UI to the render output window.
+             Rhino.Render.RenderPanels.RegisterPanel(Rhino.PlugIns.PlugIn,Rhino.Render.RenderPanelType,S
+             ystem.Type,System.String,System.Boolean,System.Boolean)
+                    to add custom render 
+             UI to the render output window.
         """
         pass
 
@@ -1483,8 +1469,8 @@ class RenderPlugIn(PlugIn):
         """
         RegisterRenderTabs(self: RenderPlugIn, tabs: RenderTabs)
             Override this method and call 
-             Rhino.Render.RenderTabs.RegisterTab(Rhino.PlugIns.PlugIn,System.Type,System.String,
-             System.Drawing.Icon)
+             Rhino.Render.RenderTabs.RegisterTab(Rhino.PlugIns.PlugIn,System.Type,System.String,System.D
+             rawing.Icon)
                     to add custom tabs to the render output window
         """
         pass
@@ -1493,8 +1479,8 @@ class RenderPlugIn(PlugIn):
         """
         Render(self: RenderPlugIn, doc: RhinoDoc, mode: RunMode, fastPreview: bool) -> Result
         
-            Called by Render and RenderPreview commands if this plug-in is set as the default 
-             render engine.
+            Called by Render and RenderPreview commands if this plug-in is set as the default render 
+             engine.
         
         
             doc: A document.
@@ -1510,14 +1496,14 @@ class RenderPlugIn(PlugIn):
         RenderContentSerializers(self: RenderPlugIn) -> IEnumerable[RenderContentSerializer]
         
             Called by Rhino when it is time to register RenderContentSerializer
-                    
-             derived classes.  Override this method and return an array of an
-                    
-             instance of each serialize custom content object you wish to add.
+                    derived 
+             classes.  Override this method and return an array of an
+                    instance of each 
+             serialize custom content object you wish to add.
         
             Returns: List of RenderContentSerializer objects to register with the Rhino
-                    
-             render content browsers.
+                    render 
+             content browsers.
         """
         pass
 
@@ -1526,16 +1512,16 @@ class RenderPlugIn(PlugIn):
         RenderOptionsDialogPage(self: RenderPlugIn, doc: RhinoDoc) -> OptionsDialogPage
         
             Override this method to replace the render properties page in the Rhino
-                  
-               document properties dialog.  The default implementation returns null
-                   
-              which means just use the the default Rhino page.
+                    
+             document properties dialog.  The default implementation returns null
+                    which 
+             means just use the the default Rhino page.
         
         
             doc: The document properties to edit.
             Returns: Return null to use the default Rhino page or return a page derived from
-                  
-               Rhino.UI.OptionsDialogPage to replace the default page.
+                    
+             Rhino.UI.OptionsDialogPage to replace the default page.
         """
         pass
 
@@ -1552,8 +1538,8 @@ class RenderPlugIn(PlugIn):
         SupportedOutputTypes(self: RenderPlugIn) -> List[FileType]
         
             Returns a list of output types which your renderer can write.
-                    The 
-             default implementation returns bmp, jpg, png, tif, tga.
+                    The default 
+             implementation returns bmp, jpg, png, tif, tga.
         
             Returns: A list of file types.
         """
@@ -1591,9 +1577,7 @@ class ValidateProductKeyDelegate(MulticastDelegate, ICloneable, ISerializable):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new 
-             delegate.
-        
+            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
         
             follow: The delegate to combine with this delegate.
             Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
@@ -1606,9 +1590,9 @@ class ValidateProductKeyDelegate(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by 
-             the current delegate.-or- null, if the method represented by the current delegate 
-             does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1635,14 +1619,14 @@ class ValidateProductKeyDelegate(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that 
-             is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is equal 
+             to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new 
-             System.Delegate without value in its invocation list; otherwise, this instance 
-             with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 

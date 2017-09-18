@@ -16,8 +16,8 @@ class AppearanceSettings(object):
         GetCurrentState() -> AppearanceSettingsState
         
             Gets the current settings of the application.
-            Returns: An instance of a class that represents all the settings as they appear in the 
-             Rhino _Options dialog,
+            Returns: An instance of a class that represents all the settings as they appear in the Rhino 
+             _Options dialog,
                     joined in a single class.
         """
         pass
@@ -49,9 +49,9 @@ class AppearanceSettings(object):
         """
         InitialMainWindowState() -> (bool, Rectangle, FormWindowState)
         
-            Location where the Main Rhino window attempts to show when the application is 
-             first
-                    started.
+            Location where the Main Rhino window attempts to show when the application is first
+              
+                   started.
         
             Returns: false if the information could not be retrieved.
         """
@@ -75,8 +75,8 @@ class AppearanceSettings(object):
             c: A .Net library color.
             forceUiUpdate: true if the UI should be forced to update.
         SetPaintColor(whichColor: PaintColor, c: Color)
-            Sets the logical paint color association to a spacific .Net library color, without 
-             forced UI update.
+            Sets the logical paint color association to a spacific .Net library color, without forced 
+             UI update.
         
         
             whichColor: A logical color association.
@@ -416,10 +416,9 @@ class CommandAliasList(object):
         """
         GetDefaults() -> Dictionary[str, str]
         
-            Constructs a dictionary containing as keys the default names and as value the 
-             default macro.
-                    The returned dicionary contains a copy of the 
-             settings.
+            Constructs a dictionary containing as keys the default names and as value the default 
+             macro.
+                    The returned dicionary contains a copy of the settings.
         
             Returns: A new dictionary with the default name/macro combinantions.
         """
@@ -463,11 +462,10 @@ class CommandAliasList(object):
         """
         IsDefault() -> bool
         
-            Computes a value indicating if the current alias list is the same as the default 
-             alias list.
+            Computes a value indicating if the current alias list is the same as the default alias 
+             list.
         
-            Returns: true if the current alias list is exactly equal to the default alias list; false 
-             otherwise.
+            Returns: true if the current alias list is exactly equal to the default alias list; false otherwise.
         """
         pass
 
@@ -489,10 +487,9 @@ class CommandAliasList(object):
         """
         ToDictionary() -> Dictionary[str, str]
         
-            Constructs a new dictionary that contains: as keys all names and as values all 
-             macros.
-                    Modifications to this dictionary do not affect any Rhino 
-             command alias.
+            Constructs a new dictionary that contains: as keys all names and as values all macros.
+           
+                      Modifications to this dictionary do not affect any Rhino command alias.
         
             Returns: The new dictionary.
         """
@@ -797,15 +794,14 @@ class FileSettings(object):
         AddSearchPath(folder: str, index: int) -> int
         
             Adds a new imagePath to Rhino's search imagePath list.
-                     See "Options 
-             Files settings" in the Rhino help file for more details.
+                     See "Options Files 
+             settings" in the Rhino help file for more details.
         
         
             folder: [in] The valid folder, or imagePath, to add.
-            index: [in] A zero-based position index in the search imagePath list to insert the 
-             string.
-                     If -1, the imagePath will be appended to the end of the 
-             list.
+            index: [in] A zero-based position index in the search imagePath list to insert the string.
+              
+                    If -1, the imagePath will be appended to the end of the list.
         
             Returns: The index where the item was inserted if success.
                      -1 on failure.
@@ -841,13 +837,12 @@ class FileSettings(object):
         """
         FindFile(fileName: str) -> str
         
-            Searches for a file using Rhino's search imagePath. Rhino will look for a file in 
-             the following locations:
+            Searches for a file using Rhino's search imagePath. Rhino will look for a file in the 
+             following locations:
                     1. The current document's folder.
-                  
-               2. Folder's specified in Options dialog, File tab.
-                    3. Rhino's 
-             System folders.
+                    2. 
+             Folder's specified in Options dialog, File tab.
+                    3. Rhino's System folders.
         
         
             fileName: short file name to search for.
@@ -892,8 +887,8 @@ class FileSettings(object):
         """
         GetSearchPaths() -> Array[str]
         
-            Returns all of the imagePath items in Rhino's search imagePath list. See "Options 
-             Files settings" in the Rhino help file for more details.
+            Returns all of the imagePath items in Rhino's search imagePath list. See "Options Files 
+             settings" in the Rhino help file for more details.
         """
         pass
 
@@ -903,8 +898,8 @@ class FileSettings(object):
         RecentlyOpenedFiles() -> Array[str]
         
             Returns a list of recently opened files. Note that this function does not
-                
-                 check to make sure that these files still exist.
+                    
+             check to make sure that these files still exist.
         
             Returns: An array of strings with the paths to the recently opened files.
         """

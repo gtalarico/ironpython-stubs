@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Rhino.Runtime.InteropWrappers calls itself InteropWrappers
-# from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null, RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530
+# from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530
 # by generator 1.145
 """ NamespaceTracker represent a CLS namespace. """
 # no imports
@@ -1110,8 +1110,8 @@ class SimpleArraySurfacePointer(object, IDisposable):
         ToNonConstArray(self: SimpleArraySurfacePointer) -> Array[Surface]
         
             Copies the unmanaged array to a managed counterpart.
-                    Elements are 
-             made non-const.
+                    Elements are made 
+             non-const.
         
             Returns: The managed array.
         """
@@ -1153,8 +1153,8 @@ class StringHolder(object, IDisposable):
         ConstPointer(self: StringHolder) -> IntPtr
         
             C++ pointer used to access the ON_wString, managed plug-ins should
-                    
-             never need this.
+                    never need 
+             this.
         """
         pass
 
@@ -1179,8 +1179,8 @@ class StringHolder(object, IDisposable):
         NonConstPointer(self: StringHolder) -> IntPtr
         
             C++ pointer used to access the ON_wString, managed plug-ins should
-                    
-             never need this.
+                    never need 
+             this.
         """
         pass
 

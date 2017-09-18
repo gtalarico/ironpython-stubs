@@ -45,6 +45,20 @@ def is_namespace(something):
     if isinstance(something, type(System)):
         return True
 
+
+def load_assemblies(assembly_name):
+    """ Load Assemblies using clr.AddReference """
+    logger.info('='*30)
+    try:
+        logger.info('Adding Assembly [{}]'.format(assembly_name))
+        clr.AddReference(assembly_name)
+    except Exception as errmsg:
+        logger.error('Could not load assembly: {}'.format(assembly_name))
+        logger.error(errmsg)
+    else:
+        logger.info('Loaded [{}]'.format(assembly_name))
+
+
 def iter_module(module_name, module, module_path=None, namespaces=None):
     """
     Recursively iterate through all namespaces in assembly
@@ -64,17 +78,6 @@ def iter_module(module_name, module, module_path=None, namespaces=None):
                     namespaces=namespaces)
     return namespaces
 
-def load_assemblies(assembly_name):
-    """ Load Assemblies using clr.AddReference """
-    logger.info('='*30)
-    try:
-        logger.info('Adding Assembly [{}]'.format(assembly_name))
-        clr.AddReference(assembly_name)
-    except Exception as errmsg:
-        logger.error('Could not load assembly: {}'.format(assembly_name))
-        logger.error(errmsg)
-    else:
-        logger.info('Loaded [{}]'.format(assembly_name))
 
 def crawl_loaded_references(target_assembly_name):
     """ Crawl Loaded assemblies to get Namespaces. """
@@ -90,11 +93,6 @@ def crawl_loaded_references(target_assembly_name):
             logger.debug('Assembly Skiped. Not in target list: {}'.format(assembly_name))
     return namespaces_dict
 
-def crawl_builtin_modules(builtin_name):
-    """ Crawl Built in  Modules. Assumes it has already been loaded """
-    builtin_dict = {}
-    builtin_dict[module_name] = str(sys.modules[builtin_name])
-    return builtin_dict
 
 def stub_exists(output_dir, module_path):
     """ Check if Stub exists """
@@ -124,53 +122,54 @@ def delete_module(module_path):
     else:
         logger.debug('Deleted Module: {}'.format(module_path))
 
-def create_json(output_dir, namespaces_dict):
+def dump_json_log(namespaces_dict):
+    output_dir = os.path.join(os.getcwd(), 'logs')
     now = str(time.time()).split('.')[0]
-    filepath = os.path.join(output_dir, '{}-{}.json'.format(output_dir, now))
+    name = '-'.join(namespaces_dict.keys())
+    json_dir = os.path.dirname(output_dir)
+    filepath = os.path.join(json_dir, '{}-{}.json'.format(name, now))
     with open(filepath, 'w') as fp:
         json.dump(namespaces_dict, fp, indent=2)
 
-def make(output_dir, assembly_or_builtin, overwrite=False):
-    # TODO: Handle assemblies or builtins automatically
-    namespaces_to_process = {}
-    assembly_name, builtin_name = None, None
+def make(output_dir, assembly_or_builtin, overwrite=False, quiet=False):
+    """ Main Processing Function """
 
+    assembly_dict = {}
     try:
         importlib.import_module(assembly_or_builtin)
-    except:
+    except ImportError:
+        # Is not Module, Parse as Assembly Name
         assembly_name = assembly_or_builtin
-    else:
-        builtin_name = assembly_or_builtin
-
-    if assembly_name:
         load_assemblies(assembly_name)
         namespaces_dict = crawl_loaded_references(assembly_name)
-        namespaces_to_process.update(namespaces_dict)
-    if builtin_name:
-        builtins_dict = crawl_builtin_modules(builtin_name)
-        namespaces_to_process.update({'__builtins__': builtins_dict})
+        assembly_dict = namespaces_dict
+    else:
+        # Import Worked, Name is BuiltIn
+        builtin_name = assembly_or_builtin
+        builtin_dict = {module_name: str(sys.modules[builtin_name])}
+        assembly_dict = {'__builtins__': builtins_dict}
 
-    if not namespaces_to_process:
+    if not assembly_dict:
         raise Exception('No namspaces to process')
 
-    modules = [v.keys() for v in namespaces_to_process.values()]
+    modules = [d.keys() for d in assembly_dict.values()]
     logger.info('Modules and Assemblies Loaded: {}'.format(modules))
-    logger.debug( json.dumps(namespaces_dict, indent=2, sort_keys=True))
+    logger.debug( json.dumps(assembly_dict, indent=2, sort_keys=True))
 
-    if raw_input('>>> Write Stubs ({}) [y/n] [n]:\n>>> '.format(output_dir)) != 'y':
+    if quiet or raw_input('>>> Write Stubs ({}) [y/n] [n]:\n>>> '.format(output_dir)) != 'y':
         logger.info('No Stubs Created')
     else:
-        for assembly, modules in namespaces_dict.items():
+        for assembly, modules in assembly_dict.items():
             for module_path in modules.keys():
                 if not stub_exists(output_dir, module_path) or overwrite:
                     create_stubs(output_dir, module_path)
                 else:
                     logger.info('Skipping [{}] Already Exists'.format(module_path))
-            for module_path in module.keys()
+            for module_path in modules.keys():
                 delete_module(module_path)
 
         logger.info('Stubs Created')
-        create_json(output_dir, namespaces_dict)
+    return assembly_dict
 
 
 

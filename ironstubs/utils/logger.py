@@ -14,7 +14,7 @@ LOGGER_CONFIG = {
           "file_handler": {
               "class": "logging.FileHandler",
               "formatter": "simple",
-              "filename": "log.log"
+              "filename": "logs\\log.log"
               },
           },
       "formatters": {
@@ -43,3 +43,6 @@ dictConfig(LOGGER_CONFIG)
 logger = logging.getLogger()
 logger.debug('** LOG LEVEL: {}'.format(log_levels[logger.getEffectiveLevel()]))
 
+def enable_debug():
+  logger.setLevel(logging.DEBUG)
+logger.enable_debug = enable_debug

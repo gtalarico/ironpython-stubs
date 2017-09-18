@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Rhino.FileIO calls itself FileIO
-# from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null, RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530
+# from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530
 # by generator 1.145
 """ NamespaceTracker represent a CLS namespace. """
 # no imports
@@ -155,18 +155,18 @@ class BinaryArchiveReader(object):
         Dump3dmChunk(self: BinaryArchiveReader, log: TextLog) -> UInt32
         
             Fnction for studying contents of a file.  The primary use is as an aid
-                   
-              to help dig through files that have been damaged (bad disks, transmission
-               
-                  errors, etc.) If an error is found, a line that begins with the word
-                
-                 "ERROR" is printed.
+                    to 
+             help dig through files that have been damaged (bad disks, transmission
+                    
+             errors, etc.) If an error is found, a line that begins with the word
+                    "ERROR" 
+             is printed.
         
         
             log: log where information is printed to
             Returns: 0 if something went wrong, otherwise the typecode of the chunk that
-                    
-             was just studied.
+                    was just 
+             studied.
         """
         pass
 
@@ -175,15 +175,15 @@ class BinaryArchiveReader(object):
         Read3dmChunkVersion(self: BinaryArchiveReader) -> (int, int)
         
             A chunk version is a single byte that encodes a major.minor
-                    version 
-             number.  Useful when creating I/O code for 3dm chunks
-                    that may change 
-             in the future.  Increment the minor version 
-                    number if new 
-             information is added to the end of the chunk. 
-                    Increment the major 
-             version if the format of the chunk changes
-                    in some other way.
+                    version number.  
+             Useful when creating I/O code for 3dm chunks
+                    that may change in the future.  
+             Increment the minor version 
+                    number if new information is added to the end of 
+             the chunk. 
+                    Increment the major version if the format of the chunk changes
+          
+                       in some other way.
         
             Returns: true on successful read.
         """
@@ -210,8 +210,8 @@ class BinaryArchiveReader(object):
         ReadBoolArray(self: BinaryArchiveReader) -> Array[bool]
         
             Reads an array of System.Boolean from the archive.
-                    An array is 
-             returned even if the input was another enumerable type.
+                    An array is returned even 
+             if the input was another enumerable type.
         
             Returns: The array that was read.
         """
@@ -240,8 +240,8 @@ class BinaryArchiveReader(object):
         ReadByteArray(self: BinaryArchiveReader) -> Array[Byte]
         
             Reads an array of System.Byte from the archive.
-                    An array is returned 
-             even if the input was another enumerable type.
+                    An array is returned even if 
+             the input was another enumerable type.
         
             Returns: The array that was read.
         """
@@ -260,10 +260,9 @@ class BinaryArchiveReader(object):
         """
         ReadCompressedBuffer(self: BinaryArchiveReader) -> Array[Byte]
         
-            Reads an array of compressed System.Byte information from the archive and 
-             uncompresses it.
-                    An array is returned even if the input was another 
-             enumerable type.
+            Reads an array of compressed System.Byte information from the archive and uncompresses it.
+             
+                    An array is returned even if the input was another enumerable type.
         
             Returns: The array that was read.
         """
@@ -292,8 +291,8 @@ class BinaryArchiveReader(object):
         ReadDoubleArray(self: BinaryArchiveReader) -> Array[float]
         
             Reads an array of System.Double from the archive.
-                    An array is 
-             returned even if the input was another enumerable type.
+                    An array is returned even 
+             if the input was another enumerable type.
         
             Returns: The array that was read.
         """
@@ -313,8 +312,8 @@ class BinaryArchiveReader(object):
         ReadGeometry(self: BinaryArchiveReader) -> GeometryBase
         
             Reads a Rhino.Geometry.GeometryBase-derived object from the archive.
-                    
-             The Rhino.Geometry.GeometryBase class is abstract.
+                    The 
+             Rhino.Geometry.GeometryBase class is abstract.
         
             Returns: The element that was read.
         """
@@ -334,8 +333,8 @@ class BinaryArchiveReader(object):
         ReadGuidArray(self: BinaryArchiveReader) -> Array[Guid]
         
             Reads an array of System.Guid from the archive.
-                    An array is returned 
-             even if the input was another enumerable type.
+                    An array is returned even if 
+             the input was another enumerable type.
         
             Returns: The array that was read.
         """
@@ -364,8 +363,8 @@ class BinaryArchiveReader(object):
         ReadIntArray(self: BinaryArchiveReader) -> Array[int]
         
             Reads an array of System.Int32 from the archive.
-                    An array is returned 
-             even if the input was another enumerable type.
+                    An array is returned even if 
+             the input was another enumerable type.
         
             Returns: The array that was read.
         """
@@ -412,8 +411,8 @@ class BinaryArchiveReader(object):
         ReadObjRefArray(self: BinaryArchiveReader) -> Array[ObjRef]
         
             Reads an array of System.Double from the archive.
-                    An array is 
-             returned even if the input was another enumerable type.
+                    An array is returned even 
+             if the input was another enumerable type.
         
             Returns: The array that was read.
         """
@@ -523,8 +522,8 @@ class BinaryArchiveReader(object):
         ReadSByteArray(self: BinaryArchiveReader) -> Array[SByte]
         
             Reads an array of System.SByte from the archive.
-                    An array is returned 
-             even if the input was another enumerable type.
+                    An array is returned even if 
+             the input was another enumerable type.
         
             Returns: The array that was read.
         """
@@ -544,8 +543,8 @@ class BinaryArchiveReader(object):
         ReadShortArray(self: BinaryArchiveReader) -> Array[Int16]
         
             Reads an array of System.Int16 from the archive.
-                    An array is returned 
-             even if the input was another enumerable type.
+                    An array is returned even if 
+             the input was another enumerable type.
         
             Returns: The array that was read.
         """
@@ -565,8 +564,8 @@ class BinaryArchiveReader(object):
         ReadSingleArray(self: BinaryArchiveReader) -> Array[Single]
         
             Reads an array of System.Single from the archive.
-                    An array is 
-             returned even if the input was another enumerable type.
+                    An array is returned even 
+             if the input was another enumerable type.
         
             Returns: The array that was read.
         """
@@ -604,8 +603,8 @@ class BinaryArchiveReader(object):
         ReadStringArray(self: BinaryArchiveReader) -> Array[str]
         
             Reads an array of System.String from the archive.
-                    An array is 
-             returned even if the input was another enumerable type.
+                    An array is returned even 
+             if the input was another enumerable type.
         
             Returns: The array that was read.
         """
@@ -696,15 +695,15 @@ class BinaryArchiveWriter(object):
         """
         Write3dmChunkVersion(self: BinaryArchiveWriter, major: int, minor: int)
             A chunk version is a single byte that encodes a major.minor
-                    version 
-             number.  Useful when creating I/O code for 3dm chunks
-                    that may change 
-             in the future.  Increment the minor version 
-                    number if new 
-             information is added to the end of the chunk. 
-                    Increment the major 
-             version if the format of the chunk changes
-                    in some other way.
+                    version number.  
+             Useful when creating I/O code for 3dm chunks
+                    that may change in the future.  
+             Increment the minor version 
+                    number if new information is added to the end of 
+             the chunk. 
+                    Increment the major version if the format of the chunk changes
+          
+                       in some other way.
         
         
             major: 0 to 15.
@@ -1126,15 +1125,15 @@ class File3dm(object, IDisposable):
         Audit(self: File3dm, attemptRepair: bool) -> (int, int, str, Array[int])
         
             Check a model to make sure it is valid and, if possible
-                    and 
-             requested, attempt to repair.
+                    and requested, 
+             attempt to repair.
         
         
             attemptRepair: if true and a problem is found, the problem is repaired.
             Returns: <0 (model has serious errors),
                     0 (model is ok),
-                    >0 
-             (number of problems that were found)
+                    >0 (number of 
+             problems that were found)
         """
         pass
 
@@ -1189,10 +1188,10 @@ class File3dm(object, IDisposable):
         """
         Polish(self: File3dm)
             Quickly fills in the little details, like making sure there is at least
-                  
-               one layer and table indices make sense.  For a full blown check and repair,
-            
-                     call Audit(true).
+                    one 
+             layer and table indices make sense.  For a full blown check and repair,
+                    call 
+             Audit(true).
         """
         pass
 
@@ -1262,8 +1261,8 @@ class File3dm(object, IDisposable):
         ReadRevisionHistory(path: str) -> (bool, str, str, int, DateTime, DateTime)
         
             Quickly check a file for it's revision information.  This function does
-                  
-               not read the entire file, just what it needs to get revision information out
+                    not 
+             read the entire file, just what it needs to get revision information out
         
         
             path: path to the 3dm file
@@ -1277,9 +1276,7 @@ class File3dm(object, IDisposable):
         ReadWithLog(path: str) -> (File3dm, str)
         
             Read a 3dm file from a specified location and log any archive
-                    reading 
-             errors.
-        
+                    reading errors.
         
             path: The file to read.
             Returns: New File3dm on success, null on error.
@@ -1292,12 +1289,12 @@ class File3dm(object, IDisposable):
         Write(self: File3dm, path: str, options: File3dmWriteOptions) -> bool
         
             Writes contents of this model to an openNURBS archive. I STRONGLY
-                    
-             suggested that you call Polish() before calling Write so that your
-                    
-             file has all the "fluff" that makes it complete.  If the model is
-                    not 
-             valid, then Write will refuse to write it.
+                    suggested 
+             that you call Polish() before calling Write so that your
+                    file has all the 
+             "fluff" that makes it complete.  If the model is
+                    not valid, then Write will 
+             refuse to write it.
         
         
             path: The file name to use for writing.
@@ -1306,25 +1303,24 @@ class File3dm(object, IDisposable):
         Write(self: File3dm, path: str, version: int) -> bool
         
             Writes contents of this model to an openNURBS archive. I STRONGLY
-                    
-             suggested that you call Polish() before calling Write so that your
-                    
-             file has all the "fluff" that makes it complete.  If the model is
-                    not 
-             valid, then Write will refuse to write it.
+                    suggested 
+             that you call Polish() before calling Write so that your
+                    file has all the 
+             "fluff" that makes it complete.  If the model is
+                    not valid, then Write will 
+             refuse to write it.
         
         
             path: The file name to use for writing.
             version: Version of the openNURBS archive to write.  Must be 2, 3, 4, or 5.
-                    
-             Rhino 2.x can read version 2 files.
-                    Rhino 3.x can read version 2 and 
-             3 files.
-                    Rhino 4.x can read version 2, 3 and 4 files.
-                    
-             Rhino 5.x can read version 2, 3, 4, and 5 files.
-                    Use version 5 when 
-             possible.
+                    Rhino 2.x 
+             can read version 2 files.
+                    Rhino 3.x can read version 2 and 3 files.
+                 
+                Rhino 4.x can read version 2, 3 and 4 files.
+                    Rhino 5.x can read version 2, 
+             3, 4, and 5 files.
+                    Use version 5 when possible.
         
             Returns: true if archive is written with no error.
                     false if errors occur.
@@ -1336,24 +1332,23 @@ class File3dm(object, IDisposable):
         WriteWithLog(self: File3dm, path: str, version: int) -> (bool, str)
         
             Writes contents of this model to an openNURBS archive. I STRONGLY
-                    
-             suggested that you call Polish() before calling Write so that your
-                    
-             file has all the "fluff" that makes it complete.  If the model is
-                    not 
-             valid, then Write will refuse to write it.
+                    suggested 
+             that you call Polish() before calling Write so that your
+                    file has all the 
+             "fluff" that makes it complete.  If the model is
+                    not valid, then Write will 
+             refuse to write it.
         
         
             path: Version of the openNURBS archive to write.  Must be 2, 3, 4, or 5.
-                    
-             Rhino 2.x can read version 2 files.
-                    Rhino 3.x can read version 2 and 
-             3 files.
-                    Rhino 4.x can read version 2, 3 and 4 files.
-                    
-             Rhino 5.x can read version 2, 3, 4, and 5 files.
-                    Use version 5 when 
-             possible.
+                    Rhino 2.x 
+             can read version 2 files.
+                    Rhino 3.x can read version 2 and 3 files.
+                 
+                Rhino 4.x can read version 2, 3 and 4 files.
+                    Rhino 5.x can read version 2, 
+             3, 4, and 5 files.
+                    Use version 5 when possible.
         
             version: A version number.
             Returns: true if archive is written with no error.
@@ -2115,8 +2110,7 @@ class File3dmObjectTable(object, IEnumerable[File3dmObject], IEnumerable, IRhino
             Finds all File3dmObject that are in a given layer.
         
             layer: Layer to search.
-            Returns: Array of objects that belong to the specified group or null if no objects could be 
-             found.
+            Returns: Array of objects that belong to the specified group or null if no objects could be found.
         """
         pass
 
@@ -3134,10 +3128,10 @@ class TextLog(object, IDisposable):
         ToString(self: TextLog) -> str
         
             If the TextLog was constructed using the empty constructor, then the text
-                
-                 information is stored in a runtime string.  The contents of this string
-              
-                   is retrieved using ToString for this case
+                    
+             information is stored in a runtime string.  The contents of this string
+                    is 
+             retrieved using ToString for this case
         """
         pass
 

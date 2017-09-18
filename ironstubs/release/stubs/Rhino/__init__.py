@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Rhino
-# from Rhino3dmIO, Version=5.1.30000.14, Culture=neutral, PublicKeyToken=null, RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530
+# from RhinoCommon, Version=5.1.30000.16, Culture=neutral, PublicKeyToken=552281e97c755530
 # by generator 1.145
 """ NamespaceTracker represent a CLS namespace. """
 # no imports
@@ -317,10 +317,9 @@ class PersistentSettings(object, ISerializable):
     def SetStringList(self, key, value):
         """
         SetStringList(self: PersistentSettings, key: str, value: Array[str])
-            Including a item with the value of StringListRootKey will cause the ProgramData 
-             value to get inserted at
-                    that location in the list when calling 
-             GetStringList.
+            Including a item with the value of StringListRootKey will cause the ProgramData value to 
+             get inserted at
+                    that location in the list when calling GetStringList.
         
         
             key: The string key.
@@ -441,13 +440,11 @@ class RhinoApp(object):
         """
         AskUserForRhinoLicense(standAlone: bool, parent: IWin32Window) -> bool
         
-            Causes Rhino to display UI asking the user to enter a license for Rhino or use one 
-             from the Zoo.
+            Causes Rhino to display UI asking the user to enter a license for Rhino or use one from 
+             the Zoo.
         
         
-            standAlone: True to ask for a stand-alone license, false to ask the user for a license from 
-             the Zoo
-        
+            standAlone: True to ask for a stand-alone license, false to ask the user for a license from the Zoo
             parent: Parent window for the user interface dialog.
         """
         pass
@@ -474,16 +471,16 @@ class RhinoApp(object):
         GetPlugInObject(plugin: str) -> object
         
             Gets the object that is returned by PlugIn.GetPlugInObject for a given
-                   
-              plug-in. This function attempts to find and load a plug-in with a given name.
-           
-                      When a plug-in is found, it's GetPlugInObject function is called and the
-        
-                         result is returned here.
-                    Note the plug-in must have 
-             already been installed in Rhino or the plug-in manager
-                    will not know 
-             where to look for a plug-in with a matching name.
+                    
+             plug-in. This function attempts to find and load a plug-in with a given name.
+                    
+             When a plug-in is found, it's GetPlugInObject function is called and the
+                    
+             result is returned here.
+                    Note the plug-in must have already been installed in 
+             Rhino or the plug-in manager
+                    will not know where to look for a plug-in with a 
+             matching name.
         
         
             plugin: Name of a plug-in.
@@ -491,16 +488,16 @@ class RhinoApp(object):
         GetPlugInObject(pluginId: Guid) -> object
         
             Gets the object that is returned by PlugIn.GetPlugInObject for a given
-                   
-              plug-in. This function attempts to find and load a plug-in with a given Id.
-             
-                    When a plug-in is found, it's GetPlugInObject function is called and the
-          
-                       result is returned here.
-                    Note the plug-in must have already 
-             been installed in Rhino or the plug-in manager
-                    will not know where to 
-             look for a plug-in with a matching id.
+                    
+             plug-in. This function attempts to find and load a plug-in with a given Id.
+                    
+             When a plug-in is found, it's GetPlugInObject function is called and the
+                    
+             result is returned here.
+                    Note the plug-in must have already been installed in 
+             Rhino or the plug-in manager
+                    will not know where to look for a plug-in with a 
+             matching id.
         
         
             pluginId: Guid for a given plug-in.
@@ -514,8 +511,8 @@ class RhinoApp(object):
         IsInstallationBeta(licenseType: Installation) -> bool
         
             If licenseType is a beta license, returns true. A beta license grants
-                    
-             full use of the product during the pre-release development period.
+                    full 
+             use of the product during the pre-release development period.
         
             Returns: true if licenseType is a beta license. false otherwise
         """
@@ -527,8 +524,8 @@ class RhinoApp(object):
         IsInstallationCommercial(licenseType: Installation) -> bool
         
             If licenseType is a commercial license, returns true. A commercial license grants
-        
-                         full use of the product.
+                
+                 full use of the product.
         
             Returns: true if licenseType is a commercial license. false otherwise
         """
@@ -539,10 +536,10 @@ class RhinoApp(object):
         """
         IsInstallationEvaluation(licenseType: Installation) -> bool
         
-            If licenseType is an evaluation license, returns true. An evaluation license 
-             limits the ability of
-                    Rhino to save based on either the number of 
-             saves or a fixed period of time.
+            If licenseType is an evaluation license, returns true. An evaluation license limits the 
+             ability of
+                    Rhino to save based on either the number of saves or a fixed 
+             period of time.
         
             Returns: true if licenseType is an evaluation license. false otherwise
         """
@@ -586,10 +583,10 @@ class RhinoApp(object):
             script: [in] script to run.
             mruDisplayString: [in] String to display in the most recent command list.
             echo: Controls how the script is echoed in the command output window.
-                     
-             false = silent - nothing is echoed.
-                     true = verbatim - the script is 
-             echoed literally.
+                     false = 
+             silent - nothing is echoed.
+                     true = verbatim - the script is echoed 
+             literally.
         
         RunScript(script: str, echo: bool) -> bool
         
@@ -597,10 +594,10 @@ class RhinoApp(object):
         
             script: [in] script to run.
             echo: Controls how the script is echoed in the command output window.
-                     
-             false = silent - nothing is echoed.
-                     true = verbatim - the script is 
-             echoed literally.
+                     false = 
+             silent - nothing is echoed.
+                     true = verbatim - the script is echoed 
+             literally.
         """
         pass
 
@@ -626,8 +623,8 @@ class RhinoApp(object):
             Sets the command prompt in Rhino.
         
             prompt: The new prompt text.
-            promptDefault: Text that appears in angle brackets and indicates what will happen if the user 
-             pressed ENTER.
+            promptDefault: Text that appears in angle brackets and indicates what will happen if the user pressed 
+             ENTER.
         """
         pass
 
@@ -644,8 +641,8 @@ class RhinoApp(object):
         """
         Wait()
             Pauses to keep Windows message pump alive so views will update
-                    and 
-             windows will repaint.
+                    and windows 
+             will repaint.
         """
         pass
 
@@ -750,18 +747,18 @@ class RhinoDoc(object):
         BeginUndoRecord(self: RhinoDoc, description: str) -> UInt32
         
             Instructs Rhino to begin recording undo information when the document
-                    
-             is changed outside of a command. We use this, e.g., to save changes
-                    
-             caused by the modeless layer or object properties dialogs
-                    when 
-             commands are not running.
+                    is 
+             changed outside of a command. We use this, e.g., to save changes
+                    caused by 
+             the modeless layer or object properties dialogs
+                    when commands are not 
+             running.
         
         
             description: A text describing the record.
             Returns: Serial number of record.  Returns 0 if record is not started
-                    because 
-             undo information is already being recorded or
+                    because undo 
+             information is already being recorded or
                     undo is disabled.
         """
         pass
@@ -779,10 +776,10 @@ class RhinoDoc(object):
         CreateDefaultAttributes(self: RhinoDoc) -> ObjectAttributes
         
             Gets the default object attributes for this document. 
-                    The attributes 
-             will be linked to the currently active layer 
-                    and they will inherit 
-             the Document WireDensity setting.
+                    The attributes will be 
+             linked to the currently active layer 
+                    and they will inherit the Document 
+             WireDensity setting.
         """
         pass
 
@@ -813,11 +810,11 @@ class RhinoDoc(object):
                     
              following places:
                     1. Current model folder
-                    2. Path 
-             specified in options dialog/File tab
+                    2. Path specified in 
+             options dialog/File tab
                     3. Rhino system folders
-                
-                 4. Rhino executable folder
+                    4. Rhino 
+             executable folder
         
             Returns: Path to existing file if found, an empty string if no file was found
         """
@@ -863,21 +860,20 @@ class RhinoDoc(object):
         ReadFileVersion(self: RhinoDoc) -> int
         
             Returns the file version of the current document.  
-                    Use this function 
-             to determine which version of Rhino last saved the document.
+                    Use this function to 
+             determine which version of Rhino last saved the document.
         
-            Returns: The file version (e.g. 1, 2, 3, 4, etc.) or -1 if the document has not been read 
-             from disk.
+            Returns: The file version (e.g. 1, 2, 3, 4, etc.) or -1 if the document has not been read from disk.
         """
         pass
 
     def SetCustomMeshingParameters(self, mp):
         """
         SetCustomMeshingParameters(self: RhinoDoc, mp: MeshingParameters)
-            Set the custom meshing parameters that this document will use. You must also 
-             modify the
-                    MeshingParameterStyle property on the document to Custom 
-             if you want these meshing
+            Set the custom meshing parameters that this document will use. You must also modify the
+          
+                       MeshingParameterStyle property on the document to Custom if you want these 
+             meshing
                     parameters to be used
         """
         pass
@@ -1265,8 +1261,8 @@ class RhinoMath(object):
         CRC32(currentRemainder: UInt32, value: int) -> UInt32
         
             Advances the cyclic redundancy check value remainder given a System.Int32.
-               
-                  http://en.wikipedia.org/wiki/Cyclic_redundancy_check.
+                    
+             http://en.wikipedia.org/wiki/Cyclic_redundancy_check.
         
         
             currentRemainder: The remainder from which to start.
@@ -1275,8 +1271,8 @@ class RhinoMath(object):
         CRC32(currentRemainder: UInt32, value: float) -> UInt32
         
             Advances the cyclic redundancy check value remainder given a System.Double.
-              
-                   http://en.wikipedia.org/wiki/Cyclic_redundancy_check.
+                    
+             http://en.wikipedia.org/wiki/Cyclic_redundancy_check.
         
         
             currentRemainder: The remainder from which to start.
@@ -1285,8 +1281,8 @@ class RhinoMath(object):
         CRC32(currentRemainder: UInt32, buffer: Array[Byte]) -> UInt32
         
             Advances the cyclic redundancy check value remainder given a byte array.
-                 
-                http://en.wikipedia.org/wiki/Cyclic_redundancy_check.
+                    
+             http://en.wikipedia.org/wiki/Cyclic_redundancy_check.
         
         
             currentRemainder: The remainder from which to start.
@@ -1313,9 +1309,9 @@ class RhinoMath(object):
         IsValidDouble(x: float) -> bool
         
             Determines whether a System.Double value is valid within the RhinoCommon context.
-        
-                         Rhino does not use Double.NaN by convention, so this test evaluates to 
-             true if:x is not equal to RhinoMath.UnsetValueSystem.Double.IsNaN(x) evaluates to 
+                
+                 Rhino does not use Double.NaN by convention, so this test evaluates to true if:x is 
+             not equal to RhinoMath.UnsetValueSystem.Double.IsNaN(x) evaluates to 
              falseSystem.Double.IsInfinity(x) evaluates to false
         
         
@@ -1330,9 +1326,9 @@ class RhinoMath(object):
         IsValidSingle(x: Single) -> bool
         
             Determines whether a System.Single value is valid within the RhinoCommon context.
-        
-                         Rhino does not use Single.NaN by convention, so this test evaluates to 
-             true if:x is not equal to RhinoMath.UnsetValue,System.Single.IsNaN(x) evaluates to 
+                
+                 Rhino does not use Single.NaN by convention, so this test evaluates to true if:x is 
+             not equal to RhinoMath.UnsetValue,System.Single.IsNaN(x) evaluates to 
              falseSystem.Single.IsInfinity(x) evaluates to false
         
         

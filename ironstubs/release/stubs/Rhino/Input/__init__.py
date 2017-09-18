@@ -146,9 +146,8 @@ class RhinoGet(object):
             Gets a rectangle in view window coordinates.
         
             solidPen: If true, a solid pen is used for drawing while the user selects a rectangle.
-             
-                    If false, a dotted pen is used for drawing while the user selects a 
-             rectangle.
+                    
+             If false, a dotted pen is used for drawing while the user selects a rectangle.
         
             Returns: Success or Cancel.
         """
@@ -184,8 +183,8 @@ class RhinoGet(object):
             boolValue: Default bool value set to this and returned here.
             Returns: The getter result based on user choice.
                     Commands.Result.Success - got 
-             value.Commands.Result.Nothing - user pressed enter.Commands.Result.Cancel - user 
-             cancelled value getting.
+             value.Commands.Result.Nothing - user pressed enter.Commands.Result.Cancel - user cancelled 
+             value getting.
         """
         pass
 
@@ -267,8 +266,8 @@ class RhinoGet(object):
             lowerLimit: The minimum allowed value.
             upperLimit: The maximum allowed value.
             Returns: Commands.Result.Success - got number
-                    Commands.Result.Nothing - user 
-             pressed enter
+                    Commands.Result.Nothing - user pressed 
+             enter
                     Commands.Result.Cancel - user cancel number getting.
         
         GetInteger(prompt: str, acceptNothing: bool, outputNumber: int) -> (Result, int)
@@ -279,8 +278,8 @@ class RhinoGet(object):
             acceptNothing: if true, the user can press enter.
             outputNumber: default number is set to this value and number value returned here.
             Returns: Commands.Result.Success - got number
-                    Commands.Result.Nothing - user 
-             pressed enter
+                    Commands.Result.Nothing - user pressed 
+             enter
                     Commands.Result.Cancel - user cancel number getting.
         """
         pass
@@ -306,8 +305,8 @@ class RhinoGet(object):
             acceptNothing: if true, the user can press enter.
             filter: geometry filter to use when getting objects.
             Returns: Commands.Result.Success - got object
-                    Commands.Result.Nothing - user 
-             pressed enter
+                    Commands.Result.Nothing - user pressed 
+             enter
                     Commands.Result.Cancel - user cancel object getting.
         
         GetMultipleObjects(prompt: str, acceptNothing: bool, filter: ObjectType) -> (Result, Array[ObjRef])
@@ -318,8 +317,8 @@ class RhinoGet(object):
             acceptNothing: if true, the user can press enter.
             filter: geometry filter to use when getting objects.
             Returns: Commands.Result.Success - got object
-                    Commands.Result.Nothing - user 
-             pressed enter
+                    Commands.Result.Nothing - user pressed 
+             enter
                     Commands.Result.Cancel - user cancel object getting.
         """
         pass
@@ -335,8 +334,8 @@ class RhinoGet(object):
             acceptNothing: if true, the user can press enter.
             outputNumber: default number is set to this value and number value returned here.
             Returns: Commands.Result.Success - got number
-                    Commands.Result.Nothing - user 
-             pressed enter
+                    Commands.Result.Nothing - user pressed 
+             enter
                     Commands.Result.Cancel - user cancel number getting.
         
         GetNumber(prompt: str, acceptNothing: bool, outputNumber: float, lowerLimit: float, upperLimit: float) -> (Result, float)
@@ -345,8 +344,8 @@ class RhinoGet(object):
         
             prompt: The command prompt.
             acceptNothing: If true, the user can press Enter.
-            outputNumber: Default number is set to this value and the return number value is assigned to 
-             this variable during the call.
+            outputNumber: Default number is set to this value and the return number value is assigned to this 
+             variable during the call.
         
             lowerLimit: The minimum allowed value.
             upperLimit: The maximum allowed value.
@@ -366,8 +365,8 @@ class RhinoGet(object):
             acceptNothing: if true, the user can press enter.
             filter: geometry filter to use when getting objects.
             Returns: Commands.Result.Success - got object
-                    Commands.Result.Nothing - user 
-             pressed enter
+                    Commands.Result.Nothing - user pressed 
+             enter
                     Commands.Result.Cancel - user cancel object getting.
         
         GetOneObject(prompt: str, acceptNothing: bool, filter: ObjectType) -> (Result, ObjRef)
@@ -378,8 +377,8 @@ class RhinoGet(object):
             acceptNothing: if true, the user can press enter.
             filter: geometry filter to use when getting objects.
             Returns: Commands.Result.Success - got object
-                    Commands.Result.Nothing - user 
-             pressed enter
+                    Commands.Result.Nothing - user pressed 
+             enter
                     Commands.Result.Cancel - user cancel object getting.
         """
         pass
@@ -405,8 +404,8 @@ class RhinoGet(object):
             prompt: Prompt to display in command line during the operation.
             acceptNothing: if true, the user can press enter.
             Returns: Commands.Result.Success - got point
-                    Commands.Result.Nothing - user 
-             pressed enter
+                    Commands.Result.Nothing - user pressed 
+             enter
                     Commands.Result.Cancel - user cancel point getting.
         """
         pass
@@ -465,8 +464,8 @@ class RhinoGet(object):
             acceptNothing: if true, the user can press enter.
             outputString: default string set to this value and string value returned here.
             Returns: Commands.Result.Success - got string
-                    Commands.Result.Nothing - user 
-             pressed enter
+                    Commands.Result.Nothing - user pressed 
+             enter
                     Commands.Result.Cancel - user cancel string getting.
         """
         pass
