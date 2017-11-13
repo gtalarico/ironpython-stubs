@@ -36,9 +36,10 @@ Large Namespaces such as `Autodesk.Revit.DB` can take a long time to be parsed a
 
 # Contribute - WIP
 
-### Generate Stubs
+### Generate Stubs - Examples
 `ipy -m ironstubs make RhinoCommon`
 `ipy -m ironstubs make --all`
+`ipy -m ironstubs make DSCoreNodes --folder="DSCore" --directory="C:/Program Files/Dynamo/Dynamo Core/1.3"`
 ### Process Stubs
 WIP
 

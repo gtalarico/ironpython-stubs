@@ -40,7 +40,7 @@ __doc__ = """
     IronPython Stubs Generator
 
     Usage:
-      ironstubs
+      ironstubs --help
       ironstubs make (<assembly-name>|--all) [options]
 
     Examples:
