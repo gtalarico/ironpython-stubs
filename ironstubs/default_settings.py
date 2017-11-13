@@ -7,7 +7,9 @@ PATHS = [
     'C:\\Program Files\\Autodesk\\Revit 2017\\en-US',
     # | Dynamo
     'C:\\Program Files\\Dynamo\Dynamo Core\\1.2',
+    'C:\\Program Files\\Dynamo\Dynamo Core\\1.3',
     'C:\\Program Files\\Dynamo\Dynamo Revit\\1.2\\Revit_2017',
+    'C:\\Program Files\\Dynamo\Dynamo Revit\\1.3\\Revit_2017',
     # | Rhino
     'C:\\Program Files\\Rhinoceros 5 (64-bit)\\System',
     # Grasshopper

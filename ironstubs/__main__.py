@@ -42,6 +42,7 @@ __doc__ = """
     Usage:
       ironstubs --help
       ironstubs make (<assembly-name>|--all) [options]
+      ironstubs minify <folder> [options]
 
     Examples:
       ipy -m ironstubs RhinoCommon --overwrite
@@ -50,8 +51,8 @@ __doc__ = """
         <assembly-name>         Name of Dll Assembly to load
         --all                   Process all Assemblies in the default_settings.py
 
-        --folder=<dir>          Name of Output Directory [default: {out_dir}]
-        --directory=<dir>       Additional Directory to add to Path [default: ]
+        --output=<dir>          Name of Output Directory [default: {out_dir}]
+        --path=<dir>            Additional Directory to add to Path [default: ]
         --overwrite             Force Overwrite if stub already exists [default: False].
         --no-json               Disables Json Log
         --debug                 Enables Debug Messages
@@ -64,10 +65,11 @@ arguments = docopt(__doc__, version=__version__)
 # OPTIONS
 option_assembly_name = arguments['<assembly-name>']
 option_all = arguments['--all']
-option_output_dir = arguments['--folder']
-option_overwrite = arguments['--overwrite']
+
+option_output_dir = arguments['--output']
+option_path_dir = arguments['--path']
 option_json = not arguments['--no-json']
-option_directory = arguments['--directory']
+option_overwrite = arguments['--overwrite']
 
 if arguments['--debug']:
     logger.enable_debug()
@@ -83,8 +85,8 @@ PATHS.append(os.path.join(PROJECT_DIR, 'bin'))
 [sys.path.append(p) for p in PATHS]
 
 # Additional Paths from Options
-if option_directory:
-    sys.path.append(option_directory)
+if option_path_dir:
+    sys.path.append(option_path_dir)
 
 logger.debug(sys.path)
 logger.debug(arguments)
