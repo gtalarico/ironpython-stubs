@@ -1,0 +1,14 @@
+{
+  "Tekla.Structures.Model.dll": {
+    "Tekla.Structures.ModelInternal": "<module 'ModelInternal' (CLS module from Tekla.Structures.Model, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.Model": "<module 'Model' (CLS module from Tekla.Structures.Model, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.Model.History": "<module 'History' (CLS module from Tekla.Structures.Model, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.Model.UI": "<module 'UI' (CLS module from Tekla.Structures.Model, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures": "<module 'Structures' (CLS module from Tekla.Structures.Model, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.Model.Operations": "<module 'Operations' (CLS module from Tekla.Structures.Model, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla": "<module 'Tekla' (CLS module from Tekla.Structures.Model, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.Model.ClashChecker": "<module 'ClashChecker' (CLS module from Tekla.Structures.Model, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.Model.Collaboration": "<module 'Collaboration' (CLS module from Tekla.Structures.Model, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.Model.Welding": "<module 'Welding' (CLS module from Tekla.Structures.Model, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>"
+  }
+}

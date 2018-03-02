@@ -5,6 +5,8 @@ PATHS = [
     # | Revit
     'C:\\Program Files\\Autodesk\\Revit 2017',
     'C:\\Program Files\\Autodesk\\Revit 2017\\en-US',
+    # | Tekla Structures
+    'C:\\Program Files\\Tekla Structures\\2017\\nt\\bin\\plugins',
     # | Dynamo
     'C:\\Program Files\\Dynamo\Dynamo Core\\1.2',
     'C:\\Program Files\\Dynamo\Dynamo Revit\\1.2\\Revit_2017',
@@ -37,6 +39,11 @@ ASSEMBLIES = [
     'Grasshopper',
     'GH_IO',
     # 'GH_Util',
+    # | Tekla Structures
+    'Tekla.Structures',
+    'Tekla.Structures.Drawing',
+    'Tekla.Structures.Model',
+    'Tekla.Structures.Plugins',
     ]
 
 BUILTINS = [
