@@ -1,0 +1,11 @@
+{
+  "Tekla.Structures.Drawing.dll": {
+    "Tekla.Structures.Drawing.Tools": "<module 'Tools' (CLS module from Tekla.Structures.Drawing, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.Drawing": "<module 'Drawing' (CLS module from Tekla.Structures.Drawing, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.Drawing.Automation": "<module 'Automation' (CLS module from Tekla.Structures.Drawing, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.DrawingInternal": "<module 'DrawingInternal' (CLS module from Tekla.Structures.Drawing, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.Drawing.UI": "<module 'UI' (CLS module from Tekla.Structures.Drawing, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures": "<module 'Structures' (CLS module from Tekla.Structures.Drawing, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla": "<module 'Tekla' (CLS module from Tekla.Structures.Drawing, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>"
+  }
+}

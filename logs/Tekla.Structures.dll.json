@@ -1,0 +1,14 @@
+{
+  "Tekla.Structures.dll": {
+    "Tekla.Structures.Filtering.Categories": "<module 'Categories' (CLS module from Tekla.Structures, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.TeklaStructuresInternal.Filtering": "<module 'Filtering' (CLS module from Tekla.Structures, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.Forming": "<module 'Forming' (CLS module from Tekla.Structures, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.TeklaStructuresInternal": "<module 'TeklaStructuresInternal' (CLS module from Tekla.Structures, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.Solid": "<module 'Solid' (CLS module from Tekla.Structures, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.Filtering": "<module 'Filtering' (CLS module from Tekla.Structures, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.Geometry3d": "<module 'Geometry3d' (CLS module from Tekla.Structures, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures": "<module 'Structures' (CLS module from Tekla.Structures, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla": "<module 'Tekla' (CLS module from Tekla.Structures, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.Internal": "<module 'Internal' (CLS module from Tekla.Structures, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "Tekla.Structures.Plugins.dll": {
+    "Tekla.Structures.Plugins": "<module 'Plugins' (CLS module from Tekla.Structures.Plugins, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures": "<module 'Structures' (CLS module from Tekla.Structures.Plugins, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.Internal": "<module 'Internal' (CLS module from Tekla.Structures.Plugins, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla": "<module 'Tekla' (CLS module from Tekla.Structures.Plugins, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>", 
+    "Tekla.Structures.PluginsInternal": "<module 'PluginsInternal' (CLS module from Tekla.Structures.Plugins, Version=2017.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114)>"
+  }
+}
