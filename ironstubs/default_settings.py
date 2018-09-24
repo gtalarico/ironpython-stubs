@@ -13,7 +13,9 @@ PATHS = [
     # | Rhino
     'C:\\Program Files\\Rhinoceros 5 (64-bit)\\System',
     # Grasshopper
-    'C:\\Users\\gtalarico\\AppData\\Roaming\\McNeel\\Rhinoceros\\5.0\\Plug-ins\\Grasshopper (b45a29b1-4343-4035-989e-044e8580d9cf)\\0.9.76.0'
+    'C:\\Users\\gtalarico\\AppData\\Roaming\\McNeel\\Rhinoceros\\5.0\\Plug-ins\\Grasshopper (b45a29b1-4343-4035-989e-044e8580d9cf)\\0.9.76.0',
+    # Dynamo for AliasAutoStudio2019
+    'C:\\Program Files\\Autodesk\\AliasAutoStudio2019\\Dynamo\\Dynamo Core'
     ]
 
 ASSEMBLIES = [

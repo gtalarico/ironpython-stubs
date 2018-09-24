@@ -1,0 +1,6 @@
+{
+  "DesignScriptBuiltin.DLL": {
+    "DesignScript": "<module 'DesignScript' (CLS module from DesignScriptBuiltin, Version=2.0.1.5055, Culture=neutral, PublicKeyToken=null)>", 
+    "DesignScript.Builtin": "<module 'Builtin' (CLS module from DesignScriptBuiltin, Version=2.0.1.5055, Culture=neutral, PublicKeyToken=null)>"
+  }
+}
