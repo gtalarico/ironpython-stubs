@@ -25,7 +25,7 @@ a version of them that can be used by autocomplete-python.
 
 [Wiki](https://github.com/gtalarico/ironpython-stubs/wiki)
 
-The [wiki](https://github.com/gtalarico/ironpython-stubs/wiki) has step-by-step instructions for setting up your stubs for Atom, Sublime, and Visual Studio Code.
+The [wiki](https://github.com/gtalarico/ironpython-stubs/wiki) has step-by-step instructions for setting up your stubs for Atom, Sublime, Vim, Visual Studio Code.
 
 For a list of supported Assemblies, see [this list](https://github.com/gtalarico/ironpython-stubs/tree/master/logs)
 
