@@ -285,6 +285,10 @@ class ModuleRedeclarator(object):
                 else: # something else, maybe representable
                     # look up this value in the module.
                     if sys.platform == "cli":
+                        name = prefix.split(" ", 1)[0]
+                        if name in keyword.kwlist or name == "None": #fix Kevin and Ana keyword in classproperty
+                            prefix = name + "_ ="
+
                         out(indent, prefix, "None", postfix)
                         return
                     found_name = ""
@@ -408,9 +412,9 @@ class ModuleRedeclarator(object):
                     elif one.startswith("*"):
                         starred = one
             if not starred:
-                seq.append("*args")
+                seq.append("args")                                                  #Fix*
             if not double_starred:
-                seq.append("**kwargs")
+                seq.append("kwargs")                                                #Fix*
         else:
             doc_node = self.SIG_DOC_NOTE
 
@@ -541,6 +545,8 @@ class ModuleRedeclarator(object):
             if sig_note:
                 out(indent, "def ", spec, ": #", sig_note)
             else:
+                if spec.split("(", 1)[0] == "__repr__":               #fix remove repr because clr takes an extra arg context 
+                    return                                            #and python cant handle that
                 out(indent, "def ", spec, ":")
             if not p_name in ['__gt__', '__ge__', '__lt__', '__le__', '__ne__', '__reduce_ex__', '__str__']:
                 out_doc_attr(out, p_func, indent + 1, p_class)
@@ -585,10 +591,10 @@ class ModuleRedeclarator(object):
                     first_param = propose_first_param(deco)
                     if first_param:
                         decl.append(first_param)
-                decl.append("*args")
-                decl.append("**kwargs")
+                decl.append("args")                                                               #Fix* kevin ana removed * because ordering
+                decl.append("kwargs")                                                             #because ordering is important in py but not in c#
                 spec = p_name + "(" + ", ".join(decl) + ")"
-            out(indent, "def ", spec, ": # ", sig_note)
+            out(indent, "def ", spec.replace("*",""), ": # ", sig_note)                           #fix
             # to reduce size of stubs, don't output same docstring twice for class and its __init__ method
             if not is_init or funcdoc != p_class.__doc__:
                 out_docstring(out, funcdoc, indent + 1)
@@ -655,7 +661,7 @@ class ModuleRedeclarator(object):
                     local_import = self.create_local_import(base)
                     if local_import:
                         out(indent, local_import)
-        out(indent, "class ", p_name, base_def, ":",
+        out(indent, "class ", p_name,"(object)", ":",                                         #fix kevin ana 3/inherited classes showed up in constructor
             skipped_bases and " # skipped bases: " + ", ".join(skipped_bases) or "")
         out_doc_attr(out, p_class, indent + 1)
         # inner parts
