@@ -1,9 +1,7 @@
-class HorizontalAlignment(Enum,IComparable,IFormattable,IConvertible):
+class HorizontalAlignment:
  """
- Specifies how an object or text in a control is horizontally aligned relative to an element of the control.
-
- 
-
+ Specifies how an object or text in a control is horizontally aligned relative to an element of the control.
+ 
  enum HorizontalAlignment,values: Center (2),Left (0),Right (1)
  """
  def __eq__(self,*args):

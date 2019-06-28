@@ -1,9 +1,7 @@
-class ListSortDirection(Enum,IComparable,IFormattable,IConvertible):
+class ListSortDirection:
  """
- Specifies the direction of a sort operation.
-
- 
-
+ Specifies the direction of a sort operation.
+ 
  enum ListSortDirection,values: Ascending (0),Descending (1)
  """
  def __eq__(self,*args):

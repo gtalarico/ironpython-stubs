@@ -1,9 +1,7 @@
-class BorderStyle(Enum,IComparable,IFormattable,IConvertible):
+class BorderStyle:
  """
- Specifies the border style for a control.
-
- 
-
+ Specifies the border style for a control.
+ 
  enum BorderStyle,values: Fixed3D (2),FixedSingle (1),None (0)
  """
  def __eq__(self,*args):
@@ -31,6 +29,6 @@ class BorderStyle(Enum,IComparable,IFormattable,IConvertible):
   pass
  Fixed3D=None
  FixedSingle=None
- None=None
+ None_ =None
  value__=None
 

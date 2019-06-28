@@ -1,9 +1,7 @@
-class SerializableAttribute(Attribute,_Attribute):
+class SerializableAttribute:
  """
- Indicates that a class can be serialized. This class cannot be inherited.
-
- 
-
+ Indicates that a class can be serialized. This class cannot be inherited.
+ 
  SerializableAttribute()
  """
  def __init__(self,*args):

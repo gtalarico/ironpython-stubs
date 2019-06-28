@@ -1,2 +1,2 @@
-class RuntimeArgumentHandle(object):
+class RuntimeArgumentHandle:
  """ References a variable-length argument list. """

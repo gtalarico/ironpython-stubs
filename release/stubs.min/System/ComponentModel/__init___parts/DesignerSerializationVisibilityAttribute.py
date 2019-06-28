@@ -1,49 +1,34 @@
-class DesignerSerializationVisibilityAttribute(Attribute,_Attribute):
+class DesignerSerializationVisibilityAttribute:
  """
- Specifies the type of persistence to use when serializing a property on a component at design time.
-
- 
-
+ Specifies the type of persistence to use when serializing a property on a component at design time.
+ 
  DesignerSerializationVisibilityAttribute(visibility: DesignerSerializationVisibility)
  """
  def Equals(self,obj):
   """
-  Equals(self: DesignerSerializationVisibilityAttribute,obj: object) -> bool
-
-  
-
-   Indicates whether this instance and a specified object are equal.
-
-  
-
-   obj: Another object to compare to.
-
+  Equals(self: DesignerSerializationVisibilityAttribute,obj: object) -> bool
+  
+   Indicates whether this instance and a specified object are equal.
+  
+   obj: Another object to compare to.
    Returns: true if obj is equal to this instance; otherwise,false.
   """
   pass
  def GetHashCode(self):
   """
-  GetHashCode(self: DesignerSerializationVisibilityAttribute) -> int
-
-  
-
-   Returns the hash code for this object.
-
+  GetHashCode(self: DesignerSerializationVisibilityAttribute) -> int
+  
+   Returns the hash code for this object.
    Returns: A 32-bit signed integer hash code.
   """
   pass
  def IsDefaultAttribute(self):
   """
-  IsDefaultAttribute(self: DesignerSerializationVisibilityAttribute) -> bool
-
-  
-
-   Gets a value indicating whether the current value of the attribute is the default value for the 
-
-    attribute.
-
-  
-
+  IsDefaultAttribute(self: DesignerSerializationVisibilityAttribute) -> bool
+  
+   Gets a value indicating whether the current value of the attribute is the default value 
+    for the attribute.
+  
    Returns: true if the attribute is set to the default value; otherwise,false.
   """
   pass
@@ -60,14 +45,10 @@ class DesignerSerializationVisibilityAttribute(Attribute,_Attribute):
  def __ne__(self,*args):
   pass
  Visibility=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a value indicating the basic serialization mode a serializer should use when determining whether and how to persist the value of a property.
-
-
-
-Get: Visibility(self: DesignerSerializationVisibilityAttribute) -> DesignerSerializationVisibility
-
-
-
+ """Gets a value indicating the basic serialization mode a serializer should use when determining whether and how to persist the value of a property.
+
+Get: Visibility(self: DesignerSerializationVisibilityAttribute) -> DesignerSerializationVisibility
+
 """
 
 

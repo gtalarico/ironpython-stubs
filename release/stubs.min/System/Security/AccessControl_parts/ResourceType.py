@@ -1,9 +1,7 @@
-class ResourceType(Enum,IComparable,IFormattable,IConvertible):
+class ResourceType:
  """
- Specifies the defined native object types.
-
- 
-
+ Specifies the defined native object types.
+ 
  enum ResourceType,values: DSObject (8),DSObjectAll (9),FileObject (1),KernelObject (6),LMShare (5),Printer (3),ProviderDefined (10),RegistryKey (4),RegistryWow6432Key (12),Service (2),Unknown (0),WindowObject (7),WmiGuidObject (11)
  """
  def __eq__(self,*args):

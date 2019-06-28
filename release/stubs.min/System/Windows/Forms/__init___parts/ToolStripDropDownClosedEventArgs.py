@@ -1,9 +1,7 @@
-class ToolStripDropDownClosedEventArgs(EventArgs):
+class ToolStripDropDownClosedEventArgs:
  """
- Provides data for the System.Windows.Forms.ToolStripDropDown.Closed event.
-
- 
-
+ Provides data for the System.Windows.Forms.ToolStripDropDown.Closed event.
+ 
  ToolStripDropDownClosedEventArgs(reason: ToolStripDropDownCloseReason)
  """
  @staticmethod
@@ -11,14 +9,10 @@ class ToolStripDropDownClosedEventArgs(EventArgs):
   """ __new__(cls: type,reason: ToolStripDropDownCloseReason) """
   pass
  CloseReason=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the reason that the System.Windows.Forms.ToolStripDropDown closed.
-
-
-
-Get: CloseReason(self: ToolStripDropDownClosedEventArgs) -> ToolStripDropDownCloseReason
-
-
-
+ """Gets the reason that the System.Windows.Forms.ToolStripDropDown closed.
+
+Get: CloseReason(self: ToolStripDropDownClosedEventArgs) -> ToolStripDropDownCloseReason
+
 """
 
 

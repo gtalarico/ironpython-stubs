@@ -1,9 +1,7 @@
-class ToolStripRenderMode(Enum,IComparable,IFormattable,IConvertible):
+class ToolStripRenderMode:
  """
- Specifies the painting style applied to one System.Windows.Forms.ToolStrip contained in a form.
-
- 
-
+ Specifies the painting style applied to one System.Windows.Forms.ToolStrip contained in a form.
+ 
  enum ToolStripRenderMode,values: Custom (0),ManagerRenderMode (3),Professional (2),System (1)
  """
  def __eq__(self,*args):

@@ -2,13 +2,13 @@
 # module System.Web calls itself Web
 # from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class AspNetHostingPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IUnrestrictedPermission):
+class AspNetHostingPermission:
     """
     Controls access permissions in ASP.NET hosted environments. This class cannot be inherited.
     
@@ -40,15 +40,15 @@ class AspNetHostingPermission(CodeAccessPermission, IPermission, ISecurityEncoda
         """
         Intersect(self: AspNetHostingPermission, target: IPermission) -> IPermission
         
-            When implemented by a derived class, creates and returns a permission that is the intersection 
-             of the current permission and the specified permission.
+            When implemented by a derived class, creates and returns a permission that is the 
+             intersection of the current permission and the specified permission.
         
         
-            target: A permission to combine with the current permission. It must be of the same type as the current 
-             permission.
+            target: A permission to combine with the current permission. It must be of the same type as the 
+             current permission.
         
-            Returns: An System.Security.IPermission that represents the intersection of the current permission and 
-             the specified permission; otherwise, null if the intersection is empty.
+            Returns: An System.Security.IPermission that represents the intersection of the current permission 
+             and the specified permission; otherwise, null if the intersection is empty.
         """
         pass
 
@@ -60,8 +60,8 @@ class AspNetHostingPermission(CodeAccessPermission, IPermission, ISecurityEncoda
              permission.
         
         
-            target: The System.Security.IPermission to combine with the current permission. It must be of the same 
-             type as the current System.Security.IPermission.
+            target: The System.Security.IPermission to combine with the current permission. It must be of the 
+             same type as the current System.Security.IPermission.
         
             Returns: true if the current System.Security.IPermission is a subset of the specified 
              System.Security.IPermission; otherwise, false.
@@ -72,11 +72,11 @@ class AspNetHostingPermission(CodeAccessPermission, IPermission, ISecurityEncoda
         """
         IsUnrestricted(self: AspNetHostingPermission) -> bool
         
-            Returns a value indicating whether unrestricted access to the resource that is protected by the 
-             current permission is allowed.
+            Returns a value indicating whether unrestricted access to the resource that is protected 
+             by the current permission is allowed.
         
-            Returns: true if unrestricted use of the resource protected by the permission is allowed; otherwise, 
-             false.
+            Returns: true if unrestricted use of the resource protected by the permission is allowed; 
+             otherwise, false.
         """
         pass
 
@@ -94,13 +94,15 @@ class AspNetHostingPermission(CodeAccessPermission, IPermission, ISecurityEncoda
         """
         Union(self: AspNetHostingPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
-        
-            target: A permission to combine with the current permission. It must be of the same type as the current 
+            Creates a permission that is the union of the current permission and the specified 
              permission.
         
-            Returns: An System.Security.IPermission that represents the union of the current permission and the 
-             specified permission.
+        
+            target: A permission to combine with the current permission. It must be of the same type as the 
+             current permission.
+        
+            Returns: An System.Security.IPermission that represents the union of the current permission and 
+             the specified permission.
         """
         pass
 
@@ -132,7 +134,7 @@ Set: Level(self: AspNetHostingPermission) = value
 
 
 
-class AspNetHostingPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class AspNetHostingPermissionAttribute:
     """
     Allows security actions for System.Web.AspNetHostingPermission to be applied to code using declarative security. This class cannot be inherited.
     
@@ -142,8 +144,8 @@ class AspNetHostingPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
         """
         CreatePermission(self: AspNetHostingPermissionAttribute) -> IPermission
         
-            Creates a new System.Web.AspNetHostingPermission with the permission level previously set by the 
-             System.Web.AspNetHostingPermissionAttribute.Level property.
+            Creates a new System.Web.AspNetHostingPermission with the permission level previously set 
+             by the System.Web.AspNetHostingPermissionAttribute.Level property.
         
             Returns: An System.Security.IPermission that is the new System.Web.AspNetHostingPermission.
         """
@@ -171,7 +173,7 @@ Set: Level(self: AspNetHostingPermissionAttribute) = value
 
 
 
-class AspNetHostingPermissionLevel(Enum, IComparable, IFormattable, IConvertible):
+class AspNetHostingPermissionLevel:
     """
     Specifies the trust level that is granted to an ASP.NET Web application.
     
@@ -214,7 +216,7 @@ class AspNetHostingPermissionLevel(Enum, IComparable, IFormattable, IConvertible
     Low = None
     Medium = None
     Minimal = None
-    None = None
+    None_ =None
     Unrestricted = None
     value__ = None
 

@@ -2,13 +2,13 @@
 # module System.Media calls itself Media
 # from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class SoundPlayer(Component, IComponent, IDisposable, ISerializable):
+class SoundPlayer:
     """
     Controls playback of a sound from a .wav file.
     
@@ -19,11 +19,12 @@ class SoundPlayer(Component, IComponent, IDisposable, ISerializable):
     def Dispose(self):
         """
         Dispose(self: Component, disposing: bool)
-            Releases the unmanaged resources used by the System.ComponentModel.Component and optionally 
-             releases the managed resources.
+            Releases the unmanaged resources used by the System.ComponentModel.Component and 
+             optionally releases the managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
@@ -31,13 +32,14 @@ class SoundPlayer(Component, IComponent, IDisposable, ISerializable):
         """
         GetService(self: Component, service: Type) -> object
         
-            Returns an object that represents a service provided by the System.ComponentModel.Component or 
-             by its System.ComponentModel.Container.
+            Returns an object that represents a service provided by the 
+             System.ComponentModel.Component or by its System.ComponentModel.Container.
         
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or 
-             null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the 
+             System.ComponentModel.Component, or null if the System.ComponentModel.Component does not 
+             provide the specified service.
         """
         pass
 
@@ -61,11 +63,11 @@ class SoundPlayer(Component, IComponent, IDisposable, ISerializable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -105,15 +107,16 @@ class SoundPlayer(Component, IComponent, IDisposable, ISerializable):
     def Play(self):
         """
         Play(self: SoundPlayer)
-            Plays the .wav file using a new thread, and loads the .wav file first if it has not been loaded.
+            Plays the .wav file using a new thread, and loads the .wav file first if it has not been 
+             loaded.
         """
         pass
 
     def PlayLooping(self):
         """
         PlayLooping(self: SoundPlayer)
-            Plays and loops the .wav file using a new thread, and loads the .wav file first if it has not 
-             been loaded.
+            Plays and loops the .wav file using a new thread, and loads the .wav file first if it has 
+             not been loaded.
         """
         pass
 
@@ -132,18 +135,11 @@ class SoundPlayer(Component, IComponent, IDisposable, ISerializable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -226,7 +222,7 @@ Set: Tag(self: SoundPlayer) = value
     StreamChanged = None
 
 
-class SystemSound(object):
+class SystemSound:
     """ Represents a system sound type. """
     def Play(self):
         """
@@ -236,7 +232,7 @@ class SystemSound(object):
         pass
 
 
-class SystemSounds(object):
+class SystemSounds:
     """ Retrieves sounds associated with a set of Windows operating system sound-event types. This class cannot be inherited. """
     Asterisk = None
     Beep = None

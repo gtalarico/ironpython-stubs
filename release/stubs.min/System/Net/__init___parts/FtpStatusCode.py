@@ -1,9 +1,7 @@
-class FtpStatusCode(Enum,IComparable,IFormattable,IConvertible):
+class FtpStatusCode:
  """
- Specifies the status codes returned for a File Transfer Protocol (FTP) operation.
-
- 
-
+ Specifies the status codes returned for a File Transfer Protocol (FTP) operation.
+ 
  enum FtpStatusCode,values: AccountNeeded (532),ActionAbortedLocalProcessingError (451),ActionAbortedUnknownPageType (551),ActionNotTakenFilenameNotAllowed (553),ActionNotTakenFileUnavailable (550),ActionNotTakenFileUnavailableOrBusy (450),ActionNotTakenInsufficientSpace (452),ArgumentSyntaxError (501),BadCommandSequence (503),CantOpenData (425),ClosingControl (221),ClosingData (226),CommandExtraneous (202),CommandNotImplemented (502),CommandOK (200),CommandSyntaxError (500),ConnectionClosed (426),DataAlreadyOpen (125),DirectoryStatus (212),EnteringPassive (227),FileActionAborted (552),FileActionOK (250),FileCommandPending (350),FileStatus (213),LoggedInProceed (230),NeedLoginAccount (332),NotLoggedIn (530),OpeningData (150),PathnameCreated (257),RestartMarker (110),SendPasswordCommand (331),SendUserCommand (220),ServerWantsSecureSession (234),ServiceNotAvailable (421),ServiceTemporarilyNotAvailable (120),SystemType (215),Undefined (0)
  """
  def __eq__(self,*args):

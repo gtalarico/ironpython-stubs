@@ -1,9 +1,7 @@
-class TraceLevel(Enum,IComparable,IFormattable,IConvertible):
+class TraceLevel:
  """
- Specifies what messages to output for the System.Diagnostics.Debug,System.Diagnostics.Trace and System.Diagnostics.TraceSwitch classes.
-
- 
-
+ Specifies what messages to output for the System.Diagnostics.Debug,System.Diagnostics.Trace and System.Diagnostics.TraceSwitch classes.
+ 
  enum TraceLevel,values: Error (1),Info (3),Off (0),Verbose (4),Warning (2)
  """
  def __eq__(self,*args):

@@ -1,4 +1,4 @@
-class VARDESC(object):
+class VARDESC:
  """ Use System.Runtime.InteropServices.ComTypes.VARDESC instead. """
  DESCUNION=None
  elemdescVar=None

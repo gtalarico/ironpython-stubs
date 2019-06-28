@@ -1,9 +1,7 @@
-class TYPEKIND(Enum,IComparable,IFormattable,IConvertible):
+class TYPEKIND:
  """
- Use System.Runtime.InteropServices.ComTypes.TYPEKIND instead.
-
- 
-
+ Use System.Runtime.InteropServices.ComTypes.TYPEKIND instead.
+ 
  enum TYPEKIND,values: TKIND_ALIAS (6),TKIND_COCLASS (5),TKIND_DISPATCH (4),TKIND_ENUM (0),TKIND_INTERFACE (3),TKIND_MAX (8),TKIND_MODULE (2),TKIND_RECORD (1),TKIND_UNION (7)
  """
  def __eq__(self,*args):

@@ -1,9 +1,7 @@
-class ComRegisterFunctionAttribute(Attribute,_Attribute):
+class ComRegisterFunctionAttribute:
  """
- Specifies the method to call when you register an assembly for use from COM; this enables the execution of user-written code during the registration process.
-
- 
-
+ Specifies the method to call when you register an assembly for use from COM; this enables the execution of user-written code during the registration process.
+ 
  ComRegisterFunctionAttribute()
  """
  def __init__(self,*args):

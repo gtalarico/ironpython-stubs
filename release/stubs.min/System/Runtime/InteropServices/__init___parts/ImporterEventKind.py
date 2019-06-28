@@ -1,9 +1,7 @@
-class ImporterEventKind(Enum,IComparable,IFormattable,IConvertible):
+class ImporterEventKind:
  """
- Describes the callbacks that the type library importer makes when importing a type library.
-
- 
-
+ Describes the callbacks that the type library importer makes when importing a type library.
+ 
  enum ImporterEventKind,values: ERROR_REFTOINVALIDTYPELIB (2),NOTIF_CONVERTWARNING (1),NOTIF_TYPECONVERTED (0)
  """
  def __eq__(self,*args):

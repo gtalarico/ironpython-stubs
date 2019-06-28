@@ -1,4 +1,4 @@
-class FUNCDESC(object):
+class FUNCDESC:
  """ Use System.Runtime.InteropServices.ComTypes.FUNCDESC instead. """
  callconv=None
  cParams=None

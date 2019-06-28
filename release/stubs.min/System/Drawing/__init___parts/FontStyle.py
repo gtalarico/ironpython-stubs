@@ -1,9 +1,7 @@
-class FontStyle(Enum,IComparable,IFormattable,IConvertible):
+class FontStyle:
  """
- Specifies style information applied to text.
-
- 
-
+ Specifies style information applied to text.
+ 
  enum (flags) FontStyle,values: Bold (1),Italic (2),Regular (0),Strikeout (8),Underline (4)
  """
  def __eq__(self,*args):

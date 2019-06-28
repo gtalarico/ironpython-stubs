@@ -1,9 +1,7 @@
-class StringDigitSubstitute(Enum,IComparable,IFormattable,IConvertible):
+class StringDigitSubstitute:
  """
- The System.Drawing.StringDigitSubstitute enumeration specifies how to substitute digits in a string according to a user's locale or language.
-
- 
-
+ The System.Drawing.StringDigitSubstitute enumeration specifies how to substitute digits in a string according to a user's locale or language.
+ 
  enum StringDigitSubstitute,values: National (2),None (1),Traditional (3),User (0)
  """
  def __eq__(self,*args):
@@ -30,7 +28,7 @@ class StringDigitSubstitute(Enum,IComparable,IFormattable,IConvertible):
  def __str__(self,*args):
   pass
  National=None
- None=None
+ None_ =None
  Traditional=None
  User=None
  value__=None

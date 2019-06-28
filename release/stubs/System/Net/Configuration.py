@@ -2,13 +2,13 @@
 # module System.Net.Configuration calls itself Configuration
 # from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class AuthenticationModuleElement(ConfigurationElement):
+class AuthenticationModuleElement:
     """
     Represents the type information for an authentication module. This class cannot be inherited.
     
@@ -47,7 +47,7 @@ Set: Type(self: AuthenticationModuleElement) = value
 
 
 
-class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICollection, IEnumerable):
+class AuthenticationModuleElementCollection:
     """
     Represents a container for authentication module configuration elements. This class cannot be inherited.
     
@@ -64,20 +64,23 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
 
     def BaseAdd(self, *args): #cannot find CLR method
         """
-        BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
-            Adds a configuration element to the configuration element collection.
+        BaseAdd(self: ConfigurationElementCollection, element: ConfigurationElement)
+            Adds a configuration element to the System.Configuration.ConfigurationElementCollection.
         
-            index: The index location at which to add the specified System.Configuration.ConfigurationElement.
             element: The System.Configuration.ConfigurationElement to add.
         BaseAdd(self: ConfigurationElementCollection, element: ConfigurationElement, throwIfExists: bool)
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already 
-             contained in the System.Configuration.ConfigurationElementCollection; otherwise, false.
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is 
+             already contained in the System.Configuration.ConfigurationElementCollection; otherwise, 
+             false.
         
-        BaseAdd(self: ConfigurationElementCollection, element: ConfigurationElement)
-            Adds a configuration element to the System.Configuration.ConfigurationElementCollection.
+        BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
+            Adds a configuration element to the configuration element collection.
+        
+            index: The index location at which to add the specified 
+             System.Configuration.ConfigurationElement.
         
             element: The System.Configuration.ConfigurationElement to add.
         """
@@ -92,18 +95,18 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
 
     def BaseGet(self, *args): #cannot find CLR method
         """
-        BaseGet(self: ConfigurationElementCollection, index: int) -> ConfigurationElement
-        
-            Gets the configuration element at the specified index location.
-        
-            index: The index location of the System.Configuration.ConfigurationElement to return.
-            Returns: The System.Configuration.ConfigurationElement at the specified index.
         BaseGet(self: ConfigurationElementCollection, key: object) -> ConfigurationElement
         
             Returns the configuration element with the specified key.
         
             key: The key of the element to return.
-            Returns: The System.Configuration.ConfigurationElement with the specified key; otherwise, null.
+            Returns: The System.Configuration.ConfigurationElement with the specified key; otherwise, null.
+        BaseGet(self: ConfigurationElementCollection, index: int) -> ConfigurationElement
+        
+            Gets the configuration element at the specified index location.
+        
+            index: The index location of the System.Configuration.ConfigurationElement to return.
+            Returns: The System.Configuration.ConfigurationElement at the specified index.
         """
         pass
 
@@ -114,8 +117,8 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
             Returns an array of the keys for all of the configuration elements contained in the 
              System.Configuration.ConfigurationElementCollection.
         
-            Returns: An array that contains the keys for all of the System.Configuration.ConfigurationElement objects 
-             contained in the System.Configuration.ConfigurationElementCollection.
+            Returns: An array that contains the keys for all of the System.Configuration.ConfigurationElement 
+             objects contained in the System.Configuration.ConfigurationElementCollection.
         """
         pass
 
@@ -123,7 +126,9 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
         """
         BaseGetKey(self: ConfigurationElementCollection, index: int) -> object
         
-            Gets the key for the System.Configuration.ConfigurationElement at the specified index location.
+            Gets the key for the System.Configuration.ConfigurationElement at the specified index 
+             location.
+        
         
             index: The index location for the System.Configuration.ConfigurationElement.
             Returns: The key for the specified System.Configuration.ConfigurationElement.
@@ -145,13 +150,14 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified 
-             key has been removed from the System.Configuration.ConfigurationElementCollection.
+            Gets a value indicating whether the System.Configuration.ConfigurationElement with the 
+             specified key has been removed from the 
+             System.Configuration.ConfigurationElementCollection.
         
         
             key: The key of the element to check.
-            Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; 
-             otherwise, false. The default is false.
+            Returns: true if the System.Configuration.ConfigurationElement with the specified key has been 
+             removed; otherwise, false. The default is false.
         """
         pass
 
@@ -185,7 +191,9 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
         CreateNewElement(self: AuthenticationModuleElementCollection) -> ConfigurationElement
         CreateNewElement(self: ConfigurationElementCollection, elementName: str) -> ConfigurationElement
         
-            Creates a new System.Configuration.ConfigurationElement when overridden in a derived class.
+            Creates a new System.Configuration.ConfigurationElement when overridden in a derived 
+             class.
+        
         
             elementName: The name of the System.Configuration.ConfigurationElement to create.
             Returns: A new System.Configuration.ConfigurationElement.
@@ -213,10 +221,10 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
             Returns the transformed version of the specified assembly name.
         
             assemblyName: The name of the assembly.
-            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName 
-             parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is 
-             available.
+            Returns: The transformed version of the assembly name. If no transformer is available, the 
+             assemblyName parameter value is returned unchanged. The 
+             System.Configuration.Configuration.TypeStringTransformer property is null if no 
+             transformer is available.
         """
         pass
 
@@ -227,17 +235,10 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
             Returns the transformed version of the specified type name.
         
             typeName: The name of the type.
-            Returns: The transformed version of the specified type name. If no transformer is available, the typeName 
-             parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is 
-             available.
-        """
-        pass
-
-    def get_Item(self, *__args):
-        """
-        get_Item(self: ConfigurationElement, propertyName: str) -> object
-        get_Item(self: ConfigurationElement, prop: ConfigurationProperty) -> object
+            Returns: The transformed version of the specified type name. If no transformer is available, the 
+             typeName parameter value is returned unchanged. The 
+             System.Configuration.Configuration.TypeStringTransformer property is null if no 
+             transformer is available.
         """
         pass
 
@@ -262,8 +263,8 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
     def InitializeDefault(self, *args): #cannot find CLR method
         """
         InitializeDefault(self: ConfigurationElement)
-            Used to initialize a default set of values for the System.Configuration.ConfigurationElement 
-             object.
+            Used to initialize a default set of values for the 
+             System.Configuration.ConfigurationElement object.
         """
         pass
 
@@ -284,13 +285,14 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
         """
         IsElementRemovable(self: ConfigurationElementCollection, element: ConfigurationElement) -> bool
         
-            Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be 
-             removed from the System.Configuration.ConfigurationElementCollection.
+            Gets a value indicating whether the specified System.Configuration.ConfigurationElement 
+             can be removed from the System.Configuration.ConfigurationElementCollection.
         
         
             element: The element to check.
             Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this 
-             System.Configuration.ConfigurationElementCollection; otherwise, false. The default is true.
+             System.Configuration.ConfigurationElementCollection; otherwise, false. The default is 
+             true.
         """
         pass
 
@@ -298,8 +300,8 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
         """
         IsModified(self: ConfigurationElementCollection) -> bool
         
-            Indicates whether this System.Configuration.ConfigurationElementCollection has been modified 
-             since it was last saved or loaded when overridden in a derived class.
+            Indicates whether this System.Configuration.ConfigurationElementCollection has been 
+             modified since it was last saved or loaded when overridden in a derived class.
         
             Returns: true if any contained element has been modified; otherwise, false
         """
@@ -308,8 +310,8 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
     def ListErrors(self, *args): #cannot find CLR method
         """
         ListErrors(self: ConfigurationElement, errorList: IList)
-            Adds the invalid-property errors in this System.Configuration.ConfigurationElement object, and 
-             in all subelements, to the passed list.
+            Adds the invalid-property errors in this System.Configuration.ConfigurationElement 
+             object, and in all subelements, to the passed list.
         
         
             errorList: An object that implements the System.Collections.IList interface.
@@ -320,7 +322,9 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
         """
         OnDeserializeUnrecognizedAttribute(self: ConfigurationElement, name: str, value: str) -> bool
         
-            Gets a value indicating whether an unknown attribute is encountered during deserialization.
+            Gets a value indicating whether an unknown attribute is encountered during 
+             deserialization.
+        
         
             name: The name of the unrecognized attribute.
             value: The value of the unrecognized attribute.
@@ -336,8 +340,8 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
         
             elementName: The name of the unrecognized element.
             reader: An input stream that reads XML from the configuration file.
-            Returns: true if the unrecognized element was deserialized successfully; otherwise, false. The default is 
-             false.
+            Returns: true if the unrecognized element was deserialized successfully; otherwise, false. The 
+             default is false.
         """
         pass
 
@@ -371,14 +375,14 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
 
     def Remove(self, *__args):
         """
-        Remove(self: AuthenticationModuleElementCollection, name: str)
-            Removes the element with the specified key.
-        
-            name: The key of the element to remove.
         Remove(self: AuthenticationModuleElementCollection, element: AuthenticationModuleElement)
             Removes the specified configuration element from the collection.
         
-            element: The System.Net.Configuration.AuthenticationModuleElement to remove.
+            element: The System.Net.Configuration.AuthenticationModuleElement to remove.
+        Remove(self: AuthenticationModuleElementCollection, name: str)
+            Removes the element with the specified key.
+        
+            name: The key of the element to remove.
         """
         pass
 
@@ -394,20 +398,20 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
     def Reset(self, *args): #cannot find CLR method
         """
         Reset(self: ConfigurationElementCollection, parentElement: ConfigurationElement)
-            Resets the System.Configuration.ConfigurationElementCollection to its unmodified state when 
-             overridden in a derived class.
+            Resets the System.Configuration.ConfigurationElementCollection to its unmodified state 
+             when overridden in a derived class.
         
         
-            parentElement: The System.Configuration.ConfigurationElement representing the collection parent element, if 
-             any; otherwise, null.
+            parentElement: The System.Configuration.ConfigurationElement representing the collection parent element, 
+             if any; otherwise, null.
         """
         pass
 
     def ResetModified(self, *args): #cannot find CLR method
         """
         ResetModified(self: ConfigurationElementCollection)
-            Resets the value of the System.Configuration.ConfigurationElementCollection.IsModified property 
-             to false when overridden in a derived class.
+            Resets the value of the System.Configuration.ConfigurationElementCollection.IsModified 
+             property to false when overridden in a derived class.
         """
         pass
 
@@ -415,14 +419,14 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
         """
         SerializeElement(self: ConfigurationElementCollection, writer: XmlWriter, serializeCollectionKey: bool) -> bool
         
-            Writes the configuration data to an XML element in the configuration file when overridden in a 
-             derived class.
+            Writes the configuration data to an XML element in the configuration file when overridden 
+             in a derived class.
         
         
             writer: Output stream that writes XML to the configuration file.
             serializeCollectionKey: true to serialize the collection key; otherwise, false.
-            Returns: true if the System.Configuration.ConfigurationElementCollection was written to the configuration 
-             file successfully.
+            Returns: true if the System.Configuration.ConfigurationElementCollection was written to the 
+             configuration file successfully.
         """
         pass
 
@@ -430,8 +434,8 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
         """
         SerializeToXmlElement(self: ConfigurationElement, writer: XmlWriter, elementName: str) -> bool
         
-            Writes the outer tags of this configuration element to the configuration file when implemented 
-             in a derived class.
+            Writes the outer tags of this configuration element to the configuration file when 
+             implemented in a derived class.
         
         
             writer: The System.Xml.XmlWriter that writes to the configuration file.
@@ -459,10 +463,6 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
         """
         pass
 
-    def set_Item(self, *__args):
-        """ set_Item(self: ConfigurationElement, propertyName: str, value: object)set_Item(self: ConfigurationElement, prop: ConfigurationProperty, value: object) """
-        pass
-
     def Unmerge(self, *args): #cannot find CLR method
         """
         Unmerge(self: ConfigurationElementCollection, sourceElement: ConfigurationElement, parentElement: ConfigurationElement, saveMode: ConfigurationSaveMode)
@@ -470,14 +470,14 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
              configuration hierarchy
         
         
-            sourceElement: A System.Configuration.ConfigurationElement object at the current level containing a merged view 
-             of the properties.
+            sourceElement: A System.Configuration.ConfigurationElement object at the current level containing a 
+             merged view of the properties.
         
-            parentElement: The parent System.Configuration.ConfigurationElement object of the current element, or null if 
-             this is the top level.
+            parentElement: The parent System.Configuration.ConfigurationElement object of the current element, or 
+             null if this is the top level.
         
-            saveMode: A System.Configuration.ConfigurationSaveMode enumerated value that determines which property 
-             values to include.
+            saveMode: A System.Configuration.ConfigurationSaveMode enumerated value that determines which 
+             property values to include.
         """
         pass
 
@@ -545,7 +545,7 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection, ICol
 
 
 
-class AuthenticationModulesSection(ConfigurationSection):
+class AuthenticationModulesSection:
     """
     Represents the configuration section for authentication modules. This class cannot be inherited.
     
@@ -574,7 +574,7 @@ Get: AuthenticationModules(self: AuthenticationModulesSection) -> Authentication
 
 
 
-class BypassElement(ConfigurationElement):
+class BypassElement:
     """
     Represents the address information for resources that are not retrieved using a proxy server. This class cannot be inherited.
     
@@ -613,7 +613,7 @@ Set: Address(self: BypassElement) = value
 
 
 
-class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnumerable):
+class BypassElementCollection:
     """
     Represents a container for the addresses of resources that bypass the proxy server. This class cannot be inherited.
     
@@ -630,20 +630,23 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
 
     def BaseAdd(self, *args): #cannot find CLR method
         """
-        BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
-            Adds a configuration element to the configuration element collection.
+        BaseAdd(self: ConfigurationElementCollection, element: ConfigurationElement)
+            Adds a configuration element to the System.Configuration.ConfigurationElementCollection.
         
-            index: The index location at which to add the specified System.Configuration.ConfigurationElement.
             element: The System.Configuration.ConfigurationElement to add.
         BaseAdd(self: ConfigurationElementCollection, element: ConfigurationElement, throwIfExists: bool)
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already 
-             contained in the System.Configuration.ConfigurationElementCollection; otherwise, false.
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is 
+             already contained in the System.Configuration.ConfigurationElementCollection; otherwise, 
+             false.
         
-        BaseAdd(self: ConfigurationElementCollection, element: ConfigurationElement)
-            Adds a configuration element to the System.Configuration.ConfigurationElementCollection.
+        BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
+            Adds a configuration element to the configuration element collection.
+        
+            index: The index location at which to add the specified 
+             System.Configuration.ConfigurationElement.
         
             element: The System.Configuration.ConfigurationElement to add.
         """
@@ -658,18 +661,18 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
 
     def BaseGet(self, *args): #cannot find CLR method
         """
-        BaseGet(self: ConfigurationElementCollection, index: int) -> ConfigurationElement
-        
-            Gets the configuration element at the specified index location.
-        
-            index: The index location of the System.Configuration.ConfigurationElement to return.
-            Returns: The System.Configuration.ConfigurationElement at the specified index.
         BaseGet(self: ConfigurationElementCollection, key: object) -> ConfigurationElement
         
             Returns the configuration element with the specified key.
         
             key: The key of the element to return.
-            Returns: The System.Configuration.ConfigurationElement with the specified key; otherwise, null.
+            Returns: The System.Configuration.ConfigurationElement with the specified key; otherwise, null.
+        BaseGet(self: ConfigurationElementCollection, index: int) -> ConfigurationElement
+        
+            Gets the configuration element at the specified index location.
+        
+            index: The index location of the System.Configuration.ConfigurationElement to return.
+            Returns: The System.Configuration.ConfigurationElement at the specified index.
         """
         pass
 
@@ -680,8 +683,8 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
             Returns an array of the keys for all of the configuration elements contained in the 
              System.Configuration.ConfigurationElementCollection.
         
-            Returns: An array that contains the keys for all of the System.Configuration.ConfigurationElement objects 
-             contained in the System.Configuration.ConfigurationElementCollection.
+            Returns: An array that contains the keys for all of the System.Configuration.ConfigurationElement 
+             objects contained in the System.Configuration.ConfigurationElementCollection.
         """
         pass
 
@@ -689,7 +692,9 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
         """
         BaseGetKey(self: ConfigurationElementCollection, index: int) -> object
         
-            Gets the key for the System.Configuration.ConfigurationElement at the specified index location.
+            Gets the key for the System.Configuration.ConfigurationElement at the specified index 
+             location.
+        
         
             index: The index location for the System.Configuration.ConfigurationElement.
             Returns: The key for the specified System.Configuration.ConfigurationElement.
@@ -711,13 +716,14 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified 
-             key has been removed from the System.Configuration.ConfigurationElementCollection.
+            Gets a value indicating whether the System.Configuration.ConfigurationElement with the 
+             specified key has been removed from the 
+             System.Configuration.ConfigurationElementCollection.
         
         
             key: The key of the element to check.
-            Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; 
-             otherwise, false. The default is false.
+            Returns: true if the System.Configuration.ConfigurationElement with the specified key has been 
+             removed; otherwise, false. The default is false.
         """
         pass
 
@@ -751,7 +757,9 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
         CreateNewElement(self: BypassElementCollection) -> ConfigurationElement
         CreateNewElement(self: ConfigurationElementCollection, elementName: str) -> ConfigurationElement
         
-            Creates a new System.Configuration.ConfigurationElement when overridden in a derived class.
+            Creates a new System.Configuration.ConfigurationElement when overridden in a derived 
+             class.
+        
         
             elementName: The name of the System.Configuration.ConfigurationElement to create.
             Returns: A new System.Configuration.ConfigurationElement.
@@ -779,10 +787,10 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
             Returns the transformed version of the specified assembly name.
         
             assemblyName: The name of the assembly.
-            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName 
-             parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is 
-             available.
+            Returns: The transformed version of the assembly name. If no transformer is available, the 
+             assemblyName parameter value is returned unchanged. The 
+             System.Configuration.Configuration.TypeStringTransformer property is null if no 
+             transformer is available.
         """
         pass
 
@@ -793,17 +801,10 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
             Returns the transformed version of the specified type name.
         
             typeName: The name of the type.
-            Returns: The transformed version of the specified type name. If no transformer is available, the typeName 
-             parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is 
-             available.
-        """
-        pass
-
-    def get_Item(self, *__args):
-        """
-        get_Item(self: ConfigurationElement, propertyName: str) -> object
-        get_Item(self: ConfigurationElement, prop: ConfigurationProperty) -> object
+            Returns: The transformed version of the specified type name. If no transformer is available, the 
+             typeName parameter value is returned unchanged. The 
+             System.Configuration.Configuration.TypeStringTransformer property is null if no 
+             transformer is available.
         """
         pass
 
@@ -828,8 +829,8 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
     def InitializeDefault(self, *args): #cannot find CLR method
         """
         InitializeDefault(self: ConfigurationElement)
-            Used to initialize a default set of values for the System.Configuration.ConfigurationElement 
-             object.
+            Used to initialize a default set of values for the 
+             System.Configuration.ConfigurationElement object.
         """
         pass
 
@@ -850,13 +851,14 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
         """
         IsElementRemovable(self: ConfigurationElementCollection, element: ConfigurationElement) -> bool
         
-            Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be 
-             removed from the System.Configuration.ConfigurationElementCollection.
+            Gets a value indicating whether the specified System.Configuration.ConfigurationElement 
+             can be removed from the System.Configuration.ConfigurationElementCollection.
         
         
             element: The element to check.
             Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this 
-             System.Configuration.ConfigurationElementCollection; otherwise, false. The default is true.
+             System.Configuration.ConfigurationElementCollection; otherwise, false. The default is 
+             true.
         """
         pass
 
@@ -864,8 +866,8 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
         """
         IsModified(self: ConfigurationElementCollection) -> bool
         
-            Indicates whether this System.Configuration.ConfigurationElementCollection has been modified 
-             since it was last saved or loaded when overridden in a derived class.
+            Indicates whether this System.Configuration.ConfigurationElementCollection has been 
+             modified since it was last saved or loaded when overridden in a derived class.
         
             Returns: true if any contained element has been modified; otherwise, false
         """
@@ -874,8 +876,8 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
     def ListErrors(self, *args): #cannot find CLR method
         """
         ListErrors(self: ConfigurationElement, errorList: IList)
-            Adds the invalid-property errors in this System.Configuration.ConfigurationElement object, and 
-             in all subelements, to the passed list.
+            Adds the invalid-property errors in this System.Configuration.ConfigurationElement 
+             object, and in all subelements, to the passed list.
         
         
             errorList: An object that implements the System.Collections.IList interface.
@@ -886,7 +888,9 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
         """
         OnDeserializeUnrecognizedAttribute(self: ConfigurationElement, name: str, value: str) -> bool
         
-            Gets a value indicating whether an unknown attribute is encountered during deserialization.
+            Gets a value indicating whether an unknown attribute is encountered during 
+             deserialization.
+        
         
             name: The name of the unrecognized attribute.
             value: The value of the unrecognized attribute.
@@ -902,8 +906,8 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
         
             elementName: The name of the unrecognized element.
             reader: An input stream that reads XML from the configuration file.
-            Returns: true if the unrecognized element was deserialized successfully; otherwise, false. The default is 
-             false.
+            Returns: true if the unrecognized element was deserialized successfully; otherwise, false. The 
+             default is false.
         """
         pass
 
@@ -937,14 +941,14 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
 
     def Remove(self, *__args):
         """
-        Remove(self: BypassElementCollection, name: str)
-            Removes the element with the specified key.
-        
-            name: The key of the element to remove.
         Remove(self: BypassElementCollection, element: BypassElement)
             Removes the specified configuration element from the collection.
         
-            element: The System.Net.Configuration.BypassElement to remove.
+            element: The System.Net.Configuration.BypassElement to remove.
+        Remove(self: BypassElementCollection, name: str)
+            Removes the element with the specified key.
+        
+            name: The key of the element to remove.
         """
         pass
 
@@ -960,20 +964,20 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
     def Reset(self, *args): #cannot find CLR method
         """
         Reset(self: ConfigurationElementCollection, parentElement: ConfigurationElement)
-            Resets the System.Configuration.ConfigurationElementCollection to its unmodified state when 
-             overridden in a derived class.
+            Resets the System.Configuration.ConfigurationElementCollection to its unmodified state 
+             when overridden in a derived class.
         
         
-            parentElement: The System.Configuration.ConfigurationElement representing the collection parent element, if 
-             any; otherwise, null.
+            parentElement: The System.Configuration.ConfigurationElement representing the collection parent element, 
+             if any; otherwise, null.
         """
         pass
 
     def ResetModified(self, *args): #cannot find CLR method
         """
         ResetModified(self: ConfigurationElementCollection)
-            Resets the value of the System.Configuration.ConfigurationElementCollection.IsModified property 
-             to false when overridden in a derived class.
+            Resets the value of the System.Configuration.ConfigurationElementCollection.IsModified 
+             property to false when overridden in a derived class.
         """
         pass
 
@@ -981,14 +985,14 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
         """
         SerializeElement(self: ConfigurationElementCollection, writer: XmlWriter, serializeCollectionKey: bool) -> bool
         
-            Writes the configuration data to an XML element in the configuration file when overridden in a 
-             derived class.
+            Writes the configuration data to an XML element in the configuration file when overridden 
+             in a derived class.
         
         
             writer: Output stream that writes XML to the configuration file.
             serializeCollectionKey: true to serialize the collection key; otherwise, false.
-            Returns: true if the System.Configuration.ConfigurationElementCollection was written to the configuration 
-             file successfully.
+            Returns: true if the System.Configuration.ConfigurationElementCollection was written to the 
+             configuration file successfully.
         """
         pass
 
@@ -996,8 +1000,8 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
         """
         SerializeToXmlElement(self: ConfigurationElement, writer: XmlWriter, elementName: str) -> bool
         
-            Writes the outer tags of this configuration element to the configuration file when implemented 
-             in a derived class.
+            Writes the outer tags of this configuration element to the configuration file when 
+             implemented in a derived class.
         
         
             writer: The System.Xml.XmlWriter that writes to the configuration file.
@@ -1025,10 +1029,6 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
         """
         pass
 
-    def set_Item(self, *__args):
-        """ set_Item(self: ConfigurationElement, propertyName: str, value: object)set_Item(self: ConfigurationElement, prop: ConfigurationProperty, value: object) """
-        pass
-
     def Unmerge(self, *args): #cannot find CLR method
         """
         Unmerge(self: ConfigurationElementCollection, sourceElement: ConfigurationElement, parentElement: ConfigurationElement, saveMode: ConfigurationSaveMode)
@@ -1036,14 +1036,14 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
              configuration hierarchy
         
         
-            sourceElement: A System.Configuration.ConfigurationElement object at the current level containing a merged view 
-             of the properties.
+            sourceElement: A System.Configuration.ConfigurationElement object at the current level containing a 
+             merged view of the properties.
         
-            parentElement: The parent System.Configuration.ConfigurationElement object of the current element, or null if 
-             this is the top level.
+            parentElement: The parent System.Configuration.ConfigurationElement object of the current element, or 
+             null if this is the top level.
         
-            saveMode: A System.Configuration.ConfigurationSaveMode enumerated value that determines which property 
-             values to include.
+            saveMode: A System.Configuration.ConfigurationSaveMode enumerated value that determines which 
+             property values to include.
         """
         pass
 
@@ -1108,7 +1108,7 @@ class BypassElementCollection(ConfigurationElementCollection, ICollection, IEnum
 
 
 
-class ConnectionManagementElement(ConfigurationElement):
+class ConnectionManagementElement:
     """
     Represents the maximum number of connections to a remote computer. This class cannot be inherited.
     
@@ -1155,7 +1155,7 @@ Set: MaxConnection(self: ConnectionManagementElement) = value
 
 
 
-class ConnectionManagementElementCollection(ConfigurationElementCollection, ICollection, IEnumerable):
+class ConnectionManagementElementCollection:
     """
     Represents a container for connection management configuration elements. This class cannot be inherited.
     
@@ -1172,20 +1172,23 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
 
     def BaseAdd(self, *args): #cannot find CLR method
         """
-        BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
-            Adds a configuration element to the configuration element collection.
+        BaseAdd(self: ConfigurationElementCollection, element: ConfigurationElement)
+            Adds a configuration element to the System.Configuration.ConfigurationElementCollection.
         
-            index: The index location at which to add the specified System.Configuration.ConfigurationElement.
             element: The System.Configuration.ConfigurationElement to add.
         BaseAdd(self: ConfigurationElementCollection, element: ConfigurationElement, throwIfExists: bool)
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already 
-             contained in the System.Configuration.ConfigurationElementCollection; otherwise, false.
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is 
+             already contained in the System.Configuration.ConfigurationElementCollection; otherwise, 
+             false.
         
-        BaseAdd(self: ConfigurationElementCollection, element: ConfigurationElement)
-            Adds a configuration element to the System.Configuration.ConfigurationElementCollection.
+        BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
+            Adds a configuration element to the configuration element collection.
+        
+            index: The index location at which to add the specified 
+             System.Configuration.ConfigurationElement.
         
             element: The System.Configuration.ConfigurationElement to add.
         """
@@ -1200,18 +1203,18 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
 
     def BaseGet(self, *args): #cannot find CLR method
         """
-        BaseGet(self: ConfigurationElementCollection, index: int) -> ConfigurationElement
-        
-            Gets the configuration element at the specified index location.
-        
-            index: The index location of the System.Configuration.ConfigurationElement to return.
-            Returns: The System.Configuration.ConfigurationElement at the specified index.
         BaseGet(self: ConfigurationElementCollection, key: object) -> ConfigurationElement
         
             Returns the configuration element with the specified key.
         
             key: The key of the element to return.
-            Returns: The System.Configuration.ConfigurationElement with the specified key; otherwise, null.
+            Returns: The System.Configuration.ConfigurationElement with the specified key; otherwise, null.
+        BaseGet(self: ConfigurationElementCollection, index: int) -> ConfigurationElement
+        
+            Gets the configuration element at the specified index location.
+        
+            index: The index location of the System.Configuration.ConfigurationElement to return.
+            Returns: The System.Configuration.ConfigurationElement at the specified index.
         """
         pass
 
@@ -1222,8 +1225,8 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
             Returns an array of the keys for all of the configuration elements contained in the 
              System.Configuration.ConfigurationElementCollection.
         
-            Returns: An array that contains the keys for all of the System.Configuration.ConfigurationElement objects 
-             contained in the System.Configuration.ConfigurationElementCollection.
+            Returns: An array that contains the keys for all of the System.Configuration.ConfigurationElement 
+             objects contained in the System.Configuration.ConfigurationElementCollection.
         """
         pass
 
@@ -1231,7 +1234,9 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
         """
         BaseGetKey(self: ConfigurationElementCollection, index: int) -> object
         
-            Gets the key for the System.Configuration.ConfigurationElement at the specified index location.
+            Gets the key for the System.Configuration.ConfigurationElement at the specified index 
+             location.
+        
         
             index: The index location for the System.Configuration.ConfigurationElement.
             Returns: The key for the specified System.Configuration.ConfigurationElement.
@@ -1253,13 +1258,14 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified 
-             key has been removed from the System.Configuration.ConfigurationElementCollection.
+            Gets a value indicating whether the System.Configuration.ConfigurationElement with the 
+             specified key has been removed from the 
+             System.Configuration.ConfigurationElementCollection.
         
         
             key: The key of the element to check.
-            Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; 
-             otherwise, false. The default is false.
+            Returns: true if the System.Configuration.ConfigurationElement with the specified key has been 
+             removed; otherwise, false. The default is false.
         """
         pass
 
@@ -1293,7 +1299,9 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
         CreateNewElement(self: ConnectionManagementElementCollection) -> ConfigurationElement
         CreateNewElement(self: ConfigurationElementCollection, elementName: str) -> ConfigurationElement
         
-            Creates a new System.Configuration.ConfigurationElement when overridden in a derived class.
+            Creates a new System.Configuration.ConfigurationElement when overridden in a derived 
+             class.
+        
         
             elementName: The name of the System.Configuration.ConfigurationElement to create.
             Returns: A new System.Configuration.ConfigurationElement.
@@ -1321,10 +1329,10 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
             Returns the transformed version of the specified assembly name.
         
             assemblyName: The name of the assembly.
-            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName 
-             parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is 
-             available.
+            Returns: The transformed version of the assembly name. If no transformer is available, the 
+             assemblyName parameter value is returned unchanged. The 
+             System.Configuration.Configuration.TypeStringTransformer property is null if no 
+             transformer is available.
         """
         pass
 
@@ -1335,17 +1343,10 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
             Returns the transformed version of the specified type name.
         
             typeName: The name of the type.
-            Returns: The transformed version of the specified type name. If no transformer is available, the typeName 
-             parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is 
-             available.
-        """
-        pass
-
-    def get_Item(self, *__args):
-        """
-        get_Item(self: ConfigurationElement, propertyName: str) -> object
-        get_Item(self: ConfigurationElement, prop: ConfigurationProperty) -> object
+            Returns: The transformed version of the specified type name. If no transformer is available, the 
+             typeName parameter value is returned unchanged. The 
+             System.Configuration.Configuration.TypeStringTransformer property is null if no 
+             transformer is available.
         """
         pass
 
@@ -1370,8 +1371,8 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
     def InitializeDefault(self, *args): #cannot find CLR method
         """
         InitializeDefault(self: ConfigurationElement)
-            Used to initialize a default set of values for the System.Configuration.ConfigurationElement 
-             object.
+            Used to initialize a default set of values for the 
+             System.Configuration.ConfigurationElement object.
         """
         pass
 
@@ -1392,13 +1393,14 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
         """
         IsElementRemovable(self: ConfigurationElementCollection, element: ConfigurationElement) -> bool
         
-            Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be 
-             removed from the System.Configuration.ConfigurationElementCollection.
+            Gets a value indicating whether the specified System.Configuration.ConfigurationElement 
+             can be removed from the System.Configuration.ConfigurationElementCollection.
         
         
             element: The element to check.
             Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this 
-             System.Configuration.ConfigurationElementCollection; otherwise, false. The default is true.
+             System.Configuration.ConfigurationElementCollection; otherwise, false. The default is 
+             true.
         """
         pass
 
@@ -1406,8 +1408,8 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
         """
         IsModified(self: ConfigurationElementCollection) -> bool
         
-            Indicates whether this System.Configuration.ConfigurationElementCollection has been modified 
-             since it was last saved or loaded when overridden in a derived class.
+            Indicates whether this System.Configuration.ConfigurationElementCollection has been 
+             modified since it was last saved or loaded when overridden in a derived class.
         
             Returns: true if any contained element has been modified; otherwise, false
         """
@@ -1416,8 +1418,8 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
     def ListErrors(self, *args): #cannot find CLR method
         """
         ListErrors(self: ConfigurationElement, errorList: IList)
-            Adds the invalid-property errors in this System.Configuration.ConfigurationElement object, and 
-             in all subelements, to the passed list.
+            Adds the invalid-property errors in this System.Configuration.ConfigurationElement 
+             object, and in all subelements, to the passed list.
         
         
             errorList: An object that implements the System.Collections.IList interface.
@@ -1428,7 +1430,9 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
         """
         OnDeserializeUnrecognizedAttribute(self: ConfigurationElement, name: str, value: str) -> bool
         
-            Gets a value indicating whether an unknown attribute is encountered during deserialization.
+            Gets a value indicating whether an unknown attribute is encountered during 
+             deserialization.
+        
         
             name: The name of the unrecognized attribute.
             value: The value of the unrecognized attribute.
@@ -1444,8 +1448,8 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
         
             elementName: The name of the unrecognized element.
             reader: An input stream that reads XML from the configuration file.
-            Returns: true if the unrecognized element was deserialized successfully; otherwise, false. The default is 
-             false.
+            Returns: true if the unrecognized element was deserialized successfully; otherwise, false. The 
+             default is false.
         """
         pass
 
@@ -1479,14 +1483,14 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
 
     def Remove(self, *__args):
         """
-        Remove(self: ConnectionManagementElementCollection, name: str)
-            Removes the element with the specified key.
-        
-            name: The key of the element to remove.
         Remove(self: ConnectionManagementElementCollection, element: ConnectionManagementElement)
             Removes the specified configuration element from the collection.
         
-            element: The System.Net.Configuration.ConnectionManagementElement to remove.
+            element: The System.Net.Configuration.ConnectionManagementElement to remove.
+        Remove(self: ConnectionManagementElementCollection, name: str)
+            Removes the element with the specified key.
+        
+            name: The key of the element to remove.
         """
         pass
 
@@ -1502,20 +1506,20 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
     def Reset(self, *args): #cannot find CLR method
         """
         Reset(self: ConfigurationElementCollection, parentElement: ConfigurationElement)
-            Resets the System.Configuration.ConfigurationElementCollection to its unmodified state when 
-             overridden in a derived class.
+            Resets the System.Configuration.ConfigurationElementCollection to its unmodified state 
+             when overridden in a derived class.
         
         
-            parentElement: The System.Configuration.ConfigurationElement representing the collection parent element, if 
-             any; otherwise, null.
+            parentElement: The System.Configuration.ConfigurationElement representing the collection parent element, 
+             if any; otherwise, null.
         """
         pass
 
     def ResetModified(self, *args): #cannot find CLR method
         """
         ResetModified(self: ConfigurationElementCollection)
-            Resets the value of the System.Configuration.ConfigurationElementCollection.IsModified property 
-             to false when overridden in a derived class.
+            Resets the value of the System.Configuration.ConfigurationElementCollection.IsModified 
+             property to false when overridden in a derived class.
         """
         pass
 
@@ -1523,14 +1527,14 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
         """
         SerializeElement(self: ConfigurationElementCollection, writer: XmlWriter, serializeCollectionKey: bool) -> bool
         
-            Writes the configuration data to an XML element in the configuration file when overridden in a 
-             derived class.
+            Writes the configuration data to an XML element in the configuration file when overridden 
+             in a derived class.
         
         
             writer: Output stream that writes XML to the configuration file.
             serializeCollectionKey: true to serialize the collection key; otherwise, false.
-            Returns: true if the System.Configuration.ConfigurationElementCollection was written to the configuration 
-             file successfully.
+            Returns: true if the System.Configuration.ConfigurationElementCollection was written to the 
+             configuration file successfully.
         """
         pass
 
@@ -1538,8 +1542,8 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
         """
         SerializeToXmlElement(self: ConfigurationElement, writer: XmlWriter, elementName: str) -> bool
         
-            Writes the outer tags of this configuration element to the configuration file when implemented 
-             in a derived class.
+            Writes the outer tags of this configuration element to the configuration file when 
+             implemented in a derived class.
         
         
             writer: The System.Xml.XmlWriter that writes to the configuration file.
@@ -1567,10 +1571,6 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
         """
         pass
 
-    def set_Item(self, *__args):
-        """ set_Item(self: ConfigurationElement, propertyName: str, value: object)set_Item(self: ConfigurationElement, prop: ConfigurationProperty, value: object) """
-        pass
-
     def Unmerge(self, *args): #cannot find CLR method
         """
         Unmerge(self: ConfigurationElementCollection, sourceElement: ConfigurationElement, parentElement: ConfigurationElement, saveMode: ConfigurationSaveMode)
@@ -1578,14 +1578,14 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
              configuration hierarchy
         
         
-            sourceElement: A System.Configuration.ConfigurationElement object at the current level containing a merged view 
-             of the properties.
+            sourceElement: A System.Configuration.ConfigurationElement object at the current level containing a 
+             merged view of the properties.
         
-            parentElement: The parent System.Configuration.ConfigurationElement object of the current element, or null if 
-             this is the top level.
+            parentElement: The parent System.Configuration.ConfigurationElement object of the current element, or 
+             null if this is the top level.
         
-            saveMode: A System.Configuration.ConfigurationSaveMode enumerated value that determines which property 
-             values to include.
+            saveMode: A System.Configuration.ConfigurationSaveMode enumerated value that determines which 
+             property values to include.
         """
         pass
 
@@ -1653,7 +1653,7 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection, ICol
 
 
 
-class ConnectionManagementSection(ConfigurationSection):
+class ConnectionManagementSection:
     """
     Represents the configuration section for connection management. This class cannot be inherited.
     
@@ -1682,7 +1682,7 @@ Get: ConnectionManagement(self: ConnectionManagementSection) -> ConnectionManage
 
 
 
-class DefaultProxySection(ConfigurationSection):
+class DefaultProxySection:
     """
     Represents the configuration section for Web proxy server usage. This class cannot be inherited.
     
@@ -1741,7 +1741,7 @@ Set: UseDefaultCredentials(self: DefaultProxySection) = value
 
 
 
-class FtpCachePolicyElement(ConfigurationElement):
+class FtpCachePolicyElement:
     """
     Represents the default FTP cache policy for network resources. This class cannot be inherited.
     
@@ -1771,7 +1771,7 @@ Set: PolicyLevel(self: FtpCachePolicyElement) = value
 
 
 
-class HttpCachePolicyElement(ConfigurationElement):
+class HttpCachePolicyElement:
     """
     Represents the default HTTP cache policy for network resources. This class cannot be inherited.
     
@@ -1825,7 +1825,7 @@ Set: PolicyLevel(self: HttpCachePolicyElement) = value
 
 
 
-class HttpListenerElement(ConfigurationElement):
+class HttpListenerElement:
     """
     Represents the HttpListener element in the configuration file. This class cannot be inherited.
     
@@ -1859,7 +1859,7 @@ Get: UnescapeRequestUrl(self: HttpListenerElement) -> bool
 
 
 
-class HttpListenerTimeoutsElement(ConfigurationElement):
+class HttpListenerTimeoutsElement:
     """ HttpListenerTimeoutsElement() """
     DrainEntityBody = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: DrainEntityBody(self: HttpListenerTimeoutsElement) -> TimeSpan
@@ -1907,7 +1907,7 @@ class HttpListenerTimeoutsElement(ConfigurationElement):
 
 
 
-class HttpWebRequestElement(ConfigurationElement):
+class HttpWebRequestElement:
     """
     Represents the maximum length for response headers. This class cannot be inherited.
     
@@ -1961,7 +1961,7 @@ Set: UseUnsafeHeaderParsing(self: HttpWebRequestElement) = value
 
 
 
-class Ipv6Element(ConfigurationElement):
+class Ipv6Element:
     """
     Determines whether Internet Protocol version 6 is enabled on the local computer. This class cannot be inherited.
     
@@ -1991,7 +1991,7 @@ Set: Enabled(self: Ipv6Element) = value
 
 
 
-class MailSettingsSectionGroup(ConfigurationSectionGroup):
+class MailSettingsSectionGroup:
     """
     Initializes a new instance of the System.Net.Configuration.MailSettingsSectionGroup class.
     
@@ -2006,7 +2006,7 @@ Get: Smtp(self: MailSettingsSectionGroup) -> SmtpSection
 
 
 
-class ModuleElement(ConfigurationElement):
+class ModuleElement:
     """
     Represents the type information for a custom System.Net.IWebProxy module. This class cannot be inherited.
     
@@ -2036,7 +2036,7 @@ Set: Type(self: ModuleElement) = value
 
 
 
-class NetSectionGroup(ConfigurationSectionGroup):
+class NetSectionGroup:
     """
     Gets the section group information for the networking namespaces. This class cannot be inherited.
     
@@ -2050,7 +2050,8 @@ class NetSectionGroup(ConfigurationSectionGroup):
             Gets the System.Net configuration section group from the specified configuration file.
         
             config: A System.Configuration.Configuration that represents a configuration file.
-            Returns: A System.Net.Configuration.NetSectionGroup that represents the System.Net settings in config.
+            Returns: A System.Net.Configuration.NetSectionGroup that represents the System.Net settings in 
+             config.
         """
         pass
 
@@ -2105,7 +2106,7 @@ Get: WebRequestModules(self: NetSectionGroup) -> WebRequestModulesSection
 
 
 
-class PerformanceCountersElement(ConfigurationElement):
+class PerformanceCountersElement:
     """
     Represents the performance counter element in the System.Net configuration file that determines whether networking performance counters are enabled. This class cannot be inherited.
     
@@ -2135,7 +2136,7 @@ Set: Enabled(self: PerformanceCountersElement) = value
 
 
 
-class ProxyElement(ConfigurationElement):
+class ProxyElement:
     """
     Identifies the configuration settings for Web proxy server. This class cannot be inherited.
     
@@ -2201,7 +2202,7 @@ Set: UseSystemDefault(self: ProxyElement) = value
     UseSystemDefaultValues = None
 
 
-class RequestCachingSection(ConfigurationSection):
+class RequestCachingSection:
     """
     Represents the configuration section for cache behavior. This class cannot be inherited.
     
@@ -2269,7 +2270,7 @@ Set: UnspecifiedMaximumAge(self: RequestCachingSection) = value
 
 
 
-class ServicePointManagerElement(ConfigurationElement):
+class ServicePointManagerElement:
     """
     Represents the default settings used to create connections to a remote computer. This class cannot be inherited.
     
@@ -2347,7 +2348,7 @@ Set: UseNagleAlgorithm(self: ServicePointManagerElement) = value
 
 
 
-class SettingsSection(ConfigurationSection):
+class SettingsSection:
     """
     Represents the configuration section for sockets, IPv6, response headers, and service points. This class cannot be inherited.
     
@@ -2423,7 +2424,7 @@ Get: WebProxyScript(self: SettingsSection) -> WebProxyScriptElement
 
 
 
-class SmtpNetworkElement(ConfigurationElement):
+class SmtpNetworkElement:
     """
     Represents the network element in the SMTP configuration file. This class cannot be inherited.
     
@@ -2509,7 +2510,7 @@ Set: UserName(self: SmtpNetworkElement) = value
 
 
 
-class SmtpSection(ConfigurationSection):
+class SmtpSection:
     """
     Represents the SMTP section in the System.Net configuration file.
     
@@ -2567,7 +2568,7 @@ Get: SpecifiedPickupDirectory(self: SmtpSection) -> SmtpSpecifiedPickupDirectory
 
 
 
-class SmtpSpecifiedPickupDirectoryElement(ConfigurationElement):
+class SmtpSpecifiedPickupDirectoryElement:
     """
     Represents an SMTP pickup directory configuration element.
     
@@ -2597,7 +2598,7 @@ Set: PickupDirectoryLocation(self: SmtpSpecifiedPickupDirectoryElement) = value
 
 
 
-class SocketElement(ConfigurationElement):
+class SocketElement:
     """
     Represents information used to configure System.Net.Sockets.Socket objects. This class cannot be inherited.
     
@@ -2643,7 +2644,7 @@ Set: IPProtectionLevel(self: SocketElement) = value
 
 
 
-class UnicodeDecodingConformance(Enum, IComparable, IFormattable, IConvertible):
+class UnicodeDecodingConformance:
     """ enum UnicodeDecodingConformance, values: Auto (0), Compat (2), Loose (3), Strict (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2685,7 +2686,7 @@ class UnicodeDecodingConformance(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class UnicodeEncodingConformance(Enum, IComparable, IFormattable, IConvertible):
+class UnicodeEncodingConformance:
     """ enum UnicodeEncodingConformance, values: Auto (0), Compat (2), Strict (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2726,7 +2727,7 @@ class UnicodeEncodingConformance(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class WebProxyScriptElement(ConfigurationElement):
+class WebProxyScriptElement:
     """
     Represents information used to configure Web proxy scripts. This class cannot be inherited.
     
@@ -2756,7 +2757,7 @@ Set: DownloadTimeout(self: WebProxyScriptElement) = value
 
 
 
-class WebRequestModuleElement(ConfigurationElement):
+class WebRequestModuleElement:
     """
     Represents a URI prefix and the associated class that handles creating Web requests for the prefix. This class cannot be inherited.
     
@@ -2805,7 +2806,7 @@ Set: Type(self: WebRequestModuleElement) = value
 
 
 
-class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollection, IEnumerable):
+class WebRequestModuleElementCollection:
     """
     Represents a container for Web request module configuration elements. This class cannot be inherited.
     
@@ -2822,20 +2823,23 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
 
     def BaseAdd(self, *args): #cannot find CLR method
         """
-        BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
-            Adds a configuration element to the configuration element collection.
+        BaseAdd(self: ConfigurationElementCollection, element: ConfigurationElement)
+            Adds a configuration element to the System.Configuration.ConfigurationElementCollection.
         
-            index: The index location at which to add the specified System.Configuration.ConfigurationElement.
             element: The System.Configuration.ConfigurationElement to add.
         BaseAdd(self: ConfigurationElementCollection, element: ConfigurationElement, throwIfExists: bool)
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already 
-             contained in the System.Configuration.ConfigurationElementCollection; otherwise, false.
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is 
+             already contained in the System.Configuration.ConfigurationElementCollection; otherwise, 
+             false.
         
-        BaseAdd(self: ConfigurationElementCollection, element: ConfigurationElement)
-            Adds a configuration element to the System.Configuration.ConfigurationElementCollection.
+        BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
+            Adds a configuration element to the configuration element collection.
+        
+            index: The index location at which to add the specified 
+             System.Configuration.ConfigurationElement.
         
             element: The System.Configuration.ConfigurationElement to add.
         """
@@ -2850,18 +2854,18 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
 
     def BaseGet(self, *args): #cannot find CLR method
         """
-        BaseGet(self: ConfigurationElementCollection, index: int) -> ConfigurationElement
-        
-            Gets the configuration element at the specified index location.
-        
-            index: The index location of the System.Configuration.ConfigurationElement to return.
-            Returns: The System.Configuration.ConfigurationElement at the specified index.
         BaseGet(self: ConfigurationElementCollection, key: object) -> ConfigurationElement
         
             Returns the configuration element with the specified key.
         
             key: The key of the element to return.
-            Returns: The System.Configuration.ConfigurationElement with the specified key; otherwise, null.
+            Returns: The System.Configuration.ConfigurationElement with the specified key; otherwise, null.
+        BaseGet(self: ConfigurationElementCollection, index: int) -> ConfigurationElement
+        
+            Gets the configuration element at the specified index location.
+        
+            index: The index location of the System.Configuration.ConfigurationElement to return.
+            Returns: The System.Configuration.ConfigurationElement at the specified index.
         """
         pass
 
@@ -2872,8 +2876,8 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
             Returns an array of the keys for all of the configuration elements contained in the 
              System.Configuration.ConfigurationElementCollection.
         
-            Returns: An array that contains the keys for all of the System.Configuration.ConfigurationElement objects 
-             contained in the System.Configuration.ConfigurationElementCollection.
+            Returns: An array that contains the keys for all of the System.Configuration.ConfigurationElement 
+             objects contained in the System.Configuration.ConfigurationElementCollection.
         """
         pass
 
@@ -2881,7 +2885,9 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
         """
         BaseGetKey(self: ConfigurationElementCollection, index: int) -> object
         
-            Gets the key for the System.Configuration.ConfigurationElement at the specified index location.
+            Gets the key for the System.Configuration.ConfigurationElement at the specified index 
+             location.
+        
         
             index: The index location for the System.Configuration.ConfigurationElement.
             Returns: The key for the specified System.Configuration.ConfigurationElement.
@@ -2903,13 +2909,14 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified 
-             key has been removed from the System.Configuration.ConfigurationElementCollection.
+            Gets a value indicating whether the System.Configuration.ConfigurationElement with the 
+             specified key has been removed from the 
+             System.Configuration.ConfigurationElementCollection.
         
         
             key: The key of the element to check.
-            Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; 
-             otherwise, false. The default is false.
+            Returns: true if the System.Configuration.ConfigurationElement with the specified key has been 
+             removed; otherwise, false. The default is false.
         """
         pass
 
@@ -2943,7 +2950,9 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
         CreateNewElement(self: WebRequestModuleElementCollection) -> ConfigurationElement
         CreateNewElement(self: ConfigurationElementCollection, elementName: str) -> ConfigurationElement
         
-            Creates a new System.Configuration.ConfigurationElement when overridden in a derived class.
+            Creates a new System.Configuration.ConfigurationElement when overridden in a derived 
+             class.
+        
         
             elementName: The name of the System.Configuration.ConfigurationElement to create.
             Returns: A new System.Configuration.ConfigurationElement.
@@ -2971,10 +2980,10 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
             Returns the transformed version of the specified assembly name.
         
             assemblyName: The name of the assembly.
-            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName 
-             parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is 
-             available.
+            Returns: The transformed version of the assembly name. If no transformer is available, the 
+             assemblyName parameter value is returned unchanged. The 
+             System.Configuration.Configuration.TypeStringTransformer property is null if no 
+             transformer is available.
         """
         pass
 
@@ -2985,17 +2994,10 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
             Returns the transformed version of the specified type name.
         
             typeName: The name of the type.
-            Returns: The transformed version of the specified type name. If no transformer is available, the typeName 
-             parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is 
-             available.
-        """
-        pass
-
-    def get_Item(self, *__args):
-        """
-        get_Item(self: ConfigurationElement, propertyName: str) -> object
-        get_Item(self: ConfigurationElement, prop: ConfigurationProperty) -> object
+            Returns: The transformed version of the specified type name. If no transformer is available, the 
+             typeName parameter value is returned unchanged. The 
+             System.Configuration.Configuration.TypeStringTransformer property is null if no 
+             transformer is available.
         """
         pass
 
@@ -3020,8 +3022,8 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
     def InitializeDefault(self, *args): #cannot find CLR method
         """
         InitializeDefault(self: ConfigurationElement)
-            Used to initialize a default set of values for the System.Configuration.ConfigurationElement 
-             object.
+            Used to initialize a default set of values for the 
+             System.Configuration.ConfigurationElement object.
         """
         pass
 
@@ -3042,13 +3044,14 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
         """
         IsElementRemovable(self: ConfigurationElementCollection, element: ConfigurationElement) -> bool
         
-            Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be 
-             removed from the System.Configuration.ConfigurationElementCollection.
+            Gets a value indicating whether the specified System.Configuration.ConfigurationElement 
+             can be removed from the System.Configuration.ConfigurationElementCollection.
         
         
             element: The element to check.
             Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this 
-             System.Configuration.ConfigurationElementCollection; otherwise, false. The default is true.
+             System.Configuration.ConfigurationElementCollection; otherwise, false. The default is 
+             true.
         """
         pass
 
@@ -3056,8 +3059,8 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
         """
         IsModified(self: ConfigurationElementCollection) -> bool
         
-            Indicates whether this System.Configuration.ConfigurationElementCollection has been modified 
-             since it was last saved or loaded when overridden in a derived class.
+            Indicates whether this System.Configuration.ConfigurationElementCollection has been 
+             modified since it was last saved or loaded when overridden in a derived class.
         
             Returns: true if any contained element has been modified; otherwise, false
         """
@@ -3066,8 +3069,8 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
     def ListErrors(self, *args): #cannot find CLR method
         """
         ListErrors(self: ConfigurationElement, errorList: IList)
-            Adds the invalid-property errors in this System.Configuration.ConfigurationElement object, and 
-             in all subelements, to the passed list.
+            Adds the invalid-property errors in this System.Configuration.ConfigurationElement 
+             object, and in all subelements, to the passed list.
         
         
             errorList: An object that implements the System.Collections.IList interface.
@@ -3078,7 +3081,9 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
         """
         OnDeserializeUnrecognizedAttribute(self: ConfigurationElement, name: str, value: str) -> bool
         
-            Gets a value indicating whether an unknown attribute is encountered during deserialization.
+            Gets a value indicating whether an unknown attribute is encountered during 
+             deserialization.
+        
         
             name: The name of the unrecognized attribute.
             value: The value of the unrecognized attribute.
@@ -3094,8 +3099,8 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
         
             elementName: The name of the unrecognized element.
             reader: An input stream that reads XML from the configuration file.
-            Returns: true if the unrecognized element was deserialized successfully; otherwise, false. The default is 
-             false.
+            Returns: true if the unrecognized element was deserialized successfully; otherwise, false. The 
+             default is false.
         """
         pass
 
@@ -3129,14 +3134,14 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
 
     def Remove(self, *__args):
         """
-        Remove(self: WebRequestModuleElementCollection, name: str)
-            Removes the element with the specified key.
-        
-            name: The key of the element to remove.
         Remove(self: WebRequestModuleElementCollection, element: WebRequestModuleElement)
             Removes the specified configuration element from the collection.
         
-            element: The System.Net.Configuration.WebRequestModuleElement to remove.
+            element: The System.Net.Configuration.WebRequestModuleElement to remove.
+        Remove(self: WebRequestModuleElementCollection, name: str)
+            Removes the element with the specified key.
+        
+            name: The key of the element to remove.
         """
         pass
 
@@ -3152,20 +3157,20 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
     def Reset(self, *args): #cannot find CLR method
         """
         Reset(self: ConfigurationElementCollection, parentElement: ConfigurationElement)
-            Resets the System.Configuration.ConfigurationElementCollection to its unmodified state when 
-             overridden in a derived class.
+            Resets the System.Configuration.ConfigurationElementCollection to its unmodified state 
+             when overridden in a derived class.
         
         
-            parentElement: The System.Configuration.ConfigurationElement representing the collection parent element, if 
-             any; otherwise, null.
+            parentElement: The System.Configuration.ConfigurationElement representing the collection parent element, 
+             if any; otherwise, null.
         """
         pass
 
     def ResetModified(self, *args): #cannot find CLR method
         """
         ResetModified(self: ConfigurationElementCollection)
-            Resets the value of the System.Configuration.ConfigurationElementCollection.IsModified property 
-             to false when overridden in a derived class.
+            Resets the value of the System.Configuration.ConfigurationElementCollection.IsModified 
+             property to false when overridden in a derived class.
         """
         pass
 
@@ -3173,14 +3178,14 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
         """
         SerializeElement(self: ConfigurationElementCollection, writer: XmlWriter, serializeCollectionKey: bool) -> bool
         
-            Writes the configuration data to an XML element in the configuration file when overridden in a 
-             derived class.
+            Writes the configuration data to an XML element in the configuration file when overridden 
+             in a derived class.
         
         
             writer: Output stream that writes XML to the configuration file.
             serializeCollectionKey: true to serialize the collection key; otherwise, false.
-            Returns: true if the System.Configuration.ConfigurationElementCollection was written to the configuration 
-             file successfully.
+            Returns: true if the System.Configuration.ConfigurationElementCollection was written to the 
+             configuration file successfully.
         """
         pass
 
@@ -3188,8 +3193,8 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
         """
         SerializeToXmlElement(self: ConfigurationElement, writer: XmlWriter, elementName: str) -> bool
         
-            Writes the outer tags of this configuration element to the configuration file when implemented 
-             in a derived class.
+            Writes the outer tags of this configuration element to the configuration file when 
+             implemented in a derived class.
         
         
             writer: The System.Xml.XmlWriter that writes to the configuration file.
@@ -3217,10 +3222,6 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
         """
         pass
 
-    def set_Item(self, *__args):
-        """ set_Item(self: ConfigurationElement, propertyName: str, value: object)set_Item(self: ConfigurationElement, prop: ConfigurationProperty, value: object) """
-        pass
-
     def Unmerge(self, *args): #cannot find CLR method
         """
         Unmerge(self: ConfigurationElementCollection, sourceElement: ConfigurationElement, parentElement: ConfigurationElement, saveMode: ConfigurationSaveMode)
@@ -3228,14 +3229,14 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
              configuration hierarchy
         
         
-            sourceElement: A System.Configuration.ConfigurationElement object at the current level containing a merged view 
-             of the properties.
+            sourceElement: A System.Configuration.ConfigurationElement object at the current level containing a 
+             merged view of the properties.
         
-            parentElement: The parent System.Configuration.ConfigurationElement object of the current element, or null if 
-             this is the top level.
+            parentElement: The parent System.Configuration.ConfigurationElement object of the current element, or 
+             null if this is the top level.
         
-            saveMode: A System.Configuration.ConfigurationSaveMode enumerated value that determines which property 
-             values to include.
+            saveMode: A System.Configuration.ConfigurationSaveMode enumerated value that determines which 
+             property values to include.
         """
         pass
 
@@ -3303,7 +3304,7 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection, ICollect
 
 
 
-class WebRequestModulesSection(ConfigurationSection):
+class WebRequestModulesSection:
     """
     Represents the configuration section for Web request modules. This class cannot be inherited.
     
@@ -3332,7 +3333,7 @@ Get: WebRequestModules(self: WebRequestModulesSection) -> WebRequestModuleElemen
 
 
 
-class WebUtilityElement(ConfigurationElement):
+class WebUtilityElement:
     """ WebUtilityElement() """
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.

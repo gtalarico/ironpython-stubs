@@ -1,48 +1,39 @@
-class DockingAttribute(Attribute,_Attribute):
+class DockingAttribute:
  """
- Specifies the default docking behavior for a control.
-
- 
-
- DockingAttribute()
-
+ Specifies the default docking behavior for a control.
+ 
+ DockingAttribute()
  DockingAttribute(dockingBehavior: DockingBehavior)
  """
  def Equals(self,obj):
   """
-  Equals(self: DockingAttribute,obj: object) -> bool
-
-  
-
-   Compares an arbitrary object with the System.Windows.Forms.DockingAttribute object for equality.
-
-  
-
-   obj: The System.Object against which to compare this System.Windows.Forms.DockingAttribute.
-
+  Equals(self: DockingAttribute,obj: object) -> bool
+  
+   Compares an arbitrary object with the System.Windows.Forms.DockingAttribute object for 
+    equality.
+  
+  
+   obj: The System.Object against which to compare this System.Windows.Forms.DockingAttribute.
    Returns: true is obj is equal to this System.Windows.Forms.DockingAttribute; otherwise,false.
   """
   pass
  def GetHashCode(self):
   """
-  GetHashCode(self: DockingAttribute) -> int
-
-  
-
-   The hash code for this object.
-
+  GetHashCode(self: DockingAttribute) -> int
+  
+   The hash code for this object.
    Returns: An System.Int32 representing an in-memory hash of this object.
   """
   pass
  def IsDefaultAttribute(self):
   """
-  IsDefaultAttribute(self: DockingAttribute) -> bool
-
-  
-
-   Specifies whether this System.Windows.Forms.DockingAttribute is the default docking attribute.
-
-   Returns: true is the current System.Windows.Forms.DockingAttribute is the default; otherwise,false.
+  IsDefaultAttribute(self: DockingAttribute) -> bool
+  
+   Specifies whether this System.Windows.Forms.DockingAttribute is the default docking 
+    attribute.
+  
+   Returns: true is the current System.Windows.Forms.DockingAttribute is the default; otherwise,
+    false.
   """
   pass
  def __eq__(self,*args):
@@ -54,22 +45,17 @@ class DockingAttribute(Attribute,_Attribute):
  @staticmethod
  def __new__(self,dockingBehavior=None):
   """
-  __new__(cls: type)
-
+  __new__(cls: type)
   __new__(cls: type,dockingBehavior: DockingBehavior)
   """
   pass
  def __ne__(self,*args):
   pass
  DockingBehavior=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the docking behavior supplied to this attribute.
-
-
-
-Get: DockingBehavior(self: DockingAttribute) -> DockingBehavior
-
-
-
+ """Gets the docking behavior supplied to this attribute.
+
+Get: DockingBehavior(self: DockingAttribute) -> DockingBehavior
+
 """
 
 

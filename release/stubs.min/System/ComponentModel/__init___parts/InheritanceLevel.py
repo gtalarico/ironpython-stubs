@@ -1,9 +1,7 @@
-class InheritanceLevel(Enum,IComparable,IFormattable,IConvertible):
+class InheritanceLevel:
  """
- Defines identifiers for types of inheritance levels.
-
- 
-
+ Defines identifiers for types of inheritance levels.
+ 
  enum InheritanceLevel,values: Inherited (1),InheritedReadOnly (2),NotInherited (3)
  """
  def __eq__(self,*args):

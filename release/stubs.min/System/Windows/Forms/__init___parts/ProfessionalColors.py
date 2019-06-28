@@ -1,4 +1,4 @@
-class ProfessionalColors(object):
+class ProfessionalColors:
  """ Provides System.Drawing.Color structures that are colors of a Windows display element. This class cannot be inherited. """
  ButtonCheckedGradientBegin=None
  ButtonCheckedGradientEnd=None

@@ -2,13 +2,13 @@
 # module System.Collections.Specialized calls itself Specialized
 # from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class BitVector32(object):
+class BitVector32:
     """
     Provides a simple structure that stores Boolean values and small integers in 32 bits of memory.
     
@@ -18,41 +18,41 @@ class BitVector32(object):
     @staticmethod
     def CreateMask(previous=None):
         """
+        CreateMask() -> int
+        
+            Creates the first mask in a series of masks that can be used to retrieve individual bits 
+             in a System.Collections.Specialized.BitVector32 that is set up as bit flags.
+        
+            Returns: A mask that isolates the first bit flag in the System.Collections.Specialized.BitVector32.
         CreateMask(previous: int) -> int
         
-            Creates an additional mask following the specified mask in a series of masks that can be used to 
-             retrieve individual bits in a System.Collections.Specialized.BitVector32 that is set up as bit 
-             flags.
+            Creates an additional mask following the specified mask in a series of masks that can be 
+             used to retrieve individual bits in a System.Collections.Specialized.BitVector32 that is 
+             set up as bit flags.
         
         
             previous: The mask that indicates the previous bit flag.
             Returns: A mask that isolates the bit flag following the one that previous points to in 
-             System.Collections.Specialized.BitVector32.
-        
-        CreateMask() -> int
-        
-            Creates the first mask in a series of masks that can be used to retrieve individual bits in a 
-             System.Collections.Specialized.BitVector32 that is set up as bit flags.
-        
-            Returns: A mask that isolates the first bit flag in the System.Collections.Specialized.BitVector32.
+             System.Collections.Specialized.BitVector32.
         """
         pass
 
     @staticmethod
     def CreateSection(maxValue, previous=None):
         """
-        CreateSection(maxValue: Int16, previous: Section) -> Section
         CreateSection(maxValue: Int16) -> Section
         
-            Creates the first System.Collections.Specialized.BitVector32.Section in a series of sections 
-             that contain small integers.
+            Creates the first System.Collections.Specialized.BitVector32.Section in a series of 
+             sections that contain small integers.
         
         
             maxValue: A 16-bit signed integer that specifies the maximum value for the new 
              System.Collections.Specialized.BitVector32.Section.
         
             Returns: A System.Collections.Specialized.BitVector32.Section that can hold a number from zero to 
-             maxValue.
+             maxValue.
+        
+        CreateSection(maxValue: Int16, previous: Section) -> Section
         """
         pass
 
@@ -82,16 +82,16 @@ class BitVector32(object):
     @staticmethod
     def ToString(value=None):
         """
-        ToString(self: BitVector32) -> str
-        
-            Returns a string that represents the current System.Collections.Specialized.BitVector32.
-            Returns: A string that represents the current System.Collections.Specialized.BitVector32.
         ToString(value: BitVector32) -> str
         
             Returns a string that represents the specified System.Collections.Specialized.BitVector32.
         
             value: The System.Collections.Specialized.BitVector32 to represent.
-            Returns: A string that represents the specified System.Collections.Specialized.BitVector32.
+            Returns: A string that represents the specified System.Collections.Specialized.BitVector32.
+        ToString(self: BitVector32) -> str
+        
+            Returns a string that represents the current System.Collections.Specialized.BitVector32.
+            Returns: A string that represents the current System.Collections.Specialized.BitVector32.
         """
         pass
 
@@ -106,10 +106,9 @@ class BitVector32(object):
     @staticmethod # known case of __new__
     def __new__(self, *__args):
         """
-        __new__[BitVector32]() -> BitVector32
-        
         __new__(cls: type, data: int)
-        __new__(cls: type, value: BitVector32)
+        __new__(cls: type, value: BitVector32)
+        __new__[BitVector32]() -> BitVector32
         """
         pass
 
@@ -131,7 +130,7 @@ Get: Data(self: BitVector32) -> int
     Section = None
 
 
-class CollectionsUtil(object):
+class CollectionsUtil:
     """
     Creates collections that ignore the case in strings.
     
@@ -140,36 +139,38 @@ class CollectionsUtil(object):
     @staticmethod
     def CreateCaseInsensitiveHashtable(*__args):
         """
+        CreateCaseInsensitiveHashtable(capacity: int) -> Hashtable
+        
+            Creates a new case-insensitive instance of the System.Collections.Hashtable class with 
+             the specified initial capacity.
+        
+        
+            capacity: The approximate number of entries that the System.Collections.Hashtable can initially 
+             contain.
+        
+            Returns: A new case-insensitive instance of the System.Collections.Hashtable class with the 
+             specified initial capacity.
+        
+        CreateCaseInsensitiveHashtable() -> Hashtable
+        
+            Creates a new case-insensitive instance of the System.Collections.Hashtable class with 
+             the default initial capacity.
+        
+            Returns: A new case-insensitive instance of the System.Collections.Hashtable class with the 
+             default initial capacity.
+        
         CreateCaseInsensitiveHashtable(d: IDictionary) -> Hashtable
         
-            Copies the entries from the specified dictionary to a new case-insensitive instance of the 
-             System.Collections.Hashtable class with the same initial capacity as the number of entries 
-             copied.
+            Copies the entries from the specified dictionary to a new case-insensitive instance of 
+             the System.Collections.Hashtable class with the same initial capacity as the number of 
+             entries copied.
         
         
             d: The System.Collections.IDictionary to copy to a new case-insensitive 
              System.Collections.Hashtable.
         
-            Returns: A new case-insensitive instance of the System.Collections.Hashtable class containing the entries 
-             from the specified System.Collections.IDictionary.
-        
-        CreateCaseInsensitiveHashtable() -> Hashtable
-        
-            Creates a new case-insensitive instance of the System.Collections.Hashtable class with the 
-             default initial capacity.
-        
-            Returns: A new case-insensitive instance of the System.Collections.Hashtable class with the default 
-             initial capacity.
-        
-        CreateCaseInsensitiveHashtable(capacity: int) -> Hashtable
-        
-            Creates a new case-insensitive instance of the System.Collections.Hashtable class with the 
-             specified initial capacity.
-        
-        
-            capacity: The approximate number of entries that the System.Collections.Hashtable can initially contain.
-            Returns: A new case-insensitive instance of the System.Collections.Hashtable class with the specified 
-             initial capacity.
+            Returns: A new case-insensitive instance of the System.Collections.Hashtable class containing the 
+             entries from the specified System.Collections.IDictionary.
         """
         pass
 
@@ -178,15 +179,16 @@ class CollectionsUtil(object):
         """
         CreateCaseInsensitiveSortedList() -> SortedList
         
-            Creates a new instance of the System.Collections.SortedList class that ignores the case of 
-             strings.
+            Creates a new instance of the System.Collections.SortedList class that ignores the case 
+             of strings.
         
-            Returns: A new instance of the System.Collections.SortedList class that ignores the case of strings.
+            Returns: A new instance of the System.Collections.SortedList class that ignores the case of 
+             strings.
         """
         pass
 
 
-class HybridDictionary(object, IDictionary, ICollection, IEnumerable):
+class HybridDictionary:
     """
     Implements IDictionary by using a System.Collections.Specialized.ListDictionary while the collection is small, and then switching to a System.Collections.Hashtable when the collection gets large.
     
@@ -218,11 +220,13 @@ class HybridDictionary(object, IDictionary, ICollection, IEnumerable):
         """
         Contains(self: HybridDictionary, key: object) -> bool
         
-            Determines whether the System.Collections.Specialized.HybridDictionary contains a specific key.
+            Determines whether the System.Collections.Specialized.HybridDictionary contains a 
+             specific key.
+        
         
             key: The key to locate in the System.Collections.Specialized.HybridDictionary.
-            Returns: true if the System.Collections.Specialized.HybridDictionary contains an entry with the specified 
-             key; otherwise, false.
+            Returns: true if the System.Collections.Specialized.HybridDictionary contains an entry with the 
+             specified key; otherwise, false.
         """
         pass
 
@@ -235,7 +239,8 @@ class HybridDictionary(object, IDictionary, ICollection, IEnumerable):
         
             array: The one-dimensional System.Array that is the destination of the 
              System.Collections.DictionaryEntry objects copied from 
-             System.Collections.Specialized.HybridDictionary. The System.Array must have zero-based indexing.
+             System.Collections.Specialized.HybridDictionary. The System.Array must have zero-based 
+             indexing.
         
             index: The zero-based index in array at which copying begins.
         """
@@ -277,7 +282,8 @@ class HybridDictionary(object, IDictionary, ICollection, IEnumerable):
         
         
             key: The key to locate in the System.Collections.IDictionary object.
-            Returns: true if the System.Collections.IDictionary contains an element with the key; otherwise, false.
+            Returns: true if the System.Collections.IDictionary contains an element with the key; otherwise, 
+             false.
         """
         pass
 
@@ -378,7 +384,7 @@ class INotifyCollectionChanged:
     CollectionChanged = None
 
 
-class IOrderedDictionary(IDictionary, ICollection, IEnumerable):
+class IOrderedDictionary:
     """ Represents an indexed collection of key/value pairs. """
     def GetEnumerator(self):
         """
@@ -421,7 +427,8 @@ class IOrderedDictionary(IDictionary, ICollection, IEnumerable):
         
         
             key: The key to locate in the System.Collections.IDictionary object.
-            Returns: true if the System.Collections.IDictionary contains an element with the key; otherwise, false.
+            Returns: true if the System.Collections.IDictionary contains an element with the key; otherwise, 
+             false.
         """
         pass
 
@@ -446,7 +453,7 @@ class IOrderedDictionary(IDictionary, ICollection, IEnumerable):
         pass
 
 
-class ListDictionary(object, IDictionary, ICollection, IEnumerable):
+class ListDictionary:
     """
     Implements IDictionary using a singly linked list. Recommended for collections that typically contain 10 items or less.
     
@@ -476,11 +483,13 @@ class ListDictionary(object, IDictionary, ICollection, IEnumerable):
         """
         Contains(self: ListDictionary, key: object) -> bool
         
-            Determines whether the System.Collections.Specialized.ListDictionary contains a specific key.
+            Determines whether the System.Collections.Specialized.ListDictionary contains a specific 
+             key.
+        
         
             key: The key to locate in the System.Collections.Specialized.ListDictionary.
-            Returns: true if the System.Collections.Specialized.ListDictionary contains an entry with the specified 
-             key; otherwise, false.
+            Returns: true if the System.Collections.Specialized.ListDictionary contains an entry with the 
+             specified key; otherwise, false.
         """
         pass
 
@@ -493,7 +502,8 @@ class ListDictionary(object, IDictionary, ICollection, IEnumerable):
         
             array: The one-dimensional System.Array that is the destination of the 
              System.Collections.DictionaryEntry objects copied from 
-             System.Collections.Specialized.ListDictionary. The System.Array must have zero-based indexing.
+             System.Collections.Specialized.ListDictionary. The System.Array must have zero-based 
+             indexing.
         
             index: The zero-based index in array at which copying begins.
         """
@@ -514,7 +524,9 @@ class ListDictionary(object, IDictionary, ICollection, IEnumerable):
     def Remove(self, key):
         """
         Remove(self: ListDictionary, key: object)
-            Removes the entry with the specified key from the System.Collections.Specialized.ListDictionary.
+            Removes the entry with the specified key from the 
+             System.Collections.Specialized.ListDictionary.
+        
         
             key: The key of the entry to remove.
         """
@@ -533,7 +545,8 @@ class ListDictionary(object, IDictionary, ICollection, IEnumerable):
         
         
             key: The key to locate in the System.Collections.IDictionary object.
-            Returns: true if the System.Collections.IDictionary contains an element with the key; otherwise, false.
+            Returns: true if the System.Collections.IDictionary contains an element with the key; otherwise, 
+             false.
         """
         pass
 
@@ -623,7 +636,7 @@ Get: Values(self: ListDictionary) -> ICollection
 
 
 
-class NameObjectCollectionBase(object, ICollection, IEnumerable, ISerializable, IDeserializationCallback):
+class NameObjectCollectionBase:
     """ Provides the abstract base class for a collection of associated System.String keys and System.Object values that can be accessed either with the key or with the index. """
     def BaseAdd(self, *args): #cannot find CLR method
         """
@@ -640,20 +653,13 @@ class NameObjectCollectionBase(object, ICollection, IEnumerable, ISerializable, 
     def BaseClear(self, *args): #cannot find CLR method
         """
         BaseClear(self: NameObjectCollectionBase)
-            Removes all entries from the System.Collections.Specialized.NameObjectCollectionBase instance.
+            Removes all entries from the System.Collections.Specialized.NameObjectCollectionBase 
+             instance.
         """
         pass
 
     def BaseGet(self, *args): #cannot find CLR method
         """
-        BaseGet(self: NameObjectCollectionBase, index: int) -> object
-        
-            Gets the value of the entry at the specified index of the 
-             System.Collections.Specialized.NameObjectCollectionBase instance.
-        
-        
-            index: The zero-based index of the value to get.
-            Returns: An System.Object that represents the value of the entry at the specified index.
         BaseGet(self: NameObjectCollectionBase, name: str) -> object
         
             Gets the value of the first entry with the specified key from the 
@@ -661,8 +667,17 @@ class NameObjectCollectionBase(object, ICollection, IEnumerable, ISerializable, 
         
         
             name: The System.String key of the entry to get. The key can be null.
-            Returns: An System.Object that represents the value of the first entry with the specified key, if found; 
-             otherwise, null.
+            Returns: An System.Object that represents the value of the first entry with the specified key, if 
+             found; otherwise, null.
+        
+        BaseGet(self: NameObjectCollectionBase, index: int) -> object
+        
+            Gets the value of the entry at the specified index of the 
+             System.Collections.Specialized.NameObjectCollectionBase instance.
+        
+        
+            index: The zero-based index of the value to get.
+            Returns: An System.Object that represents the value of the entry at the specified index.
         """
         pass
 
@@ -680,6 +695,14 @@ class NameObjectCollectionBase(object, ICollection, IEnumerable, ISerializable, 
 
     def BaseGetAllValues(self, *args): #cannot find CLR method
         """
+        BaseGetAllValues(self: NameObjectCollectionBase) -> Array[object]
+        
+            Returns an System.Object array that contains all the values in the 
+             System.Collections.Specialized.NameObjectCollectionBase instance.
+        
+            Returns: An System.Object array that contains all the values in the 
+             System.Collections.Specialized.NameObjectCollectionBase instance.
+        
         BaseGetAllValues(self: NameObjectCollectionBase, type: Type) -> Array[object]
         
             Returns an array of the specified type that contains all the values in the 
@@ -688,14 +711,6 @@ class NameObjectCollectionBase(object, ICollection, IEnumerable, ISerializable, 
         
             type: A System.Type that represents the type of array to return.
             Returns: An array of the specified type that contains all the values in the 
-             System.Collections.Specialized.NameObjectCollectionBase instance.
-        
-        BaseGetAllValues(self: NameObjectCollectionBase) -> Array[object]
-        
-            Returns an System.Object array that contains all the values in the 
-             System.Collections.Specialized.NameObjectCollectionBase instance.
-        
-            Returns: An System.Object array that contains all the values in the 
              System.Collections.Specialized.NameObjectCollectionBase instance.
         """
         pass
@@ -717,11 +732,12 @@ class NameObjectCollectionBase(object, ICollection, IEnumerable, ISerializable, 
         """
         BaseHasKeys(self: NameObjectCollectionBase) -> bool
         
-            Gets a value indicating whether the System.Collections.Specialized.NameObjectCollectionBase 
-             instance contains entries whose keys are not null.
+            Gets a value indicating whether the 
+             System.Collections.Specialized.NameObjectCollectionBase instance contains entries whose 
+             keys are not null.
         
-            Returns: true if the System.Collections.Specialized.NameObjectCollectionBase instance contains entries 
-             whose keys are not null; otherwise, false.
+            Returns: true if the System.Collections.Specialized.NameObjectCollectionBase instance contains 
+             entries whose keys are not null; otherwise, false.
         """
         pass
 
@@ -749,22 +765,25 @@ class NameObjectCollectionBase(object, ICollection, IEnumerable, ISerializable, 
 
     def BaseSet(self, *args): #cannot find CLR method
         """
+        BaseSet(self: NameObjectCollectionBase, name: str, value: object)
+            Sets the value of the first entry with the specified key in the 
+             System.Collections.Specialized.NameObjectCollectionBase instance, if found; otherwise, 
+             adds an entry with the specified key and value into the 
+             System.Collections.Specialized.NameObjectCollectionBase instance.
+        
+        
+            name: The System.String key of the entry to set. The key can be null.
+            value: The System.Object that represents the new value of the entry to set. The value can be 
+             null.
+        
         BaseSet(self: NameObjectCollectionBase, index: int, value: object)
             Sets the value of the entry at the specified index of the 
              System.Collections.Specialized.NameObjectCollectionBase instance.
         
         
             index: The zero-based index of the entry to set.
-            value: The System.Object that represents the new value of the entry to set. The value can be null.
-        BaseSet(self: NameObjectCollectionBase, name: str, value: object)
-            Sets the value of the first entry with the specified key in the 
-             System.Collections.Specialized.NameObjectCollectionBase instance, if found; otherwise, adds an 
-             entry with the specified key and value into the 
-             System.Collections.Specialized.NameObjectCollectionBase instance.
-        
-        
-            name: The System.String key of the entry to set. The key can be null.
-            value: The System.Object that represents the new value of the entry to set. The value can be null.
+            value: The System.Object that represents the new value of the entry to set. The value can be 
+             null.
         """
         pass
 
@@ -783,15 +802,16 @@ class NameObjectCollectionBase(object, ICollection, IEnumerable, ISerializable, 
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: NameObjectCollectionBase, info: SerializationInfo, context: StreamingContext)
-            Implements the System.Runtime.Serialization.ISerializable interface and returns the data needed 
-             to serialize the System.Collections.Specialized.NameObjectCollectionBase instance.
+            Implements the System.Runtime.Serialization.ISerializable interface and returns the data 
+             needed to serialize the System.Collections.Specialized.NameObjectCollectionBase instance.
         
         
-            info: A System.Runtime.Serialization.SerializationInfo object that contains the information required 
-             to serialize the System.Collections.Specialized.NameObjectCollectionBase instance.
+            info: A System.Runtime.Serialization.SerializationInfo object that contains the information 
+             required to serialize the System.Collections.Specialized.NameObjectCollectionBase 
+             instance.
         
-            context: A System.Runtime.Serialization.StreamingContext object that contains the source and destination 
-             of the serialized stream associated with the 
+            context: A System.Runtime.Serialization.StreamingContext object that contains the source and 
+             destination of the serialized stream associated with the 
              System.Collections.Specialized.NameObjectCollectionBase instance.
         """
         pass
@@ -862,7 +882,7 @@ Get: Keys(self: NameObjectCollectionBase) -> KeysCollection
     KeysCollection = None
 
 
-class NameValueCollection(NameObjectCollectionBase, ICollection, IEnumerable, ISerializable, IDeserializationCallback):
+class NameValueCollection:
     """
     Represents a collection of associated System.String keys and System.String values that can be accessed either with the key or with the index.
     
@@ -877,20 +897,21 @@ class NameValueCollection(NameObjectCollectionBase, ICollection, IEnumerable, IS
     """
     def Add(self, *__args):
         """
+        Add(self: NameValueCollection, c: NameValueCollection)
+            Copies the entries in the specified System.Collections.Specialized.NameValueCollection to 
+             the current System.Collections.Specialized.NameValueCollection.
+        
+        
+            c: The System.Collections.Specialized.NameValueCollection to copy to the current 
+             System.Collections.Specialized.NameValueCollection.
+        
         Add(self: NameValueCollection, name: str, value: str)
             Adds an entry with the specified name and value to the 
              System.Collections.Specialized.NameValueCollection.
         
         
             name: The System.String key of the entry to add. The key can be null.
-            value: The System.String value of the entry to add. The value can be null.
-        Add(self: NameValueCollection, c: NameValueCollection)
-            Copies the entries in the specified System.Collections.Specialized.NameValueCollection to the 
-             current System.Collections.Specialized.NameValueCollection.
-        
-        
-            c: The System.Collections.Specialized.NameValueCollection to copy to the current 
-             System.Collections.Specialized.NameValueCollection.
+            value: The System.String value of the entry to add. The value can be null.
         """
         pass
 
@@ -909,20 +930,13 @@ class NameValueCollection(NameObjectCollectionBase, ICollection, IEnumerable, IS
     def BaseClear(self, *args): #cannot find CLR method
         """
         BaseClear(self: NameObjectCollectionBase)
-            Removes all entries from the System.Collections.Specialized.NameObjectCollectionBase instance.
+            Removes all entries from the System.Collections.Specialized.NameObjectCollectionBase 
+             instance.
         """
         pass
 
     def BaseGet(self, *args): #cannot find CLR method
         """
-        BaseGet(self: NameObjectCollectionBase, index: int) -> object
-        
-            Gets the value of the entry at the specified index of the 
-             System.Collections.Specialized.NameObjectCollectionBase instance.
-        
-        
-            index: The zero-based index of the value to get.
-            Returns: An System.Object that represents the value of the entry at the specified index.
         BaseGet(self: NameObjectCollectionBase, name: str) -> object
         
             Gets the value of the first entry with the specified key from the 
@@ -930,8 +944,17 @@ class NameValueCollection(NameObjectCollectionBase, ICollection, IEnumerable, IS
         
         
             name: The System.String key of the entry to get. The key can be null.
-            Returns: An System.Object that represents the value of the first entry with the specified key, if found; 
-             otherwise, null.
+            Returns: An System.Object that represents the value of the first entry with the specified key, if 
+             found; otherwise, null.
+        
+        BaseGet(self: NameObjectCollectionBase, index: int) -> object
+        
+            Gets the value of the entry at the specified index of the 
+             System.Collections.Specialized.NameObjectCollectionBase instance.
+        
+        
+            index: The zero-based index of the value to get.
+            Returns: An System.Object that represents the value of the entry at the specified index.
         """
         pass
 
@@ -949,6 +972,14 @@ class NameValueCollection(NameObjectCollectionBase, ICollection, IEnumerable, IS
 
     def BaseGetAllValues(self, *args): #cannot find CLR method
         """
+        BaseGetAllValues(self: NameObjectCollectionBase) -> Array[object]
+        
+            Returns an System.Object array that contains all the values in the 
+             System.Collections.Specialized.NameObjectCollectionBase instance.
+        
+            Returns: An System.Object array that contains all the values in the 
+             System.Collections.Specialized.NameObjectCollectionBase instance.
+        
         BaseGetAllValues(self: NameObjectCollectionBase, type: Type) -> Array[object]
         
             Returns an array of the specified type that contains all the values in the 
@@ -957,14 +988,6 @@ class NameValueCollection(NameObjectCollectionBase, ICollection, IEnumerable, IS
         
             type: A System.Type that represents the type of array to return.
             Returns: An array of the specified type that contains all the values in the 
-             System.Collections.Specialized.NameObjectCollectionBase instance.
-        
-        BaseGetAllValues(self: NameObjectCollectionBase) -> Array[object]
-        
-            Returns an System.Object array that contains all the values in the 
-             System.Collections.Specialized.NameObjectCollectionBase instance.
-        
-            Returns: An System.Object array that contains all the values in the 
              System.Collections.Specialized.NameObjectCollectionBase instance.
         """
         pass
@@ -986,11 +1009,12 @@ class NameValueCollection(NameObjectCollectionBase, ICollection, IEnumerable, IS
         """
         BaseHasKeys(self: NameObjectCollectionBase) -> bool
         
-            Gets a value indicating whether the System.Collections.Specialized.NameObjectCollectionBase 
-             instance contains entries whose keys are not null.
+            Gets a value indicating whether the 
+             System.Collections.Specialized.NameObjectCollectionBase instance contains entries whose 
+             keys are not null.
         
-            Returns: true if the System.Collections.Specialized.NameObjectCollectionBase instance contains entries 
-             whose keys are not null; otherwise, false.
+            Returns: true if the System.Collections.Specialized.NameObjectCollectionBase instance contains 
+             entries whose keys are not null; otherwise, false.
         """
         pass
 
@@ -1018,22 +1042,25 @@ class NameValueCollection(NameObjectCollectionBase, ICollection, IEnumerable, IS
 
     def BaseSet(self, *args): #cannot find CLR method
         """
+        BaseSet(self: NameObjectCollectionBase, name: str, value: object)
+            Sets the value of the first entry with the specified key in the 
+             System.Collections.Specialized.NameObjectCollectionBase instance, if found; otherwise, 
+             adds an entry with the specified key and value into the 
+             System.Collections.Specialized.NameObjectCollectionBase instance.
+        
+        
+            name: The System.String key of the entry to set. The key can be null.
+            value: The System.Object that represents the new value of the entry to set. The value can be 
+             null.
+        
         BaseSet(self: NameObjectCollectionBase, index: int, value: object)
             Sets the value of the entry at the specified index of the 
              System.Collections.Specialized.NameObjectCollectionBase instance.
         
         
             index: The zero-based index of the entry to set.
-            value: The System.Object that represents the new value of the entry to set. The value can be null.
-        BaseSet(self: NameObjectCollectionBase, name: str, value: object)
-            Sets the value of the first entry with the specified key in the 
-             System.Collections.Specialized.NameObjectCollectionBase instance, if found; otherwise, adds an 
-             entry with the specified key and value into the 
-             System.Collections.Specialized.NameObjectCollectionBase instance.
-        
-        
-            name: The System.String key of the entry to set. The key can be null.
-            value: The System.Object that represents the new value of the entry to set. The value can be null.
+            value: The System.Object that represents the new value of the entry to set. The value can be 
+             null.
         """
         pass
 
@@ -1062,25 +1089,28 @@ class NameValueCollection(NameObjectCollectionBase, ICollection, IEnumerable, IS
 
     def Get(self, *__args):
         """
-        Get(self: NameValueCollection, index: int) -> str
-        
-            Gets the values at the specified index of the System.Collections.Specialized.NameValueCollection 
-             combined into one comma-separated list.
-        
-        
-            index: The zero-based index of the entry that contains the values to get from the collection.
-            Returns: A System.String that contains a comma-separated list of the values at the specified index of the 
-             System.Collections.Specialized.NameValueCollection, if found; otherwise, null.
-        
         Get(self: NameValueCollection, name: str) -> str
         
             Gets the values associated with the specified key from the 
-             System.Collections.Specialized.NameValueCollection combined into one comma-separated list.
+             System.Collections.Specialized.NameValueCollection combined into one comma-separated 
+             list.
         
         
             name: The System.String key of the entry that contains the values to get. The key can be null.
-            Returns: A System.String that contains a comma-separated list of the values associated with the specified 
-             key from the System.Collections.Specialized.NameValueCollection, if found; otherwise, null.
+            Returns: A System.String that contains a comma-separated list of the values associated with the 
+             specified key from the System.Collections.Specialized.NameValueCollection, if found; 
+             otherwise, null.
+        
+        Get(self: NameValueCollection, index: int) -> str
+        
+            Gets the values at the specified index of the 
+             System.Collections.Specialized.NameValueCollection combined into one comma-separated 
+             list.
+        
+        
+            index: The zero-based index of the entry that contains the values to get from the collection.
+            Returns: A System.String that contains a comma-separated list of the values at the specified index 
+             of the System.Collections.Specialized.NameValueCollection, if found; otherwise, null.
         """
         pass
 
@@ -1088,7 +1118,9 @@ class NameValueCollection(NameObjectCollectionBase, ICollection, IEnumerable, IS
         """
         GetKey(self: NameValueCollection, index: int) -> str
         
-            Gets the key at the specified index of the System.Collections.Specialized.NameValueCollection.
+            Gets the key at the specified index of the 
+             System.Collections.Specialized.NameValueCollection.
+        
         
             index: The zero-based index of the key to get from the collection.
             Returns: A System.String that contains the key at the specified index of the 
@@ -1098,14 +1130,6 @@ class NameValueCollection(NameObjectCollectionBase, ICollection, IEnumerable, IS
 
     def GetValues(self, *__args):
         """
-        GetValues(self: NameValueCollection, index: int) -> Array[str]
-        
-            Gets the values at the specified index of the System.Collections.Specialized.NameValueCollection.
-        
-            index: The zero-based index of the entry that contains the values to get from the collection.
-            Returns: A System.String array that contains the values at the specified index of the 
-             System.Collections.Specialized.NameValueCollection, if found; otherwise, null.
-        
         GetValues(self: NameValueCollection, name: str) -> Array[str]
         
             Gets the values associated with the specified key from the 
@@ -1114,6 +1138,16 @@ class NameValueCollection(NameObjectCollectionBase, ICollection, IEnumerable, IS
         
             name: The System.String key of the entry that contains the values to get. The key can be null.
             Returns: A System.String array that contains the values associated with the specified key from the 
+             System.Collections.Specialized.NameValueCollection, if found; otherwise, null.
+        
+        GetValues(self: NameValueCollection, index: int) -> Array[str]
+        
+            Gets the values at the specified index of the 
+             System.Collections.Specialized.NameValueCollection.
+        
+        
+            index: The zero-based index of the entry that contains the values to get from the collection.
+            Returns: A System.String array that contains the values at the specified index of the 
              System.Collections.Specialized.NameValueCollection, if found; otherwise, null.
         """
         pass
@@ -1122,11 +1156,11 @@ class NameValueCollection(NameObjectCollectionBase, ICollection, IEnumerable, IS
         """
         HasKeys(self: NameValueCollection) -> bool
         
-            Gets a value indicating whether the System.Collections.Specialized.NameValueCollection contains 
-             keys that are not null.
+            Gets a value indicating whether the System.Collections.Specialized.NameValueCollection 
+             contains keys that are not null.
         
-            Returns: true if the System.Collections.Specialized.NameValueCollection contains keys that are not null; 
-             otherwise, false.
+            Returns: true if the System.Collections.Specialized.NameValueCollection contains keys that are not 
+             null; otherwise, false.
         """
         pass
 
@@ -1154,8 +1188,8 @@ class NameValueCollection(NameObjectCollectionBase, ICollection, IEnumerable, IS
             Sets the value of an entry in the System.Collections.Specialized.NameValueCollection.
         
             name: The System.String key of the entry to add the new value to. The key can be null.
-            value: The System.Object that represents the new value to add to the specified entry. The value can be 
-             null.
+            value: The System.Object that represents the new value to add to the specified entry. The value 
+             can be null.
         """
         pass
 
@@ -1211,7 +1245,7 @@ Get: AllKeys(self: NameValueCollection) -> Array[str]
 
 
 
-class NotifyCollectionChangedAction(Enum, IComparable, IFormattable, IConvertible):
+class NotifyCollectionChangedAction:
     """
     Describes the action that caused a System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged event.
     
@@ -1258,7 +1292,7 @@ class NotifyCollectionChangedAction(Enum, IComparable, IFormattable, IConvertibl
     value__ = None
 
 
-class NotifyCollectionChangedEventArgs(EventArgs):
+class NotifyCollectionChangedEventArgs:
     """
     Provides data for the System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged event.
     
@@ -1328,7 +1362,7 @@ Get: OldStartingIndex(self: NotifyCollectionChangedEventArgs) -> int
 
 
 
-class NotifyCollectionChangedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class NotifyCollectionChangedEventHandler:
     """
     Represents the method that handles the System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged event.
     
@@ -1355,9 +1389,9 @@ class NotifyCollectionChangedEventHandler(MulticastDelegate, ICloneable, ISerial
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1384,13 +1418,14 @@ class NotifyCollectionChangedEventHandler(MulticastDelegate, ICloneable, ISerial
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -1407,7 +1442,7 @@ class NotifyCollectionChangedEventHandler(MulticastDelegate, ICloneable, ISerial
         pass
 
 
-class OrderedDictionary(object, IOrderedDictionary, IDictionary, ICollection, IEnumerable, ISerializable, IDeserializationCallback):
+class OrderedDictionary:
     """
     Represents a collection of key/value pairs that are accessible by the key or index.
     
@@ -1420,7 +1455,8 @@ class OrderedDictionary(object, IOrderedDictionary, IDictionary, ICollection, IE
         """
         Add(self: OrderedDictionary, key: object, value: object)
             Adds an entry with the specified key and value into the 
-             System.Collections.Specialized.OrderedDictionary collection with the lowest available index.
+             System.Collections.Specialized.OrderedDictionary collection with the lowest available 
+             index.
         
         
             key: The key of the entry to add.
@@ -1435,7 +1471,8 @@ class OrderedDictionary(object, IOrderedDictionary, IDictionary, ICollection, IE
             Returns a read-only copy of the current System.Collections.Specialized.OrderedDictionary 
              collection.
         
-            Returns: A read-only copy of the current System.Collections.Specialized.OrderedDictionary collection.
+            Returns: A read-only copy of the current System.Collections.Specialized.OrderedDictionary 
+             collection.
         """
         pass
 
@@ -1450,13 +1487,13 @@ class OrderedDictionary(object, IOrderedDictionary, IDictionary, ICollection, IE
         """
         Contains(self: OrderedDictionary, key: object) -> bool
         
-            Determines whether the System.Collections.Specialized.OrderedDictionary collection contains a 
-             specific key.
+            Determines whether the System.Collections.Specialized.OrderedDictionary collection 
+             contains a specific key.
         
         
             key: The key to locate in the System.Collections.Specialized.OrderedDictionary collection.
-            Returns: true if the System.Collections.Specialized.OrderedDictionary collection contains an element with 
-             the specified key; otherwise, false.
+            Returns: true if the System.Collections.Specialized.OrderedDictionary collection contains an 
+             element with the specified key; otherwise, false.
         """
         pass
 
@@ -1491,23 +1528,24 @@ class OrderedDictionary(object, IOrderedDictionary, IDictionary, ICollection, IE
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: OrderedDictionary, info: SerializationInfo, context: StreamingContext)
-            Implements the System.Runtime.Serialization.ISerializable interface and returns the data needed 
-             to serialize the System.Collections.Specialized.OrderedDictionary collection.
+            Implements the System.Runtime.Serialization.ISerializable interface and returns the data 
+             needed to serialize the System.Collections.Specialized.OrderedDictionary collection.
         
         
-            info: A System.Runtime.Serialization.SerializationInfo object containing the information required to 
-             serialize the System.Collections.Specialized.OrderedDictionary collection.
+            info: A System.Runtime.Serialization.SerializationInfo object containing the information 
+             required to serialize the System.Collections.Specialized.OrderedDictionary collection.
         
-            context: A System.Runtime.Serialization.StreamingContext object containing the source and destination of 
-             the serialized stream associated with the System.Collections.Specialized.OrderedDictionary.
+            context: A System.Runtime.Serialization.StreamingContext object containing the source and 
+             destination of the serialized stream associated with the 
+             System.Collections.Specialized.OrderedDictionary.
         """
         pass
 
     def Insert(self, index, key, value):
         """
         Insert(self: OrderedDictionary, index: int, key: object, value: object)
-            Inserts a new entry into the System.Collections.Specialized.OrderedDictionary collection with 
-             the specified key and value at the specified index.
+            Inserts a new entry into the System.Collections.Specialized.OrderedDictionary collection 
+             with the specified key and value at the specified index.
         
         
             index: The zero-based index at which the element should be inserted.
@@ -1519,8 +1557,8 @@ class OrderedDictionary(object, IOrderedDictionary, IDictionary, ICollection, IE
     def OnDeserialization(self, *args): #cannot find CLR method
         """
         OnDeserialization(self: OrderedDictionary, sender: object)
-            Implements the System.Runtime.Serialization.ISerializable interface and is called back by the 
-             deserialization event when deserialization is complete.
+            Implements the System.Runtime.Serialization.ISerializable interface and is called back by 
+             the deserialization event when deserialization is complete.
         
         
             sender: The source of the deserialization event.
@@ -1562,7 +1600,8 @@ class OrderedDictionary(object, IOrderedDictionary, IDictionary, ICollection, IE
         
         
             key: The key to locate in the System.Collections.IDictionary object.
-            Returns: true if the System.Collections.IDictionary contains an element with the key; otherwise, false.
+            Returns: true if the System.Collections.IDictionary contains an element with the key; otherwise, 
+             false.
         """
         pass
 
@@ -1634,7 +1673,7 @@ Get: Values(self: OrderedDictionary) -> ICollection
 
 
 
-class StringCollection(object, IList, ICollection, IEnumerable):
+class StringCollection:
     """
     Represents a collection of strings.
     
@@ -1646,8 +1685,8 @@ class StringCollection(object, IList, ICollection, IEnumerable):
         
             Adds a string to the end of the System.Collections.Specialized.StringCollection.
         
-            value: The string to add to the end of the System.Collections.Specialized.StringCollection. The value 
-             can be null.
+            value: The string to add to the end of the System.Collections.Specialized.StringCollection. The 
+             value can be null.
         
             Returns: The zero-based index at which the new element is inserted.
         """
@@ -1660,8 +1699,9 @@ class StringCollection(object, IList, ICollection, IEnumerable):
              System.Collections.Specialized.StringCollection.
         
         
-            value: An array of strings to add to the end of the System.Collections.Specialized.StringCollection. 
-             The array itself can not be null but it can contain elements that are null.
+            value: An array of strings to add to the end of the 
+             System.Collections.Specialized.StringCollection. The array itself can not be null but it 
+             can contain elements that are null.
         """
         pass
 
@@ -1680,22 +1720,24 @@ class StringCollection(object, IList, ICollection, IEnumerable):
              System.Collections.Specialized.StringCollection.
         
         
-            value: The string to locate in the System.Collections.Specialized.StringCollection. The value can be 
-             null.
+            value: The string to locate in the System.Collections.Specialized.StringCollection. The value 
+             can be null.
         
-            Returns: true if value is found in the System.Collections.Specialized.StringCollection; otherwise, false.
+            Returns: true if value is found in the System.Collections.Specialized.StringCollection; otherwise, 
+             false.
         """
         pass
 
     def CopyTo(self, array, index):
         """
         CopyTo(self: StringCollection, array: Array[str], index: int)
-            Copies the entire System.Collections.Specialized.StringCollection values to a one-dimensional 
-             array of strings, starting at the specified index of the target array.
+            Copies the entire System.Collections.Specialized.StringCollection values to a 
+             one-dimensional array of strings, starting at the specified index of the target array.
         
         
             array: The one-dimensional array of strings that is the destination of the elements copied from 
-             System.Collections.Specialized.StringCollection. The System.Array must have zero-based indexing.
+             System.Collections.Specialized.StringCollection. The System.Array must have zero-based 
+             indexing.
         
             index: The zero-based index in array at which copying begins.
         """
@@ -1717,8 +1759,8 @@ class StringCollection(object, IList, ICollection, IEnumerable):
         """
         IndexOf(self: StringCollection, value: str) -> int
         
-            Searches for the specified string and returns the zero-based index of the first occurrence 
-             within the System.Collections.Specialized.StringCollection.
+            Searches for the specified string and returns the zero-based index of the first 
+             occurrence within the System.Collections.Specialized.StringCollection.
         
         
             value: The string to locate. The value can be null.
@@ -1730,7 +1772,9 @@ class StringCollection(object, IList, ICollection, IEnumerable):
     def Insert(self, index, value):
         """
         Insert(self: StringCollection, index: int, value: str)
-            Inserts a string into the System.Collections.Specialized.StringCollection at the specified index.
+            Inserts a string into the System.Collections.Specialized.StringCollection at the 
+             specified index.
+        
         
             index: The zero-based index at which value is inserted.
             value: The string to insert. The value can be null.
@@ -1744,15 +1788,17 @@ class StringCollection(object, IList, ICollection, IEnumerable):
              System.Collections.Specialized.StringCollection.
         
         
-            value: The string to remove from the System.Collections.Specialized.StringCollection. The value can be 
-             null.
+            value: The string to remove from the System.Collections.Specialized.StringCollection. The value 
+             can be null.
         """
         pass
 
     def RemoveAt(self, index):
         """
         RemoveAt(self: StringCollection, index: int)
-            Removes the string at the specified index of the System.Collections.Specialized.StringCollection.
+            Removes the string at the specified index of the 
+             System.Collections.Specialized.StringCollection.
+        
         
             index: The zero-based index of the string to remove.
         """
@@ -1830,7 +1876,7 @@ Get: SyncRoot(self: StringCollection) -> object
 
 
 
-class StringDictionary(object, IEnumerable):
+class StringDictionary:
     """
     Implements a hash table with the key and the value strongly typed to be strings rather than objects.
     
@@ -1862,8 +1908,8 @@ class StringDictionary(object, IEnumerable):
             Determines if the System.Collections.Specialized.StringDictionary contains a specific key.
         
             key: The key to locate in the System.Collections.Specialized.StringDictionary.
-            Returns: true if the System.Collections.Specialized.StringDictionary contains an entry with the specified 
-             key; otherwise, false.
+            Returns: true if the System.Collections.Specialized.StringDictionary contains an entry with the 
+             specified key; otherwise, false.
         """
         pass
 
@@ -1871,10 +1917,12 @@ class StringDictionary(object, IEnumerable):
         """
         ContainsValue(self: StringDictionary, value: str) -> bool
         
-            Determines if the System.Collections.Specialized.StringDictionary contains a specific value.
+            Determines if the System.Collections.Specialized.StringDictionary contains a specific 
+             value.
         
-            value: The value to locate in the System.Collections.Specialized.StringDictionary. The value can be 
-             null.
+        
+            value: The value to locate in the System.Collections.Specialized.StringDictionary. The value can 
+             be null.
         
             Returns: true if the System.Collections.Specialized.StringDictionary contains an element with the 
              specified value; otherwise, false.
@@ -1884,8 +1932,8 @@ class StringDictionary(object, IEnumerable):
     def CopyTo(self, array, index):
         """
         CopyTo(self: StringDictionary, array: Array, index: int)
-            Copies the string dictionary values to a one-dimensional System.Array instance at the specified 
-             index.
+            Copies the string dictionary values to a one-dimensional System.Array instance at the 
+             specified index.
         
         
             array: The one-dimensional System.Array that is the destination of the values copied from the 
@@ -1977,22 +2025,23 @@ Get: Values(self: StringDictionary) -> ICollection
 
 
 
-class StringEnumerator(object):
+class StringEnumerator:
     """ Supports a simple iteration over a System.Collections.Specialized.StringCollection. """
     def MoveNext(self):
         """
         MoveNext(self: StringEnumerator) -> bool
         
             Advances the enumerator to the next element of the collection.
-            Returns: true if the enumerator was successfully advanced to the next element; false if the enumerator 
-             has passed the end of the collection.
+            Returns: true if the enumerator was successfully advanced to the next element; false if the 
+             enumerator has passed the end of the collection.
         """
         pass
 
     def Reset(self):
         """
         Reset(self: StringEnumerator)
-            Sets the enumerator to its initial position, which is before the first element in the collection.
+            Sets the enumerator to its initial position, which is before the first element in the 
+             collection.
         """
         pass
 

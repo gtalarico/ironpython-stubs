@@ -1,20 +1,16 @@
-class IDeviceContext(IDisposable):
+class IDeviceContext:
  """ Defines methods for obtaining and releasing an existing handle to a Windows device context. """
  def GetHdc(self):
   """
-  GetHdc(self: IDeviceContext) -> IntPtr
-
-  
-
-   Returns the handle to a Windows device context.
-
+  GetHdc(self: IDeviceContext) -> IntPtr
+  
+   Returns the handle to a Windows device context.
    Returns: An System.IntPtr representing the handle of a device context.
   """
   pass
  def ReleaseHdc(self):
   """
-  ReleaseHdc(self: IDeviceContext)
-
+  ReleaseHdc(self: IDeviceContext)
    Releases the handle of a Windows device context.
   """
   pass

@@ -1,9 +1,7 @@
-class CustomQueryInterfaceResult(Enum,IComparable,IFormattable,IConvertible):
+class CustomQueryInterfaceResult:
  """
- Provides return values for the System.Runtime.InteropServices.ICustomQueryInterface.GetInterface(System.Guid@,System.IntPtr@) method.
-
- 
-
+ Provides return values for the System.Runtime.InteropServices.ICustomQueryInterface.GetInterface(System.Guid@,System.IntPtr@) method.
+ 
  enum CustomQueryInterfaceResult,values: Failed (2),Handled (0),NotHandled (1)
  """
  def __eq__(self,*args):

@@ -1,9 +1,7 @@
-class RichTextBoxStreamType(Enum,IComparable,IFormattable,IConvertible):
+class RichTextBoxStreamType:
  """
- Specifies the types of input and output streams used to load and save data in the System.Windows.Forms.RichTextBox control.
-
- 
-
+ Specifies the types of input and output streams used to load and save data in the System.Windows.Forms.RichTextBox control.
+ 
  enum RichTextBoxStreamType,values: PlainText (1),RichNoOleObjs (2),RichText (0),TextTextOleObjs (3),UnicodePlainText (4)
  """
  def __eq__(self,*args):

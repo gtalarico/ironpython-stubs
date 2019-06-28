@@ -1,9 +1,7 @@
-class DataGridViewColumnSortMode(Enum,IComparable,IFormattable,IConvertible):
+class DataGridViewColumnSortMode:
  """
- Defines how a System.Windows.Forms.DataGridView column can be sorted by the user.
-
- 
-
+ Defines how a System.Windows.Forms.DataGridView column can be sorted by the user.
+ 
  enum DataGridViewColumnSortMode,values: Automatic (1),NotSortable (0),Programmatic (2)
  """
  def __eq__(self,*args):

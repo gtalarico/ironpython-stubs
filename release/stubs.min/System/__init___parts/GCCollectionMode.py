@@ -1,9 +1,7 @@
-class GCCollectionMode(Enum,IComparable,IFormattable,IConvertible):
+class GCCollectionMode:
  """
- Specifies the behavior for a forced garbage collection.
-
- 
-
+ Specifies the behavior for a forced garbage collection.
+ 
  enum GCCollectionMode,values: Default (0),Forced (1),Optimized (2)
  """
  def __eq__(self,*args):

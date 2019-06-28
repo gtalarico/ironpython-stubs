@@ -1,239 +1,153 @@
-class EventDescriptorCollection(object,ICollection,IEnumerable,IList):
+class EventDescriptorCollection:
  """
- Represents a collection of System.ComponentModel.EventDescriptor objects.
-
- 
-
- EventDescriptorCollection(events: Array[EventDescriptor])
-
+ Represents a collection of System.ComponentModel.EventDescriptor objects.
+ 
+ EventDescriptorCollection(events: Array[EventDescriptor])
  EventDescriptorCollection(events: Array[EventDescriptor],readOnly: bool)
  """
  def Add(self,value):
   """
-  Add(self: EventDescriptorCollection,value: EventDescriptor) -> int
-
-  
-
-   Adds an System.ComponentModel.EventDescriptor to the end of the collection.
-
-  
-
-   value: An System.ComponentModel.EventDescriptor to add to the collection.
-
+  Add(self: EventDescriptorCollection,value: EventDescriptor) -> int
+  
+   Adds an System.ComponentModel.EventDescriptor to the end of the collection.
+  
+   value: An System.ComponentModel.EventDescriptor to add to the collection.
    Returns: The position of the System.ComponentModel.EventDescriptor within the collection.
   """
   pass
  def Clear(self):
   """
-  Clear(self: EventDescriptorCollection)
-
+  Clear(self: EventDescriptorCollection)
    Removes all objects from the collection.
   """
   pass
  def Contains(self,value):
   """
-  Contains(self: EventDescriptorCollection,value: EventDescriptor) -> bool
-
-  
-
-   Returns whether the collection contains the given System.ComponentModel.EventDescriptor.
-
-  
-
-   value: The System.ComponentModel.EventDescriptor to find within the collection.
-
+  Contains(self: EventDescriptorCollection,value: EventDescriptor) -> bool
+  
+   Returns whether the collection contains the given System.ComponentModel.EventDescriptor.
+  
+   value: The System.ComponentModel.EventDescriptor to find within the collection.
    Returns: true if the collection contains the value parameter given; otherwise,false.
   """
   pass
  def Find(self,name,ignoreCase):
   """
-  Find(self: EventDescriptorCollection,name: str,ignoreCase: bool) -> EventDescriptor
-
-  
-
-   Gets the description of the event with the specified name in the collection.
-
-  
-
-   name: The name of the event to get from the collection.
-
-   ignoreCase: true if you want to ignore the case of the event; otherwise,false.
-
-   Returns: The System.ComponentModel.EventDescriptor with the specified name,or null if the event does not 
-
-    exist.
+  Find(self: EventDescriptorCollection,name: str,ignoreCase: bool) -> EventDescriptor
+  
+   Gets the description of the event with the specified name in the collection.
+  
+   name: The name of the event to get from the collection.
+   ignoreCase: true if you want to ignore the case of the event; otherwise,false.
+   Returns: The System.ComponentModel.EventDescriptor with the specified name,or null if the event 
+    does not exist.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: EventDescriptorCollection) -> IEnumerator
-
-  
-
-   Gets an enumerator for this System.ComponentModel.EventDescriptorCollection.
-
+  GetEnumerator(self: EventDescriptorCollection) -> IEnumerator
+  
+   Gets an enumerator for this System.ComponentModel.EventDescriptorCollection.
    Returns: An enumerator that implements System.Collections.IEnumerator.
   """
   pass
  def IndexOf(self,value):
   """
-  IndexOf(self: EventDescriptorCollection,value: EventDescriptor) -> int
-
-  
-
-   Returns the index of the given System.ComponentModel.EventDescriptor.
-
-  
-
-   value: The System.ComponentModel.EventDescriptor to find within the collection.
-
+  IndexOf(self: EventDescriptorCollection,value: EventDescriptor) -> int
+  
+   Returns the index of the given System.ComponentModel.EventDescriptor.
+  
+   value: The System.ComponentModel.EventDescriptor to find within the collection.
    Returns: The index of the given System.ComponentModel.EventDescriptor within the collection.
   """
   pass
  def Insert(self,index,value):
   """
-  Insert(self: EventDescriptorCollection,index: int,value: EventDescriptor)
-
-   Inserts an System.ComponentModel.EventDescriptor to the collection at a specified index.
-
-  
-
-   index: The index within the collection in which to insert the value parameter.
-
+  Insert(self: EventDescriptorCollection,index: int,value: EventDescriptor)
+   Inserts an System.ComponentModel.EventDescriptor to the collection at a specified index.
+  
+   index: The index within the collection in which to insert the value parameter.
    value: An System.ComponentModel.EventDescriptor to insert into the collection.
   """
   pass
  def InternalSort(self,*args):
   """
-  InternalSort(self: EventDescriptorCollection,sorter: IComparer)
-
-   Sorts the members of this System.ComponentModel.EventDescriptorCollection,using the specified 
-
-    System.Collections.IComparer.
-
-  
-
-  
-
-   sorter: A comparer to use to sort the System.ComponentModel.EventDescriptor objects in this collection.
-
-  InternalSort(self: EventDescriptorCollection,names: Array[str])
-
-   Sorts the members of this System.ComponentModel.EventDescriptorCollection. The specified order 
-
-    is applied first,followed by the default sort for this collection,which is usually 
-
-    alphabetical.
-
-  
-
-  
-
-   names: An array of strings describing the order in which to sort the 
-
-    System.ComponentModel.EventDescriptor objects in this collection.
+  InternalSort(self: EventDescriptorCollection,names: Array[str])
+   Sorts the members of this System.ComponentModel.EventDescriptorCollection. The specified 
+    order is applied first,followed by the default sort for this collection,which is 
+    usually alphabetical.
+  
+  
+   names: An array of strings describing the order in which to sort the 
+    System.ComponentModel.EventDescriptor objects in this collection.
+  
+  InternalSort(self: EventDescriptorCollection,sorter: IComparer)
+   Sorts the members of this System.ComponentModel.EventDescriptorCollection,using the 
+    specified System.Collections.IComparer.
+  
+  
+   sorter: A comparer to use to sort the System.ComponentModel.EventDescriptor objects in this 
+    collection.
   """
   pass
  def Remove(self,value):
   """
-  Remove(self: EventDescriptorCollection,value: EventDescriptor)
-
-   Removes the specified System.ComponentModel.EventDescriptor from the collection.
-
-  
-
+  Remove(self: EventDescriptorCollection,value: EventDescriptor)
+   Removes the specified System.ComponentModel.EventDescriptor from the collection.
+  
    value: The System.ComponentModel.EventDescriptor to remove from the collection.
   """
   pass
  def RemoveAt(self,index):
   """
-  RemoveAt(self: EventDescriptorCollection,index: int)
-
-   Removes the System.ComponentModel.EventDescriptor at the specified index from the collection.
-
-  
-
+  RemoveAt(self: EventDescriptorCollection,index: int)
+   Removes the System.ComponentModel.EventDescriptor at the specified index from the 
+    collection.
+  
+  
    index: The index of the System.ComponentModel.EventDescriptor to remove.
   """
   pass
  def Sort(self,*__args):
   """
-  Sort(self: EventDescriptorCollection,names: Array[str],comparer: IComparer) -> EventDescriptorCollection
-
-  
-
-   Sorts the members of this System.ComponentModel.EventDescriptorCollection,given a specified 
-
-    sort order and an System.Collections.IComparer.
-
-  
-
-  
-
-   names: An array of strings describing the order in which to sort the 
-
-    System.ComponentModel.EventDescriptor objects in the collection.
-
-  
-
-   comparer: An System.Collections.IComparer to use to sort the System.ComponentModel.EventDescriptor objects 
-
-    in this collection.
-
-  
-
-   Returns: The new System.ComponentModel.EventDescriptorCollection.
-
-  Sort(self: EventDescriptorCollection,comparer: IComparer) -> EventDescriptorCollection
-
-  
-
-   Sorts the members of this System.ComponentModel.EventDescriptorCollection,using the specified 
-
-    System.Collections.IComparer.
-
-  
-
-  
-
-   comparer: An System.Collections.IComparer to use to sort the System.ComponentModel.EventDescriptor objects 
-
-    in this collection.
-
-  
-
-   Returns: The new System.ComponentModel.EventDescriptorCollection.
-
-  Sort(self: EventDescriptorCollection) -> EventDescriptorCollection
-
-  
-
-   Sorts the members of this System.ComponentModel.EventDescriptorCollection,using the default 
-
-    sort for this collection,which is usually alphabetical.
-
-  
-
-   Returns: The new System.ComponentModel.EventDescriptorCollection.
-
-  Sort(self: EventDescriptorCollection,names: Array[str]) -> EventDescriptorCollection
-
-  
-
-   Sorts the members of this System.ComponentModel.EventDescriptorCollection,given a specified 
-
-    sort order.
-
-  
-
-  
-
-   names: An array of strings describing the order in which to sort the 
-
-    System.ComponentModel.EventDescriptor objects in the collection.
-
-  
-
+  Sort(self: EventDescriptorCollection) -> EventDescriptorCollection
+  
+   Sorts the members of this System.ComponentModel.EventDescriptorCollection,using the 
+    default sort for this collection,which is usually alphabetical.
+  
+   Returns: The new System.ComponentModel.EventDescriptorCollection.
+  Sort(self: EventDescriptorCollection,names: Array[str]) -> EventDescriptorCollection
+  
+   Sorts the members of this System.ComponentModel.EventDescriptorCollection,given a 
+    specified sort order.
+  
+  
+   names: An array of strings describing the order in which to sort the 
+    System.ComponentModel.EventDescriptor objects in the collection.
+  
+   Returns: The new System.ComponentModel.EventDescriptorCollection.
+  Sort(self: EventDescriptorCollection,names: Array[str],comparer: IComparer) -> EventDescriptorCollection
+  
+   Sorts the members of this System.ComponentModel.EventDescriptorCollection,given a 
+    specified sort order and an System.Collections.IComparer.
+  
+  
+   names: An array of strings describing the order in which to sort the 
+    System.ComponentModel.EventDescriptor objects in the collection.
+  
+   comparer: An System.Collections.IComparer to use to sort the System.ComponentModel.EventDescriptor 
+    objects in this collection.
+  
+   Returns: The new System.ComponentModel.EventDescriptorCollection.
+  Sort(self: EventDescriptorCollection,comparer: IComparer) -> EventDescriptorCollection
+  
+   Sorts the members of this System.ComponentModel.EventDescriptorCollection,using the 
+    specified System.Collections.IComparer.
+  
+  
+   comparer: An System.Collections.IComparer to use to sort the System.ComponentModel.EventDescriptor 
+    objects in this collection.
+  
    Returns: The new System.ComponentModel.EventDescriptorCollection.
   """
   pass
@@ -242,16 +156,11 @@ class EventDescriptorCollection(object,ICollection,IEnumerable,IList):
   pass
  def __contains__(self,*args):
   """
-  __contains__(self: IList,value: object) -> bool
-
-  
-
-   Determines whether the System.Collections.IList contains a specific value.
-
-  
-
-   value: The object to locate in the System.Collections.IList.
-
+  __contains__(self: IList,value: object) -> bool
+  
+   Determines whether the System.Collections.IList contains a specific value.
+  
+   value: The object to locate in the System.Collections.IList.
    Returns: true if the System.Object is found in the System.Collections.IList; otherwise,false.
   """
   pass
@@ -270,8 +179,7 @@ class EventDescriptorCollection(object,ICollection,IEnumerable,IList):
  @staticmethod
  def __new__(self,events,readOnly=None):
   """
-  __new__(cls: type,events: Array[EventDescriptor])
-
+  __new__(cls: type,events: Array[EventDescriptor])
   __new__(cls: type,events: Array[EventDescriptor],readOnly: bool)
   """
   pass
@@ -279,14 +187,10 @@ class EventDescriptorCollection(object,ICollection,IEnumerable,IList):
   """ __repr__(self: object) -> str """
   pass
  Count=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the number of event descriptors in the collection.
-
-
-
-Get: Count(self: EventDescriptorCollection) -> int
-
-
-
+ """Gets the number of event descriptors in the collection.
+
+Get: Count(self: EventDescriptorCollection) -> int
+
 """
 
 

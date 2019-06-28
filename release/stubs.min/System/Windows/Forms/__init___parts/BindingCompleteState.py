@@ -1,9 +1,7 @@
-class BindingCompleteState(Enum,IComparable,IFormattable,IConvertible):
+class BindingCompleteState:
  """
- Indicates the result of a completed binding operation.
-
- 
-
+ Indicates the result of a completed binding operation.
+ 
  enum BindingCompleteState,values: DataError (1),Exception (2),Success (0)
  """
  def __eq__(self,*args):

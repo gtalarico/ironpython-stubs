@@ -1,9 +1,7 @@
-class LinkState(Enum,IComparable,IFormattable,IConvertible):
+class LinkState:
  """
- Specifies constants that define the state of the link.
-
- 
-
+ Specifies constants that define the state of the link.
+ 
  enum LinkState,values: Active (2),Hover (1),Normal (0),Visited (4)
  """
  def __eq__(self,*args):

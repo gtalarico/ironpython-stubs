@@ -1,4 +1,4 @@
-class Cursors(object):
+class Cursors:
  """ Provides a collection of System.Windows.Forms.Cursor objects for use by a Windows Forms application. """
  AppStarting=None
  Arrow=None

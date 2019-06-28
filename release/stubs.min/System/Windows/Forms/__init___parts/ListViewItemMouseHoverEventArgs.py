@@ -1,9 +1,7 @@
-class ListViewItemMouseHoverEventArgs(EventArgs):
+class ListViewItemMouseHoverEventArgs:
  """
- Provides data for the System.Windows.Forms.ListView.ItemMouseHover event.
-
- 
-
+ Provides data for the System.Windows.Forms.ListView.ItemMouseHover event.
+ 
  ListViewItemMouseHoverEventArgs(item: ListViewItem)
  """
  def __getitem__(self,*args):
@@ -14,14 +12,10 @@ class ListViewItemMouseHoverEventArgs(EventArgs):
   """ __new__(cls: type,item: ListViewItem) """
   pass
  Item=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the item the mouse pointer is currently hovering over.
-
-
-
-Get: Item(self: ListViewItemMouseHoverEventArgs) -> ListViewItem
-
-
-
+ """Gets the item the mouse pointer is currently hovering over.
+
+Get: Item(self: ListViewItemMouseHoverEventArgs) -> ListViewItem
+
 """
 
 

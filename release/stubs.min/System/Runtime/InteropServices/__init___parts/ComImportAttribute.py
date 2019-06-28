@@ -1,9 +1,7 @@
-class ComImportAttribute(Attribute,_Attribute):
+class ComImportAttribute:
  """
- Indicates that the attributed type was previously defined in COM.
-
- 
-
+ Indicates that the attributed type was previously defined in COM.
+ 
  ComImportAttribute()
  """
  def __init__(self,*args):

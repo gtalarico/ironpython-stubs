@@ -1,9 +1,7 @@
-class LoaderOptimization(Enum,IComparable,IFormattable,IConvertible):
+class LoaderOptimization:
  """
- An enumeration used with the System.LoaderOptimizationAttribute class to specify loader optimizations for an executable.
-
- 
-
+ An enumeration used with the System.LoaderOptimizationAttribute class to specify loader optimizations for an executable.
+ 
  enum LoaderOptimization,values: DisallowBindings (4),DomainMask (3),MultiDomain (2),MultiDomainHost (3),NotSpecified (0),SingleDomain (1)
  """
  def __eq__(self,*args):

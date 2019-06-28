@@ -1,9 +1,7 @@
-class DataGridViewCellStyleScopes(Enum,IComparable,IFormattable,IConvertible):
+class DataGridViewCellStyleScopes:
  """
- Specifies the System.Windows.Forms.DataGridView entity that owns the cell style that was changed.
-
- 
-
+ Specifies the System.Windows.Forms.DataGridView entity that owns the cell style that was changed.
+ 
  enum (flags) DataGridViewCellStyleScopes,values: AlternatingRows (128),Cell (1),Column (2),ColumnHeaders (16),DataGridView (8),None (0),Row (4),RowHeaders (32),Rows (64)
  """
  def __eq__(self,*args):
@@ -34,7 +32,7 @@ class DataGridViewCellStyleScopes(Enum,IComparable,IFormattable,IConvertible):
  Column=None
  ColumnHeaders=None
  DataGridView=None
- None=None
+ None_ =None
  Row=None
  RowHeaders=None
  Rows=None

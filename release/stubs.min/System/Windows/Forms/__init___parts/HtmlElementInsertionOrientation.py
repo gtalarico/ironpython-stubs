@@ -1,9 +1,7 @@
-class HtmlElementInsertionOrientation(Enum,IComparable,IFormattable,IConvertible):
+class HtmlElementInsertionOrientation:
  """
- Defines values that describe where to insert a new element when using System.Windows.Forms.HtmlElement.InsertAdjacentElement(System.Windows.Forms.HtmlElementInsertionOrientation,System.Windows.Forms.HtmlElement).
-
- 
-
+ Defines values that describe where to insert a new element when using System.Windows.Forms.HtmlElement.InsertAdjacentElement(System.Windows.Forms.HtmlElementInsertionOrientation,System.Windows.Forms.HtmlElement).
+ 
  enum HtmlElementInsertionOrientation,values: AfterBegin (1),AfterEnd (3),BeforeBegin (0),BeforeEnd (2)
  """
  def __eq__(self,*args):

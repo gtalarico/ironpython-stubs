@@ -2,13 +2,13 @@
 # module System.Runtime.Versioning calls itself Versioning
 # from mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class CompatibilitySwitch(object):
+class CompatibilitySwitch:
     # no doc
     @staticmethod
     def GetValue(compatibilitySwitchName):
@@ -26,7 +26,7 @@ class CompatibilitySwitch(object):
     ]
 
 
-class ComponentGuaranteesAttribute(Attribute, _Attribute):
+class ComponentGuaranteesAttribute:
     """
     Defines the compatibility guarantee of a component, type, or type member that may span multiple versions.
     
@@ -50,7 +50,7 @@ Get: Guarantees(self: ComponentGuaranteesAttribute) -> ComponentGuaranteesOption
 
 
 
-class ComponentGuaranteesOptions(Enum, IComparable, IFormattable, IConvertible):
+class ComponentGuaranteesOptions:
     """
     Describes the compatibility guarantee of a component, type, or type member that may span multiple versions.
     
@@ -90,13 +90,13 @@ class ComponentGuaranteesOptions(Enum, IComparable, IFormattable, IConvertible):
         pass
 
     Exchange = None
-    None = None
+    None_ =None
     SideBySide = None
     Stable = None
     value__ = None
 
 
-class FrameworkName(object, IEquatable[FrameworkName]):
+class FrameworkName:
     """
     Represents the name of a version of the .NET Framework.
     
@@ -106,26 +106,26 @@ class FrameworkName(object, IEquatable[FrameworkName]):
     """
     def Equals(self, *__args):
         """
+        Equals(self: FrameworkName, obj: object) -> bool
+        
+            Returns a value that indicates whether this System.Runtime.Versioning.FrameworkName 
+             instance represents the same .NET Framework version as a specified object.
+        
+        
+            obj: The object to compare to the current instance.
+            Returns: true if every component of the current System.Runtime.Versioning.FrameworkName object 
+             matches the corresponding component of obj; otherwise, false.
+        
         Equals(self: FrameworkName, other: FrameworkName) -> bool
         
-            Returns a value that indicates whether this System.Runtime.Versioning.FrameworkName instance 
-             represents the same .NET Framework version as a specified 
+            Returns a value that indicates whether this System.Runtime.Versioning.FrameworkName 
+             instance represents the same .NET Framework version as a specified 
              System.Runtime.Versioning.FrameworkName instance.
         
         
             other: The object to compare to the current instance.
-            Returns: true if every component of the current System.Runtime.Versioning.FrameworkName object matches 
-             the corresponding component of other; otherwise, false.
-        
-        Equals(self: FrameworkName, obj: object) -> bool
-        
-            Returns a value that indicates whether this System.Runtime.Versioning.FrameworkName instance 
-             represents the same .NET Framework version as a specified object.
-        
-        
-            obj: The object to compare to the current instance.
-            Returns: true if every component of the current System.Runtime.Versioning.FrameworkName object matches 
-             the corresponding component of obj; otherwise, false.
+            Returns: true if every component of the current System.Runtime.Versioning.FrameworkName object 
+             matches the corresponding component of other; otherwise, false.
         """
         pass
 
@@ -207,7 +207,7 @@ Get: Version(self: FrameworkName) -> Version
 
 
 
-class ResourceConsumptionAttribute(Attribute, _Attribute):
+class ResourceConsumptionAttribute:
     """
     Specifies the resource consumed by the member of a class. This class cannot be inherited.
     
@@ -242,7 +242,7 @@ Get: ResourceScope(self: ResourceConsumptionAttribute) -> ResourceScope
 
 
 
-class ResourceExposureAttribute(Attribute, _Attribute):
+class ResourceExposureAttribute:
     """
     Specifies the resource exposure for a member of a class. This class cannot be inherited.
     
@@ -266,7 +266,7 @@ Get: ResourceExposureLevel(self: ResourceExposureAttribute) -> ResourceScope
 
 
 
-class ResourceScope(Enum, IComparable, IFormattable, IConvertible):
+class ResourceScope:
     """
     Identifies the scope of a sharable resource.
     
@@ -309,13 +309,13 @@ class ResourceScope(Enum, IComparable, IFormattable, IConvertible):
     Assembly = None
     Library = None
     Machine = None
-    None = None
+    None_ =None
     Private = None
     Process = None
     value__ = None
 
 
-class TargetFrameworkAttribute(Attribute, _Attribute):
+class TargetFrameworkAttribute:
     """
     Identifies the version of the .NET Framework that a particular assembly was compiled against.
     
@@ -347,21 +347,11 @@ Get: FrameworkName(self: TargetFrameworkAttribute) -> str
 
 
 
-class VersioningHelper(object):
+class VersioningHelper:
     """ Provides methods to aid developers in writing version-safe code. This class cannot be inherited. """
     @staticmethod
-    def MakeVersionSafeName(name, from, to, type=None):
+    def MakeVersionSafeName(name, from_, to, type=None):
         """
-        MakeVersionSafeName(name: str, from: ResourceScope, to: ResourceScope) -> str
-        
-            Returns a version-safe name based on the specified resource name and the intended resource 
-             consumption source.
-        
-        
-            name: The name of the resource.
-            from: The scope of the resource.
-            to: The desired resource consumption scope.
-            Returns: A version-safe name.
         MakeVersionSafeName(name: str, from: ResourceScope, to: ResourceScope, type: Type) -> str
         
             Returns a version-safe name based on the specified resource name, the intended resource 
@@ -372,6 +362,16 @@ class VersioningHelper(object):
             from: The beginning of the scope range.
             to: The end of the scope range.
             type: The System.Type of the resource.
+            Returns: A version-safe name.
+        MakeVersionSafeName(name: str, from: ResourceScope, to: ResourceScope) -> str
+        
+            Returns a version-safe name based on the specified resource name and the intended 
+             resource consumption source.
+        
+        
+            name: The name of the resource.
+            from: The scope of the resource.
+            to: The desired resource consumption scope.
             Returns: A version-safe name.
         """
         pass

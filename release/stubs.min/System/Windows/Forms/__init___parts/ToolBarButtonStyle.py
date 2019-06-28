@@ -1,9 +1,7 @@
-class ToolBarButtonStyle(Enum,IComparable,IFormattable,IConvertible):
+class ToolBarButtonStyle:
  """
- Specifies the button style within a toolbar.
-
- 
-
+ Specifies the button style within a toolbar.
+ 
  enum ToolBarButtonStyle,values: DropDownButton (4),PushButton (1),Separator (3),ToggleButton (2)
  """
  def __eq__(self,*args):

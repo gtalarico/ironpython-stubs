@@ -1,0 +1,1078 @@
+# encoding: utf-8
+# module Wms.RemotingObjects.Sales calls itself Sales
+# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# by generator 1.145
+# no doc
+# no imports
+
+# no functions
+# classes
+
+class BatchPackProcessingModeEnum:
+ """ enum BatchPackProcessingModeEnum,values: Direct (0),Queued (1) """
+ def __eq__(self,*args):
+  """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
+  pass
+ def __format__(self,*args):
+  """ __format__(formattable: IFormattable,format: str) -> str """
+  pass
+ def __ge__(self,*args):
+  pass
+ def __gt__(self,*args):
+  pass
+ def __init__(self,*args):
+  """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+  pass
+ def __le__(self,*args):
+  pass
+ def __lt__(self,*args):
+  pass
+ def __ne__(self,*args):
+  pass
+ def __reduce_ex__(self,*args):
+  pass
+ def __str__(self,*args):
+  pass
+ Direct=None
+ Queued=None
+ value__=None
+
+
+class Customer:
+ """ Customer() """
+ def GetHashCode(self):
+  """ GetHashCode(self: Customer) -> int """
+  pass
+ def ToAddress(self):
+  """ ToAddress(self: Customer) -> Address """
+  pass
+ AddressLine1=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: AddressLine1(self: Customer) -> str
+
+Set: AddressLine1(self: Customer)=value
+"""
+
+ AddressLine2=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: AddressLine2(self: Customer) -> str
+
+Set: AddressLine2(self: Customer)=value
+"""
+
+ AddressLine3=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: AddressLine3(self: Customer) -> str
+
+Set: AddressLine3(self: Customer)=value
+"""
+
+ Barcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Barcode(self: Customer) -> str
+
+Set: Barcode(self: Customer)=value
+"""
+
+ BatchId=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: BatchId(self: Customer) -> str
+
+Set: BatchId(self: Customer)=value
+"""
+
+ City=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: City(self: Customer) -> str
+
+Set: City(self: Customer)=value
+"""
+
+ Contact=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Contact(self: Customer) -> str
+
+Set: Contact(self: Customer)=value
+"""
+
+ ContactEmail=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: ContactEmail(self: Customer) -> str
+
+Set: ContactEmail(self: Customer)=value
+"""
+
+ CountryCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: CountryCode(self: Customer) -> str
+
+Set: CountryCode(self: Customer)=value
+"""
+
+ CountryName=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: CountryName(self: Customer) -> str
+
+Set: CountryName(self: Customer)=value
+"""
+
+ DateOldestSalesOrder=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: DateOldestSalesOrder(self: Customer) -> DateTime
+
+Set: DateOldestSalesOrder(self: Customer)=value
+"""
+
+ EoriNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: EoriNumber(self: Customer) -> str
+
+Set: EoriNumber(self: Customer)=value
+"""
+
+ FullAddress=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: FullAddress(self: Customer) -> str
+
+"""
+
+ GroupKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: GroupKey(self: Customer) -> int
+
+Set: GroupKey(self: Customer)=value
+"""
+
+ HasBackOrders=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: HasBackOrders(self: Customer) -> bool
+
+Set: HasBackOrders(self: Customer)=value
+"""
+
+ HasOrdersWithoutPartialDelivery=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: HasOrdersWithoutPartialDelivery(self: Customer) -> bool
+
+Set: HasOrdersWithoutPartialDelivery(self: Customer)=value
+"""
+
+ Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Id(self: Customer) -> int
+
+Set: Id(self: Customer)=value
+"""
+
+ InBatch=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: InBatch(self: Customer) -> str
+
+Set: InBatch(self: Customer)=value
+"""
+
+ ItemCountInPendingOrders=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: ItemCountInPendingOrders(self: Customer) -> int
+
+"""
+
+ ItemsInPendingOrders=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: ItemsInPendingOrders(self: Customer) -> Dictionary[str,Decimal]
+
+Set: ItemsInPendingOrders(self: Customer)=value
+"""
+
+ ItemUnitCountInPendingOrders=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: ItemUnitCountInPendingOrders(self: Customer) -> Decimal
+
+"""
+
+ Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Name(self: Customer) -> str
+
+Set: Name(self: Customer)=value
+"""
+
+ Number=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Number(self: Customer) -> str
+
+Set: Number(self: Customer)=value
+"""
+
+ OrderTags=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: OrderTags(self: Customer) -> Tags
+
+Set: OrderTags(self: Customer)=value
+"""
+
+ OrderType=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: OrderType(self: Customer) -> OutboundOrderTypeEnum
+
+Set: OrderType(self: Customer)=value
+"""
+
+ PendingOrderCount=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: PendingOrderCount(self: Customer) -> int
+
+Set: PendingOrderCount(self: Customer)=value
+"""
+
+ PhoneNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: PhoneNumber(self: Customer) -> str
+
+Set: PhoneNumber(self: Customer)=value
+"""
+
+ State=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: State(self: Customer) -> str
+
+Set: State(self: Customer)=value
+"""
+
+ UniqueId=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: UniqueId(self: Customer) -> str
+
+"""
+
+ ZipCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: ZipCode(self: Customer) -> str
+
+Set: ZipCode(self: Customer)=value
+"""
+
+
+
+class Customers:
+ """ Customers() """
+ @staticmethod
+ def FromIEnumerable(list):
+  """ FromIEnumerable(list: IEnumerable[Customer]) -> Customers """
+  pass
+ def __getitem__(self,*args):
+  """ x.__getitem__(y) <==> x[y] """
+  pass
+ def __init__(self,*args):
+  """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+  pass
+ def __iter__(self,*args):
+  """ __iter__(self: IEnumerable) -> object """
+  pass
+ def __reduce_ex__(self,*args):
+  pass
+ def __setitem__(self,*args):
+  """ x.__setitem__(i,y) <==> x[i]= """
+  pass
+ DisplayMember='Name'
+ ValueMember='Number'
+
+
+class ErpProcessSalesOrderLinesResult:
+ """ ErpProcessSalesOrderLinesResult() """
+ NetInvoiceAmount=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: NetInvoiceAmount(self: ErpProcessSalesOrderLinesResult) -> Decimal
+
+Set: NetInvoiceAmount(self: ErpProcessSalesOrderLinesResult)=value
+"""
+
+ NetInvoiceAmountCurrencyCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: NetInvoiceAmountCurrencyCode(self: ErpProcessSalesOrderLinesResult) -> str
+
+Set: NetInvoiceAmountCurrencyCode(self: ErpProcessSalesOrderLinesResult)=value
+"""
+
+ PackageSlipNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: PackageSlipNumber(self: ErpProcessSalesOrderLinesResult) -> str
+
+Set: PackageSlipNumber(self: ErpProcessSalesOrderLinesResult)=value
+"""
+
+ Reports=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Reports(self: ErpProcessSalesOrderLinesResult) -> List[Attachment]
+
+Set: Reports(self: ErpProcessSalesOrderLinesResult)=value
+"""
+
+
+
+class GetCustomersArgs:
+ """ GetCustomersArgs() """
+ CustomerNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: CustomerNumber(self: GetCustomersArgs) -> str
+
+Set: CustomerNumber(self: GetCustomersArgs)=value
+"""
+
+ FilterText=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: FilterText(self: GetCustomersArgs) -> str
+
+Set: FilterText(self: GetCustomersArgs)=value
+"""
+
+ Paging=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Paging(self: GetCustomersArgs) -> PagingParams
+
+Set: Paging(self: GetCustomersArgs)=value
+"""
+
+
+
+class GetCustomersPendingArgs:
+ """ GetCustomersPendingArgs() """
+ IncludeReplenishmentOrders=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: IncludeReplenishmentOrders(self: GetCustomersPendingArgs) -> bool
+
+Set: IncludeReplenishmentOrders(self: GetCustomersPendingArgs)=value
+"""
+
+ IncludeSalesOrders=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: IncludeSalesOrders(self: GetCustomersPendingArgs) -> bool
+
+Set: IncludeSalesOrders(self: GetCustomersPendingArgs)=value
+"""
+
+ SearchTags=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: SearchTags(self: GetCustomersPendingArgs) -> Tags
+
+Set: SearchTags(self: GetCustomersPendingArgs)=value
+"""
+
+ SearchText=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: SearchText(self: GetCustomersPendingArgs) -> str
+
+Set: SearchText(self: GetCustomersPendingArgs)=value
+"""
+
+
+
+class GetCustomersWithPendingPackagesArgs:
+ """
+ GetCustomersWithPendingPackagesArgs()
+ GetCustomersWithPendingPackagesArgs(batchIds: List[str],filterText: str)
+ """
+ @staticmethod
+ def __new__(self,batchIds=None,filterText=None):
+  """
+  __new__(cls: type)
+  __new__(cls: type,batchIds: List[str],filterText: str)
+  """
+  pass
+ BatchIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: BatchIds(self: GetCustomersWithPendingPackagesArgs) -> List[str]
+
+Set: BatchIds(self: GetCustomersWithPendingPackagesArgs)=value
+"""
+
+ FilterTags=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: FilterTags(self: GetCustomersWithPendingPackagesArgs) -> Tags
+
+Set: FilterTags(self: GetCustomersWithPendingPackagesArgs)=value
+"""
+
+ FilterText=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: FilterText(self: GetCustomersWithPendingPackagesArgs) -> str
+
+Set: FilterText(self: GetCustomersWithPendingPackagesArgs)=value
+"""
+
+
+ Default=None
+
+
+class GetOutboundOrdersBatchableArgs:
+ """ GetOutboundOrdersBatchableArgs() """
+ DeliveryDateFromTo=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: DeliveryDateFromTo(self: GetOutboundOrdersBatchableArgs) -> Tuple[DateTime,DateTime]
+
+Set: DeliveryDateFromTo(self: GetOutboundOrdersBatchableArgs)=value
+"""
+
+ IncludeIncompleteOrdersWithoutPartialDelivery=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: IncludeIncompleteOrdersWithoutPartialDelivery(self: GetOutboundOrdersBatchableArgs) -> bool
+
+Set: IncludeIncompleteOrdersWithoutPartialDelivery(self: GetOutboundOrdersBatchableArgs)=value
+"""
+
+ OrderDateFromTo=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: OrderDateFromTo(self: GetOutboundOrdersBatchableArgs) -> Tuple[DateTime,DateTime]
+
+Set: OrderDateFromTo(self: GetOutboundOrdersBatchableArgs)=value
+"""
+
+ Paging=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Paging(self: GetOutboundOrdersBatchableArgs) -> PagingParams
+
+Set: Paging(self: GetOutboundOrdersBatchableArgs)=value
+"""
+
+ SearchTags=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: SearchTags(self: GetOutboundOrdersBatchableArgs) -> Tags
+
+Set: SearchTags(self: GetOutboundOrdersBatchableArgs)=value
+"""
+
+ SearchText=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: SearchText(self: GetOutboundOrdersBatchableArgs) -> str
+
+Set: SearchText(self: GetOutboundOrdersBatchableArgs)=value
+"""
+
+ TypeOfOrders=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: TypeOfOrders(self: GetOutboundOrdersBatchableArgs) -> TagTarget
+
+Set: TypeOfOrders(self: GetOutboundOrdersBatchableArgs)=value
+"""
+
+
+
+class GetSalesOrderCustomersArgs:
+ """
+ GetSalesOrderCustomersArgs()
+ GetSalesOrderCustomersArgs(warehouseCode: str,filterText: str)
+ """
+ @staticmethod
+ def __new__(self,warehouseCode=None,filterText=None):
+  """
+  __new__(cls: type)
+  __new__(cls: type,warehouseCode: str,filterText: str)
+  """
+  pass
+ DaysToFuture=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: DaysToFuture(self: GetSalesOrderCustomersArgs) -> int
+
+Set: DaysToFuture(self: GetSalesOrderCustomersArgs)=value
+"""
+
+ FilterText=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: FilterText(self: GetSalesOrderCustomersArgs) -> str
+
+Set: FilterText(self: GetSalesOrderCustomersArgs)=value
+"""
+
+ WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: WarehouseCode(self: GetSalesOrderCustomersArgs) -> str
+
+Set: WarehouseCode(self: GetSalesOrderCustomersArgs)=value
+"""
+
+
+ Default=None
+
+
+class HistorySalesOrder:
+ """ HistorySalesOrder() """
+ def Clone(self):
+  """ Clone(self: HistorySalesOrder) -> object """
+  pass
+ def __init__(self,*args):
+  """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+  pass
+ def __reduce_ex__(self,*args):
+  pass
+ BusinessUnit=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: BusinessUnit(self: HistorySalesOrder) -> str
+
+Set: BusinessUnit(self: HistorySalesOrder)=value
+"""
+
+ QuantityLeftToReturn=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: QuantityLeftToReturn(self: HistorySalesOrder) -> Decimal
+
+Set: QuantityLeftToReturn(self: HistorySalesOrder)=value
+"""
+
+ QuantityReturned=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: QuantityReturned(self: HistorySalesOrder) -> Decimal
+
+Set: QuantityReturned(self: HistorySalesOrder)=value
+"""
+
+ SalesRepresentative=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: SalesRepresentative(self: HistorySalesOrder) -> str
+
+Set: SalesRepresentative(self: HistorySalesOrder)=value
+"""
+
+ Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Type(self: HistorySalesOrder) -> OutboundOrderTypeEnum
+
+"""
+
+
+
+class HistorySalesOrders:
+ """ HistorySalesOrders() """
+ @staticmethod
+ def FromIEnumerable(list):
+  """ FromIEnumerable(list: IEnumerable[HistorySalesOrder]) -> HistorySalesOrders """
+  pass
+ def __getitem__(self,*args):
+  """ x.__getitem__(y) <==> x[y] """
+  pass
+ def __init__(self,*args):
+  """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+  pass
+ def __iter__(self,*args):
+  """ __iter__(self: IEnumerable) -> object """
+  pass
+ def __reduce_ex__(self,*args):
+  pass
+ def __setitem__(self,*args):
+  """ x.__setitem__(i,y) <==> x[i]= """
+  pass
+
+class PackCustomer:
+ """
+ PackCustomer()
+ PackCustomer(customer: Customer,deliveryMethod: str)
+ """
+ def Clone(self):
+  """ Clone(self: PackCustomer) -> object """
+  pass
+ def GetHashCode(self):
+  """ GetHashCode(self: PackCustomer) -> int """
+  pass
+ def ToAddress(self):
+  """ ToAddress(self: PackCustomer) -> Address """
+  pass
+ def __init__(self,*args):
+  """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+  pass
+ @staticmethod
+ def __new__(self,customer=None,deliveryMethod=None):
+  """
+  __new__(cls: type)
+  __new__(cls: type,customer: Customer,deliveryMethod: str)
+  """
+  pass
+ def __reduce_ex__(self,*args):
+  pass
+ AreOutboundOrdersProcessed=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: AreOutboundOrdersProcessed(self: PackCustomer) -> bool
+
+Set: AreOutboundOrdersProcessed(self: PackCustomer)=value
+"""
+
+ ColliLetterCachedImage=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: ColliLetterCachedImage(self: PackCustomer) -> Image
+
+"""
+
+ ColliLetterImage=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: ColliLetterImage(self: PackCustomer) -> Array[Byte]
+
+Set: ColliLetterImage(self: PackCustomer)=value
+"""
+
+ ColliLetters=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: ColliLetters(self: PackCustomer) -> List[str]
+
+Set: ColliLetters(self: PackCustomer)=value
+"""
+
+ DeliveryMethod=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: DeliveryMethod(self: PackCustomer) -> str
+
+Set: DeliveryMethod(self: PackCustomer)=value
+"""
+
+ HasDeliveredItems=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: HasDeliveredItems(self: PackCustomer) -> bool
+
+Set: HasDeliveredItems(self: PackCustomer)=value
+"""
+
+ OrderTags=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: OrderTags(self: PackCustomer) -> Tags
+
+Set: OrderTags(self: PackCustomer)=value
+"""
+
+ OutboundOrders=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: OutboundOrders(self: PackCustomer) -> OutboundOrders
+
+Set: OutboundOrders(self: PackCustomer)=value
+"""
+
+ OutboundOrdersProcessed=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: OutboundOrdersProcessed(self: PackCustomer) -> OutboundOrders
+
+Set: OutboundOrdersProcessed(self: PackCustomer)=value
+"""
+
+
+
+class PackCustomers:
+ """ PackCustomers() """
+ def Add(self,*__args):
+  """ Add(self: PackCustomers,customer: PackCustomer) -> FindableList[PackCustomer] """
+  pass
+ def AddRange(self,*__args):
+  """ AddRange(self: PackCustomers,customers: IEnumerable[PackCustomer]) -> FindableList[PackCustomer] """
+  pass
+ def Clone(self):
+  """ Clone(self: PackCustomers) -> object """
+  pass
+ @staticmethod
+ def FromIEnumerable(list):
+  """ FromIEnumerable(list: IEnumerable[PackCustomer]) -> PackCustomers """
+  pass
+ def __add__(self,*args):
+  """ x.__add__(y) <==> x+y """
+  pass
+ def __getitem__(self,*args):
+  """ x.__getitem__(y) <==> x[y] """
+  pass
+ def __init__(self,*args):
+  """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+  pass
+ def __iter__(self,*args):
+  """ __iter__(self: IEnumerable) -> object """
+  pass
+ def __reduce_ex__(self,*args):
+  pass
+ def __setitem__(self,*args):
+  """ x.__setitem__(i,y) <==> x[i]= """
+  pass
+ DisplayMember='Name'
+ ValueMember='Number'
+
+
+class PartialDeliveryTypeEnum:
+ """ enum PartialDeliveryTypeEnum,values: Allow (0),OnlyEntireLines (2),OnlyEntireOrder (1) """
+ def __eq__(self,*args):
+  """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
+  pass
+ def __format__(self,*args):
+  """ __format__(formattable: IFormattable,format: str) -> str """
+  pass
+ def __ge__(self,*args):
+  pass
+ def __gt__(self,*args):
+  pass
+ def __init__(self,*args):
+  """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+  pass
+ def __le__(self,*args):
+  pass
+ def __lt__(self,*args):
+  pass
+ def __ne__(self,*args):
+  pass
+ def __reduce_ex__(self,*args):
+  pass
+ def __str__(self,*args):
+  pass
+ Allow=None
+ OnlyEntireLines=None
+ OnlyEntireOrder=None
+ value__=None
+
+
+class ReplenishmentOrderArgs:
+ """
+ ReplenishmentOrderArgs()
+ ReplenishmentOrderArgs(warehouseToCode: str)
+ ReplenishmentOrderArgs(orderFilterType: ReplenishmentOrderArgsOrderFilterType)
+ ReplenishmentOrderArgs(approvedOnly: bool)
+ ReplenishmentOrderArgs(warehouseToCode: str,locationToCode: str)
+ ReplenishmentOrderArgs(id: int,warehouseToCode: str,locationToCode: str,searchText: str)
+ """
+ @staticmethod
+ def __new__(self,*__args):
+  """
+  __new__(cls: type)
+  __new__(cls: type,warehouseToCode: str)
+  __new__(cls: type,orderFilterType: ReplenishmentOrderArgsOrderFilterType)
+  __new__(cls: type,approvedOnly: bool)
+  __new__(cls: type,warehouseToCode: str,locationToCode: str)
+  __new__(cls: type,id: int,warehouseToCode: str,locationToCode: str,searchText: str)
+  """
+  pass
+ ApprovedOnly=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: ApprovedOnly(self: ReplenishmentOrderArgs) -> bool
+
+Set: ApprovedOnly(self: ReplenishmentOrderArgs)=value
+"""
+
+ CustomerNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: CustomerNumber(self: ReplenishmentOrderArgs) -> str
+
+Set: CustomerNumber(self: ReplenishmentOrderArgs)=value
+"""
+
+ Ids=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Ids(self: ReplenishmentOrderArgs) -> List[int]
+
+Set: Ids(self: ReplenishmentOrderArgs)=value
+"""
+
+ LocationToCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: LocationToCode(self: ReplenishmentOrderArgs) -> str
+
+Set: LocationToCode(self: ReplenishmentOrderArgs)=value
+"""
+
+ OrderNumbers=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: OrderNumbers(self: ReplenishmentOrderArgs) -> List[str]
+
+Set: OrderNumbers(self: ReplenishmentOrderArgs)=value
+"""
+
+ Paging=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Paging(self: ReplenishmentOrderArgs) -> PagingParams
+
+Set: Paging(self: ReplenishmentOrderArgs)=value
+"""
+
+ SearchText=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: SearchText(self: ReplenishmentOrderArgs) -> str
+
+Set: SearchText(self: ReplenishmentOrderArgs)=value
+"""
+
+ WarehouseToCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: WarehouseToCode(self: ReplenishmentOrderArgs) -> str
+
+Set: WarehouseToCode(self: ReplenishmentOrderArgs)=value
+"""
+
+
+ DaysToFuture=None
+ Default=None
+ Id=None
+ OrderFilterType=None
+ ReplenishmentOrderArgsOrderFilterType=None
+
+
+class ReplenishmentOrderLinesArgs:
+ """
+ ReplenishmentOrderLinesArgs()
+ ReplenishmentOrderLinesArgs(orderIds: List[int])
+ ReplenishmentOrderLinesArgs(orderNumbers: List[str])
+ ReplenishmentOrderLinesArgs(orderIds: List[int],daysToFuture: int)
+ """
+ @staticmethod
+ def __new__(self,*__args):
+  """
+  __new__(cls: type)
+  __new__(cls: type,orderIds: List[int])
+  __new__(cls: type,orderNumbers: List[str])
+  __new__(cls: type,orderIds: List[int],daysToFuture: int)
+  """
+  pass
+ Approved=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Approved(self: ReplenishmentOrderLinesArgs) -> Nullable[bool]
+
+Set: Approved(self: ReplenishmentOrderLinesArgs)=value
+"""
+
+ ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: ItemCode(self: ReplenishmentOrderLinesArgs) -> str
+
+Set: ItemCode(self: ReplenishmentOrderLinesArgs)=value
+"""
+
+ OrderIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: OrderIds(self: ReplenishmentOrderLinesArgs) -> List[int]
+
+Set: OrderIds(self: ReplenishmentOrderLinesArgs)=value
+"""
+
+ OrderNumbers=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: OrderNumbers(self: ReplenishmentOrderLinesArgs) -> List[str]
+
+Set: OrderNumbers(self: ReplenishmentOrderLinesArgs)=value
+"""
+
+ Paging=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Paging(self: ReplenishmentOrderLinesArgs) -> PagingParams
+
+Set: Paging(self: ReplenishmentOrderLinesArgs)=value
+"""
+
+ SearchText=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: SearchText(self: ReplenishmentOrderLinesArgs) -> str
+
+Set: SearchText(self: ReplenishmentOrderLinesArgs)=value
+"""
+
+
+ DaysToFuture=None
+ Default=None
+
+
+class SalesOrder:
+ """ SalesOrder() """
+ def Clone(self):
+  """ Clone(self: SalesOrder) -> object """
+  pass
+ def __init__(self,*args):
+  """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+  pass
+ def __reduce_ex__(self,*args):
+  pass
+ BusinessUnit=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: BusinessUnit(self: SalesOrder) -> str
+
+Set: BusinessUnit(self: SalesOrder)=value
+"""
+
+ SalesRepresentative=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: SalesRepresentative(self: SalesOrder) -> str
+
+Set: SalesRepresentative(self: SalesOrder)=value
+"""
+
+ Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Type(self: SalesOrder) -> OutboundOrderTypeEnum
+
+"""
+
+
+
+class SalesOrderArgs:
+ """
+ SalesOrderArgs()
+ SalesOrderArgs(warehouseCode: str)
+ SalesOrderArgs(orderFilterType: SalesOrderOrderFilterType)
+ SalesOrderArgs(warehouseCode: str,customerNumber: str)
+ SalesOrderArgs(orderNumber: str,warehouseCode: str,customerNumber: str,searchText: str)
+ """
+ @staticmethod
+ def __new__(self,*__args):
+  """
+  __new__(cls: type)
+  __new__(cls: type,warehouseCode: str)
+  __new__(cls: type,orderFilterType: SalesOrderOrderFilterType)
+  __new__(cls: type,warehouseCode: str,customerNumber: str)
+  __new__(cls: type,orderNumber: str,warehouseCode: str,customerNumber: str,searchText: str)
+  """
+  pass
+ BatchId=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: BatchId(self: SalesOrderArgs) -> str
+
+Set: BatchId(self: SalesOrderArgs)=value
+"""
+
+ CustomerNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: CustomerNumber(self: SalesOrderArgs) -> str
+
+Set: CustomerNumber(self: SalesOrderArgs)=value
+"""
+
+ DaysToFuture=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: DaysToFuture(self: SalesOrderArgs) -> int
+
+Set: DaysToFuture(self: SalesOrderArgs)=value
+"""
+
+ OnlyBatchableOrders=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: OnlyBatchableOrders(self: SalesOrderArgs) -> bool
+
+Set: OnlyBatchableOrders(self: SalesOrderArgs)=value
+"""
+
+ OnlyBatchedOrders=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: OnlyBatchedOrders(self: SalesOrderArgs) -> bool
+
+Set: OnlyBatchedOrders(self: SalesOrderArgs)=value
+"""
+
+ OrderFilterType=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: OrderFilterType(self: SalesOrderArgs) -> SalesOrderOrderFilterType
+
+Set: OrderFilterType(self: SalesOrderArgs)=value
+"""
+
+ OrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: OrderNumber(self: SalesOrderArgs) -> str
+
+Set: OrderNumber(self: SalesOrderArgs)=value
+"""
+
+ OrderNumbers=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: OrderNumbers(self: SalesOrderArgs) -> List[str]
+
+Set: OrderNumbers(self: SalesOrderArgs)=value
+"""
+
+ SearchText=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: SearchText(self: SalesOrderArgs) -> str
+
+Set: SearchText(self: SalesOrderArgs)=value
+"""
+
+ WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: WarehouseCode(self: SalesOrderArgs) -> str
+
+Set: WarehouseCode(self: SalesOrderArgs)=value
+"""
+
+
+ Default=None
+ SalesOrderOrderFilterType=None
+
+
+class SalesOrderLine:
+ """ SalesOrderLine() """
+ def GetHashCode(self):
+  """ GetHashCode(self: SalesOrderLine) -> int """
+  pass
+ def __init__(self,*args):
+  """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+  pass
+ def __reduce_ex__(self,*args):
+  pass
+ CustomerItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: CustomerItemCode(self: SalesOrderLine) -> str
+
+Set: CustomerItemCode(self: SalesOrderLine)=value
+"""
+
+ IsCostItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: IsCostItem(self: SalesOrderLine) -> bool
+
+Set: IsCostItem(self: SalesOrderLine)=value
+"""
+
+ IsExtraItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: IsExtraItem(self: SalesOrderLine) -> bool
+
+Set: IsExtraItem(self: SalesOrderLine)=value
+"""
+
+ Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Type(self: SalesOrderLine) -> OutboundOrderTypeEnum
+
+"""
+
+
+
+class SalesOrderLines:
+ """ SalesOrderLines() """
+ @staticmethod
+ def FromIEnumerable(list):
+  """ FromIEnumerable(list: IEnumerable[SalesOrderLine]) -> SalesOrderLines """
+  pass
+ def __getitem__(self,*args):
+  """ x.__getitem__(y) <==> x[y] """
+  pass
+ def __init__(self,*args):
+  """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+  pass
+ def __iter__(self,*args):
+  """ __iter__(self: IEnumerable) -> object """
+  pass
+ def __reduce_ex__(self,*args):
+  pass
+ def __setitem__(self,*args):
+  """ x.__setitem__(i,y) <==> x[i]= """
+  pass
+
+class SalesOrderLinesArgs:
+ """
+ SalesOrderLinesArgs()
+ SalesOrderLinesArgs(orderNumbers: List[str])
+ SalesOrderLinesArgs(orderNumbers: List[str],daysToFuture: int)
+ """
+ @staticmethod
+ def __new__(self,orderNumbers=None,daysToFuture=None):
+  """
+  __new__(cls: type)
+  __new__(cls: type,orderNumbers: List[str])
+  __new__(cls: type,orderNumbers: List[str],daysToFuture: int)
+  """
+  pass
+ DaysToFuture=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: DaysToFuture(self: SalesOrderLinesArgs) -> int
+
+Set: DaysToFuture(self: SalesOrderLinesArgs)=value
+"""
+
+ OrderNumbers=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: OrderNumbers(self: SalesOrderLinesArgs) -> List[str]
+
+Set: OrderNumbers(self: SalesOrderLinesArgs)=value
+"""
+
+ SearchText=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: SearchText(self: SalesOrderLinesArgs) -> str
+
+Set: SearchText(self: SalesOrderLinesArgs)=value
+"""
+
+ WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: WarehouseCode(self: SalesOrderLinesArgs) -> str
+
+Set: WarehouseCode(self: SalesOrderLinesArgs)=value
+"""
+
+
+ Default=None
+
+
+class SalesOrders:
+ """ SalesOrders() """
+ @staticmethod
+ def FromIEnumerable(list):
+  """ FromIEnumerable(list: IEnumerable[OutboundOrder]) -> SalesOrders """
+  pass
+ def __getitem__(self,*args):
+  """ x.__getitem__(y) <==> x[y] """
+  pass
+ def __init__(self,*args):
+  """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+  pass
+ def __iter__(self,*args):
+  """ __iter__(self: IEnumerable) -> object """
+  pass
+ def __reduce_ex__(self,*args):
+  pass
+ def __setitem__(self,*args):
+  """ x.__setitem__(i,y) <==> x[i]= """
+  pass
+
+class SplitProcessedOutboundOrdersEnum:
+ """ enum SplitProcessedOutboundOrdersEnum,values: IntoFirstColli (2),None (0),PerOutboundOrder (1) """
+ def __eq__(self,*args):
+  """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
+  pass
+ def __format__(self,*args):
+  """ __format__(formattable: IFormattable,format: str) -> str """
+  pass
+ def __ge__(self,*args):
+  pass
+ def __gt__(self,*args):
+  pass
+ def __init__(self,*args):
+  """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+  pass
+ def __le__(self,*args):
+  pass
+ def __lt__(self,*args):
+  pass
+ def __ne__(self,*args):
+  pass
+ def __reduce_ex__(self,*args):
+  pass
+ def __str__(self,*args):
+  pass
+ IntoFirstColli=None
+ None_ =None
+ PerOutboundOrder=None
+ value__=None
+
+
+class StockRegistrationForColliEnum:
+ """ enum StockRegistrationForColliEnum,values: Counts (2),Disabled (0),PackageSlip (1) """
+ def __eq__(self,*args):
+  """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
+  pass
+ def __format__(self,*args):
+  """ __format__(formattable: IFormattable,format: str) -> str """
+  pass
+ def __ge__(self,*args):
+  pass
+ def __gt__(self,*args):
+  pass
+ def __init__(self,*args):
+  """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+  pass
+ def __le__(self,*args):
+  pass
+ def __lt__(self,*args):
+  pass
+ def __ne__(self,*args):
+  pass
+ def __reduce_ex__(self,*args):
+  pass
+ def __str__(self,*args):
+  pass
+ Counts=None
+ Disabled=None
+ PackageSlip=None
+ value__=None
+
+

@@ -1,8 +1,6 @@
-class GopherStyleUriParser(UriParser):
+class GopherStyleUriParser:
  """
- A customizable parser based on the Gopher scheme.
-
- 
-
+ A customizable parser based on the Gopher scheme.
+ 
  GopherStyleUriParser()
  """

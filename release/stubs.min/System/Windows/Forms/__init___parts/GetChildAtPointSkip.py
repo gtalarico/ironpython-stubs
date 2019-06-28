@@ -1,9 +1,7 @@
-class GetChildAtPointSkip(Enum,IComparable,IFormattable,IConvertible):
+class GetChildAtPointSkip:
  """
- Specifies which child controls to skip.
-
- 
-
+ Specifies which child controls to skip.
+ 
  enum (flags) GetChildAtPointSkip,values: Disabled (2),Invisible (1),None (0),Transparent (4)
  """
  def __eq__(self,*args):
@@ -31,7 +29,7 @@ class GetChildAtPointSkip(Enum,IComparable,IFormattable,IConvertible):
   pass
  Disabled=None
  Invisible=None
- None=None
+ None_ =None
  Transparent=None
  value__=None
 

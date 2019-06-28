@@ -1,4 +1,4 @@
-class Brushes(object):
+class Brushes:
  """ Brushes for all the standard colors. This class cannot be inherited. """
  AliceBlue=None
  AntiqueWhite=None

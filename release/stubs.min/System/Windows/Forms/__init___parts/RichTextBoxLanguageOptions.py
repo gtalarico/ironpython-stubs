@@ -1,9 +1,7 @@
-class RichTextBoxLanguageOptions(Enum,IComparable,IFormattable,IConvertible):
+class RichTextBoxLanguageOptions:
  """
- Provides System.Windows.Forms.RichTextBox settings for Input Method Editor (IME) and Asian language support.
-
- 
-
+ Provides System.Windows.Forms.RichTextBox settings for Input Method Editor (IME) and Asian language support.
+ 
  enum (flags) RichTextBoxLanguageOptions,values: AutoFont (2),AutoFontSizeAdjust (16),AutoKeyboard (1),DualFont (128),ImeAlwaysSendNotify (8),ImeCancelComplete (4),UIFonts (32)
  """
  def __eq__(self,*args):

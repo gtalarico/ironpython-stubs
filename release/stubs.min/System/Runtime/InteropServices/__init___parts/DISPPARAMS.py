@@ -1,4 +1,4 @@
-class DISPPARAMS(object):
+class DISPPARAMS:
  """ Use System.Runtime.InteropServices.ComTypes.DISPPARAMS instead. """
  cArgs=None
  cNamedArgs=None

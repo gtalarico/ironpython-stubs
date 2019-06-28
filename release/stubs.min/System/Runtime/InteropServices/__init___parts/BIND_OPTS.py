@@ -1,4 +1,4 @@
-class BIND_OPTS(object):
+class BIND_OPTS:
  """ Use System.Runtime.InteropServices.ComTypes.BIND_OPTS instead. """
  cbStruct=None
  dwTickCountDeadline=None

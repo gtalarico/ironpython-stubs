@@ -1,9 +1,7 @@
-class ToolStripGripStyle(Enum,IComparable,IFormattable,IConvertible):
+class ToolStripGripStyle:
  """
- Specifies visibility of a System.Windows.Forms.ToolStrip move handle (grip).
-
- 
-
+ Specifies visibility of a System.Windows.Forms.ToolStrip move handle (grip).
+ 
  enum ToolStripGripStyle,values: Hidden (0),Visible (1)
  """
  def __eq__(self,*args):

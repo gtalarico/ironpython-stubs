@@ -1,9 +1,7 @@
-class CustomQueryInterfaceMode(Enum,IComparable,IFormattable,IConvertible):
+class CustomQueryInterfaceMode:
  """
- Indicates whether the System.Runtime.InteropServices.Marshal.GetComInterfaceForObject(System.Object,System.Type,System.Runtime.InteropServices.CustomQueryInterfaceMode) method's IUnknown::QueryInterface calls can use the System.Runtime.InteropServices.ICustomQueryInterface interface.
-
- 
-
+ Indicates whether the System.Runtime.InteropServices.Marshal.GetComInterfaceForObject(System.Object,System.Type,System.Runtime.InteropServices.CustomQueryInterfaceMode) method's IUnknown::QueryInterface calls can use the System.Runtime.InteropServices.ICustomQueryInterface interface.
+ 
  enum CustomQueryInterfaceMode,values: Allow (1),Ignore (0)
  """
  def __eq__(self,*args):

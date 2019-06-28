@@ -1,4 +1,4 @@
-class AppContext(object):
+class AppContext:
  # no doc
  @staticmethod
  def GetData(name):
@@ -12,8 +12,8 @@ class AppContext(object):
  def TryGetSwitch(switchName,isEnabled):
   """ TryGetSwitch(switchName: str) -> (bool,bool) """
   pass
- BaseDirectory='C:\\Program Files (x86)\\IronPython-2.7.7\\'
- TargetFrameworkName='.NETFramework,Version=v4.0'
+ BaseDirectory='C:\\Users\\k.pawiroredjo\\Downloads\\IronPython.2.7.9\\net45\\'
+ TargetFrameworkName='.NETFramework,Version=v4.5'
  __all__=[
   'GetData',
   'SetSwitch',

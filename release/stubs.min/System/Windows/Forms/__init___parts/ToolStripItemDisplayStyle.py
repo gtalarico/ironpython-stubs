@@ -1,9 +1,7 @@
-class ToolStripItemDisplayStyle(Enum,IComparable,IFormattable,IConvertible):
+class ToolStripItemDisplayStyle:
  """
- Specifies what to render (image or text) for this System.Windows.Forms.ToolStripItem.
-
- 
-
+ Specifies what to render (image or text) for this System.Windows.Forms.ToolStripItem.
+ 
  enum ToolStripItemDisplayStyle,values: Image (2),ImageAndText (3),None (0),Text (1)
  """
  def __eq__(self,*args):
@@ -31,7 +29,7 @@ class ToolStripItemDisplayStyle(Enum,IComparable,IFormattable,IConvertible):
   pass
  Image=None
  ImageAndText=None
- None=None
+ None_ =None
  Text=None
  value__=None
 

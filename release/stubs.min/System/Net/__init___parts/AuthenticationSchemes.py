@@ -1,9 +1,7 @@
-class AuthenticationSchemes(Enum,IComparable,IFormattable,IConvertible):
+class AuthenticationSchemes:
  """
- Specifies protocols for authentication.
-
- 
-
+ Specifies protocols for authentication.
+ 
  enum (flags) AuthenticationSchemes,values: Anonymous (32768),Basic (8),Digest (1),IntegratedWindowsAuthentication (6),Negotiate (2),None (0),Ntlm (4)
  """
  def __eq__(self,*args):
@@ -34,7 +32,7 @@ class AuthenticationSchemes(Enum,IComparable,IFormattable,IConvertible):
  Digest=None
  IntegratedWindowsAuthentication=None
  Negotiate=None
- None=None
+ None_ =None
  Ntlm=None
  value__=None
 

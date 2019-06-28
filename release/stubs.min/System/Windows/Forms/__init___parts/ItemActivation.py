@@ -1,9 +1,7 @@
-class ItemActivation(Enum,IComparable,IFormattable,IConvertible):
+class ItemActivation:
  """
- Specifies the user action that is required to activate items in a list view control and the feedback that is given as the user moves the mouse pointer over an item.
-
- 
-
+ Specifies the user action that is required to activate items in a list view control and the feedback that is given as the user moves the mouse pointer over an item.
+ 
  enum ItemActivation,values: OneClick (1),Standard (0),TwoClick (2)
  """
  def __eq__(self,*args):

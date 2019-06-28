@@ -1,4 +1,4 @@
-class SystemColors(object):
+class SystemColors:
  """ Each property of the System.Drawing.SystemColors class is a System.Drawing.Color structure that is the color of a Windows display element. """
  ActiveBorder=None
  ActiveCaption=None

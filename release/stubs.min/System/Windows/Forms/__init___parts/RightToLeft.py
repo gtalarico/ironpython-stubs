@@ -1,9 +1,7 @@
-class RightToLeft(Enum,IComparable,IFormattable,IConvertible):
+class RightToLeft:
  """
- Specifies a value indicating whether the text appears from right to left,such as when using Hebrew or Arabic fonts.
-
- 
-
+ Specifies a value indicating whether the text appears from right to left,such as when using Hebrew or Arabic fonts.
+ 
  enum RightToLeft,values: Inherit (2),No (0),Yes (1)
  """
  def __eq__(self,*args):

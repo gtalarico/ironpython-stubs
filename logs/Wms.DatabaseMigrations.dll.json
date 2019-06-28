@@ -1,0 +1,11 @@
+{
+  "Wms.DatabaseMigrations.dll": {
+    "Wms.DatabaseMigrations.Upgrade": "<module 'Upgrade' (CLS module from Wms.DatabaseMigrations, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms.DatabaseMigrations.Exceptions": "<module 'Exceptions' (CLS module from Wms.DatabaseMigrations, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms": "<module 'Wms' (CLS module from Wms.DatabaseMigrations, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms.DatabaseMigrations.Extensions": "<module 'Extensions' (CLS module from Wms.DatabaseMigrations, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms.DatabaseMigrations": "<module 'DatabaseMigrations' (CLS module from Wms.DatabaseMigrations, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms.DatabaseMigrations.Upgrade.Upgrades.A20190213122034_PC020_tvaneijk": "<module 'A20190213122034_PC020_tvaneijk' (CLS module from Wms.DatabaseMigrations, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms.DatabaseMigrations.Upgrade.Upgrades": "<module 'Upgrades' (CLS module from Wms.DatabaseMigrations, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

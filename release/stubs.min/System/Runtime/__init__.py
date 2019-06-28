@@ -2,18 +2,16 @@
 # module System.Runtime calls itself Runtime
 # from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class AssemblyTargetedPatchBandAttribute(Attribute,_Attribute):
+class AssemblyTargetedPatchBandAttribute:
  """
- Specifies patch band information for targeted patching of the .NET Framework.
-
- 
-
+ Specifies patch band information for targeted patching of the .NET Framework.
+ 
  AssemblyTargetedPatchBandAttribute(targetedPatchBand: str)
  """
  def __init__(self,*args):
@@ -24,19 +22,15 @@ class AssemblyTargetedPatchBandAttribute(Attribute,_Attribute):
   """ __new__(cls: type,targetedPatchBand: str) """
   pass
  TargetedPatchBand=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the patch band.
-
-
-
-Get: TargetedPatchBand(self: AssemblyTargetedPatchBandAttribute) -> str
-
-
-
+ """Gets the patch band.
+
+Get: TargetedPatchBand(self: AssemblyTargetedPatchBandAttribute) -> str
+
 """
 
 
 
-class GCLargeObjectHeapCompactionMode(Enum,IComparable,IFormattable,IConvertible):
+class GCLargeObjectHeapCompactionMode:
  """ enum GCLargeObjectHeapCompactionMode,values: CompactOnce (2),Default (1) """
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -66,12 +60,10 @@ class GCLargeObjectHeapCompactionMode(Enum,IComparable,IFormattable,IConvertible
  value__=None
 
 
-class GCLatencyMode(Enum,IComparable,IFormattable,IConvertible):
+class GCLatencyMode:
  """
- Adjusts the time that the garbage collector intrudes in your application.
-
- 
-
+ Adjusts the time that the garbage collector intrudes in your application.
+ 
  enum GCLatencyMode,values: Batch (0),Interactive (1),LowLatency (2),NoGCRegion (4),SustainedLowLatency (3)
  """
  def __eq__(self,*args):
@@ -105,7 +97,7 @@ class GCLatencyMode(Enum,IComparable,IFormattable,IConvertible):
  value__=None
 
 
-class GCSettings(object):
+class GCSettings:
  """ Specifies the garbage collection settings for the current process. """
  IsServerGC=False
  LargeObjectHeapCompactionMode=None
@@ -113,36 +105,23 @@ class GCSettings(object):
  __all__=[]
 
 
-class MemoryFailPoint(CriticalFinalizerObject,IDisposable):
+class MemoryFailPoint:
  """
- Checks for sufficient memory resources prior to execution. This class cannot be inherited.
-
- 
-
+ Checks for sufficient memory resources prior to execution. This class cannot be inherited.
+ 
  MemoryFailPoint(sizeInMegabytes: int)
  """
  def Dispose(self):
   """
-  Dispose(self: MemoryFailPoint)
-
+  Dispose(self: MemoryFailPoint)
    Releases all resources used by the System.Runtime.MemoryFailPoint.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-
-  
-
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -152,7 +131,7 @@ class MemoryFailPoint(CriticalFinalizerObject,IDisposable):
   """ __new__(cls: type,sizeInMegabytes: int) """
   pass
 
-class ProfileOptimization(object):
+class ProfileOptimization:
  # no doc
  @staticmethod
  def SetProfileRoot(directoryPath):
@@ -168,12 +147,10 @@ class ProfileOptimization(object):
  ]
 
 
-class TargetedPatchingOptOutAttribute(Attribute,_Attribute):
+class TargetedPatchingOptOutAttribute:
  """
- Indicates that the .NET Framework class library method to which this attribute is applied is unlikely to be affected by servicing releases,and therefore is eligible to be inlined across Native Image Generator (NGen) images.
-
- 
-
+ Indicates that the .NET Framework class library method to which this attribute is applied is unlikely to be affected by servicing releases,and therefore is eligible to be inlined across Native Image Generator (NGen) images.
+ 
  TargetedPatchingOptOutAttribute(reason: str)
  """
  def __init__(self,*args):
@@ -184,14 +161,10 @@ class TargetedPatchingOptOutAttribute(Attribute,_Attribute):
   """ __new__(cls: type,reason: str) """
   pass
  Reason=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the reason why the method to which this attribute is applied is considered to be eligible for inlining across Native Image Generator (NGen) images.
-
-
-
-Get: Reason(self: TargetedPatchingOptOutAttribute) -> str
-
-
-
+ """Gets the reason why the method to which this attribute is applied is considered to be eligible for inlining across Native Image Generator (NGen) images.
+
+Get: Reason(self: TargetedPatchingOptOutAttribute) -> str
+
 """
 
 

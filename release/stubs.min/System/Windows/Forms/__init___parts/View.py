@@ -1,9 +1,7 @@
-class View(Enum,IComparable,IFormattable,IConvertible):
+class View:
  """
- Specifies how list items are displayed in a System.Windows.Forms.ListView control.
-
- 
-
+ Specifies how list items are displayed in a System.Windows.Forms.ListView control.
+ 
  enum View,values: Details (1),LargeIcon (0),List (3),SmallIcon (2),Tile (4)
  """
  def __eq__(self,*args):

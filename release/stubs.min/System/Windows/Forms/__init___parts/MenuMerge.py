@@ -1,9 +1,7 @@
-class MenuMerge(Enum,IComparable,IFormattable,IConvertible):
+class MenuMerge:
  """
- Specifies the behavior of a System.Windows.Forms.MenuItem when it is merged with items in another menu.
-
- 
-
+ Specifies the behavior of a System.Windows.Forms.MenuItem when it is merged with items in another menu.
+ 
  enum MenuMerge,values: Add (0),MergeItems (2),Remove (3),Replace (1)
  """
  def __eq__(self,*args):

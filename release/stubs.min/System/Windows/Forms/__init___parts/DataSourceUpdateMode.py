@@ -1,9 +1,7 @@
-class DataSourceUpdateMode(Enum,IComparable,IFormattable,IConvertible):
+class DataSourceUpdateMode:
  """
- Specifies when a data source is updated when changes occur in the bound control.
-
- 
-
+ Specifies when a data source is updated when changes occur in the bound control.
+ 
  enum DataSourceUpdateMode,values: Never (2),OnPropertyChanged (1),OnValidation (0)
  """
  def __eq__(self,*args):

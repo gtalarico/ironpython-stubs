@@ -1,9 +1,7 @@
-class ThreadPriorityLevel(Enum,IComparable,IFormattable,IConvertible):
+class ThreadPriorityLevel:
  """
- Specifies the priority level of a thread.
-
- 
-
+ Specifies the priority level of a thread.
+ 
  enum ThreadPriorityLevel,values: AboveNormal (1),BelowNormal (-1),Highest (2),Idle (-15),Lowest (-2),Normal (0),TimeCritical (15)
  """
  def __eq__(self,*args):

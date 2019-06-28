@@ -1,9 +1,7 @@
-class DataGridViewHeaderBorderStyle(Enum,IComparable,IFormattable,IConvertible):
+class DataGridViewHeaderBorderStyle:
  """
- Specifies the border style that can be applied to the System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle and System.Windows.Forms.DataGridView.RowHeadersBorderStyle properties of a System.Windows.Forms.DataGridView control.
-
- 
-
+ Specifies the border style that can be applied to the System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle and System.Windows.Forms.DataGridView.RowHeadersBorderStyle properties of a System.Windows.Forms.DataGridView control.
+ 
  enum DataGridViewHeaderBorderStyle,values: Custom (0),None (4),Raised (2),Single (1),Sunken (3)
  """
  def __eq__(self,*args):
@@ -30,7 +28,7 @@ class DataGridViewHeaderBorderStyle(Enum,IComparable,IFormattable,IConvertible):
  def __str__(self,*args):
   pass
  Custom=None
- None=None
+ None_ =None
  Raised=None
  Single=None
  Sunken=None

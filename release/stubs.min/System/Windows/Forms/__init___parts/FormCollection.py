@@ -1,9 +1,7 @@
-class FormCollection(ReadOnlyCollectionBase,ICollection,IEnumerable):
+class FormCollection:
  """
- Represents a collection of System.Windows.Forms.Form objects.
-
- 
-
+ Represents a collection of System.Windows.Forms.Form objects.
+ 
  FormCollection()
  """
  def __getitem__(self,*args):
@@ -16,10 +14,8 @@ class FormCollection(ReadOnlyCollectionBase,ICollection,IEnumerable):
   """ __iter__(self: IEnumerable) -> object """
   pass
  InnerList=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the list of elements contained in the System.Collections.ReadOnlyCollectionBase instance.
-
-
-
+ """Gets the list of elements contained in the System.Collections.ReadOnlyCollectionBase instance.
+
 """
 
 

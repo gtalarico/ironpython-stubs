@@ -1,9 +1,7 @@
-class ToolStripItemRenderEventArgs(EventArgs):
+class ToolStripItemRenderEventArgs:
  """
- Provides data for the events that render the background of objects derived from System.Windows.Forms.ToolStripItem in the System.Windows.Forms.ToolStripRenderer class.
-
- 
-
+ Provides data for the events that render the background of objects derived from System.Windows.Forms.ToolStripItem in the System.Windows.Forms.ToolStripRenderer class.
+ 
  ToolStripItemRenderEventArgs(g: Graphics,item: ToolStripItem)
  """
  def __getitem__(self,*args):
@@ -14,36 +12,24 @@ class ToolStripItemRenderEventArgs(EventArgs):
   """ __new__(cls: type,g: Graphics,item: ToolStripItem) """
   pass
  Graphics=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the graphics used to paint the System.Windows.Forms.ToolStripItem.
-
-
-
-Get: Graphics(self: ToolStripItemRenderEventArgs) -> Graphics
-
-
-
+ """Gets the graphics used to paint the System.Windows.Forms.ToolStripItem.
+
+Get: Graphics(self: ToolStripItemRenderEventArgs) -> Graphics
+
 """
 
  Item=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the System.Windows.Forms.ToolStripItem to paint.
-
-
-
-Get: Item(self: ToolStripItemRenderEventArgs) -> ToolStripItem
-
-
-
+ """Gets the System.Windows.Forms.ToolStripItem to paint.
+
+Get: Item(self: ToolStripItemRenderEventArgs) -> ToolStripItem
+
 """
 
  ToolStrip=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the value of the System.Windows.Forms.ToolStripItem.Owner property for the System.Windows.Forms.ToolStripItem to paint.
-
-
-
-Get: ToolStrip(self: ToolStripItemRenderEventArgs) -> ToolStrip
-
-
-
+ """Gets the value of the System.Windows.Forms.ToolStripItem.Owner property for the System.Windows.Forms.ToolStripItem to paint.
+
+Get: ToolStrip(self: ToolStripItemRenderEventArgs) -> ToolStrip
+
 """
 
 

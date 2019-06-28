@@ -1,9 +1,7 @@
-class LeftRightAlignment(Enum,IComparable,IFormattable,IConvertible):
+class LeftRightAlignment:
  """
- Specifies whether an object or text is aligned to the left or right of a reference point.
-
- 
-
+ Specifies whether an object or text is aligned to the left or right of a reference point.
+ 
  enum LeftRightAlignment,values: Left (0),Right (1)
  """
  def __eq__(self,*args):

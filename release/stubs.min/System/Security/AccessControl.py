@@ -2,18 +2,18 @@
 # module System.Security.AccessControl calls itself AccessControl
 # from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # functions
 
-def AccessRule(*args,**kwargs): # real signature unknown
+def AccessRule(args,kwargs): # real signature unknown
  """ Represents a combination of a user's identity,an access mask,and an access control type (allow or deny). An System.Security.AccessControl.AccessRule object also contains information about the how the rule is inherited by child objects and how that inheritance is propagated. """
  pass
-def AuditRule(*args,**kwargs): # real signature unknown
+def AuditRule(args,kwargs): # real signature unknown
  """ Represents a combination of a user's identity and an access mask. An System.Security.AccessControl.AuditRule object also contains information about how the rule is inherited by child objects,how that inheritance is propagated,and for what conditions it is audited. """
  pass
-def ObjectSecurity(*args,**kwargs): # real signature unknown
+def ObjectSecurity(args,kwargs): # real signature unknown
  """ Provides the ability to control access to objects without direct manipulation of Access Control Lists (ACLs). This class is the abstract base class for the System.Security.AccessControl.CommonObjectSecurity and System.Security.AccessControl.DirectoryObjectSecurity classes. """
  pass
 # classes

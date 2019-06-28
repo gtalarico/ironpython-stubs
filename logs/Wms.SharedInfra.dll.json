@@ -1,0 +1,12 @@
+{
+  "Wms.SharedInfra.dll": {
+    "Wms.SharedInfra.Assemblies": "<module 'Assemblies' (CLS module from Wms.SharedInfra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms.SharedInfra": "<module 'SharedInfra' (CLS module from Wms.SharedInfra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms.SharedInfra.RuleEngine": "<module 'RuleEngine' (CLS module from Wms.SharedInfra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms.SharedInfra.Cryptography": "<module 'Cryptography' (CLS module from Wms.SharedInfra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms": "<module 'Wms' (CLS module from Wms.SharedInfra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms.SharedInfra.Cryptography.PasswordHashing": "<module 'PasswordHashing' (CLS module from Wms.SharedInfra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms.SharedInfra.Extensions": "<module 'Extensions' (CLS module from Wms.SharedInfra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms.SharedInfra.Platform": "<module 'Platform' (CLS module from Wms.SharedInfra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

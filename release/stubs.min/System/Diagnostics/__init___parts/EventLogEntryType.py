@@ -1,9 +1,7 @@
-class EventLogEntryType(Enum,IComparable,IFormattable,IConvertible):
+class EventLogEntryType:
  """
- Specifies the event type of an event log entry.
-
- 
-
+ Specifies the event type of an event log entry.
+ 
  enum EventLogEntryType,values: Error (1),FailureAudit (16),Information (4),SuccessAudit (8),Warning (2)
  """
  def __eq__(self,*args):

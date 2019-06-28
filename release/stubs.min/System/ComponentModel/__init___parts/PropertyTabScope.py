@@ -1,9 +1,7 @@
-class PropertyTabScope(Enum,IComparable,IFormattable,IConvertible):
+class PropertyTabScope:
  """
- Defines identifiers that indicate the persistence scope of a tab in the Properties window.
-
- 
-
+ Defines identifiers that indicate the persistence scope of a tab in the Properties window.
+ 
  enum PropertyTabScope,values: Component (3),Document (2),Global (1),Static (0)
  """
  def __eq__(self,*args):

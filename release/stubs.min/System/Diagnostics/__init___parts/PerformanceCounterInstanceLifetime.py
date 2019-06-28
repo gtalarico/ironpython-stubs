@@ -1,9 +1,7 @@
-class PerformanceCounterInstanceLifetime(Enum,IComparable,IFormattable,IConvertible):
+class PerformanceCounterInstanceLifetime:
  """
- Specifies the lifetime of a performance counter instance.
-
- 
-
+ Specifies the lifetime of a performance counter instance.
+ 
  enum PerformanceCounterInstanceLifetime,values: Global (0),Process (1)
  """
  def __eq__(self,*args):

@@ -1,9 +1,7 @@
-class ToolStripItemPlacement(Enum,IComparable,IFormattable,IConvertible):
+class ToolStripItemPlacement:
  """
- Specifies where a System.Windows.Forms.ToolStripItem is to be layed out.
-
- 
-
+ Specifies where a System.Windows.Forms.ToolStripItem is to be layed out.
+ 
  enum ToolStripItemPlacement,values: Main (0),None (2),Overflow (1)
  """
  def __eq__(self,*args):
@@ -30,7 +28,7 @@ class ToolStripItemPlacement(Enum,IComparable,IFormattable,IConvertible):
  def __str__(self,*args):
   pass
  Main=None
- None=None
+ None_ =None
  Overflow=None
  value__=None
 

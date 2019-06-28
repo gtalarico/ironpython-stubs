@@ -1,9 +1,7 @@
-class InitializationEventAttribute(Attribute,_Attribute):
+class InitializationEventAttribute:
  """
- Specifies which event is raised on initialization. This class cannot be inherited.
-
- 
-
+ Specifies which event is raised on initialization. This class cannot be inherited.
+ 
  InitializationEventAttribute(eventName: str)
  """
  def __init__(self,*args):
@@ -14,14 +12,10 @@ class InitializationEventAttribute(Attribute,_Attribute):
   """ __new__(cls: type,eventName: str) """
   pass
  EventName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the name of the initialization event.
-
-
-
-Get: EventName(self: InitializationEventAttribute) -> str
-
-
-
+ """Gets the name of the initialization event.
+
+Get: EventName(self: InitializationEventAttribute) -> str
+
 """
 
 

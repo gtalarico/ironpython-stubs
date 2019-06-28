@@ -1,9 +1,7 @@
-class SystemParameter(Enum,IComparable,IFormattable,IConvertible):
+class SystemParameter:
  """
- Specifies the system parameter type.
-
- 
-
+ Specifies the system parameter type.
+ 
  enum SystemParameter,values: CaretWidthMetric (8),DropShadow (0),FlatMenu (1),FontSmoothingContrastMetric (2),FontSmoothingTypeMetric (3),HorizontalFocusThicknessMetric (10),MenuFadeEnabled (4),SelectionFade (5),ToolTipAnimationMetric (6),UIEffects (7),VerticalFocusThicknessMetric (9)
  """
  def __eq__(self,*args):

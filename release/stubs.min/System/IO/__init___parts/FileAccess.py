@@ -1,9 +1,7 @@
-class FileAccess(Enum,IComparable,IFormattable,IConvertible):
+class FileAccess:
  """
- Defines constants for read,write,or read/write access to a file.
-
- 
-
+ Defines constants for read,write,or read/write access to a file.
+ 
  enum (flags) FileAccess,values: Read (1),ReadWrite (3),Write (2)
  """
  def __eq__(self,*args):

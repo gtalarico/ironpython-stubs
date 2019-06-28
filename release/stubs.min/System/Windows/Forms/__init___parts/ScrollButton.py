@@ -1,9 +1,7 @@
-class ScrollButton(Enum,IComparable,IFormattable,IConvertible):
+class ScrollButton:
  """
- Specifies the type of scroll arrow to draw on a scroll bar.
-
- 
-
+ Specifies the type of scroll arrow to draw on a scroll bar.
+ 
  enum ScrollButton,values: Down (1),Left (2),Max (3),Min (0),Right (3),Up (0)
  """
  def __eq__(self,*args):

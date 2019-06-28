@@ -1,9 +1,7 @@
-class FileShare(Enum,IComparable,IFormattable,IConvertible):
+class FileShare:
  """
- Contains constants for controlling the kind of access other System.IO.FileStream objects can have to the same file.
-
- 
-
+ Contains constants for controlling the kind of access other System.IO.FileStream objects can have to the same file.
+ 
  enum (flags) FileShare,values: Delete (4),Inheritable (16),None (0),Read (1),ReadWrite (3),Write (2)
  """
  def __eq__(self,*args):
@@ -31,7 +29,7 @@ class FileShare(Enum,IComparable,IFormattable,IConvertible):
   pass
  Delete=None
  Inheritable=None
- None=None
+ None_ =None
  Read=None
  ReadWrite=None
  value__=None

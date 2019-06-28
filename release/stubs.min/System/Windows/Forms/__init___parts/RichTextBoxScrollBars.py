@@ -1,9 +1,7 @@
-class RichTextBoxScrollBars(Enum,IComparable,IFormattable,IConvertible):
+class RichTextBoxScrollBars:
  """
- Specifies the type of scroll bars to display in a System.Windows.Forms.RichTextBox control.
-
- 
-
+ Specifies the type of scroll bars to display in a System.Windows.Forms.RichTextBox control.
+ 
  enum RichTextBoxScrollBars,values: Both (3),ForcedBoth (19),ForcedHorizontal (17),ForcedVertical (18),Horizontal (1),None (0),Vertical (2)
  """
  def __eq__(self,*args):
@@ -34,7 +32,7 @@ class RichTextBoxScrollBars(Enum,IComparable,IFormattable,IConvertible):
  ForcedHorizontal=None
  ForcedVertical=None
  Horizontal=None
- None=None
+ None_ =None
  value__=None
  Vertical=None
 

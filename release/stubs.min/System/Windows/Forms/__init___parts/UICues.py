@@ -1,9 +1,7 @@
-class UICues(Enum,IComparable,IFormattable,IConvertible):
+class UICues:
  """
- Specifies the state of the user interface.
-
- 
-
+ Specifies the state of the user interface.
+ 
  enum (flags) UICues,values: Changed (12),ChangeFocus (4),ChangeKeyboard (8),None (0),ShowFocus (1),ShowKeyboard (2),Shown (3)
  """
  def __eq__(self,*args):
@@ -32,7 +30,7 @@ class UICues(Enum,IComparable,IFormattable,IConvertible):
  Changed=None
  ChangeFocus=None
  ChangeKeyboard=None
- None=None
+ None_ =None
  ShowFocus=None
  ShowKeyboard=None
  Shown=None

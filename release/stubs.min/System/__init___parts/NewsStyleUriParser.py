@@ -1,8 +1,6 @@
-class NewsStyleUriParser(UriParser):
+class NewsStyleUriParser:
  """
- A customizable parser based on the news scheme using the Network News Transfer Protocol (NNTP).
-
- 
-
+ A customizable parser based on the news scheme using the Network News Transfer Protocol (NNTP).
+ 
  NewsStyleUriParser()
  """

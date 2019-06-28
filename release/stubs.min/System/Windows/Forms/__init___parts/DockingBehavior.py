@@ -1,9 +1,7 @@
-class DockingBehavior(Enum,IComparable,IFormattable,IConvertible):
+class DockingBehavior:
  """
- Specifies how a control should be docked by default when added through a designer.
-
- 
-
+ Specifies how a control should be docked by default when added through a designer.
+ 
  enum DockingBehavior,values: Ask (1),AutoDock (2),Never (0)
  """
  def __eq__(self,*args):

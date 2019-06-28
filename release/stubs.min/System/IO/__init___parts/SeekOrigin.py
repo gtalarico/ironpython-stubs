@@ -1,9 +1,7 @@
-class SeekOrigin(Enum,IComparable,IFormattable,IConvertible):
+class SeekOrigin:
  """
- Provides the fields that represent reference points in streams for seeking.
-
- 
-
+ Provides the fields that represent reference points in streams for seeking.
+ 
  enum SeekOrigin,values: Begin (0),Current (1),End (2)
  """
  def __eq__(self,*args):

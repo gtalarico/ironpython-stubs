@@ -1,4 +1,4 @@
-class SystemIcons(object):
+class SystemIcons:
  """ Each property of the System.Drawing.SystemIcons class is an System.Drawing.Icon object for Windows system-wide icons. This class cannot be inherited. """
  Application=None
  Asterisk=None

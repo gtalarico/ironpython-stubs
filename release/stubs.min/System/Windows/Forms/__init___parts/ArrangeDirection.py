@@ -1,9 +1,7 @@
-class ArrangeDirection(Enum,IComparable,IFormattable,IConvertible):
+class ArrangeDirection:
  """
- Specifies the direction in which the system arranges minimized windows.
-
- 
-
+ Specifies the direction in which the system arranges minimized windows.
+ 
  enum (flags) ArrangeDirection,values: Down (4),Left (0),Right (0),Up (4)
  """
  def __eq__(self,*args):

@@ -1,9 +1,7 @@
-class ContentAlignment(Enum,IComparable,IFormattable,IConvertible):
+class ContentAlignment:
  """
- Specifies alignment of content on the drawing surface.
-
- 
-
+ Specifies alignment of content on the drawing surface.
+ 
  enum ContentAlignment,values: BottomCenter (512),BottomLeft (256),BottomRight (1024),MiddleCenter (32),MiddleLeft (16),MiddleRight (64),TopCenter (2),TopLeft (1),TopRight (4)
  """
  def __eq__(self,*args):

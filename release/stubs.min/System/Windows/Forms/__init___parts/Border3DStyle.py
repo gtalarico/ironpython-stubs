@@ -1,9 +1,7 @@
-class Border3DStyle(Enum,IComparable,IFormattable,IConvertible):
+class Border3DStyle:
  """
- Specifies the style of a three-dimensional border.
-
- 
-
+ Specifies the style of a three-dimensional border.
+ 
  enum Border3DStyle,values: Adjust (8192),Bump (9),Etched (6),Flat (16394),Raised (5),RaisedInner (4),RaisedOuter (1),Sunken (10),SunkenInner (8),SunkenOuter (2)
  """
  def __eq__(self,*args):

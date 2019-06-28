@@ -1,9 +1,7 @@
-class IMPLTYPEFLAGS(Enum,IComparable,IFormattable,IConvertible):
+class IMPLTYPEFLAGS:
  """
- Use System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS instead.
-
- 
-
+ Use System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS instead.
+ 
  enum (flags) IMPLTYPEFLAGS,values: IMPLTYPEFLAG_FDEFAULT (1),IMPLTYPEFLAG_FDEFAULTVTABLE (8),IMPLTYPEFLAG_FRESTRICTED (4),IMPLTYPEFLAG_FSOURCE (2)
  """
  def __eq__(self,*args):

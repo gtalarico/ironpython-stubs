@@ -2,13 +2,13 @@
 # module System.Net.Cache calls itself Cache
 # from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class HttpCacheAgeControl(Enum, IComparable, IFormattable, IConvertible):
+class HttpCacheAgeControl:
     """
     Specifies the meaning of time values that control caching behavior for resources obtained using System.Net.HttpWebRequest objects.
     
@@ -52,11 +52,11 @@ class HttpCacheAgeControl(Enum, IComparable, IFormattable, IConvertible):
     MaxAgeAndMinFresh = None
     MaxStale = None
     MinFresh = None
-    None = None
+    None_ =None
     value__ = None
 
 
-class HttpRequestCacheLevel(Enum, IComparable, IFormattable, IConvertible):
+class HttpRequestCacheLevel:
     """
     Specifies caching behavior for resources obtained using the Hypertext Transfer protocol (HTTP).
     
@@ -107,19 +107,20 @@ class HttpRequestCacheLevel(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class RequestCachePolicy(object):
+class RequestCachePolicy:
     """
     Defines an application's caching requirements for resources obtained by using System.Net.WebRequest objects.
     
-    RequestCachePolicy(level: RequestCacheLevel)
-    RequestCachePolicy()
+    RequestCachePolicy()
+    RequestCachePolicy(level: RequestCacheLevel)
     """
     def ToString(self):
         """
         ToString(self: RequestCachePolicy) -> str
         
             Returns a string representation of this instance.
-            Returns: A System.String containing the System.Net.Cache.RequestCachePolicy.Level for this instance.
+            Returns: A System.String containing the System.Net.Cache.RequestCachePolicy.Level for this 
+             instance.
         """
         pass
 
@@ -140,7 +141,7 @@ Get: Level(self: RequestCachePolicy) -> RequestCacheLevel
 
 
 
-class HttpRequestCachePolicy(RequestCachePolicy):
+class HttpRequestCachePolicy:
     """
     Defines an application's caching requirements for resources obtained by using System.Net.HttpWebRequest objects.
     
@@ -209,7 +210,7 @@ Get: MinFresh(self: HttpRequestCachePolicy) -> TimeSpan
 
 
 
-class RequestCacheLevel(Enum, IComparable, IFormattable, IConvertible):
+class RequestCacheLevel:
     """
     Specifies caching behavior for resources obtained using System.Net.WebRequest and its derived classes.
     

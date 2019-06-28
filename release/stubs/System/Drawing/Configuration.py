@@ -2,13 +2,13 @@
 # module System.Drawing.Configuration calls itself Configuration
 # from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class SystemDrawingSection(ConfigurationSection):
+class SystemDrawingSection:
     """ SystemDrawingSection() """
     BitmapSuffix = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: BitmapSuffix(self: SystemDrawingSection) -> str

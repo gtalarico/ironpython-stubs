@@ -2,13 +2,13 @@
 # module System.ComponentModel calls itself ComponentModel
 # from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class AddingNewEventArgs(EventArgs):
+class AddingNewEventArgs:
     """
     Provides data for the System.Windows.Forms.BindingSource.AddingNew event.
     
@@ -33,7 +33,7 @@ Set: NewObject(self: AddingNewEventArgs) = value
 
 
 
-class AddingNewEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class AddingNewEventHandler:
     """
     Represents the method that will handle the System.Windows.Forms.BindingSource.AddingNew event.
     
@@ -60,9 +60,9 @@ class AddingNewEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -89,13 +89,14 @@ class AddingNewEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -112,7 +113,7 @@ class AddingNewEventHandler(MulticastDelegate, ICloneable, ISerializable):
         pass
 
 
-class AmbientValueAttribute(Attribute, _Attribute):
+class AmbientValueAttribute:
     """
     Specifies the value to pass to a property to cause the property to get its value from another source. This is known as ambience. This class cannot be inherited.
     
@@ -132,8 +133,8 @@ class AmbientValueAttribute(Attribute, _Attribute):
         """
         Equals(self: AmbientValueAttribute, obj: object) -> bool
         
-            Determines whether the specified System.ComponentModel.AmbientValueAttribute is equal to the 
-             current System.ComponentModel.AmbientValueAttribute.
+            Determines whether the specified System.ComponentModel.AmbientValueAttribute is equal to 
+             the current System.ComponentModel.AmbientValueAttribute.
         
         
             obj: The System.ComponentModel.AmbientValueAttribute to compare with the current 
@@ -190,7 +191,7 @@ Get: Value(self: AmbientValueAttribute) -> object
 
 
 
-class TypeConverter(object):
+class TypeConverter:
     """
     Provides a unified way of converting types of values to other types, as well as for accessing standard values and subproperties.
     
@@ -198,21 +199,21 @@ class TypeConverter(object):
     """
     def CanConvertFrom(self, *__args):
         """
+        CanConvertFrom(self: TypeConverter, sourceType: Type) -> bool
+        
+            Returns whether this converter can convert an object of the given type to the type of 
+             this converter.
+        
+        
+            sourceType: A System.Type that represents the type you want to convert from.
+            Returns: true if this converter can perform the conversion; otherwise, false.
         CanConvertFrom(self: TypeConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Returns whether this converter can convert an object of the given type to the type of this 
-             converter, using the specified context.
+            Returns whether this converter can convert an object of the given type to the type of 
+             this converter, using the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            sourceType: A System.Type that represents the type you want to convert from.
-            Returns: true if this converter can perform the conversion; otherwise, false.
-        CanConvertFrom(self: TypeConverter, sourceType: Type) -> bool
-        
-            Returns whether this converter can convert an object of the given type to the type of this 
-             converter.
-        
-        
             sourceType: A System.Type that represents the type you want to convert from.
             Returns: true if this converter can perform the conversion; otherwise, false.
         """
@@ -220,19 +221,19 @@ class TypeConverter(object):
 
     def CanConvertTo(self, *__args):
         """
-        CanConvertTo(self: TypeConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
-        
-            Returns whether this converter can convert the object to the specified type, using the specified 
-             context.
-        
-        
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            destinationType: A System.Type that represents the type you want to convert to.
-            Returns: true if this converter can perform the conversion; otherwise, false.
         CanConvertTo(self: TypeConverter, destinationType: Type) -> bool
         
             Returns whether this converter can convert the object to the specified type.
         
+            destinationType: A System.Type that represents the type you want to convert to.
+            Returns: true if this converter can perform the conversion; otherwise, false.
+        CanConvertTo(self: TypeConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
+        
+            Returns whether this converter can convert the object to the specified type, using the 
+             specified context.
+        
+        
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             destinationType: A System.Type that represents the type you want to convert to.
             Returns: true if this converter can perform the conversion; otherwise, false.
         """
@@ -240,20 +241,20 @@ class TypeConverter(object):
 
     def ConvertFrom(self, *__args):
         """
-        ConvertFrom(self: TypeConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object) -> object
-        
-            Converts the given object to the type of this converter, using the specified context and culture 
-             information.
-        
-        
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            culture: The System.Globalization.CultureInfo to use as the current culture.
-            value: The System.Object to convert.
-            Returns: An System.Object that represents the converted value.
         ConvertFrom(self: TypeConverter, value: object) -> object
         
             Converts the given value to the type of this converter.
         
+            value: The System.Object to convert.
+            Returns: An System.Object that represents the converted value.
+        ConvertFrom(self: TypeConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object) -> object
+        
+            Converts the given object to the type of this converter, using the specified context and 
+             culture information.
+        
+        
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
+            culture: The System.Globalization.CultureInfo to use as the current culture.
             value: The System.Object to convert.
             Returns: An System.Object that represents the converted value.
         """
@@ -261,19 +262,19 @@ class TypeConverter(object):
 
     def ConvertFromInvariantString(self, *__args):
         """
-        ConvertFromInvariantString(self: TypeConverter, context: ITypeDescriptorContext, text: str) -> object
-        
-            Converts the given string to the type of this converter, using the invariant culture and the 
-             specified context.
-        
-        
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            text: The System.String to convert.
-            Returns: An System.Object that represents the converted text.
         ConvertFromInvariantString(self: TypeConverter, text: str) -> object
         
             Converts the given string to the type of this converter, using the invariant culture.
         
+            text: The System.String to convert.
+            Returns: An System.Object that represents the converted text.
+        ConvertFromInvariantString(self: TypeConverter, context: ITypeDescriptorContext, text: str) -> object
+        
+            Converts the given string to the type of this converter, using the invariant culture and 
+             the specified context.
+        
+        
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             text: The System.String to convert.
             Returns: An System.Object that represents the converted text.
         """
@@ -281,13 +282,11 @@ class TypeConverter(object):
 
     def ConvertFromString(self, *__args):
         """
-        ConvertFromString(self: TypeConverter, context: ITypeDescriptorContext, culture: CultureInfo, text: str) -> object
+        ConvertFromString(self: TypeConverter, text: str) -> object
         
-            Converts the given text to an object, using the specified context and culture information.
+            Converts the specified text to an object.
         
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            culture: A System.Globalization.CultureInfo. If null is passed, the current culture is assumed.
-            text: The System.String to convert.
+            text: The text representation of the object to convert.
             Returns: An System.Object that represents the converted text.
         ConvertFromString(self: TypeConverter, context: ITypeDescriptorContext, text: str) -> object
         
@@ -296,32 +295,34 @@ class TypeConverter(object):
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             text: The System.String to convert.
             Returns: An System.Object that represents the converted text.
-        ConvertFromString(self: TypeConverter, text: str) -> object
+        ConvertFromString(self: TypeConverter, context: ITypeDescriptorContext, culture: CultureInfo, text: str) -> object
         
-            Converts the specified text to an object.
+            Converts the given text to an object, using the specified context and culture information.
         
-            text: The text representation of the object to convert.
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
+            culture: A System.Globalization.CultureInfo. If null is passed, the current culture is assumed.
+            text: The System.String to convert.
             Returns: An System.Object that represents the converted text.
         """
         pass
 
     def ConvertTo(self, *__args):
         """
-        ConvertTo(self: TypeConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object, destinationType: Type) -> object
-        
-            Converts the given value object to the specified type, using the specified context and culture 
-             information.
-        
-        
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            culture: A System.Globalization.CultureInfo. If null is passed, the current culture is assumed.
-            value: The System.Object to convert.
-            destinationType: The System.Type to convert the value parameter to.
-            Returns: An System.Object that represents the converted value.
         ConvertTo(self: TypeConverter, value: object, destinationType: Type) -> object
         
             Converts the given value object to the specified type, using the arguments.
         
+            value: The System.Object to convert.
+            destinationType: The System.Type to convert the value parameter to.
+            Returns: An System.Object that represents the converted value.
+        ConvertTo(self: TypeConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object, destinationType: Type) -> object
+        
+            Converts the given value object to the specified type, using the specified context and 
+             culture information.
+        
+        
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
+            culture: A System.Globalization.CultureInfo. If null is passed, the current culture is assumed.
             value: The System.Object to convert.
             destinationType: The System.Type to convert the value parameter to.
             Returns: An System.Object that represents the converted value.
@@ -330,19 +331,19 @@ class TypeConverter(object):
 
     def ConvertToInvariantString(self, *__args):
         """
-        ConvertToInvariantString(self: TypeConverter, context: ITypeDescriptorContext, value: object) -> str
-        
-            Converts the specified value to a culture-invariant string representation, using the specified 
-             context.
-        
-        
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            value: The System.Object to convert.
-            Returns: A System.String that represents the converted value.
         ConvertToInvariantString(self: TypeConverter, value: object) -> str
         
             Converts the specified value to a culture-invariant string representation.
         
+            value: The System.Object to convert.
+            Returns: A System.String that represents the converted value.
+        ConvertToInvariantString(self: TypeConverter, context: ITypeDescriptorContext, value: object) -> str
+        
+            Converts the specified value to a culture-invariant string representation, using the 
+             specified context.
+        
+        
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             value: The System.Object to convert.
             Returns: A System.String that represents the converted value.
         """
@@ -350,14 +351,10 @@ class TypeConverter(object):
 
     def ConvertToString(self, *__args):
         """
-        ConvertToString(self: TypeConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object) -> str
+        ConvertToString(self: TypeConverter, value: object) -> str
         
-            Converts the given value to a string representation, using the specified context and culture 
-             information.
+            Converts the specified value to a string representation.
         
-        
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            culture: A System.Globalization.CultureInfo. If null is passed, the current culture is assumed.
             value: The System.Object to convert.
             Returns: An System.Object that represents the converted value.
         ConvertToString(self: TypeConverter, context: ITypeDescriptorContext, value: object) -> str
@@ -367,10 +364,14 @@ class TypeConverter(object):
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             value: The System.Object to convert.
             Returns: An System.Object that represents the converted value.
-        ConvertToString(self: TypeConverter, value: object) -> str
+        ConvertToString(self: TypeConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object) -> str
         
-            Converts the specified value to a string representation.
+            Converts the given value to a string representation, using the specified context and 
+             culture information.
         
+        
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
+            culture: A System.Globalization.CultureInfo. If null is passed, the current culture is assumed.
             value: The System.Object to convert.
             Returns: An System.Object that represents the converted value.
         """
@@ -378,24 +379,25 @@ class TypeConverter(object):
 
     def CreateInstance(self, *__args):
         """
-        CreateInstance(self: TypeConverter, context: ITypeDescriptorContext, propertyValues: IDictionary) -> object
-        
-            Creates an instance of the type that this System.ComponentModel.TypeConverter is associated 
-             with, using the specified context, given a set of property values for the object.
-        
-        
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            propertyValues: An System.Collections.IDictionary of new property values.
-            Returns: An System.Object representing the given System.Collections.IDictionary, or null if the object 
-             cannot be created. This method always returns null.
-        
         CreateInstance(self: TypeConverter, propertyValues: IDictionary) -> object
         
             Re-creates an System.Object given a set of property values for the object.
         
             propertyValues: An System.Collections.IDictionary that represents a dictionary of new property values.
-            Returns: An System.Object representing the given System.Collections.IDictionary, or null if the object 
-             cannot be created. This method always returns null.
+            Returns: An System.Object representing the given System.Collections.IDictionary, or null if the 
+             object cannot be created. This method always returns null.
+        
+        CreateInstance(self: TypeConverter, context: ITypeDescriptorContext, propertyValues: IDictionary) -> object
+        
+            Creates an instance of the type that this System.ComponentModel.TypeConverter is 
+             associated with, using the specified context, given a set of property values for the 
+             object.
+        
+        
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
+            propertyValues: An System.Collections.IDictionary of new property values.
+            Returns: An System.Object representing the given System.Collections.IDictionary, or null if the 
+             object cannot be created. This method always returns null.
         """
         pass
 
@@ -406,7 +408,8 @@ class TypeConverter(object):
             Returns an exception to throw when a conversion cannot be performed.
         
             value: The System.Object to convert, or null if the object is not available.
-            Returns: An System.Exception that represents the exception to throw when a conversion cannot be performed.
+            Returns: An System.Exception that represents the exception to throw when a conversion cannot be 
+             performed.
         """
         pass
 
@@ -418,173 +421,178 @@ class TypeConverter(object):
         
             value: The System.Object to convert, or null if the object is not available.
             destinationType: A System.Type that represents the type the conversion was trying to convert to.
-            Returns: An System.Exception that represents the exception to throw when a conversion cannot be performed.
+            Returns: An System.Exception that represents the exception to throw when a conversion cannot be 
+             performed.
         """
         pass
 
     def GetCreateInstanceSupported(self, context=None):
         """
+        GetCreateInstanceSupported(self: TypeConverter) -> bool
+        
+            Returns whether changing a value on this object requires a call to the 
+             System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) method 
+             to create a new value.
+        
+            Returns: true if changing a property on this object requires a call to 
+             System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to 
+             create a new value; otherwise, false.
+        
         GetCreateInstanceSupported(self: TypeConverter, context: ITypeDescriptorContext) -> bool
         
             Returns whether changing a value on this object requires a call to 
-             System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a 
-             new value, using the specified context.
+             System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to 
+             create a new value, using the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             Returns: true if changing a property on this object requires a call to 
-             System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a 
-             new value; otherwise, false.
-        
-        GetCreateInstanceSupported(self: TypeConverter) -> bool
-        
-            Returns whether changing a value on this object requires a call to the 
-             System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) method to 
-             create a new value.
-        
-            Returns: true if changing a property on this object requires a call to 
-             System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a 
-             new value; otherwise, false.
+             System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to 
+             create a new value; otherwise, false.
         """
         pass
 
     def GetProperties(self, *__args):
         """
-        GetProperties(self: TypeConverter, context: ITypeDescriptorContext, value: object, attributes: Array[Attribute]) -> PropertyDescriptorCollection
-        
-            Returns a collection of properties for the type of array specified by the value parameter, using 
-             the specified context and attributes.
-        
-        
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            value: An System.Object that specifies the type of array for which to get properties.
-            attributes: An array of type System.Attribute that is used as a filter.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed for 
-             this data type, or null if there are no properties.
-        
-        GetProperties(self: TypeConverter, context: ITypeDescriptorContext, value: object) -> PropertyDescriptorCollection
-        
-            Returns a collection of properties for the type of array specified by the value parameter, using 
-             the specified context.
-        
-        
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            value: An System.Object that specifies the type of array for which to get properties.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed for 
-             this data type, or null if there are no properties.
-        
         GetProperties(self: TypeConverter, value: object) -> PropertyDescriptorCollection
         
             Returns a collection of properties for the type of array specified by the value parameter.
         
             value: An System.Object that specifies the type of array for which to get properties.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed for 
-             this data type, or null if there are no properties.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed 
+             for this data type, or null if there are no properties.
+        
+        GetProperties(self: TypeConverter, context: ITypeDescriptorContext, value: object) -> PropertyDescriptorCollection
+        
+            Returns a collection of properties for the type of array specified by the value 
+             parameter, using the specified context.
+        
+        
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
+            value: An System.Object that specifies the type of array for which to get properties.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed 
+             for this data type, or null if there are no properties.
+        
+        GetProperties(self: TypeConverter, context: ITypeDescriptorContext, value: object, attributes: Array[Attribute]) -> PropertyDescriptorCollection
+        
+            Returns a collection of properties for the type of array specified by the value 
+             parameter, using the specified context and attributes.
+        
+        
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
+            value: An System.Object that specifies the type of array for which to get properties.
+            attributes: An array of type System.Attribute that is used as a filter.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed 
+             for this data type, or null if there are no properties.
         """
         pass
 
     def GetPropertiesSupported(self, context=None):
         """
+        GetPropertiesSupported(self: TypeConverter) -> bool
+        
+            Returns whether this object supports properties.
+            Returns: true if System.ComponentModel.TypeConverter.GetProperties(System.Object) should be called 
+             to find the properties of this object; otherwise, false.
+        
         GetPropertiesSupported(self: TypeConverter, context: ITypeDescriptorContext) -> bool
         
             Returns whether this object supports properties, using the specified context.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true if System.ComponentModel.TypeConverter.GetProperties(System.Object) should be called to 
-             find the properties of this object; otherwise, false.
-        
-        GetPropertiesSupported(self: TypeConverter) -> bool
-        
-            Returns whether this object supports properties.
-            Returns: true if System.ComponentModel.TypeConverter.GetProperties(System.Object) should be called to 
-             find the properties of this object; otherwise, false.
+            Returns: true if System.ComponentModel.TypeConverter.GetProperties(System.Object) should be called 
+             to find the properties of this object; otherwise, false.
         """
         pass
 
     def GetStandardValues(self, context=None):
         """
-        GetStandardValues(self: TypeConverter, context: ITypeDescriptorContext) -> StandardValuesCollection
-        
-            Returns a collection of standard values for the data type this type converter is designed for 
-             when provided with a format context.
-        
-        
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context that can be used 
-             to extract additional information about the environment from which this converter is invoked. 
-             This parameter or properties of this parameter can be null.
-        
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of 
-             valid values, or null if the data type does not support a standard set of values.
-        
         GetStandardValues(self: TypeConverter) -> ICollection
         
-            Returns a collection of standard values from the default context for the data type this type 
-             converter is designed for.
+            Returns a collection of standard values from the default context for the data type this 
+             type converter is designed for.
         
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection containing a standard set of 
-             valid values, or null if the data type does not support a standard set of values.
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection containing a standard set 
+             of valid values, or null if the data type does not support a standard set of values.
+        
+        GetStandardValues(self: TypeConverter, context: ITypeDescriptorContext) -> StandardValuesCollection
+        
+            Returns a collection of standard values for the data type this type converter is designed 
+             for when provided with a format context.
+        
+        
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context that can 
+             be used to extract additional information about the environment from which this converter 
+             is invoked. This parameter or properties of this parameter can be null.
+        
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set 
+             of valid values, or null if the data type does not support a standard set of values.
         """
         pass
 
     def GetStandardValuesExclusive(self, context=None):
         """
-        GetStandardValuesExclusive(self: TypeConverter, context: ITypeDescriptorContext) -> bool
-        
-            Returns whether the collection of standard values returned from 
-             System.ComponentModel.TypeConverter.GetStandardValues is an exclusive list of possible values, 
-             using the specified context.
-        
-        
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
-             System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of possible values; 
-             false if other values are possible.
-        
         GetStandardValuesExclusive(self: TypeConverter) -> bool
         
             Returns whether the collection of standard values returned from 
              System.ComponentModel.TypeConverter.GetStandardValues is an exclusive list.
         
             Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
-             System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of possible values; 
-             false if other values are possible.
+             System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of possible 
+             values; false if other values are possible.
+        
+        GetStandardValuesExclusive(self: TypeConverter, context: ITypeDescriptorContext) -> bool
+        
+            Returns whether the collection of standard values returned from 
+             System.ComponentModel.TypeConverter.GetStandardValues is an exclusive list of possible 
+             values, using the specified context.
+        
+        
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
+            Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
+             System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of possible 
+             values; false if other values are possible.
         """
         pass
 
     def GetStandardValuesSupported(self, context=None):
         """
+        GetStandardValuesSupported(self: TypeConverter) -> bool
+        
+            Returns whether this object supports a standard set of values that can be picked from a 
+             list.
+        
+            Returns: true if System.ComponentModel.TypeConverter.GetStandardValues should be called to find a 
+             common set of values the object supports; otherwise, false.
+        
         GetStandardValuesSupported(self: TypeConverter, context: ITypeDescriptorContext) -> bool
         
-            Returns whether this object supports a standard set of values that can be picked from a list, 
-             using the specified context.
+            Returns whether this object supports a standard set of values that can be picked from a 
+             list, using the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true if System.ComponentModel.TypeConverter.GetStandardValues should be called to find a common 
-             set of values the object supports; otherwise, false.
-        
-        GetStandardValuesSupported(self: TypeConverter) -> bool
-        
-            Returns whether this object supports a standard set of values that can be picked from a list.
-            Returns: true if System.ComponentModel.TypeConverter.GetStandardValues should be called to find a common 
-             set of values the object supports; otherwise, false.
+            Returns: true if System.ComponentModel.TypeConverter.GetStandardValues should be called to find a 
+             common set of values the object supports; otherwise, false.
         """
         pass
 
     def IsValid(self, *__args):
         """
-        IsValid(self: TypeConverter, context: ITypeDescriptorContext, value: object) -> bool
-        
-            Returns whether the given value object is valid for this type and for the specified context.
-        
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            value: The System.Object to test for validity.
-            Returns: true if the specified value is valid for this object; otherwise, false.
         IsValid(self: TypeConverter, value: object) -> bool
         
             Returns whether the given value object is valid for this type.
         
             value: The object to test for validity.
+            Returns: true if the specified value is valid for this object; otherwise, false.
+        IsValid(self: TypeConverter, context: ITypeDescriptorContext, value: object) -> bool
+        
+            Returns whether the given value object is valid for this type and for the specified 
+             context.
+        
+        
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
+            value: The System.Object to test for validity.
             Returns: true if the specified value is valid for this object; otherwise, false.
         """
         pass
@@ -605,7 +613,7 @@ class TypeConverter(object):
     StandardValuesCollection = None
 
 
-class CollectionConverter(TypeConverter):
+class CollectionConverter:
     """
     Provides a type converter to convert collection objects to and from various other representations.
     
@@ -619,7 +627,9 @@ class CollectionConverter(TypeConverter):
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             culture: The culture to which value will be converted.
-            value: The System.Object to convert. This parameter must inherit from System.Collections.ICollection.
+            value: The System.Object to convert. This parameter must inherit from 
+             System.Collections.ICollection.
+        
             destinationType: The System.Type to convert the value to.
             Returns: An System.Object that represents the converted value.
         """
@@ -629,15 +639,15 @@ class CollectionConverter(TypeConverter):
         """
         GetProperties(self: CollectionConverter, context: ITypeDescriptorContext, value: object, attributes: Array[Attribute]) -> PropertyDescriptorCollection
         
-            Gets a collection of properties for the type of array specified by the value parameter using the 
-             specified context and attributes.
+            Gets a collection of properties for the type of array specified by the value parameter 
+             using the specified context and attributes.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             value: An System.Object that specifies the type of array to get the properties for.
             attributes: An array of type System.Attribute that will be used as a filter.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed for 
-             this data type, or null if there are no properties. This method always returns null.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed 
+             for this data type, or null if there are no properties. This method always returns null.
         """
         pass
 
@@ -649,14 +659,14 @@ class CollectionConverter(TypeConverter):
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             Returns: false because 
-             System.ComponentModel.CollectionConverter.GetProperties(System.ComponentModel.ITypeDescriptorCont
-             ext,System.Object,System.Attribute[]) should not be called to find the properties of this 
-             object. This method never returns true.
+             System.ComponentModel.CollectionConverter.GetProperties(System.ComponentModel.ITypeDescrip
+             torContext,System.Object,System.Attribute[]) should not be called to find the properties 
+             of this object. This method never returns true.
         """
         pass
 
 
-class ArrayConverter(CollectionConverter):
+class ArrayConverter:
     """
     Provides a type converter to convert System.Array objects to and from various other representations.
     
@@ -685,8 +695,8 @@ class ArrayConverter(CollectionConverter):
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             value: An System.Object that specifies the type of array to get the properties for.
             attributes: An array of type System.Attribute that will be used as a filter.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed for an 
-             array, or null if there are no properties.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed 
+             for an array, or null if there are no properties.
         """
         pass
 
@@ -698,14 +708,14 @@ class ArrayConverter(CollectionConverter):
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             Returns: true because 
-             System.ComponentModel.ArrayConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,S
-             ystem.Object,System.Attribute[]) should be called to find the properties of this object. This 
-             method never returns false.
+             System.ComponentModel.ArrayConverter.GetProperties(System.ComponentModel.ITypeDescriptorCo
+             ntext,System.Object,System.Attribute[]) should be called to find the properties of this 
+             object. This method never returns false.
         """
         pass
 
 
-class AsyncCompletedEventArgs(EventArgs):
+class AsyncCompletedEventArgs:
     """
     Provides data for the MethodNameCompleted event.
     
@@ -750,7 +760,7 @@ Get: UserState(self: AsyncCompletedEventArgs) -> object
 
 
 
-class AsyncCompletedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class AsyncCompletedEventHandler:
     """
     Represents the method that will handle the MethodNameCompleted event of an asynchronous operation.
     
@@ -777,9 +787,9 @@ class AsyncCompletedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -806,13 +816,14 @@ class AsyncCompletedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -829,7 +840,7 @@ class AsyncCompletedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         pass
 
 
-class AsyncOperation(object):
+class AsyncOperation:
     """ Tracks the lifetime of an asynchronous operation. """
     def OperationCompleted(self):
         """
@@ -843,8 +854,8 @@ class AsyncOperation(object):
         Post(self: AsyncOperation, d: SendOrPostCallback, arg: object)
             Invokes a delegate on the thread or context appropriate for the application model.
         
-            d: A System.Threading.SendOrPostCallback object that wraps the delegate to be called when the 
-             operation ends.
+            d: A System.Threading.SendOrPostCallback object that wraps the delegate to be called when 
+             the operation ends.
         
             arg: An argument for the delegate contained in the d parameter.
         """
@@ -855,8 +866,8 @@ class AsyncOperation(object):
         PostOperationCompleted(self: AsyncOperation, d: SendOrPostCallback, arg: object)
             Ends the lifetime of an asynchronous operation.
         
-            d: A System.Threading.SendOrPostCallback object that wraps the delegate to be called when the 
-             operation ends.
+            d: A System.Threading.SendOrPostCallback object that wraps the delegate to be called when 
+             the operation ends.
         
             arg: An argument for the delegate contained in the d parameter.
         """
@@ -878,7 +889,7 @@ Get: UserSuppliedState(self: AsyncOperation) -> object
 
 
 
-class AsyncOperationManager(object):
+class AsyncOperationManager:
     """ Provides concurrency management for classes that support asynchronous method calls. This class cannot be inherited. """
     @staticmethod
     def CreateOperation(userSuppliedState):
@@ -903,7 +914,7 @@ class AsyncOperationManager(object):
     ]
 
 
-class AttributeCollection(object, ICollection, IEnumerable):
+class AttributeCollection:
     """
     Represents a collection of attributes.
     
@@ -911,6 +922,14 @@ class AttributeCollection(object, ICollection, IEnumerable):
     """
     def Contains(self, *__args):
         """
+        Contains(self: AttributeCollection, attribute: Attribute) -> bool
+        
+            Determines whether this collection of attributes has the specified attribute.
+        
+            attribute: An System.Attribute to find in the collection.
+            Returns: true if the collection contains the attribute or is the default attribute for the type of 
+             attribute; otherwise, false.
+        
         Contains(self: AttributeCollection, attributes: Array[Attribute]) -> bool
         
             Determines whether this attribute collection contains all the specified attributes in the 
@@ -918,14 +937,7 @@ class AttributeCollection(object, ICollection, IEnumerable):
         
         
             attributes: An array of type System.Attribute to find in the collection.
-            Returns: true if the collection contains all the attributes; otherwise, false.
-        Contains(self: AttributeCollection, attribute: Attribute) -> bool
-        
-            Determines whether this collection of attributes has the specified attribute.
-        
-            attribute: An System.Attribute to find in the collection.
-            Returns: true if the collection contains the attribute or is the default attribute for the type of 
-             attribute; otherwise, false.
+            Returns: true if the collection contains all the attributes; otherwise, false.
         """
         pass
 
@@ -949,7 +961,9 @@ class AttributeCollection(object, ICollection, IEnumerable):
         
         
             existing: An System.ComponentModel.AttributeCollection from which to create the copy.
-            newAttributes: An array of type System.Attribute that provides the attributes for this collection. Can be null.
+            newAttributes: An array of type System.Attribute that provides the attributes for this collection. Can 
+             be null.
+        
             Returns: A new System.ComponentModel.AttributeCollection that is a copy of existing.
         """
         pass
@@ -976,23 +990,25 @@ class AttributeCollection(object, ICollection, IEnumerable):
 
     def Matches(self, *__args):
         """
-        Matches(self: AttributeCollection, attributes: Array[Attribute]) -> bool
-        
-            Determines whether the attributes in the specified array are the same as the attributes in the 
-             collection.
-        
-        
-            attributes: An array of System.CodeDom.MemberAttributes to compare with the attributes in this collection.
-            Returns: true if all the attributes in the array are contained in the collection and have the same values 
-             as the attributes in the collection; otherwise, false.
-        
         Matches(self: AttributeCollection, attribute: Attribute) -> bool
         
             Determines whether a specified attribute is the same as an attribute in the collection.
         
             attribute: An instance of System.Attribute to compare with the attributes in this collection.
-            Returns: true if the attribute is contained within the collection and has the same value as the attribute 
-             in the collection; otherwise, false.
+            Returns: true if the attribute is contained within the collection and has the same value as the 
+             attribute in the collection; otherwise, false.
+        
+        Matches(self: AttributeCollection, attributes: Array[Attribute]) -> bool
+        
+            Determines whether the attributes in the specified array are the same as the attributes 
+             in the collection.
+        
+        
+            attributes: An array of System.CodeDom.MemberAttributes to compare with the attributes in this 
+             collection.
+        
+            Returns: true if all the attributes in the array are contained in the collection and have the same 
+             values as the attributes in the collection; otherwise, false.
         """
         pass
 
@@ -1040,7 +1056,7 @@ Get: Count(self: AttributeCollection) -> int
     Empty = None
 
 
-class AttributeProviderAttribute(Attribute, _Attribute):
+class AttributeProviderAttribute:
     """
     Enables attribute redirection. This class cannot be inherited.
     
@@ -1077,7 +1093,7 @@ Get: TypeName(self: AttributeProviderAttribute) -> str
 
 
 
-class Component(MarshalByRefObject, IComponent, IDisposable):
+class Component:
     """
     Provides the base implementation for the System.ComponentModel.IComponent interface and enables object sharing between applications.
     
@@ -1094,13 +1110,14 @@ class Component(MarshalByRefObject, IComponent, IDisposable):
         """
         GetService(self: Component, service: Type) -> object
         
-            Returns an object that represents a service provided by the System.ComponentModel.Component or 
-             by its System.ComponentModel.Container.
+            Returns an object that represents a service provided by the 
+             System.ComponentModel.Component or by its System.ComponentModel.Container.
         
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or 
-             null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the 
+             System.ComponentModel.Component, or null if the System.ComponentModel.Component does not 
+             provide the specified service.
         """
         pass
 
@@ -1110,11 +1127,11 @@ class Component(MarshalByRefObject, IComponent, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -1128,27 +1145,20 @@ class Component(MarshalByRefObject, IComponent, IDisposable):
         """
         ToString(self: Component) -> str
         
-            Returns a System.String containing the name of the System.ComponentModel.Component, if any. This 
-             method should not be overridden.
+            Returns a System.String containing the name of the System.ComponentModel.Component, if 
+             any. This method should not be overridden.
         
-            Returns: A System.String containing the name of the System.ComponentModel.Component, if any, or null if 
-             the System.ComponentModel.Component is unnamed.
+            Returns: A System.String containing the name of the System.ComponentModel.Component, if any, or 
+             null if the System.ComponentModel.Component is unnamed.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1192,7 +1202,7 @@ Set: Site(self: Component) = value
     Disposed = None
 
 
-class BackgroundWorker(Component, IComponent, IDisposable):
+class BackgroundWorker:
     """
     Executes an operation on a separate thread.
     
@@ -1208,11 +1218,12 @@ class BackgroundWorker(Component, IComponent, IDisposable):
     def Dispose(self):
         """
         Dispose(self: Component, disposing: bool)
-            Releases the unmanaged resources used by the System.ComponentModel.Component and optionally 
-             releases the managed resources.
+            Releases the unmanaged resources used by the System.ComponentModel.Component and 
+             optionally releases the managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
@@ -1220,13 +1231,14 @@ class BackgroundWorker(Component, IComponent, IDisposable):
         """
         GetService(self: Component, service: Type) -> object
         
-            Returns an object that represents a service provided by the System.ComponentModel.Component or 
-             by its System.ComponentModel.Container.
+            Returns an object that represents a service provided by the 
+             System.ComponentModel.Component or by its System.ComponentModel.Container.
         
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or 
-             null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the 
+             System.ComponentModel.Component, or null if the System.ComponentModel.Component does not 
+             provide the specified service.
         """
         pass
 
@@ -1236,11 +1248,11 @@ class BackgroundWorker(Component, IComponent, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -1279,44 +1291,37 @@ class BackgroundWorker(Component, IComponent, IDisposable):
 
     def ReportProgress(self, percentProgress, userState=None):
         """
+        ReportProgress(self: BackgroundWorker, percentProgress: int)
+            Raises the System.ComponentModel.BackgroundWorker.ProgressChanged event.
+        
+            percentProgress: The percentage, from 0 to 100, of the background operation that is complete.
         ReportProgress(self: BackgroundWorker, percentProgress: int, userState: object)
             Raises the System.ComponentModel.BackgroundWorker.ProgressChanged event.
         
             percentProgress: The percentage, from 0 to 100, of the background operation that is complete.
-            userState: The state object passed to System.ComponentModel.BackgroundWorker.RunWorkerAsync(System.Object).
-        ReportProgress(self: BackgroundWorker, percentProgress: int)
-            Raises the System.ComponentModel.BackgroundWorker.ProgressChanged event.
-        
-            percentProgress: The percentage, from 0 to 100, of the background operation that is complete.
+            userState: The state object passed to 
+             System.ComponentModel.BackgroundWorker.RunWorkerAsync(System.Object).
         """
         pass
 
     def RunWorkerAsync(self, argument=None):
         """
+        RunWorkerAsync(self: BackgroundWorker)
+            Starts execution of a background operation.
         RunWorkerAsync(self: BackgroundWorker, argument: object)
             Starts execution of a background operation.
         
             argument: A parameter for use by the background operation to be executed in the 
-             System.ComponentModel.BackgroundWorker.DoWork event handler.
-        
-        RunWorkerAsync(self: BackgroundWorker)
-            Starts execution of a background operation.
+             System.ComponentModel.BackgroundWorker.DoWork event handler.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1377,14 +1382,14 @@ Set: WorkerSupportsCancellation(self: BackgroundWorker) = value
     RunWorkerCompleted = None
 
 
-class BaseNumberConverter(TypeConverter):
+class BaseNumberConverter:
     """ Provides a base type converter for nonfloating-point numerical types. """
     def CanConvertFrom(self, *__args):
         """
         CanConvertFrom(self: BaseNumberConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Determines if this converter can convert an object in the given source type to the native type 
-             of the converter.
+            Determines if this converter can convert an object in the given source type to the native 
+             type of the converter.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -1397,8 +1402,8 @@ class BaseNumberConverter(TypeConverter):
         """
         CanConvertTo(self: BaseNumberConverter, context: ITypeDescriptorContext, t: Type) -> bool
         
-            Returns a value indicating whether this converter can convert an object to the given destination 
-             type using the context.
+            Returns a value indicating whether this converter can convert an object to the given 
+             destination type using the context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -1435,7 +1440,7 @@ class BaseNumberConverter(TypeConverter):
         pass
 
 
-class BindableAttribute(Attribute, _Attribute):
+class BindableAttribute:
     """
     Specifies whether a member is typically used for binding. This class cannot be inherited.
     
@@ -1515,7 +1520,7 @@ Get: Direction(self: BindableAttribute) -> BindingDirection
     Yes = None
 
 
-class BindableSupport(Enum, IComparable, IFormattable, IConvertible):
+class BindableSupport:
     """
     Specifies values to indicate whether a property can be bound to a data element or another property.
     
@@ -1560,7 +1565,7 @@ class BindableSupport(Enum, IComparable, IFormattable, IConvertible):
     Yes = None
 
 
-class BindingDirection(Enum, IComparable, IFormattable, IConvertible):
+class BindingDirection:
     """
     Specifies whether the template can be bound one way or two ways.
     
@@ -1604,7 +1609,7 @@ class BindingDirection(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class IBindingList(IList, ICollection, IEnumerable):
+class IBindingList:
     """ Provides the features required to support both complex and simple scenarios when binding to a data source. """
     def AddIndex(self, property):
         """
@@ -1653,7 +1658,8 @@ class IBindingList(IList, ICollection, IEnumerable):
         RemoveIndex(self: IBindingList, property: PropertyDescriptor)
             Removes the System.ComponentModel.PropertyDescriptor from the indexes used for searching.
         
-            property: The System.ComponentModel.PropertyDescriptor to remove from the indexes used for searching.
+            property: The System.ComponentModel.PropertyDescriptor to remove from the indexes used for 
+             searching.
         """
         pass
 
@@ -1661,8 +1667,8 @@ class IBindingList(IList, ICollection, IEnumerable):
         """
         RemoveSort(self: IBindingList)
             Removes any sort applied using 
-             System.ComponentModel.IBindingList.ApplySort(System.ComponentModel.PropertyDescriptor,System.Comp
-             onentModel.ListSortDirection).
+             System.ComponentModel.IBindingList.ApplySort(System.ComponentModel.PropertyDescriptor,Syst
+             em.ComponentModel.ListSortDirection).
         """
         pass
 
@@ -1796,7 +1802,7 @@ Get: RaisesItemChangedEvents(self: IRaiseItemChangedEvents) -> bool
 
 
 
-class BindingList(Collection[T], IList[T], ICollection[T], IEnumerable[T], IEnumerable, IList, ICollection, IReadOnlyList[T], IReadOnlyCollection[T], IBindingList, ICancelAddNew, IRaiseItemChangedEvents):
+class BindingList:
     """
     BindingList[T]()
     BindingList[T](list: IList[T])
@@ -1860,15 +1866,15 @@ class BindingList(Collection[T], IList[T], ICollection[T], IEnumerable[T], IEnum
         """
         FindCore(self: BindingList[T], prop: PropertyDescriptor, key: object) -> int
         
-            Searches for the index of the item that has the specified property descriptor with the specified 
-             value, if searching is implemented in a derived class; otherwise, a 
+            Searches for the index of the item that has the specified property descriptor with the 
+             specified value, if searching is implemented in a derived class; otherwise, a 
              System.NotSupportedException.
         
         
             prop: The System.ComponentModel.PropertyDescriptor to search for.
             key: The value of property to match.
-            Returns: The zero-based index of the item that matches the property descriptor and contains the specified 
-             value.
+            Returns: The zero-based index of the item that matches the property descriptor and contains the 
+             specified value.
         """
         pass
 
@@ -1912,8 +1918,8 @@ class BindingList(Collection[T], IList[T], ICollection[T], IEnumerable[T], IEnum
     def RemoveSortCore(self, *args): #cannot find CLR method
         """
         RemoveSortCore(self: BindingList[T])
-            Removes any sort applied with System.ComponentModel.BindingList if sorting is implemented in a 
-             derived class; otherwise, raises System.NotSupportedException.
+            Removes any sort applied with System.ComponentModel.BindingList if sorting is implemented 
+             in a derived class; otherwise, raises System.NotSupportedException.
         """
         pass
 
@@ -1942,7 +1948,8 @@ class BindingList(Collection[T], IList[T], ICollection[T], IEnumerable[T], IEnum
             Replaces the item at the specified index with the specified item.
         
             index: The zero-based index of the item to replace.
-            item: The new value for the item at the specified index. The value can be null for reference types.
+            item: The new value for the item at the specified index. The value can be null for reference 
+             types.
         """
         pass
 
@@ -2045,7 +2052,7 @@ Set: RaiseListChangedEvents(self: BindingList[T]) = value
     ListChanged = None
 
 
-class BooleanConverter(TypeConverter):
+class BooleanConverter:
     """
     Provides a type converter to convert System.Boolean objects to and from various other representations.
     
@@ -2055,8 +2062,8 @@ class BooleanConverter(TypeConverter):
         """
         CanConvertFrom(self: BooleanConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object in the given source type to 
-             a Boolean object using the specified context.
+            Gets a value indicating whether this converter can convert an object in the given source 
+             type to a Boolean object using the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -2085,8 +2092,8 @@ class BooleanConverter(TypeConverter):
             Gets a collection of standard values for the Boolean data type.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of 
-             valid values.
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set 
+             of valid values.
         """
         pass
 
@@ -2095,14 +2102,15 @@ class BooleanConverter(TypeConverter):
         GetStandardValuesExclusive(self: BooleanConverter, context: ITypeDescriptorContext) -> bool
         
             Gets a value indicating whether the list of standard values returned from the 
-             System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorCon
-             text) method is an exclusive list.
+             System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescri
+             ptorContext) method is an exclusive list.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true because the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
-             System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorCon
-             text) is an exhaustive list of possible values. This method never returns false.
+            Returns: true because the System.ComponentModel.TypeConverter.StandardValuesCollection returned 
+             from 
+             System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescri
+             ptorContext) is an exhaustive list of possible values. This method never returns false.
         """
         pass
 
@@ -2110,20 +2118,20 @@ class BooleanConverter(TypeConverter):
         """
         GetStandardValuesSupported(self: BooleanConverter, context: ITypeDescriptorContext) -> bool
         
-            Gets a value indicating whether this object supports a standard set of values that can be picked 
-             from a list.
+            Gets a value indicating whether this object supports a standard set of values that can be 
+             picked from a list.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             Returns: true because 
-             System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorCon
-             text) can be called to find a common set of values the object supports. This method never 
-             returns false.
+             System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescri
+             ptorContext) can be called to find a common set of values the object supports. This 
+             method never returns false.
         """
         pass
 
 
-class BrowsableAttribute(Attribute, _Attribute):
+class BrowsableAttribute:
     """
     Specifies whether a property or event should be displayed in a Properties window.
     
@@ -2187,14 +2195,14 @@ Get: Browsable(self: BrowsableAttribute) -> bool
     Yes = None
 
 
-class ByteConverter(BaseNumberConverter):
+class ByteConverter:
     """
     Provides a type converter to convert 8-bit unsigned integer objects to and from various other representations.
     
     ByteConverter()
     """
 
-class CancelEventArgs(EventArgs):
+class CancelEventArgs:
     """
     Provides data for a cancelable event.
     
@@ -2219,7 +2227,7 @@ Set: Cancel(self: CancelEventArgs) = value
 
 
 
-class CancelEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class CancelEventHandler:
     """
     Represents the method that handles a cancelable event.
     
@@ -2246,9 +2254,9 @@ class CancelEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -2275,13 +2283,14 @@ class CancelEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -2298,7 +2307,7 @@ class CancelEventHandler(MulticastDelegate, ICloneable, ISerializable):
         pass
 
 
-class CategoryAttribute(Attribute, _Attribute):
+class CategoryAttribute:
     """
     Specifies the name of the category in which to group the property or event when displayed in a System.Windows.Forms.PropertyGrid control set to Categorized mode.
     
@@ -2390,7 +2399,7 @@ Get: Category(self: CategoryAttribute) -> str
     WindowStyle = None
 
 
-class CharConverter(TypeConverter):
+class CharConverter:
     """
     Provides a type converter to convert Unicode character objects to and from various other representations.
     
@@ -2400,8 +2409,8 @@ class CharConverter(TypeConverter):
         """
         CanConvertFrom(self: CharConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object in the given source type to 
-             a Unicode character object using the specified context.
+            Gets a value indicating whether this converter can convert an object in the given source 
+             type to a Unicode character object using the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -2438,7 +2447,7 @@ class CharConverter(TypeConverter):
         pass
 
 
-class CollectionChangeAction(Enum, IComparable, IFormattable, IConvertible):
+class CollectionChangeAction:
     """
     Specifies how the collection is changed.
     
@@ -2483,7 +2492,7 @@ class CollectionChangeAction(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class CollectionChangeEventArgs(EventArgs):
+class CollectionChangeEventArgs:
     """
     Provides data for the System.Data.DataColumnCollection.CollectionChanged event.
     
@@ -2510,7 +2519,7 @@ Get: Element(self: CollectionChangeEventArgs) -> object
 
 
 
-class CollectionChangeEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class CollectionChangeEventHandler:
     """
     Represents the method that handles the System.Data.DataColumnCollection.CollectionChanged event raised when adding elements to or removing elements from a collection.
     
@@ -2537,9 +2546,9 @@ class CollectionChangeEventHandler(MulticastDelegate, ICloneable, ISerializable)
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -2566,13 +2575,14 @@ class CollectionChangeEventHandler(MulticastDelegate, ICloneable, ISerializable)
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -2589,7 +2599,7 @@ class CollectionChangeEventHandler(MulticastDelegate, ICloneable, ISerializable)
         pass
 
 
-class ComplexBindingPropertiesAttribute(Attribute, _Attribute):
+class ComplexBindingPropertiesAttribute:
     """
     Specifies the data source and data member properties for a component that supports complex data binding. This class cannot be inherited.
     
@@ -2608,8 +2618,8 @@ class ComplexBindingPropertiesAttribute(Attribute, _Attribute):
             obj: The System.Object to compare with the current 
              System.ComponentModel.ComplexBindingPropertiesAttribute instance
         
-            Returns: true if the object is equal to the current instance; otherwise, false, indicating they are not 
-             equal.
+            Returns: true if the object is equal to the current instance; otherwise, false, indicating they 
+             are not equal.
         """
         pass
 
@@ -2658,7 +2668,7 @@ Get: DataSource(self: ComplexBindingPropertiesAttribute) -> str
     Default = None
 
 
-class ComponentCollection(ReadOnlyCollectionBase, ICollection, IEnumerable):
+class ComponentCollection:
     """
     Provides a read-only container for a collection of System.ComponentModel.IComponent objects.
     
@@ -2698,7 +2708,7 @@ class ComponentCollection(ReadOnlyCollectionBase, ICollection, IEnumerable):
 
 
 
-class ReferenceConverter(TypeConverter):
+class ReferenceConverter:
     """
     Provides a type converter to convert object references to and from other representations.
     
@@ -2708,8 +2718,8 @@ class ReferenceConverter(TypeConverter):
         """
         CanConvertFrom(self: ReferenceConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object in the given source type to 
-             a reference object using the specified context.
+            Gets a value indicating whether this converter can convert an object in the given source 
+             type to a reference object using the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -2735,7 +2745,9 @@ class ReferenceConverter(TypeConverter):
         """
         ConvertTo(self: ReferenceConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object, destinationType: Type) -> object
         
-            Converts the given value object to the reference type using the specified context and arguments.
+            Converts the given value object to the reference type using the specified context and 
+             arguments.
+        
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             culture: A System.Globalization.CultureInfo that specifies the culture used to represent the font.
@@ -2752,8 +2764,8 @@ class ReferenceConverter(TypeConverter):
             Gets a collection of standard values for the reference data type.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of 
-             valid values, or null if the data type does not support a standard set of values.
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set 
+             of valid values, or null if the data type does not support a standard set of values.
         """
         pass
 
@@ -2762,14 +2774,15 @@ class ReferenceConverter(TypeConverter):
         GetStandardValuesExclusive(self: ReferenceConverter, context: ITypeDescriptorContext) -> bool
         
             Gets a value indicating whether the list of standard values returned from 
-             System.ComponentModel.ReferenceConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorC
-             ontext) is an exclusive list.
+             System.ComponentModel.ReferenceConverter.GetStandardValues(System.ComponentModel.ITypeDesc
+             riptorContext) is an exclusive list.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true because the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
-             System.ComponentModel.ReferenceConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorC
-             ontext) is an exhaustive list of possible values. This method never returns false.
+            Returns: true because the System.ComponentModel.TypeConverter.StandardValuesCollection returned 
+             from 
+             System.ComponentModel.ReferenceConverter.GetStandardValues(System.ComponentModel.ITypeDesc
+             riptorContext) is an exhaustive list of possible values. This method never returns false.
         """
         pass
 
@@ -2777,15 +2790,15 @@ class ReferenceConverter(TypeConverter):
         """
         GetStandardValuesSupported(self: ReferenceConverter, context: ITypeDescriptorContext) -> bool
         
-            Gets a value indicating whether this object supports a standard set of values that can be picked 
-             from a list.
+            Gets a value indicating whether this object supports a standard set of values that can be 
+             picked from a list.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             Returns: true because 
-             System.ComponentModel.ReferenceConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorC
-             ontext) can be called to find a common set of values the object supports. This method never 
-             returns false.
+             System.ComponentModel.ReferenceConverter.GetStandardValues(System.ComponentModel.ITypeDesc
+             riptorContext) can be called to find a common set of values the object supports. This 
+             method never returns false.
         """
         pass
 
@@ -2799,8 +2812,8 @@ class ReferenceConverter(TypeConverter):
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides an additional context.
             value: The value to check.
-            Returns: true if the value is allowed and can be added to the standard values collection; false if the 
-             value cannot be added to the standard values collection.
+            Returns: true if the value is allowed and can be added to the standard values collection; false if 
+             the value cannot be added to the standard values collection.
         """
         pass
 
@@ -2810,7 +2823,7 @@ class ReferenceConverter(TypeConverter):
         pass
 
 
-class ComponentConverter(ReferenceConverter):
+class ComponentConverter:
     """
     Provides a type converter to convert components to and from various other representations.
     
@@ -2820,13 +2833,15 @@ class ComponentConverter(ReferenceConverter):
         """
         GetProperties(self: ComponentConverter, context: ITypeDescriptorContext, value: object, attributes: Array[Attribute]) -> PropertyDescriptorCollection
         
-            Gets a collection of properties for the type of component specified by the value parameter.
+            Gets a collection of properties for the type of component specified by the value 
+             parameter.
+        
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             value: An System.Object that specifies the type of component to get the properties for.
             attributes: An array of type System.Attribute that will be used as a filter.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed for 
-             the component, or null if there are no properties.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed 
+             for the component, or null if there are no properties.
         """
         pass
 
@@ -2834,11 +2849,13 @@ class ComponentConverter(ReferenceConverter):
         """
         GetPropertiesSupported(self: ComponentConverter, context: ITypeDescriptorContext) -> bool
         
-            Gets a value indicating whether this object supports properties using the specified context.
+            Gets a value indicating whether this object supports properties using the specified 
+             context.
+        
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true because System.ComponentModel.TypeConverter.GetProperties(System.Object) should be called 
-             to find the properties of this object. This method never returns false.
+            Returns: true because System.ComponentModel.TypeConverter.GetProperties(System.Object) should be 
+             called to find the properties of this object. This method never returns false.
         """
         pass
 
@@ -2848,30 +2865,30 @@ class ComponentConverter(ReferenceConverter):
         pass
 
 
-class ComponentEditor(object):
+class ComponentEditor:
     """ Provides the base class for a custom component editor. """
     def EditComponent(self, *__args):
         """
-        EditComponent(self: ComponentEditor, context: ITypeDescriptorContext, component: object) -> bool
-        
-            Edits the component and returns a value indicating whether the component was modified based upon 
-             a given context.
-        
-        
-            context: An optional context object that can be used to obtain further information about the edit.
-            component: The component to be edited.
-            Returns: true if the component was modified; otherwise, false.
         EditComponent(self: ComponentEditor, component: object) -> bool
         
             Edits the component and returns a value indicating whether the component was modified.
         
+            component: The component to be edited.
+            Returns: true if the component was modified; otherwise, false.
+        EditComponent(self: ComponentEditor, context: ITypeDescriptorContext, component: object) -> bool
+        
+            Edits the component and returns a value indicating whether the component was modified 
+             based upon a given context.
+        
+        
+            context: An optional context object that can be used to obtain further information about the edit.
             component: The component to be edited.
             Returns: true if the component was modified; otherwise, false.
         """
         pass
 
 
-class ComponentResourceManager(ResourceManager):
+class ComponentResourceManager:
     """
     Provides simple functionality for enumerating resources for a component or object. The System.ComponentModel.ComponentResourceManager class is a System.Resources.ResourceManager.
     
@@ -2880,17 +2897,17 @@ class ComponentResourceManager(ResourceManager):
     """
     def ApplyResources(self, value, objectName, culture=None):
         """
+        ApplyResources(self: ComponentResourceManager, value: object, objectName: str)
+            Applies a resource's value to the corresponding property of the object.
+        
+            value: An System.Object that contains the property value to be applied.
+            objectName: A System.String that contains the name of the object to look up in the resources.
         ApplyResources(self: ComponentResourceManager, value: object, objectName: str, culture: CultureInfo)
             Applies a resource's value to the corresponding property of the object.
         
             value: An System.Object that contains the property value to be applied.
             objectName: A System.String that contains the name of the object to look up in the resources.
-            culture: The culture for which to apply resources.
-        ApplyResources(self: ComponentResourceManager, value: object, objectName: str)
-            Applies a resource's value to the corresponding property of the object.
-        
-            value: An System.Object that contains the property value to be applied.
-            objectName: A System.String that contains the name of the object to look up in the resources.
+            culture: The culture for which to apply resources.
         """
         pass
 
@@ -2913,7 +2930,7 @@ class ComponentResourceManager(ResourceManager):
     ResourceSets = None
 
 
-class Container(object, IContainer, IDisposable):
+class Container:
     """
     Encapsulates zero or more components.
     
@@ -2921,21 +2938,20 @@ class Container(object, IContainer, IDisposable):
     """
     def Add(self, component, name=None):
         """
+        Add(self: Container, component: IComponent)
+            Adds the specified System.ComponentModel.Component to the 
+             System.ComponentModel.Container. The component is unnamed.
+        
+        
+            component: The component to add.
         Add(self: Container, component: IComponent, name: str)
-            Adds the specified System.ComponentModel.Component to the System.ComponentModel.Container and 
-             assigns it a name.
+            Adds the specified System.ComponentModel.Component to the System.ComponentModel.Container 
+             and assigns it a name.
         
         
             component: The component to add.
             name: The unique, case-insensitive name to assign to the component.-or- null, which leaves the 
-             component unnamed.
-        
-        Add(self: Container, component: IComponent)
-            Adds the specified System.ComponentModel.Component to the System.ComponentModel.Container. The 
-             component is unnamed.
-        
-        
-            component: The component to add.
+             component unnamed.
         """
         pass
 
@@ -2943,8 +2959,8 @@ class Container(object, IContainer, IDisposable):
         """
         CreateSite(self: Container, component: IComponent, name: str) -> ISite
         
-            Creates a site System.ComponentModel.ISite for the given System.ComponentModel.IComponent and 
-             assigns the given name to the site.
+            Creates a site System.ComponentModel.ISite for the given System.ComponentModel.IComponent 
+             and assigns the given name to the site.
         
         
             component: The System.ComponentModel.IComponent to create a site for.
@@ -2967,7 +2983,8 @@ class Container(object, IContainer, IDisposable):
             Gets the service object of the specified type, if it is available.
         
             service: The System.Type of the service to retrieve.
-            Returns: An System.Object implementing the requested service, or null if the service cannot be resolved.
+            Returns: An System.Object implementing the requested service, or null if the service cannot be 
+             resolved.
         """
         pass
 
@@ -3006,18 +3023,11 @@ class Container(object, IContainer, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -3037,7 +3047,7 @@ Get: Components(self: Container) -> ComponentCollection
 
 
 
-class ContainerFilterService(object):
+class ContainerFilterService:
     """ Provides a base class for the container filter service. """
     def FilterComponents(self, components):
         """
@@ -3051,7 +3061,7 @@ class ContainerFilterService(object):
         pass
 
 
-class CultureInfoConverter(TypeConverter):
+class CultureInfoConverter:
     """
     Provides a type converter to convert System.Globalization.CultureInfo objects to and from various other representations.
     
@@ -3061,8 +3071,8 @@ class CultureInfoConverter(TypeConverter):
         """
         CanConvertFrom(self: CultureInfoConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object in the given source type to 
-             a System.Globalization.CultureInfo using the specified context.
+            Gets a value indicating whether this converter can convert an object in the given source 
+             type to a System.Globalization.CultureInfo using the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -3075,8 +3085,8 @@ class CultureInfoConverter(TypeConverter):
         """
         CanConvertTo(self: CultureInfoConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object to the given destination 
-             type using the context.
+            Gets a value indicating whether this converter can convert an object to the given 
+             destination type using the context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -3127,13 +3137,13 @@ class CultureInfoConverter(TypeConverter):
         """
         GetStandardValues(self: CultureInfoConverter, context: ITypeDescriptorContext) -> StandardValuesCollection
         
-            Gets a collection of standard values for a System.Globalization.CultureInfo object using the 
-             specified context.
+            Gets a collection of standard values for a System.Globalization.CultureInfo object using 
+             the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection containing a standard set of 
-             valid values, or null if the data type does not support a standard set of values.
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection containing a standard set 
+             of valid values, or null if the data type does not support a standard set of values.
         """
         pass
 
@@ -3142,15 +3152,16 @@ class CultureInfoConverter(TypeConverter):
         GetStandardValuesExclusive(self: CultureInfoConverter, context: ITypeDescriptorContext) -> bool
         
             Gets a value indicating whether the list of standard values returned from 
-             System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDescripto
-             rContext) is an exhaustive list.
+             System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDe
+             scriptorContext) is an exhaustive list.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: false because the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
-             System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDescripto
-             rContext) is not an exhaustive list of possible values (that is, other values are possible). 
-             This method never returns true.
+            Returns: false because the System.ComponentModel.TypeConverter.StandardValuesCollection returned 
+             from 
+             System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDe
+             scriptorContext) is not an exhaustive list of possible values (that is, other values are 
+             possible). This method never returns true.
         """
         pass
 
@@ -3158,28 +3169,30 @@ class CultureInfoConverter(TypeConverter):
         """
         GetStandardValuesSupported(self: CultureInfoConverter, context: ITypeDescriptorContext) -> bool
         
-            Gets a value indicating whether this object supports a standard set of values that can be picked 
-             from a list using the specified context.
+            Gets a value indicating whether this object supports a standard set of values that can be 
+             picked from a list using the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             Returns: true because 
-             System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDescripto
-             rContext) should be called to find a common set of values the object supports. This method never 
-             returns false.
+             System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDe
+             scriptorContext) should be called to find a common set of values the object supports. 
+             This method never returns false.
         """
         pass
 
 
-class CustomTypeDescriptor(object, ICustomTypeDescriptor):
+class CustomTypeDescriptor:
     """ Provides a simple default implementation of the System.ComponentModel.ICustomTypeDescriptor interface. """
     def GetAttributes(self):
         """
         GetAttributes(self: CustomTypeDescriptor) -> AttributeCollection
         
-            Returns a collection of custom attributes for the type represented by this type descriptor.
-            Returns: An System.ComponentModel.AttributeCollection containing the attributes for the type. The default 
-             is System.ComponentModel.AttributeCollection.Empty.
+            Returns a collection of custom attributes for the type represented by this type 
+             descriptor.
+        
+            Returns: An System.ComponentModel.AttributeCollection containing the attributes for the type. The 
+             default is System.ComponentModel.AttributeCollection.Empty.
         """
         pass
 
@@ -3188,8 +3201,8 @@ class CustomTypeDescriptor(object, ICustomTypeDescriptor):
         GetClassName(self: CustomTypeDescriptor) -> str
         
             Returns the fully qualified name of the class represented by this type descriptor.
-            Returns: A System.String containing the fully qualified class name of the type this type descriptor is 
-             describing. The default is null.
+            Returns: A System.String containing the fully qualified class name of the type this type 
+             descriptor is describing. The default is null.
         """
         pass
 
@@ -3208,8 +3221,8 @@ class CustomTypeDescriptor(object, ICustomTypeDescriptor):
         GetConverter(self: CustomTypeDescriptor) -> TypeConverter
         
             Returns a type converter for the type represented by this type descriptor.
-            Returns: A System.ComponentModel.TypeConverter for the type represented by this type descriptor. The 
-             default is a newly created System.ComponentModel.TypeConverter.
+            Returns: A System.ComponentModel.TypeConverter for the type represented by this type descriptor. 
+             The default is a newly created System.ComponentModel.TypeConverter.
         """
         pass
 
@@ -3220,8 +3233,8 @@ class CustomTypeDescriptor(object, ICustomTypeDescriptor):
             Returns the event descriptor for the default event of the object represented by this type 
              descriptor.
         
-            Returns: The System.ComponentModel.EventDescriptor for the default event on the object represented by 
-             this type descriptor. The default is null.
+            Returns: The System.ComponentModel.EventDescriptor for the default event on the object represented 
+             by this type descriptor. The default is null.
         """
         pass
 
@@ -3229,11 +3242,11 @@ class CustomTypeDescriptor(object, ICustomTypeDescriptor):
         """
         GetDefaultProperty(self: CustomTypeDescriptor) -> PropertyDescriptor
         
-            Returns the property descriptor for the default property of the object represented by this type 
-             descriptor.
+            Returns the property descriptor for the default property of the object represented by 
+             this type descriptor.
         
-            Returns: A System.ComponentModel.PropertyDescriptor for the default property on the object represented by 
-             this type descriptor. The default is null.
+            Returns: A System.ComponentModel.PropertyDescriptor for the default property on the object 
+             represented by this type descriptor. The default is null.
         """
         pass
 
@@ -3241,34 +3254,36 @@ class CustomTypeDescriptor(object, ICustomTypeDescriptor):
         """
         GetEditor(self: CustomTypeDescriptor, editorBaseType: Type) -> object
         
-            Returns an editor of the specified type that is to be associated with the class represented by 
-             this type descriptor.
+            Returns an editor of the specified type that is to be associated with the class 
+             represented by this type descriptor.
         
         
             editorBaseType: The base type of the editor to retrieve.
-            Returns: An editor of the given type that is to be associated with the class represented by this type 
-             descriptor. The default is null.
+            Returns: An editor of the given type that is to be associated with the class represented by this 
+             type descriptor. The default is null.
         """
         pass
 
     def GetEvents(self, attributes=None):
         """
+        GetEvents(self: CustomTypeDescriptor) -> EventDescriptorCollection
+        
+            Returns a collection of event descriptors for the object represented by this type 
+             descriptor.
+        
+            Returns: An System.ComponentModel.EventDescriptorCollection containing the event descriptors for 
+             the object represented by this type descriptor. The default is 
+             System.ComponentModel.EventDescriptorCollection.Empty.
+        
         GetEvents(self: CustomTypeDescriptor, attributes: Array[Attribute]) -> EventDescriptorCollection
         
-            Returns a filtered collection of event descriptors for the object represented by this type 
-             descriptor.
+            Returns a filtered collection of event descriptors for the object represented by this 
+             type descriptor.
         
         
             attributes: An array of attributes to use as a filter. This can be null.
-            Returns: An System.ComponentModel.EventDescriptorCollection containing the event descriptions for the 
-             object represented by this type descriptor. The default is 
-             System.ComponentModel.EventDescriptorCollection.Empty.
-        
-        GetEvents(self: CustomTypeDescriptor) -> EventDescriptorCollection
-        
-            Returns a collection of event descriptors for the object represented by this type descriptor.
-            Returns: An System.ComponentModel.EventDescriptorCollection containing the event descriptors for the 
-             object represented by this type descriptor. The default is 
+            Returns: An System.ComponentModel.EventDescriptorCollection containing the event descriptions for 
+             the object represented by this type descriptor. The default is 
              System.ComponentModel.EventDescriptorCollection.Empty.
         """
         pass
@@ -3277,20 +3292,22 @@ class CustomTypeDescriptor(object, ICustomTypeDescriptor):
         """
         GetProperties(self: CustomTypeDescriptor) -> PropertyDescriptorCollection
         
-            Returns a collection of property descriptors for the object represented by this type descriptor.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection containing the property descriptions for 
-             the object represented by this type descriptor. The default is 
+            Returns a collection of property descriptors for the object represented by this type 
+             descriptor.
+        
+            Returns: A System.ComponentModel.PropertyDescriptorCollection containing the property descriptions 
+             for the object represented by this type descriptor. The default is 
              System.ComponentModel.PropertyDescriptorCollection.Empty.
         
         GetProperties(self: CustomTypeDescriptor, attributes: Array[Attribute]) -> PropertyDescriptorCollection
         
-            Returns a filtered collection of property descriptors for the object represented by this type 
-             descriptor.
+            Returns a filtered collection of property descriptors for the object represented by this 
+             type descriptor.
         
         
             attributes: An array of attributes to use as a filter. This can be null.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection containing the property descriptions for 
-             the object represented by this type descriptor. The default is 
+            Returns: A System.ComponentModel.PropertyDescriptorCollection containing the property descriptions 
+             for the object represented by this type descriptor. The default is 
              System.ComponentModel.PropertyDescriptorCollection.Empty.
         """
         pass
@@ -3299,11 +3316,13 @@ class CustomTypeDescriptor(object, ICustomTypeDescriptor):
         """
         GetPropertyOwner(self: CustomTypeDescriptor, pd: PropertyDescriptor) -> object
         
-            Returns an object that contains the property described by the specified property descriptor.
+            Returns an object that contains the property described by the specified property 
+             descriptor.
+        
         
             pd: The property descriptor for which to retrieve the owning object.
-            Returns: An System.Object that owns the given property specified by the type descriptor. The default is 
-             null.
+            Returns: An System.Object that owns the given property specified by the type descriptor. The 
+             default is null.
         """
         pass
 
@@ -3324,7 +3343,7 @@ class CustomTypeDescriptor(object, ICustomTypeDescriptor):
         pass
 
 
-class DataErrorsChangedEventArgs(EventArgs):
+class DataErrorsChangedEventArgs:
     """ DataErrorsChangedEventArgs(propertyName: str) """
     @staticmethod # known case of __new__
     def __new__(self, propertyName):
@@ -3338,7 +3357,7 @@ class DataErrorsChangedEventArgs(EventArgs):
 
 
 
-class DataObjectAttribute(Attribute, _Attribute):
+class DataObjectAttribute:
     """
     Identifies a type as an object suitable for binding to an System.Web.UI.WebControls.ObjectDataSource object. This class cannot be inherited.
     
@@ -3349,13 +3368,13 @@ class DataObjectAttribute(Attribute, _Attribute):
         """
         Equals(self: DataObjectAttribute, obj: object) -> bool
         
-            Determines whether this instance of System.ComponentModel.DataObjectAttribute fits the pattern 
-             of another object.
+            Determines whether this instance of System.ComponentModel.DataObjectAttribute fits the 
+             pattern of another object.
         
         
             obj: An object to compare with this instance of System.ComponentModel.DataObjectAttribute.
-            Returns: true if this instance is the same as the instance specified by the obj parameter; otherwise, 
-             false.
+            Returns: true if this instance is the same as the instance specified by the obj parameter; 
+             otherwise, false.
         """
         pass
 
@@ -3372,8 +3391,8 @@ class DataObjectAttribute(Attribute, _Attribute):
         """
         IsDefaultAttribute(self: DataObjectAttribute) -> bool
         
-            Gets a value indicating whether the current value of the attribute is the default value for the 
-             attribute.
+            Gets a value indicating whether the current value of the attribute is the default value 
+             for the attribute.
         
             Returns: true if the current value of the attribute is the default; otherwise, false.
         """
@@ -3411,7 +3430,7 @@ Get: IsDataObject(self: DataObjectAttribute) -> bool
     NonDataObject = None
 
 
-class DataObjectFieldAttribute(Attribute, _Attribute):
+class DataObjectFieldAttribute:
     """
     Provides metadata for a property representing a data field. This class cannot be inherited.
     
@@ -3427,8 +3446,8 @@ class DataObjectFieldAttribute(Attribute, _Attribute):
             Returns a value indicating whether this instance is equal to a specified object.
         
             obj: An object to compare with this instance of System.ComponentModel.DataObjectFieldAttribute.
-            Returns: true if this instance is the same as the instance specified by the obj parameter; otherwise, 
-             false.
+            Returns: true if this instance is the same as the instance specified by the obj parameter; 
+             otherwise, false.
         """
         pass
 
@@ -3492,7 +3511,7 @@ Get: PrimaryKey(self: DataObjectFieldAttribute) -> bool
 
 
 
-class DataObjectMethodAttribute(Attribute, _Attribute):
+class DataObjectMethodAttribute:
     """
     Identifies a data operation method exposed by a type, what type of operation the method performs, and whether the method is the default data method. This class cannot be inherited.
     
@@ -3505,9 +3524,11 @@ class DataObjectMethodAttribute(Attribute, _Attribute):
         
             Returns a value indicating whether this instance is equal to a specified object.
         
-            obj: An object to compare with this instance of System.ComponentModel.DataObjectMethodAttribute.
-            Returns: true if this instance is the same as the instance specified by the obj parameter; otherwise, 
-             false.
+            obj: An object to compare with this instance of 
+             System.ComponentModel.DataObjectMethodAttribute.
+        
+            Returns: true if this instance is the same as the instance specified by the obj parameter; 
+             otherwise, false.
         """
         pass
 
@@ -3524,11 +3545,15 @@ class DataObjectMethodAttribute(Attribute, _Attribute):
         """
         Match(self: DataObjectMethodAttribute, obj: object) -> bool
         
-            Gets a value indicating whether this instance shares a common pattern with a specified attribute.
+            Gets a value indicating whether this instance shares a common pattern with a specified 
+             attribute.
         
-            obj: An object to compare with this instance of System.ComponentModel.DataObjectMethodAttribute.
-            Returns: true if this instance is the same as the instance specified by the obj parameter; otherwise, 
-             false.
+        
+            obj: An object to compare with this instance of 
+             System.ComponentModel.DataObjectMethodAttribute.
+        
+            Returns: true if this instance is the same as the instance specified by the obj parameter; 
+             otherwise, false.
         """
         pass
 
@@ -3567,7 +3592,7 @@ Get: MethodType(self: DataObjectMethodAttribute) -> DataObjectMethodType
 
 
 
-class DataObjectMethodType(Enum, IComparable, IFormattable, IConvertible):
+class DataObjectMethodType:
     """
     Identifies the type of data operation performed by a method, as specified by the System.ComponentModel.DataObjectMethodAttribute applied to the method.
     
@@ -3614,7 +3639,7 @@ class DataObjectMethodType(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class DateTimeConverter(TypeConverter):
+class DateTimeConverter:
     """
     Provides a type converter to convert System.DateTime objects to and from various other representations.
     
@@ -3624,8 +3649,8 @@ class DateTimeConverter(TypeConverter):
         """
         CanConvertFrom(self: DateTimeConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object in the given source type to 
-             a System.DateTime using the specified context.
+            Gets a value indicating whether this converter can convert an object in the given source 
+             type to a System.DateTime using the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -3638,8 +3663,8 @@ class DateTimeConverter(TypeConverter):
         """
         CanConvertTo(self: DateTimeConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object to the given destination 
-             type using the context.
+            Gets a value indicating whether this converter can convert an object to the given 
+             destination type using the context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -3655,7 +3680,9 @@ class DateTimeConverter(TypeConverter):
             Converts the given value object to a System.DateTime.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            culture: An optional System.Globalization.CultureInfo. If not supplied, the current culture is assumed.
+            culture: An optional System.Globalization.CultureInfo. If not supplied, the current culture is 
+             assumed.
+        
             value: The System.Object to convert.
             Returns: An System.Object that represents the converted value.
         """
@@ -3668,7 +3695,9 @@ class DateTimeConverter(TypeConverter):
             Converts the given value object to a System.DateTime using the arguments.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            culture: An optional System.Globalization.CultureInfo. If not supplied, the current culture is assumed.
+            culture: An optional System.Globalization.CultureInfo. If not supplied, the current culture is 
+             assumed.
+        
             value: The System.Object to convert.
             destinationType: The System.Type to convert the value to.
             Returns: An System.Object that represents the converted value.
@@ -3676,7 +3705,7 @@ class DateTimeConverter(TypeConverter):
         pass
 
 
-class DateTimeOffsetConverter(TypeConverter):
+class DateTimeOffsetConverter:
     """
     Provides a type converter to convert System.DateTimeOffset structures to and from various other representations.
     
@@ -3686,8 +3715,8 @@ class DateTimeOffsetConverter(TypeConverter):
         """
         CanConvertFrom(self: DateTimeOffsetConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Returns a value that indicates whether an object of the specified source type can be converted 
-             to a System.DateTimeOffset.
+            Returns a value that indicates whether an object of the specified source type can be 
+             converted to a System.DateTimeOffset.
         
         
             context: The date format context.
@@ -3700,8 +3729,8 @@ class DateTimeOffsetConverter(TypeConverter):
         """
         CanConvertTo(self: DateTimeOffsetConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Returns a value that indicates whether a System.DateTimeOffset can be converted to an object of 
-             the specified type.
+            Returns a value that indicates whether a System.DateTimeOffset can be converted to an 
+             object of the specified type.
         
         
             context: The date format context.
@@ -3738,7 +3767,7 @@ class DateTimeOffsetConverter(TypeConverter):
         pass
 
 
-class DecimalConverter(BaseNumberConverter):
+class DecimalConverter:
     """
     Provides a type converter to convert System.Decimal objects to and from various other representations.
     
@@ -3748,8 +3777,8 @@ class DecimalConverter(BaseNumberConverter):
         """
         CanConvertTo(self: DecimalConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object to the given destination 
-             type using the context.
+            Gets a value indicating whether this converter can convert an object to the given 
+             destination type using the context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -3765,7 +3794,9 @@ class DecimalConverter(BaseNumberConverter):
             Converts the given value object to a System.Decimal using the arguments.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            culture: An optional System.Globalization.CultureInfo. If not supplied, the current culture is assumed.
+            culture: An optional System.Globalization.CultureInfo. If not supplied, the current culture is 
+             assumed.
+        
             value: The System.Object to convert.
             destinationType: The System.Type to convert the value to.
             Returns: An System.Object that represents the converted value.
@@ -3773,7 +3804,7 @@ class DecimalConverter(BaseNumberConverter):
         pass
 
 
-class DefaultBindingPropertyAttribute(Attribute, _Attribute):
+class DefaultBindingPropertyAttribute:
     """
     Specifies the default binding property for a component. This class cannot be inherited.
     
@@ -3791,8 +3822,8 @@ class DefaultBindingPropertyAttribute(Attribute, _Attribute):
             obj: The System.Object to compare with the current 
              System.ComponentModel.DefaultBindingPropertyAttribute instance
         
-            Returns: true if the object is equal to the current instance; otherwise, false, indicating they are not 
-             equal.
+            Returns: true if the object is equal to the current instance; otherwise, false, indicating they 
+             are not equal.
         """
         pass
 
@@ -3833,7 +3864,7 @@ Get: Name(self: DefaultBindingPropertyAttribute) -> str
     Default = None
 
 
-class DefaultEventAttribute(Attribute, _Attribute):
+class DefaultEventAttribute:
     """
     Specifies the default event for a component.
     
@@ -3888,7 +3919,7 @@ Get: Name(self: DefaultEventAttribute) -> str
     Default = None
 
 
-class DefaultPropertyAttribute(Attribute, _Attribute):
+class DefaultPropertyAttribute:
     """
     Specifies the default property for a component.
     
@@ -3943,7 +3974,7 @@ Get: Name(self: DefaultPropertyAttribute) -> str
     Default = None
 
 
-class DefaultValueAttribute(Attribute, _Attribute):
+class DefaultValueAttribute:
     """
     Specifies the default value for a property.
     
@@ -4022,7 +4053,7 @@ Get: Value(self: DefaultValueAttribute) -> object
 
 
 
-class DescriptionAttribute(Attribute, _Attribute):
+class DescriptionAttribute:
     """
     Specifies a description for a property or event.
     
@@ -4053,8 +4084,8 @@ class DescriptionAttribute(Attribute, _Attribute):
             Returns a value indicating whether this is the default 
              System.ComponentModel.DescriptionAttribute instance.
         
-            Returns: true, if this is the default System.ComponentModel.DescriptionAttribute instance; otherwise, 
-             false.
+            Returns: true, if this is the default System.ComponentModel.DescriptionAttribute instance; 
+             otherwise, false.
         """
         pass
 
@@ -4093,7 +4124,7 @@ Get: Description(self: DescriptionAttribute) -> str
     Default = None
 
 
-class DesignerAttribute(Attribute, _Attribute):
+class DesignerAttribute:
     """
     Specifies the class used to implement design-time services for a component.
     
@@ -4165,7 +4196,7 @@ Get: TypeId(self: DesignerAttribute) -> object
 
 
 
-class DesignerCategoryAttribute(Attribute, _Attribute):
+class DesignerCategoryAttribute:
     """
     Specifies that the designer for a class belongs to a certain category.
     
@@ -4243,7 +4274,7 @@ Get: TypeId(self: DesignerCategoryAttribute) -> object
     Generic = None
 
 
-class DesignerSerializationVisibility(Enum, IComparable, IFormattable, IConvertible):
+class DesignerSerializationVisibility:
     """
     Specifies the visibility a property has to the design-time serializer.
     
@@ -4288,7 +4319,7 @@ class DesignerSerializationVisibility(Enum, IComparable, IFormattable, IConverti
     Visible = None
 
 
-class DesignerSerializationVisibilityAttribute(Attribute, _Attribute):
+class DesignerSerializationVisibilityAttribute:
     """
     Specifies the type of persistence to use when serializing a property on a component at design time.
     
@@ -4318,8 +4349,8 @@ class DesignerSerializationVisibilityAttribute(Attribute, _Attribute):
         """
         IsDefaultAttribute(self: DesignerSerializationVisibilityAttribute) -> bool
         
-            Gets a value indicating whether the current value of the attribute is the default value for the 
-             attribute.
+            Gets a value indicating whether the current value of the attribute is the default value 
+             for the attribute.
         
             Returns: true if the attribute is set to the default value; otherwise, false.
         """
@@ -4355,7 +4386,7 @@ Get: Visibility(self: DesignerSerializationVisibilityAttribute) -> DesignerSeria
     Visible = None
 
 
-class DesignOnlyAttribute(Attribute, _Attribute):
+class DesignOnlyAttribute:
     """
     Specifies whether a property can only be set at design time.
     
@@ -4416,7 +4447,7 @@ Get: IsDesignOnly(self: DesignOnlyAttribute) -> bool
     Yes = None
 
 
-class DesignTimeVisibleAttribute(Attribute, _Attribute):
+class DesignTimeVisibleAttribute:
     """
     System.ComponentModel.DesignTimeVisibleAttribute marks a component's visibility. If System.ComponentModel.DesignTimeVisibleAttribute.Yes is present, a visual designer can show this component on a designer.
     
@@ -4442,8 +4473,8 @@ class DesignTimeVisibleAttribute(Attribute, _Attribute):
             Gets a value indicating if this instance is equal to the 
              System.ComponentModel.DesignTimeVisibleAttribute.Default value.
         
-            Returns: true, if this instance is equal to the System.ComponentModel.DesignTimeVisibleAttribute.Default 
-             value; otherwise, false.
+            Returns: true, if this instance is equal to the 
+             System.ComponentModel.DesignTimeVisibleAttribute.Default value; otherwise, false.
         """
         pass
 
@@ -4479,7 +4510,7 @@ Get: Visible(self: DesignTimeVisibleAttribute) -> bool
     Yes = None
 
 
-class DisplayNameAttribute(Attribute, _Attribute):
+class DisplayNameAttribute:
     """
     Specifies the display name for a property, event, or public void method which takes no arguments.
     
@@ -4493,7 +4524,8 @@ class DisplayNameAttribute(Attribute, _Attribute):
             Determines whether two System.ComponentModel.DisplayNameAttribute instances are equal.
         
             obj: The System.ComponentModel.DisplayNameAttribute to test the value equality of.
-            Returns: true if the value of the given object is equal to that of the current object; otherwise, false.
+            Returns: true if the value of the given object is equal to that of the current object; otherwise, 
+             false.
         """
         pass
 
@@ -4550,14 +4582,14 @@ Get: DisplayName(self: DisplayNameAttribute) -> str
     Default = None
 
 
-class DoubleConverter(BaseNumberConverter):
+class DoubleConverter:
     """
     Provides a type converter to convert double-precision, floating point number objects to and from various other representations.
     
     DoubleConverter()
     """
 
-class DoWorkEventArgs(CancelEventArgs):
+class DoWorkEventArgs:
     """
     Provides data for the System.ComponentModel.BackgroundWorker.DoWork event handler.
     
@@ -4585,7 +4617,7 @@ Set: Result(self: DoWorkEventArgs) = value
 
 
 
-class DoWorkEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class DoWorkEventHandler:
     """
     Represents the method that will handle the System.ComponentModel.BackgroundWorker.DoWork event. This class cannot be inherited.
     
@@ -4612,9 +4644,9 @@ class DoWorkEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -4641,13 +4673,14 @@ class DoWorkEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -4664,7 +4697,7 @@ class DoWorkEventHandler(MulticastDelegate, ICloneable, ISerializable):
         pass
 
 
-class EditorAttribute(Attribute, _Attribute):
+class EditorAttribute:
     """
     Specifies the editor to use to change a property. This class cannot be inherited.
     
@@ -4682,7 +4715,8 @@ class EditorAttribute(Attribute, _Attribute):
         
         
             obj: The object to test the value equality of.
-            Returns: true if the value of the given object is equal to that of the current object; otherwise, false.
+            Returns: true if the value of the given object is equal to that of the current object; otherwise, 
+             false.
         """
         pass
 
@@ -4734,7 +4768,7 @@ Get: TypeId(self: EditorAttribute) -> object
 
 
 
-class EditorBrowsableAttribute(Attribute, _Attribute):
+class EditorBrowsableAttribute:
     """
     Specifies that a property or method is viewable in an editor. This class cannot be inherited.
     
@@ -4786,7 +4820,7 @@ Get: State(self: EditorBrowsableAttribute) -> EditorBrowsableState
 
 
 
-class EditorBrowsableState(Enum, IComparable, IFormattable, IConvertible):
+class EditorBrowsableState:
     """
     Specifies the browsable state of a property or method from within an editor.
     
@@ -4831,7 +4865,7 @@ class EditorBrowsableState(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class EnumConverter(TypeConverter):
+class EnumConverter:
     """
     Provides a type converter to convert System.Enum objects to and from various other representations.
     
@@ -4841,8 +4875,8 @@ class EnumConverter(TypeConverter):
         """
         CanConvertFrom(self: EnumConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object in the given source type to 
-             an enumeration object using the specified context.
+            Gets a value indicating whether this converter can convert an object in the given source 
+             type to an enumeration object using the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -4855,8 +4889,8 @@ class EnumConverter(TypeConverter):
         """
         CanConvertTo(self: EnumConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object to the given destination 
-             type using the context.
+            Gets a value indicating whether this converter can convert an object to the given 
+             destination type using the context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -4872,7 +4906,9 @@ class EnumConverter(TypeConverter):
             Converts the specified value object to an enumeration object.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            culture: An optional System.Globalization.CultureInfo. If not supplied, the current culture is assumed.
+            culture: An optional System.Globalization.CultureInfo. If not supplied, the current culture is 
+             assumed.
+        
             value: The System.Object to convert.
             Returns: An System.Object that represents the converted value.
         """
@@ -4885,7 +4921,9 @@ class EnumConverter(TypeConverter):
             Converts the given value object to the specified destination type.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            culture: An optional System.Globalization.CultureInfo. If not supplied, the current culture is assumed.
+            culture: An optional System.Globalization.CultureInfo. If not supplied, the current culture is 
+             assumed.
+        
             value: The System.Object to convert.
             destinationType: The System.Type to convert the value to.
             Returns: An System.Object that represents the converted value.
@@ -4899,8 +4937,8 @@ class EnumConverter(TypeConverter):
             Gets a collection of standard values for the data type this validator is designed for.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of 
-             valid values, or null if the data type does not support a standard set of values.
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set 
+             of valid values, or null if the data type does not support a standard set of values.
         """
         pass
 
@@ -4909,14 +4947,14 @@ class EnumConverter(TypeConverter):
         GetStandardValuesExclusive(self: EnumConverter, context: ITypeDescriptorContext) -> bool
         
             Gets a value indicating whether the list of standard values returned from 
-             System.ComponentModel.TypeConverter.GetStandardValues is an exclusive list using the specified 
-             context.
+             System.ComponentModel.TypeConverter.GetStandardValues is an exclusive list using the 
+             specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
-             System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of possible values; 
-             false if other values are possible.
+             System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of possible 
+             values; false if other values are possible.
         """
         pass
 
@@ -4924,13 +4962,13 @@ class EnumConverter(TypeConverter):
         """
         GetStandardValuesSupported(self: EnumConverter, context: ITypeDescriptorContext) -> bool
         
-            Gets a value indicating whether this object supports a standard set of values that can be picked 
-             from a list using the specified context.
+            Gets a value indicating whether this object supports a standard set of values that can be 
+             picked from a list using the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true because System.ComponentModel.TypeConverter.GetStandardValues should be called to find a 
-             common set of values the object supports. This method never returns false.
+            Returns: true because System.ComponentModel.TypeConverter.GetStandardValues should be called to 
+             find a common set of values the object supports. This method never returns false.
         """
         pass
 
@@ -4968,13 +5006,15 @@ class EnumConverter(TypeConverter):
 
 
 
-class MemberDescriptor(object):
+class MemberDescriptor:
     """ Represents a class member, such as a property or event. This is an abstract base class. """
     def CreateAttributeCollection(self, *args): #cannot find CLR method
         """
         CreateAttributeCollection(self: MemberDescriptor) -> AttributeCollection
         
-            Creates a collection of attributes using the array of attributes passed to the constructor.
+            Creates a collection of attributes using the array of attributes passed to the 
+             constructor.
+        
             Returns: A new System.ComponentModel.AttributeCollection that contains the 
              System.ComponentModel.MemberDescriptor.AttributeArray attributes.
         """
@@ -4994,17 +5034,28 @@ class MemberDescriptor(object):
     def FillAttributes(self, *args): #cannot find CLR method
         """
         FillAttributes(self: MemberDescriptor, attributeList: IList)
-            When overridden in a derived class, adds the attributes of the inheriting class to the specified 
-             list of attributes in the parent class.
+            When overridden in a derived class, adds the attributes of the inheriting class to the 
+             specified list of attributes in the parent class.
         
         
-            attributeList: An System.Collections.IList that lists the attributes in the parent class. Initially, this is 
-             empty.
+            attributeList: An System.Collections.IList that lists the attributes in the parent class. Initially, 
+             this is empty.
         """
         pass
 
     def FindMethod(self, *args): #cannot find CLR method
         """
+        FindMethod(componentClass: Type, name: str, args: Array[Type], returnType: Type) -> MethodInfo
+        
+            Finds the given method through reflection, searching only for public methods.
+        
+            componentClass: The component that contains the method.
+            name: The name of the method to find.
+            args: An array of parameters for the method, used to choose between overloaded methods.
+            returnType: The type to return for the method.
+            Returns: A System.Reflection.MethodInfo that represents the method, or null if the method is not 
+             found.
+        
         FindMethod(componentClass: Type, name: str, args: Array[Type], returnType: Type, publicOnly: bool) -> MethodInfo
         
             Finds the given method through reflection, with an option to search only public methods.
@@ -5014,16 +5065,8 @@ class MemberDescriptor(object):
             args: An array of parameters for the method, used to choose between overloaded methods.
             returnType: The type to return for the method.
             publicOnly: Whether to restrict search to public methods.
-            Returns: A System.Reflection.MethodInfo that represents the method, or null if the method is not found.
-        FindMethod(componentClass: Type, name: str, args: Array[Type], returnType: Type) -> MethodInfo
-        
-            Finds the given method through reflection, searching only for public methods.
-        
-            componentClass: The component that contains the method.
-            name: The name of the method to find.
-            args: An array of parameters for the method, used to choose between overloaded methods.
-            returnType: The type to return for the method.
-            Returns: A System.Reflection.MethodInfo that represents the method, or null if the method is not found.
+            Returns: A System.Reflection.MethodInfo that represents the method, or null if the method is not 
+             found.
         """
         pass
 
@@ -5054,13 +5097,14 @@ class MemberDescriptor(object):
         
             Gets the component on which to invoke a method.
         
-            componentClass: A System.Type representing the type of component this System.ComponentModel.MemberDescriptor is 
-             bound to. For example, if this System.ComponentModel.MemberDescriptor describes a property, this 
-             parameter should be the class that the property is declared on.
+            componentClass: A System.Type representing the type of component this 
+             System.ComponentModel.MemberDescriptor is bound to. For example, if this 
+             System.ComponentModel.MemberDescriptor describes a property, this parameter should be the 
+             class that the property is declared on.
         
             component: An instance of the object to call.
-            Returns: An instance of the component to invoke. This method returns a visual designer when the property 
-             is attached to a visual designer.
+            Returns: An instance of the component to invoke. This method returns a visual designer when the 
+             property is attached to a visual designer.
         """
         pass
 
@@ -5153,7 +5197,7 @@ Get: Name(self: MemberDescriptor) -> str
 
 
 
-class EventDescriptor(MemberDescriptor):
+class EventDescriptor:
     """ Provides information about an event. """
     def AddEventHandler(self, component, value):
         """
@@ -5168,8 +5212,8 @@ class EventDescriptor(MemberDescriptor):
     def RemoveEventHandler(self, component, value):
         """
         RemoveEventHandler(self: EventDescriptor, component: object, value: Delegate)
-            When overridden in a derived class, unbinds the delegate from the component so that the delegate 
-             will no longer receive events from the component.
+            When overridden in a derived class, unbinds the delegate from the component so that the 
+             delegate will no longer receive events from the component.
         
         
             component: The component that the delegate is bound to.
@@ -5219,7 +5263,7 @@ Get: IsMulticast(self: EventDescriptor) -> bool
 
 
 
-class EventDescriptorCollection(object, ICollection, IEnumerable, IList):
+class EventDescriptorCollection:
     """
     Represents a collection of System.ComponentModel.EventDescriptor objects.
     
@@ -5263,8 +5307,8 @@ class EventDescriptorCollection(object, ICollection, IEnumerable, IList):
         
             name: The name of the event to get from the collection.
             ignoreCase: true if you want to ignore the case of the event; otherwise, false.
-            Returns: The System.ComponentModel.EventDescriptor with the specified name, or null if the event does not 
-             exist.
+            Returns: The System.ComponentModel.EventDescriptor with the specified name, or null if the event 
+             does not exist.
         """
         pass
 
@@ -5300,20 +5344,22 @@ class EventDescriptorCollection(object, ICollection, IEnumerable, IList):
 
     def InternalSort(self, *args): #cannot find CLR method
         """
-        InternalSort(self: EventDescriptorCollection, sorter: IComparer)
-            Sorts the members of this System.ComponentModel.EventDescriptorCollection, using the specified 
-             System.Collections.IComparer.
-        
-        
-            sorter: A comparer to use to sort the System.ComponentModel.EventDescriptor objects in this collection.
         InternalSort(self: EventDescriptorCollection, names: Array[str])
-            Sorts the members of this System.ComponentModel.EventDescriptorCollection. The specified order 
-             is applied first, followed by the default sort for this collection, which is usually 
-             alphabetical.
+            Sorts the members of this System.ComponentModel.EventDescriptorCollection. The specified 
+             order is applied first, followed by the default sort for this collection, which is 
+             usually alphabetical.
         
         
             names: An array of strings describing the order in which to sort the 
-             System.ComponentModel.EventDescriptor objects in this collection.
+             System.ComponentModel.EventDescriptor objects in this collection.
+        
+        InternalSort(self: EventDescriptorCollection, sorter: IComparer)
+            Sorts the members of this System.ComponentModel.EventDescriptorCollection, using the 
+             specified System.Collections.IComparer.
+        
+        
+            sorter: A comparer to use to sort the System.ComponentModel.EventDescriptor objects in this 
+             collection.
         """
         pass
 
@@ -5329,7 +5375,9 @@ class EventDescriptorCollection(object, ICollection, IEnumerable, IList):
     def RemoveAt(self, index):
         """
         RemoveAt(self: EventDescriptorCollection, index: int)
-            Removes the System.ComponentModel.EventDescriptor at the specified index from the collection.
+            Removes the System.ComponentModel.EventDescriptor at the specified index from the 
+             collection.
+        
         
             index: The index of the System.ComponentModel.EventDescriptor to remove.
         """
@@ -5337,43 +5385,43 @@ class EventDescriptorCollection(object, ICollection, IEnumerable, IList):
 
     def Sort(self, *__args):
         """
-        Sort(self: EventDescriptorCollection, names: Array[str], comparer: IComparer) -> EventDescriptorCollection
-        
-            Sorts the members of this System.ComponentModel.EventDescriptorCollection, given a specified 
-             sort order and an System.Collections.IComparer.
-        
-        
-            names: An array of strings describing the order in which to sort the 
-             System.ComponentModel.EventDescriptor objects in the collection.
-        
-            comparer: An System.Collections.IComparer to use to sort the System.ComponentModel.EventDescriptor objects 
-             in this collection.
-        
-            Returns: The new System.ComponentModel.EventDescriptorCollection.
-        Sort(self: EventDescriptorCollection, comparer: IComparer) -> EventDescriptorCollection
-        
-            Sorts the members of this System.ComponentModel.EventDescriptorCollection, using the specified 
-             System.Collections.IComparer.
-        
-        
-            comparer: An System.Collections.IComparer to use to sort the System.ComponentModel.EventDescriptor objects 
-             in this collection.
-        
-            Returns: The new System.ComponentModel.EventDescriptorCollection.
         Sort(self: EventDescriptorCollection) -> EventDescriptorCollection
         
-            Sorts the members of this System.ComponentModel.EventDescriptorCollection, using the default 
-             sort for this collection, which is usually alphabetical.
+            Sorts the members of this System.ComponentModel.EventDescriptorCollection, using the 
+             default sort for this collection, which is usually alphabetical.
         
             Returns: The new System.ComponentModel.EventDescriptorCollection.
         Sort(self: EventDescriptorCollection, names: Array[str]) -> EventDescriptorCollection
         
-            Sorts the members of this System.ComponentModel.EventDescriptorCollection, given a specified 
-             sort order.
+            Sorts the members of this System.ComponentModel.EventDescriptorCollection, given a 
+             specified sort order.
         
         
             names: An array of strings describing the order in which to sort the 
              System.ComponentModel.EventDescriptor objects in the collection.
+        
+            Returns: The new System.ComponentModel.EventDescriptorCollection.
+        Sort(self: EventDescriptorCollection, names: Array[str], comparer: IComparer) -> EventDescriptorCollection
+        
+            Sorts the members of this System.ComponentModel.EventDescriptorCollection, given a 
+             specified sort order and an System.Collections.IComparer.
+        
+        
+            names: An array of strings describing the order in which to sort the 
+             System.ComponentModel.EventDescriptor objects in the collection.
+        
+            comparer: An System.Collections.IComparer to use to sort the System.ComponentModel.EventDescriptor 
+             objects in this collection.
+        
+            Returns: The new System.ComponentModel.EventDescriptorCollection.
+        Sort(self: EventDescriptorCollection, comparer: IComparer) -> EventDescriptorCollection
+        
+            Sorts the members of this System.ComponentModel.EventDescriptorCollection, using the 
+             specified System.Collections.IComparer.
+        
+        
+            comparer: An System.Collections.IComparer to use to sort the System.ComponentModel.EventDescriptor 
+             objects in this collection.
         
             Returns: The new System.ComponentModel.EventDescriptorCollection.
         """
@@ -5433,7 +5481,7 @@ Get: Count(self: EventDescriptorCollection) -> int
     Empty = None
 
 
-class EventHandlerList(object, IDisposable):
+class EventHandlerList:
     """
     Provides a simple list of delegates. This class cannot be inherited.
     
@@ -5476,18 +5524,11 @@ class EventHandlerList(object, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __getitem__(self, *args): #cannot find CLR method
@@ -5507,7 +5548,7 @@ class EventHandlerList(object, IDisposable):
         pass
 
 
-class ExpandableObjectConverter(TypeConverter):
+class ExpandableObjectConverter:
     """
     Provides a type converter to convert expandable objects to and from various other representations.
     
@@ -5522,8 +5563,8 @@ class ExpandableObjectConverter(TypeConverter):
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             value: An System.Object that specifies the type of object to get the properties for.
             attributes: An array of type System.Attribute that will be used as a filter.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed for 
-             the component, or null if there are no properties.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed 
+             for the component, or null if there are no properties.
         """
         pass
 
@@ -5531,16 +5572,18 @@ class ExpandableObjectConverter(TypeConverter):
         """
         GetPropertiesSupported(self: ExpandableObjectConverter, context: ITypeDescriptorContext) -> bool
         
-            Gets a value indicating whether this object supports properties using the specified context.
+            Gets a value indicating whether this object supports properties using the specified 
+             context.
+        
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true because System.ComponentModel.TypeConverter.GetProperties(System.Object) should be called 
-             to find the properties of this object. This method never returns false.
+            Returns: true because System.ComponentModel.TypeConverter.GetProperties(System.Object) should be 
+             called to find the properties of this object. This method never returns false.
         """
         pass
 
 
-class ExtenderProvidedPropertyAttribute(Attribute, _Attribute):
+class ExtenderProvidedPropertyAttribute:
     """
     Specifies a property that is offered by an extender provider. This class cannot be inherited.
     
@@ -5553,7 +5596,8 @@ class ExtenderProvidedPropertyAttribute(Attribute, _Attribute):
             Determines whether the specified System.Object is equal to the current System.Object.
         
             obj: An System.Object to compare with this instance or null.
-            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, false.
+            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, 
+             false.
         """
         pass
 
@@ -5570,8 +5614,8 @@ class ExtenderProvidedPropertyAttribute(Attribute, _Attribute):
         """
         IsDefaultAttribute(self: ExtenderProvidedPropertyAttribute) -> bool
         
-            Provides an indication whether the value of this instance is the default value for the derived 
-             class.
+            Provides an indication whether the value of this instance is the default value for the 
+             derived class.
         
             Returns: true if this instance is the default attribute for the class; otherwise, false.
         """
@@ -5611,7 +5655,7 @@ Get: ReceiverType(self: ExtenderProvidedPropertyAttribute) -> Type
 
 
 
-class GuidConverter(TypeConverter):
+class GuidConverter:
     """
     Provides a type converter to convert System.Guid objects to and from various other representations.
     
@@ -5621,8 +5665,8 @@ class GuidConverter(TypeConverter):
         """
         CanConvertFrom(self: GuidConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object in the given source type to 
-             a GUID object using the context.
+            Gets a value indicating whether this converter can convert an object in the given source 
+             type to a GUID object using the context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -5635,8 +5679,8 @@ class GuidConverter(TypeConverter):
         """
         CanConvertTo(self: GuidConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object to the given destination 
-             type using the context.
+            Gets a value indicating whether this converter can convert an object to the given 
+             destination type using the context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -5652,7 +5696,9 @@ class GuidConverter(TypeConverter):
             Converts the given object to a GUID object.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            culture: An optional System.Globalization.CultureInfo. If not supplied, the current culture is assumed.
+            culture: An optional System.Globalization.CultureInfo. If not supplied, the current culture is 
+             assumed.
+        
             value: The System.Object to convert.
             Returns: An System.Object that represents the converted value.
         """
@@ -5673,7 +5719,7 @@ class GuidConverter(TypeConverter):
         pass
 
 
-class HandledEventArgs(EventArgs):
+class HandledEventArgs:
     """
     Provides data for events that can be handled completely in an event handler.
     
@@ -5698,7 +5744,7 @@ Set: Handled(self: HandledEventArgs) = value
 
 
 
-class HandledEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class HandledEventHandler:
     """
     Represents a method that can handle events which may or may not require further processing after the event handler has returned.
     
@@ -5725,9 +5771,9 @@ class HandledEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -5754,13 +5800,14 @@ class HandledEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -5777,15 +5824,17 @@ class HandledEventHandler(MulticastDelegate, ICloneable, ISerializable):
         pass
 
 
-class IBindingListView(IBindingList, IList, ICollection, IEnumerable):
+class IBindingListView:
     """ Extends the System.ComponentModel.IBindingList interface by providing advanced sorting and filtering capabilities. """
     def ApplySort(self, sorts):
         """
         ApplySort(self: IBindingListView, sorts: ListSortDescriptionCollection)
-            Sorts the data source based on the given System.ComponentModel.ListSortDescriptionCollection.
+            Sorts the data source based on the given 
+             System.ComponentModel.ListSortDescriptionCollection.
         
-            sorts: The System.ComponentModel.ListSortDescriptionCollection containing the sorts to apply to the 
-             data source.
+        
+            sorts: The System.ComponentModel.ListSortDescriptionCollection containing the sorts to apply to 
+             the data source.
         """
         pass
 
@@ -5942,18 +5991,18 @@ class IComNativeDescriptorHandler:
 
     def GetEvents(self, component, attributes=None):
         """
+        GetEvents(self: IComNativeDescriptorHandler, component: object) -> EventDescriptorCollection
+        
+            Gets the events for the specified component.
+        
+            component: The component to get events for.
+            Returns: A collection of event descriptors for component.
         GetEvents(self: IComNativeDescriptorHandler, component: object, attributes: Array[Attribute]) -> EventDescriptorCollection
         
             Gets the events with the specified attributes for the specified component.
         
             component: The component to get events for.
             attributes: The attributes used to filter events.
-            Returns: A collection of event descriptors for component.
-        GetEvents(self: IComNativeDescriptorHandler, component: object) -> EventDescriptorCollection
-        
-            Gets the events for the specified component.
-        
-            component: The component to get events for.
             Returns: A collection of event descriptors for component.
         """
         pass
@@ -5983,14 +6032,6 @@ class IComNativeDescriptorHandler:
 
     def GetPropertyValue(self, component, *__args):
         """
-        GetPropertyValue(self: IComNativeDescriptorHandler, component: object, dispid: int, success: bool) -> (object, bool)
-        
-            Gets the value of the property that has the specified dispatch identifier.
-        
-            component: The object to which the property belongs.
-            dispid: The dispatch identifier.
-            success: A System.Boolean, passed by reference, that represents whether the property was retrieved.
-            Returns: The value of the property that has the specified dispatch identifier.
         GetPropertyValue(self: IComNativeDescriptorHandler, component: object, propertyName: str, success: bool) -> (object, bool)
         
             Gets the value of the property that has the specified name.
@@ -5998,7 +6039,15 @@ class IComNativeDescriptorHandler:
             component: The object to which the property belongs.
             propertyName: The name of the property.
             success: A System.Boolean, passed by reference, that represents whether the property was retrieved.
-            Returns: The value of the property that has the specified name.
+            Returns: The value of the property that has the specified name.
+        GetPropertyValue(self: IComNativeDescriptorHandler, component: object, dispid: int, success: bool) -> (object, bool)
+        
+            Gets the value of the property that has the specified dispatch identifier.
+        
+            component: The object to which the property belongs.
+            dispid: The dispatch identifier.
+            success: A System.Boolean, passed by reference, that represents whether the property was retrieved.
+            Returns: The value of the property that has the specified dispatch identifier.
         """
         pass
 
@@ -6007,7 +6056,7 @@ class IComNativeDescriptorHandler:
         pass
 
 
-class IComponent(IDisposable):
+class IComponent:
     """ Provides functionality required by all components. """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6025,25 +6074,25 @@ Set: Site(self: IComponent) = value
     Disposed = None
 
 
-class IContainer(IDisposable):
+class IContainer:
     """ Provides functionality for containers. Containers are objects that logically contain zero or more components. """
     def Add(self, component, name=None):
         """
-        Add(self: IContainer, component: IComponent, name: str)
-            Adds the specified System.ComponentModel.IComponent to the System.ComponentModel.IContainer at 
-             the end of the list, and assigns a name to the component.
+        Add(self: IContainer, component: IComponent)
+            Adds the specified System.ComponentModel.IComponent to the 
+             System.ComponentModel.IContainer at the end of the list.
         
         
             component: The System.ComponentModel.IComponent to add.
-            name: The unique, case-insensitive name to assign to the component.-or- null that leaves the component 
-             unnamed.
-        
-        Add(self: IContainer, component: IComponent)
-            Adds the specified System.ComponentModel.IComponent to the System.ComponentModel.IContainer at 
-             the end of the list.
+        Add(self: IContainer, component: IComponent, name: str)
+            Adds the specified System.ComponentModel.IComponent to the 
+             System.ComponentModel.IContainer at the end of the list, and assigns a name to the 
+             component.
         
         
-            component: The System.ComponentModel.IComponent to add.
+            component: The System.ComponentModel.IComponent to add.
+            name: The unique, case-insensitive name to assign to the component.-or- null that leaves the 
+             component unnamed.
         """
         pass
 
@@ -6107,8 +6156,8 @@ class ICustomTypeDescriptor:
         GetConverter(self: ICustomTypeDescriptor) -> TypeConverter
         
             Returns a type converter for this instance of a component.
-            Returns: A System.ComponentModel.TypeConverter that is the converter for this object, or null if there is 
-             no System.ComponentModel.TypeConverter for this object.
+            Returns: A System.ComponentModel.TypeConverter that is the converter for this object, or null if 
+             there is no System.ComponentModel.TypeConverter for this object.
         """
         pass
 
@@ -6117,8 +6166,8 @@ class ICustomTypeDescriptor:
         GetDefaultEvent(self: ICustomTypeDescriptor) -> EventDescriptor
         
             Returns the default event for this instance of a component.
-            Returns: An System.ComponentModel.EventDescriptor that represents the default event for this object, or 
-             null if this object does not have events.
+            Returns: An System.ComponentModel.EventDescriptor that represents the default event for this 
+             object, or null if this object does not have events.
         """
         pass
 
@@ -6127,8 +6176,8 @@ class ICustomTypeDescriptor:
         GetDefaultProperty(self: ICustomTypeDescriptor) -> PropertyDescriptor
         
             Returns the default property for this instance of a component.
-            Returns: A System.ComponentModel.PropertyDescriptor that represents the default property for this object, 
-             or null if this object does not have properties.
+            Returns: A System.ComponentModel.PropertyDescriptor that represents the default property for this 
+             object, or null if this object does not have properties.
         """
         pass
 
@@ -6139,46 +6188,48 @@ class ICustomTypeDescriptor:
             Returns an editor of the specified type for this instance of a component.
         
             editorBaseType: A System.Type that represents the editor for this object.
-            Returns: An System.Object of the specified type that is the editor for this object, or null if the editor 
-             cannot be found.
+            Returns: An System.Object of the specified type that is the editor for this object, or null if the 
+             editor cannot be found.
         """
         pass
 
     def GetEvents(self, attributes=None):
         """
-        GetEvents(self: ICustomTypeDescriptor, attributes: Array[Attribute]) -> EventDescriptorCollection
-        
-            Returns the events for this instance of a component using the specified attribute array as a 
-             filter.
-        
-        
-            attributes: An array of type System.Attribute that is used as a filter.
-            Returns: An System.ComponentModel.EventDescriptorCollection that represents the filtered events for this 
-             component instance.
-        
         GetEvents(self: ICustomTypeDescriptor) -> EventDescriptorCollection
         
             Returns the events for this instance of a component.
-            Returns: An System.ComponentModel.EventDescriptorCollection that represents the events for this component 
-             instance.
+            Returns: An System.ComponentModel.EventDescriptorCollection that represents the events for this 
+             component instance.
+        
+        GetEvents(self: ICustomTypeDescriptor, attributes: Array[Attribute]) -> EventDescriptorCollection
+        
+            Returns the events for this instance of a component using the specified attribute array 
+             as a filter.
+        
+        
+            attributes: An array of type System.Attribute that is used as a filter.
+            Returns: An System.ComponentModel.EventDescriptorCollection that represents the filtered events 
+             for this component instance.
         """
         pass
 
     def GetProperties(self, attributes=None):
         """
-        GetProperties(self: ICustomTypeDescriptor, attributes: Array[Attribute]) -> PropertyDescriptorCollection
-        
-            Returns the properties for this instance of a component using the attribute array as a filter.
-        
-            attributes: An array of type System.Attribute that is used as a filter.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection that represents the filtered properties for 
-             this component instance.
-        
         GetProperties(self: ICustomTypeDescriptor) -> PropertyDescriptorCollection
         
             Returns the properties for this instance of a component.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection that represents the properties for this 
-             component instance.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection that represents the properties for 
+             this component instance.
+        
+        GetProperties(self: ICustomTypeDescriptor, attributes: Array[Attribute]) -> PropertyDescriptorCollection
+        
+            Returns the properties for this instance of a component using the attribute array as a 
+             filter.
+        
+        
+            attributes: An array of type System.Attribute that is used as a filter.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection that represents the filtered 
+             properties for this component instance.
         """
         pass
 
@@ -6186,10 +6237,12 @@ class ICustomTypeDescriptor:
         """
         GetPropertyOwner(self: ICustomTypeDescriptor, pd: PropertyDescriptor) -> object
         
-            Returns an object that contains the property described by the specified property descriptor.
+            Returns an object that contains the property described by the specified property 
+             descriptor.
         
-            pd: A System.ComponentModel.PropertyDescriptor that represents the property whose owner is to be 
-             found.
+        
+            pd: A System.ComponentModel.PropertyDescriptor that represents the property whose owner is to 
+             be found.
         
             Returns: An System.Object that represents the owner of the specified property.
         """
@@ -6257,7 +6310,8 @@ class IExtenderProvider:
             Specifies whether this object can provide its extender properties to the specified object.
         
             extendee: The System.Object to receive the extender properties.
-            Returns: true if this object can provide extender properties to the specified object; otherwise, false.
+            Returns: true if this object can provide extender properties to the specified object; otherwise, 
+             false.
         """
         pass
 
@@ -6277,8 +6331,8 @@ class IIntellisenseBuilder:
             language: The language service that is calling the builder.
             value: The expression being edited.
             newValue: The new value.
-            Returns: true if the value should be replaced with newValue; otherwise, false (if the user cancels, for 
-             example).
+            Returns: true if the value should be replaced with newValue; otherwise, false (if the user 
+             cancels, for example).
         """
         pass
 
@@ -6301,8 +6355,8 @@ class IListSource:
         """
         GetList(self: IListSource) -> IList
         
-            Returns an System.Collections.IList that can be bound to a data source from an object that does 
-             not implement an System.Collections.IList itself.
+            Returns an System.Collections.IList that can be bound to a data source from an object 
+             that does not implement an System.Collections.IList itself.
         
             Returns: An System.Collections.IList that can be bound to a data source from the object.
         """
@@ -6321,7 +6375,7 @@ Get: ContainsListCollection(self: IListSource) -> bool
 
 
 
-class ImmutableObjectAttribute(Attribute, _Attribute):
+class ImmutableObjectAttribute:
     """
     Specifies that an object has no subproperties capable of being edited. This class cannot be inherited.
     
@@ -6383,21 +6437,14 @@ Get: Immutable(self: ImmutableObjectAttribute) -> bool
     Yes = None
 
 
-class INestedContainer(IContainer, IDisposable):
+class INestedContainer:
     """ Provides functionality for nested containers, which logically contain zero or more other components and are owned by a parent component. """
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -6413,7 +6460,7 @@ Get: Owner(self: INestedContainer) -> IComponent
 
 
 
-class ISite(IServiceProvider):
+class ISite:
     """ Provides functionality required by sites. """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6450,7 +6497,7 @@ Set: Name(self: ISite) = value
 
 
 
-class INestedSite(ISite, IServiceProvider):
+class INestedSite:
     """ Provides the ability to retrieve the full nested name of a component. """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6465,7 +6512,7 @@ Get: FullName(self: INestedSite) -> str
 
 
 
-class InheritanceAttribute(Attribute, _Attribute):
+class InheritanceAttribute:
     """
     Indicates whether the component associated with this attribute has been inherited from a base class. This class cannot be inherited.
     
@@ -6496,8 +6543,8 @@ class InheritanceAttribute(Attribute, _Attribute):
         """
         IsDefaultAttribute(self: InheritanceAttribute) -> bool
         
-            Gets a value indicating whether the current value of the attribute is the default value for the 
-             attribute.
+            Gets a value indicating whether the current value of the attribute is the default value 
+             for the attribute.
         
             Returns: true if the current value of the attribute is the default; otherwise, false.
         """
@@ -6548,7 +6595,7 @@ Get: InheritanceLevel(self: InheritanceAttribute) -> InheritanceLevel
     NotInherited = None
 
 
-class InheritanceLevel(Enum, IComparable, IFormattable, IConvertible):
+class InheritanceLevel:
     """
     Defines identifiers for types of inheritance levels.
     
@@ -6593,7 +6640,7 @@ class InheritanceLevel(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class InitializationEventAttribute(Attribute, _Attribute):
+class InitializationEventAttribute:
     """
     Specifies which event is raised on initialization. This class cannot be inherited.
     
@@ -6654,7 +6701,7 @@ class INotifyPropertyChanging:
     PropertyChanging = None
 
 
-class InstallerTypeAttribute(Attribute, _Attribute):
+class InstallerTypeAttribute:
     """
     Specifies the installer for a type that installs components.
     
@@ -6711,7 +6758,7 @@ Get: InstallerType(self: InstallerTypeAttribute) -> Type
 
 
 
-class InstanceCreationEditor(object):
+class InstanceCreationEditor:
     """ Creates an instance of a particular type of property from a drop-down box within the System.Windows.Forms.PropertyGrid. """
     def CreateInstance(self, context, instanceType):
         """
@@ -6734,28 +6781,28 @@ Get: Text(self: InstanceCreationEditor) -> str
 
 
 
-class Int16Converter(BaseNumberConverter):
+class Int16Converter:
     """
     Provides a type converter to convert 16-bit signed integer objects to and from other representations.
     
     Int16Converter()
     """
 
-class Int32Converter(BaseNumberConverter):
+class Int32Converter:
     """
     Provides a type converter to convert 32-bit signed integer objects to and from other representations.
     
     Int32Converter()
     """
 
-class Int64Converter(BaseNumberConverter):
+class Int64Converter:
     """
     Provides a type converter to convert 64-bit signed integer objects to and from various other representations.
     
     Int64Converter()
     """
 
-class InvalidAsynchronousStateException(ArgumentException, ISerializable, _Exception):
+class InvalidAsynchronousStateException:
     """
     Thrown when a thread on which an operation should execute no longer exists or has no message loop.
     
@@ -6763,14 +6810,6 @@ class InvalidAsynchronousStateException(ArgumentException, ISerializable, _Excep
     InvalidAsynchronousStateException(message: str)
     InvalidAsynchronousStateException(message: str, innerException: Exception)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -6791,8 +6830,10 @@ class InvalidAsynchronousStateException(ArgumentException, ISerializable, _Excep
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    SerializeObjectState = None
 
-class InvalidEnumArgumentException(ArgumentException, ISerializable, _Exception):
+
+class InvalidEnumArgumentException:
     """
     The exception thrown when using invalid arguments that are enumerators.
     
@@ -6801,14 +6842,6 @@ class InvalidEnumArgumentException(ArgumentException, ISerializable, _Exception)
     InvalidEnumArgumentException(message: str, innerException: Exception)
     InvalidEnumArgumentException(argumentName: str, invalidValue: int, enumClass: Type)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -6830,8 +6863,10 @@ class InvalidEnumArgumentException(ArgumentException, ISerializable, _Exception)
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    SerializeObjectState = None
 
-class IRevertibleChangeTracking(IChangeTracking):
+
+class IRevertibleChangeTracking:
     """ Provides support for rolling back the changes """
     def RejectChanges(self):
         """
@@ -6865,7 +6900,7 @@ class ISupportInitialize:
         pass
 
 
-class ISupportInitializeNotification(ISupportInitialize):
+class ISupportInitializeNotification:
     """ Allows coordination of initialization for a component and its dependent properties. """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6893,11 +6928,11 @@ class ISynchronizeInvoke:
             method: A System.Delegate to a method that takes parameters of the same number and type that are 
              contained in args.
         
-            args: An array of type System.Object to pass as arguments to the given method. This can be null if no 
-             arguments are needed.
+            args: An array of type System.Object to pass as arguments to the given method. This can be null 
+             if no arguments are needed.
         
-            Returns: An System.IAsyncResult interface that represents the asynchronous operation started by calling 
-             this method.
+            Returns: An System.IAsyncResult interface that represents the asynchronous operation started by 
+             calling this method.
         """
         pass
 
@@ -6906,11 +6941,12 @@ class ISynchronizeInvoke:
         EndInvoke(self: ISynchronizeInvoke, result: IAsyncResult) -> object
         
             Waits until the process started by calling 
-             System.ComponentModel.ISynchronizeInvoke.BeginInvoke(System.Delegate,System.Object[]) completes, 
-             and then returns the value generated by the process.
+             System.ComponentModel.ISynchronizeInvoke.BeginInvoke(System.Delegate,System.Object[]) 
+             completes, and then returns the value generated by the process.
         
         
-            result: An System.IAsyncResult interface that represents the asynchronous operation started by calling 
+            result: An System.IAsyncResult interface that represents the asynchronous operation started by 
+             calling 
              System.ComponentModel.ISynchronizeInvoke.BeginInvoke(System.Delegate,System.Object[]).
         
             Returns: An System.Object that represents the return value generated by the asynchronous operation.
@@ -6921,16 +6957,18 @@ class ISynchronizeInvoke:
         """
         Invoke(self: ISynchronizeInvoke, method: Delegate, args: Array[object]) -> object
         
-            Synchronously executes the delegate on the thread that created this object and marshals the call 
-             to the creating thread.
+            Synchronously executes the delegate on the thread that created this object and marshals 
+             the call to the creating thread.
         
         
-            method: A System.Delegate that contains a method to call, in the context of the thread for the control.
-            args: An array of type System.Object that represents the arguments to pass to the given method. This 
-             can be null if no arguments are needed.
+            method: A System.Delegate that contains a method to call, in the context of the thread for the 
+             control.
         
-            Returns: An System.Object that represents the return value from the delegate being invoked, or null if 
-             the delegate has no return value.
+            args: An array of type System.Object that represents the arguments to pass to the given method. 
+             This can be null if no arguments are needed.
+        
+            Returns: An System.Object that represents the return value from the delegate being invoked, or 
+             null if the delegate has no return value.
         """
         pass
 
@@ -6947,7 +6985,7 @@ Get: InvokeRequired(self: ISynchronizeInvoke) -> bool
 
 
 
-class ITypeDescriptorContext(IServiceProvider):
+class ITypeDescriptorContext:
     """ Provides contextual information about a component, such as its container and property descriptor. """
     def OnComponentChanged(self):
         """
@@ -6998,15 +7036,15 @@ class ITypedList:
         """
         GetItemProperties(self: ITypedList, listAccessors: Array[PropertyDescriptor]) -> PropertyDescriptorCollection
         
-            Returns the System.ComponentModel.PropertyDescriptorCollection that represents the properties on 
-             each item used to bind data.
+            Returns the System.ComponentModel.PropertyDescriptorCollection that represents the 
+             properties on each item used to bind data.
         
         
             listAccessors: An array of System.ComponentModel.PropertyDescriptor objects to find in the collection as 
              bindable. This can be null.
         
-            Returns: The System.ComponentModel.PropertyDescriptorCollection that represents the properties on each 
-             item used to bind data.
+            Returns: The System.ComponentModel.PropertyDescriptorCollection that represents the properties on 
+             each item used to bind data.
         """
         pass
 
@@ -7028,7 +7066,7 @@ class ITypedList:
         pass
 
 
-class License(object, IDisposable):
+class License:
     """ Provides the abstract base class for all licenses. A license is granted to a specific instance of a component. """
     def Dispose(self):
         """
@@ -7038,18 +7076,11 @@ class License(object, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -7069,7 +7100,7 @@ Get: LicenseKey(self: License) -> str
 
 
 
-class LicenseContext(object, IServiceProvider):
+class LicenseContext:
     """
     Specifies when you can use a licensed object and provides a way of obtaining additional services needed to support licenses running within its domain.
     
@@ -7079,14 +7110,14 @@ class LicenseContext(object, IServiceProvider):
         """
         GetSavedLicenseKey(self: LicenseContext, type: Type, resourceAssembly: Assembly) -> str
         
-            When overridden in a derived class, returns a saved license key for the specified type, from the 
-             specified resource assembly.
+            When overridden in a derived class, returns a saved license key for the specified type, 
+             from the specified resource assembly.
         
         
             type: A System.Type that represents the type of component.
             resourceAssembly: An System.Reflection.Assembly with the license key.
-            Returns: The System.ComponentModel.License.LicenseKey for the specified type. This method returns null 
-             unless you override it.
+            Returns: The System.ComponentModel.License.LicenseKey for the specified type. This method returns 
+             null unless you override it.
         """
         pass
 
@@ -7128,7 +7159,7 @@ Get: UsageMode(self: LicenseContext) -> LicenseUsageMode
 
 
 
-class LicenseException(SystemException, ISerializable, _Exception):
+class LicenseException:
     """
     Represents the exception thrown when a component cannot be granted a license.
     
@@ -7137,22 +7168,16 @@ class LicenseException(SystemException, ISerializable, _Exception):
     LicenseException(type: Type, instance: object, message: str)
     LicenseException(type: Type, instance: object, message: str, innerException: Exception)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: LicenseException, info: SerializationInfo, context: StreamingContext)
-            Sets the System.Runtime.Serialization.SerializationInfo with information about the exception.
+            Sets the System.Runtime.Serialization.SerializationInfo with information about the 
+             exception.
+        
         
             info: The System.Runtime.Serialization.SerializationInfo to be used for deserialization.
             context: The destination to be used for deserialization.
         """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -7184,31 +7209,37 @@ Get: LicensedType(self: LicenseException) -> Type
 """
 
 
+    SerializeObjectState = None
 
-class LicenseManager(object):
+
+class LicenseManager:
     """ Provides properties and methods to add a license to a component and to manage a System.ComponentModel.LicenseProvider. This class cannot be inherited. """
     @staticmethod
     def CreateWithContext(type, creationContext, args=None):
         """
-        CreateWithContext(type: Type, creationContext: LicenseContext, args: Array[object]) -> object
-        
-            Creates an instance of the specified type with the specified arguments, given a context in which 
-             you can use the licensed instance.
-        
-        
-            type: A System.Type that represents the type to create.
-            creationContext: A System.ComponentModel.LicenseContext that specifies when you can use the licensed instance.
-            args: An array of type System.Object that represents the arguments for the type.
-            Returns: An instance of the specified type with the given array of arguments.
         CreateWithContext(type: Type, creationContext: LicenseContext) -> object
         
-            Creates an instance of the specified type, given a context in which you can use the licensed 
-             instance.
+            Creates an instance of the specified type, given a context in which you can use the 
+             licensed instance.
         
         
             type: A System.Type that represents the type to create.
-            creationContext: A System.ComponentModel.LicenseContext that specifies when you can use the licensed instance.
-            Returns: An instance of the specified type.
+            creationContext: A System.ComponentModel.LicenseContext that specifies when you can use the licensed 
+             instance.
+        
+            Returns: An instance of the specified type.
+        CreateWithContext(type: Type, creationContext: LicenseContext, args: Array[object]) -> object
+        
+            Creates an instance of the specified type with the specified arguments, given a context 
+             in which you can use the licensed instance.
+        
+        
+            type: A System.Type that represents the type to create.
+            creationContext: A System.ComponentModel.LicenseContext that specifies when you can use the licensed 
+             instance.
+        
+            args: An array of type System.Object that represents the arguments for the type.
+            Returns: An instance of the specified type with the given array of arguments.
         """
         pass
 
@@ -7227,21 +7258,23 @@ class LicenseManager(object):
     @staticmethod
     def IsValid(type, instance=None, license=None):
         """
-        IsValid(type: Type, instance: object) -> (bool, License)
-        
-            Determines whether a valid license can be granted for the specified instance of the type. This 
-             method creates a valid System.ComponentModel.License.
-        
-        
-            type: A System.Type that represents the type of object that requests the license.
-            instance: An object of the specified type or a type derived from the specified type.
-            Returns: true if a valid System.ComponentModel.License can be granted; otherwise, false.
         IsValid(type: Type) -> bool
         
             Determines whether a valid license can be granted for the specified type.
         
-            type: A System.Type that represents the type of object that requests the System.ComponentModel.License.
-            Returns: true if a valid license can be granted; otherwise, false.
+            type: A System.Type that represents the type of object that requests the 
+             System.ComponentModel.License.
+        
+            Returns: true if a valid license can be granted; otherwise, false.
+        IsValid(type: Type, instance: object) -> (bool, License)
+        
+            Determines whether a valid license can be granted for the specified instance of the type. 
+             This method creates a valid System.ComponentModel.License.
+        
+        
+            type: A System.Type that represents the type of object that requests the license.
+            instance: An object of the specified type or a type derived from the specified type.
+            Returns: true if a valid System.ComponentModel.License can be granted; otherwise, false.
         """
         pass
 
@@ -7249,8 +7282,8 @@ class LicenseManager(object):
     def LockContext(contextUser):
         """
         LockContext(contextUser: object)
-            Prevents changes being made to the current System.ComponentModel.LicenseContext of the given 
-             object.
+            Prevents changes being made to the current System.ComponentModel.LicenseContext of the 
+             given object.
         
         
             contextUser: The object whose current context you want to lock.
@@ -7261,8 +7294,8 @@ class LicenseManager(object):
     def UnlockContext(contextUser):
         """
         UnlockContext(contextUser: object)
-            Allows changes to be made to the current System.ComponentModel.LicenseContext of the given 
-             object.
+            Allows changes to be made to the current System.ComponentModel.LicenseContext of the 
+             given object.
         
         
             contextUser: The object whose current context you want to unlock.
@@ -7272,17 +7305,17 @@ class LicenseManager(object):
     @staticmethod
     def Validate(type, instance=None):
         """
+        Validate(type: Type)
+            Determines whether a license can be granted for the specified type.
+        
+            type: A System.Type that represents the type of object that requests the license.
         Validate(type: Type, instance: object) -> License
         
             Determines whether a license can be granted for the instance of the specified type.
         
             type: A System.Type that represents the type of object that requests the license.
             instance: An System.Object of the specified type or a type derived from the specified type.
-            Returns: A valid System.ComponentModel.License.
-        Validate(type: Type)
-            Determines whether a license can be granted for the specified type.
-        
-            type: A System.Type that represents the type of object that requests the license.
+            Returns: A valid System.ComponentModel.License.
         """
         pass
 
@@ -7290,28 +7323,30 @@ class LicenseManager(object):
     UsageMode = None
 
 
-class LicenseProvider(object):
+class LicenseProvider:
     """ Provides the abstract base class for implementing a license provider. """
     def GetLicense(self, context, type, instance, allowExceptions):
         """
         GetLicense(self: LicenseProvider, context: LicenseContext, type: Type, instance: object, allowExceptions: bool) -> License
         
-            When overridden in a derived class, gets a license for an instance or type of component, when 
-             given a context and whether the denial of a license throws an exception.
+            When overridden in a derived class, gets a license for an instance or type of component, 
+             when given a context and whether the denial of a license throws an exception.
         
         
-            context: A System.ComponentModel.LicenseContext that specifies where you can use the licensed object.
+            context: A System.ComponentModel.LicenseContext that specifies where you can use the licensed 
+             object.
+        
             type: A System.Type that represents the component requesting the license.
             instance: An object that is requesting the license.
-            allowExceptions: true if a System.ComponentModel.LicenseException should be thrown when the component cannot be 
-             granted a license; otherwise, false.
+            allowExceptions: true if a System.ComponentModel.LicenseException should be thrown when the component 
+             cannot be granted a license; otherwise, false.
         
             Returns: A valid System.ComponentModel.License.
         """
         pass
 
 
-class LicenseProviderAttribute(Attribute, _Attribute):
+class LicenseProviderAttribute:
     """
     Specifies the System.ComponentModel.LicenseProvider to use with a class. This class cannot be inherited.
     
@@ -7377,7 +7412,7 @@ Get: TypeId(self: LicenseProviderAttribute) -> object
     Default = None
 
 
-class LicenseUsageMode(Enum, IComparable, IFormattable, IConvertible):
+class LicenseUsageMode:
     """
     Specifies when the System.ComponentModel.License can be used.
     
@@ -7421,7 +7456,7 @@ class LicenseUsageMode(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class LicFileLicenseProvider(LicenseProvider):
+class LicFileLicenseProvider:
     """
     Provides an implementation of a System.ComponentModel.LicenseProvider. The provider works in a similar fashion to the Microsoft .NET Framework standard licensing model.
     
@@ -7444,11 +7479,13 @@ class LicFileLicenseProvider(LicenseProvider):
         
             Returns a license for the instance of the component, if one is available.
         
-            context: A System.ComponentModel.LicenseContext that specifies where you can use the licensed object.
+            context: A System.ComponentModel.LicenseContext that specifies where you can use the licensed 
+             object.
+        
             type: A System.Type that represents the component requesting the System.ComponentModel.License.
             instance: An object that requests the System.ComponentModel.License.
-            allowExceptions: true if a System.ComponentModel.LicenseException should be thrown when a component cannot be 
-             granted a license; otherwise, false.
+            allowExceptions: true if a System.ComponentModel.LicenseException should be thrown when a component cannot 
+             be granted a license; otherwise, false.
         
             Returns: A valid System.ComponentModel.License. If this method cannot find a valid 
              System.ComponentModel.License or a valid context parameter, it returns null.
@@ -7460,19 +7497,20 @@ class LicFileLicenseProvider(LicenseProvider):
         IsKeyValid(self: LicFileLicenseProvider, key: str, type: Type) -> bool
         
             Determines whether the key that the 
-             System.ComponentModel.LicFileLicenseProvider.GetLicense(System.ComponentModel.LicenseContext,Syst
-             em.Type,System.Object,System.Boolean) method retrieves is valid for the specified type.
+             System.ComponentModel.LicFileLicenseProvider.GetLicense(System.ComponentModel.LicenseConte
+             xt,System.Type,System.Object,System.Boolean) method retrieves is valid for the specified 
+             type.
         
         
             key: The System.ComponentModel.License.LicenseKey to check.
             type: A System.Type that represents the component requesting the System.ComponentModel.License.
-            Returns: true if the key is a valid System.ComponentModel.License.LicenseKey for the specified type; 
-             otherwise, false.
+            Returns: true if the key is a valid System.ComponentModel.License.LicenseKey for the specified 
+             type; otherwise, false.
         """
         pass
 
 
-class ListBindableAttribute(Attribute, _Attribute):
+class ListBindableAttribute:
     """
     Specifies that a list can be used as a data source. A visual designer should use this attribute to determine whether to display a particular list in a data-binding picker. This class cannot be inherited.
     
@@ -7483,7 +7521,9 @@ class ListBindableAttribute(Attribute, _Attribute):
         """
         Equals(self: ListBindableAttribute, obj: object) -> bool
         
-            Returns whether the object passed is equal to this System.ComponentModel.ListBindableAttribute.
+            Returns whether the object passed is equal to this 
+             System.ComponentModel.ListBindableAttribute.
+        
         
             obj: The object to test equality with.
             Returns: true if the object passed is equal to this System.ComponentModel.ListBindableAttribute; 
@@ -7504,11 +7544,11 @@ class ListBindableAttribute(Attribute, _Attribute):
         """
         IsDefaultAttribute(self: ListBindableAttribute) -> bool
         
-            Returns whether System.ComponentModel.ListBindableAttribute.ListBindable is set to the default 
-             value.
+            Returns whether System.ComponentModel.ListBindableAttribute.ListBindable is set to the 
+             default value.
         
-            Returns: true if System.ComponentModel.ListBindableAttribute.ListBindable is set to the default value; 
-             otherwise, false.
+            Returns: true if System.ComponentModel.ListBindableAttribute.ListBindable is set to the default 
+             value; otherwise, false.
         """
         pass
 
@@ -7544,7 +7584,7 @@ Get: ListBindable(self: ListBindableAttribute) -> bool
     Yes = None
 
 
-class ListChangedEventArgs(EventArgs):
+class ListChangedEventArgs:
     """
     Provides data for the System.ComponentModel.IBindingList.ListChanged event.
     
@@ -7593,7 +7633,7 @@ Get: PropertyDescriptor(self: ListChangedEventArgs) -> PropertyDescriptor
 
 
 
-class ListChangedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class ListChangedEventHandler:
     """
     Represents the method that will handle the System.ComponentModel.IBindingList.ListChanged event of the System.ComponentModel.IBindingList class.
     
@@ -7620,9 +7660,9 @@ class ListChangedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -7649,13 +7689,14 @@ class ListChangedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -7672,7 +7713,7 @@ class ListChangedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         pass
 
 
-class ListChangedType(Enum, IComparable, IFormattable, IConvertible):
+class ListChangedType:
     """
     Specifies how the list changed.
     
@@ -7722,7 +7763,7 @@ class ListChangedType(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ListSortDescription(object):
+class ListSortDescription:
     """
     Provides a description of the sort operation applied to a data source.
     
@@ -7751,7 +7792,7 @@ Set: SortDirection(self: ListSortDescription) = value
 
 
 
-class ListSortDescriptionCollection(object, IList, ICollection, IEnumerable):
+class ListSortDescriptionCollection:
     """
     Represents a collection of System.ComponentModel.ListSortDescription objects.
     
@@ -7762,7 +7803,9 @@ class ListSortDescriptionCollection(object, IList, ICollection, IEnumerable):
         """
         Contains(self: ListSortDescriptionCollection, value: object) -> bool
         
-            Determines if the System.ComponentModel.ListSortDescriptionCollection contains a specific value.
+            Determines if the System.ComponentModel.ListSortDescriptionCollection contains a specific 
+             value.
+        
         
             value: The System.Object to locate in the collection.
             Returns: true if the System.Object is found in the collection; otherwise, false.
@@ -7844,7 +7887,7 @@ Get: Count(self: ListSortDescriptionCollection) -> int
 
 
 
-class ListSortDirection(Enum, IComparable, IFormattable, IConvertible):
+class ListSortDirection:
     """
     Specifies the direction of a sort operation.
     
@@ -7888,7 +7931,7 @@ class ListSortDirection(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class LocalizableAttribute(Attribute, _Attribute):
+class LocalizableAttribute:
     """
     Specifies whether a property should be localized. This class cannot be inherited.
     
@@ -7954,7 +7997,7 @@ Get: IsLocalizable(self: LocalizableAttribute) -> bool
     Yes = None
 
 
-class LookupBindingPropertiesAttribute(Attribute, _Attribute):
+class LookupBindingPropertiesAttribute:
     """
     Specifies the properties that support lookup-based binding. This class cannot be inherited.
     
@@ -7972,8 +8015,8 @@ class LookupBindingPropertiesAttribute(Attribute, _Attribute):
             obj: The System.Object to compare with the current 
              System.ComponentModel.LookupBindingPropertiesAttribute instance
         
-            Returns: true if the object is equal to the current instance; otherwise, false, indicating they are not 
-             equal.
+            Returns: true if the object is equal to the current instance; otherwise, false, indicating they 
+             are not equal.
         """
         pass
 
@@ -8037,7 +8080,7 @@ Get: ValueMember(self: LookupBindingPropertiesAttribute) -> str
     Default = None
 
 
-class MarshalByValueComponent(object, IComponent, IDisposable, IServiceProvider):
+class MarshalByValueComponent:
     """
     Implements System.ComponentModel.IComponent and provides the base implementation for remotable components that are marshaled by value (a copy of the serialized object is passed).
     
@@ -8065,27 +8108,20 @@ class MarshalByValueComponent(object, IComponent, IDisposable, IServiceProvider)
         """
         ToString(self: MarshalByValueComponent) -> str
         
-            Returns a System.String containing the name of the System.ComponentModel.Component, if any. This 
-             method should not be overridden.
+            Returns a System.String containing the name of the System.ComponentModel.Component, if 
+             any. This method should not be overridden.
         
-            Returns: A System.String containing the name of the System.ComponentModel.Component, if any.null if the 
-             System.ComponentModel.Component is unnamed.
+            Returns: A System.String containing the name of the System.ComponentModel.Component, if any.null 
+             if the System.ComponentModel.Component is unnamed.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -8130,7 +8166,7 @@ Set: Site(self: MarshalByValueComponent) = value
     Disposed = None
 
 
-class MaskedTextProvider(object, ICloneable):
+class MaskedTextProvider:
     """
     Represents a mask-parsing service that can be used by any number of controls that support masking, such as the System.Windows.Forms.MaskedTextBox control.
     
@@ -8144,24 +8180,6 @@ class MaskedTextProvider(object, ICloneable):
     """
     def Add(self, input, testPosition=None, resultHint=None):
         """
-        Add(self: MaskedTextProvider, input: str) -> bool
-        
-            Adds the characters in the specified input string to the end of the formatted string.
-        
-            input: A System.String containing character values to be appended to the formatted string.
-            Returns: true if all the characters from the input string were added successfully; otherwise false to 
-             indicate that no characters were added.
-        
-        Add(self: MaskedTextProvider, input: str) -> (bool, int, MaskedTextResultHint)
-        
-            Adds the characters in the specified input string to the end of the formatted string, and then 
-             outputs position and descriptive information.
-        
-        
-            input: A System.String containing character values to be appended to the formatted string.
-            Returns: true if all the characters from the input string were added successfully; otherwise false to 
-             indicate that no characters were added.
-        
         Add(self: MaskedTextProvider, input: Char) -> bool
         
             Adds the specified input character to the end of the formatted string.
@@ -8170,25 +8188,42 @@ class MaskedTextProvider(object, ICloneable):
             Returns: true if the input character was added successfully; otherwise false.
         Add(self: MaskedTextProvider, input: Char) -> (bool, int, MaskedTextResultHint)
         
-            Adds the specified input character to the end of the formatted string, and then outputs position 
-             and descriptive information.
+            Adds the specified input character to the end of the formatted string, and then outputs 
+             position and descriptive information.
         
         
             input: A System.Char value to be appended to the formatted string.
-            Returns: true if the input character was added successfully; otherwise false.
+            Returns: true if the input character was added successfully; otherwise false.
+        Add(self: MaskedTextProvider, input: str) -> bool
+        
+            Adds the characters in the specified input string to the end of the formatted string.
+        
+            input: A System.String containing character values to be appended to the formatted string.
+            Returns: true if all the characters from the input string were added successfully; otherwise false 
+             to indicate that no characters were added.
+        
+        Add(self: MaskedTextProvider, input: str) -> (bool, int, MaskedTextResultHint)
+        
+            Adds the characters in the specified input string to the end of the formatted string, and 
+             then outputs position and descriptive information.
+        
+        
+            input: A System.String containing character values to be appended to the formatted string.
+            Returns: true if all the characters from the input string were added successfully; otherwise false 
+             to indicate that no characters were added.
         """
         pass
 
     def Clear(self, resultHint=None):
         """
+        Clear(self: MaskedTextProvider)
+            Clears all the editable input characters from the formatted string, replacing them with 
+             prompt characters.
+        
         Clear(self: MaskedTextProvider) -> MaskedTextResultHint
         
-            Clears all the editable input characters from the formatted string, replacing them with prompt 
-             characters, and then outputs descriptive information.
-        
-        Clear(self: MaskedTextProvider)
-            Clears all the editable input characters from the formatted string, replacing them with prompt 
-             characters.
+            Clears all the editable input characters from the formatted string, replacing them with 
+             prompt characters, and then outputs descriptive information.
         """
         pass
 
@@ -8197,7 +8232,8 @@ class MaskedTextProvider(object, ICloneable):
         Clone(self: MaskedTextProvider) -> object
         
             Creates a copy of the current System.ComponentModel.MaskedTextProvider.
-            Returns: The System.ComponentModel.MaskedTextProvider object this method creates, cast as an object.
+            Returns: The System.ComponentModel.MaskedTextProvider object this method creates, cast as an 
+             object.
         """
         pass
 
@@ -8205,16 +8241,17 @@ class MaskedTextProvider(object, ICloneable):
         """
         FindAssignedEditPositionFrom(self: MaskedTextProvider, position: int, direction: bool) -> int
         
-            Returns the position of the first assigned editable position after the specified position using 
-             the specified search direction.
+            Returns the position of the first assigned editable position after the specified position 
+             using the specified search direction.
         
         
             position: The zero-based position in the formatted string to start the search.
-            direction: A System.Boolean indicating the search direction; either true to search forward or false to 
-             search backward.
+            direction: A System.Boolean indicating the search direction; either true to search forward or false 
+             to search backward.
         
             Returns: If successful, an System.Int32 representing the zero-based position of the first assigned 
-             editable position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
+             editable position encountered; otherwise 
+             System.ComponentModel.MaskedTextProvider.InvalidIndex.
         """
         pass
 
@@ -8222,17 +8259,18 @@ class MaskedTextProvider(object, ICloneable):
         """
         FindAssignedEditPositionInRange(self: MaskedTextProvider, startPosition: int, endPosition: int, direction: bool) -> int
         
-            Returns the position of the first assigned editable position between the specified positions 
-             using the specified search direction.
+            Returns the position of the first assigned editable position between the specified 
+             positions using the specified search direction.
         
         
             startPosition: The zero-based position in the formatted string where the search starts.
             endPosition: The zero-based position in the formatted string where the search ends.
-            direction: A System.Boolean indicating the search direction; either true to search forward or false to 
-             search backward.
+            direction: A System.Boolean indicating the search direction; either true to search forward or false 
+             to search backward.
         
             Returns: If successful, an System.Int32 representing the zero-based position of the first assigned 
-             editable position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
+             editable position encountered; otherwise 
+             System.ComponentModel.MaskedTextProvider.InvalidIndex.
         """
         pass
 
@@ -8240,13 +8278,13 @@ class MaskedTextProvider(object, ICloneable):
         """
         FindEditPositionFrom(self: MaskedTextProvider, position: int, direction: bool) -> int
         
-            Returns the position of the first editable position after the specified position using the 
-             specified search direction.
+            Returns the position of the first editable position after the specified position using 
+             the specified search direction.
         
         
             position: The zero-based position in the formatted string to start the search.
-            direction: A System.Boolean indicating the search direction; either true to search forward or false to 
-             search backward.
+            direction: A System.Boolean indicating the search direction; either true to search forward or false 
+             to search backward.
         
             Returns: If successful, an System.Int32 representing the zero-based position of the first editable 
              position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
@@ -8257,14 +8295,14 @@ class MaskedTextProvider(object, ICloneable):
         """
         FindEditPositionInRange(self: MaskedTextProvider, startPosition: int, endPosition: int, direction: bool) -> int
         
-            Returns the position of the first editable position between the specified positions using the 
-             specified search direction.
+            Returns the position of the first editable position between the specified positions using 
+             the specified search direction.
         
         
             startPosition: The zero-based position in the formatted string where the search starts.
             endPosition: The zero-based position in the formatted string where the search ends.
-            direction: A System.Boolean indicating the search direction; either true to search forward or false to 
-             search backward.
+            direction: A System.Boolean indicating the search direction; either true to search forward or false 
+             to search backward.
         
             Returns: If successful, an System.Int32 representing the zero-based position of the first editable 
              position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
@@ -8275,13 +8313,13 @@ class MaskedTextProvider(object, ICloneable):
         """
         FindNonEditPositionFrom(self: MaskedTextProvider, position: int, direction: bool) -> int
         
-            Returns the position of the first non-editable position after the specified position using the 
-             specified search direction.
+            Returns the position of the first non-editable position after the specified position 
+             using the specified search direction.
         
         
             position: The zero-based position in the formatted string to start the search.
-            direction: A System.Boolean indicating the search direction; either true to search forward or false to 
-             search backward.
+            direction: A System.Boolean indicating the search direction; either true to search forward or false 
+             to search backward.
         
             Returns: If successful, an System.Int32 representing the zero-based position of the first literal 
              position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
@@ -8292,14 +8330,14 @@ class MaskedTextProvider(object, ICloneable):
         """
         FindNonEditPositionInRange(self: MaskedTextProvider, startPosition: int, endPosition: int, direction: bool) -> int
         
-            Returns the position of the first non-editable position between the specified positions using 
-             the specified search direction.
+            Returns the position of the first non-editable position between the specified positions 
+             using the specified search direction.
         
         
             startPosition: The zero-based position in the formatted string where the search starts.
             endPosition: The zero-based position in the formatted string where the search ends.
-            direction: A System.Boolean indicating the search direction; either true to search forward or false to 
-             search backward.
+            direction: A System.Boolean indicating the search direction; either true to search forward or false 
+             to search backward.
         
             Returns: If successful, an System.Int32 representing the zero-based position of the first literal 
              position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
@@ -8310,16 +8348,17 @@ class MaskedTextProvider(object, ICloneable):
         """
         FindUnassignedEditPositionFrom(self: MaskedTextProvider, position: int, direction: bool) -> int
         
-            Returns the position of the first unassigned editable position after the specified position 
-             using the specified search direction.
+            Returns the position of the first unassigned editable position after the specified 
+             position using the specified search direction.
         
         
             position: The zero-based position in the formatted string to start the search.
-            direction: A System.Boolean indicating the search direction; either true to search forward or false to 
-             search backward.
+            direction: A System.Boolean indicating the search direction; either true to search forward or false 
+             to search backward.
         
-            Returns: If successful, an System.Int32 representing the zero-based position of the first unassigned 
-             editable position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
+            Returns: If successful, an System.Int32 representing the zero-based position of the first 
+             unassigned editable position encountered; otherwise 
+             System.ComponentModel.MaskedTextProvider.InvalidIndex.
         """
         pass
 
@@ -8327,17 +8366,18 @@ class MaskedTextProvider(object, ICloneable):
         """
         FindUnassignedEditPositionInRange(self: MaskedTextProvider, startPosition: int, endPosition: int, direction: bool) -> int
         
-            Returns the position of the first unassigned editable position between the specified positions 
-             using the specified search direction.
+            Returns the position of the first unassigned editable position between the specified 
+             positions using the specified search direction.
         
         
             startPosition: The zero-based position in the formatted string where the search starts.
             endPosition: The zero-based position in the formatted string where the search ends.
-            direction: A System.Boolean indicating the search direction; either true to search forward or false to 
-             search backward.
+            direction: A System.Boolean indicating the search direction; either true to search forward or false 
+             to search backward.
         
-            Returns: If successful, an System.Int32 representing the zero-based position of the first unassigned 
-             editable position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
+            Returns: If successful, an System.Int32 representing the zero-based position of the first 
+             unassigned editable position encountered; otherwise 
+             System.ComponentModel.MaskedTextProvider.InvalidIndex.
         """
         pass
 
@@ -8346,36 +8386,20 @@ class MaskedTextProvider(object, ICloneable):
         """
         GetOperationResultFromHint(hint: MaskedTextResultHint) -> bool
         
-            Determines whether the specified System.ComponentModel.MaskedTextResultHint denotes success or 
-             failure.
+            Determines whether the specified System.ComponentModel.MaskedTextResultHint denotes 
+             success or failure.
         
         
-            hint: A System.ComponentModel.MaskedTextResultHint value typically obtained as an output parameter 
-             from a previous operation.
+            hint: A System.ComponentModel.MaskedTextResultHint value typically obtained as an output 
+             parameter from a previous operation.
         
-            Returns: true if the specified System.ComponentModel.MaskedTextResultHint value represents a success; 
-             otherwise, false if it represents failure.
+            Returns: true if the specified System.ComponentModel.MaskedTextResultHint value represents a 
+             success; otherwise, false if it represents failure.
         """
         pass
 
     def InsertAt(self, input, position, testPosition=None, resultHint=None):
         """
-        InsertAt(self: MaskedTextProvider, input: str, position: int) -> bool
-        
-            Inserts the specified string at a specified position within the formatted string.
-        
-            input: The System.String to be inserted.
-            position: The zero-based position in the formatted string to insert the input string.
-            Returns: true if the insertion was successful; otherwise, false.
-        InsertAt(self: MaskedTextProvider, input: str, position: int) -> (bool, int, MaskedTextResultHint)
-        
-            Inserts the specified string at a specified position within the formatted string, returning the 
-             last insertion position and the status of the operation.
-        
-        
-            input: The System.String to be inserted.
-            position: The zero-based position in the formatted string to insert the input string.
-            Returns: true if the insertion was successful; otherwise, false.
         InsertAt(self: MaskedTextProvider, input: Char, position: int) -> bool
         
             Inserts the specified character at the specified position within the formatted string.
@@ -8385,12 +8409,28 @@ class MaskedTextProvider(object, ICloneable):
             Returns: true if the insertion was successful; otherwise, false.
         InsertAt(self: MaskedTextProvider, input: Char, position: int) -> (bool, int, MaskedTextResultHint)
         
-            Inserts the specified character at the specified position within the formatted string, returning 
-             the last insertion position and the status of the operation.
+            Inserts the specified character at the specified position within the formatted string, 
+             returning the last insertion position and the status of the operation.
         
         
             input: The System.Char to be inserted.
             position: The zero-based position in the formatted string to insert the character.
+            Returns: true if the insertion was successful; otherwise, false.
+        InsertAt(self: MaskedTextProvider, input: str, position: int) -> bool
+        
+            Inserts the specified string at a specified position within the formatted string.
+        
+            input: The System.String to be inserted.
+            position: The zero-based position in the formatted string to insert the input string.
+            Returns: true if the insertion was successful; otherwise, false.
+        InsertAt(self: MaskedTextProvider, input: str, position: int) -> (bool, int, MaskedTextResultHint)
+        
+            Inserts the specified string at a specified position within the formatted string, 
+             returning the last insertion position and the status of the operation.
+        
+        
+            input: The System.String to be inserted.
+            position: The zero-based position in the formatted string to insert the input string.
             Returns: true if the insertion was successful; otherwise, false.
         """
         pass
@@ -8402,8 +8442,8 @@ class MaskedTextProvider(object, ICloneable):
             Determines whether the specified position is available for assignment.
         
             position: The zero-based position in the mask to test.
-            Returns: true if the specified position in the formatted string is editable and has not been assigned to 
-             yet; otherwise false.
+            Returns: true if the specified position in the formatted string is editable and has not been 
+             assigned to yet; otherwise false.
         """
         pass
 
@@ -8456,29 +8496,26 @@ class MaskedTextProvider(object, ICloneable):
 
     def Remove(self, testPosition=None, resultHint=None):
         """
-        Remove(self: MaskedTextProvider) -> (bool, int, MaskedTextResultHint)
-        
-            Removes the last assigned character from the formatted string, and then outputs the removal 
-             position and descriptive information.
-        
-            Returns: true if the character was successfully removed; otherwise, false.
         Remove(self: MaskedTextProvider) -> bool
         
             Removes the last assigned character from the formatted string.
+            Returns: true if the character was successfully removed; otherwise, false.
+        Remove(self: MaskedTextProvider) -> (bool, int, MaskedTextResultHint)
+        
+            Removes the last assigned character from the formatted string, and then outputs the 
+             removal position and descriptive information.
+        
             Returns: true if the character was successfully removed; otherwise, false.
         """
         pass
 
     def RemoveAt(self, *__args):
         """
-        RemoveAt(self: MaskedTextProvider, startPosition: int, endPosition: int) -> (bool, int, MaskedTextResultHint)
+        RemoveAt(self: MaskedTextProvider, position: int) -> bool
         
-            Removes the assigned characters between the specified positions from the formatted string, and 
-             then outputs the removal position and descriptive information.
+            Removes the assigned character at the specified position from the formatted string.
         
-        
-            startPosition: The zero-based index of the first assigned character to remove.
-            endPosition: The zero-based index of the last assigned character to remove.
+            position: The zero-based position of the assigned character to remove.
             Returns: true if the character was successfully removed; otherwise, false.
         RemoveAt(self: MaskedTextProvider, startPosition: int, endPosition: int) -> bool
         
@@ -8487,49 +8524,24 @@ class MaskedTextProvider(object, ICloneable):
             startPosition: The zero-based index of the first assigned character to remove.
             endPosition: The zero-based index of the last assigned character to remove.
             Returns: true if the character was successfully removed; otherwise, false.
-        RemoveAt(self: MaskedTextProvider, position: int) -> bool
+        RemoveAt(self: MaskedTextProvider, startPosition: int, endPosition: int) -> (bool, int, MaskedTextResultHint)
         
-            Removes the assigned character at the specified position from the formatted string.
+            Removes the assigned characters between the specified positions from the formatted 
+             string, and then outputs the removal position and descriptive information.
         
-            position: The zero-based position of the assigned character to remove.
+        
+            startPosition: The zero-based index of the first assigned character to remove.
+            endPosition: The zero-based index of the last assigned character to remove.
             Returns: true if the character was successfully removed; otherwise, false.
         """
         pass
 
     def Replace(self, input, *__args):
         """
-        Replace(self: MaskedTextProvider, input: str, position: int) -> bool
-        
-            Replaces a range of editable characters starting at the specified position with the specified 
-             string.
-        
-        
-            input: The System.String value used to replace the existing editable characters.
-            position: The zero-based position to search for the first editable character to replace.
-            Returns: true if all the characters were successfully replaced; otherwise, false.
-        Replace(self: MaskedTextProvider, input: str, position: int) -> (bool, int, MaskedTextResultHint)
-        
-            Replaces a range of editable characters starting at the specified position with the specified 
-             string, and then outputs the removal position and descriptive information.
-        
-        
-            input: The System.String value used to replace the existing editable characters.
-            position: The zero-based position to search for the first editable character to replace.
-            Returns: true if all the characters were successfully replaced; otherwise, false.
-        Replace(self: MaskedTextProvider, input: str, startPosition: int, endPosition: int) -> (bool, int, MaskedTextResultHint)
-        
-            Replaces a range of editable characters between the specified starting and ending positions with 
-             the specified string, and then outputs the removal position and descriptive information.
-        
-        
-            input: The System.String value used to replace the existing editable characters.
-            startPosition: The zero-based position in the formatted string where the replacement starts.
-            endPosition: The zero-based position in the formatted string where the replacement ends.
-            Returns: true if all the characters were successfully replaced; otherwise, false.
         Replace(self: MaskedTextProvider, input: Char, position: int) -> bool
         
-            Replaces a single character at or beyond the specified position with the specified character 
-             value.
+            Replaces a single character at or beyond the specified position with the specified 
+             character value.
         
         
             input: The System.Char value that replaces the existing value.
@@ -8537,8 +8549,8 @@ class MaskedTextProvider(object, ICloneable):
             Returns: true if the character was successfully replaced; otherwise, false.
         Replace(self: MaskedTextProvider, input: Char, position: int) -> (bool, int, MaskedTextResultHint)
         
-            Replaces a single character at or beyond the specified position with the specified character 
-             value, and then outputs the removal position and descriptive information.
+            Replaces a single character at or beyond the specified position with the specified 
+             character value, and then outputs the removal position and descriptive information.
         
         
             input: The System.Char value that replaces the existing value.
@@ -8547,29 +8559,59 @@ class MaskedTextProvider(object, ICloneable):
         Replace(self: MaskedTextProvider, input: Char, startPosition: int, endPosition: int) -> (bool, int, MaskedTextResultHint)
         
             Replaces a single character between the specified starting and ending positions with the 
-             specified character value, and then outputs the removal position and descriptive information.
+             specified character value, and then outputs the removal position and descriptive 
+             information.
         
         
             input: The System.Char value that replaces the existing value.
             startPosition: The zero-based position in the formatted string where the replacement starts.
             endPosition: The zero-based position in the formatted string where the replacement ends.
-            Returns: true if the character was successfully replaced; otherwise, false.
+            Returns: true if the character was successfully replaced; otherwise, false.
+        Replace(self: MaskedTextProvider, input: str, position: int) -> bool
+        
+            Replaces a range of editable characters starting at the specified position with the 
+             specified string.
+        
+        
+            input: The System.String value used to replace the existing editable characters.
+            position: The zero-based position to search for the first editable character to replace.
+            Returns: true if all the characters were successfully replaced; otherwise, false.
+        Replace(self: MaskedTextProvider, input: str, position: int) -> (bool, int, MaskedTextResultHint)
+        
+            Replaces a range of editable characters starting at the specified position with the 
+             specified string, and then outputs the removal position and descriptive information.
+        
+        
+            input: The System.String value used to replace the existing editable characters.
+            position: The zero-based position to search for the first editable character to replace.
+            Returns: true if all the characters were successfully replaced; otherwise, false.
+        Replace(self: MaskedTextProvider, input: str, startPosition: int, endPosition: int) -> (bool, int, MaskedTextResultHint)
+        
+            Replaces a range of editable characters between the specified starting and ending 
+             positions with the specified string, and then outputs the removal position and 
+             descriptive information.
+        
+        
+            input: The System.String value used to replace the existing editable characters.
+            startPosition: The zero-based position in the formatted string where the replacement starts.
+            endPosition: The zero-based position in the formatted string where the replacement ends.
+            Returns: true if all the characters were successfully replaced; otherwise, false.
         """
         pass
 
     def Set(self, input, testPosition=None, resultHint=None):
         """
-        Set(self: MaskedTextProvider, input: str) -> (bool, int, MaskedTextResultHint)
-        
-            Sets the formatted string to the specified input string, and then outputs the removal position 
-             and descriptive information.
-        
-        
-            input: The System.String value used to set the formatted string.
-            Returns: true if all the characters were successfully set; otherwise, false.
         Set(self: MaskedTextProvider, input: str) -> bool
         
             Sets the formatted string to the specified input string.
+        
+            input: The System.String value used to set the formatted string.
+            Returns: true if all the characters were successfully set; otherwise, false.
+        Set(self: MaskedTextProvider, input: str) -> (bool, int, MaskedTextResultHint)
+        
+            Sets the formatted string to the specified input string, and then outputs the removal 
+             position and descriptive information.
+        
         
             input: The System.String value used to set the formatted string.
             Returns: true if all the characters were successfully set; otherwise, false.
@@ -8587,56 +8629,6 @@ class MaskedTextProvider(object, ICloneable):
 
     def ToString(self, *__args):
         """
-        ToString(self: MaskedTextProvider, includePrompt: bool, includeLiterals: bool) -> str
-        
-            Returns the formatted string, optionally including prompt and literal characters.
-        
-            includePrompt: true to include prompt characters in the return string; otherwise, false.
-            includeLiterals: true to include literal characters in the return string; otherwise, false.
-            Returns: The formatted System.String that includes all the assigned character values and optionally 
-             includes literals and prompts.
-        
-        ToString(self: MaskedTextProvider, includePrompt: bool, includeLiterals: bool, startPosition: int, length: int) -> str
-        
-            Returns a substring of the formatted string, optionally including prompt and literal characters.
-        
-            includePrompt: true to include prompt characters in the return string; otherwise, false.
-            includeLiterals: true to include literal characters in the return string; otherwise, false.
-            startPosition: The zero-based position in the formatted string where the output begins.
-            length: The number of characters to return.
-            Returns: If successful, a substring of the formatted System.String, which includes all the assigned 
-             character values and optionally includes literals and prompts; otherwise the System.String.Empty 
-             string.
-        
-        ToString(self: MaskedTextProvider, ignorePasswordChar: bool, includePrompt: bool, includeLiterals: bool, startPosition: int, length: int) -> str
-        
-            Returns a substring of the formatted string, optionally including prompt, literal, and password 
-             characters.
-        
-        
-            ignorePasswordChar: true to return the actual editable characters; otherwise, false to indicate that the 
-             System.ComponentModel.MaskedTextProvider.PasswordChar property is to be honored.
-        
-            includePrompt: true to include prompt characters in the return string; otherwise, false.
-            includeLiterals: true to return literal characters in the return string; otherwise, false.
-            startPosition: The zero-based position in the formatted string where the output begins.
-            length: The number of characters to return.
-            Returns: If successful, a substring of the formatted System.String, which includes all the assigned 
-             character values and optionally includes literals, prompts, and password characters; otherwise 
-             the System.String.Empty string.
-        
-        ToString(self: MaskedTextProvider, ignorePasswordChar: bool, startPosition: int, length: int) -> str
-        
-            Returns a substring of the formatted string, optionally including password characters.
-        
-            ignorePasswordChar: true to return the actual editable characters; otherwise, false to indicate that the 
-             System.ComponentModel.MaskedTextProvider.PasswordChar property is to be honored.
-        
-            startPosition: The zero-based position in the formatted string where the output begins.
-            length: The number of characters to return.
-            Returns: If successful, a substring of the formatted System.String, which includes literals, prompts, and 
-             optionally password characters; otherwise the System.String.Empty string.
-        
         ToString(self: MaskedTextProvider) -> str
         
             Returns the formatted string that includes all the assigned character values.
@@ -8648,15 +8640,69 @@ class MaskedTextProvider(object, ICloneable):
             ignorePasswordChar: true to return the actual editable characters; otherwise, false to indicate that the 
              System.ComponentModel.MaskedTextProvider.PasswordChar property is to be honored.
         
-            Returns: The formatted System.String that includes literals, prompts, and optionally password characters.
+            Returns: The formatted System.String that includes literals, prompts, and optionally password 
+             characters.
+        
         ToString(self: MaskedTextProvider, startPosition: int, length: int) -> str
         
             Returns a substring of the formatted string.
         
             startPosition: The zero-based position in the formatted string where the output begins.
             length: The number of characters to return.
-            Returns: If successful, a substring of the formatted System.String, which includes all the assigned 
-             character values; otherwise the System.String.Empty string.
+            Returns: If successful, a substring of the formatted System.String, which includes all the 
+             assigned character values; otherwise the System.String.Empty string.
+        
+        ToString(self: MaskedTextProvider, ignorePasswordChar: bool, startPosition: int, length: int) -> str
+        
+            Returns a substring of the formatted string, optionally including password characters.
+        
+            ignorePasswordChar: true to return the actual editable characters; otherwise, false to indicate that the 
+             System.ComponentModel.MaskedTextProvider.PasswordChar property is to be honored.
+        
+            startPosition: The zero-based position in the formatted string where the output begins.
+            length: The number of characters to return.
+            Returns: If successful, a substring of the formatted System.String, which includes literals, 
+             prompts, and optionally password characters; otherwise the System.String.Empty string.
+        
+        ToString(self: MaskedTextProvider, includePrompt: bool, includeLiterals: bool) -> str
+        
+            Returns the formatted string, optionally including prompt and literal characters.
+        
+            includePrompt: true to include prompt characters in the return string; otherwise, false.
+            includeLiterals: true to include literal characters in the return string; otherwise, false.
+            Returns: The formatted System.String that includes all the assigned character values and 
+             optionally includes literals and prompts.
+        
+        ToString(self: MaskedTextProvider, includePrompt: bool, includeLiterals: bool, startPosition: int, length: int) -> str
+        
+            Returns a substring of the formatted string, optionally including prompt and literal 
+             characters.
+        
+        
+            includePrompt: true to include prompt characters in the return string; otherwise, false.
+            includeLiterals: true to include literal characters in the return string; otherwise, false.
+            startPosition: The zero-based position in the formatted string where the output begins.
+            length: The number of characters to return.
+            Returns: If successful, a substring of the formatted System.String, which includes all the 
+             assigned character values and optionally includes literals and prompts; otherwise the 
+             System.String.Empty string.
+        
+        ToString(self: MaskedTextProvider, ignorePasswordChar: bool, includePrompt: bool, includeLiterals: bool, startPosition: int, length: int) -> str
+        
+            Returns a substring of the formatted string, optionally including prompt, literal, and 
+             password characters.
+        
+        
+            ignorePasswordChar: true to return the actual editable characters; otherwise, false to indicate that the 
+             System.ComponentModel.MaskedTextProvider.PasswordChar property is to be honored.
+        
+            includePrompt: true to include prompt characters in the return string; otherwise, false.
+            includeLiterals: true to return literal characters in the return string; otherwise, false.
+            startPosition: The zero-based position in the formatted string where the output begins.
+            length: The number of characters to return.
+            Returns: If successful, a substring of the formatted System.String, which includes all the 
+             assigned character values and optionally includes literals, prompts, and password 
+             characters; otherwise the System.String.Empty string.
         """
         pass
 
@@ -8680,23 +8726,24 @@ class MaskedTextProvider(object, ICloneable):
         
             input: The System.Char value to test.
             position: The position in the mask to test the input character against.
-            Returns: true if the specified character would be escaped at the specified position; otherwise, false.
+            Returns: true if the specified character would be escaped at the specified position; otherwise, 
+             false.
         """
         pass
 
     def VerifyString(self, input, testPosition=None, resultHint=None):
         """
-        VerifyString(self: MaskedTextProvider, input: str) -> (bool, int, MaskedTextResultHint)
-        
-            Tests whether the specified string could be set successfully, and then outputs position and 
-             descriptive information.
-        
-        
-            input: The System.String value to test.
-            Returns: true if the specified string represents valid input; otherwise, false.
         VerifyString(self: MaskedTextProvider, input: str) -> bool
         
             Tests whether the specified string could be set successfully.
+        
+            input: The System.String value to test.
+            Returns: true if the specified string represents valid input; otherwise, false.
+        VerifyString(self: MaskedTextProvider, input: str) -> (bool, int, MaskedTextResultHint)
+        
+            Tests whether the specified string could be set successfully, and then outputs position 
+             and descriptive information.
+        
         
             input: The System.String value to test.
             Returns: true if the specified string represents valid input; otherwise, false.
@@ -8888,7 +8935,7 @@ Set: SkipLiterals(self: MaskedTextProvider) = value
     InvalidIndex = -1
 
 
-class MaskedTextResultHint(Enum, IComparable, IFormattable, IConvertible):
+class MaskedTextResultHint:
     """
     Specifies values that succinctly describe the results of a masked text parsing operation.
     
@@ -8945,7 +8992,7 @@ class MaskedTextResultHint(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class MergablePropertyAttribute(Attribute, _Attribute):
+class MergablePropertyAttribute:
     """
     Specifies that this property can be combined with properties belonging to other objects in a Properties window.
     
@@ -9009,7 +9056,7 @@ Get: AllowMerge(self: MergablePropertyAttribute) -> bool
     Yes = None
 
 
-class MultilineStringConverter(TypeConverter):
+class MultilineStringConverter:
     """
     Provides a type converter to convert multiline strings to a simple string.
     
@@ -9019,8 +9066,8 @@ class MultilineStringConverter(TypeConverter):
         """
         ConvertTo(self: MultilineStringConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object, destinationType: Type) -> object
         
-            Converts the given value object to the specified type, using the specified context and culture 
-             information.
+            Converts the given value object to the specified type, using the specified context and 
+             culture information.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext  that provides a format context.
@@ -9035,15 +9082,15 @@ class MultilineStringConverter(TypeConverter):
         """
         GetProperties(self: MultilineStringConverter, context: ITypeDescriptorContext, value: object, attributes: Array[Attribute]) -> PropertyDescriptorCollection
         
-            Returns a collection of properties for the type of array specified by the value parameter, using 
-             the specified context and attributes.
+            Returns a collection of properties for the type of array specified by the value 
+             parameter, using the specified context and attributes.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext  that provides a format context.
             value: An System.Object that specifies the type of array for which to get properties.
             attributes: An array of type System.Attribute that is used as a filter.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed for 
-             this data type, or null if there are no properties.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed 
+             for this data type, or null if there are no properties.
         """
         pass
 
@@ -9054,13 +9101,13 @@ class MultilineStringConverter(TypeConverter):
             Returns whether this object supports properties, using the specified context.
         
             context: An System.ComponentModel.ITypeDescriptorContext  that provides a format context.
-            Returns: true if erload:System.ComponentModel.MultilineStringConverter.GetProperties should be called to 
-             find the properties of this object; otherwise, false.
+            Returns: true if erload:System.ComponentModel.MultilineStringConverter.GetProperties should be 
+             called to find the properties of this object; otherwise, false.
         """
         pass
 
 
-class NestedContainer(Container, IContainer, IDisposable, INestedContainer):
+class NestedContainer:
     """
     Provides the base implementation for the System.ComponentModel.INestedContainer interface, which enables containers to have an owning component.
     
@@ -9083,7 +9130,8 @@ class NestedContainer(Container, IContainer, IDisposable, INestedContainer):
         Dispose(self: NestedContainer, disposing: bool)
             Releases the resources used by the nested container.
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
@@ -9121,18 +9169,11 @@ class NestedContainer(Container, IContainer, IDisposable, INestedContainer):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -9158,7 +9199,7 @@ Get: Owner(self: NestedContainer) -> IComponent
 
 
 
-class NotifyParentPropertyAttribute(Attribute, _Attribute):
+class NotifyParentPropertyAttribute:
     """
     Indicates that the parent property is notified when the value of the property that this attribute is applied to is modified. This class cannot be inherited.
     
@@ -9188,11 +9229,11 @@ class NotifyParentPropertyAttribute(Attribute, _Attribute):
         """
         IsDefaultAttribute(self: NotifyParentPropertyAttribute) -> bool
         
-            Gets a value indicating whether the current value of the attribute is the default value for the 
-             attribute.
+            Gets a value indicating whether the current value of the attribute is the default value 
+             for the attribute.
         
-            Returns: true if the current value of the attribute is the default value of the attribute; otherwise, 
-             false.
+            Returns: true if the current value of the attribute is the default value of the attribute; 
+             otherwise, false.
         """
         pass
 
@@ -9225,7 +9266,7 @@ Get: NotifyParent(self: NotifyParentPropertyAttribute) -> bool
     Yes = None
 
 
-class NullableConverter(TypeConverter):
+class NullableConverter:
     """
     Provides automatic conversion between a nullable type and its underlying primitive type.
     
@@ -9235,8 +9276,8 @@ class NullableConverter(TypeConverter):
         """
         CanConvertFrom(self: NullableConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Returns whether this converter can convert an object of the given type to the type of this 
-             converter, using the specified context.
+            Returns whether this converter can convert an object of the given type to the type of 
+             this converter, using the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext  that provides a format context.
@@ -9249,8 +9290,8 @@ class NullableConverter(TypeConverter):
         """
         CanConvertTo(self: NullableConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Returns whether this converter can convert the object to the specified type, using the specified 
-             context.
+            Returns whether this converter can convert the object to the specified type, using the 
+             specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -9263,8 +9304,8 @@ class NullableConverter(TypeConverter):
         """
         ConvertFrom(self: NullableConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object) -> object
         
-            Converts the given object to the type of this converter, using the specified context and culture 
-             information.
+            Converts the given object to the type of this converter, using the specified context and 
+             culture information.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -9278,8 +9319,8 @@ class NullableConverter(TypeConverter):
         """
         ConvertTo(self: NullableConverter, context: ITypeDescriptorContext, culture: CultureInfo, value: object, destinationType: Type) -> object
         
-            Converts the given value object to the specified type, using the specified context and culture 
-             information.
+            Converts the given value object to the specified type, using the specified context and 
+             culture information.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -9296,8 +9337,8 @@ class NullableConverter(TypeConverter):
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             propertyValues: An System.Collections.IDictionary of new property values.
-            Returns: An System.Object representing the given System.Collections.IDictionary, or null if the object 
-             cannot be created. This method always returns null.
+            Returns: An System.Object representing the given System.Collections.IDictionary, or null if the 
+             object cannot be created. This method always returns null.
         """
         pass
 
@@ -9307,8 +9348,8 @@ class NullableConverter(TypeConverter):
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             Returns: true if changing a property on this object requires a call to 
-             System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a 
-             new value; otherwise, false.
+             System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to 
+             create a new value; otherwise, false.
         """
         pass
 
@@ -9319,8 +9360,8 @@ class NullableConverter(TypeConverter):
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             value: An System.Object that specifies the type of array for which to get properties.
             attributes: An array of type System.Attribute that is used as a filter.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed for 
-             this data type, or null if there are no properties.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed 
+             for this data type, or null if there are no properties.
         """
         pass
 
@@ -9329,8 +9370,8 @@ class NullableConverter(TypeConverter):
         GetPropertiesSupported(self: NullableConverter, context: ITypeDescriptorContext) -> bool
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true if System.ComponentModel.TypeConverter.GetProperties(System.Object) should be called to 
-             find the properties of this object; otherwise, false.
+            Returns: true if System.ComponentModel.TypeConverter.GetProperties(System.Object) should be called 
+             to find the properties of this object; otherwise, false.
         """
         pass
 
@@ -9338,12 +9379,12 @@ class NullableConverter(TypeConverter):
         """
         GetStandardValues(self: NullableConverter, context: ITypeDescriptorContext) -> StandardValuesCollection
         
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context that can be used 
-             to extract additional information about the environment from which this converter is invoked. 
-             This parameter or properties of this parameter can be null.
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context that can 
+             be used to extract additional information about the environment from which this converter 
+             is invoked. This parameter or properties of this parameter can be null.
         
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of 
-             valid values, or null if the data type does not support a standard set of values.
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set 
+             of valid values, or null if the data type does not support a standard set of values.
         """
         pass
 
@@ -9353,8 +9394,8 @@ class NullableConverter(TypeConverter):
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
-             System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of possible values; 
-             false if other values are possible.
+             System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of possible 
+             values; false if other values are possible.
         """
         pass
 
@@ -9363,8 +9404,8 @@ class NullableConverter(TypeConverter):
         GetStandardValuesSupported(self: NullableConverter, context: ITypeDescriptorContext) -> bool
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true if System.ComponentModel.TypeConverter.GetStandardValues should be called to find a common 
-             set of values the object supports; otherwise, false.
+            Returns: true if System.ComponentModel.TypeConverter.GetStandardValues should be called to find a 
+             common set of values the object supports; otherwise, false.
         """
         pass
 
@@ -9405,7 +9446,7 @@ Get: UnderlyingTypeConverter(self: NullableConverter) -> TypeConverter
 
 
 
-class ParenthesizePropertyNameAttribute(Attribute, _Attribute):
+class ParenthesizePropertyNameAttribute:
     """
     Indicates whether the name of the associated property is displayed with parentheses in the Properties window. This class cannot be inherited.
     
@@ -9436,11 +9477,11 @@ class ParenthesizePropertyNameAttribute(Attribute, _Attribute):
         """
         IsDefaultAttribute(self: ParenthesizePropertyNameAttribute) -> bool
         
-            Gets a value indicating whether the current value of the attribute is the default value for the 
-             attribute.
+            Gets a value indicating whether the current value of the attribute is the default value 
+             for the attribute.
         
-            Returns: true if the current value of the attribute is the default value of the attribute; otherwise, 
-             false.
+            Returns: true if the current value of the attribute is the default value of the attribute; 
+             otherwise, false.
         """
         pass
 
@@ -9474,7 +9515,7 @@ Get: NeedParenthesis(self: ParenthesizePropertyNameAttribute) -> bool
     Default = None
 
 
-class PasswordPropertyTextAttribute(Attribute, _Attribute):
+class PasswordPropertyTextAttribute:
     """
     Indicates that an object's text representation is obscured by characters such as asterisks. This class cannot be inherited.
     
@@ -9485,7 +9526,9 @@ class PasswordPropertyTextAttribute(Attribute, _Attribute):
         """
         Equals(self: PasswordPropertyTextAttribute, o: object) -> bool
         
-            Determines whether two System.ComponentModel.PasswordPropertyTextAttribute instances are equal.
+            Determines whether two System.ComponentModel.PasswordPropertyTextAttribute instances are 
+             equal.
+        
         
             o: The System.ComponentModel.PasswordPropertyTextAttribute to compare with the current 
              System.ComponentModel.PasswordPropertyTextAttribute.
@@ -9545,7 +9588,7 @@ Get: Password(self: PasswordPropertyTextAttribute) -> bool
     Yes = None
 
 
-class ProgressChangedEventArgs(EventArgs):
+class ProgressChangedEventArgs:
     """
     Provides data for the System.ComponentModel.BackgroundWorker.ProgressChanged event.
     
@@ -9572,7 +9615,7 @@ Get: UserState(self: ProgressChangedEventArgs) -> object
 
 
 
-class ProgressChangedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class ProgressChangedEventHandler:
     """
     Represents the method that will handle the System.ComponentModel.BackgroundWorker.ProgressChanged event of the System.ComponentModel.BackgroundWorker class. This class cannot be inherited.
     
@@ -9599,9 +9642,9 @@ class ProgressChangedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -9628,13 +9671,14 @@ class ProgressChangedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -9651,7 +9695,7 @@ class ProgressChangedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         pass
 
 
-class PropertyChangedEventArgs(EventArgs):
+class PropertyChangedEventArgs:
     """
     Provides data for the System.ComponentModel.INotifyPropertyChanged.PropertyChanged event.
     
@@ -9671,7 +9715,7 @@ Get: PropertyName(self: PropertyChangedEventArgs) -> str
 
 
 
-class PropertyChangedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class PropertyChangedEventHandler:
     """
     Represents the method that will handle the System.ComponentModel.INotifyPropertyChanged.PropertyChanged event raised when a property is changed on a component.
     
@@ -9698,9 +9742,9 @@ class PropertyChangedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -9727,13 +9771,14 @@ class PropertyChangedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -9750,7 +9795,7 @@ class PropertyChangedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         pass
 
 
-class PropertyChangingEventArgs(EventArgs):
+class PropertyChangingEventArgs:
     """
     Provides data for the System.ComponentModel.INotifyPropertyChanging.PropertyChanging event.
     
@@ -9770,7 +9815,7 @@ Get: PropertyName(self: PropertyChangingEventArgs) -> str
 
 
 
-class PropertyChangingEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class PropertyChangingEventHandler:
     """
     Represents the method that will handle the System.ComponentModel.INotifyPropertyChanging.PropertyChanging event of an System.ComponentModel.INotifyPropertyChanging interface.
     
@@ -9797,9 +9842,9 @@ class PropertyChangingEventHandler(MulticastDelegate, ICloneable, ISerializable)
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -9826,13 +9871,14 @@ class PropertyChangingEventHandler(MulticastDelegate, ICloneable, ISerializable)
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -9849,7 +9895,7 @@ class PropertyChangingEventHandler(MulticastDelegate, ICloneable, ISerializable)
         pass
 
 
-class PropertyDescriptor(MemberDescriptor):
+class PropertyDescriptor:
     """ Provides an abstraction of a property on a class. """
     def AddValueChanged(self, component, handler):
         """
@@ -9896,25 +9942,6 @@ class PropertyDescriptor(MemberDescriptor):
 
     def GetChildProperties(self, *__args):
         """
-        GetChildProperties(self: PropertyDescriptor, instance: object) -> PropertyDescriptorCollection
-        
-            Returns a System.ComponentModel.PropertyDescriptorCollection for a given object.
-        
-            instance: A component to get the properties for.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties for the specified 
-             component.
-        
-        GetChildProperties(self: PropertyDescriptor, instance: object, filter: Array[Attribute]) -> PropertyDescriptorCollection
-        
-            Returns a System.ComponentModel.PropertyDescriptorCollection for a given object using a 
-             specified array of attributes as a filter.
-        
-        
-            instance: A component to get the properties for.
-            filter: An array of type System.Attribute to use as a filter.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that match the 
-             specified attributes for the specified component.
-        
         GetChildProperties(self: PropertyDescriptor) -> PropertyDescriptorCollection
         
             Returns the default System.ComponentModel.PropertyDescriptorCollection.
@@ -9927,7 +9954,26 @@ class PropertyDescriptor(MemberDescriptor):
         
             filter: An array of type System.Attribute to use as a filter.
             Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that match the 
-             specified attributes.
+             specified attributes.
+        
+        GetChildProperties(self: PropertyDescriptor, instance: object) -> PropertyDescriptorCollection
+        
+            Returns a System.ComponentModel.PropertyDescriptorCollection for a given object.
+        
+            instance: A component to get the properties for.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties for the 
+             specified component.
+        
+        GetChildProperties(self: PropertyDescriptor, instance: object, filter: Array[Attribute]) -> PropertyDescriptorCollection
+        
+            Returns a System.ComponentModel.PropertyDescriptorCollection for a given object using a 
+             specified array of attributes as a filter.
+        
+        
+            instance: A component to get the properties for.
+            filter: An array of type System.Attribute to use as a filter.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that match the 
+             specified attributes for the specified component.
         """
         pass
 
@@ -9937,8 +9983,8 @@ class PropertyDescriptor(MemberDescriptor):
         
             Gets an editor of the specified type.
         
-            editorBaseType: The base type of editor, which is used to differentiate between multiple editors that a property 
-             supports.
+            editorBaseType: The base type of editor, which is used to differentiate between multiple editors that a 
+             property supports.
         
             Returns: An instance of the requested editor type, or null if an editor cannot be found.
         """
@@ -9982,8 +10028,8 @@ class PropertyDescriptor(MemberDescriptor):
             Retrieves the current set of ValueChanged event handlers for a specific component
         
             component: The component for which to retrieve event handlers.
-            Returns: A combined multicast event handler, or null if no event handlers are currently assigned to 
-             component.
+            Returns: A combined multicast event handler, or null if no event handlers are currently assigned 
+             to component.
         """
         pass
 
@@ -10010,8 +10056,8 @@ class PropertyDescriptor(MemberDescriptor):
     def ResetValue(self, component):
         """
         ResetValue(self: PropertyDescriptor, component: object)
-            When overridden in a derived class, resets the value for this property of the component to the 
-             default value.
+            When overridden in a derived class, resets the value for this property of the component 
+             to the default value.
         
         
             component: The component with the property value that is to be reset to the default value.
@@ -10032,8 +10078,8 @@ class PropertyDescriptor(MemberDescriptor):
         """
         ShouldSerializeValue(self: PropertyDescriptor, component: object) -> bool
         
-            When overridden in a derived class, determines a value indicating whether the value of this 
-             property needs to be persisted.
+            When overridden in a derived class, determines a value indicating whether the value of 
+             this property needs to be persisted.
         
         
             component: The component with the property to be examined for persistence.
@@ -10111,7 +10157,7 @@ Get: SupportsChangeEvents(self: PropertyDescriptor) -> bool
 
 
 
-class PropertyDescriptorCollection(object, ICollection, IEnumerable, IList, IDictionary):
+class PropertyDescriptorCollection:
     """
     Represents a collection of System.ComponentModel.PropertyDescriptor objects.
     
@@ -10125,7 +10171,8 @@ class PropertyDescriptorCollection(object, ICollection, IEnumerable, IList, IDic
             Adds the specified System.ComponentModel.PropertyDescriptor to the collection.
         
             value: The System.ComponentModel.PropertyDescriptor to add to the collection.
-            Returns: The index of the System.ComponentModel.PropertyDescriptor that was added to the collection.
+            Returns: The index of the System.ComponentModel.PropertyDescriptor that was added to the 
+             collection.
         """
         pass
 
@@ -10140,11 +10187,13 @@ class PropertyDescriptorCollection(object, ICollection, IEnumerable, IList, IDic
         """
         Contains(self: PropertyDescriptorCollection, value: PropertyDescriptor) -> bool
         
-            Returns whether the collection contains the given System.ComponentModel.PropertyDescriptor.
+            Returns whether the collection contains the given 
+             System.ComponentModel.PropertyDescriptor.
+        
         
             value: The System.ComponentModel.PropertyDescriptor to find in the collection.
-            Returns: true if the collection contains the given System.ComponentModel.PropertyDescriptor; otherwise, 
-             false.
+            Returns: true if the collection contains the given System.ComponentModel.PropertyDescriptor; 
+             otherwise, false.
         """
         pass
 
@@ -10153,8 +10202,8 @@ class PropertyDescriptorCollection(object, ICollection, IEnumerable, IList, IDic
         CopyTo(self: PropertyDescriptorCollection, array: Array, index: int)
             Copies the entire collection to an array, starting at the specified index number.
         
-            array: An array of System.ComponentModel.PropertyDescriptor objects to copy elements of the collection 
-             to.
+            array: An array of System.ComponentModel.PropertyDescriptor objects to copy elements of the 
+             collection to.
         
             index: The index of the array parameter at which copying begins.
         """
@@ -10164,14 +10213,14 @@ class PropertyDescriptorCollection(object, ICollection, IEnumerable, IList, IDic
         """
         Find(self: PropertyDescriptorCollection, name: str, ignoreCase: bool) -> PropertyDescriptor
         
-            Returns the System.ComponentModel.PropertyDescriptor with the specified name, using a Boolean to 
-             indicate whether to ignore case.
+            Returns the System.ComponentModel.PropertyDescriptor with the specified name, using a 
+             Boolean to indicate whether to ignore case.
         
         
             name: The name of the System.ComponentModel.PropertyDescriptor to return from the collection.
             ignoreCase: true if you want to ignore the case of the property name; otherwise, false.
-            Returns: A System.ComponentModel.PropertyDescriptor with the specified name, or null if the property does 
-             not exist.
+            Returns: A System.ComponentModel.PropertyDescriptor with the specified name, or null if the 
+             property does not exist.
         """
         pass
 
@@ -10198,8 +10247,8 @@ class PropertyDescriptorCollection(object, ICollection, IEnumerable, IList, IDic
     def Insert(self, index, value):
         """
         Insert(self: PropertyDescriptorCollection, index: int, value: PropertyDescriptor)
-            Adds the System.ComponentModel.PropertyDescriptor to the collection at the specified index 
-             number.
+            Adds the System.ComponentModel.PropertyDescriptor to the collection at the specified 
+             index number.
         
         
             index: The index at which to add the value parameter to the collection.
@@ -10209,19 +10258,19 @@ class PropertyDescriptorCollection(object, ICollection, IEnumerable, IList, IDic
 
     def InternalSort(self, *args): #cannot find CLR method
         """
+        InternalSort(self: PropertyDescriptorCollection, names: Array[str])
+            Sorts the members of this collection. The specified order is applied first, followed by 
+             the default sort for this collection, which is usually alphabetical.
+        
+        
+            names: An array of strings describing the order in which to sort the 
+             System.ComponentModel.PropertyDescriptor objects in this collection.
+        
         InternalSort(self: PropertyDescriptorCollection, sorter: IComparer)
             Sorts the members of this collection, using the specified System.Collections.IComparer.
         
             sorter: A comparer to use to sort the System.ComponentModel.PropertyDescriptor objects in this 
-             collection.
-        
-        InternalSort(self: PropertyDescriptorCollection, names: Array[str])
-            Sorts the members of this collection. The specified order is applied first, followed by the 
-             default sort for this collection, which is usually alphabetical.
-        
-        
-            names: An array of strings describing the order in which to sort the 
-             System.ComponentModel.PropertyDescriptor objects in this collection.
+             collection.
         """
         pass
 
@@ -10237,7 +10286,9 @@ class PropertyDescriptorCollection(object, ICollection, IEnumerable, IList, IDic
     def RemoveAt(self, index):
         """
         RemoveAt(self: PropertyDescriptorCollection, index: int)
-            Removes the System.ComponentModel.PropertyDescriptor at the specified index from the collection.
+            Removes the System.ComponentModel.PropertyDescriptor at the specified index from the 
+             collection.
+        
         
             index: The index of the System.ComponentModel.PropertyDescriptor to remove from the collection.
         """
@@ -10245,10 +10296,30 @@ class PropertyDescriptorCollection(object, ICollection, IEnumerable, IList, IDic
 
     def Sort(self, *__args):
         """
+        Sort(self: PropertyDescriptorCollection) -> PropertyDescriptorCollection
+        
+            Sorts the members of this collection, using the default sort for this collection, which 
+             is usually alphabetical.
+        
+            Returns: A new System.ComponentModel.PropertyDescriptorCollection that contains the sorted 
+             System.ComponentModel.PropertyDescriptor objects.
+        
+        Sort(self: PropertyDescriptorCollection, names: Array[str]) -> PropertyDescriptorCollection
+        
+            Sorts the members of this collection. The specified order is applied first, followed by 
+             the default sort for this collection, which is usually alphabetical.
+        
+        
+            names: An array of strings describing the order in which to sort the 
+             System.ComponentModel.PropertyDescriptor objects in this collection.
+        
+            Returns: A new System.ComponentModel.PropertyDescriptorCollection that contains the sorted 
+             System.ComponentModel.PropertyDescriptor objects.
+        
         Sort(self: PropertyDescriptorCollection, names: Array[str], comparer: IComparer) -> PropertyDescriptorCollection
         
-            Sorts the members of this collection. The specified order is applied first, followed by the sort 
-             using the specified System.Collections.IComparer.
+            Sorts the members of this collection. The specified order is applied first, followed by 
+             the sort using the specified System.Collections.IComparer.
         
         
             names: An array of strings describing the order in which to sort the 
@@ -10266,26 +10337,6 @@ class PropertyDescriptorCollection(object, ICollection, IEnumerable, IList, IDic
         
             comparer: A comparer to use to sort the System.ComponentModel.PropertyDescriptor objects in this 
              collection.
-        
-            Returns: A new System.ComponentModel.PropertyDescriptorCollection that contains the sorted 
-             System.ComponentModel.PropertyDescriptor objects.
-        
-        Sort(self: PropertyDescriptorCollection) -> PropertyDescriptorCollection
-        
-            Sorts the members of this collection, using the default sort for this collection, which is 
-             usually alphabetical.
-        
-            Returns: A new System.ComponentModel.PropertyDescriptorCollection that contains the sorted 
-             System.ComponentModel.PropertyDescriptor objects.
-        
-        Sort(self: PropertyDescriptorCollection, names: Array[str]) -> PropertyDescriptorCollection
-        
-            Sorts the members of this collection. The specified order is applied first, followed by the 
-             default sort for this collection, which is usually alphabetical.
-        
-        
-            names: An array of strings describing the order in which to sort the 
-             System.ComponentModel.PropertyDescriptor objects in this collection.
         
             Returns: A new System.ComponentModel.PropertyDescriptorCollection that contains the sorted 
              System.ComponentModel.PropertyDescriptor objects.
@@ -10346,7 +10397,7 @@ Get: Count(self: PropertyDescriptorCollection) -> int
     Empty = None
 
 
-class PropertyTabAttribute(Attribute, _Attribute):
+class PropertyTabAttribute:
     """
     Identifies the property tab or tabs to display for the specified class or classes.
     
@@ -10358,18 +10409,20 @@ class PropertyTabAttribute(Attribute, _Attribute):
     """
     def Equals(self, other):
         """
-        Equals(self: PropertyTabAttribute, other: PropertyTabAttribute) -> bool
-        
-            Returns a value indicating whether this instance is equal to a specified attribute.
-        
-            other: A System.ComponentModel.PropertyTabAttribute to compare to this instance, or null.
-            Returns: true if the System.ComponentModel.PropertyTabAttribute instances are equal; otherwise, false.
         Equals(self: PropertyTabAttribute, other: object) -> bool
         
             Returns a value indicating whether this instance is equal to a specified object.
         
             other: An object to compare to this instance, or null.
-            Returns: true if other refers to the same System.ComponentModel.PropertyTabAttribute instance; otherwise, 
+            Returns: true if other refers to the same System.ComponentModel.PropertyTabAttribute instance; 
+             otherwise, false.
+        
+        Equals(self: PropertyTabAttribute, other: PropertyTabAttribute) -> bool
+        
+            Returns a value indicating whether this instance is equal to a specified attribute.
+        
+            other: A System.ComponentModel.PropertyTabAttribute to compare to this instance, or null.
+            Returns: true if the System.ComponentModel.PropertyTabAttribute instances are equal; otherwise, 
              false.
         """
         pass
@@ -10385,22 +10438,30 @@ class PropertyTabAttribute(Attribute, _Attribute):
 
     def InitializeArrays(self, *args): #cannot find CLR method
         """
-        InitializeArrays(self: PropertyTabAttribute, tabClasses: Array[Type], tabScopes: Array[PropertyTabScope])
-            Initializes the attribute using the specified names of tab classes and array of tab scopes.
+        InitializeArrays(self: PropertyTabAttribute, tabClassNames: Array[str], tabScopes: Array[PropertyTabScope])
+            Initializes the attribute using the specified names of tab classes and array of tab 
+             scopes.
         
-            tabClasses: The types of tabs to create.
-            tabScopes: The scope of each tab. If the scope is System.ComponentModel.PropertyTabScope.Component, it is 
-             shown only for components with the corresponding System.ComponentModel.PropertyTabAttribute. If 
-             it is System.ComponentModel.PropertyTabScope.Document, it is shown for all components on the 
+        
+            tabClassNames: An array of fully qualified type names of the types to create for tabs on the Properties 
+             window.
+        
+            tabScopes: The scope of each tab. If the scope is System.ComponentModel.PropertyTabScope.Component, 
+             it is shown only for components with the corresponding 
+             System.ComponentModel.PropertyTabAttribute. If it is 
+             System.ComponentModel.PropertyTabScope.Document, it is shown for all components on the 
              document.
         
-        InitializeArrays(self: PropertyTabAttribute, tabClassNames: Array[str], tabScopes: Array[PropertyTabScope])
-            Initializes the attribute using the specified names of tab classes and array of tab scopes.
+        InitializeArrays(self: PropertyTabAttribute, tabClasses: Array[Type], tabScopes: Array[PropertyTabScope])
+            Initializes the attribute using the specified names of tab classes and array of tab 
+             scopes.
         
-            tabClassNames: An array of fully qualified type names of the types to create for tabs on the Properties window.
-            tabScopes: The scope of each tab. If the scope is System.ComponentModel.PropertyTabScope.Component, it is 
-             shown only for components with the corresponding System.ComponentModel.PropertyTabAttribute. If 
-             it is System.ComponentModel.PropertyTabScope.Document, it is shown for all components on the 
+        
+            tabClasses: The types of tabs to create.
+            tabScopes: The scope of each tab. If the scope is System.ComponentModel.PropertyTabScope.Component, 
+             it is shown only for components with the corresponding 
+             System.ComponentModel.PropertyTabAttribute. If it is 
+             System.ComponentModel.PropertyTabScope.Document, it is shown for all components on the 
              document.
         """
         pass
@@ -10448,7 +10509,7 @@ Get: TabScopes(self: PropertyTabAttribute) -> Array[PropertyTabScope]
 
 
 
-class PropertyTabScope(Enum, IComparable, IFormattable, IConvertible):
+class PropertyTabScope:
     """
     Defines identifiers that indicate the persistence scope of a tab in the Properties window.
     
@@ -10494,7 +10555,7 @@ class PropertyTabScope(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ProvidePropertyAttribute(Attribute, _Attribute):
+class ProvidePropertyAttribute:
     """
     Specifies the name of the property that an implementer of System.ComponentModel.IExtenderProvider offers to other components. This class cannot be inherited
     
@@ -10565,7 +10626,7 @@ Get: TypeId(self: ProvidePropertyAttribute) -> object
 
 
 
-class ReadOnlyAttribute(Attribute, _Attribute):
+class ReadOnlyAttribute:
     """
     Specifies whether the property this attribute is bound to is read-only or read/write. This class cannot be inherited
     
@@ -10629,7 +10690,7 @@ Get: IsReadOnly(self: ReadOnlyAttribute) -> bool
     Yes = None
 
 
-class RecommendedAsConfigurableAttribute(Attribute, _Attribute):
+class RecommendedAsConfigurableAttribute:
     """
     Specifies that the property can be used as an application setting.
     
@@ -10693,7 +10754,7 @@ Get: RecommendedAsConfigurable(self: RecommendedAsConfigurableAttribute) -> bool
     Yes = None
 
 
-class RefreshEventArgs(EventArgs):
+class RefreshEventArgs:
     """
     Provides data for the System.ComponentModel.TypeDescriptor.Refreshed event.
     
@@ -10724,7 +10785,7 @@ Get: TypeChanged(self: RefreshEventArgs) -> Type
 
 
 
-class RefreshEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class RefreshEventHandler:
     """
     Represents the method that handles the System.ComponentModel.TypeDescriptor.Refreshed event raised when a System.Type or component is changed during design time.
     
@@ -10751,9 +10812,9 @@ class RefreshEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -10780,13 +10841,14 @@ class RefreshEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -10803,7 +10865,7 @@ class RefreshEventHandler(MulticastDelegate, ICloneable, ISerializable):
         pass
 
 
-class RefreshProperties(Enum, IComparable, IFormattable, IConvertible):
+class RefreshProperties:
     """
     Defines identifiers that indicate the type of a refresh of the Properties window.
     
@@ -10843,12 +10905,12 @@ class RefreshProperties(Enum, IComparable, IFormattable, IConvertible):
         pass
 
     All = None
-    None = None
+    None_ =None
     Repaint = None
     value__ = None
 
 
-class RefreshPropertiesAttribute(Attribute, _Attribute):
+class RefreshPropertiesAttribute:
     """
     Indicates that the property grid should refresh when the associated property value changes. This class cannot be inherited.
     
@@ -10878,8 +10940,8 @@ class RefreshPropertiesAttribute(Attribute, _Attribute):
         """
         IsDefaultAttribute(self: RefreshPropertiesAttribute) -> bool
         
-            Gets a value indicating whether the current value of the attribute is the default value for the 
-             attribute.
+            Gets a value indicating whether the current value of the attribute is the default value 
+             for the attribute.
         
             Returns: true if the current value of the attribute is the default; otherwise, false.
         """
@@ -10914,7 +10976,7 @@ Get: RefreshProperties(self: RefreshPropertiesAttribute) -> RefreshProperties
     Repaint = None
 
 
-class RunInstallerAttribute(Attribute, _Attribute):
+class RunInstallerAttribute:
     """
     Specifies whether the Visual Studio Custom Action Installer or the Installutil.exe (Installer Tool) should be invoked when the assembly is installed.
     
@@ -10924,8 +10986,8 @@ class RunInstallerAttribute(Attribute, _Attribute):
         """
         Equals(self: RunInstallerAttribute, obj: object) -> bool
         
-            Determines whether the value of the specified System.ComponentModel.RunInstallerAttribute is 
-             equivalent to the current System.ComponentModel.RunInstallerAttribute.
+            Determines whether the value of the specified System.ComponentModel.RunInstallerAttribute 
+             is equivalent to the current System.ComponentModel.RunInstallerAttribute.
         
         
             obj: The object to compare.
@@ -10981,7 +11043,7 @@ Get: RunInstaller(self: RunInstallerAttribute) -> bool
     Yes = None
 
 
-class RunWorkerCompletedEventArgs(AsyncCompletedEventArgs):
+class RunWorkerCompletedEventArgs:
     """
     Provides data for the MethodNameCompleted event.
     
@@ -11008,7 +11070,7 @@ Get: UserState(self: RunWorkerCompletedEventArgs) -> object
 
 
 
-class RunWorkerCompletedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class RunWorkerCompletedEventHandler:
     """
     Represents the method that will handle the System.ComponentModel.BackgroundWorker.RunWorkerCompleted event of a System.ComponentModel.BackgroundWorker class.
     
@@ -11035,9 +11097,9 @@ class RunWorkerCompletedEventHandler(MulticastDelegate, ICloneable, ISerializabl
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -11064,13 +11126,14 @@ class RunWorkerCompletedEventHandler(MulticastDelegate, ICloneable, ISerializabl
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -11087,14 +11150,14 @@ class RunWorkerCompletedEventHandler(MulticastDelegate, ICloneable, ISerializabl
         pass
 
 
-class SByteConverter(BaseNumberConverter):
+class SByteConverter:
     """
     Provides a type converter to convert 8-bit unsigned integer objects to and from a string.
     
     SByteConverter()
     """
 
-class SettingsBindableAttribute(Attribute, _Attribute):
+class SettingsBindableAttribute:
     """
     Specifies when a component property can be bound to an application setting.
     
@@ -11146,14 +11209,14 @@ Get: Bindable(self: SettingsBindableAttribute) -> bool
     Yes = None
 
 
-class SingleConverter(BaseNumberConverter):
+class SingleConverter:
     """
     Provides a type converter to convert single-precision, floating point number objects to and from various other representations.
     
     SingleConverter()
     """
 
-class StringConverter(TypeConverter):
+class StringConverter:
     """
     Provides a type converter to convert string objects to and from other representations.
     
@@ -11163,8 +11226,8 @@ class StringConverter(TypeConverter):
         """
         CanConvertFrom(self: StringConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object in the given source type to 
-             a string using the specified context.
+            Gets a value indicating whether this converter can convert an object in the given source 
+             type to a string using the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -11187,7 +11250,7 @@ class StringConverter(TypeConverter):
         pass
 
 
-class SyntaxCheck(object):
+class SyntaxCheck:
     """ Provides methods to verify the machine name and path conform to a specific syntax. This class cannot be inherited. """
     @staticmethod
     def CheckMachineName(value):
@@ -11232,7 +11295,7 @@ class SyntaxCheck(object):
     ]
 
 
-class TimeSpanConverter(TypeConverter):
+class TimeSpanConverter:
     """
     Provides a type converter to convert System.TimeSpan objects to and from other representations.
     
@@ -11242,8 +11305,8 @@ class TimeSpanConverter(TypeConverter):
         """
         CanConvertFrom(self: TimeSpanConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object in the given source type to 
-             a System.TimeSpan using the specified context.
+            Gets a value indicating whether this converter can convert an object in the given source 
+             type to a System.TimeSpan using the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -11256,8 +11319,8 @@ class TimeSpanConverter(TypeConverter):
         """
         CanConvertTo(self: TimeSpanConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object to the given destination 
-             type using the context.
+            Gets a value indicating whether this converter can convert an object to the given 
+             destination type using the context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -11273,7 +11336,9 @@ class TimeSpanConverter(TypeConverter):
             Converts the given object to a System.TimeSpan.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            culture: An optional System.Globalization.CultureInfo. If not supplied, the current culture is assumed.
+            culture: An optional System.Globalization.CultureInfo. If not supplied, the current culture is 
+             assumed.
+        
             value: The System.Object to convert.
             Returns: An System.Object that represents the converted value.
         """
@@ -11294,7 +11359,7 @@ class TimeSpanConverter(TypeConverter):
         pass
 
 
-class ToolboxItemAttribute(Attribute, _Attribute):
+class ToolboxItemAttribute:
     """
     Represents an attribute of a toolbox item.
     
@@ -11318,8 +11383,8 @@ class ToolboxItemAttribute(Attribute, _Attribute):
         """
         IsDefaultAttribute(self: ToolboxItemAttribute) -> bool
         
-            Gets a value indicating whether the current value of the attribute is the default value for the 
-             attribute.
+            Gets a value indicating whether the current value of the attribute is the default value 
+             for the attribute.
         
             Returns: true if the current value of the attribute is the default; otherwise, false.
         """
@@ -11361,10 +11426,10 @@ Get: ToolboxItemTypeName(self: ToolboxItemAttribute) -> str
 
 
     Default = None
-    None = None
+    None_ =None
 
 
-class ToolboxItemFilterAttribute(Attribute, _Attribute):
+class ToolboxItemFilterAttribute:
     """
     Specifies the filter string and filter type to use for a toolbox item.
     
@@ -11446,7 +11511,7 @@ Get: TypeId(self: ToolboxItemFilterAttribute) -> object
 
 
 
-class ToolboxItemFilterType(Enum, IComparable, IFormattable, IConvertible):
+class ToolboxItemFilterType:
     """
     Defines identifiers used to indicate the type of filter that a System.ComponentModel.ToolboxItemFilterAttribute uses.
     
@@ -11492,7 +11557,7 @@ class ToolboxItemFilterType(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class TypeConverterAttribute(Attribute, _Attribute):
+class TypeConverterAttribute:
     """
     Specifies what type to use as a converter for the object this attribute is bound to.
     
@@ -11554,7 +11619,7 @@ Get: ConverterTypeName(self: TypeConverterAttribute) -> str
     Default = None
 
 
-class TypeDescriptionProvider(object):
+class TypeDescriptionProvider:
     """ Provides supplemental metadata to the System.ComponentModel.TypeDescriptor. """
     def CreateInstance(self, provider, objectType, argTypes, args):
         """
@@ -11564,8 +11629,8 @@ class TypeDescriptionProvider(object):
         
             provider: An optional service provider.
             objectType: The type of object to create. This parameter is never null.
-            argTypes: An optional array of types that represent the parameter types to be passed to the object's 
-             constructor. This array can be null or of zero length.
+            argTypes: An optional array of types that represent the parameter types to be passed to the 
+             object's constructor. This array can be null or of zero length.
         
             args: An optional array of parameter values to pass to the object's constructor.
             Returns: The substitute System.Object.
@@ -11579,7 +11644,8 @@ class TypeDescriptionProvider(object):
             Gets a per-object cache, accessed as an System.Collections.IDictionary of key/value pairs.
         
             instance: The object for which to get the cache.
-            Returns: An System.Collections.IDictionary if the provided object supports caching; otherwise, null.
+            Returns: An System.Collections.IDictionary if the provided object supports caching; otherwise, 
+             null.
         """
         pass
 
@@ -11590,7 +11656,8 @@ class TypeDescriptionProvider(object):
             Gets an extended custom type descriptor for the given object.
         
             instance: The object for which to get the extended type descriptor.
-            Returns: An System.ComponentModel.ICustomTypeDescriptor that can provide extended metadata for the object.
+            Returns: An System.ComponentModel.ICustomTypeDescriptor that can provide extended metadata for the 
+             object.
         """
         pass
 
@@ -11618,12 +11685,11 @@ class TypeDescriptionProvider(object):
 
     def GetReflectionType(self, *__args):
         """
-        GetReflectionType(self: TypeDescriptionProvider, objectType: Type, instance: object) -> Type
+        GetReflectionType(self: TypeDescriptionProvider, objectType: Type) -> Type
         
-            Performs normal reflection against the given object with the given type.
+            Performs normal reflection against a type.
         
             objectType: The type of object for which to retrieve the System.Reflection.IReflect.
-            instance: An instance of the type. Can be null.
             Returns: A System.Type.
         GetReflectionType(self: TypeDescriptionProvider, instance: object) -> Type
         
@@ -11631,11 +11697,12 @@ class TypeDescriptionProvider(object):
         
             instance: An instance of the type (should not be null).
             Returns: A System.Type.
-        GetReflectionType(self: TypeDescriptionProvider, objectType: Type) -> Type
+        GetReflectionType(self: TypeDescriptionProvider, objectType: Type, instance: object) -> Type
         
-            Performs normal reflection against a type.
+            Performs normal reflection against the given object with the given type.
         
             objectType: The type of object for which to retrieve the System.Reflection.IReflect.
+            instance: An instance of the type. Can be null.
             Returns: A System.Type.
         """
         pass
@@ -11653,14 +11720,11 @@ class TypeDescriptionProvider(object):
 
     def GetTypeDescriptor(self, *__args):
         """
-        GetTypeDescriptor(self: TypeDescriptionProvider, objectType: Type, instance: object) -> ICustomTypeDescriptor
+        GetTypeDescriptor(self: TypeDescriptionProvider, objectType: Type) -> ICustomTypeDescriptor
         
-            Gets a custom type descriptor for the given type and object.
+            Gets a custom type descriptor for the given type.
         
             objectType: The type of object for which to retrieve the type descriptor.
-            instance: An instance of the type. Can be null if no instance was passed to the 
-             System.ComponentModel.TypeDescriptor.
-        
             Returns: An System.ComponentModel.ICustomTypeDescriptor that can provide metadata for the type.
         GetTypeDescriptor(self: TypeDescriptionProvider, instance: object) -> ICustomTypeDescriptor
         
@@ -11670,11 +11734,14 @@ class TypeDescriptionProvider(object):
              System.ComponentModel.TypeDescriptor.
         
             Returns: An System.ComponentModel.ICustomTypeDescriptor that can provide metadata for the type.
-        GetTypeDescriptor(self: TypeDescriptionProvider, objectType: Type) -> ICustomTypeDescriptor
+        GetTypeDescriptor(self: TypeDescriptionProvider, objectType: Type, instance: object) -> ICustomTypeDescriptor
         
-            Gets a custom type descriptor for the given type.
+            Gets a custom type descriptor for the given type and object.
         
             objectType: The type of object for which to retrieve the type descriptor.
+            instance: An instance of the type. Can be null if no instance was passed to the 
+             System.ComponentModel.TypeDescriptor.
+        
             Returns: An System.ComponentModel.ICustomTypeDescriptor that can provide metadata for the type.
         """
         pass
@@ -11683,8 +11750,8 @@ class TypeDescriptionProvider(object):
         """
         IsSupportedType(self: TypeDescriptionProvider, type: Type) -> bool
         
-            Gets a value that indicates whether the specified type is compatible with the type description 
-             and its chain of type description providers.
+            Gets a value that indicates whether the specified type is compatible with the type 
+             description and its chain of type description providers.
         
         
             type: The type to test for compatibility.
@@ -11702,7 +11769,7 @@ class TypeDescriptionProvider(object):
         pass
 
 
-class TypeDescriptionProviderAttribute(Attribute, _Attribute):
+class TypeDescriptionProviderAttribute:
     """
     Specifies the custom type description provider for a class. This class cannot be inherited.
     
@@ -11730,25 +11797,25 @@ Get: TypeName(self: TypeDescriptionProviderAttribute) -> str
 
 
 
-class TypeDescriptor(object):
+class TypeDescriptor:
     """ Provides information about the characteristics for a component, such as its attributes, properties, and events. This class cannot be inherited. """
     @staticmethod
     def AddAttributes(*__args):
         """
-        AddAttributes(instance: object, *attributes: Array[Attribute]) -> TypeDescriptionProvider
-        
-            Adds class-level attributes to the target component instance.
-        
-            instance: An instance of the target component.
-            attributes: An array of System.Attribute objects to add to the component's class.
-            Returns: The newly created System.ComponentModel.TypeDescriptionProvider that was used to add the 
-             specified attributes.
-        
         AddAttributes(type: Type, *attributes: Array[Attribute]) -> TypeDescriptionProvider
         
             Adds class-level attributes to the target component type.
         
             type: The System.Type of the target component.
+            attributes: An array of System.Attribute objects to add to the component's class.
+            Returns: The newly created System.ComponentModel.TypeDescriptionProvider that was used to add the 
+             specified attributes.
+        
+        AddAttributes(instance: object, *attributes: Array[Attribute]) -> TypeDescriptionProvider
+        
+            Adds class-level attributes to the target component instance.
+        
+            instance: An instance of the target component.
             attributes: An array of System.Attribute objects to add to the component's class.
             Returns: The newly created System.ComponentModel.TypeDescriptionProvider that was used to add the 
              specified attributes.
@@ -11761,8 +11828,8 @@ class TypeDescriptor(object):
         AddEditorTable(editorBaseType: Type, table: Hashtable)
             Adds an editor table for the given editor base type.
         
-            editorBaseType: The editor base type to add the editor table for. If a table already exists for this type, this 
-             method will do nothing.
+            editorBaseType: The editor base type to add the editor table for. If a table already exists for this 
+             type, this method will do nothing.
         
             table: The System.Collections.Hashtable to add.
         """
@@ -11771,32 +11838,32 @@ class TypeDescriptor(object):
     @staticmethod
     def AddProvider(provider, *__args):
         """
-        AddProvider(provider: TypeDescriptionProvider, instance: object)
-            Adds a type description provider for a single instance of a component.
-        
-            provider: The System.ComponentModel.TypeDescriptionProvider to add.
-            instance: An instance of the target component.
         AddProvider(provider: TypeDescriptionProvider, type: Type)
             Adds a type description provider for a component class.
         
             provider: The System.ComponentModel.TypeDescriptionProvider to add.
-            type: The System.Type of the target component.
+            type: The System.Type of the target component.
+        AddProvider(provider: TypeDescriptionProvider, instance: object)
+            Adds a type description provider for a single instance of a component.
+        
+            provider: The System.ComponentModel.TypeDescriptionProvider to add.
+            instance: An instance of the target component.
         """
         pass
 
     @staticmethod
     def AddProviderTransparent(provider, *__args):
         """
-        AddProviderTransparent(provider: TypeDescriptionProvider, instance: object)
-            Adds a type description provider for a single instance of a component.
-        
-            provider: The System.ComponentModel.TypeDescriptionProvider to add.
-            instance: An instance of the target component.
         AddProviderTransparent(provider: TypeDescriptionProvider, type: Type)
             Adds a type description provider for a component class.
         
             provider: The System.ComponentModel.TypeDescriptionProvider to add.
-            type: The System.Type of the target component.
+            type: The System.Type of the target component.
+        AddProviderTransparent(provider: TypeDescriptionProvider, instance: object)
+            Adds a type description provider for a single instance of a component.
+        
+            provider: The System.ComponentModel.TypeDescriptionProvider to add.
+            instance: An instance of the target component.
         """
         pass
 
@@ -11816,43 +11883,44 @@ class TypeDescriptor(object):
         """
         CreateDesigner(component: IComponent, designerBaseType: Type) -> IDesigner
         
-            Creates an instance of the designer associated with the specified component and of the specified 
-             type of designer.
+            Creates an instance of the designer associated with the specified component and of the 
+             specified type of designer.
         
         
-            component: An System.ComponentModel.IComponent that specifies the component to associate with the designer.
+            component: An System.ComponentModel.IComponent that specifies the component to associate with the 
+             designer.
+        
             designerBaseType: A System.Type that represents the type of designer to create.
-            Returns: An System.ComponentModel.Design.IDesigner that is an instance of the designer for the component, 
-             or null if no designer can be found.
+            Returns: An System.ComponentModel.Design.IDesigner that is an instance of the designer for the 
+             component, or null if no designer can be found.
         """
         pass
 
     @staticmethod
     def CreateEvent(componentType, *__args):
         """
-        CreateEvent(componentType: Type, oldEventDescriptor: EventDescriptor, *attributes: Array[Attribute]) -> EventDescriptor
-        
-            Creates a new event descriptor that is identical to an existing event descriptor, when passed 
-             the existing System.ComponentModel.EventDescriptor.
-        
-        
-            componentType: The type of the component for which to create the new event.
-            oldEventDescriptor: The existing event information.
-            attributes: The new attributes.
-            Returns: A new System.ComponentModel.EventDescriptor that has merged the specified metadata attributes 
-             with the existing metadata attributes.
-        
         CreateEvent(componentType: Type, name: str, type: Type, *attributes: Array[Attribute]) -> EventDescriptor
         
-            Creates a new event descriptor that is identical to an existing event descriptor by dynamically 
-             generating descriptor information from a specified event on a type.
+            Creates a new event descriptor that is identical to an existing event descriptor by 
+             dynamically generating descriptor information from a specified event on a type.
         
         
             componentType: The type of the component the event lives on.
             name: The name of the event.
             type: The type of the delegate that handles the event.
             attributes: The attributes for this event.
-            Returns: An System.ComponentModel.EventDescriptor that is bound to a type.
+            Returns: An System.ComponentModel.EventDescriptor that is bound to a type.
+        CreateEvent(componentType: Type, oldEventDescriptor: EventDescriptor, *attributes: Array[Attribute]) -> EventDescriptor
+        
+            Creates a new event descriptor that is identical to an existing event descriptor, when 
+             passed the existing System.ComponentModel.EventDescriptor.
+        
+        
+            componentType: The type of the component for which to create the new event.
+            oldEventDescriptor: The existing event information.
+            attributes: The new attributes.
+            Returns: A new System.ComponentModel.EventDescriptor that has merged the specified metadata 
+             attributes with the existing metadata attributes.
         """
         pass
 
@@ -11863,15 +11931,15 @@ class TypeDescriptor(object):
         
             Creates an object that can substitute for another data type.
         
-            provider: The service provider that provides a System.ComponentModel.TypeDescriptionProvider service. This 
-             parameter can be null.
+            provider: The service provider that provides a System.ComponentModel.TypeDescriptionProvider 
+             service. This parameter can be null.
         
             objectType: The System.Type of object to create.
-            argTypes: An optional array of parameter types to be passed to the object's constructor. This parameter 
-             can be null or an array of zero length.
+            argTypes: An optional array of parameter types to be passed to the object's constructor. This 
+             parameter can be null or an array of zero length.
         
-            args: An optional array of parameter values to pass to the object's constructor. If not null, the 
-             number of elements must be the same as argTypes.
+            args: An optional array of parameter values to pass to the object's constructor. If not null, 
+             the number of elements must be the same as argTypes.
         
             Returns: An instance of the substitute data type if an associated 
              System.ComponentModel.TypeDescriptionProvider is found; otherwise, null.
@@ -11881,30 +11949,30 @@ class TypeDescriptor(object):
     @staticmethod
     def CreateProperty(componentType, *__args):
         """
-        CreateProperty(componentType: Type, oldPropertyDescriptor: PropertyDescriptor, *attributes: Array[Attribute]) -> PropertyDescriptor
-        
-            Creates a new property descriptor from an existing property descriptor, using the specified 
-             existing System.ComponentModel.PropertyDescriptor and attribute array.
-        
-        
-            componentType: The System.Type of the component that the property is a member of.
-            oldPropertyDescriptor: The existing property descriptor.
-            attributes: The new attributes for this property.
-            Returns: A new System.ComponentModel.PropertyDescriptor that has the specified metadata attributes merged 
-             with the existing metadata attributes.
-        
         CreateProperty(componentType: Type, name: str, type: Type, *attributes: Array[Attribute]) -> PropertyDescriptor
         
-            Creates and dynamically binds a property descriptor to a type, using the specified property 
-             name, type, and attribute array.
+            Creates and dynamically binds a property descriptor to a type, using the specified 
+             property name, type, and attribute array.
         
         
             componentType: The System.Type of the component that the property is a member of.
             name: The name of the property.
             type: The System.Type of the property.
             attributes: The new attributes for this property.
-            Returns: A System.ComponentModel.PropertyDescriptor that is bound to the specified type and that has the 
-             specified metadata attributes merged with the existing metadata attributes.
+            Returns: A System.ComponentModel.PropertyDescriptor that is bound to the specified type and that 
+             has the specified metadata attributes merged with the existing metadata attributes.
+        
+        CreateProperty(componentType: Type, oldPropertyDescriptor: PropertyDescriptor, *attributes: Array[Attribute]) -> PropertyDescriptor
+        
+            Creates a new property descriptor from an existing property descriptor, using the 
+             specified existing System.ComponentModel.PropertyDescriptor and attribute array.
+        
+        
+            componentType: The System.Type of the component that the property is a member of.
+            oldPropertyDescriptor: The existing property descriptor.
+            attributes: The new attributes for this property.
+            Returns: A new System.ComponentModel.PropertyDescriptor that has the specified metadata attributes 
+             merged with the existing metadata attributes.
         """
         pass
 
@@ -11925,46 +11993,48 @@ class TypeDescriptor(object):
     @staticmethod
     def GetAttributes(*__args):
         """
-        GetAttributes(component: object, noCustomTypeDesc: bool) -> AttributeCollection
+        GetAttributes(componentType: Type) -> AttributeCollection
         
-            Returns a collection of attributes for the specified component and a Boolean indicating that a 
-             custom type descriptor has been created.
+            Returns a collection of attributes for the specified type of component.
         
-        
-            component: The component for which you want to get attributes.
-            noCustomTypeDesc: true to use a baseline set of attributes from the custom type descriptor if component is of type 
-             System.ComponentModel.ICustomTypeDescriptor; otherwise, false.
-        
-            Returns: An System.ComponentModel.AttributeCollection with the attributes for the component. If the 
-             component is null, this method returns an empty collection.
+            componentType: The System.Type of the target component.
+            Returns: An System.ComponentModel.AttributeCollection with the attributes for the type of the 
+             component. If the component is null, this method returns an empty collection.
         
         GetAttributes(component: object) -> AttributeCollection
         
             Returns the collection of attributes for the specified component.
         
             component: The component for which you want to get attributes.
-            Returns: An System.ComponentModel.AttributeCollection containing the attributes for the component. If 
-             component is null, this method returns an empty collection.
+            Returns: An System.ComponentModel.AttributeCollection containing the attributes for the component. 
+             If component is null, this method returns an empty collection.
         
-        GetAttributes(componentType: Type) -> AttributeCollection
+        GetAttributes(component: object, noCustomTypeDesc: bool) -> AttributeCollection
         
-            Returns a collection of attributes for the specified type of component.
+            Returns a collection of attributes for the specified component and a Boolean indicating 
+             that a custom type descriptor has been created.
         
-            componentType: The System.Type of the target component.
-            Returns: An System.ComponentModel.AttributeCollection with the attributes for the type of the component. 
-             If the component is null, this method returns an empty collection.
+        
+            component: The component for which you want to get attributes.
+            noCustomTypeDesc: true to use a baseline set of attributes from the custom type descriptor if component is 
+             of type System.ComponentModel.ICustomTypeDescriptor; otherwise, false.
+        
+            Returns: An System.ComponentModel.AttributeCollection with the attributes for the component. If 
+             the component is null, this method returns an empty collection.
         """
         pass
 
     @staticmethod
     def GetClassName(*__args):
         """
-        GetClassName(componentType: Type) -> str
+        GetClassName(component: object) -> str
         
-            Returns the name of the class for the specified type.
+            Returns the name of the class for the specified component using the default type 
+             descriptor.
         
-            componentType: The System.Type of the target component.
-            Returns: A System.String containing the name of the class for the specified component type.
+        
+            component: The System.Object for which you want the class name.
+            Returns: A System.String containing the name of the class for the specified component.
         GetClassName(component: object, noCustomTypeDesc: bool) -> str
         
             Returns the name of the class for the specified component using a custom type descriptor.
@@ -11972,126 +12042,134 @@ class TypeDescriptor(object):
             component: The System.Object for which you want the class name.
             noCustomTypeDesc: true to consider custom type description information; otherwise, false.
             Returns: A System.String containing the name of the class for the specified component.
-        GetClassName(component: object) -> str
+        GetClassName(componentType: Type) -> str
         
-            Returns the name of the class for the specified component using the default type descriptor.
+            Returns the name of the class for the specified type.
         
-            component: The System.Object for which you want the class name.
-            Returns: A System.String containing the name of the class for the specified component.
+            componentType: The System.Type of the target component.
+            Returns: A System.String containing the name of the class for the specified component type.
         """
         pass
 
     @staticmethod
     def GetComponentName(component, noCustomTypeDesc=None):
         """
+        GetComponentName(component: object) -> str
+        
+            Returns the name of the specified component using the default type descriptor.
+        
+            component: The System.Object for which you want the class name.
+            Returns: A System.String containing the name of the specified component, or null if there is no 
+             component name.
+        
         GetComponentName(component: object, noCustomTypeDesc: bool) -> str
         
             Returns the name of the specified component using a custom type descriptor.
         
             component: The System.Object for which you want the class name.
             noCustomTypeDesc: true to consider custom type description information; otherwise, false.
-            Returns: The name of the class for the specified component, or null if there is no component name.
-        GetComponentName(component: object) -> str
-        
-            Returns the name of the specified component using the default type descriptor.
-        
-            component: The System.Object for which you want the class name.
-            Returns: A System.String containing the name of the specified component, or null if there is no component 
-             name.
+            Returns: The name of the class for the specified component, or null if there is no component name.
         """
         pass
 
     @staticmethod
     def GetConverter(*__args):
         """
-        GetConverter(type: Type) -> TypeConverter
-        
-            Returns a type converter for the specified type.
-        
-            type: The System.Type of the target component.
-            Returns: A System.ComponentModel.TypeConverter for the specified type.
-        GetConverter(component: object, noCustomTypeDesc: bool) -> TypeConverter
-        
-            Returns a type converter for the type of the specified component with a custom type descriptor.
-        
-            component: A component to get the converter for.
-            noCustomTypeDesc: true to consider custom type description information; otherwise, false.
-            Returns: A System.ComponentModel.TypeConverter for the specified component.
         GetConverter(component: object) -> TypeConverter
         
             Returns a type converter for the type of the specified component.
         
             component: A component to get the converter for.
-            Returns: A System.ComponentModel.TypeConverter for the specified component.
+            Returns: A System.ComponentModel.TypeConverter for the specified component.
+        GetConverter(component: object, noCustomTypeDesc: bool) -> TypeConverter
+        
+            Returns a type converter for the type of the specified component with a custom type 
+             descriptor.
+        
+        
+            component: A component to get the converter for.
+            noCustomTypeDesc: true to consider custom type description information; otherwise, false.
+            Returns: A System.ComponentModel.TypeConverter for the specified component.
+        GetConverter(type: Type) -> TypeConverter
+        
+            Returns a type converter for the specified type.
+        
+            type: The System.Type of the target component.
+            Returns: A System.ComponentModel.TypeConverter for the specified type.
         """
         pass
 
     @staticmethod
     def GetDefaultEvent(*__args):
         """
+        GetDefaultEvent(componentType: Type) -> EventDescriptor
+        
+            Returns the default event for the specified type of component.
+        
+            componentType: The System.Type of the target component.
+            Returns: An System.ComponentModel.EventDescriptor with the default event, or null if there are no 
+             events.
+        
+        GetDefaultEvent(component: object) -> EventDescriptor
+        
+            Returns the default event for the specified component.
+        
+            component: The component to get the event for.
+            Returns: An System.ComponentModel.EventDescriptor with the default event, or null if there are no 
+             events.
+        
         GetDefaultEvent(component: object, noCustomTypeDesc: bool) -> EventDescriptor
         
             Returns the default event for a component with a custom type descriptor.
         
             component: The component to get the event for.
             noCustomTypeDesc: true to consider custom type description information; otherwise, false.
-            Returns: An System.ComponentModel.EventDescriptor with the default event, or null if there are no events.
-        GetDefaultEvent(component: object) -> EventDescriptor
-        
-            Returns the default event for the specified component.
-        
-            component: The component to get the event for.
-            Returns: An System.ComponentModel.EventDescriptor with the default event, or null if there are no events.
-        GetDefaultEvent(componentType: Type) -> EventDescriptor
-        
-            Returns the default event for the specified type of component.
-        
-            componentType: The System.Type of the target component.
-            Returns: An System.ComponentModel.EventDescriptor with the default event, or null if there are no events.
+            Returns: An System.ComponentModel.EventDescriptor with the default event, or null if there are no 
+             events.
         """
         pass
 
     @staticmethod
     def GetDefaultProperty(*__args):
         """
-        GetDefaultProperty(component: object, noCustomTypeDesc: bool) -> PropertyDescriptor
+        GetDefaultProperty(componentType: Type) -> PropertyDescriptor
         
-            Returns the default property for the specified component with a custom type descriptor.
+            Returns the default property for the specified type of component.
         
-            component: The component to get the default property for.
-            noCustomTypeDesc: true to consider custom type description information; otherwise, false.
-            Returns: A System.ComponentModel.PropertyDescriptor with the default property, or null if there are no 
-             properties.
+            componentType: A System.Type that represents the class to get the property for.
+            Returns: A System.ComponentModel.PropertyDescriptor with the default property, or null if there 
+             are no properties.
         
         GetDefaultProperty(component: object) -> PropertyDescriptor
         
             Returns the default property for the specified component.
         
             component: The component to get the default property for.
-            Returns: A System.ComponentModel.PropertyDescriptor with the default property, or null if there are no 
-             properties.
+            Returns: A System.ComponentModel.PropertyDescriptor with the default property, or null if there 
+             are no properties.
         
-        GetDefaultProperty(componentType: Type) -> PropertyDescriptor
+        GetDefaultProperty(component: object, noCustomTypeDesc: bool) -> PropertyDescriptor
         
-            Returns the default property for the specified type of component.
+            Returns the default property for the specified component with a custom type descriptor.
         
-            componentType: A System.Type that represents the class to get the property for.
-            Returns: A System.ComponentModel.PropertyDescriptor with the default property, or null if there are no 
-             properties.
+            component: The component to get the default property for.
+            noCustomTypeDesc: true to consider custom type description information; otherwise, false.
+            Returns: A System.ComponentModel.PropertyDescriptor with the default property, or null if there 
+             are no properties.
         """
         pass
 
     @staticmethod
     def GetEditor(*__args):
         """
-        GetEditor(type: Type, editorBaseType: Type) -> object
+        GetEditor(component: object, editorBaseType: Type) -> object
         
-            Returns an editor with the specified base type for the specified type.
+            Gets an editor with the specified base type for the specified component.
         
-            type: The System.Type of the target component.
-            editorBaseType: A System.Type that represents the base type of the editor you are trying to find.
-            Returns: An instance of the editor object that can be cast to the given base type, or null if no editor 
-             of the requested type can be found.
+            component: The component to get the editor for.
+            editorBaseType: A System.Type that represents the base type of the editor you want to find.
+            Returns: An instance of the editor that can be cast to the specified editor type, or null if no 
+             editor of the requested type can be found.
         
         GetEditor(component: object, editorBaseType: Type, noCustomTypeDesc: bool) -> object
         
@@ -12102,23 +12180,46 @@ class TypeDescriptor(object):
             component: The component to get the editor for.
             editorBaseType: A System.Type that represents the base type of the editor you want to find.
             noCustomTypeDesc: A flag indicating whether custom type description information should be considered.
-            Returns: An instance of the editor that can be cast to the specified editor type, or null if no editor of 
-             the requested type can be found.
+            Returns: An instance of the editor that can be cast to the specified editor type, or null if no 
+             editor of the requested type can be found.
         
-        GetEditor(component: object, editorBaseType: Type) -> object
+        GetEditor(type: Type, editorBaseType: Type) -> object
         
-            Gets an editor with the specified base type for the specified component.
+            Returns an editor with the specified base type for the specified type.
         
-            component: The component to get the editor for.
-            editorBaseType: A System.Type that represents the base type of the editor you want to find.
-            Returns: An instance of the editor that can be cast to the specified editor type, or null if no editor of 
-             the requested type can be found.
+            type: The System.Type of the target component.
+            editorBaseType: A System.Type that represents the base type of the editor you are trying to find.
+            Returns: An instance of the editor object that can be cast to the given base type, or null if no 
+             editor of the requested type can be found.
         """
         pass
 
     @staticmethod
     def GetEvents(*__args):
         """
+        GetEvents(componentType: Type) -> EventDescriptorCollection
+        
+            Returns the collection of events for a specified type of component.
+        
+            componentType: The System.Type of the target component.
+            Returns: An System.ComponentModel.EventDescriptorCollection with the events for this component.
+        GetEvents(componentType: Type, attributes: Array[Attribute]) -> EventDescriptorCollection
+        
+            Returns the collection of events for a specified type of component using a specified 
+             array of attributes as a filter.
+        
+        
+            componentType: The System.Type of the target component.
+            attributes: An array of type System.Attribute that you can use as a filter.
+            Returns: An System.ComponentModel.EventDescriptorCollection with the events that match the 
+             specified attributes for this component.
+        
+        GetEvents(component: object) -> EventDescriptorCollection
+        
+            Returns the collection of events for the specified component.
+        
+            component: A component to get the events for.
+            Returns: An System.ComponentModel.EventDescriptorCollection with the events for this component.
         GetEvents(component: object, noCustomTypeDesc: bool) -> EventDescriptorCollection
         
             Returns the collection of events for a specified component with a custom type descriptor.
@@ -12128,50 +12229,26 @@ class TypeDescriptor(object):
             Returns: An System.ComponentModel.EventDescriptorCollection with the events for this component.
         GetEvents(component: object, attributes: Array[Attribute]) -> EventDescriptorCollection
         
-            Returns the collection of events for a specified component using a specified array of attributes 
-             as a filter.
+            Returns the collection of events for a specified component using a specified array of 
+             attributes as a filter.
         
         
             component: A component to get the events for.
             attributes: An array of type System.Attribute that you can use as a filter.
-            Returns: An System.ComponentModel.EventDescriptorCollection with the events that match the specified 
-             attributes for this component.
+            Returns: An System.ComponentModel.EventDescriptorCollection with the events that match the 
+             specified attributes for this component.
         
         GetEvents(component: object, attributes: Array[Attribute], noCustomTypeDesc: bool) -> EventDescriptorCollection
         
-            Returns the collection of events for a specified component using a specified array of attributes 
-             as a filter and using a custom type descriptor.
+            Returns the collection of events for a specified component using a specified array of 
+             attributes as a filter and using a custom type descriptor.
         
         
             component: A component to get the events for.
             attributes: An array of type System.Attribute to use as a filter.
             noCustomTypeDesc: true to consider custom type description information; otherwise, false.
-            Returns: An System.ComponentModel.EventDescriptorCollection with the events that match the specified 
-             attributes for this component.
-        
-        GetEvents(componentType: Type) -> EventDescriptorCollection
-        
-            Returns the collection of events for a specified type of component.
-        
-            componentType: The System.Type of the target component.
-            Returns: An System.ComponentModel.EventDescriptorCollection with the events for this component.
-        GetEvents(componentType: Type, attributes: Array[Attribute]) -> EventDescriptorCollection
-        
-            Returns the collection of events for a specified type of component using a specified array of 
-             attributes as a filter.
-        
-        
-            componentType: The System.Type of the target component.
-            attributes: An array of type System.Attribute that you can use as a filter.
-            Returns: An System.ComponentModel.EventDescriptorCollection with the events that match the specified 
-             attributes for this component.
-        
-        GetEvents(component: object) -> EventDescriptorCollection
-        
-            Returns the collection of events for the specified component.
-        
-            component: A component to get the events for.
-            Returns: An System.ComponentModel.EventDescriptorCollection with the events for this component.
+            Returns: An System.ComponentModel.EventDescriptorCollection with the events that match the 
+             specified attributes for this component.
         """
         pass
 
@@ -12190,9 +12267,38 @@ class TypeDescriptor(object):
     @staticmethod
     def GetProperties(*__args):
         """
+        GetProperties(componentType: Type) -> PropertyDescriptorCollection
+        
+            Returns the collection of properties for a specified type of component.
+        
+            componentType: A System.Type that represents the component to get properties for.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties for a specified 
+             type of component.
+        
+        GetProperties(componentType: Type, attributes: Array[Attribute]) -> PropertyDescriptorCollection
+        
+            Returns the collection of properties for a specified type of component using a specified 
+             array of attributes as a filter.
+        
+        
+            componentType: The System.Type of the target component.
+            attributes: An array of type System.Attribute to use as a filter.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that match the 
+             specified attributes for this type of component.
+        
+        GetProperties(component: object) -> PropertyDescriptorCollection
+        
+            Returns the collection of properties for a specified component.
+        
+            component: A component to get the properties for.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties for the 
+             specified component.
+        
         GetProperties(component: object, noCustomTypeDesc: bool) -> PropertyDescriptorCollection
         
-            Returns the collection of properties for a specified component using the default type descriptor.
+            Returns the collection of properties for a specified component using the default type 
+             descriptor.
+        
         
             component: A component to get the properties for.
             noCustomTypeDesc: true to not consider custom type description information; otherwise, false.
@@ -12219,89 +12325,50 @@ class TypeDescriptor(object):
             component: A component to get the properties for.
             attributes: An array of type System.Attribute to use as a filter.
             noCustomTypeDesc: true to consider custom type description information; otherwise, false.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection with the events that match the specified 
-             attributes for the specified component.
-        
-        GetProperties(componentType: Type) -> PropertyDescriptorCollection
-        
-            Returns the collection of properties for a specified type of component.
-        
-            componentType: A System.Type that represents the component to get properties for.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties for a specified type of 
-             component.
-        
-        GetProperties(componentType: Type, attributes: Array[Attribute]) -> PropertyDescriptorCollection
-        
-            Returns the collection of properties for a specified type of component using a specified array 
-             of attributes as a filter.
-        
-        
-            componentType: The System.Type of the target component.
-            attributes: An array of type System.Attribute to use as a filter.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that match the 
-             specified attributes for this type of component.
-        
-        GetProperties(component: object) -> PropertyDescriptorCollection
-        
-            Returns the collection of properties for a specified component.
-        
-            component: A component to get the properties for.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties for the specified 
-             component.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection with the events that match the 
+             specified attributes for the specified component.
         """
         pass
 
     @staticmethod
     def GetProvider(*__args):
         """
-        GetProvider(instance: object) -> TypeDescriptionProvider
-        
-            Returns the type description provider for the specified component.
-        
-            instance: An instance of the target component.
-            Returns: A System.ComponentModel.TypeDescriptionProvider associated with the specified component.
         GetProvider(type: Type) -> TypeDescriptionProvider
         
             Returns the type description provider for the specified type.
         
             type: The System.Type of the target component.
-            Returns: A System.ComponentModel.TypeDescriptionProvider associated with the specified type.
+            Returns: A System.ComponentModel.TypeDescriptionProvider associated with the specified type.
+        GetProvider(instance: object) -> TypeDescriptionProvider
+        
+            Returns the type description provider for the specified component.
+        
+            instance: An instance of the target component.
+            Returns: A System.ComponentModel.TypeDescriptionProvider associated with the specified component.
         """
         pass
 
     @staticmethod
     def GetReflectionType(*__args):
         """
-        GetReflectionType(instance: object) -> Type
-        
-            Returns a System.Type that can be used to perform reflection, given an object.
-        
-            instance: An instance of the target component.
-            Returns: A System.Type for the specified object.
         GetReflectionType(type: Type) -> Type
         
             Returns a System.Type that can be used to perform reflection, given a class type.
         
             type: The System.Type of the target component.
-            Returns: A System.Type of the specified class.
+            Returns: A System.Type of the specified class.
+        GetReflectionType(instance: object) -> Type
+        
+            Returns a System.Type that can be used to perform reflection, given an object.
+        
+            instance: An instance of the target component.
+            Returns: A System.Type for the specified object.
         """
         pass
 
     @staticmethod
     def Refresh(*__args):
         """
-        Refresh(module: Module)
-            Clears the properties and events for the specified module from the cache.
-        
-            module: The System.Reflection.Module that represents the module to refresh. Each System.Type in this 
-             module will be refreshed.
-        
-        Refresh(assembly: Assembly)
-            Clears the properties and events for the specified assembly from the cache.
-        
-            assembly: The System.Reflection.Assembly that represents the assembly to refresh. Each System.Type in this 
-             assembly will be refreshed.
-        
         Refresh(component: object)
             Clears the properties and events for the specified component from the cache.
         
@@ -12309,7 +12376,18 @@ class TypeDescriptor(object):
         Refresh(type: Type)
             Clears the properties and events for the specified type of component from the cache.
         
-            type: The System.Type of the target component.
+            type: The System.Type of the target component.
+        Refresh(module: Module)
+            Clears the properties and events for the specified module from the cache.
+        
+            module: The System.Reflection.Module that represents the module to refresh. Each System.Type in 
+             this module will be refreshed.
+        
+        Refresh(assembly: Assembly)
+            Clears the properties and events for the specified assembly from the cache.
+        
+            assembly: The System.Reflection.Assembly that represents the assembly to refresh. Each System.Type 
+             in this assembly will be refreshed.
         """
         pass
 
@@ -12337,36 +12415,40 @@ class TypeDescriptor(object):
     @staticmethod
     def RemoveProvider(provider, *__args):
         """
-        RemoveProvider(provider: TypeDescriptionProvider, instance: object)
-            Removes a previously added type description provider that is associated with the specified 
-             object.
-        
-        
-            provider: The System.ComponentModel.TypeDescriptionProvider to remove.
-            instance: An instance of the target component.
         RemoveProvider(provider: TypeDescriptionProvider, type: Type)
-            Removes a previously added type description provider that is associated with the specified type.
+            Removes a previously added type description provider that is associated with the 
+             specified type.
+        
         
             provider: The System.ComponentModel.TypeDescriptionProvider to remove.
-            type: The System.Type of the target component.
+            type: The System.Type of the target component.
+        RemoveProvider(provider: TypeDescriptionProvider, instance: object)
+            Removes a previously added type description provider that is associated with the 
+             specified object.
+        
+        
+            provider: The System.ComponentModel.TypeDescriptionProvider to remove.
+            instance: An instance of the target component.
         """
         pass
 
     @staticmethod
     def RemoveProviderTransparent(provider, *__args):
         """
-        RemoveProviderTransparent(provider: TypeDescriptionProvider, instance: object)
-            Removes a previously added type description provider that is associated with the specified 
-             object.
-        
-        
-            provider: The System.ComponentModel.TypeDescriptionProvider to remove.
-            instance: An instance of the target component.
         RemoveProviderTransparent(provider: TypeDescriptionProvider, type: Type)
-            Removes a previously added type description provider that is associated with the specified type.
+            Removes a previously added type description provider that is associated with the 
+             specified type.
+        
         
             provider: The System.ComponentModel.TypeDescriptionProvider to remove.
-            type: The System.Type of the target component.
+            type: The System.Type of the target component.
+        RemoveProviderTransparent(provider: TypeDescriptionProvider, instance: object)
+            Removes a previously added type description provider that is associated with the 
+             specified object.
+        
+        
+            provider: The System.ComponentModel.TypeDescriptionProvider to remove.
+            instance: An instance of the target component.
         """
         pass
 
@@ -12386,14 +12468,14 @@ class TypeDescriptor(object):
     Refreshed = None
 
 
-class TypeListConverter(TypeConverter):
+class TypeListConverter:
     """ Provides a type converter that can be used to populate a list box with available types. """
     def CanConvertFrom(self, *__args):
         """
         CanConvertFrom(self: TypeListConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert the specified System.Type of the 
-             source object using the given context.
+            Gets a value indicating whether this converter can convert the specified System.Type of 
+             the source object using the given context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -12406,8 +12488,8 @@ class TypeListConverter(TypeConverter):
         """
         CanConvertTo(self: TypeListConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
         
-            Gets a value indicating whether this converter can convert an object to the given destination 
-             type using the context.
+            Gets a value indicating whether this converter can convert an object to the given 
+             destination type using the context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
@@ -12436,7 +12518,9 @@ class TypeListConverter(TypeConverter):
             Converts the given value object to the specified destination type.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            culture: An optional System.Globalization.CultureInfo. If not supplied, the current culture is assumed.
+            culture: An optional System.Globalization.CultureInfo. If not supplied, the current culture is 
+             assumed.
+        
             value: The System.Object to convert.
             destinationType: The System.Type to convert the value to.
             Returns: An System.Object that represents the converted value.
@@ -12450,8 +12534,8 @@ class TypeListConverter(TypeConverter):
             Gets a collection of standard values for the data type this validator is designed for.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of 
-             valid values, or null if the data type does not support a standard set of values.
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set 
+             of valid values, or null if the data type does not support a standard set of values.
         """
         pass
 
@@ -12460,14 +12544,15 @@ class TypeListConverter(TypeConverter):
         GetStandardValuesExclusive(self: TypeListConverter, context: ITypeDescriptorContext) -> bool
         
             Gets a value indicating whether the list of standard values returned from the 
-             System.ComponentModel.TypeListConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorCo
-             ntext) method is an exclusive list.
+             System.ComponentModel.TypeListConverter.GetStandardValues(System.ComponentModel.ITypeDescr
+             iptorContext) method is an exclusive list.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true because the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
-             System.ComponentModel.TypeListConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorCo
-             ntext) is an exhaustive list of possible values. This method never returns false.
+            Returns: true because the System.ComponentModel.TypeConverter.StandardValuesCollection returned 
+             from 
+             System.ComponentModel.TypeListConverter.GetStandardValues(System.ComponentModel.ITypeDescr
+             iptorContext) is an exhaustive list of possible values. This method never returns false.
         """
         pass
 
@@ -12475,15 +12560,15 @@ class TypeListConverter(TypeConverter):
         """
         GetStandardValuesSupported(self: TypeListConverter, context: ITypeDescriptorContext) -> bool
         
-            Gets a value indicating whether this object supports a standard set of values that can be picked 
-             from a list using the specified context.
+            Gets a value indicating whether this object supports a standard set of values that can be 
+             picked from a list using the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             Returns: true because 
-             System.ComponentModel.TypeListConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorCo
-             ntext) should be called to find a common set of values the object supports. This method never 
-             returns false.
+             System.ComponentModel.TypeListConverter.GetStandardValues(System.ComponentModel.ITypeDescr
+             iptorContext) should be called to find a common set of values the object supports. This 
+             method never returns false.
         """
         pass
 
@@ -12493,28 +12578,28 @@ class TypeListConverter(TypeConverter):
         pass
 
 
-class UInt16Converter(BaseNumberConverter):
+class UInt16Converter:
     """
     Provides a type converter to convert 16-bit unsigned integer objects to and from other representations.
     
     UInt16Converter()
     """
 
-class UInt32Converter(BaseNumberConverter):
+class UInt32Converter:
     """
     Provides a type converter to convert 32-bit unsigned integer objects to and from various other representations.
     
     UInt32Converter()
     """
 
-class UInt64Converter(BaseNumberConverter):
+class UInt64Converter:
     """
     Provides a type converter to convert 64-bit unsigned integer objects to and from other representations.
     
     UInt64Converter()
     """
 
-class WarningException(SystemException, ISerializable, _Exception):
+class WarningException:
     """
     Specifies an exception that is handled as a warning instead of an error.
     
@@ -12524,27 +12609,21 @@ class WarningException(SystemException, ISerializable, _Exception):
     WarningException(message: str, innerException: Exception)
     WarningException(message: str, helpUrl: str, helpTopic: str)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: WarningException, info: SerializationInfo, context: StreamingContext)
-            Sets the System.Runtime.Serialization.SerializationInfo with the parameter name and additional 
-             exception information.
+            Sets the System.Runtime.Serialization.SerializationInfo with the parameter name and 
+             additional exception information.
         
         
             info: Stores the data that was being used to serialize or deserialize the object that the 
-             System.ComponentModel.Design.Serialization.CodeDomSerializer was serializing or deserializing.
+             System.ComponentModel.Design.Serialization.CodeDomSerializer was serializing or 
+             deserializing.
         
-            context: Describes the source and destination of the stream that generated the exception, as well as a 
-             means for serialization to retain that context and an additional caller-defined context.
+            context: Describes the source and destination of the stream that generated the exception, as well 
+             as a means for serialization to retain that context and an additional caller-defined 
+             context.
         """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -12584,8 +12663,10 @@ Get: HelpUrl(self: WarningException) -> str
 """
 
 
+    SerializeObjectState = None
 
-class Win32Exception(ExternalException, ISerializable, _Exception):
+
+class Win32Exception:
     """
     Throws an exception for a Win32 error code.
     
@@ -12595,24 +12676,16 @@ class Win32Exception(ExternalException, ISerializable, _Exception):
     Win32Exception(message: str)
     Win32Exception(message: str, innerException: Exception)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: Win32Exception, info: SerializationInfo, context: StreamingContext)
-            Sets the System.Runtime.Serialization.SerializationInfo object with the file name and line 
-             number at which this System.ComponentModel.Win32Exception occurred.
+            Sets the System.Runtime.Serialization.SerializationInfo object with the file name and 
+             line number at which this System.ComponentModel.Win32Exception occurred.
         
         
             info: A System.Runtime.Serialization.SerializationInfo.
             context: The contextual information about the source or destination.
         """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -12644,6 +12717,8 @@ Get: NativeErrorCode(self: Win32Exception) -> int
 
 """
 
+
+    SerializeObjectState = None
 
 
 # variables with complex values

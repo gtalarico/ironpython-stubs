@@ -1,4 +1,4 @@
-class Pens(object):
+class Pens:
  """ Pens for all the standard colors. This class cannot be inherited. """
  AliceBlue=None
  AntiqueWhite=None

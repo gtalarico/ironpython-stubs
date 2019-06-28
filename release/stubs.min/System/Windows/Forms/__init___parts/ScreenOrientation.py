@@ -1,9 +1,7 @@
-class ScreenOrientation(Enum,IComparable,IFormattable,IConvertible):
+class ScreenOrientation:
  """
- Specifies the angle of the screen.
-
- 
-
+ Specifies the angle of the screen.
+ 
  enum ScreenOrientation,values: Angle0 (0),Angle180 (2),Angle270 (3),Angle90 (1)
  """
  def __eq__(self,*args):

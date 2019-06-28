@@ -1,4 +1,4 @@
-class DllImportSearchPath(Enum,IComparable,IFormattable,IConvertible):
+class DllImportSearchPath:
  """ enum (flags) DllImportSearchPath,values: ApplicationDirectory (512),AssemblyDirectory (2),LegacyBehavior (0),SafeDirectories (4096),System32 (2048),UseDllDirectoryForDependencies (256),UserDirectories (1024) """
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

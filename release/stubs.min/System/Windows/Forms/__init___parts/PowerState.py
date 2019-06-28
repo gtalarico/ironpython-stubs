@@ -1,9 +1,7 @@
-class PowerState(Enum,IComparable,IFormattable,IConvertible):
+class PowerState:
  """
- Defines identifiers that indicate a suspended system power activity mode.
-
- 
-
+ Defines identifiers that indicate a suspended system power activity mode.
+ 
  enum PowerState,values: Hibernate (1),Suspend (0)
  """
  def __eq__(self,*args):

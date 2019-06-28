@@ -1,9 +1,7 @@
-class DataGridViewClipboardCopyMode(Enum,IComparable,IFormattable,IConvertible):
+class DataGridViewClipboardCopyMode:
  """
- Defines constants that indicate whether content is copied from a System.Windows.Forms.DataGridView control to the Clipboard.
-
- 
-
+ Defines constants that indicate whether content is copied from a System.Windows.Forms.DataGridView control to the Clipboard.
+ 
  enum DataGridViewClipboardCopyMode,values: Disable (0),EnableAlwaysIncludeHeaderText (3),EnableWithAutoHeaderText (1),EnableWithoutHeaderText (2)
  """
  def __eq__(self,*args):

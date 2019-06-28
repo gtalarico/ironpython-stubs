@@ -2,13 +2,13 @@
 # module System.Net.WebSockets calls itself WebSockets
 # from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class WebSocket(object, IDisposable):
+class WebSocket:
     # no doc
     def Abort(self):
         """ Abort(self: WebSocket) """
@@ -68,18 +68,11 @@ class WebSocket(object, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -114,7 +107,7 @@ class WebSocket(object, IDisposable):
     DefaultKeepAliveInterval = None
 
 
-class ClientWebSocket(WebSocket, IDisposable):
+class ClientWebSocket:
     """ ClientWebSocket() """
     def Abort(self):
         """ Abort(self: ClientWebSocket) """
@@ -145,18 +138,11 @@ class ClientWebSocket(WebSocket, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -190,14 +176,14 @@ class ClientWebSocket(WebSocket, IDisposable):
 
 
 
-class ClientWebSocketOptions(object):
+class ClientWebSocketOptions:
     # no doc
     def AddSubProtocol(self, subProtocol):
         """ AddSubProtocol(self: ClientWebSocketOptions, subProtocol: str) """
         pass
 
     def SetBuffer(self, receiveBufferSize, sendBufferSize, buffer=None):
-        """ SetBuffer(self: ClientWebSocketOptions, receiveBufferSize: int, sendBufferSize: int, buffer: ArraySegment[Byte])SetBuffer(self: ClientWebSocketOptions, receiveBufferSize: int, sendBufferSize: int) """
+        """ SetBuffer(self: ClientWebSocketOptions, receiveBufferSize: int, sendBufferSize: int)SetBuffer(self: ClientWebSocketOptions, receiveBufferSize: int, sendBufferSize: int, buffer: ArraySegment[Byte]) """
         pass
 
     def SetRequestHeader(self, headerName, headerValue):
@@ -242,7 +228,7 @@ Set: UseDefaultCredentials(self: ClientWebSocketOptions) = value
 
 
 
-class WebSocketContext(object):
+class WebSocketContext:
     # no doc
     CookieCollection = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: CookieCollection(self: WebSocketContext) -> CookieCollection
@@ -306,7 +292,7 @@ class WebSocketContext(object):
 
 
 
-class HttpListenerWebSocketContext(WebSocketContext):
+class HttpListenerWebSocketContext:
     # no doc
     CookieCollection = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: CookieCollection(self: HttpListenerWebSocketContext) -> CookieCollection
@@ -370,7 +356,7 @@ class HttpListenerWebSocketContext(WebSocketContext):
 
 
 
-class WebSocketCloseStatus(Enum, IComparable, IFormattable, IConvertible):
+class WebSocketCloseStatus:
     """ enum WebSocketCloseStatus, values: Empty (1005), EndpointUnavailable (1001), InternalServerError (1011), InvalidMessageType (1003), InvalidPayloadData (1007), MandatoryExtension (1010), MessageTooBig (1009), NormalClosure (1000), PolicyViolation (1008), ProtocolError (1002) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -418,7 +404,7 @@ class WebSocketCloseStatus(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class WebSocketError(Enum, IComparable, IFormattable, IConvertible):
+class WebSocketError:
     """ enum WebSocketError, values: ConnectionClosedPrematurely (8), Faulted (2), HeaderError (7), InvalidMessageType (1), InvalidState (9), NativeError (3), NotAWebSocket (4), Success (0), UnsupportedProtocol (6), UnsupportedVersion (5) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -466,7 +452,7 @@ class WebSocketError(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class WebSocketException(Win32Exception, ISerializable, _Exception):
+class WebSocketException:
     """
     WebSocketException()
     WebSocketException(error: WebSocketError)
@@ -483,16 +469,8 @@ class WebSocketException(Win32Exception, ISerializable, _Exception):
     WebSocketException(message: str)
     WebSocketException(message: str, innerException: Exception)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def GetObjectData(self, info, context):
         """ GetObjectData(self: WebSocketException, info: SerializationInfo, context: StreamingContext) """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -536,8 +514,10 @@ class WebSocketException(Win32Exception, ISerializable, _Exception):
 """
 
 
+    SerializeObjectState = None
 
-class WebSocketMessageType(Enum, IComparable, IFormattable, IConvertible):
+
+class WebSocketMessageType:
     """ enum WebSocketMessageType, values: Binary (1), Close (2), Text (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -578,7 +558,7 @@ class WebSocketMessageType(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class WebSocketReceiveResult(object):
+class WebSocketReceiveResult:
     """
     WebSocketReceiveResult(count: int, messageType: WebSocketMessageType, endOfMessage: bool)
     WebSocketReceiveResult(count: int, messageType: WebSocketMessageType, endOfMessage: bool, closeStatus: Nullable[WebSocketCloseStatus], closeStatusDescription: str)
@@ -618,7 +598,7 @@ class WebSocketReceiveResult(object):
 
 
 
-class WebSocketState(Enum, IComparable, IFormattable, IConvertible):
+class WebSocketState:
     """ enum WebSocketState, values: Aborted (6), Closed (5), CloseReceived (4), CloseSent (3), Connecting (1), None (0), Open (2) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -658,7 +638,7 @@ class WebSocketState(Enum, IComparable, IFormattable, IConvertible):
     CloseReceived = None
     CloseSent = None
     Connecting = None
-    None = None
+    None_ =None
     Open = None
     value__ = None
 

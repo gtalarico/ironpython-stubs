@@ -1,9 +1,7 @@
-class CompoundAceType(Enum,IComparable,IFormattable,IConvertible):
+class CompoundAceType:
  """
- Specifies the type of a System.Security.AccessControl.CompoundAce object.
-
- 
-
+ Specifies the type of a System.Security.AccessControl.CompoundAce object.
+ 
  enum CompoundAceType,values: Impersonation (1)
  """
  def __eq__(self,*args):

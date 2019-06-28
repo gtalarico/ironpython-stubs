@@ -1,9 +1,7 @@
-class RegistrationConnectionType(Enum,IComparable,IFormattable,IConvertible):
+class RegistrationConnectionType:
  """
- Defines the types of connections to a class object.
-
- 
-
+ Defines the types of connections to a class object.
+ 
  enum (flags) RegistrationConnectionType,values: MultipleUse (1),MultiSeparate (2),SingleUse (0),Surrogate (8),Suspended (4)
  """
  def __eq__(self,*args):

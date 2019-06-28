@@ -1,9 +1,7 @@
-class ThreadStaticAttribute(Attribute,_Attribute):
+class ThreadStaticAttribute:
  """
- Indicates that the value of a static field is unique for each thread.
-
- 
-
+ Indicates that the value of a static field is unique for each thread.
+ 
  ThreadStaticAttribute()
  """
  def __init__(self,*args):

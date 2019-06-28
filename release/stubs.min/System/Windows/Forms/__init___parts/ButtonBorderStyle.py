@@ -1,9 +1,7 @@
-class ButtonBorderStyle(Enum,IComparable,IFormattable,IConvertible):
+class ButtonBorderStyle:
  """
- Specifies the border style for a button control.
-
- 
-
+ Specifies the border style for a button control.
+ 
  enum ButtonBorderStyle,values: Dashed (2),Dotted (1),Inset (4),None (0),Outset (5),Solid (3)
  """
  def __eq__(self,*args):
@@ -32,7 +30,7 @@ class ButtonBorderStyle(Enum,IComparable,IFormattable,IConvertible):
  Dashed=None
  Dotted=None
  Inset=None
- None=None
+ None_ =None
  Outset=None
  Solid=None
  value__=None

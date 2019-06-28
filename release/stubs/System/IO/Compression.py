@@ -2,13 +2,13 @@
 # module System.IO.Compression calls itself Compression
 # from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class CompressionLevel(Enum, IComparable, IFormattable, IConvertible):
+class CompressionLevel:
     """ enum CompressionLevel, values: Fastest (1), NoCompression (2), Optimal (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -49,7 +49,7 @@ class CompressionLevel(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class CompressionMode(Enum, IComparable, IFormattable, IConvertible):
+class CompressionMode:
     """
     Specifies whether to compress or decompress the underlying stream.
     
@@ -93,7 +93,7 @@ class CompressionMode(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class DeflateStream(Stream, IDisposable):
+class DeflateStream:
     """
     Provides methods and properties for compressing and decompressing streams using the Deflate algorithm.
     
@@ -112,8 +112,8 @@ class DeflateStream(Stream, IDisposable):
             offset: The byte offset in array at which to begin writing data read from the stream.
             count: The maximum number of bytes to read.
             asyncCallback: An optional asynchronous callback, to be called when the read is complete.
-            asyncState: A user-provided object that distinguishes this particular asynchronous read request from other 
-             requests.
+            asyncState: A user-provided object that distinguishes this particular asynchronous read request from 
+             other requests.
         
             Returns: An System.IAsyncResult object that represents the asynchronous read, which could still be 
              pending.
@@ -130,11 +130,11 @@ class DeflateStream(Stream, IDisposable):
             offset: The byte offset in buffer to begin writing from.
             count: The maximum number of bytes to write.
             asyncCallback: An optional asynchronous callback, to be called when the write is complete.
-            asyncState: A user-provided object that distinguishes this particular asynchronous write request from other 
-             requests.
+            asyncState: A user-provided object that distinguishes this particular asynchronous write request from 
+             other requests.
         
-            Returns: An System.IAsyncResult object that represents the asynchronous write, which could still be 
-             pending.
+            Returns: An System.IAsyncResult object that represents the asynchronous write, which could still 
+             be pending.
         """
         pass
 
@@ -150,11 +150,12 @@ class DeflateStream(Stream, IDisposable):
     def Dispose(self):
         """
         Dispose(self: DeflateStream, disposing: bool)
-            Releases the unmanaged resources used by the System.IO.Compression.DeflateStream and optionally 
-             releases the managed resources.
+            Releases the unmanaged resources used by the System.IO.Compression.DeflateStream and 
+             optionally releases the managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
@@ -166,8 +167,8 @@ class DeflateStream(Stream, IDisposable):
         
             asyncResult: The reference to the pending asynchronous request to finish.
             Returns: The number of bytes read from the stream, between zero (0) and the number of bytes you 
-             requested. System.IO.Compression.DeflateStream returns zero (0) only at the end of the stream; 
-             otherwise, it blocks until at least one byte is available.
+             requested. System.IO.Compression.DeflateStream returns zero (0) only at the end of the 
+             stream; otherwise, it blocks until at least one byte is available.
         """
         pass
 
@@ -183,8 +184,8 @@ class DeflateStream(Stream, IDisposable):
     def Flush(self):
         """
         Flush(self: DeflateStream)
-            Flushes the contents of the internal buffer of the current stream object to the underlying 
-             stream.
+            Flushes the contents of the internal buffer of the current stream object to the 
+             underlying stream.
         """
         pass
 
@@ -194,11 +195,11 @@ class DeflateStream(Stream, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -261,18 +262,11 @@ class DeflateStream(Stream, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -334,7 +328,7 @@ Set: Position(self: DeflateStream) = value
 
 
 
-class GZipStream(Stream, IDisposable):
+class GZipStream:
     """
     Provides methods and properties used to compress and decompress streams.
     
@@ -353,8 +347,8 @@ class GZipStream(Stream, IDisposable):
             offset: The byte offset in array at which to begin writing data read from the stream.
             count: The maximum number of bytes to read.
             asyncCallback: An optional asynchronous callback, to be called when the read is complete.
-            asyncState: A user-provided object that distinguishes this particular asynchronous read request from other 
-             requests.
+            asyncState: A user-provided object that distinguishes this particular asynchronous read request from 
+             other requests.
         
             Returns: An System.IAsyncResult object that represents the asynchronous read, which could still be 
              pending.
@@ -371,11 +365,11 @@ class GZipStream(Stream, IDisposable):
             offset: The byte offset in array at which to begin writing.
             count: The maximum number of bytes to write.
             asyncCallback: An optional asynchronous callback to be called when the write is complete.
-            asyncState: A user-provided object that distinguishes this particular asynchronous write request from other 
-             requests.
+            asyncState: A user-provided object that distinguishes this particular asynchronous write request from 
+             other requests.
         
-            Returns: An System.IAsyncResult object that represents the asynchronous write, which could still be 
-             pending.
+            Returns: An System.IAsyncResult object that represents the asynchronous write, which could still 
+             be pending.
         """
         pass
 
@@ -391,11 +385,12 @@ class GZipStream(Stream, IDisposable):
     def Dispose(self):
         """
         Dispose(self: GZipStream, disposing: bool)
-            Releases the unmanaged resources used by the System.IO.Compression.GZipStream and optionally 
-             releases the managed resources.
+            Releases the unmanaged resources used by the System.IO.Compression.GZipStream and 
+             optionally releases the managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
@@ -407,8 +402,8 @@ class GZipStream(Stream, IDisposable):
         
             asyncResult: The reference to the pending asynchronous request to finish.
             Returns: The number of bytes read from the stream, between zero (0) and the number of bytes you 
-             requested. System.IO.Compression.GZipStream returns zero (0) only at the end of the stream; 
-             otherwise, it blocks until at least one byte is available.
+             requested. System.IO.Compression.GZipStream returns zero (0) only at the end of the 
+             stream; otherwise, it blocks until at least one byte is available.
         """
         pass
 
@@ -424,8 +419,8 @@ class GZipStream(Stream, IDisposable):
     def Flush(self):
         """
         Flush(self: GZipStream)
-            Flushes the contents of the internal buffer of the current System.IO.Compression.GZipStream 
-             object to the underlying stream.
+            Flushes the contents of the internal buffer of the current 
+             System.IO.Compression.GZipStream object to the underlying stream.
         """
         pass
 
@@ -435,11 +430,11 @@ class GZipStream(Stream, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -465,8 +460,8 @@ class GZipStream(Stream, IDisposable):
             array: The array used to store decompressed bytes.
             offset: The byte offset in array at which the read bytes will be placed.
             count: The maximum number of decompressed bytes to read.
-            Returns: The number of bytes that were decompressed into the byte array. If the end of the stream has 
-             been reached, zero or the number of bytes read is returned.
+            Returns: The number of bytes that were decompressed into the byte array. If the end of the stream 
+             has been reached, zero or the number of bytes read is returned.
         """
         pass
 
@@ -503,18 +498,11 @@ class GZipStream(Stream, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method

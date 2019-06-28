@@ -1,9 +1,7 @@
-class FormBorderStyle(Enum,IComparable,IFormattable,IConvertible):
+class FormBorderStyle:
  """
- Specifies the border styles for a form.
-
- 
-
+ Specifies the border styles for a form.
+ 
  enum FormBorderStyle,values: Fixed3D (2),FixedDialog (3),FixedSingle (1),FixedToolWindow (5),None (0),Sizable (4),SizableToolWindow (6)
  """
  def __eq__(self,*args):
@@ -33,7 +31,7 @@ class FormBorderStyle(Enum,IComparable,IFormattable,IConvertible):
  FixedDialog=None
  FixedSingle=None
  FixedToolWindow=None
- None=None
+ None_ =None
  Sizable=None
  SizableToolWindow=None
  value__=None

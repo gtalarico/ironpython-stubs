@@ -1,9 +1,7 @@
-class FileMode(Enum,IComparable,IFormattable,IConvertible):
+class FileMode:
  """
- Specifies how the operating system should open a file.
-
- 
-
+ Specifies how the operating system should open a file.
+ 
  enum FileMode,values: Append (6),Create (2),CreateNew (1),Open (3),OpenOrCreate (4),Truncate (5)
  """
  def __eq__(self,*args):

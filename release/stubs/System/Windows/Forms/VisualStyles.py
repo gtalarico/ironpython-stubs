@@ -2,13 +2,13 @@
 # module System.Windows.Forms.VisualStyles calls itself VisualStyles
 # from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class BackgroundType(Enum, IComparable, IFormattable, IConvertible):
+class BackgroundType:
     """
     Specifies the source of a visual style element's background.
     
@@ -49,11 +49,11 @@ class BackgroundType(Enum, IComparable, IFormattable, IConvertible):
 
     BorderFill = None
     ImageFile = None
-    None = None
+    None_ =None
     value__ = None
 
 
-class BooleanProperty(Enum, IComparable, IFormattable, IConvertible):
+class BooleanProperty:
     """
     Identifies the Boolean properties of a visual style element.
     
@@ -108,7 +108,7 @@ class BooleanProperty(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class BorderType(Enum, IComparable, IFormattable, IConvertible):
+class BorderType:
     """
     Specifies the border type of a visual style element with a filled-border background.
     
@@ -153,7 +153,7 @@ class BorderType(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class CheckBoxState(Enum, IComparable, IFormattable, IConvertible):
+class CheckBoxState:
     """
     Specifies the visual state of a check box that is drawn with visual styles.
     
@@ -207,7 +207,7 @@ class CheckBoxState(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ColorProperty(Enum, IComparable, IFormattable, IConvertible):
+class ColorProperty:
     """
     Identifies the color properties of a visual style element.
     
@@ -272,7 +272,7 @@ class ColorProperty(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ComboBoxState(Enum, IComparable, IFormattable, IConvertible):
+class ComboBoxState:
     """
     Specifies the visual state of a combo box that is drawn with visual styles.
     
@@ -318,7 +318,7 @@ class ComboBoxState(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ContentAlignment(Enum, IComparable, IFormattable, IConvertible):
+class ContentAlignment:
     """
     Specifies how text is aligned in a window caption.
     
@@ -363,7 +363,7 @@ class ContentAlignment(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class EdgeEffects(Enum, IComparable, IFormattable, IConvertible):
+class EdgeEffects:
     """
     Specifies the visual effects that can be applied to the edges of a visual style element.
     
@@ -405,12 +405,12 @@ class EdgeEffects(Enum, IComparable, IFormattable, IConvertible):
     FillInterior = None
     Flat = None
     Mono = None
-    None = None
+    None_ =None
     Soft = None
     value__ = None
 
 
-class Edges(Enum, IComparable, IFormattable, IConvertible):
+class Edges:
     """
     Specifies which edges of a visual style element to draw.
     
@@ -457,7 +457,7 @@ class Edges(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class EdgeStyle(Enum, IComparable, IFormattable, IConvertible):
+class EdgeStyle:
     """
     Specifies the styles that can be applied to the edges of a visual style element.
     
@@ -503,7 +503,7 @@ class EdgeStyle(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class EnumProperty(Enum, IComparable, IFormattable, IConvertible):
+class EnumProperty:
     """
     Identifies the enumerated type properties of a visual style element.
     
@@ -560,7 +560,7 @@ class EnumProperty(Enum, IComparable, IFormattable, IConvertible):
     VerticalAlignment = None
 
 
-class FilenameProperty(Enum, IComparable, IFormattable, IConvertible):
+class FilenameProperty:
     """
     Identifies the names of the image files that are used to draw a visual style element.
     
@@ -610,7 +610,7 @@ class FilenameProperty(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class FillType(Enum, IComparable, IFormattable, IConvertible):
+class FillType:
     """
     Specifies the interior of visual style elements with a filled border background.
     
@@ -657,7 +657,7 @@ class FillType(Enum, IComparable, IFormattable, IConvertible):
     VerticalGradient = None
 
 
-class FontProperty(Enum, IComparable, IFormattable, IConvertible):
+class FontProperty:
     """
     Identifies the font properties of a visual style element.
     
@@ -700,7 +700,7 @@ class FontProperty(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class GlyphFontSizingType(Enum, IComparable, IFormattable, IConvertible):
+class GlyphFontSizingType:
     """
     Specifies when the visual style selects a different glyph font size.
     
@@ -740,12 +740,12 @@ class GlyphFontSizingType(Enum, IComparable, IFormattable, IConvertible):
         pass
 
     Dpi = None
-    None = None
+    None_ =None
     Size = None
     value__ = None
 
 
-class GlyphType(Enum, IComparable, IFormattable, IConvertible):
+class GlyphType:
     """
     Specifies the type of glyph for elements with a bitmap background.
     
@@ -786,11 +786,11 @@ class GlyphType(Enum, IComparable, IFormattable, IConvertible):
 
     FontGlyph = None
     ImageGlyph = None
-    None = None
+    None_ =None
     value__ = None
 
 
-class GroupBoxState(Enum, IComparable, IFormattable, IConvertible):
+class GroupBoxState:
     """
     Specifies the visual state of a group box that is drawn with visual styles.
     
@@ -834,7 +834,7 @@ class GroupBoxState(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class HitTestCode(Enum, IComparable, IFormattable, IConvertible):
+class HitTestCode:
     """
     Describes the location of a point in the background specified by a visual style.
     
@@ -886,7 +886,7 @@ class HitTestCode(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class HitTestOptions(Enum, IComparable, IFormattable, IConvertible):
+class HitTestOptions:
     """
     Specifies the options that can be used when performing a hit test on the background specified by a visual style.
     
@@ -938,7 +938,7 @@ class HitTestOptions(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class HorizontalAlign(Enum, IComparable, IFormattable, IConvertible):
+class HorizontalAlign:
     """
     Specifies the horizontal alignment for visual style elements with a fixed size.
     
@@ -983,7 +983,7 @@ class HorizontalAlign(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class IconEffect(Enum, IComparable, IFormattable, IConvertible):
+class IconEffect:
     """
     Specifies the visual effect that the visual style will apply to an icon.
     
@@ -1024,13 +1024,13 @@ class IconEffect(Enum, IComparable, IFormattable, IConvertible):
 
     Alpha = None
     Glow = None
-    None = None
+    None_ =None
     Pulse = None
     Shadow = None
     value__ = None
 
 
-class ImageOrientation(Enum, IComparable, IFormattable, IConvertible):
+class ImageOrientation:
     """
     Specifies how multiple images are arranged in a single image file.
     
@@ -1074,7 +1074,7 @@ class ImageOrientation(Enum, IComparable, IFormattable, IConvertible):
     Vertical = None
 
 
-class ImageSelectType(Enum, IComparable, IFormattable, IConvertible):
+class ImageSelectType:
     """
     Specifies when the visual style selects a different multiple-image file to draw an element.
     
@@ -1114,12 +1114,12 @@ class ImageSelectType(Enum, IComparable, IFormattable, IConvertible):
         pass
 
     Dpi = None
-    None = None
+    None_ =None
     Size = None
     value__ = None
 
 
-class IntegerProperty(Enum, IComparable, IFormattable, IConvertible):
+class IntegerProperty:
     """
     Identifies the integer properties of a visual style element.
     
@@ -1185,7 +1185,7 @@ class IntegerProperty(Enum, IComparable, IFormattable, IConvertible):
     Width = None
 
 
-class MarginProperty(Enum, IComparable, IFormattable, IConvertible):
+class MarginProperty:
     """
     Identifies the margin properties of a visual style element.
     
@@ -1230,7 +1230,7 @@ class MarginProperty(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class OffsetType(Enum, IComparable, IFormattable, IConvertible):
+class OffsetType:
     """
     Specifies where an offset is applied to a window element.
     
@@ -1286,7 +1286,7 @@ class OffsetType(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class PointProperty(Enum, IComparable, IFormattable, IConvertible):
+class PointProperty:
     """
     Identifies the point properties of a visual style element.
     
@@ -1336,7 +1336,7 @@ class PointProperty(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class PushButtonState(Enum, IComparable, IFormattable, IConvertible):
+class PushButtonState:
     """
     Specifies the visual state of a button that is drawn with visual styles.
     
@@ -1383,7 +1383,7 @@ class PushButtonState(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class RadioButtonState(Enum, IComparable, IFormattable, IConvertible):
+class RadioButtonState:
     """
     Specifies the visual state of an option button (also known as a radio button) that is drawn with visual styles.
     
@@ -1433,7 +1433,7 @@ class RadioButtonState(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ScrollBarArrowButtonState(Enum, IComparable, IFormattable, IConvertible):
+class ScrollBarArrowButtonState:
     """
     Specifies the visual state of a scroll arrow that is drawn with visual styles.
     
@@ -1491,7 +1491,7 @@ class ScrollBarArrowButtonState(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ScrollBarSizeBoxState(Enum, IComparable, IFormattable, IConvertible):
+class ScrollBarSizeBoxState:
     """
     Specifies the visual state of a scroll bar sizing handle that is drawn with visual styles.
     
@@ -1535,7 +1535,7 @@ class ScrollBarSizeBoxState(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ScrollBarState(Enum, IComparable, IFormattable, IConvertible):
+class ScrollBarState:
     """
     Specifies the visual state of a scroll bar that is drawn with visual styles.
     
@@ -1581,7 +1581,7 @@ class ScrollBarState(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class SizingType(Enum, IComparable, IFormattable, IConvertible):
+class SizingType:
     """
     Specifies how elements with a bitmap background will adjust to fill a bounds.
     
@@ -1626,7 +1626,7 @@ class SizingType(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class StringProperty(Enum, IComparable, IFormattable, IConvertible):
+class StringProperty:
     """
     Identifies the string properties of a visual style element.
     
@@ -1669,7 +1669,7 @@ class StringProperty(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class TabItemState(Enum, IComparable, IFormattable, IConvertible):
+class TabItemState:
     """
     Specifies the visual state of a tab item that is drawn with visual styles.
     
@@ -1715,7 +1715,7 @@ class TabItemState(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class TextBoxState(Enum, IComparable, IFormattable, IConvertible):
+class TextBoxState:
     """
     Specifies the visual state of a text box that is drawn with visual styles.
     
@@ -1763,7 +1763,7 @@ class TextBoxState(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class TextMetrics(object):
+class TextMetrics:
     """ Provides basic information about the font specified by a visual style for a particular element. """
     Ascent = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets the ascent of characters in the font.
@@ -1927,7 +1927,7 @@ Set: Weight(self: TextMetrics) = value
 
 
 
-class TextMetricsCharacterSet(Enum, IComparable, IFormattable, IConvertible):
+class TextMetricsCharacterSet:
     """
     Specifies the character set of the font specified by a visual style for a particular element.
     
@@ -1988,7 +1988,7 @@ class TextMetricsCharacterSet(Enum, IComparable, IFormattable, IConvertible):
     Vietnamese = None
 
 
-class TextMetricsPitchAndFamilyValues(Enum, IComparable, IFormattable, IConvertible):
+class TextMetricsPitchAndFamilyValues:
     """
     Specifies information about the pitch, technology, and family of the font specified by a visual style for a particular element.
     
@@ -2034,7 +2034,7 @@ class TextMetricsPitchAndFamilyValues(Enum, IComparable, IFormattable, IConverti
     Vector = None
 
 
-class TextShadowType(Enum, IComparable, IFormattable, IConvertible):
+class TextShadowType:
     """
     Specifies the type of shadow to add to text.
     
@@ -2074,12 +2074,12 @@ class TextShadowType(Enum, IComparable, IFormattable, IConvertible):
         pass
 
     Continuous = None
-    None = None
+    None_ =None
     Single = None
     value__ = None
 
 
-class ThemeSizeType(Enum, IComparable, IFormattable, IConvertible):
+class ThemeSizeType:
     """
     Specifies the size of the visual style part to retrieve.
     
@@ -2124,7 +2124,7 @@ class ThemeSizeType(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ToolBarState(Enum, IComparable, IFormattable, IConvertible):
+class ToolBarState:
     """
     Specifies the visual state of a toolbar item that is drawn with visual styles.
     
@@ -2172,7 +2172,7 @@ class ToolBarState(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class TrackBarThumbState(Enum, IComparable, IFormattable, IConvertible):
+class TrackBarThumbState:
     """
     Specifies the visual state of a track bar slider (also known as a thumb) that is drawn with visual styles.
     
@@ -2218,7 +2218,7 @@ class TrackBarThumbState(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class TrueSizeScalingType(Enum, IComparable, IFormattable, IConvertible):
+class TrueSizeScalingType:
     """
     Specifies the scaling type of a visual style element with a fixed size.
     
@@ -2258,12 +2258,12 @@ class TrueSizeScalingType(Enum, IComparable, IFormattable, IConvertible):
         pass
 
     Dpi = None
-    None = None
+    None_ =None
     Size = None
     value__ = None
 
 
-class VerticalAlignment(Enum, IComparable, IFormattable, IConvertible):
+class VerticalAlignment:
     """
     Specifies the vertical alignment for visual style elements with a fixed size.
     
@@ -2308,7 +2308,7 @@ class VerticalAlignment(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class VisualStyleElement(object):
+class VisualStyleElement:
     """ Identifies a control or user interface (UI) element that is drawn with visual styles. """
     @staticmethod
     def CreateElement(className, part, state):
@@ -2377,7 +2377,7 @@ Get: State(self: VisualStyleElement) -> int
     Window = None
 
 
-class VisualStyleInformation(object):
+class VisualStyleInformation:
     """ Provides information about the current visual style of the operating system. """
     Author = 'MSX'
     ColorScheme = 'NormalColor'
@@ -2397,7 +2397,7 @@ class VisualStyleInformation(object):
     __all__ = []
 
 
-class VisualStyleRenderer(object):
+class VisualStyleRenderer:
     """
     Provides methods for drawing and getting information about a System.Windows.Forms.VisualStyles.VisualStyleElement. This class cannot be inherited.
     
@@ -2406,21 +2406,21 @@ class VisualStyleRenderer(object):
     """
     def DrawBackground(self, dc, bounds, clipRectangle=None):
         """
-        DrawBackground(self: VisualStyleRenderer, dc: IDeviceContext, bounds: Rectangle, clipRectangle: Rectangle)
-            Draws the background image of the current visual style element within the specified bounding 
-             rectangle and clipped to the specified clipping rectangle.
+        DrawBackground(self: VisualStyleRenderer, dc: IDeviceContext, bounds: Rectangle)
+            Draws the background image of the current visual style element within the specified 
+             bounding rectangle.
         
         
             dc: The System.Drawing.IDeviceContext used to draw the background image.
             bounds: A System.Drawing.Rectangle in which the background image is drawn.
-            clipRectangle: A System.Drawing.Rectangle that defines a clipping rectangle for the drawing operation.
-        DrawBackground(self: VisualStyleRenderer, dc: IDeviceContext, bounds: Rectangle)
-            Draws the background image of the current visual style element within the specified bounding 
-             rectangle.
+        DrawBackground(self: VisualStyleRenderer, dc: IDeviceContext, bounds: Rectangle, clipRectangle: Rectangle)
+            Draws the background image of the current visual style element within the specified 
+             bounding rectangle and clipped to the specified clipping rectangle.
         
         
             dc: The System.Drawing.IDeviceContext used to draw the background image.
-            bounds: A System.Drawing.Rectangle in which the background image is drawn.
+            bounds: A System.Drawing.Rectangle in which the background image is drawn.
+            clipRectangle: A System.Drawing.Rectangle that defines a clipping rectangle for the drawing operation.
         """
         pass
 
@@ -2435,26 +2435,28 @@ class VisualStyleRenderer(object):
             edges: A bitwise combination of the System.Windows.Forms.VisualStyles.Edges values.
             style: A bitwise combination of the System.Windows.Forms.VisualStyles.EdgeStyle values.
             effects: A bitwise combination of the System.Windows.Forms.VisualStyles.EdgeEffects values.
-            Returns: A System.Drawing.Rectangle that represents the interior of the bounds parameter, minus the edges 
-             that were drawn.
+            Returns: A System.Drawing.Rectangle that represents the interior of the bounds parameter, minus 
+             the edges that were drawn.
         """
         pass
 
     def DrawImage(self, g, bounds, *__args):
         """
-        DrawImage(self: VisualStyleRenderer, g: Graphics, bounds: Rectangle, imageList: ImageList, imageIndex: int)
-            Draws the image from the specified System.Windows.Forms.ImageList within the specified bounds.
-        
-            g: The System.Drawing.Graphics used to draw the image.
-            bounds: A System.Drawing.Rectangle in which the image is drawn.
-            imageList: An System.Windows.Forms.ImageList that contains the System.Drawing.Image to draw.
-            imageIndex: The index of the System.Drawing.Image within imageList to draw.
         DrawImage(self: VisualStyleRenderer, g: Graphics, bounds: Rectangle, image: Image)
             Draws the specified image within the specified bounds.
         
             g: The System.Drawing.Graphics used to draw the image.
             bounds: A System.Drawing.Rectangle in which the image is drawn.
-            image: The System.Drawing.Image to draw.
+            image: The System.Drawing.Image to draw.
+        DrawImage(self: VisualStyleRenderer, g: Graphics, bounds: Rectangle, imageList: ImageList, imageIndex: int)
+            Draws the image from the specified System.Windows.Forms.ImageList within the specified 
+             bounds.
+        
+        
+            g: The System.Drawing.Graphics used to draw the image.
+            bounds: A System.Drawing.Rectangle in which the image is drawn.
+            imageList: An System.Windows.Forms.ImageList that contains the System.Drawing.Image to draw.
+            imageIndex: The index of the System.Drawing.Image within imageList to draw.
         """
         pass
 
@@ -2463,10 +2465,10 @@ class VisualStyleRenderer(object):
         DrawParentBackground(self: VisualStyleRenderer, dc: IDeviceContext, bounds: Rectangle, childControl: Control)
             Draws the background of a control's parent in the specified area.
         
-            dc: The System.Drawing.IDeviceContext used to draw the background of the parent of childControl. 
-             This object typically belongs to the child control.
+            dc: The System.Drawing.IDeviceContext used to draw the background of the parent of 
+             childControl. This object typically belongs to the child control.
         
-            bounds: A System.Drawing.Rectangle in which to draw the parent control's background. This rectangle 
+            bounds: A System.Drawing.Rectangle in which to draw the parent control's background. This 
                 
             childControl: The control whose parent's background will be drawn.
         """
@@ -2474,16 +2476,12 @@ class VisualStyleRenderer(object):
 
     def DrawText(self, dc, bounds, textToDraw, drawDisabled=None, flags=None):
         """
-        DrawText(self: VisualStyleRenderer, dc: IDeviceContext, bounds: Rectangle, textToDraw: str, drawDisabled: bool, flags: TextFormatFlags)
-            Draws text in the specified bounding rectangle with the option of displaying disabled text and 
-             applying other text formatting.
-        
+        DrawText(self: VisualStyleRenderer, dc: IDeviceContext, bounds: Rectangle, textToDraw: str)
+            Draws text in the specified bounds using default formatting.
         
             dc: The System.Drawing.IDeviceContext used to draw the text.
             bounds: A System.Drawing.Rectangle in which to draw the text.
             textToDraw: The text to draw.
-            drawDisabled: true to draw grayed-out text; otherwise, false.
-            flags: A bitwise combination of the System.Windows.Forms.TextFormatFlags values.
         DrawText(self: VisualStyleRenderer, dc: IDeviceContext, bounds: Rectangle, textToDraw: str, drawDisabled: bool)
             Draws text in the specified bounds with the option of displaying disabled text.
         
@@ -2491,12 +2489,16 @@ class VisualStyleRenderer(object):
             bounds: A System.Drawing.Rectangle in which to draw the text.
             textToDraw: The text to draw.
             drawDisabled: true to draw grayed-out text; otherwise, false.
-        DrawText(self: VisualStyleRenderer, dc: IDeviceContext, bounds: Rectangle, textToDraw: str)
-            Draws text in the specified bounds using default formatting.
+        DrawText(self: VisualStyleRenderer, dc: IDeviceContext, bounds: Rectangle, textToDraw: str, drawDisabled: bool, flags: TextFormatFlags)
+            Draws text in the specified bounding rectangle with the option of displaying disabled 
+             text and applying other text formatting.
+        
         
             dc: The System.Drawing.IDeviceContext used to draw the text.
             bounds: A System.Drawing.Rectangle in which to draw the text.
-            textToDraw: The text to draw.
+            textToDraw: The text to draw.
+            drawDisabled: true to draw grayed-out text; otherwise, false.
+            flags: A bitwise combination of the System.Windows.Forms.TextFormatFlags values.
         """
         pass
 
@@ -2507,11 +2509,11 @@ class VisualStyleRenderer(object):
             Returns the content area for the background of the current visual style element.
         
             dc: The System.Drawing.IDeviceContext this operation will use.
-            bounds: A System.Drawing.Rectangle that contains the entire background area of the current visual style 
-             element.
+            bounds: A System.Drawing.Rectangle that contains the entire background area of the current visual 
+             style element.
         
-            Returns: A System.Drawing.Rectangle that contains the content area for the background of the current 
-             visual style element.
+            Returns: A System.Drawing.Rectangle that contains the content area for the background of the 
+             current visual style element.
         """
         pass
 
@@ -2522,9 +2524,11 @@ class VisualStyleRenderer(object):
             Returns the entire background area for the current visual style element.
         
             dc: The System.Drawing.IDeviceContext this operation will use.
-            contentBounds: A System.Drawing.Rectangle that contains the content area of the current visual style element.
-            Returns: A System.Drawing.Rectangle that contains the entire background area of the current visual style 
-             element.
+            contentBounds: A System.Drawing.Rectangle that contains the content area of the current visual style 
+             element.
+        
+            Returns: A System.Drawing.Rectangle that contains the entire background area of the current visual 
+             style element.
         """
         pass
 
@@ -2535,10 +2539,11 @@ class VisualStyleRenderer(object):
             Returns the region for the background of the current visual style element.
         
             dc: The System.Drawing.IDeviceContext this operation will use.
-            bounds: A System.Drawing.Rectangle that contains the entire background area of the current visual style 
-             element.
+            bounds: A System.Drawing.Rectangle that contains the entire background area of the current visual 
+             style element.
         
-            Returns: The System.Drawing.Region that contains the background of the current visual style element.
+            Returns: The System.Drawing.Region that contains the background of the current visual style 
+             element.
         """
         pass
 
@@ -2562,11 +2567,11 @@ class VisualStyleRenderer(object):
         
             Returns the value of the specified color property for the current visual style element.
         
-            prop: One of the System.Windows.Forms.VisualStyles.ColorProperty values that specifies which property 
-             value to retrieve for the current visual style element.
+            prop: One of the System.Windows.Forms.VisualStyles.ColorProperty values that specifies which 
+             property value to retrieve for the current visual style element.
         
-            Returns: A System.Drawing.Color that contains the value of the property specified by the prop parameter 
-             for the current visual style element.
+            Returns: A System.Drawing.Color that contains the value of the property specified by the prop 
+             parameter for the current visual style element.
         """
         pass
 
@@ -2574,13 +2579,15 @@ class VisualStyleRenderer(object):
         """
         GetEnumValue(self: VisualStyleRenderer, prop: EnumProperty) -> int
         
-            Returns the value of the specified enumerated type property for the current visual style element.
+            Returns the value of the specified enumerated type property for the current visual style 
+             element.
         
-            prop: One of the System.Windows.Forms.VisualStyles.EnumProperty values that specifies which property 
-             value to retrieve for the current visual style element.
         
-            Returns: The integer value of the property specified by the prop parameter for the current visual style 
-             element.
+            prop: One of the System.Windows.Forms.VisualStyles.EnumProperty values that specifies which 
+             property value to retrieve for the current visual style element.
+        
+            Returns: The integer value of the property specified by the prop parameter for the current visual 
+             style element.
         """
         pass
 
@@ -2588,13 +2595,15 @@ class VisualStyleRenderer(object):
         """
         GetFilename(self: VisualStyleRenderer, prop: FilenameProperty) -> str
         
-            Returns the value of the specified file name property for the current visual style element.
+            Returns the value of the specified file name property for the current visual style 
+             element.
+        
         
             prop: One of the System.Windows.Forms.VisualStyles.FilenameProperty values that specifies which 
              property value to retrieve for the current visual style element.
         
-            Returns: A System.String that contains the value of the property specified by the prop parameter for the 
-             current visual style element.
+            Returns: A System.String that contains the value of the property specified by the prop parameter 
+             for the current visual style element.
         """
         pass
 
@@ -2605,11 +2614,11 @@ class VisualStyleRenderer(object):
             Returns the value of the specified font property for the current visual style element.
         
             dc: The System.Drawing.IDeviceContext this operation will use.
-            prop: One of the System.Windows.Forms.VisualStyles.FontProperty values that specifies which property 
-             value to retrieve for the current visual style element.
+            prop: One of the System.Windows.Forms.VisualStyles.FontProperty values that specifies which 
+             property value to retrieve for the current visual style element.
         
-            Returns: A System.Drawing.Font that contains the value of the property specified by the prop parameter 
-             for the current visual style element.
+            Returns: A System.Drawing.Font that contains the value of the property specified by the prop 
+             parameter for the current visual style element.
         """
         pass
 
@@ -2622,8 +2631,8 @@ class VisualStyleRenderer(object):
             prop: One of the System.Windows.Forms.VisualStyles.IntegerProperty values that specifies which 
              property value to retrieve for the current visual style element.
         
-            Returns: The integer value of the property specified by the prop parameter for the current visual style 
-             element.
+            Returns: The integer value of the property specified by the prop parameter for the current visual 
+             style element.
         """
         pass
 
@@ -2634,40 +2643,40 @@ class VisualStyleRenderer(object):
             Returns the value of the specified margins property for the current visual style element.
         
             dc: The System.Drawing.IDeviceContext this operation will use.
-            prop: One of the System.Windows.Forms.VisualStyles.MarginProperty values that specifies which property 
-             value to retrieve for the current visual style element.
+            prop: One of the System.Windows.Forms.VisualStyles.MarginProperty values that specifies which 
+             property value to retrieve for the current visual style element.
         
-            Returns: A System.Windows.Forms.Padding that contains the value of the property specified by the prop 
-             parameter for the current visual style element.
+            Returns: A System.Windows.Forms.Padding that contains the value of the property specified by the 
+             prop parameter for the current visual style element.
         """
         pass
 
     def GetPartSize(self, dc, *__args):
         """
-        GetPartSize(self: VisualStyleRenderer, dc: IDeviceContext, bounds: Rectangle, type: ThemeSizeType) -> Size
-        
-            Returns the value of the specified size property of the current visual style part using the 
-             specified drawing bounds.
-        
-        
-            dc: The System.Drawing.IDeviceContext this operation will use.
-            bounds: A System.Drawing.Rectangle that contains the area in which the part will be drawn.
-            type: One of the System.Windows.Forms.VisualStyles.ThemeSizeType values that specifies which size 
-             value to retrieve for the part.
-        
-            Returns: A System.Drawing.Size that contains the size specified by the type parameter for the current 
-             visual style part.
-        
         GetPartSize(self: VisualStyleRenderer, dc: IDeviceContext, type: ThemeSizeType) -> Size
         
             Returns the value of the specified size property of the current visual style part.
         
             dc: The System.Drawing.IDeviceContext this operation will use.
-            type: One of the System.Windows.Forms.VisualStyles.ThemeSizeType values that specifies which size 
-             value to retrieve for the part.
+            type: One of the System.Windows.Forms.VisualStyles.ThemeSizeType values that specifies which 
+             size value to retrieve for the part.
         
-            Returns: A System.Drawing.Size that contains the size specified by the type parameter for the current 
-             visual style part.
+            Returns: A System.Drawing.Size that contains the size specified by the type parameter for the 
+             current visual style part.
+        
+        GetPartSize(self: VisualStyleRenderer, dc: IDeviceContext, bounds: Rectangle, type: ThemeSizeType) -> Size
+        
+            Returns the value of the specified size property of the current visual style part using 
+             the specified drawing bounds.
+        
+        
+            dc: The System.Drawing.IDeviceContext this operation will use.
+            bounds: A System.Drawing.Rectangle that contains the area in which the part will be drawn.
+            type: One of the System.Windows.Forms.VisualStyles.ThemeSizeType values that specifies which 
+             size value to retrieve for the part.
+        
+            Returns: A System.Drawing.Size that contains the size specified by the type parameter for the 
+             current visual style part.
         """
         pass
 
@@ -2677,11 +2686,11 @@ class VisualStyleRenderer(object):
         
             Returns the value of the specified point property for the current visual style element.
         
-            prop: One of the System.Windows.Forms.VisualStyles.PointProperty values that specifies which property 
-             value to retrieve for the current visual style element.
+            prop: One of the System.Windows.Forms.VisualStyles.PointProperty values that specifies which 
+             property value to retrieve for the current visual style element.
         
-            Returns: A System.Drawing.Point that contains the value of the property specified by the prop parameter 
-             for the current visual style element.
+            Returns: A System.Drawing.Point that contains the value of the property specified by the prop 
+             parameter for the current visual style element.
         """
         pass
 
@@ -2691,34 +2700,34 @@ class VisualStyleRenderer(object):
         
             Returns the value of the specified string property for the current visual style element.
         
-            prop: One of the System.Windows.Forms.VisualStyles.StringProperty values that specifies which property 
-             value to retrieve for the current visual style element.
+            prop: One of the System.Windows.Forms.VisualStyles.StringProperty values that specifies which 
+             property value to retrieve for the current visual style element.
         
-            Returns: A System.String that contains the value of the property specified by the prop parameter for the 
-             current visual style element.
+            Returns: A System.String that contains the value of the property specified by the prop parameter 
+             for the current visual style element.
         """
         pass
 
     def GetTextExtent(self, dc, *__args):
         """
+        GetTextExtent(self: VisualStyleRenderer, dc: IDeviceContext, textToDraw: str, flags: TextFormatFlags) -> Rectangle
+        
+            Returns the size and location of the specified string when drawn with the font of the 
+             current visual style element.
+        
+        
+            dc: The System.Drawing.IDeviceContext this operation will use.
+            textToDraw: The string to measure.
+            flags: A bitwise combination of the System.Windows.Forms.TextFormatFlags values.
+            Returns: A System.Drawing.Rectangle that contains the area required to fit the rendered text.
         GetTextExtent(self: VisualStyleRenderer, dc: IDeviceContext, bounds: Rectangle, textToDraw: str, flags: TextFormatFlags) -> Rectangle
         
-            Returns the size and location of the specified string when drawn with the font of the current 
-             visual style element within the specified initial bounding rectangle.
+            Returns the size and location of the specified string when drawn with the font of the 
+             current visual style element within the specified initial bounding rectangle.
         
         
             dc: The System.Drawing.IDeviceContext this operation will use.
             bounds: A System.Drawing.Rectangle used to control the flow and wrapping of the text.
-            textToDraw: The string to measure.
-            flags: A bitwise combination of the System.Windows.Forms.TextFormatFlags values.
-            Returns: A System.Drawing.Rectangle that contains the area required to fit the rendered text.
-        GetTextExtent(self: VisualStyleRenderer, dc: IDeviceContext, textToDraw: str, flags: TextFormatFlags) -> Rectangle
-        
-            Returns the size and location of the specified string when drawn with the font of the current 
-             visual style element.
-        
-        
-            dc: The System.Drawing.IDeviceContext this operation will use.
             textToDraw: The string to measure.
             flags: A bitwise combination of the System.Windows.Forms.TextFormatFlags values.
             Returns: A System.Drawing.Rectangle that contains the area required to fit the rendered text.
@@ -2739,16 +2748,15 @@ class VisualStyleRenderer(object):
 
     def HitTestBackground(self, *__args):
         """
-        HitTestBackground(self: VisualStyleRenderer, dc: IDeviceContext, backgroundRectangle: Rectangle, hRgn: IntPtr, pt: Point, options: HitTestOptions) -> HitTestCode
+        HitTestBackground(self: VisualStyleRenderer, dc: IDeviceContext, backgroundRectangle: Rectangle, pt: Point, options: HitTestOptions) -> HitTestCode
         
-            Returns a hit test code indicating whether the point is contained in the background of the 
-             current visual style element and within the specified region.
+            Returns a hit test code indicating whether a point is contained in the background of the 
+             current visual style element.
         
         
             dc: The System.Drawing.IDeviceContext this operation will use.
-            backgroundRectangle: A System.Drawing.Rectangle that contains the background of the current visual style element.
-            hRgn: A Windows handle to a System.Drawing.Region that specifies the bounds of the hit test area 
-             within the background.
+            backgroundRectangle: A System.Drawing.Rectangle that contains the background of the current visual style 
+             element.
         
             pt: The System.Drawing.Point to test.
             options: A bitwise combination of the System.Windows.Forms.VisualStyles.HitTestOptions values.
@@ -2757,26 +2765,35 @@ class VisualStyleRenderer(object):
         
         HitTestBackground(self: VisualStyleRenderer, g: Graphics, backgroundRectangle: Rectangle, region: Region, pt: Point, options: HitTestOptions) -> HitTestCode
         
-            Returns a hit test code indicating whether the point is contained in the background of the 
-             current visual style element and within the specified bounds.
+            Returns a hit test code indicating whether the point is contained in the background of 
+             the current visual style element and within the specified bounds.
         
         
             g: The System.Drawing.Graphics this operation will use.
-            backgroundRectangle: A System.Drawing.Rectangle that contains the background of the current visual style element.
-            region: A System.Drawing.Region that specifies the bounds of the hit test area within the background.
+            backgroundRectangle: A System.Drawing.Rectangle that contains the background of the current visual style 
+             element.
+        
+            region: A System.Drawing.Region that specifies the bounds of the hit test area within the 
+             background.
+        
             pt: The System.Drawing.Point to test.
             options: A bitwise combination of the System.Windows.Forms.VisualStyles.HitTestOptions values.
             Returns: A System.Windows.Forms.VisualStyles.HitTestCode that describes where pt is located in the 
              background of the current visual style element, if at all.
         
-        HitTestBackground(self: VisualStyleRenderer, dc: IDeviceContext, backgroundRectangle: Rectangle, pt: Point, options: HitTestOptions) -> HitTestCode
+        HitTestBackground(self: VisualStyleRenderer, dc: IDeviceContext, backgroundRectangle: Rectangle, hRgn: IntPtr, pt: Point, options: HitTestOptions) -> HitTestCode
         
-            Returns a hit test code indicating whether a point is contained in the background of the current 
-             visual style element.
+            Returns a hit test code indicating whether the point is contained in the background of 
+             the current visual style element and within the specified region.
         
         
             dc: The System.Drawing.IDeviceContext this operation will use.
-            backgroundRectangle: A System.Drawing.Rectangle that contains the background of the current visual style element.
+            backgroundRectangle: A System.Drawing.Rectangle that contains the background of the current visual style 
+             element.
+        
+            hRgn: A Windows handle to a System.Drawing.Region that specifies the bounds of the hit test 
+             area within the background.
+        
             pt: The System.Drawing.Point to test.
             options: A bitwise combination of the System.Windows.Forms.VisualStyles.HitTestOptions values.
             Returns: A System.Windows.Forms.VisualStyles.HitTestCode that describes where pt is located in the 
@@ -2788,8 +2805,8 @@ class VisualStyleRenderer(object):
         """
         IsBackgroundPartiallyTransparent(self: VisualStyleRenderer) -> bool
         
-            Indicates whether the background of the current visual style element has any semitransparent or 
-             alpha-blended pieces.
+            Indicates whether the background of the current visual style element has any 
+             semitransparent or alpha-blended pieces.
         
             Returns: true if the background of the current visual style element has any semitransparent or 
              alpha-blended pieces; otherwise, false.
@@ -2801,36 +2818,41 @@ class VisualStyleRenderer(object):
         """
         IsElementDefined(element: VisualStyleElement) -> bool
         
-            Determines whether the specified visual style element is defined by the current visual style.
+            Determines whether the specified visual style element is defined by the current visual 
+             style.
         
-            element: A System.Windows.Forms.VisualStyles.VisualStyleElement whose class and part combination will be 
-             verified.
         
-            Returns: true if the combination of the System.Windows.Forms.VisualStyles.VisualStyleElement.ClassName 
-             and System.Windows.Forms.VisualStyles.VisualStyleElement.Part properties of element are defined; 
-             otherwise, false.
+            element: A System.Windows.Forms.VisualStyles.VisualStyleElement whose class and part combination 
+             will be verified.
+        
+            Returns: true if the combination of the 
+             System.Windows.Forms.VisualStyles.VisualStyleElement.ClassName and 
+             System.Windows.Forms.VisualStyles.VisualStyleElement.Part properties of element are 
+             defined; otherwise, false.
         """
         pass
 
     def SetParameters(self, *__args):
         """
+        SetParameters(self: VisualStyleRenderer, element: VisualStyleElement)
+            Sets this System.Windows.Forms.VisualStyles.VisualStyleRenderer to the visual style 
+             element represented by the specified 
+             System.Windows.Forms.VisualStyles.VisualStyleElement.
+        
+        
+            element: A System.Windows.Forms.VisualStyles.VisualStyleElement that specifies the new values of 
+             the System.Windows.Forms.VisualStyles.VisualStyleRenderer.Class, 
+             System.Windows.Forms.VisualStyles.VisualStyleRenderer.Part, and 
+             System.Windows.Forms.VisualStyles.VisualStyleRenderer.State properties.
+        
         SetParameters(self: VisualStyleRenderer, className: str, part: int, state: int)
-            Sets this System.Windows.Forms.VisualStyles.VisualStyleRenderer to the visual style element 
-             represented by the specified class, part, and state values.
+            Sets this System.Windows.Forms.VisualStyles.VisualStyleRenderer to the visual style 
+             element represented by the specified class, part, and state values.
         
         
             className: The new value of the System.Windows.Forms.VisualStyles.VisualStyleRenderer.Class property.
             part: The new value of the System.Windows.Forms.VisualStyles.VisualStyleRenderer.Part property.
-            state: The new value of the System.Windows.Forms.VisualStyles.VisualStyleRenderer.State property.
-        SetParameters(self: VisualStyleRenderer, element: VisualStyleElement)
-            Sets this System.Windows.Forms.VisualStyles.VisualStyleRenderer to the visual style element 
-             represented by the specified System.Windows.Forms.VisualStyles.VisualStyleElement.
-        
-        
-            element: A System.Windows.Forms.VisualStyles.VisualStyleElement that specifies the new values of the 
-             System.Windows.Forms.VisualStyles.VisualStyleRenderer.Class, 
-             System.Windows.Forms.VisualStyles.VisualStyleRenderer.Part, and 
-             System.Windows.Forms.VisualStyles.VisualStyleRenderer.State properties.
+            state: The new value of the System.Windows.Forms.VisualStyles.VisualStyleRenderer.State property.
         """
         pass
 
@@ -2881,7 +2903,7 @@ Get: State(self: VisualStyleRenderer) -> int
     IsSupported = True
 
 
-class VisualStyleState(Enum, IComparable, IFormattable, IConvertible):
+class VisualStyleState:
     """
     Specifies how visual styles are applied to the current application.
     

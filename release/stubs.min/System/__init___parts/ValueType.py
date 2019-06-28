@@ -1,4 +1,4 @@
-class ValueType(object):
+class ValueType:
  """ Provides the base class for value types. """
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==y """

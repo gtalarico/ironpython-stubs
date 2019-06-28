@@ -1,9 +1,7 @@
-class FUNCKIND(Enum,IComparable,IFormattable,IConvertible):
+class FUNCKIND:
  """
- Use System.Runtime.InteropServices.ComTypes.FUNCKIND instead.
-
- 
-
+ Use System.Runtime.InteropServices.ComTypes.FUNCKIND instead.
+ 
  enum FUNCKIND,values: FUNC_DISPATCH (4),FUNC_NONVIRTUAL (2),FUNC_PUREVIRTUAL (1),FUNC_STATIC (3),FUNC_VIRTUAL (0)
  """
  def __eq__(self,*args):

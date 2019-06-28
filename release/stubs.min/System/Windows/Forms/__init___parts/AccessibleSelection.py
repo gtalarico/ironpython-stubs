@@ -1,9 +1,7 @@
-class AccessibleSelection(Enum,IComparable,IFormattable,IConvertible):
+class AccessibleSelection:
  """
- Specifies how an accessible object is selected or receives focus.
-
- 
-
+ Specifies how an accessible object is selected or receives focus.
+ 
  enum (flags) AccessibleSelection,values: AddSelection (8),ExtendSelection (4),None (0),RemoveSelection (16),TakeFocus (1),TakeSelection (2)
  """
  def __eq__(self,*args):
@@ -31,7 +29,7 @@ class AccessibleSelection(Enum,IComparable,IFormattable,IConvertible):
   pass
  AddSelection=None
  ExtendSelection=None
- None=None
+ None_ =None
  RemoveSelection=None
  TakeFocus=None
  TakeSelection=None

@@ -1,9 +1,7 @@
-class LIBFLAGS(Enum,IComparable,IFormattable,IConvertible):
+class LIBFLAGS:
  """
- Use System.Runtime.InteropServices.ComTypes.LIBFLAGS instead.
-
- 
-
+ Use System.Runtime.InteropServices.ComTypes.LIBFLAGS instead.
+ 
  enum (flags) LIBFLAGS,values: LIBFLAG_FCONTROL (2),LIBFLAG_FHASDISKIMAGE (8),LIBFLAG_FHIDDEN (4),LIBFLAG_FRESTRICTED (1)
  """
  def __eq__(self,*args):

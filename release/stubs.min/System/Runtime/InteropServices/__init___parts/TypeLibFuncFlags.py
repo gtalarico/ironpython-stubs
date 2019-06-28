@@ -1,9 +1,7 @@
-class TypeLibFuncFlags(Enum,IComparable,IFormattable,IConvertible):
+class TypeLibFuncFlags:
  """
- Describes the original settings of the FUNCFLAGS in the COM type library from where this method was imported.
-
- 
-
+ Describes the original settings of the FUNCFLAGS in the COM type library from where this method was imported.
+ 
  enum (flags) TypeLibFuncFlags,values: FBindable (4),FDefaultBind (32),FDefaultCollelem (256),FDisplayBind (16),FHidden (64),FImmediateBind (4096),FNonBrowsable (1024),FReplaceable (2048),FRequestEdit (8),FRestricted (1),FSource (2),FUiDefault (512),FUsesGetLastError (128)
  """
  def __eq__(self,*args):

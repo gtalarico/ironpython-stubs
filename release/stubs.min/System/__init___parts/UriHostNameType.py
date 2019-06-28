@@ -1,9 +1,7 @@
-class UriHostNameType(Enum,IComparable,IFormattable,IConvertible):
+class UriHostNameType:
  """
- Defines host name types for the System.Uri.CheckHostName(System.String) method.
-
- 
-
+ Defines host name types for the System.Uri.CheckHostName(System.String) method.
+ 
  enum UriHostNameType,values: Basic (1),Dns (2),IPv4 (3),IPv6 (4),Unknown (0)
  """
  def __eq__(self,*args):

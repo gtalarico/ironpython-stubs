@@ -2,13 +2,13 @@
 # module System.Collections.ObjectModel calls itself ObjectModel
 # from mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class Collection(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, IList, ICollection, IReadOnlyList[T], IReadOnlyCollection[T]):
+class Collection:
     """
     Collection[T]()
     Collection[T](list: IList[T])
@@ -18,8 +18,8 @@ class Collection(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, 
         Add(self: Collection[T], item: T)
             Adds an object to the end of the System.Collections.ObjectModel.Collection.
         
-            item: The object to be added to the end of the System.Collections.ObjectModel.Collection. The value 
-             can be null for reference types.
+            item: The object to be added to the end of the System.Collections.ObjectModel.Collection. The 
+             value can be null for reference types.
         """
         pass
 
@@ -43,8 +43,8 @@ class Collection(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, 
         
             Determines whether an element is in the System.Collections.ObjectModel.Collection.
         
-            item: The object to locate in the System.Collections.ObjectModel.Collection. The value can be null for 
-             reference types.
+            item: The object to locate in the System.Collections.ObjectModel.Collection. The value can be 
+             null for reference types.
         
             Returns: true if item is found in the System.Collections.ObjectModel.Collection; otherwise, false.
         """
@@ -59,7 +59,8 @@ class Collection(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, 
         GetEnumerator(self: Collection[T]) -> IEnumerator[T]
         
             Returns an enumerator that iterates through the System.Collections.ObjectModel.Collection.
-            Returns: An System.Collections.Generic.IEnumerator for the System.Collections.ObjectModel.Collection.
+            Returns: An System.Collections.Generic.IEnumerator for the 
+             System.Collections.ObjectModel.Collection.
         """
         pass
 
@@ -67,12 +68,12 @@ class Collection(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, 
         """
         IndexOf(self: Collection[T], item: T) -> int
         
-            Searches for the specified object and returns the zero-based index of the first occurrence 
-             within the entire System.Collections.ObjectModel.Collection.
+            Searches for the specified object and returns the zero-based index of the first 
+             occurrence within the entire System.Collections.ObjectModel.Collection.
         
         
-            item: The object to locate in the System.Collections.Generic.List. The value can be null for reference 
-             types.
+            item: The object to locate in the System.Collections.Generic.List. The value can be null for 
+             reference types.
         
             Returns: The zero-based index of the first occurrence of item within the entire 
              System.Collections.ObjectModel.Collection, if found; otherwise, -1.
@@ -82,7 +83,9 @@ class Collection(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, 
     def Insert(self, index, item):
         """
         Insert(self: Collection[T], index: int, item: T)
-            Inserts an element into the System.Collections.ObjectModel.Collection at the specified index.
+            Inserts an element into the System.Collections.ObjectModel.Collection at the specified 
+             index.
+        
         
             index: The zero-based index at which item should be inserted.
             item: The object to insert. The value can be null for reference types.
@@ -92,7 +95,9 @@ class Collection(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, 
     def InsertItem(self, *args): #cannot find CLR method
         """
         InsertItem(self: Collection[T], index: int, item: T)
-            Inserts an element into the System.Collections.ObjectModel.Collection at the specified index.
+            Inserts an element into the System.Collections.ObjectModel.Collection at the specified 
+             index.
+        
         
             index: The zero-based index at which item should be inserted.
             item: The object to insert. The value can be null for reference types.
@@ -107,18 +112,20 @@ class Collection(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, 
              System.Collections.ObjectModel.Collection.
         
         
-            item: The object to remove from the System.Collections.ObjectModel.Collection. The value can be null 
-             for reference types.
+            item: The object to remove from the System.Collections.ObjectModel.Collection. The value can be 
+             null for reference types.
         
-            Returns: true if item is successfully removed; otherwise, false.  This method also returns false if item 
-             was not found in the original System.Collections.ObjectModel.Collection.
+            Returns: true if item is successfully removed; otherwise, false.  This method also returns false 
+             if item was not found in the original System.Collections.ObjectModel.Collection.
         """
         pass
 
     def RemoveAt(self, index):
         """
         RemoveAt(self: Collection[T], index: int)
-            Removes the element at the specified index of the System.Collections.ObjectModel.Collection.
+            Removes the element at the specified index of the 
+             System.Collections.ObjectModel.Collection.
+        
         
             index: The zero-based index of the element to remove.
         """
@@ -127,7 +134,9 @@ class Collection(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, 
     def RemoveItem(self, *args): #cannot find CLR method
         """
         RemoveItem(self: Collection[T], index: int)
-            Removes the element at the specified index of the System.Collections.ObjectModel.Collection.
+            Removes the element at the specified index of the 
+             System.Collections.ObjectModel.Collection.
+        
         
             index: The zero-based index of the element to remove.
         """
@@ -139,7 +148,8 @@ class Collection(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, 
             Replaces the element at the specified index.
         
             index: The zero-based index of the element to replace.
-            item: The new value for the element at the specified index. The value can be null for reference types.
+            item: The new value for the element at the specified index. The value can be null for reference 
+             types.
         """
         pass
 
@@ -213,7 +223,7 @@ Get: Count(self: Collection[T]) -> int
 
 
 
-class KeyedCollection(Collection[TItem], IList[TItem], ICollection[TItem], IEnumerable[TItem], IEnumerable, IList, ICollection, IReadOnlyList[TItem], IReadOnlyCollection[TItem]):
+class KeyedCollection:
     # no doc
     def ChangeItemKey(self, *args): #cannot find CLR method
         """
@@ -258,8 +268,8 @@ class KeyedCollection(Collection[TItem], IList[TItem], ICollection[TItem], IEnum
     def InsertItem(self, *args): #cannot find CLR method
         """
         InsertItem(self: KeyedCollection[TKey, TItem], index: int, item: TItem)
-            Inserts an element into the System.Collections.ObjectModel.KeyedCollection at the specified 
-             index.
+            Inserts an element into the System.Collections.ObjectModel.KeyedCollection at the 
+             specified index.
         
         
             index: The zero-based index at which item should be inserted.
@@ -276,15 +286,17 @@ class KeyedCollection(Collection[TItem], IList[TItem], ICollection[TItem], IEnum
         
         
             key: The key of the element to remove.
-            Returns: true if the element is successfully removed; otherwise, false.  This method also returns false 
-             if key is not found in the System.Collections.ObjectModel.KeyedCollection.
+            Returns: true if the element is successfully removed; otherwise, false.  This method also returns 
+             false if key is not found in the System.Collections.ObjectModel.KeyedCollection.
         """
         pass
 
     def RemoveItem(self, *args): #cannot find CLR method
         """
         RemoveItem(self: KeyedCollection[TKey, TItem], index: int)
-            Removes the element at the specified index of the System.Collections.ObjectModel.KeyedCollection.
+            Removes the element at the specified index of the 
+             System.Collections.ObjectModel.KeyedCollection.
+        
         
             index: The index of the element to remove.
         """
@@ -347,16 +359,12 @@ Get: Comparer(self: KeyedCollection[TKey, TItem]) -> IEqualityComparer[TKey]
 
 
 
-class ObservableCollection(Collection[T], IList[T], ICollection[T], IEnumerable[T], IEnumerable, IList, ICollection, IReadOnlyList[T], IReadOnlyCollection[T], INotifyCollectionChanged, INotifyPropertyChanged):
+class ObservableCollection:
     """
     ObservableCollection[T]()
     ObservableCollection[T](list: List[T])
     ObservableCollection[T](collection: IEnumerable[T])
     """
-    def add_PropertyChanged(self, *args): #cannot find CLR method
-        """ add_PropertyChanged(self: ObservableCollection[T], value: PropertyChangedEventHandler) """
-        pass
-
     def BlockReentrancy(self, *args): #cannot find CLR method
         """
         BlockReentrancy(self: ObservableCollection[T]) -> IDisposable
@@ -413,7 +421,9 @@ class ObservableCollection(Collection[T], IList[T], ICollection[T], IEnumerable[
     def OnCollectionChanged(self, *args): #cannot find CLR method
         """
         OnCollectionChanged(self: ObservableCollection[T], e: NotifyCollectionChangedEventArgs)
-            Raises the System.Collections.ObjectModel.ObservableCollection event with the provided arguments.
+            Raises the System.Collections.ObjectModel.ObservableCollection event with the provided 
+             arguments.
+        
         
             e: Arguments of the event being raised.
         """
@@ -422,7 +432,9 @@ class ObservableCollection(Collection[T], IList[T], ICollection[T], IEnumerable[
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: ObservableCollection[T], e: PropertyChangedEventArgs)
-            Raises the System.Collections.ObjectModel.ObservableCollection event with the provided arguments.
+            Raises the System.Collections.ObjectModel.ObservableCollection event with the provided 
+             arguments.
+        
         
             e: Arguments of the event being raised.
         """
@@ -435,10 +447,6 @@ class ObservableCollection(Collection[T], IList[T], ICollection[T], IEnumerable[
         
             index: The zero-based index of the element to remove.
         """
-        pass
-
-    def remove_PropertyChanged(self, *args): #cannot find CLR method
-        """ remove_PropertyChanged(self: ObservableCollection[T], value: PropertyChangedEventHandler) """
         pass
 
     def SetItem(self, *args): #cannot find CLR method
@@ -486,9 +494,10 @@ class ObservableCollection(Collection[T], IList[T], ICollection[T], IEnumerable[
 
 
     CollectionChanged = None
+    PropertyChanged = None
 
 
-class ReadOnlyCollection(object, IList[T], ICollection[T], IEnumerable[T], IEnumerable, IList, ICollection, IReadOnlyList[T], IReadOnlyCollection[T]):
+class ReadOnlyCollection:
     """ ReadOnlyCollection[T](list: IList[T]) """
     def Contains(self, value):
         """
@@ -496,11 +505,11 @@ class ReadOnlyCollection(object, IList[T], ICollection[T], IEnumerable[T], IEnum
         
             Determines whether an element is in the System.Collections.ObjectModel.ReadOnlyCollection.
         
-            value: The object to locate in the System.Collections.ObjectModel.ReadOnlyCollection. The value can be 
-             null for reference types.
+            value: The object to locate in the System.Collections.ObjectModel.ReadOnlyCollection. The value 
+             can be null for reference types.
         
-            Returns: true if value is found in the System.Collections.ObjectModel.ReadOnlyCollection; otherwise, 
-             false.
+            Returns: true if value is found in the System.Collections.ObjectModel.ReadOnlyCollection; 
+             otherwise, false.
         """
         pass
 
@@ -524,12 +533,12 @@ class ReadOnlyCollection(object, IList[T], ICollection[T], IEnumerable[T], IEnum
         """
         IndexOf(self: ReadOnlyCollection[T], value: T) -> int
         
-            Searches for the specified object and returns the zero-based index of the first occurrence 
-             within the entire System.Collections.ObjectModel.ReadOnlyCollection.
+            Searches for the specified object and returns the zero-based index of the first 
+             occurrence within the entire System.Collections.ObjectModel.ReadOnlyCollection.
         
         
-            value: The object to locate in the System.Collections.Generic.List. The value can be null for reference 
-             types.
+            value: The object to locate in the System.Collections.Generic.List. The value can be null for 
+             reference types.
         
             Returns: The zero-based index of the first occurrence of item within the entire 
              System.Collections.ObjectModel.ReadOnlyCollection, if found; otherwise, -1.
@@ -595,7 +604,7 @@ Get: Count(self: ReadOnlyCollection[T]) -> int
 
 
 
-class ReadOnlyDictionary(object, IDictionary[TKey, TValue], ICollection[KeyValuePair[TKey, TValue]], IEnumerable[KeyValuePair[TKey, TValue]], IEnumerable, IDictionary, ICollection, IReadOnlyDictionary[TKey, TValue], IReadOnlyCollection[KeyValuePair[TKey, TValue]]):
+class ReadOnlyDictionary:
     """ ReadOnlyDictionary[TKey, TValue](dictionary: IDictionary[TKey, TValue]) """
     def ContainsKey(self, key):
         """ ContainsKey(self: ReadOnlyDictionary[TKey, TValue], key: TKey) -> bool """
@@ -613,13 +622,13 @@ class ReadOnlyDictionary(object, IDictionary[TKey, TValue], ICollection[KeyValue
         """
         __contains__(self: IDictionary[TKey, TValue], key: TKey) -> bool
         
-            Determines whether the System.Collections.Generic.IDictionary contains an element with the 
-             specified key.
+            Determines whether the System.Collections.Generic.IDictionary contains an element with 
+             the specified key.
         
         
             key: The key to locate in the System.Collections.Generic.IDictionary.
-            Returns: true if the System.Collections.Generic.IDictionary contains an element with the key; otherwise, 
-             false.
+            Returns: true if the System.Collections.Generic.IDictionary contains an element with the key; 
+             otherwise, false.
         
         __contains__(self: IDictionary, key: object) -> bool
         
@@ -628,7 +637,8 @@ class ReadOnlyDictionary(object, IDictionary[TKey, TValue], ICollection[KeyValue
         
         
             key: The key to locate in the System.Collections.IDictionary object.
-            Returns: true if the System.Collections.IDictionary contains an element with the key; otherwise, false.
+            Returns: true if the System.Collections.IDictionary contains an element with the key; otherwise, 
+             false.
         """
         pass
 
@@ -682,21 +692,13 @@ class ReadOnlyDictionary(object, IDictionary[TKey, TValue], ICollection[KeyValue
     ValueCollection = None
 
 
-class ReadOnlyObservableCollection(ReadOnlyCollection[T], IList[T], ICollection[T], IEnumerable[T], IEnumerable, IList, ICollection, IReadOnlyList[T], IReadOnlyCollection[T], INotifyCollectionChanged, INotifyPropertyChanged):
+class ReadOnlyObservableCollection:
     """ ReadOnlyObservableCollection[T](list: ObservableCollection[T]) """
-    def add_CollectionChanged(self, *args): #cannot find CLR method
-        """ add_CollectionChanged(self: ReadOnlyObservableCollection[T], value: NotifyCollectionChangedEventHandler) """
-        pass
-
-    def add_PropertyChanged(self, *args): #cannot find CLR method
-        """ add_PropertyChanged(self: ReadOnlyObservableCollection[T], value: PropertyChangedEventHandler) """
-        pass
-
     def OnCollectionChanged(self, *args): #cannot find CLR method
         """
         OnCollectionChanged(self: ReadOnlyObservableCollection[T], args: NotifyCollectionChangedEventArgs)
-            Raises the System.Collections.ObjectModel.ReadOnlyObservableCollection event using the provided 
-             arguments.
+            Raises the System.Collections.ObjectModel.ReadOnlyObservableCollection event using the 
+             provided arguments.
         
         
             args: Arguments of the event being raised.
@@ -706,20 +708,12 @@ class ReadOnlyObservableCollection(ReadOnlyCollection[T], IList[T], ICollection[
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: ReadOnlyObservableCollection[T], args: PropertyChangedEventArgs)
-            Raises the System.Collections.ObjectModel.ReadOnlyObservableCollection event using the provided 
-             arguments.
+            Raises the System.Collections.ObjectModel.ReadOnlyObservableCollection event using the 
+             provided arguments.
         
         
             args: Arguments of the event being raised.
         """
-        pass
-
-    def remove_CollectionChanged(self, *args): #cannot find CLR method
-        """ remove_CollectionChanged(self: ReadOnlyObservableCollection[T], value: NotifyCollectionChangedEventHandler) """
-        pass
-
-    def remove_PropertyChanged(self, *args): #cannot find CLR method
-        """ remove_PropertyChanged(self: ReadOnlyObservableCollection[T], value: PropertyChangedEventHandler) """
         pass
 
     def __getitem__(self, *args): #cannot find CLR method
@@ -747,5 +741,8 @@ class ReadOnlyObservableCollection(ReadOnlyCollection[T], IList[T], ICollection[
 
 """
 
+
+    CollectionChanged = None
+    PropertyChanged = None
 
 

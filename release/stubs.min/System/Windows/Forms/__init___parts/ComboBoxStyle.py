@@ -1,9 +1,7 @@
-class ComboBoxStyle(Enum,IComparable,IFormattable,IConvertible):
+class ComboBoxStyle:
  """
- Specifies the System.Windows.Forms.ComboBox style.
-
- 
-
+ Specifies the System.Windows.Forms.ComboBox style.
+ 
  enum ComboBoxStyle,values: DropDown (1),DropDownList (2),Simple (0)
  """
  def __eq__(self,*args):

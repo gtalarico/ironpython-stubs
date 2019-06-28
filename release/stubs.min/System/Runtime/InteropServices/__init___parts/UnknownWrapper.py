@@ -1,9 +1,7 @@
-class UnknownWrapper(object):
+class UnknownWrapper:
  """
- Wraps objects the marshaler should marshal as a VT_UNKNOWN.
-
- 
-
+ Wraps objects the marshaler should marshal as a VT_UNKNOWN.
+ 
  UnknownWrapper(obj: object)
  """
  @staticmethod
@@ -11,14 +9,10 @@ class UnknownWrapper(object):
   """ __new__(cls: type,obj: object) """
   pass
  WrappedObject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the object contained by this wrapper.
-
-
-
-Get: WrappedObject(self: UnknownWrapper) -> object
-
-
-
+ """Gets the object contained by this wrapper.
+
+Get: WrappedObject(self: UnknownWrapper) -> object
+
 """
 
 

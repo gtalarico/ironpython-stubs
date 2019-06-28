@@ -1,9 +1,7 @@
-class AccessibleStates(Enum,IComparable,IFormattable,IConvertible):
+class AccessibleStates:
  """
- Specifies values representing possible states for an accessible object.
-
- 
-
+ Specifies values representing possible states for an accessible object.
+ 
  enum (flags) AccessibleStates,values: AlertHigh (268435456),AlertLow (67108864),AlertMedium (134217728),Animated (16384),Busy (2048),Checked (16),Collapsed (1024),Default (256),Expanded (512),ExtSelectable (33554432),Floating (4096),Focusable (1048576),Focused (4),HasPopup (1073741824),HotTracked (128),Indeterminate (32),Invisible (32768),Linked (4194304),Marqueed (8192),Mixed (32),Moveable (262144),MultiSelectable (16777216),None (0),Offscreen (65536),Pressed (8),Protected (536870912),ReadOnly (64),Selectable (2097152),Selected (2),SelfVoicing (524288),Sizeable (131072),Traversed (8388608),Unavailable (1),Valid (1073741823)
  """
  def __eq__(self,*args):
@@ -51,7 +49,7 @@ class AccessibleStates(Enum,IComparable,IFormattable,IConvertible):
  Mixed=None
  Moveable=None
  MultiSelectable=None
- None=None
+ None_ =None
  Offscreen=None
  Pressed=None
  Protected=None

@@ -1,9 +1,7 @@
-class FrameStyle(Enum,IComparable,IFormattable,IConvertible):
+class FrameStyle:
  """
- Specifies the frame style of the selected control.
-
- 
-
+ Specifies the frame style of the selected control.
+ 
  enum FrameStyle,values: Dashed (0),Thick (1)
  """
  def __eq__(self,*args):

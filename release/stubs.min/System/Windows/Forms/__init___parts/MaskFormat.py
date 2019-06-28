@@ -1,9 +1,7 @@
-class MaskFormat(Enum,IComparable,IFormattable,IConvertible):
+class MaskFormat:
  """
- Defines how to format the text inside of a System.Windows.Forms.MaskedTextBox.
-
- 
-
+ Defines how to format the text inside of a System.Windows.Forms.MaskedTextBox.
+ 
  enum MaskFormat,values: ExcludePromptAndLiterals (0),IncludeLiterals (2),IncludePrompt (1),IncludePromptAndLiterals (3)
  """
  def __eq__(self,*args):

@@ -1,9 +1,7 @@
-class SearchDirectionHint(Enum,IComparable,IFormattable,IConvertible):
+class SearchDirectionHint:
  """
- Provides a directional hint of where to search for a System.Windows.Forms.ListViewItem.
-
- 
-
+ Provides a directional hint of where to search for a System.Windows.Forms.ListViewItem.
+ 
  enum SearchDirectionHint,values: Down (40),Left (37),Right (39),Up (38)
  """
  def __eq__(self,*args):

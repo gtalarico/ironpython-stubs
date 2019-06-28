@@ -1,11 +1,8 @@
-class MarshalAsAttribute(Attribute,_Attribute):
+class MarshalAsAttribute:
  """
- Indicates how to marshal the data between managed and unmanaged code.
-
- 
-
- MarshalAsAttribute(unmanagedType: UnmanagedType)
-
+ Indicates how to marshal the data between managed and unmanaged code.
+ 
+ MarshalAsAttribute(unmanagedType: UnmanagedType)
  MarshalAsAttribute(unmanagedType: Int16)
  """
  def __init__(self,*args):
@@ -14,20 +11,15 @@ class MarshalAsAttribute(Attribute,_Attribute):
  @staticmethod
  def __new__(self,unmanagedType):
   """
-  __new__(cls: type,unmanagedType: UnmanagedType)
-
+  __new__(cls: type,unmanagedType: UnmanagedType)
   __new__(cls: type,unmanagedType: Int16)
   """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the System.Runtime.InteropServices.UnmanagedType value the data is to be marshaled as.
-
-
-
-Get: Value(self: MarshalAsAttribute) -> UnmanagedType
-
-
-
+ """Gets the System.Runtime.InteropServices.UnmanagedType value the data is to be marshaled as.
+
+Get: Value(self: MarshalAsAttribute) -> UnmanagedType
+
 """
 
 

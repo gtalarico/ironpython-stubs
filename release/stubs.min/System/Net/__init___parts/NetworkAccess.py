@@ -1,9 +1,7 @@
-class NetworkAccess(Enum,IComparable,IFormattable,IConvertible):
+class NetworkAccess:
  """
- Specifies network access permissions.
-
- 
-
+ Specifies network access permissions.
+ 
  enum (flags) NetworkAccess,values: Accept (128),Connect (64)
  """
  def __eq__(self,*args):

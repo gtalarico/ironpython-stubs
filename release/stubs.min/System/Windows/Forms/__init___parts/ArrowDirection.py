@@ -1,9 +1,7 @@
-class ArrowDirection(Enum,IComparable,IFormattable,IConvertible):
+class ArrowDirection:
  """
- Specifies the direction to move when getting items with the System.Windows.Forms.ToolStrip.GetNextItem(System.Windows.Forms.ToolStripItem,System.Windows.Forms.ArrowDirection) method.
-
- 
-
+ Specifies the direction to move when getting items with the System.Windows.Forms.ToolStrip.GetNextItem(System.Windows.Forms.ToolStripItem,System.Windows.Forms.ArrowDirection) method.
+ 
  enum ArrowDirection,values: Down (17),Left (0),Right (16),Up (1)
  """
  def __eq__(self,*args):

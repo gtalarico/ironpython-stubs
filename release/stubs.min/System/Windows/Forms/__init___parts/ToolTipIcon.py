@@ -1,9 +1,7 @@
-class ToolTipIcon(Enum,IComparable,IFormattable,IConvertible):
+class ToolTipIcon:
  """
- Defines a set of standardized icons that can be associated with a ToolTip.
-
- 
-
+ Defines a set of standardized icons that can be associated with a ToolTip.
+ 
  enum ToolTipIcon,values: Error (3),Info (1),None (0),Warning (2)
  """
  def __eq__(self,*args):
@@ -31,7 +29,7 @@ class ToolTipIcon(Enum,IComparable,IFormattable,IConvertible):
   pass
  Error=None
  Info=None
- None=None
+ None_ =None
  value__=None
  Warning=None
 

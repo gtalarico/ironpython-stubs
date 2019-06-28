@@ -1,9 +1,7 @@
-class FlagsAttribute(Attribute,_Attribute):
+class FlagsAttribute:
  """
- Indicates that an enumeration can be treated as a bit field; that is,a set of flags.
-
- 
-
+ Indicates that an enumeration can be treated as a bit field; that is,a set of flags.
+ 
  FlagsAttribute()
  """
  def __init__(self,*args):

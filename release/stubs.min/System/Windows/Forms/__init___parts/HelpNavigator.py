@@ -1,9 +1,7 @@
-class HelpNavigator(Enum,IComparable,IFormattable,IConvertible):
+class HelpNavigator:
  """
- Specifies constants indicating which elements of the Help file to display.
-
- 
-
+ Specifies constants indicating which elements of the Help file to display.
+ 
  enum HelpNavigator,values: AssociateIndex (-2147483643),Find (-2147483644),Index (-2147483645),KeywordIndex (-2147483642),TableOfContents (-2147483646),Topic (-2147483647),TopicId (-2147483641)
  """
  def __eq__(self,*args):

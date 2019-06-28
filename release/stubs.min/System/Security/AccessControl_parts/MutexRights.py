@@ -1,9 +1,7 @@
-class MutexRights(Enum,IComparable,IFormattable,IConvertible):
+class MutexRights:
  """
- Specifies the access control rights that can be applied to named system mutex objects.
-
- 
-
+ Specifies the access control rights that can be applied to named system mutex objects.
+ 
  enum (flags) MutexRights,values: ChangePermissions (262144),Delete (65536),FullControl (2031617),Modify (1),ReadPermissions (131072),Synchronize (1048576),TakeOwnership (524288)
  """
  def __eq__(self,*args):

@@ -1,4 +1,4 @@
-class TYPELIBATTR(object):
+class TYPELIBATTR:
  """ Use System.Runtime.InteropServices.ComTypes.TYPELIBATTR instead. """
  guid=None
  lcid=None

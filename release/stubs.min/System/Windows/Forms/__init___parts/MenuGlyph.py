@@ -1,9 +1,7 @@
-class MenuGlyph(Enum,IComparable,IFormattable,IConvertible):
+class MenuGlyph:
  """
- Specifies the image to draw when drawing a menu with the System.Windows.Forms.ControlPaint.DrawMenuGlyph(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.MenuGlyph) method.
-
- 
-
+ Specifies the image to draw when drawing a menu with the System.Windows.Forms.ControlPaint.DrawMenuGlyph(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.MenuGlyph) method.
+ 
  enum MenuGlyph,values: Arrow (0),Bullet (2),Checkmark (1),Max (2),Min (0)
  """
  def __eq__(self,*args):

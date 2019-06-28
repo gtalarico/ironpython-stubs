@@ -1,9 +1,7 @@
-class DayOfWeek(Enum,IComparable,IFormattable,IConvertible):
+class DayOfWeek:
  """
- Specifies the day of the week.
-
- 
-
+ Specifies the day of the week.
+ 
  enum DayOfWeek,values: Friday (5),Monday (1),Saturday (6),Sunday (0),Thursday (4),Tuesday (2),Wednesday (3)
  """
  def __eq__(self,*args):

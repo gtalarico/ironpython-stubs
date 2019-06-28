@@ -1,9 +1,7 @@
-class PreserveSigAttribute(Attribute,_Attribute):
+class PreserveSigAttribute:
  """
- Indicates that the HRESULT or retval signature transformation that takes place during COM interop calls should be suppressed.
-
- 
-
+ Indicates that the HRESULT or retval signature transformation that takes place during COM interop calls should be suppressed.
+ 
  PreserveSigAttribute()
  """
  def __init__(self,*args):

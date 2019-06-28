@@ -1,9 +1,7 @@
-class DragAction(Enum,IComparable,IFormattable,IConvertible):
+class DragAction:
  """
- Specifies how and if a drag-and-drop operation should continue.
-
- 
-
+ Specifies how and if a drag-and-drop operation should continue.
+ 
  enum DragAction,values: Cancel (2),Continue (0),Drop (1)
  """
  def __eq__(self,*args):

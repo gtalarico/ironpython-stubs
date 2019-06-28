@@ -1,9 +1,7 @@
-class BatteryChargeStatus(Enum,IComparable,IFormattable,IConvertible):
+class BatteryChargeStatus:
  """
- Defines identifiers that indicate the current battery charge level or charging state information.
-
- 
-
+ Defines identifiers that indicate the current battery charge level or charging state information.
+ 
  enum (flags) BatteryChargeStatus,values: Charging (8),Critical (4),High (1),Low (2),NoSystemBattery (128),Unknown (255)
  """
  def __eq__(self,*args):

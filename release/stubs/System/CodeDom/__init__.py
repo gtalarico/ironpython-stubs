@@ -2,13 +2,13 @@
 # module System.CodeDom calls itself CodeDom
 # from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class CodeObject(object):
+class CodeObject:
     """
     Provides a common base class for most Code Document Object Model (CodeDOM) objects.
     
@@ -23,14 +23,14 @@ Get: UserData(self: CodeObject) -> IDictionary
 
 
 
-class CodeExpression(CodeObject):
+class CodeExpression:
     """
     Represents a code expression. This is a base class for other code expression objects that is never instantiated.
     
     CodeExpression()
     """
 
-class CodeArgumentReferenceExpression(CodeExpression):
+class CodeArgumentReferenceExpression:
     """
     Represents a reference to the value of an argument passed to a method.
     
@@ -55,7 +55,7 @@ Set: ParameterName(self: CodeArgumentReferenceExpression) = value
 
 
 
-class CodeArrayCreateExpression(CodeExpression):
+class CodeArrayCreateExpression:
     """
     Represents an expression that creates an array.
     
@@ -119,7 +119,7 @@ Set: SizeExpression(self: CodeArrayCreateExpression) = value
 
 
 
-class CodeArrayIndexerExpression(CodeExpression):
+class CodeArrayIndexerExpression:
     """
     Represents a reference to an index of an array.
     
@@ -151,7 +151,7 @@ Set: TargetObject(self: CodeArrayIndexerExpression) = value
 
 
 
-class CodeStatement(CodeObject):
+class CodeStatement:
     """
     Represents the abstract base class from which all code statements derive.
     
@@ -181,7 +181,7 @@ Get: StartDirectives(self: CodeStatement) -> CodeDirectiveCollection
 
 
 
-class CodeAssignStatement(CodeStatement):
+class CodeAssignStatement:
     """
     Represents a simple assignment statement.
     
@@ -214,7 +214,7 @@ Set: Right(self: CodeAssignStatement) = value
 
 
 
-class CodeAttachEventStatement(CodeStatement):
+class CodeAttachEventStatement:
     """
     Represents a statement that attaches an event-handler delegate to an event.
     
@@ -249,7 +249,7 @@ Set: Listener(self: CodeAttachEventStatement) = value
 
 
 
-class CodeAttributeArgument(object):
+class CodeAttributeArgument:
     """
     Represents an argument used in a metadata attribute declaration.
     
@@ -284,7 +284,7 @@ Set: Value(self: CodeAttributeArgument) = value
 
 
 
-class CodeAttributeArgumentCollection(CollectionBase, IList, ICollection, IEnumerable):
+class CodeAttributeArgumentCollection:
     """
     Represents a collection of System.CodeDom.CodeAttributeArgument objects.
     
@@ -305,20 +305,20 @@ class CodeAttributeArgumentCollection(CollectionBase, IList, ICollection, IEnume
 
     def AddRange(self, value):
         """
+        AddRange(self: CodeAttributeArgumentCollection, value: Array[CodeAttributeArgument])
+            Copies the elements of the specified System.CodeDom.CodeAttributeArgument array to the 
+             end of the collection.
+        
+        
+            value: An array of type System.CodeDom.CodeAttributeArgument that contains the objects to add to 
+             the collection.
+        
         AddRange(self: CodeAttributeArgumentCollection, value: CodeAttributeArgumentCollection)
-            Copies the contents of another System.CodeDom.CodeAttributeArgumentCollection object to the end 
-             of the collection.
+            Copies the contents of another System.CodeDom.CodeAttributeArgumentCollection object to 
+             the end of the collection.
         
         
             value: A System.CodeDom.CodeAttributeArgumentCollection that contains the objects to add to the 
-             collection.
-        
-        AddRange(self: CodeAttributeArgumentCollection, value: Array[CodeAttributeArgument])
-            Copies the elements of the specified System.CodeDom.CodeAttributeArgument array to the end of 
-             the collection.
-        
-        
-            value: An array of type System.CodeDom.CodeAttributeArgument that contains the objects to add to the 
              collection.
         """
         pass
@@ -354,8 +354,8 @@ class CodeAttributeArgumentCollection(CollectionBase, IList, ICollection, IEnume
         """
         IndexOf(self: CodeAttributeArgumentCollection, value: CodeAttributeArgument) -> int
         
-            Gets the index of the specified System.CodeDom.CodeAttributeArgument object in the collection, 
-             if it exists in the collection.
+            Gets the index of the specified System.CodeDom.CodeAttributeArgument object in the 
+             collection, if it exists in the collection.
         
         
             value: The System.CodeDom.CodeAttributeArgument object to locate in the collection.
@@ -366,8 +366,8 @@ class CodeAttributeArgumentCollection(CollectionBase, IList, ICollection, IEnume
     def Insert(self, index, value):
         """
         Insert(self: CodeAttributeArgumentCollection, index: int, value: CodeAttributeArgument)
-            Inserts the specified System.CodeDom.CodeAttributeArgument object into the collection at the 
-             specified index.
+            Inserts the specified System.CodeDom.CodeAttributeArgument object into the collection at 
+             the specified index.
         
         
             index: The zero-based index where the specified object should be inserted.
@@ -527,7 +527,7 @@ class CodeAttributeArgumentCollection(CollectionBase, IList, ICollection, IEnume
 
 
 
-class CodeAttributeDeclaration(object):
+class CodeAttributeDeclaration:
     """
     Represents an attribute declaration.
     
@@ -572,7 +572,7 @@ Set: Name(self: CodeAttributeDeclaration) = value
 
 
 
-class CodeAttributeDeclarationCollection(CollectionBase, IList, ICollection, IEnumerable):
+class CodeAttributeDeclarationCollection:
     """
     Represents a collection of System.CodeDom.CodeAttributeDeclaration objects.
     
@@ -584,7 +584,9 @@ class CodeAttributeDeclarationCollection(CollectionBase, IList, ICollection, IEn
         """
         Add(self: CodeAttributeDeclarationCollection, value: CodeAttributeDeclaration) -> int
         
-            Adds a System.CodeDom.CodeAttributeDeclaration object with the specified value to the collection.
+            Adds a System.CodeDom.CodeAttributeDeclaration object with the specified value to the 
+             collection.
+        
         
             value: The System.CodeDom.CodeAttributeDeclaration object to add.
             Returns: The index at which the new element was inserted.
@@ -593,21 +595,21 @@ class CodeAttributeDeclarationCollection(CollectionBase, IList, ICollection, IEn
 
     def AddRange(self, value):
         """
-        AddRange(self: CodeAttributeDeclarationCollection, value: CodeAttributeDeclarationCollection)
-            Copies the contents of another System.CodeDom.CodeAttributeDeclarationCollection object to the 
+        AddRange(self: CodeAttributeDeclarationCollection, value: Array[CodeAttributeDeclaration])
+            Copies the elements of the specified System.CodeDom.CodeAttributeDeclaration array to the 
              end of the collection.
         
         
-            value: A System.CodeDom.CodeAttributeDeclarationCollection that contains the objects to add to the 
-             collection.
+            value: An array of type System.CodeDom.CodeAttributeDeclaration that contains the objects to add 
+             to the collection.
         
-        AddRange(self: CodeAttributeDeclarationCollection, value: Array[CodeAttributeDeclaration])
-            Copies the elements of the specified System.CodeDom.CodeAttributeDeclaration array to the end of 
-             the collection.
+        AddRange(self: CodeAttributeDeclarationCollection, value: CodeAttributeDeclarationCollection)
+            Copies the contents of another System.CodeDom.CodeAttributeDeclarationCollection object 
+             to the end of the collection.
         
         
-            value: An array of type System.CodeDom.CodeAttributeDeclaration that contains the objects to add to the 
-             collection.
+            value: A System.CodeDom.CodeAttributeDeclarationCollection that contains the objects to add to 
+             the collection.
         """
         pass
 
@@ -654,8 +656,8 @@ class CodeAttributeDeclarationCollection(CollectionBase, IList, ICollection, IEn
     def Insert(self, index, value):
         """
         Insert(self: CodeAttributeDeclarationCollection, index: int, value: CodeAttributeDeclaration)
-            Inserts the specified System.CodeDom.CodeAttributeDeclaration object into the collection at the 
-             specified index.
+            Inserts the specified System.CodeDom.CodeAttributeDeclaration object into the collection 
+             at the specified index.
         
         
             index: The zero-based index where the specified object should be inserted.
@@ -815,14 +817,14 @@ class CodeAttributeDeclarationCollection(CollectionBase, IList, ICollection, IEn
 
 
 
-class CodeBaseReferenceExpression(CodeExpression):
+class CodeBaseReferenceExpression:
     """
     Represents a reference to the base class.
     
     CodeBaseReferenceExpression()
     """
 
-class CodeBinaryOperatorExpression(CodeExpression):
+class CodeBinaryOperatorExpression:
     """
     Represents an expression that consists of a binary operation between two expressions.
     
@@ -863,7 +865,7 @@ Set: Right(self: CodeBinaryOperatorExpression) = value
 
 
 
-class CodeBinaryOperatorType(Enum, IComparable, IFormattable, IConvertible):
+class CodeBinaryOperatorType:
     """
     Defines identifiers for supported binary operators.
     
@@ -922,7 +924,7 @@ class CodeBinaryOperatorType(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class CodeCastExpression(CodeExpression):
+class CodeCastExpression:
     """
     Represents an expression cast to a data type or interface.
     
@@ -959,7 +961,7 @@ Set: TargetType(self: CodeCastExpression) = value
 
 
 
-class CodeCatchClause(object):
+class CodeCatchClause:
     """
     Represents a catch exception block of a try/catch statement.
     
@@ -1003,7 +1005,7 @@ Get: Statements(self: CodeCatchClause) -> CodeStatementCollection
 
 
 
-class CodeCatchClauseCollection(CollectionBase, IList, ICollection, IEnumerable):
+class CodeCatchClauseCollection:
     """
     Represents a collection of System.CodeDom.CodeCatchClause objects.
     
@@ -1024,18 +1026,20 @@ class CodeCatchClauseCollection(CollectionBase, IList, ICollection, IEnumerable)
 
     def AddRange(self, value):
         """
-        AddRange(self: CodeCatchClauseCollection, value: CodeCatchClauseCollection)
-            Copies the contents of another System.CodeDom.CodeCatchClauseCollection object to the end of the 
-             collection.
-        
-        
-            value: A System.CodeDom.CodeCatchClauseCollection that contains the objects to add to the collection.
         AddRange(self: CodeCatchClauseCollection, value: Array[CodeCatchClause])
-            Copies the elements of the specified System.CodeDom.CodeCatchClause array to the end of the 
-             collection.
+            Copies the elements of the specified System.CodeDom.CodeCatchClause array to the end of 
+             the collection.
         
         
             value: An array of type System.CodeDom.CodeCatchClause that contains the objects to add to the 
+             collection.
+        
+        AddRange(self: CodeCatchClauseCollection, value: CodeCatchClauseCollection)
+            Copies the contents of another System.CodeDom.CodeCatchClauseCollection object to the end 
+             of the collection.
+        
+        
+            value: A System.CodeDom.CodeCatchClauseCollection that contains the objects to add to the 
              collection.
         """
         pass
@@ -1071,8 +1075,8 @@ class CodeCatchClauseCollection(CollectionBase, IList, ICollection, IEnumerable)
         """
         IndexOf(self: CodeCatchClauseCollection, value: CodeCatchClause) -> int
         
-            Gets the index of the specified System.CodeDom.CodeCatchClause object in the collection, if it 
-             exists in the collection.
+            Gets the index of the specified System.CodeDom.CodeCatchClause object in the collection, 
+             if it exists in the collection.
         
         
             value: The System.CodeDom.CodeCatchClause object to locate in the collection.
@@ -1083,8 +1087,8 @@ class CodeCatchClauseCollection(CollectionBase, IList, ICollection, IEnumerable)
     def Insert(self, index, value):
         """
         Insert(self: CodeCatchClauseCollection, index: int, value: CodeCatchClause)
-            Inserts the specified System.CodeDom.CodeCatchClause object into the collection at the specified 
-             index.
+            Inserts the specified System.CodeDom.CodeCatchClause object into the collection at the 
+             specified index.
         
         
             index: The zero-based index where the specified object should be inserted.
@@ -1244,14 +1248,14 @@ class CodeCatchClauseCollection(CollectionBase, IList, ICollection, IEnumerable)
 
 
 
-class CodeDirective(CodeObject):
+class CodeDirective:
     """
     Serves as the base class for code directive classes.
     
     CodeDirective()
     """
 
-class CodeChecksumPragma(CodeDirective):
+class CodeChecksumPragma:
     """
     Represents a code checksum pragma code entity.
     
@@ -1292,7 +1296,7 @@ Set: FileName(self: CodeChecksumPragma) = value
 
 
 
-class CodeComment(CodeObject):
+class CodeComment:
     """
     Represents a comment.
     
@@ -1327,7 +1331,7 @@ Set: Text(self: CodeComment) = value
 
 
 
-class CodeCommentStatement(CodeStatement):
+class CodeCommentStatement:
     """
     Represents a statement consisting of a single comment.
     
@@ -1356,7 +1360,7 @@ Set: Comment(self: CodeCommentStatement) = value
 
 
 
-class CodeCommentStatementCollection(CollectionBase, IList, ICollection, IEnumerable):
+class CodeCommentStatementCollection:
     """
     Represents a collection of System.CodeDom.CodeCommentStatement objects.
     
@@ -1377,20 +1381,20 @@ class CodeCommentStatementCollection(CollectionBase, IList, ICollection, IEnumer
 
     def AddRange(self, value):
         """
-        AddRange(self: CodeCommentStatementCollection, value: CodeCommentStatementCollection)
-            Copies the contents of another System.CodeDom.CodeCommentStatementCollection object to the end 
+        AddRange(self: CodeCommentStatementCollection, value: Array[CodeCommentStatement])
+            Copies the elements of the specified System.CodeDom.CodeCommentStatement array to the end 
              of the collection.
         
         
+            value: An array of type System.CodeDom.CodeCommentStatement that contains the objects to add to 
+             the collection.
+        
+        AddRange(self: CodeCommentStatementCollection, value: CodeCommentStatementCollection)
+            Copies the contents of another System.CodeDom.CodeCommentStatementCollection object to 
+             the end of the collection.
+        
+        
             value: A System.CodeDom.CodeCommentStatementCollection that contains the objects to add to the 
-             collection.
-        
-        AddRange(self: CodeCommentStatementCollection, value: Array[CodeCommentStatement])
-            Copies the elements of the specified System.CodeDom.CodeCommentStatement array to the end of the 
-             collection.
-        
-        
-            value: An array of type System.CodeDom.CodeCommentStatement that contains the objects to add to the 
              collection.
         """
         pass
@@ -1411,8 +1415,8 @@ class CodeCommentStatementCollection(CollectionBase, IList, ICollection, IEnumer
     def CopyTo(self, array, index):
         """
         CopyTo(self: CodeCommentStatementCollection, array: Array[CodeCommentStatement], index: int)
-            Copies the collection objects to the specified one-dimensional System.Array beginning at the 
-             specified index.
+            Copies the collection objects to the specified one-dimensional System.Array beginning at 
+             the specified index.
         
         
             array: The one-dimensional System.Array that is the destination of the values copied from the 
@@ -1426,8 +1430,8 @@ class CodeCommentStatementCollection(CollectionBase, IList, ICollection, IEnumer
         """
         IndexOf(self: CodeCommentStatementCollection, value: CodeCommentStatement) -> int
         
-            Gets the index of the specified System.CodeDom.CodeCommentStatement object in the collection, if 
-             it exists in the collection.
+            Gets the index of the specified System.CodeDom.CodeCommentStatement object in the 
+             collection, if it exists in the collection.
         
         
             value: The System.CodeDom.CodeCommentStatement object to locate.
@@ -1438,7 +1442,9 @@ class CodeCommentStatementCollection(CollectionBase, IList, ICollection, IEnumer
     def Insert(self, index, value):
         """
         Insert(self: CodeCommentStatementCollection, index: int, value: CodeCommentStatement)
-            Inserts a System.CodeDom.CodeCommentStatement object into the collection at the specified index.
+            Inserts a System.CodeDom.CodeCommentStatement object into the collection at the specified 
+             index.
+        
         
             index: The zero-based index where the item should be inserted.
             value: The System.CodeDom.CodeCommentStatement object to insert.
@@ -1597,7 +1603,7 @@ class CodeCommentStatementCollection(CollectionBase, IList, ICollection, IEnumer
 
 
 
-class CodeCompileUnit(CodeObject):
+class CodeCompileUnit:
     """
     Provides a container for a CodeDOM program graph.
     
@@ -1640,7 +1646,7 @@ Get: StartDirectives(self: CodeCompileUnit) -> CodeDirectiveCollection
 
 
 
-class CodeConditionStatement(CodeStatement):
+class CodeConditionStatement:
     """
     Represents a conditional branch statement, typically represented as an if statement.
     
@@ -1681,7 +1687,7 @@ Get: TrueStatements(self: CodeConditionStatement) -> CodeStatementCollection
 
 
 
-class CodeTypeMember(CodeObject):
+class CodeTypeMember:
     """
     Provides a base class for a member of a type. Type members include fields, methods, properties, constructors and nested types.
     
@@ -1742,7 +1748,7 @@ Get: StartDirectives(self: CodeTypeMember) -> CodeDirectiveCollection
 
 
 
-class CodeMemberMethod(CodeTypeMember):
+class CodeMemberMethod:
     """
     Represents a declaration for a method of a type.
     
@@ -1805,7 +1811,7 @@ Get: TypeParameters(self: CodeMemberMethod) -> CodeTypeParameterCollection
     PopulateStatements = None
 
 
-class CodeConstructor(CodeMemberMethod):
+class CodeConstructor:
     """
     Represents a declaration for an instance constructor of a type.
     
@@ -1827,7 +1833,7 @@ Get: ChainedConstructorArgs(self: CodeConstructor) -> CodeExpressionCollection
 
 
 
-class CodeDefaultValueExpression(CodeExpression):
+class CodeDefaultValueExpression:
     """
     Represents a reference to a default value.
     
@@ -1852,7 +1858,7 @@ Set: Type(self: CodeDefaultValueExpression) = value
 
 
 
-class CodeDelegateCreateExpression(CodeExpression):
+class CodeDelegateCreateExpression:
     """
     Represents an expression that creates a delegate.
     
@@ -1893,7 +1899,7 @@ Set: TargetObject(self: CodeDelegateCreateExpression) = value
 
 
 
-class CodeDelegateInvokeExpression(CodeExpression):
+class CodeDelegateInvokeExpression:
     """
     Represents an expression that raises an event.
     
@@ -1927,7 +1933,7 @@ Set: TargetObject(self: CodeDelegateInvokeExpression) = value
 
 
 
-class CodeDirectionExpression(CodeExpression):
+class CodeDirectionExpression:
     """
     Represents an expression used as a method invoke parameter along with a reference direction indicator.
     
@@ -1960,7 +1966,7 @@ Set: Expression(self: CodeDirectionExpression) = value
 
 
 
-class CodeDirectiveCollection(CollectionBase, IList, ICollection, IEnumerable):
+class CodeDirectiveCollection:
     """
     Represents a collection of System.CodeDom.CodeDirective objects.
     
@@ -1981,18 +1987,17 @@ class CodeDirectiveCollection(CollectionBase, IList, ICollection, IEnumerable):
 
     def AddRange(self, value):
         """
-        AddRange(self: CodeDirectiveCollection, value: CodeDirectiveCollection)
-            Adds the contents of the specified System.CodeDom.CodeDirectiveCollection object to the end of 
-             the collection.
-        
-        
-            value: A System.CodeDom.CodeDirectiveCollection object containing the System.CodeDom.CodeDirective 
-             objects to add to the collection.
-        
         AddRange(self: CodeDirectiveCollection, value: Array[CodeDirective])
             Adds an array of System.CodeDom.CodeDirective objects to the end of the collection.
         
-            value: An array of System.CodeDom.CodeDirective objects to add to the collection.
+            value: An array of System.CodeDom.CodeDirective objects to add to the collection.
+        AddRange(self: CodeDirectiveCollection, value: CodeDirectiveCollection)
+            Adds the contents of the specified System.CodeDom.CodeDirectiveCollection object to the 
+             end of the collection.
+        
+        
+            value: A System.CodeDom.CodeDirectiveCollection object containing the 
+             System.CodeDom.CodeDirective objects to add to the collection.
         """
         pass
 
@@ -2012,12 +2017,12 @@ class CodeDirectiveCollection(CollectionBase, IList, ICollection, IEnumerable):
     def CopyTo(self, array, index):
         """
         CopyTo(self: CodeDirectiveCollection, array: Array[CodeDirective], index: int)
-            Copies the contents of the collection to a one-dimensional array beginning at the specified 
-             index.
+            Copies the contents of the collection to a one-dimensional array beginning at the 
+             specified index.
         
         
-            array: An array of type System.CodeDom.CodeDirective that is the destination of the values copied from 
-             the collection.
+            array: An array of type System.CodeDom.CodeDirective that is the destination of the values 
+             copied from the collection.
         
             index: The index in the array at which to begin inserting collection objects.
         """
@@ -2027,8 +2032,8 @@ class CodeDirectiveCollection(CollectionBase, IList, ICollection, IEnumerable):
         """
         IndexOf(self: CodeDirectiveCollection, value: CodeDirective) -> int
         
-            Gets the index in the collection of the specified System.CodeDom.CodeDirective object, if it 
-             exists in the collection.
+            Gets the index in the collection of the specified System.CodeDom.CodeDirective object, if 
+             it exists in the collection.
         
         
             value: The System.CodeDom.CodeDirective object to locate in the collection.
@@ -2039,8 +2044,8 @@ class CodeDirectiveCollection(CollectionBase, IList, ICollection, IEnumerable):
     def Insert(self, index, value):
         """
         Insert(self: CodeDirectiveCollection, index: int, value: CodeDirective)
-            Inserts the specified System.CodeDom.CodeDirective object into the collection at the specified 
-             index.
+            Inserts the specified System.CodeDom.CodeDirective object into the collection at the 
+             specified index.
         
         
             index: The zero-based index position where the specified object should be inserted.
@@ -2200,14 +2205,14 @@ class CodeDirectiveCollection(CollectionBase, IList, ICollection, IEnumerable):
 
 
 
-class CodeEntryPointMethod(CodeMemberMethod):
+class CodeEntryPointMethod:
     """
     Represents the entry point method of an executable.
     
     CodeEntryPointMethod()
     """
 
-class CodeEventReferenceExpression(CodeExpression):
+class CodeEventReferenceExpression:
     """
     Represents a reference to an event.
     
@@ -2240,7 +2245,7 @@ Set: TargetObject(self: CodeEventReferenceExpression) = value
 
 
 
-class CodeExpressionCollection(CollectionBase, IList, ICollection, IEnumerable):
+class CodeExpressionCollection:
     """
     Represents a collection of System.CodeDom.CodeExpression objects.
     
@@ -2261,16 +2266,18 @@ class CodeExpressionCollection(CollectionBase, IList, ICollection, IEnumerable):
 
     def AddRange(self, value):
         """
-        AddRange(self: CodeExpressionCollection, value: CodeExpressionCollection)
-            Copies the contents of another System.CodeDom.CodeExpressionCollection object to the end of the 
-             collection.
-        
-        
-            value: A System.CodeDom.CodeExpressionCollection that contains the objects to add to the collection.
         AddRange(self: CodeExpressionCollection, value: Array[CodeExpression])
             Copies the elements of the specified array to the end of the collection.
         
             value: An array of type System.CodeDom.CodeExpression that contains the objects to add to the 
+             collection.
+        
+        AddRange(self: CodeExpressionCollection, value: CodeExpressionCollection)
+            Copies the contents of another System.CodeDom.CodeExpressionCollection object to the end 
+             of the collection.
+        
+        
+            value: A System.CodeDom.CodeExpressionCollection that contains the objects to add to the 
              collection.
         """
         pass
@@ -2306,8 +2313,8 @@ class CodeExpressionCollection(CollectionBase, IList, ICollection, IEnumerable):
         """
         IndexOf(self: CodeExpressionCollection, value: CodeExpression) -> int
         
-            Gets the index of the specified System.CodeDom.CodeExpression object in the collection, if it 
-             exists in the collection.
+            Gets the index of the specified System.CodeDom.CodeExpression object in the collection, 
+             if it exists in the collection.
         
         
             value: The System.CodeDom.CodeExpression object to locate in the collection.
@@ -2318,8 +2325,8 @@ class CodeExpressionCollection(CollectionBase, IList, ICollection, IEnumerable):
     def Insert(self, index, value):
         """
         Insert(self: CodeExpressionCollection, index: int, value: CodeExpression)
-            Inserts the specified System.CodeDom.CodeExpression object into the collection at the specified 
-             index.
+            Inserts the specified System.CodeDom.CodeExpression object into the collection at the 
+             specified index.
         
         
             index: The zero-based index where the specified object should be inserted.
@@ -2479,7 +2486,7 @@ class CodeExpressionCollection(CollectionBase, IList, ICollection, IEnumerable):
 
 
 
-class CodeExpressionStatement(CodeStatement):
+class CodeExpressionStatement:
     """
     Represents a statement that consists of a single expression.
     
@@ -2504,7 +2511,7 @@ Set: Expression(self: CodeExpressionStatement) = value
 
 
 
-class CodeFieldReferenceExpression(CodeExpression):
+class CodeFieldReferenceExpression:
     """
     Represents a reference to a field.
     
@@ -2537,7 +2544,7 @@ Set: TargetObject(self: CodeFieldReferenceExpression) = value
 
 
 
-class CodeGotoStatement(CodeStatement):
+class CodeGotoStatement:
     """
     Represents a goto statement.
     
@@ -2562,7 +2569,7 @@ Set: Label(self: CodeGotoStatement) = value
 
 
 
-class CodeIndexerExpression(CodeExpression):
+class CodeIndexerExpression:
     """
     Represents a reference to an indexer property of an object.
     
@@ -2594,7 +2601,7 @@ Set: TargetObject(self: CodeIndexerExpression) = value
 
 
 
-class CodeIterationStatement(CodeStatement):
+class CodeIterationStatement:
     """
     Represents a for statement, or a loop through a block of statements, using a test expression as a condition for continuing to loop.
     
@@ -2642,7 +2649,7 @@ Set: TestExpression(self: CodeIterationStatement) = value
 
 
 
-class CodeLabeledStatement(CodeStatement):
+class CodeLabeledStatement:
     """
     Represents a labeled statement or a stand-alone label.
     
@@ -2677,7 +2684,7 @@ Set: Statement(self: CodeLabeledStatement) = value
 
 
 
-class CodeLinePragma(object):
+class CodeLinePragma:
     """
     Represents a specific location within a specific file.
     
@@ -2710,7 +2717,7 @@ Set: LineNumber(self: CodeLinePragma) = value
 
 
 
-class CodeMemberEvent(CodeTypeMember):
+class CodeMemberEvent:
     """
     Represents a declaration for an event of a type.
     
@@ -2741,7 +2748,7 @@ Set: Type(self: CodeMemberEvent) = value
 
 
 
-class CodeMemberField(CodeTypeMember):
+class CodeMemberField:
     """
     Represents a declaration for a field of a type.
     
@@ -2778,7 +2785,7 @@ Set: Type(self: CodeMemberField) = value
 
 
 
-class CodeMemberProperty(CodeTypeMember):
+class CodeMemberProperty:
     """
     Represents a declaration for a property of a type.
     
@@ -2846,7 +2853,7 @@ Set: Type(self: CodeMemberProperty) = value
 
 
 
-class CodeMethodInvokeExpression(CodeExpression):
+class CodeMethodInvokeExpression:
     """
     Represents an expression that invokes a method.
     
@@ -2880,7 +2887,7 @@ Get: Parameters(self: CodeMethodInvokeExpression) -> CodeExpressionCollection
 
 
 
-class CodeMethodReferenceExpression(CodeExpression):
+class CodeMethodReferenceExpression:
     """
     Represents a reference to a method.
     
@@ -2922,7 +2929,7 @@ Get: TypeArguments(self: CodeMethodReferenceExpression) -> CodeTypeReferenceColl
 
 
 
-class CodeMethodReturnStatement(CodeStatement):
+class CodeMethodReturnStatement:
     """
     Represents a return value statement.
     
@@ -2947,7 +2954,7 @@ Set: Expression(self: CodeMethodReturnStatement) = value
 
 
 
-class CodeNamespace(CodeObject):
+class CodeNamespace:
     """
     Represents a namespace declaration.
     
@@ -2997,7 +3004,7 @@ Get: Types(self: CodeNamespace) -> CodeTypeDeclarationCollection
     PopulateTypes = None
 
 
-class CodeNamespaceCollection(CollectionBase, IList, ICollection, IEnumerable):
+class CodeNamespaceCollection:
     """
     Represents a collection of System.CodeDom.CodeNamespace objects.
     
@@ -3018,18 +3025,21 @@ class CodeNamespaceCollection(CollectionBase, IList, ICollection, IEnumerable):
 
     def AddRange(self, value):
         """
-        AddRange(self: CodeNamespaceCollection, value: CodeNamespaceCollection)
-            Adds the contents of the specified System.CodeDom.CodeNamespaceCollection object to the end of 
-             the collection.
-        
-        
-            value: A System.CodeDom.CodeNamespaceCollection that contains the objects to add to the collection.
         AddRange(self: CodeNamespaceCollection, value: Array[CodeNamespace])
             Copies the elements of the specified System.CodeDom.CodeNamespace array to the end of the 
              collection.
         
         
-            value: An array of type System.CodeDom.CodeNamespace that contains the objects to add to the collection.
+            value: An array of type System.CodeDom.CodeNamespace that contains the objects to add to the 
+             collection.
+        
+        AddRange(self: CodeNamespaceCollection, value: CodeNamespaceCollection)
+            Adds the contents of the specified System.CodeDom.CodeNamespaceCollection object to the 
+             end of the collection.
+        
+        
+            value: A System.CodeDom.CodeNamespaceCollection that contains the objects to add to the 
+             collection.
         """
         pass
 
@@ -3069,16 +3079,16 @@ class CodeNamespaceCollection(CollectionBase, IList, ICollection, IEnumerable):
         
         
             value: The System.CodeDom.CodeNamespace to locate.
-            Returns: The index of the specified System.CodeDom.CodeNamespace, if it is found, in the collection; 
-             otherwise, -1.
+            Returns: The index of the specified System.CodeDom.CodeNamespace, if it is found, in the 
+             collection; otherwise, -1.
         """
         pass
 
     def Insert(self, index, value):
         """
         Insert(self: CodeNamespaceCollection, index: int, value: CodeNamespace)
-            Inserts the specified System.CodeDom.CodeNamespace object into the collection at the specified 
-             index.
+            Inserts the specified System.CodeDom.CodeNamespace object into the collection at the 
+             specified index.
         
         
             index: The zero-based index where the new item should be inserted.
@@ -3238,7 +3248,7 @@ class CodeNamespaceCollection(CollectionBase, IList, ICollection, IEnumerable):
 
 
 
-class CodeNamespaceImport(CodeObject):
+class CodeNamespaceImport:
     """
     Represents a namespace import directive that indicates a namespace to use.
     
@@ -3271,7 +3281,7 @@ Set: Namespace(self: CodeNamespaceImport) = value
 
 
 
-class CodeNamespaceImportCollection(object, IList, ICollection, IEnumerable):
+class CodeNamespaceImportCollection:
     """
     Represents a collection of System.CodeDom.CodeNamespaceImport objects.
     
@@ -3291,8 +3301,8 @@ class CodeNamespaceImportCollection(object, IList, ICollection, IEnumerable):
         AddRange(self: CodeNamespaceImportCollection, value: Array[CodeNamespaceImport])
             Adds a set of System.CodeDom.CodeNamespaceImport objects to the collection.
         
-            value: An array of type System.CodeDom.CodeNamespaceImport that contains the objects to add to the 
-             collection.
+            value: An array of type System.CodeDom.CodeNamespaceImport that contains the objects to add to 
+             the collection.
         """
         pass
 
@@ -3363,7 +3373,7 @@ Get: Count(self: CodeNamespaceImportCollection) -> int
 
 
 
-class CodeObjectCreateExpression(CodeExpression):
+class CodeObjectCreateExpression:
     """
     Represents an expression that creates a new instance of a type.
     
@@ -3399,7 +3409,7 @@ Get: Parameters(self: CodeObjectCreateExpression) -> CodeExpressionCollection
 
 
 
-class CodeParameterDeclarationExpression(CodeExpression):
+class CodeParameterDeclarationExpression:
     """
     Represents a parameter declaration for a method, property, or constructor.
     
@@ -3452,7 +3462,7 @@ Set: Type(self: CodeParameterDeclarationExpression) = value
 
 
 
-class CodeParameterDeclarationExpressionCollection(CollectionBase, IList, ICollection, IEnumerable):
+class CodeParameterDeclarationExpressionCollection:
     """
     Represents a collection of System.CodeDom.CodeParameterDeclarationExpression objects.
     
@@ -3473,19 +3483,19 @@ class CodeParameterDeclarationExpressionCollection(CollectionBase, IList, IColle
 
     def AddRange(self, value):
         """
-        AddRange(self: CodeParameterDeclarationExpressionCollection, value: CodeParameterDeclarationExpressionCollection)
-            Adds the contents of another System.CodeDom.CodeParameterDeclarationExpressionCollection to the 
-             end of the collection.
-        
-        
-            value: A System.CodeDom.CodeParameterDeclarationExpressionCollection containing the objects to add to 
-             the collection.
-        
         AddRange(self: CodeParameterDeclarationExpressionCollection, value: Array[CodeParameterDeclarationExpression])
             Copies the elements of the specified array to the end of the collection.
         
-            value: An array of type System.CodeDom.CodeParameterDeclarationExpression containing the objects to add 
-             to the collection.
+            value: An array of type System.CodeDom.CodeParameterDeclarationExpression containing the objects 
+             to add to the collection.
+        
+        AddRange(self: CodeParameterDeclarationExpressionCollection, value: CodeParameterDeclarationExpressionCollection)
+            Adds the contents of another System.CodeDom.CodeParameterDeclarationExpressionCollection 
+             to the end of the collection.
+        
+        
+            value: A System.CodeDom.CodeParameterDeclarationExpressionCollection containing the objects to 
+             add to the collection.
         """
         pass
 
@@ -3532,8 +3542,8 @@ class CodeParameterDeclarationExpressionCollection(CollectionBase, IList, IColle
     def Insert(self, index, value):
         """
         Insert(self: CodeParameterDeclarationExpressionCollection, index: int, value: CodeParameterDeclarationExpression)
-            Inserts the specified System.CodeDom.CodeParameterDeclarationExpression into the collection at 
-             the specified index.
+            Inserts the specified System.CodeDom.CodeParameterDeclarationExpression into the 
+             collection at the specified index.
         
         
             index: The zero-based index where the specified object should be inserted.
@@ -3643,7 +3653,9 @@ class CodeParameterDeclarationExpressionCollection(CollectionBase, IList, IColle
     def Remove(self, value):
         """
         Remove(self: CodeParameterDeclarationExpressionCollection, value: CodeParameterDeclarationExpression)
-            Removes the specified System.CodeDom.CodeParameterDeclarationExpression from the collection.
+            Removes the specified System.CodeDom.CodeParameterDeclarationExpression from the 
+             collection.
+        
         
             value: The System.CodeDom.CodeParameterDeclarationExpression to remove from the collection.
         """
@@ -3693,7 +3705,7 @@ class CodeParameterDeclarationExpressionCollection(CollectionBase, IList, IColle
 
 
 
-class CodePrimitiveExpression(CodeExpression):
+class CodePrimitiveExpression:
     """
     Represents a primitive data type value.
     
@@ -3718,7 +3730,7 @@ Set: Value(self: CodePrimitiveExpression) = value
 
 
 
-class CodePropertyReferenceExpression(CodeExpression):
+class CodePropertyReferenceExpression:
     """
     Represents a reference to the value of a property.
     
@@ -3751,14 +3763,14 @@ Set: TargetObject(self: CodePropertyReferenceExpression) = value
 
 
 
-class CodePropertySetValueReferenceExpression(CodeExpression):
+class CodePropertySetValueReferenceExpression:
     """
     Represents the value argument of a property set method call within a property set method.
     
     CodePropertySetValueReferenceExpression()
     """
 
-class CodeRegionDirective(CodeDirective):
+class CodeRegionDirective:
     """
     Specifies the name and mode for a code region.
     
@@ -3791,7 +3803,7 @@ Set: RegionText(self: CodeRegionDirective) = value
 
 
 
-class CodeRegionMode(Enum, IComparable, IFormattable, IConvertible):
+class CodeRegionMode:
     """
     Specifies the start or end of a code region.
     
@@ -3831,12 +3843,12 @@ class CodeRegionMode(Enum, IComparable, IFormattable, IConvertible):
         pass
 
     End = None
-    None = None
+    None_ =None
     Start = None
     value__ = None
 
 
-class CodeRemoveEventStatement(CodeStatement):
+class CodeRemoveEventStatement:
     """
     Represents a statement that removes an event handler.
     
@@ -3871,7 +3883,7 @@ Set: Listener(self: CodeRemoveEventStatement) = value
 
 
 
-class CodeSnippetCompileUnit(CodeCompileUnit):
+class CodeSnippetCompileUnit:
     """
     Represents a literal code fragment that can be compiled.
     
@@ -3904,7 +3916,7 @@ Set: Value(self: CodeSnippetCompileUnit) = value
 
 
 
-class CodeSnippetExpression(CodeExpression):
+class CodeSnippetExpression:
     """
     Represents a literal expression.
     
@@ -3929,7 +3941,7 @@ Set: Value(self: CodeSnippetExpression) = value
 
 
 
-class CodeSnippetStatement(CodeStatement):
+class CodeSnippetStatement:
     """
     Represents a statement using a literal code fragment.
     
@@ -3954,7 +3966,7 @@ Set: Value(self: CodeSnippetStatement) = value
 
 
 
-class CodeSnippetTypeMember(CodeTypeMember):
+class CodeSnippetTypeMember:
     """
     Represents a member of a type using a literal code fragment.
     
@@ -3979,7 +3991,7 @@ Set: Text(self: CodeSnippetTypeMember) = value
 
 
 
-class CodeStatementCollection(CollectionBase, IList, ICollection, IEnumerable):
+class CodeStatementCollection:
     """
     Represents a collection of System.CodeDom.CodeStatement objects.
     
@@ -3989,35 +4001,34 @@ class CodeStatementCollection(CollectionBase, IList, ICollection, IEnumerable):
     """
     def Add(self, value):
         """
-        Add(self: CodeStatementCollection, value: CodeExpression) -> int
-        
-            Adds the specified System.CodeDom.CodeExpression object to the collection.
-        
-            value: The System.CodeDom.CodeExpression object to add.
-            Returns: The index at which the new element was inserted.
         Add(self: CodeStatementCollection, value: CodeStatement) -> int
         
             Adds the specified System.CodeDom.CodeStatement object to the collection.
         
             value: The System.CodeDom.CodeStatement object to add.
+            Returns: The index at which the new element was inserted.
+        Add(self: CodeStatementCollection, value: CodeExpression) -> int
+        
+            Adds the specified System.CodeDom.CodeExpression object to the collection.
+        
+            value: The System.CodeDom.CodeExpression object to add.
             Returns: The index at which the new element was inserted.
         """
         pass
 
     def AddRange(self, value):
         """
-        AddRange(self: CodeStatementCollection, value: CodeStatementCollection)
-            Adds the contents of another System.CodeDom.CodeStatementCollection object to the end of the 
-             collection.
-        
-        
-            value: A System.CodeDom.CodeStatementCollection object that contains the objects to add to the 
-             collection.
-        
         AddRange(self: CodeStatementCollection, value: Array[CodeStatement])
             Adds a set of System.CodeDom.CodeStatement objects to the collection.
         
-            value: An array of System.CodeDom.CodeStatement objects to add to the collection.
+            value: An array of System.CodeDom.CodeStatement objects to add to the collection.
+        AddRange(self: CodeStatementCollection, value: CodeStatementCollection)
+            Adds the contents of another System.CodeDom.CodeStatementCollection object to the end of 
+             the collection.
+        
+        
+            value: A System.CodeDom.CodeStatementCollection object that contains the objects to add to the 
+             collection.
         """
         pass
 
@@ -4037,8 +4048,8 @@ class CodeStatementCollection(CollectionBase, IList, ICollection, IEnumerable):
     def CopyTo(self, array, index):
         """
         CopyTo(self: CodeStatementCollection, array: Array[CodeStatement], index: int)
-            Copies the elements of the System.CodeDom.CodeStatementCollection object to a one-dimensional 
-             System.Array instance, starting at the specified index.
+            Copies the elements of the System.CodeDom.CodeStatementCollection object to a 
+             one-dimensional System.Array instance, starting at the specified index.
         
         
             array: The one-dimensional System.Array that is the destination of the values copied from the 
@@ -4064,8 +4075,8 @@ class CodeStatementCollection(CollectionBase, IList, ICollection, IEnumerable):
     def Insert(self, index, value):
         """
         Insert(self: CodeStatementCollection, index: int, value: CodeStatement)
-            Inserts the specified System.CodeDom.CodeStatement object into the collection at the specified 
-             index.
+            Inserts the specified System.CodeDom.CodeStatement object into the collection at the 
+             specified index.
         
         
             index: The zero-based index where the specified object should be inserted.
@@ -4225,14 +4236,14 @@ class CodeStatementCollection(CollectionBase, IList, ICollection, IEnumerable):
 
 
 
-class CodeThisReferenceExpression(CodeExpression):
+class CodeThisReferenceExpression:
     """
     Represents a reference to the current local class instance.
     
     CodeThisReferenceExpression()
     """
 
-class CodeThrowExceptionStatement(CodeStatement):
+class CodeThrowExceptionStatement:
     """
     Represents a statement that throws an exception.
     
@@ -4257,7 +4268,7 @@ Set: ToThrow(self: CodeThrowExceptionStatement) = value
 
 
 
-class CodeTryCatchFinallyStatement(CodeStatement):
+class CodeTryCatchFinallyStatement:
     """
     Represents a try block with any number of catch clauses and, optionally, a finally block.
     
@@ -4297,14 +4308,14 @@ Get: TryStatements(self: CodeTryCatchFinallyStatement) -> CodeStatementCollectio
 
 
 
-class CodeTypeConstructor(CodeMemberMethod):
+class CodeTypeConstructor:
     """
     Represents a static constructor for a class.
     
     CodeTypeConstructor()
     """
 
-class CodeTypeDeclaration(CodeTypeMember):
+class CodeTypeDeclaration:
     """
     Represents a type declaration for a class, structure, interface, or enumeration.
     
@@ -4393,7 +4404,7 @@ Get: TypeParameters(self: CodeTypeDeclaration) -> CodeTypeParameterCollection
     PopulateMembers = None
 
 
-class CodeTypeDeclarationCollection(CollectionBase, IList, ICollection, IEnumerable):
+class CodeTypeDeclarationCollection:
     """
     Represents a collection of System.CodeDom.CodeTypeDeclaration objects.
     
@@ -4414,19 +4425,19 @@ class CodeTypeDeclarationCollection(CollectionBase, IList, ICollection, IEnumera
 
     def AddRange(self, value):
         """
-        AddRange(self: CodeTypeDeclarationCollection, value: CodeTypeDeclarationCollection)
-            Adds the contents of another System.CodeDom.CodeTypeDeclarationCollection object to the end of 
-             the collection.
-        
-        
-            value: A System.CodeDom.CodeTypeDeclarationCollection object that contains the objects to add to the 
-             collection.
-        
         AddRange(self: CodeTypeDeclarationCollection, value: Array[CodeTypeDeclaration])
             Copies the elements of the specified array to the end of the collection.
         
-            value: An array of type System.CodeDom.CodeTypeDeclaration that contains the objects to add to the 
-             collection.
+            value: An array of type System.CodeDom.CodeTypeDeclaration that contains the objects to add to 
+             the collection.
+        
+        AddRange(self: CodeTypeDeclarationCollection, value: CodeTypeDeclarationCollection)
+            Adds the contents of another System.CodeDom.CodeTypeDeclarationCollection object to the 
+             end of the collection.
+        
+        
+            value: A System.CodeDom.CodeTypeDeclarationCollection object that contains the objects to add to 
+             the collection.
         """
         pass
 
@@ -4473,8 +4484,8 @@ class CodeTypeDeclarationCollection(CollectionBase, IList, ICollection, IEnumera
     def Insert(self, index, value):
         """
         Insert(self: CodeTypeDeclarationCollection, index: int, value: CodeTypeDeclaration)
-            Inserts the specified System.CodeDom.CodeTypeDeclaration object into the collection at the 
-             specified index.
+            Inserts the specified System.CodeDom.CodeTypeDeclaration object into the collection at 
+             the specified index.
         
         
             index: The zero-based index where the specified object should be inserted.
@@ -4634,7 +4645,7 @@ class CodeTypeDeclarationCollection(CollectionBase, IList, ICollection, IEnumera
 
 
 
-class CodeTypeDelegate(CodeTypeDeclaration):
+class CodeTypeDelegate:
     """
     Represents a delegate declaration.
     
@@ -4666,7 +4677,7 @@ Set: ReturnType(self: CodeTypeDelegate) = value
 
 
 
-class CodeTypeMemberCollection(CollectionBase, IList, ICollection, IEnumerable):
+class CodeTypeMemberCollection:
     """
     Represents a collection of System.CodeDom.CodeTypeMember objects.
     
@@ -4687,18 +4698,20 @@ class CodeTypeMemberCollection(CollectionBase, IList, ICollection, IEnumerable):
 
     def AddRange(self, value):
         """
+        AddRange(self: CodeTypeMemberCollection, value: Array[CodeTypeMember])
+            Copies the elements of the specified System.CodeDom.CodeTypeMember array to the end of 
+             the collection.
+        
+        
+            value: An array of type System.CodeDom.CodeTypeMember containing the objects to add to the 
+             collection.
+        
         AddRange(self: CodeTypeMemberCollection, value: CodeTypeMemberCollection)
             Adds the contents of another System.CodeDom.CodeTypeMemberCollection to the end of the 
              collection.
         
         
-            value: A System.CodeDom.CodeTypeMemberCollection containing the objects to add to the collection.
-        AddRange(self: CodeTypeMemberCollection, value: Array[CodeTypeMember])
-            Copies the elements of the specified System.CodeDom.CodeTypeMember array to the end of the 
-             collection.
-        
-        
-            value: An array of type System.CodeDom.CodeTypeMember containing the objects to add to the collection.
+            value: A System.CodeDom.CodeTypeMemberCollection containing the objects to add to the collection.
         """
         pass
 
@@ -4718,8 +4731,8 @@ class CodeTypeMemberCollection(CollectionBase, IList, ICollection, IEnumerable):
     def CopyTo(self, array, index):
         """
         CopyTo(self: CodeTypeMemberCollection, array: Array[CodeTypeMember], index: int)
-            Copies the collection objects to a one-dimensional System.Array instance, beginning at the 
-             specified index.
+            Copies the collection objects to a one-dimensional System.Array instance, beginning at 
+             the specified index.
         
         
             array: The one-dimensional System.Array that is the destination of the values copied from the 
@@ -4733,8 +4746,8 @@ class CodeTypeMemberCollection(CollectionBase, IList, ICollection, IEnumerable):
         """
         IndexOf(self: CodeTypeMemberCollection, value: CodeTypeMember) -> int
         
-            Gets the index in the collection of the specified System.CodeDom.CodeTypeMember, if it exists in 
-             the collection.
+            Gets the index in the collection of the specified System.CodeDom.CodeTypeMember, if it 
+             exists in the collection.
         
         
             value: The System.CodeDom.CodeTypeMember to locate in the collection.
@@ -4745,7 +4758,9 @@ class CodeTypeMemberCollection(CollectionBase, IList, ICollection, IEnumerable):
     def Insert(self, index, value):
         """
         Insert(self: CodeTypeMemberCollection, index: int, value: CodeTypeMember)
-            Inserts the specified System.CodeDom.CodeTypeMember into the collection at the specified index.
+            Inserts the specified System.CodeDom.CodeTypeMember into the collection at the specified 
+             index.
+        
         
             index: The zero-based index where the specified object should be inserted.
             value: The System.CodeDom.CodeTypeMember to insert.
@@ -4904,7 +4919,7 @@ class CodeTypeMemberCollection(CollectionBase, IList, ICollection, IEnumerable):
 
 
 
-class CodeTypeOfExpression(CodeExpression):
+class CodeTypeOfExpression:
     """
     Represents a typeof expression, an expression that returns a System.Type for a specified type name.
     
@@ -4933,7 +4948,7 @@ Set: Type(self: CodeTypeOfExpression) = value
 
 
 
-class CodeTypeParameter(CodeObject):
+class CodeTypeParameter:
     """
     Represents a type parameter of a generic type or method.
     
@@ -4980,7 +4995,7 @@ Set: Name(self: CodeTypeParameter) = value
 
 
 
-class CodeTypeParameterCollection(CollectionBase, IList, ICollection, IEnumerable):
+class CodeTypeParameterCollection:
     """
     Represents a collection of System.CodeDom.CodeTypeParameter objects.
     
@@ -4990,40 +5005,39 @@ class CodeTypeParameterCollection(CollectionBase, IList, ICollection, IEnumerabl
     """
     def Add(self, value):
         """
-        Add(self: CodeTypeParameterCollection, value: str)
-            Adds the specified System.CodeDom.CodeTypeParameter object to the collection using the specified 
-             data type name.
-        
-        
-            value: The name of a data type for which to add the System.CodeDom.CodeTypeParameter object to the 
-             collection.
-        
         Add(self: CodeTypeParameterCollection, value: CodeTypeParameter) -> int
         
             Adds the specified System.CodeDom.CodeTypeParameter object to the collection.
         
             value: The System.CodeDom.CodeTypeParameter to add.
-            Returns: The zero-based index at which the new element was inserted.
+            Returns: The zero-based index at which the new element was inserted.
+        Add(self: CodeTypeParameterCollection, value: str)
+            Adds the specified System.CodeDom.CodeTypeParameter object to the collection using the 
+             specified data type name.
+        
+        
+            value: The name of a data type for which to add the System.CodeDom.CodeTypeParameter object to 
+             the collection.
         """
         pass
 
     def AddRange(self, value):
         """
-        AddRange(self: CodeTypeParameterCollection, value: CodeTypeParameterCollection)
-            Copies the elements of the specified System.CodeDom.CodeTypeParameterCollection to the end of 
+        AddRange(self: CodeTypeParameterCollection, value: Array[CodeTypeParameter])
+            Copies the elements of the specified System.CodeDom.CodeTypeParameter array to the end of 
              the collection.
         
         
-            value: A System.CodeDom.CodeTypeParameterCollection containing the System.CodeDom.CodeTypeParameter 
-             objects to add to the collection.
-        
-        AddRange(self: CodeTypeParameterCollection, value: Array[CodeTypeParameter])
-            Copies the elements of the specified System.CodeDom.CodeTypeParameter array to the end of the 
+            value: An array of type System.CodeDom.CodeTypeParameter containing the objects to add to the 
              collection.
         
+        AddRange(self: CodeTypeParameterCollection, value: CodeTypeParameterCollection)
+            Copies the elements of the specified System.CodeDom.CodeTypeParameterCollection to the 
+             end of the collection.
         
-            value: An array of type System.CodeDom.CodeTypeParameter containing the objects to add to the 
-             collection.
+        
+            value: A System.CodeDom.CodeTypeParameterCollection containing the 
+             System.CodeDom.CodeTypeParameter objects to add to the collection.
         """
         pass
 
@@ -5031,11 +5045,13 @@ class CodeTypeParameterCollection(CollectionBase, IList, ICollection, IEnumerabl
         """
         Contains(self: CodeTypeParameterCollection, value: CodeTypeParameter) -> bool
         
-            Determines whether the collection contains the specified System.CodeDom.CodeTypeParameter object.
+            Determines whether the collection contains the specified System.CodeDom.CodeTypeParameter 
+             object.
+        
         
             value: The System.CodeDom.CodeTypeParameter object to search for in the collection.
-            Returns: true if the System.CodeDom.CodeTypeParameter object is contained in the collection; otherwise, 
-             false.
+            Returns: true if the System.CodeDom.CodeTypeParameter object is contained in the collection; 
+             otherwise, false.
         """
         pass
 
@@ -5057,13 +5073,13 @@ class CodeTypeParameterCollection(CollectionBase, IList, ICollection, IEnumerabl
         """
         IndexOf(self: CodeTypeParameterCollection, value: CodeTypeParameter) -> int
         
-            Gets the index in the collection of the specified System.CodeDom.CodeTypeParameter object, if it 
-             exists in the collection.
+            Gets the index in the collection of the specified System.CodeDom.CodeTypeParameter 
+             object, if it exists in the collection.
         
         
             value: The System.CodeDom.CodeTypeParameter object to locate in the collection.
-            Returns: The zero-based index of the specified System.CodeDom.CodeTypeParameter object in the collection 
-             if found; otherwise, -1.
+            Returns: The zero-based index of the specified System.CodeDom.CodeTypeParameter object in the 
+             collection if found; otherwise, -1.
         """
         pass
 
@@ -5231,7 +5247,7 @@ class CodeTypeParameterCollection(CollectionBase, IList, ICollection, IEnumerabl
 
 
 
-class CodeTypeReference(CodeObject):
+class CodeTypeReference:
     """
     Represents a reference to a type.
     
@@ -5301,7 +5317,7 @@ Get: TypeArguments(self: CodeTypeReference) -> CodeTypeReferenceCollection
 
 
 
-class CodeTypeReferenceCollection(CollectionBase, IList, ICollection, IEnumerable):
+class CodeTypeReferenceCollection:
     """
     Represents a collection of System.CodeDom.CodeTypeReference objects.
     
@@ -5311,37 +5327,43 @@ class CodeTypeReferenceCollection(CollectionBase, IList, ICollection, IEnumerabl
     """
     def Add(self, value):
         """
-        Add(self: CodeTypeReferenceCollection, value: Type)
-            Adds a System.CodeDom.CodeTypeReference to the collection using the specified data type.
-        
-            value: The data type for which to add a System.CodeDom.CodeTypeReference to the collection.
-        Add(self: CodeTypeReferenceCollection, value: str)
-            Adds a System.CodeDom.CodeTypeReference to the collection using the specified data type name.
-        
-            value: The name of a data type for which to add a System.CodeDom.CodeTypeReference to the collection.
         Add(self: CodeTypeReferenceCollection, value: CodeTypeReference) -> int
         
             Adds the specified System.CodeDom.CodeTypeReference to the collection.
         
             value: The System.CodeDom.CodeTypeReference to add.
-            Returns: The index at which the new element was inserted.
+            Returns: The index at which the new element was inserted.
+        Add(self: CodeTypeReferenceCollection, value: str)
+            Adds a System.CodeDom.CodeTypeReference to the collection using the specified data type 
+             name.
+        
+        
+            value: The name of a data type for which to add a System.CodeDom.CodeTypeReference to the 
+             collection.
+        
+        Add(self: CodeTypeReferenceCollection, value: Type)
+            Adds a System.CodeDom.CodeTypeReference to the collection using the specified data type.
+        
+            value: The data type for which to add a System.CodeDom.CodeTypeReference to the collection.
         """
         pass
 
     def AddRange(self, value):
         """
-        AddRange(self: CodeTypeReferenceCollection, value: CodeTypeReferenceCollection)
-            Adds the contents of the specified System.CodeDom.CodeTypeReferenceCollection to the end of the 
-             collection.
-        
-        
-            value: A System.CodeDom.CodeTypeReferenceCollection containing the objects to add to the collection.
         AddRange(self: CodeTypeReferenceCollection, value: Array[CodeTypeReference])
-            Copies the elements of the specified System.CodeDom.CodeTypeReference array to the end of the 
-             collection.
+            Copies the elements of the specified System.CodeDom.CodeTypeReference array to the end of 
+             the collection.
         
         
             value: An array of type System.CodeDom.CodeTypeReference containing the objects to add to the 
+             collection.
+        
+        AddRange(self: CodeTypeReferenceCollection, value: CodeTypeReferenceCollection)
+            Adds the contents of the specified System.CodeDom.CodeTypeReferenceCollection to the end 
+             of the collection.
+        
+        
+            value: A System.CodeDom.CodeTypeReferenceCollection containing the objects to add to the 
              collection.
         """
         pass
@@ -5355,7 +5377,8 @@ class CodeTypeReferenceCollection(CollectionBase, IList, ICollection, IEnumerabl
         
         
             value: The System.CodeDom.CodeTypeReference to search for in the collection.
-            Returns: true if the System.CodeDom.CodeTypeReference is contained in the collection; otherwise, false.
+            Returns: true if the System.CodeDom.CodeTypeReference is contained in the collection; otherwise, 
+             false.
         """
         pass
 
@@ -5377,8 +5400,8 @@ class CodeTypeReferenceCollection(CollectionBase, IList, ICollection, IEnumerabl
         """
         IndexOf(self: CodeTypeReferenceCollection, value: CodeTypeReference) -> int
         
-            Gets the index in the collection of the specified System.CodeDom.CodeTypeReference, if it exists 
-             in the collection.
+            Gets the index in the collection of the specified System.CodeDom.CodeTypeReference, if it 
+             exists in the collection.
         
         
             value: The System.CodeDom.CodeTypeReference to locate in the collection.
@@ -5549,7 +5572,7 @@ class CodeTypeReferenceCollection(CollectionBase, IList, ICollection, IEnumerabl
 
 
 
-class CodeTypeReferenceExpression(CodeExpression):
+class CodeTypeReferenceExpression:
     """
     Represents a reference to a data type.
     
@@ -5578,7 +5601,7 @@ Set: Type(self: CodeTypeReferenceExpression) = value
 
 
 
-class CodeTypeReferenceOptions(Enum, IComparable, IFormattable, IConvertible):
+class CodeTypeReferenceOptions:
     """
     Specifies how the code type reference is to be resolved.
     
@@ -5622,7 +5645,7 @@ class CodeTypeReferenceOptions(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class CodeVariableDeclarationStatement(CodeStatement):
+class CodeVariableDeclarationStatement:
     """
     Represents a variable declaration.
     
@@ -5673,7 +5696,7 @@ Set: Type(self: CodeVariableDeclarationStatement) = value
 
 
 
-class CodeVariableReferenceExpression(CodeExpression):
+class CodeVariableReferenceExpression:
     """
     Represents a reference to a local variable.
     
@@ -5698,7 +5721,7 @@ Set: VariableName(self: CodeVariableReferenceExpression) = value
 
 
 
-class FieldDirection(Enum, IComparable, IFormattable, IConvertible):
+class FieldDirection:
     """
     Defines identifiers used to indicate the direction of parameter and argument declarations.
     
@@ -5743,7 +5766,7 @@ class FieldDirection(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class MemberAttributes(Enum, IComparable, IFormattable, IConvertible):
+class MemberAttributes:
     """
     Defines member attribute identifiers for class members.
     

@@ -1,9 +1,7 @@
-class WebBrowserReadyState(Enum,IComparable,IFormattable,IConvertible):
+class WebBrowserReadyState:
  """
- Specifies constants that define the state of the System.Windows.Forms.WebBrowser control.
-
- 
-
+ Specifies constants that define the state of the System.Windows.Forms.WebBrowser control.
+ 
  enum WebBrowserReadyState,values: Complete (4),Interactive (3),Loaded (2),Loading (1),Uninitialized (0)
  """
  def __eq__(self,*args):

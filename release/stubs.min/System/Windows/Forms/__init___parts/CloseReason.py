@@ -1,9 +1,7 @@
-class CloseReason(Enum,IComparable,IFormattable,IConvertible):
+class CloseReason:
  """
- Specifies the reason that a form was closed.
-
- 
-
+ Specifies the reason that a form was closed.
+ 
  enum CloseReason,values: ApplicationExitCall (6),FormOwnerClosing (5),MdiFormClosing (2),None (0),TaskManagerClosing (4),UserClosing (3),WindowsShutDown (1)
  """
  def __eq__(self,*args):
@@ -32,7 +30,7 @@ class CloseReason(Enum,IComparable,IFormattable,IConvertible):
  ApplicationExitCall=None
  FormOwnerClosing=None
  MdiFormClosing=None
- None=None
+ None_ =None
  TaskManagerClosing=None
  UserClosing=None
  value__=None

@@ -1,9 +1,7 @@
-class BootMode(Enum,IComparable,IFormattable,IConvertible):
+class BootMode:
  """
- Specifies the boot mode in which the system was started.
-
- 
-
+ Specifies the boot mode in which the system was started.
+ 
  enum BootMode,values: FailSafe (1),FailSafeWithNetwork (2),Normal (0)
  """
  def __eq__(self,*args):

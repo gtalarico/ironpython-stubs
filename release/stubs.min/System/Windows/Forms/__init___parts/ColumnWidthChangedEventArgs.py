@@ -1,9 +1,7 @@
-class ColumnWidthChangedEventArgs(EventArgs):
+class ColumnWidthChangedEventArgs:
  """
- Provides data for the System.Windows.Forms.ListView.ColumnWidthChanged event.
-
- 
-
+ Provides data for the System.Windows.Forms.ListView.ColumnWidthChanged event.
+ 
  ColumnWidthChangedEventArgs(columnIndex: int)
  """
  @staticmethod
@@ -11,14 +9,10 @@ class ColumnWidthChangedEventArgs(EventArgs):
   """ __new__(cls: type,columnIndex: int) """
   pass
  ColumnIndex=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the column index for the column whose width is being changed.
-
-
-
-Get: ColumnIndex(self: ColumnWidthChangedEventArgs) -> int
-
-
-
+ """Gets the column index for the column whose width is being changed.
+
+Get: ColumnIndex(self: ColumnWidthChangedEventArgs) -> int
+
 """
 
 

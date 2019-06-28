@@ -1,9 +1,7 @@
-class DesignerSerializationVisibility(Enum,IComparable,IFormattable,IConvertible):
+class DesignerSerializationVisibility:
  """
- Specifies the visibility a property has to the design-time serializer.
-
- 
-
+ Specifies the visibility a property has to the design-time serializer.
+ 
  enum DesignerSerializationVisibility,values: Content (2),Hidden (0),Visible (1)
  """
  def __eq__(self,*args):

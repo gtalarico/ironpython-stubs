@@ -1,9 +1,7 @@
-class LCIDConversionAttribute(Attribute,_Attribute):
+class LCIDConversionAttribute:
  """
- Indicates that a method's unmanaged signature expects a locale identifier (LCID) parameter.
-
- 
-
+ Indicates that a method's unmanaged signature expects a locale identifier (LCID) parameter.
+ 
  LCIDConversionAttribute(lcid: int)
  """
  def __init__(self,*args):
@@ -14,14 +12,10 @@ class LCIDConversionAttribute(Attribute,_Attribute):
   """ __new__(cls: type,lcid: int) """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the position of the LCID argument in the unmanaged signature.
-
-
-
-Get: Value(self: LCIDConversionAttribute) -> int
-
-
-
+ """Gets the position of the LCID argument in the unmanaged signature.
+
+Get: Value(self: LCIDConversionAttribute) -> int
+
 """
 
 

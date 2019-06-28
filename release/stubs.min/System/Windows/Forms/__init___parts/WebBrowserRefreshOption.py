@@ -1,9 +1,7 @@
-class WebBrowserRefreshOption(Enum,IComparable,IFormattable,IConvertible):
+class WebBrowserRefreshOption:
  """
- Specifies constants that define how the System.Windows.Forms.WebBrowser control can refresh its contents.
-
- 
-
+ Specifies constants that define how the System.Windows.Forms.WebBrowser control can refresh its contents.
+ 
  enum WebBrowserRefreshOption,values: Completely (3),Continue (2),IfExpired (1),Normal (0)
  """
  def __eq__(self,*args):

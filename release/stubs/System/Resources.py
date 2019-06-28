@@ -2,13 +2,13 @@
 # module System.Resources calls itself Resources
 # from mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class IResourceReader(IEnumerable, IDisposable):
+class IResourceReader:
     """ Provides the base functionality to read data from resource files. """
     def Close(self):
         """
@@ -27,18 +27,11 @@ class IResourceReader(IEnumerable, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -50,33 +43,35 @@ class IResourceReader(IEnumerable, IDisposable):
         pass
 
 
-class IResourceWriter(IDisposable):
+class IResourceWriter:
     """ Provides functionality to write resources to an output file or stream. """
     def AddResource(self, name, value):
         """
-        AddResource(self: IResourceWriter, name: str, value: Array[Byte])
-            Adds an 8-bit unsigned integer array as a named resource to the list of resources to be written.
+        AddResource(self: IResourceWriter, name: str, value: str)
+            Adds a named resource of type System.String to the list of resources to be written.
         
-            name: Name of a resource.
-            value: Value of a resource as an 8-bit unsigned integer array.
+            name: The name of the resource.
+            value: The value of the resource.
         AddResource(self: IResourceWriter, name: str, value: object)
             Adds a named resource of type System.Object to the list of resources to be written.
         
             name: The name of the resource.
             value: The value of the resource.
-        AddResource(self: IResourceWriter, name: str, value: str)
-            Adds a named resource of type System.String to the list of resources to be written.
+        AddResource(self: IResourceWriter, name: str, value: Array[Byte])
+            Adds an 8-bit unsigned integer array as a named resource to the list of resources to be 
+             written.
         
-            name: The name of the resource.
-            value: The value of the resource.
+        
+            name: Name of a resource.
+            value: Value of a resource as an 8-bit unsigned integer array.
         """
         pass
 
     def Close(self):
         """
         Close(self: IResourceWriter)
-            Closes the underlying resource file or stream, ensuring all the data has been written to the 
-             file.
+            Closes the underlying resource file or stream, ensuring all the data has been written to 
+             the file.
         """
         pass
 
@@ -84,8 +79,8 @@ class IResourceWriter(IDisposable):
         """
         Generate(self: IResourceWriter)
             Writes all the resources added by the 
-             System.Resources.IResourceWriter.AddResource(System.String,System.String) method to the output 
-             file or stream.
+             System.Resources.IResourceWriter.AddResource(System.String,System.String) method to the 
+             output file or stream.
         """
         pass
 
@@ -94,7 +89,7 @@ class IResourceWriter(IDisposable):
         pass
 
 
-class MissingManifestResourceException(SystemException, ISerializable, _Exception):
+class MissingManifestResourceException:
     """
     The exception thrown if the main assembly does not contain the resources for the neutral culture, and they are required because of a missing appropriate satellite assembly.
     
@@ -102,14 +97,6 @@ class MissingManifestResourceException(SystemException, ISerializable, _Exceptio
     MissingManifestResourceException(message: str)
     MissingManifestResourceException(message: str, inner: Exception)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -130,8 +117,10 @@ class MissingManifestResourceException(SystemException, ISerializable, _Exceptio
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    SerializeObjectState = None
 
-class MissingSatelliteAssemblyException(SystemException, ISerializable, _Exception):
+
+class MissingSatelliteAssemblyException:
     """
     The exception that is thrown when the satellite assembly for the resources of the neutral culture is missing.
     
@@ -140,14 +129,6 @@ class MissingSatelliteAssemblyException(SystemException, ISerializable, _Excepti
     MissingSatelliteAssemblyException(message: str, cultureName: str)
     MissingSatelliteAssemblyException(message: str, inner: Exception)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -177,8 +158,10 @@ Get: CultureName(self: MissingSatelliteAssemblyException) -> str
 """
 
 
+    SerializeObjectState = None
 
-class NeutralResourcesLanguageAttribute(Attribute, _Attribute):
+
+class NeutralResourcesLanguageAttribute:
     """
     Informs the System.Resources.ResourceManager of the default culture of an application. This class cannot be inherited.
     
@@ -213,7 +196,7 @@ Get: Location(self: NeutralResourcesLanguageAttribute) -> UltimateResourceFallba
 
 
 
-class ResourceManager(object):
+class ResourceManager:
     """
     Represents a resource manager that provides convenient access to culture-specific resources at run time.
     
@@ -226,16 +209,16 @@ class ResourceManager(object):
         """
         CreateFileBasedResourceManager(baseName: str, resourceDir: str, usingResourceSet: Type) -> ResourceManager
         
-            Returns a System.Resources.ResourceManager that searches a specific directory for resources 
-             instead of in the assembly manifest.
+            Returns a System.Resources.ResourceManager that searches a specific directory for 
+             resources instead of in the assembly manifest.
         
         
             baseName: The root name of the resources. For example, the root name for the resource file named 
              "MyResource.en-US.resources" is "MyResource".
         
             resourceDir: The name of the directory to search for the resources.
-            usingResourceSet: The System.Type of the custom System.Resources.ResourceSet to use. If null, the default runtime 
-             System.Resources.ResourceSet is used.
+            usingResourceSet: The System.Type of the custom System.Resources.ResourceSet to use. If null, the default 
+             runtime System.Resources.ResourceSet is used.
         
             Returns: The newly created System.Resources.ResourceManager that searches a specific directory for 
              resources instead of in the assembly manifest.
@@ -247,37 +230,37 @@ class ResourceManager(object):
         GetNeutralResourcesLanguage(a: Assembly) -> CultureInfo
         
             Returns the System.Globalization.CultureInfo for the main assembly's neutral resources by 
-             reading the value of the System.Resources.NeutralResourcesLanguageAttribute on a specified 
-             System.Reflection.Assembly.
+             reading the value of the System.Resources.NeutralResourcesLanguageAttribute on a 
+             specified System.Reflection.Assembly.
         
         
             a: The assembly for which to return a System.Globalization.CultureInfo.
-            Returns: The culture from the System.Resources.NeutralResourcesLanguageAttribute, if found; otherwise, 
-             System.Globalization.CultureInfo.InvariantCulture.
+            Returns: The culture from the System.Resources.NeutralResourcesLanguageAttribute, if found; 
+             otherwise, System.Globalization.CultureInfo.InvariantCulture.
         """
         pass
 
     def GetObject(self, name, culture=None):
         """
-        GetObject(self: ResourceManager, name: str, culture: CultureInfo) -> object
-        
-            Gets the value of the specified non-string  resource localized for the specified culture.
-        
-            name: The name of the resource to get.
-            culture: The culture for which the resource is localized. If the resource is not localized for this 
-             culture, the resource manager uses fallback rules to locate an appropriate resource.If this 
-             value is null, the System.Globalization.CultureInfo object is obtained using the culture's 
-             System.Globalization.CultureInfo.CurrentUICulture property.
-        
-            Returns: The value of the resource, localized for the specified culture. If an appropriate resource set 
-             exists but name cannot be found, the method returns null.
-        
         GetObject(self: ResourceManager, name: str) -> object
         
             Returns the value of the specified non-string resource.
         
             name: The name of the resource to get.
-            Returns: The value of the resource localized for the caller's current culture settings. If an appropriate 
+            Returns: The value of the resource localized for the caller's current culture settings. If an 
+             appropriate resource set exists but name cannot be found, the method returns null.
+        
+        GetObject(self: ResourceManager, name: str, culture: CultureInfo) -> object
+        
+            Gets the value of the specified non-string  resource localized for the specified culture.
+        
+            name: The name of the resource to get.
+            culture: The culture for which the resource is localized. If the resource is not localized for 
+             this culture, the resource manager uses fallback rules to locate an appropriate 
+             resource.If this value is null, the System.Globalization.CultureInfo object is obtained 
+             using the culture's System.Globalization.CultureInfo.CurrentUICulture property.
+        
+            Returns: The value of the resource, localized for the specified culture. If an appropriate 
              resource set exists but name cannot be found, the method returns null.
         """
         pass
@@ -289,7 +272,8 @@ class ResourceManager(object):
             Generates the name for the resource file for the given System.Globalization.CultureInfo.
         
             culture: The System.Globalization.CultureInfo for which a resource file name is constructed.
-            Returns: The name that can be used for a resource file for the given System.Globalization.CultureInfo.
+            Returns: The name that can be used for a resource file for the given 
+             System.Globalization.CultureInfo.
         """
         pass
 
@@ -312,57 +296,58 @@ class ResourceManager(object):
         """
         GetSatelliteContractVersion(a: Assembly) -> Version
         
-            Returns the System.Version specified by the System.Resources.SatelliteContractVersionAttribute 
-             in the given assembly.
+            Returns the System.Version specified by the 
+             System.Resources.SatelliteContractVersionAttribute in the given assembly.
         
         
             a: The System.Reflection.Assembly for which to look up the 
              System.Resources.SatelliteContractVersionAttribute.
         
-            Returns: The satellite contract System.Version of the given assembly, or null if no version was found.
+            Returns: The satellite contract System.Version of the given assembly, or null if no version was 
+             found.
         """
         pass
 
     def GetStream(self, name, culture=None):
         """
-        GetStream(self: ResourceManager, name: str, culture: CultureInfo) -> UnmanagedMemoryStream
-        
-            Returns an unmanaged memory stream  object from the specified resource, using the specified 
-             culture.
-        
-        
-            name: The name of a resource.
-            culture: An object that specifies the culture to use for the resource lookup. If culture is null, the 
-             culture for the current thread is used.
-        
-            Returns: An System.IO.UnmanagedMemoryStream object.
         GetStream(self: ResourceManager, name: str) -> UnmanagedMemoryStream
         
             Returns an unmanaged memory stream object from the specified resource.
         
             name: The name of a resource.
-            Returns: An unmanaged memory stream object object that represents a resource.
+            Returns: An unmanaged memory stream object object that represents a resource.
+        GetStream(self: ResourceManager, name: str, culture: CultureInfo) -> UnmanagedMemoryStream
+        
+            Returns an unmanaged memory stream  object from the specified resource, using the 
+             specified culture.
+        
+        
+            name: The name of a resource.
+            culture: An object that specifies the culture to use for the resource lookup. If culture is null, 
+             the culture for the current thread is used.
+        
+            Returns: An System.IO.UnmanagedMemoryStream object.
         """
         pass
 
     def GetString(self, name, culture=None):
         """
+        GetString(self: ResourceManager, name: str) -> str
+        
+            Returns the value of the specified string resource.
+        
+            name: The name of the resource to retrieve.
+            Returns: The value of the resource localized for the caller's current UI culture, or null if name 
+             cannot be found in a resource set.
+        
         GetString(self: ResourceManager, name: str, culture: CultureInfo) -> str
         
             Returns the value of the string resource localized for the specified culture.
         
             name: The name of the resource to get.
             culture: An object that represents the culture for which the resource is localized.
-            Returns: The value of the resource localized for the specified culture, or null if name cannot be found 
-             in a resource set.
-        
-        GetString(self: ResourceManager, name: str) -> str
-        
-            Returns the value of the specified string resource.
-        
-            name: The name of the resource to retrieve.
-            Returns: The value of the resource localized for the caller's current UI culture, or null if name cannot 
-             be found in a resource set.
+            Returns: The value of the resource localized for the specified culture, or null if name cannot be 
+             found in a resource set.
         """
         pass
 
@@ -384,8 +369,8 @@ class ResourceManager(object):
     def ReleaseAllResources(self):
         """
         ReleaseAllResources(self: ResourceManager)
-            Tells the System.Resources.ResourceManager to call System.Resources.ResourceSet.Close on all 
-             System.Resources.ResourceSet objects and release all resources.
+            Tells the System.Resources.ResourceManager to call System.Resources.ResourceSet.Close on 
+             all System.Resources.ResourceSet objects and release all resources.
         """
         pass
 
@@ -434,7 +419,7 @@ Get: ResourceSetType(self: ResourceManager) -> Type
     ResourceSets = None
 
 
-class ResourceReader(object, IResourceReader, IEnumerable, IDisposable):
+class ResourceReader:
     """
     Enumerates the resources in a binary resources (.resources) file by reading sequential resource name/value pairs.
     
@@ -444,15 +429,16 @@ class ResourceReader(object, IResourceReader, IEnumerable, IDisposable):
     def Close(self):
         """
         Close(self: ResourceReader)
-            Releases all operating system resources associated with this System.Resources.ResourceReader 
-             object.
+            Releases all operating system resources associated with this 
+             System.Resources.ResourceReader object.
         """
         pass
 
     def Dispose(self):
         """
         Dispose(self: ResourceReader)
-            Releases all resources used by the current instance of the System.Resources.ResourceReader class.
+            Releases all resources used by the current instance of the 
+             System.Resources.ResourceReader class.
         """
         pass
 
@@ -476,18 +462,11 @@ class ResourceReader(object, IResourceReader, IEnumerable, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -511,7 +490,7 @@ class ResourceReader(object, IResourceReader, IEnumerable, IDisposable):
         pass
 
 
-class ResourceSet(object, IDisposable, IEnumerable):
+class ResourceSet:
     """
     Stores all the resources localized for one particular culture, ignoring all other cultures, including any fallback rules.
     
@@ -567,6 +546,12 @@ class ResourceSet(object, IDisposable, IEnumerable):
 
     def GetObject(self, name, ignoreCase=None):
         """
+        GetObject(self: ResourceSet, name: str) -> object
+        
+            Searches for a resource object with the specified name.
+        
+            name: Case-sensitive name of the resource to search for.
+            Returns: The requested resource.
         GetObject(self: ResourceSet, name: str, ignoreCase: bool) -> object
         
             Searches for a resource object with the specified name in a case-insensitive manner, if 
@@ -575,32 +560,26 @@ class ResourceSet(object, IDisposable, IEnumerable):
         
             name: Name of the resource to search for.
             ignoreCase: Indicates whether the case of the specified name should be ignored.
-            Returns: The requested resource.
-        GetObject(self: ResourceSet, name: str) -> object
-        
-            Searches for a resource object with the specified name.
-        
-            name: Case-sensitive name of the resource to search for.
             Returns: The requested resource.
         """
         pass
 
     def GetString(self, name, ignoreCase=None):
         """
-        GetString(self: ResourceSet, name: str, ignoreCase: bool) -> str
-        
-            Searches for a System.String resource with the specified name in a case-insensitive manner, if 
-             requested.
-        
-        
-            name: Name of the resource to search for.
-            ignoreCase: Indicates whether the case of the case of the specified name should be ignored.
-            Returns: The value of a resource, if the value is a System.String.
         GetString(self: ResourceSet, name: str) -> str
         
             Searches for a System.String resource with the specified name.
         
             name: Name of the resource to search for.
+            Returns: The value of a resource, if the value is a System.String.
+        GetString(self: ResourceSet, name: str, ignoreCase: bool) -> str
+        
+            Searches for a System.String resource with the specified name in a case-insensitive 
+             manner, if requested.
+        
+        
+            name: Name of the resource to search for.
+            ignoreCase: Indicates whether the case of the case of the specified name should be ignored.
             Returns: The value of a resource, if the value is a System.String.
         """
         pass
@@ -608,24 +587,17 @@ class ResourceSet(object, IDisposable, IEnumerable):
     def ReadResources(self, *args): #cannot find CLR method
         """
         ReadResources(self: ResourceSet)
-            Reads all the resources and stores them in a System.Collections.Hashtable indicated in the 
-             System.Resources.ResourceSet.Table property.
+            Reads all the resources and stores them in a System.Collections.Hashtable indicated in 
+             the System.Resources.ResourceSet.Table property.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -657,7 +629,7 @@ class ResourceSet(object, IDisposable, IEnumerable):
     Table = None
 
 
-class ResourceWriter(object, IResourceWriter, IDisposable):
+class ResourceWriter:
     """
     Writes resources in the system-default format to an output file or an output stream. This class cannot be inherited.
     
@@ -666,27 +638,6 @@ class ResourceWriter(object, IResourceWriter, IDisposable):
     """
     def AddResource(self, name, value, closeAfterWrite=None):
         """
-        AddResource(self: ResourceWriter, name: str, value: Stream, closeAfterWrite: bool)
-            Adds a named resource specified as a stream to the list of resources to be written, and 
-             specifies whether the stream should be closed after the System.Resources.ResourceWriter.Generate 
-             method is called.
-        
-        
-            name: The name of the resource to add.
-            value: The value of the resource to add that supports the System.IO.Stream.Length property.
-            closeAfterWrite: true to close the stream after the System.Resources.ResourceWriter.Generate method is called; 
-             otherwise, false.
-        
-        AddResource(self: ResourceWriter, name: str, value: Array[Byte])
-            Adds a named resource specified as a byte array to the list of resources to be written.
-        
-            name: The name of the resource.
-            value: Value of the resource as an 8-bit unsigned integer array.
-        AddResource(self: ResourceWriter, name: str, value: Stream)
-            Adds a named resource specified as a stream to the list of resources to be written.
-        
-            name: The name of the resource to add.
-            value: The value of the resource to add. The resource must support the System.IO.Stream.Length property.
         AddResource(self: ResourceWriter, name: str, value: str)
             Adds a string resource to the list of resources to be written.
         
@@ -696,7 +647,30 @@ class ResourceWriter(object, IResourceWriter, IDisposable):
             Adds a named resource specified as an object to the list of resources to be written.
         
             name: The name of the resource.
-            value: The value of the resource.
+            value: The value of the resource.
+        AddResource(self: ResourceWriter, name: str, value: Stream)
+            Adds a named resource specified as a stream to the list of resources to be written.
+        
+            name: The name of the resource to add.
+            value: The value of the resource to add. The resource must support the System.IO.Stream.Length 
+             property.
+        
+        AddResource(self: ResourceWriter, name: str, value: Stream, closeAfterWrite: bool)
+            Adds a named resource specified as a stream to the list of resources to be written, and 
+             specifies whether the stream should be closed after the 
+             System.Resources.ResourceWriter.Generate method is called.
+        
+        
+            name: The name of the resource to add.
+            value: The value of the resource to add that supports the System.IO.Stream.Length property.
+            closeAfterWrite: true to close the stream after the System.Resources.ResourceWriter.Generate method is 
+             called; otherwise, false.
+        
+        AddResource(self: ResourceWriter, name: str, value: Array[Byte])
+            Adds a named resource specified as a byte array to the list of resources to be written.
+        
+            name: The name of the resource.
+            value: Value of the resource as an 8-bit unsigned integer array.
         """
         pass
 
@@ -733,18 +707,11 @@ class ResourceWriter(object, IResourceWriter, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -773,7 +740,7 @@ Set: TypeNameConverter(self: ResourceWriter) = value
 
 
 
-class ResXDataNode(object, ISerializable):
+class ResXDataNode:
     """
     Represents an element in a resource file.
     
@@ -787,43 +754,44 @@ class ResXDataNode(object, ISerializable):
         GetNodePosition(self: ResXDataNode) -> Point
         
             Gets the position of the resource in the resource file.
-            Returns: A System.Drawing.Point structure specifying the location of this resource in the resource file 
-             as a line position (System.Drawing.Point.X) and a column position (System.Drawing.Point.Y). If 
-             this resource is not part of a resource file, returns a System.Drawing.Point structure with an 
-             System.Drawing.Point.X of 0 and a System.Drawing.Point.Y of 0.
+            Returns: A System.Drawing.Point structure specifying the location of this resource in the resource 
+             file as a line position (System.Drawing.Point.X) and a column position 
+             (System.Drawing.Point.Y). If this resource is not part of a resource file, returns a 
+             System.Drawing.Point structure with an System.Drawing.Point.X of 0 and a 
+             System.Drawing.Point.Y of 0.
         """
         pass
 
     def GetValue(self, *__args):
         """
-        GetValue(self: ResXDataNode, names: Array[AssemblyName]) -> object
-        
-            Gets the object stored by this node.
-        
-            names: The list of assemblies in which to look for the type of the object.
-            Returns: The System.Object corresponding to the stored value.
         GetValue(self: ResXDataNode, typeResolver: ITypeResolutionService) -> object
         
             Gets the object stored by this node.
         
             typeResolver: The type resolution service to use when looking for a type converter.
+            Returns: The System.Object corresponding to the stored value.
+        GetValue(self: ResXDataNode, names: Array[AssemblyName]) -> object
+        
+            Gets the object stored by this node.
+        
+            names: The list of assemblies in which to look for the type of the object.
             Returns: The System.Object corresponding to the stored value.
         """
         pass
 
     def GetValueTypeName(self, *__args):
         """
-        GetValueTypeName(self: ResXDataNode, names: Array[AssemblyName]) -> str
-        
-            Gets the name of the type of the value.
-        
-            names: The assemblies to examine for the type.
-            Returns: A System.String representing the fully qualified name of the type.
         GetValueTypeName(self: ResXDataNode, typeResolver: ITypeResolutionService) -> str
         
             A System.String representing the fully qualified name of the type.
         
             typeResolver: The type resolution service to use to locate a converter for this type.
+            Returns: A System.String representing the fully qualified name of the type.
+        GetValueTypeName(self: ResXDataNode, names: Array[AssemblyName]) -> str
+        
+            Gets the name of the type of the value.
+        
+            names: The assemblies to examine for the type.
             Returns: A System.String representing the fully qualified name of the type.
         """
         pass
@@ -874,7 +842,7 @@ Set: Name(self: ResXDataNode) = value
 
 
 
-class ResXFileRef(object):
+class ResXFileRef:
     """
     Represents a link to an external resource.
     
@@ -886,8 +854,8 @@ class ResXFileRef(object):
         ToString(self: ResXFileRef) -> str
         
             Gets the text representation of the current System.Resources.ResXFileRef object.
-            Returns: A string that consists of the concatenated text representations of the parameters specified in 
-             the current erload:System.Resources.ResXFileRef.#ctor constructor.
+            Returns: A string that consists of the concatenated text representations of the parameters 
+             specified in the current erload:System.Resources.ResXFileRef.#ctor constructor.
         """
         pass
 
@@ -924,7 +892,7 @@ Get: TypeName(self: ResXFileRef) -> str
     Converter = None
 
 
-class ResXResourceReader(object, IResourceReader, IEnumerable, IDisposable):
+class ResXResourceReader:
     """
     Enumerates XML resource (.resx) files and streams, and reads the sequential resource name and value pairs.
     
@@ -948,47 +916,48 @@ class ResXResourceReader(object, IResourceReader, IEnumerable, IDisposable):
     def Dispose(self, *args): #cannot find CLR method
         """
         Dispose(self: ResXResourceReader, disposing: bool)
-            Releases the unmanaged resources used by the System.Resources.ResXResourceReader and optionally 
-             releases the managed resources.
+            Releases the unmanaged resources used by the System.Resources.ResXResourceReader and 
+             optionally releases the managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
     @staticmethod
     def FromFileContents(fileContents, *__args):
         """
-        FromFileContents(fileContents: str, assemblyNames: Array[AssemblyName]) -> ResXResourceReader
+        FromFileContents(fileContents: str) -> ResXResourceReader
         
-            Creates a new System.Resources.ResXResourceReader object and initializes it to read a string 
-             whose contents are in the form of an XML resource file, and to use an array of 
-             System.Reflection.AssemblyName objects to resolve type names specified in a resource.
+            Creates a new System.Resources.ResXResourceReader object and initializes it to read a 
+             string whose contents are in the form of an XML resource file.
         
         
-            fileContents: A string whose contents are in the form of an XML resource file.
-            assemblyNames: An array of System.Reflection.AssemblyName objects that specifies one or more assemblies. The 
-             assemblies are used to resolve a type name in the resource to an actual type.
-        
+            fileContents: A string containing XML resource-formatted information.
             Returns: An object that reads resources from the fileContents string.
         FromFileContents(fileContents: str, typeResolver: ITypeResolutionService) -> ResXResourceReader
         
-            Creates a new System.Resources.ResXResourceReader object and initializes it to read a string 
-             whose contents are in the form of an XML resource file, and to use an 
-             System.ComponentModel.Design.ITypeResolutionService object to resolve type names specified in a 
-             resource.
+            Creates a new System.Resources.ResXResourceReader object and initializes it to read a 
+             string whose contents are in the form of an XML resource file, and to use an 
+             System.ComponentModel.Design.ITypeResolutionService object to resolve type names 
+             specified in a resource.
         
         
             fileContents: A string containing XML resource-formatted information.
             typeResolver: An object that resolves type names specified in a resource.
             Returns: An object that reads resources from the fileContents string.
-        FromFileContents(fileContents: str) -> ResXResourceReader
+        FromFileContents(fileContents: str, assemblyNames: Array[AssemblyName]) -> ResXResourceReader
         
-            Creates a new System.Resources.ResXResourceReader object and initializes it to read a string 
-             whose contents are in the form of an XML resource file.
+            Creates a new System.Resources.ResXResourceReader object and initializes it to read a 
+             string whose contents are in the form of an XML resource file, and to use an array of 
+             System.Reflection.AssemblyName objects to resolve type names specified in a resource.
         
         
-            fileContents: A string containing XML resource-formatted information.
+            fileContents: A string whose contents are in the form of an XML resource file.
+            assemblyNames: An array of System.Reflection.AssemblyName objects that specifies one or more assemblies. 
+             The assemblies are used to resolve a type name in the resource to an actual type.
+        
             Returns: An object that reads resources from the fileContents string.
         """
         pass
@@ -1006,26 +975,19 @@ class ResXResourceReader(object, IResourceReader, IEnumerable, IDisposable):
         """
         GetMetadataEnumerator(self: ResXResourceReader) -> IDictionaryEnumerator
         
-            Provides a dictionary enumerator that can retrieve the design-time properties from the current 
-             XML resource file or stream.
+            Provides a dictionary enumerator that can retrieve the design-time properties from the 
+             current XML resource file or stream.
         
             Returns: An enumerator for the metadata in a resource.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1073,7 +1035,7 @@ Set: UseResXDataNodes(self: ResXResourceReader) = value
 
 
 
-class ResXResourceSet(ResourceSet, IDisposable, IEnumerable):
+class ResXResourceSet:
     """
     Gathers all items that represent an XML resource (.resx) file into a single object.
     
@@ -1083,11 +1045,12 @@ class ResXResourceSet(ResourceSet, IDisposable, IEnumerable):
     def Dispose(self):
         """
         Dispose(self: ResourceSet, disposing: bool)
-            Releases resources (other than memory) associated with the current instance, closing internal 
-             managed objects if requested.
+            Releases resources (other than memory) associated with the current instance, closing 
+             internal managed objects if requested.
         
         
-            disposing: Indicates whether the objects contained in the current instance should be explicitly closed.
+            disposing: Indicates whether the objects contained in the current instance should be explicitly 
+             closed.
         """
         pass
 
@@ -1095,7 +1058,9 @@ class ResXResourceSet(ResourceSet, IDisposable, IEnumerable):
         """
         GetDefaultReader(self: ResXResourceSet) -> Type
         
-            Returns the preferred resource reader class for this kind of System.Resources.ResXResourceSet.
+            Returns the preferred resource reader class for this kind of 
+             System.Resources.ResXResourceSet.
+        
             Returns: The System.Type of the preferred resource reader for this kind of 
              System.Resources.ResXResourceSet.
         """
@@ -1105,7 +1070,9 @@ class ResXResourceSet(ResourceSet, IDisposable, IEnumerable):
         """
         GetDefaultWriter(self: ResXResourceSet) -> Type
         
-            Returns the preferred resource writer class for this kind of System.Resources.ResXResourceSet.
+            Returns the preferred resource writer class for this kind of 
+             System.Resources.ResXResourceSet.
+        
             Returns: The System.Type of the preferred resource writer for this kind of 
              System.Resources.ResXResourceSet.
         """
@@ -1114,24 +1081,17 @@ class ResXResourceSet(ResourceSet, IDisposable, IEnumerable):
     def ReadResources(self, *args): #cannot find CLR method
         """
         ReadResources(self: ResourceSet)
-            Reads all the resources and stores them in a System.Collections.Hashtable indicated in the 
-             System.Resources.ResourceSet.Table property.
+            Reads all the resources and stores them in a System.Collections.Hashtable indicated in 
+             the System.Resources.ResourceSet.Table property.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1154,7 +1114,7 @@ class ResXResourceSet(ResourceSet, IDisposable, IEnumerable):
     Table = None
 
 
-class ResXResourceWriter(object, IResourceWriter, IDisposable):
+class ResXResourceWriter:
     """
     Writes resources in an XML resource (.resx) file or an output stream.
     
@@ -1177,32 +1137,42 @@ class ResXResourceWriter(object, IResourceWriter, IDisposable):
 
     def AddMetadata(self, name, value):
         """
-        AddMetadata(self: ResXResourceWriter, name: str, value: object)
-            Adds a design-time property whose value is specified as an object to the list of resources to 
-             write.
+        AddMetadata(self: ResXResourceWriter, name: str, value: Array[Byte])
+            Adds a design-time property whose value is specifed as a byte array to the list of 
+             resources to write.
         
         
             name: The name of a property.
-            value: An object that is the value of the property to add.
+            value: A byte array containing the value of the property to add.
         AddMetadata(self: ResXResourceWriter, name: str, value: str)
-            Adds a design-time property whose value is specified as a string to the list of resources to 
-             write.
+            Adds a design-time property whose value is specified as a string to the list of resources 
+             to write.
         
         
             name: The name of a property.
             value: A string that is the value of the property to add.
-        AddMetadata(self: ResXResourceWriter, name: str, value: Array[Byte])
-            Adds a design-time property whose value is specifed as a byte array to the list of resources to 
-             write.
+        AddMetadata(self: ResXResourceWriter, name: str, value: object)
+            Adds a design-time property whose value is specified as an object to the list of 
+             resources to write.
         
         
             name: The name of a property.
-            value: A byte array containing the value of the property to add.
+            value: An object that is the value of the property to add.
         """
         pass
 
     def AddResource(self, *__args):
         """
+        AddResource(self: ResXResourceWriter, name: str, value: Array[Byte])
+            Adds a named resource specified as a byte array to the list of resources to write.
+        
+            name: The name of the resource.
+            value: The value of the resource to add as an 8-bit unsigned integer array.
+        AddResource(self: ResXResourceWriter, name: str, value: object)
+            Adds a named resource specified as an object to the list of resources to write.
+        
+            name: The name of the resource.
+            value: The value of the resource.
         AddResource(self: ResXResourceWriter, name: str, value: str)
             Adds a string resource to the resources.
         
@@ -1213,17 +1183,7 @@ class ResXResourceWriter(object, IResourceWriter, IDisposable):
              resources to write.
         
         
-            node: A System.Resources.ResXDataNode object that contains a resource name/value pair.
-        AddResource(self: ResXResourceWriter, name: str, value: Array[Byte])
-            Adds a named resource specified as a byte array to the list of resources to write.
-        
-            name: The name of the resource.
-            value: The value of the resource to add as an 8-bit unsigned integer array.
-        AddResource(self: ResXResourceWriter, name: str, value: object)
-            Adds a named resource specified as an object to the list of resources to write.
-        
-            name: The name of the resource.
-            value: The value of the resource.
+            node: A System.Resources.ResXDataNode object that contains a resource name/value pair.
         """
         pass
 
@@ -1245,24 +1205,17 @@ class ResXResourceWriter(object, IResourceWriter, IDisposable):
         """
         Generate(self: ResXResourceWriter)
             Writes all resources added by the 
-             System.Resources.ResXResourceWriter.AddResource(System.String,System.Byte[]) method to the 
-             output file or stream.
+             System.Resources.ResXResourceWriter.AddResource(System.String,System.Byte[]) method to 
+             the output file or stream.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1303,7 +1256,7 @@ Set: BasePath(self: ResXResourceWriter) = value
     Version = '2.0'
 
 
-class SatelliteContractVersionAttribute(Attribute, _Attribute):
+class SatelliteContractVersionAttribute:
     """
     Instructs the System.Resources.ResourceManager to ask for a particular version of a satellite assembly to simplify updates of the main assembly of an application.
     
@@ -1327,7 +1280,7 @@ Get: Version(self: SatelliteContractVersionAttribute) -> str
 
 
 
-class UltimateResourceFallbackLocation(Enum, IComparable, IFormattable, IConvertible):
+class UltimateResourceFallbackLocation:
     """
     Specifies the assembly for the System.Resources.ResourceManager class to use to retrieve neutral resources by using the Packaging and Deploying Resources.
     

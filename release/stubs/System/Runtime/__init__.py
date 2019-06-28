@@ -2,13 +2,13 @@
 # module System.Runtime calls itself Runtime
 # from mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class AssemblyTargetedPatchBandAttribute(Attribute, _Attribute):
+class AssemblyTargetedPatchBandAttribute:
     """
     Specifies patch band information for targeted patching of the .NET Framework.
     
@@ -32,7 +32,7 @@ Get: TargetedPatchBand(self: AssemblyTargetedPatchBandAttribute) -> str
 
 
 
-class GCLargeObjectHeapCompactionMode(Enum, IComparable, IFormattable, IConvertible):
+class GCLargeObjectHeapCompactionMode:
     """ enum GCLargeObjectHeapCompactionMode, values: CompactOnce (2), Default (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -72,7 +72,7 @@ class GCLargeObjectHeapCompactionMode(Enum, IComparable, IFormattable, IConverti
     value__ = None
 
 
-class GCLatencyMode(Enum, IComparable, IFormattable, IConvertible):
+class GCLatencyMode:
     """
     Adjusts the time that the garbage collector intrudes in your application.
     
@@ -119,7 +119,7 @@ class GCLatencyMode(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class GCSettings(object):
+class GCSettings:
     """ Specifies the garbage collection settings for the current process. """
     IsServerGC = False
     LargeObjectHeapCompactionMode = None
@@ -127,7 +127,7 @@ class GCSettings(object):
     __all__ = []
 
 
-class MemoryFailPoint(CriticalFinalizerObject, IDisposable):
+class MemoryFailPoint:
     """
     Checks for sufficient memory resources prior to execution. This class cannot be inherited.
     
@@ -141,18 +141,11 @@ class MemoryFailPoint(CriticalFinalizerObject, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -165,7 +158,7 @@ class MemoryFailPoint(CriticalFinalizerObject, IDisposable):
         pass
 
 
-class ProfileOptimization(object):
+class ProfileOptimization:
     # no doc
     @staticmethod
     def SetProfileRoot(directoryPath):
@@ -183,7 +176,7 @@ class ProfileOptimization(object):
     ]
 
 
-class TargetedPatchingOptOutAttribute(Attribute, _Attribute):
+class TargetedPatchingOptOutAttribute:
     """
     Indicates that the .NET Framework class library method to which this attribute is applied is unlikely to be affected by servicing releases, and therefore is eligible to be inlined across Native Image Generator (NGen) images.
     

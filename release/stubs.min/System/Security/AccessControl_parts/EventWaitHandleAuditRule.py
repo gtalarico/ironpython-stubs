@@ -1,9 +1,7 @@
-class EventWaitHandleAuditRule(AuditRule):
+class EventWaitHandleAuditRule:
  """
- Represents a set of access rights to be audited for a user or group. This class cannot be inherited.
-
- 
-
+ Represents a set of access rights to be audited for a user or group. This class cannot be inherited.
+ 
  EventWaitHandleAuditRule(identity: IdentityReference,eventRights: EventWaitHandleRights,flags: AuditFlags)
  """
  @staticmethod
@@ -11,21 +9,15 @@ class EventWaitHandleAuditRule(AuditRule):
   """ __new__(cls: type,identity: IdentityReference,eventRights: EventWaitHandleRights,flags: AuditFlags) """
   pass
  AccessMask=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the access mask for this rule.
-
-
-
+ """Gets the access mask for this rule.
+
 """
 
  EventWaitHandleRights=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the access rights affected by the audit rule.
-
-
-
-Get: EventWaitHandleRights(self: EventWaitHandleAuditRule) -> EventWaitHandleRights
-
-
-
+ """Gets the access rights affected by the audit rule.
+
+Get: EventWaitHandleRights(self: EventWaitHandleAuditRule) -> EventWaitHandleRights
+
 """
 
 

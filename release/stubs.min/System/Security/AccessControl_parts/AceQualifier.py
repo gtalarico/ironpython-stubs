@@ -1,9 +1,7 @@
-class AceQualifier(Enum,IComparable,IFormattable,IConvertible):
+class AceQualifier:
  """
- Specifies the function of an access control entry (ACE).
-
- 
-
+ Specifies the function of an access control entry (ACE).
+ 
  enum AceQualifier,values: AccessAllowed (0),AccessDenied (1),SystemAlarm (3),SystemAudit (2)
  """
  def __eq__(self,*args):

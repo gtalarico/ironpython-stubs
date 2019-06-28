@@ -1,9 +1,7 @@
-class PreProcessControlState(Enum,IComparable,IFormattable,IConvertible):
+class PreProcessControlState:
  """
- Provides options that specify the relationship between the control and preprocessing messages.
-
- 
-
+ Provides options that specify the relationship between the control and preprocessing messages.
+ 
  enum PreProcessControlState,values: MessageNeeded (1),MessageNotNeeded (2),MessageProcessed (0)
  """
  def __eq__(self,*args):

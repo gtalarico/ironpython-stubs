@@ -2,13 +2,13 @@
 # module System.Security.Authentication calls itself Authentication
 # from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class AuthenticationException(SystemException, ISerializable, _Exception):
+class AuthenticationException:
     """
     The exception that is thrown when authentication fails for an authentication stream.
     
@@ -16,14 +16,6 @@ class AuthenticationException(SystemException, ISerializable, _Exception):
     AuthenticationException(message: str)
     AuthenticationException(message: str, innerException: Exception)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -44,8 +36,10 @@ class AuthenticationException(SystemException, ISerializable, _Exception):
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    SerializeObjectState = None
 
-class CipherAlgorithmType(Enum, IComparable, IFormattable, IConvertible):
+
+class CipherAlgorithmType:
     """
     Defines the possible cipher algorithms for the System.Net.Security.SslStream class.
     
@@ -89,7 +83,7 @@ class CipherAlgorithmType(Enum, IComparable, IFormattable, IConvertible):
     Aes192 = None
     Aes256 = None
     Des = None
-    None = None
+    None_ =None
     Null = None
     Rc2 = None
     Rc4 = None
@@ -97,7 +91,7 @@ class CipherAlgorithmType(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ExchangeAlgorithmType(Enum, IComparable, IFormattable, IConvertible):
+class ExchangeAlgorithmType:
     """
     Specifies the algorithm used to create keys shared by the client and server.
     
@@ -137,13 +131,13 @@ class ExchangeAlgorithmType(Enum, IComparable, IFormattable, IConvertible):
         pass
 
     DiffieHellman = None
-    None = None
+    None_ =None
     RsaKeyX = None
     RsaSign = None
     value__ = None
 
 
-class HashAlgorithmType(Enum, IComparable, IFormattable, IConvertible):
+class HashAlgorithmType:
     """
     Specifies the algorithm used for generating message authentication codes (MACs).
     
@@ -183,7 +177,7 @@ class HashAlgorithmType(Enum, IComparable, IFormattable, IConvertible):
         pass
 
     Md5 = None
-    None = None
+    None_ =None
     Sha1 = None
     Sha256 = None
     Sha384 = None
@@ -191,7 +185,7 @@ class HashAlgorithmType(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class InvalidCredentialException(AuthenticationException, ISerializable, _Exception):
+class InvalidCredentialException:
     """
     The exception that is thrown when authentication fails for an authentication stream and cannot be retried.
     
@@ -199,14 +193,6 @@ class InvalidCredentialException(AuthenticationException, ISerializable, _Except
     InvalidCredentialException(message: str)
     InvalidCredentialException(message: str, innerException: Exception)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -227,8 +213,10 @@ class InvalidCredentialException(AuthenticationException, ISerializable, _Except
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    SerializeObjectState = None
 
-class SslProtocols(Enum, IComparable, IFormattable, IConvertible):
+
+class SslProtocols:
     """
     Defines the possible versions of System.Security.Authentication.SslProtocols.
     
@@ -268,7 +256,7 @@ class SslProtocols(Enum, IComparable, IFormattable, IConvertible):
         pass
 
     Default = None
-    None = None
+    None_ =None
     Ssl2 = None
     Ssl3 = None
     Tls = None

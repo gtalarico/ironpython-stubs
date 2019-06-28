@@ -1,9 +1,7 @@
-class RefreshProperties(Enum,IComparable,IFormattable,IConvertible):
+class RefreshProperties:
  """
- Defines identifiers that indicate the type of a refresh of the Properties window.
-
- 
-
+ Defines identifiers that indicate the type of a refresh of the Properties window.
+ 
  enum RefreshProperties,values: All (1),None (0),Repaint (2)
  """
  def __eq__(self,*args):
@@ -30,7 +28,7 @@ class RefreshProperties(Enum,IComparable,IFormattable,IConvertible):
  def __str__(self,*args):
   pass
  All=None
- None=None
+ None_ =None
  Repaint=None
  value__=None
 

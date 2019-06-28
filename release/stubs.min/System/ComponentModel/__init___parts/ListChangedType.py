@@ -1,9 +1,7 @@
-class ListChangedType(Enum,IComparable,IFormattable,IConvertible):
+class ListChangedType:
  """
- Specifies how the list changed.
-
- 
-
+ Specifies how the list changed.
+ 
  enum ListChangedType,values: ItemAdded (1),ItemChanged (4),ItemDeleted (2),ItemMoved (3),PropertyDescriptorAdded (5),PropertyDescriptorChanged (7),PropertyDescriptorDeleted (6),Reset (0)
  """
  def __eq__(self,*args):

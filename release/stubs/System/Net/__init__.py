@@ -2,29 +2,29 @@
 # module System.Net calls itself Net
 # from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class AuthenticationManager(object):
+class AuthenticationManager:
     """ Manages the authentication modules called during the client authentication process. """
     @staticmethod
     def Authenticate(challenge, request, credentials):
         """
         Authenticate(challenge: str, request: WebRequest, credentials: ICredentials) -> Authorization
         
-            Calls each registered authentication module to find the first module that can respond to the 
-             authentication request.
+            Calls each registered authentication module to find the first module that can respond to 
+             the authentication request.
         
         
             challenge: The challenge returned by the Internet resource.
             request: The System.Net.WebRequest that initiated the authentication challenge.
             credentials: The System.Net.ICredentials associated with this request.
-            Returns: An instance of the System.Net.Authorization class containing the result of the authorization 
-             attempt. If there is no authentication module to respond to the challenge, this method returns 
-             null.
+            Returns: An instance of the System.Net.Authorization class containing the result of the 
+             authorization attempt. If there is no authentication module to respond to the challenge, 
+             this method returns null.
         """
         pass
 
@@ -55,16 +55,16 @@ class AuthenticationManager(object):
     @staticmethod
     def Unregister(*__args):
         """
+        Unregister(authenticationModule: IAuthenticationModule)
+            Removes the specified authentication module from the list of registered modules.
+        
+            authenticationModule: The System.Net.IAuthenticationModule to remove from the list of registered modules.
         Unregister(authenticationScheme: str)
             Removes authentication modules with the specified authentication scheme from the list of 
              registered modules.
         
         
-            authenticationScheme: The authentication scheme of the module to remove.
-        Unregister(authenticationModule: IAuthenticationModule)
-            Removes the specified authentication module from the list of registered modules.
-        
-            authenticationModule: The System.Net.IAuthenticationModule to remove from the list of registered modules.
+            authenticationScheme: The authentication scheme of the module to remove.
         """
         pass
 
@@ -73,7 +73,7 @@ class AuthenticationManager(object):
     RegisteredModules = None
 
 
-class AuthenticationSchemes(Enum, IComparable, IFormattable, IConvertible):
+class AuthenticationSchemes:
     """
     Specifies protocols for authentication.
     
@@ -117,12 +117,12 @@ class AuthenticationSchemes(Enum, IComparable, IFormattable, IConvertible):
     Digest = None
     IntegratedWindowsAuthentication = None
     Negotiate = None
-    None = None
+    None_ =None
     Ntlm = None
     value__ = None
 
 
-class AuthenticationSchemeSelector(MulticastDelegate, ICloneable, ISerializable):
+class AuthenticationSchemeSelector:
     """
     Selects the authentication scheme for an System.Net.HttpListener instance.
     
@@ -149,9 +149,9 @@ class AuthenticationSchemeSelector(MulticastDelegate, ICloneable, ISerializable)
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -178,13 +178,14 @@ class AuthenticationSchemeSelector(MulticastDelegate, ICloneable, ISerializable)
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -201,7 +202,7 @@ class AuthenticationSchemeSelector(MulticastDelegate, ICloneable, ISerializable)
         pass
 
 
-class Authorization(object):
+class Authorization:
     """
     Contains an authentication message for an Internet server.
     
@@ -257,7 +258,7 @@ Set: ProtectionRealm(self: Authorization) = value
 
 
 
-class BindIPEndPoint(MulticastDelegate, ICloneable, ISerializable):
+class BindIPEndPoint:
     """
     Represents the method that specifies a local Internet Protocol address and port number for a System.Net.ServicePoint.
     
@@ -284,9 +285,9 @@ class BindIPEndPoint(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -313,13 +314,14 @@ class BindIPEndPoint(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -336,7 +338,7 @@ class BindIPEndPoint(MulticastDelegate, ICloneable, ISerializable):
         pass
 
 
-class Cookie(object):
+class Cookie:
     """
     Provides a set of properties and methods that are used to manage cookies. This class cannot be inherited.
     
@@ -352,10 +354,11 @@ class Cookie(object):
             Overrides the System.Object.Equals(System.Object) method.
         
             comparand: A reference to a System.Net.Cookie.
-            Returns: Returns true if the System.Net.Cookie is equal to comparand. Two System.Net.Cookie instances are 
-             equal if their System.Net.Cookie.Name, System.Net.Cookie.Value, System.Net.Cookie.Path, 
-             System.Net.Cookie.Domain, and System.Net.Cookie.Version properties are equal. 
-             System.Net.Cookie.Name and System.Net.Cookie.Domain string comparisons are case-insensitive.
+            Returns: Returns true if the System.Net.Cookie is equal to comparand. Two System.Net.Cookie 
+             instances are equal if their System.Net.Cookie.Name, System.Net.Cookie.Value, 
+             System.Net.Cookie.Path, System.Net.Cookie.Domain, and System.Net.Cookie.Version 
+             properties are equal. System.Net.Cookie.Name and System.Net.Cookie.Domain string 
+             comparisons are case-insensitive.
         """
         pass
 
@@ -373,8 +376,8 @@ class Cookie(object):
         ToString(self: Cookie) -> str
         
             Overrides the System.Object.ToString method.
-            Returns: Returns a string representation of this System.Net.Cookie object that is suitable for including 
-             in a HTTP Cookie: request header.
+            Returns: Returns a string representation of this System.Net.Cookie object that is suitable for 
+             including in a HTTP Cookie: request header.
         """
         pass
 
@@ -508,7 +511,7 @@ Set: Version(self: Cookie) = value
 
 
 
-class CookieCollection(object, ICollection, IEnumerable):
+class CookieCollection:
     """
     Provides a collection container for instances of the System.Net.Cookie class.
     
@@ -516,32 +519,34 @@ class CookieCollection(object, ICollection, IEnumerable):
     """
     def Add(self, *__args):
         """
-        Add(self: CookieCollection, cookies: CookieCollection)
-            Adds the contents of a System.Net.CookieCollection to the current instance.
-        
-            cookies: The System.Net.CookieCollection to be added.
         Add(self: CookieCollection, cookie: Cookie)
             Adds a System.Net.Cookie to a System.Net.CookieCollection.
         
-            cookie: The System.Net.Cookie to be added to a System.Net.CookieCollection.
+            cookie: The System.Net.Cookie to be added to a System.Net.CookieCollection.
+        Add(self: CookieCollection, cookies: CookieCollection)
+            Adds the contents of a System.Net.CookieCollection to the current instance.
+        
+            cookies: The System.Net.CookieCollection to be added.
         """
         pass
 
     def CopyTo(self, array, index):
         """
-        CopyTo(self: CookieCollection, array: Array[Cookie], index: int)
-            Copies the elements of this System.Net.CookieCollection to a System.Net.Cookie array starting at 
-             the specified index of the target array.
-        
-        
-            array: The target System.Net.Cookie array to which the System.Net.CookieCollection will be copied.
-            index: The zero-based index in the target System.Array where copying begins.
         CopyTo(self: CookieCollection, array: Array, index: int)
-            Copies the elements of a System.Net.CookieCollection to an instance of the System.Array class, 
-             starting at a particular index.
+            Copies the elements of a System.Net.CookieCollection to an instance of the System.Array 
+             class, starting at a particular index.
         
         
             array: The target System.Array to which the System.Net.CookieCollection will be copied.
+            index: The zero-based index in the target System.Array where copying begins.
+        CopyTo(self: CookieCollection, array: Array[Cookie], index: int)
+            Copies the elements of this System.Net.CookieCollection to a System.Net.Cookie array 
+             starting at the specified index of the target array.
+        
+        
+            array: The target System.Net.Cookie array to which the System.Net.CookieCollection will be 
+             copied.
+        
             index: The zero-based index in the target System.Array where copying begins.
         """
         pass
@@ -551,8 +556,8 @@ class CookieCollection(object, ICollection, IEnumerable):
         GetEnumerator(self: CookieCollection) -> IEnumerator
         
             Gets an enumerator that can iterate through a System.Net.CookieCollection.
-            Returns: An instance of an implementation of an System.Collections.IEnumerator interface that can iterate 
-             through a System.Net.CookieCollection.
+            Returns: An instance of an implementation of an System.Collections.IEnumerator interface that can 
+             iterate through a System.Net.CookieCollection.
         """
         pass
 
@@ -613,7 +618,7 @@ Get: SyncRoot(self: CookieCollection) -> object
 
 
 
-class CookieContainer(object):
+class CookieContainer:
     """
     Provides a container for a collection of System.Net.CookieCollection objects.
     
@@ -623,27 +628,28 @@ class CookieContainer(object):
     """
     def Add(self, *__args):
         """
-        Add(self: CookieContainer, uri: Uri, cookie: Cookie)
-            Adds a System.Net.Cookie to the System.Net.CookieContainer for a particular URI.
-        
-            uri: The URI of the System.Net.Cookie to be added to the System.Net.CookieContainer.
-            cookie: The System.Net.Cookie to be added to the System.Net.CookieContainer.
-        Add(self: CookieContainer, uri: Uri, cookies: CookieCollection)
-            Adds the contents of a System.Net.CookieCollection to the System.Net.CookieContainer for a 
-             particular URI.
-        
-        
-            uri: The URI of the System.Net.CookieCollection to be added to the System.Net.CookieContainer.
-            cookies: The System.Net.CookieCollection to be added to the System.Net.CookieContainer.
         Add(self: CookieContainer, cookie: Cookie)
-            Adds a System.Net.Cookie to a System.Net.CookieContainer. This method uses the domain from the 
-             System.Net.Cookie to determine which domain collection to associate the System.Net.Cookie with.
+            Adds a System.Net.Cookie to a System.Net.CookieContainer. This method uses the domain 
+             from the System.Net.Cookie to determine which domain collection to associate the 
+             System.Net.Cookie with.
         
         
             cookie: The System.Net.Cookie to be added to the System.Net.CookieContainer.
         Add(self: CookieContainer, cookies: CookieCollection)
             Adds the contents of a System.Net.CookieCollection to the System.Net.CookieContainer.
         
+            cookies: The System.Net.CookieCollection to be added to the System.Net.CookieContainer.
+        Add(self: CookieContainer, uri: Uri, cookie: Cookie)
+            Adds a System.Net.Cookie to the System.Net.CookieContainer for a particular URI.
+        
+            uri: The URI of the System.Net.Cookie to be added to the System.Net.CookieContainer.
+            cookie: The System.Net.Cookie to be added to the System.Net.CookieContainer.
+        Add(self: CookieContainer, uri: Uri, cookies: CookieCollection)
+            Adds the contents of a System.Net.CookieCollection to the System.Net.CookieContainer for 
+             a particular URI.
+        
+        
+            uri: The URI of the System.Net.CookieCollection to be added to the System.Net.CookieContainer.
             cookies: The System.Net.CookieCollection to be added to the System.Net.CookieContainer.
         """
         pass
@@ -652,8 +658,8 @@ class CookieContainer(object):
         """
         GetCookieHeader(self: CookieContainer, uri: Uri) -> str
         
-            Gets the HTTP cookie header that contains the HTTP cookies that represent the System.Net.Cookie 
-             instances that are associated with a specific URI.
+            Gets the HTTP cookie header that contains the HTTP cookies that represent the 
+             System.Net.Cookie instances that are associated with a specific URI.
         
         
             uri: The URI of the System.Net.Cookie instances desired.
@@ -671,21 +677,21 @@ class CookieContainer(object):
         
         
             uri: The URI of the System.Net.Cookie instances desired.
-            Returns: A System.Net.CookieCollection that contains the System.Net.Cookie instances that are associated 
-             with a specific URI.
+            Returns: A System.Net.CookieCollection that contains the System.Net.Cookie instances that are 
+             associated with a specific URI.
         """
         pass
 
     def SetCookies(self, uri, cookieHeader):
         """
         SetCookies(self: CookieContainer, uri: Uri, cookieHeader: str)
-            Adds System.Net.Cookie instances for one or more cookies from an HTTP cookie header to the 
-             System.Net.CookieContainer for a specific URI.
+            Adds System.Net.Cookie instances for one or more cookies from an HTTP cookie header to 
+             the System.Net.CookieContainer for a specific URI.
         
         
             uri: The URI of the System.Net.CookieCollection.
-            cookieHeader: The contents of an HTTP set-cookie header as returned by a HTTP server, with System.Net.Cookie 
-             instances delimited by commas.
+            cookieHeader: The contents of an HTTP set-cookie header as returned by a HTTP server, with 
+             System.Net.Cookie instances delimited by commas.
         """
         pass
 
@@ -739,21 +745,17 @@ Set: PerDomainCapacity(self: CookieContainer) = value
     DefaultPerDomainCookieLimit = 20
 
 
-class CookieException(FormatException, ISerializable, _Exception):
+class CookieException:
     """
     The exception that is thrown when an error is made adding a System.Net.Cookie to a System.Net.CookieContainer.
     
     CookieException()
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def GetObjectData(self, serializationInfo, streamingContext):
         """
         GetObjectData(self: CookieException, serializationInfo: SerializationInfo, streamingContext: StreamingContext)
-            Populates a System.Runtime.Serialization.SerializationInfo instance with the data needed to 
-             serialize the System.Net.CookieException.
+            Populates a System.Runtime.Serialization.SerializationInfo instance with the data needed 
+             to serialize the System.Net.CookieException.
         
         
             serializationInfo: The object that holds the serialized object data. The 
@@ -763,10 +765,6 @@ class CookieException(FormatException, ISerializable, _Exception):
              System.Runtime.Serialization.StreamingContext that specifies the destination for this 
              serialization.
         """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -787,8 +785,10 @@ class CookieException(FormatException, ISerializable, _Exception):
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    SerializeObjectState = None
 
-class CredentialCache(object, ICredentials, ICredentialsByHost, IEnumerable):
+
+class CredentialCache:
     """
     Provides storage for multiple credentials.
     
@@ -796,52 +796,57 @@ class CredentialCache(object, ICredentials, ICredentialsByHost, IEnumerable):
     """
     def Add(self, *__args):
         """
+        Add(self: CredentialCache, uriPrefix: Uri, authType: str, cred: NetworkCredential)
+            Adds a System.Net.NetworkCredential instance to the credential cache for use with 
+             protocols other than SMTP and associates it with a Uniform Resource Identifier (URI) 
+             prefix and authentication protocol.
+        
+        
+            uriPrefix: A System.Uri that specifies the URI prefix of the resources that the credential grants 
+             access to.
+        
+            authType: The authentication scheme used by the resource named in uriPrefix.
+            cred: The System.Net.NetworkCredential to add to the credential cache.
         Add(self: CredentialCache, host: str, port: int, authenticationType: str, credential: NetworkCredential)
-            Adds a System.Net.NetworkCredential instance for use with SMTP to the credential cache and 
-             associates it with a host computer, port, and authentication protocol. Credentials added using 
-             this method are valid for SMTP only. This method does not work for HTTP or FTP requests.
+            Adds a System.Net.NetworkCredential instance for use with SMTP to the credential cache 
+             and associates it with a host computer, port, and authentication protocol. Credentials 
+             added using this method are valid for SMTP only. This method does not work for HTTP or 
+             FTP requests.
         
         
             host: A System.String that identifies the host computer.
             port: A System.Int32 that specifies the port to connect to on host.
-            authenticationType: A System.String that identifies the authentication scheme used when connecting to host using 
-             cred. See Remarks.
+            authenticationType: A System.String that identifies the authentication scheme used when connecting to host 
+             using cred. See Remarks.
         
-            credential: The System.Net.NetworkCredential to add to the credential cache.
-        Add(self: CredentialCache, uriPrefix: Uri, authType: str, cred: NetworkCredential)
-            Adds a System.Net.NetworkCredential instance to the credential cache for use with protocols 
-             other than SMTP and associates it with a Uniform Resource Identifier (URI) prefix and 
-             authentication protocol.
-        
-        
-            uriPrefix: A System.Uri that specifies the URI prefix of the resources that the credential grants access to.
-            authType: The authentication scheme used by the resource named in uriPrefix.
-            cred: The System.Net.NetworkCredential to add to the credential cache.
+            credential: The System.Net.NetworkCredential to add to the credential cache.
         """
         pass
 
     def GetCredential(self, *__args):
         """
+        GetCredential(self: CredentialCache, uriPrefix: Uri, authType: str) -> NetworkCredential
+        
+            Returns the System.Net.NetworkCredential instance associated with the specified Uniform 
+             Resource Identifier (URI) and authentication type.
+        
+        
+            uriPrefix: A System.Uri that specifies the URI prefix of the resources that the credential grants 
+             access to.
+        
+            authType: The authentication scheme used by the resource named in uriPrefix.
+            Returns: A System.Net.NetworkCredential or, if there is no matching credential in the cache, null.
         GetCredential(self: CredentialCache, host: str, port: int, authenticationType: str) -> NetworkCredential
         
-            Returns the System.Net.NetworkCredential instance associated with the specified host, port, and 
-             authentication protocol.
+            Returns the System.Net.NetworkCredential instance associated with the specified host, 
+             port, and authentication protocol.
         
         
             host: A System.String that identifies the host computer.
             port: A System.Int32 that specifies the port to connect to on host.
-            authenticationType: A System.String that identifies the authentication scheme used when connecting to host. See 
-             Remarks.
+            authenticationType: A System.String that identifies the authentication scheme used when connecting to host. 
+             See Remarks.
         
-            Returns: A System.Net.NetworkCredential or, if there is no matching credential in the cache, null.
-        GetCredential(self: CredentialCache, uriPrefix: Uri, authType: str) -> NetworkCredential
-        
-            Returns the System.Net.NetworkCredential instance associated with the specified Uniform Resource 
-             Identifier (URI) and authentication type.
-        
-        
-            uriPrefix: A System.Uri that specifies the URI prefix of the resources that the credential grants access to.
-            authType: The authentication scheme used by the resource named in uriPrefix.
             Returns: A System.Net.NetworkCredential or, if there is no matching credential in the cache, null.
         """
         pass
@@ -857,23 +862,24 @@ class CredentialCache(object, ICredentials, ICredentialsByHost, IEnumerable):
 
     def Remove(self, *__args):
         """
+        Remove(self: CredentialCache, uriPrefix: Uri, authType: str)
+            Deletes a System.Net.NetworkCredential instance from the cache if it is associated with 
+             the specified Uniform Resource Identifier (URI) prefix and authentication protocol.
+        
+        
+            uriPrefix: A System.Uri that specifies the URI prefix of the resources that the credential is used 
+             for.
+        
+            authType: The authentication scheme used by the host named in uriPrefix.
         Remove(self: CredentialCache, host: str, port: int, authenticationType: str)
-            Deletes a System.Net.NetworkCredential instance from the cache if it is associated with the 
-             specified host, port, and authentication protocol.
+            Deletes a System.Net.NetworkCredential instance from the cache if it is associated with 
+             the specified host, port, and authentication protocol.
         
         
             host: A System.String that identifies the host computer.
             port: A System.Int32 that specifies the port to connect to on host.
-            authenticationType: A System.String that identifies the authentication scheme used when connecting to host. See 
-             Remarks.
-        
-        Remove(self: CredentialCache, uriPrefix: Uri, authType: str)
-            Deletes a System.Net.NetworkCredential instance from the cache if it is associated with the 
-             specified Uniform Resource Identifier (URI) prefix and authentication protocol.
-        
-        
-            uriPrefix: A System.Uri that specifies the URI prefix of the resources that the credential is used for.
-            authType: The authentication scheme used by the host named in uriPrefix.
+            authenticationType: A System.String that identifies the authentication scheme used when connecting to host. 
+             See Remarks.
         """
         pass
 
@@ -897,7 +903,7 @@ class CredentialCache(object, ICredentials, ICredentialsByHost, IEnumerable):
     DefaultNetworkCredentials = None
 
 
-class DecompressionMethods(Enum, IComparable, IFormattable, IConvertible):
+class DecompressionMethods:
     """
     Represents the file compression and decompression encoding format to be used to compress the data received in response to an System.Net.HttpWebRequest.
     
@@ -938,11 +944,11 @@ class DecompressionMethods(Enum, IComparable, IFormattable, IConvertible):
 
     Deflate = None
     GZip = None
-    None = None
+    None_ =None
     value__ = None
 
 
-class Dns(object):
+class Dns:
     """ Provides simple domain name resolution functionality. """
     @staticmethod
     def BeginGetHostAddresses(hostNameOrAddress, requestCallback, state):
@@ -952,11 +958,11 @@ class Dns(object):
             Asynchronously returns the Internet Protocol (IP) addresses for the specified host.
         
             hostNameOrAddress: The host name or IP address to resolve.
-            requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is 
-             complete.
+            requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation 
+             is complete.
         
-            state: A user-defined object that contains information about the operation. This object is passed to 
-             the requestCallback delegate when the operation is complete.
+            state: A user-defined object that contains information about the operation. This object is 
+             passed to the requestCallback delegate when the operation is complete.
         
             Returns: An System.IAsyncResult instance that references the asynchronous request.
         """
@@ -967,16 +973,16 @@ class Dns(object):
         """
         BeginGetHostByName(hostName: str, requestCallback: AsyncCallback, stateObject: object) -> IAsyncResult
         
-            Begins an asynchronous request for System.Net.IPHostEntry information about the specified DNS 
-             host name.
+            Begins an asynchronous request for System.Net.IPHostEntry information about the specified 
+             DNS host name.
         
         
             hostName: The DNS name of the host.
-            requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is 
-             complete.
+            requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation 
+             is complete.
         
-            stateObject: A user-defined object that contains information about the operation. This object is passed to 
-             the requestCallback delegate when the operation is complete.
+            stateObject: A user-defined object that contains information about the operation. This object is 
+             passed to the requestCallback delegate when the operation is complete.
         
             Returns: An System.IAsyncResult instance that references the asynchronous request.
         """
@@ -985,28 +991,28 @@ class Dns(object):
     @staticmethod
     def BeginGetHostEntry(*__args):
         """
-        BeginGetHostEntry(address: IPAddress, requestCallback: AsyncCallback, stateObject: object) -> IAsyncResult
-        
-            Asynchronously resolves an IP address to an System.Net.IPHostEntry instance.
-        
-            address: The IP address to resolve.
-            requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is 
-             complete.
-        
-            stateObject: A user-defined object that contains information about the operation. This object is passed to 
-             the requestCallback delegate when the operation is complete.
-        
-            Returns: An System.IAsyncResult instance that references the asynchronous request.
         BeginGetHostEntry(hostNameOrAddress: str, requestCallback: AsyncCallback, stateObject: object) -> IAsyncResult
         
             Asynchronously resolves a host name or IP address to an System.Net.IPHostEntry instance.
         
             hostNameOrAddress: The host name or IP address to resolve.
-            requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is 
-             complete.
+            requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation 
+             is complete.
         
-            stateObject: A user-defined object that contains information about the operation. This object is passed to 
-             the requestCallback delegate when the operation is complete.
+            stateObject: A user-defined object that contains information about the operation. This object is 
+             passed to the requestCallback delegate when the operation is complete.
+        
+            Returns: An System.IAsyncResult instance that references the asynchronous request.
+        BeginGetHostEntry(address: IPAddress, requestCallback: AsyncCallback, stateObject: object) -> IAsyncResult
+        
+            Asynchronously resolves an IP address to an System.Net.IPHostEntry instance.
+        
+            address: The IP address to resolve.
+            requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation 
+             is complete.
+        
+            stateObject: A user-defined object that contains information about the operation. This object is 
+             passed to the requestCallback delegate when the operation is complete.
         
             Returns: An System.IAsyncResult instance that references the asynchronous request.
         """
@@ -1022,11 +1028,11 @@ class Dns(object):
         
         
             hostName: The DNS name of the host.
-            requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is 
-             complete.
+            requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation 
+             is complete.
         
-            stateObject: A user-defined object that contains information about the operation. This object is passed to 
-             the requestCallback delegate when the operation is complete.
+            stateObject: A user-defined object that contains information about the operation. This object is 
+             passed to the requestCallback delegate when the operation is complete.
         
             Returns: An System.IAsyncResult instance that references the asynchronous request.
         """
@@ -1040,10 +1046,11 @@ class Dns(object):
             Ends an asynchronous request for DNS information.
         
             asyncResult: An System.IAsyncResult instance returned by a call to the 
-             System.Net.Dns.BeginGetHostAddresses(System.String,System.AsyncCallback,System.Object) method.
+             System.Net.Dns.BeginGetHostAddresses(System.String,System.AsyncCallback,System.Object) 
+             method.
         
-            Returns: An array of type System.Net.IPAddress that holds the IP addresses for the host specified by the 
-             hostNameOrAddress parameter of 
+            Returns: An array of type System.Net.IPAddress that holds the IP addresses for the host specified 
+             by the hostNameOrAddress parameter of 
              System.Net.Dns.BeginGetHostAddresses(System.String,System.AsyncCallback,System.Object).
         """
         pass
@@ -1056,7 +1063,8 @@ class Dns(object):
             Ends an asynchronous request for DNS information.
         
             asyncResult: An System.IAsyncResult instance that is returned by a call to the 
-             System.Net.Dns.BeginGetHostByName(System.String,System.AsyncCallback,System.Object) method.
+             System.Net.Dns.BeginGetHostByName(System.String,System.AsyncCallback,System.Object) 
+             method.
         
             Returns: An System.Net.IPHostEntry object that contains DNS information about a host.
         """
@@ -1069,8 +1077,8 @@ class Dns(object):
         
             Ends an asynchronous request for DNS information.
         
-            asyncResult: An System.IAsyncResult instance returned by a call to an erload:System.Net.Dns.BeginGetHostEntry 
-             method.
+            asyncResult: An System.IAsyncResult instance returned by a call to an 
+             erload:System.Net.Dns.BeginGetHostEntry method.
         
             Returns: An System.Net.IPHostEntry instance that contains address information about the host.
         """
@@ -1098,8 +1106,8 @@ class Dns(object):
             Returns the Internet Protocol (IP) addresses for the specified host.
         
             hostNameOrAddress: The host name or IP address to resolve.
-            Returns: An array of type System.Net.IPAddress that holds the IP addresses for the host that is specified 
-             by the hostNameOrAddress parameter.
+            Returns: An array of type System.Net.IPAddress that holds the IP addresses for the host that is 
+             specified by the hostNameOrAddress parameter.
         """
         pass
 
@@ -1111,18 +1119,18 @@ class Dns(object):
     @staticmethod
     def GetHostByAddress(address):
         """
-        GetHostByAddress(address: IPAddress) -> IPHostEntry
-        
-            Creates an System.Net.IPHostEntry instance from the specified System.Net.IPAddress.
-        
-            address: An System.Net.IPAddress.
-            Returns: An System.Net.IPHostEntry.
         GetHostByAddress(address: str) -> IPHostEntry
         
             Creates an System.Net.IPHostEntry instance from an IP address.
         
             address: An IP address.
-            Returns: An System.Net.IPHostEntry instance.
+            Returns: An System.Net.IPHostEntry instance.
+        GetHostByAddress(address: IPAddress) -> IPHostEntry
+        
+            Creates an System.Net.IPHostEntry instance from the specified System.Net.IPAddress.
+        
+            address: An System.Net.IPAddress.
+            Returns: An System.Net.IPHostEntry.
         """
         pass
 
@@ -1134,37 +1142,37 @@ class Dns(object):
             Gets the DNS information for the specified DNS host name.
         
             hostName: The DNS name of the host.
-            Returns: An System.Net.IPHostEntry object that contains host information for the address specified in 
-             hostName.
+            Returns: An System.Net.IPHostEntry object that contains host information for the address specified 
+             in hostName.
         """
         pass
 
     @staticmethod
     def GetHostEntry(*__args):
         """
-        GetHostEntry(address: IPAddress) -> IPHostEntry
-        
-            Resolves an IP address to an System.Net.IPHostEntry instance.
-        
-            address: An IP address.
-            Returns: An System.Net.IPHostEntry instance that contains address information about the host specified in 
-             address.
-        
         GetHostEntry(hostNameOrAddress: str) -> IPHostEntry
         
             Resolves a host name or IP address to an System.Net.IPHostEntry instance.
         
             hostNameOrAddress: The host name or IP address to resolve.
-            Returns: An System.Net.IPHostEntry instance that contains address information about the host specified in 
-             hostNameOrAddress.
+            Returns: An System.Net.IPHostEntry instance that contains address information about the host 
+             specified in hostNameOrAddress.
+        
+        GetHostEntry(address: IPAddress) -> IPHostEntry
+        
+            Resolves an IP address to an System.Net.IPHostEntry instance.
+        
+            address: An IP address.
+            Returns: An System.Net.IPHostEntry instance that contains address information about the host 
+             specified in address.
         """
         pass
 
     @staticmethod
     def GetHostEntryAsync(*__args):
         """
-        GetHostEntryAsync(hostNameOrAddress: str) -> Task[IPHostEntry]
-        GetHostEntryAsync(address: IPAddress) -> Task[IPHostEntry]
+        GetHostEntryAsync(address: IPAddress) -> Task[IPHostEntry]
+        GetHostEntryAsync(hostNameOrAddress: str) -> Task[IPHostEntry]
         """
         pass
 
@@ -1186,8 +1194,8 @@ class Dns(object):
             Resolves a DNS host name or IP address to an System.Net.IPHostEntry instance.
         
             hostName: A DNS-style host name or IP address.
-            Returns: An System.Net.IPHostEntry instance that contains address information about the host specified in 
-             hostName.
+            Returns: An System.Net.IPHostEntry instance that contains address information about the host 
+             specified in hostName.
         """
         pass
 
@@ -1211,7 +1219,7 @@ class Dns(object):
     ]
 
 
-class EndPoint(object):
+class EndPoint:
     """ Identifies a network address. This is an abstract class. """
     def Create(self, socketAddress):
         """
@@ -1243,7 +1251,7 @@ Get: AddressFamily(self: EndPoint) -> AddressFamily
 
 
 
-class DnsEndPoint(EndPoint):
+class DnsEndPoint:
     """
     Represents a network endpoint as a host name or a string representation of an IP address and a port number.
     
@@ -1277,8 +1285,8 @@ class DnsEndPoint(EndPoint):
             Returns the host name or string representation of the IP address and port number of the 
              System.Net.DnsEndPoint.
         
-            Returns: A string containing the address family, host name or IP address string, and the port number of 
-             the specified System.Net.DnsEndPoint.
+            Returns: A string containing the address family, host name or IP address string, and the port 
+             number of the specified System.Net.DnsEndPoint.
         """
         pass
 
@@ -1320,7 +1328,7 @@ Get: Port(self: DnsEndPoint) -> int
 
 
 
-class DnsPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IUnrestrictedPermission):
+class DnsPermission:
     """
     Controls rights to access Domain Name System (DNS) servers on the network.
     
@@ -1331,8 +1339,8 @@ class DnsPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStac
         Copy(self: DnsPermission) -> IPermission
         
             Creates an identical copy of the current permission instance.
-            Returns: A new instance of the System.Net.DnsPermission class that is an identical copy of the current 
-             instance.
+            Returns: A new instance of the System.Net.DnsPermission class that is an identical copy of the 
+             current instance.
         """
         pass
 
@@ -1349,16 +1357,16 @@ class DnsPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStac
         """
         Intersect(self: DnsPermission, target: IPermission) -> IPermission
         
-            Creates a permission instance that is the intersection of the current permission instance and 
-             the specified permission instance.
+            Creates a permission instance that is the intersection of the current permission instance 
+             and the specified permission instance.
         
         
             target: The System.Net.DnsPermission instance to intersect with the current instance.
             Returns: A System.Net.DnsPermission instance that represents the intersection of the current 
-             System.Net.DnsPermission instance with the specified System.Net.DnsPermission instance, or null 
-             if the intersection is empty. If both the current instance and target are unrestricted, this 
-             method returns a new System.Net.DnsPermission instance that is unrestricted; otherwise, it 
-             returns null.
+             System.Net.DnsPermission instance with the specified System.Net.DnsPermission instance, 
+             or null if the intersection is empty. If both the current instance and target are 
+             unrestricted, this method returns a new System.Net.DnsPermission instance that is 
+             unrestricted; otherwise, it returns null.
         """
         pass
 
@@ -1366,8 +1374,8 @@ class DnsPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStac
         """
         IsSubsetOf(self: DnsPermission, target: IPermission) -> bool
         
-            Determines whether the current permission instance is a subset of the specified permission 
-             instance.
+            Determines whether the current permission instance is a subset of the specified 
+             permission instance.
         
         
             target: The second System.Net.DnsPermission instance to be tested for the subset relationship.
@@ -1391,8 +1399,8 @@ class DnsPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStac
         ToXml(self: DnsPermission) -> SecurityElement
         
             Creates an XML encoding of a System.Net.DnsPermission instance and its current state.
-            Returns: A System.Security.SecurityElement instance that contains an XML-encoded representation of the 
-             security object, including state information.
+            Returns: A System.Security.SecurityElement instance that contains an XML-encoded representation of 
+             the security object, including state information.
         """
         pass
 
@@ -1400,16 +1408,17 @@ class DnsPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStac
         """
         Union(self: DnsPermission, target: IPermission) -> IPermission
         
-            Creates a permission instance that is the union of the current permission instance and the 
-             specified permission instance.
+            Creates a permission instance that is the union of the current permission instance and 
+             the specified permission instance.
         
         
             target: The System.Net.DnsPermission instance to combine with the current instance.
             Returns: A System.Net.DnsPermission instance that represents the union of the current 
-             System.Net.DnsPermission instance with the specified System.Net.DnsPermission instance. If 
-             target is null, this method returns a copy of the current instance. If the current instance or 
-             target is unrestricted, this method returns a System.Net.DnsPermission instance that is 
-             unrestricted; otherwise, it returns a System.Net.DnsPermission instance that is restricted.
+             System.Net.DnsPermission instance with the specified System.Net.DnsPermission instance. 
+             If target is null, this method returns a copy of the current instance. If the current 
+             instance or target is unrestricted, this method returns a System.Net.DnsPermission 
+             instance that is unrestricted; otherwise, it returns a System.Net.DnsPermission instance 
+             that is restricted.
         """
         pass
 
@@ -1429,7 +1438,7 @@ class DnsPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStac
         pass
 
 
-class DnsPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class DnsPermissionAttribute:
     """
     Specifies permission to request information from Domain Name Servers.
     
@@ -1457,7 +1466,7 @@ class DnsPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
         pass
 
 
-class DownloadDataCompletedEventArgs(AsyncCompletedEventArgs):
+class DownloadDataCompletedEventArgs:
     """ Provides data for the System.Net.WebClient.DownloadDataCompleted event. """
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the data that is downloaded by a erload:System.Net.WebClient.DownloadDataAsync method.
@@ -1468,7 +1477,7 @@ Get: Result(self: DownloadDataCompletedEventArgs) -> Array[Byte]
 
 
 
-class DownloadDataCompletedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class DownloadDataCompletedEventHandler:
     """
     Represents the method that will handle the System.Net.WebClient.DownloadDataCompleted event of a System.Net.WebClient.
     
@@ -1495,9 +1504,9 @@ class DownloadDataCompletedEventHandler(MulticastDelegate, ICloneable, ISerializ
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1524,13 +1533,14 @@ class DownloadDataCompletedEventHandler(MulticastDelegate, ICloneable, ISerializ
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -1547,7 +1557,7 @@ class DownloadDataCompletedEventHandler(MulticastDelegate, ICloneable, ISerializ
         pass
 
 
-class DownloadProgressChangedEventArgs(ProgressChangedEventArgs):
+class DownloadProgressChangedEventArgs:
     """ Provides data for the System.Net.WebClient.DownloadProgressChanged event of a System.Net.WebClient. """
     BytesReceived = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of bytes received.
@@ -1565,7 +1575,7 @@ Get: TotalBytesToReceive(self: DownloadProgressChangedEventArgs) -> Int64
 
 
 
-class DownloadProgressChangedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class DownloadProgressChangedEventHandler:
     """
     Represents the method that will handle the System.Net.WebClient.DownloadProgressChanged event of a System.Net.WebClient.
     
@@ -1592,9 +1602,9 @@ class DownloadProgressChangedEventHandler(MulticastDelegate, ICloneable, ISerial
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1621,13 +1631,14 @@ class DownloadProgressChangedEventHandler(MulticastDelegate, ICloneable, ISerial
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -1644,7 +1655,7 @@ class DownloadProgressChangedEventHandler(MulticastDelegate, ICloneable, ISerial
         pass
 
 
-class DownloadStringCompletedEventArgs(AsyncCompletedEventArgs):
+class DownloadStringCompletedEventArgs:
     """ Provides data for the System.Net.WebClient.DownloadStringCompleted event. """
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the data that is downloaded by a erload:System.Net.WebClient.DownloadStringAsync method.
@@ -1655,7 +1666,7 @@ Get: Result(self: DownloadStringCompletedEventArgs) -> str
 
 
 
-class DownloadStringCompletedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class DownloadStringCompletedEventHandler:
     """
     Represents the method that will handle the System.Net.WebClient.DownloadStringCompleted event of a System.Net.WebClient.
     
@@ -1682,9 +1693,9 @@ class DownloadStringCompletedEventHandler(MulticastDelegate, ICloneable, ISerial
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1711,13 +1722,14 @@ class DownloadStringCompletedEventHandler(MulticastDelegate, ICloneable, ISerial
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -1734,7 +1746,7 @@ class DownloadStringCompletedEventHandler(MulticastDelegate, ICloneable, ISerial
         pass
 
 
-class EndpointPermission(object):
+class EndpointPermission:
     """ Defines an endpoint that is authorized by a System.Net.SocketPermission instance. """
     def Equals(self, obj):
         """
@@ -1745,7 +1757,8 @@ class EndpointPermission(object):
         
         
             obj: The specified System.Object
-            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, false.
+            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, 
+             false.
         """
         pass
 
@@ -1797,7 +1810,7 @@ Get: Transport(self: EndpointPermission) -> TransportType
 
 
 
-class WebRequest(MarshalByRefObject, ISerializable):
+class WebRequest:
     """ Makes a request to a Uniform Resource Identifier (URI). This is an abstract class. """
     def Abort(self):
         """
@@ -1824,7 +1837,9 @@ class WebRequest(MarshalByRefObject, ISerializable):
         """
         BeginGetResponse(self: WebRequest, callback: AsyncCallback, state: object) -> IAsyncResult
         
-            When overridden in a descendant class, begins an asynchronous request for an Internet resource.
+            When overridden in a descendant class, begins an asynchronous request for an Internet 
+             resource.
+        
         
             callback: The System.AsyncCallback delegate.
             state: An object containing state information for this asynchronous request.
@@ -1835,18 +1850,18 @@ class WebRequest(MarshalByRefObject, ISerializable):
     @staticmethod
     def Create(*__args):
         """
-        Create(requestUri: Uri) -> WebRequest
-        
-            Initializes a new System.Net.WebRequest instance for the specified URI scheme.
-        
-            requestUri: A System.Uri containing the URI of the requested resource.
-            Returns: A System.Net.WebRequest descendant for the specified URI scheme.
         Create(requestUriString: str) -> WebRequest
         
             Initializes a new System.Net.WebRequest instance for the specified URI scheme.
         
             requestUriString: The URI that identifies the Internet resource.
-            Returns: A System.Net.WebRequest descendant for the specific URI scheme.
+            Returns: A System.Net.WebRequest descendant for the specific URI scheme.
+        Create(requestUri: Uri) -> WebRequest
+        
+            Initializes a new System.Net.WebRequest instance for the specified URI scheme.
+        
+            requestUri: A System.Uri containing the URI of the requested resource.
+            Returns: A System.Net.WebRequest descendant for the specified URI scheme.
         """
         pass
 
@@ -1865,8 +1880,8 @@ class WebRequest(MarshalByRefObject, ISerializable):
     @staticmethod
     def CreateHttp(*__args):
         """
-        CreateHttp(requestUri: Uri) -> HttpWebRequest
-        CreateHttp(requestUriString: str) -> HttpWebRequest
+        CreateHttp(requestUriString: str) -> HttpWebRequest
+        CreateHttp(requestUri: Uri) -> HttpWebRequest
         """
         pass
 
@@ -1897,8 +1912,8 @@ class WebRequest(MarshalByRefObject, ISerializable):
     def GetObjectData(self, *args): #cannot find CLR method
         """
         GetObjectData(self: WebRequest, serializationInfo: SerializationInfo, streamingContext: StreamingContext)
-            Populates a System.Runtime.Serialization.SerializationInfo with the data needed to serialize the 
-             target object.
+            Populates a System.Runtime.Serialization.SerializationInfo with the data needed to 
+             serialize the target object.
         
         
             serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
@@ -1940,8 +1955,8 @@ class WebRequest(MarshalByRefObject, ISerializable):
         """
         GetSystemWebProxy() -> IWebProxy
         
-            Returns a proxy configured with the Internet Explorer settings of the currently impersonated 
-             user.
+            Returns a proxy configured with the Internet Explorer settings of the currently 
+             impersonated user.
         
             Returns: An System.Net.IWebProxy used by every call to instances of System.Net.WebRequest.
         """
@@ -1953,11 +1968,11 @@ class WebRequest(MarshalByRefObject, ISerializable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -1980,8 +1995,8 @@ class WebRequest(MarshalByRefObject, ISerializable):
             Registers a System.Net.WebRequest descendant for the specified URI.
         
             prefix: The complete URI or URI prefix that the System.Net.WebRequest descendant services.
-            creator: The create method that the System.Net.WebRequest calls to create the System.Net.WebRequest 
-             descendant.
+            creator: The create method that the System.Net.WebRequest calls to create the 
+             System.Net.WebRequest descendant.
         
             Returns: true if registration is successful; otherwise, false.
         """
@@ -2123,7 +2138,7 @@ Set: UseDefaultCredentials(self: WebRequest) = value
     DefaultWebProxy = None
 
 
-class FileWebRequest(WebRequest, ISerializable):
+class FileWebRequest:
     """ Provides a file system implementation of the System.Net.WebRequest class. """
     def Abort(self):
         """
@@ -2160,8 +2175,8 @@ class FileWebRequest(WebRequest, ISerializable):
         """
         EndGetRequestStream(self: FileWebRequest, asyncResult: IAsyncResult) -> Stream
         
-            Ends an asynchronous request for a System.IO.Stream instance that the application uses to write 
-             data.
+            Ends an asynchronous request for a System.IO.Stream instance that the application uses to 
+             write data.
         
         
             asyncResult: An System.IAsyncResult that references the pending request for a stream.
@@ -2183,8 +2198,8 @@ class FileWebRequest(WebRequest, ISerializable):
     def GetObjectData(self, *args): #cannot find CLR method
         """
         GetObjectData(self: FileWebRequest, serializationInfo: SerializationInfo, streamingContext: StreamingContext)
-            Populates a System.Runtime.Serialization.SerializationInfo with the data needed to serialize the 
-             target object.
+            Populates a System.Runtime.Serialization.SerializationInfo with the data needed to 
+             serialize the target object.
         
         
             serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
@@ -2217,11 +2232,11 @@ class FileWebRequest(WebRequest, ISerializable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2331,7 +2346,7 @@ Set: UseDefaultCredentials(self: FileWebRequest) = value
 
 
 
-class WebResponse(MarshalByRefObject, ISerializable, IDisposable):
+class WebResponse:
     """ Provides a response from a Uniform Resource Identifier (URI). This is an abstract class. """
     def Close(self):
         """
@@ -2347,8 +2362,8 @@ class WebResponse(MarshalByRefObject, ISerializable, IDisposable):
     def GetObjectData(self, *args): #cannot find CLR method
         """
         GetObjectData(self: WebResponse, serializationInfo: SerializationInfo, streamingContext: StreamingContext)
-            Populates a System.Runtime.Serialization.SerializationInfo with the data that is needed to 
-             serialize the target object.
+            Populates a System.Runtime.Serialization.SerializationInfo with the data that is needed 
+             to serialize the target object.
         
         
             serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
@@ -2372,11 +2387,11 @@ class WebResponse(MarshalByRefObject, ISerializable, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2387,18 +2402,11 @@ class WebResponse(MarshalByRefObject, ISerializable, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -2467,7 +2475,7 @@ Get: ResponseUri(self: WebResponse) -> Uri
 
 
 
-class FileWebResponse(WebResponse, ISerializable, IDisposable, ICloseEx):
+class FileWebResponse:
     """ Provides a file system implementation of the System.Net.WebResponse class. """
     def Close(self):
         """
@@ -2483,8 +2491,8 @@ class FileWebResponse(WebResponse, ISerializable, IDisposable, ICloseEx):
     def GetObjectData(self, *args): #cannot find CLR method
         """
         GetObjectData(self: FileWebResponse, serializationInfo: SerializationInfo, streamingContext: StreamingContext)
-            Populates a System.Runtime.Serialization.SerializationInfo with the data needed to serialize the 
-             target object.
+            Populates a System.Runtime.Serialization.SerializationInfo with the data needed to 
+             serialize the target object.
         
         
             serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
@@ -2508,11 +2516,11 @@ class FileWebResponse(WebResponse, ISerializable, IDisposable, ICloseEx):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2523,18 +2531,11 @@ class FileWebResponse(WebResponse, ISerializable, IDisposable, ICloseEx):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -2584,7 +2585,7 @@ Get: ResponseUri(self: FileWebResponse) -> Uri
 
 
 
-class FtpStatusCode(Enum, IComparable, IFormattable, IConvertible):
+class FtpStatusCode:
     """
     Specifies the status codes returned for a File Transfer Protocol (FTP) operation.
     
@@ -2663,7 +2664,7 @@ class FtpStatusCode(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class FtpWebRequest(WebRequest, ISerializable):
+class FtpWebRequest:
     """ Implements a File Transfer Protocol (FTP) client. """
     def Abort(self):
         """
@@ -2678,11 +2679,11 @@ class FtpWebRequest(WebRequest, ISerializable):
         
             Begins asynchronously opening a request's content stream for writing.
         
-            callback: An System.AsyncCallback delegate that references the method to invoke when the operation is 
-             complete.
+            callback: An System.AsyncCallback delegate that references the method to invoke when the operation 
+             is complete.
         
-            state: A user-defined object that contains information about the operation. This object is passed to 
-             the callback delegate when the operation completes.
+            state: A user-defined object that contains information about the operation. This object is 
+             passed to the callback delegate when the operation completes.
         
             Returns: An System.IAsyncResult instance that indicates the status of the operation.
         """
@@ -2694,11 +2695,11 @@ class FtpWebRequest(WebRequest, ISerializable):
         
             Begins sending a request and receiving a response from an FTP server asynchronously.
         
-            callback: An System.AsyncCallback delegate that references the method to invoke when the operation is 
-             complete.
+            callback: An System.AsyncCallback delegate that references the method to invoke when the operation 
+             is complete.
         
-            state: A user-defined object that contains information about the operation. This object is passed to 
-             the callback delegate when the operation completes.
+            state: A user-defined object that contains information about the operation. This object is 
+             passed to the callback delegate when the operation completes.
         
             Returns: An System.IAsyncResult instance that indicates the status of the operation.
         """
@@ -2726,16 +2727,16 @@ class FtpWebRequest(WebRequest, ISerializable):
         
         
             asyncResult: The System.IAsyncResult that was returned when the operation started.
-            Returns: A System.Net.WebResponse reference that contains an System.Net.FtpWebResponse instance. This 
-             object contains the FTP server's response to the request.
+            Returns: A System.Net.WebResponse reference that contains an System.Net.FtpWebResponse instance. 
+             This object contains the FTP server's response to the request.
         """
         pass
 
     def GetObjectData(self, *args): #cannot find CLR method
         """
         GetObjectData(self: WebRequest, serializationInfo: SerializationInfo, streamingContext: StreamingContext)
-            Populates a System.Runtime.Serialization.SerializationInfo with the data needed to serialize the 
-             target object.
+            Populates a System.Runtime.Serialization.SerializationInfo with the data needed to 
+             serialize the target object.
         
         
             serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
@@ -2749,8 +2750,8 @@ class FtpWebRequest(WebRequest, ISerializable):
         GetRequestStream(self: FtpWebRequest) -> Stream
         
             Retrieves the stream used to upload data to an FTP server.
-            Returns: A writable System.IO.Stream instance used to store data to be sent to the server by the current 
-             request.
+            Returns: A writable System.IO.Stream instance used to store data to be sent to the server by the 
+             current request.
         """
         pass
 
@@ -2759,8 +2760,8 @@ class FtpWebRequest(WebRequest, ISerializable):
         GetResponse(self: FtpWebRequest) -> WebResponse
         
             Returns the FTP server response.
-            Returns: A System.Net.WebResponse reference that contains an System.Net.FtpWebResponse instance. This 
-             object contains the FTP server's response to the request.
+            Returns: A System.Net.WebResponse reference that contains an System.Net.FtpWebResponse instance. 
+             This object contains the FTP server's response to the request.
         """
         pass
 
@@ -2770,11 +2771,11 @@ class FtpWebRequest(WebRequest, ISerializable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2950,7 +2951,7 @@ Set: UsePassive(self: FtpWebRequest) = value
     DefaultCachePolicy = None
 
 
-class FtpWebResponse(WebResponse, ISerializable, IDisposable):
+class FtpWebResponse:
     """ Encapsulates a File Transfer Protocol (FTP) server's response to a request. """
     def Close(self):
         """
@@ -2966,8 +2967,8 @@ class FtpWebResponse(WebResponse, ISerializable, IDisposable):
     def GetObjectData(self, *args): #cannot find CLR method
         """
         GetObjectData(self: WebResponse, serializationInfo: SerializationInfo, streamingContext: StreamingContext)
-            Populates a System.Runtime.Serialization.SerializationInfo with the data that is needed to 
-             serialize the target object.
+            Populates a System.Runtime.Serialization.SerializationInfo with the data that is needed 
+             to serialize the target object.
         
         
             serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
@@ -2981,8 +2982,8 @@ class FtpWebResponse(WebResponse, ISerializable, IDisposable):
         GetResponseStream(self: FtpWebResponse) -> Stream
         
             Retrieves the stream that contains response data sent from an FTP server.
-            Returns: A readable System.IO.Stream instance that contains data returned with the response; otherwise, 
-             System.IO.Stream.Null if no response data was returned by the server.
+            Returns: A readable System.IO.Stream instance that contains data returned with the response; 
+             otherwise, System.IO.Stream.Null if no response data was returned by the server.
         """
         pass
 
@@ -2992,11 +2993,11 @@ class FtpWebResponse(WebResponse, ISerializable, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -3007,18 +3008,11 @@ class FtpWebResponse(WebResponse, ISerializable, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -3095,7 +3089,7 @@ Get: WelcomeMessage(self: FtpWebResponse) -> str
 
 
 
-class GlobalProxySelection(object):
+class GlobalProxySelection:
     """
     Contains a global default proxy instance for all HTTP requests.
     
@@ -3114,7 +3108,7 @@ class GlobalProxySelection(object):
     Select = None
 
 
-class HttpContinueDelegate(MulticastDelegate, ICloneable, ISerializable):
+class HttpContinueDelegate:
     """
     Represents the method that notifies callers when a continue response is received by the client.
     
@@ -3141,9 +3135,9 @@ class HttpContinueDelegate(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -3170,13 +3164,14 @@ class HttpContinueDelegate(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -3193,7 +3188,7 @@ class HttpContinueDelegate(MulticastDelegate, ICloneable, ISerializable):
         pass
 
 
-class HttpListener(object, IDisposable):
+class HttpListener:
     """
     Provides a simple, programmatically controlled HTTP protocol listener. This class cannot be inherited.
     
@@ -3202,8 +3197,8 @@ class HttpListener(object, IDisposable):
     def Abort(self):
         """
         Abort(self: HttpListener)
-            Shuts down the System.Net.HttpListener object immediately, discarding all currently queued 
-             requests.
+            Shuts down the System.Net.HttpListener object immediately, discarding all currently 
+             queued requests.
         """
         pass
 
@@ -3213,11 +3208,11 @@ class HttpListener(object, IDisposable):
         
             Begins asynchronously retrieving an incoming request.
         
-            callback: An System.AsyncCallback delegate that references the method to invoke when a client request is 
-             available.
+            callback: An System.AsyncCallback delegate that references the method to invoke when a client 
+             request is available.
         
-            state: A user-defined object that contains information about the operation. This object is passed to 
-             the callback delegate when the operation completes.
+            state: A user-defined object that contains information about the operation. This object is 
+             passed to the callback delegate when the operation completes.
         
             Returns: An System.IAsyncResult object that indicates the status of the asynchronous operation.
         """
@@ -3236,7 +3231,9 @@ class HttpListener(object, IDisposable):
         
             Completes an asynchronous operation to retrieve an incoming client request.
         
-            asyncResult: An System.IAsyncResult object that was obtained when the asynchronous operation was started.
+            asyncResult: An System.IAsyncResult object that was obtained when the asynchronous operation was 
+             started.
+        
             Returns: An System.Net.HttpListenerContext object that represents the client request.
         """
         pass
@@ -3269,18 +3266,11 @@ class HttpListener(object, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -3378,7 +3368,7 @@ Set: UnsafeConnectionNtlmAuthentication(self: HttpListener) = value
     IsSupported = True
 
 
-class HttpListenerBasicIdentity(GenericIdentity, IIdentity):
+class HttpListenerBasicIdentity:
     """
     Holds the user name and password from a basic authentication request.
     
@@ -3416,14 +3406,14 @@ Get: Password(self: HttpListenerBasicIdentity) -> str
 
 
 
-class HttpListenerContext(object):
+class HttpListenerContext:
     """ Provides access to the request and response objects used by the System.Net.HttpListener class. This class cannot be inherited. """
     def AcceptWebSocketAsync(self, subProtocol, *__args):
         """
-        AcceptWebSocketAsync(self: HttpListenerContext, subProtocol: str, receiveBufferSize: int, keepAliveInterval: TimeSpan) -> Task[HttpListenerWebSocketContext]
-        AcceptWebSocketAsync(self: HttpListenerContext, subProtocol: str, receiveBufferSize: int, keepAliveInterval: TimeSpan, internalBuffer: ArraySegment[Byte]) -> Task[HttpListenerWebSocketContext]
         AcceptWebSocketAsync(self: HttpListenerContext, subProtocol: str) -> Task[HttpListenerWebSocketContext]
-        AcceptWebSocketAsync(self: HttpListenerContext, subProtocol: str, keepAliveInterval: TimeSpan) -> Task[HttpListenerWebSocketContext]
+        AcceptWebSocketAsync(self: HttpListenerContext, subProtocol: str, keepAliveInterval: TimeSpan) -> Task[HttpListenerWebSocketContext]
+        AcceptWebSocketAsync(self: HttpListenerContext, subProtocol: str, receiveBufferSize: int, keepAliveInterval: TimeSpan) -> Task[HttpListenerWebSocketContext]
+        AcceptWebSocketAsync(self: HttpListenerContext, subProtocol: str, receiveBufferSize: int, keepAliveInterval: TimeSpan, internalBuffer: ArraySegment[Byte]) -> Task[HttpListenerWebSocketContext]
         """
         pass
 
@@ -3450,7 +3440,7 @@ Get: User(self: HttpListenerContext) -> IPrincipal
 
 
 
-class HttpListenerException(Win32Exception, ISerializable, _Exception):
+class HttpListenerException:
     """
     The exception that is thrown when an error occurs processing an HTTP request.
     
@@ -3458,14 +3448,6 @@ class HttpListenerException(Win32Exception, ISerializable, _Exception):
     HttpListenerException(errorCode: int)
     HttpListenerException(errorCode: int, message: str)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -3494,16 +3476,18 @@ Get: ErrorCode(self: HttpListenerException) -> int
 """
 
 
+    SerializeObjectState = None
 
-class HttpListenerPrefixCollection(object, ICollection[str], IEnumerable[str], IEnumerable):
+
+class HttpListenerPrefixCollection:
     """ Represents the collection used to store Uniform Resource Identifier (URI) prefixes for System.Net.HttpListener objects. """
     def Add(self, uriPrefix):
         """
         Add(self: HttpListenerPrefixCollection, uriPrefix: str)
             Adds a Uniform Resource Identifier (URI) prefix to the collection.
         
-            uriPrefix: A System.String that identifies the URI information that is compared in incoming requests. The 
-             prefix must be terminated with a forward slash ("/").
+            uriPrefix: A System.String that identifies the URI information that is compared in incoming 
+             requests. The prefix must be terminated with a forward slash ("/").
         """
         pass
 
@@ -3518,8 +3502,8 @@ class HttpListenerPrefixCollection(object, ICollection[str], IEnumerable[str], I
         """
         Contains(self: HttpListenerPrefixCollection, uriPrefix: str) -> bool
         
-            Returns a System.Boolean value that indicates whether the specified prefix is contained in the 
-             collection.
+            Returns a System.Boolean value that indicates whether the specified prefix is contained 
+             in the collection.
         
         
             uriPrefix: A System.String that contains the Uniform Resource Identifier (URI) prefix to test.
@@ -3529,18 +3513,20 @@ class HttpListenerPrefixCollection(object, ICollection[str], IEnumerable[str], I
 
     def CopyTo(self, array, offset):
         """
-        CopyTo(self: HttpListenerPrefixCollection, array: Array[str], offset: int)
-            Copies the contents of an System.Net.HttpListenerPrefixCollection to the specified string array.
-        
-            array: The one dimensional string array that receives the Uniform Resource Identifier (URI) prefix 
-             strings in this collection.
-        
-            offset: The zero-based index in array at which copying begins.
         CopyTo(self: HttpListenerPrefixCollection, array: Array, offset: int)
             Copies the contents of an System.Net.HttpListenerPrefixCollection to the specified array.
         
-            array: The one dimensional System.Array that receives the Uniform Resource Identifier (URI) prefix 
-             strings in this collection.
+            array: The one dimensional System.Array that receives the Uniform Resource Identifier (URI) 
+             prefix strings in this collection.
+        
+            offset: The zero-based index in array at which copying begins.
+        CopyTo(self: HttpListenerPrefixCollection, array: Array[str], offset: int)
+            Copies the contents of an System.Net.HttpListenerPrefixCollection to the specified string 
+             array.
+        
+        
+            array: The one dimensional string array that receives the Uniform Resource Identifier (URI) 
+             prefix strings in this collection.
         
             offset: The zero-based index in array at which copying begins.
         """
@@ -3551,8 +3537,8 @@ class HttpListenerPrefixCollection(object, ICollection[str], IEnumerable[str], I
         GetEnumerator(self: HttpListenerPrefixCollection) -> IEnumerator[str]
         
             Returns an object that can be used to iterate through the collection.
-            Returns: An object that implements the System.Collections.IEnumerator interface and provides access to 
-             the strings in this collection.
+            Returns: An object that implements the System.Collections.IEnumerator interface and provides 
+             access to the strings in this collection.
         """
         pass
 
@@ -3560,13 +3546,13 @@ class HttpListenerPrefixCollection(object, ICollection[str], IEnumerable[str], I
         """
         Remove(self: HttpListenerPrefixCollection, uriPrefix: str) -> bool
         
-            Removes the specified Uniform Resource Identifier (URI) from the list of prefixes handled by the 
-             System.Net.HttpListener object.
+            Removes the specified Uniform Resource Identifier (URI) from the list of prefixes handled 
+             by the System.Net.HttpListener object.
         
         
             uriPrefix: A System.String that contains the URI prefix to remove.
-            Returns: true if the uriPrefix was found in the System.Net.HttpListenerPrefixCollection and removed; 
-             otherwise false.
+            Returns: true if the uriPrefix was found in the System.Net.HttpListenerPrefixCollection and 
+             removed; otherwise false.
         """
         pass
 
@@ -3617,7 +3603,7 @@ Get: IsSynchronized(self: HttpListenerPrefixCollection) -> bool
 
 
 
-class HttpListenerRequest(object):
+class HttpListenerRequest:
     """ Describes an incoming HTTP request to an System.Net.HttpListener object. This class cannot be inherited. """
     def BeginGetClientCertificate(self, requestCallback, state):
         """
@@ -3625,11 +3611,11 @@ class HttpListenerRequest(object):
         
             Begins an asynchronous request for the client's X.509 v.3 certificate.
         
-            requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is 
-             complete.
+            requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation 
+             is complete.
         
-            state: A user-defined object that contains information about the operation. This object is passed to 
-             the callback delegate when the operation completes.
+            state: A user-defined object that contains information about the operation. This object is 
+             passed to the callback delegate when the operation completes.
         
             Returns: An System.IAsyncResult that indicates the status of the operation.
         """
@@ -3651,8 +3637,8 @@ class HttpListenerRequest(object):
         GetClientCertificate(self: HttpListenerRequest) -> X509Certificate2
         
             Retrieves the client's X.509 v.3 certificate.
-            Returns: A System.Security.Cryptography.X509Certificates object that contains the client's X.509 v.3 
-             certificate.
+            Returns: A System.Security.Cryptography.X509Certificates object that contains the client's X.509 
+             v.3 certificate.
         """
         pass
 
@@ -3863,7 +3849,7 @@ Get: UserLanguages(self: HttpListenerRequest) -> Array[str]
 
 
 
-class HttpListenerResponse(object, IDisposable):
+class HttpListenerResponse:
     """ Represents a response to a request being handled by an System.Net.HttpListener object. """
     def Abort(self):
         """
@@ -3903,17 +3889,16 @@ class HttpListenerResponse(object, IDisposable):
 
     def Close(self, responseEntity=None, willBlock=None):
         """
-        Close(self: HttpListenerResponse)
-            Sends the response to the client and releases the resources held by this 
-             System.Net.HttpListenerResponse instance.
-        
         Close(self: HttpListenerResponse, responseEntity: Array[Byte], willBlock: bool)
             Returns the specified byte array to the client and releases the resources held by this 
              System.Net.HttpListenerResponse instance.
         
         
             responseEntity: A System.Byte array that contains the response to send to the client.
-            willBlock: true to block execution while flushing the stream to the client; otherwise, false.
+            willBlock: true to block execution while flushing the stream to the client; otherwise, false.
+        Close(self: HttpListenerResponse)
+            Sends the response to the client and releases the resources held by this 
+             System.Net.HttpListenerResponse instance.
         """
         pass
 
@@ -3945,18 +3930,11 @@ class HttpListenerResponse(object, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -4064,7 +4042,7 @@ Set: StatusDescription(self: HttpListenerResponse) = value
 
 
 
-class HttpListenerTimeoutManager(object):
+class HttpListenerTimeoutManager:
     # no doc
     DrainEntityBody = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: DrainEntityBody(self: HttpListenerTimeoutManager) -> TimeSpan
@@ -4104,7 +4082,7 @@ Set: RequestQueue(self: HttpListenerTimeoutManager) = value
 
 
 
-class HttpRequestHeader(Enum, IComparable, IFormattable, IConvertible):
+class HttpRequestHeader:
     """
     The HTTP headers that may be specified in a client request.
     
@@ -4187,7 +4165,7 @@ class HttpRequestHeader(Enum, IComparable, IFormattable, IConvertible):
     Warning = None
 
 
-class HttpResponseHeader(Enum, IComparable, IFormattable, IConvertible):
+class HttpResponseHeader:
     """
     The HTTP headers that can be specified in a server response.
     
@@ -4259,7 +4237,7 @@ class HttpResponseHeader(Enum, IComparable, IFormattable, IConvertible):
     WwwAuthenticate = None
 
 
-class HttpStatusCode(Enum, IComparable, IFormattable, IConvertible):
+class HttpStatusCode:
     """
     Contains the values of status codes defined for HTTP.
     
@@ -4348,7 +4326,7 @@ class HttpStatusCode(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class HttpVersion(object):
+class HttpVersion:
     """
     Defines the HTTP version numbers that are supported by the System.Net.HttpWebRequest and System.Net.HttpWebResponse classes.
     
@@ -4358,7 +4336,7 @@ class HttpVersion(object):
     Version11 = None
 
 
-class HttpWebRequest(WebRequest, ISerializable):
+class HttpWebRequest:
     """
     Provides an HTTP-specific implementation of the System.Net.WebRequest class.
     
@@ -4373,53 +4351,53 @@ class HttpWebRequest(WebRequest, ISerializable):
 
     def AddRange(self, *__args):
         """
-        AddRange(self: HttpWebRequest, rangeSpecifier: str, from: Int64, to: Int64)
-            Adds a range header to a request for a specified range.
+        AddRange(self: HttpWebRequest, from: int, to: int)
+            Adds a byte range header to the request for a specified range.
         
-            rangeSpecifier: The description of the range.
             from: The position at which to start sending data.
             to: The position at which to stop sending data.
+        AddRange(self: HttpWebRequest, from: Int64, to: Int64)
+            Adds a byte range header to the request for a specified range.
+        
+            from: The position at which to start sending data.
+            to: The position at which to stop sending data.
+        AddRange(self: HttpWebRequest, range: int)
+            Adds a byte range header to a request for a specific range from the beginning or end of 
+             the requested data.
+        
+        
+            range: The starting or ending point of the range.
+        AddRange(self: HttpWebRequest, range: Int64)
+            Adds a byte range header to a request for a specific range from the beginning or end of 
+             the requested data.
+        
+        
+            range: The starting or ending point of the range.
         AddRange(self: HttpWebRequest, rangeSpecifier: str, from: int, to: int)
             Adds a range header to a request for a specified range.
         
             rangeSpecifier: The description of the range.
             from: The position at which to start sending data.
             to: The position at which to stop sending data.
-        AddRange(self: HttpWebRequest, rangeSpecifier: str, range: Int64)
-            Adds a Range header to a request for a specific range from the beginning or end of the requested 
-             data.
-        
+        AddRange(self: HttpWebRequest, rangeSpecifier: str, from: Int64, to: Int64)
+            Adds a range header to a request for a specified range.
         
             rangeSpecifier: The description of the range.
-            range: The starting or ending point of the range.
+            from: The position at which to start sending data.
+            to: The position at which to stop sending data.
         AddRange(self: HttpWebRequest, rangeSpecifier: str, range: int)
-            Adds a Range header to a request for a specific range from the beginning or end of the requested 
-             data.
+            Adds a Range header to a request for a specific range from the beginning or end of the 
+             requested data.
         
         
             rangeSpecifier: The description of the range.
             range: The starting or ending point of the range.
-        AddRange(self: HttpWebRequest, from: Int64, to: Int64)
-            Adds a byte range header to the request for a specified range.
-        
-            from: The position at which to start sending data.
-            to: The position at which to stop sending data.
-        AddRange(self: HttpWebRequest, from: int, to: int)
-            Adds a byte range header to the request for a specified range.
-        
-            from: The position at which to start sending data.
-            to: The position at which to stop sending data.
-        AddRange(self: HttpWebRequest, range: Int64)
-            Adds a byte range header to a request for a specific range from the beginning or end of the 
+        AddRange(self: HttpWebRequest, rangeSpecifier: str, range: Int64)
+            Adds a Range header to a request for a specific range from the beginning or end of the 
              requested data.
         
         
-            range: The starting or ending point of the range.
-        AddRange(self: HttpWebRequest, range: int)
-            Adds a byte range header to a request for a specific range from the beginning or end of the 
-             requested data.
-        
-        
+            rangeSpecifier: The description of the range.
             range: The starting or ending point of the range.
         """
         pass
@@ -4450,17 +4428,17 @@ class HttpWebRequest(WebRequest, ISerializable):
 
     def EndGetRequestStream(self, asyncResult, context=None):
         """
-        EndGetRequestStream(self: HttpWebRequest, asyncResult: IAsyncResult) -> (Stream, TransportContext)
-        
-            Ends an asynchronous request for a System.IO.Stream object to use to write data and outputs the 
-             System.Net.TransportContext associated with the stream.
-        
-        
-            asyncResult: The pending request for a stream.
-            Returns: A System.IO.Stream to use to write request data.
         EndGetRequestStream(self: HttpWebRequest, asyncResult: IAsyncResult) -> Stream
         
             Ends an asynchronous request for a System.IO.Stream object to use to write data.
+        
+            asyncResult: The pending request for a stream.
+            Returns: A System.IO.Stream to use to write request data.
+        EndGetRequestStream(self: HttpWebRequest, asyncResult: IAsyncResult) -> (Stream, TransportContext)
+        
+            Ends an asynchronous request for a System.IO.Stream object to use to write data and 
+             outputs the System.Net.TransportContext associated with the stream.
+        
         
             asyncResult: The pending request for a stream.
             Returns: A System.IO.Stream to use to write request data.
@@ -4481,8 +4459,8 @@ class HttpWebRequest(WebRequest, ISerializable):
     def GetObjectData(self, *args): #cannot find CLR method
         """
         GetObjectData(self: HttpWebRequest, serializationInfo: SerializationInfo, streamingContext: StreamingContext)
-            Populates a System.Runtime.Serialization.SerializationInfo with the data required to serialize 
-             the target object.
+            Populates a System.Runtime.Serialization.SerializationInfo with the data required to 
+             serialize the target object.
         
         
             serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
@@ -4493,15 +4471,15 @@ class HttpWebRequest(WebRequest, ISerializable):
 
     def GetRequestStream(self, context=None):
         """
+        GetRequestStream(self: HttpWebRequest) -> Stream
+        
+            Gets a System.IO.Stream object to use to write request data.
+            Returns: A System.IO.Stream to use to write request data.
         GetRequestStream(self: HttpWebRequest) -> (Stream, TransportContext)
         
             Gets a System.IO.Stream object to use to write request data and outputs the 
              System.Net.TransportContext associated with the stream.
         
-            Returns: A System.IO.Stream to use to write request data.
-        GetRequestStream(self: HttpWebRequest) -> Stream
-        
-            Gets a System.IO.Stream object to use to write request data.
             Returns: A System.IO.Stream to use to write request data.
         """
         pass
@@ -4521,11 +4499,11 @@ class HttpWebRequest(WebRequest, ISerializable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -4879,7 +4857,7 @@ Set: UserAgent(self: HttpWebRequest) = value
     DefaultMaximumResponseHeadersLength = 64
 
 
-class HttpWebResponse(WebResponse, ISerializable, IDisposable):
+class HttpWebResponse:
     """
     Provides an HTTP-specific implementation of the System.Net.WebResponse class.
     
@@ -4899,8 +4877,8 @@ class HttpWebResponse(WebResponse, ISerializable, IDisposable):
     def GetObjectData(self, *args): #cannot find CLR method
         """
         GetObjectData(self: HttpWebResponse, serializationInfo: SerializationInfo, streamingContext: StreamingContext)
-            Populates a System.Runtime.Serialization.SerializationInfo with the data needed to serialize the 
-             target object.
+            Populates a System.Runtime.Serialization.SerializationInfo with the data needed to 
+             serialize the target object.
         
         
             serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
@@ -4935,11 +4913,11 @@ class HttpWebResponse(WebResponse, ISerializable, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -4950,18 +4928,11 @@ class HttpWebResponse(WebResponse, ISerializable, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -5098,8 +5069,8 @@ class IAuthenticationModule:
             challenge: The authentication challenge sent by the server.
             request: The System.Net.WebRequest instance associated with the challenge.
             credentials: The credentials associated with the challenge.
-            Returns: An System.Net.Authorization instance containing the authorization message for the request, or 
-             null if the challenge cannot be handled.
+            Returns: An System.Net.Authorization instance containing the authorization message for the 
+             request, or null if the challenge cannot be handled.
         """
         pass
 
@@ -5107,8 +5078,8 @@ class IAuthenticationModule:
         """
         PreAuthenticate(self: IAuthenticationModule, request: WebRequest, credentials: ICredentials) -> Authorization
         
-            Returns an instance of the System.Net.Authorization class for an authentication request to a 
-             server.
+            Returns an instance of the System.Net.Authorization class for an authentication request 
+             to a server.
         
         
             request: The System.Net.WebRequest instance associated with the authentication request.
@@ -5168,11 +5139,15 @@ class ICredentialPolicy:
              resource request made using an instance of the System.Net.WebRequest class.
         
         
-            challengeUri: The System.Uri that will receive the request. For more information, see the Remarks section.
+            challengeUri: The System.Uri that will receive the request. For more information, see the Remarks 
+             section.
+        
             request: The System.Net.WebRequest that represents the resource being requested.
-            credential: The System.Net.NetworkCredential that will be sent with the request if this method returns true.
-            authenticationModule: The System.Net.IAuthenticationModule that will conduct the authentication, if authentication is 
-             required.
+            credential: The System.Net.NetworkCredential that will be sent with the request if this method 
+             returns true.
+        
+            authenticationModule: The System.Net.IAuthenticationModule that will conduct the authentication, if 
+             authentication is required.
         
             Returns: true if the credentials are sent with the request; otherwise, false.
         """
@@ -5189,16 +5164,16 @@ class ICredentials:
         """
         GetCredential(self: ICredentials, uri: Uri, authType: str) -> NetworkCredential
         
-            Returns a System.Net.NetworkCredential object that is associated with the specified URI, and 
-             authentication type.
+            Returns a System.Net.NetworkCredential object that is associated with the specified URI, 
+             and authentication type.
         
         
             uri: The System.Uri that the client is providing authentication for.
             authType: The type of authentication, as defined in the 
              System.Net.IAuthenticationModule.AuthenticationType property.
         
-            Returns: The System.Net.NetworkCredential that is associated with the specified URI and authentication 
-             type, or, if no credentials are available, null.
+            Returns: The System.Net.NetworkCredential that is associated with the specified URI and 
+             authentication type, or, if no credentials are available, null.
         """
         pass
 
@@ -5218,9 +5193,9 @@ class ICredentialsByHost:
             host: The host computer that is authenticating the client.
             port: The port on host that the client will communicate with.
             authenticationType: The authentication protocol.
-            Returns: A System.Net.NetworkCredential for the specified host, port, and authentication protocol, or 
-             null if there are no credentials available for the specified host, port, and authentication 
-             protocol.
+            Returns: A System.Net.NetworkCredential for the specified host, port, and authentication protocol, 
+             or null if there are no credentials available for the specified host, port, and 
+             authentication protocol.
         """
         pass
 
@@ -5229,7 +5204,7 @@ class ICredentialsByHost:
         pass
 
 
-class IPAddress(object):
+class IPAddress:
     """
     Provides an Internet Protocol (IP) address.
     
@@ -5269,24 +5244,24 @@ class IPAddress(object):
     @staticmethod
     def HostToNetworkOrder(host):
         """
-        HostToNetworkOrder(host: Int16) -> Int16
+        HostToNetworkOrder(host: Int64) -> Int64
         
-            Converts a short value from host byte order to network byte order.
+            Converts a long value from host byte order to network byte order.
         
             host: The number to convert, expressed in host byte order.
-            Returns: A short value, expressed in network byte order.
+            Returns: A long value, expressed in network byte order.
         HostToNetworkOrder(host: int) -> int
         
             Converts an integer value from host byte order to network byte order.
         
             host: The number to convert, expressed in host byte order.
             Returns: An integer value, expressed in network byte order.
-        HostToNetworkOrder(host: Int64) -> Int64
+        HostToNetworkOrder(host: Int16) -> Int16
         
-            Converts a long value from host byte order to network byte order.
+            Converts a short value from host byte order to network byte order.
         
             host: The number to convert, expressed in host byte order.
-            Returns: A long value, expressed in network byte order.
+            Returns: A short value, expressed in network byte order.
         """
         pass
 
@@ -5313,24 +5288,24 @@ class IPAddress(object):
     @staticmethod
     def NetworkToHostOrder(network):
         """
-        NetworkToHostOrder(network: Int16) -> Int16
+        NetworkToHostOrder(network: Int64) -> Int64
         
-            Converts a short value from network byte order to host byte order.
+            Converts a long value from network byte order to host byte order.
         
             network: The number to convert, expressed in network byte order.
-            Returns: A short value, expressed in host byte order.
+            Returns: A long value, expressed in host byte order.
         NetworkToHostOrder(network: int) -> int
         
             Converts an integer value from network byte order to host byte order.
         
             network: The number to convert, expressed in network byte order.
             Returns: An integer value, expressed in host byte order.
-        NetworkToHostOrder(network: Int64) -> Int64
+        NetworkToHostOrder(network: Int16) -> Int16
         
-            Converts a long value from network byte order to host byte order.
+            Converts a short value from network byte order to host byte order.
         
             network: The number to convert, expressed in network byte order.
-            Returns: A long value, expressed in host byte order.
+            Returns: A short value, expressed in host byte order.
         """
         pass
 
@@ -5341,8 +5316,8 @@ class IPAddress(object):
         
             Converts an IP address string to an System.Net.IPAddress instance.
         
-            ipString: A string that contains an IP address in dotted-quad notation for IPv4 and in colon-hexadecimal 
-             notation for IPv6.
+            ipString: A string that contains an IP address in dotted-quad notation for IPv4 and in 
+             colon-hexadecimal notation for IPv6.
         
             Returns: An System.Net.IPAddress instance.
         """
@@ -5353,8 +5328,8 @@ class IPAddress(object):
         ToString(self: IPAddress) -> str
         
             Converts an Internet address to its standard notation.
-            Returns: A string that contains the IP address in either IPv4 dotted-quad or in IPv6 colon-hexadecimal 
-             notation.
+            Returns: A string that contains the IP address in either IPv4 dotted-quad or in IPv6 
+             colon-hexadecimal notation.
         """
         pass
 
@@ -5449,10 +5424,10 @@ Set: ScopeId(self: IPAddress) = value
     IPv6Loopback = None
     IPv6None = None
     Loopback = None
-    None = None
+    None_ =None
 
 
-class IPEndPoint(EndPoint):
+class IPEndPoint:
     """
     Represents a network endpoint as an IP address and a port number.
     
@@ -5474,12 +5449,13 @@ class IPEndPoint(EndPoint):
         """
         Equals(self: IPEndPoint, comparand: object) -> bool
         
-            Determines whether the specified System.Object is equal to the current System.Net.IPEndPoint 
-             instance.
+            Determines whether the specified System.Object is equal to the current 
+             System.Net.IPEndPoint instance.
         
         
             comparand: The specified System.Object to compare with the current System.Net.IPEndPoint instance.
-            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, false.
+            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, 
+             false.
         """
         pass
 
@@ -5506,8 +5482,8 @@ class IPEndPoint(EndPoint):
         ToString(self: IPEndPoint) -> str
         
             Returns the IP address and port number of the specified endpoint.
-            Returns: A string containing the IP address and the port number of the specified endpoint (for example, 
-             192.168.1.2:80).
+            Returns: A string containing the IP address and the port number of the specified endpoint (for 
+             example, 192.168.1.2:80).
         """
         pass
 
@@ -5554,7 +5530,7 @@ Set: Port(self: IPEndPoint) = value
     MinPort = 0
 
 
-class IPHostEntry(object):
+class IPHostEntry:
     """
     Provides a container class for Internet host address information.
     
@@ -5681,7 +5657,7 @@ class IWebRequestCreate:
         pass
 
 
-class NetworkAccess(Enum, IComparable, IFormattable, IConvertible):
+class NetworkAccess:
     """
     Specifies network access permissions.
     
@@ -5725,7 +5701,7 @@ class NetworkAccess(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class NetworkCredential(object, ICredentials, ICredentialsByHost):
+class NetworkCredential:
     """
     Provides credentials for password-based authentication schemes such as basic, digest, NTLM, and Kerberos authentication.
     
@@ -5737,10 +5713,21 @@ class NetworkCredential(object, ICredentials, ICredentialsByHost):
     """
     def GetCredential(self, *__args):
         """
+        GetCredential(self: NetworkCredential, uri: Uri, authType: str) -> NetworkCredential
+        
+            Returns an instance of the System.Net.NetworkCredential class for the specified Uniform 
+             Resource Identifier (URI) and authentication type.
+        
+        
+            uri: The URI that the client provides authentication for.
+            authType: The type of authentication requested, as defined in the 
+             System.Net.IAuthenticationModule.AuthenticationType property.
+        
+            Returns: A System.Net.NetworkCredential object.
         GetCredential(self: NetworkCredential, host: str, port: int, authenticationType: str) -> NetworkCredential
         
-            Returns an instance of the System.Net.NetworkCredential class for the specified host, port, and 
-             authentication type.
+            Returns an instance of the System.Net.NetworkCredential class for the specified host, 
+             port, and authentication type.
         
         
             host: The host computer that authenticates the client.
@@ -5748,21 +5735,9 @@ class NetworkCredential(object, ICredentials, ICredentialsByHost):
             authenticationType: The type of authentication requested, as defined in the 
              System.Net.IAuthenticationModule.AuthenticationType property.
         
-            Returns: A System.Net.NetworkCredential for the specified host, port, and authentication protocol, or 
-             null if there are no credentials available for the specified host, port, and authentication 
-             protocol.
-        
-        GetCredential(self: NetworkCredential, uri: Uri, authType: str) -> NetworkCredential
-        
-            Returns an instance of the System.Net.NetworkCredential class for the specified Uniform Resource 
-             Identifier (URI) and authentication type.
-        
-        
-            uri: The URI that the client provides authentication for.
-            authType: The type of authentication requested, as defined in the 
-             System.Net.IAuthenticationModule.AuthenticationType property.
-        
-            Returns: A System.Net.NetworkCredential object.
+            Returns: A System.Net.NetworkCredential for the specified host, port, and authentication protocol, 
+             or null if there are no credentials available for the specified host, port, and 
+             authentication protocol.
         """
         pass
 
@@ -5819,7 +5794,7 @@ Set: UserName(self: NetworkCredential) = value
 
 
 
-class OpenReadCompletedEventArgs(AsyncCompletedEventArgs):
+class OpenReadCompletedEventArgs:
     """ Provides data for the System.Net.WebClient.OpenReadCompleted event. """
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets a readable stream that contains data downloaded by a erload:System.Net.WebClient.DownloadDataAsync method.
@@ -5830,7 +5805,7 @@ Get: Result(self: OpenReadCompletedEventArgs) -> Stream
 
 
 
-class OpenReadCompletedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class OpenReadCompletedEventHandler:
     """
     Represents the method that will handle the System.Net.WebClient.OpenReadCompleted event of a System.Net.WebClient.
     
@@ -5857,9 +5832,9 @@ class OpenReadCompletedEventHandler(MulticastDelegate, ICloneable, ISerializable
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -5886,13 +5861,14 @@ class OpenReadCompletedEventHandler(MulticastDelegate, ICloneable, ISerializable
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -5909,7 +5885,7 @@ class OpenReadCompletedEventHandler(MulticastDelegate, ICloneable, ISerializable
         pass
 
 
-class OpenWriteCompletedEventArgs(AsyncCompletedEventArgs):
+class OpenWriteCompletedEventArgs:
     """ Provides data for the System.Net.WebClient.OpenWriteCompleted event. """
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets a writable stream that is used to send data to a server.
@@ -5920,7 +5896,7 @@ Get: Result(self: OpenWriteCompletedEventArgs) -> Stream
 
 
 
-class OpenWriteCompletedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class OpenWriteCompletedEventHandler:
     """
     Represents the method that will handle the System.Net.WebClient.OpenWriteCompleted event of a System.Net.WebClient.
     
@@ -5947,9 +5923,9 @@ class OpenWriteCompletedEventHandler(MulticastDelegate, ICloneable, ISerializabl
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -5976,13 +5952,14 @@ class OpenWriteCompletedEventHandler(MulticastDelegate, ICloneable, ISerializabl
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -5999,32 +5976,24 @@ class OpenWriteCompletedEventHandler(MulticastDelegate, ICloneable, ISerializabl
         pass
 
 
-class ProtocolViolationException(InvalidOperationException, ISerializable, _Exception):
+class ProtocolViolationException:
     """
     The exception that is thrown when an error is made while using a network protocol.
     
     ProtocolViolationException()
     ProtocolViolationException(message: str)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def GetObjectData(self, serializationInfo, streamingContext):
         """
         GetObjectData(self: ProtocolViolationException, serializationInfo: SerializationInfo, streamingContext: StreamingContext)
-            Populates a System.Runtime.Serialization.SerializationInfo with the data required to serialize 
-             the target object.
+            Populates a System.Runtime.Serialization.SerializationInfo with the data required to 
+             serialize the target object.
         
         
             serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
             streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this 
              serialization.
         """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -6046,8 +6015,10 @@ class ProtocolViolationException(InvalidOperationException, ISerializable, _Exce
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    SerializeObjectState = None
 
-class SecurityProtocolType(Enum, IComparable, IFormattable, IConvertible):
+
+class SecurityProtocolType:
     """
     Specifies the security protocols that are supported by the Schannel security package.
     
@@ -6094,7 +6065,7 @@ class SecurityProtocolType(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ServicePoint(object):
+class ServicePoint:
     """ Provides connection management for HTTP connections. """
     def CloseConnectionGroup(self, connectionGroupName):
         """
@@ -6102,8 +6073,8 @@ class ServicePoint(object):
         
             Removes the specified connection group from this System.Net.ServicePoint object.
         
-            connectionGroupName: The name of the connection group that contains the connections to close and remove from this 
-             service point.
+            connectionGroupName: The name of the connection group that contains the connections to close and remove from 
+             this service point.
         
             Returns: A System.Boolean value that indicates whether the connection group was closed.
         """
@@ -6114,17 +6085,18 @@ class ServicePoint(object):
         SetTcpKeepAlive(self: ServicePoint, enabled: bool, keepAliveTime: int, keepAliveInterval: int)
             Enables or disables the keep-alive option on a TCP connection.
         
-            enabled: If set to true, then the TCP keep-alive option on a TCP connection will be enabled using the 
-             specified keepAliveTime and keepAliveInterval values. If set to false, then the TCP keep-alive 
-             option is disabled and the remaining parameters are ignored.The default value is false.
+            enabled: If set to true, then the TCP keep-alive option on a TCP connection will be enabled using 
+             the specified keepAliveTime and keepAliveInterval values. If set to false, then the TCP 
+             keep-alive option is disabled and the remaining parameters are ignored.The default value 
+             is false.
         
-            keepAliveTime: Specifies the timeout, in milliseconds, with no activity until the first keep-alive packet is 
-             sent. The value must be greater than 0.  If a value of less than or equal to zero is passed an 
-             System.ArgumentOutOfRangeException is thrown.
+            keepAliveTime: Specifies the timeout, in milliseconds, with no activity until the first keep-alive 
+             packet is sent. The value must be greater than 0.  If a value of less than or equal to 
+             zero is passed an System.ArgumentOutOfRangeException is thrown.
         
-            keepAliveInterval: Specifies the interval, in milliseconds, between when successive keep-alive packets are sent if 
-             no acknowledgement is received.The value must be greater than 0.  If a value of less than or 
-             equal to zero is passed an System.ArgumentOutOfRangeException is thrown.
+            keepAliveInterval: Specifies the interval, in milliseconds, between when successive keep-alive packets are 
+             sent if no acknowledgement is received.The value must be greater than 0.  If a value of 
+             less than or equal to zero is passed an System.ArgumentOutOfRangeException is thrown.
         """
         pass
 
@@ -6242,36 +6214,36 @@ Set: UseNagleAlgorithm(self: ServicePoint) = value
 
 
 
-class ServicePointManager(object):
+class ServicePointManager:
     """ Manages the collection of System.Net.ServicePoint objects. """
     @staticmethod
     def FindServicePoint(*__args):
         """
-        FindServicePoint(address: Uri, proxy: IWebProxy) -> ServicePoint
+        FindServicePoint(address: Uri) -> ServicePoint
         
-            Finds an existing System.Net.ServicePoint object or creates a new System.Net.ServicePoint object 
-             to manage communications with the specified System.Uri object.
+            Finds an existing System.Net.ServicePoint object or creates a new System.Net.ServicePoint 
+             object to manage communications with the specified System.Uri object.
         
         
-            address: A System.Uri object that contains the address of the Internet resource to contact.
-            proxy: The proxy data for this request.
+            address: The System.Uri object of the Internet resource to contact.
             Returns: The System.Net.ServicePoint object that manages communications for the request.
         FindServicePoint(uriString: str, proxy: IWebProxy) -> ServicePoint
         
-            Finds an existing System.Net.ServicePoint object or creates a new System.Net.ServicePoint object 
-             to manage communications with the specified Uniform Resource Identifier (URI).
+            Finds an existing System.Net.ServicePoint object or creates a new System.Net.ServicePoint 
+             object to manage communications with the specified Uniform Resource Identifier (URI).
         
         
             uriString: The URI of the Internet resource to be contacted.
             proxy: The proxy data for this request.
             Returns: The System.Net.ServicePoint object that manages communications for the request.
-        FindServicePoint(address: Uri) -> ServicePoint
+        FindServicePoint(address: Uri, proxy: IWebProxy) -> ServicePoint
         
-            Finds an existing System.Net.ServicePoint object or creates a new System.Net.ServicePoint object 
-             to manage communications with the specified System.Uri object.
+            Finds an existing System.Net.ServicePoint object or creates a new System.Net.ServicePoint 
+             object to manage communications with the specified System.Uri object.
         
         
-            address: The System.Uri object of the Internet resource to contact.
+            address: A System.Uri object that contains the address of the Internet resource to contact.
+            proxy: The proxy data for this request.
             Returns: The System.Net.ServicePoint object that manages communications for the request.
         """
         pass
@@ -6282,17 +6254,18 @@ class ServicePointManager(object):
         SetTcpKeepAlive(enabled: bool, keepAliveTime: int, keepAliveInterval: int)
             Enables or disables the keep-alive option on a TCP connection.
         
-            enabled: If set to true, then the TCP keep-alive option on a TCP connection will be enabled using the 
-             specified keepAliveTime and keepAliveInterval values. If set to false, then the TCP keep-alive 
-             option is disabled and the remaining parameters are ignored.The default value is false.
+            enabled: If set to true, then the TCP keep-alive option on a TCP connection will be enabled using 
+             the specified keepAliveTime and keepAliveInterval values. If set to false, then the TCP 
+             keep-alive option is disabled and the remaining parameters are ignored.The default value 
+             is false.
         
-            keepAliveTime: Specifies the timeout, in milliseconds, with no activity until the first keep-alive packet is 
-             sent.The value must be greater than 0.  If a value of less than or equal to zero is passed an 
-             System.ArgumentOutOfRangeException is thrown.
+            keepAliveTime: Specifies the timeout, in milliseconds, with no activity until the first keep-alive 
+             packet is sent.The value must be greater than 0.  If a value of less than or equal to 
+             zero is passed an System.ArgumentOutOfRangeException is thrown.
         
-            keepAliveInterval: Specifies the interval, in milliseconds, between when successive keep-alive packets are sent if 
-             no acknowledgement is received.The value must be greater than 0.  If a value of less than or 
-             equal to zero is passed an System.ArgumentOutOfRangeException is thrown.
+            keepAliveInterval: Specifies the interval, in milliseconds, between when successive keep-alive packets are 
+             sent if no acknowledgement is received.The value must be greater than 0.  If a value of 
+             less than or equal to zero is passed an System.ArgumentOutOfRangeException is thrown.
         """
         pass
 
@@ -6313,7 +6286,7 @@ class ServicePointManager(object):
     UseNagleAlgorithm = True
 
 
-class SocketAddress(object):
+class SocketAddress:
     """
     Stores serialized information from System.Net.EndPoint derived classes.
     
@@ -6324,12 +6297,13 @@ class SocketAddress(object):
         """
         Equals(self: SocketAddress, comparand: object) -> bool
         
-            Determines whether the specified System.Object is equal to the current System.Net.SocketAddress 
-             instance.
+            Determines whether the specified System.Object is equal to the current 
+             System.Net.SocketAddress instance.
         
         
             comparand: The specified System.Object to compare with the current System.Net.SocketAddress instance.
-            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, false.
+            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, 
+             false.
         """
         pass
 
@@ -6337,8 +6311,8 @@ class SocketAddress(object):
         """
         GetHashCode(self: SocketAddress) -> int
         
-            Serves as a hash function for a particular type, suitable for use in hashing algorithms and data 
-             structures like a hash table.
+            Serves as a hash function for a particular type, suitable for use in hashing algorithms 
+             and data structures like a hash table.
         
             Returns: A hash code for the current System.Object.
         """
@@ -6392,7 +6366,7 @@ Get: Size(self: SocketAddress) -> int
 
 
 
-class SocketPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IUnrestrictedPermission):
+class SocketPermission:
     """
     Controls rights to make or accept connections on a transport address.
     
@@ -6416,7 +6390,8 @@ class SocketPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IS
         Copy(self: SocketPermission) -> IPermission
         
             Creates a copy of a System.Net.SocketPermission instance.
-            Returns: A new instance of the System.Net.SocketPermission class that is a copy of the current instance.
+            Returns: A new instance of the System.Net.SocketPermission class that is a copy of the current 
+             instance.
         """
         pass
 
@@ -6437,8 +6412,8 @@ class SocketPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IS
         
             target: The System.Net.SocketPermission instance to intersect with the current instance.
             Returns: The System.Net.SocketPermission instance that represents the intersection of two 
-             System.Net.SocketPermission instances. If the intersection is empty, the method returns null. If 
-             the target parameter is a null reference, the method returns null.
+             System.Net.SocketPermission instances. If the intersection is empty, the method returns 
+             null. If the target parameter is a null reference, the method returns null.
         """
         pass
 
@@ -6449,9 +6424,9 @@ class SocketPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IS
             Determines if the current permission is a subset of the specified permission.
         
             target: A System.Net.SocketPermission that is to be tested for the subset relationship.
-            Returns: If target is null, this method returns true if the current instance defines no permissions; 
-             otherwise, false. If target is not null, this method returns true if the current instance 
-             defines a subset of target permissions; otherwise, false.
+            Returns: If target is null, this method returns true if the current instance defines no 
+             permissions; otherwise, false. If target is not null, this method returns true if the 
+             current instance defines a subset of target permissions; otherwise, false.
         """
         pass
 
@@ -6460,8 +6435,8 @@ class SocketPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IS
         IsUnrestricted(self: SocketPermission) -> bool
         
             Checks the overall permission state of the object.
-            Returns: true if the System.Net.SocketPermission instance is created with the Unrestricted value from 
-             System.Security.Permissions.PermissionState; otherwise, false.
+            Returns: true if the System.Net.SocketPermission instance is created with the Unrestricted value 
+             from System.Security.Permissions.PermissionState; otherwise, false.
         """
         pass
 
@@ -6470,8 +6445,8 @@ class SocketPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IS
         ToXml(self: SocketPermission) -> SecurityElement
         
             Creates an XML encoding of a System.Net.SocketPermission instance and its current state.
-            Returns: A System.Security.SecurityElement instance that contains an XML-encoded representation of the 
-             System.Net.SocketPermission instance, including state information.
+            Returns: A System.Security.SecurityElement instance that contains an XML-encoded representation of 
+             the System.Net.SocketPermission instance, including state information.
         """
         pass
 
@@ -6483,8 +6458,8 @@ class SocketPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IS
         
             target: The System.Net.SocketPermission instance to combine with the current instance.
             Returns: The System.Net.SocketPermission instance that represents the union of two 
-             System.Net.SocketPermission instances. If target parameter is null, it returns a copy of the 
-             current instance.
+             System.Net.SocketPermission instances. If target parameter is null, it returns a copy of 
+             the current instance.
         """
         pass
 
@@ -6524,7 +6499,7 @@ Get: ConnectList(self: SocketPermission) -> IEnumerator
     AllPorts = -1
 
 
-class SocketPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class SocketPermissionAttribute:
     """
     Specifies security actions to control System.Net.Sockets.Socket connections. This class cannot be inherited.
     
@@ -6586,7 +6561,7 @@ Set: Transport(self: SocketPermissionAttribute) = value
 
 
 
-class TransportContext(object):
+class TransportContext:
     """ The System.Net.TransportContext class provides additional context about the underlying transport layer. """
     def GetChannelBinding(self, kind):
         """
@@ -6595,8 +6570,9 @@ class TransportContext(object):
             Retrieves the requested channel binding.
         
             kind: The type of channel binding to retrieve.
-            Returns: The requested System.Security.Authentication.ExtendedProtection.ChannelBinding, or null if the 
-             channel binding is not supported by the current transport or by the operating system.
+            Returns: The requested System.Security.Authentication.ExtendedProtection.ChannelBinding, or null 
+             if the channel binding is not supported by the current transport or by the operating 
+             system.
         """
         pass
 
@@ -6605,7 +6581,7 @@ class TransportContext(object):
         pass
 
 
-class TransportType(Enum, IComparable, IFormattable, IConvertible):
+class TransportType:
     """
     Defines transport types for the System.Net.SocketPermission and System.Net.Sockets.Socket classes.
     
@@ -6652,7 +6628,7 @@ class TransportType(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class UploadDataCompletedEventArgs(AsyncCompletedEventArgs):
+class UploadDataCompletedEventArgs:
     """ Provides data for the System.Net.WebClient.UploadDataCompleted event. """
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the server reply to a data upload operation started by calling an erload:System.Net.WebClient.UploadDataAsync method.
@@ -6663,7 +6639,7 @@ Get: Result(self: UploadDataCompletedEventArgs) -> Array[Byte]
 
 
 
-class UploadDataCompletedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class UploadDataCompletedEventHandler:
     """
     Represents the method that will handle the System.Net.WebClient.UploadDataCompleted event of a System.Net.WebClient.
     
@@ -6690,9 +6666,9 @@ class UploadDataCompletedEventHandler(MulticastDelegate, ICloneable, ISerializab
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -6719,13 +6695,14 @@ class UploadDataCompletedEventHandler(MulticastDelegate, ICloneable, ISerializab
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -6742,7 +6719,7 @@ class UploadDataCompletedEventHandler(MulticastDelegate, ICloneable, ISerializab
         pass
 
 
-class UploadFileCompletedEventArgs(AsyncCompletedEventArgs):
+class UploadFileCompletedEventArgs:
     """ Provides data for the System.Net.WebClient.UploadFileCompleted event. """
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the server reply to a data upload operation that is started by calling an erload:System.Net.WebClient.UploadFileAsync method.
@@ -6753,7 +6730,7 @@ Get: Result(self: UploadFileCompletedEventArgs) -> Array[Byte]
 
 
 
-class UploadFileCompletedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class UploadFileCompletedEventHandler:
     """
     Represents the method that will handle the System.Net.WebClient.UploadFileCompleted event of a System.Net.WebClient.
     
@@ -6780,9 +6757,9 @@ class UploadFileCompletedEventHandler(MulticastDelegate, ICloneable, ISerializab
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -6809,13 +6786,14 @@ class UploadFileCompletedEventHandler(MulticastDelegate, ICloneable, ISerializab
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -6832,7 +6810,7 @@ class UploadFileCompletedEventHandler(MulticastDelegate, ICloneable, ISerializab
         pass
 
 
-class UploadProgressChangedEventArgs(ProgressChangedEventArgs):
+class UploadProgressChangedEventArgs:
     """ Provides data for the System.Net.WebClient.UploadProgressChanged event of a System.Net.WebClient. """
     BytesReceived = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of bytes received.
@@ -6864,7 +6842,7 @@ Get: TotalBytesToSend(self: UploadProgressChangedEventArgs) -> Int64
 
 
 
-class UploadProgressChangedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class UploadProgressChangedEventHandler:
     """
     Represents the method that will handle the System.Net.WebClient.UploadProgressChanged event of a System.Net.WebClient.
     
@@ -6891,9 +6869,9 @@ class UploadProgressChangedEventHandler(MulticastDelegate, ICloneable, ISerializ
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -6920,13 +6898,14 @@ class UploadProgressChangedEventHandler(MulticastDelegate, ICloneable, ISerializ
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -6943,7 +6922,7 @@ class UploadProgressChangedEventHandler(MulticastDelegate, ICloneable, ISerializ
         pass
 
 
-class UploadStringCompletedEventArgs(AsyncCompletedEventArgs):
+class UploadStringCompletedEventArgs:
     """ Provides data for the System.Net.WebClient.UploadStringCompleted event. """
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the server reply to a string upload operation that is started by calling an erload:System.Net.WebClient.UploadStringAsync method.
@@ -6954,7 +6933,7 @@ Get: Result(self: UploadStringCompletedEventArgs) -> str
 
 
 
-class UploadStringCompletedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class UploadStringCompletedEventHandler:
     """
     Represents the method that will handle the System.Net.WebClient.UploadStringCompleted event of a System.Net.WebClient.
     
@@ -6981,9 +6960,9 @@ class UploadStringCompletedEventHandler(MulticastDelegate, ICloneable, ISerializ
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -7010,13 +6989,14 @@ class UploadStringCompletedEventHandler(MulticastDelegate, ICloneable, ISerializ
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -7033,7 +7013,7 @@ class UploadStringCompletedEventHandler(MulticastDelegate, ICloneable, ISerializ
         pass
 
 
-class UploadValuesCompletedEventArgs(AsyncCompletedEventArgs):
+class UploadValuesCompletedEventArgs:
     """ Provides data for the System.Net.WebClient.UploadValuesCompleted event. """
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the server reply to a data upload operation started by calling an erload:System.Net.WebClient.UploadValuesAsync method.
@@ -7044,7 +7024,7 @@ Get: Result(self: UploadValuesCompletedEventArgs) -> Array[Byte]
 
 
 
-class UploadValuesCompletedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class UploadValuesCompletedEventHandler:
     """
     Represents the method that will handle the System.Net.WebClient.UploadValuesCompleted event of a System.Net.WebClient.
     
@@ -7071,9 +7051,9 @@ class UploadValuesCompletedEventHandler(MulticastDelegate, ICloneable, ISerializ
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -7100,13 +7080,14 @@ class UploadValuesCompletedEventHandler(MulticastDelegate, ICloneable, ISerializ
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -7123,7 +7104,7 @@ class UploadValuesCompletedEventHandler(MulticastDelegate, ICloneable, ISerializ
         pass
 
 
-class WebClient(Component, IComponent, IDisposable):
+class WebClient:
     """
     Provides common methods for sending data to and receiving data from a resource identified by a URI.
     
@@ -7139,145 +7120,145 @@ class WebClient(Component, IComponent, IDisposable):
     def Dispose(self):
         """
         Dispose(self: Component, disposing: bool)
-            Releases the unmanaged resources used by the System.ComponentModel.Component and optionally 
-             releases the managed resources.
+            Releases the unmanaged resources used by the System.ComponentModel.Component and 
+             optionally releases the managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
     def DownloadData(self, address):
         """
-        DownloadData(self: WebClient, address: Uri) -> Array[Byte]
-        
-            Downloads the resource with the specified URI as a System.Byte array.
-        
-            address: The URI represented by the System.Uri  object, from which to download data.
-            Returns: A System.Byte array containing the downloaded resource.
         DownloadData(self: WebClient, address: str) -> Array[Byte]
         
             Downloads the resource with the specified URI as a System.Byte array.
         
             address: The URI from which to download data.
+            Returns: A System.Byte array containing the downloaded resource.
+        DownloadData(self: WebClient, address: Uri) -> Array[Byte]
+        
+            Downloads the resource with the specified URI as a System.Byte array.
+        
+            address: The URI represented by the System.Uri  object, from which to download data.
             Returns: A System.Byte array containing the downloaded resource.
         """
         pass
 
     def DownloadDataAsync(self, address, userToken=None):
         """
-        DownloadDataAsync(self: WebClient, address: Uri, userToken: object)
-            Downloads the specified resource as a System.Byte array. This method does not block the calling 
-             thread.
+        DownloadDataAsync(self: WebClient, address: Uri)
+            Downloads the specified resource as a System.Byte array. This method does not block the 
+             calling thread.
         
         
             address: A System.Uri containing the URI to download.
-            userToken: A user-defined object that is passed to the method invoked when the asynchronous operation 
-             completes.
-        
-        DownloadDataAsync(self: WebClient, address: Uri)
-            Downloads the specified resource as a System.Byte array. This method does not block the calling 
-             thread.
+        DownloadDataAsync(self: WebClient, address: Uri, userToken: object)
+            Downloads the specified resource as a System.Byte array. This method does not block the 
+             calling thread.
         
         
-            address: A System.Uri containing the URI to download.
+            address: A System.Uri containing the URI to download.
+            userToken: A user-defined object that is passed to the method invoked when the asynchronous 
+             operation completes.
         """
         pass
 
     def DownloadDataTaskAsync(self, address):
         """
-        DownloadDataTaskAsync(self: WebClient, address: Uri) -> Task[Array[Byte]]
-        DownloadDataTaskAsync(self: WebClient, address: str) -> Task[Array[Byte]]
+        DownloadDataTaskAsync(self: WebClient, address: str) -> Task[Array[Byte]]
+        DownloadDataTaskAsync(self: WebClient, address: Uri) -> Task[Array[Byte]]
         """
         pass
 
     def DownloadFile(self, address, fileName):
         """
-        DownloadFile(self: WebClient, address: Uri, fileName: str)
-            Downloads the resource with the specified URI to a local file.
-        
-            address: The URI specified as a System.String, from which to download data.
-            fileName: The name of the local file that is to receive the data.
         DownloadFile(self: WebClient, address: str, fileName: str)
             Downloads the resource with the specified URI to a local file.
         
             address: The URI from which to download data.
+            fileName: The name of the local file that is to receive the data.
+        DownloadFile(self: WebClient, address: Uri, fileName: str)
+            Downloads the resource with the specified URI to a local file.
+        
+            address: The URI specified as a System.String, from which to download data.
             fileName: The name of the local file that is to receive the data.
         """
         pass
 
     def DownloadFileAsync(self, address, fileName, userToken=None):
         """
-        DownloadFileAsync(self: WebClient, address: Uri, fileName: str, userToken: object)
-            Downloads, to a local file, the resource with the specified URI. This method does not block the 
-             calling thread.
+        DownloadFileAsync(self: WebClient, address: Uri, fileName: str)
+            Downloads, to a local file, the resource with the specified URI. This method does not 
+             block the calling thread.
         
         
             address: The URI of the resource to download.
             fileName: The name of the file to be placed on the local computer.
-            userToken: A user-defined object that is passed to the method invoked when the asynchronous operation 
-             completes.
-        
-        DownloadFileAsync(self: WebClient, address: Uri, fileName: str)
-            Downloads, to a local file, the resource with the specified URI. This method does not block the 
-             calling thread.
+        DownloadFileAsync(self: WebClient, address: Uri, fileName: str, userToken: object)
+            Downloads, to a local file, the resource with the specified URI. This method does not 
+             block the calling thread.
         
         
             address: The URI of the resource to download.
-            fileName: The name of the file to be placed on the local computer.
+            fileName: The name of the file to be placed on the local computer.
+            userToken: A user-defined object that is passed to the method invoked when the asynchronous 
+             operation completes.
         """
         pass
 
     def DownloadFileTaskAsync(self, address, fileName):
         """
-        DownloadFileTaskAsync(self: WebClient, address: Uri, fileName: str) -> Task
-        DownloadFileTaskAsync(self: WebClient, address: str, fileName: str) -> Task
+        DownloadFileTaskAsync(self: WebClient, address: str, fileName: str) -> Task
+        DownloadFileTaskAsync(self: WebClient, address: Uri, fileName: str) -> Task
         """
         pass
 
     def DownloadString(self, address):
         """
-        DownloadString(self: WebClient, address: Uri) -> str
-        
-            Downloads the requested resource as a System.String. The resource to download is specified as a 
-             System.Uri.
-        
-        
-            address: A System.Uri object containing the URI to download.
-            Returns: A System.String containing the requested resource.
         DownloadString(self: WebClient, address: str) -> str
         
-            Downloads the requested resource as a System.String. The resource to download is specified as a 
-             System.String containing the URI.
+            Downloads the requested resource as a System.String. The resource to download is 
+             specified as a System.String containing the URI.
         
         
             address: A System.String containing the URI to download.
+            Returns: A System.String containing the requested resource.
+        DownloadString(self: WebClient, address: Uri) -> str
+        
+            Downloads the requested resource as a System.String. The resource to download is 
+             specified as a System.Uri.
+        
+        
+            address: A System.Uri object containing the URI to download.
             Returns: A System.String containing the requested resource.
         """
         pass
 
     def DownloadStringAsync(self, address, userToken=None):
         """
-        DownloadStringAsync(self: WebClient, address: Uri, userToken: object)
-            Downloads the specified string to the specified resource. This method does not block the calling 
+        DownloadStringAsync(self: WebClient, address: Uri)
+            Downloads the resource specified as a System.Uri. This method does not block the calling 
              thread.
         
         
             address: A System.Uri containing the URI to download.
-            userToken: A user-defined object that is passed to the method invoked when the asynchronous operation 
-             completes.
+        DownloadStringAsync(self: WebClient, address: Uri, userToken: object)
+            Downloads the specified string to the specified resource. This method does not block the 
+             calling thread.
         
-        DownloadStringAsync(self: WebClient, address: Uri)
-            Downloads the resource specified as a System.Uri. This method does not block the calling thread.
         
-            address: A System.Uri containing the URI to download.
+            address: A System.Uri containing the URI to download.
+            userToken: A user-defined object that is passed to the method invoked when the asynchronous 
+             operation completes.
         """
         pass
 
     def DownloadStringTaskAsync(self, address):
         """
-        DownloadStringTaskAsync(self: WebClient, address: Uri) -> Task[str]
-        DownloadStringTaskAsync(self: WebClient, address: str) -> Task[str]
+        DownloadStringTaskAsync(self: WebClient, address: str) -> Task[str]
+        DownloadStringTaskAsync(self: WebClient, address: Uri) -> Task[str]
         """
         pass
 
@@ -7285,13 +7266,14 @@ class WebClient(Component, IComponent, IDisposable):
         """
         GetService(self: Component, service: Type) -> object
         
-            Returns an object that represents a service provided by the System.ComponentModel.Component or 
-             by its System.ComponentModel.Container.
+            Returns an object that represents a service provided by the 
+             System.ComponentModel.Component or by its System.ComponentModel.Container.
         
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or 
-             null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the 
+             System.ComponentModel.Component, or null if the System.ComponentModel.Component does not 
+             provide the specified service.
         """
         pass
 
@@ -7308,22 +7290,22 @@ class WebClient(Component, IComponent, IDisposable):
 
     def GetWebResponse(self, *args): #cannot find CLR method
         """
+        GetWebResponse(self: WebClient, request: WebRequest) -> WebResponse
+        
+            Returns the System.Net.WebResponse for the specified System.Net.WebRequest.
+        
+            request: A System.Net.WebRequest that is used to obtain the response.
+            Returns: A System.Net.WebResponse containing the response for the specified System.Net.WebRequest.
         GetWebResponse(self: WebClient, request: WebRequest, result: IAsyncResult) -> WebResponse
         
-            Returns the System.Net.WebResponse for the specified System.Net.WebRequest using the specified 
-             System.IAsyncResult.
+            Returns the System.Net.WebResponse for the specified System.Net.WebRequest using the 
+             specified System.IAsyncResult.
         
         
             request: A System.Net.WebRequest that is used to obtain the response.
             result: An System.IAsyncResult object obtained from a previous call to 
              System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object) .
         
-            Returns: A System.Net.WebResponse containing the response for the specified System.Net.WebRequest.
-        GetWebResponse(self: WebClient, request: WebRequest) -> WebResponse
-        
-            Returns the System.Net.WebResponse for the specified System.Net.WebRequest.
-        
-            request: A System.Net.WebRequest that is used to obtain the response.
             Returns: A System.Net.WebResponse containing the response for the specified System.Net.WebRequest.
         """
         pass
@@ -7334,11 +7316,11 @@ class WebClient(Component, IComponent, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -7453,72 +7435,53 @@ class WebClient(Component, IComponent, IDisposable):
 
     def OpenRead(self, address):
         """
-        OpenRead(self: WebClient, address: Uri) -> Stream
-        
-            Opens a readable stream for the data downloaded from a resource with the URI specified as a 
-             System.Uri
-        
-        
-            address: The URI specified as a System.Uri from which to download data.
-            Returns: A System.IO.Stream used to read data from a resource.
         OpenRead(self: WebClient, address: str) -> Stream
         
-            Opens a readable stream for the data downloaded from a resource with the URI specified as a 
-             System.String.
+            Opens a readable stream for the data downloaded from a resource with the URI specified as 
+             a System.String.
         
         
             address: The URI specified as a System.String from which to download data.
+            Returns: A System.IO.Stream used to read data from a resource.
+        OpenRead(self: WebClient, address: Uri) -> Stream
+        
+            Opens a readable stream for the data downloaded from a resource with the URI specified as 
+             a System.Uri
+        
+        
+            address: The URI specified as a System.Uri from which to download data.
             Returns: A System.IO.Stream used to read data from a resource.
         """
         pass
 
     def OpenReadAsync(self, address, userToken=None):
         """
+        OpenReadAsync(self: WebClient, address: Uri)
+            Opens a readable stream containing the specified resource. This method does not block the 
+             calling thread.
+        
+        
+            address: The URI of the resource to retrieve.
         OpenReadAsync(self: WebClient, address: Uri, userToken: object)
             Opens a readable stream containing the specified resource. This method does not block the 
              calling thread.
         
         
             address: The URI of the resource to retrieve.
-            userToken: A user-defined object that is passed to the method invoked when the asynchronous operation 
-             completes.
-        
-        OpenReadAsync(self: WebClient, address: Uri)
-            Opens a readable stream containing the specified resource. This method does not block the 
-             calling thread.
-        
-        
-            address: The URI of the resource to retrieve.
+            userToken: A user-defined object that is passed to the method invoked when the asynchronous 
+             operation completes.
         """
         pass
 
     def OpenReadTaskAsync(self, address):
         """
-        OpenReadTaskAsync(self: WebClient, address: Uri) -> Task[Stream]
-        OpenReadTaskAsync(self: WebClient, address: str) -> Task[Stream]
+        OpenReadTaskAsync(self: WebClient, address: str) -> Task[Stream]
+        OpenReadTaskAsync(self: WebClient, address: Uri) -> Task[Stream]
         """
         pass
 
     def OpenWrite(self, address, method=None):
         """
-        OpenWrite(self: WebClient, address: str, method: str) -> Stream
-        
-            Opens a stream for writing data to the specified resource, using the specified method.
-        
-            address: The URI of the resource to receive the data.
-            method: The method used to send the data to the resource. If null, the default is POST for http and STOR 
-             for ftp.
-        
-            Returns: A System.IO.Stream used to write data to the resource.
-        OpenWrite(self: WebClient, address: Uri, method: str) -> Stream
-        
-            Opens a stream for writing data to the specified resource, by using the specified method.
-        
-            address: The URI of the resource to receive the data.
-            method: The method used to send the data to the resource. If null, the default is POST for http and STOR 
-             for ftp.
-        
-            Returns: A System.IO.Stream used to write data to the resource.
         OpenWrite(self: WebClient, address: str) -> Stream
         
             Opens a stream for writing data to the specified resource.
@@ -7530,73 +7493,70 @@ class WebClient(Component, IComponent, IDisposable):
             Opens a stream for writing data to the specified resource.
         
             address: The URI of the resource to receive the data.
+            Returns: A System.IO.Stream used to write data to the resource.
+        OpenWrite(self: WebClient, address: str, method: str) -> Stream
+        
+            Opens a stream for writing data to the specified resource, using the specified method.
+        
+            address: The URI of the resource to receive the data.
+            method: The method used to send the data to the resource. If null, the default is POST for http 
+             and STOR for ftp.
+        
+            Returns: A System.IO.Stream used to write data to the resource.
+        OpenWrite(self: WebClient, address: Uri, method: str) -> Stream
+        
+            Opens a stream for writing data to the specified resource, by using the specified method.
+        
+            address: The URI of the resource to receive the data.
+            method: The method used to send the data to the resource. If null, the default is POST for http 
+             and STOR for ftp.
+        
             Returns: A System.IO.Stream used to write data to the resource.
         """
         pass
 
     def OpenWriteAsync(self, address, method=None, userToken=None):
         """
-        OpenWriteAsync(self: WebClient, address: Uri, method: str, userToken: object)
-            Opens a stream for writing data to the specified resource, using the specified method. This 
-             method does not block the calling thread.
+        OpenWriteAsync(self: WebClient, address: Uri)
+            Opens a stream for writing data to the specified resource. This method does not block the 
+             calling thread.
         
         
             address: The URI of the resource to receive the data.
-            method: The method used to send the data to the resource. If null, the default is POST for http and STOR 
-             for ftp.
-        
-            userToken: A user-defined object that is passed to the method invoked when the asynchronous operation 
-             completes
-        
         OpenWriteAsync(self: WebClient, address: Uri, method: str)
             Opens a stream for writing data to the specified resource. This method does not block the 
              calling thread.
         
         
             address: The URI of the resource to receive the data.
-            method: The method used to send the data to the resource. If null, the default is POST for http and STOR 
-             for ftp.
+            method: The method used to send the data to the resource. If null, the default is POST for http 
+             and STOR for ftp.
         
-        OpenWriteAsync(self: WebClient, address: Uri)
-            Opens a stream for writing data to the specified resource. This method does not block the 
-             calling thread.
+        OpenWriteAsync(self: WebClient, address: Uri, method: str, userToken: object)
+            Opens a stream for writing data to the specified resource, using the specified method. 
+             This method does not block the calling thread.
         
         
-            address: The URI of the resource to receive the data.
+            address: The URI of the resource to receive the data.
+            method: The method used to send the data to the resource. If null, the default is POST for http 
+             and STOR for ftp.
+        
+            userToken: A user-defined object that is passed to the method invoked when the asynchronous 
+             operation completes
         """
         pass
 
     def OpenWriteTaskAsync(self, address, method=None):
         """
-        OpenWriteTaskAsync(self: WebClient, address: str, method: str) -> Task[Stream]
-        OpenWriteTaskAsync(self: WebClient, address: Uri, method: str) -> Task[Stream]
         OpenWriteTaskAsync(self: WebClient, address: str) -> Task[Stream]
-        OpenWriteTaskAsync(self: WebClient, address: Uri) -> Task[Stream]
+        OpenWriteTaskAsync(self: WebClient, address: Uri) -> Task[Stream]
+        OpenWriteTaskAsync(self: WebClient, address: str, method: str) -> Task[Stream]
+        OpenWriteTaskAsync(self: WebClient, address: Uri, method: str) -> Task[Stream]
         """
         pass
 
     def UploadData(self, address, *__args):
         """
-        UploadData(self: WebClient, address: str, method: str, data: Array[Byte]) -> Array[Byte]
-        
-            Uploads a data buffer to the specified resource, using the specified method.
-        
-            address: The URI of the resource to receive the data.
-            method: The HTTP method used to send the data to the resource. If null, the default is POST for http and 
-             STOR for ftp.
-        
-            data: The data buffer to send to the resource.
-            Returns: A System.Byte array containing the body of the response from the resource.
-        UploadData(self: WebClient, address: Uri, method: str, data: Array[Byte]) -> Array[Byte]
-        
-            Uploads a data buffer to the specified resource, using the specified method.
-        
-            address: The URI of the resource to receive the data.
-            method: The HTTP method used to send the data to the resource. If null, the default is POST for http and 
-             STOR for ftp.
-        
-            data: The data buffer to send to the resource.
-            Returns: A System.Byte array containing the body of the response from the resource.
         UploadData(self: WebClient, address: str, data: Array[Byte]) -> Array[Byte]
         
             Uploads a data buffer to a resource identified by a URI.
@@ -7610,76 +7570,75 @@ class WebClient(Component, IComponent, IDisposable):
         
             address: The URI of the resource to receive the data.
             data: The data buffer to send to the resource.
+            Returns: A System.Byte array containing the body of the response from the resource.
+        UploadData(self: WebClient, address: str, method: str, data: Array[Byte]) -> Array[Byte]
+        
+            Uploads a data buffer to the specified resource, using the specified method.
+        
+            address: The URI of the resource to receive the data.
+            method: The HTTP method used to send the data to the resource. If null, the default is POST for 
+             http and STOR for ftp.
+        
+            data: The data buffer to send to the resource.
+            Returns: A System.Byte array containing the body of the response from the resource.
+        UploadData(self: WebClient, address: Uri, method: str, data: Array[Byte]) -> Array[Byte]
+        
+            Uploads a data buffer to the specified resource, using the specified method.
+        
+            address: The URI of the resource to receive the data.
+            method: The HTTP method used to send the data to the resource. If null, the default is POST for 
+             http and STOR for ftp.
+        
+            data: The data buffer to send to the resource.
             Returns: A System.Byte array containing the body of the response from the resource.
         """
         pass
 
     def UploadDataAsync(self, address, *__args):
         """
+        UploadDataAsync(self: WebClient, address: Uri, data: Array[Byte])
+            Uploads a data buffer to a resource identified by a URI, using the POST method. This 
+             method does not block the calling thread.
+        
+        
+            address: The URI of the resource to receive the data.
+            data: The data buffer to send to the resource.
+        UploadDataAsync(self: WebClient, address: Uri, method: str, data: Array[Byte])
+            Uploads a data buffer to a resource identified by a URI, using the specified method. This 
+             method does not block the calling thread.
+        
+        
+            address: The URI of the resource to receive the data.
+            method: The HTTP method used to send the file to the resource. If null, the default is POST for 
+             http and STOR for ftp.
+        
+            data: The data buffer to send to the resource.
         UploadDataAsync(self: WebClient, address: Uri, method: str, data: Array[Byte], userToken: object)
             Uploads a data buffer to a resource identified by a URI, using the specified method and 
              identifying token.
         
         
             address: The URI of the resource to receive the data.
-            method: The HTTP method used to send the file to the resource. If null, the default is POST for http and 
-             STOR for ftp.
+            method: The HTTP method used to send the file to the resource. If null, the default is POST for 
+             http and STOR for ftp.
         
             data: The data buffer to send to the resource.
-            userToken: A user-defined object that is passed to the method invoked when the asynchronous operation 
-             completes.
-        
-        UploadDataAsync(self: WebClient, address: Uri, method: str, data: Array[Byte])
-            Uploads a data buffer to a resource identified by a URI, using the specified method. This method 
-             does not block the calling thread.
-        
-        
-            address: The URI of the resource to receive the data.
-            method: The HTTP method used to send the file to the resource. If null, the default is POST for http and 
-             STOR for ftp.
-        
-            data: The data buffer to send to the resource.
-        UploadDataAsync(self: WebClient, address: Uri, data: Array[Byte])
-            Uploads a data buffer to a resource identified by a URI, using the POST method. This method does 
-             not block the calling thread.
-        
-        
-            address: The URI of the resource to receive the data.
-            data: The data buffer to send to the resource.
+            userToken: A user-defined object that is passed to the method invoked when the asynchronous 
+             operation completes.
         """
         pass
 
     def UploadDataTaskAsync(self, address, *__args):
         """
-        UploadDataTaskAsync(self: WebClient, address: str, method: str, data: Array[Byte]) -> Task[Array[Byte]]
-        UploadDataTaskAsync(self: WebClient, address: Uri, method: str, data: Array[Byte]) -> Task[Array[Byte]]
         UploadDataTaskAsync(self: WebClient, address: str, data: Array[Byte]) -> Task[Array[Byte]]
-        UploadDataTaskAsync(self: WebClient, address: Uri, data: Array[Byte]) -> Task[Array[Byte]]
+        UploadDataTaskAsync(self: WebClient, address: Uri, data: Array[Byte]) -> Task[Array[Byte]]
+        UploadDataTaskAsync(self: WebClient, address: str, method: str, data: Array[Byte]) -> Task[Array[Byte]]
+        UploadDataTaskAsync(self: WebClient, address: Uri, method: str, data: Array[Byte]) -> Task[Array[Byte]]
         """
         pass
 
     def UploadFile(self, address, *__args):
         """
-        UploadFile(self: WebClient, address: str, method: str, fileName: str) -> Array[Byte]
-        
-            Uploads the specified local file to the specified resource, using the specified method.
-        
-            address: The URI of the resource to receive the file.
-            method: The HTTP method used to send the file to the resource. If null, the default is POST for http and 
-             STOR for ftp.
-        
-            fileName: The file to send to the resource.
-            Returns: A System.Byte array containing the body of the response from the resource.
-        UploadFile(self: WebClient, address: Uri, method: str, fileName: str) -> Array[Byte]
-        
-            Uploads the specified local file to the specified resource, using the specified method.
-        
-            address: The URI of the resource to receive the file.
-            method: The HTTP method used to send the file to the resource. If null, the default is POST for http and 
-             STOR for ftp.
-        
-            fileName: The file to send to the resource.
-            Returns: A System.Byte array containing the body of the response from the resource.
         UploadFile(self: WebClient, address: str, fileName: str) -> Array[Byte]
         
             Uploads the specified local file to a resource with the specified URI.
@@ -7693,92 +7652,91 @@ class WebClient(Component, IComponent, IDisposable):
         
             address: The URI of the resource to receive the file. For example, ftp://localhost/samplefile.txt.
             fileName: The file to send to the resource. For example, "samplefile.txt".
+            Returns: A System.Byte array containing the body of the response from the resource.
+        UploadFile(self: WebClient, address: str, method: str, fileName: str) -> Array[Byte]
+        
+            Uploads the specified local file to the specified resource, using the specified method.
+        
+            address: The URI of the resource to receive the file.
+            method: The HTTP method used to send the file to the resource. If null, the default is POST for 
+             http and STOR for ftp.
+        
+            fileName: The file to send to the resource.
+            Returns: A System.Byte array containing the body of the response from the resource.
+        UploadFile(self: WebClient, address: Uri, method: str, fileName: str) -> Array[Byte]
+        
+            Uploads the specified local file to the specified resource, using the specified method.
+        
+            address: The URI of the resource to receive the file.
+            method: The HTTP method used to send the file to the resource. If null, the default is POST for 
+             http and STOR for ftp.
+        
+            fileName: The file to send to the resource.
             Returns: A System.Byte array containing the body of the response from the resource.
         """
         pass
 
     def UploadFileAsync(self, address, *__args):
         """
-        UploadFileAsync(self: WebClient, address: Uri, method: str, fileName: str, userToken: object)
-            Uploads the specified local file to the specified resource, using the POST method. This method 
-             does not block the calling thread.
-        
-        
-            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a 
-             resource that can accept a request sent with the POST method, such as a script or ASP page.
-        
-            method: The HTTP method used to send the data to the resource. If null, the default is POST for http and 
-             STOR for ftp.
-        
-            fileName: The file to send to the resource.
-            userToken: A user-defined object that is passed to the method invoked when the asynchronous operation 
-             completes.
-        
-        UploadFileAsync(self: WebClient, address: Uri, method: str, fileName: str)
-            Uploads the specified local file to the specified resource, using the POST method. This method 
-             does not block the calling thread.
-        
-        
-            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a 
-             resource that can accept a request sent with the POST method, such as a script or ASP page.
-        
-            method: The HTTP method used to send the data to the resource. If null, the default is POST for http and 
-             STOR for ftp.
-        
-            fileName: The file to send to the resource.
         UploadFileAsync(self: WebClient, address: Uri, fileName: str)
-            Uploads the specified local file to the specified resource, using the POST method. This method 
-             does not block the calling thread.
+            Uploads the specified local file to the specified resource, using the POST method. This 
+             method does not block the calling thread.
         
         
             address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a 
-             resource that can accept a request sent with the POST method, such as a script or ASP page.
+             resource that can accept a request sent with the POST method, such as a script or ASP 
+             page.
         
-            fileName: The file to send to the resource.
+            fileName: The file to send to the resource.
+        UploadFileAsync(self: WebClient, address: Uri, method: str, fileName: str)
+            Uploads the specified local file to the specified resource, using the POST method. This 
+             method does not block the calling thread.
+        
+        
+            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a 
+             resource that can accept a request sent with the POST method, such as a script or ASP 
+             page.
+        
+            method: The HTTP method used to send the data to the resource. If null, the default is POST for 
+             http and STOR for ftp.
+        
+            fileName: The file to send to the resource.
+        UploadFileAsync(self: WebClient, address: Uri, method: str, fileName: str, userToken: object)
+            Uploads the specified local file to the specified resource, using the POST method. This 
+             method does not block the calling thread.
+        
+        
+            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a 
+             resource that can accept a request sent with the POST method, such as a script or ASP 
+             page.
+        
+            method: The HTTP method used to send the data to the resource. If null, the default is POST for 
+             http and STOR for ftp.
+        
+            fileName: The file to send to the resource.
+            userToken: A user-defined object that is passed to the method invoked when the asynchronous 
+             operation completes.
         """
         pass
 
     def UploadFileTaskAsync(self, address, *__args):
         """
-        UploadFileTaskAsync(self: WebClient, address: str, method: str, fileName: str) -> Task[Array[Byte]]
-        UploadFileTaskAsync(self: WebClient, address: Uri, method: str, fileName: str) -> Task[Array[Byte]]
         UploadFileTaskAsync(self: WebClient, address: str, fileName: str) -> Task[Array[Byte]]
-        UploadFileTaskAsync(self: WebClient, address: Uri, fileName: str) -> Task[Array[Byte]]
+        UploadFileTaskAsync(self: WebClient, address: Uri, fileName: str) -> Task[Array[Byte]]
+        UploadFileTaskAsync(self: WebClient, address: str, method: str, fileName: str) -> Task[Array[Byte]]
+        UploadFileTaskAsync(self: WebClient, address: Uri, method: str, fileName: str) -> Task[Array[Byte]]
         """
         pass
 
     def UploadString(self, address, *__args):
         """
-        UploadString(self: WebClient, address: str, method: str, data: str) -> str
-        
-            Uploads the specified string to the specified resource, using the specified method.
-        
-            address: The URI of the resource to receive the file. This URI must identify a resource that can accept a 
-             request sent with the method method.
-        
-            method: The HTTP method used to send the string to the resource. If null, the default is POST for http 
-             and STOR for ftp.
-        
-            data: The string to be uploaded.
-            Returns: A System.String containing the response sent by the server.
-        UploadString(self: WebClient, address: Uri, method: str, data: str) -> str
-        
-            Uploads the specified string to the specified resource, using the specified method.
-        
-            address: The URI of the resource to receive the file. This URI must identify a resource that can accept a 
-             request sent with the method method.
-        
-            method: The HTTP method used to send the string to the resource. If null, the default is POST for http 
-             and STOR for ftp.
-        
-            data: The string to be uploaded.
-            Returns: A System.String containing the response sent by the server.
         UploadString(self: WebClient, address: str, data: str) -> str
         
             Uploads the specified string to the specified resource, using the POST method.
         
-            address: The URI of the resource to receive the string. For Http resources, this URI must identify a 
-             resource that can accept a request sent with the POST method, such as a script or ASP page.
+            address: The URI of the resource to receive the string. For Http resources, this URI must identify 
+             a resource that can accept a request sent with the POST method, such as a script or ASP 
+             page.
         
             data: The string to be uploaded.
             Returns: A System.String containing the response sent by the server.
@@ -7786,8 +7744,33 @@ class WebClient(Component, IComponent, IDisposable):
         
             Uploads the specified string to the specified resource, using the POST method.
         
-            address: The URI of the resource to receive the string. For Http resources, this URI must identify a 
-             resource that can accept a request sent with the POST method, such as a script or ASP page.
+            address: The URI of the resource to receive the string. For Http resources, this URI must identify 
+             a resource that can accept a request sent with the POST method, such as a script or ASP 
+             page.
+        
+            data: The string to be uploaded.
+            Returns: A System.String containing the response sent by the server.
+        UploadString(self: WebClient, address: str, method: str, data: str) -> str
+        
+            Uploads the specified string to the specified resource, using the specified method.
+        
+            address: The URI of the resource to receive the file. This URI must identify a resource that can 
+             accept a request sent with the method method.
+        
+            method: The HTTP method used to send the string to the resource. If null, the default is POST for 
+             http and STOR for ftp.
+        
+            data: The string to be uploaded.
+            Returns: A System.String containing the response sent by the server.
+        UploadString(self: WebClient, address: Uri, method: str, data: str) -> str
+        
+            Uploads the specified string to the specified resource, using the specified method.
+        
+            address: The URI of the resource to receive the file. This URI must identify a resource that can 
+             accept a request sent with the method method.
+        
+            method: The HTTP method used to send the string to the resource. If null, the default is POST for 
+             http and STOR for ftp.
         
             data: The string to be uploaded.
             Returns: A System.String containing the response sent by the server.
@@ -7796,92 +7779,98 @@ class WebClient(Component, IComponent, IDisposable):
 
     def UploadStringAsync(self, address, *__args):
         """
-        UploadStringAsync(self: WebClient, address: Uri, method: str, data: str, userToken: object)
-            Uploads the specified string to the specified resource. This method does not block the calling 
-             thread.
-        
-        
-            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a 
-             resource that can accept a request sent with the POST method, such as a script or ASP page.
-        
-            method: The HTTP method used to send the file to the resource. If null, the default is POST for http and 
-             STOR for ftp.
-        
-            data: The string to be uploaded.
-            userToken: A user-defined object that is passed to the method invoked when the asynchronous operation 
-             completes.
-        
-        UploadStringAsync(self: WebClient, address: Uri, method: str, data: str)
-            Uploads the specified string to the specified resource. This method does not block the calling 
-             thread.
-        
-        
-            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a 
-             resource that can accept a request sent with the POST method, such as a script or ASP page.
-        
-            method: The HTTP method used to send the file to the resource. If null, the default is POST for http and 
-             STOR for ftp.
-        
-            data: The string to be uploaded.
         UploadStringAsync(self: WebClient, address: Uri, data: str)
-            Uploads the specified string to the specified resource. This method does not block the calling 
-             thread.
+            Uploads the specified string to the specified resource. This method does not block the 
+             calling thread.
         
         
             address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a 
-             resource that can accept a request sent with the POST method, such as a script or ASP page.
+             resource that can accept a request sent with the POST method, such as a script or ASP 
+             page.
         
-            data: The string to be uploaded.
+            data: The string to be uploaded.
+        UploadStringAsync(self: WebClient, address: Uri, method: str, data: str)
+            Uploads the specified string to the specified resource. This method does not block the 
+             calling thread.
+        
+        
+            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a 
+             resource that can accept a request sent with the POST method, such as a script or ASP 
+             page.
+        
+            method: The HTTP method used to send the file to the resource. If null, the default is POST for 
+             http and STOR for ftp.
+        
+            data: The string to be uploaded.
+        UploadStringAsync(self: WebClient, address: Uri, method: str, data: str, userToken: object)
+            Uploads the specified string to the specified resource. This method does not block the 
+             calling thread.
+        
+        
+            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a 
+             resource that can accept a request sent with the POST method, such as a script or ASP 
+             page.
+        
+            method: The HTTP method used to send the file to the resource. If null, the default is POST for 
+             http and STOR for ftp.
+        
+            data: The string to be uploaded.
+            userToken: A user-defined object that is passed to the method invoked when the asynchronous 
+             operation completes.
         """
         pass
 
     def UploadStringTaskAsync(self, address, *__args):
         """
-        UploadStringTaskAsync(self: WebClient, address: str, method: str, data: str) -> Task[str]
-        UploadStringTaskAsync(self: WebClient, address: Uri, method: str, data: str) -> Task[str]
         UploadStringTaskAsync(self: WebClient, address: str, data: str) -> Task[str]
-        UploadStringTaskAsync(self: WebClient, address: Uri, data: str) -> Task[str]
+        UploadStringTaskAsync(self: WebClient, address: Uri, data: str) -> Task[str]
+        UploadStringTaskAsync(self: WebClient, address: str, method: str, data: str) -> Task[str]
+        UploadStringTaskAsync(self: WebClient, address: Uri, method: str, data: str) -> Task[str]
         """
         pass
 
     def UploadValues(self, address, *__args):
         """
-        UploadValues(self: WebClient, address: str, method: str, data: NameValueCollection) -> Array[Byte]
-        
-            Uploads the specified name/value collection to the resource identified by the specified URI, 
-             using the specified method.
-        
-        
-            address: The URI of the resource to receive the collection.
-            method: The HTTP method used to send the file to the resource. If null, the default is POST for http and 
-             STOR for ftp.
-        
-            data: The System.Collections.Specialized.NameValueCollection to send to the resource.
-            Returns: A System.Byte array containing the body of the response from the resource.
-        UploadValues(self: WebClient, address: Uri, method: str, data: NameValueCollection) -> Array[Byte]
-        
-            Uploads the specified name/value collection to the resource identified by the specified URI, 
-             using the specified method.
-        
-        
-            address: The URI of the resource to receive the collection.
-            method: The HTTP method used to send the file to the resource. If null, the default is POST for http and 
-             STOR for ftp.
-        
-            data: The System.Collections.Specialized.NameValueCollection to send to the resource.
-            Returns: A System.Byte array containing the body of the response from the resource.
         UploadValues(self: WebClient, address: str, data: NameValueCollection) -> Array[Byte]
         
-            Uploads the specified name/value collection to the resource identified by the specified URI.
+            Uploads the specified name/value collection to the resource identified by the specified 
+             URI.
+        
         
             address: The URI of the resource to receive the collection.
             data: The System.Collections.Specialized.NameValueCollection to send to the resource.
             Returns: A System.Byte array containing the body of the response from the resource.
         UploadValues(self: WebClient, address: Uri, data: NameValueCollection) -> Array[Byte]
         
-            Uploads the specified name/value collection to the resource identified by the specified URI.
+            Uploads the specified name/value collection to the resource identified by the specified 
+             URI.
+        
         
             address: The URI of the resource to receive the collection.
+            data: The System.Collections.Specialized.NameValueCollection to send to the resource.
+            Returns: A System.Byte array containing the body of the response from the resource.
+        UploadValues(self: WebClient, address: str, method: str, data: NameValueCollection) -> Array[Byte]
+        
+            Uploads the specified name/value collection to the resource identified by the specified 
+             URI, using the specified method.
+        
+        
+            address: The URI of the resource to receive the collection.
+            method: The HTTP method used to send the file to the resource. If null, the default is POST for 
+             http and STOR for ftp.
+        
+            data: The System.Collections.Specialized.NameValueCollection to send to the resource.
+            Returns: A System.Byte array containing the body of the response from the resource.
+        UploadValues(self: WebClient, address: Uri, method: str, data: NameValueCollection) -> Array[Byte]
+        
+            Uploads the specified name/value collection to the resource identified by the specified 
+             URI, using the specified method.
+        
+        
+            address: The URI of the resource to receive the collection.
+            method: The HTTP method used to send the file to the resource. If null, the default is POST for 
+             http and STOR for ftp.
+        
             data: The System.Collections.Specialized.NameValueCollection to send to the resource.
             Returns: A System.Byte array containing the body of the response from the resource.
         """
@@ -7889,68 +7878,61 @@ class WebClient(Component, IComponent, IDisposable):
 
     def UploadValuesAsync(self, address, *__args):
         """
-        UploadValuesAsync(self: WebClient, address: Uri, method: str, data: NameValueCollection, userToken: object)
-            Uploads the data in the specified name/value collection to the resource identified by the 
-             specified URI, using the specified method. This method does not block the calling thread, and 
-             allows the caller to pass an object to the method that is invoked when the operation completes.
-        
-        
-            address: The URI of the resource to receive the collection. This URI must identify a resource that can 
-             accept a request sent with the method method.
-        
-            method: The HTTP method used to send the string to the resource. If null, the default is POST for http 
-             and STOR for ftp.
-        
-            data: The System.Collections.Specialized.NameValueCollection to send to the resource.
-            userToken: A user-defined object that is passed to the method invoked when the asynchronous operation 
-             completes.
-        
-        UploadValuesAsync(self: WebClient, address: Uri, method: str, data: NameValueCollection)
-            Uploads the data in the specified name/value collection to the resource identified by the 
-             specified URI, using the specified method. This method does not block the calling thread.
-        
-        
-            address: The URI of the resource to receive the collection. This URI must identify a resource that can 
-             accept a request sent with the method method.
-        
-            method: The method used to send the string to the resource. If null, the default is POST for http and 
-             STOR for ftp.
-        
-            data: The System.Collections.Specialized.NameValueCollection to send to the resource.
         UploadValuesAsync(self: WebClient, address: Uri, data: NameValueCollection)
             Uploads the data in the specified name/value collection to the resource identified by the 
              specified URI. This method does not block the calling thread.
         
         
-            address: The URI of the resource to receive the collection. This URI must identify a resource that can 
-             accept a request sent with the default method. See remarks.
+            address: The URI of the resource to receive the collection. This URI must identify a resource that 
+             can accept a request sent with the default method. See remarks.
         
-            data: The System.Collections.Specialized.NameValueCollection to send to the resource.
+            data: The System.Collections.Specialized.NameValueCollection to send to the resource.
+        UploadValuesAsync(self: WebClient, address: Uri, method: str, data: NameValueCollection)
+            Uploads the data in the specified name/value collection to the resource identified by the 
+             specified URI, using the specified method. This method does not block the calling thread.
+        
+        
+            address: The URI of the resource to receive the collection. This URI must identify a resource that 
+             can accept a request sent with the method method.
+        
+            method: The method used to send the string to the resource. If null, the default is POST for http 
+             and STOR for ftp.
+        
+            data: The System.Collections.Specialized.NameValueCollection to send to the resource.
+        UploadValuesAsync(self: WebClient, address: Uri, method: str, data: NameValueCollection, userToken: object)
+            Uploads the data in the specified name/value collection to the resource identified by the 
+             specified URI, using the specified method. This method does not block the calling thread, 
+             and allows the caller to pass an object to the method that is invoked when the operation 
+             completes.
+        
+        
+            address: The URI of the resource to receive the collection. This URI must identify a resource that 
+             can accept a request sent with the method method.
+        
+            method: The HTTP method used to send the string to the resource. If null, the default is POST for 
+             http and STOR for ftp.
+        
+            data: The System.Collections.Specialized.NameValueCollection to send to the resource.
+            userToken: A user-defined object that is passed to the method invoked when the asynchronous 
+             operation completes.
         """
         pass
 
     def UploadValuesTaskAsync(self, address, *__args):
         """
-        UploadValuesTaskAsync(self: WebClient, address: Uri, data: NameValueCollection) -> Task[Array[Byte]]
-        UploadValuesTaskAsync(self: WebClient, address: Uri, method: str, data: NameValueCollection) -> Task[Array[Byte]]
         UploadValuesTaskAsync(self: WebClient, address: str, data: NameValueCollection) -> Task[Array[Byte]]
-        UploadValuesTaskAsync(self: WebClient, address: str, method: str, data: NameValueCollection) -> Task[Array[Byte]]
+        UploadValuesTaskAsync(self: WebClient, address: str, method: str, data: NameValueCollection) -> Task[Array[Byte]]
+        UploadValuesTaskAsync(self: WebClient, address: Uri, data: NameValueCollection) -> Task[Array[Byte]]
+        UploadValuesTaskAsync(self: WebClient, address: Uri, method: str, data: NameValueCollection) -> Task[Array[Byte]]
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -8080,7 +8062,7 @@ Set: UseDefaultCredentials(self: WebClient) = value
     WriteStreamClosed = None
 
 
-class WebException(InvalidOperationException, ISerializable, _Exception):
+class WebException:
     """
     The exception that is thrown when an error occurs while accessing the network through a pluggable protocol.
     
@@ -8090,24 +8072,16 @@ class WebException(InvalidOperationException, ISerializable, _Exception):
     WebException(message: str, status: WebExceptionStatus)
     WebException(message: str, innerException: Exception, status: WebExceptionStatus, response: WebResponse)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def GetObjectData(self, serializationInfo, streamingContext):
         """
         GetObjectData(self: WebException, serializationInfo: SerializationInfo, streamingContext: StreamingContext)
-            Populates a System.Runtime.Serialization.SerializationInfo instance with the data needed to 
-             serialize the System.Net.WebException.
+            Populates a System.Runtime.Serialization.SerializationInfo instance with the data needed 
+             to serialize the System.Net.WebException.
         
         
             serializationInfo: The System.Runtime.Serialization.SerializationInfo to be used.
             streamingContext: The System.Runtime.Serialization.StreamingContext to be used.
         """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -8147,8 +8121,10 @@ Get: Status(self: WebException) -> WebExceptionStatus
 """
 
 
+    SerializeObjectState = None
 
-class WebExceptionStatus(Enum, IComparable, IFormattable, IConvertible):
+
+class WebExceptionStatus:
     """
     Defines status codes for the System.Net.WebException class.
     
@@ -8211,7 +8187,7 @@ class WebExceptionStatus(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class WebHeaderCollection(NameValueCollection, ICollection, IEnumerable, ISerializable, IDeserializationCallback):
+class WebHeaderCollection:
     """
     Contains protocol headers associated with a request or response.
     
@@ -8219,15 +8195,6 @@ class WebHeaderCollection(NameValueCollection, ICollection, IEnumerable, ISerial
     """
     def Add(self, *__args):
         """
-        Add(self: WebHeaderCollection, header: HttpResponseHeader, value: str)
-            Inserts the specified header with the specified value into the collection.
-        
-            header: The header to add to the collection.
-            value: The content of the header.
-        Add(self: WebHeaderCollection, header: str)
-            Inserts the specified header into the collection.
-        
-            header: The header to add, with the name and value separated by a colon.
         Add(self: WebHeaderCollection, name: str, value: str)
             Inserts a header with the specified name and value into the collection.
         
@@ -8237,15 +8204,24 @@ class WebHeaderCollection(NameValueCollection, ICollection, IEnumerable, ISerial
             Inserts the specified header with the specified value into the collection.
         
             header: The header to add to the collection.
-            value: The content of the header.
+            value: The content of the header.
+        Add(self: WebHeaderCollection, header: HttpResponseHeader, value: str)
+            Inserts the specified header with the specified value into the collection.
+        
+            header: The header to add to the collection.
+            value: The content of the header.
+        Add(self: WebHeaderCollection, header: str)
+            Inserts the specified header into the collection.
+        
+            header: The header to add, with the name and value separated by a colon.
         """
         pass
 
     def AddWithoutValidate(self, *args): #cannot find CLR method
         """
         AddWithoutValidate(self: WebHeaderCollection, headerName: str, headerValue: str)
-            Inserts a header into the collection without checking whether the header is on the restricted 
-             header list.
+            Inserts a header into the collection without checking whether the header is on the 
+             restricted header list.
         
         
             headerName: The header to add to the collection.
@@ -8268,20 +8244,13 @@ class WebHeaderCollection(NameValueCollection, ICollection, IEnumerable, ISerial
     def BaseClear(self, *args): #cannot find CLR method
         """
         BaseClear(self: NameObjectCollectionBase)
-            Removes all entries from the System.Collections.Specialized.NameObjectCollectionBase instance.
+            Removes all entries from the System.Collections.Specialized.NameObjectCollectionBase 
+             instance.
         """
         pass
 
     def BaseGet(self, *args): #cannot find CLR method
         """
-        BaseGet(self: NameObjectCollectionBase, index: int) -> object
-        
-            Gets the value of the entry at the specified index of the 
-             System.Collections.Specialized.NameObjectCollectionBase instance.
-        
-        
-            index: The zero-based index of the value to get.
-            Returns: An System.Object that represents the value of the entry at the specified index.
         BaseGet(self: NameObjectCollectionBase, name: str) -> object
         
             Gets the value of the first entry with the specified key from the 
@@ -8289,8 +8258,17 @@ class WebHeaderCollection(NameValueCollection, ICollection, IEnumerable, ISerial
         
         
             name: The System.String key of the entry to get. The key can be null.
-            Returns: An System.Object that represents the value of the first entry with the specified key, if found; 
-             otherwise, null.
+            Returns: An System.Object that represents the value of the first entry with the specified key, if 
+             found; otherwise, null.
+        
+        BaseGet(self: NameObjectCollectionBase, index: int) -> object
+        
+            Gets the value of the entry at the specified index of the 
+             System.Collections.Specialized.NameObjectCollectionBase instance.
+        
+        
+            index: The zero-based index of the value to get.
+            Returns: An System.Object that represents the value of the entry at the specified index.
         """
         pass
 
@@ -8308,6 +8286,14 @@ class WebHeaderCollection(NameValueCollection, ICollection, IEnumerable, ISerial
 
     def BaseGetAllValues(self, *args): #cannot find CLR method
         """
+        BaseGetAllValues(self: NameObjectCollectionBase) -> Array[object]
+        
+            Returns an System.Object array that contains all the values in the 
+             System.Collections.Specialized.NameObjectCollectionBase instance.
+        
+            Returns: An System.Object array that contains all the values in the 
+             System.Collections.Specialized.NameObjectCollectionBase instance.
+        
         BaseGetAllValues(self: NameObjectCollectionBase, type: Type) -> Array[object]
         
             Returns an array of the specified type that contains all the values in the 
@@ -8316,14 +8302,6 @@ class WebHeaderCollection(NameValueCollection, ICollection, IEnumerable, ISerial
         
             type: A System.Type that represents the type of array to return.
             Returns: An array of the specified type that contains all the values in the 
-             System.Collections.Specialized.NameObjectCollectionBase instance.
-        
-        BaseGetAllValues(self: NameObjectCollectionBase) -> Array[object]
-        
-            Returns an System.Object array that contains all the values in the 
-             System.Collections.Specialized.NameObjectCollectionBase instance.
-        
-            Returns: An System.Object array that contains all the values in the 
              System.Collections.Specialized.NameObjectCollectionBase instance.
         """
         pass
@@ -8345,11 +8323,12 @@ class WebHeaderCollection(NameValueCollection, ICollection, IEnumerable, ISerial
         """
         BaseHasKeys(self: NameObjectCollectionBase) -> bool
         
-            Gets a value indicating whether the System.Collections.Specialized.NameObjectCollectionBase 
-             instance contains entries whose keys are not null.
+            Gets a value indicating whether the 
+             System.Collections.Specialized.NameObjectCollectionBase instance contains entries whose 
+             keys are not null.
         
-            Returns: true if the System.Collections.Specialized.NameObjectCollectionBase instance contains entries 
-             whose keys are not null; otherwise, false.
+            Returns: true if the System.Collections.Specialized.NameObjectCollectionBase instance contains 
+             entries whose keys are not null; otherwise, false.
         """
         pass
 
@@ -8377,22 +8356,25 @@ class WebHeaderCollection(NameValueCollection, ICollection, IEnumerable, ISerial
 
     def BaseSet(self, *args): #cannot find CLR method
         """
+        BaseSet(self: NameObjectCollectionBase, name: str, value: object)
+            Sets the value of the first entry with the specified key in the 
+             System.Collections.Specialized.NameObjectCollectionBase instance, if found; otherwise, 
+             adds an entry with the specified key and value into the 
+             System.Collections.Specialized.NameObjectCollectionBase instance.
+        
+        
+            name: The System.String key of the entry to set. The key can be null.
+            value: The System.Object that represents the new value of the entry to set. The value can be 
+             null.
+        
         BaseSet(self: NameObjectCollectionBase, index: int, value: object)
             Sets the value of the entry at the specified index of the 
              System.Collections.Specialized.NameObjectCollectionBase instance.
         
         
             index: The zero-based index of the entry to set.
-            value: The System.Object that represents the new value of the entry to set. The value can be null.
-        BaseSet(self: NameObjectCollectionBase, name: str, value: object)
-            Sets the value of the first entry with the specified key in the 
-             System.Collections.Specialized.NameObjectCollectionBase instance, if found; otherwise, adds an 
-             entry with the specified key and value into the 
-             System.Collections.Specialized.NameObjectCollectionBase instance.
-        
-        
-            name: The System.String key of the entry to set. The key can be null.
-            value: The System.Object that represents the new value of the entry to set. The value can be null.
+            value: The System.Object that represents the new value of the entry to set. The value can be 
+             null.
         """
         pass
 
@@ -8405,6 +8387,14 @@ class WebHeaderCollection(NameValueCollection, ICollection, IEnumerable, ISerial
 
     def Get(self, *__args):
         """
+        Get(self: WebHeaderCollection, name: str) -> str
+        
+            Get the value of a particular header in the collection, specified by the name of the 
+             header.
+        
+        
+            name: The name of the Web header.
+            Returns: A System.String holding the value of the specified header.
         Get(self: WebHeaderCollection, index: int) -> str
         
             Get the value of a particular header in the collection, specified by an index into the 
@@ -8412,13 +8402,7 @@ class WebHeaderCollection(NameValueCollection, ICollection, IEnumerable, ISerial
         
         
             index: The zero-based index of the key to get from the collection.
-            Returns: A System.String containing the value of the specified header.
-        Get(self: WebHeaderCollection, name: str) -> str
-        
-            Get the value of a particular header in the collection, specified by the name of the header.
-        
-            name: The name of the Web header.
-            Returns: A System.String holding the value of the specified header.
+            Returns: A System.String containing the value of the specified header.
         """
         pass
 
@@ -8426,7 +8410,9 @@ class WebHeaderCollection(NameValueCollection, ICollection, IEnumerable, ISerial
         """
         GetEnumerator(self: WebHeaderCollection) -> IEnumerator
         
-            Returns an enumerator that can iterate through the System.Net.WebHeaderCollection instance.
+            Returns an enumerator that can iterate through the System.Net.WebHeaderCollection 
+             instance.
+        
             Returns: An System.Collections.IEnumerator for the System.Net.WebHeaderCollection.
         """
         pass
@@ -8445,8 +8431,8 @@ class WebHeaderCollection(NameValueCollection, ICollection, IEnumerable, ISerial
     def GetObjectData(self, serializationInfo, streamingContext):
         """
         GetObjectData(self: WebHeaderCollection, serializationInfo: SerializationInfo, streamingContext: StreamingContext)
-            Populates a System.Runtime.Serialization.SerializationInfo with the data needed to serialize the 
-             target object.
+            Populates a System.Runtime.Serialization.SerializationInfo with the data needed to 
+             serialize the target object.
         
         
             serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
@@ -8457,17 +8443,17 @@ class WebHeaderCollection(NameValueCollection, ICollection, IEnumerable, ISerial
 
     def GetValues(self, *__args):
         """
-        GetValues(self: WebHeaderCollection, index: int) -> Array[str]
-        
-            Gets an array of header values stored in the index position of the header collection.
-        
-            index: The header index to return.
-            Returns: An array of header strings.
         GetValues(self: WebHeaderCollection, header: str) -> Array[str]
         
             Gets an array of header values stored in a header.
         
             header: The header to return.
+            Returns: An array of header strings.
+        GetValues(self: WebHeaderCollection, index: int) -> Array[str]
+        
+            Gets an array of header values stored in the index position of the header collection.
+        
+            index: The header index to return.
             Returns: An array of header strings.
         """
         pass
@@ -8482,19 +8468,19 @@ class WebHeaderCollection(NameValueCollection, ICollection, IEnumerable, ISerial
     @staticmethod
     def IsRestricted(headerName, response=None):
         """
+        IsRestricted(headerName: str) -> bool
+        
+            Tests whether the specified HTTP header can be set for the request.
+        
+            headerName: The header to test.
+            Returns: true if the header is restricted; otherwise false.
         IsRestricted(headerName: str, response: bool) -> bool
         
             Tests whether the specified HTTP header can be set for the request or the response.
         
             headerName: The header to test.
             response: Does the Framework test the response or the request?
-            Returns: true if the header is restricted; otherwise, false.
-        IsRestricted(headerName: str) -> bool
-        
-            Tests whether the specified HTTP header can be set for the request.
-        
-            headerName: The header to test.
-            Returns: true if the header is restricted; otherwise false.
+            Returns: true if the header is restricted; otherwise, false.
         """
         pass
 
@@ -8511,37 +8497,37 @@ class WebHeaderCollection(NameValueCollection, ICollection, IEnumerable, ISerial
 
     def Remove(self, *__args):
         """
-        Remove(self: WebHeaderCollection, name: str)
+        Remove(self: WebHeaderCollection, header: HttpRequestHeader)
             Removes the specified header from the collection.
         
-            name: The name of the header to remove from the collection.
+            header: The System.Net.HttpRequestHeader instance to remove from the collection.
         Remove(self: WebHeaderCollection, header: HttpResponseHeader)
             Removes the specified header from the collection.
         
             header: The System.Net.HttpResponseHeader instance to remove from the collection.
-        Remove(self: WebHeaderCollection, header: HttpRequestHeader)
+        Remove(self: WebHeaderCollection, name: str)
             Removes the specified header from the collection.
         
-            header: The System.Net.HttpRequestHeader instance to remove from the collection.
+            name: The name of the header to remove from the collection.
         """
         pass
 
     def Set(self, *__args):
         """
-        Set(self: WebHeaderCollection, header: HttpResponseHeader, value: str)
+        Set(self: WebHeaderCollection, header: HttpRequestHeader, value: str)
             Sets the specified header to the specified value.
         
-            header: The System.Net.HttpResponseHeader value to set.
+            header: The System.Net.HttpRequestHeader value to set.
             value: The content of the header to set.
         Set(self: WebHeaderCollection, name: str, value: str)
             Sets the specified header to the specified value.
         
             name: The header to set.
             value: The content of the header to set.
-        Set(self: WebHeaderCollection, header: HttpRequestHeader, value: str)
+        Set(self: WebHeaderCollection, header: HttpResponseHeader, value: str)
             Sets the specified header to the specified value.
         
-            header: The System.Net.HttpRequestHeader value to set.
+            header: The System.Net.HttpResponseHeader value to set.
             value: The content of the header to set.
         """
         pass
@@ -8630,7 +8616,7 @@ Get: Keys(self: WebHeaderCollection) -> KeysCollection
 
 
 
-class WebPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IUnrestrictedPermission):
+class WebPermission:
     """
     Controls rights to access HTTP Internet resources.
     
@@ -8641,18 +8627,20 @@ class WebPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStac
     """
     def AddPermission(self, access, *__args):
         """
-        AddPermission(self: WebPermission, access: NetworkAccess, uriRegex: Regex)
-            Adds the specified URI with the specified access rights to the current System.Net.WebPermission.
-        
-            access: A NetworkAccess that specifies the access rights that are granted to the URI.
-            uriRegex: A regular expression that describes the set of URIs to which access rights are granted.
         AddPermission(self: WebPermission, access: NetworkAccess, uriString: str)
             Adds the specified URI string with the specified access rights to the current 
              System.Net.WebPermission.
         
         
             access: A System.Net.NetworkAccess that specifies the access rights that are granted to the URI.
-            uriString: A string that describes the URI to which access rights are granted.
+            uriString: A string that describes the URI to which access rights are granted.
+        AddPermission(self: WebPermission, access: NetworkAccess, uriRegex: Regex)
+            Adds the specified URI with the specified access rights to the current 
+             System.Net.WebPermission.
+        
+        
+            access: A NetworkAccess that specifies the access rights that are granted to the URI.
+            uriRegex: A regular expression that describes the set of URIs to which access rights are granted.
         """
         pass
 
@@ -8661,7 +8649,8 @@ class WebPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStac
         Copy(self: WebPermission) -> IPermission
         
             Creates a copy of a System.Net.WebPermission.
-            Returns: A new instance of the System.Net.WebPermission class that has the same values as the original.
+            Returns: A new instance of the System.Net.WebPermission class that has the same values as the 
+             original.
         """
         pass
 
@@ -8681,8 +8670,8 @@ class WebPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStac
             Returns the logical intersection of two System.Net.WebPermission instances.
         
             target: The System.Net.WebPermission to compare with the current instance.
-            Returns: A new System.Net.WebPermission that represents the intersection of the current instance and the 
-             target parameter. If the intersection is empty, the method returns null.
+            Returns: A new System.Net.WebPermission that represents the intersection of the current instance 
+             and the target parameter. If the intersection is empty, the method returns null.
         """
         pass
 
@@ -8690,12 +8679,14 @@ class WebPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStac
         """
         IsSubsetOf(self: WebPermission, target: IPermission) -> bool
         
-            Determines whether the current System.Net.WebPermission is a subset of the specified object.
+            Determines whether the current System.Net.WebPermission is a subset of the specified 
+             object.
+        
         
             target: The System.Net.WebPermission to compare to the current System.Net.WebPermission.
-            Returns: true if the current instance is a subset of the target parameter; otherwise, false. If the 
-             target is null, the method returns true for an empty current permission that is not unrestricted 
-             and false otherwise.
+            Returns: true if the current instance is a subset of the target parameter; otherwise, false. If 
+             the target is null, the method returns true for an empty current permission that is not 
+             unrestricted and false otherwise.
         """
         pass
 
@@ -8705,8 +8696,8 @@ class WebPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStac
         
             Checks the overall permission state of the System.Net.WebPermission.
             Returns: true if the System.Net.WebPermission was created with the 
-             System.Security.Permissions.PermissionState.UnrestrictedSystem.Security.Permissions.PermissionSta
-             te; otherwise, false.
+             System.Security.Permissions.PermissionState.UnrestrictedSystem.Security.Permissions.Permis
+             sionState; otherwise, false.
         """
         pass
 
@@ -8727,11 +8718,12 @@ class WebPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStac
             Returns the logical union between two instances of the System.Net.WebPermission class.
         
             target: The System.Net.WebPermission to combine with the current System.Net.WebPermission.
-            Returns: A System.Net.WebPermission that represents the union of the current instance and the target 
-             parameter. If either WebPermission is System.Security.Permissions.PermissionState.Unrestricted, 
-             the method returns a System.Net.WebPermission that is 
-             System.Security.Permissions.PermissionState.Unrestricted. If the target is null, the method 
-             returns a copy of the current System.Net.WebPermission.
+            Returns: A System.Net.WebPermission that represents the union of the current instance and the 
+             target parameter. If either WebPermission is 
+             System.Security.Permissions.PermissionState.Unrestricted, the method returns a 
+             System.Net.WebPermission that is 
+             System.Security.Permissions.PermissionState.Unrestricted. If the target is null, the 
+             method returns a copy of the current System.Net.WebPermission.
         """
         pass
 
@@ -8771,7 +8763,7 @@ Get: ConnectList(self: WebPermission) -> IEnumerator
 
 
 
-class WebPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class WebPermissionAttribute:
     """
     Specifies permission to access Internet resources. This class cannot be inherited.
     
@@ -8832,7 +8824,7 @@ Set: ConnectPattern(self: WebPermissionAttribute) = value
 
 
 
-class WebProxy(object, IAutoWebProxy, IWebProxy, ISerializable):
+class WebProxy:
     """
     Contains HTTP proxy settings for the System.Net.WebRequest class.
     
@@ -8861,8 +8853,8 @@ class WebProxy(object, IAutoWebProxy, IWebProxy, ISerializable):
     def GetObjectData(self, *args): #cannot find CLR method
         """
         GetObjectData(self: WebProxy, serializationInfo: SerializationInfo, streamingContext: StreamingContext)
-            Populates a System.Runtime.Serialization.SerializationInfo with the data that is needed to 
-             serialize the target object.
+            Populates a System.Runtime.Serialization.SerializationInfo with the data that is needed 
+             to serialize the target object.
         
         
             serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
@@ -8971,7 +8963,7 @@ Set: UseDefaultCredentials(self: WebProxy) = value
 
 
 
-class WebRequestMethods(object):
+class WebRequestMethods:
     """ Container class for System.Net.WebRequestMethods.Ftp, System.Net.WebRequestMethods.File, and System.Net.WebRequestMethods.Http classes. This class cannot be inherited """
     File = None
     Ftp = None
@@ -8983,43 +8975,43 @@ class WebRequestMethods(object):
     ]
 
 
-class WebUtility(object):
+class WebUtility:
     """ Provides methods for encoding and decoding URLs when processing Web requests. """
     @staticmethod
     def HtmlDecode(value, output=None):
         """
-        HtmlDecode(value: str, output: TextWriter)
-            Converts a string that has been HTML-encoded into a decoded string, and sends the decoded string 
-             to a System.IO.TextWriter output stream.
-        
-        
-            value: The string to decode.
-            output: A System.IO.TextWriter stream of output.
         HtmlDecode(value: str) -> str
         
             Converts a string that has been HTML-encoded for HTTP transmission into a decoded string.
         
             value: The string to decode.
-            Returns: A decoded string.
+            Returns: A decoded string.
+        HtmlDecode(value: str, output: TextWriter)
+            Converts a string that has been HTML-encoded into a decoded string, and sends the decoded 
+             string to a System.IO.TextWriter output stream.
+        
+        
+            value: The string to decode.
+            output: A System.IO.TextWriter stream of output.
         """
         pass
 
     @staticmethod
     def HtmlEncode(value, output=None):
         """
-        HtmlEncode(value: str, output: TextWriter)
-            Converts a string into an HTML-encoded string, and returns the output as a System.IO.TextWriter 
-             stream of output.
-        
-        
-            value: The string to encode.
-            output: A System.IO.TextWriter output stream.
         HtmlEncode(value: str) -> str
         
             Converts a string to an HTML-encoded string.
         
             value: The string to encode.
-            Returns: An encoded string.
+            Returns: An encoded string.
+        HtmlEncode(value: str, output: TextWriter)
+            Converts a string into an HTML-encoded string, and returns the output as a 
+             System.IO.TextWriter stream of output.
+        
+        
+            value: The string to encode.
+            output: A System.IO.TextWriter output stream.
         """
         pass
 
@@ -9053,7 +9045,7 @@ class WebUtility(object):
     ]
 
 
-class WriteStreamClosedEventArgs(EventArgs):
+class WriteStreamClosedEventArgs:
     """ WriteStreamClosedEventArgs() """
     Error = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Error(self: WriteStreamClosedEventArgs) -> Exception
@@ -9062,7 +9054,7 @@ class WriteStreamClosedEventArgs(EventArgs):
 
 
 
-class WriteStreamClosedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class WriteStreamClosedEventHandler:
     """ WriteStreamClosedEventHandler(object: object, method: IntPtr) """
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: WriteStreamClosedEventHandler, sender: object, e: WriteStreamClosedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -9085,9 +9077,9 @@ class WriteStreamClosedEventHandler(MulticastDelegate, ICloneable, ISerializable
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -9114,13 +9106,14 @@ class WriteStreamClosedEventHandler(MulticastDelegate, ICloneable, ISerializable
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 

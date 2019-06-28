@@ -1,9 +1,7 @@
-class ThreadState(Enum,IComparable,IFormattable,IConvertible):
+class ThreadState:
  """
- Specifies the current execution state of the thread.
-
- 
-
+ Specifies the current execution state of the thread.
+ 
  enum ThreadState,values: Initialized (0),Ready (1),Running (2),Standby (3),Terminated (4),Transition (6),Unknown (7),Wait (5)
  """
  def __eq__(self,*args):

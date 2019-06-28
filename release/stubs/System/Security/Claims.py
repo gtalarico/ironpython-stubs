@@ -2,13 +2,13 @@
 # module System.Security.Claims calls itself Claims
 # from mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class Claim(object):
+class Claim:
     """
     Claim(reader: BinaryReader)
     Claim(reader: BinaryReader, subject: ClaimsIdentity)
@@ -20,8 +20,8 @@ class Claim(object):
     """
     def Clone(self, identity=None):
         """
-        Clone(self: Claim, identity: ClaimsIdentity) -> Claim
-        Clone(self: Claim) -> Claim
+        Clone(self: Claim) -> Claim
+        Clone(self: Claim, identity: ClaimsIdentity) -> Claim
         """
         pass
 
@@ -87,7 +87,7 @@ class Claim(object):
 
 
 
-class ClaimsIdentity(object, IIdentity):
+class ClaimsIdentity:
     """
     ClaimsIdentity()
     ClaimsIdentity(identity: IIdentity)
@@ -118,15 +118,15 @@ class ClaimsIdentity(object, IIdentity):
 
     def FindAll(self, *__args):
         """
-        FindAll(self: ClaimsIdentity, type: str) -> IEnumerable[Claim]
-        FindAll(self: ClaimsIdentity, match: Predicate[Claim]) -> IEnumerable[Claim]
+        FindAll(self: ClaimsIdentity, match: Predicate[Claim]) -> IEnumerable[Claim]
+        FindAll(self: ClaimsIdentity, type: str) -> IEnumerable[Claim]
         """
         pass
 
     def FindFirst(self, *__args):
         """
-        FindFirst(self: ClaimsIdentity, type: str) -> Claim
-        FindFirst(self: ClaimsIdentity, match: Predicate[Claim]) -> Claim
+        FindFirst(self: ClaimsIdentity, match: Predicate[Claim]) -> Claim
+        FindFirst(self: ClaimsIdentity, type: str) -> Claim
         """
         pass
 
@@ -136,8 +136,8 @@ class ClaimsIdentity(object, IIdentity):
 
     def HasClaim(self, *__args):
         """
-        HasClaim(self: ClaimsIdentity, type: str, value: str) -> bool
-        HasClaim(self: ClaimsIdentity, match: Predicate[Claim]) -> bool
+        HasClaim(self: ClaimsIdentity, match: Predicate[Claim]) -> bool
+        HasClaim(self: ClaimsIdentity, type: str, value: str) -> bool
         """
         pass
 
@@ -239,7 +239,7 @@ Set: Label(self: ClaimsIdentity) = value
     DefaultRoleClaimType = 'http://schemas.microsoft.com/ws/2008/06/identity/claims/role'
 
 
-class ClaimsPrincipal(object, IPrincipal):
+class ClaimsPrincipal:
     """
     ClaimsPrincipal()
     ClaimsPrincipal(identity: IIdentity)
@@ -265,15 +265,15 @@ class ClaimsPrincipal(object, IPrincipal):
 
     def FindAll(self, *__args):
         """
-        FindAll(self: ClaimsPrincipal, type: str) -> IEnumerable[Claim]
-        FindAll(self: ClaimsPrincipal, match: Predicate[Claim]) -> IEnumerable[Claim]
+        FindAll(self: ClaimsPrincipal, match: Predicate[Claim]) -> IEnumerable[Claim]
+        FindAll(self: ClaimsPrincipal, type: str) -> IEnumerable[Claim]
         """
         pass
 
     def FindFirst(self, *__args):
         """
-        FindFirst(self: ClaimsPrincipal, type: str) -> Claim
-        FindFirst(self: ClaimsPrincipal, match: Predicate[Claim]) -> Claim
+        FindFirst(self: ClaimsPrincipal, match: Predicate[Claim]) -> Claim
+        FindFirst(self: ClaimsPrincipal, type: str) -> Claim
         """
         pass
 
@@ -283,8 +283,8 @@ class ClaimsPrincipal(object, IPrincipal):
 
     def HasClaim(self, *__args):
         """
-        HasClaim(self: ClaimsPrincipal, type: str, value: str) -> bool
-        HasClaim(self: ClaimsPrincipal, match: Predicate[Claim]) -> bool
+        HasClaim(self: ClaimsPrincipal, match: Predicate[Claim]) -> bool
+        HasClaim(self: ClaimsPrincipal, type: str, value: str) -> bool
         """
         pass
 
@@ -345,7 +345,7 @@ class ClaimsPrincipal(object, IPrincipal):
     Current = None
 
 
-class ClaimTypes(object):
+class ClaimTypes:
     # no doc
     Actor = 'http://schemas.xmlsoap.org/ws/2009/09/identity/claims/actor'
     Anonymous = 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/anonymous'
@@ -459,7 +459,7 @@ class ClaimTypes(object):
     ]
 
 
-class ClaimValueTypes(object):
+class ClaimValueTypes:
     # no doc
     Base64Binary = 'http://www.w3.org/2001/XMLSchema#base64Binary'
     Base64Octet = 'http://www.w3.org/2001/XMLSchema#base64Octet'
@@ -519,7 +519,7 @@ class ClaimValueTypes(object):
     ]
 
 
-class DynamicRoleClaimProvider(object):
+class DynamicRoleClaimProvider:
     # no doc
     @staticmethod
     def AddDynamicRoleClaims(claimsIdentity, claims):

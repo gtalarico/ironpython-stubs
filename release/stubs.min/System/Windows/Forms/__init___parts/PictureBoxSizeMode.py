@@ -1,9 +1,7 @@
-class PictureBoxSizeMode(Enum,IComparable,IFormattable,IConvertible):
+class PictureBoxSizeMode:
  """
- Specifies how an image is positioned within a System.Windows.Forms.PictureBox.
-
- 
-
+ Specifies how an image is positioned within a System.Windows.Forms.PictureBox.
+ 
  enum PictureBoxSizeMode,values: AutoSize (2),CenterImage (3),Normal (0),StretchImage (1),Zoom (4)
  """
  def __eq__(self,*args):

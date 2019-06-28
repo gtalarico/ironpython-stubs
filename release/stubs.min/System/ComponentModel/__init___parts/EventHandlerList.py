@@ -1,70 +1,46 @@
-class EventHandlerList(object,IDisposable):
+class EventHandlerList:
  """
- Provides a simple list of delegates. This class cannot be inherited.
-
- 
-
+ Provides a simple list of delegates. This class cannot be inherited.
+ 
  EventHandlerList()
  """
  def AddHandler(self,key,value):
   """
-  AddHandler(self: EventHandlerList,key: object,value: Delegate)
-
-   Adds a delegate to the list.
-
-  
-
-   key: The object that owns the event.
-
+  AddHandler(self: EventHandlerList,key: object,value: Delegate)
+   Adds a delegate to the list.
+  
+   key: The object that owns the event.
    value: The delegate to add to the list.
   """
   pass
  def AddHandlers(self,listToAddFrom):
   """
-  AddHandlers(self: EventHandlerList,listToAddFrom: EventHandlerList)
-
-   Adds a list of delegates to the current list.
-
-  
-
+  AddHandlers(self: EventHandlerList,listToAddFrom: EventHandlerList)
+   Adds a list of delegates to the current list.
+  
    listToAddFrom: The list to add.
   """
   pass
  def Dispose(self):
   """
-  Dispose(self: EventHandlerList)
-
+  Dispose(self: EventHandlerList)
    Disposes the delegate list.
   """
   pass
  def RemoveHandler(self,key,value):
   """
-  RemoveHandler(self: EventHandlerList,key: object,value: Delegate)
-
-   Removes a delegate from the list.
-
-  
-
-   key: The object that owns the event.
-
+  RemoveHandler(self: EventHandlerList,key: object,value: Delegate)
+   Removes a delegate from the list.
+  
+   key: The object that owns the event.
    value: The delegate to remove from the list.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-
-  
-
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """

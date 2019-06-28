@@ -1,4 +1,4 @@
-class Int32(object):
+class Int32:
  """ Represents a 32-bit signed integer. """
  def bit_length(self,*args):
   """ bit_length(value: int) -> int """
@@ -23,9 +23,8 @@ class Int32(object):
   pass
  def __divmod__(self,*args):
   """
+  __divmod__(x: int,y: int) -> tuple
   __divmod__(x: int,y: object) -> object
-
-  __divmod__(x: int,y: int) -> tuple
   """
   pass
  def __div__(self,*args):
@@ -70,17 +69,12 @@ class Int32(object):
  @staticmethod
  def __new__(self,*args): #cannot find CLR constructor
   """
-  __new__(cls: type,s: IList[Byte]) -> object
-
-  __new__(cls: type,x: object) -> object
-
+  __new__(o: object) -> object
+  __new__(cls: type,o: Extensible[float]) -> object
+  __new__(cls: type,s: str,base: int) -> object
+  __new__(cls: type,s: IList[Byte]) -> object
+  __new__(cls: type,x: object) -> object
   __new__(cls: type) -> object
-
-  __new__(o: object) -> object
-
-  __new__(cls: type,o: Extensible[float]) -> object
-
-  __new__(cls: type,s: str,base: int) -> object
   """
   pass
  def __nonzero__(self,*args):
@@ -127,13 +121,10 @@ class Int32(object):
   pass
  def __rpow__(self,*args):
   """
-  __rpow__(x: int,power: int,qmod: Nullable[int]) -> object
-
+  __rpow__(x: int,power: long,qmod: long) -> object
+  __rpow__(x: int,power: float,qmod: float) -> object
+  __rpow__(x: int,power: int,qmod: Nullable[int]) -> object
   __rpow__(x: int,power: int) -> object
-
-  __rpow__(x: int,power: long,qmod: long) -> object
-
-  __rpow__(x: int,power: float,qmod: float) -> object
   """
   pass
  def __rrshift__(self,*args):

@@ -2,13 +2,13 @@
 # module System.IO.Ports calls itself Ports
 # from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class Handshake(Enum, IComparable, IFormattable, IConvertible):
+class Handshake:
     """
     Specifies the control protocol used in establishing a serial port communication for a System.IO.Ports.SerialPort object.
     
@@ -47,14 +47,14 @@ class Handshake(Enum, IComparable, IFormattable, IConvertible):
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    None = None
+    None_ =None
     RequestToSend = None
     RequestToSendXOnXOff = None
     value__ = None
     XOnXOff = None
 
 
-class Parity(Enum, IComparable, IFormattable, IConvertible):
+class Parity:
     """
     Specifies the parity bit for a System.IO.Ports.SerialPort object.
     
@@ -95,13 +95,13 @@ class Parity(Enum, IComparable, IFormattable, IConvertible):
 
     Even = None
     Mark = None
-    None = None
+    None_ =None
     Odd = None
     Space = None
     value__ = None
 
 
-class SerialData(Enum, IComparable, IFormattable, IConvertible):
+class SerialData:
     """
     Specifies the type of character that was received on the serial port of the System.IO.Ports.SerialPort object.
     
@@ -145,7 +145,7 @@ class SerialData(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class SerialDataReceivedEventArgs(EventArgs):
+class SerialDataReceivedEventArgs:
     """ Provides data for the System.IO.Ports.SerialPort.DataReceived event. """
     EventType = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets the event type.
@@ -156,7 +156,7 @@ Get: EventType(self: SerialDataReceivedEventArgs) -> SerialData
 
 
 
-class SerialDataReceivedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class SerialDataReceivedEventHandler:
     """
     Represents the method that will handle the System.IO.Ports.SerialPort.DataReceived event of a System.IO.Ports.SerialPort object.
     
@@ -183,9 +183,9 @@ class SerialDataReceivedEventHandler(MulticastDelegate, ICloneable, ISerializabl
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -212,13 +212,14 @@ class SerialDataReceivedEventHandler(MulticastDelegate, ICloneable, ISerializabl
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -235,7 +236,7 @@ class SerialDataReceivedEventHandler(MulticastDelegate, ICloneable, ISerializabl
         pass
 
 
-class SerialError(Enum, IComparable, IFormattable, IConvertible):
+class SerialError:
     """
     Specifies errors that occur on the System.IO.Ports.SerialPort object.
     
@@ -282,7 +283,7 @@ class SerialError(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class SerialErrorReceivedEventArgs(EventArgs):
+class SerialErrorReceivedEventArgs:
     """ Prepares data for the System.IO.Ports.SerialPort.ErrorReceived event. """
     EventType = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets the event type.
@@ -293,7 +294,7 @@ Get: EventType(self: SerialErrorReceivedEventArgs) -> SerialError
 
 
 
-class SerialErrorReceivedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class SerialErrorReceivedEventHandler:
     """
     Represents the method that will handle the System.IO.Ports.SerialPort.ErrorReceived event of a System.IO.Ports.SerialPort object.
     
@@ -320,9 +321,9 @@ class SerialErrorReceivedEventHandler(MulticastDelegate, ICloneable, ISerializab
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -349,13 +350,14 @@ class SerialErrorReceivedEventHandler(MulticastDelegate, ICloneable, ISerializab
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -372,7 +374,7 @@ class SerialErrorReceivedEventHandler(MulticastDelegate, ICloneable, ISerializab
         pass
 
 
-class SerialPinChange(Enum, IComparable, IFormattable, IConvertible):
+class SerialPinChange:
     """
     Specifies the type of change that occurred on the System.IO.Ports.SerialPort object.
     
@@ -419,7 +421,7 @@ class SerialPinChange(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class SerialPinChangedEventArgs(EventArgs):
+class SerialPinChangedEventArgs:
     """ Provides data for the System.IO.Ports.SerialPort.PinChanged event. """
     EventType = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets the event type.
@@ -430,7 +432,7 @@ Get: EventType(self: SerialPinChangedEventArgs) -> SerialPinChange
 
 
 
-class SerialPinChangedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class SerialPinChangedEventHandler:
     """
     Represents the method that will handle the System.IO.Ports.SerialPort.PinChanged event of a System.IO.Ports.SerialPort object.
     
@@ -457,9 +459,9 @@ class SerialPinChangedEventHandler(MulticastDelegate, ICloneable, ISerializable)
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -486,13 +488,14 @@ class SerialPinChangedEventHandler(MulticastDelegate, ICloneable, ISerializable)
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -509,7 +512,7 @@ class SerialPinChangedEventHandler(MulticastDelegate, ICloneable, ISerializable)
         pass
 
 
-class SerialPort(Component, IComponent, IDisposable):
+class SerialPort:
     """
     Represents a serial port resource.
     
@@ -524,8 +527,8 @@ class SerialPort(Component, IComponent, IDisposable):
     def Close(self):
         """
         Close(self: SerialPort)
-            Closes the port connection, sets the System.IO.Ports.SerialPort.IsOpen property to false, and 
-             disposes of the internal System.IO.Stream object.
+            Closes the port connection, sets the System.IO.Ports.SerialPort.IsOpen property to false, 
+             and disposes of the internal System.IO.Stream object.
         """
         pass
 
@@ -546,11 +549,12 @@ class SerialPort(Component, IComponent, IDisposable):
     def Dispose(self):
         """
         Dispose(self: SerialPort, disposing: bool)
-            Releases the unmanaged resources used by the System.IO.Ports.SerialPort and optionally releases 
-             the managed resources.
+            Releases the unmanaged resources used by the System.IO.Ports.SerialPort and optionally 
+             releases the managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
@@ -568,13 +572,14 @@ class SerialPort(Component, IComponent, IDisposable):
         """
         GetService(self: Component, service: Type) -> object
         
-            Returns an object that represents a service provided by the System.ComponentModel.Component or 
-             by its System.ComponentModel.Container.
+            Returns an object that represents a service provided by the 
+             System.ComponentModel.Component or by its System.ComponentModel.Container.
         
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or 
-             null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the 
+             System.ComponentModel.Component, or null if the System.ComponentModel.Component does not 
+             provide the specified service.
         """
         pass
 
@@ -584,11 +589,11 @@ class SerialPort(Component, IComponent, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -607,26 +612,26 @@ class SerialPort(Component, IComponent, IDisposable):
 
     def Read(self, buffer, offset, count):
         """
-        Read(self: SerialPort, buffer: Array[Char], offset: int, count: int) -> int
-        
-            Reads a number of characters from the System.IO.Ports.SerialPort input buffer and writes them 
-             into an array of characters at a given offset.
-        
-        
-            buffer: The character array to write the input to.
-            offset: The offset in the buffer array to begin writing.
-            count: The number of characters to read.
-            Returns: The number of characters read.
         Read(self: SerialPort, buffer: Array[Byte], offset: int, count: int) -> int
         
-            Reads a number of bytes from the System.IO.Ports.SerialPort input buffer and writes those bytes 
-             into a byte array at the specified offset.
+            Reads a number of bytes from the System.IO.Ports.SerialPort input buffer and writes those 
+             bytes into a byte array at the specified offset.
         
         
             buffer: The byte array to write the input to.
             offset: The offset in the buffer array to begin writing.
             count: The number of bytes to read.
-            Returns: The number of bytes read.
+            Returns: The number of bytes read.
+        Read(self: SerialPort, buffer: Array[Char], offset: int, count: int) -> int
+        
+            Reads a number of characters from the System.IO.Ports.SerialPort input buffer and writes 
+             them into an array of characters at a given offset.
+        
+        
+            buffer: The character array to write the input to.
+            offset: The offset in the buffer array to begin writing.
+            count: The number of characters to read.
+            Returns: The number of characters read.
         """
         pass
 
@@ -652,8 +657,8 @@ class SerialPort(Component, IComponent, IDisposable):
         """
         ReadExisting(self: SerialPort) -> str
         
-            Reads all immediately available bytes, based on the encoding, in both the stream and the input 
-             buffer of the System.IO.Ports.SerialPort object.
+            Reads all immediately available bytes, based on the encoding, in both the stream and the 
+             input buffer of the System.IO.Ports.SerialPort object.
         
             Returns: The contents of the stream and the input buffer of the System.IO.Ports.SerialPort object.
         """
@@ -682,30 +687,34 @@ class SerialPort(Component, IComponent, IDisposable):
 
     def Write(self, *__args):
         """
-        Write(self: SerialPort, buffer: Array[Byte], offset: int, count: int)
-            Writes a specified number of bytes to the serial port using data from a buffer.
+        Write(self: SerialPort, text: str)
+            Writes the specified string to the serial port.
         
-            buffer: The byte array that contains the data to write to the port.
-            offset: The zero-based byte offset in the buffer parameter at which to begin copying bytes to the port.
-            count: The number of bytes to write.
+            text: The string for output.
         Write(self: SerialPort, buffer: Array[Char], offset: int, count: int)
             Writes a specified number of characters to the serial port using data from a buffer.
         
             buffer: The character array that contains the data to write to the port.
-            offset: The zero-based byte offset in the buffer parameter at which to begin copying bytes to the port.
-            count: The number of characters to write.
-        Write(self: SerialPort, text: str)
-            Writes the specified string to the serial port.
+            offset: The zero-based byte offset in the buffer parameter at which to begin copying bytes to the 
+             port.
         
-            text: The string for output.
+            count: The number of characters to write.
+        Write(self: SerialPort, buffer: Array[Byte], offset: int, count: int)
+            Writes a specified number of bytes to the serial port using data from a buffer.
+        
+            buffer: The byte array that contains the data to write to the port.
+            offset: The zero-based byte offset in the buffer parameter at which to begin copying bytes to the 
+             port.
+        
+            count: The number of bytes to write.
         """
         pass
 
     def WriteLine(self, text):
         """
         WriteLine(self: SerialPort, text: str)
-            Writes the specified string and the System.IO.Ports.SerialPort.NewLine value to the output 
-             buffer.
+            Writes the specified string and the System.IO.Ports.SerialPort.NewLine value to the 
+             output buffer.
         
         
             text: The string to write to the output buffer.
@@ -713,18 +722,11 @@ class SerialPort(Component, IComponent, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -962,7 +964,7 @@ Set: WriteTimeout(self: SerialPort) = value
     PinChanged = None
 
 
-class StopBits(Enum, IComparable, IFormattable, IConvertible):
+class StopBits:
     """
     Specifies the number of stop bits used on the System.IO.Ports.SerialPort object.
     
@@ -1001,7 +1003,7 @@ class StopBits(Enum, IComparable, IFormattable, IConvertible):
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    None = None
+    None_ =None
     One = None
     OnePointFive = None
     Two = None

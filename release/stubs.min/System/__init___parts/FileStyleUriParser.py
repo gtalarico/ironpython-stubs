@@ -1,8 +1,6 @@
-class FileStyleUriParser(UriParser):
+class FileStyleUriParser:
  """
- A customizable parser based on the File scheme.
-
- 
-
+ A customizable parser based on the File scheme.
+ 
  FileStyleUriParser()
  """

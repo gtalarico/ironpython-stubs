@@ -1,79 +1,46 @@
 # encoding: utf-8
 # module System
-# from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
+# from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System.Drawing,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a,System.Windows.Forms,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null,Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # functions
 
 def Action(p_object,method): # real signature unknown; restored from __doc__
  """
- Encapsulates a method that has no parameters and does not return a value.
-
- 
-
+ Encapsulates a method that has no parameters and does not return a value.
+ 
  Action(object: object,method: IntPtr)
  """
  pass
 def EventHandler(p_object,method): # real signature unknown; restored from __doc__
  """
- Represents the method that will handle an event that has no event data.
-
- 
-
+ Represents the method that will handle an event that has no event data.
+ 
  EventHandler(object: object,method: IntPtr)
  """
  pass
-def Func(*args,**kwargs): # real signature unknown
- """
- A TypeCollision is used when we have a collision between
-
-    two types with the same name.  Currently this is only possible w/ generic
-
-    methods that should logically have arity as a portion of their name. For eg:
-
-      System.EventHandler and System.EventHandler[T]
-
-      System.Nullable and System.Nullable[T]
-
-      System.IComparable and System.IComparable[T]
-
-    
-
-    The TypeCollision provides an indexer but also is a real type.  When used
-
-    as a real type it is the non-generic form of the type.
-
-    
-
-    The indexer allows the user to disambiguate between the generic and
-
-    non-generic versions.  Therefore users must always provide additional
-
-    information to get the generic version.
- """
+def Func(args,kwargs): # real signature unknown
+ """  """
  pass
-def IComparable(*args,**kwargs): # real signature unknown
+def IComparable(args,kwargs): # real signature unknown
  """ Defines a generalized type-specific comparison method that a value type or class implements to order or sort its instances. """
  pass
-def Nullable(*args,**kwargs): # real signature unknown
+def Nullable(args,kwargs): # real signature unknown
  """ Supports a value type that can be assigned null like a reference type. This class cannot be inherited. """
  pass
-def Tuple(*args,**kwargs): # real signature unknown
+def Tuple(args,kwargs): # real signature unknown
  """ Provides static methods for creating tuple objects. """
  pass
-def ValueTuple(*args,**kwargs): # real signature unknown
+def ValueTuple(args,kwargs): # real signature unknown
  """  """
  pass
 def WeakReference(target): # real signature unknown; restored from __doc__
  """
- Represents a weak reference,which references an object while still allowing that object to be reclaimed by garbage collection.
-
- 
-
- WeakReference(target: object)
-
+ Represents a weak reference,which references an object while still allowing that object to be reclaimed by garbage collection.
+ 
+ WeakReference(target: object)
  WeakReference(target: object,trackResurrection: bool)
  """
  pass
@@ -147,6 +114,7 @@ from __init___parts.Converter import Converter
 from __init___parts.CrossAppDomainDelegate import CrossAppDomainDelegate
 from __init___parts.DataMisalignedException import DataMisalignedException
 from __init___parts.DateTime import DateTime
+from __init___parts.DateTimeExtensions import DateTimeExtensions
 from __init___parts.DateTimeKind import DateTimeKind
 from __init___parts.DateTimeOffset import DateTimeOffset
 from __init___parts.DayOfWeek import DayOfWeek
@@ -245,6 +213,7 @@ from __init___parts.STAThreadAttribute import STAThreadAttribute
 from __init___parts.String import String
 from __init___parts.StringComparer import StringComparer
 from __init___parts.StringComparison import StringComparison
+from __init___parts.StringNormalizationExtensions import StringNormalizationExtensions
 from __init___parts.StringSplitOptions import StringSplitOptions
 from __init___parts.ThreadStaticAttribute import ThreadStaticAttribute
 from __init___parts.TimeoutException import TimeoutException

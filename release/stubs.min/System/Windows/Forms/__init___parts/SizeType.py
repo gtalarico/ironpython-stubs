@@ -1,9 +1,7 @@
-class SizeType(Enum,IComparable,IFormattable,IConvertible):
+class SizeType:
  """
- Specifies how rows or columns of user interface (UI) elements should be sized relative to their container.
-
- 
-
+ Specifies how rows or columns of user interface (UI) elements should be sized relative to their container.
+ 
  enum SizeType,values: Absolute (1),AutoSize (0),Percent (2)
  """
  def __eq__(self,*args):

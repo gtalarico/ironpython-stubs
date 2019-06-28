@@ -1,9 +1,7 @@
-class DataGridViewCellBorderStyle(Enum,IComparable,IFormattable,IConvertible):
+class DataGridViewCellBorderStyle:
  """
- Specifies the border styles that can be applied to the cells of a System.Windows.Forms.DataGridView control.
-
- 
-
+ Specifies the border styles that can be applied to the cells of a System.Windows.Forms.DataGridView control.
+ 
  enum DataGridViewCellBorderStyle,values: Custom (0),None (4),Raised (2),RaisedHorizontal (9),RaisedVertical (6),Single (1),SingleHorizontal (8),SingleVertical (5),Sunken (3),SunkenHorizontal (10),SunkenVertical (7)
  """
  def __eq__(self,*args):
@@ -30,7 +28,7 @@ class DataGridViewCellBorderStyle(Enum,IComparable,IFormattable,IConvertible):
  def __str__(self,*args):
   pass
  Custom=None
- None=None
+ None_ =None
  Raised=None
  RaisedHorizontal=None
  RaisedVertical=None

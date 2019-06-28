@@ -1,9 +1,7 @@
-class LayoutKind(Enum,IComparable,IFormattable,IConvertible):
+class LayoutKind:
  """
- Controls the layout of an object when it is exported to unmanaged code.
-
- 
-
+ Controls the layout of an object when it is exported to unmanaged code.
+ 
  enum LayoutKind,values: Auto (3),Explicit (2),Sequential (0)
  """
  def __eq__(self,*args):

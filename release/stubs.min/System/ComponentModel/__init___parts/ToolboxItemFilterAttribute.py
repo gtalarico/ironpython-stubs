@@ -1,19 +1,14 @@
-class ToolboxItemFilterAttribute(Attribute,_Attribute):
+class ToolboxItemFilterAttribute:
  """
- Specifies the filter string and filter type to use for a toolbox item.
-
- 
-
- ToolboxItemFilterAttribute(filterString: str)
-
+ Specifies the filter string and filter type to use for a toolbox item.
+ 
+ ToolboxItemFilterAttribute(filterString: str)
  ToolboxItemFilterAttribute(filterString: str,filterType: ToolboxItemFilterType)
  """
  def Equals(self,obj):
   """
-  Equals(self: ToolboxItemFilterAttribute,obj: object) -> bool
-
-  
-
+  Equals(self: ToolboxItemFilterAttribute,obj: object) -> bool
+  
    obj: The object to compare.
   """
   pass
@@ -22,16 +17,11 @@ class ToolboxItemFilterAttribute(Attribute,_Attribute):
   pass
  def Match(self,obj):
   """
-  Match(self: ToolboxItemFilterAttribute,obj: object) -> bool
-
-  
-
-   Indicates whether the specified object has a matching filter string.
-
-  
-
-   obj: The object to test for a matching filter string.
-
+  Match(self: ToolboxItemFilterAttribute,obj: object) -> bool
+  
+   Indicates whether the specified object has a matching filter string.
+  
+   obj: The object to test for a matching filter string.
    Returns: true if the specified object has a matching filter string; otherwise,false.
   """
   pass
@@ -47,8 +37,7 @@ class ToolboxItemFilterAttribute(Attribute,_Attribute):
  @staticmethod
  def __new__(self,filterString,filterType=None):
   """
-  __new__(cls: type,filterString: str)
-
+  __new__(cls: type,filterString: str)
   __new__(cls: type,filterString: str,filterType: ToolboxItemFilterType)
   """
   pass
@@ -59,36 +48,24 @@ class ToolboxItemFilterAttribute(Attribute,_Attribute):
  def __str__(self,*args):
   pass
  FilterString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the filter string for the toolbox item.
-
-
-
-Get: FilterString(self: ToolboxItemFilterAttribute) -> str
-
-
-
+ """Gets the filter string for the toolbox item.
+
+Get: FilterString(self: ToolboxItemFilterAttribute) -> str
+
 """
 
  FilterType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the type of the filter.
-
-
-
-Get: FilterType(self: ToolboxItemFilterAttribute) -> ToolboxItemFilterType
-
-
-
+ """Gets the type of the filter.
+
+Get: FilterType(self: ToolboxItemFilterAttribute) -> ToolboxItemFilterType
+
 """
 
  TypeId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the type ID for the attribute.
-
-
-
-Get: TypeId(self: ToolboxItemFilterAttribute) -> object
-
-
-
+ """Gets the type ID for the attribute.
+
+Get: TypeId(self: ToolboxItemFilterAttribute) -> object
+
 """
 
 

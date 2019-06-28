@@ -1,13 +1,10 @@
-class GridItemCollection(object,ICollection,IEnumerable):
+class GridItemCollection:
  """ Contains a collection of System.Windows.Forms.GridItem objects. """
  def GetEnumerator(self):
   """
-  GetEnumerator(self: GridItemCollection) -> IEnumerator
-
-  
-
-   Returns an enumeration of all the grid items in the collection.
-
+  GetEnumerator(self: GridItemCollection) -> IEnumerator
+  
+   Returns an enumeration of all the grid items in the collection.
    Returns: An System.Collections.IEnumerator for the System.Windows.Forms.GridItemCollection.
   """
   pass
@@ -27,14 +24,10 @@ class GridItemCollection(object,ICollection,IEnumerable):
   """ __repr__(self: object) -> str """
   pass
  Count=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the number of grid items in the collection.
-
-
-
-Get: Count(self: GridItemCollection) -> int
-
-
-
+ """Gets the number of grid items in the collection.
+
+Get: Count(self: GridItemCollection) -> int
+
 """
 
 

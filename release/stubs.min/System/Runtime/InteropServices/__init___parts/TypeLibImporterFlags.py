@@ -1,9 +1,7 @@
-class TypeLibImporterFlags(Enum,IComparable,IFormattable,IConvertible):
+class TypeLibImporterFlags:
  """
- Indicates how an assembly should be produced.
-
- 
-
+ Indicates how an assembly should be produced.
+ 
  enum (flags) TypeLibImporterFlags,values: ImportAsAgnostic (2048),ImportAsArm (16384),ImportAsItanium (1024),ImportAsX64 (512),ImportAsX86 (256),NoDefineVersionResource (8192),None (0),PreventClassMembers (16),PrimaryInteropAssembly (1),ReflectionOnlyLoading (4096),SafeArrayAsSystemArray (4),SerializableValueClasses (32),TransformDispRetVals (8),UnsafeInterfaces (2)
  """
  def __eq__(self,*args):
@@ -35,7 +33,7 @@ class TypeLibImporterFlags(Enum,IComparable,IFormattable,IConvertible):
  ImportAsX64=None
  ImportAsX86=None
  NoDefineVersionResource=None
- None=None
+ None_ =None
  PreventClassMembers=None
  PrimaryInteropAssembly=None
  ReflectionOnlyLoading=None

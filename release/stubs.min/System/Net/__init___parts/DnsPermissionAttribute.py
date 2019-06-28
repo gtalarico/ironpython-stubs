@@ -1,19 +1,14 @@
-class DnsPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class DnsPermissionAttribute:
  """
- Specifies permission to request information from Domain Name Servers.
-
- 
-
+ Specifies permission to request information from Domain Name Servers.
+ 
  DnsPermissionAttribute(action: SecurityAction)
  """
  def CreatePermission(self):
   """
-  CreatePermission(self: DnsPermissionAttribute) -> IPermission
-
-  
-
-   Creates and returns a new instance of the System.Net.DnsPermission class.
-
+  CreatePermission(self: DnsPermissionAttribute) -> IPermission
+  
+   Creates and returns a new instance of the System.Net.DnsPermission class.
    Returns: A System.Net.DnsPermission that corresponds to the security declaration.
   """
   pass

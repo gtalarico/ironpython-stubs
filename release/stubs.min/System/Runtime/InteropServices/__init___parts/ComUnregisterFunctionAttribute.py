@@ -1,9 +1,7 @@
-class ComUnregisterFunctionAttribute(Attribute,_Attribute):
+class ComUnregisterFunctionAttribute:
  """
- Specifies the method to call when you unregister an assembly for use from COM; this allows for the execution of user-written code during the unregistration process.
-
- 
-
+ Specifies the method to call when you unregister an assembly for use from COM; this allows for the execution of user-written code during the unregistration process.
+ 
  ComUnregisterFunctionAttribute()
  """
  def __init__(self,*args):

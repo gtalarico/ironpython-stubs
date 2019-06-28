@@ -1,9 +1,7 @@
-class STAThreadAttribute(Attribute,_Attribute):
+class STAThreadAttribute:
  """
- Indicates that the COM threading model for an application is single-threaded apartment (STA).
-
- 
-
+ Indicates that the COM threading model for an application is single-threaded apartment (STA).
+ 
  STAThreadAttribute()
  """
  def __init__(self,*args):

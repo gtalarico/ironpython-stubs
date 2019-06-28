@@ -2,13 +2,13 @@
 # module System.Diagnostics.CodeAnalysis calls itself CodeAnalysis
 # from mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class ExcludeFromCodeCoverageAttribute(Attribute, _Attribute):
+class ExcludeFromCodeCoverageAttribute:
     """
     Specifies that the attributed code should be excluded from code coverage information.
     
@@ -19,7 +19,7 @@ class ExcludeFromCodeCoverageAttribute(Attribute, _Attribute):
         pass
 
 
-class SuppressMessageAttribute(Attribute, _Attribute):
+class SuppressMessageAttribute:
     """
     Suppresses reporting of a specific static analysis tool rule violation, allowing multiple suppressions on a single code artifact.
     

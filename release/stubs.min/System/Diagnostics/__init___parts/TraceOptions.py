@@ -1,9 +1,7 @@
-class TraceOptions(Enum,IComparable,IFormattable,IConvertible):
+class TraceOptions:
  """
- Specifies trace data options to be written to the trace output.
-
- 
-
+ Specifies trace data options to be written to the trace output.
+ 
  enum (flags) TraceOptions,values: Callstack (32),DateTime (2),LogicalOperationStack (1),None (0),ProcessId (8),ThreadId (16),Timestamp (4)
  """
  def __eq__(self,*args):
@@ -32,7 +30,7 @@ class TraceOptions(Enum,IComparable,IFormattable,IConvertible):
  Callstack=None
  DateTime=None
  LogicalOperationStack=None
- None=None
+ None_ =None
  ProcessId=None
  ThreadId=None
  Timestamp=None

@@ -1,9 +1,7 @@
-class GCHandleType(Enum,IComparable,IFormattable,IConvertible):
+class GCHandleType:
  """
- Represents the types of handles the System.Runtime.InteropServices.GCHandle class can allocate.
-
- 
-
+ Represents the types of handles the System.Runtime.InteropServices.GCHandle class can allocate.
+ 
  enum GCHandleType,values: Normal (2),Pinned (3),Weak (0),WeakTrackResurrection (1)
  """
  def __eq__(self,*args):

@@ -1,9 +1,7 @@
-class ColumnClickEventArgs(EventArgs):
+class ColumnClickEventArgs:
  """
- Provides data for the System.Windows.Forms.ListView.ColumnClick event.
-
- 
-
+ Provides data for the System.Windows.Forms.ListView.ColumnClick event.
+ 
  ColumnClickEventArgs(column: int)
  """
  @staticmethod
@@ -11,14 +9,10 @@ class ColumnClickEventArgs(EventArgs):
   """ __new__(cls: type,column: int) """
   pass
  Column=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the zero-based index of the column that is clicked.
-
-
-
-Get: Column(self: ColumnClickEventArgs) -> int
-
-
-
+ """Gets the zero-based index of the column that is clicked.
+
+Get: Column(self: ColumnClickEventArgs) -> int
+
 """
 
 

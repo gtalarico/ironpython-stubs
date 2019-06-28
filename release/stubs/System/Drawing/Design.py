@@ -2,13 +2,13 @@
 # module System.Drawing.Design calls itself Design
 # from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class CategoryNameCollection(ReadOnlyCollectionBase, ICollection, IEnumerable):
+class CategoryNameCollection:
     """
     Represents a collection of category name strings.
     
@@ -89,12 +89,12 @@ class IPropertyValueUIService:
         """
         GetPropertyUIValueItems(self: IPropertyValueUIService, context: ITypeDescriptorContext, propDesc: PropertyDescriptor) -> Array[PropertyValueUIItem]
         
-            Gets the System.Drawing.Design.PropertyValueUIItem objects that match the specified context and 
-             property descriptor characteristics.
+            Gets the System.Drawing.Design.PropertyValueUIItem objects that match the specified 
+             context and property descriptor characteristics.
         
         
-            context: An System.ComponentModel.ITypeDescriptorContext that can be used to gain additional context 
-             information.
+            context: An System.ComponentModel.ITypeDescriptorContext that can be used to gain additional 
+             context information.
         
             propDesc: A System.ComponentModel.PropertyDescriptor that indicates the property to match with the 
              properties to return.
@@ -107,16 +107,16 @@ class IPropertyValueUIService:
     def NotifyPropertyValueUIItemsChanged(self):
         """
         NotifyPropertyValueUIItemsChanged(self: IPropertyValueUIService)
-            Notifies the System.Drawing.Design.IPropertyValueUIService implementation that the global list 
-             of System.Drawing.Design.PropertyValueUIItem objects has been modified.
+            Notifies the System.Drawing.Design.IPropertyValueUIService implementation that the global 
+             list of System.Drawing.Design.PropertyValueUIItem objects has been modified.
         """
         pass
 
     def RemovePropertyValueUIHandler(self, newHandler):
         """
         RemovePropertyValueUIHandler(self: IPropertyValueUIService, newHandler: PropertyValueUIHandler)
-            Removes the specified System.Drawing.Design.PropertyValueUIHandler from the property value UI 
-             service.
+            Removes the specified System.Drawing.Design.PropertyValueUIHandler from the property 
+             value UI service.
         
         
             newHandler: The handler to remove.
@@ -149,182 +149,187 @@ class IToolboxService:
     """ Provides methods and properties to manage and query the toolbox in the development environment. """
     def AddCreator(self, creator, format, host=None):
         """
-        AddCreator(self: IToolboxService, creator: ToolboxItemCreatorCallback, format: str, host: IDesignerHost)
-            Adds a new toolbox item creator for a specified data format and designer host.
-        
-            creator: A System.Drawing.Design.ToolboxItemCreatorCallback that can create a component when the toolbox 
-             item is invoked.
-        
-            format: The data format that the creator handles.
-            host: The System.ComponentModel.Design.IDesignerHost that represents the designer host to associate 
-             with the creator.
-        
         AddCreator(self: IToolboxService, creator: ToolboxItemCreatorCallback, format: str)
             Adds a new toolbox item creator for a specified data format.
         
-            creator: A System.Drawing.Design.ToolboxItemCreatorCallback that can create a component when the toolbox 
-             item is invoked.
+            creator: A System.Drawing.Design.ToolboxItemCreatorCallback that can create a component when the 
+             toolbox item is invoked.
         
-            format: The data format that the creator handles.
+            format: The data format that the creator handles.
+        AddCreator(self: IToolboxService, creator: ToolboxItemCreatorCallback, format: str, host: IDesignerHost)
+            Adds a new toolbox item creator for a specified data format and designer host.
+        
+            creator: A System.Drawing.Design.ToolboxItemCreatorCallback that can create a component when the 
+             toolbox item is invoked.
+        
+            format: The data format that the creator handles.
+            host: The System.ComponentModel.Design.IDesignerHost that represents the designer host to 
+             associate with the creator.
         """
         pass
 
     def AddLinkedToolboxItem(self, toolboxItem, *__args):
         """
+        AddLinkedToolboxItem(self: IToolboxService, toolboxItem: ToolboxItem, host: IDesignerHost)
+            Adds the specified project-linked toolbox item to the toolbox.
+        
+            toolboxItem: The linked System.Drawing.Design.ToolboxItem to add to the toolbox.
+            host: The System.ComponentModel.Design.IDesignerHost for the current design document.
         AddLinkedToolboxItem(self: IToolboxService, toolboxItem: ToolboxItem, category: str, host: IDesignerHost)
             Adds the specified project-linked toolbox item to the toolbox in the specified category.
         
             toolboxItem: The linked System.Drawing.Design.ToolboxItem to add to the toolbox.
             category: The toolbox item category to add the toolbox item to.
-            host: The System.ComponentModel.Design.IDesignerHost for the current design document.
-        AddLinkedToolboxItem(self: IToolboxService, toolboxItem: ToolboxItem, host: IDesignerHost)
-            Adds the specified project-linked toolbox item to the toolbox.
-        
-            toolboxItem: The linked System.Drawing.Design.ToolboxItem to add to the toolbox.
             host: The System.ComponentModel.Design.IDesignerHost for the current design document.
         """
         pass
 
     def AddToolboxItem(self, toolboxItem, category=None):
         """
+        AddToolboxItem(self: IToolboxService, toolboxItem: ToolboxItem)
+            Adds the specified toolbox item to the toolbox.
+        
+            toolboxItem: The System.Drawing.Design.ToolboxItem to add to the toolbox.
         AddToolboxItem(self: IToolboxService, toolboxItem: ToolboxItem, category: str)
             Adds the specified toolbox item to the toolbox in the specified category.
         
             toolboxItem: The System.Drawing.Design.ToolboxItem to add to the toolbox.
-            category: The toolbox item category to add the System.Drawing.Design.ToolboxItem to.
-        AddToolboxItem(self: IToolboxService, toolboxItem: ToolboxItem)
-            Adds the specified toolbox item to the toolbox.
-        
-            toolboxItem: The System.Drawing.Design.ToolboxItem to add to the toolbox.
+            category: The toolbox item category to add the System.Drawing.Design.ToolboxItem to.
         """
         pass
 
     def DeserializeToolboxItem(self, serializedObject, host=None):
         """
+        DeserializeToolboxItem(self: IToolboxService, serializedObject: object) -> ToolboxItem
+        
+            Gets a toolbox item from the specified object that represents a toolbox item in 
+             serialized form.
+        
+        
+            serializedObject: The object that contains the System.Drawing.Design.ToolboxItem to retrieve.
+            Returns: The System.Drawing.Design.ToolboxItem created from the serialized object.
         DeserializeToolboxItem(self: IToolboxService, serializedObject: object, host: IDesignerHost) -> ToolboxItem
         
-            Gets a toolbox item from the specified object that represents a toolbox item in serialized form, 
-             using the specified designer host.
+            Gets a toolbox item from the specified object that represents a toolbox item in 
+             serialized form, using the specified designer host.
         
         
             serializedObject: The object that contains the System.Drawing.Design.ToolboxItem to retrieve.
             host: The System.ComponentModel.Design.IDesignerHost to associate with this 
              System.Drawing.Design.ToolboxItem.
         
-            Returns: The System.Drawing.Design.ToolboxItem created from deserialization.
-        DeserializeToolboxItem(self: IToolboxService, serializedObject: object) -> ToolboxItem
-        
-            Gets a toolbox item from the specified object that represents a toolbox item in serialized form.
-        
-            serializedObject: The object that contains the System.Drawing.Design.ToolboxItem to retrieve.
-            Returns: The System.Drawing.Design.ToolboxItem created from the serialized object.
+            Returns: The System.Drawing.Design.ToolboxItem created from deserialization.
         """
         pass
 
     def GetSelectedToolboxItem(self, host=None):
         """
-        GetSelectedToolboxItem(self: IToolboxService, host: IDesignerHost) -> ToolboxItem
-        
-            Gets the currently selected toolbox item if it is available to all designers, or if it supports 
-             the specified designer.
-        
-        
-            host: The System.ComponentModel.Design.IDesignerHost that the selected tool must be associated with 
-             for it to be returned.
-        
-            Returns: The System.Drawing.Design.ToolboxItem that is currently selected, or null if no toolbox item is 
-             currently selected.
-        
         GetSelectedToolboxItem(self: IToolboxService) -> ToolboxItem
         
             Gets the currently selected toolbox item.
-            Returns: The System.Drawing.Design.ToolboxItem that is currently selected, or null if no toolbox item has 
-             been selected.
+            Returns: The System.Drawing.Design.ToolboxItem that is currently selected, or null if no toolbox 
+             item has been selected.
+        
+        GetSelectedToolboxItem(self: IToolboxService, host: IDesignerHost) -> ToolboxItem
+        
+            Gets the currently selected toolbox item if it is available to all designers, or if it 
+             supports the specified designer.
+        
+        
+            host: The System.ComponentModel.Design.IDesignerHost that the selected tool must be associated 
+             with for it to be returned.
+        
+            Returns: The System.Drawing.Design.ToolboxItem that is currently selected, or null if no toolbox 
+             item is currently selected.
         """
         pass
 
     def GetToolboxItems(self, *__args):
         """
-        GetToolboxItems(self: IToolboxService, category: str) -> ToolboxItemCollection
-        
-            Gets a collection of toolbox items from the toolbox that match the specified category.
-        
-            category: The toolbox item category to retrieve all the toolbox items from.
-            Returns: A System.Drawing.Design.ToolboxItemCollection that contains the current toolbox items that are 
-             associated with the specified category.
-        
-        GetToolboxItems(self: IToolboxService, category: str, host: IDesignerHost) -> ToolboxItemCollection
-        
-            Gets the collection of toolbox items that are associated with the specified designer host and 
-             category from the toolbox.
-        
-        
-            category: The toolbox item category to retrieve the toolbox items from.
-            host: The System.ComponentModel.Design.IDesignerHost that is associated with the toolbox items to 
-             retrieve.
-        
-            Returns: A System.Drawing.Design.ToolboxItemCollection that contains the current toolbox items that are 
-             associated with the specified category and designer host.
-        
         GetToolboxItems(self: IToolboxService) -> ToolboxItemCollection
         
             Gets the entire collection of toolbox items from the toolbox.
             Returns: A System.Drawing.Design.ToolboxItemCollection that contains the current toolbox items.
         GetToolboxItems(self: IToolboxService, host: IDesignerHost) -> ToolboxItemCollection
         
-            Gets the collection of toolbox items that are associated with the specified designer host from 
-             the toolbox.
+            Gets the collection of toolbox items that are associated with the specified designer host 
+             from the toolbox.
         
         
-            host: The System.ComponentModel.Design.IDesignerHost that is associated with the toolbox items to 
-             retrieve.
+            host: The System.ComponentModel.Design.IDesignerHost that is associated with the toolbox items 
+             to retrieve.
         
-            Returns: A System.Drawing.Design.ToolboxItemCollection that contains the current toolbox items that are 
-             associated with the specified designer host.
+            Returns: A System.Drawing.Design.ToolboxItemCollection that contains the current toolbox items 
+             that are associated with the specified designer host.
+        
+        GetToolboxItems(self: IToolboxService, category: str) -> ToolboxItemCollection
+        
+            Gets a collection of toolbox items from the toolbox that match the specified category.
+        
+            category: The toolbox item category to retrieve all the toolbox items from.
+            Returns: A System.Drawing.Design.ToolboxItemCollection that contains the current toolbox items 
+             that are associated with the specified category.
+        
+        GetToolboxItems(self: IToolboxService, category: str, host: IDesignerHost) -> ToolboxItemCollection
+        
+            Gets the collection of toolbox items that are associated with the specified designer host 
+             and category from the toolbox.
+        
+        
+            category: The toolbox item category to retrieve the toolbox items from.
+            host: The System.ComponentModel.Design.IDesignerHost that is associated with the toolbox items 
+             to retrieve.
+        
+            Returns: A System.Drawing.Design.ToolboxItemCollection that contains the current toolbox items 
+             that are associated with the specified category and designer host.
         """
         pass
 
     def IsSupported(self, serializedObject, *__args):
         """
-        IsSupported(self: IToolboxService, serializedObject: object, filterAttributes: ICollection) -> bool
-        
-            Gets a value indicating whether the specified object which represents a serialized toolbox item 
-             matches the specified attributes.
-        
-        
-            serializedObject: The object that contains the System.Drawing.Design.ToolboxItem to retrieve.
-            filterAttributes: An System.Collections.ICollection that contains the attributes to test the serialized object for.
-            Returns: true if the object matches the specified attributes; otherwise, false.
         IsSupported(self: IToolboxService, serializedObject: object, host: IDesignerHost) -> bool
         
-            Gets a value indicating whether the specified object which represents a serialized toolbox item 
-             can be used by the specified designer host.
+            Gets a value indicating whether the specified object which represents a serialized 
+             toolbox item can be used by the specified designer host.
         
         
             serializedObject: The object that contains the System.Drawing.Design.ToolboxItem to retrieve.
             host: The System.ComponentModel.Design.IDesignerHost to test for support for the 
              System.Drawing.Design.ToolboxItem.
         
-            Returns: true if the specified object is compatible with the specified designer host; otherwise, false.
+            Returns: true if the specified object is compatible with the specified designer host; otherwise, 
+             false.
+        
+        IsSupported(self: IToolboxService, serializedObject: object, filterAttributes: ICollection) -> bool
+        
+            Gets a value indicating whether the specified object which represents a serialized 
+             toolbox item matches the specified attributes.
+        
+        
+            serializedObject: The object that contains the System.Drawing.Design.ToolboxItem to retrieve.
+            filterAttributes: An System.Collections.ICollection that contains the attributes to test the serialized 
+             object for.
+        
+            Returns: true if the object matches the specified attributes; otherwise, false.
         """
         pass
 
     def IsToolboxItem(self, serializedObject, host=None):
         """
-        IsToolboxItem(self: IToolboxService, serializedObject: object, host: IDesignerHost) -> bool
-        
-            Gets a value indicating whether the specified object is a serialized toolbox item, using the 
-             specified designer host.
-        
-        
-            serializedObject: The object to inspect.
-            host: The System.ComponentModel.Design.IDesignerHost that is making this request.
-            Returns: true if the object contains a toolbox item object; otherwise, false.
         IsToolboxItem(self: IToolboxService, serializedObject: object) -> bool
         
             Gets a value indicating whether the specified object is a serialized toolbox item.
         
             serializedObject: The object to inspect.
+            Returns: true if the object contains a toolbox item object; otherwise, false.
+        IsToolboxItem(self: IToolboxService, serializedObject: object, host: IDesignerHost) -> bool
+        
+            Gets a value indicating whether the specified object is a serialized toolbox item, using 
+             the specified designer host.
+        
+        
+            serializedObject: The object to inspect.
+            host: The System.ComponentModel.Design.IDesignerHost that is making this request.
             Returns: true if the object contains a toolbox item object; otherwise, false.
         """
         pass
@@ -338,31 +343,32 @@ class IToolboxService:
 
     def RemoveCreator(self, format, host=None):
         """
-        RemoveCreator(self: IToolboxService, format: str, host: IDesignerHost)
-            Removes a previously added toolbox creator that is associated with the specified data format and 
-             the specified designer host.
-        
-        
-            format: The data format of the creator to remove.
-            host: The System.ComponentModel.Design.IDesignerHost that is associated with the creator to remove.
         RemoveCreator(self: IToolboxService, format: str)
             Removes a previously added toolbox item creator of the specified data format.
         
-            format: The data format of the creator to remove.
+            format: The data format of the creator to remove.
+        RemoveCreator(self: IToolboxService, format: str, host: IDesignerHost)
+            Removes a previously added toolbox creator that is associated with the specified data 
+             format and the specified designer host.
+        
+        
+            format: The data format of the creator to remove.
+            host: The System.ComponentModel.Design.IDesignerHost that is associated with the creator to 
+             remove.
         """
         pass
 
     def RemoveToolboxItem(self, toolboxItem, category=None):
         """
+        RemoveToolboxItem(self: IToolboxService, toolboxItem: ToolboxItem)
+            Removes the specified toolbox item from the toolbox.
+        
+            toolboxItem: The System.Drawing.Design.ToolboxItem to remove from the toolbox.
         RemoveToolboxItem(self: IToolboxService, toolboxItem: ToolboxItem, category: str)
             Removes the specified toolbox item from the toolbox.
         
             toolboxItem: The System.Drawing.Design.ToolboxItem to remove from the toolbox.
-            category: The toolbox item category to remove the System.Drawing.Design.ToolboxItem from.
-        RemoveToolboxItem(self: IToolboxService, toolboxItem: ToolboxItem)
-            Removes the specified toolbox item from the toolbox.
-        
-            toolboxItem: The System.Drawing.Design.ToolboxItem to remove from the toolbox.
+            category: The toolbox item category to remove the System.Drawing.Design.ToolboxItem from.
         """
         pass
 
@@ -388,9 +394,11 @@ class IToolboxService:
         """
         SetCursor(self: IToolboxService) -> bool
         
-            Sets the current application's cursor to a cursor that represents the currently selected tool.
-            Returns: true if the cursor is set by the currently selected tool, false if there is no tool selected and 
-             the cursor is set to the standard windows cursor.
+            Sets the current application's cursor to a cursor that represents the currently selected 
+             tool.
+        
+            Returns: true if the cursor is set by the currently selected tool, false if there is no tool 
+             selected and the cursor is set to the standard windows cursor.
         """
         pass
 
@@ -433,8 +441,8 @@ class IToolboxUser:
             Gets a value indicating whether the specified tool is supported by the current designer.
         
             tool: The System.Drawing.Design.ToolboxItem to be tested for toolbox support.
-            Returns: true if the tool is supported by the toolbox and can be enabled; false if the document designer 
-             does not know how to use the tool.
+            Returns: true if the tool is supported by the toolbox and can be enabled; false if the document 
+             designer does not know how to use the tool.
         """
         pass
 
@@ -452,7 +460,7 @@ class IToolboxUser:
         pass
 
 
-class PaintValueEventArgs(EventArgs):
+class PaintValueEventArgs:
     """
     Provides data for the System.Drawing.Design.UITypeEditor.PaintValue(System.Object,System.Drawing.Graphics,System.Drawing.Rectangle) method.
     
@@ -493,7 +501,7 @@ Get: Value(self: PaintValueEventArgs) -> object
 
 
 
-class PropertyValueUIHandler(MulticastDelegate, ICloneable, ISerializable):
+class PropertyValueUIHandler:
     """
     Represents the method that adds a delegate to an implementation of System.Drawing.Design.IPropertyValueUIService.
     
@@ -520,9 +528,9 @@ class PropertyValueUIHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -549,13 +557,14 @@ class PropertyValueUIHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -572,7 +581,7 @@ class PropertyValueUIHandler(MulticastDelegate, ICloneable, ISerializable):
         pass
 
 
-class PropertyValueUIItem(object):
+class PropertyValueUIItem:
     """
     Provides information about a property displayed in the Properties window, including the associated event handler, pop-up information string, and the icon to display for the property.
     
@@ -613,7 +622,7 @@ Get: ToolTip(self: PropertyValueUIItem) -> str
 
 
 
-class PropertyValueUIItemInvokeHandler(MulticastDelegate, ICloneable, ISerializable):
+class PropertyValueUIItemInvokeHandler:
     """
     Represents the method that will handle the System.Drawing.Design.PropertyValueUIItem.InvokeHandler event of a System.Drawing.Design.PropertyValueUIItem.
     
@@ -640,9 +649,9 @@ class PropertyValueUIItemInvokeHandler(MulticastDelegate, ICloneable, ISerializa
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -669,13 +678,14 @@ class PropertyValueUIItemInvokeHandler(MulticastDelegate, ICloneable, ISerializa
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -692,7 +702,7 @@ class PropertyValueUIItemInvokeHandler(MulticastDelegate, ICloneable, ISerializa
         pass
 
 
-class ToolboxComponentsCreatedEventArgs(EventArgs):
+class ToolboxComponentsCreatedEventArgs:
     """
     Provides data for the System.Drawing.Design.ToolboxItem.ComponentsCreated event that occurs when components are added to the toolbox.
     
@@ -712,7 +722,7 @@ Get: Components(self: ToolboxComponentsCreatedEventArgs) -> Array[IComponent]
 
 
 
-class ToolboxComponentsCreatedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class ToolboxComponentsCreatedEventHandler:
     """
     Represents the method that handles the System.Drawing.Design.ToolboxItem.ComponentsCreated event.
     
@@ -739,9 +749,9 @@ class ToolboxComponentsCreatedEventHandler(MulticastDelegate, ICloneable, ISeria
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -768,13 +778,14 @@ class ToolboxComponentsCreatedEventHandler(MulticastDelegate, ICloneable, ISeria
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -791,7 +802,7 @@ class ToolboxComponentsCreatedEventHandler(MulticastDelegate, ICloneable, ISeria
         pass
 
 
-class ToolboxComponentsCreatingEventArgs(EventArgs):
+class ToolboxComponentsCreatingEventArgs:
     """
     Provides data for the System.Drawing.Design.ToolboxItem.ComponentsCreating event that occurs when components are added to the toolbox.
     
@@ -811,7 +822,7 @@ Get: DesignerHost(self: ToolboxComponentsCreatingEventArgs) -> IDesignerHost
 
 
 
-class ToolboxComponentsCreatingEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class ToolboxComponentsCreatingEventHandler:
     """
     Represents the method that handles the System.Drawing.Design.ToolboxItem.ComponentsCreating event.
     
@@ -838,9 +849,9 @@ class ToolboxComponentsCreatingEventHandler(MulticastDelegate, ICloneable, ISeri
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -867,13 +878,14 @@ class ToolboxComponentsCreatingEventHandler(MulticastDelegate, ICloneable, ISeri
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -890,7 +902,7 @@ class ToolboxComponentsCreatingEventHandler(MulticastDelegate, ICloneable, ISeri
         pass
 
 
-class ToolboxItem(object, ISerializable):
+class ToolboxItem:
     """
     Provides a base implementation of a toolbox item.
     
@@ -906,6 +918,18 @@ class ToolboxItem(object, ISerializable):
 
     def CreateComponents(self, host=None, defaultValues=None):
         """
+        CreateComponents(self: ToolboxItem) -> Array[IComponent]
+        
+            Creates the components that the toolbox item is configured to create.
+            Returns: An array of created System.ComponentModel.IComponent objects.
+        CreateComponents(self: ToolboxItem, host: IDesignerHost) -> Array[IComponent]
+        
+            Creates the components that the toolbox item is configured to create, using the specified 
+             designer host.
+        
+        
+            host: The System.ComponentModel.Design.IDesignerHost to use when creating the components.
+            Returns: An array of created System.ComponentModel.IComponent objects.
         CreateComponents(self: ToolboxItem, host: IDesignerHost, defaultValues: IDictionary) -> Array[IComponent]
         
             Creates the components that the toolbox item is configured to create, using the specified 
@@ -916,24 +940,18 @@ class ToolboxItem(object, ISerializable):
             defaultValues: A dictionary of property name/value pairs of default values with which to initialize the 
              component.
         
-            Returns: An array of created System.ComponentModel.IComponent objects.
-        CreateComponents(self: ToolboxItem, host: IDesignerHost) -> Array[IComponent]
-        
-            Creates the components that the toolbox item is configured to create, using the specified 
-             designer host.
-        
-        
-            host: The System.ComponentModel.Design.IDesignerHost to use when creating the components.
-            Returns: An array of created System.ComponentModel.IComponent objects.
-        CreateComponents(self: ToolboxItem) -> Array[IComponent]
-        
-            Creates the components that the toolbox item is configured to create.
             Returns: An array of created System.ComponentModel.IComponent objects.
         """
         pass
 
     def CreateComponentsCore(self, *args): #cannot find CLR method
         """
+        CreateComponentsCore(self: ToolboxItem, host: IDesignerHost) -> Array[IComponent]
+        
+            Creates a component or an array of components when the toolbox item is invoked.
+        
+            host: The System.ComponentModel.Design.IDesignerHost to host the toolbox item.
+            Returns: An array of created System.ComponentModel.IComponent objects.
         CreateComponentsCore(self: ToolboxItem, host: IDesignerHost, defaultValues: IDictionary) -> Array[IComponent]
         
             Creates an array of components when the toolbox item is invoked.
@@ -942,12 +960,6 @@ class ToolboxItem(object, ISerializable):
             defaultValues: A dictionary of property name/value pairs of default values with which to initialize the 
              component.
         
-            Returns: An array of created System.ComponentModel.IComponent objects.
-        CreateComponentsCore(self: ToolboxItem, host: IDesignerHost) -> Array[IComponent]
-        
-            Creates a component or an array of components when the toolbox item is invoked.
-        
-            host: The System.ComponentModel.Design.IDesignerHost to host the toolbox item.
             Returns: An array of created System.ComponentModel.IComponent objects.
         """
         pass
@@ -1029,7 +1041,8 @@ class ToolboxItem(object, ISerializable):
         OnComponentsCreated(self: ToolboxItem, args: ToolboxComponentsCreatedEventArgs)
             Raises the System.Drawing.Design.ToolboxItem.ComponentsCreated event.
         
-            args: A System.Drawing.Design.ToolboxComponentsCreatedEventArgs that provides data for the event.
+            args: A System.Drawing.Design.ToolboxComponentsCreatedEventArgs that provides data for the 
+             event.
         """
         pass
 
@@ -1038,7 +1051,8 @@ class ToolboxItem(object, ISerializable):
         OnComponentsCreating(self: ToolboxItem, args: ToolboxComponentsCreatingEventArgs)
             Raises the System.Drawing.Design.ToolboxItem.ComponentsCreating event.
         
-            args: A System.Drawing.Design.ToolboxComponentsCreatingEventArgs that provides data for the event.
+            args: A System.Drawing.Design.ToolboxComponentsCreatingEventArgs that provides data for the 
+             event.
         """
         pass
 
@@ -1225,7 +1239,7 @@ Get: Version(self: ToolboxItem) -> str
     ComponentsCreating = None
 
 
-class ToolboxItemCollection(ReadOnlyCollectionBase, ICollection, IEnumerable):
+class ToolboxItemCollection:
     """
     Represents a collection of toolbox items.
     
@@ -1246,7 +1260,9 @@ class ToolboxItemCollection(ReadOnlyCollectionBase, ICollection, IEnumerable):
     def CopyTo(self, array, index):
         """
         CopyTo(self: ToolboxItemCollection, array: Array[ToolboxItem], index: int)
-            Copies the collection to the specified array beginning with the specified destination index.
+            Copies the collection to the specified array beginning with the specified destination 
+             index.
+        
         
             array: The array to copy to.
             index: The index to begin copying to.
@@ -1293,7 +1309,7 @@ class ToolboxItemCollection(ReadOnlyCollectionBase, ICollection, IEnumerable):
 
 
 
-class ToolboxItemCreatorCallback(MulticastDelegate, ICloneable, ISerializable):
+class ToolboxItemCreatorCallback:
     """
     Provides a callback mechanism that can create a System.Drawing.Design.ToolboxItem.
     
@@ -1320,9 +1336,9 @@ class ToolboxItemCreatorCallback(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1349,13 +1365,14 @@ class ToolboxItemCreatorCallback(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -1372,7 +1389,7 @@ class ToolboxItemCreatorCallback(MulticastDelegate, ICloneable, ISerializable):
         pass
 
 
-class UITypeEditor(object):
+class UITypeEditor:
     """
     Provides a base class that can be used to design value editors that can provide a user interface (UI) for representing and editing the values of objects of the supported data types.
     
@@ -1380,20 +1397,6 @@ class UITypeEditor(object):
     """
     def EditValue(self, *__args):
         """
-        EditValue(self: UITypeEditor, context: ITypeDescriptorContext, provider: IServiceProvider, value: object) -> object
-        
-            Edits the specified object's value using the editor style indicated by the 
-             System.Drawing.Design.UITypeEditor.GetEditStyle method.
-        
-        
-            context: An System.ComponentModel.ITypeDescriptorContext that can be used to gain additional context 
-             information.
-        
-            provider: An System.IServiceProvider that this editor can use to obtain services.
-            value: The object to edit.
-            Returns: The new value of the object. If the value of the object has not changed, this should return the 
-             same object it was passed.
-        
         EditValue(self: UITypeEditor, provider: IServiceProvider, value: object) -> object
         
             Edits the value of the specified object using the editor style indicated by the 
@@ -1402,76 +1405,93 @@ class UITypeEditor(object):
         
             provider: An System.IServiceProvider that this editor can use to obtain services.
             value: The object to edit.
-            Returns: The new value of the object.
+            Returns: The new value of the object.
+        EditValue(self: UITypeEditor, context: ITypeDescriptorContext, provider: IServiceProvider, value: object) -> object
+        
+            Edits the specified object's value using the editor style indicated by the 
+             System.Drawing.Design.UITypeEditor.GetEditStyle method.
+        
+        
+            context: An System.ComponentModel.ITypeDescriptorContext that can be used to gain additional 
+             context information.
+        
+            provider: An System.IServiceProvider that this editor can use to obtain services.
+            value: The object to edit.
+            Returns: The new value of the object. If the value of the object has not changed, this should 
+             return the same object it was passed.
         """
         pass
 
     def GetEditStyle(self, context=None):
         """
-        GetEditStyle(self: UITypeEditor, context: ITypeDescriptorContext) -> UITypeEditorEditStyle
-        
-            Gets the editor style used by the 
-             System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object) method.
-        
-        
-            context: An System.ComponentModel.ITypeDescriptorContext that can be used to gain additional context 
-             information.
-        
-            Returns: A System.Drawing.Design.UITypeEditorEditStyle value that indicates the style of editor used by 
-             the System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object) method. 
-             If the System.Drawing.Design.UITypeEditor does not support this method, then 
-             System.Drawing.Design.UITypeEditor.GetEditStyle will return 
-             System.Drawing.Design.UITypeEditorEditStyle.None.
-        
         GetEditStyle(self: UITypeEditor) -> UITypeEditorEditStyle
         
             Gets the editor style used by the 
-             System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object) method.
+             System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object) 
+             method.
         
-            Returns: A System.Drawing.Design.UITypeEditorEditStyle enumeration value that indicates the style of 
-             editor used by the current System.Drawing.Design.UITypeEditor. By default, this method will 
-             return System.Drawing.Design.UITypeEditorEditStyle.None.
+            Returns: A System.Drawing.Design.UITypeEditorEditStyle enumeration value that indicates the style 
+             of editor used by the current System.Drawing.Design.UITypeEditor. By default, this method 
+             will return System.Drawing.Design.UITypeEditorEditStyle.None.
+        
+        GetEditStyle(self: UITypeEditor, context: ITypeDescriptorContext) -> UITypeEditorEditStyle
+        
+            Gets the editor style used by the 
+             System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object) 
+             method.
+        
+        
+            context: An System.ComponentModel.ITypeDescriptorContext that can be used to gain additional 
+             context information.
+        
+            Returns: A System.Drawing.Design.UITypeEditorEditStyle value that indicates the style of editor 
+             used by the 
+             System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object) 
+             method. If the System.Drawing.Design.UITypeEditor does not support this method, then 
+             System.Drawing.Design.UITypeEditor.GetEditStyle will return 
+             System.Drawing.Design.UITypeEditorEditStyle.None.
         """
         pass
 
     def GetPaintValueSupported(self, context=None):
         """
-        GetPaintValueSupported(self: UITypeEditor, context: ITypeDescriptorContext) -> bool
-        
-            Indicates whether the specified context supports painting a representation of an object's value 
-             within the specified context.
-        
-        
-            context: An System.ComponentModel.ITypeDescriptorContext that can be used to gain additional context 
-             information.
-        
-            Returns: true if 
-             System.Drawing.Design.UITypeEditor.PaintValue(System.Object,System.Drawing.Graphics,System.Drawin
-             g.Rectangle) is implemented; otherwise, false.
-        
         GetPaintValueSupported(self: UITypeEditor) -> bool
         
             Indicates whether this editor supports painting a representation of an object's value.
             Returns: true if 
-             System.Drawing.Design.UITypeEditor.PaintValue(System.Object,System.Drawing.Graphics,System.Drawin
-             g.Rectangle) is implemented; otherwise, false.
+             System.Drawing.Design.UITypeEditor.PaintValue(System.Object,System.Drawing.Graphics,System
+             .Drawing.Rectangle) is implemented; otherwise, false.
+        
+        GetPaintValueSupported(self: UITypeEditor, context: ITypeDescriptorContext) -> bool
+        
+            Indicates whether the specified context supports painting a representation of an object's 
+             value within the specified context.
+        
+        
+            context: An System.ComponentModel.ITypeDescriptorContext that can be used to gain additional 
+             context information.
+        
+            Returns: true if 
+             System.Drawing.Design.UITypeEditor.PaintValue(System.Object,System.Drawing.Graphics,System
+             .Drawing.Rectangle) is implemented; otherwise, false.
         """
         pass
 
     def PaintValue(self, *__args):
         """
-        PaintValue(self: UITypeEditor, e: PaintValueEventArgs)
-            Paints a representation of the value of an object using the specified 
-             System.Drawing.Design.PaintValueEventArgs.
-        
-        
-            e: A System.Drawing.Design.PaintValueEventArgs that indicates what to paint and where to paint it.
         PaintValue(self: UITypeEditor, value: object, canvas: Graphics, rectangle: Rectangle)
             Paints a representation of the value of the specified object to the specified canvas.
         
             value: The object whose value this type editor will display.
             canvas: A drawing canvas on which to paint the representation of the object's value.
-            rectangle: A System.Drawing.Rectangle within whose boundaries to paint the value.
+            rectangle: A System.Drawing.Rectangle within whose boundaries to paint the value.
+        PaintValue(self: UITypeEditor, e: PaintValueEventArgs)
+            Paints a representation of the value of an object using the specified 
+             System.Drawing.Design.PaintValueEventArgs.
+        
+        
+            e: A System.Drawing.Design.PaintValueEventArgs that indicates what to paint and where to 
+             paint it.
         """
         pass
 
@@ -1484,7 +1504,7 @@ Get: IsDropDownResizable(self: UITypeEditor) -> bool
 
 
 
-class UITypeEditorEditStyle(Enum, IComparable, IFormattable, IConvertible):
+class UITypeEditorEditStyle:
     """
     Specifies identifiers that indicate the value editing style of a System.Drawing.Design.UITypeEditor.
     
@@ -1525,7 +1545,7 @@ class UITypeEditorEditStyle(Enum, IComparable, IFormattable, IConvertible):
 
     DropDown = None
     Modal = None
-    None = None
+    None_ =None
     value__ = None
 
 

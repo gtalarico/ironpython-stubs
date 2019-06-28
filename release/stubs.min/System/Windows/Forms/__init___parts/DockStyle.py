@@ -1,9 +1,7 @@
-class DockStyle(Enum,IComparable,IFormattable,IConvertible):
+class DockStyle:
  """
- Specifies the position and manner in which a control is docked.
-
- 
-
+ Specifies the position and manner in which a control is docked.
+ 
  enum DockStyle,values: Bottom (2),Fill (5),Left (3),None (0),Right (4),Top (1)
  """
  def __eq__(self,*args):
@@ -32,7 +30,7 @@ class DockStyle(Enum,IComparable,IFormattable,IConvertible):
  Bottom=None
  Fill=None
  Left=None
- None=None
+ None_ =None
  Right=None
  Top=None
  value__=None

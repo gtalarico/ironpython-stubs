@@ -1,9 +1,7 @@
-class ComConversionLossAttribute(Attribute,_Attribute):
+class ComConversionLossAttribute:
  """
- Indicates that information was lost about a class or interface when it was imported from a type library to an assembly.
-
- 
-
+ Indicates that information was lost about a class or interface when it was imported from a type library to an assembly.
+ 
  ComConversionLossAttribute()
  """
  def __init__(self,*args):

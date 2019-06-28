@@ -1,19 +1,14 @@
-class WebPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class WebPermissionAttribute:
  """
- Specifies permission to access Internet resources. This class cannot be inherited.
-
- 
-
+ Specifies permission to access Internet resources. This class cannot be inherited.
+ 
  WebPermissionAttribute(action: SecurityAction)
  """
  def CreatePermission(self):
   """
-  CreatePermission(self: WebPermissionAttribute) -> IPermission
-
-  
-
-   Creates and returns a new instance of the System.Net.WebPermission class.
-
+  CreatePermission(self: WebPermissionAttribute) -> IPermission
+  
+   Creates and returns a new instance of the System.Net.WebPermission class.
    Returns: A System.Net.WebPermission corresponding to the security declaration.
   """
   pass
@@ -27,55 +22,35 @@ class WebPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
  def __reduce_ex__(self,*args):
   pass
  Accept=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the URI string accepted by the current System.Net.WebPermissionAttribute.
-
-
-
-Get: Accept(self: WebPermissionAttribute) -> str
-
-
-
-Set: Accept(self: WebPermissionAttribute)=value
-
+ """Gets or sets the URI string accepted by the current System.Net.WebPermissionAttribute.
+
+Get: Accept(self: WebPermissionAttribute) -> str
+
+Set: Accept(self: WebPermissionAttribute)=value
 """
 
  AcceptPattern=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a regular expression pattern that describes the URI accepted by the current System.Net.WebPermissionAttribute.
-
-
-
-Get: AcceptPattern(self: WebPermissionAttribute) -> str
-
-
-
-Set: AcceptPattern(self: WebPermissionAttribute)=value
-
+ """Gets or sets a regular expression pattern that describes the URI accepted by the current System.Net.WebPermissionAttribute.
+
+Get: AcceptPattern(self: WebPermissionAttribute) -> str
+
+Set: AcceptPattern(self: WebPermissionAttribute)=value
 """
 
  Connect=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the URI connection string controlled by the current System.Net.WebPermissionAttribute.
-
-
-
-Get: Connect(self: WebPermissionAttribute) -> str
-
-
-
-Set: Connect(self: WebPermissionAttribute)=value
-
+ """Gets or sets the URI connection string controlled by the current System.Net.WebPermissionAttribute.
+
+Get: Connect(self: WebPermissionAttribute) -> str
+
+Set: Connect(self: WebPermissionAttribute)=value
 """
 
  ConnectPattern=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a regular expression pattern that describes the URI connection controlled by the current System.Net.WebPermissionAttribute.
-
-
-
-Get: ConnectPattern(self: WebPermissionAttribute) -> str
-
-
-
-Set: ConnectPattern(self: WebPermissionAttribute)=value
-
+ """Gets or sets a regular expression pattern that describes the URI connection controlled by the current System.Net.WebPermissionAttribute.
+
+Get: ConnectPattern(self: WebPermissionAttribute) -> str
+
+Set: ConnectPattern(self: WebPermissionAttribute)=value
 """
 
 

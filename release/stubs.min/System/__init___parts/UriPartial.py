@@ -1,9 +1,7 @@
-class UriPartial(Enum,IComparable,IFormattable,IConvertible):
+class UriPartial:
  """
- Defines the parts of a URI for the System.Uri.GetLeftPart(System.UriPartial) method.
-
- 
-
+ Defines the parts of a URI for the System.Uri.GetLeftPart(System.UriPartial) method.
+ 
  enum UriPartial,values: Authority (1),Path (2),Query (3),Scheme (0)
  """
  def __eq__(self,*args):

@@ -1,9 +1,7 @@
-class TreeViewAction(Enum,IComparable,IFormattable,IConvertible):
+class TreeViewAction:
  """
- Specifies the action that raised a System.Windows.Forms.TreeViewEventArgs event.
-
- 
-
+ Specifies the action that raised a System.Windows.Forms.TreeViewEventArgs event.
+ 
  enum TreeViewAction,values: ByKeyboard (1),ByMouse (2),Collapse (3),Expand (4),Unknown (0)
  """
  def __eq__(self,*args):

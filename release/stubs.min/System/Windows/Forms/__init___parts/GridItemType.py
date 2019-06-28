@@ -1,9 +1,7 @@
-class GridItemType(Enum,IComparable,IFormattable,IConvertible):
+class GridItemType:
  """
- Specifies the valid grid item types for a System.Windows.Forms.PropertyGrid.
-
- 
-
+ Specifies the valid grid item types for a System.Windows.Forms.PropertyGrid.
+ 
  enum GridItemType,values: ArrayValue (2),Category (1),Property (0),Root (3)
  """
  def __eq__(self,*args):

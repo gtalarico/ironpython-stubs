@@ -1,9 +1,7 @@
-class ToolStripDropDownCloseReason(Enum,IComparable,IFormattable,IConvertible):
+class ToolStripDropDownCloseReason:
  """
- Specifies the reason that a System.Windows.Forms.ToolStripDropDown control was closed.
-
- 
-
+ Specifies the reason that a System.Windows.Forms.ToolStripDropDown control was closed.
+ 
  enum ToolStripDropDownCloseReason,values: AppClicked (1),AppFocusChange (0),CloseCalled (4),ItemClicked (2),Keyboard (3)
  """
  def __eq__(self,*args):

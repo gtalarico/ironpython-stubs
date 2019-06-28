@@ -2,7 +2,7 @@
 # module System.Runtime.InteropServices calls itself InteropServices
 # from mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
@@ -27,8 +27,8 @@ class _Attribute:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _Attribute, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -41,7 +41,8 @@ class _Attribute:
         """
         GetTypeInfoCount(self: _Attribute) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -55,8 +56,8 @@ class _Attribute:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -69,7 +70,7 @@ class _Attribute:
         pass
 
 
-class AllowReversePInvokeCallsAttribute(Attribute, _Attribute):
+class AllowReversePInvokeCallsAttribute:
     """
     Allows an unmanaged method to call a managed method.
     
@@ -80,7 +81,49 @@ class AllowReversePInvokeCallsAttribute(Attribute, _Attribute):
         pass
 
 
-class ArrayWithOffset(object):
+class Architecture:
+    """ enum Architecture, values: Arm (2), Arm64 (3), X64 (1), X86 (0) """
+    def __eq__(self, *args): #cannot find CLR method
+        """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
+        pass
+
+    def __format__(self, *args): #cannot find CLR method
+        """ __format__(formattable: IFormattable, format: str) -> str """
+        pass
+
+    def __ge__(self, *args): #cannot find CLR method
+        pass
+
+    def __gt__(self, *args): #cannot find CLR method
+        pass
+
+    def __init__(self, *args): #cannot find CLR method
+        """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+        pass
+
+    def __le__(self, *args): #cannot find CLR method
+        pass
+
+    def __lt__(self, *args): #cannot find CLR method
+        pass
+
+    def __ne__(self, *args): #cannot find CLR method
+        pass
+
+    def __reduce_ex__(self, *args): #cannot find CLR method
+        pass
+
+    def __str__(self, *args): #cannot find CLR method
+        pass
+
+    Arm = None
+    Arm64 = None
+    value__ = None
+    X64 = None
+    X86 = None
+
+
+class ArrayWithOffset:
     """
     Encapsulates an array and an offset within the specified array.
     
@@ -88,16 +131,6 @@ class ArrayWithOffset(object):
     """
     def Equals(self, obj):
         """
-        Equals(self: ArrayWithOffset, obj: ArrayWithOffset) -> bool
-        
-            Indicates whether the specified System.Runtime.InteropServices.ArrayWithOffset object matches 
-             the current instance.
-        
-        
-            obj: An System.Runtime.InteropServices.ArrayWithOffset object to compare with this instance.
-            Returns: true if the specified System.Runtime.InteropServices.ArrayWithOffset object matches the current 
-             instance; otherwise, false.
-        
         Equals(self: ArrayWithOffset, obj: object) -> bool
         
             Indicates whether the specified object matches the current 
@@ -105,7 +138,18 @@ class ArrayWithOffset(object):
         
         
             obj: Object to compare with this instance.
-            Returns: true if the object matches this System.Runtime.InteropServices.ArrayWithOffset; otherwise, false.
+            Returns: true if the object matches this System.Runtime.InteropServices.ArrayWithOffset; 
+             otherwise, false.
+        
+        Equals(self: ArrayWithOffset, obj: ArrayWithOffset) -> bool
+        
+            Indicates whether the specified System.Runtime.InteropServices.ArrayWithOffset object 
+             matches the current instance.
+        
+        
+            obj: An System.Runtime.InteropServices.ArrayWithOffset object to compare with this instance.
+            Returns: true if the specified System.Runtime.InteropServices.ArrayWithOffset object matches the 
+             current instance; otherwise, false.
         """
         pass
 
@@ -113,7 +157,9 @@ class ArrayWithOffset(object):
         """
         GetArray(self: ArrayWithOffset) -> object
         
-            Returns the managed array referenced by this System.Runtime.InteropServices.ArrayWithOffset.
+            Returns the managed array referenced by this 
+             System.Runtime.InteropServices.ArrayWithOffset.
+        
             Returns: The managed array this instance references.
         """
         pass
@@ -145,8 +191,9 @@ class ArrayWithOffset(object):
     @staticmethod # known case of __new__
     def __new__(self, array, offset):
         """
-        __new__(cls: type, array: object, offset: int)
-        __new__[ArrayWithOffset]() -> ArrayWithOffset
+        __new__[ArrayWithOffset]() -> ArrayWithOffset
+        
+        __new__(cls: type, array: object, offset: int)
         """
         pass
 
@@ -154,7 +201,7 @@ class ArrayWithOffset(object):
         pass
 
 
-class AssemblyRegistrationFlags(Enum, IComparable, IFormattable, IConvertible):
+class AssemblyRegistrationFlags:
     """
     Defines a set of flags used when registering assemblies.
     
@@ -193,12 +240,12 @@ class AssemblyRegistrationFlags(Enum, IComparable, IFormattable, IConvertible):
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    None = None
+    None_ =None
     SetCodeBase = None
     value__ = None
 
 
-class AutomationProxyAttribute(Attribute, _Attribute):
+class AutomationProxyAttribute:
     """
     Specifies whether the type should be marshaled using the Automation marshaler or a custom proxy and stub.
     
@@ -222,7 +269,7 @@ Get: Value(self: AutomationProxyAttribute) -> bool
 
 
 
-class BestFitMappingAttribute(Attribute, _Attribute):
+class BestFitMappingAttribute:
     """
     Controls whether Unicode characters are converted to the closest matching ANSI characters.
     
@@ -248,14 +295,14 @@ Get: BestFitMapping(self: BestFitMappingAttribute) -> bool
     ThrowOnUnmappableChar = None
 
 
-class BINDPTR(object):
+class BINDPTR:
     """ Use System.Runtime.InteropServices.ComTypes.BINDPTR instead. """
     lpfuncdesc = None
     lptcomp = None
     lpvardesc = None
 
 
-class BIND_OPTS(object):
+class BIND_OPTS:
     """ Use System.Runtime.InteropServices.ComTypes.BIND_OPTS instead. """
     cbStruct = None
     dwTickCountDeadline = None
@@ -263,7 +310,7 @@ class BIND_OPTS(object):
     grfMode = None
 
 
-class BStrWrapper(object):
+class BStrWrapper:
     """
     Marshals data of type VT_BSTR from managed to unmanaged code. This class cannot be inherited.
     
@@ -287,7 +334,7 @@ Get: WrappedObject(self: BStrWrapper) -> str
 
 
 
-class CALLCONV(Enum, IComparable, IFormattable, IConvertible):
+class CALLCONV:
     """
     Use System.Runtime.InteropServices.ComTypes.CALLCONV instead.
     
@@ -339,7 +386,7 @@ class CALLCONV(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class CallingConvention(Enum, IComparable, IFormattable, IConvertible):
+class CallingConvention:
     """
     Specifies the calling convention required to call methods implemented in unmanaged code.
     
@@ -386,7 +433,7 @@ class CallingConvention(Enum, IComparable, IFormattable, IConvertible):
     Winapi = None
 
 
-class CharSet(Enum, IComparable, IFormattable, IConvertible):
+class CharSet:
     """
     Dictates which character set marshaled strings should use.
     
@@ -427,12 +474,12 @@ class CharSet(Enum, IComparable, IFormattable, IConvertible):
 
     Ansi = None
     Auto = None
-    None = None
+    None_ =None
     Unicode = None
     value__ = None
 
 
-class ClassInterfaceAttribute(Attribute, _Attribute):
+class ClassInterfaceAttribute:
     """
     Indicates the type of class interface to be generated for a class exposed to COM, if an interface is generated at all.
     
@@ -460,7 +507,7 @@ Get: Value(self: ClassInterfaceAttribute) -> ClassInterfaceType
 
 
 
-class ClassInterfaceType(Enum, IComparable, IFormattable, IConvertible):
+class ClassInterfaceType:
     """
     Identifies the type of class interface that is generated for a class.
     
@@ -501,11 +548,11 @@ class ClassInterfaceType(Enum, IComparable, IFormattable, IConvertible):
 
     AutoDispatch = None
     AutoDual = None
-    None = None
+    None_ =None
     value__ = None
 
 
-class CoClassAttribute(Attribute, _Attribute):
+class CoClassAttribute:
     """
     Specifies the class identifier of a coclass imported from a type library.
     
@@ -529,7 +576,7 @@ Get: CoClass(self: CoClassAttribute) -> Type
 
 
 
-class ComAliasNameAttribute(Attribute, _Attribute):
+class ComAliasNameAttribute:
     """
     Indicates the COM alias for a parameter or field type.
     
@@ -553,7 +600,7 @@ Get: Value(self: ComAliasNameAttribute) -> str
 
 
 
-class ComCompatibleVersionAttribute(Attribute, _Attribute):
+class ComCompatibleVersionAttribute:
     """
     Indicates to a COM client that all classes in the current version of an assembly are compatible with classes in an earlier version of the assembly.
     
@@ -598,7 +645,7 @@ Get: RevisionNumber(self: ComCompatibleVersionAttribute) -> int
 
 
 
-class ComConversionLossAttribute(Attribute, _Attribute):
+class ComConversionLossAttribute:
     """
     Indicates that information was lost about a class or interface when it was imported from a type library to an assembly.
     
@@ -609,7 +656,7 @@ class ComConversionLossAttribute(Attribute, _Attribute):
         pass
 
 
-class ComDefaultInterfaceAttribute(Attribute, _Attribute):
+class ComDefaultInterfaceAttribute:
     """
     Specifies a default interface to expose to COM. This class cannot be inherited.
     
@@ -633,7 +680,7 @@ Get: Value(self: ComDefaultInterfaceAttribute) -> Type
 
 
 
-class ComEventInterfaceAttribute(Attribute, _Attribute):
+class ComEventInterfaceAttribute:
     """
     Identifies the source interface and the class that implements the methods of the event interface that is generated when a coclass is imported from a COM type library.
     
@@ -664,7 +711,7 @@ Get: SourceInterface(self: ComEventInterfaceAttribute) -> Type
 
 
 
-class ComEventsHelper(object):
+class ComEventsHelper:
     """ Provides methods that enable .NET Framework delegates that handle events to be added and removed from COM objects. """
     @staticmethod
     def Combine(rcw, iid, dispid, d):
@@ -700,7 +747,7 @@ class ComEventsHelper(object):
     ]
 
 
-class ExternalException(SystemException, ISerializable, _Exception):
+class ExternalException:
     """
     The base exception type for all COM interop exceptions and structured exception handling (SEH) exceptions.
     
@@ -709,14 +756,6 @@ class ExternalException(SystemException, ISerializable, _Exception):
     ExternalException(message: str, inner: Exception)
     ExternalException(message: str, errorCode: int)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def ToString(self):
         """
         ToString(self: ExternalException) -> str
@@ -755,8 +794,10 @@ Get: ErrorCode(self: ExternalException) -> int
 """
 
 
+    SerializeObjectState = None
 
-class COMException(ExternalException, ISerializable, _Exception):
+
+class COMException:
     """
     The exception that is thrown when an unrecognized HRESULT is returned from a COM method call.
     
@@ -765,21 +806,14 @@ class COMException(ExternalException, ISerializable, _Exception):
     COMException(message: str, inner: Exception)
     COMException(message: str, errorCode: int)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def ToString(self):
         """
         ToString(self: COMException) -> str
         
             Converts the contents of the exception to a string.
             Returns: A string containing the System.Exception.HResult, System.Exception.Message, 
-             System.Exception.InnerException, and System.Exception.StackTrace properties of the exception.
+             System.Exception.InnerException, and System.Exception.StackTrace properties of the 
+             exception.
         """
         pass
 
@@ -804,8 +838,10 @@ class COMException(ExternalException, ISerializable, _Exception):
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    SerializeObjectState = None
 
-class ComImportAttribute(Attribute, _Attribute):
+
+class ComImportAttribute:
     """
     Indicates that the attributed type was previously defined in COM.
     
@@ -816,7 +852,7 @@ class ComImportAttribute(Attribute, _Attribute):
         pass
 
 
-class ComInterfaceType(Enum, IComparable, IFormattable, IConvertible):
+class ComInterfaceType:
     """
     Identifies how to expose an interface to COM.
     
@@ -862,7 +898,7 @@ class ComInterfaceType(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ComMemberType(Enum, IComparable, IFormattable, IConvertible):
+class ComMemberType:
     """
     Describes the type of a COM member.
     
@@ -907,7 +943,7 @@ class ComMemberType(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ComRegisterFunctionAttribute(Attribute, _Attribute):
+class ComRegisterFunctionAttribute:
     """
     Specifies the method to call when you register an assembly for use from COM; this enables the execution of user-written code during the registration process.
     
@@ -918,7 +954,7 @@ class ComRegisterFunctionAttribute(Attribute, _Attribute):
         pass
 
 
-class ComSourceInterfacesAttribute(Attribute, _Attribute):
+class ComSourceInterfacesAttribute:
     """
     Identifies a list of interfaces that are exposed as COM event sources for the attributed class.
     
@@ -952,7 +988,7 @@ Get: Value(self: ComSourceInterfacesAttribute) -> str
 
 
 
-class ComUnregisterFunctionAttribute(Attribute, _Attribute):
+class ComUnregisterFunctionAttribute:
     """
     Specifies the method to call when you unregister an assembly for use from COM; this allows for the execution of user-written code during the unregistration process.
     
@@ -963,7 +999,7 @@ class ComUnregisterFunctionAttribute(Attribute, _Attribute):
         pass
 
 
-class ComVisibleAttribute(Attribute, _Attribute):
+class ComVisibleAttribute:
     """
     Controls accessibility of an individual managed type or member, or of all types within an assembly, to COM.
     
@@ -987,13 +1023,13 @@ Get: Value(self: ComVisibleAttribute) -> bool
 
 
 
-class CONNECTDATA(object):
+class CONNECTDATA:
     """ Use System.Runtime.InteropServices.ComTypes.CONNECTDATA instead. """
     dwCookie = None
     pUnk = None
 
 
-class CriticalHandle(CriticalFinalizerObject, IDisposable):
+class CriticalHandle:
     """ Represents a wrapper class for handle resources. """
     def Close(self):
         """
@@ -1014,8 +1050,9 @@ class CriticalHandle(CriticalFinalizerObject, IDisposable):
         ReleaseHandle(self: CriticalHandle) -> bool
         
             When overridden in a derived class, executes the code required to free the handle.
-            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, 
-             false. In this case, it generates a releaseHandleFailed MDA Managed Debugging Assistant.
+            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic 
+             failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging 
+             Assistant.
         """
         pass
 
@@ -1036,18 +1073,11 @@ class CriticalHandle(CriticalFinalizerObject, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -1077,7 +1107,7 @@ Get: IsInvalid(self: CriticalHandle) -> bool
     handle = None
 
 
-class CurrencyWrapper(object):
+class CurrencyWrapper:
     """
     Wraps objects the marshaler should marshal as a VT_CY.
     
@@ -1101,7 +1131,7 @@ Get: WrappedObject(self: CurrencyWrapper) -> Decimal
 
 
 
-class CustomQueryInterfaceMode(Enum, IComparable, IFormattable, IConvertible):
+class CustomQueryInterfaceMode:
     """
     Indicates whether the System.Runtime.InteropServices.Marshal.GetComInterfaceForObject(System.Object,System.Type,System.Runtime.InteropServices.CustomQueryInterfaceMode) method's IUnknown::QueryInterface calls can use the System.Runtime.InteropServices.ICustomQueryInterface interface.
     
@@ -1145,7 +1175,7 @@ class CustomQueryInterfaceMode(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class CustomQueryInterfaceResult(Enum, IComparable, IFormattable, IConvertible):
+class CustomQueryInterfaceResult:
     """
     Provides return values for the System.Runtime.InteropServices.ICustomQueryInterface.GetInterface(System.Guid@,System.IntPtr@) method.
     
@@ -1190,7 +1220,7 @@ class CustomQueryInterfaceResult(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class DefaultCharSetAttribute(Attribute, _Attribute):
+class DefaultCharSetAttribute:
     """
     Specifies the value of the System.Runtime.InteropServices.CharSet enumeration. This class cannot be inherited.
     
@@ -1214,7 +1244,7 @@ Get: CharSet(self: DefaultCharSetAttribute) -> CharSet
 
 
 
-class DefaultDllImportSearchPathsAttribute(Attribute, _Attribute):
+class DefaultDllImportSearchPathsAttribute:
     """ DefaultDllImportSearchPathsAttribute(paths: DllImportSearchPath) """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1232,7 +1262,7 @@ class DefaultDllImportSearchPathsAttribute(Attribute, _Attribute):
 
 
 
-class DefaultParameterValueAttribute(Attribute, _Attribute):
+class DefaultParameterValueAttribute:
     """
     Sets the default value of a parameter when called from a language that supports default parameters. This class cannot be inherited.
     
@@ -1256,7 +1286,7 @@ Get: Value(self: DefaultParameterValueAttribute) -> object
 
 
 
-class DESCKIND(Enum, IComparable, IFormattable, IConvertible):
+class DESCKIND:
     """
     Use System.Runtime.InteropServices.ComTypes.DESCKIND instead.
     
@@ -1304,7 +1334,7 @@ class DESCKIND(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class DispatchWrapper(object):
+class DispatchWrapper:
     """
     Wraps objects the marshaler should marshal as a VT_DISPATCH.
     
@@ -1324,7 +1354,7 @@ Get: WrappedObject(self: DispatchWrapper) -> object
 
 
 
-class DispIdAttribute(Attribute, _Attribute):
+class DispIdAttribute:
     """
     Specifies the COM dispatch identifier (DISPID) of a method, field, or property.
     
@@ -1348,7 +1378,7 @@ Get: Value(self: DispIdAttribute) -> int
 
 
 
-class DISPPARAMS(object):
+class DISPPARAMS:
     """ Use System.Runtime.InteropServices.ComTypes.DISPPARAMS instead. """
     cArgs = None
     cNamedArgs = None
@@ -1356,7 +1386,7 @@ class DISPPARAMS(object):
     rgvarg = None
 
 
-class DllImportAttribute(Attribute, _Attribute):
+class DllImportAttribute:
     """
     Indicates that the attributed method is exposed by an unmanaged dynamic-link library (DLL) as a static entry point.
     
@@ -1389,7 +1419,7 @@ Get: Value(self: DllImportAttribute) -> str
     ThrowOnUnmappableChar = None
 
 
-class DllImportSearchPath(Enum, IComparable, IFormattable, IConvertible):
+class DllImportSearchPath:
     """ enum (flags) DllImportSearchPath, values: ApplicationDirectory (512), AssemblyDirectory (2), LegacyBehavior (0), SafeDirectories (4096), System32 (2048), UseDllDirectoryForDependencies (256), UserDirectories (1024) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1434,14 +1464,14 @@ class DllImportSearchPath(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ELEMDESC(object):
+class ELEMDESC:
     """ Use System.Runtime.InteropServices.ComTypes.ELEMDESC instead. """
     desc = None
     DESCUNION = None
     tdesc = None
 
 
-class ErrorWrapper(object):
+class ErrorWrapper:
     """
     Wraps objects the marshaler should marshal as a VT_ERROR.
     
@@ -1467,7 +1497,7 @@ Get: ErrorCode(self: ErrorWrapper) -> int
 
 
 
-class EXCEPINFO(object):
+class EXCEPINFO:
     """ Use System.Runtime.InteropServices.ComTypes.EXCEPINFO instead. """
     bstrDescription = None
     bstrHelpFile = None
@@ -1479,7 +1509,7 @@ class EXCEPINFO(object):
     wReserved = None
 
 
-class ExporterEventKind(Enum, IComparable, IFormattable, IConvertible):
+class ExporterEventKind:
     """
     Describes the callbacks that the type library exporter makes when exporting a type library.
     
@@ -1524,14 +1554,14 @@ class ExporterEventKind(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ExtensibleClassFactory(object):
+class ExtensibleClassFactory:
     """ Enables customization of managed objects that extend from unmanaged objects during creation. """
     @staticmethod
     def RegisterObjectCreationCallback(callback):
         """
         RegisterObjectCreationCallback(callback: ObjectCreationDelegate)
-            Registers a delegate that is called when an instance of a managed type, that extends from an 
-             unmanaged type, needs to allocate the aggregated unmanaged object.
+            Registers a delegate that is called when an instance of a managed type, that extends from 
+             an unmanaged type, needs to allocate the aggregated unmanaged object.
         
         
             callback: A delegate that is called in place of CoCreateInstance.
@@ -1539,7 +1569,7 @@ class ExtensibleClassFactory(object):
         pass
 
 
-class FieldOffsetAttribute(Attribute, _Attribute):
+class FieldOffsetAttribute:
     """
     Indicates the physical position of fields within the unmanaged representation of a class or structure.
     
@@ -1563,13 +1593,13 @@ Get: Value(self: FieldOffsetAttribute) -> int
 
 
 
-class FILETIME(object):
+class FILETIME:
     """ Use System.Runtime.InteropServices.ComTypes.FILETIME instead. """
     dwHighDateTime = None
     dwLowDateTime = None
 
 
-class FUNCDESC(object):
+class FUNCDESC:
     """ Use System.Runtime.InteropServices.ComTypes.FUNCDESC instead. """
     callconv = None
     cParams = None
@@ -1585,7 +1615,7 @@ class FUNCDESC(object):
     wFuncFlags = None
 
 
-class FUNCFLAGS(Enum, IComparable, IFormattable, IConvertible):
+class FUNCFLAGS:
     """
     Use System.Runtime.InteropServices.ComTypes.FUNCFLAGS instead.
     
@@ -1640,7 +1670,7 @@ class FUNCFLAGS(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class FUNCKIND(Enum, IComparable, IFormattable, IConvertible):
+class FUNCKIND:
     """
     Use System.Runtime.InteropServices.ComTypes.FUNCKIND instead.
     
@@ -1687,14 +1717,14 @@ class FUNCKIND(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class GCHandle(object):
+class GCHandle:
     """ Provides a way to access a managed object from unmanaged memory. """
     def AddrOfPinnedObject(self):
         """
         AddrOfPinnedObject(self: GCHandle) -> IntPtr
         
-            Retrieves the address of an object in a System.Runtime.InteropServices.GCHandleType.Pinned 
-             handle.
+            Retrieves the address of an object in a 
+             System.Runtime.InteropServices.GCHandleType.Pinned handle.
         
             Returns: The address of the of the Pinned object as an System.IntPtr.
         """
@@ -1703,6 +1733,17 @@ class GCHandle(object):
     @staticmethod
     def Alloc(value, type=None):
         """
+        Alloc(value: object) -> GCHandle
+        
+            Allocates a System.Runtime.InteropServices.GCHandleType.Normal handle for the specified 
+             object.
+        
+        
+            value: The object that uses the System.Runtime.InteropServices.GCHandle.
+            Returns: A new System.Runtime.InteropServices.GCHandle that protects the object from garbage 
+             collection. This System.Runtime.InteropServices.GCHandle must be released with 
+             System.Runtime.InteropServices.GCHandle.Free when it is no longer needed.
+        
         Alloc(value: object, type: GCHandleType) -> GCHandle
         
             Allocates a handle of the specified type for the specified object.
@@ -1713,15 +1754,6 @@ class GCHandle(object):
         
             Returns: A new System.Runtime.InteropServices.GCHandle of the specified type. This 
              System.Runtime.InteropServices.GCHandle must be released with 
-             System.Runtime.InteropServices.GCHandle.Free when it is no longer needed.
-        
-        Alloc(value: object) -> GCHandle
-        
-            Allocates a System.Runtime.InteropServices.GCHandleType.Normal handle for the specified object.
-        
-            value: The object that uses the System.Runtime.InteropServices.GCHandle.
-            Returns: A new System.Runtime.InteropServices.GCHandle that protects the object from garbage collection. 
-             This System.Runtime.InteropServices.GCHandle must be released with 
              System.Runtime.InteropServices.GCHandle.Free when it is no longer needed.
         """
         pass
@@ -1730,15 +1762,15 @@ class GCHandle(object):
         """
         Equals(self: GCHandle, o: object) -> bool
         
-            Determines whether the specified System.Runtime.InteropServices.GCHandle object is equal to the 
-             current System.Runtime.InteropServices.GCHandle object.
+            Determines whether the specified System.Runtime.InteropServices.GCHandle object is equal 
+             to the current System.Runtime.InteropServices.GCHandle object.
         
         
             o: The System.Runtime.InteropServices.GCHandle object to compare with the current 
              System.Runtime.InteropServices.GCHandle object.
         
-            Returns: true if the specified System.Runtime.InteropServices.GCHandle object is equal to the current 
-             System.Runtime.InteropServices.GCHandle object; otherwise, false.
+            Returns: true if the specified System.Runtime.InteropServices.GCHandle object is equal to the 
+             current System.Runtime.InteropServices.GCHandle object; otherwise, false.
         """
         pass
 
@@ -1754,14 +1786,15 @@ class GCHandle(object):
         """
         FromIntPtr(value: IntPtr) -> GCHandle
         
-            Returns a new System.Runtime.InteropServices.GCHandle object created from a handle to a managed 
-             object.
+            Returns a new System.Runtime.InteropServices.GCHandle object created from a handle to a 
+             managed object.
         
         
-            value: An System.IntPtr handle to a managed object to create a System.Runtime.InteropServices.GCHandle 
-             object from.
+            value: An System.IntPtr handle to a managed object to create a 
+             System.Runtime.InteropServices.GCHandle object from.
         
-            Returns: A new System.Runtime.InteropServices.GCHandle object that corresponds to the value parameter.
+            Returns: A new System.Runtime.InteropServices.GCHandle object that corresponds to the value 
+             parameter.
         """
         pass
 
@@ -1779,10 +1812,12 @@ class GCHandle(object):
         """
         ToIntPtr(value: GCHandle) -> IntPtr
         
-            Returns the internal integer representation of a System.Runtime.InteropServices.GCHandle object.
+            Returns the internal integer representation of a System.Runtime.InteropServices.GCHandle 
+             object.
         
-            value: A System.Runtime.InteropServices.GCHandle object to retrieve an internal integer representation 
-             from.
+        
+            value: A System.Runtime.InteropServices.GCHandle object to retrieve an internal integer 
+             representation from.
         
             Returns: An System.IntPtr object that represents a System.Runtime.InteropServices.GCHandle object.
         """
@@ -1812,7 +1847,7 @@ Set: Target(self: GCHandle) = value
 
 
 
-class GCHandleType(Enum, IComparable, IFormattable, IConvertible):
+class GCHandleType:
     """
     Represents the types of handles the System.Runtime.InteropServices.GCHandle class can allocate.
     
@@ -1858,7 +1893,7 @@ class GCHandleType(Enum, IComparable, IFormattable, IConvertible):
     WeakTrackResurrection = None
 
 
-class GuidAttribute(Attribute, _Attribute):
+class GuidAttribute:
     """
     Supplies an explicit System.Guid when an automatic GUID is undesirable.
     
@@ -1882,7 +1917,7 @@ Get: Value(self: GuidAttribute) -> str
 
 
 
-class HandleCollector(object):
+class HandleCollector:
     """
     Tracks outstanding handles and forces a garbage collection when the specified threshold is reached.
     
@@ -1945,7 +1980,7 @@ Get: Name(self: HandleCollector) -> str
 
 
 
-class HandleRef(object):
+class HandleRef:
     """
     Wraps a managed object holding a handle to a resource that is passed to unmanaged code using platform invoke.
     
@@ -1956,10 +1991,12 @@ class HandleRef(object):
         """
         ToIntPtr(value: HandleRef) -> IntPtr
         
-            Returns the internal integer representation of a System.Runtime.InteropServices.HandleRef object.
+            Returns the internal integer representation of a System.Runtime.InteropServices.HandleRef 
+             object.
         
-            value: A System.Runtime.InteropServices.HandleRef object to retrieve an internal integer representation 
-             from.
+        
+            value: A System.Runtime.InteropServices.HandleRef object to retrieve an internal integer 
+             representation from.
         
             Returns: An System.IntPtr object that represents a System.Runtime.InteropServices.HandleRef object.
         """
@@ -1968,8 +2005,9 @@ class HandleRef(object):
     @staticmethod # known case of __new__
     def __new__(self, wrapper, handle):
         """
-        __new__(cls: type, wrapper: object, handle: IntPtr)
-        __new__[HandleRef]() -> HandleRef
+        __new__[HandleRef]() -> HandleRef
+        
+        __new__(cls: type, wrapper: object, handle: IntPtr)
         """
         pass
 
@@ -2098,7 +2136,7 @@ class ICustomQueryInterface:
         pass
 
 
-class IDispatchImplAttribute(Attribute, _Attribute):
+class IDispatchImplAttribute:
     """
     Indicates which IDispatch implementation the common language runtime uses when exposing dual interfaces and dispinterfaces to COM.
     
@@ -2126,7 +2164,7 @@ Get: Value(self: IDispatchImplAttribute) -> IDispatchImplType
 
 
 
-class IDispatchImplType(Enum, IComparable, IFormattable, IConvertible):
+class IDispatchImplType:
     """
     Indicates which IDispatch implementation to use for a particular class.
     
@@ -2171,13 +2209,13 @@ class IDispatchImplType(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class IDLDESC(object):
+class IDLDESC:
     """ Use System.Runtime.InteropServices.ComTypes.IDLDESC instead. """
     dwReserved = None
     wIDLFlags = None
 
 
-class IDLFLAG(Enum, IComparable, IFormattable, IConvertible):
+class IDLFLAG:
     """
     Use System.Runtime.InteropServices.ComTypes.IDLFLAG instead.
     
@@ -2224,7 +2262,7 @@ class IDLFLAG(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class IMPLTYPEFLAGS(Enum, IComparable, IFormattable, IConvertible):
+class IMPLTYPEFLAGS:
     """
     Use System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS instead.
     
@@ -2270,7 +2308,7 @@ class IMPLTYPEFLAGS(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ImportedFromTypeLibAttribute(Attribute, _Attribute):
+class ImportedFromTypeLibAttribute:
     """
     Indicates that the types defined within an assembly were originally defined in a type library.
     
@@ -2294,7 +2332,7 @@ Get: Value(self: ImportedFromTypeLibAttribute) -> str
 
 
 
-class ImporterEventKind(Enum, IComparable, IFormattable, IConvertible):
+class ImporterEventKind:
     """
     Describes the callbacks that the type library importer makes when importing a type library.
     
@@ -2339,7 +2377,7 @@ class ImporterEventKind(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class InAttribute(Attribute, _Attribute):
+class InAttribute:
     """
     Indicates that data should be marshaled from the caller to the callee, but not back to the caller.
     
@@ -2350,7 +2388,7 @@ class InAttribute(Attribute, _Attribute):
         pass
 
 
-class InterfaceTypeAttribute(Attribute, _Attribute):
+class InterfaceTypeAttribute:
     """
     Indicates whether a managed interface is dual, dispatch-only, or IUnknown -only when exposed to COM.
     
@@ -2378,7 +2416,7 @@ Get: Value(self: InterfaceTypeAttribute) -> ComInterfaceType
 
 
 
-class InvalidComObjectException(SystemException, ISerializable, _Exception):
+class InvalidComObjectException:
     """
     The exception thrown when an invalid COM object is used.
     
@@ -2386,14 +2424,6 @@ class InvalidComObjectException(SystemException, ISerializable, _Exception):
     InvalidComObjectException(message: str)
     InvalidComObjectException(message: str, inner: Exception)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -2414,8 +2444,10 @@ class InvalidComObjectException(SystemException, ISerializable, _Exception):
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    SerializeObjectState = None
 
-class InvalidOleVariantTypeException(SystemException, ISerializable, _Exception):
+
+class InvalidOleVariantTypeException:
     """
     The exception thrown by the marshaler when it encounters an argument of a variant type that can not be marshaled to managed code.
     
@@ -2423,14 +2455,6 @@ class InvalidOleVariantTypeException(SystemException, ISerializable, _Exception)
     InvalidOleVariantTypeException(message: str)
     InvalidOleVariantTypeException(message: str, inner: Exception)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -2451,8 +2475,10 @@ class InvalidOleVariantTypeException(SystemException, ISerializable, _Exception)
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    SerializeObjectState = None
 
-class INVOKEKIND(Enum, IComparable, IFormattable, IConvertible):
+
+class INVOKEKIND:
     """
     Use System.Runtime.InteropServices.ComTypes.INVOKEKIND instead.
     
@@ -2525,8 +2551,8 @@ class IRegistrationServices:
         GetRegistrableTypesInAssembly(self: IRegistrationServices, assembly: Assembly) -> Array[Type]
         
             Retrieves a list of classes in an assembly that would be registered by a call to 
-             System.Runtime.InteropServices.IRegistrationServices.RegisterAssembly(System.Reflection.Assembly,
-             System.Runtime.InteropServices.AssemblyRegistrationFlags).
+             System.Runtime.InteropServices.IRegistrationServices.RegisterAssembly(System.Reflection.As
+             sembly,System.Runtime.InteropServices.AssemblyRegistrationFlags).
         
         
             assembly: The assembly to search for classes.
@@ -2589,8 +2615,8 @@ class IRegistrationServices:
             Unregisters the classes in a managed assembly.
         
             assembly: The assembly to be unregistered.
-            Returns: true if assembly contains types that were successfully unregistered; otherwise false if the 
-             assembly contains no eligible types.
+            Returns: true if assembly contains types that were successfully unregistered; otherwise false if 
+             the assembly contains no eligible types.
         """
         pass
 
@@ -2609,9 +2635,11 @@ class ITypeLibConverter:
         
             assembly: The assembly to convert.
             typeLibName: The file name of the resulting type library.
-            flags: A System.Runtime.InteropServices.TypeLibExporterFlags value indicating any special settings.
-            notifySink: The System.Runtime.InteropServices.ITypeLibExporterNotifySink interface implemented by the 
-             caller.
+            flags: A System.Runtime.InteropServices.TypeLibExporterFlags value indicating any special 
+             settings.
+        
+            notifySink: The System.Runtime.InteropServices.ITypeLibExporterNotifySink interface implemented by 
+             the caller.
         
             Returns: An object that implements the ITypeLib interface.
         """
@@ -2619,38 +2647,46 @@ class ITypeLibConverter:
 
     def ConvertTypeLibToAssembly(self, typeLib, asmFileName, flags, notifySink, publicKey, keyPair, *__args):
         """
-        ConvertTypeLibToAssembly(self: ITypeLibConverter, typeLib: object, asmFileName: str, flags: int, notifySink: ITypeLibImporterNotifySink, publicKey: Array[Byte], keyPair: StrongNameKeyPair, unsafeInterfaces: bool) -> AssemblyBuilder
-        
-            Converts a COM type library to an assembly.
-        
-            typeLib: The object that implements the ITypeLib interface.
-            asmFileName: The file name of the resulting assembly.
-            flags: A System.Runtime.InteropServices.TypeLibImporterFlags value indicating any special settings.
-            notifySink: System.Runtime.InteropServices.ITypeLibImporterNotifySink interface implemented by the caller.
-            publicKey: A byte array containing the public key.
-            keyPair: A System.Reflection.StrongNameKeyPair object containing the public and private cryptographic key 
-             pair.
-        
-            unsafeInterfaces: If true, the interfaces require link time checks for 
-             System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode permission. If false, the 
-             interfaces require run time checks that require a stack walk and are more expensive, but help 
-             provide greater protection.
-        
-            Returns: An System.Reflection.Emit.AssemblyBuilder object containing the converted type library.
         ConvertTypeLibToAssembly(self: ITypeLibConverter, typeLib: object, asmFileName: str, flags: TypeLibImporterFlags, notifySink: ITypeLibImporterNotifySink, publicKey: Array[Byte], keyPair: StrongNameKeyPair, asmNamespace: str, asmVersion: Version) -> AssemblyBuilder
         
             Converts a COM type library to an assembly.
         
             typeLib: The object that implements the ITypeLib interface.
             asmFileName: The file name of the resulting assembly.
-            flags: A System.Runtime.InteropServices.TypeLibImporterFlags value indicating any special settings.
-            notifySink: System.Runtime.InteropServices.ITypeLibImporterNotifySink interface implemented by the caller.
+            flags: A System.Runtime.InteropServices.TypeLibImporterFlags value indicating any special 
+             settings.
+        
+            notifySink: System.Runtime.InteropServices.ITypeLibImporterNotifySink interface implemented by the 
+             caller.
+        
             publicKey: A byte array containing the public key.
-            keyPair: A System.Reflection.StrongNameKeyPair object containing the public and private cryptographic key 
-             pair.
+            keyPair: A System.Reflection.StrongNameKeyPair object containing the public and private 
+             cryptographic key pair.
         
             asmNamespace: The namespace for the resulting assembly.
             asmVersion: The version of the resulting assembly. If null, the version of the type library is used.
+            Returns: An System.Reflection.Emit.AssemblyBuilder object containing the converted type library.
+        ConvertTypeLibToAssembly(self: ITypeLibConverter, typeLib: object, asmFileName: str, flags: int, notifySink: ITypeLibImporterNotifySink, publicKey: Array[Byte], keyPair: StrongNameKeyPair, unsafeInterfaces: bool) -> AssemblyBuilder
+        
+            Converts a COM type library to an assembly.
+        
+            typeLib: The object that implements the ITypeLib interface.
+            asmFileName: The file name of the resulting assembly.
+            flags: A System.Runtime.InteropServices.TypeLibImporterFlags value indicating any special 
+             settings.
+        
+            notifySink: System.Runtime.InteropServices.ITypeLibImporterNotifySink interface implemented by the 
+             caller.
+        
+            publicKey: A byte array containing the public key.
+            keyPair: A System.Reflection.StrongNameKeyPair object containing the public and private 
+             cryptographic key pair.
+        
+            unsafeInterfaces: If true, the interfaces require link time checks for 
+             System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode permission. If false, 
+             the interfaces require run time checks that require a stack walk and are more expensive, 
+             but help provide greater protection.
+        
             Returns: An System.Reflection.Emit.AssemblyBuilder object containing the converted type library.
         """
         pass
@@ -2748,7 +2784,7 @@ class ITypeLibImporterNotifySink:
         pass
 
 
-class LayoutKind(Enum, IComparable, IFormattable, IConvertible):
+class LayoutKind:
     """
     Controls the layout of an object when it is exported to unmanaged code.
     
@@ -2793,7 +2829,7 @@ class LayoutKind(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class LCIDConversionAttribute(Attribute, _Attribute):
+class LCIDConversionAttribute:
     """
     Indicates that a method's unmanaged signature expects a locale identifier (LCID) parameter.
     
@@ -2817,7 +2853,7 @@ Get: Value(self: LCIDConversionAttribute) -> int
 
 
 
-class LIBFLAGS(Enum, IComparable, IFormattable, IConvertible):
+class LIBFLAGS:
     """
     Use System.Runtime.InteropServices.ComTypes.LIBFLAGS instead.
     
@@ -2863,7 +2899,7 @@ class LIBFLAGS(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ManagedToNativeComInteropStubAttribute(Attribute, _Attribute):
+class ManagedToNativeComInteropStubAttribute:
     """
     Provides support for user customization of interop stubs in managed-to-COM interop scenarios.
     
@@ -2894,7 +2930,7 @@ Get: MethodName(self: ManagedToNativeComInteropStubAttribute) -> str
 
 
 
-class Marshal(object):
+class Marshal:
     """ Provides a collection of methods for allocating unmanaged memory, copying unmanaged memory blocks, and converting managed to unmanaged types, as well as other miscellaneous methods used when interacting with unmanaged code. """
     @staticmethod
     def AddRef(pUnk):
@@ -2924,18 +2960,20 @@ class Marshal(object):
     @staticmethod
     def AllocHGlobal(cb):
         """
-        AllocHGlobal(cb: int) -> IntPtr
+        AllocHGlobal(cb: IntPtr) -> IntPtr
         
-            Allocates memory from the unmanaged memory of the process by using the specified number of bytes.
+            Allocates memory from the unmanaged memory of the process by using the pointer to the 
+             specified number of bytes.
+        
         
             cb: The required number of bytes in memory.
             Returns: A pointer to the newly allocated memory. This memory must be released using the 
              System.Runtime.InteropServices.Marshal.FreeHGlobal(System.IntPtr) method.
         
-        AllocHGlobal(cb: IntPtr) -> IntPtr
+        AllocHGlobal(cb: int) -> IntPtr
         
-            Allocates memory from the unmanaged memory of the process by using the pointer to the specified 
-             number of bytes.
+            Allocates memory from the unmanaged memory of the process by using the specified number 
+             of bytes.
         
         
             cb: The required number of bytes in memory.
@@ -2949,7 +2987,9 @@ class Marshal(object):
         """
         AreComObjectsAvailableForCleanup() -> bool
         
-            Indicates whether runtime callable wrappers (RCWs) from any context are available for cleanup.
+            Indicates whether runtime callable wrappers (RCWs) from any context are available for 
+             cleanup.
+        
             Returns: true if there are any RCWs available for cleanup; otherwise, false.
         """
         pass
@@ -2973,8 +3013,8 @@ class Marshal(object):
         ChangeWrapperHandleStrength(otp: object, fIsWeak: bool)
             Changes the strength of an object's COM Callable Wrapper (CCW) handle.
         
-            otp: The object whose CCW holds a reference counted handle. The handle is strong if the reference 
-             count on the CCW is greater than zero; otherwise, it is weak.
+            otp: The object whose CCW holds a reference counted handle. The handle is strong if the 
+             reference count on the CCW is greater than zero; otherwise, it is weak.
         
             fIsWeak: true to change the strength of the handle on the otp parameter to weak, regardless of its 
              reference count; false to reset the handle strength on otp to be reference counted.
@@ -2985,14 +3025,100 @@ class Marshal(object):
     def CleanupUnusedObjectsInCurrentContext():
         """
         CleanupUnusedObjectsInCurrentContext()
-            Notifies the runtime to clean up all Runtime Callable Wrappers (RCWs) allocated in the current 
-             context.
+            Notifies the runtime to clean up all Runtime Callable Wrappers (RCWs) allocated in the 
+             current context.
         """
         pass
 
     @staticmethod
     def Copy(source, *__args):
         """
+        Copy(source: Array[int], startIndex: int, destination: IntPtr, length: int)
+            Copies data from a one-dimensional, managed 32-bit signed integer array to an unmanaged 
+             memory pointer.
+        
+        
+            source: The one-dimensional array to copy from.
+            startIndex: The zero-based index in the source array where copying should start.
+            destination: The memory pointer to copy to.
+            length: The number of array elements to copy.
+        Copy(source: Array[Char], startIndex: int, destination: IntPtr, length: int)
+            Copies data from a one-dimensional, managed character array to an unmanaged memory 
+             pointer.
+        
+        
+            source: The one-dimensional array to copy from.
+            startIndex: The zero-based index in the source array where copying should start.
+            destination: The memory pointer to copy to.
+            length: The number of array elements to copy.
+        Copy(source: Array[Int16], startIndex: int, destination: IntPtr, length: int)
+            Copies data from a one-dimensional, managed 16-bit signed integer array to an unmanaged 
+             memory pointer.
+        
+        
+            source: The one-dimensional array to copy from.
+            startIndex: The zero-based index in the source array where copying should start.
+            destination: The memory pointer to copy to.
+            length: The number of array elements to copy.
+        Copy(source: Array[Int64], startIndex: int, destination: IntPtr, length: int)
+            Copies data from a one-dimensional, managed 64-bit signed integer array to an unmanaged 
+             memory pointer.
+        
+        
+            source: The one-dimensional array to copy from.
+            startIndex: The zero-based index in the source array where copying should start.
+            destination: The memory pointer to copy to.
+            length: The number of array elements to copy.
+        Copy(source: Array[Single], startIndex: int, destination: IntPtr, length: int)
+            Copies data from a one-dimensional, managed single-precision floating-point number array 
+             to an unmanaged memory pointer.
+        
+        
+            source: The one-dimensional array to copy from.
+            startIndex: The zero-based index in the source array where copying should start.
+            destination: The memory pointer to copy to.
+            length: The number of array elements to copy.
+        Copy(source: Array[float], startIndex: int, destination: IntPtr, length: int)
+            Copies data from a one-dimensional, managed double-precision floating-point number array 
+             to an unmanaged memory pointer.
+        
+        
+            source: The one-dimensional array to copy from.
+            startIndex: The zero-based index in the source array where copying should start.
+            destination: The memory pointer to copy to.
+            length: The number of array elements to copy.
+        Copy(source: Array[Byte], startIndex: int, destination: IntPtr, length: int)
+            Copies data from a one-dimensional, managed 8-bit unsigned integer array to an unmanaged 
+             memory pointer.
+        
+        
+            source: The one-dimensional array to copy from.
+            startIndex: The zero-based index in the source array where copying should start.
+            destination: The memory pointer to copy to.
+            length: The number of array elements to copy.
+        Copy(source: Array[IntPtr], startIndex: int, destination: IntPtr, length: int)
+            Copies data from a one-dimensional, managed System.IntPtr array to an unmanaged memory 
+             pointer.
+        
+        
+            source: The one-dimensional array to copy from.
+            startIndex: The zero-based index into the source array where copying should start.
+            destination: The memory pointer to copy to.
+            length: The number of array elements to copy.
+        Copy(source: IntPtr, destination: Array[int], startIndex: int, length: int)
+            Copies data from an unmanaged memory pointer to a managed 32-bit signed integer array.
+        
+            source: The memory pointer to copy from.
+            destination: The array to copy to.
+            startIndex: The zero-based index in the destination  array where copying should start.
+            length: The number of array elements to copy.
+        Copy(source: IntPtr, destination: Array[Char], startIndex: int, length: int)
+            Copies data from an unmanaged memory pointer to a managed character array.
+        
+            source: The memory pointer to copy from.
+            destination: The array to copy to.
+            startIndex: The zero-based index in the destination  array where copying should start.
+            length: The number of array elements to copy.
         Copy(source: IntPtr, destination: Array[Int16], startIndex: int, length: int)
             Copies data from an unmanaged memory pointer to a managed 16-bit signed integer array.
         
@@ -3007,15 +3133,19 @@ class Marshal(object):
             destination: The array to copy to.
             startIndex: The zero-based index in the destination  array where copying should start.
             length: The number of array elements to copy.
-        Copy(source: IntPtr, destination: Array[int], startIndex: int, length: int)
-            Copies data from an unmanaged memory pointer to a managed 32-bit signed integer array.
+        Copy(source: IntPtr, destination: Array[Single], startIndex: int, length: int)
+            Copies data from an unmanaged memory pointer to a managed single-precision floating-point 
+             number array.
+        
         
             source: The memory pointer to copy from.
             destination: The array to copy to.
             startIndex: The zero-based index in the destination  array where copying should start.
             length: The number of array elements to copy.
-        Copy(source: IntPtr, destination: Array[Char], startIndex: int, length: int)
-            Copies data from an unmanaged memory pointer to a managed character array.
+        Copy(source: IntPtr, destination: Array[float], startIndex: int, length: int)
+            Copies data from an unmanaged memory pointer to a managed double-precision floating-point 
+             number array.
+        
         
             source: The memory pointer to copy from.
             destination: The array to copy to.
@@ -3034,92 +3164,6 @@ class Marshal(object):
             source: The memory pointer to copy from.
             destination: The array to copy to.
             startIndex: The zero-based index into the destination array where copying should start.
-            length: The number of array elements to copy.
-        Copy(source: IntPtr, destination: Array[Single], startIndex: int, length: int)
-            Copies data from an unmanaged memory pointer to a managed single-precision floating-point number 
-             array.
-        
-        
-            source: The memory pointer to copy from.
-            destination: The array to copy to.
-            startIndex: The zero-based index in the destination  array where copying should start.
-            length: The number of array elements to copy.
-        Copy(source: IntPtr, destination: Array[float], startIndex: int, length: int)
-            Copies data from an unmanaged memory pointer to a managed double-precision floating-point number 
-             array.
-        
-        
-            source: The memory pointer to copy from.
-            destination: The array to copy to.
-            startIndex: The zero-based index in the destination  array where copying should start.
-            length: The number of array elements to copy.
-        Copy(source: Array[Int16], startIndex: int, destination: IntPtr, length: int)
-            Copies data from a one-dimensional, managed 16-bit signed integer array to an unmanaged memory 
-             pointer.
-        
-        
-            source: The one-dimensional array to copy from.
-            startIndex: The zero-based index in the source array where copying should start.
-            destination: The memory pointer to copy to.
-            length: The number of array elements to copy.
-        Copy(source: Array[Int64], startIndex: int, destination: IntPtr, length: int)
-            Copies data from a one-dimensional, managed 64-bit signed integer array to an unmanaged memory 
-             pointer.
-        
-        
-            source: The one-dimensional array to copy from.
-            startIndex: The zero-based index in the source array where copying should start.
-            destination: The memory pointer to copy to.
-            length: The number of array elements to copy.
-        Copy(source: Array[int], startIndex: int, destination: IntPtr, length: int)
-            Copies data from a one-dimensional, managed 32-bit signed integer array to an unmanaged memory 
-             pointer.
-        
-        
-            source: The one-dimensional array to copy from.
-            startIndex: The zero-based index in the source array where copying should start.
-            destination: The memory pointer to copy to.
-            length: The number of array elements to copy.
-        Copy(source: Array[Char], startIndex: int, destination: IntPtr, length: int)
-            Copies data from a one-dimensional, managed character array to an unmanaged memory pointer.
-        
-            source: The one-dimensional array to copy from.
-            startIndex: The zero-based index in the source array where copying should start.
-            destination: The memory pointer to copy to.
-            length: The number of array elements to copy.
-        Copy(source: Array[Byte], startIndex: int, destination: IntPtr, length: int)
-            Copies data from a one-dimensional, managed 8-bit unsigned integer array to an unmanaged memory 
-             pointer.
-        
-        
-            source: The one-dimensional array to copy from.
-            startIndex: The zero-based index in the source array where copying should start.
-            destination: The memory pointer to copy to.
-            length: The number of array elements to copy.
-        Copy(source: Array[IntPtr], startIndex: int, destination: IntPtr, length: int)
-            Copies data from a one-dimensional, managed System.IntPtr array to an unmanaged memory pointer.
-        
-            source: The one-dimensional array to copy from.
-            startIndex: The zero-based index into the source array where copying should start.
-            destination: The memory pointer to copy to.
-            length: The number of array elements to copy.
-        Copy(source: Array[Single], startIndex: int, destination: IntPtr, length: int)
-            Copies data from a one-dimensional, managed single-precision floating-point number array to an 
-             unmanaged memory pointer.
-        
-        
-            source: The one-dimensional array to copy from.
-            startIndex: The zero-based index in the source array where copying should start.
-            destination: The memory pointer to copy to.
-            length: The number of array elements to copy.
-        Copy(source: Array[float], startIndex: int, destination: IntPtr, length: int)
-            Copies data from a one-dimensional, managed double-precision floating-point number array to an 
-             unmanaged memory pointer.
-        
-        
-            source: The one-dimensional array to copy from.
-            startIndex: The zero-based index in the source array where copying should start.
-            destination: The memory pointer to copy to.
             length: The number of array elements to copy.
         """
         pass
@@ -3127,40 +3171,42 @@ class Marshal(object):
     @staticmethod
     def CreateAggregatedObject(pOuter, o):
         """
-        CreateAggregatedObject[T](pOuter: IntPtr, o: T) -> IntPtr
         CreateAggregatedObject(pOuter: IntPtr, o: object) -> IntPtr
         
             Aggregates a managed object with the specified COM object.
         
             pOuter: The outer IUnknown pointer.
             o: An object to aggregate.
-            Returns: The inner IUnknown pointer of the managed object.
+            Returns: The inner IUnknown pointer of the managed object.
+        CreateAggregatedObject[T](pOuter: IntPtr, o: T) -> IntPtr
         """
         pass
 
     @staticmethod
     def CreateWrapperOfType(o, t=None):
         """
-        CreateWrapperOfType[(T, TWrapper)](o: T) -> TWrapper
         CreateWrapperOfType(o: object, t: Type) -> object
         
             Wraps the specified COM object in an object of the specified type.
         
             o: The object to be wrapped.
             t: The type of wrapper to create.
-            Returns: The newly wrapped object that is an instance of the desired type.
+            Returns: The newly wrapped object that is an instance of the desired type.
+        CreateWrapperOfType[(T, TWrapper)](o: T) -> TWrapper
         """
         pass
 
     @staticmethod
     def DestroyStructure(ptr, structuretype=None):
         """
-        DestroyStructure[T](ptr: IntPtr)DestroyStructure(ptr: IntPtr, structuretype: Type)
+        DestroyStructure(ptr: IntPtr, structuretype: Type)
             Frees all substructures that the specified unmanaged memory block points to.
         
             ptr: A pointer to an unmanaged block of memory.
-            structuretype: Type of a formatted class. This provides the layout information necessary to delete the buffer 
-             in the ptr parameter.
+            structuretype: Type of a formatted class. This provides the layout information necessary to delete the 
+             buffer in the ptr parameter.
+        
+        DestroyStructure[T](ptr: IntPtr)
         """
         pass
 
@@ -3169,11 +3215,13 @@ class Marshal(object):
         """
         FinalReleaseComObject(o: object) -> int
         
-            Releases all references to a Runtime Callable Wrapper (RCW) by setting its reference count to 0.
+            Releases all references to a Runtime Callable Wrapper (RCW) by setting its reference 
+             count to 0.
+        
         
             o: The RCW to be released.
-            Returns: The new value of the reference count of the RCW associated with the oparameter, which is 0 
-             (zero) if the release is successful.
+            Returns: The new value of the reference count of the RCW associated with the oparameter, which is 
+             0 (zero) if the release is successful.
         """
         pass
 
@@ -3213,8 +3261,8 @@ class Marshal(object):
         """
         GenerateGuidForType(type: Type) -> Guid
         
-            Returns the globally unique identifier (GUID) for the specified type, or generates a GUID using 
-             the algorithm used by the Type Library Exporter (Tlbexp.exe).
+            Returns the globally unique identifier (GUID) for the specified type, or generates a GUID 
+             using the algorithm used by the Type Library Exporter (Tlbexp.exe).
         
         
             type: The type to generate a GUID for.
@@ -3242,28 +3290,14 @@ class Marshal(object):
             Obtains a running instance of the specified object from the running object table (ROT).
         
             progID: The programmatic identifier (ProgID) of the object that was requested.
-            Returns: The object that was requested; otherwise null. You can cast this object to any COM interface 
-             that it supports.
+            Returns: The object that was requested; otherwise null. You can cast this object to any COM 
+             interface that it supports.
         """
         pass
 
     @staticmethod
     def GetComInterfaceForObject(o, T=None, mode=None):
         """
-        GetComInterfaceForObject(o: object, T: Type, mode: CustomQueryInterfaceMode) -> IntPtr
-        
-            Returns a pointer to an IUnknown interface that represents the specified interface on the 
-             specified object. Custom query interface access is controlled by the specified customization 
-             mode.
-        
-        
-            o: The object that provides the interface.
-            T: The type of interface that is requested.
-            mode: One of the enumeration values that indicates whether to apply an IUnknown::QueryInterface 
-             customization that is supplied by an System.Runtime.InteropServices.ICustomQueryInterface.
-        
-            Returns: The interface pointer that represents the interface for the object.
-        GetComInterfaceForObject[(T, TInterface)](o: T) -> IntPtr
         GetComInterfaceForObject(o: object, T: Type) -> IntPtr
         
             Returns a pointer to an IUnknown interface that represents the specified interface on the 
@@ -3272,7 +3306,22 @@ class Marshal(object):
         
             o: The object that provides the interface.
             T: The type of interface that is requested.
-            Returns: The interface pointer that represents the specified interface for the object.
+            Returns: The interface pointer that represents the specified interface for the object.
+        GetComInterfaceForObject[(T, TInterface)](o: T) -> IntPtr
+        GetComInterfaceForObject(o: object, T: Type, mode: CustomQueryInterfaceMode) -> IntPtr
+        
+            Returns a pointer to an IUnknown interface that represents the specified interface on the 
+             specified object. Custom query interface access is controlled by the specified 
+             customization mode.
+        
+        
+            o: The object that provides the interface.
+            T: The type of interface that is requested.
+            mode: One of the enumeration values that indicates whether to apply an IUnknown::QueryInterface 
+             customization that is supplied by an 
+             System.Runtime.InteropServices.ICustomQueryInterface.
+        
+            Returns: The interface pointer that represents the interface for the object.
         """
         pass
 
@@ -3281,14 +3330,14 @@ class Marshal(object):
         """
         GetComInterfaceForObjectInContext(o: object, t: Type) -> IntPtr
         
-            Returns an interface pointer that represents the specified interface for an object, if the 
-             caller is in the same context as that object.
+            Returns an interface pointer that represents the specified interface for an object, if 
+             the caller is in the same context as that object.
         
         
             o: The object that provides the interface.
             t: The type of interface that is requested.
-            Returns: The interface pointer specified by t that represents the interface for the specified object, or 
-             null if the caller is not in the same context as the object.
+            Returns: The interface pointer specified by t that represents the interface for the specified 
+             object, or null if the caller is not in the same context as the object.
         """
         pass
 
@@ -3322,14 +3371,14 @@ class Marshal(object):
     @staticmethod
     def GetDelegateForFunctionPointer(ptr, t=None):
         """
-        GetDelegateForFunctionPointer[TDelegate](ptr: IntPtr) -> TDelegate
         GetDelegateForFunctionPointer(ptr: IntPtr, t: Type) -> Delegate
         
             Converts an unmanaged function pointer to a delegate.
         
             ptr: The unmanaged function pointer to be converted.
             t: The type of the delegate to be returned.
-            Returns: A delegate instance that can be cast to the appropriate delegate type.
+            Returns: A delegate instance that can be cast to the appropriate delegate type.
+        GetDelegateForFunctionPointer[TDelegate](ptr: IntPtr) -> TDelegate
         """
         pass
 
@@ -3338,13 +3387,14 @@ class Marshal(object):
         """
         GetEndComSlot(t: Type) -> int
         
-            Retrieves the last slot in the virtual function table (v-table or VTBL) of a type when exposed 
-             to COM.
+            Retrieves the last slot in the virtual function table (v-table or VTBL) of a type when 
+             exposed to COM.
         
         
             t: A type that represents an interface or class.
-            Returns: The last VTBL slot of the interface when exposed to COM. If the t parameter is a class, the 
-             returned VTBL slot is the last slot in the interface that is generated from the class.
+            Returns: The last VTBL slot of the interface when exposed to COM. If the t parameter is a class, 
+             the returned VTBL slot is the last slot in the interface that is generated from the 
+             class.
         """
         pass
 
@@ -3361,24 +3411,25 @@ class Marshal(object):
     @staticmethod
     def GetExceptionForHR(errorCode, errorInfo=None):
         """
-        GetExceptionForHR(errorCode: int, errorInfo: IntPtr) -> Exception
-        
-            Converts the specified HRESULT error code to a corresponding System.Exception object, with 
-             additional error information passed in an IErrorInfo interface for the exception object.
-        
-        
-            errorCode: The HRESULT to be converted.
-            errorInfo: A pointer to the IErrorInfo interface that provides more information about the error. You can 
-             specify IntPtr(0) to use the current IErrorInfo interface, or IntPtr(-1) to ignore the current 
-             IErrorInfo interface and construct the exception just from the error code.
-        
-            Returns: An object that represents the converted HRESULT and information obtained from errorInfo.
         GetExceptionForHR(errorCode: int) -> Exception
         
             Converts the specified HRESULT error code to a corresponding System.Exception object.
         
             errorCode: The HRESULT to be converted.
-            Returns: An object that represents the converted HRESULT.
+            Returns: An object that represents the converted HRESULT.
+        GetExceptionForHR(errorCode: int, errorInfo: IntPtr) -> Exception
+        
+            Converts the specified HRESULT error code to a corresponding System.Exception object, 
+             with additional error information passed in an IErrorInfo interface for the exception 
+             object.
+        
+        
+            errorCode: The HRESULT to be converted.
+            errorInfo: A pointer to the IErrorInfo interface that provides more information about the error. You 
+             can specify IntPtr(0) to use the current IErrorInfo interface, or IntPtr(-1) to ignore 
+             the current IErrorInfo interface and construct the exception just from the error code.
+        
+            Returns: An object that represents the converted HRESULT and information obtained from errorInfo.
         """
         pass
 
@@ -3387,8 +3438,8 @@ class Marshal(object):
         """
         GetExceptionPointers() -> IntPtr
         
-            Retrieves a computer-independent description of an exception, and information about the state 
-             that existed for the thread when the exception occurred.
+            Retrieves a computer-independent description of an exception, and information about the 
+             state that existed for the thread when the exception occurred.
         
             Returns: A pointer to an EXCEPTION_POINTERS structure.
         """
@@ -3397,14 +3448,15 @@ class Marshal(object):
     @staticmethod
     def GetFunctionPointerForDelegate(d):
         """
-        GetFunctionPointerForDelegate[TDelegate](d: TDelegate) -> IntPtr
         GetFunctionPointerForDelegate(d: Delegate) -> IntPtr
         
             Converts a delegate into a function pointer that is callable from unmanaged code.
         
             d: The delegate to be passed to unmanaged code.
-            Returns: A value that can be passed to unmanaged code, which, in turn, can use it to call the underlying 
-             managed delegate.
+            Returns: A value that can be passed to unmanaged code, which, in turn, can use it to call the 
+             underlying managed delegate.
+        
+        GetFunctionPointerForDelegate[TDelegate](d: TDelegate) -> IntPtr
         """
         pass
 
@@ -3461,13 +3513,13 @@ class Marshal(object):
         """
         GetIDispatchForObjectInContext(o: object) -> IntPtr
         
-            Returns an IDispatch interface pointer from a managed object, if the caller is in the same 
-             context as that object.
+            Returns an IDispatch interface pointer from a managed object, if the caller is in the 
+             same context as that object.
         
         
             o: The object whose IDispatch interface is requested.
-            Returns: The IDispatch interface pointer for the specified object, or null if the caller is not in the 
-             same context as the specified object.
+            Returns: The IDispatch interface pointer for the specified object, or null if the caller is not in 
+             the same context as the specified object.
         """
         pass
 
@@ -3500,13 +3552,13 @@ class Marshal(object):
         """
         GetIUnknownForObjectInContext(o: object) -> IntPtr
         
-            Returns an IUnknown interface from a managed object, if the caller is in the same context as 
-             that object.
+            Returns an IUnknown interface from a managed object, if the caller is in the same context 
+             as that object.
         
         
             o: The object whose IUnknown interface is requested.
-            Returns: The IUnknown pointer for the specified object, or null if the caller is not in the same context 
-             as the specified object.
+            Returns: The IUnknown pointer for the specified object, or null if the caller is not in the same 
+             context as the specified object.
         """
         pass
 
@@ -3515,8 +3567,9 @@ class Marshal(object):
         """
         GetLastWin32Error() -> int
         
-            Returns the error code returned by the last unmanaged function that was called using platform 
-             invoke that has the System.Runtime.InteropServices.DllImportAttribute.SetLastError flag set.
+            Returns the error code returned by the last unmanaged function that was called using 
+             platform invoke that has the 
+             System.Runtime.InteropServices.DllImportAttribute.SetLastError flag set.
         
             Returns: The last error code set by a call to the Win32 SetLastError function.
         """
@@ -3527,8 +3580,8 @@ class Marshal(object):
         """
         GetManagedThunkForUnmanagedMethodPtr(pfnMethodToWrap: IntPtr, pbSignature: IntPtr, cbSignature: int) -> IntPtr
         
-            Gets a pointer to a runtime-generated function that marshals a call from managed to unmanaged 
-             code.
+            Gets a pointer to a runtime-generated function that marshals a call from managed to 
+             unmanaged code.
         
         
             pfnMethodToWrap: A pointer to the method to marshal.
@@ -3558,11 +3611,12 @@ class Marshal(object):
     @staticmethod
     def GetNativeVariantForObject(obj, pDstNativeVariant):
         """
-        GetNativeVariantForObject[T](obj: T, pDstNativeVariant: IntPtr)GetNativeVariantForObject(obj: object, pDstNativeVariant: IntPtr)
+        GetNativeVariantForObject(obj: object, pDstNativeVariant: IntPtr)
             Converts an object to a COM VARIANT.
         
             obj: The object for which to get a COM VARIANT.
-            pDstNativeVariant: A pointer to receive the VARIANT that corresponds to the obj parameter.
+            pDstNativeVariant: A pointer to receive the VARIANT that corresponds to the obj parameter.
+        GetNativeVariantForObject[T](obj: T, pDstNativeVariant: IntPtr)
         """
         pass
 
@@ -3583,13 +3637,13 @@ class Marshal(object):
     @staticmethod
     def GetObjectForNativeVariant(pSrcNativeVariant):
         """
-        GetObjectForNativeVariant[T](pSrcNativeVariant: IntPtr) -> T
+        GetObjectForNativeVariant(pSrcNativeVariant: IntPtr) -> object
         
             Converts a COM VARIANT to an object.
         
             pSrcNativeVariant: A pointer to a COM VARIANT.
             Returns: An object that corresponds to the pSrcNativeVariant parameter.
-        GetObjectForNativeVariant(pSrcNativeVariant: IntPtr) -> object
+        GetObjectForNativeVariant[T](pSrcNativeVariant: IntPtr) -> T
         
             Converts a COM VARIANT to an object.
         
@@ -3601,14 +3655,14 @@ class Marshal(object):
     @staticmethod
     def GetObjectsForNativeVariants(aSrcNativeVariant, cVars):
         """
-        GetObjectsForNativeVariants[T](aSrcNativeVariant: IntPtr, cVars: int) -> Array[T]
+        GetObjectsForNativeVariants(aSrcNativeVariant: IntPtr, cVars: int) -> Array[object]
         
             Converts an array of COM VARIANTs to an array of objects.
         
             aSrcNativeVariant: A pointer to the first element of an array of COM VARIANTs.
             cVars: The count of COM VARIANTs in aSrcNativeVariant.
             Returns: An object array that corresponds to aSrcNativeVariant.
-        GetObjectsForNativeVariants(aSrcNativeVariant: IntPtr, cVars: int) -> Array[object]
+        GetObjectsForNativeVariants[T](aSrcNativeVariant: IntPtr, cVars: int) -> Array[T]
         
             Converts an array of COM VARIANTs to an array of objects.
         
@@ -3623,13 +3677,13 @@ class Marshal(object):
         """
         GetStartComSlot(t: Type) -> int
         
-            Gets the first slot in the virtual function table (v-table or VTBL) that contains user-defined 
-             methods.
+            Gets the first slot in the virtual function table (v-table or VTBL) that contains 
+             user-defined methods.
         
         
             t: A type that represents an interface.
-            Returns: The first VTBL slot that contains user-defined methods. The first slot is 3 if the interface is 
-             based on IUnknown, and 7 if the interface is based on IDispatch.
+            Returns: The first VTBL slot that contains user-defined methods. The first slot is 3 if the 
+             interface is based on IUnknown, and 7 if the interface is based on IDispatch.
         """
         pass
 
@@ -3654,8 +3708,8 @@ class Marshal(object):
         
             pUnk: A pointer to the IUnknown interface of the unmanaged object.
             t: The type of the requested managed class.
-            Returns: An instance of the class corresponding to the System.Type object that represents the requested 
-             unmanaged COM object.
+            Returns: An instance of the class corresponding to the System.Type object that represents the 
+             requested unmanaged COM object.
         """
         pass
 
@@ -3679,36 +3733,36 @@ class Marshal(object):
     @staticmethod
     def GetTypeInfoName(*__args):
         """
-        GetTypeInfoName(typeInfo: ITypeInfo) -> str
-        
-            Retrieves the name of the type represented by an ITypeInfo object.
-        
-            typeInfo: An object that represents an ITypeInfo pointer.
-            Returns: The name of the type that the typeInfo parameter points to.
         GetTypeInfoName(pTI: UCOMITypeInfo) -> str
         
             Retrieves the name of the type represented by an ITypeInfo object.
         
             pTI: An object that represents an ITypeInfo pointer.
-            Returns: The name of the type that the pTI parameter points to.
+            Returns: The name of the type that the pTI parameter points to.
+        GetTypeInfoName(typeInfo: ITypeInfo) -> str
+        
+            Retrieves the name of the type represented by an ITypeInfo object.
+        
+            typeInfo: An object that represents an ITypeInfo pointer.
+            Returns: The name of the type that the typeInfo parameter points to.
         """
         pass
 
     @staticmethod
     def GetTypeLibGuid(*__args):
         """
-        GetTypeLibGuid(typelib: ITypeLib) -> Guid
-        
-            Retrieves the library identifier (LIBID) of a type library.
-        
-            typelib: The type library whose LIBID is to be retrieved.
-            Returns: The LIBID of the specified type library.
         GetTypeLibGuid(pTLB: UCOMITypeLib) -> Guid
         
             Retrieves the library identifier (LIBID) of a type library.
         
             pTLB: The type library whose LIBID is to be retrieved.
-            Returns: The LIBID of the type library that the pTLB parameter points to.
+            Returns: The LIBID of the type library that the pTLB parameter points to.
+        GetTypeLibGuid(typelib: ITypeLib) -> Guid
+        
+            Retrieves the library identifier (LIBID) of a type library.
+        
+            typelib: The type library whose LIBID is to be retrieved.
+            Returns: The LIBID of the specified type library.
         """
         pass
 
@@ -3717,48 +3771,49 @@ class Marshal(object):
         """
         GetTypeLibGuidForAssembly(asm: Assembly) -> Guid
         
-            Retrieves the library identifier (LIBID) that is assigned to a type library when it was exported 
-             from the specified assembly.
+            Retrieves the library identifier (LIBID) that is assigned to a type library when it was 
+             exported from the specified assembly.
         
         
             asm: The assembly from which the type library was exported.
-            Returns: The LIBID that is assigned to a type library when it is exported from the specified assembly.
+            Returns: The LIBID that is assigned to a type library when it is exported from the specified 
+             assembly.
         """
         pass
 
     @staticmethod
     def GetTypeLibLcid(*__args):
         """
-        GetTypeLibLcid(typelib: ITypeLib) -> int
-        
-            Retrieves the LCID of a type library.
-        
-            typelib: The type library whose LCID is to be retrieved.
-            Returns: The LCID of the type library that the typelib parameter points to.
         GetTypeLibLcid(pTLB: UCOMITypeLib) -> int
         
             Retrieves the LCID of a type library.
         
             pTLB: The type library whose LCID is to be retrieved.
-            Returns: The LCID of the type library that the pTLB parameter points to.
+            Returns: The LCID of the type library that the pTLB parameter points to.
+        GetTypeLibLcid(typelib: ITypeLib) -> int
+        
+            Retrieves the LCID of a type library.
+        
+            typelib: The type library whose LCID is to be retrieved.
+            Returns: The LCID of the type library that the typelib parameter points to.
         """
         pass
 
     @staticmethod
     def GetTypeLibName(*__args):
         """
-        GetTypeLibName(typelib: ITypeLib) -> str
-        
-            Retrieves the name of a type library.
-        
-            typelib: The type library whose name is to be retrieved.
-            Returns: The name of the type library that the typelib parameter points to.
         GetTypeLibName(pTLB: UCOMITypeLib) -> str
         
             Retrieves the name of a type library.
         
             pTLB: The type library whose name is to be retrieved.
-            Returns: The name of the type library that the pTLB parameter points to.
+            Returns: The name of the type library that the pTLB parameter points to.
+        GetTypeLibName(typelib: ITypeLib) -> str
+        
+            Retrieves the name of a type library.
+        
+            typelib: The type library whose name is to be retrieved.
+            Returns: The name of the type library that the typelib parameter points to.
         """
         pass
 
@@ -3767,7 +3822,9 @@ class Marshal(object):
         """
         GetTypeLibVersionForAssembly(inputAssembly: Assembly) -> (int, int)
         
-            Retrieves the version number of a type library that will be exported from the specified assembly.
+            Retrieves the version number of a type library that will be exported from the specified 
+             assembly.
+        
         
             inputAssembly: A managed assembly.
         """
@@ -3790,8 +3847,8 @@ class Marshal(object):
         """
         GetUnmanagedThunkForManagedMethodPtr(pfnMethodToWrap: IntPtr, pbSignature: IntPtr, cbSignature: int) -> IntPtr
         
-            Gets a pointer to a runtime-generated function that marshals a call from unmanaged to managed 
-             code.
+            Gets a pointer to a runtime-generated function that marshals a call from unmanaged to 
+             managed code.
         
         
             pfnMethodToWrap: A pointer to the method to marshal.
@@ -3830,8 +3887,8 @@ class Marshal(object):
         """
         NumParamBytes(m: MethodInfo) -> int
         
-            Calculates the number of bytes in unmanaged memory that are required to hold the parameters for 
-             the specified method.
+            Calculates the number of bytes in unmanaged memory that are required to hold the 
+             parameters for the specified method.
         
         
             m: The method to be checked.
@@ -3842,17 +3899,18 @@ class Marshal(object):
     @staticmethod
     def OffsetOf(*__args):
         """
-        OffsetOf[T](fieldName: str) -> IntPtr
         OffsetOf(t: Type, fieldName: str) -> IntPtr
         
             Returns the field offset of the unmanaged form of the managed class.
         
-            t: A value type or formatted reference type that specifies the managed class. You must apply the 
-             System.Runtime.InteropServices.StructLayoutAttribute to the class.
+            t: A value type or formatted reference type that specifies the managed class. You must apply 
+             the System.Runtime.InteropServices.StructLayoutAttribute to the class.
         
             fieldName: The field within the t parameter.
-            Returns: The offset, in bytes, for the fieldName parameter within the specified class that is declared by 
-             platform invoke.
+            Returns: The offset, in bytes, for the fieldName parameter within the specified class that is 
+             declared by platform invoke.
+        
+        OffsetOf[T](fieldName: str) -> IntPtr
         """
         pass
 
@@ -3879,56 +3937,56 @@ class Marshal(object):
     @staticmethod
     def PtrToStringAnsi(ptr, len=None):
         """
+        PtrToStringAnsi(ptr: IntPtr) -> str
+        
+            Copies all characters up to the first null character from an unmanaged ANSI string to a 
+             managed System.String, and widens each ANSI character to Unicode.
+        
+        
+            ptr: The address of the first character of the unmanaged string.
+            Returns: A managed string that holds a copy of the unmanaged ANSI string. If ptr is null, the 
+             method returns a null string.
+        
         PtrToStringAnsi(ptr: IntPtr, len: int) -> str
         
-            Allocates a managed System.String, copies a specified number of characters from an unmanaged 
-             ANSI string into it, and widens each ANSI character to Unicode.
+            Allocates a managed System.String, copies a specified number of characters from an 
+             unmanaged ANSI string into it, and widens each ANSI character to Unicode.
         
         
             ptr: The address of the first character of the unmanaged string.
             len: The byte count of the input string to copy.
-            Returns: A managed string that holds a copy of the native ANSI string if the value of the ptr parameter 
-             is not null; otherwise, this method returns null.
-        
-        PtrToStringAnsi(ptr: IntPtr) -> str
-        
-            Copies all characters up to the first null character from an unmanaged ANSI string to a managed 
-             System.String, and widens each ANSI character to Unicode.
-        
-        
-            ptr: The address of the first character of the unmanaged string.
-            Returns: A managed string that holds a copy of the unmanaged ANSI string. If ptr is null, the method 
-             returns a null string.
+            Returns: A managed string that holds a copy of the native ANSI string if the value of the ptr 
+             parameter is not null; otherwise, this method returns null.
         """
         pass
 
     @staticmethod
     def PtrToStringAuto(ptr, len=None):
         """
-        PtrToStringAuto(ptr: IntPtr) -> str
-        
-            Allocates a managed System.String and copies all characters up to the first null character from 
-             a string stored in unmanaged memory into it.
-        
-        
-            ptr: For Unicode platforms, the address of the first Unicode character.-or- For ANSI plaforms, the 
-             address of the first ANSI character.
-        
-            Returns: A managed string that holds a copy of the unmanaged string if the value of the ptr parameter is 
-             not null; otherwise, this method returns null.
-        
         PtrToStringAuto(ptr: IntPtr, len: int) -> str
         
-            Allocates a managed System.String and copies the specified number of characters from a string 
-             stored in unmanaged memory into it.
+            Allocates a managed System.String and copies the specified number of characters from a 
+             string stored in unmanaged memory into it.
         
         
-            ptr: For Unicode platforms, the address of the first Unicode character.-or- For ANSI plaforms, the 
-             address of the first ANSI character.
+            ptr: For Unicode platforms, the address of the first Unicode character.-or- For ANSI plaforms, 
+             the address of the first ANSI character.
         
             len: The number of characters to copy.
-            Returns: A managed string that holds a copy of the native string if the value of the ptr parameter is not 
-             null; otherwise, this method returns null.
+            Returns: A managed string that holds a copy of the native string if the value of the ptr parameter 
+             is not null; otherwise, this method returns null.
+        
+        PtrToStringAuto(ptr: IntPtr) -> str
+        
+            Allocates a managed System.String and copies all characters up to the first null 
+             character from a string stored in unmanaged memory into it.
+        
+        
+            ptr: For Unicode platforms, the address of the first Unicode character.-or- For ANSI plaforms, 
+             the address of the first ANSI character.
+        
+            Returns: A managed string that holds a copy of the unmanaged string if the value of the ptr 
+             parameter is not null; otherwise, this method returns null.
         """
         pass
 
@@ -3937,61 +3995,64 @@ class Marshal(object):
         """
         PtrToStringBSTR(ptr: IntPtr) -> str
         
-            Allocates a managed System.String and copies a BSTR Data Type string stored in unmanaged memory 
-             into it.
+            Allocates a managed System.String and copies a BSTR Data Type string stored in unmanaged 
+             memory into it.
         
         
             ptr: The address of the first character of the unmanaged string.
-            Returns: A managed string that holds a copy of the unmanaged string if the value of the ptr parameter is 
-             not null; otherwise, this method returns null.
+            Returns: A managed string that holds a copy of the unmanaged string if the value of the ptr 
+             parameter is not null; otherwise, this method returns null.
         """
         pass
 
     @staticmethod
     def PtrToStringUni(ptr, len=None):
         """
-        PtrToStringUni(ptr: IntPtr) -> str
-        
-            Allocates a managed System.String and copies all characters up to the first null character from 
-             an unmanaged Unicode string into it.
-        
-        
-            ptr: The address of the first character of the unmanaged string.
-            Returns: A managed string that holds a copy of the unmanaged string if the value of the ptr parameter is 
-             not null; otherwise, this method returns null.
-        
         PtrToStringUni(ptr: IntPtr, len: int) -> str
         
-            Allocates a managed System.String and copies a specified number of characters from an unmanaged 
-             Unicode string into it.
+            Allocates a managed System.String and copies a specified number of characters from an 
+             unmanaged Unicode string into it.
         
         
             ptr: The address of the first character of the unmanaged string.
             len: The number of Unicode characters to copy.
-            Returns: A managed string that holds a copy of the unmanaged string if the value of the ptr parameter is 
-             not null; otherwise, this method returns null.
+            Returns: A managed string that holds a copy of the unmanaged string if the value of the ptr 
+             parameter is not null; otherwise, this method returns null.
+        
+        PtrToStringUni(ptr: IntPtr) -> str
+        
+            Allocates a managed System.String and copies all characters up to the first null 
+             character from an unmanaged Unicode string into it.
+        
+        
+            ptr: The address of the first character of the unmanaged string.
+            Returns: A managed string that holds a copy of the unmanaged string if the value of the ptr 
+             parameter is not null; otherwise, this method returns null.
         """
         pass
 
     @staticmethod
     def PtrToStructure(ptr, *__args):
         """
-        PtrToStructure(ptr: IntPtr, structureType: Type) -> object
-        
-            Marshals data from an unmanaged block of memory to a newly allocated managed object of the 
-             specified type.
-        
-        
-            ptr: A pointer to an unmanaged block of memory.
-            structureType: The type of object to be created. This object must represent a formatted class or a structure.
-            Returns: A managed object containing the data pointed to by the ptr parameter.
-        PtrToStructure[T](ptr: IntPtr) -> T
         PtrToStructure(ptr: IntPtr, structure: object)
             Marshals data from an unmanaged block of memory to a managed object.
         
             ptr: A pointer to an unmanaged block of memory.
-            structure: The object to which the data is to be copied. This must be an instance of a formatted class.
-        PtrToStructure[T](ptr: IntPtr, structure: T)
+            structure: The object to which the data is to be copied. This must be an instance of a formatted 
+             class.
+        
+        PtrToStructure[T](ptr: IntPtr, structure: T)PtrToStructure(ptr: IntPtr, structureType: Type) -> object
+        
+            Marshals data from an unmanaged block of memory to a newly allocated managed object of 
+             the specified type.
+        
+        
+            ptr: A pointer to an unmanaged block of memory.
+            structureType: The type of object to be created. This object must represent a formatted class or a 
+             structure.
+        
+            Returns: A managed object containing the data pointed to by the ptr parameter.
+        PtrToStructure[T](ptr: IntPtr) -> T
         """
         pass
 
@@ -4011,12 +4072,13 @@ class Marshal(object):
     @staticmethod
     def ReadByte(ptr, ofs=None):
         """
-        ReadByte(ptr: IntPtr) -> Byte
+        ReadByte(ptr: object, ofs: int) -> Byte
         
-            Reads a single byte from unmanaged memory.
+            Reads a single byte at a given offset (or index) from unmanaged memory.
         
-            ptr: The address in unmanaged memory from which to read.
-            Returns: The byte read from unmanaged memory.
+            ptr: The base address in unmanaged memory of the source object.
+            ofs: An additional byte offset, which is added to the ptr parameter before reading.
+            Returns: The byte read from unmanaged memory at the given offset.
         ReadByte(ptr: IntPtr, ofs: int) -> Byte
         
             Reads a single byte at a given offset (or index) from unmanaged memory.
@@ -4024,25 +4086,25 @@ class Marshal(object):
             ptr: The base address in unmanaged memory from which to read.
             ofs: An additional byte offset, which is added to the ptr parameter before reading.
             Returns: The byte read from unmanaged memory at the given offset.
-        ReadByte(ptr: object, ofs: int) -> Byte
+        ReadByte(ptr: IntPtr) -> Byte
         
-            Reads a single byte at a given offset (or index) from unmanaged memory.
+            Reads a single byte from unmanaged memory.
         
-            ptr: The base address in unmanaged memory of the source object.
-            ofs: An additional byte offset, which is added to the ptr parameter before reading.
-            Returns: The byte read from unmanaged memory at the given offset.
+            ptr: The address in unmanaged memory from which to read.
+            Returns: The byte read from unmanaged memory.
         """
         pass
 
     @staticmethod
     def ReadInt16(ptr, ofs=None):
         """
-        ReadInt16(ptr: IntPtr) -> Int16
+        ReadInt16(ptr: object, ofs: int) -> Int16
         
-            Reads a 16-bit signed integer from unmanaged memory.
+            Reads a 16-bit signed integer at a given offset from unmanaged memory.
         
-            ptr: The address in unmanaged memory from which to read.
-            Returns: The 16-bit signed integer read from unmanaged memory.
+            ptr: The base address in unmanaged memory of the source object.
+            ofs: An additional byte offset, which is added to the ptr parameter before reading.
+            Returns: The 16-bit signed integer read from unmanaged memory at the given offset.
         ReadInt16(ptr: IntPtr, ofs: int) -> Int16
         
             Reads a 16-bit signed integer at a given offset from unmanaged memory.
@@ -4050,25 +4112,25 @@ class Marshal(object):
             ptr: The base address in unmanaged memory from which to read.
             ofs: An additional byte offset, which is added to the ptr parameter before reading.
             Returns: The 16-bit signed integer read from unmanaged memory at the given offset.
-        ReadInt16(ptr: object, ofs: int) -> Int16
+        ReadInt16(ptr: IntPtr) -> Int16
         
-            Reads a 16-bit signed integer at a given offset from unmanaged memory.
+            Reads a 16-bit signed integer from unmanaged memory.
         
-            ptr: The base address in unmanaged memory of the source object.
-            ofs: An additional byte offset, which is added to the ptr parameter before reading.
-            Returns: The 16-bit signed integer read from unmanaged memory at the given offset.
+            ptr: The address in unmanaged memory from which to read.
+            Returns: The 16-bit signed integer read from unmanaged memory.
         """
         pass
 
     @staticmethod
     def ReadInt32(ptr, ofs=None):
         """
-        ReadInt32(ptr: IntPtr) -> int
+        ReadInt32(ptr: object, ofs: int) -> int
         
-            Reads a 32-bit signed integer from unmanaged memory.
+            Reads a 32-bit signed integer at a given offset from unmanaged memory.
         
-            ptr: The address in unmanaged memory from which to read.
-            Returns: The 32-bit signed integer read from unmanaged memory.
+            ptr: The base address in unmanaged memory of the source object.
+            ofs: An additional byte offset, which is added to the ptr parameter before reading.
+            Returns: The 32-bit signed integer read from unmanaged memory at the given offset.
         ReadInt32(ptr: IntPtr, ofs: int) -> int
         
             Reads a 32-bit signed integer at a given offset from unmanaged memory.
@@ -4076,25 +4138,25 @@ class Marshal(object):
             ptr: The base address in unmanaged memory from which to read.
             ofs: An additional byte offset, which is added to the ptr parameter before reading.
             Returns: The 32-bit signed integer read from unmanaged memory.
-        ReadInt32(ptr: object, ofs: int) -> int
+        ReadInt32(ptr: IntPtr) -> int
         
-            Reads a 32-bit signed integer at a given offset from unmanaged memory.
+            Reads a 32-bit signed integer from unmanaged memory.
         
-            ptr: The base address in unmanaged memory of the source object.
-            ofs: An additional byte offset, which is added to the ptr parameter before reading.
-            Returns: The 32-bit signed integer read from unmanaged memory at the given offset.
+            ptr: The address in unmanaged memory from which to read.
+            Returns: The 32-bit signed integer read from unmanaged memory.
         """
         pass
 
     @staticmethod
     def ReadInt64(ptr, ofs=None):
         """
-        ReadInt64(ptr: IntPtr) -> Int64
+        ReadInt64(ptr: object, ofs: int) -> Int64
         
-            Reads a 64-bit signed integer from unmanaged memory.
+            Reads a 64-bit signed integer at a given offset from unmanaged memory.
         
-            ptr: The address in unmanaged memory from which to read.
-            Returns: The 64-bit signed integer read from unmanaged memory.
+            ptr: The base address in unmanaged memory of the source object.
+            ofs: An additional byte offset, which is added to the ptr parameter before reading.
+            Returns: The 64-bit signed integer read from unmanaged memory at the given offset.
         ReadInt64(ptr: IntPtr, ofs: int) -> Int64
         
             Reads a 64-bit signed integer at a given offset from unmanaged memory.
@@ -4102,27 +4164,25 @@ class Marshal(object):
             ptr: The base address in unmanaged memory from which to read.
             ofs: An additional byte offset, which is added to the ptr parameter before reading.
             Returns: The 64-bit signed integer read from unmanaged memory at the given offset.
-        ReadInt64(ptr: object, ofs: int) -> Int64
+        ReadInt64(ptr: IntPtr) -> Int64
         
-            Reads a 64-bit signed integer at a given offset from unmanaged memory.
+            Reads a 64-bit signed integer from unmanaged memory.
         
-            ptr: The base address in unmanaged memory of the source object.
-            ofs: An additional byte offset, which is added to the ptr parameter before reading.
-            Returns: The 64-bit signed integer read from unmanaged memory at the given offset.
+            ptr: The address in unmanaged memory from which to read.
+            Returns: The 64-bit signed integer read from unmanaged memory.
         """
         pass
 
     @staticmethod
     def ReadIntPtr(ptr, ofs=None):
         """
-        ReadIntPtr(ptr: IntPtr) -> IntPtr
+        ReadIntPtr(ptr: object, ofs: int) -> IntPtr
         
-            Reads a processor native-sized integer from unmanaged memory.
+            Reads a processor native sized integer from unmanaged memory.
         
-            ptr: The address in unmanaged memory from which to read.
-            Returns: The integer read from unmanaged memory. A 32 bit integer is returned on 32 bit machines and a 64 
-             bit integer is returned on 64 bit machines.
-        
+            ptr: The base address in unmanaged memory of the source object.
+            ofs: An additional byte offset, which is added to the ptr parameter before reading.
+            Returns: The integer read from unmanaged memory at the given offset.
         ReadIntPtr(ptr: IntPtr, ofs: int) -> IntPtr
         
             Reads a processor native sized integer at a given offset from unmanaged memory.
@@ -4130,13 +4190,13 @@ class Marshal(object):
             ptr: The base address in unmanaged memory from which to read.
             ofs: An additional byte offset, which is added to the ptr parameter before reading.
             Returns: The integer read from unmanaged memory at the given offset.
-        ReadIntPtr(ptr: object, ofs: int) -> IntPtr
+        ReadIntPtr(ptr: IntPtr) -> IntPtr
         
-            Reads a processor native sized integer from unmanaged memory.
+            Reads a processor native-sized integer from unmanaged memory.
         
-            ptr: The base address in unmanaged memory of the source object.
-            ofs: An additional byte offset, which is added to the ptr parameter before reading.
-            Returns: The integer read from unmanaged memory at the given offset.
+            ptr: The address in unmanaged memory from which to read.
+            Returns: The integer read from unmanaged memory. A 32 bit integer is returned on 32 bit machines 
+             and a 64 bit integer is returned on 64 bit machines.
         """
         pass
 
@@ -4153,8 +4213,8 @@ class Marshal(object):
              System.Runtime.InteropServices.Marshal.AllocCoTaskMem(System.Int32).
         
             cb: The new size of the allocated block.
-            Returns: An integer representing the address of the reallocated block of memory. This memory must be 
-             released with System.Runtime.InteropServices.Marshal.FreeCoTaskMem(System.IntPtr).
+            Returns: An integer representing the address of the reallocated block of memory. This memory must 
+             be released with System.Runtime.InteropServices.Marshal.FreeCoTaskMem(System.IntPtr).
         """
         pass
 
@@ -4195,14 +4255,14 @@ class Marshal(object):
         """
         ReleaseComObject(o: object) -> int
         
-            Decrements the reference count of the specified Runtime Callable Wrapper (RCW) associated with 
-             the specified COM object.
+            Decrements the reference count of the specified Runtime Callable Wrapper (RCW) associated 
+             with the specified COM object.
         
         
             o: The COM object to release.
-            Returns: The new value of the reference count of the RCW associated with o. This value is typically zero 
-             since the RCW keeps just one reference to the wrapped COM object regardless of the number of 
-             managed clients calling it.
+            Returns: The new value of the reference count of the RCW associated with o. This value is 
+             typically zero since the RCW keeps just one reference to the wrapped COM object 
+             regardless of the number of managed clients calling it.
         """
         pass
 
@@ -4219,13 +4279,13 @@ class Marshal(object):
         """
         SecureStringToBSTR(s: SecureString) -> IntPtr
         
-            Allocates a BSTR Data Type and copies the contents of a managed System.Security.SecureString 
-             object into it.
+            Allocates a BSTR Data Type and copies the contents of a managed 
+             System.Security.SecureString object into it.
         
         
             s: The managed object to copy.
-            Returns: The address, in unmanaged memory, where the s parameter was copied to, or 0 if a null object was 
-             supplied.
+            Returns: The address, in unmanaged memory, where the s parameter was copied to, or 0 if a null 
+             object was supplied.
         """
         pass
 
@@ -4239,8 +4299,8 @@ class Marshal(object):
         
         
             s: The managed object to copy.
-            Returns: The address, in unmanaged memory, where the s parameter was copied to, or 0 if a null object was 
-             supplied.
+            Returns: The address, in unmanaged memory, where the s parameter was copied to, or 0 if a null 
+             object was supplied.
         """
         pass
 
@@ -4254,8 +4314,8 @@ class Marshal(object):
         
         
             s: The managed object to copy.
-            Returns: The address, in unmanaged memory, where the s parameter was copied to, or 0 if a null object was 
-             supplied.
+            Returns: The address, in unmanaged memory, where the s parameter was copied to, or 0 if a null 
+             object was supplied.
         """
         pass
 
@@ -4264,13 +4324,13 @@ class Marshal(object):
         """
         SecureStringToGlobalAllocAnsi(s: SecureString) -> IntPtr
         
-            Copies the contents of a managed System.Security.SecureString into unmanaged memory, converting 
-             into ANSI format as it copies.
+            Copies the contents of a managed System.Security.SecureString into unmanaged memory, 
+             converting into ANSI format as it copies.
         
         
             s: The managed object to copy.
-            Returns: The address, in unmanaged memory, to where the s parameter was copied, or 0 if a null object was 
-             supplied.
+            Returns: The address, in unmanaged memory, to where the s parameter was copied, or 0 if a null 
+             object was supplied.
         """
         pass
 
@@ -4279,7 +4339,9 @@ class Marshal(object):
         """
         SecureStringToGlobalAllocUnicode(s: SecureString) -> IntPtr
         
-            Copies the contents of a managed System.Security.SecureString object into unmanaged memory.
+            Copies the contents of a managed System.Security.SecureString object into unmanaged 
+             memory.
+        
         
             s: The managed object to copy.
             Returns: The address, in unmanaged memory, where s was copied, or 0 if s is a 
@@ -4304,20 +4366,20 @@ class Marshal(object):
     @staticmethod
     def SizeOf(*__args):
         """
-        SizeOf(t: Type) -> int
-        
-            Returns the size of an unmanaged type in bytes.
-        
-            t: The type whose size is to be returned.
-            Returns: The size of the specified type in unmanaged code.
-        SizeOf[T]() -> int
         SizeOf(structure: object) -> int
         
             Returns the unmanaged size of an object in bytes.
         
             structure: The object whose size is to be returned.
             Returns: The size of the specified object in unmanaged code.
-        SizeOf[T](structure: T) -> int
+        SizeOf[T](structure: T) -> int
+        SizeOf(t: Type) -> int
+        
+            Returns the size of an unmanaged type in bytes.
+        
+            t: The type whose size is to be returned.
+            Returns: The size of the specified type in unmanaged code.
+        SizeOf[T]() -> int
         """
         pass
 
@@ -4338,13 +4400,13 @@ class Marshal(object):
         """
         StringToCoTaskMemAnsi(s: str) -> IntPtr
         
-            Copies the contents of a managed System.String to a block of memory allocated from the unmanaged 
-             COM task allocator.
+            Copies the contents of a managed System.String to a block of memory allocated from the 
+             unmanaged COM task allocator.
         
         
             s: A managed string to be copied.
-            Returns: An integer representing a pointer to the block of memory allocated for the string, or 0 if s is 
-             null.
+            Returns: An integer representing a pointer to the block of memory allocated for the string, or 0 
+             if s is null.
         """
         pass
 
@@ -4353,8 +4415,8 @@ class Marshal(object):
         """
         StringToCoTaskMemAuto(s: str) -> IntPtr
         
-            Copies the contents of a managed System.String to a block of memory allocated from the unmanaged 
-             COM task allocator.
+            Copies the contents of a managed System.String to a block of memory allocated from the 
+             unmanaged COM task allocator.
         
         
             s: A managed string to be copied.
@@ -4367,13 +4429,13 @@ class Marshal(object):
         """
         StringToCoTaskMemUni(s: str) -> IntPtr
         
-            Copies the contents of a managed System.String to a block of memory allocated from the unmanaged 
-             COM task allocator.
+            Copies the contents of a managed System.String to a block of memory allocated from the 
+             unmanaged COM task allocator.
         
         
             s: A managed string to be copied.
-            Returns: An integer representing a pointer to the block of memory allocated for the string, or 0 if s is 
-             null.
+            Returns: An integer representing a pointer to the block of memory allocated for the string, or 0 
+             if s is null.
         """
         pass
 
@@ -4382,8 +4444,8 @@ class Marshal(object):
         """
         StringToHGlobalAnsi(s: str) -> IntPtr
         
-            Copies the contents of a managed System.String into unmanaged memory, converting into ANSI 
-             format as it copies.
+            Copies the contents of a managed System.String into unmanaged memory, converting into 
+             ANSI format as it copies.
         
         
             s: A managed string to be copied.
@@ -4396,8 +4458,8 @@ class Marshal(object):
         """
         StringToHGlobalAuto(s: str) -> IntPtr
         
-            Copies the contents of a managed System.String into unmanaged memory, converting into ANSI 
-             format if required.
+            Copies the contents of a managed System.String into unmanaged memory, converting into 
+             ANSI format if required.
         
         
             s: A managed string to be copied.
@@ -4420,61 +4482,65 @@ class Marshal(object):
     @staticmethod
     def StructureToPtr(structure, ptr, fDeleteOld):
         """
-        StructureToPtr[T](structure: T, ptr: IntPtr, fDeleteOld: bool)StructureToPtr(structure: object, ptr: IntPtr, fDeleteOld: bool)
+        StructureToPtr(structure: object, ptr: IntPtr, fDeleteOld: bool)
             Marshals data from a managed object to an unmanaged block of memory.
         
             structure: A managed object holding the data to be marshaled. This object must be an instance of a 
              formatted class.
         
-            ptr: A pointer to an unmanaged block of memory, which must be allocated before this method is called.
+            ptr: A pointer to an unmanaged block of memory, which must be allocated before this method is 
+             called.
+        
             fDeleteOld: true to have the 
-             System.Runtime.InteropServices.Marshal.DestroyStructure(System.IntPtr,System.Type) method called 
-             on the ptr parameter before this method executes. Note that passing false can lead to a memory 
-             leak.
+             System.Runtime.InteropServices.Marshal.DestroyStructure(System.IntPtr,System.Type) method 
+             called on the ptr parameter before this method executes. Note that passing false can lead 
+             to a memory leak.
+        
+        StructureToPtr[T](structure: T, ptr: IntPtr, fDeleteOld: bool)
         """
         pass
 
     @staticmethod
     def ThrowExceptionForHR(errorCode, errorInfo=None):
         """
-        ThrowExceptionForHR(errorCode: int, errorInfo: IntPtr)
-            Throws an exception with a specific failure HRESULT, based on the specified IErrorInfo Interface 
-             interface.
-        
-        
-            errorCode: The HRESULT corresponding to the desired exception.
-            errorInfo: A pointer to the IErrorInfo interface that provides more information about the error. You can 
-             specify IntPtr(0) to use the current IErrorInfo interface, or IntPtr(-1) to ignore the current 
-             IErrorInfo interface and construct the exception just from the error code.
-        
         ThrowExceptionForHR(errorCode: int)
             Throws an exception with a specific failure HRESULT value.
         
-            errorCode: The HRESULT corresponding to the desired exception.
+            errorCode: The HRESULT corresponding to the desired exception.
+        ThrowExceptionForHR(errorCode: int, errorInfo: IntPtr)
+            Throws an exception with a specific failure HRESULT, based on the specified IErrorInfo 
+             Interface interface.
+        
+        
+            errorCode: The HRESULT corresponding to the desired exception.
+            errorInfo: A pointer to the IErrorInfo interface that provides more information about the error. You 
+             can specify IntPtr(0) to use the current IErrorInfo interface, or IntPtr(-1) to ignore 
+             the current IErrorInfo interface and construct the exception just from the error code.
         """
         pass
 
     @staticmethod
     def UnsafeAddrOfPinnedArrayElement(arr, index):
         """
-        UnsafeAddrOfPinnedArrayElement[T](arr: Array[T], index: int) -> IntPtr
         UnsafeAddrOfPinnedArrayElement(arr: Array, index: int) -> IntPtr
         
             Gets the address of the element at the specified index inside the specified array.
         
             arr: The array that contains the desired element.
             index: The index in the arr parameter of the desired element.
-            Returns: The address of index inside arr.
+            Returns: The address of index inside arr.
+        UnsafeAddrOfPinnedArrayElement[T](arr: Array[T], index: int) -> IntPtr
         """
         pass
 
     @staticmethod
     def WriteByte(ptr, *__args):
         """
-        WriteByte(ptr: IntPtr, val: Byte)
-            Writes a single byte value to unmanaged memory.
+        WriteByte(ptr: IntPtr, ofs: int, val: Byte)
+            Writes a single byte value to unmanaged memory at a specified offset.
         
-            ptr: The address in unmanaged memory to write to.
+            ptr: The base address in unmanaged memory to write to.
+            ofs: An additional byte offset, which is added to the ptr parameter before writing.
             val: The value to write.
         WriteByte(ofs: int, val: Byte) -> object
         
@@ -4482,11 +4548,10 @@ class Marshal(object):
         
             ofs: An additional byte offset, which is added to the ptr parameter before writing.
             val: The value to write.
-        WriteByte(ptr: IntPtr, ofs: int, val: Byte)
-            Writes a single byte value to unmanaged memory at a specified offset.
+        WriteByte(ptr: IntPtr, val: Byte)
+            Writes a single byte value to unmanaged memory.
         
-            ptr: The base address in unmanaged memory to write to.
-            ofs: An additional byte offset, which is added to the ptr parameter before writing.
+            ptr: The address in unmanaged memory to write to.
             val: The value to write.
         """
         pass
@@ -4494,23 +4559,6 @@ class Marshal(object):
     @staticmethod
     def WriteInt16(ptr, *__args):
         """
-        WriteInt16(ptr: IntPtr, ofs: int, val: Char)
-            Writes a 16-bit signed integer value to unmanaged memory at a specified offset.
-        
-            ptr: The base address in the native heap to write to.
-            ofs: An additional byte offset, which is added to the ptr parameter before writing.
-            val: The value to write.
-        WriteInt16(ofs: int, val: Char) -> object
-        
-            Writes a 16-bit signed integer value to unmanaged memory at a specified offset.
-        
-            ofs: An additional byte offset, which is added to the ptr parameter before writing.
-            val: The value to write.
-        WriteInt16(ptr: IntPtr, val: Char)
-            Writes a character as a 16-bit integer value to unmanaged memory.
-        
-            ptr: The address in unmanaged memory to write to.
-            val: The value to write.
         WriteInt16(ptr: IntPtr, ofs: int, val: Int16)
             Writes a 16-bit signed integer value into unmanaged memory at a specified offset.
         
@@ -4527,6 +4575,23 @@ class Marshal(object):
             Writes a 16-bit integer value to unmanaged memory.
         
             ptr: The address in unmanaged memory to write to.
+            val: The value to write.
+        WriteInt16(ptr: IntPtr, ofs: int, val: Char)
+            Writes a 16-bit signed integer value to unmanaged memory at a specified offset.
+        
+            ptr: The base address in the native heap to write to.
+            ofs: An additional byte offset, which is added to the ptr parameter before writing.
+            val: The value to write.
+        WriteInt16(ofs: int, val: Char) -> object
+        
+            Writes a 16-bit signed integer value to unmanaged memory at a specified offset.
+        
+            ofs: An additional byte offset, which is added to the ptr parameter before writing.
+            val: The value to write.
+        WriteInt16(ptr: IntPtr, val: Char)
+            Writes a character as a 16-bit integer value to unmanaged memory.
+        
+            ptr: The address in unmanaged memory to write to.
             val: The value to write.
         """
         pass
@@ -4534,10 +4599,11 @@ class Marshal(object):
     @staticmethod
     def WriteInt32(ptr, *__args):
         """
-        WriteInt32(ptr: IntPtr, val: int)
-            Writes a 32-bit signed integer value to unmanaged memory.
+        WriteInt32(ptr: IntPtr, ofs: int, val: int)
+            Writes a 32-bit signed integer value into unmanaged memory at a specified offset.
         
-            ptr: The address in unmanaged memory to write to.
+            ptr: The base address in unmanaged memory to write to.
+            ofs: An additional byte offset, which is added to the ptr parameter before writing.
             val: The value to write.
         WriteInt32(ofs: int, val: int) -> object
         
@@ -4545,11 +4611,10 @@ class Marshal(object):
         
             ofs: An additional byte offset, which is added to the ptr parameter before writing.
             val: The value to write.
-        WriteInt32(ptr: IntPtr, ofs: int, val: int)
-            Writes a 32-bit signed integer value into unmanaged memory at a specified offset.
+        WriteInt32(ptr: IntPtr, val: int)
+            Writes a 32-bit signed integer value to unmanaged memory.
         
-            ptr: The base address in unmanaged memory to write to.
-            ofs: An additional byte offset, which is added to the ptr parameter before writing.
+            ptr: The address in unmanaged memory to write to.
             val: The value to write.
         """
         pass
@@ -4557,10 +4622,11 @@ class Marshal(object):
     @staticmethod
     def WriteInt64(ptr, *__args):
         """
-        WriteInt64(ptr: IntPtr, val: Int64)
-            Writes a 64-bit signed integer value to unmanaged memory.
+        WriteInt64(ptr: IntPtr, ofs: int, val: Int64)
+            Writes a 64-bit signed integer value to unmanaged memory at a specified offset.
         
-            ptr: The address in unmanaged memory to write to.
+            ptr: The base address in unmanaged memory to write.
+            ofs: An additional byte offset, which is added to the ptr parameter before writing.
             val: The value to write.
         WriteInt64(ofs: int, val: Int64) -> object
         
@@ -4568,11 +4634,10 @@ class Marshal(object):
         
             ofs: An additional byte offset, which is added to the ptr parameter before writing.
             val: The value to write.
-        WriteInt64(ptr: IntPtr, ofs: int, val: Int64)
-            Writes a 64-bit signed integer value to unmanaged memory at a specified offset.
+        WriteInt64(ptr: IntPtr, val: Int64)
+            Writes a 64-bit signed integer value to unmanaged memory.
         
-            ptr: The base address in unmanaged memory to write.
-            ofs: An additional byte offset, which is added to the ptr parameter before writing.
+            ptr: The address in unmanaged memory to write to.
             val: The value to write.
         """
         pass
@@ -4580,10 +4645,11 @@ class Marshal(object):
     @staticmethod
     def WriteIntPtr(ptr, *__args):
         """
-        WriteIntPtr(ptr: IntPtr, val: IntPtr)
-            Writes a processor native sized integer value into unmanaged memory.
+        WriteIntPtr(ptr: IntPtr, ofs: int, val: IntPtr)
+            Writes a processor native-sized integer value to unmanaged memory at a specified offset.
         
-            ptr: The address in unmanaged memory to write to.
+            ptr: The base address in unmanaged memory to write to.
+            ofs: An additional byte offset, which is added to the ptr parameter before writing.
             val: The value to write.
         WriteIntPtr(ofs: int, val: IntPtr) -> object
         
@@ -4591,11 +4657,10 @@ class Marshal(object):
         
             ofs: An additional byte offset, which is added to the ptr parameter before writing.
             val: The value to write.
-        WriteIntPtr(ptr: IntPtr, ofs: int, val: IntPtr)
-            Writes a processor native-sized integer value to unmanaged memory at a specified offset.
+        WriteIntPtr(ptr: IntPtr, val: IntPtr)
+            Writes a processor native sized integer value into unmanaged memory.
         
-            ptr: The base address in unmanaged memory to write to.
-            ofs: An additional byte offset, which is added to the ptr parameter before writing.
+            ptr: The address in unmanaged memory to write to.
             val: The value to write.
         """
         pass
@@ -4605,7 +4670,8 @@ class Marshal(object):
         """
         ZeroFreeBSTR(s: IntPtr)
             Frees a BSTR Data Type pointer that was allocated using the 
-             System.Runtime.InteropServices.Marshal.SecureStringToBSTR(System.Security.SecureString) method.
+             System.Runtime.InteropServices.Marshal.SecureStringToBSTR(System.Security.SecureString) 
+             method.
         
         
             s: The address of the BSTR to free.
@@ -4617,8 +4683,8 @@ class Marshal(object):
         """
         ZeroFreeCoTaskMemAnsi(s: IntPtr)
             Frees an unmanaged string pointer that was allocated using the 
-             System.Runtime.InteropServices.Marshal.SecureStringToCoTaskMemAnsi(System.Security.SecureString) 
-             method.
+             System.Runtime.InteropServices.Marshal.SecureStringToCoTaskMemAnsi(System.Security.SecureS
+             tring) method.
         
         
             s: The address of the unmanaged string to free.
@@ -4630,8 +4696,8 @@ class Marshal(object):
         """
         ZeroFreeCoTaskMemUnicode(s: IntPtr)
             Frees an unmanaged string pointer that was allocated using the 
-             System.Runtime.InteropServices.Marshal.SecureStringToCoTaskMemUnicode(System.Security.SecureStrin
-             g) method.
+             System.Runtime.InteropServices.Marshal.SecureStringToCoTaskMemUnicode(System.Security.Secu
+             reString) method.
         
         
             s: The address of the unmanaged string to free.
@@ -4643,8 +4709,8 @@ class Marshal(object):
         """
         ZeroFreeGlobalAllocAnsi(s: IntPtr)
             Frees an unmanaged string pointer that was allocated using the 
-             System.Runtime.InteropServices.Marshal.SecureStringToGlobalAllocAnsi(System.Security.SecureString
-             ) method.
+             System.Runtime.InteropServices.Marshal.SecureStringToGlobalAllocAnsi(System.Security.Secur
+             eString) method.
         
         
             s: The address of the unmanaged string to free.
@@ -4656,8 +4722,8 @@ class Marshal(object):
         """
         ZeroFreeGlobalAllocUnicode(s: IntPtr)
             Frees an unmanaged string pointer that was allocated using the 
-             System.Runtime.InteropServices.Marshal.SecureStringToGlobalAllocUnicode(System.Security.SecureStr
-             ing) method.
+             System.Runtime.InteropServices.Marshal.SecureStringToGlobalAllocUnicode(System.Security.Se
+             cureString) method.
         
         
             s: The address of the unmanaged string to free.
@@ -4777,7 +4843,7 @@ class Marshal(object):
     ]
 
 
-class MarshalAsAttribute(Attribute, _Attribute):
+class MarshalAsAttribute:
     """
     Indicates how to marshal the data between managed and unmanaged code.
     
@@ -4815,7 +4881,7 @@ Get: Value(self: MarshalAsAttribute) -> UnmanagedType
     SizeParamIndex = None
 
 
-class MarshalDirectiveException(SystemException, ISerializable, _Exception):
+class MarshalDirectiveException:
     """
     The exception that is thrown by the marshaler when it encounters a System.Runtime.InteropServices.MarshalAsAttribute it does not support.
     
@@ -4823,14 +4889,6 @@ class MarshalDirectiveException(SystemException, ISerializable, _Exception):
     MarshalDirectiveException(message: str)
     MarshalDirectiveException(message: str, inner: Exception)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -4851,8 +4909,10 @@ class MarshalDirectiveException(SystemException, ISerializable, _Exception):
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    SerializeObjectState = None
 
-class ObjectCreationDelegate(MulticastDelegate, ICloneable, ISerializable):
+
+class ObjectCreationDelegate:
     """
     Creates a COM object.
     
@@ -4879,9 +4939,9 @@ class ObjectCreationDelegate(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -4908,13 +4968,14 @@ class ObjectCreationDelegate(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -4931,7 +4992,7 @@ class ObjectCreationDelegate(MulticastDelegate, ICloneable, ISerializable):
         pass
 
 
-class OptionalAttribute(Attribute, _Attribute):
+class OptionalAttribute:
     """
     Indicates that a parameter is optional.
     
@@ -4942,7 +5003,52 @@ class OptionalAttribute(Attribute, _Attribute):
         pass
 
 
-class OutAttribute(Attribute, _Attribute):
+class OSPlatform:
+    # no doc
+    @staticmethod
+    def Create(osPlatform):
+        """ Create(osPlatform: str) -> OSPlatform """
+        pass
+
+    def Equals(self, *__args):
+        """
+        Equals(self: OSPlatform, other: OSPlatform) -> bool
+        Equals(self: OSPlatform, obj: object) -> bool
+        """
+        pass
+
+    def GetHashCode(self):
+        """ GetHashCode(self: OSPlatform) -> int """
+        pass
+
+    def ToString(self):
+        """ ToString(self: OSPlatform) -> str """
+        pass
+
+    def __eq__(self, *args): #cannot find CLR method
+        """ x.__eq__(y) <==> x==y """
+        pass
+
+    def __init__(self, *args): #cannot find CLR method
+        """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+        pass
+
+    def __ne__(self, *args): #cannot find CLR method
+        pass
+
+    def __repr__(self, *args): #cannot find CLR method
+        """ __repr__(self: object) -> str """
+        pass
+
+    def __str__(self, *args): #cannot find CLR method
+        pass
+
+    Linux = None
+    OSX = None
+    Windows = None
+
+
+class OutAttribute:
     """
     Indicates that data should be marshaled from callee back to caller.
     
@@ -4953,13 +5059,13 @@ class OutAttribute(Attribute, _Attribute):
         pass
 
 
-class PARAMDESC(object):
+class PARAMDESC:
     """ Use System.Runtime.InteropServices.ComTypes.PARAMDESC instead. """
     lpVarValue = None
     wParamFlags = None
 
 
-class PARAMFLAG(Enum, IComparable, IFormattable, IConvertible):
+class PARAMFLAG:
     """
     Use System.Runtime.InteropServices.ComTypes.PARAMFLAG instead.
     
@@ -5009,7 +5115,7 @@ class PARAMFLAG(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class PreserveSigAttribute(Attribute, _Attribute):
+class PreserveSigAttribute:
     """
     Indicates that the HRESULT or retval signature transformation that takes place during COM interop calls should be suppressed.
     
@@ -5020,7 +5126,7 @@ class PreserveSigAttribute(Attribute, _Attribute):
         pass
 
 
-class PrimaryInteropAssemblyAttribute(Attribute, _Attribute):
+class PrimaryInteropAssemblyAttribute:
     """
     Indicates that the attributed assembly is a primary interop assembly.
     
@@ -5051,7 +5157,7 @@ Get: MinorVersion(self: PrimaryInteropAssemblyAttribute) -> int
 
 
 
-class ProgIdAttribute(Attribute, _Attribute):
+class ProgIdAttribute:
     """
     Allows the user to specify the ProgID of a class.
     
@@ -5075,7 +5181,7 @@ Get: Value(self: ProgIdAttribute) -> str
 
 
 
-class RegistrationClassContext(Enum, IComparable, IFormattable, IConvertible):
+class RegistrationClassContext:
     """
     Specifies the set of execution contexts in which a class object will be made available for requests to construct instances.
     
@@ -5135,7 +5241,7 @@ class RegistrationClassContext(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class RegistrationConnectionType(Enum, IComparable, IFormattable, IConvertible):
+class RegistrationConnectionType:
     """
     Defines the types of connections to a class object.
     
@@ -5182,7 +5288,7 @@ class RegistrationConnectionType(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class RegistrationServices(object, IRegistrationServices):
+class RegistrationServices:
     """
     Provides a set of services for registering and unregistering managed assemblies for use from COM.
     
@@ -5213,8 +5319,8 @@ class RegistrationServices(object, IRegistrationServices):
         GetRegistrableTypesInAssembly(self: RegistrationServices, assembly: Assembly) -> Array[Type]
         
             Retrieves a list of classes in an assembly that would be registered by a call to 
-             System.Runtime.InteropServices.RegistrationServices.RegisterAssembly(System.Reflection.Assembly,S
-             ystem.Runtime.InteropServices.AssemblyRegistrationFlags).
+             System.Runtime.InteropServices.RegistrationServices.RegisterAssembly(System.Reflection.Ass
+             embly,System.Runtime.InteropServices.AssemblyRegistrationFlags).
         
         
             assembly: The assembly to search for classes.
@@ -5239,24 +5345,26 @@ class RegistrationServices(object, IRegistrationServices):
 
     def RegisterTypeForComClients(self, type, *__args):
         """
-        RegisterTypeForComClients(self: RegistrationServices, type: Type, classContext: RegistrationClassContext, flags: RegistrationConnectionType) -> int
-        
-            Registers the specified type with COM using the specified execution context and connection type.
-        
-            type: The System.Type object to register for use from COM.
-            classContext: One of the System.Runtime.InteropServices.RegistrationClassContext values that indicates the 
-             context in which the executable code will be run.
-        
-            flags: One of the System.Runtime.InteropServices.RegistrationConnectionType values that specifies how 
-             connections are made to the class object.
-        
-            Returns: An integer that represents a cookie value.
         RegisterTypeForComClients(self: RegistrationServices, type: Type, g: Guid) -> Guid
         
             Registers the specified type with COM using the specified GUID.
         
             type: The System.Type to be registered for use from COM.
-            g: The System.Guid used to register the specified type.
+            g: The System.Guid used to register the specified type.
+        RegisterTypeForComClients(self: RegistrationServices, type: Type, classContext: RegistrationClassContext, flags: RegistrationConnectionType) -> int
+        
+            Registers the specified type with COM using the specified execution context and 
+             connection type.
+        
+        
+            type: The System.Type object to register for use from COM.
+            classContext: One of the System.Runtime.InteropServices.RegistrationClassContext values that indicates 
+             the context in which the executable code will be run.
+        
+            flags: One of the System.Runtime.InteropServices.RegistrationConnectionType values that 
+             specifies how connections are made to the class object.
+        
+            Returns: An integer that represents a cookie value.
         """
         pass
 
@@ -5264,15 +5372,15 @@ class RegistrationServices(object, IRegistrationServices):
         """
         TypeRepresentsComType(self: RegistrationServices, type: Type) -> bool
         
-            Indicates whether a type is marked with the System.Runtime.InteropServices.ComImportAttribute, 
-             or derives from a type marked with the System.Runtime.InteropServices.ComImportAttribute and 
-             shares the same GUID as the parent.
+            Indicates whether a type is marked with the 
+             System.Runtime.InteropServices.ComImportAttribute, or derives from a type marked with the 
+             System.Runtime.InteropServices.ComImportAttribute and shares the same GUID as the parent.
         
         
             type: The type to check for being a COM type.
-            Returns: true if a type is marked with the System.Runtime.InteropServices.ComImportAttribute, or derives 
-             from a type marked with the System.Runtime.InteropServices.ComImportAttribute and shares the 
-             same GUID as the parent; otherwise false.
+            Returns: true if a type is marked with the System.Runtime.InteropServices.ComImportAttribute, or 
+             derives from a type marked with the System.Runtime.InteropServices.ComImportAttribute and 
+             shares the same GUID as the parent; otherwise false.
         """
         pass
 
@@ -5294,8 +5402,8 @@ class RegistrationServices(object, IRegistrationServices):
             Unregisters the classes in a managed assembly.
         
             assembly: The assembly to be unregistered.
-            Returns: true if assembly contains types that were successfully unregistered; otherwise false if the 
-             assembly contains no eligible types.
+            Returns: true if assembly contains types that were successfully unregistered; otherwise false if 
+             the assembly contains no eligible types.
         """
         pass
 
@@ -5303,15 +5411,15 @@ class RegistrationServices(object, IRegistrationServices):
         """
         UnregisterTypeForComClients(self: RegistrationServices, cookie: int)
             Removes references to a type registered with the 
-             System.Runtime.InteropServices.RegistrationServices.RegisterTypeForComClients(System.Type,System.
-             Runtime.InteropServices.RegistrationClassContext,System.Runtime.InteropServices.RegistrationConne
-             ctionType) method.
+             System.Runtime.InteropServices.RegistrationServices.RegisterTypeForComClients(System.Type,
+             System.Runtime.InteropServices.RegistrationClassContext,System.Runtime.InteropServices.Reg
+             istrationConnectionType) method.
         
         
             cookie: The cookie value returned by a previous call to the 
-             System.Runtime.InteropServices.RegistrationServices.RegisterTypeForComClients(System.Type,System.
-             Runtime.InteropServices.RegistrationClassContext,System.Runtime.InteropServices.RegistrationConne
-             ctionType) method overload.
+             System.Runtime.InteropServices.RegistrationServices.RegisterTypeForComClients(System.Type,
+             System.Runtime.InteropServices.RegistrationClassContext,System.Runtime.InteropServices.Reg
+             istrationConnectionType) method overload.
         """
         pass
 
@@ -5324,7 +5432,7 @@ class RegistrationServices(object, IRegistrationServices):
         pass
 
 
-class RuntimeEnvironment(object):
+class RuntimeEnvironment:
     """
     Provides a collection of static methods that return information about the common language runtime environment.
     
@@ -5348,7 +5456,8 @@ class RuntimeEnvironment(object):
         GetRuntimeDirectory() -> str
         
             Returns the directory where the common language runtime is installed.
-            Returns: A string that contains the path to the directory where the common language runtime is installed.
+            Returns: A string that contains the path to the directory where the common language runtime is 
+             installed.
         """
         pass
 
@@ -5385,15 +5494,33 @@ class RuntimeEnvironment(object):
         """
         GetSystemVersion() -> str
         
-            Gets the version number of the common language runtime that is running the current process.
+            Gets the version number of the common language runtime that is running the current 
+             process.
+        
             Returns: A string containing the version number of the common language runtime.
         """
         pass
 
-    SystemConfigurationFile = 'C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\config\\machine.config'
+    SystemConfigurationFile = 'C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\config\\machine.config'
 
 
-class SafeArrayRankMismatchException(SystemException, ISerializable, _Exception):
+class RuntimeInformation:
+    # no doc
+    @staticmethod
+    def IsOSPlatform(osPlatform):
+        """ IsOSPlatform(osPlatform: OSPlatform) -> bool """
+        pass
+
+    FrameworkDescription = '.NET Framework 4.7.3324.0'
+    OSArchitecture = None
+    OSDescription = 'Microsoft Windows 10.0.17134 '
+    ProcessArchitecture = None
+    __all__ = [
+        'IsOSPlatform',
+    ]
+
+
+class SafeArrayRankMismatchException:
     """
     The exception thrown when the rank of an incoming SAFEARRAY does not match the rank specified in the managed signature.
     
@@ -5401,14 +5528,6 @@ class SafeArrayRankMismatchException(SystemException, ISerializable, _Exception)
     SafeArrayRankMismatchException(message: str)
     SafeArrayRankMismatchException(message: str, inner: Exception)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -5429,8 +5548,10 @@ class SafeArrayRankMismatchException(SystemException, ISerializable, _Exception)
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    SerializeObjectState = None
 
-class SafeArrayTypeMismatchException(SystemException, ISerializable, _Exception):
+
+class SafeArrayTypeMismatchException:
     """
     The exception thrown when the type of the incoming SAFEARRAY does not match the type specified in the managed signature.
     
@@ -5438,14 +5559,6 @@ class SafeArrayTypeMismatchException(SystemException, ISerializable, _Exception)
     SafeArrayTypeMismatchException(message: str)
     SafeArrayTypeMismatchException(message: str, inner: Exception)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -5466,8 +5579,10 @@ class SafeArrayTypeMismatchException(SystemException, ISerializable, _Exception)
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    SerializeObjectState = None
 
-class SafeHandle(CriticalFinalizerObject, IDisposable):
+
+class SafeHandle:
     """ Represents a wrapper class for operating system handles. This class must be inherited. """
     def Close(self):
         """
@@ -5480,7 +5595,9 @@ class SafeHandle(CriticalFinalizerObject, IDisposable):
         """
         DangerousAddRef(self: SafeHandle, success: bool) -> bool
         
-            Manually increments the reference counter on System.Runtime.InteropServices.SafeHandle instances.
+            Manually increments the reference counter on System.Runtime.InteropServices.SafeHandle 
+             instances.
+        
         
             success: true if the reference counter was successfully incremented; otherwise, false.
         """
@@ -5491,10 +5608,10 @@ class SafeHandle(CriticalFinalizerObject, IDisposable):
         DangerousGetHandle(self: SafeHandle) -> IntPtr
         
             Returns the value of the System.Runtime.InteropServices.SafeHandle.handle field.
-            Returns: An IntPtr representing the value of the System.Runtime.InteropServices.SafeHandle.handle field. 
-             If the handle has been marked invalid with 
-             System.Runtime.InteropServices.SafeHandle.SetHandleAsInvalid, this method still returns the 
-             original handle value, which can be a stale value.
+            Returns: An IntPtr representing the value of the System.Runtime.InteropServices.SafeHandle.handle 
+             field. If the handle has been marked invalid with 
+             System.Runtime.InteropServices.SafeHandle.SetHandleAsInvalid, this method still returns 
+             the original handle value, which can be a stale value.
         """
         pass
 
@@ -5518,8 +5635,9 @@ class SafeHandle(CriticalFinalizerObject, IDisposable):
         ReleaseHandle(self: SafeHandle) -> bool
         
             When overridden in a derived class, executes the code required to free the handle.
-            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, 
-             false. In this case, it generates a releaseHandleFailed MDA Managed Debugging Assistant.
+            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic 
+             failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging 
+             Assistant.
         """
         pass
 
@@ -5540,18 +5658,11 @@ class SafeHandle(CriticalFinalizerObject, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -5581,25 +5692,27 @@ Get: IsInvalid(self: SafeHandle) -> bool
     handle = None
 
 
-class SafeBuffer(SafeHandleZeroOrMinusOneIsInvalid, IDisposable):
+class SafeBuffer:
     """ Provides a controlled memory buffer that can be used for reading and writing. Attempts to access memory outside the controlled buffer (underruns and overruns) raise exceptions. """
     def AcquirePointer(self, pointer):
         """
         AcquirePointer(self: SafeBuffer, pointer: Byte*) -> Byte*
         
-            Obtains a pointer from a System.Runtime.InteropServices.SafeBuffer object for a block of memory.
+            Obtains a pointer from a System.Runtime.InteropServices.SafeBuffer object for a block of 
+             memory.
+        
         
             pointer: A byte pointer, passed by reference, to receive the pointer from within the 
-             System.Runtime.InteropServices.SafeBuffer object. You must set this pointer to null before you 
-             call this method.
+             System.Runtime.InteropServices.SafeBuffer object. You must set this pointer to null 
+             before you call this method.
         """
         pass
 
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
-            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class 
-             specifying whether to perform a normal dispose operation.
+            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
+             class specifying whether to perform a normal dispose operation.
         
         
             disposing: true for a normal dispose operation; false to finalize the handle.
@@ -5608,20 +5721,21 @@ class SafeBuffer(SafeHandleZeroOrMinusOneIsInvalid, IDisposable):
 
     def Initialize(self, *__args):
         """
-        Initialize[T](self: SafeBuffer, numElements: UInt32)Initialize(self: SafeBuffer, numElements: UInt32, sizeOfEachElement: UInt32)
-            Specifies the allocation size of the memory buffer by using the specified number of elements and 
-             element size. You must call this method before you use the 
+        Initialize(self: SafeBuffer, numBytes: UInt64)
+            Defines the allocation size of the memory region in bytes. You must call this method 
+             before you use the System.Runtime.InteropServices.SafeBuffer instance.
+        
+        
+            numBytes: The number of bytes in the buffer.
+        Initialize(self: SafeBuffer, numElements: UInt32, sizeOfEachElement: UInt32)
+            Specifies the allocation size of the memory buffer by using the specified number of 
+             elements and element size. You must call this method before you use the 
              System.Runtime.InteropServices.SafeBuffer instance.
         
         
             numElements: The number of elements in the buffer.
             sizeOfEachElement: The size of each element in the buffer.
-        Initialize(self: SafeBuffer, numBytes: UInt64)
-            Defines the allocation size of the memory region in bytes. You must call this method before you 
-             use the System.Runtime.InteropServices.SafeBuffer instance.
-        
-        
-            numBytes: The number of bytes in the buffer.
+        Initialize[T](self: SafeBuffer, numElements: UInt32)
         """
         pass
 
@@ -5638,8 +5752,9 @@ class SafeBuffer(SafeHandleZeroOrMinusOneIsInvalid, IDisposable):
         ReleaseHandle(self: SafeHandle) -> bool
         
             When overridden in a derived class, executes the code required to free the handle.
-            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, 
-             false. In this case, it generates a releaseHandleFailed MDA Managed Debugging Assistant.
+            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic 
+             failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging 
+             Assistant.
         """
         pass
 
@@ -5669,18 +5784,11 @@ class SafeBuffer(SafeHandleZeroOrMinusOneIsInvalid, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -5703,7 +5811,7 @@ Get: ByteLength(self: SafeBuffer) -> UInt64
     handle = None
 
 
-class SEHException(ExternalException, ISerializable, _Exception):
+class SEHException:
     """
     Represents structured exception handling (SEH) errors.
     
@@ -5711,23 +5819,15 @@ class SEHException(ExternalException, ISerializable, _Exception):
     SEHException(message: str)
     SEHException(message: str, inner: Exception)
     """
-    def add_SerializeObjectState(self, *args): #cannot find CLR method
-        """ add_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
-        pass
-
     def CanResume(self):
         """
         CanResume(self: SEHException) -> bool
         
-            Indicates whether the exception can be recovered from, and whether the code can continue from 
-             the point at which the exception was thrown.
+            Indicates whether the exception can be recovered from, and whether the code can continue 
+             from the point at which the exception was thrown.
         
             Returns: Always false, because resumable exceptions are not implemented.
         """
-        pass
-
-    def remove_SerializeObjectState(self, *args): #cannot find CLR method
-        """ remove_SerializeObjectState(self: Exception, value: EventHandler[SafeSerializationEventArgs]) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -5750,8 +5850,10 @@ class SEHException(ExternalException, ISerializable, _Exception):
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    SerializeObjectState = None
 
-class SetWin32ContextInIDispatchAttribute(Attribute, _Attribute):
+
+class SetWin32ContextInIDispatchAttribute:
     """
     This attribute has been deprecated.
     
@@ -5762,7 +5864,7 @@ class SetWin32ContextInIDispatchAttribute(Attribute, _Attribute):
         pass
 
 
-class StandardOleMarshalObject(MarshalByRefObject, IMarshal):
+class StandardOleMarshalObject:
     """ Replaces the standard common language runtime (CLR) free-threaded marshaler with the standard OLE STA marshaler. """
     def MemberwiseClone(self, *args): #cannot find CLR method
         """
@@ -5770,11 +5872,11 @@ class StandardOleMarshalObject(MarshalByRefObject, IMarshal):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -5789,7 +5891,7 @@ class StandardOleMarshalObject(MarshalByRefObject, IMarshal):
         pass
 
 
-class STATSTG(object):
+class STATSTG:
     """ Use System.Runtime.InteropServices.ComTypes.STATSTG instead. """
     atime = None
     cbSize = None
@@ -5804,7 +5906,7 @@ class STATSTG(object):
     type = None
 
 
-class StructLayoutAttribute(Attribute, _Attribute):
+class StructLayoutAttribute:
     """
     Lets you control the physical layout of the data fields of a class or structure.
     
@@ -5836,7 +5938,7 @@ Get: Value(self: StructLayoutAttribute) -> LayoutKind
     Size = None
 
 
-class SYSKIND(Enum, IComparable, IFormattable, IConvertible):
+class SYSKIND:
     """
     Use System.Runtime.InteropServices.ComTypes.SYSKIND instead.
     
@@ -5881,7 +5983,7 @@ class SYSKIND(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class TYPEATTR(object):
+class TYPEATTR:
     """ Use System.Runtime.InteropServices.ComTypes.TYPEATTR instead. """
     cbAlignment = None
     cbSizeInstance = None
@@ -5904,13 +6006,13 @@ class TYPEATTR(object):
     wTypeFlags = None
 
 
-class TYPEDESC(object):
+class TYPEDESC:
     """ Use System.Runtime.InteropServices.ComTypes.TYPEDESC instead. """
     lpValue = None
     vt = None
 
 
-class TYPEFLAGS(Enum, IComparable, IFormattable, IConvertible):
+class TYPEFLAGS:
     """
     Use System.Runtime.InteropServices.ComTypes.TYPEFLAGS instead.
     
@@ -5967,7 +6069,7 @@ class TYPEFLAGS(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class TypeIdentifierAttribute(Attribute, _Attribute):
+class TypeIdentifierAttribute:
     """
     Provides support for type equivalence.
     
@@ -6002,7 +6104,7 @@ Get: Scope(self: TypeIdentifierAttribute) -> str
 
 
 
-class TYPEKIND(Enum, IComparable, IFormattable, IConvertible):
+class TYPEKIND:
     """
     Use System.Runtime.InteropServices.ComTypes.TYPEKIND instead.
     
@@ -6053,7 +6155,7 @@ class TYPEKIND(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class TYPELIBATTR(object):
+class TYPELIBATTR:
     """ Use System.Runtime.InteropServices.ComTypes.TYPELIBATTR instead. """
     guid = None
     lcid = None
@@ -6063,7 +6165,7 @@ class TYPELIBATTR(object):
     wMinorVerNum = None
 
 
-class TypeLibConverter(object, ITypeLibConverter):
+class TypeLibConverter:
     """
     Provides a set of services that convert a managed assembly to a COM type library and vice versa.
     
@@ -6077,9 +6179,11 @@ class TypeLibConverter(object, ITypeLibConverter):
         
             assembly: The assembly to convert.
             strTypeLibName: The file name of the resulting type library.
-            flags: A System.Runtime.InteropServices.TypeLibExporterFlags value indicating any special settings.
-            notifySink: The System.Runtime.InteropServices.ITypeLibExporterNotifySink interface implemented by the 
-             caller.
+            flags: A System.Runtime.InteropServices.TypeLibExporterFlags value indicating any special 
+             settings.
+        
+            notifySink: The System.Runtime.InteropServices.ITypeLibExporterNotifySink interface implemented by 
+             the caller.
         
             Returns: An object that implements the ITypeLib interface.
         """
@@ -6087,38 +6191,46 @@ class TypeLibConverter(object, ITypeLibConverter):
 
     def ConvertTypeLibToAssembly(self, typeLib, asmFileName, flags, notifySink, publicKey, keyPair, *__args):
         """
-        ConvertTypeLibToAssembly(self: TypeLibConverter, typeLib: object, asmFileName: str, flags: TypeLibImporterFlags, notifySink: ITypeLibImporterNotifySink, publicKey: Array[Byte], keyPair: StrongNameKeyPair, asmNamespace: str, asmVersion: Version) -> AssemblyBuilder
-        
-            Converts a COM type library to an assembly.
-        
-            typeLib: The object that implements the ITypeLib interface.
-            asmFileName: The file name of the resulting assembly.
-            flags: A System.Runtime.InteropServices.TypeLibImporterFlags value indicating any special settings.
-            notifySink: System.Runtime.InteropServices.ITypeLibImporterNotifySink interface implemented by the caller.
-            publicKey: A byte array containing the public key.
-            keyPair: A System.Reflection.StrongNameKeyPair object containing the public and private cryptographic key 
-             pair.
-        
-            asmNamespace: The namespace for the resulting assembly.
-            asmVersion: The version of the resulting assembly. If null, the version of the type library is used.
-            Returns: An System.Reflection.Emit.AssemblyBuilder object containing the converted type library.
         ConvertTypeLibToAssembly(self: TypeLibConverter, typeLib: object, asmFileName: str, flags: int, notifySink: ITypeLibImporterNotifySink, publicKey: Array[Byte], keyPair: StrongNameKeyPair, unsafeInterfaces: bool) -> AssemblyBuilder
         
             Converts a COM type library to an assembly.
         
             typeLib: The object that implements the ITypeLib interface.
             asmFileName: The file name of the resulting assembly.
-            flags: A System.Runtime.InteropServices.TypeLibImporterFlags value indicating any special settings.
-            notifySink: System.Runtime.InteropServices.ITypeLibImporterNotifySink interface implemented by the caller.
+            flags: A System.Runtime.InteropServices.TypeLibImporterFlags value indicating any special 
+             settings.
+        
+            notifySink: System.Runtime.InteropServices.ITypeLibImporterNotifySink interface implemented by the 
+             caller.
+        
             publicKey: A byte array containing the public key.
-            keyPair: A System.Reflection.StrongNameKeyPair object containing the public and private cryptographic key 
-             pair.
+            keyPair: A System.Reflection.StrongNameKeyPair object containing the public and private 
+             cryptographic key pair.
         
             unsafeInterfaces: If true, the interfaces require link time checks for 
-             System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode permission. If false, the 
-             interfaces require run time checks that require a stack walk and are more expensive, but help 
-             provide greater protection.
+             System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode permission. If false, 
+             the interfaces require run time checks that require a stack walk and are more expensive, 
+             but help provide greater protection.
         
+            Returns: An System.Reflection.Emit.AssemblyBuilder object containing the converted type library.
+        ConvertTypeLibToAssembly(self: TypeLibConverter, typeLib: object, asmFileName: str, flags: TypeLibImporterFlags, notifySink: ITypeLibImporterNotifySink, publicKey: Array[Byte], keyPair: StrongNameKeyPair, asmNamespace: str, asmVersion: Version) -> AssemblyBuilder
+        
+            Converts a COM type library to an assembly.
+        
+            typeLib: The object that implements the ITypeLib interface.
+            asmFileName: The file name of the resulting assembly.
+            flags: A System.Runtime.InteropServices.TypeLibImporterFlags value indicating any special 
+             settings.
+        
+            notifySink: System.Runtime.InteropServices.ITypeLibImporterNotifySink interface implemented by the 
+             caller.
+        
+            publicKey: A byte array containing the public key.
+            keyPair: A System.Reflection.StrongNameKeyPair object containing the public and private 
+             cryptographic key pair.
+        
+            asmNamespace: The namespace for the resulting assembly.
+            asmVersion: The version of the resulting assembly. If null, the version of the type library is used.
             Returns: An System.Reflection.Emit.AssemblyBuilder object containing the converted type library.
         """
         pass
@@ -6146,7 +6258,7 @@ class TypeLibConverter(object, ITypeLibConverter):
         pass
 
 
-class TypeLibExporterFlags(Enum, IComparable, IFormattable, IConvertible):
+class TypeLibExporterFlags:
     """
     Indicates how a type library should be produced.
     
@@ -6188,13 +6300,13 @@ class TypeLibExporterFlags(Enum, IComparable, IFormattable, IConvertible):
     CallerResolvedReferences = None
     ExportAs32Bit = None
     ExportAs64Bit = None
-    None = None
+    None_ =None
     OldNames = None
     OnlyReferenceRegistered = None
     value__ = None
 
 
-class TypeLibFuncAttribute(Attribute, _Attribute):
+class TypeLibFuncAttribute:
     """
     Contains the System.Runtime.InteropServices.FUNCFLAGS that were originally imported for this method from the COM type library.
     
@@ -6222,7 +6334,7 @@ Get: Value(self: TypeLibFuncAttribute) -> TypeLibFuncFlags
 
 
 
-class TypeLibFuncFlags(Enum, IComparable, IFormattable, IConvertible):
+class TypeLibFuncFlags:
     """
     Describes the original settings of the FUNCFLAGS in the COM type library from where this method was imported.
     
@@ -6277,7 +6389,7 @@ class TypeLibFuncFlags(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class TypeLibImportClassAttribute(Attribute, _Attribute):
+class TypeLibImportClassAttribute:
     """
     Specifies which System.Type exclusively uses an interface. This class cannot be inherited.
     
@@ -6301,7 +6413,7 @@ Get: Value(self: TypeLibImportClassAttribute) -> str
 
 
 
-class TypeLibImporterFlags(Enum, IComparable, IFormattable, IConvertible):
+class TypeLibImporterFlags:
     """
     Indicates how an assembly should be produced.
     
@@ -6346,7 +6458,7 @@ class TypeLibImporterFlags(Enum, IComparable, IFormattable, IConvertible):
     ImportAsX64 = None
     ImportAsX86 = None
     NoDefineVersionResource = None
-    None = None
+    None_ =None
     PreventClassMembers = None
     PrimaryInteropAssembly = None
     ReflectionOnlyLoading = None
@@ -6357,7 +6469,7 @@ class TypeLibImporterFlags(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class TypeLibTypeAttribute(Attribute, _Attribute):
+class TypeLibTypeAttribute:
     """
     Contains the System.Runtime.InteropServices.TYPEFLAGS that were originally imported for this type from the COM type library.
     
@@ -6385,7 +6497,7 @@ Get: Value(self: TypeLibTypeAttribute) -> TypeLibTypeFlags
 
 
 
-class TypeLibTypeFlags(Enum, IComparable, IFormattable, IConvertible):
+class TypeLibTypeFlags:
     """
     Describes the original settings of the System.Runtime.InteropServices.TYPEFLAGS in the COM type library from which the type was imported.
     
@@ -6441,7 +6553,7 @@ class TypeLibTypeFlags(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class TypeLibVarAttribute(Attribute, _Attribute):
+class TypeLibVarAttribute:
     """
     Contains the System.Runtime.InteropServices.VARFLAGS that were originally imported for this field from the COM type library.
     
@@ -6469,7 +6581,7 @@ Get: Value(self: TypeLibVarAttribute) -> TypeLibVarFlags
 
 
 
-class TypeLibVarFlags(Enum, IComparable, IFormattable, IConvertible):
+class TypeLibVarFlags:
     """
     Describes the original settings of the System.Runtime.InteropServices.VARFLAGS in the COM type library from which the variable was imported.
     
@@ -6524,7 +6636,7 @@ class TypeLibVarFlags(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class TypeLibVersionAttribute(Attribute, _Attribute):
+class TypeLibVersionAttribute:
     """
     Specifies the version number of an exported type library.
     
@@ -6561,8 +6673,8 @@ class UCOMIBindCtx:
         """
         EnumObjectParam(self: UCOMIBindCtx) -> UCOMIEnumString
         
-            Enumerate the strings which are the keys of the internally-maintained table of contextual object 
-             parameters.
+            Enumerate the strings which are the keys of the internally-maintained table of contextual 
+             object parameters.
         """
         pass
 
@@ -6580,8 +6692,8 @@ class UCOMIBindCtx:
         """
         GetObjectParam(self: UCOMIBindCtx, pszKey: str) -> object
         
-            Lookup the given key in the internally-maintained table of contextual object parameters and 
-             return the corresponding object, if one exists.
+            Lookup the given key in the internally-maintained table of contextual object parameters 
+             and return the corresponding object, if one exists.
         
         
             pszKey: The name of the object to search for.
@@ -6599,8 +6711,8 @@ class UCOMIBindCtx:
     def RegisterObjectBound(self, punk):
         """
         RegisterObjectBound(self: UCOMIBindCtx, punk: object)
-            Register the passed object as one of the objects that has been bound during a moniker operation 
-             and which should be released when it is complete.
+            Register the passed object as one of the objects that has been bound during a moniker 
+             operation and which should be released when it is complete.
         
         
             punk: The object to register for release.
@@ -6610,8 +6722,8 @@ class UCOMIBindCtx:
     def RegisterObjectParam(self, pszKey, punk):
         """
         RegisterObjectParam(self: UCOMIBindCtx, pszKey: str, punk: object)
-            Register the given object pointer under the specified name in the internally-maintained table of 
-             object pointers.
+            Register the given object pointer under the specified name in the internally-maintained 
+             table of object pointers.
         
         
             pszKey: The name to register punk with.
@@ -6652,8 +6764,8 @@ class UCOMIBindCtx:
         """
         SetBindOptions(self: UCOMIBindCtx, pbindopts: BIND_OPTS) -> BIND_OPTS
         
-            Store in the bind context a block of parameters that will apply to later UCOMIMoniker operations 
-             using this bind context.
+            Store in the bind context a block of parameters that will apply to later UCOMIMoniker 
+             operations using this bind context.
         
         
             pbindopts: The structure containing the binding options to set.
@@ -6671,10 +6783,12 @@ class UCOMIConnectionPoint:
         """
         Advise(self: UCOMIConnectionPoint, pUnkSink: object) -> int
         
-            Establishes an advisory connection between the connection point and the caller's sink object.
+            Establishes an advisory connection between the connection point and the caller's sink 
+             object.
         
-            pUnkSink: Reference to the sink to receive calls for the outgoing interface managed by this connection 
-             point.
+        
+            pUnkSink: Reference to the sink to receive calls for the outgoing interface managed by this 
+             connection point.
         """
         pass
 
@@ -6682,8 +6796,8 @@ class UCOMIConnectionPoint:
         """
         EnumConnections(self: UCOMIConnectionPoint) -> UCOMIEnumConnections
         
-            Creates an enumerator object for iteration through the connections that exist to this connection 
-             point.
+            Creates an enumerator object for iteration through the connections that exist to this 
+             connection point.
         """
         pass
 
@@ -6727,8 +6841,8 @@ class UCOMIConnectionPointContainer:
         """
         EnumConnectionPoints(self: UCOMIConnectionPointContainer) -> UCOMIEnumConnectionPoints
         
-            Creates an enumerator of all the connection points supported in the connectable object, one 
-             connection point per IID.
+            Creates an enumerator of all the connection points supported in the connectable object, 
+             one connection point per IID.
         """
         pass
 
@@ -6988,12 +7102,14 @@ class UCOMIMoniker:
         
             Uses the moniker to bind to the object it identifies.
         
-            pbc: A reference to the IBindCtx interface on the bind context object used in this binding operation.
-            pmkToLeft: A reference to the moniker to the left of this moniker, if the moniker is part of a composite 
-             moniker.
+            pbc: A reference to the IBindCtx interface on the bind context object used in this binding 
+             operation.
         
-            riidResult: The interface identifier (IID) of the interface the client intends to use to communicate with 
-             the object that the moniker identifies.
+            pmkToLeft: A reference to the moniker to the left of this moniker, if the moniker is part of a 
+             composite moniker.
+        
+            riidResult: The interface identifier (IID) of the interface the client intends to use to communicate 
+             with the object that the moniker identifies.
         """
         pass
 
@@ -7001,13 +7117,15 @@ class UCOMIMoniker:
         """
         BindToStorage(self: UCOMIMoniker, pbc: UCOMIBindCtx, pmkToLeft: UCOMIMoniker, riid: Guid) -> (Guid, object)
         
-            Retrieves an interface pointer to the storage that contains the object identified by the moniker.
+            Retrieves an interface pointer to the storage that contains the object identified by the 
+             moniker.
+        
         
             pbc: A reference to the IBindCtx interface on the bind context object used during this binding 
              operation.
         
-            pmkToLeft: A reference to the moniker to the left of this moniker, if the moniker is part of a composite 
-             moniker.
+            pmkToLeft: A reference to the moniker to the left of this moniker, if the moniker is part of a 
+             composite moniker.
         
             riid: The interface identifier (IID) of the storage interface requested.
         """
@@ -7017,10 +7135,12 @@ class UCOMIMoniker:
         """
         CommonPrefixWith(self: UCOMIMoniker, pmkOther: UCOMIMoniker) -> UCOMIMoniker
         
-            Creates a new moniker based on the common prefix that this moniker shares with another moniker.
+            Creates a new moniker based on the common prefix that this moniker shares with another 
+             moniker.
         
-            pmkOther: A reference to the IMoniker interface on another moniker to compare with this for a common 
-             prefix.
+        
+            pmkOther: A reference to the IMoniker interface on another moniker to compare with this for a 
+             common prefix.
         """
         pass
 
@@ -7030,10 +7150,13 @@ class UCOMIMoniker:
         
             Combines the current moniker with another moniker, creating a new composite moniker.
         
-            pmkRight: A reference to the IMoniker interface on the moniker to compose onto the end of this moniker.
+            pmkRight: A reference to the IMoniker interface on the moniker to compose onto the end of this 
+             moniker.
+        
             fOnlyIfNotGeneric: If true, the caller requires a nongeneric composition, so the operation proceeds only if 
-             pmkRight is a moniker class that this moniker can compose with in some way other than forming a 
-             generic composite. If false, the method can create a generic composite if necessary.
+             pmkRight is a moniker class that this moniker can compose with in some way other than 
+             forming a generic composite. If false, the method can create a generic composite if 
+             necessary.
         """
         pass
 
@@ -7041,9 +7164,12 @@ class UCOMIMoniker:
         """
         Enum(self: UCOMIMoniker, fForward: bool) -> UCOMIEnumMoniker
         
-            Supplies a pointer to an enumerator that can enumerate the components of a composite moniker.
+            Supplies a pointer to an enumerator that can enumerate the components of a composite 
+             moniker.
         
-            fForward: If true, enumerates the monikers from left to right. If false, enumerates from right to left.
+        
+            fForward: If true, enumerates the monikers from left to right. If false, enumerates from right to 
+             left.
         """
         pass
 
@@ -7062,8 +7188,8 @@ class UCOMIMoniker:
             Gets the display name, which is a user-readable representation of this moniker.
         
             pbc: A reference to the bind context to use in this operation.
-            pmkToLeft: A reference to the moniker to the left of this moniker, if the moniker is part of a composite 
-             moniker.
+            pmkToLeft: A reference to the moniker to the left of this moniker, if the moniker is part of a 
+             composite moniker.
         """
         pass
 
@@ -7079,11 +7205,13 @@ class UCOMIMoniker:
         """
         GetTimeOfLastChange(self: UCOMIMoniker, pbc: UCOMIBindCtx, pmkToLeft: UCOMIMoniker) -> FILETIME
         
-            Provides a number representing the time the object identified by this moniker was last changed.
+            Provides a number representing the time the object identified by this moniker was last 
+             changed.
+        
         
             pbc: A reference to the bind context to be used in this binding operation.
-            pmkToLeft: A reference to the moniker to the left of this moniker, if the moniker is part of a composite 
-             moniker.
+            pmkToLeft: A reference to the moniker to the left of this moniker, if the moniker is part of a 
+             composite moniker.
         """
         pass
 
@@ -7099,8 +7227,8 @@ class UCOMIMoniker:
         """
         Inverse(self: UCOMIMoniker) -> UCOMIMoniker
         
-            Provides a moniker that, when composed to the right of this moniker or one of similar structure, 
-             composes to nothing.
+            Provides a moniker that, when composed to the right of this moniker or one of similar 
+             structure, composes to nothing.
         """
         pass
 
@@ -7125,10 +7253,14 @@ class UCOMIMoniker:
     def IsRunning(self, pbc, pmkToLeft, pmkNewlyRunning):
         """
         IsRunning(self: UCOMIMoniker, pbc: UCOMIBindCtx, pmkToLeft: UCOMIMoniker, pmkNewlyRunning: UCOMIMoniker)
-            Determines whether the object that is identified by this moniker is currently loaded and running.
+            Determines whether the object that is identified by this moniker is currently loaded and 
+             running.
+        
         
             pbc: A reference to the bind context to be used in this binding operation.
-            pmkToLeft: A reference to the moniker to the left of this moniker if this moniker is part of a composite.
+            pmkToLeft: A reference to the moniker to the left of this moniker if this moniker is part of a 
+             composite.
+        
             pmkNewlyRunning: A reference to the moniker most recently added to the Running Object Table.
         """
         pass
@@ -7154,8 +7286,8 @@ class UCOMIMoniker:
         """
         ParseDisplayName(self: UCOMIMoniker, pbc: UCOMIBindCtx, pmkToLeft: UCOMIMoniker, pszDisplayName: str) -> (int, UCOMIMoniker)
         
-            Reads as many characters of the specified display name as it understands and builds a moniker 
-             corresponding to the portion read.
+            Reads as many characters of the specified display name as it understands and builds a 
+             moniker corresponding to the portion read.
         
         
             pbc: A reference to the bind context to be used in this binding operation.
@@ -7172,7 +7304,9 @@ class UCOMIMoniker:
              moniker but can be bound with equal or greater efficiency.
         
         
-            pbc: A reference to the IBindCtx interface on the bind context to be used in this binding operation.
+            pbc: A reference to the IBindCtx interface on the bind context to be used in this binding 
+             operation.
+        
             dwReduceHowFar: Specifies how far this moniker should be reduced.
             ppmkToLeft: A reference to the moniker to the left of this moniker.
         """
@@ -7182,8 +7316,8 @@ class UCOMIMoniker:
         """
         RelativePathTo(self: UCOMIMoniker, pmkOther: UCOMIMoniker) -> UCOMIMoniker
         
-            Supplies a moniker that, when appended to this moniker (or one with a similar structure), yields 
-             the specified moniker.
+            Supplies a moniker that, when appended to this moniker (or one with a similar structure), 
+             yields the specified moniker.
         
         
             pmkOther: A reference to the moniker to which a relative path should be taken.
@@ -7219,8 +7353,8 @@ class UCOMIPersistFile:
         """
         GetCurFile(self: UCOMIPersistFile) -> str
         
-            Retrieves either the absolute path to current working file of the object, or if there is no 
-             current working file, the default filename prompt of the object.
+            Retrieves either the absolute path to current working file of the object, or if there is 
+             no current working file, the default filename prompt of the object.
         """
         pass
 
@@ -7229,8 +7363,8 @@ class UCOMIPersistFile:
         IsDirty(self: UCOMIPersistFile) -> int
         
             Checks an object for changes since it was last saved to its current file.
-            Returns: S_OK if the file has changed since it was last saved; S_FALSE if the file has not changed since 
-             it was last saved.
+            Returns: S_OK if the file has changed since it was last saved; S_FALSE if the file has not changed 
+             since it was last saved.
         """
         pass
 
@@ -7240,8 +7374,8 @@ class UCOMIPersistFile:
             Opens the specified file and initializes an object from the file contents.
         
             pszFileName: A zero-terminated string containing the absolute path of the file to open.
-            dwMode: A combination of values from the STGM enumeration to indicate the access mode in which to open 
-             pszFileName.
+            dwMode: A combination of values from the STGM enumeration to indicate the access mode in which to 
+             open pszFileName.
         """
         pass
 
@@ -7250,7 +7384,9 @@ class UCOMIPersistFile:
         Save(self: UCOMIPersistFile, pszFileName: str, fRemember: bool)
             Saves a copy of the object into the specified file.
         
-            pszFileName: A zero-terminated string containing the absolute path of the file to which the object is saved.
+            pszFileName: A zero-terminated string containing the absolute path of the file to which the object is 
+             saved.
+        
             fRemember: Indicates whether pszFileName is to be used as the current working file.
         """
         pass
@@ -7312,8 +7448,8 @@ class UCOMIRunningObjectTable:
         """
         NoteChangeTime(self: UCOMIRunningObjectTable, dwRegister: int, pfiletime: FILETIME) -> FILETIME
         
-            Makes a note of the time that a particular object has changed so IMoniker::GetTimeOfLastChange 
-             can report an appropriate change time.
+            Makes a note of the time that a particular object has changed so 
+             IMoniker::GetTimeOfLastChange can report an appropriate change time.
         
         
             dwRegister: The ROT entry of the changed object.
@@ -7327,8 +7463,8 @@ class UCOMIRunningObjectTable:
         
             Registers that the supplied object has entered the running state.
         
-            grfFlags: Specifies whether the Running Object Table's (ROT) reference to punkObject is weak or strong, 
-             and controls access to the object through its entry in the ROT.
+            grfFlags: Specifies whether the Running Object Table's (ROT) reference to punkObject is weak or 
+             strong, and controls access to the object through its entry in the ROT.
         
             punkObject: Reference to the object being registered as running.
             pmkObjectName: Reference to the moniker that identifies punkObject.
@@ -7355,16 +7491,16 @@ class UCOMIStream:
         """
         Clone(self: UCOMIStream) -> UCOMIStream
         
-            Creates a new stream object with its own seek pointer that references the same bytes as the 
-             original stream.
+            Creates a new stream object with its own seek pointer that references the same bytes as 
+             the original stream.
         """
         pass
 
     def Commit(self, grfCommitFlags):
         """
         Commit(self: UCOMIStream, grfCommitFlags: int)
-            Ensures that any changes made to a stream object open in transacted mode are reflected in the 
-             parent storage.
+            Ensures that any changes made to a stream object open in transacted mode are reflected in 
+             the parent storage.
         
         
             grfCommitFlags: Controls how the changes for the stream object are committed.
@@ -7374,8 +7510,8 @@ class UCOMIStream:
     def CopyTo(self, pstm, cb, pcbRead, pcbWritten):
         """
         CopyTo(self: UCOMIStream, pstm: UCOMIStream, cb: Int64, pcbRead: IntPtr, pcbWritten: IntPtr)
-            Copies a specified number of bytes from the current seek pointer in the stream to the current 
-             seek pointer in another stream.
+            Copies a specified number of bytes from the current seek pointer in the stream to the 
+             current seek pointer in another stream.
         
         
             pstm: Reference to the destination stream.
@@ -7400,12 +7536,13 @@ class UCOMIStream:
         """
         Read(self: UCOMIStream, cb: int, pcbRead: IntPtr) -> Array[Byte]
         
-            Reads a specified number of bytes from the stream object into memory starting at the current 
-             seek pointer.
+            Reads a specified number of bytes from the stream object into memory starting at the 
+             current seek pointer.
         
         
             cb: The number of bytes to read from the stream object.
-            pcbRead: Pointer to a ULONG variable that receives the actual number of bytes read from the stream object.
+            pcbRead: Pointer to a ULONG variable that receives the actual number of bytes read from the stream 
+             object.
         """
         pass
 
@@ -7420,15 +7557,16 @@ class UCOMIStream:
     def Seek(self, dlibMove, dwOrigin, plibNewPosition):
         """
         Seek(self: UCOMIStream, dlibMove: Int64, dwOrigin: int, plibNewPosition: IntPtr)
-            Changes the seek pointer to a new location relative to the beginning of the stream, to the end 
-             of the stream, or to the current seek pointer.
+            Changes the seek pointer to a new location relative to the beginning of the stream, to 
+             the end of the stream, or to the current seek pointer.
         
         
             dlibMove: Displacement to add to dwOrigin.
-            dwOrigin: Specifies the origin of the seek. The origin can be the beginning of the file, the current seek 
-             pointer, or the end of the file.
+            dwOrigin: Specifies the origin of the seek. The origin can be the beginning of the file, the 
+             current seek pointer, or the end of the file.
         
-            plibNewPosition: On successful return, contains the offset of the seek pointer from the beginning of the stream.
+            plibNewPosition: On successful return, contains the offset of the seek pointer from the beginning of the 
+             stream.
         """
         pass
 
@@ -7447,8 +7585,8 @@ class UCOMIStream:
         
             Retrieves the System.Runtime.InteropServices.STATSTG structure for this stream.
         
-            grfStatFlag: Specifies some of the members in the STATSTG structure that this method does not return, thus 
-             saving some memory allocation operations.
+            grfStatFlag: Specifies some of the members in the STATSTG structure that this method does not return, 
+             thus saving some memory allocation operations.
         """
         pass
 
@@ -7456,7 +7594,8 @@ class UCOMIStream:
         """
         UnlockRegion(self: UCOMIStream, libOffset: Int64, cb: Int64, dwLockType: int)
             Removes the access restriction on a range of bytes previously restricted with 
-             System.Runtime.InteropServices.UCOMIStream.LockRegion(System.Int64,System.Int64,System.Int32).
+             System.Runtime.InteropServices.UCOMIStream.LockRegion(System.Int64,System.Int64,System.Int
+             32).
         
         
             libOffset: The byte offset for the beginning of the range.
@@ -7468,13 +7607,15 @@ class UCOMIStream:
     def Write(self, pv, cb, pcbWritten):
         """
         Write(self: UCOMIStream, pv: Array[Byte], cb: int, pcbWritten: IntPtr)
-            Writes a specified number of bytes into the stream object starting at the current seek pointer.
+            Writes a specified number of bytes into the stream object starting at the current seek 
+             pointer.
+        
         
             pv: Buffer to write this stream to.
             cb: The number of bytes to write into the stream.
-            pcbWritten: On successful return, contains the actual number of bytes written to the stream object. The 
-             caller can set this pointer to null, in which case this method does not provide the actual 
-             number of bytes written.
+            pcbWritten: On successful return, contains the actual number of bytes written to the stream object. 
+             The caller can set this pointer to null, in which case this method does not provide the 
+             actual number of bytes written.
         """
         pass
 
@@ -7489,13 +7630,14 @@ class UCOMITypeComp:
         """
         Bind(self: UCOMITypeComp, szName: str, lHashVal: int, wFlags: Int16) -> (UCOMITypeInfo, DESCKIND, BINDPTR)
         
-            Maps a name to a member of a type, or binds global variables and functions contained in a type 
-             library.
+            Maps a name to a member of a type, or binds global variables and functions contained in a 
+             type library.
         
         
             szName: The name to bind.
             lHashVal: A hash value for szName computed by LHashValOfNameSys.
-            wFlags: A flags word containing one or more of the invoke flags defined in the INVOKEKIND enumeration.
+            wFlags: A flags word containing one or more of the invoke flags defined in the INVOKEKIND 
+             enumeration.
         """
         pass
 
@@ -7535,7 +7677,8 @@ class UCOMITypeInfo:
             Creates a new instance of a type that describes a component class (coclass).
         
             pUnkOuter: Object which acts as the controlling IUnknown.
-            riid: The IID of the interface that the caller will use to communicate with the resulting object.
+            riid: The IID of the interface that the caller will use to communicate with the resulting 
+             object.
         """
         pass
 
@@ -7543,8 +7686,8 @@ class UCOMITypeInfo:
         """
         GetContainingTypeLib(self: UCOMITypeInfo) -> (UCOMITypeLib, int)
         
-            Retrieves the type library that contains this type description and its index within that type 
-             library.
+            Retrieves the type library that contains this type description and its index within that 
+             type library.
         """
         pass
 
@@ -7563,8 +7706,8 @@ class UCOMITypeInfo:
         """
         GetDocumentation(self: UCOMITypeInfo, index: int) -> (str, str, int, str)
         
-            Retrieves the documentation string, the complete Help file name and path, and the context ID for 
-             the Help topic for a specified type description.
+            Retrieves the documentation string, the complete Help file name and path, and the context 
+             ID for the Help topic for a specified type description.
         
         
             index: ID of the member whose documentation is to be returned.
@@ -7575,8 +7718,8 @@ class UCOMITypeInfo:
         """
         GetFuncDesc(self: UCOMITypeInfo, index: int) -> IntPtr
         
-            Retrieves the System.Runtime.InteropServices.FUNCDESC structure that contains information about 
-             a specified function.
+            Retrieves the System.Runtime.InteropServices.FUNCDESC structure that contains information 
+             about a specified function.
         
         
             index: Index of the function description to return.
@@ -7598,8 +7741,8 @@ class UCOMITypeInfo:
         """
         GetImplTypeFlags(self: UCOMITypeInfo, index: int) -> int
         
-            Retrieves the System.Runtime.InteropServices.IMPLTYPEFLAGS value for one implemented interface 
-             or base interface in a type description.
+            Retrieves the System.Runtime.InteropServices.IMPLTYPEFLAGS value for one implemented 
+             interface or base interface in a type description.
         
         
             index: Index of the implemented interface or base interface.
@@ -7620,8 +7763,8 @@ class UCOMITypeInfo:
         """
         GetNames(self: UCOMITypeInfo, memid: int, cMaxNames: int) -> (Array[str], int)
         
-            Retrieves the variable with the specified member ID (or the name of the property or method and 
-             its parameters) that correspond to the specified function ID.
+            Retrieves the variable with the specified member ID (or the name of the property or 
+             method and its parameters) that correspond to the specified function ID.
         
         
             memid: The ID of the member whose name (or names) is to be returned.
@@ -7633,8 +7776,8 @@ class UCOMITypeInfo:
         """
         GetRefTypeInfo(self: UCOMITypeInfo, hRef: int) -> UCOMITypeInfo
         
-            If a type description references other type descriptions, it retrieves the referenced type 
-             descriptions.
+            If a type description references other type descriptions, it retrieves the referenced 
+             type descriptions.
         
         
             hRef: Handle to the referenced type description to return.
@@ -7657,8 +7800,8 @@ class UCOMITypeInfo:
         """
         GetTypeAttr(self: UCOMITypeInfo) -> IntPtr
         
-            Retrieves a System.Runtime.InteropServices.TYPEATTR structure that contains the attributes of 
-             the type description.
+            Retrieves a System.Runtime.InteropServices.TYPEATTR structure that contains the 
+             attributes of the type description.
         """
         pass
 
@@ -7666,8 +7809,8 @@ class UCOMITypeInfo:
         """
         GetTypeComp(self: UCOMITypeInfo) -> UCOMITypeComp
         
-            Retrieves the ITypeComp interface for the type description, which enables a client compiler to 
-             bind to the type description's members.
+            Retrieves the ITypeComp interface for the type description, which enables a client 
+             compiler to bind to the type description's members.
         """
         pass
 
@@ -7685,15 +7828,15 @@ class UCOMITypeInfo:
         """
         Invoke(self: UCOMITypeInfo, pvInstance: object, memid: int, wFlags: Int16, pDispParams: DISPPARAMS) -> (DISPPARAMS, object, EXCEPINFO, int)
         
-            Invokes a method, or accesses a property of an object, that implements the interface described 
-             by the type description.
+            Invokes a method, or accesses a property of an object, that implements the interface 
+             described by the type description.
         
         
             pvInstance: Reference to the interface described by this type description.
             memid: Identifies the interface member.
             wFlags: Flags describing the context of the invoke call.
-            pDispParams: Reference to a structure that contains an array of arguments, an array of DISPIDs for named 
-             arguments, and counts of the number of elements in each array.
+            pDispParams: Reference to a structure that contains an array of arguments, an array of DISPIDs for 
+             named arguments, and counts of the number of elements in each array.
         """
         pass
 
@@ -7744,13 +7887,13 @@ class UCOMITypeLib:
             Finds occurrences of a type description in a type library.
         
             szNameBuf: The name to search for.
-            lHashVal: A hash value to speed up the search, computed by the LHashValOfNameSys function. If lHashVal is 
-             0, a value is computed.
+            lHashVal: A hash value to speed up the search, computed by the LHashValOfNameSys function. If 
+             lHashVal is 0, a value is computed.
         
-            pcFound: On entry, indicates how many instances to look for. For example, pcFound = 1 can be called to 
-             find the first occurrence. The search stops when one instance is found.On exit, indicates the 
-             number of instances that were found. If the in and out values of pcFound are identical, there 
-             might be more type descriptions that contain the name.
+            pcFound: On entry, indicates how many instances to look for. For example, pcFound = 1 can be 
+             called to find the first occurrence. The search stops when one instance is found.On exit, 
+             indicates the number of instances that were found. If the in and out values of pcFound 
+             are identical, there might be more type descriptions that contain the name.
         """
         pass
 
@@ -7758,8 +7901,8 @@ class UCOMITypeLib:
         """
         GetDocumentation(self: UCOMITypeLib, index: int) -> (str, str, int, str)
         
-            Retrieves the library's documentation string, the complete Help file name and path, and the 
-             context identifier for the library Help topic in the Help file.
+            Retrieves the library's documentation string, the complete Help file name and path, and 
+             the context identifier for the library Help topic in the Help file.
         
         
             index: Index of the type description whose documentation is to be returned.
@@ -7826,8 +7969,8 @@ class UCOMITypeLib:
         """
         IsName(self: UCOMITypeLib, szNameBuf: str, lHashVal: int) -> bool
         
-            Indicates whether a passed-in string contains the name of a type or member described in the 
-             library.
+            Indicates whether a passed-in string contains the name of a type or member described in 
+             the library.
         
         
             szNameBuf: The string to test.
@@ -7852,7 +7995,7 @@ class UCOMITypeLib:
         pass
 
 
-class UnknownWrapper(object):
+class UnknownWrapper:
     """
     Wraps objects the marshaler should marshal as a VT_UNKNOWN.
     
@@ -7872,7 +8015,7 @@ Get: WrappedObject(self: UnknownWrapper) -> object
 
 
 
-class UnmanagedFunctionPointerAttribute(Attribute, _Attribute):
+class UnmanagedFunctionPointerAttribute:
     """
     Controls the marshaling behavior of a delegate signature passed as an unmanaged function pointer to or from unmanaged code. This class cannot be inherited.
     
@@ -7901,7 +8044,7 @@ Get: CallingConvention(self: UnmanagedFunctionPointerAttribute) -> CallingConven
     ThrowOnUnmappableChar = None
 
 
-class UnmanagedType(Enum, IComparable, IFormattable, IConvertible):
+class UnmanagedType:
     """
     Identifies how to marshal parameters or fields to unmanaged code.
     
@@ -7981,7 +8124,7 @@ class UnmanagedType(Enum, IComparable, IFormattable, IConvertible):
     VBByRefStr = None
 
 
-class VARDESC(object):
+class VARDESC:
     """ Use System.Runtime.InteropServices.ComTypes.VARDESC instead. """
     DESCUNION = None
     elemdescVar = None
@@ -7991,7 +8134,7 @@ class VARDESC(object):
     wVarFlags = None
 
 
-class VarEnum(Enum, IComparable, IFormattable, IConvertible):
+class VarEnum:
     """
     Indicates how to marshal the array elements when an array is marshaled from managed to unmanaged code as a System.Runtime.InteropServices.UnmanagedType.SafeArray.
     
@@ -8077,7 +8220,7 @@ class VarEnum(Enum, IComparable, IFormattable, IConvertible):
     VT_VOID = None
 
 
-class VARFLAGS(Enum, IComparable, IFormattable, IConvertible):
+class VARFLAGS:
     """
     Use System.Runtime.InteropServices.ComTypes.VARFLAGS instead.
     
@@ -8132,7 +8275,7 @@ class VARFLAGS(Enum, IComparable, IFormattable, IConvertible):
     VARFLAG_FUIDEFAULT = None
 
 
-class VariantWrapper(object):
+class VariantWrapper:
     """
     Marshals data of type VT_VARIANT | VT_BYREF from managed to unmanaged code. This class cannot be inherited.
     
@@ -8171,8 +8314,8 @@ class _Activator:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _Activator, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -8185,7 +8328,8 @@ class _Activator:
         """
         GetTypeInfoCount(self: _Activator) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -8199,8 +8343,8 @@ class _Activator:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -8217,37 +8361,16 @@ class _Assembly:
     """ Exposes the public members of the System.Reflection.Assembly class to unmanaged code. """
     def CreateInstance(self, typeName, ignoreCase=None, bindingAttr=None, binder=None, args=None, culture=None, activationAttributes=None):
         """
-        CreateInstance(self: _Assembly, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object]) -> object
+        CreateInstance(self: _Assembly, typeName: str) -> object
         
             Provides COM objects with version-independent access to the 
-             System.Reflection.Assembly.CreateInstance(System.String,System.Boolean,System.Reflection.BindingF
-             lags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo,System.Object[]) 
-             method.
+             System.Reflection.Assembly.CreateInstance(System.String) method.
         
         
             typeName: The System.Type.FullName of the type to locate.
-            ignoreCase: true to ignore the case of the type name; otherwise, false.
-            bindingAttr: A bitmask that affects how the search is conducted. The value is a combination of bit flags from 
-             System.Reflection.BindingFlags.
-        
-            binder: An object that enables the binding, coercion of argument types, invocation of members, and 
-             retrieval of MemberInfo objects via reflection. If binder is null, the default binder is used.
-        
-            args: An array of type Object containing the arguments to be passed to the constructor. This array of 
-             arguments must match in number, order, and type the parameters of the constructor to be invoked. 
-             If the default constructor is desired, args must be an empty array or null.
-        
-            culture: An instance of CultureInfo used to govern the coercion of types. If this is null, the 
-             CultureInfo for the current thread is used. (This is necessary to convert a String that 
-             represents 1000 to a Double value, for example, since 1000 is represented differently by 
-             different cultures.)
-        
-            activationAttributes: An array of type Object containing one or more activation attributes that can participate in the 
-             activation. An example of an activation attribute is: 
-             URLAttribute(http://hostname/appname/objectURI)
-        
-            Returns: An instance of Object representing the type and matching the specified criteria, or null if 
-             typeName is not found.
+            Returns: An instance of System.Object representing the type, with culture, arguments, binder, and 
+             activation attributes set to null, and System.Reflection.BindingFlags set to Public or 
+             Instance, or null if typeName is not found.
         
         CreateInstance(self: _Assembly, typeName: str, ignoreCase: bool) -> object
         
@@ -8258,19 +8381,42 @@ class _Assembly:
             typeName: The System.Type.FullName of the type to locate.
             ignoreCase: true to ignore the case of the type name; otherwise, false.
             Returns: An instance of System.Object representing the type, with culture, arguments, binder, and 
-             activation attributes set to null, and System.Reflection.BindingFlags set to Public or Instance, 
-             or null if typeName is not found.
+             activation attributes set to null, and System.Reflection.BindingFlags set to Public or 
+             Instance, or null if typeName is not found.
         
-        CreateInstance(self: _Assembly, typeName: str) -> object
+        CreateInstance(self: _Assembly, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object]) -> object
         
             Provides COM objects with version-independent access to the 
-             System.Reflection.Assembly.CreateInstance(System.String) method.
+             System.Reflection.Assembly.CreateInstance(System.String,System.Boolean,System.Reflection.B
+             indingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo,Syst
+             em.Object[]) method.
         
         
             typeName: The System.Type.FullName of the type to locate.
-            Returns: An instance of System.Object representing the type, with culture, arguments, binder, and 
-             activation attributes set to null, and System.Reflection.BindingFlags set to Public or Instance, 
-             or null if typeName is not found.
+            ignoreCase: true to ignore the case of the type name; otherwise, false.
+            bindingAttr: A bitmask that affects how the search is conducted. The value is a combination of bit 
+             flags from System.Reflection.BindingFlags.
+        
+            binder: An object that enables the binding, coercion of argument types, invocation of members, 
+             and retrieval of MemberInfo objects via reflection. If binder is null, the default binder 
+             is used.
+        
+            args: An array of type Object containing the arguments to be passed to the constructor. This 
+             array of arguments must match in number, order, and type the parameters of the 
+             constructor to be invoked. If the default constructor is desired, args must be an empty 
+             array or null.
+        
+            culture: An instance of CultureInfo used to govern the coercion of types. If this is null, the 
+             CultureInfo for the current thread is used. (This is necessary to convert a String that 
+             represents 1000 to a Double value, for example, since 1000 is represented differently by 
+             different cultures.)
+        
+            activationAttributes: An array of type Object containing one or more activation attributes that can participate 
+             in the activation. An example of an activation attribute is: 
+             URLAttribute(http://hostname/appname/objectURI)
+        
+            Returns: An instance of Object representing the type and matching the specified criteria, or null 
+             if typeName is not found.
         """
         pass
 
@@ -8278,25 +8424,18 @@ class _Assembly:
         """
         Equals(self: _Assembly, other: object) -> bool
         
-            Provides COM objects with version-independent access to the System.Object.Equals(System.Object) 
-             method.
+            Provides COM objects with version-independent access to the 
+             System.Object.Equals(System.Object) method.
         
         
             other: The System.Object to compare with the current System.Object.
-            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, false.
+            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, 
+             false.
         """
         pass
 
     def GetCustomAttributes(self, *__args):
         """
-        GetCustomAttributes(self: _Assembly, inherit: bool) -> Array[object]
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.Assembly.GetCustomAttributes(System.Boolean) method.
-        
-        
-            inherit: This argument is ignored for objects of type System.Reflection.Assembly.
-            Returns: An array of type Object containing the custom attributes for this assembly.
         GetCustomAttributes(self: _Assembly, attributeType: Type, inherit: bool) -> Array[object]
         
             Provides COM objects with version-independent access to the 
@@ -8305,8 +8444,17 @@ class _Assembly:
         
             attributeType: The System.Type for which the custom attributes are to be returned.
             inherit: This argument is ignored for objects of type System.Reflection.Assembly.
-            Returns: An array of type System.Object containing the custom attributes for this assembly as specified 
-             by attributeType.
+            Returns: An array of type System.Object containing the custom attributes for this assembly as 
+             specified by attributeType.
+        
+        GetCustomAttributes(self: _Assembly, inherit: bool) -> Array[object]
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.Assembly.GetCustomAttributes(System.Boolean) method.
+        
+        
+            inherit: This argument is ignored for objects of type System.Reflection.Assembly.
+            Returns: An array of type Object containing the custom attributes for this assembly.
         """
         pass
 
@@ -8317,8 +8465,8 @@ class _Assembly:
             Provides COM objects with version-independent access to the 
              System.Reflection.Assembly.GetExportedTypes property.
         
-            Returns: An array of System.Type objects that represent the types defined in this assembly that are 
-             visible outside the assembly.
+            Returns: An array of System.Type objects that represent the types defined in this assembly that 
+             are visible outside the assembly.
         """
         pass
 
@@ -8337,6 +8485,12 @@ class _Assembly:
 
     def GetFiles(self, getResourceModules=None):
         """
+        GetFiles(self: _Assembly) -> Array[FileStream]
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.Assembly.GetFiles method.
+        
+            Returns: An array of System.IO.FileStream objects.
         GetFiles(self: _Assembly, getResourceModules: bool) -> Array[FileStream]
         
             Provides COM objects with version-independent access to the 
@@ -8344,12 +8498,6 @@ class _Assembly:
         
         
             getResourceModules: true to include resource modules; otherwise, false.
-            Returns: An array of System.IO.FileStream objects.
-        GetFiles(self: _Assembly) -> Array[FileStream]
-        
-            Provides COM objects with version-independent access to the System.Reflection.Assembly.GetFiles 
-             method.
-        
             Returns: An array of System.IO.FileStream objects.
         """
         pass
@@ -8358,13 +8506,21 @@ class _Assembly:
         """
         GetHashCode(self: _Assembly) -> int
         
-            Provides COM objects with version-independent access to the System.Object.GetHashCode method.
+            Provides COM objects with version-independent access to the System.Object.GetHashCode 
+             method.
+        
             Returns: A hash code for the current System.Object.
         """
         pass
 
     def GetLoadedModules(self, getResourceModules=None):
         """
+        GetLoadedModules(self: _Assembly) -> Array[Module]
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.Assembly.GetLoadedModules method.
+        
+            Returns: An array of modules.
         GetLoadedModules(self: _Assembly, getResourceModules: bool) -> Array[Module]
         
             Provides COM objects with version-independent access to the 
@@ -8372,12 +8528,6 @@ class _Assembly:
         
         
             getResourceModules: true to include resource modules; otherwise, false.
-            Returns: An array of modules.
-        GetLoadedModules(self: _Assembly) -> Array[Module]
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.Assembly.GetLoadedModules method.
-        
             Returns: An array of modules.
         """
         pass
@@ -8391,8 +8541,8 @@ class _Assembly:
         
         
             resourceName: The case-sensitive name of the resource.
-            Returns: A System.Reflection.ManifestResourceInfo object populated with information about the resource's 
-             topology, or null if the resource is not found.
+            Returns: A System.Reflection.ManifestResourceInfo object populated with information about the 
+             resource's topology, or null if the resource is not found.
         """
         pass
 
@@ -8409,14 +8559,6 @@ class _Assembly:
 
     def GetManifestResourceStream(self, *__args):
         """
-        GetManifestResourceStream(self: _Assembly, name: str) -> Stream
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.Assembly.GetManifestResourceStream(System.String) method.
-        
-        
-            name: The case-sensitive name of the manifest resource being requested.
-            Returns: A System.IO.Stream representing this manifest resource.
         GetManifestResourceStream(self: _Assembly, type: Type, name: str) -> Stream
         
             Provides COM objects with version-independent access to the 
@@ -8424,6 +8566,14 @@ class _Assembly:
         
         
             type: The type whose namespace is used to scope the manifest resource name.
+            name: The case-sensitive name of the manifest resource being requested.
+            Returns: A System.IO.Stream representing this manifest resource.
+        GetManifestResourceStream(self: _Assembly, name: str) -> Stream
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.Assembly.GetManifestResourceStream(System.String) method.
+        
+        
             name: The case-sensitive name of the manifest resource being requested.
             Returns: A System.IO.Stream representing this manifest resource.
         """
@@ -8444,6 +8594,12 @@ class _Assembly:
 
     def GetModules(self, getResourceModules=None):
         """
+        GetModules(self: _Assembly) -> Array[Module]
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.Assembly.GetModules method.
+        
+            Returns: An array of modules.
         GetModules(self: _Assembly, getResourceModules: bool) -> Array[Module]
         
             Provides COM objects with version-independent access to the 
@@ -8451,32 +8607,27 @@ class _Assembly:
         
         
             getResourceModules: true to include resource modules; otherwise, false.
-            Returns: An array of modules.
-        GetModules(self: _Assembly) -> Array[Module]
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.Assembly.GetModules method.
-        
             Returns: An array of modules.
         """
         pass
 
     def GetName(self, copiedName=None):
         """
+        GetName(self: _Assembly) -> AssemblyName
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.Assembly.GetName method.
+        
+            Returns: An System.Reflection.AssemblyName for this assembly.
         GetName(self: _Assembly, copiedName: bool) -> AssemblyName
         
             Provides COM objects with version-independent access to the 
              System.Reflection.Assembly.GetName(System.Boolean) method.
         
         
-            copiedName: true to set the System.Reflection.Assembly.CodeBase to the location of the assembly after it was 
-             shadow copied; false to set System.Reflection.Assembly.CodeBase to the original location.
-        
-            Returns: An System.Reflection.AssemblyName for this assembly.
-        GetName(self: _Assembly) -> AssemblyName
-        
-            Provides COM objects with version-independent access to the System.Reflection.Assembly.GetName 
-             method.
+            copiedName: true to set the System.Reflection.Assembly.CodeBase to the location of the assembly after 
+             it was shadow copied; false to set System.Reflection.Assembly.CodeBase to the original 
+             location.
         
             Returns: An System.Reflection.AssemblyName for this assembly.
         """
@@ -8486,8 +8637,8 @@ class _Assembly:
         """
         GetObjectData(self: _Assembly, info: SerializationInfo, context: StreamingContext)
             Provides COM objects with version-independent access to the 
-             System.Reflection.Assembly.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Ru
-             ntime.Serialization.StreamingContext) method.
+             System.Reflection.Assembly.GetObjectData(System.Runtime.Serialization.SerializationInfo,Sy
+             stem.Runtime.Serialization.StreamingContext) method.
         
         
             info: The object to be populated with serialization information.
@@ -8502,23 +8653,13 @@ class _Assembly:
             Provides COM objects with version-independent access to the 
              System.Reflection.Assembly.GetReferencedAssemblies method.
         
-            Returns: An array of type System.Reflection.AssemblyName containing all the assemblies referenced by this 
-             assembly.
+            Returns: An array of type System.Reflection.AssemblyName containing all the assemblies referenced 
+             by this assembly.
         """
         pass
 
     def GetSatelliteAssembly(self, culture, version=None):
         """
-        GetSatelliteAssembly(self: _Assembly, culture: CultureInfo, version: Version) -> Assembly
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.Assembly.GetSatelliteAssembly(System.Globalization.CultureInfo,System.Version) 
-             method.
-        
-        
-            culture: The specified culture.
-            version: The version of the satellite assembly.
-            Returns: The specified satellite assembly.
         GetSatelliteAssembly(self: _Assembly, culture: CultureInfo) -> Assembly
         
             Provides COM objects with version-independent access to the 
@@ -8526,12 +8667,36 @@ class _Assembly:
         
         
             culture: The specified culture.
+            Returns: The specified satellite assembly.
+        GetSatelliteAssembly(self: _Assembly, culture: CultureInfo, version: Version) -> Assembly
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.Assembly.GetSatelliteAssembly(System.Globalization.CultureInfo,System.Ve
+             rsion) method.
+        
+        
+            culture: The specified culture.
+            version: The version of the satellite assembly.
             Returns: The specified satellite assembly.
         """
         pass
 
     def GetType(self, name=None, throwOnError=None, ignoreCase=None):
         """
+        GetType(self: _Assembly) -> Type
+        
+            Provides COM objects with version-independent access to the System.Object.GetType method.
+            Returns: A System.Type object.
+        GetType(self: _Assembly, name: str) -> Type
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.Assembly.GetType(System.String) method.
+        
+        
+            name: The full name of the type.
+            Returns: A System.Type object that represents the specified class, or null if the class is not 
+             found.
+        
         GetType(self: _Assembly, name: str, throwOnError: bool) -> Type
         
             Provides COM objects with version-independent access to the 
@@ -8550,19 +8715,7 @@ class _Assembly:
             name: The full name of the type.
             throwOnError: true to throw an exception if the type is not found; false to return null.
             ignoreCase: true to ignore the case of the type name; otherwise, false.
-            Returns: A System.Type object that represents the specified class.
-        GetType(self: _Assembly) -> Type
-        
-            Provides COM objects with version-independent access to the System.Object.GetType method.
-            Returns: A System.Type object.
-        GetType(self: _Assembly, name: str) -> Type
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.Assembly.GetType(System.String) method.
-        
-        
-            name: The full name of the type.
-            Returns: A System.Type object that represents the specified class, or null if the class is not found.
+            Returns: A System.Type object that represents the specified class.
         """
         pass
 
@@ -8570,10 +8723,11 @@ class _Assembly:
         """
         GetTypes(self: _Assembly) -> Array[Type]
         
-            Provides COM objects with version-independent access to the System.Reflection.Assembly.GetTypes 
-             method.
+            Provides COM objects with version-independent access to the 
+             System.Reflection.Assembly.GetTypes method.
         
-            Returns: An array of type System.Type containing objects for all the types defined in this assembly.
+            Returns: An array of type System.Type containing objects for all the types defined in this 
+             assembly.
         """
         pass
 
@@ -8587,24 +8741,13 @@ class _Assembly:
         
             attributeType: The System.Type of the custom attribute to be checked for this assembly.
             inherit: This argument is ignored for objects of this type.
-            Returns: true if a custom attribute identified by the specified System.Type is defined; otherwise, false.
+            Returns: true if a custom attribute identified by the specified System.Type is defined; otherwise, 
+             false.
         """
         pass
 
     def LoadModule(self, moduleName, rawModule, rawSymbolStore=None):
         """
-        LoadModule(self: _Assembly, moduleName: str, rawModule: Array[Byte], rawSymbolStore: Array[Byte]) -> Module
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.Assembly.LoadModule(System.String,System.Byte[],System.Byte[]) method.
-        
-        
-            moduleName: Name of the module. Must correspond to a file name in this assembly's manifest.
-            rawModule: A byte array that is a COFF-based image containing an emitted module, or a resource.
-            rawSymbolStore: A byte array containing the raw bytes representing the symbols for the module. Must be null if 
-             this is a resource file.
-        
-            Returns: The loaded module.
         LoadModule(self: _Assembly, moduleName: str, rawModule: Array[Byte]) -> Module
         
             Provides COM objects with version-independent access to the 
@@ -8613,7 +8756,19 @@ class _Assembly:
         
             moduleName: Name of the module. Must correspond to a file name in this assembly's manifest.
             rawModule: A byte array that is a COFF-based image containing an emitted module, or a resource.
-            Returns: The loaded Module.
+            Returns: The loaded Module.
+        LoadModule(self: _Assembly, moduleName: str, rawModule: Array[Byte], rawSymbolStore: Array[Byte]) -> Module
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.Assembly.LoadModule(System.String,System.Byte[],System.Byte[]) method.
+        
+        
+            moduleName: Name of the module. Must correspond to a file name in this assembly's manifest.
+            rawModule: A byte array that is a COFF-based image containing an emitted module, or a resource.
+            rawSymbolStore: A byte array containing the raw bytes representing the symbols for the module. Must be 
+             null if this is a resource file.
+        
+            Returns: The loaded module.
         """
         pass
 
@@ -8621,11 +8776,11 @@ class _Assembly:
         """
         ToString(self: _Assembly) -> str
         
-            Provides COM objects with version-independent access to the System.Reflection.Assembly.ToString 
-             method.
+            Provides COM objects with version-independent access to the 
+             System.Reflection.Assembly.ToString method.
         
-            Returns: The full name of the assembly, or the class name if the full name of the assembly cannot be 
-             determined.
+            Returns: The full name of the assembly, or the class name if the full name of the assembly cannot 
+             be determined.
         """
         pass
 
@@ -8712,8 +8867,8 @@ class _AssemblyBuilder:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _AssemblyBuilder, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -8726,7 +8881,8 @@ class _AssemblyBuilder:
         """
         GetTypeInfoCount(self: _AssemblyBuilder) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -8740,8 +8896,8 @@ class _AssemblyBuilder:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -8773,8 +8929,8 @@ class _AssemblyName:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _AssemblyName, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -8787,7 +8943,8 @@ class _AssemblyName:
         """
         GetTypeInfoCount(self: _AssemblyName) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -8801,8 +8958,8 @@ class _AssemblyName:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -8834,8 +8991,8 @@ class _ConstructorBuilder:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _ConstructorBuilder, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -8848,7 +9005,8 @@ class _ConstructorBuilder:
         """
         GetTypeInfoCount(self: _ConstructorBuilder) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -8862,8 +9020,8 @@ class _ConstructorBuilder:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -8882,17 +9040,32 @@ class _ConstructorInfo:
         """
         Equals(self: _ConstructorInfo, other: object) -> bool
         
-            Provides COM objects with version-independent access to the System.Object.Equals(System.Object) 
-             method.
+            Provides COM objects with version-independent access to the 
+             System.Object.Equals(System.Object) method.
         
         
             other: The System.Object to compare with the current System.Object.
-            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, false.
+            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, 
+             false.
         """
         pass
 
     def GetCustomAttributes(self, *__args):
         """
+        GetCustomAttributes(self: _ConstructorInfo, attributeType: Type, inherit: bool) -> Array[object]
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.Emit.MethodBuilder.GetCustomAttributes(System.Type,System.Boolean) 
+             method.
+        
+        
+            attributeType: The type of attribute to search for. Only attributes that are assignable to this type are 
+             returned.
+        
+            inherit: Specifies whether to search this member's inheritance chain to find the attributes.
+            Returns: An array of custom attributes applied to this member, or an array with zero (0) elements 
+             if no attributes have been applied.
+        
         GetCustomAttributes(self: _ConstructorInfo, inherit: bool) -> Array[object]
         
             Provides COM objects with version-independent access to the 
@@ -8901,20 +9074,7 @@ class _ConstructorInfo:
         
             inherit: Specifies whether to search this member's inheritance chain to find the attributes.
             Returns: An array that contains all the custom attributes, or an array with zero elements if no 
-             attributes are defined.
-        
-        GetCustomAttributes(self: _ConstructorInfo, attributeType: Type, inherit: bool) -> Array[object]
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.Emit.MethodBuilder.GetCustomAttributes(System.Type,System.Boolean) method.
-        
-        
-            attributeType: The type of attribute to search for. Only attributes that are assignable to this type are 
-             returned.
-        
-            inherit: Specifies whether to search this member's inheritance chain to find the attributes.
-            Returns: An array of custom attributes applied to this member, or an array with zero (0) elements if no 
-             attributes have been applied.
+             attributes are defined.
         """
         pass
 
@@ -8922,7 +9082,9 @@ class _ConstructorInfo:
         """
         GetHashCode(self: _ConstructorInfo) -> int
         
-            Provides COM objects with version-independent access to the System.Object.GetHashCode method.
+            Provides COM objects with version-independent access to the System.Object.GetHashCode 
+             method.
+        
             Returns: The hash code for the current instance.
         """
         pass
@@ -8976,8 +9138,8 @@ class _ConstructorInfo:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _ConstructorInfo, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can then be used to get the type information 
-             for an interface.
+            Retrieves the type information for an object, which can then be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -8990,7 +9152,8 @@ class _ConstructorInfo:
         """
         GetTypeInfoCount(self: _ConstructorInfo) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -9004,8 +9167,8 @@ class _ConstructorInfo:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: Pointer to a structure containing an array of arguments, an array of argument DISPIDs for named 
-             arguments, and counts for the number of elements in the arrays.
+            pDispParams: Pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
+             named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: Pointer to the location where the result is to be stored.
             pExcepInfo: Pointer to a structure that contains exception information.
@@ -9018,25 +9181,26 @@ class _ConstructorInfo:
         Invoke_2(self: _ConstructorInfo, obj: object, invokeAttr: BindingFlags, binder: Binder, parameters: Array[object], culture: CultureInfo) -> object
         
             Provides COM objects with version-independent access to the 
-             System.Reflection.MethodBase.Invoke(System.Object,System.Reflection.BindingFlags,System.Reflectio
-             n.Binder,System.Object[],System.Globalization.CultureInfo) method.
+             System.Reflection.MethodBase.Invoke(System.Object,System.Reflection.BindingFlags,System.Re
+             flection.Binder,System.Object[],System.Globalization.CultureInfo) method.
         
         
             obj: The instance that created this method.
             invokeAttr: One of the BindingFlags values that specifies the type of binding.
-            binder: A Binder that defines a set of properties and enables the binding, coercion of argument types, 
-             and invocation of members using reflection. If binder is null, then Binder.DefaultBinding is 
-             used.
+            binder: A Binder that defines a set of properties and enables the binding, coercion of argument 
+             types, and invocation of members using reflection. If binder is null, then 
+             Binder.DefaultBinding is used.
         
-            parameters: An array of type Object used to match the number, order, and type of the parameters for this 
-             constructor, under the constraints of binder. If this constructor does not require parameters, 
-             pass an array with zero elements, as in Object[] parameters = new Object[0]. Any object in this 
-             array that is not explicitly initialized with a value will contain the default value for that 
-             object type. For reference-type elements, this value is null. For value-type elements, this 
-             value is 0, 0.0, or false, depending on the specific element type.
+            parameters: An array of type Object used to match the number, order, and type of the parameters for 
+             this constructor, under the constraints of binder. If this constructor does not require 
+             parameters, pass an array with zero elements, as in Object[] parameters = new Object[0]. 
+             Any object in this array that is not explicitly initialized with a value will contain the 
+             default value for that object type. For reference-type elements, this value is null. For 
+             value-type elements, this value is 0, 0.0, or false, depending on the specific element 
+             type.
         
-            culture: A System.Globalization.CultureInfo used to govern the coercion of types. If this is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
+            culture: A System.Globalization.CultureInfo used to govern the coercion of types. If this is null, 
+             the System.Globalization.CultureInfo for the current thread is used.
         
             Returns: An instance of the class associated with the constructor.
         """
@@ -9051,14 +9215,15 @@ class _ConstructorInfo:
         
         
             obj: The instance that created this method.
-            parameters: An argument list for the invoked method or constructor. This is an array of objects with the 
-             same number, order, and type as the parameters of the method or constructor to be invoked. If 
-             there are no parameters, parameters should be null.If the method or constructor represented by 
-             this instance takes a ref parameter (ByRef in Visual Basic), no special attribute is required 
-             for that parameter in order to invoke the method or constructor using this function. Any object 
-             in this array that is not explicitly initialized with a value will contain the default value for 
-             that object type. For reference-type elements, this value is null. For value-type elements, this 
-             value is 0, 0.0, or false, depending on the specific element type.
+            parameters: An argument list for the invoked method or constructor. This is an array of objects with 
+             the same number, order, and type as the parameters of the method or constructor to be 
+             invoked. If there are no parameters, parameters should be null.If the method or 
+             constructor represented by this instance takes a ref parameter (ByRef in Visual Basic), 
+             no special attribute is required for that parameter in order to invoke the method or 
+             constructor using this function. Any object in this array that is not explicitly 
+             initialized with a value will contain the default value for that object type. For 
+             reference-type elements, this value is null. For value-type elements, this value is 0, 
+             0.0, or false, depending on the specific element type.
         
             Returns: An instance of the class associated with the constructor.
         """
@@ -9069,24 +9234,25 @@ class _ConstructorInfo:
         Invoke_4(self: _ConstructorInfo, invokeAttr: BindingFlags, binder: Binder, parameters: Array[object], culture: CultureInfo) -> object
         
             Provides COM objects with version-independent access to the 
-             System.Reflection.ConstructorInfo.Invoke(System.Reflection.BindingFlags,System.Reflection.Binder,
-             System.Object[],System.Globalization.CultureInfo) method.
+             System.Reflection.ConstructorInfo.Invoke(System.Reflection.BindingFlags,System.Reflection.
+             Binder,System.Object[],System.Globalization.CultureInfo) method.
         
         
             invokeAttr: One of the BindingFlags values that specifies the type of binding.
-            binder: A Binder that defines a set of properties and enables the binding, coercion of argument types, 
-             and invocation of members using reflection. If binder is null, then Binder.DefaultBinding is 
-             used.
+            binder: A Binder that defines a set of properties and enables the binding, coercion of argument 
+             types, and invocation of members using reflection. If binder is null, then 
+             Binder.DefaultBinding is used.
         
-            parameters: An array of type Object used to match the number, order, and type of the parameters for this 
-             constructor, under the constraints of binder. If this constructor does not require parameters, 
-             pass an array with zero elements, as in Object[] parameters = new Object[0]. Any object in this 
-             array that is not explicitly initialized with a value will contain the default value for that 
-             object type. For reference-type elements, this value is null. For value-type elements, this 
-             value is 0, 0.0, or false, depending on the specific element type.
+            parameters: An array of type Object used to match the number, order, and type of the parameters for 
+             this constructor, under the constraints of binder. If this constructor does not require 
+             parameters, pass an array with zero elements, as in Object[] parameters = new Object[0]. 
+             Any object in this array that is not explicitly initialized with a value will contain the 
+             default value for that object type. For reference-type elements, this value is null. For 
+             value-type elements, this value is 0, 0.0, or false, depending on the specific element 
+             type.
         
-            culture: A System.Globalization.CultureInfo used to govern the coercion of types. If this is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
+            culture: A System.Globalization.CultureInfo used to govern the coercion of types. If this is null, 
+             the System.Globalization.CultureInfo for the current thread is used.
         
             Returns: An instance of the class associated with the constructor.
         """
@@ -9101,11 +9267,12 @@ class _ConstructorInfo:
         
         
             parameters: An array of values that matches the number, order, and type (under the constraints of the 
-             default binder) of the parameters for this constructor. If this constructor takes no parameters, 
-             then use either an array with zero elements or null, as in Object[] parameters = new Object[0]. 
-             Any object in this array that is not explicitly initialized with a value will contain the 
-             default value for that object type. For reference-type elements, this value is null. For 
-             value-type elements, this value is 0, 0.0, or false, depending on the specific element type.
+             default binder) of the parameters for this constructor. If this constructor takes no 
+             parameters, then use either an array with zero elements or null, as in Object[] 
+             parameters = new Object[0]. Any object in this array that is not explicitly initialized 
+             with a value will contain the default value for that object type. For reference-type 
+             elements, this value is null. For value-type elements, this value is 0, 0.0, or false, 
+             depending on the specific element type.
         
             Returns: An instance of the class associated with the constructor.
         """
@@ -9306,8 +9473,8 @@ class _CustomAttributeBuilder:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _CustomAttributeBuilder, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -9320,7 +9487,8 @@ class _CustomAttributeBuilder:
         """
         GetTypeInfoCount(self: _CustomAttributeBuilder) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -9334,8 +9502,8 @@ class _CustomAttributeBuilder:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -9367,8 +9535,8 @@ class _EnumBuilder:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _EnumBuilder, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -9381,7 +9549,8 @@ class _EnumBuilder:
         """
         GetTypeInfoCount(self: _EnumBuilder) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -9395,8 +9564,8 @@ class _EnumBuilder:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -9428,8 +9597,8 @@ class _EventBuilder:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _EventBuilder, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -9442,7 +9611,8 @@ class _EventBuilder:
         """
         GetTypeInfoCount(self: _EventBuilder) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -9456,8 +9626,8 @@ class _EventBuilder:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -9488,25 +9658,18 @@ class _EventInfo:
         """
         Equals(self: _EventInfo, other: object) -> bool
         
-            Provides COM objects with version-independent access to the System.Object.Equals(System.Object) 
-             method.
+            Provides COM objects with version-independent access to the 
+             System.Object.Equals(System.Object) method.
         
         
             other: The System.Object to compare with the current System.Object.
-            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, false.
+            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, 
+             false.
         """
         pass
 
     def GetAddMethod(self, nonPublic=None):
         """
-        GetAddMethod(self: _EventInfo) -> MethodInfo
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.EventInfo.GetAddMethod method.
-        
-            Returns: A System.Reflection.MethodInfo object representing the method used to add an event-handler 
-             delegate to the event source.
-        
         GetAddMethod(self: _EventInfo, nonPublic: bool) -> MethodInfo
         
             Provides COM objects with version-independent access to the 
@@ -9514,23 +9677,21 @@ class _EventInfo:
         
         
             nonPublic: true to return non-public methods; otherwise, false.
-            Returns: A System.Reflection.MethodInfo object representing the method used to add an event-handler 
-             delegate to the event source.
+            Returns: A System.Reflection.MethodInfo object representing the method used to add an 
+             event-handler delegate to the event source.
+        
+        GetAddMethod(self: _EventInfo) -> MethodInfo
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.EventInfo.GetAddMethod method.
+        
+            Returns: A System.Reflection.MethodInfo object representing the method used to add an 
+             event-handler delegate to the event source.
         """
         pass
 
     def GetCustomAttributes(self, *__args):
         """
-        GetCustomAttributes(self: _EventInfo, inherit: bool) -> Array[object]
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean) method.
-        
-        
-            inherit: true to search a member's inheritance chain to find the attributes; otherwise, false.
-            Returns: An array that contains all the custom attributes, or an array with zero (0) elements if no 
-             attributes are defined.
-        
         GetCustomAttributes(self: _EventInfo, attributeType: Type, inherit: bool) -> Array[object]
         
             Provides COM objects with version-independent access to the 
@@ -9541,8 +9702,18 @@ class _EventInfo:
              returned.
         
             inherit: true to search this member's inheritance chain to find the attributes; otherwise, false.
-            Returns: An array of custom attributes applied to this member, or an array with zero (0) elements if no 
-             attributes have been applied.
+            Returns: An array of custom attributes applied to this member, or an array with zero (0) elements 
+             if no attributes have been applied.
+        
+        GetCustomAttributes(self: _EventInfo, inherit: bool) -> Array[object]
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean) method.
+        
+        
+            inherit: true to search a member's inheritance chain to find the attributes; otherwise, false.
+            Returns: An array that contains all the custom attributes, or an array with zero (0) elements if 
+             no attributes are defined.
         """
         pass
 
@@ -9550,7 +9721,9 @@ class _EventInfo:
         """
         GetHashCode(self: _EventInfo) -> int
         
-            Provides COM objects with version-independent access to the System.Object.GetHashCode method.
+            Provides COM objects with version-independent access to the System.Object.GetHashCode 
+             method.
+        
             Returns: The hash code for the current instance.
         """
         pass
@@ -9571,12 +9744,6 @@ class _EventInfo:
 
     def GetRaiseMethod(self, nonPublic=None):
         """
-        GetRaiseMethod(self: _EventInfo) -> MethodInfo
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.EventInfo.GetRaiseMethod method.
-        
-            Returns: The method that is called when the event is raised.
         GetRaiseMethod(self: _EventInfo, nonPublic: bool) -> MethodInfo
         
             Provides COM objects with version-independent access to the 
@@ -9584,20 +9751,18 @@ class _EventInfo:
         
         
             nonPublic: true to return non-public methods; otherwise, false.
-            Returns: The System.Reflection.MethodInfo object that was called when the event was raised.
+            Returns: The System.Reflection.MethodInfo object that was called when the event was raised.
+        GetRaiseMethod(self: _EventInfo) -> MethodInfo
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.EventInfo.GetRaiseMethod method.
+        
+            Returns: The method that is called when the event is raised.
         """
         pass
 
     def GetRemoveMethod(self, nonPublic=None):
         """
-        GetRemoveMethod(self: _EventInfo) -> MethodInfo
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.EventInfo.GetRemoveMethod method.
-        
-            Returns: A System.Reflection.MethodInfo object representing the method used to remove an event-handler 
-             delegate from the event source.
-        
         GetRemoveMethod(self: _EventInfo, nonPublic: bool) -> MethodInfo
         
             Provides COM objects with version-independent access to the 
@@ -9605,8 +9770,16 @@ class _EventInfo:
         
         
             nonPublic: true to return non-public methods; otherwise, false.
-            Returns: A System.Reflection.MethodInfo object representing the method used to remove an event-handler 
-             delegate from the event source.
+            Returns: A System.Reflection.MethodInfo object representing the method used to remove an 
+             event-handler delegate from the event source.
+        
+        GetRemoveMethod(self: _EventInfo) -> MethodInfo
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.EventInfo.GetRemoveMethod method.
+        
+            Returns: A System.Reflection.MethodInfo object representing the method used to remove an 
+             event-handler delegate from the event source.
         """
         pass
 
@@ -9622,8 +9795,8 @@ class _EventInfo:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _EventInfo, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -9636,7 +9809,8 @@ class _EventInfo:
         """
         GetTypeInfoCount(self: _EventInfo) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -9650,8 +9824,8 @@ class _EventInfo:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -9770,12 +9944,13 @@ class _Exception:
         """
         Equals(self: _Exception, obj: object) -> bool
         
-            Provides COM objects with version-independent access to the System.Object.Equals(System.Object) 
-             method.
+            Provides COM objects with version-independent access to the 
+             System.Object.Equals(System.Object) method.
         
         
             obj: The System.Object to compare with the current System.Object.
-            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, false.
+            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, 
+             false.
         """
         pass
 
@@ -9783,12 +9958,12 @@ class _Exception:
         """
         GetBaseException(self: _Exception) -> Exception
         
-            Provides COM objects with version-independent access to the System.Exception.GetBaseException 
-             method.
+            Provides COM objects with version-independent access to the 
+             System.Exception.GetBaseException method.
         
-            Returns: The first exception thrown in a chain of exceptions. If the System.Exception.InnerException 
-             property of the current exception is a null reference (Nothing in Visual Basic), this property 
-             returns the current exception.
+            Returns: The first exception thrown in a chain of exceptions. If the 
+             System.Exception.InnerException property of the current exception is a null reference 
+             (Nothing in Visual Basic), this property returns the current exception.
         """
         pass
 
@@ -9796,7 +9971,9 @@ class _Exception:
         """
         GetHashCode(self: _Exception) -> int
         
-            Provides COM objects with version-independent access to the System.Object.GetHashCode method.
+            Provides COM objects with version-independent access to the System.Object.GetHashCode 
+             method.
+        
             Returns: The hash code for the current instance.
         """
         pass
@@ -9805,15 +9982,15 @@ class _Exception:
         """
         GetObjectData(self: _Exception, info: SerializationInfo, context: StreamingContext)
             Provides COM objects with version-independent access to the 
-             System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Seri
-             alization.StreamingContext) method
+             System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runti
+             me.Serialization.StreamingContext) method
         
         
-            info: The System.Runtime.Serialization.SerializationInfo object that holds the serialized object data 
-             about the exception being thrown.
+            info: The System.Runtime.Serialization.SerializationInfo object that holds the serialized 
+             object data about the exception being thrown.
         
-            context: The System.Runtime.Serialization.StreamingContext structure that contains contextual information 
-             about the source or destination.
+            context: The System.Runtime.Serialization.StreamingContext structure that contains contextual 
+             information about the source or destination.
         """
         pass
 
@@ -9821,7 +9998,9 @@ class _Exception:
         """
         GetType(self: _Exception) -> Type
         
-            Provides COM objects with version-independent access to the System.Exception.GetType method.
+            Provides COM objects with version-independent access to the System.Exception.GetType 
+             method.
+        
             Returns: A System.Type object that represents the exact runtime type of the current instance.
         """
         pass
@@ -9830,7 +10009,9 @@ class _Exception:
         """
         ToString(self: _Exception) -> str
         
-            Provides COM objects with version-independent access to the System.Exception.ToString method.
+            Provides COM objects with version-independent access to the System.Exception.ToString 
+             method.
+        
             Returns: A string that represents the current System.Exception object.
         """
         pass
@@ -9911,8 +10092,8 @@ class _FieldBuilder:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _FieldBuilder, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -9925,7 +10106,8 @@ class _FieldBuilder:
         """
         GetTypeInfoCount(self: _FieldBuilder) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -9939,8 +10121,8 @@ class _FieldBuilder:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -9959,27 +10141,18 @@ class _FieldInfo:
         """
         Equals(self: _FieldInfo, other: object) -> bool
         
-            Provides COM objects with version-independent access to the System.Object.Equals(System.Object) 
-             method.
+            Provides COM objects with version-independent access to the 
+             System.Object.Equals(System.Object) method.
         
         
             other: The System.Object to compare with the current System.Object.
-            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, false.
+            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, 
+             false.
         """
         pass
 
     def GetCustomAttributes(self, *__args):
         """
-        GetCustomAttributes(self: _FieldInfo, inherit: bool) -> Array[object]
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean) method.
-        
-        
-            inherit: Specifies whether to search this member's inheritance chain to find the attributes.
-            Returns: An array that contains all the custom attributes, or an array with zero elements if no 
-             attributes are defined.
-        
         GetCustomAttributes(self: _FieldInfo, attributeType: Type, inherit: bool) -> Array[object]
         
             Provides COM objects with version-independent access to the 
@@ -9990,8 +10163,18 @@ class _FieldInfo:
              returned.
         
             inherit: Specifies whether to search this member's inheritance chain to find the attributes.
-            Returns: An array of custom attributes applied to this member, or an array with zero (0) elements if no 
-             attributes have been applied.
+            Returns: An array of custom attributes applied to this member, or an array with zero (0) elements 
+             if no attributes have been applied.
+        
+        GetCustomAttributes(self: _FieldInfo, inherit: bool) -> Array[object]
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean) method.
+        
+        
+            inherit: Specifies whether to search this member's inheritance chain to find the attributes.
+            Returns: An array that contains all the custom attributes, or an array with zero elements if no 
+             attributes are defined.
         """
         pass
 
@@ -9999,7 +10182,9 @@ class _FieldInfo:
         """
         GetHashCode(self: _FieldInfo) -> int
         
-            Provides COM objects with version-independent access to the System.Object.GetHashCode method.
+            Provides COM objects with version-independent access to the System.Object.GetHashCode 
+             method.
+        
             Returns: The hash code for the current instance.
         """
         pass
@@ -10030,8 +10215,8 @@ class _FieldInfo:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _FieldInfo, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can then be used to get the type information 
-             for an interface.
+            Retrieves the type information for an object, which can then be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -10044,7 +10229,8 @@ class _FieldInfo:
         """
         GetTypeInfoCount(self: _FieldInfo) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -10086,8 +10272,8 @@ class _FieldInfo:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: Pointer to a structure containing an array of arguments, an array of argument DISPIDs for named 
-             arguments, and counts for the number of elements in the arrays.
+            pDispParams: Pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
+             named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: Pointer to the location where the result is to be stored.
             pExcepInfo: Pointer to a structure that contains exception information.
@@ -10111,28 +10297,29 @@ class _FieldInfo:
 
     def SetValue(self, obj, value, invokeAttr=None, binder=None, culture=None):
         """
+        SetValue(self: _FieldInfo, obj: object, value: object, invokeAttr: BindingFlags, binder: Binder, culture: CultureInfo)
+            Provides COM objects with version-independent access to the 
+             System.Reflection.PropertyInfo.SetValue(System.Object,System.Object,System.Reflection.Bind
+             ingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo) 
+             method.
+        
+        
+            obj: The object whose field value will be set.
+            value: The value to assign to the field.
+            invokeAttr: A field of System.Reflection.Binder that specifies the type of binding that is desired 
+             (for example, Binder.CreateInstance or Binder.ExactBinding).
+        
+            binder: A set of properties that enables the binding, coercion of argument types, and invocation 
+             of members through reflection. If binder is null, then Binder.DefaultBinding is used.
+        
+            culture: The software preferences of a particular culture.
         SetValue(self: _FieldInfo, obj: object, value: object)
             Provides COM objects with version-independent access to the 
              System.Reflection.FieldInfo.SetValue(System.Object,System.Object) method.
         
         
             obj: The object whose field value will be set.
-            value: The value to assign to the field.
-        SetValue(self: _FieldInfo, obj: object, value: object, invokeAttr: BindingFlags, binder: Binder, culture: CultureInfo)
-            Provides COM objects with version-independent access to the 
-             System.Reflection.PropertyInfo.SetValue(System.Object,System.Object,System.Reflection.BindingFlag
-             s,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo) method.
-        
-        
-            obj: The object whose field value will be set.
-            value: The value to assign to the field.
-            invokeAttr: A field of System.Reflection.Binder that specifies the type of binding that is desired (for 
-             example, Binder.CreateInstance or Binder.ExactBinding).
-        
-            binder: A set of properties that enables the binding, coercion of argument types, and invocation of 
-             members through reflection. If binder is null, then Binder.DefaultBinding is used.
-        
-            culture: The software preferences of a particular culture.
+            value: The value to assign to the field.
         """
         pass
 
@@ -10322,8 +10509,8 @@ class _ILGenerator:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _ILGenerator, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -10336,7 +10523,8 @@ class _ILGenerator:
         """
         GetTypeInfoCount(self: _ILGenerator) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -10350,8 +10538,8 @@ class _ILGenerator:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -10383,8 +10571,8 @@ class _LocalBuilder:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _LocalBuilder, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -10397,7 +10585,8 @@ class _LocalBuilder:
         """
         GetTypeInfoCount(self: _LocalBuilder) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -10411,8 +10600,8 @@ class _LocalBuilder:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result is to be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -10431,27 +10620,18 @@ class _MemberInfo:
         """
         Equals(self: _MemberInfo, other: object) -> bool
         
-            Provides COM objects with version-independent access to the System.Object.Equals(System.Object) 
-             method.
+            Provides COM objects with version-independent access to the 
+             System.Object.Equals(System.Object) method.
         
         
             other: The System.Object to compare with the current System.Object.
-            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, false.
+            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, 
+             false.
         """
         pass
 
     def GetCustomAttributes(self, *__args):
         """
-        GetCustomAttributes(self: _MemberInfo, inherit: bool) -> Array[object]
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean) method.
-        
-        
-            inherit: true to search this member's inheritance chain to find the attributes; otherwise, false.
-            Returns: An array that contains all the custom attributes, or an array with zero (0) elements if no 
-             attributes are defined.
-        
         GetCustomAttributes(self: _MemberInfo, attributeType: Type, inherit: bool) -> Array[object]
         
             Provides COM objects with version-independent access to the 
@@ -10462,8 +10642,18 @@ class _MemberInfo:
              returned.
         
             inherit: true to search this member's inheritance chain to find the attributes; otherwise, false.
-            Returns: An array of custom attributes applied to this member, or an array with zero (0) elements if no 
-             attributes have been applied.
+            Returns: An array of custom attributes applied to this member, or an array with zero (0) elements 
+             if no attributes have been applied.
+        
+        GetCustomAttributes(self: _MemberInfo, inherit: bool) -> Array[object]
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean) method.
+        
+        
+            inherit: true to search this member's inheritance chain to find the attributes; otherwise, false.
+            Returns: An array that contains all the custom attributes, or an array with zero (0) elements if 
+             no attributes are defined.
         """
         pass
 
@@ -10471,7 +10661,9 @@ class _MemberInfo:
         """
         GetHashCode(self: _MemberInfo) -> int
         
-            Provides COM objects with version-independent access to the System.Object.GetHashCode method.
+            Provides COM objects with version-independent access to the System.Object.GetHashCode 
+             method.
+        
             Returns: The hash code for the current instance.
         """
         pass
@@ -10502,8 +10694,8 @@ class _MemberInfo:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _MemberInfo, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -10516,7 +10708,8 @@ class _MemberInfo:
         """
         GetTypeInfoCount(self: _MemberInfo) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -10530,8 +10723,8 @@ class _MemberInfo:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -10610,27 +10803,18 @@ class _MethodBase:
         """
         Equals(self: _MethodBase, other: object) -> bool
         
-            Provides COM objects with version-independent access to the System.Object.Equals(System.Object) 
-             method.
+            Provides COM objects with version-independent access to the 
+             System.Object.Equals(System.Object) method.
         
         
             other: The System.Object to compare with the current System.Object.
-            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, false.
+            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, 
+             false.
         """
         pass
 
     def GetCustomAttributes(self, *__args):
         """
-        GetCustomAttributes(self: _MethodBase, inherit: bool) -> Array[object]
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean) method.
-        
-        
-            inherit: true to search this member's inheritance chain to find the attributes; otherwise, false.
-            Returns: An array that contains all the custom attributes, or an array with zero (0) elements if no 
-             attributes are defined.
-        
         GetCustomAttributes(self: _MethodBase, attributeType: Type, inherit: bool) -> Array[object]
         
             Provides COM objects with version-independent access to the 
@@ -10641,8 +10825,18 @@ class _MethodBase:
              returned.
         
             inherit: true to search this member's inheritance chain to find the attributes; otherwise, false.
-            Returns: An array of custom attributes applied to this member, or an array with zero (0) elements if no 
-             attributes have been applied.
+            Returns: An array of custom attributes applied to this member, or an array with zero (0) elements 
+             if no attributes have been applied.
+        
+        GetCustomAttributes(self: _MethodBase, inherit: bool) -> Array[object]
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean) method.
+        
+        
+            inherit: true to search this member's inheritance chain to find the attributes; otherwise, false.
+            Returns: An array that contains all the custom attributes, or an array with zero (0) elements if 
+             no attributes are defined.
         """
         pass
 
@@ -10650,7 +10844,9 @@ class _MethodBase:
         """
         GetHashCode(self: _MethodBase) -> int
         
-            Provides COM objects with version-independent access to the System.Object.GetHashCode method.
+            Provides COM objects with version-independent access to the System.Object.GetHashCode 
+             method.
+        
             Returns: The hash code for the current instance.
         """
         pass
@@ -10704,8 +10900,8 @@ class _MethodBase:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _MethodBase, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -10718,53 +10914,13 @@ class _MethodBase:
         """
         GetTypeInfoCount(self: _MethodBase) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
     def Invoke(self, *__args):
         """
-        Invoke(self: _MethodBase, obj: object, parameters: Array[object]) -> object
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.MethodBase.Invoke(System.Object,System.Object[]) method.
-        
-        
-            obj: The instance that created this method.
-            parameters: An argument list for the invoked method or constructor. This is an array of objects with the 
-             same number, order, and type as the parameters of the method or constructor to be invoked. If 
-             there are no parameters, parameters should be null.If the method or constructor represented by 
-             this instance takes a ref parameter (ByRef in Visual Basic), no special attribute is required 
-             for that parameter to invoke the method or constructor using this function. Any object in this 
-             array that is not explicitly initialized with a value will contain the default value for that 
-             object type. For reference type elements, this value is null. For value type elements, this 
-             value is 0, 0.0, or false, depending on the specific element type.
-        
-            Returns: An instance of the class associated with the constructor.
-        Invoke(self: _MethodBase, obj: object, invokeAttr: BindingFlags, binder: Binder, parameters: Array[object], culture: CultureInfo) -> object
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.MethodBase.Invoke(System.Object,System.Reflection.BindingFlags,System.Reflectio
-             n.Binder,System.Object[],System.Globalization.CultureInfo) method.
-        
-        
-            obj: The instance that created this method.
-            invokeAttr: One of the BindingFlags values that specifies the type of binding.
-            binder: A Binder that defines a set of properties and enables the binding, coercion of argument types, 
-             and invocation of members using reflection. If binder is null, then Binder.DefaultBinding is 
-             used.
-        
-            parameters: An array of type Object used to match the number, order, and type of the parameters for this 
-             constructor, under the constraints of binder. If this constructor does not require parameters, 
-             pass an array with zero elements, as in Object[] parameters = new Object[0]. Any object in this 
-             array that is not explicitly initialized with a value will contain the default value for that 
-             object type. For reference type elements, this value is null. For value type elements, this 
-             value is 0, 0.0, or false, depending on the specific element type.
-        
-            culture: A System.Globalization.CultureInfo object used to govern the coercion of types. If this is null, 
-             the System.Globalization.CultureInfo for the current thread is used.
-        
-            Returns: An instance of the class associated with the constructor.
         Invoke(self: _MethodBase, dispIdMember: UInt32, riid: Guid, lcid: UInt32, wFlags: Int16, pDispParams: IntPtr, pVarResult: IntPtr, pExcepInfo: IntPtr, puArgErr: IntPtr) -> Guid
         
             Provides access to properties and methods exposed by an object.
@@ -10773,12 +10929,55 @@ class _MethodBase:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
-            puArgErr: The index of the first argument that has an error.
+            puArgErr: The index of the first argument that has an error.
+        Invoke(self: _MethodBase, obj: object, invokeAttr: BindingFlags, binder: Binder, parameters: Array[object], culture: CultureInfo) -> object
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.MethodBase.Invoke(System.Object,System.Reflection.BindingFlags,System.Re
+             flection.Binder,System.Object[],System.Globalization.CultureInfo) method.
+        
+        
+            obj: The instance that created this method.
+            invokeAttr: One of the BindingFlags values that specifies the type of binding.
+            binder: A Binder that defines a set of properties and enables the binding, coercion of argument 
+             types, and invocation of members using reflection. If binder is null, then 
+             Binder.DefaultBinding is used.
+        
+            parameters: An array of type Object used to match the number, order, and type of the parameters for 
+             this constructor, under the constraints of binder. If this constructor does not require 
+             parameters, pass an array with zero elements, as in Object[] parameters = new Object[0]. 
+             Any object in this array that is not explicitly initialized with a value will contain the 
+             default value for that object type. For reference type elements, this value is null. For 
+             value type elements, this value is 0, 0.0, or false, depending on the specific element 
+             type.
+        
+            culture: A System.Globalization.CultureInfo object used to govern the coercion of types. If this 
+             is null, the System.Globalization.CultureInfo for the current thread is used.
+        
+            Returns: An instance of the class associated with the constructor.
+        Invoke(self: _MethodBase, obj: object, parameters: Array[object]) -> object
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.MethodBase.Invoke(System.Object,System.Object[]) method.
+        
+        
+            obj: The instance that created this method.
+            parameters: An argument list for the invoked method or constructor. This is an array of objects with 
+             the same number, order, and type as the parameters of the method or constructor to be 
+             invoked. If there are no parameters, parameters should be null.If the method or 
+             constructor represented by this instance takes a ref parameter (ByRef in Visual Basic), 
+             no special attribute is required for that parameter to invoke the method or constructor 
+             using this function. Any object in this array that is not explicitly initialized with a 
+             value will contain the default value for that object type. For reference type elements, 
+             this value is null. For value type elements, this value is 0, 0.0, or false, depending on 
+             the specific element type.
+        
+            Returns: An instance of the class associated with the constructor.
         """
         pass
 
@@ -10978,8 +11177,8 @@ class _MethodBuilder:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _MethodBuilder, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -10992,7 +11191,8 @@ class _MethodBuilder:
         """
         GetTypeInfoCount(self: _MethodBuilder) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -11006,8 +11206,8 @@ class _MethodBuilder:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -11026,12 +11226,13 @@ class _MethodInfo:
         """
         Equals(self: _MethodInfo, other: object) -> bool
         
-            Provides COM objects with version-independent access to the System.Object.Equals(System.Object) 
-             method.
+            Provides COM objects with version-independent access to the 
+             System.Object.Equals(System.Object) method.
         
         
             other: The System.Object to compare with the current System.Object.
-            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, false.
+            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, 
+             false.
         """
         pass
 
@@ -11048,16 +11249,6 @@ class _MethodInfo:
 
     def GetCustomAttributes(self, *__args):
         """
-        GetCustomAttributes(self: _MethodInfo, inherit: bool) -> Array[object]
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean) method.
-        
-        
-            inherit: true to search this member's inheritance chain to find the attributes; otherwise, false.
-            Returns: An array that contains all the custom attributes, or an array with zero (0) elements if no 
-             attributes are defined.
-        
         GetCustomAttributes(self: _MethodInfo, attributeType: Type, inherit: bool) -> Array[object]
         
             Provides COM objects with version-independent access to the 
@@ -11068,8 +11259,18 @@ class _MethodInfo:
              returned.
         
             inherit: true to search this member's inheritance chain to find the attributes; otherwise, false.
-            Returns: An array of custom attributes applied to this member, or an array with zero (0) elements if no 
-             attributes have been applied.
+            Returns: An array of custom attributes applied to this member, or an array with zero (0) elements 
+             if no attributes have been applied.
+        
+        GetCustomAttributes(self: _MethodInfo, inherit: bool) -> Array[object]
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean) method.
+        
+        
+            inherit: true to search this member's inheritance chain to find the attributes; otherwise, false.
+            Returns: An array that contains all the custom attributes, or an array with zero (0) elements if 
+             no attributes are defined.
         """
         pass
 
@@ -11077,7 +11278,9 @@ class _MethodInfo:
         """
         GetHashCode(self: _MethodInfo) -> int
         
-            Provides COM objects with version-independent access to the System.Object.GetHashCode method.
+            Provides COM objects with version-independent access to the System.Object.GetHashCode 
+             method.
+        
             Returns: The hash code for the current instance.
         """
         pass
@@ -11131,8 +11334,8 @@ class _MethodInfo:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _MethodInfo, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -11145,53 +11348,13 @@ class _MethodInfo:
         """
         GetTypeInfoCount(self: _MethodInfo) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
     def Invoke(self, *__args):
         """
-        Invoke(self: _MethodInfo, obj: object, parameters: Array[object]) -> object
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.MethodBase.Invoke(System.Object,System.Object[]) method.
-        
-        
-            obj: The instance that created this method.
-            parameters: An argument list for the invoked method or constructor. This is an array of objects with the 
-             same number, order, and type as the parameters of the method or constructor to be invoked. If 
-             there are no parameters, parameters should be null.If the method or constructor represented by 
-             this instance takes a ref parameter (ByRef in Visual Basic), no special attribute is required 
-             for that parameter to invoke the method or constructor using this function. Any object in this 
-             array that is not explicitly initialized with a value will contain the default value for that 
-             object type. For reference type elements, this value is null. For value type elements, this 
-             value is 0, 0.0, or false, depending on the specific element type.
-        
-            Returns: An instance of the class associated with the constructor.
-        Invoke(self: _MethodInfo, obj: object, invokeAttr: BindingFlags, binder: Binder, parameters: Array[object], culture: CultureInfo) -> object
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.MethodBase.Invoke(System.Object,System.Reflection.BindingFlags,System.Reflectio
-             n.Binder,System.Object[],System.Globalization.CultureInfo) method.
-        
-        
-            obj: The instance that created this method.
-            invokeAttr: One of the BindingFlags values that specifies the type of binding.
-            binder: A Binder that defines a set of properties and enables the binding, coercion of argument types, 
-             and invocation of members using reflection. If binder is null, then Binder.DefaultBinding is 
-             used.
-        
-            parameters: An array of type Object used to match the number, order, and type of the parameters for this 
-             constructor, under the constraints of binder. If this constructor does not require parameters, 
-             pass an array with zero elements, as in Object[] parameters = new Object[0]. Any object in this 
-             array that is not explicitly initialized with a value will contain the default value for that 
-             object type. For reference type elements, this value is null. For value type elements, this 
-             value is 0, 0.0, or false, depending on the specific element type.
-        
-            culture: A System.Globalization.CultureInfo object used to govern the coercion of types. If this is null, 
-             the System.Globalization.CultureInfo for the current thread is used.
-        
-            Returns: An instance of the class associated with the constructor.
         Invoke(self: _MethodInfo, dispIdMember: UInt32, riid: Guid, lcid: UInt32, wFlags: Int16, pDispParams: IntPtr, pVarResult: IntPtr, pExcepInfo: IntPtr, puArgErr: IntPtr) -> Guid
         
             Provides access to properties and methods exposed by an object.
@@ -11200,12 +11363,55 @@ class _MethodInfo:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
-            puArgErr: The index of the first argument that has an error.
+            puArgErr: The index of the first argument that has an error.
+        Invoke(self: _MethodInfo, obj: object, invokeAttr: BindingFlags, binder: Binder, parameters: Array[object], culture: CultureInfo) -> object
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.MethodBase.Invoke(System.Object,System.Reflection.BindingFlags,System.Re
+             flection.Binder,System.Object[],System.Globalization.CultureInfo) method.
+        
+        
+            obj: The instance that created this method.
+            invokeAttr: One of the BindingFlags values that specifies the type of binding.
+            binder: A Binder that defines a set of properties and enables the binding, coercion of argument 
+             types, and invocation of members using reflection. If binder is null, then 
+             Binder.DefaultBinding is used.
+        
+            parameters: An array of type Object used to match the number, order, and type of the parameters for 
+             this constructor, under the constraints of binder. If this constructor does not require 
+             parameters, pass an array with zero elements, as in Object[] parameters = new Object[0]. 
+             Any object in this array that is not explicitly initialized with a value will contain the 
+             default value for that object type. For reference type elements, this value is null. For 
+             value type elements, this value is 0, 0.0, or false, depending on the specific element 
+             type.
+        
+            culture: A System.Globalization.CultureInfo object used to govern the coercion of types. If this 
+             is null, the System.Globalization.CultureInfo for the current thread is used.
+        
+            Returns: An instance of the class associated with the constructor.
+        Invoke(self: _MethodInfo, obj: object, parameters: Array[object]) -> object
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.MethodBase.Invoke(System.Object,System.Object[]) method.
+        
+        
+            obj: The instance that created this method.
+            parameters: An argument list for the invoked method or constructor. This is an array of objects with 
+             the same number, order, and type as the parameters of the method or constructor to be 
+             invoked. If there are no parameters, parameters should be null.If the method or 
+             constructor represented by this instance takes a ref parameter (ByRef in Visual Basic), 
+             no special attribute is required for that parameter to invoke the method or constructor 
+             using this function. Any object in this array that is not explicitly initialized with a 
+             value will contain the default value for that object type. For reference type elements, 
+             this value is null. For value type elements, this value is 0, 0.0, or false, depending on 
+             the specific element type.
+        
+            Returns: An instance of the class associated with the constructor.
         """
         pass
 
@@ -11419,8 +11625,8 @@ class _MethodRental:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _MethodRental, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -11433,7 +11639,8 @@ class _MethodRental:
         """
         GetTypeInfoCount(self: _MethodRental) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -11447,8 +11654,8 @@ class _MethodRental:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -11480,8 +11687,8 @@ class _Module:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _Module, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -11494,7 +11701,8 @@ class _Module:
         """
         GetTypeInfoCount(self: _Module) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -11508,8 +11716,8 @@ class _Module:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -11541,8 +11749,8 @@ class _ModuleBuilder:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _ModuleBuilder, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -11555,7 +11763,8 @@ class _ModuleBuilder:
         """
         GetTypeInfoCount(self: _ModuleBuilder) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -11569,8 +11778,8 @@ class _ModuleBuilder:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -11602,8 +11811,8 @@ class _ParameterBuilder:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _ParameterBuilder, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -11616,7 +11825,8 @@ class _ParameterBuilder:
         """
         GetTypeInfoCount(self: _ParameterBuilder) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -11630,8 +11840,8 @@ class _ParameterBuilder:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -11663,8 +11873,8 @@ class _ParameterInfo:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _ParameterInfo, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -11677,7 +11887,8 @@ class _ParameterInfo:
         """
         GetTypeInfoCount(self: _ParameterInfo) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -11691,8 +11902,8 @@ class _ParameterInfo:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -11724,8 +11935,8 @@ class _PropertyBuilder:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _PropertyBuilder, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -11738,7 +11949,8 @@ class _PropertyBuilder:
         """
         GetTypeInfoCount(self: _PropertyBuilder) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -11752,8 +11964,8 @@ class _PropertyBuilder:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -11772,26 +11984,18 @@ class _PropertyInfo:
         """
         Equals(self: _PropertyInfo, other: object) -> bool
         
-            Provides COM objects with version-independent access to the System.Object.Equals(System.Object) 
-             method.
+            Provides COM objects with version-independent access to the 
+             System.Object.Equals(System.Object) method.
         
         
             other: The System.Object to compare with the current System.Object.
-            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, false.
+            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, 
+             false.
         """
         pass
 
     def GetAccessors(self, nonPublic=None):
         """
-        GetAccessors(self: _PropertyInfo) -> Array[MethodInfo]
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.PropertyInfo.GetAccessors method.
-        
-            Returns: An array of System.Reflection.MethodInfo objects that reflect the public get, set, and other 
-             accessors of the property reflected by the current instance, if accessors are found; otherwise, 
-             this method returns an array with zero (0) elements.
-        
         GetAccessors(self: _PropertyInfo, nonPublic: bool) -> Array[MethodInfo]
         
             Provides COM objects with version-independent access to the 
@@ -11799,26 +12003,26 @@ class _PropertyInfo:
         
         
             nonPublic: true to include non-public methods in the returned MethodInfo array; otherwise, false.
-            Returns: An array of System.Reflection.MethodInfo objects whose elements reflect the get, set, and other 
-             accessors of the property reflected by the current instance. If the nonPublic parameter is true, 
-             this array contains public and non-public get, set, and other accessors. If nonPublic is false, 
-             this array contains only public get, set, and other accessors. If no accessors with the 
-             specified visibility are found, this method returns an array with zero (0) elements.
+            Returns: An array of System.Reflection.MethodInfo objects whose elements reflect the get, set, and 
+             other accessors of the property reflected by the current instance. If the nonPublic 
+             parameter is true, this array contains public and non-public get, set, and other 
+             accessors. If nonPublic is false, this array contains only public get, set, and other 
+             accessors. If no accessors with the specified visibility are found, this method returns 
+             an array with zero (0) elements.
+        
+        GetAccessors(self: _PropertyInfo) -> Array[MethodInfo]
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.PropertyInfo.GetAccessors method.
+        
+            Returns: An array of System.Reflection.MethodInfo objects that reflect the public get, set, and 
+             other accessors of the property reflected by the current instance, if accessors are 
+             found; otherwise, this method returns an array with zero (0) elements.
         """
         pass
 
     def GetCustomAttributes(self, *__args):
         """
-        GetCustomAttributes(self: _PropertyInfo, inherit: bool) -> Array[object]
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean) method.
-        
-        
-            inherit: true to search this member's inheritance chain to find the attributes; otherwise false.
-            Returns: An array that contains all the custom attributes, or an array with zero elements if no 
-             attributes are defined.
-        
         GetCustomAttributes(self: _PropertyInfo, attributeType: Type, inherit: bool) -> Array[object]
         
             Provides COM objects with version-independent access to the 
@@ -11829,21 +12033,23 @@ class _PropertyInfo:
              returned.
         
             inherit: true to search this member's inheritance chain to find the attributes; otherwise false.
-            Returns: An array of custom attributes applied to this member, or an array with zero (0) elements if no 
-             attributes have been applied.
+            Returns: An array of custom attributes applied to this member, or an array with zero (0) elements 
+             if no attributes have been applied.
+        
+        GetCustomAttributes(self: _PropertyInfo, inherit: bool) -> Array[object]
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean) method.
+        
+        
+            inherit: true to search this member's inheritance chain to find the attributes; otherwise false.
+            Returns: An array that contains all the custom attributes, or an array with zero elements if no 
+             attributes are defined.
         """
         pass
 
     def GetGetMethod(self, nonPublic=None):
         """
-        GetGetMethod(self: _PropertyInfo) -> MethodInfo
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.PropertyInfo.GetGetMethod method.
-        
-            Returns: A System.Reflection.MethodInfo object representing the public get accessor for this property, or 
-             null if the get accessor is non-public or does not exist.
-        
         GetGetMethod(self: _PropertyInfo, nonPublic: bool) -> MethodInfo
         
             Provides COM objects with version-independent access to the 
@@ -11851,9 +12057,17 @@ class _PropertyInfo:
         
         
             nonPublic: true to return a non-public get accessor; otherwise, false.
-            Returns: A System.Reflection.MethodInfo object representing the get accessor for this property, if the 
-             nonPublic parameter is true. Or null if nonPublic is false and the get accessor is non-public, 
-             or if nonPublic is true but no get accessors exist.
+            Returns: A System.Reflection.MethodInfo object representing the get accessor for this property, if 
+             the nonPublic parameter is true. Or null if nonPublic is false and the get accessor is 
+             non-public, or if nonPublic is true but no get accessors exist.
+        
+        GetGetMethod(self: _PropertyInfo) -> MethodInfo
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.PropertyInfo.GetGetMethod method.
+        
+            Returns: A System.Reflection.MethodInfo object representing the public get accessor for this 
+             property, or null if the get accessor is non-public or does not exist.
         """
         pass
 
@@ -11861,7 +12075,9 @@ class _PropertyInfo:
         """
         GetHashCode(self: _PropertyInfo) -> int
         
-            Provides COM objects with version-independent access to the System.Object.GetHashCode method.
+            Provides COM objects with version-independent access to the System.Object.GetHashCode 
+             method.
+        
             Returns: The hash code for the current instance.
         """
         pass
@@ -11887,20 +12103,13 @@ class _PropertyInfo:
             Provides COM objects with version-independent access to the 
              System.Reflection.PropertyInfo.GetIndexParameters method.
         
-            Returns: An array of type System.Reflection.ParameterInfo containing the parameters for the indexes.
+            Returns: An array of type System.Reflection.ParameterInfo containing the parameters for the 
+             indexes.
         """
         pass
 
     def GetSetMethod(self, nonPublic=None):
         """
-        GetSetMethod(self: _PropertyInfo) -> MethodInfo
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.PropertyInfo.GetSetMethod method.
-        
-            Returns: The System.Reflection.MethodInfo object representing the Set method for this property if the set 
-             accessor is public, or null if the set accessor is not public.
-        
         GetSetMethod(self: _PropertyInfo, nonPublic: bool) -> MethodInfo
         
             Provides COM objects with version-independent access to the 
@@ -11908,11 +12117,19 @@ class _PropertyInfo:
         
         
             nonPublic: true to return a non-public accessor; otherwise, false.
-            Returns: One of the values in the following table.Value Meaning A System.Reflection.MethodInfo object 
-             representing the Set method for this property. The set accessor is public.-or- The nonPublic 
-             parameter is true and the set accessor is non-public. nullThe nonPublic parameter is true, but 
-             the property is read-only.-or- The nonPublic parameter is false and the set accessor is 
-             non-public.-or- There is no set accessor.
+            Returns: One of the values in the following table.Value Meaning A System.Reflection.MethodInfo 
+             object representing the Set method for this property. The set accessor is public.-or- The 
+             nonPublic parameter is true and the set accessor is non-public. nullThe nonPublic 
+             parameter is true, but the property is read-only.-or- The nonPublic parameter is false 
+             and the set accessor is non-public.-or- There is no set accessor.
+        
+        GetSetMethod(self: _PropertyInfo) -> MethodInfo
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.PropertyInfo.GetSetMethod method.
+        
+            Returns: The System.Reflection.MethodInfo object representing the Set method for this property if 
+             the set accessor is public, or null if the set accessor is not public.
         """
         pass
 
@@ -11928,8 +12145,8 @@ class _PropertyInfo:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _PropertyInfo, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -11942,38 +12159,13 @@ class _PropertyInfo:
         """
         GetTypeInfoCount(self: _PropertyInfo) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
     def GetValue(self, obj, *__args):
         """
-        GetValue(self: _PropertyInfo, obj: object, invokeAttr: BindingFlags, binder: Binder, index: Array[object], culture: CultureInfo) -> object
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.PropertyInfo.GetValue(System.Object,System.Reflection.BindingFlags,System.Refle
-             ction.Binder,System.Object[],System.Globalization.CultureInfo) method.
-        
-        
-            obj: The object whose property value will be returned.
-            invokeAttr: The invocation attribute. This must be a bit flag from BindingFlags: InvokeMethod, 
-             CreateInstance, Static, GetField, SetField, GetProperty, or SetProperty. A suitable invocation 
-             attribute must be specified. If a static member will be invoked, the Static flag of BindingFlags 
-             must be set.
-        
-            binder: An object that enables the binding, coercion of argument types, invocation of members, and 
-             retrieval of MemberInfo objects through reflection. If binder is null, the default binder is 
-             used.
-        
-            index: Optional index values for indexed properties. This value should be null for non-indexed 
-             properties.
-        
-            culture: The CultureInfo object that represents the culture for which the resource will be localized. 
-             Note that if the resource is not localized for this culture, the CultureInfo.Parent method will 
-             be called successively in search of a match. If this value is null, the CultureInfo is obtained 
-             from the CultureInfo.CurrentUICulture property.
-        
-            Returns: The property value for the obj parameter.
         GetValue(self: _PropertyInfo, obj: object, index: Array[object]) -> object
         
             Provides COM objects with version-independent access to the 
@@ -11983,6 +12175,32 @@ class _PropertyInfo:
             obj: The object whose property value will be returned.
             index: Optional index values for indexed properties. This value should be null for non-indexed 
              properties.
+        
+            Returns: The property value for the obj parameter.
+        GetValue(self: _PropertyInfo, obj: object, invokeAttr: BindingFlags, binder: Binder, index: Array[object], culture: CultureInfo) -> object
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.PropertyInfo.GetValue(System.Object,System.Reflection.BindingFlags,Syste
+             m.Reflection.Binder,System.Object[],System.Globalization.CultureInfo) method.
+        
+        
+            obj: The object whose property value will be returned.
+            invokeAttr: The invocation attribute. This must be a bit flag from BindingFlags: InvokeMethod, 
+             CreateInstance, Static, GetField, SetField, GetProperty, or SetProperty. A suitable 
+             invocation attribute must be specified. If a static member will be invoked, the Static 
+             flag of BindingFlags must be set.
+        
+            binder: An object that enables the binding, coercion of argument types, invocation of members, 
+             and retrieval of MemberInfo objects through reflection. If binder is null, the default 
+             binder is used.
+        
+            index: Optional index values for indexed properties. This value should be null for non-indexed 
+             properties.
+        
+            culture: The CultureInfo object that represents the culture for which the resource will be 
+             localized. Note that if the resource is not localized for this culture, the 
+             CultureInfo.Parent method will be called successively in search of a match. If this value 
+             is null, the CultureInfo is obtained from the CultureInfo.CurrentUICulture property.
         
             Returns: The property value for the obj parameter.
         """
@@ -11998,8 +12216,8 @@ class _PropertyInfo:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -12024,40 +12242,42 @@ class _PropertyInfo:
 
     def SetValue(self, obj, value, *__args):
         """
+        SetValue(self: _PropertyInfo, obj: object, value: object, index: Array[object])
+            Provides COM objects with version-independent access to the 
+             System.Reflection.PropertyInfo.SetValue(System.Object,System.Object,System.Object[]) 
+             method.
+        
+        
+            obj: The object whose property value will be set.
+            value: The new value for this property.
+            index: Optional index values for indexed properties. This value should be null for non-indexed 
+             properties.
+        
         SetValue(self: _PropertyInfo, obj: object, value: object, invokeAttr: BindingFlags, binder: Binder, index: Array[object], culture: CultureInfo)
             Provides COM objects with version-independent access to the 
-             System.Reflection.FieldInfo.SetValue(System.Object,System.Object,System.Reflection.BindingFlags,S
-             ystem.Reflection.Binder,System.Globalization.CultureInfo) method.
+             System.Reflection.FieldInfo.SetValue(System.Object,System.Object,System.Reflection.Binding
+             Flags,System.Reflection.Binder,System.Globalization.CultureInfo) method.
         
         
             obj: The object whose property value will be returned.
             value: The new value for this property.
             invokeAttr: The invocation attribute. This must be a bit flag from System.Reflection.BindingFlags: 
              InvokeMethod, CreateInstance, Static, GetField, SetField, GetProperty, or SetProperty. A 
-             suitable invocation attribute must be specified. If a static member will be invoked, the Static 
-             flag of BindingFlags must be set.
+             suitable invocation attribute must be specified. If a static member will be invoked, the 
+             Static flag of BindingFlags must be set.
         
-            binder: An object that enables the binding, coercion of argument types, invocation of members, and 
-             retrieval of System.Reflection.MemberInfo objects through reflection. If binder is null, the 
-             default binder is used.
+            binder: An object that enables the binding, coercion of argument types, invocation of members, 
+             and retrieval of System.Reflection.MemberInfo objects through reflection. If binder is 
+             null, the default binder is used.
         
             index: Optional index values for indexed properties. This value should be null for non-indexed 
              properties.
         
-            culture: The System.Globalization.CultureInfo object that represents the culture for which the resource 
-             will be localized. Note that if the resource is not localized for this culture, the 
-             CultureInfo.Parent method will be called successively in search of a match. If this value is 
-             null, the CultureInfo is obtained from the CultureInfo.CurrentUICulture property.
-        
-        SetValue(self: _PropertyInfo, obj: object, value: object, index: Array[object])
-            Provides COM objects with version-independent access to the 
-             System.Reflection.PropertyInfo.SetValue(System.Object,System.Object,System.Object[]) method.
-        
-        
-            obj: The object whose property value will be set.
-            value: The new value for this property.
-            index: Optional index values for indexed properties. This value should be null for non-indexed 
-             properties.
+            culture: The System.Globalization.CultureInfo object that represents the culture for which the 
+             resource will be localized. Note that if the resource is not localized for this culture, 
+             the CultureInfo.Parent method will be called successively in search of a match. If this 
+             value is null, the CultureInfo is obtained from the CultureInfo.CurrentUICulture 
+             property.
         """
         pass
 
@@ -12165,8 +12385,8 @@ class _SignatureHelper:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _SignatureHelper, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -12179,7 +12399,8 @@ class _SignatureHelper:
         """
         GetTypeInfoCount(self: _SignatureHelper) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -12193,8 +12414,8 @@ class _SignatureHelper:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -12226,8 +12447,8 @@ class _Thread:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _Thread, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -12240,7 +12461,8 @@ class _Thread:
         """
         GetTypeInfoCount(self: _Thread) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -12254,8 +12476,8 @@ class _Thread:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.
@@ -12272,29 +12494,29 @@ class _Type:
     """ Exposes the public members of the System.Type class to the unmanaged code. """
     def Equals(self, *__args):
         """
-        Equals(self: _Type, o: Type) -> bool
-        
-            Provides COM objects with version-independent access to the System.Type.Equals(System.Type) 
-             method.
-        
-        
-            o: The System.Type whose underlying system type is to be compared with the underlying system type 
-             of the current System.Type.
-        
-            Returns: true if the underlying system type of o is the same as the underlying system type of the current 
-             System.Type; otherwise, false.
-        
         Equals(self: _Type, other: object) -> bool
         
-            Provides COM objects with version-independent access to the System.Type.Equals(System.Object) 
-             method.
+            Provides COM objects with version-independent access to the 
+             System.Type.Equals(System.Object) method.
         
         
-            other: The System.Object whose underlying system type is to be compared with the underlying system type 
-             of the current System.Type.
+            other: The System.Object whose underlying system type is to be compared with the underlying 
+             system type of the current System.Type.
         
-            Returns: true if the underlying system type of o is the same as the underlying system type of the current 
-             System.Type; otherwise, false.
+            Returns: true if the underlying system type of o is the same as the underlying system type of the 
+             current System.Type; otherwise, false.
+        
+        Equals(self: _Type, o: Type) -> bool
+        
+            Provides COM objects with version-independent access to the 
+             System.Type.Equals(System.Type) method.
+        
+        
+            o: The System.Type whose underlying system type is to be compared with the underlying system 
+             type of the current System.Type.
+        
+            Returns: true if the underlying system type of o is the same as the underlying system type of the 
+             current System.Type; otherwise, false.
         """
         pass
 
@@ -12306,13 +12528,16 @@ class _Type:
              System.Type.FindInterfaces(System.Reflection.TypeFilter,System.Object) method.
         
         
-            filter: The System.Reflection.TypeFilter delegate that compares the interfaces against filterCriteria.
-            filterCriteria: The search criteria that determines whether an interface should be included in the returned 
-             array.
+            filter: The System.Reflection.TypeFilter delegate that compares the interfaces against 
+             filterCriteria.
         
-            Returns: An array of System.Type objects representing a filtered list of the interfaces implemented or 
-             inherited by the current System.Type.-or- An empty array of type System.Type, if no interfaces 
-             matching the filter are implemented or inherited by the current System.Type.
+            filterCriteria: The search criteria that determines whether an interface should be included in the 
+             returned array.
+        
+            Returns: An array of System.Type objects representing a filtered list of the interfaces 
+             implemented or inherited by the current System.Type.-or- An empty array of type 
+             System.Type, if no interfaces matching the filter are implemented or inherited by the 
+             current System.Type.
         """
         pass
 
@@ -12321,27 +12546,29 @@ class _Type:
         FindMembers(self: _Type, memberType: MemberTypes, bindingAttr: BindingFlags, filter: MemberFilter, filterCriteria: object) -> Array[MemberInfo]
         
             Provides COM objects with version-independent access to the 
-             System.Type.FindMembers(System.Reflection.MemberTypes,System.Reflection.BindingFlags,System.Refle
-             ction.MemberFilter,System.Object) method.
+             System.Type.FindMembers(System.Reflection.MemberTypes,System.Reflection.BindingFlags,Syste
+             m.Reflection.MemberFilter,System.Object) method.
         
         
             memberType: A MemberTypes object indicating the type of member to search for.
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return null.
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return null.
         
-            filter: The delegate that does the comparisons, returning true if the member currently being inspected 
-             matches the filterCriteria and false otherwise. You can use the FilterAttribute, FilterName, and 
-             FilterNameIgnoreCase delegates supplied by this class. The first uses the fields of 
-             FieldAttributes, MethodAttributes, and MethodImplAttributes as search criteria, and the other 
-             two delegates use String objects as the search criteria.
+            filter: The delegate that does the comparisons, returning true if the member currently being 
+             inspected matches the filterCriteria and false otherwise. You can use the 
+             FilterAttribute, FilterName, and FilterNameIgnoreCase delegates supplied by this class. 
+             The first uses the fields of FieldAttributes, MethodAttributes, and MethodImplAttributes 
+             as search criteria, and the other two delegates use String objects as the search 
+             criteria.
         
-            filterCriteria: The search criteria that determines whether a member is returned in the array of MemberInfo 
-             objects.The fields of FieldAttributes, MethodAttributes, and MethodImplAttributes can be used in 
-             conjunction with the FilterAttribute delegate supplied by this class.
+            filterCriteria: The search criteria that determines whether a member is returned in the array of 
+             MemberInfo objects.The fields of FieldAttributes, MethodAttributes, and 
+             MethodImplAttributes can be used in conjunction with the FilterAttribute delegate 
+             supplied by this class.
         
-            Returns: A filtered array of System.Reflection.MemberInfo objects of the specified member type.-or- An 
-             empty array of type System.Reflection.MemberInfo, if the current System.Type does not have 
-             members of type memberType that match the filter criteria.
+            Returns: A filtered array of System.Reflection.MemberInfo objects of the specified member 
+             type.-or- An empty array of type System.Reflection.MemberInfo, if the current System.Type 
+             does not have members of type memberType that match the filter criteria.
         """
         pass
 
@@ -12349,123 +12576,123 @@ class _Type:
         """
         GetArrayRank(self: _Type) -> int
         
-            Provides COM objects with version-independent access to the System.Type.GetArrayRank method.
+            Provides COM objects with version-independent access to the System.Type.GetArrayRank 
+             method.
+        
             Returns: An System.Int32 containing the number of dimensions in the current System.Type.
         """
         pass
 
     def GetConstructor(self, *__args):
         """
+        GetConstructor(self: _Type, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Array[Type], modifiers: Array[ParameterModifier]) -> ConstructorInfo
+        
+            Provides COM objects with version-independent access to the 
+             System.Type.GetConstructor(System.Reflection.BindingFlags,System.Reflection.Binder,System.
+             Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[]) 
+             method.
+        
+        
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return null.
+        
+            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, 
+             which can involve selection of an overloaded method, coercion of argument types, and 
+             invocation of a member through reflection.-or- null, to use the 
+             System.Type.DefaultBinder.
+        
+            callConvention: The System.Reflection.CallingConventions object that specifies the set of rules to use 
+             regarding the order and layout of arguments, how the return value is passed, what 
+             registers are used for arguments, and the stack is cleaned up.
+        
+            types: An array of System.Type objects representing the number, order, and type of the 
+             parameters for the constructor to get.-or- An empty array of the type System.Type (that 
+             is, Type[] types = new Type[0]) to get a constructor that takes no parameters.
+        
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes 
+             associated with the corresponding element in the types array. The default binder does not 
+             process this parameter.
+        
+            Returns: A System.Reflection.ConstructorInfo object representing the constructor that matches the 
+             specified requirements, if found; otherwise, null.
+        
+        GetConstructor(self: _Type, bindingAttr: BindingFlags, binder: Binder, types: Array[Type], modifiers: Array[ParameterModifier]) -> ConstructorInfo
+        
+            Provides COM objects with version-independent access to the 
+             System.Type.GetConstructor(System.Reflection.BindingFlags,System.Reflection.Binder,System.
+             Type[],System.Reflection.ParameterModifier[]) method.
+        
+        
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return null.
+        
+            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, 
+             which can involve selection of an overloaded method, coercion of argument types, and 
+             invocation of a member through reflection.-or- null, to use the 
+             System.Type.DefaultBinder.
+        
+            types: An array of System.Type objects representing the number, order, and type of the 
+             parameters for the constructor to get.-or- An empty array of the type System.Type (that 
+             is, Type[] types = new Type[0]) to get a constructor that takes no parameters.-or- 
+             System.Type.EmptyTypes.
+        
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes 
+             associated with the corresponding element in the parameter type array. The default binder 
+             does not process this parameter.
+        
+            Returns: A System.Reflection.ConstructorInfo object representing the constructor that matches the 
+             specified requirements, if found; otherwise, null.
+        
         GetConstructor(self: _Type, types: Array[Type]) -> ConstructorInfo
         
             Provides COM objects with version-independent access to the 
              System.Type.GetConstructor(System.Type[]) method.
         
         
-            types: An array of System.Type objects representing the number, order, and type of the parameters for 
-             the desired constructor.-or- An empty array of System.Type objects, to get a constructor that 
-             takes no parameters. Such an empty array is provided by the static field System.Type.EmptyTypes.
+            types: An array of System.Type objects representing the number, order, and type of the 
+             parameters for the desired constructor.-or- An empty array of System.Type objects, to get 
+             a constructor that takes no parameters. Such an empty array is provided by the static 
+             field System.Type.EmptyTypes.
         
-            Returns: A System.Reflection.ConstructorInfo object representing the public instance constructor whose 
-             parameters match the types in the parameter type array, if found; otherwise, null.
-        
-        GetConstructor(self: _Type, bindingAttr: BindingFlags, binder: Binder, types: Array[Type], modifiers: Array[ParameterModifier]) -> ConstructorInfo
-        
-            Provides COM objects with version-independent access to the 
-             System.Type.GetConstructor(System.Reflection.BindingFlags,System.Reflection.Binder,System.Type[],
-             System.Reflection.ParameterModifier[]) method.
-        
-        
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return null.
-        
-            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which 
-             can involve selection of an overloaded method, coercion of argument types, and invocation of a 
-             member through reflection.-or- null, to use the System.Type.DefaultBinder.
-        
-            types: An array of System.Type objects representing the number, order, and type of the parameters for 
-             the constructor to get.-or- An empty array of the type System.Type (that is, Type[] types = new 
-             Type[0]) to get a constructor that takes no parameters.-or- System.Type.EmptyTypes.
-        
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated 
-             with the corresponding element in the parameter type array. The default binder does not process 
-             this parameter.
-        
-            Returns: A System.Reflection.ConstructorInfo object representing the constructor that matches the 
-             specified requirements, if found; otherwise, null.
-        
-        GetConstructor(self: _Type, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Array[Type], modifiers: Array[ParameterModifier]) -> ConstructorInfo
-        
-            Provides COM objects with version-independent access to the 
-             System.Type.GetConstructor(System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflect
-             ion.CallingConventions,System.Type[],System.Reflection.ParameterModifier[]) method.
-        
-        
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return null.
-        
-            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which 
-             can involve selection of an overloaded method, coercion of argument types, and invocation of a 
-             member through reflection.-or- null, to use the System.Type.DefaultBinder.
-        
-            callConvention: The System.Reflection.CallingConventions object that specifies the set of rules to use regarding 
-             the order and layout of arguments, how the return value is passed, what registers are used for 
-             arguments, and the stack is cleaned up.
-        
-            types: An array of System.Type objects representing the number, order, and type of the parameters for 
-             the constructor to get.-or- An empty array of the type System.Type (that is, Type[] types = new 
-             Type[0]) to get a constructor that takes no parameters.
-        
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated 
-             with the corresponding element in the types array. The default binder does not process this 
-             parameter.
-        
-            Returns: A System.Reflection.ConstructorInfo object representing the constructor that matches the 
-             specified requirements, if found; otherwise, null.
+            Returns: A System.Reflection.ConstructorInfo object representing the public instance constructor 
+             whose parameters match the types in the parameter type array, if found; otherwise, null.
         """
         pass
 
     def GetConstructors(self, bindingAttr=None):
         """
-        GetConstructors(self: _Type) -> Array[ConstructorInfo]
-        
-            Provides COM objects with version-independent access to the System.Type.GetConstructors method.
-            Returns: An array of System.Reflection.ConstructorInfo objects representing all the public instance 
-             constructors defined for the current System.Type, but not including the type initializer (static 
-             constructor). If no public instance constructors are defined for the current System.Type, or if 
-             the current System.Type represents a type parameter of a generic type or method definition, an 
-             empty array of type System.Reflection.ConstructorInfo is returned.
-        
         GetConstructors(self: _Type, bindingAttr: BindingFlags) -> Array[ConstructorInfo]
         
             Provides COM objects with version-independent access to the 
              System.Type.GetConstructors(System.Reflection.BindingFlags) method.
         
         
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return null.
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return null.
         
-            Returns: An array of System.Reflection.ConstructorInfo objects representing all constructors defined for 
-             the current System.Type that match the specified binding constraints, including the type 
-             initializer if it is defined. Returns an empty array of type System.Reflection.ConstructorInfo 
-             if no constructors are defined for the current System.Type, if none of the defined constructors 
-             match the binding constraints, or if the current System.Type represents a type parameter of a 
-             generic type or method definition.
+            Returns: An array of System.Reflection.ConstructorInfo objects representing all constructors 
+             defined for the current System.Type that match the specified binding constraints, 
+             including the type initializer if it is defined. Returns an empty array of type 
+             System.Reflection.ConstructorInfo if no constructors are defined for the current 
+             System.Type, if none of the defined constructors match the binding constraints, or if the 
+             current System.Type represents a type parameter of a generic type or method definition.
+        
+        GetConstructors(self: _Type) -> Array[ConstructorInfo]
+        
+            Provides COM objects with version-independent access to the System.Type.GetConstructors 
+             method.
+        
+            Returns: An array of System.Reflection.ConstructorInfo objects representing all the public 
+             instance constructors defined for the current System.Type, but not including the type 
+             initializer (static constructor). If no public instance constructors are defined for the 
+             current System.Type, or if the current System.Type represents a type parameter of a 
+             generic type or method definition, an empty array of type 
+             System.Reflection.ConstructorInfo is returned.
         """
         pass
 
     def GetCustomAttributes(self, *__args):
         """
-        GetCustomAttributes(self: _Type, inherit: bool) -> Array[object]
-        
-            Provides COM objects with version-independent access to the 
-             System.Reflection.Assembly.GetCustomAttributes(System.Boolean) method.
-        
-        
-            inherit: Specifies whether to search this member's inheritance chain to find the attributes.
-            Returns: An array of custom attributes applied to this member, or an array with zero (0) elements if no 
-             attributes have been applied.
-        
         GetCustomAttributes(self: _Type, attributeType: Type, inherit: bool) -> Array[object]
         
             Provides COM objects with version-independent access to the 
@@ -12476,8 +12703,18 @@ class _Type:
              returned.
         
             inherit: Specifies whether to search this member's inheritance chain to find the attributes.
-            Returns: An array of custom attributes applied to this member, or an array with zero (0) elements if no 
-             attributes have been applied.
+            Returns: An array of custom attributes applied to this member, or an array with zero (0) elements 
+             if no attributes have been applied.
+        
+        GetCustomAttributes(self: _Type, inherit: bool) -> Array[object]
+        
+            Provides COM objects with version-independent access to the 
+             System.Reflection.Assembly.GetCustomAttributes(System.Boolean) method.
+        
+        
+            inherit: Specifies whether to search this member's inheritance chain to find the attributes.
+            Returns: An array of custom attributes applied to this member, or an array with zero (0) elements 
+             if no attributes have been applied.
         """
         pass
 
@@ -12485,10 +12722,12 @@ class _Type:
         """
         GetDefaultMembers(self: _Type) -> Array[MemberInfo]
         
-            Provides COM objects with version-independent access to the System.Type.GetDefaultMembers method.
-            Returns: An array of System.Reflection.MemberInfo objects representing all default members of the current 
-             System.Type.-or- An empty array of type System.Reflection.MemberInfo, if the current System.Type 
-             does not have default members.
+            Provides COM objects with version-independent access to the System.Type.GetDefaultMembers 
+             method.
+        
+            Returns: An array of System.Reflection.MemberInfo objects representing all default members of the 
+             current System.Type.-or- An empty array of type System.Reflection.MemberInfo, if the 
+             current System.Type does not have default members.
         """
         pass
 
@@ -12496,84 +12735,76 @@ class _Type:
         """
         GetElementType(self: _Type) -> Type
         
-            Provides COM objects with version-independent access to the System.Type.GetElementType method.
+            Provides COM objects with version-independent access to the System.Type.GetElementType 
+             method.
+        
             Returns: The System.Type of the object encompassed or referred to by the current array, pointer or 
-             reference type.-or- null if the current System.Type is not an array or a pointer, or is not 
-             passed by reference, or represents a generic type or a type parameter of a generic type or 
-             method definition.
+             reference type.-or- null if the current System.Type is not an array or a pointer, or is 
+             not passed by reference, or represents a generic type or a type parameter of a generic 
+             type or method definition.
         """
         pass
 
     def GetEvent(self, name, bindingAttr=None):
         """
-        GetEvent(self: _Type, name: str) -> EventInfo
-        
-            Provides COM objects with version-independent access to the System.Type.GetEvent(System.String) 
-             method.
-        
-        
-            name: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return null.
-        
-            Returns: An array of System.Reflection.EventInfo objects representing all events that are declared or 
-             inherited by the current System.Type that match the specified binding constraints.-or- An empty 
-             array of type System.Reflection.EventInfo, if the current System.Type does not have events, or 
-             if none of the events match the binding constraints.
-        
         GetEvent(self: _Type, name: str, bindingAttr: BindingFlags) -> EventInfo
         
             Provides COM objects with version-independent access to the 
              System.Type.GetEvent(System.String,System.Reflection.BindingFlags) method.
         
         
-            name: The System.String containing the name of an event that is declared or inherited by the current 
-             System.Type.
+            name: The System.String containing the name of an event that is declared or inherited by the 
+             current System.Type.
         
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return null.
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return null.
         
-            Returns: The System.Reflection.EventInfo object representing the specified event that is declared or 
-             inherited by the current System.Type, if found; otherwise, null.
+            Returns: The System.Reflection.EventInfo object representing the specified event that is declared 
+             or inherited by the current System.Type, if found; otherwise, null.
+        
+        GetEvent(self: _Type, name: str) -> EventInfo
+        
+            Provides COM objects with version-independent access to the 
+             System.Type.GetEvent(System.String) method.
+        
+        
+            name: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return null.
+        
+            Returns: An array of System.Reflection.EventInfo objects representing all events that are declared 
+             or inherited by the current System.Type that match the specified binding constraints.-or- 
+             An empty array of type System.Reflection.EventInfo, if the current System.Type does not 
+             have events, or if none of the events match the binding constraints.
         """
         pass
 
     def GetEvents(self, bindingAttr=None):
         """
+        GetEvents(self: _Type) -> Array[EventInfo]
+        
+            Provides COM objects with version-independent access to the System.Type.GetEvents method.
+            Returns: An array of System.Reflection.EventInfo objects representing all the public events that 
+             are declared or inherited by the current System.Type.-or- An empty array of type 
+             System.Reflection.EventInfo, if the current System.Type does not have public events.
+        
         GetEvents(self: _Type, bindingAttr: BindingFlags) -> Array[EventInfo]
         
             Provides COM objects with version-independent access to the 
              System.Type.GetEvents(System.Reflection.BindingFlags) method.
         
         
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return null.
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return null.
         
-            Returns: An array of System.Reflection.EventInfo objects representing all events that are declared or 
-             inherited by the current System.Type that match the specified binding constraints.-or- An empty 
-             array of type System.Reflection.EventInfo, if the current System.Type does not have events, or 
-             if none of the events match the binding constraints.
-        
-        GetEvents(self: _Type) -> Array[EventInfo]
-        
-            Provides COM objects with version-independent access to the System.Type.GetEvents method.
-            Returns: An array of System.Reflection.EventInfo objects representing all the public events that are 
-             declared or inherited by the current System.Type.-or- An empty array of type 
-             System.Reflection.EventInfo, if the current System.Type does not have public events.
+            Returns: An array of System.Reflection.EventInfo objects representing all events that are declared 
+             or inherited by the current System.Type that match the specified binding constraints.-or- 
+             An empty array of type System.Reflection.EventInfo, if the current System.Type does not 
+             have events, or if none of the events match the binding constraints.
         """
         pass
 
     def GetField(self, name, bindingAttr=None):
         """
-        GetField(self: _Type, name: str) -> FieldInfo
-        
-            Provides COM objects with version-independent access to the System.Type.GetField(System.String) 
-             method.
-        
-        
-            name: The System.String containing the name of the data field to get.
-            Returns: A System.Reflection.FieldInfo object representing the public field with the specified name, if 
-             found; otherwise, null.
-        
         GetField(self: _Type, name: str, bindingAttr: BindingFlags) -> FieldInfo
         
             Provides COM objects with version-independent access to the 
@@ -12581,36 +12812,46 @@ class _Type:
         
         
             name: The System.String containing the name of the data field to get.
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return null.
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return null.
         
             Returns: A System.Reflection.FieldInfo object representing the field that matches the specified 
-             requirements, if found; otherwise, null.
+             requirements, if found; otherwise, null.
+        
+        GetField(self: _Type, name: str) -> FieldInfo
+        
+            Provides COM objects with version-independent access to the 
+             System.Type.GetField(System.String) method.
+        
+        
+            name: The System.String containing the name of the data field to get.
+            Returns: A System.Reflection.FieldInfo object representing the public field with the specified 
+             name, if found; otherwise, null.
         """
         pass
 
     def GetFields(self, bindingAttr=None):
         """
-        GetFields(self: _Type) -> Array[FieldInfo]
-        
-            Provides COM objects with version-independent access to the System.Type.GetFields method.
-            Returns: An array of System.Reflection.FieldInfo objects representing all the public fields defined for 
-             the current System.Type.-or- An empty array of type System.Reflection.FieldInfo, if no public 
-             fields are defined for the current System.Type.
-        
         GetFields(self: _Type, bindingAttr: BindingFlags) -> Array[FieldInfo]
         
             Provides COM objects with version-independent access to the 
              System.Type.GetFields(System.Reflection.BindingFlags) method.
         
         
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return null.
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return null.
         
-            Returns: An array of System.Reflection.FieldInfo objects representing all fields defined for the current 
-             System.Type that match the specified binding constraints.-or- An empty array of type 
-             System.Reflection.FieldInfo, if no fields are defined for the current System.Type, or if none of 
-             the defined fields match the binding constraints.
+            Returns: An array of System.Reflection.FieldInfo objects representing all fields defined for the 
+             current System.Type that match the specified binding constraints.-or- An empty array of 
+             type System.Reflection.FieldInfo, if no fields are defined for the current System.Type, 
+             or if none of the defined fields match the binding constraints.
+        
+        GetFields(self: _Type) -> Array[FieldInfo]
+        
+            Provides COM objects with version-independent access to the System.Type.GetFields method.
+            Returns: An array of System.Reflection.FieldInfo objects representing all the public fields 
+             defined for the current System.Type.-or- An empty array of type 
+             System.Reflection.FieldInfo, if no public fields are defined for the current System.Type.
         """
         pass
 
@@ -12618,7 +12859,9 @@ class _Type:
         """
         GetHashCode(self: _Type) -> int
         
-            Provides COM objects with version-independent access to the System.Type.GetHashCode method.
+            Provides COM objects with version-independent access to the System.Type.GetHashCode 
+             method.
+        
             Returns: An System.Int32 containing the hash code for this instance.
         """
         pass
@@ -12639,29 +12882,29 @@ class _Type:
 
     def GetInterface(self, name, ignoreCase=None):
         """
-        GetInterface(self: _Type, name: str) -> Type
-        
-            Provides COM objects with version-independent access to the 
-             System.Type.GetInterface(System.String) method.
-        
-        
-            name: The System.String containing the name of the interface to get. For generic interfaces, this is 
-             the mangled name.
-        
-            Returns: A System.Type object representing the interface with the specified name, implemented or 
-             inherited by the current System.Type, if found; otherwise, null.
-        
         GetInterface(self: _Type, name: str, ignoreCase: bool) -> Type
         
             Provides COM objects with version-independent access to the 
              System.Type.GetInterface(System.String,System.Boolean) method.
         
         
-            name: The System.String containing the name of the interface to get. For generic interfaces, this is 
-             the mangled name.
+            name: The System.String containing the name of the interface to get. For generic interfaces, 
+             this is the mangled name.
         
-            ignoreCase: true to perform a case-insensitive search for name.-or- false to perform a case-sensitive search 
-             for name.
+            ignoreCase: true to perform a case-insensitive search for name.-or- false to perform a case-sensitive 
+             search for name.
+        
+            Returns: A System.Type object representing the interface with the specified name, implemented or 
+             inherited by the current System.Type, if found; otherwise, null.
+        
+        GetInterface(self: _Type, name: str) -> Type
+        
+            Provides COM objects with version-independent access to the 
+             System.Type.GetInterface(System.String) method.
+        
+        
+            name: The System.String containing the name of the interface to get. For generic interfaces, 
+             this is the mangled name.
         
             Returns: A System.Type object representing the interface with the specified name, implemented or 
              inherited by the current System.Type, if found; otherwise, null.
@@ -12686,22 +12929,29 @@ class _Type:
         """
         GetInterfaces(self: _Type) -> Array[Type]
         
-            Provides COM objects with version-independent access to the System.Type.GetInterfaces method.
-            Returns: An array of System.Type objects representing all the interfaces implemented or inherited by the 
-             current System.Type.-or- An empty array of type System.Type, if no interfaces are implemented or 
-             inherited by the current System.Type.
+            Provides COM objects with version-independent access to the System.Type.GetInterfaces 
+             method.
+        
+            Returns: An array of System.Type objects representing all the interfaces implemented or inherited 
+             by the current System.Type.-or- An empty array of type System.Type, if no interfaces are 
+             implemented or inherited by the current System.Type.
         """
         pass
 
     def GetMember(self, name, *__args):
         """
-        GetMember(self: _Type, name: str) -> Array[MemberInfo]
+        GetMember(self: _Type, name: str, type: MemberTypes, bindingAttr: BindingFlags) -> Array[MemberInfo]
         
-            Provides COM objects with version-independent access to the System.Type.GetMember(System.String) 
-             method.
+            Provides COM objects with version-independent access to the 
+             System.Type.GetMember(System.String,System.Reflection.MemberTypes,System.Reflection.Bindin
+             gFlags) method.
         
         
-            name: The System.String containing the name of the public members to get.
+            name: The System.String containing the name of the members to get.
+            type: The System.Reflection.MemberTypes value to search for.
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return an empty array.
+        
             Returns: An array of System.Reflection.MemberInfo objects representing the public members with the 
              specified name, if found; otherwise, an empty array.
         
@@ -12712,24 +12962,19 @@ class _Type:
         
         
             name: The System.String containing the name of the members to get.
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return an empty array.
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return an empty array.
         
             Returns: An array of System.Reflection.MemberInfo objects representing the public members with the 
              specified name, if found; otherwise, an empty array.
         
-        GetMember(self: _Type, name: str, type: MemberTypes, bindingAttr: BindingFlags) -> Array[MemberInfo]
+        GetMember(self: _Type, name: str) -> Array[MemberInfo]
         
             Provides COM objects with version-independent access to the 
-             System.Type.GetMember(System.String,System.Reflection.MemberTypes,System.Reflection.BindingFlags)
-              method.
+             System.Type.GetMember(System.String) method.
         
         
-            name: The System.String containing the name of the members to get.
-            type: The System.Reflection.MemberTypes value to search for.
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return an empty array.
-        
+            name: The System.String containing the name of the public members to get.
             Returns: An array of System.Reflection.MemberInfo objects representing the public members with the 
              specified name, if found; otherwise, an empty array.
         """
@@ -12737,95 +12982,54 @@ class _Type:
 
     def GetMembers(self, bindingAttr=None):
         """
-        GetMembers(self: _Type) -> Array[MemberInfo]
-        
-            Provides COM objects with version-independent access to the System.Type.GetMembers method.
-            Returns: An array of System.Reflection.MemberInfo objects representing all the public members of the 
-             current System.Type.-or- An empty array of type System.Reflection.MemberInfo, if the current 
-             System.Type does not have public members.
-        
         GetMembers(self: _Type, bindingAttr: BindingFlags) -> Array[MemberInfo]
         
             Provides COM objects with version-independent access to the 
              System.Type.GetMembers(System.Reflection.BindingFlags) method.
         
         
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return null.
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return null.
         
             Returns: An array of System.Reflection.MemberInfo objects representing all members defined for the 
-             current System.Type that match the specified binding constraints.-or- An empty array of type 
-             System.Reflection.MemberInfo, if no members are defined for the current System.Type, or if none 
-             of the defined members match the binding constraints.
+             current System.Type that match the specified binding constraints.-or- An empty array of 
+             type System.Reflection.MemberInfo, if no members are defined for the current System.Type, 
+             or if none of the defined members match the binding constraints.
+        
+        GetMembers(self: _Type) -> Array[MemberInfo]
+        
+            Provides COM objects with version-independent access to the System.Type.GetMembers method.
+            Returns: An array of System.Reflection.MemberInfo objects representing all the public members of 
+             the current System.Type.-or- An empty array of type System.Reflection.MemberInfo, if the 
+             current System.Type does not have public members.
         """
         pass
 
     def GetMethod(self, name, *__args):
         """
-        GetMethod(self: _Type, name: str, types: Array[Type], modifiers: Array[ParameterModifier]) -> MethodInfo
-        
-            Provides COM objects with version-independent access to the 
-             System.Type.GetMethod(System.String,System.Type[],System.Reflection.ParameterModifier[]) method.
-        
-        
-            name: The System.String containing the name of the public method to get.
-            types: An array of System.Type objects representing the number, order, and type of the parameters for 
-             the method to get.-or- An empty array of the type System.Type (that is, Type[] types = new 
-             Type[0]) to get a method that takes no parameters.
-        
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated 
-             with the corresponding element in the types array. The default binder does not process this 
-             parameter.
-        
-            Returns: A System.Reflection.MethodInfo object representing the public method that matches the specified 
-             requirements, if found; otherwise, null.
-        
-        GetMethod(self: _Type, name: str, types: Array[Type]) -> MethodInfo
-        
-            Provides COM objects with version-independent access to the 
-             System.Type.GetMethod(System.String,System.Type[]) method.
-        
-        
-            name: The System.String containing the name of the public method to get.
-            types: An array of System.Type objects representing the number, order, and type of the parameters for 
-             the method to get.-or- An empty array of the type System.Type (that is, Type[] types = new 
-             Type[0]) to get a method that takes no parameters.
-        
-            Returns: A System.Reflection.MethodInfo object representing the public method whose parameters match the 
-             specified argument types, if found; otherwise, null.
-        
-        GetMethod(self: _Type, name: str) -> MethodInfo
-        
-            Provides COM objects with version-independent access to the System.Type.GetMethod(System.String) 
-             method.
-        
-        
-            name: The System.String containing the name of the public method to get.
-            Returns: A System.Reflection.MethodInfo object representing the public method with the specified name, if 
-             found; otherwise, null.
-        
         GetMethod(self: _Type, name: str, bindingAttr: BindingFlags, binder: Binder, types: Array[Type], modifiers: Array[ParameterModifier]) -> MethodInfo
         
             Provides COM objects with version-independent access to the 
-             System.Type.GetMethod(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,Syste
-             m.Type[],System.Reflection.ParameterModifier[]) method.
+             System.Type.GetMethod(System.String,System.Reflection.BindingFlags,System.Reflection.Binde
+             r,System.Type[],System.Reflection.ParameterModifier[]) method.
         
         
             name: The System.String containing the name of the method to get.
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return null.
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return null.
         
-            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which 
-             can involve selection of an overloaded method, coercion of argument types, and invocation of a 
-             member through reflection.-or- null, to use the System.Type.DefaultBinder.
+            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, 
+             which can involve selection of an overloaded method, coercion of argument types, and 
+             invocation of a member through reflection.-or- null, to use the 
+             System.Type.DefaultBinder.
         
-            types: An array of System.Type objects representing the number, order, and type of the parameters for 
-             the method to get.-or- An empty array of the type System.Type (that is, Type[] types = new 
-             Type[0]) to get a method that takes no parameters.
+            types: An array of System.Type objects representing the number, order, and type of the 
+             parameters for the method to get.-or- An empty array of the type System.Type (that is, 
+             Type[] types = new Type[0]) to get a method that takes no parameters.
         
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated 
-             with the corresponding element in the types array. The default binder does not process this 
-             parameter.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes 
+             associated with the corresponding element in the types array. The default binder does not 
+             process this parameter.
         
             Returns: A System.Reflection.MethodInfo object representing the method that matches the specified 
              requirements, if found; otherwise, null.
@@ -12837,8 +13041,8 @@ class _Type:
         
         
             name: The System.String containing the name of the method to get.
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return null.
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return null.
         
             Returns: A System.Reflection.MethodInfo object representing the method that matches the specified 
              requirements, if found; otherwise, null.
@@ -12846,72 +13050,108 @@ class _Type:
         GetMethod(self: _Type, name: str, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Array[Type], modifiers: Array[ParameterModifier]) -> MethodInfo
         
             Provides COM objects with version-independent access to the 
-             System.Type.GetMethod(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,Syste
-             m.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[]) method.
+             System.Type.GetMethod(System.String,System.Reflection.BindingFlags,System.Reflection.Binde
+             r,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[]
+             ) method.
         
         
             name: The System.String containing the name of the method to get.
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return null.
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return null.
         
-            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which 
-             can involve selection of an overloaded method, coercion of argument types, and invocation of a 
-             member through reflection.-or- null, to use the System.Type.DefaultBinder.
+            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, 
+             which can involve selection of an overloaded method, coercion of argument types, and 
+             invocation of a member through reflection.-or- null, to use the 
+             System.Type.DefaultBinder.
         
-            callConvention: The System.Reflection.CallingConventions object that specifies the set of rules to use regarding 
-             the order and layout of arguments, how the return value is passed, what registers are used for 
-             arguments, and how the stack is cleaned up.
+            callConvention: The System.Reflection.CallingConventions object that specifies the set of rules to use 
+             regarding the order and layout of arguments, how the return value is passed, what 
+             registers are used for arguments, and how the stack is cleaned up.
         
-            types: An array of System.Type objects representing the number, order, and type of the parameters for 
-             the method to get.-or- An empty array of the type System.Type (that is, Type[] types = new 
-             Type[0]) to get a method that takes no parameters.
+            types: An array of System.Type objects representing the number, order, and type of the 
+             parameters for the method to get.-or- An empty array of the type System.Type (that is, 
+             Type[] types = new Type[0]) to get a method that takes no parameters.
         
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated 
-             with the corresponding element in the types array. The default binder does not process this 
-             parameter.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes 
+             associated with the corresponding element in the types array. The default binder does not 
+             process this parameter.
         
             Returns: A System.Reflection.MethodInfo object representing the method that matches the specified 
-             requirements, if found; otherwise, null.
+             requirements, if found; otherwise, null.
+        
+        GetMethod(self: _Type, name: str, types: Array[Type], modifiers: Array[ParameterModifier]) -> MethodInfo
+        
+            Provides COM objects with version-independent access to the 
+             System.Type.GetMethod(System.String,System.Type[],System.Reflection.ParameterModifier[]) 
+             method.
+        
+        
+            name: The System.String containing the name of the public method to get.
+            types: An array of System.Type objects representing the number, order, and type of the 
+             parameters for the method to get.-or- An empty array of the type System.Type (that is, 
+             Type[] types = new Type[0]) to get a method that takes no parameters.
+        
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes 
+             associated with the corresponding element in the types array. The default binder does not 
+             process this parameter.
+        
+            Returns: A System.Reflection.MethodInfo object representing the public method that matches the 
+             specified requirements, if found; otherwise, null.
+        
+        GetMethod(self: _Type, name: str, types: Array[Type]) -> MethodInfo
+        
+            Provides COM objects with version-independent access to the 
+             System.Type.GetMethod(System.String,System.Type[]) method.
+        
+        
+            name: The System.String containing the name of the public method to get.
+            types: An array of System.Type objects representing the number, order, and type of the 
+             parameters for the method to get.-or- An empty array of the type System.Type (that is, 
+             Type[] types = new Type[0]) to get a method that takes no parameters.
+        
+            Returns: A System.Reflection.MethodInfo object representing the public method whose parameters 
+             match the specified argument types, if found; otherwise, null.
+        
+        GetMethod(self: _Type, name: str) -> MethodInfo
+        
+            Provides COM objects with version-independent access to the 
+             System.Type.GetMethod(System.String) method.
+        
+        
+            name: The System.String containing the name of the public method to get.
+            Returns: A System.Reflection.MethodInfo object representing the public method with the specified 
+             name, if found; otherwise, null.
         """
         pass
 
     def GetMethods(self, bindingAttr=None):
         """
-        GetMethods(self: _Type) -> Array[MethodInfo]
-        
-            Provides COM objects with version-independent access to the System.Type.GetMethods method.
-            Returns: An array of System.Reflection.MethodInfo objects representing all the public methods defined for 
-             the current System.Type.-or- An empty array of type System.Reflection.MethodInfo, if no public 
-             methods are defined for the current System.Type.
-        
         GetMethods(self: _Type, bindingAttr: BindingFlags) -> Array[MethodInfo]
         
             Provides COM objects with version-independent access to the 
              System.Type.GetMethods(System.Reflection.BindingFlags) method.
         
         
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return null.
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return null.
         
             Returns: An array of System.Reflection.MethodInfo objects representing all methods defined for the 
-             current System.Type that match the specified binding constraints.-or- An empty array of type 
-             System.Reflection.MethodInfo, if no methods are defined for the current System.Type, or if none 
-             of the defined methods match the binding constraints.
+             current System.Type that match the specified binding constraints.-or- An empty array of 
+             type System.Reflection.MethodInfo, if no methods are defined for the current System.Type, 
+             or if none of the defined methods match the binding constraints.
+        
+        GetMethods(self: _Type) -> Array[MethodInfo]
+        
+            Provides COM objects with version-independent access to the System.Type.GetMethods method.
+            Returns: An array of System.Reflection.MethodInfo objects representing all the public methods 
+             defined for the current System.Type.-or- An empty array of type 
+             System.Reflection.MethodInfo, if no public methods are defined for the current 
+             System.Type.
         """
         pass
 
     def GetNestedType(self, name, bindingAttr=None):
         """
-        GetNestedType(self: _Type, name: str) -> Type
-        
-            Provides COM objects with version-independent access to the 
-             System.Type.GetNestedType(System.String) method.
-        
-        
-            name: The string containing the name of the nested type to get.
-            Returns: A System.Type object representing the public nested type with the specified name, if found; 
-             otherwise, null.
-        
         GetNestedType(self: _Type, name: str, bindingAttr: BindingFlags) -> Type
         
             Provides COM objects with version-independent access to the 
@@ -12919,101 +13159,141 @@ class _Type:
         
         
             name: The string containing the name of the nested type to get.
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return null.
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return null.
         
-            Returns: A System.Type object representing the nested type that matches the specified requirements, if 
+            Returns: A System.Type object representing the nested type that matches the specified 
+             requirements, if found; otherwise, null.
+        
+        GetNestedType(self: _Type, name: str) -> Type
+        
+            Provides COM objects with version-independent access to the 
+             System.Type.GetNestedType(System.String) method.
+        
+        
+            name: The string containing the name of the nested type to get.
+            Returns: A System.Type object representing the public nested type with the specified name, if 
              found; otherwise, null.
         """
         pass
 
     def GetNestedTypes(self, bindingAttr=None):
         """
-        GetNestedTypes(self: _Type) -> Array[Type]
-        
-            Provides COM objects with version-independent access to the System.Type.GetNestedTypes method.
-            Returns: An array of System.Type objects representing all the types nested within the current 
-             System.Type.-or- An empty array of type System.Type, if no types are nested within the current 
-             System.Type.
-        
         GetNestedTypes(self: _Type, bindingAttr: BindingFlags) -> Array[Type]
         
             Provides COM objects with version-independent access to the 
-             System.Type.GetNestedTypes(System.Reflection.BindingFlags) method, and searches for the types 
-             nested within the current System.Type, using the specified binding constraints.
+             System.Type.GetNestedTypes(System.Reflection.BindingFlags) method, and searches for the 
+             types nested within the current System.Type, using the specified binding constraints.
         
         
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return null.
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return null.
         
-            Returns: An array of System.Type objects representing all the types nested within the current System.Type 
-             that match the specified binding constraints.-or- An empty array of type System.Type, if no 
-             types are nested within the current System.Type, or if none of the nested types match the 
-             binding constraints.
+            Returns: An array of System.Type objects representing all the types nested within the current 
+             System.Type that match the specified binding constraints.-or- An empty array of type 
+             System.Type, if no types are nested within the current System.Type, or if none of the 
+             nested types match the binding constraints.
+        
+        GetNestedTypes(self: _Type) -> Array[Type]
+        
+            Provides COM objects with version-independent access to the System.Type.GetNestedTypes 
+             method.
+        
+            Returns: An array of System.Type objects representing all the types nested within the current 
+             System.Type.-or- An empty array of type System.Type, if no types are nested within the 
+             current System.Type.
         """
         pass
 
     def GetProperties(self, bindingAttr=None):
         """
-        GetProperties(self: _Type) -> Array[PropertyInfo]
-        
-            Provides COM objects with version-independent access to the System.Type.GetProperties method.
-            Returns: An array of System.Reflection.PropertyInfo objects representing all public properties of the 
-             current System.Type.-or- An empty array of type System.Reflection.PropertyInfo, if the current 
-             System.Type does not have public properties.
-        
         GetProperties(self: _Type, bindingAttr: BindingFlags) -> Array[PropertyInfo]
         
             Provides COM objects with version-independent access to the 
              System.Type.GetProperties(System.Reflection.BindingFlags) method.
         
         
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return null.
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return null.
         
-            Returns: An array of System.Reflection.PropertyInfo objects representing all properties of the current 
-             System.Type that match the specified binding constraints.-or- An empty array of type 
-             System.Reflection.PropertyInfo, if the current System.Type does not have properties, or if none 
-             of the properties match the binding constraints.
+            Returns: An array of System.Reflection.PropertyInfo objects representing all properties of the 
+             current System.Type that match the specified binding constraints.-or- An empty array of 
+             type System.Reflection.PropertyInfo, if the current System.Type does not have properties, 
+             or if none of the properties match the binding constraints.
+        
+        GetProperties(self: _Type) -> Array[PropertyInfo]
+        
+            Provides COM objects with version-independent access to the System.Type.GetProperties 
+             method.
+        
+            Returns: An array of System.Reflection.PropertyInfo objects representing all public properties of 
+             the current System.Type.-or- An empty array of type System.Reflection.PropertyInfo, if 
+             the current System.Type does not have public properties.
         """
         pass
 
     def GetProperty(self, name, *__args):
         """
-        GetProperty(self: _Type, name: str, types: Array[Type]) -> PropertyInfo
+        GetProperty(self: _Type, name: str, bindingAttr: BindingFlags) -> PropertyInfo
         
             Provides COM objects with version-independent access to the 
-             System.Type.GetProperty(System.String,System.Type[]) method.
+             System.Type.GetProperty(System.String,System.Reflection.BindingFlags) method.
         
         
-            name: The System.String containing the name of the public property to get.
-            types: An array of System.Type objects representing the number, order, and type of the parameters for 
-             the indexed property to get.-or- An empty array of the type System.Type (that is, Type[] types = 
-             new Type[0]) to get a property that is not indexed.
+            name: The System.String containing the name of the property to get.
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return null.
         
-            Returns: A System.Reflection.PropertyInfo object representing the public property whose parameters match 
-             the specified argument types, if found; otherwise, null.
+            Returns: A System.Reflection.PropertyInfo object representing the property that matches the 
+             specified requirements, if found; otherwise, null.
         
-        GetProperty(self: _Type, name: str, returnType: Type) -> PropertyInfo
+        GetProperty(self: _Type, name: str, bindingAttr: BindingFlags, binder: Binder, returnType: Type, types: Array[Type], modifiers: Array[ParameterModifier]) -> PropertyInfo
         
             Provides COM objects with version-independent access to the 
-             System.Type.GetProperty(System.String,System.Type) method.
+             System.Type.GetProperty(System.String,System.Reflection.BindingFlags,System.Reflection.Bin
+             der,System.Type,System.Type[],System.Reflection.ParameterModifier[]) method.
+        
+        
+            name: The System.String containing the name of the property to get.
+            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted.-or- Zero, to return null.
+        
+            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, 
+             which can involve selection of an overloaded method, coercion of argument types, and 
+             invocation of a member through reflection.-or- null, to use the 
+             System.Type.DefaultBinder.
+        
+            returnType: The return type of the property.
+            types: An array of System.Type objects representing the number, order, and type of the 
+             parameters for the indexed property to get.-or- An empty array of the type System.Type 
+             (that is, Type[] types = new Type[0]) to get a property that is not indexed.
+        
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes 
+             associated with the corresponding element in the types array. The default binder does not 
+             process this parameter.
+        
+            Returns: A System.Reflection.PropertyInfo object representing the property that matches the 
+             specified requirements, if found; otherwise, null.
+        
+        GetProperty(self: _Type, name: str, returnType: Type, types: Array[Type], modifiers: Array[ParameterModifier]) -> PropertyInfo
+        
+            Provides COM objects with version-independent access to the 
+             System.Type.GetProperty(System.String,System.Type,System.Type[],System.Reflection.Paramete
+             rModifier[]) method.
         
         
             name: The System.String containing the name of the public property to get.
             returnType: The return type of the property.
-            Returns: A System.Reflection.PropertyInfo object representing the public property with the specified 
-             name, if found; otherwise, null.
+            types: An array of System.Type objects representing the number, order, and type of the 
+             parameters for the indexed property to get.-or- An empty array of the type System.Type 
+             (that is, Type[] types = new Type[0]) to get a property that is not indexed.
         
-        GetProperty(self: _Type, name: str) -> PropertyInfo
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes 
+             associated with the corresponding element in the types array. The default binder does not 
+             process this parameter.
         
-            Provides COM objects with version-independent access to the 
-             System.Type.GetProperty(System.String) method.
-        
-        
-            name: The System.String containing the name of the public property to get.
-            Returns: A System.Reflection.PropertyInfo object representing the public property with the specified 
-             name, if found; otherwise, null.
+            Returns: A System.Reflection.PropertyInfo object representing the public property that matches the 
+             specified requirements, if found; otherwise, null.
         
         GetProperty(self: _Type, name: str, returnType: Type, types: Array[Type]) -> PropertyInfo
         
@@ -13023,72 +13303,47 @@ class _Type:
         
             name: The System.String containing the name of the public property to get.
             returnType: The return type of the property.
-            types: An array of System.Type objects representing the number, order, and type of the parameters for 
-             the indexed property to get.-or- An empty array of the type System.Type (that is, Type[] types = 
-             new Type[0]) to get a property that is not indexed.
+            types: An array of System.Type objects representing the number, order, and type of the 
+             parameters for the indexed property to get.-or- An empty array of the type System.Type 
+             (that is, Type[] types = new Type[0]) to get a property that is not indexed.
         
-            Returns: A System.Reflection.PropertyInfo object representing the public property whose parameters match 
-             the specified argument types, if found; otherwise, null.
+            Returns: A System.Reflection.PropertyInfo object representing the public property whose parameters 
+             match the specified argument types, if found; otherwise, null.
         
-        GetProperty(self: _Type, name: str, bindingAttr: BindingFlags) -> PropertyInfo
-        
-            Provides COM objects with version-independent access to the 
-             System.Type.GetProperty(System.String,System.Reflection.BindingFlags) method.
-        
-        
-            name: The System.String containing the name of the property to get.
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return null.
-        
-            Returns: A System.Reflection.PropertyInfo object representing the property that matches the specified 
-             requirements, if found; otherwise, null.
-        
-        GetProperty(self: _Type, name: str, bindingAttr: BindingFlags, binder: Binder, returnType: Type, types: Array[Type], modifiers: Array[ParameterModifier]) -> PropertyInfo
+        GetProperty(self: _Type, name: str, types: Array[Type]) -> PropertyInfo
         
             Provides COM objects with version-independent access to the 
-             System.Type.GetProperty(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,Sys
-             tem.Type,System.Type[],System.Reflection.ParameterModifier[]) method.
+             System.Type.GetProperty(System.String,System.Type[]) method.
         
         
-            name: The System.String containing the name of the property to get.
-            bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted.-or- Zero, to return null.
+            name: The System.String containing the name of the public property to get.
+            types: An array of System.Type objects representing the number, order, and type of the 
+             parameters for the indexed property to get.-or- An empty array of the type System.Type 
+             (that is, Type[] types = new Type[0]) to get a property that is not indexed.
         
-            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which 
-             can involve selection of an overloaded method, coercion of argument types, and invocation of a 
-             member through reflection.-or- null, to use the System.Type.DefaultBinder.
+            Returns: A System.Reflection.PropertyInfo object representing the public property whose parameters 
+             match the specified argument types, if found; otherwise, null.
         
-            returnType: The return type of the property.
-            types: An array of System.Type objects representing the number, order, and type of the parameters for 
-             the indexed property to get.-or- An empty array of the type System.Type (that is, Type[] types = 
-             new Type[0]) to get a property that is not indexed.
-        
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated 
-             with the corresponding element in the types array. The default binder does not process this 
-             parameter.
-        
-            Returns: A System.Reflection.PropertyInfo object representing the property that matches the specified 
-             requirements, if found; otherwise, null.
-        
-        GetProperty(self: _Type, name: str, returnType: Type, types: Array[Type], modifiers: Array[ParameterModifier]) -> PropertyInfo
+        GetProperty(self: _Type, name: str, returnType: Type) -> PropertyInfo
         
             Provides COM objects with version-independent access to the 
-             System.Type.GetProperty(System.String,System.Type,System.Type[],System.Reflection.ParameterModifi
-             er[]) method.
+             System.Type.GetProperty(System.String,System.Type) method.
         
         
             name: The System.String containing the name of the public property to get.
             returnType: The return type of the property.
-            types: An array of System.Type objects representing the number, order, and type of the parameters for 
-             the indexed property to get.-or- An empty array of the type System.Type (that is, Type[] types = 
-             new Type[0]) to get a property that is not indexed.
+            Returns: A System.Reflection.PropertyInfo object representing the public property with the 
+             specified name, if found; otherwise, null.
         
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated 
-             with the corresponding element in the types array. The default binder does not process this 
-             parameter.
+        GetProperty(self: _Type, name: str) -> PropertyInfo
         
-            Returns: A System.Reflection.PropertyInfo object representing the public property that matches the 
-             specified requirements, if found; otherwise, null.
+            Provides COM objects with version-independent access to the 
+             System.Type.GetProperty(System.String) method.
+        
+        
+            name: The System.String containing the name of the public property to get.
+            Returns: A System.Reflection.PropertyInfo object representing the public property with the 
+             specified name, if found; otherwise, null.
         """
         pass
 
@@ -13104,8 +13359,8 @@ class _Type:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _Type, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can then be used to get the type information 
-             for an interface.
+            Retrieves the type information for an object, which can then be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -13118,7 +13373,8 @@ class _Type:
         """
         GetTypeInfoCount(self: _Type) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -13132,8 +13388,8 @@ class _Type:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: Pointer to a structure containing an array of arguments, an array of argument DISPIDs for named 
-             arguments, and counts for the number of elements in the arrays.
+            pDispParams: Pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
+             named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: Pointer to the location where the result is to be stored.
             pExcepInfo: Pointer to a structure that contains exception information.
@@ -13143,88 +13399,96 @@ class _Type:
 
     def InvokeMember(self, name, invokeAttr, binder, target, args, *__args):
         """
-        InvokeMember(self: _Type, name: str, invokeAttr: BindingFlags, binder: Binder, target: object, args: Array[object]) -> object
+        InvokeMember(self: _Type, name: str, invokeAttr: BindingFlags, binder: Binder, target: object, args: Array[object], modifiers: Array[ParameterModifier], culture: CultureInfo, namedParameters: Array[str]) -> object
         
             Provides COM objects with version-independent access to the 
-             System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,Sy
-             stem.Object,System.Object[]) method.
+             System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Bi
+             nder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalizat
+             ion.CultureInfo,System.String[]) method.
         
         
-            name: The System.String containing the name of the constructor, method, property, or field member to 
-             invoke.-or- An empty string ("") to invoke the default member. -or-For IDispatch members, a 
-             string representing the DispID, for example "[DispID=3]".
+            name: The System.String containing the name of the constructor, method, property, or field 
+             member to invoke.-or- An empty string ("") to invoke the default member. -or-For 
+             IDispatch members, a string representing the DispID, for example "[DispID=3]".
         
-            invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted. The access can be one of the BindingFlags such as Public, NonPublic, Private, 
-             InvokeMethod, GetField, and so on. The type of lookup need not be specified. If the type of 
-             lookup is omitted, BindingFlags.Public | BindingFlags.Instance will apply.
+            invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted. The access can be one of the BindingFlags such as Public, NonPublic, 
+             Private, InvokeMethod, GetField, and so on. The type of lookup need not be specified. If 
+             the type of lookup is omitted, BindingFlags.Public | BindingFlags.Instance will apply.
         
-            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which 
-             can involve selection of an overloaded method, coercion of argument types, and invocation of a 
-             member through reflection.-or- null, to use the System.Type.DefaultBinder.
+            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, 
+             which can involve selection of an overloaded method, coercion of argument types, and 
+             invocation of a member through reflection.-or- null, to use the 
+             System.Type.DefaultBinder.
         
             target: The System.Object on which to invoke the specified member.
             args: An array containing the arguments to pass to the member to invoke.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes 
+             associated with the corresponding element in the args array. A parameter's associated 
+             attributes are stored in the member's signature. The default binder does not process this 
+             parameter.
+        
+            culture: The System.Globalization.CultureInfo object representing the globalization locale to use, 
+             which may be necessary for locale-specific conversions, such as converting a numeric 
+             String to a Double.-or- null to use the current thread's 
+             System.Globalization.CultureInfo.
+        
+            namedParameters: An array containing the names of the parameters to which the values in the args array are 
+             passed.
+        
             Returns: An System.Object representing the return value of the invoked member.
         InvokeMember(self: _Type, name: str, invokeAttr: BindingFlags, binder: Binder, target: object, args: Array[object], culture: CultureInfo) -> object
         
             Provides COM objects with version-independent access to the 
-             System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,Sy
-             stem.Object,System.Object[],System.Globalization.CultureInfo) method.
+             System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Bi
+             nder,System.Object,System.Object[],System.Globalization.CultureInfo) method.
         
         
-            name: The System.String containing the name of the constructor, method, property, or field member to 
-             invoke.-or- An empty string ("") to invoke the default member. -or-For IDispatch members, a 
-             string representing the DispID, for example "[DispID=3]".
+            name: The System.String containing the name of the constructor, method, property, or field 
+             member to invoke.-or- An empty string ("") to invoke the default member. -or-For 
+             IDispatch members, a string representing the DispID, for example "[DispID=3]".
         
-            invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted. The access can be one of the BindingFlags such as Public, NonPublic, Private, 
-             InvokeMethod, GetField, and so on. The type of lookup need not be specified. If the type of 
-             lookup is omitted, BindingFlags.Public | BindingFlags.Instance will apply.
+            invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted. The access can be one of the BindingFlags such as Public, NonPublic, 
+             Private, InvokeMethod, GetField, and so on. The type of lookup need not be specified. If 
+             the type of lookup is omitted, BindingFlags.Public | BindingFlags.Instance will apply.
         
-            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which 
-             can involve selection of an overloaded method, coercion of argument types, and invocation of a 
-             member through reflection.-or- null, to use the System.Type.DefaultBinder.
+            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, 
+             which can involve selection of an overloaded method, coercion of argument types, and 
+             invocation of a member through reflection.-or- null, to use the 
+             System.Type.DefaultBinder.
         
             target: The System.Object on which to invoke the specified member.
             args: An array containing the arguments to pass to the member to invoke.
-            culture: The System.Globalization.CultureInfo object representing the globalization locale to use, which 
-             may be necessary for locale-specific conversions, such as converting a numeric String to a 
-             Double.-or- null to use the current thread's System.Globalization.CultureInfo.
+            culture: The System.Globalization.CultureInfo object representing the globalization locale to use, 
+             which may be necessary for locale-specific conversions, such as converting a numeric 
+             String to a Double.-or- null to use the current thread's 
+             System.Globalization.CultureInfo.
         
             Returns: An System.Object representing the return value of the invoked member.
-        InvokeMember(self: _Type, name: str, invokeAttr: BindingFlags, binder: Binder, target: object, args: Array[object], modifiers: Array[ParameterModifier], culture: CultureInfo, namedParameters: Array[str]) -> object
+        InvokeMember(self: _Type, name: str, invokeAttr: BindingFlags, binder: Binder, target: object, args: Array[object]) -> object
         
             Provides COM objects with version-independent access to the 
-             System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,Sy
-             stem.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInf
-             o,System.String[]) method.
+             System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Bi
+             nder,System.Object,System.Object[]) method.
         
         
-            name: The System.String containing the name of the constructor, method, property, or field member to 
-             invoke.-or- An empty string ("") to invoke the default member. -or-For IDispatch members, a 
-             string representing the DispID, for example "[DispID=3]".
+            name: The System.String containing the name of the constructor, method, property, or field 
+             member to invoke.-or- An empty string ("") to invoke the default member. -or-For 
+             IDispatch members, a string representing the DispID, for example "[DispID=3]".
         
-            invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is 
-             conducted. The access can be one of the BindingFlags such as Public, NonPublic, Private, 
-             InvokeMethod, GetField, and so on. The type of lookup need not be specified. If the type of 
-             lookup is omitted, BindingFlags.Public | BindingFlags.Instance will apply.
+            invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the 
+             search is conducted. The access can be one of the BindingFlags such as Public, NonPublic, 
+             Private, InvokeMethod, GetField, and so on. The type of lookup need not be specified. If 
+             the type of lookup is omitted, BindingFlags.Public | BindingFlags.Instance will apply.
         
-            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which 
-             can involve selection of an overloaded method, coercion of argument types, and invocation of a 
-             member through reflection.-or- null, to use the System.Type.DefaultBinder.
+            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, 
+             which can involve selection of an overloaded method, coercion of argument types, and 
+             invocation of a member through reflection.-or- null, to use the 
+             System.Type.DefaultBinder.
         
             target: The System.Object on which to invoke the specified member.
             args: An array containing the arguments to pass to the member to invoke.
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated 
-             with the corresponding element in the args array. A parameter's associated attributes are stored 
-             in the member's signature. The default binder does not process this parameter.
-        
-            culture: The System.Globalization.CultureInfo object representing the globalization locale to use, which 
-             may be necessary for locale-specific conversions, such as converting a numeric String to a 
-             Double.-or- null to use the current thread's System.Globalization.CultureInfo.
-        
-            namedParameters: An array containing the names of the parameters to which the values in the args array are passed.
             Returns: An System.Object representing the return value of the invoked member.
         """
         pass
@@ -13238,10 +13502,11 @@ class _Type:
         
         
             c: The System.Type to compare with the current System.Type.
-            Returns: true if c and the current System.Type represent the same type, or if the current System.Type is 
-             in the inheritance hierarchy of c, or if the current System.Type is an interface that c 
-             implements, or if c is a generic type parameter and the current System.Type represents one of 
-             the constraints of c. false if none of these conditions are the case, or if c is null.
+            Returns: true if c and the current System.Type represent the same type, or if the current 
+             System.Type is in the inheritance hierarchy of c, or if the current System.Type is an 
+             interface that c implements, or if c is a generic type parameter and the current 
+             System.Type represents one of the constraints of c. false if none of these conditions are 
+             the case, or if c is null.
         """
         pass
 
@@ -13268,10 +13533,10 @@ class _Type:
         
         
             o: The object to compare with the current System.Type.
-            Returns: true if the current System.Type is in the inheritance hierarchy of the object represented by o, 
-             or if the current System.Type is an interface that o supports. false if neither of these 
-             conditions is the case, or if o is null, or if the current System.Type is an open generic type 
-             (that is, System.Type.ContainsGenericParameters returns true).
+            Returns: true if the current System.Type is in the inheritance hierarchy of the object represented 
+             by o, or if the current System.Type is an interface that o supports. false if neither of 
+             these conditions is the case, or if o is null, or if the current System.Type is an open 
+             generic type (that is, System.Type.ContainsGenericParameters returns true).
         """
         pass
 
@@ -13284,10 +13549,10 @@ class _Type:
         
         
             c: The System.Type to compare with the current System.Type.
-            Returns: true if the System.Type represented by the c parameter and the current System.Type represent 
-             classes, and the class represented by the current System.Type derives from the class represented 
-             by c; otherwise, false. This method also returns false if c and the current System.Type 
-             represent the same class.
+            Returns: true if the System.Type represented by the c parameter and the current System.Type 
+             represent classes, and the class represented by the current System.Type derives from the 
+             class represented by c; otherwise, false. This method also returns false if c and the 
+             current System.Type represent the same class.
         """
         pass
 
@@ -13654,8 +13919,8 @@ class _TypeBuilder:
     def GetTypeInfo(self, iTInfo, lcid, ppTInfo):
         """
         GetTypeInfo(self: _TypeBuilder, iTInfo: UInt32, lcid: UInt32, ppTInfo: IntPtr)
-            Retrieves the type information for an object, which can be used to get the type information for 
-             an interface.
+            Retrieves the type information for an object, which can be used to get the type 
+             information for an interface.
         
         
             iTInfo: The type information to return.
@@ -13668,7 +13933,8 @@ class _TypeBuilder:
         """
         GetTypeInfoCount(self: _TypeBuilder) -> UInt32
         
-            Retrieves the number of type information interfaces that an object provides (either 0 or 1).
+            Retrieves the number of type information interfaces that an object provides (either 0 or 
+             1).
         """
         pass
 
@@ -13682,8 +13948,8 @@ class _TypeBuilder:
             riid: Reserved for future use. Must be IID_NULL.
             lcid: The locale context in which to interpret arguments.
             wFlags: Flags describing the context of the call.
-            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs for 
-             named arguments, and counts for the number of elements in the arrays.
+            pDispParams: A pointer to a structure containing an array of arguments, an array of argument DISPIDs 
+             for named arguments, and counts for the number of elements in the arrays.
         
             pVarResult: A pointer to the location where the result will be stored.
             pExcepInfo: A pointer to a structure that contains exception information.

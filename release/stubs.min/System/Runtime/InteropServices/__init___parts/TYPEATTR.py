@@ -1,4 +1,4 @@
-class TYPEATTR(object):
+class TYPEATTR:
  """ Use System.Runtime.InteropServices.ComTypes.TYPEATTR instead. """
  cbAlignment=None
  cbSizeInstance=None

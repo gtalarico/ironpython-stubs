@@ -2,19 +2,19 @@
 # module System.Security.Authentication.ExtendedProtection calls itself ExtendedProtection
 # from System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class ChannelBinding(SafeHandleZeroOrMinusOneIsInvalid, IDisposable):
+class ChannelBinding:
     """ The System.Security.Authentication.ExtendedProtection.ChannelBinding class encapsulates a pointer to the opaque data used to bind an authenticated transaction to a secure channel. """
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
-            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class 
-             specifying whether to perform a normal dispose operation.
+            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
+             class specifying whether to perform a normal dispose operation.
         
         
             disposing: true for a normal dispose operation; false to finalize the handle.
@@ -26,8 +26,9 @@ class ChannelBinding(SafeHandleZeroOrMinusOneIsInvalid, IDisposable):
         ReleaseHandle(self: SafeHandle) -> bool
         
             When overridden in a derived class, executes the code required to free the handle.
-            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, 
-             false. In this case, it generates a releaseHandleFailed MDA Managed Debugging Assistant.
+            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic 
+             failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging 
+             Assistant.
         """
         pass
 
@@ -41,18 +42,11 @@ class ChannelBinding(SafeHandleZeroOrMinusOneIsInvalid, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -78,7 +72,7 @@ Get: Size(self: ChannelBinding) -> int
     handle = None
 
 
-class ChannelBindingKind(Enum, IComparable, IFormattable, IConvertible):
+class ChannelBindingKind:
     """
     The System.Security.Authentication.ExtendedProtection.ChannelBindingKind enumeration represents the kinds of channel bindings that can be queried from secure channels.
     
@@ -123,7 +117,7 @@ class ChannelBindingKind(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ExtendedProtectionPolicy(object, ISerializable):
+class ExtendedProtectionPolicy:
     """
     The System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy class represents the extended protection policy used by the server to validate incoming client connections.
     
@@ -199,7 +193,7 @@ Get: ProtectionScenario(self: ExtendedProtectionPolicy) -> ProtectionScenario
     OSSupportsExtendedProtection = True
 
 
-class ExtendedProtectionPolicyTypeConverter(TypeConverter):
+class ExtendedProtectionPolicyTypeConverter:
     """
     The System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicyTypeConverter class represents the type converter for extended protection policy used by the server to validate incoming client connections.
     
@@ -224,7 +218,9 @@ class ExtendedProtectionPolicyTypeConverter(TypeConverter):
             Convert the object to the specified type
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            culture: A System.Globalization.CultureInfo object. If null is passed, the current culture is assumed.
+            culture: A System.Globalization.CultureInfo object. If null is passed, the current culture is 
+             assumed.
+        
             value: The System.Object to convert. This should be a 
              System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy object.
         
@@ -234,7 +230,7 @@ class ExtendedProtectionPolicyTypeConverter(TypeConverter):
         pass
 
 
-class PolicyEnforcement(Enum, IComparable, IFormattable, IConvertible):
+class PolicyEnforcement:
     """
     The System.Security.Authentication.ExtendedProtection.PolicyEnforcement enumeration specifies when the System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy should be enforced.
     
@@ -279,7 +275,7 @@ class PolicyEnforcement(Enum, IComparable, IFormattable, IConvertible):
     WhenSupported = None
 
 
-class ProtectionScenario(Enum, IComparable, IFormattable, IConvertible):
+class ProtectionScenario:
     """
     The System.Security.Authentication.ExtendedProtection.ProtectionScenario enumeration specifies the protection scenario enforced by the policy.
     
@@ -323,7 +319,7 @@ class ProtectionScenario(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ServiceNameCollection(ReadOnlyCollectionBase, ICollection, IEnumerable):
+class ServiceNameCollection:
     """
     The System.Security.Authentication.ExtendedProtection.ServiceNameCollection class is a read-only collection of service principal names.
     
@@ -335,33 +331,39 @@ class ServiceNameCollection(ReadOnlyCollectionBase, ICollection, IEnumerable):
 
     def Merge(self, *__args):
         """
-        Merge(self: ServiceNameCollection, serviceNames: IEnumerable) -> ServiceNameCollection
-        
-            Merges the current System.Security.Authentication.ExtendedProtection.ServiceNameCollection with 
-             the specified values to create a new 
-             System.Security.Authentication.ExtendedProtection.ServiceNameCollection containing the union.
-        
-        
-            serviceNames: An instance of the System.Collections.IEnumerable class that contains the specified values of 
-             service names to be merged.
-        
-            Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance that 
-             contains the union of the existing 
-             System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance merged with the 
-             specified values.
-        
         Merge(self: ServiceNameCollection, serviceName: str) -> ServiceNameCollection
         
-            Merges the current System.Security.Authentication.ExtendedProtection.ServiceNameCollection with 
-             the specified values to create a new 
-             System.Security.Authentication.ExtendedProtection.ServiceNameCollection containing the union.
+            Merges the current 
+             System.Security.Authentication.ExtendedProtection.ServiceNameCollection with the 
+             specified values to create a new 
+             System.Security.Authentication.ExtendedProtection.ServiceNameCollection containing the 
+             union.
         
         
-            serviceName: A string that contains the specified values of service names to be used to initialize the class.
-            Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance that 
-             contains the union of the existing 
-             System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance merged with the 
-             specified values.
+            serviceName: A string that contains the specified values of service names to be used to initialize the 
+             class.
+        
+            Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance 
+             that contains the union of the existing 
+             System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance merged 
+             with the specified values.
+        
+        Merge(self: ServiceNameCollection, serviceNames: IEnumerable) -> ServiceNameCollection
+        
+            Merges the current 
+             System.Security.Authentication.ExtendedProtection.ServiceNameCollection with the 
+             specified values to create a new 
+             System.Security.Authentication.ExtendedProtection.ServiceNameCollection containing the 
+             union.
+        
+        
+            serviceNames: An instance of the System.Collections.IEnumerable class that contains the specified 
+             values of service names to be merged.
+        
+            Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance 
+             that contains the union of the existing 
+             System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance merged 
+             with the specified values.
         """
         pass
 
@@ -388,7 +390,7 @@ class ServiceNameCollection(ReadOnlyCollectionBase, ICollection, IEnumerable):
 
 
 
-class TokenBinding(object):
+class TokenBinding:
     # no doc
     def GetRawTokenBindingId(self):
         """ GetRawTokenBindingId(self: TokenBinding) -> Array[Byte] """
@@ -401,7 +403,7 @@ class TokenBinding(object):
 
 
 
-class TokenBindingType(Enum, IComparable, IFormattable, IConvertible):
+class TokenBindingType:
     """ enum TokenBindingType, values: Provided (0), Referred (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

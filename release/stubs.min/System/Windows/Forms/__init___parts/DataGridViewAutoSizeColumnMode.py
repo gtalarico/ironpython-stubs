@@ -1,9 +1,7 @@
-class DataGridViewAutoSizeColumnMode(Enum,IComparable,IFormattable,IConvertible):
+class DataGridViewAutoSizeColumnMode:
  """
- Defines values for specifying how the width of a column is adjusted.
-
- 
-
+ Defines values for specifying how the width of a column is adjusted.
+ 
  enum DataGridViewAutoSizeColumnMode,values: AllCells (6),AllCellsExceptHeader (4),ColumnHeader (2),DisplayedCells (10),DisplayedCellsExceptHeader (8),Fill (16),None (1),NotSet (0)
  """
  def __eq__(self,*args):
@@ -35,7 +33,7 @@ class DataGridViewAutoSizeColumnMode(Enum,IComparable,IFormattable,IConvertible)
  DisplayedCells=None
  DisplayedCellsExceptHeader=None
  Fill=None
- None=None
+ None_ =None
  NotSet=None
  value__=None
 

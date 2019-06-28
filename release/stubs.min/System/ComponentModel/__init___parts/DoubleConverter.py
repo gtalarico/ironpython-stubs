@@ -1,8 +1,6 @@
-class DoubleConverter(BaseNumberConverter):
+class DoubleConverter:
  """
- Provides a type converter to convert double-precision,floating point number objects to and from various other representations.
-
- 
-
+ Provides a type converter to convert double-precision,floating point number objects to and from various other representations.
+ 
  DoubleConverter()
  """

@@ -1,9 +1,7 @@
-class MessageBoxOptions(Enum,IComparable,IFormattable,IConvertible):
+class MessageBoxOptions:
  """
- Specifies options on a System.Windows.Forms.MessageBox.
-
- 
-
+ Specifies options on a System.Windows.Forms.MessageBox.
+ 
  enum (flags) MessageBoxOptions,values: DefaultDesktopOnly (131072),RightAlign (524288),RtlReading (1048576),ServiceNotification (2097152)
  """
  def __eq__(self,*args):

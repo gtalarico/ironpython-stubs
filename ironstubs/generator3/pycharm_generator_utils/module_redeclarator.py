@@ -661,8 +661,8 @@ class ModuleRedeclarator(object):
                     local_import = self.create_local_import(base)
                     if local_import:
                         out(indent, local_import)
-        out(indent, "class ", p_name,"(object)", ":",                                         #fix kevin ana 3/inherited classes showed up in constructor
-            skipped_bases and " # skipped bases: " + ", ".join(skipped_bases) or "")
+        out(indent, "class ", p_name,"", ":",                                         #fix kevin ana 3/inherited classes showed up in constructor/base def replaced with ""
+            skipped_bases and " # skipped bases: " + ", ".join(skipped_bases) or "")  # we dont do anything with python objects so why bother 
         out_doc_attr(out, p_class, indent + 1)
         # inner parts
         methods = {}

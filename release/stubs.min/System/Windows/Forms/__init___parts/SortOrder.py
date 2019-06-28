@@ -1,9 +1,7 @@
-class SortOrder(Enum,IComparable,IFormattable,IConvertible):
+class SortOrder:
  """
- Specifies how items in a list are sorted.
-
- 
-
+ Specifies how items in a list are sorted.
+ 
  enum SortOrder,values: Ascending (1),Descending (2),None (0)
  """
  def __eq__(self,*args):
@@ -31,6 +29,6 @@ class SortOrder(Enum,IComparable,IFormattable,IConvertible):
   pass
  Ascending=None
  Descending=None
- None=None
+ None_ =None
  value__=None
 

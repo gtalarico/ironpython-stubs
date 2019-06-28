@@ -1,9 +1,7 @@
-class AuditFlags(Enum,IComparable,IFormattable,IConvertible):
+class AuditFlags:
  """
- Specifies the conditions for auditing attempts to access a securable object.
-
- 
-
+ Specifies the conditions for auditing attempts to access a securable object.
+ 
  enum (flags) AuditFlags,values: Failure (2),None (0),Success (1)
  """
  def __eq__(self,*args):
@@ -30,7 +28,7 @@ class AuditFlags(Enum,IComparable,IFormattable,IConvertible):
  def __str__(self,*args):
   pass
  Failure=None
- None=None
+ None_ =None
  Success=None
  value__=None
 

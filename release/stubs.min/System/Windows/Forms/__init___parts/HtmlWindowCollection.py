@@ -1,17 +1,12 @@
-class HtmlWindowCollection(object,ICollection,IEnumerable):
+class HtmlWindowCollection:
  """ Represents the windows contained within another System.Windows.Forms.HtmlWindow. """
  def GetEnumerator(self):
   """
-  GetEnumerator(self: HtmlWindowCollection) -> IEnumerator
-
-  
-
-   Returns an enumerator that can iterate through all elements in the 
-
-    System.Windows.Forms.HtmlWindowCollection.
-
-  
-
+  GetEnumerator(self: HtmlWindowCollection) -> IEnumerator
+  
+   Returns an enumerator that can iterate through all elements in the 
+    System.Windows.Forms.HtmlWindowCollection.
+  
    Returns: The System.Collections.IEnumerator that enables enumeration of this collection's elements.
   """
   pass
@@ -31,14 +26,10 @@ class HtmlWindowCollection(object,ICollection,IEnumerable):
   """ __repr__(self: object) -> str """
   pass
  Count=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the number of elements in the collection.
-
-
-
-Get: Count(self: HtmlWindowCollection) -> int
-
-
-
+ """Gets the number of elements in the collection.
+
+Get: Count(self: HtmlWindowCollection) -> int
+
 """
 
 

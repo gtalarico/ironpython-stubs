@@ -1,9 +1,7 @@
-class DataGridViewCellMouseEventArgs(MouseEventArgs):
+class DataGridViewCellMouseEventArgs:
  """
- Provides data for mouse events raised by a System.Windows.Forms.DataGridView whenever the mouse is moved within a System.Windows.Forms.DataGridViewCell.
-
- 
-
+ Provides data for mouse events raised by a System.Windows.Forms.DataGridView whenever the mouse is moved within a System.Windows.Forms.DataGridViewCell.
+ 
  DataGridViewCellMouseEventArgs(columnIndex: int,rowIndex: int,localX: int,localY: int,e: MouseEventArgs)
  """
  @staticmethod
@@ -11,25 +9,17 @@ class DataGridViewCellMouseEventArgs(MouseEventArgs):
   """ __new__(cls: type,columnIndex: int,rowIndex: int,localX: int,localY: int,e: MouseEventArgs) """
   pass
  ColumnIndex=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the zero-based column index of the cell.
-
-
-
-Get: ColumnIndex(self: DataGridViewCellMouseEventArgs) -> int
-
-
-
+ """Gets the zero-based column index of the cell.
+
+Get: ColumnIndex(self: DataGridViewCellMouseEventArgs) -> int
+
 """
 
  RowIndex=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the zero-based row index of the cell.
-
-
-
-Get: RowIndex(self: DataGridViewCellMouseEventArgs) -> int
-
-
-
+ """Gets the zero-based row index of the cell.
+
+Get: RowIndex(self: DataGridViewCellMouseEventArgs) -> int
+
 """
 
 

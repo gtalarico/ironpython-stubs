@@ -2,13 +2,13 @@
 # module System.Windows.Forms.ComponentModel.Com2Interop calls itself Com2Interop
 # from System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class Com2Variant(object):
+class Com2Variant:
     """
     Facilitates proper recognition of a variant type.
     
@@ -49,15 +49,16 @@ class IComPropertyBrowser:
         EnsurePendingChangesCommitted(self: IComPropertyBrowser) -> bool
         
             Commits all pending changes to the System.Windows.Forms.PropertyGrid control.
-            Returns: true if the System.Windows.Forms.PropertyGrid successfully commits changes; otherwise, false.
+            Returns: true if the System.Windows.Forms.PropertyGrid successfully commits changes; otherwise, 
+             false.
         """
         pass
 
     def HandleF4(self):
         """
         HandleF4(self: IComPropertyBrowser)
-            Activates the System.Windows.Forms.PropertyGrid control when the user chooses Properties for a 
-             control in Design view.
+            Activates the System.Windows.Forms.PropertyGrid control when the user chooses Properties 
+             for a control in Design view.
         """
         pass
 

@@ -1,9 +1,7 @@
-class StringTrimming(Enum,IComparable,IFormattable,IConvertible):
+class StringTrimming:
  """
- Specifies how to trim characters from a string that does not completely fit into a layout shape.
-
- 
-
+ Specifies how to trim characters from a string that does not completely fit into a layout shape.
+ 
  enum StringTrimming,values: Character (1),EllipsisCharacter (3),EllipsisPath (5),EllipsisWord (4),None (0),Word (2)
  """
  def __eq__(self,*args):
@@ -33,7 +31,7 @@ class StringTrimming(Enum,IComparable,IFormattable,IConvertible):
  EllipsisCharacter=None
  EllipsisPath=None
  EllipsisWord=None
- None=None
+ None_ =None
  value__=None
  Word=None
 

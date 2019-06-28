@@ -1,9 +1,7 @@
-class SecurityInfos(Enum,IComparable,IFormattable,IConvertible):
+class SecurityInfos:
  """
- Specifies the section of a security descriptor to be queried or set.
-
- 
-
+ Specifies the section of a security descriptor to be queried or set.
+ 
  enum (flags) SecurityInfos,values: DiscretionaryAcl (4),Group (2),Owner (1),SystemAcl (8)
  """
  def __eq__(self,*args):

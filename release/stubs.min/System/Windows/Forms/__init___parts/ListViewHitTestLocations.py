@@ -1,9 +1,7 @@
-class ListViewHitTestLocations(Enum,IComparable,IFormattable,IConvertible):
+class ListViewHitTestLocations:
  """
- Defines constants that represent areas in a System.Windows.Forms.ListView or System.Windows.Forms.ListViewItem.
-
- 
-
+ Defines constants that represent areas in a System.Windows.Forms.ListView or System.Windows.Forms.ListViewItem.
+ 
  enum (flags) ListViewHitTestLocations,values: AboveClientArea (256),BelowClientArea (16),Image (2),Label (4),LeftOfClientArea (64),None (1),RightOfClientArea (32),StateImage (512)
  """
  def __eq__(self,*args):
@@ -34,7 +32,7 @@ class ListViewHitTestLocations(Enum,IComparable,IFormattable,IConvertible):
  Image=None
  Label=None
  LeftOfClientArea=None
- None=None
+ None_ =None
  RightOfClientArea=None
  StateImage=None
  value__=None

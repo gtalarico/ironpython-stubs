@@ -2,21 +2,21 @@
 # module System.Diagnostics calls itself Diagnostics
 # from mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class Switch(object):
+class Switch:
     """ Provides an abstract base class to create new debugging and tracing switches. """
     def GetSupportedAttributes(self, *args): #cannot find CLR method
         """
         GetSupportedAttributes(self: Switch) -> Array[str]
         
             Gets the custom attributes supported by the switch.
-            Returns: A string array that contains the names of the custom attributes supported by the switch, or null 
-             if there no custom attributes are supported.
+            Returns: A string array that contains the names of the custom attributes supported by the switch, 
+             or null if there no custom attributes are supported.
         """
         pass
 
@@ -75,7 +75,7 @@ Get: DisplayName(self: Switch) -> str
 
 
 
-class BooleanSwitch(Switch):
+class BooleanSwitch:
     """
     Provides a simple on/off switch that controls debugging and tracing output.
     
@@ -110,7 +110,7 @@ Set: Enabled(self: BooleanSwitch) = value
 
 
 
-class ConditionalAttribute(Attribute, _Attribute):
+class ConditionalAttribute:
     """
     Indicates to compilers that a method call or attribute should be ignored unless a specified conditional compilation symbol is defined.
     
@@ -137,13 +137,13 @@ Get: ConditionString(self: ConditionalAttribute) -> str
 
 
 
-class TraceListener(MarshalByRefObject, IDisposable):
+class TraceListener:
     """ Provides the abstract base class for the listeners who monitor trace and debug output. """
     def Close(self):
         """
         Close(self: TraceListener)
-            When overridden in a derived class, closes the output stream so it no longer receives tracing or 
-             debugging output.
+            When overridden in a derived class, closes the output stream so it no longer receives 
+             tracing or debugging output.
         """
         pass
 
@@ -156,19 +156,19 @@ class TraceListener(MarshalByRefObject, IDisposable):
 
     def Fail(self, message, detailMessage=None):
         """
+        Fail(self: TraceListener, message: str)
+            Emits an error message to the listener you create when you implement the 
+             System.Diagnostics.TraceListener class.
+        
+        
+            message: A message to emit.
         Fail(self: TraceListener, message: str, detailMessage: str)
             Emits an error message and a detailed error message to the listener you create when you 
              implement the System.Diagnostics.TraceListener class.
         
         
             message: A message to emit.
-            detailMessage: A detailed message to emit.
-        Fail(self: TraceListener, message: str)
-            Emits an error message to the listener you create when you implement the 
-             System.Diagnostics.TraceListener class.
-        
-        
-            message: A message to emit.
+            detailMessage: A detailed message to emit.
         """
         pass
 
@@ -184,8 +184,8 @@ class TraceListener(MarshalByRefObject, IDisposable):
         GetSupportedAttributes(self: TraceListener) -> Array[str]
         
             Gets the custom attributes supported by the trace listener.
-            Returns: A string array naming the custom attributes supported by the trace listener, or null if there 
-             are no custom attributes.
+            Returns: A string array naming the custom attributes supported by the trace listener, or null if 
+             there are no custom attributes.
         """
         pass
 
@@ -195,11 +195,11 @@ class TraceListener(MarshalByRefObject, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -211,102 +211,106 @@ class TraceListener(MarshalByRefObject, IDisposable):
 
     def TraceData(self, eventCache, source, eventType, id, data):
         """
+        TraceData(self: TraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, data: object)
+            Writes trace information, a data object and event information to the listener specific 
+             output.
+        
+        
+            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread 
+             ID, and stack trace information.
+        
+            source: A name used to identify the output, typically the name of the application that generated 
+             the trace event.
+        
+            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has 
+             caused the trace.
+        
+            id: A numeric identifier for the event.
+            data: The trace data to emit.
         TraceData(self: TraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, *data: Array[object])
             Writes trace information, an array of data objects and event information to the listener 
              specific output.
         
         
-            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread ID, and 
-             stack trace information.
+            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread 
+             ID, and stack trace information.
         
-            source: A name used to identify the output, typically the name of the application that generated the 
-             trace event.
+            source: A name used to identify the output, typically the name of the application that generated 
+             the trace event.
         
-            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has caused 
-             the trace.
-        
-            id: A numeric identifier for the event.
-            data: An array of objects to emit as data.
-        TraceData(self: TraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, data: object)
-            Writes trace information, a data object and event information to the listener specific output.
-        
-            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread ID, and 
-             stack trace information.
-        
-            source: A name used to identify the output, typically the name of the application that generated the 
-             trace event.
-        
-            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has caused 
-             the trace.
+            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has 
+             caused the trace.
         
             id: A numeric identifier for the event.
-            data: The trace data to emit.
+            data: An array of objects to emit as data.
         """
         pass
 
     def TraceEvent(self, eventCache, source, eventType, id, *__args):
         """
-        TraceEvent(self: TraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, format: str, *args: Array[object])
-            Writes trace information, a formatted array of objects and event information to the listener 
-             specific output.
-        
-        
-            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread ID, and 
-             stack trace information.
-        
-            source: A name used to identify the output, typically the name of the application that generated the 
-             trace event.
-        
-            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has caused 
-             the trace.
-        
-            id: A numeric identifier for the event.
-            format: A format string that contains zero or more format items, which correspond to objects in the args 
-             array.
-        
-            args: An object array containing zero or more objects to format.
-        TraceEvent(self: TraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, message: str)
-            Writes trace information, a message, and event information to the listener specific output.
-        
-            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread ID, and 
-             stack trace information.
-        
-            source: A name used to identify the output, typically the name of the application that generated the 
-             trace event.
-        
-            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has caused 
-             the trace.
-        
-            id: A numeric identifier for the event.
-            message: A message to write.
         TraceEvent(self: TraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int)
             Writes trace and event information to the listener specific output.
         
-            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread ID, and 
-             stack trace information.
+            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread 
+             ID, and stack trace information.
         
-            source: A name used to identify the output, typically the name of the application that generated the 
-             trace event.
+            source: A name used to identify the output, typically the name of the application that generated 
+             the trace event.
         
-            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has caused 
-             the trace.
+            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has 
+             caused the trace.
         
-            id: A numeric identifier for the event.
+            id: A numeric identifier for the event.
+        TraceEvent(self: TraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, message: str)
+            Writes trace information, a message, and event information to the listener specific 
+             output.
+        
+        
+            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread 
+             ID, and stack trace information.
+        
+            source: A name used to identify the output, typically the name of the application that generated 
+             the trace event.
+        
+            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has 
+             caused the trace.
+        
+            id: A numeric identifier for the event.
+            message: A message to write.
+        TraceEvent(self: TraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, format: str, *args: Array[object])
+            Writes trace information, a formatted array of objects and event information to the 
+             listener specific output.
+        
+        
+            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread 
+             ID, and stack trace information.
+        
+            source: A name used to identify the output, typically the name of the application that generated 
+             the trace event.
+        
+            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has 
+             caused the trace.
+        
+            id: A numeric identifier for the event.
+            format: A format string that contains zero or more format items, which correspond to objects in 
+             the args array.
+        
+            args: An object array containing zero or more objects to format.
         """
         pass
 
     def TraceTransfer(self, eventCache, source, id, message, relatedActivityId):
         """
         TraceTransfer(self: TraceListener, eventCache: TraceEventCache, source: str, id: int, message: str, relatedActivityId: Guid)
-            Writes trace information, a message, a related activity identity and event information to the 
-             listener specific output.
+            Writes trace information, a message, a related activity identity and event information to 
+             the listener specific output.
         
         
-            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread ID, and 
-             stack trace information.
+            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread 
+             ID, and stack trace information.
         
-            source: A name used to identify the output, typically the name of the application that generated the 
-             trace event.
+            source: A name used to identify the output, typically the name of the application that generated 
+             the trace event.
         
             id: A numeric identifier for the event.
             message: A message to write.
@@ -316,6 +320,18 @@ class TraceListener(MarshalByRefObject, IDisposable):
 
     def Write(self, *__args):
         """
+        Write(self: TraceListener, message: str)
+            When overridden in a derived class, writes the specified message to the listener you 
+             create in the derived class.
+        
+        
+            message: A message to write.
+        Write(self: TraceListener, o: object)
+            Writes the value of the object's System.Object.ToString method to the listener you create 
+             when you implement the System.Diagnostics.TraceListener class.
+        
+        
+            o: An System.Object whose fully qualified class name you want to write.
         Write(self: TraceListener, message: str, category: str)
             Writes a category name and a message to the listener you create when you implement the 
              System.Diagnostics.TraceListener class.
@@ -329,32 +345,33 @@ class TraceListener(MarshalByRefObject, IDisposable):
         
         
             o: An System.Object whose fully qualified class name you want to write.
-            category: A category name used to organize the output.
-        Write(self: TraceListener, message: str)
-            When overridden in a derived class, writes the specified message to the listener you create in 
-             the derived class.
-        
-        
-            message: A message to write.
-        Write(self: TraceListener, o: object)
-            Writes the value of the object's System.Object.ToString method to the listener you create when 
-             you implement the System.Diagnostics.TraceListener class.
-        
-        
-            o: An System.Object whose fully qualified class name you want to write.
+            category: A category name used to organize the output.
         """
         pass
 
     def WriteIndent(self, *args): #cannot find CLR method
         """
         WriteIndent(self: TraceListener)
-            Writes the indent to the listener you create when you implement this class, and resets the 
-             System.Diagnostics.TraceListener.NeedIndent property to false.
+            Writes the indent to the listener you create when you implement this class, and resets 
+             the System.Diagnostics.TraceListener.NeedIndent property to false.
         """
         pass
 
     def WriteLine(self, *__args):
         """
+        WriteLine(self: TraceListener, message: str)
+            When overridden in a derived class, writes a message to the listener you create in the 
+             derived class, followed by a line terminator.
+        
+        
+            message: A message to write.
+        WriteLine(self: TraceListener, o: object)
+            Writes the value of the object's System.Object.ToString method to the listener you create 
+             when you implement the System.Diagnostics.TraceListener class, followed by a line 
+             terminator.
+        
+        
+            o: An System.Object whose fully qualified class name you want to write.
         WriteLine(self: TraceListener, message: str, category: str)
             Writes a category name and a message to the listener you create when you implement the 
              System.Diagnostics.TraceListener class, followed by a line terminator.
@@ -364,40 +381,21 @@ class TraceListener(MarshalByRefObject, IDisposable):
             category: A category name used to organize the output.
         WriteLine(self: TraceListener, o: object, category: str)
             Writes a category name and the value of the object's System.Object.ToString method to the 
-             listener you create when you implement the System.Diagnostics.TraceListener class, followed by a 
-             line terminator.
+             listener you create when you implement the System.Diagnostics.TraceListener class, 
+             followed by a line terminator.
         
         
             o: An System.Object whose fully qualified class name you want to write.
-            category: A category name used to organize the output.
-        WriteLine(self: TraceListener, message: str)
-            When overridden in a derived class, writes a message to the listener you create in the derived 
-             class, followed by a line terminator.
-        
-        
-            message: A message to write.
-        WriteLine(self: TraceListener, o: object)
-            Writes the value of the object's System.Object.ToString method to the listener you create when 
-             you implement the System.Diagnostics.TraceListener class, followed by a line terminator.
-        
-        
-            o: An System.Object whose fully qualified class name you want to write.
+            category: A category name used to organize the output.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -473,7 +471,7 @@ Set: TraceOutputOptions(self: TraceListener) = value
 
 
 
-class TextWriterTraceListener(TraceListener, IDisposable):
+class TextWriterTraceListener:
     """
     Directs tracing or debugging output to a System.IO.TextWriter or to a System.IO.Stream, such as System.IO.FileStream.
     
@@ -488,8 +486,8 @@ class TextWriterTraceListener(TraceListener, IDisposable):
     def Close(self):
         """
         Close(self: TextWriterTraceListener)
-            Closes the System.Diagnostics.TextWriterTraceListener.Writer so that it no longer receives 
-             tracing or debugging output.
+            Closes the System.Diagnostics.TextWriterTraceListener.Writer so that it no longer 
+             receives tracing or debugging output.
         """
         pass
 
@@ -515,8 +513,8 @@ class TextWriterTraceListener(TraceListener, IDisposable):
         GetSupportedAttributes(self: TraceListener) -> Array[str]
         
             Gets the custom attributes supported by the trace listener.
-            Returns: A string array naming the custom attributes supported by the trace listener, or null if there 
-             are no custom attributes.
+            Returns: A string array naming the custom attributes supported by the trace listener, or null if 
+             there are no custom attributes.
         """
         pass
 
@@ -526,11 +524,11 @@ class TextWriterTraceListener(TraceListener, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -552,17 +550,17 @@ class TextWriterTraceListener(TraceListener, IDisposable):
     def WriteIndent(self, *args): #cannot find CLR method
         """
         WriteIndent(self: TraceListener)
-            Writes the indent to the listener you create when you implement this class, and resets the 
-             System.Diagnostics.TraceListener.NeedIndent property to false.
+            Writes the indent to the listener you create when you implement this class, and resets 
+             the System.Diagnostics.TraceListener.NeedIndent property to false.
         """
         pass
 
     def WriteLine(self, *__args):
         """
         WriteLine(self: TextWriterTraceListener, message: str)
-            Writes a message to this instance's System.Diagnostics.TextWriterTraceListener.Writer followed 
-             by a line terminator. The default line terminator is a carriage return followed by a line feed 
-             (\r\n).
+            Writes a message to this instance's System.Diagnostics.TextWriterTraceListener.Writer 
+             followed by a line terminator. The default line terminator is a carriage return followed 
+             by a line feed (\r\n).
         
         
             message: A message to write.
@@ -570,18 +568,11 @@ class TextWriterTraceListener(TraceListener, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -616,7 +607,7 @@ Set: Writer(self: TextWriterTraceListener) = value
 
 
 
-class ConsoleTraceListener(TextWriterTraceListener, IDisposable):
+class ConsoleTraceListener:
     """
     Directs tracing or debugging output to either the standard output or the standard error stream.
     
@@ -645,8 +636,8 @@ class ConsoleTraceListener(TextWriterTraceListener, IDisposable):
         GetSupportedAttributes(self: TraceListener) -> Array[str]
         
             Gets the custom attributes supported by the trace listener.
-            Returns: A string array naming the custom attributes supported by the trace listener, or null if there 
-             are no custom attributes.
+            Returns: A string array naming the custom attributes supported by the trace listener, or null if 
+             there are no custom attributes.
         """
         pass
 
@@ -656,11 +647,11 @@ class ConsoleTraceListener(TextWriterTraceListener, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -673,24 +664,17 @@ class ConsoleTraceListener(TextWriterTraceListener, IDisposable):
     def WriteIndent(self, *args): #cannot find CLR method
         """
         WriteIndent(self: TraceListener)
-            Writes the indent to the listener you create when you implement this class, and resets the 
-             System.Diagnostics.TraceListener.NeedIndent property to false.
+            Writes the indent to the listener you create when you implement this class, and resets 
+             the System.Diagnostics.TraceListener.NeedIndent property to false.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -712,16 +696,16 @@ class ConsoleTraceListener(TextWriterTraceListener, IDisposable):
 
 
 
-class CorrelationManager(object):
+class CorrelationManager:
     """ Correlates traces that are part of a logical transaction. """
     def StartLogicalOperation(self, operationId=None):
         """
-        StartLogicalOperation(self: CorrelationManager)
-            Starts a logical operation on a thread.
         StartLogicalOperation(self: CorrelationManager, operationId: object)
             Starts a logical operation with the specified identity on a thread.
         
-            operationId: An object identifying the operation.
+            operationId: An object identifying the operation.
+        StartLogicalOperation(self: CorrelationManager)
+            Starts a logical operation on a thread.
         """
         pass
 
@@ -749,7 +733,7 @@ Get: LogicalOperationStack(self: CorrelationManager) -> Stack
 
 
 
-class CounterCreationData(object):
+class CounterCreationData:
     """
     Defines the counter type, name, and Help string for a custom counter.
     
@@ -790,7 +774,7 @@ Set: CounterType(self: CounterCreationData) = value
 
 
 
-class CounterCreationDataCollection(CollectionBase, IList, ICollection, IEnumerable):
+class CounterCreationDataCollection:
     """
     Provides a strongly typed collection of System.Diagnostics.CounterCreationData objects.
     
@@ -811,19 +795,21 @@ class CounterCreationDataCollection(CollectionBase, IList, ICollection, IEnumera
 
     def AddRange(self, value):
         """
+        AddRange(self: CounterCreationDataCollection, value: Array[CounterCreationData])
+            Adds the specified array of System.Diagnostics.CounterCreationData instances to the 
+             collection.
+        
+        
+            value: An array of System.Diagnostics.CounterCreationData instances to append to the existing 
+             collection.
+        
         AddRange(self: CounterCreationDataCollection, value: CounterCreationDataCollection)
             Adds the specified collection of System.Diagnostics.CounterCreationData instances to the 
              collection.
         
         
-            value: A collection of System.Diagnostics.CounterCreationData instances to append to the existing 
-             collection.
-        
-        AddRange(self: CounterCreationDataCollection, value: Array[CounterCreationData])
-            Adds the specified array of System.Diagnostics.CounterCreationData instances to the collection.
-        
-            value: An array of System.Diagnostics.CounterCreationData instances to append to the existing 
-             collection.
+            value: A collection of System.Diagnostics.CounterCreationData instances to append to the 
+             existing collection.
         """
         pass
 
@@ -831,19 +817,21 @@ class CounterCreationDataCollection(CollectionBase, IList, ICollection, IEnumera
         """
         Contains(self: CounterCreationDataCollection, value: CounterCreationData) -> bool
         
-            Determines whether a System.Diagnostics.CounterCreationData instance exists in the collection.
+            Determines whether a System.Diagnostics.CounterCreationData instance exists in the 
+             collection.
+        
         
             value: The System.Diagnostics.CounterCreationData object to find in the collection.
-            Returns: true if the specified System.Diagnostics.CounterCreationData object exists in the collection; 
-             otherwise, false.
+            Returns: true if the specified System.Diagnostics.CounterCreationData object exists in the 
+             collection; otherwise, false.
         """
         pass
 
     def CopyTo(self, array, index):
         """
         CopyTo(self: CounterCreationDataCollection, array: Array[CounterCreationData], index: int)
-            Copies the elements of the System.Diagnostics.CounterCreationData to an array, starting at the 
-             specified index of the array.
+            Copies the elements of the System.Diagnostics.CounterCreationData to an array, starting 
+             at the specified index of the array.
         
         
             array: An array of System.Diagnostics.CounterCreationData instances to add to the collection.
@@ -858,20 +846,20 @@ class CounterCreationDataCollection(CollectionBase, IList, ICollection, IEnumera
             Returns the index of a System.Diagnostics.CounterCreationData object in the collection.
         
             value: The System.Diagnostics.CounterCreationData object to locate in the collection.
-            Returns: The zero-based index of the specified System.Diagnostics.CounterCreationData, if it is found, in 
-             the collection; otherwise, -1.
+            Returns: The zero-based index of the specified System.Diagnostics.CounterCreationData, if it is 
+             found, in the collection; otherwise, -1.
         """
         pass
 
     def Insert(self, index, value):
         """
         Insert(self: CounterCreationDataCollection, index: int, value: CounterCreationData)
-            Inserts a System.Diagnostics.CounterCreationData object into the collection, at the specified 
-             index.
+            Inserts a System.Diagnostics.CounterCreationData object into the collection, at the 
+             specified index.
         
         
-            index: The zero-based index of the location at which the System.Diagnostics.CounterCreationData is to 
-             be inserted.
+            index: The zero-based index of the location at which the System.Diagnostics.CounterCreationData 
+             is to be inserted.
         
             value: The System.Diagnostics.CounterCreationData to insert into the collection.
         """
@@ -1031,7 +1019,7 @@ class CounterCreationDataCollection(CollectionBase, IList, ICollection, IEnumera
 
 
 
-class CounterSample(object):
+class CounterSample:
     """
     Defines a structure that holds the raw data for a performance counter.
     
@@ -1041,6 +1029,16 @@ class CounterSample(object):
     @staticmethod
     def Calculate(counterSample, nextCounterSample=None):
         """
+        Calculate(counterSample: CounterSample) -> Single
+        
+            Calculates the performance data of the counter, using a single sample point. This method 
+             is generally used for uncalculated performance counter types.
+        
+        
+            counterSample: The System.Diagnostics.CounterSample structure to use as a base point for calculating 
+             performance data.
+        
+            Returns: The calculated performance value.
         Calculate(counterSample: CounterSample, nextCounterSample: CounterSample) -> Single
         
             Calculates the performance data of the counter, using two sample points. This method is 
@@ -1053,39 +1051,30 @@ class CounterSample(object):
             nextCounterSample: The System.Diagnostics.CounterSample structure to use as an ending point for calculating 
              performance data.
         
-            Returns: The calculated performance value.
-        Calculate(counterSample: CounterSample) -> Single
-        
-            Calculates the performance data of the counter, using a single sample point. This method is 
-             generally used for uncalculated performance counter types.
-        
-        
-            counterSample: The System.Diagnostics.CounterSample structure to use as a base point for calculating 
-             performance data.
-        
             Returns: The calculated performance value.
         """
         pass
 
     def Equals(self, *__args):
         """
-        Equals(self: CounterSample, sample: CounterSample) -> bool
-        
-            Indicates whether the specified System.Diagnostics.CounterSample structure is equal to the 
-             current System.Diagnostics.CounterSample structure.
-        
-        
-            sample: The System.Diagnostics.CounterSample structure to be compared with this instance.
-            Returns: true if sample is equal to the current instance; otherwise, false.
         Equals(self: CounterSample, o: object) -> bool
         
-            Indicates whether the specified structure is a System.Diagnostics.CounterSample structure and is 
-             identical to the current System.Diagnostics.CounterSample structure.
+            Indicates whether the specified structure is a System.Diagnostics.CounterSample structure 
+             and is identical to the current System.Diagnostics.CounterSample structure.
         
         
             o: The System.Diagnostics.CounterSample structure to be compared with the current structure.
             Returns: true if o is a System.Diagnostics.CounterSample structure and is identical to the current 
-             instance; otherwise, false.
+             instance; otherwise, false.
+        
+        Equals(self: CounterSample, sample: CounterSample) -> bool
+        
+            Indicates whether the specified System.Diagnostics.CounterSample structure is equal to 
+             the current System.Diagnostics.CounterSample structure.
+        
+        
+            sample: The System.Diagnostics.CounterSample structure to be compared with this instance.
+            Returns: true if sample is equal to the current instance; otherwise, false.
         """
         pass
 
@@ -1105,10 +1094,9 @@ class CounterSample(object):
     @staticmethod # known case of __new__
     def __new__(self, rawValue, baseValue, counterFrequency, systemFrequency, timeStamp, timeStamp100nSec, counterType, counterTimeStamp=None):
         """
-        __new__[CounterSample]() -> CounterSample
-        
         __new__(cls: type, rawValue: Int64, baseValue: Int64, counterFrequency: Int64, systemFrequency: Int64, timeStamp: Int64, timeStamp100nSec: Int64, counterType: PerformanceCounterType)
-        __new__(cls: type, rawValue: Int64, baseValue: Int64, counterFrequency: Int64, systemFrequency: Int64, timeStamp: Int64, timeStamp100nSec: Int64, counterType: PerformanceCounterType, counterTimeStamp: Int64)
+        __new__(cls: type, rawValue: Int64, baseValue: Int64, counterFrequency: Int64, systemFrequency: Int64, timeStamp: Int64, timeStamp100nSec: Int64, counterType: PerformanceCounterType, counterTimeStamp: Int64)
+        __new__[CounterSample]() -> CounterSample
         """
         pass
 
@@ -1175,23 +1163,27 @@ Get: TimeStamp100nSec(self: CounterSample) -> Int64
     Empty = None
 
 
-class CounterSampleCalculator(object):
+class CounterSampleCalculator:
     """ Provides a set of utility functions for interpreting performance counter data. """
     @staticmethod
     def ComputeCounterValue(*__args):
         """
+        ComputeCounterValue(newSample: CounterSample) -> Single
+        
+            Computes the calculated value of a single raw counter sample.
+        
+            newSample: A System.Diagnostics.CounterSample that indicates the most recent sample the system has 
+             taken.
+        
+            Returns: A floating-point representation of the performance counter's calculated value.
         ComputeCounterValue(oldSample: CounterSample, newSample: CounterSample) -> Single
         
             Computes the calculated value of two raw counter samples.
         
             oldSample: A System.Diagnostics.CounterSample that indicates a previous sample the system has taken.
-            newSample: A System.Diagnostics.CounterSample that indicates the most recent sample the system has taken.
-            Returns: A floating-point representation of the performance counter's calculated value.
-        ComputeCounterValue(newSample: CounterSample) -> Single
+            newSample: A System.Diagnostics.CounterSample that indicates the most recent sample the system has 
+             taken.
         
-            Computes the calculated value of a single raw counter sample.
-        
-            newSample: A System.Diagnostics.CounterSample that indicates the most recent sample the system has taken.
             Returns: A floating-point representation of the performance counter's calculated value.
         """
         pass
@@ -1201,7 +1193,7 @@ class CounterSampleCalculator(object):
     ]
 
 
-class DataReceivedEventArgs(EventArgs):
+class DataReceivedEventArgs:
     """ Provides data for the System.Diagnostics.Process.OutputDataReceived and System.Diagnostics.Process.ErrorDataReceived events. """
     Data = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the line of characters that was written to a redirected System.Diagnostics.Process output stream.
@@ -1212,7 +1204,7 @@ Get: Data(self: DataReceivedEventArgs) -> str
 
 
 
-class DataReceivedEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class DataReceivedEventHandler:
     """
     Represents the method that will handle the System.Diagnostics.Process.OutputDataReceived event or System.Diagnostics.Process.ErrorDataReceived event of a System.Diagnostics.Process.
     
@@ -1239,9 +1231,9 @@ class DataReceivedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1268,13 +1260,14 @@ class DataReceivedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -1291,52 +1284,52 @@ class DataReceivedEventHandler(MulticastDelegate, ICloneable, ISerializable):
         pass
 
 
-class Debug(object):
+class Debug:
     """ Provides a set of methods and properties that help debug your code. This class cannot be inherited. """
     @staticmethod
     def Assert(condition, message=None, *__args):
         """
+        Assert(condition: bool)
+            Checks for a condition; if the condition is false, displays a message box that shows the 
+             call stack.
+        
+        
+            condition: The conditional expression to evaluate. If the condition is true, a failure message is 
+             not sent and the message box is not displayed.
+        
+        Assert(condition: bool, message: str)
+            Checks for a condition; if the condition is false, outputs a specified message and 
+             displays a message box that shows the call stack.
+        
+        
+            condition: The conditional expression to evaluate. If the condition is true, the specified message 
+             is not sent and the message box is not displayed.
+        
+            message: The message to send to the System.Diagnostics.Trace.Listeners collection.
         Assert(condition: bool, message: str, detailMessage: str)
-            Checks for a condition; if the condition is false, outputs two specified messages and displays a 
-             message box that shows the call stack.
+            Checks for a condition; if the condition is false, outputs two specified messages and 
+             displays a message box that shows the call stack.
         
         
-            condition: The conditional expression to evaluate. If the condition is true, the specified messages are not 
-             sent and the message box is not displayed.
+            condition: The conditional expression to evaluate. If the condition is true, the specified messages 
+             are not sent and the message box is not displayed.
         
             message: The message to send to the System.Diagnostics.Trace.Listeners collection.
             detailMessage: The detailed message to send to the System.Diagnostics.Trace.Listeners collection.
         Assert(condition: bool, message: str, detailMessageFormat: str, *args: Array[object])
-            Checks for a condition; if the condition is false, outputs two messages (simple and formatted) 
-             and displays a message box that shows the call stack.
+            Checks for a condition; if the condition is false, outputs two messages (simple and 
+             formatted) and displays a message box that shows the call stack.
         
         
-            condition: The conditional expression to evaluate. If the condition is true, the specified messages are not 
-             sent and the message box is not displayed.
+            condition: The conditional expression to evaluate. If the condition is true, the specified messages 
+             are not sent and the message box is not displayed.
         
             message: The message to send to the System.Diagnostics.Trace.Listeners collection.
-            detailMessageFormat: The composite format string (see Remarks) to send to the System.Diagnostics.Trace.Listeners 
-             collection. This message contains text intermixed with zero or more format items, which 
-             correspond to objects in the args array.
+            detailMessageFormat: The composite format string (see Remarks) to send to the 
+             System.Diagnostics.Trace.Listeners collection. This message contains text intermixed with 
+             zero or more format items, which correspond to objects in the args array.
         
-            args: An object array that contains zero or more objects to format.
-        Assert(condition: bool)
-            Checks for a condition; if the condition is false, displays a message box that shows the call 
-             stack.
-        
-        
-            condition: The conditional expression to evaluate. If the condition is true, a failure message is not sent 
-             and the message box is not displayed.
-        
-        Assert(condition: bool, message: str)
-            Checks for a condition; if the condition is false, outputs a specified message and displays a 
-             message box that shows the call stack.
-        
-        
-            condition: The conditional expression to evaluate. If the condition is true, the specified message is not 
-             sent and the message box is not displayed.
-        
-            message: The message to send to the System.Diagnostics.Trace.Listeners collection.
+            args: An object array that contains zero or more objects to format.
         """
         pass
 
@@ -1352,15 +1345,15 @@ class Debug(object):
     @staticmethod
     def Fail(message, detailMessage=None):
         """
+        Fail(message: str)
+            Emits the specified error message.
+        
+            message: A message to emit.
         Fail(message: str, detailMessage: str)
             Emits an error message and a detailed error message.
         
             message: A message to emit.
-            detailMessage: A detailed message to emit.
-        Fail(message: str)
-            Emits the specified error message.
-        
-            message: A message to emit.
+            detailMessage: A detailed message to emit.
         """
         pass
 
@@ -1384,21 +1377,21 @@ class Debug(object):
     @staticmethod
     def Print(*__args):
         """
-        Print(format: str, *args: Array[object])
-            Writes a formatted string followed by a line terminator to the trace listeners in the 
-             System.Diagnostics.Debug.Listeners collection.
-        
-        
-            format: A composite format string (see Remarks) that contains text intermixed with zero or more format 
-             items, which correspond to objects in the args array.
-        
-            args: An object array containing zero or more objects to format.
         Print(message: str)
             Writes a message followed by a line terminator to the trace listeners in the 
              System.Diagnostics.Debug.Listeners collection.
         
         
-            message: The message to write.
+            message: The message to write.
+        Print(format: str, *args: Array[object])
+            Writes a formatted string followed by a line terminator to the trace listeners in the 
+             System.Diagnostics.Debug.Listeners collection.
+        
+        
+            format: A composite format string (see Remarks) that contains text intermixed with zero or more 
+             format items, which correspond to objects in the args array.
+        
+            args: An object array containing zero or more objects to format.
         """
         pass
 
@@ -1413,6 +1406,18 @@ class Debug(object):
     @staticmethod
     def Write(*__args):
         """
+        Write(message: str)
+            Writes a message to the trace listeners in the System.Diagnostics.Debug.Listeners 
+             collection.
+        
+        
+            message: A message to write.
+        Write(value: object)
+            Writes the value of the object's System.Object.ToString method to the trace listeners in 
+             the System.Diagnostics.Debug.Listeners collection.
+        
+        
+            value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
         Write(message: str, category: str)
             Writes a category name and message to the trace listeners in the 
              System.Diagnostics.Debug.Listeners collection.
@@ -1421,75 +1426,85 @@ class Debug(object):
             message: A message to write.
             category: A category name used to organize the output.
         Write(value: object, category: str)
-            Writes a category name and the value of the object's System.Object.ToString method to the trace 
-             listeners in the System.Diagnostics.Debug.Listeners collection.
+            Writes a category name and the value of the object's System.Object.ToString method to the 
+             trace listeners in the System.Diagnostics.Debug.Listeners collection.
         
         
             value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
-            category: A category name used to organize the output.
-        Write(message: str)
-            Writes a message to the trace listeners in the System.Diagnostics.Debug.Listeners collection.
-        
-            message: A message to write.
-        Write(value: object)
-            Writes the value of the object's System.Object.ToString method to the trace listeners in the 
-             System.Diagnostics.Debug.Listeners collection.
-        
-        
-            value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
+            category: A category name used to organize the output.
         """
         pass
 
     @staticmethod
     def WriteIf(condition, *__args):
         """
+        WriteIf(condition: bool, message: str)
+            Writes a message to the trace listeners in the System.Diagnostics.Debug.Listeners 
+             collection if a condition is true.
+        
+        
+            condition: The conditional expression to evaluate. If the condition is true, the message is written 
+             to the trace listeners in the collection.
+        
+            message: A message to write.
+        WriteIf(condition: bool, value: object)
+            Writes the value of the object's System.Object.ToString method to the trace listeners in 
+             the System.Diagnostics.Debug.Listeners collection if a condition is true.
+        
+        
+            condition: The conditional expression to evaluate. If the condition is true, the value is written to 
+             the trace listeners in the collection.
+        
+            value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
         WriteIf(condition: bool, message: str, category: str)
             Writes a category name and message to the trace listeners in the 
              System.Diagnostics.Debug.Listeners collection if a condition is true.
         
         
-            condition: The conditional expression to evaluate. If the condition is true, the category name and message 
-             are written to the trace listeners in the collection.
+            condition: The conditional expression to evaluate. If the condition is true, the category name and 
+             message are written to the trace listeners in the collection.
         
             message: A message to write.
             category: A category name used to organize the output.
         WriteIf(condition: bool, value: object, category: str)
-            Writes a category name and the value of the object's System.Object.ToString method to the trace 
-             listeners in the System.Diagnostics.Debug.Listeners collection if a condition is true.
+            Writes a category name and the value of the object's System.Object.ToString method to the 
+             trace listeners in the System.Diagnostics.Debug.Listeners collection if a condition is 
+             true.
         
         
-            condition: The conditional expression to evaluate. If the condition is true, the category name and value 
-             are written to the trace listeners in the collection.
+            condition: The conditional expression to evaluate. If the condition is true, the category name and 
+             value are written to the trace listeners in the collection.
         
             value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
-            category: A category name used to organize the output.
-        WriteIf(condition: bool, message: str)
-            Writes a message to the trace listeners in the System.Diagnostics.Debug.Listeners collection if 
-             a condition is true.
-        
-        
-            condition: The conditional expression to evaluate. If the condition is true, the message is written to the 
-             trace listeners in the collection.
-        
-            message: A message to write.
-        WriteIf(condition: bool, value: object)
-            Writes the value of the object's System.Object.ToString method to the trace listeners in the 
-             System.Diagnostics.Debug.Listeners collection if a condition is true.
-        
-        
-            condition: The conditional expression to evaluate. If the condition is true, the value is written to the 
-             trace listeners in the collection.
-        
-            value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
+            category: A category name used to organize the output.
         """
         pass
 
     @staticmethod
     def WriteLine(*__args):
         """
+        WriteLine(message: str)
+            Writes a message followed by a line terminator to the trace listeners in the 
+             System.Diagnostics.Debug.Listeners collection.
+        
+        
+            message: A message to write.
+        WriteLine(value: object)
+            Writes the value of the object's System.Object.ToString method to the trace listeners in 
+             the System.Diagnostics.Debug.Listeners collection.
+        
+        
+            value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
+        WriteLine(message: str, category: str)
+            Writes a category name and message to the trace listeners in the 
+             System.Diagnostics.Debug.Listeners collection.
+        
+        
+            message: A message to write.
+            category: A category name used to organize the output.
         WriteLine(value: object, category: str)
-            Writes a category name and the value of the object's System.Object.ToString method to the trace 
-             listeners in the System.Diagnostics.Debug.Listeners collection.
+            Writes a category name and the value of the object's System.Object.ToString method to the 
+             trace listeners in the System.Diagnostics.Debug.Listeners collection.
         
         
             value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
@@ -1499,35 +1514,34 @@ class Debug(object):
              System.Diagnostics.Debug.Listeners collection.
         
         
-            format: A composite format string (see Remarks) that contains text intermixed with zero or more format 
-             items, which correspond to objects in the args array.
+            format: A composite format string (see Remarks) that contains text intermixed with zero or more 
+             format items, which correspond to objects in the args array.
         
-            args: An object array containing zero or more objects to format.
-        WriteLine(message: str, category: str)
-            Writes a category name and message to the trace listeners in the 
-             System.Diagnostics.Debug.Listeners collection.
-        
-        
-            message: A message to write.
-            category: A category name used to organize the output.
-        WriteLine(message: str)
-            Writes a message followed by a line terminator to the trace listeners in the 
-             System.Diagnostics.Debug.Listeners collection.
-        
-        
-            message: A message to write.
-        WriteLine(value: object)
-            Writes the value of the object's System.Object.ToString method to the trace listeners in the 
-             System.Diagnostics.Debug.Listeners collection.
-        
-        
-            value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
+            args: An object array containing zero or more objects to format.
         """
         pass
 
     @staticmethod
     def WriteLineIf(condition, *__args):
         """
+        WriteLineIf(condition: bool, message: str)
+            Writes a message to the trace listeners in the System.Diagnostics.Debug.Listeners 
+             collection if a condition is true.
+        
+        
+            condition: The conditional expression to evaluate. If the condition is true, the message is written 
+             to the trace listeners in the collection.
+        
+            message: A message to write.
+        WriteLineIf(condition: bool, value: object)
+            Writes the value of the object's System.Object.ToString method to the trace listeners in 
+             the System.Diagnostics.Debug.Listeners collection if a condition is true.
+        
+        
+            condition: The conditional expression to evaluate. If the condition is true, the value is written to 
+             the trace listeners in the collection.
+        
+            value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
         WriteLineIf(condition: bool, message: str, category: str)
             Writes a category name and message to the trace listeners in the 
              System.Diagnostics.Debug.Listeners collection if a condition is true.
@@ -1537,33 +1551,16 @@ class Debug(object):
             message: A message to write.
             category: A category name used to organize the output.
         WriteLineIf(condition: bool, value: object, category: str)
-            Writes a category name and the value of the object's System.Object.ToString method to the trace 
-             listeners in the System.Diagnostics.Debug.Listeners collection if a condition is true.
+            Writes a category name and the value of the object's System.Object.ToString method to the 
+             trace listeners in the System.Diagnostics.Debug.Listeners collection if a condition is 
+             true.
         
         
-            condition: The conditional expression to evaluate. If the condition is true, the category name and value 
-             are written to the trace listeners in the collection.
+            condition: The conditional expression to evaluate. If the condition is true, the category name and 
+             value are written to the trace listeners in the collection.
         
             value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
-            category: A category name used to organize the output.
-        WriteLineIf(condition: bool, message: str)
-            Writes a message to the trace listeners in the System.Diagnostics.Debug.Listeners collection if 
-             a condition is true.
-        
-        
-            condition: The conditional expression to evaluate. If the condition is true, the message is written to the 
-             trace listeners in the collection.
-        
-            message: A message to write.
-        WriteLineIf(condition: bool, value: object)
-            Writes the value of the object's System.Object.ToString method to the trace listeners in the 
-             System.Diagnostics.Debug.Listeners collection if a condition is true.
-        
-        
-            condition: The conditional expression to evaluate. If the condition is true, the value is written to the 
-             trace listeners in the collection.
-        
-            value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
+            category: A category name used to organize the output.
         """
         pass
 
@@ -1586,7 +1583,7 @@ class Debug(object):
     ]
 
 
-class DebuggableAttribute(Attribute, _Attribute):
+class DebuggableAttribute:
     """
     Modifies code generation for runtime just-in-time (JIT) debugging. This class cannot be inherited.
     
@@ -1630,7 +1627,7 @@ Get: IsJITTrackingEnabled(self: DebuggableAttribute) -> bool
     DebuggingModes = None
 
 
-class Debugger(object):
+class Debugger:
     """
     Enables communication with a debugger. This class cannot be inherited.
     
@@ -1650,9 +1647,9 @@ class Debugger(object):
         IsLogging() -> bool
         
             Checks to see if logging is enabled by an attached debugger.
-            Returns: true if a debugger is attached and logging is enabled; otherwise, false. The attached debugger 
-             is the registered managed debugger in the DbgManagedDebugger registry key. For more information 
-             on this key, see Enabling JIT-Attach Debugging.
+            Returns: true if a debugger is attached and logging is enabled; otherwise, false. The attached 
+             debugger is the registered managed debugger in the DbgManagedDebugger registry key. For 
+             more information on this key, see Enabling JIT-Attach Debugging.
         """
         pass
 
@@ -1662,7 +1659,8 @@ class Debugger(object):
         Launch() -> bool
         
             Launches and attaches a debugger to the process.
-            Returns: true if the startup is successful or if the debugger is already attached; otherwise, false.
+            Returns: true if the startup is successful or if the debugger is already attached; otherwise, 
+             false.
         """
         pass
 
@@ -1691,7 +1689,7 @@ class Debugger(object):
     IsAttached = False
 
 
-class DebuggerBrowsableAttribute(Attribute, _Attribute):
+class DebuggerBrowsableAttribute:
     """
     Determines if and how a member is displayed in the debugger variable windows. This class cannot be inherited.
     
@@ -1715,7 +1713,7 @@ Get: State(self: DebuggerBrowsableAttribute) -> DebuggerBrowsableState
 
 
 
-class DebuggerBrowsableState(Enum, IComparable, IFormattable, IConvertible):
+class DebuggerBrowsableState:
     """
     Provides display instructions for the debugger.
     
@@ -1760,7 +1758,7 @@ class DebuggerBrowsableState(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class DebuggerDisplayAttribute(Attribute, _Attribute):
+class DebuggerDisplayAttribute:
     """
     Determines how a class or field is displayed in the debugger variable windows.
     
@@ -1816,7 +1814,7 @@ Get: Value(self: DebuggerDisplayAttribute) -> str
 
 
 
-class DebuggerHiddenAttribute(Attribute, _Attribute):
+class DebuggerHiddenAttribute:
     """
     Specifies the System.Diagnostics.DebuggerHiddenAttribute. This class cannot be inherited.
     
@@ -1830,7 +1828,7 @@ class DebuggerHiddenAttribute(Attribute, _Attribute):
         pass
 
 
-class DebuggerNonUserCodeAttribute(Attribute, _Attribute):
+class DebuggerNonUserCodeAttribute:
     """
     Identifies a type or member that is not part of the user code for an application.
     
@@ -1844,7 +1842,7 @@ class DebuggerNonUserCodeAttribute(Attribute, _Attribute):
         pass
 
 
-class DebuggerStepperBoundaryAttribute(Attribute, _Attribute):
+class DebuggerStepperBoundaryAttribute:
     """
     Indicates the code following the attribute is to be executed in run, not step, mode.
     
@@ -1858,7 +1856,7 @@ class DebuggerStepperBoundaryAttribute(Attribute, _Attribute):
         pass
 
 
-class DebuggerStepThroughAttribute(Attribute, _Attribute):
+class DebuggerStepThroughAttribute:
     """
     Instructs the debugger to step through the code instead of stepping into the code. This class cannot be inherited.
     
@@ -1872,7 +1870,7 @@ class DebuggerStepThroughAttribute(Attribute, _Attribute):
         pass
 
 
-class DebuggerTypeProxyAttribute(Attribute, _Attribute):
+class DebuggerTypeProxyAttribute:
     """
     Specifies the display proxy for a type.
     
@@ -1916,7 +1914,7 @@ Set: TargetTypeName(self: DebuggerTypeProxyAttribute) = value
 
 
 
-class DebuggerVisualizerAttribute(Attribute, _Attribute):
+class DebuggerVisualizerAttribute:
     """
     Specifies that the type has a visualizer. This class cannot be inherited.
     
@@ -1983,7 +1981,7 @@ Get: VisualizerTypeName(self: DebuggerVisualizerAttribute) -> str
 
 
 
-class DefaultTraceListener(TraceListener, IDisposable):
+class DefaultTraceListener:
     """
     Provides the default output methods and behavior for tracing.
     
@@ -1992,25 +1990,26 @@ class DefaultTraceListener(TraceListener, IDisposable):
     def Dispose(self):
         """
         Dispose(self: TraceListener, disposing: bool)
-            Releases the unmanaged resources used by the System.Diagnostics.TraceListener and optionally 
-             releases the managed resources.
+            Releases the unmanaged resources used by the System.Diagnostics.TraceListener and 
+             optionally releases the managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
     def Fail(self, message, detailMessage=None):
         """
+        Fail(self: DefaultTraceListener, message: str)
+            Emits or displays a message and a stack trace for an assertion that always fails.
+        
+            message: The message to emit or display.
         Fail(self: DefaultTraceListener, message: str, detailMessage: str)
             Emits or displays detailed messages and a stack trace for an assertion that always fails.
         
             message: The message to emit or display.
-            detailMessage: The detailed message to emit or display.
-        Fail(self: DefaultTraceListener, message: str)
-            Emits or displays a message and a stack trace for an assertion that always fails.
-        
-            message: The message to emit or display.
+            detailMessage: The detailed message to emit or display.
         """
         pass
 
@@ -2019,8 +2018,8 @@ class DefaultTraceListener(TraceListener, IDisposable):
         GetSupportedAttributes(self: TraceListener) -> Array[str]
         
             Gets the custom attributes supported by the trace listener.
-            Returns: A string array naming the custom attributes supported by the trace listener, or null if there 
-             are no custom attributes.
+            Returns: A string array naming the custom attributes supported by the trace listener, or null if 
+             there are no custom attributes.
         """
         pass
 
@@ -2030,11 +2029,11 @@ class DefaultTraceListener(TraceListener, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2059,8 +2058,8 @@ class DefaultTraceListener(TraceListener, IDisposable):
     def WriteIndent(self, *args): #cannot find CLR method
         """
         WriteIndent(self: TraceListener)
-            Writes the indent to the listener you create when you implement this class, and resets the 
-             System.Diagnostics.TraceListener.NeedIndent property to false.
+            Writes the indent to the listener you create when you implement this class, and resets 
+             the System.Diagnostics.TraceListener.NeedIndent property to false.
         """
         pass
 
@@ -2068,8 +2067,8 @@ class DefaultTraceListener(TraceListener, IDisposable):
         """
         WriteLine(self: DefaultTraceListener, message: str)
             Writes the output to the OutputDebugString function and to the 
-             System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String) method, followed by a 
-             carriage return and line feed (\r\n).
+             System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String) method, 
+             followed by a carriage return and line feed (\r\n).
         
         
             message: The message to write to OutputDebugString and 
@@ -2078,18 +2077,11 @@ class DefaultTraceListener(TraceListener, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -2119,7 +2111,7 @@ Set: LogFileName(self: DefaultTraceListener) = value
 
 
 
-class DelimitedListTraceListener(TextWriterTraceListener, IDisposable):
+class DelimitedListTraceListener:
     """
     Directs tracing or debugging output to a text writer, such as a stream writer, or to a stream, such as a file stream.
     
@@ -2155,11 +2147,11 @@ class DelimitedListTraceListener(TextWriterTraceListener, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2171,98 +2163,93 @@ class DelimitedListTraceListener(TextWriterTraceListener, IDisposable):
 
     def TraceData(self, eventCache, source, eventType, id, data):
         """
-        TraceData(self: DelimitedListTraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, *data: Array[object])
-            Writes trace information, an array of data objects, and event information to the output file or 
+        TraceData(self: DelimitedListTraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, data: object)
+            Writes trace information, a data object, and event information to the output file or 
              stream.
         
         
-            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread ID, and 
-             stack trace information.
+            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread 
+             ID, and stack trace information.
         
-            source: A name used to identify the output, typically the name of the application that generated the 
-             trace event.
+            source: A name used to identify the output, typically the name of the application that generated 
+             the trace event.
         
-            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has caused 
-             the trace.
-        
-            id: A numeric identifier for the event.
-            data: An array of data objects to write to the output file or stream.
-        TraceData(self: DelimitedListTraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, data: object)
-            Writes trace information, a data object, and event information to the output file or stream.
-        
-            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread ID, and 
-             stack trace information.
-        
-            source: A name used to identify the output, typically the name of the application that generated the 
-             trace event.
-        
-            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has caused 
-             the trace.
+            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has 
+             caused the trace.
         
             id: A numeric identifier for the event.
-            data: A data object to write to the output file or stream.
+            data: A data object to write to the output file or stream.
+        TraceData(self: DelimitedListTraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, *data: Array[object])
+            Writes trace information, an array of data objects, and event information to the output 
+             file or stream.
+        
+        
+            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread 
+             ID, and stack trace information.
+        
+            source: A name used to identify the output, typically the name of the application that generated 
+             the trace event.
+        
+            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has 
+             caused the trace.
+        
+            id: A numeric identifier for the event.
+            data: An array of data objects to write to the output file or stream.
         """
         pass
 
     def TraceEvent(self, eventCache, source, eventType, id, *__args):
         """
+        TraceEvent(self: DelimitedListTraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, format: str, *args: Array[object])
+            Writes trace information, a formatted array of objects, and event information to the 
+             output file or stream.
+        
+        
+            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread 
+             ID, and stack trace information.
+        
+            source: A name used to identify the output, typically the name of the application that generated 
+             the trace event.
+        
+            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has 
+             caused the trace.
+        
+            id: A numeric identifier for the event.
+            format: A format string that contains zero or more format items that correspond to objects in the 
+             args array.
+        
+            args: An array containing zero or more objects to format.
         TraceEvent(self: DelimitedListTraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, message: str)
             Writes trace information, a message, and event information to the output file or stream.
         
-            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread ID, and 
-             stack trace information.
+            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread 
+             ID, and stack trace information.
         
-            source: A name used to identify the output, typically the name of the application that generated the 
-             trace event.
+            source: A name used to identify the output, typically the name of the application that generated 
+             the trace event.
         
-            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has caused 
-             the trace.
-        
-            id: A numeric identifier for the event.
-            message: The trace message to write to the output file or stream.
-        TraceEvent(self: DelimitedListTraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, format: str, *args: Array[object])
-            Writes trace information, a formatted array of objects, and event information to the output file 
-             or stream.
-        
-        
-            eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID, thread ID, and 
-             stack trace information.
-        
-            source: A name used to identify the output, typically the name of the application that generated the 
-             trace event.
-        
-            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has caused 
-             the trace.
+            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has 
+             caused the trace.
         
             id: A numeric identifier for the event.
-            format: A format string that contains zero or more format items that correspond to objects in the args 
-             array.
-        
-            args: An array containing zero or more objects to format.
+            message: The trace message to write to the output file or stream.
         """
         pass
 
     def WriteIndent(self, *args): #cannot find CLR method
         """
         WriteIndent(self: TraceListener)
-            Writes the indent to the listener you create when you implement this class, and resets the 
-             System.Diagnostics.TraceListener.NeedIndent property to false.
+            Writes the indent to the listener you create when you implement this class, and resets 
+             the System.Diagnostics.TraceListener.NeedIndent property to false.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -2296,7 +2283,7 @@ Set: Delimiter(self: DelimitedListTraceListener) = value
 
 
 
-class DiagnosticsConfigurationHandler(object, IConfigurationSectionHandler):
+class DiagnosticsConfigurationHandler:
     """
     Handles the diagnostics section of configuration files.
     
@@ -2306,8 +2293,8 @@ class DiagnosticsConfigurationHandler(object, IConfigurationSectionHandler):
         """
         Create(self: DiagnosticsConfigurationHandler, parent: object, configContext: object, section: XmlNode) -> object
         
-            Parses the configuration settings for the <system.diagnostics> Element section of configuration 
-             files.
+            Parses the configuration settings for the <system.diagnostics> Element section of 
+             configuration files.
         
         
             parent: The object inherited from the parent path
@@ -2326,7 +2313,7 @@ class DiagnosticsConfigurationHandler(object, IConfigurationSectionHandler):
         pass
 
 
-class EntryWrittenEventArgs(EventArgs):
+class EntryWrittenEventArgs:
     """
     Provides data for the System.Diagnostics.EventLog.EntryWritten event.
     
@@ -2350,7 +2337,7 @@ Get: Entry(self: EntryWrittenEventArgs) -> EventLogEntry
 
 
 
-class EntryWrittenEventHandler(MulticastDelegate, ICloneable, ISerializable):
+class EntryWrittenEventHandler:
     """
     Represents the method that will handle the System.Diagnostics.EventLog.EntryWritten event of an System.Diagnostics.EventLog.
     
@@ -2377,9 +2364,9 @@ class EntryWrittenEventHandler(MulticastDelegate, ICloneable, ISerializable):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current 
-             delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -2406,13 +2393,14 @@ class EntryWrittenEventHandler(MulticastDelegate, ICloneable, ISerializable):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to 
-             the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without 
-             value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -2429,7 +2417,7 @@ class EntryWrittenEventHandler(MulticastDelegate, ICloneable, ISerializable):
         pass
 
 
-class EventInstance(object):
+class EventInstance:
     """
     Represents language-neutral information for an event log entry.
     
@@ -2470,7 +2458,7 @@ Set: InstanceId(self: EventInstance) = value
 
 
 
-class EventLog(Component, IComponent, IDisposable, ISupportInitialize):
+class EventLog:
     """
     Provides interaction with Windows event logs.
     
@@ -2482,8 +2470,8 @@ class EventLog(Component, IComponent, IDisposable, ISupportInitialize):
     def BeginInit(self):
         """
         BeginInit(self: EventLog)
-            Begins the initialization of an System.Diagnostics.EventLog used on a form or used by another 
-             component. The initialization occurs at runtime.
+            Begins the initialization of an System.Diagnostics.EventLog used on a form or used by 
+             another component. The initialization occurs at runtime.
         """
         pass
 
@@ -2504,64 +2492,70 @@ class EventLog(Component, IComponent, IDisposable, ISupportInitialize):
     @staticmethod
     def CreateEventSource(*__args):
         """
-        CreateEventSource(sourceData: EventSourceCreationData)
-            Establishes a valid event source for writing localized event messages, using the specified 
-             configuration properties for the event source and the corresponding event log.
-        
-        
-            sourceData: The configuration properties for the event source and its target event log.
-        CreateEventSource(source: str, logName: str, machineName: str)
-            Establishes the specified source name as a valid event source for writing entries to a log on 
-             the specified computer. This method can also be used to create a new custom log on the specified 
+        CreateEventSource(source: str, logName: str)
+            Establishes the specified source name as a valid event source for writing entries to a 
+             log on the local computer. This method can also create a new custom log on the local 
              computer.
         
         
-            source: The source by which the application is registered on the specified computer.
-            logName: The name of the log the source's entries are written to. Possible values include Application, 
-             System, or a custom event log. If you do not specify a value, logName defaults to Application.
-        
-            machineName: The name of the computer to register this event source with, or "." for the local computer.
-        CreateEventSource(source: str, logName: str)
-            Establishes the specified source name as a valid event source for writing entries to a log on 
-             the local computer. This method can also create a new custom log on the local computer.
-        
-        
             source: The source name by which the application is registered on the local computer.
-            logName: The name of the log the source's entries are written to. Possible values include Application, 
-             System, or a custom event log.
+            logName: The name of the log the source's entries are written to. Possible values include 
+             Application, System, or a custom event log.
+        
+        CreateEventSource(source: str, logName: str, machineName: str)
+            Establishes the specified source name as a valid event source for writing entries to a 
+             log on the specified computer. This method can also be used to create a new custom log on 
+             the specified computer.
+        
+        
+            source: The source by which the application is registered on the specified computer.
+            logName: The name of the log the source's entries are written to. Possible values include 
+             Application, System, or a custom event log. If you do not specify a value, logName 
+             defaults to Application.
+        
+            machineName: The name of the computer to register this event source with, or "." for the local 
+             computer.
+        
+        CreateEventSource(sourceData: EventSourceCreationData)
+            Establishes a valid event source for writing localized event messages, using the 
+             specified configuration properties for the event source and the corresponding event log.
+        
+        
+            sourceData: The configuration properties for the event source and its target event log.
         """
         pass
 
     @staticmethod
     def Delete(logName, machineName=None):
         """
-        Delete(logName: str, machineName: str)
-            Removes an event log from the specified computer.
-        
-            logName: The name of the log to delete. Possible values include: Application, Security, System, and any 
-             custom event logs on the specified computer.
-        
-            machineName: The name of the computer to delete the log from, or "." for the local computer.
         Delete(logName: str)
             Removes an event log from the local computer.
         
-            logName: The name of the log to delete. Possible values include: Application, Security, System, and any 
-             custom event logs on the computer.
+            logName: The name of the log to delete. Possible values include: Application, Security, System, 
+             and any custom event logs on the computer.
+        
+        Delete(logName: str, machineName: str)
+            Removes an event log from the specified computer.
+        
+            logName: The name of the log to delete. Possible values include: Application, Security, System, 
+             and any custom event logs on the specified computer.
+        
+            machineName: The name of the computer to delete the log from, or "." for the local computer.
         """
         pass
 
     @staticmethod
     def DeleteEventSource(source, machineName=None):
         """
+        DeleteEventSource(source: str)
+            Removes the event source registration from the event log of the local computer.
+        
+            source: The name by which the application is registered in the event log system.
         DeleteEventSource(source: str, machineName: str)
             Removes the application's event source registration from the specified computer.
         
             source: The name by which the application is registered in the event log system.
-            machineName: The name of the computer to remove the registration from, or "." for the local computer.
-        DeleteEventSource(source: str)
-            Removes the event source registration from the event log of the local computer.
-        
-            source: The name by which the application is registered in the event log system.
+            machineName: The name of the computer to remove the registration from, or "." for the local computer.
         """
         pass
 
@@ -2572,7 +2566,8 @@ class EventLog(Component, IComponent, IDisposable, ISupportInitialize):
              releases the managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
@@ -2587,31 +2582,39 @@ class EventLog(Component, IComponent, IDisposable, ISupportInitialize):
     @staticmethod
     def Exists(logName, machineName=None):
         """
-        Exists(logName: str, machineName: str) -> bool
-        
-            Determines whether the log exists on the specified computer.
-        
-            logName: The log for which to search. Possible values include: Application, Security, System, other 
-             application-specific logs (such as those associated with Active Directory), or any custom log on 
-             the computer.
-        
-            machineName: The name of the computer on which to search for the log, or "." for the local computer.
-            Returns: true if the log exists on the specified computer; otherwise, false.
         Exists(logName: str) -> bool
         
             Determines whether the log exists on the local computer.
         
-            logName: The name of the log to search for. Possible values include: Application, Security, System, other 
-             application-specific logs (such as those associated with Active Directory), or any custom log on 
-             the computer.
+            logName: The name of the log to search for. Possible values include: Application, Security, 
+             System, other application-specific logs (such as those associated with Active Directory), 
+             or any custom log on the computer.
         
-            Returns: true if the log exists on the local computer; otherwise, false.
+            Returns: true if the log exists on the local computer; otherwise, false.
+        Exists(logName: str, machineName: str) -> bool
+        
+            Determines whether the log exists on the specified computer.
+        
+            logName: The log for which to search. Possible values include: Application, Security, System, 
+             other application-specific logs (such as those associated with Active Directory), or any 
+             custom log on the computer.
+        
+            machineName: The name of the computer on which to search for the log, or "." for the local computer.
+            Returns: true if the log exists on the specified computer; otherwise, false.
         """
         pass
 
     @staticmethod
     def GetEventLogs(machineName=None):
         """
+        GetEventLogs() -> Array[EventLog]
+        
+            Searches for all event logs on the local computer and creates an array of 
+             System.Diagnostics.EventLog objects that contain the list.
+        
+            Returns: An array of type System.Diagnostics.EventLog that represents the logs on the local 
+             computer.
+        
         GetEventLogs(machineName: str) -> Array[EventLog]
         
             Searches for all event logs on the given computer and creates an array of 
@@ -2619,13 +2622,8 @@ class EventLog(Component, IComponent, IDisposable, ISupportInitialize):
         
         
             machineName: The computer on which to search for event logs.
-            Returns: An array of type System.Diagnostics.EventLog that represents the logs on the given computer.
-        GetEventLogs() -> Array[EventLog]
-        
-            Searches for all event logs on the local computer and creates an array of 
-             System.Diagnostics.EventLog objects that contain the list.
-        
-            Returns: An array of type System.Diagnostics.EventLog that represents the logs on the local computer.
+            Returns: An array of type System.Diagnostics.EventLog that represents the logs on the given 
+             computer.
         """
         pass
 
@@ -2633,13 +2631,14 @@ class EventLog(Component, IComponent, IDisposable, ISupportInitialize):
         """
         GetService(self: Component, service: Type) -> object
         
-            Returns an object that represents a service provided by the System.ComponentModel.Component or 
-             by its System.ComponentModel.Container.
+            Returns an object that represents a service provided by the 
+             System.ComponentModel.Component or by its System.ComponentModel.Container.
         
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or 
-             null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the 
+             System.ComponentModel.Component, or null if the System.ComponentModel.Component does not 
+             provide the specified service.
         """
         pass
 
@@ -2662,11 +2661,11 @@ class EventLog(Component, IComponent, IDisposable, ISupportInitialize):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2679,20 +2678,22 @@ class EventLog(Component, IComponent, IDisposable, ISupportInitialize):
     def ModifyOverflowPolicy(self, action, retentionDays):
         """
         ModifyOverflowPolicy(self: EventLog, action: OverflowAction, retentionDays: int)
-            Changes the configured behavior for writing new entries when the event log reaches its maximum 
-             file size.
+            Changes the configured behavior for writing new entries when the event log reaches its 
+             maximum file size.
         
         
             action: The overflow behavior for writing new entries to the event log.
-            retentionDays: The minimum number of days each event log entry is retained. This parameter is used only if 
-             action is set to System.Diagnostics.OverflowAction.OverwriteOlder.
+            retentionDays: The minimum number of days each event log entry is retained. This parameter is used only 
+             if action is set to System.Diagnostics.OverflowAction.OverwriteOlder.
         """
         pass
 
     def RegisterDisplayName(self, resourceFile, resourceId):
         """
         RegisterDisplayName(self: EventLog, resourceFile: str, resourceId: Int64)
-            Specifies the localized name of the event log, which is displayed in the server Event Viewer.
+            Specifies the localized name of the event log, which is displayed in the server Event 
+             Viewer.
+        
         
             resourceFile: The fully specified path to a localized resource file.
             resourceId: The resource identifier that indexes a localized string within the resource file.
@@ -2702,24 +2703,67 @@ class EventLog(Component, IComponent, IDisposable, ISupportInitialize):
     @staticmethod
     def SourceExists(source, machineName=None):
         """
+        SourceExists(source: str) -> bool
+        
+            Determines whether an event source is registered on the local computer.
+        
+            source: The name of the event source.
+            Returns: true if the event source is registered on the local computer; otherwise, false.
         SourceExists(source: str, machineName: str) -> bool
         
             Determines whether an event source is registered on a specified computer.
         
             source: The name of the event source.
             machineName: The name the computer on which to look, or "." for the local computer.
-            Returns: true if the event source is registered on the given computer; otherwise, false.
-        SourceExists(source: str) -> bool
-        
-            Determines whether an event source is registered on the local computer.
-        
-            source: The name of the event source.
-            Returns: true if the event source is registered on the local computer; otherwise, false.
+            Returns: true if the event source is registered on the given computer; otherwise, false.
         """
         pass
 
     def WriteEntry(self, *__args):
         """
+        WriteEntry(self: EventLog, message: str)
+            Writes an information type entry, with the given message text, to the event log.
+        
+            message: The string to write to the event log.
+        WriteEntry(source: str, message: str)
+            Writes an information type entry with the given message text to the event log, using the 
+             specified registered event source.
+        
+        
+            source: The source by which the application is registered on the specified computer.
+            message: The string to write to the event log.
+        WriteEntry(self: EventLog, message: str, type: EventLogEntryType)
+            Writes an error, warning, information, success audit, or failure audit entry with the 
+             given message text to the event log.
+        
+        
+            message: The string to write to the event log.
+            type: One of the System.Diagnostics.EventLogEntryType values.
+        WriteEntry(source: str, message: str, type: EventLogEntryType)
+            Writes an error, warning, information, success audit, or failure audit entry with the 
+             given message text to the event log, using the specified registered event source.
+        
+        
+            source: The source by which the application is registered on the specified computer.
+            message: The string to write to the event log.
+            type: One of the System.Diagnostics.EventLogEntryType values.
+        WriteEntry(self: EventLog, message: str, type: EventLogEntryType, eventID: int)
+            Writes an entry with the given message text and application-defined event identifier to 
+             the event log.
+        
+        
+            message: The string to write to the event log.
+            type: One of the System.Diagnostics.EventLogEntryType values.
+            eventID: The application-specific identifier for the event.
+        WriteEntry(source: str, message: str, type: EventLogEntryType, eventID: int)
+            Writes an entry with the given message text and application-defined event identifier to 
+             the event log, using the specified registered event source.
+        
+        
+            source: The source by which the application is registered on the specified computer.
+            message: The string to write to the event log.
+            type: One of the System.Diagnostics.EventLogEntryType values.
+            eventID: The application-specific identifier for the event.
         WriteEntry(self: EventLog, message: str, type: EventLogEntryType, eventID: int, category: Int16)
             Writes an entry with the given message text, application-defined event identifier, and 
              application-defined category to the event log.
@@ -2729,19 +2773,10 @@ class EventLog(Component, IComponent, IDisposable, ISupportInitialize):
             type: One of the System.Diagnostics.EventLogEntryType values.
             eventID: The application-specific identifier for the event.
             category: The application-specific subcategory associated with the message.
-        WriteEntry(source: str, message: str, type: EventLogEntryType, eventID: int)
-            Writes an entry with the given message text and application-defined event identifier to the 
-             event log, using the specified registered event source.
-        
-        
-            source: The source by which the application is registered on the specified computer.
-            message: The string to write to the event log.
-            type: One of the System.Diagnostics.EventLogEntryType values.
-            eventID: The application-specific identifier for the event.
         WriteEntry(source: str, message: str, type: EventLogEntryType, eventID: int, category: Int16)
             Writes an entry with the given message text, application-defined event identifier, and 
-             application-defined category to the event log, using the specified registered event source. The 
-             category can be used by the Event Viewer to filter events in the log.
+             application-defined category to the event log, using the specified registered event 
+             source. The category can be used by the Event Viewer to filter events in the log.
         
         
             source: The source by which the application is registered on the specified computer.
@@ -2749,6 +2784,18 @@ class EventLog(Component, IComponent, IDisposable, ISupportInitialize):
             type: One of the System.Diagnostics.EventLogEntryType values.
             eventID: The application-specific identifier for the event.
             category: The application-specific subcategory associated with the message.
+        WriteEntry(source: str, message: str, type: EventLogEntryType, eventID: int, category: Int16, rawData: Array[Byte])
+            Writes an entry with the given message text, application-defined event identifier, and 
+             application-defined category to the event log (using the specified registered event 
+             source) and appends binary data to the message.
+        
+        
+            source: The source by which the application is registered on the specified computer.
+            message: The string to write to the event log.
+            type: One of the System.Diagnostics.EventLogEntryType values.
+            eventID: The application-specific identifier for the event.
+            category: The application-specific subcategory associated with the message.
+            rawData: An array of bytes that holds the binary data associated with the entry.
         WriteEntry(self: EventLog, message: str, type: EventLogEntryType, eventID: int, category: Int16, rawData: Array[Byte])
             Writes an entry with the given message text, application-defined event identifier, and 
              application-defined category to the event log, and appends binary data to the message.
@@ -2758,85 +2805,39 @@ class EventLog(Component, IComponent, IDisposable, ISupportInitialize):
             type: One of the System.Diagnostics.EventLogEntryType values.
             eventID: The application-specific identifier for the event.
             category: The application-specific subcategory associated with the message.
-            rawData: An array of bytes that holds the binary data associated with the entry.
-        WriteEntry(source: str, message: str, type: EventLogEntryType, eventID: int, category: Int16, rawData: Array[Byte])
-            Writes an entry with the given message text, application-defined event identifier, and 
-             application-defined category to the event log (using the specified registered event source) and 
-             appends binary data to the message.
-        
-        
-            source: The source by which the application is registered on the specified computer.
-            message: The string to write to the event log.
-            type: One of the System.Diagnostics.EventLogEntryType values.
-            eventID: The application-specific identifier for the event.
-            category: The application-specific subcategory associated with the message.
-            rawData: An array of bytes that holds the binary data associated with the entry.
-        WriteEntry(source: str, message: str)
-            Writes an information type entry with the given message text to the event log, using the 
-             specified registered event source.
-        
-        
-            source: The source by which the application is registered on the specified computer.
-            message: The string to write to the event log.
-        WriteEntry(self: EventLog, message: str)
-            Writes an information type entry, with the given message text, to the event log.
-        
-            message: The string to write to the event log.
-        WriteEntry(self: EventLog, message: str, type: EventLogEntryType)
-            Writes an error, warning, information, success audit, or failure audit entry with the given 
-             message text to the event log.
-        
-        
-            message: The string to write to the event log.
-            type: One of the System.Diagnostics.EventLogEntryType values.
-        WriteEntry(self: EventLog, message: str, type: EventLogEntryType, eventID: int)
-            Writes an entry with the given message text and application-defined event identifier to the 
-             event log.
-        
-        
-            message: The string to write to the event log.
-            type: One of the System.Diagnostics.EventLogEntryType values.
-            eventID: The application-specific identifier for the event.
-        WriteEntry(source: str, message: str, type: EventLogEntryType)
-            Writes an error, warning, information, success audit, or failure audit entry with the given 
-             message text to the event log, using the specified registered event source.
-        
-        
-            source: The source by which the application is registered on the specified computer.
-            message: The string to write to the event log.
-            type: One of the System.Diagnostics.EventLogEntryType values.
+            rawData: An array of bytes that holds the binary data associated with the entry.
         """
         pass
 
     def WriteEvent(self, *__args):
         """
-        WriteEvent(source: str, instance: EventInstance, *values: Array[object])
-            Writes an event log entry with the given event data and message replacement strings, using the 
-             specified registered event source.
-        
-        
-            source: The name of the event source registered for the application on the specified computer.
-            instance: An System.Diagnostics.EventInstance instance that represents a localized event log entry.
-            values: An array of strings to merge into the message text of the event log entry.
-        WriteEvent(source: str, instance: EventInstance, data: Array[Byte], *values: Array[object])
-            Writes an event log entry with the given event data, message replacement strings, and associated 
-             binary data, and using the specified registered event source.
-        
-        
-            source: The name of the event source registered for the application on the specified computer.
-            instance: An System.Diagnostics.EventInstance instance that represents a localized event log entry.
-            data: An array of bytes that holds the binary data associated with the entry.
-            values: An array of strings to merge into the message text of the event log entry.
         WriteEvent(self: EventLog, instance: EventInstance, *values: Array[object])
             Writes a localized entry to the event log.
         
             instance: An System.Diagnostics.EventInstance instance that represents a localized event log entry.
             values: An array of strings to merge into the message text of the event log entry.
         WriteEvent(self: EventLog, instance: EventInstance, data: Array[Byte], *values: Array[object])
-            Writes an event log entry with the given event data, message replacement strings, and associated 
-             binary data.
+            Writes an event log entry with the given event data, message replacement strings, and 
+             associated binary data.
         
         
+            instance: An System.Diagnostics.EventInstance instance that represents a localized event log entry.
+            data: An array of bytes that holds the binary data associated with the entry.
+            values: An array of strings to merge into the message text of the event log entry.
+        WriteEvent(source: str, instance: EventInstance, *values: Array[object])
+            Writes an event log entry with the given event data and message replacement strings, 
+             using the specified registered event source.
+        
+        
+            source: The name of the event source registered for the application on the specified computer.
+            instance: An System.Diagnostics.EventInstance instance that represents a localized event log entry.
+            values: An array of strings to merge into the message text of the event log entry.
+        WriteEvent(source: str, instance: EventInstance, data: Array[Byte], *values: Array[object])
+            Writes an event log entry with the given event data, message replacement strings, and 
+             associated binary data, and using the specified registered event source.
+        
+        
+            source: The name of the event source registered for the application on the specified computer.
             instance: An System.Diagnostics.EventInstance instance that represents a localized event log entry.
             data: An array of bytes that holds the binary data associated with the entry.
             values: An array of strings to merge into the message text of the event log entry.
@@ -2844,18 +2845,11 @@ class EventLog(Component, IComponent, IDisposable, ISupportInitialize):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -2970,16 +2964,17 @@ Set: SynchronizingObject(self: EventLog) = value
     EntryWritten = None
 
 
-class EventLogEntry(Component, IComponent, IDisposable, ISerializable):
+class EventLogEntry:
     """ Encapsulates a single record in the event log. This class cannot be inherited. """
     def Dispose(self):
         """
         Dispose(self: Component, disposing: bool)
-            Releases the unmanaged resources used by the System.ComponentModel.Component and optionally 
-             releases the managed resources.
+            Releases the unmanaged resources used by the System.ComponentModel.Component and 
+             optionally releases the managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
@@ -2998,13 +2993,14 @@ class EventLogEntry(Component, IComponent, IDisposable, ISerializable):
         """
         GetService(self: Component, service: Type) -> object
         
-            Returns an object that represents a service provided by the System.ComponentModel.Component or 
-             by its System.ComponentModel.Container.
+            Returns an object that represents a service provided by the 
+             System.ComponentModel.Component or by its System.ComponentModel.Container.
         
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or 
-             null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the 
+             System.ComponentModel.Component, or null if the System.ComponentModel.Component does not 
+             provide the specified service.
         """
         pass
 
@@ -3014,11 +3010,11 @@ class EventLogEntry(Component, IComponent, IDisposable, ISerializable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -3029,11 +3025,7 @@ class EventLogEntry(Component, IComponent, IDisposable, ISerializable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __eq__(self, *args): #cannot find CLR method
@@ -3041,10 +3033,7 @@ class EventLogEntry(Component, IComponent, IDisposable, ISerializable):
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -3172,7 +3161,7 @@ Get: UserName(self: EventLogEntry) -> str
 
 
 
-class EventLogEntryCollection(object, ICollection, IEnumerable):
+class EventLogEntryCollection:
     """ Defines size and enumerators for a collection of System.Diagnostics.EventLogEntry instances. """
     def CopyTo(self, entries, index):
         """
@@ -3181,8 +3170,9 @@ class EventLogEntryCollection(object, ICollection, IEnumerable):
              System.Diagnostics.EventLogEntry instances, starting at a particular array index.
         
         
-            entries: The one-dimensional array of System.Diagnostics.EventLogEntry instances that is the destination 
-             of the elements copied from the collection. The array must have zero-based indexing.
+            entries: The one-dimensional array of System.Diagnostics.EventLogEntry instances that is the 
+             destination of the elements copied from the collection. The array must have zero-based 
+             indexing.
         
             index: The zero-based index in the array at which copying begins.
         """
@@ -3226,7 +3216,7 @@ Get: Count(self: EventLogEntryCollection) -> int
 
 
 
-class EventLogEntryType(Enum, IComparable, IFormattable, IConvertible):
+class EventLogEntryType:
     """
     Specifies the event type of an event log entry.
     
@@ -3273,7 +3263,7 @@ class EventLogEntryType(Enum, IComparable, IFormattable, IConvertible):
     Warning = None
 
 
-class EventLogPermission(ResourcePermissionBase, IPermission, ISecurityEncodable, IStackWalk, IUnrestrictedPermission):
+class EventLogPermission:
     """
     Controls code access permissions for event logging.
     
@@ -3302,11 +3292,11 @@ class EventLogPermission(ResourcePermissionBase, IPermission, ISecurityEncodable
         """
         GetPermissionEntries(self: ResourcePermissionBase) -> Array[ResourcePermissionBaseEntry]
         
-            Returns an array of the System.Security.Permissions.ResourcePermissionBaseEntry objects added to 
-             this permission.
+            Returns an array of the System.Security.Permissions.ResourcePermissionBaseEntry objects 
+             added to this permission.
         
-            Returns: An array of System.Security.Permissions.ResourcePermissionBaseEntry objects that were added to 
-             this permission.
+            Returns: An array of System.Security.Permissions.ResourcePermissionBaseEntry objects that were 
+             added to this permission.
         """
         pass
 
@@ -3358,7 +3348,7 @@ Get: PermissionEntries(self: EventLogPermission) -> EventLogPermissionEntryColle
 
 
 
-class EventLogPermissionAccess(Enum, IComparable, IFormattable, IConvertible):
+class EventLogPermissionAccess:
     """
     Defines access levels used by System.Diagnostics.EventLog permission classes.
     
@@ -3401,12 +3391,12 @@ class EventLogPermissionAccess(Enum, IComparable, IFormattable, IConvertible):
     Audit = None
     Browse = None
     Instrument = None
-    None = None
+    None_ =None
     value__ = None
     Write = None
 
 
-class EventLogPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class EventLogPermissionAttribute:
     """
     Allows declaritive permission checks for event logging.
     
@@ -3416,9 +3406,11 @@ class EventLogPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
         """
         CreatePermission(self: EventLogPermissionAttribute) -> IPermission
         
-            Creates the permission based on the System.Diagnostics.EventLogPermissionAttribute.MachineName 
-             property and the requested access levels that are set through the 
-             System.Diagnostics.EventLogPermissionAttribute.PermissionAccess property on the attribute.
+            Creates the permission based on the 
+             System.Diagnostics.EventLogPermissionAttribute.MachineName property and the requested 
+             access levels that are set through the 
+             System.Diagnostics.EventLogPermissionAttribute.PermissionAccess property on the 
+             attribute.
         
             Returns: An System.Security.IPermission that represents the created permission.
         """
@@ -3454,7 +3446,7 @@ Set: PermissionAccess(self: EventLogPermissionAttribute) = value
 
 
 
-class EventLogPermissionEntry(object):
+class EventLogPermissionEntry:
     """
     Defines the smallest unit of a code access security permission that is set for an System.Diagnostics.EventLog.
     
@@ -3481,7 +3473,7 @@ Get: PermissionAccess(self: EventLogPermissionEntry) -> EventLogPermissionAccess
 
 
 
-class EventLogPermissionEntryCollection(CollectionBase, IList, ICollection, IEnumerable):
+class EventLogPermissionEntryCollection:
     """ Contains a strongly typed collection of System.Diagnostics.EventLogPermissionEntry objects. """
     def Add(self, value):
         """
@@ -3496,16 +3488,16 @@ class EventLogPermissionEntryCollection(CollectionBase, IList, ICollection, IEnu
 
     def AddRange(self, value):
         """
-        AddRange(self: EventLogPermissionEntryCollection, value: EventLogPermissionEntryCollection)
-            Appends a set of specified permission entries to this collection.
-        
-            value: A System.Diagnostics.EventLogPermissionEntryCollection that contains the permission entries to 
-             add.
-        
         AddRange(self: EventLogPermissionEntryCollection, value: Array[EventLogPermissionEntry])
             Appends a set of specified permission entries to this collection.
         
-            value: An array of type System.Diagnostics.EventLogPermissionEntry objects that contains the permission 
+            value: An array of type System.Diagnostics.EventLogPermissionEntry objects that contains the 
+             permission entries to add.
+        
+        AddRange(self: EventLogPermissionEntryCollection, value: EventLogPermissionEntryCollection)
+            Appends a set of specified permission entries to this collection.
+        
+            value: A System.Diagnostics.EventLogPermissionEntryCollection that contains the permission 
              entries to add.
         """
         pass
@@ -3519,20 +3511,20 @@ class EventLogPermissionEntryCollection(CollectionBase, IList, ICollection, IEnu
         
         
             value: The System.Diagnostics.EventLogPermissionEntry to find.
-            Returns: true if the specified System.Diagnostics.EventLogPermissionEntry belongs to this collection; 
-             otherwise, false.
+            Returns: true if the specified System.Diagnostics.EventLogPermissionEntry belongs to this 
+             collection; otherwise, false.
         """
         pass
 
     def CopyTo(self, array, index):
         """
         CopyTo(self: EventLogPermissionEntryCollection, array: Array[EventLogPermissionEntry], index: int)
-            Copies the permission entries from this collection to an array, starting at a particular index 
-             of the array.
+            Copies the permission entries from this collection to an array, starting at a particular 
+             index of the array.
         
         
-            array: An array of type System.Diagnostics.EventLogPermissionEntry that receives this collection's 
-             permission entries.
+            array: An array of type System.Diagnostics.EventLogPermissionEntry that receives this 
+             collection's permission entries.
         
             index: The zero-based index at which to begin copying the permission entries.
         """
@@ -3545,8 +3537,8 @@ class EventLogPermissionEntryCollection(CollectionBase, IList, ICollection, IEnu
             Determines the index of a specified permission entry in this collection.
         
             value: The permission entry to search for.
-            Returns: The zero-based index of the specified permission entry, or -1 if the permission entry was not 
-             found in the collection.
+            Returns: The zero-based index of the specified permission entry, or -1 if the permission entry was 
+             not found in the collection.
         """
         pass
 
@@ -3602,7 +3594,9 @@ class EventLogPermissionEntryCollection(CollectionBase, IList, ICollection, IEnu
     def OnRemove(self, *args): #cannot find CLR method
         """
         OnRemove(self: EventLogPermissionEntryCollection, index: int, value: object)
-            Performs additional custom processes when removing a new permission entry from the collection.
+            Performs additional custom processes when removing a new permission entry from the 
+             collection.
+        
         
             index: The zero-based index at which value can be found.
             value: The permission entry to remove from index.
@@ -3698,7 +3692,7 @@ class EventLogPermissionEntryCollection(CollectionBase, IList, ICollection, IEnu
 
 
 
-class EventLogTraceListener(TraceListener, IDisposable):
+class EventLogTraceListener:
     """
     Provides a simple listener that directs tracing or debugging output to an System.Diagnostics.EventLog.
     
@@ -3722,8 +3716,8 @@ class EventLogTraceListener(TraceListener, IDisposable):
         GetSupportedAttributes(self: TraceListener) -> Array[str]
         
             Gets the custom attributes supported by the trace listener.
-            Returns: A string array naming the custom attributes supported by the trace listener, or null if there 
-             are no custom attributes.
+            Returns: A string array naming the custom attributes supported by the trace listener, or null if 
+             there are no custom attributes.
         """
         pass
 
@@ -3733,11 +3727,11 @@ class EventLogTraceListener(TraceListener, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -3749,62 +3743,66 @@ class EventLogTraceListener(TraceListener, IDisposable):
 
     def TraceData(self, eventCache, source, severity, id, data):
         """
-        TraceData(self: EventLogTraceListener, eventCache: TraceEventCache, source: str, severity: TraceEventType, id: int, *data: Array[object])
-            Writes trace information, an array of data objects, and event information to the event log.
-        
-            eventCache: An object that contains the current process ID, thread ID, and stack trace information.
-            source: A name used to identify the output; typically the name of the application that generated the 
-             trace event.
-        
-            severity: One of the enumeration values that specifies the type of event that has caused the trace.
-            id: A numeric identifier for the event. The combination of source and id uniquely identifies an 
-             event.
-        
-            data: An array of data objects.
         TraceData(self: EventLogTraceListener, eventCache: TraceEventCache, source: str, severity: TraceEventType, id: int, data: object)
             Writes trace information, a data object, and event information to the event log.
         
             eventCache: An object that contains the current process ID, thread ID, and stack trace information.
-            source: A name used to identify the output; typically the name of the application that generated the 
-             trace event.
+            source: A name used to identify the output; typically the name of the application that generated 
+             the trace event.
         
             severity: One of the enumeration values that specifies the type of event that has caused the trace.
-            id: A numeric identifier for the event. The combination of source and id uniquely identifies an 
-             event.
+            id: A numeric identifier for the event. The combination of source and id uniquely identifies 
+             an event.
         
-            data: A data object to write to the output file or stream.
+            data: A data object to write to the output file or stream.
+        TraceData(self: EventLogTraceListener, eventCache: TraceEventCache, source: str, severity: TraceEventType, id: int, *data: Array[object])
+            Writes trace information, an array of data objects, and event information to the event 
+             log.
+        
+        
+            eventCache: An object that contains the current process ID, thread ID, and stack trace information.
+            source: A name used to identify the output; typically the name of the application that generated 
+             the trace event.
+        
+            severity: One of the enumeration values that specifies the type of event that has caused the trace.
+            id: A numeric identifier for the event. The combination of source and id uniquely identifies 
+             an event.
+        
+            data: An array of data objects.
         """
         pass
 
     def TraceEvent(self, eventCache, source, *__args):
         """
+        TraceEvent(self: EventLogTraceListener, eventCache: TraceEventCache, source: str, severity: TraceEventType, id: int, format: str, *args: Array[object])
+            Writes trace information, a formatted array of objects, and event information to the 
+             event log.
+        
+        
+            eventCache: An object that contains the current process ID, thread ID, and stack trace information.
+            source: A name used to identify the output; typically the name of the application that generated 
+             the trace event.
+        
+            severity: One of the enumeration values that specifies the type of event that has caused the trace.
+            id: A numeric identifier for the event. The combination of source and id uniquely identifies 
+             an event.
+        
+            format: A format string that contains zero or more format items that correspond to objects in the 
+             args array.
+        
+            args: An object array containing zero or more objects to format.
         TraceEvent(self: EventLogTraceListener, eventCache: TraceEventCache, source: str, severity: TraceEventType, id: int, message: str)
             Writes trace information, a message, and event information to the event log.
         
             eventCache: An object that contains the current process ID, thread ID, and stack trace information.
-            source: A name used to identify the output; typically the name of the application that generated the 
-             trace event.
+            source: A name used to identify the output; typically the name of the application that generated 
+             the trace event.
         
             severity: One of the enumeration values that specifies the type of event that has caused the trace.
-            id: A numeric identifier for the event. The combination of source and id uniquely identifies an 
-             event.
+            id: A numeric identifier for the event. The combination of source and id uniquely identifies 
+             an event.
         
-            message: The trace message.
-        TraceEvent(self: EventLogTraceListener, eventCache: TraceEventCache, source: str, severity: TraceEventType, id: int, format: str, *args: Array[object])
-            Writes trace information, a formatted array of objects, and event information to the event log.
-        
-            eventCache: An object that contains the current process ID, thread ID, and stack trace information.
-            source: A name used to identify the output; typically the name of the application that generated the 
-             trace event.
-        
-            severity: One of the enumeration values that specifies the type of event that has caused the trace.
-            id: A numeric identifier for the event. The combination of source and id uniquely identifies an 
-             event.
-        
-            format: A format string that contains zero or more format items that correspond to objects in the args 
-             array.
-        
-            args: An object array containing zero or more objects to format.
+            message: The trace message.
         """
         pass
 
@@ -3820,8 +3818,8 @@ class EventLogTraceListener(TraceListener, IDisposable):
     def WriteIndent(self, *args): #cannot find CLR method
         """
         WriteIndent(self: TraceListener)
-            Writes the indent to the listener you create when you implement this class, and resets the 
-             System.Diagnostics.TraceListener.NeedIndent property to false.
+            Writes the indent to the listener you create when you implement this class, and resets 
+             the System.Diagnostics.TraceListener.NeedIndent property to false.
         """
         pass
 
@@ -3835,18 +3833,11 @@ class EventLogTraceListener(TraceListener, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -3885,7 +3876,7 @@ Set: Name(self: EventLogTraceListener) = value
 
 
 
-class EventSourceCreationData(object):
+class EventSourceCreationData:
     """
     Represents the configuration settings used to create an event log source on the local computer or a remote computer.
     
@@ -3954,22 +3945,24 @@ Set: Source(self: EventSourceCreationData) = value
 
 
 
-class TraceFilter(object):
+class TraceFilter:
     """ Provides the base class for trace filter implementations. """
     def ShouldTrace(self, cache, source, eventType, id, formatOrMessage, args, data1, data):
         """
         ShouldTrace(self: TraceFilter, cache: TraceEventCache, source: str, eventType: TraceEventType, id: int, formatOrMessage: str, args: Array[object], data1: object, data: Array[object]) -> bool
         
-            When overridden in a derived class, determines whether the trace listener should trace the event.
+            When overridden in a derived class, determines whether the trace listener should trace 
+             the event.
+        
         
             cache: The System.Diagnostics.TraceEventCache that contains information for the trace event.
             source: The name of the source.
-            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has caused 
-             the trace.
+            eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has 
+             caused the trace.
         
             id: A trace identifier number.
-            formatOrMessage: Either the format to use for writing an array of arguments specified by the args parameter, or a 
-             message to write.
+            formatOrMessage: Either the format to use for writing an array of arguments specified by the args 
+             parameter, or a message to write.
         
             args: An array of argument objects.
             data1: A trace data object.
@@ -3979,7 +3972,7 @@ class TraceFilter(object):
         pass
 
 
-class EventTypeFilter(TraceFilter):
+class EventTypeFilter:
     """
     Indicates whether a listener should trace based on the event type.
     
@@ -3991,7 +3984,9 @@ class EventTypeFilter(TraceFilter):
         
             Determines whether the trace listener should trace the event.
         
-            cache: A System.Diagnostics.TraceEventCache that represents the information cache for the trace event.
+            cache: A System.Diagnostics.TraceEventCache that represents the information cache for the trace 
+             event.
+        
             source: The name of the source.
             eventType: One of the System.Diagnostics.TraceEventType values.
             id: A trace identifier number.
@@ -4018,21 +4013,21 @@ Set: EventType(self: EventTypeFilter) = value
 
 
 
-class FileVersionInfo(object):
+class FileVersionInfo:
     """ Provides version information for a physical file on disk. """
     @staticmethod
     def GetVersionInfo(fileName):
         """
         GetVersionInfo(fileName: str) -> FileVersionInfo
         
-            Returns a System.Diagnostics.FileVersionInfo representing the version information associated 
-             with the specified file.
+            Returns a System.Diagnostics.FileVersionInfo representing the version information 
+             associated with the specified file.
         
         
             fileName: The fully qualified path and name of the file to retrieve the version information for.
-            Returns: A System.Diagnostics.FileVersionInfo containing information about the file. If the file did not 
-             contain version information, the System.Diagnostics.FileVersionInfo contains only the name of 
-             the file requested.
+            Returns: A System.Diagnostics.FileVersionInfo containing information about the file. If the file 
+             did not contain version information, the System.Diagnostics.FileVersionInfo contains only 
+             the name of the file requested.
         """
         pass
 
@@ -4040,19 +4035,23 @@ class FileVersionInfo(object):
         """
         ToString(self: FileVersionInfo) -> str
         
-            Returns a partial list of properties in the System.Diagnostics.FileVersionInfo and their values.
+            Returns a partial list of properties in the System.Diagnostics.FileVersionInfo and their 
+             values.
+        
             Returns: A list of the following properties in this class and their values: 
-             System.Diagnostics.FileVersionInfo.FileName, System.Diagnostics.FileVersionInfo.InternalName, 
+             System.Diagnostics.FileVersionInfo.FileName, 
+             System.Diagnostics.FileVersionInfo.InternalName, 
              System.Diagnostics.FileVersionInfo.OriginalFilename, 
              System.Diagnostics.FileVersionInfo.FileVersion, 
              System.Diagnostics.FileVersionInfo.FileDescription, 
              System.Diagnostics.FileVersionInfo.ProductName, 
-             System.Diagnostics.FileVersionInfo.ProductVersion, System.Diagnostics.FileVersionInfo.IsDebug, 
-             System.Diagnostics.FileVersionInfo.IsPatched, System.Diagnostics.FileVersionInfo.IsPreRelease, 
+             System.Diagnostics.FileVersionInfo.ProductVersion, 
+             System.Diagnostics.FileVersionInfo.IsDebug, System.Diagnostics.FileVersionInfo.IsPatched, 
+             System.Diagnostics.FileVersionInfo.IsPreRelease, 
              System.Diagnostics.FileVersionInfo.IsPrivateBuild, 
-             System.Diagnostics.FileVersionInfo.IsSpecialBuild,System.Diagnostics.FileVersionInfo.Language.If 
-             the file did not contain version information, this list will contain only the name of the 
-             requested file. Boolean values will be false, and all other entries will be null.
+             System.Diagnostics.FileVersionInfo.IsSpecialBuild,System.Diagnostics.FileVersionInfo.Langu
+             age.If the file did not contain version information, this list will contain only the name 
+             of the requested file. Boolean values will be false, and all other entries will be null.
         """
         pass
 
@@ -4274,7 +4273,7 @@ class ICollectData:
         pass
 
 
-class InstanceData(object):
+class InstanceData:
     """
     Holds instance data associated with a performance counter sample.
     
@@ -4308,7 +4307,7 @@ Get: Sample(self: InstanceData) -> CounterSample
 
 
 
-class InstanceDataCollection(DictionaryBase, IDictionary, ICollection, IEnumerable):
+class InstanceDataCollection:
     """
     Provides a strongly typed collection of System.Diagnostics.InstanceData objects.
     
@@ -4330,7 +4329,9 @@ class InstanceDataCollection(DictionaryBase, IDictionary, ICollection, IEnumerab
     def CopyTo(self, *__args):
         """
         CopyTo(self: InstanceDataCollection, instances: Array[InstanceData], index: int)
-            Copies the items in the collection to the specified one-dimensional array at the specified index.
+            Copies the items in the collection to the specified one-dimensional array at the 
+             specified index.
+        
         
             instances: The one-dimensional System.Array that is the destination of the values copied from the 
              collection.
@@ -4359,8 +4360,8 @@ class InstanceDataCollection(DictionaryBase, IDictionary, ICollection, IEnumerab
         """
         OnGet(self: DictionaryBase, key: object, currentValue: object) -> object
         
-            Gets the element with the specified key and value in the System.Collections.DictionaryBase 
-             instance.
+            Gets the element with the specified key and value in the 
+             System.Collections.DictionaryBase instance.
         
         
             key: The key of the element to get.
@@ -4446,8 +4447,8 @@ class InstanceDataCollection(DictionaryBase, IDictionary, ICollection, IEnumerab
     def OnValidate(self, *args): #cannot find CLR method
         """
         OnValidate(self: DictionaryBase, key: object, value: object)
-            Performs additional custom processes when validating the element with the specified key and 
-             value.
+            Performs additional custom processes when validating the element with the specified key 
+             and value.
         
         
             key: The key of the element to validate.
@@ -4505,7 +4506,7 @@ Get: Values(self: InstanceDataCollection) -> ICollection
 
 
 
-class InstanceDataCollectionCollection(DictionaryBase, IDictionary, ICollection, IEnumerable):
+class InstanceDataCollectionCollection:
     """
     Provides a strongly typed collection of System.Diagnostics.InstanceDataCollection objects.
     
@@ -4515,25 +4516,26 @@ class InstanceDataCollectionCollection(DictionaryBase, IDictionary, ICollection,
         """
         Contains(self: InstanceDataCollectionCollection, counterName: str) -> bool
         
-            Determines whether an instance data collection for the specified counter (identified by one of 
-             the indexed System.Diagnostics.InstanceDataCollection objects) exists in the collection.
+            Determines whether an instance data collection for the specified counter (identified by 
+             one of the indexed System.Diagnostics.InstanceDataCollection objects) exists in the 
+             collection.
         
         
             counterName: The name of the performance counter.
-            Returns: true if an instance data collection containing the specified counter exists in the collection; 
-             otherwise, false.
+            Returns: true if an instance data collection containing the specified counter exists in the 
+             collection; otherwise, false.
         """
         pass
 
     def CopyTo(self, *__args):
         """
         CopyTo(self: InstanceDataCollectionCollection, counters: Array[InstanceDataCollection], index: int)
-            Copies an array of System.Diagnostics.InstanceDataCollection instances to the collection, at the 
-             specified index.
+            Copies an array of System.Diagnostics.InstanceDataCollection instances to the collection, 
+             at the specified index.
         
         
-            counters: An array of System.Diagnostics.InstanceDataCollection instances (identified by the counters they 
-             contain) to add to the collection.
+            counters: An array of System.Diagnostics.InstanceDataCollection instances (identified by the 
+             counters they contain) to add to the collection.
         
             index: The location at which to add the new instances.
         """
@@ -4559,8 +4561,8 @@ class InstanceDataCollectionCollection(DictionaryBase, IDictionary, ICollection,
         """
         OnGet(self: DictionaryBase, key: object, currentValue: object) -> object
         
-            Gets the element with the specified key and value in the System.Collections.DictionaryBase 
-             instance.
+            Gets the element with the specified key and value in the 
+             System.Collections.DictionaryBase instance.
         
         
             key: The key of the element to get.
@@ -4646,8 +4648,8 @@ class InstanceDataCollectionCollection(DictionaryBase, IDictionary, ICollection,
     def OnValidate(self, *args): #cannot find CLR method
         """
         OnValidate(self: DictionaryBase, key: object, value: object)
-            Performs additional custom processes when validating the element with the specified key and 
-             value.
+            Performs additional custom processes when validating the element with the specified key 
+             and value.
         
         
             key: The key of the element to validate.
@@ -4693,7 +4695,7 @@ Get: Values(self: InstanceDataCollectionCollection) -> ICollection
 
 
 
-class MonitoringDescriptionAttribute(DescriptionAttribute, _Attribute):
+class MonitoringDescriptionAttribute:
     """
     Specifies a description for a property or event.
     
@@ -4722,7 +4724,7 @@ Get: Description(self: MonitoringDescriptionAttribute) -> str
 
 
 
-class OverflowAction(Enum, IComparable, IFormattable, IConvertible):
+class OverflowAction:
     """
     Specifies how to handle entries in an event log that has reached its maximum file size.
     
@@ -4767,7 +4769,7 @@ class OverflowAction(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class PerformanceCounter(Component, IComponent, IDisposable, ISupportInitialize):
+class PerformanceCounter:
     """
     Represents a Windows NT performance counter component.
     
@@ -4781,16 +4783,16 @@ class PerformanceCounter(Component, IComponent, IDisposable, ISupportInitialize)
     def BeginInit(self):
         """
         BeginInit(self: PerformanceCounter)
-            Begins the initialization of a System.Diagnostics.PerformanceCounter instance used on a form or 
-             by another component. The initialization occurs at runtime.
+            Begins the initialization of a System.Diagnostics.PerformanceCounter instance used on a 
+             form or by another component. The initialization occurs at runtime.
         """
         pass
 
     def Close(self):
         """
         Close(self: PerformanceCounter)
-            Closes the performance counter and frees all the resources allocated by this performance counter 
-             instance.
+            Closes the performance counter and frees all the resources allocated by this performance 
+             counter instance.
         """
         pass
 
@@ -4806,7 +4808,9 @@ class PerformanceCounter(Component, IComponent, IDisposable, ISupportInitialize)
         """
         Decrement(self: PerformanceCounter) -> Int64
         
-            Decrements the associated performance counter by one through an efficient atomic operation.
+            Decrements the associated performance counter by one through an efficient atomic 
+             operation.
+        
             Returns: The decremented counter value.
         """
         pass
@@ -4818,8 +4822,8 @@ class PerformanceCounter(Component, IComponent, IDisposable, ISupportInitialize)
     def EndInit(self):
         """
         EndInit(self: PerformanceCounter)
-            Ends the initialization of a System.Diagnostics.PerformanceCounter instance that is used on a 
-             form or by another component. The initialization occurs at runtime.
+            Ends the initialization of a System.Diagnostics.PerformanceCounter instance that is used 
+             on a form or by another component. The initialization occurs at runtime.
         """
         pass
 
@@ -4827,13 +4831,14 @@ class PerformanceCounter(Component, IComponent, IDisposable, ISupportInitialize)
         """
         GetService(self: Component, service: Type) -> object
         
-            Returns an object that represents a service provided by the System.ComponentModel.Component or 
-             by its System.ComponentModel.Container.
+            Returns an object that represents a service provided by the 
+             System.ComponentModel.Component or by its System.ComponentModel.Container.
         
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or 
-             null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the 
+             System.ComponentModel.Component, or null if the System.ComponentModel.Component does not 
+             provide the specified service.
         """
         pass
 
@@ -4841,7 +4846,9 @@ class PerformanceCounter(Component, IComponent, IDisposable, ISupportInitialize)
         """
         Increment(self: PerformanceCounter) -> Int64
         
-            Increments the associated performance counter by one through an efficient atomic operation.
+            Increments the associated performance counter by one through an efficient atomic 
+             operation.
+        
             Returns: The incremented counter value.
         """
         pass
@@ -4850,8 +4857,8 @@ class PerformanceCounter(Component, IComponent, IDisposable, ISupportInitialize)
         """
         IncrementBy(self: PerformanceCounter, value: Int64) -> Int64
         
-            Increments or decrements the value of the associated performance counter by a specified amount 
-             through an efficient atomic operation.
+            Increments or decrements the value of the associated performance counter by a specified 
+             amount through an efficient atomic operation.
         
         
             value: The value to increment by. (A negative value decrements the counter.)
@@ -4865,11 +4872,11 @@ class PerformanceCounter(Component, IComponent, IDisposable, ISupportInitialize)
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -4884,8 +4891,8 @@ class PerformanceCounter(Component, IComponent, IDisposable, ISupportInitialize)
         NextSample(self: PerformanceCounter) -> CounterSample
         
             Obtains a counter sample, and returns the raw, or uncalculated, value for it.
-            Returns: A System.Diagnostics.CounterSample that represents the next raw value that the system obtains 
-             for this counter.
+            Returns: A System.Diagnostics.CounterSample that represents the next raw value that the system 
+             obtains for this counter.
         """
         pass
 
@@ -4901,24 +4908,17 @@ class PerformanceCounter(Component, IComponent, IDisposable, ISupportInitialize)
     def RemoveInstance(self):
         """
         RemoveInstance(self: PerformanceCounter)
-            Deletes the category instance specified by the System.Diagnostics.PerformanceCounter object 
-             System.Diagnostics.PerformanceCounter.InstanceName property.
+            Deletes the category instance specified by the System.Diagnostics.PerformanceCounter 
+             object System.Diagnostics.PerformanceCounter.InstanceName property.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -5029,7 +5029,7 @@ Set: ReadOnly(self: PerformanceCounter) = value
     DefaultFileMappingSize = 524288
 
 
-class PerformanceCounterCategory(object):
+class PerformanceCounterCategory:
     """
     Represents a performance object, which defines a category of performance counters.
     
@@ -5039,93 +5039,66 @@ class PerformanceCounterCategory(object):
     """
     def CounterExists(self, counterName, categoryName=None, machineName=None):
         """
-        CounterExists(counterName: str, categoryName: str, machineName: str) -> bool
-        
-            Determines whether the specified counter is registered to the specified category on a remote 
-             computer.
-        
-        
-            counterName: The name of the performance counter to look for.
-            categoryName: The name of the performance counter category, or performance object, with which the specified 
-             performance counter is associated.
-        
-            machineName: The name of the computer on which the performance counter category and its associated counters 
-             exist.
-        
-            Returns: true, if the counter is registered to the specified category on the specified computer; 
-             otherwise, false.
-        
-        CounterExists(counterName: str, categoryName: str) -> bool
-        
-            Determines whether the specified counter is registered to the specified category on the local 
-             computer.
-        
-        
-            counterName: The name of the performance counter to look for.
-            categoryName: The name of the performance counter category, or performance object, with which the specified 
-             performance counter is associated.
-        
-            Returns: true, if the counter is registered to the specified category on the local computer; otherwise, 
-             false.
-        
         CounterExists(self: PerformanceCounterCategory, counterName: str) -> bool
         
-            Determines whether the specified counter is registered to this category, which is indicated by 
-             the System.Diagnostics.PerformanceCounterCategory.CategoryName and 
+            Determines whether the specified counter is registered to this category, which is 
+             indicated by the System.Diagnostics.PerformanceCounterCategory.CategoryName and 
              System.Diagnostics.PerformanceCounterCategory.MachineName properties.
         
         
             counterName: The name of the performance counter to look for.
             Returns: true if the counter is registered to the category that is specified by the 
              System.Diagnostics.PerformanceCounterCategory.CategoryName and 
-             System.Diagnostics.PerformanceCounterCategory.MachineName properties; otherwise, false.
+             System.Diagnostics.PerformanceCounterCategory.MachineName properties; otherwise, false.
+        
+        CounterExists(counterName: str, categoryName: str) -> bool
+        
+            Determines whether the specified counter is registered to the specified category on the 
+             local computer.
+        
+        
+            counterName: The name of the performance counter to look for.
+            categoryName: The name of the performance counter category, or performance object, with which the 
+             specified performance counter is associated.
+        
+            Returns: true, if the counter is registered to the specified category on the local computer; 
+             otherwise, false.
+        
+        CounterExists(counterName: str, categoryName: str, machineName: str) -> bool
+        
+            Determines whether the specified counter is registered to the specified category on a 
+             remote computer.
+        
+        
+            counterName: The name of the performance counter to look for.
+            categoryName: The name of the performance counter category, or performance object, with which the 
+             specified performance counter is associated.
+        
+            machineName: The name of the computer on which the performance counter category and its associated 
+             counters exist.
+        
+            Returns: true, if the counter is registered to the specified category on the specified computer; 
+             otherwise, false.
         """
         pass
 
     @staticmethod
     def Create(categoryName, categoryHelp, *__args):
         """
-        Create(categoryName: str, categoryHelp: str, counterData: CounterCreationDataCollection) -> PerformanceCounterCategory
-        
-            Registers the custom performance counter category containing the specified counters on the local 
-             computer.
-        
-        
-            categoryName: The name of the custom performance counter category to create and register with the system.
-            categoryHelp: A description of the custom category.
-            counterData: A System.Diagnostics.CounterCreationDataCollection that specifies the counters to create as part 
-             of the new category.
-        
-            Returns: A System.Diagnostics.PerformanceCounterCategory that is associated with the new custom category, 
-             or performance object.
-        
-        Create(categoryName: str, categoryHelp: str, categoryType: PerformanceCounterCategoryType, counterData: CounterCreationDataCollection) -> PerformanceCounterCategory
-        
-            Registers the custom performance counter category containing the specified counters on the local 
-             computer.
-        
-        
-            categoryName: The name of the custom performance counter category to create and register with the system.
-            categoryHelp: A description of the custom category.
-            categoryType: One of the System.Diagnostics.PerformanceCounterCategoryType  values.
-            counterData: A System.Diagnostics.CounterCreationDataCollection that specifies the counters to create as part 
-             of the new category.
-        
-            Returns: A System.Diagnostics.PerformanceCounterCategory that is associated with the new custom category, 
-             or performance object.
-        
         Create(categoryName: str, categoryHelp: str, counterName: str, counterHelp: str) -> PerformanceCounterCategory
         
             Registers a custom performance counter category containing a single counter of type 
              NumberOfItems32 on the local computer.
         
         
-            categoryName: The name of the custom performance counter category to create and register with the system.
+            categoryName: The name of the custom performance counter category to create and register with the 
+             system.
+        
             categoryHelp: A description of the custom category.
             counterName: The name of a new counter, of type NumberOfItems32, to create as part of the new category.
             counterHelp: A description of the counter that is associated with the new custom category.
-            Returns: A System.Diagnostics.PerformanceCounterCategory that is associated with the new system category, 
-             or performance object.
+            Returns: A System.Diagnostics.PerformanceCounterCategory that is associated with the new system 
+             category, or performance object.
         
         Create(categoryName: str, categoryHelp: str, categoryType: PerformanceCounterCategoryType, counterName: str, counterHelp: str) -> PerformanceCounterCategory
         
@@ -5133,17 +5106,52 @@ class PerformanceCounterCategory(object):
              System.Diagnostics.PerformanceCounterType.NumberOfItems32 on the local computer.
         
         
-            categoryName: The name of the custom performance counter category to create and register with the system.
+            categoryName: The name of the custom performance counter category to create and register with the 
+             system.
+        
             categoryHelp: A description of the custom category.
-            categoryType: One of the System.Diagnostics.PerformanceCounterCategoryType  values specifying whether the 
-             category is System.Diagnostics.PerformanceCounterCategoryType.MultiInstance, 
+            categoryType: One of the System.Diagnostics.PerformanceCounterCategoryType  values specifying whether 
+             the category is System.Diagnostics.PerformanceCounterCategoryType.MultiInstance, 
              System.Diagnostics.PerformanceCounterCategoryType.SingleInstance, or 
              System.Diagnostics.PerformanceCounterCategoryType.Unknown.
         
             counterName: The name of a new counter to create as part of the new category.
             counterHelp: A description of the counter that is associated with the new custom category.
-            Returns: A System.Diagnostics.PerformanceCounterCategory that is associated with the new system category, 
-             or performance object.
+            Returns: A System.Diagnostics.PerformanceCounterCategory that is associated with the new system 
+             category, or performance object.
+        
+        Create(categoryName: str, categoryHelp: str, counterData: CounterCreationDataCollection) -> PerformanceCounterCategory
+        
+            Registers the custom performance counter category containing the specified counters on 
+             the local computer.
+        
+        
+            categoryName: The name of the custom performance counter category to create and register with the 
+             system.
+        
+            categoryHelp: A description of the custom category.
+            counterData: A System.Diagnostics.CounterCreationDataCollection that specifies the counters to create 
+             as part of the new category.
+        
+            Returns: A System.Diagnostics.PerformanceCounterCategory that is associated with the new custom 
+             category, or performance object.
+        
+        Create(categoryName: str, categoryHelp: str, categoryType: PerformanceCounterCategoryType, counterData: CounterCreationDataCollection) -> PerformanceCounterCategory
+        
+            Registers the custom performance counter category containing the specified counters on 
+             the local computer.
+        
+        
+            categoryName: The name of the custom performance counter category to create and register with the 
+             system.
+        
+            categoryHelp: A description of the custom category.
+            categoryType: One of the System.Diagnostics.PerformanceCounterCategoryType  values.
+            counterData: A System.Diagnostics.CounterCreationDataCollection that specifies the counters to create 
+             as part of the new category.
+        
+            Returns: A System.Diagnostics.PerformanceCounterCategory that is associated with the new custom 
+             category, or performance object.
         """
         pass
 
@@ -5160,18 +5168,18 @@ class PerformanceCounterCategory(object):
     @staticmethod
     def Exists(categoryName, machineName=None):
         """
+        Exists(categoryName: str) -> bool
+        
+            Determines whether the category is registered on the local computer.
+        
+            categoryName: The name of the performance counter category to look for.
+            Returns: true if the category is registered; otherwise, false.
         Exists(categoryName: str, machineName: str) -> bool
         
             Determines whether the category is registered on the specified computer.
         
             categoryName: The name of the performance counter category to look for.
             machineName: The name of the computer to examine for the category.
-            Returns: true if the category is registered; otherwise, false.
-        Exists(categoryName: str) -> bool
-        
-            Determines whether the category is registered on the local computer.
-        
-            categoryName: The name of the performance counter category to look for.
             Returns: true if the category is registered; otherwise, false.
         """
         pass
@@ -5179,43 +5187,45 @@ class PerformanceCounterCategory(object):
     @staticmethod
     def GetCategories(machineName=None):
         """
+        GetCategories() -> Array[PerformanceCounterCategory]
+        
+            Retrieves a list of the performance counter categories that are registered on the local 
+             computer.
+        
+            Returns: An array of System.Diagnostics.PerformanceCounterCategory objects indicating the 
+             categories that are registered on the local computer.
+        
         GetCategories(machineName: str) -> Array[PerformanceCounterCategory]
         
-            Retrieves a list of the performance counter categories that are registered on the specified 
-             computer.
+            Retrieves a list of the performance counter categories that are registered on the 
+             specified computer.
         
         
             machineName: The computer to look on.
-            Returns: An array of System.Diagnostics.PerformanceCounterCategory objects indicating the categories that 
-             are registered on the specified computer.
-        
-        GetCategories() -> Array[PerformanceCounterCategory]
-        
-            Retrieves a list of the performance counter categories that are registered on the local computer.
-            Returns: An array of System.Diagnostics.PerformanceCounterCategory objects indicating the categories that 
-             are registered on the local computer.
+            Returns: An array of System.Diagnostics.PerformanceCounterCategory objects indicating the 
+             categories that are registered on the specified computer.
         """
         pass
 
     def GetCounters(self, instanceName=None):
         """
+        GetCounters(self: PerformanceCounterCategory) -> Array[PerformanceCounter]
+        
+            Retrieves a list of the counters in a performance counter category that contains exactly 
+             one instance.
+        
+            Returns: An array of System.Diagnostics.PerformanceCounter objects indicating the counters that 
+             are associated with this single-instance performance counter category.
+        
         GetCounters(self: PerformanceCounterCategory, instanceName: str) -> Array[PerformanceCounter]
         
-            Retrieves a list of the counters in a performance counter category that contains one or more 
-             instances.
+            Retrieves a list of the counters in a performance counter category that contains one or 
+             more instances.
         
         
             instanceName: The performance object instance for which to retrieve the list of associated counters.
-            Returns: An array of System.Diagnostics.PerformanceCounter objects indicating the counters that are 
-             associated with the specified object instance of this performance counter category.
-        
-        GetCounters(self: PerformanceCounterCategory) -> Array[PerformanceCounter]
-        
-            Retrieves a list of the counters in a performance counter category that contains exactly one 
-             instance.
-        
-            Returns: An array of System.Diagnostics.PerformanceCounter objects indicating the counters that are 
-             associated with this single-instance performance counter category.
+            Returns: An array of System.Diagnostics.PerformanceCounter objects indicating the counters that 
+             are associated with the specified object instance of this performance counter category.
         """
         pass
 
@@ -5224,14 +5234,32 @@ class PerformanceCounterCategory(object):
         GetInstanceNames(self: PerformanceCounterCategory) -> Array[str]
         
             Retrieves the list of performance object instances that are associated with this category.
-            Returns: An array of strings representing the performance object instance names that are associated with 
-             this category or, if the category contains only one performance object instance, a single-entry 
-             array that contains an empty string ("").
+            Returns: An array of strings representing the performance object instance names that are 
+             associated with this category or, if the category contains only one performance object 
+             instance, a single-entry array that contains an empty string ("").
         """
         pass
 
     def InstanceExists(self, instanceName, categoryName=None, machineName=None):
         """
+        InstanceExists(self: PerformanceCounterCategory, instanceName: str) -> bool
+        
+            Determines whether the specified performance object instance exists in the category that 
+             is identified by this System.Diagnostics.PerformanceCounterCategory object's 
+             System.Diagnostics.PerformanceCounterCategory.CategoryName property.
+        
+        
+            instanceName: The performance object instance in this performance counter category to search for.
+            Returns: true if the category contains the specified performance object instance; otherwise, false.
+        InstanceExists(instanceName: str, categoryName: str) -> bool
+        
+            Determines whether a specified category on the local computer contains the specified 
+             performance object instance.
+        
+        
+            instanceName: The performance object instance to search for.
+            categoryName: The performance counter category to search.
+            Returns: true if the category contains the specified performance object instance; otherwise, false.
         InstanceExists(instanceName: str, categoryName: str, machineName: str) -> bool
         
             Determines whether a specified category on a specified computer contains the specified 
@@ -5241,24 +5269,6 @@ class PerformanceCounterCategory(object):
             instanceName: The performance object instance to search for.
             categoryName: The performance counter category to search.
             machineName: The name of the computer on which to look for the category instance pair.
-            Returns: true if the category contains the specified performance object instance; otherwise, false.
-        InstanceExists(instanceName: str, categoryName: str) -> bool
-        
-            Determines whether a specified category on the local computer contains the specified performance 
-             object instance.
-        
-        
-            instanceName: The performance object instance to search for.
-            categoryName: The performance counter category to search.
-            Returns: true if the category contains the specified performance object instance; otherwise, false.
-        InstanceExists(self: PerformanceCounterCategory, instanceName: str) -> bool
-        
-            Determines whether the specified performance object instance exists in the category that is 
-             identified by this System.Diagnostics.PerformanceCounterCategory object's 
-             System.Diagnostics.PerformanceCounterCategory.CategoryName property.
-        
-        
-            instanceName: The performance object instance in this performance counter category to search for.
             Returns: true if the category contains the specified performance object instance; otherwise, false.
         """
         pass
@@ -5270,8 +5280,8 @@ class PerformanceCounterCategory(object):
             Reads all the counter and performance object instance data that is associated with this 
              performance counter category.
         
-            Returns: An System.Diagnostics.InstanceDataCollectionCollection that contains the counter and performance 
-             object instance data for the category.
+            Returns: An System.Diagnostics.InstanceDataCollectionCollection that contains the counter and 
+             performance object instance data for the category.
         """
         pass
 
@@ -5316,7 +5326,7 @@ Set: MachineName(self: PerformanceCounterCategory) = value
 
 
 
-class PerformanceCounterCategoryType(Enum, IComparable, IFormattable, IConvertible):
+class PerformanceCounterCategoryType:
     """
     Indicates whether the performance counter category can have multiple instances.
     
@@ -5361,7 +5371,7 @@ class PerformanceCounterCategoryType(Enum, IComparable, IFormattable, IConvertib
     value__ = None
 
 
-class PerformanceCounterInstanceLifetime(Enum, IComparable, IFormattable, IConvertible):
+class PerformanceCounterInstanceLifetime:
     """
     Specifies the lifetime of a performance counter instance.
     
@@ -5405,7 +5415,7 @@ class PerformanceCounterInstanceLifetime(Enum, IComparable, IFormattable, IConve
     value__ = None
 
 
-class PerformanceCounterManager(object, ICollectData):
+class PerformanceCounterManager:
     """
     Prepares performance data for the performance.dll the system loads when working with performance counters.
     
@@ -5420,7 +5430,7 @@ class PerformanceCounterManager(object, ICollectData):
         pass
 
 
-class PerformanceCounterPermission(ResourcePermissionBase, IPermission, ISecurityEncodable, IStackWalk, IUnrestrictedPermission):
+class PerformanceCounterPermission:
     """
     Allows control of code access permissions for System.Diagnostics.PerformanceCounter.
     
@@ -5449,11 +5459,11 @@ class PerformanceCounterPermission(ResourcePermissionBase, IPermission, ISecurit
         """
         GetPermissionEntries(self: ResourcePermissionBase) -> Array[ResourcePermissionBaseEntry]
         
-            Returns an array of the System.Security.Permissions.ResourcePermissionBaseEntry objects added to 
-             this permission.
+            Returns an array of the System.Security.Permissions.ResourcePermissionBaseEntry objects 
+             added to this permission.
         
-            Returns: An array of System.Security.Permissions.ResourcePermissionBaseEntry objects that were added to 
-             this permission.
+            Returns: An array of System.Security.Permissions.ResourcePermissionBaseEntry objects that were 
+             added to this permission.
         """
         pass
 
@@ -5505,7 +5515,7 @@ Get: PermissionEntries(self: PerformanceCounterPermission) -> PerformanceCounter
 
 
 
-class PerformanceCounterPermissionAccess(Enum, IComparable, IFormattable, IConvertible):
+class PerformanceCounterPermissionAccess:
     """
     Defines access levels used by System.Diagnostics.PerformanceCounter permission classes.
     
@@ -5547,13 +5557,13 @@ class PerformanceCounterPermissionAccess(Enum, IComparable, IFormattable, IConve
     Administer = None
     Browse = None
     Instrument = None
-    None = None
+    None_ =None
     Read = None
     value__ = None
     Write = None
 
 
-class PerformanceCounterPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class PerformanceCounterPermissionAttribute:
     """
     Allows declaritive performance counter permission checks.
     
@@ -5609,7 +5619,7 @@ Set: PermissionAccess(self: PerformanceCounterPermissionAttribute) = value
 
 
 
-class PerformanceCounterPermissionEntry(object):
+class PerformanceCounterPermissionEntry:
     """
     Defines the smallest unit of a code access security permission that is set for a System.Diagnostics.PerformanceCounter.
     
@@ -5643,7 +5653,7 @@ Get: PermissionAccess(self: PerformanceCounterPermissionEntry) -> PerformanceCou
 
 
 
-class PerformanceCounterPermissionEntryCollection(CollectionBase, IList, ICollection, IEnumerable):
+class PerformanceCounterPermissionEntryCollection:
     """ Contains a strongly typed collection of System.Diagnostics.PerformanceCounterPermissionEntry objects. """
     def Add(self, value):
         """
@@ -5652,22 +5662,23 @@ class PerformanceCounterPermissionEntryCollection(CollectionBase, IList, ICollec
             Adds a specified System.Diagnostics.PerformanceCounterPermissionEntry to this collection.
         
             value: The System.Diagnostics.PerformanceCounterPermissionEntry object to add.
-            Returns: The zero-based index of the added System.Diagnostics.PerformanceCounterPermissionEntry object.
+            Returns: The zero-based index of the added System.Diagnostics.PerformanceCounterPermissionEntry 
+             object.
         """
         pass
 
     def AddRange(self, value):
         """
-        AddRange(self: PerformanceCounterPermissionEntryCollection, value: PerformanceCounterPermissionEntryCollection)
-            Appends a set of specified permission entries to this collection.
-        
-            value: A System.Diagnostics.PerformanceCounterPermissionEntryCollection that contains the permission 
-             entries to add.
-        
         AddRange(self: PerformanceCounterPermissionEntryCollection, value: Array[PerformanceCounterPermissionEntry])
             Appends a set of specified permission entries to this collection.
         
-            value: An array of type System.Diagnostics.PerformanceCounterPermissionEntry objects that contains the 
+            value: An array of type System.Diagnostics.PerformanceCounterPermissionEntry objects that 
+             contains the permission entries to add.
+        
+        AddRange(self: PerformanceCounterPermissionEntryCollection, value: PerformanceCounterPermissionEntryCollection)
+            Appends a set of specified permission entries to this collection.
+        
+            value: A System.Diagnostics.PerformanceCounterPermissionEntryCollection that contains the 
              permission entries to add.
         """
         pass
@@ -5681,16 +5692,16 @@ class PerformanceCounterPermissionEntryCollection(CollectionBase, IList, ICollec
         
         
             value: The System.Diagnostics.PerformanceCounterPermissionEntry object to find.
-            Returns: true if the specified System.Diagnostics.PerformanceCounterPermissionEntry object belongs to 
-             this collection; otherwise, false.
+            Returns: true if the specified System.Diagnostics.PerformanceCounterPermissionEntry object belongs 
+             to this collection; otherwise, false.
         """
         pass
 
     def CopyTo(self, array, index):
         """
         CopyTo(self: PerformanceCounterPermissionEntryCollection, array: Array[PerformanceCounterPermissionEntry], index: int)
-            Copies the permission entries from this collection to an array, starting at a particular index 
-             of the array.
+            Copies the permission entries from this collection to an array, starting at a particular 
+             index of the array.
         
         
             array: An array of type System.Diagnostics.PerformanceCounterPermissionEntry that receives this 
@@ -5707,8 +5718,8 @@ class PerformanceCounterPermissionEntryCollection(CollectionBase, IList, ICollec
             Determines the index of a specified permission entry in this collection.
         
             value: The permission entry for which to search.
-            Returns: The zero-based index of the specified permission entry, or -1 if the permission entry was not 
-             found in the collection.
+            Returns: The zero-based index of the specified permission entry, or -1 if the permission entry was 
+             not found in the collection.
         """
         pass
 
@@ -5764,7 +5775,9 @@ class PerformanceCounterPermissionEntryCollection(CollectionBase, IList, ICollec
     def OnRemove(self, *args): #cannot find CLR method
         """
         OnRemove(self: PerformanceCounterPermissionEntryCollection, index: int, value: object)
-            Performs additional custom processes when removing a new permission entry from the collection.
+            Performs additional custom processes when removing a new permission entry from the 
+             collection.
+        
         
             index: The zero-based index at which value can be found.
             value: The permission entry to remove from index.
@@ -5860,7 +5873,7 @@ class PerformanceCounterPermissionEntryCollection(CollectionBase, IList, ICollec
 
 
 
-class PerformanceCounterType(Enum, IComparable, IFormattable, IConvertible):
+class PerformanceCounterType:
     """
     Specifies the formula used to calculate the System.Diagnostics.PerformanceCounter.NextValue method for a System.Diagnostics.PerformanceCounter instance.
     
@@ -5930,7 +5943,7 @@ class PerformanceCounterType(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class Process(Component, IComponent, IDisposable):
+class Process:
     """
     Provides access to local and remote processes and enables you to start and stop local system processes.
     
@@ -5939,16 +5952,16 @@ class Process(Component, IComponent, IDisposable):
     def BeginErrorReadLine(self):
         """
         BeginErrorReadLine(self: Process)
-            Begins asynchronous read operations on the redirected System.Diagnostics.Process.StandardError 
-             stream of the application.
+            Begins asynchronous read operations on the redirected 
+             System.Diagnostics.Process.StandardError stream of the application.
         """
         pass
 
     def BeginOutputReadLine(self):
         """
         BeginOutputReadLine(self: Process)
-            Begins asynchronous read operations on the redirected System.Diagnostics.Process.StandardOutput 
-             stream of the application.
+            Begins asynchronous read operations on the redirected 
+             System.Diagnostics.Process.StandardOutput stream of the application.
         """
         pass
 
@@ -5980,8 +5993,9 @@ class Process(Component, IComponent, IDisposable):
         CloseMainWindow(self: Process) -> bool
         
             Closes a process that has a user interface by sending a close message to its main window.
-            Returns: true if the close message was successfully sent; false if the associated process does not have a 
-             main window or if the main window is disabled (for example if a modal dialog is being shown).
+            Returns: true if the close message was successfully sent; false if the associated process does not 
+             have a main window or if the main window is disabled (for example if a modal dialog is 
+             being shown).
         """
         pass
 
@@ -5990,7 +6004,8 @@ class Process(Component, IComponent, IDisposable):
         Dispose(self: Process, disposing: bool)
             Release all resources used by this process.
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
@@ -5998,9 +6013,9 @@ class Process(Component, IComponent, IDisposable):
     def EnterDebugMode():
         """
         EnterDebugMode()
-            Puts a System.Diagnostics.Process component in state to interact with operating system processes 
-             that run in a special mode by enabling the native property SeDebugPrivilege on the current 
-             thread.
+            Puts a System.Diagnostics.Process component in state to interact with operating system 
+             processes that run in a special mode by enabling the native property SeDebugPrivilege on 
+             the current thread.
         """
         pass
 
@@ -6009,36 +6024,36 @@ class Process(Component, IComponent, IDisposable):
         """
         GetCurrentProcess() -> Process
         
-            Gets a new System.Diagnostics.Process component and associates it with the currently active 
-             process.
+            Gets a new System.Diagnostics.Process component and associates it with the currently 
+             active process.
         
-            Returns: A new System.Diagnostics.Process component associated with the process resource that is running 
-             the calling application.
+            Returns: A new System.Diagnostics.Process component associated with the process resource that is 
+             running the calling application.
         """
         pass
 
     @staticmethod
     def GetProcessById(processId, machineName=None):
         """
-        GetProcessById(processId: int) -> Process
-        
-            Returns a new System.Diagnostics.Process component, given the identifier of a process on the 
-             local computer.
-        
-        
-            processId: The system-unique identifier of a process resource.
-            Returns: A System.Diagnostics.Process component that is associated with the local process resource 
-             identified by the processId parameter.
-        
         GetProcessById(processId: int, machineName: str) -> Process
         
-            Returns a new System.Diagnostics.Process component, given a process identifier and the name of a 
-             computer on the network.
+            Returns a new System.Diagnostics.Process component, given a process identifier and the 
+             name of a computer on the network.
         
         
             processId: The system-unique identifier of a process resource.
             machineName: The name of a computer on the network.
             Returns: A System.Diagnostics.Process component that is associated with a remote process resource 
+             identified by the processId parameter.
+        
+        GetProcessById(processId: int) -> Process
+        
+            Returns a new System.Diagnostics.Process component, given the identifier of a process on 
+             the local computer.
+        
+        
+            processId: The system-unique identifier of a process resource.
+            Returns: A System.Diagnostics.Process component that is associated with the local process resource 
              identified by the processId parameter.
         """
         pass
@@ -6046,49 +6061,49 @@ class Process(Component, IComponent, IDisposable):
     @staticmethod
     def GetProcesses(machineName=None):
         """
-        GetProcesses(machineName: str) -> Array[Process]
-        
-            Creates a new System.Diagnostics.Process component for each process resource on the specified 
-             computer.
-        
-        
-            machineName: The computer from which to read the list of processes.
-            Returns: An array of type System.Diagnostics.Process that represents all the process resources running on 
-             the specified computer.
-        
         GetProcesses() -> Array[Process]
         
             Creates a new System.Diagnostics.Process component for each process resource on the local 
              computer.
         
-            Returns: An array of type System.Diagnostics.Process that represents all the process resources running on 
-             the local computer.
+            Returns: An array of type System.Diagnostics.Process that represents all the process resources 
+             running on the local computer.
+        
+        GetProcesses(machineName: str) -> Array[Process]
+        
+            Creates a new System.Diagnostics.Process component for each process resource on the 
+             specified computer.
+        
+        
+            machineName: The computer from which to read the list of processes.
+            Returns: An array of type System.Diagnostics.Process that represents all the process resources 
+             running on the specified computer.
         """
         pass
 
     @staticmethod
     def GetProcessesByName(processName, machineName=None):
         """
+        GetProcessesByName(processName: str) -> Array[Process]
+        
+            Creates an array of new System.Diagnostics.Process components and associates them with 
+             all the process resources on the local computer that share the specified process name.
+        
+        
+            processName: The friendly name of the process.
+            Returns: An array of type System.Diagnostics.Process that represents the process resources running 
+             the specified application or file.
+        
         GetProcessesByName(processName: str, machineName: str) -> Array[Process]
         
-            Creates an array of new System.Diagnostics.Process components and associates them with all the 
-             process resources on a remote computer that share the specified process name.
+            Creates an array of new System.Diagnostics.Process components and associates them with 
+             all the process resources on a remote computer that share the specified process name.
         
         
             processName: The friendly name of the process.
             machineName: The name of a computer on the network.
-            Returns: An array of type System.Diagnostics.Process that represents the process resources running the 
-             specified application or file.
-        
-        GetProcessesByName(processName: str) -> Array[Process]
-        
-            Creates an array of new System.Diagnostics.Process components and associates them with all the 
-             process resources on the local computer that share the specified process name.
-        
-        
-            processName: The friendly name of the process.
-            Returns: An array of type System.Diagnostics.Process that represents the process resources running the 
-             specified application or file.
+            Returns: An array of type System.Diagnostics.Process that represents the process resources running 
+             the specified application or file.
         """
         pass
 
@@ -6096,13 +6111,14 @@ class Process(Component, IComponent, IDisposable):
         """
         GetService(self: Component, service: Type) -> object
         
-            Returns an object that represents a service provided by the System.ComponentModel.Component or 
-             by its System.ComponentModel.Container.
+            Returns an object that represents a service provided by the 
+             System.ComponentModel.Component or by its System.ComponentModel.Container.
         
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or 
-             null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the 
+             System.ComponentModel.Component, or null if the System.ComponentModel.Component does not 
+             provide the specified service.
         """
         pass
 
@@ -6128,11 +6144,11 @@ class Process(Component, IComponent, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -6152,68 +6168,38 @@ class Process(Component, IComponent, IDisposable):
     def Refresh(self):
         """
         Refresh(self: Process)
-            Discards any information about the associated process that has been cached inside the process 
-             component.
+            Discards any information about the associated process that has been cached inside the 
+             process component.
         """
         pass
 
     def Start(self, *__args):
         """
-        Start(fileName: str) -> Process
-        
-            Starts a process resource by specifying the name of a document or application file and 
-             associates the resource with a new System.Diagnostics.Process component.
-        
-        
-            fileName: The name of a document or application file to run in the process.
-            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or 
-             null, if no process resource is started (for example, if an existing process is reused).
-        
-        Start(fileName: str, arguments: str) -> Process
-        
-            Starts a process resource by specifying the name of an application and a set of command-line 
-             arguments, and associates the resource with a new System.Diagnostics.Process component.
-        
-        
-            fileName: The name of an application file to run in the process.
-            arguments: Command-line arguments to pass when starting the process.
-            Returns: A new System.Diagnostics.Process component that is associated with the process, or null, if no 
-             process resource is started (for example, if an existing process is reused).
-        
-        Start(startInfo: ProcessStartInfo) -> Process
-        
-            Starts the process resource that is specified by the parameter containing process start 
-             information (for example, the file name of the process to start) and associates the resource 
-             with a new System.Diagnostics.Process component.
-        
-        
-            startInfo: The System.Diagnostics.ProcessStartInfo that contains the information that is used to start the 
-             process, including the file name and any command-line arguments.
-        
-            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or null 
-             if no process resource is started (for example, if an existing process is reused).
-        
         Start(self: Process) -> bool
         
             Starts (or reuses) the process resource that is specified by the 
-             System.Diagnostics.Process.StartInfo property of this System.Diagnostics.Process component and 
-             associates it with the component.
+             System.Diagnostics.Process.StartInfo property of this System.Diagnostics.Process 
+             component and associates it with the component.
         
-            Returns: true if a process resource is started; false if no new process resource is started (for example, 
-             if an existing process is reused).
+            Returns: true if a process resource is started; false if no new process resource is started (for 
+             example, if an existing process is reused).
         
         Start(fileName: str, userName: str, password: SecureString, domain: str) -> Process
         
-            Starts a process resource by specifying the name of an application, a user name, a password, and 
-             a domain and associates the resource with a new System.Diagnostics.Process component.
+            Starts a process resource by specifying the name of an application, a user name, a 
+             password, and a domain and associates the resource with a new System.Diagnostics.Process 
+             component.
         
         
             fileName: The name of an application file to run in the process.
             userName: The user name to use when starting the process.
-            password: A System.Security.SecureString that contains the password to use when starting the process.
+            password: A System.Security.SecureString that contains the password to use when starting the 
+             process.
+        
             domain: The domain to use when starting the process.
-            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or null 
-             if no process resource is started (for example, if an existing process is reused).
+            Returns: A new System.Diagnostics.Process component that is associated with the process resource, 
+             or null if no process resource is started (for example, if an existing process is 
+             reused).
         
         Start(fileName: str, arguments: str, userName: str, password: SecureString, domain: str) -> Process
         
@@ -6225,10 +6211,50 @@ class Process(Component, IComponent, IDisposable):
             fileName: The name of an application file to run in the process.
             arguments: Command-line arguments to pass when starting the process.
             userName: The user name to use when starting the process.
-            password: A System.Security.SecureString that contains the password to use when starting the process.
+            password: A System.Security.SecureString that contains the password to use when starting the 
+             process.
+        
             domain: The domain to use when starting the process.
-            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or null 
-             if no process resource is started (for example, if an existing process is reused).
+            Returns: A new System.Diagnostics.Process component that is associated with the process resource, 
+             or null if no process resource is started (for example, if an existing process is 
+             reused).
+        
+        Start(fileName: str) -> Process
+        
+            Starts a process resource by specifying the name of a document or application file and 
+             associates the resource with a new System.Diagnostics.Process component.
+        
+        
+            fileName: The name of a document or application file to run in the process.
+            Returns: A new System.Diagnostics.Process component that is associated with the process resource, 
+             or null, if no process resource is started (for example, if an existing process is 
+             reused).
+        
+        Start(fileName: str, arguments: str) -> Process
+        
+            Starts a process resource by specifying the name of an application and a set of 
+             command-line arguments, and associates the resource with a new System.Diagnostics.Process 
+             component.
+        
+        
+            fileName: The name of an application file to run in the process.
+            arguments: Command-line arguments to pass when starting the process.
+            Returns: A new System.Diagnostics.Process component that is associated with the process, or null, 
+             if no process resource is started (for example, if an existing process is reused).
+        
+        Start(startInfo: ProcessStartInfo) -> Process
+        
+            Starts the process resource that is specified by the parameter containing process start 
+             information (for example, the file name of the process to start) and associates the 
+             resource with a new System.Diagnostics.Process component.
+        
+        
+            startInfo: The System.Diagnostics.ProcessStartInfo that contains the information that is used to 
+             start the process, including the file name and any command-line arguments.
+        
+            Returns: A new System.Diagnostics.Process component that is associated with the process resource, 
+             or null if no process resource is started (for example, if an existing process is 
+             reused).
         """
         pass
 
@@ -6236,7 +6262,9 @@ class Process(Component, IComponent, IDisposable):
         """
         ToString(self: Process) -> str
         
-            Formats the process's name as a string, combined with the parent component type, if applicable.
+            Formats the process's name as a string, combined with the parent component type, if 
+             applicable.
+        
             Returns: The System.Diagnostics.Process.ProcessName, combined with the base component's 
              System.Object.ToString return value.
         """
@@ -6244,61 +6272,53 @@ class Process(Component, IComponent, IDisposable):
 
     def WaitForExit(self, milliseconds=None):
         """
-        WaitForExit(self: Process)
-            Instructs the System.Diagnostics.Process component to wait indefinitely for the associated 
-             process to exit.
-        
         WaitForExit(self: Process, milliseconds: int) -> bool
         
-            Instructs the System.Diagnostics.Process component to wait the specified number of milliseconds 
-             for the associated process to exit.
+            Instructs the System.Diagnostics.Process component to wait the specified number of 
+             milliseconds for the associated process to exit.
         
         
-            milliseconds: The amount of time, in milliseconds, to wait for the associated process to exit. The maximum is 
-             the largest possible value of a 32-bit integer, which represents infinity to the operating 
-             system.
+            milliseconds: The amount of time, in milliseconds, to wait for the associated process to exit. The 
+             maximum is the largest possible value of a 32-bit integer, which represents infinity to 
+             the operating system.
         
-            Returns: true if the associated process has exited; otherwise, false.
+            Returns: true if the associated process has exited; otherwise, false.
+        WaitForExit(self: Process)
+            Instructs the System.Diagnostics.Process component to wait indefinitely for the 
+             associated process to exit.
         """
         pass
 
     def WaitForInputIdle(self, milliseconds=None):
         """
-        WaitForInputIdle(self: Process) -> bool
-        
-            Causes the System.Diagnostics.Process component to wait indefinitely for the associated process 
-             to enter an idle state. This overload applies only to processes with a user interface and, 
-             therefore, a message loop.
-        
-            Returns: true if the associated process has reached an idle state.
         WaitForInputIdle(self: Process, milliseconds: int) -> bool
         
-            Causes the System.Diagnostics.Process component to wait the specified number of milliseconds for 
-             the associated process to enter an idle state. This overload applies only to processes with a 
-             user interface and, therefore, a message loop.
+            Causes the System.Diagnostics.Process component to wait the specified number of 
+             milliseconds for the associated process to enter an idle state. This overload applies 
+             only to processes with a user interface and, therefore, a message loop.
         
         
-            milliseconds: A value of 1 to System.Int32.MaxValue that specifies the amount of time, in milliseconds, to 
-             wait for the associated process to become idle. A value of 0 specifies an immediate return, and 
-             a value of -1 specifies an infinite wait.
+            milliseconds: A value of 1 to System.Int32.MaxValue that specifies the amount of time, in milliseconds, 
+             to wait for the associated process to become idle. A value of 0 specifies an immediate 
+             return, and a value of -1 specifies an infinite wait.
         
-            Returns: true if the associated process has reached an idle state; otherwise, false.
+            Returns: true if the associated process has reached an idle state; otherwise, false.
+        WaitForInputIdle(self: Process) -> bool
+        
+            Causes the System.Diagnostics.Process component to wait indefinitely for the associated 
+             process to enter an idle state. This overload applies only to processes with a user 
+             interface and, therefore, a message loop.
+        
+            Returns: true if the associated process has reached an idle state.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -6685,16 +6705,17 @@ Get: WorkingSet64(self: Process) -> Int64
     OutputDataReceived = None
 
 
-class ProcessModule(Component, IComponent, IDisposable):
+class ProcessModule:
     """ Represents a.dll or .exe file that is loaded into a particular process. """
     def Dispose(self):
         """
         Dispose(self: Component, disposing: bool)
-            Releases the unmanaged resources used by the System.ComponentModel.Component and optionally 
-             releases the managed resources.
+            Releases the unmanaged resources used by the System.ComponentModel.Component and 
+             optionally releases the managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
@@ -6702,13 +6723,14 @@ class ProcessModule(Component, IComponent, IDisposable):
         """
         GetService(self: Component, service: Type) -> object
         
-            Returns an object that represents a service provided by the System.ComponentModel.Component or 
-             by its System.ComponentModel.Container.
+            Returns an object that represents a service provided by the 
+             System.ComponentModel.Component or by its System.ComponentModel.Container.
         
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or 
-             null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the 
+             System.ComponentModel.Component, or null if the System.ComponentModel.Component does not 
+             provide the specified service.
         """
         pass
 
@@ -6718,11 +6740,11 @@ class ProcessModule(Component, IComponent, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -6742,18 +6764,11 @@ class ProcessModule(Component, IComponent, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -6822,7 +6837,7 @@ Get: ModuleName(self: ProcessModule) -> str
 
 
 
-class ProcessModuleCollection(ReadOnlyCollectionBase, ICollection, IEnumerable):
+class ProcessModuleCollection:
     """
     Provides a strongly typed collection of System.Diagnostics.ProcessModule objects.
     
@@ -6834,7 +6849,9 @@ class ProcessModuleCollection(ReadOnlyCollectionBase, ICollection, IEnumerable):
         
             Determines whether the specified process module exists in the collection.
         
-            module: A System.Diagnostics.ProcessModule instance that indicates the module to find in this collection.
+            module: A System.Diagnostics.ProcessModule instance that indicates the module to find in this 
+             collection.
+        
             Returns: true if the module exists in the collection; otherwise, false.
         """
         pass
@@ -6890,7 +6907,7 @@ class ProcessModuleCollection(ReadOnlyCollectionBase, ICollection, IEnumerable):
 
 
 
-class ProcessPriorityClass(Enum, IComparable, IFormattable, IConvertible):
+class ProcessPriorityClass:
     """
     Indicates the priority that the system associates with a process. This value, together with the priority value of each thread of the process, determines each thread's base priority level.
     
@@ -6938,7 +6955,7 @@ class ProcessPriorityClass(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ProcessStartInfo(object):
+class ProcessStartInfo:
     """
     Specifies a set of values that are used when you start a process.
     
@@ -7126,16 +7143,17 @@ Set: WorkingDirectory(self: ProcessStartInfo) = value
 
 
 
-class ProcessThread(Component, IComponent, IDisposable):
+class ProcessThread:
     """ Represents an operating system process thread. """
     def Dispose(self):
         """
         Dispose(self: Component, disposing: bool)
-            Releases the unmanaged resources used by the System.ComponentModel.Component and optionally 
-             releases the managed resources.
+            Releases the unmanaged resources used by the System.ComponentModel.Component and 
+             optionally releases the managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
@@ -7143,13 +7161,14 @@ class ProcessThread(Component, IComponent, IDisposable):
         """
         GetService(self: Component, service: Type) -> object
         
-            Returns an object that represents a service provided by the System.ComponentModel.Component or 
-             by its System.ComponentModel.Container.
+            Returns an object that represents a service provided by the 
+             System.ComponentModel.Component or by its System.ComponentModel.Container.
         
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or 
-             null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the 
+             System.ComponentModel.Component, or null if the System.ComponentModel.Component does not 
+             provide the specified service.
         """
         pass
 
@@ -7159,11 +7178,11 @@ class ProcessThread(Component, IComponent, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -7176,24 +7195,17 @@ class ProcessThread(Component, IComponent, IDisposable):
     def ResetIdealProcessor(self):
         """
         ResetIdealProcessor(self: ProcessThread)
-            Resets the ideal processor for this thread to indicate that there is no single ideal processor. 
-             In other words, so that any processor is ideal.
+            Resets the ideal processor for this thread to indicate that there is no single ideal 
+             processor. In other words, so that any processor is ideal.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -7318,7 +7330,7 @@ Get: WaitReason(self: ProcessThread) -> ThreadWaitReason
 
 
 
-class ProcessThreadCollection(ReadOnlyCollectionBase, ICollection, IEnumerable):
+class ProcessThreadCollection:
     """
     Provides a strongly typed collection of System.Diagnostics.ProcessThread objects.
     
@@ -7341,7 +7353,9 @@ class ProcessThreadCollection(ReadOnlyCollectionBase, ICollection, IEnumerable):
         
             Determines whether the specified process thread exists in the collection.
         
-            thread: A System.Diagnostics.ProcessThread instance that indicates the thread to find in this collection.
+            thread: A System.Diagnostics.ProcessThread instance that indicates the thread to find in this 
+             collection.
+        
             Returns: true if the thread exists in the collection; otherwise, false.
         """
         pass
@@ -7420,7 +7434,7 @@ class ProcessThreadCollection(ReadOnlyCollectionBase, ICollection, IEnumerable):
 
 
 
-class ProcessWindowStyle(Enum, IComparable, IFormattable, IConvertible):
+class ProcessWindowStyle:
     """
     Specified how a new window should appear when the system starts a process.
     
@@ -7466,7 +7480,7 @@ class ProcessWindowStyle(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class SourceFilter(TraceFilter):
+class SourceFilter:
     """
     Indicates whether a listener should trace a message based on the source of a trace.
     
@@ -7505,7 +7519,7 @@ Set: Source(self: SourceFilter) = value
 
 
 
-class SourceLevels(Enum, IComparable, IFormattable, IConvertible):
+class SourceLevels:
     """
     Specifies the levels of trace messages filtered by the source switch and event type filter.
     
@@ -7555,7 +7569,7 @@ class SourceLevels(Enum, IComparable, IFormattable, IConvertible):
     Warning = None
 
 
-class SourceSwitch(Switch):
+class SourceSwitch:
     """
     Provides a multilevel switch to control tracing and debug output without recompiling your code.
     
@@ -7601,7 +7615,7 @@ Set: Level(self: SourceSwitch) = value
 
 
 
-class StackFrame(object):
+class StackFrame:
     """
     Provides information about a System.Diagnostics.StackFrame, which represents a function call on the call stack for the current thread.
     
@@ -7616,8 +7630,8 @@ class StackFrame(object):
         """
         GetFileColumnNumber(self: StackFrame) -> int
         
-            Gets the column number in the file that contains the code that is executing. This information is 
-             typically extracted from the debugging symbols for the executable.
+            Gets the column number in the file that contains the code that is executing. This 
+             information is typically extracted from the debugging symbols for the executable.
         
             Returns: The file column number, or 0 (zero) if the file column number cannot be determined.
         """
@@ -7627,8 +7641,8 @@ class StackFrame(object):
         """
         GetFileLineNumber(self: StackFrame) -> int
         
-            Gets the line number in the file that contains the code that is executing. This information is 
-             typically extracted from the debugging symbols for the executable.
+            Gets the line number in the file that contains the code that is executing. This 
+             information is typically extracted from the debugging symbols for the executable.
         
             Returns: The file line number, or 0 (zero) if the file line number cannot be determined.
         """
@@ -7638,8 +7652,8 @@ class StackFrame(object):
         """
         GetFileName(self: StackFrame) -> str
         
-            Gets the file name that contains the code that is executing. This information is typically 
-             extracted from the debugging symbols for the executable.
+            Gets the file name that contains the code that is executing. This information is 
+             typically extracted from the debugging symbols for the executable.
         
             Returns: The file name, or null if the file name cannot be determined.
         """
@@ -7649,10 +7663,10 @@ class StackFrame(object):
         """
         GetILOffset(self: StackFrame) -> int
         
-            Gets the offset from the start of the Microsoft intermediate language (MSIL) code for the method 
-             that is executing. This offset might be an approximation depending on whether or not the 
-             just-in-time (JIT) compiler is generating debugging code. The generation of this debugging 
-             information is controlled by the System.Diagnostics.DebuggableAttribute.
+            Gets the offset from the start of the Microsoft intermediate language (MSIL) code for the 
+             method that is executing. This offset might be an approximation depending on whether or 
+             not the just-in-time (JIT) compiler is generating debugging code. The generation of this 
+             debugging information is controlled by the System.Diagnostics.DebuggableAttribute.
         
             Returns: The offset from the start of the MSIL code for the method that is executing.
         """
@@ -7671,9 +7685,9 @@ class StackFrame(object):
         """
         GetNativeOffset(self: StackFrame) -> int
         
-            Gets the offset from the start of the native just-in-time (JIT)-compiled code for the method 
-             that is being executed. The generation of this debugging information is controlled by the 
-             System.Diagnostics.DebuggableAttribute class.
+            Gets the offset from the start of the native just-in-time (JIT)-compiled code for the 
+             method that is being executed. The generation of this debugging information is controlled 
+             by the System.Diagnostics.DebuggableAttribute class.
         
             Returns: The offset from the start of the JIT-compiled code for the method that is being executed.
         """
@@ -7703,7 +7717,49 @@ class StackFrame(object):
     OFFSET_UNKNOWN = -1
 
 
-class StackTrace(object):
+class StackFrameExtensions:
+    # no doc
+    @staticmethod
+    def GetNativeImageBase(stackFrame):
+        """ GetNativeImageBase(stackFrame: StackFrame) -> IntPtr """
+        pass
+
+    @staticmethod
+    def GetNativeIP(stackFrame):
+        """ GetNativeIP(stackFrame: StackFrame) -> IntPtr """
+        pass
+
+    @staticmethod
+    def HasILOffset(stackFrame):
+        """ HasILOffset(stackFrame: StackFrame) -> bool """
+        pass
+
+    @staticmethod
+    def HasMethod(stackFrame):
+        """ HasMethod(stackFrame: StackFrame) -> bool """
+        pass
+
+    @staticmethod
+    def HasNativeImage(stackFrame):
+        """ HasNativeImage(stackFrame: StackFrame) -> bool """
+        pass
+
+    @staticmethod
+    def HasSource(stackFrame):
+        """ HasSource(stackFrame: StackFrame) -> bool """
+        pass
+
+    __all__ = [
+        'GetNativeImageBase',
+        'GetNativeIP',
+        'HasILOffset',
+        'HasMethod',
+        'HasNativeImage',
+        'HasSource',
+    ]
+
+
+class StackTrace:
     """
     Represents a stack trace, which is an ordered collection of one or more stack frames.
     
@@ -7734,8 +7790,8 @@ class StackTrace(object):
         GetFrames(self: StackTrace) -> Array[StackFrame]
         
             Returns a copy of all stack frames in the current stack trace.
-            Returns: An array of type System.Diagnostics.StackFrame representing the function calls in the stack 
-             trace.
+            Returns: An array of type System.Diagnostics.StackFrame representing the function calls in the 
+             stack trace.
         """
         pass
 
@@ -7775,7 +7831,7 @@ Get: FrameCount(self: StackTrace) -> int
     METHODS_TO_SKIP = 0
 
 
-class Stopwatch(object):
+class Stopwatch:
     """
     Provides a set of methods and properties that you can use to accurately measure elapsed time.
     
@@ -7801,8 +7857,8 @@ class Stopwatch(object):
     def Restart(self):
         """
         Restart(self: Stopwatch)
-            Stops time interval measurement, resets the elapsed time to zero, and starts measuring elapsed 
-             time.
+            Stops time interval measurement, resets the elapsed time to zero, and starts measuring 
+             elapsed time.
         """
         pass
 
@@ -7818,8 +7874,8 @@ class Stopwatch(object):
         """
         StartNew() -> Stopwatch
         
-            Initializes a new System.Diagnostics.Stopwatch instance, sets the elapsed time property to zero, 
-             and starts measuring elapsed time.
+            Initializes a new System.Diagnostics.Stopwatch instance, sets the elapsed time property 
+             to zero, and starts measuring elapsed time.
         
             Returns: A System.Diagnostics.Stopwatch that has just begun measuring elapsed time.
         """
@@ -7865,7 +7921,7 @@ Get: IsRunning(self: Stopwatch) -> bool
     IsHighResolution = True
 
 
-class SwitchAttribute(Attribute, _Attribute):
+class SwitchAttribute:
     """
     Identifies a switch used in an assembly, class, or member.
     
@@ -7918,7 +7974,7 @@ Set: SwitchType(self: SwitchAttribute) = value
 
 
 
-class SwitchLevelAttribute(Attribute, _Attribute):
+class SwitchLevelAttribute:
     """
     Identifies the level type for a switch.
     
@@ -7943,7 +7999,7 @@ Set: SwitchLevelType(self: SwitchLevelAttribute) = value
 
 
 
-class ThreadPriorityLevel(Enum, IComparable, IFormattable, IConvertible):
+class ThreadPriorityLevel:
     """
     Specifies the priority level of a thread.
     
@@ -7992,7 +8048,7 @@ class ThreadPriorityLevel(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class ThreadState(Enum, IComparable, IFormattable, IConvertible):
+class ThreadState:
     """
     Specifies the current execution state of the thread.
     
@@ -8042,7 +8098,7 @@ class ThreadState(Enum, IComparable, IFormattable, IConvertible):
     Wait = None
 
 
-class ThreadWaitReason(Enum, IComparable, IFormattable, IConvertible):
+class ThreadWaitReason:
     """
     Specifies the reason a thread is waiting.
     
@@ -8098,37 +8154,38 @@ class ThreadWaitReason(Enum, IComparable, IFormattable, IConvertible):
     VirtualMemory = None
 
 
-class Trace(object):
+class Trace:
     """ Provides a set of methods and properties that help you trace the execution of your code. This class cannot be inherited. """
     @staticmethod
     def Assert(condition, message=None, detailMessage=None):
         """
-        Assert(condition: bool, message: str, detailMessage: str)
-            Checks for a condition; if the condition is false, outputs two specified messages and displays a 
-             message box that shows the call stack.
-        
-        
-            condition: The conditional expression to evaluate. If the condition is true, the specified messages are not 
-             sent and the message box is not displayed.
-        
-            message: The message to send to the System.Diagnostics.Trace.Listeners collection.
-            detailMessage: The detailed message to send to the System.Diagnostics.Trace.Listeners collection.
-        Assert(condition: bool, message: str)
-            Checks for a condition; if the condition is false, outputs a specified message and displays a 
-             message box that shows the call stack.
-        
-        
-            condition: The conditional expression to evaluate. If the condition is true, the specified message is not 
-             sent and the message box is not displayed.
-        
-            message: The message to send to the System.Diagnostics.Trace.Listeners collection.
         Assert(condition: bool)
-            Checks for a condition; if the condition is false, displays a message box that shows the call 
-             stack.
+            Checks for a condition; if the condition is false, displays a message box that shows the 
+             call stack.
         
         
-            condition: The conditional expression to evaluate. If the condition is true, a failure message is not sent 
-             and the message box is not displayed.
+            condition: The conditional expression to evaluate. If the condition is true, a failure message is 
+             not sent and the message box is not displayed.
+        
+        Assert(condition: bool, message: str)
+            Checks for a condition; if the condition is false, outputs a specified message and 
+             displays a message box that shows the call stack.
+        
+        
+            condition: The conditional expression to evaluate. If the condition is true, the specified message 
+             is not sent and the message box is not displayed.
+        
+            message: The message to send to the System.Diagnostics.Trace.Listeners collection.
+        Assert(condition: bool, message: str, detailMessage: str)
+            Checks for a condition; if the condition is false, outputs two specified messages and 
+             displays a message box that shows the call stack.
+        
+        
+            condition: The conditional expression to evaluate. If the condition is true, the specified messages 
+             are not sent and the message box is not displayed.
+        
+            message: The message to send to the System.Diagnostics.Trace.Listeners collection.
+            detailMessage: The detailed message to send to the System.Diagnostics.Trace.Listeners collection.
         """
         pass
 
@@ -8143,15 +8200,15 @@ class Trace(object):
     @staticmethod
     def Fail(message, detailMessage=None):
         """
+        Fail(message: str)
+            Emits the specified error message.
+        
+            message: A message to emit.
         Fail(message: str, detailMessage: str)
             Emits an error message, and a detailed error message.
         
             message: A message to emit.
-            detailMessage: A detailed message to emit.
-        Fail(message: str)
-            Emits the specified error message.
-        
-            message: A message to emit.
+            detailMessage: A detailed message to emit.
         """
         pass
 
@@ -8183,63 +8240,64 @@ class Trace(object):
     @staticmethod
     def TraceError(*__args):
         """
-        TraceError(format: str, *args: Array[object])
-            Writes an error message to the trace listeners in the System.Diagnostics.Trace.Listeners 
-             collection using the specified array of objects and formatting information.
-        
-        
-            format: A format string that contains zero or more format items, which correspond to objects in the args 
-             array.
-        
-            args: An object array containing zero or more objects to format.
         TraceError(message: str)
             Writes an error message to the trace listeners in the System.Diagnostics.Trace.Listeners 
              collection using the specified message.
         
         
-            message: The informative message to write.
+            message: The informative message to write.
+        TraceError(format: str, *args: Array[object])
+            Writes an error message to the trace listeners in the System.Diagnostics.Trace.Listeners 
+             collection using the specified array of objects and formatting information.
+        
+        
+            format: A format string that contains zero or more format items, which correspond to objects in 
+             the args array.
+        
+            args: An object array containing zero or more objects to format.
         """
         pass
 
     @staticmethod
     def TraceInformation(*__args):
         """
-        TraceInformation(format: str, *args: Array[object])
-            Writes an informational message to the trace listeners in the System.Diagnostics.Trace.Listeners 
-             collection using the specified array of objects and formatting information.
-        
-        
-            format: A format string that contains zero or more format items, which correspond to objects in the args 
-             array.
-        
-            args: An object array containing zero or more objects to format.
         TraceInformation(message: str)
-            Writes an informational message to the trace listeners in the System.Diagnostics.Trace.Listeners 
-             collection using the specified message.
+            Writes an informational message to the trace listeners in the 
+             System.Diagnostics.Trace.Listeners collection using the specified message.
         
         
-            message: The informative message to write.
+            message: The informative message to write.
+        TraceInformation(format: str, *args: Array[object])
+            Writes an informational message to the trace listeners in the 
+             System.Diagnostics.Trace.Listeners collection using the specified array of objects and 
+             formatting information.
+        
+        
+            format: A format string that contains zero or more format items, which correspond to objects in 
+             the args array.
+        
+            args: An object array containing zero or more objects to format.
         """
         pass
 
     @staticmethod
     def TraceWarning(*__args):
         """
-        TraceWarning(format: str, *args: Array[object])
-            Writes a warning message to the trace listeners in the System.Diagnostics.Trace.Listeners 
-             collection using the specified array of objects and formatting information.
-        
-        
-            format: A format string that contains zero or more format items, which correspond to objects in the args 
-             array.
-        
-            args: An object array containing zero or more objects to format.
         TraceWarning(message: str)
             Writes a warning message to the trace listeners in the System.Diagnostics.Trace.Listeners 
              collection using the specified message.
         
         
-            message: The informative message to write.
+            message: The informative message to write.
+        TraceWarning(format: str, *args: Array[object])
+            Writes a warning message to the trace listeners in the System.Diagnostics.Trace.Listeners 
+             collection using the specified array of objects and formatting information.
+        
+        
+            format: A format string that contains zero or more format items, which correspond to objects in 
+             the args array.
+        
+            args: An object array containing zero or more objects to format.
         """
         pass
 
@@ -8254,6 +8312,18 @@ class Trace(object):
     @staticmethod
     def Write(*__args):
         """
+        Write(message: str)
+            Writes a message to the trace listeners in the System.Diagnostics.Trace.Listeners 
+             collection.
+        
+        
+            message: A message to write.
+        Write(value: object)
+            Writes the value of the object's System.Object.ToString method to the trace listeners in 
+             the System.Diagnostics.Trace.Listeners collection.
+        
+        
+            value: An System.Object whose name is sent to the System.Diagnostics.Trace.Listeners.
         Write(message: str, category: str)
             Writes a category name and a message to the trace listeners in the 
              System.Diagnostics.Trace.Listeners collection.
@@ -8262,28 +8332,32 @@ class Trace(object):
             message: A message to write.
             category: A category name used to organize the output.
         Write(value: object, category: str)
-            Writes a category name and the value of the object's System.Object.ToString method to the trace 
-             listeners in the System.Diagnostics.Trace.Listeners collection.
+            Writes a category name and the value of the object's System.Object.ToString method to the 
+             trace listeners in the System.Diagnostics.Trace.Listeners collection.
         
         
             value: An System.Object name is sent to the System.Diagnostics.Trace.Listeners.
-            category: A category name used to organize the output.
-        Write(message: str)
-            Writes a message to the trace listeners in the System.Diagnostics.Trace.Listeners collection.
-        
-            message: A message to write.
-        Write(value: object)
-            Writes the value of the object's System.Object.ToString method to the trace listeners in the 
-             System.Diagnostics.Trace.Listeners collection.
-        
-        
-            value: An System.Object whose name is sent to the System.Diagnostics.Trace.Listeners.
+            category: A category name used to organize the output.
         """
         pass
 
     @staticmethod
     def WriteIf(condition, *__args):
         """
+        WriteIf(condition: bool, message: str)
+            Writes a message to the trace listeners in the System.Diagnostics.Trace.Listeners 
+             collection if a condition is true.
+        
+        
+            condition: true to cause a message to be written; otherwise, false.
+            message: A message to write.
+        WriteIf(condition: bool, value: object)
+            Writes the value of the object's System.Object.ToString method to the trace listeners in 
+             the System.Diagnostics.Trace.Listeners collection if a condition is true.
+        
+        
+            condition: true to cause a message to be written; otherwise, false.
+            value: An System.Object whose name is sent to the System.Diagnostics.Trace.Listeners.
         WriteIf(condition: bool, message: str, category: str)
             Writes a category name and message to the trace listeners in the 
              System.Diagnostics.Trace.Listeners collection if a condition is true.
@@ -8293,33 +8367,32 @@ class Trace(object):
             message: A message to write.
             category: A category name used to organize the output.
         WriteIf(condition: bool, value: object, category: str)
-            Writes a category name and the value of the object's System.Object.ToString method to the trace 
-             listeners in the System.Diagnostics.Trace.Listeners collection if a condition is true.
+            Writes a category name and the value of the object's System.Object.ToString method to the 
+             trace listeners in the System.Diagnostics.Trace.Listeners collection if a condition is 
+             true.
         
         
             condition: true to cause a message to be written; otherwise, false.
             value: An System.Object whose name is sent to the System.Diagnostics.Trace.Listeners.
-            category: A category name used to organize the output.
-        WriteIf(condition: bool, message: str)
-            Writes a message to the trace listeners in the System.Diagnostics.Trace.Listeners collection if 
-             a condition is true.
-        
-        
-            condition: true to cause a message to be written; otherwise, false.
-            message: A message to write.
-        WriteIf(condition: bool, value: object)
-            Writes the value of the object's System.Object.ToString method to the trace listeners in the 
-             System.Diagnostics.Trace.Listeners collection if a condition is true.
-        
-        
-            condition: true to cause a message to be written; otherwise, false.
-            value: An System.Object whose name is sent to the System.Diagnostics.Trace.Listeners.
+            category: A category name used to organize the output.
         """
         pass
 
     @staticmethod
     def WriteLine(*__args):
         """
+        WriteLine(message: str)
+            Writes a message to the trace listeners in the System.Diagnostics.Trace.Listeners 
+             collection.
+        
+        
+            message: A message to write.
+        WriteLine(value: object)
+            Writes the value of the object's System.Object.ToString method to the trace listeners in 
+             the System.Diagnostics.Trace.Listeners collection.
+        
+        
+            value: An System.Object whose name is sent to the System.Diagnostics.Trace.Listeners.
         WriteLine(message: str, category: str)
             Writes a category name and message to the trace listeners in the 
              System.Diagnostics.Trace.Listeners collection.
@@ -8328,28 +8401,32 @@ class Trace(object):
             message: A message to write.
             category: A category name used to organize the output.
         WriteLine(value: object, category: str)
-            Writes a category name and the value of the object's System.Object.ToString method to the trace 
-             listeners in the System.Diagnostics.Trace.Listeners collection.
+            Writes a category name and the value of the object's System.Object.ToString method to the 
+             trace listeners in the System.Diagnostics.Trace.Listeners collection.
         
         
             value: An System.Object whose name is sent to the System.Diagnostics.Trace.Listeners.
-            category: A category name used to organize the output.
-        WriteLine(message: str)
-            Writes a message to the trace listeners in the System.Diagnostics.Trace.Listeners collection.
-        
-            message: A message to write.
-        WriteLine(value: object)
-            Writes the value of the object's System.Object.ToString method to the trace listeners in the 
-             System.Diagnostics.Trace.Listeners collection.
-        
-        
-            value: An System.Object whose name is sent to the System.Diagnostics.Trace.Listeners.
+            category: A category name used to organize the output.
         """
         pass
 
     @staticmethod
     def WriteLineIf(condition, *__args):
         """
+        WriteLineIf(condition: bool, message: str)
+            Writes a message to the trace listeners in the System.Diagnostics.Trace.Listeners 
+             collection if a condition is true.
+        
+        
+            condition: true to cause a message to be written; otherwise, false.
+            message: A message to write.
+        WriteLineIf(condition: bool, value: object)
+            Writes the value of the object's System.Object.ToString method to the trace listeners in 
+             the System.Diagnostics.Trace.Listeners collection if a condition is true.
+        
+        
+            condition: true to cause a message to be written; otherwise, false.
+            value: An System.Object whose name is sent to the System.Diagnostics.Trace.Listeners.
         WriteLineIf(condition: bool, message: str, category: str)
             Writes a category name and message to the trace listeners in the 
              System.Diagnostics.Trace.Listeners collection if a condition is true.
@@ -8359,27 +8436,14 @@ class Trace(object):
             message: A message to write.
             category: A category name used to organize the output.
         WriteLineIf(condition: bool, value: object, category: str)
-            Writes a category name and the value of the object's System.Object.ToString method to the trace 
-             listeners in the System.Diagnostics.Trace.Listeners collection if a condition is true.
+            Writes a category name and the value of the object's System.Object.ToString method to the 
+             trace listeners in the System.Diagnostics.Trace.Listeners collection if a condition is 
+             true.
         
         
             condition: true to cause a message to be written; otherwise, false.
             value: An System.Object whose name is sent to the System.Diagnostics.Trace.Listeners.
-            category: A category name used to organize the output.
-        WriteLineIf(condition: bool, message: str)
-            Writes a message to the trace listeners in the System.Diagnostics.Trace.Listeners collection if 
-             a condition is true.
-        
-        
-            condition: true to cause a message to be written; otherwise, false.
-            message: A message to write.
-        WriteLineIf(condition: bool, value: object)
-            Writes the value of the object's System.Object.ToString method to the trace listeners in the 
-             System.Diagnostics.Trace.Listeners collection if a condition is true.
-        
-        
-            condition: true to cause a message to be written; otherwise, false.
-            value: An System.Object whose name is sent to the System.Diagnostics.Trace.Listeners.
+            category: A category name used to organize the output.
         """
         pass
 
@@ -8391,7 +8455,7 @@ class Trace(object):
     UseGlobalLock = True
 
 
-class TraceEventCache(object):
+class TraceEventCache:
     """
     Provides trace event data specific to a thread and a process.
     
@@ -8441,7 +8505,7 @@ Get: Timestamp(self: TraceEventCache) -> Int64
 
 
 
-class TraceEventType(Enum, IComparable, IFormattable, IConvertible):
+class TraceEventType:
     """
     Identifies the type of event that has caused the trace.
     
@@ -8493,7 +8557,7 @@ class TraceEventType(Enum, IComparable, IFormattable, IConvertible):
     Warning = None
 
 
-class TraceLevel(Enum, IComparable, IFormattable, IConvertible):
+class TraceLevel:
     """
     Specifies what messages to output for the System.Diagnostics.Debug, System.Diagnostics.Trace and System.Diagnostics.TraceSwitch classes.
     
@@ -8540,7 +8604,7 @@ class TraceLevel(Enum, IComparable, IFormattable, IConvertible):
     Warning = None
 
 
-class TraceListenerCollection(object, IList, ICollection, IEnumerable):
+class TraceListenerCollection:
     """ Provides a thread-safe list of System.Diagnostics.TraceListener objects. """
     def Add(self, listener):
         """
@@ -8555,14 +8619,14 @@ class TraceListenerCollection(object, IList, ICollection, IEnumerable):
 
     def AddRange(self, value):
         """
-        AddRange(self: TraceListenerCollection, value: TraceListenerCollection)
-            Adds the contents of another System.Diagnostics.TraceListenerCollection to the list.
-        
-            value: Another System.Diagnostics.TraceListenerCollection whose contents are added to the list.
         AddRange(self: TraceListenerCollection, value: Array[TraceListener])
             Adds an array of System.Diagnostics.TraceListener objects to the list.
         
-            value: An array of System.Diagnostics.TraceListener objects to add to the list.
+            value: An array of System.Diagnostics.TraceListener objects to add to the list.
+        AddRange(self: TraceListenerCollection, value: TraceListenerCollection)
+            Adds the contents of another System.Diagnostics.TraceListenerCollection to the list.
+        
+            value: Another System.Diagnostics.TraceListenerCollection whose contents are added to the list.
         """
         pass
 
@@ -8587,8 +8651,8 @@ class TraceListenerCollection(object, IList, ICollection, IEnumerable):
     def CopyTo(self, listeners, index):
         """
         CopyTo(self: TraceListenerCollection, listeners: Array[TraceListener], index: int)
-            Copies a section of the current System.Diagnostics.TraceListenerCollection list to the specified 
-             array at the specified index.
+            Copies a section of the current System.Diagnostics.TraceListenerCollection list to the 
+             specified array at the specified index.
         
         
             listeners: An array of type System.Array to copy the elements into.
@@ -8628,14 +8692,16 @@ class TraceListenerCollection(object, IList, ICollection, IEnumerable):
 
     def Remove(self, *__args):
         """
-        Remove(self: TraceListenerCollection, name: str)
-            Removes from the collection the first System.Diagnostics.TraceListener with the specified name.
-        
-            name: The name of the System.Diagnostics.TraceListener to remove from the list.
         Remove(self: TraceListenerCollection, listener: TraceListener)
             Removes from the collection the specified System.Diagnostics.TraceListener.
         
-            listener: A System.Diagnostics.TraceListener to remove from the list.
+            listener: A System.Diagnostics.TraceListener to remove from the list.
+        Remove(self: TraceListenerCollection, name: str)
+            Removes from the collection the first System.Diagnostics.TraceListener with the specified 
+             name.
+        
+        
+            name: The name of the System.Diagnostics.TraceListener to remove from the list.
         """
         pass
 
@@ -8696,7 +8762,7 @@ Get: Count(self: TraceListenerCollection) -> int
 
 
 
-class TraceOptions(Enum, IComparable, IFormattable, IConvertible):
+class TraceOptions:
     """
     Specifies trace data options to be written to the trace output.
     
@@ -8738,14 +8804,14 @@ class TraceOptions(Enum, IComparable, IFormattable, IConvertible):
     Callstack = None
     DateTime = None
     LogicalOperationStack = None
-    None = None
+    None_ =None
     ProcessId = None
     ThreadId = None
     Timestamp = None
     value__ = None
 
 
-class TraceSource(object):
+class TraceSource:
     """
     Provides a set of methods and properties that enable applications to trace the execution of code and associate trace messages with their source.
     
@@ -8771,21 +8837,13 @@ class TraceSource(object):
         GetSupportedAttributes(self: TraceSource) -> Array[str]
         
             Gets the custom attributes supported by the trace source.
-            Returns: A string array naming the custom attributes supported by the trace source, or null if there are 
-             no custom attributes.
+            Returns: A string array naming the custom attributes supported by the trace source, or null if 
+             there are no custom attributes.
         """
         pass
 
     def TraceData(self, eventType, id, data):
         """
-        TraceData(self: TraceSource, eventType: TraceEventType, id: int, *data: Array[object])
-            Writes trace data to the trace listeners in the System.Diagnostics.TraceSource.Listeners 
-             collection using the specified event type, event identifier, and trace data array.
-        
-        
-            eventType: One of the enumeration values that specifies the event type of the trace data.
-            id: A numeric identifier for the event.
-            data: An object array containing the trace data.
         TraceData(self: TraceSource, eventType: TraceEventType, id: int, data: object)
             Writes trace data to the trace listeners in the System.Diagnostics.TraceSource.Listeners 
              collection using the specified event type, event identifier, and trace data.
@@ -8793,23 +8851,28 @@ class TraceSource(object):
         
             eventType: One of the enumeration values that specifies the event type of the trace data.
             id: A numeric identifier for the event.
-            data: The trace data.
+            data: The trace data.
+        TraceData(self: TraceSource, eventType: TraceEventType, id: int, *data: Array[object])
+            Writes trace data to the trace listeners in the System.Diagnostics.TraceSource.Listeners 
+             collection using the specified event type, event identifier, and trace data array.
+        
+        
+            eventType: One of the enumeration values that specifies the event type of the trace data.
+            id: A numeric identifier for the event.
+            data: An object array containing the trace data.
         """
         pass
 
     def TraceEvent(self, eventType, id, *__args):
         """
-        TraceEvent(self: TraceSource, eventType: TraceEventType, id: int, format: str, *args: Array[object])
-            Writes a trace event to the trace listeners in the System.Diagnostics.TraceSource.Listeners 
-             collection using the specified event type, event identifier, and argument array and format.
+        TraceEvent(self: TraceSource, eventType: TraceEventType, id: int)
+            Writes a trace event message to the trace listeners in the 
+             System.Diagnostics.TraceSource.Listeners collection using the specified event type and 
+             event identifier.
         
         
             eventType: One of the enumeration values that specifies the event type of the trace data.
             id: A numeric identifier for the event.
-            format: A composite format string (see Remarks) that contains text intermixed with zero or more format 
-             items, which correspond to objects in the args array.
-        
-            args: An object array containing zero or more objects to format.
         TraceEvent(self: TraceSource, eventType: TraceEventType, id: int, message: str)
             Writes a trace event message to the trace listeners in the 
              System.Diagnostics.TraceSource.Listeners collection using the specified event type, event 
@@ -8819,35 +8882,39 @@ class TraceSource(object):
             eventType: One of the enumeration values that specifies the event type of the trace data.
             id: A numeric identifier for the event.
             message: The trace message to write.
-        TraceEvent(self: TraceSource, eventType: TraceEventType, id: int)
-            Writes a trace event message to the trace listeners in the 
-             System.Diagnostics.TraceSource.Listeners collection using the specified event type and event 
-             identifier.
+        TraceEvent(self: TraceSource, eventType: TraceEventType, id: int, format: str, *args: Array[object])
+            Writes a trace event to the trace listeners in the 
+             System.Diagnostics.TraceSource.Listeners collection using the specified event type, event 
+             identifier, and argument array and format.
         
         
             eventType: One of the enumeration values that specifies the event type of the trace data.
-            id: A numeric identifier for the event.
+            id: A numeric identifier for the event.
+            format: A composite format string (see Remarks) that contains text intermixed with zero or more 
+             format items, which correspond to objects in the args array.
+        
+            args: An object array containing zero or more objects to format.
         """
         pass
 
     def TraceInformation(self, *__args):
         """
+        TraceInformation(self: TraceSource, message: str)
+            Writes an informational message to the trace listeners in the 
+             System.Diagnostics.TraceSource.Listeners collection using the specified message.
+        
+        
+            message: The informative message to write.
         TraceInformation(self: TraceSource, format: str, *args: Array[object])
             Writes an informational message to the trace listeners in the 
              System.Diagnostics.TraceSource.Listeners collection using the specified object array and 
              formatting information.
         
         
-            format: A composite format string (see Remarks) that contains text intermixed with zero or more format 
-             items, which correspond to objects in the args array.
+            format: A composite format string (see Remarks) that contains text intermixed with zero or more 
+             format items, which correspond to objects in the args array.
         
-            args: An array containing zero or more objects to format.
-        TraceInformation(self: TraceSource, message: str)
-            Writes an informational message to the trace listeners in the 
-             System.Diagnostics.TraceSource.Listeners collection using the specified message.
-        
-        
-            message: The informative message to write.
+            args: An array containing zero or more objects to format.
         """
         pass
 
@@ -8855,8 +8922,8 @@ class TraceSource(object):
         """
         TraceTransfer(self: TraceSource, id: int, message: str, relatedActivityId: Guid)
             Writes a trace transfer message to the trace listeners in the 
-             System.Diagnostics.TraceSource.Listeners collection using the specified numeric identifier, 
-             message, and related activity identifier.
+             System.Diagnostics.TraceSource.Listeners collection using the specified numeric 
+             identifier, message, and related activity identifier.
         
         
             id: A numeric identifier for the event.
@@ -8904,7 +8971,7 @@ Set: Switch(self: TraceSource) = value
 
 
 
-class TraceSwitch(Switch):
+class TraceSwitch:
     """
     Provides a multilevel switch to control tracing and debug output without recompiling your code.
     
@@ -8967,7 +9034,7 @@ Get: TraceWarning(self: TraceSwitch) -> bool
 
 
 
-class XmlWriterTraceListener(TextWriterTraceListener, IDisposable):
+class XmlWriterTraceListener:
     """
     Directs tracing or debugging output as XML-encoded data to a System.IO.TextWriter or to a System.IO.Stream, such as a System.IO.FileStream.
     
@@ -8981,8 +9048,8 @@ class XmlWriterTraceListener(TextWriterTraceListener, IDisposable):
     def Close(self):
         """
         Close(self: XmlWriterTraceListener)
-            Closes the System.Diagnostics.TextWriterTraceListener.Writer for this listener so that it no 
-             longer receives tracing or debugging output.
+            Closes the System.Diagnostics.TextWriterTraceListener.Writer for this listener so that it 
+             no longer receives tracing or debugging output.
         """
         pass
 
@@ -8999,8 +9066,8 @@ class XmlWriterTraceListener(TextWriterTraceListener, IDisposable):
     def Fail(self, message, detailMessage=None):
         """
         Fail(self: XmlWriterTraceListener, message: str, detailMessage: str)
-            Writes trace information including an error message and a detailed error message to the file or 
-             stream.
+            Writes trace information including an error message and a detailed error message to the 
+             file or stream.
         
         
             message: The error message to write.
@@ -9013,8 +9080,8 @@ class XmlWriterTraceListener(TextWriterTraceListener, IDisposable):
         GetSupportedAttributes(self: TraceListener) -> Array[str]
         
             Gets the custom attributes supported by the trace listener.
-            Returns: A string array naming the custom attributes supported by the trace listener, or null if there 
-             are no custom attributes.
+            Returns: A string array naming the custom attributes supported by the trace listener, or null if 
+             there are no custom attributes.
         """
         pass
 
@@ -9024,11 +9091,11 @@ class XmlWriterTraceListener(TextWriterTraceListener, IDisposable):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the 
-             object to be assigned a new identity when it is marshaled across a remoting boundary. A value of 
-             false is usually appropriate. true to copy the current System.MarshalByRefObject object's 
-             identity to its clone, which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -9040,66 +9107,68 @@ class XmlWriterTraceListener(TextWriterTraceListener, IDisposable):
 
     def TraceData(self, eventCache, source, eventType, id, data):
         """
-        TraceData(self: XmlWriterTraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, *data: Array[object])
-            Writes trace information, data objects, and event information to the file or stream.
-        
-            eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID, thread ID, and stack 
-             trace information.
-        
-            source: The source name.
-            eventType: One of the System.Diagnostics.TraceEventType values.
-            id: A numeric identifier for the event.
-            data: An array of data objects to emit.
         TraceData(self: XmlWriterTraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, data: object)
             Writes trace information, a data object, and event information to the file or stream.
         
-            eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID, thread ID, and stack 
-             trace information.
+            eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID, thread ID, and 
+             stack trace information.
         
             source: The source name.
             eventType: One of the System.Diagnostics.TraceEventType values.
             id: A numeric identifier for the event.
-            data: A data object to emit.
+            data: A data object to emit.
+        TraceData(self: XmlWriterTraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, *data: Array[object])
+            Writes trace information, data objects, and event information to the file or stream.
+        
+            eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID, thread ID, and 
+             stack trace information.
+        
+            source: The source name.
+            eventType: One of the System.Diagnostics.TraceEventType values.
+            id: A numeric identifier for the event.
+            data: An array of data objects to emit.
         """
         pass
 
     def TraceEvent(self, eventCache, source, eventType, id, *__args):
         """
+        TraceEvent(self: XmlWriterTraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, format: str, *args: Array[object])
+            Writes trace information, a formatted message, and event information to the file or 
+             stream.
+        
+        
+            eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID, thread ID, and 
+             stack trace information.
+        
+            source: The source name.
+            eventType: One of the System.Diagnostics.TraceEventType values.
+            id: A numeric identifier for the event.
+            format: A format string that contains zero or more format items that correspond to objects in the 
+             args array.
+        
+            args: An object array containing zero or more objects to format.
         TraceEvent(self: XmlWriterTraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, message: str)
             Writes trace information, a message, and event information to the file or stream.
         
-            eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID, thread ID, and stack 
-             trace information.
+            eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID, thread ID, and 
+             stack trace information.
         
             source: The source name.
             eventType: One of the System.Diagnostics.TraceEventType values.
             id: A numeric identifier for the event.
-            message: The message to write.
-        TraceEvent(self: XmlWriterTraceListener, eventCache: TraceEventCache, source: str, eventType: TraceEventType, id: int, format: str, *args: Array[object])
-            Writes trace information, a formatted message, and event information to the file or stream.
-        
-            eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID, thread ID, and stack 
-             trace information.
-        
-            source: The source name.
-            eventType: One of the System.Diagnostics.TraceEventType values.
-            id: A numeric identifier for the event.
-            format: A format string that contains zero or more format items that correspond to objects in the args 
-             array.
-        
-            args: An object array containing zero or more objects to format.
+            message: The message to write.
         """
         pass
 
     def TraceTransfer(self, eventCache, source, id, message, relatedActivityId):
         """
         TraceTransfer(self: XmlWriterTraceListener, eventCache: TraceEventCache, source: str, id: int, message: str, relatedActivityId: Guid)
-            Writes trace information including the identity of a related activity, a message, and event 
-             information to the file or stream.
+            Writes trace information including the identity of a related activity, a message, and 
+             event information to the file or stream.
         
         
-            eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID, thread ID, and stack 
-             trace information.
+            eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID, thread ID, and 
+             stack trace information.
         
             source: The source name.
             id: A numeric identifier for the event.
@@ -9111,7 +9180,9 @@ class XmlWriterTraceListener(TextWriterTraceListener, IDisposable):
     def Write(self, *__args):
         """
         Write(self: XmlWriterTraceListener, message: str)
-            Writes a verbatim message without any additional context information to the file or stream.
+            Writes a verbatim message without any additional context information to the file or 
+             stream.
+        
         
             message: The message to write.
         """
@@ -9120,16 +9191,16 @@ class XmlWriterTraceListener(TextWriterTraceListener, IDisposable):
     def WriteIndent(self, *args): #cannot find CLR method
         """
         WriteIndent(self: TraceListener)
-            Writes the indent to the listener you create when you implement this class, and resets the 
-             System.Diagnostics.TraceListener.NeedIndent property to false.
+            Writes the indent to the listener you create when you implement this class, and resets 
+             the System.Diagnostics.TraceListener.NeedIndent property to false.
         """
         pass
 
     def WriteLine(self, *__args):
         """
         WriteLine(self: XmlWriterTraceListener, message: str)
-            Writes a verbatim message without any additional context information followed by the current 
-             line terminator to the file or stream.
+            Writes a verbatim message without any additional context information followed by the 
+             current line terminator to the file or stream.
         
         
             message: The message to write.
@@ -9137,18 +9208,11 @@ class XmlWriterTraceListener(TextWriterTraceListener, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method

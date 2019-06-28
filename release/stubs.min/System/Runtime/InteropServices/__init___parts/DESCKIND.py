@@ -1,9 +1,7 @@
-class DESCKIND(Enum,IComparable,IFormattable,IConvertible):
+class DESCKIND:
  """
- Use System.Runtime.InteropServices.ComTypes.DESCKIND instead.
-
- 
-
+ Use System.Runtime.InteropServices.ComTypes.DESCKIND instead.
+ 
  enum DESCKIND,values: DESCKIND_FUNCDESC (1),DESCKIND_IMPLICITAPPOBJ (4),DESCKIND_MAX (5),DESCKIND_NONE (0),DESCKIND_TYPECOMP (3),DESCKIND_VARDESC (2)
  """
  def __eq__(self,*args):

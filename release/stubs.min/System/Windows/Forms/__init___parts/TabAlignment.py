@@ -1,9 +1,7 @@
-class TabAlignment(Enum,IComparable,IFormattable,IConvertible):
+class TabAlignment:
  """
- Specifies the locations of the tabs in a tab control.
-
- 
-
+ Specifies the locations of the tabs in a tab control.
+ 
  enum TabAlignment,values: Bottom (1),Left (2),Right (3),Top (0)
  """
  def __eq__(self,*args):

@@ -1,49 +1,35 @@
-class ExtenderProvidedPropertyAttribute(Attribute,_Attribute):
+class ExtenderProvidedPropertyAttribute:
  """
- Specifies a property that is offered by an extender provider. This class cannot be inherited.
-
- 
-
+ Specifies a property that is offered by an extender provider. This class cannot be inherited.
+ 
  ExtenderProvidedPropertyAttribute()
  """
  def Equals(self,obj):
   """
-  Equals(self: ExtenderProvidedPropertyAttribute,obj: object) -> bool
-
-  
-
-   Determines whether the specified System.Object is equal to the current System.Object.
-
-  
-
-   obj: An System.Object to compare with this instance or null.
-
-   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,false.
+  Equals(self: ExtenderProvidedPropertyAttribute,obj: object) -> bool
+  
+   Determines whether the specified System.Object is equal to the current System.Object.
+  
+   obj: An System.Object to compare with this instance or null.
+   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,
+    false.
   """
   pass
  def GetHashCode(self):
   """
-  GetHashCode(self: ExtenderProvidedPropertyAttribute) -> int
-
-  
-
-   Returns the hash code for this instance.
-
+  GetHashCode(self: ExtenderProvidedPropertyAttribute) -> int
+  
+   Returns the hash code for this instance.
    Returns: A 32-bit signed integer hash code.
   """
   pass
  def IsDefaultAttribute(self):
   """
-  IsDefaultAttribute(self: ExtenderProvidedPropertyAttribute) -> bool
-
-  
-
-   Provides an indication whether the value of this instance is the default value for the derived 
-
-    class.
-
-  
-
+  IsDefaultAttribute(self: ExtenderProvidedPropertyAttribute) -> bool
+  
+   Provides an indication whether the value of this instance is the default value for the 
+    derived class.
+  
    Returns: true if this instance is the default attribute for the class; otherwise,false.
   """
   pass
@@ -56,36 +42,24 @@ class ExtenderProvidedPropertyAttribute(Attribute,_Attribute):
  def __ne__(self,*args):
   pass
  ExtenderProperty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the property that is being provided.
-
-
-
-Get: ExtenderProperty(self: ExtenderProvidedPropertyAttribute) -> PropertyDescriptor
-
-
-
+ """Gets the property that is being provided.
+
+Get: ExtenderProperty(self: ExtenderProvidedPropertyAttribute) -> PropertyDescriptor
+
 """
 
  Provider=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the extender provider that is providing the property.
-
-
-
-Get: Provider(self: ExtenderProvidedPropertyAttribute) -> IExtenderProvider
-
-
-
+ """Gets the extender provider that is providing the property.
+
+Get: Provider(self: ExtenderProvidedPropertyAttribute) -> IExtenderProvider
+
 """
 
  ReceiverType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the type of object that can receive the property.
-
-
-
-Get: ReceiverType(self: ExtenderProvidedPropertyAttribute) -> Type
-
-
-
+ """Gets the type of object that can receive the property.
+
+Get: ReceiverType(self: ExtenderProvidedPropertyAttribute) -> Type
+
 """
 
 

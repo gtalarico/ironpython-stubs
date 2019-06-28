@@ -1,9 +1,7 @@
-class DecompressionMethods(Enum,IComparable,IFormattable,IConvertible):
+class DecompressionMethods:
  """
- Represents the file compression and decompression encoding format to be used to compress the data received in response to an System.Net.HttpWebRequest.
-
- 
-
+ Represents the file compression and decompression encoding format to be used to compress the data received in response to an System.Net.HttpWebRequest.
+ 
  enum (flags) DecompressionMethods,values: Deflate (2),GZip (1),None (0)
  """
  def __eq__(self,*args):
@@ -31,6 +29,6 @@ class DecompressionMethods(Enum,IComparable,IFormattable,IConvertible):
   pass
  Deflate=None
  GZip=None
- None=None
+ None_ =None
  value__=None
 

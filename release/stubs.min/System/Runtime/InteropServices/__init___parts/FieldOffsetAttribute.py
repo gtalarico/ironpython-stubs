@@ -1,9 +1,7 @@
-class FieldOffsetAttribute(Attribute,_Attribute):
+class FieldOffsetAttribute:
  """
- Indicates the physical position of fields within the unmanaged representation of a class or structure.
-
- 
-
+ Indicates the physical position of fields within the unmanaged representation of a class or structure.
+ 
  FieldOffsetAttribute(offset: int)
  """
  def __init__(self,*args):
@@ -14,14 +12,10 @@ class FieldOffsetAttribute(Attribute,_Attribute):
   """ __new__(cls: type,offset: int) """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the offset from the beginning of the structure to the beginning of the field.
-
-
-
-Get: Value(self: FieldOffsetAttribute) -> int
-
-
-
+ """Gets the offset from the beginning of the structure to the beginning of the field.
+
+Get: Value(self: FieldOffsetAttribute) -> int
+
 """
 
 

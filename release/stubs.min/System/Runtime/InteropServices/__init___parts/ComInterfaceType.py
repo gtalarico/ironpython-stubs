@@ -1,9 +1,7 @@
-class ComInterfaceType(Enum,IComparable,IFormattable,IConvertible):
+class ComInterfaceType:
  """
- Identifies how to expose an interface to COM.
-
- 
-
+ Identifies how to expose an interface to COM.
+ 
  enum ComInterfaceType,values: InterfaceIsDual (0),InterfaceIsIDispatch (2),InterfaceIsIInspectable (3),InterfaceIsIUnknown (1)
  """
  def __eq__(self,*args):

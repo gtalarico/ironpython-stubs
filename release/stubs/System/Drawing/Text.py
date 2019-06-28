@@ -2,13 +2,13 @@
 # module System.Drawing.Text calls itself Text
 # from System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class FontCollection(object, IDisposable):
+class FontCollection:
     """ Provides a base class for installed and private font collections. """
     def Dispose(self):
         """
@@ -18,18 +18,11 @@ class FontCollection(object, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -49,7 +42,7 @@ Get: Families(self: FontCollection) -> Array[FontFamily]
 
 
 
-class GenericFontFamilies(Enum, IComparable, IFormattable, IConvertible):
+class GenericFontFamilies:
     """
     Specifies a generic System.Drawing.FontFamily object.
     
@@ -94,7 +87,7 @@ class GenericFontFamilies(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class HotkeyPrefix(Enum, IComparable, IFormattable, IConvertible):
+class HotkeyPrefix:
     """
     Specifies the type of display for hot-key prefixes that relate to text.
     
@@ -134,12 +127,12 @@ class HotkeyPrefix(Enum, IComparable, IFormattable, IConvertible):
         pass
 
     Hide = None
-    None = None
+    None_ =None
     Show = None
     value__ = None
 
 
-class InstalledFontCollection(FontCollection, IDisposable):
+class InstalledFontCollection:
     """
     Represents the fonts installed on the system. This class cannot be inherited.
     
@@ -148,27 +141,21 @@ class InstalledFontCollection(FontCollection, IDisposable):
     def Dispose(self):
         """
         Dispose(self: FontCollection, disposing: bool)
-            Releases the unmanaged resources used by the System.Drawing.Text.FontCollection and optionally 
-             releases the managed resources.
+            Releases the unmanaged resources used by the System.Drawing.Text.FontCollection and 
+             optionally releases the managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -176,7 +163,7 @@ class InstalledFontCollection(FontCollection, IDisposable):
         pass
 
 
-class PrivateFontCollection(FontCollection, IDisposable):
+class PrivateFontCollection:
     """
     Provides a collection of font families built from font files that are provided by the client application.
     
@@ -206,18 +193,11 @@ class PrivateFontCollection(FontCollection, IDisposable):
         pass
 
     def __enter__(self, *args): #cannot find CLR method
-        """
-        __enter__(self: IDisposable) -> object
-        
-            Provides the implementation of __enter__ for objects which implement IDisposable.
-        """
+        """ __enter__(self: IDisposable) -> object """
         pass
 
     def __exit__(self, *args): #cannot find CLR method
-        """
-        __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object)
-            Provides the implementation of __exit__ for objects which implement IDisposable.
-        """
+        """ __exit__(self: IDisposable, exc_type: object, exc_value: object, exc_back: object) """
         pass
 
     def __init__(self, *args): #cannot find CLR method
@@ -225,7 +205,7 @@ class PrivateFontCollection(FontCollection, IDisposable):
         pass
 
 
-class TextRenderingHint(Enum, IComparable, IFormattable, IConvertible):
+class TextRenderingHint:
     """
     Specifies the quality of text rendering.
     

@@ -1,8 +1,6 @@
-class LdapStyleUriParser(UriParser):
+class LdapStyleUriParser:
  """
- A customizable parser based on the Lightweight Directory Access Protocol (LDAP) scheme.
-
- 
-
+ A customizable parser based on the Lightweight Directory Access Protocol (LDAP) scheme.
+ 
  LdapStyleUriParser()
  """

@@ -1,9 +1,7 @@
-class ErrorBlinkStyle(Enum,IComparable,IFormattable,IConvertible):
+class ErrorBlinkStyle:
  """
- Specifies constants indicating when the error icon,supplied by an System.Windows.Forms.ErrorProvider,should blink to alert the user that an error has occurred.
-
- 
-
+ Specifies constants indicating when the error icon,supplied by an System.Windows.Forms.ErrorProvider,should blink to alert the user that an error has occurred.
+ 
  enum ErrorBlinkStyle,values: AlwaysBlink (1),BlinkIfDifferentError (0),NeverBlink (2)
  """
  def __eq__(self,*args):

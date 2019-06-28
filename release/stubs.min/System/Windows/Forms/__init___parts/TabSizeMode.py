@@ -1,9 +1,7 @@
-class TabSizeMode(Enum,IComparable,IFormattable,IConvertible):
+class TabSizeMode:
  """
- Specifies how tabs in a tab control are sized.
-
- 
-
+ Specifies how tabs in a tab control are sized.
+ 
  enum TabSizeMode,values: FillToRight (1),Fixed (2),Normal (0)
  """
  def __eq__(self,*args):

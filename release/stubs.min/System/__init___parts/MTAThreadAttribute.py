@@ -1,9 +1,7 @@
-class MTAThreadAttribute(Attribute,_Attribute):
+class MTAThreadAttribute:
  """
- Indicates that the COM threading model for an application is multithreaded apartment (MTA).
-
- 
-
+ Indicates that the COM threading model for an application is multithreaded apartment (MTA).
+ 
  MTAThreadAttribute()
  """
  def __init__(self,*args):

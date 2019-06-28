@@ -1,4 +1,4 @@
-class EXCEPINFO(object):
+class EXCEPINFO:
  """ Use System.Runtime.InteropServices.ComTypes.EXCEPINFO instead. """
  bstrDescription=None
  bstrHelpFile=None

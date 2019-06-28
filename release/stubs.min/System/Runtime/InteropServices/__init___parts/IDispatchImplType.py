@@ -1,9 +1,7 @@
-class IDispatchImplType(Enum,IComparable,IFormattable,IConvertible):
+class IDispatchImplType:
  """
- Indicates which IDispatch implementation to use for a particular class.
-
- 
-
+ Indicates which IDispatch implementation to use for a particular class.
+ 
  enum IDispatchImplType,values: CompatibleImpl (2),InternalImpl (1),SystemDefinedImpl (0)
  """
  def __eq__(self,*args):

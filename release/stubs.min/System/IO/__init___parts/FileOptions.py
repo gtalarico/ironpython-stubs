@@ -1,9 +1,7 @@
-class FileOptions(Enum,IComparable,IFormattable,IConvertible):
+class FileOptions:
  """
- Represents additional options for creating a System.IO.FileStream object.
-
- 
-
+ Represents additional options for creating a System.IO.FileStream object.
+ 
  enum (flags) FileOptions,values: Asynchronous (1073741824),DeleteOnClose (67108864),Encrypted (16384),None (0),RandomAccess (268435456),SequentialScan (134217728),WriteThrough (-2147483648)
  """
  def __eq__(self,*args):
@@ -32,7 +30,7 @@ class FileOptions(Enum,IComparable,IFormattable,IConvertible):
  Asynchronous=None
  DeleteOnClose=None
  Encrypted=None
- None=None
+ None_ =None
  RandomAccess=None
  SequentialScan=None
  value__=None

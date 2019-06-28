@@ -1,9 +1,7 @@
-class AceFlags(Enum,IComparable,IFormattable,IConvertible):
+class AceFlags:
  """
- Specifies the inheritance and auditing behavior of an access control entry (ACE).
-
- 
-
+ Specifies the inheritance and auditing behavior of an access control entry (ACE).
+ 
  enum (flags) AceFlags,values: AuditFlags (192),ContainerInherit (2),FailedAccess (128),InheritanceFlags (15),Inherited (16),InheritOnly (8),None (0),NoPropagateInherit (4),ObjectInherit (1),SuccessfulAccess (64)
  """
  def __eq__(self,*args):
@@ -35,7 +33,7 @@ class AceFlags(Enum,IComparable,IFormattable,IConvertible):
  InheritanceFlags=None
  Inherited=None
  InheritOnly=None
- None=None
+ None_ =None
  NoPropagateInherit=None
  ObjectInherit=None
  SuccessfulAccess=None

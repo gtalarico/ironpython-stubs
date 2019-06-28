@@ -1,9 +1,7 @@
-class MessageBoxButtons(Enum,IComparable,IFormattable,IConvertible):
+class MessageBoxButtons:
  """
- Specifies constants defining which buttons to display on a System.Windows.Forms.MessageBox.
-
- 
-
+ Specifies constants defining which buttons to display on a System.Windows.Forms.MessageBox.
+ 
  enum MessageBoxButtons,values: AbortRetryIgnore (2),OK (0),OKCancel (1),RetryCancel (5),YesNo (4),YesNoCancel (3)
  """
  def __eq__(self,*args):

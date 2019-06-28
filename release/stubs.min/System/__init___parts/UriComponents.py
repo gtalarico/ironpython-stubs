@@ -1,9 +1,7 @@
-class UriComponents(Enum,IComparable,IFormattable,IConvertible):
+class UriComponents:
  """
- Specifies the parts of a System.Uri.
-
- 
-
+ Specifies the parts of a System.Uri.
+ 
  enum (flags) UriComponents,values: AbsoluteUri (127),Fragment (64),Host (4),HostAndPort (132),HttpRequestUrl (61),KeepDelimiter (1073741824),NormalizedHost (256),Path (16),PathAndQuery (48),Port (8),Query (32),Scheme (1),SchemeAndServer (13),SerializationInfoString (-2147483648),StrongAuthority (134),StrongPort (128),UserInfo (2)
  """
  def __eq__(self,*args):

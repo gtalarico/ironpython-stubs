@@ -1,9 +1,7 @@
-class SetWin32ContextInIDispatchAttribute(Attribute,_Attribute):
+class SetWin32ContextInIDispatchAttribute:
  """
- This attribute has been deprecated.
-
- 
-
+ This attribute has been deprecated.
+ 
  SetWin32ContextInIDispatchAttribute()
  """
  def __init__(self,*args):

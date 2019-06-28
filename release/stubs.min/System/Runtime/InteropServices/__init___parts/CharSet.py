@@ -1,9 +1,7 @@
-class CharSet(Enum,IComparable,IFormattable,IConvertible):
+class CharSet:
  """
- Dictates which character set marshaled strings should use.
-
- 
-
+ Dictates which character set marshaled strings should use.
+ 
  enum CharSet,values: Ansi (2),Auto (4),None (1),Unicode (3)
  """
  def __eq__(self,*args):
@@ -31,7 +29,7 @@ class CharSet(Enum,IComparable,IFormattable,IConvertible):
   pass
  Ansi=None
  Auto=None
- None=None
+ None_ =None
  Unicode=None
  value__=None
 

@@ -1,4 +1,4 @@
-class Double(object):
+class Double:
  """ Represents a double-precision floating-point number. """
  def as_integer_ratio(self,*args):
   """ as_integer_ratio(self: float) -> tuple """
@@ -71,11 +71,9 @@ class Double(object):
  @staticmethod
  def __new__(self,*args): #cannot find CLR constructor
   """
+  __new__(cls: type) -> object
+  __new__(cls: type,x: object) -> object
   __new__(cls: type,s: IList[Byte]) -> object
-
-  __new__(cls: type,x: object) -> object
-
-  __new__(cls: type) -> object
   """
   pass
  def __ne__(self,*args):

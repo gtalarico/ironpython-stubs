@@ -1,9 +1,7 @@
-class DefaultParameterValueAttribute(Attribute,_Attribute):
+class DefaultParameterValueAttribute:
  """
- Sets the default value of a parameter when called from a language that supports default parameters. This class cannot be inherited.
-
- 
-
+ Sets the default value of a parameter when called from a language that supports default parameters. This class cannot be inherited.
+ 
  DefaultParameterValueAttribute(value: object)
  """
  def __init__(self,*args):
@@ -14,14 +12,10 @@ class DefaultParameterValueAttribute(Attribute,_Attribute):
   """ __new__(cls: type,value: object) """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the default value of a parameter.
-
-
-
-Get: Value(self: DefaultParameterValueAttribute) -> object
-
-
-
+ """Gets the default value of a parameter.
+
+Get: Value(self: DefaultParameterValueAttribute) -> object
+
 """
 
 

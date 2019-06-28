@@ -1,21 +1,15 @@
-class ComponentCollection(ReadOnlyCollectionBase,ICollection,IEnumerable):
+class ComponentCollection:
  """
- Provides a read-only container for a collection of System.ComponentModel.IComponent objects.
-
- 
-
+ Provides a read-only container for a collection of System.ComponentModel.IComponent objects.
+ 
  ComponentCollection(components: Array[IComponent])
  """
  def CopyTo(self,array,index):
   """
-  CopyTo(self: ComponentCollection,array: Array[IComponent],index: int)
-
-   Copies the entire collection to an array,starting writing at the specified array index.
-
-  
-
-   array: An System.ComponentModel.IComponent array to copy the objects in the collection to.
-
+  CopyTo(self: ComponentCollection,array: Array[IComponent],index: int)
+   Copies the entire collection to an array,starting writing at the specified array index.
+  
+   array: An System.ComponentModel.IComponent array to copy the objects in the collection to.
    index: The index of the array at which copying to should begin.
   """
   pass
@@ -33,10 +27,8 @@ class ComponentCollection(ReadOnlyCollectionBase,ICollection,IEnumerable):
   """ __new__(cls: type,components: Array[IComponent]) """
   pass
  InnerList=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the list of elements contained in the System.Collections.ReadOnlyCollectionBase instance.
-
-
-
+ """Gets the list of elements contained in the System.Collections.ReadOnlyCollectionBase instance.
+
 """
 
 

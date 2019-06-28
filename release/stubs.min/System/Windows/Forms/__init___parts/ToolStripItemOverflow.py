@@ -1,9 +1,7 @@
-class ToolStripItemOverflow(Enum,IComparable,IFormattable,IConvertible):
+class ToolStripItemOverflow:
  """
- Determines whether a System.Windows.Forms.ToolStripItem is placed in the overflow System.Windows.Forms.ToolStrip.
-
- 
-
+ Determines whether a System.Windows.Forms.ToolStripItem is placed in the overflow System.Windows.Forms.ToolStrip.
+ 
  enum ToolStripItemOverflow,values: Always (1),AsNeeded (2),Never (0)
  """
  def __eq__(self,*args):

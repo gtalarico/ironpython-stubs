@@ -2,21 +2,21 @@
 # module System.Security.Permissions calls itself Permissions
 # from mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
+# no doc
 # no imports
 
 # no functions
 # classes
 
-class SecurityAttribute(Attribute, _Attribute):
+class SecurityAttribute:
     """ Specifies the base attribute class for declarative security from which System.Security.Permissions.CodeAccessSecurityAttribute is derived. """
     def CreatePermission(self):
         """
         CreatePermission(self: SecurityAttribute) -> IPermission
         
-            When overridden in a derived class, creates a permission object that can then be serialized into 
-             binary form and persistently stored along with the System.Security.Permissions.SecurityAction in 
-             an assembly's metadata.
+            When overridden in a derived class, creates a permission object that can then be 
+             serialized into binary form and persistently stored along with the 
+             System.Security.Permissions.SecurityAction in an assembly's metadata.
         
             Returns: A serializable permission object.
         """
@@ -52,7 +52,7 @@ Set: Unrestricted(self: SecurityAttribute) = value
 
 
 
-class CodeAccessSecurityAttribute(SecurityAttribute, _Attribute):
+class CodeAccessSecurityAttribute:
     """ Specifies the base attribute class for code access security. """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -76,8 +76,8 @@ class IUnrestrictedPermission:
             Returns a value indicating whether unrestricted access to the resource protected by the 
              permission is allowed.
         
-            Returns: true if unrestricted use of the resource protected by the permission is allowed; otherwise, 
-             false.
+            Returns: true if unrestricted use of the resource protected by the permission is allowed; 
+             otherwise, false.
         """
         pass
 
@@ -86,7 +86,7 @@ class IUnrestrictedPermission:
         pass
 
 
-class EnvironmentPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IUnrestrictedPermission, IBuiltInPermission):
+class EnvironmentPermission:
     """
     Controls access to system and user environment variables. This class cannot be inherited.
     
@@ -96,7 +96,9 @@ class EnvironmentPermission(CodeAccessPermission, IPermission, ISecurityEncodabl
     def AddPathList(self, flag, pathList):
         """
         AddPathList(self: EnvironmentPermission, flag: EnvironmentPermissionAccess, pathList: str)
-            Adds access for the specified environment variables to the existing state of the permission.
+            Adds access for the specified environment variables to the existing state of the 
+             permission.
+        
         
             flag: One of the System.Security.Permissions.EnvironmentPermissionAccess values.
             pathList: A list of environment variables (semicolon-separated).
@@ -129,8 +131,8 @@ class EnvironmentPermission(CodeAccessPermission, IPermission, ISecurityEncodabl
              System.Security.Permissions.EnvironmentPermissionAccess.
         
         
-            flag: One of the System.Security.Permissions.EnvironmentPermissionAccess values that represents a 
-             single type of environment variable access.
+            flag: One of the System.Security.Permissions.EnvironmentPermissionAccess values that represents 
+             a single type of environment variable access.
         
             Returns: A list of environment variables (semicolon-separated) for the selected flag.
         """
@@ -140,15 +142,15 @@ class EnvironmentPermission(CodeAccessPermission, IPermission, ISecurityEncodabl
         """
         Intersect(self: EnvironmentPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the 
-             specified permission.
+            Creates and returns a permission that is the intersection of the current permission and 
+             the specified permission.
         
         
             target: A permission to intersect with the current permission. It must be of the same type as the 
              current permission.
         
-            Returns: A new permission that represents the intersection of the current permission and the specified 
-             permission. This new permission is null if the intersection is empty.
+            Returns: A new permission that represents the intersection of the current permission and the 
+             specified permission. This new permission is null if the intersection is empty.
         """
         pass
 
@@ -158,8 +160,8 @@ class EnvironmentPermission(CodeAccessPermission, IPermission, ISecurityEncodabl
         
             Determines whether the current permission is a subset of the specified permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the 
-             same type as the current permission.
+            target: A permission that is to be tested for the subset relationship. This permission must be of 
+             the same type as the current permission.
         
             Returns: true if the current permission is a subset of the specified permission; otherwise, false.
         """
@@ -177,8 +179,8 @@ class EnvironmentPermission(CodeAccessPermission, IPermission, ISecurityEncodabl
     def SetPathList(self, flag, pathList):
         """
         SetPathList(self: EnvironmentPermission, flag: EnvironmentPermissionAccess, pathList: str)
-            Sets the specified access to the specified environment variables to the existing state of the 
-             permission.
+            Sets the specified access to the specified environment variables to the existing state of 
+             the permission.
         
         
             flag: One of the System.Security.Permissions.EnvironmentPermissionAccess values.
@@ -199,10 +201,12 @@ class EnvironmentPermission(CodeAccessPermission, IPermission, ISecurityEncodabl
         """
         Union(self: EnvironmentPermission, other: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
-        
-            other: A permission to combine with the current permission. It must be of the same type as the current 
+            Creates a permission that is the union of the current permission and the specified 
              permission.
+        
+        
+            other: A permission to combine with the current permission. It must be of the same type as the 
+             current permission.
         
             Returns: A new permission that represents the union of the current permission and the specified 
              permission.
@@ -228,7 +232,7 @@ class EnvironmentPermission(CodeAccessPermission, IPermission, ISecurityEncodabl
         pass
 
 
-class EnvironmentPermissionAccess(Enum, IComparable, IFormattable, IConvertible):
+class EnvironmentPermissionAccess:
     """
     Specifies access to environment variables.
     
@@ -274,7 +278,7 @@ class EnvironmentPermissionAccess(Enum, IComparable, IFormattable, IConvertible)
     Write = None
 
 
-class EnvironmentPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class EnvironmentPermissionAttribute:
     """
     Allows security actions for System.Security.Permissions.EnvironmentPermission to be applied to code using declarative security. This class cannot be inherited.
     
@@ -327,7 +331,7 @@ Set: Write(self: EnvironmentPermissionAttribute) = value
 
 
 
-class FileDialogPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IUnrestrictedPermission, IBuiltInPermission):
+class FileDialogPermission:
     """
     Controls the ability to access files or folders through a File dialog box. This class cannot be inherited.
     
@@ -356,15 +360,15 @@ class FileDialogPermission(CodeAccessPermission, IPermission, ISecurityEncodable
         """
         Intersect(self: FileDialogPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the 
-             specified permission.
+            Creates and returns a permission that is the intersection of the current permission and 
+             the specified permission.
         
         
-            target: A permission to intersect with the current permission. It must be the same type as the current 
-             permission.
+            target: A permission to intersect with the current permission. It must be the same type as the 
+             current permission.
         
-            Returns: A new permission that represents the intersection of the current permission and the specified 
-             permission. This new permission is null if the intersection is empty.
+            Returns: A new permission that represents the intersection of the current permission and the 
+             specified permission. This new permission is null if the intersection is empty.
         """
         pass
 
@@ -374,8 +378,8 @@ class FileDialogPermission(CodeAccessPermission, IPermission, ISecurityEncodable
         
             Determines whether the current permission is a subset of the specified permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be the same 
-             type as the current permission.
+            target: A permission that is to be tested for the subset relationship. This permission must be 
+             the same type as the current permission.
         
             Returns: true if the current permission is a subset of the specified permission; otherwise, false.
         """
@@ -403,10 +407,12 @@ class FileDialogPermission(CodeAccessPermission, IPermission, ISecurityEncodable
         """
         Union(self: FileDialogPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
-        
-            target: A permission to combine with the current permission. It must be of the same type as the current 
+            Creates a permission that is the union of the current permission and the specified 
              permission.
+        
+        
+            target: A permission to combine with the current permission. It must be of the same type as the 
+             current permission.
         
             Returns: A new permission that represents the union of the current permission and the specified 
              permission.
@@ -441,7 +447,7 @@ Set: Access(self: FileDialogPermission) = value
 
 
 
-class FileDialogPermissionAccess(Enum, IComparable, IFormattable, IConvertible):
+class FileDialogPermissionAccess:
     """
     Specifies the type of access to files allowed through the File dialog boxes.
     
@@ -480,14 +486,14 @@ class FileDialogPermissionAccess(Enum, IComparable, IFormattable, IConvertible):
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    None = None
+    None_ =None
     Open = None
     OpenSave = None
     Save = None
     value__ = None
 
 
-class FileDialogPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class FileDialogPermissionAttribute:
     """
     Allows security actions for System.Security.Permissions.FileDialogPermission to be applied to code using declarative security. This class cannot be inherited.
     
@@ -532,7 +538,7 @@ Set: Save(self: FileDialogPermissionAttribute) = value
 
 
 
-class FileIOPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IUnrestrictedPermission, IBuiltInPermission):
+class FileIOPermission:
     """
     Controls the ability to access files and folders. This class cannot be inherited.
     
@@ -544,16 +550,18 @@ class FileIOPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IS
     """
     def AddPathList(self, access, *__args):
         """
-        AddPathList(self: FileIOPermission, access: FileIOPermissionAccess, pathList: Array[str])
-            Adds access for the specified files and directories to the existing state of the permission.
-        
-            access: A bitwise combination of the System.Security.Permissions.FileIOPermissionAccess values.
-            pathList: An array containing the absolute paths of the files and directories.
         AddPathList(self: FileIOPermission, access: FileIOPermissionAccess, path: str)
             Adds access for the specified file or directory to the existing state of the permission.
         
             access: A bitwise combination of the System.Security.Permissions.FileIOPermissionAccess values.
-            path: The absolute path of a file or directory.
+            path: The absolute path of a file or directory.
+        AddPathList(self: FileIOPermission, access: FileIOPermissionAccess, pathList: Array[str])
+            Adds access for the specified files and directories to the existing state of the 
+             permission.
+        
+        
+            access: A bitwise combination of the System.Security.Permissions.FileIOPermissionAccess values.
+            pathList: An array containing the absolute paths of the files and directories.
         """
         pass
 
@@ -570,15 +578,15 @@ class FileIOPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IS
         """
         Equals(self: FileIOPermission, obj: object) -> bool
         
-            Determines whether the specified System.Security.Permissions.FileIOPermission object is equal to 
-             the current System.Security.Permissions.FileIOPermission.
+            Determines whether the specified System.Security.Permissions.FileIOPermission object is 
+             equal to the current System.Security.Permissions.FileIOPermission.
         
         
             obj: The System.Security.Permissions.FileIOPermission object to compare with the current 
              System.Security.Permissions.FileIOPermission.
         
-            Returns: true if the specified System.Security.Permissions.FileIOPermission is equal to the current 
-             System.Security.Permissions.FileIOPermission object; otherwise, false.
+            Returns: true if the specified System.Security.Permissions.FileIOPermission is equal to the 
+             current System.Security.Permissions.FileIOPermission object; otherwise, false.
         """
         pass
 
@@ -595,8 +603,8 @@ class FileIOPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IS
         """
         GetHashCode(self: FileIOPermission) -> int
         
-            Gets a hash code for the System.Security.Permissions.FileIOPermission object that is suitable 
-             for use in hashing algorithms and data structures such as a hash table.
+            Gets a hash code for the System.Security.Permissions.FileIOPermission object that is 
+             suitable for use in hashing algorithms and data structures such as a hash table.
         
             Returns: A hash code for the current System.Security.Permissions.FileIOPermission object.
         """
@@ -610,11 +618,11 @@ class FileIOPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IS
              System.Security.Permissions.FileIOPermissionAccess.
         
         
-            access: One of the System.Security.Permissions.FileIOPermissionAccess values that represents a single 
-             type of file access.
+            access: One of the System.Security.Permissions.FileIOPermissionAccess values that represents a 
+             single type of file access.
         
-            Returns: An array containing the paths of the files and directories to which access specified by the 
-             access parameter is granted.
+            Returns: An array containing the paths of the files and directories to which access specified by 
+             the access parameter is granted.
         """
         pass
 
@@ -622,15 +630,15 @@ class FileIOPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IS
         """
         Intersect(self: FileIOPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the 
-             specified permission.
+            Creates and returns a permission that is the intersection of the current permission and 
+             the specified permission.
         
         
-            target: A permission to intersect with the current permission. It must be the same type as the current 
-             permission.
+            target: A permission to intersect with the current permission. It must be the same type as the 
+             current permission.
         
-            Returns: A new permission that represents the intersection of the current permission and the specified 
-             permission. This new permission is null if the intersection is empty.
+            Returns: A new permission that represents the intersection of the current permission and the 
+             specified permission. This new permission is null if the intersection is empty.
         """
         pass
 
@@ -640,8 +648,8 @@ class FileIOPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IS
         
             Determines whether the current permission is a subset of the specified permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be the same 
-             type as the current permission.
+            target: A permission that is to be tested for the subset relationship. This permission must be 
+             the same type as the current permission.
         
             Returns: true if the current permission is a subset of the specified permission; otherwise, false.
         """
@@ -658,20 +666,20 @@ class FileIOPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IS
 
     def SetPathList(self, access, *__args):
         """
-        SetPathList(self: FileIOPermission, access: FileIOPermissionAccess, pathList: Array[str])
-            Sets the specified access to the specified files and directories, replacing the current state 
-             for the specified access with the new set of paths.
-        
-        
-            access: A bitwise combination of the System.Security.Permissions.FileIOPermissionAccess values.
-            pathList: An array containing the absolute paths of the files and directories.
         SetPathList(self: FileIOPermission, access: FileIOPermissionAccess, path: str)
-            Sets the specified access to the specified file or directory, replacing the existing state of 
-             the permission.
+            Sets the specified access to the specified file or directory, replacing the existing 
+             state of the permission.
         
         
             access: A bitwise combination of the System.Security.Permissions.FileIOPermissionAccess values.
-            path: The absolute path of the file or directory.
+            path: The absolute path of the file or directory.
+        SetPathList(self: FileIOPermission, access: FileIOPermissionAccess, pathList: Array[str])
+            Sets the specified access to the specified files and directories, replacing the current 
+             state for the specified access with the new set of paths.
+        
+        
+            access: A bitwise combination of the System.Security.Permissions.FileIOPermissionAccess values.
+            pathList: An array containing the absolute paths of the files and directories.
         """
         pass
 
@@ -688,10 +696,12 @@ class FileIOPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IS
         """
         Union(self: FileIOPermission, other: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
-        
-            other: A permission to combine with the current permission. It must be the same type as the current 
+            Creates a permission that is the union of the current permission and the specified 
              permission.
+        
+        
+            other: A permission to combine with the current permission. It must be the same type as the 
+             current permission.
         
             Returns: A new permission that represents the union of the current permission and the specified 
              permission.
@@ -744,7 +754,7 @@ Set: AllLocalFiles(self: FileIOPermission) = value
 
 
 
-class FileIOPermissionAccess(Enum, IComparable, IFormattable, IConvertible):
+class FileIOPermissionAccess:
     """
     Specifies the type of file access requested.
     
@@ -792,7 +802,7 @@ class FileIOPermissionAccess(Enum, IComparable, IFormattable, IConvertible):
     Write = None
 
 
-class FileIOPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class FileIOPermissionAttribute:
     """
     Allows security actions for System.Security.Permissions.FileIOPermission to be applied to code using declarative security. This class cannot be inherited.
     
@@ -901,7 +911,7 @@ Set: Write(self: FileIOPermissionAttribute) = value
 
 
 
-class GacIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IBuiltInPermission):
+class GacIdentityPermission:
     """
     Defines the identity permission for files originating in the global assembly cache. This class cannot be inherited.
     
@@ -931,15 +941,15 @@ class GacIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodabl
         """
         Intersect(self: GacIdentityPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the 
-             specified permission.
+            Creates and returns a permission that is the intersection of the current permission and 
+             the specified permission.
         
         
             target: A permission to intersect with the current permission. It must be of the same type as the 
              current permission.
         
-            Returns: A new permission that represents the intersection of the current permission and the specified 
-             permission. The new permission is null if the intersection is empty.
+            Returns: A new permission that represents the intersection of the current permission and the 
+             specified permission. The new permission is null if the intersection is empty.
         """
         pass
 
@@ -949,8 +959,8 @@ class GacIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodabl
         
             Indicates whether the current permission is a subset of the specified permission.
         
-            target: A permission object to test for the subset relationship. The permission must be of the same type 
-             as the current permission.
+            target: A permission object to test for the subset relationship. The permission must be of the 
+             same type as the current permission.
         
             Returns: true if the current permission is a subset of the specified permission; otherwise, false.
         """
@@ -961,8 +971,8 @@ class GacIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodabl
         ToXml(self: GacIdentityPermission) -> SecurityElement
         
             Creates an XML encoding of the permission and its current state.
-            Returns: A System.Security.SecurityElement that represents the XML encoding of the permission, including 
-             any state information.
+            Returns: A System.Security.SecurityElement that represents the XML encoding of the permission, 
+             including any state information.
         """
         pass
 
@@ -970,12 +980,12 @@ class GacIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodabl
         """
         Union(self: GacIdentityPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the union of the current permission and the specified 
-             permission.
+            Creates and returns a permission that is the union of the current permission and the 
+             specified permission.
         
         
-            target: A permission to combine with the current permission. It must be of the same type as the current 
-             permission.
+            target: A permission to combine with the current permission. It must be of the same type as the 
+             current permission.
         
             Returns: A new permission that represents the union of the current permission and the specified 
              permission.
@@ -1001,7 +1011,7 @@ class GacIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodabl
         pass
 
 
-class GacIdentityPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class GacIdentityPermissionAttribute:
     """
     Allows security actions for System.Security.Permissions.GacIdentityPermission to be applied to code using declarative security. This class cannot be inherited.
     
@@ -1029,7 +1039,7 @@ class GacIdentityPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
         pass
 
 
-class HostProtectionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class HostProtectionAttribute:
     """
     Allows the use of declarative security actions to determine host protection requirements. This class cannot be inherited.
     
@@ -1142,7 +1152,7 @@ Set: UI(self: HostProtectionAttribute) = value
 
 
 
-class HostProtectionResource(Enum, IComparable, IFormattable, IConvertible):
+class HostProtectionResource:
     """
     Specifies categories of functionality potentially harmful to the host if invoked by a method or class.
     
@@ -1185,7 +1195,7 @@ class HostProtectionResource(Enum, IComparable, IFormattable, IConvertible):
     ExternalProcessMgmt = None
     ExternalThreading = None
     MayLeakOnAbort = None
-    None = None
+    None_ =None
     SecurityInfrastructure = None
     SelfAffectingProcessMgmt = None
     SelfAffectingThreading = None
@@ -1195,7 +1205,7 @@ class HostProtectionResource(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class IsolatedStorageContainment(Enum, IComparable, IFormattable, IConvertible):
+class IsolatedStorageContainment:
     """
     Specifies the permitted use of isolated storage.
     
@@ -1244,12 +1254,12 @@ class IsolatedStorageContainment(Enum, IComparable, IFormattable, IConvertible):
     DomainIsolationByMachine = None
     DomainIsolationByRoamingUser = None
     DomainIsolationByUser = None
-    None = None
+    None_ =None
     UnrestrictedIsolatedStorage = None
     value__ = None
 
 
-class IsolatedStoragePermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IUnrestrictedPermission):
+class IsolatedStoragePermission:
     """ Represents access to generic isolated storage capabilities. """
     def FromXml(self, esd):
         """
@@ -1311,7 +1321,7 @@ Set: UserQuota(self: IsolatedStoragePermission) = value
 
 
 
-class IsolatedStorageFilePermission(IsolatedStoragePermission, IPermission, ISecurityEncodable, IStackWalk, IUnrestrictedPermission, IBuiltInPermission):
+class IsolatedStorageFilePermission:
     """
     Specifies the allowed usage of a private virtual file system. This class cannot be inherited.
     
@@ -1330,15 +1340,15 @@ class IsolatedStorageFilePermission(IsolatedStoragePermission, IPermission, ISec
         """
         Intersect(self: IsolatedStorageFilePermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the 
-             specified permission.
+            Creates and returns a permission that is the intersection of the current permission and 
+             the specified permission.
         
         
-            target: A permission to intersect with the current permission object. It must be of the same type as the 
-             current permission.
+            target: A permission to intersect with the current permission object. It must be of the same type 
+             as the current permission.
         
-            Returns: A new permission that represents the intersection of the current permission and the specified 
-             permission. This new permission is null if the intersection is empty.
+            Returns: A new permission that represents the intersection of the current permission and the 
+             specified permission. This new permission is null if the intersection is empty.
         """
         pass
 
@@ -1348,8 +1358,8 @@ class IsolatedStorageFilePermission(IsolatedStoragePermission, IPermission, ISec
         
             Determines whether the current permission is a subset of the specified permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the 
-             same type as the current permission.
+            target: A permission that is to be tested for the subset relationship. This permission must be of 
+             the same type as the current permission.
         
             Returns: true if the current permission is a subset of the specified permission; otherwise, false.
         """
@@ -1368,10 +1378,12 @@ class IsolatedStorageFilePermission(IsolatedStoragePermission, IPermission, ISec
         """
         Union(self: IsolatedStorageFilePermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
-        
-            target: A permission to combine with the current permission. It must be of the same type as the current 
+            Creates a permission that is the union of the current permission and the specified 
              permission.
+        
+        
+            target: A permission to combine with the current permission. It must be of the same type as the 
+             current permission.
         
             Returns: A new permission that represents the union of the current permission and the specified 
              permission.
@@ -1394,7 +1406,7 @@ class IsolatedStorageFilePermission(IsolatedStoragePermission, IPermission, ISec
         pass
 
 
-class IsolatedStoragePermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class IsolatedStoragePermissionAttribute:
     """ Allows security actions for System.Security.Permissions.IsolatedStoragePermission to be applied to code using declarative security. """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1426,7 +1438,7 @@ Set: UserQuota(self: IsolatedStoragePermissionAttribute) = value
 
 
 
-class IsolatedStorageFilePermissionAttribute(IsolatedStoragePermissionAttribute, _Attribute):
+class IsolatedStorageFilePermissionAttribute:
     """
     Allows security actions for System.Security.Permissions.IsolatedStorageFilePermission to be applied to code using declarative security. This class cannot be inherited.
     
@@ -1437,7 +1449,8 @@ class IsolatedStorageFilePermissionAttribute(IsolatedStoragePermissionAttribute,
         CreatePermission(self: IsolatedStorageFilePermissionAttribute) -> IPermission
         
             Creates and returns a new System.Security.Permissions.IsolatedStorageFilePermission.
-            Returns: An System.Security.Permissions.IsolatedStorageFilePermission that corresponds to this attribute.
+            Returns: An System.Security.Permissions.IsolatedStorageFilePermission that corresponds to this 
+             attribute.
         """
         pass
 
@@ -1454,7 +1467,7 @@ class IsolatedStorageFilePermissionAttribute(IsolatedStoragePermissionAttribute,
         pass
 
 
-class KeyContainerPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IUnrestrictedPermission, IBuiltInPermission):
+class KeyContainerPermission:
     """
     Controls the ability to access key containers. This class cannot be inherited.
     
@@ -1485,15 +1498,15 @@ class KeyContainerPermission(CodeAccessPermission, IPermission, ISecurityEncodab
         """
         Intersect(self: KeyContainerPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the 
-             specified permission.
+            Creates and returns a permission that is the intersection of the current permission and 
+             the specified permission.
         
         
-            target: A permission to intersect with the current permission. It must be the same type as the current 
-             permission.
+            target: A permission to intersect with the current permission. It must be the same type as the 
+             current permission.
         
-            Returns: A new permission that represents the intersection of the current permission and the specified 
-             permission. This new permission is null if the intersection is empty.
+            Returns: A new permission that represents the intersection of the current permission and the 
+             specified permission. This new permission is null if the intersection is empty.
         """
         pass
 
@@ -1503,8 +1516,8 @@ class KeyContainerPermission(CodeAccessPermission, IPermission, ISecurityEncodab
         
             Determines whether the current permission is a subset of the specified permission.
         
-            target: A permission to test for the subset relationship. This permission must be the same type as the 
-             current permission.
+            target: A permission to test for the subset relationship. This permission must be the same type 
+             as the current permission.
         
             Returns: true if the current permission is a subset of the specified permission; otherwise, false.
         """
@@ -1524,8 +1537,8 @@ class KeyContainerPermission(CodeAccessPermission, IPermission, ISecurityEncodab
         ToXml(self: KeyContainerPermission) -> SecurityElement
         
             Creates an XML encoding of the permission and its current state.
-            Returns: A System.Security.SecurityElement that contains an XML encoding of the permission, including 
-             state information.
+            Returns: A System.Security.SecurityElement that contains an XML encoding of the permission, 
+             including state information.
         """
         pass
 
@@ -1533,10 +1546,12 @@ class KeyContainerPermission(CodeAccessPermission, IPermission, ISecurityEncodab
         """
         Union(self: KeyContainerPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
-        
-            target: A permission to combine with the current permission. It must be of the same type as the current 
+            Creates a permission that is the union of the current permission and the specified 
              permission.
+        
+        
+            target: A permission to combine with the current permission. It must be of the same type as the 
+             current permission.
         
             Returns: A new permission that represents the union of the current permission and the specified 
              permission.
@@ -1578,7 +1593,7 @@ Get: Flags(self: KeyContainerPermission) -> KeyContainerPermissionFlags
 
 
 
-class KeyContainerPermissionAccessEntry(object):
+class KeyContainerPermissionAccessEntry:
     """
     Specifies access rights for specific key containers. This class cannot be inherited.
     
@@ -1590,16 +1605,17 @@ class KeyContainerPermissionAccessEntry(object):
         """
         Equals(self: KeyContainerPermissionAccessEntry, o: object) -> bool
         
-            Determines whether the specified System.Security.Permissions.KeyContainerPermissionAccessEntry 
-             object is equal to the current instance.
+            Determines whether the specified 
+             System.Security.Permissions.KeyContainerPermissionAccessEntry object is equal to the 
+             current instance.
         
         
-            o: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to compare with the 
-             currentinstance.
+            o: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to compare with 
+             the currentinstance.
         
-            Returns: true if the specified System.Security.Permissions.KeyContainerPermissionAccessEntry is equal to 
-             the current System.Security.Permissions.KeyContainerPermissionAccessEntry object; otherwise, 
-             false.
+            Returns: true if the specified System.Security.Permissions.KeyContainerPermissionAccessEntry is 
+             equal to the current System.Security.Permissions.KeyContainerPermissionAccessEntry 
+             object; otherwise, false.
         """
         pass
 
@@ -1607,10 +1623,11 @@ class KeyContainerPermissionAccessEntry(object):
         """
         GetHashCode(self: KeyContainerPermissionAccessEntry) -> int
         
-            Gets a hash code for the current instance that is suitable for use in hashing algorithms and 
-             data structures such as a hash table.
+            Gets a hash code for the current instance that is suitable for use in hashing algorithms 
+             and data structures such as a hash table.
         
-            Returns: A hash code for the current System.Security.Permissions.KeyContainerPermissionAccessEntry object.
+            Returns: A hash code for the current System.Security.Permissions.KeyContainerPermissionAccessEntry 
+             object.
         """
         pass
 
@@ -1680,13 +1697,15 @@ Set: ProviderType(self: KeyContainerPermissionAccessEntry) = value
 
 
 
-class KeyContainerPermissionAccessEntryCollection(object, ICollection, IEnumerable):
+class KeyContainerPermissionAccessEntryCollection:
     """ Represents a collection of System.Security.Permissions.KeyContainerPermissionAccessEntry objects. This class cannot be inherited. """
     def Add(self, accessEntry):
         """
         Add(self: KeyContainerPermissionAccessEntryCollection, accessEntry: KeyContainerPermissionAccessEntry) -> int
         
-            Adds a System.Security.Permissions.KeyContainerPermissionAccessEntry object to the collection.
+            Adds a System.Security.Permissions.KeyContainerPermissionAccessEntry object to the 
+             collection.
+        
         
             accessEntry: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to add.
             Returns: The index at which the new element was inserted.
@@ -1696,20 +1715,20 @@ class KeyContainerPermissionAccessEntryCollection(object, ICollection, IEnumerab
     def Clear(self):
         """
         Clear(self: KeyContainerPermissionAccessEntryCollection)
-            Removes all the System.Security.Permissions.KeyContainerPermissionAccessEntry objects from the 
-             collection.
+            Removes all the System.Security.Permissions.KeyContainerPermissionAccessEntry objects 
+             from the collection.
         """
         pass
 
     def CopyTo(self, array, index):
         """
         CopyTo(self: KeyContainerPermissionAccessEntryCollection, array: Array[KeyContainerPermissionAccessEntry], index: int)
-            Copies the elements of the collection to a compatible one-dimensional array, starting at the 
-             specified index of the target array.
+            Copies the elements of the collection to a compatible one-dimensional array, starting at 
+             the specified index of the target array.
         
         
-            array: The one-dimensional System.Security.Permissions.KeyContainerPermissionAccessEntry array that is 
-             the destination of the elements copied from the current collection.
+            array: The one-dimensional System.Security.Permissions.KeyContainerPermissionAccessEntry array 
+             that is the destination of the elements copied from the current collection.
         
             index: The index in array at which copying begins.
         """
@@ -1719,11 +1738,11 @@ class KeyContainerPermissionAccessEntryCollection(object, ICollection, IEnumerab
         """
         GetEnumerator(self: KeyContainerPermissionAccessEntryCollection) -> KeyContainerPermissionAccessEntryEnumerator
         
-            Returns a System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator object that 
-             can be used to iterate through the objects in the collection.
+            Returns a System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator object 
+             that can be used to iterate through the objects in the collection.
         
-            Returns: A System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator object that can be 
-             used to iterate through the collection.
+            Returns: A System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator object that can 
+             be used to iterate through the collection.
         """
         pass
 
@@ -1737,15 +1756,15 @@ class KeyContainerPermissionAccessEntryCollection(object, ICollection, IEnumerab
         
         
             accessEntry: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to locate.
-            Returns: The index of the specified System.Security.Permissions.KeyContainerPermissionAccessEntry object 
+            Returns: The index of the specified System.Security.Permissions.KeyContainerPermissionAccessEntry 
                 """
         pass
 
     def Remove(self, accessEntry):
         """
         Remove(self: KeyContainerPermissionAccessEntryCollection, accessEntry: KeyContainerPermissionAccessEntry)
-            Removes the specified System.Security.Permissions.KeyContainerPermissionAccessEntry object from 
-             thecollection.
+            Removes the specified System.Security.Permissions.KeyContainerPermissionAccessEntry 
+             object from thecollection.
         
         
             accessEntry: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to remove.
@@ -1802,15 +1821,15 @@ Get: SyncRoot(self: KeyContainerPermissionAccessEntryCollection) -> object
 
 
 
-class KeyContainerPermissionAccessEntryEnumerator(object, IEnumerator):
+class KeyContainerPermissionAccessEntryEnumerator:
     """ Represents the enumerator for System.Security.Permissions.KeyContainerPermissionAccessEntry objects in a System.Security.Permissions.KeyContainerPermissionAccessEntryCollection. """
     def MoveNext(self):
         """
         MoveNext(self: KeyContainerPermissionAccessEntryEnumerator) -> bool
         
             Moves to the next element in the collection.
-            Returns: true if the enumerator was successfully advanced to the next element; false if the enumerator 
-             has passed the end of the collection.
+            Returns: true if the enumerator was successfully advanced to the next element; false if the 
+             enumerator has passed the end of the collection.
         """
         pass
 
@@ -1849,7 +1868,7 @@ Get: Current(self: KeyContainerPermissionAccessEntryEnumerator) -> KeyContainerP
 
 
 
-class KeyContainerPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class KeyContainerPermissionAttribute:
     """
     Allows security actions for System.Security.Permissions.KeyContainerPermission to be applied to code using declarative security. This class cannot be inherited.
     
@@ -1926,7 +1945,7 @@ Set: ProviderType(self: KeyContainerPermissionAttribute) = value
 
 
 
-class KeyContainerPermissionFlags(Enum, IComparable, IFormattable, IConvertible):
+class KeyContainerPermissionFlags:
     """
     Specifies the type of key container access allowed.
     
@@ -1979,7 +1998,7 @@ class KeyContainerPermissionFlags(Enum, IComparable, IFormattable, IConvertible)
     ViewAcl = None
 
 
-class PermissionSetAttribute(CodeAccessSecurityAttribute, _Attribute):
+class PermissionSetAttribute:
     """
     Allows security actions for a System.Security.PermissionSet to be applied to code using declarative security. This class cannot be inherited.
     
@@ -2057,7 +2076,7 @@ Set: XML(self: PermissionSetAttribute) = value
 
 
 
-class PermissionState(Enum, IComparable, IFormattable, IConvertible):
+class PermissionState:
     """
     Specifies whether a permission should have all or no access to resources at creation.
     
@@ -2096,12 +2115,12 @@ class PermissionState(Enum, IComparable, IFormattable, IConvertible):
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    None = None
+    None_ =None
     Unrestricted = None
     value__ = None
 
 
-class PrincipalPermission(object, IPermission, ISecurityEncodable, IUnrestrictedPermission, IBuiltInPermission):
+class PrincipalPermission:
     """
     Allows checks against the active principal (see System.Security.Principal.IPrincipal) using the language constructs defined for both declarative and imperative security actions. This class cannot be inherited.
     
@@ -2121,8 +2140,8 @@ class PrincipalPermission(object, IPermission, ISecurityEncodable, IUnrestricted
     def Demand(self):
         """
         Demand(self: PrincipalPermission)
-            Determines at run time whether the current principal matches the principal specified by the 
-             current permission.
+            Determines at run time whether the current principal matches the principal specified by 
+             the current permission.
         """
         pass
 
@@ -2130,15 +2149,15 @@ class PrincipalPermission(object, IPermission, ISecurityEncodable, IUnrestricted
         """
         Equals(self: PrincipalPermission, obj: object) -> bool
         
-            Determines whether the specified System.Security.Permissions.PrincipalPermission object is equal 
-             to the current System.Security.Permissions.PrincipalPermission.
+            Determines whether the specified System.Security.Permissions.PrincipalPermission object 
+             is equal to the current System.Security.Permissions.PrincipalPermission.
         
         
             obj: The System.Security.Permissions.PrincipalPermission object to compare with the current 
              System.Security.Permissions.PrincipalPermission.
         
-            Returns: true if the specified System.Security.Permissions.PrincipalPermission is equal to the current 
-             System.Security.Permissions.PrincipalPermission object; otherwise, false.
+            Returns: true if the specified System.Security.Permissions.PrincipalPermission is equal to the 
+             current System.Security.Permissions.PrincipalPermission object; otherwise, false.
         """
         pass
 
@@ -2155,8 +2174,8 @@ class PrincipalPermission(object, IPermission, ISecurityEncodable, IUnrestricted
         """
         GetHashCode(self: PrincipalPermission) -> int
         
-            Gets a hash code for the System.Security.Permissions.PrincipalPermission object that is suitable 
-             for use in hashing algorithms and data structures such as a hash table.
+            Gets a hash code for the System.Security.Permissions.PrincipalPermission object that is 
+             suitable for use in hashing algorithms and data structures such as a hash table.
         
             Returns: A hash code for the current System.Security.Permissions.PrincipalPermission object.
         """
@@ -2166,15 +2185,15 @@ class PrincipalPermission(object, IPermission, ISecurityEncodable, IUnrestricted
         """
         Intersect(self: PrincipalPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the 
-             specified permission.
+            Creates and returns a permission that is the intersection of the current permission and 
+             the specified permission.
         
         
             target: A permission to intersect with the current permission. It must be of the same type as the 
              current permission.
         
-            Returns: A new permission that represents the intersection of the current permission and the specified 
-             permission. This new permission will be null if the intersection is empty.
+            Returns: A new permission that represents the intersection of the current permission and the 
+             specified permission. This new permission will be null if the intersection is empty.
         """
         pass
 
@@ -2184,8 +2203,8 @@ class PrincipalPermission(object, IPermission, ISecurityEncodable, IUnrestricted
         
             Determines whether the current permission is a subset of the specified permission.
         
-            target: The permission that is to be tested for the subset relationship. This permission must be of the 
-             same type as the current permission.
+            target: The permission that is to be tested for the subset relationship. This permission must be 
+             of the same type as the current permission.
         
             Returns: true if the current permission is a subset of the specified permission; otherwise, false.
         """
@@ -2222,7 +2241,9 @@ class PrincipalPermission(object, IPermission, ISecurityEncodable, IUnrestricted
         """
         Union(self: PrincipalPermission, other: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
+            Creates a permission that is the union of the current permission and the specified 
+             permission.
+        
         
             other: A permission to combine with the current permission. This must be of the same type as the 
              current permission.
@@ -2263,7 +2284,7 @@ class PrincipalPermission(object, IPermission, ISecurityEncodable, IUnrestricted
         pass
 
 
-class PrincipalPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class PrincipalPermissionAttribute:
     """
     Allows security actions for the System.Security.Permissions.PrincipalPermission class to be applied to code by using declarative security. This class cannot be inherited.
     
@@ -2316,7 +2337,7 @@ Set: Role(self: PrincipalPermissionAttribute) = value
 
 
 
-class PublisherIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IBuiltInPermission):
+class PublisherIdentityPermission:
     """
     Represents the identity of a software publisher. This class cannot be inherited.
     
@@ -2345,15 +2366,15 @@ class PublisherIdentityPermission(CodeAccessPermission, IPermission, ISecurityEn
         """
         Intersect(self: PublisherIdentityPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the 
-             specified permission.
+            Creates and returns a permission that is the intersection of the current permission and 
+             the specified permission.
         
         
             target: A permission to intersect with the current permission. It must be of the same type as the 
              current permission.
         
-            Returns: A new permission that represents the intersection of the current permission and the specified 
-             permission. This new permission is null if the intersection is empty.
+            Returns: A new permission that represents the intersection of the current permission and the 
+             specified permission. This new permission is null if the intersection is empty.
         """
         pass
 
@@ -2363,8 +2384,8 @@ class PublisherIdentityPermission(CodeAccessPermission, IPermission, ISecurityEn
         
             Determines whether the current permission is a subset of the specified permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the 
-             same type as the current permission.
+            target: A permission that is to be tested for the subset relationship. This permission must be of 
+             the same type as the current permission.
         
             Returns: true if the current permission is a subset of the specified permission; otherwise, false.
         """
@@ -2383,10 +2404,12 @@ class PublisherIdentityPermission(CodeAccessPermission, IPermission, ISecurityEn
         """
         Union(self: PublisherIdentityPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
-        
-            target: A permission to combine with the current permission. It must be of the same type as the current 
+            Creates a permission that is the union of the current permission and the specified 
              permission.
+        
+        
+            target: A permission to combine with the current permission. It must be of the same type as the 
+             current permission.
         
             Returns: A new permission that represents the union of the current permission and the specified 
              permission.
@@ -2421,7 +2444,7 @@ Set: Certificate(self: PublisherIdentityPermission) = value
 
 
 
-class PublisherIdentityPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class PublisherIdentityPermissionAttribute:
     """
     Allows security actions for System.Security.Permissions.PublisherIdentityPermission to be applied to code using declarative security. This class cannot be inherited.
     
@@ -2431,8 +2454,11 @@ class PublisherIdentityPermissionAttribute(CodeAccessSecurityAttribute, _Attribu
         """
         CreatePermission(self: PublisherIdentityPermissionAttribute) -> IPermission
         
-            Creates and returns a new instance of System.Security.Permissions.PublisherIdentityPermission.
-            Returns: A System.Security.Permissions.PublisherIdentityPermission that corresponds to this attribute.
+            Creates and returns a new instance of 
+             System.Security.Permissions.PublisherIdentityPermission.
+        
+            Returns: A System.Security.Permissions.PublisherIdentityPermission that corresponds to this 
+             attribute.
         """
         pass
 
@@ -2474,7 +2500,7 @@ Set: X509Certificate(self: PublisherIdentityPermissionAttribute) = value
 
 
 
-class ReflectionPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IUnrestrictedPermission, IBuiltInPermission):
+class ReflectionPermission:
     """
     Controls access to non-public types and members through the System.Reflection APIs. Controls some features of the System.Reflection.Emit APIs.
     
@@ -2503,15 +2529,15 @@ class ReflectionPermission(CodeAccessPermission, IPermission, ISecurityEncodable
         """
         Intersect(self: ReflectionPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the 
-             specified permission.
+            Creates and returns a permission that is the intersection of the current permission and 
+             the specified permission.
         
         
             target: A permission to intersect with the current permission. It must be of the same type as the 
              current permission.
         
-            Returns: A new permission that represents the intersection of the current permission and the specified 
-             permission. This new permission is null if the intersection is empty.
+            Returns: A new permission that represents the intersection of the current permission and the 
+             specified permission. This new permission is null if the intersection is empty.
         """
         pass
 
@@ -2521,8 +2547,8 @@ class ReflectionPermission(CodeAccessPermission, IPermission, ISecurityEncodable
         
             Determines whether the current permission is a subset of the specified permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the 
-             same type as the current permission.
+            target: A permission that is to be tested for the subset relationship. This permission must be of 
+             the same type as the current permission.
         
             Returns: true if the current permission is a subset of the specified permission; otherwise, false.
         """
@@ -2550,10 +2576,12 @@ class ReflectionPermission(CodeAccessPermission, IPermission, ISecurityEncodable
         """
         Union(self: ReflectionPermission, other: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
-        
-            other: A permission to combine with the current permission. It must be of the same type as the current 
+            Creates a permission that is the union of the current permission and the specified 
              permission.
+        
+        
+            other: A permission to combine with the current permission. It must be of the same type as the 
+             current permission.
         
             Returns: A new permission that represents the union of the current permission and the specified 
              permission.
@@ -2588,7 +2616,7 @@ Set: Flags(self: ReflectionPermission) = value
 
 
 
-class ReflectionPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class ReflectionPermissionAttribute:
     """
     Allows security actions for System.Security.Permissions.ReflectionPermission to be applied to code using declarative security.
     
@@ -2657,7 +2685,7 @@ Set: TypeInformation(self: ReflectionPermissionAttribute) = value
 
 
 
-class ReflectionPermissionFlag(Enum, IComparable, IFormattable, IConvertible):
+class ReflectionPermissionFlag:
     """
     Specifies the permitted use of the System.Reflection and System.Reflection.Emit namespaces.
     
@@ -2705,7 +2733,7 @@ class ReflectionPermissionFlag(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class RegistryPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IUnrestrictedPermission, IBuiltInPermission):
+class RegistryPermission:
     """
     Controls the ability to access registry variables. This class cannot be inherited.
     
@@ -2715,6 +2743,11 @@ class RegistryPermission(CodeAccessPermission, IPermission, ISecurityEncodable, 
     """
     def AddPathList(self, access, *__args):
         """
+        AddPathList(self: RegistryPermission, access: RegistryPermissionAccess, pathList: str)
+            Adds access for the specified registry variables to the existing state of the permission.
+        
+            access: One of the System.Security.Permissions.RegistryPermissionAccess values.
+            pathList: A list of registry variables (semicolon-separated).
         AddPathList(self: RegistryPermission, access: RegistryPermissionAccess, control: AccessControlActions, pathList: str)
             Adds access for the specified registry variables to the existing state of the permission, 
              specifying registry permission access and access control actions.
@@ -2722,12 +2755,7 @@ class RegistryPermission(CodeAccessPermission, IPermission, ISecurityEncodable, 
         
             access: One of the System.Security.Permissions.RegistryPermissionAccess values.
             control: One of the System.Security.AccessControl.AccessControlActions values.
-            pathList: A list of registry variables (separated by semicolons).
-        AddPathList(self: RegistryPermission, access: RegistryPermissionAccess, pathList: str)
-            Adds access for the specified registry variables to the existing state of the permission.
-        
-            access: One of the System.Security.Permissions.RegistryPermissionAccess values.
-            pathList: A list of registry variables (semicolon-separated).
+            pathList: A list of registry variables (separated by semicolons).
         """
         pass
 
@@ -2757,8 +2785,8 @@ class RegistryPermission(CodeAccessPermission, IPermission, ISecurityEncodable, 
              System.Security.Permissions.RegistryPermissionAccess.
         
         
-            access: One of the System.Security.Permissions.RegistryPermissionAccess values that represents a single 
-             type of registry variable access.
+            access: One of the System.Security.Permissions.RegistryPermissionAccess values that represents a 
+             single type of registry variable access.
         
             Returns: A list of the registry variables (semicolon-separated) with the specified 
              System.Security.Permissions.RegistryPermissionAccess.
@@ -2769,15 +2797,15 @@ class RegistryPermission(CodeAccessPermission, IPermission, ISecurityEncodable, 
         """
         Intersect(self: RegistryPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the 
-             specified permission.
+            Creates and returns a permission that is the intersection of the current permission and 
+             the specified permission.
         
         
             target: A permission to intersect with the current permission. It must be of the same type as the 
              current permission.
         
-            Returns: A new permission that represents the intersection of the current permission and the specified 
-             permission. This new permission is null if the intersection is empty.
+            Returns: A new permission that represents the intersection of the current permission and the 
+             specified permission. This new permission is null if the intersection is empty.
         """
         pass
 
@@ -2787,8 +2815,8 @@ class RegistryPermission(CodeAccessPermission, IPermission, ISecurityEncodable, 
         
             Determines whether the current permission is a subset of the specified permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the 
-             same type as the current permission.
+            target: A permission that is to be tested for the subset relationship. This permission must be of 
+             the same type as the current permission.
         
             Returns: true if the current permission is a subset of the specified permission; otherwise, false.
         """
@@ -2828,10 +2856,12 @@ class RegistryPermission(CodeAccessPermission, IPermission, ISecurityEncodable, 
         """
         Union(self: RegistryPermission, other: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
-        
-            other: A permission to combine with the current permission. It must be of the same type as the current 
+            Creates a permission that is the union of the current permission and the specified 
              permission.
+        
+        
+            other: A permission to combine with the current permission. It must be of the same type as the 
+             current permission.
         
             Returns: A new permission that represents the union of the current permission and the specified 
              permission.
@@ -2858,7 +2888,7 @@ class RegistryPermission(CodeAccessPermission, IPermission, ISecurityEncodable, 
         pass
 
 
-class RegistryPermissionAccess(Enum, IComparable, IFormattable, IConvertible):
+class RegistryPermissionAccess:
     """
     Specifies the permitted access to registry keys and values.
     
@@ -2905,7 +2935,7 @@ class RegistryPermissionAccess(Enum, IComparable, IFormattable, IConvertible):
     Write = None
 
 
-class RegistryPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class RegistryPermissionAttribute:
     """
     Allows security actions for System.Security.Permissions.RegistryPermission to be applied to code using declarative security. This class cannot be inherited.
     
@@ -2990,7 +3020,7 @@ Set: Write(self: RegistryPermissionAttribute) = value
 
 
 
-class ResourcePermissionBase(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IUnrestrictedPermission):
+class ResourcePermissionBase:
     """ Allows control of code access security permissions. """
     def AddPermissionAccess(self, *args): #cannot find CLR method
         """
@@ -3030,11 +3060,11 @@ class ResourcePermissionBase(CodeAccessPermission, IPermission, ISecurityEncodab
         """
         GetPermissionEntries(self: ResourcePermissionBase) -> Array[ResourcePermissionBaseEntry]
         
-            Returns an array of the System.Security.Permissions.ResourcePermissionBaseEntry objects added to 
-             this permission.
+            Returns an array of the System.Security.Permissions.ResourcePermissionBaseEntry objects 
+             added to this permission.
         
-            Returns: An array of System.Security.Permissions.ResourcePermissionBaseEntry objects that were added to 
-             this permission.
+            Returns: An array of System.Security.Permissions.ResourcePermissionBaseEntry objects that were 
+             added to this permission.
         """
         pass
 
@@ -3042,13 +3072,13 @@ class ResourcePermissionBase(CodeAccessPermission, IPermission, ISecurityEncodab
         """
         Intersect(self: ResourcePermissionBase, target: IPermission) -> IPermission
         
-            Creates and returns a permission object that is the intersection of the current permission 
-             object and a target permission object.
+            Creates and returns a permission object that is the intersection of the current 
+             permission object and a target permission object.
         
         
             target: A permission object of the same type as the current permission object.
-            Returns: A new permission object that represents the intersection of the current object and the specified 
-             target. This object is null if the intersection is empty.
+            Returns: A new permission object that represents the intersection of the current object and the 
+             specified target. This object is null if the intersection is empty.
         """
         pass
 
@@ -3059,8 +3089,8 @@ class ResourcePermissionBase(CodeAccessPermission, IPermission, ISecurityEncodab
             Determines whether the current permission object is a subset of the specified permission.
         
             target: A permission object that is to be tested for the subset relationship.
-            Returns: true if the current permission object is a subset of the specified permission object; otherwise, 
-             false.
+            Returns: true if the current permission object is a subset of the specified permission object; 
+             otherwise, false.
         """
         pass
 
@@ -3099,11 +3129,11 @@ class ResourcePermissionBase(CodeAccessPermission, IPermission, ISecurityEncodab
              permission object.
         
         
-            target: A permission object to combine with the current permission object. It must be of the same type 
-             as the current permission object.
+            target: A permission object to combine with the current permission object. It must be of the same 
+             type as the current permission object.
         
-            Returns: A new permission object that represents the union of the current permission object and the 
-             specified permission object.
+            Returns: A new permission object that represents the union of the current permission object and 
+             the specified permission object.
         """
         pass
 
@@ -3140,7 +3170,7 @@ class ResourcePermissionBase(CodeAccessPermission, IPermission, ISecurityEncodab
     Local = '.'
 
 
-class ResourcePermissionBaseEntry(object):
+class ResourcePermissionBaseEntry:
     """
     Defines the smallest unit of a code access security permission set.
     
@@ -3171,7 +3201,7 @@ Get: PermissionAccessPath(self: ResourcePermissionBaseEntry) -> Array[str]
 
 
 
-class SecurityAction(Enum, IComparable, IFormattable, IConvertible):
+class SecurityAction:
     """
     Specifies the security actions that can be performed using declarative security.
     
@@ -3222,7 +3252,7 @@ class SecurityAction(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class SecurityPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IUnrestrictedPermission, IBuiltInPermission):
+class SecurityPermission:
     """
     Describes a set of security permissions applied to code. This class cannot be inherited.
     
@@ -3251,15 +3281,15 @@ class SecurityPermission(CodeAccessPermission, IPermission, ISecurityEncodable, 
         """
         Intersect(self: SecurityPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the 
-             specified permission.
+            Creates and returns a permission that is the intersection of the current permission and 
+             the specified permission.
         
         
             target: A permission to intersect with the current permission. It must be of the same type as the 
              current permission.
         
-            Returns: A new permission object that represents the intersection of the current permission and the 
-             specified permission. This new permission is null if the intersection is empty.
+            Returns: A new permission object that represents the intersection of the current permission and 
+             the specified permission. This new permission is null if the intersection is empty.
         """
         pass
 
@@ -3269,8 +3299,8 @@ class SecurityPermission(CodeAccessPermission, IPermission, ISecurityEncodable, 
         
             Determines whether the current permission is a subset of the specified permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the 
-             same type as the current permission.
+            target: A permission that is to be tested for the subset relationship. This permission must be of 
+             the same type as the current permission.
         
             Returns: true if the current permission is a subset of the specified permission; otherwise, false.
         """
@@ -3298,10 +3328,12 @@ class SecurityPermission(CodeAccessPermission, IPermission, ISecurityEncodable, 
         """
         Union(self: SecurityPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
-        
-            target: A permission to combine with the current permission. It must be of the same type as the current 
+            Creates a permission that is the union of the current permission and the specified 
              permission.
+        
+        
+            target: A permission to combine with the current permission. It must be of the same type as the 
+             current permission.
         
             Returns: A new permission that represents the union of the current permission and the specified 
              permission.
@@ -3336,7 +3368,7 @@ Set: Flags(self: SecurityPermission) = value
 
 
 
-class SecurityPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class SecurityPermissionAttribute:
     """
     Allows security actions for System.Security.Permissions.SecurityPermission to be applied to code using declarative security. This class cannot be inherited.
     
@@ -3485,7 +3517,7 @@ Set: UnmanagedCode(self: SecurityPermissionAttribute) = value
 
 
 
-class SecurityPermissionFlag(Enum, IComparable, IFormattable, IConvertible):
+class SecurityPermissionFlag:
     """
     Specifies access flags for the security permission object.
     
@@ -3543,7 +3575,7 @@ class SecurityPermissionFlag(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class SiteIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IBuiltInPermission):
+class SiteIdentityPermission:
     """
     Defines the identity permission for the Web site from which the code originates. This class cannot be inherited.
     
@@ -3572,15 +3604,15 @@ class SiteIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodab
         """
         Intersect(self: SiteIdentityPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the 
-             specified permission.
+            Creates and returns a permission that is the intersection of the current permission and 
+             the specified permission.
         
         
             target: A permission to intersect with the current permission. It must be of the same type as the 
              current permission.
         
-            Returns: A new permission that represents the intersection of the current permission and the specified 
-             permission. This new permission is null if the intersection is empty.
+            Returns: A new permission that represents the intersection of the current permission and the 
+             specified permission. This new permission is null if the intersection is empty.
         """
         pass
 
@@ -3590,8 +3622,8 @@ class SiteIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodab
         
             Determines whether the current permission is a subset of the specified permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the 
-             same type as the current permission.
+            target: A permission that is to be tested for the subset relationship. This permission must be of 
+             the same type as the current permission.
         
             Returns: true if the current permission is a subset of the specified permission; otherwise, false.
         """
@@ -3610,10 +3642,12 @@ class SiteIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodab
         """
         Union(self: SiteIdentityPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
-        
-            target: A permission to combine with the current permission. It must be of the same type as the current 
+            Creates a permission that is the union of the current permission and the specified 
              permission.
+        
+        
+            target: A permission to combine with the current permission. It must be of the same type as the 
+             current permission.
         
             Returns: A new permission that represents the union of the current permission and the specified 
              permission.
@@ -3648,7 +3682,7 @@ Set: Site(self: SiteIdentityPermission) = value
 
 
 
-class SiteIdentityPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class SiteIdentityPermissionAttribute:
     """
     Allows security actions for System.Security.Permissions.SiteIdentityPermission to be applied to code using declarative security. This class cannot be inherited.
     
@@ -3685,7 +3719,7 @@ Set: Site(self: SiteIdentityPermissionAttribute) = value
 
 
 
-class StorePermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IUnrestrictedPermission):
+class StorePermission:
     """
     Controls access to stores containing X.509 certificates. This class cannot be inherited.
     
@@ -3706,8 +3740,8 @@ class StorePermission(CodeAccessPermission, IPermission, ISecurityEncodable, ISt
         FromXml(self: StorePermission, securityElement: SecurityElement)
             Reconstructs a permission with a specified state from an XML encoding.
         
-            securityElement: A System.Security.SecurityElement that contains the XML encoding to use to reconstruct the 
-             permission.
+            securityElement: A System.Security.SecurityElement that contains the XML encoding to use to reconstruct 
+             the permission.
         """
         pass
 
@@ -3715,15 +3749,15 @@ class StorePermission(CodeAccessPermission, IPermission, ISecurityEncodable, ISt
         """
         Intersect(self: StorePermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the 
-             specified permission.
+            Creates and returns a permission that is the intersection of the current permission and 
+             the specified permission.
         
         
             target: A permission to intersect with the current permission. It must be of the same type as the 
              current permission.
         
-            Returns: A new permission that represents the intersection of the current permission and the specified 
-             permission. This new permission is null if the intersection is empty.
+            Returns: A new permission that represents the intersection of the current permission and the 
+             specified permission. This new permission is null if the intersection is empty.
         """
         pass
 
@@ -3733,8 +3767,8 @@ class StorePermission(CodeAccessPermission, IPermission, ISecurityEncodable, ISt
         
             Determines whether the current permission is a subset of the specified permission.
         
-            target: A permission to test for the subset relationship. This permission must be of the same type as 
-             the current permission.
+            target: A permission to test for the subset relationship. This permission must be of the same 
+             type as the current permission.
         
             Returns: true if the current permission is a subset of the specified permission; otherwise, false.
         """
@@ -3754,8 +3788,8 @@ class StorePermission(CodeAccessPermission, IPermission, ISecurityEncodable, ISt
         ToXml(self: StorePermission) -> SecurityElement
         
             Creates an XML encoding of the permission and its current state.
-            Returns: A System.Security.SecurityElement that contains an XML encoding of the permission, including any 
-             state information.
+            Returns: A System.Security.SecurityElement that contains an XML encoding of the permission, 
+             including any state information.
         """
         pass
 
@@ -3763,10 +3797,12 @@ class StorePermission(CodeAccessPermission, IPermission, ISecurityEncodable, ISt
         """
         Union(self: StorePermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
-        
-            target: A permission to combine with the current permission. It must be of the same type as the current 
+            Creates a permission that is the union of the current permission and the specified 
              permission.
+        
+        
+            target: A permission to combine with the current permission. It must be of the same type as the 
+             current permission.
         
             Returns: A new permission that represents the union of the current permission and the specified 
              permission.
@@ -3801,7 +3837,7 @@ Set: Flags(self: StorePermission) = value
 
 
 
-class StorePermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class StorePermissionAttribute:
     """
     Allows security actions for System.Security.Permissions.StorePermission to be applied to code using declarative security. This class cannot be inherited.
     
@@ -3894,7 +3930,7 @@ Set: RemoveFromStore(self: StorePermissionAttribute) = value
 
 
 
-class StorePermissionFlags(Enum, IComparable, IFormattable, IConvertible):
+class StorePermissionFlags:
     """
     Specifies the permitted access to X.509 certificate stores.
     
@@ -3945,7 +3981,7 @@ class StorePermissionFlags(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class StrongNameIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IBuiltInPermission):
+class StrongNameIdentityPermission:
     """
     Defines the identity permission for strong names. This class cannot be inherited.
     
@@ -3974,15 +4010,15 @@ class StrongNameIdentityPermission(CodeAccessPermission, IPermission, ISecurityE
         """
         Intersect(self: StrongNameIdentityPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the 
-             specified permission.
+            Creates and returns a permission that is the intersection of the current permission and 
+             the specified permission.
         
         
             target: A permission to intersect with the current permission. It must be of the same type as the 
              current permission.
         
-            Returns: A new permission that represents the intersection of the current permission and the specified 
-             permission, or null if the intersection is empty.
+            Returns: A new permission that represents the intersection of the current permission and the 
+             specified permission, or null if the intersection is empty.
         """
         pass
 
@@ -3992,8 +4028,8 @@ class StrongNameIdentityPermission(CodeAccessPermission, IPermission, ISecurityE
         
             Determines whether the current permission is a subset of the specified permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the 
-             same type as the current permission.
+            target: A permission that is to be tested for the subset relationship. This permission must be of 
+             the same type as the current permission.
         
             Returns: true if the current permission is a subset of the specified permission; otherwise, false.
         """
@@ -4012,10 +4048,12 @@ class StrongNameIdentityPermission(CodeAccessPermission, IPermission, ISecurityE
         """
         Union(self: StrongNameIdentityPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
-        
-            target: A permission to combine with the current permission. It must be of the same type as the current 
+            Creates a permission that is the union of the current permission and the specified 
              permission.
+        
+        
+            target: A permission to combine with the current permission. It must be of the same type as the 
+             current permission.
         
             Returns: A new permission that represents the union of the current permission and the specified 
              permission.
@@ -4066,7 +4104,7 @@ Set: Version(self: StrongNameIdentityPermission) = value
 
 
 
-class StrongNameIdentityPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class StrongNameIdentityPermissionAttribute:
     """
     Allows security actions for System.Security.Permissions.StrongNameIdentityPermission to be applied to code using declarative security. This class cannot be inherited.
     
@@ -4077,7 +4115,8 @@ class StrongNameIdentityPermissionAttribute(CodeAccessSecurityAttribute, _Attrib
         CreatePermission(self: StrongNameIdentityPermissionAttribute) -> IPermission
         
             Creates and returns a new System.Security.Permissions.StrongNameIdentityPermission.
-            Returns: A System.Security.Permissions.StrongNameIdentityPermission that corresponds to this attribute.
+            Returns: A System.Security.Permissions.StrongNameIdentityPermission that corresponds to this 
+             attribute.
         """
         pass
 
@@ -4119,7 +4158,7 @@ Set: Version(self: StrongNameIdentityPermissionAttribute) = value
 
 
 
-class StrongNamePublicKeyBlob(object):
+class StrongNamePublicKeyBlob:
     """
     Represents the public key information (called a blob) for a strong name. This class cannot be inherited.
     
@@ -4129,13 +4168,13 @@ class StrongNamePublicKeyBlob(object):
         """
         Equals(self: StrongNamePublicKeyBlob, obj: object) -> bool
         
-            Gets or sets a value indicating whether the current public key blob is equal to the specified 
-             public key blob.
+            Gets or sets a value indicating whether the current public key blob is equal to the 
+             specified public key blob.
         
         
             obj: An object containing a public key blob.
-            Returns: true if the public key blob of the current object is equal to the public key blob of the obj 
-             parameter; otherwise, false.
+            Returns: true if the public key blob of the current object is equal to the public key blob of the 
+             obj parameter; otherwise, false.
         """
         pass
 
@@ -4170,7 +4209,7 @@ class StrongNamePublicKeyBlob(object):
         pass
 
 
-class TypeDescriptorPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IUnrestrictedPermission):
+class TypeDescriptorPermission:
     """
     Defines partial-trust access to the System.ComponentModel.TypeDescriptor class.
     
@@ -4198,8 +4237,8 @@ class TypeDescriptorPermission(CodeAccessPermission, IPermission, ISecurityEncod
             target: A permission to intersect with the current permission. It must be of the same type as the 
              current permission.
         
-            Returns: A new permission that represents the intersection of the current permission and the specified 
-             permission. This new permission is null if the intersection is empty.
+            Returns: A new permission that represents the intersection of the current permission and the 
+             specified permission. This new permission is null if the intersection is empty.
         """
         pass
 
@@ -4207,8 +4246,8 @@ class TypeDescriptorPermission(CodeAccessPermission, IPermission, ISecurityEncod
         """
         IsSubsetOf(self: TypeDescriptorPermission, target: IPermission) -> bool
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the 
-             same type as the current permission.
+            target: A permission that is to be tested for the subset relationship. This permission must be of 
+             the same type as the current permission.
         
             Returns: true if the current permission is a subset of the specified permission; otherwise, false.
         """
@@ -4218,8 +4257,8 @@ class TypeDescriptorPermission(CodeAccessPermission, IPermission, ISecurityEncod
         """
         IsUnrestricted(self: TypeDescriptorPermission) -> bool
         
-            Gets a value that indicates whether the type descriptor may be called from partially trusted 
-             code.
+            Gets a value that indicates whether the type descriptor may be called from partially 
+             trusted code.
         
             Returns: true if the System.Security.Permissions.TypeDescriptorPermission.Flags property is set to 
              System.Security.Permissions.TypeDescriptorPermissionFlags.RestrictedRegistrationAccess; 
@@ -4238,8 +4277,8 @@ class TypeDescriptorPermission(CodeAccessPermission, IPermission, ISecurityEncod
         """
         Union(self: TypeDescriptorPermission, target: IPermission) -> IPermission
         
-            target: A permission to combine with the current permission. It must be of the same type as the current 
-             permission.
+            target: A permission to combine with the current permission. It must be of the same type as the 
+             current permission.
         
             Returns: A new permission that represents the union of the current permission and the specified 
              permission.
@@ -4274,7 +4313,7 @@ Set: Flags(self: TypeDescriptorPermission) = value
 
 
 
-class TypeDescriptorPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class TypeDescriptorPermissionAttribute:
     """
     Determines the permission flags that apply to a System.ComponentModel.TypeDescriptor.
     
@@ -4317,7 +4356,7 @@ Set: RestrictedRegistrationAccess(self: TypeDescriptorPermissionAttribute) = val
 
 
 
-class TypeDescriptorPermissionFlags(Enum, IComparable, IFormattable, IConvertible):
+class TypeDescriptorPermissionFlags:
     """
     Defines permission settings for type descriptors.
     
@@ -4361,7 +4400,7 @@ class TypeDescriptorPermissionFlags(Enum, IComparable, IFormattable, IConvertibl
     value__ = None
 
 
-class UIPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IUnrestrictedPermission, IBuiltInPermission):
+class UIPermission:
     """
     Controls the permissions related to user interfaces and the Clipboard. This class cannot be inherited.
     
@@ -4392,15 +4431,15 @@ class UIPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStack
         """
         Intersect(self: UIPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the 
-             specified permission.
+            Creates and returns a permission that is the intersection of the current permission and 
+             the specified permission.
         
         
-            target: A permission to intersect with the current permission. It must be the same type as the current 
-             permission.
+            target: A permission to intersect with the current permission. It must be the same type as the 
+             current permission.
         
-            Returns: A new permission that represents the intersection of the current permission and the specified 
-             permission. This new permission is null if the intersection is empty.
+            Returns: A new permission that represents the intersection of the current permission and the 
+             specified permission. This new permission is null if the intersection is empty.
         """
         pass
 
@@ -4410,8 +4449,8 @@ class UIPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStack
         
             Determines whether the current permission is a subset of the specified permission.
         
-            target: A permission to test for the subset relationship. This permission must be the same type as the 
-             current permission.
+            target: A permission to test for the subset relationship. This permission must be the same type 
+             as the current permission.
         
             Returns: true if the current permission is a subset of the specified permission; otherwise, false.
         """
@@ -4441,8 +4480,8 @@ class UIPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStack
         
             Creates a permission that is the union of the permission and the specified permission.
         
-            target: A permission to combine with the current permission. It must be the same type as the current 
-             permission.
+            target: A permission to combine with the current permission. It must be the same type as the 
+             current permission.
         
             Returns: A new permission that represents the union of the current permission and the specified 
              permission.
@@ -4487,7 +4526,7 @@ Set: Window(self: UIPermission) = value
 
 
 
-class UIPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class UIPermissionAttribute:
     """
     Allows security actions for System.Security.Permissions.UIPermission to be applied to code using declarative security. This class cannot be inherited.
     
@@ -4532,7 +4571,7 @@ Set: Window(self: UIPermissionAttribute) = value
 
 
 
-class UIPermissionClipboard(Enum, IComparable, IFormattable, IConvertible):
+class UIPermissionClipboard:
     """
     Specifies the type of clipboard access that is allowed to the calling code.
     
@@ -4577,7 +4616,7 @@ class UIPermissionClipboard(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class UIPermissionWindow(Enum, IComparable, IFormattable, IConvertible):
+class UIPermissionWindow:
     """
     Specifies the type of windows that code is allowed to use.
     
@@ -4623,7 +4662,7 @@ class UIPermissionWindow(Enum, IComparable, IFormattable, IConvertible):
     value__ = None
 
 
-class UrlIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IBuiltInPermission):
+class UrlIdentityPermission:
     """
     Defines the identity permission for the URL from which the code originates. This class cannot be inherited.
     
@@ -4652,15 +4691,15 @@ class UrlIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodabl
         """
         Intersect(self: UrlIdentityPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the 
-             specified permission.
+            Creates and returns a permission that is the intersection of the current permission and 
+             the specified permission.
         
         
             target: A permission to intersect with the current permission. It must be of the same type as the 
              current permission.
         
-            Returns: A new permission that represents the intersection of the current permission and the specified 
-             permission. This new permission is null if the intersection is empty.
+            Returns: A new permission that represents the intersection of the current permission and the 
+             specified permission. This new permission is null if the intersection is empty.
         """
         pass
 
@@ -4670,8 +4709,8 @@ class UrlIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodabl
         
             Determines whether the current permission is a subset of the specified permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the 
-             same type as the current permission.
+            target: A permission that is to be tested for the subset relationship. This permission must be of 
+             the same type as the current permission.
         
             Returns: true if the current permission is a subset of the specified permission; otherwise, false.
         """
@@ -4690,10 +4729,12 @@ class UrlIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodabl
         """
         Union(self: UrlIdentityPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
-        
-            target: A permission to combine with the current permission. It must be of the same type as the current 
+            Creates a permission that is the union of the current permission and the specified 
              permission.
+        
+        
+            target: A permission to combine with the current permission. It must be of the same type as the 
+             current permission.
         
             Returns: A new permission that represents the union of the current permission and the specified 
              permission.
@@ -4728,7 +4769,7 @@ Set: Url(self: UrlIdentityPermission) = value
 
 
 
-class UrlIdentityPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class UrlIdentityPermissionAttribute:
     """
     Allows security actions for System.Security.Permissions.UrlIdentityPermission to be applied to code using declarative security. This class cannot be inherited.
     
@@ -4765,7 +4806,7 @@ Set: Url(self: UrlIdentityPermissionAttribute) = value
 
 
 
-class ZoneIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodable, IStackWalk, IBuiltInPermission):
+class ZoneIdentityPermission:
     """
     Defines the identity permission for the zone from which the code originates. This class cannot be inherited.
     
@@ -4794,15 +4835,15 @@ class ZoneIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodab
         """
         Intersect(self: ZoneIdentityPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the 
-             specified permission.
+            Creates and returns a permission that is the intersection of the current permission and 
+             the specified permission.
         
         
             target: A permission to intersect with the current permission. It must be of the same type as the 
              current permission.
         
-            Returns: A new permission that represents the intersection of the current permission and the specified 
-             permission. This new permission is null if the intersection is empty.
+            Returns: A new permission that represents the intersection of the current permission and the 
+             specified permission. This new permission is null if the intersection is empty.
         """
         pass
 
@@ -4812,8 +4853,8 @@ class ZoneIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodab
         
             Determines whether the current permission is a subset of the specified permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the 
-             same type as the current permission.
+            target: A permission that is to be tested for the subset relationship. This permission must be of 
+             the same type as the current permission.
         
             Returns: true if the current permission is a subset of the specified permission; otherwise, false.
         """
@@ -4832,10 +4873,12 @@ class ZoneIdentityPermission(CodeAccessPermission, IPermission, ISecurityEncodab
         """
         Union(self: ZoneIdentityPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
-        
-            target: A permission to combine with the current permission. It must be of the same type as the current 
+            Creates a permission that is the union of the current permission and the specified 
              permission.
+        
+        
+            target: A permission to combine with the current permission. It must be of the same type as the 
+             current permission.
         
             Returns: A new permission that represents the union of the current permission and the specified 
              permission.
@@ -4870,7 +4913,7 @@ Set: SecurityZone(self: ZoneIdentityPermission) = value
 
 
 
-class ZoneIdentityPermissionAttribute(CodeAccessSecurityAttribute, _Attribute):
+class ZoneIdentityPermissionAttribute:
     """
     Allows security actions for System.Security.Permissions.ZoneIdentityPermission to be applied to code using declarative security. This class cannot be inherited.
     

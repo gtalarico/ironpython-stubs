@@ -1,9 +1,7 @@
-class ParamArrayAttribute(Attribute,_Attribute):
+class ParamArrayAttribute:
  """
- Indicates that a method will allow a variable number of arguments in its invocation. This class cannot be inherited.
-
- 
-
+ Indicates that a method will allow a variable number of arguments in its invocation. This class cannot be inherited.
+ 
  ParamArrayAttribute()
  """
  def __init__(self,*args):

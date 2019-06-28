@@ -1,9 +1,7 @@
-class UriFormat(Enum,IComparable,IFormattable,IConvertible):
+class UriFormat:
  """
- Controls how URI information is escaped.
-
- 
-
+ Controls how URI information is escaped.
+ 
  enum UriFormat,values: SafeUnescaped (3),Unescaped (2),UriEscaped (1)
  """
  def __eq__(self,*args):

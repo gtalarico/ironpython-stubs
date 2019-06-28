@@ -1,9 +1,7 @@
-class StringAlignment(Enum,IComparable,IFormattable,IConvertible):
+class StringAlignment:
  """
- Specifies the alignment of a text string relative to its layout rectangle.
-
- 
-
+ Specifies the alignment of a text string relative to its layout rectangle.
+ 
  enum StringAlignment,values: Center (1),Far (2),Near (0)
  """
  def __eq__(self,*args):

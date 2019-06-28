@@ -1,9 +1,7 @@
-class BindingCompleteContext(Enum,IComparable,IFormattable,IConvertible):
+class BindingCompleteContext:
  """
- Specifies the direction of the binding operation.
-
- 
-
+ Specifies the direction of the binding operation.
+ 
  enum BindingCompleteContext,values: ControlUpdate (0),DataSourceUpdate (1)
  """
  def __eq__(self,*args):

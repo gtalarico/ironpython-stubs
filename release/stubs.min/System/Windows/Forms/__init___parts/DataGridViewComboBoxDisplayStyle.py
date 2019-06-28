@@ -1,9 +1,7 @@
-class DataGridViewComboBoxDisplayStyle(Enum,IComparable,IFormattable,IConvertible):
+class DataGridViewComboBoxDisplayStyle:
  """
- Defines constants that indicate how a System.Windows.Forms.DataGridViewComboBoxCell is displayed.
-
- 
-
+ Defines constants that indicate how a System.Windows.Forms.DataGridViewComboBoxCell is displayed.
+ 
  enum DataGridViewComboBoxDisplayStyle,values: ComboBox (0),DropDownButton (1),Nothing (2)
  """
  def __eq__(self,*args):

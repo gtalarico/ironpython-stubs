@@ -2,16 +2,11 @@ class IEquatable:
  # no doc
  def Equals(self,other):
   """
-  Equals(self: IEquatable[T],other: T) -> bool
-
-  
-
-   Indicates whether the current object is equal to another object of the same type.
-
-  
-
-   other: An object to compare with this object.
-
+  Equals(self: IEquatable[T],other: T) -> bool
+  
+   Indicates whether the current object is equal to another object of the same type.
+  
+   other: An object to compare with this object.
    Returns: true if the current object is equal to the other parameter; otherwise,false.
   """
   pass

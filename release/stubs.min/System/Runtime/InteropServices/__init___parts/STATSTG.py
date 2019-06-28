@@ -1,4 +1,4 @@
-class STATSTG(object):
+class STATSTG:
  """ Use System.Runtime.InteropServices.ComTypes.STATSTG instead. """
  atime=None
  cbSize=None
