@@ -2,7 +2,7 @@ import keyword
 
 from util_methods import *
 from constants import *
-
+import re
 
 class emptylistdict(dict):
     """defaultdict not available before 2.5; simplest reimplementation using [] as default"""
@@ -661,7 +661,12 @@ class ModuleRedeclarator(object):
                     local_import = self.create_local_import(base)
                     if local_import:
                         out(indent, local_import)
-        out(indent, "class ", p_name,"", ":",                                         #fix kevin ana 3/inherited classes showed up in constructor/base def replaced with ""
+
+        regex = "([\[]).*?([\]]+)"
+        if p_name == "Dictionary":
+            print base_def
+            print re.sub(regex, "", base_def)
+        out(indent, "class ", p_name,"" , ":",          #re.sub(regex, "", base_def)                               #fix kevin ana 3/inherited classes showed up in constructor/base def replaced with ""
             skipped_bases and " # skipped bases: " + ", ".join(skipped_bases) or "")  # we dont do anything with python objects so why bother 
         out_doc_attr(out, p_class, indent + 1)
         # inner parts

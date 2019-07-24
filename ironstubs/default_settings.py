@@ -14,7 +14,7 @@ ASSEMBLIES = [
 	'Wms.EdiMessaging',
 
     # | System
-    #'System',
+    'System',
     #'System.Drawing',
     #'System.Windows.Forms',
     ]
